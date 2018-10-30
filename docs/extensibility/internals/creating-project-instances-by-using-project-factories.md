@@ -26,9 +26,8 @@ Tipos de projeto em [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]
   
  O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE chama a fábrica de projeto implementada no VSPackage quando um usuário carrega um projeto existente ou cria um novo projeto no [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. O novo objeto de projeto fornece o IDE com informações suficientes para preencher **Gerenciador de soluções**. O novo objeto de projeto também fornece as interfaces necessárias para dar suporte a todas as ações relevantes de interface do usuário iniciadas pelo IDE.  
   
- Você pode implementar o <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory> interface em uma classe em seu projeto. Normalmente, residem em seu próprio módulo.  
-  
- Para obter um exemplo de uma implementação do `IVsProjectFactory` interface, consulte *PrjFac.cpp*, que está contido no [projeto básico](https://www.microsoft.com/download/details.aspx?id=55984) diretório de exemplo.  
+ Você pode implementar o <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory> interface em uma classe em seu projeto. Normalmente, residem em seu próprio módulo.
+ 
   
  Projetos que dão suporte ao que está sendo agregada por um proprietário devem manter uma chave de proprietário no seu arquivo de projeto. Quando o <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A> método é chamado em um projeto com uma chave de proprietário, o projeto de propriedade converte sua chave de proprietário para uma fábrica de projeto, GUID, em seguida, chama o `CreateProject` método nesta fábrica de projeto para fazer a criação real.  
   
