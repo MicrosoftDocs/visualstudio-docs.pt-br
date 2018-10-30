@@ -79,7 +79,7 @@ Neste exemplo, você usará um aplicativo ASP.NET Core vazio (C#). No entanto, v
 * Abra o arquivo *./Startup.cs* e adicione as seguintes linhas ao método Configure:
 
     ```csharp
-    app.UseDefaultFiles() // Enables default file mapping on the web root.
+    app.UseDefaultFiles(); // Enables default file mapping on the web root.
     app.UseStaticFiles(); // Marks files on the web root as servable.
     ```
 
