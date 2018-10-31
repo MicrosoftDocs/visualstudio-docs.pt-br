@@ -503,7 +503,7 @@ Aplicativo Web com ASP.NET Core</a>
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage cardScaleImage">
-                                                    <img src="/media/logos/logo_Csharp.svg" alt="C# logo" />
+                                                    <img src="./images/logo_Csharp.svg" alt="C# logo" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -522,7 +522,7 @@ Aplicativo Web com ASP.NET Core</a>
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage cardScaleImage">
-                                                    <img src="/media/logos/logo_vb.svg" alt="VB logo" />
+                                                    <img src="./images/logo_vb.svg" alt="VB logo" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -541,7 +541,7 @@ Aplicativo Web com ASP.NET Core</a>
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage cardScaleImage">
-                                                    <img src="/media/logos/logo_Cplusplus.svg" alt="C++ logo" />
+                                                    <img src="./images/logo_Cplusplus.svg" alt="C++ logo" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -560,7 +560,7 @@ Aplicativo Web com ASP.NET Core</a>
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage cardScaleImage">
-                                                    <img src="/media/logos/logo_Fsharp.svg" alt="F# logo" />
+                                                    <img src="./images/logo_Fsharp.svg" alt="F# logo" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -579,7 +579,7 @@ Aplicativo Web com ASP.NET Core</a>
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage cardScaleImage">
-                                                    <img src="/media/logos/logo_js.svg" alt="JavaScript logo" />
+                                                    <img src="./images/logo_js.svg" alt="JavaScript logo" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -598,7 +598,7 @@ Aplicativo Web com ASP.NET Core</a>
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage cardScaleImage">
-                                                    <img src="/media/logos/logo_TS.svg" alt="TypeScript logo" />
+                                                    <img src="./images/logo_TS.svg" alt="TypeScript logo" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -617,7 +617,7 @@ Aplicativo Web com ASP.NET Core</a>
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage cardScaleImage">
-                                                    <img src="/media/logos/logo_Python.svg" alt="Python logo" />
+                                                    <img src="./images/logo_Python.svg" alt="Python logo" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -636,7 +636,7 @@ Aplicativo Web com ASP.NET Core</a>
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage cardScaleImage">
-                                                    <img src="/media/logos/logo_R.svg" alt="R logo" />
+                                                    <img src="./images/logo_R.svg" alt="R logo" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -729,7 +729,7 @@ Aplicativo Web com ASP.NET Core</a>
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="/media/logos/logo_nodejs.svg" src="/media/logos/logo_nodejs.svg" alt="Node.js logo" />
+                                                        <img data-scaleimage="./images/vs_web-4.svg" src="./images/vs_web-4.svg" alt="Node.js logo" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
