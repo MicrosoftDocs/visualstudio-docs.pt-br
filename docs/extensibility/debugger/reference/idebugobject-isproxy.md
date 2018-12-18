@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 79ffc902357bb720e9173872d6ec45814e397658
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f807e25a10ccc2b0d940b6f0db6947e404dc55b0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928575"
 ---
 # <a name="idebugobjectisproxy"></a>IDebugObject::IsProxy
-Determina se o objeto é um proxy transparente.  
+Determina se o objeto for um proxy transparente.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +43,7 @@ int IsProxy (
  [out] `TRUE` se o objeto for um proxy transparente; caso contrário, `FALSE`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  Esse método é implementado pelo mecanismo de depuração de C++ padrão.  

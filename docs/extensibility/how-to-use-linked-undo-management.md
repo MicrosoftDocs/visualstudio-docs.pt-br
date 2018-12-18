@@ -13,28 +13,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 24e39bd0bde922dbe761bc9de176d43161bb985d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 255ad8de79b13a74816b2abd28281ac5de6f1932
+ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46370556"
 ---
-# <a name="how-to-use-linked-undo-management"></a>Como: usar o gerenciamento de desfazer vinculado
-Desfazer vinculado permite ao usuário desfazer simultaneamente as mesmo edições em vários arquivos. Por exemplo, as alterações no texto simultâneas em vários arquivos de programa, como um arquivo de cabeçalho e um arquivo de Visual C++, é uma transação desfazer vinculado. Capacidade de desfazer vinculado está incorporada a implementação do ambiente do Gerenciador de desfazer, e <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager> permite manipular esse recurso. Desfazer vinculado é implementado por uma unidade para desfazer pai que pode vincular pilhas de desfazer separado para ser tratado como uma unidade única de desfazer. O procedimento para usar desfazer vinculado é detalhado na seção a seguir.  
+# <a name="how-to-use-linked-undo-management"></a>Como: usar vinculado gerenciamento de desfazer
+Desfazer vinculado permite que o usuário simultaneamente, desfazer as mesmas edições em vários arquivos. Por exemplo, as alterações de texto simultâneas em vários arquivos de programa, como um arquivo de cabeçalho e um arquivo do Visual C++, é uma transação de desfazer vinculado. Capacidade de desfazer vinculado está incorporada a implementação do ambiente do Gerenciador de desfazer, e <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager> permite manipular esse recurso. Desfazer vinculado é implementado por uma unidade de desfazer pai que pode vincular as pilhas de desfazer separado juntos para ser tratado como uma unidade de desfazer. O procedimento para usar um Desfazer vinculado é detalhado na seção a seguir.  
   
-### <a name="to-use-linked-undo"></a>Para usar um Desfazer vinculado  
+## <a name="to-use-linked-undo"></a>Para usar um Desfazer vinculado  
   
-1.  Chamar `QueryService` na `SVsLinkedUndoManager` para obter um ponteiro para `IVsLinkedUndoTransactionManager`.  
+1.  Chame `QueryService` na `SVsLinkedUndoManager` para obter um ponteiro para `IVsLinkedUndoTransactionManager`.  
   
-2.  Criar uma unidade de desfazer vinculado pai inicial chamando <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager.OpenLinkedUndo%2A>. Isso define o ponto de partida para um conjunto de pilhas de desfazer sejam agrupados em pilhas de desfazer vinculado. No `OpenLinkedUndo` método, você também precisará especificar se deseja que o desfazer vinculado não estrito ou strict. Desfazer vinculado não estrito comportamento significa que alguns dos documentos com irmãos de desfazer vinculado podem fechar e ainda deixar o outro vinculado desfazer irmãos em suas pilhas. Comportamento de desfazer vinculado estrito Especifica que todas as pilhas de irmão de desfazer vinculado precisam ser desfeita juntos ou nenhum. Adicionar subsequentes vinculado desfazer pilhas chamando [IOleUndoManager::Add](http://msdn.microsoft.com/library/windows/desktop/ms680135) método.  
+2.  Criar a unidade de desfazer vinculado pai inicial chamando <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager.OpenLinkedUndo%2A>. Isso define o ponto de partida para um conjunto de pilhas de desfazer a ser agrupada em pilhas de desfazer vinculado. No `OpenLinkedUndo` método, você também precisará especificar se deseja que o desfazer vinculado ser estrito ou não restrito. Comportamento de desfazer vinculado não estrito significa que alguns dos documentos com irmãos de desfazer vinculado podem fechar e ainda, deixe o outro vinculado desfazer irmãos em suas pilhas. Comportamento estrito desfazer vinculado Especifica que todas as pilhas de irmão desfazer vinculado precisam ser desfeita juntos ou nenhum. Adicionar subsequentes vinculado pilhas de desfazer, chamando [IOleUndoManager::Add](/windows/desktop/api/ocidl/nf-ocidl-ioleundomanager-add) método.  
   
-3.  Chamar <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager.CloseLinkedUndo%2A> para reverter todas as unidades de desfazer vinculado como um.  
+3.  Chamar <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager.CloseLinkedUndo%2A> reverter todas as unidades de desfazer vinculado como um.  
   
     > [!NOTE]
     >  Para implementar o gerenciamento de desfazer vinculado em um editor, adicione o gerenciamento de desfazer. Para obter mais informações sobre como implementar o gerenciamento de desfazer vinculado, consulte [como: implementar o gerenciamento de desfazer](../extensibility/how-to-implement-undo-management.md).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompoundAction>   
- [IOleParentUndoUnit](http://msdn.microsoft.com/library/windows/desktop/ms682151)   
- [IOleUndoUnit](http://msdn.microsoft.com/library/windows/desktop/ms678476)   
+ [IOleParentUndoUnit](/windows/desktop/api/ocidl/nn-ocidl-ioleparentundounit)   
+ [IOleUndoUnit](/windows/desktop/api/ocidl/nn-ocidl-ioleundounit)   
  [Como: implementar o gerenciamento de desfazer](../extensibility/how-to-implement-undo-management.md)

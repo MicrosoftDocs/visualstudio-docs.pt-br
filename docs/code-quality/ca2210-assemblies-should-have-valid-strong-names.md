@@ -1,6 +1,7 @@
 ---
 title: 'CA2210: os assemblies devem ter nomes fortes válidos'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,81 +16,91 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b7421cee4e1b561d4efec7b843d12a7dcf5a67a6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bd22b0e28859ea153466b58f5f27ab458f5aa529
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47858938"
 ---
 # <a name="ca2210-assemblies-should-have-valid-strong-names"></a>CA2210: os assemblies devem ter nomes fortes válidos
+
 |||
 |-|-|
 |NomeDoTipo|AssembliesShouldHaveValidStrongNames|
 |CheckId|CA2210|
 |Categoria|Microsoft.Design|
-|Alteração Significativa|Não separáveis|
+|Alteração Significativa|Não separável|
 
 ## <a name="cause"></a>Causa
- Um assembly não está assinado com um nome forte, não foi possível verificar o nome forte, ou o nome forte não será válido sem as configurações do registro atual do computador.
 
-## <a name="rule-description"></a>Descrição da Regra
- Esta regra recupera e verifica o nome forte de um assembly. Ocorre uma violação se qualquer uma das seguintes opções for verdadeira:
+Um assembly não está assinado com um nome forte, o nome forte não pôde ser verificado ou o nome forte não é válido sem as configurações do registro atual do computador.
 
--   O assembly não tem um nome forte.
+## <a name="rule-description"></a>Descrição da regra
 
--   O assembly foi alterado após a assinatura.
+Esta regra recupera e verifica o nome forte de um assembly. Ocorre uma violação se qualquer uma das seguintes opções for verdadeira:
 
--   O assembly é assinado com atraso.
+- O assembly não tem um nome forte.
 
--   O assembly foi assinado incorretamente ou falha na assinatura.
+- O assembly foi alterado depois de entrar.
 
--   O assembly requer configurações de registro transmitir a verificação. Por exemplo, a ferramenta de nome forte (Sn.exe) foi usada para ignorar a verificação do assembly.
+- O assembly é assinado com atraso.
 
- O nome forte protege clientes do carregamento desconhecido de um assembly adulterado. Os assemblies sem nomes fortes não devem ser implantados fora de cenários muito limitados. Se você compartilhar ou distribuir assemblies não assinados corretamente, o assembly poderá ser adulterado, o Common Language Runtime poderá não carregar o assembly ou o usuário talvez precise desabilitar a verificação em seu computador. Um assembly sem um nome forte tem das seguintes desvantagens:
+- O assembly foi assinado incorretamente ou a assinatura falhou.
 
--   Sua origem não pode ser verificada.
+- O assembly requer configurações do registro para passar pela verificação. Por exemplo, a ferramenta de nome forte (Sn.exe) foi usada para ignorar a verificação para o assembly.
 
--   O common language runtime não é possível avisar os usuários se o conteúdo do assembly tiver sido alterado.
+O nome forte protege clientes do carregamento desconhecido de um assembly adulterado. Os assemblies sem nomes fortes não devem ser implantados fora de cenários muito limitados. Se você compartilhar ou distribuir assemblies não assinados corretamente, o assembly poderá ser adulterado, o Common Language Runtime poderá não carregar o assembly ou o usuário talvez precise desabilitar a verificação em seu computador. Um assembly sem um nome forte tem das seguintes desvantagens:
 
--   Ele não pode ser carregado no cache de assembly global.
+- Não não possível verificar suas origens.
 
- Observe que, para carregar e analisar um assembly assinado com atraso, você deve desabilitar verificação para o assembly.
+- O common language runtime não pode avisar os usuários se o conteúdo do assembly tiver sido alterado.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- **Para criar um arquivo de chave**
+- Ele não pode ser carregado no cache de assembly global.
 
- Use um dos procedimentos a seguir:
+Observe que, para carregar e analisar um assembly assinado com atraso, você deve desabilitar verificação para o assembly.
 
--   Use a ferramenta de Assembly Linker (Al.exe) fornecida pelo [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] SDK.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
 
--   Para o [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] versão 1.0 ou 1.1, use o <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName> ou <xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName> atributo.
+### <a name="create-a-key-file"></a>Criar um arquivo de chave
 
--   Para o [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)], use o `/keyfile` ou `/keycontainer` opção de compilador [/KEYFILE (especificar chave ou par de chaves para assinar um Assembly)](/cpp/build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly) ou [/KEYCONTAINER (especificar um contêiner de chave para assinar um Assembly)](/cpp/build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly) a opção de vinculador em C++).
+Use um dos procedimentos a seguir:
 
- **Para assinar o assembly com um nome forte no Visual Studio**
+- Use a ferramenta de vinculador de Assembly (Al.exe) fornecida pelo SDK do .NET Framework.
 
-1.  Em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], abra sua solução.
+- Para o .NET Framework v 1.0 ou 1.1, use o <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName> ou <xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName> atributo.
 
-2.  Em **Solution Explorer**, clique com o botão direito e, em seguida, clique em **propriedades.**
+- Para o [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)], use o `/keyfile` ou `/keycontainer` opção de compilador [/KEYFILE (especificar chave ou par de chaves para assinar um Assembly)](/cpp/build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly) ou [/KEYCONTAINER (especificar um contêiner de chave para assinar um Assembly)](/cpp/build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly) opção de vinculador em C++).
 
-3.  Clique o **assinatura** guia e selecione o **assinar o assembly** caixa de seleção.
+### <a name="sign-your-assembly-with-a-strong-name-in-visual-studio"></a>Assinar o assembly com um nome forte no Visual Studio
 
-4.  De **escolher um arquivo de chave de nome forte**, selecione **novo**.
+1. No Visual Studio, abra sua solução.
 
-     O **criar chave de nome forte** janela será exibida.
+2. Na **Gerenciador de soluções**, clique em seu projeto e, em seguida, clique em **propriedades.**
 
-5.  Em **nome do arquivo de chave**, digite um nome para a sua chave de nome forte.
+3. Clique o **Signing** guia e, em seguida, selecione o **assinar o assembly** caixa de seleção.
 
-6.  Escolha se deseja proteger a chave com uma senha e, em seguida, clique em **Okey**.
+4. Partir **escolher um arquivo de chave de nome forte**, selecione **New**.
 
-7.  Em **Solution Explorer**, clique com o botão direito e, em seguida, clique em **criar**.
+   O **criar chave de nome forte** janela será exibida.
 
- **Para assinar o assembly com um nome forte fora do Visual Studio**
+5. Na **nome do arquivo de chave**, digite um nome para sua chave de nome forte.
 
--   Use a ferramenta de nome forte (Sn.exe) que é fornecida pelo [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] SDK. Para saber mais, veja [Sn.exe (Ferramenta de Nome Forte)](/dotnet/framework/tools/sn-exe-strong-name-tool).
+6. Escolha se deseja proteger a chave com uma senha e, em seguida, clique em **Okey**.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- Suprimir um aviso dessa regra somente se o assembly é usado em um ambiente em que viole o conteúdo não for um problema.
+7. Na **Gerenciador de soluções**, clique em seu projeto e, em seguida, clique em **Build**.
+
+### <a name="sign-your-assembly-with-a-strong-name-outside-visual-studio"></a>Assinar o assembly com um nome forte fora do Visual Studio
+
+Use a ferramenta de nome forte (Sn.exe) que é fornecida pelo SDK do .NET Framework. Para saber mais, veja [Sn.exe (Ferramenta de Nome Forte)](/dotnet/framework/tools/sn-exe-strong-name-tool).
+
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+
+Suprimir um aviso nessa regra somente se o assembly é usado em um ambiente em que viole o conteúdo não é uma preocupação.
 
 ## <a name="see-also"></a>Consulte também
- <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName> <xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName> [Como: assinar um Assembly com um nome forte](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name) [Sn.exe (ferramenta de nome forte)](/dotnet/framework/tools/sn-exe-strong-name-tool)
+
+- <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName>
+- <xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName>
+- [Como assinar um assembly com um nome forte](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)
+- [Sn.exe (Ferramenta Nome Forte)](/dotnet/framework/tools/sn-exe-strong-name-tool)

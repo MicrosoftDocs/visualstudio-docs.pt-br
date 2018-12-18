@@ -1,7 +1,7 @@
 ---
 title: Exibir cadeias de caracteres em um visualizador de cadeia de caracteres | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2017
+ms.date: 10/10/2018
 ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
@@ -22,48 +22,52 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a3a0575b02422bf83dd560d3eae5724b0a50d3f3
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: eb447a29ea669dbea3a68312884760f8984cc2de
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388550"
 ---
 # <a name="view-strings-in-a-string-visualizer-in-visual-studio"></a>Cadeias de caracteres de exibição em um visualizador de cadeia de caracteres no Visual Studio
-Enquanto você está depurando, você pode abrir um visualizador de cadeia de caracteres em cadeias de caracteres de exibição que são muito longos para exibição em uma janela de dica ou depurador de dados. Em muitos cenários, o visualizador pode ajudar a identificar as cadeias de caracteres malformadas.
 
-Os visualizadores de cadeia de caracteres padrão incluem XML, texto sem formatação, HTML e JSON. Para alguns outros tipos, como objetos WPF que aparecem no depurador do windows, como o **Autos** janela, você também pode abrir visualizadores.
+Enquanto você estiver depurando no Visual Studio, você pode exibir cadeias de caracteres com o Visualizador de cadeia de caracteres internas. O Visualizador de cadeia de caracteres mostra as cadeias de caracteres que são muito longos para uma janela de dica ou depurador de dados. Ele pode também ajudar a identificar cadeias de caracteres malformadas.
+
+O Visualizador de cadeia de caracteres inclui o texto sem formatação, XML, HTML e JSON opções. Você também pode abrir os visualizadores para alguns outros tipos, como objetos do WPF, do **automóveis** ou outras janelas do depurador.
 
 ## <a name="open-a-string-visualizer"></a>Abrir um visualizador de cadeia de caracteres
 
-Para exibir um texto sem formatação, a cadeia de caracteres JSON, HTML ou XML, clique no ícone de lupa ![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "ícone visualizador") ao passar o mouse sobre uma variável que contém um valor de cadeia de caracteres. Você deve estar pausada no depurador para ver o ícone de lupa.
+Para abrir o Visualizador de cadeia de caracteres, você precisa ser interrompido durante a depuração. Passe o mouse sobre uma variável que possui um texto sem formatação, XML, HTML ou JSON valor de cadeia de caracteres e, em seguida, selecione o ícone de lupa ![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "ícone do visualizador").
 
-![Abrir um visualizador de cadeia de caracteres](../debugger/media/dbg-tips-string-visualizers.png "OpenStringVisualizer")
+![Abrir um visualizador de cadeia de caracteres](../debugger/media/dbg-tips-string-visualizers.png "visualizador aberto de cadeia de caracteres")
 
-## <a name="view-string-data"></a>Exibir dados de cadeia de caracteres
+## <a name="view-string-visualizer-data"></a>Exibir dados do Visualizador de cadeia de caracteres
 
-O **expressão** campo no Visualizador de cadeia de caracteres mostra a variável atual ou colocado em cima de expressão no depurador.
+Na janela do Visualizador de cadeia de caracteres, o **expressão** campo mostra a variável ou expressão que você está passando o mouse sobre, e o **valor** campo mostra o valor de cadeia de caracteres.
 
-O **valor** campo mostra o valor de cadeia de caracteres. O Visualizador de texto mostra o texto sem formatação.
+Um espaço em branco **valor** significa que o visualizador escolhido não reconhece a cadeia de caracteres. Por exemplo, o **Visualizador XML** mostra um espaço em branco **valor** para uma cadeia de caracteres de texto sem marcas XML ou uma cadeia de caracteres JSON.
 
-Um espaço em branco **valor** indica que o visualizador específico não é possível reconhecer o tipo de cadeia de caracteres. Por exemplo, o Visualizador XML mostra um espaço em branco **valor** para cadeia de caracteres formatadas como uma cadeia de caracteres de texto simples (com nenhuma marcação XML) ou JSON. Se você precisar exibir uma cadeia de caracteres não reconhecida em um visualizador, use o Visualizador de texto.
+Para exibir cadeias de caracteres que o visualizador escolhido não pode reconhecer, escolha o **Visualizador de texto**. O **Visualizador de texto** mostra texto sem formatação.
 
 ### <a name="view-json-string-data"></a>Exibir dados de cadeia de caracteres JSON
 
-Uma cadeia de caracteres JSON bem formada será semelhante à ilustração a seguir no Visualizador de JSON. JSON malformado pode exibir um ícone de erro (ou em branco, se não reconhecido).
+Uma cadeia de caracteres JSON bem formada é semelhante à ilustração a seguir no visualizador JSON. JSON malformado pode exibir um ícone de erro (ou em branco, se não reconhecido). Para identificar o erro JSON, copie e cole a cadeia de caracteres em uma ferramenta de linting JSON como [JSLint](https://www.jslint.com/).
 
 ![Visualizador de cadeia de caracteres JSON](../debugger/media/dbg-tips-string-visualizer-json.png "Visualizador de cadeia de caracteres JSON")
 
 ### <a name="view-xml-string-data"></a>Exibir dados de cadeia de caracteres XML
 
-Uma cadeia de caracteres XML bem formada será semelhante à ilustração a seguir no Visualizador de XML. XML malformado pode exibir sem as marcas XML (ou o espaço em branco se não reconhecido).
+Uma cadeia de caracteres XML bem formada é semelhante à ilustração a seguir no Visualizador XML. XML mal formado pode exibir sem marcas XML ou em branco se não reconhecido.
 
 ![Visualizador de cadeia de caracteres XML](../debugger/media/dbg-string-visualizers-xml.png "Visualizador de cadeia de caracteres XML")
 
 ### <a name="view-html-string-data"></a>Dados de cadeia de caracteres de exibição HTML
 
-Uma cadeia de caracteres HTML bem formada parece semelhante ao modo de exibição que você veria se a cadeia de caracteres é renderizada em um navegador, conforme mostrado na ilustração a seguir. HTML malformado pode ser exibido como texto sem formatação.
+Uma cadeia de caracteres HTML bem formada aparece como se renderizado em um navegador, conforme mostrado na ilustração a seguir. HTML malformado pode exibir como texto sem formatação.
 
-![Visualizador de cadeia de caracteres HTML](../debugger/media/dbg-string-visualizers-html.png "Visualizador de cadeia de caracteres HTML")
+![Visualizador de cadeia de caracteres HTML](../debugger/media/dbg-string-visualizers-html.png "Visualizador de cadeia de caracteres de HTML")
 
-## <a name="see-also"></a>Consulte também  
- [Criar visualizadores personalizados (c#, Visual Basic)](../debugger/create-custom-visualizers-of-data.md)
+## <a name="see-also"></a>Consulte também
+
+- [Criar visualizadores personalizados (C#, Visual Basic)](../debugger/create-custom-visualizers-of-data.md)
+- [Visualizações de dados no Visual Studio para Mac](/visualstudio/mac/data-visualizations)

@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3a34d9a6f403345bb84f172c416dda62f0109ec2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7f70f685fe8792f698dcc397b2f3fc9ccb6de8dc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49927717"
 ---
 # <a name="idebugprocess3getencavailablestate"></a>IDebugProcess3::GetENCAvailableState
-Esse método obtém o estado atual de editar e continuar o processo. Um fornecedor de porta personalizado deve sempre retornar `E_NOTIMPL`.  
+Esse método obtém o estado atual de editar e continuar do processo. Um fornecedor de porta personalizado deve sempre retornar `E_NOTIMPL`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,16 +41,16 @@ int GetENCAvailableState(
   
 #### <a name="parameters"></a>Parâmetros  
  `pReason`  
- [out] Um valor da [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) enumeração.  
+ [out] Um valor a partir de [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) enumeração.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retornará o código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará o código de erro.  
   
 > [!NOTE]
 >  Um fornecedor de porta personalizado deve sempre retornar `E_NOTIMPL`.  
   
 ## <a name="remarks"></a>Comentários  
- Esse estado pode ser afetado por [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md).  
+ Esse estado pode ser afetado pelas [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   

@@ -1,95 +1,72 @@
 ---
-title: "Benefício WhiteSource Bolt | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 1/11/2017
-Ms.topic: Get-Started-Article
-Description: Learn how to activate the WhiteSource Bolt subscription included with your Visual Studio subscription.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: fe8e731e26765ec17b56383e04362efa25b2f141
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: Benefício WhiteSource Bolt | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 01/11/2017
+ms.topic: Get-Started-Article
+description: Saiba como ativar a assinatura do WhiteSource Bolt incluída em sua assinatura do Visual Studio.
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 981d6a655a203a7d44728fa7d12761fba2918d76
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935766"
 ---
 #  <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>WhiteSource Bolt em assinaturas do Visual Studio
 
-## <a name="overview"></a>Visão geral
+Encontre e corrija vulnerabilidades de software livre e gere relatórios de licença e inventário abrangentes de todos os componentes de software livre em seu build. Algumas assinaturas do Visual Studio incluem seis meses de acesso gratuito.
 
-Encontre e corrija vulnerabilidades de software livre e gere relatórios de licença e inventário abrangentes de todos os componentes de software livre em seu build.  Assinaturas do Visual Studio selecionadas incluem seis meses de acesso gratuito. 
+## <a name="activation-steps"></a>Etapas de ativação
 
-## <a name="eligibility"></a>Qualificação
+1. Para ativar o benefício WhiteSource Bolt, entre em [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 
-| Nível de Assinatura/Programa                                                  | Benefício               | Renovável?                                                         |
-|-------------------------------------------------------------------------------|-----------------------|--------------------------------------------------------------------|
-| Visual Studio Enterprise Standard                                             | Seis meses              | Sim                                                                |
-| Visual Studio Enterprise anual                                               | Seis meses              | Sim                                                                |
-| Visual Studio Enterprise mensal                                              | Não disponível         |                                                                    |
-| Visual Studio Professional Standard                                           | Não disponível         |                                                                    |
-| Visual Studio Professional anual                                             | Não disponível         |                                                                    | 
-| Visual Studio Professional mensal                                            | Não disponível         |                                                                    |
-| Visual Studio Test Pro                                                        | Não disponível         |                                                                    |
-| Plataformas MSDN                                                                | Não disponível         |                                                                    |
-| Visual Studio Dev Essentials                                                  | Não disponível         |                                                                    |
-| Visual Studio Enterprise – NFR<sup>1</sup>                                               | Não disponível         |                                                                    |
-| Visual Studio Enterprise - FTE                                                | Não disponível         |                                                                    |
-| Visual Studio Enterprise ‒ Microsoft Partner Network                          | Seis meses              | Sim                                                                |
-| Visual Studio Professional – Microsoft Partner Network                        | Não disponível         |                                                                    |
-| Visual Studio Enterprise – Imagine (Standard)                                 | Não disponível         |                                                                    |
-| Visual Studio Enterprise – Imagine (Premium)                                  | Não disponível         |                                                                    |
-| Visual Studio Enterprise – BizSpark                                           | Não disponível         |                                                                    |
-| Microsoft Certified Trainer ‒ Software e Serviços                             | Não disponível         |                                                                    |
-| Microsoft Certified Trainer ‒ Desenvolvedor de Software e Serviços                   | Não disponível         |                                                                    |
+2. Localize o bloco WhiteSource Bolt na seção de Ferramentas e clique no link **Obter Código** na parte inferior do bloco do benefício.
+   > [!div class="mx-imgBorder"]
+   > ![Bloco do benefício WhiteSource Bolt](_img/vs-whitesource/vs-whitesource-tile.png)
 
-<sup>1</sup>  *Inclui NFR (Proibida a revenda), MVP (Microsoft Valued Partner), RD (Diretor de Região), VSIP (Visual Studio Industry Partner)*  
+3. Você receberá uma notificação exibindo o código de ativação.  **Copie o código para a área de transferência** e, em seguida, clique em **Ativar**.
+   > [!div class="mx-imgBorder"]
+   > ![Código do benefício WhiteSource](_img/vs-whitesource/vs-whitesource-code.png)
 
-Não tem certeza de qual assinatura você está usando?  Conecte-se a [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) para ver todas as assinaturas atribuídas a seu endereço de email. Se não vir todas as suas assinaturas, talvez você tenha uma ou mais atribuídas a outro endereço de email.  Você precisará entrar com esse endereço de email para ver as assinaturas. 
+4. Na página da Web do WhiteSource, clique no botão **Ativar** ou role para baixo até a seção da página **Ativar sua conta**.
+   > [!div class="mx-imgBorder"]
+   > ![Ativar o benefício WhiteSource](_img/vs-whitesource/vs-whitesource-activate-page-cropped.png)
 
-## <a name="activation-steps"></a>Etapas de Ativação
+5. Na seção da página **Ativar sua conta**, você será guiado para realizar quatro etapas:
 
-1.  Para ativar o benefício WhiteSource Bolt, entre em [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
+   - [Instalar](https://marketplace.visualstudio.com/items?itemName=whitesource.ws-bolt) a extensão WhiteSource Bolt do Microsoft Visual Studio Marketplace. Se você não tem permissões para instalar extensões, confira [Instalar extensões gratuitas para o Azure DevOps Services](/azure/devops/marketplace/install-vsts-extension?view=vsts).
 
-2.  Localize o bloco WhiteSource Bolt na seção de Ferramentas e clique no link **Obter Código** na parte inferior do bloco do benefício.    
 
-    ![Bloco do benefício WhiteSource Bolt](_img\vs-whitesource\vs-whitesource-tile.png)
+~~~
+Click the green **Install** button if you are using Azure DevOps Services, or the **Download** button for Team Foundation Server.  For this example, we will use Azure DevOps Services.
+> [!div class="mx-imgBorder"]
+> ![WhiteSource Benefit Install Extension](_img\vs-whitesource\vs-whitesource-download-install.png)
 
-2.  Você receberá uma notificação exibindo o código de ativação.  **Copie o código para a área de transferência** e, em seguida, clique em **Ativar**. 
+- Next, select the Azure DevOps organization you want to use and click **Confirm**.  (If you have not yet set up Azure DevOps Services, visit the [Benefits](https://my.visualstudio.com/benefits) page and activate your Azure DevOps Services benefit.)
 
-    ![Código do benefício WhiteSource ](_img\vs-whitesource\vs-whitesource-code.png)
+> [!div class="mx-imgBorder"]
+> ![WhiteSource Benefit Confirm Account](_img\vs-whitesource\vs-whitesource-confirm-account.png)
 
-3.  Na página da Web do WhiteSource, clique no botão **Ativar** ou role para baixo até a seção da página **Ativar sua conta**.  
+- You’ll receive a confirmation that the extension is installed and ready to use.  Click **Get started** to return to the WhiteSource Bolt page and continue.
+> [!div class="mx-imgBorder"]
+> ![WhiteSource Benefit Install Complete](_img\vs-whitesource\vs-whitesource-install-complete.png)
+~~~
 
-    ![Ativar o benefício WhiteSource](_img\vs-whitesource\vs-whitesource-activate-page-cropped.png)
+5. Abra o painel do projeto do Azure DevOps, clique no menu **Azure Pipelines** e escolha **WhiteSource Bolt**.
+   > [!div class="mx-imgBorder"]
+   > ![Adicionar extensão do benefício WhiteSource](_img/vs-whitesource/vs-whitesource-installed-cropped.png)
 
-4.  Na seção da página **Ativar sua conta**, você será guiado para realizar quatro etapas:
-    - [Instalar](https://marketplace.visualstudio.com/items?itemName=whitesource.ws-bolt) a extensão WhiteSource Bolt do Microsoft Visual Studio Marketplace. Se você não tem permissões para instalar as extensões, visite [esta página](https://www.visualstudio.com/docs/marketplace/get-vsts-extensions#request).
+6. Cole o código de ativação no bloco do benefício WhiteSource Bolt e clique em **Ativar**. Cada código de ativação pode ser usado para ativar um único projeto.
+   > [!div class="mx-imgBorder"]
+   > ![Código de ativação do benefício WhiteSource](_img/vs-whitesource/vs-whitesource-activate-code-cropped.png)
 
-    Clique no botão verde **Instalar** se você estiver usando o VSTS ou no botão **Baixar** se estiver usando o Team Foundation Server.  Neste exemplo, usaremos o VSTS. 
+7. Agora a ativação está concluída e você terá 180 dias restantes na sua assinatura.
 
-    ![Extensão de instalação do benefício WhiteSource](_img\vs-whitesource\vs-whitesource-download-install.png)
-
-    - Em seguida, selecione a conta do VSTS que você deseja usar e clique em **Confirmar**.  (Se você ainda não tiver configurado o VSTS, visite a página [Benefícios](https://my.visualstudio.com/benefits) e ative o benefício VSTS.)
-
-    ![Confirmar conta do benefício WhiteSource](_img\vs-whitesource\vs-whitesource-confirm-account.png)
-
-    - Você receberá uma confirmação de que a extensão está instalada e pronta para ser usada.  Clique em **Começar a usar** para retornar à página do WhiteSource Bolt e continuar.  
-
-    ![Instalação do benefício WhiteSource concluída](_img\vs-whitesource\vs-whitesource-install-complete.png)
-
-5.  Abra o painel do projeto do VSTS (Visual Studio Team Services), clique no menu **Build e lançamento** e escolha **WhiteSource Bolt**.
-
-    ![Adicionar extensão do benefício WhiteSource](_img\vs-whitesource\vs-whitesource-installed-cropped.png)
-
-6. Cole o código de ativação no bloco do benefício WhiteSource Bolt e clique em **Ativar**. Cada código de ativação pode ser usado para ativar um único projeto. 
-
-    ![Código de ativação do benefício WhiteSource](_img\vs-whitesource\vs-whitesource-activate-code-cropped.png)
-
-7.  Agora a ativação está concluída e você terá 180 dias restantes na sua assinatura. 
-
-8.  Será necessário adicionar a extensão do WhiteSource Bolt como uma das etapas de build.  Há um vídeo disponível na [página do WhiteSource Bolt](https://www.whitesourcesoftware.com/whitesource_bolt_visualstudio_2017/#activate) que mostra como fazer isso.  
+8. Será necessário adicionar a extensão do WhiteSource Bolt como uma das etapas de build.  Há um vídeo disponível na [página do WhiteSource Bolt](https://www.whitesourcesoftware.com/whitesource_bolt_visualstudio_2017/#activate) que mostra como fazer isso.
 
 9. Depois de executar o build, os seguintes relatórios e painéis abrangentes serão gerados automaticamente:
     - Painel de vulnerabilidades de segurança
@@ -98,11 +75,23 @@ Não tem certeza de qual assinatura você está usando?  Conecte-se a [https://m
     - Painel de riscos e conformidade de licença
     - Relatório de inventário
 
-## <a name="faq"></a>Perguntas Frequentes
-*Verifique aqui se há atualizações*
+## <a name="eligibility"></a>Qualificação
+
+| Nível de Assinatura                                                 |     Canais                                            | Benefício                                                          | Renovável?    |
+|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
+| Visual Studio Enterprise (Padrão, nuvem anual)   | VL, Azure, Retail, NFR<sup>1</sup> selecionado | Seis meses       |  Sim          |
+| Visual Studio Professional (Padrão, nuvem anual) | VL, Azure, Retail                                       | Indisponível                                                           |NA         |
+| Visual Studio Test Professional (Padrão)                         | VL, Retail                                              | Não disponível                                             |  NA         |
+| Plataformas MSDN (Padrão)                                          | VL, Retail                                              | Não disponível                                              | NA         |
+| Visual Studio Dev Essentials | NA  | Não disponível |NA |
+| Visual Studio Enterprise, Visual Studio Professional (nuvem mensal) | Azure                                       | Não disponível                                                           |NA|
+
+<sup>1</sup>  *Inclui: Microsoft Partner Network (Enterprise).  Exclui: NFR (Proibida a Revenda), VSIP (Visual Studio Industry Partner), FTE, MCT Software & Services Developer, BizSpark, Imagine, MVP (Microsoft Valued Professional), RD (diretor regional), MCT Software & Services, Microsoft Partner Network (Professional).*
+
+Não tem certeza de qual assinatura você está usando?  Conecte-se ao [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) para ver todas as assinaturas atribuídas ao seu endereço de email. Se não vir todas as suas assinaturas, talvez você tenha uma ou mais atribuídas a outro endereço de email.  Você precisará entrar com esse endereço de email para ver as assinaturas.
 
 ## <a name="support-resources"></a>Recursos de suporte
--  Precisa de ajuda com o WhiteSource Bolt?  Converse com um representante do WhiteSource Bolt ao vivo em https://www.whitesourcesoftware.com/vse_whitesource_bolt/ 
--  Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://www.visualstudio.com/subscriptions/support/) do Visual Studio.
--  Tem alguma pergunta sobre o IDE do Visual Studio, o Visual Studio Team Services ou outros produtos ou serviços do Visual Studio?  Acesse o [Suporte do Visual Studio](https://www.visualstudio.com/support/). 
 
+-  Precisa de ajuda com o WhiteSource Bolt?  Converse com um representante do Bolt WhiteSource em https://www.whitesourcesoftware.com/vse_whitesource_bolt/
+-  Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio.
+-  Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Acesse o [Suporte do Visual Studio](https://visualstudio.microsoft.com/support/).

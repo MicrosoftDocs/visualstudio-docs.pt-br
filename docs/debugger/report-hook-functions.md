@@ -25,29 +25,30 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 562944404d3e02a2e5768fcd74c67302475e6190
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 97d39a171d812915a1cf3c1c6450c73098067949
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44284192"
 ---
 # <a name="report-hook-functions"></a>Funções de gancho do relatório
-Uma função de gancho de relatório, instalada usando [crtsetreporthook](/cpp/c-runtime-library/reference/crtsetreporthook), é chamado sempre [crtdbgreport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) gera um relatório de depuração. Você pode usá-la, entre outras coisas, para filtrar relatórios com foco em tipos de alocações específicos. Uma função de gancho de relatório deve ter um protótipo como o seguinte:  
+Uma função de gancho de relatório, instalada usando [crtsetreporthook](/cpp/c-runtime-library/reference/crtsetreporthook), é chamado toda vez [crtdbgreport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) gera um relatório de depuração. Você pode usá-la, entre outras coisas, para filtrar relatórios com foco em tipos de alocações específicos. Uma função de gancho de relatório deve ter um protótipo como o seguinte:  
   
-```  
+```cpp
 int YourReportHook(int nRptType, char *szMsg, int *retVal);  
 ```  
   
- O ponteiro transmitido **crtsetreporthook** é do tipo **crt_report_hook**, conforme definido em CRTDBG. H:  
+ O ponteiro que você passa para **crtsetreporthook** é do tipo **crt_report_hook**, conforme definido em CRTDBG. H:  
   
-```  
+```cpp
 typedef int (__cdecl *_CRT_REPORT_HOOK)(int, char *, int *);  
 ```  
   
- Quando a biblioteca de tempo de execução chama a função de gancho de *nRptType* argumento contém a categoria do relatório (**_CRT_WARN**, **_CRT_ERROR**, ou **_CRT Assert**), *szMsg* contém um ponteiro para uma cadeia de caracteres de mensagem de relatório totalmente montado e *retVal* Especifica se `_CrtDbgReport` devem continuar em execução normal Depois de gerar o relatório ou iniciar o depurador. (Um *retVal* valor zero continua a execução, um valor de 1 inicia o depurador.)  
+ Quando a biblioteca de tempo de execução chama sua função de gancho, o *nRptType* argumento contém a categoria do relatório (**_CRT_WARN**, **crt_error**, ou **_CRT Macros Assert**), *szMsg* contém um ponteiro para uma cadeia de caracteres de mensagem de relatório completamente montado, e *retVal* Especifica se `_CrtDbgReport` devem continuar em execução normal Depois de gerar o relatório ou inicie o depurador. (Um *retVal* valor igual a zero continua a execução, um valor de 1 inicia o depurador.)  
   
- Se o gancho trata a mensagem em questão completamente, de forma que nenhum relatório adicional é necessária, ele deverá retornar **TRUE**. Se ele retorna **FALSE**, `_CrtDbgReport` relatará a mensagem normalmente.  
+ Se o gancho tratar a mensagem em questão completamente, para que nenhum relatório adicional seja necessária, ele deverá retornar **verdadeira**. Se ele retornar **falsos**, `_CrtDbgReport` relatará a mensagem normalmente.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gravação da função de gancho de depuração](../debugger/debug-hook-function-writing.md)   
- [Exemplo de crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167)
+ [Exemplo de crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2)

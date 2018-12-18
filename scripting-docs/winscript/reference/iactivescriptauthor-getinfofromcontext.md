@@ -1,11 +1,11 @@
 ---
 title: IActiveScriptAuthor::GetInfoFromContext | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IActiveScriptAuthor.GetInfoFromContext
@@ -14,18 +14,19 @@ apilocation:
 helpviewer_keywords:
 - IActiveScriptAuthor::GetInfoFromContext
 ms.assetid: 9891b095-6eb5-4473-87c0-c2e5cd2afc1a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 27c13dbe51bb1150554275b5fbeacd00be2e445f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 3465552b99b2185ea475c5479f044ee7b27704ae
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281241"
 ---
 # <a name="iactivescriptauthorgetinfofromcontext"></a>IActiveScriptAuthor::GetInfoFromContext
-Retorna informações e as posições de âncora para um determinado caractere de tipo em um bloco de código. Isso fornece informações de membro, IntelliSense, listas globais e dicas de parâmetro.  
+Retorna informações e as posições de âncora para um determinado caractere de tipo em um bloco de código. Isso fornece informações de membro IntelliSense, listas globais e dicas de parâmetro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,10 +47,10 @@ HRESULT GetInfoFromContext(
   
 #### <a name="parameters"></a>Parâmetros  
  `pszCode`  
- [in] O endereço da cadeia de bloco de código usado para gerar os resultados de informações.  
+ [in] O endereço da cadeia de caracteres de bloco de código usado para gerar os resultados de informações.  
   
  `cchCode`  
- [in] O comprimento do bloco de código.  
+ [in] O tamanho do bloco de código.  
   
  `ichCurrentPosition`  
  [in] Posição do caractere em relação ao início do bloco.  
@@ -62,10 +63,10 @@ HRESULT GetInfoFromContext(
 |SCRIPT_CMPL_NOLIST|0x0000|Nenhuma lista.|  
 |SCRIPT_CMPL_MEMBERLIST|0x0001|Lista de membros.|  
 |SCRIPT_CMPL_ENUMLIST|0x0002|Lista de enumeração.|  
-|SCRIPT_CMPL_PARAMLIST|0x0004|Lista de parâmetros do método de chamada.|  
+|SCRIPT_CMPL_PARAMLIST|0x0004|Chame a lista de parâmetros de método.|  
 |SCRIPT_CMPL_GLOBALLIST|0x0008|Lista global.|  
   
- O tipo SCRIPT_CMPL_GLOBALLIST é tratado como um item de preenchimento padrão que pode ser combinado usando o operador ou com outros itens de conclusão. O script de criação mecanismo primeiro tenta preencher informações de tipo para outros itens de lista de conclusão. Se isso falhar, o mecanismo preenche para SCRIPT_CMPL_GLOBALLIST.  
+ O tipo SCRIPT_CMPL_GLOBALLIST é tratado como um item de preenchimento padrão que pode ser combinado usando o operador OR com outros itens de conclusão. O script do mecanismo de criação primeiro tenta preencher as informações de tipo para outros itens de lista de conclusão. Se isso falhar, o mecanismo preenche para SCRIPT_CMPL_GLOBALLIST.  
   
  `pdwListTypesProvided`  
  [out] O tipo de lista fornecida.  
@@ -73,15 +74,15 @@ HRESULT GetInfoFromContext(
  `pichListAnchorPosition`  
  [out] O índice inicial do contexto que contém a posição atual. O índice inicial é relativo ao início do bloco.  
   
- Esse campo é preenchido somente quando `dwListTypesRequested` inclui SCRIPT_CMPL_MEMBERLIST, SCRIPT_CMPL_ENUMLIST ou SCRIPT_CMPL_GLOBALLIST. Para outros tipos de lista solicitada, o resultado é indefinido.  
+ Esse campo é preenchido somente quando `dwListTypesRequested` inclui SCRIPT_CMPL_MEMBERLIST, SCRIPT_CMPL_ENUMLIST ou SCRIPT_CMPL_GLOBALLIST. Para outros tipos de lista solicitada, o resultado será indefinido.  
   
  `pichFuncAnchorPosition`  
  [out] O índice de início da chamada de função que contém a posição atual. O índice inicial é relativo ao início do bloco.  
   
- Esse campo é preenchido somente quando o contexto que contém a posição atual é uma chamada de função e quando `dwListTypesRequested` inclui SCRIPT_CMPL_PARAMLIST. Caso contrário, o resultado é indefinido.  
+ Esse campo é preenchido somente quando o contexto que contém a posição atual é uma chamada de função e quando `dwListTypesRequested` inclui SCRIPT_CMPL_PARAMLIST. Caso contrário, o resultado será indefinido.  
   
  `pmemid`  
- [out] MEMBERID da função, conforme definido por um tipo no `IProvideMultipleClassInfo``ppunk` parâmetro out.  
+ [out] O MEMBERID da função, conforme definido por um tipo no `IProvideMultipleClassInfo``ppunk` parâmetro out.  
   
  Esse campo é preenchido somente quando `dwListTypesRequested` inclui SCRIPT_CMPL_PARAMLIST.  
   
@@ -103,5 +104,5 @@ HRESULT GetInfoFromContext(
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Interface IProvideMultipleClassInfo](https://msdn.microsoft.com/library/microsoft.visualstudio.ole.interop.iprovidemultipleclassinfo.aspx)   
+ [Interface IProvideMultipleClassInfo](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.iprovidemultipleclassinfo)   
  [IActiveScriptAuthor Interface](../../winscript/reference/iactivescriptauthor-interface.md)

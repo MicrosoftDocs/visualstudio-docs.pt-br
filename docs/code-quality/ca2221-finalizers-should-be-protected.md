@@ -1,6 +1,7 @@
 ---
 title: 'CA2221: os finalizadores devem ser protegidos'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,30 +16,32 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cf4ee1aef9ef31dccad5a9728244aeaf79f9e6a4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1ac3f9116366920f833fe8d907181473d6fda106
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551278"
 ---
 # <a name="ca2221-finalizers-should-be-protected"></a>CA2221: os finalizadores devem ser protegidos
+
 |||
 |-|-|
 |NomeDoTipo|FinalizersShouldBeProtected|
 |CheckId|CA2221|
 |Categoria|Microsoft.Usage|
-|Alteração Significativa|Não separáveis|
+|Alteração Significativa|Não separável|
 
 ## <a name="cause"></a>Causa
- Um tipo público implementa um finalizador que não especifica a família de acesso (protegido).
+ Um tipo público implementa um finalizador que não especificam o acesso da família (protegido).
 
-## <a name="rule-description"></a>Descrição da Regra
- Os finalizadores deve usar o modificador de acesso da família. Essa regra é aplicada, os compiladores c#, Visual Basic e Visual C++.
+## <a name="rule-description"></a>Descrição da regra
+ Os finalizadores deve usar o modificador de acesso da família. Essa regra é imposta pelos compiladores c#, Visual Basic e Visual C++.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, altere o finalizador para que sejam acessíveis a família.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, altere o finalizador para ser acessível de família.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
  Não suprima um aviso nessa regra.
 
 ## <a name="example"></a>Exemplo
@@ -78,4 +81,5 @@ ms.lasthandoff: 04/19/2018
 ```
 
 ## <a name="see-also"></a>Consulte também
- [Padrão de descarte](/dotnet/standard/design-guidelines/dispose-pattern)
+
+- [Padrão de descarte](/dotnet/standard/design-guidelines/dispose-pattern)

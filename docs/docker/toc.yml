@@ -1,0 +1,19 @@
+items:
+- name: Ferramentas do Visual Studio para Docker
+  href: /dotnet/standard/containerized-lifecycle-architecture/design-develop-containerized-apps/visual-studio-tools-for-docker?toc=/visualstudio/docker/toc.json&bc=/visualstudio/docker/breadcrumb/toc.json
+  items:
+  - name: Depuração de aplicativos em um contêiner local do Docker
+    href: ../docker/vs-azure-tools-docker-edit-and-refresh.md
+  - name: Implantar um contêiner ASP.NET em um registro de contêiner usando o Visual Studio
+    href: ../docker/vs-azure-tools-docker-hosting-web-apps-in-docker.md
+  - name: Configurar um host do Docker com o VirtualBox
+    href: ../docker/vs-azure-tools-docker-setup.md
+  - name: Solucionar problemas de desenvolvimento do Visual Studio 2017 com o Docker
+    href: ../docker/vs-azure-tools-docker-troubleshooting-docker-errors.md
+  expanded: true
+ms.openlocfilehash: d5d996815f1991edf0df1b4c0e3a694eae865bed
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51762601"

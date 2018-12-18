@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 288cea5fff45306d819cfe3b9269e9768e66cb89
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6606c239ca8db24d1e6794715d2e0a9388d0db6b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854540"
 ---
 # <a name="idebugbreakpointunboundevent2getbreakpoint"></a>IDebugBreakpointUnboundEvent2::GetBreakpoint
 Obtém o ponto de interrupção não vinculado.  
@@ -43,10 +44,10 @@ int GetBreakpoint(
  [out] Retorna um [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) objeto que representa o ponto de interrupção não vinculado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CBreakpointUnboundDebugEventBase** objeto que expõe o [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md) interface.  
+ O exemplo a seguir mostra como implementar esse método para um **CBreakpointUnboundDebugEventBase** objeto que expõe a [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md) interface.  
   
 ```cpp  
 STDMETHODIMP CBreakpointUnboundDebugEventBase::GetBreakpoint(  

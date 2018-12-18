@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c5836069aacb80a3d917a8e272150a477589c3ef
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f9c5e1fc300a150b15acc48f12dc3b8c6c01e277
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882622"
 ---
 # <a name="idebugexpressionevaluatorsetlocale"></a>IDebugExpressionEvaluator::SetLocale
-Esse método define o idioma a ser usado para criar resultados de impressão.  
+Esse método define o idioma a ser usado para criar resultados imprimíveis.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,10 +44,10 @@ int SetLocale(
  [in] O identificador de idioma.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método pode ser chamado várias vezes enquanto o avaliador de expressão (EE) é carregado para que o EE deve ser capaz de alternar os idiomas em tempo real. O EE usa este código de idioma para retornar mensagens de erro e cadeias de caracteres no idioma adequado.  
+ Esse método pode ser chamado várias vezes enquanto o avaliador de expressão (EE) é carregado, portanto, o EE deve ser capaz de alternar os idiomas em tempo real. O EE usa essa localidade para retornar cadeias de caracteres e mensagens de erro no idioma apropriado.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

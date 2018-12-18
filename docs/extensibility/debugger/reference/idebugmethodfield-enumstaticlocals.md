@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 761e696cd774e0414b58c9d2a9f1482d298489f6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 35474156ec43fb9e1e44117e44430b27a6e1b383
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905084"
 ---
 # <a name="idebugmethodfieldenumstaticlocals"></a>IDebugMethodField::EnumStaticLocals
 Cria um enumerador para variáveis locais estáticas do método.  
@@ -40,13 +41,13 @@ int EnumStaticLocals(
   
 #### <a name="parameters"></a>Parâmetros  
  `ppLocals`  
- [out] Retorna um [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objeto que representa a lista de locais estáticos. Retorna um valor nulo se não houver nenhum locais estáticos.  
+ [out] Retorna um [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objeto que representa a lista de variáveis locais estáticas. Retorna um valor nulo se não houver nenhum estáticos locais.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK ou retornará S_FALSE se não houver nenhum locais estáticos. Caso contrário, retornará um código de erro.  
+ Se for bem-sucedido, Retorna S_OK ou retornará S_FALSE se não houver nenhum estáticos locais. Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Cada elemento é um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto representando diferentes tipos de variáveis locais estáticas. Chamar o [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) método em cada objeto para determinar exatamente quais tipos de locais estáticos que o objeto representa.  
+ Cada elemento é um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto que representa os diferentes tipos de variáveis locais estáticas. Chame o [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) método em cada objeto para determinar exatamente quais tipos de local estático que o objeto representa.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   

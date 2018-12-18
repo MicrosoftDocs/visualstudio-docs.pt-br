@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fc844885a7efa1784b985eb3901de80a47c5efe4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b4c62a12c54a716a02146190b91f1f95365333b9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917122"
 ---
 # <a name="idebugexceptionevent2getexception"></a>IDebugExceptionEvent2::GetException
 Obtém uma descrição detalhada da exceção que disparou este evento.  
@@ -40,13 +41,13 @@ int GetException(
   
 #### <a name="parameters"></a>Parâmetros  
  `pExceptionInfo`  
- [out no] Um [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) estrutura que é preenchida com a descrição da exceção.  
+ [no, out] Uma [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) estrutura será preenchida com a descrição da exceção.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- [C++] O chamador é responsável pela liberação de cadeias de caracteres no [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) estrutura, bem como liberar o [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objeto na estrutura.  
+ [C++] O chamador é responsável por liberar quaisquer cadeias de caracteres na [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) estrutura, bem como liberar a [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objeto na estrutura.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)   

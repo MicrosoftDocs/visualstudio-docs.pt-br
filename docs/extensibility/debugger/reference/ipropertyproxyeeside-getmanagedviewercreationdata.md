@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 47ae1c724542d628e7f3c047efd8ed2da1f6f1f8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cd8da39b89311939017698b4095321df450112e6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49821364"
 ---
 # <a name="ipropertyproxyeesidegetmanagedviewercreationdata"></a>IPropertyProxyEESide::GetManagedViewerCreationData
-Recupera informações sobre o visualizador para esse tipo de propriedade para criar uma instância desse visualizador.  
+Recupera informações sobre o visualizador para esse tipo de propriedade para instanciar esse visualizador.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,10 +54,10 @@ int GetManagedViewerCreationData(
  [out] Retorna o nome do assembly que contém este objeto.  
   
  `assemBytes`  
- [out] Retorna um [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) objeto que contém os bytes de assembly do objeto (Este é um valor nulo se nenhuma bytes estão disponíveis).  
+ [out] Retorna um [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) objeto que contém os bytes de assembly do objeto (esse é um valor nulo se não há bytes estão disponíveis).  
   
  `assemPdb`  
- [out] Retorna um `IEEDataStorage` objeto que contém o símbolo de armazena informações para esse objeto (Este é um valor nulo se nenhum armazenamento de símbolo está disponível).  
+ [out] Retorna um `IEEDataStorage` objeto que contém o símbolo de armazena informações para esse objeto (esse é um valor nulo se nenhum repositório de símbolos está disponível).  
   
  `className`  
  [out] Retorna o nome da classe que contém este objeto.  
@@ -65,10 +66,10 @@ int GetManagedViewerCreationData(
  [out] Retorna um valor da [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) enumeração que indica o local do assembly.  
   
  `replacementOk`  
- [out] Retorna zero (`TRUE`) se o valor do objeto pode ser alterado; zero (`FALSE`) se o objeto é somente leitura.  
+ [out] Retorna não zero (`TRUE`) se o valor desse objeto pode ser alterado; zero (`FALSE`) se o objeto é somente leitura.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  Esse método é usado por visualizadores de tipo para instanciar um visualizador gerenciado.  

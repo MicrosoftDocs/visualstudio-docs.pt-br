@@ -16,18 +16,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cef7e1e09d81c4ff0fb28198ff9a4d68f1e9c501
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 050d9b060fe9976dc9262b2878f570abbdc9bb42
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636896"
 ---
 # <a name="locationfieldmruprefix-element-visual-studio-templates"></a>Elemento LocationFieldMRUPrefix (modelos do Visual Studio)
-Especifica os caminhos usados recentemente (MRU) a **novo projeto** e **Adicionar Novo Item** caixa de diálogo.  
+Especifica os caminhos usados mais recentemente (MRU) a **novo projeto** e **Adicionar Novo Item** caixa de diálogo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <LocationFieldMRUPrefix> ... </LocationFieldMRUPrefix>  
 ```  
   
@@ -44,7 +45,7 @@ Especifica os caminhos usados recentemente (MRU) a **novo projeto** e **Adiciona
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Categoriza o modelo e define como ele exibe em um a **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo.|  
   
 ## <a name="remarks"></a>Comentários  
  Esse elemento só deve ser usado para modelos produzidos por meio de [!INCLUDE[vsipprvsip](../extensibility/includes/vsipprvsip_md.md)].  

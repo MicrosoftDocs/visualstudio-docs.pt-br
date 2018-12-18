@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31480261"
 ---
 # <a name="symbol-locations"></a>Locais de símbolos
 A maioria dos símbolos tem um local definido dentro do arquivo de imagem. Local do símbolo é especificado com um valor da [enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) enumeração. O símbolo pode oferecer suporte a propriedades adicionais, dependendo de seu local.  

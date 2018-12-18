@@ -20,11 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d018b26f2df32b9e3cc1e3fae65ec8b3d3394806
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5f4f886e6c6d1ec09700eefa3c7289c9cb918ecc
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39155042"
 ---
 # <a name="otherwise-element-msbuild"></a>Elemento Otherwise (MSBuild)
 Especifica o bloco de código a executar se e somente se as condições de todos os elementos `When` forem avaliadas como `false`.  
@@ -40,7 +41,7 @@ Especifica o bloco de código a executar se e somente se as condições de todos
 
 ## <a name="syntax"></a>Sintaxe  
 
-```  
+```xml  
 <Otherwise>  
     <PropertyGroup>... </PropertyGroup>  
     <ItemGroup>... </ItemGroup>  
@@ -71,7 +72,7 @@ Especifica o bloco de código a executar se e somente se as condições de todos
 ## <a name="remarks"></a>Comentários  
  Pode haver apenas um elemento `Otherwise` em um elemento `Choose` e ele deve ser o último elemento.  
 
- Os elementos `Choose`, `When` e `Otherwise` são usados juntos para fornecer uma maneira de selecionar uma seção de código para executar diversas alternativas possíveis. Para obter mais informações, confira [ Constructos condicionais](../msbuild/msbuild-conditional-constructs.md).  
+ Os elementos `Choose`, `When` e `Otherwise` são usados juntos para fornecer uma maneira de selecionar uma seção de código para executar diversas alternativas possíveis. Para saber mais, confira [Constructos condicionais](../msbuild/msbuild-conditional-constructs.md).  
 
 ## <a name="example"></a>Exemplo  
  O seguinte projeto usa o `Choose` elemento para selecionar o conjunto de valores de propriedades no elemento `When` a ser definido. Se os `Condition` atributos de ambos `When` elementos são avaliadas como `false`, os valores de propriedades no elemento `Otherwise` são definidos.  
@@ -123,4 +124,4 @@ Especifica o bloco de código a executar se e somente se as condições de todos
 
 ## <a name="see-also"></a>Consulte também  
  [Constructos condicionais](../msbuild/msbuild-conditional-constructs.md)   
- [Referência do esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)
+ [Referência de esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31128839"
 ---
 # <a name="registering-vspackages"></a>Registrando VSPackages
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] se baseia em arquivos de .pkgdef para descrever e localizar um VSPackage. Um arquivo .pkgdef contém todas as informações de registro que outra forma seriam adicionadas ao registro do sistema. VSPackages gerenciados são registrados por adicionar atributos ao código-fonte e, em seguida, executar o [CreatePkgDef utilitário](../../extensibility/internals/createpkgdef-utility.md) no assembly resultante para gerar um arquivo de .pkgdef.  

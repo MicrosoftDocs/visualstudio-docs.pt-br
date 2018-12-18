@@ -1,16 +1,16 @@
 ---
 title: Interface IRemoteDebugApplication | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IRemoteDebugApplication interface
 ms.assetid: 96bf2a3f-049f-46ba-86ad-57fc184343a2
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +19,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24729596"
 ---
 # <a name="iremotedebugapplication-interface"></a>Interface IRemoteDebugApplication
 Representa um aplicativo em execução. Ele não precisa corresponder a um processo do sistema operacional. Normalmente, um depurador tem como alvo um aplicativo para depuração. Normalmente, o Gerenciador de depuração do processo implementa o objeto de aplicativo.  

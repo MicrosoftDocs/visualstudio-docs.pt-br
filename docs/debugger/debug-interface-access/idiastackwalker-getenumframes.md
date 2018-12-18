@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a86af24d863982a527a5f3bd2fae58b4dbc6d431
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f4c7d8d30dee1d9c0a058177ad54aab864cee28d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836146"
 ---
 # <a name="idiastackwalkergetenumframes"></a>IDiaStackWalker::getEnumFrames
 Recupera um enumerador de quadro de pilha para x86 de plataformas.  
@@ -40,10 +41,10 @@ HRESULT getEnumFrames(
  [out] Retorna um [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) objeto que contém uma lista de [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) objetos.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter uma lista de quadro de pilha em qualquer outra plataforma, chame o [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) método.  
+ Para obter uma lista de quadros de pilha em nenhuma outra plataforma, chame o [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) método.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaStackWalker](../../debugger/debug-interface-access/idiastackwalker.md)   

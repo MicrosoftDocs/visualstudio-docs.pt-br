@@ -1,0 +1,1 @@
+Gerenciamento do Ciclo de Vida do Aplicativo no Visual Studio

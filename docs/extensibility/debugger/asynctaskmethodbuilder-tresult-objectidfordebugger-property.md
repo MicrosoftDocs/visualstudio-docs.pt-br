@@ -13,18 +13,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 85d5a5816bf26b7de704cfe1c1462c89918b7dc2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0f60f7cf4cb524a473b89528c7b7077459d140a9
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153644"
 ---
 # <a name="asynctaskmethodbuilderlttresultgtobjectidfordebugger-property"></a>AsyncTaskMethodBuilder&lt;TResult&gt;. Propriedade ObjectIdForDebugger
-Obtém um objeto que pode ser usado para identificar com exclusividade este construtor para o depurador.  
+Obtém um objeto que pode ser usado para identificar exclusivamente esse construtor para o depurador.  
   
  **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
   
- **Assembly:** mscorlib (em mscorlib.dll)  
+ **Assembly:** mscorlib (em mscorlib. dll)  
   
  Porque você não pode acessar esse membro interno do .NET Framework, a sintaxe a seguir é fornecida em comum Intermediate Language (CIL).  
   

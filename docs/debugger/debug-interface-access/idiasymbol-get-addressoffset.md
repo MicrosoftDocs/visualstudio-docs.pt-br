@@ -1,5 +1,5 @@
 ---
-title: ': Get_addressoffset | Microsoft Docs'
+title: 'Idiasymbol:: Get_addressoffset | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d00838fc3f76221293241656743bbf5a2a7f4d26
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 5dba9f8b40bd3246dd07ec2fae76ad6aa8b9c604
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917798"
 ---
 # <a name="idiasymbolgetaddressoffset"></a>IDiaSymbol::get_addressOffset
-Recupera o parte do deslocamento de um local de endereço. Usado quando o [enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) é definido como `LocIsStatic`.  
+Recupera a parte do deslocamento de um local de endereço. Usado quando o [enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) é definido como `LocIsStatic`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,29 +34,29 @@ HRESULT get_addressOffset (
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Retorna a parte de deslocamento de um local de endereço.  
+ [out] Retorna a parte do deslocamento de um local de endereço.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
   
 ## <a name="remarks"></a>Comentários  
- Para membros estáticos localizados em uma DLL externa, o deslocamento retornado por esse método pode ser 0, como esse método se baseia na obtenção do endereço virtual do membro. Endereços virtuais são válidos apenas se o [: Put_loadaddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) método o [IDiaSession](../../debugger/debug-interface-access/idiasession.md) interface foi chamada com um parâmetro diferente de zero, especificando o endereço de carregamento da DLL.  
+ Para membros estáticos localizados em uma DLL externa, o deslocamento retornado por esse método pode ser 0, como esse método depende na obtenção do endereço virtual do membro. Endereços virtuais são válidos somente se o [idiasession:: Put_loadaddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) método o [IDiaSession](../../debugger/debug-interface-access/idiasession.md) interface foi chamado com um parâmetro diferente de zero, especificando o endereço de carregamento da DLL.  
   
- Para obter a parte da seção de um endereço, chame o [: Get_addresssection](../../debugger/debug-interface-access/idiasymbol-get-addresssection.md) método.  
+ Para obter a parte da seção de um endereço, chame o [idiasymbol:: Get_addresssection](../../debugger/debug-interface-access/idiasymbol-get-addresssection.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Requisito|Descrição|  
 |-----------------|-----------------|  
 |Cabeçalho:|dia2.h|  
-|Versão:|Versão 7.0 do DIA SDK|  
+|Versão:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md)   
- [: Get_addresssection](../../debugger/debug-interface-access/idiasymbol-get-addresssection.md)   
- [: Put_loadaddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md)   
+ [Idiasymbol:: Get_addresssection](../../debugger/debug-interface-access/idiasymbol-get-addresssection.md)   
+ [Idiasession:: Put_loadaddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

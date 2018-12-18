@@ -1,5 +1,5 @@
 ---
-title: Associar um controlador de teste ou agente de teste a um adaptador de rede no Visual Studio | Microsoft Docs
+title: Associar um controlador de teste ou agente de teste a um adaptador de rede no Visual Studio
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,14 @@ ms.assetid: 7eb9290a-f9f6-4e41-9caa-796fcfaf0610
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 79aef9a4ad15f364df00dfd4ee6c7f1d7925c281
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 222fe589a0d4282531b9ee73d476678d54747e7b
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896039"
 ---
 # <a name="how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter"></a>Como associar um controlador de teste ou agente de teste a um adaptador de rede
 
@@ -29,7 +31,9 @@ Se um computador com o software de controlador de teste ou agente de teste insta
 >
 > Esse erro pode ser causado pela instalação do controlador de teste em um computador que tenha mais de um adaptador de rede. Também é possível instalar agentes com êxito e não ver esse problema até tentar executar um teste.
 
-## <a name="binding-a-test-controller-to-a-specific-network-adapter"></a>Associando um controlador de teste a um adaptador de rede específico
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
+## <a name="bind-a-test-controller-to-a-specific-network-adapter"></a>Associar um controlador de teste a um adaptador de rede específico
 
 ### <a name="to-obtain-the-ip-addresses-of-the-network-adapters"></a>Para obter os endereços IP dos adaptadores de rede
 
@@ -129,7 +133,7 @@ Se um computador com o software de controlador de teste ou agente de teste insta
 ## <a name="see-also"></a>Consulte também
 
 - [Instalar e configurar agentes de teste](../test/lab-management/install-configure-test-agents.md)
-- [Modificando configurações de registro em log de teste de carga](../test/modify-load-test-logging-settings.md)
-- [Configurando portas para Test Controllers e Test Agents](../test/configure-ports-for-test-controllers-and-test-agents.md)
+- [Modificar configurações de registro em log de testes de carga](../test/modify-load-test-logging-settings.md)
+- [Configurar portas para controladores e agentes de teste](../test/configure-ports-for-test-controllers-and-test-agents.md)
 - [Como especificar o tamanho máximo do arquivo de log](../test/how-to-specify-the-maximum-size-for-the-log-file.md)
-- [Como especificar períodos de tempo limite para Test Controllers e Test Agents](../test/how-to-specify-timeout-periods-for-test-controllers-and-test-agents.md)
+- [Como especificar períodos de tempo limite para test controllers e test agents](../test/how-to-specify-timeout-periods-for-test-controllers-and-test-agents.md)

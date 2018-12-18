@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 13364d94f33eca33bf71b7077c19b9da54298ed7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e7906e1f1daa0b473473abd28417a2db1c9b7f98
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49912819"
 ---
 # <a name="idebugexpression2evaluateasync"></a>IDebugExpression2::EvaluateAsync
 Esse método avalia a expressão de forma assíncrona.  
@@ -48,14 +49,14 @@ int EvaluateAsync(
  [in] Esse parâmetro é sempre um valor nulo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Um código de erro típico é:  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará um código de erro. Um código de erro típica é:  
   
 |Erro|Descrição|  
 |-----------|-----------------|  
-|E_EVALUATE_BUSY_WITH_EVALUATION|Outra expressão atualmente está sendo avaliada, e não há suporte para a avaliação da expressão simultâneas.|  
+|E_EVALUATE_BUSY_WITH_EVALUATION|Outra expressão está sendo avaliada no momento, e não há suporte para a avaliação da expressão simultâneas.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse método deve retornar imediatamente depois de iniciada a avaliação da expressão. Quando a expressão é avaliada com êxito, uma [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) devem ser enviadas para o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) retorno de chamada do evento conforme fornecido por meio de [anexar ](../../../extensibility/debugger/reference/idebugprogram2-attach.md) ou [anexar](../../../extensibility/debugger/reference/idebugengine2-attach.md).  
+ Esse método deve retornar imediatamente depois de ter começado a avaliação da expressão. Quando a expressão é avaliada com êxito, uma [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) deve ser enviada para o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) retorno de chamada do evento conforme fornecido por meio de [anexar ](../../../extensibility/debugger/reference/idebugprogram2-attach.md) ou [anexar](../../../extensibility/debugger/reference/idebugengine2-attach.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como implementar esse método para um simples `CExpression` objeto que implementa o [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) interface.  

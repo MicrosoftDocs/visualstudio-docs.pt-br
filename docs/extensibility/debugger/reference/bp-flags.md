@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 481dd21287ba3ca68c2abc61412785fc0151788d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0fba22042f5b12cfb9140e93e9e7efbeb0342328
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49904161"
 ---
 # <a name="bpflags"></a>BP_FLAGS
 Fornece sinalizadores opcionais que podem ser usados para especificar informações adicionais ao definir um ponto de interrupção.  
@@ -48,13 +49,13 @@ public enum enum_BP_FLAGS {
  Não especifica que nenhum sinalizador de ponto de interrupção.  
   
  BP_FLAG_MAP_DOCPOSITION  
- Especifica que o mecanismo de depuração (DE) deve mapear o ponto de interrupção usando a posição do documento. Isso é aplicável somente a pontos de interrupção definidos nos arquivos de origem orientado por script, como páginas ASP (ASP).  
+ Especifica que o mecanismo de depuração (DES) deve mapear o ponto de interrupção usando a posição do documento. Isso é aplicável somente a pontos de interrupção definidos em arquivos de origem e orientada a script, como Active Server Pages (ASP).  
   
  BP_FLAG_DONT_STOP  
- Especifica que o ponto de interrupção deve ser processado pelo mecanismo de depuração, mas que o mecanismo de depuração, por fim, não deve parar existe (ou seja, um [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) não deve ser enviado um objeto de evento). Esse sinalizador é projetado para ser usado principalmente com pontos de rastreamento.  
+ Especifica que o ponto de interrupção deve ser processado pelo mecanismo de depuração, mas que o mecanismo de depuração, por fim, não deve parar existe (ou seja, uma [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) objeto de evento não deve ser enviado). Esse sinalizador é projetado para ser usado principalmente com tracepoints.  
   
 ## <a name="remarks"></a>Comentários  
- Usado para o `dwFlags` membro o [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) e [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) estruturas.  
+ Usado para o `dwFlags` membro a [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) e [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) estruturas.  
   
  Esses valores podem ser combinados com um bit a bit `OR`.  
   

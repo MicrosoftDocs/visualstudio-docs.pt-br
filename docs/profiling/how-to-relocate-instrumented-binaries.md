@@ -16,11 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c138e8b823977d95f2630040a0690628396503d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a060506f818ac000611fc0c29988ed324ae89226
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843647"
 ---
 # <a name="how-to-relocate-instrumented-binaries"></a>Como realocar binários instrumentados
 
@@ -38,5 +39,5 @@ Durante a instrumentação, as investigações são inseridas no binário para m
 
 ## <a name="see-also"></a>Consulte também
 
-[Configurando sessões de desempenho](../profiling/configuring-performance-sessions.md)  
+[Configurar sessões de desempenho](../profiling/configuring-performance-sessions.md)  
 [VSInstr](../profiling/vsinstr.md)

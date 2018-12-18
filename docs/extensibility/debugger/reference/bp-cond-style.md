@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 64c3ac876f0d7be8582ca8162fd93c83cb6d343e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8ff46d6cae842d258aab8fb03409ff263670c410
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939761"
 ---
 # <a name="bpcondstyle"></a>BP_COND_STYLE
-Especifica o estilo de condição de ponto de interrupção para pendente e associadas a pontos de interrupção.  
+Especifica o estilo de condição de ponto de interrupção para pendentes e associados a pontos de interrupção.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,16 +46,16 @@ public enum enum_BP_COND_STYLE {
   
 ## <a name="members"></a>Membros  
  BP_COND_NONE  
- Aciona o ponto de interrupção quando a posição do ponto de interrupção é atingida. Nenhuma condição de ponto de interrupção especificada.  
+ Dispara o ponto de interrupção quando a posição do ponto de interrupção é atingida. Nenhuma condição de ponto de interrupção especificada.  
   
  BP_COND_WHEN_TRUE  
- Aciona o ponto de interrupção somente quando a expressão condicional associado com o ponto de interrupção é avaliada como `true`.  
+ Dispara o ponto de interrupção somente quando a expressão condicional é associado com o ponto de interrupção é avaliada como `true`.  
   
  BP_COND_WHEN_CHANGED  
- Aciona o ponto de interrupção somente quando o valor da expressão condicional associada com o ponto de interrupção foi alterado de sua avaliação anterior.  
+ Dispara o ponto de interrupção somente quando o valor da expressão condicional associado com o ponto de interrupção foi alterado de sua avaliação anterior.  
   
 ## <a name="remarks"></a>Comentários  
- Usado para o `styleCondition` membro o [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) estrutura.  
+ Usado para o `styleCondition` membro a [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) estrutura.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

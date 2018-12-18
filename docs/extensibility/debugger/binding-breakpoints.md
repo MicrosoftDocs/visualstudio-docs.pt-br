@@ -1,5 +1,5 @@
 ---
-title: Associação de pontos de interrupção | Microsoft Docs
+title: Associar pontos de interrupção | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,47 +13,48 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: efda5969e7022f8c44d7060a29ee31fbc5968d96
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e02b3da843f7e4cffe33d660a8a82ab3c4c0dc03
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153440"
 ---
-# <a name="binding-breakpoints"></a>Associação de pontos de interrupção
-Se o usuário define um ponto de interrupção, talvez, pressionando F9, o IDE Formula a solicitação e solicita que a sessão de depuração para criar o ponto de interrupção.  
+# <a name="bind-breakpoints"></a>Associar os pontos de interrupção
+Se o usuário define um ponto de interrupção, talvez, pressionando **F9**, o IDE Formula a solicitação e solicita que a sessão de depuração para criar o ponto de interrupção.  
   
-## <a name="setting-a-breakpoint"></a>Definindo um ponto de interrupção  
- Definindo um ponto de interrupção é um processo de duas etapas, porque o código ou com o ponto de interrupção de dados talvez ainda não estejam disponíveis. Primeiro, o ponto de interrupção deve ser descrito e, em seguida, como códigos ou dados se torna disponíveis, ele deve ser associado a esse código ou dados, da seguinte maneira:  
+## <a name="set-a-breakpoint"></a>Definir um ponto de interrupção  
+ Definindo um ponto de interrupção é um processo em duas etapas, porque o código ou os dados afetados pela interrupção podem ainda não estar disponíveis. Primeiro, o ponto de interrupção deve ser descrito e, em seguida, como códigos ou dados se torna disponíveis, ele deve ser associado a esse código ou dados, da seguinte maneira:  
   
-1.  O ponto de interrupção é solicitado dos mecanismos de depuração relevantes (DEs) e, em seguida, o ponto de interrupção está associado ao código ou dados assim que possível.  
+1.  O ponto de interrupção foi solicitado dos mecanismos de depuração relevantes (DEs) e, em seguida, o ponto de interrupção está associado ao código ou dados assim que estiverem disponíveis.  
   
-2.  A solicitação de ponto de interrupção é enviada para a sessão de depuração, que envia para todos os DEs relevantes. Qualquer ir escolhido para lidar com o ponto de interrupção cria correspondente pendente de ponto de interrupção.  
+2.  A solicitação de ponto de interrupção é enviada para a sessão de depuração, que envia para todos os DEs relevantes. Qualquer Alemanha que escolhe para lidar com o ponto de interrupção cria um correspondente pendente do ponto de interrupção.  
   
 3.  A sessão de depuração coleta os pontos de interrupção pendentes e envia-os de volta para o pacote de depuração (o componente de depuração do Visual Studio).  
   
-4.  O pacote de depuração solicita que a sessão de depuração para associar o ponto de interrupção pendente no código ou dados. A sessão de depuração envia essa solicitação para todos os DEs relevantes.  
+4.  O pacote de depuração solicita que a sessão de depuração para associar o ponto de interrupção pendente para o código ou dados. A sessão de depuração envia essa solicitação para todos os DEs relevantes.  
   
-5.  Se o DE é capaz de associar o ponto de interrupção, ele enviará que um ponto de interrupção associado o evento para a sessão de depuração. Caso contrário, ele envia um evento de erro do ponto de interrupção em vez disso.  
+5.  Se o DE conseguir associar o ponto de interrupção, ele envia que um ponto de interrupção associado a eventos para a sessão de depuração. Caso contrário, ele envia um evento de erro de ponto de interrupção em vez disso.  
   
 ## <a name="pending-breakpoints"></a>Pontos de interrupção pendentes  
- Um ponto de interrupção pendente pode vincular a vários locais de código. Por exemplo, uma linha do código-fonte para um modelo de C++ pode associar a cada sequência de código gerada a partir do modelo. A sessão de depuração pode usar um evento associado do ponto de interrupção para enumerar os contextos de código associados a um ponto de interrupção no momento em que o evento foi enviado. Contextos de código mais podem ser vinculados posteriormente, para que o DE pode enviar que várias ponto de interrupção associado eventos para cada solicitação de associação. No entanto, um DE deve enviar somente um evento de erro de ponto de interrupção por solicitação de associação.  
+ Um ponto de interrupção pendente pode associar a vários locais de código. Por exemplo, uma linha de código-fonte para um modelo do C++ pode associar a cada sequência de código gerada a partir do modelo. A sessão de depuração pode usar um evento associado do ponto de interrupção para enumerar os contextos de código associados a um ponto de interrupção no momento em que o evento foi enviado. Mais contextos de código podem ser associados mais tarde, para que o DE pode enviar que várias de ponto de interrupção associado a eventos para cada solicitação de associação. No entanto, a DE deve enviar somente um evento de erro de ponto de interrupção por solicitação de associação.  
   
 ## <a name="implementation"></a>Implementação  
- Programaticamente, o pacote de depuração chama a depuração de sessão Gerenciador (SDM) e concede a ele um [IDebugBreakpointRequest2](../../extensibility/debugger/reference/idebugbreakpointrequest2.md) interface que encapsula uma [BP_REQUEST_INFO](../../extensibility/debugger/reference/bp-request-info.md) estrutura que descreve o ponto de interrupção a ser definido. Embora os pontos de interrupção podem ser de várias formas, eles apontam para um contexto de códigos ou dados.  
+ Programaticamente, o pacote de depuração chama a depuração de sessão Gerenciador (SDM) e concede a ele uma [IDebugBreakpointRequest2](../../extensibility/debugger/reference/idebugbreakpointrequest2.md) interface que encapsula uma [BP_REQUEST_INFO](../../extensibility/debugger/reference/bp-request-info.md) estrutura, que descreve o ponto de interrupção a ser definido. Embora os pontos de interrupção podem ser de várias formas, eles apontam para um contexto de código ou dados.  
   
- O SDM passa essa chamada para cada relevantes DE chamando seu [CreatePendingBreakpoint](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) método. Se escolher o DE lidar com o ponto de interrupção, ele cria e retorna um [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) interface. O SDM coleta essas interfaces e os passa para o pacote de depuração como um único `IDebugPendingBreakpoint2` interface.  
+ O SDM passa essa chamada para cada relevantes DE chamando seus [CreatePendingBreakpoint](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) método. Se o DE optar por lidar com o ponto de interrupção, ele cria e retorna um [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) interface. O SDM coleta essas interfaces e os passa de volta para o pacote de depuração como um único `IDebugPendingBreakpoint2` interface.  
   
- Até o momento, nenhum evento foi gerado.  
+ Até aqui, nenhum evento foi gerado.  
   
- O pacote de depuração, em seguida, tenta associar o ponto de interrupção pendente para códigos ou dados chamando [associar](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md), que é implementado por DE.  
+ O pacote de depuração, em seguida, tenta associar o ponto de interrupção pendente para o código ou dados chamando [associar](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md), que é implementado por DE.  
   
- Se o ponto de interrupção está associado, envia o DE um [IDebugBreakpointBoundEvent2](../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) interface de eventos para o pacote de depuração. Os usos do pacote de depuração essa interface para enumerar todos os contextos de código (ou o contexto de dados único) associado ao ponto de interrupção chamando [EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md), que retorna um ou mais [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) interfaces. O [GetBreakpointResolution](../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md) interface retorna um [IDebugBreakpointResolution2](../../extensibility/debugger/reference/idebugbreakpointresolution2.md) interface, e [GetResolutionInfo](../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) retorna um [BP_ RESOLUTION_INFO](../../extensibility/debugger/reference/bp-resolution-info.md) union contendo o contexto de códigos ou dados.  
+ Se o ponto de interrupção está associado, o DE envia um [IDebugBreakpointBoundEvent2](../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) interface de eventos para o pacote de depuração. Os usos do pacote de depuração dessa interface para enumerar todos os contextos de código (ou o contexto de dados único) associada ao ponto de interrupção chamando [EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md), que retorna um ou mais [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) interfaces. O [GetBreakpointResolution](../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md) interface retorna um [IDebugBreakpointResolution2](../../extensibility/debugger/reference/idebugbreakpointresolution2.md) interface, e [GetResolutionInfo](../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) retorna um [BP_ RESOLUTION_INFO](../../extensibility/debugger/reference/bp-resolution-info.md) contendo o contexto de dados ou códigos de união.  
   
- Se o DE não é possível associar o ponto de interrupção, ele enviará um único [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) interface de eventos para o pacote de depuração. O pacote de depuração recupera o tipo de erro (erro ou aviso) e a mensagem informativa chamando [GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md), seguido por [GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) e [ GetResolutionInfo](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md). Isso retorna um [BP_ERROR_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-error-resolution-info.md) estrutura que contém o tipo de erro e a mensagem.  
+ Se o DE for não é possível associar o ponto de interrupção, ele envia um único [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) interface de eventos para o pacote de depuração. O pacote de depuração recupera o tipo de erro (erro ou aviso) e uma mensagem informativa chamando [GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md), seguido pelo [GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) e [ GetResolutionInfo](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md). Isso retorna um [BP_ERROR_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-error-resolution-info.md) estrutura que contém o tipo de erro e a mensagem.  
   
- Se um DE trata de um ponto de interrupção, mas não é possível vinculá-lo, ele retornará um erro de tipo `BPET_TYPE_ERROR`. O pacote de depuração responde exibindo uma caixa de diálogo de erro e o IDE coloca um glifo de exclamação dentro de glifo de ponto de interrupção à esquerda da linha do código-fonte.  
+ Se a DE lida com um ponto de interrupção, mas não é possível vinculá-lo, ele retornará um erro de tipo `BPET_TYPE_ERROR`. O pacote de depuração responde, exibindo uma caixa de diálogo de erro e o IDE coloca um glifo de ponto de exclamação dentro o glifo de ponto de interrupção à esquerda da linha de código-fonte.  
   
- Se um DE trata de um ponto de interrupção, não é possível associar a ele, mas algum outro ir pode associá-lo, ele retorna um aviso. O IDE responde colocando um glifo de ponto dentro de glifo de ponto de interrupção à esquerda da linha do código-fonte.  
+ Se a DE trata de um ponto de interrupção, não é possível associar a ele, mas algum outro Alemanha pode associá-lo, ele retorna um aviso. O IDE responde colocando um glifo de pergunta dentro o glifo de ponto de interrupção à esquerda da linha de código-fonte.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas de depuração](../../extensibility/debugger/debugging-tasks.md)

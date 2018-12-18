@@ -22,14 +22,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57f1e559452c64f9f1a7b019d75b52384081d65
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: eba1f156589babb9a3bec38982bd27b7c17a83c8
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39180185"
 ---
 # <a name="debugging-native-code"></a>Depurando código nativo
-A seção aborda alguns problemas comuns de depuração e técnicas para aplicativos nativos. As técnicas abordadas nesta seção são de alto nível. Para os mecanismos de usar o depurador do Visual Studio, consulte [Debugger Roadmap](../debugger/debugger-basics.md).  
+A seção aborda alguns problemas comuns de depuração e técnicas para aplicativos nativos. As técnicas abordadas nesta seção são de alto nível. Para conhecer a mecânica de como usar o depurador do Visual Studio, consulte [roteiro do depurador](../debugger/getting-started-with-the-debugger.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Como depurar o código otimizado](../debugger/how-to-debug-optimized-code.md)  
@@ -60,13 +61,13 @@ A seção aborda alguns problemas comuns de depuração e técnicas para aplicat
  Fornece orientação sobre o código de depuração que usa atributos. As instruções incluem como ativar a Anotação de Origem, como exibir o código injetado e como exibir o código de desmontagem no ponto de execução atual.  
   
  [Passo a passo: depurando um aplicativo paralelo](../debugger/walkthrough-debugging-a-parallel-application.md)  
- Descreve como usar o **tarefas paralelas** e **pilhas paralelas** ferramenta windows para depurar um aplicativo em paralelo.  
+ Descreve como usar o **tarefas paralelas** e **pilhas paralelas** janelas para depurar um aplicativo paralelo.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Tipos de projeto do Visual C++](../debugger/debugging-preparation-visual-cpp-project-types.md)  
  Fornece links para tópicos que descrevem como depurar os tipos de projeto nativos criados pelos modelos de projeto do Visual C++.  
 
- [Depurando projetos DLL](../debugger/debugging-dll-projects.md) fornece informações sobre como depurar DLLs nativas e gerenciadas.
+ [Depurando projetos de DLL](../debugger/debugging-dll-projects.md) fornece informações sobre como depurar DLLs nativas e gerenciadas.
   
  [Tour dos recursos do depurador](../debugger/debugger-feature-tour.md)  
  Fornece links para as maiores seções de documentação de depuração. A informação inclui: novidades no depurador, configurações e preparação, pontos de interrupção, tratamentos de exceção, edição e continuação, depuração de código gerenciado, depuração de código nativo, depuração de SQL e referências à interface do usuário.  

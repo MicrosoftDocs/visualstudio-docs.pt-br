@@ -13,16 +13,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 42a8c6cbe2b3a2b5fa559a74dd165b7a729b814d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d8a273c5e53f9f7086e8dc96bcb4c36e0b0223d0
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231526"
 ---
 # <a name="com-constants-in-managed-code"></a>Constantes de COM em código gerenciado
-Estrutura de pacote gerenciado (MPF) faz com que algumas constantes COM padrão disponível para código gerenciado. Essas constantes estão listados abaixo para referência.  
+O Framework de pacote gerenciado (MPF) faz com que algumas constantes COM padrão disponível para código gerenciado. Essas constantes são listadas abaixo para referência.  
   
-## <a name="boolean-hresult-values"></a>Valores booleanos HRESULT  
+## <a name="boolean-hresult-values"></a>Valores HRESULT booliano  
  <xref:Microsoft.VisualStudio.VSConstants.S_FALSE>  
   
  <xref:Microsoft.VisualStudio.VSConstants.S_OK>  

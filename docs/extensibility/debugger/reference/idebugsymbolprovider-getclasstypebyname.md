@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b972885a8999ac688ade380fbe9601d4274d205e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3b67b959d31989c0a891fc44e1bf8acefb6cc182
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846948"
 ---
 # <a name="idebugsymbolprovidergetclasstypebyname"></a>IDebugSymbolProvider::GetClassTypeByName
 Esse método obtém o tipo de campo de classe que representa um nome de classe totalmente qualificado.  
@@ -47,13 +48,13 @@ int GetClassTypeByName(
  [in] O nome da classe.  
   
  `nameMatch`  
- [in] Seleciona o tipo de correspondência, por exemplo, diferencia maiusculas de minúsculas. Um valor da [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) enumeração.  
+ [in] Seleciona o tipo de correspondência, por exemplo, diferencia maiusculas de minúsculas. Um valor a partir de [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) enumeração.  
   
  `ppField`  
- [out] Retorna o tipo de classe, conforme representado pelo [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) interface.  
+ [out] Retorna o tipo de classe, conforme representado pela [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) interface.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

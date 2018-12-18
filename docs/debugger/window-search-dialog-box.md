@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476625"
 ---
 # <a name="window-search-dialog-box"></a>Caixa de diálogo Pesquisa de Janela
 Use essa caixa de diálogo para localizar e selecionar o nó de uma janela específica no [exibição Windows](../debugger/windows-view.md). Para exibir essa caixa de diálogo, mova o foco para a janela de exibição do Windows. Em seguida, escolha **encontrar janela** do **pesquisa** menu.  

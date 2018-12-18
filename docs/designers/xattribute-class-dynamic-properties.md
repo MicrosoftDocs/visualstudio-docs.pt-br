@@ -1,6 +1,7 @@
 ---
 title: Propriedades dinâmicas da classe de XAttribute
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: reference
 ms.assetid: 7394cef0-55e9-4e90-bc2e-118ed4b78fb0
@@ -9,13 +10,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 985e8707cfb405e81c34a8e420285098997228ed
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b25d6cc6a88e1e5b7bd0b839cfdca5be713c6b7e
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077181"
 ---
-# <a name="xattribute-class-dynamic-properties"></a>Propriedades dinâmicas da classe de XAttribute
+# <a name="xattribute-class-dynamic-properties"></a>Propriedades dinâmicas da classe XAttribute
 
 Esta seção descreve as propriedades dinâmicas de <xref:System.Xml.Linq.XAttribute?displayProperty=fullName>.
 
@@ -28,5 +30,5 @@ Esta seção descreve as propriedades dinâmicas de <xref:System.Xml.Linq.XAttri
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Xml.Linq.XAttribute?displayProperty=fullName>
-- [Propriedades dinâmicas LINQ to XML](../designers/linq-to-xml-dynamic-properties.md)
+- [Propriedades dinâmicas do LINQ to XML](../designers/linq-to-xml-dynamic-properties.md)
 - [Propriedades dinâmicas da classe XElement](../designers/xelement-class-dynamic-properties.md)

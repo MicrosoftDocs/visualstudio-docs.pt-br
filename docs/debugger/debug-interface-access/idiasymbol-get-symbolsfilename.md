@@ -1,5 +1,5 @@
 ---
-title: ': Get_symbolsfilename | Microsoft Docs'
+title: 'Idiasymbol:: Get_symbolsfilename | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 93f04d4ffee712a87dc784b5b83496b86d70ae25
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 46b468144e0d8275b121d9fe29e59d4789f06042
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49840435"
 ---
 # <a name="idiasymbolgetsymbolsfilename"></a>IDiaSymbol::get_symbolsFileName
 Recupera o nome do arquivo do qual os símbolos foram carregados.  
@@ -36,13 +37,13 @@ HRESULT get_symbolsFileName (
  [out] Retorna o nome do arquivo do qual os símbolos foram carregados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
   
 ## <a name="remarks"></a>Comentários  
- Essa propriedade é válida somente para símbolos com um [SymTagEnum enumeração](../../debugger/debug-interface-access/symtagenum.md) valor de `SymTagExe` que também têm escopo global.  
+ Essa propriedade é válida somente para símbolos com um [enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) valor `SymTagExe` que também têm escopo global.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

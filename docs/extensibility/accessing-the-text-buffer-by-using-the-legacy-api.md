@@ -1,5 +1,5 @@
 ---
-title: Acessando o Buffer de texto usando a API herdado | Microsoft Docs
+title: Acessando o Buffer de texto usando a API herdada | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,31 +13,32 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84bf79ea19fc0867643ce3e8ee6db0a645d9a0dd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3347fc2fd03a2eb6b466145672d3aebb77ad71a6
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078008"
 ---
-# <a name="accessing-the-text-buffer-by-using-the-legacy-api"></a>Acessando o Buffer de texto usando a API herdado
-O texto é responsável por gerenciar fluxos de texto e persistência de arquivo. Embora o buffer pode ler ou gravar outros formatos, toda a comunicação comum com o buffer é realizada usando o Unicode. APIs herdado, o buffer de texto pode usar um - ou um sistema de coordenadas bidimensional para identificar os locais de caractere no buffer.  
+# <a name="access-the-text-buffer-by-using-the-legacy-api"></a>Acessar o buffer de texto, usando a API herdada
+O texto é responsável por gerenciar os fluxos de texto e persistência de arquivo. Embora o buffer pode ler ou gravar outros formatos, toda a comunicação comum com o buffer é executada usando o Unicode. Nas APIs herdadas, o buffer de texto pode usar aquele - ou um sistema de coordenadas bidimensional para identificar os locais de caractere no buffer.  
   
 ## <a name="one--and-two-dimension-coordinate-systems"></a>Dimensão de um e dois sistemas de coordenadas  
- Uma posição de coordenadas unidimensional baseia-se a posição do caractere a partir do primeiro caractere no buffer, como 147. Você usa o <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream> interface para acessar um local unidimensional no buffer. Um sistema de coordenadas bidimensional baseia-se em pares de linha e de índice. Por exemplo, um caractere no buffer no 43, 5 seria na linha 43, cinco caracteres à direita do primeiro caractere na linha. Acessar um local bidimensional no buffer usando o <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> interface. Tanto o <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> e <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream> interfaces implementadas pelo objeto de buffer de texto (<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>) e pode ser acessado do outro usando `QueryInterface`. O diagrama a seguir mostra essas e outras interfaces de chave em <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>.  
+ Uma posição de coordenadas unidimensional baseia-se a posição de um caractere a partir do primeiro caractere no buffer, como 147. Você usa o <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream> interface para acessar um unidimensional local no buffer. Um sistema de coordenadas bidimensional é baseado em pares de linha e índice. Por exemplo, um caractere no buffer em 43, 5 seria na linha 43, cinco caracteres à direita do primeiro caractere na linha. Você acessa um local bidimensional no buffer usando o <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> interface. Tanto a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> e o <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream> interfaces são implementadas pelo objeto de buffer de texto (<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>) e pode ser acessado entre si usando `QueryInterface`. O diagrama a seguir mostra essas e outras interfaces principais em <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>.  
   
  ![Objeto de Buffer de texto](../extensibility/media/vstextbuffer.gif "vsTextBuffer")  
 Objeto de buffer de texto  
   
- Embora o sistema de coordenadas funciona no buffer de texto, ela é otimizada para usar coordenadas bidimensionais. Um sistema de coordenadas unidimensional pode criar sobrecarga de desempenho. Portanto, use o sistema de coordenadas bidimensional sempre que possível.  
+ Embora o sistema de coordenadas funcione no buffer de texto, ele é otimizado para usar coordenadas bidimensionais. Um sistema de coordenadas unidimensional pode criar sobrecarga de desempenho. Portanto, use o sistema de coordenadas bidimensional sempre que possível.  
   
- O texto de responsabilidade de segundo do buffer é persistência de arquivo. Para fazer isso, o objeto de buffer de texto implementa <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> e atua como o componente de objeto de dados de documentos para itens de projeto e outros componentes do ambiente envolvidos na persistência. Para obter mais informações, consulte [abrir e salvar itens de projeto](../extensibility/internals/opening-and-saving-project-items.md).  
+ O responsabilidade de segundo do buffer de texto é a persistência de arquivo. Para fazer isso, o objeto de buffer de texto implementa <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> e atua como o componente de objeto de dados de documentos para itens de projeto e outros componentes do ambiente envolvidos na persistência. Para obter mais informações, consulte [abrindo e salvando itens de projeto](../extensibility/internals/opening-and-saving-project-items.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Alterar configurações de exibição usando a API herdado](../extensibility/changing-view-settings-by-using-the-legacy-api.md)  
+ [Alterar as configurações de exibição usando a API herdada](../extensibility/changing-view-settings-by-using-the-legacy-api.md)  
  Explica como alterar as configurações de exibição usando a API herdada.  
   
- [Usando o Gerenciador de texto para monitorar as configurações globais](../extensibility/using-the-text-manager-to-monitor-global-settings.md)  
+ [Use o Gerenciador de texto para monitorar as configurações globais](../extensibility/using-the-text-manager-to-monitor-global-settings.md)  
  Explica como usar o Gerenciador de texto para monitorar as configurações globais.  
   
 ## <a name="see-also"></a>Consulte também  
- [Dentro do Editor de núcleo](../extensibility/inside-the-core-editor.md)
+ [Dentro do editor de núcleo](../extensibility/inside-the-core-editor.md)

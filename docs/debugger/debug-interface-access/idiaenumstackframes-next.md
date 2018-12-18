@@ -1,5 +1,5 @@
 ---
-title: Idiaenumstackframes | Microsoft Docs
+title: 'Idiaenumstackframes:: Next | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 68e84c31cb98cdbbe69e62aa1e572386100277a0
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 42d096ce41c5ff9f254e7f44d595159130e43548
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949838"
 ---
 # <a name="idiaenumstackframesnext"></a>IDiaEnumStackFrames::Next
 Recupera um número especificado de elementos de quadro de pilha da sequência de enumeração.  
@@ -35,16 +36,16 @@ HRESULT Next(
   
 #### <a name="parameters"></a>Parâmetros  
  celt  
- [in] O número de elementos stackframe no enumerador a ser recuperado.  
+ [in] O número de elementos de stackframe no enumerador a ser recuperado.  
   
  rgelt  
- [out] Uma matriz que é preenchido com o solicitado [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) objetos.  
+ [out] Uma matriz que deve ser preenchido com os solicitados [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) objetos.  
   
  pceltFetched  
- [out] Retorna o número da pilha de elementos de quadro no enumerador busca.  
+ [out] Retorna o número da pilha de elementos de quadro no enumerador buscado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver nenhum quadro de pilha mais. Caso contrário, retornará um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver nenhum mais quadros de pilha. Caso contrário, retornará um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)   

@@ -1,11 +1,11 @@
 ---
 title: IActiveScript::AddNamedItem | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IActiveScript.AddNamedItem
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - AddNamedItem method, IActiveScript interface
 ms.assetid: a7c6317d-948f-4bb3-b169-1bbe5b7c7cc5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24642016"
 ---
 # <a name="iactivescriptaddnameditem"></a>IActiveScript::AddNamedItem
 Adiciona o nome de um item de nível raiz ao espaço para nome do mecanismo de script. Um item de nível raiz é um objeto com propriedades e métodos, uma fonte de evento ou todos os três.  

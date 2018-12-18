@@ -14,24 +14,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ecb114c1c05a4e31d58746948cec76317012328e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 130a3236752fba85c611619fb3cae70e00c76ec9
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39150960"
 ---
 # <a name="asynctaskmethodbuilder-structure---internal-members"></a>Estrutura AsyncTaskMethodBuilder - membros internos
-Este tópico descreve os membros internos do <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> classe. Para obter informações gerais sobre esta classe, consulte o <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> tópico de referência.  
+Este tópico descreve os membros internos do <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> classe. Para obter informações gerais sobre essa classe, consulte o <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> tópico de referência.  
   
  **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
   
- **Assembly:** mscorlib (em mscorlib.dll)  
+ **Assembly:** mscorlib (em mscorlib. dll)  
   
  Porque você não pode acessar esses membros internos do .NET Framework, a sintaxe a seguir é fornecida em comum Intermediate Language (CIL).  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp  
 .class public sequential ansi sealed beforefieldinit System.Runtime.CompilerServices.AsyncTaskMethodBuilder  
        extends System.ValueType  
        implements System.Runtime.CompilerServices.IAsyncMethodBuilder  
@@ -41,8 +42,8 @@ Este tópico descreve os membros internos do <xref:System.Runtime.CompilerServic
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Propriedade ObjectIdForDebugger](../../extensibility/debugger/asynctaskmethodbuilder-objectidfordebugger-property.md)|Obtém um objeto que pode ser usado para identificar com exclusividade este construtor para o depurador.|  
-|[campo m_builder](../../extensibility/debugger/asynctaskmethodbuilder-m-builder-field.md)|Representa o objeto de construtor genérico para o qual essa instância não genérico delega.|  
+|[Propriedade ObjectIdForDebugger](../../extensibility/debugger/asynctaskmethodbuilder-objectidfordebugger-property.md)|Obtém um objeto que pode ser usado para identificar exclusivamente esse construtor para o depurador.|  
+|[campo m_builder](../../extensibility/debugger/asynctaskmethodbuilder-m-builder-field.md)|Representa o objeto de construtor genérico ao qual esta instância não genérica delega.|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder>   

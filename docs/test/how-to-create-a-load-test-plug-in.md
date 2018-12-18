@@ -1,5 +1,5 @@
 ---
-title: Criar um plug-in de teste de carga no Visual Studio | Microsoft Docs
+title: Criar um plug-in de teste de carga no Visual Studio
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,19 +12,23 @@ ms.assetid: 27806972-1b15-4388-833d-6d0632816f1f
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 6e585fe66bde573f8bb133b0c8cda0900b0d6d16
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ce3e85965aa8823aa12102fff41401cf24eef6a7
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896725"
 ---
 # <a name="how-to-create-a-load-test-plug-in"></a>Como criar um plug-in de teste de carga
 
 Você pode criar um plug-in de teste de carga para executar o código em momentos diferentes com o teste de carga em execução. Você cria um plug-in para expandir ou modificar a funcionalidade interna do teste de carga. Por exemplo, você pode codificar um plug-in de teste de carga para modificar o padrão do teste de carga com o teste de carga em execução. Para fazer isso, você deve criar uma classe que herde a interface <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin>. Essa classe deve implementar o método <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin.Initialize*> dessa interface. Para obter mais informações, consulte <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin>.
 
 > [!NOTE]
-> Você também pode criar plug-ins para testes de desempenho na Web. Para obter mais informações, consulte [Como criar um plug-in de teste de desempenho Web](../test/how-to-create-a-web-performance-test-plug-in.md)
+> Você também pode criar plug-ins para testes de desempenho na Web. Para obter mais informações, confira [Como criar um plug-in de teste de desempenho Web](../test/how-to-create-a-web-performance-test-plug-in.md)
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="to-create-a-load-test-plug-in-by-using-visual-c"></a>Para criar um plug-in de teste de carga usando o Visual C#
 
@@ -34,7 +38,7 @@ Você pode criar um plug-in de teste de carga para executar o código em momento
 
      Para obter mais informações, consulte [Início rápido: criar um projeto de teste de carga](../test/quickstart-create-a-load-test-project.md).
 
-3.  No Gerenciador de Soluções, clique com o botão direito do mouse na solução, selecione **Adicionar** e, em seguida, escolha **Novo Projeto**.
+3.  No **Gerenciador de Soluções**, clique com o botão direito do mouse na solução, selecione **Adicionar** e, em seguida, escolha **Novo Projeto**.
 
      A caixa de diálogo **Adicionar Novo Projeto** é exibida.
 
@@ -46,9 +50,9 @@ Você pode criar um plug-in de teste de carga para executar o código em momento
 
 7.  Escolha **OK**.
 
-8.  O novo projeto da biblioteca de classes é adicionado ao Gerenciador de Soluções e a nova classe é exibida no Editor de Códigos.
+8.  O novo projeto da biblioteca de classes é adicionado ao **Gerenciador de Soluções** e a nova classe é exibida no **Editor de Códigos**.
 
-9. No Gerenciador de Soluções, clique com o botão direito do mouse na pasta **Referências** da nova biblioteca de classes e selecione **Adicionar Referência**.
+9. No **Gerenciador de Soluções**, clique com o botão direito do mouse na pasta **Referências** da nova biblioteca de classes e selecione **Adicionar Referência**.
 
 10. A caixa de diálogo **Adicionar Referência** é exibida.
 
@@ -56,9 +60,9 @@ Você pode criar um plug-in de teste de carga para executar o código em momento
 
 12. Escolha **OK**.
 
-     A referência para **Microsoft.VisualStudio.QualityTools.LoadTestFramework** é adicionada à pasta **Referência** do Gerenciador de Soluções.
+     A referência a **Microsoft.VisualStudio.QualityTools.LoadTestFramework** é adicionada à pasta **Referência** do **Gerenciador de Soluções**.
 
-13. No Gerenciador de Soluções, clique com o botão direito do mouse no nó superior do projeto de teste de carga e de desempenho Web que contém o teste de carga a que você deseja adicionar o plug-in e selecione **Adicionar Referência**.
+13. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó superior do projeto de teste de carga e de desempenho Web que contém o teste de carga ao qual você deseja adicionar o plug-in de teste de carga e selecione **Adicionar Referência**.
 
 14. A **caixa de diálogo Adicionar Referência é exibida**.
 
@@ -66,7 +70,7 @@ Você pode criar um plug-in de teste de carga para executar o código em momento
 
 16. Escolha **OK**.
 
-17. No Editor de Códigos, adicione uma instrução `using` para o namespace <xref:Microsoft.VisualStudio.TestTools.LoadTesting>.
+17. No **Editor de Códigos**, adicione uma instrução `using` ao namespace <xref:Microsoft.VisualStudio.TestTools.LoadTesting>.
 
 18. Implemente a interface <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin> da classe que foi criada no projeto da biblioteca de classes. Consulte a seção Exemplo a seguir para obter uma implementação de exemplo.
 
@@ -81,7 +85,7 @@ Você pode criar um plug-in de teste de carga para executar o código em momento
 22. No painel **Propriedades do plug-in selecionado**, defina os valores iniciais a serem usados pelo plug-in em tempo de execução.
 
     > [!NOTE]
-    > Você pode expor quantas propriedades quiser de seus plug-ins; apenas torne-os públicos, definíveis e de um tipo de base como Inteiro, Booliano ou Cadeia de Caracteres. Você também pode alterar as propriedades de plug-in de teste de desempenho na Web mais tarde usando a janela Propriedades.
+    > Você pode expor quantas propriedades quiser de seus plug-ins; apenas torne-os públicos, definíveis e de um tipo de base como Inteiro, Booliano ou Cadeia de Caracteres. Altere também as propriedades do plug-in de teste de desempenho Web posteriormente usando a janela **Propriedades**.
 
 23. Escolha **OK**.
 
@@ -102,7 +106,8 @@ Você pode criar um plug-in de teste de carga para executar o código em momento
 O código a seguir mostra um plug-in de teste de carga que executa um código personalizado depois que ocorre um evento LoadTestFinished. Se esse código for executado em um agente de teste em um computador remoto e o agente de teste não tiver um serviço SMTP localhost, o teste de carga permanecerá no estado "Em andamento" porque uma caixa de mensagem será aberta.
 
 > [!NOTE]
->  O código a seguir exige que você adicione uma referência a System.Windows.Forms.
+> O código a seguir exige que você adicione uma referência a System.Windows.Forms.
+
 
 ```csharp
 using System;

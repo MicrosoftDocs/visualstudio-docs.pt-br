@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2efed57d74f748de762ce4dcf48c7774ad7d4303
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4b5e4849c13e5a7c9e88dd2be450cb75d4be70a3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928146"
 ---
 # <a name="ienumdebugboundbreakpoints2reset"></a>IEnumDebugBoundBreakpoints2::Reset
 Redefine a enumeração para o primeiro elemento.  
@@ -37,10 +38,10 @@ int Reset();
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Depois que este método é chamado, a próxima chamada para o [próximo](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-next.md) método retorna o primeiro elemento da enumeração.  
+ Depois que esse método é chamado, a próxima chamada para o [próxima](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-next.md) método retorna o primeiro elemento da enumeração.  
   
 ## <a name="see-also"></a>Consulte também  
  [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md)

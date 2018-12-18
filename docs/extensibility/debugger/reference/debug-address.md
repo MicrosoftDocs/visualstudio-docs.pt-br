@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 07312208967aeccfbd81f44587f84a43dfebf4c0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1d5851fd9fe7224d060b1454a7123b98f77216b4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49813473"
 ---
 # <a name="debugaddress"></a>DEBUG_ADDRESS
-Esta estrutura representa um endereço.  
+Essa estrutura representa um endereço.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,20 +53,20 @@ public struct DEBUG_ADDRESS {
  O GUID do módulo que contém esse endereço.  
   
  tokClass  
- O token que identifica a classe ou o tipo desse endereço.  
+ O token de identificação de classe ou tipo desse endereço.  
   
 > [!NOTE]
->  Esse valor é específico para um provedor de símbolo e, portanto, não tem nenhum significado geral de como um identificador para um tipo de classe.  
+>  Esse valor é específico para um provedor de símbolo e, portanto, não tem nenhum significado geral diferente de como um identificador para um tipo de classe.  
   
- Endereço  
- Um [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) estrutura, que contém uma união de estruturas que descrevem os tipos de endereço individual. O valor `addr`.`dwKind` é proveniente do [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeração, que explica como interpretar a união.  
+ Addr  
+ Um [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) estrutura, que contém uma união de estruturas que descrevem os tipos de endereço individual. O valor `addr`.`dwKind` é proveniente de [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeração, que explica como interpretar a união.  
   
 ## <a name="remarks"></a>Comentários  
  Essa estrutura é passada para o [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) método a ser preenchido.  
   
  **Aviso [C++]**  
   
- Se `addr.dwKind` é `ADDRESS_KIND_METADATA_LOCAL` e se `addr.addr.addrLocal.pLocal` não é um valor nulo, em seguida, você deve chamar `Release` no ponteiro token:  
+ Se `addr.dwKind` está `ADDRESS_KIND_METADATA_LOCAL` e, se `addr.addr.addrLocal.pLocal` não é um valor nulo, em seguida, você deve chamar `Release` no ponteiro de token:  
   
 ```  
 if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL &&  addr.addr.addrLocal.pLocal != NULL)  

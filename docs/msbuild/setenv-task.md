@@ -1,7 +1,7 @@
 ---
 title: Tarefa SetEnv | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 11/05/2018
 ms.technology: msbuild
 ms.topic: reference
 f1_keywords:
@@ -21,11 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ec47adec3a9c979a21a543f2c073c440384b26d1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3024a0477193647a6949eeaa4d8d40d4d965f940
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220395"
 ---
 # <a name="setenv-task"></a>Tarefa SetEnv
 Define ou exclui o valor de uma variável de ambiente especificada.  
@@ -38,10 +39,8 @@ Define ou exclui o valor de uma variável de ambiente especificada.
 |**Nome**|Parâmetro da **cadeia de caracteres** obrigatório.<br /><br /> O nome de uma variável de ambiente.|  
 |**OutputEnvironmentVariable**|Parâmetro de saída opcional **String**.<br /><br /> Contém o valor atribuído à variável de ambiente especificado pelo parâmetro **Nome**.|  
 |**Prefixo**|Parâmetro `Boolean` obrigatório.<br /><br /> Se `true`, concatenará o valor do parâmetro **Valor** antes do valor da variável de ambiente especificado pelo parâmetro **Nome** e, em seguida, atribuirá o resultado à variável de ambiente. Se `false`, atribuirá somente o valor do parâmetro **Valor** à variável de ambiente.|  
-|**Target**|Parâmetro **String** opcional.<br /><br /> Especifica o local em que uma variável de ambiente é armazenada. Especifique "`User`" ou "`Machine`".<br /><br /> Para obter mais informações, consulte "Enumeração EnvironmentVariableTarget" no site do [MSDN](http://go.microsoft.com/fwlink/?LinkId=737).|  
-|**Value**|Parâmetro **String** opcional.<br /><br /> O valor atribuído à variável de ambiente especificado pelo parâmetro **Nome**. Se **Valor** estiver vazio e a variável existir, a variável será excluída. Se a variável não existir, nenhum erro ocorrerá mesmo que a operação não possa ser executada.<br /><br /> Para obter mais informações, consulte "Environment::SetEnvironmentVariable Method" no site do [MSDN](http://go.microsoft.com/fwlink/?LinkId=737).|  
-  
-## <a name="remarks"></a>Comentários  
+|**Target**|Parâmetro **String** opcional.<br /><br /> Especifica o local em que uma variável de ambiente é armazenada. Especifique "User" ou "Machine".<br /><br /> Para saber mais, confira [Enumeração EnvironmentVariableTarget](xref:System.EnvironmentVariableTarget).|  
+|**Valor**|Parâmetro **String** opcional.<br /><br /> O valor atribuído à variável de ambiente especificado pelo parâmetro **Nome**. Se **Valor** estiver vazio e a variável existir, a variável será excluída. Se a variável não existir, nenhum erro ocorrerá mesmo que a operação não possa ser executada.<br /><br /> Para saber mais, confira [Método Environment::SetEnvironmentVariable](xref:System.Environment.SetEnvironmentVariable%2A).|  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)

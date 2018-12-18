@@ -1,13 +1,13 @@
 ---
-title: "Não é possível atribuir a um resultado de função | Microsoft Docs"
-ms.custom: 
+title: Não é possível atribuir a um resultado de função | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5003
@@ -16,7 +16,7 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: ee8ffb3a-1451-4cb3-99bf-5e9cf8b77d79
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -25,6 +25,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24632976"
 ---
 # <a name="cannot-assign-to-a-function-result"></a>Não é possível designar a um resultado de função
 Tentativa de atribuir um valor a um resultado de função. O resultado de uma função pode ser atribuído a uma variável, mas ele não pode ser usado como uma variável. Se você deseja atribuir um novo valor para a função em si, omita os parênteses (o operador de chamada de função). O exemplo a seguir demonstra uma situação em que esse erro é gerado.  

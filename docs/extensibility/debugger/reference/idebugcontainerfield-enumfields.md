@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0af939253de7b592e7c0ec35be9ea2b9bbff2b0f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 49874de9166310fc4b9a887fd1fc6d6355682c7a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942678"
 ---
 # <a name="idebugcontainerfieldenumfields"></a>IDebugContainerField::EnumFields
 Cria um enumerador para os campos do contêiner.  
@@ -48,25 +49,25 @@ int EnumFields(
   
 #### <a name="parameters"></a>Parâmetros  
  `dwKindFilter`  
- [in] Uma combinação de [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) constantes que selecione os campos a serem enumerados. Tipos de campo podem descrever tipos de armazenamento, como classe ou informações primitivo ou específicas, como o ponteiro "this", parâmetro ou local.  
+ [in] Uma combinação de [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) constantes que selecione os campos a serem enumerados. Tipos de campo podem descrever os tipos de armazenamento, como classe ou informações primitivas ou específicas, como local, parâmetro ou ponteiro "this".  
   
  `dwModifiersFilter`  
- [in] Uma combinação de [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) constantes que selecione os campos a serem enumerados. Modificadores de campo podem ser permissões de acesso, como público ou privado ou informações de armazenamento, como estático, final ou virtual.  
+ [in] Uma combinação de [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) constantes que selecione os campos a serem enumerados. Modificadores de campo podem ser permissões de acesso, como público ou privado ou informações de armazenamento, como virtual, estático ou final.  
   
  `pszNameFilter`  
- [in] O nome do campo a ser enumerado. Isso pode ser um valor nulo se todos os campos devem ser retornadas.  
+ [in] O nome do campo a ser enumerado. Isso pode ser um valor nulo se todos os campos devem ser retornados.  
   
  `nameMatch`  
- [in] Um valor da [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) enumeração que controla se a pesquisa diferencia maiusculas de minúsculas ou não.  
+ [in] Um valor a partir de [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) enumeração que controla se a pesquisa diferencia maiusculas de minúsculas ou não.  
   
  `ppEnum`  
  [out] Retorna um [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objeto que representa a lista de campos. Retorna um valor nulo se não houver nenhum campo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, Retorna S_OK ou S_FALSE se houver campos. Caso contrário, retornará um código de erro.  
+ Se for bem-sucedido, Retorna S_OK ou S_FALSE se não houver nenhum campo. Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- O `dwKindFilter`, `dwModifiersFilter`, e `pszNameFilter` parâmetros podem ser combinados, por exemplo, para selecionar todos os métodos virtuais públicos denominados "Meumetodo".  
+ O `dwKindFilter`, `dwModifiersFilter`, e `pszNameFilter` parâmetros podem ser combinados, por exemplo, para selecionar todos os métodos virtuais públicos denominados "MyMethod".  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)   

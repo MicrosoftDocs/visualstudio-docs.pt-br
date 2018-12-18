@@ -1,6 +1,7 @@
 ---
 title: 'CA1038: os enumeradores devem ser fortemente tipados'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0cd45f3d601b3bba1bdda795ff098b72e241ca28
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 22cc84a0cdc8d4fdb86f6890ae0ebd25eb65beb8
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45545483"
 ---
 # <a name="ca1038-enumerators-should-be-strongly-typed"></a>CA1038: os enumeradores devem ser fortemente tipados
+
 |||
 |-|-|
 |NomeDoTipo|EnumeratorsShouldBeStronglyTyped|
@@ -30,25 +33,25 @@ ms.lasthandoff: 04/19/2018
 |Alteração Significativa|Quebra|
 
 ## <a name="cause"></a>Causa
- Implementa um tipo público ou protegido <xref:System.Collections.IEnumerator?displayProperty=fullName> , mas não fornece uma versão fortemente tipada de <xref:System.Collections.IEnumerator.Current%2A?displayProperty=fullName> propriedade. Tipos derivados dos seguintes tipos são isentos dessa regra:
+ Um tipo público ou protegido implementa <xref:System.Collections.IEnumerator?displayProperty=fullName> , mas não fornece uma versão fortemente tipada do <xref:System.Collections.IEnumerator.Current%2A?displayProperty=fullName> propriedade. Tipos que são derivados dos seguintes tipos são isentos dessa regra:
 
--   <xref:System.Collections.CollectionBase?displayProperty=fullName>
+- <xref:System.Collections.CollectionBase?displayProperty=fullName>
 
--   <xref:System.Collections.DictionaryBase?displayProperty=fullName>
+- <xref:System.Collections.DictionaryBase?displayProperty=fullName>
 
--   <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>
+- <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>
 
-## <a name="rule-description"></a>Descrição da Regra
- Essa regra requer <xref:System.Collections.IEnumerator> implementações também fornecer uma versão fortemente tipada do <xref:System.Collections.IEnumerator.Current%2A> propriedade para que os usuários não precisarão converter o valor de retorno para o tipo forte quando eles usam a funcionalidade fornecida pela interface. Essa regra pressupõe que o tipo que implementa <xref:System.Collections.IEnumerator> contém uma coleção de instâncias de um tipo que é mais forte que <xref:System.Object>.
+## <a name="rule-description"></a>Descrição da regra
+ Essa regra exige <xref:System.Collections.IEnumerator> implementações também forneçam uma versão fortemente tipada do <xref:System.Collections.IEnumerator.Current%2A> propriedade para que os usuários não sejam obrigados a converter o valor de retorno para o tipo forte quando usarem a funcionalidade fornecida pela interface. Esta regra pressupõe que o tipo que implementa <xref:System.Collections.IEnumerator> contém uma coleção de instâncias de um tipo que é mais forte que <xref:System.Object>.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, implemente a propriedade de interface explicitamente (declare-o como `IEnumerator.Current`). Adicionar versão fortemente tipada da propriedade, declarada como pública `Current`, e retornar um objeto fortemente tipado.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, implemente a propriedade de interface explicitamente (declare-o como `IEnumerator.Current`). Adicionar uma versão pública fortemente tipada da propriedade, declarada como `Current`, e retornará um objeto fortemente tipado.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- Suprima um aviso dessa regra ao implementar um enumerador baseada em objeto para uso com uma coleção com base em objeto, como uma árvore binária. Tipos que estendem a nova coleção vai definir o enumerador fortemente tipado e expor a propriedade fortemente tipada.
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+ Suprima um aviso nessa regra ao implementar um enumerador baseado em objeto para uso com uma coleção baseada em objeto, como uma árvore binária. Tipos que estendem a nova coleção serão definir o enumerador com rigidez de tipos e expor a propriedade com rigidez de tipos.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir demonstra a maneira correta de implementar um fortemente tipada <xref:System.Collections.IEnumerator> tipo.
+ O exemplo a seguir demonstra a maneira correta de implementar fortemente tipado <xref:System.Collections.IEnumerator> tipo.
 
  [!code-csharp[FxCop.Design.IEnumeratorStrongTypes#1](../code-quality/codesnippet/CSharp/ca1038-enumerators-should-be-strongly-typed_1.cs)]
 
@@ -58,4 +61,8 @@ ms.lasthandoff: 04/19/2018
  [CA1039: as listas são fortemente tipadas](../code-quality/ca1039-lists-are-strongly-typed.md)
 
 ## <a name="see-also"></a>Consulte também
- <xref:System.Collections.IEnumerator?displayProperty=fullName> <xref:System.Collections.CollectionBase?displayProperty=fullName> <xref:System.Collections.DictionaryBase?displayProperty=fullName> <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>
+
+- <xref:System.Collections.IEnumerator?displayProperty=fullName>
+- <xref:System.Collections.CollectionBase?displayProperty=fullName>
+- <xref:System.Collections.DictionaryBase?displayProperty=fullName>
+- <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>

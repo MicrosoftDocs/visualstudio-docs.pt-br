@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 21d4e3f23ae8a66ff4bfa26bdaf6d906a2b008a2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2b4c7af3a7cedd56b72032ad51ecc6ef4df04d8c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837926"
 ---
 # <a name="idebugreference2setvalueasstring"></a>IDebugReference2::SetValueAsString
 Define o valor de uma referência de uma cadeia de caracteres. Reservado para uso futuro.  
@@ -50,7 +51,7 @@ int SetValueAsString (
  [in] A base a ser usada na formatação de todas as informações numéricas.  
   
  `dwTimeout`  
- [in] Tempo máximo, em milissegundos, de espera antes de retornar desse método. Use `INFINITE` aguardar indefinidamente.  
+ [in] Tempo máximo, em milissegundos, para aguardar antes de retornar do método. Use `INFINITE` para aguardar indefinidamente.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Sempre retorna `E_NOTIMPL`.  

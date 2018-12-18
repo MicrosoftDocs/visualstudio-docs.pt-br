@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 95c95d33c2d31e5476153ddd0d0a9598f67080c8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c7711d185e92b0cc8a29070aa78a4acff835df33
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846935"
 ---
 # <a name="ipropertyproxyeesideresolveassemblyref"></a>IPropertyProxyEESide::ResolveAssemblyRef
 Determina o local da referência de assembly gerenciado especificado.  
@@ -51,10 +52,10 @@ int ResolveAssemblyRef(
  [in] Nome do assembly para resolver.  
   
  `assemBytes`  
- [out] Retorna um [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) que contém os bytes do assembly associados com a referência de objeto.  
+ [out] Retorna um [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) contendo os bytes de assembly associados à referência de objeto.  
   
  `assemPdb`  
- [out] Retorna um `IEEDataStorage` objeto que contém o símbolo de armazena dados associados a esta referência.  
+ [out] Retorna um `IEEDataStorage` objeto que contém o símbolo de armazena os dados associados a esta referência.  
   
  `assemLocation`  
  [out] Retorna o local do caminho dessa referência.  
@@ -63,7 +64,7 @@ int ResolveAssemblyRef(
  [out] Retorna um valor da [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) enumeração que indica o local do assembly dessa referência.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  Normalmente, esse método não é implementado por um avaliador de expressão personalizada.  

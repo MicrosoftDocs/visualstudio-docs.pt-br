@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c6ae2716fc76d77d1c670bb206168826c66c48ed
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 41add9a334dd6e78a476134845db7d31664755c9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49871076"
 ---
 # <a name="ipropertyproxyeesideinitsourcedataprovider"></a>IPropertyProxyEESide::InitSourceDataProvider
 Inicializa os dados de origem para este objeto e retorna um objeto que contém os dados iniciais.  
@@ -43,10 +44,10 @@ int InitSourceDataProvider(
  [out] Retorna um [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) objeto  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método faz o que for necessário para inicializar um objeto para que ele pode retornar um [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) interface nos dados do objeto. Isso permite que os dados do objeto a ser exibido e, se permitido, alteradas por um visualizador de tipo.  
+ Esse método faz tudo o que é necessário inicializar um objeto para que ele possa retornar um [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) interface nos dados do objeto. Isso permite que os dados do objeto seja exibido e, se puder, alterado por um visualizador de tipo.  
   
 ## <a name="see-also"></a>Consulte também  
  [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)   

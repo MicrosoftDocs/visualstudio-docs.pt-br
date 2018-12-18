@@ -1,5 +1,5 @@
 ---
-title: ': Get_source | Microsoft Docs'
+title: 'Idiainjectedsource:: Get_source | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8331086fff33f247ab030e3736e1e598c3af477d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 2966405dfe3bb7e6134f5ef35e55b30ef6c66c6e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909896"
 ---
 # <a name="idiainjectedsourcegetsource"></a>IDiaInjectedSource::get_source
-Recupera os bytes de código fonte.  
+Recupera os bytes de código de origem.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,10 +39,10 @@ HRESULT get_source (
  [in] O número de bytes que representa o tamanho do buffer de dados.  
   
  `pcbData`  
- [out] Retorna o número de bytes que representa os bytes retornados. Se `data` é `NULL`, em seguida, `pcbData` é o número total de bytes de dados disponíveis.  
+ [out] Retorna o número de bytes que representa os bytes retornados. Se `data` está `NULL`, em seguida, `pcbData` é o número total de bytes de dados disponíveis.  
   
  `data[]`  
- [out] Um buffer é preenchido com os bytes de origem.  
+ [out] Um buffer que deve ser preenchida com os bytes de origem.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.  

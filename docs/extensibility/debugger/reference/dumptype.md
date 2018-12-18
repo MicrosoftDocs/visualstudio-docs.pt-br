@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa44dfa59f4883fa29a1724344124267f28bce9f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5e886649a7eaa5f9f99eb2e2bfcc48985f12a5e4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949546"
 ---
 # <a name="dumptype"></a>DUMPTYPE
-Especifica a quantidade de estado do programa (como threads em execução, quadros de pilhas e endereço de instrução atual) para despejo.  
+Especifica a quantidade de estado de um programa (como threads em execução, quadros de pilha e o endereço da instrução atual) para despejo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +44,7 @@ public enum enum_DUMPTYPE {
   
 ## <a name="members"></a>Membros  
  DUMP_MINIDUMP  
- Especifica um despejo de memória pequeno, compacto.  
+ Especifica um despejo de pequeno e compacto.  
   
  DUMP_FULLDUMP  
  Especifica um despejo completo, grande.  

@@ -1,10 +1,9 @@
 ---
-title: Caixa de diálogo Geral, Ambiente, Opções | Microsoft Docs
-ms.custom: ''
+title: Caixa de diálogo Geral, Ambientes, Opções
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.Message.0x800a002e
 - VS.ToolsOptionsPages.Environment.General
@@ -28,18 +27,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c427752fa1b89acb2fa55afc7acd8c4535686c37
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b52a6815fe9eb9333d6a87b25c1b8dd33ff7eb08
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389157"
 ---
 # <a name="general-environment-options-dialog-box"></a>Caixa de diálogo Geral, Ambientes, Opções
 
 Use esta página para alterar temas de cores, configurações de barra de status e associações de extensões de arquivo, entre outras coisas, para o IDE (ambiente de desenvolvimento integrado). Você pode acessar a caixa de diálogo **Opções** abrindo o menu **Ferramentas**, escolhendo **Opções**, abrindo a pasta **Ambiente** e, em seguida, escolhendo a página **Geral**. Se essa página não aparecer na lista, marque a caixa de seleção **Mostrar todas as configurações** na caixa de diálogo **Opções**.
-
-> [!NOTE]
-> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, abra o menu **Ferramentas** e escolha **Importar e Exportar Configurações**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="visual-experience"></a>Experiência visual
 
@@ -67,17 +64,27 @@ Usa aceleração de elementos gráficos de hardware se estiver disponível, em v
 
 ## <a name="other"></a>Outros
 
-**Itens mostrados no menu Janela** Personaliza o número de janelas que aparecem na lista Janelas do menu **Janela**. Digite um número entre 1 e 24. Por padrão, o número é 10.
+**Itens mostrados no menu Janela**
 
-**Itens mostrados em listas usadas recentemente** Personaliza o número de projetos e arquivos usados mais recentemente que aparecem no menu **Arquivo**. Digite um número entre 1 e 24. Por padrão, o número é 10. Esta é uma maneira fácil de recuperar projetos e arquivos usados recentemente.
+Personaliza o número de janelas que aparecem na lista Janelas do menu **Janela**. Digite um número entre 1 e 24. Por padrão, o número é 10.
 
-**Mostrar barra de status** Exibe a barra de status. A barra de status fica localizada na parte inferior da janela do IDE e exibe informações sobre o progresso das operações em andamento.
+**Itens mostrados em listas usadas recentemente**
 
-**Botão Fechar afeta apenas a janela de ferramentas ativa** Especifica que, quando o botão **Fechar** é acionado, somente a janela de ferramentas que está em foco é fechada e não todas as janelas de ferramentas do conjunto encaixado. Por padrão, essa opção é selecionada.
+Personaliza o número de projetos e arquivos usados mais recentemente que aparecem no menu **Arquivo**. Digite um número entre 1 e 24. Por padrão, o número é 10. Esta é uma maneira fácil de recuperar projetos e arquivos usados recentemente.
 
-**Botão Ocultar Automaticamente afeta apenas a janela de ferramentas ativa** Especifica que, quando o botão **Ocultar Automaticamente** é acionado, somente a janela de ferramentas que está em foco é ocultada automaticamente e não todas as janelas de ferramentas do conjunto encaixado. Por padrão, essa opção não é selecionada.
+**Mostrar barra de status**
+
+Exibe a barra de status. A barra de status fica localizada na parte inferior da janela do IDE e exibe informações sobre o progresso das operações em andamento.
+
+**Botão Fechar afeta apenas a janela da ferramenta ativa**
+
+Especifica que, quando o botão **Fechar** é acionado, somente a janela da ferramenta que está em foco é fechada, e não todas as janelas de ferramentas do conjunto encaixado. Por padrão, essa opção é selecionada.
+
+**Botão Ocultar Automaticamente afeta apenas a janela da ferramenta ativa**
+
+Especifica que, quando o botão **Ocultar Automaticamente** é acionado, somente a janela da ferramenta que está em foco é ocultada automaticamente, e não todas as janelas de ferramentas do conjunto encaixado. Por padrão, essa opção não é selecionada.
 
 ## <a name="see-also"></a>Consulte também
 
-[Caixa de diálogo de opções do ambiente](../../ide/reference/environment-options-dialog-box.md)
-[Personalizando layouts de janela](../../ide/customizing-window-layouts-in-visual-studio.md)
+- [Caixa de diálogo Opções do Ambiente](../../ide/reference/environment-options-dialog-box.md)
+- [Personalizando layouts de janela](../../ide/customizing-window-layouts-in-visual-studio.md)

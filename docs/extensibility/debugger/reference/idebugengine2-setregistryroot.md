@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 606ddb5380da2bfe0c75d20bc70bf0da911ea4e5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 07e62715bc5bdce655c4fa5493bb9043ce241dca
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939729"
 ---
 # <a name="idebugengine2setregistryroot"></a>IDebugEngine2::SetRegistryRoot
-Define a raiz do registro para o mecanismo de depuração (DE).  
+Define a raiz do registro para o mecanismo de depuração (DES).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,10 +44,10 @@ int SetRegistryRoot(
  [in] A raiz do registro para usar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método permite que [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] para especificar uma raiz de registro alternativo que o DE deve usar para obter as configurações do registro; por exemplo, "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp".  
+ Esse método permite [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] para especificar uma raiz do registro alternativo que o DE deve usar para obter as configurações do registro; por exemplo, "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp".  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

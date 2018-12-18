@@ -12,14 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2551e68e2563570d4b72df2438bd747da36e59ac
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 47d01237d7e2235f2d50e82a8fd599384e930d2c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896257"
 ---
 # <a name="idiasessionfindinlineesbyname"></a>IDiaSession::findInlineesByName
-Recupera uma enumeração que permite que um cliente iterar por meio das informações de número de linha de todas as funções embutidas que corresponde a um nome especificado.  
+Recupera uma enumeração que permite que um cliente iterar por meio das informações de número de linha de todas as funções embutidas que correspondem a um nome especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,13 +37,13 @@ HRESULT findInlineesByName (
  [in] Especifica o nome a ser usado para comparação.  
   
  `option`  
- [in] Especifica as opções de comparação aplicadas à pesquisa de nome. Os valores do [enumeração NameSearchOptions](../../debugger/debug-interface-access/namesearchoptions.md) enumeração pode ser usada sozinha ou em combinação.  
+ [in] Especifica as opções de comparação aplicadas à pesquisa de nome. Os valores do [enumeração NameSearchOptions](../../debugger/debug-interface-access/namesearchoptions.md) enumeração pode ser usada sozinho ou em combinação.  
   
  `ppResult`  
  [out] Retorna um [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objeto que contém uma lista dos números de linha que foram recuperados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   

@@ -14,18 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 801bdf945f7f963168a83f8291d78e4751354269
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e0bfb702b9465ee4d00547f5d965bfbaae18742b
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39637624"
 ---
-# <a name="menus-element"></a>Elemento de menus
+# <a name="menus-element"></a>Elemento menus
 Define todos os menus e barras de ferramentas que implementa um VSPackage.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <Menus>  
   <Menu>... </Menu>  
   <Menu>... </Menu>  
@@ -39,24 +40,24 @@ Define todos os menus e barras de ferramentas que implementa um VSPackage.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|Condição|Opcional. Consulte [atributos condicionais](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|Condição|Opcional. Ver [atributos condicionais](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[Elemento Menus](../extensibility/menus-element.md)|Define todos os menus e barras de ferramentas que implementa um VSPackage.|  
-|[Elemento Menu](../extensibility/menu-element.md)|Representa um único menu ou barra de ferramentas.|  
+|[Elemento menus](../extensibility/menus-element.md)|Define todos os menus e barras de ferramentas que implementa um VSPackage.|  
+|[Elemento menu](../extensibility/menu-element.md)|Representa um único menu ou barra de ferramentas.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[Elemento Commands](../extensibility/commands-element.md)|Representa a coleção de comandos no VSPackage.|  
+|[Elemento Commands](../extensibility/commands-element.md)|Representa a coleção de comandos em um VSPackage.|  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```xml  
 <Commands package="guidMyPackage">  
     <Menus>  
       <Menu Condition="'%(DEBUG)' != 'true'"   
@@ -80,5 +81,5 @@ Define todos os menus e barras de ferramentas que implementa um VSPackage.
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Como VSPackages adicionar elementos da Interface do usuário](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
+ [Como os VSPackages adicionam elementos da interface do usuário](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [Comandos, menus e barras de ferramentas](../extensibility/internals/commands-menus-and-toolbars.md)

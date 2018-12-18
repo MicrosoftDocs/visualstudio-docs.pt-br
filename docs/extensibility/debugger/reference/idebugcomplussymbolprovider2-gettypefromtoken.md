@@ -14,11 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1e0860ae08332f364e707dcde70b345ce4dae181
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5c514df27914ed0c40239e6d06130ab7df25d07c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49858323"
 ---
 # <a name="idebugcomplussymbolprovider2gettypefromtoken"></a>IDebugComPlusSymbolProvider2::GetTypeFromToken
 Recupera um tipo de dado seu token.  
@@ -54,13 +55,13 @@ int GetTypeFromToken(
  [in] Token do tipo a ser recuperado.  
   
  `ppField`  
- [out] Retorna o tipo que é representado pelo [IDebugField](../../../extensibility/debugger/reference/idebugfield.md).  
+ [out] Retorna o tipo que é representado pela [IDebugField](../../../extensibility/debugger/reference/idebugfield.md).  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto que expõe o [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) interface.  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto que expõe a [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) interface.  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::GetTypeFromToken(  

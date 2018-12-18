@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cfa0e6b6755ea884b6dd9b6ba0409a614e80e290
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f6e8998ca881bbeb4a90405ab01577bf6be18f33
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49858349"
 ---
 # <a name="idebugreference2getderivedmostreference"></a>IDebugReference2::GetDerivedMostReference
-Obtém a referência mais derivado de uma referência. Reservado para uso futuro.  
+Obtém a referência do mais derivado de uma referência. Reservado para uso futuro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +47,7 @@ int GetDerivedMostReference(
  Sempre retorna `E_NOTIMPL`.  
   
 ## <a name="remarks"></a>Comentários  
- Por exemplo, se esta propriedade descreve um objeto que implementa `ClassRoot` , mas que é realmente uma instanciação de `ClassDerived` que é derivado de `ClassRoot`, em seguida, esse método retorna um [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objeto que representa uma referência para o `ClassDerived` objeto.  
+ Por exemplo, se esta propriedade descreve um objeto que implementa `ClassRoot` , mas o que é realmente uma instanciação de `ClassDerived` que é derivada de `ClassRoot`, em seguida, esse método retorna um [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objeto que representa uma referência para o `ClassDerived` objeto.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

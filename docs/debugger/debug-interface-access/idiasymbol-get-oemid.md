@@ -1,5 +1,5 @@
 ---
-title: ': Get_oemid | Microsoft Docs'
+title: 'Idiasymbol:: Get_oemid | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6911e617a8cac136eb7b51913db48fbb031803d4
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 8208d146284926ce7ec3375e8416210eeb5d214c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875249"
 ---
 # <a name="idiasymbolgetoemid"></a>IDiaSymbol::get_oemId
-Recupera o valor da ID do símbolo fabricante (OEM).  
+Recupera o valor de ID do fabricante original do equipamento (OEM) do símbolo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,13 +37,13 @@ HRESULT get_oemId (
  [out] Retorna um valor exclusivo que identifica um OEM.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
   
 ## <a name="remarks"></a>Comentários  
- Essa propriedade só se aplica a símbolos com um [SymTagEnum enumeração](../../debugger/debug-interface-access/symtagenum.md) tipo de `SymTagCustomType`.  
+ Essa propriedade se aplica apenas aos símbolos com um [enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) tipo de `SymTagCustomType`.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

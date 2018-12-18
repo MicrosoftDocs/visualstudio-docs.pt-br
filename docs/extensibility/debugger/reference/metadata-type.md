@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 66a1632198a0af5490e66a843458fc55bcad2d6d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 77e0a87f6b20093c1ddca1a9f132003f63afbaa1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900313"
 ---
 # <a name="metadatatype"></a>METADATA_TYPE
-Essa estrutura Especifica informações sobre um tipo de campo obtido de metadados.  
+Essa estrutura Especifica informações sobre um tipo de campo tirado de metadados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,12 +53,12 @@ public struct METADATA_TYPE {
  tokClass  
  A ID do token metadados desse tipo.  
   
- [C++] `_mdToken` é um `typedef` para 32 bits `int`.  
+ [C++] `_mdToken` é um `typedef` de 32 bits `int`.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é exibido como parte da união no [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) estrutura quando o `dwKind` campo do `TYPE_INFO` estrutura é definida como `TYPE_KIND_METADATA` (um valor da [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) enumeração).  
+ Essa estrutura é exibido como parte da união na [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) estrutura quando o `dwKind` campo dos `TYPE_INFO` estrutura é definida como `TYPE_KIND_METADATA` (um valor da [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) enumeração).  
   
- O `tokClass` valor é um token de metadados que identifica exclusivamente um tipo. Para obter detalhes sobre como interpretar os bits superiores da ID do token de metadados, consulte o `CorTokenType` enumeração no arquivo corhdr no [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] SDK.  
+ O `tokClass` valor é um token de metadados que identifica exclusivamente um tipo. Para obter detalhes sobre como interpretar os bits superiores do que a ID do token de metadados, consulte a `CorTokenType` enumeração no arquivo corhdr. h no [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] SDK.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: sh.h  

@@ -16,11 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0cd5b36d8985ef36b67d5983113989a2f60bf588
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b3f8589e8e7084853a4db5bb39b79c1abd6ee293
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936628"
 ---
 # <a name="idebugboundbreakpoint2enable"></a>IDebugBoundBreakpoint2::Enable
 Habilita ou desabilita o ponto de interrupção.  
@@ -41,10 +42,10 @@ int Enable(
   
 #### <a name="parameters"></a>Parâmetros  
  `fEnable`  
- [in] Definir como diferente de zero (`TRUE`) para ativar ou zero (`FALSE`) para desabilitar o ponto de interrupção.  
+ [in] Definida como diferente de zero (`TRUE`) para habilitar ou zero (`FALSE`) para desabilitar o ponto de interrupção.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o estado do objeto de ponto de interrupção associado é definido como `BPS_DELETED` (parte do [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeração).  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o estado do objeto associado de ponto de interrupção é definido como `BPS_DELETED` (parte do [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeração).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como implementar esse método para um simples `CBoundBreakpoint` objeto que expõe o [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) interface.  

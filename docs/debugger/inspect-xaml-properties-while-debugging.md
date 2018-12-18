@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31480209"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>Inspecione as propriedades XAML durante a depuração
 Você pode obter uma exibição em tempo real do seu código XAML em execução com o **árvore Visual dinâmica** e **Live propriedade Explorer**. Essas ferramentas oferecem um modo de exibição de árvore dos elementos de interface do usuário de seu aplicativo em execução do XAML e mostram as propriedades de tempo de execução de qualquer elemento de interface do usuário selecionado.  

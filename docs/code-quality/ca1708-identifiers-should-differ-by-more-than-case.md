@@ -1,6 +1,7 @@
 ---
 title: 'CA1708: os identificadores devem ser diferentes além de maiúsculas de minúsculas'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cf10202293091fd02eee3d8eb94f0f93b8edd2ae
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b2bda5a9f5d569057455af9e31fb5d6852c9881e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49815488"
 ---
 # <a name="ca1708-identifiers-should-differ-by-more-than-case"></a>CA1708: os identificadores devem ser diferentes além de maiúsculas de minúsculas
+
 |||
 |-|-|
 |NomeDoTipo|IdentifiersShouldDifferByMoreThanCase|
@@ -30,21 +33,21 @@ ms.lasthandoff: 04/19/2018
 |Alteração Significativa|Quebra|
 
 ## <a name="cause"></a>Causa
- Os nomes dos dois tipos, membros, parâmetros ou espaços para nome totalmente qualificados são idênticos quando eles são convertidos em minúsculas.
+ Os nomes dos dois tipos, membros, parâmetros ou espaços para nomes totalmente qualificados são idênticos quando eles são convertidos em minúsculas.
 
-## <a name="rule-description"></a>Descrição da Regra
- Os identificadores de namespaces, tipos, membros e parâmetros não podem se diferenciar apenas por maiúsculas porque linguagens com o Common Language Runtime como destino não precisam diferenciar maiúsculas e minúsculas. Por exemplo, [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] é uma linguagem de maiusculas e minúsculas amplamente usada.
+## <a name="rule-description"></a>Descrição da regra
+ Os identificadores de namespaces, tipos, membros e parâmetros não podem se diferenciar apenas por maiúsculas porque linguagens com o Common Language Runtime como destino não precisam diferenciar maiúsculas e minúsculas. Por exemplo, [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] é uma linguagem diferencia maiusculas de minúsculas amplamente utilizada.
 
- Esta regra é disparada em membros publicamente visíveis apenas.
+ Essa regra é acionada em apenas a membros publicamente visível.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Selecione um nome exclusivo quando comparado a outros identificadores em minúsculas.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Selecione um nome exclusivo quando comparado a outros identificadores no diferenciando maiusculas de minúsculas.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- Não suprima um aviso nessa regra. Não pode ser utilizada em todos os idiomas disponíveis na biblioteca de [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+ Não suprima um aviso nessa regra. A biblioteca não pode ser utilizada em todos os idiomas disponíveis no .NET Framework.
 
 ## <a name="example-of-a-violation"></a>Exemplo de uma violação
- O exemplo a seguir demonstra uma violação desta regra.
+ O exemplo a seguir demonstra uma violação dessa regra.
 
  [!code-csharp[FxCop.Naming.IdentifiersShouldDifferByMoreThanCase#1](../code-quality/codesnippet/CSharp/ca1708-identifiers-should-differ-by-more-than-case_1.cs)]
 

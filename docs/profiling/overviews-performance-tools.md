@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 709f9b62844a209450daa427efdb3333796828b8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 904ebf55e7920bfd79fec3afb502d59e5dc82a33
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254612"
 ---
 # <a name="overviews-performance-tools"></a>Visões gerais (ferramentas de desempenho)
 Esta seção fornece visões gerais conceituais e de terminologia para as Ferramentas de Criação de Perfil do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], que você pode usar para medir as características de desempenho de um aplicativo em desenvolvimento.  
@@ -29,16 +30,16 @@ Esta seção fornece visões gerais conceituais e de terminologia para as Ferram
  [Noções básicas sobre valores de dados de amostragem](../profiling/understanding-sampling-data-values.md)  
  Saiba os valores de dados que são relatados ao usar o método de criação de perfil de amostragem.  
   
- [Noções básicas sobre valores de dados de instrumentação](../profiling/understanding-instrumentation-data-values.md)  
+ [Entender os valores de dados de instrumentação](../profiling/understanding-instrumentation-data-values.md)  
  Saiba os valores de dados que são relatados ao usar o método de criação de perfil de instrumentação.  
   
- [Entendendo a alocação de memória e os valores de dados de tempo de vida do objeto](../profiling/understanding-memory-allocation-and-object-lifetime-data-values.md)  
+ [Entender a alocação de memória e os valores de dados de tempo de vida do objeto](../profiling/understanding-memory-allocation-and-object-lifetime-data-values.md)  
  Saiba os valores de dados que são relatados ao usar o método de criação de perfil de memória de .NET.  
   
- [Noções básicas sobre valores de dados de contenção de recurso](../profiling/understanding-resource-contention-data-values.md)  
+ [Entender os valores de dados de contenção de recursos](../profiling/understanding-resource-contention-data-values.md)  
  Saiba os valores de dados que são relatados ao usar o método de criação de perfil de simultaneidade.  
   
- [Janela do Performance Explorer](../profiling/performance-explorer-window.md)  
+ [Janela do Gerenciador de Desempenho](../profiling/performance-explorer-window.md)  
  Descreve a janela que é usada para configurar e iniciar sessões de desempenho.  
   
  [Contadores da CPU e do Windows](../profiling/cpu-and-windows-counters.md)  

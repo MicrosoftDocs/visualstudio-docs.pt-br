@@ -1,5 +1,5 @@
 ---
-title: ': Get_offset | Microsoft Docs'
+title: 'Idiasymbol:: Get_offset | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e1cf6b88a306fbb6cb127ec8174b5030a6d4d88
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0b2fa3ed234532ad3de02a31d4600f10f5375ad3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49850068"
 ---
 # <a name="idiasymbolgetoffset"></a>IDiaSymbol::get_offset
 Recupera o deslocamento do local do símbolo. Usado quando o [enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) é `LocIsRegRel` ou `LocIsBitField`.  
@@ -33,23 +34,23 @@ HRESULT get_offset (
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Retorna o deslocamento em bytes do local do símbolo.  
+ [out] Retorna o deslocamento em bytes, do local do símbolo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
   
 ## <a name="remarks"></a>Comentários  
- O deslocamento é de alguns ponto conhecido anteriormente determinado. Por exemplo, o deslocamento para um `LocIsBitField` tipo de local é normalmente desde o início da classe que contém.  
+ O deslocamento é de algum ponto conhecido anteriormente foi determinado. Por exemplo, o deslocamento para um `LocIsBitField` normalmente é o tipo de local desde o início da classe recipiente.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Requisito|Descrição|  
 |-----------------|-----------------|  
 |Cabeçalho:|dia2.h|  
-|Versão:|Versão 7.0 do DIA SDK|  
+|Versão:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

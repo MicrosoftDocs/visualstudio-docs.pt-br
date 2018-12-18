@@ -15,66 +15,67 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f72640369152b03ef86383fda1162b1cfbacba8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 295f6d26d086914bf75d5744ca47594dfefb6591
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911246"
 ---
-# <a name="how-to-access-the-built-in-fonts-and-color-scheme"></a>Como: acessar o esquema de cores e fontes internas
+# <a name="how-to-access-the-built-in-fonts-and-color-ccheme"></a>Como: acessar as fontes internas e ccheme de cores
 O ambiente de desenvolvimento integrado (IDE) do Visual Studio tem um esquema de fontes e cores que está associado com a janela do editor. Você pode acessar esse esquema por meio de <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> interface.
 
  Para usar o esquema de cores e fontes internas, um VSPackage deve:
 
--   Defina uma categoria para usar com o serviço de fontes e cores padrão.
+- Defina uma categoria a ser usado com o serviço de fontes e cores padrão.
 
--   Registre a categoria com o servidor de fontes e cores padrão.
+- Registre-se a categoria com o servidor de fontes e cores padrão.
 
--   Informe o IDE que uma janela específica usa as categorias e itens de exibição interna usando o <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer> e <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer> interfaces.
+- Aconselhamos o IDE que uma janela específica usa os itens de exibição interna e as categorias usando o <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer> e <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer> interfaces.
 
- O IDE usa a categoria resultante como um identificador para a janela. Nome da categoria é exibido no **Mostrar configurações de:** caixa suspensa no **fontes e cores** página de propriedades.
+  O IDE usa a categoria resultante como um identificador para a janela. Nome da categoria é exibido na **Mostrar configurações de:** caixa de lista suspensa na **fontes e cores** página de propriedades.
 
-### <a name="to-define-a-category-using-built-in-fonts-and-colors"></a>Para definir uma categoria usando cores e fontes internas
+## <a name="to-define-a-category-using-built-in-fonts-and-colors"></a>Para definir uma categoria usando cores e fontes internas
 
 1.  Crie um GUID arbitrário.
 
-     Esse GUID é usado para identificar exclusivamente uma categoria **.** Esta categoria reutiliza a especificação de cores e fontes de padrão do IDE.
+     Esse GUID é usado para identificar exclusivamente uma categoria. Esta categoria reutiliza a especificação de cores e fontes de padrão do IDE.
 
     > [!NOTE]
-    >  Ao recuperar dados de fontes e cores com o <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents> ou outras interfaces, VSPackages usar esse GUID para fazer referência a informações internas.
+    >  Ao recuperar dados de fontes e cores com o <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents> ou outras interfaces, VSPackages usará esse GUID para fazer referência a informações internas.
 
-2.  Nome da categoria deve ser adicionado a uma tabela de cadeia de caracteres dentro do arquivo de recursos (. rc) do VSPackage, para que ele pode ser localizado conforme necessário, quando exibido no IDE.
+2.  Nome da categoria deve ser adicionado a uma tabela de cadeia de caracteres dentro de recursos do VSPackage (*. rc*) de arquivo, para que ele pode ser localizado conforme necessário, quando exibidas no IDE.
 
-     Para obter mais informações, consulte [adicionando ou excluindo uma cadeia de caracteres](/cpp/windows/adding-or-deleting-a-string).
+     Para obter mais informações, consulte [adicionar ou excluir uma cadeia de caracteres](/cpp/windows/adding-or-deleting-a-string).
 
 ### <a name="to-register-a-category-using-built-in-fonts-and-colors"></a>Para registrar uma categoria usando cores e fontes internas
 
 1.  Construa um tipo especial de entrada de registro de categoria no seguinte local:
 
-     [HKLM\Software\Microsoft. \Visual Studio\\*\<versão do Visual Studio >* \FontAndColors\\*\<categoria >*]
+     *[HKLM\Software\Microsoft. \Visual Studio\\\<versão do Visual Studio > \FontAndColors\\\<categoria >*]
 
-     *\<Categoria >* é o nome da categoria não localizada.
+     *\<Categoria >* é o nome não localizado da categoria.
 
 2.  Preencha o registro para usar as fontes de estoque e o esquema de cores com quatro valores:
 
     |Nome|Tipo|Dados|Descrição|
     |----------|----------|----------|-----------------|
     |Categoria|REG_SZ|GUID|Um GUID arbitrária que identifica uma categoria que contém o esquema de fontes e cores das ações.|
-    |Pacote|REG_SZ|GUID|{F5E7E71D-1401-11D1-883B-0000F87579D2}<br /><br /> Esse GUID é usada por todos os VSPackages que usam as configurações de fonte e cor padrão.|
-    |NameID|REG_DWORD|ID|A ID de recurso de um nome de categoria localizável o VSPackage.|
-    |ToolWindowPackage|REG_SZ|GUID|O GUID do VSPackage que implementa o <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> interface.|
+    |Pacote|REG_SZ|GUID|{F5E7E71D-1401-11D1-883B-0000F87579D2}<br /><br /> Esse GUID é usado por todos os VSPackages que usam as configurações de fonte e cor padrão.|
+    |NameID|REG_DWORD|ID|A ID de recurso de um nome de categoria localizáveis em VSPackage.|
+    |ToolWindowPackage|REG_SZ|GUID|O GUID da implementação de VSPackage o <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> interface.|
 
 ### <a name="to-initiate-the-use-of-system-provided-fonts-and-colors"></a>Para iniciar o uso de cores e fontes fornecidas pelo sistema
 
-1.  Criar uma instância do <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer> interface como parte da implementação e a inicialização da janela.
+1. Criar uma instância da <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer> interface como parte da implementação e a inicialização da janela.
 
-2.  Chamar o <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A> método para obter uma instância do <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer> interface correspondente à atual <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> instância.
+2. Chame o <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A> método para obter uma instância das <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer> interface correspondente ao atual <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> instância.
 
-3.  Chamar <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A> duas vezes.
+3. Chamar <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A> duas vezes.
 
-    -   Chame uma vez com `VSEDITPROPID_ViewGeneral_ColorCategory`como um argumento.
+   - Chamar uma vez com `VSEDITPROPID_ViewGeneral_ColorCategory`como um argumento.
 
-    -   Chame uma vez com `VSEDITPROPID_ViewGeneral_FontCategory` como um argumento.
+   - Chamar uma vez com `VSEDITPROPID_ViewGeneral_FontCategory` como um argumento.
 
      Isso define e expõe os serviços de fontes e cores padrão como uma propriedade da janela.
 
@@ -97,7 +98,7 @@ if (spPropCatContainer != NULL){
 
 ## <a name="see-also"></a>Consulte também
 
-- [Usando fontes e cores](../extensibility/using-fonts-and-colors.md)
-- [Obtendo informações de cores para coloração de texto e fonte](../extensibility/getting-font-and-color-information-for-text-colorization.md)
-- [Acessando configurações de cor e fonte armazenado](../extensibility/accessing-stored-font-and-color-settings.md)
-- [Visão geral de cor e de fonte](../extensibility/font-and-color-overview.md)
+- [Use fontes e cores](../extensibility/using-fonts-and-colors.md)
+- [Obter informações de fonte e cor para a colorização do texto](../extensibility/getting-font-and-color-information-for-text-colorization.md)
+- [Configurações de fonte e cor armazenados do Access](../extensibility/accessing-stored-font-and-color-settings.md)
+- [Visão geral de fontes e cores](../extensibility/font-and-color-overview.md)

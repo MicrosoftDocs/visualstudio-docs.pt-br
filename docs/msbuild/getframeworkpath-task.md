@@ -20,16 +20,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 03747e9271b9eea71236a4ec3fea373b992f9068
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 25fb85642b7eb6a92c11d3d04d2c44eb6c683cff
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946310"
 ---
 # <a name="getframeworkpath-task"></a>Tarefa GetFrameworkPath
 Recupera o caminho para os assemblies [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
   
-## <a name="task-parameters"></a>Parâmetros da tarefa  
+## <a name="task-parameters"></a>Parâmetros de tarefa  
  A tabela a seguir descreve os parâmetros da tarefa `GetFrameworkPath`.  
   
 |Parâmetro|Descrição|  
@@ -44,7 +45,7 @@ Recupera o caminho para os assemblies [!INCLUDE[dnprdnshort](../code-quality/inc
 ## <a name="remarks"></a>Comentários  
  Se várias versões do [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] estiverem instaladas, essa tarefa retorna a versão na qual o [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] está projetado para funcionar.  
   
- Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, confira [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa a tarefa `GetFrameworkPath` para armazenar o caminho para o [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] na propriedade `FrameworkPath`.  

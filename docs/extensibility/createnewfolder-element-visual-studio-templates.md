@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0897a5fdd160abf42e28ba6f36755822172fa743
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 77a67f69db12f5b651be45380e46e437ecc8bf3c
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232674"
 ---
 # <a name="createnewfolder-element-visual-studio-templates"></a>Elemento CreateNewFolder (modelos do Visual Studio)
 Determina se deve ser verificado se o diretório de destino onde o projeto será criado existe ou não. Se o diretório não existir, um novo diretório poderá ser criado para o projeto. Essa configuração é normalmente substituída pelo sinalizador de registro `NewProjectRequiresNewFolder(VsTemplate)` (`HKEY_LOCAL_MACHINE/SOFTWARE(/Wow6432Node)/Microsoft/VisualStudio/<version number>/Projects/<project GUID>`) que todos os tipos de projetos comuns usam para determinar se um novo projeto deve ser criado ou não em um novo diretório.  
@@ -52,7 +53,7 @@ Determina se deve ser verificado se o diretório de destino onde o projeto será
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele exibe em um a **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo.|  
   
 ## <a name="text-value"></a>Valor de texto  
  Um valor de texto é obrigatório.  

@@ -12,16 +12,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 41b7812db05b61c351346e5f0dcfa1bf4bd7bd1f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9dcadfdbfa52815fdd6d88f78afb88d421e203c7
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237904"
 ---
 # <a name="gpu-activity-graph"></a>Gráfico de atividade de GPU
 O gráfico de Atividade de GPU na Visualização Simultânea exibe o nível de atividade do DirectX no sistema, medido pelo número de mecanismos do DirectX em uso ao longo do tempo.  O gráfico não mostra quais mecanismos específicos foram usados.  É considerado que um mecanismo está em uso se ele estiver processando qualquer trabalho da GPU.  
   
-## <a name="gpu-activity-graph-colors"></a>Cores do gráfico de Atividade de GPU  
+## <a name="gpu-activity-graph-colors"></a>Cores do gráfico de atividade de GPU  
  Verde indica o consumo de mecanismos do DirectX pelo processo atual.  
   
  Cinza claro indica o consumo de mecanismos do DirectX por outros processos no sistema. Para reduzir o consumo de mecanismos do DirectX por outros processos, reduza o número de outros processos em execução no sistema.  

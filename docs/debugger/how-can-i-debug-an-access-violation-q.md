@@ -1,6 +1,6 @@
 ---
-title: Como depurar uma violação de acesso C++? | Microsoft Docs
-ms.custom: ''
+title: Depurar uma violação de acesso do C++ | Microsoft Docs
+ms.custom: seodec18
 ms.date: 05/23/2017
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -20,13 +20,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b131ba4acf761a11aa9f39807d1db3202b021c9d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 6f463f4e14e5be90422f73b299cb927a54fcfcef
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067254"
 ---
-# <a name="how-can-i-debug-a-c-access-violation"></a>Como depurar uma violação de acesso C++?
+# <a name="how-can-i-debug-a-c-access-violation"></a>Como posso depurar uma violação de acesso de C++?
 ## <a name="problem-description"></a>Descrição do problema  
  Meu programa produz uma violação de acesso. Como posso depurar isso?  
   
@@ -64,11 +65,11 @@ int main() {
 }  
 ```  
   
- Se você executar esse código no Visual Studio 2015 atualização 1, você verá a seguinte caixa de diálogo de exceção:  
+ Se você executar esse código no Visual Studio 2015 atualização 1, você deverá ver a seguinte caixa de diálogo de exceção:  
   
  ![AccessViolationCPlus](../debugger/media/accessviolationcplus.png "AccessViolationCPlus")  
   
- Se você não puder determinar por que o ponteiro causou uma violação de acesso, o rastreamento através do código para certificar-se de que o ponteiro causando o problema foi atribuído corretamente.  Se ele é passado como um parâmetro, certifique-se de que ela será transmitida corretamente e você não criar acidentalmente um [shallow cópia](http://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy). Verifique se que os valores não sejam sendo acidentalmente alterados em algum lugar no programa criando um ponto de interrupção de dados para o ponteiro em questão para certificar-se de que ele não está sendo modificado em outro lugar no programa. Para obter mais informações sobre pontos de interrupção de dados, consulte a seção de ponto de interrupção de dados em [usando pontos de interrupção](../debugger/using-breakpoints.md).  
+ Se você não puder determinar por que o ponteiro causou uma violação de acesso, rastrear o código para certificar-se de que o ponteiro causando o problema foi atribuído corretamente.  Se ele é passado como um parâmetro, certifique-se de que ele é passado corretamente, e você não criar acidentalmente um [cópia superficial](http://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy). Em seguida, verifique se que os valores não sejam sendo inadvertidamente alterados em algum lugar no programa, criando um ponto de interrupção de dados para o ponteiro em questão para certificar-se de que não está sendo modificada em outro lugar no programa. Para obter mais informações sobre pontos de interrupção de dados, consulte a seção de ponto de interrupção de dados no [usando pontos de interrupção](../debugger/using-breakpoints.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Perguntas frequentes de depuração de código nativo](../debugger/debugging-native-code-faqs.md)

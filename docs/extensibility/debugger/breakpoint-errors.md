@@ -15,18 +15,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e3c7271cc573388231045143f275d1032bef437
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b08b9bee82a2505411be95ef2e6634e7897c15ec
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153743"
 ---
 # <a name="breakpoint-errors"></a>Erros de ponto de interrupção
-O seguinte descreve o processo quando um ponto de interrupção tenta associar ao código, mas falha:  
+O exemplo a seguir descreve o processo quando um ponto de interrupção tenta associar ao código, mas falha.  
   
-## <a name="troubleshooting-a-breakpoint-error"></a>Solucionando problemas de um erro de ponto de interrupção  
+## <a name="troubleshoot-a-breakpoint-error"></a>Solucionar problemas de um erro de ponto de interrupção  
   
-1.  O mecanismo de depuração (DE) envia um [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) para o Gerenciador de sessão de depuração (SDM).  
+1.  O mecanismo de depuração (DES) envia uma [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) para o Gerenciador de sessão de depuração (SDM).  
   
 2.  As chamadas SDM [IDebugBreakpointErrorEvent2::GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md) (IDebugErrorBreakpoint2 * * `ppErrorBP`) para obter o ponto de interrupção de erro.  
   

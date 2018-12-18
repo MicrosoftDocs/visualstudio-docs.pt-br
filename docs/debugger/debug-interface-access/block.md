@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31462374"
 ---
 # <a name="block"></a>Bloco
 Cada bloco de código é identificado por um `SymTagBlock` símbolo. Símbolos de bloco são usados para identificar os escopos aninhados dentro de funções.  

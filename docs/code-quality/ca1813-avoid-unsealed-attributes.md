@@ -1,6 +1,7 @@
 ---
 title: 'CA1813: evitar atributos não lacrados'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,20 @@ ms.assetid: f5e31b4c-9f8b-49e1-a2a8-bb5f1140729a
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: db86642cc5b65a93cd2d2bb565ed3ed786362f54
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 45804f08ea25ab8582d28632baf07abea24e0406
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859478"
 ---
 # <a name="ca1813-avoid-unsealed-attributes"></a>CA1813: evitar atributos não lacrados
+
 |||
 |-|-|
 |NomeDoTipo|AvoidUnsealedAttributes|
@@ -30,27 +36,33 @@ ms.lasthandoff: 04/19/2018
 |Alteração Significativa|Quebra|
 
 ## <a name="cause"></a>Causa
- Um tipo público herda de <xref:System.Attribute?displayProperty=fullName>, não é abstrato e não está lacrado (`NotInheritable` no Visual Basic).
 
-## <a name="rule-description"></a>Descrição da Regra
- A biblioteca de classes do [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] fornece métodos para recuperar atributos personalizados. Por padrão, esses métodos pesquisar a hierarquia de herança de atributo; Por exemplo <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=fullName> procura o tipo de atributo especificado ou qualquer tipo de atributo que estende o tipo de atributo especificado. Lacrar o atributo elimina a pesquisa por meio da hierarquia de herança e pode melhorar o desempenho.
+Um tipo público herda <xref:System.Attribute?displayProperty=fullName>, não é abstrato e não está lacrado (`NotInheritable` no Visual Basic).
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, lacrar o tipo de atributo ou torná-lo abstrata.
+## <a name="rule-description"></a>Descrição da regra
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- É seguro suprimir um aviso dessa regra. Você deve fazer isso apenas se você estiver definindo uma hierarquia de atributo e não é possível lacrar o atributo ou torná-lo abstrata.
+A biblioteca de classes do .NET Framework fornece métodos para recuperar atributos personalizados. Por padrão, esses métodos pesquisam a hierarquia de herança do atributo. Por exemplo, <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=fullName> procura o tipo de atributo especificado ou qualquer tipo de atributo que estende o tipo de atributo especificado. A validação do atributo elimina a pesquisa por meio da hierarquia de herança e pode melhorar o desempenho.
+
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+
+Para corrigir uma violação dessa regra, lacre o tipo de atributo ou torná-lo abstrata.
+
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+
+É seguro suprimir um aviso nessa regra. Suprimir somente se você estiver definindo uma hierarquia de atributo e não é possível lacrar o atributo ou torná-lo abstrata.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir mostra um atributo personalizado que atenda a essa regra.
 
- [!code-csharp[FxCop.Performance.AttributesSealed#1](../code-quality/codesnippet/CSharp/ca1813-avoid-unsealed-attributes_1.cs)]
- [!code-vb[FxCop.Performance.AttributesSealed#1](../code-quality/codesnippet/VisualBasic/ca1813-avoid-unsealed-attributes_1.vb)]
+O exemplo a seguir mostra um atributo personalizado que atende a essa regra.
+
+[!code-csharp[FxCop.Performance.AttributesSealed#1](../code-quality/codesnippet/CSharp/ca1813-avoid-unsealed-attributes_1.cs)]
+[!code-vb[FxCop.Performance.AttributesSealed#1](../code-quality/codesnippet/VisualBasic/ca1813-avoid-unsealed-attributes_1.vb)]
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1019: definir acessadores para argumentos de atributo](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)
 
- [CA1018: marcar atributos com AttributeUsageAttribute](../code-quality/ca1018-mark-attributes-with-attributeusageattribute.md)
+- [CA1019: definir acessadores para argumentos de atributo](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)
+- [CA1018: marcar atributos com AttributeUsageAttribute](../code-quality/ca1018-mark-attributes-with-attributeusageattribute.md)
 
 ## <a name="see-also"></a>Consulte também
- [Atributos](/dotnet/standard/design-guidelines/attributes)
+
+- [Atributos](/dotnet/standard/design-guidelines/attributes)

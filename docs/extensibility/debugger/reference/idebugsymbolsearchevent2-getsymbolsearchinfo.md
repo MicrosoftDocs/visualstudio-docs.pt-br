@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 518429149ad1d997b860e486f3db4e519ef42cae
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7c38d1f834e9eb7deae62701a17c0d24ea21937c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915328"
 ---
 # <a name="idebugsymbolsearchevent2getsymbolsearchinfo"></a>IDebugSymbolSearchEvent2::GetSymbolSearchInfo
-Chamado pelo manipulador de eventos para recuperar resultados sobre um processo de carregamento de símbolo.  
+Chamado por um manipulador de eventos para recuperar os resultados de um processo de carregamento de símbolo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +49,7 @@ int GetSymbolSearchInfo(
  [out] Um objeto IDebugModule3 que representa o módulo para o qual os símbolos foram carregados.  
   
  `pbstrDebugMessage`  
- [out no] Retorna uma cadeia de caracteres que contém mensagens de erro do módulo. Se não houver nenhum erro, essa cadeia de caracteres conterá apenas o nome do módulo, mas nunca está vazia.  
+ [no, out] Retorna uma cadeia de caracteres que contém todas as mensagens de erro do módulo. Se não houver nenhum erro, essa cadeia de caracteres conterá apenas o nome do módulo, mas nunca está vazia.  
   
 > [!NOTE]
 >  [C++] `pbstrDebugMessage` não pode ser `NULL` e deve ser liberado com `SysFreeString`.  
@@ -57,10 +58,10 @@ int GetSymbolSearchInfo(
  [out] Uma combinação de sinalizadores do [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md) enumeração que indica se todos os símbolos foram carregados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Quando um manipulador recebe o [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) evento após uma tentativa de carregar símbolos de depuração para um módulo, o manipulador pode chamar esse método para determinar os resultados da carga.  
+ Quando um manipulador recebe o [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) evento após uma tentativa para carregar símbolos de depuração para um módulo, o manipulador pode chamar esse método para determinar os resultados do que a carga.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)   

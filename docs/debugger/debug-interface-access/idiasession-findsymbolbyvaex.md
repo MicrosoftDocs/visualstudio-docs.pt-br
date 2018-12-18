@@ -1,5 +1,5 @@
 ---
-title: ': Findsymbolbyvaex | Microsoft Docs'
+title: 'Idiasession:: Findsymbolbyvaex | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e3fad26dfd43057f02105e867c5f1f0add57b20d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 706049acf99804038f48125b77a71b879658baac
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874456"
 ---
 # <a name="idiasessionfindsymbolbyvaex"></a>IDiaSession::findSymbolByVAEx
 Recupera um tipo de símbolo especificado que contém ou está mais próximo de um endereço virtual especificado (VA) e o deslocamento.  
@@ -36,19 +37,19 @@ HRESULT findSymbolByVAEx (
   
 #### <a name="parameters"></a>Parâmetros  
  `va`  
- [in] Especifica o VA.  
+ [in] Especifica a VA.  
   
  `symtag`  
- [in] Tipo de símbolo a ser localizado. Os valores são tirados de [SymTagEnum enumeração](../../debugger/debug-interface-access/symtagenum.md) enumeração.  
+ [in] Tipo de símbolo a ser localizada. Valores são tirados de [enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) enumeração.  
   
  `ppSymbol`  
  [out] Retorna um [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) recuperado do objeto que representa o símbolo.  
   
  `displacement`  
- [out] Retorna um valor que especifica um deslocamento do endereço virtual fornecido pelo `va`.  
+ [out] Retorna um valor que especifica um deslocamento de endereço virtual fornecido pelo `va`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -60,7 +61,7 @@ pSession->findSymbolByVAEx( va, SymTagFunction, &pFunc, &disp );
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
- [: Findchildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
- [: Findsymbolbyva](../../debugger/debug-interface-access/idiasession-findsymbolbyva.md)   
+ [Idiasession:: Findchildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
+ [Idiasession:: Findsymbolbyva](../../debugger/debug-interface-access/idiasession-findsymbolbyva.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)

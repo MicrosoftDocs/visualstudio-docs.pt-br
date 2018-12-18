@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8379407a275fa4b89b4107037b2a39691d062dd9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a7983943aaa6680539557f68376d19e1e19580cd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888236"
 ---
 # <a name="idebugmethodfieldenumlocals"></a>IDebugMethodField::EnumLocals
 Cria um enumerador para variáveis locais selecionados do método.  
@@ -42,7 +43,7 @@ int EnumLocals(
   
 #### <a name="parameters"></a>Parâmetros  
  `pAddress`  
- [in] Um [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) objeto que representa o endereço de depuração que seleciona o contexto ou o escopo da qual obter os locais.  
+ [in] Uma [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) objeto que representa o endereço de depuração que seleciona o contexto ou escopo do qual obter os locais.  
   
  `ppLocals`  
  [out] Retorna um [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objeto que representa uma lista de locais; caso contrário, retornará um valor nulo se não houver nenhum locais.  
@@ -51,9 +52,9 @@ int EnumLocals(
  Se for bem-sucedido, Retorna S_OK ou retornará S_FALSE se não houver nenhum locais. Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Somente as variáveis definidas dentro do bloco que contém o endereço de depuração determinado são enumeradas. Se todos os locais, incluindo qualquer gerado pelo compilador locais são necessários, chame o [EnumAllLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md) método.  
+ Somente as variáveis definidas dentro do bloco que contém o endereço de depuração determinado são enumeradas. Se todos os locais, incluindo qualquer locais gerados pelo compilador são necessários, chame o [EnumAllLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md) método.  
   
- Um método pode conter vários contextos ou blocos de escopo. Por exemplo, o seguinte método forçado contém três escopos, os dois blocos internos e o corpo do método.  
+ Um método pode conter vários contextos ou blocos de escopo. Por exemplo, o seguinte método artificial contém três escopos, os dois blocos internos e o corpo do método em si.  
   
 ```csharp  
 public void func(int index)  
@@ -73,7 +74,7 @@ public void func(int index)
 }  
 ```  
   
- O [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) objeto representa o `func` próprio método. Chamando o `EnumLocals` método com um [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) definido como o `Inner Scope 1` endereço retorna uma enumeração que contém o `temp1` variável, por exemplo.  
+ O [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) objeto representa o `func` método em si. Chamar o `EnumLocals` método com um [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) definido como o `Inner Scope 1` endereço retorna uma enumeração que contém o `temp1` variável, por exemplo.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   

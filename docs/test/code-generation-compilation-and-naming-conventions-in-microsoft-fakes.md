@@ -1,6 +1,7 @@
 ---
-title: Convenções de nomenclatura, compilação e geração de código no Microsoft Fakes para Visual Studio | Microsoft Docs
+title: Geração de código, compilação e convenções de nomenclatura no Microsoft Fakes
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -8,11 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 0c42c25f397a5906654dd5ef0115df921d60607f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7af8fc49896549fd553c8262b04e9d02f76f06e9
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058305"
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Geração de código, compilação e convenções de nomenclatura no Microsoft Fakes
 
@@ -21,14 +23,18 @@ Este artigo discute problemas e opções na compilação e geração de código 
 **Requisitos**
 
 -   Visual Studio Enterprise
+-   Um projeto do .NET Framework
+
+> [!NOTE]
+> Projetos do .NET Standard não têm suporte.
 
 ## <a name="code-generation-and-compilation"></a>Geração e compilação de código
 
 ### <a name="configure-code-generation-of-stubs"></a>Configurar a geração de código de stubs
 
-A geração de tipos de stub é configurada em um arquivo XML que tem a extensão de arquivo .fakes. A estrutura do Fakes integra-se no processo de build por meio de tarefas personalizadas do MSBuild e detecta esses arquivos no momento do build. O gerador de código do Fakes compila os tipos de stub em um assembly e adiciona a referência ao projeto.
+A geração de tipos de stub é configurada em um arquivo XML que tem a extensão de arquivo *.fakes*. A estrutura do Fakes integra-se no processo de build por meio de tarefas personalizadas do MSBuild e detecta esses arquivos no momento do build. O gerador de código do Fakes compila os tipos de stub em um assembly e adiciona a referência ao projeto.
 
-O exemplo a seguir ilustra os tipos de stub definidos em FileSystem.dll:
+O exemplo a seguir ilustra os tipos de stub definidos em *FileSystem.dll*:
 
 ```xml
 <Fakes xmlns="http://schemas.microsoft.com/fakes/2011/">
@@ -38,9 +44,9 @@ O exemplo a seguir ilustra os tipos de stub definidos em FileSystem.dll:
 
 ### <a name="type-filtering"></a>Filtragem de tipo
 
-Filtros podem ser configurados no arquivo .fakes para restringir os tipos que devem conter stubs. Você pode adicionar um número ilimitado de elementos Clear, Add e Remove sob o elemento StubGeneration para criar a lista de tipos selecionados.
+Filtros podem ser configurados no arquivo *.fakes* para restringir os tipos que devem conter stubs. Você pode adicionar um número ilimitado de elementos Clear, Add e Remove sob o elemento StubGeneration para criar a lista de tipos selecionados.
 
-Por exemplo, o seguinte arquivo .fakes gera stubs para tipos nos namespaces System e System.IO mas exclui qualquer tipo que contém "Handle" em System:
+Por exemplo, o arquivo *.fakes* a seguir gera stubs para tipos nos namespaces System e System.IO mas exclui qualquer tipo que contém "Handle" em System:
 
 ```xml
 <Fakes xmlns="http://schemas.microsoft.com/fakes/2011/">
@@ -80,7 +86,7 @@ As cadeias de caracteres de filtro usam uma gramática simples para definir como
 
 ### <a name="stub-concrete-classes-and-virtual-methods"></a>Classes concretas de stub e métodos virtuais
 
-Por padrão, os tipos de stub são gerados para todas as classes não lacradas. É possível restringir os tipos de stub para classes abstratas por meio do arquivo de configuração .fakes:
+Por padrão, os tipos de stub são gerados para todas as classes não lacradas. É possível restringir os tipos de stub para classes abstratas por meio de arquivo de configuração *.fakes*:
 
 ```xml
 <Fakes xmlns="http://schemas.microsoft.com/fakes/2011/">
@@ -122,15 +128,15 @@ O gerador de código do Fakes gera tipos de shim e tipos de stub que são visív
         PublicKey=<Test_assembly_public_key>)]
     ```
 
-Se o assembly com shims tiver nome forte, a estrutura do Fakes assinará fortemente o assembly do Fakes gerado, automaticamente. Você precisa assinar fortemente o assembly de teste. Consulte [Assemblies com nomes fortes](/dotnet/framework/app-domains/strong-named-assemblies).
+Se o assembly com shims tivesse um nome forte, a estrutura do Fakes assinaria automaticamente fortemente o assembly do Fakes gerado. Você precisa assinar fortemente o assembly de teste. Confira [Assemblies de nome forte](/dotnet/framework/app-domains/strong-named-assemblies).
 
-A estrutura do Fakes usa a mesma chave para assinar assemblies gerados, então você pode usar este trecho de código como um ponto de partida para adicionar o atributo **InternalsVisibleTo** do assembly do Fakes ao seu código de assembly com shims.
+A estrutura do Fakes usa a mesma chave para assinar assemblies gerados, então você pode usar este snippet de código como um ponto de partida para adicionar o atributo **InternalsVisibleTo** do assembly do Fakes ao seu código de assembly com shims.
 
 ```csharp
 [assembly: InternalsVisibleTo("FileSystem.Fakes, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e92decb949446f688ab9f6973436c535bf50acd1fd580495aae3f875aa4e4f663ca77908c63b7f0996977cb98fcfdb35e05aa2c842002703cad835473caac5ef14107e3a7fae01120a96558785f48319f66daabc862872b2c53f5ac11fa335c0165e202b4c011334c7bc8f4c4e570cf255190f4e3e2cbc9137ca57cb687947bc")]
 ```
 
-Você pode especificar uma chave pública diferente para o assembly do Fakes, por exemplo, uma chave que você tenha criado para o assembly com shims, especificando o caminho completo para o arquivo **.snk** que contém a chave alternativa como o valor do atributo `KeyFile` no elemento `Fakes`\\`Compilation` do arquivo **.fakes**. Por exemplo:
+Você pode especificar uma chave pública diferente para o assembly do Fakes, por exemplo, uma chave que você tenha criado para o assembly com shims, especificando o caminho completo para o arquivo *.snk* que contém a chave alternativa como o valor do atributo `KeyFile` no elemento `Fakes`\\`Compilation` do arquivo *.fakes*. Por exemplo:
 
 ```xml
 <-- FileSystem.Fakes.fakes -->
@@ -139,7 +145,7 @@ Você pode especificar uma chave pública diferente para o assembly do Fakes, po
 </Fakes>
 ```
 
-Em seguida, você deve usar a chave pública do arquivo **.snk** alternativo como o segundo parâmetro do atributo InternalVisibleTo para o assembly do Fakes no código de assembly com shims:
+Em seguida, você deve usar a chave pública do arquivo *.snk* alternativo como o segundo parâmetro do atributo InternalVisibleTo para o assembly do Fakes no código de assembly com shims:
 
 ```csharp
 // FileSystem\AssemblyInfo.cs
@@ -157,11 +163,11 @@ O build de assemblies do Fakes pode aumentar significativamente o tempo de build
 
 De seus projetos de teste de unidade, faça uma referência aos assemblies do Fakes compilados que são colocados em FakesAssemblies na pasta do projeto.
 
-1.  Crie uma nova biblioteca de classes com a versão de tempo de execução do .NET que corresponde aos seus projetos de teste. Vamos chamá-lo de Fakes.Prebuild. Remova o arquivo class1.cs so projeto, ele não é necessário.
+1.  Crie uma nova biblioteca de classes com a versão de tempo de execução do .NET que corresponde aos seus projetos de teste. Vamos chamá-lo de Fakes.Prebuild. Remova o arquivo *class1.cs* do projeto, pois ele não é necessário.
 
 2.  Adicione uma referência a todos os assemblies do System e de terceiros para os quais você precisa do Fakes.
 
-3.  Adicione um arquivo .fakes para cada um dos assemblies e compile.
+3.  Adicione um arquivo *.fakes* para cada um dos assemblies e crie.
 
 4.  Do seu projeto de teste
 
@@ -169,17 +175,17 @@ De seus projetos de teste de unidade, faça uma referência aos assemblies do Fa
 
          *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies\Microsoft.QualityTools.Testing.Fakes.dll*
 
-    -   Para cada assembly para o qual você criou o Fakes, adicione uma referência para o arquivo DLL correspondente na pasta Fakes.Prebuild\FakesAssemblies do seu projeto.
+    -   Para cada assembly para o qual você criou o Fakes, adicione uma referência ao arquivo DLL correspondente na pasta *Fakes.Prebuild\FakesAssemblies* do projeto.
 
 ### <a name="avoid-assembly-name-clashing"></a>Evitar conflitos entre nomes de assembly
 
-Em um ambiente do Team Build, todas as saídas de build são mescladas em um único diretório. Se vários projetos usarem o Fakes, poderá acontecer que assemblies do Fakes de versões diferentes substituam uns aos outros. Por exemplo, TestProject1 fakes mscorlib.dll do .NET Framework 2.0 e TestProject2 fakes mscorlib.dll para o .NET Framework 4 produziriam ambos um assembly do Fakes mscorlib.Fakes.dll.
+Em um ambiente do Team Build, todas as saídas de build são mescladas em um único diretório. Se vários projetos usarem o Fakes, poderá acontecer que assemblies do Fakes de versões diferentes substituam uns aos outros. Por exemplo, o TestProject1 fakes *mscorlib.dll* do .NET Framework 2.0 e o TestProject2 fakes *mscorlib.dll* para o .NET Framework 4 produziriam um assembly do Fakes *mscorlib.Fakes.dll*.
 
- Para evitar esse problema, o Fakes deve criar automaticamente nomes de assembly do Fakes de versão qualificada para referências que não sejam de projeto ao adicionar os arquivos .fakes. Um nome de assembly do Fakes de versão qualificada incorpora um número de versão quando você cria o nome de assembly do Fakes:
+ Para evitar esse problema, o Fakes deve criar automaticamente nomes de assembly do Fakes de versão qualificada para referências que não sejam do projeto ao adicionar os arquivos *.fakes*. Um nome de assembly do Fakes de versão qualificada incorpora um número de versão quando você cria o nome de assembly do Fakes:
 
  Dado um assembly MyAssembly e uma versão 1.2.3.4, o nome de assembly do Fakes é MyAssembly.1.2.3.4.Fakes.
 
- Você pode alterar ou remover essa versão editando o atributo Version do elemento Assembly no .fakes:
+ Você pode alterar ou remover essa versão editando o atributo Version do elemento de Assembly no *.fakes*:
 
 ```xml
 attribute of the Assembly element in the .fakes:
@@ -195,42 +201,42 @@ attribute of the Assembly element in the .fakes:
 
  **Namespaces**
 
--   O sufixo .fakes é adicionado ao namespace.
+- O sufixo .fakes é adicionado ao namespace.
 
-     Por exemplo, o namespace `System.Fakes` contém os tipos de shim do namespace System.
+   Por exemplo, o namespace `System.Fakes` contém os tipos de shim do namespace System.
 
--   Global.Fakes contém o tipo de shim do namespace vazio.
+- Global.Fakes contém o tipo de shim do namespace vazio.
 
- **Nomes de tipo**
+  **Nomes de tipo**
 
--   O prefixo Shim é adicionado ao nome de tipo para criar o nome de tipo do shim.
+- O prefixo Shim é adicionado ao nome de tipo para criar o nome de tipo do shim.
 
-     Por exemplo, ShimExample é o tipo de shim do tipo Example.
+   Por exemplo, ShimExample é o tipo de shim do tipo Example.
 
--   O prefixo Stub é adicionado ao nome de tipo para criar o nome de tipo do stub.
+- O prefixo Stub é adicionado ao nome de tipo para criar o nome de tipo do stub.
 
-     Por exemplo, StubIExample é o tipo de stub do tipo IExample.
+   Por exemplo, StubIExample é o tipo de stub do tipo IExample.
 
- **Argumentos de tipo e estruturas de tipo aninhado**
+  **Argumentos de tipo e estruturas de tipo aninhado**
 
--   Os argumentos de tipo genérico são copiados.
+- Os argumentos de tipo genérico são copiados.
 
--   A estrutura de tipo aninhado é copiada para os tipos de shim.
+- A estrutura de tipo aninhado é copiada para os tipos de shim.
 
 ### <a name="shim-delegate-property-or-stub-delegate-field-naming-conventions"></a>Convenções de nomenclatura de propriedade delegada de shim ou campo delegado de stub
 
 **Regras básicas** para nomenclatura de campos, começando por um nome vazio:
 
--   O nome do método é acrescentado.
+- O nome do método é acrescentado.
 
--   Se o nome do método for uma implementação de interface explícita, os pontos serão removidos.
+- Se o nome do método for uma implementação de interface explícita, os pontos serão removidos.
 
--   Se o método for genérico, `Of`*n* será acrescentado, em que *n* é o número de argumentos de método genérico.
+- Se o método for genérico, `Of`*n* será acrescentado, em que *n* é o número de argumentos de método genérico.
 
- **Nomes de método especiais** como setters ou getter da propriedade são tratados conforme descrito na tabela a seguir:
+  **Nomes de método especiais** como setters ou getter da propriedade são tratados conforme descrito na tabela a seguir:
 
 |Se o método for...|Exemplo|Nome do método anexado|
-|-------------------|-------------|--------------------------|
+|-|-|-|
 |Um **construtor**|`.ctor`|`Constructor`|
 |Um **construtor** estático|`.cctor`|`StaticConstructor`|
 |Um **acessador** com nome de método composto de duas partes separadas por "_" (como getters de propriedade)|*kind_name* (caso mais frequente, mas não imposto por ECMA)|*NameKind*, em que ambas as partes foram colocadas em maiusculas e trocadas|
@@ -250,7 +256,7 @@ attribute of the Assembly element in the .fakes:
 ### <a name="parameter-type-naming-conventions"></a>Convenções de nomenclatura de tipo de parâmetro
 
 |Fornecido|A cadeia de caracteres acrescentada é...|
-|-----------|-------------------------|
+|-|-|
 |Um **tipo**`T`|T<br /><br /> O namespace, estrutura aninhada e tics genéricos são descartados.|
 |Um **parâmetro de saída**`out T`|`TOut`|
 |Um **parâmetro ref**`ref T`|`TRef`|
@@ -272,4 +278,4 @@ As regras a seguir são aplicadas recursivamente:
 
 ## <a name="see-also"></a>Consulte também
 
-- [Isolando código em teste com Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)
+- [Isolando o código em teste com o Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)

@@ -1,6 +1,7 @@
 ---
-title: Ferramentas de teste do Visual Studio | Microsoft Docs
+title: Ferramentas de teste
 ms.date: 03/16/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,11 +12,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: dec57e0f51b9033d9808c36a3ed9ed59c0221131
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a619989543b30ccf07cdb300a5688a985cf27eb7
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068241"
 ---
 # <a name="testing-tools-in-visual-studio"></a>Testando ferramentas no Visual Studio
 
@@ -36,12 +38,11 @@ As ferramentas de teste do Visual Studio podem ajudar você e sua equipe a desen
 - O [teste de carga](../test/quickstart-create-a-load-test-project.md) simula a carga em um aplicativo para servidores executando testes de unidade e testes de desempenho Web.
 
 > [!NOTE]
-> Teste de unidade está disponível em todas as edições do Visual Studio. Outras ferramentas de teste, em tempo real, como testes de unidade, IntelliTest e testes de interface do usuário codificada só estão disponíveis no Visual Studio Enterprise edition. Para obter mais informações sobre edições, consulte [Comparar IDEs do Visual Studio 2017](https://www.visualstudio.com/vs/compare/).
+> O teste de unidade está disponível em todas as edições do Visual Studio. Outras ferramentas de teste, como o Live Unit Testing, o IntelliTest e o teste de IU codificado só estão disponíveis no Visual Studio Enterprise edition. Para obter mais informações sobre edições, consulte [Comparar IDEs do Visual Studio 2017](https://visualstudio.microsoft.com/vs/compare/).
 
 ## <a name="related-scenarios"></a>Cenários relacionados
 
-* [Testes exploratórios e manuais (VSTS)](/vsts/manual-test/)
-* [Teste de carga (VSTS)](/vsts/load-test/index)
-* [Testes contínuos (VSTS)](/vsts/build-release/test/index)
-* [Visão geral de DevOps para Team Services e TFS (VSTS)](/vsts/user-guide/devops-alm-overview)
+* [Testes exploratórios e manuais (Azure Test Plans)](/azure/devops/test/index?view=vsts)
+* [Teste de carga (Azure Test Plans)](/azure/devops/test/load-test/index?view=vsts)
+* [Testes contínuos (Azure Test Plans)](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)
 * [Ferramentas de análise de código](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)

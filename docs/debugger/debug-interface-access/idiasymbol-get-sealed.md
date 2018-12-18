@@ -1,5 +1,5 @@
 ---
-title: ': Get_sealed | Microsoft Docs'
+title: 'Idiasymbol:: Get_sealed | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d6ec278fd3ed2b3fef157c30300c16ccaaa8087b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e77e379d3f3635cf6976765450ba32ea6de81ef2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49841800"
 ---
 # <a name="idiasymbolgetsealed"></a>IDiaSymbol::get_sealed
-Recupera um sinalizador que especifica se a classe ou método está lacrado.  
+Recupera um sinalizador que especifica se a classe ou método está selado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,13 +37,13 @@ HRESULT get_sealed(
  [out] Retorna `TRUE` se a classe ou método é lacrado; caso contrário, retornará `FALSE`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
   
 ## <a name="remarks"></a>Comentários  
- Uma classe sealed não pode ser usada como uma classe base. Um método lacrado não pode ser overidden.  
+ Uma classe sealed não pode ser usada como uma classe base. Um método lacrado não pode ser um ponto.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: Dia2.h  

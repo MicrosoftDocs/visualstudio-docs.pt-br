@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cfccb444eab802f7caa5cf83faff0ddc7a51c389
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 61d63f20bb086190f6409d3eb4cd08c80689d10f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874014"
 ---
 # <a name="basictype"></a>BasicType
 Especifica o tipo básico do símbolo.  
@@ -45,6 +46,8 @@ enum BasicType {
    btBit      = 29,  
    btBSTR     = 30,  
    btHresult  = 31  
+   btChar16   = 32,  // char16_t
+   btChar32   = 33,  // char32_t
 };  
 ```  
   
@@ -53,19 +56,19 @@ enum BasicType {
  Nenhum tipo básico é especificado.  
   
  btVoid  
- O tipo básico é um `void`.  
+ Tipo básico é um `void`.  
   
  btChar  
- O tipo básico é um `char` (tipo de C/C++).  
+ Tipo básico é um `char` (tipo de C/C++).  
   
  btWChar  
- Tipo básico é um caractere (Unicode) largo (`WCHAR`).  
+ Tipo básico é um caractere largo de (Unicode) (`WCHAR`).  
   
  btInt  
- O tipo básico é `signed int` (tipo de C/C++).  
+ Tipo básico é `signed int` (tipo de C/C++).  
   
  btUInt  
- O tipo básico é `unsigned int` (tipo de C/C++).  
+ Tipo básico é `unsigned int` (tipo de C/C++).  
   
  btFloat  
  Tipo básico é um número de ponto flutuante (`FLOAT`).  
@@ -77,16 +80,16 @@ enum BasicType {
  Tipo básico é um valor booliano (`BOOL`).  
   
  btLong  
- O tipo básico é um `long int` (tipo de C/C++).  
+ Tipo básico é um `long int` (tipo de C/C++).  
   
  btULong  
- O tipo básico é um `unsigned long int` (tipo de C/C++).  
+ Tipo básico é um `unsigned long int` (tipo de C/C++).  
   
  btCurrency  
- O tipo básico é moeda.  
+ Tipo básico é a moeda.  
   
  btDate  
- Tipo básico é data/hora (`DATE`).  
+ Tipo básico é de data/hora (`DATE`).  
   
  btVariant  
  Tipo básico é uma estrutura de tipo de variável (`VARIANT`).  
@@ -95,21 +98,21 @@ enum BasicType {
  Tipo básico é um número complexo.  
   
  btBit  
- O tipo básico é um bit.  
+ Tipo básico é um pouco.  
   
  btBSTR  
- Tipo básico é uma cadeia de caracteres binária ou básica (`BSTR`).  
+ Tipo básico é uma cadeia de caracteres básica ou binary (`BSTR`).  
   
  btHresult  
- O tipo básico é um `HRESULT`.  
+ Tipo básico é um `HRESULT`.  
   
 ## <a name="remarks"></a>Comentários  
- Os valores nesta enumeração são retornados pelo [: Get_basetype](../../debugger/debug-interface-access/idiasymbol-get-basetype.md) método.  
+ Os valores nesta enumeração são retornados pelo [idiasymbol:: Get_basetype](../../debugger/debug-interface-access/idiasymbol-get-basetype.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: cvconst.h  
   
 ## <a name="see-also"></a>Consulte também  
  [Enumerações e estruturas](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [: Get_basetype](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)   
+ [Idiasymbol:: Get_basetype](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)   
  [IDiaSymbol::get_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)

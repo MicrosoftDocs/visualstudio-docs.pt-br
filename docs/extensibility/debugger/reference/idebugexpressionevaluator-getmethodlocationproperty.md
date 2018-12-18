@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f10a26eca06aed24d53b70cd406fe3f24e2fe898
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: af772ebfd844679c7fb8d482b0fd0adf7d84e0e7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905344"
 ---
 # <a name="idebugexpressionevaluatorgetmethodlocationproperty"></a>IDebugExpressionEvaluator::GetMethodLocationProperty
 Este método converte um local de método e o deslocamento em um endereço de memória.  
@@ -51,24 +52,24 @@ int GetMethodLocationProperty(
  [in] O método local e o deslocamento, expresso como uma cadeia de caracteres.  
   
  `pSymbolProvider`  
- [in] O provedor de símbolo é expresso como um [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) objeto.  
+ [in] O provedor de símbolo é expresso como uma [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) objeto.  
   
  `pAddress`  
- [in] Um endereço dentro do método, expressado como um [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) objeto.  
+ [in] Um endereço dentro do método, expressado como uma [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) objeto.  
   
  `pBinder`  
- [in] O associador expresso como um [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) objeto.  
+ [in] O associador expresso como uma [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) objeto.  
   
  `ppProperty`  
  [out] Retorna um [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) interface que representa o endereço de memória.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  O endereço retornado pode ser usado para definir um ponto de interrupção, por exemplo.  
   
- Apesar do nome `upstrFullyQualifiedMethodPlusOffset`, esse parâmetro pode ser passado como um nome de método parcialmente qualificado. Nesse caso, o método selecionado é o que inclui `pAddress`. Como esse parâmetro é interpretado é até a implementação de avaliador de expressão e o idioma que ele suporta.  
+ Apesar do nome `upstrFullyQualifiedMethodPlusOffset`, esse parâmetro pode ser passado como um nome de método parcialmente qualificado. Nesse caso, o método selecionado é aquele que circunscreve `pAddress`. Como esse parâmetro é interpretado é até a implementação do avaliador de expressão e o idioma que ele dá suporte.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

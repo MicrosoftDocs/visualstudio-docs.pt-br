@@ -1,5 +1,5 @@
 ---
-title: ': Get_typeids | Microsoft Docs'
+title: 'Idiasymbol:: Get_typeids | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f1ad4aae54096ea2fdcbcac1a68d32fc3b386ad
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: bacd3547c1aadfc99b66437acbd73599ec2191f6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942580"
 ---
 # <a name="idiasymbolgettypeids"></a>IDiaSymbol::get_typeIds
-Recupera uma matriz de valores de identificador de tipo específico de compilador para esse símbolo.  
+Recupera uma matriz de valores de identificador de tipo de compilador específicos para esse símbolo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,16 +36,16 @@ HRESULT get_typeIds (
   
 #### <a name="parameters"></a>Parâmetros  
  `cTypeIds`  
- [in] Tamanho do buffer para armazenar os dados.  
+ [in] Tamanho do buffer para manter os dados.  
   
  `pcTypeIds`  
- [out] Retorna o número de `typeIds` gravado, ou, se `typeIds` é `NULL`, em seguida, o número total de identificadores de tipo disponíveis.  
+ [out] Retorna o número de `typeIds` escrita, ou, se `typeIds` é `NULL`, em seguida, o número total de identificadores de tipo disponíveis.  
   
  `typeIds[]`  
- [out] Uma matriz que é preenchido com os identificadores de tipo.  
+ [out] Uma matriz que deve ser preenchida com os identificadores de tipo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  

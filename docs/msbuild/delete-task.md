@@ -20,13 +20,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 54b8028e6d49d712392508247c5a2aef159692da
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bd4e0d4aa2567656e8aa37f88b59128bb60a786c
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946180"
 ---
-# <a name="delete-task"></a>Tarefa Delete
+# <a name="delete-task"></a>tarefa Delete
 Exclui os arquivos especificados.  
   
 ## <a name="parameters"></a>Parâmetros  
@@ -39,10 +40,10 @@ Exclui os arquivos especificados.
 |`TreatErrorsAsWarnings`|Parâmetro opcional `Boolean`<br /><br /> Se `true`, os erros são registrados como avisos. O valor padrão é `false`.|  
   
 ## <a name="remarks"></a>Comentários  
- Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, confira [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir exclui o arquivo `MyApp.pdb`.  
+ O exemplo a seguir exclui o arquivo *MyApp.pdb*.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  

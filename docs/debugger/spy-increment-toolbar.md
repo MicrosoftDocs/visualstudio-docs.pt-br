@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31477375"
 ---
 # <a name="spy-toolbar"></a>Barra de ferramentas do Spy++
 A barra de ferramentas aparece na barra de menu do Spy + +. Para exibir ou ocultar a barra de ferramentas, sobre o **exibição** menu, clique em **barra de ferramentas**.  

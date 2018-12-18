@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c49e4254df9ec06813499237054ec916bb4b6c1b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a1210b84a52aa15d3c8e1bb73bc58d1fbe48a19d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920346"
 ---
 # <a name="idebugbinderbind"></a>IDebugBinder::Bind
-Esse método obtém o contexto de memória ou o objeto que contém o valor atual do símbolo.  
+Esse método obtém o contexto de memória ou um objeto que contém o valor atual do símbolo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +54,7 @@ int Bind(
  [out] Retorna o `IDebugObject` que representa a instância do símbolo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   

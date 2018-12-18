@@ -13,11 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: afb04c9aa36c2103809ca16db603ad4a63a6ec7c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7bc832aff1178d0d1247d4fda2e203bfc5857118
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875080"
 ---
 # <a name="portsupplierdescriptionflags"></a>PORT_SUPPLIER_DESCRIPTION_FLAGS
 Define os metadados que podem ser recuperados sobre um fornecedor de porta.  
@@ -41,10 +42,10 @@ public enum enum_PORT_SUPPLIER_DESCRIPTION_FLAGS
   
 ## <a name="terms"></a>Termos  
  PSDFLAG_SHOW_WARNING_ICON  
- Se selecionada, o ícone de aviso será exibido na interface de usuário.  
+ Se selecionado, o ícone de aviso será exibido na interface do usuário.  
   
 ## <a name="remarks"></a>Comentários  
- Essa enumeração é retornada pelo [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md) método.  
+ Essa enumeração é retornada pela [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: Msdbg.h  

@@ -1,5 +1,5 @@
 ---
-title: Habilitando recursos de depuração no Visual C++ (-/d_debug) | Microsoft Docs
+title: Habilitando recursos de depuração no Visual C++ (-D_DEBUG) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -26,22 +26,23 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5298879d93bf4e86df7610d5891e73bdbb67c4a1
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 772467caf74a381fc2ef5cc74e8e31bf2ff0503c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949611"
 ---
 # <a name="enabling-debug-features-in-visual-c-ddebug"></a>Habilitando funcionalidades de depuração no Visual C++ (/D_DEBUG)
-Em [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)], recursos de depuração, como as declarações são habilitadas quando você compila seu programa com o símbolo **Debug** definido. Você pode definir **Debug** em uma das duas maneiras:  
+Na [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)], recursos de depuração como asserções são habilitados quando você compila seu programa com o símbolo **Debug** definido. Você pode definir **Debug** em uma das duas maneiras:  
   
--   Especifique **#define Debug** em seu código-fonte, ou  
+- Especificar **#define Debug** no seu código-fonte, ou  
   
--   Especifique o **/D_DEBUG** opção de compilador. (Se você criar seu projeto no Visual Studio usando assistentes, **/D_DEBUG** é definido automaticamente na configuração de depuração.)  
+- Especifique o **/D_DEBUG** opção de compilador. (Se você criar seu projeto no Visual Studio usando assistentes **/D_DEBUG** é definido automaticamente na configuração de depuração.)  
   
- Quando **Debug** é definido, o compilador compila seções de código cercado por **#ifdef DEBUG** e `#endif`.  
+  Quando **Debug** é definido, o compilador compila as seções de código cercadas por **#ifdef DEBUG** e `#endif`.  
   
- A configuração Depuração de um programa MFC deve ser vinculada a uma versão de depuração da biblioteca MFC. Os arquivos de cabeçalho MFC determinam a versão correta da biblioteca MFC para vincular com baseada nos símbolos que você definiu, tais como **Debug** e **Unicode**. Para obter detalhes, consulte [versões de biblioteca MFC](/cpp/mfc/mfc-library-versions).  
+  A configuração Depuração de um programa MFC deve ser vinculada a uma versão de depuração da biblioteca MFC. Os arquivos de cabeçalho MFC determinam a versão correta da biblioteca MFC para vincular com base nos símbolos que você definiu, tais como **Debug** e **Unicode**. Para obter detalhes, consulte [versões de biblioteca MFC](/cpp/mfc/mfc-library-versions).  
   
 ## <a name="see-also"></a>Consulte também  
  [Depurando código nativo](../debugger/debugging-native-code.md)   

@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f90cd6b8d7fcb6a9eaf2d68f3eabe4b851979302
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a6eb52273633e0b65aa4a7a7049198c49c20633d
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34476996"
 ---
-# <a name="understanding-sampling-data-values"></a>Noções básicas sobre valores de dados de amostragem
+# <a name="understand-sampling-data-values"></a>Noções básicas sobre valores de dados de amostragem
 
 O método de criação de perfil de *amostragem* das Ferramentas de Criação de Perfil do Visual Studio interrompe o processador do computador em intervalos definidos e coleta a pilha de chamadas de função. Uma *pilha de chamadas* é uma estrutura dinâmica que armazena informações sobre as funções que estão em execução no processador.
 
@@ -53,4 +54,4 @@ O percentual do número total de amostras exclusivas na criação de perfil que 
 ## <a name="see-also"></a>Consulte também
 
 [Como escolher métodos de coleta](../profiling/how-to-choose-collection-methods.md)  
-[Analisando dados de ferramentas de desempenho](../profiling/analyzing-performance-tools-data.md)
+[Analisar dados de ferramentas de desempenho](../profiling/analyzing-performance-tools-data.md)

@@ -1,6 +1,7 @@
 ---
 title: 'CA2144: o código transparente não deve carregar assemblies a partir de matrizes de bytes'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -11,13 +12,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 79c2ebb4b088a0712773ce8d5c208ba0f921df75
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a908b197e05b1795534dd00edc2c1ff9597f2d90
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876198"
 ---
 # <a name="ca2144-transparent-code-should-not-load-assemblies-from-byte-arrays"></a>CA2144: o código transparente não deve carregar assemblies a partir de matrizes de bytes
+
 |||
 |-|-|
 |NomeDoTipo|TransparentMethodsShouldNotLoadAssembliesFromByteArrays|
@@ -28,22 +31,22 @@ ms.lasthandoff: 04/19/2018
 ## <a name="cause"></a>Causa
  Um método transparente carrega um assembly de uma matriz de bytes usando um dos seguintes métodos:
 
--   <xref:System.Reflection.Assembly.Load%2A>
+- <xref:System.Reflection.Assembly.Load%2A>
 
--   <xref:System.Reflection.Assembly.Load%2A>
+- <xref:System.Reflection.Assembly.Load%2A>
 
--   <xref:System.Reflection.Assembly.Load%2A>
+- <xref:System.Reflection.Assembly.Load%2A>
 
-## <a name="rule-description"></a>Descrição da Regra
+## <a name="rule-description"></a>Descrição da regra
  A revisão de segurança para o código transparente não é tão completo quanto a revisão de segurança para o código crítico porque o código transparente não pode realizar ações confidenciais de segurança. Os assemblies carregados a partir de uma matriz de bytes podem não ser observados no código transparente e essa matriz de bytes pode conter código crítico ou código crítico de segurança mais importante, que precisa ser auditado. Portanto, o código transparente não deve carregar assemblies de uma matriz de bytes.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, marque o método que está carregando o assembly com o <xref:System.Security.SecurityCriticalAttribute> ou <xref:System.Security.SecuritySafeCriticalAttribute> atributo.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, marque o método que está carregando o assembly com o <xref:System.Security.SecurityCriticalAttribute> ou o <xref:System.Security.SecuritySafeCriticalAttribute> atributo.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
  Não suprima um aviso nessa regra.
 
 ## <a name="example"></a>Exemplo
- A regra é disparada com o código a seguir porque um método transparente carrega um assembly de uma matriz de bytes.
+ A regra é acionada no código a seguir porque um método transparente carrega um assembly de uma matriz de bytes.
 
  [!code-csharp[FxCop.Security.CA2144.TransparentMethodsShouldNotLoadAssembliesFromByteArrays#1](../code-quality/codesnippet/CSharp/ca2144-transparent-code-should-not-load-assemblies-from-byte-arrays_1.cs)]

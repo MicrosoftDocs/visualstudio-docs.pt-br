@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c69f21c72e8816d9ddf6eb5b88cf7798bc7d1f4e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dac1234a765bbb3064ea4471d7531864306e0220
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842911"
 ---
 # <a name="symbolsearchinfofields"></a>SYMBOL_SEARCH_INFO_FIELDS
 Especifica o tipo de informações de símbolo para recuperar.  
@@ -49,13 +50,13 @@ public enum enum_SYMBOL_SEARCH_INFO_FIELDS
  Não indica nenhum sinalizador  
   
  SSIF_VERBOSE_SEARCH_INFO  
- Retorna que todos os caminhos usados para localizar símbolos de pesquisa  
+ Retorna que todos os caminhos de pesquisa de usada para localizar símbolos  
   
 ## <a name="remarks"></a>Comentários  
- Esses sinalizadores são transmitidos como um parâmetro para o [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) retornado do método para determinar a quantidade de informações.  
+ Esses sinalizadores são passados como um parâmetro para o [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) retornado do método para determinar a quantidade de informações.  
   
 > [!NOTE]
->  Atualmente, apenas `SSIF_VERBOSE_SEARCH_INFO` tem suporte, e ele deve ser especificado como o `dwFlags` parâmetro `IDebugModule3::GetSymbolInfo`. Todos os outros valores retornará um erro.  
+>  Atualmente, apenas `SSIF_VERBOSE_SEARCH_INFO` tem suporte, e ele deve ser especificado como o `dwFlags` parâmetro `IDebugModule3::GetSymbolInfo`. Todos os outros valores retornam um erro.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

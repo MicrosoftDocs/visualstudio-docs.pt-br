@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a8a313be7c24b4e3778a4e4890eaf2c5eb67b4b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9119668cf4eb8ddb6196aec774acf171db04e868
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872675"
 ---
 # <a name="idebugclassfieldenuminterfacesimplemented"></a>IDebugClassField::EnumInterfacesImplemented
 Cria um enumerador para as interfaces implementadas por esta classe.  
@@ -43,10 +44,10 @@ int EnumInterfacesImplemented(
  [out] Retorna um [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objeto que representa a lista de interfaces implementadas. Retorna um valor nulo se não houver nenhuma interface.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK ou retornará S_FALSE se não houver nenhuma interfaces implementadas nessa classe. Caso contrário, retornará um código de erro.  
+ Se for bem-sucedido, Retorna S_OK ou retornará S_FALSE se não houver nenhuma interface implementado nesta classe. Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Cada elemento da enumeração é uma [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objeto que descreve uma interface. Observe que não gerenciado [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] código não usa interfaces como uma entidade separada para esse método sempre retorna um valor nulo para não gerenciado [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] código.  
+ Cada elemento da enumeração é um [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objeto que descreve uma interface. Observe que não gerenciados [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] código não usa interfaces como uma entidade separada para que esse método sempre retorna um valor nulo para não gerenciado [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] código.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   

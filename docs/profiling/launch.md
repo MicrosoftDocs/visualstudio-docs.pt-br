@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c9fc350a3eaadd919f339a37843f37291ed6ff3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3afc0a50847591445c106d86460ee1821fe0df81
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219192"
 ---
 # <a name="launch"></a>Inicializar
 A opção **Inicializar** inicia o criador de perfil usando o método de amostragem e também inicia o aplicativo especificado.  
@@ -23,7 +24,7 @@ A opção **Inicializar** inicia o criador de perfil usando o método de amostra
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cmd  
 VSPerfCmd.exe /Launch:AppName [Options]  
 ```  
   
@@ -77,13 +78,13 @@ VSPerfCmd.exe /Launch:AppName [Options]
 ## <a name="example"></a>Exemplo  
  Este exemplo demonstra o uso de **Inicializar** para iniciar um aplicativo.  
   
-```  
+```cmd  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Launch:TestApp.exe  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
- [Criando perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Criando perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Serviços de Criação de Perfil](../profiling/command-line-profiling-of-services.md)
+ [Criar perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [Criar o perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profile services (Serviços de perfil)](../profiling/command-line-profiling-of-services.md)

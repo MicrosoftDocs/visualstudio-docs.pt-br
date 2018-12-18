@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e163daff6466f9cc6e0f83fff20b89006a73dcc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fafba8e09ad4f0dccb40ebd6fb88b75eef70964d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896790"
 ---
 # <a name="bpresolutioninfo"></a>BP_RESOLUTION_INFO
-Descreve as informações de ponto de interrupção associado para um ponto de interrupção de código ou um ponto de interrupção de dados.  
+Descreve as informações de ponto de interrupção associada para um ponto de interrupção de código ou um ponto de interrupção de dados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +56,7 @@ public struct BP_RESOLUTION_INFO {
  O [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objeto que representa o aplicativo no qual ocorreu o erro de ponto de interrupção.  
   
  `pThread`  
- O [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objeto que representa o thread em que o aplicativo que contém o erro de ponto de interrupção está em execução.  
+ O [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objeto que representa o thread no qual o aplicativo que contém o erro de ponto de interrupção é executado.  
   
 ## <a name="remarks"></a>Comentários  
  Essa estrutura é retornada por [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md).  

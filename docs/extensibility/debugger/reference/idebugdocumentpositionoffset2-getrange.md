@@ -13,14 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 60d7ee73be7ccd421c7f5e0b4861e9cd935fbdb0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 70f878c7299ab716c764f5962d675691f4bb521a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860104"
 ---
 # <a name="idebugdocumentpositionoffset2getrange"></a>IDebugDocumentPositionOffset2::GetRange
-Recupera o intervalo para a posição do documento atual.  
+Recupera o intervalo para a posição atual do documento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,23 +41,23 @@ public int GetRange(
   
 #### <a name="parameters"></a>Parâmetros  
  `pdwBegOffset`  
- [out no] Deslocamento da posição inicial do intervalo. Defina esse parâmetro como um valor nulo se essas informações não são necessárias.  
+ [no, out] Deslocamento da posição inicial do intervalo. Defina esse parâmetro como um valor nulo se essa informação não é necessária.  
   
  `pdwEndOffset`  
- [out no] Deslocamento para a posição final do intervalo. Defina esse parâmetro como um valor nulo se essas informações não são necessárias.  
+ [no, out] Deslocamento para a posição final do intervalo. Defina esse parâmetro como um valor nulo se essa informação não é necessária.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- O intervalo especificado em uma posição de documento para um ponto de interrupção de local é usado pelo mecanismo de depuração (DE) para procurar uma instrução que realmente contribui código em frente. Por exemplo, considere o seguinte código:  
+ O intervalo especificado em uma posição de documento para um ponto de interrupção de local é usado pelo mecanismo de depuração (DE) para procurar uma instrução que contribui, na verdade, o código com antecedência. Por exemplo, considere o seguinte código:  
   
 ```  
 Line 5: // comment  
 Line 6: x = 1;  
 ```  
   
- Linha 5 não contribui nenhum código para o programa que está sendo depurado. Se desejar que o depurador que define o ponto de interrupção na linha 5 DE para procurar uma determinada quantidade para a primeira linha que contribui com o código, o depurador deve especificar um intervalo que inclui linhas de candidato adicionais em que um ponto de interrupção pode ser posicionado corretamente. O DE seria, em seguida, avance a pesquisa por essas linhas até que ela encontrou uma linha que pode aceitar um ponto de interrupção.  
+ Linha 5 contribui com nenhum código para o programa que está sendo depurado. Se quiser que o depurador que define o ponto de interrupção na linha 5 DE para pesquisar adiante uma certa quantidade para a primeira linha que contribui com o código, o depurador seria especificar um intervalo que inclui linhas de candidato adicional em que um ponto de interrupção pode ser colocado corretamente. O DE, em seguida, pesquisaria para frente por meio dessas linhas até que ela encontrou uma linha que poderia aceitar um ponto de interrupção.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugDocumentPositionOffset2](../../../extensibility/debugger/reference/idebugdocumentpositionoffset2.md)   

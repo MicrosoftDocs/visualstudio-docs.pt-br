@@ -1,5 +1,5 @@
 ---
-title: Adicionar conjuntos de contadores personalizados para testes de carga no Visual Studio | Microsoft Docs
+title: Adicionar conjuntos de contadores personalizados para testes de carga no Visual Studio
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,14 @@ ms.assetid: 499aca80-1069-408d-ac68-326da6a50645
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: f811ee784a0cb40fb1e5daf00f0ccf3c2ca16bfe
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 76ba63b1ca84a09294226ad8c4924df9b1fbb321
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894684"
 ---
 # <a name="how-to-add-custom-counter-sets-using-the-load-test-editor"></a>Como adicionar conjuntos de contadores personalizados usando o Editor de Teste de Carga
 
@@ -26,7 +28,9 @@ Quando cria um teste de carga com o **Novo Assistente de Teste de Carga**, você
 
 Você gerencia os contadores no **Editor de Teste de Carga**. Os conjuntos de contadores que já foram adicionados ao teste ficam visíveis no nó **Conjuntos de contadores** do teste de carga. Depois de criar um teste de carga, é possível adicionar a ele novos conjuntos de contadores personalizados.
 
-![Conjunto de contadores personalizados](../test/media/loadtestcustomcounter.png "LoadTestCustomCounter")
+![Conjunto de contadores personalizados](../test/media/loadtestcustomcounter.png)
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="to-add-a-custom-counter-set-to-a-load-test"></a>Para adicionar um conjunto de contadores personalizados a um teste de carga
 
@@ -37,14 +41,14 @@ Você gerencia os contadores no **Editor de Teste de Carga**. Os conjuntos de co
 3.  Clique com o botão direito do mouse no nó **Conjuntos de contadores** e selecione **Adicionar conjunto de contadores personalizados**.
 
     > [!NOTE]
-    > O conjunto de contadores recebe um nome padrão, como **Custom1**. É possível alterar o nome usando a janela **Propriedades**. Pressione F4 para exibir a janela **Propriedades**.
+    > O conjunto de contadores recebe um nome padrão, como **Custom1**. É possível alterar o nome usando a janela **Propriedades**. Pressione **F4** para exibir a janela **Propriedades**.
 
-4.  Para adicionar contadores ao conjunto de contadores personalizado, clique com o botão direito do mouse no novo conjunto de contadores e escolha **Adicionar contadores**. Para obter mais informações sobre como adicionar contadores, consulte [Como adicionar contadores a conjuntos de contadores](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md).
+4.  Para adicionar contadores ao conjunto de contadores personalizado, clique com o botão direito do mouse no novo conjunto de contadores e escolha **Adicionar contadores**. Para saber mais sobre como adicionar contadores, confira [Como adicionar contadores a conjuntos de contadores](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md).
 
     > [!NOTE]
     > Também é possível adicionar um conjunto de contadores personalizados clicando com o botão direito do mouse em um conjunto de contadores existente, escolhendo copiar e colando-o no nó de conjuntos de contadores. Os contadores adicionais que são copiados, mas não são necessários, podem ser excluídos. Você pode alterar o nome do novo conjunto de contadores usando a janela **Propriedades**.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Especificando os conjuntos de contadores e as regras de limite para computadores em um teste de carga](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
-- [Definindo configurações de execução de teste de carga](../test/configure-load-test-run-settings.md)
+- [Especificar os conjuntos de contadores e as regras de limite para computadores em um teste de carga](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
+- [Definir configurações de execução de teste de carga](../test/configure-load-test-run-settings.md)

@@ -15,25 +15,26 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61227652bf191280f69466f127c4a400ea43856e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9d840ea26757ca56ee58b5ac4941f7f3c1065562
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39497944"
 ---
-# <a name="elimination-of-sak-files"></a>Eliminação de ~ SAK arquivos
-No código-fonte controle plug-in API 1.2, o ~ arquivos SAK foram substituídos por sinalizadores de recursos e novas funções que detecta se um plug-in de controle de origem dá suporte a arquivo MSSCCPRJ e check-outs compartilhados.  
+# <a name="elimination-of-sak-files"></a>Eliminação de ~ arquivos SAK
+Na fonte de controle de plug-in API 1.2, o *~ SAK* arquivos foram substituídos por sinalizadores de recurso e dá suporte a plug-in de controle de novas funções de detectam se uma fonte de *MSSCCPRJ* de arquivo e check-outs compartilhados.  
   
-## <a name="sak-files"></a>~ Arquivos de SAK  
- Visual Studio .NET 2003 criou arquivos temporários prefixados com ~ SAK. Esses arquivos são usados para determinar se um plug-in de controle de origem dá suporte a:  
+## <a name="sak-files"></a>~ Arquivos SAK  
+Visual Studio .NET 2003 criado prefixados com os arquivos temporários *~ SAK*. Esses arquivos são usados para determinar se um plug-in de controle de origem dá suporte a:  
   
--   MSSCCPRJ. Arquivos SCC.  
+- O *Mssccprj* arquivo.  
   
--   Vários checkouts (compartilhados).  
+- Vários checkouts (compartilhados).  
+    
+Para plug-ins que dão suporte a funções avançadas fornecidas a fonte de controle de plug-in API 1.2, o IDE pode detectar esses recursos sem criar os arquivos temporários com o uso de novos recursos, sinalizadores e funções, detalhadas nas seções a seguir.  
   
- Para plug-ins que dão suporte a funções avançadas fornecidas a fonte de controle de plug-in API 1.2, o IDE pode detectar esses recursos sem criar os arquivos temporários com o uso de novos recursos, sinalizadores e funções, detalhadas nas seções a seguir.  
-  
-## <a name="new-capability-flags"></a>Novo sinalizadores de recursos  
+## <a name="new-capability-flags"></a>Novos sinalizadores de recurso  
  `SCC_CAP_SCCFILE`  
   
  `SCC_CAP_MULTICHECKOUT`  
@@ -43,14 +44,14 @@ No código-fonte controle plug-in API 1.2, o ~ arquivos SAK foram substituídos 
   
  [SccIsMultiCheckoutEnabled](../../extensibility/sccismulticheckoutenabled-function.md)  
   
- Se um plug-in de controle de origem dá suporte a vários check-outs (compartilhados), ele declara o `SCC_CAP_MULTICHECKOUT` capacidade e implementa o `SccIsMultiCheckOutEnabled` função. Essa função é chamada sempre que ocorre uma operação de check-out em qualquer um dos projetos de controle do código-fonte.  
+ Se um plug-in de controle de origem dá suporte a vários check-outs (compartilhados) e, em seguida, ele declara a `SCC_CAP_MULTICHECKOUT` funcionalidade e implementa o `SccIsMultiCheckOutEnabled` função. Essa função é chamada sempre que uma operação de check-out ocorre em qualquer um dos projetos de controle do código-fonte.  
   
- Se um plug-in de controle de origem tiver suporte para a criação e uso de um MSSCCPRJ. Arquivos SCC, ele declara o `SCC_CAP_SCCFILE` capacidade e implementa o [SccWillCreateSccFile](../../extensibility/sccwillcreatesccfile-function.md). Essa função é chamada com uma lista de arquivos. A função retorna `TRUE/FALSE` para cada arquivo indicar se o Visual Studio deve usar um MSSCCPRJ. Arquivos SCC para ele. Se o plug-in de controle de origem decidir não oferecer suporte a esses novos recursos e funções, poderá usar a seguinte chave do registro para desabilitar a criação desses arquivos:  
+ Se um plug-in de controle de origem dá suporte à criação e ao uso de um *Mssccprj* do arquivo, em seguida, ele declara o `SCC_CAP_SCCFILE` funcionalidade e implementa os [SccWillCreateSccFile](../../extensibility/sccwillcreatesccfile-function.md). Essa função é chamada com uma lista de arquivos. A função retornará `TRUE' or 'FALSE` para cada arquivo indicar se o Visual Studio deve usar um *Mssccprj* arquivo para ele. Se o plug-in de controle do código-fonte optar por não dar suporte a esses novos recursos e funções, ele pode usar a seguinte chave do registro para desabilitar a criação desses arquivos:  
   
- [HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateTemporaryFilesInSourceControl" = DWORD: 00000001  
+ **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] DoNotCreateTemporaryFilesInSourceControl** = *DWORD: 00000001*  
   
 > [!NOTE]
->  Se essa chave do registro é definida como DWORD: 00000000, é equivalente à chave sendo inexistente e Visual Studio ainda tenta criar arquivos temporários. No entanto, se a chave do registro é definida como DWORD: 00000001, Visual Studio não tentará criar arquivos temporários. Em vez disso, ele pressupõe que o plug-in de controle de origem não oferece suporte a MSSCCPRJ. Arquivos SCC e não dá suporte a check-outs compartilhados.  
+>  Se essa chave do registro for definida como *DWORD: 00000000*, é equivalente à chave que está sendo inexistente e Visual Studio ainda tenta criar arquivos temporários. No entanto, se a chave do registro for definida como *DWORD: 00000001*, Visual Studio não tentará criar arquivos temporários. Em vez disso, ele pressupõe que o plug-in de controle do código-fonte não dá suporte a *Mssccprj* de arquivo e não oferece suporte a check-outs compartilhados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Novidades na Versão 1.2 da API do plug-in de controle de código-fonte](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)
+ [O que há de novo no controle de fonte de plug-in API versão 1.2](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

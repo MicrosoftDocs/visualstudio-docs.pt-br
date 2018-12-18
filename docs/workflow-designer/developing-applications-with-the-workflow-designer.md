@@ -1,14 +1,16 @@
 ---
-title: Desenvolvendo aplicativos com o Designer de fluxo de trabalho | Microsoft Docs
+title: Desenvolvendo aplicativos com designers de Fluxo de Trabalho
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - DefaultWorkflowDesigner
 - DefaultWorkflowDesigner.UI
 helpviewer_keywords:
-- Visual Studio 2010 Workflow Designer [WFD], overview
+- Visual Studio Workflow Designer [WFD], overview
 - Workflow Designer [WFD]
-- Visual Studio 2010 Workflow Designer [WFD]
+- Visual Studio Workflow Designer [WFD]
 - Workflow Designer [WFD], overview
 ms.assetid: 4cd062b1-b496-4668-bbc1-ee85545e066d
 author: gewarren
@@ -16,34 +18,33 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c48e7b43b23e7bfe8887f437cc17e6db077c0e4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f6fa987303ccbc3c6dc9122fb03daef02896a327
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36756415"
 ---
-# <a name="developing-applications-with-the-workflow-designer"></a>Desenvolvendo aplicativos com designers de Fluxo de Trabalho
+# <a name="develop-apps-with-the-workflow-designer"></a>Desenvolver aplicativos com o Designer de Fluxo de Trabalho
 
-O Designer de fluxo de trabalho do Windows é um designer visual e o depurador para a construção de gráfica e a depuração de [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] aplicativos o [!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)] que está hospedado no [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] ambiente de desenvolvimento. Permite que você escreve um aplicativo de fluxo de trabalho, uma biblioteca de atividade, ou um serviço composto de [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] com o uso de modelos e os designers de atividade. Para obter mais informações sobre fluxos de trabalho, consulte o [Windows Workflow Foundation &#91;.NET Framework 4&#93;](http://msdn.microsoft.com/Library/9a23ea6b-d600-483e-89cd-8889cfec5f66).
+O Designer de fluxo de trabalho é um designer visual e o depurador para a construção do gráfica e a depuração de [Windows Workflow Foundation](/dotnet/framework/windows-workflow-foundation/index) aplicativos (WF) no Visual Studio. Ele permite compor um aplicativo de fluxo de trabalho composto, biblioteca de atividades ou serviço do Windows Communication Foundation (WCF) com o uso de modelos e designers de atividade.
 
- Os seguintes são vários novos recursos de design esse conjunto essa nova versão de [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] independentemente das versões anteriores de [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]:
+## <a name="install-windows-workflow-foundation"></a>Instalar o Windows Workflow Foundation
 
--   [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] é compilado usando [!INCLUDE[avalon1](../workflow-designer/includes/avalon1_md.md)]. Isso melhora a experiência do designer de atividade e melhora o desempenho para grandes e fluxos de trabalho complexos.
+Para usar os modelos de projeto de fluxo de trabalho no Visual Studio 2017, primeiro instale o **Windows Workflow Foundation** componente.
 
--   As atividades personalizados são criadas agora com [!INCLUDE[avalon2](../workflow-designer/includes/avalon2_md.md)], usando XAML e o modelo de programação para criar designer de atividade foi simplificado.
+1. Abra o instalador do Visual Studio. Uma maneira rápida para abri-lo é selecionando **ferramentas** > **obter ferramentas e recursos** no Visual Studio.
 
--   Uma atividade do fluxograma era implementado, então você pode visualizar o fluxo de programa usando o fluxograma familiar que modela o estilo.
+1. No instalador do Visual Studio, selecione o **componentes individuais** guia.
 
--   [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] tem um novo designer variável que permite que você declare e defina o escopo variáveis em seus fluxos de trabalho, associando os às atividades.
+1. Role para baixo até a **atividades de desenvolvimento** categoria e, em seguida, selecione o **Windows Workflow Foundation** componente.
 
--   Em [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)], [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] fornece recursos do IntelliSense para criar expressões do Visual Basic dentro dos fluxos de trabalho [!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)] .
+   ![Componente do Windows Workflow Foundation para o Visual Studio 2017](media/windows-workflow-foundation-component.png)
 
--   A experiência de depuração estende agora em XAML, permitindo que você defina pontos de interrupção na definição de fluxo de trabalho XAML e entrar no seu código XAML em tempo de execução, que fornece uma experiência semelhante ao código gerenciado.
+1. Selecione **Modificar**.
 
--   Rehosting [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] fora de [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] é simplificado extremamente em comparação com versões anteriores, que requer agora apenas algumas linhas de código.
+   O Visual Studio instala o **Windows Workflow Foundation** componente.
 
--   O novo <xref:System.Activities.Statements.Flowchart> atividade e seu [fluxograma](../workflow-designer/flowchart-activity-designer.md) permitem que você visualize seu fluxo de programa usando o fluxograma familiar estilo de modelagem.
+## <a name="see-also"></a>Consulte também
 
--   As atividades de mensagem foram aprimoradas, permitindo que você escreva (nenhum código declarativo completa) serviços de [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] .
-
--   O **adicionar referência de serviço...**  funcionalidade permite que você gere atividades automaticamente que acessar serviços da Web.
+- [Windows Workflow Foundation (.NET Framework)](/dotnet/framework/windows-workflow-foundation/index)

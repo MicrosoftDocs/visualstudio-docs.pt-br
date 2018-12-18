@@ -10,13 +10,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7949f19198aebe37b4a846cc37f274940415fb8e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ec1acb6763d408f9f13ec3044e2cd8137d34e634
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237647"
 ---
-# <a name="memory-and-paging-performance-rules"></a>Regras de desempenho de memória e paginação
+# <a name="memory-and-paging-performance-rules"></a>Regras de desempenho de memória e de paginação
 As regras de desempenho na memória e categoria de paginação identificam a atividade de paginação em uma execução de criação de perfil que pode afetar a capacidade de resposta e o desempenho do aplicativo.  
   
 |||  

@@ -1,5 +1,5 @@
 ---
-title: ': Get_virtualbaseoffset | Microsoft Docs'
+title: 'Idiasymbol:: Get_virtualbaseoffset | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e26ef0435b2e4f3fde14d8e58b4f5cb8321b1d0d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 354f1be420e2a14d716d0817a888c5a6978db595
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864225"
 ---
 # <a name="idiasymbolgetvirtualbaseoffset"></a>IDiaSymbol::get_virtualBaseOffset
 Recupera o deslocamento na tabela de função virtual de uma função virtual.  
@@ -36,7 +37,7 @@ HRESULT get_virtualBaseOffset (
  [out] Retorna o deslocamento na tabela de função virtual de uma função virtual.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  

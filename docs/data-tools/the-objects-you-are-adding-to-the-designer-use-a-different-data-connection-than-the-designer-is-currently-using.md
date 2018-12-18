@@ -6,37 +6,39 @@ ms.assetid: 332ed2f3-3377-4d51-8e3b-fdb98231978e
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: dc08b045ebd02496d0ae87055b205285ee5ab57f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a2fb26fa8960c652feefa157fb04c31b9ed7abb9
+ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174162"
 ---
 # <a name="the-objects-you-are-adding-to-the-designer-use-a-different-data-connection-than-the-designer"></a>Os objetos que você está adicionando ao designer usam uma conexão de dados diferente que o designer
 
 Os objetos que você está adicionando ao designer usam uma conexão de dados diferente da que o designer está usando no momento. Deseja substituir a conexão usada pelo designer?
 
-Para adicionar itens para o [!INCLUDE[vs_ordesigner_long](../data-tools/includes/vs_ordesigner_long_md.md)] ([!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]), todos os itens de usam uma conexão de dados compartilhada. (A superfície de design representa <xref:System.Data.Linq.DataContext>, que usa uma única conexão para todos os objetos na superfície.) Se você adicionar um objeto para o designer que usa uma conexão de dados que seja diferente de conexão de dados atualmente sendo usada pelo designer, esta mensagem aparece. Para resolver esse erro, você pode escolher para manter a conexão existente. Se você fizer essa opção, o objeto selecionado não será adicionado. Como alternativa, você pode optar por adicionar o objeto e redefinir a <xref:System.Data.Linq.DataContext> conexão para a nova conexão.
+Quando você adiciona itens para o **Object Relational Designer** (**Relational Designer**), todos os itens usam uma conexão de dados compartilhada. (A superfície de design representa <xref:System.Data.Linq.DataContext>, que usa uma única conexão para todos os objetos na superfície.) Se você adicionar um objeto para o designer que usa uma conexão de dados que seja diferente de conexão de dados atualmente sendo usada pelo designer, esta mensagem aparece. Para resolver esse erro, você pode escolher para manter a conexão existente. Se você fizer essa opção, o objeto selecionado não será adicionado. Como alternativa, você pode optar por adicionar o objeto e redefinir o <xref:System.Data.Linq.DataContext> conexão para a nova conexão.
 
 > [!NOTE]
-> Se você clicar em **Sim**, entidade todas as classes no [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] são mapeadas para a nova conexão.
+> Se você clicar **Sim**, classes de entidade todas na **Relational Designer** são mapeados para a nova conexão.
 
 ## <a name="to-replace-the-existing-connection-with-the-connection-used-by-the-selected-object"></a>Para substituir a conexão existente com a conexão usada pelo objeto selecionado
 
 - Clique em **Sim**.
 
-    O objeto selecionado é adicionado a [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], e o DataContext.Connection é definido para a nova conexão.
+    O objeto selecionado é adicionado para o **Relational Designer**e o *DataContext* é definido como a nova conexão.
 
 ## <a name="to-continue-to-use-the-existing-connection-and-cancel-adding-the-selected-object"></a>Para continuar a usar a conexão e cancelar existentes que adicionam o objeto selecionado
 
 - Clique em **Não**.
 
-    A ação é cancelada. O DataContext.Connection de definidas para a conexão existente.
+    A ação é cancelada. O *DataContext* permanecerá definido para a conexão existente.
 
 ## <a name="see-also"></a>Consulte também
 
 - [Mensagens do O/R Designer](../data-tools/o-r-designer-messages.md)
-- [LINQ to SQL tools no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Ferramentas LINQ to SQL no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

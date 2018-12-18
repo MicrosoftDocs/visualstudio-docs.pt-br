@@ -1,5 +1,5 @@
 ---
-title: 'Como: adicionar controles XMLMappedRange a planilhas | Microsoft Docs'
+title: 'Como: adicionar controles XMLMappedRange a planilhas'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,13 +16,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: fa0e6d6249ea9b7da3fb0ab57640b61fb38e7fe5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 55b6c83624c3ccb6c28701cd97753ea155e37288
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34263974"
 ---
-# <a name="how-to-add-xmlmappedrange-controls-to-worksheets"></a>Como adicionar controles XMLMappedRange a planilhas
+# <a name="how-to-add-xmlmappedrange-controls-to-worksheets"></a>Como: adicionar controles XMLMappedRange a planilhas
   Quando você mapear um elemento XML para uma célula no Microsoft Office Excel, o Visual Studio adiciona automaticamente um <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> controle à sua planilha.  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  O <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> controle não está disponível no **caixa de ferramentas** ou **fontes de dados** janela. Além disso, você não pode criar <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> controla programaticamente.  
   
-### <a name="to-add-an-xmlmappedrange-control-to-a-worksheet"></a>Para adicionar um controle XMLMappedRange a uma planilha  
+## <a name="to-add-an-xmlmappedrange-control-to-a-worksheet"></a>Para adicionar um controle XMLMappedRange a uma planilha  
   
 1.  Abra a pasta de trabalho do Excel no designer do Visual Studio.  
   
@@ -64,9 +65,9 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="see-also"></a>Consulte também  
  [Controle XmlMappedRange](../vsto/xmlmappedrange-control.md)   
- [Automatizando o Excel usando objetos estendidos](../vsto/automating-excel-by-using-extended-objects.md)   
- [Itens de host e visão geral dos controles de Host](../vsto/host-items-and-host-controls-overview.md)   
- [Limitações programáticas de itens de Host e controles de Host](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [Como mapear esquemas para planilhas dentro do Visual Studio](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)  
+ [Automatizar o Excel usando objetos estendidos](../vsto/automating-excel-by-using-extended-objects.md)   
+ [Itens de host e visão geral dos controles de host](../vsto/host-items-and-host-controls-overview.md)   
+ [Limitações programáticas de itens de host e controles de host](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [Como: mapear esquemas para planilhas dentro do Visual Studio](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)  
   
   

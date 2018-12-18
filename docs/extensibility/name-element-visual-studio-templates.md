@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 202542388fc04b07c0792a550029b0d509327c74
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 743c732410c97aa795264dd6fe2495d2d14f2481
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638864"
 ---
-# <a name="name-element-visual-studio-templates"></a>Elemento de nome (Modelos do Visual Studio)
-Especifica o nome do modelo como ele aparece no **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.  
+# <a name="name-element-visual-studio-templates"></a>Elemento Name (modelos do Visual Studio)
+Especifica o nome do modelo como ele aparece na **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.  
   
  \<VSTemplate >  
  \<TemplateData >  
@@ -30,11 +31,11 @@ Especifica o nome do modelo como ele aparece no **novo projeto** ou **Adicionar 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <Name> Template Name </Name>  
 ```  
   
-```  
+```xml  
 <Name Package="{PackageID}" ID="ResourceID" />  
 ```  
   
@@ -45,8 +46,8 @@ Especifica o nome do modelo como ele aparece no **novo projeto** ou **Adicionar 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`Package`|Atributo opcional, para cenários de usuário avançado.<br /><br /> ID de um GUID que especifica o pacote do Visual Studio.|  
-|`ID`|Atributo opcional, para cenários de usuário avançado.<br /><br /> Especifica a ID de recurso do Visual Studio.|  
+|`Package`|Atributo opcional para cenários de usuário avançado.<br /><br /> ID de um GUID que especifica o pacote do Visual Studio.|  
+|`ID`|Atributo opcional para cenários de usuário avançado.<br /><br /> Especifica a ID de recurso do Visual Studio.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -55,10 +56,10 @@ Especifica o nome do modelo como ele aparece no **novo projeto** ou **Adicionar 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele exibe em um a **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo.|  
   
 ## <a name="text-value"></a>Valor de texto  
- É necessário um valor de texto, a menos que o `Package` e `ID` os atributos são usados.  
+ É necessário um valor de texto, a menos que o `Package` e `ID` atributos são usados.  
   
  O texto fornece o nome do modelo.  
   
@@ -68,7 +69,7 @@ Especifica o nome do modelo como ele aparece no **novo projeto** ou **Adicionar 
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra os metadados para um modelo de projeto para um [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplicativo.  
   
-```  
+```xml  
 <VSTemplate Type="Project" Version="3.0.0"  
     xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">  
     <TemplateData>  

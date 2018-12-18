@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84cac5c66dd20dc9641fee7f05b456b25cbe2ffc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4238895b236db6dd75cbf384adc78284f34d073f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936000"
 ---
 # <a name="idebugobjectisreadonly"></a>IDebugObject::IsReadOnly
 Determina se este objeto é somente leitura.  
@@ -40,13 +41,13 @@ int IsReadOnly(
   
 #### <a name="parameters"></a>Parâmetros  
  `pfIsReadOnly`  
- [out] Retorna diferente de zero (`TRUE`) se este objeto é somente leitura; caso contrário, retorna zero (`FALSE`).  
+ [out] Retorna não zero (`TRUE`) se esse objeto é somente leitura; caso contrário, retornará zero (`FALSE`).  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Um objeto somente leitura não pode ter seu valor alterado depois que ela é criada.  
+ Um objeto somente leitura não pode ter seu valor alterado depois que ele é criado.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

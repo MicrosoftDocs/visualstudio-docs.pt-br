@@ -1,5 +1,5 @@
 ---
-title: 'Como: recuperar programaticamente as mensagens não lidas da caixa de entrada | Microsoft Docs'
+title: 'Como: recuperar mensagens não lidas da caixa de entrada de forma programática'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,14 +18,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ec08c95a0543ab6ec47c0bded8126c6c2030c87e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3442ecd10bc18e0336542ce2b8396b8b7f654b78
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35670192"
 ---
-# <a name="how-to-programmatically-retrieve-unread-messages-from-the-inbox"></a>Como recuperar mensagens não lidas da Caixa de Entrada programaticamente
-  Este exemplo recupera mensagens não lidas do Outlook do **caixa de entrada** e exibe o número de itens.  
+# <a name="how-to-programmatically-retrieve-unread-messages-from-the-inbox"></a>Como: recuperar mensagens não lidas da caixa de entrada de forma programática
+  Este exemplo recupera mensagens de email não lido do Outlook **caixa de entrada** e exibe o número de itens.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
@@ -34,10 +35,10 @@ ms.lasthandoff: 04/16/2018
  [!code-csharp[Trin_Outlook_RL_UnreadItems#1](../vsto/codesnippet/CSharp/Trin_Outlook_RL_UnreadItems/thisaddin.cs#1)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhando com itens de email](../vsto/working-with-mail-items.md)   
- [Guia de Introdução Programando suplementos do VSTO](../vsto/getting-started-programming-vsto-add-ins.md)   
- [Como: criar programaticamente um Item de email](../vsto/how-to-programmatically-create-an-e-mail-item.md)   
+ [Trabalhar com itens de email](../vsto/working-with-mail-items.md)   
+ [Introdução à programação VSTO Add-ins](../vsto/getting-started-programming-vsto-add-ins.md)   
+ [Como: criar programaticamente um item de email](../vsto/how-to-programmatically-create-an-e-mail-item.md)   
  [Como: enviar email](../vsto/how-to-programmatically-send-e-mail-programmatically.md)   
- [Como executar ações de forma programática quando uma mensagem de email é recebida](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)  
+ [Como: executar ações programaticamente quando uma mensagem de email é recebida](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)  
   
   

@@ -12,15 +12,16 @@ ms.author: heaths
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ed6125c69b9068ebfb3d776ccbefaf88043f83a4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 65b0b8dfcc42cfcf80fc24f0c844469b77734e9c
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495382"
 ---
-# <a name="locating-visual-studio"></a>Localizando o Visual Studio
+# <a name="locate-visual-studio"></a>Localize o Visual Studio
 
-A partir do Visual Studio de 2017, você pode instalar várias instâncias da mesma versão ou edição mesmo. Isso é útil quando você deseja visualizar a nova funcionalidade no computador de desenvolvimento principal enquanto retém a instalação anterior. Devido a essas alterações, não há nenhum valor de variável ou registro único ambiente que você pode usar para localizar uma instância. Em vez disso, você pode usar um [API de consulta COM](https://msdn.microsoft.com/library/microsoft.visualstudio.setup.configuration.aspx) para localizar instâncias com base em critérios relevantes para sua extensão.
+Começando com o Visual Studio 2017, você pode instalar várias instâncias da mesma versão ou até mesmo edition. Isso é útil quando você deseja visualizar a nova funcionalidade no seu computador de desenvolvimento primário, mantendo sua instalação anterior. Por causa dessas alterações, não há nenhum valor de variável ou registro único ambiente que pode usar para localizar uma instância. Em vez disso, você pode usar um [API de consulta COM](https://msdn.microsoft.com/library/microsoft.visualstudio.setup.configuration.aspx) para localizar instâncias com base em critérios relevantes para sua extensão.
 
 Esta é uma API rápida, somente leitura com pacotes do NuGet para código nativo e gerenciado.
 
@@ -29,18 +30,18 @@ Esta é uma API rápida, somente leitura com pacotes do NuGet para código nativ
 | Nativo | https://nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Native |
 | Gerenciado | https://nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop |
 
-Você pode localizar uma única instância, dada um caminho ou o processo atual, ou enumerar todas as instâncias. Consulte [nossos exemplos](https://github.com/Microsoft/vs-setup-samples) para conclusão exemplos de como localizar o Visual Studio.
+Você pode localizar uma única instância, dada um caminho ou o processo atual ou enumerar todas as instâncias. Ver [nossos exemplos](https://github.com/Microsoft/vs-setup-samples) para obter exemplos completos de como localizar o Visual Studio.
 
 ## <a name="tools"></a>Ferramentas
 
-Para localizar o Visual Studio e outras ferramentas em ambientes de desenvolvimento, scripts do PowerShell, instaladores e mais cenários, temos um número de ferramentas de software livre, você pode usar diretamente ou redistribuir junto com seus próprios scripts.
+Para localizar o Visual Studio e outras ferramentas em ambientes de compilação, scripts do PowerShell, instaladores e mais cenários, há uma série de ferramentas de código-fonte aberto, você pode usar diretamente ou redistribuir junto com seus próprios scripts.
 
 | Projeto | Descrição |
 | ------- | ----------- |
-| [vswhere](https://github.com/Microsoft/vswhere) | Arquivo único executável nativo para localizar instâncias que atendem aos critérios, como versão ou versão de pré-lançamento, o produto foi instalado e que cargas de trabalho estão instaladas. Também oferece suporte a localizar o Visual Studio 2010 e mais recente, embora menos informações são retornadas que para 2017 do Visual Studio e mais recente. Consulte o [wiki](https://github.com/Microsoft/vswhere/wiki) para obter exemplos. |
-| [Cmdlets de VSSetup](https://github.com/Microsoft/vssetup.powershell) | Suporte para cmdlets do PowerShell 2.0 e mais recente que retornam informações detalhadas como objetos que você pode usar para localizar instâncias com base nos mesmos critérios como _vswhere_ e para descobrir as propriedades ainda mais sobre as instâncias. Consulte o [wiki](https://github.com/Microsoft/vssetup.powershell/wiki) para obter exemplos. |
-| [VSIXBootstrapper](https://github.com/Microsoft/vsixbootstrapper) | Localiza automaticamente _VSIXInstaller_ e passa a linha de comando por meio de instalar um _*.vsix_ arquivo. Isso pode ser útil em instaladores que não têm suporte direto para os APIs de consulta. Consulte o [wiki](https://github.com/Microsoft/vsixbootstrapper/wiki) para obter exemplos. |
+| [vswhere](https://github.com/Microsoft/vswhere) | Arquivo único executável nativo para localizar instâncias que atendem aos critérios como versão ou versão de pré-lançamento, o produto foi instalado e quais cargas de trabalho estão instaladas. Também dá suporte a localizar o Visual Studio 2010 e versões mais recentes, embora menos informações são retornadas que para o Visual Studio 2017 e mais recente. Consulte a [wiki](https://github.com/Microsoft/vswhere/wiki) para obter exemplos. |
+| [Cmdlets do VSSetup](https://github.com/Microsoft/vssetup.powershell) | Suporte para cmdlets do PowerShell 2.0 e versões mais recentes que retornam informações ricas como objetos que você pode usar para localizar instâncias com base nos mesmos critérios de _vswhere_ e para descobrir as propriedades ainda mais sobre as instâncias. Consulte a [wiki](https://github.com/Microsoft/vssetup.powershell/wiki) para obter exemplos. |
+| [VSIXBootstrapper](https://github.com/Microsoft/vsixbootstrapper) | Localiza automaticamente _VSIXInstaller_ e passa a linha de comando por meio de instalar um **VSIX* arquivo. Esse recurso pode ser útil em instaladores que não têm suporte direto para as APIs de consulta. Consulte a [wiki](https://github.com/Microsoft/vsixbootstrapper/wiki) para obter exemplos. |
 
 ## <a name="see-also"></a>Consulte também
 
-* [Alterações na configuração de 2017 Visual Studio](https://blogs.msdn.microsoft.com/heaths/2016/09/15/changes-to-visual-studio-15-setup)
+* [Alterações na instalação do Visual Studio 2017](https://blogs.msdn.microsoft.com/heaths/2016/09/15/changes-to-visual-studio-15-setup/)

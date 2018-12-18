@@ -1,5 +1,5 @@
 ---
-title: Referência da API (depuração no Visual Studio) | Microsoft Docs
+title: Referência da API (depuração do Visual Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,16 +13,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3c9007d679e36e2aa6dbab41074338395434be42
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 97d5aa6fc92457557493005389d129993d38e099
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839434"
 ---
-# <a name="api-reference-visual-studio-debugging"></a>Referência da API (depuração no Visual Studio)
-A seção de referência inclui uma visão geral conceitual da API, um guia que mostra a sintaxe e uso de todos os elementos de API e uma variedade de exemplos de código. Todas as referências são listadas em ordem alfabética por categoria.  
+# <a name="api-reference-visual-studio-debugging"></a>Referência de API (depuração no Visual Studio)
+A seção de referência inclui uma visão geral conceitual da API, um guia que mostra a sintaxe e uso para todos os elementos de API e uma variedade de exemplos de código. Todas as referências são listadas em ordem alfabética por categoria.  
   
- A tabela a seguir mostra comuns `HRESULT` valores retornados pelos métodos.  
+ A tabela a seguir mostra o comum `HRESULT` valores retornados pelos métodos.  
   
 |Nome|Descrição|Valor|  
 |----------|-----------------|-----------|  
@@ -39,8 +40,8 @@ A seção de referência inclui uma visão geral conceitual da API, um guia que 
 |E_ACCESSDENIED|Erro de acesso geral negado.|0x80070005|  
   
 > [!NOTE]
->  Quando um [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] depuração método retorna `S_OK`, presume-se que todo ponteiros de parâmetro são válidos, ou seja, nenhuma validação é realizada no limite ponteiros de parâmetro quando `S_OK` é retornado.  
-  
+>  Quando um [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] depuração método retorna `S_OK`, supõe-se que todos os ponteiros de parâmetro são válidos, ou seja, nenhuma validação é realizada em out ponteiros de parâmetro quando `S_OK` é retornado.  
+> 
 > [!NOTE]
 >  Inválido ou `NULL` [parâmetros out] pode causar falhas no IDE.  
   

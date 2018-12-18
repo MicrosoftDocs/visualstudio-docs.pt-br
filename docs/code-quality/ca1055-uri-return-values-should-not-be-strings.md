@@ -1,6 +1,7 @@
 ---
 title: 'CA1055: os valores de retorno de URI não devem ser cadeias de caracteres'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,21 @@ ms.assetid: 40e39873-7872-4988-8195-9eb0ade9ece0
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CPP
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 6474579cef909a7e05435b5aac1336d24c875c37
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1189552960ac57aebc37373e2a6d32249faf12dd
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548271"
 ---
 # <a name="ca1055-uri-return-values-should-not-be-strings"></a>CA1055: os valores de retorno de URI não devem ser cadeias de caracteres
+
 |||
 |-|-|
 |NomeDoTipo|UriReturnValuesShouldNotBeStrings|
@@ -30,19 +37,19 @@ ms.lasthandoff: 04/19/2018
 |Alteração Significativa|Quebra|
 
 ## <a name="cause"></a>Causa
- O nome de um método contiver "uri", "Uri", "urn", "Urn", "url" ou "Url", e o método retorna uma cadeia de caracteres.
+ O nome de um método contém "uri", "Uri", "urn", "Urn", "url" ou "Url", e o método retorna uma cadeia de caracteres.
 
-## <a name="rule-description"></a>Descrição da Regra
- Essa regra divide o nome do método em tokens com base na convenção de maiusculas e minúsculas de Pascal e verifica se cada token é igual a "uri", "Uri", "urn", "Urn", "url" ou "Url". Se houver uma correspondência, a regra pressupõe que o método retorna um identificador de recurso uniforme (URI). Uma representação de cadeia de caracteres de um URI está propensa a erros de análise e de codificação, e pode resultar em vulnerabilidades de segurança. O <xref:System.Uri?displayProperty=fullName> classe fornece esses serviços de forma segura e protegida.
+## <a name="rule-description"></a>Descrição da regra
+ Essa regra é o nome do método é dividida em tokens com base na convenção de maiusculas e minúsculas de Pascal e verifica se cada token é igual a "uri", "Uri", "urn", "Urn", "url" ou "Url". Se houver uma correspondência, a regra pressupõe que o método retorna um uniform resource identifier (URI). Uma representação de cadeia de caracteres de um URI está propensa a erros de análise e de codificação, e pode resultar em vulnerabilidades de segurança. O <xref:System.Uri?displayProperty=fullName> classe fornece esses serviços de maneira segura e protegida.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, altere o tipo de retorno para um <xref:System.Uri>.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, altere o tipo de retorno para um <xref:System.Uri>.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- É seguro suprimir um aviso de que essa regra se o valor de retorno não representa um URI.
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+ É seguro suprimir um aviso nessa regra, se o valor de retorno não representa um URI.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir mostra um tipo `ErrorProne`, que violam essa regra e um tipo, `SaferWay`, que atende a regra.
+ O exemplo a seguir mostra um tipo `ErrorProne`, que viola essa regra e um tipo, `SaferWay`, que satisfaz a regra.
 
  [!code-csharp[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CSharp/ca1055-uri-return-values-should-not-be-strings_1.cs)]
  [!code-vb[FxCop.Design.UriNotString#1](../code-quality/codesnippet/VisualBasic/ca1055-uri-return-values-should-not-be-strings_1.vb)]

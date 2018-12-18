@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 477bdb12cef6711c6b946b3ddd8d9550e48c01b0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b397bded186623b09bc868d6b4af97cd0d4d5388
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854553"
 ---
 # <a name="idebugfunctionobjectcreateprimitiveobject"></a>IDebugFunctionObject::CreatePrimitiveObject
-Cria um objeto de dados primitivos, como um inteiro simple.  
+Cria um objeto de dados primitivos, como um inteiro simples.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,16 +43,16 @@ int CreatePrimitiveObject(
   
 #### <a name="parameters"></a>Parâmetros  
  `ot`  
- [in] Um valor da [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) enumeração que representa o tipo primitivo para criar.  
+ [in] Um valor a partir de [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) enumeração que representa o tipo primitivo para criar.  
   
  `ppObject`  
  [out] Retorna um [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) que representa o objeto recém-criado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Chame esse método para criar um objeto que representa um objeto primitivo que é um parâmetro para a função que é representado pelo [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) interface. Por exemplo, se a cadeia de caracteres de expressão é "myString(5)", esse método será usado para criar um objeto que representa o inteiro 5.  
+ Chame esse método para criar um objeto que representa um objeto primitivo que é um parâmetro para a função que é representado pela [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) interface. Por exemplo, se a cadeia de caracteres de expressão for "myString(5)", esse método seria usado para criar um objeto que representa o inteiro 5.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

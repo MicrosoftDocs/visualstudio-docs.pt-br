@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d2f7d5430326f57acf686b90f911445cc36dbf02
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7d6df39bcd02fe74e2c6ada24d341cd3d2fdfb75
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49932919"
 ---
 # <a name="idebugproperty3getstringchars"></a>IDebugProperty3::GetStringChars
 Recupera a cadeia de caracteres associada a essa propriedade e o armazena em um buffer fornecido pelo usuário.  
@@ -44,24 +45,24 @@ int GetStringChars(
   
 #### <a name="parameters"></a>Parâmetros  
  `buflen`  
- [in] Número máximo de caracteres que pode conter o buffer fornecido pelo usuário.  
+ [in] Número máximo de caracteres em que o buffer fornecido pelo usuário pode conter.  
   
  `rgString`  
  [out] Retorna a cadeia de caracteres.  
   
- [C++ apenas], `rgString` é um ponteiro para um buffer que recebe os caracteres Unicode da cadeia de caracteres. Esse buffer deve ser pelo menos `buflen` caracteres (não em bytes) de tamanho.  
+ [C++ apenas], `rgString` é um ponteiro para um buffer que recebe os caracteres Unicode da cadeia de caracteres. Esse buffer deve ter pelo menos `buflen` caracteres (não em bytes) de tamanho.  
   
  `pceltFetched`  
- [out] Em que o número de caracteres de fato armazenados no buffer é retornado. (Pode ser `NULL` em C++.)  
+ [out] Em que o número de caracteres, na verdade, são armazenados no buffer é retornado. (Pode ser `NULL` em C++.)  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- No C++, tome cuidado para garantir que o buffer é pelo menos `buflen` caracteres Unicode. Observe que um caractere Unicode é de 2 bytes de comprimento.  
+ No C++, tome cuidado para garantir que o buffer seja pelo menos `buflen` caracteres Unicode. Observe que um caractere Unicode é de 2 bytes de comprimento.  
   
 > [!NOTE]
->  No C++, a cadeia de caracteres retornada não inclui um caractere null de terminação. Se fornecido, `pceltFetched` especificará o número de caracteres na cadeia de caracteres.  
+>  No C++, a cadeia de caracteres retornada não inclui um caractere nulo de terminação. Se fornecido, `pceltFetched` especificará o número de caracteres na cadeia de caracteres.  
   
 ## <a name="example"></a>Exemplo  
  

@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b9145cff487ebb97894d9b93ad5e1ec54d5b4b2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eb2e66378b2a7b906b6bf9e0efe4e718316ade54
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948285"
 ---
 # <a name="idebugpendingbreakpoint2virtualize"></a>IDebugPendingBreakpoint2::Virtualize
-Alterna o estado virtualizado deste pendente de ponto de interrupção. Quando um ponto de interrupção pendente é virtualizado, o mecanismo de depuração tentará associá-lo sempre que o novo código carrega no programa.  
+Alterna o estado virtualizado isso pendente do ponto de interrupção. Quando um ponto de interrupção pendente é virtualizado, o mecanismo de depuração tentará associá-lo sempre que o novo código é carregado no programa.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,13 +42,13 @@ int Virtualize(
   
 #### <a name="parameters"></a>Parâmetros  
  `fVirtualize`  
- [in] Definido como zero (`TRUE`) para virtualizar o ponto de interrupção pendente, ou zero (`FALSE`) para desativar a virtualização.  
+ [in] Definido como não zero (`TRUE`) para virtualizar o ponto de interrupção pendente, ou zero (`FALSE`) para desativar a virtualização.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o ponto de interrupção foi excluído.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o ponto de interrupção tiver sido excluído.  
   
 ## <a name="remarks"></a>Comentários  
- Está associado a um ponto de interrupção virtualizado sempre que o código é carregado.  
+ Um ponto de interrupção virtualizado é associado sempre que o código é carregado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como implementar esse método para um simples `CPendingBreakpoint` objeto que expõe o [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) interface.  

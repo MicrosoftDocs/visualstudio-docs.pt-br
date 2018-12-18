@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d74f39ce8e9e350c791371f20b7401d685fb1d18
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 78ea2148290402f2a8e5c08474de125fc52bca47
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936498"
 ---
 # <a name="fieldinfofields"></a>FIELD_INFO_FIELDS
-Especifica quais informações recuperar sobre um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto.  
+Especifica quais informações devem ser recuperadas sobre um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,21 +52,21 @@ public enum enum_FIELD_INFO_FIELDS {
   
 ## <a name="members"></a>Membros  
  FIF_FULLNAME  
- Inicializar/usar o `bstrFullName` campo o [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) estrutura.  
+ Inicialização/usar o `bstrFullName` campo de [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) estrutura.  
   
  FIF_NAME  
- Inicializar/usar o `bstrName` campo o `FIELD_INFO` estrutura.  
+ Inicialização/usar o `bstrName` campo o `FIELD_INFO` estrutura.  
   
  FIF_TYPE  
- Inicializar/usar o `bstrType` campo o `FIELD_INFO` estrutura.  
+ Inicialização/usar o `bstrType` campo o `FIELD_INFO` estrutura.  
   
  FIF_MODIFIERS  
- Inicializar/usar o `bstrModifiers` campo o `FIELD_INFO` estrutura.  
+ Inicialização/usar o `bstrModifiers` campo o `FIELD_INFO` estrutura.  
   
 ## <a name="remarks"></a>Comentários  
- Esses valores também são passados como um argumento para o [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) método para especificar quais campos do [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) estrutura devem ser inicializado.  
+ Esses valores também são passados como um argumento para o [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) método para especificar quais campos da [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) são de estrutura a ser inicializado.  
   
- Esses valores também são usados no `dwFields` membro o `FIELD_INFO` estrutura para indicar quais campos são usados e válido.  
+ Esses valores também são usados na `dwFields` membro o `FIELD_INFO` estrutura para indicar quais campos são usados e válido.  
   
  Esses sinalizadores podem ser combinados com um bit a bit `OR`.  
   

@@ -14,18 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2fca0fbb22bf51353eeaa64f519face53bfb23c8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f8ba4667a34594c764a57788ee468d32733ded8e
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232001"
 ---
 # <a name="buttontext-element"></a>Elemento ButtonText
-Este campo permite que você especifique o texto que aparece em vários menus. Por padrão, o `ButtonText` elemento aparece em controladores de menu. O `ButtonText` elemento também se tornará o padrão se campos de texto estão em branco. O `ButtonText` elemento não pode ficar em branco, mesmo se os outros campos de texto forem especificados.  
+Este campo permite especificar o texto que aparece em vários menus. Por padrão, o `ButtonText` elemento aparece em controladores de menu. O `ButtonText` elemento também se tornará o padrão se campos de texto estiverem em branco. O `ButtonText` elemento não pode ficar em branco, mesmo se os outros campos de texto forem especificados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <ButtonText>My Command</ButtonText>  
 ```  
   
@@ -42,10 +43,10 @@ Este campo permite que você especifique o texto que aparece em vários menus. P
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[Elemento Strings](../extensibility/strings-element.md)|Agrupa elementos de texto, como `ButtonText` e `CommandName`.|  
+|[Elemento Strings](../extensibility/strings-element.md)|Agrupa os elementos de texto, como `ButtonText` e `CommandName`.|  
   
 ## <a name="text-value"></a>Valor de texto  
- O valor de texto de `ButtonText` elemento fornece o texto que é exibido para os itens de menu, combinações e outros elementos de interface de usuário com texto visível.  
+ O valor de texto o `ButtonText` elemento fornece o texto que é exibido para itens de menu, combos e outros elementos de (UI) de interface de usuário que tenham texto visível.  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquivos da tabela de comandos do Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+ [Arquivos de tabela (. VSCT) de comando do Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

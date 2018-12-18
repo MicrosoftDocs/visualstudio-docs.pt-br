@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1faa847d907af938bb5f91206a5f438bcba886a3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f1032be313c6be8c71799ea493e82c03fd9e96ad
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818244"
 ---
 # <a name="exceptionstate"></a>EXCEPTION_STATE
 Especifica o estado de exceção.  
@@ -77,37 +78,37 @@ public enum enum_EXCEPTION_STATE {
   
 ## <a name="members"></a>Membros  
  EXCEPTION_NONE  
- Não pare a exceção.  
+ Não pare na exceção.  
   
  EXCEPTION_STOP_FIRST_CHANCE  
- Pare na primeira acionamento da exceção. Ao descrever um evento de exceção, esse sinalizador indica que o evento de exceção é uma exceção de primeira chance.  
+ Pare no primeiro disparo da exceção. Ao descrever um evento de exceção, esse sinalizador indica que o evento de exceção é um evento de exceção de primeira chance.  
   
  EXCEPTION_STOP_SECOND_CHANCE  
- Pare no segundo acionamento da exceção. Ao descrever um evento de exceção, indica que a exceção é um evento de exceção de segunda chance.  
+ Pare no segundo acionamento da exceção. Ao descrever um evento de exceção, indica que o evento de exceção é um evento de exceção de segunda chance.  
   
  EXCEPTION_STOP_USER_FIRST_CHANCE  
- Pare na primeira acionamento de uma exceção do modo de usuário. Ao descrever um evento de exceção, indica que o evento de exceção é um evento de exceção de primeira chance de usuário.  
+ Pare no primeiro acionamento de uma exceção do modo de usuário. Ao descrever um evento de exceção, indica que o evento de exceção é um evento de exceção do usuário de primeira chance.  
   
  EXCEPTION_STOP_USER_UNCAUGHT  
- Interrompa quando uma exceção do modo de usuário não é capturada. Ao descrever um evento de exceção, indica que o evento de exceção é um evento de exceção de modo de usuário não identificada.  
+ Interrompa quando uma exceção do modo de usuário não é capturada. Ao descrever um evento de exceção, indica que o evento de exceção é um evento de exceção de modo de usuário não identificadas.  
   
  EXCEPTION_STOP_ALL  
- Pare em qualquer exceção. Não é usado para descrever um evento de exceção.  
+ Interrompa qualquer exceção. Não é usado para descrever um evento de exceção.  
   
  EXCEPTION_CANNOT_BE_CONTINUED  
- Ao descrever um evento de exceção, indica que a exceção não pode ser contínuo do.  
+ Ao descrever um evento de exceção, indica que a exceção não pode ser continuada de.  
   
  EXCEPTION_CODE_SUPPORTED  
- Indica que a exceção tem código de suporte a ele. Usados para exibir uma exceção  
+ Indica que a exceção tem código que dão suporte a ele. Usados para exibir uma exceção  
   
  EXCEPTION_CODE_DISPLAY_IN_HEX  
  Indica que o código de exceção deve ser exibido em hexadecimal. Usados para exibir uma exceção.  
   
  EXCEPTION_JUST_MY_CODE_SUPPORTED  
- Indica que o código de exceção suporta /justmycode. Usados para exibir uma exceção.  
+ Indica que o código de exceção oferece suporte a JustMyCode. Usados para exibir uma exceção.  
   
  EXCEPTION_MANAGED_DEBUG_ASSISTANT  
- Indica que o depurador de código gerenciado deve lidar com exceções. Se não for definido, o depurador padrão manipula as exceções. Isso é passado para o [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) método e não usado no [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) estrutura.  
+ Indica que o depurador de código gerenciado deve lidar com exceções. Se não for definido, o depurador padrão manipula as exceções. Isso é passado para o [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) método e não usado na [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) estrutura.  
   
  EXCEPTION_STOP_FIRST_CHANCE_USE_PARENT  
  OBSOLETO, NÃO USE.  
@@ -122,7 +123,7 @@ public enum enum_EXCEPTION_STATE {
  OBSOLETO, NÃO USE.  
   
 ## <a name="remarks"></a>Comentários  
- Usado como o `dwState` membro o [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) estrutura para indicar o estado de exceção e que pode ser feito sobre ele.  
+ Usado como o `dwState` membro a [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) estrutura para indicar o estado da exceção e o que pode ser feito sobre isso.  
   
  Esses valores também são passados para o [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) método para definir o estado de todas as exceções.  
   

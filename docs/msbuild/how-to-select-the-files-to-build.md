@@ -14,16 +14,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 651570ef83f5f87d96ed27538cc4f6ffd569d41f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8ef956b94ca263dac5ce57c7b122576060bb7a05
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820662"
 ---
 # <a name="how-to-select-the-files-to-build"></a>Como selecionar os arquivos a serem compilados
 Quando você compila um projeto que contém vários arquivos, é possível listar cada arquivo separadamente no arquivo de projeto ou usar caracteres curinga para incluir todos os arquivos em um diretório ou um conjunto aninhado de diretórios.  
   
-## <a name="specifying-inputs"></a>Especificando as entradas  
+## <a name="specify-inputs"></a>Especificar entradas  
  Os itens representam as entradas para um build. Para obter mais informações sobre os itens, consulte [Itens](../msbuild/msbuild-items.md).  
   
  Para incluir arquivos para um build, eles devem ser incluídos em uma lista de itens no arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Vários arquivos podem ser adicionados a listas de itens incluindo os arquivos individualmente ou usando caracteres curinga para incluir vários arquivos ao mesmo tempo.  
@@ -34,7 +35,7 @@ Quando você compila um projeto que contém vários arquivos, é possível lista
   
      `<CSFile Include="form1.cs"/>`  
   
-     - ou –  
+     ou 
   
      `<VBFile Include="form1.vb"/>`  
   
@@ -47,44 +48,44 @@ Quando você compila um projeto que contém vários arquivos, é possível lista
   
      `<CSFile Include="form1.cs;form2.cs"/>`  
   
-     - ou –  
+     ou 
   
      `<VBFile Include="form1.vb;form2.vb"/>`  
   
-## <a name="specifying-inputs-with-wildcards"></a>Especificando entradas com caracteres curinga  
+## <a name="specify-inputs-with-wildcards"></a>Especificar entradas com curingas  
  Você também pode usar caracteres curinga para incluir recursivamente todos os arquivos ou apenas arquivos específicos de subdiretórios como entradas para um build. Para obter mais informações sobre caracteres curinga, consulte [Itens](../msbuild/msbuild-items.md)  
   
- Os exemplos a seguir baseiam-se em um projeto que contém os arquivos de elementos gráficos nos seguintes diretórios e subdiretórios, com o arquivo de projeto localizado no diretório do Projeto:  
+ Os seguintes exemplos baseiam-se em um projeto que contém arquivos de elementos gráficos nos seguintes diretórios e subdiretórios, com o arquivo de projeto localizado no diretório *Project*:  
   
- Project\Images\BestJpgs  
+ *Project\Images\BestJpgs*  
   
- Project\Images\ImgJpgs  
+ *Project\Images\ImgJpgs*  
   
- Project\Images\ImgJpgs\Img1  
+ *Project\Images\ImgJpgs\Img1*  
   
-#### <a name="to-include-all-jpg-files-in-the-images-directory-and-subdirectories"></a>Para incluir todos os arquivos. jpg no diretório Imagens e subdiretórios  
+#### <a name="to-include-all-jpg-files-in-the-images-directory-and-subdirectories"></a>Para incluir todos os arquivos *.jpg* no diretório *Images* e nos subdiretórios  
   
 -   Use o seguinte atributo `Include`:  
   
      `Include="Images\**\*.jpg"`  
   
-#### <a name="to-include-all-jpg-files-starting-with-img"></a>Para incluir todos os arquivos. jpg, começando com "img"  
+#### <a name="to-include-all-jpg-files-starting-with-img"></a>Para incluir todos os arquivos *.jpg* que começam com *img*  
   
 -   Use o seguinte atributo `Include`:  
   
      `Include="Images\**\img*.jpg"`  
   
-#### <a name="to-include-all-files-in-directories-with-names-ending-in-jpgs"></a>Para incluir todos os arquivos em diretórios com nomes que terminam em "jpgs"  
+#### <a name="to-include-all-files-in-directories-with-names-ending-in-jpgs"></a>Para incluir todos os arquivos em diretórios com nomes que terminam com *jpgs*  
   
 -   Use um dos seguintes atributos `Include`:  
   
      `Include="Images\**\*jpgs\*.*"`  
   
-     - ou –  
+     ou
   
      `Include="Images\**\*jpgs\*"`  
   
-## <a name="passing-items-to-a-task"></a>Passando itens para uma tarefa  
+## <a name="pass-items-to-a-task"></a>Passar itens para uma tarefa  
  Em um arquivo de projeto, você pode usar a notação @() em tarefas para especificar uma lista completa de itens como a entrada para um build. Você pode usar essa notação se listar todos os arquivos separadamente ou usar caracteres curinga.  
   
 #### <a name="to-use-all-visual-c-or-visual-basic-files-as-inputs"></a>Para usar todos os arquivos do Visual c# ou Visual Basic como entradas  
@@ -93,13 +94,13 @@ Quando você compila um projeto que contém vários arquivos, é possível lista
   
      `<CSC Sources="@(CSFile)">...</CSC>`  
   
-     - ou –  
+     ou 
   
      `<VBC Sources="@(VBFile)">...</VBC>`  
   
 > [!NOTE]
->  Você deve usar caracteres curinga com itens para especificar as entradas para um build; não é possível especificar as entradas usando o atributo `Sources` em tarefas de [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] como [Csc](../msbuild/csc-task.md) ou [Vbc](../msbuild/vbc-task.md). O exemplo a seguir não é válido em um arquivo de projeto:  
->   
+>  Use curingas com itens para especificar as entradas para um build; não é possível especificar as entradas usando o atributo `Sources` em tarefas do [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] como [Csc](../msbuild/csc-task.md) ou [Vbc](../msbuild/vbc-task.md). O exemplo a seguir não é válido em um arquivo de projeto:  
+> 
 >  `<CSC Sources="*.cs">...</CSC>`  
   
 ## <a name="example"></a>Exemplo  
@@ -137,7 +138,7 @@ Quando você compila um projeto que contém vários arquivos, é possível lista
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir usa um caractere curinga para incluir todos os arquivos .cs.  
+ O exemplo de código a seguir usa um curinga para incluir todos os arquivos *.cs*.  
   
 ```xml  
 <Project DefaultTargets="Compile"  

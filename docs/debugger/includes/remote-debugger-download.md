@@ -1,42 +1,35 @@
 ---
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.openlocfilehash: 273f67b997da80b27c124d3119ec0871f0a061b8
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+title: Download do depurador remoto
+description: Links de download para o depurador remoto
+services: ''
+author: mikejo5000
+ms.service: ''
+ms.topic: include
+ms.date: 05/23/2018
+ms.author: mikejo
+ms.custom: include file
+ms.openlocfilehash: 6c429614a094ceefc4f9a1e358ebc8ee26c40773
+ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50915096"
 ---
-1.  No dispositivo ou servidor máquina que você deseja depurar (em vez do computador executando o Visual Studio), obtenha a versão correta das ferramentas remotas.
+No dispositivo remoto ou servidor que você deseja depurar na, em vez de computador do Visual Studio, baixe e instale a versão correta das ferramentas remotas nos links na tabela a seguir.
 
-    |Versão|Link|Observações|
-    |-|-|-|
-    |Visual Studio 2017 (versão mais recente)|[Ferramentas remotas](https://www.visualstudio.com/downloads/?q=remote+tools#remote-tools-for-visual-studio-2017)|Sempre Baixe a versão correspondente de seu sistema operacional do dispositivo (x86 ou x64). Se o modo de segurança aprimorada estiver ativado (Windows Server), você deve adicionar novos sites confiáveis se solicitado.|
-    |Visual Studio de 2017 (antiga)|[Ferramentas remotas](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202017)|Ferramentas remotas para versões anteriores do Visual Studio de 2017 estão disponíveis no My.VisualStudio.com. Se solicitado, associação a grupo livre de Fundamentos de desenvolvimento do Visual Studio, ou entre com sua assinatura do Visual Studio ID. Se o modo de segurança aprimorada estiver ativado (Windows Server), você deve adicionar novos sites confiáveis se solicitado.|
-    |Visual Studio 2015 Atualização 3|[Ferramentas remotas](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|Se solicitado, associação a grupo livre de Fundamentos de desenvolvimento do Visual Studio, ou entre com sua assinatura do Visual Studio ID. Se o modo de segurança aprimorada estiver ativado (Windows Server), você deve adicionar novos sites confiáveis se solicitado.|
-    |Visual Studio 2015 (older)|[Ferramentas remotas](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|Se solicitado, associação a grupo livre de Fundamentos de desenvolvimento do Visual Studio, ou entre com sua assinatura do Visual Studio ID. Se o modo de segurança aprimorada estiver ativado (Windows Server), você deve adicionar novos sites confiáveis se solicitado.|
-    |Visual Studio 2013|[Ferramentas remotas](https://msdn.microsoft.com/library/bt727f1t(v=vs.120).aspx#BKMK_Installing_the_Remote_Tools)|Baixar página na documentação do Visual Studio 2013|
-    |Visual Studio 2012|[Ferramentas remotas](https://msdn.microsoft.com/library/bt727f1t(v=vs.110).aspx#BKMK_Installing_the_Remote_Tools)|Baixar página na documentação do Visual Studio 2012|
-  
-2.  Na página de download, escolha a versão das ferramentas que corresponde ao seu sistema operacional (x 86, x64 ou ARM) e baixar as ferramentas remotas.
-  
-    > [!IMPORTANT]
-    >  Recomendamos que você instale a versão mais recente das ferramentas remotas que corresponde à sua versão do Visual Studio. Versões não correspondentes não são recomendadas. Além disso, você deve instalar as ferramentas remotas que têm a mesma arquitetura do sistema operacional no qual você deseja instalá-lo. Em outras palavras, se você quiser depurar um aplicativo de 32 bits em um computador remoto executando um sistema operacional de 64 bits, você deve instalar a versão de 64 bits das ferramentas remotas no computador remoto. 
-    >   
-    >  Superfície 3 alternado do ARM para x64 arquitetura. Uma versão ARM das ferramentas remotas não está disponível para o Visual Studio de 2017. Para Visual Studio 2015, localize a versão do ARM no download RTW de 2015 do Visual Studio.
-  
-3.  Quando você terminar de baixar o arquivo executável, vá para a próxima seção e siga as instruções de instalação.
+- Baixe as mais recentes ferramentas remotas para a sua versão do Visual Studio. A versão mais recente de ferramentas remoto é compatível com versões anteriores do Visual Studio, mas as versões anteriores de ferramentas remotas não são compatíveis com versões posteriores do Visual Studio. 
+- Baixe as ferramentas remotas com a mesma arquitetura que a máquina que você estiver instalando-os em. Por exemplo, se você quiser depurar um aplicativo de 32 bits em um computador remoto executando um sistema operacional de 64 bits, instale as ferramentas remotas de 64 bits. 
 
-Se você tentar copiar o depurador remoto (msvsmon.exe) para o computador remoto e executá-lo, esteja ciente de que o **Assistente de configuração do depurador remoto** (**rdbgwiz.exe**) é instalado apenas quando você baixar o ferramentas. Talvez seja necessário usar o Assistente para configuração mais tarde, especialmente se você deseja que o depurador remoto para ser executado como um serviço. Para obter mais informações, consulte [(opcional) configurar o depurador remoto como um serviço](../../debugger/remote-debugging.md#bkmk_configureService).
+|Versão|Vincular|Observações|
+|-|-|-|
+|Visual Studio 2017 (versão mais recente)|[Ferramentas remotas](https://visualstudio.microsoft.com/downloads/?q=remote+tools#remote-tools-for-visual-studio-2017)|É compatível com todas as versões do Visual Studio 2017. Baixe a versão correspondente do seu sistema operacional do dispositivo (x x86, x64 ou ARM64). No Windows Server, consulte [desbloquear o download do arquivo](../../debugger/remote-debugging-unblock-file-download.md) para obter ajuda a baixar as ferramentas remotas.|
+|Visual Studio 2015|[Ferramentas remotas](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|Ferramentas remotas para Visual Studio 2015 estão disponíveis no My.VisualStudio.com. Se solicitado, Junte-se a versão gratuita [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/) programa, ou entre com sua ID de assinatura do Visual Studio. No Windows Server, consulte [desbloquear o download do arquivo](../../debugger/remote-debugging-unblock-file-download.md) para obter ajuda a baixar as ferramentas remotas.|
+|Visual Studio 2013|[Ferramentas remotas](/previous-versions/visualstudio/visual-studio-2013/bt727f1t(v=vs.120)#Installing_the_Remote_Tools)|Baixar a página na documentação do Visual Studio 2013|
+|Visual Studio 2012|[Ferramentas remotas](/previous-versions/visualstudio/visual-studio-2012/bt727f1t(v=vs.110)#BKMK_Installing_the_Remote_Tools)|Baixar a página na documentação do Visual Studio 2012|
+
+Você pode executar o depurador remoto copiando *msvsmon.exe* para o computador remoto, em vez de instalar as ferramentas remotas. No entanto, o Assistente de configuração do depurador remoto (*rdbgwiz.exe*) está disponível apenas quando você instala as ferramentas remotas. Talvez você precise usar o Assistente para configuração, se você quiser executar o depurador remoto como um serviço. Para obter mais informações, consulte [(opcional) configurar o depurador remoto como um serviço](../../debugger/remote-debugging.md#bkmk_configureService).
+
+>[!NOTE]
+>- Para depurar aplicativos do Windows 10 em dispositivos ARM, use ARM64, que está disponível com a versão mais recente das ferramentas remotas.  
+>- Para depurar aplicativos do Windows 10 em dispositivos Windows RT, use o ARM, que está disponível apenas no Visual Studio 2015 download das ferramentas remotas.
+

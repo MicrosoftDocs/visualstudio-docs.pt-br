@@ -16,11 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ca76a0e66073d0102adb97d8cc4ca35087399297
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 582cf1b5faf0cc62d85e17544aa03c4ede4ab0a8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852837"
 ---
 # <a name="error-web-site-worker-process-has-been-terminated-by-iis"></a>Erro: o processo de trabalho do site foi encerrado pelo IIS
 O depurador interrompeu a execução de código no site. Isso fez o IIS (Serviços de Informações da Internet) supor que o processo de trabalho parou de responder. Consequentemente, o IIS terminou o processo de trabalho.  
@@ -29,33 +30,33 @@ O depurador interrompeu a execução de código no site. Isso fez o IIS (Serviç
   
 ### <a name="to-configure-iis-7-to-allow-the-worker-process-to-continue"></a>Para configurar o IIS 7 para permitir que o processo de trabalho continue  
   
-1.  Abra o **ferramentas administrativas** janela.  
+1. Abra o **ferramentas administrativas** janela.  
   
-    1.  Clique em **iniciar**e, em seguida, escolha **painel de controle**.  
+   1.  Clique em **inicie**e, em seguida, escolha **painel de controle**.  
   
-    2.  Em **painel de controle**, escolha **alternar para modo de exibição clássico**, se necessário e, em seguida, clique duas vezes em **ferramentas administrativas**.  
+   2.  Na **painel de controle**, escolha **alterne para modo de exibição clássico**, se necessário e, em seguida, clique duas vezes em **ferramentas administrativas**.  
   
-2.  No **ferramentas administrativas** janela, clique duas vezes em **serviços de informações da Internet (IIS) Manager**.  
+2. No **ferramentas administrativas** janela, clique duas vezes em **serviços de informações da Internet (IIS) Manager**.  
   
-     O Gerenciador do IIS é aberto.  
+    O Gerenciador do IIS é aberto.  
   
-3.  No **conexões** painel, expanda o \<nome do computador > nó se necessário.  
+3. No **conexões** painel, expanda o \<nome do computador > nó se necessário.  
   
-4.  Sob o \<nome do computador > nó, clique em **Pools de aplicativos**.  
+4. Sob o \<nome do computador > nó, clique em **Pools de aplicativos**.  
   
-5.  No **Pools de aplicativos** lista, clique no nome do seu aplicativo é executado no pool e, em seguida, clique em **configurações avançadas**.  
+5. No **Pools de aplicativos** lista, clique no nome do seu aplicativo é executado no pool e, em seguida, clique em **configurações avançadas**.  
   
-6.  No **configurações avançadas** caixa de diálogo caixa, localize o **modelo de processo** seção e execute uma das seguintes ações:  
+6. No **configurações avançadas** diálogo caixa, localize a **modelo de processo** seção e execute uma das seguintes ações:  
   
-    -   Definir **Ping habilitado** para **False**.  
+   - Definir **Ping habilitado** à **falso**.  
   
-    -   Definir **tempo máximo de resposta de Ping** para um valor maior que 90 segundos.  
+   - Definir **tempo de resposta máximo de Ping** para um valor maior que 90 segundos.  
   
-     Configuração **Ping habilitado** para **False** impede que o IIS verificando se o processo de trabalho ainda está em execução e mantém o processo de trabalho ativo até que você interrompa o processo depurado. Configuração **tempo máximo de resposta de Ping** com um valor grande permite que o IIS continuar a monitorar o processo de trabalho.  
+     Definindo **Ping habilitado** à **falso** impede que o IIS verificando se o processo de trabalho ainda está em execução e mantém o processo de trabalho ativo até que você interrompa o processo depurado. Definindo **tempo de resposta máximo de Ping** com um valor grande permite que o IIS continue monitorando o processo de trabalho.  
   
-7.  Clique em **Okey** para fechar o **configurações avançadas** caixa de diálogo.  
+7. Clique em **Okey** para fechar o **configurações avançadas** caixa de diálogo.  
   
-8.  Feche o Gerenciador do IIS e o **ferramentas administrativas** janela.  
+8. Feche o Gerenciador do IIS e o **ferramentas administrativas** janela.  
   
 ## <a name="see-also"></a>Consulte também  
  [Erros e solução de problemas de depuração remota](../debugger/remote-debugging-errors-and-troubleshooting.md)

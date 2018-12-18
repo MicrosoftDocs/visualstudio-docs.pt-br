@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bf40d5714810fd4beba9d5d75ffbffbf1895883
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6c8772bd6426632093bb23cc3094fe42ad433a8d
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257807"
 ---
-# <a name="process-view---contention-data"></a>Exibição de processo – dados de contenção
+# <a name="process-view---contention-data"></a>Exibição Processo – dados de contenção
 A exibição Processo exibe dados de contenção para os processos e threads que foram executados durante o processo de criação de perfil.  
   
  Se os símbolos estiverem disponíveis, os processos serão listados por nome. Se os símbolos não estiverem disponíveis, os processos serão listados por seu endereço de memória em formato hexadecimal. Threads são listados como filhos do processo que os criou.  
@@ -40,5 +41,5 @@ A exibição Processo exibe dados de contenção para os processos e threads que
 |**ID exclusiva**|Um identificador gerado pelo criador de perfil que é exclusivo ao processo ou thread.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Como personalizar as colunas de exibição do relatório](../profiling/how-to-customize-report-view-columns.md)   
+ [Como personalizar as colunas de exibição de relatório](../profiling/how-to-customize-report-view-columns.md)   
  [Exibição de Processo](../profiling/process-view.md)

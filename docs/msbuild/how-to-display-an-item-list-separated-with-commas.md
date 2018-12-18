@@ -13,21 +13,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a79e8c0f21a63bd5b64af69c2bf9778c07822d83
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f1507a297c1baf7f410bde1c6d32e48b43a9cdc2
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880221"
 ---
-# <a name="how-to-display-an-item-list-separated-with-commas"></a>Como exibir uma lista de itens separada por vírgulas
+# <a name="how-to-display-an-item-list-separated-with-commas"></a>Como exibir uma lista de itens separados por vírgulas
 Quando você trabalha com listas de itens no [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]), às vezes, é útil exibir o conteúdo dessas listas de itens de uma maneira que seja fácil de ler. Ou, você pode ter uma tarefa que utiliza uma lista de itens separados por uma cadeia de caracteres do separador especial. Em ambos os casos, você pode especificar uma cadeia de caracteres do separador para uma lista de itens.  
   
-## <a name="separating-items-in-a-list-with-commas"></a>Separando itens em uma lista com vírgulas  
+## <a name="separate-items-in-a-list-with-commas"></a>Separar itens em uma lista com vírgulas  
  Por padrão, o [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] usa o ponto e vírgula para separar itens em uma lista. Por exemplo, considere um elemento `Message` com o seguinte valor:  
   
  `<Message Text="This is my list of TXT files: @(TXTFile)"/>`  
   
- Quando a lista de itens de `@(TXTFile)` contém os itens App1.txt, App2.txt e App3.txt, a mensagem é:  
+ Quando a lista de itens `@(TXTFile)` contém os itens *App1.txt*, *App2.txt* e *App3.txt*, a mensagem é:  
   
  `This is my list of TXT files: App1.txt;App2.txt;App3.txt`  
   
@@ -44,7 +45,7 @@ Quando você trabalha com listas de itens no [!INCLUDE[vstecmsbuildengine](../ms
      `@(TXTFile, ', ')`  
   
 ## <a name="example"></a>Exemplo  
- Neste exemplo, a tarefa [Exec](../msbuild/exec-task.md) executa a ferramenta findstr para localizar as cadeias de caracteres de texto especificadas no arquivo, Phrases.txt. No comando findstr, cadeias de caracteres de pesquisa literais são indicadas pela opção **/c:**, portanto, o separador de item, `/c:` é inserido entre os itens na lista de itens de `@(Phrase)`.  
+ Neste exemplo, a tarefa [Exec](../msbuild/exec-task.md) executa a ferramenta findstr para localizar as cadeias de caracteres de texto especificadas no arquivo *Phrases.txt*. No comando findstr, as cadeias de caracteres de pesquisas literais são indicadas pela opção **-c:**, portanto, o separador de item, `-c:` é inserido entre os itens na lista de itens de `@(Phrase)`.  
   
  Neste exemplo, a linha de comando equivalente é:  
   

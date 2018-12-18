@@ -18,13 +18,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 35c746ea76358b631cac65846b95fc355e6cc17f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fd47bc4a481a8a7e0ce15395770e7cc8bc67bbab
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152939"
 ---
-# <a name="taskextension-base-class"></a>Classe TaskExtension (base)
+# <a name="taskextension-base-class"></a>Classe base TaskExtension
 Muitas tarefas são herdadas da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que é herdada da classe <xref:Microsoft.Build.Utilities.Task>. Esta cadeia de herança adiciona vários parâmetros nas tarefas que derivam deles. Esses parâmetros são listados neste documento.  
   
 ## <a name="parameters"></a>Parâmetros  

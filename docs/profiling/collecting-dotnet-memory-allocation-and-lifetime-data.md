@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 91013c0f9a6f213b70710d29d9102efc04db2821
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2484072a0f85b002ff2e59512f44ca0826540fd3
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43775200"
 ---
-# <a name="collecting-net-memory-allocation-and-lifetime-data"></a>Coletando a alocação de memória do .NET e os dados de vida útil
+# <a name="collect-net-memory-allocation-and-lifetime-data"></a>Coletar dados de tempo de vida e de alocação de memória do .NET
 
 As Ferramentas de Criação de Perfil do Visual Studio dão suporte à coleta de alocação de memória e dados de tempo de vida do objeto do .NET, que ajuda a detectar problemas de desempenho relacionados à memória em seu aplicativo.
 
@@ -52,18 +53,18 @@ Para obter informações sobre como coletar dados de memória do .NET usando as 
 
 ## <a name="common-tasks"></a>Tarefas comuns
 
-É possível especificar outras opções na caixa de diálogo *Sessão de Desempenho***Páginas de Propriedades** da sessão de desempenho. Para abrir essa caixa de diálogo:
+É possível especificar outras opções na caixa de diálogo _Sessão de Desempenho_**Páginas de Propriedades** da sessão de desempenho. Para abrir essa caixa de diálogo:
 
 - No **Gerenciador de Desempenho**, clique com o botão direito do mouse no nome da sessão de desempenho e clique em **Propriedades**.
 
-As tarefas na tabela a seguir descrevem opções que podem ser especificadas na caixa de diálogo *Sessão de Desempenho***Páginas de Propriedades* quando você coleta dados de memória do .NET.
+As tarefas na tabela a seguir descrevem opções que podem ser especificadas na caixa de diálogo _Sessão de Desempenho_**Páginas de Propriedades** quando você coleta dados de memória do .NET.
 
 |Tarefa|Conteúdo relacionado|
 |----------|---------------------|
-|Na página **Geral**, especifique detalhes de nomenclatura para o arquivo de dados de criação de perfil gerado (.vsp).|- [Coletando a alocação de memória do .NET e os dados de tempo de vida](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />- [Como definir opções de nome de arquivo de dados de desempenho](../profiling/how-to-set-performance-data-file-name-options.md)|
-|Na página **Iniciar**, especifique o aplicativo a ser iniciado se você tiver vários projetos .exe na solução do seu código.|- [Coletando dados de interação entre camadas](../profiling/collecting-tier-interaction-data.md)|
-|Na página **Interação de Camada**, adicione dados de chamada ADO.NET à execução de criação de perfil.|- [Coletando dados de interação entre camadas](../profiling/collecting-tier-interaction-data.md)|
-|Na página **Eventos do Windows**, especifique um ou mais eventos ETW (Rastreamento de Eventos para Windows) para coletar com os dados de amostragem.|- [Como coletar dados ETW (Rastreamento de Eventos para Windows)](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)|
+|Na página **Geral**, especifique detalhes de nomenclatura para o arquivo de dados de criação de perfil gerado (.vsp).|- [Coletar a alocação de memória do .NET e os dados de tempo de vida](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />- [Como definir opções do nome do arquivo de dados de desempenho](../profiling/how-to-set-performance-data-file-name-options.md)|
+|Na página **Iniciar**, especifique o aplicativo a ser iniciado se você tiver vários projetos .exe na solução do seu código.|- [Coletar dados de interação entre camadas](../profiling/collecting-tier-interaction-data.md)|
+|Na página **Interação de Camada**, adicione dados de chamada ADO.NET à execução de criação de perfil.|- [Coletar dados de interação entre camadas](../profiling/collecting-tier-interaction-data.md)|
+|Na página **Eventos do Windows**, especifique um ou mais eventos ETW (Rastreamento de Eventos para Windows) para coletar com os dados de amostragem.|- [Como coletar dados de ETW (Rastreamento de Eventos para Windows)](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)|
 |Na página **Contadores do Windows**, especifique um ou mais contadores de desempenho de sistema operacional para serem adicionados aos dados de criação de perfil como marcas.|- [Como coletar dados do contador do Windows](../profiling/how-to-collect-windows-counter-data.md)|
 |Na página **Avançado**, especifique a versão do tempo de execução do .NET Framework para o perfil se seus módulos de aplicativo usarem várias versões. Por padrão, a primeira versão carregada é analisada.|- [Como especificar o tempo de execução do .NET Framework](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|
 
@@ -74,12 +75,12 @@ As tarefas na tabela a seguir são opções na caixa de diálogo **Páginas de P
 |Tarefa|Conteúdo relacionado|
 |----------|---------------------|
 |Na página **Binários**, especifique um local para as cópias instrumentadas dos módulos. Por padrão, os binários originais são movidos para uma pasta de backup.|- [Como realocar binários instrumentados](../profiling/how-to-relocate-instrumented-binaries.md)|
-|Na página **Instrumentação**, exclua pequenas funções de criação de perfil para reduzir a sobrecarga da criação de perfil, criar perfil de código JavaScript em páginas Web ASP.NET e especificar comandos para serem executados em um prompt de comando antes e depois do processo de instrumentação.|- [Como excluir ou incluir funções curtas por meio da instrumentação](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)<br />- [Como analisar código JavaScript em páginas da Web](../profiling/how-to-profile-javascript-code-in-web-pages.md)<br />- [Como especificar comandos pré e pós-instrumento](../profiling/how-to-specify-pre-and-post-instrument-commands.md)|
+|Na página **Instrumentação**, exclua pequenas funções de criação de perfil para reduzir a sobrecarga da criação de perfil, criar perfil de código JavaScript em páginas Web ASP.NET e especificar comandos para serem executados em um prompt de comando antes e depois do processo de instrumentação.|- [Como excluir ou incluir funções curtas da instrumentação](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)<br />- [Como analisar código JavaScript em páginas da Web](../profiling/how-to-profile-javascript-code-in-web-pages.md)<br />- [Como especificar comandos pré e pós-instrumento](../profiling/how-to-specify-pre-and-post-instrument-commands.md)|
 |Na página **Contadores de CPU**, especifique um ou mais contadores de desempenho de processador para serem adicionados aos dados de criação de perfil.|- [Como coletar dados do contador de CPU](../profiling/how-to-collect-cpu-counter-data.md)|
 |Na página **Avançado**, especifique outras opções VSInstr.exe que você desejar, como opções para incluir ou excluir funções específicas. Para obter mais informações sobre opções VSInstr, consulte [VSInstr](../profiling/vsinstr.md)|- [Como especificar opções de instrumentação adicionais](../profiling/how-to-specify-additional-instrumentation-options.md)<br />- [Como limitar a instrumentação a funções específicas](../profiling/how-to-limit-instrumentation-to-specific-functions.md)|
 
 ## <a name="see-also"></a>Consulte também
 
-[Configurando sessões de desempenho](../profiling/configuring-performance-sessions.md)  
+[Configurar sessões de desempenho](../profiling/configuring-performance-sessions.md)  
 [Como escolher métodos de coleta](../profiling/how-to-choose-collection-methods.md)  
 [Propriedades da sessão de desempenho](../profiling/performance-session-properties.md)

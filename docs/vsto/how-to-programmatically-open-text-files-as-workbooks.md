@@ -1,5 +1,5 @@
 ---
-title: 'Como: abrir programaticamente os arquivos de texto como pastas de trabalho | Microsoft Docs'
+title: 'Como: abrir arquivos de texto como pastas de trabalho de forma programática'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,14 +17,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: cafe64ce693972bd9c254a6bdfc1dcbf70f004c9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b7bc7caa5dbceb727394b8543b7659cc43e64a36
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257641"
 ---
-# <a name="how-to-programmatically-open-text-files-as-workbooks"></a>Como abrir arquivos de texto como pastas de trabalho programaticamente
-  Você pode abrir um arquivo de texto como uma pasta de trabalho. Você deve passar o nome do arquivo de texto que você deseja abrir. Você pode especificar vários parâmetros opcionais, como o número da linha para iniciar analisar e o formato de coluna de dados no arquivo.  
+# <a name="how-to-programmatically-open-text-files-as-workbooks"></a>Como: abrir arquivos de texto como pastas de trabalho de forma programática
+  Você pode abrir um arquivo de texto como uma pasta de trabalho. Você deve passar no nome do arquivo de texto que você deseja abrir. Você pode especificar vários parâmetros opcionais, como qual número de linha de análise em início e o formato de coluna dos dados no arquivo.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/16/2018
  [!code-csharp[Trin_VstcoreExcelAutomation#80](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#80)]
  [!code-vb[Trin_VstcoreExcelAutomation#80](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#80)]  
   
-## <a name="compiling-the-code"></a>Compilando o código  
+## <a name="compile-the-code"></a>Compilar o código  
  Este exemplo requer os seguintes componentes:  
   
 -   Um arquivo de texto delimitado por vírgula chamado `Test.txt` que contém pelo menos três linhas de texto.  
@@ -40,11 +41,11 @@ ms.lasthandoff: 04/16/2018
 -   O arquivo de texto `Test.txt` a ser armazenado na unidade C.  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhando com pastas de trabalho](../vsto/working-with-workbooks.md)   
- [Como: programaticamente abrir pastas de trabalho](../vsto/how-to-programmatically-open-workbooks.md)   
+ [Trabalhar com pastas de trabalho](../vsto/working-with-workbooks.md)   
+ [Como: abrir pastas de trabalho de forma programática](../vsto/how-to-programmatically-open-workbooks.md)   
  [Como: criar programaticamente novas pastas de trabalho](../vsto/how-to-programmatically-create-new-workbooks.md)   
- [Como: programaticamente salvar pastas de trabalho](../vsto/how-to-programmatically-save-workbooks.md)   
- [Como: programaticamente fechar pastas de trabalho](../vsto/how-to-programmatically-close-workbooks.md)   
+ [Como: salvar pastas de trabalho de forma programática](../vsto/how-to-programmatically-save-workbooks.md)   
+ [Como: Fechar pastas de trabalho de forma programática](../vsto/how-to-programmatically-close-workbooks.md)   
  [Parâmetros opcionais em soluções do Office](../vsto/optional-parameters-in-office-solutions.md)  
   
   

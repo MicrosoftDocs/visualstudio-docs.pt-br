@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31143879"
 ---
 # <a name="strings-element"></a>Elemento de cadeias de caracteres
 O elemento de cadeias de caracteres deve conter pelo menos um **ButtonText** elemento filho. Todos os outros elementos filho são opcionais. Caracteres de XML inválido como '&' e ' <' devem ser codificados como entidades ('&amp;'e'&lt;' e assim por diante).  

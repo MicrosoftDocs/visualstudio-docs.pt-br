@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5350484294d02356301839e38b97bea1d40ec27c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f9593496f36fba4a56334a206cf39e9a6ad96ad2
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639783"
 ---
 # <a name="sccbeginbatch-function"></a>Função SccBeginBatch
-Essa função inicia uma sequência de lote de operações de controle de origem. O [SccEndBatch](../extensibility/sccendbatch-function.md) será chamada para finalizar o lote. Esses lotes não podem ser aninhados.  
+Essa função inicia uma sequência de lote de operações de controle do código-fonte. O [SccEndBatch](../extensibility/sccendbatch-function.md) será chamado para finalizar o lote. Esses lotes não podem ser aninhados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -30,22 +31,22 @@ Essa função inicia uma sequência de lote de operações de controle de origem
 SCCRTN SccBeginBatch(void);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  nenhuma.  
   
-## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+## <a name="return-value"></a>Valor retornado  
+ A implementação de plug-in de controle do código-fonte desta função deve retornar um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|SCC_OK|Lote de operações foi iniciado com êxito.|  
+|SCC_OK|Lote de operações começou com êxito.|  
 |SCC_E_UNKNOWNERROR|Falha não específica.|  
   
 ## <a name="remarks"></a>Comentários  
- Lotes de controle do código-fonte são usados para executar as mesmas operações em vários projetos ou em vários contextos. Lotes podem ser usados para eliminar as caixas de diálogo de projeto de redundância da experiência do usuário durante uma operação em lote. O `SccBeginBatch` função e o [SccEndBatch](../extensibility/sccendbatch-function.md) são usados como um par de função para indicar o início e término de uma operação. Eles não podem ser aninhados. `SccBeginBatch` define um sinalizador que indica que uma operação em lote está em andamento.  
+ Lotes de controle do código-fonte são usados para executar as mesmas operações em vários projetos ou vários contextos. Lotes podem ser usados para eliminar as caixas de diálogo do projeto de redundantes a experiência do usuário durante uma operação em lote. O `SccBeginBatch` função e o [SccEndBatch](../extensibility/sccendbatch-function.md) são usados como um par de função para indicar o início e no final de uma operação. Eles não podem ser aninhados. `SccBeginBatch` define um sinalizador que indica que uma operação em lote está em andamento.  
   
- Enquanto uma operação em lote estiver em vigor, o plug-in de controle de origem deve apresentar uma caixa de diálogo para qualquer questão de no máximo para o usuário e aplicar a resposta da caixa de diálogo em todas as operações subsequentes.  
+ Enquanto uma operação em lote estiver em vigor, o plug-in de controle do código-fonte deve apresentar no máximo uma caixa de diálogo para qualquer pergunta ao usuário e aplicar a resposta nessa caixa de diálogo em todas as operações subsequentes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)   
+ [Funções de API de plug-in da controle de origem](../extensibility/source-control-plug-in-api-functions.md)   
  [SccEndBatch](../extensibility/sccendbatch-function.md)

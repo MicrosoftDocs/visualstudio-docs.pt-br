@@ -1,6 +1,6 @@
 ---
-title: Como posso saber se meus ponteiros corrompem um endereço de memória? | Microsoft Docs
-ms.custom: ''
+title: Descobrir se Meus ponteiros corrompido um endereço de memória | Microsoft Docs
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -22,11 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8965ec268e5d236b9a33e5c3e8acfa35e51dcdb3
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 966a21bfbe5e6813bd4ea1cd6f11c682deea2d0f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062959"
 ---
 # <a name="how-can-i-find-out-if-my-pointers-corrupt-a-memory-address"></a>Como posso saber se meus ponteiros corrompem um endereço de memória?
 ## <a name="problem-description"></a>Descrição do problema  
@@ -36,14 +37,14 @@ ms.lasthandoff: 04/18/2018
   
 #### <a name="check-for-heap-corruption"></a>Verificação de danos do heap  
   
--   A maior parte das corrupções de memória acontece, na verdade, devido à corrupção da heap. Tente usar o utilitário global dos sinalizadores (gflags.exe) ou pageheap.exe. Consulte [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 286470](http://support.microsoft.com/default.aspx?scid=kb;en-us;286470).  
+-   A maior parte das corrupções de memória acontece, na verdade, devido à corrupção da heap. Tente usar o utilitário global dos sinalizadores (gflags.exe) ou pageheap.exe. Ver [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 286470](http://support.microsoft.com/default.aspx?scid=kb;en-us;286470).  
   
 #### <a name="to-find-where-the-memory-address-is-modified"></a>Para localizar onde o endereço de memória foi alterado  
   
-1.  Defina um ponto de interrupção de dados em 0x00408000. Consulte [definir um ponto de interrupção de alteração de dados (apenas C++ nativo)](../debugger/using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus_only).  
+1.  Defina um ponto de interrupção de dados em 0x00408000. Confira [Definir um ponto de interrupção de alteração de dados (somente C++ nativo)](../debugger/using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus_only).  
   
-2.  Quando você atinge o ponto de interrupção, use o **memória** começando em 0x00408000 de conteúdo da janela para visualizar a memória. Para obter mais informações, consulte [memória Windows](../debugger/memory-windows.md).  
+2.  Quando você atingir o ponto de interrupção, use a janela **Memória** para exibir o conteúdo da memória que começa em 0x00408000. Para obter mais informações, consulte [memória Windows](../debugger/memory-windows.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Perguntas frequentes de código nativo de depuração](../debugger/debugging-native-code-faqs.md)   
+ [Perguntas frequentes sobre depuração de código nativo](../debugger/debugging-native-code-faqs.md)   
  [Depurando código nativo](../debugger/debugging-native-code.md)

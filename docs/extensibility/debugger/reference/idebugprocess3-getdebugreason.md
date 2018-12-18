@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b1db0cfea540458e0c8b288430027df03fa4cf2e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 60b664680c806f5553e45854a6e678befac952fb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822222"
 ---
 # <a name="idebugprocess3getdebugreason"></a>IDebugProcess3::GetDebugReason
-Esse método retorna o motivo que o processo foi iniciado para depuração.  
+Esse método retorna o motivo pelo qual que o processo foi iniciado para depuração.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +44,7 @@ int GetDebugReason(
  [out] Retorna um valor da [DEBUG_REASON](../../../extensibility/debugger/reference/debug-reason.md) enumeração.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retornará o código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará o código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   

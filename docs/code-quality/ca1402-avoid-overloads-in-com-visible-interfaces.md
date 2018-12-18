@@ -1,6 +1,7 @@
 ---
 title: 'CA1402: evitar sobrecargas em interfaces visíveis COM'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,20 @@ ms.assetid: 2724c1f9-d5d3-4704-b124-21c4d398e5df
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 11c72fa5d64991931dc6c6d2d5506fd73a7cc59f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e4360ff6c6355827a77d165c9a4975ffa8bdc89a
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549005"
 ---
 # <a name="ca1402-avoid-overloads-in-com-visible-interfaces"></a>CA1402: evitar sobrecargas em interfaces visíveis COM
+
 |||
 |-|-|
 |NomeDoTipo|AvoidOverloadsInComVisibleInterfaces|
@@ -30,31 +36,31 @@ ms.lasthandoff: 04/19/2018
 |Alteração Significativa|Quebra|
 
 ## <a name="cause"></a>Causa
- Um modelo COM (Component Object) interface visível declarar métodos sobrecarregados.
+ Métodos sobrecarregados de um modelo COM (Component Object) declara interface visível.
 
-## <a name="rule-description"></a>Descrição da Regra
- Quando os métodos sobrecarregados são expostos a clientes COM, apenas a primeira sobrecarga do método mantém seu nome. Sobrecargas subsequentes são renomeadas exclusivamente por meio do acréscimo para o nome de um caractere de sublinhado '_' e um número inteiro que corresponde à ordem de declaração da sobrecarga. Por exemplo, considere os seguintes métodos.
+## <a name="rule-description"></a>Descrição da regra
+ Quando os métodos sobrecarregados são expostos a clientes COM, apenas a primeira sobrecarga do método mantém seu nome. As sobrecargas subsequentes são renomeadas com exclusividade acrescentando-se para o nome de um caractere de sublinhado '_' e um inteiro que corresponde a ordem de declaração da sobrecarga. Por exemplo, considere os seguintes métodos:
 
-```
+```csharp
 void SomeMethod(int valueOne);
 void SomeMethod(int valueOne, int valueTwo, int valueThree);
 void SomeMethod(int valueOne, int valueTwo);
 ```
 
- Esses métodos são expostos aos clientes COM o seguinte.
+Esses métodos são expostos aos clientes COM o seguinte.
 
-```
+```csharp
 void SomeMethod(int valueOne);
 void SomeMethod_2(int valueOne, int valueTwo, int valueThree);
 void SomeMethod_3(int valueOne, int valueTwo);
 ```
 
- Clientes COM do Visual Basic 6 não podem implementar métodos de interface usando um sublinhado no nome.
+Clientes Visual Basic 6 COM não podem implementar métodos de interface por meio de um sublinhado no nome.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, renomeie os métodos sobrecarregados para que os nomes sejam exclusivos. Como alternativa, fazer a interface invisível COM alterando a acessibilidade ao `internal` (`Friend` na [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) ou aplicando o <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> atributo definido como `false`.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, renomeie os métodos sobrecarregados para que os nomes sejam exclusivos. Como alternativa, faça a interface invisível COM alterando a acessibilidade aos `internal` (`Friend` na [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) ou aplicando o <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> atributo definido como `false`.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
  Não suprima um aviso nessa regra.
 
 ## <a name="example"></a>Exemplo
@@ -71,4 +77,6 @@ void SomeMethod_3(int valueOne, int valueTwo);
  [CA1017: marcar assemblies com ComVisibleAttribute](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
 ## <a name="see-also"></a>Consulte também
- [Interoperação com código não gerenciado](/dotnet/framework/interop/index) [tipo de dados Long](/dotnet/visual-basic/language-reference/data-types/long-data-type)
+
+- [Interoperação com código não gerenciado](/dotnet/framework/interop/index)
+- [Tipo de Dados Long](/dotnet/visual-basic/language-reference/data-types/long-data-type)

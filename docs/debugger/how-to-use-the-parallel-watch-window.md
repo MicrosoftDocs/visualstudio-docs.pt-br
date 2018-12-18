@@ -1,5 +1,5 @@
 ---
-title: Definir um observador variáveis em Threads paralelos | Microsoft Docs
+title: Definir uma inspeção nas variáveis em Threads paralelos | Microsoft Docs
 ms.custom: ''
 ms.date: 04/25/2017
 ms.technology: vs-ide-debug
@@ -19,27 +19,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a142b512c5bbaf5d93dc0302aa39db92fb7c7ae
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e9381479fdfa3d64f3504e947f49411b99d53e2d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49857946"
 ---
-# <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio"></a>Definir um observador variáveis em Threads paralelos no Visual Studio
-Na janela Inspeção Paralela, você pode exibir simultaneamente os valores que uma expressão mantém em vários threads. Cada linha representa um thread que está sendo executado em um aplicativo, mas um thread pode ser representado em várias linhas. Mais especificamente, cada linha representa uma chamada de função cuja assinatura de função corresponde à função no registro de ativação atual. Você pode classificar, reorganizar, remover e agrupar os itens que estão nas colunas. Você pode sinalizar, remover sinalização, congelar (suspender) e descongelar (retomar) threads. As seguintes colunas são exibidas no **inspeção paralela** janela:  
+# <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio"></a>Definir uma inspeção nas variáveis em Threads paralelos no Visual Studio
+Na janela Inspeção Paralela, você pode exibir simultaneamente os valores que uma expressão mantém em vários threads. Cada linha representa um thread que está sendo executado em um aplicativo, mas um thread pode ser representado em várias linhas. Mais especificamente, cada linha representa uma chamada de função cuja assinatura de função corresponde à função no registro de ativação atual. Você pode classificar, reorganizar, remover e agrupar os itens que estão nas colunas. Você pode sinalizar, remover sinalização, congelar (suspender) e descongelar (retomar) threads. As colunas a seguir são exibidas na **inspeção paralela** janela:  
   
--   A coluna do sinalizador, na qual você pode marcar um thread ao qual deseja prestar atenção especial.  
+- A coluna do sinalizador, na qual você pode marcar um thread ao qual deseja prestar atenção especial.  
   
--   A coluna de segmento atual, no qual uma seta amarela indica que o thread atual (uma seta verde com uma chave final indica que um thread atual não tem o contexto do depurador atual).  
+- A coluna atual do thread, no qual uma seta amarela indica que o thread atual (uma seta verde com uma parte final encaracolada indica que um thread não atual tem o contexto do depurador atual).  
   
--   Uma coluna configurável que pode exibir o computador, o processo, o bloco, a tarefa e o thread.  
+- Uma coluna configurável que pode exibir o computador, o processo, o bloco, a tarefa e o thread.  
   
-    > [!TIP]
-    >  A tarefa exibir informações de **inspeção paralela** , você deverá primeiro abrir o **tarefa** janela.  
+  > [!TIP]
+  >  Para informações sobre a exibição de tarefa na **inspeção paralela** , você deverá primeiro abrir o **tarefa** janela.  
   
--   O espaço em branco *Adicionar inspeção* colunas, na qual você pode inserir expressões para observar.  
+- O espaço em branco *Adicionar inspeção* colunas, na qual você pode inserir expressões para assistir.  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
 ### <a name="to-display-the-parallel-watch-window"></a>Para exibir a janela Inspeção Paralela  
   
@@ -47,19 +48,19 @@ Na janela Inspeção Paralela, você pode exibir simultaneamente os valores que 
   
 2.  Na barra de menus, escolha **Depurar**, **Iniciar Depuração**. Aguarde até que o aplicativo atinja o ponto de interrupção.  
   
-3.  Na barra de menus, escolha **depurar**, **Windows**, **inspeção paralela**e, em seguida, escolha uma janela de observação. Você pode abrir até quatro janelas.  
+3.  Na barra de menus, escolha **Debug**, **Windows**, **inspeção paralela**e, em seguida, escolha uma janela de observação. Você pode abrir até quatro janelas.  
   
 ### <a name="to-add-a-watch-expression"></a>Para adicionar uma expressão de inspeção  
   
--   Selecione uma da em branco *Adicionar inspeção* colunas e, em seguida, digite uma expressão de inspeção.  
+-   Selecione uma do espaço em branco *Adicionar inspeção* colunas e, em seguida, insira uma expressão de inspeção.  
   
 ### <a name="to-flag-or-unflag-a-thread"></a>Para sinalizar ou remover sinalização de um thread  
   
--   Selecione a coluna de sinalizador da linha (primeira coluna), ou abra o menu de atalho para o thread e escolha **sinalizador** ou **Unflag**.  
+-   Selecione a coluna do sinalizador da linha (primeira coluna), ou abra o menu de atalho para o thread e escolha **sinalizador** ou **Remover sinalização**.  
   
 ### <a name="to-display-only-flagged-threads"></a>Para exibir somente threads sinalizados  
   
--   Escolha o **Mostrar apenas sinalizados** botão no canto superior esquerdo do **inspeção paralela** janela.  
+-   Escolha o **Mostrar somente sinalizados** botão no canto superior esquerdo do **inspeção paralela** janela.  
   
 ### <a name="to-switch-to-another-thread"></a>Para alternar para outro thread  
   

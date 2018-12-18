@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4c0eaefee714467084898182b338ceda63ebdc0f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d32f8be53d88b8268fdbbc82e6d774bffe3d7c3a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898404"
 ---
 # <a name="idebugcanstopevent2getreason"></a>IDebugCanStopEvent2::GetReason
-Obtém o motivo por que deseja parar o mecanismo de depuração (DE).  
+Obtém o motivo por que deseja interromper o mecanismo de depuração (DES).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,12 +44,12 @@ int GetReason(
  [out] Retorna um valor da [CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md) enumeração que descreve o motivo para esse evento.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Normalmente, esse método é chamado antes do [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md) método para que o chamador pode determinar se deseja transmitir diferente de zero (`TRUE`) para o `IDebugCanStopEvent2::CanStop` método.  
+ Normalmente, esse método é chamado antes do [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md) método para que o chamador possa determinar se deve passar diferente de zero (`TRUE`) para o `IDebugCanStopEvent2::CanStop` método.  
   
- O motivo para interrupção pode ser `CANSTOP_ENTRYPOINT`, que significa que o DE atingiu um ponto de entrada, ou `CANSTOP_STEPIN`, que significa que o DE tenha entrado em uma função.  
+ O motivo para interrupção pode ser `CANSTOP_ENTRYPOINT`, que significa que o DE atingiu um ponto de entrada, ou `CANSTOP_STEPIN`, que significa que o DE tiver entrado em uma função.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)   

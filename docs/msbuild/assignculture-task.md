@@ -20,16 +20,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 26adf9bd97e10e25402db100ebb0140917ac6143
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: cf333c5339ce9a4d6046fb5156e37157004491b9
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177874"
 ---
 # <a name="assignculture-task"></a>Tarefa AssignCulture
-Essa tarefa aceita uma lista de itens que pode conter uma cadeia de caracteres de identificador de cultura .NET válida como parte do nome de arquivo e produz itens com metadados nomeados como `Culture` que contêm o identificador de cultura correspondente. Por exemplo, o nome de arquivo Form1.fr-fr.resx tem um identificador de cultura "fr-fr" inserido, assim, essa tarefa produzirá um item com o mesmo nome de arquivo e com os metadados `Culture` iguais a `fr-fr`. A tarefa também produz uma lista de nomes de arquivo com a cultura removida do nome de arquivo.  
+Essa tarefa aceita uma lista de itens que pode conter uma cadeia de caracteres de identificador de cultura .NET válida como parte do nome de arquivo e produz itens com metadados nomeados como `Culture` que contêm o identificador de cultura correspondente. Por exemplo, o nome de arquivo *Form1.fr-fr.resx* tem um identificador de cultura "fr-fr" inserido; portanto, essa tarefa produzirá um item com o mesmo nome de arquivo e com os metadados `Culture` iguais a `fr-fr`. A tarefa também produz uma lista de nomes de arquivo com a cultura removida do nome de arquivo.  
   
-## <a name="task-parameters"></a>Parâmetros da tarefa  
+## <a name="task-parameters"></a>Parâmetros de tarefa  
  A tabela a seguir descreve os parâmetros da tarefa `AssignCulture`.  
   
 |Parâmetro|Descrição|  
@@ -41,7 +42,7 @@ Essa tarefa aceita uma lista de itens que pode conter uma cadeia de caracteres d
 |`Files`|Parâmetro <xref:Microsoft.Build.Framework.ITaskItem>`[]` obrigatório.<br /><br /> Especifica a lista de arquivos com nomes de cultura inseridos a qual a cultura será atribuída.|  
   
 ## <a name="remarks"></a>Comentários  
- Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, confira [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir executa a tarefa `AssignCulture` com a coleção de itens `ResourceFiles`.  
@@ -73,10 +74,10 @@ Essa tarefa aceita uma lista de itens que pode conter uma cadeia de caracteres d
   
 |Coleta de itens|Conteúdo|  
 |---------------------|--------------|  
-|`OutAssignedFiles`|`MyResource1.fr.resx (Culture="fr")`<br /><br /> `MyResource2.XX.resx` (não há metadados adicionais)|  
-|`OutAssignedFilesWithCulture`|`MyResource1.fr.resx (Culture="fr")`|  
-|`OutAssignedFilesWithNoCulture`|`MyResource2.XX.resx` (não há metadados adicionais)|  
-|`OutCultureNeutralAssignedFiles`|`MyResource1.resx (Culture="fr")`<br /><br /> `MyResource2.XX.resx (`não há metadados adicionais)|  
+|`OutAssignedFiles`|*MyResource1.fr.resx* (Culture="fr")<br /><br /> *MyResource2.XX.resx* (sem metadados adicionais)|  
+|`OutAssignedFilesWithCulture`|*MyResource1.fr.resx* (Culture="fr")|  
+|`OutAssignedFilesWithNoCulture`|*MyResource2.XX.resx* (sem metadados adicionais)|  
+|`OutCultureNeutralAssignedFiles`|*MyResource1.resx* (Cultura="fr")<br /><br /> *MyResource2.XX.resx* (sem metadados adicionais)|  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas](../msbuild/msbuild-tasks.md)   

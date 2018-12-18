@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bd3671b1b3bad7426cb9b6ad0741f38ea21bb5ec
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 056a875c48fecde764fc686866c3d5ec8ca80d0d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823249"
 ---
 # <a name="ienumdebugboundbreakpoints2clone"></a>IEnumDebugBoundBreakpoints2::Clone
 Retorna uma cópia da enumeração atual como um objeto separado.  
@@ -43,10 +44,10 @@ int Clone(
  [out] Retorna uma cópia dessa enumeração como um objeto separado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- A cópia da enumeração tem o mesmo estado original no momento em que este método é chamado. No entanto, o original e da cópia estados são separados e podem ser alterados individualmente.  
+ A cópia da enumeração tem o mesmo estado original no momento em que esse método é chamado. No entanto, a cópia e o original estados são separados e podem ser alterados individualmente.  
   
 ## <a name="see-also"></a>Consulte também  
  [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md)

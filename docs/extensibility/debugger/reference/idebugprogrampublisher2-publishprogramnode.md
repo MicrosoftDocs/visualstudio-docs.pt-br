@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f04624f7a2b42fa50360841b91db4cb70b5e15ef
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e1182158852e978cb78096eec6e60783317f1cc0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49930448"
 ---
 # <a name="idebugprogrampublisher2publishprogramnode"></a>IDebugProgramPublisher2::PublishProgramNode
-Disponibiliza um nó de programa para uso por mecanismos de depuração (DEs) e a sessão de depuração manager (SDM).  
+Disponibiliza um nó de programa para uso pelos mecanismos de depuração (DEs) e a sessão de depuração SDM (Gerenciador).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,13 +41,13 @@ int PublishProgramNode(
   
 #### <a name="parameters"></a>Parâmetros  
  `pProgramNode`  
- [in] Um [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objeto que representa o nó de programa para disponibilizar.  
+ [in] Uma [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objeto que representa o nó de programa para tornar disponível.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método permite que os programas a ser consultado para informações antes de selecionar e iniciando-los para depuração.  
+ Esse método permite que os programas a ser consultado para obter informações antes de selecionar e iniciando-los para depuração.  
   
  Para remover um nó do programa de disponibilidade, chame o [UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md) método.  
   

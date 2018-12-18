@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31122087"
 ---
 # <a name="idebugstackframe2"></a>IDebugStackFrame2
 Essa interface representa um quadro de pilha único em uma pilha de chamadas em um thread específico.  

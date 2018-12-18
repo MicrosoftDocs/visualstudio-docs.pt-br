@@ -1,7 +1,7 @@
 ---
-title: Exibir Threads do depurador | Microsoft Docs
+title: Para visualizar Threads no depurador | Microsoft Docs
 ms.custom: ''
-ms.date: 04/25/2017
+ms.date: 10/29/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
@@ -25,144 +25,150 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ec5cdf340002c9f454c67b170b4e849360de0166
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 14b170e6f8259776941ce0fcc2a2866a9084cffb
+ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607712"
 ---
-# <a name="view-threads-in-the-debugger-in-visual-studio-using-the-threads-window"></a>Exibir Threads do depurador no Visual Studio usando a janela Threads
-No **Threads** janela, você pode examinar e trabalhar com os threads do aplicativo que você está depurando. Para obter orientação passo a passo sobre como usar o **Threads** janela, consulte [passo a passo: depurar usando a janela Threads](../debugger/how-to-use-the-threads-window.md).
+# <a name="view-threads-in-the-visual-studio-debugger-by-using-the-threads-window"></a>Exibir threads no depurador do Visual Studio usando a janela Threads
+No **Threads** janela, você pode examinar e trabalhar com threads no aplicativo que você está depurando. Para obter orientação passo a passo sobre como usar o **Threads** janela, consulte [passo a passo: depurar usando a janela Threads](../debugger/how-to-use-the-threads-window.md).
+
+## <a name="use-the-threads-window"></a>Usar a janela Threads 
+ O **Threads** janela contém uma tabela em que cada linha descreve um thread separado em seu aplicativo. Por padrão, a tabela lista todos os threads em seu aplicativo, mas você pode filtrar a lista para mostrar apenas os threads que lhe interessam. Cada coluna descreve um tipo diferente de informações. Você também pode ocultar algumas colunas. Se você exibir todas as colunas, as colunas a seguir são exibidos da esquerda para a direita:  
   
- O **Threads** janela contém uma tabela em que cada linha representa um segmento em seu aplicativo. Por padrão, a tabela lista todos os threads em seu aplicativo, mas você pode filtrar a lista para mostrar apenas os threads do seu interesse. Cada coluna contém um tipo diferente de informação. Você também pode ocultar algumas colunas. Se você exibir todas as colunas, as seguintes informações são exibidas, da esquerda para a direita:  
+- **Sinalizador**: nesta coluna sem rótulo, você pode marcar um thread ao qual você deseja prestar atenção especial. Para obter informações sobre como sinalizar um thread, consulte [como: sinalizador não sinalizar threads](../debugger/how-to-flag-and-unflag-threads.md).  
   
--   A coluna do sinalizador, em que você pode marcar um thread para o qual você deseja prestar atenção especial. Para obter informações sobre como um thread do sinalizador, consulte [como: sinalizador e sinalizar Threads](../debugger/how-to-flag-and-unflag-threads.md).  
+- **O thread atual**: nesta coluna sem nome, uma seta amarela indica que o thread atual. Uma estrutura de tópicos de seta indica o contexto atual do depurador para um thread não atual.
   
--   A coluna de segmento atual, no qual uma seta amarela indica que o thread atual (uma estrutura de tópicos de seta indica o contexto do depurador atual por um thread não atual).
+- **ID**: exibe o número de identificação para cada thread.  
   
--   O **ID** coluna, que contém o número de identificação para cada thread.  
+- **ID gerenciada**: exibe os números de identificação gerenciados para threads gerenciados.  
   
--   O **ID gerenciado** coluna, que contém os números de identificação de gerenciado para threads gerenciados.  
+- **Categoria**: exibe a categoria de threads como threads de interface do usuário, manipuladores de chamada de procedimento remoto ou threads de trabalho. Uma categoria especial identifica o thread principal do aplicativo.  
   
--   O **categoria** coluna, que categoriza threads como threads de interface do usuário, manipuladores de chamada de procedimento remoto ou threads de trabalho. Uma categoria especial identifica o thread principal do aplicativo.  
+- **Nome da**: identifica cada thread por nome, se ele tiver um, ou como \<No Name >.  
   
--   O **nome** coluna, que identificam cada thread por nome, se houver, ou como \<sem nome >.  
+- **Local**: mostra onde o thread está em execução. Você pode expandir este local para mostrar a pilha de chamadas inteira para o thread.  
   
--   O **local** coluna, que mostra onde o thread está em execução. Você pode expandir este local para mostrar a pilha de chamadas inteira para o thread.  
+- **Prioridade**: uma coluna avançada (ocultada por padrão) que exibe a prioridade ou precedência que o sistema atribuiu a cada thread.  
   
--   O **prioridade** coluna, que contém a prioridade ou precedência que o sistema atribuído a cada thread.  
+- **Máscara de afinidade**: uma coluna avançada (ocultada por padrão) que mostra a máscara de afinidade do processador para cada thread. Em um sistema com vários processadores, a máscara de afinidade determina quais processadores em qual thread pode ser executado.  
   
--   O **máscara de afinidade** coluna, que é uma coluna avançada (geralmente ocultada). Esta coluna mostra a máscara de afinidade do processador para cada thread. Em um sistema com vários processadores, a máscara de afinidade determina quais processadores em qual thread pode ser executado.  
+- **Contagem suspensa**: uma coluna avançada (ocultada por padrão) que exibe a contagem suspensa. Esta contagem determina se um thread pode ser executado. Para obter mais informações sobre contagens suspensas, consulte [congelar e descongelar threads](#freeze-and-thaw-threads).  
   
--   O **suspenso contagem** coluna (normalmente ocultada), que contém a contagem suspensa e normalmente é oculto. Esta contagem determina se um thread pode ser executado. Para obter uma explicação de contagem suspensa, consulte “Congelando e descongelando threads” posteriormente neste tópico.  
-  
--   O **nome do processo** coluna (normalmente ocultada), que contém o processo ao qual pertence cada thread. Esta coluna pode ser útil quando você estiver depurando vários processos.  
+- **Nome do processo**: uma coluna avançada (ocultada por padrão) que exibe o processo ao qual cada thread pertence. Os dados nesta coluna podem ser útil quando você estiver depurando vários processos.  
+
+- **ID do processo**: ID de uma coluna avançada (oculta por padrão) que exibe o processo ao qual pertence a cada thread. 
+
+- **Qualificador de transporte**: uma coluna avançada (ocultada por padrão) que identifica exclusivamente o computador ao qual o depurador está conectado. 
   
 ### <a name="to-display-the-threads-window-in-break-mode-or-run-mode"></a>Para exibir a janela de threads no modo de interrupção ou no modo de execução  
   
--   Durante a depuração, selecione o **depurar** , aponte para **Windows**e, em seguida, clique em **Threads**.  
+-   Enquanto o Visual Studio está no modo de depuração, selecione o **Debug** , aponte para **Windows**e, em seguida, selecione **Threads**.  
   
 ### <a name="to-display-or-hide-a-column"></a>Para exibir ou ocultar uma coluna  
   
--   Na barra de ferramentas na parte superior do **Threads** janela, clique em **colunas**, em seguida, marque ou desmarque o nome da coluna que você deseja exibir ou ocultar.    
+-   Na barra de ferramentas na parte superior do **Threads** janela, selecione **colunas**. Em seguida, marque ou desmarque o nome da coluna que você deseja exibir ou ocultar.  
 
-## <a name="display-flagged-threads"></a>Exibir Threads sinalizados  
- Você pode sinalizar um thread que você deseja dar atenção especial, marcando-o com um ícone de **Threads** janela. Para obter mais informações, consulte [como: sinalizador e sinalizar Threads](../debugger/how-to-flag-and-unflag-threads.md). No **Threads** janela você pode optar por exibir todos os threads ou apenas os threads sinalizados.  
+## <a name="display-flagged-threads"></a>Exibir threads sinalizados  
+ Você pode sinalizar um thread que você deseja dar atenção especial marcando-o com um ícone na **Threads** janela. Para obter mais informações, consulte [como: sinalizar e remover sinalização de threads](../debugger/how-to-flag-and-unflag-threads.md). No **Threads** janela, que você pode optar por exibir todos os threads ou apenas os threads sinalizados.  
   
-#### <a name="to-display-only-flagged-threads"></a>Para exibir somente threads sinalizados  
+### <a name="to-display-only-flagged-threads"></a>Para exibir somente threads sinalizados  
   
--   Escolha o **Mostrar somente Threads sinalizados** botão na parte superior do **Threads** janela. (Se ele estiver esmaecido, você precisa sinalizar alguns segmentos primeiro.) 
+-   Escolher **Mostrar somente Threads sinalizados** na barra de ferramentas na parte superior das **Threads** janela. (Se ele estiver esmaecido, você precisará sinalizar alguns threads pela primeira vez.) 
 
-## <a name="freeze-and-thaw-threads"></a>Congelar e descongelar Threads  
- Quando você congela um thread, o sistema não iniciará a execução do thread mesmo se os recursos estiverem disponíveis.  
+## <a name="freeze-and-thaw-threads"></a>Congelar e descongelar threads  
+ Quando você congela um thread, o sistema não inicia a execução do thread, mesmo se os recursos estiverem disponíveis.  
   
- No código nativo, você pode suspender ou retomar threads chamando as funções do Windows `SuspendThread` e `ResumeThread` ou as funções MFC [CWinThread::SuspendThread](/cpp/mfc/reference/CWinThread-class.md#cwinthread__suspendthread) e [CWinThread::ResumeThread](/cpp/mfc/reference/CWinThread-class.md#cwinthread__resumethread). Se você chamar `SuspendThread` ou `ResumeThread`, você alterar o *suspenso contagem*, que aparece no **Threads** janela. Porém, se você congelar ou descongelar um thread nativo, não alterará a contagem suspensa. No código nativo, um thread não pode ser executado a menos que seja descongelado e tenha uma contagem suspensa de zero.  
+ No código nativo, você pode suspender ou retomar threads chamando as funções do Windows `SuspendThread` e `ResumeThread`. Ou então, chamar as funções MFC [CWinThread::SuspendThread](/cpp/mfc/reference/CWinThread-class#suspendthread) e [cwinthread:: ResumeThread](/cpp/mfc/reference/CWinThread-class#resumethread). Se você chamar `SuspendThread` ou `ResumeThread`, o *contagem suspensa* mostra o **Threads** janela será alterada. A contagem suspensa não serão alteradas se você congelar ou descongelar um thread nativo. Um thread não é possível executar em código nativo, a menos que seja descongelado e tenha uma contagem suspensa de zero.  
   
- No código gerenciado, congelar ou descongelar um thread altera a contagem suspensa. No código gerenciado, um thread congelado tem uma contagem suspensa de 1. No código nativo, um thread congelado tem uma contagem suspensa de 0 a menos que o thread tenha sido suspenso por uma chamada `SuspendThread`.  
+ No código gerenciado, a contagem suspensa muda quando você congela ou descongelar um thread. Se você congela um thread em código gerenciado, sua contagem suspensa é 1. Quando você congela um thread em código nativo, sua contagem suspensa é 0, a menos que você usou o `SuspendThread` chamar.  
   
 > [!NOTE]
 >  Quando você depura uma chamada de código nativo para o código gerenciado, o código gerenciado é executado no mesmo thread físico que o código nativo que o chamou. Suspender ou congelar o thread nativo também congela o código gerenciado.  
   
-#### <a name="to-freeze-or-thaw-execution-of-a-thread"></a>Para congelar ou descongelar a execução de um thread  
+### <a name="to-freeze-or-thaw-execution-of-a-thread"></a>Para congelar ou descongelar a execução de um thread  
   
--   Na barra de ferramentas na parte superior do **Threads** janela, clique em **congelar Threads** ou **descongelar Threads**.  
+-   Na barra de ferramentas na parte superior do **Threads** janela, selecione **congelar Threads** ou **descongelar Threads**.  
   
-     Esta ação afeta apenas os threads que são selecionados no **Threads** janela. 
+     Essa ação afeta somente os threads selecionados na **Threads** janela. 
 
-### <a name="switch-to-another-thread"></a>Alternar para outro thread 
+### <a name="switch-to-another-thread"></a>Mudar para outro thread 
 
-Uma seta amarela indica que o thread atual (e o local do ponteiro de execução). Uma seta verde com uma chave final indica que um thread atual não tem o contexto atual do depurador.
+Uma seta amarela indica o thread atual (e o local do ponteiro de execução). Uma seta verde com uma parte final encaracolada indica que um thread não atual tem o contexto atual do depurador.
 
 #### <a name="to-switch-to-another-thread"></a>Para alternar para outro thread  
   
--   Execute uma das seguintes etapas:  
+-   Siga as etapas a seguir:  
   
     -   Clique duas vezes em qualquer thread.  
   
-    -   Um thread de mouse e clique em **alternar para Thread**.
+    -   Um thread com o botão direito e selecione **alternar para Thread**.
 
-## <a name="group-and-sort-threads"></a>Threads de classificação e de grupo  
- Quando você agrupa threads, um título aparece na tabela para cada grupo. O título contém uma descrição do grupo, como “Thread de trabalho” ou “Threads sem sinalização” e um controle de árvore. Os threads de membro de cada grupo aparecem no cabeçalho do grupo. Se você quiser ocultar os threads de membro para um grupo, poderá usar o controle de árvore para recolher o grupo.  
+## <a name="group-and-sort-threads"></a>Agrupar e classificar threads  
+ Quando você agrupa threads, um título aparece na tabela para cada grupo. O título contém uma descrição do grupo, como **Thread de trabalho** ou **Threads sem sinalização**e um controle de árvore. Os threads de membro de cada grupo aparecem no cabeçalho do grupo. Se você quiser ocultar os threads de membro de um grupo, use o controle de árvore para recolher o grupo.  
   
  Como o agrupamento tem precedência sobre a classificação, você poderá agrupar threads por categoria, por exemplo, e, em seguida, classificá-los por ID dentro de cada categoria.  
   
-#### <a name="to-sort-threads"></a>Para classificar threads  
+### <a name="to-sort-threads"></a>Para classificar threads  
   
-1.  Na barra de ferramentas na parte superior do **Threads** janela, clique no botão na parte superior de qualquer coluna.  
+1.  Na barra de ferramentas na parte superior do **Threads** janela, selecione o botão na parte superior de qualquer coluna.  
   
      Os threads agora são classificados pelos valores nessa coluna.  
   
-2.  Se você quiser inverter a ordem de classificação, clique no mesmo botão novamente.  
+2.  Se você quiser inverter a ordem de classificação, selecione o mesmo botão novamente.  
   
      Os threads que apareceram na parte superior da lista agora aparecem na parte inferior.  
   
-#### <a name="to-group-threads"></a>Para agrupar threads  
+### <a name="to-group-threads"></a>Para agrupar threads  
   
--   No **Threads** de ferramentas da janela, clique no **Agrupar por** lista e clique nos critérios que você deseja threads de grupo por.  
+-   No **Threads** ferramentas da janela, selecione a **Group by** lista e, em seguida, selecione os critérios que você deseja agrupar threads.  
   
-#### <a name="to-sort-threads-within-groups"></a>Para classificar threads dentro de grupos  
+### <a name="to-sort-threads-within-groups"></a>Para classificar threads dentro de grupos  
   
-1.  Na barra de ferramentas na parte superior do **Threads** janela, clique no **Agrupar por** lista e clique nos critérios que você deseja threads de grupo por.  
+1.  Na barra de ferramentas na parte superior a **Threads** janela, selecione a **Group by** lista e, em seguida, selecione os critérios que você deseja agrupar threads.  
   
-2.  No **Threads** janela, clique no botão na parte superior de qualquer coluna.  
+2.  No **Threads** janela, selecione o botão na parte superior de qualquer coluna.  
   
      Os threads agora são classificados pelos valores nessa coluna.  
   
-#### <a name="to-expand-or-collapse-all-groups"></a>Para expandir ou recolher todos os grupos  
+### <a name="to-expand-or-collapse-all-groups"></a>Para expandir ou recolher todos os grupos  
   
--   Na barra de ferramentas na parte superior do **Threads** janela, clique em **expandir grupos** ou **recolher grupos**.  
+-   Na barra de ferramentas na parte superior do **Threads** janela, selecione **expandir grupos** ou **recolher grupos**.  
   
-## <a name="search-for-specific-threads"></a>Pesquise a Threads específicos  
- No [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)], você pode procurar threads que correspondem a uma cadeia de caracteres especificada. Quando você procura por threads no **Threads** janela, a janela exibe todos os threads que correspondem a cadeia de caracteres de pesquisa em qualquer coluna. As informações incluem o local de thread que aparece na parte superior da pilha de chamadas no **local** coluna. Por padrão, no entanto, a pilha de chamadas completa não será pesquisada.  
+## <a name="search-for-specific-threads"></a>Pesquisar threads específicos  
+ Você pode procurar threads que correspondem a uma cadeia de caracteres especificada de **Threads** janela. Quando você procura threads, a janela exibe todos os threads que a cadeia de caracteres de pesquisa em qualquer coluna de correspondência. Essas informações incluem o local de thread que aparece na parte superior da pilha de chamadas na **local** coluna. Por padrão, a pilha de chamadas completa não é pesquisada.  
   
-#### <a name="to-search-for-specific-threads"></a>Para pesquisar threads específicos  
+### <a name="to-search-for-specific-threads"></a>Para pesquisar threads específicos  
   
--   Na barra de ferramentas na parte superior de **Threads** janela, vá para o **pesquisa** caixa e:  
+1. Na barra de ferramentas na parte superior a **Threads** janela, vá para o **pesquisa** caixa e:  
+
+     - Insira uma cadeia de caracteres de pesquisa e, em seguida, pressione **Enter**.  
   
-    -   Digite uma cadeia de caracteres de pesquisa e pressione ENTER.  
+     \- ou -  
   
-         \- ou -  
+     - Selecione a lista suspensa ao lado de **pesquisa** caixa e selecione uma cadeia de caracteres de pesquisa de uma pesquisa anterior.  
   
-    -   Clique na lista suspensa ao lado de **pesquisa** caixa e selecione uma cadeia de caracteres de pesquisa de uma pesquisa anterior.  
+2. (Opcional) Para incluir a pilha de chamadas inteira na pesquisa, selecione **pilha de chamadas de pesquisa**.   
   
--   (Opcional) Para incluir a pilha de chamadas completa em sua pesquisa, selecione **a pilha de chamadas de pesquisa**.   
-  
-## <a name="display-thread-call-stacks-and-switching-between-frames"></a>Exibir as pilhas de chamadas do Thread e alternar entre os quadros  
+## <a name="display-thread-call-stacks-and-switch-between-frames"></a>Exibir pilhas de chamadas do thread e alternar entre os quadros  
 Em um programa de vários threads, cada thread tem sua própria pilha de chamadas. O **Threads** janela fornece uma maneira conveniente de exibir essas pilhas.
 
 > [!TIP]
 > Para obter uma representação visual da pilha de chamadas para cada thread, use o [pilhas paralelas](../debugger/get-started-debugging-multithreaded-apps.md) janela.
   
-#### <a name="to-view-the-call-stack-of-a-thread"></a>Para exibir a pilha de chamadas de um thread  
+### <a name="to-view-the-call-stack-of-a-thread"></a>Para exibir a pilha de chamadas de um thread  
   
--   No **local** coluna, clique no triângulo invertido perto da localização do thread.  
+-   No **local** coluna, selecione o triângulo invertido ao lado do local do thread.  
   
      O local é expandido para mostrar a pilha de chamadas para o thread.  
   
-#### <a name="to-view-or-collapse-the-call-stacks-of-all-threads"></a>Para exibir ou recolher as chamadas de pilhas de todos os threads  
+### <a name="to-view-or-collapse-the-call-stacks-of-all-threads"></a>Para exibir ou recolher as chamadas de pilhas de todos os threads  
   
--   Na barra de ferramentas na parte superior do **Threads** janela, clique em **expanda pilhas de chamadas** ou **pilhas de chamadas de recolher**.  
+-   Na barra de ferramentas na parte superior do **Threads** janela, selecione **expandir pilhas** ou **recolher pilhas**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Depurar aplicativos multithread](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [Começar a depuração de um aplicativo multithread](../debugger/get-started-debugging-multithreaded-apps.md)
+ [Introdução ao depurar aplicativos multithread](../debugger/get-started-debugging-multithreaded-apps.md)

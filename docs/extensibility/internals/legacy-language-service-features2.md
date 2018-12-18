@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130736"
 ---
 # <a name="legacy-language-service-features"></a>Recursos de serviço de linguagem herdada
 Os tópicos a seguir listam alguns dos recursos de serviço de linguagem herdada que pode fornecer.  

@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e910de3682486d56e66125ad1f6c02ea0a14a55b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 09f77fa2f79f6e2e60a4a1b29e3c1a85e791c75b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910713"
 ---
 # <a name="textposition"></a>TEXT_POSITION
-Descreve o local de linha e coluna no texto especificado.  
+Descreve o local de linha e coluna em que o texto especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,35 +43,35 @@ public struct TEXT_POSITION {
   
 ## <a name="members"></a>Membros  
  dwLine  
- Índice de linha no arquivo de origem.  
+ Índice da linha no arquivo de origem.  
   
  dwColumn  
  Deslocamento de caractere na linha.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é usada no [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) e [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) estruturas.  
+ Essa estrutura é usada na [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) e [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) estruturas.  
   
  Essa estrutura é preenchida por uma chamada para os seguintes métodos:  
   
--   [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)  
+- [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)  
   
--   [GetSourceRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getsourcerange.md)  
+- [GetSourceRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getsourcerange.md)  
   
--   [GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)  
+- [GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)  
   
--   [GetOffset](../../../extensibility/debugger/reference/idebugfunctionposition2-getoffset.md)  
+- [GetOffset](../../../extensibility/debugger/reference/idebugfunctionposition2-getoffset.md)  
   
- Essa estrutura é passada como um parâmetro para os seguintes métodos:  
+  Essa estrutura é passada como um parâmetro para os seguintes métodos:  
   
--   [GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)  
+- [GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)  
   
--   [onInsertText](../../../extensibility/debugger/reference/idebugdocumenttextevents2-oninserttext.md)  
+- [onInsertText](../../../extensibility/debugger/reference/idebugdocumenttextevents2-oninserttext.md)  
   
--   [onRemoveText](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onremovetext.md)  
+- [onRemoveText](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onremovetext.md)  
   
--   [onReplaceText](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onreplacetext.md)  
+- [onReplaceText](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onreplacetext.md)  
   
--   [onUpdateTextAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatetextattributes.md)  
+- [onUpdateTextAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatetextattributes.md)  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

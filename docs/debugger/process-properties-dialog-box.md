@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476803"
 ---
 # <a name="process-properties-dialog-box"></a>Caixa de diálogo Propriedades do Processo
 Use essa caixa de diálogo para obter mais informações sobre um processo específico. Para exibir essa caixa de diálogo, mova o foco para um [exibição processos](../debugger/processes-view.md) janela. Selecione qualquer nó de processo na árvore e escolha **propriedades** do **exibição** menu.  

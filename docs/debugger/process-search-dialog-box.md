@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475503"
 ---
 # <a name="process-search-dialog-box"></a>Caixa de diálogo Pesquisa de Processo
 Use essa caixa de diálogo para localizar e selecionar o nó para um processo específico em [exibição processos](../debugger/processes-view.md). Para exibir essa caixa de diálogo, mova o foco para um **processos** janela modo de exibição. Em seguida, escolha **encontrar processo** do **pesquisa** menu.  

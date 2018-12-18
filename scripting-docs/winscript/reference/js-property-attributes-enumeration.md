@@ -1,16 +1,18 @@
 ---
-title: "Enumeração JS_PROPERTY_ATTRIBUTES | Microsoft Docs"
-ms.custom: 
+title: Enumeração JS_PROPERTY_ATTRIBUTES | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: JS_PROPERTY_ATTRIBUTES
-apilocation: jscript9diag.dll
+apiname:
+- JS_PROPERTY_ATTRIBUTES
+apilocation:
+- jscript9diag.dll
 ms.assetid: e83b9b6c-5b21-48d1-92b6-22bed926b18b
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +21,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24733766"
 ---
 # <a name="jspropertyattributes-enumeration"></a>Enumeração JS_PROPERTY_ATTRIBUTES
 Indica os atributos de uma propriedade.  

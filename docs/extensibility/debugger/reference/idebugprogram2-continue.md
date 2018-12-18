@@ -15,17 +15,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f52fccf640cca32d4291b3d6fb8626c38370ded3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8e776c91e68e4689c1cc6c54f17397eca495b493
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832648"
 ---
 # <a name="idebugprogram2continue"></a>IDebugProgram2::Continue
-Continua executando esse programa de um estado parado. Qualquer estado de execução anterior (como uma etapa) é preservado, e o programa inicia a execução novamente.  
+Continua a execução deste programa de um estado parado. Qualquer estado de execução anterior (por exemplo, uma etapa) é preservado, e o programa inicia a execução novamente.  
   
 > [!NOTE]
->  Este método é preterido. Use o [continuar](../../../extensibility/debugger/reference/idebugprocess3-continue.md) método em vez disso.  
+>  Esse método é preterido. Use o [continuar](../../../extensibility/debugger/reference/idebugprocess3-continue.md) método em vez disso.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,16 +44,16 @@ int Continue(
   
 #### <a name="parameters"></a>Parâmetros  
  `pThread`  
- [in] Um [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objeto que representa o thread.  
+ [in] Uma [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objeto que representa o thread.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Este método é chamado neste programa, independentemente de quantos aplicativos estão sendo depurados, ou o programa que gerou o evento de interrupção. A implementação deve manter o estado de execução anterior (como uma etapa) e continuar a execução como se ela nunca foi interrompido antes de concluir a execução anterior. Ou seja, se um thread em que o programa estava executando uma operação percorrer e foi interrompido porque outro programa interrompido e, em seguida, esse método foi chamado, o programa deve concluir a operação percorrer original.  
+ Este método é chamado neste programa, independentemente de quantos aplicativos estão sendo depurados, ou qual programa gerou o evento de interrupção. A implementação deve manter o estado de execução anterior (por exemplo, uma etapa) e continuar a execução como se ele nunca foi interrompido antes de concluir sua execução anterior. Ou seja, se um thread nesse programa estava fazendo uma operação de percorrer e foi interrompido porque algum outro programa é interrompido e, em seguida, esse método foi chamado, o programa deve concluir a operação percorrer original.  
   
 > [!WARNING]
->  Não enviar um evento de parada ou um evento (síncrono) imediato [evento](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) ao tratar essa chamada; caso contrário, o depurador pode travar.  
+>  Não enviar um evento de interrupção ou um evento (síncrono) imediato [evento](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) ao manipular essa chamada; caso contrário, o depurador poderá parar de responder.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)   

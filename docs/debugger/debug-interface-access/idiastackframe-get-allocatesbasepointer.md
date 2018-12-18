@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e3a58ee8093087f99ac6f002faa7fb32d053be4
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: a746cc5ceeba8df4a023e10c09ecfe511be557b6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49848768"
 ---
 # <a name="idiastackframegetallocatesbasepointer"></a>IDiaStackFrame::get_allocatesBasePointer
 Recupera um sinalizador que indica se o ponteiro de base está alocado para o código nesse intervalo de endereço.  
@@ -33,10 +34,10 @@ HRESULT get_allocatesBasePointer (
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Retorna `TRUE` se um ponteiro de base é alocado para o código nesse quadro; caso contrário, retornará `FALSE`.  
+ [out] Retorna `TRUE` se um ponteiro de base é alocado para o código neste quadro; caso contrário, retornará `FALSE`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se a propriedade não é suportada. Caso contrário, retornará um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para a propriedade. Caso contrário, retornará um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

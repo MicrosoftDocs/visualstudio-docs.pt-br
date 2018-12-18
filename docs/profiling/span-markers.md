@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f6952408611bfdd59a3d488db2a7f34524588edf
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 37f2dd735b7deb2d4fed1232c2ba690b26a9fde0
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35668161"
 ---
 # <a name="span-markers"></a>Marcadores de período
 Um marcador de período representa uma fase significativa de um aplicativo. Por exemplo, você pode usar um período para representar um intervalo de tempo durante o qual um item de trabalho específico está sendo processado. Seu comprimento representa a duração da fase de aplicativo correspondente. Esta ilustração mostra um período na Visualização Simultânea:  
@@ -24,7 +25,7 @@ Um marcador de período representa uma fase significativa de um aplicativo. Por 
  ![Um marcador de extensão no Visualizador de simultaneidade](../profiling/media/cvmarkerspan.png "CVMarkerSpan")  
 Um marcador de período na Visualização Simultânea  
   
-## <a name="span-category"></a>Categoria Período  
+## <a name="span-category"></a>Categoria de período  
  Um marcador de período pode ser exibido em cinco cores diferentes, dependendo de sua categoria. As cores são repetidas se há mais de cinco categorias. A categoria pode ser qualquer inteiro. Esta ilustração mostra as cinco cores possíveis:  
   
  ![Cinco extensões em categorias diferentes](../profiling/media/cvmarkerspancategory.png "CVMarkerSpanCategory")  
@@ -37,5 +38,5 @@ As cores das cinco primeiras categorias de período
 Um marcador de agregação de período  
   
 ## <a name="see-also"></a>Consulte também  
- [Marcadores da Visualização Simultânea](../profiling/concurrency-visualizer-markers.md)   
+ [Marcadores de Visualização Simultânea](../profiling/concurrency-visualizer-markers.md)   
  [SDK da Visualização Simultânea](../profiling/concurrency-visualizer-sdk.md)

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476313"
 ---
 # <a name="search-tools-for-spy-views"></a>Ferramentas de pesquisa das exibições do Spy++
 Use essas caixas de diálogo para especificar quais dados exibirá uma janela de exibições do Spy + +:  

@@ -1,15 +1,16 @@
 ---
 title: Acessibilidade
-description: ''
-author: asb3993
-ms.author: amburns
+description: Este artigo apresenta as funcionalidades de acessibilidade do Visual Studio para Mac e como elas podem ser habilitadas.
+author: conceptdev
+ms.author: crdun
 ms.date: 08/15/2017
 ms.assetid: 2C4AAC2E-3B4A-4496-8BE0-1F5A7F81D1CA
-ms.openlocfilehash: b434a1cf0290c1c43d0f309850e112843907d6da
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: f90f5fca9d68ed00162fd746ddf291343c8d51f7
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296328"
 ---
 # <a name="accessibility"></a>Acessibilidade
 
@@ -19,7 +20,7 @@ Além dos recursos e utilitários no macOS, o Visual Studio para Mac tem os segu
 - Opções de tamanho de texto em editores
 - Personalização de cor em editores
 - Personalização de atalhos de teclado
-- Preenchimento de código para métodos e parâmetros 
+- Preenchimento de código para métodos e parâmetros
 
 Para obter mais informações sobre recursos de acessibilidade no macOS, confira o [site da Apple](https://www.apple.com/accessibility/mac/).
 
@@ -35,11 +36,10 @@ Os recursos de Acessibilidade no Visual Studio para Mac estão desativados por p
 
 3. Pressione o botão **Reiniciar o Visual Studio** para permitir que os recursos de acessibilidade entrem em vigor.
 
-
-Como alternativa, você pode usar a linha de comando para habilitar os recursos de acessibilidade. Para isso, digite o seguinte comando no terminal: 
+Como alternativa, você pode usar a linha de comando para habilitar os recursos de acessibilidade. Para isso, digite o seguinte comando no terminal:
 
 ```bash
-defaults write com.microsoft.visual-studio com.monodevelop.AccessibilityEnabled 1 
+defaults write com.microsoft.visual-studio com.monodevelop.AccessibilityEnabled 1
 ```
 
 Depois de ativar a acessibilidade, você precisa reiniciar o Visual Studio.
@@ -48,12 +48,13 @@ Depois de ativar a acessibilidade, você precisa reiniciar o Visual Studio.
 
 A navegação por teclado pode ser habilitada configurando a opção Acesso Completo por Teclado em **Preferências do Sistema > Teclado > Atalhos** como **Todos os Controles**:
 
-  ![Painel Preferências do sistema no macOS](media/accessibility-image2.png)
+![Painel Preferências do sistema no macOS](media/accessibility-image2.png)
 
 A configuração de acesso completo por teclado ativa o retângulo de foco. Em seguida, você pode selecionar os controles usando:
+
 - A tecla Tab para avançar pelos controles
 - Shift-Tab para voltar pelos controles
-- Teclas de direção para navegar entre os controles na direção das setas. 
+- Teclas de direção para navegar entre os controles na direção das setas.
 
 Pressionar a barra de espaço ativa o controle com foco.
 
@@ -65,13 +66,17 @@ Para navegar pelos comandos da interface do usuário do VoiceOver, use os seguin
 
 - Mova o cursor do VoiceOver entre Controles: **Ctrl+ Alt+Seta para a esquerda/Seta para a direita**
 
-O VoiceOver lê o nome dos controles, alguns detalhes sobre eles e o que pode ser feito com eles. 
+   O VoiceOver lê o nome dos controles, alguns detalhes sobre eles e o que pode ser feito com eles.
 
 - Insira Grupos e controles (como o Painel de Soluções, Caixa de ferramentas e outros Painéis): **Ctrl+Alt+Shift+Seta para baixo**
 
-Quando estiver dentro do controle, use **Ctrl+Alt+Setas** para se movimentar dentro dele. 
- 
+   Quando estiver dentro do controle, use **Ctrl+Alt+Setas** para se movimentar dentro dele.
+
 Para obter informações gerais sobre como usar o VoiceOver no macOS, confira os guias a seguir:
 
 - [Introdução ao VoiceOver](https://help.apple.com/voiceover/info/guide/10.12/)
 - [Comandos de VoiceOver no macOS](http://lab.dotjay.com/notes/voiceover-commands/)
+
+## <a name="see-also"></a>Consulte também
+
+- [Recursos de acessibilidade do Visual Studio (no Windows)](/visualstudio/ide/reference/accessibility-features-of-visual-studio)

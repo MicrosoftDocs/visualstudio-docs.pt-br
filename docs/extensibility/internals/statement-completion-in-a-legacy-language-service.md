@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131321"
 ---
 # <a name="statement-completion-in-a-legacy-language-service"></a>Conclusão de instrução em um serviço de linguagem herdado
 Conclusão de instrução é o processo pelo qual o serviço de linguagem ajuda os usuários a concluir uma palavra-chave do idioma ou um elemento que eles tenham sido iniciados digitando no editor de núcleo. Este tópico discute como funciona a conclusão de instrução e como implementá-la em seu serviço de linguagem.  

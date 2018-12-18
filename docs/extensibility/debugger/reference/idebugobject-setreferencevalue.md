@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8941b09a18968fccba72c6e03a2fe612234909d5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1b597d7a62880e00a570a1971a6fec2becaaddca
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908620"
 ---
 # <a name="idebugobjectsetreferencevalue"></a>IDebugObject::SetReferenceValue
 Define o valor de referência do objeto.  
@@ -40,13 +41,13 @@ int SetReferenceValue(
   
 #### <a name="parameters"></a>Parâmetros  
  `pObject`  
- [in] Um [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objeto que representa o novo valor de referência.  
+ [in] Uma [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objeto que representa o novo valor de referência.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método torna isso [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objeto uma referência para o valor do objeto fornecido no `pObject` parâmetro, descartar qualquer referência anterior. Observe que esse `IDebugObject` objeto já deve ser um tipo de referência.  
+ Esse método faz isso [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objeto uma referência para o valor do objeto fornecido no `pObject` parâmetro, descartando qualquer referência anterior. Observe que este `IDebugObject` objeto já deve ser um tipo de referência.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   

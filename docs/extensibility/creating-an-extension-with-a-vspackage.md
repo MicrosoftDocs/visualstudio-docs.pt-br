@@ -1,5 +1,5 @@
 ---
-title: Criando uma extensão com um VSPackage | Microsoft Docs
+title: Criar uma extensão com um VSPackage | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,34 +11,35 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 706cdcd26df18af9ccd79b5bf83890c47b1faf57
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 50af15e1c15b5d0b6318c498923229778e8c0169
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500768"
 ---
-# <a name="creating-an-extension-with-a-vspackage"></a>Criando uma extensão com um VSPackage
-Este passo a passo mostra como criar um projeto do VSIX e adicionar um item de projeto VSPackage. Usaremos o VSPackage para obter o serviço de Shell de interface do usuário para mostrar uma caixa de mensagem.  
+# <a name="create-an-extension-with-a-vspackage"></a>Criar uma extensão com um VSPackage
+Este passo a passo mostra como criar um projeto VSIX e adicione um item de projeto de VSPackage. Usaremos o VSPackage para obter o serviço de Shell de interface do usuário para mostrar uma caixa de mensagem.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
- A partir do Visual Studio 2015, você não instalar o SDK do Visual Studio no Centro de download. Ele está incluído como um recurso opcional na instalação do Visual Studio. Você também pode instalar o SDK do VS posteriormente. Para obter mais informações, consulte [instalar o SDK do Visual Studio](../extensibility/installing-the-visual-studio-sdk.md).  
+ A partir do Visual Studio 2015, você não instale o SDK do Visual Studio no Centro de download. Ele é incluído como um recurso opcional na instalação do Visual Studio. Você também pode instalar o SDK do VS mais tarde. Para obter mais informações, consulte [instalar o SDK do Visual Studio](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-vspackage"></a>Criar um VSPackage  
+## <a name="create-a-vspackage"></a>Crie um VSPackage  
   
-1.  Crie um projeto do VSIX denominado **FirstPackage**. Você pode encontrar o modelo de projeto do VSIX no **novo projeto** caixa de diálogo em **Visual C# / extensibilidade**.  
+1.  Crie um projeto do VSIX chamado **FirstPackage**. Você pode encontrar o modelo de projeto VSIX na **novo projeto** diálogo sob **Visual c#** > **extensibilidade**.  
   
-2.  Quando o projeto for aberto, adicionar um modelo de item de pacote do Visual Studio chamado **FirstPackage**. No **Solution Explorer**, com o botão direito no nó do projeto e selecione **Adicionar / Novo Item**. No **Adicionar Novo Item** caixa de diálogo, vá para **Visual C# / extensibilidade** e selecione **pacote do Visual Studio**. No **nome** campo na parte inferior da janela, altere o nome do arquivo de comando para **FirstPackage.cs**.  
+2.  Quando o projeto aberto, adicione um modelo de item de pacote do Visual Studio denominado **FirstPackage**. No **Gerenciador de soluções**, clique com botão direito no nó do projeto e selecione **Add** > **Novo Item**. No **Adicionar Novo Item** caixa de diálogo, vá para **Visual c#** > **extensibilidade** e selecione **Visual Studio Package**. No **nome** campo na parte inferior da janela, altere o nome do arquivo de comando para *FirstPackage.cs*.  
   
 3.  Compile o projeto e comece a depuração.  
   
-     É exibida a instância experimental do Visual Studio. Para obter mais informações sobre a instância experimental, consulte [a instância Experimental](../extensibility/the-experimental-instance.md).  
+     A instância experimental do Visual Studio é exibida. Para obter mais informações sobre a instância experimental, consulte [a instância experimental](../extensibility/the-experimental-instance.md).  
   
-4.  Na instância experimental, abra o **ferramentas / extensões e atualizações** janela. Você deve ver o **FirstPackage** extensão aqui. (Se você abrir **extensões e atualizações** em sua instância de trabalho do Visual Studio, você não verá **FirstPackage**).  
+4.  Na instância experimental, abra o **ferramentas** > **extensões e atualizações** janela. Você deve ver a **FirstPackage** extensão aqui. (Se você abrir **extensões e atualizações** em sua instância de trabalho do Visual Studio, você não verá **FirstPackage**).  
   
-## <a name="loading-the-vspackage"></a>Carregando o VSPackage  
- Neste momento a extensão não carregar, porque não há nada que faz com que ele seja carregado. Geralmente, você pode carregar uma extensão quando você interage com sua interface do usuário (clicando em um comando de menu, abrindo uma janela de ferramenta) ou especificando que o VSPackage deve ser carregadas em um contexto específico de interface do usuário. Para obter mais informações sobre como carregar contextos VSPackages e interface do usuário, consulte [VSPackages carregar](../extensibility/loading-vspackages.md). Para esse procedimento, mostraremos como carregar um VSPackage quando uma solução é aberta.  
+## <a name="load-the-vspackage"></a>Carregar o VSPackage  
+ Neste momento a extensão não for carregado, porque não há nada que faz com que ele seja carregado. Em geral, você pode carregar uma extensão ao interagir com sua interface do usuário (clicando em um comando de menu, abrindo uma janela de ferramentas), ou especificando que o VSPackage deverá carregar em um contexto específico de interface do usuário. Para obter mais informações sobre como carregar VSPackages contextos de interface do usuário, consulte [carregar VSPackages](../extensibility/loading-vspackages.md). Para este procedimento, mostraremos como carregar um VSPackage quando uma solução é aberta.  
   
-1.  Abra o arquivo FirstPackage.cs. Procure a declaração da classe FirstPackage. Substitua os atributos existentes a seguir:  
+1.  Abra o *FirstPackage.cs* arquivo. Procure a declaração do `FirstPackage` classe. Substitua os atributos existentes a seguir:  
   
     ```csharp  
     [PackageRegistration(UseManagedResourcesOnly = true)]  
@@ -48,7 +49,7 @@ Este passo a passo mostra como criar um projeto do VSIX e adicionar um item de p
     public sealed class FirstPackage : Package  
     ```  
   
-2.  Vamos adicionar uma mensagem que nos permite saber que carregou o VSPackage. Usamos método Initialize () do VSPackage para fazer isso, porque você pode obter os serviços do Visual Studio somente depois que o VSPackage foi localizado. (Para obter mais informações sobre serviços, consulte [como: obter um serviço](../extensibility/how-to-get-a-service.md).) Substitua o método Initialize () de FirstPackage pelo código que obtém a <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> de serviço, obtém o <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> interface e chama seu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowMessageBox%2A> método.  
+2.  Vamos adicionar uma mensagem que nos informa que carregou o VSPackage. Usamos o VSPackage `Initialize()` somente depois que o VSPackage foi colocado no local de serviços de método para fazer isso, porque você pode obter o Visual Studio. (Para obter mais informações sobre como obter os serviços, consulte [como: obter um serviço](../extensibility/how-to-get-a-service.md).) Substitua o `Initialize()` método de `FirstPackage` com o código que obtém a <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> de serviço, obtém o <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> interface e chama seu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowMessageBox%2A> método.  
   
     ```csharp  
     protected override void Initialize()  
@@ -73,6 +74,6 @@ Este passo a passo mostra como criar um projeto do VSIX e adicionar um item de p
     }  
     ```  
   
-3.  Compile o projeto e comece a depuração. A instância experimental aparece.  
+3.  Compile o projeto e comece a depuração. A instância experimental é exibida.  
   
-4.  Abra uma solução na instância experimental. Você deve ver uma caixa de mensagem que diz **primeiro pacote dentro Initialize**.
+4.  Abra uma solução na instância experimental. Você deve ver uma caixa de mensagem que diz **primeiro pacote dentro Initialize ()**.

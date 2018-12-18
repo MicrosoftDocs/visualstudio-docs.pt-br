@@ -10,20 +10,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c4aa07333385951ba2ffd2f1bcf86aa5e8442982
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: cb99ec5bab1098f3551548698919cb1f2fc8f8b1
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764326"
 ---
 # <a name="events-vsperfcmd"></a>Eventos (VSPerfCmd)
-A opção **Eventos** do VSPerfCmd.exe controla o registro em log do ETW (Rastreamento de Eventos para Windows). Os dados ETW são salvos em um arquivo .etl separado do arquivo de dados do criador de perfil. Os dados podem ser exibidos em um relatório usando o comando [VSPerfReport](../profiling/vsperfreport.md) /summary:etw.  
+A opção **Events** do *VSPerfCmd.exe* controla o log do ETW (Rastreamento de Eventos para Windows). Os dados ETW são salvos em um arquivo .etl separado do arquivo de dados do criador de perfil. Os dados podem ser exibidos em um relatório usando o comando [VSPerfReport](../profiling/vsperfreport.md) /summary:etw.  
   
  A opção **Eventos** pode ser chamada a qualquer momento antes do comando **Shutdown** do VSPerfCmd ser chamado para interromper a criação de perfil.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cmd  
 VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]  
 ```  
   
@@ -79,15 +80,15 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
 > [!NOTE]
 >  Quando eventos CLR ETW estiverem habilitados, os dados de inicialização adicional também serão coletados no relatório de Exibição de Rastreamento. Para excluir eventos de inicialização daqueles que aparecem no relatório, use o seguinte comando:  
   
-```  
+```cmd  
 C:\<path>VSPerfCmd -events on, \".NET Common Language Runtime\", 0x7fffffff, 5  
 ```  
   
 > [!IMPORTANT]
->  Se você não excluir os eventos de inicialização, como tais eventos não são listados no arquivo MOF (Managed Object Format), eles aparecerão como GUIDs no relatório. Para obter mais informações, consulte esta página no site da Microsoft: [Arquivo MOF (Managed Object Format) de exemplo](http://go.microsoft.com/fwlink/?linkid=37118).  
+>  Se você não excluir os eventos de inicialização, como tais eventos não são listados no arquivo MOF (Managed Object Format), eles aparecerão como GUIDs no relatório. Para obter mais informações, confira esta página no site da Microsoft: [Arquivo de formato MOF (Managed Object Format) de exemplo](http://go.microsoft.com/fwlink/?linkid=37118).  
   
 ## <a name="see-also"></a>Consulte também  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
- [Criando perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Criando perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Serviços de Criação de Perfil](../profiling/command-line-profiling-of-services.md)
+ [Criar perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [Criar o perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profile services (Serviços de perfil)](../profiling/command-line-profiling-of-services.md)

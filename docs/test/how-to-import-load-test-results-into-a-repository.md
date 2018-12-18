@@ -1,5 +1,5 @@
 ---
-title: Como importar resultados de teste de carga para um repositório no Visual Studio | Microsoft Docs
+title: Como importar resultados de teste de carga para um repositório no Visual Studio
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +11,22 @@ ms.assetid: a955b3d2-c8ad-40dd-8ea3-9f1a271e1eed
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 5a4646578299895c0988522d871ba727d80f063c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 80bb7f0998dd8ee1bc46105892e0e6f4e23b74c1
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895061"
 ---
-# <a name="how-to-import-load-test-results-into-a-repository"></a>Como importar resultados de teste de carga para um repositório
+# <a name="how-to-import-load-test-results-into-a-repository"></a>Como importar resultados do teste de carga para um repositório
 
-Quando você executar um teste de carga, as informações coletadas durante a execução serão armazenadas no Repositório de Resultados de Testes de Carga. O Repositório de Resultados de Testes de Carga contém dados do contador de desempenho e informações sobre todos os erros. Para obter mais informações, consulte [Gerenciando resultados de teste de carga no repositório de resultados de teste de carga](../test/manage-load-test-results-in-the-load-test-results-repository.md).
+Quando você executar um teste de carga, as informações coletadas durante a execução serão armazenadas no Repositório de Resultados de Testes de Carga. O Repositório de Resultados de Testes de Carga contém dados do contador de desempenho e informações sobre todos os erros. Para obter mais informações, confira [Gerenciar resultados do teste de carga no repositório de resultados do teste de carga](../test/manage-load-test-results-in-the-load-test-results-repository.md).
 
- É possível gerenciar resultados do teste de carga no Editor de Teste de Carga usando a caixa de diálogo **Abrir e gerenciar resultados de testes de carga**. É possível abrir, importar, exportar e remover resultados de testes de carga.
+É possível gerenciar resultados do teste de carga no Editor de Teste de Carga usando a caixa de diálogo **Abrir e gerenciar resultados de testes de carga**. É possível abrir, importar, exportar e remover resultados de testes de carga.
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="to-import-results-into-a-repository"></a>Para importar resultados para um repositório
 
@@ -53,6 +57,6 @@ Quando você executar um teste de carga, as informações coletadas durante a ex
 
 ## <a name="see-also"></a>Consulte também
 
-- [Gerenciando resultados de teste de carga no repositório de resultados de teste de carga](../test/manage-load-test-results-in-the-load-test-results-repository.md)
-- [Analisar resultados de teste de carga](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
-- [Como exportar resultados de teste de carga de um repositório](../test/how-to-export-load-test-results-from-a-repository.md)
+- [Gerenciar resultados do teste de carga no repositório de Resultados do Teste de Carga](../test/manage-load-test-results-in-the-load-test-results-repository.md)
+- [Analisar resultados do teste de carga](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Como exportar resultados do teste de carga de um repositório](../test/how-to-export-load-test-results-from-a-repository.md)

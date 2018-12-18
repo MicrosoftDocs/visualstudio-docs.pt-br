@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 01020148db1c5d34b4108d2c7ab25aa74fb1b308
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bf51cbc4cd20401f17f5e92def47713c6107f3d2
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078749"
 ---
 # <a name="msbuild-glossary"></a>Glossário do MSBuild
 Esses termos são usados para descrever o MSBuild (Microsoft Build Engine) e seus componentes.  
@@ -60,10 +61,10 @@ Esses termos são usados para descrever o MSBuild (Microsoft Build Engine) e seu
  Os itens são entradas no sistema de build e são agrupados em tipos de item com base em seus nomes de elemento. Normalmente, os itens representam arquivos. Como os itens são nomeados pelo tipo de item ao qual pertencem, os termos *item* e *valor de item* podem ser usados alternadamente. Para obter mais informações, consulte [Itens](../msbuild/msbuild-items.md).  
   
  Definição de item  
- Os grupos de definição de item contêm as definições de item que adicionam metadados padrão a qualquer tipo de item. Como metadados conhecidos, os metadados padrão estão associados a todos os itens do tipo de item especificado. Os metadados padrão podem ser substituídos explicitamente em uma definição de item. Para obter mais informações, consulte [Definições de item](../msbuild/item-definitions.md).  
+ Os grupos de definição de item contêm as definições de item que adicionam metadados padrão a qualquer tipo de item. Como metadados conhecidos, os metadados padrão estão associados a todos os itens do tipo de item especificado. Os metadados padrão podem ser substituídos explicitamente em uma definição de item. Para obter mais informações, confira [Definições de item](../msbuild/item-definitions.md).  
   
  Função de item  
- As funções de item obtêm informações sobre os itens no projeto. Essas funções simplificam a obtenção de itens Distinct() e são mais rápidas do que executar loop nos itens. Há funções para manipular cadeias de caracteres e caminhos de item. Para obter mais informações, consulte as [Funções de item](../msbuild/item-functions.md)  
+ As funções de item obtêm informações sobre os itens no projeto. Essas funções simplificam a obtenção de itens Distinct() e são mais rápidas do que executar loop nos itens. Há funções para manipular cadeias de caracteres e caminhos de item. Para obter mais informações, confira [Funções de item](../msbuild/item-functions.md)  
   
  metadados de item  
  Consulte *metadados, item*.  
@@ -84,38 +85,38 @@ Esses termos são usados para descrever o MSBuild (Microsoft Build Engine) e seu
  Um subconjunto da estrutura completa. Ele é usado para minimizar a quantidade que precisa ser baixado para um computador.  
   
  arquivo de projeto  
- Um arquivo de projeto contém o script MSBuild que controla o build. Os arquivos de projeto geralmente têm uma extensão de arquivo que termina com "proj", como .csproj ou .vbproj. Os arquivos de projeto podem importar arquivos de propriedade e de destino.  
+ Um arquivo de projeto contém o script MSBuild que controla o build. Normalmente, os arquivos de projeto têm uma extensão de arquivo que termina com *proj*, como *.csproj* ou *.vbproj*. Os arquivos de projeto podem importar arquivos de propriedade e de destino.  
   
  propriedade  
- Uma propriedade é um par chave-valor que é usado para controlar o processo de build. Para mais informações, consulte [Propriedades do MSBuild](../msbuild/msbuild-properties.md).  
+ Uma propriedade é um par chave-valor que é usado para controlar o processo de build. Para obter mais informações, confira [Propriedades do MSBuild](../msbuild/msbuild-properties.md).  
   
  propriedade, ambiente  
- Uma propriedade de ambiente é uma propriedade que é inicializada automaticamente para o valor de uma variável de ambiente do sistema que tem o mesmo nome. Para mais informações, consulte [Propriedades do MSBuild](../msbuild/msbuild-properties.md).  
+ Uma propriedade de ambiente é uma propriedade que é inicializada automaticamente para o valor de uma variável de ambiente do sistema que tem o mesmo nome. Para obter mais informações, confira [Propriedades do MSBuild](../msbuild/msbuild-properties.md).  
   
  Arquivo de propriedade  
- Um arquivo de propriedade é um arquivo de projeto que contém principalmente grupos de propriedade e grupos de itens que orientam o build. Por convenção, ele tem a extensão de arquivo .props. Normalmente, os arquivos de propriedade são importados no início dos arquivos de projeto associados.  
+ Um arquivo de propriedade é um arquivo de projeto que contém principalmente grupos de propriedade e grupos de itens que orientam o build. Por convenção, ele tem a extensão de arquivo *.props*. Normalmente, os arquivos de propriedade são importados no início dos arquivos de projeto associados.  
   
  propriedade, função  
- Uma função de propriedade é uma propriedade do sistema ou um método que pode ser usado para avaliar scripts do MSBuild. Os métodos de propriedade podem ser usados para ler a hora do sistema, comparar cadeias de caracteres, combinar expressões regulares e executar outras ações. Para obter mais informações, consulte [Funções de propriedade](../msbuild/property-functions.md).  
+ Uma função de propriedade é uma propriedade do sistema ou um método que pode ser usado para avaliar scripts do MSBuild. Os métodos de propriedade podem ser usados para ler a hora do sistema, comparar cadeias de caracteres, combinar expressões regulares e executar outras ações. Para obter mais informações, confira [Funções de propriedade](../msbuild/property-functions.md).  
   
  função de propriedade, aninhada  
  As funções de propriedade podem ser combinadas para formar funções mais complexas. Por exemplo,  
   
  `$([MSBuild]::BitwiseAnd(32,   $([System.IO.File]::GetAttributes(tempFile))))`  
   
- Para obter mais informações, consulte [Funções de propriedade](../msbuild/property-functions.md).  
+ Para obter mais informações, confira [Funções de propriedade](../msbuild/property-functions.md).  
   
  propriedade, global  
- Uma propriedade global é um par chave-valor que é usado para controlar o processo de build. As propriedades globais são definidas em um prompt de comando ou usando o atributo `Properties` de uma [tarefa do MSBuild](../msbuild/msbuild-task.md) e não podem ser modificadas durante a fase de avaliação de um build. Para mais informações, consulte [Propriedades do MSBuild](../msbuild/msbuild-properties.md).  
+ Uma propriedade global é um par chave-valor que é usado para controlar o processo de build. As propriedades globais são definidas em um prompt de comando ou usando o atributo `Properties` de uma [tarefa do MSBuild](../msbuild/msbuild-task.md) e não podem ser modificadas durante a fase de avaliação de um build. Para obter mais informações, confira [Propriedades do MSBuild](../msbuild/msbuild-properties.md).  
   
  propriedade, local  
  Uma propriedade local é um par chave-valor que é usado para controlar o processo de build. Este termo é usado apenas para distinguir uma propriedade que não é uma propriedade global.  
   
  propriedade, Registro  
- Uma propriedade de Registro tem um valor que é definido usando uma sintaxe especial que lê o valor de uma subchave de Registro do sistema. Para mais informações, consulte [Propriedades do MSBuild](../msbuild/msbuild-properties.md).  
+ Uma propriedade de Registro tem um valor que é definido usando uma sintaxe especial que lê o valor de uma subchave de Registro do sistema. Para obter mais informações, confira [Propriedades do MSBuild](../msbuild/msbuild-properties.md).  
   
  propriedade, reservada  
- Uma propriedade reservada é um par chave-valor que é usado para controlar o processo de build. As propriedades reservadas são inicializadas automaticamente com valores predefinidos. Para mais informações, consulte [Propriedades do MSBuild](../msbuild/msbuild-properties.md).  
+ Uma propriedade reservada é um par chave-valor que é usado para controlar o processo de build. As propriedades reservadas são inicializadas automaticamente com valores predefinidos. Para obter mais informações, confira [Propriedades do MSBuild](../msbuild/msbuild-properties.md).  
   
  Escopo do projeto  
  O escopo do projeto descreve um objeto do MSBuild, por exemplo, uma propriedade local, que é visível somente no arquivo de projeto e em todos os projetos que ele importa.  
@@ -139,7 +140,7 @@ Esses termos são usados para descrever o MSBuild (Microsoft Build Engine) e seu
  Consulte destino, execução.  
   
  destino, avaliação  
- Devido à compilação incremental, os destinos devem ser analisados quanto a possíveis alterações nas propriedades e nos itens. Mesmo se o destino for ignorado, essas alterações deverão ser feitas. Avaliar um destino significa executar essa análise e fazer essas alterações. Para obter mais informações, consulte [Compilações incrementais](../msbuild/incremental-builds.md).  
+ Devido à compilação incremental, os destinos devem ser analisados quanto a possíveis alterações nas propriedades e nos itens. Mesmo se o destino for ignorado, essas alterações deverão ser feitas. Avaliar um destino significa executar essa análise e fazer essas alterações. Para obter mais informações, confira [Builds incrementais](../msbuild/incremental-builds.md).  
   
  destino, executando  
  Executar um destino significa avaliá-lo e executar todas as tarefas que não têm condições ou cujas condições são avaliadas como true. Durante a compilação incremental, os destinos podem ser ignorados ou executados, mas eles são sempre avaliados. Para obter mais informações, consulte destino, avaliação.  
@@ -151,13 +152,13 @@ Esses termos são usados para descrever o MSBuild (Microsoft Build Engine) e seu
  Se a compilação incremental determina que todos os arquivos de saída estão atualizados, então o destino é ignorado, isto é, o destino é avaliado, mas as tarefas dentro do destino não são executadas. Para obter mais informações, consulte destino, avaliação.  
   
  Moniker de estrutura de destino  
- Um nome que descreve a estrutura (como. NETFramework, Silverlight, etc.), a versão e o perfil (como cliente, servidor, etc.) que você deseja utilizar como destino.  
+ Um nome que descreve a estrutura (como .NET Framework, Silverlight etc.), a versão e o perfil (como Cliente, Servidor etc.) que você deseja usar como destino.  
   
  Direcionamento de pacote  
  A lista de assemblies que são distribuídos com uma determinada estrutura e o conjunto de assemblies de referência para essa estrutura.  
   
  Arquivo de destino  
- Um arquivo de destino é um arquivo de projeto que contém, em grande parte, destinos e tarefas que orientam o build. Por convenção, ele tem a extensão de arquivo .targets. Normalmente, os arquivos de destino são importados no fim dos arquivos de projeto associados.  
+ Um arquivo de destino é um arquivo de projeto que contém, em grande parte, destinos e tarefas que orientam o build. Por convenção, ele tem a extensão de arquivo *.targets*. Normalmente, os arquivos de destino são importados no fim dos arquivos de projeto associados.  
   
  tarefa  
  As tarefas são unidades de código executável que os projetos [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] usam para executar operações de build. Por exemplo, uma tarefa pode compilar os arquivos de entrada ou executar uma ferramenta externa. Para obter mais informações, consulte [Tarefas](../msbuild/msbuild-tasks.md).  
@@ -169,4 +170,4 @@ Esses termos são usados para descrever o MSBuild (Microsoft Build Engine) e seu
  Consulte *metadados, conhecidos*.  
   
 ## <a name="see-also"></a>Consulte também  
- [Msbuild](../msbuild/msbuild.md)
+ [MSBuild](../msbuild/msbuild.md)

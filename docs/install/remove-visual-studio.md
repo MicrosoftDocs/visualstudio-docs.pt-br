@@ -1,13 +1,10 @@
 ---
 title: Remover o Visual Studio 2017 | Microsoft Docs
-description: Saiba como remover o Visual Studio, passo a passo.
+description: Saiba como remover completamente o Visual Studio de seu computador, passo a passo.
 ms.custom: ''
 ms.date: 09/12/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-acquisition
-ms.tgt_pltfrm: ''
+ms.technology: vs-acquisition
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - uninstall
@@ -24,15 +21,16 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3234dad8a68e4a6ac5560122a971f26e90158ce4
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: e72482dce3df2ceaa5d5131838ce08b13a05cd90
+ms.sourcegitcommit: c5e72875206b8c5737c29d5b1ec7b86eec747303
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49382760"
 ---
 # <a name="remove-visual-studio"></a>Remover o Visual Studio
 
-Se você encontrar um erro fatal e não puder reparar ou desinstalar o Visual Studio, será possível executar a ferramenta `InstallCleanup.exe` para remover os arquivos de instalação e informações do produto. Essa ferramenta deverá ser executada como um último recurso se a reparação ou a desinstalação falhararem. Ela pode desinstalar recursos de outras instalações do Visual Studio ou outros produtos que precisam ser reparados.
+Se você encontrar um erro fatal e não puder reparar ou desinstalar o Visual Studio, é possível executar a ferramenta `InstallCleanup.exe` para remover os arquivos de instalação e informações do produto de todas as instâncias instaladas do Visual Studio 2017 e posteriores. Essa ferramenta deverá ser executada como um último recurso se a reparação ou a desinstalação falhararem. Ela pode desinstalar recursos de outras instalações do Visual Studio ou outros produtos que precisam ser reparados.
 
 Nas instruções a seguir, você pode executar a ferramenta com diferentes opções de linha de comando com o seguinte comportamento:
 
@@ -43,7 +41,7 @@ Nas instruções a seguir, você pode executar a ferramenta com diferentes opç�
 
 1. Fechar o instalador do Visual Studio.
 2. Abrir um prompt de comando de administrador. Para abrir um prompt de comando de administrador, siga estas etapas:
-   * No menu **Iniciar**, clique em **Executar** (Iniciar + R).
+   * Clique no menu **Iniciar**
    * Digite **cmd**.
    * Clique com o botão direito em **Prompt de Comando**e em **Executar como administrador**.
 3. Digite o caminho completo do utilitário `InstallCleanup.exe` e passe qualquer opção de linha de comando desejada. Por padrão, o caminho do utilitário é o seguinte:
@@ -53,16 +51,10 @@ Nas instruções a seguir, você pode executar a ferramenta com diferentes opç�
 
 Se não encontrar o `InstallCleanup.exe` no diretório do Instalador do Visual Studio (sempre localizado em `%ProgramFiles(x86)%\Microsoft Visual Studio`), siga as instruções de [instalação do Visual Studio](install-visual-studio.md) e quando a tela de seleção de carga de trabalho for exibida, feche a janela e siga as etapas anteriores novamente.
 
-## <a name="get-support"></a>Obter suporte
-Às vezes, as coisas podem dar errado. Caso a instalação do Visual Studio falhe, confira a página [Solução de problemas de instalação e atualização do Visual Studio 2017](troubleshooting-installation-issues.md). Se nenhuma das etapas de solução de problemas ajudar, entre em contato conosco por meio de um chat ao vivo para obter ajuda com a instalação (somente em inglês). Para saber mais detalhes, confira a [página de suporte do Visual Studio](https://www.visualstudio.com/vs/support/#talktous).
-
-Aqui estão algumas outras opções de suporte:
-* Você pode nos relatar problemas do produto por meio da ferramenta [Relatar um Problema](../ide/how-to-report-a-problem-with-visual-studio-2017.md), exibida no Instalador do Visual Studio e no IDE do Visual Studio.
-* Você pode compartilhar uma sugestão de produto conosco no [UserVoice](https://visualstudio.uservoice.com/forums/121579).
-* É possível acompanhar os problemas do produto na [Comunidade de Desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/), além de fazer perguntas e encontrar respostas.
-* Você pode também interagir conosco e com outros desenvolvedores do Visual Studio por meio das [conversas sobre o Visual Studio na comunidade do Gitter](https://gitter.im/Microsoft/VisualStudio).  (Esta opção requer uma conta do [GitHub](https://github.com/).)
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Consulte também
+
 * [Instalar o Visual Studio 2017](install-visual-studio.md)
 * [Atualizar o Visual Studio 2017](update-visual-studio.md)
 * [Modificar o Visual Studio 2017](modify-visual-studio.md)

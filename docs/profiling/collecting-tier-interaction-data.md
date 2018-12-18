@@ -16,13 +16,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 251dac9f457e1103173de01f0a9522c8199a9571
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f5e86cd1318d4b0db35ce6fa0e0abd925100fe34
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34548420"
 ---
-# <a name="collecting-tier-interaction-data"></a>Coletando dados de interação entre camadas
+# <a name="collect-tier-interaction-data"></a>Coletar dados de interação de camadas
 
 A criação de perfil de interação de camadas fornece informações adicionais sobre os tempos de execução de funções de aplicativos de várias camadas que se comunicam com os bancos de dados por meio de serviços do ADO.NET. Os dados são coletados apenas para chamadas de função síncronas.
 
@@ -48,4 +49,4 @@ Por causa de um bug no Assistente de desempenho, é necessário adicionar a opç
 
 ## <a name="see-also"></a>Consulte também
 
-[Exibição de Interações de Camada](../profiling/tier-interactions-view.md)
+[Exibição de interações de camada](../profiling/tier-interactions-view.md)

@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: baf4edeb67d9c1c66ce6e6542b9684b29a8c358b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6005bfcd4c69220c26929a8ad57f0e37923f388c
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34265495"
 ---
-# <a name="callercallee-view---net-memory-instrumentation-data"></a>Exibição Chamador/Receptor da Chamada – dados de instrumentação da memória do .NET
+# <a name="callercallee-view---net-memory-instrumentation-data"></a>Exibição do Chamador/Receptor – dados de instrumentação da memória do .NET
 O modo de exibição de Chamador/Computador Chamado dos dados de criação de perfil de memória do .NET coletados usando o método de instrumentação exibe dados de alocação e de tempo para uma função selecionada e as funções pai e filho da função selecionada. A exibição de Chamador/Computador Chamado contém três grades.  
   
  A **Função atual** é exibida na grade do meio exibe informações de criação de perfil de memória sobre a função selecionada. Os valores incluem todas as chamadas amostradas para a função.  
@@ -47,7 +48,7 @@ O modo de exibição de Chamador/Computador Chamado dos dados de criação de pe
 |**Tipo**|O contexto da função:<br /><br /> **0** – a função atual<br /><br /> **1** – uma função que chama a função atual<br /><br /> **2** – uma função que é chamada pela função atual<br /><br /> Somente em relatórios de linha de comando [VSPerfReport](../profiling/vsperfreport.md).|  
 |**Nome da Função Raiz**|O nome da função atual. Somente em relatórios de linha de comando [VSPerfReport](../profiling/vsperfreport.md).|  
   
-## <a name="net-memory-allocation-values"></a>Valores de Alocação de Memória do .NET  
+## <a name="net-memory-allocation-values"></a>Valores de alocação de memória do .NET  
   
 |Column|Descrição|  
 |------------|-----------------|  
@@ -60,7 +61,7 @@ O modo de exibição de Chamador/Computador Chamado dos dados de criação de pe
 |**Bytes Inclusivos**|–   Para a função atual, o número de bytes na memória que foram alocados pela função na execução de criação de perfil. O número inclui memória foi alocada em funções do computador chamado que foram chamadas pela função.<br />–   Para uma função do chamador, o número de bytes inclusivos das instâncias da função atual que foram gerados por chamadas dessa função do chamador.<br />–   Para uma função do computador chamado, o número de bytes alocados pelas instâncias dessa função que foram gerados por chamadas da função atual. O número inclui os bytes alocados por funções chamadas por essa função do computador chamado.|  
 |**% de Bytes Inclusivos**|O percentual de todos os bytes de memória que foram alocados na execução de criação de perfil que eram alocações inclusivas dessa função.|  
   
-## <a name="elapsed-inclusive-values"></a>Valores Inclusivos Decorridos  
+## <a name="elapsed-inclusive-values"></a>Valores inclusivos decorridos  
  Os valores inclusivos decorridos indicam o tempo que uma função ficou na pilha de chamadas. O tempo inclui o tempo gasto em funções filho e em chamadas para o sistema operacional, como operações de entrada/saída e de mudanças de contexto.  
   
 |Column|Descrição|  
@@ -71,7 +72,7 @@ O modo de exibição de Chamador/Computador Chamado dos dados de criação de pe
 |**Tempo Inclusivo Decorrido Máximo**|O tempo inclusivo decorrido máximo de uma chamada para essa função nesse contexto.|  
 |**Tempo Inclusivo Decorrido Mínimo**|O tempo inclusivo decorrido mínimo de uma chamada para essa função nesse contexto.|  
   
-## <a name="elapsed-exclusive-values"></a>Valores Exclusivos Decorridos  
+## <a name="elapsed-exclusive-values"></a>Valores exclusivos decorridos  
  Valores exclusivos decorridos indicam o tempo durante o qual uma função estava diretamente em execução no topo da pilha de chamadas. O tempo inclui o tempo em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto, mas não inclui o tempo gasto em funções filho.  
   
 |Column|Descrição|  
@@ -82,7 +83,7 @@ O modo de exibição de Chamador/Computador Chamado dos dados de criação de pe
 |**Tempo Exclusivo Decorrido Máximo**|O tempo exclusivo decorrido máximo de uma chamada para essa função nesse contexto.|  
 |**Tempo Exclusivo Decorrido Mínimo**|O tempo exclusivo decorrido mínimo de uma chamada para essa função nesse contexto.|  
   
-## <a name="application-inclusive-values"></a>Valores Inclusivos do Aplicativo  
+## <a name="application-inclusive-values"></a>Valores inclusivos do aplicativo  
  Os valores inclusivos do aplicativo indicam o tempo que uma função ficou na pilha de chamadas. O tempo não inclui o tempo gasto em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto, mas inclui o tempo gasto em funções filho.  
   
 |Column|Descrição|  
@@ -93,7 +94,7 @@ O modo de exibição de Chamador/Computador Chamado dos dados de criação de pe
 |**Tempo Inclusivo Máximo do Aplicativo**|O tempo inclusivo máximo do aplicativo de uma chamada para essa função nesse contexto.|  
 |**Tempo Inclusivo Mínimo do Aplicativo**|O tempo inclusivo mínimo do aplicativo de uma chamada para essa função nesse contexto.|  
   
-## <a name="application-exclusive-values"></a>Valores Exclusivos do Aplicativo  
+## <a name="application-exclusive-values"></a>Valores exclusivos do aplicativo  
  Valores exclusivos do aplicativo indicam o tempo gasto na função, excluindo o tempo gasto em funções filho. O tempo indicado também exclui o tempo gasto em chamadas ao sistema operacional, como mudanças de contexto e operações de entrada/saída.  
   
 |Column|Descrição|  
@@ -105,7 +106,7 @@ O modo de exibição de Chamador/Computador Chamado dos dados de criação de pe
 |**Tempo Exclusivo Mínimo do Aplicativo**|O tempo exclusivo mínimo do aplicativo de uma chamada para essa função nesse contexto.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Como personalizar as colunas de exibição do relatório](../profiling/how-to-customize-report-view-columns.md)   
- [Exibição Chamador/Receptor da Chamada – dados de amostragem da memória do .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
- [Exibição de chamador/computador chamado – dados de instrumentação](../profiling/caller-callee-view-instrumentation-data.md)   
- [Exibição de chamador/computador chamado – dados de amostragem](../profiling/caller-callee-view-sampling-data.md)
+ [Como personalizar as colunas de visualização de relatório](../profiling/how-to-customize-report-view-columns.md)   
+ [Exibição do Chamador/Receptor – dados de amostragem da memória do .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
+ [Exibição do Chamador/Receptor – dados de instrumentação](../profiling/caller-callee-view-instrumentation-data.md)   
+ [Exibição do chamador/chamado – dados de amostragem](../profiling/caller-callee-view-sampling-data.md)

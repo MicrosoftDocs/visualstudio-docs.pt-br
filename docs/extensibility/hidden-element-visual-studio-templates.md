@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b41005dc789cf464973b225c76b2845db5565772
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 18c5783eb6e9572e030e4ea764ad0393f61f6049
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498256"
 ---
 # <a name="hidden-element-visual-studio-templates"></a>Elemento oculto (modelos do Visual Studio)
 Especifica se o modelo é exibido em qualquer um de **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.  
@@ -47,12 +48,12 @@ Especifica se o modelo é exibido em qualquer um de **novo projeto** ou **Adicio
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele exibe em um a **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo.|  
   
 ## <a name="text-value"></a>Valor de texto  
  Um valor de texto é obrigatório.  
   
- O texto deve ser `true` ou `false`, indicando se o modelo aparecerá no **novo projeto** ou **Adicionar Novo Item** caixas de diálogo.  
+ O texto deve ser `true` ou `false`, indicando se ou não o modelo aparecerá na **novo projeto** ou **Add New Item** caixas de diálogo.  
   
 ## <a name="remarks"></a>Comentários  
  `Hidden` é um elemento opcional.  
@@ -89,4 +90,4 @@ Especifica se o modelo é exibido em qualquer um de **novo projeto** ou **Adicio
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)
+ [Criar modelos de projeto e de item](../ide/creating-project-and-item-templates.md)

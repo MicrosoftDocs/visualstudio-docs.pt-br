@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31120956"
 ---
 # <a name="idebugprogramex2"></a>IDebugProgramEx2
 Essa interface permite que a sessão de depuração manager (SDM) anexar a um programa e obter o nó de programa associado a um programa.  

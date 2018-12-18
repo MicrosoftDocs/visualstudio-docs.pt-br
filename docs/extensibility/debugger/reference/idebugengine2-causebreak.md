@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ba10e167246ce2467f2faebf157e46306749bdb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 08544fb80e1006dbed08e51689c1bb3b01212edb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820506"
 ---
 # <a name="idebugengine2causebreak"></a>IDebugEngine2::CauseBreak
-Solicitações que todos os programas que estão sendo depurado por este mecanismo de depuração (DE) para interromper a execução da próxima vez que um dos seus threads tentará executar.  
+Solicitações de todos os programas sendo depurado por este mecanismo de depuração (DE) para interromper a execução da próxima vez que um dos seus threads tentará executar.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +38,10 @@ int CauseBreak();
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método é assíncrono: um [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) evento é enviado quando o programa em seguida tenta executar depois que este método é chamado.  
+ Esse método é assíncrono: uma [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) evento é enviado quando o programa em seguida tenta executar depois que esse método é chamado.  
   
 ## <a name="see-also"></a>Consulte também  
  [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)   

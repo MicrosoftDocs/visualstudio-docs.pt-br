@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 76a8db9c0b8bd64d41524b7fc3a419d8f6ec4d27
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0349ecb12d60018b09271efe5b988cc44585dc4d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939664"
 ---
 # <a name="idebugbreakpointrequest3getrequestinfo2"></a>IDebugBreakpointRequest3::GetRequestInfo2
 Esse método obtém as informações de solicitação de ponto de interrupção que descreve esta solicitação de ponto de interrupção.  
@@ -48,10 +49,10 @@ int GetRequestInfo2(
  [out] O [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) estrutura a ser preenchido.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retornará o código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará o código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Mais informações sobre esta solicitação que é retornado do [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) método.  
+ Há mais informações nesta solicitação que é retornado a partir de [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) método.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugBreakpointRequest3](../../../extensibility/debugger/reference/idebugbreakpointrequest3.md)   

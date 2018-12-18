@@ -10,31 +10,31 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ddad95ddae2572ae55024bfbec2d17c3df98b526
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 2072006941c0572fc8072f2dd99afe7d324326bd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842840"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>Modelos de compartilhamento e diagramas de exportação
 No Visual Studio, você pode compartilhar modelos e diagramas com colegas de várias maneiras.
 
- Para ver quais versões do Visual Studio oferecem suporte a esse recurso, consulte [suporte de versão para a arquitetura e ferramentas de modelagem](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+ Para ver quais edições do Visual Studio dão suporte a esse recurso, consulte [suporte de edição para a arquitetura e ferramentas de modelagem](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 ## <a name="working-on-a-model-as-a-team"></a>Trabalhando em um modelo como uma equipe
- Os usuários do Visual Studio podem criar e editar modelos e diagramas de dependência gráficos direcionados.
+ Os usuários do Visual Studio podem criar e editar gráficos direcionados de modelos e diagramas de dependência.
 
  Usuários diferentes podem trabalhar ao mesmo tempo em um modelo, mas devem funcionar em pacotes diferentes.
 
- Recomendamos que você use [!INCLUDE[esprscc](../code-quality/includes/esprscc_md.md)].
+ Para obter sugestões sobre como organizar modelos em um projeto de médio ou grande, consulte [estruturar a solução de modelagem](../modeling/structure-your-modeling-solution.md).
 
- Para obter sugestões sobre como organizar modelos em um projeto de médias ou grande, consulte [estruturar a solução de modelagem](../modeling/structure-your-modeling-solution.md).
+## <a name="reading-and-reviewing-models"></a>Lendo e revisão de modelos
+ Os membros da equipe usando algumas versões do Visual Studio (que não é possível criar modelos) podem ler os modelos, gráficos direcionados e diagramas de modelagem, mas não é possível editá-los.  Para ver quais edições do Visual Studio dão suporte a esse recurso, consulte [suporte de edição para a arquitetura e ferramentas de modelagem](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-## <a name="reading-and-reviewing-models"></a>Ler e analisar modelos
- Membros da equipe usando algumas versões do Visual Studio (que não é possível criar modelos) podem ler modelos, direcionados gráficos e diagramas de modelagem, mas não é possível editá-los.  Para ver quais versões do Visual Studio oferecem suporte a esse recurso, consulte [suporte de versão para a arquitetura e ferramentas de modelagem](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
-
- Um diagrama de dependência pode ser aberto somente dentro do modelo no qual ele foi criado. Para fornecer acesso a um diagrama, portanto você deve fornecer o acesso a todo o modelo de projeto de arquivos, ou cópias deles.
+ Um diagrama de dependência pode ser aberto apenas dentro do modelo no qual ele foi criado. Para fornecer acesso a um diagrama, você deve, portanto, fornecer acesso a todos os de modelagem, arquivos de projeto ou para cópias deles.
 
  Para obter mais informações, consulte [ler modelos e diagramas em outras edições do Visual Studio](../modeling/read-models-and-diagrams-in-other-visual-studio-editions.md).
 
@@ -46,10 +46,10 @@ No Visual Studio, você pode compartilhar modelos e diagramas com colegas de vá
 ## <a name="related-topics"></a>Tópicos relacionados
 
 |Título|Descrição|
-|-----------|-----------------|
-|[Estruturar a solução de modelagem](../modeling/structure-your-modeling-solution.md)|Compartilhamento de modelos em um projeto de médias ou grande.|
-|[Exportar diagramas como imagens](../modeling/export-diagrams-as-images.md)|Você pode copiar partes de diagramas para aplicativos como PowerPoint ou Word ou imprimir um diagrama em um arquivo XPS.|
-|[Análise e modelagem de arquitetura](../modeling/analyze-and-model-your-architecture.md)|Visão geral de modelos e diagramas.|
+|-|-|
+|[Estruturar a solução de modelagem](../modeling/structure-your-modeling-solution.md)|Compartilhando modelos em um projeto grande ou médio.|
+|[Exportar diagramas como imagens](../modeling/export-diagrams-as-images.md)|Você pode copiar partes de diagramas para aplicativos como o PowerPoint ou Word ou imprimir um diagrama em um arquivo XPS.|
+|[Análise e modelagem de arquitetura](../modeling/analyze-and-model-your-architecture.md)|Visão geral dos modelos e diagramas.|
 
 ## <a name="see-also"></a>Consulte também
 

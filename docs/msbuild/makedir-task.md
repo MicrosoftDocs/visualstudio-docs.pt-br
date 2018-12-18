@@ -20,11 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 44a87542e6bc2f28be841020b588c2d6ab3be683
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b90ad8ca887c0868f568dee3ed0264f56f122a49
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080890"
 ---
 # <a name="makedir-task"></a>Tarefa MakeDir
 Cria diretórios e, se necessário, qualquer diretório pai.  
@@ -38,7 +39,7 @@ Cria diretórios e, se necessário, qualquer diretório pai.
 |`DirectoriesCreated`|Parâmetro de saída <xref:Microsoft.Build.Framework.ITaskItem>`[]` opcional.<br /><br /> Os diretórios que são criados por essa tarefa. Se alguns diretórios não puderem ser criados, pode ser que não contenha todos os itens que foram passados para o parâmetro `Directories`.|  
   
 ## <a name="remarks"></a>Comentários  
- Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, confira [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Exemplo  
  O seguinte exemplo de código usa a tarefa `MakeDir` para criar o diretório especificado pela propriedade `OutputDirectory`.  

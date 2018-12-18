@@ -15,26 +15,27 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a46c62c05b762bee3233062a5b84e3ffca20e15a
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 38783f5ec228965010dbe8054373803185fe2e7c
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44282697"
 ---
 # <a name="more-debugging-features"></a>Mais funcionalidades de depuração
 Esta seção contém os recursos adicionais que você pode usar com o depurador do Visual Studio.  
   
- Para obter uma lista de dicas e truques para facilitar a depuração mais rapidez e facilidade, consulte [depuração dicas e truques](http://blogs.msdn.com/b/visualstudio/archive/2015/05/22/debugging-tips-and-tricks.aspx).  
+ Para obter uma lista de dicas e truques para tornar a depuração mais rápida e facilmente, consulte [depuração dicas e truques](https://blogs.msdn.microsoft.com/visualstudio/2015/05/22/debugging-tips-and-tricks/).  
   
 ## <a name="additional-features"></a>Recursos adicionais  
  [Inspecione as propriedades XAML durante a depuração](../debugger/inspect-xaml-properties-while-debugging.md)  
- Descreve o uso do **árvore Visual dinâmica** e **Live propriedade Explorer** ferramentas.  
+ Descreve o uso do **Live Visual Tree** e o **Live Property Explorer** ferramentas.  
   
  [Preparação e configurações do depurador](../debugger/debugger-settings-and-preparation.md)  
- Descreve as diferentes configurações que talvez seja necessário configurar para usar o depurador em diferentes contextos.  
+ Descreve as diferentes configurações que talvez você precise definido para usar o depurador em contextos diferentes.  
   
  [Exibindo dados no depurador](../debugger/viewing-data-in-the-debugger.md)  
- Descreve as janelas de depuração diferente e  
+ Descreve as janelas de depuração diferentes e  
   
  [Depuração Just-In-Time](../debugger/just-in-time-debugging-in-visual-studio.md)  
  Discute a depuração Just-In-Time, que pode iniciar o depurador automaticamente quando um programa falha ao executar fora do Visual Studio.  

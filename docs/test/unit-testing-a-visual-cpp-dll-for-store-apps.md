@@ -1,6 +1,7 @@
 ---
-title: Como testar uma DLL do Visual C++ para aplicativos da UWP no Visual Studio | Microsoft Docs
+title: Como testar uma DLL do Visual C++ para aplicativos UWP
 ms.date: 02/15/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: mblome
@@ -8,11 +9,12 @@ manager: douge
 ms.workload:
 - uwp
 author: mikeblome
-ms.openlocfilehash: 56bd0acf242f0fac4ccb2d73063e8ee73d234a0c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4081fae86b41a9bf8b925bf84d403b3be6628294
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068361"
 ---
 # <a name="how-to-test-a-visual-c-dll"></a>Como testar uma DLL do Visual C++
 
@@ -24,17 +26,17 @@ Este tópico descreve uma maneira de criar testes de unidade para uma DLL do C++
 
 ##  <a name="Create_the_solution_and_the_unit_test_project"></a> Criar a solução e o projeto de teste de unidade
 
-1.  No menu **Arquivo**, escolha **Novo** > **Projeto...**.
+1.  No menu **Arquivo**, escolha **Novo** > **Novo Projeto**.
 
 2.  Na caixa Novo Projeto, expanda **Instalado** > **Visual C++** e escolha **Windows Universal**. Em seguida, escolha **Aplicativo de Teste de Unidade (Windows Universal)** na lista de modelos de projeto.
 
 3.  Dê ao projeto o nome `RooterLibTests`; especifique o local, dê à solução o nome `RooterLib`; e certifique-se de que a opção **Criar diretório para solução** esteja selecionada.
 
-     ![Especifique o nome do projeto e solução e local](../test/media/ute_cpp_windows_unittestlib_createspecs.png "UTE_Cpp_windows_UnitTestLib_CreateSpecs")
+     ![Especifique o nome da solução e do projeto e o local](../test/media/ute_cpp_windows_unittestlib_createspecs.png)
 
 4.  No novo projeto, abra **unittest1.cpp**.
 
-     ![unittest1.cpp](../test/media/ute_cpp_windows_unittest1_cpp.png "UTE_Cpp_windows_unittest1_cpp")
+     ![unittest1.cpp](../test/media/ute_cpp_windows_unittest1_cpp.png)
 
      Observe que:
 
@@ -44,7 +46,7 @@ Este tópico descreve uma maneira de criar testes de unidade para uma DLL do C++
 
     -   Os métodos de teste são agrupados em classes usando `TEST_CLASS(YourClassName){...}`.
 
-         Quando os testes são executados, uma instância de cada classe de teste é criada. Os métodos de teste são chamados em uma ordem não especificada. Você pode definir métodos especiais que são invocados antes e depois de cada módulo, classe ou método. Para obter mais informações, consulte [Usando Microsoft.VisualStudio.TestTools.CppUnitTestFramework](../test/using-microsoft-visualstudio-testtools-cppunittestframework.md) na biblioteca MSDN.
+         Quando os testes são executados, uma instância de cada classe de teste é criada. Os métodos de teste são chamados em uma ordem não especificada. Você pode definir métodos especiais que são invocados antes e depois de cada módulo, classe ou método. Para obter mais informações, confira [Usando o Microsoft.VisualStudio.TestTools.CppUnitTestFramework](how-to-use-microsoft-test-framework-for-cpp.md).
 
 ##  <a name="Verify_that_the_tests_run_in_Test_Explorer"></a> Verificar se o testes são executados no Gerenciador de Testes
 
@@ -61,19 +63,19 @@ Este tópico descreve uma maneira de criar testes de unidade para uma DLL do C++
 
 2.  No menu **Testar**, escolha **Executar** e **Executar Todos**.
 
-     O projeto de teste é compilado e executado. A janela Gerenciador de Testes é exibida e o teste é listado em **Testes Aprovados**. O painel Resumo, na parte inferior da janela, fornece mais detalhes sobre o teste selecionado.
+     O projeto de teste é compilado e executado. A janela **Gerenciador de Testes** é exibida e o teste é listado em **Testes Aprovados**. O painel **Resumo** na parte inferior da janela fornece mais detalhes sobre o teste selecionado.
 
-     ![Gerenciador de testes](../test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")
+     ![Gerenciador de Testes](../test/media/ute_cpp_testexplorer_testmethod1.png)
 
 ##  <a name="Add_the_DLL_project_to_the_solution"></a> Adicione o projeto DLL à solução
 
-1.  No Gerenciador de Soluções, escolha o nome da solução. No menu de atalho, escolha **Adicionar** e então **Adicionar Novo Projeto**.
+1.  No **Gerenciador de Soluções**, escolha o nome da solução. No menu de atalho, escolha **Adicionar** e então **Adicionar Novo Projeto**.
 
-     ![Criar o projeto RooterLib](../test/media/ute_cpp_windows_rooterlib_create.png "UTE_Cpp_windows_RooterLib_Create")
+     ![Criar o projeto RooterLib](../test/media/ute_cpp_windows_rooterlib_create.png)
 
 2.  Na caixa de diálogo **Adicionar Novo Projeto**, escolha **DLL (aplicativos UWP)**.
 
-3.  Adicione o código a seguir ao arquivo **RooterLib.h**:
+3.  Adicione o código a seguir ao arquivo *RooterLib.h*:
 
     ```cpp
     // The following ifdef block is the standard way of creating macros which make exporting
@@ -101,17 +103,17 @@ Este tópico descreve uma maneira de criar testes de unidade para uma DLL do C++
 
 4.  Adicione o símbolo ROOTERLIB_EXPORTS à linha de comando.
 
-    1.  No Gerenciador de Soluções, escolha o projeto **RooterLib** e escolha **Propriedades** no menu de atalho.
+    1.  No **Gerenciador de Soluções**, escolha o projeto **RooterLib** e, em seguida, escolha **Propriedades** no menu de atalho.
 
-         ![Adicionar uma definição de símbolo do pré-processador](../test/media/ute_cpp_windows_addpreprocessorsymbol.png "UTE_Cpp_windows_AddPreprocessorSymbol")
+         ![Adicionar uma definição de símbolo de pré-processador](../test/media/ute_cpp_windows_addpreprocessorsymbol.png)
 
-    2.  Na caixa de diálogo Página de Propriedades de RooterLib, expanda **Propriedades de Configuração**, expanda **C++** e escolha **Pré-processador**.
+    2.  Na caixa de diálogo **Página de Propriedades de RooterLib**, expanda **Propriedades de Configuração**, expanda **C++** e escolha **Pré-processador**.
 
-    3.  Escolha **\<<Editar...>** na lista **Definições do Pré-processador** e, em seguida, adicione `ROOTERLIB_EXPORTS` na caixa de diálogo Definições do Pré-processador.
+    3.  Escolha **\<Editar...>** na lista **Definições do Pré-processador** e, em seguida, adicione `ROOTERLIB_EXPORTS` na caixa de diálogo **Definições do Pré-processador**.
 
-5.  Adicione implementações mínimas das funções declaradas. Abra **RooterLib.cpp** e adicione o seguinte código:
+5.  Adicione implementações mínimas das funções declaradas. Abra *RooterLib.cpp* e adicione o seguinte código:
 
-    ```
+    ```cpp
     // constructor
     CRooterLib::CRooterLib()
     {
@@ -127,56 +129,55 @@ Este tópico descreve uma maneira de criar testes de unidade para uma DLL do C++
 
 ##  <a name="make_the_dll_functions_visible_to_the_test_code"></a> Tornar as funções de dll visíveis para o código de teste
 
-1.  Adicione RooterLib ao projeto RooterLibTests.
+1. Adicione RooterLib ao projeto RooterLibTests.
 
-    1.  No Gerenciador de Soluções, escolha o projeto **RooterLibTests** e, em seguida, **Referências...** no menu de atalho.
+   1.  No **Gerenciador de Soluções**, escolha o projeto **RooterLibTests** e, em seguida, escolha **Referências** no menu de atalho.
 
-    2.  Na caixa de diálogo Propriedades do Projeto RooterLib, expanda **Propriedades Comuns** e escolha **Estrutura e Referências**.
+   2.  Na caixa de diálogo **Propriedades do Projeto RooterLib**, expanda **Propriedades Comuns** e escolha **Estrutura e Referências**.
 
-    3.  Escolha **Adicionar nova referência...**
+   3.  Escolha **Adicionar Nova Referência**
 
-    4.  Na caixa de diálogo **Adicionar Referência**, expanda **Solução** e, em seguida, escolha **Projetos**. Então selecione o item **RouterLib**.
+   4.  Na caixa de diálogo **Adicionar Referência**, expanda **Solução** e, em seguida, escolha **Projetos**. Então selecione o item **RouterLib**.
 
-2.  Inclua o arquivo de cabeçalho RooterLib em **unittest1.cpp**.
+2. Inclua o arquivo de cabeçalho RooterLib em *unittest1.cpp*.
 
-    1.  Abra **unittest1.cpp**.
+   1.  Abra *unittest1.cpp*.
 
-    2.  Adicione esse código abaixo da linha `#include "CppUnitTest.h"`:
+   2.  Adicione esse código abaixo da linha `#include "CppUnitTest.h"`:
 
-        ```cpp
-        #include "..\RooterLib\RooterLib.h"
-        ```
+       ```cpp
+       #include "..\RooterLib\RooterLib.h"
+       ```
 
-3.  Adicione um teste que use a função importada. Adicione o seguinte código a **unittest1.cpp**:
+3. Adicione um teste que use a função importada. Adicione o seguinte código a *unittest1.cpp*:
 
-    ```
-    TEST_METHOD(BasicTest)
-    {
-        CRooterLib rooter;
-        Assert::AreEqual(
-            // Expected value:
-            0.0,
-            // Actual value:
-            rooter.SquareRoot(0.0),
-            // Tolerance:
-            0.01,
-            // Message:
-            L"Basic test failed",
-            // Line number - used if there is no PDB file:
-            LINE_INFO());
-    }
+   ```cpp
+   TEST_METHOD(BasicTest)
+   {
+       CRooterLib rooter;
+       Assert::AreEqual(
+           // Expected value:
+           0.0,
+           // Actual value:
+           rooter.SquareRoot(0.0),
+           // Tolerance:
+           0.01,
+           // Message:
+           L"Basic test failed",
+           // Line number - used if there is no PDB file:
+           LINE_INFO());
+   }
+   ```
 
-    ```
+4. Compile a solução.
 
-4.  Compile a solução.
+    O novo teste é exibido no **Gerenciador de Testes**, no nó **Não Executar Testes**.
 
-     O novo teste é exibido no Gerenciador de Testes, no nó **Não Executar Testes**.
+5. No **Gerenciador de Testes**, escolha **Executar Todos**.
 
-5.  No Gerenciador de Testes, escolha **Executar Todos**.
+    ![Êxito no Teste básico](../test/media/ute_cpp_testexplorer_basictest.png)
 
-     ![Teste básico aprovado](../test/media/ute_cpp_testexplorer_basictest.png "UTE_Cpp_TestExplorer_BasicTest")
-
- Você configurou o teste e os projetos de código, além de ter verificado que pode executar testes que executam funções no projeto de código. Agora, você pode começar a escrever testes e códigos reais.
+   Você configurou o teste e os projetos de código, além de ter verificado que pode executar testes que executam funções no projeto de código. Agora, você pode começar a escrever testes e códigos reais.
 
 ##  <a name="Iteratively_augment_the_tests_and_make_them_pass"></a> Aumentar iterativamente os testes e fazer com que sejam aprovados
 
@@ -201,16 +202,16 @@ Este tópico descreve uma maneira de criar testes de unidade para uma DLL do C++
     >
     > Quando os usuários alterarem os respectivos requisitos, desabilite os testes que não estejam mais corretos. Escreva novos testes e faça-os funcionar, um por vez, da mesma maneira incremental.
 
-2.  No Gerenciador de Testes, escolha **Executar Todos**.
+2.  No **Gerenciador de Testes**, escolha **Executar Todos**.
 
 3.  O teste falhará.
 
-     ![Falha em RangeTest](../test/media/ute_cpp_testexplorer_rangetest_fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")
+     ![Falha de RangeTest](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
 
     > [!TIP]
     > Verifique se os testes falham imediatamente após escrevê-los. Isso ajuda a impedir a facilidade de errar ao escrever um teste que nunca falha.
 
-4.  Aprimore o código sob teste para que o novo teste seja aprovado. Adicione o seguinte ao **RooterLib.cpp**:
+4.  Aprimore o código sob teste para que o novo teste seja aprovado. Adicione o seguinte ao *RooterLib.cpp*:
 
     ```cpp
     #include <math.h>
@@ -231,82 +232,82 @@ Este tópico descreve uma maneira de criar testes de unidade para uma DLL do C++
 
     ```
 
-5.  Compile a solução e, no Gerenciador de Testes, escolha **Executar Todos**.
+5.  Compile a solução e, no **Gerenciador de Testes**, escolha **Executar Todos**.
 
      Ambos os testes são aprovados.
 
 > [!TIP]
->  Desenvolva o código adicionando testes, um de cada vez. Verifique se todos os testes passaram após cada iteração.
+> Desenvolva o código adicionando testes, um de cada vez. Verifique se todos os testes passaram após cada iteração.
+
 
 ##  <a name="Debug_a_failing_test"></a> Depurar um teste que falhou
 
-1.  Adicionar outro teste a **unittest1.cpp**:
+1. Adicionar outro teste a *unittest1.cpp*:
 
-    ```
-    // Verify that negative inputs throw an exception.
-     TEST_METHOD(NegativeRangeTest)
-     {
-       wchar_t message[200];
-       CRooterLib rooter;
-       for (double v = -0.1; v > -3.0; v = v - 0.5)
-       {
-         try
-         {
-           // Should raise an exception:
-           double result = rooter.SquareRoot(v);
-
-           swprintf_s(message, L"No exception for input %g", v);
-           Assert::Fail(message, LINE_INFO());
-         }
-         catch (std::out_of_range ex)
-         {
-           continue; // Correct exception.
-         }
-         catch (...)
-         {
-           swprintf_s(message, L"Incorrect exception for %g", v);
-           Assert::Fail(message, LINE_INFO());
-         }
-       }
-    };
-
-    ```
-
-2.  No Gerenciador de Testes, escolha **Executar Todos**.
-
-     O teste falhará. Escolha o nome do teste no Gerenciador de Testes. A asserção com falha é realçada. A mensagem de falha fica visível no painel de detalhes do Gerenciador de Testes.
-
-     ![Falha em NegativeRangeTests](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")
-
-3.  Para ver o motivo da falha do teste, percorra a função:
-
-    1.  Defina o ponto de interrupção no início da função `SquareRoot`.
-
-    2.  No menu de atalho do teste com falha, escolha **Depurar Testes Selecionados**.
-
-         Quando a execução for interrompida no ponto de interrupção, percorra o código.
-
-    3.  Adicione código ao **RooterLib.cpp** para capturar a exceção:
-
-        ```
-        #include <stdexcept>
-        ...
-        double CRooterLib::SquareRoot(double v)
+   ```cpp
+   // Verify that negative inputs throw an exception.
+    TEST_METHOD(NegativeRangeTest)
+    {
+      wchar_t message[200];
+      CRooterLib rooter;
+      for (double v = -0.1; v > -3.0; v = v - 0.5)
+      {
+        try
         {
-            //Validate the input parameter:
-            if (v < 0.0)
-            {
-              throw std::out_of_range("Can't do square roots of negatives");
-            }
-        ...
+          // Should raise an exception:
+          double result = rooter.SquareRoot(v);
 
-        ```
+          swprintf_s(message, L"No exception for input %g", v);
+          Assert::Fail(message, LINE_INFO());
+        }
+        catch (std::out_of_range ex)
+        {
+          continue; // Correct exception.
+        }
+        catch (...)
+        {
+          swprintf_s(message, L"Incorrect exception for %g", v);
+          Assert::Fail(message, LINE_INFO());
+        }
+      }
+   };
+   ```
 
-    1.  No Gerenciador de Testes, escolha **Executar Tudo** para testar o método corrigido e ter certeza de que você não introduziu uma regressão.
+2. No **Gerenciador de Testes**, escolha **Executar Todos**.
 
- Todos os testes agora foram aprovados.
+    O teste falhará. Escolha o nome do teste no **Gerenciador de Testes**. A asserção com falha é realçada. A mensagem de falha fica visível no painel de detalhes do **Gerenciador de Testes**.
 
- ![Todos os testes foram aprovados](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")
+    ![Falha de NegativeRangeTests](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
+
+3. Para ver o motivo da falha do teste, percorra a função:
+
+   1.  Defina o ponto de interrupção no início da função `SquareRoot`.
+
+   2.  No menu de atalho do teste com falha, escolha **Depurar Testes Selecionados**.
+
+        Quando a execução for interrompida no ponto de interrupção, percorra o código.
+
+   3.  Adicione código ao *RooterLib.cpp* para capturar a exceção:
+
+       ```cpp
+       #include <stdexcept>
+       ...
+       double CRooterLib::SquareRoot(double v)
+       {
+           //Validate the input parameter:
+           if (v < 0.0)
+           {
+             throw std::out_of_range("Can't do square roots of negatives");
+           }
+       ...
+
+       ```
+
+   1.  No **Gerenciador de Testes**, escolha **Executar Tudo** para testar o método corrigido e ter certeza de que você não introduziu uma regressão.
+
+   Todos os testes agora foram aprovados.
+
+   ![Todos os testes serão aprovados](../test/media/ute_ult_alltestspass.png)
 
 ##  <a name="Refactor_the_code_without_changing_tests"></a> Refatorar o código sem alterar os testes
 

@@ -17,83 +17,84 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3b6b75deb576e5cb4e23975e80428433fbbc143a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b5701044e20f2122199d9d0ca5558e453e6e5f72
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906020"
 ---
 # <a name="visual-studio-sdk"></a>SDK do Visual Studio
-O SDK do Visual Studio ajuda você a ampliar os recursos do Visual Studio ou integrar novos recursos do Visual Studio. Você pode distribuir suas extensões a outros usuários, bem como para o Visual Studio Marketplace. A seguir está algumas das maneiras em que você pode estender o Visual Studio:  
+O SDK do Visual Studio ajuda você a estender os recursos do Visual Studio ou integrar novos recursos no Visual Studio. Você pode distribuir suas extensões para outros usuários, bem como o Visual Studio Marketplace. Seguem algumas das maneiras em que você pode estender o Visual Studio:  
   
--   Adicionar comandos, botões, menus e outros elementos de interface do usuário para o IDE  
+- Adicionar comandos, botões, menus e outros elementos de interface do usuário para o IDE  
   
--   Adicionar janelas de ferramenta para a nova funcionalidade  
+- Adicionar janelas de ferramentas para a nova funcionalidade  
   
--   Estender o IntelliSense para um determinado idioma ou fornecem IntelliSense para novas linguagens de programação  
+- Estender o IntelliSense para um determinado idioma, ou fornecer o IntelliSense para novas linguagens de programação  
   
--   Use lâmpadas para fornecer dicas e sugestões para ajudam os desenvolvedores a escrever código melhor  
+- Usar as lâmpadas para fornecer dicas e sugestões para ajudam os desenvolvedores escrevam códigos melhores  
   
--   Habilitar o suporte para um novo idioma  
+- Habilitar o suporte para um novo idioma  
   
--   Adicionar um tipo de projeto personalizados  
+- Adicionar um tipo de projeto personalizado  
   
--   Alcançar milhões de desenvolvedores por meio do Visual Studio Marketplace  
+- Alcance milhões de desenvolvedores por meio do Visual Studio Marketplace  
   
- Se você nunca escreveu uma extensão do Visual Studio antes, você deve encontrar mais informações sobre esses recursos e [começando a desenvolver extensões do Visual Studio](../extensibility/starting-to-develop-visual-studio-extensions.md).  
+  Se você nunca escreveu uma extensão do Visual Studio antes, você deve encontrar mais informações sobre esses recursos e no [começando a desenvolver extensões do Visual Studio](../extensibility/starting-to-develop-visual-studio-extensions.md).  
   
-## <a name="installing-the-visual-studio-sdk"></a>Instalar o SDK do Visual Studio  
- O SDK do Visual Studio é um recurso opcional na instalação do Visual Studio. Você também pode instalar o SDK do VS posteriormente. Para obter mais informações, consulte [instalar o SDK do Visual Studio](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="install-the-visual-studio-sdk"></a>Instalar o SDK do Visual Studio  
+ O SDK do Visual Studio é um recurso opcional na instalação do Visual Studio. Você também pode instalar o SDK do VS mais tarde. Para obter mais informações, consulte [instalar o SDK do Visual Studio](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="whats-new-in-the-visual-studio-2017-sdk"></a>Novidades no SDK do Visual Studio de 2017  
- O SDK do Visual Studio tem alguns recursos novos, como o formato do VSIX v3, bem como alterações que podem exigir que você atualize sua extensão de quebra. Para obter mais informações, consulte [Novidades no SDK do Visual Studio 2017](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md).  
+## <a name="whats-new-in-the-visual-studio-2017-sdk"></a>O que há de novo no SDK do Visual Studio 2017  
+ O SDK do Visual Studio tem alguns recursos novos, como o formato do VSIX v3, bem como alterações da falha, que pode exigir que você atualize sua extensão. Para obter mais informações, consulte [o que há de novo no SDK do Visual Studio 2017](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md).  
   
 ## <a name="visual-studio-user-experience-guidelines"></a>Diretrizes de experiência de usuário do Visual Studio  
- Obter ótimas dicas para projetar a interface do usuário para a extensão no [diretrizes de experiência de usuário do Visual Studio](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).  
+ Obtenha ótimas dicas para projetar a interface do usuário para a sua extensão em [diretrizes de experiência de usuário do Visual Studio](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).  
   
- Você também pode aprender a fazer sua extensão de aparência excelente em dispositivos DPI alto com nosso [abordar problemas de DPI](../extensibility/addressing-dpi-issues2.md) tópico.  
+ Você também pode aprender como fazer sua extensão combinam bem com dispositivos de DPI alto com o [endereço DPI emite](../extensibility/addressing-dpi-issues2.md) artigo.  
   
- Aproveitar o [serviço de imagem e catálogo](../extensibility/image-service-and-catalog.md) para gerenciamento de imagem grande e suporte a alto DPI e temas.  
+ Aproveitar o [service e o catálogo de imagens](../extensibility/image-service-and-catalog.md) para gerenciamento de imagem grande e suporte para DPI alto e temas.  
   
-## <a name="finding-and-installing-existing-visual-studio-extensions"></a>Localizar e instalar extensões do Visual Studio existentes  
- Você pode encontrar as extensões do Visual Studio no **extensões e atualizações** caixa de diálogo no **ferramentas** menu. Para obter mais informações, consulte [Localizando e usando extensões do Visual Studio](../ide/finding-and-using-visual-studio-extensions.md). Você também pode encontrar extensões no [Visual Studio Marketplace](https://marketplace.visualstudio.com/)  
+## <a name="find-and-install-existing-visual-studio-extensions"></a>Localizar e instalar extensões do Visual Studio existentes  
+ Você pode encontrar extensões do Visual Studio na **extensões e atualizações** caixa de diálogo na **ferramentas** menu. Para obter mais informações, consulte [localizar e usar extensões do Visual Studio](../ide/finding-and-using-visual-studio-extensions.md). Você também pode encontrar extensões no [Visual Studio marketplace](https://marketplace.visualstudio.com/)  
   
-## <a name="visual-studio-sdk-reference"></a>Referência SDK do Visual Studio  
- Você pode encontrar a referência de API do SDK do Visual Studio em [referência de SDK do Visual Studio](../extensibility/visual-studio-sdk-reference.md).  
+## <a name="visual-studio-sdk-reference"></a>Referência do Visual Studio SDK  
+ Você pode encontrar a referência da API do SDK do Visual Studio em [referência de SDK do Visual Studio](../extensibility/visual-studio-sdk-reference.md).  
   
-## <a name="visual-studio-sdk-samples"></a>Amostras do Visual Studio SDK  
- Você pode encontrar exemplos de código aberto de extensões do SDK do VS no GitHub em [exemplos do Visual Studio](https://aka.ms/vs2015sdksamples). Este repositório GitHub contém exemplos que ilustram diversos recursos extensíveis no Visual Studio.  
+## <a name="visual-studio-sdk-samples"></a>Exemplos do Visual Studio SDK  
+ Você pode encontrar exemplos de código-fonte aberto de extensões do SDK do VS no GitHub em [exemplos do Visual Studio](https://aka.ms/vs2015sdksamples). Este repositório GitHub contém exemplos que ilustram diversos recursos extensíveis no Visual Studio.  
   
-## <a name="other-visual-studio-sdk-resources"></a>Outros recursos SDK do Visual Studio  
- Se você tiver dúvidas sobre o VSSDK ou compartilhar suas experiências desenvolver extensões, você pode usar o [Fórum de extensibilidade do Visual Studio](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx) ou [ExtendVS Gitter Chatroom](https://gitter.im/Microsoft/extendvs).  
+## <a name="other-visual-studio-sdk-resources"></a>Outros recursos do SDK do Visual Studio  
+ Se você tiver dúvidas sobre VSSDK ou deseja compartilhar suas experiências de desenvolvimento de extensões, você pode usar o [Visual Studio Extensibility Forum](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx) ou o [ExtendVS Gitter Chatroom](https://gitter.im/Microsoft/extendvs).  
   
- Você pode encontrar mais informações no [Arcana VSX blog](http://blogs.msdn.com/b/vsx/) e uma série de blogs gravados pelo Microsoft MVPs:  
+ Você pode encontrar mais informações na [no blog do VSX Arcana](https://blogs.msdn.microsoft.com/vsx/) e uma série de blogs escritos por MVPs da Microsoft:  
   
--   [Extensões do Visual Studio Favoritos](http://geekswithblogs.net/sdorman/archive/2014/10/05/favorite-visual-studio-extensions.aspx)  
+-   [Extensões do Visual Studio favoritas](http://geekswithblogs.net/sdorman/archive/2014/10/05/favorite-visual-studio-extensions.aspx)  
   
 -   [Extensibilidade do Visual Studio](http://www.visualstudioextensibility.com/overview/vs/)  
   
--   [Extensão do Visual Studio](http://blog.slaks.net/2013-10-18/extending-visual-studio-part-1-getting-started/)  
+-   [Estendendo o Visual Studio](http://blog.slaks.net/2013-10-18/extending-visual-studio-part-1-getting-started/)  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando uma extensão com um comando de Menu](../extensibility/creating-an-extension-with-a-menu-command.md)   
- [Como: migrar projetos de extensibilidade para o Visual Studio de 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)   
- [Perguntas Frequentes: Convertendo suplementos para extensões de VSPackage](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)   
- [Gerenciamento de vários Threads em código gerenciado](../extensibility/managing-multiple-threads-in-managed-code.md)   
- [Comandos e Menus estendendo](../extensibility/extending-menus-and-commands.md)   
- [Adicionando comandos em barras de ferramentas](../extensibility/adding-commands-to-toolbars.md)   
- [Estender e personalizar as janelas de ferramentas](../extensibility/extending-and-customizing-tool-windows.md)   
- [Editor e extensões de serviço de linguagem](../extensibility/editor-and-language-service-extensions.md)   
- [Estendendo projetos](../extensibility/extending-projects.md)   
- [Opções e configurações de usuário de extensão](../extensibility/extending-user-settings-and-options.md)   
- [Criando modelos de Item e projeto personalizados](../extensibility/creating-custom-project-and-item-templates.md)   
- [Estendendo propriedades e a janela de propriedade](../extensibility/extending-properties-and-the-property-window.md)   
- [Estendendo a outras partes do Visual Studio](../extensibility/extending-other-parts-of-visual-studio.md)   
- [Usando e fornecer serviços](../extensibility/using-and-providing-services.md)   
- [Gerenciando VSPackages](../extensibility/managing-vspackages.md)   
- [Visual Studio Isolated Shell](../extensibility/visual-studio-isolated-shell.md)   
- [Envio de extensões do Visual Studio](../extensibility/shipping-visual-studio-extensions.md)   
- [Dentro do Visual Studio SDK](../extensibility/internals/inside-the-visual-studio-sdk.md)   
+ [Criar uma extensão com um comando de menu](../extensibility/creating-an-extension-with-a-menu-command.md)   
+ [Como: migrar projetos de extensibilidade para o Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)   
+ [Perguntas Frequentes: Convertendo suplementos em extensões VSPackage](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)   
+ [Gerenciar vários threads em código gerenciado](../extensibility/managing-multiple-threads-in-managed-code.md)   
+ [Ampliar menus e comandos](../extensibility/extending-menus-and-commands.md)   
+ [Adicionar comandos em barras de ferramentas](../extensibility/adding-commands-to-toolbars.md)   
+ [Estender e personalizar janelas de ferramentas](../extensibility/extending-and-customizing-tool-windows.md)   
+ [Extensões de serviços do Editor e linguagem](../extensibility/editor-and-language-service-extensions.md)   
+ [Estender projetos](../extensibility/extending-projects.md)   
+ [Estender opções e configurações de usuário](../extensibility/extending-user-settings-and-options.md)   
+ [Criar modelos personalizados de projeto e de item](../extensibility/creating-custom-project-and-item-templates.md)   
+ [Estender propriedades e a janela de propriedade](../extensibility/extending-properties-and-the-property-window.md)   
+ [Estender outras partes do Visual Studio](../extensibility/extending-other-parts-of-visual-studio.md)   
+ [Uso e o fornecimento de serviços](../extensibility/using-and-providing-services.md)   
+ [Gerenciar VSPackages](../extensibility/managing-vspackages.md)   
+ [Shell do Visual Studio isolado](../extensibility/visual-studio-isolated-shell.md)   
+ [Enviar extensões do Visual Studio](../extensibility/shipping-visual-studio-extensions.md)   
+ [Dentro do SDK do Visual Studio](../extensibility/internals/inside-the-visual-studio-sdk.md)   
  [Suporte para o SDK do Visual Studio](../extensibility/support-for-the-visual-studio-sdk.md)   
  [Arquivo morto](../extensibility/archive.md)   
- [Referência do SDK do Visual Studio](../extensibility/visual-studio-sdk-reference.md)
+ [Referência do Visual Studio SDK](../extensibility/visual-studio-sdk-reference.md)

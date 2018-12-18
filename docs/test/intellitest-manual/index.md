@@ -1,6 +1,7 @@
 ---
-title: Manual de referência de IntelliTest | Ferramentas de teste do Microsoft Developer | Microsoft Docs
+title: Manual de referência de IntelliTest | Ferramentas de teste do Desenvolvedor Microsoft
 ms.date: 05/02/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,11 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 581533a92807a009696ec1cb4fb715d7272c3897
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 982d54bec30e164a1b2017c7aa8a221ee56e19d0
+ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51000592"
 ---
 # <a name="intellitest-reference-manual"></a>Manual de referência do IntelliTest
 
@@ -125,4 +127,4 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="got-feedback"></a>Recebeu comentários?
 
-Poste suas ideias e solicitações de recursos no  **[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)**.
+Poste suas ideias e solicitações de recursos no [Developer Community](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).

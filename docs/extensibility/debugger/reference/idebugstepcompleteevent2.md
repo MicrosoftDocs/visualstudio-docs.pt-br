@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31121307"
 ---
 # <a name="idebugstepcompleteevent2"></a>IDebugStepCompleteEvent2
 Essa interface é enviada pelo mecanismo de depuração (DE) para o Gerenciador de sessão de depuração (SDM) quando o programa que está sendo depurado conclui uma etapa em, uma etapa por ou uma etapa de fora de uma linha do código-fonte, declaração ou instrução.  

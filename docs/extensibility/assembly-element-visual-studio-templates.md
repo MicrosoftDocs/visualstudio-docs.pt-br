@@ -16,13 +16,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 97e6209fdf446d88ed79ef741c3584b2bc4f5602
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 195faf23ecb2fca019b4948b3150ab6f9c00f5ec
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39155458"
 ---
-# <a name="assembly-element-visual-studio-templates"></a>Elemento de assembly (modelos do Visual Studio)
+# <a name="assembly-element-visual-studio-templates"></a>Elemento Assembly (modelos do Visual Studio)
 Especifica informações sobre um assembly, que usa o modelo para adicionar uma referência de assembly para projetos.  
   
  \<VSTemplate >  
@@ -50,12 +51,12 @@ Especifica informações sobre um assembly, que usa o modelo para adicionar uma 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[Referência](../extensibility/reference-element-visual-studio-templates.md)|Especifica a referência de assembly para adicionar quando o item é adicionado a um projeto.|  
+|[Referência](../extensibility/reference-element-visual-studio-templates.md)|Especifica a referência de assembly a ser adicionada quando o item for adicionado a um projeto.|  
   
 ## <a name="text-value"></a>Valor de texto  
  Um valor de texto é obrigatório.  
   
- Esse texto Especifica o assembly a ser adicionado a um projeto quando o modelo de item é instanciado. Esse nome de assembly deve ser especificado em uma das seguintes maneiras:  
+ Esse texto Especifica o assembly a ser adicionado a um projeto quando o modelo de item é instanciado. O nome do assembly deve ser especificado em uma das seguintes maneiras:  
   
 -   Como um nome completo do assembly. Por exemplo:  
   
@@ -74,10 +75,10 @@ Especifica informações sobre um assembly, que usa o modelo para adicionar uma 
 ## <a name="remarks"></a>Comentários  
  O `Assembly` é um elemento filho obrigatório de `Reference`.  
   
- O `Reference`, `References,` e `Assembly` elementos só podem ser usados em arquivos. vstemplate que têm um `Type` valor de atributo `Item`.  
+ O `Reference`, `References,` e `Assembly` elementos só podem ser usados na *. vstemplate* arquivos que têm uma `Type` valor de atributo `Item`.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir ilustra o `TemplateContent` elemento de um modelo de item. Esse XML adiciona referências aos assemblies System. dll e System.Data.dll.  
+ O exemplo a seguir ilustra o `TemplateContent` elemento de um modelo de item. Esse XML adiciona as referências para o *System. dll* e *dll* assemblies.  
   
 ```  
 <TemplateContent>  
@@ -99,4 +100,4 @@ Especifica informações sobre um assembly, que usa o modelo para adicionar uma 
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)
+ [Criar modelos de projeto e de item](../ide/creating-project-and-item-templates.md)

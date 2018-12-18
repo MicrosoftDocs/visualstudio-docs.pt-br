@@ -1,41 +1,42 @@
 ---
-title: "Interfaces auxiliares do host inteligente de implementação | Microsoft Docs"
-ms.custom: 
+title: Interfaces auxiliares do host inteligente de implementação | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Smart Host Helper Interfaces, implementing
 ms.assetid: b9c44246-4d4d-469e-91be-00c8f5796fa5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ba571f6ad66855c44902e06467889e2cae5b4555
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 016e2a0641772992c9c3e6f423e105c42ae20ff1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909816"
 ---
 # <a name="implementing-smart-host-helper-interfaces"></a>Interfaces auxiliares do host inteligente de implementação
 A [Interface IDebugDocumentHelper](../winscript/reference/idebugdocumenthelper-interface.md) simplifica a tarefa de criação de um host inteligente para depuração ativa, porque ela fornece implementações de várias interfaces necessárias para hospedagem inteligente.  
   
  Para ser um host inteligente usando `IDebugDocumentHelper`, um aplicativo host deve executar apenas três ações:  
   
-1.  `CoCreate` o gerenciador de depuração do processo e usar a [Interface IProcessDebugManager](../winscript/reference/iprocessdebugmanager-interface.md) para adicionar o aplicativo à lista de aplicativos depuráveis.  
+1. `CoCreate` o gerenciador de depuração do processo e usar a [Interface IProcessDebugManager](../winscript/reference/iprocessdebugmanager-interface.md) para adicionar o aplicativo à lista de aplicativos depuráveis.  
   
-2.  Criar um auxiliar de documentos de depuração para cada objeto de script, usando o método [IProcessDebugManager::CreateDebugDocumentHelper](../winscript/reference/iprocessdebugmanager-createdebugdocumenthelper.md). Verifique se o nome do documento, documento pai, texto e blocos de script estão definidos.  
+2. Criar um auxiliar de documentos de depuração para cada objeto de script, usando o método [IProcessDebugManager::CreateDebugDocumentHelper](../winscript/reference/iprocessdebugmanager-createdebugdocumenthelper.md). Verifique se o nome do documento, documento pai, texto e blocos de script estão definidos.  
   
-3.  Implemente a [Interface IActiveScriptSiteDebug](../winscript/reference/iactivescriptsitedebug-interface.md) em seu objeto que implementa a interface [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) (que é necessária para script ativo). O único método não trivial na interface `IActiveScriptSiteDebug` simplesmente delega para o auxiliar.  
+3. Implemente a [Interface IActiveScriptSiteDebug](../winscript/reference/iactivescriptsitedebug-interface.md) em seu objeto que implementa a interface [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) (que é necessária para script ativo). O único método não trivial na interface `IActiveScriptSiteDebug` simplesmente delega para o auxiliar.  
   
- Opcionalmente, o host poderá implementar a [Interface IDebugDocumentHost](../winscript/reference/idebugdocumenthost-interface.md) se precisar de mais controle sobre as cores de sintaxe, a criação de contexto do documento e outras funcionalidades estendidas.  
+   Opcionalmente, o host poderá implementar a [Interface IDebugDocumentHost](../winscript/reference/idebugdocumenthost-interface.md) se precisar de mais controle sobre as cores de sintaxe, a criação de contexto do documento e outras funcionalidades estendidas.  
   
- A principal limitação no auxiliar de host inteligente é que ele pode manipular apenas documentos cujo conteúdo é alterado ou reduzido depois de ser adicionado (embora documentos possam expandir). Para muitos hosts inteligentes, no entanto, a funcionalidade que ele fornece é exatamente o que é necessário.  
+   A principal limitação no auxiliar de host inteligente é que ele pode manipular apenas documentos cujo conteúdo é alterado ou reduzido depois de ser adicionado (embora documentos possam expandir). Para muitos hosts inteligentes, no entanto, a funcionalidade que ele fornece é exatamente o que é necessário.  
   
- As seções a seguir explicam cada etapa em mais detalhes.  
+   As seções a seguir explicam cada etapa em mais detalhes.  
   
 ## <a name="create-an-application-object"></a>Criar um objeto de aplicativo  
  Antes que o auxiliar de host inteligente possa ser usado, é necessário criar um objeto de [Interface IDebugApplication](../winscript/reference/idebugapplication-interface.md) para representar seu aplicativo no depurador.  

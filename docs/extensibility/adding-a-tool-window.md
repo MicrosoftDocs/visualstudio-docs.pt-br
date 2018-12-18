@@ -1,5 +1,5 @@
 ---
-title: Adicionar uma janela de ferramentas | Microsoft Docs
+title: Adição de uma janela de ferramentas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,54 +14,55 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: db06bebd700fa229685d6b79ffcfb014ef301994
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 550e483ec2a8cd4b4126e4c0838dc8d2870af59c
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39151925"
 ---
-# <a name="adding-a-tool-window"></a>Adicionar uma janela de ferramenta
-Este passo a passo, você aprenderá como criar uma janela de ferramenta e integrá-lo no Visual Studio das seguintes maneiras:  
+# <a name="add-a-tool-window"></a>Adicionar uma janela de ferramentas
+Neste passo a passo, você aprenderá como criar uma janela de ferramenta e integrá-la no Visual Studio das seguintes maneiras:  
   
 -   Adicione um controle para a janela da ferramenta.  
   
--   Adicione uma barra de ferramentas para uma janela de ferramenta.  
+-   Adicione uma barra de ferramentas para uma janela de ferramentas.  
   
--   Adicione um comando na barra de ferramentas.  
+-   Adicione um comando à barra de ferramentas.  
   
 -   Implemente os comandos.  
   
--   Defina a posição padrão para a janela da ferramenta.  
+-   Defina a posição padrão da janela de ferramentas.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
- A partir do Visual Studio 2015, você não instalar o SDK do Visual Studio no Centro de download. Ele está incluído como um recurso opcional na instalação do Visual Studio. Você também pode instalar o SDK do VS posteriormente. Para obter mais informações, consulte [instalar o SDK do Visual Studio](../extensibility/installing-the-visual-studio-sdk.md).  
+ A partir do Visual Studio 2015, você não instale o SDK do Visual Studio no Centro de download. Ele é incluído como um recurso opcional na instalação do Visual Studio. Você também pode instalar o SDK do VS mais tarde. Para obter mais informações, consulte [instalar o SDK do Visual Studio](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-tool-window"></a>Criar uma janela de ferramenta  
+## <a name="create-a-tool-window"></a>Criar uma janela de ferramentas  
   
 1.  Crie um projeto chamado **FirstToolWin** usando o modelo VSIX e adicionar um modelo de item da janela de ferramenta personalizada denominado **FirstToolWindow**.  
   
     > [!NOTE]
-    >  Para obter mais informações sobre como criar uma extensão com uma janela da ferramenta, consulte [criando uma extensão com uma janela de ferramenta](../extensibility/creating-an-extension-with-a-tool-window.md).  
+    >  Para obter mais informações sobre como criar uma extensão com uma janela de ferramentas, consulte [criar uma extensão com uma janela de ferramentas](../extensibility/creating-an-extension-with-a-tool-window.md).  
   
-## <a name="add-a-control-to-the-tool-window"></a>Adicionar um controle para a janela de ferramenta  
+## <a name="add-a-control-to-the-tool-window"></a>Adicionar um controle para a janela da ferramenta  
   
-1.  Remova o padrão de controle. Abra FirstToolWindowControl.xaml e exclua o **clique Me!** .  
+1.  Remova o controle padrão. Abra *FirstToolWindowControl.xaml* e exclua o **Click Me!** .  
   
-2.  No **caixa de ferramentas**, expanda o **todos os controles do WPF** seção e arraste o **elemento de mídia** o controle para o **FirstToolWindowControl** formulário. Selecione o controle e, no **propriedades** janela, nomeie esse elemento **mediaElement1**.  
+2.  No **caixa de ferramentas**, expanda o **todos os controles do WPF** seção e arraste o **elemento de mídia** o controle para o **FirstToolWindowControl** formulário. Selecione o controle e, na **propriedades** janela, nomeie esse elemento **mediaElement1**.  
   
-## <a name="add-a-toolbar-to-the-tool-window"></a>Adicionar uma barra de ferramentas para a janela de ferramenta  
- Adicionando uma barra de ferramentas da seguinte maneira, você garante que seus gradientes e cores são consistentes com o restante do IDE.  
+## <a name="add-a-toolbar-to-the-tool-window"></a>Adicionar uma barra de ferramentas para a janela da ferramenta  
+ Adicionando uma barra de ferramentas da seguinte maneira, você garante que seus gradientes e cores sejam consistentes com o restante do IDE.  
   
-1.  Em **Solution Explorer**, abra FirstToolWindowPackage.vsct. O arquivo. VSCT define os elementos de interface (GUI) do usuário gráfica na janela de ferramenta por meio de XML.  
+1.  Na **Gerenciador de soluções**, abra *FirstToolWindowPackage.vsct*. O *VSCT* arquivo define os elementos de (GUI) de interface gráfica do usuário em sua janela de ferramentas por meio de XML.  
   
-2.  No `<Symbols>` seção, localize o `<GuidSymbol>` nó cujo `name` atributo é `guidFirstToolWindowPackageCmdSet`. Adicione os dois seguintes `<IDSymbol>` elementos à lista de `<IDSymbol>` elementos nesse nó para definir uma barra de ferramentas e um grupo de barra de ferramentas.  
+2.  No `<Symbols>` seção, localize o `<GuidSymbol>` nó cujo `name` atributo é `guidFirstToolWindowPackageCmdSet`. Adicione as duas seguintes `<IDSymbol>` elementos à lista de `<IDSymbol>` elementos neste nó para definir uma barra de ferramentas e um grupo de barra de ferramentas.  
   
     ```xml  
     <IDSymbol name="ToolbarID" value="0x1000" />  
     <IDSymbol name="ToolbarGroupID" value="0x1001" />  
     ```  
   
-3.  Imediatamente acima do `<Buttons>` seção, crie um `<Menus>` seção que é semelhante a esta:  
+3.  Logo acima de `<Buttons>` seção, crie um `<Menus>` seção que se parece com isso:  
   
     ```xml  
     <Menus>  
@@ -75,11 +76,11 @@ Este passo a passo, você aprenderá como criar uma janela de ferramenta e integ
     </Menus>  
     ```  
   
-     Há vários tipos diferentes de menu. Esse menu é uma barra de ferramentas em uma janela de ferramenta, definida pelo seu `type` atributo. O `guid` e `id` configurações compõem a ID totalmente qualificada da barra de ferramentas. Normalmente, o `<Parent>` de um menu é o grupo que contém. No entanto, uma barra de ferramentas é definida como seu próprio pai. Portanto, o mesmo identificador é usado para o `<Menu>` e `<Parent>` elementos. O `priority` atributo é apenas ' 0'.  
+     Há vários tipos diferentes de menu. Esse menu é uma barra de ferramentas em uma janela de ferramenta, definida pela sua `type` atributo. O `guid` e `id` configurações compõem a ID totalmente qualificada da barra de ferramentas. Normalmente, o `<Parent>` de um menu é o grupo que contém. No entanto, uma barra de ferramentas é definida como seu próprio pai. Portanto, o mesmo identificador é usado para o `<Menu>` e `<Parent>` elementos. O `priority` atributo é simplesmente ' 0'.  
   
-4.  Barras de ferramentas são semelhantes a menus de várias maneiras. Por exemplo, assim como um menu pode ter grupos de comandos, barras de ferramentas também podem ter grupos. (Em menus, os grupos de comando são separados por linhas horizontais. Na barra de ferramentas, os grupos não estiverem separados por visual divisores.)  
+4.  Barras de ferramentas são semelhantes a menus de várias maneiras. Por exemplo, assim como um menu pode ter grupos de comandos, barras de ferramentas também podem ter grupos. (Em menus, os grupos de comando são separados por linhas horizontais. Na barra de ferramentas, os grupos não são separados por visual divisores.)  
   
-     Adicionar um `<Groups>` seção que contém um `<Group>` elemento. Isso define o grupo cuja ID é declarado no `<Symbols>` seção. Adicionar o `<Groups>` seção logo após o `<Menus>` seção.  
+     Adicionar um `<Groups>` seção que contém um `<Group>` elemento. Isso define o grupo cujo ID declarados no `<Symbols>` seção. Adicione a `<Groups>` seção logo após o `<Menus>` seção.  
   
     ```xml  
     <Groups>  
@@ -89,19 +90,19 @@ Este passo a passo, você aprenderá como criar uma janela de ferramenta e integ
     </Groups>  
     ```  
   
-     Ao definir o pai GUID e ID para o GUID e a ID da barra de ferramentas, você pode adicionar o grupo na barra de ferramentas.  
+     Ao definir o pai GUID e ID como GUID e ID da barra de ferramentas, você pode adicionar o grupo à barra de ferramentas.  
   
-## <a name="add-a-command-to-the-toolbar"></a>Adicionar um comando na barra de ferramentas  
- Adicione um comando que é exibido como um botão na barra de ferramentas.  
+## <a name="add-a-command-to-the-toolbar"></a>Adicionar um comando à barra de ferramentas  
+ Adicione um comando à barra de ferramentas, que é exibida como um botão.  
   
-1.  No `<Symbols>` seção, declare os seguintes elementos IDSymbol logo após a barra de ferramentas e barra de ferramentas declarações de grupo.  
+1.  No `<Symbols>` seção, declare os seguintes elementos IDSymbol logo após a barra de ferramentas e barra de ferramentas de declarações de grupo.  
   
     ```xml  
     <IDSymbol name="cmdidWindowsMedia" value="0x0100" />  
     <IDSymbol name="cmdidWindowsMediaOpen" value="0x132" />  
     ```  
   
-2.  Adicionar um elemento de botão dentro de `<Buttons>` seção. Este elemento será exibido na barra de ferramentas na janela da ferramenta, com um ícone de pesquisa (Lupa).  
+2.  Adicionar um elemento de botão dentro de `<Buttons>` seção. Este elemento será exibido na barra de ferramentas na janela da ferramenta, com um **pesquisa** ícone (Lupa).  
   
     ```xml  
     <Button guid="guidFirstToolWindowPackageCmdSet" id="cmdidWindowsMediaOpen" priority="0x0101" type="Button">  
@@ -114,7 +115,7 @@ Este passo a passo, você aprenderá como criar uma janela de ferramenta e integ
     </Button>  
     ```  
   
-3.  Abra FirstToolWindowCommand.cs e adicione as seguintes linhas na classe logo após os campos existentes.  
+3.  Abra *FirstToolWindowCommand.cs* e adicione as seguintes linhas na classe logo após os campos existentes.  
   
     ```csharp  
     public const string guidFirstToolWindowPackageCmdSet = "00000000-0000-0000-0000-0000";  // get the GUID from the .vsct file  
@@ -125,10 +126,10 @@ Este passo a passo, você aprenderá como criar uma janela de ferramenta e integ
   
      Isso torna os comandos disponíveis no código.  
   
-## <a name="add-a-mediaplayer-property-to-firsttoolwindowcontrol"></a>Adicionar uma propriedade do Media Player para FirstToolWindowControl  
+## <a name="add-a-mediaplayer-property-to-firsttoolwindowcontrol"></a>Adicionar uma propriedade de Media Player para FirstToolWindowControl  
  De manipuladores de eventos para os controles de barra de ferramentas, seu código deve ser capaz de acessar o controle Media Player, que é um filho da classe FirstToolWindowControl.  
   
- Em **Solution Explorer**, FirstToolWindowControl.xaml, clique **Exibir código**e adicione o seguinte código à classe FirstToolWindowControl.  
+ Na **Gerenciador de soluções**, clique com botão direito *FirstToolWindowControl.xaml*, clique em **Exibir código**e adicione o seguinte código à classe FirstToolWindowControl.  
   
 ```csharp  
 public System.Windows.Controls.MediaElement MediaPlayer  
@@ -137,10 +138,10 @@ public System.Windows.Controls.MediaElement MediaPlayer
 }  
 ```  
   
-## <a name="instantiate-the-tool-window-and-toolbar"></a>Criar uma instância de janela de ferramentas e barra de ferramentas  
- Adicionar uma barra de ferramentas e um comando de menu que invoca o **abrir arquivo** caixa de diálogo e executa o arquivo de mídia selecionado.  
+## <a name="instantiate-the-tool-window-and-toolbar"></a>Instanciar a janela de ferramentas e a barra de ferramentas  
+ Adicionar uma barra de ferramentas e um comando de menu que invoca a **abrir arquivo** caixa de diálogo e reproduz o arquivo de mídia selecionado.  
   
-1.  Abra FirstToolWindow.cs e adicione o seguinte `using` instruções.  
+1.  Abra *FirstToolWindow.cs* e adicione o seguinte `using` instruções.  
   
     ```csharp  
     using System.ComponentModel.Design;  
@@ -154,7 +155,7 @@ public System.Windows.Controls.MediaElement MediaPlayer
     public FirstToolWindowControl control;  
     ```  
   
-3.  No final do construtor, defina essa variável de controle para o controle recém-criado.  
+3.  No final do construtor, defina essa variável de controle ao controle recém-criado.  
   
     ```csharp  
     control = new FirstToolWindowControl();   
@@ -169,7 +170,7 @@ public System.Windows.Controls.MediaElement MediaPlayer
     this.ToolBarLocation = (int)VSTWT_LOCATION.VSTWT_TOP;  
     ```  
   
-5.  Neste ponto, o construtor FirstToolWindow deve ser assim:  
+5.  Neste momento, o construtor FirstToolWindow deve ser assim:  
   
     ```csharp  
     public FirstToolWindow() : base(null)  
@@ -203,9 +204,9 @@ public System.Windows.Controls.MediaElement MediaPlayer
     mcs.AddCommand(menuItem);  
     ```  
   
-#### <a name="to-implement-a-menu-command-in-the-tool-window"></a>Para implementar um comando de menu na janela de ferramenta  
+### <a name="to-implement-a-menu-command-in-the-tool-window"></a>Para implementar um comando de menu na janela da ferramenta  
   
-1.  Na classe FirstToolWindowCommand, adicione um método ButtonHandler que invoca o **abrir arquivo** caixa de diálogo. Quando um arquivo tiver sido selecionado, ele executa o arquivo de mídia.  
+1.  Na classe FirstToolWindowCommand, adicione um método ButtonHandler que chama o **abrir arquivo** caixa de diálogo. Quando um arquivo tiver sido selecionado, ele executa o arquivo de mídia.  
   
 2.  Na classe FirstToolWindowCommand, adicione uma referência privada para a janela de FirstToolWindow que é criada no método FindToolWindow().  
   
@@ -213,7 +214,7 @@ public System.Windows.Controls.MediaElement MediaPlayer
     private FirstToolWindow window;  
     ```  
   
-3.  Alterar o método ShowToolWindow() para definir a janela definida acima (de forma que o manipulador de comandos ButtonHandler pode acessar o controle de janela. Aqui está o método ShowToolWindow() complete.  
+3.  Alterar o método ShowToolWindow() para definir a janela definida acima (de modo que o manipulador de comandos ButtonHandler pode acessar o controle de janela. Aqui está o método ShowToolWindow() completo.  
   
     ```csharp  
     private void ShowToolWindow(object sender, EventArgs e)  
@@ -236,7 +237,7 @@ public System.Windows.Controls.MediaElement MediaPlayer
     }  
     ```  
   
-4.  Adicione o método ButtonHandler. Ele cria uma OpenFileDialog para o usuário especificar o arquivo de mídia para executar, e, em seguida, executa o arquivo selecionado.  
+4.  Adicione o método ButtonHandler. Ele cria uma OpenFileDialog para o usuário especifique o arquivo de mídia para executar, e reproduz o arquivo selecionado.  
   
     ```csharp  
     private void ButtonHandler(object sender, EventArgs arguments)  
@@ -251,9 +252,9 @@ public System.Windows.Controls.MediaElement MediaPlayer
     ```  
   
 ## <a name="set-the-default-position-for-the-tool-window"></a>Definir a posição padrão da janela de ferramentas  
- Em seguida, especifique um local padrão no IDE para a janela da ferramenta. Informações de configuração para a janela da ferramenta estão no arquivo FirstToolWindowPackage.cs.  
+ Em seguida, especifique um local padrão no IDE para a janela da ferramenta. Informações de configuração para a janela da ferramenta estão no *FirstToolWindowPackage.cs* arquivo.  
   
-1.  Em FirstToolWindowPackage.cs, localize o <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> atributo no `FirstToolWindowPackage` classe, que passa o tipo de FirstToolWindow para o construtor. Para especificar uma posição padrão, você deve adicionar mais parâmetros para o construtor do exemplo a seguir.  
+1.  Na *FirstToolWindowPackage.cs*, localizar o <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> atributo o `FirstToolWindowPackage` classe, que passa o tipo de FirstToolWindow para o construtor. Para especificar uma posição padrão, você deve adicionar mais parâmetros para o construtor no exemplo a seguir.  
   
     ```csharp  
     [ProvideToolWindow(typeof(FirstToolWindow),  
@@ -261,22 +262,22 @@ public System.Windows.Controls.MediaElement MediaPlayer
         Window = "3ae79031-e1bc-11d0-8f78-00a0c9110057")]  
     ```  
   
-     O primeiro parâmetro nomeado é `Style` e seu valor é `Tabbed`, que significa que a janela será uma guia em uma janela existente. A posição de encaixe for especificada o `Window` parâmetro, n nesse caso, o GUID do **Gerenciador de soluções**.  
+     É o primeiro parâmetro nomeado `Style` e seu valor é `Tabbed`, que significa que a janela será uma guia em uma janela existente. A posição de encaixe é especificada pelo `Window` parâmetro, n neste caso, o GUID do **Gerenciador de soluções**.  
   
     > [!NOTE]
-    >  Para obter mais informações sobre os tipos de janelas do IDE, consulte <xref:EnvDTE.vsWindowType>.  
+    >  Para obter mais informações sobre os tipos de janelas no IDE, consulte <xref:EnvDTE.vsWindowType>.  
   
-## <a name="testing-the-tool-window"></a>A janela da ferramenta de teste  
+## <a name="test-the-tool-window"></a>A janela de ferramentas de teste  
   
-1.  Pressione F5 para abrir uma nova instância do Visual Studio experimental de compilação.  
+1.  Pressione **F5** para abrir uma nova instância da compilação de experimental do Visual Studio.  
   
-2.  Sobre o **exibição** , aponte para **outras janelas** e, em seguida, clique em **primeira janela da ferramenta**.  
+2.  Sobre o **modo de exibição** , aponte para **Other Windows** e, em seguida, clique em **primeira janela da ferramenta**.  
   
-     A janela de ferramenta do media player deve abrir na mesma posição como **Gerenciador de soluções**. Se ele ainda aparece na mesma posição como antes, redefinir o layout de janela (**janela / Redefinir Layout da janela**).  
+     A janela de ferramentas do player de mídia deve abrir na mesma posição que **Gerenciador de soluções**. Se ele ainda aparece na mesma posição como antes, redefinir o layout de janela (**janela / Redefinir Layout da janela**).  
   
-3.  Clique no botão (ele tem o ícone de pesquisa) na janela da ferramenta. Selecione um arquivo com suporte som ou vídeo, por exemplo, C:\windows\media\chimes.wav, em seguida, pressione **abrir**.  
+3.  Clique no botão (ele tem o **pesquisa** ícone) na janela da ferramenta. Selecione um som com suporte ou o arquivo de vídeo, por exemplo, *C:\windows\media\chimes.wav*, em seguida, pressione **abrir**.  
   
-     Você ouvirá o som do alarme.  
+     Você deve ouvir o som do alarme.  
   
 ## <a name="see-also"></a>Consulte também  
  [Comandos, menus e barras de ferramentas](../extensibility/internals/commands-menus-and-toolbars.md)

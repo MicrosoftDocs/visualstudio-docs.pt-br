@@ -13,14 +13,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bd2b335635f4fc83eb4b0857f9b5d785eb9dccc
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 17fc42eab94d98ceb636e53e3ed6efd39a08f920
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254264"
 ---
 # <a name="performance-report-view-filter"></a>Filtro de exibição de relatório de desempenho
-A janela de Filtro de Exibição de Relatório do Criador de Perfil está localizada na parte superior da janela Relatório de Desempenho. Se não estiver visível, clique no botão **Mostrar Filtro**.  
+A janela **Filtro de Exibição de Relatório do Criador de Perfil** está localizada na parte superior da janela **Relatório de Desempenho**. Se não estiver visível, clique no botão **Mostrar Filtro**.  
   
  Você pode modificar cada cláusula de filtro para refinar os resultados. As seguintes colunas estão disponíveis no construtor de filtro.  
   
@@ -35,8 +36,8 @@ A janela de Filtro de Exibição de Relatório do Criador de Perfil está locali
   
  Na exibição de relatório **Marcas**, você pode gerar cláusulas de filtro para limitar os dados nas exibições de relatório para os dados coletados entre duas marcas. Selecione as marcas nas quais você deseja começar e terminar o relatório de dados e clique com botão direito e selecione **Adicionar Filtro nas Marcas** ou **Adicionar Filtro em Carimbos de Data/Hora**. Ambos os filtros limitam os dados no arquivo de dados para o mesmo período; **Adicionar Filtro nas Marcas** pode ser aplicado a outros arquivos .vsp.  
   
- Para salvar o filtro, clique em **Exportar Filtro** na barra de ferramentas de Relatório de Desempenho e especifique um local e um nome do arquivo .vspf. Para carregar um filtro salvo anteriormente, clique em **Importar Filtro** e localize o arquivo de filtro salvo. Arquivos de filtro também podem ser usados para filtrar arquivos de dados em computadores que têm as ferramentas de criação de perfil autônomas instaladas. Para obter mais informações, confira [VSPerfReport](../profiling/vsperfreport.md).  
+ Para salvar o filtro, clique em **Exportar filtro** na barra de ferramentas **Relatório de Desempenho** e, em seguida, especifique um local e um nome para o arquivo .*vspf*. Para carregar um filtro salvo anteriormente, clique em **Importar Filtro** e localize o arquivo de filtro salvo. Arquivos de filtro também podem ser usados para filtrar arquivos de dados em computadores que têm as ferramentas de criação de perfil autônomas instaladas. Para obter mais informações, confira [VSPerfReport](../profiling/vsperfreport.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Analisando dados de ferramentas de desempenho](../profiling/analyzing-performance-tools-data.md)   
+ [Analisar dados de ferramentas de desempenho](../profiling/analyzing-performance-tools-data.md)   
  [VSPerfReport](../profiling/vsperfreport.md)

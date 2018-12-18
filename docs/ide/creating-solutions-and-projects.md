@@ -1,12 +1,9 @@
 ---
-title: "Criar soluções e projetos no Visual Studio | Microsoft Docs"
-ms.custom: 
+title: Criar soluções e projetos no Visual Studio
 ms.date: 02/06/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.openprojectfromweb
 - vs.newproject
@@ -17,14 +14,15 @@ helpviewer_keywords:
 - projects [Visual Studio], creating
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 23e91f8c5908efb4eed942a9c2556de7778fda92
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: a912534b9e0212e68a947fa892395a233f263a87
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349631"
 ---
 # <a name="create-solutions-and-projects"></a>Criar soluções e projetos
 
@@ -32,7 +30,10 @@ ms.lasthandoff: 03/08/2018
 
 ![Hierarquia de projeto/solução](./media/vside-proj-soln.png)
 
-Você pode exibir suas soluções e projetos em uma janela de ferramentas chamada **Gerenciador de Soluções**. A captura de tela a seguir mostra uma solução de exemplo no Gerenciador de Soluções (BikeSharing.Xamarin-UWP) que contém dois projetos: BikeSharing.Clients.Core e BikeSharing.Clients.Windows. Cada projeto contém vários arquivos, pastas e referências. O nome do projeto em negrito é o *projeto de inicialização*, ou seja, o projeto que é iniciado quando você executa o aplicativo. Você pode especificar qual projeto é o projeto de inicialização.
+> [!NOTE]
+> Este tópico aplica-se ao Visual Studio no Windows. Para o Visual Studio para Mac, confira [Criar projetos no Visual Studio para Mac](/visualstudio/mac/create-new-projects).
+
+Você pode exibir suas soluções e projetos em uma janela de ferramentas chamada **Gerenciador de Soluções**. A captura de tela a seguir mostra uma solução de exemplo no **Gerenciador de Soluções** (**BikeSharing.Xamarin-UWP**) que contém dois projetos: **BikeSharing.Clients.Core** e **BikeSharing.Clients.Windows**. Cada projeto contém vários arquivos, pastas e referências. O nome do projeto em negrito é o *projeto de inicialização*, ou seja, o projeto que é iniciado quando você executa o aplicativo. Você pode especificar qual projeto é o projeto de inicialização.
 
 ![Gerenciador de Soluções com projetos](./media/vside-solution-explorer-projects.png)
 
@@ -41,34 +42,34 @@ Embora você possa construir um projeto por conta própria, adicionando nele os 
 Dito isso, soluções e projetos não são necessários para desenvolver aplicativos no Visual Studio. Você também pode simplesmente abrir código clonado do Git ou baixado em outro lugar. Para obter mais informações, consulte [Desenvolver código no Visual Studio sem projetos nem soluções](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
 
 > [!NOTE]
-> As descrições deste tópico baseiam-se na edição Visual Studio Community. As caixas de diálogo e comandos de menu que você vê podem ser diferentes dos descritos aqui, dependendo de suas configurações ou da edição Visual Studio. Para alterar as configurações, por exemplo, para configurações **Gerais** ou do **Visual C++**, escolha **Ferramentas**, **Importar e exportar configurações** e, em seguida, escolha **Redefinir todas as configurações**.
+> As descrições deste tópico baseiam-se na edição Visual Studio Community. As caixas de diálogo e comandos de menu que você vê podem ser diferentes dos descritos aqui, dependendo de suas configurações ou da edição Visual Studio. Para alterar as configurações, por exemplo, para configurações **Gerais** ou do **Visual C++**, escolha **Ferramentas** > **Importar e Exportar Configurações** e, em seguida, escolha **Redefinir todas as configurações**.
 
 ## <a name="to-create-a-project-from-a-project-template"></a>Para criar um projeto com base em um modelo de projeto
 
-1. Há várias maneiras de criar um novo projeto no Visual Studio. Na Página Inicial, digite o nome de um modelo de projeto na caixa **Pesquisar modelos de projeto** ou escolha o link **Criar novo projeto** para abrir a caixa de diálogo **Novo Projeto**. Você também pode escolher **Arquivo** > **Novo** > **Projeto...** na barra de menus ou escolher o botão **Novo Projeto** na barra de ferramentas.
+1. Há várias maneiras de criar um novo projeto no Visual Studio. Na **Página Inicial**, digite o nome de um modelo de projeto na caixa **Pesquisar modelos de projeto** ou escolha o link **Criar novo projeto** para abrir a caixa de diálogo **Novo Projeto**. Você também pode escolher **Arquivo** > **Novo** > **Projeto** na barra de menus ou clicar no botão **Novo Projeto** na barra de ferramentas.
 
-  ![Página inicial](./media/vside-newproject1.png)
+   ![Página inicial](./media/vside-newproject1.png)
 
-  Na caixa de diálogo **Novo Projeto**, os modelos de projeto disponíveis aparecem em uma lista sob a categoria **Modelos**. Os modelos são organizados por linguagem de programação e tipo de projeto, como Visual C#, JavaScript e Azure Data Lake.
+   Na caixa de diálogo **Novo Projeto**, os modelos de projeto disponíveis aparecem em uma lista sob a categoria **Modelos**. Os modelos são organizados por linguagem de programação e tipo de projeto, como Visual C#, JavaScript e Azure Data Lake.
 
-  ![Caixa de diálogo Novo Projeto](./media/vside-newproject-templates-list.png)
+   ![Caixa de diálogo Novo Projeto](./media/vside-newproject-templates-list.png)
 
-  > [!NOTE]
-  > A lista de linguagens e modelos de projeto disponíveis que é exibida depende da versão do Visual Studio que você está executando e das cargas de trabalho que estão instaladas. Para saber mais sobre como instalar cargas de trabalho adicionais, consulte [Modificar o Visual Studio 2017 adicionando ou removendo cargas de trabalho e componentes](../install/modify-visual-studio.md).
+   > [!NOTE]
+   > A lista de linguagens e modelos de projeto disponíveis que é exibida depende da versão do Visual Studio que você está executando e das cargas de trabalho que estão instaladas. Para saber mais sobre como instalar cargas de trabalho adicionais, consulte [Modificar o Visual Studio 2017 adicionando ou removendo cargas de trabalho e componentes](../install/modify-visual-studio.md).
 
-1. Para mostrar a lista de modelos da linguagem de programação que você deseja usar, escolha o triângulo próximo do nome da linguagem e, em seguida, escolha um tipo de projeto.
+2. Para mostrar a lista de modelos da linguagem de programação que você deseja usar, escolha o triângulo próximo do nome da linguagem e, em seguida, escolha um tipo de projeto.
 
-  O exemplo a seguir mostra os modelos de projeto disponíveis para projetos .NET Core do Visual C#.
+   O exemplo a seguir mostra os modelos de projeto disponíveis para projetos .NET Core do Visual C#.
 
-  ![Modelos de projeto](./media/new-project-dialog-net-core.png)
+   ![Modelos de projeto](./media/new-project-dialog-net-core.png)
 
-1. Digite um nome para o novo projeto na caixa **Nome**. Você pode optar por salvar o projeto no local padrão em seu sistema ou escolher o botão **Procurar** para encontrar outro local.
+3. Digite um nome para o novo projeto na caixa **Nome**. Você pode optar por salvar o projeto no local padrão em seu sistema ou escolher o botão **Procurar** para encontrar outro local.
 
-  Você também pode optar por alterar o nome da solução ou adicionar o novo projeto a um repositório Git, escolhendo **Adicionar ao Controle do Código-Fonte**.
+   Você também pode optar por alterar o nome da solução ou adicionar o novo projeto a um repositório Git, escolhendo **Adicionar ao Controle do Código-Fonte**.
 
-1. Escolha o botão **OK** para criar a solução e o projeto.
+4. Escolha o botão **OK** para criar a solução e o projeto.
 
-1. Se você quiser adicionar mais um projeto à solução, escolha o nó da solução no Gerenciador de Soluções e, na barra de menus, escolha **Projeto** > **Adicionar novo item**.
+5. Se você quiser adicionar mais um projeto à solução, escolha o nó da solução no **Gerenciador de Soluções** e, na barra de menus, escolha **Projeto** > **Adicionar novo item**.
 
 ## <a name="create-a-project-from-existing-code-files"></a>Criar um projeto com base em arquivos de código existentes
 
@@ -102,7 +103,7 @@ Você também pode criar soluções vazias que não tenham projetos. Isso é pre
 
 ### <a name="to-create-an-empty-solution"></a>Para criar uma solução vazia
 
-1. No menu, escolha **Arquivo** > **Novo** > **Projeto...**.
+1. No menu, escolha **Arquivo** > **Novo** > **Projeto**.
 
 1. No painel esquerdo (**Modelos**), escolha **Outros Tipos de Projetos** > **Soluções do Visual Studio** na lista expandida.
 
@@ -122,10 +123,10 @@ Para criar um projeto temporário, primeiro acesse **Ferramentas** > **Opções*
 
 ## <a name="delete-a-solution-project-or-item"></a>Excluir uma solução, um projeto ou um item
 
-Você pode excluir as soluções e seu conteúdo permanentemente, mas não usando o IDE do Visual Studio. A exclusão de itens dentro do Visual Studio somente os remove da solução ou do projeto atual. Para excluir permanentemente do sistema uma solução ou outro componente, use o Explorador de Arquivos para excluir a pasta que contém os arquivos de solução .sln e .suo. No entanto, antes de excluir permanentemente uma solução, é recomendável que você faça backup de todos os projetos ou arquivos, caso sejam necessários novamente.
+Você pode excluir as soluções e seu conteúdo permanentemente, mas não usando o IDE do Visual Studio. A exclusão de itens dentro do Visual Studio somente os remove da solução ou do projeto atual. Para excluir permanentemente do sistema uma solução ou outro componente, use o Explorador de Arquivos para excluir a pasta que contém os arquivos de solução *.sln* e *.suo*. No entanto, antes de excluir permanentemente uma solução, é recomendável que você faça backup de todos os projetos ou arquivos, caso sejam necessários novamente.
 
 > [!NOTE]
-> O arquivo .suo é um arquivo oculto que não é exibido com as configurações padrão do Explorador de Arquivos. Para mostrar arquivos ocultos, no menu **Exibir** do Explorador de Arquivos, marque a caixa de seleção **Itens Ocultos**.
+> O arquivo *.suo* é um arquivo oculto que não é exibido com as configurações padrão do Explorador de Arquivos. Para mostrar arquivos ocultos, no menu **Exibir** do Explorador de Arquivos, marque a caixa de seleção **Itens Ocultos**.
 
 ### <a name="to-permanently-delete-a-solution"></a>Para excluir permanentemente uma solução
 
@@ -137,7 +138,7 @@ Você pode excluir as soluções e seu conteúdo permanentemente, mas não usand
 
 ## <a name="see-also"></a>Consulte também
 
-[Soluções e Projetos](../ide/solutions-and-projects-in-visual-studio.md)  
-[Repositórios de software livre da Microsoft no GitHub](https://github.com/Microsoft)  
-[Exemplos do Visual Studio](../ide/visual-studio-samples.md)  
-[Exemplos de código para desenvolvedores](https://code.msdn.microsoft.com/)
+- [Soluções e Projetos](../ide/solutions-and-projects-in-visual-studio.md)
+- [Repositórios de software livre da Microsoft no GitHub](https://github.com/Microsoft)
+- [Exemplos de código para desenvolvedores](https://code.msdn.microsoft.com/)
+- [Criar projetos (Visual Studio para Mac)](/visualstudio/mac/create-new-projects)

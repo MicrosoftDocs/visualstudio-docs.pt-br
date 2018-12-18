@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca63b23e9f87e807b3eec0e3ad35ea5414ac8dc6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bd2273e7ca2769c5dde43d1c29f08989503659f4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949117"
 ---
 # <a name="frameinfoflags"></a>FRAMEINFO_FLAGS
-Especifica as informações para recuperar de um objeto de quadro de pilha.  
+Especifica as informações a serem recuperadas sobre um objeto de quadro de pilha.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -101,40 +102,40 @@ public enum enum_FRAMEINFO_FLAGS {
   
 ## <a name="members"></a>Membros  
  FIF_FUNCNAME  
- Inicializar/usar o `m_bstrFuncName` campo.  
+ Inicialização/usar o `m_bstrFuncName` campo.  
   
  FIF_RETURNTYPE  
- Inicializar/usar o `m_bstrReturnType` campo.  
+ Inicialização/usar o `m_bstrReturnType` campo.  
   
  FIF_ARGS  
- Inicializar/usar o `m_bstrArgs` campo.  
+ Inicialização/usar o `m_bstrArgs` campo.  
   
  FIF_LANGUAGE  
- Inicializar/usar o `m_bstrLanguage` campo.  
+ Inicialização/usar o `m_bstrLanguage` campo.  
   
  FIF_MODULE  
- Inicializar/usar o `m_bstrModule` campo.  
+ Inicialização/usar o `m_bstrModule` campo.  
   
  FIF_STACKRANGE  
- Inicializar/usar o `m_addrMin` e `m_addrMax` campos (intervalo de pilha).  
+ Inicialização/usar o `m_addrMin` e `m_addrMax` campos (intervalo de pilha).  
   
  FIF_FRAME  
- Inicializar/usar o `m_pFrame` campo.  
+ Inicialização/usar o `m_pFrame` campo.  
   
  FIF_DEBUGINFO  
- Inicializar/usar o `m_fHasDebugInfo` campo.  
+ Inicialização/usar o `m_fHasDebugInfo` campo.  
   
  FIF_STALECODE  
- Inicializar/usar o `m_fStaleCode` campo.  
+ Inicialização/usar o `m_fStaleCode` campo.  
   
  FIF_ANNOTATEDFRAME  
- Inicializar/usar o `m_fAnnotatedFrame` campo.  
+ Inicialização/usar o `m_fAnnotatedFrame` campo.  
   
  FIF_DEBUG_MODULEP  
- Inicializar/usar o `m_pModule` campo.  
+ Inicialização/usar o `m_pModule` campo.  
   
  FIF_FUNCNAME_FORMAT  
- Formata o nome da função. O resultado é retornado no `m_bstrFunName` e não há outros campos são preenchidos.  
+ Formata o nome da função. O resultado é retornado no `m_bstrFunName` campo e não outros campos são preenchidos.  
   
  FIF_FUNCNAME_RETURNTYPE  
  Adiciona o tipo de retorno para o `m_bstrFuncName` campo.  
@@ -152,7 +153,7 @@ public enum enum_FRAMEINFO_FLAGS {
  Adiciona o número de linhas para o `m_bstrFuncName` campo.  
   
  FIF_FUNCNAME_OFFSET  
- Adiciona o `m_bstrFuncName` campo o deslocamento em bytes do início da linha se `FIF_FUNCNAME_LINES` for especificado. Se `FIF_FUNCNAME_LINES` não for especificado, ou se os números de linha não estiverem disponíveis, adiciona o deslocamento em bytes do início da função.  
+ Adiciona o `m_bstrFuncName` campo o deslocamento em bytes desde o início da linha se `FIF_FUNCNAME_LINES` for especificado. Se `FIF_FUNCNAME_LINES` não for especificado, ou se os números de linha não estiverem disponíveis, adiciona o deslocamento em bytes desde o início da função.  
   
  FIF_FUNCNAME_ARGS_TYPES  
  Adiciona o tipo de cada argumento de função para o `m_bstrFuncName` campo.  
@@ -164,7 +165,7 @@ public enum enum_FRAMEINFO_FLAGS {
  Adiciona o valor de cada argumento de função para o `m_bstrFuncName` campo.  
   
  FIF_FUNCNAME_ARGS_ALL  
- Adiciona o tipo, o nome e o valor de todos os argumentos para o `m_bstrFuncName` campo.  
+ Adiciona o tipo, nome e valor de todos os argumentos para o `m_bstrFuncName` campo.  
   
  FIF_ARGS_TYPES  
  Os tipos de argumento são recuperados e formatados.  
@@ -182,13 +183,13 @@ public enum enum_FRAMEINFO_FLAGS {
  Especifica que os argumentos não são formatadas (por exemplo, não adicione abrindo e fechando a lista de argumentos entre parênteses nem adicionar um separador entre argumentos).  
   
  FIF_ARGS_NO_FUNC_EVAL  
- Especifica que a avaliação de função (propriedade) não deve ser usada ao recuperar valores de argumento.  
+ Especifica que a avaliação da função (propriedade) não deve ser usada ao recuperar valores de argumento.  
   
  FIF_FILTER_NON_USER_CODE  
- O mecanismo de depuração é filtrar quadros de código não-usuário para que eles não são incluídos.  
+ O mecanismo de depuração é filtrar quadros de código de não usuário para que eles não estão incluídos.  
   
  FIF_ARGS_NO_TOSTRING  
- Não permitir `ToString()` formatação ao retornar argumentos de função ou avaliação de função.  
+ Não permitir `ToString()` formatação ao retornar os argumentos de função ou avaliação de função.  
   
  FIF_DESIGN_TIME_EXPR_EVAL  
  Informações de quadro devem ser obtidas de domínio de aplicativo hospedado em vez do processo de hospedagem.  
@@ -196,7 +197,7 @@ public enum enum_FRAMEINFO_FLAGS {
 ## <a name="remarks"></a>Comentários  
  Esses sinalizadores são passados para o [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) e [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) métodos para indicar quais campos devem ser inicializados no [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) estrutura ou estruturas.  
   
- Esses sinalizadores também são usados para indicar quais campos do [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) estrutura são válidos e usadas quando a estrutura é retornada. Esses valores podem ser combinados com um bit a bit `OR`.  
+ Esses sinalizadores também são usados para indicar quais campos do [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) estrutura são usados e válidos quando a estrutura é retornada. Esses valores podem ser combinados com um bit a bit `OR`.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

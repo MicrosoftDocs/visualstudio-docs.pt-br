@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb62fb0a830c8c3bf6bb9b7ca186e001573b7b37
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9deadc13f8cbe3678282bb2d9ac619959ecd26b3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875912"
 ---
 # <a name="modulesymbolsearchinfo"></a>MODULE_SYMBOL_SEARCH_INFO
-Contém informações de status sobre os caminhos de pesquisa de símbolo que foram pesquisadas.  
+Contém informações de status sobre os caminhos de pesquisa de símbolo que foram pesquisados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,12 +47,12 @@ public struct MODULE_SYMBOL_SEARCH_INFO {
  Uma combinação de sinalizadores do [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) enumeração que especifica o tipo de informações de pesquisa descritos nessa estrutura.  
   
  `bstrVerboseSearchInfo`  
- Caminho de pesquisa e resultados concatenados em uma única cadeia de caracteres.  
+ Caminho de pesquisa e os resultados concatenados em uma única cadeia de caracteres.  
   
 ## <a name="remarks"></a>Comentários  
  Essa estrutura é retornada de uma chamada para o [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) método.  
   
- Se o `bstrVerboseSearchInfo` campo não for vazio, contém uma lista de caminhos pesquisados e os resultados da pesquisa. A lista é formatada com um caminho, seguido por um sinal de reticências ("..."), seguido pelo resultado. Se houver mais de um par de resultados de caminho, cada par é separado por um par de (carro-retorno/alimentação de linha) "\r\n". O padrão é semelhante a:  
+ Se o `bstrVerboseSearchInfo` campo não estiver vazio, ele contém uma lista de caminhos pesquisados e os resultados da pesquisa. A lista é formatada com um caminho, seguido por um sinal de reticências (""...), seguido pelo resultado. Se houver mais de um par de resultado do caminho, em seguida, cada par é separado por um par de "\r\n" (carro-retorno/avanço de linha). O padrão tem esta aparência:  
   
  \<caminho >... \<resultado > \r\n\<caminho >... \<resultado > \r\n\<caminho >... \<resultado >  
   

@@ -1,5 +1,5 @@
 ---
-title: Criar e executar um teste de carga no Visual Studio | Microsoft Docs
+title: Criar e executar um teste de carga no Visual Studio
 ms.date: 10/01/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,20 +10,24 @@ ms.assetid: bbf075a5-96d5-48ed-a03c-330f0fc04748
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: cc59ffe0e394a89f8277470a2fcf9099aedccbbe
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 649fe84b716355f5c7228e371fa88d80937f24af
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895373"
 ---
-# <a name="walkthrough-create-and-run-a-load-test-that-contains-unit-tests"></a>Passo a passo: criar e executar um teste de carga que contém testes de unidade
+# <a name="walkthrough-create-and-run-a-load-test-that-contains-unit-tests"></a>Passo a passo: Criar e executar um teste de carga que contém testes de unidade
 
 Nesta explicação passo a passo você cria um teste de carga que contém testes de unidade.
 
-Esta explicação passo a passo orienta você na criação e execução de um teste de carga usando o Visual Studio Enterprise. Um teste de carga é um contêiner de testes de desempenho na Web e de testes de unidade. Você cria testes de carga com o Novo assistente de teste de carga.
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Um teste de carga também expõe muitas propriedades de tempo de execução que podem ser alteradas para gerar a simulação desejada de carga. Nesta explicação passo a passo, você usa o Novo assistente de teste de carga para adicionar testes de unidade a um teste de carga.
+Esta explicação passo a passo orienta você na criação e execução de um teste de carga usando o Visual Studio Enterprise. Um teste de carga é um contêiner de testes de desempenho na Web e de testes de unidade. Crie testes de carga com o **Novo Assistente de Teste de Carga**.
+
+Um teste de carga também expõe muitas propriedades de tempo de execução que podem ser alteradas para gerar a simulação desejada de carga. Neste passo a passo, você usará o **Novo Assistente de Teste de Carga** para adicionar testes de unidade a um teste de carga.
 
 Nesta explicação passo a passo, você concluirá as seguintes tarefas:
 
@@ -33,19 +37,19 @@ Nesta explicação passo a passo, você concluirá as seguintes tarefas:
 
 -   Executar um teste de carga.
 
--   Execute as etapas em [Passo a passo: criando e executando testes de unidade para código gerenciado](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md) para criar uma biblioteca de classes C# simples que contenha um projeto de desempenho Web e de teste de carga com alguns testes de unidade nele.
+-   Execute as etapas de [Passo a passo: Criando e executando testes de unidade para código gerenciado](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md) para criar uma biblioteca de classes C# simples que contém um projeto de desempenho Web e de teste de carga com alguns testes de unidade.
 
-## <a name="create-a-load-test-containing-unit-tests-using-the-new-load-test-wizard"></a>Criar um teste de carga que contenha testes de unidade usando o Novo assistente de teste de carga
+## <a name="create-a-load-test-containing-unit-tests-using-the-new-load-test-wizard"></a>Criar um teste de carga que contém testes de unidade usando o Novo Assistente de Teste de Carga
 
 ### <a name="to-start-the-new-load-test-wizard"></a>Para iniciar o Novo assistente de teste de carga
 
-1.  Abra a solução de Banco que você criou em [Passo a passo: criando e executando testes de unidade para código gerenciado](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md).
+1.  Abra a solução Bank criada em [Passo a passo: Criando e executando testes de unidade para código gerenciado](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md).
 
 2.  No **Gerenciador de Soluções**, abra o menu de atalho do nó da solução de Banco, escolha **Adicionar** e **Novo Projeto**.
 
-     A caixa de diálogo Adicionar Novo Projeto é exibida.
+     A caixa de diálogo **Adicionar Novo Projeto** é exibida.
 
-3.  Na caixa de diálogo Adicionar Novo Projeto, expanda **Visual C#** e escolha **Testar**. Na lista de modelos, escolha **Projeto de teste de carga e desempenho da Web** e, no campo **Nome**, digite `BankLoadTest`. Escolha **OK**.
+3.  Na caixa de diálogo **Adicionar Novo Projeto**, expanda **Visual C#** e escolha **Teste**. Na lista de modelos, escolha **Projeto de teste de carga e desempenho da Web** e, no campo **Nome**, digite `BankLoadTest`. Escolha **OK**.
 
      O projeto de teste de desempenho na Web e de carga BankLoadTest é adicionado à solução.
 
@@ -63,7 +67,7 @@ Nesta explicação passo a passo, você concluirá as seguintes tarefas:
 
      Um *cenário* é um mecanismo de agrupamento. Consiste em um conjunto de testes e as propriedades para executar esses testes sob carga.
 
-2.  Defina o **Perfil de tempo de processamento** como `Use normal distribution centered on recorded think times`. Os tempos de processamento representam o tempo que um usuário refletiria sobre uma página da Web antes de ir para a próxima página.
+2.  Defina o **Perfil de tempo de processamento** como `Use normal distribution centered on recorded think times`. Os tempos de raciocínio representam o tempo que um usuário refletiria sobre uma página da Web antes de passar para a próxima página.
 
 1.  Escolha **Avançar** quando terminar.
 
@@ -86,7 +90,7 @@ Nesta explicação passo a passo, você concluirá as seguintes tarefas:
 
 ### <a name="to-select-test-mix-model-for-the-scenario"></a>Para selecionar o modelo de combinação de testes para o cenário
 
-1.  Em Como a combinação de testes deve ser modelada?, selecione **Baseado no número total de testes**.
+1.  Em **Como a combinação de testes deve ser modelada?**, selecione **Baseado no número total de testes**.
 
 2.  Escolha **Avançar**.
 
@@ -96,17 +100,17 @@ Nesta explicação passo a passo, você concluirá as seguintes tarefas:
 
 2.  Escolha **Adicionar** para selecionar testes.
 
-3.  Escolha os testes de unidade CreditTest listados no painel **Testes Disponíveis**, que lista todos os testes de desempenho na Web e os testes de unidade no projeto de teste de desempenho Web e de carga.
+3.  Escolha os testes de unidade **CreditTest** listados no painel **Testes Disponíveis**, que lista todos os testes de desempenho Web e os testes de unidade no projeto de teste de desempenho Web e de carga.
 
-4.  Escolha a seta para adicionar o teste de unidade CreditTest ao painel **Testes Selecionados**.
+4.  Escolha a seta para adicionar o teste de unidade **CreditTest** ao painel **Testes Selecionados**.
 
-5.  Repita as etapas 3 e 4 para os testes de unidade DebitTest e FreezeAccountTest.
+5.  Repita as etapas 3 e 4 para os testes de unidade **DebitTest** e **FreezeAccountTest**.
 
 6.  Quando você tiver terminado de adicionar os três testes de unidade, escolha **OK**.
 
      Você recebe a combinação de testes.
 
-7.  Mova o controle deslizante em Distribuição para CreditTest ligeiramente para a direita para ajustar a distribuição de teste. Observe que os outros controles deslizantes se movem para a esquerda automaticamente, de forma que a distribuição permaneça em 100%.
+7.  Mova o controle deslizante em **Distribuição** para **CreditTest** ligeiramente para a direita para ajustar a distribuição de teste. Observe que os outros controles deslizantes se movem para a esquerda automaticamente, de forma que a distribuição permaneça em 100%.
 
 8.  Escolha **Avançar**.
 
@@ -122,7 +126,7 @@ Nesta explicação passo a passo, você concluirá as seguintes tarefas:
 
 1.  Escolha **Avançar**.
 
-     Para obter mais informações sobre conjuntos de contadores, consulte [Especificando os conjuntos de contadores e as regras de limite para computadores em um teste de carga](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md).
+     Para obter mais informações sobre conjuntos de contadores, confira [Especificar os conjuntos de contadores e as regras de limite para computadores em um teste de carga](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md).
 
 ### <a name="to-edit-run-setting-for-load-test"></a>Para editar a configuração de execução do teste de carga
 
@@ -132,7 +136,7 @@ Nesta explicação passo a passo, você concluirá as seguintes tarefas:
 
 2.  Escolha **Concluir**. Seu teste de carga será aberto no **Editor de Teste de Carga**.
 
-## <a name="running-the-load-test"></a>Executando o teste de carga
+## <a name="run-the-load-test"></a>Executar o teste de carga
  Após você criar o teste de carga, execute-o para ver como seu aplicativo de banco responde à simulação de carga. Enquanto um teste de carga está sendo executado, consulte a janela **Analisador de Teste de Carga**.
 
 ### <a name="to-run-the-load-test"></a>Para executar o teste de carga
@@ -143,8 +147,8 @@ Nesta explicação passo a passo, você concluirá as seguintes tarefas:
 
 ## <a name="see-also"></a>Consulte também
 
-- [Editando a combinação de testes para especificar quais testes incluir em um cenário de teste de carga](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)
-- [Especificando tipos de rede virtuais](../test/specify-virtual-network-types-in-a-load-test-scenario.md)
-- [Editando cenários de teste de carga](../test/edit-load-test-scenarios.md)
-- [Editando padrões de carga para modelar atividades de usuário virtual](../test/edit-load-patterns-to-model-virtual-user-activities.md)
-- [Editando modelos de combinação de texto para especificar a probabilidade de um usuário virtual executar um teste](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)
+- [Editar a combinação de testes para especificar quais testes incluir em um cenário de teste de carga](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)
+- [Especificar tipos de rede virtual](../test/specify-virtual-network-types-in-a-load-test-scenario.md)
+- [Editar cenários de teste de carga](../test/edit-load-test-scenarios.md)
+- [Editar padrões de carga para modelar atividades de usuário virtual](../test/edit-load-patterns-to-model-virtual-user-activities.md)
+- [Editar modelos de combinação de testes para especificar a probabilidade de um usuário virtual executar um teste](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)

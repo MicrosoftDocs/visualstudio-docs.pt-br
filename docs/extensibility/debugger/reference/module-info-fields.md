@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fcc6bd76a4a9aecade72347613ed4f36968c65eb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cf01cb2573922adb5d8b5b4bc26b10b839009dda
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832840"
 ---
 # <a name="moduleinfofields"></a>MODULE_INFO_FIELDS
-Especifica os sinalizadores de módulo para informações de depuração.  
+Especifica os sinalizadores para as informações de módulo de depuração.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -65,46 +66,46 @@ public enum enum_MODULE_INFO_FIELDS {
   
 ## <a name="members"></a>Membros  
  MIF_NONE  
- Inicializar/usar nenhum dos campos na estrutura.  
+ Inicialização/usar nenhum dos campos na estrutura.  
   
  MIF_NAME  
- Inicializar/usar o `m_bstrName` campo o [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) estrutura.  
+ Inicialização/usar o `m_bstrName` campo de [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) estrutura.  
   
  MIF_URL  
- Inicializar/usar o `m_bstrUrl` campo o `MODULE_INFO` estrutura.  
+ Inicialização/usar o `m_bstrUrl` campo o `MODULE_INFO` estrutura.  
   
  MIF_VERSION  
- Inicializar/usar o `m_bstrVersion` campo o `MODULE_INFO` estrutura.  
+ Inicialização/usar o `m_bstrVersion` campo o `MODULE_INFO` estrutura.  
   
  MIF_DEBUGMESSAGE  
- Inicializar/usar o `m_bstrDebugMessage` campo o `MODULE_INFO` estrutura.  
+ Inicialização/usar o `m_bstrDebugMessage` campo o `MODULE_INFO` estrutura.  
   
  MIF_LOADADDRESS  
- Inicializar/usar o `m_addrLoadAddress` campo o `MODULE_INFO` estrutura.  
+ Inicialização/usar o `m_addrLoadAddress` campo o `MODULE_INFO` estrutura.  
   
  MIF_PREFFEREDADDRESS  
- Inicializar/usar o `m_addrPreferredLoadAddress` campo o `MODULE_INFO` estrutura.  
+ Inicialização/usar o `m_addrPreferredLoadAddress` campo o `MODULE_INFO` estrutura.  
   
  MIF_SIZE  
- Inicializar/usar o `m_dwSize` campo o `MODULE_INFO` estrutura.  
+ Inicialização/usar o `m_dwSize` campo o `MODULE_INFO` estrutura.  
   
  MIF_LOADORDER  
- Inicializar/usar o `m_dwLoadOrder` campo o `MODULE_INFO` estrutura.  
+ Inicialização/usar o `m_dwLoadOrder` campo o `MODULE_INFO` estrutura.  
   
  MIF_TIMESTAMP  
- Inicializar/usar o `m_TimeStamp` campo o `MODULE_INFO` estrutura.  
+ Inicialização/usar o `m_TimeStamp` campo o `MODULE_INFO` estrutura.  
   
  MIF_URLSYMBOLLOCATION  
- Inicializar/usar o `m_bstrUrlSymbolLocation` campo o `MODULE_INFO` estrutura.  
+ Inicialização/usar o `m_bstrUrlSymbolLocation` campo o `MODULE_INFO` estrutura.  
   
  MIF_FLAGS  
- Inicializar/usar o `m_dwModuleFlags` campo o `MODULE_INFO` estrutura.  
+ Inicialização/usar o `m_dwModuleFlags` campo o `MODULE_INFO` estrutura.  
   
  MIF_ALLFIELDS  
- Inicializar/usar todos os campos no `MODULE_INFO` estrutura.  
+ Inicialização/usar todos os campos no `MODULE_INFO` estrutura.  
   
 ## <a name="remarks"></a>Comentários  
- Esses valores são passados como um argumento para o [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) método para indicar quais campos do [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) estrutura devem ser inicializado.  
+ Esses valores são passados como um argumento para o [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) método para indicar quais campos da [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) são de estrutura a ser inicializado.  
   
  Esses valores também são usados no `MODULE_INFO` estrutura para indicar quais campos são usados e válido.  
   

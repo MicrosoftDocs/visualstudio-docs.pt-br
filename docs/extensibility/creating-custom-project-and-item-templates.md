@@ -11,80 +11,81 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fc866c9a0cd5f3aaaa06e5bc59ea2427cc86268a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eeea0f92fc846b6ed51673d22450b22e01b348eb
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39497856"
 ---
-# <a name="creating-custom-project-and-item-templates"></a>Criando modelos de Item e projeto personalizados
+# <a name="create-custom-project-and-item-templates"></a>Criar modelos personalizados de projeto e de item
 
-O SDK do Visual Studio inclui modelos de projeto para criar um modelo de projeto personalizado e um modelo de item personalizado. Esses modelos incluem algumas substituições de parâmetro comum e criar como arquivos zip. Elas não serão implantadas automaticamente, e eles não estão disponíveis na instância experimental. Você deve copiar o arquivo zip gerado para o diretório de modelos de usuário.
+O SDK do Visual Studio inclui modelos de projeto que cria um modelo de projeto personalizado e um modelo de item personalizado. Esses modelos incluem algumas substituições de parâmetro comuns e de build como arquivos zip. Eles não são implantados automaticamente e eles não estão disponíveis na instância experimental. Você deve copiar o arquivo zip gerado no diretório de modelo de usuário.
   
-Os modelos de criação de modelo permitem incluir modelos em extensões maior. Isso permite que você implementar o controle de versão nos arquivos de origem e criar um grupo de projetos de modelo em um pacote do VSIX.  
+Os modelos de criação de modelo permitem que você incluir modelos em extensões maiores. Isso permite implementar o controle de versão nos arquivos de origem e criar um grupo de projetos de modelo em um pacote VSIX.  
   
-Você também pode configurar um modelo para instalar os pacotes NuGet. Para obter mais informações, consulte [pacotes do NuGet em modelos do Visual Studio](/nuget/visual-studio-extensibility/visual-studio-templates).
+Você também pode configurar um modelo para instalar pacotes do NuGet. Para obter mais informações, consulte [pacotes do NuGet em modelos do Visual Studio](/nuget/visual-studio-extensibility/visual-studio-templates).
 
-Para cenários de criação do modelo básico, você deve usar o **exportar modelo** assistente, o que gera um arquivo compactado. Para obter mais informações sobre a criação do modelo básico, consulte [criando modelos de projeto e Item](../ide/creating-project-and-item-templates.md).  
+Para cenários de criação do modelo básico, você deve usar o **exportar modelo** assistente, o que é gerada para um arquivo compactado. Para obter mais informações sobre a criação do modelo básico, consulte [criando modelos de projeto e item](../ide/creating-project-and-item-templates.md).  
 
 > [!NOTE]
-> A partir do Visual Studio de 2017, verificação de modelos de item e projeto personalizados será não executada. Em vez disso, a extensão deve fornecer arquivos de manifesto do modelo que descrevem o local de instalação desses modelos. Você pode usar o Visual Studio de 2017 para atualizar as extensões VSIX. Se você implantar sua extensão usando um MSI, você deve gerar os arquivos de manifesto do modelo manualmente. Para obter mais informações, consulte [atualização personalizar modelos de projeto e Item para Visual Studio de 2017](../extensibility/upgrading-custom-project-and-item-templates-for-visual-studio-2017.md). O esquema de manifesto do modelo está documentado em [Visual Studio Template manifesto Schema Reference](../extensibility/visual-studio-template-manifest-schema-reference.md).
+> A partir do Visual Studio 2017, verificação de modelos de item e projeto personalizados será não é mais executada. Em vez disso, a extensão deve fornecer os arquivos de manifesto de modelo que descrevem o local de instalação desses modelos. Você pode usar o Visual Studio 2017 para atualizar as extensões VSIX. Se você implantar sua extensão usando um MSI, você deve gerar os arquivos de manifesto do modelo manualmente. Para obter mais informações, consulte [da atualização projeto e item modelos personalizados para o Visual Studio 2017](../extensibility/upgrading-custom-project-and-item-templates-for-visual-studio-2017.md). O esquema de modelo de manifesto está documentado em [referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-manifest-schema-reference.md).
 
-## <a name="creating-a-project-template"></a>Criando um modelo de projeto  
+## <a name="create-a-project-template"></a>Criar um modelo de projeto  
   
-1.  Crie um projeto de modelo de projeto. Você pode encontrar o modelo de projeto no **novo projeto** caixa de diálogo, no Visual Basic ou Visual c# **extensibilidade** pasta.  
+1.  Crie um projeto de modelo de projeto. Você pode encontrar o modelo de projeto na **novo projeto** caixa de diálogo, no Visual Basic ou Visual c# *extensibilidade* pasta.  
   
-     O modelo gera um arquivo de classe, um ícone, um arquivo. vstemplate, um arquivo de projeto editável chamado ProjectTemplate.vbproj ou ProjectTemplate.csproj e alguns arquivos que normalmente são gerados por outros tipos de projeto, esse arquivo resx, um AssemblyInfo arquivo e um arquivo Settings. Cada arquivo de código contém substituições de parâmetro comum quando apropriado.  
+     O modelo gera um arquivo de classe, um ícone, um *. vstemplate* do arquivo, um arquivo de projeto editável denominado *ProjectTemplate.vbproj* ou *ProjectTemplate.csproj*e alguns arquivos que normalmente são gerados por outros tipos de projeto, tal uma *Resources* arquivo, um *AssemblyInfo* arquivo e um *Settings* arquivo. Cada arquivo de código contém substituições de parâmetro comuns onde for apropriado.  
   
-2.  Adicionar e remover itens de projeto conforme necessário para seu projeto. Não remova o arquivo de projeto editável, o arquivo AssemblyInfo ou o arquivo. vstemplate.  
+2.  Adicionar e remover itens do projeto conforme necessário para seu projeto. Não remova o arquivo de projeto editável, a *AssemblyInfo* arquivo, ou o *. vstemplate* arquivo.  
   
-3.  Atualize o arquivo. vstemplate para refletir quaisquer adições e exclusões. O [projeto](../extensibility/project-element-visual-studio-templates.md) elemento deve conter um [ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md) elemento para cada arquivo a ser incluído no modelo.  
+3.  Atualizar o *. vstemplate* arquivo para refletir quaisquer adições e exclusões. O [Project](../extensibility/project-element-visual-studio-templates.md) elemento deve conter um [ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md) elemento para cada arquivo a ser incluído no modelo.  
   
-4.  Modifique seus arquivos de código e outro conteúdo voltado para o usuário e adicione substituições de parâmetro apropriado.  
+4.  Modificar os arquivos de código e outros tipos de conteúdo voltado para o usuário e adicione substituições de parâmetro apropriado.  
   
 5.  Modifica o conteúdo gerado conforme necessário.  
   
 6.  Compile o projeto.  
   
-     Visual Studio cria um arquivo. zip que contém o modelo. Ela não está implantada e ele não está disponível na instância experimental.  
+     O Visual Studio cria uma *. zip* arquivo que contém o modelo. Não está implantado, e ele não está disponível na instância experimental.  
   
-## <a name="creating-an-item-template"></a>Criando um modelo de Item  
+## <a name="create-an-item-template"></a>Criar um modelo de item  
   
 1.  Crie um projeto de modelo de Item.  
   
-     O modelo gera um arquivo de classe, um ícone, um arquivo. vstemplate e um arquivo AssemblyInfo. O arquivo de classe contém algumas substituições de parâmetro comum.  
+     O modelo gera um arquivo de classe, um ícone, um *. vstemplate* arquivo e um *AssemblyInfo* arquivo. O arquivo de classe contém algumas substituições de parâmetro comuns.  
   
-2.  Adicionar e remover itens de projeto conforme necessário para seu projeto.  
+2.  Adicionar e remover itens do projeto conforme necessário para seu projeto.  
   
-3.  Atualize o arquivo. vstemplate para refletir quaisquer adições e exclusões. O [projeto](../extensibility/project-element-visual-studio-templates.md) elemento deve conter um [ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md) elemento para cada arquivo a ser incluído no modelo.  
+3.  Atualizar o *. vstemplate* arquivo para refletir quaisquer adições e exclusões. O [Project](../extensibility/project-element-visual-studio-templates.md) elemento deve conter um [ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md) elemento para cada arquivo a ser incluído no modelo.  
   
-4.  Modifique seus arquivos de código e outro conteúdo voltado para o usuário e adicione substituições de parâmetro apropriado.  
+4.  Modificar os arquivos de código e outros tipos de conteúdo voltado para o usuário e adicione substituições de parâmetro apropriado.  
   
 5.  Modifica o conteúdo gerado conforme necessário.  
   
 6.  Compile o projeto.  
   
-     Visual Studio cria um arquivo compactado que contém o modelo. Ela não está implantada e ele não está disponível na instância experimental.  
+     Visual Studio cria um arquivo compactado que contém o modelo. Não está implantado, e ele não está disponível na instância experimental.  
   
 ## <a name="deployment"></a>Implantação  
   
-#### <a name="to-deploy-the-project-or-item-template"></a>Para implantar o modelo de projeto ou item  
+### <a name="to-deploy-the-project-or-item-template"></a>Para implantar o modelo de projeto ou item  
   
-1.  Crie um projeto do VSIX. Para obter mais informações, consulte [modelo de projeto do VSIX](../extensibility/vsix-project-template.md).  
+1.  Crie um projeto VSIX. Para obter mais informações, consulte [modelo de projeto do VSIX](../extensibility/vsix-project-template.md).  
   
-2.  Defina o projeto do VSIX como o projeto de inicialização. No **Solution Explorer**, selecione o nó do projeto VSIX, com o botão direito e selecione **definir como projeto de inicialização**.  
+2.  Defina o projeto VSIX como o projeto de inicialização. No **Gerenciador de soluções**, selecione o nó do projeto VSIX, clique com botão direito e selecione **definir como projeto de inicialização**.  
   
-3.  Defina o projeto de modelo de projeto como um ativo do projeto VSIX. Abra o arquivo .vsixmanifest. Vá para o **ativos** guia e clique em **novo**.  
+3.  Defina o projeto de modelo de projeto como um ativo do projeto VSIX. Abra o *.vsixmanifest* arquivo. Vá para o **ativos** guia e clique em **New**.  
   
-    1.  Definir o **tipo** campo **Microsoft.VisualStudio.ProjectTemplate** ou **Microsoft.VisualStudio.ItemTemplate**.  
+    1.  Defina as **tipo** campo **Microsoft.VisualStudio.ProjectTemplate** ou **Microsoft.VisualStudio.ItemTemplate**.  
   
-    2.  Para a fonte, selecione o **um projeto na solução atual** opção e, em seguida, selecione o projeto que contém o modelo.  
+    2.  Para o código-fonte, selecione a **um projeto na solução atual** opção e, em seguida, selecione o projeto que contém o modelo.  
   
-4.  Compile a solução e, em seguida, pressione F5. A instância experimental aparece.  
+4.  Compilar a solução e pressione **F5**. A instância experimental é exibida.  
   
-5.  Para um projeto de modelo de projeto, você deve ver o modelo de projeto listado no **novo projeto** caixa de diálogo (**arquivo > Novo > projeto**), no Visual c# ou Visual Basic nó. Para um projeto de modelo de item, você deve ver o modelo de item listado na caixa de diálogo Adicionar Novo Item (no **Solution Explorer**, selecione o nó do projeto e clique em **Adicionar / Novo Item**).  
+5.  Para um projeto de modelo de projeto, você deve ver o modelo de projeto listado na **novo projeto** caixa de diálogo (**arquivo** > **novo**  >  **Projeto**), no Visual c# ou no nó Visual Basic. Para um projeto de modelo de item, você deve ver o modelo de item listado na **Adicionar Novo Item** caixa de diálogo. Para exibir o **Adicionar Novo Item** caixa de diálogo, da **Gerenciador de soluções**, selecione o nó do projeto e clique em **Add** > **Novo Item**).  
   
 ## <a name="see-also"></a>Consulte também
 
-[Referência de modelos do Visual Studio](../ide/visual-studio-template-reference.md)  
+[Referência de modelo do Visual Studio](../ide/visual-studio-template-reference.md)  
 [Pacotes do NuGet em modelos do Visual Studio](/nuget/visual-studio-extensibility/visual-studio-templates)

@@ -1,5 +1,5 @@
 ---
-title: Manifestos de implantação para soluções do Office | Microsoft Docs
+title: Manifestos de implantação para soluções do Office
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,27 +18,28 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e1276650d38f16f8ccc36720f7e273472e609367
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 41f0e6b484ae61d53913c51e3d51b123a5d054a2
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34263484"
 ---
 # <a name="deployment-manifests-for-office-solutions"></a>Manifestos de implantação para soluções do Office
   Um manifesto de implantação é um arquivo XML que descreve as configurações de implantação de uma solução do Office e identifica a versão atual do aplicativo.  
   
- O desenvolvimento do Office no Visual Studio usa o [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] esquema de manifesto de implantação definido no [manifesto de implantação do ClickOnce](/visualstudio/deployment/clickonce-deployment-manifest) referência.  
+ O desenvolvimento do Office no Visual Studio usa o [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] esquema de manifesto de implantação definido no [o manifesto de implantação do ClickOnce](/visualstudio/deployment/clickonce-deployment-manifest) referência.  
   
 ## <a name="remarks"></a>Comentários  
- O arquivo de manifesto de implantação para soluções do Office identifica a versão atual e outras configurações de implantação. O manifesto do aplicativo, que descreve a versão atual da solução e todos os arquivos que estão contidos na solução faz referência.  
+ O arquivo de manifesto de implantação para soluções do Office, identifica a versão atual e outras configurações de implantação. Ele referencia o manifesto do aplicativo e descreve a versão atual da solução e todos os arquivos dentro da solução.  
   
 ## <a name="file-name-syntax"></a>Sintaxe de nome de arquivo  
- O nome de um arquivo de manifesto de implantação deve terminar com a extensão .vsto. Embora seja um padrão [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] o manifesto de implantação, a extensão é diferente para permitir que o Visual Studio Tools for Office runtime lidar com o arquivo.  
+ O nome de um arquivo de manifesto de implantação deve terminar com o *.vsto* extensão. Embora seja um padrão [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] o manifesto de implantação, a extensão é diferente para permitir que o Visual Studio Tools for Office runtime lidar com o arquivo.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir ilustra um manifesto de implantação do Visual Studio Tools para soluções do Office.  
   
-```  
+```xml
 <?xml version="1.0" encoding="utf-8"?>  
 <asmv1:assembly   
   xsi:schemaLocation=  

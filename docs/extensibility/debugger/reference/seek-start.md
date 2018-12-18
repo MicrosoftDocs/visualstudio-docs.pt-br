@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 55be60c35ea3af97cb9129670ef422d1a649fead
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a10d749022757860c6f7cc620091c2ac10623976
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905203"
 ---
 # <a name="seekstart"></a>SEEK_START
 Especifica a posição da qual iniciar a busca em um fluxo de desmontagem.  
@@ -49,19 +50,19 @@ public enum enum_SEEK_START {
   
 ## <a name="members"></a>Membros  
  SEEK_START_BEGIN  
- Inicia a pesquisa no início do documento atual.  
+ Inicia a busca no início do documento atual.  
   
  SEEK_START_END  
- Inicia a pesquisa no final do documento atual.  
+ Inicia a busca no final do documento atual.  
   
  SEEK_START_CURRENT  
- Inicia a busca na posição atual do documento atual.  
+ Inicia a busca da posição atual do documento atual.  
   
  SEEK_START_CODECONTEXT  
- Inicia a pesquisa no contexto do código fornecido do documento atual.  
+ Inicia a busca no contexto do código fornecido do documento atual.  
   
  SEEK_START_CODELOCID  
- Inicia a busca no identificador de local de código fornecido. Identificadores de local de código são obtidos chamando [GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md).  
+ Inicia a busca no identificador de local de código fornecida. Identificadores de local de código são obtidos chamando [GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md).  
   
 ## <a name="remarks"></a>Comentários  
  Passado como um argumento para o [busca](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) método.  

@@ -13,11 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 120bf38afbf05f367757de3a5e453cab8b4311b1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 43c8c7dcba7ea1125c031f0cc64a902d88f67017
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849416"
 ---
 # <a name="evalflags90"></a>EVALFLAGS90
 Enumera os valores válidos para sinalizadores que controlam a avaliação da expressão. Esta enumeração estende o [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) enumeração.  
@@ -65,13 +66,13 @@ public enum enum_EVALFLAGS90
   
 #### <a name="parameters"></a>Parâmetros  
  EVAL90_RETURNVALUE  
- Especifica que o valor de retorno, se houver, deve ser avaliada.  
+ Especifica que o valor de retorno, se houver, ser avaliado.  
   
  EVAL90_NOSIDEEFFECTS  
- Especifica que efeitos colaterais não serão permitidas.  
+ Especifica que os efeitos colaterais não serão permitidas.  
   
  EVAL90_ALLOWBPS  
- Especifica a parada em pontos de interrupção.  
+ Especifica parando em pontos de interrupção.  
   
  EVAL90_ALLOWERRORREPORT  
  Especifica que esse relatório de erros para o host a ser permitido. Usado principalmente para a avaliação da expressão no script no Internet Explorer.  
@@ -80,19 +81,19 @@ public enum enum_EVALFLAGS90
  Funções de força a ser avaliada como endereços, em vez de invocar a função.  
   
  EVAL90_NOFUNCEVAL  
- Impede que a função que está sendo avaliada. Por exemplo, considere o `int` token na expressão `myExpression(int) + 10`. Essa função pode ser avaliada corretamente como um endereço, mas não como um valor.  
+ Impede que a função que está sendo avaliado. Por exemplo, considere a `int` token na expressão `myExpression(int) + 10`. Essa função pode ser avaliada corretamente como um endereço, mas não como um valor.  
   
  EVAL90_NOEVENTS  
- Sinalizador para indicar que os eventos que ocorrem durante a avaliação de expressão não devem ser enviados para o Gerenciador de sessão de depuração (SDM) ou para o IDE.  
+ Sinalizador para indicar que os eventos que ocorrem durante a avaliação da expressão não devem ser enviados para o Gerenciador de sessão de depuração (SDM) ou para o IDE.  
   
  EVAL90_DESIGN_TIME_EXPR_EVAL  
- Permite que a avaliação da expressão de tempo de design.  
+ Permite a avaliação de expressão de tempo de design.  
   
  EVAL90_ALLOW_IMPLICIT_VARS  
- Permite a criação da variável implícita.  
+ Permite a criação de variável implícita.  
   
  EVAL90_FORCE_EVALUATION_NOW  
- Avaliação de força ocorra imediatamente. Isso é útil quando uma solicitação, como uma solicitação de usuário de serviço.  
+ Avaliação de força a ocorrer imediatamente. Isso é útil quando uma solicitação, como uma solicitação de usuário de manutenção.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: Msdbg90.h  

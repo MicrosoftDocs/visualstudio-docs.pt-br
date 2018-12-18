@@ -1,14 +1,14 @@
 ---
-title: "Enumeração PROFILER_HEAP_OBJECT_RELATIONSHIP_FLAGS | Microsoft Docs"
-ms.custom: 
+title: Enumeração PROFILER_HEAP_OBJECT_RELATIONSHIP_FLAGS | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1a41b642-c9a9-4d83-b943-d59b232eebf6
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -17,6 +17,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24734006"
 ---
 # <a name="profilerheapobjectrelationshipflags-enumeration"></a>Enumeração PROFILER_HEAP_OBJECT_RELATIONSHIP_FLAGS
 Sinalizadores que representam se um objeto de heap apontada em uma relação de objeto é um método getter ou setter. Usado no [EnumHeap2](../../winscript/reference/iactivescriptprofilercontrol5-enumheap2-method.md) método quando o valor PROFILER_HEAP_OBJECT_RELATIONSHIP_FLAGS é especificado no `enumFlags` parâmetro.  

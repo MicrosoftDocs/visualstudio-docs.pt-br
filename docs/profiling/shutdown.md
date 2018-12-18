@@ -10,22 +10,23 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a9c79b132dcd3358c697f9b08466af306aeed21
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ceac340beb5b8b8f7c7115400c8c22e0d2657252
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35668128"
 ---
 # <a name="shutdown"></a>Desligar
-A opção **desligamento** aguarda qualquer processo com perfil finalizar ou desanexar e, em seguida, desativa o criador de perfil e fecha o arquivo de dados de criação de perfil. A opção **desligamento** deve ser o último comando de criação de um perfil.  
+A opção **Desligamento** aguarda qualquer processo com perfil finalizar ou desanexar e, em seguida, desativa o criador de perfil e fecha o arquivo de dados de criação de perfil. A opção **desligamento** deve ser o último comando de criação de um perfil.  
   
- Se um parâmetro de tempo limite não for especificado, a opção **desligamento** aguardará indefinidamente. Se um parâmetro de tempo limite é especificado, a opção retorna após o número especificado de segundos, sem desativar o criador de perfil ou fechar o arquivo de dados.  
+ Se um parâmetro de tempo limite não for especificado, a opção **Desligamento** aguardará indefinidamente. Se um parâmetro de tempo limite for especificado, a opção retornará após o número especificado de segundos, sem desativar o criador de perfil ou fechar o arquivo de dados.  
   
  A opção **desligamento** deve ser a única opção especificada na linha de comando.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cmd  
 VSPerfCmd.exe /Shutdown[:Timeout]  
 ```  
   
@@ -35,6 +36,6 @@ VSPerfCmd.exe /Shutdown[:Timeout]
   
 ## <a name="see-also"></a>Consulte também  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
- [Criando perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Criando perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Serviços de Criação de Perfil](../profiling/command-line-profiling-of-services.md)
+ [Criar perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [Criar o perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profile services (Serviços de perfil)](../profiling/command-line-profiling-of-services.md)

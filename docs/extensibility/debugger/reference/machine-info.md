@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4be6ee66149acb970287628289a15574894b8b26
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e548552b5acda6a3334b6d7df90b2aeab80c2e77
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847221"
 ---
 # <a name="machineinfo"></a>MACHINE_INFO
-Descreve uma determinada máquina.  
+Descreve um determinado computador.  
   
 ## <a name="syntax"></a>Sintaxe  
   

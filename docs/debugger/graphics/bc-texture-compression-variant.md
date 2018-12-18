@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 49dfc92eeede177e843c9fd98b16b030f76079c0
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 919191ec29ad45a8385d32b82de99d44fcdaa2ea
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49922439"
 ---
 # <a name="bc-texture-compression-variant"></a>Variante de compressão de textura BC
 Habilita a compactação do bloco em texturas cujo formato de pixel é uma variação de B8G8R8X8, B8G8R8A8 ou R8G8B8A8.  
@@ -27,19 +28,19 @@ Habilita a compactação do bloco em texturas cujo formato de pixel é uma varia
 ## <a name="remarks"></a>Comentários  
  Para compactar texturas, use um formato de compactação em bloco em cada chamada de `ID3DDevice::CreateTexture2D`, que cria uma textura de origem. As texturas são compactadas quando:  
   
--   O objeto `D3D11_TEXTURE2D_DESC` apresentado a `pDesc` descreve um recurso do sombreador inalterável, ou seja:  
+- O objeto `D3D11_TEXTURE2D_DESC` apresentado a `pDesc` descreve um recurso do sombreador inalterável, ou seja:  
   
-    -   O membro BindFlags tem apenas o sinalizador D3D11_BIND_SHADER_RESOURCE definido.  
+  -   O membro BindFlags tem apenas o sinalizador D3D11_BIND_SHADER_RESOURCE definido.  
   
-    -   O membro Uso está definido como D3D11_USAGE_DEFAULT ou D3D11_USAGE_IMMUTABLE.  
+  -   O membro Uso está definido como D3D11_USAGE_DEFAULT ou D3D11_USAGE_IMMUTABLE.  
   
-    -   O membro CPUAccessFlags está definido como 0 (sem acesso à CPU).  
+  -   O membro CPUAccessFlags está definido como 0 (sem acesso à CPU).  
   
-    -   O membro SamplerDesc tem seu membro Count definido como 1 (sem MSAA (suavização de amostra múltipla)).  
+  -   O membro SamplerDesc tem seu membro Count definido como 1 (sem MSAA (suavização de amostra múltipla)).  
   
--   Os dados iniciais são fornecidos para a chamada de `CreateTexture2D`.  
+- Os dados iniciais são fornecidos para a chamada de `CreateTexture2D`.  
   
- Estes são os formatos de origem compatíveis e seus respectivos formatos compactados em blocos:  
+  Estes são os formatos de origem compatíveis e seus respectivos formatos compactados em blocos:  
   
 |Formato original (de)|Formato compactado (para)|  
 |------------------------------|------------------------------|  
@@ -62,4 +63,4 @@ Habilita a compactação do bloco em texturas cujo formato de pixel é uma varia
  Essa variante compacta as texturas em blocos no tempo de execução, antes da chamada de `CreateTexture2D`. Essa abordagem não é recomendada para códigos de produção porque as texturas não compactadas consomem mais espaço em disco. Além disso, a etapa adicional necessária pode aumentar consideravelmente o tempo de carregamento no aplicativo porque a compactação em blocos requer muitos recursos computacionais para realizar a codificação. Em vez disso, recomendamos que você faça a compactação das texturas quando não estiver conectado, usando um editor ou processador de imagens que faça parte do pipeline da sua compilação. Essas abordagens diminuem o espaço necessário em disco, eliminam a sobrecarga do tempo de execução no aplicativo e proporcionam mais tempo de processamento para que as imagens tenham a melhor qualidade possível.  
   
 ## <a name="see-also"></a>Consulte também  
- [Variante de dimensões da textura de metade/um quarto](half-quarter-texture-dimensions-variant.md)
+ [Variante de metade/um quarto nas dimensões de textura](half-quarter-texture-dimensions-variant.md)

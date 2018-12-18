@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31473297"
 ---
 # <a name="vsgdbgvsgdbg-constructor"></a>VsgDbg::VsgDbg (Construtor)
 Constrói uma instância do `VsgDbg` classe com ou sem Preparando o componente no aplicativo de diagnóstico de gráficos para capturar e registrar informações de gráficos por padrão, com base no parâmetro booliano especificado ativamente.  

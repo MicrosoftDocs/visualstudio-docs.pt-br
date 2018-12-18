@@ -10,14 +10,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: acd9a024ee20428bb8d90369da5b29994e939baa
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 914b0c3e493e8486247704ef22967c8ccd511ed2
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744997"
 ---
 # <a name="timer"></a>Temporizador
-A opção **Timer** do VSPerfCmd.exe define o evento de criação de perfil com amostragem para ciclos de relógio do processador e, como opção, pode alterar o número de ciclos em um intervalo de amostragem do padrão de 10.000.000. Em um processador de 1 GHz (um gigahertz), 10.000.000 ciclos de relógio são aproximadamente 100 amostras por segundo. O número mínimo de ciclos que pode ser especificado é 50.000.  
+A opção **Timer** do *VSPerfCmd.exe* define o evento de criação de perfil com amostragem para ciclos de relógio do processador e, como opção, altera o número de ciclos em um intervalo de amostragem do padrão de 10.000.000. Em um processador de 1 GHz (um gigahertz), 10.000.000 ciclos de relógio são aproximadamente 100 amostras por segundo. O número mínimo de ciclos que pode ser especificado é 50.000.  
   
  O **Temporizador** só pode ser usado quando você utiliza o método de criação de perfil de amostragem e em uma linha de comando que também contenha a opção **Inicialização** ou **Anexar**.  
   
@@ -27,7 +28,7 @@ A opção **Timer** do VSPerfCmd.exe define o evento de criação de perfil com 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cmd  
 VSPerfCmd.exe {/Launch:AppName|/Attach:PID} /Timer[:Cycles] [Options]  
 ```  
   
@@ -62,13 +63,13 @@ VSPerfCmd.exe {/Launch:AppName|/Attach:PID} /Timer[:Cycles] [Options]
 ## <a name="example"></a>Exemplo  
  Esse exemplo demonstra como definir o intervalo de amostragem da criação de perfil como 1.000.000 ciclos de processador.  
   
-```  
+```cmd  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Launch:TestApp.exe /Timer:1000000  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
- [Criando perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Criando perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Serviços de Criação de Perfil](../profiling/command-line-profiling-of-services.md)
+ [Criar perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [Criar o perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profile services (Serviços de perfil)](../profiling/command-line-profiling-of-services.md)

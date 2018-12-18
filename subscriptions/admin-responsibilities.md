@@ -9,11 +9,12 @@ description: Saiba mais sobre as responsabilidades dos administradores de assina
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 1eb8dc3cf47241632085e86f589ba377343aa4f1
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 9fdefa652a368c344f11fdaf70dbf5db9b172fbf
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638092"
 ---
 # <a name="overview-of-administrator-responsibilities"></a>Visão geral das responsabilidades do administrador
 Como administrador, você tem a capacidade de gerenciar as assinaturas da organização.  A função de administrador também tem a responsabilidade de garantir que as assinaturas sejam gerenciadas de acordo com os termos de licença. Este artigo descreve as responsabilidades, os benefícios e as limitações da função de administrador.
@@ -63,6 +64,7 @@ Os prestadores de serviço externos podem trazer licenças para se relacionar co
 
 ## <a name="track-user-assignment-and-process-orders"></a>Rastrear atribuição de usuário e processar pedidos
 Os administradores de assinaturas do Visual Studio devem controlar o uso do Visual Studio e processar pedidos de qualquer aumento no uso conforme o prazo descrito no contrato de Licenciamento por Volume ou no Contrato de produtos e serviços da Microsoft. O novo Portal de administração de assinaturas do Visual Studio tornou isso mais simples com um rastreador útil que mostra as licenças usadas e disponíveis.
+
 ### <a name="high-water-mark-of-usage"></a>Marca d'água alta de uso
 **A obrigação da sua empresa de comprar assinaturas do Visual Studio entra em vigor imediatamente quando:**
 - Uma licença é atribuída a um usuário.

@@ -1,7 +1,7 @@
 ---
 title: 'Como: usar Editar e continuar (c#) | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/04/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
@@ -17,38 +17,37 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: a1f073d401ddc1a99e365245f2a8c1b66b13fb8a
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 41e97f488344e3d34ce326a3d35880d94da4ad9a
+ms.sourcegitcommit: c5e72875206b8c5737c29d5b1ec7b86eec747303
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49382799"
 ---
 # <a name="how-to-use-edit-and-continue-c"></a>Como usar Editar e Continuar (C#)
-Com a função Editar e Continuar no C#, é possível fazer alterações em seu código no modo de interrupção durante a depuração. As alterações podem ser aplicadas sem precisar interromper e reiniciar a sessão de depuração.  
+Com editar e continuar, você pode fazer e aplicar as alterações ao seu código no modo de interrupção durante a depuração, sem a necessidade de parar e reiniciar a sessão de depuração.  
+
+Editar e continuar para C# ocorre automaticamente quando você faça alterações de código no modo de interrupção, e em seguida, continua a depuração usando **continuar**, **etapa**, ou **definir próxima instrução**, ou avaliar uma função em uma janela do depurador.  
+
+Para obter mais informações, consulte [editar e continuar (Visual C#)](../debugger/edit-and-continue-visual-csharp.md).
+
+>[!NOTE]
+>Editar e continuar não dá suporte para a otimização misto, ou código de integração do SQL Server common language runtime (CLR). Para obter informações sobre outros cenários sem suporte, consulte [suporte para alterações de código (C# e Visual Basic)](../debugger/supported-code-changes-csharp.md). Se você tentar editar e continuar com um desses cenários, uma caixa de mensagem será exibida, informando que editar e continuar não é suportado.  
   
- Editar e continuar é invocado automaticamente quando você fazer alterações no modo de interrupção e escolha uma execução do depurador, como comando **continuar**, **etapa**, ou **definir próxima instrução**, ou avaliar uma função em uma janela de depurador.  
+**Para habilitar ou desabilitar editar e continuar:**  
+   
+1. Se você estiver em uma sessão de depuração, pare a depuração (**Debug** > **parar depuração** ou **Shift**+**F5**) .
+   
+1. Na **ferramentas** > **opções** (ou **depurar** > **opções**) > **dedepuração**  >  **Gerais**, marque ou desmarque as **habilitar editar e continuar** caixa de seleção.  
   
-> [!NOTE]
->  Não há suporte para editar e continuar quando a depuração de otimização de código, o código nativo/gerenciado misto ou o código de integração do SQL Server common language runtime (CLR). Para obter informações sobre outros cenários sem suporte, consulte [suporte para alterações de código (c# e Visual Basic)](../debugger/supported-code-changes-csharp.md). Se você tentar aplicar alterações de código em um desses cenários, as exibições de depurador uma explicação de caixa diálogo que editar e continuar não tem suporte.  
-  
-### <a name="to-invoke-edit-and-continue-automatically"></a>Para invocar a função Editar e Continuar automaticamente  
-  
-1.  No modo de interrupção, faça uma alteração no código-fonte.  
-  
-2.  Do **depurar** menu, clique em **continuar**, **etapa**, ou **definir próxima instrução** ou avaliar uma função em uma janela de depurador.  
-  
-     O novo código é compilado e a depuração continua com o novo código. Algumas alterações não têm suporte para a função Editar e Continuar. Para obter mais informações, consulte [suporte para alterações de código (c# e Visual Basic)](../debugger/supported-code-changes-csharp.md).  
-  
-### <a name="to-enabledisable-edit-and-continue"></a>Para habilitar/desabilitar a função Editar e Continuar  
-  
-1.  No menu **Ferramentas**, clique em **Opções**.  
-  
-2.  No **opções** caixa de diálogo caixa, expanda o **depuração** nó e selecione **editar e continuar**.  
-  
-3.  No **opções** caixa de diálogo **editar e continuar** página, marque ou desmarque o **habilitar editar e continuar** caixa de seleção.  
-  
-     A configuração entra em vigor quando você reinicia a sessão de depuração.  
-  
-## <a name="see-also"></a>Consulte também  
- [Editar e continuar (Visual c#)](../debugger/edit-and-continue-visual-csharp.md)   
- [Alterações de código suportadas (c# e Visual Basic)](../debugger/supported-code-changes-csharp.md)   
+A configuração entra em vigor quando você iniciar ou reiniciar a sessão de depuração.  
+
+**Para usar Editar e continuar:**  
+   
+1. Durante a depuração, no modo de interrupção, faça uma alteração ao código-fonte.  
+   
+1. Dos **Debug** menu, clique em **continuar**, **etapa**, ou **definir próxima instrução**, ou avaliar uma função em uma janela do depurador.  
+   
+   Depuração continua com o novo código compilado. 
+
+Não há suporte para alguns tipos de alterações de código por editar e continuar. Para obter mais informações, consulte [suporte para alterações de código (C# e Visual Basic)](../debugger/supported-code-changes-csharp.md).   

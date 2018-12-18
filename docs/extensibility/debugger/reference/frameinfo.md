@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4080a0d868f154136b11058abdf29948a353b0ba
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1ed3ddbbbffb6e1a92e4c5038fad8f901ecf303e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834019"
 ---
 # <a name="frameinfo"></a>FRAMEINFO
 Descreve um quadro de pilha.  
@@ -67,19 +68,19 @@ public struct FRAMEINFO {
  Uma combinação de sinalizadores do [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) enumeração que especifica quais campos são preenchidos.  
   
  m_bstrFuncName  
- O nome da função associado ao quadro de pilha.  
+ O nome da função associado com o quadro de pilhas.  
   
  m_bstrReturnType  
  O tipo de retorno associado com o quadro de pilha.  
   
  m_bstrArgs  
- Os argumentos para a função associada ao quadro de pilha.  
+ Os argumentos para a função associada com o quadro de pilhas.  
   
  m_bstrLanguage  
  O idioma no qual a função é implementada.  
   
  m_bstrModule  
- O nome do módulo associado ao quadro de pilha.  
+ O nome do módulo associado com o quadro de pilhas.  
   
  m_addrMin  
  O endereço de pilha física mínimo.  
@@ -88,22 +89,22 @@ public struct FRAMEINFO {
  O endereço físico máximo da pilha.  
   
  m_pFrame  
- O [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) objeto que representa deste quadro de pilhas.  
+ O [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) objeto que representa esse quadro de pilha.  
   
  m_pFrame  
- O [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) objeto que representa o módulo que contém este quadro de pilha.  
+ O [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) objeto que representa o módulo que contém esse quadro de pilhas.  
   
  m_fHasDebugInfo  
- Diferente de zero (`TRUE`) se houver informações de depuração no quadro especificado.  
+ Diferente de zero (`TRUE`) se houver informações de depuração em determinado quadro.  
   
  m_fHasDebugInfo  
- Diferente de zero (`TRUE`) se o quadro de pilhas é associado com o código que não é mais válido.  
+ Diferente de zero (`TRUE`) se o registro de ativação está associado com o código que não é mais válido.  
   
  m_fHasDebugInfo  
- Diferente de zero (`TRUE`) se o quadro de pilhas é anotado, o Gerenciador de sessão de depuração (SDM).  
+ Diferente de zero (`TRUE`) se o quadro de pilha é anotado pelo Gerenciador de depuração de sessão (SDM).  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é passada para o [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) método a ser preenchido. Essa estrutura também está contida em uma lista que está contida no [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) interface que, por sua vez, é retornado de uma chamada para o [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) método.  
+ Essa estrutura é passada para o [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) método a ser preenchido. Essa estrutura também está contida em uma lista que está contida na [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) interface que, por sua vez, é retornado de uma chamada para o [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

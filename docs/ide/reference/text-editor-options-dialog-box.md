@@ -1,8 +1,9 @@
 ---
-title: Caixa de diálogo Opções do Editor de Texto | Microsoft Docs
+title: Caixa de diálogo Opções do Editor de Texto
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
 - VS.ToolsOptionsPages.Text_Editor.T-SQL80
@@ -19,16 +20,17 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a47bc3a86ee19f5fe47dce011adb3165e87e3a76
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d746426a5db9a3b71ba3fd3703887f9e4c894ef9
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34448695"
 ---
 # <a name="text-editor-options-dialog-box"></a>Caixa de diálogo Opções do editor de texto
 
 As opções do editor na caixa de diálogo **Opções** fornecem maneiras de personalizar a aparência e o comportamento do editor.
 
-## <a name="see-also"></a>Consulte também
+### <a name="see-also"></a>Consulte também
 
-[Escrevendo Código](../../ide/writing-code-in-the-code-and-text-editor.md) descreve diferentes maneiras de usar o editor de código.
+[Recursos do editor de código](../../ide/writing-code-in-the-code-and-text-editor.md) descreve maneiras diferentes de usar o editor de código.

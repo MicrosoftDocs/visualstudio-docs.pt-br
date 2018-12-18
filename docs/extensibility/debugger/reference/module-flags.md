@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 945a4a0fd5a7de1e9d04d409390caddfc718d92d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 89dbb562dfbab83f56664aad7fdd107ea9d0e397
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873964"
 ---
 # <a name="moduleflags"></a>MODULE_FLAGS
 Usado para descrever um módulo.  
@@ -63,13 +64,13 @@ public enum enum_MODULE_FLAGS {
  Especifica um módulo de 64 bits.  
   
  MODULE_FLAG_OPTIMIZED  
- Especifica que o módulo foi otimizado. Esse estado é refletido no **módulos** janela.  
+ Especifica que o módulo foi otimizado. Esse estado é refletido na **módulos** janela.  
   
  MODULE_FLAG_UNOPTIMIZED  
- Especifica que o módulo não foi otimizado. Esse estado é refletido no **módulos** janela. Este é o estado padrão.  
+ Especifica que o módulo não foi otimizado. Esse estado é refletido na **módulos** janela. Isso é o estado padrão.  
   
 ## <a name="remarks"></a>Comentários  
- Usado para o `m_dwModuleFlags` membro o [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) estrutura.  
+ Usado para o `m_dwModuleFlags` membro a [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) estrutura.  
   
  Esses sinalizadores podem ser combinados com um bit a bit `OR`.  
   

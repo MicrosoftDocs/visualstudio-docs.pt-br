@@ -16,20 +16,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cc4f01240f5f969b91bb3f4cfe46f74a9abb643e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7617062caf233f0711ce2b97d6816af25023ad83
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586733"
 ---
 # <a name="vscodewindowmanager-object"></a>Objeto VSCodeWindowManager
-O serviço de linguagem implementa o Gerenciador de janelas de código e é responsável por gerenciar ornamentos (por exemplo, a barra de menu suspenso). Para obter mais informações, consulte [personalizando janelas de código usando a API herdado](../extensibility/customizing-code-windows-by-using-the-legacy-api.md).  
+O serviço de linguagem implementa o Gerenciador de janelas de código e é responsável por gerenciar adornos (por exemplo, a barra de menu suspenso). Para obter mais informações, consulte [Personalizando o Windows de código usando a API herdada](../extensibility/customizing-code-windows-by-using-the-legacy-api.md).  
   
- A tabela a seguir mostra as interfaces de `VSCodeWindowManager` objeto.  
+ A tabela a seguir mostra as interfaces no `VSCodeWindowManager` objeto.  
   
 |Interface|Descrição|  
 |---------------|-----------------|  
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Permite ornamentos (como barras suspensa) a ser adicionado ou removido de uma janela de código.|  
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Permite que os adornos (como barras de menu suspenso) a ser adicionado ou removido de uma janela de código.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Personalização do Windows de código usando a API herdado](../extensibility/customizing-code-windows-by-using-the-legacy-api.md)
+ [Personalizando o windows de código usando a API herdada](../extensibility/customizing-code-windows-by-using-the-legacy-api.md)

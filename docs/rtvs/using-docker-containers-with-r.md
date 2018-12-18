@@ -1,38 +1,30 @@
 ---
-title: "Ferramentas do R para Visual Studio e Contêineres do Docker | Microsoft Docs"
-description: "Como configurar contêineres do Docker para R e conectá-los ao Visual Studio."
-ms.custom: 
+title: R e contêineres do Docker
+description: Como configurar contêineres do Docker para R e conectá-los ao Visual Studio.
 ms.date: 12/04/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-r
-dev_langs:
-- R
-ms.tgt_pltfrm: 
-ms.topic: article
-author:
-- kraigb
-- karthiknadig
-ms.author:
-- kraigb
-- karthiknadig
-manager: ghogen
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
+ms.topic: conceptual
+author: kraigb
+ms.author: kraigb
+ms.reviewer: karthiknadig
+manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 85db40a5e5b4fa05260bd62ff9857cc9b1ffebcd
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: aeb6026bf7f90d07147ef559bdad9feb03e2c005
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35667126"
 ---
-# <a name="using-docker-containers-with-r-tools-for-visual-studio"></a>Usando contêineres do Docker com as Ferramentas do R para Visual Studio
+# <a name="use-docker-containers-with-r-tools-for-visual-studio"></a>Use contêineres do Docker com as Ferramentas do R para Visual Studio
 
 As RTVS (Ferramentas do R para Visual Studio) versão 1.3+, juntamente com uma instalação do [Docker para Windows](https://www.docker.com/docker-windows), dão suporte ao trabalho com os contêineres do Docker.
 
-## <a name="creating-a-container"></a>Criar um contêiner
+## <a name="create-a-container"></a>Criar um contêiner
 
-1. Selecione o botão **Contêineres...** no canto superior direito da janela **Espaços de trabalho** (**Ferramentas do R > Windows > Espaços de trabalho**). A janela informará se você não tiver instalado o Docker para Windows e fornecerá um link para o download. A instalação do Docker pode exigir uma reinicialização do computador.
+1. Selecione o botão **Contêineres** no canto superior direito da janela **Espaços de trabalho** (**Ferramentas do R** > **Windows** > **Espaços de trabalho**). A janela informará se você não tiver instalado o Docker para Windows e fornecerá um link para o download. A instalação do Docker pode exigir uma reinicialização do computador.
 
     ![Janela Espaços de trabalho nas Ferramentas do R para Visual Studio (VS2017) com o comando Contêineres](media/container-workspaces-window.png)
 
@@ -48,17 +40,17 @@ As RTVS (Ferramentas do R para Visual Studio) versão 1.3+, juntamente com uma i
 
     ![Janela Contêineres mostrando um contêiner concluído](media/containers-window-created.png)
 
-## <a name="connecting-to-a-container"></a>Conectando-se a um contêiner
+## <a name="connect-to-a-container"></a>Conectar-se a um contêiner
 
 1. A seção **Contêineres Locais em Execução** da janela **Espaços de trabalho** exibe os contêineres que estão executando o daemon das RTVS na porta 5444. (Consulte [Remote R Server for Linux](setting-up-remote-r-service-on-linux.md) (R Server Remoto para Linux) para obter detalhes sobre como o daemon está configurado.)
 
     ![Janela Espaços de trabalho mostrando contêineres disponíveis](media/workspaces-window-running-containers.png)
 
-1. Para conectar-se a um contêiner, clique duas vezes no nome do contêiner ou selecione o botão de seta para frente à sua direita. Quando conectado, você verá uma janela **R Interativo** (consulte [Working with the R Interactive window](interactive-repl-for-r-in-visual-studio.md) (Trabalhando com a janela do R Interativo)):
+1. Para conectar-se a um contêiner, clique duas vezes no nome do contêiner ou selecione o botão de seta para frente à sua direita. Quando conectado, você verá uma janela **R Interativo** (consulte [Trabalhar com a janela R Interativo](interactive-repl-for-r-in-visual-studio.md)):
 
     ![Janelas Espaços de trabalho e janela REPL aberta para um contêiner](media/workspaces-window-container-connected.png)
 
-## <a name="using-custom-built-images"></a>Usando imagens personalizadas
+## <a name="use-custom-built-images"></a>Usar imagens personalizadas
 
 As RTVS detectam e permitem o gerenciamento de contêineres criados usando imagens personalizadas, como a imagem microsoft/rtvs descrita no arquivo do docker abaixo. A imagem base usada aqui tem rtvs-daemon, R 3.4.2 e os pacotes R comuns pré-instalados. **Observação**: altere o nome de usuário e a senha mostrados aqui, conforme necessário.
 

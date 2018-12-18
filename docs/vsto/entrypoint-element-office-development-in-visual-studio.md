@@ -1,5 +1,5 @@
 ---
-title: '&lt;ponto de entrada&gt; elemento (desenvolvimento do Office no Visual Studio) | Microsoft Docs'
+title: '&lt;ponto de entrada&gt; elemento (desenvolvimento do Office no Visual Studio)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,18 +17,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f4bd7a9a119a5e604461f44bb166f19e063ab4af
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6eb617b44eb5360ea8c313431c7d8609505efa16
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34447083"
 ---
 # <a name="ltentrypointgt-element-office-development-in-visual-studio"></a>&lt;ponto de entrada&gt; elemento (desenvolvimento do Office no Visual Studio)
   Cada `entryPoint` elemento o `vstav3` namespace identifica um assembly de personalização deve ser executado quando isso [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] aplicativo está instalado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <entryPoint class>  
     <assemblyIdentity />  
 </entryPoint>  
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="code"></a>Código  
   
-```  
+```xml  
 <vstav3:entryPoint   
   class="ContosoExcelWorkbook.ThisWorkbook">  
   <assemblyIdentity   
@@ -101,7 +102,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="code"></a>Código  
   
-```  
+```xml
 <vstav3:entryPoint   
   class="ContosoOutlookAddIn.ThisAddIn">  
   <assemblyIdentity   
@@ -115,6 +116,6 @@ ms.lasthandoff: 04/16/2018
 ## <a name="see-also"></a>Consulte também  
  [Manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md)   
  [Manifestos de implantação para soluções do Office](../vsto/deployment-manifests-for-office-solutions.md)   
- [Manifesto de aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest)  
+ [Manifesto do aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest)  
   
   

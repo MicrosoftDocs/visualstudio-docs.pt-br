@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a155c521370670ecf141177a29f70e67d812d68
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 739c2515d402d4132b2fd5eb10c7ba2cbd5e04b2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49814838"
 ---
 # <a name="idebugdisassemblystream2getscope"></a>IDebugDisassemblyStream2::GetScope
 Obtém o escopo do fluxo de desmontagem.  
@@ -43,10 +44,10 @@ int GetScope(
  [out] Retorna um valor da [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) enumeração que descreve o escopo deste fluxo de desmontagem.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- O escopo de uma desmontagem pode ser uma função ou o módulo inteiro, por exemplo.  
+ O escopo de uma desmontagem poderia ser uma função ou módulo de inteiro, por exemplo.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   

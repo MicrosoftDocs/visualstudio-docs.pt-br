@@ -13,14 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e9b1d9d96a390d36ad2b322cba088388daaca050
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1d7b45d5126f1fc437f54ed028ae7f2f5535c207
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831140"
 ---
 # <a name="idebugsettingscallback2getmetricguid"></a>IDebugSettingsCallback2::GetMetricGuid
-Recupera o identificador exclusivo de uma métrica recebe seu nome.  
+Recupera o identificador exclusivo de uma métrica, dado seu nome.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +45,7 @@ private int GetMetricGuid(
   
 #### <a name="parameters"></a>Parâmetros  
  `pszType`  
- [in] Tipo da métrica.  
+ [in] Tipo de métrica.  
   
  `guidSection`  
  [in] Identificador exclusivo da seção.  
@@ -56,7 +57,7 @@ private int GetMetricGuid(
  [out] Retorna o identificador exclusivo da métrica.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

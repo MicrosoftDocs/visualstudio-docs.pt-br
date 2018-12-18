@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14e7374fbea697b86d9ee838a6b8a76a57f920ff
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 908aef9ab784300ef4a9d30b8d16df14ff78b91d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942186"
 ---
 # <a name="idebugstackframe2getdocumentcontext"></a>IDebugStackFrame2::GetDocumentContext
-Obtém o contexto de documento para este quadro de pilhas.  
+Obtém o contexto do documento para este registro de ativação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,10 +44,10 @@ int GetDocumentContext (
  [out] Retorna um [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) objeto que representa a posição atual em um documento de origem.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método é mais rápido do que chamar o [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md) método e, em seguida, chamar o [GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md) método no contexto de código. No entanto, não há garantia de que cada mecanismo de depuração (DE) implementar esse método.  
+ Esse método é mais rápido do que chamar o [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md) método e, em seguida, chamar o [GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md) método no contexto de código. No entanto, não é garantido que cada mecanismo de depuração (DES) implementará este método.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   

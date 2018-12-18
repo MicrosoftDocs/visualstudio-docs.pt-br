@@ -1,0 +1,177 @@
+- name: Projete interfaces do usuário
+  href: designing-user-interfaces.md
+  items:
+    - name: Criar XAML no Visual Studio
+      href: designing-xaml-in-visual-studio.md
+      items:
+        - name: Criar uma interface do usuário usando o Designer XAML
+          href: creating-a-ui-by-using-xaml-designer-in-visual-studio.md
+          items:
+            - name: Trabalhar com elementos no Designer XAML
+              href: working-with-elements-in-xaml-designer.md
+            - name: Organizar objetos em contêineres de layout no XAML Designer
+              href: organize-objects-into-layout-containers-in-xaml-designer.md
+            - name: Criar e aplicar um recurso
+              href: how-to-create-and-apply-a-resource.md
+            - name: 'Passo a passo: associar dados no Designer XAML'
+              href: walkthrough-binding-to-data-in-xaml-designer.md
+            - name: Atalhos de teclado do XAML Designer
+              href: keyboard-shortcuts-for-xaml-designer.md
+            - name: Depurar ou desabilitar o código do projeto no Designer XAML
+              href: debugging-or-disabling-project-code-in-xaml-designer.md
+            - name: Avisos e erros de XAML
+              href: xaml-errors-warnings.md
+        - name: Criar uma interface do usuário usando o Blend para Visual Studio
+          href: creating-a-ui-by-using-blend-for-visual-studio.md
+          items:
+            - name: Inserir controles e modificar seu comportamento no XAML Designer
+              href: insert-controls-and-modify-their-behavior-in-xaml-designer.md
+            - name: 'Inserir imagens, vídeos e clipes de áudio no XAML Designer'
+              href: insert-images-videos-and-audio-clips-in-xaml-designer.md
+            - name: Desenhe as formas e demarcadores
+              href: draw-shapes-and-paths.md
+            - name: Modificar o estilo de objetos no Blend
+              href: modify-the-style-of-objects-in-blend.md
+            - name: Animar objetos no XAML Designer
+              href: animate-objects-in-xaml-designer.md
+            - name: Exibir dados
+              href: display-data-in-blend.md
+            - name: Atalhos de teclado e teclas modificadoras no Blend
+              href: keyboard-shortcuts-and-modifier-keys-in-blend.md
+              items:
+                - name: Atalhos de teclado
+                  href: keyboard-shortcuts-in-blend.md
+                - name: Teclas modificadoras da prancheta
+                  href: artboard-modifier-keys-in-blend.md
+                - name: Teclas modificadoras da ferramenta Caneta
+                  href: pen-tool-modifier-keys-in-blend.md
+                - name: Teclas modificadoras da ferramenta de seleção direta
+                  href: direct-selection-tool-modifier-keys-in-blend.md
+            - name: Serviços e produtos de acessibilidade para o Blend
+              href: accessibility-products-and-services-blend.md
+    - name: Windows Presentation Foundation (WPF)
+      href: getting-started-with-wpf.md
+      items:
+        - name: Visão geral do WPF
+          href: introduction-to-wpf.md
+        - name: Associação de dados do WPF com LINQ to XML
+          href: wpf-data-binding-with-linq-to-xml-overview.md
+          items:
+            - name: Propriedades dinâmicas do LINQ to XML
+              href: linq-to-xml-dynamic-properties.md
+              items:
+                - name: Propriedades dinâmicas da classe XAttribute
+                  href: xattribute-class-dynamic-properties.md
+                  items:
+                    - name: Valor (propriedade dinâmica de XAttribute)
+                      href: value-xattribute-dynamic-property.md
+                - name: Propriedades dinâmicas da classe XElement
+                  href: xelement-class-dynamic-properties.md
+                  items:
+                    - name: Atributo (propriedade dinâmica de XElement)
+                      href: attribute-xelement-dynamic-property.md
+                    - name: Elemento (propriedade dinâmica de XElement)
+                      href: element-xelement-dynamic-property.md
+                    - name: Elementos (propriedade dinâmica de XElement)
+                      href: elements-xelement-dynamic-property.md
+                    - name: Descendentes (propriedade dinâmica de XElement)
+                      href: descendants-xelement-dynamic-property.md
+                    - name: Valor (propriedade dinâmica de XElement)
+                      href: value-xelement-dynamic-property.md
+                    - name: XML (propriedade dinâmica de XElement)
+                      href: xml-xelement-dynamic-property.md
+                - name: Exemplo
+                  href: wpf-data-binding-using-linq-to-xml-example.md
+                  items:
+                    - name: Compilar e executar o exemplo de LinqToXmlDataBinding
+                      href: how-to-build-and-run-the-linqtoxmldatabinding-example.md
+                    - name: 'Passo a passo: associação de dados do LINQ to XML'
+                      href: walkthrough-linqtoxmldatabinding-example.md
+                      items:
+                        - name: Código-fonte de L2DBForm.xaml
+                          href: l2dbform-xaml-source-code.md
+                        - name: Código-fonte de L2DBForm.xaml.cs
+                          href: l2dbform-xaml-cs-source-code.md
+    - name: Trabalhar com ativos 3D para jogos e aplicativos
+      href: working-with-3-d-assets-for-games-and-apps.md
+      items:
+        - name: Trabalhar com texturas e imagens
+          href: working-with-textures-and-images.md
+          items:
+            - name: Editor de imagem
+              href: image-editor.md
+            - name: Exemplos de editor de imagens
+              href: image-editor-examples.md
+              items:
+                - name: Criar uma textura básica
+                  href: how-to-create-a-basic-texture.md
+                - name: Criar e modificar os níveis de MIP
+                  href: how-to-create-and-modify-mip-levels.md
+        - name: Trabalhar com modelos 3D
+          href: working-with-3-d-models.md
+          items:
+            - name: Editor de modelos
+              href: model-editor.md
+            - name: Exemplos do editor de modelos
+              href: model-editor-examples.md
+              items:
+                - name: Criar um modelo 3D básico
+                  href: how-to-create-a-basic-3-d-model.md
+                - name: Modificar o ponto dinâmico de um modelo 3D
+                  href: how-to-modify-the-pivot-point-of-a-3-d-model.md
+                - name: Modelar um terreno 3D
+                  href: how-to-model-3-d-terrain.md
+                - name: Aplicar um sombreador a um modelo 3D
+                  href: how-to-apply-a-shader-to-a-3-d-model.md
+        - name: Trabalhar com sombreadores
+          href: working-with-shaders.md
+          items:
+            - name: Designer de sombreador
+              href: shader-designer.md
+            - name: Nós do designer do sombreador
+              href: shader-designer-nodes.md
+              items:
+                - name: Nós de constante
+                  href: constant-nodes.md
+                - name: Nós de parâmetro
+                  href: parameter-nodes.md
+                - name: Nós de textura
+                  href: texture-nodes.md
+                - name: Nós de matemática
+                  href: math-nodes.md
+                - name: Nós de utilitário
+                  href: utility-nodes.md
+                - name: Nós de filtro
+                  href: filter-nodes.md
+            - name: Exemplos de designer do sombreador
+              href: shader-designer-examples.md
+              items:
+                - name: Criar um sombreador de cores básico
+                  href: how-to-create-a-basic-color-shader.md
+                - name: Criar um sombreador Lambert básico
+                  href: how-to-create-a-basic-lambert-shader.md
+                - name: Criar um sombreador Phong básico
+                  href: how-to-create-a-basic-phong-shader.md
+                - name: Criar um sombreador de textura básica
+                  href: how-to-create-a-basic-texture-shader.md
+                - name: Criar um sombreador de textura em escala de cinza
+                  href: how-to-create-a-grayscale-texture-shader.md
+                - name: Criar um sombreador de gradiente com base na geometria
+                  href: how-to-create-a-geometry-based-gradient-shader.md
+                - name: 'Explicação passo a passo: criar uma bola de bilhar realista em 3D'
+                  href: walkthrough-creating-a-realistic-3-d-billiard-ball.md
+                - name: Exportar um sombreador
+                  href: how-to-export-a-shader.md
+        - name: Usar ativos 3D em seu jogo ou aplicativo
+          href: using-3-d-assets-in-your-game-or-app.md
+          items:
+            - name: Exportar uma textura que contém mipmaps
+              href: how-to-export-a-texture-that-contains-mipmaps.md
+            - name: Exportar uma textura que tenha o alfa pré-multiplicado
+              href: how-to-export-a-texture-that-has-premultiplied-alpha.md
+            - name: Exportar uma textura para ser usada com aplicativos Direct2D ou Javascript
+              href: how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md
+    - name: A biblioteca de imagens do Visual Studio
+      href: the-visual-studio-image-library.md
+- name: Desenvolver aplicativos com o Designer de Fluxo de Trabalho
+  href: ../workflow-designer/developing-applications-with-the-workflow-designer.md

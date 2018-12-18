@@ -14,13 +14,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ab1aab1be9fa8ebb8667a7cf7c524da71fa013d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8edd84e68b7fbf2f361fe7f3b04807ce2feda95f
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257872"
 ---
-# <a name="no-thread-activity-to-show-threads-view"></a>Nenhuma atividade de thread a ser mostrada (exibição de threads)
+# <a name="no-thread-activity-to-show-threads-view"></a>Não há nenhuma atividade de thread a ser mostrada (exibição Threads)
 Essa área mostra dados sobre threads não ocultos no intervalo de tempo visível no momento.  
   
  Se nenhuma informação estiver visível, verifique as seguintes configurações:  

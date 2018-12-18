@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cddeb5800854d0461fbf96c895f64216f01843f6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9fc4281042b34113a17dfde2c94990642f2f98b7
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34690907"
 ---
 # <a name="copy-selection"></a>Copiar seleção
 Para copiar toda a pilha de chamadas por meio da guia de relatório, clique em **Copiar**. Em seguida, é possível colar a pilha de chamadas em qualquer programa que dá suporte a essa ação.  

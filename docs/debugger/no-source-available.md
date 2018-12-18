@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31479721"
 ---
 # <a name="no-source-available"></a>Nenhuma origem disponível
 O projeto não contém código-fonte para o código que você está tentando exibir. A causa comum é duas vezes em um módulo que não tem o código-fonte no **janela pilha de chamadas** ou **janela Threads**. Você pode continuar a depuração, mas não pode usar a janela de origem para definir pontos de interrupção e executar outras ações nesse local. Se você precisa definir um ponto de interrupção, use o **janela de desmontagem** em vez disso.  

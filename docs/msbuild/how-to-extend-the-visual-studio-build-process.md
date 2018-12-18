@@ -15,25 +15,26 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c6d373a6d5296e535069beeeb6ad551ad93a9444
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 777c2c4ecb5ea8561a43a12f1897c2260d6638d0
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081547"
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>Como estender o processo de build do Visual Studio
-O processo de build [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] é definido por uma série de arquivos .targets [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] que são importados para seu arquivo de projeto. Um desses arquivos importados, Microsoft.Common.targets, pode ser estendido para permitir a execução de tarefas personalizadas em vários pontos no processo de build. Este tópico explica os dois métodos que você pode usar para estender o processo de build do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]:  
+O processo de build do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] é definido por uma série de arquivos *.targets* do [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] que são importados para o arquivo de projeto. Um desses arquivos importados, *Microsoft.Common.targets*, pode ser estendido para permitir a execução de tarefas personalizadas em vários pontos no processo de build. Este artigo explica os dois métodos que você pode usar para estender o processo de build do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]:  
   
--   Substituindo destinos predefinidos específicos definidos no Microsoft.Common.targets.  
+-   Substituindo destinos predefinidos específicos definidos em *Microsoft.Common.targets*.  
   
--   Substituindo as propriedades “DependsOn” definidas no Microsoft.Common.targets.  
+-   Substituindo as propriedades "DependsOn" definidas em *Microsoft.Common.targets*.  
   
-## <a name="overriding-predefined-targets"></a>Substituindo destinos predefinidos  
- O arquivo Microsoft.Common.targets contém um conjunto de destinos vazios predefinidos que são chamados antes e depois de alguns dos principais destinos no processo de build. Por exemplo, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] chama o destino `BeforeBuild` antes do destino `CoreBuild` principal e o destino `AfterBuild` após o destino `CoreBuild`. Por padrão, os destinos vazios Microsoft.Common.targets não fazem nada, mas você pode substituir o comportamento padrão definindo os destinos que você desejar em um arquivo de projeto que importa o Microsoft.Common.targets. Fazendo isso, você pode usar as tarefas [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] para obter maior controle sobre o processo de build.  
+## <a name="override-predefined-targets"></a>Substituir destinos predefinidos  
+ O arquivo *Microsoft.Common.targets* contém um conjunto de destinos vazios predefinidos que é chamado antes e depois de alguns dos principais destinos no processo de build. Por exemplo, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] chama o destino `BeforeBuild` antes do destino `CoreBuild` principal e o destino `AfterBuild` após o destino `CoreBuild`. Por padrão, os destinos vazios em *Microsoft.Common.targets* não tem nenhum efeito, mas você pode substituir o comportamento padrão definindo os destinos desejados em um arquivo de projeto que importa *Microsoft.Common.targets*. Substituindo destinos predefinidos, você pode usar tarefas do [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] para obter mais controle sobre o processo de build.  
   
 #### <a name="to-override-a-predefined-target"></a>Para substituir um destino predefinido  
   
-1.  Identifique um destino predefinido em Microsoft.Common.targets que você deseja substituir. Consulte a tabela abaixo para obter uma lista completa de destinos que você pode substituir com segurança.  
+1.  Identifique um destino predefinido em *Microsoft.Common.targets* que você deseja substituir. Consulte a tabela abaixo para obter uma lista completa de destinos que você pode substituir com segurança.  
   
 2.  Defina o destino ou destinos no final do arquivo de projeto, imediatamente antes da marca `</Project>`. Por exemplo:  
   
@@ -50,23 +51,23 @@ O processo de build [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] é
     ```  
   
 3.  Compile o arquivo de projeto.  
+
+A tabela a seguir mostra todos os destinos em *Microsoft.Common.targets* que você pode substituir com segurança.  
   
- A tabela a seguir mostra todos os destinos no Microsoft.Common.targets que você pode substituir com segurança.  
-  
-|Nome de Destino|Descrição|  
+|Nome de destino|Descrição|  
 |-----------------|-----------------|  
-|`BeforeCompile`, `AfterCompile`|Tarefas inseridas em um desses destinos são executadas antes ou após a conclusão da compilação principal. A maioria das personalizações é realizada em um desses dois destinos.|  
-|`BeforeBuild`, `AfterBuild`|Tarefas inseridas em um desses destinos serão executadas antes ou depois de todo o resto no build. **Observação:** os destinos `BeforeBuild` e `AfterBuild` já estão definidos nos comentários no final da maioria dos arquivos de projeto. Isso permite que você adicione facilmente os eventos de pré e pós-build ao arquivo de projeto.|  
-|`BeforeRebuild`, `AfterRebuild`|Tarefas inseridas em um desses alvos são executadas antes ou depois que a funcionalidade de recompilação do núcleo é invocada. A ordem de execução de destino em Microsoft.Common.targets é: `BeforeRebuild`, `Clean`, `Build` e `AfterRebuild`.|  
-|`BeforeClean`, `AfterClean`|Tarefas inseridas em um desses destinos são executadas antes ou depois da funcionalidade de limpeza do núcleo ser invocada.|  
-|`BeforePublish`, `AfterPublish`|Tarefas inseridas em um desses destinos são executadas antes ou depois da funcionalidade de publicação do núcleo ser invocada.|  
-|`BeforeResolveReference`, `AfterResolveReferences`|Tarefas inseridas em um desses destinos são executadas antes ou após as referências de assembly serem resolvidas.|  
-|`BeforeResGen`, `AfterResGen`|Tarefas inseridas em um desses destinos são executadas antes ou após os recursos serem gerados.|  
+|`BeforeCompile`, `AfterCompile`|As tarefas inseridas em um desses destinos são executadas antes ou após a conclusão da compilação principal. A maioria das personalizações é realizada em um desses dois destinos.|  
+|`BeforeBuild`, `AfterBuild`|As tarefas inseridas em um desses destinos serão executadas antes ou depois de todo o resto no build. **Observação:** os destinos `BeforeBuild` e `AfterBuild` já estão definidos nos comentários ao final da maioria dos arquivos de projeto, permitindo que você adicione com facilidade eventos de pré e pós-build ao arquivo de projeto.|  
+|`BeforeRebuild`, `AfterRebuild`|As tarefas inseridas em um desses destinos são executadas antes ou após a invocação da funcionalidade de recompilação principal. A ordem de execução de destino em *Microsoft.Common.targets* é: `BeforeRebuild`, `Clean`, `Build` e, em seguida, `AfterRebuild`.|  
+|`BeforeClean`, `AfterClean`|As tarefas inseridas em um desses destinos são executadas antes ou após a invocação da funcionalidade de limpeza principal.|  
+|`BeforePublish`, `AfterPublish`|As tarefas inseridas em um desses destinos são executadas antes ou após a invocação da funcionalidade de publicação principal.|  
+|`BeforeResolveReference`, `AfterResolveReferences`|As tarefas inseridas em um desses destinos são executadas antes ou após a resolução das referências de assembly.|  
+|`BeforeResGen`, `AfterResGen`|As tarefas inseridas em um desses destinos são executadas antes ou após a geração de recursos.|  
   
-## <a name="overriding-dependson-properties"></a>Substituindo propriedades “DependsOn”  
+## <a name="override-dependson-properties"></a>Substituir propriedades DependsOn  
  Substituir destinos predefinidos é uma maneira fácil de estender o processo de build, mas, como [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] avalia a definição de destinos sequencialmente, não há nenhuma maneira de impedir que outro projeto que importa seu projeto substitua os destinos que você já substituiu. Dessa forma, por exemplo, o último destino `AfterBuild` no arquivo de projeto, depois que todos os outros projetos foram importados, será aquele usado durante o build.  
   
- Você pode se proteger contra substituições indesejadas de destinos substituindo as propriedades “DependsOn” que são usadas em atributos `DependsOnTargets` por todo o arquivo Microsoft.Common.targets. Por exemplo, o destino `Build` contém um valor de atributo `DependsOnTargets` de `"$(BuildDependsOn)"`. Considere:  
+ Você pode se proteger contra substituições indesejadas de destinos substituindo as propriedades DependsOn usadas em atributos `DependsOnTargets` em todo o arquivo *Microsoft.Common.targets*. Por exemplo, o destino `Build` contém um valor de atributo `DependsOnTargets` de `"$(BuildDependsOn)"`. Considere:  
   
 ```xml  
 <Target Name="Build" DependsOnTargets="$(BuildDependsOn)"/>  
@@ -105,9 +106,9 @@ O processo de build [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] é
   
  Projetos que importam seus arquivos de projeto podem substituir essas propriedades sem substituir as personalizações que você fez.  
   
-#### <a name="to-override-a-dependson-property"></a>Para substituir uma propriedade “DependsOn”  
+#### <a name="to-override-a-dependson-property"></a>Para substituir uma propriedade DependsOn  
   
-1.  Identifique uma propriedade “DependsOn” predefinida no Microsoft.Common.targets que você deseja substituir. Consulte a tabela abaixo para obter uma lista das propriedades “DependsOn” comumente substituídas.  
+1.  Identifique uma propriedade DependsOn predefinida em *Microsoft.Common.targets* que você deseja substituir. Confira a tabela abaixo para obter uma lista das propriedades DependsOn geralmente substituídas.  
   
 2.  Defina outra instância da propriedade ou propriedades no final do seu arquivo de projeto. Inclua a propriedade original, por exemplo `$(BuildDependsOn)`, na nova propriedade.  
   
@@ -115,9 +116,9 @@ O processo de build [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] é
   
 4.  Compile o arquivo de projeto.  
   
-### <a name="commonly-overridden-dependson-properties"></a>Propriedades “DependsOn” geralmente substituídas  
+### <a name="commonly-overridden-dependson-properties"></a>Propriedades DependsOn geralmente substituídas  
   
-|Nome da Propriedade|Descrição|  
+|Property name|Descrição|  
 |-------------------|-----------------|  
 |`BuildDependsOn`|A propriedade a ser substituída se você quiser inserir destinos personalizados antes ou após o processo inteiro de build.|  
 |`CleanDependsOn`|A propriedade a ser substituída você quiser limpar a saída do seu processo de build personalizado.|  
@@ -126,4 +127,4 @@ O processo de build [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] é
 ## <a name="see-also"></a>Consulte também  
  [Integração com o Visual Studio](../msbuild/visual-studio-integration-msbuild.md)   
  [Conceitos do MSBuild](../msbuild/msbuild-concepts.md)   
- [Arquivos .Targets](../msbuild/msbuild-dot-targets-files.md)
+ [Arquivos .targets](../msbuild/msbuild-dot-targets-files.md)

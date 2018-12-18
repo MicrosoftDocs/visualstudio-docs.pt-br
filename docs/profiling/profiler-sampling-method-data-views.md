@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a091ce71312778353a7f09869d6de45bc394c665
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8b9b85d5bf1bab61fbc59c0f90411c3e70545745
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34265038"
 ---
 # <a name="profiler-sampling-method-data-views"></a>Exibições de dados do método de amostragem do criador de perfil
 Esta seção contém informações de referência sobre as exibições e os relatórios dos arquivos de dados do criador de perfil que foram gerados por método de amostragem.  
@@ -29,16 +30,16 @@ Esta seção contém informações de referência sobre as exibições e os rela
  [Exibição de Resumo](../profiling/summary-view-sampling-data.md)  
  Lista as funções que foram executadas com mais frequência quando os exemplos foram coletados e as funções que estavam executando o trabalho mais individual.  
   
- [Modo de exibição de árvore de Chamadas](../profiling/call-tree-view-sampling-data.md)  
+ [Modo de exibição de árvore de chamadas](../profiling/call-tree-view-sampling-data.md)  
  Exibe os caminhos de execução das funções em uma árvore hierárquica.  
   
- [Exibição Módulos](../profiling/modules-view-sampling-data.md)  
+ [Exibição de Módulos](../profiling/modules-view-sampling-data.md)  
  Organiza os dados de criação de perfil por módulo e lista as funções, as linhas de código-fonte e as instruções que estavam em execução quando os exemplos foram coletados.  
   
- [Exibição de chamador/computador chamado – dados de amostragem](../profiling/caller-callee-view-sampling-data.md)  
+ [Exibição de Chamador/Receptor – dados de amostragem](../profiling/caller-callee-view-sampling-data.md)  
  Exibe os dados de criação de perfil para uma função selecionada e as funções que chamaram e foram chamadas pela função selecionada.  
   
- [Exibição Funções](../profiling/functions-view-sampling-data.md)  
+ [Exibição de Funções](../profiling/functions-view-sampling-data.md)  
  Organiza a criação de perfil por função e lista as funções que estavam em execução quando os exemplos foram coletados.  
   
  [Exibição de Linhas](../profiling/lines-view-sampling-data.md)  
@@ -51,7 +52,7 @@ Esta seção contém informações de referência sobre as exibições e os rela
  [Exibição de Processo](../profiling/process-view.md)  
  Lista o processo e as horas final e inicial do thread.  
   
- [Exibição de Marcas](../profiling/marks-view.md)  
+ [Exibição de marcas](../profiling/marks-view.md)  
  Lista ETW e eventos de amostragem inseridos em um arquivo de dados de criação de perfil.  
   
  [Exibição de Detalhes da Função](../profiling/function-details-view.md)  

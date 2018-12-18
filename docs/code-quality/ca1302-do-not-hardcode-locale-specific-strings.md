@@ -1,6 +1,7 @@
 ---
 title: 'CA1302: não codificar cadeias de caracteres específicas da localidade'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,38 +14,43 @@ ms.assetid: 05ed134a-837d-43d7-bf97-906edeac44ce
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 0de562f8f7af4e76b31bc49c33742009db485415
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e56c57343ae61709b6d5875c865857a7475363fd
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45550486"
 ---
 # <a name="ca1302-do-not-hardcode-locale-specific-strings"></a>CA1302: não codificar cadeias de caracteres específicas da localidade
+
 |||
 |-|-|
 |NomeDoTipo|DoNotHardcodeLocaleSpecificStrings|
 |CheckId|CA1302|
 |Categoria|Microsoft.Globalization|
-|Alteração Significativa|Não recentes|
+|Alteração Significativa|Não são significativas|
 
 ## <a name="cause"></a>Causa
  Um método usa uma cadeia de caracteres literal que representa a parte do caminho de determinadas pastas do sistema.
 
-## <a name="rule-description"></a>Descrição da Regra
- O <xref:System.Environment.SpecialFolder?displayProperty=fullName> enumeração contém membros que se referem a pastas do sistema especial. Os locais das pastas podem ter valores diferentes em diferentes sistemas operacionais, o usuário pode alterar alguns dos locais e os locais são localizados. Um exemplo de uma pasta especial é a pasta do sistema, que é "C:\WINDOWS\system32" em [!INCLUDE[winxp](../code-quality/includes/winxp_md.md)] mas "C:\WINNT\system32" em [!INCLUDE[win2kfamily](../code-quality/includes/win2kfamily_md.md)]. O <xref:System.Environment.GetFolderPath%2A?displayProperty=fullName> método retorna os locais que estão associados a <xref:System.Environment.SpecialFolder> enumeração. Os locais que são retornados pelo <xref:System.Environment.GetFolderPath%2A> estão localizados e apropriado para o computador em execução no momento.
+## <a name="rule-description"></a>Descrição da regra
+ O <xref:System.Environment.SpecialFolder?displayProperty=fullName> enumeração contém membros que se referem a pastas especiais do sistema. Os locais dessas pastas podem ter valores diferentes em diferentes sistemas operacionais, o usuário pode alterar alguns dos locais e os locais são localizados. Um exemplo de uma pasta especial é a pasta do sistema, que é "C:\WINDOWS\system32" em [!INCLUDE[winxp](../code-quality/includes/winxp_md.md)] mas "C:\WINNT\system32" em [!INCLUDE[win2kfamily](../code-quality/includes/win2kfamily_md.md)]. O <xref:System.Environment.GetFolderPath%2A?displayProperty=fullName> método retorna os locais que estão associados a <xref:System.Environment.SpecialFolder> enumeração. Os locais que são retornados pelo <xref:System.Environment.GetFolderPath%2A> são localizados e apropriado para o computador em execução no momento.
 
- Essa regra cria tokens de caminhos de pastas que são recuperados por meio de <xref:System.Environment.GetFolderPath%2A> método em níveis de diretório separado. Cada cadeia de caracteres literal é comparada com os tokens. Se uma correspondência for encontrada, presume-se que o método é criar uma cadeia de caracteres que refere-se para o local do sistema que está associado com o token. Para a portabilidade e localização, use o <xref:System.Environment.GetFolderPath%2A> método para recuperar os locais das pastas do sistema especiais em vez de usar literais de cadeia de caracteres.
+ Essa regra cria tokens os caminhos de pasta são recuperados por meio de <xref:System.Environment.GetFolderPath%2A> método nos níveis de diretório separado. Cada literal de cadeia de caracteres é comparadas com os tokens. Se uma correspondência for encontrada, supõe-se que o método é criando uma cadeia de caracteres que aponta para o local do sistema que está associado com o token. Para portabilidade e a possibilidade de localização, use o <xref:System.Environment.GetFolderPath%2A> método para recuperar os locais das pastas especiais do sistema em vez de usar literais de cadeia de caracteres.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, recuperar o local usando o <xref:System.Environment.GetFolderPath%2A> método.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, recupere o local usando o <xref:System.Environment.GetFolderPath%2A> método.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- É seguro suprimir um aviso de que essa regra se a cadeia de caracteres literal não é usada para se referir a um dos locais do sistema que está associado com o <xref:System.Environment.SpecialFolder> enumeração.
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+ É seguro suprimir um aviso nessa regra, se o literal de cadeia de caracteres não é usado para se referir a um dos locais de sistema que está associado com o <xref:System.Environment.SpecialFolder> enumeração.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir cria o caminho da pasta de dados do aplicativo comum, que gera três avisos dessa regra. Em seguida, o exemplo recupera o caminho usando o <xref:System.Environment.GetFolderPath%2A> método.
+ O exemplo a seguir cria o caminho de pasta de dados de aplicativo comuns, que gera três avisos dessa regra. Em seguida, o exemplo recupera o caminho usando o <xref:System.Environment.GetFolderPath%2A> método.
 
  [!code-csharp[FxCop.Globalization.HardcodedLocaleStrings#1](../code-quality/codesnippet/CSharp/ca1302-do-not-hardcode-locale-specific-strings_1.cs)]
  [!code-vb[FxCop.Globalization.HardcodedLocaleStrings#1](../code-quality/codesnippet/VisualBasic/ca1302-do-not-hardcode-locale-specific-strings_1.vb)]

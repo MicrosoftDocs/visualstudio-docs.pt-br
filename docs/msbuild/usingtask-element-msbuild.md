@@ -20,11 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f95e09639e9236b64f9c18c9bd90e6850ee13d86
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 28dba0a2b386cef00daf4827609ce9762c667067
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49892955"
 ---
 # <a name="usingtask-element-msbuild"></a>Elemento UsingTask (MSBuild)
 Mapeia a tarefa que é referenciada em um elemento [Tarefa](../msbuild/task-element-msbuild.md) para o assembly que contém a implementação de tarefas.  
@@ -34,7 +35,7 @@ Mapeia a tarefa que é referenciada em um elemento [Tarefa](../msbuild/task-elem
 
 ## <a name="syntax"></a>Sintaxe  
 
-```  
+```xml  
 <UsingTask TaskName="TaskName"  
     AssemblyName = "AssemblyName"   
     TaskFactory = "ClassName"  
@@ -63,17 +64,17 @@ Mapeia a tarefa que é referenciada em um elemento [Tarefa](../msbuild/task-elem
 
 ### <a name="parent-elements"></a>Elementos pai  
 
-|Elemento|Descrição|  
-|-------------|-----------------|  
-|[Projeto](../msbuild/project-element-msbuild.md)|Elemento raiz necessário de um arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].|  
+| Elemento | Descrição |
+| - | - |
+| [Projeto](../msbuild/project-element-msbuild.md) | Elemento raiz necessário de um arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
 
 ## <a name="remarks"></a>Comentários  
- Variáveis de ambiente, propriedades de linha de comando e propriedades de nível de projeto podem ser referenciadas em algum lugar do elemento `UsingTask` se ele aparecer no arquivo de projeto explicitamente ou por meio de um arquivo de projeto importado. Para obter mais informações, consulte [Tarefas](../msbuild/msbuild-tasks.md).  
+ Variáveis de ambiente, propriedades de linha de comando, propriedades no nível do projeto e itens no nível do projeto podem ser referenciadas no elemento `UsingTask` incluído no arquivo de projeto, explicitamente ou por meio de um arquivo de projeto importado. Para obter mais informações, consulte [Tarefas](../msbuild/msbuild-tasks.md).  
 
 > [!NOTE]
->  Propriedades de nível de projeto não têm significado se o elemento `UsingTask` for proveniente de um dos arquivos .tasks globalmente registrados com o mecanismo do MSBuild. Propriedades de nível de projeto não são globais para o MSBuild.  
+>  Propriedades e itens no nível do projeto não têm significado se o elemento `UsingTask` for proveniente de um dos arquivos *.tasks* globalmente registrados com o mecanismo do MSBuild. Valores no nível do projeto não são globais ao MSBuild.  
 
- No MSBuild 4.0, usar tarefas pode ser carregado de arquivos .overridetask.  
+ No MSBuild 4.0, usar tarefas pode ser carregado a partir de arquivos *.overridetask*.  
 
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar o elemento `UsingTask` com um atributo `AssemblyName`.  
@@ -102,4 +103,4 @@ Mapeia a tarefa que é referenciada em um elemento [Tarefa](../msbuild/task-elem
 ## <a name="see-also"></a>Consulte também  
  [Tarefas](../msbuild/msbuild-tasks.md)   
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)   
- [Referência do esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)
+ [Referência de esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)

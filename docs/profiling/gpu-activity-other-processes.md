@@ -18,6 +18,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31573070"
 ---
 # <a name="gpu-activity-other-processes"></a>Atividade de GPU (outros processos)
 Os segmentos **Atividade de GPU (outros processos)** na exibição Threads na Visualização Simultânea representam o tempo durante o qual a GPU estava processando solicitações em nome de outros processos no sistema. Essas solicitações são enviadas à GPU como pacotes de DMA (acesso direto à memória).  O tamanho de um segmento representa o tempo durante o qual o pacote foi processado pela GPU.  

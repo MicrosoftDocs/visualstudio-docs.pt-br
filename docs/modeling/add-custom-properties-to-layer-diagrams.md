@@ -9,58 +9,60 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 2766f6487b6cf2fb39140eb9678afc9999e39545
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 368d1a794f51d827aa62cc913039edda59ae7ae6
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "33864184"
 ---
 # <a name="add-custom-properties-to-dependency-diagrams"></a>Adicionar propriedades personalizadas a diagramas de dependência
+
 Quando você escreve o código de extensão para diagramas de dependência, você pode armazenar valores com qualquer elemento em um diagrama de dependência. Os valores serão mantidas quando o diagrama é salvo e aberto novamente. Você também pode ter essas propriedades aparecem no **propriedades** janela para que os usuários podem ver e editá-los. Por exemplo, você pode permitir que os usuários especificar uma expressão regular para cada camada e escrever código de validação para verificar se os nomes das classes em cada camada está de acordo com o padrão especificado pelo usuário.
 
-## <a name="properties-not-visible-to-the-user"></a>Propriedades não é visíveis para o usuário
- Se você quiser apenas seu código para anexar os valores para qualquer elemento em um diagrama de dependência, você não precisa definir um componente MEF. Não há um dicionário, chamado `Properties` em <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement>. Basta adicione valores é possível realizar marshaling para o dicionário de qualquer elemento de camada. Elas serão salvas como parte do diagrama de dependência. Para obter mais informações, consulte [navegar e atualizar modelos no código do programa de camada](../modeling/navigate-and-update-layer-models-in-program-code.md).
+## <a name="non-visible-properties"></a>Propriedades não visíveis
 
-## <a name="properties-that-the-user-can-edit"></a>Propriedades que o usuário pode editar
- **Preparação inicial**
+Se você quiser apenas seu código para anexar os valores para qualquer elemento em um diagrama de dependência, você não precisa definir um componente MEF. Não há um dicionário, chamado `Properties` em <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement>. Basta adicione valores é possível realizar marshaling para o dicionário de qualquer elemento de camada. Elas serão salvas como parte do diagrama de dependência. Para obter mais informações, consulte [navegar e atualizar modelos no código do programa de camada](../modeling/navigate-and-update-layer-models-in-program-code.md).
+
+## <a name="editable-properties"></a>Propriedades editáveis
+
+**Preparação inicial**
 
 > [!IMPORTANT]
->  Para exibir propriedades, faça as seguintes alterações em cada computador onde você deseja que as propriedades da camada fique visível.
+> Para exibir propriedades, faça a seguinte alteração em cada computador onde você deseja que as propriedades da camada devem ficar visíveis:
 >
->  1.  Execute o bloco de notas usando **executar como administrador**. Abrir `%ProgramFiles%\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest`
-> 2.  Dentro de `Content` elemento, adicionar:
+> 1. Execute o bloco de notas usando **executar como administrador**. Abra *%ProgramFiles%\Microsoft Visual Studio [version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest*.
+> 2. Dentro de **conteúdo** elemento, adicionar:
 >
 >     ```xml
 >     <MefComponent>Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.Provider.dll</MefComponent>
 >     ```
-> 3.  Sob o **ferramentas do Visual Studio** seção do Visual Studio aplicativo menu Iniciar, abra **Prompt de comando do desenvolvedor**.
->
->      Digite:
+> 3. Sob o **ferramentas do Visual Studio** seção do Visual Studio aplicativo menu Iniciar, abra **Prompt de comando do desenvolvedor**. Digite:
 >
 >      `devenv /rootSuffix /updateConfiguration`
 >
 >      `devenv /rootSuffix Exp /updateConfiguration`
-> 4.  Reinicie o Visual Studio.
+> 4. Reinicie o Visual Studio.
 
- **Verifique se que seu código está em um projeto do VSIX**
+**Verifique se que seu código está em um projeto do VSIX**
 
- Se a propriedade for parte de um projeto de validação, um gesto ou um comando, você não precisa adicionar qualquer coisa. O código para a propriedade personalizada deve ser definido em um projeto de extensibilidade do Visual Studio definido como um componente MEF. Para obter mais informações, consulte [adicionar comandos e gestos a diagramas de dependência](../modeling/add-commands-and-gestures-to-layer-diagrams.md) ou [adicionar validação de arquitetura personalizada a diagramas de dependência](../modeling/add-custom-architecture-validation-to-layer-diagrams.md).
+Se a propriedade for parte de um projeto de validação, um gesto ou um comando, você não precisa adicionar qualquer coisa. O código para a propriedade personalizada deve ser definido em um projeto de extensibilidade do Visual Studio definido como um componente MEF. Para obter mais informações, consulte [adicionar comandos e gestos a diagramas de dependência](../modeling/add-commands-and-gestures-to-layer-diagrams.md) ou [adicionar validação de arquitetura personalizada a diagramas de dependência](../modeling/add-custom-architecture-validation-to-layer-diagrams.md).
 
- **Definir a propriedade personalizada**
+**Definir a propriedade personalizada**
 
- Para criar uma propriedade personalizada, defina uma classe como este:
+Para criar uma propriedade personalizada, defina uma classe como este:
 
-```
+```csharp
 [Export(typeof(IPropertyExtension))]
-public class MyProperty
-      : PropertyExtension<ILayerElement>
+public class MyProperty : PropertyExtension<ILayerElement>
 {
   // Implement the interface.
 }
 ```
 
- Você pode definir propriedades em <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement> ou qualquer uma de suas classes derivadas, que incluem:
+Você pode definir propriedades em <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement> ou qualquer uma de suas classes derivadas, que incluem:
 
 -   `ILayerModel` -o modelo
 
@@ -73,9 +75,10 @@ public class MyProperty
 -   `ILayerCommentLink`
 
 ## <a name="example"></a>Exemplo
- O código a seguir é um descritor de propriedade personalizada típico. Define uma propriedade booleana no modelo de camada (`ILayerModel`) que permite que o usuário forneça valores para um método de validação personalizada.
 
-```
+O código a seguir é um descritor de propriedade personalizada típico. Define uma propriedade booleana no modelo de camada (`ILayerModel`) que permite que o usuário forneça valores para um método de validação personalizada.
+
+```csharp
 using System;
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer;

@@ -16,11 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a00f7019a96696b0c1bde6876697b71d96c253d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 74a89fafd8d163bfb03be8d29f58eb036be68f82
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49838563"
 ---
 # <a name="idebugmessageevent2getmessage"></a>IDebugMessageEvent2::GetMessage
 Obtém a mensagem a ser exibida.  
@@ -55,16 +56,16 @@ int GetMessage(
  [out] Retorna a mensagem.  
   
  `pdwType`  
- [out] Retorna o tipo da mensagem, usando as convenções do Win32 `MessageBox` função. Consulte o [AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox) função para obter detalhes.  
+ [out] Retorna o tipo da mensagem, usando as convenções do Win32 `MessageBox` função. Consulte a [AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox) função para obter detalhes.  
   
  `pbstrHelpFileName`  
- [out no] Retorna o nome do arquivo de Ajuda. Pode ser um valor vazio (c#) ou o nulo (C++), se não houver nenhum arquivo de Ajuda.  
+ [no, out] Retorna o nome do arquivo de Ajuda. Pode ser um null (C++) ou valor vazio (c#), se não houver nenhum arquivo de Ajuda.  
   
  `pdwHelpId`  
- [out no] Retorna o identificador da Ajuda. Pode ser 0 se não houver nenhuma ajuda associada com esta mensagem.  
+ [no, out] Retorna o identificador de Ajuda. Pode ser 0 se não houver nenhuma ajuda associado com esta mensagem.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md)   

@@ -1,9 +1,11 @@
 ---
-title: Ajuda de interface de usuário de Designer de fluxo de trabalho | Microsoft Docs
+title: Ajuda de Designer de Fluxo de Trabalho interface de usuário
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
-- Visual Studio 2010 Workflow Designer [WFD], user interface help
+- Visual Studio Workflow Designer [WFD], user interface help
 - Workflow Designer [WFD], user interface help
 ms.assetid: f7afc443-7c7f-4b0f-9517-c58070a640de
 author: gewarren
@@ -11,13 +13,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8049362e7765b2ac9f8f3529f8d283ca43bc7b13
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d5e98059c82213537625134865de80c5a363cc6f
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36756516"
 ---
 # <a name="workflow-designer-ui-help"></a>Ajuda de Designer de Fluxo de Trabalho interface de usuário
-Esta seção contém os tópicos de ajuda sensível ao contexto do Designer de fluxo de trabalho do Windows. Ao trabalhar em [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)], você pode acessar esses tópicos da interface do usuário, pressionando **F1** quando um [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] caixa de diálogo é aberta.
 
- Esta seção também contém vários tópicos preocupados com navegação e mensagens de erro.
+Esta seção contém tópicos da Ajuda contextuais para o Designer de fluxo de trabalho. Ao trabalhar no Visual Studio, você pode acessar esses tópicos na interface do usuário, pressionando **F1** quando uma caixa de diálogo do Designer de fluxo de trabalho é aberta.
+
+Esta seção também contém vários tópicos preocupados com navegação e mensagens de erro.

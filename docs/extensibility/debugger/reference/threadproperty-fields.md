@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6c5733bfa889a38c1d143fdd3bfbd8f208fed13a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 44692c4715db3db8f65a85bd66a129b4d17e5138
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855541"
 ---
 # <a name="threadpropertyfields"></a>THREADPROPERTY_FIELDS
-Especifica quais informações sobre um segmento a ser recuperado.  
+Especifica quais informações sobre um thread deve ser recuperado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,30 +54,30 @@ public enum enum_THREADPROPERTY_FIELDS {
   
 ## <a name="members"></a>Membros  
  TPF_ID  
- Inicializar/usar o `dwThreadId` campo o [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) estrutura.  
+ Inicialização/usar o `dwThreadId` campo do [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) estrutura.  
   
  TPF_SUSPENDCOUNT  
- Inicializar/usar o `dwSuspendCount` campo o `THREADPROPERTIE`estrutura.  
+ Inicialização/usar o `dwSuspendCount` campo do `THREADPROPERTIE`estrutura.  
   
  TPF_STATE  
- Inicializar/usar o `dwThreadState` campo o `THREADPROPERTIE`estrutura.  
+ Inicialização/usar o `dwThreadState` campo do `THREADPROPERTIE`estrutura.  
   
  TPF_PRIORITY  
- Inicializar/usar o `bstrPriority` campo o `THREADPROPERTIE`estrutura.  
+ Inicialização/usar o `bstrPriority` campo do `THREADPROPERTIE`estrutura.  
   
  TPF_NAME  
- Inicializar/usar o `bstrName` campo o `THREADPROPERTIE`estrutura.  
+ Inicialização/usar o `bstrName` campo do `THREADPROPERTIE`estrutura.  
   
  TPF_LOCATION  
- Inicializar/usar o `bstrLocation` campo o `THREADPROPERTIE`estrutura.  
+ Inicialização/usar o `bstrLocation` campo do `THREADPROPERTIE`estrutura.  
   
  TPF_ALLFIELDS  
  Especifica todos os campos.  
   
 ## <a name="remarks"></a>Comentários  
- Esses valores são passados como um argumento para o [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) método para indicar quais campos do [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) estrutura devem ser inicializado.  
+ Esses valores são passados como um argumento para o [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) método para indicar quais campos da [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) são de estrutura a ser inicializado.  
   
- Esses valores também são usados em `dwFields` membro o `THREADPROPERTIES` estrutura para indicar quais campos são usados e válido.  
+ Esses valores também são usados no `dwFields` membro o `THREADPROPERTIES` estrutura para indicar quais campos são usados e válido.  
   
  Esses sinalizadores podem ser combinados com um bit a bit `OR`.  
   

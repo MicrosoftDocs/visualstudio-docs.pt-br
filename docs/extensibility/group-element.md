@@ -14,18 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 184bb709d25c55adcc34e73b6df1ac5f4a2448bd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 34ca01d77856fadabcc8e681d2be3b1eb6173c70
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49813515"
 ---
-# <a name="group-element"></a>Elemento de grupo
+# <a name="group-element"></a>Elemento Group
 Define um grupo de comando VSPackage.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <Group guid="guidMyCommandSet" id="MyGroup" priority="0x101">  
   <Parent>... </Parent>  
 </Group>  
@@ -38,10 +39,10 @@ Define um grupo de comando VSPackage.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|GUID|Necessário. GUID do identificador de comando GUID ID.|  
-|id|Necessário. ID do identificador de comando GUID ID.|  
+|GUID|Necessário. GUID do identificador de comando/ID de GUID.|  
+|id|Necessário. ID do identificador de comando/ID de GUID.|  
 |priority|Opcional. Um valor numérico que especifica a prioridade.|  
-|Condição|Opcional. Consulte [atributos condicionais](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|Condição|Opcional. Ver [atributos condicionais](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -58,11 +59,11 @@ Define um grupo de comando VSPackage.
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```xml  
 <Group guid="cmdSetGuidWidgetCommands" id="groupIDFileEdit">  
   <Parent guid="guidSHLMainMenu" id="IDM_VS_TOOL_MAINMENU"/>  
 </Group>  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquivos da tabela de comandos do Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+ [Arquivos de tabela (. VSCT) de comando do Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -12,23 +12,24 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b4e21b91ceda5b51a26633b7595aed4e0ee12059
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 40e28eb246b2c4611a15dc4ce2cf6b1b02dd0100
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34263175"
 ---
 # <a name="call-tree-view---contention-data"></a>Modo de exibição de árvore de chamadas - Dados de contenção
 O modo de exibição de Árvore de Chamadas exibe os caminhos de execução de função que foram percorridos no aplicativo analisado. A raiz da árvore é o ponto de entrada do aplicativo ou do componente. Cada nó de função lista todas as funções que chamou, o número de vezes que a função foi bloqueada e por quanto tempo a função esteve bloqueada porque estava competindo por um recurso com outros threads ou processos.  
   
  Os valores no modo de exibição de Árvore de Chamadas são para as instâncias de função que foram chamadas pela função pai na árvore de chamadas. Os percentuais são calculados ao comparar o valor da instância de função ao número total de contenções na execução da criação de perfil.  
   
-## <a name="highlighting-the-execution-hot-path"></a>Realce do afunilamento de execução  
+## <a name="highlight-the-execution-hot-path"></a>Realçar o afunilamento de execução  
  O modo de exibição de árvore de chamadas pode expandir e realçar o caminho de execução do processo ou da função que criou a maior parte das contenções.  
   
 -   Para exibir o caminho mais ativo, clique com o botão direito do mouse no processo ou na função e, em seguida, clique em **Expandir Afunilamento**.  
   
-## <a name="setting-the-call-tree-root-node"></a>Configuração do nó raiz da árvore de chamadas  
+## <a name="set-the-call-tree-root-node"></a>Configurar do nó raiz da árvore de chamadas  
  Cada processo na execução de criação de perfil aparece como um nó raiz. Para definir o nó inicial do modo de exibição de Árvore de Chamadas, clique com o botão direito do mouse no nó que você deseja definir como o nó inicial e, em seguida, clique em **Definir Raiz**.  
   
  Ao definir o nó raiz, você elimina todas as outras entradas da visualização, com exceção da subárvore do nó selecionado. Para redefinir o nó raiz de volta para o nó original, clique com botão direito do mouse na janela modo de exibição de Árvore de Chamadas e, em seguida, clique em **Redefinir Raiz**.  
@@ -54,9 +55,9 @@ O modo de exibição de Árvore de Chamadas exibe os caminhos de execução de f
 |**Arquivo de Origem**|O arquivo de origem que contém a definição dessa função.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Como personalizar as colunas de exibição do relatório](../profiling/how-to-customize-report-view-columns.md)   
+ [Como personalizar as colunas de visualização de relatório](../profiling/how-to-customize-report-view-columns.md)   
  [Modo de exibição de árvore de chamadas](../profiling/call-tree-view.md)   
  [Modo de exibição de árvore de chamadas – instrumentação](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)   
  [Modo de exibição de árvore de chamadas – amostragem](../profiling/call-tree-view-dotnet-memory-sampling-data.md)   
  [Modo de exibição de árvore de chamadas](../profiling/call-tree-view-instrumentation-data.md)   
- [Modo de exibição de árvore de Chamadas](../profiling/call-tree-view-sampling-data.md)
+ [Modo de exibição de árvore de chamadas](../profiling/call-tree-view-sampling-data.md)

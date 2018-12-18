@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0b67294b6bb22ff9607be726415b6aae8a2a9524
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cdf9fa9057e946d68da9f1e02d5aaf90b34e569a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49931760"
 ---
 # <a name="idebugparsedexpressionevaluatesync"></a>IDebugParsedExpression::EvaluateSync
 Esse método avalia a expressão analisada e, opcionalmente, converte o resultado em outro tipo de dados.  
@@ -55,16 +56,16 @@ int EvaluateSync(
  [in] Uma combinação de [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) constantes que controlam como a expressão será avaliada.  
   
  `dwTimeout`  
- [in] Especifica o tempo máximo, em milissegundos, de espera antes de retornar desse método. Use `INFINITE` aguardar indefinidamente.  
+ [in] Especifica o tempo máximo, em milissegundos, para aguardar antes de retornar do método. Use `INFINITE` para aguardar indefinidamente.  
   
  `pSymbolProvider`  
- [in] O provedor de símbolo, expressado como um [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) interface.  
+ [in] O provedor de símbolo, expressado como uma [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) interface.  
   
  `pAddress`  
- [in] O local atual de execução dentro de um método, expressado como um [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
+ [in] O local atual de execução dentro de um método, expressado como uma [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
   
  `pBinder`  
- [in] O associador, expressado como um [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) interface.  
+ [in] O associador, expressado como uma [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) interface.  
   
  `bstrResultType`  
  [in] O tipo de resultado deve ser convertido em. Esse argumento pode ser um valor nulo.  
@@ -73,10 +74,10 @@ int EvaluateSync(
  [out] Retorna o [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) interface que representa os resultados da avaliação.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- O contexto de avaliação de expressão é determinado pelo `pAddress`, que torna possível determinar o método que a contém e, em seguida, regras de escopo do idioma usado para determinar o valor dos símbolos na expressão.  
+ O contexto de avaliação da expressão é determinado pela `pAddress`, que torna possível determinar o método de inclusão e, em seguida, o escopo do idioma de uso de regras para determinar o valor dos símbolos na expressão.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

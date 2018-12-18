@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134946"
 ---
 # <a name="source-control-vspackage-features"></a>Recursos de VSPackage de controle de origem
 Esta seção descreve os vários recursos de controle de origem VSPackage. Descreve o registro e seleção de detalhes para tal um VSPackage e discute três dos recursos relacionados ao controle de origem principal: manipulação de eventos, substituição de glifo e interface de usuário personalizada (UI) para o controle de origem Editar consulta Salvar consulta (QEQS) funções.  

@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: afeaa33e8cb9ffa8f4d7d12c433eff0d3298ec91
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2c1e760e8e3553e858ed707b03f31761f7aa97a0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921022"
 ---
 # <a name="idebugboundbreakpoint2sethitcount"></a>IDebugBoundBreakpoint2::SetHitCount
-Define a contagem de ocorrências para o ponto de interrupção associado.  
+Define a contagem de ocorrências para o ponto de interrupção associada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,12 +45,12 @@ int SetHitCount(
  [in] A contagem de ocorrências para definir.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o estado do objeto de ponto de interrupção associado é definido como `BPS_DELETED` (parte do [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeração).  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o estado do objeto associado de ponto de interrupção é definido como `BPS_DELETED` (parte do [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeração).  
   
 ## <a name="remarks"></a>Comentários  
  A contagem de ocorrências é o número de vezes que este ponto de interrupção foi disparado durante a execução da sessão atual.  
   
- Normalmente, esse método é chamado pelo mecanismo de depuração para atualizar a contagem de ocorrências atual em que este ponto de interrupção.  
+ Normalmente, esse método é chamado pelo mecanismo de depuração para atualizar a contagem de ocorrências atual no ponto de interrupção.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Como: adicionar um painel tarefa personalizada a um aplicativo | Microsoft Docs'
+title: 'Como: adicionar um painel tarefa personalizada a um aplicativo'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,13 +16,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 818b8e2937692ff0ec445d2a94193beaa1b480bd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b8608fcc263be4750c38b6fe3f84967f40dd34ab
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34548808"
 ---
-# <a name="how-to-add-a-custom-task-pane-to-an-application"></a>Como adicionar um painel de tarefas personalizado a um aplicativo
+# <a name="how-to-add-a-custom-task-pane-to-an-application"></a>Como: adicionar um painel tarefa personalizada a um aplicativo
   Você pode adicionar um painel tarefa personalizada para os aplicativos listados acima usando o suplemento do VSTO. Para obter mais informações, consulte [painéis de tarefas personalizados](../vsto/custom-task-panes.md).  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
@@ -30,11 +31,11 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  Seu computador pode mostrar diferentes nomes ou locais para alguns dos elementos de interface do usuário do Visual Studio nas instruções a seguir. A edição do Visual Studio que você possui e as configurações que você usa determinam esses elementos. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../ide/personalizing-the-visual-studio-ide.md).  
   
-## <a name="adding-a-custom-task-pane-to-an-application"></a>Adicionando um painel tarefa personalizada a um aplicativo  
+## <a name="add-a-custom-task-pane-to-an-application"></a>Adicionar um painel tarefa personalizada a um aplicativo  
   
-#### <a name="to-add-a-custom-task-pane-to-an-application"></a>Para adicionar um painel tarefa personalizada a um aplicativo  
+### <a name="to-add-a-custom-task-pane-to-an-application"></a>Para adicionar um painel tarefa personalizada a um aplicativo  
   
-1.  Abra ou crie um projeto de suplemento do VSTO para um dos aplicativos listados acima. Para obter mais informações, consulte [como: criar projetos do Office no Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+1.  Abra ou crie um projeto de suplemento do VSTO para um dos aplicativos listados acima. Para obter mais informações, consulte [como: projetos do Office criar no Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
 2.  Sobre o **projeto** menu, clique em **adicionar controle de usuário**.  
   
@@ -62,6 +63,6 @@ ms.lasthandoff: 04/16/2018
 ## <a name="see-also"></a>Consulte também  
  [Personalização da interface do usuário do Office](../vsto/office-ui-customization.md)   
  [Painéis de tarefas personalizados](../vsto/custom-task-panes.md)   
- [Instruções passo a passo: automatizando um aplicativo de um painel de tarefas personalizado](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)  
+ [Passo a passo: Automatizar um aplicativo de um painel tarefa personalizada](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)  
   
   

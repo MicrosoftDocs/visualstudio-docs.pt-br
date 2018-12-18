@@ -1,15 +1,16 @@
 ---
 layout: HubPage
-hide_bc: ''
+hide_bc: true
 title: Documentação do Visual Studio | Microsoft Docs
 description: Saiba como usar o Visual Studio 2017 para desenvolver aplicativos, serviços e ferramentas na linguagem de sua escolha para suas plataformas e dispositivos.
 ms.topic: landing-page
 searchScope: []
-ms.openlocfilehash: 86d19020a46c0aeb4d1d5a5d2c72e6881a04ef0c
-ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
+ms.openlocfilehash: d4419aadd8be604918b6793685079053e03d4289
+ms.sourcegitcommit: d7f232a7596420e40ff8051d42cdf90203af4a74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821351"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -41,18 +42,18 @@ ms.lasthandoff: 03/28/2018
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/vsts" title="Visual Studio Team Services">
+                                <a href="/visualstudio/mac" title="Visual Studio para Mac">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img data-scaleimage="./images/vs-team-services.svg" src="./images/vs-team-services.svg" alt="" />
+                                                        <img data-scaleimage="./images/vs-mac.svg" src="./images/vs-mac.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Visual Studio Team Services</h3>
-                                                    <p>Aumente a produtividade da equipe com as ferramentas de projeto e os relatórios Agile. Compilar, testar e implantar projetos de controle de origem com ferramentas de CI/CD modernas.</p>
+                                                    <h3>Visual Studio para Mac</h3>
+                                                    <p>Crie aplicativos e jogos, usando o Mac para a nuvem, iOS, Android, macOS e acessórios.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -79,26 +80,7 @@ ms.lasthandoff: 03/28/2018
                                 </a>
                             </li>
                             <li>
-                                <a href="/visualstudio/mac" title="Visual Studio para Mac">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img data-scaleimage="./images/vs-mac.svg" src="./images/vs-mac.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Visual Studio para Mac</h3>
-                                                    <p>Crie aplicativos e jogos, usando o Mac para a nuvem, iOS, Android, macOS e acessórios.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://docs.microsoft.com/appcenter" title="Centro de Aplicativos do Visual Studio">
+                                <a href="/appcenter/" title="Centro de Aplicativos do Visual Studio">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -117,7 +99,7 @@ ms.lasthandoff: 03/28/2018
                                 </a>
                             </li>
                             <li>
-                                <a href="https://aka.ms/vs-subscriptions" title="Centro de Aplicativos do Visual Studio">
+                                <a href="/visualstudio/subscriptions/" title="Assinaturas do Visual Studio">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -135,10 +117,49 @@ ms.lasthandoff: 03/28/2018
                                     </div>
                                 </a>
                             </li>
-                        </ul>                       
+                            <li>
+                                <a href="/azure/devops/" title="Azure DevOps Services">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img data-scaleimage="./images/vs-team-services.svg" src="./images/vs-team-services.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Azure DevOps Services</h3>
+                                                    <p>Aumente a produtividade da equipe com as ferramentas de projeto e os relatórios Agile. Compilar, testar e implantar projetos de controle de origem com ferramentas de CI/CD modernas.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/tfs/" title="Azure DevOps Server">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img data-scaleimage="./images/vs-team-services.svg" src="./images/vs-team-services.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Azure DevOps Server</h3>
+                                                    <p>Instalar, atualizar e gerenciar suas implantações locais.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>
         </ul>
+        <p>O Visual Studio Team Services foi substituído pelo Azure DevOps Services, enquanto o TFS (Team Foundation Server) mudou de nome para Azure DevOps Server. Confira <a href="/azure/devops/user-guide/what-happened-vsts?view=vsts">O que aconteceu com o Visual Studio Team Services?</a> e também <a href="/tfs/server/tfs-is-now-azure-devops-server">O Team Foundation Server agora é Azure DevOps Server</a>.</p>
     </div>
 </div>

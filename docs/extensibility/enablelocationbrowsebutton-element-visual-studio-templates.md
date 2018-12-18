@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d3573a1359cf7cc6347ede28b5361b01bbb7efb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7bebf88b8d5c98722226f42f9a1b1666695a3b7e
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639533"
 ---
 # <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>Elemento EnableLocationBrowseButton (modelos do Visual Studio)
-Especifica se o **procurar** botão está disponível no **novo projeto** caixa de diálogo, para que os usuários podem modificar facilmente o diretório padrão onde um novo projeto é salvo.  
+Especifica se o **navegue** botão está disponível na **novo projeto** caixa de diálogo, para que os usuários podem facilmente modificar o diretório padrão em que um novo projeto é salvo.  
   
  \<VSTemplate >  
  \<TemplateData >  
@@ -47,7 +48,7 @@ Especifica se o **procurar** botão está disponível no **novo projeto** caixa 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele exibe em um a **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo.|  
   
 ## <a name="text-value"></a>Valor de texto  
  Um valor de texto é obrigatório.  
@@ -55,9 +56,9 @@ Especifica se o **procurar** botão está disponível no **novo projeto** caixa 
  O texto deve ser `true` ou `false`, que indica se deve ou não exibir o **procurar** botão o **novo projeto** caixa de diálogo.  
   
 ## <a name="remarks"></a>Comentários  
- `EnableLocationBrowseButton` é um elemento opcional. O valor padrão é `true`, que exibe o **procurar** no botão de **novo projeto** caixa de diálogo.  
+ `EnableLocationBrowseButton` é um elemento opcional. O valor padrão é `true`, que exibe a **navegue** botão o **novo projeto** caixa de diálogo.  
   
- No **novo projeto** caixa de diálogo, o **local** caixa de texto Especifica o diretório em que um novo projeto é salvo. O **procurar** botão Ajuda a você modificar esse diretório exibindo o **local do projeto** caixa de diálogo que permite que você navegue facilmente para um diretório diferente que está disponível no seu computador, e em seguida, escolha-o como o diretório onde o novo projeto é salvo.  
+ No **novo projeto** caixa de diálogo, o **local** caixa de texto Especifica o diretório em que um novo projeto é salvo. O **navegue** botão Ajuda você a modificar esse diretório, exibindo o **local do projeto** caixa de diálogo que permite que você navegue facilmente para um diretório diferente que está disponível no seu computador, e em seguida, escolha-o como o diretório onde o novo projeto é salvo.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir ilustra os metadados para um [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplicativo do Windows.  

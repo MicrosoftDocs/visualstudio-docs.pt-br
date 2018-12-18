@@ -1,5 +1,5 @@
 ---
-title: ': Get_haseha | Microsoft Docs'
+title: 'Idiasymbol:: Get_haseha | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 066f86cf61a697f686153aa9e47c7920b86ea42e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 936393d3edc9273c2240787d0d1fa42ec3691748
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49813460"
 ---
 # <a name="idiasymbolgethaseha"></a>IDiaSymbol::get_hasEHa
-Recupera um sinalizador que especifica se a função contém a manipulação de exceção (estruturada) assíncrona.  
+Recupera um sinalizador que especifica se a função contém o tratamento de exceções assíncronas de (estruturada).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,13 +37,13 @@ HRESULT get_hasEHa(
  [out] Retorna `TRUE` se a função tiver qualquer manipulação de exceção assíncrona; caso contrário, retornará `FALSE`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
   
 ## <a name="remarks"></a>Comentários  
- É possível misturar estruturadas ou assíncrona tratamento de exceções com manipulação de exceção de estilo C++, mas requer uma opção de compilador específico, /EHa para habilitá-lo.  
+ É possível misturar assíncrona ou não estruturadas tratamento de exceções com manipulação de exceção de estilo C++, mas ela requer uma opção de compilador específica, /EHa, para habilitá-lo.  
   
 ## <a name="requirements"></a>Requisitos  
   

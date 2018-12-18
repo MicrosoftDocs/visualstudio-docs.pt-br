@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e6865361ac0b518f4fa78a3521973d756e6ab780
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 77ed932909845dc992c62ba884d6d48e2b788a61
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825966"
 ---
 # <a name="idebugproperty2getextendedinfo"></a>IDebugProperty2::GetExtendedInfo
 Obtém informações estendidas de propriedade.  
@@ -42,25 +43,25 @@ int GetExtendedInfo (
   
 #### <a name="parameters"></a>Parâmetros  
  `guidExtendedInfo`  
- [in] GUID que determina o tipo de informações estendidas a serem recuperados. Consulte comentários para obter detalhes.  
+ [in] GUID que determina o tipo de informações estendidas a serem recuperados. Consulte os comentários para obter detalhes.  
   
  `pExtendedInfo`  
- [out] Retorna um `VARIANT` (C++) ou o objeto (c#) que pode ser usado para recuperar as informações de propriedade estendida. Por exemplo, esse parâmetro pode retornar um `IUnknown` interface que pode ser consultada por um [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) interface. Consulte comentários para obter detalhes.  
+ [out] Retorna um `VARIANT` (C++) ou objeto (c#) que pode ser usado para recuperar as informações de propriedade estendida. Por exemplo, esse parâmetro pode retornar um `IUnknown` interface que pode ser consultado para uma [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) interface. Consulte os comentários para obter detalhes.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna o código de erro. Retorna `S_GETEXTENDEDINFO_NO_EXTENDEDINFO` se não houver nenhuma informação estendida para recuperar.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará o código de erro. Retorna `S_GETEXTENDEDINFO_NO_EXTENDEDINFO` se não houver nenhuma informação estendida para recuperar.  
   
 ## <a name="remarks"></a>Comentários  
- Este método existe para fins de recuperação de informações não se prestam sendo recuperados chamando o [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) método.  
+ Este método existe para fins de recuperação de informações que não se prestam a que está sendo recuperado por meio da chamada a [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) método.  
   
- Os GUIDs a seguir normalmente são reconhecidos por este método (os valores GUID são especificados para c# porque o nome não está disponível em qualquer assembly). GUIDs adicionais podem ser criados para uso interno.  
+ Os GUIDs seguintes normalmente são reconhecidos por este método (os valores GUID são especificados para c#, pois o nome não está disponível em qualquer assembly). GUIDs adicionais podem ser criados para uso interno.  
   
 |Nome|GUID|Descrição|  
 |----------|----------|-----------------|  
-|guidDocument|{3f98de84-fee9-11d0-b47f-00a0244a1dd2}|Retorna um `IUnknown` interface para o documento. Normalmente, o [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) interface pode ser obtida neste `IUnknown` interface.|  
-|guidCodeContext|{e2fc65e-56ce - 11d 1-b528-00aax004a8797}|Retorna um `IUnknown` interface para o contexto do documento. Normalmente, o [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) interface pode ser obtida neste `IUnknown` interface.|  
-|guidCustomViewerSupported|{d9c9da31-ffbe-4eeb-9186-23121e3c088c}|Retorna uma cadeia de caracteres que contém o CLSID de um visualizador personalizado, que costuma ser implementado por um avaliador de expressão.|  
-|guidExtendedInfoSlot|{6df235ad-82c6-4292-9c97-7389770bc42f}|Retorna um número de 32 bits que representa o número de slot desejado se esta propriedade representa um endereço de local de código gerenciado.|  
+|guidDocument|{3f98de84-fee9-11d0-b47f-00a0244a1dd2}|Retorna um `IUnknown` interface para o documento. Normalmente, o [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) interface pode ser obtida deste `IUnknown` interface.|  
+|guidCodeContext|{e2fc65e-56ce - 11d 1-b528-00aax004a8797}|Retorna um `IUnknown` interface para o contexto do documento. Normalmente, o [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) interface pode ser obtida deste `IUnknown` interface.|  
+|guidCustomViewerSupported|{d9c9da31-ffbe-4eeb-9186-23121e3c088c}|Retorna uma cadeia de caracteres que contém o CLSID de um visualizador personalizado, costuma ser implementado por um avaliador de expressão.|  
+|guidExtendedInfoSlot|{6df235ad-82c6-4292-9c97-7389770bc42f}|Retorna um número de 32 bits que representa o número de slot desejado se esta propriedade representa um endereço local do código gerenciado.|  
 |guidExtendedInfoSignature|{b5fb6d46-f805-417f-96a3-8ba737073ffd}|Retorna uma cadeia de caracteres que contém a assinatura da variável associada ao objeto de propriedade.|  
   
 ## <a name="see-also"></a>Consulte também  

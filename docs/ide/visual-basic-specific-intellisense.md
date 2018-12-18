@@ -1,10 +1,11 @@
 ---
-title: IntelliSense do Visual Basic | Microsoft Docs
-ms.custom: ''
+title: Visual Basic IntelliSense
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
+f1_keywords:
+- VS.ToolsOptionsPages.Text_Editor.Basic.IntelliSense
 helpviewer_keywords:
 - IntelliSense [Visual Basic]
 - IntelliSense [Visual Studio], Visual Basic
@@ -13,11 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 44ff32ed0452efb5e413d730a69293147fec4c7c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1bd68ae1996ce9ca70e2a8bf1dcb66822e1a8bb1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823275"
 ---
 # <a name="intellisense-for-visual-basic-code-files"></a>IntelliSense para arquivos de código do Visual Basic
 
@@ -39,7 +41,7 @@ Dicas de sintaxe são exibidas na sintaxe da instrução que você está digitan
 
 A conclusão pode ser desativada por padrão desmarcando **Listar membros automaticamente** na página de propriedades **Geral** na pasta **Visual Basic**.
 
-Você pode invocar manualmente a conclusão invocando Listar Membros, Completar Palavra ou ALT + SETA PARA A DIREITA. Para obter mais informações, veja [Usando o IntelliSense](../ide/using-intellisense.md).
+Você pode invocar manualmente a conclusão invocando Listar Membros, Completar Palavra ou **Alt**+**Seta para a Direita**. Para obter mais informações, confira [Usar o IntelliSense](../ide/using-intellisense.md).
 
 ## <a name="intellisense-in-zone"></a>IntelliSense por Zona
 
@@ -57,4 +59,4 @@ No Visual Basic, as listas de conclusão do IntelliSense têm dois controles de 
 
 ## <a name="see-also"></a>Consulte também
 
-[Usando o IntelliSense](../ide/using-intellisense.md)
+- [Usar o IntelliSense](../ide/using-intellisense.md)

@@ -16,11 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 589792a9309565496b4d1ab73e1867055bcdf3bc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: abdb437abfe2ed9980ce94c7df20a840aeec5dda
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831075"
 ---
 # <a name="idebugboundbreakpoint2setpasscount"></a>IDebugBoundBreakpoint2::SetPassCount
 Define ou altera a contagem de passagem associada a este ponto de interrupção associado.  
@@ -44,12 +45,12 @@ int SetPassCount(
  [in] O [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) estrutura que especifica a contagem de passagem.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o estado do objeto de ponto de interrupção associado é definido como `BPS_DELETED` (parte do [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeração).  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o estado do objeto associado de ponto de interrupção é definido como `BPS_DELETED` (parte do [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeração).  
   
 ## <a name="remarks"></a>Comentários  
- A contagem de passagem determina quando o ponto de interrupção é disparado. A fase atual ou a contagem de ocorrências pode ser obtida chamando o [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md) método.  
+ A contagem de passagem determina quando o ponto de interrupção é disparado. A contagem de ocorrências ou passagem atual pode ser obtida chamando o [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md) método.  
   
- Qualquer conta de passagem que foi previamente associada este ponto de interrupção será perdida.  
+ Qualquer contagem de passagem que foi previamente associada este ponto de interrupção é perdida.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   

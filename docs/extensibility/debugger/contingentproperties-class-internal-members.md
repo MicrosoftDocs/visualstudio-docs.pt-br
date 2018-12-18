@@ -14,24 +14,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b44bec34394df6f976416a827d7eb5d67cb99f6a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8e3497b31e663967417544d8e87d40d860c2e4a8
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204408"
 ---
 # <a name="contingentproperties-class---internal-members"></a>Classe ContingentProperties - membros internos
 Contém propriedades adicionais para um <xref:System.Threading.Tasks.Task> objeto.  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Assembly:** mscorlib (em mscorlib.dll)  
+ **Assembly:** mscorlib (em mscorlib. dll)  
   
  Porque você não pode acessar esses membros internos do .NET Framework, a sintaxe a seguir é fornecida em comum Intermediate Language (CIL).  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp  
 .class auto ansi nested assembly beforefieldinit ContingentProperties  
        extends System.Object  
 ```  
@@ -45,7 +46,7 @@ Contém propriedades adicionais para um <xref:System.Threading.Tasks.Task> objet
 |[m_children](../../extensibility/debugger/m-children-field.md)|A lista de tarefas filho que estão registrados com essa tarefa.|  
   
 ## <a name="remarks"></a>Comentários  
- O .NET Framework inicializa os campos dessa classe somente quando eles são necessários.  
+ O .NET Framework inicializa os campos dessa classe somente quando eles forem necessários.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elementos internos de extensões paralelas para o .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

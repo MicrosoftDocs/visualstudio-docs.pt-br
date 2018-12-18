@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b9c72120a4153ed6d0d19a2cf2b7d3a9a9943801
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5be5c6dccecc8191030482c282033aa6159f2022
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873897"
 ---
 # <a name="idebugmemorycontext2compare"></a>IDebugMemoryContext2::Compare
-Compara o contexto de memória para cada contexto na matriz fornecida da maneira indicado pelos sinalizadores de comparação, retornando um índice do primeiro contexto correspondente.  
+Compara o contexto de memória para cada contexto na matriz fornecida da maneira indicada por sinalizadores de comparação, retornando um índice do primeiro contexto que corresponde ao.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,10 +48,10 @@ int Compare(
   
 #### <a name="parameters"></a>Parâmetros  
  `compare`  
- [in] Um valor da [CONTEXT_COMPARE](../../../extensibility/debugger/reference/context-compare.md) enumeração que determina o tipo de comparação.  
+ [in] Um valor a partir de [CONTEXT_COMPARE](../../../extensibility/debugger/reference/context-compare.md) enumeração que determina o tipo de comparação.  
   
  `rgpMemoryContextSet`  
- [in] Uma matriz de referências para o [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objetos para comparação.  
+ [in] Uma matriz de referências para o [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objetos a ser comparada.  
   
  `dwMemoryContextSetLen`  
  [in] O número de contextos no `rgpMemoryContextSet` matriz.  
@@ -59,10 +60,10 @@ int Compare(
  [out] Retorna o índice do primeiro contexto de memória que satisfaz a comparação.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Retorna `E_COMPARE_CANNOT_COMPARE` se os dois contextos não podem ser comparados.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Retorna `E_COMPARE_CANNOT_COMPARE` se os dois contextos não podem ser comparados.  
   
 ## <a name="remarks"></a>Comentários  
- Não tem um mecanismo de depuração (DE) para dar suporte a todos os tipos de comparações, mas ele deve dar suporte ao menos `CONTEXT_EQUAL`, `CONTEXT_LESS_THAN`, `CONTEXT_GREATER_THAN` e `CONTEXT_SAME_SCOPE`.  
+ Um mecanismo de depuração (DES) oferecem suporte a todos os tipos de comparações, mas ele deve suportar pelo menos `CONTEXT_EQUAL`, `CONTEXT_LESS_THAN`, `CONTEXT_GREATER_THAN` e `CONTEXT_SAME_SCOPE`.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)   

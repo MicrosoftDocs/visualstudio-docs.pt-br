@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e59d4087e44458ecd49efd5d7be9f45e68c6da2b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bfc2afb15dbacde1eb0a96178d2769365deb4e31
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893780"
 ---
 # <a name="idebugthread2setnextstatement"></a>IDebugThread2::SetNextStatement
-Define o ponteiro de instrução atual para o contexto de código fornecido.  
+Define o ponteiro de instrução atual para o contexto de código fornecida.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,19 +46,19 @@ int SetNextStatement (
  Reservado para uso futuro; definido como um valor nulo.  
   
  `pCodeContext`  
- [in] Um [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objeto que descreve o local do código prestes a ser executada e o contexto.  
+ [in] Uma [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objeto que descreve o local do código prestes a ser executada e seu contexto.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. A tabela a seguir mostra os outros valores possíveis.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. A tabela a seguir mostra os outros valores possíveis.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|E_CANNOT_SET_NEXT_STATEMENT_ON_NONLEAF_FRAME|A próxima instrução não pode estar em um quadro de pilha mais profundo na pilha de quadro.|  
+|E_CANNOT_SET_NEXT_STATEMENT_ON_NONLEAF_FRAME|A próxima instrução não pode ser em um quadro de pilha mais profundo na pilha do quadro.|  
 |E_CANNOT_SETIP_TO_DIFFERENT_FUNCTION|A próxima instrução não está associada com qualquer quadro na pilha.|  
 |E_CANNOT_SET_NEXT_STATEMENT_ON_EXCEPTION|Alguns mecanismos de depuração não é possível definir a próxima instrução após uma exceção.|  
   
 ## <a name="remarks"></a>Comentários  
- O ponteiro de instrução indica a próxima instrução ou instrução execute. Esse método é usado para repetir uma linha do código-fonte ou para forçar a execução continue em outra função, por exemplo.  
+ O ponteiro de instrução indica a próxima instrução ou instrução para executar. Esse método é usado para tentar novamente uma linha de código-fonte ou para forçar a execução continue em outra função, por exemplo.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   

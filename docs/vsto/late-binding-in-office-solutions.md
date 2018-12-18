@@ -1,5 +1,5 @@
 ---
-title: Associação tardia em soluções do Office | Microsoft Docs
+title: Associação tardia em soluções do Office
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,11 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7e205874e1c5c4e5de639e28768d6369b43c1e1a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5616ce958747f90c8015df858f657299ba52852b
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572544"
 ---
 # <a name="late-binding-in-office-solutions"></a>Associação tardia em soluções do Office
   Alguns tipos de modelos de objeto dos aplicativos do Office fornecem funcionalidade que está disponível por meio de recursos de associação tardia. Por exemplo, alguns métodos e propriedades podem retornar diferentes tipos de objetos, dependendo do contexto do aplicativo do Office, e alguns tipos podem expor métodos ou propriedades em diferentes contextos.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/16/2018
   
  Onde os projetos do Visual Basic **Option Strict** está desativado e o Visual C# projetos direcionados a [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] ou [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] pode trabalhar diretamente com tipos que usam esses recursos de associação tardia.  
   
-## <a name="implicit-and-explicit-casting-of-object-return-values"></a>Conversão implícita e explícita de valores de retorno de objeto  
+## <a name="implicit-and-explicit-casting-of-object-return-values"></a>Valores de retorno de conversão implícita e explícita de objeto  
  Vários métodos e propriedades do Microsoft Office assemblies de interoperabilidade primários (PIAs) retornam <xref:System.Object> valores, porque eles podem retornar vários tipos diferentes de objetos. Por exemplo, o <xref:Microsoft.Office.Tools.Excel.Workbook.ActiveSheet%2A> propriedade retorna um <xref:System.Object> porque seu valor de retorno pode ser um <xref:Microsoft.Office.Interop.Excel.Worksheet> ou <xref:Microsoft.Office.Interop.Excel.Chart> objeto, dependendo de qual é a planilha ativa.  
   
  Quando uma propriedade ou método retorna um <xref:System.Object>, você deverá converter explicitamente (no Visual Basic) o objeto para o tipo correto em projetos do Visual Basic onde **Option Strict** está em. Não é necessário converter explicitamente <xref:System.Object> valores de retorno em projetos do Visual Basic onde **Option Strict** está desativado.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_VstcoreProgramming#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#10)]
  [!code-csharp[Trin_VstcoreProgramming#10](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs#10)]  
   
-## <a name="accessing-members-that-are-available-only-through-late-binding"></a>Acessando membros que estão disponíveis apenas por meio de associação tardia  
+## <a name="access-members-that-are-available-only-through-late-binding"></a>Membros de acesso que estão disponíveis apenas por meio de associação tardia  
  Algumas propriedades e métodos em PIAs do Office estão disponíveis apenas por meio de associação tardia. No Visual Basic, projetos onde **Option Strict** está desligado ou em projetos do Visual c# que visam o [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] ou [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], você pode usar os recursos de associação tardia nestes idiomas para acessar membros de associação tardia. No Visual Basic, projetos onde **Option Strict** está ativada, você deve usar reflexão para acessar esses membros.  
   
 ### <a name="examples"></a>Exemplos  
@@ -64,12 +65,12 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_VstcoreWordAutomation#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#102)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Escrevendo código em soluções do Office](../vsto/writing-code-in-office-solutions.md)   
+ [Escrever código em soluções do Office](../vsto/writing-code-in-office-solutions.md)   
  [Parâmetros opcionais em soluções do Office](../vsto/optional-parameters-in-office-solutions.md)   
- [Usando o tipo dynamic &#40;C&#35; guia de programação&#41;](/dotnet/csharp/programming-guide/types/using-type-dynamic)   
+ [Use tipo dinâmico &#40;C&#35; guia de programação&#41;](/dotnet/csharp/programming-guide/types/using-type-dynamic)   
  [Instrução Option Strict](/dotnet/visual-basic/language-reference/statements/option-strict-statement)   
  [Reflexão (C#)](/dotnet/csharp/programming-guide/concepts/reflection)  
  [Reflexão (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/reflection)  
- [Projetando e criando soluções do Office](../vsto/designing-and-creating-office-solutions.md)  
+ [Projetar e criar soluções do Office](../vsto/designing-and-creating-office-solutions.md)  
   
   

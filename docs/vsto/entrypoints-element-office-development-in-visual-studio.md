@@ -1,5 +1,5 @@
 ---
-title: '&lt;Pontos&gt; elemento (desenvolvimento do Office no Visual Studio) | Microsoft Docs'
+title: '&lt;Pontos&gt; elemento (desenvolvimento do Office no Visual Studio)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -15,18 +15,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a620dae22e6fd67e3d880cbd87e8883911f28845
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bec51fd4d9e6a140d274f028a0e0286a161ac147
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34448383"
 ---
 # <a name="ltentrypointsgt-element-office-development-in-visual-studio"></a>&lt;Pontos&gt; elemento (desenvolvimento do Office no Visual Studio)
   O `entryPoints` elemento do `vstav3` namespace contém tudo o `entryPoint` elementos associados a uma solução do Office.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <entryPoints>  
     <entryPoint>  
     </entryPoint>  
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="code"></a>Código  
   
-```  
+```xml  
 <vstav3:entryPoints>  
   <vstav3:entryPoint   
     class="ContosoExcelWorkbook.ThisWorkbook">  
@@ -102,7 +103,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="code"></a>Código  
   
-```  
+```xml  
 <vstav3:entryPoints>  
   <vstav3:entryPoint   
     class="ContosoOutlookAddIn.ThisAddIn">  
@@ -122,7 +123,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="code"></a>Código  
   
-```  
+```xml  
 <vstav3:entryPoints   
   id="ContosoExcel">  
   <vstav3:entryPoint   
@@ -174,6 +175,6 @@ ms.lasthandoff: 04/16/2018
 ## <a name="see-also"></a>Consulte também  
  [Manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md)   
  [Manifestos de implantação para soluções do Office](../vsto/deployment-manifests-for-office-solutions.md)   
- [Manifesto de aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest)  
+ [Manifesto do aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest)  
   
   

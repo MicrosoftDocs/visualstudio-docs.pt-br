@@ -1,27 +1,26 @@
 ---
-title: Suprimir avisos do compilador no Visual Studio para projetos e pacotes do NuGet | Microsoft Docs
-ms.custom: 
+title: Suprimir avisos do compilador no Visual Studio para projetos e pacotes do NuGet
 ms.date: 01/24/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-compile
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3af162101eb20e018be44480c862192c0c59276a
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.openlocfilehash: 1e3a84dff28b174676ff6fe74bf5420863afcc83
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31948555"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>Como suprimir avisos do compilador
 
-Você pode organizar um log de build filtrando um ou mais tipos de avisos do compilador. Por exemplo, talvez você queira analisar apenas parte da saída gerada quando você define o nível de detalhes de log de build como Normal, Detalhado ou Diagnóstico. Para saber mais sobre detalhamento, consulte [Como exibir, salvar e configurar arquivos de log de build](../ide/how-to-view-save-and-configure-build-log-files.md).
+Você pode organizar um log de build filtrando um ou mais tipos de avisos do compilador. Por exemplo, talvez você queira analisar apenas parte da saída gerada quando define o nível de detalhes de log de build como **Normal**, **Detalhado** ou **Diagnóstico**. Para saber mais sobre detalhamento, consulte [Como exibir, salvar e configurar arquivos de log de build](../ide/how-to-view-save-and-configure-build-log-files.md).
 
-## <a name="suppressing-specific-warnings-for-visual-c-or-f"></a>Suprimir avisos específicos para o Visual C# ou F# #
+## <a name="suppress-specific-warnings-for-visual-c-or-f"></a>Suprimir avisos específicos para o Visual C# ou F# #
 
 Use a página de propriedades **Build** para suprimir avisos específicos para projetos em C# e F#.
 
@@ -35,7 +34,7 @@ Use a página de propriedades **Build** para suprimir avisos específicos para p
 
 1. Recompile a solução.
 
-## <a name="suppressing-specific-warnings-for-visual-c"></a>Suprimir avisos específicos para o Visual C++
+## <a name="suppress-specific-warnings-for-visual-c"></a>Suprimir avisos específicos para o Visual C++
 
 Use a página **Propriedades da Configuração** para suprimir avisos específicos para projetos em C++.
 
@@ -53,9 +52,9 @@ Use a página **Propriedades da Configuração** para suprimir avisos específic
 
 1. Escolha o botão **OK** e recompile a solução.
 
-## <a name="suppressing-warnings-for-visual-basic"></a>Suprimir avisos para o Visual Basic
+## <a name="suppress-warnings-for-visual-basic"></a>Suprimir avisos para o Visual Basic
 
-Você pode ocultar avisos de compilador específicos para Visual Basic editando o arquivo *.vbproj* para o projeto. Para suprimir avisos por *categoria*, use a [página de propriedades de compilação](../ide/reference/compile-page-project-designer-visual-basic.md). Para saber mais, consulte [Configurar avisos no Visual Basic](../ide/configuring-warnings-in-visual-basic.md).
+Você pode ocultar avisos de compilador específicos para Visual Basic editando o arquivo *.vbproj* para o projeto. Para suprimir avisos por *categoria*, use a [página de propriedades de compilação](../ide/reference/compile-page-project-designer-visual-basic.md). Para obter mais informações, consulte [Configurar avisos no Visual Basic](../ide/configuring-warnings-in-visual-basic.md).
 
 ### <a name="to-suppress-specific-warnings-for-visual-basic"></a>Para suprimir avisos específicos para o Visual Basic
 
@@ -65,7 +64,7 @@ Este exemplo mostra como editar o arquivo *.vbproj* para suprimir avisos especí
 
 1. Na barra de menus, escolha **Projeto** > **Descarregar Projeto**.
 
-1. No **Gerenciador de Soluções**, abra o menu de atalho, ou com o botão direito, do projeto e escolha **Editar** *ProjectName* **.vbproj**.
+1. No **Gerenciador de Soluções**, clique com o botão direito do mouse ou abra o menu de atalho do projeto e escolha **Editar <ProjectName>.vbproj**.
 
     O arquivo XML do projeto é aberto no editor de códigos.
 
@@ -114,7 +113,7 @@ Este exemplo mostra como editar o arquivo *.vbproj* para suprimir avisos especí
 
 Para saber mais, consulte a [opção de compilador /nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) para o compilador de linha de comando do Visual Basic.
 
-## <a name="suppressing-warnings-for-nuget-packages"></a>Suprimir avisos para pacotes NuGet
+## <a name="suppress-warnings-for-nuget-packages"></a>Suprimir avisos para pacotes NuGet
 
 Em alguns casos, convém suprimir avisos do compilador NuGet para um único pacote NuGet, em vez de um projeto inteiro. O aviso atende a uma finalidade, portanto convém não suprimi-lo no nível do projeto. Por exemplo, um dos avisos NuGet informa que talvez o pacote não seja totalmente compatível com o seu projeto. Se você suprimi-lo no nível do projeto e depois adicionar outro pacote NuGet, você nunca saberá se ele estava gerando o aviso de compatibilidade.
 
@@ -134,6 +133,6 @@ Em alguns casos, convém suprimir avisos do compilador NuGet para um único paco
 
 ## <a name="see-also"></a>Consulte também
 
-[Passo a passo: criando um aplicativo](../ide/walkthrough-building-an-application.md)  
-[Como exibir, salvar e configurar arquivos de log de build](../ide/how-to-view-save-and-configure-build-log-files.md)  
-[Compilando e criando](../ide/compiling-and-building-in-visual-studio.md)
+- [Passo a passo: criar um aplicativo](../ide/walkthrough-building-an-application.md)
+- [Como exibir, salvar e configurar arquivos de log de build](../ide/how-to-view-save-and-configure-build-log-files.md)
+- [Compilar e criar](../ide/compiling-and-building-in-visual-studio.md)

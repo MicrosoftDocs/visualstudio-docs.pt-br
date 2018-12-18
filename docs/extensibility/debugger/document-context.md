@@ -13,23 +13,24 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f97df9bc3c0a40a44379ba37f1b36d79cffb74e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ef82c6533eddf32dd8315193531a57e2e7328ad9
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203554"
 ---
 # <a name="document-context"></a>Contexto de documento
-Em [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] depuração, um **contexto de documento**:  
+Na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] depuração, um *contexto de documento*:  
   
--   Representa uma posição em um arquivo de origem. Para os idiomas em que o arquivo de origem não pode estar presente, um contexto de documento identifica uma posição em um documento gerado normalmente pelo ambiente de tempo de execução. Por exemplo, um mecanismo de script pode gerar um documento de script. Para obter mais informações, consulte [posição do documento](../../extensibility/debugger/document-position.md).  
+-   Representa uma posição em um arquivo de origem. Para os idiomas em que o arquivo de origem não pode estar presente, um contexto de documento identifica uma posição em um documento gerado normalmente pelo ambiente de tempo de execução. Por exemplo, um mecanismo de script pode gerar um documento de script. Para obter mais informações, consulte [documentar posição](../../extensibility/debugger/document-position.md).  
   
--   Descreve uma posição em um documento de origem que corresponde a um contexto de código. O manipulador de símbolo mapeia um contexto de código para o contexto de documentação, usando informações geradas por um compilador ou interpretador.  
+-   Descreve uma posição em um documento de origem que corresponde a um contexto de código. O manipulador de símbolo mapeia um contexto de código ao contexto da documentação, usando as informações geradas por um compilador ou interpretador.  
   
--   É implementado por um [IDebugDocumentContext2](../../extensibility/debugger/reference/idebugdocumentcontext2.md) interface.  
+-   É implementado por uma [IDebugDocumentContext2](../../extensibility/debugger/reference/idebugdocumentcontext2.md) interface.  
   
 ## <a name="see-also"></a>Consulte também  
  [Contexto de código](../../extensibility/debugger/code-context.md)   
- [Provedor de símbolo](../../extensibility/debugger/symbol-provider.md)   
- [Interfaces de provedor de símbolo](../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
+ [Provedor de símbolos](../../extensibility/debugger/symbol-provider.md)   
+ [Interfaces de provedor de símbolos](../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
  [Contextos do depurador](../../extensibility/debugger/debugger-contexts.md)

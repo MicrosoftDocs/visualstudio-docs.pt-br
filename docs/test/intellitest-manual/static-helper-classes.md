@@ -1,8 +1,9 @@
 ---
-title: Classes auxiliares estáticas | Ferramenta de teste do desenvolvedor do Microsoft IntelliTest | Microsoft Docs
+title: Classes auxiliares estáticas | Ferramenta de teste do desenvolvedor do Microsoft IntelliTest
 ms.date: 05/02/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Static helper classes
 ms.author: gewarren
@@ -10,11 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: bd414382889e02f209e9cd64155f9e9baad75534
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a5c635c8fb3def61b8278b7b7c4b66aa196d82b8
+ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51000471"
 ---
 # <a name="static-helper-classes"></a>Classes auxiliares estáticas
 
@@ -32,8 +34,7 @@ Algumas classes permitem que você interaja com o mecanismo de raciocínio do In
 <a name="pexassume"></a>
 ## <a name="pexassume"></a>PexAssume
 
-Uma classe estática usada para expressar suposições, tais como [pré-condições](test-generation.md#precondition), nos [testes de unidade parametrizados](test-generation.md#parameterized-unit-testing).
-Os métodos dessa classe podem ser usados para filtrar as entradas de teste indesejáveis.
+Uma classe estática usada para expressar suposições, tais como [pré-condições](test-generation.md#precondition), nos [testes de unidade parametrizados](test-generation.md#parameterized-unit-testing). Os métodos dessa classe podem ser usados para filtrar as entradas de teste indesejáveis.
 
 Se a condição assumida não valer para alguma entrada de teste, uma **PexAssumeFailedException** é lançada. Isso fará com que o teste seja ignorado silenciosamente.
 
@@ -41,7 +42,7 @@ Se a condição assumida não valer para alguma entrada de teste, uma **PexAssum
 
 O teste parametrizado a seguir não considerará **j=0**:
 
-```
+```csharp
 public void TestSomething(int i, int j) {
      PexAssume.AreNotEqual(j, 0);
      int k = i/j;
@@ -53,7 +54,7 @@ public void TestSomething(int i, int j) {
 
 O código acima é quase equivalente a:
 
-```
+```csharp
      if (j==0)
           return;
 ```
@@ -73,7 +74,7 @@ Se a condição declarada não valer para algumas entradas de teste, um **PexAss
 
 O exemplo a seguir declara que o valor absoluto de um inteiro é positivo:
 
-```
+```csharp
 public void TestSomething(int i) {
      int j = Maths.Abs(i);
      PexAssert.IsTrue(j >= 0);
@@ -100,7 +101,7 @@ A classe **PexChoose** pode operar em dois modos:
 
 * Basta chamar **PexChoose.Value** para gerar um novo valor:
 
-```
+```csharp
 public int Foo() {
     return PexChoose.Value<int>("foo");
 }
@@ -113,13 +114,13 @@ Uma classe estática para registrar valores nomeados.
 
 Quando o IntelliTest explora o código, o **PexObserve** é usado para registrar os valores calculados usando suas representações de cadeia de caracteres formatada. Os valores são associados a nomes exclusivos.
 
-```
+```csharp
 PexObserve.Value<string>("result", result);
 ```
 
 **Exemplo**
 
-```
+```csharp
 // product code
 public static class MathEx {
      public static int Square(int value) { return value * value; }
@@ -151,7 +152,7 @@ Normalmente, o IntelliTest tenta abranger todos os caminhos de execução do có
 
 Este exemplo mostra a implementação do método **PexAssume.Arrays.ElementsAreNotNull**. No método, você ignora as restrições no tamanho do valor da matriz para evitar que o IntelliTest tente gerar diferentes tamanhos de matriz. As restrições são ignoradas somente aqui. Se o código testado tiver um comportamento diferente de comprimentos de matriz diferente, o IntelliTest não poderá gerar matrizes de tamanhos diferentes das restrições no código testado.
 
-```
+```csharp
 public static void AreElementsNotNull<T>(T[] value)
     where T : class
 {
@@ -173,4 +174,4 @@ public static void AreElementsNotNull<T>(T[] value)
 
 ## <a name="got-feedback"></a>Recebeu comentários?
 
-Poste suas ideias e solicitações de recursos no  **[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)**.
+Poste suas ideias e solicitações de recursos na [Comunidade de Desenvolvedores](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).

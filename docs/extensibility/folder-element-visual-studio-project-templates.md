@@ -15,13 +15,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2ecf9c2973a5fb09cf1a217bd700882dce41626
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b4fca64abf91105e0363ecd67ea5244c533996f3
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39497169"
 ---
-# <a name="folder-element-visual-studio-project-templates"></a>Elemento de pasta (modelos de projeto do Visual Studio)
+# <a name="folder-element-visual-studio-project-templates"></a>Elemento folder (modelos de projeto do Visual Studio)
 Especifica uma pasta que será adicionada ao projeto.  
   
  \<VSTemplate >  
@@ -46,13 +47,13 @@ Especifica uma pasta que será adicionada ao projeto.
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |`Name`|Atributo obrigatório.<br /><br /> O nome da pasta do projeto.|  
-|`TargetFolderName`|Atributo opcional.<br /><br /> Especifica o nome a ser atribuído à pasta quando um projeto é criado a partir do modelo. Esse atributo é útil para usar a substituição de parâmetro para criar um nome de pasta ou nome de uma pasta com uma cadeia de caracteres internacional que não pode ser usado diretamente no arquivo. zip.|  
+|`TargetFolderName`|Atributo opcional.<br /><br /> Especifica o nome a ser atribuído a pasta quando um projeto é criado a partir do modelo. Esse atributo é útil para usar substituição de parâmetro para criar um nome de pasta ou uma pasta com uma cadeia de caracteres internacional de nomenclatura que não pode ser usado diretamente na *. zip* arquivo.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|`Folder`|Especifica uma pasta para adicionar ao projeto. `Folder` os elementos podem conter filho `Folder` elementos.|  
+|`Folder`|Especifica uma pasta a ser adicionada ao projeto. `Folder` os elementos podem conter filho `Folder` elementos.|  
 |[Item de projeto](../extensibility/projectitem-element-visual-studio-item-templates.md)|Especifica um arquivo para adicionar ao projeto.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -66,7 +67,7 @@ Especifica uma pasta que será adicionada ao projeto.
   
  Você pode usar qualquer um dos seguintes métodos para organizar itens de projeto em pastas em um modelo:  
   
--   Incluir as pastas no arquivo. zip de modelo e adicioná-los ao seu projeto no arquivo. vstemplate, especificando o caminho para o arquivo no `ProjectItem` elementos, sem nenhum `Folder` elementos. Esse é o método recomendado. Por exemplo:  
+-   Incluir as pastas no modelo *. zip* do arquivo e adicioná-los ao projeto na *. vstemplate* arquivo, especificando o caminho para o arquivo no `ProjectItem` elementos, sem nenhum `Folder` elementos. Esse é o método recomendado. Por exemplo:  
   
      `...`  
   
@@ -76,7 +77,7 @@ Especifica uma pasta que será adicionada ao projeto.
   
      `...`  
   
--   Incluir as pastas no arquivo. zip de modelo e adicioná-los ao projeto no arquivo. vstemplate com `Folder` elementos. Por exemplo:  
+-   Incluir as pastas no modelo *. zip* do arquivo e adicioná-los ao projeto na *. vstemplate* arquivo com `Folder` elementos. Por exemplo:  
   
      `...`  
   
@@ -90,7 +91,7 @@ Especifica uma pasta que será adicionada ao projeto.
   
      `...`  
   
--   Não inclua pastas no arquivo. zip de modelo, mas adicionar pastas usando o `TargetFileName` atributo do `ProjectItem` elemento. Por exemplo:  
+-   Não inclua pastas no modelo *. zip* do arquivo, mas adicionar pastas usando o `TargetFileName` atributo do `ProjectItem` elemento. Por exemplo:  
   
      `...`  
   
@@ -131,5 +132,5 @@ Especifica uma pasta que será adicionada ao projeto.
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)   
- [Elemento ProjectItem (Modelos de item do Visual Studio)](../extensibility/projectitem-element-visual-studio-item-templates.md)
+ [Criando modelos de projeto e item](../ide/creating-project-and-item-templates.md)   
+ [Elemento ProjectItem (modelos de item do Visual Studio)](../extensibility/projectitem-element-visual-studio-item-templates.md)

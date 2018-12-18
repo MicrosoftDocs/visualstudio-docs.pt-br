@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 15a1a6888ca35df54ff6073aefaf686327b4cd8a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b5a485baaa1fdeab4a0d4c61b82f5381a931ac85
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897180"
 ---
 # <a name="saving-symbol-information-with-performance-data-files"></a>Salvando informações de símbolo com arquivos de dados de desempenho
 
@@ -42,7 +43,7 @@ Se você não vir nenhum símbolos em seu próprio código, há soluções comun
 
 - Se você tiver coletado dados de tipo, adicione /SUMMARY:TYPE à linha de comando de vsperfreport.
 
- Se você não vir os símbolos do Windows ou outros programas da Microsoft:
+  Se você não vir os símbolos do Windows ou outros programas da Microsoft:
 
 - Certifique-se de ter configurado o caminho do seu cache de símbolos do Windows. Siga um destes procedimentos para definir o caminho do cache de símbolos:
 

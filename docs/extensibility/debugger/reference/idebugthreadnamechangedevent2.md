@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31122711"
 ---
 # <a name="idebugthreadnamechangedevent2"></a>IDebugThreadNameChangedEvent2
 Essa interface é enviada pelo mecanismo de depuração (DE) para o Gerenciador de sessão de depuração (SDM) quando um nome de thread muda no programa que está sendo depurado.  

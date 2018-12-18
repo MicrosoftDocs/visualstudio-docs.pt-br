@@ -1,5 +1,5 @@
 ---
-title: Desativar restrições ao preencher um conjunto de dados
+title: Desabilitar restrições ao preencher um conjunto de dados
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -22,22 +22,23 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: c27cb590b5a8a4b38a143de5e6faba80414f97ba
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d128216f84228c9cd4946f9a38c6c1b7845f92f1
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37117232"
 ---
-# <a name="turn-off-constraints-while-filling-a-dataset"></a>Desativar restrições ao preencher um conjunto de dados
+# <a name="turn-off-constraints-while-filling-a-dataset"></a>Desabilitar restrições ao preencher um conjunto de dados
 
-Se um conjunto de dados contiver restrições (como restrições de chave estrangeira), eles podem gerar erros relacionados à ordem de operações que são executadas no conjunto de dados. Por exemplo, o carregamento de registros filho antes de carregar relacionado registros pai podem violar uma restrição e causar um erro. Assim que você carregue um registro filho, a restrição verifica o registro pai relacionado e gera um erro.
+Se um conjunto de dados contiver restrições (como restrições de chave estrangeira), eles poderão gerar erros relacionados a ordem de operações que são executadas com o conjunto de dados. Por exemplo, carregamento de registros filho antes de carregar relacionadas a registros pai podem violar uma restrição e causar um erro. Assim que você carrega um registro filho, a restrição verifica o registro pai relacionado e gera um erro.
 
-Se não houver nenhum mecanismo para permitir a suspensão de restrição temporária, um erro será gerado sempre que você tentou carregar um registro na tabela filho. Outra maneira de suspender todas as restrições em um conjunto de dados é com o <xref:System.Data.DataRow.BeginEdit%2A>, e <xref:System.Data.DataRow.EndEdit%2A> propriedades.
+Se não houver nenhum mecanismo para permitir a suspensão de restrição temporária, um erro seria gerado toda vez que você tentou carregar um registro na tabela filho. Outra maneira para suspender todas as restrições em um conjunto de dados é com o <xref:System.Data.DataRow.BeginEdit%2A>, e <xref:System.Data.DataRow.EndEdit%2A> propriedades.
 
 > [!NOTE]
-> Eventos de validação (por exemplo, <xref:System.Data.DataTable.ColumnChanging> e<xref:System.Data.DataTable.RowChanging>) não serão gerados quando restrições estão desativadas.
+> Eventos de validação (por exemplo, <xref:System.Data.DataTable.ColumnChanging> e <xref:System.Data.DataTable.RowChanging>) não serão gerados quando as restrições estão desativadas.
 
-## <a name="to-suspend-update-constraints-programmatically"></a>Para suspender restrições de atualização programaticamente
+## <a name="to-suspend-update-constraints-programmatically"></a>Para suspender restrições de atualização por meio de programação
 
 -   O exemplo a seguir mostra como desativar temporariamente a restrição de verificação em um conjunto de dados:
 
@@ -46,9 +47,9 @@ Se não houver nenhum mecanismo para permitir a suspensão de restrição tempor
 
 ## <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>Para suspender restrições de atualização usando o Designer de conjunto de dados
 
-1.  Abra o conjunto de dados de **Dataset Designer**. Para obter mais informações, consulte [passo a passo: Criando um conjunto de dados no Designer de conjunto de dados](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
+1.  Abra o dataset na **Dataset Designer**. Para obter mais informações, consulte [instruções passo a passo: Criando um conjunto de dados no Designer de conjunto de dados](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
 
-2.  No **propriedades** janela, defina o <xref:System.Data.DataSet.EnforceConstraints%2A> propriedade `false`.
+2.  No **propriedades** janela, defina as <xref:System.Data.DataSet.EnforceConstraints%2A> propriedade `false`.
 
 ## <a name="see-also"></a>Consulte também
 

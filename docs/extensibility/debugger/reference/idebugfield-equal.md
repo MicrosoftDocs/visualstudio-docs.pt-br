@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b2d195c28123cc786c9a5a97add98b7f67d499b7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1ae30cd36d2a3f51b697afa3cb5f4615a5f322da
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49830776"
 ---
 # <a name="idebugfieldequal"></a>IDebugField::Equal
-Este método compara esse campo com o campo especificado para igualdade.  
+Esse método compara esse campo com o campo especificado quanto à igualdade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,10 +41,10 @@ int Equal(
   
 #### <a name="parameters"></a>Parâmetros  
  `pField`  
- [in] O campo a ser comparado com este.  
+ [in] O campo a ser comparado a esta.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se os campos são os mesmos, retornará `S_OK`. Se os campos são diferentes, retorna `S_FALSE.` caso contrário, retornará um código de erro.  
+ Se os campos são os mesmos, retornará `S_OK`. Retorna se os campos forem diferentes, `S_FALSE.` caso contrário, retornará um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

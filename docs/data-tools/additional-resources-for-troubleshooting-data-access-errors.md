@@ -1,6 +1,6 @@
 ---
-title: Recursos adicionais para solucionar problemas de erros de acesso a dados
-ms.date: 11/04/2016
+title: Fóruns de acesso de dados
+ms.date: 06/27/2018
 ms.topic: troubleshooting
 f1_keywords:
 - DSD_ImportXmlSchemaSameFileWrnHelpId
@@ -222,35 +222,36 @@ ms.assetid: 357c9f0a-9d59-4db4-9b7c-b96cad839961
 author: gewarren
 ms.author: gewarren
 manager: douge
-robots: noindex,nofollow
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: bed8ea08496d8751c093d448c5138b97db39dd3d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 677374404de8469c8a99a906638f326ae7a9ff3c
+ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37089070"
 ---
-# <a name="additional-resources-for-troubleshooting-data-access-errors"></a>Recursos adicionais para solucionar problemas de erros de acesso a dados
+# <a name="troubleshoot-data-access-errors-on-the-forums"></a>Solucionar problemas de erros de acesso de dados nos fóruns
 
-Você pode obter ajuda com a solução de erros e avisos nos fóruns públicos do Microsoft Developer Network (MSDN). A tabela a seguir lista os fóruns relacionados a dados disponíveis no MSDN.
+Você pode obter ajuda com a solução de erros e avisos nos fóruns públicos do Microsoft Developer Network (MSDN). Aqui estão alguns fóruns relacionados a dados disponíveis no MSDN:
 
- [Associação de dados e controles dos Windows Forms dados](http://go.microsoft.com/fwlink/?LinkId=160179) fornece um fórum para perguntas discussões sobre e gerais de acesso a dados em formulários do Windows.
+- [Associação de dados e controles de dados do Windows Forms](https://social.msdn.microsoft.com/Forums/windows/en-US/home?forum=winformsdatacontrols)
 
- [Fórum de conjunto de dados do ADO.NET](http://go.microsoft.com/fwlink/?LinkId=160180) fornece um fórum para perguntas sobre e gerais discussões de conjuntos de dados.
+- [Fórum de conjunto de dados ADO.NET](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataset)
 
- [ADO.NET Entity Framework e LINQ to Entities](http://go.microsoft.com/fwlink/?LinkId=191520) fornece um fórum para perguntas discussões sobre e gerais de aplicativos Entity Framework e o LINQ to idioma de entidades.
+- [ADO.NET Entity Framework e LINQ to Entities](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetentityframework)
 
- [Fórum do WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=160181) fornece um fórum para perguntas discussões sobre e gerais dos serviços de dados.
+- [Fórum do WCF data services](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataservices)
 
- [Fórum de acesso de dados do SQL Server](http://go.microsoft.com/fwlink/?LinkID=160184) fornece um fórum para perguntas discussões sobre e gerais de acesso a dados no Microsoft SQL Server.
+- [Fórum de acesso de dados do SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldataaccess)
 
- [O LINQ to SQL fórum](http://go.microsoft.com/fwlink/?LinkId=160183) fornece um fórum para perguntas discussões sobre e gerais de Linq to SQL.
+- [LINQ para o fórum do SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=linqtosql)
 
- [Fórum de provedores de dados ADO.NET](http://go.microsoft.com/fwlink/?LinkId=160182) fornece um fórum para perguntas discussões sobre e gerais dos provedores de dados diferente do Framework .NET.
+- [Fórum de provedores de dados do ADO.NET](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataproviders)
 
- Para obter informações sobre como solucionar problemas de conectividade para SQL Server, consulte [como solucionar problemas de conexão com o mecanismo de banco de dados do SQL Server](http://go.microsoft.com/fwlink/?LinkID=246151).
+Para obter informações sobre como solucionar problemas de conectividade para SQL Server, consulte [solucione o problema se conectar ao mecanismo de banco de dados do SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx).
 
 ## <a name="see-also"></a>Consulte também
 

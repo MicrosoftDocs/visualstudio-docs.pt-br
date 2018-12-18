@@ -19,16 +19,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 64e9d8c2b25d779bfe0e80aa7b7d324f7a69879c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2526938274299cc5a90319749531f80e8bd3a90d
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220541"
 ---
 # <a name="vsinstr"></a>VSInstr
 A ferramenta VSInstr é usada para instrumentar binários. Ela é chamada usando a seguinte sintaxe:  
   
-```  
+```cmd  
 VSInstr [/U] filename [/options]  
 ```  
   
@@ -43,7 +44,7 @@ VSInstr [/U] filename [/options]
 |**Exclude** `:funcspec`|Determina uma especificação de função a ser excluída da instrumentação por testes. É útil quando a entrada de teste de criação de perfil em uma função causa resultados imprevisíveis ou indesejados.<br /><br /> Não use as opções **Exclude** e **Include** que se referem a funções no mesmo binário.<br /><br /> Você pode determinar várias especificações de função com opções **Exclude** separadas.<br /><br /> `funcspec` é definida como:<br /><br /> função [namespace\<separator1>] [class\<separator2>]<br /><br /> \<separator1> é `::` para código nativo e `.` para código gerenciado.<br /><br /> \<separator2> é sempre `::`<br /><br /> **Exclude** tem suporte com a cobertura de código.<br /><br /> Há suporte para o caractere curinga \*. Por exemplo, para excluir todas as funções em um namespace, use:<br /><br /> MyNamespace::\*<br /><br /> Você pode usar **VSInstr /DumpFuncs** para listar os nomes completos de funções no binário especificado.|  
 |**Include** `:funcspec`|Determina uma especificação de função em um binário para instrumentar com testes. Todas as outras funções nos binários não são instrumentadas.<br /><br /> Você pode determinar várias especificações de função com opções **Include** separadas.<br /><br /> Não use as opções **Include** e **Exclude** que se referem a funções no mesmo binário.<br /><br /> Não há suporte para **Include** com cobertura de código.<br /><br /> `funcspec` é definida como:<br /><br /> função [namespace\<separator1>] [class\<separator2>]<br /><br /> \<separator1> é `::` para código nativo e `.` para código gerenciado.<br /><br /> \<separator2> é sempre `::`<br /><br /> Há suporte para o caractere curinga \*. Por exemplo, para incluir todas as funções em um namespace, use:<br /><br /> MyNamespace::\*<br /><br /> Você pode usar **VSInstr /DumpFuncs** para listar os nomes completos de funções no binário especificado.|  
 |**DumpFuncs**|Lista as funções dentro da imagem especificada. Nenhuma instrumentação é executada.|  
-|**ExcludeSmallFuncs**|Exclui funções pequenas, que são funções curtas que não fazem chamadas de função, da instrumentação. A opção **ExcludeSmallFuncs** oferece menos sobrecarga devido à instrumentação, portanto, uma velocidade de instrumentação aprimorada.<br /><br /> A exclusão de pequenas funções também reduz o tamanho do arquivo .vsp e o tempo necessário para análise.|  
+|**ExcludeSmallFuncs**|Exclui funções pequenas, que são funções curtas que não fazem chamadas de função, da instrumentação. A opção **ExcludeSmallFuncs** oferece menos sobrecarga devido à instrumentação, portanto, uma velocidade de instrumentação aprimorada.<br /><br /> A exclusão de funções pequenas também reduz o tamanho do arquivo .*vsp* e o tempo necessário para análise.|  
 |**Marca:**{**Antes**`&#124;`**Depois**`&#124;`**Superior**`&#124;`**Inferior**}`,funcname,markid`|Insere uma marca de perfil (um identificador usado para delimitar os dados em relatórios) que você pode usar para identificar o início ou término de um intervalo de dados no arquivo de relatório. vsp.<br /><br /> **Before** – Imediatamente antes da entrada da função de destino.<br /><br /> **After** – Imediatamente depois da saída da função de destino.<br /><br /> **Top** – Imediatamente depois da entrada da função de destino.<br /><br /> **Bottom** – Imediatamente antes de cada retorno na função de destino.<br /><br /> `funcname` – Nome da função de destino<br /><br /> `Markid` – Um inteiro positivo (longo) para usar como o identificador da marca de perfil.|  
 |**Cobertura**|Executa a instrumentação de cobertura. Pode ser usado apenas com as seguintes opções: **Verbose**, **OutputPath**, **Exclude** e **Logfile**.|  
 |**Verbose**|A opção **Verbose** é usada para exibir informações detalhadas sobre o processo de instrumentação.|  
@@ -60,5 +61,5 @@ VSInstr [/U] filename [/options]
  [VSPerfMon](../profiling/vsperfmon.md)   
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [VSPerfReport](../profiling/vsperfreport.md)   
- [Avisos VSInstr](../profiling/vsinstr-warnings.md)   
+ [Avisos de VSInstr](../profiling/vsinstr-warnings.md)   
  [Exibições de relatório de desempenho](../profiling/performance-report-views.md)

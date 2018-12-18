@@ -15,26 +15,27 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 76d347a40993b722b13545dd278138ce753344f3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0c7a824a3ffe319d0134b59db95afe8296ef7575
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926898"
 ---
 # <a name="idebugcoreserver2getmachineinfo"></a>IDebugCoreServer2::GetMachineInfo
-Recupera uma descrição da máquina em que o servidor principal está em execução no.  
+Recupera uma descrição do computador que o server core está em execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT GetInfo(   
+HRESULT GetMachineInfo(   
    MACHINE_INFO_FIELDS Fields,  
    MACHINE_INFO*       pMachineInfo  
 );  
 ```  
   
 ```csharp  
-int GetInfo(   
+int GetMachineInfo(   
    enum_ MACHINE_INFO_FIELDS  Fields,  
    MACHINE_INFO[]             pMachineInfo  
 );  
@@ -45,10 +46,10 @@ int GetInfo(
  [in] Uma combinação de sinalizadores do [MACHINE_INFO_FIELDS](../../../extensibility/debugger/reference/machine-info-fields.md) enumeração que especificam quais campos de `pMachineInfo` devem ser preenchidos.  
   
  `pMachineInfo`  
- [out no] Um [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) estrutura que é preenchida com uma descrição da máquina.  
+ [no, out] Um [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) estrutura será preenchida com uma descrição da máquina.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)   

@@ -1,7 +1,7 @@
 ---
 title: Diretrizes de experiência de usuário do Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/05/2018
 ms.technology:
 - vs-ide-sdk
 ms.topic: conceptual
@@ -11,21 +11,22 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa7e90e04cc81443a38cb1c6cbc06644e2426499
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ed7488702bd19e8a0e8576d2cdc21e4350e8443b
+ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863979"
 ---
-# <a name="visual-studio-user-experience-guidelines"></a>Diretrizes de experiência de usuário do Visual Studio
-As diretrizes de experiência do Visual Studio usuário destinam-se para aqueles que criam novos recursos para o Visual Studio. Essas diretrizes contêm informações sobre modelos de usuário comuns e padrões de interação para que os designers de novas interfaces de usuário (UI) podem criar experiências de usuário contínua e consistente dentro do ambiente de desenvolvimento.  
+# <a name="visual-studio-user-experience-guidelines"></a>Diretrizes da experiência do usuário do Visual Studio
+Se você criar novos recursos para o Visual Studio, siga a diretrizes de experiência de usuário do Visual Studio. Essas diretrizes contêm informações sobre modelos de usuário comuns e padrões de interação para que os designers de novas interfaces de usuário (IU) podem criar experiências de usuário contínua e consistente dentro do ambiente de desenvolvimento.  
   
- Desenvolvimento de software para médias de produtos Microsoft Noções básicas sobre as diretrizes fornecidas pelo Windows. Há três recursos importantes a serem consideradas:  
+Se você desenvolver software para produtos da Microsoft, Aprenda a usar esses recursos:
   
--   O [diretrizes de interação de experiência de usuário do Windows](https://msdn.microsoft.com/en-us/library/aa511258.aspx). Essas diretrizes são as Noções básicas para a aparência e comportamento de área de trabalho do Windows.  
+-   O [diretrizes de interação de experiência de usuário do Windows](https://developer.microsoft.com/windows/desktop) são os conceitos básicos de aparência e comportamento da área de trabalho do Windows.  
   
--   Essas diretrizes do Visual Studio, diretrizes de específico de plataforma que substituem as diretrizes gerais do Windows sempre que apropriado para nosso ambiente.  
+-   Essas diretrizes do Visual Studio, são diretrizes específicas da plataforma que substituem as diretrizes gerais do Windows onde for apropriado para nosso ambiente.  
   
--   O [padrões e guias para aplicativos da Windows Store](https://dev.windows.com/en-us/design/interaction-ux) são uma referência para os padrões emergentes que podem ser usadas em algumas instâncias do Visual Studio.  
+-   O [padrões e guias para aplicativos da Windows Store](https://dev.windows.com/en-us/design/interaction-ux) são uma referência para os padrões emergentes que podem ser usadas em algumas instâncias dentro do Visual Studio.  
   
- Estas diretrizes fornecem informações sobre o que fazer ao projetar para o Visual Studio e, em alguns casos, informações sobre como fazer isso também estão incluídas. Para obter mais informações de implementação e para saber mais sobre as APIs (interfaces) que permitem que você escreva código para soluções que integrar o ambiente de desenvolvimento integrado (IDE) do Visual Studio de programação de aplicativo específico, use o [Visual Studio Software Development Kit (SDK)](https://msdn.microsoft.com/en-us/library/bb166441.aspx).
+Essas diretrizes fornecem informações sobre o que fazer ao projetar para o Visual Studio e, em alguns casos, informações sobre como fazer isso também estão incluídas. Para obter mais informações de implementação e saiba mais sobre APIs (interfaces) que permitem que você escreva código para soluções que se integram com o ambiente de desenvolvimento integrado (IDE) do Visual Studio de programação de aplicativo específico, use o [Software Development Kit (SDK do) visual Studio](../visual-studio-sdk.md).

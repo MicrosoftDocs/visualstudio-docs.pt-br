@@ -1,6 +1,7 @@
 ---
 title: Página de opções do Designer XAML
 ms.date: 03/02/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
@@ -10,18 +11,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 045f9105abd9fe52e9496adb9ba6d1a434bf9b90
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 52691c0b49c74bd39fa97ec8d297ffb823ba705c
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388355"
 ---
 # <a name="xaml-designer-options-page"></a>Página de opções do Designer XAML
 
 Use a página de opções do **Designer XAML** para especificar como os elementos e atributos são formatados nos documentos XAML. Para abrir essa página, escolha o menu **Ferramentas** e, em seguida, **Opções**. Para acessar a página de propriedades **XAML Designer**, escolha o nó **XAML Designer**. As configurações para o XAML Designer são aplicadas quando você abre o documento. Portanto, se você alterar as configurações, será necessário fechar e reabrir o Visual Studio para ver as alterações.
 
 > [!NOTE]
-> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
+> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Redefinir as configurações](../environment-settings.md#reset-settings).
 
 ## <a name="enable-xaml-designer"></a>Habilitar o XAML Designer
 

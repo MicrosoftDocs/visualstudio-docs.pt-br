@@ -1,5 +1,5 @@
 ---
-title: ': Get_checksumtype | Microsoft Docs'
+title: 'Idiasourcefile:: Get_checksumtype | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 83d1aa687ec7f19df61031d4ff334751ccabaebd
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 39fa53d00d17446e63170d5b729d2e669ecb987b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948415"
 ---
 # <a name="idiasourcefilegetchecksumtype"></a>IDiaSourceFile::get_checksumType
 Recupera o tipo de soma de verificação.  
@@ -36,20 +37,20 @@ HRESULT get_checksumType (
  [out] Retorna o tipo de soma de verificação.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  O tipo de soma de verificação é um valor que pode ser mapeado para um algoritmo de soma de verificação. Por exemplo, o formato de arquivo PDB padrão normalmente pode ter um dos seguintes valores:  
   
 |Tipo de soma de verificação|Rótulo de CryptoAPI|Descrição|  
 |-------------------|---------------------|-----------------|  
-|0|\<Nenhum >|Nenhuma soma de verificação presente.|  
+|0|\<Nenhum >|Soma de verificação não presente.|  
 |1|`CALG_MD5`|soma de verificação gerada com o algoritmo de hash MD5.|  
 |2|`CALG_SHA1`|soma de verificação gerada com o algoritmo de hash SHA1.|  
   
- O `CryptoAPI` são rótulos do `ALG_ID` enumeração. Para obter mais informações sobre algoritmos de hash, consulte o `CryptoAPI` seção do Microsoft [!INCLUDE[winsdkshort](../../debugger/debug-interface-access/includes/winsdkshort_md.md)].  
+ O `CryptoAPI` rótulos são do `ALG_ID` enumeração. Para obter mais informações sobre algoritmos de hash, consulte o `CryptoAPI` seção do Microsoft [!INCLUDE[winsdkshort](../../debugger/debug-interface-access/includes/winsdkshort_md.md)].  
   
- Para obter os bytes reais de soma de verificação para o arquivo de origem, chame o [: Get_checksum](../../debugger/debug-interface-access/idiasourcefile-get-checksum.md) método.  
+ Para obter os bytes da soma de verificação atual para o arquivo de origem, chame o [idiasourcefile:: Get_checksum](../../debugger/debug-interface-access/idiasourcefile-get-checksum.md) método.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)   

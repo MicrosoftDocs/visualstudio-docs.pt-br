@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7190e1af4bdd3304884e516a0af3610c7da47efc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 45b30aa1935535f6a275f9507b53f2a914ae2a32
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820559"
 ---
 # <a name="idebugprogram2getname"></a>IDebugProgram2::GetName
 Obtém o nome do programa.  
@@ -43,10 +44,10 @@ int GetName(
  [out] Retorna o nome do programa.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- O nome retornado por esse método é sempre um nome de exibição de usuário amigável que descreve o programa.  
+ O nome retornado por esse método sempre é um nome amigável, que pode ser exibido usuário que descreve o programa.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

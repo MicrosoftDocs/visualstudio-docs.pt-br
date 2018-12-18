@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b7569b36b954553dbb03e8a3934c375012a4349
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 27922f227c6791ad4b64b3258f9107d28b21a964
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34476724"
 ---
-# <a name="understanding-memory-allocation-and-object-lifetime-data-values"></a>Entendendo a alocação de memória e os valores de dados de vida útil de objetos
+# <a name="understand-memory-allocation-and-object-lifetime-data-values"></a>Entender a alocação de memória e os valores de dados de tempo de vida do objeto
 
 O método de criação de perfil para *alocação de memória .NET* das [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ferramentas de criação de perfil coleta informações sobre o tamanho e o número de objetos que foram criados em uma alocação ou destruídos em uma coleta de lixo e informações adicionais sobre a *pilha de chamadas* da função quando o evento ocorreu. Uma *pilha de chamadas* é uma estrutura dinâmica que armazena informações sobre as funções que estão em execução no processador.
 

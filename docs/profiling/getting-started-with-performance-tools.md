@@ -1,7 +1,7 @@
 ---
 title: Introdução às ferramentas de desempenho | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 11/04/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,30 +13,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fe0a1d3a305ca19b36358ab28fbb794d56df2aa
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 10c568705be09948b96f8c8b3df23be1f5e8d137
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948901"
 ---
 # <a name="getting-started-with-performance-tools"></a>Introdução às ferramentas de desempenho
-Esta seção fornece uma visão geral dos conceitos e tarefas que você aplicará ao coletar, exibir e analisar o desempenho do código usando as Ferramentas de Desempenho do Visual Studio.  
+
+O Visual Studio oferece várias maneiras de coletar, exibir e analisar dados de desempenho do código. Em muitos casos, a melhor maneira de começar a usar as ferramentas de desempenho é usar as configurações padrão do **Assistente de desempenho**. O assistente coleta estatísticas de aplicativo que podem indicar problemas de desempenho em seu código.  
   
- Essas ferramentas fornecem várias maneiras de coletar e analisar dados de desempenho. Mas, em muitos casos, a melhor maneira de começar é usar as configurações padrão do Assistente de Desempenho, o que lhe permite coletar estatísticas do aplicativo que podem indicar problemas de desempenho em seu código.  
+- Avisos de desempenho que notificam você sobre problemas de codificação comuns são exibidos na janela **Lista de Erros** do Visual Studio. É possível navegar dos avisos para o código-fonte e para tópicos da ajuda detalhados que ajudarão a escrever um código mais eficiente.
+
+- Os relatórios de desempenho fornecem exibições em diferentes níveis da estrutura, linhas de código-fonte e processos do seu aplicativo. Relatórios de desempenho mostram dados de execução do aplicativo, da chamada e funções chamadas de uma função específica à árvore de chamadas de todo o aplicativo.  
   
--   *Avisos de desempenho* notificam sobre problemas comuns de codificação. Os avisos são exibidos na janela de Erros do Visual Studio. É possível navegar do aviso para o código-fonte e para tópicos da ajuda detalhados que ajudarão a escrever um código mais eficiente.  
+Para criar o perfil de um projeto, aplicativo ou site do ASP.NET rapidamente, selecione **Depurar** > **Criador de Perfil de Desempenho** e selecione **Assistente de Desempenho**. Para obter instruções detalhadas, confira [Guia do iniciante à criação de perfil do desempenho](../profiling/beginners-guide-to-cpu-sampling.md) e [Como: coletar dados de desempenho de um Site da Web](../profiling/how-to-collect-performance-data-for-a-web-site.md).  
+
+Para especificar e configurar uma sessão de criação de perfil de desempenho manualmente, selecione **Depurar** > **Criador de Perfil** > **Gerenciador de Desempenho**. Use a pasta **Destinos** e as páginas **Propriedades** no **Gerenciador de Desempenho** para configurar sessões. Para obter instruções, confira [How to: Manually create performance sessions](../profiling/how-to-manually-create-performance-sessions.md) (Como criar sessões de desempenho manualmente).  
   
--   Os relatórios de desempenho fornecem visualizações de diferentes níveis da estrutura do aplicativo, desde as linhas de código-fonte aos processos, bem como dados de execução do programa das funções de chamada e funções chamadas, desde uma função específica até a árvore de chamadas do aplicativo inteiro.  
+**Confira também:**
   
-## <a name="common-tasks"></a>Tarefas comuns  
-  
-|Tarefa|Conteúdo relacionado|  
-|----------|---------------------|  
-|**Criar rapidamente o perfil de um aplicativo ou site da Web:** use o Assistente de Desempenho para configurar e executar uma sessão de criação de perfil para um site da Web ou solução do Visual Studio.|-   [Guia do iniciante à criação de perfil de desempenho](../profiling/beginners-guide-to-cpu-sampling.md)<br />-   [Como coletar dados de desempenho de um site da Web](../profiling/how-to-collect-performance-data-for-a-web-site.md)|  
-|**Criar o perfil de um aplicativo sem o assistente:** saiba como usar as páginas de propriedade de sessão de desempenho para criar uma sessão de desempenho.|-   [Como criar manualmente sessões de desempenho](../profiling/how-to-manually-create-performance-sessions.md)|  
-  
-## <a name="see-also"></a>Consulte também  
- [Visões gerais](../profiling/overviews-performance-tools.md)   
+ [Visão geral de ferramentas de desempenho](../profiling/overviews-performance-tools.md)   
  [Analisando dados de ferramentas de desempenho](../profiling/analyzing-performance-tools-data.md)   
  [Usando regras de desempenho para analisar dados](../profiling/using-performance-rules-to-analyze-data.md)   
  [Configurando sessões de desempenho](../profiling/configuring-performance-sessions.md)

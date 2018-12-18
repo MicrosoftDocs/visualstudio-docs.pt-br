@@ -20,13 +20,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 30acdaddc132a40c37bc489b07ae3b7f2843b215
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 53f723644744001e39967186d0eeec74bf7d3bd7
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153794"
 ---
-# <a name="wpf-msbuild-task-reference"></a>Referência das tarefas do WPF MSBuild
+# <a name="wpf-msbuild-task-reference"></a>Referência de tarefas do WPF MSBuild
 O processo de build do Windows Presentation Foundation (WPF) estende o Microsoft Build Engine (MSBuild) com um conjunto adicional de tarefas de build, incluindo tarefas para compilar recursos de marcação e o processo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
@@ -49,13 +50,13 @@ O processo de build do Windows Presentation Foundation (WPF) estende o Microsoft
  Mescla os atributos de localização e comentários de um ou mais [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] arquivos de formato binário em um único arquivo para todo o assembly.  
   
  [ResourcesGenerator](../msbuild/resourcesgenerator-task.md)  
- Insere um ou mais recursos (. jpg,. ico,. bmp, [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] em formato binário e outros tipos de extensão) em um arquivo .resources.  
+ Insere um ou mais recursos (*.jpg*, *.ico*, *.bmp*, [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] em formato binário e outros tipos de extensão) em um arquivo *.resources*.  
   
  [UidManager](../msbuild/uidmanager-task.md)  
  Verifica, atualiza ou remove identificadores exclusivos (UIDs), para localizar todos os [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] elementos que são incluídos na fonte de [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] arquivos.  
   
  [UpdateManifestForBrowserApplication](../msbuild/updatemanifestforbrowserapplication-task.md)  
- Adiciona o elemento **\<hostInBrowser / >** para o manifesto do aplicativo (*projectname*.exe.manifest) quando um [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)] projeto é compilado.  
+ Adiciona o elemento **\<hostInBrowser / >** para o manifesto do aplicativo (*\<projectname.exe.manifest*) quando um projeto de [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)] é compilado.  
   
 ## <a name="see-also"></a>Consulte também  
  [MSBuild](../msbuild/msbuild.md)

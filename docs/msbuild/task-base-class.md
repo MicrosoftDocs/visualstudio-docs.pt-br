@@ -15,11 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 361ff48c1363fc2e736f01c983b32a3ee229a839
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e0f11f797955dd2b909b75c0bc758209e1a0a028
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152139"
 ---
 # <a name="task-base-class"></a>Classe base Task
 Muitas tarefas são herdadas da classe <xref:Microsoft.Build.Utilities.Task>. Essa classe adiciona vários parâmetros para as tarefas que derivam dela. Esses parâmetros são listados neste documento.  

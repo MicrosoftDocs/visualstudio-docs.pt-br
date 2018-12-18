@@ -1,0 +1,82 @@
+items:
+- name: Desenvolvimento Móvel Multiplataforma no Visual Studio
+  href: cross-platform-mobile-development-in-visual-studio.md
+- name: Ferramentas do Visual Studio para Xamarin
+  displayName: .NET Mobile Developer Tools (Android & iOS)
+  href: /xamarin/
+- name: Ferramentas do Visual Studio para Apache Cordova
+  href: /visualstudio/cross-platform/tools-for-cordova/
+- name: Ferramentas do Visual Studio para Unity
+  href: visual-studio-tools-for-unity.md
+  items:
+  - name: Introdução às Ferramentas do Visual Studio para Unity
+    href: getting-started-with-visual-studio-tools-for-unity.md
+  - name: Usar as Ferramentas do Visual Studio para Unity
+    href: using-visual-studio-tools-for-unity.md
+  - name: Usar o .NET 4.x no Unity
+    href: unity-scripting-upgrade.md
+  - name: Programar as Ferramentas do Visual Studio para Unity
+    href: programming-visual-studio-tools-for-unity.md
+    items:
+    - name: Personalizar os arquivos de projeto criados pelo VSTU
+      href: customize-project-files-created-by-vstu.md
+    - name: Compartilhar o retorno de chamada de log do Unity com o VSTU
+      href: share-the-unity-log-callback-with-vstu.md
+  - name: Programar com o Unity e o Azure
+    href: visual-studio-tools-for-unity-azure.md
+  - name: Solucionando problemas e problemas conhecidos (Visual Studio Tools for Unity)
+    href: troubleshooting-and-known-issues-visual-studio-tools-for-unity.md
+  - name: Log de alterações (Ferramentas do Visual Studio para Unity, Windows)
+    href: change-log-visual-studio-tools-for-unity.md
+  - name: Log de alterações (Ferramentas do Visual Studio para Unity, Mac)
+    href: change-log-visual-studio-tools-for-unity-mac.md
+  - name: DevOps com aplicativos Unity
+    href: application-lifecycle-management-alm-with-unity-apps.md
+- name: Visual C++ para Desenvolvimento Móvel Multiplataforma
+  href: visual-cpp-for-cross-platform-mobile-development.md
+  items:
+  - name: Instalar o Visual C++ para Desenvolvimento Móvel Multiplataforma
+    href: install-visual-cpp-for-cross-platform-mobile-development.md
+    items:
+    - name: Instalar e configurar ferramentas para criação usando iOS
+      href: install-and-configure-tools-to-build-using-ios.md
+  - name: Criar um aplicativo de Atividade Nativa do Android
+    href: create-an-android-native-activity-app.md
+  - name: Criar um aplicativo OpenGL ES no Android e iOS
+    href: build-an-opengl-es-application-on-android-and-ios.md
+  - name: Importar um projeto do XCode
+    href: import-an-xcode-project.md
+  - name: Sincronizar alterações entre o XCode e o Visual Studio
+    href: sync-changes-between-xcode-and-visual-studio.md
+  - name: Exemplos de desenvolvimento móvel multiplataforma
+    href: cross-platform-mobile-development-examples.md
+  - name: Propriedades do projeto multiplataforma do C++
+    href: cross-platform-prop-pages.md
+    items:
+    - name: Propriedades gerais do projeto (Android C++)
+      href: general-android-prop-page.md
+    - name: Propriedades do depurador Android
+      href: android-debugger-prop-page.md
+    - name: Propriedades do projeto Clang (Android C++)
+      href: clang-android-prop-page.md
+    - name: Propriedades gerais do projeto (Makefile Android C++)
+      href: general-makefile-android-prop-page.md
+    - name: Propriedades do vinculador Clang (Android C++)
+      href: clanglink-prop-page.md
+    - name: Propriedades de NMake (Android C++)
+      href: nmake-android-prop-page.md
+- name: Desenvolver aplicativos para a UWP (Plataforma Universal do Windows)
+  href: develop-apps-for-the-universal-windows-platform-uwp.md
+- name: Emulador do Visual Studio para Android
+  href: visual-studio-emulator-for-android.md
+  items:
+  - name: Requisitos do sistema para o emulador do Visual Studio para Android
+    href: system-requirements-for-the-visual-studio-emulator-for-android.md
+  - name: Solução de problemas do Emulador do Visual Studio para Android
+    href: troubleshooting-the-visual-studio-emulator-for-android.md
+ms.openlocfilehash: 0126179459596c389703c065e85e2f5da41e070c
+ms.sourcegitcommit: 97204b85caadbcf14baeb6738710e287a196673e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991517"

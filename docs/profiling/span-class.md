@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e0246f448ba51ab63cd10d2026d0aa2e2cdbb7bb
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c1a33a99b129cd4a0fa1969553d55c81af310295
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35668049"
 ---
 # <a name="span-class"></a>Classe span
 Define uma fase do aplicativo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 class span;  
 ```  
   
@@ -42,9 +43,9 @@ class span;
  `span`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** cvmarkersobj.h  
+ **Cabeçalho:** *cvmarkersobj.h*  
   
  **Namespace:** Concurrency::diagnostic  
   
 ## <a name="see-also"></a>Consulte também  
- [Namespace de diagnóstico](../profiling/diagnostic-namespace.md)
+ [namespace de diagnóstico](../profiling/diagnostic-namespace.md)

@@ -1,6 +1,7 @@
 ---
-title: 'CA2153: Evitar tratamento de exceções de estado corrompidas'
+title: 'CA2153: evite manipular exceções de estado corrompido'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 author: gewarren
@@ -8,52 +9,57 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 035c68feddafffbb7e1502a07db47ab80eac61c5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5043c8cb9cefb8ffdb600083ba2dc4bb49d5e3f5
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45547508"
 ---
-# <a name="ca2153-avoid-handling-corrupted-state-exceptions"></a>CA2153: Evitar tratamento de exceções de estado corrompidas
+# <a name="ca2153-avoid-handling-corrupted-state-exceptions"></a>CA2153: evite manipular exceções de estado corrompido
 
 |||
 |-|-|
 |NomeDoTipo|AvoidHandlingCorruptedStateExceptions|
 |CheckId|CA2153|
 |Categoria|Microsoft.Security|
-|Alteração Significativa|Não separáveis|
+|Alteração Significativa|Não separável|
 
 ## <a name="cause"></a>Causa
 
-[Corrompido exceções de estado (CSE)](https://msdn.microsoft.com/magazine/dd419661.aspx) indicar que a memória corrompidos no processo. Capturando esses em vez de permitir o processo a falha pode levar a vulnerabilidades de segurança se um invasor pode colocar uma exploração para a área de memória corrompidos.
+[Corrompido exceções de estado (CSE)](https://msdn.microsoft.com/magazine/dd419661.aspx) indicam que a memória corrupção existe em seu processo. Capturar esses em vez de permitir que o processo falhe pode levar a vulnerabilidades de segurança se um invasor pode colocar uma exploração para a região de memória corrompida.
 
-## <a name="rule-description"></a>Descrição da Regra
- CSE indica que o estado de um processo foi corrompido e não foi detectado pelo sistema. No cenário de estado corrompido, um manipulador geral somente captura a exceção se você marcar o método com o próprio `HandleProcessCorruptedStateExceptions` atributo. Por padrão, o [Common Language Runtime (CLR)](/dotnet/standard/clr) não invoca manipuladores catch para CSEs.
+## <a name="rule-description"></a>Descrição da regra
 
- Permitir que o processo falhar sem capturando esses tipos de exceção é a opção mais segura, como o mesmo código de registro pode permitir que os invasores podem explorar bugs de corrupção de memória.
+CSE indica que o estado de um processo foi corrompido e não capturado pelo sistema. No cenário de estado corrompido, um manipulador geral só captura a exceção se você marcar o método com as devidas `HandleProcessCorruptedStateExceptions` atributo. Por padrão, o [Common Language Runtime (CLR)](/dotnet/standard/clr) não invoca manipuladores catch para CSEs.
 
- Esse aviso é disparado quando capturando CSEs com um manipulador geral que captura todas as exceções, como catch(exception) ou catch (especificação de exceção).
+Permitindo que o processo falhe sem capturar esses tipos de exceções é a opção mais segura, como o mesmo código de registro pode permitir que os invasores podem explorar os bugs de corrupção de memória.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para resolver este aviso, você deve fazer o seguinte:
+Esse aviso dispara quando capturando CSEs com um manipulador geral que captura todas as exceções, como catch (Exception) ou catch (especificação de exceção).
 
- 1. Remover o `HandleProcessCorruptedStateExceptions` atributo. Isso será revertido para o comportamento de tempo de execução padrão onde CSEs não são passados para manipuladores catch.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
 
- 2. Remova o manipulador catch geral in preference of manipuladores que capturar tipos de exceção específica.  Isso pode incluir CSEs supondo que o código do manipulador possa gerenciá-las com segurança (muito raro).
+Para resolver este aviso, siga um destes procedimentos:
 
- 3. Gera novamente a CSE no manipulador catch que garante a exceção é passada para o chamador e resultará no encerramento do processo em execução.
+- Remover o `HandleProcessCorruptedStateExceptions` atributo. Isso será revertido para o comportamento de tempo de execução padrão no qual os CSEs não são passados para manipuladores catch.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- Não suprima um aviso nessa regra.
+- Remova o manipulador catch geral in preference of manipuladores que capturar tipos de exceção específica. Isso pode incluir CSEs, supondo que o código do manipulador possa tratá-las com segurança (raro).
 
-## <a name="pseudo-code-example"></a>Exemplo de código pseudo
+- Relançar a CSE no manipulador catch, que garante que a exceção é passada para o chamador e resultarão no encerramento do processo em execução.
+
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+
+Não suprima um aviso nessa regra.
+
+## <a name="pseudo-code-example"></a>Exemplo de pseudocódigo
 
 ### <a name="violation"></a>Violação
- O pseudocódigo a seguir ilustra o padrão detectado por essa regra.
 
-```
+O pseudocódigo a seguir ilustra o padrão detectado por essa regra.
+
+```csharp
 [HandleProcessCorruptedStateExceptions]
-//method to handle and log CSE exceptions
+// Method to handle and log CSE exceptions.
 void TestMethod1()
 {
     try
@@ -62,15 +68,16 @@ void TestMethod1()
     }
     catch (Exception e)
     {
-        // Handle error
+        // Handle error.
     }
 }
 ```
 
 ### <a name="solution-1"></a>Solução 1
- Removendo o atributo HandleProcessCorruptedExceptions garante que as exceções não ocorrerão.
 
-```
+Removendo o atributo HandleProcessCorruptedExceptions garante que as exceções não ocorrerão.
+
+```csharp
 void TestMethod1()
 {
     try
@@ -79,19 +86,20 @@ void TestMethod1()
     }
     catch (IOException e)
     {
-        // Handle error
+        // Handle error.
     }
     catch (UnauthorizedAccessException e)
     {
-        // Handle error
+        // Handle error.
     }
 }
 ```
 
 ### <a name="solution-2"></a>Solução 2
- Remova o manipulador catch geral e capturar somente os tipos de exceção específica.
 
-```
+Remover o manipulador catch geral e capturar apenas os tipos de exceção específica.
+
+```csharp
 void TestMethod1()
 {
     try
@@ -100,19 +108,20 @@ void TestMethod1()
     }
     catch (IOException e)
     {
-        // Handle error
+        // Handle error.
     }
     catch (UnauthorizedAccessException e)
     {
-        // Handle error
+        // Handle error.
     }
 }
 ```
 
 ### <a name="solution-3"></a>Solução 3
- Gera novamente a exceção.
 
-```
+Relançar a exceção.
+
+```csharp
 void TestMethod1()
 {
     try
@@ -121,7 +130,7 @@ void TestMethod1()
     }
     catch (Exception e)
     {
-        // Handle error
+        // Handle error.
         throw;
     }
 }

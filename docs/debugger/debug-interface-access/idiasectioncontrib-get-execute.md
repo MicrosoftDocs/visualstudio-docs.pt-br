@@ -1,5 +1,5 @@
 ---
-title: ': Get_execute | Microsoft Docs'
+title: 'Idiasectioncontrib:: Get_execute | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c684dfd9d233b149d98d9e1cfcf0e79b09fede38
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: c3f6f26a5ba6442dc9047a2612e032a97a95e04f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910648"
 ---
 # <a name="idiasectioncontribgetexecute"></a>IDiaSectionContrib::get_execute
 Recupera um sinalizador que indica se a seção é executável como código.  

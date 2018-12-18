@@ -14,28 +14,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5d86b94a457934547037f2428e6284f20de1660d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4f83e7b124745d089f1632060c552b5424e5ccde
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949962"
 ---
-# <a name="evaluating-a-watch-expression"></a>Avaliar uma expressão de inspeção
+# <a name="evaluate-a-watch-expression"></a>Avaliar uma expressão de inspeção
 > [!IMPORTANT]
->  No Visual Studio 2015, essa maneira de implementar avaliadores de expressão foi preterida. Para obter informações sobre como implementar avaliadores de expressão do CLR, consulte [avaliadores de expressão CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) e [amostra do avaliador de expressão gerenciado](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+>  No Visual Studio 2015, essa forma de implementar os avaliadores de expressão foi preterida. Para obter informações sobre como implementar os avaliadores de expressão de CLR, consulte [avaliadores de expressão de CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) e [amostra do avaliador de expressão gerenciado](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Quando o Visual Studio está pronto para exibir o valor de uma expressão de inspeção, ele chama [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) chama [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md). Isso produz um [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) objeto que contém o valor e o tipo da expressão.  
+ Quando o Visual Studio está pronto para exibir o valor de uma expressão de inspeção, ele chama [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md), que por sua vez chama [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md). Esse processo gera uma [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) objeto que contém o valor e o tipo da expressão.  
   
- Nessa implementação de `IDebugParsedExpression::EvaluateSync`, a expressão é analisada e avaliada ao mesmo tempo. Essa implementação executa as seguintes tarefas:  
+ Nessa implementação de `IDebugParsedExpression::EvaluateSync`, a expressão é analisada e avaliada ao mesmo tempo. Esta implementação realiza as seguintes tarefas:  
   
-1.  Analisa e avalia a expressão para produzir um objeto genérico que contém o valor e seu tipo. Em c#, isso é representado como um `object` enquanto em C++ é representado como um `VARIANT`.  
+1.  Analisa e avalia a expressão para produzir um objeto genérico que contém o valor e seu tipo. No c#, isso é representado como uma `object` enquanto estiver no C++, isso é representado como um `VARIANT`.  
   
-2.  Instancia uma classe (chamado `CValueProperty` neste exemplo) que implementa o `IDebugProperty2` de interface e o armazena na classe, o valor a ser retornado.  
+2.  Cria uma instância de uma classe (chamados `CValueProperty` neste exemplo) que implementa o `IDebugProperty2` de interface e o armazena na classe de valor a ser retornado.  
   
-3.  Retorna o `IDebugProperty2` de interface do `CValueProperty` objeto.  
+3.  Retorna o `IDebugProperty2` da interface do `CValueProperty` objeto.  
   
 ## <a name="managed-code"></a>Código gerenciado  
- Esta é uma implementação do `IDebugParsedExpression::EvaluateSync` em código gerenciado. O método auxiliar `Tokenize` analisa a expressão em uma árvore de análise. A função auxiliar `EvalToken` converte o token para um valor. A função auxiliar `FindTerm` recursivamente percorre a árvore de análise, chamando `EvalToken` para cada nó que representa um valor e a aplicação de todas as operações (adição ou subtração) na expressão.  
+ Essa é uma implementação do `IDebugParsedExpression::EvaluateSync` em código gerenciado. O método auxiliar `Tokenize` analisa a expressão em uma árvore de análise. A função auxiliar `EvalToken` converte o token para um valor. A função auxiliar `FindTerm` recursivamente percorre a árvore de análise, chamar `EvalToken` para cada nó que representa um valor e a aplicação de qualquer operação (adição ou subtração) na expressão.  
   
 ```csharp  
 namespace EEMC  
@@ -82,9 +83,9 @@ namespace EEMC
 ```  
   
 ## <a name="unmanaged-code"></a>Código não gerenciado  
- Esta é uma implementação do `IDebugParsedExpression::EvaluateSync` em código não gerenciado. A função auxiliar `Evaluate` analisa e avalia a expressão, retornando um `VARIANT` contendo o valor resultante. A função auxiliar `VariantValueToProperty` pacotes o `VARIANT` em uma `CValueProperty` objeto.  
+ Essa é uma implementação do `IDebugParsedExpression::EvaluateSync` em código não gerenciado. A função auxiliar `Evaluate` analisa e avalia a expressão, retornando um `VARIANT` que contém o valor resultante. A função auxiliar `VariantValueToProperty` pacotes do `VARIANT` em um `CValueProperty` objeto.  
   
-```  
+```cpp  
 [C++]  
 STDMETHODIMP CParsedExpression::EvaluateSync(   
     in  DWORD                 evalFlags,  
@@ -175,5 +176,5 @@ STDMETHODIMP CParsedExpression::EvaluateSync(
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Avaliar uma expressão de janela Inspeção](../../extensibility/debugger/evaluating-a-watch-window-expression.md)   
- [Exemplo de implementação da Avaliação de expressão](../../extensibility/debugger/sample-implementation-of-expression-evaluation.md)
+ [Avaliar uma expressão da janela de inspeção](../../extensibility/debugger/evaluating-a-watch-window-expression.md)   
+ [Exemplo de implementação da avaliação de expressão](../../extensibility/debugger/sample-implementation-of-expression-evaluation.md)

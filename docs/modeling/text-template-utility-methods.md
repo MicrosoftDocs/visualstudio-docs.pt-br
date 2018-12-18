@@ -9,25 +9,27 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 9367c5c8e65c58a79b0d8e864c5a9a201fbe3954
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 8d8101b3cd88b4cfa81e6d32327581de5336dcd1
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966499"
 ---
 # <a name="text-template-utility-methods"></a>Métodos de utilitário do modelo de texto
 
-Há vários métodos que estão sempre disponíveis para você quando você escreve o código em um modelo de texto do Visual Studio. Esses métodos são definidos no <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>.
+Há vários métodos que estão sempre disponíveis para você quando você escreve código em um modelo de texto do Visual Studio. Esses métodos são definidos no <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>.
 
 > [!TIP]
-> Você também pode usar outros métodos e os serviços fornecidos pelo ambiente de host em um modelo de texto (não pré-processados) regular. Por exemplo, você pode resolver os caminhos de arquivos, log de erros e obter os serviços fornecidos pelo Visual Studio e qualquer carregar pacotes. Para obter mais informações, consulte [acessando o Visual Studio a partir de um modelo de texto](http://msdn.microsoft.com/0556f20c-fef4-41a9-9597-53afab4ab9e4).
+> Você também pode usar outros métodos e os serviços fornecidos pelo ambiente de host em um modelo de texto (não pré-processado) regular. Por exemplo, você pode resolver caminhos de arquivo, log de erros e obter os serviços fornecidos pelo Visual Studio e qualquer carregar pacotes. Para obter mais informações, consulte [acessando o Visual Studio a partir de um modelo de texto](/previous-versions/visualstudio/visual-studio-2010/gg604090\(v\=vs.100\)).
 
-## <a name="write-methods"></a>Métodos de gravação
+## <a name="write-methods"></a>Escrever métodos
 
-Você pode usar o `Write()` e `WriteLine()` métodos para acrescentar o texto dentro de um bloco de código padrão, em vez de usar um bloco de código expressão. Os blocos de código de dois a seguir são funcionalmente equivalentes.
+Você pode usar o `Write()` e `WriteLine()` métodos para acrescentar texto dentro de um bloco de código padrão, em vez de usar um bloco de código de expressão. Os seguintes blocos de código são funcionalmente equivalentes.
 
-### <a name="code-block-with-an-expression-block"></a>Bloco de código com um bloco da expressão
+### <a name="code-block-with-an-expression-block"></a>Bloco de código com um bloco de expressão
 
 ```
 <#
@@ -39,7 +41,7 @@ while (i-- > 0)
 #>
 ```
 
-### <a name="code-block-using-writeline"></a>Bloco de código usando WriteLine()
+### <a name="code-block-using-writeline"></a>Bloco de código usando são
 
 ```
 <#
@@ -51,9 +53,9 @@ while (i-- > 0)
 #>
 ```
 
-Talvez seja útil para usar um dos seguintes métodos de utilitário em vez de um bloco da expressão dentro de um bloco de código longo com estruturas de controle aninhadas.
+Você talvez ache útil usar um dos seguintes métodos de utilitário em vez de um bloco de expressão dentro de um bloco de código longo com estruturas de controle aninhadas.
 
-O `Write()` e `WriteLine()` métodos tem duas sobrecargas, uma que usa um parâmetro de cadeia de caracteres simples e outro que usa uma cadeia de caracteres de formato composto e uma matriz de objetos a serem incluídas na cadeia de caracteres (como o `Console.WriteLine()` método). Os seguintes dois usos do `WriteLine()` são funcionalmente equivalentes:
+O `Write()` e `WriteLine()` métodos tem duas sobrecargas, uma que aceita um parâmetro de cadeia de caracteres única e outro que usa uma cadeia de caracteres de formato composto além de uma matriz de objetos a serem incluídos na cadeia de caracteres (como o `Console.WriteLine()` método). Os seguintes dois usos de `WriteLine()` são funcionalmente equivalentes:
 
 ```
 <#
@@ -69,7 +71,7 @@ O `Write()` e `WriteLine()` métodos tem duas sobrecargas, uma que usa um parâm
 
 ## <a name="indentation-methods"></a>Métodos de recuo
 
-Você pode usar métodos de recuo para formatar a saída do modelo de texto. O <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> classe tiver um `CurrentIndent` propriedade que mostra o recuo atual do modelo de texto da cadeia de caracteres e um `indentLengths` campo que é uma lista dos recuos que foram adicionados. Você pode adicionar um recuo com o `PushIndent()` método e subtrair um recuo com o `PopIndent()` método. Se você quiser remover todos os recuos, use o `ClearIndent()` método. O bloco de código a seguir mostra o uso dos seguintes métodos:
+Você pode usar métodos de recuo para formatar a saída do modelo de texto. O <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> classe tem um `CurrentIndent` propriedade string que mostra o recuo atual do modelo de texto e um `indentLengths` campo, ou seja, uma lista dos recuos que foram adicionados. Você pode adicionar um recuo com o `PushIndent()` método e subtraia um recuo com o `PopIndent()` método. Se você quiser remover todos os recuos, use o `ClearIndent()` método. O bloco de código a seguir mostra o uso desses métodos:
 
 ```
 <#
@@ -97,7 +99,7 @@ Hello
 
 ## <a name="error-and-warning-methods"></a>Métodos de aviso e erro
 
-Você pode usar métodos de utilitário de aviso e erro para adicionar mensagens à lista de erros do Visual Studio. Por exemplo, o código a seguir adicionará uma mensagem de erro para a lista de erros.
+Você pode usar métodos de utilitário de aviso e erro para adicionar mensagens a lista de erros do Visual Studio. Por exemplo, o código a seguir adicionará uma mensagem de erro para a lista de erros.
 
 ```
 <#
@@ -115,7 +117,7 @@ Você pode usar métodos de utilitário de aviso e erro para adicionar mensagens
 
 ## <a name="access-to-host-and-service-provider"></a>Acesso ao Host e o provedor de serviços
 
-A propriedade `this.Host` pode fornecer acesso a propriedades expostas pelo host que está executando o modelo. Para usar `this.Host`, você deve definir `hostspecific` atributo o `<@template#>` diretiva:
+A propriedade `this.Host` pode fornecer acesso a propriedades expostas pelo host que está executando o modelo. Para usar `this.Host`, você deve definir `hostspecific` atributo no `<@template#>` diretiva:
 
 `<#@template ... hostspecific="true" #>`
 
@@ -128,10 +130,10 @@ EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
 
 ## <a name="using-a-different-set-of-utility-methods"></a>Usando um conjunto diferente de métodos de utilitário
 
-Como parte do processo de geração de texto, o arquivo de modelo é transformado em uma classe, que é sempre nomeada `GeneratedTextTransformation`e herda do <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>. Se você quiser usar outro conjunto de métodos em vez disso, você pode escrever sua própria classe e especificá-la na diretiva de modelo. A classe deve herdar de <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>.
+Como parte do processo de geração de texto, seu arquivo de modelo é transformado em uma classe, que é sempre denominada `GeneratedTextTransformation`e herda <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>. Se você quiser usar outro conjunto de métodos em vez disso, você pode escrever sua própria classe e especificá-lo na diretiva do modelo. Sua classe deve herdar de <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>.
 
 ```
 <#@ template inherits="MyUtilityClass" #>
 ```
 
-Use o `assembly` diretiva para fazer referência ao assembly onde a classe compilada pode ser encontrada.
+Use o `assembly` diretiva para referenciar o assembly em que a classe compilada pode ser encontrada.

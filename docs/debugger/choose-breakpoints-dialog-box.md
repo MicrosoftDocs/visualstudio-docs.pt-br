@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31458239"
 ---
 # <a name="choose-breakpoints-dialog-box"></a>Caixa de diálogo Escolher Pontos de Interrupção
 O **escolher pontos de interrupção** caixa de diálogo é aberta quando você tentar definir um ponto de interrupção de entrada ambígua no **novo ponto de interrupção** caixa de diálogo. Um exemplo comum de entrada ambígua é um nome de função sobrecarregada.  

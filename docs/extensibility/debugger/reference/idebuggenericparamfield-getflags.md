@@ -14,11 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: abeb26d0e8078eeaaf6ba6c8850b3636367bebc7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 51aed81c26a4f62185d3dd7bcd588b7e955a92d9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934334"
 ---
 # <a name="idebuggenericparamfieldgetflags"></a>IDebugGenericParamField::GetFlags
 Recupera os sinalizadores para esse parâmetro genérico.  
@@ -42,13 +43,13 @@ int GetFlags(
  [out] Retorna os sinalizadores para esse parâmetro genérico.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  Esses sinalizadores contêm informações sobre várias restrições especiais.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CDebugGenericParamFieldType** objeto que expõe o [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) interface.  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugGenericParamFieldType** objeto que expõe a [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) interface.  
   
 ```cpp  
 HRESULT CDebugGenericParamFieldType::GetFlags(DWORD *pdwFlags)  

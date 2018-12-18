@@ -7,17 +7,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: f56d5e681ae3e7deb60dd3b804d096d7d95243c1
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 77d26595bd97a98ef9a4cd1f72c14739695bb755
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859842"
 ---
 # <a name="generating-code-from-a-domain-specific-language"></a>Gerando código a partir de uma linguagem específica do domínio
-Microsoft [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] fornece uma maneira eficiente para gerar o código, documentos, arquivos de configuração e outros artefatos de dados representados em modelos. Usando [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], você pode criar um conjunto de classes que representam os dados e você pode escrever seus modelos de texto em classes cujos nomes e propriedades refletirem esses dados.
+Microsoft [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] fornece uma maneira eficiente para gerar código, documentos, arquivos de configuração e outros artefatos de dados representados em modelos. Usando [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], você pode criar um conjunto de classes que representam seus dados e você pode escrever seus modelos de texto em classes cujos nomes e propriedades refletirem esses dados.
 
- Por exemplo, a Fabrikam tem um arquivo XML de nomes de clientes e endereços de email. Seus desenvolvedores criar um modelo no qual o cliente é uma classe, com propriedades de nome e email. Eles gravar vários modelos de texto para processar os dados, incluindo este fragmento que produz uma tabela de todos os clientes como parte de uma página HTML:
+ Por exemplo, a Fabrikam tem um arquivo XML de nomes de clientes e endereços de email. Seus desenvolvedores criar um modelo no qual o cliente é uma classe, com as propriedades name e e-mail. Eles escreverem vários modelos de texto para processar os dados, incluindo desse fragmento que produz uma tabela de todos os clientes como parte de uma página HTML:
 
 ```
 <table>
@@ -27,11 +29,11 @@ Microsoft [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] fornece uma maneira ef
 <# } #>  </table>
 ```
 
- Quando o banco de dados do cliente é processado, o arquivo XML é lido no armazenamento de modelos. Um *processador de diretiva*, criado usando [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], disponibiliza a classe de cliente para o código no modelo de texto. Muitos modelos de texto podem ser executados no mesmo repositório.
+ Quando o banco de dados do cliente é processado, o arquivo XML é lido no armazenamento de modelos. Um *processador de diretriz*, criada usando [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], torna a classe de cliente disponível para o código no modelo de texto. Muitos modelos de texto podem ser executados no mesmo repositório.
 
- Modelos de texto são essenciais para [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]. Eles são usados para gerar o código-fonte para os elementos do modelo de domínio, bem como para o VSPackage e os controles que são usados para integrar ferramentas com [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+ Modelos de texto são essenciais para [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]. Eles são usados para gerar o código-fonte para os elementos de modelo de domínio, bem como para o VSPackage e os controles que são usados para integrar as ferramentas do Visual Studio.
 
- Esta seção discute algumas das maneiras de criar, modificar e depurar os modelos de texto usados no [!INCLUDE[dsl](../modeling/includes/dsl_md.md)].
+ Esta seção discute algumas das maneiras de criar, modificar e depurar os modelos de texto usados em [!INCLUDE[dsl](../modeling/includes/dsl_md.md)].
 
 ## <a name="in-this-section"></a>Nesta seção
  [Acessando modelos por meio de modelos de texto](../modeling/accessing-models-from-text-templates.md)
@@ -44,11 +46,11 @@ Microsoft [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] fornece uma maneira ef
 
  [Passo a passo: conectando um host a um processador de diretriz gerado](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)
 
- Descreve como se conectar a um host personalizado para um processador de diretiva gerado.
+ Descreve como se conectar a um host personalizado para um processador de diretriz gerado.
 
  [O comando DslTextTransform](../modeling/the-dsltexttransform-command.md)
 
- Descreve o arquivo de comando que executa o executável TextTransform na linha de comando para modelos de texto que referenciam linguagens específicas de domínio.
+ Descreve o arquivo de comando que executa o executável TextTransform na linha de comando para modelos de texto que fazem referência a linguagens específicas de domínio.
 
 ## <a name="reference"></a>Referência
  [Gravando um modelo de texto T4](../modeling/writing-a-t4-text-template.md)
@@ -58,7 +60,7 @@ Microsoft [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] fornece uma maneira ef
 ## <a name="related-sections"></a>Seções relacionadas
  [Geração de código no tempo de design usando modelos de texto T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 
- Explica o processo de transformação de modelo de texto.
+ Explica o processo de transformação do modelo de texto.
 
  [Geração de código em um processo de build](../modeling/code-generation-in-a-build-process.md)
 

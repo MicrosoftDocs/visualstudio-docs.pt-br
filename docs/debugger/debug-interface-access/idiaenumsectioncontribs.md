@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 47577b3a2abfef3b6c6741d2e25af418318340ce
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 5903c276b82f8b689e67c20310ccc6d6a6514896
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37057054"
 ---
 # <a name="idiaenumsectioncontribs"></a>IDiaEnumSectionContribs
-Enumera as contribuições de seção vários contidas na fonte de dados.  
+Enumera as várias contribuições de seção contidas na fonte de dados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,23 +30,23 @@ Enumera as contribuições de seção vários contidas na fonte de dados.
 IDiaEnumSectionContribs : IUnknown  
 ```  
   
-## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
+## <a name="methods-in-vtable-order"></a>Métodos na ordem de Vtable  
  A tabela a seguir mostra os métodos de `IDiaEnumSectionContribs`.  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[IDiaEnumSectionContribs::get__NewEnum](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-newenum.md)|Recupera o [IEnumVARIANT Interface](http://msdn.microsoft.com/en-us/139e3c93-faef-4003-9079-e0e94494db3e) versão este enumerador.|  
+|[IDiaEnumSectionContribs::get__NewEnum](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-newenum.md)|Recupera o [IEnumVARIANT Interface](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant) versão este enumerador.|  
 |[IDiaEnumSectionContribs::get_Count](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-count.md)|Recupera o número de contribuições de seção.|  
 |[IDiaEnumSectionContribs::Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md)|Recupera as contribuições de seção por meio de um índice.|  
 |[IDiaEnumSectionContribs::Next](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md)|Recupera um número especificado de contribuições de seção na sequência de enumeração.|  
 |[IDiaEnumSectionContribs::Skip](../../debugger/debug-interface-access/idiaenumsectioncontribs-skip.md)|Ignora um número especificado de contribuições de seção em uma sequência de enumeração.|  
 |[IDiaEnumSectionContribs::Reset](../../debugger/debug-interface-access/idiaenumsectioncontribs-reset.md)|Redefine uma sequência de enumeração para o início.|  
-|[IDiaEnumSectionContribs::Clone](../../debugger/debug-interface-access/idiaenumsectioncontribs-clone.md)|Cria um enumerador que contém o mesmo estado de enumeração do enumerador atual.|  
+|[IDiaEnumSectionContribs::Clone](../../debugger/debug-interface-access/idiaenumsectioncontribs-clone.md)|Cria um enumerador que contém o mesmo estado de enumeração que o enumerador atual.|  
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="note-for-callers"></a>Observação para chamadores  
- Obter essa interface do [: Getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md) método. Consulte o exemplo para obter detalhes.  
+## <a name="note-for-callers"></a>Observação para os chamadores  
+ Obtenha essa interface do [idiasession:: Getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md) método. Consulte o exemplo para obter detalhes.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como obter (o `GetEnumSectionContribs` função) e use (o `ShowSectionContribs` função) a `IDiaEnumSectionContribs` interface. Para obter um exemplo mais completo de como usar as contribuições de seção, consulte o [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) interface.  
@@ -109,5 +110,5 @@ void ShowSectionContribs(IDiaSession *pSession)
   
 ## <a name="see-also"></a>Consulte também  
  [Interfaces (SDK de acesso à Interface de depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
- [: Getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md)   
+ [Idiasession:: Getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md)   
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

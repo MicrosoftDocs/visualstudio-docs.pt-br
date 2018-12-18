@@ -23,63 +23,64 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c3d7ebc762c7b1feb895323f7ef9ee0180ce954e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2a4234d8f6ee9fa946f2accfd50a587e6dbd8068
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822095"
 ---
-# <a name="localizing-clickonce-applications"></a>Localização de aplicativos ClickOnce
-A localização é o processo de tornar o aplicativo apropriado para uma cultura específica. Esse processo envolve a conversão de texto de interface de usuário para um idioma específico de região, usando a data correta e a formatação de moeda, ajuste o tamanho dos controles em um formulário, e controles de espelhamento da direita para a esquerda, se necessário.  
+# <a name="localize-clickonce-applications"></a>Localizar aplicativos ClickOnce
+Localização é o processo de tornar seu aplicativo apropriado para uma cultura específica. Esse processo envolve a tradução de texto de (UI) de interface do usuário para uma linguagem específica de região, usando a data correta e a formatação de moeda, ajustando o tamanho dos controles em um formulário, e controles de espelhamento da direita para a esquerda, se necessário.  
   
- Localizando os resultados de aplicativo na criação de um ou mais assemblies de satélite. Cada assembly contém cadeias de caracteres, imagens e outros recursos específicos para uma determinada cultura de interface do usuário. (O arquivo executável principal do aplicativo contém as cadeias de caracteres para a cultura padrão para seu aplicativo.)  
+ Localizando seus resultados de aplicativo na criação de um ou mais assemblies de satélite. Cada assembly contém cadeias de caracteres, imagens e outros recursos específicos de uma determinada cultura de interface do usuário. (O arquivo executável principal do seu aplicativo contém as cadeias de caracteres para a cultura padrão para seu aplicativo.)  
   
  Este tópico descreve três maneiras de implantar um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] para outras culturas:  
   
--   Inclua todos os assemblies satélite em uma única implantação.  
+-   Inclua todos os assemblies de satélite em uma única implantação.  
   
 -   Gere uma implantação para cada cultura, com um assembly satélite único incluído em cada um.  
   
 -   Baixe os assemblies satélite por demanda.  
   
-## <a name="including-all-satellite-assemblies-in-a-deployment"></a>Incluindo todos os Assemblies satélite em uma implantação  
+## <a name="including-all-satellite-assemblies-in-a-deployment"></a>Incluindo todos os Assemblies de satélite em uma implantação  
  Em vez de publicação de várias [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] implantações, você pode publicar um único [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] implantação que contém todos os assemblies de satélite.  
   
- Esse método é o padrão em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Para usar este método em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], você não precisa fazer qualquer trabalho adicional.  
+ Esse método é o padrão no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Para usar este método em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], você não precisa fazer qualquer trabalho adicional.  
   
- Para usar esse método com MageUI.exe, você deve definir a cultura do seu aplicativo para **neutro** em MageUI.exe. Em seguida, você deve incluir manualmente todos os assemblies satélite em sua implantação. Em MageUI.exe, você pode adicionar os assemblies satélite usando o **popular** botão o **arquivos** guia de manifesto do aplicativo.  
+ Para usar esse método com *MageUI.exe*, você deve definir a cultura para seu aplicativo para **neutro** na *MageUI.exe*. Em seguida, você deverá incluir manualmente todos os assemblies de satélite em sua implantação. Na *MageUI.exe*, você pode adicionar os assemblies satélite usando o **popular** botão o **arquivos** guia do manifesto do aplicativo.  
   
- A vantagem dessa abordagem é que ele cria uma única implantação e simplifica a sua história de implantação localizada. Em tempo de execução, o assembly satélite será usado, dependendo da cultura padrão do sistema de operacional do Windows do usuário. Uma desvantagem dessa abordagem é que ele baixa todos os assemblies de satélite, sempre que o aplicativo é instalado ou atualizado em um computador cliente. Se seu aplicativo tiver um grande número de cadeias de caracteres, ou os clientes tenham uma conexão de rede lenta, esse processo pode afetar o desempenho durante a atualização do aplicativo.  
+ O benefício dessa abordagem é que ele cria uma única implantação e simplifica a sua história de implantação localizada. Em tempo de execução, o assembly satélite adequado será usado, dependendo da cultura padrão do sistema de operacional do Windows do usuário. Uma desvantagem dessa abordagem é que ele baixa todos os assemblies de satélite, sempre que o aplicativo é instalado ou atualizado em um computador cliente. Se seu aplicativo tiver um grande número de cadeias de caracteres ou seus clientes têm uma conexão de rede lenta, esse processo pode afetar o desempenho durante a atualização do aplicativo.  
   
 > [!NOTE]
->  Essa abordagem supõe que o seu aplicativo ajusta a altura, largura e a posição dos controles automaticamente para acomodar tamanhos de cadeia de caracteres de texto diferente em diferentes culturas. Windows Forms contém uma variedade de controles e tecnologias que permitem que você cria um formulário para torná-lo facilmente localizáveis, incluindo o <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel> controles, bem como a <xref:System.Windows.Forms.Control.AutoSize%2A> propriedade.  Consulte também [como: localização de suporte no Windows Forms usando AutoSize e o controle TableLayoutPanel](http://msdn.microsoft.com/library/1zkt8b33\(v=vs.110\)).  
+>  Essa abordagem supõe que o seu aplicativo se ajusta a altura, largura e a posição dos controles automaticamente para acomodar os tamanhos de cadeia de caracteres de texto diferente em diferentes culturas. Windows Forms contém uma variedade de controles e tecnologias que permitem que você cria um formulário para torná-lo facilmente localizável, incluindo o <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel> controles, bem como a <xref:System.Windows.Forms.Control.AutoSize%2A> propriedade.  Consulte também [como: suporte à localização em formulários do Windows usando AutoSize e o controle TableLayoutPanel](/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100)).  
   
 ## <a name="generate-one-deployment-for-each-culture"></a>Gerar uma implantação para cada cultura  
- Essa estratégia de implantação, você deve gerar várias implantações. Em cada implantação incluir somente o assembly satélite necessário para uma cultura específica e marcar a implantação mais específico para aquela cultura.  
+ Essa estratégia de implantação, você gera várias implantações. Em cada implantação, você inclui apenas o assembly satélite necessário para uma cultura específica e você marcar a implantação como específico para aquela cultura.  
   
- Para usar este método em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], defina o **idioma publicar** propriedade o **publicar** guia para a região desejada. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] incluirá automaticamente o assembly satélite necessário para a região que você selecionar e excluirá todos os outros assemblies de satélite da implantação.  
+ Para usar este método em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], defina a **linguagem de publicação** propriedade no **publicar** guia para a região desejada. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] incluirá automaticamente o assembly de satélite necessário para a região que você selecionar e excluirá todos os outros assemblies de satélite da implantação.  
   
- Você pode realizar a mesma coisa usando a ferramenta de MageUI.exe no Microsoft [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]. Use o **popular** botão o **arquivos** guia de manifesto do aplicativo para excluir todos os outros assemblies de satélite do diretório de aplicativo e, em seguida, defina o **cultura**campo o **nome** guia para o manifesto de implantação no MageUI.exe. Essas etapas incluem não só o assembly satélite correto, mas também definem o `language` atributo no `assemblyIdentity` elemento em seu manifesto de implantação para a cultura correspondente.  
+ Você pode fazer a mesma coisa usando o *MageUI.exe* ferramenta no Microsoft [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]. Use o **popular** botão a **arquivos** guia do manifesto do aplicativo para excluir todos os outros assemblies de satélite do diretório do aplicativo e, em seguida, defina o **cultura**campo de **nome** guia para o manifesto de implantação no *MageUI.exe*. Essas etapas não incluem apenas o assembly satélite correto, mas também definem os `language` atributo a `assemblyIdentity` elemento em seu manifesto de implantação para a cultura correspondente.  
   
- Depois de publicar o aplicativo, você deve repetir esta etapa para cada cultura adicional sua oferece suporte a aplicativos. Você deve assegurar-se de que você publica em um diretório diferente do servidor Web ou o diretório de compartilhamento de arquivo sempre, porque cada manifesto de aplicativo fará referência a um assembly satélite diferentes, e cada manifesto de implantação tem um valor diferente para o `language`atributo.  
+ Depois de publicar o aplicativo, você deve repetir esta etapa para cada cultura adicional suporta seu aplicativo. Certifique-se de que você publica em um diretório diferente do servidor Web ou o diretório de compartilhamento de arquivo cada vez, porque cada manifesto do aplicativo fará referência a um assembly satélite diferentes, e cada manifesto de implantação terá um valor diferente para o `language`atributo.  
   
-## <a name="downloading-satellite-assemblies-on-demand"></a>Baixando Assemblies satélite por demanda  
- Se você optar por incluir todos os assemblies satélite em uma única implantação, você pode melhorar o desempenho por meio de download sob demanda, que permite que você marcar assemblies como opcional. Os assemblies marcados não serão baixados quando o aplicativo é instalado ou atualizado. Você pode instalar os assemblies quando você precisar deles, chamando o <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A> método sobre o <xref:System.Deployment.Application.ApplicationDeployment> classe.  
+## <a name="download-satellite-assemblies-on-demand"></a>Baixar os assemblies satélite por demanda  
+ Se você decidir incluir todos os assemblies de satélite em uma única implantação, você pode melhorar o desempenho por meio de download sob demanda, que permite que você marcar assemblies como opcional. Os assemblies marcados não serão baixados quando o aplicativo é instalado ou atualizado. Você pode instalar os assemblies quando você precisar deles, chamando o <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A> método no <xref:System.Deployment.Application.ApplicationDeployment> classe.  
   
- Baixando assemblies satélite por demanda difere ligeiramente baixar outros tipos de assemblies por demanda. Para mais informações e exemplos de código sobre como habilitar esse cenário usando a [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] ferramentas para [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], consulte [passo a passo: baixando Assemblies satélite por demanda com a API de implantação do ClickOnce](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md).  
+ Baixando assemblies satélite sob demanda é ligeiramente diferente de baixar outros tipos de assemblies por demanda. Para obter mais informações e exemplos de código sobre como habilitar esse cenário usando o [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] ferramentas para o [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], consulte [passo a passo: baixando Assemblies de satélite por demanda com a API de implantação do ClickOnce](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md).  
   
- Você também pode habilitar esse cenário no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  Consulte também [passo a passo: baixando Assemblies satélite por demanda com o ClickOnce implantação API usando o Designer](http://msdn.microsoft.com/library/ms366788\(v=vs.110\)) ou [passo a passo: baixando Assemblies satélite por demanda com a API de implantação do ClickOnce Usando o Designer](http://msdn.microsoft.com/library/ms366788\(v=vs.120\)).  
+ Você também pode habilitar esse cenário em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  Consulte também [instruções passo a passo: baixando Assemblies de satélite sob demanda com o ClickOnce Deployment API usando o Designer](/previous-versions/visualstudio/visual-studio-2012/ms366788(v=vs.110)) ou [passo a passo: baixando Assemblies de satélite por demanda com a API de implantação do ClickOnce Usando o Designer](/previous-versions/visualstudio/visual-studio-2013/ms366788(v=vs.120)).  
   
-## <a name="testing-localized-clickonce-applications-before-deployment"></a>Teste localizado aplicativos ClickOnce antes da implantação  
- Um assembly satélite será usado para um se somente de aplicativo do Windows Forms a <xref:System.Threading.Thread.CurrentUICulture%2A> propriedade para o thread principal do aplicativo é definida como a cultura do assembly satélite. Os clientes em locais mercados provavelmente já executará uma versão localizada do Windows com a cultura definida como o padrão apropriado.  
+## <a name="testing-localized-clickonce-applications-before-deployment"></a>Teste de aplicativos ClickOnce localizados antes da implantação  
+ Um assembly satélite será usado para um se somente de aplicativo do Windows Forms a <xref:System.Threading.Thread.CurrentUICulture%2A> propriedade para o thread principal do aplicativo é definida como a cultura do assembly satélite. Os clientes em mercados locais provavelmente já executará uma versão localizada do Windows com sua cultura definida como o padrão apropriado.  
   
- Você tem três opções para implantações localizadas de teste antes de fazer seu aplicativo disponível aos clientes:  
+ Você tem três opções para testar implantações localizadas antes de tornar seu aplicativo disponível aos clientes:  
   
--   Você pode executar sua [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo sobre as versões localizadas do Windows.  
+- Você pode executar seu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo em apropriado as versões localizadas do Windows.  
   
--   Você pode definir o <xref:System.Threading.Thread.CurrentUICulture%2A> propriedade programaticamente no seu aplicativo. (Essa propriedade deve ser definida antes de chamar o <xref:System.Windows.Forms.Application.Run%2A> método.)  
+- Você pode definir o <xref:System.Threading.Thread.CurrentUICulture%2A> propriedade por meio de programação em seu aplicativo. (Essa propriedade deve ser definida antes de chamar o <xref:System.Windows.Forms.Application.Run%2A> método.)  
   
 ## <a name="see-also"></a>Consulte também  
  [\<assemblyIdentity > elemento](../deployment/assemblyidentity-element-clickonce-deployment.md)   
- [Segurança e implantação do ClickOnce](../deployment/clickonce-security-and-deployment.md)   
- [Globalizando o Windows Forms](/dotnet/framework/winforms/advanced/globalizing-windows-forms)
+ [Implantação e segurança do ClickOnce](../deployment/clickonce-security-and-deployment.md)   
+ [Globalizar formulários do Windows](/dotnet/framework/winforms/advanced/globalizing-windows-forms)

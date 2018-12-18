@@ -1,5 +1,5 @@
 ---
-title: Idiaenumdebugstreams | Microsoft Docs
+title: 'Idiaenumdebugstreams:: item | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b255a96b3bd443ff4a2782cb2161694da3694c17
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: ae82df1f2af6acba7f94bf0d14682aff27a830bb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49916186"
 ---
 # <a name="idiaenumdebugstreamsitem"></a>IDiaEnumDebugStreams::Item
 Recupera um fluxo de depuração por meio de um índice ou nome.  
@@ -34,13 +35,13 @@ HRESULT Item (
   
 #### <a name="parameters"></a>Parâmetros  
  índice  
- [in] Índice ou o nome do fluxo de depuração a ser recuperado. Se uma variante de inteiro for usada, ele deve estar no intervalo de 0 a `count`-1, onde `count` é conforme retornado pelo [Idiaenumdebugstreams](../../debugger/debug-interface-access/idiaenumdebugstreams-get-count.md) método.  
+ [in] Índice ou nome do fluxo de depuração a ser recuperado. Se uma variante integer for usada, ele deve estar no intervalo de 0 a `count`-1, onde `count` são retornados pelo [idiaenumdebugstreams:: Get_count](../../debugger/debug-interface-access/idiaenumdebugstreams-get-count.md) método.  
   
  fluxo  
  [out] Retorna um [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) objeto que representa o fluxo de depuração especificado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="example"></a>Exemplo  
   

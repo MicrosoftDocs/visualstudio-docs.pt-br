@@ -1,8 +1,9 @@
 ---
-title: Avisos e erros | Ferramenta de teste do desenvolvedor do Microsoft IntelliTest | Microsoft Docs
+title: Avisos e erros | Ferramenta de teste do desenvolvedor do Microsoft IntelliTest
 ms.date: 05/02/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Warnings and errors
 ms.author: gewarren
@@ -10,11 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 5c66d208f89cc656eb22d874dc3efafe46c4d53f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: efb82a7419ba58c27ccab864d2360538075a1089
+ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51000608"
 ---
 # <a name="warnings-and-errors"></a>Avisos e erros
 
@@ -61,13 +63,13 @@ Cada branch condicional e incondicional do código executado e monitorado é con
 
 Por exemplo, o código a seguir consome branches na ordem de 100:
 
-```
+```csharp
 for (int i=0; i<100; i++) { }
 ```
 
 Você pode editar a opção **MaxBranches** de um atributo derivado de **PexSettingsAttributeBase**, como [PexClass](attribute-glossary.md#pexclass) ou [PexMethod](attribute-glossary.md#pexmethod). O exemplo a seguir remove efetivamente este limite:
 
-```
+```csharp
 [PexMethod(MaxBranches=int.MaxValue)]
 public void MyTest(...) {
     // ....
@@ -78,10 +80,10 @@ Você também pode definir a opção **TestExcludePathBoundsExceeded** para info
 
 No código de teste, você pode usar [PexSymbolicValue](static-helper-classes.md#pexsymbolicvalue) para ignorar restrições geradas pela condição de loop:
 
-```
-for (int i=0; 
+```csharp
+for (int i=0;
     PexSymbolicValue.Ignore(i<100); // IntelliTest will 'forget' about this path condition
-    i++) 
+    i++)
 { }
 ```
 
@@ -101,7 +103,7 @@ Cada branch condicional que depende das entradas do [teste de unidade parametriz
 
 Por exemplo, cada caminho no código a seguir consome **n+1** condições:
 
-```
+```csharp
 [PexMethod]
 void ParameterizedTest(int n) {
     // conditions are "0<n", "1<n", ..., "!(n<n)"
@@ -109,14 +111,14 @@ void ParameterizedTest(int n) {
     { ... }
 
     // irrelevant for MaxConditions, since conditions do not depend on input
-    for (int i=0; i<100; i++) 
+    for (int i=0; i<100; i++)
     { ... }
 }
 ```
 
 Você pode editar a opção **MaxConditions** de um atributo derivado de **PexSettingsAttributeBase**, como [PexClass](attribute-glossary.md#pexclass) ou [PexMethod](attribute-glossary.md#pexmethod). Por exemplo:
 
-```
+```csharp
 [PexMethod(MaxConditions=10000)]
 void ParameterizedTest(int n) {
     // ...
@@ -127,13 +129,13 @@ Você também pode definir a opção **TestExcludePathBoundsExceeded** para info
 
 Você pode usar [PexSymbolicValue](static-helper-classes.md#pexsymbolicvalue) para ignorar restrições geradas pela condição de loop:
 
-```
+```csharp
 [PexMethod]
 void ParameterizedTest(int n) {
     int nshadow = PexSymbolicValue.Ignore(n); // IntelliTest looses track of 'n'
 
     // irrevelant for MaxConditions, since nshadow is not related to input
-    for (int i=0; i<nshadow; i++)  
+    for (int i=0; i<nshadow; i++)
     {...}
 }
 ```
@@ -147,7 +149,7 @@ Cada chamada (direta, indireta, virtual ou pulo) do código executado e monitora
 
 Você pode editar a opção **MaxCalls** de um atributo derivado de **PexSettingsAttributeBase**, como [PexClass](attribute-glossary.md#pexclass) ou [PexMethod](attribute-glossary.md#pexmethod). O exemplo a seguir remove efetivamente este limite:
 
-```
+```csharp
 [PexMethod(MaxCalls=int.MaxValue)]
 public void MyTest(...) {
     // ....
@@ -163,7 +165,7 @@ O IntelliTest limita o tamanho da pilha de chamadas de qualquer caminho de execu
 
 Você pode editar a opção **MaxStack** de um atributo derivado de **PexSettingsAttributeBase**, como [PexClass](attribute-glossary.md#pexclass) ou [PexMethod](attribute-glossary.md#pexmethod). O exemplo a seguir remove efetivamente este limite (não recomendado):
 
-```
+```csharp
 [PexMethod(MaxStack=int.MaxValue)]
 public void MyTest(...) {
     // ....
@@ -181,7 +183,7 @@ Pode não ser o caso que, sempre que o IntelliTest executa o teste parametrizado
 
 Você pode editar a opção **MaxRuns** de um atributo derivado de **PexSettingsAttributeBase**, como [PexClass](attribute-glossary.md#pexclass) ou [PexMethod](attribute-glossary.md#pexmethod). O exemplo a seguir remove efetivamente este limite (não recomendado):
 
-```
+```csharp
 [PexMethod(MaxRuns=2000)]
 public void MyTest(...) {
     // ....
@@ -199,7 +201,7 @@ Enquanto o IntelliTest geralmente encontra muitas entradas de teste interessante
 
 Você pode editar a opção **MaxRunsWithoutNewTests** de um atributo derivado de **PexSettingsAttributeBase**, como [PexClass](attribute-glossary.md#pexclass) ou [PexMethod](attribute-glossary.md#pexmethod). O exemplo a seguir remove efetivamente este limite (não recomendado):
 
-```
+```csharp
 [PexMethod(MaxRunsWithoutNewTests=2000)]
 public void MyTest(...) {
     // ....
@@ -218,16 +220,18 @@ Esse erro geralmente é a consequência de um erro anterior. O IntelliTest usa u
 <a name="help-construct"></a>
 ## <a name="need-help-to-construct-object"></a>Precisa de ajuda para construir o objeto
 
-O IntelliTest [gera as entradas do teste](input-generation.md) e algumas das entradas podem ser objetos com campos. Aqui, o IntelliTest tenta gerar uma instância de uma classe que tem um campo particular e ele pressupõe que um comportamento do programa interessantes ocorrerá quando esse campo particular tiver um valor específico. 
+O IntelliTest [gera as entradas do teste](input-generation.md) e algumas das entradas podem ser objetos com campos.
+Aqui, o IntelliTest tenta gerar uma instância de uma classe que tem um campo particular e ele pressupõe que um comportamento do programa interessantes ocorrerá quando esse campo particular tiver um valor específico.
 
-No entanto, embora isso seja possível com o Reflection, o IntelliTest não produz objetos com valores de campo arbitrários. Em vez disso, nesses casos, ele se baseia no usuário para fornecer dicas sobre como usar os métodos públicos de uma classe para criar um objeto e colocá-lo em um estado em que seu campo particular tenha o valor desejado.
+No entanto, embora isso seja possível com o Reflection, o IntelliTest não produz objetos com valores de campo arbitrários.
+Em vez disso, nesses casos, ele se baseia no usuário para fornecer dicas sobre como usar os métodos públicos de uma classe para criar um objeto e colocá-lo em um estado em que seu campo particular tenha o valor desejado.
 
-Leia [Criando instâncias de classes existentes](input-generation.md#existing-classes) para saber como você pode ajudar o IntelliTest a construir objetos interessantes. 
+Leia [Criando instâncias de classes existentes](input-generation.md#existing-classes) para saber como você pode ajudar o IntelliTest a construir objetos interessantes.
 
 <a name="help-types"></a>
 ## <a name="need-help-to-find-types"></a>Precisa de ajuda para encontrar tipos
 
-O IntelliTest [gera as entradas de teste](input-generation.md) para qualquer tipo de .NET. Aqui, o IntelliTest tenta criar uma instância que deriva de uma classe abstrata ou implementa uma interface abstrata e o IntelliTest não sabe de nenhum tipo que satisfaça as restrições. 
+O IntelliTest [gera as entradas de teste](input-generation.md) para qualquer tipo de .NET. Aqui, o IntelliTest tenta criar uma instância que deriva de uma classe abstrata ou implementa uma interface abstrata e o IntelliTest não sabe de nenhum tipo que satisfaça as restrições.
 
 Você pode ajudar o IntelliTest apontando para um ou mais tipos que correspondam às restrições. Normalmente, um dos seguintes atributos ajudará:
 
@@ -235,7 +239,7 @@ Você pode ajudar o IntelliTest apontando para um ou mais tipos que correspondam
 
   Por exemplo, se o IntelliTest relata que ele "não conhece nenhum dos tipos atribuíveis ao **System.Collections.IDictionary**", você pode ajudá-lo anexando o seguinte **PexUseTypeAttribute** a seguir ao teste (ou a classe de acessório):
 
-  ```
+  ```csharp
   [PexMethod]
   [PexUseType(typeof(System.Collections.Hashtable))]
   public void MyTest(IDictionary[] dictionaries) { ... }
@@ -243,14 +247,14 @@ Você pode ajudar o IntelliTest apontando para um ou mais tipos que correspondam
 
 * **Um atributo de nível de assembly**
 
-  ```
+  ```csharp
   [assembly: PexUseType(typeof(System.Collections.Hashtable))]
   ```
 
 <a name="usable-type-guessed"></a>
 ## <a name="usable-type-guessed"></a>Tipo utilizável estimado
 
-O IntelliTest [gera as entradas de teste](input-generation.md) para qualquer tipo de .NET. Quando um tipo é abstrato ou uma interface, o IntelliTest deve escolher uma implementação específica desse tipo. Para fazer essa escolha, é necessário saber quais são os tipos existentes. 
+O IntelliTest [gera as entradas de teste](input-generation.md) para qualquer tipo de .NET. Quando um tipo é abstrato ou uma interface, o IntelliTest deve escolher uma implementação específica desse tipo. Para fazer essa escolha, é necessário saber quais são os tipos existentes.
 
 Quando este aviso é exibido, ele indica que o IntelliTest procurava algum dos assemblies referenciados e encontrou um tipo de implementação, mas não tem certeza de se ele deve usar esse tipo ou se já tipos mais adequados disponíveis em outro lugar. IntelliTest simplesmente escolhe um tipo que pareceu promissor.
 
@@ -273,12 +277,14 @@ Ocorreu uma exceção no código do usuário. Inspecione o rastreamento de pilha
 
 O IntelliTest [gera entradas de teste](input-generation.md) monitorando a execução do programa. É essencial que o código relevante seja corretamente instrumentado para que o IntelliTest possa monitorar seu comportamento.
 
-Esse aviso é exibido quando o código instrumentado chama métodos em outro assembly não instrumentado. Se quiser que o IntelliTest explore a interação de ambos, você também deverá instrumentar o outro assembly (ou partes dele).
+Esse aviso é exibido quando o código instrumentado chama métodos em outro assembly não instrumentado.
+Se quiser que o IntelliTest explore a interação de ambos, você também deverá instrumentar o outro assembly (ou partes dele).
 
 <a name="external-method-called"></a>
 ## <a name="external-method-called"></a>Método externo chamado
 
-O IntelliTest [gera entradas de teste](input-generation.md) monitorando a execução dos aplicativos .NET. O IntelliTest não pode gerar entradas de teste significativas para o código que não é escrito em uma linguagem .NET.
+O IntelliTest [gera entradas de teste](input-generation.md) monitorando a execução dos aplicativos .NET.
+O IntelliTest não pode gerar entradas de teste significativas para o código que não é escrito em uma linguagem .NET.
 
 Esse aviso é exibido quando o código instrumentado chama um método nativo não gerenciado que o IntelliTest não pode analisar. Se você quiser que o IntelliTest explore a interação de ambos, você deverá simular o método não gerenciado.
 
@@ -287,7 +293,7 @@ Esse aviso é exibido quando o código instrumentado chama um método nativo nã
 
 O IntelliTest [gera entradas de teste](input-generation.md) monitorando a execução dos aplicativos .NET. No entanto, há alguns métodos que, por motivos técnicos, o IntelliTest não pode monitorar. Por exemplo, o IntelliTest não pode monitorar um construtor estático.
 
-Esse aviso é exibido quando o código instrumentado chama um método que o IntelliTest não pode monitorar. 
+Esse aviso é exibido quando o código instrumentado chama um método que o IntelliTest não pode monitorar.
 
 <a name="testability-issue"></a>
 ## <a name="testability-issue"></a>Problema de capacidade de teste
@@ -307,7 +313,7 @@ Atualmente isso inclui:
 * conversões entre os números de ponto flutuante e inteiros
 * todas as operações do tipo **System.Decimal**
 
-Esse aviso aparece quando o código executado realiza uma operação ou chama um método que o IntelliTest não pode interpretar. 
+Esse aviso aparece quando o código executado realiza uma operação ou chama um método que o IntelliTest não pode interpretar.
 
 <a name="observed-call-mismatch"></a>
 ## <a name="observed-call-mismatch"></a>Incompatibilidade de chamada observada
@@ -319,7 +325,7 @@ Geralmente, o IntelliTest não está ciente do fato de que ele não pode monitor
 
 * O IntelliTest monitorou um pouco de código, o que iniciou uma chamada para um método não instrumentado
 * O método não instrumentado chamou um método instrumentado
-* O IntelliTest monitora o método instrumentado que foi chamado 
+* O IntelliTest monitora o método instrumentado que foi chamado
 
 O IntelliTest não sabe o que o método intermediário não instrumentado fez, portanto, ele pode não ser capaz de gerar entradas de teste relevantes para a chamada instrumentada aninhada.
 
@@ -340,4 +346,4 @@ Em algumas situações, a alteração de um campo estático é aceitável:
 
 ## <a name="got-feedback"></a>Recebeu comentários?
 
-Poste suas ideias e solicitações de recursos no  **[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)**.
+Poste suas ideias e solicitações de recursos na [Comunidade de Desenvolvedores](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).

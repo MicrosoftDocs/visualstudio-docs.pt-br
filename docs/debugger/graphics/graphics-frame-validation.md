@@ -12,28 +12,29 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e9732cd3f3440448e5096e71f838d8ebcf20fb13
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0cdfdee83a9c78069b3f086ef84b280ba9328e4f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49850874"
 ---
 # <a name="graphics-frame-validation"></a>Validação de quadro de gráficos
-<!-- VERSIONLESS -->
-2017 do Visual Studio e maior suporte a **validação de quadro** ferramenta.  A janela do quadro validação exibe erros e avisos associados com a lista de eventos.  Para exibir essa janela, selecione o **exibição > quadro validação** menu.
+<!-- VERSIONLESS --> Visual Studio 2017 e maior suporte a **validação de quadro** ferramenta.  A janela de validação de quadro exibe erros e avisos associados com a lista de eventos.  Para exibir essa janela, selecione a **Exibir > validação de quadro** menu.
 
 ![Validação de quadro](media/gfx_diag_frame_validation.png)
 
-Clique o **executar validação** botão no canto superior esquerdo para iniciar a análise.  Ele pode levar vários minutos dependendo da complexidade do quadro.  Os dados que aparece aqui é uma combinação de duas fontes: as mensagens que D3D próprio emite quando [camadas do SDK](https://msdn.microsoft.com/library/windows/desktop/ff476881(v=vs.85).aspx) estiver habilitado e os dados que são coletados de estado interno da ferramenta de rastreamento. Uma vez concluído, você verá várias colunas de dados:
+Clique o **executar a validação** botão no canto superior esquerdo para iniciar a análise.  Pode levar vários minutos para ser concluída dependendo da complexidade do quadro.  Os dados que aparece aqui é uma combinação de duas fontes: as mensagens que D3D em si emite quando [camadas de SDK](/windows/desktop/direct3d11/overviews-direct3d-11-devices-layers) estiver habilitado e os dados coletados do estado interno da ferramenta de controle. Uma vez concluído, você verá várias colunas de dados:
 
-**Coluna**|**Descrição**
----|---
-ID do evento | ID que é mapeada para uma entrada de [lista de eventos](graphics-event-list.md) janela.
-Severidade | Corrupção, erro, aviso, informações ou mensagem.
-Categoria | Aplicativo definido, diverso, inicialização, limpeza, compilação, estado de criação, configuração de estado, obtendo estado, execução, manipulação de recursos, sombreador, redundante e não utilizado.
-Mensagem | A mensagem associada ao evento.
-evento | O evento associado com o erro ou aviso.
+
+| **Coluna** | **Descrição** |
+|------------| - |
+| ID do evento | ID que é mapeado para uma entrada na [lista de eventos](graphics-event-list.md) janela. |
+| Severidade | Corrupção, erro, aviso, informações ou mensagem. |
+| Categoria | Aplicativo definido, diverso, inicialização, limpeza, compilação, criação do estado, configuração de estado, obtenção de estado, execução, manipulação de recursos, sombreador, redundante e não utilizado. |
+| Mensagem | A mensagem associada ao evento. |
+| evento | O evento associado com o erro ou aviso. |
 
 ## <a name="see-also"></a>Consulte também  
-[Diagnóstico de gráficos (depuração DirectX Graphics)](visual-studio-graphics-diagnostics.md)   
+[Diagnóstico de gráficos (depuração de gráficos DirectX)](visual-studio-graphics-diagnostics.md)   
 <!-- /VERSIONLESS -->

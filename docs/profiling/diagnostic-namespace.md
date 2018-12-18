@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 29164c08b03bd23980aad381a1a832b2857309a6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d781bbfefa59b2e124cf76c11b8fd7c06cc66dda
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764664"
 ---
 # <a name="diagnostic-namespace"></a>Namespace de diagnóstico
 O namespace `diagnostics` fornece funcionalidade para emitir marcadores de Visualização Simultânea.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 namespace diagnostic;  
 ```  
   
@@ -45,7 +46,7 @@ namespace diagnostic;
 |[Enumeração marker_importance](../profiling/marker-importance-enumeration.md)|Representa o nível de importância de um marcador da Visualização Simultânea.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** cvmarkersobj.h  
+ **Cabeçalho:** *cvmarkersobj.h*  
   
  **Namespace:** Simultaneidade  
   

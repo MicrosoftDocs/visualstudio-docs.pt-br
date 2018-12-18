@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4dcf705015925145b790b14a44007fed8d8fad3b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8228d741848ba90c2d2d39618781e6d915c4b627
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854644"
 ---
 # <a name="encunavailablereason"></a>EncUnavailableReason
 `This is for internal use only!` Representa os motivos que **editar e continuar** não está disponível.  
@@ -68,13 +69,13 @@ public enum EncUnavailableReason {
  Editar e continuar não está disponível durante o processamento de código inserido.  
   
  ENCUN_ATTACH  
- Editar e continuar não está disponível porque a sessão foi anexada ao, ainda não tiver iniciado pelo depurador.  
+ Editar e continuar não está disponível porque a sessão foi conectada a, não seja iniciado pelo depurador.  
   
  ENCUN_WIN64  
- Editar e continuar não está disponível durante o processamento de código de 64 bits do Windows.  
+ Editar e continuar não está disponível durante o processamento de código do Windows de 64 bits.  
   
 ## <a name="remarks"></a>Comentários  
- Essa enumeração é para uso interno apenas por [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]. O [GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md) e [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md) métodos conforme implementado por um fornecedor de porta personalizado devem sempre retornar `E_NOTIMPL`.  
+ Essa enumeração é para uso interno somente pela [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]. O [GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md) e [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md) métodos conforme implementado por um fornecedor de porta personalizado devem sempre retornar `E_NOTIMPL`.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.idl  

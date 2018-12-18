@@ -1,5 +1,5 @@
 ---
-title: Exceção tratamento (SDK do Visual Studio) | Microsoft Docs
+title: (Visual Studio SDK) de tratamento de exceções | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,42 +13,43 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 646479184061b093d5d84f81827a4106bd3cda47
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ab3a3aafdca83305b86ce083e53e654b637cf110
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232059"
 ---
-# <a name="exception-handling-visual-studio-sdk"></a>Exceção tratamento (SDK do Visual Studio)
+# <a name="exception-handling-visual-studio-sdk"></a>Tratamento de exceção (SDK do Visual Studio)
 O exemplo a seguir descreve o processo que ocorre quando as exceções são geradas.  
   
-## <a name="exception-handling-process"></a>Processo de tratamento de exceção  
+## <a name="exception-handling-process"></a>Processo de manipulação de exceção  
   
-1.  Quando uma exceção é lançada pela primeira vez, mas antes que ela é tratada pelo manipulador de exceção no programa que está sendo depurado, o mecanismo de depuração (DE) envia um [IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md) para o Gerenciador de depuração de sessão (SDM) como um evento de parada. O `IDebugExceptionEvent2` é enviado se apenas as configurações para a exceção (especificada na caixa de diálogo exceções no pacote de depuração) especificam que o usuário deseja parar em notificações de exceção de primeira chance.  
+1.  Quando uma exceção é lançada pela primeira vez, mas antes que ela é tratada pelo manipulador de exceção no programa que está sendo depurado, o mecanismo de depuração (DES) envia uma [IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md) para o Gerenciador de depuração de sessão (SDM) como um evento de interrupção. O `IDebugExceptionEvent2` é enviado se apenas as configurações para a exceção (especificada na caixa de diálogo exceções no pacote de depuração) especificam que o usuário deseja parar em notificações de exceção de primeira chance.  
   
 2.  As chamadas SDM [IDebugExceptionEvent2::GetException](../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md) para obter a propriedade de exceção.  
   
 3.  As chamadas de pacote de depuração [IDebugExceptionEvent2::CanPassToDebuggee](../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md) para determinar as opções para apresentar ao usuário.  
   
-4.  O pacote de depuração pede ao usuário como lidar com a exceção abrindo uma caixa de diálogo de exceção de primeira chance.  
+4.  O pacote de depuração pede ao usuário como lidar com a exceção, abrindo uma caixa de diálogo de exceção de primeira chance.  
   
 5.  Se o usuário optar por continuar, o SDM chama [IDebugExceptionEvent2::CanPassToDebuggee](../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md).  
   
-    -   Se o método retorna S_OK, chamadas [IDebugExceptionEvent2::PassToDebuggee](../../extensibility/debugger/reference/idebugexceptionevent2-passtodebuggee.md).  
+    -   Se o método retorna S_OK, chama [IDebugExceptionEvent2::PassToDebuggee](../../extensibility/debugger/reference/idebugexceptionevent2-passtodebuggee.md).  
   
          -ou-  
   
-         Se o método retornar S_FALSE, o programa que está sendo depurado receberá a segunda oportunidade de lidar com a exceção.  
+         Se o método retorna S_FALSE, o programa que está sendo depurado recebe uma segunda chance para tratar a exceção.  
   
-6.  Se o programa que está sendo depurado não tem um manipulador para uma exceção de segunda chance, envia o DE um `IDebugExceptionEvent2` para SDM como **EVENT_SYNC_STOP**.  
+6.  Se o programa que está sendo depurado não tem nenhum manipulador para uma exceção de segunda chance, o DE envia um `IDebugExceptionEvent2` para o SDM como **EVENT_SYNC_STOP**.  
   
-7.  O pacote de depuração pede ao usuário como lidar com a exceção abrindo uma caixa de diálogo de exceção de primeira chance.  
+7.  O pacote de depuração pede ao usuário como lidar com a exceção, abrindo uma caixa de diálogo de exceção de primeira chance.  
   
 8.  As chamadas de pacote de depuração [IDebugExceptionEvent2::CanPassToDebuggee](../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md) para determinar as opções para apresentar ao usuário.  
   
-9. O pacote de depuração pede ao usuário como lidar com a exceção abrindo uma caixa de diálogo de exceção de segunda chance.  
+9. O pacote de depuração pede ao usuário como lidar com a exceção, abrindo uma caixa de diálogo de exceção de segunda chance.  
   
-10. Se o método retorna S_OK, chamadas `IDebugExceptionEvent2::PassToDebuggee`.  
+10. Se o método retorna S_OK, chama `IDebugExceptionEvent2::PassToDebuggee`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Chamar eventos do depurador](../../extensibility/debugger/calling-debugger-events.md)

@@ -1,5 +1,5 @@
 ---
-title: Olá, mundo | Microsoft Docs
+title: Tutorial de extensão do Hello World | Microsoft Docs
 ms.custom: ''
 ms.date: 07/10/2017
 ms.topic: conceptual
@@ -9,15 +9,16 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c531d8acddfebcd2656d6dca05b95244f54ec01
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e2122a98778372690990a75269be2f3087653678
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349459"
 ---
-# <a name="creating-your-first-extension-hello-world"></a>Criando sua primeira extensão: Hello World
+# <a name="create-your-first-extension-hello-world"></a>Criar sua primeira extensão: Olá, mundo
 
-Este exemplo Hello World ensina a criar sua primeira extensão para o Visual Studio. Este tutorial mostra como adicionar um novo comando para o Visual Studio.
+Este exemplo de Hello World explica como criar sua primeira extensão para o Visual Studio. Este tutorial mostra como adicionar um novo comando para o Visual Studio.
 
 O processo, você aprenderá como:
 
@@ -26,55 +27,59 @@ O processo, você aprenderá como:
 * **[Modificar o código-fonte](#modify-the-source-code)**
 * **[Executá-lo](#run-it)**
 
-Neste exemplo, você usará o Visual C# para adicionar que um botão de menu personalizado chamado "Diga Olá, mundo!" que tem esta aparência:
+Neste exemplo, você usará o Visual c# para adicionar que um botão de menu personalizado chamado "Diga Hello World!" Isso se parece com isso:
 
-![comando do Hello world](media/hello-world-say-hello-world.png)
+![Comando do Hello World](media/hello-world-say-hello-world.png)
+
+> [!NOTE]
+> Este artigo se aplica ao Visual Studio no Windows. Para o Visual Studio para Mac, consulte [instruções passo a passo de extensibilidade no Visual Studio para Mac](/visualstudio/mac/extending-visual-studio-mac-walkthrough).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Antes de começar, certifique-se de ter instalado o **desenvolvimento de extensão do Visual Studio** carga de trabalho que inclui o modelo VSIX que você precisa e código de exemplo.
+Antes de começar, verifique se você instalou o **desenvolvimento de extensões do Visual Studio** carga de trabalho que inclui o modelo VSIX, você precisará e código de exemplo.
 
-Observação: Você pode usar qualquer versão do Visual Studio (Community, Professional ou Enterprise) para criar um projeto de extensibilidade do Visual Studio.
+> [!NOTE]
+> Você pode usar qualquer edição do Visual Studio (Community, Professional ou Enterprise) para criar um projeto de extensibilidade do Visual Studio.
 
 ## <a name="create-an-extensibility-project"></a>Criar um projeto de extensibilidade
 
-Etapa 1. Do **arquivo** menu, clique em **novo projeto**. Na parte inferior da tela, você pode inserir o nome do seu projeto.
+Etapa 1. Dos **arquivo** menu, clique em **novo projeto**. Na parte inferior da tela, insira o nome do seu projeto.
 
-Etapa 2. Do **modelos** menu, clique em **Visual C#**, clique em **extensibilidade**e, em seguida, clique em **projeto VSIX**.
+Etapa 2. Dos **modelos** menu, clique em **Visual c#**, clique em **extensibilidade**e, em seguida, clique em **projeto VSIX**.
 
-![Novo projeto](media/hello-world-new-project.png)
+![novo projeto](media/hello-world-new-project.png)
 
-Agora você verá a página de Introdução e alguns recursos de exemplo.
+Agora você deve ver a página de Introdução e alguns recursos de exemplo.
 
-Se você precisar deixar este tutorial e voltar a ele, você pode encontrar seu novo projeto HelloWorld no **página inicial** no **recentes** seção.
+Se você precisar deixar este tutorial e volte a ela, você pode encontrar seu novo projeto HelloWorld na **página inicial** na **recentes** seção.
 
 ## <a name="add-a-custom-command"></a>Adicionar um comando personalizado
 
-Etapa 1. Se você selecionar o manifesto, você pode ver quais são as opções mutáveis de instância, metadados, descrição e versão.
+Etapa 1. Se você selecionar o manifesto, você pode ver quais opções estão mutáveis, para a instância, metadados, descrição e versão.
 
-Etapa 2. Clique com botão direito no projeto (não a solução). No menu de contexto, clique em **adicionar**e, em seguida, clique em **controle de usuário**.
+Etapa 2. Clique com botão direito no projeto (não na solução). No menu de contexto, clique em **Add**e, em seguida, clique em **Novo Item**.
 
-Etapa 3. Volte para o **extensibilidade** seção e, em seguida, clique em **comando personalizado**.
+Etapa 3. Selecione o **extensibilidade** seção e, em seguida, clique em **comando personalizado**.
 
-Etapa 4. No **nome** campo na parte inferior, dê a ele um nome, por exemplo Command.cs.
+Etapa 4. No **nome** campo na parte inferior, dê a ele um nome, por exemplo *Command.cs*.
 
 ![comando personalizado](media/hello-world-custom-command.png)
 
-Novo comando será listado no **Solution Explorer** sob o **recursos** ramificação. Isso também é onde você encontrará outros arquivos relacionados ao seu comando, como os arquivos PNG e ICO se você deseja modificar a imagem.
+Novo comando está listado na **Gerenciador de soluções** sob o **recursos** branch. Isso também é onde você encontrará outros arquivos relacionados ao seu comando, como os arquivos PNG e ICO, se você quiser modificar a imagem.
 
 ## <a name="modify-the-source-code"></a>Modificar o código-fonte
 
-Neste ponto, o botão Adicionar é muito genérico. Você precisará modificar o arquivo VSCT e o arquivo de CS, se você quiser fazer alterações.
+Neste ponto, o botão que você está adicionando está bastante genérico. Você precisará modificar o arquivo VSCT e o arquivo de CS se você quiser fazer alterações.
 
-* O arquivo VSCT é onde você pode renomear os comandos, bem como definir onde entram no sistema de linha de comando do Visual Studio. Conforme você explora o arquivo VSCT, você observará muito código comentado que explica o que cada seção dos controles do código.
+* O arquivo VSCT é onde você pode renomear os comandos, bem como definir onde eles ficar no sistema de comando do Visual Studio. Conforme você explora o arquivo VSCT, você observará muito código comentado que explica o que cada seção de controles de código.
 
-* O arquivo de CS é onde você pode definir ações, como o manipulador de cliques.
+* O arquivo de CS é onde você pode definir a ações, como o manipulador de clique.
 
-Etapa 1. Em **Solution Explorer**, localizar o arquivo VSCT para seu novo comando. Nesse caso, ele será chamado CommandPackage.vsct.
+Etapa 1. Na **Gerenciador de soluções**, localize o arquivo VSCT para seu novo comando. Nesse caso, ele será chamado *CommandPackage.vsct*.
 
 ![comando pacote vsct](media/hello-world-command-package-vsct.png)
 
-Etapa 2. Alterar o `ButtonText` parâmetro para "Diga Olá, mundo!"
+Etapa 2. Alterar o `ButtonText` parâmetro para `Say Hello World!`.
 
 ```xml
   ...
@@ -88,7 +93,7 @@ Etapa 2. Alterar o `ButtonText` parâmetro para "Diga Olá, mundo!"
   ...
 ```
 
-Etapa 3. Volte para **Solution Explorer** e localize o arquivo Command.cs. Alterar a cadeia de caracteres `message` para o comando `string.Format(..)` para "Hello World!"
+Etapa 3. Volte para **Gerenciador de soluções** e localize o *Command.cs* arquivo. Alterar a cadeia de caracteres `message` para o comando `string.Format(..)` para `Hello World!`.
 
 ```csharp
   ...
@@ -113,24 +118,24 @@ Certifique-se de salvar suas alterações para cada arquivo.
 
 ## <a name="run-it"></a>Executá-lo
 
-Agora você pode executar o código-fonte na instância Experimental do Visual Studio.
+Agora você pode executar o código-fonte em que a instância Experimental do Visual Studio.
 
-Etapa 1. Clique em **iniciar** na barra de ferramentas. Isso criará seu projeto e iniciar o depurador, iniciando uma nova instância do Visual Studio chamado o **instância Experimental**.
+Etapa 1. Clique em **iniciar** na barra de ferramentas. Isso compila seu projeto e inicia o depurador, iniciando uma nova instância do Visual Studio chamada a **instância Experimental**.
 
-Você verá as palavras "Instância Experimental" na barra de título do Visual Studio.
+Você verá as palavras **instância Experimental** na barra de título do Visual Studio.
 
 ![barra de título da instância experimental](media/hello-world-exp-instance.png)
 
-Etapa 2. No **ferramentas** menu o **instância Experimental**, clique em **diga Olá, mundo!**.
+Etapa 2. Sobre o **ferramentas** menu da **instância Experimental**, clique em **Say Hello World!**.
 
 ![resultado final](media/hello-world-final-result.png)
 
-Você deve ver a saída do comando personalizado novo, neste caso, a caixa de diálogo no centro da tela que lhe dá o "Hello World!" .
+Você deverá ver a saída do novo comando personalizado, neste caso, a caixa de diálogo no centro da tela que lhe dá o **Olá, mundo!** .
 
 ## <a name="next-steps"></a>Próximas etapas
 
 Agora que você conhece os fundamentos de trabalhar com a extensibilidade do Visual Studio, aqui é onde você pode saber mais:
 
-* [Começando a desenvolver extensões do Visual Studio](starting-to-develop-visual-studio-extensions.md) -exemplos, tutoriais. e publicar sua extensão.
-* [Novidades no SDK do Visual Studio 2017](what-s-new-in-the-visual-studio-2017-sdk.md) -novos recursos de extensibilidade do Visual Studio de 2017
-* [Dentro do Visual Studio SDK](internals/inside-the-visual-studio-sdk.md) -saber os detalhes de extensibilidade do Visual Studio
+* [Começar a desenvolver extensões do Visual Studio](starting-to-develop-visual-studio-extensions.md) -exemplos, tutoriais. e publicar sua extensão
+* [O que há de novo no SDK do Visual Studio 2017](what-s-new-in-the-visual-studio-2017-sdk.md) -novos recursos de extensibilidade do Visual Studio 2017
+* [Dentro do Visual Studio SDK](internals/inside-the-visual-studio-sdk.md) -Conheça os detalhes de extensibilidade do Visual Studio

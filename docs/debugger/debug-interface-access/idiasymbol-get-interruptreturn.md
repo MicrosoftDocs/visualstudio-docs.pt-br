@@ -1,5 +1,5 @@
 ---
-title: ': Get_interruptreturn | Microsoft Docs'
+title: 'Idiasymbol:: Get_interruptreturn | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e62fd85e8c60910be0b88c3eb27532edd874563a
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 49455347d6e45e51cdc639ef0eabdabbbebcfbd6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888041"
 ---
 # <a name="idiasymbolgetinterruptreturn"></a>IDiaSymbol::get_interruptReturn
 Recupera um sinalizador que especifica se a função contém um retorno de instrução de interrupção (por exemplo, X86 código assembly `iret`).  
@@ -36,7 +37,7 @@ HRESULT get_interruptReturn(
  [out] Retorna `TRUE` se a função tem um retorno de instrução de interrupção; caso contrário, retornará `FALSE`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  

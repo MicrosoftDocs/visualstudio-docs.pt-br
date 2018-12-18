@@ -1,9 +1,8 @@
 ---
-title: Gerenciando recursos de aplicativo (.NET) | Microsoft Docs
-ms.custom: ''
+title: Gerenciar recursos do aplicativo (.NET)
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - msvse_resedit.dlg.SetCustomTool
@@ -20,35 +19,40 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5515796d34b12e95fe6c9a545e7a81e98a8f6a9a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b9a80a84276648f8a0f0d5a94992b5f58cbcfefa
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51348106"
 ---
-# <a name="managing-application-resources-net"></a>Gerenciando recursos de aplicativo (.NET)
+# <a name="manage-application-resources-net"></a>Gerenciar recursos do aplicativo (.NET)
 
 Arquivos de recurso são arquivos que fazem parte de um aplicativo, mas não são compilados, por exemplo, arquivos de ícone ou arquivos de áudio. Como esses arquivos não fazem parte do processo de compilação, você pode alterá-los sem precisar recompilar os binários. Se estiver planejando localizar seu aplicativo, você deverá usar arquivos de recurso para todas as cadeias de caracteres e outros recursos que precisam ser alterados ao localizar o aplicativo.
 
-Para obter mais informações sobre recursos em aplicativos de área de trabalho do .NET, consulte [Recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index).
+> [!NOTE]
+> Este tópico aplica-se ao Visual Studio no Windows. Para o Visual Studio para Mac, confira [Gerenciando recursos de aplicativo (Visual Studio para Mac)](/visualstudio/mac/managing-app-resources).
 
-## <a name="working-with-resources"></a>Trabalhando com recursos
+Para obter mais informações sobre recursos em aplicativos de área de trabalho do .NET, confira [Recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index).
+
+## <a name="work-with-resources"></a>Trabalhar com recursos
 
 Em um projeto de código gerenciado, abra a janela de propriedades do projeto. Você pode abrir a janela Propriedades das seguintes maneiras:
 
-- clicando com o botão direito do mouse no nó do projeto no **Gerenciador de Soluções** e selecionando **Propriedades**
-- digitando “propriedades do projeto” na janela **Início Rápido**
-- escolhendo **Alt**+**Enter** na janela **Gerenciador de Soluções**
+- Clicando com o botão direito do mouse no nó do projeto, no **Gerenciador de Soluções**, e selecionar **Propriedades**
+- Digitando "propriedades do projeto" na janela do **Início Rápido**
+- Escolhendo **Alt**+**Enter** no **Gerenciador de Soluções**
 
-Selecione a guia **Recursos**. Você poderá adicionar um arquivo .resx se o projeto ainda não contiver um, adicionar e excluir diferentes tipos de recursos e modificar os recursos existentes.
+Selecione a guia **Recursos**. Você poderá adicionar um arquivo *.resx* se o projeto ainda não contiver um, adicionar e excluir diferentes tipos de recursos e modificar os recursos existentes.
 
 ## <a name="resources-in-other-project-types"></a>Recursos em outros tipos de projeto
 
 Recursos são gerenciados de forma diferente em projetos do .NET que em outros tipos de projeto. Para obter mais informações sobre os recursos em:
 
 - Aplicativos UWP (Plataforma Universal do Windows), consulte [Recursos do aplicativo e o Sistema de Gerenciamento de Recursos](/windows/uwp/app-resources/)
-- Para projetos C++, consulte [Trabalhando com arquivos de recurso](/cpp/windows/working-with-resource-files) e [Como criar um recurso](/cpp/windows/how-to-create-a-resource)
+- Projetos C++, confira [trabalhar com arquivos de recurso](/cpp/windows/working-with-resource-files) e [Como criar um recurso](/cpp/windows/how-to-create-a-resource)
 
 ## <a name="see-also"></a>Consulte também
 
-[Recursos em aplicativos da área de trabalho (.NET Framework)](/dotnet/framework/resources/index)
+- [Recursos em aplicativos de área de trabalho (.NET Framework)](/dotnet/framework/resources/index)
+- [Gerenciando recursos de aplicativo (Visual Studio para Mac)](/visualstudio/mac/managing-app-resources)

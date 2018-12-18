@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31139150"
 ---
 # <a name="updating-the-user-interface"></a>Atualizando a Interface do usuário
 Depois de implementar um comando, você pode adicionar código para atualizar a interface do usuário com o estado dos seus comandos de novo.  

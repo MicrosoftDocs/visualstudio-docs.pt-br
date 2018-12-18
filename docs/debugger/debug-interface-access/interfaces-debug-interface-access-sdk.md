@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31474736"
 ---
 # <a name="interfaces-debug-interface-access-sdk"></a>Interfaces (SDK de Acesso à Interface de Depuração)
 Métodos estão listados em ordem alfabética em cada interface na tabela de conteúdo e na página de interface em ordem de Vtable.  

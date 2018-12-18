@@ -1,5 +1,5 @@
 ---
-title: Obsoleto caixa de diálogo de aviso de código | Microsoft Docs
+title: Obsoleto de caixa de diálogo de aviso de código | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -22,18 +22,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ec80baa04529bcc6a9705d1c8df03e120e6bc64e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f1e212602b317127cfd14adcd246a23cdd92ed86
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281787"
 ---
 # <a name="stale-code-warning-dialog-box"></a>Caixa de diálogo Aviso de Código Obsoleto
-Essa caixa de diálogo aparece quando você fez alterações para o nativo de código que **editar e continuar** não foi possível aplicar imediatamente. Como resultado, alguns códigos nativos no quadro de pilhas atual agora está expirado, ou seja, obsoleto. Para obter mais informações, consulte [como: trabalhar com código obsoleto](http://msdn.microsoft.com/en-us/c7536e95-66a6-44a0-995d-3fe5035250b4).  
+Essa caixa de diálogo aparece quando você tiver feito alterações no código nativo que **editar e continuar** não pôde aplicar imediatamente. Como resultado, alguns códigos nativos no quadro de pilhas atual agora está expirado, ou seja, obsoleto. Para obter mais informações, consulte [como: trabalhar com código obsoleto](/visualstudio/debugger/edit-and-continue-visual-cpp#bkmk_how_to_work_with_stale_code).  
   
  **Não mostrar esta caixa de diálogo novamente**  
- Se você marcar essa caixa de seleção, Editar e Continuar aplicará as alterações de código sem solicitar permissão no futuro. Você pode ativar este aviso novamente, vá para o **opções** caixa de diálogo, abrindo o **depuração** pasta, clicando no **editar e continuar** página e, em seguida, selecionando **Avisar sobre código obsoleto**.  
+ Se você marcar essa caixa de seleção, Editar e Continuar aplicará as alterações de código sem solicitar permissão no futuro. Você pode ativar esse aviso novamente indo para o **opções** caixa de diálogo, abrindo o **depuração** pasta, clicando no **editar e continuar** da página e selecionando **Avisar sobre código obsoleto**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Alterações de código suportadas (C++)](../debugger/supported-code-changes-cpp.md)   
- [Editar e continuar, depuração, a caixa de diálogo Opções](http://msdn.microsoft.com/Library/009d225f-ef65-463f-a146-e4c518f86103)
+ [Caixa de diálogo Editar e Continuar, Depuração, Opções](/visualstudio/debugger/edit-and-continue)

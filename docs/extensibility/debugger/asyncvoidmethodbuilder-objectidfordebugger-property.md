@@ -1,5 +1,5 @@
 ---
-title: Propriedade AsyncVoidMethodBuilder.ObjectIdForDebugger | Microsoft Docs
+title: Propriedade asyncvoidmethodbuilder. Objectidfordebugger | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,18 +13,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 868deef955ce90f49ce3ba2719903bdcbb38f2a5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cf0f8acbfbdc129371d288d64cc48b3e4b0704ad
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39151477"
 ---
-# <a name="asyncvoidmethodbuilderobjectidfordebugger-property"></a>Propriedade AsyncVoidMethodBuilder.ObjectIdForDebugger
-Obtém um objeto que pode ser usado para identificar com exclusividade este construtor para o depurador.  
+# <a name="asyncvoidmethodbuilderobjectidfordebugger-property"></a>Propriedade asyncvoidmethodbuilder. Objectidfordebugger
+Obtém um objeto que pode ser usado para identificar exclusivamente esse construtor para o depurador.  
   
  **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
   
- **Assembly:** mscorlib (em mscorlib.dll)  
+ **Assembly:** mscorlib (em mscorlib. dll)  
   
  Porque você não pode acessar esse membro interno do .NET Framework, a sintaxe a seguir é fornecida em comum Intermediate Language (CIL).  
   

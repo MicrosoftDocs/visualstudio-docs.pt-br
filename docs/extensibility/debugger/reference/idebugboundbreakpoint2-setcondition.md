@@ -16,11 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94b131820fdd6bd2b83a9e54fd450cbb19c8064a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 07512dbec66d3abd3c380629a32bd8468b253eb1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882620"
 ---
 # <a name="idebugboundbreakpoint2setcondition"></a>IDebugBoundBreakpoint2::SetCondition
 Define ou altera a condição associada a este ponto de interrupção associado.  
@@ -41,13 +42,13 @@ int SetCondition(
   
 #### <a name="parameters"></a>Parâmetros  
  `bpCondition`  
- [in] Um valor da [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) enumeração que descreve a condição.  
+ [in] Um valor a partir de [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) enumeração que descreve a condição.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o estado do objeto de ponto de interrupção associado é definido como `BPS_DELETED` (parte do [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeração).  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o estado do objeto associado de ponto de interrupção é definido como `BPS_DELETED` (parte do [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeração).  
   
 ## <a name="remarks"></a>Comentários  
- Qualquer condição que foi previamente associada este ponto de interrupção é perdida.  
+ Qualquer condição que foi previamente associada este ponto de interrupção será perdida.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   

@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ad684837fcda28fbe45874e5a5573f4581a9217f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a2475c9b5a24fb00d266ce1ceaae0181c6f010f2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939886"
 ---
 # <a name="idebugfieldgettype"></a>IDebugField::GetType
 Esse método obtém o tipo de campo.  
@@ -40,10 +41,10 @@ int GetType(
   
 #### <a name="parameters"></a>Parâmetros  
  `ppType`  
- [out] Retorna o tipo de campo como outro [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto.  
+ [out] Retorna o tipo de campo como outra [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

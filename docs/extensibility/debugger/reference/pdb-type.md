@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc610963fa1ca82fec30e04abb90583db48bdf55
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 83d891de330b66841b1ad48a7fc4593b1144e9e7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888101"
 ---
 # <a name="pdbtype"></a>PDB_TYPE
-Essa estrutura Especifica informações sobre um tipo de campo obtido um símbolo PDB.  
+Essa estrutura Especifica informações sobre um tipo de campo extraído de um símbolo PDB.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +54,7 @@ public struct PDB_TYPE {
  A ID do símbolo que corresponde a esse campo.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é exibido como parte da união no [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) estrutura quando o `dwKind` campo do `TYPE_INFO` estrutura é definida como `TYPE_KIND_PDB` (um valor da [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) enumeração).  
+ Essa estrutura é exibido como parte da união na [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) estrutura quando o `dwKind` campo dos `TYPE_INFO` estrutura é definida como `TYPE_KIND_PDB` (um valor da [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) enumeração).  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: sh.h  

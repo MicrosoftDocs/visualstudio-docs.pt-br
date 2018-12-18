@@ -19,16 +19,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f185bdee29ee93de3d64464d1fcd41a5269636f3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 182f972d902367e0c49c7d1a7c8e92b6de8d3cb7
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39151802"
 ---
 # <a name="wpf-targets-files"></a>Arquivos .targets do WPF
-[!INCLUDE[TLA#tla_winclient](../misc/includes/tlasharptla_winclient_md.md)] estende o [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] adicionando um conjunto de tarefas [!INCLUDE[TLA2#tla_wpf](../msbuild/includes/tla2sharptla_wpf_md.md)] específicas que são combinadas em um arquivo .targets especial, **Microsoft.WinFX.targets**. Esse arquivo combina o conjunto de tarefas [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] necessárias para compilar um projeto [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] no [!INCLUDE[TLA#tla_winclient](../misc/includes/tlasharptla_winclient_md.md)].  
+[!INCLUDE[TLA#tla_winclient](../misc/includes/tlasharptla_winclient_md.md)] estende o [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] adicionando um conjunto de tarefas específicas do [!INCLUDE[TLA2#tla_wpf](../msbuild/includes/tla2sharptla_wpf_md.md)] que são combinadas em um arquivo *.targets* especial, o *Microsoft.WinFX.targets*. Esse arquivo combina o conjunto de tarefas [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] necessárias para compilar um projeto [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] no [!INCLUDE[TLA#tla_winclient](../misc/includes/tlasharptla_winclient_md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquivos .Targets](../msbuild/msbuild-dot-targets-files.md)   
+ [Arquivos .targets do MSBuild](../msbuild/msbuild-dot-targets-files.md)   
  [Referência do MSBuild](../msbuild/msbuild-reference.md)   
- [Como compilar um aplicativo WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+ [Compilando um aplicativo WPF](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

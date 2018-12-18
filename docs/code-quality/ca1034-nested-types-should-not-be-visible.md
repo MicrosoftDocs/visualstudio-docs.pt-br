@@ -1,6 +1,7 @@
 ---
 title: 'CA1034: os tipos aninhados não devem ser visíveis'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,21 @@ ms.assetid: e9789a2c-2540-42a1-8705-ae7104011194
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CPP
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 0afc6d4eb388c93fb42d99adf242b669024444a2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 14c0837d482341e1ba60191c8b6bb3f5bd8e6dd4
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45550941"
 ---
 # <a name="ca1034-nested-types-should-not-be-visible"></a>CA1034: os tipos aninhados não devem ser visíveis
+
 |||
 |-|-|
 |NomeDoTipo|NestedTypesShouldNotBeVisible|
@@ -30,21 +37,22 @@ ms.lasthandoff: 04/19/2018
 |Alteração Significativa|Quebra|
 
 ## <a name="cause"></a>Causa
- Um tipo visível externamente contém uma declaração de tipo visível externamente. Tipos protegidos e enumerações aninhadas são isentos dessa regra.
 
-## <a name="rule-description"></a>Descrição da Regra
- Um tipo aninhado é um tipo declarado dentro do escopo de outro tipo. Tipos aninhados são úteis para encapsular os detalhes de implementação privada do tipo recipiente. Usados para essa finalidade, os tipos aninhados não devem ser visíveis externamente.
+Um tipo visível externamente contém uma declaração de tipo visível externamente. Enumerações aninhadas e tipos protegidos são isentos dessa regra.
 
- Não use tipos aninhados visíveis externamente para agrupamento lógico ou para evitar colisões de nomes; em vez disso, use namespaces.
+## <a name="rule-description"></a>Descrição da regra
+ Um tipo aninhado é um tipo declarado no escopo de outro tipo. Tipos aninhados são úteis para encapsular os detalhes de implementação privada do tipo recipiente. Usados para essa finalidade, os tipos aninhados não devem ser visíveis externamente.
 
- Tipos aninhados incluem a noção de acessibilidade de membro, o que alguns programadores não entender claramente.
+ Não use tipos aninhados visíveis externamente para agrupamento lógico ou para evitar colisões de nome; em vez disso, usam namespaces.
 
- Tipos protegidos podem ser usados em subclasses e tipos aninhados em cenários de personalização avançada.
+ Tipos aninhados incluem a noção de acessibilidade de membro, o que alguns programadores não entendem claramente.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
+ Tipos protegidos podem ser usados em subclasses e tipos aninhados em cenários de personalização avançadas.
+
+## <a name="how-to-fix-violations"></a>Como corrigir violações
  Se você não for do tipo aninhado para ser visível externamente, altere a acessibilidade do tipo. Caso contrário, remova o tipo aninhado de seu pai. Se a finalidade de aninhamento é categorizar o tipo aninhado, use um namespace para criar a hierarquia em vez disso.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
  Não suprima um aviso nessa regra.
 
 ## <a name="example"></a>Exemplo

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31128981"
 ---
 # <a name="removal-of-source-control-information-from-proj-and-sln-files"></a>Remoção de informações de controle de origem. PROJ e. Arquivos sln
 Na versão 1.2 da API de plug-in de controle de origem SCC informações são armazenadas em um MSSCCPRJ. Arquivos SCC. A vantagem do MSSCCPRJ. Arquivos SCC é que as informações de SCC é não na origem - controlada, como nos arquivos. proj. e. sln.  

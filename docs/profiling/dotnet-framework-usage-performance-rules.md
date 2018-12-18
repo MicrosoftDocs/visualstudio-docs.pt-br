@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ddfe3d7bdc4cb274a7b70dca48e45794d5f1cac
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1903b61fce39bdd68b471472530857d720bac906
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766016"
 ---
 # <a name="net-framework-usage-performance-rules"></a>Regras de desempenho de uso do .NET Framework
 As regras de desempenho na categoria de uso do .NET Framework identificam métodos específicos que podem ser otimizados e também identificam padrões de uso mais gerais, como coleta de lixo e contenção de bloqueio, o que pode ser investigado para problemas de desempenho.  
@@ -33,6 +34,6 @@ As regras de desempenho na categoria de uso do .NET Framework identificam métod
 |[DA0021: taxa alta de coletas de lixo da geração 1](../profiling/da0021-high-rate-of-gen-1-garbage-collections.md)|Um número relativamente alto de objetos de memória do .NET está sendo recuperado na coleta de lixo de geração 1. Se muitos objetos de curta duração sobrevivem à coleta de geração 0, o custo de gerenciamento de memória pode facilmente se tornar excessivo.|  
 |[DA0022: taxa alta de coletas de lixo da geração 2](../profiling/da0022-high-rate-of-gen-2-garbage-collections.md)|Um número alto de objetos de memória do .NET está sendo recuperado na coleta de lixo de geração 2. Se muitos objetos de curta duração sobrevivem à coleta de geração 1, o custo de gerenciamento de memória pode facilmente se tornar excessivo. Essa regra é acionada quando a taxa de contenções de bloqueio excede o valor do limite superior da regra DA0005.|  
 |[DA0023: tempo de CPU em GC alto](../profiling/da0023-high-gc-cpu-time.md)|Os dados de desempenho do sistema coletados durante a criação de perfil indicam que a quantidade de tempo gasto na coleta de lixo é significativa em comparação com o tempo total de processamento do aplicativo.|  
-|[DA0024: tempo de CPU para GC excessivo](../profiling/da0024-excessive-gc-cpu-time.md)|Os dados de desempenho do sistema coletados durante a criação de perfil indicam que a quantidade de tempo gasto na coleta de lixo é excessivamente alta em comparação com o tempo total de processamento do aplicativo. Essa regra é acionada quando a quantidade de tempo gasto na coleta de lixo excede o valor do limite superior da regra DA0023.|  
+|[DA0024: tempo excessivo de CPU no GC](../profiling/da0024-excessive-gc-cpu-time.md)|Os dados de desempenho do sistema coletados durante a criação de perfil indicam que a quantidade de tempo gasto na coleta de lixo é excessivamente alta em comparação com o tempo total de processamento do aplicativo. Essa regra é acionada quando a quantidade de tempo gasto na coleta de lixo excede o valor do limite superior da regra DA0023.|  
 |[DA0038: taxa alta de contenções de bloqueio](../profiling/da0038-high-rate-of-lock-contentions.md)|Os dados de desempenho do sistema coletados com os dados de criação de perfil indicam que ocorreu uma taxa consideravelmente alta de contenções de bloqueio durante a execução do aplicativo. Considere uma nova criação de perfil usando o método de criação de perfil de simultaneidade para descobrir a causa das contenções.|  
 |[DA0039: taxa muito alta de contenções de bloqueio](../profiling/da0039-very-high-rate-of-lock-contentions.md)|Os dados de desempenho do sistema coletados com os dados de criação de perfil indicam que ocorreu uma taxa excessivamente alta de contenções de bloqueio durante a execução do aplicativo. Considere uma nova criação de perfil usando o método de criação de perfil de simultaneidade para descobrir a causa das contenções. Essa regra é acionada quando a taxa de contenções de bloqueio excede o valor do limite superior da regra DA0038.|

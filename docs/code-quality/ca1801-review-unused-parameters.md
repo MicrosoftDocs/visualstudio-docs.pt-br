@@ -1,6 +1,7 @@
 ---
 title: 'CA1801: revisar parâmetros não usados'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -16,45 +17,47 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aae1661d848e2b7a49dc1873dbe1f555bef6abc0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0c5f288b57a377c69bf159f9e92ccc575f983083
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948207"
 ---
 # <a name="ca1801-review-unused-parameters"></a>CA1801: revisar parâmetros não usados
+
 |||
 |-|-|
 |NomeDoTipo|ReviewUnusedParameters|
 |CheckId|CA1801|
 |Categoria|Microsoft.Usage|
-|Alteração Significativa|Não separáveis - se o membro não é visível fora do assembly, independentemente da alteração feita.<br /><br /> Não separáveis - se você alterar o membro para usar o parâmetro em seu corpo.<br /><br /> Quebrar - se que você remova o parâmetro e é visível fora do assembly.|
+|Alteração Significativa|Não separável - se o membro não é visível fora do assembly, independentemente da alteração feita.<br /><br /> Não separável - se você alterar o membro para usar o parâmetro em seu corpo.<br /><br /> Quebrando - se você remover o parâmetro e é visível fora do assembly.|
 
 ## <a name="cause"></a>Causa
- Uma assinatura de método inclui um parâmetro que não é usado no corpo do método. Esta regra examina os seguintes métodos:
+ Uma assinatura de método inclui um parâmetro que não é usado no corpo do método. Essa regra não examina os métodos a seguir:
 
--   Métodos referenciados por um representante.
+- Métodos referenciados por um delegado.
 
--   Métodos usados como manipuladores de eventos.
+- Métodos usados como manipuladores de eventos.
 
--   Métodos declarados com o `abstract` (`MustOverride` no Visual Basic) modificador.
+- Os métodos declarados com o `abstract` (`MustOverride` no Visual Basic) modificador.
 
--   Métodos declarados com o `virtual` (`Overridable` no Visual Basic) modificador.
+- Os métodos declarados com o `virtual` (`Overridable` no Visual Basic) modificador.
 
--   Métodos declarados com o `override` (`Overrides` no Visual Basic) modificador.
+- Os métodos declarados com o `override` (`Overrides` no Visual Basic) modificador.
 
--   Métodos declarados com o `extern` (`Declare` instrução no Visual Basic) modificador.
+- Os métodos declarados com o `extern` (`Declare` instrução no Visual Basic) modificador.
 
-## <a name="rule-description"></a>Descrição da Regra
- Verifique os parâmetros em métodos não virtuais que não são usados no corpo do método para certificar-se de que nenhuma correção existe uma falha para acessá-los. Parâmetros não utilizados incorrem em custos de manutenção e desempenho.
+## <a name="rule-description"></a>Descrição da regra
+ Revise os parâmetros em métodos não virtuais que não são usados no corpo do método para verificar se que nenhuma correção existe em torno de falha para acessá-los. Parâmetros não utilizados incorrem em custos de manutenção e desempenho.
 
- Às vezes, uma violação desta regra pode apontar para um bug de implementação no método. Por exemplo, o parâmetro deve ter foi usado no corpo do método. Suprima avisos desta regra se o parâmetro precisar existir devido à compatibilidade com versões anteriores.
+ Às vezes, uma violação dessa regra pode apontar para um bug de implementação no método. Por exemplo, o parâmetro deve ter sido usado no corpo do método. Suprima avisos desta regra se o parâmetro precisar existir devido à compatibilidade com versões anteriores.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, remova o parâmetro não utilizado (uma alteração significativa) ou use o parâmetro no corpo do método (uma alteração sem quebra).
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, remova o parâmetro não utilizado (uma alteração significativa) ou use o parâmetro no corpo do método (uma alteração sem interrupção).
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- É seguro suprimir um aviso dessa regra para o código fornecido anteriormente para os quais a correção seria uma alteração significativa.
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+ É seguro suprimir um aviso nessa regra para o código fornecido anteriormente para o qual a correção seria uma alteração significativa.
 
 ## <a name="example"></a>Exemplo
  O exemplo a seguir mostra dois métodos. Um método viola a regra e o outro método satisfaz a regra.

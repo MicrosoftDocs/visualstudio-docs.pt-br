@@ -1,16 +1,16 @@
 ---
 title: Interface IDebugStackFrameSniffer | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDebugStackFrameSniffer interface
 ms.assetid: 5669598e-a6bd-4694-9cb2-bd908be72bed
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +19,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24726796"
 ---
 # <a name="idebugstackframesniffer-interface"></a>Interface IDebugStackFrameSniffer
 Fornece uma maneira para enumerar os quadros de pilha lógico conhecidos por um componente. Mecanismos de script geralmente implementam essa interface. O processo depuração manager usa essa interface para localizar todos os quadros de pilha associado a um determinado thread.  

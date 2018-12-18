@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e67d8970859906e839abf89e85e38c24c2d88066
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 03513b786c17e5bef3d8fa1fff79c1c3e73fe6a0
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500313"
 ---
 # <a name="defaultname-element-visual-studio-templates"></a>Elemento DefaultName (modelos do Visual Studio)
 Especifica o nome que o sistema de projeto do Visual Studio gerará para o projeto ou item quando ele é criado.  
@@ -49,7 +50,7 @@ Especifica o nome que o sistema de projeto do Visual Studio gerará para o proje
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele exibe em um a **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo.|  
   
 ## <a name="text-value"></a>Valor de texto  
  Um valor de texto é obrigatório.  
@@ -59,11 +60,11 @@ Especifica o nome que o sistema de projeto do Visual Studio gerará para o proje
 ## <a name="remarks"></a>Comentários  
  `DefaultName` é um elemento opcional.  
   
- Para projetos, este elemento Especifica o nome do diretório que armazena o projeto no disco. Para itens, especifica o nome do arquivo do arquivo de origem.  
+ Para projetos, esse elemento Especifica o nome do diretório que armazena o projeto no disco. Para itens, ele especifica o nome do arquivo do arquivo de origem.  
   
- Quando você cria um projeto ou item, você pode modificar o nome padrão usando o **nome** opção, que está disponível em um a **novo projeto** caixa de diálogo ou **Adicionar Novo Item** caixa de diálogo.  
+ Quando você cria um projeto ou item, você pode modificar o nome padrão usando o **nome** opção, que está disponível em um a **novo projeto** caixa de diálogo ou **Add New Item** caixa de diálogo.  
   
- Se você não deseja que o sistema de projeto para gerar o nome padrão para o projeto ou item, em seguida, defina o [ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md) elemento `False`.  
+ Se você não deseja que o sistema de projeto para gerar o nome padrão para o projeto ou item, em seguida, defina as [ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md) elemento `False`.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir ilustra os metadados para o modelo de item padrão para um [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] classe.  

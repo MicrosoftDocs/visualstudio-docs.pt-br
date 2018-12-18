@@ -1,6 +1,7 @@
 ---
-title: Testar aplicativos do SharePoint com testes de IU codificados no Visual Studio | Microsoft Docs
+title: Testar aplicativos do SharePoint com testes de IU codificados
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -8,11 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 0ed08d82e186f83b71a01dab0b267410fde7267d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 91d17857f1d20508041ad6c5daa90a962d6d30e6
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895438"
 ---
 # <a name="test-sharepoint-applications-with-coded-ui-tests"></a>Testar aplicativos do SharePoint com testes de IU codificados
 
@@ -20,13 +22,15 @@ Incluir testes de IU codificados em um aplicativo do SharePoint permite verifica
 
 Para saber mais sobre os benefícios de usar testes de IU codificados, consulte [Usar a automação de interface do usuário para testar o código](../test/use-ui-automation-to-test-your-code.md).
 
+[!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
+
 **Requisitos**
 
 - Visual Studio Enterprise
 
 ## <a name="create-a-coded-ui-test-for-a-sharepoint-app"></a>Criar um teste de IU codificado para um aplicativo do SharePoint
 
-[Criar testes de IU codificados](../test/use-ui-automation-to-test-your-code.md) para seus aplicativos do SharePoint é o mesmo processo de criar testes para outros tipos de aplicativos. A gravação e a reprodução têm suporte para todos os controles na interface de edição na Web. A interface para a seleção de categorias e as Web parts são controles da Web padrão.
+[Criar testes de IU codificados](../test/use-ui-automation-to-test-your-code.md) para seus aplicativos do SharePoint é o mesmo que criar testes para outros tipos de aplicativos. A gravação e a reprodução têm suporte para todos os controles na interface de **Edição na Web**. A interface para a seleção de categorias e as Web parts são controles da Web padrão.
 
 ![Web parts do SharePoint](../test/media/cuit_sharepoint.png)
 
@@ -92,8 +96,8 @@ Se você estiver gravando ações em uma célula não vazia, a gravação ficar�
 
 ## See also
 
-- [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md)
-- [Create SharePoint Solutions](/office-dev/office-dev/create-sharepoint-solutions)
-- [Verifying and Debugging SharePoint Code](/office-dev/office-dev/verifying-and-debugging-sharepoint-code)
-- [Building and Debugging SharePoint Solutions](/office-dev/office-dev/building-and-debugging-sharepoint-solutions)
-- [Profiling the Performance of SharePoint Applications](/office-dev/office-dev/profiling-the-performance-of-sharepoint-applications)
+- [Use UI automation to test your code](../test/use-ui-automation-to-test-your-code.md)
+- [Create SharePoint solutions](../sharepoint/create-sharepoint-solutions.md)
+- [Verify and debug SharePoint code](../sharepoint/verifying-and-debugging-sharepoint-code.md)
+- [Build and debug SharePoint solutions](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [Profile the performance of SharePoint applications](../sharepoint/profiling-the-performance-of-sharepoint-applications.md)

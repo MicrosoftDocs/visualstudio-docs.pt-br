@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9eb500539184d6ac5e7e3cb00e753a00f3585057
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: ec11596091f7039d9f711acc0d96510340a77c6c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49901418"
 ---
 # <a name="idiastackwalkhelperpdataforva"></a>IDiaStackWalkHelper::pdataForVA
-Retorna o bloco de dados PDATA associado ao endereço virtual.  
+Retorna o bloco de dados PDATA associado com o endereço virtual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +37,7 @@ HRESULT pdataForVA(
   
 #### <a name="parameters"></a>Parâmetros  
  `va`  
- [in] Especifica o endereço virtual para obter os dados.  
+ [in] Especifica o endereço virtual dos dados a obter.  
   
  `cbData`  
  [in] O tamanho dos dados em bytes para obter.  
@@ -45,15 +46,15 @@ HRESULT pdataForVA(
  [out] Retorna o tamanho real dos dados em bytes, que foi obtido.  
   
  `pbData`  
- [out no] Um buffer é preenchido com os dados solicitados. Não pode ser `NULL`.  
+ [no, out] Um buffer que será preenchido com os dados solicitados. Não pode ser `NULL`.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver nenhum PDATA para o endereço especificado. Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- PDATA (a seção denominada ". pData") de um compiland contém informações sobre funções de manipulação de exceção.  
+ PDATA (a seção chamada ". pData") de um compiland contém informações sobre o tratamento de exceção para funções.  
   
- O chamador sabe a quantidade de dados a ser retornado para que o chamador tenha sem necessidade de solicitar a quantidade de dados está disponível. Portanto, é aceitável para uma implementação deste método para retornar um erro se o `pbData` parâmetro é `NULL`.  
+ O chamador sabe a quantidade de dados deve ser retornado para que o chamador tenha nem precisa perguntar para a quantidade de dados está disponível. Portanto, é aceitável para a implementação desse método para retornar um erro se o `pbData` parâmetro é `NULL`.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

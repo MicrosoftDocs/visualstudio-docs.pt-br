@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f43a0fe3d7d2ad7c54ee9203037595dade7c6486
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 434a53803dcc08a5d4b07b531b56e913d5311d1a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934789"
 ---
 # <a name="idebugdisassemblystream2getsize"></a>IDebugDisassemblyStream2::GetSize
 Obtém o tamanho em instruções deste fluxo de desmontagem.  
@@ -43,12 +44,12 @@ int GetSize(
  [out] Retorna o tamanho, em instruções.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- O valor retornado desse método pode ser usado para alocar uma matriz de [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) estruturas que é passado para o [leitura](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) método.  
+ O valor retornado desse método pode ser usado para alocar uma matriz de [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) estruturas que é então passado para o [leitura](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) método.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)   
- [Leitura](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)
+ [Ler](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)

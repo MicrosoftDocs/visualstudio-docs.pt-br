@@ -1,5 +1,5 @@
 ---
-title: Codificando uma regra de extração personalizada para um teste de desempenho Web no Visual Studio | Microsoft Docs
+title: Codificando uma regra de extração personalizada para um teste de desempenho Web
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,23 +13,27 @@ dev_langs:
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 748b1f726a74fd0af1545a5bdb9c620b1ffb2a4d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 41e9a025db4ec9c8425e0de6ba4ecad25f775d50
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066672"
 ---
-# <a name="coding-a-custom-extraction-rule-for-a-web-performance-test"></a>Codificando uma regra de extração personalizada para um teste de desempenho Web
+# <a name="code-a-custom-extraction-rule-for-a-web-performance-test"></a>Codificar uma regra de extração personalizada para um teste de desempenho Web
 
 Você pode criar suas próprias regras de extração. Para fazer isso, você deve derivar suas próprias regras de uma classe de regra de extração. As regras de extração derivam da classe base <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule>.
 
 > [!NOTE]
 > Também é possível criar regras de validação personalizadas. Para obter mais informações, consulte [Criar código personalizado e plug-ins para testes de carga](../test/create-custom-code-and-plug-ins-for-load-tests.md).
 
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
 ## <a name="to-create-a-custom-extraction-rule"></a>Para criar uma regra de extração personalizada
 
-1.  Abra um projeto de teste que contenha um teste de desempenho na Web.
+1.  Abra um projeto de teste que contém um teste de desempenho Web.
 
 2.  (Opcional) Crie um projeto de biblioteca de classes separado no qual armazenar a regra de extração.
 
@@ -42,7 +46,7 @@ Você pode criar suas próprias regras de extração. Para fazer isso, você dev
 
 5.  (Opcional) Crie o novo projeto de biblioteca de classes.
 
-6.  (Opcional) No projeto de teste, adicione uma referência ao projeto de biblioteca de classes que contenha a regra de extração personalizada.
+6.  (Opcional) No projeto de teste, adicione uma referência ao projeto de biblioteca de classes que contém a regra de extração personalizada.
 
 7.  No projeto de teste, abra um teste de desempenho Web no **Editor de Testes de Desempenho Web**.
 

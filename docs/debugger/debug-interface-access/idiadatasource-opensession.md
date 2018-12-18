@@ -1,5 +1,5 @@
 ---
-title: ': Opensession | Microsoft Docs'
+title: 'Idiadatasource:: Opensession | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 39fe9bf3a67d3ad5f26ff7c4ccdaa9772cf1346b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 8266102e8bc2c347ed8a554a3c64d9504f1e863b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933502"
 ---
 # <a name="idiadatasourceopensession"></a>IDiaDataSource::openSession
-Abre uma sessão de consulta de símbolos.  
+Abre uma sessão para consultar os símbolos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,18 +37,18 @@ HRESULT openSession (
  [out] Retorna um [IDiaSession](../../debugger/debug-interface-access/idiasession.md) objeto que representa a sessão aberta.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. A tabela a seguir mostra os valores de retorno possíveis para esse método.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. A tabela a seguir mostra os possíveis valores retornados para esse método.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|E_UNEXPECTED|O [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md) objeto anteriormente não foi inicializado com uma fonte de símbolos.|  
+|E_UNEXPECTED|O [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md) objeto anteriormente não foi inicializado com uma origem de símbolos.|  
 |E_INVALIDARG|Inválido `ppSession` parâmetro.|  
 |E_OUTOFMEMORY|Memória insuficiente para abrir a sessão.|  
   
 ## <a name="remarks"></a>Comentários  
- Este método abre um [IDiaSession](../../debugger/debug-interface-access/idiasession.md) objeto para uma fonte de dados.  
+ Este método abre uma [IDiaSession](../../debugger/debug-interface-access/idiasession.md) objeto para uma fonte de dados.  
   
- `IDiaSession` objetos de implementar consultas na fonte de dados. Uma sessão gerencia um espaço de endereço para cada conjunto de símbolos de depuração. Se o arquivo .exe ou. dll descrito pelos símbolos de fonte de dados ativas em vários endereços intervalos (por exemplo, porque vários processos que carregado), em seguida, uma sessão para cada intervalo de endereço deve ser usada.  
+ `IDiaSession` objetos de implementação de consultas na fonte de dados. Uma sessão gerencia um espaço de endereço para cada conjunto de símbolos de depuração. Se o arquivo. dll ou. .exe descrito pelos símbolos de fonte de dados estiver ativo no endereço vários intervalos (por exemplo, porque vários processos tem carregado) e uma sessão para cada intervalo de endereços deve ser usada.  
   
 ## <a name="example"></a>Exemplo  
   

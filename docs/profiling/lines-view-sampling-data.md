@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b35964aeef4323f4daff01d77aef5d3d5bf7f66
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: cb965b9a93a278a4c51ea4661f683ebafc2838fd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914808"
 ---
-# <a name="lines-view---sampling-data"></a>Exibição de linhas – Dados de Amostragem
+# <a name="lines-view---sampling-data"></a>Exibição de linhas – dados de amostragem
 A visualização Linhas de dados de amostragem lista os dados de desempenho das instruções que estavam em execução quando os exemplos foram coletados na criação de perfil.  
   
 > [!NOTE]
@@ -26,21 +27,21 @@ A visualização Linhas de dados de amostragem lista os dados de desempenho das 
   
  Em um arquivo de origem, uma instrução pode abranger mais de uma linha em um arquivo de origem, e uma única linha pode incluir mais de uma instrução. Uma instrução é identificada pelo seguinte:  
   
--   O arquivo de origem que contém a instrução da função.  
+- O arquivo de origem que contém a instrução da função.  
   
--   A função que contém a instrução.  
+- A função que contém a instrução.  
   
--   A linha de origem em que a instrução se inicia.  
+- A linha de origem em que a instrução se inicia.  
   
--   O caractere na linha de origem em que a instrução se inicia.  
+- O caractere na linha de origem em que a instrução se inicia.  
   
--   A linha de origem em que a instrução termina.  
+- A linha de origem em que a instrução termina.  
   
--   O caractere na linha de origem em que a instrução termina.  
+- O caractere na linha de origem em que a instrução termina.  
   
- A coluna de Nome de Linha fornece uma concatenação classificável dos dados do identificador.  
+  A coluna de Nome de Linha fornece uma concatenação classificável dos dados do identificador.  
   
- Por definição, uma instrução não chama outras funções. Portanto, apenas valores exclusivos são listados.  
+  Por definição, uma instrução não chama outras funções. Portanto, apenas valores exclusivos são listados.  
   
 |Column|Descrição|  
 |------------|-----------------|  
@@ -61,4 +62,4 @@ A visualização Linhas de dados de amostragem lista os dados de desempenho das 
 |**% de Amostras Exclusivas**|O percentual de todas as amostras coletadas na criação de perfil durante a execução da linha de função.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibição de Linhas – Amostragem](../profiling/lines-view-dotnet-memory-sampling-data.md)
+ [Exibição de linhas – amostragem](../profiling/lines-view-dotnet-memory-sampling-data.md)

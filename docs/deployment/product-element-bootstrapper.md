@@ -17,18 +17,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fa27f5b2af87ec3a174c26ccae1ad4e4e47749b3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 90179df4595ea58a771dd941ea388555b52c7374
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080399"
 ---
-# <a name="ltproductgt-element-bootstrapper"></a>&lt;Produto&gt; elemento (Bootstrapper)
+# <a name="ltproductgt-element-bootstrapper"></a>&lt;Produto&gt; elemento (bootstrapper)
 O `Product` é o elemento XML de nível superior dentro de um arquivo de produto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <Product  
 ProductCode  
 >  
@@ -146,9 +147,9 @@ ProductCode
 |`ProductCode`|Um identificador exclusivo para o produto.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir mostra um arquivo completa do produto para instalar o [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
+ O exemplo de código a seguir mostra um arquivo de produto completo para instalar o [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
   
 <Product  

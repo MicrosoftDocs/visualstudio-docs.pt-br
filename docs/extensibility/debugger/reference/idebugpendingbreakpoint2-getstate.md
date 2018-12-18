@@ -16,11 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 56665204381659dc95b73cf5b904c44df3a7d245
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 446c4aceb9b9662579253aa189e9f17ad0779bce
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49927769"
 ---
 # <a name="idebugpendingbreakpoint2getstate"></a>IDebugPendingBreakpoint2::GetState
 Obtém o estado do ponto de interrupção pendente.  
@@ -41,10 +42,10 @@ int GetState(
   
 #### <a name="parameters"></a>Parâmetros  
  `pState`  
- [out no] Um [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) estrutura que é preenchida com uma descrição deste pendente de ponto de interrupção.  
+ [no, out] Um [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) estrutura será preenchida com uma descrição deste pendente do ponto de interrupção.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   

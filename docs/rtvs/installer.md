@@ -10,11 +10,12 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 5370a399ba5d66a868f3804106e062c214e4fe30
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2dd23b87bc3d362f7d198cdd0e5d63e0ebac26d5
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35667048"
 ---
 # <a name="welcome-to-r-tools-for-visual-studio"></a>Bem-vindo às Ferramentas do R para Visual Studio
 
@@ -25,7 +26,7 @@ Obrigado por instalar às RTVS (Ferramentas do R para Visual Studio)! Confira e 
 ## <a name="resources"></a>Recursos
 
 - [Documentação](index.md)
-- [Installation steps](installing-r-tools-for-visual-studio.md) (Etapas de instalação)
+- [Como instalar as Ferramentas do R para Visual Studio](installing-r-tools-for-visual-studio.md)
 - [Submit and browse bugs and feature requests on GitHib](https://github.com/Microsoft/RTVS/issues) (Enviar e procurar erros e solicitações de recursos no GitHi)
 - [Explore and contribute to the source code](https://github.com/Microsoft/RTVS/blob/master/LICENSE) (Explorar e contribuir no código-fonte)
 - Para enviar comentários sem usar o Github (o que é preferível), use o menu **Ferramentas do R > Comentários** do Visual Studio.

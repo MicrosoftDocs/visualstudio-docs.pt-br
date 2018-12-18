@@ -10,13 +10,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e030b6b770a9748363c0ddc4809baeed458af048
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6f30131debe9dd4e35f115531a0e00afeb38a492
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34690696"
 ---
-# <a name="collecting-application-statistics-for-services-by-using-the-profiler-sampling-method"></a>Coletando estatísticas do aplicativo para serviços usando o método de amostragem do criador de perfil
+# <a name="collect-application-statistics-for-services-by-using-the-profiler-sampling-method"></a>Coletar estatísticas do aplicativo para serviços usando o método de amostragem do criador de perfil
 Esta seção descreve os procedimentos e as opções para coletar estatísticas de desempenho de serviços Windows usando o método de amostragem da linha de comando.  
   
 > [!NOTE]
@@ -27,25 +28,28 @@ Esta seção descreve os procedimentos e as opções para coletar estatísticas 
 |Tarefa|Conteúdo relacionado|  
 |----------|---------------------|  
 |**Anexar o criador de perfil a um serviço .NET**|-   [How to: Attach the Profiler to a .NET Service to Collect Application Statistics (Como anexar o criador de perfil a um serviço do .NET para coletar estatísticas do aplicativo)](../profiling/how-to-attach-the-profiler-to-a-dotnet-service-to-collect-application-statistics-by-using-the-command-line.md)|  
-|**Add tier-interaction data (Adicionar dados de interação de camada)**|-   [Coletando dados de interação entre camadas](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
+|**Add tier-interaction data (Adicionar dados de interação de camada)**|-   [Coletar dados de interação entre camadas](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
 |**Attach the profiler to a C/C++ service (Anexar o criador de perfil a um serviço C/C++)**|-   [How to: Attach the Profiler to a Native Service to Collect Application Statistics (Como anexar o criador de perfil a um serviço nativo para coletar estatísticas do aplicativo)](../profiling/how-to-attach-the-profiler-to-a-native-service-to-collect-application-statistics-by-using-the-command-line.md)|  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
   
-### <a name="profiling-windows-services"></a>Criando o perfil de Serviços Microsoft Windows  
+### <a name="profile-windows-services"></a>Criar perfil de serviços do Windows  
   
 |Tarefa|Conteúdo relacionado|  
 |----------|---------------------|  
-|**Criar perfil usando o método de instrumentação**|-   [Coletando dados de tempo detalhados usando a instrumentação](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method-from-the-profiler-command-line.md)|  
-|**Profile .NET memory allocation and garbage collection (Criar o perfil de alocação de memória e coleta de lixo do .NET)**|-   [Coletando dados de memória do .NET](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md)|  
-|**Criar perfil de contenção de recursos e atividade de thread**|-   [Coletando dados de simultaneidade](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|  
+|**Criar perfil usando o método de instrumentação**|-   [Coletar dados de tempo detalhados usando a instrumentação](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md)|  
+|**Profile .NET memory allocation and garbage collection (Criar o perfil de alocação de memória e coleta de lixo do .NET)**|-   [Coletar dados de memória do .NET](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md)|  
+|**Criar perfil de contenção de recursos e atividade de thread**|-   [Coletar dados de simultaneidade](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|  
   
-### <a name="profiling-by-using-the-sampling-method"></a>Criação de perfil usando o método de amostragem  
+
+### <a name="profile-by-using-the-sampling-method"></a>Criar perfil usando o método de amostragem  
   
 |Tarefa|Conteúdo relacionado|  
 |----------|---------------------|  
-|**Criar o perfil de aplicativos autônomos (clientes)**|-   [Coletando estatísticas do aplicativo usando amostragem](../profiling/collecting-application-statistics-for-stand-alone-applications-by-using-the-profiler-command-line.md)|  
-|**Criar o perfil de aplicativos Web ASP.NET**|-   [Coletando estatísticas do aplicativo usando amostragem](../profiling/collecting-application-statistics-for-aspnet-web-applications-using-the-profiler-sampling-method-from-the-command-line.md)|  
+|**Criar o perfil de aplicativos autônomos (clientes)**|-   [Coletar estatísticas do aplicativo usando amostragem](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|  
+|**Criar o perfil de aplicativos Web ASP.NET**|-   [Coletar estatísticas do aplicativo usando amostragem](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md)|  
   
-### <a name="analyzing-sampling-data-views-and-reports"></a>Analisando exibições e relatórios dos dados de amostragem  
+### <a name="analyze-sampling-data-views-and-reports"></a>Analisar exibições e relatórios dos dados de amostragem  
  [Exibições de dados do método de amostragem](../profiling/profiler-sampling-method-data-views.md)
+
+  

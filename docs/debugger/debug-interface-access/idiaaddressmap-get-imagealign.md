@@ -1,5 +1,5 @@
 ---
-title: ': Get_imagealign | Microsoft Docs'
+title: 'Idiaaddressmap:: Get_imagealign | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bd085e59606b1e8598359636208cf308ff0b711d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 409b33953d6674066eff9570288de2e3912bdab3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908817"
 ---
 # <a name="idiaaddressmapgetimagealign"></a>IDiaAddressMap::get_imageAlign
 Recupera o alinhamento da imagem atual.  
@@ -36,10 +37,10 @@ HRESULT get_imageAlign (
  [out] Retorna o valor de alinhamento da imagem do executável.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Imagens são alinhadas com limites de memória específico, dependendo de como a imagem foi carregada e criada. O alinhamento é normalmente em limites de 1, 2, 4, 8, 16, 32 ou 64 bytes. O alinhamento da imagem pode ser definido com uma chamada para o [: Put_imagealign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md) método.  
+ Imagens são alinhadas a limites de memória específico, dependendo de como a imagem foi carregada e criada. O alinhamento é normalmente em limites de 1, 2, 4, 8, 16, 32 ou 64 bytes. O alinhamento da imagem pode ser definido com uma chamada para o [idiaaddressmap:: Put_imagealign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md) método.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   

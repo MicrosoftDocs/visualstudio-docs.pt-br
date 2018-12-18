@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31472000"
 ---
 # <a name="help-menu-commands"></a>Comandos do menu Ajuda
 O **ajuda** menu fornece comandos para abrir arquivos de Ajuda.  

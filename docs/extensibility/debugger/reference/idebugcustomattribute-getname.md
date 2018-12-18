@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a33b4507cb54095a38671eaf310d87dae180be6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 11a4b986799cf03221b4af077fc3e1e5809c4137
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866474"
 ---
 # <a name="idebugcustomattributegetname"></a>IDebugCustomAttribute::GetName
 Obtém o nome do atributo personalizado.  
@@ -43,10 +44,10 @@ int GetName(
  [out] Retorna uma cadeia de caracteres que contém o nome do atributo personalizado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Nomeado retornado por esse método corresponde ao nome da classe usada para declarar o atributo. Isso pode corresponder com o nome da classe de atributos personalizados em si não exatamente como c# permite que o sufixo "Atributo" a ser removido de um nome de atributo personalizado quando ele é usado em uma declaração de.  
+ Nomeado retornado por esse método corresponde ao nome da classe usada para declarar o atributo. Não exatamente, isso pode corresponder ao nome da classe de atributo personalizado em si como o c# permite que o sufixo "Attribute" a ser removido de um nome de atributo personalizado quando ele é usado em uma declaração.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

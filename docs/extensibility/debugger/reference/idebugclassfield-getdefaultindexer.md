@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3f16f4dc94a5019fa66425f55c8f7706db566db9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 75bb1bc0adb63a3c606b03cafc0b8a8c92d956df
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934308"
 ---
 # <a name="idebugclassfieldgetdefaultindexer"></a>IDebugClassField::GetDefaultIndexer
 Obtém o nome do indexador padrão.  
@@ -43,10 +44,10 @@ int GetDefaultIndexer(
  [out] Retorna uma cadeia de caracteres que contém o nome do indexador padrão.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK ou retornará S_FALSE se não há nenhum indexador padrão. Caso contrário, retornará um código de erro.  
+ Se for bem-sucedido, Retorna S_OK ou retornará S_FALSE se não houver nenhum indexador padrão. Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- O indexador padrão de uma classe é a propriedade que está marcada como o `Default` propriedade acessos de matriz. Isso é específico para [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]. Aqui está um exemplo de um indexador padrão declarado em [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] e como ele é usado.  
+ O indexador padrão de uma classe é a propriedade que está marcada como o `Default` propriedade para acessos de matriz. Isso é específico para [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]. Aqui está um exemplo de um indexador padrão declarado no [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] e como ele é usado.  
   
 ```vb  
 Imports System.Collections;  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31121047"
 ---
 # <a name="ienumdebugboundbreakpoints2"></a>IEnumDebugBoundBreakpoints2
 Essa interface enumera os pontos de interrupção associados associados a um ponto de interrupção pendente ou evento de associados do ponto de interrupção.  

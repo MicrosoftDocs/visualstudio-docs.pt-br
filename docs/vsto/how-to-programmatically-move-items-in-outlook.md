@@ -1,5 +1,5 @@
 ---
-title: 'Como: mover itens programaticamente no Outlook | Microsoft Docs'
+title: 'Como: mover itens no Outlook de forma programática'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -15,31 +15,32 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a9eca20d533ba429db8b4227d5620c507fd805a7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fced6a5e41d2b79d32575f20d224f75053acb988
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257716"
 ---
-# <a name="how-to-programmatically-move-items-in-outlook"></a>Como mover itens no Outlook programaticamente
-  Este exemplo move mensagens não lidas do **caixa de entrada** para uma pasta chamada **teste**. O exemplo só move as mensagens com a palavra **teste** no `Subject` campo.  
+# <a name="how-to-programmatically-move-items-in-outlook"></a>Como: mover itens no Outlook de forma programática
+  Este exemplo move mensagens não lidas do **caixa de entrada** para uma pasta chamada **teste**. O exemplo só move as mensagens que tenham a palavra **teste** no `Subject` campo.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[Trin_OL_MoveItems#1](../vsto/codesnippet/CSharp/Trin_OL_MoveItems/thisaddin.cs#1)]  
   
-## <a name="compiling-the-code"></a>Compilando o código  
+## <a name="compile-the-code"></a>Compilar o código  
  Este exemplo requer:  
   
 -   Uma pasta de email do Outlook chamada **teste**.  
   
--   Uma mensagem que chega com a palavra **teste** no `Subject` campo.  
+-   Uma mensagem de email que chega com a palavra **teste** no `Subject` campo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhando com pastas](../vsto/working-with-folders.md)   
- [Como: recuperar programaticamente uma pasta por nome](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)   
- [Como: programaticamente pesquisar em uma pasta específica](../vsto/how-to-programmatically-search-within-a-specific-folder.md)   
- [Como executar ações de forma programática quando uma mensagem de email é recebida](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)  
+ [Trabalhar com pastas](../vsto/working-with-folders.md)   
+ [Como: recuperar uma pasta por nome de forma programática](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)   
+ [Como: pesquisar em uma pasta específica de forma programática](../vsto/how-to-programmatically-search-within-a-specific-folder.md)   
+ [Como: executar ações programaticamente quando uma mensagem de email é recebida](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)  
   
   

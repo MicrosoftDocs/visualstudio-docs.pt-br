@@ -1,5 +1,5 @@
 ---
-title: Idiaenumlinenumbers | Microsoft Docs
+title: 'Idiaenumlinenumbers:: Next | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6015658a72c264f1421c782a1e6e6c28038748a1
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 9a8c00aa5b3d6e6a9b9251075cc5cc065119cc95
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909855"
 ---
 # <a name="idiaenumlinenumbersnext"></a>IDiaEnumLineNumbers::Next
 Recupera um número especificado de números de linha na sequência de enumeração.  
@@ -41,10 +42,10 @@ HRESULT Next (
  [out] Retorna uma matriz de [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) objetos que representam os números de linha desejado.  
   
  pceltFetched  
- [out] Retorna o número de números de linha no enumerador busca.  
+ [out] Retorna o número de números de linha no enumerador buscado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver nenhuma mais números de linha. Caso contrário, retornará um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver nenhum mais números de linha. Caso contrário, retornará um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   

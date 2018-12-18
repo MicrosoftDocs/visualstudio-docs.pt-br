@@ -15,13 +15,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: adc76c12570191e8b7b4635b8963f16aa4d21c13
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 05b23039540ed520e2298222e92131248fef0e3b
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498361"
 ---
-# <a name="fullclassname-element-visual-studio-template-wizard-extension"></a>Elemento FullClassName (Extensão do Assistente de Modelo do Visual Studio)
+# <a name="fullclassname-element-visual-studio-template-wizard-extension"></a>Elemento FullClassName (extensão de Assistente de modelo do Visual Studio)
 O nome totalmente qualificado da classe que implementa o `IWizard` interface.  
   
  \<VSTemplate >  
@@ -31,7 +32,7 @@ O nome totalmente qualificado da classe que implementa o `IWizard` interface.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <FullClassName>ClassName</FullClassName>  
 ```  
   
@@ -53,7 +54,7 @@ O nome totalmente qualificado da classe que implementa o `IWizard` interface.
 ## <a name="text-value"></a>Valor de texto  
  Um valor de texto é obrigatório.  
   
- Esse texto Especifica a classe que implementa o `IWizard` interface. A classe especificada deve existir no assembly especificado pelo [Assembly](../extensibility/assembly-element-visual-studio-template-wizard-extension.md) elemento.  
+ Esse texto Especifica a classe que implementa o `IWizard` interface. A classe especificada deve existir no assembly especificado pela [Assembly](../extensibility/assembly-element-visual-studio-template-wizard-extension.md) elemento.  
   
 ## <a name="remarks"></a>Comentários  
  O `FullClassName` é um elemento filho obrigatório de `WizardExtension`.  
@@ -91,5 +92,5 @@ O nome totalmente qualificado da classe que implementa o `IWizard` interface.
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)   
- [Como usar assistentes com modelos do projeto](../extensibility/how-to-use-wizards-with-project-templates.md)
+ [Criar modelos de projeto e item](../ide/creating-project-and-item-templates.md)   
+ [Como: usar assistentes com modelos de projeto](../extensibility/how-to-use-wizards-with-project-templates.md)

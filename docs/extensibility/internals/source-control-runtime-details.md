@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130306"
 ---
 # <a name="source-control-runtime-details"></a>Detalhes de tempo de execução de controle do código-fonte
 Um projeto é adicionado ao controle de origem quando o usuário adiciona um arquivo no projeto ao controle de origem ou por meio de um controlador de automação, como um assistente. Um projeto não especificar para si mesmo que está sob controle do código-fonte; Ele dá suporte ao controle de origem, mas deve ser adicionado a ele manualmente.  

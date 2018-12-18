@@ -1,24 +1,22 @@
 ---
-title: Criando modelos de item multiarquivos para o Visual Studio | Microsoft Docs
-ms.custom: 
+title: Criando modelos de item multiarquivos para o Visual Studio
 ms.date: 01/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio templates, creating multi-file item templates
 - multi-file item templates
 - item templates, creating multi-file item templates
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: f1d5b11c97b7f214a13225b5605f47e3d3a45966
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+manager: douge
+ms.openlocfilehash: 0ba36e666daf7940971dff587aa483d62f97b6a9
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31942150"
 ---
 # <a name="how-to-create-multi-file-item-templates"></a>Como criar modelos de item multiarquivos
 
@@ -40,7 +38,7 @@ Você pode criar um modelo de item multiarquivos da mesma maneira que se cria um
 
 1. Crie o modelo de item da mesma forma em que você criaria manualmente um modelo de item de arquivo único, mas inclua cada arquivo que constitui o item multiarquivos.
 
-1. No arquivo XML .vstemplate, adicione um elemento `ProjectItem` para cada arquivo individual e, em seguida, adicione um atributo `TargetFileName` para este elemento. Defina os valores do atributo `TargetFileName` como $fileinputname$.*FileExtension*, em que *FileExtension* é a extensão de arquivo do arquivo que está sendo incluído no modelo. Por exemplo:
+1. No arquivo XML *.vstemplate*, adicione um elemento `ProjectItem` a cada arquivo individual e, em seguida, adicione um atributo `TargetFileName` a este elemento. Defina os valores do atributo `TargetFileName` como *$fileinputname$.ExtensãoDeArquivo*, em que *ExtensãoDeArquivo* é a extensão de arquivo do arquivo que está sendo incluído no modelo. Por exemplo:
 
     ```xml
     <ProjectItem TargetFileName="$fileinputname$.vb">
@@ -59,13 +57,13 @@ Você pode criar um modelo de item multiarquivos da mesma maneira que se cria um
 
 1. Selecione os arquivos a serem incluídos em seu modelo, clique com o botão direito do mouse na seleção e escolha **Enviar para** > **Pasta compactada (zipada)**.
 
-   Os arquivos selecionados são compactados em um arquivo .zip.
+   Os arquivos selecionados são compactados em um arquivo *.zip*.
 
-1. Copie o arquivo .zip para o local do modelo de item do usuário. Por padrão, o diretório é %USERPROFILE%\Documents\Visual Studio \<Version\>\Templates\ItemTemplates. Para obter mais informações, consulte [Como localizar e organizar modelos](../ide/how-to-locate-and-organize-project-and-item-templates.md).
+1. Copie o arquivo *.zip* para o local do modelo de item do usuário. Por padrão, o diretório é *%USERPROFILE%\Documents\Visual Studio \<Versão\>\Templates\ItemTemplates*. Para obter mais informações, consulte [Como localizar e organizar modelos](../ide/how-to-locate-and-organize-project-and-item-templates.md).
 
 1. Feche o Visual Studio e, em seguida, o reabra.
 
-1. Crie um novo projeto ou abra um projeto existente e, em seguida, escolha **Projeto** > **Adicionar Novo Item...** ou pressione **Ctrl** + **Shift** + **A**.
+1. Crie um novo projeto ou abra um projeto existente e, em seguida, escolha **Projeto** > **Adicionar Novo Item** ou pressione **Ctrl**+**Shift**+**A**.
 
    O modelo de item multiarquivos aparece na caixa de diálogo **Adicionar Novo Item**.
 
@@ -98,7 +96,7 @@ O exemplo a seguir mostra um modelo do Windows Forms. Quando um item é criado c
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)  
-[Como criar modelos de item](../ide/how-to-create-item-templates.md)  
-[Parâmetros de modelo](../ide/template-parameters.md)  
-[Como substituir parâmetros em um modelo](../ide/how-to-substitute-parameters-in-a-template.md)
+- [Criar modelos de projeto e de item](../ide/creating-project-and-item-templates.md)
+- [Como criar modelos de item](../ide/how-to-create-item-templates.md)
+- [Parâmetros de modelo](../ide/template-parameters.md)
+- [Como substituir parâmetros em um modelo](../ide/how-to-substitute-parameters-in-a-template.md)

@@ -1,35 +1,171 @@
 ---
-title: Log de Alterações (Ferramentas do Visual Studio para Unity) | Microsoft Docs
+title: Log de alterações (Ferramentas do Visual Studio para Unity, Windows) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/23/2018
-ms.reviewer: ''
-ms.suite: ''
+ms.date: 08/06/2018
 ms.technology: vs-unity-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
-author: dantogno
-ms.author: v-davian
+author: TerryGLee
+ms.author: tglee
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 6670f346f4834807296f6385bf23e573400f96a3
-ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
+ms.openlocfilehash: da2e91e15572a9904115926447523d8dba23a36a
+ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51000720"
 ---
-# <a name="change-log-visual-studio-tools-for-unity"></a>Log de alterações (Ferramentas do Visual Studio para Unity)
+# <a name="change-log-visual-studio-tools-for-unity-windows"></a>Log de alterações (Ferramentas do Visual Studio para Unity, Windows)
 Log de alterações de Ferramentas do Visual Studio para Unity.
 
+## <a name="3807"></a>3.8.0.7
+ Lançado em 20 de setembro de 2018
+
+### <a name="bug-fixes"></a>Correções de bug
+
+-   **Depurador:**
+
+    -   Corrigido um deadlock na biblioteca usada para se comunicar com o mecanismo de depuração do Unity, causando o congelamento do Visual Studio ou Unity, especialmente ao pressionar "Anexar ao Unity" ou ao reiniciar o jogo.
+
+## <a name="3806"></a>3.8.0.6
+ Lançado em 27 de agosto de 2018
+
+### <a name="bug-fixes"></a>Correções de bug
+
+-   **Integração:**
+
+    -   Correção do recarregamento de projetos e soluções.
+
+## <a name="3805"></a>3.8.0.5
+ Lançado em 20 de agosto de 2018
+
+### <a name="bug-fixes"></a>Correções de bug
+
+-   **Integração:**
+
+    -   Correção do descarte de assinatura de monitoramento de projeto.
+
+## <a name="3804"></a>3.8.0.4
+ Lançado em 14 de agosto de 2018
+
+### <a name="new-features"></a>Novos recursos
+
+-   **Avaliação:**
+
+    -   Foi adicionado suporte para valores de ponteiro.
+
+    -   Foi adicionado suporte para métodos genéricos.
+
+### <a name="bug-fixes"></a>Correções de bug
+
+-   **Integração:**
+
+    -   O recarregamento inteligente com vários projetos foi alterado.
+
+## <a name="3803"></a>3.8.0.3
+ Lançado em 24 de julho de 2018
+
+### <a name="bug-fixes"></a>Correções de bug
+
+-   **Geração do Projeto:**
+
+    -   Foi revertida a solução alternativa para um bug de desempenho do Unity que foi corrigido pelo Unity.
+
+## <a name="3802"></a>3.8.0.2
+ Lançado em 7 de julho de 2018
+
+### <a name="bug-fixes"></a>Correções de bug
+
+-   **Geração do Projeto:**
+
+    -   Solução alternativa temporária para um bug de desempenho do Unity: armazenar em cache MonoIslands ao gerar projetos.
+
+## <a name="3801"></a>3.8.0.1
+ Lançado em 26 de junho de 2018
+
+### <a name="new-features"></a>Novos recursos
+
+-   **Depuração:**
+
+    -   Foi adicionado suporte para comandos UserLog e UserBreak.
+
+    -   Foi adicionado o suporte para carregamento do tipo lento (otimizando a carga da rede e a latência de resposta de depurador).
+
+### <a name="bug-fixes"></a>Correções de bug
+
+-   **Avaliação:**
+
+    -   Melhorias na avaliação da expressão e na pesquisa de método de operador binário.
+
+## <a name="3800"></a>3.8.0.0
+ Lançado em 30 de maio de 2018
+
+### <a name="new-features"></a>Novos recursos
+
+-   **Depuração:**
+
+    -   Foi adicionado suporte para exibir as variáveis em construções de assíncronas.
+
+    -   Foi adicionado suporte para o processamento de tipos aninhados ao definir pontos de interrupção, para evitar avisos em construções do compilador.
+
+-   **Integração:**
+
+    -   Foi adicionado suporte para gramáticas textmate para sombreadores (a carga de trabalho do C++ não é mais necessária para coloração de código do sombreador).
+
+### <a name="bug-fixes"></a>Correções de bug
+
+-   **Geração do Projeto:**
+
+    -   Não converta mais um pdb portátil para mdb ao usar o novo tempo de execução do Unity.
+
+## <a name="3701"></a>3.7.0.1
+ Lançado em 7 de maio de 2018
+
+### <a name="bug-fixes"></a>Correções de bug
+
+-   **Instalador:**
+
+    -   Correção de problema de dependência ao usar builds experimentais.
+
+## <a name="3700"></a>3.7.0.0
+ Lançado em 7 de maio de 2018
+
+### <a name="new-features"></a>Novos recursos
+
+-   **Depuração:**
+
+    -   Adição de suporte para depuração orquestrada (depuração de vários players/editores na mesma sessão do Visual Studio).
+
+    -   Adição de suporte para depuração de player USB no Android.
+
+    -   Adição de suporte para depuração de player UWP/IL2CPP.
+
+-   **Avaliação:**
+
+    -   Adição de suporte para especificadores hexadecimais.
+
+    -   Experiência de avaliação da janela de inspeção aprimorada.
+
+### <a name="bug-fixes"></a>Correções de bug
+
+-   **Integração:**
+
+    -   Correção do uso de configurações de exceção.
+
+-   **Geração do Projeto:**
+
+    -   Exclusão de unidades de compilação do gerenciador de pacotes da geração.
+
 ## <a name="3605"></a>3.6.0.5
- Lançado em 13/03/2018
+ Lançado em 13 de março de 2018
 
 ### <a name="new-features"></a>Novos recursos
 
 -   **Geração do Projeto:**
 
-    -   Foi adicionado o suporte para o gerador de projeto novo no Unity 2018.1
+    -   Adicionado o suporte para o gerador de projeto novo no Unity 2018.1.
 
 ### <a name="bug-fixes"></a>Correções de bug
 
@@ -42,7 +178,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
     -   Foi corrigida a configuração da próxima instrução.
 
 ## <a name="3604"></a>3.6.0.4
- Lançado em 05/03/2018
+ Lançado em 5 de março de 2018
 
 ### <a name="bug-fixes"></a>Correções de bug
 
@@ -55,7 +191,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
     -   Correção dos problemas de timing com 2018.1 e ativação de plug-in.
 
 ## <a name="3603"></a>3.6.0.3
- Lançado em 23/02/2018
+ Lançado em 23 de fevereiro de 2018
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -74,7 +210,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
     -   Corrigida a quebra de exceções que são lançadas fora do código do usuário.
 
 ## <a name="3602"></a>3.6.0.2
- Lançado em 07/02/2018
+ Lançado em 7 de fevereiro de 2018
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -87,20 +223,20 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   **Integração:**
 
     -   Somente recarrega projetos em alterações externas (com a limitação).
- 
+
 ## <a name="3601"></a>3.6.0.1
- Lançado em 24/01/2018
+ Lançado em 24 de janeiro de 2018
 
 ### <a name="bug-fixes"></a>Correções de bug
 
 -   **Integração:**
 
     -   Correção de pdb automático para conversão de símbolo de depuração de mdb.
-    
+
     -   Correção de chamada indireta para EditorPrefs.GetBool afetando o inspetor ao tentar alterar o tamanho da matriz.
- 
+
 ## <a name="3600"></a>3.6.0.0
- Lançado em 10/01/2018
+ Lançado em 10 de janeiro de 2018
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -115,7 +251,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   **Depurador:**
 
     -   Adicionado o suporte para atributos de DebuggerHidden/DebuggerStepThrough com o novo tempo de execução do Unity.
-    
+
 -   **Assistentes:**
 
     -   Introduza 'Última' versão para os assistentes.
@@ -129,13 +265,13 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   **Depurador:**
 
     -   Correção de uma corrida na manipulação de eventos recentes.
-    
+
 -   **Assistentes:**
 
     -   Atualize o contexto do roslyn antes de inserir o método.
 
 ## <a name="3503"></a>3.5.0.3
- Lançado em 09/01/2018
+ Lançado em 9 de janeiro de 2018
 
 ### <a name="bug-fixes"></a>Correções de bug
 
@@ -144,7 +280,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
     -   Correção de pdb automático para conversão de símbolo de depuração de mdb.
 
 ## <a name="3502"></a>3.5.0.2
- Lançado em 04/12/2017
+ Lançado em 4 de dezembro de 2017
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -177,7 +313,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
     -   Não force o sinalizador AllowAttachedDebuggingOfEditor do Unity, uma vez que o padrão agora é ‘true’.
 
 ## <a name="3402"></a>3.4.0.2
- Lançada em 19/09/2017
+ Lançado em 19 de setembro de 2017
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -208,7 +344,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
     -   Corrigida a referência a Microsoft.CSharp fixa para nível de API 4.6.
 
 ## <a name="3302"></a>3.3.0.2
- Lançado em 15/08/2017
+ Lançado em 15 de agosto de 2017
 
 ### <a name="bug-fixes"></a>Correções de bug
 
@@ -217,7 +353,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
     -   Correção da geração de solução do Visual Studio no Unity 5.5 e nas versões anteriores.
 
 ## <a name="3300"></a>3.3.0.0
- Lançado em 14/08/2017
+ Lançado em 14 de agosto de 2017
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -246,7 +382,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
     -   Corrigidas definições com níveis de API.
 
 ## <a name="3200"></a>3.2.0.0
- Lançado em 10/05/2017
+ Lançado em 10 de maio de 2017
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -263,7 +399,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
     -   Corrigida cintilação com mensagens Unity.
 
 ## <a name="3100"></a>3.1.0.0
- Lançado em 07/04/2017
+ Lançado em 7 de abril de 2017
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -292,12 +428,12 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
     -   Versão do assembly removido após o processamento.
 
 ## <a name="3001"></a>3.0.0.1
- Lançado em 07/03/2017
+ Lançado em 7 de março de 2017
 
 ### <a name="this-version-includes-all-new-features-and-bug-fixes-introduced-with-28x-series"></a>Esta versão inclui todos os novos recursos e as correções de bugs introduzidas com a série 2.8.x.
 
 ## <a name="2820---30-preview-3"></a>2.8.2.0 – 3.0 versão prévia 3
- Lançado em 25/01/2017
+ Lançado em 25 de janeiro de 2017
 
 ### <a name="bug-fixes"></a>Correções de bug
 
@@ -306,7 +442,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
     -   Corrigida regressão em que projetos de Plug-Ins eram referenciados duas vezes, primeiro como uma DLL binária em então como uma referência de projeto.
 
 ## <a name="2810---30-preview-2"></a>2.8.1.0 – 3.0 versão prévia 2
- Lançado em 23/01/2017
+ Lançado em 23 de janeiro de 2017
 
 ### <a name="bug-fixes"></a>Correções de bug
 
@@ -333,7 +469,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
     -   Mudado para https para ter a documentação do Unity remota como destino.
 
 ## <a name="2800---30-preview"></a>2.8.0.0 – 3.0 versão prévia
- Lançado em 17/11/2016
+ Lançado em 17 de novembro de 2016
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -400,7 +536,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
     -   Corrigido um bug que impedia a compilação ao compilar um script com um nome de arquivo codificado para web.
 
 ## <a name="2300"></a>2.3.0.0
- Lançado em 14/07/2016
+ Lançado em 14 de julho de 2016
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -435,7 +571,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
     -   Corrigidos vários problemas de avaliação de expressão.
 
 ## <a name="2200"></a>2.2.0.0
- Lançado em 04/02/2016
+ Lançado em 4 de fevereiro de 2016
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -451,7 +587,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 
     -   Adicionada uma opção para configurar a visibilidade das mensagens MonoBehavior.
 
-    -   Removidas páginas de propriedade do Visual Studio que não são relevantes para projetos do Unity.
+    -   Remoção das páginas de propriedades do Visual Studio que não são relevantes para projetos do Unity.
 
 ### <a name="bug-fixes"></a>Correções de bug
 
@@ -482,7 +618,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
     -   Corrigidos problemas com a desinstalação do VSTU quando a mesma versão do VSTU é instalada para várias versões diferentes do Visual Studio. Por exemplo, quando tanto VSTU **2015** 2.1.0.0 quanto VSTU **2013** 2.1.0.0 foram instalados.
 
 ## <a name="2100"></a>2.1.0.0
- Lançado em 08/09/2015
+ Lançado em 8 de setembro de 2015
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -503,7 +639,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigidos pontos de interrupção de contagem de ocorrências no Visual Studio 2015.
 
 ## <a name="2000"></a>2.0.0.0
- Lançado em 20/07/2015
+ Lançado em 20 de julho de 2015
 
 ### <a name="bug-fixes"></a>Correções de bug
 
@@ -538,7 +674,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
     -   Corrigida a inspeção de matrizes vazias.
 
 ## <a name="1990---20-preview-2"></a>1.9.9.0 – 2.0 versão prévia 2
- Lançado em 02/04/2015
+ Lançado em 2 de abril de 2015
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -627,7 +763,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   **Interface do Usuário:** dá suporte a temas do Visual Studio para ícones e menu de contexto.
 
 ## <a name="1980---20-preview"></a>1.9.8.0 – 2.0 versão prévia
- Lançado em 12/11/2014
+ Lançado em 12 de novembro de 2014
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -666,7 +802,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Não registre o retorno de chamada de log se não for necessário.
 
 ## <a name="1920"></a>1.9.2.0
- Lançado em 09/10/2014
+ Lançado em 9 de outubro de 2014
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -689,7 +825,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrija o bug em que todos os ativos eram incluídos nos arquivos de projeto se o filtro de extensão estivesse vazio.
 
 ## <a name="1910"></a>1.9.1.0
- Lançado em 22/09/2014
+ Lançado em 22 de setembro de 2014
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -705,9 +841,9 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 
 ### <a name="bug-fixes"></a>Correções de bug
 
--   Corrija a manipulação de temas do Visual Studio. Anteriormente, as caixas de diálogo em temas pretos podiam aparecer vazias (problemas de Conexão [nº 932637](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/932637/) e [nº 936439](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/936439/)).
+-   Corrija a manipulação de temas do Visual Studio. Anteriormente, as caixas de diálogo em temas pretos podiam aparecer vazias.
 
--   Corrija o congelamento do Unity ao conectar o depurador enquanto o Unity está recompilando (problemas de Conexão [nº 947119](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/947119/) e [nº 969211](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/969211/)).
+-   Corrija o congelamento do Unity ao conectar o depurador enquanto o Unity está recompilando.
 
 -   Corrija pontos de interrupção ao depurar editores ou jogadores remotos compilados em outro sistema.
 
@@ -717,7 +853,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 
 -   Corrija a manipulação de escopo de variáveis no depurador para evitar variáveis dinâmicas que pareçam fora do escopo.
 
--   Corrija a pesquisa de membros estáticos na Avaliação de Expressão do depurador (problema de Conexão [nº 953379](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/953379/)).
+-   Corrija a pesquisa de membros estáticos na Avaliação de Expressão do depurador.
 
 -   Corrija a exibição de tipos na Avaliação de Expressão do depurador para mostrar propriedades e campos estáticos.
 
@@ -734,7 +870,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrija scripts de abertura com VSTU em versões de 64 bits do Unity.
 
 ## <a name="1900"></a>1.9.0.0
- Lançado em 29/07/2014
+ Lançado em 29 de julho de 2014
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -782,7 +918,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 >  Sendo C# a linguagem predominante no ecossistema do Unity (os novos Exemplos de Ativo estão em C#, a documentação do Unity assumirá C# como padrão), removemos o nosso suporte básico para UnityScript e Boo para focar melhor na experiência do C#. Como resultado, soluções VSTU agora são somente C# e são muito mais rápidas para carregar.
 
 ## <a name="1820"></a>1.8.2.0
- Lançado em 07/01/2014
+ Lançado em 7 de janeiro de 2014
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -809,7 +945,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Previna falhas no Unity quando o assembly gerado específico da versão estiver fora de sincronia.
 
 ## <a name="1810"></a>1.8.1.0
- Lançado em 21/11/2013
+ Lançado em 21 de novembro de 2013
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -842,7 +978,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigidos scripts de abertura do Unity para não confundir a ordem ALT+TAB para o Unity 4.2 e superiores.
 
 ## <a name="1800"></a>1.8.0.0
- Lançado em 24/09/2013
+ Lançado em 24 de setembro de 2013
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -883,7 +1019,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigidos valores inconstantes de boolianos na exibição local.
 
 ## <a name="1220"></a>1.2.2.0
- Lançado em 09/07/2013
+ Lançado em 9 de julho de 2013
 
 ### <a name="bug-fixes"></a>Correções de bug
 
@@ -906,7 +1042,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigido o tratamento de assemblies do Unity 4.2 Beta.
 
 ## <a name="1210"></a>1.2.1.0
- Lançado em 09/04/2013
+ Lançado em 9 de abril de 2013
 
 ### <a name="bug-fixes"></a>Correções de bug
 
@@ -919,7 +1055,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigida a associação de pontos de interrupção em algumas DLLs externas.
 
 ## <a name="1200"></a>1.2.0.0
- Lançado em 25/03/2013
+ Lançado em 25 de março de 2013
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -986,10 +1122,10 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigido o bug UVS-11: locais em co-rotinas.
 
 ## <a name="1100---beta-release"></a>1.1.0.0 – versão beta
- Lançado em 09/10/2014
+ Lançado 9 de março, de 2013
 
 ## <a name="10130"></a>1.0.13.0
- Lançado em 21/01/2013
+ Lançado em 21 de janeiro de 2013
 
 ### <a name="bug-fixes"></a>Correções de bug
 
@@ -1012,7 +1148,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigido o tratamento de mensagens longas enviadas do Unity para o UnityVS. Antes disso, mensagens longas poderiam provocar falhas em nossa parte de mensagens do UnityVS. Como consequência, às vezes o UnityVS não abre um arquivo do Unity.
 
 ## <a name="10120"></a>1.0.12.0
- Lançado em 03/01/2013
+ Lançado em 3 de janeiro de 2013
 
 ### <a name="bug-fixes"></a>Correções de bug
 
@@ -1031,7 +1167,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigida uma falha de API em que o código do usuário não conseguia participar do manipulador de retorno de chamada de log.
 
 ## <a name="10110"></a>1.0.11.0
- Lançado em 28/11/2012
+ Lançado em 28 de novembro de 2012
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -1062,7 +1198,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigida falha se não pudermos injetar nosso ícone na barra de status do Visual Studio.
 
 ## <a name="10100"></a>1.0.10.0
- Lançado em 09/10/2012
+ Lançado em 9 de outubro de 2012
 
 ### <a name="bug-fixes"></a>Correções de Bug
 
@@ -1075,7 +1211,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigido o modo como assemblies são recuperados do Unity para evitar o bloqueio de arquivos e confundir o processo de build do Unity.
 
 ## <a name="1090"></a>1.0.9.0
- Lançado em 03/10/2012
+ Lançado em 3 de outubro de 2012
 
 ### <a name="bug-fixes"></a>Correções de bug
 
@@ -1094,7 +1230,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigido o bug UVS-21: ponteiro inválido ao avaliar uma invocação de método para a API de Matemática do Unity.
 
 ## <a name="1080"></a>1.0.8.0
- Lançado em 26/09/2012
+ Lançado em 26 de setembro de 2012
 
 ### <a name="bug-fixes"></a>Correções de bug
 
@@ -1105,7 +1241,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigido como UnityVS é registrado no Visual Studio 2010.
 
 ## <a name="1070"></a>1.0.7.0
- Lançado em 14/09/2012
+ Lançado em 14 de setembro de 2012
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -1121,10 +1257,10 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 >  Devido ao suporte do Visual Studio 2012, foi necessário renomear alguns arquivos de mover outros. O pacote do UnityVS para importar o Unity agora se chama UnityVS 2010 ou 2012 UnityVS para, respectivamente, o Visual Studio 2010 e o Visual Studio 2012. Essa versão também requer que os arquivos de projeto UnityVS sejam regenerados.
 
 ## <a name="1060---internal-build"></a>1.0.6.0 – build interno
- Lançado em 12/09/2012
+ Lançado em 12 de setembro de 2012
 
 ## <a name="1050"></a>1.0.5.0
- Lançado em 10/09/2012
+ Lançado em 10 de setembro de 2012
 
 ### <a name="bug-fixes"></a>Correções de bug
 
@@ -1133,7 +1269,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigida a detecção de instâncias do Unity quando Unity era conectado ao servidor de Ativo. Isso disparou falhas em abrir arquivos do Unity e na conexão automática do depurador do Visual Studio.
 
 ## <a name="1040"></a>1.0.4.0
- Lançado em 05/09/2012
+ Lançado em 5 de setembro de 2012
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -1146,7 +1282,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigida uma falha do UnityVS durante a depuração causada por exceções geradas por métodos ou propriedades dentro do Unity.
 
 ## <a name="1030"></a>1.0.3.0
- Lançado em 04/09/2012
+ Lançado em 4 de setembro de 2012
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -1161,7 +1297,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigida falha aleatória do VS causada pela nossa barra de status personalizada.
 
 ## <a name="1020"></a>1.0.2.0
- Lançado em 30/08/2012
+ Lançado em 30 de agosto de 2012
 
 ### <a name="bug-fixes"></a>Correções de bug
 
@@ -1172,7 +1308,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigido um bug em como assemblies de scripts eram recuperados do Unity com o Unity 4 b7.
 
 ## <a name="1010"></a>1.0.1.0
- Lançado em 28/08/2012
+ Lançado em 28 de agosto de 2012
 
 ### <a name="new-features"></a>Novos recursos
 
@@ -1189,4 +1325,4 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
 -   Corrigida a conclusão para dll dentro da pasta Ativo para UnityScript e Boo.
 
 ## <a name="1000---initial-release"></a>1.0.0.0 – versão inicial
- Lançado em 22/08/2012
+ Lançado em 22 de agosto de 2012

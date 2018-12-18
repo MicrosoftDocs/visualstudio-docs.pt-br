@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31140736"
 ---
 # <a name="supportscodeseparation-element-visual-studio-templates"></a>Elemento SupportsCodeSeparation (modelos do Visual Studio)
 Especifica se o **colocar código em arquivo separado** caixa de seleção está habilitada no **Adicionar Novo Item** caixa de diálogo.  

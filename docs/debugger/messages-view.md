@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31477073"
 ---
 # <a name="messages-view"></a>Exibição de mensagens
 Cada janela tem um fluxo de mensagem associado. Uma janela de exibição de mensagens exibe este fluxo de mensagem. O identificador de janela, o código de mensagem e a mensagem são mostrados. Você pode criar um modo de exibição de mensagens para um thread ou processo. Isso permite que você exiba as mensagens enviadas a todos os windows pertencentes a um processo específico ou thread, que é particularmente útil para a captura de mensagens de inicialização de janela.  

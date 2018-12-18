@@ -1,5 +1,5 @@
 ---
-title: Contextos de depurador | Microsoft Docs
+title: Contextos do depurador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,40 +13,41 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a9310512417ac0e24046a1b7bcc1fd92099fe98
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 49af504b27afc6171a914d9559a5ff83f3d595eb
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204096"
 ---
-# <a name="debugger-contexts"></a>Contextos de depurador
-Em [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] de depuração, o mecanismo de depuração (DE) opera simultaneamente em vários contextos diferentes, da seguinte maneira:  
+# <a name="debugger-contexts"></a>Contextos do depurador
+No [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] depuração, o mecanismo de depuração (DES) opera simultaneamente em vários contextos distintos, da seguinte maneira:  
   
--   O contexto de código, que descreve o local atual no fluxo de execução do programa.  
+-   O contexto de código, que descreve o local atual no fluxo de execução de um programa.  
   
--   O contexto da documentação ou posição, que descreve a posição atual dentro de um documento de origem.  
+-   O contexto de documentação ou posição, que descreve a posição atual dentro de um documento de origem.  
   
--   O contexto de avaliação de expressão, que descreve o contexto no qual expressão avaliação ocorrerá.  
+-   O contexto de avaliação de expressão, que descreve o contexto em que a expressão a avaliação será realizada.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Contexto do código](../../extensibility/debugger/code-context.md)  
- Discute o contexto de código como um endereço no fluxo de instrução do programa em arquiteturas de tempo de execução de hoje versus idiomas não tradicionais, onde código não pode ser representado por instruções, mas outros meios.  
+ [Contexto de código](../../extensibility/debugger/code-context.md)  
+ Discute o contexto de código como um endereço no fluxo de instruções de um programa em arquiteturas de tempo de execução de hoje versus idiomas não tradicionais, onde código não pode ser representado por instruções, mas outros meios.  
   
  [Posição do documento](../../extensibility/debugger/document-position.md)  
- Define a posição do documento na depuração no Visual Studio por meio de uma abstração de uma posição em um arquivo de origem conhecida para o IDE.  
+ Define a posição do documento na depuração por meio de uma abstração de uma posição em um arquivo de origem como o IDE conhecido do Visual Studio.  
   
- [Contexto do documento](../../extensibility/debugger/document-context.md)  
- Discute representa o contexto de documento na depuração do Visual Studio em relação a um arquivo de origem. Também descreve como o manipulador de símbolo mapeia um contexto de código para o contexto da documentação.  
+ [Contexto de documento](../../extensibility/debugger/document-context.md)  
+ Discute o contexto de documento representa em depuração do Visual Studio em relação a um arquivo de origem. Também discute como o manipulador de símbolo mapeia um contexto de código para o contexto da documentação.  
   
- [Contexto da avaliação de expressão](../../extensibility/debugger/expression-evaluation-context.md)  
- Fornece informações sobre um contexto de avaliação de expressão no Visual Studio. Por exemplo, um contexto de avaliação de expressão associado a um quadro de pilha fornece o contexto para avaliar as variáveis locais, parâmetros de método e membros de classe.  
+ [Contexto de avaliação de expressão](../../extensibility/debugger/expression-evaluation-context.md)  
+ Fornece informações sobre um contexto de avaliação de expressão no Visual Studio. Por exemplo, um contexto de avaliação de expressão associado com um quadro de pilha fornece o contexto para avaliar as variáveis locais, parâmetros de método e membros de classe.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Conceitos de depuração](../../extensibility/debugger/debugger-concepts.md)  
- Descreve os principais conceitos de arquitetura de depuração.  
+ Descreve os principais conceitos de arquiteturas de depuração.  
   
  [Componentes de depuração](../../extensibility/debugger/debugger-components.md)  
- Fornece uma visão geral dos componentes de depuração Visual Studio, que incluem o mecanismo de depuração (DE), o avaliador de expressão (EE) e o manipulador de símbolo (SH).  
+ Fornece uma visão geral do que os componentes de depuração do Visual Studio, que incluem o mecanismo de depuração (DE), o avaliador de expressão (EE) e o manipulador de símbolo (SH).  
   
- [Tarefas de depuração](../../extensibility/debugger/debugging-tasks.md)  
+ [As tarefas de depuração](../../extensibility/debugger/debugging-tasks.md)  
  Contém links para várias tarefas de depuração, como iniciar um programa e avaliar expressões.

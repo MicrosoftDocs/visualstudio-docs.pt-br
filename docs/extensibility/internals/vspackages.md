@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31142822"
 ---
 # <a name="vspackages"></a>VSPackages
 VSPackages são módulos de software que estendem o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] o ambiente de desenvolvimento integrado (IDE), fornecendo os elementos de interface do usuário, serviços, projetos, editores e designers.  

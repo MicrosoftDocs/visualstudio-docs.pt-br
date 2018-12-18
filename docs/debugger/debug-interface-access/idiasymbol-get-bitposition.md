@@ -1,5 +1,5 @@
 ---
-title: ': Get_bitposition | Microsoft Docs'
+title: 'Idiasymbol:: Get_bitposition | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 406cfd6c94af4d9dbd3f66b7321241f906e80648
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: bba39752470cf9f282245cbece7f260558b8b21d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49838469"
 ---
 # <a name="idiasymbolgetbitposition"></a>IDiaSymbol::get_bitPosition
 Recupera a posição de bit do local. Usado quando o [enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) é `LocIsBitField`.  
@@ -36,7 +37,7 @@ HRESULT get_bitPosition (
  [out] Retorna a posição de bit do local.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
@@ -46,7 +47,7 @@ HRESULT get_bitPosition (
 |Requisito|Descrição|  
 |-----------------|-----------------|  
 |Cabeçalho:|dia2.h|  
-|Versão:|Versão 7.0 do DIA SDK|  
+|Versão:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

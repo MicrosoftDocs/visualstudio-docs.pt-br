@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c18feedde988559ae4aff1455b7dfb1d8c6eb1e9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b66713fa5929fc1397a5302732399c07c3f5a726
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49885909"
 ---
 # <a name="constguidarray"></a>CONST_GUID_ARRAY
-Uma estrutura que mantém uma lista de `GUID`s.  
+Uma estrutura que contém uma lista de `GUID`s.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,15 +43,15 @@ public struct CONST_GUID_ARRAY {
   
 ## <a name="members"></a>Membros  
  dwCount  
- Número de `GUID`s a `Members` matriz.  
+ Número de `GUID`s no `Members` matriz.  
   
  Membros  
  Matriz de `GUID`s.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é passada para o [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) método e é retornado a partir de [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) e [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md) métodos.  
+ Essa estrutura é passada para o [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) método e é retornado do [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) e [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md) métodos.  
   
- O proprietário de uma instância dessa estrutura é responsável pela liberação de toda a memória alocada.  
+ O proprietário de uma instância dessa estrutura é responsável por liberar toda a memória alocada.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

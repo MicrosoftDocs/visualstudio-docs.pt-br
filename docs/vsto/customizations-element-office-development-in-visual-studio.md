@@ -1,5 +1,5 @@
 ---
-title: '&lt;personalizações&gt; elemento (desenvolvimento do Office no Visual Studio) | Microsoft Docs'
+title: '&lt;personalizações&gt; elemento (desenvolvimento do Office no Visual Studio)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,18 +17,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7174f4f04914a120454d9977516e7c2443cbadda
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9ac1a78f0d35b2fac751e87874bbfe169798712a
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669786"
 ---
 # <a name="ltcustomizationsgt-element-office-development-in-visual-studio"></a>&lt;personalizações&gt; elemento (desenvolvimento do Office no Visual Studio)
   O `customizations` elemento o `vstov4` namespace contém todas as informações sobre como instalar e carregar cada solução do Office.  
   
-## <a name="syntax-for-document-level-customizations"></a>Sintaxe de personalizações no nível do documento  
+## <a name="syntax-for-document-level-customizations"></a>Sintaxe para personalizações no nível do documento  
   
-```  
+```xml
 <customizations>  
   <customization  
     id  
@@ -39,9 +40,9 @@ ms.lasthandoff: 04/16/2018
 </customizations>  
 ```  
   
-## <a name="syntax-for-vsto-add-ins"></a>Sintaxe de suplementos do VSTO  
+## <a name="syntax-for-vsto-add-ins"></a>Sintaxe para suplementos VSTO  
   
-```  
+```xml
 <customizations>  
   <customization  
     id  
@@ -63,20 +64,20 @@ ms.lasthandoff: 04/16/2018
   
  O `customizations` elemento tem o seguinte elemento filho.  
   
-### <a name="customization"></a>personalização  
- Necessário. O `customization` elemento o `vstov4` namespace está definido em [ &#60;personalização&#62; elemento &#40;desenvolvimento do Office no Visual Studio&#41;](../vsto/customization-element-office-development-in-visual-studio.md).  
+### <a name="customization"></a>Personalização  
+ Necessário. O `customization` elemento na `vstov4` namespace está definido no [ &#60;personalização&#62; elemento &#40;desenvolvimento do Office no Visual Studio&#41;](../vsto/customization-element-office-development-in-visual-studio.md).  
   
-## <a name="example-of-a-document-level-customization"></a>Exemplo de uma personalização no nível do documento  
+## <a name="example-of-a-document-level-customization"></a>Exemplo de uma personalização no nível de documento  
   
 ### <a name="description"></a>Descrição  
- O exemplo de código a seguir ilustra o `customizations` elemento para uma personalização no nível do documento.  
+ O exemplo de código a seguir ilustra o `customizations` elemento para uma personalização no nível de documento.  
   
 > [!NOTE]  
->  Este exemplo de código é parte de um exemplo maior fornecido em [manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).  
+>  Este exemplo de código é parte de um exemplo maior fornecido no [manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).  
   
 ### <a name="code"></a>Código  
   
-```  
+```xml
 <vstov4:customizations   
   xmlns:vstov4="urn:schemas-microsoft-com:vsto.v4">  
   <vstov4:customization>  
@@ -86,14 +87,14 @@ ms.lasthandoff: 04/16/2018
 </vstov4:customizations>  
 ```  
   
-## <a name="example-of-an-vsto-add-in"></a>Exemplo de um suplemento do VSTO  
+## <a name="example-of-a-vsto-add-in"></a>Exemplo de um suplemento do VSTO  
   
 ### <a name="description"></a>Descrição  
- O exemplo de código a seguir ilustra o `customizations` elemento para um suplemento do VSTO. Isso é um Add-in do Outlook VSTO que inclui as regiões de formulário. Este exemplo de código é parte de um exemplo maior fornecido em [manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).  
+ O exemplo de código a seguir ilustra o `customizations` elemento para um suplemento do VSTO. Isso é um Add-in do VSTO do Outlook que inclui as regiões do formulário. Este exemplo de código é parte de um exemplo maior fornecido no [manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).  
   
 ### <a name="code"></a>Código  
   
-```  
+```xml
 <vstov4:customizations   
   xmlns:vstov4="urn:schemas-microsoft-com:vsto.v4">  
   <vstov4:customization>  
@@ -124,6 +125,6 @@ ms.lasthandoff: 04/16/2018
 ## <a name="see-also"></a>Consulte também  
  [Manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md)   
  [Manifestos de implantação para soluções do Office](../vsto/deployment-manifests-for-office-solutions.md)   
- [Manifesto de aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest)  
+ [Manifesto do aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest)  
   
   

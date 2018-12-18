@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476852"
 ---
 # <a name="windows-tab-message-options-dialog-box"></a>Guia Janelas, Caixa de diálogo Opções da Mensagem
 Use o **Windows** guia para definir o escopo das mensagens de erro listados na [exibição de mensagens](../debugger/messages-view.md). Para exibir o [caixa de diálogo de opções de mensagem](../debugger/message-options-dialog-box.md), escolha **mensagens de Log** do **Spy** menu.  

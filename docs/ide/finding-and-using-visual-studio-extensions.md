@@ -1,13 +1,9 @@
 ---
-title: "Localizar e usar extensões do Visual Studio | Microsoft Docs"
-ms.custom: 
+title: Localizar e usar extensões do Visual Studio
 ms.date: 06/07/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.ExtensionManager
 helpviewer_keywords:
@@ -15,23 +11,23 @@ helpviewer_keywords:
 - install packages
 - managing extensions visual studio
 ms.assetid: 4ca92d93-31b9-47ef-8109-4a429d9e2ca3
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f3057ae7cf987c19e87329894249031b3af29806
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 9a5b562aa6fe4a64f92d66ad0a6fff0395e5314a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31950274"
 ---
 # <a name="find-and-use-visual-studio-extensions"></a>Localizar e usar extensões do Visual Studio
 
 As extensões do Visual Studio são pacotes de código executados dentro do Visual Studio e fornecem recursos novos ou aprimorados do Visual Studio. É possível encontrar mais informações sobre extensões do Visual Studio aqui: [SDK do Visual Studio](../extensibility/visual-studio-sdk.md).
 
-É possível usar a caixa de diálogo **Extensões e Atualizações** para instalar as extensões e amostras do Visual Studio de sites e outros locais e habilitá-las, desabilitá-las, atualizá-las ou desinstalá-las. (**Ferramentas/Extensões e Atualizações** ou digite ou **Extensões** na janela **Início Rápido**). A caixa de diálogo também mostra atualizações para amostras e extensões instaladas. Também é possível baixar extensões de sites ou obtê-las de outros desenvolvedores.
+É possível usar a caixa de diálogo **Extensões e Atualizações** para instalar as extensões e amostras do Visual Studio de sites e outros locais e habilitá-las, desabilitá-las, atualizá-las ou desinstalá-las. (**Ferramentas > Extensões e Atualizações** ou digite ou **Extensões** na janela **Início Rápido**). A caixa de diálogo também mostra atualizações para amostras e extensões instaladas. Também é possível baixar extensões de sites ou obtê-las de outros desenvolvedores.
 
 > [!NOTE]
 > A partir do Visual Studio 2015, as extensões hospedadas no Visual Studio Marketplace são atualizadas automaticamente. É possível alterar essa configuração por meio da caixa de diálogo **Extensões e Atualizações**.  Consulte a seção **Atualizações automáticas de extensões** abaixo para obter detalhes.
@@ -50,9 +46,9 @@ Se desejar parar de usar uma extensão, você poderá desabilitá-la ou desinsta
 
 ## <a name="per-user-and-administrative-extensions"></a>Extensões administrativas e por usuário
 
-A maioria das extensões são extensões por usuário e são instaladas na pasta **%LocalAppData%\Microsoft\VisualStudio\\<Visual Studio version\>\Extensions\\** folder. Algumas extensões são extensões administrativas e são instaladas na **\<pasta de instalação do Visual Studio>\Common7\IDE\Extensions\\**.
+A maioria das extensões são extensões por usuário e são instaladas na pasta *%LocalAppData%\Microsoft\VisualStudio\\<Visual Studio version\>\Extensions\\* folder. Algumas extensões são extensões administrativas e são instaladas na *\<pasta de instalação do Visual Studio>\Common7\IDE\Extensions\\*.
 
-Para proteger seu sistema contra extensões que possam conter erros ou código mal-intencionado, é possível restringir que as extensões por usuário sejam carregadas somente quando o Visual Studio estiver em execução com permissões de usuário normal. Isso significa que as extensões por usuário são desabilitadas quando o Visual Studio é executado com permissões de usuário administrativo. Para fazer isso, vá para a página de opções **Extensões e Atualizações** (**Ferramentas/Opções**, **Ambiente**, **Extensões e Atualizações** ou simplesmente digite **Extensão** na janela **Início Rápido**). Desmarque a caixa de seleção **Carregar extensões por usuário ao executar como administrador** e reinicie o Visual Studio.
+Para proteger seu sistema contra extensões que possam conter erros ou código mal-intencionado, é possível restringir que as extensões por usuário sejam carregadas somente quando o Visual Studio estiver em execução com permissões de usuário normal. Isso significa que as extensões por usuário são desabilitadas quando o Visual Studio é executado com permissões de usuário administrativo. Para fazer isso, vá para a página de opções **Extensões e Atualizações** (**Ferramentas > Opções** > **Ambiente** > **Extensões e Atualizações** ou simplesmente digite **Extensão** na janela **Início Rápido**). Desmarque a caixa de seleção **Carregar extensões por usuário ao executar como administrador** e reinicie o Visual Studio.
 
 ## <a name="automatic-extension-updates"></a>Atualizações automáticas de extensão
 
@@ -67,7 +63,7 @@ Se você desejar desabilitar as atualizações automáticas, será possível des
 - Para desabilitar as atualizações automáticas de uma extensão específica, desmarque a opção **Atualizar automaticamente essa extensão** no painel de detalhes da extensão do lado direito da caixa de diálogo **Extensões e Atualizações**.
 
 > [!NOTE]
-> A partir do Visual Studio 2015 Atualização 2, é possível especificar (em **Ferramentas/Opções/Ambiente/Extensões e Atualizações**) se você deseja atualizações automáticas para extensões por usuário, todas as extensões do usuário ou ambas (a configuração padrão).
+> A partir do Visual Studio 2015 Atualização 2, é possível especificar (em **Ferramentas > Opções > Ambiente > Extensões e Atualizações**) se você deseja atualizações automáticas para extensões por usuário, todas as extensões do usuário ou ambas (a configuração padrão).
 
 ## <a name="extension-crashunresponsiveness-notifications"></a>Notificações de falha/falta de resposta da extensão
 
@@ -114,11 +110,11 @@ Quando você instala um exemplo online, a solução é armazenada em dois locais
 
 ## <a name="installing-without-using-the-extensions-and-updates-dialog-box"></a>Instalando sem usar a caixa de diálogo Extensões e Atualizações
 
-As extensões que foram empacotadas em arquivos .vsix podem estar disponíveis em outros locais e não no Visual Studio Marketplace. A caixa de diálogo **Extensões e Atualizações** não pode detectar esses arquivos, mas é possível instalar um arquivo .vsix clicando duas vezes no arquivo ou selecionando-o e pressionando a tecla ENTER. Depois disso, basta seguir as instruções. Depois que a extensão for instalada, será possível usar a caixa de diálogo **Extensões e Atualizações** para habilitá-la, desabilitá-la ou desinstalá-la.
+As extensões que foram empacotadas em arquivos *.vsix* podem estar disponíveis em outros locais e não no Visual Studio Marketplace. A caixa de diálogo **Extensões e Atualizações** não pode detectar esses arquivos, mas é possível instalar um arquivo *.vsix* clicando duas vezes no arquivo ou selecionando-o e pressionando a tecla **Enter**. Depois disso, basta seguir as instruções. Depois que a extensão for instalada, será possível usar a caixa de diálogo **Extensões e Atualizações** para habilitá-la, desabilitá-la ou desinstalá-la.
 
-## <a name="extension-types-not-supported-by-the-extensions-and-updates-dialog-box"></a>A caixa de diálogo Extensões e Atualizações não dá suporte aos tipos de extensão
+## <a name="extension-types-not-supported-by-the-extensions-and-updates-dialog-box"></a>A caixa de diálogo Extensões e Atualizações não é compatível com os tipos de extensão
 
 O Visual Studio continua dando suporte a extensões instaladas pelo MSI (Microsoft Installer), mas não por meio da caixa de diálogo **Extensões e Atualizações** sem modificação.
 
 > [!TIP]
-> Se uma extensão baseada em MSI incluir um arquivo extension.vsixmanifest, a extensão será exibida na caixa de diálogo **Extensões e Atualizações**.
+> Se uma extensão baseada em MSI incluir um arquivo *extension.vsixmanifest*, a extensão será exibida na caixa de diálogo **Extensões e Atualizações**.

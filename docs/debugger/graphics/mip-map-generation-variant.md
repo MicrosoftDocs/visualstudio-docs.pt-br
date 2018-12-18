@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d8804c4b559d2755dd0caec000a58751b9697b23
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 06b2d1e537152020b42fdff38fab1200b9cf7668
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908529"
 ---
 # <a name="mip-map-generation-variant"></a>Variante de geração de Mip-map
 Habilita mapas mip em texturas que não são destinos de renderização.  
@@ -27,26 +28,26 @@ Habilita mapas mip em texturas que não são destinos de renderização.
  Se essa variante tiver um ganho de desempenho considerável, é sinal de que você está usando as texturas sem habilitar os mapas mip e, por isso, não está aproveitando ao máximo o cache da textura.  
   
 ## <a name="remarks"></a>Comentários  
- A geração do mapa mip é forçada em cada chamada de `ID3D11Device::CreateTexture2D` que cria uma textura de origem. A geração do mapa mip é forçada, especificamente, quando o objeto D3D11_TEXTUR2D_DESC apresentado a `pDesc` descreve um recurso do sombreador inalterável, ou seja:  
+ A geração do mapa mip é forçada em cada chamada de `ID3D11Device::CreateTexture2D` que cria uma textura de origem. Especificamente, a geração de mapas mip é forçada quando o objeto D3D11_TEXTURE2D_DESC no `pDesc` descreve um recurso do sombreador inalterável, que é:  
   
--   O membro BindFlags tem apenas o sinalizador D3D11_BIND_SHADER_RESOURCE definido.  
+- O membro BindFlags tem apenas o sinalizador D3D11_BIND_SHADER_RESOURCE definido.  
   
--   O membro Uso está definido como D3D11_USAGE_DEFAULT ou D3D11_USAGE_IMMUTABLE.  
+- O membro Uso está definido como D3D11_USAGE_DEFAULT ou D3D11_USAGE_IMMUTABLE.  
   
--   O membro CPUAccessFlags está definido como 0 (sem acesso à CPU).  
+- O membro CPUAccessFlags está definido como 0 (sem acesso à CPU).  
   
--   O membro SampleDesc tem seu membro Count definido como 1 (sem MSAA (suavização de amostra múltipla)).  
+- O membro SampleDesc tem seu membro Count definido como 1 (sem MSAA (suavização de amostra múltipla)).  
   
--   O membro MipLevels está definido como 1 (não há mapas mip).  
+- O membro MipLevels está definido como 1 (não há mapas mip).  
   
- Quando o aplicativo fornece os dados iniciais, o formato da textura deve permitir a geração de mapas mip automaticamente — conforme determinado por D3D11_FORMAT_SUPPORT_MIP_AUTOGEN —, a menos que o formato usado seja BC1, BC2 ou BC3. Caso contrário, a textura não é modificada e o mapa mip não é gerado após o fornecimento dos dados iniciais.  
+  Quando o aplicativo fornece os dados iniciais, o formato da textura deve permitir a geração de mapas mip automaticamente — conforme determinado por D3D11_FORMAT_SUPPORT_MIP_AUTOGEN —, a menos que o formato usado seja BC1, BC2 ou BC3. Caso contrário, a textura não é modificada e o mapa mip não é gerado após o fornecimento dos dados iniciais.  
   
- Quando há mapas mip gerados automaticamente para uma textura, as chamadas de `ID3D11Device::CreateShaderResourceView` são modificadas durante a reprodução para usar a cadeia de mip durante a amostragem da textura.  
+  Quando há mapas mip gerados automaticamente para uma textura, as chamadas de `ID3D11Device::CreateShaderResourceView` são modificadas durante a reprodução para usar a cadeia de mip durante a amostragem da textura.  
   
 ## <a name="example"></a>Exemplo  
- O **geração de Mip-map** variant pode ser reproduzida usando código como este:  
+ O **geração de mapas Mip** variante pode ser reproduzida usando códigos da seguinte forma:  
   
-```  
+```cpp
 D3D11_TEXTURE2D_DESC texture_description;  
   
 // ...  
@@ -63,7 +64,7 @@ for (auto&& mip_level : initial_data)
 d3d_device->CreateTexture2D(&texture_description, initial_data.data(), &texture)  
 ```  
   
- Para criar uma textura com cadeia de mip completa, defina `D3D11_TEXTURE2D_DESC::MipLevels` como 0. O número de níveis de mip em uma cadeia de mip completo é floor(log2(n) + 1), onde n é a maior dimensão da textura.  
+ Para criar uma textura com cadeia de mip completa, defina `D3D11_TEXTURE2D_DESC::MipLevels` como 0. O número de níveis de mip em uma cadeia de mip completa é floor(log2(n) + 1), onde n é a maior dimensão da textura.  
   
  Lembre-se de que ao fornecer os dados iniciais para `CreateTexture2D`, você também deve fornecer um objeto D3D11_SUBRESOURCE_DATA para cada nível de mip.  
   
@@ -71,4 +72,4 @@ d3d_device->CreateTexture2D(&texture_description, initial_data.data(), &texture)
 >  Se quiser fornecer seu próprio conteúdo aos níveis de mip em vez de gerá-lo automaticamente, crie as texturas usando um editor de imagens compatível com texturas com mapas mip. Em seguida, carregue o arquivo e transmita os níveis de mip a `CreateTexture2D`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Variante de dimensões da textura de metade/um quarto](half-quarter-texture-dimensions-variant.md)
+ [Variante de metade/um quarto nas dimensões de textura](half-quarter-texture-dimensions-variant.md)

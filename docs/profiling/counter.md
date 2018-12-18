@@ -10,28 +10,29 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eaebb7afc76066e9c1c53b0649c70dd346ddb72f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3bfc59eb1cec7e4ed5ef9b7955438fffb03ca5d4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832888"
 ---
 # <a name="counter"></a>Contador
 A opção **Counter** coleta dados de contadores de desempenho do processador (hardware).  
   
--   Quando você está usando o método de criação de perfil de amostragem, **Counter** especifica o contador de desempenho on-chip e o número de eventos do contador a ser usado como o intervalo de amostragem. Você pode especificar apenas um contador quando você está usando amostragem.  
+- Quando você está usando o método de criação de perfil de amostragem, **Counter** especifica o contador de desempenho on-chip e o número de eventos do contador a ser usado como o intervalo de amostragem. Você pode especificar apenas um contador quando você está usando amostragem.  
   
--   Quando você está usando a método de criação de perfil de instrumentação, o número de eventos do contador que ocorreram no intervalo entre os eventos da coleção anterior e os da atual é listado como campos separados em relatórios do criador de perfil. Várias opções de **Counter** podem ser especificadas quando você usa instrumentação.  
+- Quando você está usando a método de criação de perfil de instrumentação, o número de eventos do contador que ocorreram no intervalo entre os eventos da coleção anterior e os da atual é listado como campos separados em relatórios do criador de perfil. Várias opções de **Counter** podem ser especificadas quando você usa instrumentação.  
   
- Cada tipo de processador tem seu próprio conjunto de contadores de desempenho de hardware. O criador de perfil define um conjunto de contadores de desempenho que são comuns a quase todos os processadores. Para listar os contadores genéricos e específicos do processador no computador, use o comando VSPerfCmd **QueryCounters**.  
+  Cada tipo de processador tem seu próprio conjunto de contadores de desempenho de hardware. O criador de perfil define um conjunto de contadores de desempenho que são comuns a quase todos os processadores. Para listar os contadores genéricos e específicos do processador no computador, use o comando VSPerfCmd **QueryCounters**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cmd  
 VSPerfCmd.exe {/Launch:AppName | /Attach PID} /Counter:Name[,Reload[,FriendlyName]][Options]  
 ```  
   
-```  
+```cmd  
 VSPerfCmd.exe /Start:Method /Counter:Name[,Reload[,FriendlyName]][/Counter:Name[,Reload[,FriendlyName]]][Options]  
 ```  
   
@@ -62,7 +63,7 @@ VSPerfCmd.exe /Start:Method /Counter:Name[,Reload[,FriendlyName]][/Counter:Name[
   
  A amostra do método de instrumentação demonstra como inicializar o criador de perfil para coletar eventos do contador L2InstructionFetches. O nome do contador L2InstructionFetches é específico do processador.  
   
-```  
+```cmd  
 ; Sample Method Example  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Launch:TestApp.exe /Counter:NonHaltedCycles,1000,"Non-Halted Cycles"  
@@ -73,6 +74,6 @@ VSPerfCmd.exe /Start:Trace /Output:TestApp.exe.vsp /Counter:L2InstructionFetches
   
 ## <a name="see-also"></a>Consulte também  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
- [Criando perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Criando perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Serviços de Criação de Perfil](../profiling/command-line-profiling-of-services.md)
+ [Criar perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [Criar o perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profile services (Serviços de perfil)](../profiling/command-line-profiling-of-services.md)

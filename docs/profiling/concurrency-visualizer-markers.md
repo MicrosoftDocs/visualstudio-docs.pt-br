@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a1e713292421613e835697037d5298a4a2c854f6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: cf07f939a9ce15d2ebca7afb0ee37695fa5fbf98
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220592"
 ---
-# <a name="concurrency-visualizer-markers"></a>Marcadores do Visualizador de Simultaneidade
+# <a name="concurrency-visualizer-markers"></a>Marcadores da Visualização Simultânea
 Na Visualização Simultânea, os marcadores são ícones que representam os eventos em um aplicativo.  Normalmente, o aplicativo gera esses eventos para designar fases ou ocorrências em um aplicativo.  Os eventos podem ser gerados pelo aplicativo ou por bibliotecas e tempos de execução que o aplicativo usa.  
   
 ## <a name="kinds-of-markers"></a>Tipos de marcadores  
@@ -34,7 +35,7 @@ Na Visualização Simultânea, os marcadores são ícones que representam os eve
  Cada thread que gera marcadores tem um canal separado de linha do tempo.  A ID do thread responsável por gerar os eventos de marcador é mostrada ao lado da descrição do canal do marcador.  A ID mostrada no lado esquerdo do canal do marcador corresponde à ID de outro thread no processo atual.  
   
 ## <a name="marker-importance"></a>Importância do marcador  
- Os marcadores podem ter um dos quatro níveis de importância: baixa, normal, alta e crítica.  É possível filtrar as fontes de marcadores com base no nível de importância.  Por exemplo, se você só desejar ver os marcadores de uma fonte específica que tem importância normal ou crítica, será possível configurar o filtro na caixa de diálogo [Configurações Avançadas](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md). A importância de um marcador é exibida em sua dica de ferramenta e no [Relatório de Marcadores](../profiling/markers-report.md).  
+ Os marcadores podem ter um dos quatro níveis de importância: baixa, normal, alta e crítica.  É possível filtrar as fontes de marcadores com base no nível de importância.  Por exemplo, se você só desejar ver os marcadores de uma fonte específica que tem importância normal ou crítica, será possível configurar o filtro na caixa de diálogo [Configurações avançadas](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md). A importância de um marcador é exibida em sua dica de ferramenta e no [Relatório de Marcadores](../profiling/markers-report.md).  
   
 ## <a name="marker-category"></a>Categoria de marcador  
  Uma categoria de marcador indica um grupo de eventos de marcador que vêm da mesma fonte.  A Visualização Simultânea usa cor para diferenciar diferentes categorias de sinalizadores e intervalos. É possível configurar a Visualização Simultânea para usar categorias para filtrar os eventos de marcador em um provedor de eventos específico.  Use a caixa de diálogo [Configurações Avançadas](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) para configurar o filtro.  
@@ -42,27 +43,27 @@ Na Visualização Simultânea, os marcadores são ícones que representam os eve
 ## <a name="known-sources-of-markers"></a>Fontes conhecidas de marcadores  
  Qualquer provedor ETW pode gerar marcadores, desde que os provedores obedeçam a determinadas restrições. É possível configurar a Visualização Simultânea para escutar outras fontes de evento para marcadores. Por padrão, ele escuta estas fontes de evento:  
   
--   [SDK da Visualização Simultânea](../profiling/concurrency-visualizer-sdk.md)  
+- [SDK da Visualização Simultânea](../profiling/concurrency-visualizer-sdk.md)  
   
--   [TPL (Biblioteca de Paralelismo de Tarefas)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)  
+- [TPL (Biblioteca de Paralelismo de Tarefas)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)  
   
--   [Fluxo de dados](/dotnet/standard/parallel-programming/dataflow-task-parallel-library)  
+- [Fluxo de dados](/dotnet/standard/parallel-programming/dataflow-task-parallel-library)  
   
--   [PLINQ (LINQ paralelo)](/dotnet/standard/parallel-programming/parallel-linq-plinq)  
+- [PLINQ (LINQ paralelo)](/dotnet/standard/parallel-programming/parallel-linq-plinq)  
   
--   [Tempo de Execução de Simultaneidade](/cpp/parallel/concrt/concurrency-runtime)  
+- [Tempo de Execução de Simultaneidade](/cpp/parallel/concrt/concurrency-runtime)  
   
--   [Suporte do Marcador de Cenário](http://msdn.microsoft.com/en-us/e3b55bc2-b451-4214-ae00-0c7f5a5baec8)  
+- [Suporte do Marcador de Cenário](/previous-versions/visualstudio/visual-studio-2010/dd984115\(v\=vs.100\))  
   
--   [C++ AMP (C++ Accelerated Massive Parallelism)](/cpp/parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism)  
+- [C++ AMP (C++ Accelerated Massive Parallelism)](/cpp/parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism)  
   
- É possível usar a guia Marcadores na caixa de diálogo [Configurações Avançadas](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) para controlar se os marcadores de várias fontes são exibidos na Visualização Simultânea e é possível filtrá-los com base na importância e na categoria.  
+  É possível usar a guia Marcadores na caixa de diálogo [Configurações Avançadas](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) para controlar se os marcadores de várias fontes são exibidos na Visualização Simultânea e é possível filtrá-los com base na importância e na categoria.  
   
 ## <a name="markers-from-eventsource"></a>Marcadores de EventSource  
- A Visualização Simultânea também pode exibir eventos EventSource.  Para obter mais informações, consulte [Visualizando eventos EventSource como marcadores](../profiling/visualizing-eventsource-events-as-markers.md).  
+ A Visualização Simultânea também pode exibir eventos EventSource.  Para obter mais informações, confira [Visualizar eventos EventSource como marcadores](../profiling/visualizing-eventsource-events-as-markers.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Marcadores de sinalizador](../profiling/flag-markers.md)   
  [Marcadores de mensagem](../profiling/message-markers.md)   
  [Marcadores de intervalo](../profiling/span-markers.md)   
- [Visualizando eventos EventSource como marcadores](../profiling/visualizing-eventsource-events-as-markers.md)
+ [Visualizar eventos EventSource como marcadores](../profiling/visualizing-eventsource-events-as-markers.md)

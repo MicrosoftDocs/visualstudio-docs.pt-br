@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 77af1428dbdd0ea9f84000bda34ea8608b17cc24
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 685499cae556a50a5e98e8fe32e8104098cc79e6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933242"
 ---
 # <a name="idebugpointerfieldgetdereferencedfield"></a>IDebugPointerField::GetDereferencedField
 Esse método retorna o tipo de objeto para o qual este objeto de ponteiro aponta.  
@@ -43,10 +44,10 @@ int GetDereferencedField(
  [out] Retorna um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) que descreve o tipo de objeto de destino.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Se, por exemplo, o [IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md) objeto aponta para um número inteiro, o [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) tipo retornado por este método descreve que tipo de inteiro.  
+ Se, por exemplo, o [IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md) objeto aponta para um número inteiro, o [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) tipo retornado por esse método descreve que tipo de inteiro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md)   

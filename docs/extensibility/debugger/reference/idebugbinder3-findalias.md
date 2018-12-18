@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e68038f6e00c2a04f4c96f5f9d93fc4919d2fd09
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 128629f5cd359539406f438aec41909672e1ed83
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837718"
 ---
 # <a name="idebugbinder3findalias"></a>IDebugBinder3::FindAlias
 Esse método localiza um alias, dado um nome. Isso irá procurar todos os aliases no programa.  
@@ -45,13 +46,13 @@ int FindAlias(
  [in] Nome do alias para localizar.  
   
  `ppAlias`  
- [out] Alias encontrado (se houver) representado pelo [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) interface.  
+ [out] Alias encontrada (se houver) representado pela [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) interface.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` (se o alias não foi encontrado) ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` (se o alias não for encontrado) ou um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método inicializa o objeto de destino como nulo antes de chamar; em seguida, ele testa um valor nulo determinar se o alias foi encontrado.  
+ Esse método inicializa o objeto de destino para nulo antes de chamar; em seguida, ele testa um valor nulo determinar se o alias foi encontrado.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   

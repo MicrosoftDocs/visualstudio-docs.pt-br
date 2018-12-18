@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 92be0bc15542010cfeea8a9ee70e69ff52e14163
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2c5b04bfa04b1b6fd6599e5fdd06d6c58210f635
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638437"
 ---
 # <a name="promptforsaveoncreation-element-visual-studio-templates"></a>Elemento PromptForSaveOnCreation (modelos do Visual Studio)
-Especifica se o usuário é solicitado um projeto local por meio de salvamento de **novo projeto** caixa de diálogo ao criar um projeto. Se esse elemento é definido como `true`, em seguida, o usuário é solicitado para salvar local; se `false`, em seguida, ele não será solicitado. (Ou seja, um projeto temporário é criado.)  
+Especifica se o usuário é solicitado para um projeto local por meio de salvamento a **novo projeto** caixa de diálogo ao criar um projeto. Se esse elemento é definido como `true`, em seguida, o usuário é solicitado que você salve local; se `false`, em seguida, ele não será solicitado. (Ou seja, um projeto temporário é criado.)  
   
  \<VSTemplate >  
  \<TemplateData >  
@@ -30,7 +31,7 @@ Especifica se o usuário é solicitado um projeto local por meio de salvamento d
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <PromptForSaveOnCreation> true/false </PromptForSaveOnCreation>  
 ```  
   
@@ -47,20 +48,20 @@ Especifica se o usuário é solicitado um projeto local por meio de salvamento d
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele exibe em um a **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo.|  
   
 ## <a name="text-value"></a>Valor de texto  
  Um valor de texto é obrigatório.  
   
- O texto deve ser `true` ou `false`, `true` indicando que o usuário será solicitado para salvar local ao criar um novo projeto.  
+ O texto deve ser `true` ou `false`, `true` indicando que o usuário será solicitado para um salvamento local ao criar um novo projeto.  
   
 ## <a name="remarks"></a>Comentários  
  `PromptForSaveOnCreation` é um elemento opcional. O valor padrão é `false`.  
   
- Projetos temporários são projetos que você pode criar e modificar sem salvar o conteúdo do projeto no disco.  
+ Projetos temporários são projetos que você pode criar e modificar sem salvar o conteúdo desse projeto no disco.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir define o valor de `PromptForSaveOnCreation` igual a `false`, que especifica para permitir que o projeto a ser criado como um projeto temporário.  
+ O exemplo a seguir define o valor da `PromptForSaveOnCreation` igual a `false`, que especifica para permitir que o projeto a ser criado como um projeto temporário.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -89,4 +90,4 @@ Especifica se o usuário é solicitado um projeto local por meio de salvamento d
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)
+ [Criar modelos de projeto e de item](../ide/creating-project-and-item-templates.md)

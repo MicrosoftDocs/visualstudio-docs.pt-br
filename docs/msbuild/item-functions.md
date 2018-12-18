@@ -12,16 +12,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 93c8a16b1ab15354deafc236d9f4845b051d58f7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 85dd03080a9dda58532d656161c3c44ae4943251
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081342"
 ---
-# <a name="item-functions"></a>Funções de itens
+# <a name="item-functions"></a>funções de item
 Começando com o MSBuild 4.0, o código em tarefas e destinos pode chamar funções de item para obter informações sobre os itens no projeto. Essas funções simplificam a obtenção de itens Distinct() e são mais rápidas do que executar loop nos itens.  
   
-## <a name="string-item-functions"></a>Funções de Item de Cadeia de Caracteres  
+## <a name="string-item-functions"></a>Funções de item de cadeia de caracteres  
  É possível usar métodos e propriedades de cadeia de caracteres no .NET Framework para operar em qualquer valor de item. Para métodos <xref:System.String>, especifique o nome do método. Para propriedades <xref:System.String>, especifique o nome da propriedade após "get_".  
   
  Para itens que têm várias cadeias de caracteres, o método ou propriedade da cadeia de caracteres será executado em cada cadeia de caracteres.  
@@ -49,7 +50,7 @@ Começando com o MSBuild 4.0, o código em tarefas e destinos pode chamar funç�
   -->  
 ```  
   
-## <a name="intrinsic-item-functions"></a>Funções Intrínsecas de Item  
+## <a name="intrinsic-item-functions"></a>Funções de item intrínsecas  
  A tabela a seguir lista as funções intrínsecas disponíveis para itens.  
   
 |Função|Exemplo|Descrição|  

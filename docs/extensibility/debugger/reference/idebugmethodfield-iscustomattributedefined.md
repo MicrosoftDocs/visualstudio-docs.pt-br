@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f8515fd9fc9914daa7f28f876777dd5eb26ac14c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9d2481c014c149e51c4c9ee3ff837a65e040b7e8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882257"
 ---
 # <a name="idebugmethodfieldiscustomattributedefined"></a>IDebugMethodField::IsCustomAttributeDefined
 Determina se um atributo personalizado específico foi definido.  
@@ -43,7 +44,7 @@ int IsCustomAttributeDefined(
  [in] Uma cadeia de caracteres que contém o nome do atributo personalizado para localizar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna que S_OK se o atributo personalizado é definido nesse método, caso contrário retornará S_FALSE.  
+ Retorna que S_OK se o atributo personalizado é definido neste método, caso contrário retorna S_FALSE.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

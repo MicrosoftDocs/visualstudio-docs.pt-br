@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 619e2a38c794a6823f7efcfb5606bd9fbe9f461c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6f9ad65a81820e37c01d55a0ddba441dd30977b4
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35256052"
 ---
-# <a name="modules-view---contention-data"></a>Modo de Exibição de Módulos – Dados de Contenção
+# <a name="modules-view---contention-data"></a>Exibição Módulos – dados de contenção
 O modo de exibição de módulos de dados de contenção exibe dados de simultaneidade agrupados pelos módulos que foram utilizados nos dados de criação de perfil. Cada módulo é a raiz de uma árvore hierárquica. As funções do módulo no qual os eventos de contenção ocorreram são listadas sob o nó do módulo.  
   
  Se a função estava executando seu próprio código quando ocorreu um evento de contenção, ou seja, a função estava na parte superior da pilha de chamadas, as linhas de origem e os endereços de instrução que estavam em execução são listados sob o nó de função. Como os dados são coletados para uma linha de origem ou um ponteiro de instrução quando a linha ou a instrução está em execução, os valores exclusivos e inclusivos são sempre os mesmos dados de linha e dados de instrução.  
@@ -44,9 +45,9 @@ O modo de exibição de módulos de dados de contenção exibe dados de simultan
 |**Arquivo de Origem**|O arquivo de origem que contém a definição dessa função.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Como personalizar as colunas de exibição do relatório](../profiling/how-to-customize-report-view-columns.md)   
+ [Como personalizar as colunas de exibição de relatório](../profiling/how-to-customize-report-view-columns.md)   
  [Exibição Módulos](../profiling/modules-view.md)   
- [Exibição Módulos – Instrumentação](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
+ [Exibição Módulos – instrumentação](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
  [Exibição Módulos – amostragem](../profiling/modules-view-dotnet-memory-sampling-data.md)   
  [Exibição Módulos](../profiling/modules-view-instrumentation-data.md)   
  [Exibição Módulos](../profiling/modules-view-sampling-data.md)

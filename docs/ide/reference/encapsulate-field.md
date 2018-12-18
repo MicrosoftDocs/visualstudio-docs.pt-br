@@ -1,7 +1,7 @@
 ---
-title: Refatorar um campo para uma propriedade no Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Refatorar um campo para uma propriedade no Visual Studio
 ms.date: 01/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
@@ -14,11 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: b3bb30e262374324952e38cf8b783a96ff6b3f9a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0c6594521774ca7e4fe91bc47776c4f0c4a489a9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942914"
 ---
 # <a name="encapsulate-a-field-refactoring"></a>Refatoração Encapsular um campo
 
@@ -40,20 +41,20 @@ Esta refatoração aplica-se a:
 
    - C#:
 
-    ![Código realçado – C#](media/encapsulate-highlight-cs.png)
+       ![Código realçado – C#](media/encapsulate-highlight-cs.png)
 
    - Visual Basic:
 
-    ![Código realçado – Visual Basic](media/encapsulate-highlight-vb.png)
+       ![Código realçado – Visual Basic](media/encapsulate-highlight-vb.png)
 
-1. Depois, siga um destes procedimentos:
+2. Depois, siga um destes procedimentos:
 
    - **Teclado**
-     - Pressione **Ctrl+R**, em seguida, **Ctrl+E**.  (Observe que o atalho de teclado pode ser diferente com base no perfil selecionado.)
-     - Pressione **Ctrl**+**.** para disparar o menu **Ações Rápidas e Refatorações** e selecione **Encapsular campo** no pop-up da janela Visualização.
+      - Pressione **Ctrl+R**, em seguida, **Ctrl+E**.  (Observe que o atalho de teclado pode ser diferente com base no perfil selecionado.)
+      - Pressione **Ctrl**+**.** para disparar o menu **Ações Rápidas e Refatorações** e selecione **Encapsular campo** no pop-up da janela Visualização.
    - **Mouse**
-     - Selecione **Editar > Refatorar > Encapsular Campo**.
-     - Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Encapsular campo** no pop-up da janela Visualização.
+      - Selecione **Editar > Refatorar > Encapsular Campo**.
+      - Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Encapsular campo** no pop-up da janela Visualização.
 
    Seleção | Descrição
    --------- | -----------
@@ -67,11 +68,11 @@ Esta refatoração aplica-se a:
 
    - C#:
 
-    ![Resultado da ação de encapsular propriedade – C#](media/encapsulate-result-cs.png)
+      ![Resultado da ação de encapsular propriedade – C#](media/encapsulate-result-cs.png)
 
    - Visual Basic:
 
-    ![Resultado da ação de encapsular propriedade – Visual Basic](media/encapsulate-result-vb.png)
+      ![Resultado da ação de encapsular propriedade – Visual Basic](media/encapsulate-result-vb.png)
 
 ## <a name="see-also"></a>Consulte também
 

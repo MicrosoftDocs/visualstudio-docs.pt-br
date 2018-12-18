@@ -1,6 +1,7 @@
 ---
-title: Analisadores de Roslyn no Visual Studio
+title: Análise de código usando os analisadores do Roslyn
 ms.date: 03/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: overview
 helpviewer_keywords:
@@ -12,71 +13,75 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5a434a47bac73aef86e83d220605b196fc2a74a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
-ms.translationtype: MT
+ms.openlocfilehash: 620f2905e2511ed403f0d25f32fa1bfc9b1eca68
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948836"
 ---
-# <a name="overview-of-net-compiler-platform-analyzers"></a>Visão geral dos analisadores de plataforma de compilador do .NET
+# <a name="overview-of-net-compiler-platform-analyzers"></a>Visão geral dos analisadores do .NET Compiler Platform
 
-2017 do Visual Studio inclui um conjunto interno de analisadores de plataforma de compilador .NET que analisar seu código c# ou Visual Basic, conforme você digita. Você pode instalar analisadores adicionais como uma extensão do Visual Studio ou em uma base por projeto como um pacote do NuGet. Analisadores de examinar código estilo, a qualidade do código e facilidade de manutenção, design de código e outros problemas.
+O Visual Studio 2017 inclui um conjunto interno de analisadores do .NET Compiler Platform que analisam o código C# e Visual Basic durante a digitação. Os analisadores examinam o estilo do código, a qualidade e a capacidade de manutenção do código, o design do código e outros problemas. Instale outros analisadores como uma extensão do Visual Studio ou por projeto como um pacote NuGet.
 
-Se forem encontradas violações de regras por um analisador, são informados no editor de códigos como um *curvadas* sob o código incorreto e, no **lista de erros**.
+Se um analisador encontrar violações de regra, elas serão relatadas no editor de códigos como uma *linha ondulada* embaixo do código transgressor e na **Lista de Erros**.
 
-Muitas regras do analisador, ou *diagnóstico*, ter uma ou mais associados *correções de código* que você pode aplicar para corrigir o problema. O diagnóstico de analisador que é integrado ao Visual Studio têm uma correção de código associado. Correções de código são mostradas no menu de ícone de lâmpada, juntamente com outros tipos de *ações rápidas*. Para obter informações sobre essas correções de código, consulte [ações rápidas comuns](../ide/common-quick-actions.md).
+Muitas regras do analisador ou *diagnósticos* têm uma ou mais *correções de código* associadas que podem ser aplicadas para corrigir o problema. Cada diagnóstico do analisador inserido no Visual Studio tem uma correção de código associada. Correções de código são mostradas no menu do ícone de lâmpada, juntamente com outros tipos de *Ações rápidas*. Para saber mais sobre essas correções de código, confira [Ações rápidas comuns](../ide/common-quick-actions.md).
 
-![Violação de analisador e correção de código de ação rápida](../code-quality/media/built-in-analyzer-code-fix.png)
+![Violação do analisador e correção de código de Ação Rápida](../code-quality/media/built-in-analyzer-code-fix.png)
 
-## <a name="roslyn-analyzers-vs-static-code-analysis"></a>Analisadores de Roslyn vs. de análise de código estático
+## <a name="roslyn-analyzers-vs-static-code-analysis"></a>Analisadores do Roslyn vs. análise de código estático
 
-Analisadores de plataforma de compilador .NET ("Roslyn") substituirá [análise de código estático](../code-quality/code-analysis-for-managed-code-overview.md) para código gerenciado. Muitas das regras de análise de código estático já foram reescritas como diagnóstico do Roslyn analisador.
+Os Analisadores do .NET Compiler Platform ("Roslyn") substituirão eventualmente a [análise de código estático](../code-quality/code-analysis-for-managed-code-overview.md) por código gerenciado. Muitas das regras de análise de código estático já foram reescritas como diagnóstico de analisador do Roslyn.
 
-Como violações de regras de análise de código estático, violações de analisador Roslyn aparecem no **lista de erros**. Além disso, violações de analisador Roslyn também aparecem no editor de códigos como *squigglies* sob o código incorreto. A cor do curvadas depende de [configuração de severidade](../code-quality/use-roslyn-analyzers.md#rule-severity) da regra. Captura de tela a seguir mostra três violações&mdash;um vermelho, um verde e um cinza:
+Como violações de regra de análise de código estático, as violações de analisador do Roslyn são exibidas na **Lista de Erros**. Além disso, as violações de analisador do Roslyn também são mostradas no editor de códigos, como *linhas onduladas* embaixo do código incorreto. A cor da linha ondulada depende da [configuração de gravidade](../code-quality/use-roslyn-analyzers.md#rule-severity) da regra. A captura de tela a seguir mostra três violações&mdash;uma vermelha, uma verde e uma cinza:
 
-![Squigglies no editor de códigos](media/diagnostics-severity-colors.png)
+![Linhas onduladas no editor de códigos](media/diagnostics-severity-colors.png)
 
-Analisadores de Roslyn analisar o código no momento da compilação, como análise de código estático se ele está habilitado, mas também em tempo real conforme você digita! Analisadores de Roslyn também podem fornecer análise em tempo de design dos arquivos de código que não estão abertos no editor, se você habilitar [completa de análise de solução](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md#to-toggle-full-solution-analysis).
-
-> [!NOTE]
-> Erros de tempo de compilação e avisos do Roslyn analisadores são mostrados apenas se os analisadores são instalados como um pacote do NuGet.
-
-Não apenas Roslyn analisadores relatar os mesmos tipos de problemas que a análise de código estático, mas eles facilitam corrigir um ou todos, ocorrências da violação de no arquivo ou projeto. Essas ações são chamadas *correções de código*. Correções de código são específicos do IDE; no Visual Studio, eles são implementados como [ações rápidas](../ide/quick-actions.md). Nem todos os diagnósticos de analisador têm uma correção de código associado.
+Os analisadores do Roslyn analisam código em tempo de build, como análise de código estático, se habilitada, mas também em tempo real conforme você digita! Os analisadores do Roslyn também poderão fornecer análise em tempo de design dos arquivos de código que não estão abertos no editor se você habilitar [análise de solução completa](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md#to-toggle-full-solution-analysis).
 
 > [!NOTE]
-> A opção de menu **analisar** > **executar análise de código** aplica-se a análise de código estático somente para. Além disso, em um projeto **análise de código** página de propriedade, o **habilitar análise de código no Build** e **Suprimir resultados do código gerado** caixas de seleção só se aplicam ao análise de código estático. Eles não têm efeito sobre os analisadores de Roslyn.
+> Erros e avisos de tempo de build de analisadores do Roslyn serão mostrados apenas se os analisadores estiverem instalados como um pacote NuGet.
 
-Para diferenciar as violações de analisadores de Roslyn e análise de código estático no **lista de erros**, examine o **ferramenta** coluna. Se o valor de ferramenta corresponde a um dos assemblies do analisador de **Solution Explorer**, por exemplo **Microsoft.CodeQuality.Analyzers**, a violação vêm de um analisador de Roslyn. Caso contrário, a violação se origina de análise de código estático.
+Os analisadores do Roslyn não só comunicam os mesmos tipos de problemas que a análise de código estático, mas também facilitam a correção de uma ou todas as ocorrências da violação no seu arquivo ou projeto. Essas ações são denominadas *correções de código*. As correções de código são específicas do IDE; no Visual Studio, elas são implementadas como [Ações rápidas](../ide/quick-actions.md). Nem todos os diagnósticos do analisador têm uma correção de código associada.
 
-![Coluna de ferramenta na lista de erros](media/code-analysis-tool-in-error-list.png)
+> [!NOTE]
+> A opção de menu **Analisar** > **Executar análise de código** aplica-se apenas à análise de código estático. Além disso, na página de propriedades **Análise de código** de um projeto, as caixas de seleção **Habilitar análise de código no build** e **Suprimir resultados do código gerado** são aplicáveis apenas à análise de código estático. Eles não têm efeito nenhum sobre os analisadores do Roslyn.
 
-## <a name="nuget-package-vs-extension"></a>Pacote do NuGet versus extensão
+Para diferenciar entre as violações de analisadores do Roslyn e análise de código estático na **Lista de Erros**, examine a coluna **Ferramenta**. Se o valor Ferramenta corresponder a um dos assemblies do analisador no **Gerenciador de Soluções**, por exemplo **Microsoft.CodeQuality.Analyzers**, a violação será proveniente de um analisador do Roslyn. Caso contrário, a violação será proveniente da análise de código estático.
 
-Plataforma de compilador .NET analisadores podem ser instalado por projeto através de um pacote NuGet ou todo o Visual Studio como uma extensão do Visual Studio. Há algumas diferenças de comportamento das teclas entre esses dois métodos de [instalar analisadores de](../code-quality/install-roslyn-analyzers.md).
+![Coluna Ferramenta na Lista de Erros](media/code-analysis-tool-in-error-list.png)
+
+## <a name="nuget-package-versus-vsix-extension"></a>Pacote NuGet em comparação com a extensão do VSIX
+
+Os analisadores do .NET Compiler Platform podem ser instalados por projeto por meio de um pacote NuGet ou em todo o Visual Studio como uma extensão dele. Há algumas importantes diferenças de comportamento entre esses dois métodos de [instalar analisadores](../code-quality/install-roslyn-analyzers.md).
 
 ### <a name="scope"></a>Escopo
 
-Se você instalar analisadores como uma extensão do Visual Studio, eles se aplicam no nível da solução, a todas as instâncias do Visual Studio. Se você instalar os analisadores como um pacote do NuGet, que é o método preferencial, elas se aplicam somente ao projeto em que o pacote NuGet foi instalado. Em ambientes de equipe, analisadores instalados como pacotes NuGet estão no escopo para *todos os desenvolvedores* que trabalhar no projeto.
+Se você instalar analisadores como uma extensão do Visual Studio, então aplique, no nível da solução, a todas as instâncias do Visual Studio. Se você instalar os analisadores como um pacote NuGet, que é o método preferencial, eles serão aplicáveis somente ao projeto em que o pacote NuGet foi instalado. Em ambientes de equipe, os analisadores instalados como pacotes NuGet estão no escopo para *todos os desenvolvedores* que trabalham nesse projeto.
 
-### <a name="build-errors"></a>Erros de compilação
+### <a name="build-errors"></a>Erros de build
 
-Para que as regras aplicadas em tempo de compilação, inclusive por meio da linha de comando ou como parte de uma integração contínua (CI) compilação, instale os analisadores como um pacote do NuGet. Erros e avisos do analisador não aparecem no relatório de compilação se você instalar os analisadores como uma extensão.
+Para que as regras sejam impostas no tempo de build, incluindo por meio da linha de comando ou como parte de uma build de CI (integração contínua), instale os analisadores como um pacote NuGet. Os erros e avisos do analisador não serão exibidos no relatório de build se você instalar os analisadores como uma extensão.
 
-Captura de tela a seguir mostra a saída da compilação de linha de comando de criação de um projeto que contém uma violação de regra do analisador:
+A captura de tela a seguir mostra a saída de build da linha de comando da criação de um projeto que contém uma violação de regra de analisador:
 
-![Saída de MSBuild com violação de regra](media/command-line-build-analyzers.png)
+![Saída do MSBuild com violação de regra](media/command-line-build-analyzers.png)
 
 ### <a name="rule-severity"></a>Gravidade da regra
 
-Você não pode definir a severidade das regras de analisadores que foram instaladas como uma extensão do Visual Studio. Para configurar [regra severidade](../code-quality/use-roslyn-analyzers.md#rule-severity), instale os analisadores como um pacote do NuGet.
+Não é possível definir a gravidade das regras de analisadores que foram instalados como uma extensão do Visual Studio. Para configurar a [gravidade da regra](../code-quality/use-roslyn-analyzers.md#rule-severity), instale os analisadores como um pacote NuGet.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Instalar analisadores de Roslyn no Visual Studio](../code-quality/install-roslyn-analyzers.md)
-- [Use os analisadores de Roslyn no Visual Studio](../code-quality/use-roslyn-analyzers.md)
+> [!div class="nextstepaction"]
+> [Instalar Analisadores do Roslyn no Visual Studio](../code-quality/install-roslyn-analyzers.md)
+
+> [!div class="nextstepaction"]
+> [Usar Analisadores do Roslyn no Visual Studio](../code-quality/use-roslyn-analyzers.md)
 
 ## <a name="see-also"></a>Consulte também
 
 - [Ações rápidas no Visual Studio](../ide/quick-actions.md)
-- [Gravar seu próprio analisador Roslyn](../extensibility/getting-started-with-roslyn-analyzers.md)
-- [SDK de plataforma de compilador do .NET](/dotnet/csharp/roslyn-sdk/)
+- [Escrever seu próprio analisador do Roslyn](../extensibility/getting-started-with-roslyn-analyzers.md)
+- [SDK do .NET Compiler Platform](/dotnet/csharp/roslyn-sdk/)

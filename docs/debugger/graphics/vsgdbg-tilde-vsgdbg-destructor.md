@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31471594"
 ---
 # <a name="vsgdbgvsgdbg-destructor"></a>VsgDbg::~VsgDbg (Destruidor)
 Destrói a uma instância do `VsgDbg` classe. Se as informações de gráficos ativamente está sendo registradas, o arquivo de log do gráfico é finalizado e fechado, e os recursos que foram usados durante a captura ativamente informações de gráficos são liberados.  

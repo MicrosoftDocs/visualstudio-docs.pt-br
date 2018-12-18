@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 65398ac0c4bde18dc772d75ceea203bdbfe3b189
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1e1e344ff5adb51d118370f81de10ba01c8950e1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49904213"
 ---
 # <a name="bpunboundreason"></a>BP_UNBOUND_REASON
 Fornece o motivo pelo qual que um ponto de interrupção foi desassociado.  
@@ -53,13 +54,13 @@ public enum enum_BP_UNBOUND_REASON {
  O código que contém o ponto de interrupção foi descarregado.  
   
  BPUR_BREAKPOINT_REBIND  
- O ponto de interrupção foram religado para um local diferente. Isso pode ocorrer depois de editar e continuar as operações quando move o ponto de interrupção, ou quando o ponto de interrupção está associado a um arquivo com um caminho que não é mais válido.  
+ O ponto de interrupção foram religado para um local diferente. Isso pode acontecer após editar e continuar as operações quando move o ponto de interrupção ou quando o ponto de interrupção é associado a um arquivo com um caminho que não é mais válido.  
   
  BPUR_ BREAKPOINT_ERROR  
- O ponto de interrupção é determinado para estar em erro depois que ele está associado. Isso acontece para pontos de interrupção gerenciados cujas condições não são mais válidas.  
+ O ponto de interrupção é determinado em erro depois que ele está associado. Isso acontece com os pontos de interrupção gerenciados cujas condições não são mais válidas.  
   
 ## <a name="remarks"></a>Comentários  
- Retornado pelo [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) método.  
+ Retornado pela [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

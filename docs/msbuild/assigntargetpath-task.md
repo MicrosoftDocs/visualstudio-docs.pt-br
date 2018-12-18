@@ -15,16 +15,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c57c9515b57b0fbdd49da6b35d664cd1547882d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ccbd96de96e750c0f149924ab69785e077591755
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946609"
 ---
 # <a name="assigntargetpath-task"></a>Tarefa AssignTargetPath
-Essa tarefa aceita arquivos de uma lista e adiciona atributos `<TargetPath>` se ainda não foram especificados.  
+Essa tarefa aceita uma lista de arquivos e adiciona atributos `<TargetPath>`, caso eles ainda não estiverem especificados.  
   
-## <a name="task-parameters"></a>Parâmetros da tarefa  
+## <a name="task-parameters"></a>Parâmetros de tarefa  
  A tabela a seguir descreve os parâmetros da tarefa `AssignTargetPath`.  
   
 |Parâmetro|Descrição|  
@@ -34,7 +35,7 @@ Essa tarefa aceita arquivos de uma lista e adiciona atributos `<TargetPath>` se 
 |`AssignedFiles`|Opcional<br /><br /> Parâmetro de saída <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Contém a lista resultante de arquivos.|  
   
 ## <a name="remarks"></a>Comentários  
- Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, confira [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir executa a tarefa `AssignTargetPath` para configurar um projeto.  

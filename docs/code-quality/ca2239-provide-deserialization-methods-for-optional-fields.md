@@ -1,6 +1,7 @@
 ---
 title: 'CA2239: fornecer métodos de desserialização para campos opcionais'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,36 +14,41 @@ ms.assetid: 6480ff5e-0caa-4707-814e-2f927cdafef5
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e0bd6acae196dc3556994cdd36946b2574aad698
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8c1b8adb3454b7309eefa49ded129ce899c3cf58
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548576"
 ---
 # <a name="ca2239-provide-deserialization-methods-for-optional-fields"></a>CA2239: fornecer métodos de desserialização para campos opcionais
+
 |||
 |-|-|
 |NomeDoTipo|ProvideDeserializationMethodsForOptionalFields|
 |CheckId|CA2239|
 |Categoria|Microsoft.Usage|
-|Alteração Significativa|Não separáveis|
+|Alteração Significativa|Não separável|
 
 ## <a name="cause"></a>Causa
- Um tipo tem um campo que está marcado com o <xref:System.Runtime.Serialization.OptionalFieldAttribute?displayProperty=fullName> atributo e o tipo não fornece métodos de manipulação de eventos de desserialização.
+ Um tipo tem um campo que é marcado com o <xref:System.Runtime.Serialization.OptionalFieldAttribute?displayProperty=fullName> atributo e o tipo não fornece métodos de manipulação de eventos de desserialização.
 
-## <a name="rule-description"></a>Descrição da Regra
- O <xref:System.Runtime.Serialization.OptionalFieldAttribute> atributo não tem nenhum efeito na serialização; um campo marcado com o atributo é serializado. No entanto, o campo será ignorado na desserialização e retém o valor padrão associado com seu tipo. Manipuladores de eventos de desserialização devem ser declarado como definir o campo durante o processo de desserialização.
+## <a name="rule-description"></a>Descrição da regra
+ O <xref:System.Runtime.Serialization.OptionalFieldAttribute> atributo não tem nenhum efeito na serialização; um campo marcado com o atributo é serializado. No entanto, o campo é ignorado na desserialização e retém o valor padrão associado com seu tipo. Manipuladores de eventos de desserialização devem ser declarados para definir o campo durante o processo de desserialização.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, adicione métodos para o tipo de manipulação de eventos de desserialização.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, adicione métodos para o tipo de manipulação de evento de desserialização.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- É seguro suprimir um aviso de que essa regra se o campo deve ser ignorado durante o processo de desserialização.
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+ É seguro suprimir um aviso nessa regra, se o campo deve ser ignorado durante o processo de desserialização.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir mostra métodos de manipulação de um tipo com um campo opcional e um evento de desserialização.
+ O exemplo a seguir mostra métodos de manipulação de um tipo com um campo opcional e o evento de desserialização.
 
  [!code-csharp[FxCop.Usage.OptionalFields#1](../code-quality/codesnippet/CSharp/ca2239-provide-deserialization-methods-for-optional-fields_1.cs)]
  [!code-vb[FxCop.Usage.OptionalFields#1](../code-quality/codesnippet/VisualBasic/ca2239-provide-deserialization-methods-for-optional-fields_1.vb)]

@@ -1,5 +1,5 @@
 ---
-title: 'Como: desabilitar a ativação de URL de aplicativos ClickOnce usando o Designer | Microsoft Docs'
+title: 'Como: desabilitar a ativação de aplicativos ClickOnce pela URL usando o Designer | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -18,14 +18,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 366c4362ca3c3b6140380ab64000a01fe8e1aa6b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 97357dd92525be2d36b552c5f3df49080f46d29b
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152027"
 ---
-# <a name="how-to-disable-url-activation-of-clickonce-applications-by-using-the-designer"></a>Como desabilitar a ativação de aplicativos ClickOnce pela URL usando o designer
-Normalmente, um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo será iniciado automaticamente imediatamente após a instalação de um servidor Web. Por motivos de segurança, você pode decidir desativar esse comportamento e diga aos usuários para iniciar o aplicativo a partir de **iniciar** menu em vez disso. O procedimento a seguir descreve como desabilitar a ativação de URL.  
+# <a name="how-to-disable-url-activation-of-clickonce-applications-by-using-the-designer"></a>Como: desabilitar a ativação de aplicativos ClickOnce pela URL usando o Designer
+Normalmente, um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo será iniciado automaticamente, imediatamente após a instalação de um servidor Web. Por motivos de segurança, você pode optar por desabilitar esse comportamento e diga aos usuários para iniciar o aplicativo a partir de **iniciar** menu em vez disso. O procedimento a seguir descreve como desabilitar a ativação de URL.  
   
  Essa técnica pode ser usada somente para [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativos instalados no computador do usuário de um servidor Web. Ele não pode ser usado para aplicativos somente online, que podem ser iniciados apenas por meio de sua URL. Para obter mais informações sobre a diferença entre os aplicativos instalados e somente online, consulte [escolhendo uma estratégia de implantação do ClickOnce](../deployment/choosing-a-clickonce-deployment-strategy.md).  
   
@@ -33,9 +34,9 @@ Normalmente, um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)
   
 ## <a name="procedure"></a>Procedimento  
   
-#### <a name="to-disable-url-activation-for-your-application"></a>Para desabilitar a ativação de URL para o seu aplicativo  
+#### <a name="to-disable-url-activation-for-your-application"></a>Para desabilitar a ativação de URL para seu aplicativo  
   
-1.  Clique o nome do projeto em **Solution Explorer**e clique em **propriedades**.  
+1.  Nome do projeto no botão direito do mouse **Gerenciador de soluções**e clique em **propriedades**.  
   
 2.  Sobre o **propriedades** , clique no **publicar** guia.  
   
@@ -43,7 +44,7 @@ Normalmente, um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)
   
 4.  Clique em **manifestos**.  
   
-5.  Selecione a caixa de seleção **bloqueia o aplicativo seja ativado através de uma URL**.  
+5.  Selecione a caixa de seleção rotulada **bloquear o aplicativo seja ativado através de uma URL**.  
   
 6.  Implantar seu aplicativo.  
   

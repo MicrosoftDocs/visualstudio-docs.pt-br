@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e4d5cf54ce48d71ce31e87699b2310d5d0650e83
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: be83e7ce4e5b3620ffdd24cc0b504d93d4a376a9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49947963"
 ---
 # <a name="idebugexpressionevaluationcompleteevent2getexpression"></a>IDebugExpressionEvaluationCompleteEvent2::GetExpression
 Obtém a expressão original.  
@@ -43,7 +44,7 @@ int GetExpression(
  [out] Retorna um [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) objeto que representa a expressão que foi analisada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  Esse método retorna o objeto que foi criado em uma chamada para o [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) método.  

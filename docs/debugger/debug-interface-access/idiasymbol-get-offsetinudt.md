@@ -1,5 +1,5 @@
 ---
-title: ': Get_offsetinudt | Microsoft Docs'
+title: 'Idiasymbol:: Get_offsetinudt | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 22e0574f8892c2e73a12ebf241af604b85a5ed30
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 48b13de8a9d1680ae4e2a6a94a4fda120a74a18e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911415"
 ---
 # <a name="idiasymbolgetoffsetinudt"></a>IDiaSymbol::get_offsetInUdt
-Recupera o deslocamento de início de um tipo definido pelo usuário (UDT) de um membro de UDT.  
+Recupera o deslocamento para o início de um tipo definido pelo usuário (UDT) de um membro no UDT.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,10 +34,10 @@ HRESULT get_offsetInUdt(
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Retorna o deslocamento em bytes do local do símbolo.  
+ [out] Retorna o deslocamento em bytes, do local do símbolo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  

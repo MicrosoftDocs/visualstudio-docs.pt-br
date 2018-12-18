@@ -16,20 +16,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2d905914c9819671cf8c77d81ec8d51302467a9d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 31f34dbf974ef860ddabd29af0e94b3c65a11f32
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231002"
 ---
 # <a name="commands-element"></a>Elemento Commands
-Representa a coleção de comandos na barra de ferramentas VSPackage. A coleção pode ter até cinco subseções, da seguinte maneira: grupos, menus, botões, combinações e bitmaps.  
+Representa a coleção de comandos na barra de ferramentas do VSPackage. A coleção pode ter até cinco subseções, da seguinte maneira: grupos, menus, botões, combos e bitmaps.  
   
- Cada elemento do filho subseção, por exemplo, \<Menu >, é identificado por uma ID exclusiva que é um GUID e um par de identificador numérico. O GUID identifica o conjunto de comandos"" e é usado para agrupar comandos relacionados logicamente. O VSPackage deve definir seu próprio comando definido para evitar colisões com IDs de comando que são definidos por outros VSPackages.  
+ Cada elemento de filho subseção, por exemplo, \<Menu >, é identificado por uma ID exclusiva do comando que é um GUID e um par de identificador numérico. O GUID identifica o conjunto de comandos"" e é usado para agrupar comandos relacionados logicamente. O VSPackage deverá definir seu próprio conjunto de comandos para evitar colisões com IDs de comando que são definidas por outros VSPackages.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <Commands package="GuidMyPackage" >  
   <Menus>... </Menus>  
   <Groups>... </Groups>  
@@ -46,23 +47,23 @@ Representa a coleção de comandos na barra de ferramentas VSPackage. A coleçã
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|pacote|Um GUID que identifica o VSPackage que fornece os comandos.<br /><br /> Por exemplo, do pacote = "guidVsPackage1Pkg".|  
+|pacote|Um GUID que identifica o VSPackage, que fornece os comandos.<br /><br /> Por exemplo, do pacote = "guidVsPackage1Pkg".|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[Elemento Menus](../extensibility/menus-element.md)|Define todos os menus que implementa um VSPackage.|  
+|[Elemento menus](../extensibility/menus-element.md)|Define todos os menus que implementa um VSPackage.|  
 |[Elemento Groups](../extensibility/groups-element.md)|Contém entradas que definem os grupos de comando em um VSPackage.|  
-|[Elemento Buttons](../extensibility/buttons-element.md)|Agrupa elementos de botão.|  
-|[Elemento Bitmaps](../extensibility/bitmaps-element.md)|Agrupa elementos do Bitmap.|  
-|[Elemento Combos](../extensibility/combos-element.md)|Agrupa elementos de combinação.|  
+|[Elemento Buttons](../extensibility/buttons-element.md)|Agrupa os elementos de botão.|  
+|[Elemento bitmaps](../extensibility/bitmaps-element.md)|Agrupa elementos do Bitmap.|  
+|[Elemento combos](../extensibility/combos-element.md)|Agrupa os elementos de combinação.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[Elemento CommandTable](../extensibility/commandtable-element.md)|Define todos os elementos que representam os comandos que fornece um VSPackage ao IDE. Possíveis elementos são itens de menu, menus, barras de ferramentas e caixas de combinação.|  
+|[Elemento CommandTable](../extensibility/commandtable-element.md)|Define todos os elementos que representam os comandos a um VSPackage fornece ao IDE. Possíveis elementos são itens de menu, menus, barras de ferramentas e caixas de combinação.|  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar um [comandos elemento](../extensibility/commands-element.md).  
@@ -91,5 +92,5 @@ Representa a coleção de comandos na barra de ferramentas VSPackage. A coleçã
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Como VSPackages adicionar elementos da Interface do usuário](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
+ [Como os VSPackages adicionam elementos da interface do usuário](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [Comandos, menus e barras de ferramentas](../extensibility/internals/commands-menus-and-toolbars.md)

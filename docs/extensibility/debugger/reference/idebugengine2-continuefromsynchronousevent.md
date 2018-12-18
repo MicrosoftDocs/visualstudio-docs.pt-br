@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 305179184df1241b6d944ea78e164c09af37923f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 43589e4fd5a75c5c1cd7681dde4a3957f3fe4243
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837510"
 ---
 # <a name="idebugengine2continuefromsynchronousevent"></a>IDebugEngine2::ContinueFromSynchronousEvent
 Chamado pelo Gerenciador de depuração de sessão (SDM) para indicar que um evento de depuração síncrona, enviado anteriormente pelo mecanismo de depuração (DE) para o SDM, foi recebido e processado.  
@@ -40,13 +41,13 @@ HRESULT ContinueFromSynchronousEvent(
   
 #### <a name="parameters"></a>Parâmetros  
  `pEvent`  
- [in] Um [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) objeto que representa o evento síncrono enviado anteriormente da qual o depurador agora deve prosseguir.  
+ [in] Uma [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) objeto que representa o evento síncrono enviado anteriormente da qual o depurador agora deve prosseguir.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- O DE deve verificar que era a origem do evento representado pelo `pEvent` parâmetro.  
+ O DE deve verificar que ele foi a origem do evento representado pelo `pEvent` parâmetro.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como implementar esse método para um simples `CEngine` objeto que implementa o [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) interface.  

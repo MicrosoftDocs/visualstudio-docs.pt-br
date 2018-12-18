@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31473826"
 ---
 # <a name="label-debug-interface-access-sdk"></a>Label (SDK de Acesso à Interface de Depuração)
 Um local no código do programa é identificado por um `SymTagLabel` símbolo.  

@@ -14,18 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: adc1a138c50c0fe13962f6601449eb3498d90398
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 23538e8e00553322f4f04e50414a8b3ddbd73b91
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39635906"
 ---
 # <a name="requiredframeworkversion-element-visual-studio-templates"></a>Elemento RequiredFrameworkVersion (modelos do Visual Studio)
 
-Especifica a versão mínima do .NET Framework que é exigido pelo modelo. Faz com que o **versão do Framework de destino** lista suspensa para ser exibido no **novo projeto** caixa de diálogo. O `RequiredFrameworkVersion` elemento também determina o valor mais baixo disponível na lista suspensa.
+Especifica a versão mínima do .NET Framework que é exigido pelo modelo. Isso faz com que o **versão do Framework de destino** dropdown a ser exibido na **novo projeto** caixa de diálogo. O `RequiredFrameworkVersion` elemento também determina o valor mais baixo disponível na lista suspensa.
 
 > [!IMPORTANT]
-> A partir do Visual Studio 2017 versão 15.6, o **versão do Framework de destino** suspensa não é mais um filtro de modelos exibidos no **modelos** seção o **novo projeto** caixa de diálogo. Em vez disso, a lista suspensa funciona como um seletor de framework para o modelo selecionado.
+> A partir do Visual Studio 2017 versão 15.6, o **versão do Framework de destino** lista suspensa não é mais um filtro para os modelos exibidos na **modelos** seção o **novo projeto** caixa de diálogo. Em vez disso, a lista suspensa funciona como um seletor de estrutura para o modelo selecionado.
 
  \<VSTemplate > \<TemplateData > \<RequiredFrameworkVersion >
 
@@ -48,7 +49,7 @@ Especifica a versão mínima do .NET Framework que é exigido pelo modelo. Faz c
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e a define como ele é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo.|
 
 ## <a name="text-value"></a>Valor de texto
  Um valor de texto é obrigatório.
@@ -57,7 +58,7 @@ Especifica a versão mínima do .NET Framework que é exigido pelo modelo. Faz c
 
 ## <a name="remarks"></a>Comentários
 
-`RequiredFrameworkVersion` é um elemento opcional. Use esse elemento apenas se o modelo dá suporte a uma versão mínima específica (e versões posteriores, se houver) do .NET Framework. Se você especificar o `RequiredFrameworkVersion` elemento e seu modelo não dá suporte a uma versão específica de mínima do .NET Framework, o **versão do Framework de destino** suspenso é exibido quando não é aplicável.
+`RequiredFrameworkVersion` é um elemento opcional. Use esse elemento somente se o modelo dá suporte a uma versão mínima específica (e versões posteriores, se houver) do .NET Framework. Se você especificar o `RequiredFrameworkVersion` elemento e seu modelo não dá suporte a uma versão específica de mínima do .NET Framework, o **versão do Framework de destino** menu suspenso é exibido quando não é aplicável.
 
 ## <a name="example"></a>Exemplo
 
@@ -81,10 +82,10 @@ O exemplo a seguir ilustra os metadados para um padrão [!INCLUDE[csprcs](../dat
 </VSTemplate>
 ```
 
-Neste exemplo, a versão mínima do .NET Framework que é exigido pelo modelo, representado pelo `RequiredFrameworkVersion`, é o 3.0. Um projeto criado com esse modelo pode direcionar o .NET Framework 3.0 a partir de versões.
+Neste exemplo, a versão mínima do .NET Framework que é exigido pelo modelo, representado por `RequiredFrameworkVersion`, é 3.0. Um projeto criado com esse modelo pode direcionar o .NET Framework 3.0 a partir de versões.
 
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
-- [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)
-- [Direcionamento de uma versão específica do .NET Framework](../ide/targeting-a-specific-dotnet-framework-version.md)
+- [Criar modelos de projeto e de item](../ide/creating-project-and-item-templates.md)
+- [Uma versão específica do .NET Framework de destino](../ide/targeting-a-specific-dotnet-framework-version.md)

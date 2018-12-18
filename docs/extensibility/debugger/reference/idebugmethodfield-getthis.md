@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3cde294ea10a6eedd1046a41686dbfa9f3b47e4e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 302486a0cd59f6bc843af6aba76f734775cf405e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842931"
 ---
 # <a name="idebugmethodfieldgetthis"></a>IDebugMethodField::GetThis
 Obtém o `this` (`Me` em [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]) ponteiro do objeto que contém o método.  
@@ -43,10 +44,10 @@ int GetThis(
  [out] Retorna um [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objeto que representa o ponteiro "this".  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Em idiomas orientada a objeto, normalmente há um ponteiro implícito à instanciação atual de uma classe. Isso é conhecido como `this` em c / C++ e como `Me` em [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)].  
+ Em linguagens orientadas a objeto, normalmente há um ponteiro implícito para a instanciação atual de uma classe. Isso é conhecido como `this` no # C / C++ e assim como acontece `Me` em [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   

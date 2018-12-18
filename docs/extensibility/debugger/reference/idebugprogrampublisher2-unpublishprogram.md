@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9bff0c60ea8401896eb5399ed797d90b62bf0d0a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2daec6615f98d6e253e65bdc66cb7f1f545f9857
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822209"
 ---
 # <a name="idebugprogrampublisher2unpublishprogram"></a>IDebugProgramPublisher2::UnpublishProgram
-Faz com que um programa não está disponível para ser depurado.  
+Faz com que um programa não esteja disponível para ser depurado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +44,7 @@ int UnpublishProgram(
  [in] Um `IUnknown` interface para o programa. Este é o mesmo valor fornecido para o [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) método e identifica exclusivamente o programa que está sendo removido (ou seja, ele é usado como um cookie).  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  Para disponibilizar um programa para os mecanismos de depuração e o Gerenciador de sessão de depuração, use o [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) método.  

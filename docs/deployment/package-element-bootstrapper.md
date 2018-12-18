@@ -17,18 +17,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c04676f03f4734a25601e772208939e0b3f8482d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 49867ddc897a9c1a1241a891a3ba3de866d84688
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899234"
 ---
-# <a name="ltpackagegt-element-bootstrapper"></a>&lt;Pacote&gt; elemento (Bootstrapper)
+# <a name="ltpackagegt-element-bootstrapper"></a>&lt;Pacote&gt; elemento (bootstrapper)
 O `Package` é o elemento XML de nível superior dentro de um arquivo de pacote.  
-  
+
 ## <a name="syntax"></a>Sintaxe  
-  
-```  
+
+```xml  
 <Package  
     Culture  
     Name  
@@ -74,7 +75,7 @@ O `Package` é o elemento XML de nível superior dentro de um arquivo de pacote.
             SearchDepth  
         />  
     </InstallChecks>  
-  
+
     <Commands  
         Reboot  
     >  
@@ -110,7 +111,7 @@ O `Package` é o elemento XML de nível superior dentro de um arquivo de pacote.
             </ExitCodes>  
         </Command>  
     </Commands>  
-  
+
     <PackageFiles  
         CopyAllComponents  
     >  
@@ -121,14 +122,14 @@ O `Package` é o elemento XML de nível superior dentro de um arquivo de pacote.
             PublicKey  
         />  
     </PackageFiles>  
-  
+
     <Strings>  
         <String  
             Name  
         >  
         </String>  
     </Strings>  
-  
+
     <Schedules>  
         <Schedule  
             Name  
@@ -140,33 +141,34 @@ O `Package` é o elemento XML de nível superior dentro de um arquivo de pacote.
     </Schedules>  
 </Package>  
 ```  
-  
+
 ## <a name="elements-and-attributes"></a>Elementos e atributos  
  O `Package` elemento é necessário. Ele tem os seguintes atributos.  
-  
-|Atributo|Descrição|  
-|---------------|-----------------|  
-|`Culture`|Necessário. Define a cultura para este pacote, que determina o idioma a ser usado. Esse atributo é uma chave para o `Strings` elemento, que lista as cadeias de caracteres específicas da cultura para nomes de produtos e as mensagens de erro durante a instalação.|  
-|`Name`|Necessário. O nome do pacote exibido ao desenvolvedor de dentro de uma ferramenta como [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Esse atributo é uma chave para o `Strings` elemento, que deve conter um `String` elemento com o `Name` e `Culture` propriedades definida para corresponder a `Name` e `Culture` propriedades de `Package`.|  
-|`LicenseAgreement`|Opcional. Especifica o nome do arquivo do pacote de distribuição que contém o contrato de licença de usuário final (EULA).  Esse arquivo pode ser um texto sem formatação (. txt) ou Rich Text Format. (. rtf)|  
-  
+
+
+| Atributo | Descrição |
+|--------------------| - |
+| `Culture` | Necessário. Define a cultura para esse pacote, que determina o idioma a ser usado. Esse atributo é uma chave para o `Strings` elemento, que lista as cadeias de caracteres específicas da cultura para nomes de produtos e as mensagens de erro durante a instalação. |
+| `Name` | Necessário. O nome do pacote exibido ao desenvolvedor de dentro de uma ferramenta como [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Esse atributo é uma chave para o `Strings` elemento, que deve conter um `String` elemento com o `Name` e `Culture` propriedades definidas para corresponder a `Name` e `Culture` propriedades de `Package`. |
+| `LicenseAgreement` | Opcional. Especifica o nome do arquivo no pacote de distribuição que contém o contrato de licença de usuário final (EULA).  Esse arquivo pode ser qualquer texto sem formatação (*. txt*) ou Rich Text Format. (*. rtf*) |
+
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir mostra um arquivo de pacote completo para redistribuir o [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)].  
-  
-```  
+
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
-  
+
 <Package  
   xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"  
   Name="DisplayName"  
   Culture="Culture"  
   LicenseAgreement="eula.rtf"  
 >  
-  
+
     <PackageFiles>  
         <PackageFile Name="eula.rtf"/>  
     </PackageFiles>  
-  
+
     <!-- Defines a localizable string table for error messages-->  
     <Strings>  
         <String Name="DisplayName">.NET Framework 2.0</String>  
@@ -184,9 +186,9 @@ O `Package` é o elemento XML de nível superior dentro de um arquivo de pacote.
         <String Name="InstMsiAExe">http://go.microsoft.com/fwlink/?LinkId=37285</String>  
         <String Name="Msi30Exe">http://go.microsoft.com/fwlink/?LinkId=37287</String>  
     </Strings>  
-  
+
 </Package>  
 ```  
-  
+
 ## <a name="see-also"></a>Consulte também  
  [Referência de esquema de produto e pacote](../deployment/product-and-package-schema-reference.md)

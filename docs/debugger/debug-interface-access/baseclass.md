@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31465415"
 ---
 # <a name="baseclass"></a>BaseClass
 Cada classe base para um símbolo de tipo definido pelo usuário (UDT) é identificada por um filho com um `SymTagBaseClass` marca. O [: Get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md) propriedade contém o símbolo para o UDT subjacente, e todas as propriedades do UDT subjacente estão disponíveis como parte desse símbolo BaseClass.  

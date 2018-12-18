@@ -21,11 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dc467b859e3a02282c6d6165dc263931900c5bc2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7847f8b1dbea5ac5dbd2f9c1ed492c9172e539b7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49895464"
 ---
 # <a name="choose-element-msbuild"></a>Elemento Choose (MSBuild)
 Avalia a elementos filho para selecionar um conjunto de elementos `ItemGroup` e/ou `PropertyGroup` a ser avaliado.  
@@ -41,7 +42,7 @@ Avalia a elementos filho para selecionar um conjunto de elementos `ItemGroup` e/
 
 ## <a name="syntax"></a>Sintaxe  
 
-```  
+```xml  
 <Choose>  
     <When Condition="'StringA'=='StringB'">... </When>  
     <Otherwise>... </Otherwise>  
@@ -63,14 +64,14 @@ Avalia a elementos filho para selecionar um conjunto de elementos `ItemGroup` e/
 
 ### <a name="parent-elements"></a>Elementos pai  
 
-|Elemento|Descrição|  
-|-------------|-----------------|  
-|[Otherwise](../msbuild/otherwise-element-msbuild.md)|Especifica o bloco de código a ser executado se as condições de todos os elementos `When` forem avaliadas como `false`.|  
-|[Projeto](../msbuild/project-element-msbuild.md)|Elemento raiz necessário de um arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].|  
-|[When](../msbuild/when-element-msbuild.md)|Especifica um possível bloco de código a ser selecionado pelo elemento `Choose`.|  
+| Elemento | Descrição |
+| - | - |
+| [Otherwise](../msbuild/otherwise-element-msbuild.md) | Especifica o bloco de código a ser executado se as condições de todos os elementos `When` forem avaliadas como `false`. |
+| [Projeto](../msbuild/project-element-msbuild.md) | Elemento raiz necessário de um arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| [When](../msbuild/when-element-msbuild.md) | Especifica um possível bloco de código a ser selecionado pelo elemento `Choose`. |
 
 ## <a name="remarks"></a>Comentários  
- Os elementos `Choose`, `When` e `Otherwise` são usados juntos para fornecer uma maneira de selecionar uma seção de código para executar diversas alternativas possíveis. Para obter mais informações, confira [ Constructos condicionais](../msbuild/msbuild-conditional-constructs.md).  
+ Os elementos `Choose`, `When` e `Otherwise` são usados juntos para fornecer uma maneira de selecionar uma seção de código para executar diversas alternativas possíveis. Para saber mais, confira [Constructos condicionais](../msbuild/msbuild-conditional-constructs.md).  
 
 ## <a name="example"></a>Exemplo  
  O seguinte projeto usa o `Choose` elemento para selecionar o conjunto de valores de propriedades no elemento `When` a ser definido. Se os `Condition` atributos de ambos `When` elementos são avaliadas como `false`, os valores de propriedades no elemento `Otherwise` são definidos.  
@@ -122,4 +123,4 @@ Avalia a elementos filho para selecionar um conjunto de elementos `ItemGroup` e/
 
 ## <a name="see-also"></a>Consulte também  
  [Constructos condicionais](../msbuild/msbuild-conditional-constructs.md)   
- [Referência do esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)
+ [Referência de esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)

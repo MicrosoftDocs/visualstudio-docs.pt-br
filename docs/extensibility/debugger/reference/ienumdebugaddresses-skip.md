@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b515f3b71942df7b3a12e744cf38992dd290ae4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8e05e658aaf43208e968c7cc1a12a6504cb5e802
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49938299"
 ---
 # <a name="ienumdebugaddressesskip"></a>IEnumDebugAddresses::Skip
 Este método ignora o número especificado de elementos.  
@@ -43,10 +44,10 @@ int Skip(
  [in] Número de elementos a serem ignorados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se `celt` for maior que o número de elementos restantes; caso contrário, retornará um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se `celt` é maior que o número de elementos restantes; caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Se `celt` Especifica um valor maior que o número de elementos restantes, a enumeração está definida para o fim e `S_FALSE` é retornado.  
+ Se `celt` Especifica um valor maior que o número de elementos restantes, a enumeração é definida como o fim e `S_FALSE` é retornado.  
   
 ## <a name="see-also"></a>Consulte também  
  [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)

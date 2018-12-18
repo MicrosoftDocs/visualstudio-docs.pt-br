@@ -26,6 +26,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134574"
 ---
 # <a name="supporting-symbol-browsing-tools"></a>Suporte a ferramentas de navegação de símbolo
 **Pesquisador de objetos**, **exibição de classe**, **Pesquisador de chamadas** e **localizar resultados de símbolos** ferramentas oferecem funcionalidades no Visual Studio de navegação de símbolo. Essas ferramentas exibem modos de exibição de árvore hierárquica de símbolos e mostram as relações entre os símbolos na árvore. Os símbolos podem representar namespaces, objetos, classes, membros de classe e outros elementos de linguagem contidos em vários componentes. Os componentes incluem projetos do Visual Studio, externos [!INCLUDE[dnprdnshort](../../code-quality/includes/dnprdnshort_md.md)] componentes e bibliotecas de tipos (. tlb). Para obter mais informações, consulte [Exibindo a estrutura do código](../../ide/viewing-the-structure-of-code.md).  

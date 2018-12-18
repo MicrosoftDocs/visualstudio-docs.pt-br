@@ -16,13 +16,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 58493c8e3c4668f1cd94c7f892d727479b755f3f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b70cc3522d59c2abe4633f38f746aeeb3159fe8a
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39150659"
 ---
-# <a name="buildprojectonload-visual-studio-templates"></a>BuildProjectOnLoad (Modelos do Visual Studio)
+# <a name="buildprojectonload-visual-studio-templates"></a>BuildProjectOnLoad (modelos do Visual Studio)
 Especifica se deve compilar o projeto imediatamente após sua criação.  
   
  \<VSTemplate >  
@@ -48,12 +49,12 @@ Especifica se deve compilar o projeto imediatamente após sua criação.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Categoriza o modelo e define como ele exibe em um a **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo.|  
   
 ## <a name="text-value"></a>Valor de texto  
  Um valor de texto é obrigatório.  
   
- O texto deve ser `true` ou `false`, indicando se é necessário compilar o projeto imediatamente após sua criação.  
+ O texto deve ser `true` ou `false`, que indica se é compilar o projeto imediatamente após sua criação.  
   
 ## <a name="remarks"></a>Comentários  
  `BuildProjectOnLoad` é um atributo opcional. O valor padrão é `false`.  
@@ -88,5 +89,5 @@ Especifica se deve compilar o projeto imediatamente após sua criação.
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento TemplateContent (modelos do Visual Studio)](../extensibility/templatecontent-element-visual-studio-templates.md)   
- [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)   
+ [Criando modelos de projeto e item](../ide/creating-project-and-item-templates.md)   
  [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)

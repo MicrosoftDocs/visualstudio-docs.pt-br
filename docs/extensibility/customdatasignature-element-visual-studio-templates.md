@@ -14,11 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1f56f9b2ffcb09ea8399b6d949cc781f5a99e7c2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b2f32c90adf1732cac1542935a8a6ce2da983c35
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500638"
 ---
 # <a name="customdatasignature-element-visual-studio-templates"></a>Elemento CustomDataSignature (modelos do Visual Studio)
 Especifica a assinatura de texto para localizar os dados personalizados.  
@@ -46,16 +47,16 @@ Especifica a assinatura de texto para localizar os dados personalizados.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e a define como ele é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo.|  
   
 ## <a name="text-value"></a>Valor de texto  
  Um valor de texto é obrigatório.  
   
- O texto é uma cadeia de caracteres que tem a assinatura de texto que é necessário para localizar os dados personalizados.  
+ O texto é uma cadeia de caracteres que tenha a assinatura de texto que é necessário para localizar os dados personalizados.  
   
 ## <a name="remarks"></a>Comentários  
  `CustomDataSignature` é um elemento opcional.  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+ [Referência de esquema de modelo do Studio Visual](../extensibility/visual-studio-template-schema-reference.md)   
  [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)

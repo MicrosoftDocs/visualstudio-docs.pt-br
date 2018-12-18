@@ -14,11 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a2fb72a486c58c0213361eb983371493f7ebafc5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 066084853c63f7f824b27b365e9abf0f2d695970
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822223"
 ---
 # <a name="idebuggenericfieldinstancetypeargumentcount"></a>IDebugGenericFieldInstance::TypeArgumentCount
 Retorna o número de tipo de argumentos de parâmetro para esta instância.  
@@ -39,13 +40,13 @@ int TypeArgumentCount(
   
 #### <a name="parameters"></a>Parâmetros  
  `pcArgs`  
- [out no] Número de argumentos de parâmetro de tipo para essa instância.  
+ [no, out] Número de argumentos de parâmetro de tipo para esta instância.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Por exemplo, se lista\<int >, esse método retorna 1 e, se lista\<int, float2 > Este método retorna 2. Esse método retornará 0 se não houver nenhum argumento de tipo.  
+ Por exemplo, se lista\<int >, esse método retornará 1 e, se lista\<int, float2 > Esse método retorna 2. Esse método retornará 0 se não houver nenhum argumento de tipo.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)

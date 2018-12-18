@@ -14,11 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7a9efc94f86ddbaffc465ae83208b7ff0cc1f152
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0827947050df1258d8b062d00b579fc1608d2c77
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823563"
 ---
 # <a name="idebuggenericfielddefinitiongetformaltypeparams"></a>IDebugGenericFieldDefinition::GetFormalTypeParams
 Recupera os parâmetros de tipo dado o número de parâmetros.  
@@ -49,13 +50,13 @@ int GetFormalTypeParams(
  [out] Matriz de parâmetros de tipo.  
   
  `pcParams`  
- [out no] Número de parâmetros na `ppParams` matriz.  
+ [no, out] Número de parâmetros no `ppParams` matriz.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Retorna os parâmetros de tipo na ordem da esquerda para a direita. Por exemplo, o dicionário\<K, V > retorna IDebugFormalGenericParameters {K, V}.  
+ Retorne os parâmetros de tipo em ordem da esquerda para a direita. Por exemplo, dicionário\<K, V > retorna IDebugFormalGenericParameters {K, V}.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

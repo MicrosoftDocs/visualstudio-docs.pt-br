@@ -13,23 +13,24 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3c3715bac00b25cd2080a1162c8e2ce8cb33e63a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 058e3d3087a46de4bb3c5d9b721d3c9111b77526
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203706"
 ---
-# <a name="choosing-a-debug-engine-implementation-strategy"></a>Escolhendo uma estratégia de implementação do mecanismo de depuração
-Use a arquitetura de tempo de execução para determinar sua estratégia de implementação do mecanismo (DE) de depuração. O mecanismo de depuração pode ser criado no processo para o programa a ser depurado, no processo para o Gerenciador de depuração de sessão do Visual Studio (SDM) ou fora de processo para ambos. As diretrizes a seguir devem ajudar a escolher entre esses três estratégias.  
+# <a name="choose-a-debug-engine-implementation-strategy"></a>Escolha uma estratégia de implementação do mecanismo de depuração
+Use a arquitetura de tempo de execução para determinar sua estratégia de implementação de (DES) do mecanismo de depuração. Você pode criar o debug mecanismo em processo para o programa que você está depurando. Crie o debug mecanismo em processo para o Gerenciador de depuração de sessão do Visual Studio (SDM). Ou crie a depuração mecanismo fora de processo para os dois. As diretrizes a seguir devem ajudá-lo a escolher entre essas três estratégias.  
   
 ## <a name="guidelines"></a>Diretrizes  
- Embora seja possível para o DE fora do processo do SDM tanto o programa a ser depurado, normalmente não há nenhum motivo para isso. Chamadas entre limites de processo são relativamente lentas.  
+ Embora seja possível para o DE ser out-of-process para o SDM e o programa que você está depurando, normalmente há nenhum motivo para fazer isso. Chamadas entre limites de processo são relativamente lentas.  
   
- Depurar mecanismos já são fornecidos para o ambiente de tempo de execução nativo do Win32 e para o ambiente de tempo de execução de linguagem comum. Se for necessário substituir DE para qualquer um desses ambientes, você deve criar o DE processo com o SDM.  
+ Depurar mecanismos já são fornecidos para o ambiente de tempo de execução nativo do Win32 e para o ambiente de tempo de execução de linguagem comum. Se você precisa substituir o DE para qualquer ambiente, você deve criar o DE processo com o SDM.  
   
- Caso contrário, você pode escolher entre a criação DE em processo para o SDM ou em processo para o programa a ser depurado. É importante considerar se o avaliador de expressão de precisa ter acesso frequente para o armazenamento de símbolo de programa e se o repositório de símbolos pode ser carregado na memória para acesso rápido. Além disso, considere o seguinte:  
+ Caso contrário, você cria o DE em processo para o SDM ou em processo para o programa que você está depurando. Você precisará considerar se o avaliador de expressão de requer acesso frequente para o repositório de símbolos do programa. Ou, se o repositório de símbolos pode ser carregado na memória para acesso rápido. Além disso, considere as seguintes abordagens:  
   
--   Se não houver muitas chamadas entre o avaliador de expressão e o armazenamento de símbolo, ou se o armazenamento de símbolo pode ser lido no espaço de memória do SDM, crie o DE em processo para o SDM. Você deve retornar o CLSID do mecanismo de depuração para o SDM quando ele se conecta ao seu programa. O SDM usa esse CLSID para criar uma instância no processo de.  
+-   Se não houver muitas chamadas entre o avaliador de expressão e o repositório de símbolos, ou se o repositório de símbolos pode ser lidos no espaço de memória do SDM, crie o DE em processo para o SDM. Você deve retornar o CLSID do mecanismo de depuração para o SDM quando ele se conecta ao seu programa. O SDM usa este CLSID para criar uma instância no processo de.  
   
 -   Se o DE deve chamar o programa para acessar o repositório de símbolos, crie o DE processo com o programa. Nesse caso, o programa cria a instância do DE.  
   

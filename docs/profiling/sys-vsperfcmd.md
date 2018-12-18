@@ -10,14 +10,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e054cc07748e7503cb7410206c5ebff1408725b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 567510bba3e7503fccb1273c306990eb17a93525
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35668169"
 ---
 # <a name="sys-vsperfcmd"></a>Sys (VSPerfCmd)
-A opção VSPerfCmd.exe **Sys** define o evento de criação de perfil que é amostrado aos eventos de chamada do sistema (chamadas de função do aplicativo de perfil para o sistema operacional) e, opcionalmente, altera o número de chamadas em um intervalo de amostragem do padrão de 10.  
+A opção **Sys** de *VSPerfCmd.exe* define o evento de criação de perfil cuja amostra é fornecida aos eventos de chamada do sistema (chamadas de função do aplicativo cujo perfil é criado para o sistema operacional) e, opcionalmente, altera o número de chamadas em um intervalo de amostragem do padrão de 10.  
   
  **Sys** só pode ser usada em uma linha de comando que também contém a opção de **Inicialização** ou **Anexar**.  
   
@@ -27,7 +28,7 @@ A opção VSPerfCmd.exe **Sys** define o evento de criação de perfil que é am
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cmd  
 VSPerfCmd.exe {/Launch:AppName|Attach:PID} /Sys[:Events] [Options]  
 ```  
   
@@ -62,13 +63,13 @@ VSPerfCmd.exe {/Launch:AppName|Attach:PID} /Sys[:Events] [Options]
 ## <a name="example"></a>Exemplo  
  Este exemplo demonstra como configurar o criador de perfil do evento de amostragem para chamadas do sistema e como definir o intervalo de amostragem de 20 chamadas por amostra.  
   
-```  
+```cmd  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Launch:TestApp.exe /Sys:20  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
- [Criando perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Criando perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Serviços de Criação de Perfil](../profiling/command-line-profiling-of-services.md)
+ [Criar perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [Criar o perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profile services (Serviços de perfil)](../profiling/command-line-profiling-of-services.md)

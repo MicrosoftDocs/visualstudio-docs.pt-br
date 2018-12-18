@@ -1,5 +1,5 @@
 ---
-title: Como criar um adaptador de dados de diagnóstico no Visual Studio | Microsoft Docs
+title: Como criar um adaptador de dados de diagnóstico no Visual Studio
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,30 +8,34 @@ ms.assetid: bd7ad36c-54cb-4d2a-9aea-9d10ad98d7ba
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 22867cab68497afd54c2ffee30bb9ccc73e90862
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 25adfc867ca208f367f047e4cb94322718e12b52
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895308"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>Como criar um adaptador de dados de diagnóstico
 
 Para criar um *adaptador de dados de diagnóstico*, crie uma biblioteca de classes usando o Visual Studio e adicione as APIs do Adaptador de Dados de Diagnóstico fornecidas pelo Visual Studio Enterprise à sua biblioteca de classes. Envie quaisquer informações que você desejar como um fluxo ou um arquivo ao <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink> fornecido pela estrutura ao manipular eventos gerados durante a execução de teste. Os fluxos ou arquivos enviados a <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink> são armazenados como arquivos anexos aos resultados de teste quando seu teste é concluído. Se você criar um bug desses resultados de teste ou quando usar o [!INCLUDE[mtrlong](../test/includes/mtrlong_md.md)], os arquivos também serão vinculados ao bug.
 
- Você pode criar um adaptador de dados de diagnóstico que afeta o computador onde seus testes são executados, ou um computador que é parte do ambiente que você está usando para executar o aplicativo do teste. Por exemplo, coletando arquivos em seu computador de teste onde os testes são executados ou coletando arquivos no computador que serve na função de servidor Web para seu aplicativo.
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
- Você pode dar ao adaptador de dados de diagnóstico um nome amigável a ser exibido quando você criar suas configurações de teste usando o Microsoft Test Manager ou usando o Visual Studio. As configurações de teste permitem que você defina qual função de computador executará adaptadores de dados de diagnóstico específicos em seu ambiente quando você executar os testes. Você também pode configurar os adaptadores de dados de diagnóstico ao criar suas configurações de teste. Por exemplo, você pode criar um adaptador de dados de diagnóstico que colete logs personalizados do servidor Web. Quando você cria suas configurações de teste, você pode selecionar para executar este adaptador de dados de diagnóstico no computador ou computadores que estão executando esta função do servidor Web, e pode alterar a configuração para que suas configurações de teste coletem somente os últimos três logs que foram criados. Para obter mais informações sobre as configurações de teste, consulte [Coletar informações de diagnóstico usando configurações de teste](../test/collect-diagnostic-information-using-test-settings.md).
+Você pode criar um adaptador de dados de diagnóstico que afeta o computador onde seus testes são executados, ou um computador que é parte do ambiente que você está usando para executar o aplicativo do teste. Por exemplo, coletando arquivos em seu computador de teste onde os testes são executados ou coletando arquivos no computador que serve na função de servidor Web para seu aplicativo.
 
- Os eventos são gerados quando você executa seus testes de modo que o adaptador de dados de diagnóstico possa executar tarefas nesse ponto no teste.
+Você pode dar ao adaptador de dados de diagnóstico um nome amigável a ser exibido quando você criar suas configurações de teste usando o Microsoft Test Manager ou usando o Visual Studio. As configurações de teste permitem que você defina qual função de computador executará adaptadores de dados de diagnóstico específicos em seu ambiente quando você executar os testes. Você também pode configurar os adaptadores de dados de diagnóstico ao criar suas configurações de teste. Por exemplo, você pode criar um adaptador de dados de diagnóstico que colete logs personalizados do servidor Web. Quando você cria suas configurações de teste, você pode selecionar para executar este adaptador de dados de diagnóstico no computador ou computadores que estão executando esta função do servidor Web, e pode alterar a configuração para que suas configurações de teste coletem somente os últimos três logs que foram criados. Para obter mais informações sobre as configurações de teste, confira [Coletar informações de diagnóstico usando configurações de teste](../test/collect-diagnostic-information-using-test-settings.md).
+
+Os eventos são gerados quando você executa seus testes de modo que o adaptador de dados de diagnóstico possa executar tarefas nesse ponto no teste.
 
 > [!IMPORTANT]
 > Esses eventos podem ser gerados em threads diferentes, especialmente quando você tem testes que são executados em vários computadores. Portanto, você deve estar ciente de possíveis problemas de threading e não corromper inadvertidamente os dados internos do adaptador personalizado. Certifique-se de que o adaptador de dados de diagnóstico seja do tipo thread-safe.
 
- A seguir está uma lista parcial dos principais eventos que você pode usar ao criar seu adaptador de dados de diagnóstico. Para obter uma lista completa de eventos do adaptador de dados de diagnóstico, consulte a classe abstrata <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents>.
+A seguir está uma lista parcial dos principais eventos que você pode usar ao criar seu adaptador de dados de diagnóstico. Para obter uma lista completa de eventos do adaptador de dados de diagnóstico, consulte a classe abstrata <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents>.
 
 |evento|Descrição|
-|-----------|-----------------|
+|-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionStart>|Início da execução do teste|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionEnd>|Fim da execução do teste|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCaseStart>|Início de cada teste na execução de testes|
@@ -42,86 +46,86 @@ Para criar um *adaptador de dados de diagnóstico*, crie uma biblioteca de class
 > [!NOTE]
 > Quando um teste manual terminar, nenhum evento de coleção de dados é enviado ao adaptador de dados de diagnóstico. Quando um teste é executado novamente, terá um novo identificador de situação de teste. Se um usuário redefinir um teste durante um teste (gerando o evento <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.TestCaseReset>) ou se alterar um resultado da etapa de teste, nenhum evento da coleção de dados será enviado ao adaptador de dados de diagnóstico, mas o identificador de caso de teste permanecerá o mesmo. Para determinar se um caso de teste foi redefinido, você deve rastrear o identificador de caso de teste em seu adaptador de dados de diagnóstico.
 
- Use o seguinte procedimento para criar o adaptador de dados de diagnóstico que coleta um arquivo de dados que é baseado nas informações que você configura quando você cria suas configurações de teste.
+Use o seguinte procedimento para criar o adaptador de dados de diagnóstico que coleta um arquivo de dados que é baseado nas informações que você configura quando você cria suas configurações de teste.
 
- Para obter um projeto completo do adaptador de dados de diagnóstico de exemplo, incluindo um editor de configuração personalizado, consulte [Projeto de amostra para criar um adaptador de dados de diagnóstico](../test/sample-project-for-creating-a-diagnostic-data-adapter.md).
+Para obter um projeto completo do adaptador de dados de diagnóstico de exemplo, incluindo um editor de configuração personalizado, confira [Projeto de exemplo para criar um adaptador de dados de diagnóstico](../test/sample-project-for-creating-a-diagnostic-data-adapter.md).
 
-##  <a name="CreateAdapter"></a> Criando e instalando um adaptador de dados de diagnóstico
+##  <a name="create-and-install-a-diagnostic-data-adapter"></a>Criar e instalar um adaptador de dados de diagnóstico
 
-#### <a name="to-create-and-install-a-diagnostic-data-adapter"></a>Para criar e instalar um adaptador de dados de diagnóstico
+### <a name="to-create-and-install-a-diagnostic-data-adapter"></a>Para criar e instalar um adaptador de dados de diagnóstico
 
-1.  Criar uma nova biblioteca de classes.
+1. Criar uma nova biblioteca de classes.
 
-    1.  No menu **Arquivo**, selecione **Novo** e aponte para **Novo projeto**.
+   1.  No menu **Arquivo**, selecione **Novo** e aponte para **Novo projeto**.
 
-    2.  De **Tipos de projeto**, selecione a linguagem a ser usada.
+   2.  De **Tipos de projeto**, selecione a linguagem a ser usada.
 
-    3.  Em **Modelos instalados do Visual Studio**, clique em **Biblioteca de Classes**.
+   3.  Em **Modelos instalados do Visual Studio**, clique em **Biblioteca de Classes**.
 
-    4.  Digite um nome para o adaptador de dados de diagnóstico.
+   4.  Digite um nome para o adaptador de dados de diagnóstico.
 
-    5.  Escolha **OK**.
+   5.  Escolha **OK**.
 
-2.  Adicione o assembly **Microsoft.VisualStudio.QualityTools.ExecutionCommon**.
+2. Adicione o assembly **Microsoft.VisualStudio.QualityTools.ExecutionCommon**.
 
-    1.  No Gerenciador de Soluções, clique com o botão direito em **Referências** e selecione o comando **Adicionar referência**.
+   1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Referências** e escolha o comando **Adicionar Referência**.
 
-    2.  Escolha **.NET** e localize **Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll**.
+   2.  Escolha **.NET** e localize **Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll**.
 
-    3.  Escolha **OK**.
+   3.  Escolha **OK**.
 
-3.  Adicione o assembly **Microsoft.VisualStudio.QualityTools.Common**.
+3. Adicione o assembly **Microsoft.VisualStudio.QualityTools.Common**.
 
-    1.  No Gerenciador de Soluções, clique com o botão direito do mouse em **Referências** e selecione o comando **Adicionar referência**.
+   1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Referências** e selecione o comando **Adicionar Referência**.
 
-    2.  Escolha **.NET** e localize **Microsoft.VisualStudio.QualityTools.Common.dll**.
+   2.  Escolha **.NET** e localize **Microsoft.VisualStudio.QualityTools.Common.dll**.
 
-    3.  Escolha **OK**.
+   3.  Escolha **OK**.
 
-4.  Adicione as seguintes instruções `using` para seu arquivo de classe:
+4. Adicione as seguintes instruções `using` para seu arquivo de classe:
 
-    ```csharp
-    using Microsoft.VisualStudio.TestTools.Common;
-    using Microsoft.VisualStudio.TestTools.Execution;
-    using System.Linq;
-    using System.Text;
-    using System.Xml;
-    using System;
-    ```
+   ```csharp
+   using Microsoft.VisualStudio.TestTools.Common;
+   using Microsoft.VisualStudio.TestTools.Execution;
+   using System.Linq;
+   using System.Text;
+   using System.Xml;
+   using System;
+   ```
 
-5.  Adicione <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorTypeUriAttribute> à classe do seu adaptador de dados de diagnóstico para identificá-la como um adaptador de dados de diagnóstico, substituindo **Empresa**, **Produto** e **Versão** pelas informações apropriadas do seu adaptador de dados de diagnóstico:
+5. Adicione <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorTypeUriAttribute> à classe do seu adaptador de dados de diagnóstico para identificá-la como um adaptador de dados de diagnóstico, substituindo **Empresa**, **Produto** e **Versão** pelas informações apropriadas do seu adaptador de dados de diagnóstico:
 
-    ```
-    [DataCollectorTypeUri("datacollector://Company/Product/Version")]
-    ```
+   ```csharp
+   [DataCollectorTypeUri("datacollector://Company/Product/Version")]
+   ```
 
-6.  Adicione o atributo de <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorFriendlyNameAttribute> à classe, substituindo os parâmetros pelas informações apropriadas para o adaptador de dados de diagnóstico:
+6. Adicione o atributo de <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorFriendlyNameAttribute> à classe, substituindo os parâmetros pelas informações apropriadas para o adaptador de dados de diagnóstico:
 
-    ```
-    [DataCollectorFriendlyName("Collect Log Files", false)]
-    ```
+   ```csharp
+   [DataCollectorFriendlyName("Collect Log Files", false)]
+   ```
 
-     Este nome amigável é exibido na atividade de configurações de teste.
+    Este nome amigável é exibido na atividade de configurações de teste.
 
-    > [!NOTE]
-    > Você também pode adicionar <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorAttribute> para especificar `Type` do editor de configuração personalizada para este adaptador de dados, e opcionalmente para especificar o arquivo de ajuda para usar o editor.
-    >
-    > Você também pode aplicar <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorEnabledByDefaultAttribute> para especificar que ele sempre deve ser ativado.
+   > [!NOTE]
+   > Você também pode adicionar <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorAttribute> para especificar `Type` do editor de configuração personalizada para este adaptador de dados, e opcionalmente para especificar o arquivo de ajuda para usar o editor.
+   >
+   > Você também pode aplicar <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorEnabledByDefaultAttribute> para especificar que ele sempre deve ser ativado.
 
-7.  A classe do adaptador de dados de diagnóstico deve herdar da classe de <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollector> como segue:
+7. A classe do adaptador de dados de diagnóstico deve herdar da classe de <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollector> como segue:
 
-    ```csharp
-    public class MyDiagnosticDataAdapter : DataCollector
-    ```
+   ```csharp
+   public class MyDiagnosticDataAdapter : DataCollector
+   ```
 
-8.  Adicione as variáveis locais como a seguir:
+8. Adicione as variáveis locais como a seguir:
 
-    ```csharp
-    private DataCollectionEvents dataEvents;
-    private DataCollectionLogger dataLogger;
-    private DataCollectionSink dataSink;
-    private XmlElement configurationSettings;
-    ```
+   ```csharp
+   private DataCollectionEvents dataEvents;
+   private DataCollectionLogger dataLogger;
+   private DataCollectionSink dataSink;
+   private XmlElement configurationSettings;
+   ```
 
 9. Adicione o método de <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollector.Initialize*> e um método **Dispose**. No método `Initialize`, você inicializa o coletor de dados, quaisquer dados de configuração das configurações de teste e registra os manipuladores de eventos que deseja usar como segue:
 
@@ -220,9 +224,9 @@ Para criar um *adaptador de dados de diagnóstico*, crie uma biblioteca de class
 
      Esses arquivos são anexados aos resultados de teste. Se você criar um bug desses resultados de teste ou quando usar o [!INCLUDE[mtrlong](../test/includes/mtrlong_md.md)], os arquivos também serão anexados ao bug.
 
-     Se quiser usar seu próprio editor para coletar dados para uso em suas configurações de teste, consulte [Como criar um editor personalizado para dados para o adaptador de dados de diagnóstico](../test/how-to-create-a-custom-editor-for-data-for-your-diagnostic-data-adapter.md).
+     Caso deseje usar seu próprio editor para coletar dados para uso nas configurações de teste, confira [Como criar um editor personalizado de dados para o adaptador de dados de diagnóstico](../test/how-to-create-a-custom-editor-for-data-for-your-diagnostic-data-adapter.md).
 
-11. Para coletar um arquivo de log quando um teste for concluído com base no que o usuário configurou em configurações de teste, você deve criar um arquivo `App.config` e adicioná-lo à solução. Este arquivo tem o seguinte formato e deve conter o URI para que o adaptador de dados de diagnóstico identifique-o. Substitua os valores reais de "Company/ProductName/Version".
+11. Para coletar um arquivo de log quando um teste for concluído com base no que o usuário configurou nas configurações de teste, é necessário criar um arquivo *App.config* e adicioná-lo à solução. Este arquivo tem o seguinte formato e deve conter o URI para que o adaptador de dados de diagnóstico identifique-o. Substitua os valores reais de "Company/ProductName/Version".
 
     > [!NOTE]
     > Se você não precisar configurar quaisquer informações para o adaptador de dados de diagnóstico, então não será necessário criar um arquivo de configuração.
@@ -253,25 +257,25 @@ Para criar um *adaptador de dados de diagnóstico*, crie uma biblioteca de class
     > [!NOTE]
     > O elemento de configuração padrão pode conter todos os dados de que você precisar. Se o usuário não configurar o adaptador de dados de diagnóstico nas configurações de teste, os dados padrão serão passados para seu adaptador de dados de diagnóstico quando ele for executado. Como o XML que você adiciona à seção `<DefaultConfigurations>` provavelmente não é parte do esquema declarado, você pode ignorar todos os erros que o XML gerar.
     >
-    > Existem outros exemplos dos arquivos de configuração no seguinte caminho baseado no diretório de instalação: **Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\DataCollectors**.
+    > Existem outros exemplos dos arquivos de configuração no seguinte caminho baseado no diretório de instalação: *Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\DataCollectors*.
 
-     Para obter mais informações sobre como definir suas configurações de teste para usar um ambiente quando executar testes, consulte [Coletar dados de diagnóstico em testes manuais (VSTS)](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests).
+     Para obter mais informações sobre como definir suas configurações de teste para usar um ambiente ao executar testes, confira [Coletar dados de diagnóstico em testes manuais (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts).
 
-     Para obter mais informações sobre como instalar o arquivo de configuração, consulte [Como instalar um adaptador de dados de diagnóstico personalizado](../test/how-to-install-a-custom-diagnostic-data-adapter.md)
+     Para obter mais informações sobre como instalar o arquivo de configuração, confira [Como instalar um adaptador de dados de diagnóstico personalizado](../test/how-to-install-a-custom-diagnostic-data-adapter.md)
 
 12. Construa sua solução para criar o assembly do adaptador de dados de diagnóstico.
 
-13. Para obter informações sobre como instalar seu editor personalizado, consulte [Como instalar um adaptador de dados de diagnóstico personalizado](../test/how-to-install-a-custom-diagnostic-data-adapter.md).
+13. Para obter informações sobre como instalar o editor personalizado, confira [Como instalar um adaptador de dados de diagnóstico personalizado](../test/how-to-install-a-custom-diagnostic-data-adapter.md).
 
-14. Para obter mais informações sobre como definir suas configurações de teste para usar um ambiente quando executar testes, consulte [Coletar dados de diagnóstico em testes manuais (VSTS)](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests).
+14. Para obter mais informações sobre como definir suas configurações de teste para usar um ambiente ao executar testes, confira [Coletar dados de diagnóstico em testes manuais (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts).
 
 15. Para selecionar o adaptador de dados de diagnóstico, primeiro você deve selecionar as configurações existentes de um teste ou criar um novo do Microsoft Test Manager ou do Visual Studio. O adaptador é exibido na guia **Dados e Diagnósticos** das configurações de teste com o nome amigável que você atribuiu à classe.
 
-16. Defina as configurações de teste como ativas. Para obter mais informações sobre as configurações de teste, consulte [Coletar informações de diagnóstico usando configurações de teste](../test/collect-diagnostic-information-using-test-settings.md).
+16. Defina as configurações de teste como ativas. Para obter mais informações sobre as configurações de teste, confira [Coletar informações de diagnóstico usando configurações de teste](../test/collect-diagnostic-information-using-test-settings.md).
 
 17. Execute seus testes usando as configurações de teste com o adaptador de dados de diagnóstico selecionado.
 
-   O arquivo de dados que você especificou está anexado aos resultados do teste.
+    O arquivo de dados que você especificou está anexado aos resultados do teste.
 
 ## <a name="see-also"></a>Consulte também
 
@@ -283,6 +287,6 @@ Para criar um *adaptador de dados de diagnóstico*, crie uma biblioteca de class
 - <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorFriendlyNameAttribute>
 - <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorEnabledByDefaultAttribute>
 - [Coletar informações de diagnóstico usando configurações de teste](../test/collect-diagnostic-information-using-test-settings.md)
-- [Coletar dados de diagnóstico em testes manuais (VSTS)](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests)
-- [Coletar dados de diagnóstico durante testes (VSTS)](/vsts/manual-test/collect-diagnostic-data)
-- [Como criar um editor personalizado para dados para o adaptador de dados de diagnóstico](../test/how-to-create-a-custom-editor-for-data-for-your-diagnostic-data-adapter.md)
+- [Coletar dados de diagnóstico em testes manuais (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)
+- [Coletar dados de diagnóstico durante testes (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)
+- [Como criar um editor personalizado de dados para o adaptador de dados de diagnóstico](../test/how-to-create-a-custom-editor-for-data-for-your-diagnostic-data-adapter.md)

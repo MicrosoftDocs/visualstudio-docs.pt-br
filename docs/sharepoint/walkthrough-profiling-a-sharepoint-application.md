@@ -18,67 +18,68 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f6eb4e9f78a9defaafb774551e301d6101cc40d0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5db5e9408a64df80311667267561ee69234fd7d5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852734"
 ---
-# <a name="walkthrough-profiling-a-sharepoint-application"></a>Passo a passo: Criando o perfil de um aplicativo do SharePoint
-  Este passo a passo mostra como usar as ferramentas de criação de perfil no Visual Studio para otimizar o desempenho de um aplicativo do SharePoint. O aplicativo de exemplo é um receptor de evento de recurso do SharePoint que contém um loop ocioso que degrada o desempenho do receptor de evento do recurso. O criador de perfil do Visual Studio permite que você localize e eliminar a parte mais cara (desempenho mais lento) do projeto, também conhecido como o *afunilamento*.  
+# <a name="walkthrough-profile-a-sharepoint-application"></a>Passo a passo: Criar o perfil de um aplicativo do SharePoint
+  Este passo a passo mostra como usar as ferramentas de criação de perfil no Visual Studio para otimizar o desempenho de um aplicativo do SharePoint. O aplicativo de exemplo é um receptor de evento de recurso do SharePoint que contém um loop ocioso que pode degradar o desempenho do receptor de evento do recurso. O criador de perfil do Visual Studio permite que você localize e eliminar a parte mais cara (desempenho mais lento) do projeto, também conhecido como o *afunilamento*.  
   
  Este passo a passo demonstra as seguintes tarefas:  
   
--   [Adicionando um recurso e o receptor de evento de recurso](#BKMK_AddFtrandFtrEvntReceiver).  
+- [Adicionando um recurso e o receptor de evento de recurso](#BKMK_AddFtrandFtrEvntReceiver).  
   
--   [Como configurar e implantar o aplicativo do SharePoint](#BKMK_ConfigSharePointApp).  
+- [Configurando e implantando o aplicativo do SharePoint](#BKMK_ConfigSharePointApp).  
   
--   [Executando o aplicativo do SharePoint](#BKMK_RunSPApp).  
+- [Executando o aplicativo do SharePoint](#BKMK_RunSPApp).  
   
--   [Exibir e interpretar os resultados da criação de perfil](#BKMK_ViewResults).  
+- [Exibir e interpretar os resultados de criação de perfil](#BKMK_ViewResults).  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Você precisa dos seguintes componentes para concluir esta instrução passo a passo:  
   
--   Edições com suporte do Microsoft Windows e do SharePoint. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [Requisitos para desenvolver soluções do SharePoint](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
+-   Edições com suporte do Microsoft Windows e do SharePoint.
   
 -   [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)].  
   
-## <a name="creating-a-sharepoint-project"></a>Criando um Projeto do SharePoint  
+## <a name="create-a-sharepoint-project"></a>Criar um projeto do SharePoint
  Primeiro, crie um projeto do SharePoint.  
   
 #### <a name="to-create-a-sharepoint-project"></a>Para criar um projeto do SharePoint  
   
-1.  Na barra de menus, escolha **arquivo**, **novo**, **projeto** para exibir o **novo projeto** caixa de diálogo.  
+1. Na barra de menus, escolha **arquivo** > **New** > **projeto** para exibir o **novo projeto** caixa de diálogo.  
   
-2.  Expanda o **SharePoint** nó sob o **Visual C#** ou **Visual Basic**e, em seguida, escolha o **2010** nó.  
+2. Expanda o **SharePoint** nó em um **Visual c#** ou **Visual Basic**e, em seguida, escolha o **2010** nó.  
   
-3.  No painel modelos, escolha o **projeto do SharePoint 2010** modelo.  
+3. No painel modelos, escolha o **projeto do SharePoint 2010** modelo.  
   
-4.  No **nome** , digite **ProfileTest**e, em seguida, escolha o **Okey** botão.  
+4. No **nome** , digite **ProfileTest**e, em seguida, escolha o **Okey** botão.  
   
-     O **Assistente de personalização do SharePoint** é exibida.  
+    O **Assistente para personalização do SharePoint** é exibida.  
   
-5.  Sobre o **especificar o nível de site e segurança de depuração** página, insira a URL do servidor do site do SharePoint onde você deseja depurar a definição de site ou use o local padrão (http://*nome de sistema*/) .  
+5. Sobre o **especificar o nível de site e segurança para depuração** página, insira a URL do servidor do site do SharePoint onde você deseja depurar a definição de site ou usar o local padrão (http://<em>nome do sistema</em>/) .  
   
-6.  No **o que é o nível de confiança para essa solução do SharePoint?** , escolha o **implantar como uma solução de farm** botão de opção.  
+6. No **qual é o nível de confiança para essa solução do SharePoint?** , escolha o **implantar como uma solução de farm** botão de opção.  
   
-     No momento, você pode apenas soluções de farm do perfil. Para obter mais informações sobre soluções de área restrita em comparação com soluções de farm, consulte [considerações sobre a solução em área restrita](../sharepoint/sandboxed-solution-considerations.md).  
+    No momento, você pode apenas soluções de farm de perfil. Para obter mais informações sobre soluções em área restrita em comparação com soluções de farm, consulte [considerações sobre a solução em área restrita](../sharepoint/sandboxed-solution-considerations.md).  
   
-7.  Escolha o **concluir** botão. O projeto aparece na **Gerenciador de soluções**.  
+7. Escolha o **concluir** botão. O projeto aparece na **Gerenciador de soluções**.  
   
-##  <a name="BKMK_AddFtrandFtrEvntReceiver"></a> Adicionando um recurso e o receptor de evento de recurso  
- Em seguida, adicione um recurso para o projeto junto com um receptor de eventos para o recurso. Esse receptor de evento conterá o código para ser analisado.  
+## <a name="add-a-feature-and-feature-event-receiver"></a>Adicionar um recurso e o receptor de evento de recurso
+ Em seguida, adicione um recurso para o projeto, juntamente com um receptor de eventos para o recurso. Esse receptor de evento conterá o código para criação de perfil.  
   
 #### <a name="to-add-a-feature-and-feature-event-receiver"></a>Para adicionar um recurso e o receptor de evento de recurso  
   
-1.  Em **Solution Explorer**, abra o menu de atalho para o **recursos** nó, escolha **adicionar recurso**e deixe o nome no valor padrão, **Feature1**.  
+1.  Na **Gerenciador de soluções**, abra o menu de atalho para o **recursos** nó, escolha **adicionar recurso**e deixe o nome com o valor padrão, **Feature1**.  
   
-2.  Em **Solution Explorer**, abra o menu de atalho para **Feature1**e, em seguida, escolha **adicionar receptor de evento**.  
+2.  Na **Gerenciador de soluções**, abra o menu de atalho **Feature1**e, em seguida, escolha **adicionar receptor de evento**.  
   
-     Isso adiciona um arquivo de código para o recurso com vários manipuladores de eventos comentado e abre o arquivo para edição.  
+     Isso adiciona um arquivo de código para o recurso com vários manipuladores de eventos comentada e abre o arquivo para edição.  
   
 3.  Na classe de receptor de evento, adicione as seguintes declarações de variável.  
   
@@ -180,104 +181,103 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-6.  Em **Solution Explorer**, abra o menu de atalho do projeto (**ProfileTest**) e, em seguida, escolha **propriedades**.  
+6.  Na **Gerenciador de soluções**, abra o menu de atalho para o projeto (**ProfileTest**) e, em seguida, escolha **propriedades**.  
   
-7.  No **propriedades** caixa de diálogo caixa, escolha o **SharePoint** guia.  
+7.  No **propriedades** diálogo caixa, escolha o **SharePoint** guia.  
   
-8.  No **configuração de implantação ativa** , escolha **ativação não**.  
+8.  No **configuração de implantação ativa** , escolha **sem ativação**.  
   
-     Selecionar essa configuração de implantação permite ativar manualmente o recurso posteriormente no SharePoint.  
+     Selecionar essa configuração de implantação permite que você ativar manualmente o recurso mais tarde no SharePoint.  
   
 9. Salvar o projeto.  
   
-##  <a name="BKMK_ConfigSharePointApp"></a> Como configurar e implantar o aplicativo do SharePoint  
+## <a name="configure-and-deploy-the-sharepoint-application"></a>Configurar e implantar o aplicativo do SharePoint
  Agora que o projeto do SharePoint estiver pronto, configurá-lo e implantá-lo no servidor do SharePoint.  
   
 #### <a name="to-configure-and-deploy-the-sharepoint-application"></a>Para configurar e implantar o aplicativo do SharePoint  
   
-1.  Sobre o **analisar** menu, escolha **iniciar o Assistente de desempenho**.  
+1.  Sobre o **Analyze** menu, escolha **Launch Performance Wizard**.  
   
-2.  Na página do **Assistente de desempenho**, deixe o método de criação de perfil como **amostragem de CPU** e escolha o **próximo** botão.  
+2.  Na página do **Performance Wizard**, deixe o método de criação de perfil como **amostragem de CPU** e escolha o **próxima** botão.  
   
-     Os outros métodos de criação de perfil podem ser usados em mais avançados situações de criação de perfil. Para obter mais informações, consulte [Noções Básicas sobre Métodos de Coleta de Desempenho](/visualstudio/profiling/understanding-performance-collection-methods).  
+     Os outros métodos de criação de perfil podem ser usados em mais avançados de situações de criação de perfil. Para obter mais informações, consulte [Noções Básicas sobre Métodos de Coleta de Desempenho](/visualstudio/profiling/understanding-performance-collection-methods).  
   
-3.  Na página dois o **Assistente de desempenho**, deixe o perfil de destino como **ProfileTest** e escolha o **próximo** botão.  
+3.  Na página dois dos **Performance Wizard**, deixe o perfil de destino como **ProfileTest** e escolha o **próxima** botão.  
   
-     Se uma solução tem vários projetos, elas aparecem na lista.  
+     Se uma solução tem vários projetos, elas aparecem nessa lista.  
   
-4.  Na página três o **Assistente de desempenho**, desmarque o **habilitar perfis de interação de camada** caixa de seleção e, em seguida, escolha o **próximo** botão.  
+4.  Na página três da **Performance Wizard**, desmarque a **habilitar Tier Interaction Profiling** caixa de seleção e, em seguida, escolha o **próxima** botão.  
   
-     O recurso de criação de perfil de interação de camada (dica) é útil para medir o desempenho de aplicativos que bancos de dados de consulta e para mostrar a você o número de vezes que uma página da web é solicitada. Como esses dados não são necessários para este exemplo, esse recurso não será habilitado.  
+     O recurso de criação de perfil de interação de camada (TIP) é útil para medir o desempenho de aplicativos que consultar bancos de dados e para mostrar a você o número de vezes que uma página da web é solicitada. Como esses dados não são necessários para este exemplo, podemos não habilitará esse recurso.  
   
-5.  Na página quatro a **Assistente de desempenho**, deixe o **iniciar após a conclusão do Assistente de criação de perfil** selecionada de caixa de seleção e, em seguida, escolha o **concluir** botão.  
+5.  Na página quatro a **Performance Wizard**, deixe o **iniciar após a conclusão do Assistente de criação de perfil** selecionada de caixa de seleção e, em seguida, escolha o **concluir** botão.  
   
-     O assistente permite a criação de perfil de aplicativo no servidor, exibe o **Performance Explorer** janela e, em seguida, compilações, implanta e executa o aplicativo do SharePoint.  
+     O assistente permite a criação de perfil de aplicativo no servidor, exibe a **Performance Explorer** janela e, em seguida, compilações, implanta e executa o aplicativo do SharePoint.  
   
-##  <a name="BKMK_RunSPApp"></a> Executando o aplicativo do SharePoint  
- Ativar o recurso no SharePoint, acionando o `FeatureActivation` para executar o código de evento.  
+## <a name="run-the-sharepoint-application"></a>Executar o aplicativo do SharePoint
+ Ativar o recurso no SharePoint, disparando o `FeatureActivation` código de evento para ser executado.  
   
 #### <a name="to-run-the-sharepoint-application"></a>Para executar o aplicativo do SharePoint  
   
-1.  No SharePoint, abra o **ações do Site** menu e, em seguida, escolha **configurações do Site**.  
+1.  No SharePoint, abra o **ações do Site** menu e, em seguida, escolha **configurações de Site**.  
   
 2.  No **ações do Site** , escolha o **gerenciar recursos do site** link.  
   
-3.  No **recursos** , escolha o **ativar** próximo ao **ProfileTest Feature1**.  
+3.  No **recursos** , escolha o **ativar** lado **ProfileTest Feature1**.  
   
-     Há uma pausa quando você fizer isso, devido a loop ocioso que está sendo chamado no `FeatureActivated` função.  
+     Há uma pausa quando você fizer isso, devido ao loop ocioso que está sendo chamado no `FeatureActivated` função.  
   
 4.  No **início rápido** barra, escolha **lista** e, em seguida, no **lista** , escolha **anúncios**.  
   
-     Observe que um novo anúncio foi adicionado à lista informando que o recurso foi ativado.  
+     Observe que um novo aviso foi adicionado à lista informando que o recurso foi ativado.  
   
 5.  Feche o site do SharePoint.  
   
-     Depois de fechar o SharePoint, o criador de perfil cria e exibe um relatório de criação de perfil de exemplo e salva-o como um arquivo. vsp o **ProfileTest** a pasta do projeto.  
+     Depois de fechar o SharePoint, o criador de perfil cria e exibe um relatório de criação de perfil de exemplo e salva-o como um arquivo. vsp na **ProfileTest** pasta do projeto.  
   
-##  <a name="BKMK_ViewResults"></a> Exibir e interpretar os resultados da criação de perfil  
- Agora que você executou e criado o perfil de aplicativo do SharePoint, exiba os resultados de teste.  
+## <a name="view-and-interpret-the-profile-results"></a>Exibir e interpretar os resultados de perfil
+ Agora que você executou e criação de perfil de aplicativo do SharePoint, exiba os resultados de teste.  
   
-#### <a name="to-view-and-interpret-the-profiling-results"></a>Para exibir e interpretar os resultados de criação de perfil  
+#### <a name="to-view-and-interpret-the-profile-results"></a>Para exibir e interpretar os resultados de perfil
   
-1.  No **funções fazer mais trabalho Individual** seção do relatório de criação de perfil de exemplo, observe que `TimeCounter` está no topo da lista.  
+1.  No **funções que realizam o trabalho mais Individual** seção do relatório de criação de perfil de exemplo, observe que `TimeCounter` está no topo da lista.  
   
-     Esse local indica que `TimeCounter` foi uma das funções com o maior número de amostras, que significa que é um dos afunilamentos de desempenho maiores no aplicativo. Essa situação não é surpresa, no entanto, como foi intencionalmente projetado dessa maneira para fins de demonstração.  
+     Esse local indica que `TimeCounter` foi uma das funções com o maior número de amostras, significando que é um dos afunilamentos de desempenho maiores no aplicativo. Essa situação não é surpreendente, no entanto, porque ela era propositadamente projetado dessa forma, para fins de demonstração.  
   
-2.  No **funções fazer mais trabalho Individual** , escolha o `ProcessRequest` link para exibir a distribuição de custos para o `ProcessRequest` função.  
+2.  No **funções que realizam o trabalho mais Individual** , escolha o `ProcessRequest` link para exibir a distribuição de custo para o `ProcessRequest` função.  
   
-     No **chamadas de funções** seção `ProcessRequest`, observe que o **FeatureActiviated** função está listada como os mais caros chamada de função.  
+     No **funções chamadas** seção para o `ProcessRequest`, observe que o **FeatureActiviated** função é listada como os mais caros chamada de função.  
   
-3.  No **chamadas de funções** , escolha o **FeatureActivated** botão.  
+3.  No **funções chamadas** , escolha o **FeatureActivated** botão.  
   
-     No **chamadas de funções** seção **FeatureActivated**, o `TimeCounter` função está listada como os mais caros chamada de função. No **modo de exibição de código de função** painel, o código realçado (`TimeCounter`) é o ponto de acesso e indica onde a correção é necessária.  
+     No **funções chamadas** seção **FeatureActivated**, o `TimeCounter` função é listada como os mais caros chamada de função. No **modo de exibição de código de função** painel, o código realçado (`TimeCounter`) é o ponto de acesso e indica onde a correção é necessária.  
   
 4.  Feche o relatório de criação de perfil de exemplo.  
   
-     Para exibir o relatório novamente a qualquer momento, abra o arquivo. vsp no **Performance Explorer** janela.  
+     Para exibir o relatório novamente a qualquer momento, abra o arquivo. vsp na **Performance Explorer** janela.  
   
-## <a name="fixing-the-code-and-reprofiling-the-application"></a>Corrigir o código e Reprofiling o aplicativo  
- Agora que a função de ponto de acesso do aplicativo do SharePoint tiver sido identificada, corrigi-lo.  
+## <a name="fix-the-code-and-reprofile-the-application"></a>Corrija o código e reprofile o aplicativo
+ Agora que a função de ponto de acesso no aplicativo do SharePoint tiver sido identificada, corrigi-lo.  
   
 #### <a name="to-fix-the-code-and-reprofile-the-application"></a>Para corrigir o código e reprofile o aplicativo  
   
-1.  No código de receptor de evento de recurso, comente a `TimeCounter` da chamada do método `FeatureActivated` para impedir que ele está sendo chamado.  
+1.  Em que o código de receptor de evento de recurso, comente a `TimeCounter` chamada de método na `FeatureActivated` impedi-lo de que está sendo chamado.  
   
 2.  Salvar o projeto.  
   
-3.  Em **Performance Explorer**, abra a pasta de destino e, em seguida, escolha o **ProfileTest** nó.  
+3.  Na **Gerenciador de desempenho**, abra a pasta de destino e, em seguida, escolha o **ProfileTest** nó.  
   
-4.  No **Performance Explorer** barra de ferramentas, no **ações** guia, escolha o **Iniciar criação de perfil** botão.  
+4.  No **Gerenciador de desempenho** barra de ferramentas, no **ações** guia, escolha o **Iniciar criação de perfil** botão.  
   
-     Se você quiser alterar qualquer uma das propriedades de criação de perfil antes de reprofiling o aplicativo, escolha o **iniciar o Assistente de desempenho** botão em vez disso.  
+     Se você quiser alterar qualquer uma das propriedades de criação de perfil antes de reprofiling o aplicativo, escolha o **Launch Performance Wizard** botão em vez disso.  
   
 5.  Siga as instruções de **executando o aplicativo do SharePoint** seção, anteriormente neste tópico.  
   
-     O recurso deve ativar muito mais rápido agora que a chamada para o loop ocioso foi eliminada. Relatório de exemplo de criação de perfil deve refletir isso.  
+     O recurso deve ativar muito mais rapidamente agora que a chamada para o loop ocioso foi eliminada. O exemplo de relatório de criação de perfil deve refletir isso.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
  [Gerenciador de Desempenho](/visualstudio/profiling/performance-explorer)   
  [Visão geral da sessão de desempenho](/visualstudio/profiling/performance-session-overview)   
  [Guia do iniciante à criação de perfil do desempenho](/visualstudio/profiling/beginners-guide-to-performance-profiling)   
- [Encontrar afunilamentos do aplicativo com o criador de perfil do Visual Studio](http://go.microsoft.com/fwlink/?LinkID=137266)  
-  
+ [Encontre afunilamentos de aplicativos com o Visual Studio Profiler](http://go.microsoft.com/fwlink/?LinkID=137266)  
   

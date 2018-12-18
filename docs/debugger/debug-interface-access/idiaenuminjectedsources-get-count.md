@@ -1,5 +1,5 @@
 ---
-title: Idiaenuminjectedsources | Microsoft Docs
+title: 'Idiaenuminjectedsources:: Get_count | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b1357c45c3289c7592071f3a64635f07633f854
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: c44b33ead28d27416a4d54fea232a89ef8749020
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888080"
 ---
 # <a name="idiaenuminjectedsourcesgetcount"></a>IDiaEnumInjectedSources::get_Count
 Recupera o número de fontes injetados.  
@@ -36,7 +37,7 @@ HRESULT get_Count (
  [out] Retorna o número de fontes injetados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)   

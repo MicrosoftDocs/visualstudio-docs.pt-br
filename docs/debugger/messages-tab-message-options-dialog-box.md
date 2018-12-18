@@ -1,5 +1,5 @@
 ---
-title: Guia de mensagens, caixa de diálogo de opções de mensagem | Microsoft Docs
+title: Guia mensagens, caixa de diálogo de opções de mensagem | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,34 +12,35 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f19da533d2ab13e7493eae53af8dea3af4e520df
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 55906da398f7f52460523cb74a77945d84037ebc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866760"
 ---
 # <a name="messages-tab-message-options-dialog-box"></a>Guia Mensagens, Caixa de diálogo Opções da Mensagem
-Use o **mensagens** tab para selecionar qual mensagem tipos à lista na [exibição de mensagens](../debugger/messages-view.md)e para especificar critérios de pesquisa de mensagem. Para exibir o [caixa de diálogo de opções de mensagem](../debugger/message-options-dialog-box.md), escolha **mensagens de Log** do **Spy** menu.  
+Use o **mensagens** tab para selecionar qual mensagem tipos à lista na [exibição de mensagens](../debugger/messages-view.md)e para especificar critérios de pesquisa da mensagem. Para exibir o [caixa de diálogo de opções de mensagem](../debugger/message-options-dialog-box.md), escolha **mensagens de Log** do **Spy** menu.  
   
- Normalmente, você primeiro selecionar **grupos de mensagens**e, em seguida, ajustar a seleção selecionando individuais **mensagens para o modo**. O **todos os** botão Seleciona todos os tipos de mensagem e o **nenhum** botão limpa todos os tipos.  
+ Normalmente, você seleciona pela primeira vez **grupos de mensagens**e, em seguida, ajustar a seleção selecionando individuais **mensagens para o modo de exibição**. O **todos os** botão Seleciona todos os tipos de mensagem e o **None** botão limpa todos os tipos.  
   
- As configurações a seguir estão disponíveis no **mensagens** guia:  
+ As seguintes configurações estão disponíveis sobre o **mensagens** guia:  
   
  **Mensagens para o modo de exibição**  
- Selecione mensagens específicas para exibição. Quando você cria uma nova janela de mensagens, ele pode exibir todas as mensagens. Quando você filtrar mensagens de **mensagens** guia, esse filtro se aplica apenas às novas mensagens, não as mensagens que já foram exibidas no modo de exibição do Windows.  
+ Selecione mensagens específicas para a exibição. Quando você cria uma nova janela de mensagens, ele pode exibir todas as mensagens. Quando você filtra mensagens do **mensagens** guia, esse filtro se aplica somente a novas mensagens, não as mensagens que já foram exibidas na exibição do Windows.  
   
  **Grupos de mensagens**  
- Selecione os grupos de mensagem para a exibição. Os grupos disponíveis incluem:  
+ Selecione os grupos de mensagens para a exibição. Os grupos disponíveis incluem:  
   
--   WM_USER: com um código de maior que ou igual a WM_USER  
+- WM_USER: com um código de maior que ou igual a WM_USER  
   
--   Registrado: registrado com o **RegisterWindowMessage** chamar  
+- Registrado: registrado com o **RegisterWindowMessage** chamar  
   
--   Desconhecido: mensagens de desconhecido no intervalo de 0 a (WM_USER - 1)  
+- Desconhecido: mensagens desconhecidas no intervalo de 0 a (WM_USER - 1)  
   
- Observe que essas **grupos de mensagens** não são mapeadas para as entradas específicas em **mensagens para exibir**. Quando você seleciona um grupo, a seleção é aplicada diretamente ao fluxo de mensagens.  
+  Observe que esses **grupos de mensagens** não são mapeadas para as entradas específicas sob **exibição de mensagens para**. Quando você seleciona um grupo, a seleção é aplicada diretamente ao fluxo de mensagens.  
   
- Uma caixa de seleção esmaecida na **grupos de mensagens** indica que o **mensagens para exibir** caixa de listagem foi modificada para mensagens nesse grupo; nem todos os tipos de mensagem nesse grupo são selecionados.  
+  Uma caixa de seleção esmaecida dentro **grupos de mensagens** indica que o **exibição de mensagens para** caixa de listagem foi modificada para mensagens nesse grupo; nem todos os tipos de mensagem nesse grupo são selecionados.  
   
- **Salvar as configurações como padrão**  
- Salve as configurações atuais para uso posterior como opções de pesquisa de mensagem. Essas configurações também são salvas quando você sair Spy + +.
+  **Salvar configurações como padrão**  
+  Salve as configurações atuais para uso posterior como opções de pesquisa da mensagem. Essas configurações também são salvas ao sair Spy + +.

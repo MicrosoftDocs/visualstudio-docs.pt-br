@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a8908b61323c80891f93158046b9c7e821287d2e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0527cefeaed58e990d8474c25a522788e4dba6fa
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924239"
 ---
 # <a name="bpstate"></a>BP_STATE
-Especifica a existência de um ponto de interrupção associado e também especifica se ela está habilitada.  
+Especifica a existência de um ponto de interrupção associada e também especifica se ele está habilitado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +48,7 @@ public enum enum_BP_STATE {
   
 ## <a name="members"></a>Membros  
  BPS_NONE  
- Especifica que nenhum ponto de interrupção existe.  
+ Especifica que nenhum ponto de interrupção não existe.  
   
  BPS_DELETED  
  Especifica que o ponto de interrupção foi excluído.  

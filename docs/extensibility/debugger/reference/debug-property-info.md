@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4466d74d0e19b898b3c377c67a14f7c39922d915
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 612865d08142a56b2908707839ad66b60ea2de9f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847084"
 ---
 # <a name="debugpropertyinfo"></a>DEBUG_PROPERTY_INFO
 Contém informações sobre uma propriedade de depuração.  
@@ -58,7 +59,7 @@ public struct DEBUG_PROPERTY_INFO {
  O nome completo da propriedade.  
   
  bstrName  
- O nome da propriedade em um contexto.  
+ O nome da propriedade dentro de um contexto.  
   
  bstrType  
  O tipo de propriedade como uma cadeia de caracteres formatada.  
@@ -67,15 +68,15 @@ public struct DEBUG_PROPERTY_INFO {
  O valor da propriedade como uma cadeia de caracteres formatada.  
   
  pProperty  
- O [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objeto descrito por esta estrutura.  
+ O [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objeto descrito por essa estrutura.  
   
  dwAttrib  
- Uma combinação de sinalizadores do [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) enumeração que descreve os atributos da propriedade.  
+ Uma combinação de sinalizadores do [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) enumeração que descreve os atributos desta propriedade.  
   
 ## <a name="remarks"></a>Comentários  
- Uma propriedade é um objeto de natureza hierárquica que tem um nome, tipo e valor. Por exemplo, uma propriedade pode descrever parâmetros, variáveis locais, inspecionar variáveis e expressões e registros.  
+ Uma propriedade é um objeto de uma natureza hierárquica que tem um nome, tipo e valor. Por exemplo, uma propriedade pode descrever as variáveis locais, parâmetros, inspecionar variáveis e expressões e registros.  
   
- Essa estrutura é passada para o [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) método em que ele é preenchido. Essa estrutura também é retornada como parte de uma lista dessa estrutura do [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) interface que, por sua vez, é retornado de uma chamada para o [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) e [ EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) métodos.  
+ Essa estrutura é passada para o [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) método onde ele é preenchido. Essa estrutura também é retornada como parte de uma lista dessa estrutura do [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) interface que, por sua vez, é retornado de uma chamada para o [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) e [ EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) métodos.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

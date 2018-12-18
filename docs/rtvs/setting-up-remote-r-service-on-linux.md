@@ -1,30 +1,22 @@
 ---
-title: "Configurando o Serviço R Remoto no Linux | Microsoft Docs"
-description: "Como configurar o Serviço de R Remoto no Ubuntu e no subsistema do Windows para Linux."
-ms.custom: 
+title: Configurando o Serviço R Remoto no Linux
+description: Como configurar o Serviço de R Remoto no Ubuntu e no subsistema do Windows para Linux.
 ms.date: 12/04/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-r
-dev_langs:
-- R
-ms.tgt_pltfrm: 
-ms.topic: article
-author:
-- kraigb
-- karthiknadig
-ms.author:
-- kraigb
-- karthiknadig
-manager: ghogen
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
+ms.topic: conceptual
+author: kraigb
+ms.author: kraigb
+ms.reviewer: karthiknadig
+manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 80f7f82baf194070ff3e34bcbf8776f9109c925d
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 81a0a5c26e91056e757bc6e6f68cd217e98c7e06
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220801"
 ---
 # <a name="remote-r-service-for-linux"></a>Serviço R Remoto para Linux
 
@@ -32,14 +24,14 @@ No momento, o Serviço R Remoto para Linux está empacotado como rtvs-daemon. O 
 
 Depois de configurar o computador remoto, as etapas a seguir conectam as RTVS (Ferramentas do R para Visual Studio) a este serviço:
 
-1. Selecione **Ferramentas do R > Windows > Espaços de trabalho** para abrir a janela **Espaços de trabalho**.
+1. Selecione **Ferramentas do R** > **Windows** > **Espaços de trabalho** para abrir a janela **Espaços de trabalho**.
 1. Selecione **Adicionar Conexão**.
 1. Dê um nome à conexão e forneça sua URL, como `https://localhost:5444` (Subsistema Windows para Linux) ou `https://public-ip:5444` (contêiner do Azure). Selecione **Salvar** quando concluir.
 1. Selecione o ícone de conexão ou clique duas vezes no item de conexão.
 1. Forneça as credenciais de logon. O nome de usuário deve ter o prefixo `<<unix>>\` como no `<<unix>>\ruser1` (conforme necessário para todas as conexões com computadores Linux remotos).
 1. Se você estiver usando um certificado autoassinado, poderá ver um aviso. A mensagem fornece instruções para corrigir o aviso.
 
-## <a name="setting-up-remote-r-service"></a>Configurando o Serviço R Remoto
+## <a name="set-up-remote-r-service"></a>Configurar o Serviço R Remoto
 
 Esta seção descreve as opções a seguir:
 
@@ -77,7 +69,7 @@ Em cada caso, o computador remoto deve ter uma dos seguintes interpretadores do 
     sudo systemctl start rtvsd
     ```
 
-1. Configure o certificado SSL (necessário para a produção). Por padrão, o rtvs-daemon usa o `ssl-cert-snakeoil.pem` e o `ssl-cert-snakeoil.pem` gerados pelo pacote `ssl-cert`. Durante a instalação, eles são combinadas em `ssl-cert-snakeoil.pfx`. Para fins de produção, use o certificado SSL fornecido pelo seu administrador. O certificado SSL pode ser configurado fornecendo um arquivo `.pfx` e a senha de importação opcional em: `/etc/rtvs/rtvsd.config.json`.
+1. Configure o certificado SSL (necessário para a produção). Por padrão, o rtvs-daemon usa o `ssl-cert-snakeoil.pem` e o `ssl-cert-snakeoil.pem` gerados pelo pacote `ssl-cert`. Durante a instalação, eles são combinadas em `ssl-cert-snakeoil.pfx`. Para fins de produção, use o certificado SSL fornecido pelo seu administrador. O certificado SSL pode ser configurado fornecendo um arquivo *.pfx* e a senha de importação opcional em: */etc/rtvs/rtvsd.config.json*.
 
 1. (Opcional) Verifique se o serviço está em execução:
 
@@ -109,14 +101,14 @@ Em cada caso, o computador remoto deve ter uma dos seguintes interpretadores do 
 
 #### <a name="configure-the-vm"></a>Configurar a VM
 
-1. Na seção **Rede** da VM, adicione 5444 como uma porta de entrada permitida. Para usar uma porta diferente, altere a configuração no arquivo de configuração do daemon das RTVS (`/etc/rtvs/rtvsd.config.json`).
+1. Na seção **Rede** da VM, adicione 5444 como uma porta de entrada permitida. Para usar uma porta diferente, altere a configuração no arquivo de configuração do daemon das RTVS (*/etc/rtvs/rtvsd.config.json*).
 1. (Opcional) Definir um nome DNS; também é possível usar o endereço IP.
 1. Conecte-se à VM usando um cliente SSH, como o PuTTY para WIndows.
 1. Siga as instruções para um [Computador Ubuntu físico](#physical-ubuntu-computer) acima.
 
 ### <a name="windows-subsystem-for-linux-wsl"></a>WSL (Subsistema Windows para Linux)
 
-1. Siga as instruções de instalação do WSL para o [Windows 10](https://msdn.microsoft.com/commandline/wsl/install-win10) ou para o [Windows Server](https://msdn.microsoft.com/en-us/commandline/wsl/install-on-server).
+1. Siga as instruções de instalação do WSL para o [Windows 10](/windows/wsl/install-win10#install-the-windows-subsystem-for-linux) ou para o [Windows Server](/windows/wsl/install-on-server#enable-the-windows-subsystem-for-linux-wsl).
 1. Inicie o bash no Windows e siga as instruções anteriores em um [computador Ubuntu físico](#physical-ubuntu-computer) com uma exceção. Na etapa 3, inicie o serviço usando o comando `rtvsd`, porque, no momento, o WSL não dá suporte às interfaces systemd/systemctl.
 
 ### <a name="local-or-remote-docker-container-clean-build"></a>Contêiner do Docker local ou remoto (build limpo)
@@ -164,7 +156,7 @@ Em cada caso, o computador remoto deve ter uma dos seguintes interpretadores do 
     docker run -p 5444:5444 myrimage rtvsd
     ```
 
-1. Para conectar-se ao conteúdo das RTVS, use `https://localhost:5444` como o caminho, nome de usuário `<<unix>>\ruser1` e a senha `foobar`. Se o contêiner estiver em execução em um computador remoto, use `https://remote-host-name:5444` como o caminho. A porta pode ser alterada atualizando `/etc/rtvs/rtvsd.config.json`.
+1. Para conectar-se ao conteúdo das RTVS, use `https://localhost:5444` como o caminho, nome de usuário `<<unix>>\ruser1` e a senha `foobar`. Se o contêiner estiver em execução em um computador remoto, use `https://remote-host-name:5444` como o caminho. A porta pode ser alterada atualizando */etc/rtvs/rtvsd.config.json*.
 
 ### <a name="container-running-on-azure-container-instances"></a>Contêiner em execução em Instâncias de Contêiner do Azure
 

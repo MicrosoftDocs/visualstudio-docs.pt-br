@@ -1,21 +1,25 @@
 ---
-title: Designers de atividade do sistema de mensagens | Microsoft Docs
+title: Designer de fluxo de trabalho – Designers de atividade do sistema de mensagens
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: 897e63cf-a42f-4edd-876f-c4ccfffaf6d6
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 38c34dea2dd0265d156bb4b379323559be4825b3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 97279d92b9853f183778d069aa81182fa6cf8b56
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36755220"
 ---
 # <a name="messaging-activity-designers"></a>Designer de atividade de mensagem
-Os designers de atividade de mensagem são usados para criar e configurar as atividades de mensagem que enviam e recebem mensagens de [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] de dentro de um aplicativo de [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] . O [!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)] apresenta cinco mensagens atividades e o Designer de fluxo de trabalho do Windows fornece dois novos designers de modelo que permitem gerenciar mensagens dentro de um fluxo de trabalho. Os tópicos contidos nesta seção e listados na tabela a seguir fornecem orientação sobre como usar o designer de atividade e modelo de [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] .
+
+Designers de atividade de mensagens são usados para criar e configurar as atividades de mensagem que enviam e recebem mensagens do Windows Communication Foundation (WCF) de dentro de um aplicativo do Windows Workflow Foundation (WF). O .NET Framework 4 apresenta cinco atividades de mensagem e o Designer de fluxo de trabalho fornece dois novos designers de modelo que permitem que você gerencie o sistema de mensagens dentro de um fluxo de trabalho. Os tópicos contidos nesta seção e listados na tabela a seguir fornecem orientação sobre como usar a atividade de Designer de fluxo de trabalho e os designers de modelo.
 
 ## <a name="reference"></a>Referência
  <xref:System.Activities.Activity>

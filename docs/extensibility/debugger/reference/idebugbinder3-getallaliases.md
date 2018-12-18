@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6da1b26b41c80d0417da16f478ef3f6672edd12a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 75c8a916d6b69dbe4c7947e82093595a60cabbfc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49859987"
 ---
 # <a name="idebugbinder3getallaliases"></a>IDebugBinder3::GetAllAliases
 Esse método recupera uma lista de aliases do programa.  
@@ -44,16 +45,16 @@ int GetAllAliases(
   
 #### <a name="parameters"></a>Parâmetros  
  `uRequest`  
- [in] O número máximo de aliases para retornar (Especifica o comprimento da matriz passado para `ppAliases`).  
+ [in] O número máximo de aliases para retornar (Especifica o comprimento da matriz passada em `ppAliases`).  
   
  `ppAliases`  
- [out no] Matriz para preencher com aliases (se esse for um valor nulo e `uRequest` for 0, a contagem de aliases que podem ser retornados será retornada pelo `puFetched`).  
+ [no, out] Matriz a ser preenchida com aliases (quando se trata de um valor nulo e `uRequest` for 0, a contagem de aliases que podem ser retornados será retornada pela `puFetched`).  
   
  `puFetched`  
  [out] Retorna o número de aliases obtido.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

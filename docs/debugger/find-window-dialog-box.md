@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31472039"
 ---
 # <a name="find-window-dialog-box"></a>Caixa de diálogo Localizar Janela
 Use essa caixa de diálogo para selecionar uma janela e exibir suas propriedades ou mensagens. Para exibir essa caixa de diálogo, escolha **encontrar janela** do **Spy** menu.  

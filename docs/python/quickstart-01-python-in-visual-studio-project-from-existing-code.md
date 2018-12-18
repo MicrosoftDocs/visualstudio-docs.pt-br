@@ -1,15 +1,9 @@
 ---
-title: 'Início Rápido: Criar um projeto em Python com base em código existente | Microsoft Docs'
+title: Início Rápido – Criar um projeto do Python com base em código existente
 description: Neste início rápido, crie um projeto do Visual Studio para Python a partir de uma pasta existente usando um modelo adequado.
-ms.custom: mvc
-ms.date: 01/08/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+ms.date: 09/04/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: quickstart
 author: kraigb
 ms.author: kraigb
@@ -17,13 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b31cda03c2ca233e90e1ba0194d83845805e28f3
-ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
+ms.openlocfilehash: 464c53b1acd7cf0db4cde408c4b013a116f5a744
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43774723"
 ---
-# <a name="quickstart-create-a-python-project-from-existing-code"></a>Início Rápido: criar um projeto do Python com base em código existente
+# <a name="quickstart-create-a-python-project-from-existing-code"></a>Início Rápido: Criar um projeto do Python com base em código existente
 
 Depois de [instalar o suporte ao Python no Visual Studio 2017](installing-python-support-in-visual-studio.md), é fácil colocar código de Python existente em um projeto do Visual Studio.
 
@@ -32,15 +27,15 @@ Depois de [instalar o suporte ao Python no Visual Studio 2017](installing-python
 
 [!INCLUDE[project-from-existing](includes/project-from-existing.md)]
 
-8. Se desejar, execute o programa pressionando CTRL + F5 ou selecionando **Depurar > Iniciar Sem Depuração**.
+Se desejar, execute o programa pressionando **Ctrl**+**F5** ou selecionando **Depurar** > **Iniciar Sem Depuração**.
 
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
-> [Tutorial: trabalhando com o Python no Visual Studio](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
+> [Tutorial: trabalhar com Python no Visual Studio](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 ## <a name="see-also"></a>Consulte também
 
-- [Identificar manualmente um interpretador Python existente](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment).
-- [Instalar o suporte do Python no Visual Studio 2015 e anterior](installing-python-support-in-visual-studio.md).
-- [Locais de instalação](installing-python-support-in-visual-studio.md#install-locations).
+- [Identificar manualmente um interpretador Python existente](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
+- [Instalar o suporte para Python no Visual Studio 2015 e anterior](installing-python-support-in-visual-studio.md)
+- [Locais de instalação](installing-python-support-in-visual-studio.md#install-locations)

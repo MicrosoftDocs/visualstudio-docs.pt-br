@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: af6da09badf0ffea4846d35fe00b4ca146243d64
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6723eed8d29df62b2016a851bd69ae0e53a6453c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49927626"
 ---
 # <a name="sccwillcreatesccfile-function"></a>Função SccWillCreateSccFile
-Esta função determina se o plug-in de controle de origem suporta a criação do MSSCCPRJ. Arquivos SCC para cada um dos arquivos de determinado.  
+Esta função determina se o plug-in de controle do código-fonte suporta a criação do MSSCCPRJ. Arquivos SCC para cada um dos arquivos de determinado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,19 +38,19 @@ SCCRTN SccWillCreateSccFile(
   
 #### <a name="parameters"></a>Parâmetros  
  pContext  
- [in] O ponteiro de contexto de plug-in de controle de origem.  
+ [in] O ponteiro de contexto de plug-in de controle do código-fonte.  
   
  nFiles  
- [in] O número de nomes de arquivos incluídos no `lpFileNames` de matriz, bem como o comprimento do `pbSccFiles` matriz.  
+ [in] O número de nomes de arquivos incluídos na `lpFileNames` matriz, bem como o comprimento do `pbSccFiles` matriz.  
   
  lpFileNames  
  [in] Uma matriz de nomes de arquivo totalmente qualificado para verificar (matriz deve ser alocada pelo chamador).  
   
  pbSccFiles  
- [out no] Matriz na qual deseja armazenar os resultados.  
+ [no, out] Matriz na qual armazenar os resultados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+ A implementação de plug-in de controle do código-fonte desta função deve retornar um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -58,8 +59,8 @@ SCCRTN SccWillCreateSccFile(
 |SCC_E_NONSPECIFICERROR|Falha não específica.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa função é chamada com uma lista de arquivos para determinar se o plug-in de controle de origem fornece suporte a MSSCCPRJ. Arquivos SCC para cada um dos arquivos de determinado (para obter mais informações sobre o MSSCCPRJ. Arquivos SCC, consulte [MSSCCPRJ. Arquivos SCC](../extensibility/mssccprj-scc-file.md)). Plug-ins de controle de origem pode declarar se eles têm a capacidade de criar MSSCCPRJ. Arquivos SCC declarando `SCC_CAP_SCCFILE` durante a inicialização. Retorna a plug-in `TRUE` ou `FALSE` por arquivo no `pbSccFiles` array para indicar que os arquivos de determinado ter MSSCCPRJ. Suporte do SCC. Se o plug-in retorna um código de êxito da função, os valores na matriz de retorno são respeitados. Em caso de falha, a matriz é ignorada.  
+ Essa função é chamada com uma lista de arquivos para determinar se o plug-in de controle do código-fonte fornece suporte no MSSCCPRJ. Arquivos SCC para cada um dos arquivos de determinado (para obter mais informações sobre o MSSCCPRJ. Arquivos SCC, consulte [MSSCCPRJ. Arquivos SCC](../extensibility/mssccprj-scc-file.md)). Plug-ins de controle de origem pode declarar se eles têm a capacidade de criar MSSCCPRJ. Arquivos SCC, declarando `SCC_CAP_SCCFILE` durante a inicialização. O plug-in retorna `TRUE` ou `FALSE` por arquivo no `pbSccFiles` matriz para indicar quais arquivos de determinado têm MSSCCPRJ. Suporte do SCC. Se o plug-in retorna um código de êxito da função, os valores na matriz de retorno são respeitados. Em caso de falha, a matriz é ignorada.  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)   
+ [Funções de API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)   
  [Arquivo MSSCCPRJ.SCC](../extensibility/mssccprj-scc-file.md)

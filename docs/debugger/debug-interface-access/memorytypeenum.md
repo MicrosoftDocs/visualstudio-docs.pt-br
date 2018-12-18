@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 616bae99a4cb3ffafa4cdf773bce63576ed04e7a
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 4a8dcf657933cf62f3f2173bb89dadd1366b0cec
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822930"
 ---
 # <a name="memorytypeenum"></a>MemoryTypeEnum
 Especifica o tipo de memória para acessar.  
@@ -36,13 +37,13 @@ enum MemoryTypeEnum {
   
 #### <a name="parameters"></a>Parâmetros  
  `MemTypeCode`  
- Acessa somente código de memória.  
+ Acessos de memória somente código.  
   
  `MemTypeData`  
- Memória acessa dados ou de pilha.  
+ Memória de dados ou a pilha de acessos.  
   
  `MemTypeStack`  
- Acessa somente pilha de memória.  
+ Acessos apenas memória de pilha.  
   
  `MemTypeAny`  
  Acessa qualquer tipo de memória.  

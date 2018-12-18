@@ -1,7 +1,9 @@
 ---
-title: Atalhos de teclado no Designer de fluxo de trabalho | Microsoft Docs
+title: Designer de fluxo de trabalho - atalhos de teclado no Designer de fluxo de trabalho
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - WFDKeyboardShortcuts.UI
 ms.assetid: 9be75438-a4a3-4781-94e5-45b7ec082358
@@ -10,26 +12,27 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 29d96eb6d738fbf23749bec601743002a451ad06
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e4040a5b370674e7794b09e4d1cae68f424c7792
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887365"
 ---
 # <a name="keyboard-shortcuts-in-the-workflow-designer"></a>Atalhos de teclado no Designer de Fluxo de Trabalho
 
-Toda a funcionalidade de núcleo do Designer de fluxo de trabalho do Windows pode ser acessada pelo teclado.
+Toda a funcionalidade de núcleo do Designer de fluxo de trabalho pode ser acessada pelo teclado.
 
 ## <a name="navigating-the-workflow-designer-using-the-keyboard"></a>Navegando em Designer de Fluxo de Trabalho usando o teclado
 
-Dentro de [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)], os atalhos globais e os atalhos de depuração se aplicam a [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]. Além disso, um número de atalhos de teclado específicos de [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] foram criados. Em [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)], todos os atalhos de teclado podem ser remapped. No entanto, em um aplicativo rehosted, esses atalhos de teclado são embutidas em código.
+Dentro do Visual Studio, os atalhos globais e os atalhos de depuração se aplicam ao Designer de fluxo de trabalho. Além disso, um número de atalhos de teclado específicos do Designer de fluxo de trabalho ter sido criado. No Visual Studio, todos os atalhos de teclado podem ser remapeados. No entanto, em um aplicativo rehosted, esses atalhos de teclado são embutidas em código.
 
 ### <a name="workflow-designer-keyboard-shortcuts"></a>Atalhos de teclado Designer de Fluxo de Trabalho
 
-A tabela a seguir resume os atalhos de teclado padrão atribuídos aos comandos de [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] .
+A tabela a seguir resume os atalhos de teclado padrão atribuídos aos comandos de Designer de fluxo de trabalho.
 
 |Atalho|Finalidade|
-|--------------|-------------|
+|-|-------------|
 |CTRL+E, A|Mostra ou oculta o designer do argumento.|
 |CTRL+E, C 2.0|Recolhe a atividade selecionada no lugar.|
 |CTRL+E, E|Expandir a atividade selecionada no lugar.|
@@ -46,13 +49,13 @@ A tabela a seguir resume os atalhos de teclado padrão atribuídos aos comandos 
 
 ### <a name="flowchart"></a>Fluxograma
 
-A lista a seguir mostra os gestos usados para construir um fluxograma pelo teclado. Como no restante de [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)], as atividades são adicionadas à superfície de designer usando os atalhos globais da caixa de ferramentas fornecidos com [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)].
+A lista a seguir mostra os gestos usados para construir um fluxograma pelo teclado. Como no restante do Designer de fluxo de trabalho, as atividades são adicionadas à superfície do designer usando os atalhos globais da caixa de ferramentas fornecidos com o Visual Studio.
 
 - Para mover uma atividade, selecione a atividade e use as teclas de seta para reposicioná-la.
 
 - Para redimensionar um fluxograma, mover uma atividade após a borda atual do fluxograma usando as teclas de direção. O fluxograma é redimensionado automaticamente.
 
-- Para definir uma atividade como o nó de início, use o **definido como StartNode** comando no menu de contexto.
+- Para definir uma atividade como o nó inicial, use o **DataSet como StartNode** comando no menu de contexto.
 
 - Para conectar atividades:
 
@@ -66,15 +69,15 @@ A lista a seguir mostra os gestos usados para construir um fluxograma pelo tecla
 
 Notas sobre como conectar atividades pelo teclado:
 
-- Você pode fazer várias conexões ao mesmo tempo, adicionando mais atividades para a seleção antes de pressionar CTRL + E, F. As conexões são feitas na ordem em que as atividades foram adicionadas à seleção.
+- Você pode fazer várias conexões ao mesmo tempo, adicionando mais atividades a seleção antes de pressionar CTRL + E, F. As conexões são feitas na ordem em que as atividades foram adicionadas à seleção.
 
 - Se um par de atividades não pode ser conectado, por exemplo se a atividade de origem já tiver uma conexão de saída, conexões entre outras atividades na seleção é feito ainda sempre que possível.
 
-- Quando um **FlowDecision** está incluído na seleção e o **FlowDecision** não tem nenhum conector de saída, o conector é colocado no **True** ramificação.
+- Quando um **FlowDecision** está incluído na seleção e o **FlowDecision** não tem nenhum conector de saída, o conector é colocado no **verdadeiro** branch.
 
 ### <a name="expression-editing"></a>Edição de expressão
 
-Por padrão, os atalhos de teclado padrão para edição de texto de [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] se aplicam no editor de expressão em [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)], com as seguintes restrições:
+Por padrão, os atalhos de teclado padrão para edição de texto do Visual Basic se aplicam no editor de expressão no Designer de fluxo de trabalho, com as seguintes limitações:
 
 - O remapeamento atalhos de teclado para os seguintes comandos não tem efeito. Você pode usar os atalhos de teclado padrão para acessar esses comandos para editar uma expressão.
 
@@ -85,4 +88,4 @@ Por padrão, os atalhos de teclado padrão para edição de texto de [!INCLUDE[v
    - Desfazer
    - Refazer
 
-- Para remapear atalhos de teclado para comandos de edição de expressão dentro de [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] em [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)], edite os atalhos no escopo de [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] . As alterações feitas no escopo do editor de texto não se aplicam automaticamente a [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]. Se você deseja remapear atalhos nos dois lugares, você deve aplicar as alterações duas vezes (uma vez para cada escopo).
+- Para remapear atalhos de teclado para comandos de edição de expressão dentro do Designer de fluxo de trabalho no Visual Studio, edite os atalhos no escopo do Designer de fluxo de trabalho. As alterações feitas no escopo do Editor de texto não são aplicadas automaticamente ao Designer de fluxo de trabalho. Se você deseja remapear atalhos nos dois lugares, você deve aplicar as alterações duas vezes (uma vez para cada escopo).

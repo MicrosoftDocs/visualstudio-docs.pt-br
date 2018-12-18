@@ -12,16 +12,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d2464acb75d8ea8a309d788aa95dc86b44d47e9
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 96166caefa749138371dd8a5ab2ea9d496553557
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177108"
 ---
-# <a name="comparing-properties-and-items"></a>Comparando propriedades e itens
+# <a name="compare-properties-and-items"></a>Comparar propriedades e itens
 Itens e propriedades do MSBuild são usados para passar informações para tarefas, avaliar condições e armazenar os valores que podem ser referenciadas em todo o arquivo de projeto.  
   
--   Propriedades são pares nome-valor. Para mais informações, consulte [Propriedades do MSBuild](../msbuild/msbuild-properties.md).  
+-   Propriedades são pares nome-valor. Para obter mais informações, confira [Propriedades do MSBuild](../msbuild/msbuild-properties.md).  
   
 -   Itens são objetos que normalmente representam arquivos. Objetos de item podem ter coleções de metadados associadas. Metadados são pares nome-valor. Para obter mais informações, consulte [Itens](../msbuild/msbuild-items.md).  
   
@@ -54,7 +55,7 @@ Itens e propriedades do MSBuild são usados para passar informações para taref
   
  adiciona o destino CustomBuild à lista de destinos, dando a `BuildDependsOn` o valor `BeforeBuild;CoreBuild;AfterBuild;CustomBuild`.  
   
- A partir do MSBuild 4.0, a injeção de dependência de destino é preterida. Em vez disso, use os atributos `AfterTargets` e `BeforeTargets`. Para obter mais informações, consulte [Target Build Order (Ordem de build de destino)](../msbuild/target-build-order.md).  
+ A partir do MSBuild 4.0, a injeção de dependência de destino é preterida. Em vez disso, use os atributos `AfterTargets` e `BeforeTargets`. Para obter mais informações, confira [Ordem de build de destino](../msbuild/target-build-order.md).  
   
 ### <a name="conversions-between-strings-and-item-lists"></a>Conversões entre cadeias de caracteres e listas de itens  
  O MSBuild executa conversões em e de tipos de item e valores de cadeias de caracteres conforme necessário. Para ver como uma lista de itens pode se tornar um valor de cadeia de caracteres, considere o que acontece quando um tipo de item é usado como o valor de uma propriedade do MSBuild:  
@@ -70,7 +71,7 @@ Itens e propriedades do MSBuild são usados para passar informações para taref
   
  O tipo de item OutputDir tem um atributo `Include` com o valor "KeyFiles\\;Certificates\\". O MSBuild analisa essa cadeia de caracteres em dois itens: KeyFiles e Certificates\\. Quando o tipo de item OutputDir é usado como o valor da propriedade OutputDirList, o MSBuild converte ou mescla o tipo de item na cadeia de caracteres separados por ponto-e-vírgula "KeyFiles\\;Certificates\\".  
   
-## <a name="properties-and-items-in-tasks"></a>Propriedades e itens em Tarefas  
+## <a name="properties-and-items-in-tasks"></a>Propriedades e itens em tarefas  
  As propriedades e os itens são usados como entradas e saídas para tarefas do MSBuild. Para obter mais informações, consulte [Tarefas](../msbuild/msbuild-tasks.md).  
   
  Propriedades são passadas para tarefas como atributos. Dentro da tarefa, uma propriedade do MSBuild é representada por um tipo de propriedade cujo valor pode ser convertido em ou de uma cadeia de caracteres. Os tipos de propriedade compatíveis incluem `bool`, `char`, `DateTime`, `Decimal`, `Double`, `int`, `string` e qualquer tipo que <xref:System.Convert.ChangeType%2A> possa manipular.  
@@ -87,9 +88,10 @@ Itens e propriedades do MSBuild são usados para passar informações para taref
 -   As definições de itens são realizadas e modificadas na ordem em que são exibidas.  
   
 -   Os itens são definidos e modificados na ordem em que são exibidos.  
-  
+ 
+ 
  Durante a fase de execução de um build, as propriedades e os itens definidos dentro dos destinos são avaliados juntamente em uma única fase na ordem na qual são exibidos.  
-  
+ 
  No entanto, essa não é a história completa. Quando uma propriedade, definição de item ou o item é definido, seu valor é avaliado. O avaliador de expressão expande a cadeia de caracteres que especifica o valor. A expansão de cadeia de caracteres depende da fase do build. Abaixo, há uma ordem de avaliação de itens e propriedades mais detalhada:  
   
 -   Durante a fase de avaliação de um build:  
@@ -127,9 +129,9 @@ Itens e propriedades do MSBuild são usados para passar informações para taref
 KeyFileVersion: 1.0.0.3  
 ```  
   
- Isso ocorre porque o valor de `KeyFileVersion` é, na verdade, a cadeia de caracteres "@(KeyFile->'%(Version)')". O item e as transformações de item não foram expandidos quando a propriedade foi definida pela primeira vez. Portanto, a propriedade `KeyFileVersion` recebeu o valor da cadeia de caracteres não expandida.  
+ Isso ocorre porque o valor de `KeyFileVersion` é, na verdade, a cadeia de caracteres "\@(KeyFile->'%(Version)')". O item e as transformações de item não foram expandidos quando a propriedade foi definida pela primeira vez. Portanto, a propriedade `KeyFileVersion` recebeu o valor da cadeia de caracteres não expandida.  
   
- Durante a fase de execução do build, quando ele processa a tarefa Mensagem, o MSBuild expande a cadeia de caracteres "@(KeyFile->'%(Version)')" para produzir "1.0.0.3".  
+ Durante a fase de execução do build, ao processar a tarefa Message, o MSBuild expande a cadeia de caracteres "\@(KeyFile->'%(Version)')" para produzir "1.0.0.3".  
   
  Observe que a mesma mensagem seria exibida mesmo se os grupos de propriedade e de item fossem invertidos em ordem.  
   
@@ -173,7 +175,7 @@ KeyFileVersion:
 </Target>  
 ```  
   
- O valor de `KeyFileVersion` é definido como "1.0.0.3" e não como "@(KeyFile->'%(Version)')". A tarefa de mensagem exibe esta mensagem:  
+ O valor de `KeyFileVersion` é definido como "1.0.0.3" e não como "\@(KeyFile->'%(Version)')". A tarefa de mensagem exibe esta mensagem:  
   
 ```  
 KeyFileVersion: 1.0.0.3  

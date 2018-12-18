@@ -1,10 +1,9 @@
 ---
-title: Ir para Linha | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+title: Ir para a linha
+ms.date: 05/18/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vs.gotoline
 helpviewer_keywords:
@@ -16,19 +15,26 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 79b88ae959ef2fb4e63b30ced7c28d5c7c4a13ef
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bfbe70232537556bee826653d533bab8728e3d1c
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34446508"
 ---
-# <a name="go-to-line"></a>Ir para a linha
-Essa caixa de diálogo permite ir para uma linha específica no documento ativo. Para acessar essa caixa de diálogo, abra um documento para edição e selecione **Ir para** no menu **Editar**.  
-  
- Número de linha (1 – `n`)  
- Permite inserir o número da linha no documento ativo para a qual você deseja ir. O número inserido deve estar entre 1 e `n`, o número de linhas no documento atual.  
-  
-## <a name="see-also"></a>Consulte também  
- [Definindo indicadores no código](../../ide/setting-bookmarks-in-code.md)   
- [Localizando e substituindo texto](../../ide/finding-and-replacing-text.md)   
- [Escrevendo código](../../ide/writing-code-in-the-code-and-text-editor.md)
+# <a name="go-to-line-dialog-box"></a>Caixa de diálogo Ir para Linha
+
+A caixa de diálogo **Ir Para Linha** permite que você vá para uma linha específica no documento ativo. Para acessar essa caixa de diálogo, abra um documento para edição e selecione **Editar** > **Ir Para** > **Ir Para Linha** ou pressione **Ctrl**+**G**.
+
+![Caixa de diálogo Ir Para Linha no Visual Studio](media/go-to-line-dialog-box.png)
+
+## <a name="line-number-1---n"></a>Número da linha (1 - \<n>)
+
+Na caixa **Número de linha (1 - \<n>)**, insira o número de linha no documento ativo para a qual você deseja ir. O número inserido deve estar entre 1 e o número da última linha no documento atual.
+
+## <a name="see-also"></a>Consulte também
+
+- [Localizar código usando comandos Ir Para](../../ide/go-to.md)
+- [Definir indicadores no código](../../ide/setting-bookmarks-in-code.md)
+- [Localizar e substituir texto](../../ide/finding-and-replacing-text.md)
+- [Recursos do Editor de Códigos](../../ide/writing-code-in-the-code-and-text-editor.md)

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130841"
 ---
 # <a name="solution-user-options-suo-file"></a>Opções de usuário de solução (. Arquivo suo)
 O arquivo de opções (. suo) do usuário de solução contém opções de solução por usuário. Esse arquivo não deve fazer check-in de controle do código fonte.  

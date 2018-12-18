@@ -1,30 +1,25 @@
 ---
-title: Gerenciador de pacotes nas Ferramentas do R para Visual Studio | Microsoft Docs
+title: Gerenciador de pacotes para R
 description: Como usar o gerenciador de pacotes de R no Visual Studio para instalar e gerenciar pacotes R.
-ms.custom: ''
 ms.date: 01/24/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-r
-dev_langs:
-- R
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 14948b0680e570e9045d724ae00adb67bd6b19cd
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.openlocfilehash: 4063787711ae825cd587f72d735710444906d99b
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35666508"
 ---
 # <a name="package-manager"></a>Gerenciador de pacotes
 
-O gerenciador de pacotes das RTVS (Ferramentas do R para Visual Studio) é uma interface do usuário para gerenciar os pacotes R. Para abri-lo, selecione **Ferramentas do R > Janelas > Pacotes** ou pressione Ctrl + 7.
+O gerenciador de pacotes das RTVS (Ferramentas do R para Visual Studio) é uma interface do usuário para gerenciar os pacotes R. Para abri-lo, selecione **Ferramentas do R** > **Windows** > **Pacotes** ou pressione **Ctrl**+**7**.
 
 O gerenciador de pacotes tem três guias. Cada guia exibe uma lista de pacotes relevantes à esquerda e detalhes específicos para o pacote selecionado à direita, incluindo versão do pacote, descrição, licença, local de instalação e links para outras informações relevantes. Caixa de pesquisa no canto superior direito permite filtrar a lista.
 
@@ -47,5 +42,5 @@ O gerenciador de pacotes tem três guias. Cada guia exibe uma lista de pacotes r
 
 Os pacotes são instalados nos seguintes locais:
 
-- Os pacotes principais que vêm incluídos nas RTVS são instalados em `C:\Program Files\Microsoft\R Client\R_SERVER\library`
-- Os pacotes adicionais são instalados em `%userprofile%\Documents\R\win-library\3.3`
+- Os pacotes principais incluídos nas RTVS são instalados em *C:\Arquivos de Programas\Microsoft\R Client\R_SERVER\library*
+- Pacotes adicionais são instalados em *%userprofile%\Documents\R\win-library\3.3*

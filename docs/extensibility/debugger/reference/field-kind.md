@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 35a603310986f42141a04f38c7ce26db0d7326fe
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: df29c9bd876a437dbcf8d797f1dcc51fb05a296f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868190"
 ---
 # <a name="fieldkind"></a>FIELD_KIND
-Especifica o tipo de campo contido em um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto.  
+Especifica o tipo do campo contido em um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -215,18 +216,18 @@ public enum enum_FIELD_KIND {
  Reservado para uso futuro.  
   
  FIELD_KIND_MASK  
- Indica uma máscara para tipos de campo.  
+ Indica uma máscara para os tipos de campo.  
   
  FIELD_TYPE_MASK  
  Indica uma máscara para tipos de campo.  
   
  FIELD_SYM_MASK  
- Indica uma máscara para obter informações de símbolo.  
+ Indica uma máscara para informações de símbolo.  
   
 ## <a name="remarks"></a>Comentários  
  Retornado de uma chamada para o [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) método.  
   
- Dependendo do tipo de campo, [QueryInterface](/cpp/atl/queryinterface) pode ser chamado no [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface para a forma mais específica de interface. Por exemplo, se [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) retorna `FIELD_TYPE_METHOD`, em seguida, você pode chamar `QueryInterface` sobre I`DebugField` para obter o [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) interface.  
+ Dependendo do tipo de campo, [QueryInterface](/cpp/atl/queryinterface) pode ser chamado na [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface para a forma mais específica de interface. Por exemplo, se [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) retorna `FIELD_TYPE_METHOD`, em seguida, você pode chamar `QueryInterface` em`DebugField` para obter o [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) interface.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: sh.h  

@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 83b4a22d8cfb1d8ab89adb5946305ea50425fa35
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c356154c5d77c01f84c5fe4446b8ac92235c10e4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866994"
 ---
 # <a name="idebugprogram2getencupdate"></a>IDebugProgram2::GetENCUpdate
-Esse método obtém a atualização de editar e continuar (c) para este programa. Um mecanismo de depuração personalizado sempre retorna `E_NOTIMPL`.  
+Esse método obtém a atualização de editar e continuar (ENC) para este programa. Um mecanismo de depuração personalizado sempre retorna `E_NOTIMPL`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +44,7 @@ int GetENCUpdate(
  [out] Retorna uma interface interna que pode ser usada para atualizar este programa.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 > [!NOTE]
 >  Um mecanismo de depuração personalizado deve sempre retornar `E_NOTIMPL`.  

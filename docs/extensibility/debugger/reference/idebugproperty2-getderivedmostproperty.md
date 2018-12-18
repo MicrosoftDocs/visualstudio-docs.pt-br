@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f453dacf988b80cf6837b3324a9d4b0a70e2254e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 58713b63728678ccab55435eb05b1cbb1c8920fc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49929875"
 ---
 # <a name="idebugproperty2getderivedmostproperty"></a>IDebugProperty2::GetDerivedMostProperty
 Obtém a propriedade mais derivado de uma propriedade.  
@@ -43,10 +44,10 @@ int GetDerivedMostProperty (
  [out] Retorna um [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objeto que representa a propriedade mais derivado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna o código de erro. Retorna `S_GETDERIVEDMOST_NO_DERIVED_MOST` se não houver nenhuma propriedade mais derivado a recuperar.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará o código de erro. Retorna `S_GETDERIVEDMOST_NO_DERIVED_MOST` se não houver nenhuma propriedade mais derivado para recuperar.  
   
 ## <a name="remarks"></a>Comentários  
- Por exemplo, se esta propriedade descreve um objeto que implementa `ClassRoot` , mas que é realmente uma instanciação de `ClassDerived` que é derivado de `ClassRoot`, em seguida, esse método retorna um [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objeto descrevendo o `ClassDerived` objeto.  
+ Por exemplo, se esta propriedade descreve um objeto que implementa `ClassRoot` , mas o que é realmente uma instanciação de `ClassDerived` que é derivada de `ClassRoot`, em seguida, esse método retorna um [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objeto descrevendo o `ClassDerived` objeto.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

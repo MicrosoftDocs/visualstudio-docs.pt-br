@@ -12,17 +12,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 174f8612dd4f0678d8bbdc8be5c6a9b37cfc8b61
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 98b56eece1a51db94482a0a58d54ca877e47e0c1
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35668118"
 ---
-# <a name="summary-view---net-memory-data"></a>Exibição Resumo – Dados de memória do .NET
-A exibição Resumo exibe informações sobre as funções e os tipos do .NET que alocaram a maior quantidade de memória e os tipos que foram criados mais vezes em uma execução de criação de perfil. Para obter mais informações, incluindo uma descrição das listas Links de notificação e Relatório, consulte [Exibição Resumo](../profiling/summary-view.md).  
+# <a name="summary-view---net-memory-data"></a>Exibição Resumo – dados de memória do .NET
+A exibição Resumo exibe informações sobre as funções e os tipos do .NET que alocaram a maior quantidade de memória e os tipos que foram criados mais vezes em uma execução de criação de perfil. Para obter mais informações, incluindo uma descrição das listas de Links de Notificação e Relatório, confira [Exibição Resumo](../profiling/summary-view.md).  
   
 ## <a name="timeline-graph"></a>Gráfico de linha do tempo  
- O gráfico de linha do tempo na exibição Resumo mostra a utilização do processador (CPU) pelo aplicativo com perfil ao longo do tempo em que ocorreu a criação de perfil. É possível usar o gráfico de linha do tempo para filtrar a exibição para um intervalo de tempo selecionado. Para obter mais informações, consulte [Como filtrar exibições de relatório por meio da linha do tempo de resumo](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).  
+ O gráfico de linha do tempo na exibição Resumo mostra a utilização do processador (CPU) pelo aplicativo com perfil ao longo do tempo em que ocorreu a criação de perfil. É possível usar o gráfico de linha do tempo para filtrar a exibição para um intervalo de tempo selecionado. Para obter mais informações, confira [Como filtrar exibições de relatório por meio da Linha do Tempo de Resumo](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).  
   
 ## <a name="functions-allocating-most-memory"></a>Funções que Alocam Mais Memória  
  Lista as funções que alocaram o maior número de bytes de memória na execução de criação de perfil.  
@@ -49,5 +50,5 @@ A exibição Resumo exibe informações sobre as funções e os tipos do .NET qu
 |**% de instâncias**|O percentual do número total de objetos do .NET que foram criados na execução de criação de perfil que eram instâncias desse tipo.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibição Resumo](../profiling/summary-view-sampling-data.md)   
- [Exibição de Resumo](../profiling/summary-view-instrumentation-data.md)
+ [Exibição Resumo – dados de amostragem](../profiling/summary-view-sampling-data.md)   
+ [Exibição Resumo – dados de instrumentação](../profiling/summary-view-instrumentation-data.md)

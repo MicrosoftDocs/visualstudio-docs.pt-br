@@ -1,7 +1,7 @@
 ---
 title: Tarefa WriteLinesToFile | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/20/2018
 ms.technology: msbuild
 ms.topic: reference
 f1_keywords:
@@ -20,16 +20,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f321eadf4fa02d55e869dcc0d9c93b637a2d3ac3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 909c35ca889295385cae98d51a81b22b4f7eb5d8
+ms.sourcegitcommit: 95aedf723c6be5272c3c5a2911cb2bdec50e2148
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47228832"
 ---
 # <a name="writelinestofile-task"></a>Tarefa WriteLinesToFile
 Grava os caminhos dos itens especificados no arquivo de texto especificado.  
   
-## <a name="task-parameters"></a>Parâmetros da tarefa  
+## <a name="task-parameters"></a>Parâmetros de tarefa  
  A tabela a seguir descreve os parâmetros da tarefa `WriteLinestoFile`.  
   
 |Parâmetro|Descrição|  
@@ -38,11 +39,12 @@ Grava os caminhos dos itens especificados no arquivo de texto especificado.
 |`Lines`|Parâmetro opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Especifica os itens a serem gravados no arquivo.|  
 |`Overwrite`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, a tarefa substituirá todo o conteúdo existente no arquivo.|  
 |`Encoding`|Parâmetro `String` opcional.<br /><br /> Seleciona a codificação de caracteres, por exemplo, "Unicode".  Confira também <xref:System.Text.Encoding>.|  
-  
+|`WriteOnlyWhenDifferent`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, o arquivo de destino especificado, se ele existir, será lido primeiro para comparar o que a tarefa teria gravado. Se idêntico, o arquivo não será gravado no disco, e o carimbo de data e hora será preservado.|  
+
 ## <a name="remarks"></a>Comentários  
  Se `Overwrite` for `true`, criará um novo arquivo, gravará os conteúdos nele e o fechará. Se o arquivo de destino já existir, ele será substituído. Se `Overwrite` for `false`, acrescentará os conteúdos ao arquivo, criando um arquivo de destino, caso ele ainda não exista.  
   
- Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, confira [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa a tarefa `WriteLinesToFile` para gravar os caminhos dos itens na coleção de itens `MyItems` no arquivo especificado pela coleção de itens `MyTextFile`.  
@@ -64,6 +66,31 @@ Grava os caminhos dos itens especificados no arquivo de texto especificado.
     </Target>  
   
 </Project>  
+```
+
+Neste exemplo, usamos uma propriedade com novas linhas inseridas para gravar um arquivo de texto com várias linhas. Se uma entrada em `Lines` tiver caracteres de nova linha inseridos, as novas linhas serão incluídas no arquivo de saída. Dessa forma, você pode fazer referência a propriedades multilinha.
+
+```xml  
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <Target Name="WriteLaunchers" AfterTargets="CopyFilesToOutputDirectory">
+      <PropertyGroup>
+        <LauncherCmd>
+@ECHO OFF
+dotnet %~dp0$(AssemblyName).dll %*
+        </LauncherCmd>
+      </PropertyGroup>
+
+      <WriteLinesToFile
+        File="$(OutputPath)$(AssemblyName).cmd"
+        Overwrite="true"
+        Lines="$(LauncherCmd)" />
+  </Target>
+</Project>
 ```  
   
 ## <a name="see-also"></a>Consulte também  

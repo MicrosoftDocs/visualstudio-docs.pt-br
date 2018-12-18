@@ -1,6 +1,7 @@
 ---
 title: Conjunto de regras de globalização para código gerenciado
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: 3c4032ee-0805-4581-8c48-b1827cd6b213
@@ -9,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3c717eeeb94deee611c4e9cf5da573e1039e13fc
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5f260a46d26bfec8af61a39ba8c54910a45772c4
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31920648"
 ---
 # <a name="globalization-rules-rule-set-for-managed-code"></a>Conjunto de regras de globalização para código gerenciado
 Você pode usar o Microsoft globalização conjunto de regras para se concentrar nos problemas que podem impedir que os dados em seu aplicativo seja exibido corretamente em diferentes idiomas, localidades e culturas. Você deve incluir essa regra definida se seu aplicativo for localizado, globalizados, ou ambos.

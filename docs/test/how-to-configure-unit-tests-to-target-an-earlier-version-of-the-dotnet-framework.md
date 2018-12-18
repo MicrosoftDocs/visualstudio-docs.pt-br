@@ -1,6 +1,7 @@
 ---
-title: Configurar testes de unidade para que sejam direcionados para uma versão anterior do .NET Framework no Visual Studio | Microsoft Docs
+title: Configurar testes de unidade para que sejam direcionados para uma versão anterior do .NET Framework no Visual Studio
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -8,13 +9,14 @@ manager: douge
 ms.workload:
 - dotnet
 author: gewarren
-ms.openlocfilehash: 2c0a34e3a046b840024e7dbfb4b7761fcaec5cfa
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dad7589e09ded8994a5e687c4f4cf95283887324
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380636"
 ---
-# <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>Como configurar testes de unidade para direcionar uma versão anterior do .NET Framework
+# <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>Como configurar testes de unidade para usar uma versão anterior do .NET Framework como destino
 
 Quando você cria um projeto de teste no Microsoft Visual Studio, a versão mais recente do .NET Framework é definida como destino, por padrão. Além disso, se você atualizar projetos de teste de versões anteriores do Visual Studio, eles são atualizados para destinar-se à versão mais recente do .NET Framework. Ao editar as propriedades do projeto, é possível redirecionar explicitamente o projeto para versões anteriores do .NET Framework.
 
@@ -24,13 +26,13 @@ Você pode criar projetos de teste de unidade que se destinam a versões especí
 
 - Você pode executar testes de unidade direcionados a uma versão específica do .NET Framework no Visual Studio no computador local.
 
-- Você pode executar testes de unidade direcionados a uma versão específica do .NET Framework usando o MSTest.exe no prompt de comando.
+- Você pode executar testes de unidade direcionados a uma versão específica do .NET Framework usando o *MSTest.exe* no prompt de comando.
 
 - Você pode executar testes de unidade em um agente de build como parte de um build.
 
 **Testar aplicativos de SharePoint**
 
-Os recursos listados acima também permitem gravar testes de unidade e testes de integração de aplicativos do SharePoint usando o Visual Studio. Para obter mais informações sobre como desenvolver aplicativos do SharePoint usando o Visual Studio, consulte [Criar soluções do SharePoint](/office-dev/office-dev/create-sharepoint-solutions), [Compilando e depurando soluções do SharePoint](/office-dev/office-dev/building-and-debugging-sharepoint-solutions) e [Verificando e depurando código do SharePoint](/office-dev/office-dev/verifying-and-debugging-sharepoint-code).
+Os recursos listados acima também permitem gravar testes de unidade e testes de integração de aplicativos do SharePoint usando o Visual Studio. Para obter mais informações sobre como desenvolver aplicativos do SharePoint usando o Visual Studio, confira [Criar soluções do SharePoint](../sharepoint/create-sharepoint-solutions.md), [Compilar e depurar soluções do SharePoint](../sharepoint/building-and-debugging-sharepoint-solutions.md) e [Verificar e depurar um código do SharePoint](../sharepoint/verifying-and-debugging-sharepoint-code.md).
 
 **Limitações**
 
@@ -46,7 +48,7 @@ As seguintes limitações se aplicam quando você redireciona projetos de teste 
 
 - Você não pode direcionar testes de unidade a versões de cliente anteriores do Framework.
 
-## <a name="re-targeting-to-a-specific-version-of-the-net-framework-for-visual-basic-unit-test-projects"></a>Redirecionar para uma versão específica do .NET Framework para projetos de teste de unidade do Visual Basic
+## <a name="re-targeting-to-a-specific-version-of-the-net-framework-for-visual-basic-unit-test-projects"></a>Redirecionando para uma versão específica do .NET Framework para projetos de teste de unidade do Visual Basic
 
 1.  Crie um novo projeto de teste de unidade do Visual Basic. No menu **Arquivo**, escolha **Novo** e, em seguida, clique em **Projeto**.
 
@@ -56,19 +58,19 @@ As seguintes limitações se aplicam quando você redireciona projetos de teste 
 
 3.  Na caixa de texto **Nome**, digite um nome para o projeto de teste do Visual Basic e, em seguida, escolha **OK**.
 
-4.  No Gerenciador de Soluções, escolha **Propriedades** no menu de atalho do novo projeto de teste do Visual Basic.
+4.  No **Gerenciador de Soluções**, escolha **Propriedades** no menu de atalho do novo projeto de teste do Visual Basic.
 
      As propriedades do seu projeto de teste do Visual Basic são exibidas.
 
 5.  Na guia **Compilar** escolha **Opções de Compilação Avançadas** conforme mostrado na ilustração a seguir.
 
-     ![Opções de compilação Avançadas](../test/media/howtoconfigureunittest35frameworka.png "HowToConfigureUnitTest35FrameworkA")
+     ![Opções compiladas avançadas](../test/media/howtoconfigureunittest35frameworka.png)
 
 6.  Use a lista suspensa **Estrutura de destino (todas as configurações)** para alterar a estrutura de destino para **.NET Framework 3.5** ou uma versão posterior, conforme mostrado no texto explicativo B na ilustração a seguir. Não especifique uma versão de cliente.
 
-     ![Lista de lista suspensa de estrutura de destino](../test/media/howtoconfigureunitest35frameworkstepb.png "HowToConfigureUniTest35FrameworkStepB")
+     ![Lista suspensa da estrutura de destino](../test/media/howtoconfigureunitest35frameworkstepb.png)
 
-## <a name="re-targeting-to-a-specific-version-of-the-net-framework-for-visual-c-unit-test-projects"></a>Redirecionar para uma versão específica do .NET Framework para projetos de teste de unidade do Visual C#
+## <a name="re-targeting-to-a-specific-version-of-the-net-framework-for-visual-c-unit-test-projects"></a>Redirecionando para uma versão específica do .NET Framework para projetos de teste de unidade do Visual C#
 
 1.  Crie um novo projeto de teste de unidade do Visual C#. No menu **Arquivo**, escolha **Novo** e, em seguida, clique em **Projeto**.
 
@@ -78,15 +80,15 @@ As seguintes limitações se aplicam quando você redireciona projetos de teste 
 
 3.  Na caixa de texto **Nome**, digite um nome para o projeto de teste do Visual C# e, em seguida, escolha **OK**.
 
-4.  No Gerenciador de Soluções, escolha **Propriedades** no menu de atalho do seu novo projeto de teste do Visual C#.
+4.  No **Gerenciador de Soluções**, escolha **Propriedades** no menu de atalho do novo projeto de teste do Visual C#.
 
      As propriedades do seu projeto de teste do Visual C# são exibidas.
 
 5.  Na guia **Aplicativo**, escolha **Estrutura de destino**. Na lista suspensa, escolha **.NET Framework 3.5** ou uma versão posterior, conforme mostra a ilustração a seguir. Não especifique uma versão de cliente.
 
-     ![Lista de lista suspensa de estrutura de destino](../test/media/howtoconfigureunittest35frameworkcsharp.png "HowToConfigureUnitTest35FrameworkCSharp")
+     ![Lista suspensa da estrutura de destino](../test/media/howtoconfigureunittest35frameworkcsharp.png)
 
-## <a name="re-targeting-to-a-specific-version-of-the-net-framework-for-ccli-unit-test-projects"></a>Redirecionar para uma versão específica do .NET Framework para projetos de teste de unidade do C++/CLI
+## <a name="re-targeting-to-a-specific-version-of-the-net-framework-for-ccli-unit-test-projects"></a>Redirecionando para uma versão específica do .NET Framework para projetos de teste de unidade do C++/da CLI
 
 1.  Crie um novo projeto de teste de unidade do C++. No menu **Arquivo**, selecione **Novo** e, em seguida, clique em **Projeto**.
 
@@ -99,11 +101,11 @@ As seguintes limitações se aplicam quando você redireciona projetos de teste 
 
 3.  Na caixa de texto **Nome**, digite um nome para o projeto de teste do Visual C++ e, em seguida, clique em **OK**.
 
-4.  No Gerenciador de Soluções, escolha **Descarregar Projeto** do seu novo projeto de teste do Visual C++.
+4.  No **Gerenciador de Soluções**, escolha **Descarregar Projeto** do novo projeto de teste do Visual C++.
 
-5.  No Gerenciador de Soluções, escolha o projeto de teste descarregado do Visual C++ e, em seguida, escolha **Editar \<nome do projeto>.vcxproj**.
+5.  No **Gerenciador de Soluções**, escolha o projeto de teste descarregado do Visual C++ e, em seguida, escolha **Editar \<nome do projeto>.vcxproj**.
 
-     O arquivo .vcxproj é aberto no editor.
+     O arquivo *.vcxproj* é aberto no editor.
 
 6.  Defina o `TargetFrameworkVersion` para a versão 3.5 ou posterior no `PropertyGroup` rotulado `"Globals"`. Não especifique uma versão de cliente:
 
@@ -118,12 +120,12 @@ As seguintes limitações se aplicam quando você redireciona projetos de teste 
       </PropertyGroup>
     ```
 
-7.  Salve e feche o arquivo .vcxproj.
+7.  Salve e feche o arquivo *.vcxproj*.
 
-8.  No Gerenciador de Soluções, escolha **Recarregar Projeto** no menu de atalho do seu novo projeto de teste do Visual C++.
+8.  No **Gerenciador de Soluções**, escolha **Recarregar Projeto** no menu de atalho do novo projeto de teste do Visual C++.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Criar soluções do SharePoint](/office-dev/office-dev/create-sharepoint-solutions)
-- [Compilando e depurando soluções do SharePoint](/office-dev/office-dev/building-and-debugging-sharepoint-solutions)
-- [Caixa de diálogo Configurações de Compilador Avançadas (Visual Basic)](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)
+- [Criar soluções do SharePoint](../sharepoint/create-sharepoint-solutions.md)
+- [Compilar e depurar soluções do SharePoint](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [Caixa de diálogo Configurações avançadas do compilador (Visual Basic)](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)

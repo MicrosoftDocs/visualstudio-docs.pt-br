@@ -1,12 +1,9 @@
 ---
-title: Aplicar chaves do produto (Product Keys) durante a implantação do Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Aplicar chaves do produto (Product Keys) durante a implantação do Visual Studio
+description: Saiba como aplicar chaves de produto de forma programática quando você implanta o Visual Studio.
 ms.date: 08/14/2017
-ms.reviewer: tims
-ms.suite: ''
-ms.technology:
-- vs-acquisition
-ms.tgt_pltfrm: ''
+ms.technology: vs-acquisition
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: d79260be-6234-4fd3-89b5-a9756b4a93c1
 author: TerryGLee
@@ -14,16 +11,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e9bfd9f72162d354d7e606d65146f602393d286
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: fea2ffa8fd81a5012c89289df36d7f698fb60c4e
+ms.sourcegitcommit: 6b092e7d466377f06913d49d183dbbdca16730f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43138710"
 ---
 # <a name="automatically-apply-product-keys-when-deploying-visual-studio"></a>Aplicar chaves do produto (Product Keys) durante a implantação do Visual Studio
+
 É possível aplicar a chave do produto (Product Key) de forma programática como parte de um script usado para automatizar a implantação do Visual Studio. Você pode definir a chave do produto (Product Key) em um dispositivo de forma programática durante a instalação do Visual Studio ou após a conclusão de uma instalação.
 
 ## <a name="apply-the-license-after-installation"></a>Aplicar a licença após a instalação
+
  É possível ativar uma versão instalada do Visual Studio com uma chave do produto (Product Key) usando o utilitário `StorePID.exe` nos computadores de destino no modo sem confirmação. `StorePID.exe` é um utilitário instalado com o Visual Studio 2017 no seguinte local padrão: <br> `C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE`
 
  Execute `StorePID.exe` com privilégios elevados, usando um agente do System Center ou em um prompt de comandos com privilégios elevados. Em seguida, informe a chave do produto (Product Key) e o MPC (código de produto da Microsoft).
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/03/2018
 >[!IMPORTANT]
 > Verifique se você incluiu os traços na chave do produto (Product Key).
 
- ```
+ ```cmd
  StorePID.exe [product key including the dashes] [MPC]
  ```
 
@@ -61,15 +61,9 @@ Se `StorePID.exe` aplicar a chave do produto (Product Key) com êxito, ele retor
 | `PID_ACTION_FAILURE`      | 5    |
 | `PID_ACTION_NOUPGRADE`    | 6    |
 
-## <a name="get-support"></a>Obter suporte
-Às vezes, as coisas podem dar errado. Caso a instalação do Visual Studio falhe, confira a página [Solução de problemas de instalação e atualização do Visual Studio 2017](troubleshooting-installation-issues.md). Se nenhuma das etapas de solução de problemas ajudar, entre em contato conosco por meio de um chat ao vivo para obter ajuda com a instalação (somente em inglês). Para saber mais detalhes, confira a [página de suporte do Visual Studio](https://www.visualstudio.com/vs/support/#talktous).
-
-Aqui estão algumas outras opções de suporte:
-* Você pode nos relatar problemas do produto por meio da ferramenta [Relatar um Problema](../ide/how-to-report-a-problem-with-visual-studio-2017.md), exibida no Instalador do Visual Studio e no IDE do Visual Studio.
-* Você pode compartilhar uma sugestão de produto conosco no [UserVoice](https://visualstudio.uservoice.com/forums/121579).
-* É possível acompanhar os problemas do produto na [Comunidade de Desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/), além de fazer perguntas e encontrar respostas.
-* Você pode também interagir conosco e com outros desenvolvedores do Visual Studio por meio das [conversas sobre o Visual Studio na comunidade do Gitter](https://gitter.im/Microsoft/VisualStudio).  (Esta opção requer uma conta do [GitHub](https://github.com/).)
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Consulte também
- * [Instalar o Visual Studio](../install/install-visual-studio.md)
- * [Criar uma instalação offline do Visual Studio](../install/create-an-offline-installation-of-visual-studio.md)
+
+* [Instalar o Visual Studio](../install/install-visual-studio.md)
+* [Criar uma instalação offline do Visual Studio](../install/create-an-offline-installation-of-visual-studio.md)

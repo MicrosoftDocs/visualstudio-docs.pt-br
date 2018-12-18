@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a61e8a3cadeeadf0657ca6fe293a527113505a0b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2e49933c0bdc5b9a98c165aebd8e263bca2a2be5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867514"
 ---
 # <a name="namematch"></a>NAME_MATCH
-Seleciona a opção caso para correspondência de nomes.  
+Seleciona a opção de maiusculas para correspondência de nomes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +54,7 @@ public enum NameMatchOptions {
  Indica que os nomes a serem correspondidos não diferenciam maiusculas de minúsculas.  
   
 ## <a name="remarks"></a>Comentários  
- Passado como um argumento para os seguintes métodos:  
+ Passada como um argumento para os seguintes métodos:  
   
 -   [GetTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-gettypebyname.md)  
   

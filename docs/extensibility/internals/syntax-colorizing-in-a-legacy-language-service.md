@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135942"
 ---
 # <a name="syntax-colorizing-in-a-legacy-language-service"></a>Coloração de sintaxe em um serviço de linguagem herdado
 Coloração de sintaxe é um recurso que faz com que os elementos de uma linguagem de programação a ser exibido em um arquivo de origem em diferentes cores e estilos. Para dar suporte a esse recurso, você precisa fornecer um analisador ou scanner que pode identificar os tipos de elementos lexicais ou tokens no arquivo. Muitas linguagens de distinguem as palavras-chave, delimitadores (como parênteses ou chaves) e comentários por colori-los de maneiras diferentes.  

@@ -12,16 +12,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f5b35c04d34143731ccf9fe5e8fe02f5389a2e5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3700074a1d087c0626a86559ff1342698d8a4628
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176099"
 ---
 # <a name="msbuild-targets"></a>Destinos do MSBuild
 Destinos agrupam tarefas em uma ordem específica e permitem que o processo de build seja decomposto em unidades menores. Por exemplo, um destino pode excluir todos os arquivos no diretório de saída para se preparar para o build, enquanto outro compila as entradas para o projeto e as coloca no diretório vazio. Para obter mais informações sobre tarefas, consulte [Tarefas](../msbuild/msbuild-tasks.md).  
   
-## <a name="declaring-targets-in-the-project-file"></a>Declarando destinos no arquivo de projeto  
+## <a name="declare-targets-in-the-project-file"></a>Declarar destinos no arquivo de projeto  
  Os destinos são declarados no arquivo de projeto com o elemento [Destino](../msbuild/target-element-msbuild.md). Por exemplo, o XML a seguir cria um destino chamado Constructo, que chama a tarefa Csc com o tipo de item de Compilação.  
   
 ```xml  
@@ -43,7 +44,7 @@ Destinos agrupam tarefas em uma ordem específica e permitem que o processo de b
   
  Se AfterBuild for executado, ele exibirá apenas "segunda ocorrência".  
   
-## <a name="target-build-order"></a>Ordem de build de destinos  
+## <a name="target-build-order"></a>Ordem de build de destino  
  Os destinos deverão ser ordenados se a entrada para um destino depender da saída de outro. Há várias maneiras de especificar a ordem na qual os destinos são executados.  
   
 -   Destinos Iniciais  
@@ -55,13 +56,13 @@ Destinos agrupam tarefas em uma ordem específica e permitem que o processo de b
 -   Dependências de destino  
   
 -   `BeforeTargets` e `AfterTargets` (MSBuild 4.0)  
-  
- Um destino nunca é executado duas vezes durante uma único build, mesmo se um destino posterior no build depender dele. Depois da execução de um destino, sua contribuição para o build será concluída.  
-  
- Para obter detalhes e mais informações sobre a ordem do build do destino, consulte [Ordem de Build de Destino](../msbuild/target-build-order.md).  
-  
-## <a name="target-batching"></a>Lote de destino  
- Um elemento de destino pode ter um atributo `Outputs` que especifica os metadados na forma % (metadados). Nesse caso, o MSBuild executa o destino uma vez para cada valor exclusivo de metadados, agrupando ou colocando em "lote" os itens que têm esse valor de metadados. Por exemplo,  
+
+Um destino nunca é executado duas vezes durante uma único build, mesmo se um destino posterior no build depender dele. Depois da execução de um destino, sua contribuição para o build será concluída.  
+
+Para obter detalhes e mais informações sobre a ordem de build de destino, confira [Ordem de build de destino](../msbuild/target-build-order.md).  
+
+## <a name="target-batching"></a>Envio em lote de destinos  
+Um elemento de destino pode ter um atributo `Outputs` que especifica os metadados no formato %(\<Metadata>). Nesse caso, o MSBuild executa o destino uma vez para cada valor exclusivo de metadados, agrupando ou colocando em "lote" os itens que têm esse valor de metadados. Por exemplo,  
   
 ```xml  
 <ItemGroup>  
@@ -94,7 +95,7 @@ Reference: 4.0
 ## <a name="incremental-builds"></a>Builds incrementais  
  Os builds incrementais são builds que são otimizados para que os destinos com arquivos de saída que estão atualizados em relação aos seus arquivos de entrada correspondentes não sejam executados. Um elemento de destino pode ter atributos `Inputs` e `Outputs`, indicando quais itens o destino espera como entrada e quais itens ele gera como saída.  
   
- Se todos os itens de saída estiverem atualizados, o MSBuild ignora o destino, o que melhora significativamente a velocidade de build. Isso é chamado de build incremental do destino. Se apenas alguns arquivos forem atualizados, o MSBuild executa o destino sem os itens atualizados. Isso é chamado de build incremental parcial do destino. Para obter mais informações, consulte [Compilações incrementais](../msbuild/incremental-builds.md).  
+ Se todos os itens de saída estiverem atualizados, o MSBuild ignora o destino, o que melhora significativamente a velocidade de build. Isso é chamado de build incremental do destino. Se apenas alguns arquivos forem atualizados, o MSBuild executa o destino sem os itens atualizados. Isso é chamado de build incremental parcial do destino. Para obter mais informações, confira [Builds incrementais](../msbuild/incremental-builds.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conceitos do MSBuild](../msbuild/msbuild-concepts.md)   

@@ -1,16 +1,18 @@
 ---
-title: "Método Ijsdebugbreakpoint: | Microsoft Docs"
-ms.custom: 
+title: 'Método Ijsdebugbreakpoint: | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: IJSDebugBreakPoint.IsEnabled
-apilocation: jscript9diag.dll
+apiname:
+- IJSDebugBreakPoint.IsEnabled
+apilocation:
+- jscript9diag.dll
 ms.assetid: 39b63f49-2a0d-41b7-a2ba-75dcb06251a9
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +21,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24727886"
 ---
 # <a name="ijsdebugbreakpointisenabled-method"></a>Método IJsDebugBreakPoint::IsEnabled
 Determina se o ponto de interrupção está habilitado.  

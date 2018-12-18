@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 676ec19fec1406d85e6a7d9e66865b2794f72aa6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f61247bafe95039b89b43e740ce69693b584604f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866331"
 ---
 # <a name="bperrortype"></a>BP_ERROR_TYPE
 Especifica o tipo de erro de um ponto de interrupção.  
@@ -70,13 +71,13 @@ public enum enum_BP_ERROR_TYPE {
  Especifica um erro de ponto de interrupção de estilo de erro.  
   
  BPET_SEV_HIGH  
- Especifica um erro de ponto de interrupção de severidade alta.  
+ Especifica um erro de ponto de interrupção de alta gravidade.  
   
  BPET_SEV_GENERAL  
- Especifica um erro de média severidade de ponto de interrupção.  
+ Especifica um erro de ponto de interrupção de severidade média.  
   
  BPET_SEV_LOW  
- Especifica uma ponto de interrupção de baixa severidade de erro.  
+ Especifica um erro de ponto de interrupção de baixa severidade.  
   
  BPET_TYPE_MASK  
  Especifica um erro de ponto de interrupção de estilo de máscara.  
@@ -85,18 +86,18 @@ public enum enum_BP_ERROR_TYPE {
  Especifica um erro de ponto de interrupção de gravidade de máscara de estilo.  
   
  BPET_GENERAL_WARNING  
- Especifica um erro geral de aviso de estilo de ponto de interrupção.  
+ Especifica um erro de ponto de interrupção de estilo de aviso geral.  
   
  BPET_GENERAL_ERROR  
  Especifica um erro de ponto de interrupção de estilo de erro geral.  
   
  BPET_ALL  
- Especifica todos os tipos de erro do ponto de interrupção.  
+ Especifica todos os tipos de erros de ponto de interrupção.  
   
 ## <a name="remarks"></a>Comentários  
- Esses valores podem ser combinados com um bit a bit `OR` e usado para o `dwType` membro o [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) estrutura. Passado como um parâmetro para o [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) método.  
+ Esses valores podem ser combinados com um bit a bit `OR` e é usado para o `dwType` membro a [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) estrutura. Passado como um parâmetro para o [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) método.  
   
- Um tipo de erro do ponto de interrupção é composto de um tipo e severidade. Isso significa que um tipo de erro do ponto de interrupção nunca é apenas um tipo (por exemplo, `BPET_TYPE_ERROR`,) ou uma severidade (por exemplo, `BPET_SEV_GENERAL`) por si só. `BPET_GENERAL_WARNING` e `BPET_GENERAL_ERROR` fornecem valores predefinidos para pontos de interrupção de aviso e erro geral.  
+ Um tipo de erro de ponto de interrupção é composto de um tipo e severidade. Isso significa que um tipo de erro de ponto de interrupção nunca é apenas um tipo (por exemplo, `BPET_TYPE_ERROR`,) ou uma severidade (por exemplo, `BPET_SEV_GENERAL`) por si só. `BPET_GENERAL_WARNING` e `BPET_GENERAL_ERROR` fornecem valores predefinidos para pontos de interrupção de aviso e erro geral.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

@@ -1,5 +1,5 @@
 ---
-title: Implementando GetMethodProperty | Microsoft Docs
+title: Implementar GetMethodProperty | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,27 +14,28 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e3ed7207237a20e4dadc1284aca2d6b41a671353
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5638ab3d65280755de405e19a725336e4102ae2b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868502"
 ---
-# <a name="implementing-getmethodproperty"></a>Implementando GetMethodProperty
+# <a name="implement-getmethodproperty"></a>Implementar GetMethodProperty
 > [!IMPORTANT]
->  No Visual Studio 2015, essa maneira de implementar avaliadores de expressão foi preterida. Para obter informações sobre como implementar avaliadores de expressão do CLR, consulte [avaliadores de expressão CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) e [amostra do avaliador de expressão gerenciado](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+>  No Visual Studio 2015, essa forma de implementar os avaliadores de expressão foi preterida. Para obter informações sobre como implementar os avaliadores de expressão de CLR, consulte [avaliadores de expressão de CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) e [amostra do avaliador de expressão gerenciado](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- O mecanismo de depuração (DE) o Visual Studio chama [GetDebugProperty](../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md), que por sua vez chama [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) para obter informações sobre o método atual no quadro de pilha.  
+ Visual Studio chama o mecanismo de depuração (DE) [GetDebugProperty](../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md), que por sua vez chama [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) para obter informações sobre o método atual no quadro da pilha.  
   
- Essa implementação de `IDebugExpressionEvaluator::GetMethodProperty` executa as seguintes tarefas:  
+ Essa implementação do `IDebugExpressionEvaluator::GetMethodProperty` executa as seguintes tarefas:  
   
 1.  Chamadas [GetContainerField](../../extensibility/debugger/reference/idebugsymbolprovider-getcontainerfield.md), passando o [IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md) objeto. O provedor de símbolo (SP) retorna um [IDebugContainerField](../../extensibility/debugger/reference/idebugcontainerfield.md) que representa o método que contém o endereço especificado.  
   
 2.  Obtém o [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) do `IDebugContainerField`.  
   
-3.  Instancia uma classe (chamado `CFieldProperty` neste exemplo) que implementa o [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) de interface e contém o `IDebugMethodField` objeto retornado do SP.  
+3.  Cria uma instância de uma classe (chamados `CFieldProperty` neste exemplo) que implementa o [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) interface e contém o `IDebugMethodField` objeto retornado do SP.  
   
-4.  Retorna o `IDebugProperty2` de interface do `CFieldProperty` objeto.  
+4.  Retorna o `IDebugProperty2` da interface do `CFieldProperty` objeto.  
   
 ## <a name="managed-code"></a>Código gerenciado  
  Este exemplo mostra uma implementação de `IDebugExpressionEvaluator::GetMethodProperty` em código gerenciado.  
@@ -127,4 +128,4 @@ STDMETHODIMP CExpressionEvaluator::GetMethodProperty(
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de implementação de Locals](../../extensibility/debugger/sample-implementation-of-locals.md)
+ [Exemplo de implementação de locals](../../extensibility/debugger/sample-implementation-of-locals.md)

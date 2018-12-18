@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eaf8e9176c389aecf2844f3e4bcaeea9bcaa5803
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3b42cce6c9134a668d5096150d986e950ed8a8e7
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34262225"
 ---
-# <a name="call-tree-view---instrumentation-data"></a>Modo de exibição de árvore de chamadas – Dados de instrumentação
+# <a name="call-tree-view---instrumentation-data"></a>Modo de exibição de árvore de chamadas – dados de instrumentação
 Os valores para uma função na árvore de chamadas indicam a hora para as instâncias de função chamadas pela função pai na árvore de chamadas. Valores de percentual são calculados comparando o valor das instâncias de função com o tempo inclusivo decorrido total de todas as funções na execução de criação de perfil.  
   
 ## <a name="general"></a>Geral  
@@ -39,7 +40,7 @@ Os valores para uma função na árvore de chamadas indicam a hora para as inst�
 |**Sobrecarga de Investigação Inclusiva de Tempo**|A sobrecarga de tempo para essa função e suas funções filho que foi causada pela instrumentação. A sobrecarga de investigação foi subtraída de todos os tempos inclusivos.|  
 |**Nível**|A profundidade da função na árvore de chamadas. Somente em relatórios de linha de comando [VSPerfReport](../profiling/vsperfreport.md).|  
   
-## <a name="elapsed-inclusive-values"></a>Valores Inclusivos Decorridos  
+## <a name="elapsed-inclusive-values"></a>Valores inclusivos decorridos  
  Valores inclusivos decorridos indicam o tempo na pilha de chamadas dessas instâncias da função que foram chamadas pela função pai na árvore de chamadas. O tempo inclui o tempo gasto em funções filho chamadas pela função e em chamadas para o sistema operacional, como mudanças de contexto e operações de entrada/saída.  
   
 |Column|Descrição|  
@@ -50,7 +51,7 @@ Os valores para uma função na árvore de chamadas indicam a hora para as inst�
 |**Tempo Inclusivo Decorrido Máximo**|O tempo inclusivo decorrido máximo de uma chamada para essa função nesse contexto.|  
 |**Tempo Inclusivo Decorrido Mínimo**|O tempo inclusivo decorrido mínimo de uma chamada para essa função nesse contexto.|  
   
-## <a name="elapsed-exclusive-values"></a>Valores Exclusivos Decorridos  
+## <a name="elapsed-exclusive-values"></a>Valores exclusivos decorridos  
  Valores exclusivos decorridos indicam o tempo que as instâncias de uma função chamadas pela função pai na árvore de chamadas estavam executando código no corpo da função; ou seja, quando a função estava na parte superior da pilha de chamadas. O tempo inclui o tempo em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto. No entanto, o tempo não inclui o tempo gasto em funções filho que foram chamadas pela função.  
   
 |Column|Descrição|  
@@ -61,7 +62,7 @@ Os valores para uma função na árvore de chamadas indicam a hora para as inst�
 |**Tempo Exclusivo Decorrido Máximo**|O tempo exclusivo decorrido máximo de uma chamada para essa função nesse contexto.|  
 |**Tempo Exclusivo Decorrido Mínimo**|O tempo exclusivo decorrido mínimo de uma chamada para essa função nesse contexto.|  
   
-## <a name="application-inclusive-values"></a>Valores Inclusivos do Aplicativo  
+## <a name="application-inclusive-values"></a>Valores inclusivos do aplicativo  
  Valores inclusivos do aplicativo indicam o horário em que instâncias de uma função chamadas pela função pai na árvore de chamadas estavam na pilha de chamadas. O tempo não inclui o tempo gasto em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto. Porém, inclui o tempo gasto em funções filho chamadas pela função.  
   
 |Column|Descrição|  
@@ -72,7 +73,7 @@ Os valores para uma função na árvore de chamadas indicam a hora para as inst�
 |**Tempo Inclusivo Máximo do Aplicativo**|O tempo inclusivo máximo do aplicativo de uma chamada para essa função nesse contexto.|  
 |**Tempo Inclusivo Mínimo do Aplicativo**|O tempo inclusivo mínimo do aplicativo de uma chamada para essa função nesse contexto.|  
   
-## <a name="application-exclusive-values"></a>Valores Exclusivos do Aplicativo  
+## <a name="application-exclusive-values"></a>Valores exclusivos do aplicativo  
  Valores exclusivos do aplicativo indicam o horário em que as instâncias de uma função chamadas pela função pai na árvore de chamadas estavam diretamente executando código no corpo da função; ou seja, quando a função estava na parte superior da pilha de chamadas. O tempo não inclui o tempo gasto em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto. Também não inclui o tempo gasto em funções filho que foram chamadas pela função.  
   
 |Column|Descrição|  
@@ -84,7 +85,7 @@ Os valores para uma função na árvore de chamadas indicam a hora para as inst�
 |**Tempo Exclusivo Mínimo do Aplicativo**|O tempo exclusivo mínimo do aplicativo de uma chamada para essa função nesse contexto.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Como personalizar as colunas de exibição do relatório](../profiling/how-to-customize-report-view-columns.md)   
+ [Como personalizar as colunas de visualização de relatório](../profiling/how-to-customize-report-view-columns.md)   
  [Modo de exibição de árvore de chamadas](../profiling/call-tree-view-sampling-data.md)   
  [Modo de exibição de árvore de chamadas – instrumentação](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)   
  [Modo de exibição de árvore de chamadas – amostragem](../profiling/call-tree-view-dotnet-memory-sampling-data.md)

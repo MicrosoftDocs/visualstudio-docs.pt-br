@@ -1,5 +1,5 @@
 ---
-title: Combinação de testes do navegador para testes de carga no Visual Studio | Microsoft Docs
+title: Combinação de testes do navegador para testes de carga no Visual Studio
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,24 +11,28 @@ ms.assetid: 47f981d9-3038-45cc-a486-82b9daf9a9a1
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: be0bd036c907f852028f6a9cccc798742e624184
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8999d3acdd9160ea33f6e1fa9d07dc9f69619b01
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896465"
 ---
 # <a name="edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario"></a>Editar a combinação de testes para especificar os tipos de navegadores da Web em um cenário de teste de carga
 
 A *combinação de navegadores* possibilita simular a carga de modo mais realista em um cenário de teste de carga. A carga é gerada usando uma combinação heterogênea de navegadores da Web, em vez de um único navegador da Web. Você cria um cenário mais próximo dos navegadores da Web que serão usados com seus aplicativos.
 
- Uma combinação de navegadores especifica a probabilidade de um usuário virtual executar um tipo específico de navegador da Web em um cenário de teste de carga. Ao criar um teste de carga, talvez seja conveniente simular que a carga é gerada por mais de um navegador da Web. Quando você adiciona um tipo de navegador da Web à combinação do conjunto de navegadores da Web que são fornecidos, um conjunto de cabeçalhos associados para o navegador da Web selecionado é adicionado a cada solicitação HTTP que é enviada a um teste de desempenho na Web.
+Uma combinação de navegadores especifica a probabilidade de um usuário virtual executar um tipo específico de navegador da Web em um cenário de teste de carga. Ao criar um teste de carga, talvez seja conveniente simular que a carga é gerada por mais de um navegador da Web. Quando você adiciona um tipo de navegador da Web à combinação do conjunto de navegadores da Web que são fornecidos, um conjunto de cabeçalhos associados para o navegador da Web selecionado é adicionado a cada solicitação HTTP que é enviada a um teste de desempenho na Web.
 
- A combinação de navegadores funciona como outras opções de combinação. Um tipo de navegador da Web é aleatoriamente associado a um usuário virtual, com base na combinação de navegadores. Os testes desse usuário são executados em um navegador da Web específico, com base na probabilidade especificada na combinação.
+A combinação de navegadores funciona como outras opções de combinação. Um tipo de navegador da Web é aleatoriamente associado a um usuário virtual, com base na combinação de navegadores. Os testes desse usuário são executados em um navegador da Web específico, com base na probabilidade especificada na combinação.
 
- Depois de especificar uma combinação de navegadores, posteriormente, você poderá adicionar e remover tipos de navegador da Web da combinação. Você também pode alterar a distribuição da combinação de navegadores usando o controle misto. O controle misto permite ajustar facilmente a distribuição de navegadores em um cenário.
+Depois de especificar uma combinação de navegadores, posteriormente, você poderá adicionar e remover tipos de navegador da Web da combinação. Você também pode alterar a distribuição da combinação de navegadores usando o controle misto. O controle misto permite ajustar facilmente a distribuição de navegadores em um cenário.
 
-## <a name="adding-new-browsers-to-a-scenario"></a>Adicionando novos navegadores a um cenário
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
+## <a name="add-new-browsers-to-a-scenario"></a>Adicionar novos navegadores a um cenário
 
 ### <a name="to-add-new-browsers-to-a-scenario"></a>Para adicionar novos navegadores a um cenário
 
@@ -45,7 +49,7 @@ A *combinação de navegadores* possibilita simular a carga de modo mais realist
 
 4.  Quando terminar de adicionar os navegadores, escolha **OK**.
 
-##  <a name="EditingTestMixSpecifyBrowserRemovingBrowserTypes"></a> Removendo navegadores de um cenário
+##  <a name="remove-browsers-from-a-scenario"></a>Remover navegadores de um cenário
 
 ### <a name="to-remove-browsers-from-a-scenario"></a>Para remover navegadores de um cenário
 
@@ -81,4 +85,4 @@ A *combinação de navegadores* possibilita simular a carga de modo mais realist
 
 ## <a name="see-also"></a>Consulte também
 
-- [Editando cenários de teste de carga](../test/edit-load-test-scenarios.md)
+- [Editar cenários de teste de carga](../test/edit-load-test-scenarios.md)

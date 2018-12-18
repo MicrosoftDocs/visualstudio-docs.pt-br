@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fb443816db82d6003536b36783fd6555ef45db24
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 751b4dfc641b017a4dc3f47f90b95e8447a2b1c6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49840422"
 ---
 # <a name="nativeaddress"></a>NATIVE_ADDRESS
-Esta estrutura representa um endereço nativo.  
+Essa estrutura representa um endereço nativo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,10 +41,10 @@ public struct NATIVE_ADDRESS {
   
 ## <a name="terms"></a>Termos  
  Desconhecido  
- O endereço nativo (o significado deste depende do tempo de execução e o sistema operacional).  
+ O endereço nativo (o significado disso depende do tempo de execução e o sistema operacional).  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é parte da união no [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) estrutura quando o `dwKind` campo do `DEBUG_ADDRESS_UNION` estrutura é definida como `ADDRESS_KIND_NATIVE` (um valor da [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeração).  
+ Essa estrutura é parte da união na [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) estrutura quando o `dwKind` campo dos `DEBUG_ADDRESS_UNION` estrutura é definida como `ADDRESS_KIND_NATIVE` (um valor da [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeração).  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: sh.h  

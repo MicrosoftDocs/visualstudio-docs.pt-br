@@ -26,39 +26,42 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8892d83bb92198b9e8f1b7df1293a06f27d27716
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: d53c2601bc8c4490f9ca43a7e213a90d66b26aac
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389287"
 ---
 # <a name="how-to-debug-an-activex-control"></a>Como depurar um controle ActiveX
+
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha Importar e Exportar Configurações no menu Ferramentas. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../ide/personalizing-the-visual-studio-ide.md).  
-  
- Para depurar seu controle ActiveX, você deverá especificar um contêiner (executável) em que o controle será executado.  
-  
-### <a name="to-specify-a-container-for-the-debug-session"></a>Para especificar um contêiner para a sessão de depuração  
-  
-1.  No Gerenciador de Soluções, selecione o projeto.  
-  
-2.  Do **exibição** menu, escolha **páginas de propriedade**.  
-  
-3.  No **páginas de propriedades do projeto** caixa de diálogo, abra o **propriedades de configuração** pasta e selecione **depuração**.  
-  
-4.  Sob o **depuração** categoria, localize o **comando** propriedade.  
-  
-5.  Especifique o nome do caminho para o contêiner. Por exemplo, C:\Arquivos de Programas\Internet Explorer\IEXPLORE.EXE.  
-  
-6.  Se você especificar o Internet Explorer como o contêiner e você estiver usando a área de trabalho ativa, digite `/new` no **argumentos de comando** caixa.  
-  
-7.  Clique em **OK**.  
-  
-     Se você não especificar um contêiner no **páginas de propriedades do projeto** caixa de diálogo, você pode especificar o contêiner ao iniciar a depuração. Quando você seleciona um comando de execução para iniciar a depuração, o [executável para a caixa de diálogo de sessão de depuração](../debugger/executable-for-debugging-session-dialog-box.md) é exibida. Especifique o nome do caminho do contêiner na caixa de diálogo.  
-  
-## <a name="see-also"></a>Consulte também  
- [Controles ActiveX](/cpp/mfc/activex-controls)   
- [Testando propriedades e eventos com contêiner de teste](/cpp/mfc/testing-properties-and-events-with-test-container)   
- [COM e ActiveX depuração](../debugger/com-and-activex-debugging.md)   
- [Depurando no Visual Studio](../debugger/index.md)  
- [Tour dos recursos do depurador](../debugger/debugger-feature-tour.md)
+> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha Importar e Exportar Configurações no menu Ferramentas. Para obter mais informações, confira [Redefinir as configurações](../ide/environment-settings.md#reset-settings).
+
+Para depurar seu controle ActiveX, você deverá especificar um contêiner (executável) em que o controle será executado.
+
+## <a name="to-specify-a-container-for-the-debug-session"></a>Para especificar um contêiner para a sessão de depuração
+
+1.  No Gerenciador de Soluções, selecione o projeto.
+
+2.  Dos **modo de exibição** menu, escolha **páginas de propriedade**.
+
+3.  Na caixa de diálogo **Páginas de Propriedades de Projeto**, abra a pasta **Propriedades de Configuração** e selecione **Depurando**.
+
+4.  Na categoria **Depurando**, localize a propriedade **Comando**.
+
+5.  Especifique o nome do caminho para o contêiner. Por exemplo, C:\Arquivos de Programas\Internet Explorer\IEXPLORE.EXE.
+
+6.  Se você especificar o Internet Explorer como o contêiner e estiver usando o Active Desktop, digite `/new` na caixa **Argumentos do Comando**.
+
+7.  Clique em **OK**.
+
+     Se você não especificar um contêiner na caixa de diálogo **Páginas de Propriedades do Projeto**, poderá especificar o contêiner quando iniciar a depuração. Quando você selecionar um comando de execução para iniciar a depuração, a [caixa de diálogo Executável para Sessão de Depuração](../debugger/executable-for-debugging-session-dialog-box.md) é exibida. Especifique o nome do caminho do contêiner na caixa de diálogo.
+
+## <a name="see-also"></a>Consulte também
+
+- [Controles ActiveX](/cpp/mfc/activex-controls)
+- [Testando propriedades e eventos com contêiner de teste](/cpp/mfc/testing-properties-and-events-with-test-container)
+- [Depuração de COM e ActiveX](../debugger/com-and-activex-debugging.md)
+- [Depurando no Visual Studio](../debugger/index.md)
+- [Tour dos recursos do depurador](../debugger/debugger-feature-tour.md)

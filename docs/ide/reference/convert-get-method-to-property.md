@@ -1,24 +1,25 @@
 ---
-title: Converter o método Get em propriedade e converter uma propriedade no método Get no Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Converter o método Get para propriedade e converter uma propriedade para um método Get no Visual Studio
 ms.date: 01/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 ms.devlang: csharp
-author: kuhlenh
-ms.author: kaseyu
+author: gewarren
+ms.author: gewarren
 manager: douge
 f1_keywords:
 - vs.csharp.refactoring.convertmethodtoproperty
 dev_langs:
-- csharp
+- CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: fc1ef42761ad0816772dc68e00e2fdab693fac27
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 35836e18e9cf8ffa33056b6bd93959d8debcc43a
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896011"
 ---
 # <a name="convert-get-method-to-property--convert-property-to-get-method-refactorings"></a>Refatorações para converter o método Get em propriedade/converter uma propriedade no método Get
 
@@ -28,7 +29,7 @@ Essas refatorações aplicam-se a:
 
 ## <a name="convert-get-method-to-property"></a>Converter o método Get em propriedade
 
-**O quê:** permite converter um método Get em uma propriedade (e opcionalmente seu método Set) e vice-versa.
+**O quê:** permite converter um método Get em uma propriedade (e opcionalmente seu método Set).
 
 **Quando:** você tem um método Get que não contêm nenhuma lógica.
 
@@ -39,9 +40,9 @@ Essas refatorações aplicam-se a:
 1. Depois, siga um destes procedimentos:
 
    - **Teclado**
-     - Pressione **Ctrl**+**.** para disparar o menu **Ações Rápidas e Refatorações** e selecionar **Substituir método por propriedade** no pop-up da janela Visualização.
+      - Pressione **Ctrl**+**.** para disparar o menu **Ações Rápidas e Refatorações** e selecionar **Substituir método por propriedade** no pop-up da janela Visualização.
    - **Mouse**
-     - Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Substituir método por propriedade** no pop-up da janela Visualização.
+      - Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Substituir método por propriedade** no pop-up da janela Visualização.
 
 1. (Opcional) Se houver um método Set, você também poderá convertê-lo neste momento selecionando **Substituir método Get e método Set por propriedade**.
 
@@ -80,9 +81,9 @@ public int MyValue
 1. Depois, siga um destes procedimentos:
 
    - **Teclado**
-     - Pressione **Ctrl**+**.** para disparar o menu **Ações Rápidas e Refatorações** e selecionar **Substituir propriedade por métodos** no pop-up da janela Visualização.
+      - Pressione **Ctrl**+**.** para disparar o menu **Ações Rápidas e Refatorações** e selecionar **Substituir propriedade por métodos** no pop-up da janela Visualização.
    - **Mouse**
-     - Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Substituir propriedade por métodos** no pop-up da janela Visualização.
+      - Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Substituir propriedade por métodos** no pop-up da janela Visualização.
 
 1. Se você estiver satisfeito com a alteração na visualização do código, pressione **Enter** ou clique na correção no menu e as alterações serão confirmadas.
 

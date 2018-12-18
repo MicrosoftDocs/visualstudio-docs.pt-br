@@ -10,18 +10,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cf374c03f7918e48c57f221ada22e43b435c0a78
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: dbecc61e5203495e33aa4417e954607d8cdf6be8
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35668260"
 ---
 # <a name="start"></a>Início
-A opção **Start** é uma opção de VSPerfCmd.exe que inicializa o criador de perfil para o método de criação de perfil especificado.  
+A opção **Start** é uma opção de *VSPerfCmd.exe* que inicializa o criador de perfil para o método de criação de perfil especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cmd  
 VSPerfCmd.exe /Start:Method /Output:FileName [Options]  
 ```  
   
@@ -43,7 +44,7 @@ VSPerfCmd.exe /Start:Method /Output:FileName [Options]
  **Output:** `filename`  
  Especifica o nome do arquivo de saída.  
   
-## <a name="exclusive-options"></a>Opções Exclusivas  
+## <a name="exclusive-options"></a>Opções exclusivas  
  As opções a seguir só podem ser usadas com a opção **Start** em uma linha de comando.  
   
  **CrossSession**&#124;**CS**  
@@ -65,15 +66,15 @@ VSPerfCmd.exe /Start:Method /Output:FileName [Options]
  Desliga o criador de perfil.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar a opção **Start** do VSPerfCmd.exe para inicializar o criador de perfil.  
+ O exemplo a seguir demonstra como usar a opção **Start** de *VSPerfCmd.exe* para inicializar o criador de perfil.  
   
-```  
+```cmd  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Launch:TestApp.exe  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
- [Criando perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Criando perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Serviços de Criação de Perfil](../profiling/command-line-profiling-of-services.md)
+ [Criar perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [Criar o perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profile services (Serviços de perfil)](../profiling/command-line-profiling-of-services.md)

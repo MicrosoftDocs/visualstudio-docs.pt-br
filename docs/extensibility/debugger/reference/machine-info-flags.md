@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f81f1b11488e7ee4de88ec97586d17440098f0e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4a3b9e8877ff77048f2b7dd697fc57971ddaf6e7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915406"
 ---
 # <a name="machineinfoflags"></a>MACHINE_INFO_FLAGS
 Usado para descrever uma máquina.  
@@ -44,7 +45,7 @@ public enum enum_MACHINE_INFO_FLAGS {
  Indica que os serviços de terminal estão disponíveis.  
   
 ## <a name="remarks"></a>Comentários  
- Usado como o `Flags` membro o [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) estrutura.  
+ Usado como o `Flags` membro a [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) estrutura.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

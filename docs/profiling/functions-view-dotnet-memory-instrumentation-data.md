@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71ea82ea9588315748a9c79eb9abd7b06eace680
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d48393a2d160e3691069a4b5f86dd814b63d935d
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237676"
 ---
-# <a name="functions-view---net-memory-instrumentation-data"></a>Exibição Funções – Dados de instrumentação de memória do .NET
+# <a name="functions-view---net-memory-instrumentation-data"></a>Exibição Funções – dados de instrumentação de memória do .NET
 A exibição Funções dos dados de criação de perfil de alocação de memória do .NET que foram coletados usando o método de instrumentação lista as funções que alocaram memória durante a execução da criação de perfil. Uma linha de função informa o tamanho e o número de alocações e dados de temporização para a função.  
   
 ## <a name="general"></a>Geral  
@@ -53,7 +54,7 @@ A exibição Funções dos dados de criação de perfil de alocação de memóri
 |**Bytes Exclusivos**|O número de bytes da memória que foram alocados nesta função, mas não em funções que foram chamadas por essa função.|  
 |**% de Bytes Exclusivos**|O percentual de todos os bytes de memória que foram alocados na execução de criação de perfil que eram bytes exclusivos dessa função.|  
   
-## <a name="elapsed-inclusive-values"></a>Valores Inclusivos Decorridos  
+## <a name="elapsed-inclusive-values"></a>Valores inclusivos decorridos  
  Os valores inclusivos decorridos indicam o tempo que uma função ficou na pilha de chamadas. O tempo inclui o tempo gasto em funções filho e em chamadas para o sistema operacional, como operações de entrada/saída e de mudanças de contexto.  
   
 |Column|Descrição|  
@@ -64,7 +65,7 @@ A exibição Funções dos dados de criação de perfil de alocação de memóri
 |**Tempo Inclusivo Decorrido Máximo**|O tempo inclusivo decorrido máximo de uma chamada feita a essa função.|  
 |**Tempo Inclusivo Decorrido Mínimo**|O tempo inclusivo decorrido mínimo de uma chamada feita a essa função.|  
   
-## <a name="elapsed-exclusive-values"></a>Valores Exclusivos Decorridos  
+## <a name="elapsed-exclusive-values"></a>Valores exclusivos decorridos  
  Valores exclusivos decorridos indicam o tempo durante o qual uma função estava diretamente em execução no topo da pilha de chamadas. O tempo inclui o tempo em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto, mas não inclui o tempo gasto em funções filho.  
   
 |Column|Descrição|  
@@ -75,7 +76,7 @@ A exibição Funções dos dados de criação de perfil de alocação de memóri
 |**Tempo Exclusivo Decorrido Máximo**|O tempo exclusivo decorrido máximo de uma chamada feita a essa função.|  
 |**Tempo Exclusivo Decorrido Mínimo**|O tempo exclusivo decorrido mínimo de uma chamada feita a essa função.|  
   
-## <a name="application-inclusive-values"></a>Valores Inclusivos do Aplicativo  
+## <a name="application-inclusive-values"></a>Valores inclusivos do aplicativo  
  Os valores inclusivos do aplicativo indicam o tempo que uma função ficou na pilha de chamadas. O tempo não inclui o tempo gasto em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto, mas inclui o tempo gasto em funções filho.  
   
 |Column|Descrição|  
@@ -86,7 +87,7 @@ A exibição Funções dos dados de criação de perfil de alocação de memóri
 |**Tempo Inclusivo Máximo do Aplicativo**|O tempo inclusivo máximo do aplicativo de uma chamada para essa função.|  
 |**Tempo Inclusivo Mínimo do Aplicativo**|O tempo inclusivo mínimo do aplicativo de uma chamada para essa função.|  
   
-## <a name="application-exclusive-values"></a>Valores Exclusivos do Aplicativo  
+## <a name="application-exclusive-values"></a>Valores exclusivos do aplicativo  
  Valores exclusivos do aplicativo indicam o tempo durante o qual uma função estava diretamente em execução no topo da pilha de chamadas. O tempo não inclui o tempo gasto em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto, nem o tempo gasto em funções filho.  
   
 |Column|Descrição|  
@@ -98,7 +99,7 @@ A exibição Funções dos dados de criação de perfil de alocação de memóri
 |**Tempo Exclusivo Mínimo do Aplicativo**|O tempo exclusivo mínimo do aplicativo de uma chamada para essa função.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Como personalizar as colunas de exibição do relatório](../profiling/how-to-customize-report-view-columns.md)   
- [Exibição de Funções – Amostragem](../profiling/functions-view-dotnet-memory-sampling-data.md)   
+ [Como personalizar as colunas de exibição de relatório](../profiling/how-to-customize-report-view-columns.md)   
+ [Exibição Funções – amostragem](../profiling/functions-view-dotnet-memory-sampling-data.md)   
  [Exibição de Funções](../profiling/functions-view-instrumentation-data.md)   
  [Exibição Funções](../profiling/functions-view-sampling-data.md)

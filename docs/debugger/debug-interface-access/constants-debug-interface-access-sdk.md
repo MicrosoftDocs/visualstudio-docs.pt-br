@@ -15,14 +15,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c77febb7ad9f41880fef604849af75aa065ff593
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: dd6908a8a0b49f5078e4c0d448ba2dedbe8f720a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872038"
 ---
 # <a name="constants-debug-interface-access-sdk"></a>Constantes (SDK de Acesso à Interface de Depuração)
-Constantes de cadeia de caracteres podem ser usados para identificar várias seções de um arquivo de banco de dados (PDB) do programa depuração por meio do SDK do DIA.  
+Constantes de cadeia de caracteres podem ser usados para identificar várias seções de um arquivo de banco de dados (PDB) de depuração do programa por meio do DIA SDK.  
   
 ## <a name="constants"></a>Constantes  
  A seguir é declarados como macros do C/C++.  

@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 35baacc0eca2919e12a9056b902ab551e7f824bd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 61dcc2d961281b620d6670c7355f026b6207554b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891596"
 ---
 # <a name="idebugexceptionevent2getexceptiondescription"></a>IDebugExceptionEvent2::GetExceptionDescription
-Obtém uma descrição pode ser exibida da exceção.  
+Obtém uma descrição que pode ser exibida da exceção.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,13 +41,13 @@ int GetExceptionDescription(
   
 #### <a name="parameters"></a>Parâmetros  
  `pbstrDescription`  
- [out] Retorna uma descrição pode ser exibida da exceção.  
+ [out] Retorna uma descrição que pode ser exibida da exceção.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- A cadeia de caracteres retornada deste método é geralmente o nome da exceção e é mostrada no **saída** janela quando a exceção ocorrer.  
+ A cadeia de caracteres retornada desse método é geralmente o nome da exceção e é mostrada na **saída** janela quando a exceção ocorrer.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)

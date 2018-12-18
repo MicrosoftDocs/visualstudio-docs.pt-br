@@ -11,18 +11,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e27ee1ab0ba42a82d61e2adbe9fb4c6c81cbb48
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6f399e0b054b5f9b112733399d644e1357837049
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280709"
 ---
 # <a name="appliesto-element-visual-studio-templates"></a>Elemento AppliesTo (modelos do Visual Studio)
 Especifica uma expressão opcional para correspondência de um ou mais recursos. (Consulte <xref:Microsoft.VisualStudio.Shell.Interop.VsProjectCapabilityExpressionMatcher>.) Os recursos são expostos pelos tipos de projeto por meio da hierarquia como uma propriedade <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID5>. Dessa maneira, o modelo pode ser compartilhado por vários tipos de projeto que têm recursos aplicáveis comuns.  
   
  Esse elemento é opcional. Pode haver um máximo de uma instância em um arquivo de modelo. Esse elemento permite que apenas um modelo de item seja aceito como aplicável, com base nos recursos do projeto ativo atualmente selecionado. Ele não pode ser usado para tornar um modelo de item não aplicável. Se `AppliesTo` estiver ausente ou a expressão não for aceita com sucesso, `TemplateID` ou `TemplateGroupID` serão usados para tornar o modelo aplicável, como nas versões anteriores do produto.  
   
- Introduzido no Visual Studio 2013 Atualização 2. Para fazer referência a versão correta, consulte [Referenciando Assemblies entregue no Visual Studio 2013 SDK Update 2](http://msdn.microsoft.com/en-us/42b65c3e-e42b-4c39-98c8-bea285f25ffb).  
+ Introduzido no Visual Studio 2013 Atualização 2. Para fazer referência a versão correta, consulte [referenciar assemblies entregues no Visual Studio 2013 SDK Update 2](https://msdn.microsoft.com/library/42b65c3e-e42b-4c39-98c8-bea285f25ffb).  
   
  \<VSTemplate >  
  \<TemplateData >  
@@ -66,7 +67,7 @@ Especifica uma expressão opcional para correspondência de um ou mais recursos.
   
 -   Uma expressão nula ou vazia é avaliada como uma correspondência.  
   
--   Recursos de projeto podem ser qualquer caractere, exceto esses caracteres reservados: "' :;,+-*/\\! ~&#124;& %$@^()={} <> []? \t\b\n\r  
+-   Recursos de projeto podem ser qualquer caractere, exceto os caracteres reservados: "' :;,+-*/\\! ~&#124;& %$@^() ={}<> []? \t\b\n\r  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra três modelos diferentes. `Template1` aplica-se a todos os tipos de projeto do C# ou a qualquer outro tipo de projeto que ofereça suporte ao recurso `WindowsAppContainer`. `Template2` aplica-se a todos os projetos do C# de qualquer tipo. `Template3` aplica-se aos projetos do C# que não são projetos `WindowsAppContainer`.  
@@ -100,4 +101,4 @@ Especifica uma expressão opcional para correspondência de um ou mais recursos.
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)
+ [Criar modelos de projeto e de item](../ide/creating-project-and-item-templates.md)

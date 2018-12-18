@@ -1,5 +1,5 @@
 ---
-title: Configurar a emulação de rede usando configurações de teste no Visual Studio | Microsoft Docs
+title: Configurar a emulação de rede usando configurações de teste no Visual Studio
 ms.date: 10/03/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,21 +8,25 @@ ms.assetid: ff275cfb-5df9-4710-9a91-9caabaaad34f
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 137f1980c53d457ef166008a438fca0effacbf44
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d58bf2bc321b3041ffa0958786b976276acf0186
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896296"
 ---
-# <a name="how-to-configure-network-emulation-using-test-settings-in-visual-studio"></a>Como: Configurar emulação da rede usando configurações do teste no Visual Studio
+# <a name="how-to-configure-network-emulation-using-test-settings-in-visual-studio"></a>Como configurar a emulação de rede usando configurações de teste no Visual Studio
 
 Você pode configurar o adaptador de dados de diagnóstico para testar o aplicativo em vários ambientes de rede do Visual Studio. Ele também pode ser configurado para testar uma carga de rede artificial ou gargalo, quando você executa os testes.
 
 > [!WARNING]
 > Se você executar seus testes em uma rede real que seja um tipo mais lento do que a rede emulada, o teste ainda será executado na velocidade mais lenta de rede. A emulação só pode reduzir a velocidade do ambiente de rede, e não agilizá-la.
 
- O procedimento a seguir descreve como configurar a emulação de rede no editor de configuração. Essas etapas se aplicam ao editor de configuração no Microsoft Test Manager e ao Visual Studio.
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
+O procedimento a seguir descreve como configurar a emulação de rede no editor de configuração. Essas etapas se aplicam ao editor de configuração no Microsoft Test Manager e ao Visual Studio.
 
 > [!NOTE]
 > O adaptador de dados de diagnóstico de emulação de rede só se aplica às configurações de teste do Visual Studio. Ele não é usado para configurações de teste no Microsoft Test Manager.
@@ -32,28 +36,29 @@ Uma conta que tenha privilégios de administrador deve ser usada para a emulaç�
 > [!NOTE]
 > A conta do Serviço de Rede, que é a conta padrão para o agente de teste, não é membro do grupo de administradores.
 
- **Emulação de rede verdadeira**
+**Emulação de rede verdadeira**
 
- O Visual Studio usa emulação de rede real baseada em software para todos os tipos de testes. Isso inclui testes de carga. A emulação de rede verdadeira simula condições de rede pela manipulação direta de pacotes de rede. O emulador real de rede pode emular o comportamento de redes com fio e sem fio usando um link físico confiável, como Ethernet. Os seguintes atributos de rede são incorporados na emulação de rede verdadeira:
+O Visual Studio usa emulação de rede real baseada em software para todos os tipos de testes. Isso inclui testes de carga. A emulação de rede verdadeira simula condições de rede pela manipulação direta de pacotes de rede. O emulador real de rede pode emular o comportamento de redes com fio e sem fio usando um link físico confiável, como Ethernet. Os seguintes atributos de rede são incorporados na emulação de rede verdadeira:
 
--   O tempo da viagem de ida e volta pela rede (latência)
+- O tempo da viagem de ida e volta pela rede (latência)
 
--   A quantidade de largura de banda disponível
+- A quantidade de largura de banda disponível
 
--   Comportamento do enfileiramento
+- Comportamento do enfileiramento
 
--   Perda de pacote
+- Perda de pacote
 
--   Reordenação de pacotes
+- Reordenação de pacotes
 
--   Propagações de erros.
+- Propagações de erros.
 
- A emulação de rede verdadeira também fornece flexibilidade em pacotes de rede de filtragem com base em endereços IP ou em protocolos como TCP, UDP e ICMP.
+A emulação de rede verdadeira também fornece flexibilidade em pacotes de rede de filtragem com base em endereços IP ou em protocolos como TCP, UDP e ICMP.
 
- A emulação real de rede pode ser usada por desenvolvedores e testadores na rede para emular um ambiente de teste desejado, avaliar o desempenho, prever o efeito da alteração ou para tomar decisões sobre otimização da tecnologia. Quando comparada com bases de teste de hardware, a emulação de rede verdadeira é uma solução muito mais econômica e flexível.
+A emulação real de rede pode ser usada por desenvolvedores e testadores na rede para emular um ambiente de teste desejado, avaliar o desempenho, prever o efeito da alteração ou para tomar decisões sobre otimização da tecnologia. Quando comparada com bases de teste de hardware, a emulação de rede verdadeira é uma solução muito mais econômica e flexível.
 
-## <a name="configure-network-emulation-for-your-test-settings"></a>Configurar a emulação de rede para suas configurações de teste
- Antes de executar as etapas neste procedimento, você deverá abrir as configurações de teste no Visual Studio e selecionar a página **Dados e Diagnósticos**.
+## <a name="configure-network-emulation-for-your-test-settings"></a>Configurar a emulação de rede para as configurações de teste
+
+Antes de executar as etapas neste procedimento, você deverá abrir as configurações de teste no Visual Studio e selecionar a página **Dados e Diagnósticos**.
 
 ### <a name="to-configure-network-emulation-for-your-test-settings"></a>Para configurar a emulação de rede para suas configurações de teste
 
@@ -83,4 +88,4 @@ Uma conta que tenha privilégios de administrador deve ser usada para a emulaç�
 ## <a name="see-also"></a>Consulte também
 
 - [Coletar informações de diagnóstico usando configurações de teste](../test/collect-diagnostic-information-using-test-settings.md)
-- [Executar testes manuais (VSTS)](/vsts/manual-test/getting-started/run-manual-tests)
+- [Executar testes manuais (Azure Test Plans)](/azure/devops/test/run-manual-tests?view=vsts)

@@ -1,21 +1,24 @@
 ---
-title: Designers de atividade de tempo de execução | Microsoft Docs
+title: Designer de fluxo de trabalho - Designers de atividade de tempo de execução
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: be18aa36-7909-4dd6-a786-b46959675a58
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3069d4c5dde1235e9563c26c10af586001af007c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a519e59538501ceb9f698c89cb2f0c762c08fcd3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31971539"
 ---
 # <a name="runtime-activity-designers"></a>Designer de atividade do tempo de execução
-Os designers de atividade de tempo de execução são usados para persistir e finalizar atividades de fluxo de trabalho. Os tópicos contidos nesta seção fornecem orientação sobre como usar o designer de atividade de [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] .
+Os designers de atividade de tempo de execução são usados para persistir e finalizar atividades de fluxo de trabalho. Os tópicos contidos nesta seção fornecem orientação sobre como usar os designers de atividade do Designer de fluxo de trabalho.
 
 ## <a name="related-sections"></a>Seções relacionadas
  [Fluxo de Controle](../workflow-designer/control-flow-activity-designers.md)

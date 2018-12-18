@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b2027146e2102be9e925454109296cdbef64861d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3c1c847bb8ab7b347cf60b8bb4035d2db709d529
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899481"
 ---
 # <a name="idebugprimitivetypefieldgetprimitivetype"></a>IDebugPrimitiveTypeField::GetPrimitiveType
-Recupera o tipo primitivo que está associado este campo.  
+Recupera o tipo primitivo que está associado esse campo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,10 +40,10 @@ int GetPrimitiveType (
   
 #### <a name="parameters"></a>Parâmetros  
  `pdwType`  
- [out] Valor de [enumeração CorElementType](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) que representa o tipo primitivo.  
+ [out] O valor dos [enumeração CorElementType](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) que representa o tipo primitivo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE`.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE`.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugPrimitiveTypeField](../../../extensibility/debugger/reference/idebugprimitivetypefield.md)

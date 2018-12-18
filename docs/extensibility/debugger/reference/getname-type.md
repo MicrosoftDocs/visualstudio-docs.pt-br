@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 17cd40938d177f3ea74af13bd84fcf1b873dd650
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 40ee5cb4bf552b04683c4c2119a8c43a595b2105
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900300"
 ---
 # <a name="getnametype"></a>GETNAME_TYPE
 Especifica o tipo de nome de arquivos a serem recuperados.  
@@ -53,28 +54,28 @@ public enum enum_GETNAME_TYPE {
   
 ## <a name="members"></a>Membros  
  GN_NAME  
- Especifica um nome amigável do documento ou no contexto.  
+ Especifica um nome amigável do documento ou do contexto.  
   
  GN_FILENAME  
- Especifica o caminho completo do documento ou no contexto.  
+ Especifica o caminho completo do documento ou do contexto.  
   
  GN_BASENAME  
- Especifica um nome de arquivo base, em vez de um caminho completo do documento ou no contexto.  
+ Especifica um nome de arquivo base, em vez de um caminho completo do documento ou do contexto.  
   
  GN_MONIKERNAME  
- Especifica um nome exclusivo do documento ou no contexto na forma de um identificador de origem.  
+ Especifica um nome exclusivo do documento ou no contexto na forma de um moniker.  
   
  GN_URL  
- Especifica um nome de URL do documento ou no contexto.  
+ Especifica um nome de URL do documento ou do contexto.  
   
  GN_TITLE  
  Especifica um título do documento, se houver.  
   
  GN_STARTPAGEURL  
- Obtém a URL da página inicial para os processos.  
+ Obtém a URL da página inicial para processos.  
   
 ## <a name="remarks"></a>Comentários  
- Esses valores são passados como parâmetros para o [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md), [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md), e [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) métodos para especificar o tipo de nome a ser retornado.  
+ Esses valores são passados como parâmetros para o [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md), [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md), e [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) métodos para especificar que tipo de nome a ser retornado.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

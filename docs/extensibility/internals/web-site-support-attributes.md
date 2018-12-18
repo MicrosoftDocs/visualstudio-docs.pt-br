@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31140830"
 ---
 # <a name="web-site-support-attributes"></a>Atributos de suporte do Site da Web
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Projeto de site pode ser estendido para oferecer suporte para Web linguagens de programação. O idioma deve ser registrado com [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] para que os modelos de projeto podem aparecer no **novo Site** caixa de diálogo quando o idioma é selecionado.

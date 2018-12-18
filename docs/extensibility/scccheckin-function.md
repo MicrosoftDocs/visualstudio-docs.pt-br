@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf8c8d23a89e55b272657dde0c2374c78e63bfaf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 95e63c9d8875bb222bf0ab1c161b4437de7466dc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898272"
 ---
 # <a name="scccheckin-function"></a>Função SccCheckin
-Essa função verifica no anteriormente arquivos com check-out ao sistema de controle de origem, armazenar as alterações e criar uma nova versão. Esta função é chamada com uma contagem e uma matriz de nomes de arquivos para fazer check-in.  
+Essa função faz check-in anteriormente arquivos com check-out para o sistema de controle do código-fonte, armazenar as alterações e criar uma nova versão. Essa função é chamada com uma contagem e uma matriz de nomes dos arquivos para check-in.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,21 +39,21 @@ SCCRTN SccCheckin (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  pvContext  
  [in] A estrutura de contexto de plug-in de controle de origem.  
   
  hWnd  
- [in] Um identificador para a janela do IDE que o plug-in do SCC pode usar como um pai para todas as caixas de diálogo que ele oferece.  
+ [in] Um identificador para a janela do IDE que o plug-in de SCC pode usar como um pai para todas as caixas de diálogo que ele oferece.  
   
  nFiles  
  [in] Número de arquivos selecionados para fazer check-in.  
   
  lpFileNames  
- [in] Matriz de nomes de caminho local totalmente qualificado de arquivos para fazer check-in.  
+ [in] Matriz de nomes de caminho local totalmente qualificado dos arquivos para check-in.  
   
  lpComment  
- [in] Comentário a ser aplicado a cada um dos arquivos selecionados em check-in. Isso é `NULL` se o plug-in de controle de origem deve solicitar um comentário.  
+ [in] Comentário a ser aplicado a cada um dos arquivos selecionados em check-in. Esse parâmetro é `NULL` se solicitará que o plug-in de controle do código-fonte para um comentário.  
   
  fOptions  
  [in] Sinalizadores de comando, 0 ou `SCC_KEEP_CHECKEDOUT`.  
@@ -60,28 +61,28 @@ SCCRTN SccCheckin (
  pvOptions  
  [in] Opções de plug-in específico de SCC.  
   
-## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+## <a name="return-value"></a>Valor retornado  
+ A implementação de plug-in de controle do código-fonte desta função deve retornar um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|SCC_OK|Arquivos foi aprovado com êxito.|  
-|SCC_E_FILENOTCONTROLLED|O arquivo selecionado não está sob controle do código fonte.|  
-|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle de origem, provavelmente devido a problemas de rede ou de contenção. Recomenda-se uma nova tentativa.|  
+|SCC_OK|Arquivo foi verificado com êxito.|  
+|SCC_E_FILENOTCONTROLLED|O arquivo selecionado não está sob controle do código-fonte.|  
+|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle do código-fonte, provavelmente devido a problemas de rede ou de contenção. É recomendável uma nova tentativa.|  
 |SCC_E_NONSPECIFICERROR|Falha não específica. Arquivo não foi aprovado.|  
 |SCC_E_NOTCHECKEDOUT|O usuário não tem check-out do arquivo, portanto, não é possível fazer check-in.|  
-|SCC_E_CHECKINCONFLICT|Não foi possível executar o check-in porque:<br /><br /> -Outro usuário fez check em frente e `bAutoReconcile` era falso.<br /><br /> -ou-<br /><br /> -A mesclagem automática não pode ser feita (por exemplo, quando os arquivos são binários).|  
-|SCC_E_VERIFYMERGE|Arquivo tiver sido mesclados automaticamente, mas não tiver sido incluído com a verificação de usuário pendente.|  
-|SCC_E_FIXMERGE|Arquivo tiver sido mesclados automaticamente, mas não tiver sido incluído devido a um conflito de mesclagem deve ser resolvido manualmente.|  
+|SCC_E_CHECKINCONFLICT|Fazer check-in não pôde ser realizada porque:<br /><br /> -Outro usuário fez check-in em frente e `bAutoReconcile` era falsa.<br /><br /> -ou-<br /><br /> -A mesclagem automática não pode ser feita (por exemplo, quando os arquivos são binários).|  
+|SCC_E_VERIFYMERGE|Arquivo tiver sido mesclada automaticamente, mas não foi verificado aguardam a verificação de usuário.|  
+|SCC_E_FIXMERGE|Arquivo tiver sido mesclada automaticamente, mas não foi verificado devido a um conflito de mesclagem que deve ser resolvido manualmente.|  
 |SCC_E_NOTAUTHORIZED|O usuário não tem permissão para executar esta operação.|  
 |SCC_I_OPERATIONCANCELED|Operação foi cancelada antes da conclusão.|  
 |SCC_I_RELOADFILE|Um arquivo ou projeto precisa ser recarregado.|  
 |SCC_E_FILENOTEXIST|Arquivo local não foi encontrado.|  
   
 ## <a name="remarks"></a>Comentários  
- O comentário se aplica a todos os arquivos em check-in. O argumento de comentário pode ser um `null` de cadeia de caracteres, caso em que o plug-in de controle de origem pode solicitar ao usuário uma cadeia de caracteres de comentário para cada arquivo.  
+ O comentário se aplica a todos os arquivos em check-in. O argumento de comentário pode ser um `null` de cadeia de caracteres, caso em que o plug-in de controle do código-fonte pode solicitar ao usuário uma cadeia de caracteres de comentário para cada arquivo.  
   
- O `fOptions` argumento pode ser fornecido um valor de `SCC_KEEP_CHECKEDOUT` sinalizador para indicar a intenção do usuário para o arquivo de check-in e check-out novamente.  
+ O `fOptions` argumento pode ser fornecido um valor da `SCC_KEEP_CHECKEDOUT` sinalizador para indicar a intenção do usuário para o arquivo de check-in e check-out novamente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções de API do plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
+ [Funções de API de plug-in da controle de origem](../extensibility/source-control-plug-in-api-functions.md)

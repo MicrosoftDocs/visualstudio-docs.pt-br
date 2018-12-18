@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475120"
 ---
 # <a name="thread-search-dialog-box"></a>Caixa de diálogo Pesquisa de Thread
 Use essa caixa de diálogo para localizar e selecionar o nó para um segmento específico no [exibição de Threads](../debugger/threads-view.md). Para exibir essa caixa de diálogo, mova o foco para um **Threads** janela modo de exibição. Em seguida, escolha **encontrar Thread** do **pesquisa** menu.  

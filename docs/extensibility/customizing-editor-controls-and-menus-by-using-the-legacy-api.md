@@ -1,5 +1,5 @@
 ---
-title: Personalizando Menus e controles do Editor usando a API herdado | Microsoft Docs
+title: Personalizando Menus e controles de Editor usando a API herdada | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,21 +13,22 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a7e6b90319d6c0e84649f52da97b2678553254b6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0fb11419e6fccf4ec3ca510e91bf79702a5a4348
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498523"
 ---
-# <a name="customizing-editor-controls-and-menus-by-using-the-legacy-api"></a>Personalizando Menus e controles do Editor usando a API herdado
-Um serviço de idioma ou um modo de exibição de texto pode controlar os controles no editor e menus de contexto. As páginas nesta seção detalham sobre como trabalhar com esses recursos.  
+# <a name="customize-editor-controls-and-mmenus-by-using-the-legacy-api"></a>Personalizar controles de editor e Mmenus, usando a API herdada
+Um serviço de linguagem ou em uma exibição de texto pode controlar os controles no editor e menus de contexto. As páginas nesta seção detalham sobre como trabalhar com esses recursos.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Barra de menu suspenso](../extensibility/drop-down-bar.md)  
- Descreve a barra do menu suspenso e fornece instruções para implementá-lo.  
+ Descreve a barra de menu suspenso e fornece instruções sobre como implementá-lo.  
   
- [Tratamento de comandos](../extensibility/command-handling.md)  
- Comando detalhes tratamento em editores.  
+ [Manipulação de comando](../extensibility/command-handling.md)  
+ Manipulação em editores de comando de detalhes.  
   
  [Menus de contexto](../extensibility/context-menus.md)  
  Descreve os menus de contexto do editor.  
@@ -36,5 +37,5 @@ Um serviço de idioma ou um modo de exibição de texto pode controlar os contro
  Fornece instruções para atualizar o **barra de Status**.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Editor e extensões do serviço de linguagem](../extensibility/editor-and-language-service-extensions.md)  
+ [Extensões de serviços do Editor e linguagem](../extensibility/editor-and-language-service-extensions.md)  
  Apresenta os diferentes tipos de editores que você pode usar no Visual Studio.

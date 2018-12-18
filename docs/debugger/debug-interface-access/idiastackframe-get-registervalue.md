@@ -1,5 +1,5 @@
 ---
-title: ': Get_registervalue | Microsoft Docs'
+title: 'Idiastackframe:: Get_registervalue | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c1c08258c98b46536f17f7819ce01c296d2d1900
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 7799316a933e5f021df78699e41e6e9483746575
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49845947"
 ---
 # <a name="idiastackframegetregistervalue"></a>IDiaStackFrame::get_registerValue
 Recupera o valor de um registro especificado conforme armazenado no quadro de pilha.  
@@ -34,13 +35,13 @@ HRESULT get_registerValue(
   
 #### <a name="parameters"></a>Parâmetros  
  `registerIndex`  
- [in] Uma da [enumeração CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md) valores de enumeração.  
+ [in] Um dos [enumeração CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md) valores de enumeração.  
   
  `pRetVal`  
  [out] Valor armazenado no registro.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retornará o código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará o código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)   

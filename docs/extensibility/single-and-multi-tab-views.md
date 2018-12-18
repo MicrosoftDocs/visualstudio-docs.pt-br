@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31142966"
 ---
 # <a name="single-and-multi-tab-views"></a>Modos de exibição único e multi-guia
 Um editor pode criar diferentes tipos de modos de exibição. Um exemplo é uma janela do editor de código, o outro é um designer de formulários.  

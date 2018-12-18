@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31458447"
 ---
 # <a name="custom-debug-interface-access-sdk"></a>Custom (SDK de Acesso à Interface de Depuração)
 Alguns compiladores introduzem símbolos que não são identificados por qualquer um dos tipos de símbolo lexical padrão. Esses símbolos são identificados por um `SymTagCustom` marca.  

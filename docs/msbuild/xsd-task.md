@@ -1,7 +1,7 @@
 ---
 title: Tarefa XSD | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/27/2018
 ms.technology: msbuild
 ms.topic: reference
 f1_keywords:
@@ -22,14 +22,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7505f3d18e0b32ebdbc8b82d447e49b26fe4182e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3eb81e05a16eb504b14e94de2c1270057311b85a
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231591"
 ---
-# <a name="xsd-task"></a>Tarefa XSD
-Encapsula a ferramenta de definição de esquema XML (xsd.exe), a qual gera arquivos de classe ou de esquema com base em uma origem.  
+# <a name="xsd-task"></a>tarefa XSD
+Encapsula a ferramenta de definição de esquema XML (*xsd.exe*), a qual gera arquivos de classe ou de esquema com base em uma origem.  
+
+> [!NOTE]
+> No Visual Studio 2017, o suporte a projetos em C++ para *xsd.exe* foi preterido. Você ainda pode usar as APIs **Microsoft.VisualC.CppCodeProvider** manualmente adicionando *CppCodeProvider.dll* ao cache de assembly global. 
   
 ## <a name="parameters"></a>Parâmetros  
  A tabela a seguir descreve os parâmetros da tarefa **XSD**.  
@@ -38,7 +42,7 @@ Encapsula a ferramenta de definição de esquema XML (xsd.exe), a qual gera arqu
   
      Parâmetro **String** opcional.  
   
-     Uma lista de opções, conforme especificado na linha de comando. Por exemplo, "*/option1 /option2 /option#*". Use esse parâmetro para especificar opções não representadas por nenhum outro parâmetro da tarefa **XSD**.  
+     Uma lista de opções, conforme especificado na linha de comando. Por exemplo, /\<option1> /\<option2> /\<option#>. Use esse parâmetro para especificar opções não representadas por nenhum outro parâmetro da tarefa **XSD**.  
   
 -   **GenerateFromSchema**  
   

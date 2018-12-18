@@ -11,23 +11,24 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c0888a0f65f36d624deffac60ceee032d3f3d13a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e597f46160221b19fe678bbf665782d3f3f5a249
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636415"
 ---
-# <a name="how-to-managing-multiple-threads-in-managed-code"></a>Como: gerenciar vários Threads em código gerenciado
-Se você tiver uma extensão de VSPackage gerenciada que chama os métodos assíncronos ou tem operações executadas em threads que não seja o thread de interface de usuário do Visual Studio, você deve seguir as diretrizes fornecidas abaixo. Você pode manter o thread de interface do usuário responsiva porque ele não precisa aguardar o trabalho em outro thread para concluir. Você pode tornar seu código mais eficiente, porque você não tem mais threads que ocupam espaço de pilha e você pode tornar mais confiável e mais fácil depurar porque você evitar deadlocks e trava.  
+# <a name="how-to-manage-multiple-threads-in-managed-code"></a>Como: gerenciar vários threads em código gerenciado
+Se você tiver uma extensão de VSPackage gerenciada que chama os métodos assíncronos ou tem operações executadas em threads diferentes do thread de interface de usuário do Visual Studio, você deve seguir as diretrizes abaixo. Você pode manter o thread de interface do usuário responsiva porque ele não precisa aguardar o trabalho em outro thread para concluir. Você pode tornar seu código mais eficiente, porque você não tem threads extras que ocupam espaço na pilha, e você pode torná-lo mais confiável e fácil de depurar porque você evita deadlocks e travamentos.  
   
- Em geral, você pode alternar do thread da interface do usuário a um thread diferente, ou vice-versa. Quando o método retorna, o segmento atual é o thread do qual ele foi originalmente chamado.  
+ Em geral, você pode alternar do thread de interface do usuário para um thread diferente, ou vice-versa. Quando o método retorna, o thread atual é o thread do qual ele foi originalmente chamado.  
   
 > [!IMPORTANT]
->  As diretrizes a seguir usam as APIs no <xref:Microsoft.VisualStudio.Threading> namespace, em particular, o <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> classe. As APIs no namespace são novas no [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]. Você pode obter uma instância de um <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> do <xref:Microsoft.VisualStudio.Shell.ThreadHelper> propriedade `ThreadHelper.JoinableTaskFactory`.  
+>  As diretrizes a seguir usam as APIs na <xref:Microsoft.VisualStudio.Threading> namespace, em particular, o <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> classe. As APIs neste namespace são novas no [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]. Você pode obter uma instância de um <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> do <xref:Microsoft.VisualStudio.Shell.ThreadHelper> propriedade `ThreadHelper.JoinableTaskFactory`.  
   
-## <a name="switching-from-the-ui-thread-to-a-background-thread"></a>Alternando do Thread da interface do usuário para um Thread em segundo plano  
+## <a name="switch-from-the-ui-thread-to-a-background-thread"></a>Alternar do thread de interface do usuário para um thread em segundo plano  
   
-1.  Se você estiver usando o thread de interface do usuário e você deseja fazer o trabalho assíncrona em um thread em segundo plano, use Task.Run():  
+1.  Se você estiver usando o thread de interface do usuário e você deseja fazer o trabalho assíncrono em um thread em segundo plano, use `Task.Run()`:  
   
     ```csharp  
     await Task.Run(async delegate{  
@@ -49,7 +50,7 @@ Se você tiver uma extensão de VSPackage gerenciada que chama os métodos assí
     });  
     ```  
   
-## <a name="switching-from-a-background-thread-to-the-ui-thread"></a>Alternar de um Thread em segundo plano para o Thread de interface do usuário  
+## <a name="switch-from-a-background-thread-to-the-ui-thread"></a>Alternar de um thread em segundo plano para o thread de interface do usuário  
   
 1.  Se você estiver em um thread em segundo plano e você deseja fazer algo no thread da interface do usuário, use <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>:  
   
@@ -58,9 +59,9 @@ Se você tiver uma extensão de VSPackage gerenciada que chama os métodos assí
     await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();  
     ```  
   
-     Você pode usar o <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> método para alternar para o thread de interface do usuário. Esse método envia uma mensagem para o thread de interface do usuário com a continuação do método assíncrono atual e também se comunica com o restante da estrutura threading para definir a prioridade correta e evitar deadlocks.  
+     Você pode usar o <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> método para alternar para o thread de interface do usuário. Esse método envia uma mensagem para o thread de interface do usuário com a continuação do método assíncrona atual e também se comunica com o restante do framework threading para definir a prioridade correta e evitar deadlocks.  
   
-     Se o método de thread em segundo plano não é assíncrono e você não pode fazer assíncrona, você ainda pode usar o `await` sintaxe para alternar para o thread de interface do usuário ao encapsular seu trabalho com <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>, como no exemplo:  
+     Se seu método de thread em segundo plano não é assíncrono e não é torná-la assíncrona, você ainda pode usar o `await` sintaxe para alternar para o thread de interface do usuário, encapsulando seu trabalho com <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>, como neste exemplo:  
   
     ```csharp  
     ThreadHelper.JoinableTaskFactory.Run(async delegate {  

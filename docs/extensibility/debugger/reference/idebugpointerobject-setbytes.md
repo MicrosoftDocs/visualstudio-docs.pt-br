@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a8234117d7965c4f2e471855d39ed0c3cee1f88c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9f3a496eb0212863f2ed08479216ac6ca546009f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891499"
 ---
 # <a name="idebugpointerobjectsetbytes"></a>IDebugPointerObject::SetBytes
 Define o valor apontado por uma série de bytes consecutivos.  
@@ -46,7 +47,7 @@ int SetBytes(
   
 #### <a name="parameters"></a>Parâmetros  
  `dwStart`  
- [in] Um deslocamento, em bytes, do início do objeto apontado.  
+ [in] Um deslocamento, em bytes, desde o início do objeto apontado.  
   
  `dwCount`  
  [in] O número de bytes a ser definido.  
@@ -58,10 +59,10 @@ int SetBytes(
  [out] Retorna que o número de bytes realmente definido.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método é usado se o ponteiro conforme representado por esse [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) aponta para um tipo primitivo ou uma matriz de tipos primitivos (ou seja, uma matriz que pode ser representado por uma sequência de bytes de simple). Isso `IDebugPointerObject` objeto não pode ser uma referência nula (deve apontar para um endereço na memória).  
+ Esse método é usado se o ponteiro, conforme representado por este [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) aponta para um tipo primitivo ou uma matriz de tipos primitivos (ou seja, uma matriz que pode ser representado por uma simple sequência de bytes). Isso `IDebugPointerObject` objeto não pode ser uma referência nula (ele deve apontar para um endereço na memória).  
   
 ## <a name="see-also"></a>Consulte também  
  [GetBytes](../../../extensibility/debugger/reference/idebugpointerobject-getbytes.md)   

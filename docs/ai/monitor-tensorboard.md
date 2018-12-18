@@ -1,19 +1,20 @@
 ---
 ms.technology: vs-ai-tools
-ms.openlocfilehash: 49882db50ed60b1e76d5e791251b11a9f7072274
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: d5a92cd1382bf65ee19a9f41b02cc2ab0db126c7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888015"
 ---
 # <a name="monitor-with-tensorboard"></a>Monitorar com TensorBoard
 
 É possível visualizar o progresso do treinamento de modelo com TensorBoard.
 
-1. Clique com botão direito do mouse no seu projeto e em **Executar TensorBoard**. Em seguida, selecione o diretório os seus logs do TensorBoard de saída.
+1. Clique com o botão direito do mouse em seu projeto e em **Executar TensorBoard**. Em seguida, selecione o diretório de seus logs do TensorBoard de saída.
 
-    ![executar tensorboard](media\monitor-tensorboard\run-tensorboard.png)
+    ![executar tensorboard](media/monitor-tensorboard/run-tensorboard.png)
 
-1. Observe o erro diminuindo com o tempo, o que significa que a qualidade está melhorando
+2. Observe o erro diminuindo com o decorrer do tempo, o que significa que a qualidade está melhorando.
 
-    ![executar tensorboard](media\monitor-tensorboard\tensorboard.png)
+    ![executar tensorboard](media/monitor-tensorboard/tensorboard.png)

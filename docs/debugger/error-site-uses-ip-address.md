@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31470898"
 ---
 # <a name="error-site-uses-ip-address"></a>Erro: o site usa endereço IP
 Esse erro ocorre quando o depurador tenta anexar-se automaticamente a um aplicativo Web que está usando um endereço IP. Isso ocorre se você alterar **identificação de site** para **usar endereço IP específico** no IIS.  

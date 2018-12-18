@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 35b10f8a98284fdec9e94043a4b827fab226d3aa
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b6de95d74b8d7edc3bde08437c3d018270758112
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49878980"
 ---
 # <a name="cvaccesse"></a>CV_access_e
 Especifica o escopo de visibilidade (nível de acesso) de funções de membro e variáveis.  
@@ -35,21 +36,21 @@ typedef enum CV_access_e {
   
 ## <a name="elements"></a>Elementos  
  CV_private  
- Membro possui acesso privado.  
+ Membro tem acesso privado.  
   
  CV_protected  
  Membro tenha acesso protegido.  
   
  CV_public  
- Membro tem acesso público.  
+ Membro tem o acesso público.  
   
 ## <a name="remarks"></a>Comentários  
- O `friend` especificador de acesso não é incluído aqui porque ele é normalmente usado por funções não membro que têm acesso aos elementos protegidos e privados da classe. Use o [: Get_symtag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) método para localizar símbolos com `SymTagFriend` acesso.  
+ O `friend` especificador de acesso não é incluída aqui porque ele é normalmente usado por funções não membro que têm acesso a elementos particulares e protegidos da classe. Use o [idiasymbol:: Get_symtag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) método para localizar símbolos com `SymTagFriend` acesso.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: cvconst.h  
   
 ## <a name="see-also"></a>Consulte também  
  [Enumerações e estruturas](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [: Get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)   
+ [Idiasymbol:: Get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)   
  [IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)

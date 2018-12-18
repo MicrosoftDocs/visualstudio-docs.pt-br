@@ -18,18 +18,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e1bea363e9d0a3880fbbaa34bb4af4fec88149c2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 89b54c52625578b6ba1f7859654804fa1caaad32
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081264"
 ---
 # <a name="ltassemblyidentitygt-element-clickonce-application"></a>&lt;assemblyIdentity&gt; elemento (aplicativo ClickOnce)
 Identifica o aplicativo implantado em um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] implantação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml
   
       <assemblyIdentity   
    name  
@@ -47,18 +48,18 @@ Identifica o aplicativo implantado em um [!INCLUDE[ndptecclick](../deployment/in
 |---------------|-----------------|  
 |`Name`|Necessário. Identifica o nome do aplicativo.<br /><br /> Se `Name` contiver caracteres especiais, como aspas simples ou duplas, o aplicativo poderá falhar ao ativar.|  
 |`Version`|Necessário. Especifica o número de versão do aplicativo no seguinte formato: `major.minor.build.revision`|  
-|`publicKeyToken`|Opcional. Especifica uma cadeia hexadecimal de 16 caracteres que representa os último 8 bytes do `SHA-1` valor de hash da chave pública em que o aplicativo ou o assembly está assinado. A chave pública que é usada para assinar o catálogo deve ser 2048 bits ou superior.<br /><br /> Embora a assinatura de um assembly é recomendado mas opcional, esse atributo é necessário. Se um assembly estiver assinado, você deve copiar um valor de um assembly autoassinado ou usar um valor "fictício" de todos os zeros.|  
-|`processorArchitecture`|Necessário. Especifica o processador. Os valores válidos são `msil` para todos os processadores, `x86` para Windows de 32 bits, `IA64` para Windows de 64 bits, e `Itanium` para processadores Itanium de 64 bits Intel.|  
-|`language`|Necessário. Identifica os códigos de idioma de duas partes (por exemplo, `en-US`) do assembly. Elemento de `asmv2` namespace. Se não for especificado, o padrão é `neutral`.|  
+|`publicKeyToken`|Opcional. Especifica uma cadeia hexadecimal de 16 caracteres que representa os últimos 8 bytes do `SHA-1` valor de hash da chave pública sob a qual o aplicativo ou assembly é assinado. A chave pública que é usada para assinar o catálogo deve ser de 2048 bits ou superior.<br /><br /> Embora a assinar um assembly é opcional mas recomendado, esse atributo é necessário. Se um assembly estiver assinado, você deve copiar um valor de um assembly autoassinado ou use um valor "fictício" de todos os zeros.|  
+|`processorArchitecture`|Necessário. Especifica o processador. Os valores válidos são `msil` de todos os processadores, `x86` para Windows de 32 bits `IA64` para Windows de 64 bits, e `Itanium` para processadores de 64 bits Intel Itanium.|  
+|`language`|Necessário. Identifica os códigos de idioma de duas partes (por exemplo, `en-US`) do assembly. Elemento o `asmv2` namespace. Se não for especificado, o padrão é `neutral`.|  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="description"></a>Descrição  
- O exemplo de código a seguir ilustra uma `assemblyIdentity` elemento em um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] o manifesto do aplicativo. Este exemplo de código é parte de um exemplo maior fornecido em [manifesto do aplicativo ClickOnce](../deployment/clickonce-application-manifest.md).  
+ O exemplo de código a seguir ilustra uma `assemblyIdentity` elemento em um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifesto do aplicativo. Este exemplo de código é parte de um exemplo maior fornecido no [manifesto do aplicativo ClickOnce](../deployment/clickonce-application-manifest.md).  
   
 ### <a name="code"></a>Código  
   
-```  
+```xml  
 <asmv1:assemblyIdentity   
   name="My Application Deployment.exe"   
   version="1.0.0.0"   

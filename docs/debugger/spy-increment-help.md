@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476599"
 ---
 # <a name="spy-help"></a>Ajuda do Spy++
 A documentação para o utilitário Spy + + inclui dois grupos de tópicos gerais em usando Spy + + e nas exibições do Spy + +. Elas são seguidas por Spy + + referência, que fornece mais detalhes sobre cada caixa de diálogo e comando menu disponíveis.  

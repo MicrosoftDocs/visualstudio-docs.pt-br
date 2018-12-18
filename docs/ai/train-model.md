@@ -12,11 +12,12 @@ ms.service: multiple
 ms.technology: vs-ai-tools
 ms.workload:
 - azure
-ms.openlocfilehash: ec0db69bbde1e2abab7022759ed0f7a3d2a88530
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6cf5c2529d54637e1e6ad4a111c3d3c456e6fae1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882386"
 ---
 # <a name="train-ai-models-in-azure-batch-ai"></a>Treinar modelos de IA no Lote do Azure AI
 
@@ -26,16 +27,15 @@ Ela está integrada às Ferramentas do Visual Studio para IA, assim, é possíve
 
 1. Inicie o Visual Studio. Abra o **Gerenciador de Servidores** abrindo o menu **Ferramentas de IA** e escolhendo **Selecionar Cluster**
 
-    ![Seletor de cluster](media\train-model\select-cluster.png)
-
+    ![Seletor de cluster](media/train-model/select-cluster.png)
 
 2. Expanda **Ferramentas de IA**. Todos os recursos do IA do Lote serão detectados automaticamente e exibidos no Gerenciador de Servidores.
 
-    ![Galeria de exemplos](media\train-model\batchai.png)
+    ![Galeria de exemplos](media/train-model/batchai.png)
 
-3. Selecione **Exibir > Team Explorer...** para abrir a janela do **Team Explorer** em que é possível se conectar ao GitHub ou ao Visual Studio Team Services ou clonar um repositório.
+3. Selecione **Exibir > Team Explorer...** para abrir a janela do **Team Explorer**, em que é possível se conectar ao GitHub ou ao Azure DevOps ou clonar um repositório.
 
-    ![Janela do Team Explorer mostrando o Visual Studio Team Services, o GitHub e a clonagem de um repositório](media\train-model\team-explorer.png)
+    ![Janela do Team Explorer mostrando o Azure DevOps, o GitHub e a clonagem de um repositório](media/train-model/team-explorer.png)
 
 4. No campo de URL em **Repositórios Git Locais**, insira `https://github.com/Microsoft/samples-for-ai`, insira uma pasta para os arquivos clonados e selecione **Clonar**.
 
@@ -44,20 +44,19 @@ Ela está integrada às Ferramentas do Visual Studio para IA, assim, é possíve
 
 5. Quando a clonagem for concluída, clique em **Arquivo > Abrir Solução > Projeto/Solução**
 
-    ![Galeria de exemplos](media\train-model\open-solution.png)
+    ![Galeria de exemplos](media/train-model/open-solution.png)
 
-5. Abra **samples-for-ai\TensorFlowExamples\TensorFlowExamples.sln** no diretório em que o repositório foi clonado
+6. Abra **samples-for-ai\TensorFlowExamples\TensorFlowExamples.sln** no diretório em que o repositório foi clonado
 
-    ![Galeria de exemplos](media\train-model\tensorflowexamples.png)
+    ![Galeria de exemplos](media/train-model/tensorflowexamples.png)
 
-5. Defina o projeto MNIST como o **Projeto de Inicialização**
+7. Defina o projeto MNIST como o **Projeto de Inicialização**
 
-    ![Galeria de exemplos](media\train-model\mnist-startup.png)
+    ![Galeria de exemplos](media/train-model/mnist-startup.png)
 
-1. **Clique com o botão direito do mouse** no projeto MNIST e clique em **Enviar Trabalho**
+8. <strong>Clique com o botão direito do mouse no projeto **MNIST, e em **Enviar Trabalho</strong>
 
-    ![Galeria de exemplos](media\train-model\submit-job.png)
+    ![Galeria de exemplos](media/train-model/submit-job.png)
+9. Selecione o cluster da **IA do Lote do Azure** e, depois, clique em **Importar**. Selecione o arquivo `AzureBatchAI_TF_MNIST.json` para preencher rapidamente alguns valores padrão, como qual imagem do Docker usar. Depois, clique em **Enviar**
 
-1. Selecione o cluster da **IA do Lote do Azure** e, depois, clique em **Importar**. Selecione o arquivo `AzureBatchAI_TF_MNIST.json` para preencher rapidamente alguns valores padrão, como qual imagem do Docker usar. Depois, clique em **Enviar**
-
-    ![Galeria de exemplos](media\train-model\submit-batch.png)
+    ![Galeria de exemplos](media/train-model/submit-batch.png)

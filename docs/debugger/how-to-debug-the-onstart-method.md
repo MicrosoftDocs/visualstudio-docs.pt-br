@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31481847"
 ---
 # <a name="how-to-debug-the-onstart-method"></a>Como depurar o método OnStart
 Você pode depurar um serviço do Windows, inicie o serviço e anexar o depurador ao processo do serviço. Para obter mais informações, consulte [como: depurar aplicativos de serviço do Windows](/dotnet/framework/windows-services/how-to-debug-windows-service-applications). No entanto, para depurar o <xref:System.ServiceProcess.ServiceBase.OnStart%2A?displayProperty=fullName> método de um serviço do Windows, você deve iniciar o depurador de dentro do método.  

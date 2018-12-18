@@ -1,5 +1,5 @@
 ---
-title: ': Get_issplitted | Microsoft Docs'
+title: 'Idiasymbol:: Get_issplitted | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 15420c56dfa16f1bbb4566b1afe3fc7ac958fc07
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 15c30577900a2d2e192bdc2dea45fc89846b102b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49919319"
 ---
 # <a name="idiasymbolgetissplitted"></a>IDiaSymbol::get_isSplitted
-Recupera um sinalizador que especifica se o símbolo de dados foi dividido em uma agregação ou uma coleção de outros símbolos; o compilador trata os símbolos como entidades separadas, mesmo que eles realmente fazem parte de um símbolo maior.  
+Recupera um sinalizador que especifica se o símbolo de dados foi dividido em uma agregação ou uma coleção de outros símbolos; o compilador trata os símbolos como entidades separadas, mesmo que eles realmente fazem parte de um símbolo de maior.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,13 +37,13 @@ HRESULT get_isSplitted(
  [out] Retorna `TRUE` se o símbolo foi dividido em uma agregação de símbolos; caso contrário, retornará `FALSE`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
   
 ## <a name="remarks"></a>Comentários  
- O [: Get_isaggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md) método retorna `TRUE` para todos os símbolos que fazem parte de um símbolo de divisão.  
+ O [idiasymbol:: Get_isaggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md) retorno do método `TRUE` para todos os símbolos que fazem parte de um símbolo de divisão.  
   
 ## <a name="requirements"></a>Requisitos  
   

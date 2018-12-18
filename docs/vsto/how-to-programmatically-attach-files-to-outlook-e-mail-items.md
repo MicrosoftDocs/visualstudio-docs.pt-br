@@ -1,5 +1,5 @@
 ---
-title: 'Como: programaticamente anexar arquivos a itens de email do Outlook | Microsoft Docs'
+title: 'Como: programaticamente anexar arquivos aos itens de email do Outlook'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,14 +18,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ec34d1276f239ecc62a7a9ca5d64e9e53d42cb90
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fab5d954136fced3a68b1aaa62233ca5ec9af91b
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35256621"
 ---
-# <a name="how-to-programmatically-attach-files-to-outlook-e-mail-items"></a>Como anexar arquivos a itens de email do Outlook programaticamente
-  Este exemplo anexa um arquivo para um novo item de email e envia a Armando Pinto. O exemplo supõe que uma pessoa denominada Armando Pinto existe como o destinatário.  
+# <a name="how-to-programmatically-attach-files-to-outlook-email-items"></a>Como: programaticamente anexar arquivos aos itens de email do Outlook
+  Este exemplo anexa um arquivo para um novo item de email e a envia por Armando Pinto. O exemplo supõe que uma pessoa denominada Armando Pinto exista como o destinatário.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
@@ -34,9 +35,9 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_Outlook_RL_AttachFiles#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_RL_AttachFiles/thisaddin.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhando com itens de email](../vsto/working-with-mail-items.md)   
+ [Trabalhar com itens de email](../vsto/working-with-mail-items.md)   
  [Como: enviar email](../vsto/how-to-programmatically-send-e-mail-programmatically.md)   
- [Como: programaticamente salvar anexos de itens de email do Outlook](../vsto/how-to-programmatically-save-attachments-from-outlook-e-mail-items.md)   
- [Como criar um item de email de forma programática](../vsto/how-to-programmatically-create-an-e-mail-item.md)  
+ [Como: salvar anexos de itens de email do Outlook de forma programática](../vsto/how-to-programmatically-save-attachments-from-outlook-e-mail-items.md)   
+ [Como: criar programaticamente um item de email](../vsto/how-to-programmatically-create-an-e-mail-item.md)  
   
   

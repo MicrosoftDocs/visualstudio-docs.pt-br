@@ -1,5 +1,5 @@
 ---
-title: Personalização de verificações de tempo de execução nativo | Microsoft Docs
+title: Personalização das verificações de tempo de execução nativas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -24,28 +24,29 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f07e2e2258190196ee001a19d79989ee58239ff
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b6df61b1e0fde088fca87fa7a99f5590768889b8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853918"
 ---
 # <a name="native-run-time-checks-customization"></a>Personalização das verificações de tempo de execução nativas
-Quando você compila com **/RTC** (verificações de tempo de execução) ou usar o `runtime_checks` pragma, a biblioteca de tempo de execução do C fornece verificações em tempo de execução nativas. Em alguns casos, você pode personalizar a verificação de tempo de execução:  
+Quando você compila com **/RTC** (verificações de tempo de execução) ou usar o `runtime_checks` pragma, a biblioteca de tempo de execução C fornece verificações de tempo de execução nativas. Em alguns casos, você pode personalizar a verificação de tempo de execução:  
   
--   Para rotear mensagens de verificação de tempo de execução para um arquivo ou destino diferente do padrão.  
+- Para rotear mensagens de verificação de tempo de execução para um arquivo ou destino diferente do padrão.  
   
--   Para especificar um destino de saída para mensagens de verificação de tempo de execução em um depurador de terceiros.  
+- Para especificar um destino de saída para mensagens de verificação de tempo de execução em um depurador de terceiros.  
   
--   Para reportar mensagens de verificação de tempo de execução de um programa compilado com uma versão lançada da biblioteca em tempo de execução C. As versões de lançamento da biblioteca não usam `_CrtDbgReportW` para reportar erros em tempo de execução. Em vez disso, elas exibem um **Assert** caixa de diálogo para cada erro de tempo de execução.  
+- Para reportar mensagens de verificação de tempo de execução de um programa compilado com uma versão lançada da biblioteca em tempo de execução C. As versões de lançamento da biblioteca não usam `_CrtDbgReportW` para reportar erros em tempo de execução. Em vez disso, eles exibem um **Assert** caixa de diálogo para cada erro de tempo de execução.  
   
- Para personalizar a verificação de erro em tempo de execução, você pode:  
+  Para personalizar a verificação de erro em tempo de execução, você pode:  
   
--   Escreva uma função de relatório de erro de tempo de execução. Para obter mais informações, consulte [como: gravar uma função de relatório de erro de tempo de execução](../debugger/how-to-write-a-run-time-error-reporting-function.md).  
+- Escreva uma função de relatório de erro de tempo de execução. Para obter mais informações, consulte [como: gravar uma função de relatório de erro de tempo de execução](../debugger/how-to-write-a-run-time-error-reporting-function.md).  
   
--   Personalize o destino da mensagem de erro.  
+- Personalize o destino da mensagem de erro.  
   
--   Consulte para obter informações sobre erros de verificação de tempo de execução.  
+- Consulte para obter informações sobre erros de verificação de tempo de execução.  
   
 ## <a name="customize-the-error-message-destination"></a>Personalize o destino da mensagem de erro  
  Se você usar `_CrtDbgReportW` para reportar erros, poderá usar `_CrtSetReportMode` para especificar o destino das mensagens de erro.  
@@ -56,6 +57,6 @@ Quando você compila com **/RTC** (verificações de tempo de execução) ou usa
  `_RTC_NumErrors` retorna o número de tipos de erros detectados por verificações de erros de tempo de execução. Para obter uma breve descrição de cada erro, você poderá executar um loop de 0 para o valor de retorno de `_RTC_NumErrors`, passando o valor da iteração para `_RTC_GetErrDesc` em cada loop. Para obter mais informações, consulte [RTC_NumErrors](/cpp/c-runtime-library/reference/rtc-numerrors) e [RTC_GetErrDesc](/cpp/c-runtime-library/reference/rtc-geterrdesc).  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: usar verificações em tempo de execução nativas](../debugger/how-to-use-native-run-time-checks.md)   
+ [Como: usar verificações de tempo de execução nativas](../debugger/how-to-use-native-run-time-checks.md)   
  [runtime_checks](/cpp/preprocessor/runtime-checks)   
  [_CrtDbgReport, _CrtDbgReportW](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw)

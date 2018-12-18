@@ -19,14 +19,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 544851ca500e417cbc3010c23ad122a4ab1f2cc0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d4778923bf6c9e521a7ee26546510466fcfefc83
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894244"
 ---
-# <a name="parameter-element"></a>Elemento de parâmetro
-Contém informações sobre um parâmetro específico de uma tarefa que é gerada por um `UsingTask``TaskFactory`.  O nome do elemento é o nome do parâmetro.  Para obter mais informações, consulte [Elemento UsingTask (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
+# <a name="parameter-element"></a>Elemento Parameter
+Contém informações sobre um parâmetro específico de uma tarefa que é gerada por um `UsingTask` `TaskFactory`.  O nome do elemento é o nome do parâmetro.  Para saber mais, confira [Elemento UsingTask (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
 
  \<Project>  
  \<UsingTask>  
@@ -35,7 +36,7 @@ Contém informações sobre um parâmetro específico de uma tarefa que é gerad
 
 ## <a name="syntax"></a>Sintaxe  
 
-```  
+```xml  
 <ParameterGroup ParameterType="SystemType"  
     Output="true/false"  
     Required="true/false" />  
@@ -48,7 +49,7 @@ Contém informações sobre um parâmetro específico de uma tarefa que é gerad
 
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`ParameterType`|Atributo opcional.<br /><br /> O tipo .NET do parâmetro, por exemplo, "System.String".|  
+|`ParameterType`|Atributo opcional.<br /><br /> O tipo .NET do parâmetro, por exemplo, `System.String`.|  
 |`Output`|Atributo booliano opcional.<br /><br /> Se `true`, esse parâmetro será um parâmetro de saída para a tarefa. Por padrão, o valor é `false`.|  
 |`Required`|Atributo booliano opcional.<br /><br /> Se `true`, esse parâmetro será um parâmetro necessário para a tarefa. Por padrão, o valor é `false`.|  
 
@@ -59,7 +60,7 @@ Contém informações sobre um parâmetro específico de uma tarefa que é gerad
 
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[ParameterGroup](../msbuild/parametergroup-element.md)|Contém uma lista opcional de parâmetros que estarão presentes na tarefa que é gerada por um `UsingTask``TaskFactory`.|  
+|[ParameterGroup](../msbuild/parametergroup-element.md)|Contém uma lista opcional de parâmetros que estarão presentes na tarefa que é gerada por um `UsingTask` `TaskFactory`.|  
 
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar o elemento `Parameter`.  
@@ -80,4 +81,4 @@ Contém informações sobre um parâmetro específico de uma tarefa que é gerad
 ## <a name="see-also"></a>Consulte também  
  [Tarefas](../msbuild/msbuild-tasks.md)   
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)   
- [Referência do esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)
+ [Referência de esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)

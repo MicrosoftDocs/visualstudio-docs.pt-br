@@ -1,40 +1,42 @@
 ---
-title: Ferramentas para detectar e gerenciar instâncias do Visual Studio | Microsoft Docs
-description: '{{ESPAÇO RESERVADO}}'
+title: Ferramentas para detectar e gerenciar instâncias do Visual Studio
+description: Saiba mais sobre as ferramentas que você pode usar para detectar e gerenciar instalações do Visual Studio em computadores cliente.
 ms.date: 08/14/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-acquisition
-ms.tgt_pltfrm: ''
+ms.technology: vs-acquisition
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 85686707-14C0-4860-9B7A-66485D43D241
-author: tglee
+author: TerryGLee
 ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e2c0f6d6884590cfb793aa522984ed7f008c37f
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: 160d0f283542445335496e3cbb7b98955df02b05
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50672607"
 ---
 # <a name="tools-for-detecting-and-managing-visual-studio-instances"></a>Ferramentas para detectar e gerenciar instâncias do Visual Studio
 
+Há várias ferramentas que você pode usar para detectar instalações do Visual Studio em computadores cliente, bem como para gerenciar as instalações.
+
 ## <a name="detecting-existing-visual-studio-instances"></a>Detectando instâncias existentes do Visual Studio
+
 Tornamos várias ferramentas disponíveis que ajudarão você a detectar e gerenciar instâncias do Visual Studio instaladas em computadores cliente:
 
 * [VSWhere](https://github.com/microsoft/vswhere): um executável integrado ao Visual Studio ou disponível para distribuição separada que ajuda a encontrar o local de todas as instâncias do Visual Studio em um computador específico.
 * [VSSetup.PowerShell](https://github.com/microsoft/vssetup.powershell): scripts do PowerShell que usam a API de Configuração de Instalação para identificar instâncias instaladas do Visual Studio.
 * [VS-Setup-Samples](https://github.com/microsoft/vs-setup-samples): amostras do C# e C++ que demonstram como usar a API de Configuração de Instalação para consultar uma instalação existente.
 
-Além disso, a [API de Configuração de Instalação](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.setup.configuration.aspx) fornece interfaces para desenvolvedores que desejam criar seus próprios utilitários para interrogar instâncias do Visual Studio.
+Além disso, a [API de Configuração de Instalação](<xref:Microsoft.VisualStudio.Setup.Configuration>) fornece interfaces para desenvolvedores que desejam criar seus próprios utilitários para interrogar instâncias do Visual Studio.
 
 ## <a name="using-vswhereexe"></a>Usar o vswhere.exe
+
 `vswhere.exe` é incluído automaticamente no Visual Studio 2017 versão 15.2 ou superior, ou pode ser baixado da [página de versões](https://github.com/Microsoft/vswhere/releases). Use o `vswhere -?` para obter informações de ajuda sobre a ferramenta. Como exemplo, este comando mostra todas as versões do Visual Studio, incluindo versões mais antigas do produto e pré-lançamentos e gera os resultados no formato JSON:
 
 ```cmd
@@ -46,6 +48,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\Installer> vswhere.exe -legacy -p
 
 
 ## <a name="editing-the-registry-for-a-visual-studio-instance"></a>A edição do Registro para uma instância do Visual Studio
+
 No Visual Studio de 2017, configurações do Registro são armazenadas em um local privado, o que permite várias instâncias lado a lado no mesmo computador com a mesma versão do Visual Studio.
 
 Como essas entradas não são armazenadas no Registro global, há instruções especiais para usar o Editor do Registro para fazer alterações nas configurações do Registro:
@@ -58,22 +61,16 @@ Como essas entradas não são armazenadas no Registro global, há instruções e
    %localappdata%\Microsoft\VisualStudio\<config>\privateregistry.bin
    ```
 
-> [!NOTE]
-> `<config>` corresponde à instância do Visual Studio que você deseja procurar.
+   > [!NOTE]
+   > `<config>` corresponde à instância do Visual Studio que você deseja procurar.
 
 Você precisará fornecer um nome de hive, que se tornará o nome do hive isolado. Depois de fazer isso, você poderá pesquisar o Registro no hive isolado que criou.
 
 > [!IMPORTANT]
 > Antes de iniciar o Visual Studio novamente, você deve descarregar a seção isolada que criou. Para fazer isso, selecione Arquivo -> Descarregar Hive no menu principal do Regedit. (Se você não fizer isso, o arquivo permanecerá bloqueado e o Visual Studio não poderá ser iniciado.)
 
-## <a name="get-support"></a>Obter suporte
-Às vezes, as coisas podem dar errado. Caso a instalação do Visual Studio falhe, confira a página [Solução de problemas de instalação e atualização do Visual Studio 2017](troubleshooting-installation-issues.md). Se nenhuma das etapas de solução de problemas ajudar, entre em contato conosco por meio de um chat ao vivo para obter ajuda com a instalação (somente em inglês). Para saber mais detalhes, confira a [página de suporte do Visual Studio](https://www.visualstudio.com/vs/support/#talktous).
-
-Aqui estão algumas outras opções de suporte:
-* Você pode nos relatar problemas do produto por meio da ferramenta [Relatar um Problema](../ide/how-to-report-a-problem-with-visual-studio-2017.md), exibida no Instalador do Visual Studio e no IDE do Visual Studio.
-* Você pode compartilhar uma sugestão de produto conosco no [UserVoice](https://visualstudio.uservoice.com/forums/121579).
-* É possível acompanhar os problemas do produto na [Comunidade de Desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/), além de fazer perguntas e encontrar respostas.
-* Você pode também interagir conosco e com outros desenvolvedores do Visual Studio por meio das [conversas sobre o Visual Studio na comunidade do Gitter](https://gitter.im/Microsoft/VisualStudio).  (Esta opção requer uma conta do [GitHub](https://github.com/).)
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Consulte também
+
 * [Guia de Administradores do Visual Studio](visual-studio-administrator-guide.md)

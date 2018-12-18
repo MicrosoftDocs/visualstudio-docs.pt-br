@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fb0b457a0efef1c860be7174f012575aec64f99
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 388bb5e16ae54199989dd125e0c3580102bca292
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37057315"
 ---
 # <a name="idiaenumlinenumbers"></a>IDiaEnumLineNumbers
 Enumera os vários números de linha contidos na fonte de dados.  
@@ -29,23 +30,23 @@ Enumera os vários números de linha contidos na fonte de dados.
 IDiaEnumLineNumbers : IUnknown  
 ```  
   
-## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
+## <a name="methods-in-vtable-order"></a>Métodos na ordem de Vtable  
  A tabela a seguir mostra os métodos de `IDiaEnumLineNumbers`.  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[IDiaEnumLineNumbers::get__NewEnum](../../debugger/debug-interface-access/idiaenumlinenumbers-get-newenum.md)|Recupera o [IEnumVARIANT Interface](http://msdn.microsoft.com/en-us/139e3c93-faef-4003-9079-e0e94494db3e) versão este enumerador.|  
+|[IDiaEnumLineNumbers::get__NewEnum](../../debugger/debug-interface-access/idiaenumlinenumbers-get-newenum.md)|Recupera o [IEnumVARIANT Interface](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant) versão este enumerador.|  
 |[IDiaEnumLineNumbers::get_Count](../../debugger/debug-interface-access/idiaenumlinenumbers-get-count.md)|Recupera o número de números de linha.|  
 |[IDiaEnumLineNumbers::Item](../../debugger/debug-interface-access/idiaenumlinenumbers-item.md)|Recupera um número de linha por meio de um índice.|  
 |[IDiaEnumLineNumbers::Next](../../debugger/debug-interface-access/idiaenumlinenumbers-next.md)|Recupera um número especificado de números de linha na sequência de enumeração.|  
 |[IDiaEnumLineNumbers::Skip](../../debugger/debug-interface-access/idiaenumlinenumbers-skip.md)|Ignora um número especificado de números de linha em uma sequência de enumeração.|  
 |[IDiaEnumLineNumbers::Reset](../../debugger/debug-interface-access/idiaenumlinenumbers-reset.md)|Redefine uma sequência de enumeração para o início.|  
-|[IDiaEnumLineNumbers::Clone](../../debugger/debug-interface-access/idiaenumlinenumbers-clone.md)|Cria um enumerador que contém o mesmo estado de enumeração do enumerador atual.|  
+|[IDiaEnumLineNumbers::Clone](../../debugger/debug-interface-access/idiaenumlinenumbers-clone.md)|Cria um enumerador que contém o mesmo estado de enumeração que o enumerador atual.|  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- Essa interface é obtida chamando um dos métodos a seguir no [IDiaSession](../../debugger/debug-interface-access/idiasession.md) interface:  
+ Essa interface é obtida chamando um dos métodos a seguir a [IDiaSession](../../debugger/debug-interface-access/idiasession.md) interface:  
   
 -   [IDiaSession::findLines](../../debugger/debug-interface-access/idiasession-findlines.md)  
   
@@ -96,8 +97,8 @@ void dumpFunctionLines( IDiaSymbol* pSymbol, IDiaSession* pSession )
 ## <a name="see-also"></a>Consulte também  
  [Interfaces (SDK de acesso à Interface de depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
- [: Findlinesbylinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)   
- [: Findlinesbyrva](../../debugger/debug-interface-access/idiasession-findlinesbyrva.md)   
- [: Findlinesbyva](../../debugger/debug-interface-access/idiasession-findlinesbyva.md)   
- [: Findlines](../../debugger/debug-interface-access/idiasession-findlines.md)   
+ [Idiasession:: Findlinesbylinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)   
+ [Idiasession:: Findlinesbyrva](../../debugger/debug-interface-access/idiasession-findlinesbyrva.md)   
+ [Idiasession:: Findlinesbyva](../../debugger/debug-interface-access/idiasession-findlinesbyva.md)   
+ [Idiasession:: Findlines](../../debugger/debug-interface-access/idiasession-findlines.md)   
  [IDiaSession::findLinesByAddr](../../debugger/debug-interface-access/idiasession-findlinesbyaddr.md)

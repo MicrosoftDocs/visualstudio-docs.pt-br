@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a09f2ec1af511cb789f2101e2df0a675dd065e8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5ceb9415648d4ad5bcfa4c16ca7f10b3a88a6db4
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078108"
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>Como configurar destinos e tarefas
 Tarefas do MSBuild selecionadas podem ser definidas para serem executadas no ambiente de destino, independentemente do ambiente do computador de desenvolvimento. Por exemplo, quando você usa um computador de 64 bits para criar um aplicativo destinado a uma arquitetura de 32 bits, as tarefas selecionadas são executadas em um processo de 32 bits.  
@@ -29,7 +30,7 @@ Tarefas do MSBuild selecionadas podem ser definidas para serem executadas no amb
   
 -   O atributo `Architecture`, se presente, define a plataforma e o número de bit e pode assumir qualquer um destes valores: `x86`, `x64`, `CurrentArchitecture` ou `*` (qualquer arquitetura).  
   
--   O atributo `TaskFactory`, se presente, define a fábrica de tarefas que cria e executa a instância de tarefa e usa apenas o valor `TaskHostFactory`. Para obter mais informações, consulte a seção Fábricas de Tarefas mais adiante neste documento.  
+-   O atributo `TaskFactory`, se presente, define a fábrica de tarefas que cria e executa a instância de tarefa e usa apenas o valor `TaskHostFactory`. Para obter mais informações, confira [Fábricas de tarefas](#task-factories) mais adiante neste documento.  
   
 ```xml  
 <UsingTask TaskName="SimpleTask"   
@@ -74,7 +75,7 @@ Tarefas do MSBuild selecionadas podem ser definidas para serem executadas no amb
   
 ```  
   
-## <a name="task-factories"></a>Fábricas de tarefa  
+## <a name="task-factories"></a>Fábricas de tarefas  
  Antes de executar uma tarefa, o MSBuild verifica para ver se ela é designada para ser executada no contexto do software atual.  Se a tarefa for designada desse modo, o MSBuild a passará para AssemblyTaskFactory, que a executará no processo atual; caso contrário, o MSBuild passará a tarefa para TaskHostFactory, que executará a tarefa em um processo correspondente ao contexto de destino. Mesmo se o contexto atual e o contexto de destino corresponderem, você poderá forçar a execução fora de processo de uma tarefa (para fins de isolamento, segurança ou outros) configurando `TaskFactory` para `TaskHostFactory`.  
   
 ```xml  
@@ -84,7 +85,7 @@ Tarefas do MSBuild selecionadas podem ser definidas para serem executadas no amb
 </UsingTask>  
 ```  
   
-## <a name="phantom-task-parameters"></a>Parâmetros da tarefa fantasma  
+## <a name="phantom-task-parameters"></a>Parâmetros de tarefa fantasma  
  Como qualquer outro parâmetro de tarefa, `MSBuildRuntime` e `MSBuildArchitecture` podem ser definidos de propriedades de build.  
   
 ```xml  
@@ -106,7 +107,7 @@ Tarefas do MSBuild selecionadas podem ser definidas para serem executadas no amb
  Os parâmetros `MSBuildRuntime` e `MSBuildArchitecture` fornecem a maneira mais flexível de definir o contexto de destino, mas também é a mais limitada em escopo.  Por um lado, como eles são definidos na própria instância de tarefa e só são avaliados quando a tarefa está prestes a ser executada, eles podem derivar seu valor do escopo completo de propriedades disponíveis em tempo de avaliação e em tempo de build.  Por outro lado, esses parâmetros se aplicam somente a uma instância específica de uma tarefa em um destino específico.  
   
 > [!NOTE]
->  Os parâmetros de tarefa são avaliados no contexto do nó pai, não no contexto do host da tarefa. As variáveis de ambiente que dependem do tempo de execução ou da arquitetura (como a localização Arquivos de programas) serão avaliadas com o valor que corresponde ao nó pai.  No entanto, se a mesma variável de ambiente for lida diretamente pela tarefa, ela será avaliada corretamente no contexto do host da tarefa.  
+>  Os parâmetros de tarefa são avaliados no contexto do nó pai, não no contexto do host da tarefa. As variáveis de ambiente que são dependentes do tempo de execução ou da arquitetura (como o local *Arquivos de Programas*) serão avaliadas como o valor que corresponde ao nó pai.  No entanto, se a mesma variável de ambiente for lida diretamente pela tarefa, ela será avaliada corretamente no contexto do host da tarefa.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurando destinos e tarefas](../msbuild/configuring-targets-and-tasks.md)
+ [Configurar destinos e tarefas](../msbuild/configuring-targets-and-tasks.md)

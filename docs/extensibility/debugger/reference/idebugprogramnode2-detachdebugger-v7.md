@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3a79c073048fe30a4abed069487ad09943253475
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 20981c744408e8d25e6e851c39532db939c71b2b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939950"
 ---
 # <a name="idebugprogramnode2detachdebuggerv7"></a>IDebugProgramNode2::DetachDebugger_V7
 
@@ -47,7 +48,7 @@ Uma implementação deve retornar sempre `E_NOTIMPL`.
 > [!WARNING]
 > A partir do Visual Studio 2005, esse método não é mais usado e deve retornar sempre `E_NOTIMPL`.
 
-Esse método é chamado quando o depurador inesperadamente. Quando este método é chamado, o DE deverá continuar o programa que o usuário desanexado dele. Não há mais eventos de depuração devem ser enviados. O programa deve estar em um estado em que ele é anexável de outra instância do depurador.
+Esse método é chamado quando o depurador fecha inesperadamente. Quando este método é chamado, o DE deve retomar o programa como se o usuário desanexado dele. Não há mais eventos de depuração devem ser enviados. O programa deve estar em um estado onde é anexável de outra instância do depurador.
 
 ## <a name="see-also"></a>Consulte também
 

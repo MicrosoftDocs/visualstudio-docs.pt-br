@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82315e1b2170f38cae296e2a9131f4b235add26b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 80a70454bd28c3b59e53ee9bc1222361291e2399
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861092"
 ---
 # <a name="idebugobject2geticordebugvalue"></a>IDebugObject2::GetICorDebugValue
 Obtém um objeto de código gerenciado que representa o valor associado a este objeto.  
@@ -43,7 +44,7 @@ int GetICorDebugValue(
  [out] `IUnknown` interface que representa este alias. Essa interface pode ser consultada para o `ICorDebugValue` interface.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  O `ICorDebugValue` objeto é uma interface de Common Language Runtime que representa um valor.  

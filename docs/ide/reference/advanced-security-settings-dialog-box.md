@@ -1,10 +1,9 @@
 ---
-title: Caixa de diálogo Configurações Avançadas de Segurança | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+title: Caixa de diálogo Configurações de Segurança Avançadas
+ms.date: 06/27/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vs.err.debug_in_zone_no_hostproc
 helpviewer_keywords:
@@ -15,30 +14,31 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a1dad7843d42aeaf0c2871f8b76c840a12cd4186
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dce482f53f9f3e6dd0b57d6cb905f97cdfaa601a
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39180510"
 ---
 # <a name="advanced-security-settings-dialog-box"></a>Caixa de diálogo Configurações de Segurança Avançadas
-Essa caixa de diálogo permite especificar configurações de segurança relacionadas à depuração na zona.  
-  
- Para acessar essa caixa de diálogo, selecione um nó do projeto no **Gerenciador de Soluções** e, no menu **Projeto**, clique em **Propriedades**. Quando o **Designer de Projeto** for exibido, clique na guia **Segurança**. Na página **Segurança** página, selecione **Habilitar Configurações de Segurança do ClickOnce**, clique em **Este é um aplicativo de confiança parcial** e, em seguida, clique em **Avançado**.  
-  
-## <a name="uielement-list"></a>Lista UIElement  
- **Depurar este aplicativo com o conjunto de permissões selecionado**  
- Se você marcar essa caixa de seleção, o conjunto de permissões selecionado na página **Segurança** será usado durante a depuração. Por padrão, essa opção é selecionada.  
-  
- Para depurar em uma zona de segurança para trabalhar, essa opção deve ser habilitada; além disso, a opção **Habilitar o processo de hospedagem do Visual Studio** (disponível na página **Depurar** página do **Designer de Projeto**) deve ser habilitada.  
-  
- Para projetos de Aplicativos de Navegador da Web WPF, a opção **Depurar este aplicativo com o conjunto de permissões selecionado** é marcada e desabilitada.  
-  
- **Conceder ao aplicativo acesso ao site de origem**  
- Se você marcar esta caixa de seleção, o aplicativo poderá acessar o site da Web ou o compartilhamento do servidor no qual ele é publicado. Por padrão, essa opção é selecionada.  
-  
- **Depurar este aplicativo como se ele tivesse sido baixado da seguinte URL**  
- Se você precisar permitir que o aplicativo acesse o site da Web ou o compartilhamento de servidor correspondente à **URL de Instalação** especificado na página **Publicar**, digite a URL aqui. Essa opção está disponível apenas quando **Conceder ao aplicativo acesso ao site de origem** está selecionado.  
-  
-## <a name="see-also"></a>Consulte também  
- [Página Segurança, Designer de Projeto](../../ide/reference/security-page-project-designer.md)
+
+Essa caixa de diálogo permite especificar configurações de segurança relacionadas à depuração na zona.
+
+![Caixa de diálogo Configurações de Segurança Avançada no Visual Studio](../media/advanced-security-settings.png)
+
+Para acessar essa caixa de diálogo, selecione um nó do projeto no **Gerenciador de Soluções** e, no menu **Projeto**, clique em **Propriedades**. Quando o **Designer de Projeto** for exibido, clique na guia **Segurança**. Na página **Segurança** página, selecione **Habilitar Configurações de Segurança do ClickOnce**, clique em **Este é um aplicativo de confiança parcial** e, em seguida, clique em **Avançado**.
+
+## <a name="uielement-list"></a>Lista UIElement
+
+**Conceder ao aplicativo acesso ao site de origem**
+
+Se você marcar esta caixa de seleção, o aplicativo poderá acessar o site da Web ou o compartilhamento do servidor no qual ele é publicado. Por padrão, essa opção é selecionada.
+
+**Depurar este aplicativo como se ele tivesse sido baixado da seguinte URL**
+
+Se você precisar permitir que o aplicativo acesse o site ou o compartilhamento do servidor correspondente à **URL de Instalação** especificada na página **Publicar**, insira a URL aqui. Essa opção está disponível apenas quando **Conceder ao aplicativo acesso ao site de origem** está selecionado.
+
+## <a name="see-also"></a>Consulte também
+
+- [Página Segurança, Designer de Projeto](../../ide/reference/security-page-project-designer.md)

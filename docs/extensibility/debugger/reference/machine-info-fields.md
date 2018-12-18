@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5d0ff6f75c0ee17bef57b1f2632c4d6926948528
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 631ef4bbb23d4b0cedbf86d7eedb019580cf7e5b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942498"
 ---
 # <a name="machineinfofields"></a>MACHINE_INFO_FIELDS
-Especifica o tipo de informações para recuperar para um determinado computador.  
+Especifica que tipo de informações para recuperar para um determinado computador.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,18 +46,18 @@ public enum enum_MACHINE_INFO_FIELDS {
   
 ## <a name="members"></a>Membros  
  MCIF_NAME  
- Inicializar/usar o `bstrName` campo na estrutura.  
+ Inicialização/usar o `bstrName` campo na estrutura.  
   
  MCIF_FLAGS  
- Inicializar/usar o `Flags` campo na estrutura.  
+ Inicialização/usar o `Flags` campo na estrutura.  
   
  MIF_ALL  
- Inicializar/usar todos os campos na estrutura.  
+ Inicialização/usar todos os campos na estrutura.  
   
 ## <a name="remarks"></a>Comentários  
- Esses valores são passados para o [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) método para indicar quais membros do [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) estrutura devem ser inicializado.  
+ Esses valores são passados para o [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) método para indicar quais membros do [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) são de estrutura a ser inicializado.  
   
- Também é usado no `Fields` membro o `MACHINE_INFO` estrutura para indicar quais campos são usados e válido.  
+ Também é usado na `Fields` membro do `MACHINE_INFO` estrutura para indicar quais campos são usados e válido.  
   
  Esses sinalizadores podem ser combinados com um bit a bit `OR`.  
   

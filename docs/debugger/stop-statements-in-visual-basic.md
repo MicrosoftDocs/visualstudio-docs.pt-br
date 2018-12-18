@@ -21,11 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5909d8ac37ee77c43b5ddbd2625c3de92de32cad
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 74be447f523713cdef9ee5c52876ee0acf4c25b2
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37056137"
 ---
 # <a name="stop-statements-in-visual-basic"></a>Instruções Stop no Visual Basic
 A instrução Stop do Visual Basic fornece uma alternativa programática ao definir um ponto de interrupção. Quando o depurador encontrar uma instrução Stop, ele interromperá a execução do programa (entra em modo de interrupção). Os programadores de C# podem obter o mesmo efeito usando uma chamada ao System.Diagnostics.Debugger.Break.  
@@ -38,7 +39,7 @@ A instrução Stop do Visual Basic fornece uma alternativa programática ao defi
   
  Para evitar ter que remover as instruções Stop, você pode usar a compilação condicional:  
   
-```  
+```cpp
 #If DEBUG Then  
    Stop  
 #Else  
@@ -46,15 +47,15 @@ A instrução Stop do Visual Basic fornece uma alternativa programática ao defi
 #End If  
 ```  
   
- Outra alternativa é usar uma instrução Assert em vez da instrução Stop. Uma instrução Debug.Assert interromperá a execução somente quando uma condição especificada não for atendida e for removida automaticamente ao criar uma versão de lançamento. Para obter mais informações, consulte [itens no código gerenciado](../debugger/assertions-in-managed-code.md). Se você quiser uma instrução Assert que sempre interrompa a execução na versão de Depuração, você poderá fazer isso:  
+ Outra alternativa é usar uma instrução Assert em vez da instrução Stop. Uma instrução Debug.Assert interromperá a execução somente quando uma condição especificada não for atendida e for removida automaticamente ao criar uma versão de lançamento. Para obter mais informações, consulte [asserções em código gerenciado](../debugger/assertions-in-managed-code.md). Se você quiser uma instrução Assert que sempre interrompa a execução na versão de Depuração, você poderá fazer isso:  
   
-```  
+```csharp
 Debug.Assert(false)  
 ```  
   
  No entanto, outra alternativa é usar o método Debug.Fail:  
   
-```  
+```csharp
 Debug.Fail("a clever output string goes here")  
 ```  
   

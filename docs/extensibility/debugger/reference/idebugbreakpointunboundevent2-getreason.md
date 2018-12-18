@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f231a1d6ee27c56f423a64cc430ba8e743e308f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c6b2dfa661b6dc21b50dec33afc736e0cc3be90a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926313"
 ---
 # <a name="idebugbreakpointunboundevent2getreason"></a>IDebugBreakpointUnboundEvent2::GetReason
 Obtém o motivo pelo qual que o ponto de interrupção foi desassociado.  
@@ -43,13 +44,13 @@ int GetReason(
  [out] Retorna um valor da [BP_UNBOUND_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md) enumeração que especifica o motivo pelo qual o ponto de interrupção foi desassociado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Os motivos incluem um ponto de interrupção que está sendo vinculada outra vez para um local diferente depois de uma operação Editar e continuar, ou uma determinação de que um ponto de interrupção foi associado em erro.  
+ Os motivos incluem um ponto de interrupção que está sendo religado para um local diferente após uma operação de editar e continuar, ou a uma determinação de que um ponto de interrupção foi vinculado em erro.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CBreakpointUnboundDebugEventBase** objeto que expõe o [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md) interface.  
+ O exemplo a seguir mostra como implementar esse método para um **CBreakpointUnboundDebugEventBase** objeto que expõe a [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md) interface.  
   
 ```cpp  
 STDMETHODIMP CBreakpointUnboundDebugEventBase::GetReason(  

@@ -18,14 +18,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c031b36501f90619369eedb9622b303ec559f6bd
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4f0a3f24c5c8634301663f19dab9078bb37405b7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876549"
 ---
 # <a name="taskbody-element-msbuild"></a>Elemento TaskBody (MSBuild)
-Contém os dados que são passados para um `UsingTask``TaskFactory`. Para obter mais informações, consulte [Elemento UsingTask (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
+Contém os dados que são passados para um `UsingTask` `TaskFactory`. Para saber mais, confira [Elemento UsingTask (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
 
  \<Project>  
  \<UsingTask>  
@@ -33,7 +34,7 @@ Contém os dados que são passados para um `UsingTask``TaskFactory`. Para obter 
 
 ## <a name="syntax"></a>Sintaxe  
 
-```  
+```xml
 <TaskBody Evaluate="true/false" />  
 ```  
 
@@ -54,9 +55,9 @@ Contém os dados que são passados para um `UsingTask``TaskFactory`. Para obter 
 
 ### <a name="parent-elements"></a>Elementos pai  
 
-|Elemento|Descrição|  
-|-------------|-----------------|  
-|[UsingTask](../msbuild/usingtask-element-msbuild.md)|Fornece uma maneira para registrar tarefas em [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Pode ser que não haja nenhum ou mais de um elemento `UsingTask` em um projeto.|  
+| Elemento | Descrição |
+| - | - |
+| [UsingTask](../msbuild/usingtask-element-msbuild.md) | Fornece uma maneira para registrar tarefas em [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Pode ser que não haja nenhum ou mais de um elemento `UsingTask` em um projeto. |
 
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar o elemento `TaskBody` com um atributo `Evaluate`.  
@@ -77,4 +78,4 @@ Contém os dados que são passados para um `UsingTask``TaskFactory`. Para obter 
 ## <a name="see-also"></a>Consulte também  
  [Tarefas](../msbuild/msbuild-tasks.md)   
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)   
- [Referência do esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)
+ [Referência de esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)

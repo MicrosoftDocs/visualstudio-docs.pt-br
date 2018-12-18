@@ -1,11 +1,11 @@
 ---
 title: IActiveScriptAuthor::RemoveNamedItem | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IActiveScriptAuthor.RemoveNamedItem
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - IActiveScriptAuthor::RemoveNamedItem
 ms.assetid: 1173ef46-39a5-4bc1-8e0c-89259a16be16
-caps.latest.revision: 
+caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24645596"
 ---
 # <a name="iactivescriptauthorremovenameditem"></a>IActiveScriptAuthor::RemoveNamedItem
 Remove um `NamedItem` objeto do namespace do script de criação de mecanismo.  

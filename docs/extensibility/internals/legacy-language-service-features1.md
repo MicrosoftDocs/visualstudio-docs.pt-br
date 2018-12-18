@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131724"
 ---
 # <a name="legacy-language-service-features"></a>Recursos de serviço de linguagem herdada
 Um serviço de idioma do pacote gerenciado framework (MPF) pode dar suporte a um ou mais [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] recursos, como o realce de sintaxe, IntelliSense e validação de ponto de interrupção. Cada recurso pode ser implementado independente dos outros, mas exigem um analisador e um scanner, exceto de realce de sintaxe, que exige apenas um scanner.  

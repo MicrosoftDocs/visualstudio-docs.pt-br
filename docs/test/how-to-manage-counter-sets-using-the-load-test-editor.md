@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de contadores de teste de carga no Visual Studio | Microsoft Docs
+title: Conjuntos de contadores de teste de carga no Visual Studio
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +13,14 @@ ms.assetid: 64315c2f-a0b2-4378-be16-0774b99beef5
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: b2ff43592819e5834f1e5f7b5088c00f61d8b1c4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 022e105261c5d1e7f079a29915363ed02812d3bc
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894346"
 ---
 # <a name="how-to-manage-counter-sets-using-the-load-test-editor"></a>Como gerenciar conjuntos de contadores usando o Editor de Teste de Carga
 
@@ -29,7 +31,9 @@ Quando cria um teste de carga com o **Novo Assistente de Teste de Carga**, você
 
 Gerenciar conjuntos de contadores envolve escolher o conjunto de computadores do qual você deseja coletar dados de desempenho e atribuir um conjunto de contadores para coletar de cada computador individualmente. Você gerencia os contadores no **Editor de Teste de Carga**.
 
-![Gerenciando conjuntos de contadores](../test/media/loadtestmanagecountersets.png "LoadTestManageCounterSets")
+![Gerenciando conjuntos de contadores](../test/media/loadtestmanagecountersets.png)
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="to-manage-counter-sets"></a>Para gerenciar conjuntos de contadores
 
@@ -54,12 +58,12 @@ Gerenciar conjuntos de contadores envolve escolher o conjunto de computadores do
 
      Os marcadores de computador permitem identificar um computador com um nome fácil de reconhecer.
 
-     As marcações são exibidas no nó **Mapeamentos de conjuntos de contadores** da árvore no Editor de Teste de Carga. O mais importante é que os marcadores são exibidos em relatórios do Excel, o que ajuda os participantes a identificar qual função o computador tem no teste de carga. Por exemplo, "Web Server1 em lab2" ou "SQL Server2 em Phoenix office". Para obter mais informações, consulte [Relatando resultados de teste de carga para comparações de testes ou análise de tendências](../test/compare-load-test-results.md).
+     As marcações são exibidas no nó **Mapeamentos de conjuntos de contadores** da árvore no Editor de Teste de Carga. O mais importante é que os marcadores são exibidos em relatórios do Excel, o que ajuda os participantes a identificar qual função o computador tem no teste de carga. Por exemplo, "Web Server1 em lab2" ou "SQL Server2 em Phoenix office". Para saber mais, confira [Relatar resultados do teste de carga para comparações de testes ou análise de tendências](../test/compare-load-test-results.md).
 
 6.  Escolha **OK**.
 
 ## <a name="see-also"></a>Consulte também
 
 - [Controladores e agentes de teste](configure-test-agents-and-controllers-for-load-tests.md)
-- [Especificando os conjuntos de contadores e as regras de limite para computadores em um teste de carga](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
-- [Definindo configurações de execução de teste de carga](../test/configure-load-test-run-settings.md)
+- [Especificar os conjuntos de contadores e as regras de limite para computadores em um teste de carga](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
+- [Definir configurações de execução de teste de carga](../test/configure-load-test-run-settings.md)

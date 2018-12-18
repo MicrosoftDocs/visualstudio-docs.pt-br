@@ -32,6 +32,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31466173"
 ---
 # <a name="continuing-execution-after-an-exception"></a>Continuando a execução depois de uma exceção
 Quando o depurador interromperá a execução devido a uma exceção, você verá o **auxiliar de exceção**, por padrão. Se você tiver desabilitado o **auxiliar de exceção** no **opções** caixa de diálogo, você verá o **Exception Assistant** (c# ou Visual Basic) ou o **exceção**  caixa de diálogo (C++).  

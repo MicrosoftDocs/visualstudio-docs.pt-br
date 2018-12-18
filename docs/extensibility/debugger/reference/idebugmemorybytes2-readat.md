@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 612a065286723e3c2b68a9ce5bd31c850d030959
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3e3989ef8c79e4304e3bda3e99418da1973e6e0a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49912936"
 ---
 # <a name="idebugmemorybytes2readat"></a>IDebugMemoryBytes2::ReadAt
-Lê uma sequência de bytes, começando em um local específico.  
+Lê uma sequência de bytes, começando em um determinado local.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,31 +50,31 @@ int ReadAt(
   
 #### <a name="parameters"></a>Parâmetros  
  `pStartContext`  
- [in] O [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objeto que especifica onde começar a ler bytes.  
+ [in] O [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objeto que especifica o local iniciar a leitura dos bytes.  
   
  `dwCount`  
  [in] O número de bytes a serem lidos. Também especifica o comprimento do `rgbMemory` matriz.  
   
  `rgbMemory`  
- [out no] Matriz preenchido com os bytes realmente lidos.  
+ [no, out] Matriz preenchido com os bytes realmente lidos.  
   
  `pdwRead`  
  [out] Retorna o número de bytes contíguos realmente lidos.  
   
  `pdwUnreadable`  
- [out no] Retorna o número de bytes ilegíveis. Pode ser um valor nulo se o cliente tem interesse no número de bytes ilegíveis.  
+ [no, out] Retorna o número de bytes não pode ser lido. Pode ser um valor nulo se o cliente não se preocupam com o número de bytes não pode ser lido.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Se 100 bytes são solicitados a 50 primeiro são legíveis, os próximos 20 ilegível, e são 30 restantes são legíveis, esse método retorna:  
+ Se 100 bytes são solicitados e os primeiros 50 são legíveis, os próximos 20 são ilegíveis e os 30 restantes são legíveis, esse método retorna:  
   
  *`pdwRead` = 50  
   
  *`pdwUnreadable` = 20  
   
- Nesse caso, porque `*pdwRead + *pdwUnreadable < dwCount`, o chamador deve fazer uma chamada adicional para ler os bytes restantes de 30 a 100 original solicitada e o [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objeto passado a `pStartContext` parâmetro deve ser adiantado por 70.  
+ Nesse caso, porque `*pdwRead + *pdwUnreadable < dwCount`, o chamador deve fazer uma chamada adicional para ler os bytes restantes 30 das 100 original solicitada e o [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objeto passado a `pStartContext` parâmetro deve ser avançado por 70.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   

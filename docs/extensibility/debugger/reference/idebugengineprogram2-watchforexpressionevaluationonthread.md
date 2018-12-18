@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a3f89502beeb1e8165450c7c07f3f55f83dd39e1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ed77975e1a1d337354e7ac743e4b47e3c84ed701
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855801"
 ---
 # <a name="idebugengineprogram2watchforexpressionevaluationonthread"></a>IDebugEngineProgram2::WatchForExpressionEvaluationOnThread
 Permite (ou não) a avaliação da expressão para ocorrer em determinado thread, mesmo se o programa foi interrompido.  
@@ -48,27 +49,27 @@ int WatchForExpressionEvaluationOnThread(
   
 #### <a name="parameters"></a>Parâmetros  
  `pOriginatingProgram`  
- [in] Um [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objeto que representa o programa que está avaliando uma expressão.  
+ [in] Uma [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objeto que representa o programa que está avaliando uma expressão.  
   
  `dwTid`  
- [in] Especifica o identificador do segmento.  
+ [in] Especifica o identificador do thread.  
   
  `dwEvalFlags`  
  [in] Uma combinação de sinalizadores do [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) enumeração que especificam como a avaliação deve ser executada.  
   
  `pExprCallback`  
- [in] Um [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objeto a ser usado para enviar eventos de depuração que ocorrem durante a avaliação da expressão.  
+ [in] Uma [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objeto a ser usado para enviar eventos de depuração que ocorrem durante a avaliação da expressão.  
   
  `fWatch`  
- [in] Se diferente de zero (`TRUE`), permite que a avaliação da expressão no thread identificado por `dwTid`; caso contrário, zero (`FALSE`) não permite a avaliação da expressão nesse segmento.  
+ [in] Se diferente de zero (`TRUE`), permite que a avaliação da expressão no thread identificado por `dwTid`; caso contrário, zero (`FALSE`) não permite a avaliação da expressão naquele thread.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Quando o Gerenciador de sessão de depuração (SDM) solicita um programa, identificado pelo `pOriginatingProgram` parâmetro, para avaliar uma expressão, ele o notificará todos os outros programas conectados por chamar esse método.  
+ Quando o Gerenciador de sessão de depuração (SDM) solicita um programa, identificado pelo `pOriginatingProgram` parâmetro, a fim de avaliar uma expressão, ele notifica todos os outros programas conectados ao chamar esse método.  
   
- Avaliação de expressão em um programa pode fazer com que o código seja executado em outro, devido a avaliação de função ou avaliação de qualquer `IDispatch` propriedades. Por isso, esse método permite que a avaliação de expressão executar e concluir o mesmo que o thread pode ser interrompido neste programa.  
+ Avaliação da expressão em um programa pode fazer com que o código seja executado em outro, devido a avaliação da função ou avaliação de qualquer `IDispatch` propriedades. Por isso, esse método permite que a avaliação da expressão ser executados e concluídos, mesmo que o thread pode ter sido interrompido neste programa.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)   

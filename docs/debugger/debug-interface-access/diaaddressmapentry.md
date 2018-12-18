@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a29de8f18a9d3123d73210d0e362c2ae2d32641
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 501defcd2274ab32624a97b9a1463e8f4a515c1e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819050"
 ---
 # <a name="diaaddressmapentry"></a>DiaAddressMapEntry
 Descreve uma entrada em um mapa de endereço.  
@@ -42,15 +43,15 @@ struct DiaAddressMapEntry {
 ## <a name="remarks"></a>Comentários  
  Um mapa de endereço fornece uma tradução do layout de uma imagem (A) para outro (B). Uma matriz de `DiaAddressMapEntry` estruturas classificadas por `rva` define um mapa de endereço.  
   
- Para converter um endereço `addrA`, na imagem A um endereço, `addrB`, na imagem B, execute as seguintes etapas:  
+ Para converter um endereço `addrA`, na imagem de um para um endereço, `addrB`, na imagem B, execute as seguintes etapas:  
   
-1.  O mapa para a entrada de pesquisa `e`, com o maior `rva` menor ou igual a `addrA`.  
+1. O mapa para a entrada de pesquisa `e`, com o maior `rva` menor ou igual a `addrA`.  
   
-2.  Set `delta = addrA - e.rva`.  
+2. Definir `delta = addrA - e.rva`.  
   
-3.  Set `addrB = e.rvaTo + delta`.  
+3. Definir `addrB = e.rvaTo + delta`.  
   
- Uma matriz de `DiaAddressMapEntry` estruturas é passada para o [: Set_addressmap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) método.  
+   Uma matriz de `DiaAddressMapEntry` estruturas é passada para o [idiaaddressmap:: Set_addressmap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: dia2.h  

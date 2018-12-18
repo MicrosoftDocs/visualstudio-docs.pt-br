@@ -1,6 +1,8 @@
 ---
 title: SDK de Modelagem para Visual Studio - linguagens específicas ao domínio
+titleSuffix: ''
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,36 +13,38 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 922419a1c0b973f704fdd16273b780e6136aebc2
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 6de309ca6ff9c1813a2a2a6ebc54ea6baa3a795f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060472"
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>SDK de Modelagem para Visual Studio - linguagens específicas ao domínio
-Usando o SDK de modelagem para [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], você pode criar ferramentas de desenvolvimento sofisticado baseado no modelo que você pode integrar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Da mesma forma, você pode criar uma ou mais definições de modelo e integrá-las em um conjunto de ferramentas.
 
- No centro do MSDK está a definição de um modelo que você cria para representar conceitos em sua área de negócios. Você pode cercar o modelo com várias ferramentas, como uma exibição diagramática, a capacidade de gerar código e outros artefatos, comandos para transformar o modelo, e a capacidade de interagir com código e os outros objetos em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. À medida que o modelo é desenvolvido, você pode combiná-lo com outros modelos e ferramentas para formar um conjunto de ferramentas avançadas centradas em seu desenvolvimento.
+Usando o SDK de modelagem para Visual Studio, você pode criar ferramentas de desenvolvimento baseado em modelo avançadas que podem ser integradas ao Visual Studio. Da mesma forma, você pode criar uma ou mais definições de modelo e integrá-las em um conjunto de ferramentas.
 
- O MSDK permite desenvolver rapidamente um modelo na forma de uma linguagem específica do domínio (DSL). Você começa ao usar um editor especializado para definir um esquema ou sintaxe abstrata junto com uma notação gráfica. Dessa definição, o VMSDK gera:
+No centro do MSDK está a definição de um modelo que você cria para representar conceitos em sua área de negócios. Você pode cercar o modelo com uma variedade de ferramentas, como uma exibição diagramática, a capacidade de gerar o código e outros artefatos, comandos para transformar o modelo e a capacidade de interagir com o código e outros objetos no Visual Studio. À medida que o modelo é desenvolvido, você pode combiná-lo com outros modelos e ferramentas para formar um conjunto de ferramentas avançadas centradas em seu desenvolvimento.
 
--   Uma implementação de modelo com uma API fortemente tipada executada em um repositório baseado em transação.
+O MSDK permite desenvolver rapidamente um modelo na forma de uma linguagem específica do domínio (DSL). Você começa ao usar um editor especializado para definir um esquema ou sintaxe abstrata junto com uma notação gráfica. Dessa definição, o VMSDK gera:
 
--   Um gerenciador baseado em árvore.
+- Uma implementação de modelo com uma API fortemente tipada executada em um repositório baseado em transação.
 
--   Um editor gráfico no qual os usuários podem exibir o modelo ou partes dele que você definir.
+- Um gerenciador baseado em árvore.
 
--   Métodos de serialização que salvam seus modelos em XML legível.
+- Um editor gráfico no qual os usuários podem exibir o modelo ou partes dele que você definir.
 
--   Recursos para gerar código de programa e outros artefatos usando modelagem de texto.
+- Métodos de serialização que salvam seus modelos em XML legível.
 
- Você pode personalizar e estender todos esses recursos. Suas extensões são integradas de tal forma que você ainda pode atualizar a definição de DSL e gerar novamente os recursos sem perder suas extensões.
+- Recursos para gerar código de programa e outros artefatos usando modelagem de texto.
+
+Você pode personalizar e estender todos esses recursos. Suas extensões são integradas de tal forma que você ainda pode atualizar a definição de DSL e gerar novamente os recursos sem perder suas extensões.
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
- [Postagens de blog relacionados](https://blogs.msdn.microsoft.com/visualstudioalm/tag/code-index/)
+[Postagens de blogs relacionadas](https://blogs.msdn.microsoft.com/visualstudioalm/tag/code-index/)
 
- Para obter orientação sobre técnicas avançadas e solução de problemas, visite [DSL do Visual Studio e extensibilidade de ferramentas de modelagem fórum](http://go.microsoft.com/fwlink/?LinkID=186074).
+Para obter orientação sobre técnicas avançadas e solução de problemas, visite [Fórum de extensibilidade de ferramentas de modelagem & de DSL do Visual Studio](http://go.microsoft.com/fwlink/?LinkID=186074).
 
 ## <a name="in-this-section"></a>Nesta seção
  [Introdução às linguagens específicas de domínio](../modeling/getting-started-with-domain-specific-languages.md)

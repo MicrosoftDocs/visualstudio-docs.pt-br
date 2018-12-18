@@ -1,5 +1,5 @@
 ---
-title: Solução de problemas do SharePoint empacotamento e implantação | Microsoft Docs
+title: Solução de problemas de implantação e empacotamento do SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 02/22/2017
 ms.technology:
@@ -26,93 +26,93 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 95dfd93433fc70895baa9056ce1b1522845bf497
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ba6f0a1aff0c263534c17256b7f5cf49ff9c9533
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898051"
 ---
-# <a name="troubleshooting-sharepoint-packaging-and-deployment"></a>Solucionando problemas de pacote e implantação do SharePoint
-  Este tópico abrange vários problemas que você pode encontrar ao empacotar e implantar soluções do SharePoint.
+# <a name="troubleshoot-sharepoint-packaging-and-deployment"></a>Solucionar problemas de implantação e empacotamento do SharePoint
+  Este tópico aborda diversos problemas que você pode encontrar ao empacotar e implantar soluções do SharePoint.
 
-## <a name="enabling-enhanced-debugging"></a>Habilitando Depuração Aperfeiçoada
- Para diagnosticar entre o Visual Studio, SharePoint e outras camadas, você pode usar a chave de registro EnableDiagnostics para exibir o rastreamento de pilha. Para obter mais informações, consulte [soluções do SharePoint de depuração](../sharepoint/debugging-sharepoint-solutions.md).
+## <a name="enable-enhanced-debugging"></a>Habilitar a depuração aprimorada
+ Para diagnosticar entre o Visual Studio, SharePoint e outras camadas, você pode usar a chave do registro EnableDiagnostics para exibir o rastreamento de pilha. Para obter mais informações, consulte [soluções do SharePoint depurar](../sharepoint/debugging-sharepoint-solutions.md).
 
-## <a name="adding-project-output-to-the-solution-package"></a>Adicionando Saída do Projeto ao Pacote de Solução
- Você pode adicionar a saída do projeto para um pacote por meio do Designer de pacote. No entanto, quando você adiciona a saída do projeto, certifique-se de que a plataforma do projeto corresponda à plataforma da solução do SharePoint. Recomendamos que você use o **qualquer CPU** destino da plataforma para os assemblies que você deseja implantar em um servidor do SharePoint. Para obter mais informações, consulte [página de compilação, Designer de projeto &#40;Visual Basic&#41; ](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) e [caixa de diálogo de configurações de compilador avançadas &#40;Visual Basic&#41;](/visualstudio/ide/reference/advanced-compiler-settings-dialog-box-visual-basic).
+## <a name="add-project-output-to-the-solution-package"></a>Adicionar a saída do projeto ao pacote de solução
+ Você pode adicionar a saída do projeto para um pacote por meio do Designer de pacote. No entanto, quando você adiciona a saída do projeto, certifique-se de que a plataforma do projeto corresponda à plataforma da solução do SharePoint. É recomendável que você use o **qualquer CPU** destino da plataforma para os assemblies que você deseja implantar em um servidor do SharePoint. Para obter mais informações, consulte [compilar página, Designer de projeto &#40;Visual Basic&#41; ](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) e [caixa de diálogo de configurações de compilador avançadas &#40;Visual Basic&#41;](/visualstudio/ide/reference/advanced-compiler-settings-dialog-box-visual-basic).
 
-## <a name="validation-warnings-and-errors"></a>Avisos e Erros de Validação
- As ferramentas de desenvolvimento do SharePoint no Visual Studio executam etapas de validação para verificar se o pacote de solução está formado corretamente. Você também pode criar etapas de validação personalizada para seus recursos e pacotes. Para obter mais informações, consulte [como: Criar recurso de personalizada e regras de validação de pacote para soluções do SharePoint](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).
+## <a name="validation-warnings-and-errors"></a>Erros e avisos de validação
+ As ferramentas de desenvolvimento do SharePoint no Visual Studio executam etapas de validação para verificar se o pacote de solução está formado corretamente. Você também pode criar etapas de validação personalizada para os recursos e pacotes. Para obter mais informações, consulte [como: criar o recurso personalizado e o pacote de regras de validação para soluções do SharePoint](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).
 
-## <a name="deployment-conflict-resolution"></a>Resolução do Conflito de Implantação
- Quando você implanta uma solução do SharePoint, você pode achar colisões quando um item no servidor tem o mesmo nome, URL ou ID como um item em seu pacote de solução. Você pode alterar o **resolução de conflitos de implantação** propriedade para resolver, relatório ou em Ignorar colisões de módulos, Web parts, listar as instâncias e tipos de conteúdo.
+## <a name="deployment-conflict-resolution"></a>Resolução de conflitos de implantação
+ Quando você implanta uma solução do SharePoint, você pode encontrar conflitos quando um item no servidor tem o mesmo nome, URL ou ID como um item em seu pacote de solução. Você pode alterar o **resolução de conflitos de implantação** propriedade para resolver, relatar ou evitar conflitos para os módulos, partes da Web, instâncias de lista e tipos de conteúdo.
 
  A tabela a seguir demonstra as configurações para o **resolução de conflitos de implantação** propriedade.
 
 |Valor|Descrição|
 |-----------|-----------------|
-|Automático|Detecta colisões e resolve os conflitos automaticamente.|
-|prompt|Detecta colisões e relatá-los para o desenvolvedor antes de resolver os conflitos.|
-|Nenhum|Não detecta colisões.|
+|Automático|Detecta conflitos e resolve os conflitos automaticamente.|
+|Solicitar|Detecta conflitos e relata-os para o desenvolvedor antes de resolver os conflitos.|
+|Nenhum|Não detecta conflitos.|
 
-## <a name="differences-between-f5-deployment"></a>Diferenças entre a Implantação de F5
- Quando você usa [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] para implantar o projeto do SharePoint para o servidor local do SharePoint para teste e depuração, há algumas etapas adicionais que são executadas por [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+## <a name="differences-between-f5-deployment"></a>Diferenças entre a implantação de F5
+ Quando você usa [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] para implantar seu projeto do SharePoint para o servidor do SharePoint local para testar e depurar, há algumas etapas adicionais que são executadas pelo [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
 
-1.  Redefina o serviço de informações da Internet (IIS) durante a etapa da implantação.
+1. Redefina o serviço de informações da Internet (IIS) durante a etapa de implantação.
 
-2.  Associe automaticamente os fluxos de trabalho.
+2. Associe automaticamente fluxos de trabalho.
 
-3.  Defina a ordem de ativação de recurso acordo com a hierarquia no Designer de pacote.
+3. Defina a ordem de ativação de recurso acordo com a hierarquia no Designer de pacote.
 
- Você pode adicionar etapas de implantação personalizada para alterar o comportamento de F5. Para obter mais informações, consulte [passo a passo: Criando uma etapa de implantação personalizada para projetos SharePoint](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).
+   Você pode adicionar etapas de implantação personalizado a alteração ainda mais a **F5** comportamento. Para obter mais informações, consulte [instruções passo a passo: criar uma etapa de implantação para projetos do SharePoint](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).
 
-## <a name="delay-displaying-sharepoint-page-when-deploying-visual-web-part"></a>Exibindo a Página do SharePoint com Atraso ao Implantar uma Web Part Visual
- A página do SharePoint leva muito tempo para ser exibida durante a implantação de uma Web part Visual para a pasta Bin em [!INCLUDE[wiprlhext](../sharepoint/includes/wiprlhext-md.md)], [!INCLUDE[win7](../sharepoint/includes/win7-md.md)], ou [!INCLUDE[winsvr08](../sharepoint/includes/winsvr08-md.md)]. Se você alterar todos os arquivos em um nível superior [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] recompilações do diretório, como o diretório Bin, todo o aplicativo Web. Isso pode causar um atraso de até 25 segundos para a página do SharePoint para renderizar.
+## <a name="delay-displaying-sharepoint-page-when-deploy-visual-web-part"></a>Atraso exibindo a página do SharePoint quando implantar a web part visual
+ A página do SharePoint leva muito tempo para aparecer durante a implantação de uma Web part Visual para a pasta Bin em [!INCLUDE[wiprlhext](../sharepoint/includes/wiprlhext-md.md)], [!INCLUDE[win7](../sharepoint/includes/win7-md.md)], ou [!INCLUDE[winsvr08](../sharepoint/includes/winsvr08-md.md)]. Se você alterar todos os arquivos em um nível superior [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] recompilações do diretório, como o diretório Bin, todo o aplicativo Web. Isso pode causar um atraso de até 25 segundos para a página do SharePoint para renderizar.
 
-### <a name="error-message"></a>Mensagem de erro
+### <a name="error-message"></a>mensagem de erro
  nenhuma.
 
 ### <a name="resolution"></a>Resolução
  Para contornar esse problema, execute as seguintes etapas:
 
-1.  Instalar a atualização KB967535 conforme descrito no artigo do Microsoft Support [corrigir: está disponível um hotfix para corrigir os dois problemas no ASP.NET no IIS 7.0 para Windows Vista e Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=179055).
+1.  Instale a atualização KB967535 conforme descrito no artigo da Microsoft Support [corrigir: um hotfix está disponível para corrigir dois problemas no ASP.NET no IIS 7.0 para Windows Vista e Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=179055).
 
 2.  Adicione a seguinte linha ao arquivo Web. config:
 
-    ```
+    ```xml
     <compilation batch="false" optimizeCompilations="true">
     ```
 
-## <a name="sharepoint-project-deployment-fails-with-error-failed-to-extract-the-cab-file-in-the-solution"></a>Falha na Implantação do Projeto do SharePoint com o Erro "Falha na extração do arquivo de gabinete na solução”
- Se o nome de qualquer item de projeto do SharePoint contém parênteses, sua solução falhar na implantação com um erro.
+## <a name="sharepoint-project-deployment-fails-with-error-failed-to-extract-the-cab-file-in-the-solution"></a>Falha de implantação de projeto do SharePoint com o erro "Falha ao extrair o arquivo de gabinete na solução"
+ Se o nome de qualquer item de projeto do SharePoint contiver parênteses, sua solução falhará na implantação com um erro.
 
-### <a name="error-message"></a>Mensagem de erro
- Ocorreu um erro na etapa de implantação adicionar solução: Falha ao extrair o arquivo cab da solução.
+### <a name="error-message"></a>mensagem de erro
+ Ocorreu um erro na etapa de implantação adicionar solução: Falha ao extrair o arquivo de gabinete na solução.
 
 ### <a name="resolution"></a>Resolução
  Para contornar esse problema, remova todos os parênteses nos nomes de itens de projeto do SharePoint.
 
-## <a name="error-appears-when-deploying-a-visual-web-part-to-a-site-on-a-different-web-application"></a>Erro Aparece ao Implantar uma Web Part Visual em um Site em um Aplicativo Web Diferente
- Na primeira vez que você implante uma Web part visual em um site em um aplicativo Web diferente no qual ele está implantado atualmente (alterando a propriedade de SiteUrl da Web part visual), você receberá um erro.
+## <a name="error-appears-when-deploying-a-visual-web-part-to-a-site-on-a-different-web-application"></a>Erro aparece ao implantar uma web part visual em um site em um aplicativo web diferente
+ Na primeira vez que você implante uma Web part visual em um site em um aplicativo Web diferente no qual está implementada atualmente (alterando a propriedade SiteUrl da parte Web visual), você obterá um erro.
 
-### <a name="error-message"></a>Mensagem de erro
- Ocorreu um erro na etapa de implantação adicionar solução: um recurso com a ID [#] já foi instalado neste farm. Use o atributo de forçar explicitamente reinstalar o recurso.
+### <a name="error-message"></a>mensagem de erro
+ Ocorreu um erro na etapa de implantação adicionar solução: um recurso com a ID [#] já foi instalado neste farm. Use o atributo de força para reinstalar explicitamente o recurso.
 
 ### <a name="resolution"></a>Resolução
- Esse erro ocorre devido à maneira que recursos de Web part visual são cancelados no SharePoint. Para implantar com êxito a Web part visual, implante a solução novamente, escolha a tecla F5.
+ Esse erro ocorre devido à maneira como recursos de Web part visual são retraídos no SharePoint. Para implantar com êxito a Web part visual, implante a solução novamente escolhendo a **F5** chave.
 
-## <a name="warning-appears-when-deploying-nested-user-controls"></a>Aviso Exibido ao Implantar Controles de Usuário Aninhados
- Este aviso ocorre quando você implanta uma solução do SharePoint que tem controles de usuário aninhados, como uma Web part visual que contém um controle de usuário ou um controle de usuário que contém uma Web part visual ou outro controle de usuário. Este aviso ocorre se você adicionar um controle a um designer, arrastando-o na caixa de ferramentas ou usando o @Register diretiva na exibição da fonte.
+## <a name="warning-appears-when-deploying-nested-user-controls"></a>Aviso é exibido ao implantar controles de usuário aninhados
+ Este aviso ocorre quando você implanta uma solução do SharePoint que tem controles de usuário aninhados, como uma Web part visual que contém um controle de usuário ou um controle de usuário que contém uma Web part visual ou outro controle de usuário. Este aviso ocorre se você adicionar um controle a um designer arrastando-o na caixa de ferramentas ou usando o @Register diretiva na exibição da fonte.
 
-### <a name="error-message"></a>Mensagem de erro
+### <a name="error-message"></a>mensagem de erro
  Aviso 1 elemento ' [*nome do controle*]' não é um elemento conhecido. Isso pode ocorrer se houver um erro de compilação no site da Web ou o arquivo Web. config está ausente.
 
 ### <a name="resolution"></a>Resolução
- Se o [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sistema de projeto não está ciente de um controle de usuário aninhados, ele não pode fornecer o IntelliSense e emite o aviso. O sistema do projeto não fica ciente de um controle de usuário aninhados se o projeto não é compilado e o designer não está fechado e reaberto, ou se o cancele automaticamente opção estiver habilitada, que faz com que o controle de usuário deve ser cancelada na seção do SharePoint após a depuração.
+ Se o [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sistema de projeto não está ciente de um controle de usuário aninhados, ele não pode fornecer o IntelliSense e ele emitirá o aviso. O sistema de projeto não fica ciente de um controle de usuário aninhado se o projeto não é compilado e o designer não é fechado e reaberto, ou se a retração automática opção estiver habilitada, que faz com que o controle de usuário seja retraído da seção o hive do SharePoint após a depuração.
 
- Para remover esse aviso, compilar o projeto e, em seguida, feche e reabra o designer ou desabilitar a opção para o projeto de retirada automaticamente. Para fazer isso, desmarque o **cancele automaticamente após a depuração** caixa de seleção de **SharePoint** guia da caixa de diálogo Propriedades do projeto.
+ Para remover este aviso, compile o projeto e, em seguida, feche e, em seguida, reabra o designer ou desabilite a opção para o projeto de retração automática. Para fazer isso, desmarque a **retração automática após a depuração** caixa de seleção a **SharePoint** guia da caixa de diálogo de propriedades do projeto.
 
 ## <a name="see-also"></a>Consulte também
- [Empacotando e implantando recursos do SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
-
+ [Empacotar e implantar soluções do SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
 

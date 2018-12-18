@@ -1,5 +1,5 @@
 ---
-title: Trabalhando com itens de calendário | Microsoft Docs
+title: Trabalhar com itens de calendário
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -21,28 +21,29 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 3caae91f24c3fbdefe24ae421fb80536b9d8ca56
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 199665d7cce60034c2b998b6c67fbc1623c43307
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35258587"
 ---
-# <a name="working-with-calendar-items"></a>Trabalhando com itens de calendário
-  O <xref:Microsoft.Office.Interop.Outlook.AppointmentItem> classe contém os métodos e propriedades que você usa para executar tarefas com itens de calendário.  
+# <a name="work-with-calendar-items"></a>Trabalhar com itens de calendário
+  O <xref:Microsoft.Office.Interop.Outlook.AppointmentItem> classe contém os métodos e propriedades que você pode usar para executar tarefas com itens de calendário.  
   
 |Tarefa|Procedimento|  
 |----------|---------------|  
-|Criar um compromisso e adicionar destinatários.|[Como criar compromissos de forma programática](../vsto/how-to-programmatically-create-appointments.md)|  
-|Exclua uma instância de um compromisso recorrente.|[Como excluir compromissos de forma programática](../vsto/how-to-programmatically-delete-appointments.md)|  
-|Crie uma pasta de calendário e adicionar um item de compromisso.|[Como criar um calendário personalizado de forma programática](../vsto/how-to-programmatically-create-a-custom-calendar.md)|  
-|Criar uma solicitação de reunião e enviá-lo.|[Como criar uma solicitação de reunião de forma programática](../vsto/how-to-programmatically-create-a-meeting-request.md)|  
+|Criar um compromisso e adicionar destinatários.|[Como: criar compromissos programaticamente](../vsto/how-to-programmatically-create-appointments.md)|  
+|Exclua uma instância de um compromisso recorrente.|[Como: excluir compromissos programaticamente](../vsto/how-to-programmatically-delete-appointments.md)|  
+|Crie uma pasta de calendário e adicione um item de compromisso.|[Como: criar programaticamente um calendário personalizado](../vsto/how-to-programmatically-create-a-custom-calendar.md)|  
+|Crie uma solicitação de reunião e enviá-lo.|[Como: criar programaticamente uma solicitação de reunião](../vsto/how-to-programmatically-create-a-meeting-request.md)|  
   
- Para obter mais informações sobre as tarefas do Outlook e o modelo de objeto do Outlook, consulte [visão geral de modelo de objeto do Outlook](../vsto/outlook-object-model-overview.md).  
+ Para obter mais informações sobre tarefas do Outlook e o modelo de objeto do Outlook, consulte [visão geral de modelo de objeto do Outlook](../vsto/outlook-object-model-overview.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhando com itens de contato](../vsto/working-with-contact-items.md)   
- [Trabalhando com pastas](../vsto/working-with-folders.md)   
- [Trabalhando com itens de email](../vsto/working-with-mail-items.md)   
+ [Trabalhar com itens de contato](../vsto/working-with-contact-items.md)   
+ [Trabalhar com pastas](../vsto/working-with-folders.md)   
+ [Trabalhar com itens de email](../vsto/working-with-mail-items.md)   
  [Soluções do Outlook](../vsto/outlook-solutions.md)  
   
   

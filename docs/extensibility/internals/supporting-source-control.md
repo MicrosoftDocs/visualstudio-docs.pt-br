@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130647"
 ---
 # <a name="supporting-source-control"></a>Suporte a controle de origem
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] dá suporte a check-out do arquivo, check-ins e outras operações de controle de origem para o projeto ou o editor. Como um cliente de controle de origem, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] é projetado para interagir com um pacote de controle de origem, como [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)], que fornece arquivamento, controle de versão e recursos de controle para um conjunto de arquivos definido dinamicamente.  

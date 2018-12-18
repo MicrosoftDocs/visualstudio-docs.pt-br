@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a37bbc808322c54d1e0c9354353de2f59b2e19af
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c4c114919d74fba7a28c9d3ea11fc5bb9947d6a3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866019"
 ---
 # <a name="bplocationcodefileline"></a>BP_LOCATION_CODE_FILE_LINE
-Contém os dados para o local de um ponto de interrupção em uma linha específica em um arquivo do código fonte.  
+Contém os dados para o local de um ponto de interrupção em uma linha específica em um arquivo de origem do código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +42,7 @@ typedef struct _BP_LOCATION_CODE_FILE_LINE {
  O [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) objeto que representa a posição do documento do ponto de interrupção.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é membro do [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura como parte de uma união.  
+ Essa estrutura é um membro do [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura como parte de uma união.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

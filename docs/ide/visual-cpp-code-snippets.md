@@ -1,9 +1,9 @@
 ---
-title: Trechos de código do Visual C++ | Microsoft Docs
-ms.custom: ''
+title: Snippets de código do Visual C++
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 author: gewarren
 ms.author: gewarren
 manager: douge
@@ -11,25 +11,26 @@ dev_langs:
 - CPP
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa6057f45c3c9030264f6a795caece6ed8a3b28e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f119f3b2bc438eacfaaa722bd57fb440aa303052
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948922"
 ---
-# <a name="visual-c-code-snippets"></a>Trechos de código do Visual C++
+# <a name="visual-c-code-snippets"></a>Snippets de código do Visual C++
 
-No Visual Studio, você pode usar trechos de código para adicionar código comumente usado nos seus arquivos de código do C++. Em geral, você pode usar os trechos de código de forma bem parecida com o C#, mas o conjunto de trechos de código padrão é diferente.
+No Visual Studio, você pode usar snippets de código para adicionar código comumente usado nos seus arquivos de código do C++. Em geral, você pode usar os snippets de código de forma bem parecida com o C#, mas o conjunto de snippets de código padrão é diferente.
 
-Você pode adicionar um trecho de código em um local específico no seu código (inserção) ou envolver algum código selecionado com um trecho de código.
+Você pode adicionar um snippet de código em um local específico no seu código (inserção) ou envolver algum código selecionado com um snippet de código.
 
-## <a name="inserting-a-code-snippet"></a>Inserindo um trecho de código
+## <a name="insert-a-code-snippet"></a>Inserir um snippet de código
 
-Para inserir um trecho de código, abra um arquivo de código do C++ (.cpp ou .h), clique em algum lugar dentro do arquivo e siga um destes procedimentos:
+Para inserir um snippet de código, abra um arquivo de código C++ (*.cpp* ou *.h*), clique em algum lugar dentro do arquivo e siga um destes procedimentos:
 
-- Clique com o botão direito do mouse para obter o menu de contexto e selecione **Inserir Trecho**
+- Clique com o botão direito do mouse para obter o menu de contexto e selecione **Inserir Snippet**
 
-- No menu **Editar / IntelliSense**, selecione **Inserir Trecho**
+- No menu **Editar / IntelliSense**, selecione **Inserir Snippet**
 
 - Use as teclas de atalho: **Ctrl**+**K**+**X**
 
@@ -41,17 +42,17 @@ Você deve ver uma lista de opções que começam com **#if**. Ao selecionar **#
 #endif // 0
 ```
 
-Em seguida, você pode substituir o 0 pela condição correta.
+Em seguida, você pode substituir o **0** pela condição correta.
 
-## <a name="using-a-code-snippet-to-surround-selected-code"></a>Usar um trecho de código para envolver o código selecionado
+## <a name="use-a-code-snippet-to-surround-selected-code"></a>Usar um snippet de código para envolver o código selecionado
 
-Para usar um trecho de código para envolver o código selecionado, selecione uma linha (ou várias linhas) e siga um destes procedimentos:
+Para usar um snippet de código para envolver o código selecionado, selecione uma linha (ou várias linhas) e siga um destes procedimentos:
 
 - Clique com o botão direito do mouse para obter o menu de contexto e selecione **Envolver Com**
 
 - No menu **Editar** > **IntelliSense**, selecione **Envolver Com**
 
-- Usando o teclado, pressione: **CTRL**+**K**+**S**
+- Usando o teclado, pressione: **Ctrl**+**K**+**S**
 
 Selecione **#if**. Você deve ver algo parecido com isso:
 
@@ -63,15 +64,15 @@ Selecione **#if**. Você deve ver algo parecido com isso:
 
 Em seguida, você pode substituir o 0 pela condição correta.
 
-## <a name="where-can-i-find-a-complete-list-of-the-c-code-snippets"></a>Onde posso encontrar uma lista completa dos trechos de código do C++?
+## <a name="where-can-i-find-a-complete-list-of-the-c-code-snippets"></a>Onde posso encontrar uma lista completa dos snippets de código do C++?
 
-Você pode encontrar a lista completa de trechos de código do C++ indo até o **Gerenciador de Trechos de Código** (no menu **Ferramentas**) e configurando a **Linguagem** para **Visual C++**. Na janela abaixo, expanda **Visual C++**. Você verá os nomes de todos os trechos de código do C++ em ordem alfabética.
+Você pode encontrar a lista completa de snippets de código do C++ indo até o **Gerenciador de Snippets de Código** (no menu **Ferramentas**) e configurando a **Linguagem** para **Visual C++**. Na janela abaixo, expanda **Visual C++**. Você verá os nomes de todos os snippets de código do C++ em ordem alfabética.
 
-Os nomes da maioria dos trechos de código são auto-explicativos, mas alguns nomes podem ser confusos.
+Os nomes da maioria dos snippets de código são auto-explicativos, mas alguns nomes podem ser confusos.
 
 ## <a name="class-vs-classi"></a>Class versus classi
 
-O trecho **class** fornece a definição de uma classe chamada MyClass, com o construtor e o destruidor padrão apropriado, em que as definições do construtor e do destruidor estão localizadas fora da classe:
+O snippet **class** fornece a definição de uma classe chamada `MyClass`, com o construtor e o destruidor padrão apropriado, em que as definições do construtor e do destruidor estão localizadas fora da classe:
 
 ```cpp
 class MyClass
@@ -93,7 +94,7 @@ MyClass::~MyClass()
 }
 ```
 
-O trecho de código **classi** também fornece a definição de uma classe chamada MyClass, mas o construtor e o destruidor padrão estão definidos dentro da definição de classe:
+O snippet de código **classi** também fornece a definição de uma classe chamada `MyClass`, mas o construtor e o destruidor padrão são definidos dentro da definição de classe:
 
 ```cpp
 class MyClass
@@ -114,9 +115,9 @@ private:
 
 ## <a name="for-vs-forr-vs-rfor"></a>para vs. forr vs rfor
 
-Há três trechos de código **for** diferentes que fornecem diferentes tipos de loops `for`.
+Há três snippets **for** diferentes que fornecem diferentes tipos de loops `for`.
 
-O trecho **rfor** fornece um loop for [baseado em intervalo](/cpp/cpp/range-based-for-statement-cpp) (link). Este constructo é preferível em relação aos loops `for` baseados em índice.
+O snippet **rfor** fornece um loop for [baseado em intervalo](/cpp/cpp/range-based-for-statement-cpp) (link). Este constructo é preferível em relação aos loops `for` baseados em índice.
 
 ```cpp
 for (auto& i : v)
@@ -125,7 +126,7 @@ for (auto& i : v)
 }
 ```
 
-O trecho **for** fornece um loop `for` no qual a condição é baseada no comprimento (em `size_t`) de um objeto.
+O snippet **for** fornece um loop `for` no qual a condição é baseada no comprimento (em `size_t`) de um objeto.
 
 ```cpp
 for (size_t i = 0; i < length; i++)
@@ -134,7 +135,7 @@ for (size_t i = 0; i < length; i++)
 }
 ```
 
-O trecho **forr** fornece um loop `for` reverso em que a condição é baseada no comprimento (em inteiros) de um objeto.
+O snippet **forr** fornece um loop `for` reverso em que a condição é baseada no comprimento (em inteiros) de um objeto.
 
 ```cpp
 for (int i = length - 1; i >= 0; i--)
@@ -143,9 +144,9 @@ for (int i = length - 1; i >= 0; i--)
 }
 ```
 
-## <a name="the-destructor-snippet-"></a>O trecho de destruidor (~)
+## <a name="the-destructor-snippet-"></a>O snippet de destruidor (~)
 
-O trecho de destruidor (**~**) apresenta comportamento diferente em diferentes contextos. Se você inserir este trecho dentro de uma classe, ele fornecerá um destruidor para essa classe. Por exemplo, considerando o seguinte código:
+O snippet de destruidor (**~**) apresenta comportamento diferente em diferentes contextos. Se você inserir este snippet dentro de uma classe, ele fornecerá um destruidor para essa classe. Por exemplo, considerando o seguinte código:
 
 ```cpp
 class SomeClass {
@@ -153,7 +154,7 @@ class SomeClass {
 };
 ```
 
-Se você inserir o trecho de destruidor, ele fornecerá um destruidor para a SomeClass:
+Se você inserir o snippet de destruidor, ele fornecerá um destruidor para `SomeClass`:
 
 ```cpp
 class SomeClass {
@@ -164,14 +165,13 @@ class SomeClass {
 };
 ```
 
-Se você tentar inserir o trecho de destruidor fora de uma classe, ele fornecerá um destruidor com um nome de espaço reservado:
+Se você tentar inserir o snippet de destruidor fora de uma classe, ele fornecerá um destruidor com um nome de espaço reservado:
 
 ```cpp
 ~TypeNamePlaceholder()
 {
-
 ```
 
 ## <a name="see-also"></a>Consulte também
 
-[Trechos de código](../ide/code-snippets.md)
+- [Snippets de código](../ide/code-snippets.md)

@@ -1,6 +1,7 @@
 ---
 title: 'CA1601: não usar temporizadores que impeçam alterações no estado de energia'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 12e00942bbae9dfdb17f60ec6acac1d18772db3c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9ae36ae1f4af7281c8f32af57fd08cdda6145ba0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917330"
 ---
 # <a name="ca1601-do-not-use-timers-that-prevent-power-state-changes"></a>CA1601: não usar temporizadores que impeçam alterações no estado de energia
+
 |||
 |-|-|
 |NomeDoTipo|DoNotUseTimersThatPreventPowerStateChanges|
@@ -32,11 +35,11 @@ ms.lasthandoff: 04/19/2018
 ## <a name="cause"></a>Causa
  Um temporizador tem um intervalo definido para ocorrer mais de uma vez por segundo.
 
-## <a name="rule-description"></a>Descrição da Regra
- Não pesquise com mais frequência do que uma vez por segundo ou use timers que ocorrem com mais frequência do que uma vez por segundo. A atividade periódica de alta frequência manterá a CPU ocupada e interferirá nos temporizadores ociosos que economizam energia e desligam monitores e discos rígidos.
+## <a name="rule-description"></a>Descrição da regra
+ Não faça sondagens com mais frequência do que uma vez por segundo ou use timers que ocorrem com mais frequência do que uma vez por segundo. A atividade periódica de alta frequência manterá a CPU ocupada e interferirá nos temporizadores ociosos que economizam energia e desligam monitores e discos rígidos.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Definir intervalos de timer para ocorrem menos de uma vez por segundo.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Definir intervalos de timer para ocorrer a menos de uma vez por segundo.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- Essa regra deve ser suprimida somente se o timer de acionamento mais de uma vez por segundo é necessário e considerações de mobilidade podem ser ignoradas.
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+ Essa regra deve ser suprimida somente se o temporizador de acionamento mais de uma vez por segundo é necessária e considerações de mobilidade podem ser ignoradas com segurança.

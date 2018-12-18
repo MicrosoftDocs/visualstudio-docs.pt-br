@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc42a7be878ce52f4d951171c6b5cb08e195d564
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b827e1f7e26fb98e9d49de4e9fe2388e46ee07cb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831166"
 ---
 # <a name="sccaddfilesfromscc-function"></a>Função SccAddFilesFromSCC
 Essa função adiciona uma lista de arquivos do controle de origem para o projeto aberto no momento.  
@@ -40,24 +41,24 @@ SCCRTN SccAddFilesFromSCC(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  pContext  
- [in] O ponteiro de contexto de plug-in de controle de origem.  
+ [in] O ponteiro de contexto de plug-in de controle do código-fonte.  
   
  hWnd  
  [in] Um identificador para a janela do IDE que o plug-in de controle de origem pode usar como um pai para todas as caixas de diálogo que ele oferece.  
   
  lpUser  
- [out no] O nome de usuário (até SCC_USER_SIZE, incluindo o terminador nulo).  
+ [no, out] O nome de usuário (até SCC_USER_SIZE, incluindo o terminador nulo).  
   
  lpAuxProjPath  
- [out no] Auxiliar cadeia de caracteres que identifica o projeto (até `SCC_PRJPATH_`tamanho, incluindo o terminador nulo).  
+ [no, out] Auxiliar cadeia de caracteres que identifica o projeto (até `SCC_PRJPATH_`tamanho, incluindo o terminador nulo).  
   
  cFiles  
- [in] Número de arquivos fornecido pelo `lpFilePaths`.  
+ [in] Número de arquivos fornecido por `lpFilePaths`.  
   
  lpFilePaths  
- [out no] Matriz de nomes de arquivo para adicionar ao projeto atual.  
+ [no, out] Matriz de nomes de arquivo para adicionar ao projeto atual.  
   
  lpDestination  
  [in] O caminho de destino onde os arquivos devem ser gravados.  
@@ -66,18 +67,18 @@ SCCRTN SccAddFilesFromSCC(
  [in] O comentário a ser aplicado a cada um dos arquivos que está sendo adicionados.  
   
  pbResults  
- [out no] Matriz de sinalizadores de conjunto para indicar êxito (diferente de zero ou verdadeiro) ou falha (zero ou FALSE) para cada arquivo (tamanho da matriz deve ser pelo menos `cFiles` longo).  
+ [no, out] Matriz de sinalizadores que está definido para indicar êxito (diferente de zero ou TRUE) ou falha (zero ou FALSE) para cada arquivo (tamanho da matriz deve ter pelo menos `cFiles` longo).  
   
-## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+## <a name="return-value"></a>Valor retornado  
+ A implementação de plug-in de controle do código-fonte desta função deve retornar um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |SCC_E_PROJNOTOPEN|Projeto não está aberto.|  
-|SCC_E_OPNOTPERFORMED|Conexão não está no mesmo projeto, conforme especificado pelo `lpAuxProjPath.`|  
+|SCC_E_OPNOTPERFORMED|Conexão não está no mesmo projeto conforme especificado por `lpAuxProjPath.`|  
 |SCC_E_NOTAUTHORIZED|Usuário não está autorizado a atualizar o banco de dados.|  
 |SCC_E_NONSPECIFICERROR|Erro desconhecido.|  
 |SCC_I_RELOADFILE|Um arquivo ou projeto precisa ser recarregado.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções de API do plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
+ [Funções de API de plug-in da controle de origem](../extensibility/source-control-plug-in-api-functions.md)

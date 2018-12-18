@@ -13,20 +13,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bfe40903063fc4ae412603563647a0deb39788f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a0313c5e0bcc18bf9ca22bdd996b862056010af1
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35668165"
 ---
-# <a name="summary-view---sampling-data"></a>Exibição Resumo – Dados de amostragem
+# <a name="summary-view---sampling-data"></a>Exibição Resumo – dados de amostragem
 A exibição Resumo exibe informações sobre as funções mais caras de desempenho em uma execução da criação de perfil. Para obter mais informações, incluindo uma descrição das listas Links de notificação e Relatório, consulte [Exibição Resumo](../profiling/summary-view.md).  
   
 > [!NOTE]
 >  Os recursos de segurança aprimorados no Windows 8 e no Windows Server 2012 exigiram alterações significativas na maneira como o criador de perfil do Visual Studio coleta dados nessas plataformas. Os aplicativos UWP também requerem novas técnicas de coleta. Consulte [Ferramentas de desempenho em aplicativos do Windows 8 e do Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
   
 ## <a name="timeline-graph"></a>Gráfico de linha do tempo  
- O gráfico de linha do tempo na exibição Resumo mostra o percentual da utilização do processador (CPU) do aplicativo com perfil ao longo do tempo em que ocorreu a criação de perfil. É possível usar o gráfico de linha do tempo para filtrar a exibição para um intervalo de tempo selecionado. Para obter mais informações, consulte [Como filtrar exibições de relatório por meio da linha do tempo de resumo](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).  
+ O gráfico de linha do tempo na exibição Resumo mostra o percentual da utilização do processador (CPU) do aplicativo com perfil ao longo do tempo em que ocorreu a criação de perfil. É possível usar o gráfico de linha do tempo para filtrar a exibição para um intervalo de tempo selecionado. Para obter mais informações, confira [Como filtrar exibições de relatório por meio da Linha do Tempo de Resumo](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).  
   
 ## <a name="hot-path"></a>Afunilamento  
  O **Afunilamento** exibe o caminho de execução no qual a maioria das amostras foi coletada. É possível clicar em uma função para mostrar a exibição Detalhes da Função referente a ela. Para exibir outras exibições da função, clique com o botão direito do mouse na função e, em seguida, clique em uma exibição na lista.  
@@ -52,5 +53,5 @@ A exibição Resumo exibe informações sobre as funções mais caras de desempe
 |**% de Amostras Exclusivas**|O percentual de todas as amostras na execução de criação de perfil coletadas durante a execução de código pela função em seu corpo. O percentual exclui as amostras que foram coletadas quando as funções chamadas por essa função estavam em execução.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibição Resumo](../profiling/summary-view-dotnet-memory-data.md)   
- [Exibição de Resumo](../profiling/summary-view-instrumentation-data.md)
+ [Exibição Resumo – dados de memória do .NET](../profiling/summary-view-dotnet-memory-data.md)   
+ [Exibição Resumo – dados de instrumentação](../profiling/summary-view-instrumentation-data.md)

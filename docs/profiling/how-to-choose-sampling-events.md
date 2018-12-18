@@ -20,11 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: da44be7f972a75e143e00346bf4a39d0bdf65c27
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b8af903abb15d06d8d76d73cca4a9c337d45ee45
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765626"
 ---
 # <a name="how-to-choose-sampling-events"></a>Como escolher eventos de amostragem
 Por padrão, as ferramentas de criação de perfil do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] coletam dados de desempenho em um intervalo especificado como um número de ciclos de processador que são usados pelo processo analisado. O número padrão de ciclos em um intervalo é de 10.000.000, que é aproximadamente 0,01 segundos em um computador de 1 GH. Você pode alterar o número de ciclos em um intervalo e também pode alterar o evento de amostragem. Os eventos de amostragem a seguir estão disponíveis:  
@@ -60,8 +61,8 @@ Por padrão, as ferramentas de criação de perfil do [!INCLUDE[vsprvs](../code-
 5.  Ao selecionar um evento de amostra, um valor de intervalo de amostragem padrão é exibido na caixa de texto **Intervalo de Amostragem**. Se necessário, insira o valor desejado na caixa de texto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurando sessões de desempenho](../profiling/configuring-performance-sessions.md)   
+ [Configurar sessões de desempenho](../profiling/configuring-performance-sessions.md)   
  [Como escolher métodos de coleta](../profiling/how-to-choose-collection-methods.md)   
- [Contadores da CPU e do Windows](../profiling/cpu-and-windows-counters.md)   
+ [Contadores de CPU e do Windows](../profiling/cpu-and-windows-counters.md)   
  [Noções básicas sobre valores de dados de amostragem](../profiling/understanding-sampling-data-values.md)   
- [Criando perfil na linha de comando](../profiling/using-the-profiling-tools-from-the-command-line.md)
+ [Criar perfil da linha de comando](../profiling/using-the-profiling-tools-from-the-command-line.md)

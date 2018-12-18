@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 68561b5a814ba27f241cee3118ef1bae938adb20
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b7444a4d3e8ad6e3f5fdd91d34058e20e13caf38
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237536"
 ---
-# <a name="functions-view---contention-data"></a>Exibição de Funções – Dados de Contenção
+# <a name="functions-view---contention-data"></a>Exibição Funções – dados de contenção
 A exibição de relatório de Funções de dados de contenção lista as funções na execução de criação de perfil que foram bloqueadas da execução durante o processo de criação de perfil.  
   
  A tabela a seguir explica os valores que são exibidos na exibição de Funções de um arquivo de dados de criação de perfil que foi coletado usando o método de simultaneidade.  
@@ -43,9 +44,9 @@ A exibição de relatório de Funções de dados de contenção lista as funçõ
 |**Arquivo de Origem**|O arquivo de origem que contém a definição dessa função.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Como personalizar as colunas de exibição do relatório](../profiling/how-to-customize-report-view-columns.md)   
+ [Como personalizar as colunas de exibição de relatório](../profiling/how-to-customize-report-view-columns.md)   
  [Exibição de Funções](../profiling/functions-view.md)   
- [Exibição de Funções – Instrumentação](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
- [Exibição de Funções – Amostragem](../profiling/functions-view-dotnet-memory-sampling-data.md)   
+ [Exibição Funções – instrumentação](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
+ [Exibição Funções – amostragem](../profiling/functions-view-dotnet-memory-sampling-data.md)   
  [Exibição de Funções](../profiling/functions-view-instrumentation-data.md)   
  [Exibição Funções](../profiling/functions-view-sampling-data.md)

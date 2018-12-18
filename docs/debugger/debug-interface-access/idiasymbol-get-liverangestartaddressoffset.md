@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 471c9ecfb7ee1aa318e2db9c1c7de0cd56a1184f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 517e3c516f18d32634d0c8243d65674175e7da17
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49870972"
 ---
 # <a name="idiasymbolgetliverangestartaddressoffset"></a>IDiaSymbol::get_liveRangeStartAddressOffset
-Retorna a parte offset do endereço inicial do intervalo no qual o símbolo local é válido.  
+Retorna a parte do deslocamento do endereço inicial do intervalo no qual o símbolo local é válido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,13 +34,13 @@ HRESULT get_liveRangeStartAddressOffset (
   
 #### <a name="parameters"></a>Parâmetros  
  `offset`  
- [out] Retorna a parte de deslocamento do intervalo de endereço inicial.  
+ [out] Retorna a parte do deslocamento do intervalo de endereços inicial.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 > [!NOTE]
->  Um código de erro significa que o símbolo não tem informações de intervalo dinâmico.  
+>  Um código de erro retornado significa que o símbolo não tem informações de intervalo em tempo real.  
   
 ## <a name="remarks"></a>Comentários  
  O endereço formado pela seção e deslocamento é o início do intervalo no qual o símbolo é válido.  

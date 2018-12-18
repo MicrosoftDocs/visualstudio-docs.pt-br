@@ -1,6 +1,7 @@
 ---
 title: Valor (propriedade dinâmica de XAttribute)
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: reference
 apiname:
@@ -12,11 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b98272fe2c86137eb925a54924e1b0e8411ed0e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 473ff5b0124a050b60c9dc02929b2bad83f3661e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842333"
 ---
 # <a name="value-xattribute-dynamic-property"></a>Valor (propriedade dinâmica de XAttribute)
 
@@ -24,19 +26,18 @@ Obtém ou define o valor de atributo XML.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```xaml
 attrib.Value
 ```
 
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor retornado
 
-
-          <xref:System.String> que contém o valor deste atributo.
+<xref:System.String> que contém o valor deste atributo.
 
 ## <a name="exceptions"></a>Exceções
 
 |Tipo de exceção|Condição|
-|--------------------|---------------|
+| - |---------------|
 |<xref:System.ArgumentNullException>|Ao definir, `value` é `null`.|
 
 ## <a name="remarks"></a>Comentários

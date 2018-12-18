@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fce67b16d8de1e70e308fd107af3c26012e752c8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: de18df907c8a30235fcfc3391fe6879afdcaa1f9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854293"
 ---
 # <a name="idebugprocess2detach"></a>IDebugProcess2::Detach
 Desanexa o depurador desse processo desanexando todos os programas no processo.  
@@ -37,10 +38,10 @@ int Detach();
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Todos os programas e o processo continuam sendo executado, mas não fazem parte da sessão de depuração. Após a operação desanexar depuração completa e não mais eventos para esse processo (e seus programas) serão enviados.  
+ Todos os programas e o processo continuam em execução, mas não fazem mais parte da sessão de depuração. Após a operação desanexar depuração completa e não mais eventos para esse processo (e seus programas) serão enviados.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

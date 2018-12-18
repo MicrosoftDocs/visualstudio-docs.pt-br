@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bbf5b4c26b46c0be6038651a41c751afc39e4da5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 064e65f56bd89b6ba73d9e65ff1e6fd5e16ee2b5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843243"
 ---
 # <a name="templatedata-element-visual-studio-templates"></a>Elemento TemplateData (modelos do Visual Studio)
-Categoriza o modelo e define como ele exibe em um a **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.  
+Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo.  
   
  \<VSTemplate >  
  \<TemplateData >  
@@ -47,39 +48,39 @@ Categoriza o modelo e define como ele exibe em um a **novo projeto** ou **Adicio
   
 ### <a name="child-elements"></a>Elementos filho  
   
-|Elemento|Descrição|  
-|-------------|-----------------|  
-|[Nome](../extensibility/name-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Especifica o nome do modelo como ele aparece no **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
-|[Descrição](../extensibility/description-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Especifica a descrição do modelo como ele aparece no **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
-|[Ícone](../extensibility/icon-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Especifica o caminho e o nome do arquivo de imagem que serve como o ícone que aparece no **novo projeto** ou **Adicionar Novo Item** caixa de diálogo para o modelo.|  
-|[ProjectType](../extensibility/projecttype-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo de projeto para que ele apareça no grupo especificado no **novo projeto** caixa de diálogo.|  
-|[ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Classifica o modelo de projeto para que ele apareça sob a subcategoria especificada no **novo projeto** caixa de diálogo.|  
-|[TemplateID](../extensibility/templateid-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Especifica a ID do modelo.|  
-|[TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Especifica a ID do grupo de modelo.|  
-|[Ordem de classificação](../extensibility/sortorder-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Especifica um valor que é usado para organizar o modelo, entre outros modelos na mesma categoria, como ele aparece no **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
-|[CreateNewFolder](../extensibility/createnewfolder-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Especifica se uma pasta contendo é criada na instanciação do projeto.|  
-|[DefaultName](../extensibility/defaultname-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Especifica o nome que o sistema de projeto do Visual Studio gerará para o projeto ou item quando ele é criado.|  
-|[ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Especifica se o sistema de projeto do Visual Studio gerará o nome padrão para um projeto ou item quando ele é criado.|  
-|[PromptForSaveOnCreation](../extensibility/promptforsaveoncreation-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Especifica se o projeto pode ser criado como um projeto temporário.|  
-|[EnableLocationBrowseButton](../extensibility/enablelocationbrowsebutton-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Especifica se o **procurar** botão está disponível no **novo projeto** caixa de diálogo, para que os usuários podem modificar facilmente o diretório padrão onde um novo projeto é salvo.|  
-|[Oculto](../extensibility/hidden-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Especifica se o modelo é exibido em qualquer um de **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
-|[NumberOfParentCategoriesToRollUp](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md)|Elemento opcional.<br /><br /> Especifica o número de categorias pai que exibirá o modelo de **novo projeto** caixa de diálogo.|  
-|[LocationFieldMRUPrefix](../extensibility/locationfieldmruprefix-element-visual-studio-templates.md)|Elemento opcional.|  
-|[LocationField](../extensibility/locationfield-element-visual-studio-project-templates.md)|Elemento opcional.<br /><br /> Especifica se ou não o **local** caixa de texto de **novo projeto** caixa de diálogo é habilitada, desabilitada ou ocultada para o modelo de projeto.|  
-|[RequiredFrameworkVersion](../extensibility/requiredframeworkversion-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Use esse elemento se o modelo só oferece suporte a uma versão específica de mínimo e versões posteriores, se houver, do .NET Framework.|  
-|[SupportsMasterPage](../extensibility/supportsmasterpage-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Especifica se o modelo dá suporte a uma página mestra para projetos web.|  
-|[SupportsCodeSeparation](../extensibility/supportscodeseparation-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Especifica se o modelo dá suporte à separação de código, ou o modelo de página code-behind, para projetos web.|  
-|[SupportsLanguageDropDown](../extensibility/supportslanguagedropdown-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Especifica se o modelo é idêntico para vários idiomas e se o **idioma** opção está disponível na **novo projeto** caixa de diálogo.|  
-|[TargetPlatformName](../extensibility/targetplatformname-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Especifica a plataforma que os destinos de modelo de projeto. Este elemento Especifica que um modelo de projeto é usado para criar [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] aplicativos.|  
+| Elemento | Descrição |
+| - | - |
+| [Nome](../extensibility/name-element-visual-studio-templates.md) | Elemento obrigatório.<br /><br /> Especifica o nome do modelo como ele aparece em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo. |
+| [Descrição](../extensibility/description-element-visual-studio-templates.md) | Elemento obrigatório.<br /><br /> Especifica a descrição do modelo como ele aparece em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo. |
+| [Ícone](../extensibility/icon-element-visual-studio-templates.md) | Elemento obrigatório.<br /><br /> Especifica o caminho e o nome do arquivo do arquivo de imagem que serve como o ícone, o que é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo, para o modelo. |
+| [ProjectType](../extensibility/projecttype-element-visual-studio-templates.md) | Elemento obrigatório.<br /><br /> Categoriza o modelo de projeto para que ele apareça sob o grupo especificado na **novo projeto** caixa de diálogo. |
+| [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md) | Elemento opcional.<br /><br /> Classifica o modelo de projeto para que ele apareça sob o nó da subcategoria especificado na **novo projeto** caixa de diálogo. |
+| [TemplateID](../extensibility/templateid-element-visual-studio-templates.md) | Elemento opcional.<br /><br /> Especifica a ID do modelo. |
+| [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md) | Elemento opcional.<br /><br /> Especifica a ID do grupo de modelo. |
+| [Ordem de classificação](../extensibility/sortorder-element-visual-studio-templates.md) | Elemento opcional.<br /><br /> Especifica um valor que é usado para organizar o modelo, entre outros modelos na mesma categoria, como ele aparece em ambos os **novo projeto** ou **Adicionar Novo Item** caixa de diálogo. |
+| [CreateNewFolder](../extensibility/createnewfolder-element-visual-studio-templates.md) | Elemento opcional.<br /><br /> Especifica se uma pasta que contém é criada na instanciação do projeto. |
+| [DefaultName](../extensibility/defaultname-element-visual-studio-templates.md) | Elemento opcional.<br /><br /> Especifica o nome que o sistema de projeto do Visual Studio gerará para o projeto ou item quando ele é criado. |
+| [ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md) | Elemento opcional.<br /><br /> Especifica se o sistema de projeto do Visual Studio gerará o nome padrão para um projeto ou item quando ele é criado. |
+| [PromptForSaveOnCreation](../extensibility/promptforsaveoncreation-element-visual-studio-templates.md) | Elemento opcional.<br /><br /> Especifica se o projeto pode ser criado como um projeto temporário. |
+| [EnableLocationBrowseButton](../extensibility/enablelocationbrowsebutton-element-visual-studio-templates.md) | Elemento opcional.<br /><br /> Especifica se o **navegue** botão está disponível na **novo projeto** caixa de diálogo, para que os usuários podem facilmente modificar o diretório padrão em que um novo projeto é salvo. |
+| [Oculto](../extensibility/hidden-element-visual-studio-templates.md) | Elemento opcional.<br /><br /> Especifica se o modelo é exibido em qualquer um de **novo projeto** ou **Adicionar Novo Item** caixa de diálogo. |
+| [NumberOfParentCategoriesToRollUp](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md) | Elemento opcional.<br /><br /> Especifica o número de categorias pai que exibirá o modelo na **novo projeto** caixa de diálogo. |
+| [LocationFieldMRUPrefix](../extensibility/locationfieldmruprefix-element-visual-studio-templates.md) | Elemento opcional. |
+| [LocationField](../extensibility/locationfield-element-visual-studio-project-templates.md) | Elemento opcional.<br /><br /> Especifica se ou não a **local** caixa de texto a **novo projeto** caixa de diálogo é habilitada, desabilitada ou ocultada para o modelo de projeto. |
+| [RequiredFrameworkVersion](../extensibility/requiredframeworkversion-element-visual-studio-templates.md) | Elemento opcional.<br /><br /> Use esse elemento se o modelo só dá suporte a uma versão específica de mínimo e versões posteriores, se houver, do .NET Framework. |
+| [SupportsMasterPage](../extensibility/supportsmasterpage-element-visual-studio-templates.md) | Elemento opcional.<br /><br /> Especifica se o modelo dá suporte a uma página mestra para projetos web. |
+| [SupportsCodeSeparation](../extensibility/supportscodeseparation-element-visual-studio-templates.md) | Elemento opcional.<br /><br /> Especifica se o modelo dá suporte à separação de código ou o modelo de página code-behind, para projetos web. |
+| [SupportsLanguageDropDown](../extensibility/supportslanguagedropdown-element-visual-studio-templates.md) | Elemento opcional.<br /><br /> Especifica se o modelo é idêntico para vários idiomas e se o **linguagem** opção está disponível na **novo projeto** caixa de diálogo. |
+| [TargetPlatformName](../extensibility/targetplatformname-element-visual-studio-templates.md) | Elemento opcional.<br /><br /> Especifica a plataforma de que os destinos de modelo de projeto. Esse elemento Especifica que um modelo de projeto é usado para criar [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] aplicativos. |
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Contém todos os metadados para o modelo de projeto, item modelo ou starter kit.|  
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Contém todos os metadados para o modelo de projeto, o modelo de item ou o starter kit para.|  
   
 ## <a name="remarks"></a>Comentários  
- `TemplateData` é um elemento necessário.  
+ `TemplateData` é um elemento obrigatório.  
   
  Se você não incluir um elemento opcional, o valor padrão para esse elemento é usado.  
   

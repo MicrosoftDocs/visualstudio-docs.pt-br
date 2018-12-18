@@ -1,33 +1,32 @@
 ---
-title: Automatizar a instalação do Visual Studio com um arquivo de resposta | Microsoft Docs
+title: Automatizar a instalação do Visual Studio com um arquivo de resposta
 description: Saiba como criar um arquivo de resposta JSON que ajuda a automatizar a instalação do Visual Studio
 ms.date: 08/14/2017
-ms.reviewer: tims
-ms.suite: ''
-ms.technology:
-- vs-acquisition
-ms.tgt_pltfrm: ''
+ms.technology: vs-acquisition
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - response file
 - automate
 - installation
 - command-line
-author: tglee
+author: TerryGLee
 ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2bbfff39dce34bfa8595f4e34222e3e61ac67fb5
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: 6d9dbcb5c033469db3e92bd4cde931257ece9ab1
+ms.sourcegitcommit: 6b092e7d466377f06913d49d183dbbdca16730f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43138443"
 ---
 # <a name="how-to-define-settings-in-a-response-file"></a>Como definir as configurações em um arquivo de resposta
+
 Os administradores que implantam o Visual Studio podem especificar um arquivo de resposta usando o parâmetro `--in`, assim como no exemplo a seguir:
 
-```
+```cmd
 vs_enterprise.exe --in customInstall.json
 ```
 
@@ -35,7 +34,7 @@ Os arquivos de resposta são arquivos [JSON](http://json-schema.org/) cujo conte
 
 Parâmetros que são especificados nas configurações de substituição de linha de comando do arquivo de resposta, exceto quando os parâmetros recebem várias entradas (por exemplo, `--add`). Quando você tiver várias entradas, as entradas fornecidas na linha de comando serão mescladas com as configurações do arquivo de resposta.
 
-# <a name="setting-a-default-configuration-for-visual-studio"></a>Definir uma configuração padrão para o Visual Studio
+## <a name="setting-a-default-configuration-for-visual-studio"></a>Definir uma configuração padrão para o Visual Studio
 
 Se você tiver criado um cache de layout de rede com o `--layout`, um arquivo `response.json` inicial será criado no layout. Se você criar um layout parcial, esse arquivo de resposta incluirá as cargas de trabalho e idiomas incluídos no layout.  Executar a instalação deste layout usa automaticamente esse arquivo response.json, que seleciona as cargas de trabalho e os componentes incluídos no layout.  Os usuários ainda podem selecionar ou desmarcar todas as cargas de trabalho na interface do usuário de configuração antes de instalar o Visual Studio.
 
@@ -59,9 +58,11 @@ O arquivo `response.json` base em um layout deve ser semelhante ao exemplo a seg
   "productId": "Microsoft.VisualStudio.Product.Enterprise"
 }
 ```
+
 Quando você cria ou atualiza um layout, um arquivo response.template.json também é criado.  Esse arquivo contém todas as IDs de carga de trabalho, de componente e de idioma que podem ser usadas.  Esse arquivo é fornecido como um modelo para o qual todas poderiam ser incluídas em uma instalação personalizada.  Os administradores podem usar esse arquivo como um ponto de partida para um arquivo de resposta personalizado.  Basta remover as IDs para os itens que você não deseja instalar e salvá-las em seu próprio arquivo de resposta.  Não personalize o arquivo response.template.json, caso contrário, as alterações serão perdidas sempre que o layout for atualizado.
 
 ## <a name="example-layout-response-file-content"></a>Conteúdo de arquivo de resposta de layout de exemplo
+
 O exemplo a seguir instalará o Visual Studio Enterprise com seis cargas de trabalho e componentes comuns e com os idiomas inglês e francês da interface do usuário. Você pode esse exemplo como um modelo; apenas altere as cargas de trabalho e os componentes para aqueles que você deseja instalar:
 
 ```json
@@ -95,14 +96,8 @@ O exemplo a seguir instalará o Visual Studio Enterprise com seis cargas de trab
 }
 ```
 
-## <a name="get-support"></a>Obter suporte
-Às vezes, as coisas podem dar errado. Caso a instalação do Visual Studio falhe, confira a página [Solução de problemas de instalação e atualização do Visual Studio 2017](troubleshooting-installation-issues.md). Se nenhuma das etapas de solução de problemas ajudar, entre em contato conosco por meio de um chat ao vivo para obter ajuda com a instalação (somente em inglês). Para saber mais detalhes, confira a [página de suporte do Visual Studio](https://www.visualstudio.com/vs/support/#talktous).
-
-Aqui estão algumas outras opções de suporte:
-* Você pode nos relatar problemas do produto por meio da ferramenta [Relatar um Problema](../ide/how-to-report-a-problem-with-visual-studio-2017.md), exibida no Instalador do Visual Studio e no IDE do Visual Studio.
-* Você pode compartilhar uma sugestão de produto conosco no [UserVoice](https://visualstudio.uservoice.com/forums/121579).
-* É possível acompanhar os problemas do produto na [Comunidade de Desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/), além de fazer perguntas e encontrar respostas.
-* Você pode também interagir conosco e com outros desenvolvedores do Visual Studio por meio das [conversas sobre o Visual Studio na comunidade do Gitter](https://gitter.im/Microsoft/VisualStudio).  (Esta opção requer uma conta do [GitHub](https://github.com/).)
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Consulte também
+
 * [IDs de carga de trabalho e de componente do Visual Studio 2017](workload-and-component-ids.md)

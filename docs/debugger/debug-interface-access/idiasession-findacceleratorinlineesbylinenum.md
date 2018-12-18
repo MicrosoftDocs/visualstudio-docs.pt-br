@@ -12,14 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: de8c5e7b5c039e43a5e513c72b270342a705b8b2
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b90a253baefad62bba205ccbf0fb8b8fff81712d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917460"
 ---
 # <a name="idiasessionfindacceleratorinlineesbylinenum"></a>IDiaSession::findAcceleratorInlineesByLinenum
-Retorna uma enumeração de símbolos para os quadros entre linhas que correspondem ao local de origem especificado.  
+Retorna uma enumeração de símbolos para quadros embutidos que correspondem ao local de origem especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,13 +36,13 @@ HRESULT findAcceleratorInlineeLinesByName (
   
 #### <a name="parameters"></a>Parâmetros  
  `parent`  
- [in] Um `IDiaSymbol` que corresponde à função de stub de aceleração que precisa ser pesquisada.  
+ [in] Um `IDiaSymbol` que corresponde à função de stub do acelerador que precisa ser pesquisado.  
   
  `file`  
- [in] O `IDiaSourceFile` do local de origem.  
+ [in] O `IDiaSourceFile` de local de origem.  
   
  `linenum`  
- [in] O número da linha do local de origem.  
+ [in] O número de linha de local de origem.  
   
  `colnum`  
  [in] O número da coluna do local de origem.  
@@ -50,7 +51,7 @@ HRESULT findAcceleratorInlineeLinesByName (
  [out] Um ponteiro para um `IDiaEnumLineNumbers` ponteiro de interface que é inicializado com o resultado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   

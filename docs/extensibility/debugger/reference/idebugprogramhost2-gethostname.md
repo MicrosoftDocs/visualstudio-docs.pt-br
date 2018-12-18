@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 139c7c991235f57dba670c15721751dca71c550f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d0e2ccf73ffdaa905585841eef99f84f59513867
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925195"
 ---
 # <a name="idebugprogramhost2gethostname"></a>IDebugProgramHost2::GetHostName
 Obtém o título, o nome amigável ou o nome do arquivo do processo de hospedagem desse programa.  
@@ -42,16 +43,16 @@ int GetHostName(
   
 #### <a name="parameters"></a>Parâmetros  
  `dwType`  
- [in] Um valor da [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) enumeração.  
+ [in] Um valor a partir de [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) enumeração.  
   
  `pbstrHostName`  
  [out] Retorna o nome solicitado do processo de hospedagem.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Em uma implementação típica desse método, o `dwType` parâmetro será ignorado e um nome amigável da máquina de host é retornado. É outra implementação possível passar o `dwType` parâmetro para uma chamada para o [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) método para obter o nome.  
+ Em uma implementação típica desse método, o `dwType` parâmetro será ignorado e um nome amigável do computador host é retornado. Outra implementação possível é transmitir o `dwType` parâmetro para uma chamada para o [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) método para obter o nome.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProgramHost2](../../../extensibility/debugger/reference/idebugprogramhost2.md)   

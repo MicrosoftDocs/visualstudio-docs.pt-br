@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d641fa8dc0f999d55d177e9a3f48e0227e17f159
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d82df4cef343965d9fdf88357154a9a3a399d9eb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842151"
 ---
 # <a name="idebugfunctionobjectcreateobjectnoconstructor"></a>IDebugFunctionObject::CreateObjectNoConstructor
 Cria um objeto com nenhum construtor.  
@@ -42,16 +43,16 @@ int CreateObjectNoConstructor(
   
 #### <a name="parameters"></a>Parâmetros  
  `pClassObject`  
- [in] Um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto que representa o tipo de objeto a ser criado.  
+ [in] Uma [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto que representa o tipo de objeto a ser criado.  
   
  `ppObject`  
  [out] Retorna um [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) que representa o objeto recém-criado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Chame esse método para criar um objeto que representa uma instância de uma estrutura ou um tipo complexo (que não requer um construtor) que é um parâmetro para a função que é representado pelo [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) interface.  
+ Chame esse método para criar um objeto que representa uma instância de uma estrutura ou tipo complexo (que não exigem um construtor) que é um parâmetro para a função que é representado pelo [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) interface.  
   
  Se o parâmetro de objeto requer um construtor, chame o [CreateObject](../../../extensibility/debugger/reference/idebugfunctionobject-createobject.md) método.  
   

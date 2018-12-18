@@ -1,5 +1,5 @@
 ---
-title: Visão geral do protocolo de servidor de idioma | Microsoft Docs
+title: Visão geral do protocolo de servidor de linguagem | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
 ms.technology:
@@ -11,57 +11,58 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: de7de0ce4d37ed74a7d2291ecf2f0db98c07478b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ad0e802bd63a9d489a98eb9f216e6739e378d590
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894853"
 ---
-# <a name="language-server-protocol"></a>Protocolo de idioma do servidor
+# <a name="language-server-protocol"></a>Language Server Protocol
 
-## <a name="what-is-the-language-server-protocol"></a>O que é o protocolo de servidor de idioma?
+## <a name="what-is-the-language-server-protocol"></a>O que é o protocolo de idioma do servidor?
 
-Autoconclusões de código fonte, como suporte avançados recursos de edição ou **ir para definição** para uma linguagem de programação em um editor ou IDE é tradicionalmente muito difícil e demorado. Geralmente ele requer a criação de um modelo de domínio (um scanner, um analisador, um verificador de tipo, um construtor e muito mais) na linguagem de programação do IDE ou editor. Por exemplo, o plug-in Eclipse CDT, que fornece suporte para C/C++ no IDE do Eclipse é gravado em Java, desde que o IDE do Eclipse em si é gravado em Java. Seguir essa abordagem, isso significaria implementar um modelo de domínio do C/C++ em TypeScript para Visual Studio Code e um modelo de domínio separadas em c# para o Visual Studio.
+Suporte avançados recursos de edição, como preenchimentos automáticos de código de origem ou **ir para definição** para uma linguagem de programação em um editor ou IDE é tradicionalmente muito difícil e demorada. Normalmente, ele requer a criação de um modelo de domínio (um scanner, um analisador, um verificador de tipo, um construtor e muito mais) na linguagem de programação do editor ou IDE. Por exemplo, o plug-in Eclipse CDT, que fornece suporte para C/C++ no IDE do Eclipse é escrito em Java, pois o próprio IDE do Eclipse é escrito em Java. Seguindo essa abordagem, isso significaria que a implementação de um modelo de domínio do C/C++ no TypeScript para Visual Studio Code e um modelo de domínio separadas em c# para Visual Studio.
 
-Criação de modelos de domínio específico do idioma também é muito mais fácil se uma ferramenta de desenvolvimento pode reutilizar as bibliotecas existentes específico do idioma. No entanto, essas bibliotecas são normalmente implementadas na linguagem de programação em si (por exemplo, bom C/C++ domínio modelos são implementados em C/C++). Integrar uma biblioteca C/C++ em um editor escrito em TypeScript é tecnicamente possível, mas difícil.
+Criação de modelos de linguagem específica de domínio também é muito mais fácil se uma ferramenta de desenvolvimento pode reutilizar as bibliotecas existentes do idioma específico. No entanto, essas bibliotecas são normalmente implementadas na linguagem de programação em si (por exemplo, C/C++ domínio adequado modelos são implementados em C/C++). Integrar uma biblioteca de C/C++ em um editor escrito em TypeScript é tecnicamente possível, mas difícil de fazer.
 
-### <a name="language-servers"></a>Servidores de linguagem
+### <a name="language-servers"></a>Servidores de idioma
 
-Outra abordagem é executar a biblioteca em seu próprio processo e usar a comunicação entre processos para conversar com ele. As mensagens enviadas e para trás formam um protocolo. O protocolo de servidor de idioma (LSP) é o produto de padronização mensagens trocadas entre uma ferramenta de desenvolvimento e um processo de servidor de idioma. Usar servidores de idioma ou demons não é uma ideia novel ou novo. Editores como Vim e Emacs fazendo isso por algum tempo oferecer suporte a semântica de conclusão automática. O objetivo de LSP era simplificar a esses tipos de integrações e fornecem uma estrutura útil para expor os recursos de idioma para uma variedade de ferramentas.
+Outra abordagem é executar a biblioteca em seu próprio processo e usar a comunicação entre processos para se comunicar com ele. As mensagens enviadas e para trás formam um protocolo. O protocolo de servidor de linguagem (LSP) é o produto de padronização as mensagens trocadas entre uma ferramenta de desenvolvimento e um processo de servidor de linguagem. Usando servidores de idioma ou demons não é uma ideia nova ou novel. Editores, como Vim e Emacs feito isso há algum tempo fornecer suporte de preenchimento automático semântica. O objetivo de LSP era simplificar esses tipos de integrações e fornecem uma estrutura úteis para expor os recursos de idioma para uma variedade de ferramentas.
 
-Ter um protocolo comum permite a integração de recursos de linguagem de programação em uma ferramenta de desenvolvimento sem complicações reutilizando uma implementação existente do modelo de domínio do idioma. Um servidor back-end do idioma poderia ser escrito em PHP, Python ou Java e LSP permite facilmente ser integrado em uma variedade de ferramentas. O protocolo funciona em um nível comum de abstração para que uma ferramenta pode oferecer serviços avançados de idioma sem a necessidade de compreender totalmente as nuances específicas para o modelo de domínio subjacente.
+Ter um protocolo comum permite a integração de recursos de linguagem de programação em uma ferramenta de desenvolvimento sem complicação reutilizando uma implementação existente do modelo de domínio do idioma. Um servidor back-end do idioma poderia ser escrito em PHP, Python ou Java e o LSP que permite que ele ser facilmente integrada a uma variedade de ferramentas. O protocolo funciona em um nível comum de abstração para que uma ferramenta pode oferecer serviços de linguagem avançados sem a necessidade de compreender totalmente as nuances específicas para o modelo de domínio subjacente.
 
 ## <a name="how-work-on-the-lsp-started"></a>Como funcionam em LSP iniciado
 
-O LSP evolução ao longo do tempo e hoje é a versão 3.0. Ele iniciado quando o conceito de um servidor de idioma foi recebido pelo OmniSharp para fornecer recursos de edição avançados para c#. Inicialmente, OmniSharp usado o protocolo HTTP com uma carga JSON e foi integrado ao vários editores incluindo [código do Visual Studio](https://code.visualstudio.com).
+O LSP evoluiu ao longo do tempo e hoje, ele está na versão 3.0. Ele iniciado quando o conceito de um servidor de linguagem foi obtido por OmniSharp para fornecer recursos avançados de edição para c#. Inicialmente, o OmniSharp usado o protocolo HTTP com uma carga JSON e foi integrado ao vários editores incluindo [Visual Studio Code](https://code.visualstudio.com).
 
-Ao mesmo tempo, a Microsoft começou a trabalhar em um servidor de linguagem TypeScript, com a ideia de suporte para editores como Emacs e texto Sublime TypeScript. Nessa implementação, um editor se comunica por meio de stdin/stdout com o processo de servidor TypeScript e usa uma carga JSON inspirado pelo protocolo do depurador V8 para solicitações e respostas. O servidor de TypeScript foi integrado no código VS e TypeScript Sublime plug-in para TypeScript avançada de edição.
+Ao mesmo tempo, a Microsoft começou a trabalhar em um servidor de linguagem do TypeScript, com a ideia de que dão suporte a TypeScript nos editores, como Emacs e Sublime Text. Nessa implementação, um editor se comunica por meio do stdin/stdout com o processo de servidor TypeScript e usa uma carga JSON inspirado pelo protocolo do depurador V8 para solicitações e respostas. O servidor de TypeScript foi integrado ao TypeScript Sublime plug-in e o VS Code para edição avançada de TypeScript.
 
-Depois de ter integrado dois servidores de idioma diferente, a equipe de código VS iniciado para explorar um protocolo de servidor de linguagem comum para editores e IDEs. Um protocolo comum permite que um provedor de linguagem criar um servidor único idioma que pode ser consumido por IDEs diferentes. Um consumidor de servidor de idioma só precisa implementar o lado do cliente do protocolo de uma vez. Isso resulta em uma situação de ganhos para o provedor do idioma e o consumidor de idioma.
+Depois de ter integrado a dois servidores de idioma diferente, a equipe do VS Code começou a explorar um protocolo de servidor de linguagem comum para editores e IDEs. Um protocolo comum permite que um provedor de linguagem de programação criar um servidor único idioma que pode ser consumido pelos IDEs diferentes. Um consumidor de servidor de idioma só tem que implementar o lado do cliente do protocolo de uma vez. Isso resulta em uma situação de ganhos para o provedor de linguagem de programação e o consumidor de idioma.
 
-O protocolo de idioma do servidor iniciado com o protocolo usado pelo servidor TypeScript, expandi-lo com mais recursos de linguagem inspirados pela API de linguagem de código VS. O protocolo é feito com RPC de JSON para invocação remota devido à sua simplicidade e bibliotecas existentes.
+O protocolo de idioma do servidor é iniciado com o protocolo usado pelo servidor do TypeScript, expandi-lo com mais recursos de linguagem inspirados a API da linguagem de código do VS. O protocolo é feito com o RPC de JSON para invocação remota devido à sua simplicidade e bibliotecas existentes.
 
-Os VS team prototipada os com a implementação de vários servidores de idioma linter que respondem às solicitações de protocolo para pano (verificação) de código a um arquivo e retornam um conjunto de erros e avisos detectados. A meta era pano sem um arquivo como as edições do usuário em um documento, o que significa que haverá muitas solicitações de linting durante uma sessão do editor. Fazia sentido manter um servidor de backup e em execução para que um novo processo de linting não precisa ser iniciada para cada edição do usuário. Vários servidores linter foram implementados, incluindo o código de VS extensões ESLint e TSLint. Esses dois servidores linter são ambos implementados em TypeScript/JavaScript e executados em Node. js. Eles compartilham uma biblioteca que implementa a parte do cliente e servidor do protocolo.
+Os VS um arquivo de código de equipe com protótipo os com a implementação de vários servidores de linguagem linter que responderem às solicitações de protocolo para efetuar lint (verificação) e retornam um conjunto de erros e avisos detectados. O objetivo era lint um arquivo como as edições do usuário em um documento, o que significa que haverá muitas solicitações de linting durante uma sessão do editor. Ele fez sentido manter um servidor de backup e em execução para que um novo processo de linting não precisa ser iniciado para cada edição do usuário. Vários servidores linter foram implementados, incluindo o VS Code ESLint e TSLint extensões. Esses dois servidores linter são implementados no TypeScript/JavaScript e executar em Node. js. Eles compartilham uma biblioteca que implementa a parte cliente e servidor do protocolo.
 
 ## <a name="how-the-lsp-works"></a>Como funciona o LSP
 
-Um servidor de linguagem é executado em seu próprio processo e ferramentas como o Visual Studio ou código VS se comunicar com o servidor usando o protocolo de linguagem via RPC de JSON. Outra vantagem do servidor de idioma que operam em um processo dedicado é evita problemas de desempenho relacionados a um modelo de processo único. O canal de transporte real pode ser stdio, soquetes, pipes nomeados ou nó ipc se o cliente e o servidor são escritos em Node.js.
+Um servidor de linguagem é executado em seu próprio processo e ferramentas como o Visual Studio ou o VS Code se comunicar com o servidor usando o protocolo de idioma sobre RPC de JSON. Outra vantagem do servidor de linguagem que operam em um processo dedicado é que os problemas de desempenho relacionados a um modelo de processo único são evitados. O canal de transporte real pode ser stdio, soquetes, pipes nomeados ou nó ipc se o cliente e o servidor são escritos em Node. js.
 
-Abaixo está um exemplo de como uma ferramenta e um servidor de idioma se comunicar durante uma rotina de sessão de edição:
+Abaixo está um exemplo de como uma ferramenta e um servidor de linguagem se comunicar durante uma rotina de sessão de edição:
 
 ![diagrama de fluxo de LSP](media/lsp-flow-diagram.png)
 
-* **O usuário abre um arquivo (conhecido como um documento) na ferramenta**: A ferramenta notifica o servidor de idioma que um documento está aberto (' textDocument/didOpen'). De agora em diante, na verdade sobre o conteúdo do documento não está mais no sistema de arquivos, mas mantidos pela ferramenta na memória.
+* **O usuário abre um arquivo (conhecido como um documento) na ferramenta**: A ferramenta notifica o servidor de linguagem que um documento está aberto (' textDocument/didOpen'). De agora em diante, a verdade sobre o conteúdo do documento não está mais no sistema de arquivos, mas mantido pela ferramenta na memória.
 
-* **O usuário fizer edições**: A ferramenta notifica o servidor sobre a alteração do documento (' textDocument/didChange') e as informações de semânticas do programa são atualizadas pelo servidor de idioma. Quando isso acontece, o servidor de idioma analisa essas informações e notifica a ferramenta com os erros detectados e avisos (' textDocument/publishDiagnostics').
+* **O usuário fizer edições**: A ferramenta notifica o servidor sobre a alteração do documento (' textDocument/didChange') e as informações semânticas do programa são atualizadas pelo servidor de linguagem. Quando isso acontece, o servidor de linguagem analisa essas informações e notifica a ferramenta com os erros detectados e os avisos (' textDocument/publishDiagnostics').
 
-* **O usuário executa "Ir para definição" em um símbolo no editor de**: A ferramenta envia uma solicitação de ' textDocument/definição de' com dois parâmetros: (1) o URI do documento e (2) a posição do texto a partir de onde ir para solicitação de definição foi iniciada no servidor. O servidor responde com o URI do documento e a posição da definição do símbolo dentro do documento.
+* **O usuário executa "Ir para definição" em um símbolo no editor de**: A ferramenta envia uma solicitação de ' textDocument/definição' com dois parâmetros: (1) o URI do documento e (2) a posição do texto a partir de onde a ir para a solicitação da definição foi iniciada no servidor. O servidor responde com o URI do documento e a posição da definição do símbolo dentro do documento.
 
-* **O usuário fecha o documento (arquivo)**: é enviada uma notificação de ' textDocument/didClose' da ferramenta, informando o servidor de idioma que o documento está agora não mais na memória e que o conteúdo atual agora é atualizado no sistema de arquivos.
+* **O usuário fecha o documento (arquivo)**: é enviada uma notificação de ' textDocument/didClose' da ferramenta, informando o servidor de idioma que o documento está agora, não há mais na memória e que o conteúdo atual é agora atualizados no sistema de arquivos.
 
-Este exemplo ilustra como o protocolo se comunica com o servidor de idioma no nível de recursos do editor com "Ir para definição de", "Localizar todas as referências". Tipos de dados usados pelo protocolo são editor ou IDE 'tipos de dados' como o documento de texto aberto no momento e a posição do cursor. Os tipos de dados não estão no nível de um modelo de domínio programação do idioma que normalmente seria fornecem árvores de sintaxe abstrata e símbolos do compilador (por exemplo, os tipos resolvidos, namespaces,...). Isso simplifica o protocolo significativamente.
+Este exemplo ilustra como o protocolo se comunica com o servidor de linguagem no nível de recursos do editor, como "Go to Definition", "Localizar todas as referências". Os tipos de dados usados pelo protocolo são editor ou IDE 'tipos de dados' como o documento de texto aberto no momento e a posição do cursor. Os tipos de dados não estão no nível de um modelo de domínio de programação linguagem que normalmente forneceria árvores de sintaxe abstrata e os símbolos do compilador (por exemplo, os tipos resolvidos, namespaces,...). Isso simplifica o protocolo significativamente.
 
-Agora vamos dar uma olhada na solicitação ' textDocument/definição de' em mais detalhes. Abaixo estão as cargas que vão entre a ferramenta de cliente e o servidor de idioma para a solicitação de "Ir para definição" em um documento de C++.
+Agora vamos examinar a solicitação de ' textDocument/definição' em mais detalhes. Abaixo estão as cargas que passam entre a ferramenta de cliente e o servidor de linguagem para a solicitação de "Ir para definição" em um documento de C++.
 
 Esta é a solicitação:
 
@@ -104,22 +105,22 @@ Esta é a resposta:
 }
 ```
 
-Em retrospecto, descrevendo os tipos de dados no nível do editor em vez de no nível do modelo de linguagem de programação é um dos motivos para o sucesso do protocolo do servidor de idioma. É muito mais simples padronizar um URI do documento de texto ou uma posição de cursor em comparação com a padronização um símbolos de compilador e de árvore de sintaxe abstrata em linguagens de programação diferentes.
+Em retrospecto, que descreve os tipos de dados no nível do editor, em vez de no nível do modelo de linguagem de programação é um dos motivos para o sucesso do protocolo de idioma do servidor. É muito mais simples padronizar um URI do documento de texto ou uma posição do cursor em comparação com a padronização um símbolos de compilador e de árvore de sintaxe abstrata entre linguagens de programação diferentes.
 
-Quando um usuário está trabalhando com idiomas diferentes, o código VS normalmente inicia um servidor de idioma para cada linguagem de programação. O exemplo a seguir mostra uma sessão em que o usuário trabalha em Java e SASS arquivos.
+Quando um usuário estiver trabalhando com idiomas diferentes, o VS Code inicia normalmente um servidor de idioma para cada linguagem de programação. O exemplo a seguir mostra uma sessão em que o usuário trabalha nos arquivos Java e SASS.
 
 ![Java e sass](media/lsp-java-and-sass.png)
 
 ### <a name="capabilities"></a>Capacidades
 
-Nem todo servidor de idioma pode dar suporte a todos os recursos definidos pelo protocolo. Portanto, o cliente e o servidor apresenta seu conjunto de recursos com suporte por meio de 'recursos'. Por exemplo, um servidor de anuncia que ele possa manipular a solicitação ' textDocument/definição de', mas ele não pode manipular a solicitação de 'espaço de trabalho/symbol'. Da mesma forma, os clientes podem anunciar que eles sejam capazes de fornecer ' prestes a salvar' notificações antes de um documento é salvo, para que um servidor pode calcular edições textuais para formatar automaticamente o documento editado.
+Nem todo servidor de idioma pode dar suporte a todos os recursos definidos pelo protocolo. Portanto, o cliente e servidor anuncia seu conjunto de recursos com suporte por meio do 'capabilities'. Por exemplo, um servidor anuncia que pode manipular a solicitação de ' textDocument/definição', mas ele não pode manipular a solicitação de 'espaço de trabalho/symbol'. Da mesma forma, os clientes podem anunciar que eles sejam capazes de fornecer ' prestes a salvar' notificações antes de um documento é salvo, para que um servidor pode calcular edições textuais para formatar automaticamente o documento editado.
 
-## <a name="integrating-a-language-server"></a>Integração de um servidor de idioma
+## <a name="integrating-a-language-server"></a>Integração de um servidor de linguagem
 
-A integração real de um servidor de idioma em uma determinada ferramenta não está definida pelo protocolo do idioma do servidor e é da esquerda para as implementações de ferramenta. Algumas ferramentas integram os servidores de idioma genericamente por ter uma extensão que pode iniciar e se comunicar com qualquer tipo de servidor de idioma. Outras, como código VS, criam uma extensão personalizada por servidor de idioma, para que uma extensão ainda possa fornecer alguns recursos de idioma personalizado.
+A integração real de um servidor de idioma em uma determinada ferramenta não está definida pelo protocolo de servidor de linguagem e é deixada para implementações de ferramenta. Algumas ferramentas integram servidores idiomas genericamente fazendo com que uma extensão que pode começar e se comunicar com qualquer tipo de servidor de linguagem. Outros, como o VS Code, criam uma extensão personalizada por servidor de idioma, para que uma extensão ainda é capaz de fornecer alguns recursos de idioma personalizado.
 
-Para simplificar a implementação de clientes e servidores de idioma, há bibliotecas ou SDKs para as partes do cliente e servidor. Essas bibliotecas são fornecidas para diferentes idiomas. Por exemplo, há um [idioma cliente npm módulo](https://www.npmjs.com/package/vscode-languageclient) para facilitar a integração de um servidor de idioma em uma extensão de código VS e outro [módulo de npm de servidor de idioma](https://www.npmjs.com/package/vscode-languageserver) para gravar um servidor de idioma usando Node. js. Isso é atual [lista](https://github.com/Microsoft/language-server-protocol/wiki/Protocol-Implementations) das bibliotecas de suporte.
+Para simplificar a implementação de linguagem de servidores e clientes, há bibliotecas ou SDKs para as partes do cliente e servidor. Essas bibliotecas são fornecidas para idiomas diferentes. Por exemplo, há um [módulo de npm de cliente de linguagem](https://www.npmjs.com/package/vscode-languageclient) para facilitar a integração de um servidor de idioma em uma extensão do VS Code e outro [módulo de npm do idioma do server](https://www.npmjs.com/package/vscode-languageserver) para gravar um servidor de idioma usando o Node. js. Isso é o atual [lista](https://github.com/Microsoft/language-server-protocol/wiki/Protocol-Implementations) das bibliotecas de suporte.
 
-## <a name="using-the-language-server-protocol-in-visual-studio"></a>Usando o protocolo de servidor de linguagem do Visual Studio
+## <a name="using-the-language-server-protocol-in-visual-studio"></a>Usando o protocolo de servidor de linguagem no Visual Studio
 
-* [Adicionar uma extensão do protocolo de servidor de idioma](adding-an-lsp-extension.md) -Saiba mais sobre como integrar um servidor de idioma para o Visual Studio.
+* [Adicionando uma extensão do protocolo de idioma do servidor](adding-an-lsp-extension.md) -Saiba mais sobre como integrar um servidor de linguagem no Visual Studio.

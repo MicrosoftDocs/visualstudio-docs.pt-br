@@ -1,6 +1,7 @@
 ---
 title: Como criar e aplicar um recurso
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 f1_keywords:
@@ -12,26 +13,27 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 88c5fd3c3b5842a9d2a68fde3c20b1a0c76af7c0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 405b208df0aedffe69c9e476a5a31745faeb84f1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872558"
 ---
 # <a name="how-to-create-and-apply-a-resource"></a>Como criar e aplicar um recurso
-Os estilos e modelos de elementos no Designer XAML são armazenados em entidades reutilizáveis chamadas recursos. Os estilos permitem que você defina propriedades de elemento e reutilize essas configurações para obter uma aparência consistente entre vários elementos. Um [ControlTemplate](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) define a aparência de um controle e também pode ser aplicado como um recurso. Para obter mais informações, consulte [Guia de início rápido: definindo o estilo dos controles](http://go.microsoft.com/fwlink/?LinkID=248239) e [Guia de início rápido: modelos de controle](http://go.microsoft.com/fwlink/?LinkID=247982).
+Os estilos e modelos de elementos no Designer XAML são armazenados em entidades reutilizáveis chamadas recursos. Os estilos permitem que você defina propriedades de elemento e reutilize essas configurações para obter uma aparência consistente entre vários elementos. Um [ControlTemplate](/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) define a aparência de um controle e também pode ser aplicado como um recurso. Para obter mais informações, confira [Início rápido: definindo o estilo de controles](http://go.microsoft.com/fwlink/?LinkID=248239) e [QuickStart: Control templates](http://go.microsoft.com/fwlink/?LinkID=247982) (Guia de início rápido: modelos de controle).
 
- Sempre que você cria um novo recurso de uma propriedade existente, [Estilo](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx), `ControlTemplate` ou caixa de diálogo **Criar Recurso** permite definir o recurso no nível do aplicativo, no nível do documento ou no nível do elemento. Esses níveis determinam onde você pode usar o recurso. Por exemplo, se você definir o recurso no nível de elemento, o recurso só poderá ser aplicado ao elemento no qual ele foi criado. Você também pode optar por armazenar o recurso em um dicionário de recursos, que é um arquivo separado que você pode usar novamente em outro projeto.
+ Sempre que você cria um novo recurso de uma propriedade existente, [Estilo](/uwp/api/Windows.UI.Xaml.Style), `ControlTemplate` ou caixa de diálogo **Criar Recurso** permite definir o recurso no nível do aplicativo, no nível do documento ou no nível do elemento. Esses níveis determinam onde você pode usar o recurso. Por exemplo, se você definir o recurso no nível de elemento, o recurso só poderá ser aplicado ao elemento no qual ele foi criado. Você também pode optar por armazenar o recurso em um dicionário de recursos, que é um arquivo separado que você pode usar novamente em outro projeto.
 
 ### <a name="to-create-a-new-resource"></a>Para criar um novo recurso
 
 1.  Com um arquivo XAML aberto no Designer XAML, crie um elemento ou selecione um elemento na janela Estrutura de Tópicos de Documento.
 
-2.  Na janela Propriedades, escolhe o marcador de propriedade exibido como um símbolo de caixa à direita de um valor da propriedade e escolha **Converter em Novo Recurso**. Um símbolo de caixa branca indica um valor padrão, e um símbolo de caixa preta normalmente indica que um recurso local foi aplicado
+2.  Na janela Propriedades, escolhe o marcador de propriedade exibido como um símbolo de caixa à direita de um valor da propriedade e escolha **Converter em Novo Recurso**. Um símbolo de caixa branca indica um valor padrão e um símbolo de caixa preta normalmente indica que um recurso local foi aplicado.
 
      A caixa de diálogo apropriada para criar um recurso é exibida. Esta caixa de diálogo é exibida quando você cria um recurso com um pincel:
 
-     ![Criar caixa de diálogo Recurso](../designers/media/xaml_create_resource.png "xaml_create_resource")
+     ![Caixa de diálogo Criar recurso](../designers/media/xaml_create_resource.png)
 
 3.  Na caixa **Nome (Chave)**, insira um nome de chave. Este é o nome que você pode usar quando quer que outros elementos façam referência ao recurso.
 
@@ -41,7 +43,7 @@ Os estilos e modelos de elementos no Designer XAML são armazenados em entidades
 
     -   Para disponibilizar o recurso somente para o documento atual, escolha **Este documento**.
 
-    -   Para disponibilizar o recurso somente para o elemento com base no qual você criou o recurso ou para seus elementos filho, clique em **Este documento** e, na lista suspensa, selecione *element*: *name*.
+    -   Para disponibilizar o recurso somente para o elemento com base no qual você criou o recurso ou para seus elementos filho, clique em **Este documento** e, na lista suspensa, selecione **element**: **name**.
 
     -   Para definir o recurso em um arquivo de dicionário de recursos que pode ser reutilizado em outros projetos, clique em **Dicionário de recursos** e selecione um arquivo de dicionário de recursos existente, como **StandardStyles.xaml** na lista suspensa.
 
@@ -49,20 +51,20 @@ Os estilos e modelos de elementos no Designer XAML são armazenados em entidades
 
 ### <a name="to-apply-a-resource-to-an-element-or-property"></a>Para aplicar um recurso a um elemento ou propriedade
 
-1.  Na janela Estrutura de Tópicos de Documento, escolha o elemento ao qual você deseja aplicar um recurso.
+1. Na janela Estrutura de Tópicos do Documento, escolha o elemento em que você deseja aplicar um recurso.
 
-2.  Realize um dos seguintes procedimentos:
+2. Realize um dos seguintes procedimentos:
 
-    -   Aplique um recurso a uma propriedade. Na janela Propriedades, escolha o marcador de propriedade ao lado do valor da propriedade, escolha **Recurso Local** ou **Recurso do Sistema** e escolha um recurso disponível na lista que é exibida.
+   - Aplique um recurso a uma propriedade. Na janela Propriedades, escolha o marcador de propriedade ao lado do valor da propriedade, escolha **Recurso Local** ou **Recurso do Sistema** e escolha um recurso disponível na lista que é exibida.
 
-         Se um recurso que você esperava ver não aparecer, poderá ser porque o tipo de recurso não corresponde ao tipo da propriedade.
+      Se um recurso que você esperava ver não aparecer, poderá ser porque o tipo de recurso não corresponde ao tipo da propriedade.
 
-    -   Aplique um estilo ou recurso de modelo de controle a um controle. Abra o menu de contexto para um controle na janela Estrutura de Tópicos de Documento, escolha **Editar Modelo** ou **Editar Modelos Adicionais**, escolha **Aplicar Recurso** e selecione o nome do modelo de controle na lista que é exibida.
+   - Aplique um estilo ou recurso de modelo de controle a um controle. Abra o menu de contexto para um controle na janela Estrutura de Tópicos de Documento, escolha **Editar Modelo** ou **Editar Modelos Adicionais**, escolha **Aplicar Recurso** e selecione o nome do modelo de controle na lista que é exibida.
 
-        > [!NOTE]
-        >  **Editar Modelo** é usado para aplicar modelos de controle. **Editar Modelos Adicionais** é usado para aplicar outros tipos de modelo.
+     > [!NOTE]
+     >  **Editar Modelo** aplica modelos de controle. **Editar Modelos Adicionais** aplica outros tipos de modelo.
 
-     Recursos podem ser aplicados sempre que forem compatíveis. Por exemplo, um recurso de pincel pode ser aplicado à propriedade **Primeiro plano** de um controle <xref:Windows.UI.Xaml.Controls.TextBox>.
+     É possível aplicar recursos sempre que eles são compatíveis. Por exemplo, você pode aplicar um recurso de pincel à propriedade **Primeiro plano** de um controle <xref:Windows.UI.Xaml.Controls.TextBox>.
 
 ### <a name="to-edit-a-resource"></a>Para editar um recurso
 

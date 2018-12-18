@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f0fe51224a4b4a5abc73a3edb7a2caf239d32efb
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 2ff182c2600a41a0e7c13ed460418e93f88baaed
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49871635"
 ---
 # <a name="idiapropertystorageenum"></a>IDiaPropertyStorage::Enum
-Obtém um enumerador para propriedades nesse conjunto.  
+Obtém um enumerador para as propriedades nesse conjunto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +37,7 @@ HRESULT Enum (
  [out] Retorna um `IEnumSTATPROPSTG` objeto (no namespace Microsoft.VisualStudio.OLE.Interop) que representa uma enumeração de propriedades.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

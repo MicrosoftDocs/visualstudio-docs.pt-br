@@ -1,5 +1,5 @@
 ---
-title: ': Get_intro | Microsoft Docs'
+title: 'Idiasymbol:: Get_intro | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c9f43aeb33ce7727133a7ed2a4e4eba0cac53cda
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 2b025ebf2a3d800743c625fab97dc271f8320e75
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49813369"
 ---
 # <a name="idiasymbolgetintro"></a>IDiaSymbol::get_intro
 Recupera um sinalizador que especifica se a função é uma função virtual apresentando.  
@@ -33,10 +34,10 @@ HRESULT get_intro (
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Retorna `TRUE` se a função é gratuito virtual; caso contrário, retornará `FALSE`.  
+ [out] Retorna `TRUE` se a função for intro virtual; caso contrário, retornará `FALSE`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
@@ -52,14 +53,14 @@ class B : public A {
 }  
 ```  
   
- Ambos `A::f1` e `B::f1` são funções virtuais, mas `A::f1` é gratuito virtual.  
+ Ambos `A::f1` e `B::f1` são funções virtuais, mas `A::f1` é intro virtual.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Requisito|Descrição|  
 |-----------------|-----------------|  
 |Cabeçalho:|dia2.h|  
-|Versão:|Versão 7.0 do DIA SDK|  
+|Versão:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

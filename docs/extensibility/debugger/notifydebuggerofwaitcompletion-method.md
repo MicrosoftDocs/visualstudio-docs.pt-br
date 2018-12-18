@@ -13,18 +13,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 95c510cd0b9be97c53d2026a54335b07bcd1da9f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1288034f171c56e78f17d02f39843cf4ff600e5e
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233094"
 ---
 # <a name="notifydebuggerofwaitcompletion-method"></a>Método NotifyDebuggerOfWaitCompletion
 Método de espaço reservado usado como um destino de ponto de interrupção pelo depurador. Esse método não deve ser embutida ou otimizado.  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Assembly:** mscorlib (em mscorlib.dll)  
+ **Assembly:** mscorlib (em *mscorlib. dll*)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,7 +34,7 @@ private void NotifyDebuggerOfWaitCompletion()
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Todas as operações de junção com uma tarefa devem chamar esse método se o bit de notificação do depurador está definido.  
+ Todas as operações de junção com uma tarefa devem chamar esse método se suas bit de notificação do depurador está definido.  
   
 ## <a name="requirements"></a>Requisitos  
   

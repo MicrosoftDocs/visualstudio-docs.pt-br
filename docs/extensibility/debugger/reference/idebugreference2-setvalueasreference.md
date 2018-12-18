@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0ce62358df758b7f4cf3ef0883cf0ac457aaf1f5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 96245b7089ddef7d465d01203ca8b540c618b05f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820246"
 ---
 # <a name="idebugreference2setvalueasreference"></a>IDebugReference2::SetValueAsReference
 Define o valor de uma referência de outra referência. Reservado para uso futuro.  
@@ -52,10 +53,10 @@ int SetValueAsReference (
  [in] O número de referências na matriz.  
   
  `pValue`  
- [in] Um [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objeto do qual definir o valor da propriedade.  
+ [in] Uma [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objeto do qual definir o valor da propriedade.  
   
  `dwTimeout`  
- [in] Tempo máximo, em milissegundos, de espera antes de retornar desse método. Use `INFINITE` aguardar indefinidamente.  
+ [in] Tempo máximo, em milissegundos, para aguardar antes de retornar do método. Use `INFINITE` para aguardar indefinidamente.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Sempre retorna `E_NOTIMPL`.  

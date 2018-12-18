@@ -1,6 +1,6 @@
 ---
-title: Como posso depurar violações de acesso ao executar meu programa fora do depurador? | Microsoft Docs
-ms.custom: ''
+title: Depurar violações de acesso ao executar um aplicativo fora do depurador | Microsoft Docs
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -20,19 +20,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 47941b2d98029c6466451fb947e31e71d14e6c57
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 42284de1195afb3b0926b15335c8e37bdcd5ec30
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53048470"
 ---
 # <a name="how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger"></a>Como posso depurar violações de acesso ao executar meu programa fora do depurador?
+
 ## <a name="problem-description"></a>Descrição do problema  
  Meu programa é executado corretamente no ambiente do Visual Studio, mas quando eu o executo em modo autônomo no sistema operacional Windows, ele gera uma violação de acesso. Como posso depurar esse problema?  
   
 ## <a name="solution"></a>Solução  
- Definir o [Just-in-time depuração](../debugger/just-in-time-debugging-in-visual-studio.md) opção e execute o programa autônomo, até que a violação de acesso. Em seguida, no **violação de acesso** caixa de diálogo, você pode clicar em **Cancelar** para iniciar o depurador.  
+ Defina a opção [depuração Just-In-Time](../debugger/just-in-time-debugging-in-visual-studio.md) e execute o programa autônomo, até que ocorra a violação de acesso. Em seguida, na caixa de diálogo **Violação de Acesso**, clique em **Cancelar** para iniciar o depurador.  
   
 ## <a name="see-also"></a>Consulte também  
- [Perguntas frequentes de código nativo de depuração](../debugger/debugging-native-code-faqs.md)   
+ [Perguntas frequentes sobre depuração de código nativo](../debugger/debugging-native-code-faqs.md)   
  [Depurando código nativo](../debugger/debugging-native-code.md)

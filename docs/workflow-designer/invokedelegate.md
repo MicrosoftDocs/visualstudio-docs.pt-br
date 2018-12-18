@@ -1,7 +1,9 @@
 ---
-title: InvokeDelegate | Microsoft Docs
+title: Designer de fluxo de trabalho - InvokeDelegate
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - InvokeDelegate Designer
 - System.Activities.Statements.InvokeDelegate.UI
@@ -11,31 +13,34 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 93e41d98b156b6314158a1cc99e368092b0cf494
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1e1f91b88d686f3e9a6ddee9573824eb4191e2bf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49927925"
 ---
 # <a name="invokedelegate"></a>InvokeDelegate
+
 O **InvokeDelegate** designer é usado para criar e configurar um <xref:System.Activities.Statements.InvokeDelegate> atividade.
 
 ## <a name="the-invokedelegate-activity"></a>A atividade de InvokeDelegate
- <xref:System.Activities.Statements.InvokeDelegate> chama um delegate público.
 
-### <a name="using-the-invokedelegate-activity-designer"></a>Usando o designer de atividade de InvokeDelegate
- O **InvokeDelegate** designer de atividade pode ser encontrado no **primitivos** categoria do **caixa de ferramentas**, que é acessado clicando o **dacaixadeferramentas** guia [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] (como alternativa, selecione **barra de ferramentas** do **exibição** menu ou CTRL + ALT + X.)
+<xref:System.Activities.Statements.InvokeDelegate> chama um delegate público.
 
- O **InvokeDelegate** designer de atividades pode ser arrastado o **caixa de ferramentas** e removidos no [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] superfície onde nunca atividades geralmente são colocados, tais como dentro um <xref:System.Activities.Statements.Sequence>. Isso cria uma atividade de <xref:System.Activities.Statements.InvokeDelegate> com <xref:System.Activities.Activity.DisplayName%2A> padrão de InvokeDelegate. O <xref:System.Activities.Activity.DisplayName%2A> pode ser editado no cabeçalho do **InvokeDelegate** designer de atividade ou o **DisplayName** caixa da grade de propriedade.
+### <a name="use-the-invokedelegate-activity-designer"></a>Use o Designer de atividade de InvokeDelegate
+
+Acesso a **InvokeDelegate** designer de atividade na **primitivos** categoria dos **caixa de ferramentas**. O **InvokeDelegate** designer de atividade pode ser arrastado da **caixa de ferramentas** e ignorados sobre a superfície do Designer de fluxo de trabalho onde quer que as atividades são colocadas em geral, como em um <xref:System.Activities.Statements.Sequence>. Soltar o designer de atividade cria uma <xref:System.Activities.Statements.InvokeDelegate> atividade com um padrão <xref:System.Activities.Activity.DisplayName%2A> de InvokeDelegate. O <xref:System.Activities.Activity.DisplayName%2A> pode ser editado no cabeçalho do **InvokeDelegate** designer de atividade ou nos **DisplayName** caixa da grade de propriedade.
 
 ### <a name="the-invokedelegate-properties"></a>As propriedades de InvokeDelegate
- A tabela a seguir mostra as propriedades de <xref:System.Activities.Statements.InvokeDelegate> e descreve como elas são usadas no designer. Essas propriedades podem ser editadas na grade de propriedade e alguns podem ser editados na superfície do designer de [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)].
+
+A tabela a seguir mostra as propriedades de <xref:System.Activities.Statements.InvokeDelegate> e descreve como elas são usadas no designer. Essas propriedades podem ser editadas na grade de propriedade e alguns podem ser editados na superfície do Designer de fluxo de trabalho.
 
 |Nome da Propriedade|Necessária|Uso|
-|-------------------|--------------|-----------|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|O nome amigável de atividade de <xref:System.Activities.Statements.InvokeDelegate> . O valor padrão é InvokeDelegate.<br /><br /> Embora não seja necessário <xref:System.Activities.Activity.DisplayName%2A> restrita, é uma prática recomendada usar um.|
-|<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|verdadeiro|O nome de <xref:System.Activities.ActivityDelegate> a ser chamado quando a atividade executar. Esta propriedade pode ser editada na superfície de designer. Esta é uma propriedade imperativa.|
-|<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|A coleção de argumento de representante chamado. As chaves são os nomes dos objetos de parâmetro no <xref:System.Activities.ActivityDelegate> e os valores são os argumentos cujas expressões são avaliadas e atribuídos aos objetos de parâmetro correspondente. Na grade de propriedades, clique no botão reticências a **DelegateArguments** campo, ele exibe o **DelegateArguments** caixa de diálogo para permitir que você defina essa propriedade. Clique o **criar argumento** campo para adicionar os argumentos.|
+|-|--------------|-|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|O nome amigável de atividade de <xref:System.Activities.Statements.InvokeDelegate> . O valor padrão é InvokeDelegate.<br /><br /> Embora o <xref:System.Activities.Activity.DisplayName%2A> não é estritamente necessária, é melhor usar um.|
+|<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|verdadeiro|O nome de <xref:System.Activities.ActivityDelegate> a ser chamado quando a atividade executar. Essa propriedade pode ser editada na superfície do designer e é obrigatória.|
+|<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|A coleção de argumento de representante chamado. As chaves são os nomes dos objetos de parâmetro no <xref:System.Activities.ActivityDelegate>, e os valores são os argumentos cujas expressões são avaliadas e atribuídas a objetos de parâmetro correspondente. Para exibir o **DelegateArguments** caixa de diálogo onde é possível definir essa propriedade, clique no botão de reticências na **DelegateArguments** campo da grade de propriedade. Clique o **criar argumento** campo para adicionar os argumentos.|
 
 ## <a name="see-also"></a>Consulte também
 

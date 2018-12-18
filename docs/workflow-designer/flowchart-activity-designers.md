@@ -1,22 +1,25 @@
 ---
-title: Designers de atividade do fluxograma | Microsoft Docs
+title: Designer de fluxo de trabalho – Designers de atividade do fluxograma
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: 8b7b4aa6-d27d-45c8-87c2-641440d38afc
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 35b5e3b3548662e1699723c82e7d12fbdca3ab2b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ef7fc3e956c6b31b1df8346e9b347ca3e094d878
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36755714"
 ---
 # <a name="flowchart-activity-designers"></a>Designer de atividade do fluxograma
 
-Designer de fluxo de trabalho do Windows inclui um número de atividades fornecido pelo sistema que você pode usar ao construir os fluxos de trabalho. Esta seção contém sistema forneceu as atividades usadas para gerenciar fluxogramas em um fluxo de trabalho. Os tópicos a seguir descrevem essas atividades e fornecem orientação sobre como usá-los.
+Designer de fluxo de trabalho inclui um número de sistema forneceu atividades que você pode usar ao construir os fluxos de trabalho. Esta seção contém sistema forneceu as atividades usadas para gerenciar fluxogramas em um fluxo de trabalho. Os tópicos a seguir descrevem essas atividades e fornecem orientação sobre como usá-los.
 
 ## <a name="reference"></a>Referência
  <xref:System.Activities.Activity>

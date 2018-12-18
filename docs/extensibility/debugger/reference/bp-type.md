@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 823b2b4bd53aabfdbcc887fe8ce4e1bf1bf858d7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c525b30a290a1a0c5f732f65967acb50219c9647
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905150"
 ---
 # <a name="bptype"></a>BP_TYPE
 Especifica se o ponto de interrupção estiver em um local de código, é um local de dados ou outro tipo de ponto de interrupção.  
@@ -47,16 +48,16 @@ public enum enum_BP_TYPE {
   
 ## <a name="members"></a>Membros  
  BPT_NONE  
- Não especifica que nenhum tipo de ponto de interrupção.  
+ Não especifica nenhum tipo de ponto de interrupção.  
   
  BPT_CODE  
- Especifica um ponto de interrupção do código.  
+ Especifica um ponto de interrupção de código.  
   
  BPT_DATA  
  Especifica um ponto de interrupção de dados.  
   
  BPT_SPECIAL  
- Especifica um ponto de interrupção que não é um código nem um tipo de dados. Esse tipo foi preterido e não deve ser usado.  
+ Especifica um ponto de interrupção que não é um código nem um tipo de dados. Esse tipo está obsoleto e não deve ser usado.  
   
 ## <a name="remarks"></a>Comentários  
  Passado como um parâmetro para o [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md) e [GetBreakpointType](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md) métodos.  

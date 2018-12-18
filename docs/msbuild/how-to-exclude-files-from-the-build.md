@@ -14,16 +14,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eb8e8ba51f4aaeed0242147d46fd282b95452d91
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b2adfd3d571fe16fcbfe273e5513ebea724403cd
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080682"
 ---
 # <a name="how-to-exclude-files-from-the-build"></a>Como excluir arquivos do build
 Em um arquivo de projeto, você pode usar curingas para incluir todos os arquivos em um diretório ou um conjunto aninhado de diretórios como entradas para um build. No entanto, pode haver um arquivo no diretório ou um diretório em um conjunto aninhado de diretórios que você não deseja incluir como entrada para um build. Você pode excluir explicitamente esse arquivo ou diretório da lista de entradas. Também pode haver um arquivo em um projeto que você deseja incluir somente em determinadas condições. Você pode declarar explicitamente as condições sob as quais um arquivo é incluído em um build.  
   
-## <a name="excluding-a-file-or-directory-from-the-inputs-for-a-build"></a>Excluir um arquivo ou diretório das entradas para um build  
+## <a name="exclude-a-file-or-directory-from-the-inputs-for-a-build"></a>Excluir um arquivo ou um diretório das entradas para um build  
  Listas de itens são os arquivos de entrada para um build. Os itens que você deseja incluir são declarados separadamente ou como um grupo usando o atributo `Include`. Por exemplo:  
   
 ```xml  
@@ -35,7 +36,7 @@ Em um arquivo de projeto, você pode usar curingas para incluir todos os arquivo
   
  Se você usou curingas para incluir todos os arquivos em um diretório ou um conjunto aninhado de diretórios como entradas para um build, poderá haver um ou mais arquivos no diretório ou um diretório no conjunto aninhado de diretórios que você não deseja incluir. Para excluir um item da lista de itens, use o atributo `Exclude`.  
   
-#### <a name="to-include-all-cs-or-vb-files-except-form2"></a>Para incluir todos os arquivos .cs ou .vb, exceto o Form2  
+#### <a name="to-include-all-cs-or-vb-files-except-form2"></a>Para incluir todos os arquivos *.cs* ou *.vb*, exceto *Form2*  
   
 -   Use um dos atributos `Include` e `Exclude` a seguir:  
   
@@ -43,13 +44,13 @@ Em um arquivo de projeto, você pode usar curingas para incluir todos os arquivo
     <CSFile Include="*.cs" Exclude="Form2.cs"/>  
     ```  
   
-     - ou –  
+    ou
   
     ```xml  
     <VBFile Include="*.vb" Exclude="Form2.vb"/>  
     ```  
   
-#### <a name="to-include-all-cs-or-vb-files-except-form2-and-form3"></a>Para incluir todos os arquivos .cs ou .vb, exceto o Form2 e o Form3  
+#### <a name="to-include-all-cs-or-vb-files-except-form2-and-form3"></a>Para incluir todos os arquivos *.cs* ou *.vb*, exceto *Form2* e *Form3*  
   
 -   Use um dos atributos `Include` e `Exclude` a seguir:  
   
@@ -57,13 +58,13 @@ Em um arquivo de projeto, você pode usar curingas para incluir todos os arquivo
     <CSFile Include="*.cs" Exclude="Form2.cs;Form3.cs"/>  
     ```  
   
-     - ou –  
+    ou
   
     ```xml  
     <VBFile Include="*.vb" Exclude="Form2.vb;Form3.vb"/>  
     ```  
   
-#### <a name="to-include-all-jpg-files-in-subdirectories-of-the-images-directory-except-those-in-the-version2-directory"></a>Para incluir todos os arquivos .jpg em subdiretórios do diretório Images, exceto aqueles no diretório Version2  
+#### <a name="to-include-all-jpg-files-in-subdirectories-of-the-images-directory-except-those-in-the-version2-directory"></a>Para incluir todos os arquivos *.jpg* em subdiretórios do diretório *Images*, exceto aqueles no diretório *Version2*  
   
 -   Use os atributos `Include` e `Exclude` a seguir:  
   
@@ -76,10 +77,10 @@ Em um arquivo de projeto, você pode usar curingas para incluir todos os arquivo
     > [!NOTE]
     >  Você deve especificar o caminho para os dois atributos. Se você usar um caminho absoluto para especificar locais de arquivo no atributo `Include`, também é necessário usar um caminho absoluto no atributo `Exclude`. Se você usar um caminho relativo no atributo `Include`, também deverá usar um caminho relativo no atributo `Exclude`.  
   
-## <a name="using-conditions-to-exclude-a-file-or-directory-from-the-inputs-for-a-build"></a>Usar condições para excluir um arquivo ou diretório das entradas para um build  
+## <a name="use-conditions-to-exclude-a-file-or-directory-from-the-inputs-for-a-build"></a>Usar condições para excluir um arquivo ou um diretório das entradas para um build  
  Se houver itens que você deseja incluir, por exemplo, em um build de depuração, mas não em um build de versão, você poderá usar o atributo `Condition` para especificar as condições sob as quais o item será incluído.  
   
-#### <a name="to-include-the-file-formulavb-only-in-release-builds"></a>Para incluir o arquivo Formula.vb somente em compilações de versão  
+#### <a name="to-include-the-file-formulavb-only-in-release-builds"></a>Para incluir o arquivo *Formula.vb* somente em builds de Versão  
   
 -   Use um atributo `Condition` semelhante ao seguinte:  
   
@@ -90,7 +91,7 @@ Em um arquivo de projeto, você pode usar curingas para incluir todos os arquivo
     ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir compila um projeto com todos os arquivos .cs no diretório, exceto o Form2.cs.  
+ O exemplo de código a seguir cria um projeto com todos os arquivos *.cs* no diretório, exceto *Form2.cs*.  
   
 ```xml  
 <Project DefaultTargets="Compile"  
@@ -125,4 +126,5 @@ Em um arquivo de projeto, você pode usar curingas para incluir todos os arquivo
   
 ## <a name="see-also"></a>Consulte também  
  [Itens](../msbuild/msbuild-items.md)   
- [MSBuild](../msbuild/msbuild.md) [Como selecionar os arquivos a serem compilados](../msbuild/how-to-select-the-files-to-build.md)
+ [MSBuild](../msbuild/msbuild.md)   
+ [Como selecionar os arquivos a serem compilados](../msbuild/how-to-select-the-files-to-build.md)   

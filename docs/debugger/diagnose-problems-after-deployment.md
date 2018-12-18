@@ -10,394 +10,381 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 54a29e25c19d3dae18efd967a4fb26e1cd4f576a
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b10635c1aefedf7af83a1c884717b80b442e8998
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219907"
 ---
-# <a name="diagnose-problems-after-deployment"></a>Diagnosticar problemas após a implantação
-Para diagnosticar problemas no seu aplicativo da web ASP.NET após a implantação usando o IntelliTrace, inclua informações de compilação com a versão para permitir que o Visual Studio localize automaticamente os arquivos de origem e símbolos corretos que são necessárias para depurar o log do IntelliTrace.  
+# <a name="diagnose-problems-after-deployment-using-intellitrace"></a>Diagnosticar problemas após a implantação usando o IntelliTrace
 
- Se você estiver usando o Microsoft Monitoring Agent para controlar o IntelliTrace, também precisará configurar o monitoramento de desempenho do aplicativo no servidor da web. Ele registra eventos de diagnóstico enquanto seu aplicativo é executado e salva os eventos em um arquivo de log do IntelliTrace. Em seguida, você pode observar os eventos no Visual Studio Enterprise (mas não Professional ou Community Edition), vá para o código em que um evento ocorreu, examinar os valores registrados no momento e para frente ou para trás por meio do código que foi executado. Depois de encontrar e resolver o problema, repita o ciclo apenas para compilar, liberar e monitorar seu aplicativo para que você possa corrigir problemas potenciais futuros o quanto antes e com mais rapidez.  
+Para diagnosticar problemas no seu aplicativo da web ASP.NET após a implantação usando o IntelliTrace, inclua informações de compilação com a versão para permitir que o Visual Studio localize automaticamente os arquivos de origem e símbolos corretos que são necessárias para depurar o log do IntelliTrace.
 
- ![Código, compilação, versão, monitorar, diagnosticar, corrigir](../debugger/media/ffr_cycle.png "FFR_Cycle")  
+ Se você estiver usando o Microsoft Monitoring Agent para controlar o IntelliTrace, também precisará configurar o monitoramento de desempenho do aplicativo no servidor da web. Ele registra eventos de diagnóstico enquanto seu aplicativo é executado e salva os eventos em um arquivo de log do IntelliTrace. Você pode, em seguida, examinar os eventos no Visual Studio Enterprise (mas não Professional ou Community edições), ir para o código onde ocorreu o evento, examinar os valores registrados no momento e avance ou retorne através do código que foi executado. Depois de encontrar e resolver o problema, repita o ciclo apenas para compilar, liberar e monitorar seu aplicativo para que você possa corrigir problemas potenciais futuros o quanto antes e com mais rapidez.
 
- **Você precisará:**  
-  
--   Visual Studio 2017, o Visual Studio 2015 ou Team Foundation Server 2017 2015, 2013, 2012 ou 2010 para configurar sua compilação  
-  
--   Para monitorar seu aplicativo e registrar dados de diagnóstico use o Microsoft Monitoring Agent  
+ ![Codificar, compilar, liberar, monitorar, diagnosticar, corrigir](../debugger/media/ffr_cycle.png "FFR_Cycle")
 
--   Visual Studio Enterprise (mas não nas edições Professional ou comunidade) para examinar os dados de diagnósticos e depurar seu código com o IntelliTrace  
+ **Você precisará:**
 
-##  <a name="SetUpBuild"></a> Etapa 1: Incluir informações com sua versão de compilação  
- Configure seu processo de compilação para criar um manifesto de compilação (BuildInfo.config file) de seu projeto Web e inclua esse manifesto em sua liberação. Esse manifesto contém informações sobre o projeto, sobre o controle do código-fonte e o sistema de compilação utilizados para criar uma compilação específica. Essas informações ajudam o Visual Studio a encontrar o código-fonte e os símbolos correspondentes após abrir o log do IntelliTrace para revisar os eventos registrados.  
+-   Visual Studio, DevOps do Azure ou o Team Foundation Server 2017, 2015, 2013, 2012 ou 2010 para configurar sua compilação
 
-###  <a name="AutomatedBuild"></a> Criar o manifesto de compilação para uma compilação automatizada usando o Team Foundation Server  
-  
- Siga essas etapas caso use Team Foundation Version Control ou Git.  
- 
- ####  <a name="TFS2017"></a> O Team Foundation Server de 2017
+-   Para monitorar seu aplicativo e registrar dados de diagnóstico use o Microsoft Monitoring Agent
 
- Configure sua definição de compilação para adicionar os locais de seu código-fonte, compilação e símbolos ao manifesto de compilação (BuildInfo.config file). O Team Foundation Build automaticamente cria esse arquivo e coloca-o em sua pasta de saída do projeto.
-  
-1.  Se você já tiver uma definição de compilação usando o modelo do ASP.NET Core (.NET Framework), você pode [editar sua definição de compilação ou criar uma nova definição de compilação.](http://msdn.microsoft.com/Library/1c2eca2d-9a65-477e-9b23-0678ff7882ee)
-  
-     ![Exibição criar definição no TFS 2017](../debugger/media/ffr_tfs2017viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")
-  
-2.  Se você criar um novo modelo, escolha o modelo do ASP.NET Core (.NET Framework). 
-  
-     ![Escolha o modelo de processo de compilação &#45; TFS 2017](../debugger/media/ffr_tfs2017buildprocesstemplate.png "FFR_TFS2013BuildProcessTemplate")  
-  
-3.  Especifique onde salvar o arquivo de símbolos (PDB) de forma que o código-fonte seja indexado automaticamente.  
-  
+-   Visual Studio Enterprise (mas não as edições Professional ou Community) para examinar dados de diagnóstico e depurar seu código com o IntelliTrace
+
+##  <a name="SetUpBuild"></a> Etapa 1: Inclua informações com sua versão de compilação
+ Configurar o processo de compilação para criar um manifesto de compilação (*Buildinfo* arquivo) para a web de projeto e inclua esse manifesto em sua versão. Esse manifesto contém informações sobre o projeto, sobre o controle do código-fonte e o sistema de compilação utilizados para criar uma compilação específica. Essas informações ajudam o Visual Studio a encontrar o código-fonte e os símbolos correspondentes após abrir o log do IntelliTrace para revisar os eventos registrados.
+
+###  <a name="AutomatedBuild"></a> Crie o manifesto de compilação para uma compilação automatizada usando o Team Foundation Server
+
+ Siga essas etapas caso use Team Foundation Version Control ou Git.
+
+####  <a name="TFS2017"></a> DevOps do Azure e o Team Foundation Server 2017
+
+Visual Studio 2017 não inclui o *Buildinfo* arquivo, que foi substituído e, em seguida, removido. Para depurar aplicativos web ASP.NET após a implantação, use um dos seguintes métodos:
+
+* Para implantação no Azure, use [Application Insights](https://docs.microsoft.com/azure/application-insights/).
+
+* Se você precisar usar o IntelliTrace, abra o projeto no Visual Studio e carregar os arquivos de símbolo de compilação correspondente. Você pode carregar arquivos de símbolo a **módulos** janela ou por meio da configuração de símbolos no **ferramentas** > **opções** > **depuração**   >  **Símbolos**.
+
+
+####  <a name="TFS2013"></a> Team Foundation Server 2013
+ Configure seu pipeline de compilação para adicionar os locais de seu código-fonte, compilação e símbolos ao manifesto de compilação (Buildinfo config). O Team Foundation Build automaticamente cria esse arquivo e coloca-o em sua pasta de saída do projeto.
+
+1.  [Edite seu pipeline de compilação ou crie um novo pipeline de compilação.](/azure/devops/pipelines/get-started-designer?view=vsts)
+
+     ![Modo de exibição criar o pipeline no TFS 2013](../debugger/media/ffr_tfs2013viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")
+
+2.  Escolha o modelo padrão (TfvcTemplate.12.xaml) ou seu próprio modelo personalizado.
+
+     ![Escolha o modelo de processo de compilação &#45; TFS 2013](../debugger/media/ffr_tfs2013buildprocesstemplate.png "FFR_TFS2013BuildProcessTemplate")
+
+3.  Especifique onde salvar o arquivo de símbolos (PDB) de forma que o código-fonte seja indexado automaticamente.
+
      Se você usar um modelo personalizado, verifique se o modelo tem uma atividade para indexar o código-fonte. Posteriormente, adicione um argumento de MSBuild para especificar onde salvar o arquivo de símbolos.
-  
-     ![Configurar o caminho de símbolos na definição de compilação TFS 2017](../debugger/media/ffr_tfs2017builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")  
-  
-     Para obter mais informações sobre símbolos, consulte [publicar dados de símbolo](http://msdn.microsoft.com/Library/bd6977ca-e30a-491a-a153-671d81222ce6).  
-  
-4.  Adicione este argumento de MSBuild para incluir os locais do TFS e de símbolos ao arquivo de manifesto da compilação:  
-  
-     **/p: includeservernameinbuildinfo = true**  
-  
-     Qualquer um que possa acessar seu servidor Web pode ver esses locais no manifesto de compilação. Certifique-se de que o servidor de código-fonte é seguro.
-  
-6.  Execute uma nova compilação.  
-  
-    Vá para [etapa 2: versão de seu aplicativo](#DeployRelease)  
 
-####  <a name="TFS2013"></a> O Team Foundation Server 2013  
- Configure sua definição de compilação para adicionar os locais de seu código-fonte, compilação e símbolos ao manifesto de compilação (BuildInfo.config file). O Team Foundation Build automaticamente cria esse arquivo e coloca-o em sua pasta de saída do projeto.  
+     ![Configurar o caminho de símbolos no pipeline de build TFS 2013](../debugger/media/ffr_tfs2013builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")
 
-1.  [Edite sua definição de compilação ou criar uma nova definição de compilação.](http://msdn.microsoft.com/Library/1c2eca2d-9a65-477e-9b23-0678ff7882ee)  
+     Para obter mais informações sobre símbolos, consulte [publicar dados de símbolo](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols?view=vsts).
 
-     ![Exibição criar definição no TFS 2013](../debugger/media/ffr_tfs2013viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")  
+4.  Adicione este argumento de MSBuild para incluir os locais do TFS e de símbolos ao arquivo de manifesto da compilação:
 
-2.  Escolha o modelo padrão (TfvcTemplate.12.xaml) ou seu próprio modelo personalizado.  
+     **/p:IncludeServerNameInBuildInfo = true**
 
-     ![Escolha o modelo de processo de compilação &#45; TFS 2013](../debugger/media/ffr_tfs2013buildprocesstemplate.png "FFR_TFS2013BuildProcessTemplate")  
-
-3.  Especifique onde salvar o arquivo de símbolos (PDB) de forma que o código-fonte seja indexado automaticamente.  
-
-     Se você usar um modelo personalizado, verifique se o modelo tem uma atividade para indexar o código-fonte. Posteriormente, adicione um argumento de MSBuild para especificar onde salvar o arquivo de símbolos.  
-
-     ![Configurar o caminho de símbolos na definição de compilação TFS 2013](../debugger/media/ffr_tfs2013builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")  
-
-     Para obter mais informações sobre símbolos, consulte [publicar dados de símbolo](http://msdn.microsoft.com/Library/bd6977ca-e30a-491a-a153-671d81222ce6).  
-
-4.  Adicione este argumento de MSBuild para incluir os locais do TFS e de símbolos ao arquivo de manifesto da compilação:  
-
-     **/p: includeservernameinbuildinfo = true**  
-  
      Qualquer um que possa acessar seu servidor Web pode ver esses locais no manifesto de compilação. Certifique-se de que o servidor de código-fonte é seguro.
 
-5.  Se você usa um modelo personalizado, adicione este argumento de MSBuild para especificar onde salvar o arquivo de símbolos:  
-  
-     **/p:BuildSymbolStorePath =**\<*caminho dos símbolos*>  
-  
-     ![Incluir informações do servidor de compilação na definição de compilação TFS 2013](../debugger/media/ffr_tfs2013builddefincludeserverinfo.png "FFR_TFS2013BuildDefIncludeServerInfo")  
-  
-     E adicione estas linhas ao arquivo de seu projeto da Web (.csproj, .vbproj):  
-  
-    ```  
-    <!-- Import the targets file. Change the folder location as necessary. -->  
-       <Import Project=""$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\BuildInfo\Microsoft.VisualStudio.ReleaseManagement.BuildInfo.targets" />  
-  
-    ```  
+5.  Se você usa um modelo personalizado, adicione este argumento de MSBuild para especificar onde salvar o arquivo de símbolos:
 
-     Qualquer um que possa acessar seu servidor Web pode ver esses locais no manifesto de compilação. Certifique-se de que o servidor de código-fonte é seguro.  
+     **1&gt;/p:buildsymbolstorepath=&lt;1}&lt;{2&gt;caminho =**\<*para símbolos*>
 
-6.  Execute uma nova compilação.  
+     ![Incluir informações do servidor de compilação na definição de compilação TFS 2013](../debugger/media/ffr_tfs2013builddefincludeserverinfo.png "FFR_TFS2013BuildDefIncludeServerInfo")
 
-    Vá para [etapa 2: versão de seu aplicativo](#DeployRelease)  
+     E adicione estas linhas ao arquivo de seu projeto da Web (.csproj, .vbproj):
 
-####  <a name="TFS2012_2010"></a> O Team Foundation Server 2012 ou 2010  
- Siga estas etapas para criar automaticamente o arquivo de manifesto de compilação (BuildInfo.config) para seu projeto e colocá-lo na pasta de saída do projeto. O arquivo é exibido como "*ProjectName*. BuildInfo.config"na pasta de saída, mas é renomeado"BuildInfo.config"na pasta de implantação depois de publicar seu aplicativo.  
+    ```xml
+    <!-- Import the targets file. Change the folder location as necessary. -->
+       <Import Project=""$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\BuildInfo\Microsoft.VisualStudio.ReleaseManagement.BuildInfo.targets" />
 
-1.  Instale o Visual Studio 2013 (qualquer edição) no servidor do Team Foundation Build.  
+    ```
 
-2.  Em sua definição de compilação, especifique onde salvar os símbolos de forma que o código-fonte seja indexado automaticamente.  
+     Qualquer um que possa acessar seu servidor Web pode ver esses locais no manifesto de compilação. Certifique-se de que o servidor de código-fonte é seguro.
 
-     Se você usar um modelo personalizado, verifique se o modelo tem uma atividade para indexar o código-fonte.  
+6.  Execute uma nova compilação.
 
-3.  Adicionar estes argumentos de MSBuild à definição de compilação:  
+    Vá para [etapa 2: liberar seu aplicativo](#DeployRelease)
 
-    -   **/p:VisualStudioVersion = 12.0**  
+####  <a name="TFS2012_2010"></a> Team Foundation Server 2012 ou 2010
+ Siga estas etapas para criar automaticamente o arquivo de manifesto de compilação (BuildInfo.config) para seu projeto e colocá-lo na pasta de saída do projeto. O arquivo aparece como "*ProjectName*. Buildinfo. config"na pasta de saída, mas é renomeado"Buildinfo. config"na pasta de implantação depois de publicar seu aplicativo.
 
-    -   **/p:MSBuildAssemblyVersion = 12.0**  
+1.  Instale o Visual Studio 2013 (qualquer edição) no servidor do Team Foundation Build.
 
-    -   **/TV:12.0**  
+2.  Em seu pipeline de compilação, especifique onde salvar os símbolos de forma que seu código-fonte seja indexado automaticamente.
 
-    -   **/p: includeservernameinbuildinfo = true**  
+     Se você usar um modelo personalizado, verifique se o modelo tem uma atividade para indexar o código-fonte.
 
-    -   **/p:BuildSymbolStorePath =**\<*caminho dos símbolos*>  
+3.  Adicione estes argumentos de MSBuild ao seu pipeline de compilação:
 
-4.  Execute uma nova compilação.  
+    -   **/p:VisualStudioVersion = 12.0**
 
-    Vá para [etapa 2: versão de seu aplicativo](#DeployRelease)  
+    -   **/p:MSBuildAssemblyVersion = 12.0**
 
-###  <a name="ManualBuild"></a> Criar o manifesto de compilação para uma compilação manual usando o Visual Studio  
- Siga estas etapas para criar automaticamente o arquivo de manifesto de compilação (BuildInfo.config) para seu projeto e colocá-lo na pasta de saída do projeto. O arquivo é exibido como "*ProjectName*. BuildInfo.config"na pasta de saída, mas é renomeado"BuildInfo.config"na pasta de implantação depois de publicar seu aplicativo.  
+    -   **/TV:12.0**
 
-1.  Em **Solution Explorer**, descarregue o projeto da web.  
+    -   **/p:IncludeServerNameInBuildInfo = true**
 
-2.  Abra o arquivo de projeto (.csproj, .vbproj). Adicione as seguintes linhas:  
+    -   **1&gt;/p:buildsymbolstorepath=&lt;1}&lt;{2&gt;caminho =**\<*para símbolos*>
 
-    ```xml  
-    <!-- **************************************************** -->  
-    <!-- Build info -->  
-    <PropertyGroup>  
-       <!-- Generate the BuildInfo.config file -->  
-       <GenerateBuildInfoConfigFile>True</GenerateBuildInfoConfigFile>  
-       <!-- Include server name in build info -->   
-       <IncludeServerNameInBuildInfo>True</IncludeServerNameInBuildInfo>   
-       <!-- Include the symbols path so Visual Studio can find the matching deployed code when you start debugging. -->  
-       <BuildSymbolStorePath><path to symbols></BuildSymbolStorePath>  
-    </PropertyGroup>  
-    <!-- **************************************************** -->  
-    ```  
+4.  Execute uma nova compilação.
 
-3.  Faça check-in do arquivo de projeto atualizado.  
+    Vá para [etapa 2: liberar seu aplicativo](#DeployRelease)
 
-4.  Execute uma nova compilação.  
+###  <a name="ManualBuild"></a> Crie o manifesto de compilação para uma compilação manual usando o Visual Studio
+ Siga estas etapas para criar automaticamente o arquivo de manifesto de compilação (BuildInfo.config) para seu projeto e colocá-lo na pasta de saída do projeto. O arquivo aparece como "*ProjectName*. Buildinfo. config"na pasta de saída, mas é renomeado"Buildinfo. config"na pasta de implantação depois de publicar seu aplicativo.
 
-    Vá para [etapa 2: versão de seu aplicativo](#DeployRelease)  
+1.  Na **Gerenciador de soluções**, descarregue seu projeto web.
 
-###  <a name="MSBuild"></a> Criar o manifesto de compilação para uma compilação manual usando o MSBuild.exe  
- Adicione estes argumentos de compilação ao executar uma compilação:  
+2.  Abra o arquivo de projeto (.csproj, .vbproj). Adicione as seguintes linhas:
 
- **/p:GenerateBuildInfoConfigFile = true**  
+    ```xml
+    <!-- **************************************************** -->
+    <!-- Build info -->
+    <PropertyGroup>
+       <!-- Generate the BuildInfo.config file -->
+       <GenerateBuildInfoConfigFile>True</GenerateBuildInfoConfigFile>
+       <!-- Include server name in build info -->
+       <IncludeServerNameInBuildInfo>True</IncludeServerNameInBuildInfo>
+       <!-- Include the symbols path so Visual Studio can find the matching deployed code when you start debugging. -->
+       <BuildSymbolStorePath><path to symbols></BuildSymbolStorePath>
+    </PropertyGroup>
+    <!-- **************************************************** -->
+    ```
 
- **/p: includeservernameinbuildinfo = true**  
+3.  Faça check-in do arquivo de projeto atualizado.
 
- **/p:BuildSymbolStorePath =**\<*caminho dos símbolos*>  
+4.  Execute uma nova compilação.
 
-##  <a name="DeployRelease"></a> Etapa 2: Versão de seu aplicativo  
- Se você usar o [Web.Deploy pacote](http://msdn.microsoft.com/library/dd394698.aspx) que foi criado pelo processo de compilação para implantar seu aplicativo, o manifesto de compilação é renomeado automaticamente de "*ProjectName*. BuildInfo.config"para"BuildInfo.config"e é colocado na mesma pasta com o arquivo Web. config de seu aplicativo em seu servidor web.  
+    Vá para [etapa 2: liberar seu aplicativo](#DeployRelease)
 
- Se você usar outros métodos para implantar seu aplicativo, certifique-se de que o manifesto de compilação é renomeado de "*ProjectName*. BuildInfo.config"para"BuildInfo.config"e é colocado na mesma pasta com o arquivo Web. config de seu aplicativo no servidor web.  
+###  <a name="MSBuild"></a> Crie o manifesto de compilação para uma compilação manual usando MSBuild.exe
+ Adicione estes argumentos de compilação ao executar uma compilação:
 
-## <a name="step-3-monitor-your-app"></a>Etapa 3: monitorar seu aplicativo  
- Configure o monitoramento do desempenho de aplicativos no seu servidor Web para que você possa monitorar a ocorrência de problemas em seu aplicativo, registrar eventos de diagnóstico e salvar esses eventos em um arquivo de log do IntelliTrace. Consulte [monitorar sua versão para problemas de implantação](../debugger/using-the-intellitrace-stand-alone-collector.md).  
+ **/p:GenerateBuildInfoConfigFile = true**
 
-##  <a name="InvestigateEvents"></a> Etapa 4: Localizar o problema  
- Você precisará Visual Studio Enterprise no seu computador de desenvolvimento ou em outro computador para examinar os eventos registrados e depurar seu código usando o IntelliTrace. Você também pode usar ferramentas como CodeLens, mapas do depurador e mapas de código para ajudar no diagnóstico do problema.  
+ **/p:IncludeServerNameInBuildInfo = true**
 
-### <a name="open-the-intellitrace-log-and-matching-solution"></a>Abrir o log do IntelliTrace e a solução correspondente  
+ **1&gt;/p:buildsymbolstorepath=&lt;1}&lt;{2&gt;caminho =**\<*para símbolos*>
 
-1.  Abra o log do IntelliTrace (arquivo. itrace) do Visual Studio Enterprise. Ou basta clicar duas vezes o arquivo se você tiver o Visual Studio Enterprise no mesmo computador.  
+##  <a name="DeployRelease"></a> Etapa 2: Liberar seu aplicativo
+ Se você usar o [pacote Deploy](https://msdn.microsoft.com/library/dd394698.aspx) que foi criado pelo processo de compilação para implantar seu aplicativo, o manifesto de compilação é renomeado automaticamente de "*ProjectName*. Buildinfo. config"para"Buildinfo. config"e é colocado na mesma pasta com o arquivo de Web. config do seu aplicativo em seu servidor web.
 
-2.  Escolha **abrir solução** para que o Visual Studio automaticamente abra a solução ou projeto, a correspondência se o projeto não foi criado como parte de uma solução. [P: o log do IntelliTrace não contém informações sobre meu aplicativo implantado. Por que isso ocorreu? O que devo fazer?](#InvalidConfigFile)  
+ Se você usar outros métodos para implantar seu aplicativo, certifique-se de que o manifesto de compilação é renomeado de "*ProjectName*. Buildinfo. config"para"Buildinfo. config"e é colocado na mesma pasta com seu arquivo do aplicativo Web. config no servidor web.
 
-     O Visual Studio faz automaticamente um check-in particular de todas as alterações pendentes quando abre a solução ou o projeto correspondente. Para obter mais detalhes sobre este check-in particular, examine o **saída** janela ou **Team Explorer**.  
+## <a name="step-3-monitor-your-app"></a>Etapa 3: monitorar seu aplicativo
+ Configure o monitoramento do desempenho de aplicativos no seu servidor Web para que você possa monitorar a ocorrência de problemas em seu aplicativo, registrar eventos de diagnóstico e salvar esses eventos em um arquivo de log do IntelliTrace. Ver [monitorar sua versão para problemas de implantação](../debugger/using-the-intellitrace-stand-alone-collector.md).
 
-     Assim, antes de fazer qualquer alteração, confirme se você tem o código-fonte correto. Se você usa ramificação, pode estar trabalhando em uma ramificação diferente daquela em que o Visual Studio encontra o código-fonte, como sua ramificação de versão.  
+##  <a name="InvestigateEvents"></a> Etapa 4: Localizar o problema
+ Será necessário o Visual Studio Enterprise no computador de desenvolvimento ou em outro computador para revisar os eventos registrados e depurar seu código usando o IntelliTrace. Você também pode usar ferramentas como CodeLens, mapas do depurador e mapas de código para ajudar no diagnóstico do problema.
 
-     ![Abra a solução de log do IntelliTrace](../debugger/media/ffr_itsummarypageopensolution.png "FFR_ITSummaryPageOpenSolution")  
+### <a name="open-the-intellitrace-log-and-matching-solution"></a>Abrir o log do IntelliTrace e a solução correspondente
 
-     Se você já tem um espaço de trabalho mapeado para essa solução ou projeto, o Visual Studio seleciona esse espaço de trabalho para colocar o código-fonte encontrado.  
+1.  Abra o log do IntelliTrace (arquivo. itrace) do Visual Studio Enterprise. Ou apenas duas vezes no arquivo, se você tiver o Visual Studio Enterprise no mesmo computador.
 
-     ![Abrir do controle de origem para o espaço de trabalho mapeado](../debugger/media/ffr_openprojectfromsourcecontrol_mapped.png "FFR_OpenProjectFromSourceControl_Mapped")  
+2.  Escolher **abrir solução** para fazer com que o Visual Studio abra automaticamente a solução ou projeto correspondente se o projeto não foi criado como parte de uma solução. [P: o log do IntelliTrace está faltando informações sobre meu aplicativo implantado. Por que isso ocorreu? O que devo fazer?](#InvalidConfigFile)
 
-     Caso contrário, escolha outro espaço de trabalho ou crie um novo espaço de trabalho. O Visual Studio mapeará a ramificação inteira para esse espaço de trabalho.  
+     O Visual Studio faz automaticamente um check-in particular de todas as alterações pendentes quando abre a solução ou o projeto correspondente. Para obter mais detalhes sobre esse check-in particular, examine os **saída** janela ou **Team Explorer**.
 
-     ![Abrir do controle de origem &#45; criar novo espaço de trabalho](../debugger/media/ffr_openprojectfromsourcecontrol_createnewworkspace.png "FFR_OpenProjectFromSourceControl_CreateNewWorkspace")  
+     Assim, antes de fazer qualquer alteração, confirme se você tem o código-fonte correto. Se você usa ramificação, pode estar trabalhando em uma ramificação diferente daquela em que o Visual Studio encontra o código-fonte, como sua ramificação de versão.
 
-     Para criar um espaço de trabalho com mapeamentos específicos ou um nome que não é o nome do computador, escolha **gerenciar**.  
+     ![Abra a solução de log do IntelliTrace](../debugger/media/ffr_itsummarypageopensolution.png "FFR_ITSummaryPageOpenSolution")
 
-     [P: por que o Visual Studio dizer que meu espaço de trabalho selecionado não é elegível?](#IneligibleWorkspace)  
+     Se você já tem um workspace mapeado para essa solução ou projeto, o Visual Studio seleciona esse workspace para colocar o código-fonte encontrado.
 
-     [P: por que eu não pode continuar até que escolher uma coleção de equipe ou uma coleção diferente?](#ChooseTeamProject)  
+     ![Abrir do controle de origem para o espaço de trabalho mapeado](../debugger/media/ffr_openprojectfromsourcecontrol_mapped.png "FFR_OpenProjectFromSourceControl_Mapped")
 
-### <a name="diagnose-a-performance-problem"></a>Diagnosticar um problema de desempenho  
+     Caso contrário, escolha outro workspace ou crie um novo workspace. O Visual Studio mapeará a ramificação inteira para esse workspace.
 
-1.  Em **violações de desempenho**, examine os eventos de desempenho registrados, seus tempos de execução total e outras informações de evento. Em seguida, verifique um pouco mais os métodos que foram chamados durante um evento de desempenho específico.  
+     ![Abrir do controle de origem &#45; criar novo espaço de trabalho](../debugger/media/ffr_openprojectfromsourcecontrol_createnewworkspace.png "FFR_OpenProjectFromSourceControl_CreateNewWorkspace")
 
-     ![Exibir detalhes do evento de desempenho](../debugger/media/ffr_itsummarypageperformance.png "FFR_ITSummaryPagePerformance")  
+     Para criar um espaço de trabalho com mapeamentos específicos ou um nome que não é o nome do computador, escolha **gerenciar**.
 
-     Você também pode clicar duas vezes no evento.  
+     [P: por que o Visual Studio diz que meu espaço de trabalho selecionado é inelegível?](#IneligibleWorkspace)
 
-2.  Na página de eventos, revise o tempo de execução dessas chamadas. Localize uma chamada lenta na árvore de execução.  
+     [P: por que não consigo continuar até escolher uma coleção de equipe ou uma coleção diferente?](#ChooseTeamProject)
 
-     As chamadas mais lentas aparecem em sua própria seção quando você tem várias chamadas, aninhadas ou de outra maneira.  
+### <a name="diagnose-a-performance-problem"></a>Diagnosticar um problema de desempenho
 
-     Expanda essa chamada para revisar qualquer chamada aninhada e os valores gravados nesse momento. Em seguida, inicie a depuração dessa chamada.  
+1.  Sob **violações de desempenho**, examine os eventos de desempenho gravados, tempo de execução total e outras informações de evento. Em seguida, verifique um pouco mais os métodos que foram chamados durante um evento de desempenho específico.
 
-     ![Iniciar a depuração de chamada de método](../debugger/media/ffr_itsummarypageperformancemethodscalled.png "FFR_ITSummaryPagePerformanceMethodsCalled")  
+     ![Exibir detalhes de eventos de desempenho](../debugger/media/ffr_itsummarypageperformance.png "FFR_ITSummaryPagePerformance")
 
-     Você também pode clicar duas vezes na chamada.  
+     Você também pode clicar duas vezes no evento.
 
-     Se o método estiver no código do aplicativo, o Visual Studio irá para esse método.  
+2.  Na página de eventos, revise o tempo de execução dessas chamadas. Localize uma chamada lenta na árvore de execução.
 
-     ![Vá para o código do aplicativo do evento de desempenho](../debugger/media/ffr_itsummarypageperformancegotocode.png "FFR_ITSummaryPagePerformanceGoToCode")  
+     As chamadas mais lentas aparecem em sua própria seção quando você tem várias chamadas, aninhadas ou de outra maneira.
 
-     Agora você pode examinar outros valores registrados, a pilha de chamadas, depurar seu código, ou use o **IntelliTrace** janela [mover para trás ou para frente "no tempo" entre outros métodos](../debugger/intellitrace.md) que foram chamadas durante Esse evento de desempenho. [O que é todos esses outros eventos e informações no log do IntelliTrace? ](../debugger/using-saved-intellitrace-data.md) [Mais o que fazer aqui?](#WhatElse) [Obter mais informações sobre eventos de desempenho?](http://blogs.msdn.com/b/visualstudioalm/archive/2013/09/20/performance-details-in-intellitrace.aspx)  
+     Expanda essa chamada para revisar qualquer chamada aninhada e os valores gravados nesse momento. Em seguida, inicie a depuração dessa chamada.
 
-### <a name="diagnose-an-exception"></a>Diagnosticar uma exceção  
+     ![Iniciar a depuração de chamada de método](../debugger/media/ffr_itsummarypageperformancemethodscalled.png "FFR_ITSummaryPagePerformanceMethodsCalled")
 
-1.  Em **dados de exceção**, examine os eventos de exceção registrado, seus tipos, mensagens, e quando as exceções ocorreram. Para se aprofundar no código, comece com a depuração do evento mais recente em um grupo de exceções.  
+     Você também pode clicar duas vezes na chamada.
 
-     ![Iniciar a depuração de eventos de exceção](../debugger/media/ffr_itsummarypageexception.png "FFR_ITSummaryPageException")  
+     Se o método estiver no código do aplicativo, o Visual Studio irá para esse método.
 
-     Você também pode clicar duas vezes no evento.  
+     ![Vá para o código do aplicativo do evento de desempenho](../debugger/media/ffr_itsummarypageperformancegotocode.png "FFR_ITSummaryPagePerformanceGoToCode")
 
-     Se a exceção ocorreu no código do aplicativo, o Visual Studio irá para o local onde a exceção ocorreu.  
+     Agora você pode revisar outros valores gravados, a pilha de chamadas, depurar seu código, ou usar o **IntelliTrace** janela [mover com versões anteriores ou encaminhará "no tempo" entre outros métodos](../debugger/intellitrace.md) que foram chamados durante Esse evento de desempenho.
 
-     ![Vá para o código do aplicativo de um evento de exceção](../debugger/media/ffr_itsummarypageexceptiongotocode.png "FFR_ITSummaryPageExceptionGoToCode")  
+    - [O que é todos esses outros eventos e informações no log do IntelliTrace?](../debugger/using-saved-intellitrace-data.md)
+    - [O que mais posso fazer aqui?](#WhatElse)
+    - [Deseja obter mais informações sobre eventos de desempenho?](https://blogs.msdn.microsoft.com/devops/2013/09/20/performance-details-in-intellitrace/)
 
-     Agora você pode examinar outros valores registrados, a pilha de chamadas, ou usar o **IntelliTrace** janela [mover para trás ou para frente "no tempo", entre outros eventos registrados](../debugger/intellitrace.md), código relacionado e os valores registrados no Esses pontos no tempo. [O que é todos esses outros eventos e informações no log do IntelliTrace?](../debugger/using-saved-intellitrace-data.md)  
+### <a name="diagnose-an-exception"></a>Diagnosticar uma exceção
 
-###  <a name="WhatElse"></a> O que mais pode fazer aqui?  
+1.  Sob **dados de exceção**, examine os eventos de exceção gravados, seus tipos, mensagens, e quando as exceções aconteceram. Para se aprofundar no código, comece com a depuração do evento mais recente em um grupo de exceções.
 
--   [Obter mais informações sobre esse código](../ide/find-code-changes-and-other-history-with-codelens.md). Para localizar referências a esse código, seu histórico de alterações, bugs relacionados, itens de trabalho, as revisões de código ou testes de unidade - tudo sem sair do editor - usam indicadores CodeLens no editor.  
+     ![Iniciar a depuração de eventos de exceção](../debugger/media/ffr_itsummarypageexception.png "FFR_ITSummaryPageException")
 
-     ![CodeLens &#45; exibir referências a esse código](../debugger/media/ffr_itsummarypageperformancecodelensreferences.png "FFR_ITSummaryPagePerformanceCodeLensReferences")  
+     Você também pode clicar duas vezes no evento.
 
-     ![CodeLens &#45; Exibir histórico de alterações por este código](../debugger/media/ffr_itsummarypageperformancecodelensauthors.png "FFR_ITSummaryPagePerformanceCodeLensAuthors")  
+     Se a exceção ocorreu no código do aplicativo, o Visual Studio irá para o local onde a exceção ocorreu.
 
--   [Mapear o local no código durante a depuração.](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md) Para acompanhar visualmente os métodos que foram chamados durante a sessão de depuração, mapeie a pilha de chamadas.  
+     ![Vá para o código do aplicativo de um evento de exceção](../debugger/media/ffr_itsummarypageexceptiongotocode.png "FFR_ITSummaryPageExceptionGoToCode")
 
-     ![Mapear a pilha de chamadas ao depurar](../debugger/media/ffr_itsummarypageperformancedebuggermap.png "FFR_ITSummaryPagePerformanceDebuggerMap")  
+     Agora você pode revisar outros valores gravados, a pilha de chamadas, ou usar o **IntelliTrace** janela [mover com versões anteriores ou encaminhará "no tempo" entre outros eventos gravados](../debugger/intellitrace.md), código relacionado e os valores registrados em Esses pontos no tempo.
 
-###  <a name="FAQ"></a> Perguntas e respostas  
+     [O que é todos esses outros eventos e informações no log do IntelliTrace?](../debugger/using-saved-intellitrace-data.md)
 
-####  <a name="WhyInclude"></a> P: por que incluem informações sobre meu projeto, controle de origem, compilação e símbolos com minha versão?  
- O Visual Studio usa essas informações para encontrar a solução e o código-fonte correspondentes para a versão que está tentando depurar. Após abrir o log do IntelliTrace e selecionar um evento para iniciar a depuração, o Visual Studio usa símbolos para encontrar e mostrar o código onde ocorreu o evento. Você pode então visualizar os valores que estão registrados e avançar ou retornar através da execução do seu código.  
+###  <a name="WhatElse"></a> O que mais posso fazer aqui?
 
- Se você estiver usando o TFS e essas informações não estiverem no manifesto de compilação (arquivo BuildInfo.config), a aparência Visual Studio para a fonte de correspondência e os símbolos em seu TFS conectado no momento. Você recebe uma solicitação para escolher um TFS diferente caso o Visual Studio não encontre o TFS correto ou o código-fonte correspondente.  
+-   [Obter mais informações sobre esse código](../ide/find-code-changes-and-other-history-with-codelens.md). Para localizar referências a esse código, seu histórico de alterações, bugs relacionados, itens de trabalho, revisões de código ou testes de unidade – tudo sem sair do editor - usam os indicadores CodeLens no editor.
 
-####  <a name="InvalidConfigFile"></a> P: o log do IntelliTrace não contém informações sobre meu aplicativo implantado. Por que isso ocorreu? O que devo fazer?  
- Isso pode ter acontecer quando ao implantar do seu computador de desenvolvimento ou quando não está conectado ao TFS durante a implantação.  
+     ![CodeLens &#45; exibir as referências a esse código](../debugger/media/ffr_itsummarypageperformancecodelensreferences.png "FFR_ITSummaryPagePerformanceCodeLensReferences")
 
-1.  Vá para sua pasta de implantação do projeto.  
+     ![CodeLens &#45; Exibir histórico de alterações para esse código](../debugger/media/ffr_itsummarypageperformancecodelensauthors.png "FFR_ITSummaryPagePerformanceCodeLensAuthors")
 
-2.  Encontre e abra o manifesto de compilação (BuildInfo.config file).  
+-   [Mapeie seu local no código enquanto você estiver depurando.](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md) Para acompanhar visualmente os métodos que foram chamados durante a sessão de depuração, mapeie a pilha de chamadas.
 
-3.  Certifique-se de que o arquivo tem as informações necessárias:  
+     ![Mapear a pilha de chamadas durante a depuração](../debugger/media/ffr_itsummarypageperformancedebuggermap.png "FFR_ITSummaryPagePerformanceDebuggerMap")
 
--   **ProjectName**  
+###  <a name="FAQ"></a> Perguntas e respostas
 
-     O nome de seu projeto no Visual Studio. Por exemplo:  
+####  <a name="WhyInclude"></a> P: por que incluem informações sobre meu projeto, controle do código-fonte, compilação e símbolos com minha liberação?
+ O Visual Studio usa essas informações para encontrar a solução e o código-fonte correspondentes para a versão que está tentando depurar. Após abrir o log do IntelliTrace e selecionar um evento para iniciar a depuração, o Visual Studio usa símbolos para encontrar e mostrar o código onde ocorreu o evento. Você pode então visualizar os valores que estão registrados e avançar ou retornar através da execução do seu código.
 
-    ```  
-    <ProjectName>FabrikamFiber.Extranet.Web</ProjectName>  
-    ```  
+ Se você estiver usando o TFS e essas informações não estiverem no manifesto de compilação (Buildinfo config), Visual Studio procura o código-fonte correspondente e os símbolos o TFS atualmente conectado. Você recebe uma solicitação para escolher um TFS diferente caso o Visual Studio não encontre o TFS correto ou o código-fonte correspondente.
 
--   **SourceControl**  
+####  <a name="InvalidConfigFile"></a> P: o log do IntelliTrace está faltando informações sobre meu aplicativo implantado. Por que isso ocorreu? O que devo fazer?
+ Isso pode ter acontecer quando ao implantar do seu computador de desenvolvimento ou quando não está conectado ao TFS durante a implantação.
 
--   Informações sobre seu sistema de controle do código-fonte e as seguintes propriedades necessárias:  
+1.  Vá para sua pasta de implantação do projeto.
 
-    -   **TFS**  
+2.  Encontre e abra o manifesto de compilação (BuildInfo.config file).
 
-        -   **ProjectCollectionUri**: O URI para sua coleção de projeto e o Team Foundation Server  
+3.  Certifique-se de que o arquivo tem as informações necessárias:
 
-        -   **ProjectItemSpec**: O caminho para o arquivo de projeto do aplicativo (. csproj ou. vbproj)  
+- **ProjectName**
 
-        -   **ProjectVersionSpec**: A versão de seu projeto  
+   O nome de seu projeto no Visual Studio. Por exemplo:
 
-         Por exemplo:  
+  ```xml
+  <ProjectName>FabrikamFiber.Extranet.Web</ProjectName>
+  ```
 
-        ```  
-        <SourceControl type="TFS">  
-           <TfsSourceControl>  
-              <ProjectCollectionUri>http://fabrikamfiber:8080/tfs/FabrikamFiber</ProjectCollectionUri>  
-              <ProjectItemSpec>$/WorkInProgress/FabrikamFiber/FabrikamFiber.CallCenter/FabrikamFiber.Web/FabrikamFiber.Web.csproj</ProjectItemSpec>  
-              <ProjectVersionSpec>LFabrikamFiber_BuildAndPublish_20130813@$/WorkInProgress</ProjectVersionSpec>  
-           </TfsSourceControl>  
-        </SourceControl>  
-        ```  
+- **SourceControl**
 
-    -   **Git**  
+- Informações sobre seu sistema de controle do código-fonte e as seguintes propriedades necessárias:
 
-        -   **GitSourceControl**: O local do **GitSourceControl** esquema  
+  - **TFS**
 
-        -   **RepositoryUrl**: O URI para o Team Foundation Server, coleção de projetos e repositório Git  
+    - **{1&gt;projectcollectionuri&lt;1**: O URI para sua coleção de projeto e o Team Foundation Server
 
-        -   **ProjectPath**: O caminho para o arquivo de projeto do aplicativo (. csproj ou. vbproj)  
+    - **{1&gt;projectitemspec&lt;1**: O caminho para o arquivo de projeto do seu aplicativo (. csproj ou. vbproj)
 
-        -   **CommitId**: A id para a sua confirmação.  
+    - **{1&gt;projectversionspec&lt;1**: A versão do seu projeto
 
-         Por exemplo:  
+      Por exemplo:
 
-        ```  
-        <SourceControl type="Git">   
-           <GitSourceControl xmlns="http://schemas.microsoft.com/visualstudio/deploymentevent_git/2013/09">  
-              <RepositoryUrl>http://gittf:8080/tfs/defaultcollection/_git/FabrikamFiber</RepositoryUrl>  
-              <ProjectPath>/FabrikamFiber.CallCenter/FabrikamFiber.Web/FabrikamFiber.Web.csproj</ProjectPath>  
-              <CommitId>50662c96502dddaae5cd5ced962d9f14ec5bc64d</CommitId>  
-           </GitSourceControl>  
-        </SourceControl>  
-        ```  
+    ```xml
+    <SourceControl type="TFS">
+       <TfsSourceControl>
+          <ProjectCollectionUri>http://fabrikamfiber:8080/tfs/FabrikamFiber</ProjectCollectionUri>
+          <ProjectItemSpec>$/WorkInProgress/FabrikamFiber/FabrikamFiber.CallCenter/FabrikamFiber.Web/FabrikamFiber.Web.csproj</ProjectItemSpec>
+          <ProjectVersionSpec>LFabrikamFiber_BuildAndPublish_20130813@$/WorkInProgress</ProjectVersionSpec>
+       </TfsSourceControl>
+    </SourceControl>
+    ```
 
--   **Build**  
+  - **Git**
 
-     Informações sobre seu sistema de compilação, `"TeamBuild"` ou `"MSBuild"` e as seguintes propriedades necessárias:  
+    - **{1&gt;gitsourcecontrol&lt;1**: O local do **GitSourceControl** esquema
 
-    -   **BuildLabel** (para TeamBuild): O nome de compilação e um número. Esse rótulo também é usado como o nome do evento de implantação. Para obter mais informações sobre números de compilação, consulte [usar números para fornecer nomes significativos para compilações concluídas de build](http://msdn.microsoft.com/Library/1f302e9d-4b0a-40b5-8009-b69ca6f988c3).  
+    - **{1&gt;repositoryurl&lt;1**: O URI para seu Team Foundation Server, a coleção de projeto e o repositório Git
 
-    -   **SymbolPath** (recomendado): A lista de URIs para os locais de símbolos (arquivo PDB) separados por ponto e vírgula. Esses URIs podem ser URLs ou UNCs (caminhos de rede). Isso facilita para o Visual Studio encontrar os símbolos correspondentes para ajudar com sua depuração.  
+    - **ProjectPath**: O caminho para o arquivo de projeto do seu aplicativo (. csproj ou. vbproj)
 
-    -   **BuildReportUrl** (para TeamBuild): O local do relatório de compilação no TFS  
+    - **CommitId**: A id para a sua confirmação
 
-    -   **BuildId** (para TeamBuild): O URI para a compilação de detalhes no TFS. Esse URI também é usado como a ID do evento de implantação. Deve ser uma ID exclusiva caso não esteja usando o TeamBuild.  
+      Por exemplo:
 
-    -   **BuiltSolution**: O caminho para o arquivo de solução que o Visual Studio usa para localizar e abrir a solução correspondente. Este é o conteúdo do **SolutionPath** propriedade MsBuild.  
+    ```xml
+    <SourceControl type="Git">
+       <GitSourceControl xmlns="http://schemas.microsoft.com/visualstudio/deploymentevent_git/2013/09">
+          <RepositoryUrl>http://gittf:8080/tfs/defaultcollection/_git/FabrikamFiber</RepositoryUrl>
+          <ProjectPath>/FabrikamFiber.CallCenter/FabrikamFiber.Web/FabrikamFiber.Web.csproj</ProjectPath>
+          <CommitId>50662c96502dddaae5cd5ced962d9f14ec5bc64d</CommitId>
+       </GitSourceControl>
+    </SourceControl>
+    ```
 
-     Por exemplo:  
+- **Build**
 
-    -   **TFS**  
+   Informações sobre seu sistema de compilação, `"TeamBuild"` ou `"MSBuild"` e as seguintes propriedades necessárias:
 
-        ```  
-        <Build type="TeamBuild">  
-           <MsBuild>  
-              <BuildLabel kind="label">FabrikamFiber_BuildAndPublish_20130813.1</BuildLabel>  
-              <SymbolPath>\\fabrikamfiber\FabrikamFiber.CallCenter\Symbols</SymbolPath>  
-              <BuildReportUrl kind="informative, url" url="http://fabrikamfiber:8080/tfs/FabrikamFiber/_releasePipeline/FindRelease?buildUri=fabrikamfiber%3a%2f%2f%2fBuild%2fBuild%2f448">Build Report Url</BuildReportUrl>  
-              <BuildId kind="id">1c4444d2-518d-4673-a590-dce2773c7744,fabrikamfiber:///Build/Build/448</BuildId>  
-              <BuiltSolution>$/WorkInProgress/FabrikamFiber/FabrikamFiber.CallCenter/FabrikamFiber.CallCenter.sln</BuiltSolution>  
-           </MsBuild>  
-        </Build>  
-        ```  
+  - **{1&gt;buildlabel&lt;1** (para TeamBuild): O nome da compilação e o número. Esse rótulo também é usado como o nome do evento de implantação. Para obter mais informações sobre números de compilação, consulte [Use números para dar nomes significativos a compilações concluídas de compilação](/azure/devops/pipelines/build/options?view=vsts).
 
-    -   **Git**  
+  - **SymbolPath** (recomendado): A lista de URIs para os locais de símbolos (arquivo PDB) separados por ponto e vírgula. Esses URIs podem ser URLs ou UNCs (caminhos de rede). Isso facilita para o Visual Studio encontrar os símbolos correspondentes para ajudar com sua depuração.
 
-        ```  
-        <Build type="MSBuild">   
-           <MSBuild>  
-              <SymbolPath>\\gittf\FabrikamFiber.CallCenter\Symbols</SymbolPath>  
-              <BuiltSolution>/FabrikamFiber.CallCenter/FabrikamFiber.CallCenter.sln</BuiltSolution>  
-           </MSBuild>  
-        </Build>  
-        ```  
+  - **{1&gt;buildreporturl&lt;1** (para TeamBuild): O local do relatório de compilação no TFS
 
-####  <a name="IneligibleWorkspace"></a> P: por que o Visual Studio dizer que meu espaço de trabalho selecionado não é elegível?  
- **R:** o espaço de trabalho selecionado não tem qualquer mapeamento entre a pasta de controle de origem e uma pasta local. Para criar um mapeamento para esse espaço de trabalho, escolha **gerenciar**. Caso contrário, escolha um espaço de trabalho já mapeado ou crie um novo espaço de trabalho.  
+  - **{1&gt;BuildID&lt;1** (para TeamBuild): O URI para a compilação detalhes no TFS. Esse URI também é usado como a ID do evento de implantação. Deve ser uma ID exclusiva caso não esteja usando o TeamBuild.
 
- ![Abrir do controle de origem com nenhum espaço de trabalho mapeado](../debugger/media/ffr_openprojectfromsourcecontrol_notmapped.png "FFR_OpenProjectFromSourceControl_NotMapped")  
+  - **{1&gt;builtsolution&lt;1**: O caminho para o arquivo de solução que o Visual Studio usa para localizar e abrir a solução correspondente. Este é o conteúdo do **SolutionPath** propriedade do MsBuild.
 
-####  <a name="ChooseTeamProject"></a> P: por que eu não pode continuar até que escolher uma coleção de equipe ou uma coleção diferente?  
- **R:** isso pode acontecer por qualquer um dos seguintes motivos:  
+    Por exemplo:
 
--   O Visual Studio não está conectado ao TFS.  
+  - **TFS**
 
-     ![Abrir do controle de origem &#45; não conectado](../debugger/media/ffr_openprojectfromsourcecontrol_notconnected.png "FFR_OpenProjectFromSourceControl_NotConnected")  
+    ```xml
+    <Build type="TeamBuild">
+       <MsBuild>
+          <BuildLabel kind="label">FabrikamFiber_BuildAndPublish_20130813.1</BuildLabel>
+          <SymbolPath>\\fabrikamfiber\FabrikamFiber.CallCenter\Symbols</SymbolPath>
+          <BuildReportUrl kind="informative, url" url="http://fabrikamfiber:8080/tfs/FabrikamFiber/_releasePipeline/FindRelease?buildUri=fabrikamfiber%3a%2f%2f%2fBuild%2fBuild%2f448">Build Report Url</BuildReportUrl>
+          <BuildId kind="id">1c4444d2-518d-4673-a590-dce2773c7744,fabrikamfiber:///Build/Build/448</BuildId>
+          <BuiltSolution>$/WorkInProgress/FabrikamFiber/FabrikamFiber.CallCenter/FabrikamFiber.CallCenter.sln</BuiltSolution>
+       </MsBuild>
+    </Build>
+    ```
 
--   O Visual Studio não encontrou a solução ou o projeto em sua coleção de equipe atual.  
+  - **Git**
 
-     Quando o arquivo de manifesto a compilação (\<*ProjectName*>. BuildInfo.config) não especifica onde o Visual Studio pode localizar a origem correspondente, o Visual Studio usa o TFS conectado no momento para localizar a correspondência de solução ou projeto. Se sua coleção de equipe atual não tiver o código-fonte correspondente, o Visual Studio solicitará que você se conecte a uma coleção de equipe diferente.  
+    ```xml
+    <Build type="MSBuild">
+       <MSBuild>
+          <SymbolPath>\\gittf\FabrikamFiber.CallCenter\Symbols</SymbolPath>
+          <BuiltSolution>/FabrikamFiber.CallCenter/FabrikamFiber.CallCenter.sln</BuiltSolution>
+       </MSBuild>
+    </Build>
+    ```
 
--   O Visual Studio não encontrar a solução ou projeto na coleção especificada pelo arquivo de manifesto de compilação (\<*ProjectName*>. BuildInfo.config).  
+####  <a name="IneligibleWorkspace"></a> P: por que o Visual Studio diz que meu espaço de trabalho selecionado é inelegível?
+ **R:** espaço de trabalho selecionado não tem mapeamento entre a pasta de controle do código-fonte e uma pasta local. Para criar um mapeamento para esse espaço de trabalho, escolha **gerenciar**. Caso contrário, escolha um workspace já mapeado ou crie um novo workspace.
 
-     O TFS especificado pode não ter mais o código-fonte compatível ou nem mesmo existir, talvez porque você migrou para um novo TFS. Se o TFS especificado não existir, o Visual Studio poderá atingir o tempo limite depois de cerca de um minuto e depois será solicitado que você se conecte a uma coleção diferente. Para prosseguir, conecte-se ao servidor TFS correto.  
+ ![Abrir do controle de origem com nenhum espaço de trabalho mapeado](../debugger/media/ffr_openprojectfromsourcecontrol_notmapped.png "FFR_OpenProjectFromSourceControl_NotMapped")
 
-     ![Abrir do controle de origem &#45; migrados](../debugger/media/ffr_openprojectfromsourcecontrol_migrated.png "FFR_OpenProjectFromSourceControl_Migrated")  
+####  <a name="ChooseTeamProject"></a> P: por que não consigo continuar até escolher uma coleção de equipe ou uma coleção diferente?
+ **R:** isso pode acontecer por qualquer um destes motivos:
 
-####  <a name="WhatWorkspace"></a> P: o que é um espaço de trabalho?  
- **R:** sua [espaço de trabalho armazena uma cópia da fonte de](http://msdn.microsoft.com/Library/1d7f6ed8-ec7c-48f8-86da-9aea55a90d5a) para que você pode desenvolver e testá-lo separadamente antes de verificação no seu trabalho. Se você ainda não tem um espaço de trabalho mapeado especificamente para a solução ou o projeto encontrado, o Visual Studio solicitará a escolha de um espaço de trabalho disponível ou a criação de um novo espaço de trabalho com o nome do computador como o nome padrão do espaço de trabalho.  
+-   O Visual Studio não está conectado ao TFS.
 
-####  <a name="UntrustedSymbols"></a> P: por que recebo a seguinte mensagem sobre símbolos não confiáveis?  
- ![Depurar com caminho de símbolos não confiável? ] (../debugger/media/ffr_ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")  
+     ![Abrir do controle de origem &#45; não conectado](../debugger/media/ffr_openprojectfromsourcecontrol_notconnected.png "FFR_OpenProjectFromSourceControl_NotConnected")
 
- **R:** esta mensagem aparece quando o caminho de símbolos no arquivo de manifesto de compilação (\<*ProjectName*>. BuildInfo.config) não está incluído na lista de caminhos confiáveis de símbolo. Você pode adicionar o caminho à lista de caminhos de símbolos nas opções do depurador.
+-   O Visual Studio não encontrou a solução ou o projeto em sua coleção de equipe atual.
+
+     Quando o arquivo de manifesto de compilação (\<*ProjectName*>. Buildinfo) não especifica onde o Visual Studio pode encontrar o código-fonte correspondente, o Visual Studio usa o TFS atualmente conectado para localizar a solução ou projeto correspondente. Se sua coleção de equipe atual não tiver o código-fonte correspondente, o Visual Studio solicitará que você se conecte a uma coleção de equipe diferente.
+
+-   Visual Studio não encontrou a solução ou projeto na coleção especificada pelo arquivo de manifesto de compilação (\<*ProjectName*>. Buildinfo).
+
+     O TFS especificado pode não ter mais o código-fonte compatível ou nem mesmo existir, talvez porque você migrou para um novo TFS. Se o TFS especificado não existir, o Visual Studio poderá atingir o tempo limite depois de cerca de um minuto e depois será solicitado que você se conecte a uma coleção diferente. Para prosseguir, conecte-se ao servidor TFS correto.
+
+     ![Abrir do controle de origem &#45; migrado](../debugger/media/ffr_openprojectfromsourcecontrol_migrated.png "FFR_OpenProjectFromSourceControl_Migrated")
+
+####  <a name="WhatWorkspace"></a> P: o que é um espaço de trabalho?
+ **R:** sua [espaço de trabalho armazena uma cópia da fonte de](/azure/devops/repos/tfvc/create-work-workspaces?view=vsts) para que você possa desenvolver e testá-lo separadamente antes de verificação no seu trabalho. Se você ainda não tem um workspace mapeado especificamente para a solução ou o projeto encontrado, o Visual Studio solicitará a escolha de um workspace disponível ou a criação de um novo workspace com o nome do computador como o nome padrão do workspace.
+
+####  <a name="UntrustedSymbols"></a> P: por que eu recebo essa mensagem sobre símbolos não confiáveis?
+ ![Depurar com o caminho de símbolos não confiáveis? ](../debugger/media/ffr_ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")
+
+ **R:** esta mensagem aparece quando o caminho de símbolos no arquivo de manifesto de compilação (\<*ProjectName*>. Buildinfo) não está incluído na lista de caminhos confiáveis de símbolos. Você pode adicionar o caminho à lista de caminhos de símbolos nas opções do depurador.

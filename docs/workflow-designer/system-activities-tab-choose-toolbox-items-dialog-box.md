@@ -1,7 +1,9 @@
 ---
-title: Guia de System. Activities, escolher a caixa de diálogo de itens de caixa de ferramentas | Microsoft Docs
+title: Designer de fluxo de trabalho - guia de System. Activities, escolher a caixa de diálogo de itens de caixa de ferramentas
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - VS.CHOOSEITEMS.SYSTEM.ACTIVITIES_COMPONENTS
 - VS.CHOOSEITEMS.SYSTEM.ACTIVITIES COMPONENTS
@@ -11,14 +13,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2da5aafcc684c9af71aebc094d817c64f579d0ea
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 82303d173a3d5a066919f8597e4636d63a005f02
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31976289"
 ---
 # <a name="systemactivities-tab-choose-toolbox-items-dialog-box"></a>O guia de System.Activities, escolher a caixa de diálogo dos itens da caixa de ferramentas
-Esta guia, o **escolher itens da caixa de ferramentas** caixa de diálogo exibe uma lista de [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] atividades, modelos e itens disponíveis para você. Para exibir essa lista, selecione **escolher itens da caixa de ferramentas** do **ferramentas** menu ou clicando com o **caixa de ferramentas** e selecionando **escolher itens**para exibir o **escolher itens da caixa de ferramentas** caixa de diálogo e, em seguida, selecione seu **System. Activities** guia. Inicialmente, a lista contém as atividades de fluxo de trabalho de assemblies de System. Activities, System.ServiceModel.Activities e System.Activities.Core.Presentation; No entanto, somente o fornecida pelo sistema mostradas de atividades e atividades adicionadas por meio de outros assemblies exibidos no **caixa de ferramentas** são selecionadas por padrão. Adicionado recentemente atividades são verificadas automaticamente e aparecem no **caixa de ferramentas** quando você clica em **Okey** na caixa de diálogo. Além disso, esses itens aparecem no **caixa de ferramentas** em uma nova categoria que corresponde ao namespace onde reside o atividade / / modelo de item.
+
+Esta guia, o **escolher itens da caixa de ferramentas** caixa de diálogo exibe uma lista de atividades do Windows Workflow Foundation (WF), modelos e itens disponíveis para você. Para exibir essa lista, selecione **escolher itens da caixa de ferramentas** do **ferramentas** menu ou clicando com o **caixa de ferramentas** e selecionando **escolher itens**para exibir o **escolher itens da caixa de ferramentas** caixa de diálogo e, em seguida, selecione seu **System. Activities** guia. Inicialmente, a lista contém as atividades de fluxo de trabalho de assemblies de System. Activities, System.ServiceModel.Activities e System.Activities.Core.Presentation; No entanto, somente o fornecida pelo sistema mostradas de atividades e atividades adicionadas por meio de outros assemblies exibidos no **caixa de ferramentas** são selecionadas por padrão. Adicionado recentemente atividades são verificadas automaticamente e aparecem no **caixa de ferramentas** quando você clica em **Okey** na caixa de diálogo. Além disso, esses itens aparecem no **caixa de ferramentas** em uma nova categoria que corresponde ao namespace onde reside o atividade / / modelo de item.
 
 > [!WARNING]
 > Se você tentar adicionar um conjunto que não contém quaisquer atividades de fluxo de trabalho, uma caixa de diálogo de erro é exibida para explicar que o assembly não contém quaisquer atividades.
@@ -35,12 +39,20 @@ Esta guia, o **escolher itens da caixa de ferramentas** caixa de diálogo exibe 
 
  As colunas nesta caixa de diálogo contém as informações a seguir:
 
- Nome lista os nomes das atividades de fluxo de trabalho está registrada no computador local.
+ Nome
 
- Namespace exibe a hierarquia do namespace da biblioteca de classes do .NET Framework que define a estrutura da atividade.
+ Lista os nomes das atividades de fluxo de trabalho registradas atualmente em seu computador local.
 
- Nome do assembly exibe o nome e versão do assembly do .NET Framework que contém a atividade.
+ Namespace
 
- Diretório exibe o local do assembly do .NET Framework que contém as atividades de fluxo de trabalho. O local padrão para todos os assemblies é o cachê global de assemblies.
+ Exibe a hierarquia de namespace de biblioteca de classes do.NET Framework que define a estrutura de atividade.
+
+ Nome do Assembly
+
+ Exibe o nome e a versão do assembly do.NET Framework que contém a atividade.
+
+ Diretório
+
+ Exibe o local do assembly do.NET Framework que contém as atividades de fluxo de trabalho. O local padrão para todos os assemblies é o cachê global de assemblies.
 
  Para classificar os componentes listados, selecione todo o título de coluna.

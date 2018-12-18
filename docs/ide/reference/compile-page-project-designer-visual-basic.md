@@ -1,10 +1,9 @@
 ---
-title: Página Compilar, Designer de Projeto (Visual Basic) | Microsoft Docs
-ms.custom: ''
+title: Página de Compilação, Designer de Projeto (Visual Basic)
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vb.ProjectPropertiesCompile
 helpviewer_keywords:
@@ -21,37 +20,44 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 56efec5b538e2e84862549f6b5c7b7f30d9de75d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6d1b5c55c3bc1732d0b394473f25c0b103c917f4
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38808368"
 ---
 # <a name="compile-page-project-designer-visual-basic"></a>Página de Compilação, Designer de Projeto (Visual Basic)
-Use a página **Compilar** do Designer de Projeto para especificar instruções de compilação. Você também pode especificar opções avançadas do compilador e eventos de pré ou pós-build nessa página.  
-  
-Para acessar a página **Compilar**, escolha um nó de projeto (não o nó **Solução**) no **Gerenciador de Soluções**. Em seguida, escolha **Projeto**, **Propriedades** na barra de menus. Quando o Designer de Projeto for exibido, clique na guia **Compilar**.  
-  
-[!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]  
-  
-## <a name="configuration-and-platform"></a>Configuração e plataforma  
- As configurações a seguir permitem selecionar a configuração e a plataforma a exibir ou modificar.  
-  
+
+Use a página **Compilar** do Designer de Projeto para especificar instruções de compilação. Você também pode especificar opções avançadas do compilador e eventos de pré ou pós-build nessa página.
+
+Para acessar a página **Compilar**, escolha um nó de projeto (não o nó **Solução**) no **Gerenciador de Soluções**. Em seguida, escolha **Projeto**, **Propriedades** na barra de menus. Quando o Designer de Projeto for exibido, clique na guia **Compilar**.
+
+[!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
+
+## <a name="configuration-and-platform"></a>Configuração e plataforma
+
+As configurações a seguir permitem selecionar a configuração e a plataforma a exibir ou modificar.
+
 > [!NOTE]
 > Com configurações de build simplificadas, o sistema do projeto determina se é necessário compilar uma versão de depuração ou de liberação. Portanto, as listas **Configuração** e **Plataforma** não são exibidas.
-  
- **Configuração**  
+
+ **Configuração**
+
  Especifica quais definições de configuração exibir ou modificar. As configurações são **Depurar** (padrão), **Versão** ou **Todas as Configurações**. Para saber mais, consulte [Noções básicas das configurações de build](../../ide/understanding-build-configurations.md) e [Como criar e editar configurações](../../ide/how-to-create-and-edit-configurations.md).
-  
- **Plataforma**  
+
+ **Plataforma**
+
  Especifica quais configurações de plataforma exibir ou modificar. Você pode especificar **Qualquer CPU** (padrão), **x64** ou **x86**.
-  
-## <a name="compiler-configuration-options"></a>Opções de configuração do compilador  
- As configurações a seguir permitem definir as opções de configuração do compilador.  
-  
- **Caminho de saída de build**  
+
+## <a name="compiler-configuration-options"></a>Opções de configuração do compilador
+
+As configurações a seguir permitem definir as opções de configuração do compilador.
+
+ **Caminho de saída de build**
+
  Especifica o local dos arquivos de saída para a configuração deste projeto. Digite o caminho da saída de build nesta caixa ou clique no botão **Procurar** para selecionar um caminho. Observe que o caminho é relativo; se você inserir um caminho absoluto, ele será salvo como relativo. O caminho padrão é bin\Debug\ ou bin\Release\\.
-  
+
  Com configurações de build simplificadas, o sistema do projeto determina se é necessário compilar uma versão de depuração ou de liberação. O comando **Build** do menu **Depurar** (F5) colocará o build no local de depuração, independentemente do **Caminho de saída** você especificar. No entanto, o comando **Build** do menu **Build** o coloca no local especificado.
   
  **Opção explícita**  
@@ -76,7 +82,7 @@ Especifica se semântica do tipo estrito deve ser imposta. Quando **Opção Estr
   
 Erros de conversão de redução implícita ocorrerem quando há uma conversão de tipo de dados implícita que é uma conversão de redução. Para obter mais informações, consulte [Instrução Opção Estrita](/dotnet/visual-basic/language-reference/statements/option-strict-statement), [Conversões Explícitas e Implícitas](/dotnet/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions) e [Conversões de Expansão e Redução](/dotnet/visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions).  
   
-Um objeto tem associação tardia quando é atribuído a uma propriedade ou a um método de uma variável declarada como sendo do tipo `Object`. Para obter mais informações, consulte [Instrução Opção Estrita](/dotnet/visual-basic/language-reference/statements/option-strict-statement) e [Associação Antecipada e Tardia](/dotnet/visual-basic/programming-guide/language-features/early-late-binding/early-and-late-binding).  
+Um objeto tem associação tardia quando é atribuído a uma propriedade ou a um método de uma variável declarada como sendo do tipo `Object`. Para obter mais informações, consulte [Instrução Opção Estrita](/dotnet/visual-basic/language-reference/statements/option-strict-statement) e [Associação Antecipada e Tardia](/dotnet/visual-basic/programming-guide/language-features/early-late-binding).
   
 Erros de tipo de objeto implícitos ocorrem quando um tipo apropriado não pode ser inferido de uma variável declarada, portanto, um tipo de `Object` é inferido. Isso ocorre principalmente quando você usa uma instrução `Dim` para declarar uma variável sem usar uma cláusula `As` e `Option Infer` está desativado. Para obter mais informações, consulte [Instrução Opção Explícita](/dotnet/visual-basic/language-reference/statements/option-strict-statement), [Instrução Opção Inferir](/dotnet/visual-basic/language-reference/statements/option-infer-statement) e [Especificação de Linguagem Visual Basic](/dotnet/visual-basic/reference/language-specification).  
   
@@ -167,8 +173,9 @@ Clique nesse botão para acessar a caixa de diálogo **Eventos de Build**. Use e
 **Opções avançadas de compilação**  
 Clique neste botão para acessar a caixa de diálogo **Configurações Avançadas do Compilador**. Use a caixa de diálogo **Configurações Avançadas do Compilador** para especificar as propriedades avançadas de configuração de build de um projeto. Essa caixa de diálogo aplica-se a somente projetos Visual Basic. Para obter mais informações, consulte [Caixa de diálogo Configurações Avançadas do Compilador (Visual Basic)](../../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md).  
 
+
 ## <a name="see-also"></a>Consulte também
 
-[Como especificar eventos de build (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)  
-[Compilador de linha de comando do Visual Basic](/dotnet/visual-basic/reference/command-line-compiler/index)  
-[Como criar e editar configurações](../../ide/how-to-create-and-edit-configurations.md)
+- [Como especificar eventos de build (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)
+- [Compilador de linha de comando do Visual Basic](/dotnet/visual-basic/reference/command-line-compiler/index)
+- [Como criar e editar configurações](../../ide/how-to-create-and-edit-configurations.md)

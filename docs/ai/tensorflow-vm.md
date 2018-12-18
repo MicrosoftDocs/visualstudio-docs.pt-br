@@ -12,11 +12,12 @@ ms.service: multiple
 ms.technology: vs-ai-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 7006802f38076283221b9351ba9660448e64a696
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: 8c84fbb3001bffb93d6c06f383551c073461419b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911326"
 ---
 # <a name="train-a-tensorflow-model-in-the-cloud"></a>Treinar um modelo do TensorFlow na nuvem
 
@@ -50,20 +51,20 @@ Baixe este [Repositório GitHub](https://github.com/Microsoft/samples-for-ai) qu
 
 - Selecione a pasta **Exemplos do TensorFlow** no repositório de exemplos baixada e abra o arquivo **TensorflowExamples.sln**.
 
-![Abrir o projeto](media\tensorflow-local\open-project.png)
+   ![Abrir o projeto](media/tensorflow-local/open-project.png)
 
-![Abrir a solução](media\tensorflow-local\open-solution.png)
+   ![Abrir a solução](media/tensorflow-local/open-solution.png)
 
 ## <a name="add-azure-remote-vm"></a>Adicionar a VM remota do Azure
 
 No Gerenciador de Servidores, clique com o botão direito do mouse no nó **Computadores Remotos** no nó Ferramentas de IA e selecione "Adicionar...". Insira o nome de exibição do computador remoto, o IP host, a porta SSH, o nome de usuário e a senha/arquivo de chave.
 
-![Adicionar um novo computador remoto](media\tensorflow-vm\add-remote-vm.png)
+![Adicionar um novo computador remoto](media/tensorflow-vm/add-remote-vm.png)
 
 ## <a name="submit-job-to-azure-vm"></a>Enviar o trabalho para a VM do Azure
 Clique com o botão direito do mouse no projeto MNIST no **Gerenciador de Soluções** e selecione **Enviar Trabalho**.
 
-![Envio de trabalho para um computador remoto](media\tensorflow-vm\job-submission.png)
+![Envio de trabalho para um computador remoto](media/tensorflow-vm/job-submission.png)
 
 Na janela de envio:
 
@@ -76,7 +77,7 @@ Na janela de envio:
 ## <a name="check-status-of-job"></a>Verificar o status do trabalho
 Para ver o status e detalhes dos trabalhos, expanda a máquina virtual a que o trabalho foi enviado no **Gerenciador de Servidores**. Clique duas vezes em **Trabalhos**.
 
-![Navegador do trabalho](media\tensorflow-vm\job-browser.png)
+![Navegador do trabalho](media/tensorflow-vm/job-browser.png)
 
 ## <a name="clean-up-resources"></a>Limpar recursos
 

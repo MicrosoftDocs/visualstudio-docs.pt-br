@@ -1,5 +1,5 @@
 ---
-title: Idiaenumframedata | Microsoft Docs
+title: 'Idiaenumframedata:: item | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d725c38073b82bc94081b3c27791e88f64343cd3
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: c15d0dec0ccaa20e2fcf59f88d68d5febc63eb04
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887392"
 ---
 # <a name="idiaenumframedataitem"></a>IDiaEnumFrameData::Item
 Recupera um elemento de quadro de dados por meio de um índice.  
@@ -34,13 +35,13 @@ HRESULT Item (
   
 #### <a name="parameters"></a>Parâmetros  
  índice  
- [in] Índice da [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) objeto a ser recuperado. O índice está no intervalo de 0 a `count`-1, onde `count` é retornado pelo [Idiaenumframedata](../../debugger/debug-interface-access/idiaenumframedata-get-count.md) método.  
+ [in] Índice do [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) objeto a ser recuperado. O índice está no intervalo de 0 a `count`-1, onde `count` é retornado pelo [idiaenumframedata:: Get_count](../../debugger/debug-interface-access/idiaenumframedata-get-count.md) método.  
   
  section  
- [out] Retorna um [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) objeto que representa o elemento de dados de quadro desejado.  
+ [out] Retorna um [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) objeto que representa o elemento de dados de quadros desejada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)   

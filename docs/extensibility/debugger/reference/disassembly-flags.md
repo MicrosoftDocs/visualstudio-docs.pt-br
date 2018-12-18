@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dd1aa9c73fad40d07be371ad7f9b3108464aeb34
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f6d42a7c5e9247359abfcdb4d65db5a4e0de247e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49916374"
 ---
 # <a name="disassemblyflags"></a>DISASSEMBLY_FLAGS
-Especifica os sinalizadores para a desmontagem.  
+Especifica os sinalizadores de desmontagem.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,25 +52,25 @@ public enum enum_DISASSEMBLY_FLAGS {
   
 ## <a name="members"></a>Membros  
  DF_DOCUMENTCHANGE  
- Indica que essa instrução está em um documento diferente que o anterior.  
+ Indica que essa instrução está em um documento diferente que a anterior.  
   
  DF_DISABLED  
- Indica que esta instrução não será executada.  
+ Indica que essa instrução não será executada.  
   
  DF_INSTRUCTION_ACTIVE  
- Indica que essa instrução é um das instruções próximas a ser executado (pode haver mais de um).  
+ Indica que essa instrução é uma das próximas instruções a ser executado (pode haver mais de um).  
   
  DF_DATA  
- Indica que essa instrução é realmente dados (não o código).  
+ Indica que essa instrução é realmente dados (não no código).  
   
  DF_HASSOURCE  
- Indica que esta instrução tem origem. Algumas instruções, como código de coleta de lixo ou de criação de perfil, não tem nenhuma fonte correspondente.  
+ Indica que essa instrução tem origem. Algumas instruções, como o código de coleta de lixo ou a criação de perfil, não tem nenhum código-fonte correspondente.  
   
  DF_DOCUMENT_CHECKSUM  
- Indica que `bstrDocumentUrl` campo contém dados de soma de verificação após a URL do documento. Consulte a seção comentários para o [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) estrutura para como os dados de soma de verificação são armazenados.  
+ Indica que `bstrDocumentUrl` campo contiver dados de soma de verificação após a URL do documento. Consulte a seção comentários para o [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) estrutura para como os dados de soma de verificação são armazenados.  
   
 ## <a name="remarks"></a>Comentários  
- Usado como o `dwFlags` membro o [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) estrutura.  
+ Usado como o `dwFlags` membro a [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) estrutura.  
   
  Esses sinalizadores podem ser combinados com um bit a bit `OR`.  
   

@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8585a777ace0d49749570d4efcbd78f133fb0edd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5b0d697a7596f7582a69466193534d4f8908f2fc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822196"
 ---
 # <a name="idebugdisassemblystream2getdocument"></a>IDebugDisassemblyStream2::GetDocument
 Obtém o documento de origem associado a este fluxo de entrada.  
@@ -48,10 +49,10 @@ int GetDocument(
  [out] Retorna um [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) objeto que representa o documento.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método é implementado por mecanismos de depuração com os documentos de texto que não são armazenados em um arquivo real.  
+ Esse método é implementado pelos mecanismos de depuração que têm os documentos de texto que não são armazenados em um arquivo real.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   

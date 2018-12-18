@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31138441"
 ---
 # <a name="tool-windows-in-the-registry"></a>Janelas de ferramenta no registro
 VSPackages que fornecem as janelas de ferramentas deve registrar com [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] como provedores de janela de ferramenta. Janelas de ferramentas criadas usando o modelo de pacote do Visual Studio fazer isso por padrão. Provedores de janela de ferramenta tenham chaves de registro do sistema que especifica os atributos de visibilidade, como tamanho de janela de ferramenta padrão e o local, o GUID da janela que serve como o painel de janela de ferramenta e o estilo de encaixe.  

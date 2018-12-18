@@ -1,5 +1,5 @@
 ---
-title: Concedendo confiança a documentos | Microsoft Docs
+title: Conceder confiança a documentos
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,36 +18,37 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e8556f77b74ee1dab6a257f5ed3634da4bf798cd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5dfa0ad9b27b94c472feabc0e202bd9eee58f08d
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50670904"
 ---
-# <a name="granting-trust-to-documents"></a>Concedendo confiança a documentos
-  Um projeto no nível do documento tem os mesmos requisitos de segurança como projetos no nível de aplicativo: os manifestos com um certificado de assinatura ou clicando em prompt de confiança. Além disso, o documento ou a pasta de trabalho deve estar localizada em um diretório que é designado como um local confiável.  
+# <a name="grant-trust-to-documents"></a>Conceder confiança a documentos
+  Um projeto de nível de documento tem os mesmos requisitos de segurança que projetos de nível de aplicativo: os manifestos com um certificado de assinatura ou clicando no prompt de confiança. Além disso, o documento ou pasta de trabalho deve estar localizada em um diretório que é designado como um local confiável.  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
 ## <a name="trusted-locations"></a>Locais confiáveis  
- Aplicativos no [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] e Office 2010 têm os centros de confiança em que os usuários podem configurar as configurações de segurança e privacidade, como locais confiáveis. Para soluções do Office, o computador local é considerado um local confiável. No entanto, devido a um risco maior, há determinadas pastas que já não são confiáveis, como as pastas temporárias para o sistema, para cada usuário e para o Internet Explorer.  
+ Aplicativos em [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] e Office 2010 têm centros de relação de confiança em que os usuários podem configurar configurações de segurança e privacidade, como locais confiáveis. Para soluções do Office, o computador local é considerado um local confiável. No entanto, devido a um risco maior, há determinados diretórios que não podem nunca ser confiáveis, como as pastas temporárias para o sistema, para cada usuário e para o Internet Explorer.  
   
- Para obter mais informações sobre a Central de confiabilidade, consulte [segurança e políticas e configurações no Office 2010](http://go.microsoft.com/fwlink/?LinkId=89202). Para obter mais informações sobre como criar, gerenciar, remover e configurar pastas confiáveis, consulte [configurar locais confiáveis e configurações de editores confiáveis no sistema Office 2007](http://go.microsoft.com/fwlink/?LinkId=89203) e [criar, remover ou alterar um confiável local para os arquivos](https://support.office.com/en-au/article/Create-remove-or-change-a-trusted-location-for-your-files-f5151879-25ea-4998-80a5-4208b3540a62).  
+ Para obter mais informações sobre a Central de confiabilidade, consulte [configurações de segurança e políticas e no Office 2010](http://go.microsoft.com/fwlink/?LinkId=89202). Para obter mais informações sobre como criar, gerenciar, remover e configurar pastas confiáveis, consulte [definir configurações de editores confiáveis e de locais confiáveis no 2007 Office system](http://go.microsoft.com/fwlink/?LinkId=89203) e [criar, remover ou alterar um local para seus arquivos confiável](https://support.office.com/article/Create-remove-or-change-a-trusted-location-for-your-files-f5151879-25ea-4998-80a5-4208b3540a62).  
   
-## <a name="security-considerations-for-office-solutions"></a>Considerações sobre segurança para soluções do Office  
- Há várias questões de segurança quando você considerar quais pastas adicionar aos locais confiáveis:  
+## <a name="security-considerations-for-office-solutions"></a>Considerações de segurança para soluções do Office  
+ Há várias questões de segurança que você considere quais pastas adicionar aos locais confiáveis:  
   
--   Pastas locais são consideradas mais seguro e são implicitamente confiáveis. Locais remotos, como compartilhamentos de arquivos devem ser designados como locais confiáveis.  
+-   Pastas locais são consideradas mais seguros e são implicitamente confiáveis. Locais remotos, como compartilhamentos de arquivos devem ser designados como locais confiáveis.  
   
--   Quando você adiciona um diretório a locais confiáveis, essa ação concede confiança total não apenas para soluções do Office, mas também para o código VBA e ActiveX. Por esse motivo, o diretório raiz e Meus documentos pastas não devem ser designadas como confiam.  
+-   Quando você adiciona um diretório para os locais confiáveis, essa ação concede confiança total não apenas para soluções do Office, mas também ao código VBA e ActiveX. Por esse motivo, o diretório raiz e o *Meus documentos* pastas não devem ser designadas como confiáveis.  
   
--   Embora o próprio documento é confiável por meio de locais confiáveis, permissões adicionais são necessárias para a personalização de relação de confiança. Você pode conceder confiança total para a personalização usando os manifestos com um certificado de assinatura, clicando em prompt de confiança ou instalar a solução do Office para o diretório de arquivos de programa.  
+-   Embora o documento em si é confiável por meio de locais confiáveis, permissões adicionais são necessárias para a personalização de confiança. Você pode conceder confiança total para a personalização usando a assinatura dos manifestos com um certificado, clicando em prompt de confiança ou instalar a solução do Office para o *arquivos de programas* directory.  
   
--   Você pode armazenar o documento ou a pasta de trabalho de uma solução de nível de documento no mesmo diretório que o assembly ou em um diretório diferente. Por exemplo, o documento pode ser localizado em um servidor do SharePoint e o assembly pode estar localizado em um compartilhamento de arquivos de rede. Para obter mais informações, consulte [como: publicar uma solução de nível de documento em um servidor do SharePoint pelo ClickOnce usando](http://msdn.microsoft.com/en-us/2408e809-fb78-42a1-9152-00afa1522e58).  
+-   Você pode armazenar o documento ou pasta de trabalho de uma solução de nível de documento no mesmo diretório que o assembly ou em um diretório diferente. Por exemplo, o documento pode estar localizado em um servidor do SharePoint e o assembly pode estar localizado em um compartilhamento de arquivos de rede. Para obter mais informações, consulte [como: publicar uma solução do Office em nível de documento em um servidor do SharePoint usando o ClickOnce](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58).  
   
 ## <a name="see-also"></a>Consulte também  
- [Concedendo confiança a soluções do Office](../vsto/granting-trust-to-office-solutions.md)   
- [Solucionando problemas de segurança de solução do Office](../vsto/troubleshooting-office-solution-security.md)   
- [Protegendo soluções do Office](../vsto/securing-office-solutions.md)  
+ [Conceder confiança a soluções do Office](../vsto/granting-trust-to-office-solutions.md)   
+ [Solucionar problemas de segurança de solução do Office](../vsto/troubleshooting-office-solution-security.md)   
+ [Proteger as soluções do Office](../vsto/securing-office-solutions.md)  
   
   

@@ -1,19 +1,20 @@
 ---
-title: Gerar um campo, uma propriedade ou uma variável local no Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Gerar um campo, uma propriedade ou uma variável local no Visual Studio
 ms.date: 01/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c42a1b22a7ae191fe9024e45df66695d10f102e8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 60472c83738351ebc46a96e9d53bc4ae3015c514
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296223"
 ---
 # <a name="generate-a-field-property-or-local-variable-in-visual-studio"></a>Gerar um campo, uma propriedade ou uma variável local no Visual Studio
 
@@ -35,24 +36,24 @@ Esta geração de código aplica-se a:
 
    - C#:
 
-    ![Código em C# realçado](media/field-highlight-cs.png)
+       ![Código em C# realçado](media/field-highlight-cs.png)
 
    - Visual Basic:
 
-    ![Código em VB realçado](media/field-highlight-vb.png)
+       ![Código em VB realçado](media/field-highlight-vb.png)
 
-1. Depois, siga um destes procedimentos:
+2. Depois, siga um destes procedimentos:
 
    - **Teclado**
-     - Pressione **Ctrl**+**.** para acionar o menu **Ações e Refatorações Rápidas**.
+      - Pressione **Ctrl**+**.** para acionar o menu **Ações e Refatorações Rápidas**.
    - **Mouse**
-     - Clique com o botão direito do mouse e selecione o menu **Ações Rápidas e Refatorações**.
-     - Passe o mouse sobre o rabisco vermelho e clique no ícone de ![Lâmpada](media/bulb-cs.png) que aparece.
-     - Clique no ícone de ![Lâmpada](media/bulb-cs.png) que aparece na margem esquerda se o cursor de texto já estiver na linha com o rabisco vermelho.
+      - Clique com o botão direito do mouse e selecione o menu **Ações Rápidas e Refatorações**.
+      - Passe o mouse sobre o rabisco vermelho e clique no ícone de ![Lâmpada](media/bulb-cs.png) ícone que aparece.
+      - Clique no ícone de ![Lâmpada](media/bulb-cs.png) ícone que aparece na margem esquerda quando o cursor de texto já está na linha com o rabisco vermelho.
 
-    ![Visualização da geração de campo/propriedade/local](media/field-preview-cs.png)
+      ![Visualização da geração de campo/propriedade/local](media/field-preview-cs.png)
 
-1. Selecione uma das opções de geração no menu suspenso.
+3. Selecione uma das opções de geração no menu suspenso.
 
    > [!TIP]
    > Use o link **Visualizar alterações** na parte inferior da janela de visualização [para ver todas as alterações](../../ide/preview-changes.md) que serão feitas antes de fazer sua seleção.
@@ -61,11 +62,11 @@ Esta geração de código aplica-se a:
 
    - C#:
 
-      ![Gerar o resultado do método C#](media/field-result-cs.png)
+       ![Gerar o resultado do método C#](media/field-result-cs.png)
 
    - Visual Basic:
 
-      ![Gerar o resultado do método VB](media/field-result-vb.png)
+       ![Gerar o resultado do método VB](media/field-result-vb.png)
 
 ## <a name="see-also"></a>Consulte também
 

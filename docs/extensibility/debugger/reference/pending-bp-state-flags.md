@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: be5e9664d1f8a9b5432825d389a355352831002d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5fbf32611223de306e010266987926a6d4589e0f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864199"
 ---
 # <a name="pendingbpstateflags"></a>PENDING_BP_STATE_FLAGS
 Especifica os sinalizadores de estado do ponto de interrupção pendente.  
@@ -46,10 +47,10 @@ public enum enum_PENDING_BP_STATE_FLAGS {
  Espaço reservado.  
   
  PBPSF_VIRTUALIZED  
- Especifica um virtualizado pendente de ponto de interrupção, que é vinculado sempre que o novo código é carregado.  
+ Especifica um virtualizado pendente do ponto de interrupção, que deve ser associado sempre que o novo código é carregado.  
   
 ## <a name="remarks"></a>Comentários  
- Usado para o `flags` membro o [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) estrutura.  
+ Usado para o `flags` membro a [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) estrutura.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

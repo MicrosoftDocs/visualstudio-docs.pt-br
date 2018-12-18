@@ -1,6 +1,7 @@
 ---
-title: Execução simbólica dinâmica | Ferramenta de teste do desenvolvedor do Microsoft IntelliTest | Microsoft Docs
+title: Execução simbólica dinâmica | Ferramenta de teste do desenvolvedor do Microsoft IntelliTest
 ms.date: 05/02/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,13 +11,14 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 083ee0e340688065ab765961676da63c405fd434
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 33bd31c59de85f70d653d2de912b8c9bc5bb0e30
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295885"
 ---
-# <a name="input-generatation-using-dynamic-symbolic-execution"></a>Geração de entrada usando a execução simbólica dinâmica
+# <a name="input-generation-using-dynamic-symbolic-execution"></a>Geração de entrada usando a execução simbólica dinâmica
 
 O IntelliTest gera entradas para [testes de unidade parametrizados](test-generation.md#parameterized-unit-testing) analisando as condições de branch no programa. As entradas do teste são escolhidas com base em se elas podem disparar novos comportamentos de ramificação do programa. A análise é um processo incremental. Ela refina um predicado **q: I -> {true, false}** nos parâmetros de entrada de teste formal **I**. **q** representa o conjunto de comportamentos que o IntelliTest já observou. Inicialmente, **p: = false**, uma vez que ainda não foi observado nada.
 
@@ -70,7 +72,7 @@ O [solver de restrição](#constraint-solver) do IntelliTest determina os valore
 O IntelliTest pode [criar instâncias de classes do .NET existentes](#existing-classes) ou você pode usar o IntelliTest para automaticamente [criar objetos fictícios](#parameterized-mocks) que implementam uma interface específica e se comportam de maneiras diferentes dependendo do uso.
 
 <a name="existing-classes"></a>
-## <a name="instantiating-existing-classes"></a>Criando instâncias de classes existentes
+## <a name="instantiate-existing-classes"></a>Criar instâncias de classes existentes
 
 **Qual é o problema?**
 
@@ -111,7 +113,7 @@ A resposta convencional é usar *objetos fictícios* com comportamento explícit
 
 Um objeto fictício implementa uma interface (ou estende uma classe não selada). Ele não representa uma implementação real, mas apenas um atalho que permite a execução de testes usando o objeto fictício. Seu comportamento é definido manualmente como parte de cada caso de teste em que ele é usado. Existem muitas ferramentas que facilitam a definição de objetos fictícios e seu comportamento esperado, mas esse comportamento ainda deve ser definido manualmente.
 
-Em vez de valores embutidos em código em objetos fictícios, o IntelliTest pode gerar os valores. Assim como ele permite [testes de unidade parametrizados](test-generation.md#parameterized-unit-testing), o IntelliTest também permite mMocks parametrizados.
+Em vez de valores embutidos em código em objetos fictícios, o IntelliTest pode gerar os valores. Assim como ele permite [teste de unidade parametrizado](test-generation.md#parameterized-unit-testing), o IntelliTest também permite simulações parametrizadas.
 
 As simulações parametrizadas têm dois modos de execução diferentes:
 
@@ -133,15 +135,15 @@ O IntelliTest monitora as instruções executadas conforme ele executa um teste 
 O IntelliTest tenta minimizar o tamanho das matrizes e cadeias de caracteres necessárias para disparar comportamentos de programa interessantes.
 
 <a name="additional-inputs"></a>
-## <a name="obtaining-additional-inputs"></a>Obtendo entradas adicionais
+## <a name="obtain-additional-inputs"></a>Obter entradas adicionais
 
 A classe estática [PexChoose](static-helper-classes.md#pexchoose) pode ser usada para obter entradas adicionais para um teste e pode ser usada para implementar [simulações parametrizadas](#parameterized-mocks).
 
 <a name="further-reading"></a>
 ## <a name="further-reading"></a>Leitura adicional
 
-* [Como funciona?](https://blogs.msdn.microsoft.com/visualstudioalm/2014/12/11/smart-unit-tests-a-mental-model/)
+* [Como funciona?](https://blogs.msdn.microsoft.com/devops/2014/12/11/smart-unit-tests-a-mental-model/)
 
 ## <a name="got-feedback"></a>Recebeu comentários?
 
-Poste suas ideias e solicitações de recursos no  **[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)**.
+Poste suas ideias e solicitações de recursos na [Comunidade de Desenvolvedores](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).

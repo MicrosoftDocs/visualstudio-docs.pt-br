@@ -19,35 +19,35 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: db37c29c049a4e233be96e468b93b8e2998c0565
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 17f1b1ccdee75a379dfc7bce42df2b5a117bdd2e
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36755406"
 ---
-# <a name="how-to-add-or-remove-sharepoint-connections"></a>ComoaAdicionar ou remover conexões do SharePoint
+# <a name="how-to-add-or-remove-sharepoint-connections"></a>Como: Adicionar ou remover conexões do SharePoint
   Gerenciador de servidores permite que você procure sites do SharePoint, bem como conexões de dados. No entanto, antes de você pode procurar o conteúdo de um site do SharePoint você deve adicioná-lo para o **conexões do SharePoint** nó.  
   
-### <a name="to-add-a-sharepoint-site-to-the-sharepoint-connections-node"></a>Para adicionar um site do SharePoint para o nó conexões do SharePoint  
+### <a name="to-add-a-sharepoint-site-to-the-sharepoint-connections-node"></a>Para adicionar um site do SharePoint para o nó de conexões do SharePoint
   
-1.  Na barra de menus, escolha **exibição**, **Server Explorer**.  
+1.  Na barra de menus, escolha **modo de exibição**, **Gerenciador de servidores**.  
   
-2.  Em **Server Explorer**, escolha o **conexões do SharePoint** nó e, em seguida, na barra de menus, escolha **ferramentas**, **Adicionar Conexão SharePoint**.  
+2.  Na **Gerenciador de servidores**, escolha o **conexões do SharePoint** nó e em seguida, na barra de menus, escolha **ferramentas** > **adicionar o SharePoint Conexão**.  
   
-3.  No **Adicionar Conexão do SharePoint** , digite o [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] para o site do SharePoint (por exemplo, http://testserver/sites/unittests).  
+3.  No **Adicionar Conexão do SharePoint** , digite o [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] do site do SharePoint (por exemplo, http://testserver/sites/unittests).  
   
-### <a name="to-delete-a-sharepoint-site-from-the-sharepoint-connections-node"></a>Para excluir um site do SharePoint a partir do nó de conexões do SharePoint  
+### <a name="to-delete-a-sharepoint-site-from-the-sharepoint-connections-node"></a>Para excluir um site do SharePoint a partir do nó de conexões do SharePoint
   
-1.  Na barra de menus, escolha **exibição**, **Server Explorer** abrir **Server Explorer**.  
+1.  Na barra de menus, escolha **modo de exibição**, **Gerenciador de servidores** para abrir **Gerenciador de servidores**.  
   
-2.  Expanda o **conexões do SharePoint** nó para exibir o site do SharePoint que você deseja excluir do **Server Explorer**.  
+2.  Expanda o **conexões do SharePoint** nó para revelar o site do SharePoint que você deseja excluir da **Gerenciador de servidores**.  
   
-3.  Escolha o site e, em seguida, na barra de menus, escolha **editar**, **excluir**.  
+3.  Escolha o site e, em seguida, na barra de menus, escolha **edite** > **excluir**.  
   
     > [!NOTE]  
-    >  Essa etapa não exclui o site subjacente. Exclui apenas a conexão do **Server Explorer**.  
+    >  Essa etapa não exclui o site subjacente; Ele exclui apenas a conexão do **Gerenciador de servidores**.  
   
-## <a name="see-also"></a>Consulte também  
- [Navegando em conexões do SharePoint usando o Gerenciador de Servidores](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)  
-  
+## <a name="see-also"></a>Consulte também
+ [Procurar conexões do SharePoint usando o Gerenciador de servidores](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)  
   

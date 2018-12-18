@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: eca2893f388c4dabb244d042d652d3ab604d88bf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: feb21f020f6a470b9fded56939987f0a03333206
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872728"
 ---
 # <a name="idebugdefaultport2getportnotify"></a>IDebugDefaultPort2::GetPortNotify
-Esse método obtém um [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) interface para essa porta.  
+Esse método obtém uma [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) interface para essa porta.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,13 +41,13 @@ int GetPortNotify(
   
 #### <a name="parameters"></a>Parâmetros  
  `ppPortNotify`  
- [out] Um [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) objeto.  
+ [out] Uma [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) objeto.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Normalmente, o `QueryInterface` método é chamado no objeto que implementa o [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) interface para obter uma [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) interface. No entanto, há circunstâncias em que a interface desejada é implementada em um objeto diferente. Este método oculta nessas circunstâncias e retorna o `IDebugPortNotify2` interface do objeto mais apropriado.  
+ Normalmente, o `QueryInterface` método é chamado no objeto que implementa o [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) interface para obter uma [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) interface. No entanto, há circunstâncias em que a interface desejada é implementada em um objeto diferente. Esse método oculta nessas circunstâncias e retorna o `IDebugPortNotify2` interface do objeto mais apropriado.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)   

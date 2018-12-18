@@ -12,17 +12,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ec882cc5797eb99370beac5e28b87ca0b981cf2a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 524f6f575725fed754c3873af8a9ff62a3c3686f
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34477542"
 ---
-# <a name="understanding-instrumentation-data-values"></a>Noções básicas sobre valores de dados de instrumentação
+# <a name="understand-instrumentation-data-values"></a>Noções básicas sobre valores de dados de instrumentação
 
 O método de criação de perfil de *instrumentação* do Visual Studio registra informações detalhadas de tempo para as chamadas de função, linhas e instruções no aplicativo de perfil
 
-O método de instrumentação injeta código no início e no final das funções de destino no binário com perfil e antes e depois de cada chamada por essas funções para outras funções. O código injetado registra o seguinte:
+O método de instrumentação injeta código no início e no final das funções de destino no binário com perfil e antes e depois de cada chamada por essas funções para outras funções. O código injetado registra as seguintes informações:
 
 - O intervalo entre esse evento de coleta e a anterior.
 
@@ -98,5 +99,5 @@ O percentual dos valores Inclusivos totais do aplicativo da sessão de criação
 
 ## <a name="see-also"></a>Consulte também
 
-[Analisando dados de ferramentas de desempenho](../profiling/analyzing-performance-tools-data.md)  
+[Analisar dados de ferramentas de desempenho](../profiling/analyzing-performance-tools-data.md)  
 [Como escolher métodos de coleta](../profiling/how-to-choose-collection-methods.md)

@@ -14,13 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eebc0ecdb38dd1b252cac9c9bf2e1bcd007d5851
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f9612c895f7453d250b4f37c06e3630901602685
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847104"
 ---
-# <a name="da0501-average-cpu-consumption-by-the-process-being-profiled"></a>DA0501: consumo de CPU médio pelo processo com perfil criado.
+# <a name="da0501-average-cpu-consumption-by-the-process-being-profiled"></a>DA0501: consumo médio da CPU pelo processo que está sendo analisado.
+
 |||  
 |-|-|  
 |ID de regra|DA501|  
@@ -28,11 +30,11 @@ ms.lasthandoff: 04/19/2018
 |Método de criação de perfil|Todos|  
 |Mensagem|Consumo médio de CPU pelo Processo cujo perfil está sendo criado.|  
 |Tipo de regra|Informações|  
-  
+
  Ao criar o perfil usando a amostragem, a memória do .NET ou métodos de contenção de recursos, é necessário coletar pelo menos 10 amostras para disparar essa regra.  
-  
-## <a name="rule-description"></a>Descrição da Regra  
+
+## <a name="rule-description"></a>Descrição da regra  
  Essa mensagem relata o percentual de tempo que um processador esteve ocupado executando instruções do aplicativo. O valor relatado é a média de todos os intervalos de medição em que o processo do qual o perfil está sendo criado estava ativo. O valor do valor pode ser maior que 100% em um computador com mais de um processador.  
-  
+
 ## <a name="how-to-use-rule-data"></a>Como usar dados de regra  
  Use o valor da regra para comparar o desempenho de diferentes versões ou compilações do programa ou para entender o desempenho do aplicativo em diferentes cenários de teste.

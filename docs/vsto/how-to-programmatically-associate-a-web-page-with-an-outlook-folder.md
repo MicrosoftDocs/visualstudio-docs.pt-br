@@ -1,5 +1,5 @@
 ---
-title: 'Como: associar programaticamente uma página da Web uma pasta do Outlook | Microsoft Docs'
+title: 'Como: associar programaticamente uma página da web uma pasta do Outlook'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,14 +17,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5495066b05ded6fc49dfe92ed489932d8c75b24d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2cb1ef525917288dc44609b899611db884da9073
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35256459"
 ---
-# <a name="how-to-programmatically-associate-a-web-page-with-an-outlook-folder"></a>Como associar uma página da Web a uma pasta do Outlook programaticamente
-  Este exemplo verifica se uma pasta chamada `HtmlView` no Microsoft Office Outlook. Se a pasta não existir, o código cria a pasta e atribui uma página da Web para ele. Se a pasta existir, o código exibe o conteúdo da pasta.  
+# <a name="how-to-programmatically-associate-a-web-page-with-an-outlook-folder"></a>Como: associar programaticamente uma página da web uma pasta do Outlook
+  Este exemplo verifica uma pasta chamada `HtmlView` no Microsoft Office Outlook. Se a pasta não existir, o código cria a pasta e atribui a uma página da Web a ela. Se a pasta existir, o código exibe o conteúdo da pasta.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
@@ -32,8 +33,8 @@ ms.lasthandoff: 04/16/2018
  [!code-csharp[Trin_OL_HTMLFolder#1](../vsto/codesnippet/CSharp/Trin_OL_HTMLFolder/thisaddin.cs#1)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhando com pastas](../vsto/working-with-folders.md)   
- [Como: recuperar programaticamente uma pasta por nome](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)   
- [Como criar itens de pasta personalizados de forma programática](../vsto/how-to-programmatically-create-custom-folder-items.md)  
+ [Trabalhar com pastas](../vsto/working-with-folders.md)   
+ [Como: recuperar uma pasta por nome de forma programática](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)   
+ [Como: criar itens de pasta personalizados programaticamente](../vsto/how-to-programmatically-create-custom-folder-items.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: 'Erro: O serviço do depurador remoto do Visual Studio no computador de destino não pode se conectar novamente a esse computador | Microsoft Docs'
-ms.custom: ''
+title: 'Erro: O serviço do Depurador Remoto do Visual Studio no computador de destino não pode se conectar novamente a esse computador'
+titleSuffix: ''
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: troubleshooting
@@ -16,13 +17,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3cfd2db1e4bf5b87d12eb5d5ffcf94d06e142516
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 37caaea1f70771145f318d892025d566a99f4ea6
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062616"
 ---
-# <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>Erro: o serviço Depurador Remoto do Visual Studio no computador de destino não pode se reconectar a este computador
+# <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>Erro: O serviço do Depurador Remoto do Visual Studio no computador de destino não pode se conectar novamente a esse computador
 Esse erro significa que o serviço de depurador remoto do Visual Studio está em execução em uma conta de usuário que não pode autenticar ao tentar se conectar ao computador do qual você está depurando.  
   
  A tabela a seguir mostra quais contas podem acessar o computador:  
@@ -39,7 +41,7 @@ Esse erro significa que o serviço de depurador remoto do Visual Studio está em
   
 -   A conta na qual você executa o serviço de depurador remoto do Visual Studio deve ser administrador no computador remoto de modo que possa depurar qualquer processo.  
   
--   A conta também deve ser concedida a `Log on as a service` privilégio no computador remoto que está usando o **política de segurança Local** ferramenta administrativa.  
+-   a conta também precisa receber o privilégio de `Log on as a service` no computador remoto que está usando a ferramenta administrativa **Política de Segurança Local**.  
   
 -   Se você estiver usando um acesso de conta local no computador, deverá executar o serviço de depurador remoto do Visual Studio em uma conta local.  
   
@@ -51,28 +53,28 @@ Esse erro significa que o serviço de depurador remoto do Visual Studio está em
   
 ### <a name="to-add-log-on-as-a-service-privilege"></a>Para adicionar o privilégio “Fazer logon como um serviço”  
   
-1.  Sobre o **iniciar** menu, escolha **painel de controle**.  
+1.  No menu **Iniciar**, escolha **Painel de Controle**.  
   
-2.  No painel de controle, escolha **exibição clássica**, se necessário.  
+2.  No Painel de Controle, escolha o **Modo de Exibição Clássico**, se necessário.  
   
 3.  Clique duas vezes em **Ferramentas Administrativas**.  
   
-4.  Na janela de ferramentas administrativas, clique duas vezes em **política de segurança Local**.  
+4.  Na janela Ferramentas Administrativas, clique duas vezes em **Política de Segurança Local**.  
   
-5.  No **configurações de segurança Local** janela, expanda o **políticas locais** pasta.  
+5.  Na janela **Configurações de Segurança Local**, expanda a pasta **Políticas Locais**.  
   
-6.  Clique em **atribuição de direitos do usuário**.  
+6.  Clique em **Atribuição de Direitos do Usuário**.  
   
-7.  No **política** coluna, clique duas vezes em **fazer logon como um serviço** para exibir as atribuições de política de grupo locais atuais no **fazer logon como um serviço** caixa de diálogo.  
+7.  Na coluna **Política**, clique duas vezes em **Fazer logon como um serviço** para exibir as atribuições locais atuais da Política de Grupo na caixa de diálogo **Fazer logon como um serviço**.  
   
-8.  Para adicionar novos usuários, clique o **adicionar usuário ou grupo** botão.  
+8.  Para adicionar novos usuários, clique no botão **Adicionar Usuário ou Grupo**.  
   
-9. Quando tiver terminado de adicionar usuários, clique em **Okey**.  
+9. Quando você terminar de adicionar usuários, clique em **OK**.  
   
 ### <a name="to-work-around-this-error"></a>Para resolver esse erro  
   
 -   Execute o Monitor de Depuração Remota como um aplicativo em vez de um serviço.  
   
 ## <a name="see-also"></a>Consulte também  
- [Erros de depuração remota e solução de problemas](../debugger/remote-debugging-errors-and-troubleshooting.md)   
+ [Solução de problemas e erros de depuração remota](../debugger/remote-debugging-errors-and-troubleshooting.md)   
  [Depuração remota](../debugger/remote-debugging.md)

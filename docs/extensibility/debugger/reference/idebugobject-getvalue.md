@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 50f65cba807abf4e8a0d7bc85ed28c765f7c6849
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dc7b0f063e64649a07954367105df6a20d997033
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868411"
 ---
 # <a name="idebugobjectgetvalue"></a>IDebugObject::GetValue
 Obtém o valor do objeto consecutivos de bytes.  
@@ -42,16 +43,16 @@ int GetValue(
   
 #### <a name="parameters"></a>Parâmetros  
  `pValue`  
- [out no] Uma matriz que é preenchida com consecutivos de bytes que representa o valor do objeto.  
+ [no, out] Uma matriz que é preenchida com uma série consecutiva de bytes que representa o valor do objeto.  
   
  `nSize`  
- [in] O número máximo de bytes de busca.  
+ [in] O número máximo de bytes para buscar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Obter o número total de bytes do valor que pode ser obtido chamando o [GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md) método.  
+ Obter o número total de bytes do valor que pode ser buscadas chamando o [GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md) método.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

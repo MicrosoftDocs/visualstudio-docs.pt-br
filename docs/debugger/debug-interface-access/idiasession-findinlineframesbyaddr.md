@@ -12,14 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7696b73e9a6d84eff3aae7b3f0cbf393c1b935bd
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 237fdb31b223db1434ec4a2c936ed956e8e339d7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899169"
 ---
 # <a name="idiasessionfindinlineframesbyaddr"></a>IDiaSession::findInlineFramesByAddr
-Recupera uma enumeração que permite que um cliente iterar por todos os quadros embutido em um determinado endereço.  
+Recupera uma enumeração que permite que um cliente iterar em todos os quadros embutidos em um determinado endereço.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,10 +43,10 @@ HRESULT findInlineFramesByAddr (
  [in] Especifica o componente de deslocamento do endereço.  
   
  `ppResult`  
- [out] Contém uma `IDiaEnumSymbols` objeto que contém a lista de quadros que são recuperados.  
+ [out] Mantém um `IDiaEnumSymbols` objeto que contém a lista de quadros que são recuperados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   

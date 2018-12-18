@@ -1,5 +1,5 @@
 ---
-title: ': Get_age | Microsoft Docs'
+title: 'Idiasymbol:: Get_age | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a81c41902b5e6a8421f15b69ebc77fe5ae6eebf
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0ba915762a5eacffc32122a1dac4b7b046691e63
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868463"
 ---
 # <a name="idiasymbolgetage"></a>IDiaSymbol::get_age
-Recupera o valor de duração de um arquivo. PDB.  
+Recupera o valor de idade de um arquivo. PDB.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,23 +34,23 @@ HRESULT get_age (
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Retorna o valor de duração de um arquivo. PDB.  
+ [out] Retorna o valor de idade de um arquivo. PDB.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
   
 ## <a name="remarks"></a>Comentários  
- A idade não necessariamente correspondem a qualquer valor de tempo conhecido; ele é normalmente usado para determinar se um arquivo. PDB está fora de sincronia com um arquivo .exe correspondente.  
+ A idade não necessariamente corresponde a qualquer valor de tempo conhecido; ele é normalmente usado para determinar se um arquivo. PDB está fora de sincronia com um arquivo .exe correspondente.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Requisito|Descrição|  
 |-----------------|-----------------|  
 |Cabeçalho:|dia2.h|  
-|Versão:|Versão 7.0 do DIA SDK|  
+|Versão:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c383fd188c035dfacf41cdf86a84b4afe8dfa40d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 63426af550894df0e9796babaec91ff5758bbf1e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909897"
 ---
 # <a name="cvcfllang"></a>CV_CFL_LANG
-Especifica a linguagem do código fonte do aplicativo ou módulo vinculado.  
+Especifica a linguagem de código fonte do aplicativo ou módulo vinculado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +53,7 @@ typedef enum CV_CFL_LANG {
  Idioma do aplicativo é C.  
   
  CV_CFL_CXX  
- Idioma do aplicativo é de C++.  
+ Idioma do aplicativo é C++.  
   
  CV_CFL_FORTRAN  
  Idioma do aplicativo é FORTRAN.  
@@ -73,10 +74,10 @@ typedef enum CV_CFL_LANG {
  Aplicativo é um módulo geradas pelo vinculador.  
   
  CV_CFL_CVTRES  
- Aplicativo é um módulo de recurso com a ferramenta CVTRES.  
+ Aplicativo é um módulo de recurso convertido com a ferramenta CVTRES.  
   
  CV_CFL_CVTPGD  
- Aplicativo é um módulo POGO otimizada gerado com a ferramenta CVTPGD.  
+ Aplicativo é um módulo POGO otimizado gerado com a ferramenta CVTPGD.  
   
  CV_CFL_CSHARP  
  Idioma do aplicativo é c#.  
@@ -85,7 +86,7 @@ typedef enum CV_CFL_LANG {
  É o idioma do aplicativo Visual Basic.  
   
  CV_CFL_ILASM  
- Idioma do aplicativo é o assembly de linguagem intermediária (ou seja, o assembly de tempo de execução de linguagem comum (CLR)).  
+ Idioma do aplicativo é um assembly de linguagem intermediária (ou seja, o assembly do Common Language Runtime (CLR)).  
   
  CV_CFL_JAVA  
  Idioma do aplicativo é Java.  
@@ -94,13 +95,13 @@ typedef enum CV_CFL_LANG {
  Idioma do aplicativo é Jscript.  
   
  CV_CFL_MSIL  
- Idioma do aplicativo é um desconhecido idioma MSIL (Microsoft Intermediate), possivelmente um resultado do uso de [/LTCG (geração de código Link-time)](/cpp/build/reference/ltcg-link-time-code-generation) alternar.  
+ Idioma do aplicativo é um desconhecido MSIL Microsoft Intermediate Language (), possivelmente um resultado do uso de [/LTCG (geração de código Link-time)](/cpp/build/reference/ltcg-link-time-code-generation) alternar.  
   
  CV_CFL_HLSL  
- Idioma do aplicativo é a linguagem de sombreador alta.  
+ Idioma do aplicativo é a linguagem de sombreador de nível alto.  
   
 ## <a name="remarks"></a>Comentários  
- Os valores nesta enumeração são retornados por uma chamada para o [: Get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md) método.  
+ Os valores nesta enumeração são retornados por uma chamada para o [idiasymbol:: Get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: cvconst.h  

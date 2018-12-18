@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bf258dbca695fe3f1516d977e02a21058377e02
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 63fe3de8c4322e378f110813ac93fa523f3453ba
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750370"
 ---
 # <a name="cvcreatemarkerserieswithcodepagea-function"></a>Função CvCreateMarkerSeriesWithCodePageA
 Cria a série de marcador para determinado provedor e uma página de código especificada. Essa função pode ser usada para especificar a página de código explicitamente para o texto gravado por funções ANSI da API do marcador. Configurar a página de código pode ser útil caso o rastreamento seja capturado e então analisado em diferentes computadores com diferentes localidades/idiomas. Por padrão, a página de código retornada pela função GetACP() é usada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```C  
 HRESULT CvCreateMarkerSeriesWithCodePageA(  
    _In_ PCV_PROVIDER pProvider,  
    _In_ LPCSTR pSeriesName,  
@@ -51,7 +52,7 @@ HRESULT CvCreateMarkerSeriesWithCodePageA(
  S_OK quando a série de marcador é criada com êxito ou código de erro no caso de erros. Use as macros SUCCEEDED/FAILED para verificar a condição de erro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** cvmarkers.h  
+ **Cabeçalho:** *cvmarkers.h*  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de biblioteca C++](../profiling/cpp-library-reference.md)

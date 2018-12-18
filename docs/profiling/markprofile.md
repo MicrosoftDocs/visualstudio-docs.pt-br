@@ -12,18 +12,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a5e4f93446c49120afb43202f457af39439ca1bc
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 98530a790963d1c7fc60742dda4bb16e14a28ab4
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238154"
 ---
 # <a name="markprofile"></a>MarkProfile
-O método `MarkProfile` insere uma marca de perfil no arquivo .vsp. A criação de perfil para o thread que contém a função `MarkProfile` deve ser ON para a marca a ser inserida.  
+O método `MarkProfile` insere uma marca de perfil no arquivo .*vsp*. A criação de perfil para o thread que contém a função `MarkProfile` deve ser ON para a marca a ser inserida.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 PROFILE_COMMAND_STATUS PROFILERAPI MarkProfile( long lMarker );  
 ```  
   
@@ -32,7 +33,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI MarkProfile( long lMarker );
   
  O marcador a inserir. O marcador deve ser maior ou igual a 0 (zero).  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor retornado  
  A função indica êxito ou falha usando a enumeração **PROFILE_COMMAND_STATUS**. O valor de retorno pode ser um dos seguintes:  
   
 |Enumerador|Descrição|  
@@ -46,27 +47,27 @@ PROFILE_COMMAND_STATUS PROFILERAPI MarkProfile( long lMarker );
 |MARK_OK|MARK_OK é retornado para indicar êxito.|  
   
 ## <a name="remarks"></a>Comentários  
- O valor de marca é inserido no arquivo .vsp cada vez que o código é executado se o perfil do thread que contém a função MarkProfile está sendo criado. Você pode chamar MarkProfile várias vezes.  
+ O valor de marca é inserido no arquivo .*vsp* sempre que o código é executado quando está sendo criado o perfil do thread que contém a função MarkProfile. Você pode chamar MarkProfile várias vezes.  
   
- Marcas de perfis são globais em termos de escopo. Por exemplo, uma marca de perfil inserida em um thread pode ser usada para marcar o início ou término de um segmento de dados em qualquer thread no arquivo .vsp.  
+ Marcas de perfis são globais no escopo. Por exemplo, uma marca de perfil inserida em um thread pode ser usada para marcar o início ou término de um segmento de dados em um thread no arquivo .*vsp*.  
   
- O estado de criação de perfil para o thread que contém a função de perfil de marca deve estar ativo quando marcas e comentários são inseridos com o comando Mark ou com funções API (CommentMarkAtProfile, CommentMarkProfile ou MarkProfile).  
+ O estado de criação de perfil para o thread que contém a função de perfil de marca deve estar ligado quando as marcas e os comentários são inseridos com o comando Mark ou com as funções da API (CommentMarkAtProfile, CommentMarkProfile ou MarkProfile).  
   
 > [!IMPORTANT]
 >  O método MarkProfile deve ser usado somente com criação de perfil por instrumentação.  
   
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Microsoft.VisualStudio.Profiler.dll  
+ *Microsoft.VisualStudio.Profiler.dll*  
   
-## <a name="function-information"></a>Informações de Função  
- Cabeçalho: declarado em VSPerf.h  
+## <a name="function-information"></a>Informações de função  
+ Cabeçalho: declarado em *VSPerf.h*  
   
- Biblioteca de importação: VSPerf.lib  
+ Biblioteca de importação: *VSPerf.lib*  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir ilustra a função MarkProfile.  
   
-```  
+```cpp  
 void ExerciseMarkProfile()  
 {  
     // Declare and initialize variables to pass to   

@@ -1,3 +1,3 @@
-  **Aplicável a:** as informações neste tópico são aplicáveis aos projetos de suplemento do VSTO para Project. Para obter mais informações, consulte [recursos disponibilizados pelo aplicativo do Office e pelo tipo de projeto](../../vsto/features-available-by-office-application-and-project-type.md).
+  **Aplica-se a:** as informações neste tópico se aplicam para adicionar o VSTO\-nos projetos do projeto. Para obter mais informações, consulte [recursos disponíveis por tipo de projeto e aplicativo do Office](../../vsto/features-available-by-office-application-and-project-type.md).
 
   

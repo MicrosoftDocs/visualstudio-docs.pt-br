@@ -16,13 +16,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 65c6bd02ae2a89f8ea8e66cb6d7b943344450375
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d8ce82bea823307e02b719fbfae43fe0697aca65
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844632"
 ---
-# <a name="how-to-specify-pre--and-post-instrument-commands"></a>Como especificar comandos pré e pós-instrumento
+# <a name="how-to-specify-pre--and-post-instrument-commands"></a>Como especificar comandos de pré e pós-instrumentação
 
 Você pode especificar comandos que são executados antes ou depois que os binários em uma sessão de desempenho são instrumentados. Qualquer comando que pode ser emitido na linha de comando pode ser especificado como um evento pré-instrumento ou pós-instrumento. Por exemplo, é possível especificar comandos que automatizam a desistência de um assembly com uma chave de nome forte em um arquivo de lote que é executado depois que os binários são instrumentados.
 
@@ -32,7 +33,7 @@ O diretório de trabalho no qual os comandos são executados depende do sistema 
 
  **Computadores de 32 bits**
 
-Em computadores de 32 bits, o diretório das ferramentas de criação de perfil padrão é Drive\Program Files\Microsoft Visual Studio 10.0\Team Tools\Performance Tools.
+Em computadores de 32 bits, o diretório padrão das ferramentas do criador de perfil é *drive\Program Files\Microsoft Visual Studio 10.0\Team Tools\Performance Tools*.
 
 **Computadores de 64 bits**
 
@@ -40,11 +41,11 @@ Em computadores de 64 bits, especifique o caminho de acordo com a plataforma de 
 
 - No caso de aplicativos de 32 bits, o diretório padrão das ferramentas de criação de perfil é:
 
-     *Unidade*\Arquivos de Programas (x86)\Microsoft Visual Studio 10.0\Team Tools\Performance Tools
+     *drive\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Performance Tools*
 
 - No caso de aplicativos de 64 bits, o diretório padrão das ferramentas de criação de perfil é:
 
-     *Unidade*\Arquivos de Programas (x86)\Microsoft Visual Studio 10.0\Team Tools\Performance Tools\x64
+     *drive\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Performance Tools\x64*
 
 ## <a name="to-specify-pre-instrument-commands"></a>Para especificar comandos pré-instrumentos
 
@@ -86,4 +87,4 @@ Em computadores de 64 bits, especifique o caminho de acordo com a plataforma de 
 
 ## <a name="see-also"></a>Consulte também
 
-[Configurando sessões de desempenho](../profiling/configuring-performance-sessions.md)
+[Configurar sessões de desempenho](../profiling/configuring-performance-sessions.md)

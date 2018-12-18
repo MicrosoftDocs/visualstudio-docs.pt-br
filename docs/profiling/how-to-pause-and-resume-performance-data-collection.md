@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 40ec14a6d8909276d479f1e43b1bc20acd4452ef
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6527825d23e0c09d156f61f2645276e61d72e165
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843631"
 ---
 # <a name="how-to-pause-and-resume-performance-data-collection"></a>Como pausar e retomar a coleta de dados de desempenho
 Você pode controlar interativamente a coleta de dados de criação de perfil na janela da página de sessão de criação de perfil.  
@@ -39,5 +40,5 @@ Você pode controlar interativamente a coleta de dados de criação de perfil na
     -   Escolha **Pare a criação de perfil** para encerrar a sessão de criação de perfil e gerar relatórios.  
   
 ## <a name="see-also"></a>Consulte também  
- [Controlando a coleta de dados](../profiling/controlling-data-collection.md)   
+ [Coleta de dados de controle](../profiling/controlling-data-collection.md)   
  [Como: iniciar e terminar a coleta de dados de desempenho](../profiling/how-to-start-and-end-performance-data-collection.md)

@@ -1,16 +1,16 @@
 ---
 title: IDebugApplication110::CallableWaitForHandles | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDebugApplication110::CallableWaitForHandles
 ms.assetid: 02e79b60-0d67-47f9-bf78-b65a02c9c014
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +19,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24725346"
 ---
 # <a name="idebugapplication110callablewaitforhandles"></a>IDebugApplication110::CallableWaitForHandles
 Esperas para qualquer uma das alças especificadas deve ser sinalizado permitindo chamadas entre threads para esse thread. Esse método deve ser chamado do thread do depurador.  

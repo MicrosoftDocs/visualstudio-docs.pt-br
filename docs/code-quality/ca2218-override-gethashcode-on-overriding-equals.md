@@ -1,6 +1,7 @@
 ---
 title: 'CA2218: substituir GetHashCode em igualdades de substituição'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,54 +16,56 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d3bcf3d8c5f9780bcd245af7d5687797fce35ba9
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: dda8fd453ae36e11a4d8f20780caf60bf3c915f0
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45547783"
 ---
 # <a name="ca2218-override-gethashcode-on-overriding-equals"></a>CA2218: substituir GetHashCode em igualdades de substituição
+
 |||
 |-|-|
 |NomeDoTipo|OverrideGetHashCodeOnOverridingEquals|
 |CheckId|CA2218|
 |Categoria|Microsoft.Usage|
-|Alteração Significativa|Não separáveis|
+|Alteração Significativa|Não separável|
 
 ## <a name="cause"></a>Causa
- Substitui um tipo público <xref:System.Object.Equals%2A?displayProperty=fullName> , mas não substitui <xref:System.Object.GetHashCode%2A?displayProperty=fullName>.
+ Um tipo público substitui <xref:System.Object.Equals%2A?displayProperty=fullName> mas não substitui <xref:System.Object.GetHashCode%2A?displayProperty=fullName>.
 
-## <a name="rule-description"></a>Descrição da Regra
+## <a name="rule-description"></a>Descrição da regra
  <xref:System.Object.GetHashCode%2A> Retorna um valor, com base na instância atual, que é adequada para algoritmos de hash e estruturas de dados como uma tabela de hash. Dois objetos que são do mesmo tipo e forem iguais devem retornar o mesmo código hash para garantir que instâncias dos tipos a seguir funcionem corretamente:
 
--   <xref:System.Collections.Hashtable?displayProperty=fullName>
+- <xref:System.Collections.Hashtable?displayProperty=fullName>
 
--   <xref:System.Collections.SortedList?displayProperty=fullName>
+- <xref:System.Collections.SortedList?displayProperty=fullName>
 
--   <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>
+- <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>
 
--   <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName>
+- <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName>
 
--   <xref:System.Collections.Generic.SortedList%602?displayProperty=fullName>
+- <xref:System.Collections.Generic.SortedList%602?displayProperty=fullName>
 
--   <xref:System.Collections.Specialized.HybridDictionary?displayProperty=fullName>
+- <xref:System.Collections.Specialized.HybridDictionary?displayProperty=fullName>
 
--   <xref:System.Collections.Specialized.ListDictionary?displayProperty=fullName>
+- <xref:System.Collections.Specialized.ListDictionary?displayProperty=fullName>
 
--   <xref:System.Collections.Specialized.OrderedDictionary?displayProperty=fullName>
+- <xref:System.Collections.Specialized.OrderedDictionary?displayProperty=fullName>
 
--   Tipos que implementam <xref:System.Collections.Generic.IEqualityComparer%601?displayProperty=fullName>
+- Tipos que implementam <xref:System.Collections.Generic.IEqualityComparer%601?displayProperty=fullName>
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, forneça uma implementação de <xref:System.Object.GetHashCode%2A>. Para um par de objetos do mesmo tipo, você deve garantir que a implementação retorna o mesmo valor se sua implementação de <xref:System.Object.Equals%2A> retorna `true` para o par.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, fornecer uma implementação de <xref:System.Object.GetHashCode%2A>. Para um par de objetos do mesmo tipo, você deve assegurar que a implementação retorna o mesmo valor se sua implementação de <xref:System.Object.Equals%2A> retorna `true` para o par.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
  Não suprima um aviso nessa regra.
 
 ## <a name="class-example"></a>Exemplo de classe
 
 ### <a name="description"></a>Descrição
- O exemplo a seguir mostra uma classe (tipo de referência) que violam essa regra.
+ O exemplo a seguir mostra uma classe (tipo de referência) que viola essa regra.
 
 ### <a name="code"></a>Código
  [!code-csharp[FxCop.Usage.GetHashCodeErrorClass#1](../code-quality/codesnippet/CSharp/ca2218-override-gethashcode-on-overriding-equals_1.cs)]
@@ -76,7 +79,7 @@ ms.lasthandoff: 04/19/2018
 ## <a name="structure-example"></a>Exemplo de estrutura
 
 ### <a name="description"></a>Descrição
- O exemplo a seguir mostra a estrutura (tipo de valor) que violam essa regra.
+ O exemplo a seguir mostra uma estrutura (tipo de valor) que viola essa regra.
 
 ### <a name="code"></a>Código
  [!code-csharp[FxCop.Usage.GetHashCodeErrorStruct#1](../code-quality/codesnippet/CSharp/ca2218-override-gethashcode-on-overriding-equals_3.cs)]
@@ -99,4 +102,8 @@ ms.lasthandoff: 04/19/2018
  [CA2231: sobrecarregar operador Equals ao substituir ValueType.Equals](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)
 
 ## <a name="see-also"></a>Consulte também
- <xref:System.Object.Equals%2A?displayProperty=fullName> <xref:System.Object.GetHashCode%2A?displayProperty=fullName> <xref:System.Collections.Hashtable?displayProperty=fullName> [Operadores de igualdade](/dotnet/standard/design-guidelines/equality-operators)
+
+- <xref:System.Object.Equals%2A?displayProperty=fullName>
+- <xref:System.Object.GetHashCode%2A?displayProperty=fullName>
+- <xref:System.Collections.Hashtable?displayProperty=fullName>
+- [Operadores de igualdade](/dotnet/standard/design-guidelines/equality-operators)

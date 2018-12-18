@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb43ac1bdf173de8e7224f154ecb57cca53abd8c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d05f49f8fa91a0b193be10169a4dcebcd561f92d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910570"
 ---
 # <a name="idebugportpickerdisplayportpicker"></a>IDebugPortPicker::DisplayPortPicker
-Exibe a caixa de diálogo especificada que permite que o usuário selecione uma porta.  
+Exibe a caixa de diálogo especificada que permite que o usuário seleciona uma porta.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +48,7 @@ public int DisplayPortPicker(
  [out] Cadeia de caracteres de identificador de porta.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Um valor de retorno `S_FALSE` (ou um valor de retorno `S_OK` com o `BSTR` definida como `NULL`) indica que o usuário clicou **Cancelar**.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Um valor de retorno `S_FALSE` (ou um valor de retorno `S_OK` com o `BSTR` definido como `NULL`) indica que o usuário clicou **Cancelar**.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugPortPicker](../../../extensibility/debugger/reference/idebugportpicker.md)

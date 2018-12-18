@@ -1,6 +1,6 @@
 ---
-title: 'Como: sair do código gerenciado quando quadros nativos não forem encontrados na janela de pilha de chamadas | Microsoft Docs'
-ms.custom: ''
+title: Sai do C# quando quadros nativos estiverem ausentes da pilha de chamadas de código | Microsoft Docs
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -24,25 +24,28 @@ manager: douge
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e21d45cd65fc6bc6a66f2f7c698952f0cdd788b9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 741afb6befdbc29cafab39c3c9b0d7bb2761d7b1
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057646"
 ---
-# <a name="how-to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-window"></a>Como sair do código gerenciado quando quadros nativos não forem encontrados na janela Pilha de Chamadas
-Se seu código possui quadros nativos que são visíveis no **pilha de chamadas** janela, revisão de código gerenciado pode produzir resultados inesperados. Como alternativa, você pode usar um ponto de interrupção em vez de **sair**.  
-  
+# <a name="how-to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-window"></a>Como: Sair do código gerenciado quando quadros nativos estiverem ausentes da janela pilha de chamadas
+
+Se seu código tiver quadros nativos invisíveis na janela **Pilha de Chamadas**, realizar a depuração circular do código gerenciado poderá produzir resultados inesperados. Como alternativa, você pode usar um ponto de interrupção em vez da **Depuração Circular**.
+
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../ide/personalizing-the-visual-studio-ide.md).  
-  
-### <a name="to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-display"></a>Para depurar fora do código gerenciado quando os quadros nativos estiverem ausentes da exibição da pilha de chamadas  
-  
-1.  No código nativo, defina um ponto de interrupção do local depois da chamada para o código gerenciado.  
-  
-2.  Sobre o **depurar** menu, escolha **continuar**.  
-  
-     Quando a chamada gerenciada for concluída, a execução será interrompida no ponto de interrupção no código nativo.  
-  
-## <a name="see-also"></a>Consulte também  
- [Como usar a janela Pilha de Chamadas](../debugger/how-to-use-the-call-stack-window.md)
+> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Redefinir as configurações](../ide/environment-settings.md#reset-settings).
+
+## <a name="step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-display"></a>Realizar Depuração Circular do código gerenciado quando os quadros nativos estiverem ausentes da exibição da pilha de chamadas
+
+1.  No código nativo, defina um ponto de interrupção do local depois da chamada para o código gerenciado.
+
+2.  No menu **Depurar**, escolha **Continuar**.
+
+     Quando a chamada gerenciada for concluída, a execução será interrompida no ponto de interrupção no código nativo.
+
+## <a name="see-also"></a>Consulte também
+
+- [Como: Usar a janela de pilha de chamadas](../debugger/how-to-use-the-call-stack-window.md)

@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b6ecfd729762944bcf26814e735c4c73841e2d0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b25c979870b21b802cd3c32f02bc649347159857
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908607"
 ---
 # <a name="bpresifields"></a>BPRESI_FIELDS
 Especifica as informações a serem recuperados sobre a resolução bem-sucedida de um ponto de interrupção.  
@@ -47,21 +48,21 @@ public enum enum_BPRESI_FIELDS {
   
 ## <a name="members"></a>Membros  
  BPRESI_BPRESLOCATION  
- Inicializar/usar o `bpResLocation` campo (localização de resolução do ponto de interrupção) do [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) estrutura.  
+ Inicialização/usar o `bpResLocation` campo (localização de resolução de ponto de interrupção) a [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) estrutura.  
   
  BPRESI_PROGRAM  
- Inicializar/usar o `pProgram` campo o `BP_RESOLUTION_INFO` estrutura.  
+ Inicialização/usar o `pProgram` campo do `BP_RESOLUTION_INFO` estrutura.  
   
  BPRESI_THREAD  
- Inicializar/usar o `pThread` campo o `BP_RESOLUTION_INFO` estrutura.  
+ Inicialização/usar o `pThread` campo do `BP_RESOLUTION_INFO` estrutura.  
   
  BPRESI_ALLFIELDS  
  Especifica todos os campos.  
   
 ## <a name="remarks"></a>Comentários  
- Passado para o [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) método para indicar quais campos do [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) estrutura devem ser inicializado.  
+ Passado para o [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) método para indicar quais campos da [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) são de estrutura a ser inicializado.  
   
- Esses sinalizadores também são usados para indicar quais campos do `BP_RESOLUTION_INFO` estrutura são válidos e usadas quando essa estrutura é retornada.  
+ Esses sinalizadores também são usados para indicar quais campos do `BP_RESOLUTION_INFO` estrutura são usados e válidos quando essa estrutura é retornada.  
   
  Esses valores podem ser combinados com um bit a bit `OR`.  
   

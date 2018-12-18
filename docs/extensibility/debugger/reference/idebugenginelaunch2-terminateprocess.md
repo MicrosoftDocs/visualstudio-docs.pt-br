@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 57fa5d4f907158f902a1d31aaecabbf973554410
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1426e8d563879fd80b8c39710be453cf0a3d6794
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49930343"
 ---
 # <a name="idebugenginelaunch2terminateprocess"></a>IDebugEngineLaunch2::TerminateProcess
 Finaliza um processo.  
@@ -40,13 +41,13 @@ int TerminateProcess (
   
 #### <a name="parameters"></a>Parâmetros  
  `pProcess`  
- [in] Um [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) objeto que representa o processo a ser finalizado.  
+ [in] Uma [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) objeto que representa o processo a ser encerrado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Chamar o [CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md) método antes de chamar esse método.  
+ Chame o [CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md) método antes de chamar esse método.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)   

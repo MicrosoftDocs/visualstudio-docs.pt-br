@@ -17,13 +17,14 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31479949"
 ---
 # <a name="graphics-pixel-history"></a>Histórico de pixel gráfico
 A janela de histórico de Pixel gráfico no analisador de gráficos do Visual Studio ajuda a entender como um pixel específico é afetado pelos eventos Direct3D que ocorrem durante um intervalo de seu aplicativo ou um jogo.  
   
  Esta é a janela Histórico de Pixel:  
   
- ![Um pixel com três eventos Direct3D no seu histórico. ] (media/gfx_diag_demo_pixel_history_orientation.png "gfx_diag_demo_pixel_history_orientation")  
+ ![Um pixel com três eventos Direct3D no seu histórico. ](media/gfx_diag_demo_pixel_history_orientation.png "gfx_diag_demo_pixel_history_orientation")  
   
 ## <a name="understanding-the-pixel-history-window"></a>Noções básicas sobre a janela Histórico de Pixel  
  Usando o histórico de Pixel, você pode analisar como um pixel específico do destino de renderização é afetado pelos eventos Direct3D durante um intervalo. Você pode identificar um problema de processamento de um evento específico do Direct3D, mesmo quando eventos subsequentes — ou primitivas subsequentes no mesmo evento — continuam a alterar o valor de cor final do pixel. Por exemplo, um pixel pode ser processado incorretamente e obscurecido por outro pixel semitransparente, para que as cores sejam combinadas no framebuffer. Esse tipo de problema seria difícil de diagnosticar se você tivesse apenas o conteúdo final do destino da renderização para orientá-lo.  
@@ -41,9 +42,9 @@ A janela de histórico de Pixel gráfico no analisador de gráficos do Visual St
   
 |Ícone|Motivo da exclusão|  
 |----------|--------------------------|  
-|![Ícone de falha de teste de profundidade. ] (media/vsg_hist_icon_failed_depth.png "vsg_hist_icon_failed_depth")|O pixel foi excluído porque não passou no teste de profundidade.|  
-|![Ícone de falha de teste de tesoura. ] (media/vsg_hist_icon_failed_scissor.png "vsg_hist_icon_failed_scissor")|O pixel foi excluído porque não passou no teste de tesoura.|  
-|![Ícone de falha de teste de estêncil. ] (media/vsg_hist_icon_failed_stencil.png "vsg_hist_icon_failed_stencil")|O pixel foi excluído porque não passou no teste de estêncil.|  
+|![Ícone de falha de teste de profundidade. ](media/vsg_hist_icon_failed_depth.png "vsg_hist_icon_failed_depth")|O pixel foi excluído porque não passou no teste de profundidade.|  
+|![Ícone de falha de teste de tesoura. ](media/vsg_hist_icon_failed_scissor.png "vsg_hist_icon_failed_scissor")|O pixel foi excluído porque não passou no teste de tesoura.|  
+|![Ícone de falha de teste de estêncil. ](media/vsg_hist_icon_failed_stencil.png "vsg_hist_icon_failed_stencil")|O pixel foi excluído porque não passou no teste de estêncil.|  
   
 ### <a name="draw-call-exclusion"></a>Exclusão de chamada de desenho  
  Se todos as primitivas em uma chamada de desenho são excluídas por afetarem o destino de renderização porque não passaram em um teste, a chamada de desenho não pode ser expandida e um ícone que corresponde ao motivo da exclusão é exibido ao lado dela. Os motivos de exclusão da chamada de desenho se assemelha aos motivos de exclusão da primitiva e os ícones são semelhantes.  

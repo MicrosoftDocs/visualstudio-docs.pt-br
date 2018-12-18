@@ -1,5 +1,5 @@
 ---
-title: 'Como: exibir propriedades de mensagem | Microsoft Docs'
+title: 'Como: exibir as propriedades de mensagem | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,19 +12,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d3caac9eab324b7656a92cb36e9c36e87d759b9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 54294ec72df4abfd6ba96e334017e58fca3d18c7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864160"
 ---
 # <a name="how-to-display-message-properties"></a>Como exibir Propriedades da Mensagem
 Para obter mais informações sobre uma mensagem listada na [exibição de mensagens](../debugger/messages-view.md), use o [caixa de diálogo de propriedades de mensagem](../debugger/message-properties-dialog-box.md).  
   
-### <a name="to-open-a-message-properties-dialog-box"></a>Para abrir uma caixa de diálogo Propriedades de mensagem  
+### <a name="to-open-a-message-properties-dialog-box"></a>Para abrir uma caixa de diálogo Propriedades da mensagem  
   
-1.  Selecione uma mensagem na árvore exibida na exibição de mensagens.  
+1. Selecione uma mensagem da árvore exibida na exibição de mensagens.  
   
-2.  Do **exibição** menu, escolha **propriedades**.  
+2. Dos **modo de exibição** menu, escolha **propriedades**.  
   
- Caixas de diálogo de propriedades não são restritas, você pode clicar em outro item em uma janela de exibição e a caixa de diálogo mostrará informações sobre o item selecionado.
+   Caixas de diálogo de propriedades não são modais, portanto, você pode clicar em outro item em uma janela de exibição e a caixa de diálogo mostrará informações sobre o item selecionado.

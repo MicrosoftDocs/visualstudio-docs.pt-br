@@ -1,10 +1,9 @@
 ---
-title: Solucionando problemas de referências desfeitas | Microsoft Docs
-ms.custom: ''
+title: Solução de problemas de referências desfeitas
 ms.date: 03/21/2017
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: troubleshooting
 helpviewer_keywords:
 - C# projects, references
 - Visual Basic projects, references
@@ -16,11 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 256e7018b29402a2d67693de3c8e2cfe18ea2f71
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3c1879b67558cb57fba7bc462e4c7df03fb5efc8
+ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
+ms.locfileid: "32064344"
 ---
 # <a name="troubleshoot-broken-references"></a>Solução de problemas de referências desfeitas
 
@@ -39,15 +39,15 @@ Se o aplicativo tentar usar uma referência desfeita, um erro de exceção será
 Veja a seguir as soluções para esses problemas.
 
 > [!NOTE]
-> Os arquivos em assemblies são referenciados com caminhos absolutos no arquivo de projeto. Portanto, é possível que os usuários que trabalham em um ambiente com vários desenvolvedores tenham um assembly referenciado ausente no ambiente local. Para evitar esses erros, nesses casos, é melhor adicionar referências projeto a projeto. Para obter mais informações, consulte [Programando com Assemblies](/dotnet/framework/app-domains/programming-with-assemblies).
+> Os arquivos em assemblies são referenciados com caminhos absolutos no arquivo de projeto. Portanto, é possível que os usuários que trabalham em um ambiente com vários desenvolvedores tenham um assembly referenciado ausente no ambiente local. Para evitar esses erros, nesses casos, é melhor adicionar referências projeto a projeto. Para saber mais, veja [Programação com Assemblies](/dotnet/framework/app-domains/programming-with-assemblies).
 
 ## <a name="reference-path-is-incorrect"></a>O caminho de referência está incorreto
 
-Se os projetos forem compartilhados em computadores diferentes, algumas referências poderão não ser encontradas quando um componente estiver localizado em um diretório diferente de cada computador. As referências são armazenadas no nome do arquivo de componente (por exemplo, MyComponent). Quando uma referência é adicionada a um projeto, o local da pasta do arquivo de componente (por exemplo, C:\MyComponents\\) é acrescentado à propriedade do projeto **ReferencePath**.
+Se os projetos forem compartilhados em computadores diferentes, algumas referências poderão não ser encontradas quando um componente estiver localizado em um diretório diferente de cada computador. As referências são armazenadas no nome do arquivo de componente (por exemplo, *MyComponent*). Quando uma referência é adicionada a um projeto, o local da pasta do arquivo de componente (por exemplo, *C:\MyComponents*) é acrescentado à propriedade do projeto **ReferencePath**.
 
-Quando o projeto é aberto, ele tenta localizar esses arquivos de componentes referenciados procurando nos diretórios no caminho de referência. Se o projeto é aberto em um computador que armazena o componente em um diretório diferente, como D:\MyComponents\\, a referência não pode ser encontrada e um erro é exibido na Lista de Tarefas.
+Quando o projeto é aberto, ele tenta localizar esses arquivos de componentes referenciados procurando nos diretórios no caminho de referência. Se o projeto for aberto em um computador que armazena o componente em um diretório diferente, como *D:\MyComponents*, a referência não poderá ser encontrada e um erro será exibido na **Lista de Tarefas**.
 
-Para corrigir esse problema, é possível excluir a referência desfeita e substituí-la usando a caixa de diálogo Adicionar Referência. Outra solução é usar o item **Caminho de Referência** nas páginas de propriedades do projeto e modificar as pastas na lista para que elas apontem para os locais corretos. A propriedade **Caminho de Referência** é persistida para cada usuário em cada computador. Portanto, a modificação do caminho de referência não afeta outros usuários do projeto.
+Para corrigir esse problema, é possível excluir a referência desfeita e substituí-la usando a caixa de diálogo **Adicionar Referência**. Outra solução é usar o item **Caminho de Referência** nas páginas de propriedades do projeto e modificar as pastas na lista para que elas apontem para os locais corretos. A propriedade **Caminho de Referência** é persistida para cada usuário em cada computador. Portanto, a modificação do caminho de referência não afeta outros usuários do projeto.
 
 > [!TIP]
 > Referências projeto a projeto não apresentam esses problemas. Por esse motivo, se possível, use-as, em vez de referências de arquivo.
@@ -88,8 +88,8 @@ Pode haver várias causas possíveis para arquivos inacessíveis: uma conexão d
 
 ## <a name="com-component-is-not-installed-on-computer"></a>O componente COM não está instalado no computador
 
-Se um usuário tiver adicionado uma referência a um componente COM e um segundo usuário tentar executar o código em um computador que não tem esse componente instalado, o segundo usuário receberá um erro informando de que a referência está desfeita. Instalar o componente no segundo computador corrigirá o erro. Para obter mais informações sobre como usar referências a componentes COM nos projetos, consulte [Interoperabilidade COM em aplicativos .NET Framework](/dotnet/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications).
+Se um usuário tiver adicionado uma referência a um componente COM e um segundo usuário tentar executar o código em um computador que não tem esse componente instalado, o segundo usuário receberá um erro informando de que a referência está desfeita. Instalar o componente no segundo computador corrigirá o erro. Para saber mais sobre como usar referências a componentes COM nos projetos, veja [Interoperabilidade COM em aplicativos .NET Framework](/dotnet/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications).
 
 ## <a name="see-also"></a>Consulte também
 
-[Página Referências, Designer de Projeto (Visual Basic)](../ide/reference/references-page-project-designer-visual-basic.md)
+- [Página Referências, Designer de Projeto (Visual Basic)](../ide/reference/references-page-project-designer-visual-basic.md)

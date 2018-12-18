@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476030"
 ---
 # <a name="menu-commands"></a>Comandos de menu
 Os tópicos da Ajuda nesta seção listam os comandos disponíveis nos menus Spy + +.  

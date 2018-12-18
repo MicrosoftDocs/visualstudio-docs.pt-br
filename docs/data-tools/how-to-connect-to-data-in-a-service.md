@@ -3,49 +3,51 @@ title: Como conectar a dados em um serviço
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
-- data [Visual Studio], connecting to Web services
-- data sources, creating from Web services
-- data [Visual Studio], reading from Web services
-- reading data, from Web services
-- Web services, reading data
-- Web services, as data sources
-- Web services, connecting
+- data [Visual Studio], connecting to web services
+- data sources, creating from web services
+- data [Visual Studio], reading from web services
+- reading data, from web services
+- web services, reading data
+- web services, as data sources
+- web services, connecting
 ms.assetid: a6b54353-05fe-4e5c-8631-90231fc95504
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: d82e84c8f71b42f5cbe4f6386ed2ceb87b32ffbd
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
-ms.translationtype: MT
+ms.openlocfilehash: f8f7371418df19ec8452334641c7c9414328e557
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52305007"
 ---
-# <a name="how-to-connect-to-data-in-a-service"></a>Como conectar a dados em um serviço
+# <a name="how-to-connect-to-data-in-a-service"></a>Como se conectar a dados em um serviço
 
-Conectar seu aplicativo para os dados retornados de um serviço executando o [Assistente de configuração de fonte de dados](../data-tools/media/data-source-configuration-wizard.png) e selecionando **Service** no **escolher um tipo de fonte de dados**página.
+Você conecta seu aplicativo para os dados retornados de um serviço executando o [Data Source Configuration Wizard](../data-tools/media/data-source-configuration-wizard.png) e selecionando **serviço** sobre o **escolher um tipo de fonte de dados**página.
 
-Após a conclusão do assistente, uma referência de serviço é adicionada ao seu projeto e fica imediatamente disponível no [janela fontes de dados](add-new-data-sources.md).
+Após a conclusão do assistente, uma referência de serviço é adicionada ao seu projeto e fica imediatamente disponível na [janela Data Sources](add-new-data-sources.md#data-sources-window).
 
 > [!NOTE]
-> Os itens que aparecem no **fontes de dados** janela são dependentes das informações que o serviço retorna. Alguns serviços não podem fornecer informações suficientes para o **Assistente de configuração de fonte de dados** para criar objetos ligáveis. Por exemplo, se o serviço retorna um dataset não tipado, então nenhum item aparecerá no **janela fontes de dados** após concluir o assistente. Isso ocorre porque datasets sem tipo não fornecem esquema, então o assistente não tem informações suficientes para criar a fonte de dados.
+> Os itens que aparecem na janela **Fontes de Dados** são dependentes das informações que o serviço retorna. Alguns serviços podem não fornecer informações suficientes para o **Assistente de Configuração de Fonte de Dados** criar objetos associáveis. Por exemplo, se o serviço retorna um conjunto de dados não tipado, nenhum item aparecerá na **fontes de dados** janela após concluir o assistente. Isso ocorre porque os conjuntos de dados não tipados não fornecem esquema, portanto, o assistente não tem informações suficientes para criar a fonte de dados.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="to-connect-your-application-to-a-service"></a>Para conectar seu aplicativo a um serviço
+## <a name="to-connect-your-application-to-a-service"></a>Conectar seu aplicativo a um serviço
 
-1.  Sobre o **dados** menu, clique em **adicionar nova fonte de dados**.
+1.  No menu **Dados**, clique em **Adicionar Nova Fonte de Dados**.
 
-2.  Selecione **Service** no **escolher um tipo de fonte de dados** página e, em seguida, clique em **próximo**.
+2.  Selecione **serviço** sobre o **escolher um tipo de fonte de dados** página e, em seguida, clique em **próxima**.
 
 3.  Insira o endereço do serviço que você deseja usar ou clique em **Discover** para localizar serviços na solução atual e, em seguida, clique em **vá**.
 
-4.  Opcionalmente, um novo **Namespace** podem ser digitados no lugar do valor padrão.
+4.  Opcionalmente, você pode digitar um novo **Namespace** no lugar do valor padrão.
 
     > [!NOTE]
-    > Clique em **avançado** para abrir o [configurar a caixa de diálogo de referência de serviço](../data-tools/configure-service-reference-dialog-box.md).
+    > Clique em **Advanced** para abrir o [caixa de diálogo Configurar referência de serviço](../data-tools/configure-service-reference-dialog-box.md).
 
 5.  Clique em **Okey** para adicionar uma referência de serviço ao seu projeto.
 
@@ -55,7 +57,7 @@ Após a conclusão do assistente, uma referência de serviço é adicionada ao s
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para adicionar funcionalidade ao seu aplicativo, selecione um item no **fontes de dados** janela e arraste-o para um formulário para criar controles associados. Para obter mais informações, consulte [associar controles a dados no Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md).
+Para adicionar funcionalidade ao seu aplicativo, selecione um item na **fontes de dados** janela e arraste-o para um formulário para criar controles associados. Para obter mais informações, confira [Associar controles a dados no Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md).
 
 ## <a name="see-also"></a>Consulte também
 

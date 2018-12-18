@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31473632"
 ---
 # <a name="how-to-expand-and-collapse-spy-trees"></a>Como expandir e recolher árvores de Spy++
 Você pode expandir e recolher os modos de exibição do Windows, processos e Threads usando dois métodos: clicando nos ícones na janela ou usando o **árvore** menu. A + e - ícones na árvore de atuam como na janela de projeto do Visual C++.  

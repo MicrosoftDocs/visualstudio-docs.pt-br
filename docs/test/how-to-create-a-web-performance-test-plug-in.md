@@ -1,5 +1,5 @@
 ---
-title: Criar um plug-in de teste de desempenho Web para o Visual Studio | Microsoft Docs
+title: Criar um plug-in de teste de desempenho Web para o Visual Studio
 ms.date: 10/03/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,29 +11,33 @@ ms.assetid: a612f2d2-9806-477d-a126-12842f07da6e
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: d7cb0eea7c6ebb32d0de4317a92fb83a8f7f2f10
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 365b1be6dd3c383c42b08d2c480db7fad104c48f
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894515"
 ---
 # <a name="how-to-create-a-web-performance-test-plug-in"></a>Como criar um plug-in de teste de desempenho Web
 
 Plug-ins de teste de desempenho na Web permitem isolar e reutilizar o código fora das instruções declarativas principais no teste de desempenho na Web. Um plug-in de teste de desempenho na Web personalizado oferece uma maneira de chamar um código quando o teste de desempenho na Web é executado. O plug-in de teste de desempenho na Web é executado uma vez para cada iteração de teste. Além disso, se você substituir os métodos PreRequest ou PostRequest no plug-in de teste, esses plug-ins de solicitação serão executados antes ou depois de cada solicitação, respectivamente.
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 Você pode criar um plug-in de teste de desempenho na Web personalizado com sua própria classe a partir da classe base <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin>.
 
 Você pode usar plug-ins de teste de desempenho na Web personalizados com os testes de desempenho na Web que você gravou, o que permite escrever uma quantidade mínima de código para obter um nível de maior controle sobre os testes de desempenho na Web. No entanto, também é possível usá-los com testes de desempenho na Web codificados. Para obter mais informações, consulte [Gerar e executar um teste de desempenho Web codificado](../test/generate-and-run-a-coded-web-performance-test.md).
 
 > [!NOTE]
-> Você também pode criar plug-ins de teste de carga. Consulte [Como criar um plug-in de teste de carga](../test/how-to-create-a-load-test-plug-in.md).
+> Você também pode criar plug-ins de teste de carga. Confira [Como criar um plug-in de teste de carga](../test/how-to-create-a-load-test-plug-in.md).
 
-## <a name="to-create-a-custom-web-performance-test-plug-in"></a>Para criar um plug-in de teste de desempenho na Web personalizado
+## <a name="to-create-a-custom-web-performance-test-plug-in"></a>Para criar um plug-in de teste de desempenho Web personalizado
 
 1.  Abra um projeto de teste de carga e de desempenho na Web contendo um teste de desempenho na Web.
 
-2.  No Gerenciador de Soluções, clique com o botão direito do mouse na solução, selecione **Adicionar** e, em seguida, escolha **Novo Projeto**.
+2.  No **Gerenciador de Soluções**, clique com o botão direito do mouse na solução, selecione **Adicionar** e, em seguida, escolha **Novo Projeto**.
 
      A caixa de diálogo **Adicionar Novo Projeto** é exibida.
 
@@ -45,9 +49,9 @@ Você pode usar plug-ins de teste de desempenho na Web personalizados com os tes
 
 6.  Escolha **OK**.
 
-7.  O novo projeto da biblioteca de classes é adicionado ao Gerenciador de Soluções e a nova classe é exibida no Editor de Códigos.
+7.  O novo projeto da biblioteca de classes é adicionado ao **Gerenciador de Soluções** e a nova classe é exibida no **Editor de Códigos**.
 
-8.  No Gerenciador de Soluções, clique com o botão direito do mouse na pasta **Referências** da nova biblioteca de classes e selecione **Adicionar Referência**.
+8.  No **Gerenciador de Soluções**, clique com o botão direito do mouse na pasta **Referências** da nova biblioteca de classes e selecione **Adicionar Referência**.
 
 9. A caixa de diálogo **Adicionar Referência** é exibida.
 
@@ -55,17 +59,17 @@ Você pode usar plug-ins de teste de desempenho na Web personalizados com os tes
 
 11. Escolha **OK**.
 
-     A referência para **Microsoft.VisualStudio.QualityTools.WebTestFramework** é adicionada à pasta **Referência** do Gerenciador de Soluções.
+     A referência a **Microsoft.VisualStudio.QualityTools.WebTestFramework** é adicionada à pasta **Referência** do **Gerenciador de Soluções**.
 
-12. No Gerenciador de Soluções, clique com o botão direito do mouse no nó superior do projeto de teste de carga e desempenho Web que contém o teste de carga a que você deseja adicionar o plug-in de teste de desempenho Web e selecione **Adicionar Referência**.
+12. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó superior do projeto de teste de carga e de desempenho Web que contém o teste de carga ao qual você deseja adicionar o plug-in de teste de desempenho Web e selecione **Adicionar Referência**.
 
 13. A **caixa de diálogo Adicionar Referência é exibida**.
 
-14. Escolha a guia **Projetos** e selecione o projeto da biblioteca de classes.
+14. Escolha a guia **Projetos** e selecione o **Projeto da Biblioteca de Classes**.
 
 15. Escolha **OK**.
 
-16. No Editor de Códigos, escreva o código de seu plug-in. Primeiro, crie uma nova classe pública que derive de <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin>.
+16. No **Editor de Códigos**, escreva o código do plug-in. Primeiro, crie uma nova classe pública que derive de <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin>.
 
 17. Implemente o código dentro de um ou mais manipuladores de eventos. Consulte a seção Exemplo a seguir para obter uma implementação de exemplo.
 
@@ -93,7 +97,7 @@ Você pode usar plug-ins de teste de desempenho na Web personalizados com os tes
 
      A caixa de diálogo **Adicionar plug-in de teste na Web** é exibida.
 
-21. Em **Selecionar um plug-in**, selecione a classe do plug-in do teste de desempenho Web.
+21. Em **Selecionar um plug-in**, selecione a classe do plug-in do teste de desempenho da Web.
 
 22. No painel **Propriedades do plug-in selecionado**, defina os valores iniciais a serem usados pelo plug-in em tempo de execução.
 
@@ -118,7 +122,7 @@ Você pode usar plug-ins de teste de desempenho na Web personalizados com os tes
 
 O código a seguir cria um plug-in de teste de desempenho na Web personalizado que adiciona um item a <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestContext> que representa a iteração de teste.
 
-Após a execução do teste de desempenho Web, usando esse plug-in você pode ver o item adicionado que se chama **TestIteratnionNumber** na guia **Contexto** no Visualizador de Resultados de Teste de Desempenho Web.
+Após a execução do teste de desempenho Web, usando esse plug-in você pode ver o item adicionado que se chama **TestIteratnionNumber** na guia **Contexto** no **Visualizador de Testes de Desempenho Web**.
 
 ```csharp
 using System;
@@ -173,8 +177,8 @@ namespace SampleRules
 
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin>
 - [Criar código personalizado e plug-ins para testes de carga](../test/create-custom-code-and-plug-ins-for-load-tests.md)
-- [Como criar um plug-in de nível de solicitação](../test/how-to-create-a-request-level-plug-in.md)
-- [Codificando uma regra de extração personalizada para um teste de desempenho Web](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)
-- [Codificando uma regra de validação personalizada para um teste de desempenho Web](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
+- [Como criar um plug-in no nível da solicitação](../test/how-to-create-a-request-level-plug-in.md)
+- [Codificar uma regra de extração personalizada para um teste de desempenho Web](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)
+- [Codificar uma regra de validação personalizada para um teste de desempenho Web](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
 - [Como criar um plug-in de teste de carga](../test/how-to-create-a-load-test-plug-in.md)
 - [Gerar e executar um teste de desempenho Web codificado](../test/generate-and-run-a-coded-web-performance-test.md)

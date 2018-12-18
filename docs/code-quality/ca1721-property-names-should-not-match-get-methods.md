@@ -1,6 +1,7 @@
 ---
 title: 'CA1721: os nomes de propriedade não devem corresponder a métodos get'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,20 @@ ms.assetid: 45a0e853-1f06-4688-af1b-cc634409e295
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 29db0561f15a16bf9b449f03f209feedf80dbd88
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 26f6e23a340ec018f766477f0bdce089a43ca3e4
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549671"
 ---
 # <a name="ca1721-property-names-should-not-match-get-methods"></a>CA1721: os nomes de propriedade não devem corresponder a métodos get
+
 |||
 |-|-|
 |NomeDoTipo|PropertyNamesShouldNotMatchGetMethods|
@@ -30,24 +36,24 @@ ms.lasthandoff: 04/19/2018
 |Alteração Significativa|Quebra|
 
 ## <a name="cause"></a>Causa
- O nome de um membro público ou protegido começa com 'Get' e, caso contrário, corresponde ao nome de uma propriedade pública ou protegida. Por exemplo, um tipo que contém um método chamado 'GetColor' e uma propriedade denominada 'Color' viola essa regra.
+ O nome de um membro público ou protegido começa com 'Get' e, caso contrário, corresponde ao nome de uma propriedade pública ou protegida. Por exemplo, um tipo que contém um método chamado 'GetColor' e uma propriedade chamada 'Color' viola essa regra.
 
-## <a name="rule-description"></a>Descrição da Regra
- Propriedades e métodos get devem ter nomes que distinguem claramente sua função.
+## <a name="rule-description"></a>Descrição da regra
+ Os métodos GET e propriedades devem ter nomes que diferenciem claramente a função.
 
- Convenções de nomenclatura fornecem uma aparência comum para bibliotecas de destino do common language runtime. Isso reduz o tempo que é necessário para aprender uma nova biblioteca de software e aumenta a confiança do cliente que a biblioteca foi desenvolvida por uma pessoa com experiência em desenvolvimento de código gerenciado.
+ Convenções de nomenclatura de fornecem uma aparência comum para bibliotecas que direcionam o common language runtime. Essa consistência reduz o tempo necessário para conhecer uma nova biblioteca de software e aumenta a confiança do cliente que a biblioteca foi desenvolvida por alguém que tenha experiência em desenvolvimento de código gerenciado.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
+## <a name="how-to-fix-violations"></a>Como corrigir violações
  Altere o nome para que ele não coincide com o nome de um método que é prefixado com 'Get'.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
  Não suprima um aviso nessa regra.
 
 > [!NOTE]
->  Esse aviso pode ser excluído se o método Get é causado pela implementação de interface IExtenderProvider.
+> Esse aviso pode ser excluído se o método Get é causado pela implementação de interface IExtenderProvider.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir contém um método e a propriedade que violam essa regra.
+ O exemplo a seguir contém um método e propriedade que violam essa regra.
 
  [!code-csharp[FxCop.Naming.GetMethod#1](../code-quality/codesnippet/CSharp/ca1721-property-names-should-not-match-get-methods_1.cs)]
  [!code-vb[FxCop.Naming.GetMethod#1](../code-quality/codesnippet/VisualBasic/ca1721-property-names-should-not-match-get-methods_1.vb)]

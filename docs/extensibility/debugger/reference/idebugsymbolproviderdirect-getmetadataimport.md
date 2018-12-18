@@ -14,11 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a9abccf11d514a998cd19aef8e9f5e8417b544c5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f62f4905d79965efaee46a79ddf86fbe75c9c9d9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49937161"
 ---
 # <a name="idebugsymbolproviderdirectgetmetadataimport"></a>IDebugSymbolProviderDirect::GetMetaDataImport
 Recupera as informações de importação de metadados.  
@@ -46,13 +47,13 @@ int GetMetaDataImport (
  [in] Identificador exclusivo para o módulo.  
   
  `appID`  
- [in] Identificador para o domínio de aplicativo.  
+ [in] Identificador para o domínio do aplicativo.  
   
  `ppImport`  
- [out] Retorna um objeto que contém os metadados de importa as informações.  
+ [out] Retorna um objeto que contém os metadados de importar as informações.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

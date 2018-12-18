@@ -1,5 +1,5 @@
 ---
-title: ': Get_functionstart | Microsoft Docs'
+title: 'Idiaframedata:: Get_functionstart | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a54fd51b63bb53521b9f1e9c75f75e49d771b0ba
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 6be173020e4aeb3b69197a038b4bc6d66c7eedc8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908295"
 ---
 # <a name="idiaframedatagetfunctionstart"></a>IDiaFrameData::get_functionStart
 Recupera um sinalizador que indica se o bloco contém o ponto de entrada de uma função.  
@@ -39,7 +40,7 @@ HRESULT get_functionStart (
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- É possível que um quadro de pilha não for o início de uma função, como o quadro representa um método embutido ou uma função inserida em uma função.  
+ É possível que um quadro de pilha não ser o início de uma função como o quadro representa um método em linha ou uma função inserida em uma função.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

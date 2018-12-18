@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31128644"
 ---
 # <a name="language-service-support-for-debugging"></a>Suporte ao serviço de linguagem para depuração
 Um serviço de idioma pode fornecer recursos que oferecem suporte a um depurador a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageDebugInfo> interface. Esses recursos incluem validar os pontos de interrupção e fornecer uma lista de expressões para o **Autos** janela.  

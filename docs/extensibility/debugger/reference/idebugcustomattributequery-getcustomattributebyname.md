@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5e452b0e1ab6de862723cfdc36f7b7226a01d676
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4e7872b7d697d0989f0efb9985a8b1b253a27322
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854605"
 ---
 # <a name="idebugcustomattributequerygetcustomattributebyname"></a>IDebugCustomAttributeQuery::GetCustomAttributeByName
-Recupera um atributo personalizado fornecido seu nome.  
+Recupera um atributo personalizado, dado seu nome.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,16 +47,16 @@ int GetCustomAttributeByName(
  [in] Nome do atributo personalizado.  
   
  `ppBlob`  
- [out no] Matriz de bytes que contém os dados de atributo personalizado.  
+ [no, out] Matriz de bytes que contém os dados de atributo personalizado.  
   
  `pdwLen`  
- [out] Tamanho em bytes do `ppBlob` parâmetro.  
+ [out] Comprimento em bytes do `ppBlob` parâmetro.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Se for bem-sucedido, retornará `S_OK`. Se o atributo personalizado não existir, retornará `S_FALSE`. Caso contrário, retornará um código de erro.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CDebugClassFieldSymbol** objeto que expõe o [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) interface.  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugClassFieldSymbol** objeto que expõe a [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) interface.  
   
 ```cpp  
 HRESULT CDebugClassFieldSymbol::GetCustomAttributeByName(  

@@ -1,5 +1,5 @@
 ---
-title: Manipuladores de alteração de valor de propriedade de domínio no Visual Studio
+title: Manipuladores de alterações nos valores de propriedades de domínio
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,22 +9,24 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 53a5640ea48ab19e599d69a8096d1a73fe1d8fde
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 834ee518269c414c8a4ee08b056369813e0a1751
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057542"
 ---
 # <a name="domain-property-value-change-handlers"></a>Manipuladores de alteração de valor de propriedade de domínio
 
-Em uma linguagem específica do domínio [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], quando o valor de uma propriedade de domínio muda, os métodos `OnValueChanging()` e `OnValueChanged()` são chamados no manipulador de propriedades de domínio. Para responder à mudança, você pode substituir esses métodos.
+Em uma linguagem específica de domínio de Visual Studio, quando o valor de uma propriedade de domínio muda, o `OnValueChanging()` e `OnValueChanged()` métodos são chamados no manipulador de propriedade de domínio. Para responder à mudança, você pode substituir esses métodos.
 
-## <a name="override-the-property-handler-methods"></a>Substituir os métodos do manipulador de propriedade
+## <a name="override-the-property-handler-methods"></a>Substituir os métodos de manipulador de propriedades
 
-Cada propriedade de domínio de sua linguagem específica do domínio é manipulada por uma classe que está aninhada em sua classe de domínio pai. Seu nome segue o formato *PropertyName*PropertyHandler. Você pode inspecionar a essa classe de manipulador de propriedade no arquivo **Dsl\Generated Code\DomainClasses.cs**. Na classe, `OnValueChanging()` é chamado imediatamente antes de o valor ser alterado, e `OnValueChanged()` é chamado imediatamente após o valor ser alterado.
+Cada propriedade de domínio de sua linguagem específica do domínio é manipulada por uma classe que está aninhada em sua classe de domínio pai. O nome segue o formato *PropertyName*PropertyHandler. Você pode inspecionar essa classe de manipulador de propriedade no arquivo **Dsl\Generated Code\DomainClasses.cs**. Na classe, `OnValueChanging()` é chamado imediatamente antes de o valor ser alterado, e `OnValueChanged()` é chamado imediatamente após o valor ser alterado.
 
-Por exemplo, suponha que você tem uma classe de domínio chamada `Comment` que tem uma propriedade de domínio de cadeia de caracteres denominada `Text` e uma propriedade de inteiro nomeada `TextLengthCount`. Para fazer com que `TextLengthCount` sempre para conter o comprimento do `Text` cadeia de caracteres, você poderia escrever o código a seguir em um arquivo separado no projeto Dsl:
+Por exemplo, suponha que você tem uma classe de domínio denominada `Comment` que tem uma propriedade de domínio de cadeia de caracteres denominada `Text` e uma propriedade de inteiro chamada `TextLengthCount`. Para fazer com que `TextLengthCount` sempre para conter o comprimento do `Text` cadeia de caracteres, você poderia escrever o código a seguir em um arquivo separado no projeto Dsl:
 
 ```csharp
 // Domain Class "Comment":
@@ -60,7 +62,7 @@ Observe os seguintes pontos sobre os manipuladores de propriedades:
 
 -   Você não pode usar um manipulador de alterações para modificar o novo valor. Se você quiser fazer isso, por exemplo, para restringir o valor de um determinado intervalo, defina uma `ChangeRule`.
 
--   Você não pode adicionar um manipulador de alterações para uma propriedade que representa a função de um relacionamento. Em vez disso, defina uma `AddRule` e uma `DeleteRule` na classe de relação. Essas regras são disparadas quando você cria ou altera links. Para obter mais informações, consulte [regras propagar as alterações no modelo de](../modeling/rules-propagate-changes-within-the-model.md).
+-   Você não pode adicionar um manipulador de alterações para uma propriedade que representa a função de um relacionamento. Em vez disso, defina uma `AddRule` e uma `DeleteRule` na classe de relação. Essas regras são disparadas quando você cria ou altera links. Para obter mais informações, consulte [propagam alterações dentro do modelo de regras](../modeling/rules-propagate-changes-within-the-model.md).
 
 ### <a name="changes-in-and-out-of-the-store"></a>Alterações dentro e fora do repositório
 
@@ -97,19 +99,19 @@ if (newValue > 10)
 
 O exemplo anterior mostra como OnValueChanged() pode ser usado para propagar os valores de uma propriedade de domínio para outra. Cada propriedade tem seu próprio valor armazenado.
 
-Em vez disso, você poderia considerar a definição da propriedade derivada como uma propriedade calculada. Nesse caso, a propriedade não tem armazenamento próprio e está definindo a função que é avaliada sempre que o seu valor é necessário. Para obter mais informações, consulte [calculado e as propriedades de armazenamento personalizado](../modeling/calculated-and-custom-storage-properties.md).
+Em vez disso, você poderia considerar a definição da propriedade derivada como uma propriedade calculada. Nesse caso, a propriedade não tem armazenamento próprio e está definindo a função que é avaliada sempre que o seu valor é necessário. Para obter mais informações, consulte [Calculated e propriedades de armazenamento personalizado](../modeling/calculated-and-custom-storage-properties.md).
 
-Em vez de no exemplo anterior, você pode definir o **tipo** campo de `TextLengthCount` ser **calculado** na definição de DSL. Você deve fornecer sua própria **obter** método para essa propriedade de domínio. O **obter** método retornaria o comprimento atual do `Text` cadeia de caracteres.
+Em vez do exemplo anterior, você poderia definir a **tipo** campo dos `TextLengthCount` seja **Calculated** na definição de DSL. Você forneceria seu próprio **obter** método para essa propriedade de domínio. O **Obtenha** método retornaria o comprimento atual do `Text` cadeia de caracteres.
 
 No entanto, há uma possível desvantagem referente às propriedades calculadas, pois a expressão é avaliada toda vez que o valor é usado, o que pode representar um problema de desempenho. Além disso, não há nenhum OnValueChanging() e OnValueChanged() em uma propriedade calculada.
 
 ### <a name="alternative-technique-change-rules"></a>Técnica alternativa: alterar as regras
 
-Se você definir um ChangeRule, ele é executado no final de uma transação em que o valor da propriedade alterada.  Para obter mais informações, consulte [regras propagar as alterações no modelo de](../modeling/rules-propagate-changes-within-the-model.md).
+Se você definir uma ChangeRule, ele é executado no final de uma transação em que o valor da propriedade é alterada.  Para obter mais informações, consulte [propagam alterações dentro do modelo de regras](../modeling/rules-propagate-changes-within-the-model.md).
 
-Se várias alterações são feitas em uma transação, a ChangeRule executa quando todas estão concluídas. Por outro lado, o OnValue... métodos são executados quando algumas das alterações não foram realizadas. Dependendo do que você deseja fazer, essa pode fazer uma ChangeRule mais adequada.
+Se várias alterações são feitas em uma transação, a ChangeRule executa quando todas estão concluídas. Por outro lado, a OnValue... métodos são executados quando algumas das alterações não foram realizadas. Dependendo do que você deseja fazer, essa pode fazer uma ChangeRule mais adequada.
 
-Você também pode usar um ChangeRule para ajustar o novo valor da propriedade para mantê-lo em um intervalo específico.
+Você também pode usar uma ChangeRule para ajustar o novo valor da propriedade para mantê-lo em um intervalo específico.
 
 > [!WARNING]
 > Se uma regra fizer alterações no conteúdo do repositório, outras regras e manipuladores de propriedades podem ser disparados. Se uma regra alterar a propriedade que disparou essas regras e manipuladores, ela será chamada novamente. Verifique se suas definições de regras não resultam em disparos infinitos.

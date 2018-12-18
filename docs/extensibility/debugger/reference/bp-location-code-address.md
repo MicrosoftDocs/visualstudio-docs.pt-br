@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6d0972b4e326cabd00341db685a0b73c8c104c7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cd694d88348a13aefa1dfd7851c6897523009919
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49930031"
 ---
 # <a name="bplocationcodeaddress"></a>BP_LOCATION_CODE_ADDRESS
 Descreve o local de um ponto de interrupção em um endereço no código.  
@@ -46,10 +47,10 @@ typedef struct _BP_LOCATION_CODE_ADDRESS {
  O nome da função que contém o ponto de interrupção.  
   
  `bstrAddress`  
- O endereço do ponto de interrupção, que analisa um avaliador de expressão para associá-lo para um [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) objeto.  
+ O endereço do ponto de interrupção, que é analisada por um avaliador de expressão para associá-lo para um [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) objeto.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é membro do [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura como parte de uma união.  
+ Essa estrutura é um membro do [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura como parte de uma união.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

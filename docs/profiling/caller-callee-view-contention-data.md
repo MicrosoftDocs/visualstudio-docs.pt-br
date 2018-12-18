@@ -12,14 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9206798c11fa0e5f63245235d633b755317e3cd2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f919bd6b3fdad1a9c7412960e14d8c9f4cf5af67
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34263144"
 ---
-# <a name="caller--callee-view----contention-data"></a>Modo de Exibição Chamador/Receptor - Dados de Contenção
-Modo de exibição Chamador/Receptor exibe informações de contenção para uma função selecionada e suas funções pai e filho. A exibição de Chamador/Computador Chamado contém três grades.  
+# <a name="callercallee-view----contention-data"></a>Exibição do Chamador/Receptor– dados de contenção
+Modo de exibição do Chamador/Receptor exibe informações de contenção para uma função selecionada e suas funções pai e filho. A exibição de Chamador/Computador Chamado contém três grades.  
   
  A **função atual** é exibida na grade intermediária e mostra informações de contenção para a função selecionada. Os valores incluem todas os contenções de bloqueio para a função.  
   
@@ -49,9 +50,9 @@ Modo de exibição Chamador/Receptor exibe informações de contenção para uma
 |**Arquivo de Origem**|O arquivo de origem que contém a definição dessa função.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Como personalizar as colunas de exibição do relatório](../profiling/how-to-customize-report-view-columns.md)   
- [Modo de Exibição de Chamador/Receptor](../profiling/caller-callee-view.md)   
- [Exibição de chamador/computador chamado – dados de amostragem](../profiling/caller-callee-view-sampling-data.md)   
- [Exibição Chamador/Receptor da Chamada – dados de instrumentação da memória do .NET](../profiling/caller-callee-view-net-memory-instrumentation-data.md)   
- [Exibição Chamador/Receptor da Chamada – dados de amostragem da memória do .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
- [Exibição de chamador/computador chamado – dados de instrumentação](../profiling/caller-callee-view-instrumentation-data.md)
+ [Como personalizar as colunas de visualização de relatório](../profiling/how-to-customize-report-view-columns.md)   
+ [Exibição do Chamador/Receptor](../profiling/caller-callee-view.md)   
+ [Exibição do chamador/chamado – dados de amostragem](../profiling/caller-callee-view-sampling-data.md)   
+ [Exibição do Chamador/Receptor – dados de instrumentação da memória do .NET](../profiling/caller-callee-view-net-memory-instrumentation-data.md)   
+ [Exibição do Chamador/Receptor – dados de amostragem da memória do .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
+ [Exibição do Chamador/Receptor – dados de instrumentação](../profiling/caller-callee-view-instrumentation-data.md)

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475412"
 ---
 # <a name="symbol-load-information-dialog-box"></a>Caixa de diálogo Informações de Carga de Símbolo
 O **informações de carga de símbolo** caixa de diálogo é aberta quando você clica no **módulos** janela e escolha **informações de carga de símbolo**.  

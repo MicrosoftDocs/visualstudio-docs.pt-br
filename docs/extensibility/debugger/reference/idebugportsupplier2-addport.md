@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab6348739feba7006e5c18eee6f7dc5f301242d9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 09303ac64d042df0d563f113e3c181d523719554
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820611"
 ---
 # <a name="idebugportsupplier2addport"></a>IDebugPortSupplier2::AddPort
 Adiciona uma porta.  
@@ -42,16 +43,16 @@ int AddPort(
   
 #### <a name="parameters"></a>Parâmetros  
  `pRequest`  
- [in] Um [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) objeto que descreve a porta a ser adicionado.  
+ [in] Uma [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) objeto que descreve a porta a ser adicionado.  
   
  `ppPort`  
  [out] Retorna um [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) objeto que representa a porta.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método cria a porta solicitada, bem como adicioná-lo para a lista interna do fornecedor de porta de portas ativas. O [CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) método pode ser chamado primeiro para evitar possíveis retardos demorados.  
+ Esse método cria, na verdade, a porta solicitada, bem como adicioná-lo à lista interna do fornecedor de porta de portas ativas. O [CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) método pode ser chamado primeiro para evitar possíveis atrasos demorados.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   

@@ -1,5 +1,5 @@
 ---
-title: ': Get_write | Microsoft Docs'
+title: 'Idiasegment:: Get_write | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6023caea9a2227d1773e900214e3abf87b272d2e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f4c312c0b2c6b4374ad407fa449ddbedfa774233
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825981"
 ---
 # <a name="idiasegmentgetwrite"></a>IDiaSegment::get_write
 Recupera um sinalizador que indica se o segmento pode ser modificado.  
@@ -33,7 +34,7 @@ HRESULT get_write (
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Retorna `TRUE` se o segmento pode ser gravado como; caso contrário, retornará `FALSE`.  
+ [out] Retorna `TRUE` se o segmento pode ser gravado; caso contrário, retorna `FALSE`.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.  

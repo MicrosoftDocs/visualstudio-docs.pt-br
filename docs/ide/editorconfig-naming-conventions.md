@@ -1,30 +1,29 @@
 ---
-title: "Convenções de nomenclatura do .NET para arquivos EditorConfig | Microsoft Docs"
-ms.custom: 
+title: Convenções de nomenclatura do .NET para arquivos EditorConfig
 ms.date: 11/20/2017
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - naming conventions [EditorConfig]
 - EditorConfig naming conventions
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: ca33a9dfa2eb4d0eb8250df2d99337ab4d550938
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: df74252361e330ac992f8f3e852d9c33006d18e7
+ms.sourcegitcommit: 6672a1e9d135d7e5cca3cceea07c6fe5a0871475
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47443578"
 ---
 # <a name="net-naming-conventions-for-editorconfig"></a>Convenções de nomenclatura do .NET para EditorConfig
 
-As convenções de nomenclatura referem-se à nomenclatura dos elementos de código, como classes, propriedades e métodos. Por exemplo, é possível especificar que membros públicos devem ser escritos em maiúsculas ou que métodos assíncronos devem terminar com "Async". É possível aplicar essas regras especificando-as em um [arquivo .editorconfig](../ide/create-portable-custom-editor-options.md). Violações de regras de nomenclatura são exibidas na Lista de Erros ou como uma sugestão embaixo do nome, dependendo da gravidade escolhida para a regra. Não é necessário criar o projeto para ver as violações.
+As convenções de nomenclatura referem-se à nomenclatura dos elementos de código, como classes, propriedades e métodos. Por exemplo, é possível especificar que membros públicos devem ser escritos em maiúsculas ou que métodos assíncronos devem terminar com "Async". É possível aplicar essas regras especificando-as em um [arquivo .editorconfig](../ide/create-portable-custom-editor-options.md). Violações de regras de nomenclatura são exibidas na **Lista de Erros** ou como uma sugestão embaixo do nome, dependendo da gravidade escolhida para a regra. Não é necessário criar o projeto para ver as violações.
 
-As convenções de nomenclatura devem ser ordenadas da mais específica para a menos específica no arquivo .editorconfig. A primeira regra encontrada que pode ser aplicada é a única regra que é aplicada.
+As convenções de nomenclatura devem ser ordenadas da mais específica para a menos específica no arquivo *.editorconfig*. A primeira regra encontrada que pode ser aplicada é a única regra que é aplicada.
 
 Para cada convenção de nomenclatura, é necessário especificar os símbolos aos quais ela se aplica, um estilo de nomenclatura e uma gravidade para impor a convenção, usando as propriedades descritas abaixo. A ordem das propriedades não é importante.
 
@@ -47,6 +46,7 @@ Para descrever o tipo de símbolos aos quais aplicar a regra de nomenclatura, es
 A lista a seguir mostra os valores permitidos e é possível especificar vários valores separando-os por vírgula.
 
 - \* (use este valor para especificar todos os símbolos)
+- namespace
 - classe
 - struct
 - interface
@@ -57,6 +57,9 @@ A lista a seguir mostra os valores permitidos e é possível especificar vários
 - evento
 - delegado
 - parâmetro
+- type_parameter
+- local
+- local_function
 
 ### <a name="accessibility-levels-of-symbols"></a>Níveis de acessibilidade de símbolos
 
@@ -72,6 +75,7 @@ A lista a seguir mostra os valores permitidos e é possível especificar vários
 - particulares
 - protegidos
 - protected\_internal or protected_friend
+- local
 
 > [!NOTE]
 > Não especifique um nível de acessibilidade como parte de sua convenção de nomenclatura se a acessibilidade não for aplicável ao tipo de símbolo para o qual você está direcionando. Por exemplo, parâmetros não tem níveis de acessibilidade. Se você especificar um nível de acessibilidade para uma convenção de nomenclatura de parâmetro, a regra de nomenclatura não funcionará corretamente.
@@ -84,11 +88,14 @@ Para descrever os modificadores dos símbolos aos quais você deseja aplicar a r
 
 A lista a seguir mostra os valores permitidos e é possível especificar vários valores separando-os por vírgula.
 
-- abstract ou must_inherit
-- async
-- const
-- readonly
-- estático ou compartilhado
+- `abstract` ou `must_inherit`
+- `async`
+- `const`
+- `readonly`
+- `static` ou `shared`
+
+   > [!NOTE]
+   > Se você tiver uma regra de nomenclatura para os símbolos `static` ou `shared`, ela também se aplicará aos símbolos `const` porque são implicitamente estáticos. Se não quiser que a regra de nomenclatura `static` se aplique aos símbolos `const`, crie uma regra de nomenclatura separada para os símbolos `const`.
 
 `required_modifiers` é uma propriedade opcional. Se você omitir esta propriedade, a regra de nomenclatura será aplicada a todos os modificadores.
 
@@ -147,15 +154,15 @@ Severidade | Efeito
 ------------ | -------------
 nenhuma ou silenciosa | Quando este estilo não estiver sendo seguido, não mostre nada para o usuário; no entanto, o código gerado automaticamente seguirá esse estilo.
 sugestão | Quando esse estilo não estiver sendo seguido, mostre-o para o usuário como uma sugestão, como pontos subjacentes nos dois primeiros caracteres. Isso não terá nenhum efeito em tempo de compilação.
-aviso | Quando esse estilo não estiver sendo seguido, mostre um aviso do compilador na Lista de Erros.
-erro | Quando esse estilo não estiver sendo seguido, mostre um erro do compilador na Lista de Erros.
+aviso | Quando esse estilo não estiver sendo seguido, mostre um aviso do compilador na **Lista de Erros**.
+erro | Quando esse estilo não estiver sendo seguido, mostre um erro do compilador na **Lista de Erros**.
 
 > [!NOTE]
-> Não é necessário criar seu projeto para ver as violações de regras de nomenclatura. Elas são exibidas à medida que o código é editado, na Lista de Erros ou como uma sugestão.
+> Não é necessário criar seu projeto para ver as violações de regras de nomenclatura. Elas são exibidas à medida que o código é editado, na **Lista de Erros** ou como uma sugestão.
 
 ## <a name="example"></a>Exemplo
 
-O arquivo .editorconfig a seguir contém uma convenção de nomenclatura que especifica que propriedades públicas, métodos, campos, eventos e delegados devem sempre ser escritos com maiúsculas. Observe que esta convenção de nomenclatura especifica vários tipos de símbolo aos quais aplicar a regra, usando uma vírgula para separar os valores.
+O arquivo *.editorconfig* a seguir contém uma convenção de nomenclatura que especifica que propriedades públicas, métodos, campos, eventos e delegados devem sempre ser escritos com maiúsculas. Observe que esta convenção de nomenclatura especifica vários tipos de símbolo aos quais aplicar a regra, usando uma vírgula para separar os valores.
 
 ```EditorConfig
 # Public members must be capitalized (public_members_must_be_capitalized)
@@ -171,7 +178,7 @@ dotnet_naming_style.first_word_upper_case_style.capitalization = first_word_uppe
 dotnet_naming_rule.public_members_must_be_capitalized.severity = suggestion
 ```
 
-A captura de tela a seguir mostra o efeito desta convenção de nomenclatura no Editor. Duas variáveis públicas foram nomeadas sem a primeira letra ser maiúscula. Uma é um `const` e a outra é `readonly`. Como a regra de nomenclatura aplica-se apenas aos símbolos *readonly*, apenas a variável `readonly` mostra uma sugestão de regra de nomenclatura.
+A captura de tela a seguir mostra o efeito desta convenção de nomenclatura no editor. Duas variáveis públicas foram nomeadas sem a primeira letra ser maiúscula. Uma é um `const` e a outra é `readonly`. Como a regra de nomenclatura aplica-se apenas aos símbolos `readonly`, apenas a variável `readonly` mostra uma sugestão de regra de nomenclatura.
 
 ![Sugestão de regra de nomenclatura](media/editorconfig-naming-rule-suggestion.png)
 
@@ -181,7 +188,7 @@ Agora vamos alterar a gravidade da violação para `warning`:
 dotnet_naming_rule.public_members_must_be_capitalized.severity = warning
 ```
 
-Se você fechar e reabrir o arquivo de código, em vez de ver a sugestão embaixo da violação de nome, você verá um rabisco verde e um aviso na Lista de Erros:
+Se você fechar e reabrir o arquivo de código, em vez de ver a sugestão embaixo da violação de nome, você verá um rabisco verde e um aviso na **Lista de Erros**:
 
 ![Aviso de regra de nomenclatura](media/editorconfig-naming-rule-warning.png)
 

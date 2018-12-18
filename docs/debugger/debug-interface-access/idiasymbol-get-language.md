@@ -1,5 +1,5 @@
 ---
-title: ': Get_language | Microsoft Docs'
+title: 'Idiasymbol:: Get_language | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b7797e4b6eb2aa35f13350580b110c757d7a5db
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 1b214e16538ba6447ce97ed6569bfbb580cf222e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935868"
 ---
 # <a name="idiasymbolgetlanguage"></a>IDiaSymbol::get_language
 Recupera o idioma da fonte.  
@@ -36,7 +37,7 @@ HRESULT get_language (
  [out] Retorna um valor da [enumeração CV_CFL_LANG](../../debugger/debug-interface-access/cv-cfl-lang.md) enumeração que especifica o idioma da fonte.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  

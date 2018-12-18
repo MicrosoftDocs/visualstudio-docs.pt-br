@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d9250467aeec5a032c8e88054d868aa45ae7dda0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cc2c710e7fbd9a6fef3283f6dc5790707c65d30a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933047"
 ---
 # <a name="idebuggenericfielddefinitionconstructinstantiation"></a>IDebugGenericFieldDefinition::ConstructInstantiation
-Cria uma instância do campo recebe uma matriz de argumentos de tipo.  
+Constrói uma instância do campo considerando uma matriz de argumentos de tipo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,16 +44,16 @@ int ConstructInstantiation(
   
 #### <a name="parameters"></a>Parâmetros  
  `cArgs`  
- [in] Número de argumentos a `ppArgs` matriz.  
+ [in] Número de argumentos no `ppArgs` matriz.  
   
  `ppArgs`  
- [in] Matriz que contém os argumentos de tipo. Os argumentos de tipo devem ser fechados tipos (genéricos não genérico ou totalmente instanciados).  
+ [in] Matriz que contém os argumentos de tipo. Os argumentos de tipo devem ser tipos fechados (genéricos não genéricas ou totalmente instanciados).  
   
  `ppConstructedField`  
  [out] Retorna o [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface que representa o novo campo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  As restrições não são verificadas.  

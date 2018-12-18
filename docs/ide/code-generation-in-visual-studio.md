@@ -1,25 +1,26 @@
 ---
-title: "Recursos de geração de código no Visual Studio | Microsoft Docs"
-ms.custom: 
+title: Recursos de geração de código no Visual Studio | Microsoft Docs
 ms.date: 01/11/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 33a2d18615885fea10f3fd64077b2f9438097a7d
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: c9c370a0ac169abe68da44d3c2e0438f9fbf15a5
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31915901"
 ---
 # <a name="code-generation-features-in-visual-studio"></a>Recursos de geração de código no Visual Studio
 
 O Visual Studio pode ajudá-lo a gerar, corrigir e refatorar o código de várias maneiras.
+
+## <a name="features"></a>Recursos
 
 - Você pode usar [trechos de código](../ide/code-snippets.md) para inserir um modelo, como um bloco [switch](/dotnet/csharp/language-reference/keywords/switch) ou uma declaração [enum](/dotnet/csharp/language-reference/keywords/enum).
 
@@ -32,7 +33,7 @@ O Visual Studio pode ajudá-lo a gerar, corrigir e refatorar o código de vária
 
 ## <a name="see-also"></a>Consulte também
 
-[Trechos de código](../ide/code-snippets.md)  
-[Ações rápidas](../ide/quick-actions.md)  
-[Refatoração](../ide/refactoring-in-visual-studio.md)  
-[Geração de código e modelos de texto T4](../modeling/code-generation-and-t4-text-templates.md)
+- [Trechos de código](../ide/code-snippets.md)
+- [Ações rápidas](../ide/quick-actions.md)
+- [Refatoração](../ide/refactoring-in-visual-studio.md)
+- [Geração de código e modelos de texto T4](../modeling/code-generation-and-t4-text-templates.md)

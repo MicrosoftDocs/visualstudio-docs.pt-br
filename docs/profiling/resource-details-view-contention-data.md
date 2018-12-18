@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ac06fa18ee9459d8dc43bd0c536b68f9d027c97d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 024241870bb4a0a2ef696130cbe5ddc94319493a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837198"
 ---
 # <a name="resource-details-view---contention-data"></a>Exibição de detalhes do recurso – Dados de contenção
 A exibição de Detalhes do Recurso apresenta um gráfico de linha do tempo dos eventos de bloqueio que foram causados por contenções em um recurso selecionado. Um evento de bloqueio ocorre quando um thread é forçado a suspender a execução porque outro thread bloqueou o acesso ao recurso.  
@@ -47,9 +48,9 @@ A exibição de Detalhes do Recurso apresenta um gráfico de linha do tempo dos 
   
 #### <a name="to-view-or-edit-the-source-code-of-a-function-in-the-call-stack"></a>Para exibir ou editar o código-fonte de uma função na pilha de chamadas  
   
--   Na janela **Pilha de Chamadas**, clique no nome da função.  
+- Na janela **Pilha de Chamadas**, clique no nome da função.  
   
- O código-fonte da função deve fazer parte do projeto atual.  
+  O código-fonte da função deve fazer parte do projeto atual.  
   
 #### <a name="to-view-the-call-tree-of-contention-events-for-the-resource"></a>Para exibir a árvore de chamadas de eventos de contenção do recurso  
   

@@ -12,32 +12,33 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b01c8aa176fe92cb4309990693063dcd27cf15a8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7c05f928d7c5c6f35226985147b6a4545e2a2937
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49890043"
 ---
-# <a name="lines-view---contention-data"></a>Exibição de Linhas – Dados de Contenção
+# <a name="lines-view---contention-data"></a>Exibição de Linhas – dados de contenção
 A exibição de Linhas de dados de contenção lista os dados de desempenho das instruções que estavam em execução quando as amostras foram coletadas na criação de perfil. Em um arquivo de origem, uma instrução pode abranger mais de uma linha em um arquivo de origem, e uma única linha pode incluir mais de uma instrução.  
   
  Uma instrução é identificada pelos seguintes dados:  
   
--   O arquivo de origem que contém a instrução da função.  
+- O arquivo de origem que contém a instrução da função.  
   
--   A função que contém a instrução.  
+- A função que contém a instrução.  
   
--   A linha de origem em que a instrução se inicia.  
+- A linha de origem em que a instrução se inicia.  
   
--   O caractere na linha de origem em que a instrução se inicia.  
+- O caractere na linha de origem em que a instrução se inicia.  
   
--   A linha de origem em que a instrução termina.  
+- A linha de origem em que a instrução termina.  
   
--   O caractere na linha de origem em que a instrução termina.  
+- O caractere na linha de origem em que a instrução termina.  
   
- A coluna de Nome de Linha fornece uma concatenação classificável dos dados do identificador.  
+  A coluna de Nome de Linha fornece uma concatenação classificável dos dados do identificador.  
   
- A tabela a seguir descreve as colunas do relatório de Exibição de Linhas.  
+  A tabela a seguir descreve as colunas do relatório de Exibição de Linhas.  
   
 |Column|Descrição|  
 |------------|-----------------|  
@@ -64,7 +65,7 @@ A exibição de Linhas de dados de contenção lista os dados de desempenho das 
 |**Final da Linha de Origem**|O número da linha no arquivo de origem na qual a instrução termina.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Como personalizar as colunas de exibição do relatório](../profiling/how-to-customize-report-view-columns.md)   
+ [Como personalizar as colunas de exibição de relatório](../profiling/how-to-customize-report-view-columns.md)   
  [Exibição de Linhas](../profiling/lines-view.md)   
- [Exibição de Linhas – Amostragem](../profiling/lines-view-dotnet-memory-sampling-data.md)   
+ [Exibição de linhas – amostragem](../profiling/lines-view-dotnet-memory-sampling-data.md)   
  [Exibição de Linhas](../profiling/lines-view-sampling-data.md)

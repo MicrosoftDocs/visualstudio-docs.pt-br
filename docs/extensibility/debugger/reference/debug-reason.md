@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 47cfd171d23420396c6d7ab5416db32cc05511f0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3f3fccdd43b7d26a5bb2dcc5799d77afff6614d1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868359"
 ---
 # <a name="debugreason"></a>DEBUG_REASON
-Especifica o motivo pelo qual o processo foi iniciado para depuração.  
+Especifica por que o processo foi iniciado para depuração.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,16 +50,16 @@ public enum enum_DEBUG_REASON {
   
 #### <a name="parameters"></a>Parâmetros  
  DEBUG_REASON_ERROR  
- Ocorreu um erro não específico (isto é usado como uma condição padrão quando nenhuma das outras razões de ajuste).  
+ Ocorreu um erro não específico (Isso é usado como uma condição padrão quando nenhuma das outras questões de ajuste).  
   
  DEBUG_REASON_USER_LAUNCHED  
- O processo foi iniciado por solicitação do usuário.  
+ O processo foi iniciado mediante solicitação do usuário.  
   
  DEBUG_REASON_USER_ATTACHED  
  O processo de execução já foi anexado pelo usuário.  
   
  DEBUG_REASON_AUTO_ATTACHED  
- O processo foi anexado automaticamente ao quando ele foi iniciado.  
+ O processo foi anexado automaticamente a quando ele foi iniciado.  
   
  DEBUG_REASON_CAUSALITY  
  O processo foi iniciado devido a um *Just-In-Time* eventos de depuração (JIT).  

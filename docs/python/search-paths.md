@@ -1,26 +1,22 @@
 ---
-title: Como os caminhos de pesquisa de Python são aplicados | Microsoft Docs
+title: Como caminhos de pesquisa de Python são aplicados
 description: Uma visão geral de como o Visual Studio usa caminhos de pesquisa do Python nos projetos e ambientes.
-ms.custom: ''
-ms.date: 03/05/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-ms.devlang: python
-ms.tgt_pltfrm: ''
+ms.date: 11/12/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9ebb5ac043253db76cc9613ac67e5d980d911bd3
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: ab55c7cf1daa02416e6192a02a01ee3f9a35f6f0
+ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607895"
 ---
 # <a name="how-visual-studio-uses-python-search-paths"></a>Como o Visual Studio usa caminhos de pesquisa de Python
 
@@ -30,19 +26,25 @@ Com o uso típico do Python, a variável de ambiente `PYTHONPATH` (ou `IRONPYTHO
 1. A pasta que contém o código do Python que você está executando.
 1. O "caminho de pesquisa do módulo", conforme definido pela variável de ambiente aplicável. (Consulte [O caminho de pesquisa do módulo](https://docs.python.org/2/tutorial/modules.html#the-module-search-path) e [Variáveis de ambiente](https://docs.python.org/2/using/cmdline.html#envvar-PYTHONPATH) na documentação básica do Python.)
 
-No entanto, o Visual Studio ignora a variável de ambiente do caminho de pesquisa, mesmo quando ela tiver sido configurada para todo o sistema. Ela é precisamente ignorada, na verdade, *porque* é definida para todo o sistema e, portanto, gera algumas perguntas que não podem ser respondidas automaticamente: os módulos referenciados são destinados ao Python 2.7 ou ao Python 3.6? Eles substituirão os módulos da biblioteca padrão? O desenvolvedor está ciente desse comportamento ou essa é uma tentativa de sequestro mal-intencionada?
+No entanto, o Visual Studio ignora a variável de ambiente do caminho de pesquisa, mesmo quando ela tiver sido configurada para todo o sistema. Na verdade, ela é precisamente ignorada *porque* é definida para todo o sistema e, portanto, gera algumas perguntas que não podem ser respondidas automaticamente: os módulos referenciados são destinados ao Python 2.7 ou ao Python 3.6 e posteriores? Eles substituirão os módulos da biblioteca padrão? O desenvolvedor está ciente desse comportamento ou essa é uma tentativa de sequestro mal-intencionada?
 
 Dessa forma, o Visual Studio fornece um meio para especificar caminhos de pesquisa diretamente nos projetos e ambientes. O código que você executa ou depura no Visual Studio recebe os caminhos de pesquisa no valor de `PYTHONPATH` (e outras variáveis equivalentes). Ao adicionar caminhos de pesquisa, o Visual Studio inspeciona as bibliotecas nessas localizações e compila bancos de dados do IntelliSense para elas quando necessário (Visual Studio 2017 versão 15.5 e anterior; a criação do banco de dados pode demorar algum tempo, dependendo do número de bibliotecas).
 
-Para adicionar um caminho de pesquisa, clique com o botão direito do mouse no item **Caminhos de Pesquisa** no Gerenciador de Soluções, selecione **Adicionar Pasta ao Caminho de Pesquisa...** e selecione a pasta a ser incluída. Esse caminho é usado para qualquer ambiente associado ao projeto. (Você poderá ver erros se o ambiente tiver base no Python 3, e você tentar adicionar um caminho de pesquisa aos módulos do Python 2.7.)
+Para adicionar um caminho de pesquisa, acesse **Gerenciador de Soluções**, expanda o nó do projeto, clique com o botão direito do mouse em **Caminhos de Pesquisa**, selecione **Adicionar Pasta ao Caminho de Pesquisa**:
 
-Os arquivos com uma extensão `.zip` ou `.egg` também podem ser adicionados como caminhos de pesquisa selecionando **Adicionar Arquivo Morto Zip para Caminho de Pesquisa...**. Assim como ocorre com pastas, o conteúdo desses arquivos é examinado e disponibilizado para o IntelliSense.
+![Comando Adicionar Pasta ao Caminho de Pesquisa em Caminhos de Pesquisa no Gerenciador de Soluções](media/search-paths-command.png)
 
-Se estiver usando regularmente os mesmos caminhos de pesquisa e o conteúdo não for alterado com frequência, poderá ser mais eficiente instalá-lo na pasta de pacotes do site. Em seguida, o caminho de pesquisa é analisado e armazenado no banco de dados do IntelliSense, sempre é associado ao ambiente pretendido e não exige a adição de um caminho de pesquisa a cada projeto.
+Esse comando exibe um navegador no qual você pode selecionar a pasta a ser incluída.
+
+Se a variável de ambiente `PYTHONPATH` já incluir as pastas que você deseja, use **Adicionar PYTHONPATH aos Caminhos de Pesquisa** como um atalho conveniente.
+
+Depois que as pastas forem adicionadas aos caminhos de pesquisa, o Visual Studio usará esses caminhos para qualquer ambiente associado ao projeto. (Você poderá ver erros se o ambiente tiver base no Python 3, e você tentar adicionar um caminho de pesquisa aos módulos do Python 2.7.)
+
+Os arquivos com uma extensão *.zip* ou *.egg* também podem ser adicionados como caminhos de pesquisa selecionando **Adicionar Arquivo Morto Zip ao Caminho de Pesquisa**. Assim como ocorre com pastas, o conteúdo desses arquivos é examinado e disponibilizado para o IntelliSense.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Gerenciando ambientes do Python no Visual Studio](managing-python-environments-in-visual-studio.md)
-- [Selecionar um interpretador para um projeto](selecting-a-python-environment-for-a-project.md)
-- [Usando requirements.txt para dependências](managing-required-packages-with-requirements-txt.md)
+- [Gerenciar ambientes do Python no Visual Studio](managing-python-environments-in-visual-studio.md)
+- [Selecionar um intérprete para um projeto](selecting-a-python-environment-for-a-project.md)
+- [Usar requirements.txt para dependências](managing-required-packages-with-requirements-txt.md)
 - [Referência à janela Ambientes do Python](python-environments-window-tab-reference.md)

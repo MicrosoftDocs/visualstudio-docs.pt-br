@@ -1,6 +1,8 @@
 ---
-title: Executar testes de unidade com o Gerenciador de Testes | Microsoft Docs
+title: Executar, criar e depurar testes de unidade com o Gerenciador de Testes
+description: Saiba como executar testes com o Gerenciador de Testes no Visual Studio. Este tópico aborda como habilitar execuções de teste automáticas após o build, exibir resultados do teste, agrupar e filtrar a lista de testes, criar playlists, depurar testes e usar atalhos de teste.
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 f1_keywords:
@@ -10,11 +12,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: eda6a63b8d6e10b3eec3139ffa29143b0b5733ba
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dc918adb6a66f64cdcda46ea535cd0ab017c0676
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939494"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Executar testes de unidade com o Gerenciador de Testes
 
@@ -22,19 +25,19 @@ Use o **Gerenciador de Testes** para executar testes de unidade do Visual Studio
 
 O Visual Studio instala as estruturas de teste de unidade da Microsoft para código gerenciado e nativo. No entanto, o **Gerenciador de Testes** também pode executar qualquer estrutura de teste de unidade que implementou um adaptador de Gerenciador de Testes. Para obter mais informações sobre como instalar estruturas de teste de unidade de terceiros, consulte [Instalar estruturas de teste de unidade de terceiros](../test/install-third-party-unit-test-frameworks.md)
 
-O **Gerenciador de Testes** pode executar testes de vários projetos de teste em uma solução e de classes de teste que fazem parte dos projetos de código de produção. Projetos de teste podem usar estruturas de teste de unidade diferente. Quando o código em teste é escrito para o .NET Framework, o projeto de teste pode ser escrito em qualquer linguagem que tem como alvo o .NET Framework, independentemente do idioma de código de destino. Projetos de código C/C++ nativos devem ser testados usando uma estrutura de teste de unidade C++. Para obter mais informações, consulte [Escrevendo testes de unidade para C/C++](writing-unit-tests-for-c-cpp.md).
+O **Gerenciador de Testes** pode executar testes de vários projetos de teste em uma solução e de classes de teste que fazem parte dos projetos de código de produção. Projetos de teste podem usar estruturas de teste de unidade diferente. Quando o código em teste é escrito para o .NET Framework, o projeto de teste pode ser escrito em qualquer linguagem que tem como alvo o .NET Framework, independentemente do idioma de código de destino. Projetos de código C/C++ nativos devem ser testados usando uma estrutura de teste de unidade C++. Para obter mais informações, confira [Escrever testes de unidade para C/C++](writing-unit-tests-for-c-cpp.md).
 
 ## <a name="run-tests-in-test-explorer"></a>Executar testes de unidade no Gerenciador de Testes
 
 Quando você compila o projeto de teste, os testes são exibidos no Gerenciador de Testes. Se o Gerenciador de Testes não estiver visível, escolha **Teste** no menu do Visual Studio, escolha **Windows** e, em seguida, escolha **Gerenciador de Testes**.
 
-![Gerenciador de testes de unidade](../test/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")
+![Gerenciador de Testes de Unidade](../test/media/ute_failedpassednotrunsummary.png)
 
 Conforme você executa, grava e executa novamente os testes, o Gerenciador de Testes exibe os resultados nos grupos padrão de **Testes com Falha**, **Testes Aprovados**, **Testes Ignorados** e **Testes Não Executados**. Você pode alterar a forma como o Gerenciador de Testes agrupa seus testes.
 
-Você pode executar a maior parte do trabalho de encontrar, organizar e executar testes usando a barra de ferramentas do Gerenciador de Testes.
+Você pode executar a maior parte do trabalho de encontrar, organizar e executar testes usando a barra de ferramentas do **Gerenciador de Testes**.
 
-![Executar testes na barra de ferramentas do Gerenciador de Testes](../test/media/ute_toolbar.png "UTE_ToolBar")
+![Executar testes na barra de ferramentas do Gerenciador de Testes](../test/media/ute_toolbar.png)
 
 ### <a name="run-tests"></a>Executar testes
 
@@ -42,19 +45,19 @@ Você pode executar todos os testes na solução, todos os testes em um grupo ou
 
 - Para executar todos os testes em uma solução, escolha **Executar Todos**.
 
-- Para executar todos os testes em um grupo padrão, escolha **Executar...** e, em seguida, escolha o grupo no menu.
+- Para executar todos os testes em um grupo padrão, escolha **Executar** e, em seguida, escolha o grupo no menu.
 
 - Selecione os testes individuais que deseja executar, abra o menu de contexto para um teste selecionado e escolha **Executar Testes Selecionados**.
 
-- Se os testes individuais não tiverem dependências que os impeçam de serem executados em qualquer ordem, ative a execução de teste em paralelo com o botão de alternância ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") na barra de ferramentas. Isso pode reduzir consideravelmente o tempo necessário para executar todos os testes.
+- Se os testes individuais não tiverem dependências que os impeçam de serem executados em qualquer ordem, ative a execução de teste em paralelo com o ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png) botão de alternância na barra de ferramentas. Isso pode reduzir consideravelmente o tempo necessário para executar todos os testes.
 
-A barra de aprovação/reprovação na parte superior da janela do Gerenciador de Testes é animada conforme os testes são executados. Na conclusão da execução de teste, a barra de aprovação/reprovação ficará verde se todos os testes forem aprovados ou vermelha se algum deles for reprovado.
+A **barra de aprovação/reprovação** na parte superior da janela do **Gerenciador de Testes** é animada conforme os testes são executados. Na conclusão da execução de teste, a **barra de aprovação/reprovação** ficará verde se todos os testes forem aprovados ou vermelha se algum deles for reprovado.
 
 ### <a name="run-tests-after-every-build"></a>Executar testes depois de cada compilação
 
-|||
+|Botão|Descrição|
 |-|-|
-|![Executar após o build](../test/media/ute_runafterbuild_btn.png)|Para executar os testes de unidade após cada build local, escolha **Teste** no menu padrão e, em seguida, escolha **Executar testes após build** na barra de ferramentas do Gerenciador de Testes.|
+|![Executar após o build](../test/media/ute_runafterbuild_btn.png)|Para executar os testes de unidade após cada build local, escolha **Teste** no menu padrão e, em seguida, **Executar Testes após Build** na barra de ferramentas do **Gerenciador de Testes**.|
 
 ## <a name="view-test-results"></a>Exibir resultados do teste
 
@@ -64,7 +67,7 @@ Conforme você executa, grava e executa novamente os testes, o Gerenciador de Te
 
 Para exibir os detalhes de um teste individual, selecione o teste.
 
-![Detalhes da execução do teste](../test/media/ute_testdetails.png "UTE_TestDetails")
+![Detalhes da execução do teste](../test/media/ute_testdetails.png)
 
 O painel de detalhes de teste exibe as seguintes informações:
 
@@ -90,14 +93,14 @@ O Gerenciador de Testes permite agrupar os testes em categorias predefinidas. A 
 
 ### <a name="group-tests-in-the-test-list"></a>Agrupar testes na lista de testes
 
- Para alterar a maneira que testes são organizados, escolha a seta para baixo ao lado do botão **Agrupar por** ![botão de agrupar o Gerenciador de Testes](../test/media/ute_groupby_btn.png "UTE_GroupBy_btn") e selecione novos critérios de agrupamento.
+ Para alterar a maneira como os testes são organizados, escolha a seta para baixo ao lado do botão **Agrupar por** ![botão de grupo do Gerenciador de Testes](../test/media/ute_groupby_btn.png) e selecione novos critérios de agrupamento.
 
- ![Agrupar testes por categoria no Gerenciador de testes](../test/media/ute_groupbycategory.png "UTE_GroupByCategory")
+ ![Agrupar testes por categoria no Gerenciador de Testes](../test/media/ute_groupbycategory.png)
 
 ### <a name="test-explorer-groups"></a>Grupos de Gerenciador de Testes
 
 |Grupo|Descrição|
-|-----------|-----------------|
+|-|-----------------|
 |**Duração**|Agrupa teste pelo tempo de execução: **rápido**, **médio** e **lento**.|
 |**Resultado**|Agrupa testes por resultados da execução: **testes com falha**, **testes ignorados**, **testes aprovados**.|
 |**Características**|Agrupa teste por pares de categoria/valor que você define. A sintaxe para especificar valores e categorias de característica é definida pela estrutura de teste de unidade.|
@@ -112,7 +115,7 @@ O Gerenciador de Testes permite agrupar os testes em categorias predefinidas. A 
  Na estrutura de teste de unidade da Microsoft para aplicativos gerenciados, você define um par nome/valor de característica no atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute>. A estrutura de teste também contém essas características predefinidas:
 
 |Característica|Descrição|
-|-----------|-----------------|
+|-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>|A categoria do proprietário é definida pela estrutura de teste de unidade e exige que você forneça um valor de cadeia de caracteres do proprietário.|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.PriorityAttribute>|A categoria Prioridade é definida pela estrutura de teste de unidade e exige que você forneça um valor inteiro da prioridade.|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute>|O atributo TestCategory permite que você forneça uma categoria sem um valor. Uma categoria definida pelo atributo TestCategory também pode ser a categoria de um atributo TestProperty.|
@@ -124,7 +127,7 @@ O Gerenciador de Testes permite agrupar os testes em categorias predefinidas. A 
 
 Você pode usar o Gerenciador de Testes filtros para limitar os métodos de teste em seus projetos que você exibe e executa.
 
-Quando você digitar em uma cadeia de caracteres na caixa de pesquisa do Gerenciador de Testes e a tecla ENTER, a lista de testes é filtrada para exibir somente os testes cujos nomes totalmente qualificados contêm a cadeia de caracteres.
+Quando você digita uma cadeia de caracteres na caixa de pesquisa do **Gerenciador de Testes** e escolhe **Enter**, a lista de testes é filtrada para exibir somente os testes cujos nomes totalmente qualificados contêm a cadeia de caracteres.
 
 Para filtrar por um critério diferente:
 
@@ -134,13 +137,13 @@ Para filtrar por um critério diferente:
 
 3. Insira o valor do filtro entre aspas.
 
-![Filtrar testes no Gerenciador de testes](../test/media/ute_filtertestlist.png "UTE_FilterTestList")
+![Filtrar testes no Gerenciador de Testes](../test/media/ute_filtertestlist.png)
 
 > [!NOTE]
 > As pesquisas não diferenciam maiúsculas de minúsculas e correspondem a cadeia especificada para qualquer parte do valor de critérios.
 
 |Qualificador|Descrição|
-|---------------|-----------------|
+|-|-----------------|
 |**Característica**|Procura categoria de característica e valor para correspondência. A sintaxe para especificar valores e categorias de característica é definida pela estrutura de teste de unidade.|
 |**Projeto**|Procura os nomes de projeto de teste para correspondências.|
 |**Mensagem de erro**|Procura nas mensagens de erro definidas pelo usuário retornadas por falhas para encontrar correspondências.|
@@ -151,7 +154,7 @@ Para filtrar por um critério diferente:
 
 Para excluir um subconjunto dos resultados de um filtro, use a seguinte sintaxe:
 
-```
+```cpp
 FilterName:"Criteria" -FilterName:"SubsetCriteria"
 ```
 
@@ -159,17 +162,17 @@ Por exemplo, `FullName:"MyClass" - FullName:"PerfTest"` retorna todos os testes 
 
 ## <a name="create-custom-playlists"></a>Criar playlists personalizadas
 
- É possível criar e salvar uma lista de teste que você deseje executar ou exibir como um grupo. Ao selecionar uma lista de reprodução, os testes na lista são exibidos no Gerenciador de Testes. É possível adicionar um teste a mais de uma lista de reprodução e todos os testes no projeto estarão disponíveis quando você escolher a lista de reprodução **Todos os Testes**.
+ É possível criar e salvar uma lista de teste que você deseje executar ou exibir como um grupo. Quando você seleciona uma playlist, os testes na lista são exibidos no Gerenciador de Testes. É possível adicionar um teste a mais de uma lista de reprodução e todos os testes no projeto estarão disponíveis quando você escolher a lista de reprodução **Todos os Testes**.
 
- ![Escolha uma lista de reprodução](../test/media/ute_playlist.png "UTE_Playlist")
+ ![Escolher uma playlist](../test/media/ute_playlist.png)
 
- **Para criar uma lista de reprodução**, escolha um ou mais testes no Gerenciador de Testes. No menu de contexto, escolha **Adicionar à lista de reprodução**, **NewPlaylist**. Salve o arquivo com o nome e local que você especificar na caixa de diálogo **Criar nova lista de reprodução**.
+ **Para criar uma lista de reprodução**, escolha um ou mais testes no Gerenciador de Testes. No menu de contexto, escolha **Adicionar à Playlist** > **NewPlaylist**. Salve o arquivo com o nome e local que você especificar na caixa de diálogo **Criar nova lista de reprodução**.
 
  **Para adicionar testes a uma lista de reprodução**, escolha um ou mais testes no Gerenciador de Testes. No menu de contexto, escolha **Adicionar à lista de reprodução**e, em seguida, escolha a lista de reprodução que você deseja adicionar os testes.
 
- **Para abrir uma lista de reprodução**, escolha o teste, a lista de reprodução no menu do Visual Studio e escolha na lista de listas de reprodução usadas recentemente ou escolha Abrir a lista de reprodução para especificar o nome e o local da lista de reprodução.
+ **Para abrir uma playlist**, escolha **Teste** > **Playlist** no menu do Visual Studio e escolha uma opção na lista de playlists usadas recentemente ou escolha **Abrir Playlist** para especificar o nome e o local da playlist.
 
- Se os testes individuais não tiverem dependências que os impeçam de serem executados em qualquer ordem, ative a execução de teste em paralelo com o botão de alternância ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") na barra de ferramentas. Isso pode reduzir consideravelmente o tempo necessário para executar todos os testes.
+ Se os testes individuais não tiverem dependências que os impeçam de serem executados em qualquer ordem, ative a execução de teste em paralelo com o ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png) botão de alternância na barra de ferramentas. Isso pode reduzir consideravelmente o tempo necessário para executar todos os testes.
 
 ## <a name="debug-and-analyze-unit-tests"></a>Depurar e analisar testes de unidade
 
@@ -184,11 +187,11 @@ Você pode usar o Gerenciador de Testes para iniciar uma sessão de depuração 
 
 2. No Gerenciador de Testes, selecione os métodos de teste e escolha **Depurar Testes Selecionados** no menu de contexto.
 
- Para obter mais informações sobre o depurador, consulte [Depuração no Visual Studio](../debugger/debugging-in-visual-studio.md).
+   Para obter mais informações sobre o depurador, confira [Depuração no Visual Studio](../debugger/debugging-in-visual-studio.md).
 
 ### <a name="diagnose-test-method-performance-issues"></a>Diagnosticar problemas de desempenho do método de teste
 
- Para diagnosticar por que um método de teste está levando muito tempo, selecione o método no Gerenciador de Testes e, em seguida, escolha o perfil no menu de contexto. Consulte [Gerenciador de Desempenho](../profiling/performance-explorer.md).
+ Para diagnosticar o motivo pelo qual um método de teste leva muito tempo para ser executado, selecione o método no Gerenciador de Testes e, em seguida, escolha **Perfil** no menu de contexto. Consulte [Gerenciador de Desempenho](../profiling/performance-explorer.md).
 
 ### <a name="analyze-unit-test-code-coverage"></a>Analisar a cobertura de código de teste de unidade
 
@@ -204,18 +207,18 @@ Para executar a cobertura de código para métodos de teste em uma solução:
 
     - **Todos os testes** executa todos os métodos de teste na solução.
 
-A janela Resultados de Cobertura de Código exibe o percentual dos blocos que foram exercidos por linha, função, classe, namespace e módulo de código do produto.
+A janela **Resultados da Cobertura de Código** exibe o percentual dos blocos de código de produto que foram exercidos por linha, função, classe, namespace e módulo.
 
-Para obter mais informações, consulte [Usando cobertura de código para determinar quanto código está sendo testado](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
+Para obter mais informações, confira [Usar a cobertura de código para determinar quanto do código está sendo testado](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
 
 ## <a name="test-shortcuts"></a>Atalhos de teste
 
 Testes podem ser executados do **Gerenciador de Testes** clicando com o botão direito do mouse no editor de código em um teste e selecionando **Executar teste** ou usando os [Atalhos padrão do Gerenciador de Testes](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL) no Visual Studio. Alguns dos atalhos são baseados em contexto. Isso significa que eles executam ou depuram testes com base em onde o cursor está no editor de código. Se o cursor estiver dentro de um método de teste, esse método de teste será executado. Se o cursor estiver no nível de classe, todos os testes na classe serão executados. O mesmo vale para o nível do namespace.
 
 |Comandos frequentes| Atalhos de teclado|
-|--------------|------------------------|
-|TestExplorer.DebugAllTestsInContext|Ctrl+R, Ctrl+T|
-|TestExplorer.RunAllTestsInContext|Ctrl+R, T|
+|-|------------------------|
+|TestExplorer.DebugAllTestsInContext|**Ctrl**+**R**, **Ctrl**+**T**|
+|TestExplorer.RunAllTestsInContext|**Ctrl**+**R**, **T**|
 
 > [!NOTE]
 > Não é possível executar um teste em uma classe abstrata, porque os testes são apenas definidos nas classes abstratas e não instanciados. Para executar testes em classes abstratas, crie uma classe que deriva da classe abstrata.

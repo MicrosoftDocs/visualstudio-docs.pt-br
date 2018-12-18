@@ -16,21 +16,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d406ecf058bf1c570b57ed8f50815cc3d9378cbe
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 44329fc4c2ec5e9f2f8352d69ea487f23cbe3c5a
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077679"
 ---
 # <a name="ltcompatibleframeworksgt-element-clickonce-deployment"></a>&lt;compatibleFrameworks&gt; elemento (implantação do ClickOnce)
 Identifica as versões do .NET Framework em que este aplicativo pode instalar e executar.  
   
 > [!NOTE]
->  [MageUI.exe](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client) não oferece suporte a `compatibleFrameworks` elemento ao salvar um manifesto de aplicativo que já foi assinado com um certificado usando [MageUI.exe](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client). Em vez disso, você deve usar [Mage.exe](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool).  
+>  [*MageUI.exe* ](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client) não oferece suporte a `compatibleFrameworks` elemento ao salvar um manifesto de aplicativo que já foi assinado com um certificado usando [ *MageUI.exe*](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client). Em vez disso, você deve usar [ *Mage.exe*](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool).  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <compatibleFrameworks  
       SupportUrl>   
    <framework  
@@ -42,29 +43,29 @@ Identifica as versões do .NET Framework em que este aplicativo pode instalar e 
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementos e atributos  
- O `compatibleFrameworks` elemento é necessário para manifestos de implantação direcionados a [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tempo de execução fornecido pelo [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] ou posterior. O `compatibleFrameworks` elemento contém um ou mais `framework` elementos que especificam as versões do .NET Framework em que esse aplicativo pode ser executado. O [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tempo de execução será executado o aplicativo na primeira disponível `framework` nesta lista.  
+ O `compatibleFrameworks` elemento é necessário para manifestos de implantação que se destinam a [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tempo de execução fornecido pelo [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] ou posterior. O `compatibleFrameworks` elemento contém um ou mais `framework` elementos que especificam as versões do .NET Framework em que esse aplicativo pode ser executado. O [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tempo de execução executará o aplicativo na primeira disponível `framework` nessa lista.  
   
- A tabela a seguir lista os atributos que o `compatibleFrameworks` oferece suporte ao elemento.  
+ A tabela a seguir lista o atributo que o `compatibleFrameworks` dá suporte ao elemento.  
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |`S` `upportUrl`|Opcional. Especifica uma URL em que a versão do .NET Framework compatível preferida pode ser baixada.|  
   
 ## <a name="framework"></a>estrutura  
- Necessário. A tabela a seguir lista os atributos que o `framework` oferece suporte ao elemento.  
+ Necessário. A tabela a seguir lista os atributos que o `framework` dá suporte ao elemento.  
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |`targetVersion`|Necessário. Especifica o número de versão do .NET Framework de destino.|  
-|`profile`|Necessário. Especifica o perfil do .NET Framework de destino.|  
-|`supportedRuntime`|Necessário. Especifica o número de versão do tempo de execução associada ao destino do .NET Framework.|  
+|`profile`|Necessário. Especifica o perfil de destino do .NET Framework.|  
+|`supportedRuntime`|Necessário. Especifica o número de versão do tempo de execução associado com o .NET Framework de destino.|  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="example"></a>Exemplo  
- O seguinte exemplo de código mostra uma `compatibleFrameworks` elemento em um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] o manifesto de implantação. Esta implantação pode ser executado no [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]. Ele também pode ser executado no [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] porque ele é um superconjunto do [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)].  
+ O seguinte exemplo de código mostra uma `compatibleFrameworks` elemento em um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifesto de implantação. Essa implantação pode ser executado no [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]. Ele também pode ser executado nos [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] porque ele é um superconjunto do [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)].  
   
-```  
+```xml  
 <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">  
   <framework   
       targetVersion="4.0"   

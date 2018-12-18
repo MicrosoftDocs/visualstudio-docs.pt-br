@@ -11,23 +11,25 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 003318b8c8e26112ee83dceb9cdc3c453dc6956f
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 7c1e7f7f642245fe4170c670fafd7366361e6de0
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47858518"
 ---
 # <a name="export-diagrams-as-images"></a>Exportar diagramas como imagens
-No Visual Studio, você pode salvar diagramas em formatos de somente leitura de modelagem para que você pode compartilhá-los com os participantes, usuários ou membros da equipe de projeto que não usam a mesma versão do Visual Studio.
+No Visual Studio, você pode salvar diagramas de modelagem no formatos de somente leitura para que você pode compartilhá-los com os participantes, usuários ou membros da equipe de projeto que não usam a mesma versão do Visual Studio.
 
- Para ver quais versões do Visual Studio oferecem suporte a esse recurso, consulte [suporte de versão para a arquitetura e ferramentas de modelagem](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+ Para ver quais edições do Visual Studio dão suporte a esse recurso, consulte [suporte de edição para a arquitetura e ferramentas de modelagem](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 ### <a name="to-copy-a-diagram-or-part-of-a-diagram-to-another-application"></a>Para copiar um diagrama ou a parte de um diagrama para outro aplicativo
 
 1.  No diagrama, selecione algumas ou todas as formas.
 
-2.  Clique com botão direito sua seleção e, em seguida, clique em **cópia**.
+2.  Sua seleção com o botão direito e, em seguida, clique em **cópia**.
 
 3.  Cole a seleção no aplicativo que você deseja.
 

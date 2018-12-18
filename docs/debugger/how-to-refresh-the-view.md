@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31480079"
 ---
 # <a name="how-to-refresh-the-view"></a>Como atualizar a exibição
 Spy + + tira um "instantâneo" das tabelas do sistema e atualiza uma exibição com base nessas informações. É importante que você atualiza periodicamente as exibições do sistema. Se você tiver uma exibição Spy + + abrir e não tiver atualizado o modo de exibição, você não verá esses processos, threads e windows são criados posteriormente. Além disso, você poderá ver os itens que não existem mais. O **atualização** comando está disponível para todos os modos de exibição, exceto o modo de exibição de mensagens.  

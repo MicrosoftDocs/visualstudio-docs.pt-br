@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 580e9c801dec9d66a8cd5a403c338bac1385f3c8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f73af4ee866ad41b93162090660ea34701f36710
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896127"
 ---
 # <a name="idebugbinder3getmemoryobject"></a>IDebugBinder3::GetMemoryObject
-Esse método retorna um objeto de memória que representa a memória associado a este objeto.  
+Esse método recupera um objeto de memória que representa a memória que esse objeto está associado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,10 +51,10 @@ int GetMemoryObject(
  [in] Representa um valor para um valor constante ou um endereço de memória.  
   
  `ppObject`  
- [out] Um [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) que representa a memória associado a este objeto.  
+ [out] Uma [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) que representa a memória que esse objeto está associado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   

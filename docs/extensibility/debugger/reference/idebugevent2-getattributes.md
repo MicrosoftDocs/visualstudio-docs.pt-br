@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d6305d7000456eb81cf01c9e85e6c2a421ed800
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 515775a064d1e260d9eb028c6e1b6020b7d642cd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935296"
 ---
 # <a name="idebugevent2getattributes"></a>IDebugEvent2::GetAttributes
 Obtém os atributos para este evento de depuração.  
@@ -43,10 +44,10 @@ int GetAttribute(
  [out] Uma combinação de sinalizadores do [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md) enumeração.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface é comum a todos os eventos. Esse método descreve o tipo de evento. Por exemplo, é o evento síncrono ou assíncrono e é um evento de parada.  
+ O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface é comum a todos os eventos. Esse método descreve o tipo de evento; Por exemplo, é o evento síncrono ou assíncrono e é um evento de interrupção ele.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   

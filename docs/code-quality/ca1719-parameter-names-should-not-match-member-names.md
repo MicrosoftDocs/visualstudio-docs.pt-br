@@ -1,6 +1,7 @@
 ---
 title: 'CA1719: os nomes de parâmetro não devem corresponder aos nomes de membro'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f91f32057b4adbe7747ea2b596c3654b93041692
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 64a10bd39ef34d207d910c3bc428ba862019369e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924012"
 ---
 # <a name="ca1719-parameter-names-should-not-match-member-names"></a>CA1719: os nomes de parâmetro não devem corresponder aos nomes de membro
+
 |||
 |-|-|
 |NomeDoTipo|ParameterNamesShouldNotMatchMemberNames|
@@ -30,16 +33,16 @@ ms.lasthandoff: 04/19/2018
 |Alteração Significativa|Quebra|
 
 ## <a name="cause"></a>Causa
- O nome de um membro visível externamente corresponde, em uma comparação de maiusculas e minúsculas, o nome de um dos seus parâmetros.
+ O nome de um membro visível externamente corresponde, em uma comparação diferencia maiusculas de minúsculas, o nome de um dos seus parâmetros.
 
-## <a name="rule-description"></a>Descrição da Regra
+## <a name="rule-description"></a>Descrição da regra
  Um nome de parâmetro deve informar o significado de um parâmetro e um nome de membro deve informar o significado de um membro. Seria um design raro se eles fossem iguais. A nomenclatura de um parâmetro com o mesmo nome do membro não é intuitiva e dificulta o uso da biblioteca.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
+## <a name="how-to-fix-violations"></a>Como corrigir violações
  Selecione um nome de parâmetro que não coincide com o nome do membro.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- Para novos desenvolvimentos, nenhum conhecidos situações ocorrer onde você deve suprimir um aviso dessa regra. Para bibliotecas de envio, você talvez precise suprimir um aviso dessa regra.
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+ Para novos desenvolvimentos, nenhum conhecidos ocorrem de cenários em que você deve suprimir um aviso nessa regra. Para o envio de bibliotecas, talvez você precise suprimir um aviso nessa regra.
 
 ## <a name="related-rules"></a>Regras relacionadas
  [CA1709: os identificadores devem ter maiúsculas e minúsculas corretas](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)

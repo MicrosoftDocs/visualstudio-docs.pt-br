@@ -20,18 +20,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7931ae34838ac7c995cbea0543f921fedd20e2ed
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9d9def71b21fc68b7347ce9fb0596fd73bd44393
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749314"
 ---
 # <a name="cvwritealert-function"></a>Função CvWriteAlert
 Grava um alerta para o arquivo de rastreamento da Visualização Simultânea.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```C  
 HRESULT CvWriteAlertW(  
     _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,  
     _In_ PCWSTR pMessage,  
@@ -69,7 +70,7 @@ HRESULT CvWriteAlertVA(
  S_OK quando a mensagem é gravada com êxito. Código de erro em caso de erros. Use as macros SUCCEEDED/FAILED para verificar a condição de erro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** cvmarkers.h  
+ **Cabeçalho:** *cvmarkers.h*  
   
  **Unicode:** CvWriteAlertW, CvWriteAlertVW  
   

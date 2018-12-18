@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d3abf59cb55bd64004750be7b24e00e42eb79d9e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b24c052bc3345443e8bcbe474f881906f420a74c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49821702"
 ---
 # <a name="jmccodespec"></a>JMC_CODE_SPEC
-Essa estrutura é usada para definir as informações de /justmycode para um módulo.  
+Essa estrutura é usada para definir as informações de JustMyCode para um módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,13 +43,13 @@ public struct JMC_CODE_SPEC {
   
 ## <a name="members"></a>Membros  
  fIsUserCode  
- Diferente de zero (`TRUE`) se o módulo está para ser considerado código de usuário; caso contrário, zero (`FALSE`) se o módulo é tratado como código externo e não a ser depurado.  
+ Diferente de zero (`TRUE`) se o módulo seja considerado código de usuário; caso contrário, zero (`FALSE`) se o módulo for sejam tratados como código externo e não a ser depurado.  
   
  bstrModuleName  
  Nome do módulo em questão.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é passada como uma lista de tais estruturas para o [SetJustMyCodeState](../../../extensibility/debugger/reference/idebugengine3-setjustmycodestate.md) método.  
+ Essa estrutura é passada como uma lista dessas estruturas para o [SetJustMyCodeState](../../../extensibility/debugger/reference/idebugengine3-setjustmycodestate.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

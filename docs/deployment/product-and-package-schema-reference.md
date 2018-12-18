@@ -1,5 +1,5 @@
 ---
-title: Referência de esquema de pacote e produto | Microsoft Docs
+title: Referência de esquema do pacote e de produto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -27,36 +27,37 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eed411e51b9e1b9e69d80a0c6187d7325d45ef7b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4fae53ad5143df91d74ad9c5e3cd19c1bdafd0da
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080643"
 ---
 # <a name="product-and-package-schema-reference"></a>Referência de esquema de produto e pacote
-Um *arquivo produto* é um manifesto XML que descreve todas as dependências externas exigidas por um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo. Exemplos de dependências externas a [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] e o Microsoft Data Access Components (MDAC). Um arquivo de pacote é semelhante a um arquivo de produto, mas é usado para instalar os componentes dependentes de cultura de uma dependência, como assemblies localizados, contratos de licença e documentação.  
+Um *arquivo de produto* é um manifesto XML que descreve todas as dependências externas necessárias por um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo. Exemplos de dependências externas incluem o [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] e o Microsoft Data Access Components (MDAC). Um arquivo de pacote é semelhante a um arquivo de produto, mas é usado para instalar os componentes dependentes de cultura de uma dependência, como assemblies localizados, contratos de licença e documentação.  
   
- O arquivo de produto e pacotes consiste em um nível superior `Product` ou `Package` elemento, cada uma delas contém os seguintes elementos.  
+ O arquivo de produto e de pacotes consiste em um nível superior `Product` ou `Package` elemento, cada uma delas contém os elementos a seguir.  
   
 |Elemento|Descrição|Atributos|  
 |-------------|-----------------|----------------|  
 |[\<Produto > elemento](../deployment/product-element-bootstrapper.md)|Elemento de nível superior necessário para arquivos de produto.|Nenhum|  
 |[\<Pacote > elemento](../deployment/package-element-bootstrapper.md)|Elemento de nível superior necessário para arquivos de pacote.|`Culture`<br /><br /> `Name`<br /><br /> `EULA`|  
 |[\<RelatedProducts > elemento](../deployment/relatedproducts-element-bootstrapper.md)|Elemento opcional para arquivos de produto. Os outros produtos que este produto instala ou depende.|Nenhum|  
-|[\<InstallChecks > elemento](../deployment/installchecks-element-bootstrapper.md)|Elemento obrigatório. Verifica se a dependência listas para executar no computador local durante a instalação.|Nenhum|  
-|[\<Comandos > elemento](../deployment/commands-element-bootstrapper.md)|Elemento obrigatório.  Executa uma ou mais verificações de instalação, conforme descrito pelo `InstallChecks`e indica qual pacote de instalação deve a verificação falhar.|Nenhum|  
+|[\<InstallChecks > elemento](../deployment/installchecks-element-bootstrapper.md)|Elemento obrigatório. Listas de verifica se a dependência para executar no computador local durante a instalação.|Nenhum|  
+|[\<Comandos > elemento](../deployment/commands-element-bootstrapper.md)|Elemento obrigatório.  Executa uma ou mais verificações de instalação conforme descrito pelo `InstallChecks`e indica qual pacote de instalação deve a verificação falhar.|Nenhum|  
 |[\<PackageFiles > elemento](../deployment/packagefiles-element-bootstrapper.md)|Elemento obrigatório. Lista os pacotes que podem ser instalados por esse processo de instalação.|Nenhum|  
-|[\<Cadeias de caracteres > elemento](../deployment/strings-element-bootstrapper.md)|Elemento obrigatório. Armazena as versões localizadas das cadeias de caracteres de erro e de nome de produto.|Nenhum|  
+|[\<Cadeias de caracteres > elemento](../deployment/strings-element-bootstrapper.md)|Elemento obrigatório. Armazena as versões localizadas das cadeias de caracteres de erro e o nome de produto.|Nenhum|  
   
 ## <a name="remarks"></a>Comentários  
- O esquema do pacote é consumido pelos Setup.exe, um programa de stub gerado pela tarefa de inicialização de Build MS que contém pouca lógica embutida de seu próprio. O esquema controla todos os aspectos do processo de instalação.  
+ O esquema do pacote é consumido pelos *Setup.exe*, um programa stub gerado pelo MS Build que contém pouca lógica embutido em código de sua própria tarefa de inicialização. O esquema de unidades de todos os aspectos do processo de instalação.  
   
- `InstallChecks` os testes que setup.exe deve executar a existência de um determinado pacote. `PackageFiles` lista todos os pacotes que o processo de instalação pode ter para instalar, se um determinado teste falhar. Cada entrada de comando em comandos executa um dos testes descritos por `InstallChecks`e especifica quais `PackageFile` executar deve o teste falhar. Você pode usar o `Strings` elemento para localizar nomes de produtos e mensagens de erro, para que você pode usar uma única instalação binária para instalar seu aplicativo para qualquer número de idiomas.  
+ `InstallChecks` os testes que setup.exe deve executar a existência de um determinado pacote. `PackageFiles` lista todos os pacotes que o processo de instalação pode ser necessário instalar, se um determinado teste falhar. Cada entrada de comando em comandos executa um dos testes descritos por `InstallChecks`e especifica quais `PackageFile` para executar o teste falhar. Você pode usar o `Strings` elemento para localizar nomes de produtos e mensagens de erro, para que você possa usar uma única instalação binária para instalar seu aplicativo para qualquer número de idiomas.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir demonstra um arquivo completa do produto para instalar o [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
+ O exemplo de código a seguir demonstra um arquivo completo de produtos para instalar o [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
   
 <Product  
@@ -160,4 +161,4 @@ Um *arquivo produto* é um manifesto XML que descreve todas as dependências ext
   
 ## <a name="see-also"></a>Consulte também  
  [Manifesto de implantação do ClickOnce](../deployment/clickonce-deployment-manifest.md)   
- [Manifesto de aplicativo ClickOnce](../deployment/clickonce-application-manifest.md)
+ [Manifesto do aplicativo ClickOnce](../deployment/clickonce-application-manifest.md)

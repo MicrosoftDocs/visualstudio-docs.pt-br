@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 032228596773d4a5a164f904c1caae161b693f64
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0dda42a65824b8fdb93ec8561f3affb59ee5d166
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926118"
 ---
 # <a name="bpresolutionlocation"></a>BP_RESOLUTION_LOCATION
-Especifica a estrutura do local de resolução do ponto de interrupção.  
+Especifica a estrutura do local de resolução de ponto de interrupção.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +50,7 @@ public struct BP_RESOLUTION_LOCATION {
   
 ## <a name="members"></a>Membros  
  `bpType`  
- Um valor da [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) enumeração que especifica como interpretar o `bpResLocation` união ou `unionmemberX` membros.  
+ Um valor da [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) enumeração que especifica como interpretar os `bpResLocation` union ou `unionmemberX` membros.  
   
  `bpResLocation.bpresCode`  
  [C++] Contém o [BP_RESOLUTION_CODE](../../../extensibility/debugger/reference/bp-resolution-code.md) estrutura se `bpType`  =  `BPT_CODE`.  
@@ -61,21 +62,21 @@ public struct BP_RESOLUTION_LOCATION {
  [C++] Um espaço reservado.  
   
  `unionmember1`  
- [Apenas c#] Consulte os comentários sobre como interpretar.  
+ [Somente c#] Consulte os comentários sobre como interpretar.  
   
  `unionmember2`  
- [Apenas c#] Consulte os comentários sobre como interpretar.  
+ [Somente c#] Consulte os comentários sobre como interpretar.  
   
  `unionmember3`  
- [Apenas c#] Consulte os comentários sobre como interpretar.  
+ [Somente c#] Consulte os comentários sobre como interpretar.  
   
  `unionmember4`  
- [Apenas c#] Consulte os comentários sobre como interpretar.  
+ [Somente c#] Consulte os comentários sobre como interpretar.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é membro do [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) e [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) estruturas.  
+ Essa estrutura é um membro do [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) e [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) estruturas.  
   
- [Apenas c#] O `unionmemberX` membros são interpretados de acordo com a tabela a seguir. Examine a coluna à esquerda para a `bpType` valor em, em seguida, para determinar o que cada `unionmemberX` membro representa e empacotar o `unionmemberX` adequadamente. Consulte o exemplo de uma maneira de interpretar esta estrutura em c#.  
+ [Somente c#] O `unionmemberX` membros são interpretados de acordo com a tabela a seguir. Procure abaixo da coluna da esquerda para a `bpType` entre de valor, em seguida, para determinar o que cada `unionmemberX` membro representa e empacotar o `unionmemberX` adequadamente. Veja o exemplo de uma maneira de interpretar essa estrutura em c#.  
   
 |`bpLocationType`|`unionmember1`|`unionmember2`|`unionmember3`|`unionmember4`|  
 |----------------------|--------------------|--------------------|--------------------|--------------------|  

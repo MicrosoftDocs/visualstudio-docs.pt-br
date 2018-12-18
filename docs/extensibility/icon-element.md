@@ -1,5 +1,5 @@
 ---
-title: Elemento de ícone | Microsoft Docs
+title: Elemento Icon | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f15dcfec5c89c6bf2b2ae68ea29e18890dc9187e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2494e75c312385a1a0c86709eb417d4b124a97de
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39497687"
 ---
-# <a name="icon-element"></a>Elemento de ícone
-O atributo de guid da marca do ícone é o guid de um bitmap definido.  O atributo id seleciona o slot na faixa de bitmap. Esse elemento é opcional.  Se esse elemento é omitido o valor de **guidOfficeIcon:msotcidNoIcon** será implícita.  
+# <a name="icon-element"></a>Elemento Icon
+O atributo guid da marca do ícone é o guid de um bitmap definido. O `id` atributo seleciona o slot na faixa de bitmap. Esse elemento é opcional. Se esse elemento não estiver incluído o valor de **guidOfficeIcon:msotcidNoIcon** será assumida.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <Icon guid="guidImages" id="bmpPic1" />  
 ```  
   
@@ -52,4 +53,4 @@ O atributo de guid da marca do ícone é o guid de um bitmap definido.  O atribu
 |[Elemento Buttons](../extensibility/buttons-element.md)||  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquivos da tabela de comandos do Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+ [Arquivos de tabela (. VSCT) de comando do Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

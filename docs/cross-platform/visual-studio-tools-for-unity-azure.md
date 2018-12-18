@@ -6,19 +6,20 @@ ms.reviewer: crdun
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: 7921D4C7-5526-42F5-8E03-82D3E33A893F
-author: dantogno
-ms.author: v-davian
+author: therealjohn
+ms.author: johmil
 manager: crdun
 ms.workload:
 - azure
 - unity
-ms.openlocfilehash: 5230ecda1c817ec5be51019f6db793210a3d7a5d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 454cb3617bb918b67784ebd2a3388ac6ee9f3826
+ms.sourcegitcommit: 5c049194fa256b876ad303f491af11edd505756c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53027257"
 ---
-# <a name="programming-with-unity-and-azure"></a>Programar com o Unity e o Azure
+# <a name="program-with-unity-and-azure"></a>Programar com o Unity e o Azure
 
 O Azure oferece uma solução escalonável para armazenar telemetria e outros dados de jogos na nuvem. Com o lançamento do Unity 2017, o suporte experimental do Unity para o .NET 4.6 torna a integração ao Azure mais simples do que nunca ao permitir o uso de SDKs do .NET para Azure .
 

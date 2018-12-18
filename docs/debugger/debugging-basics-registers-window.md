@@ -19,16 +19,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 37b2c34971750d8e6db0173f6034342b9efbfd97
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0219418b754c93b8e5e50997ede73e0611ed496a
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257050"
 ---
-# <a name="about-the-registers-window-in-visual-studio"></a>Sobre a janela de registros no Visual Studio
-O **registra** janela só estará disponível se a depuração de nível de endereço está habilitada no **opções** caixa de diálogo, **depuração** nó.  
+# <a name="about-the-registers-window-in-visual-studio-c-c-visual-basic-f"></a>Sobre a janela de registros no Visual Studio (C#, C++, Visual Basic, F#)
+
+O **registra** janela está disponível somente se a depuração do nível de endereços estiver habilitada na **opções** caixa de diálogo **depuração** nó.  
   
- Os registros são locais especiais dentro de um processador (CPU) que são usados para armazenar partes pequenas de dados em que o processador está trabalhando ativamente. Compilar ou interpretar o código-fonte gera instruções que movem dados da memória para os registros e de volta, conforme o necessário. Acessar dados em registros é muito rápido comparado a acessar dados na memória. Sendo assim, o código que permite que o processador mantenha dados em um registro e os acesse repetidamente tende a ser executado mais rápido do que o código que requer que o processador carregue e descarregue registros constantemente. Para que o compilador possa manter os dados nos registros e executar outras otimizações, evite usar variáveis globais e confie em variáveis locais o máximo possível. O código escrito dessa maneira tem boa a localidade de referência. Em algumas linguagens, por exemplo, C/C++, o desenvolvedor pode declarar uma variável do registro, que diz ao compilador para tentar o melhor possível para manter a variável em um registro constantemente. Para obter mais informações, consulte [registrar palavra-chave](http://msdn.microsoft.com/en-us/5b66905a-2f7f-4918-bb55-5e66d4bc50f9).  
+ Os registros são locais especiais dentro de um processador (CPU) que são usados para armazenar partes pequenas de dados em que o processador está trabalhando ativamente. Compilar ou interpretar o código-fonte gera instruções que movem dados da memória para os registros e de volta, conforme o necessário. Acessar dados em registros é muito rápido comparado a acessar dados na memória. Sendo assim, o código que permite que o processador mantenha dados em um registro e os acesse repetidamente tende a ser executado mais rápido do que o código que requer que o processador carregue e descarregue registros constantemente. Para que o compilador possa manter os dados nos registros e executar outras otimizações, evite usar variáveis globais e confie em variáveis locais o máximo possível. O código escrito dessa maneira tem boa a localidade de referência. Em algumas linguagens, por exemplo, C/C++, o desenvolvedor pode declarar uma variável do registro, que diz ao compilador para tentar o melhor possível para manter a variável em um registro constantemente. Para obter mais informações, consulte [registrar palavra-chave](https://msdn.microsoft.com/library/5b66905a-2f7f-4918-bb55-5e66d4bc50f9).  
   
  Os registros podem ser divididos em dois tipos: uso geral e finalidade especial. Os registros de uso geral mantêm dados para operações gerais, por exemplo, adicionar dois números ou referenciar um elemento em uma matriz. Os registros de finalidade especial têm finalidades específicas e significado especializado. Um bom exemplo é o registro do ponteiro de pilha, que o processador usa para manter controle da pilha de chamadas do programa. Como programador, você provavelmente não manipulará o ponteiro de pilhas diretamente. No entanto, é essencial para o funcionamento correto do programa porque, sem o ponteiro de pilha, o processador não saberia para onde retornar ao término de uma chamada de função.  
   
@@ -36,23 +38,19 @@ O **registra** janela só estará disponível se a depuração de nível de ende
   
  Um processador normalmente tem dois conjuntos de registros de uso geral, um otimizado para operações de ponto flutuante e o outro para operações de inteiros. Não é surpresa eles serem chamados de registros de pontos flutuante e inteiros.  
   
- O código gerenciado é compilado em tempo de execução para o código nativo que acessa os registros físicos do microprocessador. O **registra** janela exibe esses registros físicos para o common language runtime ou código nativo. O **registra** janela não exibe informações de registro de script ou aplicativo do SQL, como SQL e script são linguagens que não suportam o conceito de registros.  
+ O código gerenciado é compilado em tempo de execução para o código nativo que acessa os registros físicos do microprocessador. O **registra** janela exibe esses registros físicos para common language runtime ou código nativo. O **registra** janela exibe informações de registro para o script ou aplicativo SQL, porque o script e SQL são linguagens que não dão suporte ao conceito de registros.  
   
- Para obter mais informações sobre como exibir o **registra** janela, consulte [usando a janela registra](../debugger/how-to-use-the-registers-window.md).  
+ Para obter mais informações sobre como exibir o **registra** janela, consulte [usando a janela de registros](../debugger/how-to-use-the-registers-window.md).  
   
- Quando você examinar o **registra** janela, você verá entradas, como neste exemplo:  
+ Quando você observa a **registra** janela, você verá entradas como `EAX = 003110D8`.  
   
-```  
-EAX = 003110D8  
-```  
-  
- O símbolo à esquerda do sinal = é o nome do registro, EAX, nesse caso. O número à direita do sinal = representa o conteúdo do registro.  
+ O símbolo à esquerda do `=` sinal é o nome do registro, `EAX`, nesse caso. O número à direita do `=` sinal representa o conteúdo do registro.  
   
  O **registra** janela permite que você faça mais do que simplesmente exibir o conteúdo de um registro. Quando você está no modo de interrupção em código nativo, pode clicar no conteúdo de um registro e editar o valor. Isso não é algo que você deve fazer aleatoriamente. A menos que você compreenda o registro que está editando, e os dados que ele contém, o resultado de uma edição descuidada provavelmente será uma falha de programa ou alguma outra consequência indesejada. Infelizmente, uma explicação detalhada dos conjuntos de registro dos vários processadores Intel e compatíveis com Intel vai além do escopo dessa breve introdução.  
   
 ## <a name="register-groups"></a>Registrar grupos  
- Para reduzir a desordem, o **registra** janela organiza registros em grupos. Se você com o botão direito no **registra** janela, você verá um menu de atalho que contém uma lista de grupos, que você pode exibir ou ocultar como desejar.  
+ Para reduzir a desordem, o **registra** janela organiza registros em grupos. Se o botão direito do mouse sobre o **registra** janela, você verá um menu de atalho contendo uma lista de grupos, que você pode exibir ou ocultar como achar melhor.  
   
 ## <a name="see-also"></a>Consulte também  
  [Como: usar a janela registros](../debugger/how-to-use-the-registers-window.md)   
- [Noções básicas do depurador](../debugger/debugger-basics.md)
+ [Noções básicas do depurador](../debugger/getting-started-with-the-debugger.md)

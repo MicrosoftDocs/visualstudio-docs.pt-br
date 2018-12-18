@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31478025"
 ---
 # <a name="windows-view"></a>Exibição de janelas
 Quando você abre pela primeira vez Spy + +, Windows exibe uma árvore de todas as janelas e controles no sistema. O nome de classe e identificador de janela são mostrados. A janela de área de trabalho atual está na parte superior da árvore. Todas as outras janelas são filhos da área de trabalho e são listadas de acordo com a hierarquia de janela padrão. As janelas irmãs aparecem na lista expansible recuada abaixo de seus pais.  

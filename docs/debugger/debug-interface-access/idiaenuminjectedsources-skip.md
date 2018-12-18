@@ -1,5 +1,5 @@
 ---
-title: Idiaenuminjectedsources | Microsoft Docs
+title: 'Idiaenuminjectedsources:: Skip | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 038510fbd89d58c0d122457828c2f130df39173e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 3ed94c7e70d3d4800f8662b35bd13bc351d5bc83
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863796"
 ---
 # <a name="idiaenuminjectedsourcesskip"></a>IDiaEnumInjectedSources::Skip
 Ignora um número especificado de fontes injetados em uma sequência de enumeração.  
@@ -36,7 +37,7 @@ HRESULT Skip (
  [in] O número de fontes injetados na sequência de enumeração para ignorar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` se não houver mais nenhum injetados fontes para ignorar.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` se há não mais injetados fontes para ignorar.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

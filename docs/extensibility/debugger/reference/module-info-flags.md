@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee2676b85889226e2fbb9665462d83aa4b0d6520
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2422c2578979b1fc8c5f07ba92aa4117c87042d1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933905"
 ---
 # <a name="moduleinfoflags"></a>MODULE_INFO_FLAGS
 Especifica o estado de símbolos para um módulo.  
@@ -44,7 +45,7 @@ public enum enum_MODULE_INFO_FLAGS {
  Pelo menos um conjunto de símbolos foi carregado pelo módulo (caso contrário, nenhum símbolo foi carregado).  
   
 ## <a name="remarks"></a>Comentários  
- Esse valor é retornado pelo [GetSymbolSearchInfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md) método.  
+ Esse valor é retornado o [GetSymbolSearchInfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

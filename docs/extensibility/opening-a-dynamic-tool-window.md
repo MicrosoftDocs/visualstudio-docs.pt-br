@@ -13,30 +13,31 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bdd3a4a8d85ed7d0f5884e7f11b8778eb3b420a2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9d37a72629dfb7c10eeb51bcd2317151447e9edd
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636640"
 ---
-# <a name="opening-a-dynamic-tool-window"></a>Abrindo uma janela de ferramenta dinâmico
-Janelas de ferramenta normalmente são abertas de um comando em um menu ou uma tecla de atalho equivalente. Às vezes, no entanto, talvez seja necessário uma janela de ferramenta que abre sempre que um contexto específico de interface do usuário se aplica e fecha quando o contexto de interface do usuário já não se aplica. Esses tipos de janelas de ferramenta são chamados *dinâmico* ou *automaticamente visíveis*.  
+# <a name="open-a-dynamic-tool-window"></a>Abra uma janela de ferramenta dinâmica
+Janelas de ferramentas normalmente são abertas a partir de um comando em um menu ou um atalho de teclado equivalente. Às vezes, no entanto, talvez seja necessário uma janela de ferramenta abre sempre que um contexto de interface do usuário específico se aplica e é fechada quando o contexto de interface do usuário não se aplica. Esses tipos de janelas de ferramenta são chamados *dinâmica* ou *automaticamente visíveis*.  
   
 > [!NOTE]
->  Para obter uma lista de contextos de interface de usuário predefinidos, consulte <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT>. Para o  
+>  Para obter uma lista de contextos de interface do usuário predefinidas, consulte <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT>.  
   
- Se desejar abrir uma janela de ferramenta dinâmico na inicialização e é possível para a criação falha, você deve implementar o <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackageDynamicToolOwnerEx> interface e testar as condições de falha no <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackageDynamicToolOwnerEx.QueryShowTool%2A> método. Ordem do shell para saber se você tem uma janela de ferramenta dinâmico deve ser aberta na inicialização, você deve adicionar o `SupportsDynamicToolOwner` valor (definida como 1) para o registro do pacote. Esse valor não é parte do padrão <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>, portanto, você deve criar um atributo personalizado para adicioná-lo. Para obter mais informações sobre atributos personalizados, consulte [usando um atributo personalizado do registro para registrar uma extensão](../extensibility/registering-and-unregistering-vspackages.md#using-a-custom-registration-attribute-to-register-an-extension).  
+ Se você deseja abrir uma janela de ferramenta dinâmica na inicialização e é possível que a criação falha, você deve implementar o <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackageDynamicToolOwnerEx> da interface e testar as condições de falha no <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackageDynamicToolOwnerEx.QueryShowTool%2A> método. Para o shell sabe que tem uma janela de ferramenta dinâmica que deve ser aberta na inicialização, você deve adicionar o `SupportsDynamicToolOwner` valor (definido como 1) em seu registro de pacote. Esse valor não é parte do padrão <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>, portanto, você deve criar um atributo personalizado para adicioná-lo. Para obter mais informações sobre atributos personalizados, consulte [usa um atributo de registro personalizado para registrar uma extensão](../extensibility/registering-and-unregistering-vspackages.md#using-a-custom-registration-attribute-to-register-an-extension).  
   
- Use <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> para abrir uma janela de ferramenta. A janela de ferramentas é criada, conforme necessário.  
+ Use <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> para abrir uma janela de ferramentas. A janela da ferramenta é criada, conforme necessário.  
   
 > [!NOTE]
->  Uma janela de ferramenta dinâmico pode ser fechada pelo usuário. Se você quiser criar um comando de menu para que o usuário pode reabrir a janela da ferramenta, o comando de menu deve ser habilitado no mesmo contexto de interface do usuário que abre a janela de ferramenta e desabilitado caso contrário.  
+>  Uma janela de ferramenta dinâmica pode ser fechada pelo usuário. Se você quiser criar um comando de menu para que o usuário pode reabrir a janela da ferramenta, o comando de menu deve ser habilitado no mesmo contexto de interface do usuário que abre a janela de ferramentas e desabilitado caso contrário.  
   
-### <a name="to-open-a-dynamic-tool-window"></a>Para abrir uma janela de ferramenta dinâmico  
+## <a name="to-open-a-dynamic-tool-window"></a>Para abrir uma janela de ferramenta dinâmica  
   
-1.  Crie um projeto do VSIX denominado **DynamicToolWindow** e adicionar um modelo de item da janela de ferramenta chamado **DynamicWindowPane.cs**. Para obter mais informações, consulte [criando uma extensão com uma janela de ferramenta](../extensibility/creating-an-extension-with-a-tool-window.md).  
+1.  Crie um projeto do VSIX chamado **DynamicToolWindow** e adicione um modelo de item da janela de ferramenta denominado *DynamicWindowPane.cs*. Para obter mais informações, consulte [criar uma extensão com uma janela de ferramentas](../extensibility/creating-an-extension-with-a-tool-window.md).  
   
-2.  No arquivo DynamicWindowPanePackage.cs, localize a declaração de DynamicWindowPanePackage. Adicionar o <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> e <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> atributos para registrar a janela da ferramenta.  
+2.  No *DynamicWindowPanePackage.cs* arquivo, localize a declaração DynamicWindowPanePackage. Adicione a <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> e <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> atributos para registrar a janela da ferramenta.  
   
     ```vb  
     [ProvideToolWindow(typeof(DynamicWindowPane)]  
@@ -50,8 +51,8 @@ Janelas de ferramenta normalmente são abertas de um comando em um menu ou uma t
     {. . .}  
     ```  
   
-     Os atributos acima registrar a janela da ferramenta denominada DynamicWindowPane como uma janela transitória que não é persistida quando o Visual Studio for fechado e reaberto. DynamicWindowPane é aberto sempre que <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_string> se aplica e fechado caso contrário.  
+     Os atributos acima Registre-se a janela de ferramenta chamada DynamicWindowPane como uma janela transitória que não é persistida quando o Visual Studio é fechado e reaberto. DynamicWindowPane é aberto sempre que <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_string> se aplica e fechado, caso contrário.  
   
 3.  Compile o projeto e comece a depuração. A instância experimental deve aparecer. Você não verá a janela da ferramenta.  
   
-4.  Abra um projeto na instância experimental. A janela da ferramenta deverá aparecer.
+4.  Abra um projeto na instância experimental. A janela da ferramenta deve aparecer.

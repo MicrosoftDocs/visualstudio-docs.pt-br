@@ -1,15 +1,16 @@
 ---
 title: Trabalhando com o Subversion
 description: Usando o Subversion no Visual Studio para Mac.
-author: asb3993
-ms.author: amburns
-ms.date: 04/14/2017
+author: conceptdev
+ms.author: crdun
+ms.date: 05/06/2018
 ms.assetid: 2400ED9C-6236-4C0A-A3AB-9D7CBE1F0CF4
-ms.openlocfilehash: 1105c157139e94bef36f71d877c0184ac6ed05b0
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 7dcbd619fe0c1a0ab84a8667f5a781d006f80999
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295184"
 ---
 # <a name="working-with-subversion"></a>Trabalhando com o Subversion
 
@@ -29,7 +30,7 @@ A imagem a seguir ilustra as opções fornecidas pelo Visual Studio para Mac pel
 
 Antes de começar a usar um repositório remoto do Subversion, faça check-out do repositório para criar uma cópia funcional desse diretório em seu computador local.
 
-Para saber mais sobre como usar o recurso de **Check-out** no Visual Studio para Mac, siga as etapas na seção [Configurando um repositório do Subversion](~/set-up-subversion-repository.md).
+Para saber mais sobre como usar o recurso de **Check-out** no Visual Studio para Mac, siga as etapas na seção [Configurando um repositório do Subversion](set-up-subversion-repository.md).
 
 ## <a name="update-solution"></a>Atualizar solução
 
@@ -49,7 +50,10 @@ Isso permite exibir todas as alterações em cada arquivo de um projeto com a op
 
 Para confirmar um arquivo para o repositório remoto, pressione Confirmar..., digite uma mensagem de confirmação e confirme com o botão Confirmar:
 
-
 ![Confirmando um arquivo](media/version-control-svnCommit.png)
 
 Isso enviará as alterações ao repositório em que elas criarão a nova revisão de todas as suas modificações.
+
+## <a name="see-also"></a>Consulte também
+
+- [Configurar um repositório do Subversion](set-up-subversion-repository.md)

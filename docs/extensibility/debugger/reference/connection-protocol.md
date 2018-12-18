@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e1e1dc8cd22b529eafd6183578be7de6ffe69549
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d70aa31e7574e9fcdb0ed4e8d89847e832f3739b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832753"
 ---
 # <a name="connectionprotocol"></a>CONNECTION_PROTOCOL
-Indica o protocolo usado para comunicação entre um servidor de depuração e o pacote de depuração (DE).  
+Indica o protocolo usado para comunicação entre um servidor de depuração e o pacote de depuração (DES).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +53,7 @@ public enum CONNECTION_PROTOCOL {
   
 #### <a name="parameters"></a>Parâmetros  
  CONNECTION_NONE  
- Nenhuma conexão foi feita em um servidor.  
+ Nenhuma conexão foi feita a um servidor.  
   
  CONNECTION_UNKNOWN  
  Foi feita uma conexão, mas ele é de um tipo desconhecido.  
@@ -73,7 +74,7 @@ public enum CONNECTION_PROTOCOL {
  Algum outro tipo de conexão foi estabelecido (esse valor não é atualmente usado).  
   
 ## <a name="remarks"></a>Comentários  
- Esses valores são retornados do [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) método.  
+ Esses valores são retornados a partir de [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

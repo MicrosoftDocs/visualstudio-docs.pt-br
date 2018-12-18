@@ -1,7 +1,7 @@
 ---
-title: Introduzir uma variável local no Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Introduzir uma variável local no Visual Studio
 ms.date: 01/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
@@ -9,11 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7af958e923c6af7929b8e4a9309c210dbf8ced5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 173173e090f285fcaf6fc9d7c94ba85b692d68e2
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948342"
 ---
 # <a name="introduce-a-local-variable-in-visual-studio"></a>Introduzir uma variável local no Visual Studio
 
@@ -35,23 +36,23 @@ Esta geração de código aplica-se a:
 
    - C#:
 
-    ![Código em C# realçado](media/local-highlight-cs.png)
+       ![Código em C# realçado](media/local-highlight-cs.png)
 
    - Visual Basic:
 
-    ![Código em VB realçado](media/local-highlight-vb.png)
+       ![Código em VB realçado](media/local-highlight-vb.png)
 
-1. Depois, siga um destes procedimentos:
+2. Depois, siga um destes procedimentos:
 
    - **Teclado**
-     - Pressione **Ctrl**+**.** para acionar o menu **Ações e Refatorações Rápidas**.
+      - Pressione **Ctrl**+**.** para acionar o menu **Ações e Refatorações Rápidas**.
    - **Mouse**
-     - Clique com o botão direito do mouse e selecione o menu **Ações Rápidas e Refatorações**.
-     - Clique no ícone de ![Lâmpada](media/bulb-cs.png) que aparece na margem esquerda se o cursor de texto já estiver na linha com o rabisco vermelho.
+      - Clique com o botão direito do mouse e selecione o menu **Ações Rápidas e Refatorações**.
+      - Clique no ícone de ![Lâmpada](media/bulb-cs.png) ícone que aparece na margem esquerda quando o cursor de texto já está na linha com o rabisco vermelho.
 
    ![Introduzir versão prévia local](media/local-preview-cs.png)
 
-1. Selecione **Introduzir local para a (todas as ocorrências da) '*expressão*'** no menu suspenso.
+3. Selecione **Introduzir local para a (todas as ocorrências da) '*expressão*'** no menu suspenso.
 
    > [!TIP]
    > Use o link **Visualizar alterações** na parte inferior da janela de visualização [para ver todas as alterações](../../ide/preview-changes.md) que serão feitas antes de fazer sua seleção.
@@ -60,14 +61,14 @@ Esta geração de código aplica-se a:
 
    - C#:
 
-      ![Resultado da implementação da interface em C#](media/local-result-cs.png)
+       ![Resultado da implementação da interface em C#](media/local-result-cs.png)
 
    - Visual Basic:
 
-      ![Resultado da implementação da interface em VB](media/local-result-vb.png)
+       ![Resultado da implementação da interface em VB](media/local-result-vb.png)
 
    > [!NOTE]
-   > Você pode usar a opção de menu **...todas as ocorrências de...** para substituir todas as instâncias da expressão selecionada, não somente a que foi especificamente realçada.
+   > É possível usar a opção de menu **...todas as ocorrências de...** para substituir todas as instâncias da expressão selecionada, não somente a que foi especificamente realçada.
 
 ## <a name="see-also"></a>Consulte também
 

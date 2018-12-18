@@ -1,6 +1,7 @@
 ---
 title: 'CA1712: não use valores enum como prefixo com o nome do tipo'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,21 @@ ms.assetid: df0e3a12-67bf-48f1-a10b-2ef60484a5c7
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CPP
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b6d8a5ebba4f746c7418fcfb28a61d98949441e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9db561355fb59ec187ef87ee767c4706ebddffb9
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45547861"
 ---
 # <a name="ca1712-do-not-prefix-enum-values-with-type-name"></a>CA1712: não use valores enum como prefixo com o nome do tipo
+
 |||
 |-|-|
 |NomeDoTipo|DoNotPrefixEnumValuesWithTypeName|
@@ -32,19 +39,19 @@ ms.lasthandoff: 04/19/2018
 ## <a name="cause"></a>Causa
  Uma enumeração contém um membro cujo nome começa com o nome do tipo de enumeração.
 
-## <a name="rule-description"></a>Descrição da Regra
- Nomes de membros de enumeração não são prefixados com o nome do tipo porque as informações de tipo deve ser fornecido pelas ferramentas de desenvolvimento.
+## <a name="rule-description"></a>Descrição da regra
+ Nomes dos membros de enumeração não são prefixados com o nome do tipo porque as informações de tipo deve ser fornecido pelas ferramentas de desenvolvimento.
 
- Convenções de nomenclatura fornecem uma aparência comum para bibliotecas de destino do common language runtime. Isso reduz o tempo que é necessário para aprender uma nova biblioteca de software e aumenta a confiança do cliente que a biblioteca foi desenvolvida por uma pessoa com experiência em desenvolvimento de código gerenciado.
+ Convenções de nomenclatura de fornecem uma aparência comum para bibliotecas que direcionam o common language runtime. Isso reduz o tempo que é necessário para aprender uma nova biblioteca de software e aumenta a confiança do cliente que a biblioteca foi desenvolvida por alguém que tenha experiência em desenvolvimento de código gerenciado.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, remova o prefixo de nome de tipo de membro de enumeração.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, remova o prefixo de nome de tipo do membro de enumeração.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
  Não suprima um aviso nessa regra.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir mostra uma enumeração incorretamente nomeada seguida a versão corrigida.
+ O exemplo a seguir mostra uma enumeração nomeada incorretamente seguida a versão corrigida.
 
  [!code-csharp[FxCop.Naming.EnumValues#1](../code-quality/codesnippet/CSharp/ca1712-do-not-prefix-enum-values-with-type-name_1.cs)]
  [!code-cpp[FxCop.Naming.EnumValues#1](../code-quality/codesnippet/CPP/ca1712-do-not-prefix-enum-values-with-type-name_1.cpp)]
@@ -58,4 +65,5 @@ ms.lasthandoff: 04/19/2018
  [CA2217: não marcar enums com FlagsAttribute](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
 
 ## <a name="see-also"></a>Consulte também
- <xref:System.Enum?displayProperty=fullName>
+
+- <xref:System.Enum?displayProperty=fullName>

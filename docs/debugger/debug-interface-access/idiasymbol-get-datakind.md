@@ -1,5 +1,5 @@
 ---
-title: ': Get_datakind | Microsoft Docs'
+title: 'Idiasymbol:: Get_datakind | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c50dea6154b1616d18b7f4159468b3e22f0aa200
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e01dbb38b512832db4c3629f6169fbe3be9c3f79
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880507"
 ---
 # <a name="idiasymbolgetdatakind"></a>IDiaSymbol::get_dataKind
 Recupera a classificação de variável de um símbolo de dados.  
@@ -33,10 +34,10 @@ HRESULT get_dataKind (
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Retorna um valor da [enumeração DataKind](../../debugger/debug-interface-access/datakind.md) enumeração que especifica o tipo de dados como global, estático ou constante, por exemplo.  
+ [out] Retorna um valor da [enumeração DataKind](../../debugger/debug-interface-access/datakind.md) enumeração que especifica o tipo de dados, como global, estático ou constante, por exemplo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
@@ -46,7 +47,7 @@ HRESULT get_dataKind (
 |Requisito|Descrição|  
 |-----------------|-----------------|  
 |Cabeçalho:|dia2.h|  
-|Versão:|Versão 7.0 do DIA SDK|  
+|Versão:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

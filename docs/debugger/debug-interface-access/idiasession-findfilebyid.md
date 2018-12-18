@@ -1,5 +1,5 @@
 ---
-title: ': Findfilebyid | Microsoft Docs'
+title: 'Idiasession:: Findfilebyid | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ed79b65823c3a777c13a90331468074347425ef5
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 7c56d66a78b52e99aecb8cb744cc3d8465d0d243
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941406"
 ---
 # <a name="idiasessionfindfilebyid"></a>IDiaSession::findFileById
 Recupera um arquivo de origem pelo identificador de arquivo de origem.  
@@ -40,12 +41,12 @@ HRESULT findFileById (
  [out] Retorna um [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) recuperado do objeto que representa o arquivo de origem.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  O identificador de arquivo de origem é um valor exclusivo usado internamente para o DIA SDK para tornar exclusiva a todos os arquivos de origem. Esse método normalmente é usada internamente para o DIA SDK.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
- [: FindFile](../../debugger/debug-interface-access/idiasession-findfile.md)   
+ [Idiasession:: FindFile](../../debugger/debug-interface-access/idiasession-findfile.md)   
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4109282bea850e7bca6154a56d0023c5ebb1c746
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b1157183bcb7cd13f2683d6d6dac32cfb81d8974
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34845071"
 ---
-# <a name="instruction-pointers-ips-view---contention-data"></a>Exibição de IPs (ponteiros de instrução) – Dados de contenção
+# <a name="instruction-pointers-ips-view---contention-data"></a>Exibição de IPs (ponteiros de instrução) – dados de contenção
 O modo de exibição de IPs dos dados de contenção lista dados para as instruções de assembly cuja execução foi bloqueada na execução da criação de perfil.  
   
  A tabela a seguir explica os valores das colunas no modo de exibição de Ponteiros de Instrução.  
@@ -44,7 +45,7 @@ O modo de exibição de IPs dos dados de contenção lista dados para as instru�
 |**Final da Linha de Origem**|O número de linha no arquivo de origem em que esta instrução termina.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Como personalizar as colunas de exibição do relatório](../profiling/how-to-customize-report-view-columns.md)   
+ [Como personalizar as colunas de visualização de relatório](../profiling/how-to-customize-report-view-columns.md)   
  [Exibição de IPs (ponteiros de instrução)](../profiling/instruction-pointers-ips-view.md)   
- [Exibição de IPs (ponteiros de instrução) – Amostragem](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)   
+ [Exibição de IPs (ponteiros de instrução) – amostragem](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)   
  [Exibição de IPs (ponteiros de instrução)](../profiling/instruction-pointers-ips-view-sampling-data.md)

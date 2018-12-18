@@ -15,13 +15,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f75d16a252862d301ca1dcc85bd3ccd0696aff16
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: cd8016b14d91157942ed8d5e4a987df0009f6af3
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766156"
 ---
-# <a name="how-to-collect-event-tracing-for-windows-etw-data"></a>Como coletar dados de Rastreamento de Eventos para Windows (ETW)
+# <a name="how-to-collect-event-tracing-for-windows-etw-data"></a>Como coletar dados do ETW (Rastreamento de Eventos para Windows)
 
 O ETW (Rastreamento de Eventos para Windows) é um recurso de rastreamento eficiente em nível de kernel que permite que o criador de perfil registre log de eventos de kernel ou de eventos definidos pelo aplicativo. Os dados coletados pelo provedor de eventos podem ser exibidos somente usando a opção /**Summary:ETW** da ferramenta de linha de comando [VSPerfReport](../profiling/vsperfreport.md). Você pode usar esse relatório para determinar o local em que ocorrem problemas de desempenho no aplicativo.
 
@@ -38,4 +39,4 @@ O ETW (Rastreamento de Eventos para Windows) é um recurso de rastreamento efici
 
 ## <a name="see-also"></a>Consulte também
 
-[Configurando sessões de desempenho](../profiling/configuring-performance-sessions.md)
+[Configurar sessões de desempenho](../profiling/configuring-performance-sessions.md)

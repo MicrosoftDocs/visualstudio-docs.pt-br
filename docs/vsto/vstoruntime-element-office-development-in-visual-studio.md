@@ -1,5 +1,5 @@
 ---
-title: '&lt;vstoRuntime&gt; elemento (desenvolvimento do Office no Visual Studio) | Microsoft Docs'
+title: '&lt;vstoRuntime&gt; elemento (desenvolvimento do Office no Visual Studio)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,18 +17,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ee2d50d69c363d5073a09b953c00d22a11ef5315
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d21e097c0a05dfba2aa15bc41e37441ae02a63e4
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768060"
 ---
 # <a name="ltvstoruntimegt-element-office-development-in-visual-studio"></a>&lt;vstoRuntime&gt; elemento (desenvolvimento do Office no Visual Studio)
   O `vstoRuntime` elemento o `vstav3` namespace contém uma versão com suporte do Visual Studio Tools para Office runtime para uma determinada solução do Office.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <vstoRuntime  
     release  
     version  
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir ilustra o `vstoRuntime` elemento em um manifesto de aplicativo para uma solução do Office implantado usando [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Este exemplo de código é parte de um exemplo maior fornecido em [manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).  
   
-```  
+```xml  
 <vstav3:vstoRuntime  
     release="VSTOR40Beta1"  
     version="10.0.20303"  
@@ -61,6 +62,6 @@ ms.lasthandoff: 04/16/2018
 ## <a name="see-also"></a>Consulte também  
  [Manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md)   
  [Manifestos de implantação para soluções do Office](../vsto/deployment-manifests-for-office-solutions.md)   
- [Manifesto de aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest)  
+ [Manifesto do aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest)  
   
   

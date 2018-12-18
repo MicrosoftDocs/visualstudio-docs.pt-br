@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4dffd06c7342b77f1e4293d50217a0c6a468bf18
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d7dfac01624d83518a749dd762837dfbea3d6e54
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915289"
 ---
 # <a name="idebugerrorevent2geterrormessage"></a>IDebugErrorEvent2::GetErrorMessage
-Retorna informações que permite a construção de uma mensagem de erro legível.  
+Retorna informações que permite a construção de uma mensagem de erro legível por humanos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,7 +60,7 @@ int GetErrorMessage(
  [out] O código de erro, a mensagem é sobre.  
   
  `pdwType`  
- [out] Severidade do erro (usar as constantes MB_XXX para `MessageBox`; por exemplo, `MB_EXCLAMATION` ou `MB_WARNING`).  
+ [out] Severidade do erro (usar constantes para MB_XXX `MessageBox`; por exemplo, `MB_EXCLAMATION` ou `MB_WARNING`).  
   
  `pbstrHelpFileName`  
  [out] Caminho para um arquivo de Ajuda (definido como um valor nulo se não houver nenhum arquivo de Ajuda).  
@@ -68,10 +69,10 @@ int GetErrorMessage(
  [out] ID do tópico da Ajuda para exibir (definido como 0 se não houver nenhum tópico da Ajuda).  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- A mensagem de erro deve ser formatada ao longo das linhas de `"What I was doing.  %1"`. O `"%1"` deve ser substituído pelo chamador com a mensagem de erro derivada do código de erro (que é retornado no `hrErrorReason`). O `pMessageType` parâmetro informa o chamador como a mensagem de erro final deve ser exibida.  
+ A mensagem de erro deve ser formatada ao longo das linhas de `"What I was doing.  %1"`. O `"%1"` , em seguida, deve ser substituído pelo chamador com a mensagem de erro derivada do código de erro (que é retornado no `hrErrorReason`). O `pMessageType` parâmetro informa ao chamador como a mensagem de erro final deve ser exibida.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)   

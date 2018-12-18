@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1425760c0ba568d57bb1c3d45ed735881d28134e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c6a75c9ebacdfac2c8def4c31493b09197942090
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819622"
 ---
 # <a name="idebugport2getportsupplier"></a>IDebugPort2::GetPortSupplier
 Obtém o fornecedor de porta para essa porta.  
@@ -43,7 +44,7 @@ int GetPortSupplier(
  [out] Retorna um [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) objeto representa o fornecedor de porta para uma porta.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   

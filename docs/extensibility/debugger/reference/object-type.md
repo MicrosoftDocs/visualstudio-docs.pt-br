@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bc5c7367a8b134324073d40452ec9b7ec20c1ffc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eff83198e337a3f89c88663722bf34046d3d4f62
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905734"
 ---
 # <a name="objecttype"></a>OBJECT_TYPE
 Especifica o tipo de um objeto do avaliador de expressão.  
@@ -69,34 +70,34 @@ public enum enum_OBJECT_TYPE {
   
 ## <a name="members"></a>Membros  
  OBJECT_TYPE_BOOLEAN  
- Indica que o objeto é um valor booleano.  
+ Indica que o objeto é um valor booliano.  
   
  OBJECT_TYPE_CHAR  
  Indica que o objeto é um caractere.  
   
  OBJECT_TYPE_I1  
- Indica que o objeto é um inteiro assinado de um byte.  
+ Indica que o objeto é um inteiro com sinal de um byte.  
   
  OBJECT_TYPE_U1  
- Indica que o objeto é um inteiro não assinado de um byte.  
+ Indica que o objeto é um inteiro sem sinal de um byte.  
   
  OBJECT_TYPE_I2  
- Indica que o objeto é um inteiro assinado de dois bytes.  
+ Indica que o objeto é um inteiro com sinal de dois bytes.  
   
  OBJECT_TYPE_U2  
- Indica que o objeto é um inteiro não assinado de dois bytes.  
+ Indica que o objeto é um inteiro sem sinal de dois bytes.  
   
  OBJECT_TYPE_I4  
- Indica que o objeto é um inteiro assinado de quatro bytes.  
+ Indica que o objeto é um inteiro com sinal de quatro bytes.  
   
  OBJECT_TYPE_U4  
- Indica que o objeto é um inteiro não assinado de quatro bytes.  
+ Indica que o objeto é um inteiro sem sinal de quatro bytes.  
   
  OBJECT_TYPE_I8  
- Indica que o objeto é um inteiro assinado de oito bytes.  
+ Indica que o objeto é um inteiro com sinal de oito bytes.  
   
  OBJECT_TYPE_U8  
- Indica que o objeto é um inteiro não assinado de oito bytes.  
+ Indica que o objeto é um inteiro sem sinal de oito bytes.  
   
  OBJECT_TYPE_R4  
  Indica que o objeto é um número de ponto flutuante de quatro bytes.  

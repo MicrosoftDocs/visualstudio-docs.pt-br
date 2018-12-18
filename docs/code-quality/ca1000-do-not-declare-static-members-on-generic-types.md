@@ -1,6 +1,7 @@
 ---
 title: 'CA1000: não declarar membros estáticos em tipos genéricos'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,20 @@ ms.assetid: 5c0da594-f8d0-4f40-953d-56bf7fbd2087
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: b1e970f3b0f8cf8e774e78a5318de87d5d30d805
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5ec0e60302e1d6bff813a7bf0f39e1b71a6f1653
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548369"
 ---
 # <a name="ca1000-do-not-declare-static-members-on-generic-types"></a>CA1000: não declarar membros estáticos em tipos genéricos
+
 |||
 |-|-|
 |NomeDoTipo|DoNotDeclareStaticMembersOnGenericTypes|
@@ -32,8 +38,8 @@ ms.lasthandoff: 04/19/2018
 ## <a name="cause"></a>Causa
  Um tipo genérico visível externamente contém um `static` (`Shared` no Visual Basic) membros.
 
-## <a name="rule-description"></a>Descrição da Regra
- Quando um `static` membro de um tipo genérico é chamado, o argumento de tipo deve ser especificado para o tipo. Quando um membro de instância genérico que não dá suporte à inferência é chamado, o argumento de tipo deve ser especificado para o membro. A sintaxe para especificar o argumento de tipo nesses dois casos é diferente e é facilmente confundido, como a seguir chama demonstram:
+## <a name="rule-description"></a>Descrição da regra
+ Quando um `static` membro de um tipo genérico é chamado, o argumento de tipo deve ser especificado para o tipo. Quando um membro de instância genérico que não dá suporte à inferência é chamado, o argumento de tipo deve ser especificado para o membro. A sintaxe para especificar o argumento de tipo nesses dois casos é diferente e facilmente confundida, como demonstram as seguintes chamadas:
 
 ```vb
 ' Shared method in a generic type.
@@ -51,13 +57,13 @@ GenericType<int>.StaticMethod();
 someObject.GenericMethod<int>();
 ```
 
- Em geral, ambas as declarações anteriores devem ser evitadas para que o argumento de tipo não precisa ser especificado quando o membro é chamado. Isso resulta em uma sintaxe de chamada membros genéricos não é diferente da sintaxe para não genéricos. Para obter mais informações, consulte [ca1004 os: métodos genéricos devem fornecer o parâmetro de tipo](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md).
+ Em geral, ambas as declarações anteriores devem ser evitadas para que o argumento de tipo não precisa ser especificado quando o membro é chamado. Isso resulta em uma sintaxe de chamada membros genéricos não é diferente da sintaxe de não-genéricos. Para obter mais informações, consulte [CA1004: os métodos genéricos devem fornecer parâmetro de tipo](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md).
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, remova o membro estático ou alterá-lo para um membro de instância.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, remova o membro estático ou alterá-lo para um membro de instância.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- Não suprima um aviso nessa regra. Fornecer genéricos em uma sintaxe que seja fácil de entender e usar reduz o tempo que é necessário para saber mais e aumenta a taxa de adoção de novas bibliotecas.
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+ Não suprima um aviso nessa regra. Fornecer genéricos em uma sintaxe fácil de entender e usar reduz o tempo que é necessário para saber mais e aumenta a taxa de adoção de novas bibliotecas.
 
 ## <a name="related-rules"></a>Regras relacionadas
  [CA1005: evitar parâmetros excessivos em tipos genéricos](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)

@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b193ff33d979917342679e115cdb973cb3b7ad5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6541ddecceff6d9e7867dd5feead3457b2248b45
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844112"
 ---
 # <a name="markerimportance-enumeration"></a>Enumeração marker_importance
 Representa o nível de importância de um marcador da Visualização Simultânea.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 enum marker_importance;  
 ```  
   
@@ -41,9 +42,9 @@ enum marker_importance;
 |`normal_importance`|Especifica que o marcador tem importância normal.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** cvmarkersobj.h  
+ **Cabeçalho:** *cvmarkersobj.h*  
   
  **Namespace:** Concurrency::diagnostic  
   
 ## <a name="see-also"></a>Consulte também  
- [Namespace de diagnóstico](../profiling/diagnostic-namespace.md)
+ [namespace de diagnóstico](../profiling/diagnostic-namespace.md)

@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ede48e5236887e3d8fdb22425d92c8514636f94
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b00eb4e64e9dcccf4519f5e799f238ad01773b8a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860481"
 ---
 # <a name="idebugreference2compare"></a>IDebugReference2::Compare
-Compara uma referência para outro. Reservado para uso futuro.  
+Compara uma referência a outro. Reservado para uso futuro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,10 +43,10 @@ int Compare (
   
 #### <a name="parameters"></a>Parâmetros  
  `dwCompare`  
- [in] Um valor da [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md) enumeração que especifica a operação de comparação, por exemplo, maior ou igual a, menor que.  
+ [in] Um valor a partir de [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md) enumeração que especifica a operação de comparação, por exemplo, maior que ou igual a, menor que.  
   
  `pReference`  
- [in] Um [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objeto que representa a referência a ser comparado com.  
+ [in] Uma [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objeto que representa a referência a serem comparadas.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Sempre retorna `E_NOTIMPL`.  

@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e95a8a76e7315f8963ea415f88bd9615f3b123a4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8672dcdf92ce7341c7ae540c4836a1775671da7c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832388"
 ---
 # <a name="idebugexpressioncontext2parsetext"></a>IDebugExpressionContext2::ParseText
-Analisa uma expressão em formato de texto para avaliação posterior.  
+Analisa uma expressão na forma de texto para avaliação posterior.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,24 +60,24 @@ int ParseText(
  [in] A base a ser usado na análise de todas as informações numéricas em `pszCode`.  
   
  `ppExpr`  
- [out] Retorna o [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) objeto que representa a expressão analisada, que está pronta para a associação e avaliação.  
+ [out] Retorna o [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) objeto que representa a expressão analisada, que está pronta para vinculação e avaliação.  
   
  `pbstrError`  
- [out] Retorna a mensagem de erro se a expressão contém um erro.  
+ [out] Retorna a mensagem de erro se a expressão contiver um erro.  
   
  `pichError`  
- [out] Retorna o índice de caracteres do erro na `pszCode` se a expressão contém um erro.  
+ [out] Retorna o índice de caracteres do erro no `pszCode` se a expressão contiver um erro.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Quando este método é chamado, um mecanismo de depuração (DE) deve analisar a expressão e validá-lo estão corretos. O `pbstrError` e `pichError` parâmetros podem ser preenchidos se a expressão é inválida.  
+ Quando este método é chamado, um mecanismo de depuração (DES) deve analisar a expressão e validá-lo quanto à correção. O `pbstrError` e `pichError` parâmetros podem ser preenchidos se a expressão é inválida.  
   
- Observe que a expressão é avaliada não, somente analisado. Uma chamada posterior para o [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) ou [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) métodos avalia a expressão analisada.  
+ Observe que a expressão é avaliada não, apenas analisado. Uma chamada posterior para o [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) ou [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) métodos avalia a expressão analisada.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um simples `CEnvBlock` objeto que expõe o [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) interface. Este exemplo considera a expressão a ser analisado como o nome de uma variável de ambiente e recupera o valor dessa variável.  
+ O exemplo a seguir mostra como implementar esse método para um simples `CEnvBlock` objeto que expõe o [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) interface. Este exemplo considera que a expressão a ser analisado como o nome de uma variável de ambiente e recupera o valor dessa variável.  
   
 ```cpp  
 HRESULT CEnvBlock::ParseText(  

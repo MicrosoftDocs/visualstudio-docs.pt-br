@@ -1,7 +1,7 @@
 ---
-title: Localizando perdas de memória usando a biblioteca CRT | Microsoft Docs
+title: Localizar vazamentos de memória com a biblioteca CRT | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/04/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
@@ -31,68 +31,70 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d858b6c67893e49b4d4e9ec87c3b20fce56dd7c4
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 3b797e8c8068523b4c782c4d7f02a3853c1d37d1
+ms.sourcegitcommit: 12d6398c02e818de4fbcb4371bae9e5db6cf9509
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050099"
 ---
-# <a name="finding-memory-leaks-using-the-crt-library"></a>Localizando perdas de memória usando a biblioteca CRT
-Vazamentos de memória, definidos como a falha em desalocar corretamente a memória anteriormente alocada, estão entre os bugs mais sutis e difíceis de detectar em aplicativos C/C++. Um vazamento de memória pequeno não pode ser observado no início, mas ao longo do tempo, um vazamento de memória progressivo pode causar os sintomas que variam de desempenho reduzido a falhar quando o aplicativo é executado sem memória. Pior, um aplicativo de escape que usa toda a memória disponível pode causar a falha de outro aplicativo, criando a confusão a respeito de que o aplicativo é responsável. Até mesmo vazamentos de memória aparentemente inofensivos podem ser sintomáticos de outros problemas que devem ser corrigidos.  
-  
- O depurador do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] e as bibliotecas em tempo de execução (CRT) do C fornecem os meios para detectar e identificar vazamentos de memória.  
-  
-## <a name="enabling-memory-leak-detection"></a>Habilitando a detecção de vazamento de memória  
- As principais ferramentas para detectar memória vazamentos são bibliotecas de tempo de execução do C (CRT) e o depurador depura funções heap.  
-  
- Para ativar as funções da heap de depuração, inclua as seguintes instruções em seu programa:  
-  
-```  
+# <a name="find-memory-leaks-with-the-crt-library"></a>Localizar vazamentos de memória com a biblioteca CRT
+
+Vazamentos de memória estão entre a maioria dos bugs sutis e difíceis de detectar aplicativos em C/C++. Resultado da falha em desalocar corretamente a memória que foi alocada anteriormente vazamentos de memória. Um pequeno vazamento de memória pode não ser observado no início, mas ao longo do tempo pode causar os sintomas que variam de baixo desempenho a falhar quando o aplicativo é executado sem memória. Um aplicativo de vazamento que usa toda a memória disponível pode fazer com que outros aplicativos falhasse, criando a confusão sobre o qual aplicativo é responsável. Vazamentos de memória até mesmo inofensiva podem indicar outros problemas que devem ser corrigidos.  
+
+ O [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] depurador e a biblioteca de tempo de execução C (CRT) podem ajudá-lo a detectar e identificar vazamentos de memória.  
+
+## <a name="enable-memory-leak-detection"></a>Habilitar a detecção de vazamento de memória  
+
+As principais ferramentas para detectar vazamentos de memória são o depurador de C/C++ e a biblioteca de tempo de execução C (CRT) depurar funções de heap.  
+
+Para habilitar todas as funções de heap de depuração, inclua as seguintes instruções em seu programa de C++, na seguinte ordem:  
+
+```cpp
 #define _CRTDBG_MAP_ALLOC  
 #include <stdlib.h>  
 #include <crtdbg.h>  
 ```  
-  
- Para que as funções CRT funcionem corretamente, as instruções `#include` devem seguir a ordem mostrada aqui.  
-  
- Incluindo mapas crtdbg o `malloc` e [livre](/cpp/c-runtime-library/reference/free) funções para as versões de depuração, [malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg) e `free`, que controlam alocação de memória e a desalocação. Esse mapeamento ocorre apenas em compilações de depuração, que tem `_DEBUG`. Compilações lançadas usam as funções `malloc` e `free`.  
-  
- A declaração de `#define` mapeia uma versão de base de funções heap de CRT para a versão de depuração correspondente. Se você omitir a instrução `#define`, o despejo de vazamento de memória será menos detalhado.  
-  
- Após ser habilitado, o heap de depuração funciona usando essas declarações. Você poderá fazer uma chamada a `_CrtDumpMemoryLeaks` antes de um ponto de saída do aplicativo para exibir um relatório de vazamento de memória quando seu aplicativo for encerrado:  
-  
-```  
+
+A declaração de `#define` mapeia uma versão de base de funções heap de CRT para a versão de depuração correspondente. Se você deixar o `#define` instrução, o despejo de vazamento de memória será [menos detalhados](#interpret-the-memory-leak-report).  
+
+Incluindo *crtdbg. h* mapeia o `malloc` e `free` funções para suas versões de depuração [malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg) e [free_dbg](/cpp/c-runtime-library/reference/free-dbg), quais rastrear memória alocação e desalocação. Esse mapeamento ocorre apenas em compilações de depuração, que tem `_DEBUG`. Compilações lançadas usam as funções `malloc` e `free`.  
+
+Depois de habilitar as funções de heap de depuração usando as instruções anteriores, fazer uma chamada para [crtdumpmemoryleaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks) antes de um ponto de saída do aplicativo para exibir um relatório de vazamento de memória quando o aplicativo é encerrado.  
+
+```cpp
 _CrtDumpMemoryLeaks();  
 ```  
-  
- Se seu aplicativo tiver várias saídas, você não precisa colocar manualmente uma chamada para [crtdumpmemoryleaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks) em cada ponto de saída. Uma chamada para `_CrtSetDbgFlag` no início do seu aplicativo causará uma chamada automática para `_CrtDumpMemoryLeaks` em cada ponto de saída. Você deve definir os dois campos de bits mostrados aqui:  
-  
-```  
+
+Se seu aplicativo tiver várias saídas, você não precisa inserir manualmente o `_CrtDumpMemoryLeaks` em cada ponto de saída. Para fazer com que uma chamada automática para `_CrtDumpMemoryLeaks` em cada ponto de saída, fazer uma chamada para `_CrtSetDbgFlag` no início do seu aplicativo com os campos de bits mostrados aqui:
+
+```cpp
 _CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );  
 ```  
-  
- Por padrão, `_CrtDumpMemoryLeaks` gera o relatório de vazamento de memória para o **depurar** painel do **saída** janela. Você pode usar `_CrtSetReportMode` para redirecionar o relatório para outro local.  
-  
- Se você usar uma biblioteca, a biblioteca poderá redefinir a saída para outro local. Nesse caso, você pode definir o local de saída para o **saída** janela, conforme mostrado aqui:  
-  
-```  
+
+Por padrão, `_CrtDumpMemoryLeaks` gera o relatório de vazamento de memória para o **Debug** painel da **saída** janela. Se você usar uma biblioteca, a biblioteca poderá redefinir a saída para outro local. 
+
+Você pode usar `_CrtSetReportMode` para redirecionar o relatório para outro local ou de volta para o **saída** janela, conforme mostrado aqui:  
+
+```cpp
 _CrtSetReportMode( _CRT_ERROR, _CRTDBG_MODE_DEBUG );  
 ```  
-  
-## <a name="interpreting-the-memory-leak-report"></a>Interpretando o relatório de vazamento de memória  
- Se seu aplicativo não definir `_CRTDBG_MAP_ALLOC`, [crtdumpmemoryleaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks) exibe um relatório de vazamento de memória que tem esta aparência:  
-  
-```  
+
+## <a name="interpret-the-memory-leak-report"></a>Interpretar o relatório de vazamento de memória  
+
+Se seu aplicativo não definir `_CRTDBG_MAP_ALLOC`, [crtdumpmemoryleaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks) exibe um relatório de vazamento de memória que se parece com:  
+
+```cmd
 Detected memory leaks!  
 Dumping objects ->  
 {18} normal block at 0x00780E80, 64 bytes long.  
  Data: <                > CD CD CD CD CD CD CD CD CD CD CD CD CD CD CD CD  
 Object dump complete.  
 ```  
-  
- Se o seu aplicativo definir `_CRTDBG_MAP_ALLOC`, o relatório de vazamento de memória se parecerá com este:  
-  
-```  
+
+Se seu aplicativo definir `_CRTDBG_MAP_ALLOC`, o relatório de vazamento de memória se parece com:  
+
+```cmd
 Detected memory leaks!  
 Dumping objects ->  
 c:\users\username\documents\projects\leaktest\leaktest.cpp(20) : {18}   
@@ -100,28 +102,26 @@ normal block at 0x00780E80, 64 bytes long.
  Data: <                > CD CD CD CD CD CD CD CD CD CD CD CD CD CD CD CD  
 Object dump complete.  
 ```  
-  
- A diferença é que o segundo relatório mostra o nome do arquivo e número da linha no qual a memória vazada é atribuída primeiro.  
-  
- Se você definir `_CRTDBG_MAP_ALLOC` ou não, o relatório de vazamento de memória exibirá as seguintes informações:  
-  
--   O número de alocação de memória, que é `18` nesse exemplo  
-  
--   O [bloquear tipo](http://msdn.microsoft.com/en-us/e2f42faf-0687-49e7-aa1f-916038354f97), que é `normal` neste exemplo.  
-  
--   O número de alocação de memória hexadecimal, que é `0x00780E80` nesse exemplo.  
-  
--   O tamanho do bloco, `64 bytes` neste exemplo.  
-  
--   Os primeiros 16 bytes de dados no bloco, no formulário hexadecimal.  
-  
- O relatório de vazamento de memória identifica um bloco de memória como normal, cliente, ou CRT. Um *bloco normal* comum memória alocada pelo seu programa. Um *blocos de cliente* é um tipo especial de bloco de memória usado por programas MFC para objetos que exigem um destruidor. O operador MFC `new` cria um bloco normal ou um bloco de cliente, como apropriado para o objeto que estiver sendo criado. Um *bloco CRT* alocada pela biblioteca CRT para seu próprio uso. A biblioteca de CRT trata a desalocação desses blocos. Portanto, é improvável que você os veja no relatório de vazamento de memória a menos que algo esteja significativamente errado, por exemplo, a biblioteca de CRT está danificada.  
-  
- Há dois tipos de outros blocos de memória que nunca aparecem nos relatórios de escape de memória. Um *bloco livre* é a memória que foi liberada. Isso significa que não está vazado, por definição. Um *ignorar bloco* é a memória que você tenha marcado explicitamente para excluí-la a partir do relatório de vazamento de memória.  
-  
- Essas técnicas funcionam para a memória alocada usando a função de CRT `malloc` padrão. Se seu programa aloca memória usando o C++ `new` operador, no entanto, você pode ver apenas o número de arquivos e linhas em que a implementação do global `operator new` chamadas `_malloc_dbg` no relatório de vazamento de memória. Como esse comportamento não é muito útil, você pode alterá-lo para relatar a linha que fez a alocação usando uma macro parecida com esta: 
- 
-```C++  
+
+O segundo relatório mostra o nome de arquivo e número de linha em que a memória vazada é atribuída primeiro.  
+
+Se você definir `_CRTDBG_MAP_ALLOC`, exibe o relatório de vazamento de memória:  
+
+- O número de alocação de memória, que é `18` no exemplo  
+- O tipo de bloco, `normal` no exemplo.  
+- O local da memória hexadecimal, `0x00780E80` no exemplo.  
+- O tamanho do bloco, `64 bytes` no exemplo.  
+- Os primeiros 16 bytes de dados no bloco, no formulário hexadecimal.  
+
+Tipos de bloco de memória são *normal*, *cliente*, ou *CRT*. Um *bloco normal* é a memória comum atribuída pelo seu programa. Um *bloco de cliente* é um tipo especial de bloco de memória usado por programas MFC para objetos que exigem um destruidor. O operador MFC `new` cria um bloco normal ou um bloco de cliente, como apropriado para o objeto que estiver sendo criado. 
+
+Um *bloco de CRT* é alocado pela biblioteca de CRT para seu próprio uso. A biblioteca de CRT trata a desalocação desses blocos, para que os blocos de CRT não aparecerão no relatório de vazamento de memória, a menos que haja problemas sérios com a biblioteca de CRT.  
+
+Há dois tipos de outros blocos de memória que nunca aparecem nos relatórios de escape de memória. Um *bloco livre* é a memória que foi liberada, portanto, por definição, não é perdido. Uma *bloco ignorar* é a memória que você marcou explicitamente para excluir do relatório de vazamento de memória.  
+
+As técnicas anteriores identificam vazamentos de memória para a memória alocada usando o CRT padrão `malloc` função. Se seu programa aloca memória usando o C++ `new` operador, no entanto, você pode ver apenas o nome de arquivo e número de linha em que `operator new` chamadas `_malloc_dbg` no relatório de vazamento de memória. Para criar um relatório de vazamento de memória mais útil, você pode escrever uma macro semelhante ao seguinte para a linha que fez a alocação de relatório: 
+
+```cpp  
 #ifdef _DEBUG
     #define DBG_NEW new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )
     // Replace _NORMAL_BLOCK with _CLIENT_BLOCK if you want the
@@ -130,10 +130,10 @@ Object dump complete.
     #define DBG_NEW new
 #endif
 ```  
-  
-Agora você pode substituir o `new` operador usando o `DBG_NEW` macro em seu código. Em compilações de depuração, isso usa uma sobrecarga global `operator new` que usa parâmetros adicionais para o tipo de bloco, o arquivo e o número de linha. Esta sobrecarga do `new` chamadas `_malloc_dbg` para registrar as informações extras. Quando você usa `DBG_NEW`, o vazamento de memória relatórios mostram o nome de arquivo e número de linha em que os objetos vazados foram alocados. Em compilações para venda, ele usa o padrão `new`. (Não é recomendável criar uma macro de pré-processador denominada `new`, ou qualquer outra palavra-chave idioma.) Aqui está um exemplo da técnica:  
-  
-```C++  
+
+Agora você pode substituir a `new` operador, usando o `DBG_NEW` macro em seu código. Em compilações de depuração `DBG_NEW` usa uma sobrecarga global `operator new` que usa parâmetros adicionais para o tipo de bloco, o arquivo e o número de linha. A sobrecarga de `new` chamadas `_malloc_dbg` para registrar as informações extras. Os relatórios de vazamento de memória mostram o nome de arquivo e número de linha em que os objetos vazados foram alocados. Builds de versão ainda usa o padrão `new`. Aqui está um exemplo da técnica:  
+
+```cpp  
 // debug_new.cpp
 // compile by using: cl /EHsc /W4 /D_DEBUG /MDd debug_new.cpp
 #define _CRTDBG_MAP_ALLOC
@@ -160,9 +160,9 @@ void main() {
     _CrtDumpMemoryLeaks();
 }
 ```  
-  
-Quando você executar esse código no depurador do Visual Studio, a chamada para `_CrtDumpMemoryLeaks` gera um relatório no **saída** janela que é semelhante a este:  
-  
+
+Quando você executa esse código no Visual Studio do depurador, a chamada para `_CrtDumpMemoryLeaks` gera um relatório na **saída** janela semelhante a:  
+
 ```Output  
 Detected memory leaks!
 Dumping objects ->
@@ -171,67 +171,69 @@ c:\users\username\documents\projects\debug_new\debug_new.cpp(20) : {75}
  Data: <    > CD CD CD CD 
 Object dump complete.
 ```  
-  
-Isso indica que a alocação vazada foi na linha 20 debug_new.cpp.  
-  
-## <a name="setting-breakpoints-on-a-memory-allocation-number"></a>Pontos de interrupção em um Número de Alocação de Memória  
- O número de alocação de memória informa quando um bloco de memória vazado tiver sido atribuído. Um bloco com uma alocação de memória de 18, por exemplo, é o 18º bloco de memória alocado durante a execução do aplicativo. O relatório de CRT conta todas as alocações bloco de memória durante a execução. Isso inclui as alocações pela biblioteca de CRT e por outras bibliotecas, como o MFC. Portanto, um bloco com um número de alocação de memória de 18 não pode ser o 18º bloco de memória atribuído pelo seu código. Normalmente, não será.  
-  
- Você pode usar o número de alocação para definir um ponto de interrupção na alocação da memória.  
-  
-#### <a name="to-set-a-memory-allocation-breakpoint-using-the-watch-window"></a>Para definir um ponto de interrupção de alocação de memória usando a janela Inspeção  
-  
-1.  Defina um ponto de interrupção no início do seu aplicativo, e depois inicie seu aplicativo.  
-  
-2.  Quando o aplicativo for interrompido no ponto de interrupção, o **inspecionar** janela.  
-  
-3.  No **inspecionar** , digite `_crtBreakAlloc` no **nome** coluna.  
-  
-     Se estiver usando a versão com multithread da DLL da biblioteca CRT (a opção /MD), inclua o operador de contexto: `{,,ucrtbased.dll}_crtBreakAlloc`  
-  
-4.  Pressione **retornar**.  
-  
-     O depurador avalia a chamada e coloca o resultado no **valor** coluna. Esse valor será -1 se você não tiver configurado qualquer ponto de interrupção em alocações de memória.  
-  
-5.  No **valor** coluna, substitua o valor mostrado com o número de alocação da alocação de memória em que você deseja interromper.  
-  
- Após definir um ponto de interrupção em um número de alocação de memória, você poderá continuar a depuração. Tenha cuidado ao executar o programa nas mesmas condições que a execução anterior de modo que a ordem de alocação de memória não seja alterada. Quando o programa for interrompido na alocação de memória especificado, você pode usar o **pilha de chamadas** janela e outras janelas do depurador para determinar as condições sob as quais a memória foi alocada. Em seguida, você pode continuar a execução para observar o que acontece ao objeto e determinar o motivo dele não ser deslocado corretamente.  
-  
- Definindo um ponto de interrupção de dados no objeto também pode ser útil. Para obter mais informações, consulte [usando pontos de interrupção](../debugger/using-breakpoints.md).  
-  
- Você também pode definir pontos de interrupção de alocação de memória no código. Há duas formas de fazer isso:  
-  
-```  
+
+Esta saída de relatórios que a alocação vazada foi na linha 20 *debug_new.cpp*.  
+
+>[!NOTE]
+>Não recomendamos que você criar uma macro de pré-processador chamada `new`, ou qualquer outra linguagem palavra-chave. 
+
+## <a name="set-breakpoints-on-a-memory-allocation-number"></a>Definir pontos de interrupção em um número de alocação de memória  
+
+O número de alocação de memória informa quando um bloco de memória vazado tiver sido atribuído. Um bloco com um número de alocação de memória de 18, por exemplo, é o 18º bloco de memória alocada durante a execução do aplicativo. O relatório de CRT conta todas as alocações de bloco de memória durante a execução, incluindo as alocações pela biblioteca de CRT e outras bibliotecas como MFC. Portanto, 18, número de bloco de alocação de memória provavelmente não é o 18º bloco de memória alocado pelo seu código. 
+
+Você pode usar o número de alocação para definir um ponto de interrupção na alocação da memória.  
+
+**Para definir um ponto de interrupção de alocação de memória usando a janela Inspeção:**  
+
+1. Defina um ponto de interrupção no início do seu aplicativo e iniciar a depuração.  
+   
+1. Quando o aplicativo faz uma pausa no ponto de interrupção, abra uma **Watch** janela selecionando **Debug** > **Windows** > **inspeção 1** (ou **assistir 2**, **assistir 3**, ou **Assista 4**).  
+   
+1. No **Watch** , digite `_crtBreakAlloc` no **nome** coluna.  
+   
+   Se você estiver usando a versão com multithread da DLL da biblioteca CRT (a opção /MD), adicione o operador de contexto: `{,,ucrtbased.dll}_crtBreakAlloc`  
+   
+1. Pressione **ENTER**.  
+   
+   O depurador avalia a chamada e coloca o resultado na **valor** coluna. Esse valor será **-1** se você não definiu nenhum ponto de interrupção nas alocações de memória.  
+   
+1. No **valor** coluna, substitua o valor com o número de alocação da alocação de memória em que você deseja que o depurador seja interrompido.  
+
+Depois de definir um ponto de interrupção em um número de alocação de memória, continue a depuração. Certifique-se ser executado com as mesmas condições, para que o número de alocação de memória não muda. Quando o programa interrompe a alocação de memória especificada, use o **pilha de chamadas** janela e outras janelas do depurador para determinar as condições sob as quais a memória foi alocada. Em seguida, você pode continuar a execução para observar o que acontece ao objeto e determinar por que não é deslocado corretamente.  
+
+Definindo um ponto de interrupção de dados no objeto também pode ser útil. Para obter mais informações, consulte [usando pontos de interrupção](../debugger/using-breakpoints.md).  
+
+Você também pode definir pontos de interrupção de alocação de memória no código. Você pode definir:  
+
+```cpp
 _crtBreakAlloc = 18;  
 ```  
-  
+
  ou:  
-  
-```  
+
+```cpp
 _CrtSetBreakAlloc(18);  
 ```  
-  
-## <a name="comparing-memory-states"></a>Comparando estados de memória  
- Outra técnica para localizar vazamentos de memória envolve pegar instantâneos do estado da memória do aplicativo em pontos-chave. Para obter um instantâneo do estado da memória em um determinado ponto no seu aplicativo, criar um **crtmemstate** estrutura e passá-lo para o `_CrtMemCheckpoint` função. Esta função preenche a estrutura com uma forma instantânea do estado de memória atual:  
-  
-```  
+
+## <a name="compare-memory-states"></a>Comparar os estados de memória  
+ Outra técnica para localizar vazamentos de memória envolve pegar instantâneos do estado da memória do aplicativo em pontos-chave. Para obter um instantâneo do estado de memória em um determinado ponto no seu aplicativo, crie uma `_CrtMemState` estruturar e passá-lo para o `_CrtMemCheckpoint` função. 
+
+```cpp
 _CrtMemState s1;  
 _CrtMemCheckpoint( &s1 );  
-  
 ```  
-  
- `_CrtMemCheckpoint` preencha a estrutura com uma forma instantânea do estado de memória atual.  
-  
- Para gerar o conteúdo de um **crtmemstate** estrutura, transmitir a estrutura para o `_ CrtMemDumpStatistics` função:  
-  
-```  
+
+O `_CrtMemCheckpoint` função preenche a estrutura com um instantâneo do estado atual de memória.  
+
+Para exibir o conteúdo de um `_CrtMemState` estrutura, passe a estrutura para o `_ CrtMemDumpStatistics` função:  
+
+```cpp
 _CrtMemDumpStatistics( &s1 );  
-  
 ```  
-  
- saída de`_ CrtMemDumpStatistics` resulta num despejo do estado de memória que parece com este:  
-  
-```  
+
+`_ CrtMemDumpStatistics` gera um despejo do estado de memória que se parece com:  
+
+```cmd
 0 bytes in 0 Free Blocks.  
 0 bytes in 0 Normal Blocks.  
 3071 bytes in 16 CRT Blocks.  
@@ -239,28 +241,27 @@ _CrtMemDumpStatistics( &s1 );
 0 bytes in 0 Client Blocks.  
 Largest number used: 3071 bytes.  
 Total allocations: 3764 bytes.  
-  
 ```  
-  
- Para determinar se um vazamento de memória ocorreu em uma seção de código, você pode capturar instantâneos do estado da memória antes e após a seção e, em seguida, usar `_ CrtMemDifference` para comparar os dois estados:  
-  
-```  
+
+Para determinar se um vazamento de memória ocorreu em uma seção de código, você pode capturar instantâneos do estado da memória antes e após a seção e, em seguida, usar `_ CrtMemDifference` para comparar os dois estados:  
+
+```cpp
 _CrtMemCheckpoint( &s1 );  
 // memory allocations take place here  
 _CrtMemCheckpoint( &s2 );  
-  
+
 if ( _CrtMemDifference( &s3, &s1, &s2) )  
    _CrtMemDumpStatistics( &s3 );  
 ```  
-  
- `_CrtMemDifference` compara os estados de memória `s1` e `s2` e retorna um resultado em (`s3`) que é a diferença de `s1` e de `s2`.  
-  
- Uma técnica para localizar vazamentos de memória começa colocando chamadas de `_CrtMemCheckpoint` no início e fim do seu aplicativo, depois usando `_CrtMemDifference` para comparar os resultados. Se `_CrtMemDifference` mostra um vazamento de memória, você pode adicionar mais chamadas de `_CrtMemCheckpoint` para dividir seu programa usando uma busca binária até ter isolado a fonte do vazamento.  
-  
+
+`_CrtMemDifference` compara os estados de memória `s1` e `s2` e retorna um resultado em (`s3`) que é a diferença entre `s1` e `s2`.  
+
+Uma técnica para localizar vazamentos de memória começa colocando `_CrtMemCheckpoint` chamadas no início e no final de seu aplicativo, em seguida, usando `_CrtMemDifference` para comparar os resultados. Se `_CrtMemDifference` mostra um vazamento de memória, você pode adicionar mais `_CrtMemCheckpoint` chamadas para dividir seu programa usando uma pesquisa binária, até ter isolado a fonte do vazamento.  
+
 ## <a name="false-positives"></a>Falsos positivos  
- Em alguns casos, `_CrtDumpMemoryLeaks` poderá dar falsas indicações de vazamentos de memória. Isso pode ocorrer se você usar uma biblioteca que marca alocações internas como _NORMAL_BLOCKs em vez de `_CRT_BLOCK`s ou de `_CLIENT_BLOCK`s. Nesse caso, `_CrtDumpMemoryLeaks` não é capaz de reconhecer a diferença entre alocações de usuário e alocações internas de biblioteca. Se os destruidores globais das alocações de biblioteca forem executados após o ponto onde você chama `_CrtDumpMemoryLeaks`, cada alocação interna da biblioteca será relatada como um vazamento de memória. As versões anteriores de biblioteca padrão do modelo, anteriores do Visual Studio .NET, causaram `_CrtDumpMemoryLeaks` para relatar falsos positivos, mas este foram corrigidos em versões recentes.  
-  
+ `_CrtDumpMemoryLeaks` poderá dar falsas indicações de vazamentos de memória, se uma biblioteca de marca alocações internas como os blocos normais, em vez de blocos de CRT ou blocos de cliente. Nesse caso, `_CrtDumpMemoryLeaks` não é capaz de reconhecer a diferença entre alocações de usuário e alocações internas de biblioteca. Se os destruidores globais das alocações de biblioteca forem executados após o ponto onde você chama `_CrtDumpMemoryLeaks`, cada alocação interna da biblioteca será relatada como um vazamento de memória. Versões da biblioteca padrão do modelo antes que o Visual Studio .NET pode causar `_CrtDumpMemoryLeaks` relatar tais falsos positivos.  
+
 ## <a name="see-also"></a>Consulte também  
- [Detalhes de Heap de depuração CRT](../debugger/crt-debug-heap-details.md)   
+ [Detalhes do heap de depuração CRT](../debugger/crt-debug-heap-details.md)   
  [Segurança do depurador](../debugger/debugger-security.md)   
  [Depurando código nativo](../debugger/debugging-native-code.md)

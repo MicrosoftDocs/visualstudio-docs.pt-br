@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d2bea7816375da1131f557ebcbe206056f347f2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2eea561b82b06d44dfbc787172e7ae063b421e2f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49929784"
 ---
 # <a name="sccdirdiff-function"></a>Função SccDirDiff
-Esta função exibe as diferenças entre o diretório local atual no disco do cliente e o projeto correspondente no controle de origem.  
+Esta função exibe as diferenças entre o diretório local atual no disco do cliente e o projeto correspondente sob controle do código-fonte.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +37,7 @@ SCCRTN SccDirDiff(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  pContext  
  [in] A estrutura de contexto de plug-in de controle de origem.  
   
@@ -52,35 +53,35 @@ SCCRTN SccDirDiff(
  pvOptions  
  [in] Opções de plug-in específico de controle de origem.  
   
-## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+## <a name="return-value"></a>Valor retornado  
+ A implementação de plug-in de controle do código-fonte desta função deve retornar um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |SCC_OK|O diretório em disco é o mesmo que o projeto no controle do código fonte.|  
-|SCC_I_FILESDIFFER|O diretório em disco é diferente do projeto no controle do código fonte.|  
+|SCC_I_FILESDIFFER|O diretório no disco é diferente do projeto no controle do código fonte.|  
 |SCC_I_RELOADFILE|Um arquivo ou projeto precisa ser recarregado.|  
-|SCC_E_FILENOTCONTROLLED|O diretório não está sob controle do código fonte.|  
+|SCC_E_FILENOTCONTROLLED|O diretório não está sob controle do código-fonte.|  
 |SCC_E_NOTAUTHORIZED|O usuário não tem permissão para executar esta operação.|  
-|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle de origem, provavelmente devido a problemas de rede ou de contenção. Recomenda-se uma nova tentativa.|  
+|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle do código-fonte, provavelmente devido a problemas de rede ou de contenção. É recomendável uma nova tentativa.|  
 |SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Falha não específica.|  
 |SCC_E_FILENOTEXIST|Não foi possível encontrar o diretório local.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa função é usada para instruir o plug-in para exibir ao usuário uma lista de alterações para um diretório especificado do controle de origem. O plug-in abre sua própria janela, em um formato de sua escolha, para exibir as diferenças entre o diretório do usuário no disco e o projeto correspondente sob controle de versão.  
+ Essa função é usada para instruir o controle de fonte de plug-in para exibir ao usuário uma lista de alterações para um diretório especificado. O plug-in abre sua própria janela, em um formato de sua escolha, para exibir as diferenças entre o diretório do usuário no disco e o projeto correspondente sob controle de versão.  
   
- Se o plug-in oferece suporte à comparação de diretórios em todos os, deve suportar comparação dos diretórios em uma base de nome de arquivo mesmo se não há suporte para as opções "comparação rápida".  
+ Se uma comparação dá suporte a plug-in de diretórios em todas, ele deve oferecer suporte a comparação dos diretórios em uma base de nome de arquivo, mesmo se não há suporte para as opções "diff rápido".  
   
 |`dwFlags`|Interpretação|  
 |---------------|--------------------|  
-|SCC_DIFF_IGNORECASE|Comparação de maiusculas e minúsculas (pode ser usado para comparação rápida ou visual).|  
+|SCC_DIFF_IGNORECASE|Comparação diferencia maiusculas de minúsculas (pode ser usado para comparação rápida ou visual).|  
 |SCC_DIFF_IGNORESPACE|Ignora o espaço em branco (pode ser usado para comparação rápida ou visual).|  
-|SCC_DIFF_QD_CONTENTS|Se o plug-in de controle de origem com suporte, silenciosamente compara o diretório, byte por byte.|  
-|SCC_DIFF_QD_CHECKSUM|Se suportado pelo plug-in, silenciosamente compara o diretório por meio de uma soma de verificação ou, se não houver suporte, volta ao SCC_DIFF_QD_CONTENTS.|  
-|SCC_DIFF_QD_TIME|Se suportado pelo plug-in, silenciosamente compara o diretório por meio de seu carimbo de hora ou, se não houver suporte, volta em SCC_DIFF_QD_CHECKSUM ou SCC_DIFF_QD_CONTENTS.|  
+|SCC_DIFF_QD_CONTENTS|Se houver suporte a plug-in de controle do código-fonte, compara silenciosamente o diretório, byte por byte.|  
+|SCC_DIFF_QD_CHECKSUM|Se compatível com o plug-in, silenciosamente compara o diretório por meio de uma soma de verificação ou, se não tiver suporte, voltará a SCC_DIFF_QD_CONTENTS.|  
+|SCC_DIFF_QD_TIME|Se compatível com o plug-in, silenciosamente compara o diretório por meio de seu carimbo de hora ou, se não tiver suporte, recai em SCC_DIFF_QD_CHECKSUM ou SCC_DIFF_QD_CONTENTS.|  
   
 > [!NOTE]
->  Essa função usa os mesmos sinalizadores de comando como o [SccDiff](../extensibility/sccdiff-function.md). No entanto, um plug-in de controle de origem pode optar por não dar suporte à operação de "comparação rápida" para diretórios.  
+>  Essa função usa os mesmos sinalizadores de comando como o [SccDiff](../extensibility/sccdiff-function.md). No entanto, um plug-in de controle do código-fonte pode optar por não oferece suporte à operação "diff rápido" para diretórios.  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções de API do plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
+ [Funções de API de plug-in da controle de origem](../extensibility/source-control-plug-in-api-functions.md)

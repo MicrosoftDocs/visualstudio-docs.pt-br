@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03fbc1499372221a815eb639442af586f7020cf1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b3eaf98fe0c60a23f519bd6ec86ae6c674ac3b4e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877030"
 ---
 # <a name="idebugactivatedocumentevent2getdocumentcontext"></a>IDebugActivateDocumentEvent2::GetDocumentContext
-Obtém o contexto de documento que descreve a posição do documento que está para se tornar ativa, o pacote de depuração.  
+Obtém o contexto do documento que descreve a posição do documento que deve ficar ativo com o pacote de depuração.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +48,7 @@ int GetDocumentContext (
  Nessa posição pode ser usada para mostrar o cursor, por exemplo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugActivateDocumentEvent2](../../../extensibility/debugger/reference/idebugactivatedocumentevent2.md)   

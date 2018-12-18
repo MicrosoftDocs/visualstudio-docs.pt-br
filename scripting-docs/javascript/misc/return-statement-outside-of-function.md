@@ -1,13 +1,13 @@
 ---
-title: "&#39; retorno &#39; instrução fora da função | Microsoft Docs"
-ms.custom: 
+title: '&#39;retornar&#39; instrução fora de função | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1018
@@ -16,20 +16,21 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: 03568f9f-5f4f-4a10-a738-9a73f3832b9e
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 07b633c87dc11b291a5a5783f8121b2a368996d6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846508"
 ---
-# <a name="39return39-statement-outside-of-function"></a>&#39; retorno &#39; instrução fora da função
-Você usou um `return` instrução no escopo global do seu código. O `return` instrução só deve aparecer dentro do corpo de uma função.  
+# <a name="39return39-statement-outside-of-function"></a>&#39;retornar&#39; instrução fora de função
+Você usou um `return` instrução no escopo global do seu código. O `return` instrução deve aparecer apenas dentro do corpo de uma função.  
   
- Invocar uma função com o `()` operador é uma expressão. Todas as expressões têm valores; o `return` instrução é usada para especificar o valor reajustado por uma função. O formato geral é:  
+ Invocação de uma função com o `()` operador é uma expressão. Todas as expressões têm valores; o `return` instrução é usada para especificar o valor retornado por uma função. O formato geral é:  
   
 ```  
   
@@ -38,9 +39,9 @@ return [ expression ];
   
  Quando o `return` instrução é executada, *expressão* é avaliado e retornado como o valor da função. Se não houver nenhuma expressão **indefinido** é retornado.  
   
- A execução da função para quando o `return` instrução é executada, mesmo se não houver outras instruções restantes ainda no corpo da função. A exceção a essa regra é se o **retornar** instrução ocorre dentro de um **tente** bloco, e há um correspondente **finalmente** bloco, o código no  **Por fim** bloco será executado antes da função retorna.  
+ A execução da função é interrompido quando o `return` instrução é executada, mesmo se houver outras instruções ainda resta no corpo da função. A exceção a essa regra é se o **retornar** instrução ocorre dentro de uma **tente** bloco, e há um correspondente **finalmente** bloco, o código no  **Por fim** bloco serão executadas antes da função retorna.  
   
- Se uma função retorna porque ele atinge o final do corpo da função sem executar uma `return` instrução, o valor retornado é o **indefinido** valor (Isso significa que o resultado da função não pode ser usado como parte de uma expressão maior ).  
+ Se uma função retornar porque ela atinge o final do corpo da função sem executar uma `return` instrução, o valor retornado é o **indefinido** valor (Isso significa que o resultado da função não pode ser usado como parte de uma expressão maior ).  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   

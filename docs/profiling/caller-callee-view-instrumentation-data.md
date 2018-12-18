@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c8048d7dfd54627394705b2ca9e2ba9949f2bca1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b8a24d19fabc3cb82dbb4004ec71b6fa00bc470c
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34336107"
 ---
-# <a name="callercallee-view---instrumentation-data"></a>Exibição de chamador/computador chamado – dados de instrumentação
+# <a name="callercallee-view---instrumentation-data"></a>Exibição do Chamador/Receptor – dados de instrumentação
 A exibição de Chamador/Computador Chamado exibe informações de criação de perfil sobre uma função selecionada e suas funções pai e filho na árvore de chamadas. A exibição de Chamador/Computador Chamado contém três grades.  
   
  **Função atual** é exibida na grade intermediária e mostra informações de criação de perfil sobre a função selecionada. Os valores incluem todas as chamadas feitas à função.  
@@ -46,7 +47,7 @@ A exibição de Chamador/Computador Chamado exibe informações de criação de 
 |**Tipo**|O contexto da função:<br /><br /> **0** – a função atual<br /><br /> **1** – uma função que chama a função atual<br /><br /> **2** – uma função que é chamada pela função atual<br /><br /> Somente em relatórios de linha de comando [VSPerfReport](../profiling/vsperfreport.md).|  
 |**Nome da Função Raiz**|O nome da função atual. Somente em relatórios de linha de comando [VSPerfReport](../profiling/vsperfreport.md).|  
   
-## <a name="elapsed-inclusive-values"></a>Valores Inclusivos Decorridos  
+## <a name="elapsed-inclusive-values"></a>Valores inclusivos decorridos  
  Os valores inclusivos decorridos indicam o tempo que uma função ficou na pilha de chamadas. O tempo inclui o tempo gasto em funções filho e o tempo gasto em chamadas para o sistema operacional, como operações de entrada/saída e de mudanças de contexto.  
   
 |Column|Descrição|  
@@ -57,7 +58,7 @@ A exibição de Chamador/Computador Chamado exibe informações de criação de 
 |**Tempo Inclusivo Decorrido Máximo**|O tempo inclusivo decorrido máximo de uma chamada para essa função nesse contexto.|  
 |**Tempo Inclusivo Decorrido Mínimo**|O tempo inclusivo decorrido mínimo de uma chamada para essa função nesse contexto.|  
   
-## <a name="elapsed-exclusive-values"></a>Valores Exclusivos Decorridos  
+## <a name="elapsed-exclusive-values"></a>Valores exclusivos decorridos  
  Valores exclusivos decorridos indicam o tempo durante o qual uma função estava diretamente em execução no topo da pilha de chamadas. O tempo inclui o tempo gasto em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto, mas não inclui o tempo gasto em funções filho.  
   
 |Column|Descrição|  
@@ -68,7 +69,7 @@ A exibição de Chamador/Computador Chamado exibe informações de criação de 
 |**Tempo Exclusivo Decorrido Máximo**|O tempo exclusivo decorrido máximo de uma chamada para essa função nesse contexto.|  
 |**Tempo Exclusivo Decorrido Mínimo**|O tempo exclusivo decorrido mínimo de uma chamada para essa função nesse contexto.|  
   
-## <a name="application-inclusive-values"></a>Valores Inclusivos do Aplicativo  
+## <a name="application-inclusive-values"></a>Valores inclusivos do aplicativo  
  Os valores inclusivos do aplicativo indicam o tempo que uma função ficou na pilha de chamadas. O tempo não inclui o tempo gasto em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto, mas inclui o tempo gasto em funções filho.  
   
 |Column|Descrição|  
@@ -79,7 +80,7 @@ A exibição de Chamador/Computador Chamado exibe informações de criação de 
 |**Tempo Inclusivo Máximo do Aplicativo**|O tempo inclusivo máximo do aplicativo de uma chamada para essa função nesse contexto.|  
 |**Tempo Inclusivo Mínimo do Aplicativo**|O tempo inclusivo mínimo do aplicativo de uma chamada para essa função nesse contexto.|  
   
-## <a name="application-exclusive-values"></a>Valores Exclusivos do Aplicativo  
+## <a name="application-exclusive-values"></a>Valores exclusivos do aplicativo  
  Valores exclusivos do aplicativo indicam o tempo gasto na função. Isso exclui o tempo gasto em funções filho e também exclui as chamadas para o sistema operacional, como mudanças de contexto e operações de entrada/saída.  
   
 |Column|Descrição|  
@@ -91,7 +92,7 @@ A exibição de Chamador/Computador Chamado exibe informações de criação de 
 |**Tempo Exclusivo Mínimo do Aplicativo**|O tempo exclusivo mínimo do aplicativo de uma chamada para essa função nesse contexto.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Como personalizar as colunas de exibição do relatório](../profiling/how-to-customize-report-view-columns.md)   
- [Exibição de chamador/computador chamado – dados de amostragem](../profiling/caller-callee-view-sampling-data.md)   
- [Exibição Chamador/Receptor da Chamada – dados de amostragem da memória do .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
- [Exibição Chamador/Receptor da Chamada – dados de instrumentação da memória do .NET](../profiling/caller-callee-view-net-memory-instrumentation-data.md)
+ [Como personalizar as colunas de visualização de relatório](../profiling/how-to-customize-report-view-columns.md)   
+ [Exibição do chamador/chamado – dados de amostragem](../profiling/caller-callee-view-sampling-data.md)   
+ [Exibição do Chamador/Receptor – dados de amostragem da memória do .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
+ [Exibição do Chamador/Receptor – dados de instrumentação da memória do .NET](../profiling/caller-callee-view-net-memory-instrumentation-data.md)

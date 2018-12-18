@@ -1,10 +1,9 @@
 ---
-title: Recursos para solucionar problemas de erros do ambiente de desenvolvimento integrado | Microsoft Docs
-ms.custom: ''
+title: Recursos para solucionar erros
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: troubleshooting
 f1_keywords:
 - VS.Message.0x00005A89
 - VS.Message.0x00005A8E
@@ -96,30 +95,35 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 48516bd598719112a3a94216b3510b628579f032
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5dcdcffbcf947efa7da8471a970d07a23fe90ba4
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349277"
 ---
-# <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Recursos para solucionar problemas de erros de ambiente do ambiente integrado
+# <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Recursos para solucionar erros do ambiente de desenvolvimento integrado
 
-Nem todas as mensagens de erro têm um tópico de Ajuda específico associado. Se as informações na mensagem de erro não ajudarem você a resolver o problema, você pode consultar outros recursos, como artigos da Base de Dados de Conhecimento, a comunidade de desenvolvedores ou o suporte do produto.
+Nem todas as mensagens de erro têm um tópico de Ajuda específico associado. Se as informações na mensagem de erro não ajudarem a resolver o problema, consulte outros recursos, como os artigos da Base de Dados de Conhecimento, os fóruns ou o suporte ao produto.
+
+> [!NOTE]
+> Este tópico aplica-se ao Visual Studio no Windows. Para o Visual Studio para Mac, confira [Solucionar problemas do Visual Studio para Mac](/visualstudio/mac/troubleshooting).
 
 ## <a name="knowledge-base-articles"></a>Artigos da Base de Dados de Conhecimento
 
 É possível pesquisar a KB (Base de Dados de Conhecimento) online para encontrar artigos sobre problemas do produto. Nem todos os problemas têm um artigo correspondente na KB, mas erros encontrados por um número significativo de clientes normalmente são documentados. Você pode acessar artigos da KB no site de [Suporte da Microsoft](https://support.microsoft.com).
 
-## <a name="the-developer-community"></a>A comunidade de desenvolvedores
+## <a name="developer-forums"></a>Fóruns para desenvolvedores
 
-Fóruns lhe permitem interagir com outros desenvolvedores e também com funcionários da Microsoft. Se encontrar um erro para o qual não é possível encontrar uma resolução, você pode postar perguntas sobre o problema em um fórum. Você também pode pesquisar grupos de notícias para ver outras pessoas postaram sobre o mesmo problema.
+Os fóruns lhe permitem interagir com outros desenvolvedores e também com funcionários da Microsoft. Se encontrar um erro para o qual não é possível encontrar uma resolução, você pode postar perguntas sobre o problema em um fórum. Também é possível pesquisar grupos de notícias para ver se outras pessoas postaram sobre o mesmo problema.
 
 Você pode acessar fóruns, blogs, chats e outros recursos sobre no site das [Comunidades Técnicas da Microsoft](https://techcommunity.microsoft.com/t5/Communities/ct-p/communities).
 
-## <a name="product-support"></a>Suporte a produto
+## <a name="product-support"></a>Suporte ao produto
 
 Se ainda tiver dúvidas após tentar os outros recursos, você pode contatar os serviços de suporte da Microsoft visitando o site de [Suporte da Microsoft](http://go.microsoft.com/fwlink/?linkid=1782). Para obter informações sobre o suporte de produto disponível na sua área, consulte [Fale conosco](../../ide/talk-to-us.md).
 
- ## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte também
 
-* [Solução de erros de proxy](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server#troubleshooting-proxy-errors)
+* [Solução de problemas relacionados à rede ou erros de proxy](../../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md#troubleshoot-network-related-errors)
+* [Solução de problemas (Visual Studio para Mac)](/visualstudio/mac/troubleshooting)

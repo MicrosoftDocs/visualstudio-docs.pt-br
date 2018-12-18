@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e4414d5f444613996312978e9033145c6b8d3d82
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6d1ca080ea61fbaaba7992fd8f4f1f4fbeac843d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49824314"
 ---
 # <a name="projectsubtype-element-visual-studio-templates"></a>Elemento ProjectSubType (modelos do Visual Studio)
-Classifica o modelo em uma subcategoria do valor especificado no `ProjectType` elemento.  
+Classifica o modelo em uma subcategoria de valor especificado no `ProjectType` elemento.  
   
  \<VSTemplate >  
  \<TemplateData >  
@@ -31,7 +32,7 @@ Classifica o modelo em uma subcategoria do valor especificado no `ProjectType` e
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <ProjectSubType> SubType </ProjectSubType>  
 ```  
   
@@ -48,7 +49,7 @@ Classifica o modelo em uma subcategoria do valor especificado no `ProjectType` e
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele exibe em um a **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo.|  
   
 ## <a name="text-value"></a>Valor de texto  
  Um valor de texto é obrigatório.  
@@ -58,20 +59,20 @@ Classifica o modelo em uma subcategoria do valor especificado no `ProjectType` e
 ## <a name="remarks"></a>Comentários  
  O `ProjectSubType` é um elemento filho opcional de `TemplateData`.  
   
- O `ProjectSubType` elemento fornece uma subcategoria para o [ProjectType](../extensibility/projecttype-element-visual-studio-templates.md) elemento. Esse valor pode incluir:  
+ O `ProjectSubType` elemento fornece uma subcategoria para a [ProjectType](../extensibility/projecttype-element-visual-studio-templates.md) elemento. Esse valor pode incluir:  
   
--   `SmartDevice-NETCFv1`: Especifica que os destinos de modelo de [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] versão 1.0.  
+- `SmartDevice-NETCFv1`: Especifica que os destinos de modelo a [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] versão 1.0.  
   
--   `SmartDevice-NETCFv2`: Especifica que os destinos tempalate o [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] versão 2.0.  
+- `SmartDevice-NETCFv2`: Especifica que os destinos de modelo a [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] versão 2.0.  
   
- Se um modelo contém uma `ProjectType` elemento com um valor de `Web`, o `ProjectSubType` elemento Especifica a linguagem de programação do modelo. Esse elemento pode ter os seguintes valores:  
+  Se um modelo contém um `ProjectType` elemento com um valor de `Web`, o `ProjectSubType` elemento Especifica a linguagem de programação do modelo. Esse elemento pode ter os seguintes valores:  
   
--   `CSharp`: Especifica que o modelo cria um [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projeto Web ou item.  
+- `CSharp`: Especifica que o modelo cria um [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projeto da Web ou um item.  
   
--   `VisualBasic`: Especifica que o modelo cria um [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projeto Web ou item.  
+- `VisualBasic`: Especifica que o modelo cria um [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projeto da Web ou um item.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra os metadados para um modelo de projeto para um [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] segmentação do aplicativo de dispositivo de [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] versão 2.0.  
+ O exemplo a seguir mostra os metadados para um modelo de projeto para um [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] segmentação do aplicativo de dispositivo a [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] versão 2.0.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -100,5 +101,5 @@ Classifica o modelo em uma subcategoria do valor especificado no `ProjectType` e
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)   
- [Elemento ProjectType (Modelos do Visual Studio)](../extensibility/projecttype-element-visual-studio-templates.md)
+ [Criando modelos de projeto e item](../ide/creating-project-and-item-templates.md)   
+ [Elemento ProjectType (modelos do Visual Studio)](../extensibility/projecttype-element-visual-studio-templates.md)

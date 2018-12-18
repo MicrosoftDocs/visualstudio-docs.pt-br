@@ -1,12 +1,10 @@
 ---
-title: Desabilitar ou mover o cache do pacote | Microsoft Docs
-description: Desabilitar, habilitar ou mover o cache do pacote para implantações do Visual Studio.
+title: Desabilitar ou mover o cache do pacote
+description: Saiba como desabilitar, habilitar ou mover o cache do pacote para implantações do Visual Studio.
 ms.date: 04/14/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-acquisition
-ms.tgt_pltfrm: ''
+ms.technology: vs-acquisition
+ms.custom: seodec18
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - cache
@@ -20,11 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7027413936cc7f907b4ec70304317c71c5ceb2da
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: 006e7112a2b6c7b990fb412c6a9a2c458bc9e8b2
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159536"
 ---
 # <a name="disable-or-move-the-package-cache"></a>Desabilitar ou mover o cache do pacote
 
@@ -35,7 +34,7 @@ O instalador os baixará quando necessário. Portanto, se você deseja salvar ou
 
 Antes de instalar, modificar ou reparar o Visual Studio ou outros produtos com o novo instalador, você pode iniciar o instalador com a opção `--nocache` para o instalador.
 
-```
+```cmd
 "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vs_installer.exe" --nocache
 ```
 
@@ -43,7 +42,7 @@ Qualquer operação que você fizer em qualquer produto removerá quaisquer paco
 
 Se você quiser reabilitar o cache, passe `--cache` em vez disso. Somente os pacotes que são necessários serão armazenados. Portanto, se você precisar restaurar todos os pacotes, deverá reparar o Visual Studio antes de se desconectar da rede.
 
-```
+```cmd
 "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vs_installer.exe" repair --passive --norestart --cache
 ```
 
@@ -55,17 +54,10 @@ Uma configuração comum do sistema é ter o Windows instalado em um SSD com um 
 
 No momento, você só poderá fazer isso se definir a `CachePath`[política do Registro](set-defaults-for-enterprise-deployments.md) antes de instalar, modificar ou reparar o Visual Studio.
 
-## <a name="get-support"></a>Obter suporte
-Às vezes, as coisas podem dar errado. Caso a instalação do Visual Studio falhe, confira a página [Solução de problemas de instalação e atualização do Visual Studio 2017](troubleshooting-installation-issues.md). Se nenhuma das etapas de solução de problemas ajudar, entre em contato conosco por meio de um chat ao vivo para obter ajuda com a instalação (somente em inglês). Para saber mais detalhes, confira a [página de suporte do Visual Studio](https://www.visualstudio.com/vs/support/#talktous).
-
-Aqui estão algumas outras opções de suporte:
-* Você pode nos relatar problemas do produto por meio da ferramenta [Relatar um Problema](../ide/how-to-report-a-problem-with-visual-studio-2017.md), exibida no Instalador do Visual Studio e no IDE do Visual Studio.
-* Você pode compartilhar uma sugestão de produto conosco no [UserVoice](https://visualstudio.uservoice.com/forums/121579).
-* É possível acompanhar os problemas do produto na [Comunidade de Desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/), além de fazer perguntas e encontrar respostas.
-* Você pode também interagir conosco e com outros desenvolvedores do Visual Studio por meio das [conversas sobre o Visual Studio na comunidade do Gitter](https://gitter.im/Microsoft/VisualStudio).  (Esta opção requer uma conta do [GitHub](https://github.com/).)
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Consulte também
 
- * [Instalar o Visual Studio](install-visual-studio.md)
- * [Definir padrões para implantações corporativas](set-defaults-for-enterprise-deployments.md)
- * [Usar parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
+* [Instalar o Visual Studio](install-visual-studio.md)
+* [Definir padrões para implantações corporativas](set-defaults-for-enterprise-deployments.md)
+* [Usar parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)

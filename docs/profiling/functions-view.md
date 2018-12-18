@@ -17,23 +17,24 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d1f401e5406ed7e5bb8244c556dbc6fbc365e773
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 935b7aa55633167b6f9630b8046e29f9bc8eba91
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238076"
 ---
 # <a name="functions-view"></a>Exibição de funções
 A exibição Funções lista as funções que são chamadas durante a criação do perfil.  
   
  Por padrão, as funções são listadas por nome. Para exibir as funções por módulo, clique com o botão direito do mouse na janela da exibição Funções e selecione **Mostrar na Exibição de Módulo**. A exibição Módulo será mostrada.  
   
- Para adicionar ou remover colunas, clique com o botão direito do mouse na janela do relatório e, em seguida, selecione **Adicionar/Remover Colunas**. Além disso, você pode classificar os dados clicando em um nome de coluna. Para obter mais informações, consulte [Como personalizar colunas de exibição de relatório](../profiling/how-to-customize-report-view-columns.md).  
+ Para adicionar ou remover colunas, clique com o botão direito do mouse na janela do relatório e, em seguida, selecione **Adicionar/Remover Colunas**. Ou clique no nome da coluna para classificar os dados. Para saber mais, confira [Como personalizar colunas de exibição de relatório](../profiling/how-to-customize-report-view-columns.md).  
   
  As colunas que estão disponíveis na exibição Funções dependem do método de criação de perfil (amostragem ou instrumentação) usado para coletar os dados e se os dados de memória .NET foram coletados na execução da criação de perfil.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibição de Funções](../profiling/functions-view-sampling-data.md)   
  [Exibição de Funções](../profiling/functions-view-instrumentation-data.md)   
- [Exibição de Funções – Instrumentação](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
- [Exibição de Funções – Amostragem](../profiling/functions-view-dotnet-memory-sampling-data.md)
+ [Exibição Funções – instrumentação](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
+ [Exibição Funções – amostragem](../profiling/functions-view-dotnet-memory-sampling-data.md)

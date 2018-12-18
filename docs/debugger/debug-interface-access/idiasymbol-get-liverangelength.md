@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f6668a5c33c34ffce3cdebba0802c57e9bbf598a
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 23a24a4d88e181a447b5228080ae89b8853060ee
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880039"
 ---
 # <a name="idiasymbolgetliverangelength"></a>IDiaSymbol::get_liveRangeLength
-Retorna o comprimento do intervalo de endereços em que o símbolo de local é válido.  
+Retorna o comprimento do intervalo de endereços no qual o símbolo local é válido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,10 +37,10 @@ HRESULT get_liveRangeLength (
  [out] Retorna o comprimento do intervalo de endereços.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 > [!NOTE]
->  Um código de erro significa que o símbolo não tem informações de intervalo dinâmico.  
+>  Um código de erro retornado significa que o símbolo não tem informações de intervalo em tempo real.  
   
 ## <a name="remarks"></a>Comentários  
   

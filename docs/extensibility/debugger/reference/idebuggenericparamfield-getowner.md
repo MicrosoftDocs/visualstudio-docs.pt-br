@@ -13,14 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee4163c1353ad0dde97f0df2a20b06db0a0cb34c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6ab96887c12d798bfc521519b444c164b6e661fc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49937155"
 ---
 # <a name="idebuggenericparamfieldgetowner"></a>IDebugGenericParamField::GetOwner
-Recupera o proprietário de tipo ou método desse parâmetro genérico.  
+Recupera o proprietário do tipo ou método desse parâmetro genérico.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,13 +39,13 @@ int GetOwner(
   
 #### <a name="parameters"></a>Parâmetros  
  `ppOwner`  
- [out] Retorna o [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto que possui este parâmetro genérico.  
+ [out] Retorna o [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto que possui esse parâmetro genérico.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CDebugGenericParamFieldType** objeto que expõe o [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) interface.  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugGenericParamFieldType** objeto que expõe a [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) interface.  
   
 ```cpp  
 HRESULT CDebugGenericParamFieldType::GetOwner(IDebugField** ppOwner)  

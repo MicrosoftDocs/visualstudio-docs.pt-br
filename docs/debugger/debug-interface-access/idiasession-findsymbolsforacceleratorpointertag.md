@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7df83017e60a9d3600c7e49bcf888c771a748cee
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 3f53031bd29af50b90f88868a36f340ee460201a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915302"
 ---
 # <a name="idiasessionfindsymbolsforacceleratorpointertag"></a>IDiaSession::findSymbolsForAcceleratorPointerTag
 Retorna uma enumeração de símbolos para que o valor da marca especificado corresponde à variável na função de stub do acelerador pai.  
@@ -33,7 +34,7 @@ HRESULT findSymbolsForAcceleratorPointerTag (
   
 #### <a name="parameters"></a>Parâmetros  
  `parent`  
- [in] Um IDiaSymbol que corresponde à função de stub Acelerador a ser pesquisada.  
+ [in] Um IDiaSymbol que corresponde à função de stub Acelerador a ser pesquisado.  
   
  `tagValue`  
  [in] O valor de marca do ponteiro.  
@@ -42,7 +43,7 @@ HRESULT findSymbolsForAcceleratorPointerTag (
  [out] Um ponteiro para um `IDiaEnumSymbols` ponteiro de interface que é inicializado com o resultado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   

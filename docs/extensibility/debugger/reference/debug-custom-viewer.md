@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84d8bdc7a4ea9ac59ee0956226618402b397844b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e86cae45298b3f137e2ebca65fa8c531c6d86457
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908438"
 ---
 # <a name="debugcustomviewer"></a>DEBUG_CUSTOM_VIEWER
-Uma estrutura que identifica um visualizador personalizado ou tipo de visualizador.  
+Uma estrutura que identifica um visualizador personalizado ou digite visualizador.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +54,7 @@ public struct DEBUG_CUSTOM_VIEWER {
  Uma ID para diferenciar vários visualizadores ou visualizadores implementados por um `GUID`.  
   
  bstrMenuName  
- O texto que será exibido no menu suspenso.  
+ O texto que aparecerá no menu suspenso.  
   
  bstrDescription  
  Uma descrição do visualizador personalizado ou Visualizador de tipo (deve ser um valor nulo se não usado).  
@@ -65,7 +66,7 @@ public struct DEBUG_CUSTOM_VIEWER {
  Fornecedor do avaliador de expressão fornece.  
   
  bstrMetric  
- Métrica sob a qual o visualizador personalizado ou o Visualizador de tipo `CLSID` é armazenada.  
+ Métrica sob a qual o visualizador personalizado ou o Visualizador de tipo `CLSID` é armazenado.  
   
 ## <a name="remarks"></a>Comentários  
  Uma lista dessa estrutura é retornada por uma chamada para o [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) método (e, por extensão, o [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) método).  

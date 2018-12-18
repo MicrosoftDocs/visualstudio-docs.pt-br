@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31465217"
 ---
 # <a name="idialinenumber"></a>IDiaLineNumber
 Acessa as informações que descrevem o processo de mapeamento de um bloco de bytes de texto de imagem para um número de linha do arquivo de origem.  

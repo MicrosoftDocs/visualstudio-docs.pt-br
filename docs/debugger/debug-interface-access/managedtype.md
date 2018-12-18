@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31469744"
 ---
 # <a name="managedtype"></a>ManagedType
 Um tipo gerenciado (qualquer símbolo definido por metadados ou nativo para a funcionalidade de gerenciamento de memória e recursos de linguagens como c#) é identificado por um `SymTagManagedType` símbolo.  

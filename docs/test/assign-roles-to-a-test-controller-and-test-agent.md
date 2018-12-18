@@ -1,5 +1,5 @@
 ---
-title: Atribuindo funções a um controlador de teste e a um agente de teste para testes automatizados no Visual Studio | Microsoft Docs
+title: Atribuir Funções a um Controlador de teste e Agente de teste para Testes automatizados
 ms.date: 10/20/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,24 +12,20 @@ ms.assetid: 57ed43ae-4e67-4139-8aec-3e9fceb0a745
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 932a6fe470812fc647cad653fb95ba7ca8997ab0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 021693266278bd705678c22d2c3f07e534901e5a
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895334"
 ---
 # <a name="assign-roles-to-a-test-controller-and-test-agent"></a>Atribuir funções a um controlador de teste e a um agente de teste
 
 Este passo a passo demonstra como criar e definir uma configuração de teste que usa um controlador de teste e um agente de teste para distribuir testes em vários computadores usando o Visual Studio. Além disso, esta explicação passo a passo demonstra como adicionar adaptadores de diagnóstico e dados à configuração de teste.
 
-Nesta explicação passo a passo, você concluirá as seguintes tarefas:
-
--   Criar uma configuração de teste.
-
--   Atribuir funções a um controlador de teste e agentes de teste.
-
--   Atribuir um adaptador de diagnóstico e dados à sua configuração de teste.
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -39,7 +35,7 @@ Nesta explicação passo a passo, você concluirá as seguintes tarefas:
 
 ## <a name="to-create-and-configure-a-test-setting"></a>Para criar e configurar uma configuração de teste
 
-1.  No Gerenciador de Soluções, clique com botão direito do mouse em **Itens de Solução,** aponte para **Adicionar** e, em seguida, escolha **Novo Item**.
+1.  Na **Gerenciador de Soluções**, clique com o botão direito do mouse em **Itens da Solução**, aponte para **Adicionar** e clique em **Novo Item**.
 
      A caixa de diálogo **Adicionar Novo Item** é exibida.
 
@@ -49,7 +45,7 @@ Nesta explicação passo a passo, você concluirá as seguintes tarefas:
 
 4.  Escolha **Adicionar**.
 
-     O novo arquivo de teste TestSettingDistributedTestWalkthrough.testsettings aparece no Gerenciador de Soluções, na pasta **Itens de Solução**.
+     O novo arquivo de teste *TestSettingDistributedTestWalkthrough.testsettings* aparece no **Gerenciador de Soluções**, na pasta **Itens da Solução**.
 
      A caixa de diálogo **Configurações de Teste** é exibida. A página **Geral** está selecionada.
 

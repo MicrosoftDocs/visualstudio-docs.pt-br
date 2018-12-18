@@ -1,10 +1,9 @@
 ---
-title: -ResetSkipPkgs (devenv.exe) | Microsoft Docs
-ms.custom: ''
+title: -ResetSkipPkgs (devenv.exe)
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - /ResetSkipPkgs Devenv switch
 - Devenv, /ResetSkipPkgs switch
@@ -15,30 +14,32 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ffc8ae23dd66cdf863b6bf193289df63b3fdb06
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5f797b6228124da8d8a998a6647dcfd9195ea92c
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948058"
 ---
 # <a name="resetskippkgs-devenvexe"></a>/ResetSkipPkgs (devenv.exe)
-Limpa todas as opções para ignorar o carregamento adicionadas a VSPackages por usuários que desejam evitar o carregamento de VSPackages com problemas, e inicia o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-Devenv /ResetSkipPkgs  
-```  
-  
-## <a name="remarks"></a>Comentários  
- A presença de uma marcação SkipLoading desabilita o carregamento de um VSPackage; limpar a marcação habilita novamente o carregamento do VSPackage.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir limpa todas as marcas SkipLoading.  
-  
-```  
-Devenv.exe /ResetSkipPkgs  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções de linha de comando devenv](../../ide/reference/devenv-command-line-switches.md)
+Limpa todas as opções para ignorar o carregamento adicionadas a VSPackages por usuários que desejam evitar o carregamento de VSPackages com problemas, e inicia o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
+
+## <a name="syntax"></a>Sintaxe
+
+```cmd
+Devenv /ResetSkipPkgs
+```
+
+## <a name="remarks"></a>Comentários
+ A presença de uma marcação SkipLoading desabilita o carregamento de um VSPackage; limpar a marcação habilita novamente o carregamento do VSPackage.
+
+## <a name="example"></a>Exemplo
+ O exemplo a seguir limpa todas as marcas SkipLoading.
+
+```cmd
+Devenv.exe /ResetSkipPkgs
+```
+
+## <a name="see-also"></a>Consulte também
+
+- [Opções de linha de comando do Devenv](../../ide/reference/devenv-command-line-switches.md)

@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c436500e54f128a4095b50b2332b0d21eef7d469
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9decc11ed13029831d78e1a79deb4134cc377e99
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903199"
 ---
 # <a name="idebugprogramengines2setengine"></a>IDebugProgramEngines2::SetEngine
-O programa ou o nó de programa informa qual mecanismo de depuração (DE) a ser usado para depurar este programa.  
+O programa ou o nó de programa informa qual mecanismo de depuração (DES) usar para depurar este programa.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +44,7 @@ int SetEngine(
  [in] O GUID do DE.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProgramEngines2](../../../extensibility/debugger/reference/idebugprogramengines2.md)

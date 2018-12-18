@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f0b717882e943a37857bbdadf3d318f94b4900dc
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: df6fce197a184167b66025191f43b07ebd08ffa7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819583"
 ---
 # <a name="nameprofile"></a>NameProfile
 A função `NameProfile` atribui uma cadeia de caracteres ao thread ou processo especificado.  
@@ -26,7 +27,7 @@ A função `NameProfile` atribui uma cadeia de caracteres ao thread ou processo 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(  
                                    LPCTSTR pszName,   
                                    PROFILE_CONTROL_LEVEL Level,  
@@ -38,17 +39,17 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
   
  O nome do elemento de criação de perfil. Um nome é inválido (resultando em NameProfileA retorna NAME_ERROR_INVALID_NAME) se:  
   
--   O ponteiro transmitido para NameProfileA é um valor NULL  
+- O ponteiro transmitido para NameProfileA é um valor NULL  
   
--   Os dados de cadeia de caracteres de pszName começam com um número  
+- Os dados de cadeia de caracteres de pszName começam com um número  
   
--   Os dados de cadeia de caracteres de pszName contêm um espaço  
+- Os dados de cadeia de caracteres de pszName contêm um espaço  
   
--   Os dados de cadeia de caracteres de pszName contêm todos os seguintes caracteres: ,;.`~!@#$%^&*()=[]{}&#124;\\?/<>  
+- Os dados de cadeia de caracteres de pszName contêm todos os seguintes caracteres: ,;.`~!@#$%^&*()=[]{}&#124;\\?/<>  
   
- `Level`  
+  `Level`  
   
- Indica o nível de perfil de desempenho que pode ser aplicado a coleta de dados. Os seguintes valores de **PROFILE_CONTROL_LEVEL** podem ser usados para indicar um dos três níveis aos quais a coleta de dados de desempenho pode ser aplicada:  
+  Indica o nível de perfil de desempenho que pode ser aplicado a coleta de dados. Os seguintes valores de **PROFILE_CONTROL_LEVEL** podem ser usados para indicar um dos três níveis aos quais a coleta de dados de desempenho pode ser aplicada:  
   
 |Enumerador|Descrição|  
 |----------------|-----------------|  
@@ -60,7 +61,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
   
  Identificador de nível de criação de perfil. Use o identificador de processo ou thread que é gerado pelo sistema.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor retornado  
  A função indica êxito ou falha usando a enumeração **PROFILE_COMMAND_STATUS**. O valor de retorno pode ser um dos seguintes:  
   
 |Enumerador|Descrição|  
@@ -85,20 +86,20 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 >  As funções de API CreateProcess() e CreateThread() podem retornar antes de o thread ou processo ser inicializado.  
   
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Microsoft.VisualStudio.Profiler.dll  
+ *Microsoft.VisualStudio.Profiler.dll*  
   
 ## <a name="function-information"></a>Informações de função  
   
 |||  
 |-|-|  
-|**Header**|Inclui VSPerf.h|  
-|**Library**|Use VSPerf.lib|  
+|**Header**|Incluir *VSPerf.h*|  
+|**Library**|Usar *VSPerf.lib*|  
 |**Unicode**|Implementado como `NameProfileW` (Unicode) e `NameProfileA` (ANSI).|  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir ilustra a chamada da função NameProfile. O exemplo pressupõe o uso de macros de cadeia de caracteres do Win32 e as configurações de compilador para ANSI para determinar se o código chama a função habilitada por ANSI.  
+ O código a seguir ilustra a chamada da função NameProfile. O exemplo pressupõe o uso de macros da cadeia de caracteres do Win32 e as configurações do compilador para ANSI para determinar se o código chama a função habilitada do ANSI.  
   
-```  
+```cpp  
 void ExerciseNameProfile()  
 {  
     // Variables used to print output.  

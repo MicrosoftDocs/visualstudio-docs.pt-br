@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c613e4b200df0153827fb10013416211a2eb2062
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bf8e172f6693b4efcff1cfff3eb8c79178bb9f90
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49919163"
 ---
-# <a name="filtering-report-views"></a>Filtrando exibições de relatório
+# <a name="filter-report-views"></a>Filtrar exibições de relatório
 Você pode aplicar filtros para arquivos de dados de criação de perfil para limitar os dados de criação de perfil que são exibidos nas exibições de Relatório de Desempenho e exportados para arquivos de relatório. Você pode limitar um relatório aos dados entre os valores de carimbo de data/hora e limitar os dados a processos e threads específicos. Você pode salvar filtros em um arquivo e, em seguida, criar um filtro em um arquivo de dados de criação de perfil diferente importando o filtro salvo.  
   
  Você também pode limitar um relatório a um segmento de tempo usando a linha de tempo gráfica na Exibição de Resumo. Consulte [Como filtrar exibições de relatório por meio da linha do tempo de resumo](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).  
@@ -40,25 +41,24 @@ Você pode aplicar filtros para arquivos de dados de criação de perfil para li
     |**And/Or**|Escolha **And** se essa cláusula e a próxima devem ambas ser verdadeiras para corresponder a um resultado. Escolha **Or** se essa cláusula ou a próxima podem ser verdadeiras para corresponder a um resultado.|  
     |**Campo**|Selecione o campo de relatório para usar na cláusula de filtro da lista de campos de dados exibida.|  
     |**Operador**|Selecione o operador que especifica o relacionamento que deseja na cláusula entre o campo e o valor.<br /><br /> =    É igual a<br /><br /> <>  Não é igual a<br /><br /> <    Menor que<br /><br /> >    Maior que<br /><br /> <=  Menor ou igual a<br /><br /> >= Maior ou igual a|  
-    |**Value**|Selecione ou insira o valor a ser procurado. Alguns campos listam os valores disponíveis para o campo.|  
+    |**Valor**|Selecione ou insira o valor a ser procurado. Alguns campos listam os valores disponíveis para o campo.|  
   
-3.  
   
 #### <a name="to-create-a-profiler-report-filter-from-the-marks-report-view"></a>Para criar um filtro de relatório do criador de perfil na exibição de Relatório de Marcas  
   
-1.  Selecione **Marcas** na lista **Exibição Atual** na barra de ferramentas de Exibição de Relatório de Desempenho.  
+1. Selecione **Marcas** na lista **Exibição Atual** na barra de ferramentas de Exibição de Relatório de Desempenho.  
   
-     O relatório do criador de perfil de Marcas é exibido.  
+    O relatório do criador de perfil de Marcas é exibido.  
   
-2.  Selecione o ETW ou amostragem mesmo que deseje usar como o ponto inicial do relatório.  
+2. Selecione o ETW ou amostragem mesmo que deseje usar como o ponto inicial do relatório.  
   
-3.  Pressione e segure a tecla CTRL e clique no evento que deseja usar como o ponto final do relatório.  
+3. Pressione e segure a tecla CTRL e clique no evento que deseja usar como o ponto final do relatório.  
   
-4.  Clique com o botão direito do mouse e depois clique em uma das seguintes opções:  
+4. Clique com o botão direito do mouse e depois clique em uma das seguintes opções:  
   
-    -   **Adicionar filtro em Marcas** cria cláusulas de filtro que usam a coluna de Marca como campo de filtro.  
+   - **Adicionar filtro em Marcas** cria cláusulas de filtro que usam a coluna de Marca como campo de filtro.  
   
-    -   **Adicionar Filtro em Carimbos de Data/Hora** cria cláusulas de filtro que usam o carimbo de data/hora em milésimos de segundo como campo de filtro.  
+   - **Adicionar Filtro em Carimbos de Data/Hora** cria cláusulas de filtro que usam o carimbo de data/hora em milésimos de segundo como campo de filtro.  
   
      As duas opções filtram o arquivo de dados atual nos mesmo pontos inicial e final. Qualquer opção pode ser a melhor se exportar o filtro a ser usado em outros relatórios.  
   

@@ -1,16 +1,16 @@
 ---
 title: Interface ISimpleConnectionPoint | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ISimpleConnectionPoint interface
 ms.assetid: f632a82f-942d-4291-963e-e9fa2b162493
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +19,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24733906"
 ---
 # <a name="isimpleconnectionpoint-interface"></a>Interface ISimpleConnectionPoint
 Fornece uma maneira simples para descrever e enumerar os eventos acionados em um ponto de conexão específico. Essa interface também facilita a ligar um `IDispatch` objeto esses eventos. Essa interface é implementada pelo processo de depuração Manager (PDM) e consumido por mecanismos de script.  

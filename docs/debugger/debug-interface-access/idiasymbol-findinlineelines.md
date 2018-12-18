@@ -12,14 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cd6a3915c55729b5f9c6792281fb821b98671064
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b1be3a9576ab36bd57bde8889c6e55b0139277e8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49947960"
 ---
 # <a name="idiasymbolfindinlineelines"></a>IDiaSymbol::findInlineeLines
-Recupera uma enumeração que permite que um cliente iterar por meio das informações de número de linha de todas as funções embutidas, diretamente ou indiretamente, este símbolo.  
+Recupera uma enumeração que permite que um cliente iterar por meio das informações de número de linha de todas as funções que são embutidas, diretamente ou indiretamente, em que esse símbolo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,10 +32,10 @@ HRESULT findInlineeLines (
   
 #### <a name="parameters"></a>Parâmetros  
  `ppResult`  
- [out] Contém uma `IDiaEnumLineNumbers` objeto que contém a lista de números de linha são recuperadas.  
+ [out] Mantém um `IDiaEnumLineNumbers` objeto que contém a lista de números de linha são recuperadas.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   

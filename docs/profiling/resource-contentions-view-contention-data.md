@@ -19,6 +19,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31584133"
 ---
 # <a name="resource-contentions-view---contention-data"></a>Exibição de contenções de recurso – Dados de contenção
 A exibição Contenção de Recursos lista os dados de contenção para os recursos que estavam na fonte de eventos de contenção. Um evento de contenção ocorre quando uma função em um thread é forçada a aguardar o acesso ao recurso porque uma função em outro thread obteve acesso exclusivo ao recurso. Cada recurso é o nó raiz de uma árvore de chamadas que exibe os caminhos de execução de função que resultaram em eventos de contenção.  

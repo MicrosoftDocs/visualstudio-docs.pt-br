@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c363da795e588963c234af05a856f3352a7b2815
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 79afce90f462f97d7a33a64875c4784a030f845e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905916"
 ---
 # <a name="sccuncheckout-function"></a>Função SccUncheckout
-Essa função Desfaz uma operação de check-out anterior, restaurando assim o conteúdo do arquivo selecionado ou arquivos para o estado antes do check-out. Todas as alterações feitas desde o check-out no arquivo serão perdidas.  
+Essa função Desfaz uma operação de check-out anterior, restaurando assim o conteúdo de arquivos ou o arquivo selecionado para o estado antes do check-out. Todas as alterações feitas desde o check-out no arquivo serão perdidas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,10 +46,10 @@ SCCRTN SccUncheckout (
  [in] Um identificador para a janela do IDE que o plug-in de controle de origem pode usar como um pai para todas as caixas de diálogo que ele oferece.  
   
  nFiles  
- [in] Número de arquivos especificados na `lpFileNames` matriz.  
+ [in] Número de arquivos especificados no `lpFileNames` matriz.  
   
  lpFileNames  
- [in] Matriz de nomes de caminho local totalmente qualificado de arquivos para os quais desfazer um check-out.  
+ [in] Matriz de nomes de caminho local totalmente qualificado dos arquivos para os quais desfazer um check-out.  
   
  fOptions  
  [in] Sinalizadores de comando (não usados).  
@@ -57,21 +58,21 @@ SCCRTN SccUncheckout (
  [in] Opções de plug-in específico de controle de origem.  
   
 ## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+ A implementação de plug-in de controle do código-fonte desta função deve retornar um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |SCC_OK|Desfazer check-out foi bem-sucedida.|  
-|SCC_E_FILENOTCONTROLLED|O arquivo selecionado não está sob controle do código fonte.|  
-|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle de origem, provavelmente devido a problemas de rede ou de contenção. Recomenda-se uma nova tentativa.|  
-|SCC_E_NONSPECIFICERROR|Falha não específica. Desfazer check-out não teve êxito.|  
-|SCC_E_NOTCHECKEDOUT|O usuário não tem o arquivo com check-out.|  
+|SCC_E_FILENOTCONTROLLED|O arquivo selecionado não está sob controle do código-fonte.|  
+|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle do código-fonte, provavelmente devido a problemas de rede ou de contenção. É recomendável uma nova tentativa.|  
+|SCC_E_NONSPECIFICERROR|Falha não específica. Desfazer check-out não foi bem-sucedida.|  
+|SCC_E_NOTCHECKEDOUT|O usuário não tem o arquivo de check-out.|  
 |SCC_E_NOTAUTHORIZED|O usuário não tem permissão para executar esta operação.|  
 |SCC_E_PROJNOTOPEN|O projeto não foi aberto do controle de origem.|  
 |SCC_I_OPERATIONCANCELED|A operação foi cancelada antes da conclusão.|  
   
 ## <a name="remarks"></a>Comentários  
- Após essa operação, o `SCC_STATUS_CHECKEDOUT` e `SCC_STATUS_MODIFIED` sinalizadores serão ambos ser limpo para os arquivos no qual o desfazer check-out foi executado.  
+ Depois dessa operação, o `SCC_STATUS_CHECKEDOUT` e `SCC_STATUS_MODIFIED` sinalizadores serão ambos ser desmarcados para os arquivos no qual o desfazer check-out foi executado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções de API do plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)

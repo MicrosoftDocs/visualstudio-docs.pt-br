@@ -14,13 +14,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a576507b6ecc61ed65ce05bdad5ab302a5873fba
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: eb7ab1e30eeb20622964cd410adb0300843b964f
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254625"
 ---
-# <a name="no-disk-activity-to-show-threads-view"></a>Nenhuma atividade de disco a ser mostrada (exibição de threads)
+# <a name="no-disk-activity-to-show-threads-view"></a>Não há nenhuma atividade de disco a ser mostrada (exibição Threads)
 Não é possível exibir a atividade do disco para o intervalo de tempo atual nos canais de E/S de disco. A atividade de disco poderá ser exibida se você reduzir ou rolar. Além disso, certifique-se de que nenhum canal de disco está oculto.  
   
 ## <a name="see-also"></a>Consulte também  

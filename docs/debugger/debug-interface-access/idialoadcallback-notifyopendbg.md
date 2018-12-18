@@ -1,5 +1,5 @@
 ---
-title: ': Notifyopendbg | Microsoft Docs'
+title: 'Idialoadcallback:: Notifyopendbg | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 717c9395805b3fe12640164261d3ec916bd8067c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 2a51692b7ff554e656690898993d9dfb4a0eda57
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49883244"
 ---
 # <a name="idialoadcallbacknotifyopendbg"></a>IDiaLoadCallback::NotifyOpenDBG
-Chamado quando um arquivo. dbg candidato foi aberto.  
+Chamado quando um arquivo do candidato. dbg foi aberto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +38,10 @@ HRESULT NotifyOpenDBG (
  [in] O caminho completo do arquivo. dbg.  
   
  `resultCode`  
- [in] Código que indica o sucesso (`S_OK`) ou a falha da carga conforme aplicado a este arquivo.  
+ [in] Código que indica o êxito (`S_OK`) ou a falha da carga conforme aplicado a esse arquivo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. O código de retorno normalmente é ignorado.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. O código de retorno normalmente é ignorado.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

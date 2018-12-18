@@ -18,14 +18,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ed99b0e7dbccbee99dbc290d79d2b25b9c84874
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2a47c77ecb441d2c1277fee1a7e94e1e9a7991b3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900131"
 ---
 # <a name="parametergroup-element"></a>Elemento ParameterGroup
-Contém uma lista opcional de parâmetros que estarão presentes na tarefa que é gerada por um `UsingTask``TaskFactory`. Para obter mais informações, consulte [Elemento UsingTask (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
+Contém uma lista opcional de parâmetros que estarão presentes na tarefa que é gerada por um `UsingTask` `TaskFactory`. Para saber mais, confira [Elemento UsingTask (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
 
  \<Project>  
  \<UsingTask>  
@@ -33,7 +34,7 @@ Contém uma lista opcional de parâmetros que estarão presentes na tarefa que �
 
 ## <a name="syntax"></a>Sintaxe  
 
-```  
+```xml  
 <ParameterGroup />  
 ```  
 
@@ -47,13 +48,13 @@ Contém uma lista opcional de parâmetros que estarão presentes na tarefa que �
 
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[Parâmetro](../msbuild/parameter-element.md)|Contém informações sobre um parâmetro específico de uma tarefa que é gerada por um `UsingTask``TaskFactory`. O nome do elemento é o nome do parâmetro.|  
+|[Parâmetro](../msbuild/parameter-element.md)|Contém informações sobre um parâmetro específico de uma tarefa que é gerada por um `UsingTask` `TaskFactory`. O nome do elemento é o nome do parâmetro.|  
 
 ### <a name="parent-elements"></a>Elementos pai  
 
-|Elemento|Descrição|  
-|-------------|-----------------|  
-|[UsingTask](../msbuild/usingtask-element-msbuild.md)|Fornece uma maneira para registrar tarefas em [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Pode ser que não haja nenhum ou mais de um elemento `UsingTask` em um projeto.|  
+| Elemento | Descrição |
+| - | - |
+| [UsingTask](../msbuild/usingtask-element-msbuild.md) | Fornece uma maneira para registrar tarefas em [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Pode ser que não haja nenhum ou mais de um elemento `UsingTask` em um projeto. |
 
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar o elemento `ParameterGroup`.  
@@ -74,4 +75,4 @@ Contém uma lista opcional de parâmetros que estarão presentes na tarefa que �
 ## <a name="see-also"></a>Consulte também  
  [Tarefas](../msbuild/msbuild-tasks.md)   
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)   
- [Referência do esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)
+ [Referência de esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)

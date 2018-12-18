@@ -1,8 +1,9 @@
 ---
-title: "Personalizar tarefas de compilação e depuração no Visual Studio usando tasks.vs.json e launch.vs.json | Microsoft Docs"
+title: Personalizar tarefas de build e depuração no Visual Studio usando tasks.vs.json e launch.vs.json
 ms.date: 02/21/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NMAKE [Visual Studio]
 - makefiles [Visual Studio]
@@ -12,14 +13,15 @@ helpviewer_keywords:
 - vsworkspacesettings.json file [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d40bd35d893afeb8e76e18d46185b3d63add1c5
-ms.sourcegitcommit: 3abca1c733af876c8146daa43a62e829833be280
+ms.openlocfilehash: 3c4b915f632179ff118247e8c046ce980a824ea2
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34448081"
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>Personalizar tarefas de compilação e depuração para desenvolvimento de "Pasta Aberta"
 
@@ -38,7 +40,7 @@ Personalizar sua base de código sem projeto usando os seguintes arquivos *.json
 Esses arquivos *.json* estão localizados em uma pasta oculta chamada *.vs* na pasta raiz de sua base de código. Os arquivos *tasks.vs.json* e *launch.vs.json* são criados pelo Visual Studio conforme a necessidade quando você escolhe **Configurar Tarefas** ou **Configurações de Depuração e de Inicialização** em um arquivo ou pasta no **Gerenciador de Soluções**. Esses arquivos *.json* ficam ocultos porque a maioria dos usuários geralmente não deseja inclui-los no controle do código-fonte. No entanto, se você quiser a possibilidade de inclui-los no controle do código-fonte, arraste os arquivos para a raiz da base de código, onde eles ficarão visíveis.
 
 > [!TIP]
-> Para exibir arquivos ocultos no Visual Studio, escolha o botão **Mostrar Todos os Arquivos** na barra de ferramentas do Gerenciador de Soluções.
+> Para exibir arquivos ocultos no Visual Studio, escolha o botão **Mostrar Todos os Arquivos** na barra de ferramentas do **Gerenciador de Soluções**.
 
 ## <a name="define-tasks-with-tasksvsjson"></a>Definir tarefas com tasks.vs.json
 
@@ -54,7 +56,7 @@ As tarefas personalizadas podem ser adicionadas a arquivos individuais ou a todo
 
 Se a sua base de código usar ferramentas de compilação personalizadas não reconhecidas pelo Visual Studio, não será possível executar e depurar o código no Visual Studio antes de concluir algumas etapas de configuração. O Visual Studio fornece *tarefas de compilação*, nas quais você pode informar ao Visual Studio como compilar, recompilar e limpar seu código. O arquivo de tarefa de build *tasks.vs.json* associa o loop de desenvolvimento interno do Visual Studio às ferramentas de build personalizadas usadas pela base de código.
 
-Considere uma base de código composta por um único arquivo em C# chamado *hello.cs*. O makefile de uma base de código como essa pode ter esta aparência:
+Considere uma base de código composta por um único arquivo em C# chamado *hello.cs*. O *makefile* de uma base de código como essa pode ter esta aparência:
 
 ```makefile
 build: directory hello.exe
@@ -73,7 +75,7 @@ bin:
     md bin
 ```
 
-Para um makefile que contém destinos de compilação, limpeza e recompilação, você pode definir o seguinte arquivo *tasks.vs.json*. Ele contém três tarefas de compilação para compilar, recompilar e limpar a base de código, usando NMAKE como a ferramenta de compilação.
+Para um *makefile* que contém destinos de build, limpeza e recompilação, você pode definir o seguinte arquivo *tasks.vs.json*. Ele contém três tarefas de compilação para compilar, recompilar e limpar a base de código, usando NMAKE como a ferramenta de compilação.
 
 ```json
 {
@@ -117,7 +119,7 @@ Para um makefile que contém destinos de compilação, limpeza e recompilação,
 }
 ```
 
-Depois de definir as tarefas de compilação no *tasks.vs.json*, ocorre a adição de outros itens de menu de contexto aos arquivos correspondentes no **Gerenciador de Soluções**. Neste exemplo, as opções **Compilar**, **Recompilar** e **Limpar** são adicionadas ao menu de contexto de quaisquer arquivos *makefile*.
+Depois de definir as tarefas de compilação no *tasks.vs.json*, ocorre a adição de outros itens de menu de contexto aos arquivos correspondentes no **Gerenciador de Soluções**. Neste exemplo, as opções "criar", "recriar" e "limpar" são adicionadas ao menu de contexto de quaisquer arquivos *makefile*.
 
 ![menu de contexto do makefile com compilação, recompilação e limpeza](media/customize-build-rebuild-clean.png)
 
@@ -205,23 +207,23 @@ Você pode criar tarefas para qualquer arquivo ou pasta especificando seu nome n
 |-|-|
 |`"*"`| a tarefa está disponível para todos os arquivos e pastas no espaço de trabalho|
 |`"*/"`| a tarefa está disponível para todas as pastas no espaço de trabalho|
-|`"*.js"`| a tarefa está disponível para todos os arquivos com a extensão .js no espaço de trabalho|
-|`"/*.js"`| a tarefa está disponível para todos os arquivos com a extensão .js na raiz do espaço de trabalho|
-|`"src/*/"`| a tarefa está disponível para todas as subpastas da pasta "src"|
-|`"makefile"`| a tarefa está disponível para todos os arquivos makefile no espaço de trabalho|
-|`"/makefile"`| a tarefa está disponível apenas para o makefile na raiz do espaço de trabalho|
+|`"*.js"`| a tarefa está disponível para todos os arquivos com a extensão *.js* no espaço de trabalho|
+|`"/*.js"`| a tarefa está disponível para todos os arquivos com a extensão *.js* na raiz do espaço de trabalho|
+|`"src/*/"`| a tarefa está disponível para todas as subpastas da pasta *src*|
+|`"makefile"`| a tarefa está disponível para todos os arquivos *makefile* no espaço de trabalho|
+|`"/makefile"`| a tarefa está disponível apenas para o *makefile* na raiz do espaço de trabalho|
 
 #### <a name="macros-for-tasksvsjson"></a>Macros para tasks.vs.json
 
 |||
 |-|-|
 |`${env.<VARIABLE>}`| Especifica qualquer variável de ambiente (por exemplo, ${env.PATH}, ${env.COMSPEC} e assim por diante) que esteja definida para o prompt de comando do desenvolvedor. Para saber mais, confira [Prompt de comando do desenvolvedor para Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
-|`${workspaceRoot}`| O caminho completo para a pasta do espaço de trabalho (por exemplo, "C:\sources\hello")|
-|`${file}`| O caminho completo do arquivo ou pasta selecionado para execução dessa tarefa (por exemplo, "C:\sources\hello\src\hello.js")|
-|`${relativeFile}`| O caminho relativo até o arquivo ou pasta (por exemplo, "src\hello.js")|
-|`${fileBasename}`| O nome do arquivo sem o caminho ou extensão (por exemplo, "hello")|
-|`${fileDirname}`| O caminho completo até o arquivo, exceto o nome do arquivo (por exemplo, "C:\sources\hello\src")|
-|`${fileExtname}`| A extensão do arquivo selecionado (por exemplo, ".js")|
+|`${workspaceRoot}`| O caminho completo para a pasta do espaço de trabalho (por exemplo, *C:\sources\hello*)|
+|`${file}`| O caminho completo do arquivo ou pasta selecionado para execução dessa tarefa (por exemplo, *C:\sources\hello\src\hello.js*)|
+|`${relativeFile}`| O caminho relativo até o arquivo ou pasta (por exemplo, *src\hello.js*)|
+|`${fileBasename}`| O nome do arquivo sem o caminho ou extensão (por exemplo, *hello*)|
+|`${fileDirname}`| O caminho completo até o arquivo, exceto o nome do arquivo (por exemplo, *C:\sources\hello\src*)|
+|`${fileExtname}`| A extensão do arquivo selecionado (por exemplo, *.js*)|
 
 ## <a name="configure-debugging-with-launchvsjson"></a>Configurar a depuração com launch.vs.json
 
@@ -314,4 +316,4 @@ As configurações lidas no arquivo *.gitignore* são aplicadas ao seu diretóri
 - [Projetos de pasta aberta para C++](/cpp/ide/non-msbuild-projects)
 - [Projetos CMake em C++](/cpp/ide/cmake-tools-for-visual-cpp)
 - [Referência a NMAKE](/cpp/build/nmake-reference)
-- [Escrevendo código no editor de código e texto](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Recursos do Editor de Códigos](../ide/writing-code-in-the-code-and-text-editor.md)

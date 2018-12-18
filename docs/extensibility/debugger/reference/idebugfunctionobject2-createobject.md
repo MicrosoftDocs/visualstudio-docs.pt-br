@@ -14,11 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c5283d72972e1ba579cafa82648cbf0ec0fcf80c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 35dac5f88a755ac0622fcf752f3bcc409341441c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948969"
 ---
 # <a name="idebugfunctionobject2createobject"></a>IDebugFunctionObject2::CreateObject
 Cria um objeto que usa um construtor que recebe as configurações de sinalizador de avaliação e um valor de tempo limite.  
@@ -49,10 +50,10 @@ int CreateObject (
   
 #### <a name="parameters"></a>Parâmetros  
  `pConstructor`  
- [in] Um [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) objeto que representa o construtor do objeto a ser criado.  
+ [in] Uma [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) objeto que representa o construtor do objeto a ser criado.  
   
  `dwArgs`  
- [in] O número de parâmetros na `pArg` matriz. Representa o número de parâmetros passados para o construtor.  
+ [in] O número de parâmetros no `pArg` matriz. Representa o número de parâmetros passados para o construtor.  
   
  `pArgs`  
  [in] Uma matriz de [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objetos que representa os parâmetros passados para o construtor.  
@@ -61,16 +62,16 @@ int CreateObject (
  [in] Uma combinação de sinalizadores do [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) enumeração que especificam como a avaliação deve ser executada.  
   
  `dwTimeout`  
- [in] Tempo máximo, em milissegundos, de espera antes de retornar desse método. Use **infinito** aguardar indefinidamente.  
+ [in] Tempo máximo, em milissegundos, para aguardar antes de retornar do método. Use **infinito** para aguardar indefinidamente.  
   
  `ppObject`  
  [out] Retorna um **IDebugObject** que representa o objeto recém-criado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Chame este método para criar um objeto que representa uma instância de uma classe ou outro tipo complexo que requer um construtor, que é um parâmetro.  
+ Chame esse método para criar um objeto que representa uma instância de uma classe ou outro tipo complexo que exige um construtor, que é um parâmetro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)

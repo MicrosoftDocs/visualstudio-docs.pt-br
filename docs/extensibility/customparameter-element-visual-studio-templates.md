@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 154586701386f5f8f56c128920e12ca3147deb6b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: de6f5bf513d9d3582ba05bf7a34471d13743f8de
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500677"
 ---
 # <a name="customparameter-element-visual-studio-templates"></a>Elemento CustomParameter (modelos do Visual Studio)
 Contém um nome de parâmetro personalizado e o valor a ser usado quando um projeto ou item é criado a partir do modelo.  
@@ -47,13 +48,13 @@ Contém um nome de parâmetro personalizado e o valor a ser usado quando um proj
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|Agrupa os parâmetros personalizados que devem ser passados para o Assistente de modelo quando o assistente faz as substituições de parâmetro.|  
+|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|Agrupa os parâmetros personalizados devem ser passados para o Assistente de modelo quando o assistente faz as substituições de parâmetro.|  
   
 ## <a name="remarks"></a>Comentários  
- Quando um modelo contém `CustomParameter` elementos, cada instância de `Name` atributo é substituído pelo `Value` atributo nos arquivos de projeto ou item criados.  
+ Quando um modelo contém `CustomParameter` elementos, cada instância do `Name` atributo é substituído pelo `Value` atributo nos arquivos de projeto ou item criados.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar vários parâmetros personalizados em um modelo. Quando um projeto ou item é criado de um modelo com os seguintes parâmetros personalizados, todas as instâncias de `$color1$` e `$color2$` no modelo de arquivos serão substituídos por `Red` e `Blue`, respectivamente.  
+ O exemplo a seguir mostra como usar vários parâmetros personalizados em um modelo. Quando um projeto ou item é criado de um modelo com os seguintes parâmetros personalizados, todas as instâncias do `$color1$` e `$color2$` no modelo de arquivos serão substituídos pela `Red` e `Blue`, respectivamente.  
   
 ```  
 <CustomParameters>  

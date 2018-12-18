@@ -12,11 +12,12 @@ ms.service: multiple
 ms.technology: vs-ai-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 43411be41acf2e5bd2e40131dd06bf817bf87a38
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e0377417da5859e38c46f99b3b335ba627261cb5
+ms.sourcegitcommit: 551f13774e8bb0eb47cbd973745628a956e866aa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459681"
 ---
 # <a name="visual-studio-tools-for-ai"></a>Ferramentas do Visual Studio para IA
 
@@ -27,19 +28,19 @@ Comece na aprendizagem profunda usando o [Microsoft Cognitive Toolkit (CNTK)](ht
 ## <a name="develop-debug-and-deploy-deep-learning-models-and-ai-solutions"></a>Desenvolver, depurar e implantar modelos de aprendizagem profunda e soluções de IA
 Use os recursos de produtividade do Visual Studio para acelerar a inovação em IA hoje. Use recursos do editor de código interno como realce de sintaxe, IntelliSense e formatação automática de texto. É possível testar de forma interativa seu aplicativo de aprendizagem profunda no ambiente local usando o passo a passo de depuração em variáveis locais e modelos.
 
-![ide de aprendizagem profunda](media\about\ide.png)
+![ide de aprendizagem profunda](media/about/ide.png)
 
 ## <a name="get-started-quickly-with-the-azure-machine-learning-sample-gallery"></a>Introdução rápida à galeria de exemplos do Azure Machine Learning
 As Ferramentas do Visual Studio para IA estão integradas ao Azure Machine Learning para facilitar a navegação pela galeria de experimentos de exemplo usando o CNTK, o TensorFlow, o MMLSpark e muito mais.
 
-![gerenciador de exemplo](media\about\gallery.png)
+![gerenciador de exemplo](media/about/gallery.png)
 
 [Saiba mais sobre como criar projetos da galeria de exemplo](create-project-gallery.md)
 
 ## <a name="scale-out-deep-learning-model-training-andor-inferencing-to-the-cloud"></a>Aumente o treinamento de modelos de aprendizagem profunda e/ou fazendo inferências à nuvem
 Essa extensão facilita o treinamento de modelos no computador local ou o envio de trabalhos para a nuvem usando nossa integração com o Azure Machine Learning. É possível enviar trabalhos para destinos de computação diferentes como clusters Spark, máquinas virtuais com GPU do Azure e muito mais
 
-![Enviar trabalho](media\about\submitjobs.png)
+![Enviar trabalho](media/about/submitjobs.png)
 
 [Saiba mais sobre os modelos de treinamento na nuvem](tensorflow-vm.md)
 

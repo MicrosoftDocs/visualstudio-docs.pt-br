@@ -1,19 +1,20 @@
 ---
-title: Gerar substituições dos métodos Equals e GetHashCode em C# no Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Gerar substituições de método Equals e GetHashCode em C#
 ms.date: 01/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
-author: kuhlenh
-ms.author: kaseyu
+ms.topic: reference
+author: gewarren
+ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3768659ce6c4e52c9e4f6473207fc74513797f17
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5ec552e320b0c19c5c05e145fd9c5a4588f31b4c
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295703"
 ---
 # <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>Gerar substituições dos métodos Equals e GetHashCode no Visual Studio
 
@@ -35,17 +36,20 @@ Esta geração de código aplica-se a:
 
 ## <a name="how-to"></a>Como fazer
 
-1. coloque o cursor em sua declaração de tipo.
+1. Coloque o cursor em algum lugar na linha de sua declaração de tipo.
 
    ![Código realçado](media/overrides-highlight-cs.png)
 
+   > [!TIP]
+   > Se você clicar duas vezes para selecionar o nome do tipo, a opção de menu não ficará disponível. Basta colocar o cursor em algum lugar na linha.
+
 1. Depois, siga um destes procedimentos:
 
-   - **Teclado**
-     - Pressione **Ctrl**+**.** para acionar o menu **Ações e Refatorações Rápidas**.
-   - **Mouse**
-     - Clique com o botão direito do mouse e selecione o menu **Ações Rápidas e Refatorações**.
-     - Clique no ícone de ![Lâmpada](media/bulb-cs.png) que aparece na margem esquerda se o cursor de texto já estiver na linha com a declaração de tipo.
+   - Pressione **Ctrl**+**.** para acionar o menu **Ações e Refatorações Rápidas**.
+
+   - Clique com o botão direito do mouse e selecione o menu **Ações Rápidas e Refatorações**.
+
+   - Clique no ícone de ![chave de fenda](../media/screwdriver-icon.png) ícone que aparece na margem esquerda.
 
    ![Visualização Gerar substituições](media/overrides-preview-cs.png)
 
@@ -56,9 +60,9 @@ Esta geração de código aplica-se a:
     ![Caixa de diálogo Gerar substituições](media/overrides-dialog-cs.png)
 
     > [!TIP]
-    > Você também pode optar por gerar operadores nessa caixa de diálogo usando as caixas de seleção abaixo da lista de membros.
+    > Você também pode optar por gerar operadores nessa caixa de diálogo usando a caixa de seleção na parte inferior da caixa de diálogo.
 
-   As substituições de Equals e GetHashCode são geradas com implementações padrão.
+   Os métodos `Equals` e `GetHashCode` são gerados com implementações padrão.
 
    ![Resultado da geração do método](media/overrides-result-cs.png)
 

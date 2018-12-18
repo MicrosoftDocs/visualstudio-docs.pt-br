@@ -1,98 +1,101 @@
 ---
-title: Referência da API Microsoft.VisualStudio.TestTools.CppUnitTestFramework | Microsoft Docs
+title: Referência da API Microsoft.VisualStudio.TestTools.CppUnitTestFramework
 ms.date: 11/04/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: reference
 ms.author: mblome
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: mikeblome
-ms.openlocfilehash: 17b3b159f6baea62a079da622ccf0b44dc43591b
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: b2225ec5db308b290e932cb9d29d1c50e32d4608
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820259"
 ---
 # <a name="microsoftvisualstudiotesttoolscppunittestframework-api-reference"></a>Referência da API Microsoft.VisualStudio.TestTools.CppUnitTestFramework
 
 Este tópico lista os membros públicos do namespace `Microsoft::VisualStudio::CppUnitTestFramework`. Use essas APIs para gravar testes de unidade do C++ com base em Microsoft Native Unit Test Framework. Há um [Exemplo de Uso](#example) no final do tópico.
 
- Os arquivos de cabeçalho estão localizados na pasta *VisualStudio2012[x86]InstallFolder***\VC\UnitTest\include**.
+ Os arquivos de cabeçalho estão localizados na pasta _VisualStudio2012[x86]InstallFolder_**\VC\UnitTest\include**.
 
- Os arquivos lib estão localizados na pasta *VisualStudio2012[x86]InstallFolder***\VC\UnitTest\lib**.
+ Os arquivos lib estão localizados na pasta _VisualStudio2012[x86]InstallFolder_**\VC\UnitTest\lib**.
 
-Caminhos de cabeçalho e lib são automaticamente configurados em um projeto de teste nativo.
+Caminhos de cabeçalho e lib são configurados automaticamente em um projeto de teste nativo.
 
 ##  <a name="In_this_topic"></a> Neste tópico
  [CppUnitTest.h](#cppUnitTest_h)
 
--   [Criar classes de teste e métodos](#create_test_classes_and_methods)
+- [Criar classes de teste e métodos](#create_test_classes_and_methods)
 
--   [Inicialização e limpeza](#Initialize_and_cleanup)
+- [Inicialização e limpeza](#Initialize_and_cleanup)
 
-    -   [Métodos de teste](#test_methods)
+  -   [Métodos de teste](#test_methods)
 
-    -   [Classes de teste](#test_classes)
+  -   [Classes de teste](#test_classes)
 
-    -   [Módulos de teste](#test_modules)
+  -   [Módulos de teste](#test_modules)
 
--   [Criar atributos de teste](#create_test_attributes)
+- [Criar atributos de teste](#create_test_attributes)
 
-    -   [Atributos de método de teste](#test_method_attributes)
+  - [Atributos de método de teste](#test_method_attributes)
 
-    -   [Atributos de classe de teste](#test_class_attributes)
+  - [Atributos de classe de teste](#test_class_attributes)
 
-    -   [Atributos de módulo de teste](#test_module_attributes)
+  - [Atributos de módulo de teste](#test_module_attributes)
 
-    -   [Atributos predefinidos](#pre_defined_attributes)
+  - [Atributos predefinidos](#pre_defined_attributes)
 
-     [CppUnitTestAssert.h](#cppUnitTestAssert_h)
+    [CppUnitTestAssert.h](#cppUnitTestAssert_h)
 
-    -   [Declarações Gerais](#general_asserts)
+  - [Declarações Gerais](#general_asserts)
 
-        -   [São iguais](#general_are_equal)
+    -   [São iguais](#general_are_equal)
 
-        -   [Não são iguais](#general_are_not_equal)
+    -   [Não são iguais](#general_are_not_equal)
 
-        -   [São os mesmos](#general_are_same)
+    -   [São os mesmos](#general_are_same)
 
-        -   [Não são os mesmos](#general_are_not_same)
+    -   [Não são os mesmos](#general_are_not_same)
 
-        -   [É nulo](#general_is_null)
+    -   [É nulo](#general_is_null)
 
-        -   [Não é nulo](#general_is_not_null)
+    -   [Não é nulo](#general_is_not_null)
 
-        -   [É True](#general_is_True)
+    -   [É True](#general_is_True)
 
-        -   [É False](#general_is_false)
+    -   [É False](#general_is_false)
 
-        -   [Falha](#general_Fail)
+    -   [Falha](#general_Fail)
 
-    -   [Declarações do Windows Runtime](#winrt_asserts)
+  - [Declarações do Windows Runtime](#winrt_asserts)
 
-        -   [São iguais](#winrt_are_equal)
+    -   [São iguais](#winrt_are_equal)
 
-        -   [São os mesmos](#winrt_are_same)
+    -   [São os mesmos](#winrt_are_same)
 
-        -   [Não são iguais](#winrt_are_not_equal)
+    -   [Não são iguais](#winrt_are_not_equal)
 
-        -   [Não são os mesmos](#winrt_are_not_same)
+    -   [Não são os mesmos](#winrt_are_not_same)
 
-        -   [É nulo](#winrt_is_null)
+    -   [É nulo](#winrt_is_null)
 
-        -   [Não é nulo](#winrt_is_not_null)
+    -   [Não é nulo](#winrt_is_not_null)
 
-    -   [Declarações de Exceção](#exception_asserts)
+  - [Declarações de Exceção](#exception_asserts)
 
-        -   [Exceção de Espera](#expect_exception)
+    - [Exceção de Espera](#expect_exception)
 
-         [CppUnitTestLogger.h](#cppunittestlogger_h)
+      [CppUnitTestLogger.h](#cppunittestlogger_h)
 
-        -   [Logger](#logger)
+    - [Logger](#logger)
 
-        -   [Gravar Mensagem](#write_message)
-    -    [Exemplo de uso](#example)
+    - [Gravar Mensagem](#write_message)
+
+  - [Exemplo de uso](#example)
 
 ##  <a name="cppUnitTest_h"></a> CppUnitTest.h
 
@@ -109,7 +112,6 @@ TEST_METHOD(methodName)
 {
     // test method body
 }
-
 ```
 
  Define *methodName* como um método de teste. `TEST_METHOD` deve ser declarado no escopo da classe do método.
@@ -123,7 +125,6 @@ TEST_METHOD_INITIALIZE(methodName)
 {
     // method initialization code
 }
-
 ```
 
  Define *methodName* como um método executado antes de cada método de teste ser executado. `TEST_METHOD_INITIALIZE` só pode ser definido uma vez em uma classe de teste e deve ser definido na classe de teste.
@@ -133,7 +134,6 @@ TEST_METHOD_CLEANUP(methodName)
 {
     // test method cleanup  code
 }
-
 ```
 
  Define *methodName* como um método executado após de cada método de teste ser executado. `TEST_METHOD_CLEANUP` só pode ser definido uma vez em uma classe de teste e deve ser definido no escopo da classe de teste.
@@ -147,7 +147,7 @@ TEST_CLASS_INITIALIZE(methodName)
 }
 ```
 
- Define *methodName* como um método executado após de cada classe de teste ser executada. `TEST_CLASS_INITIALIZE` só pode ser definido uma vez em uma classe de teste e deve ser definido no escopo da classe de teste.
+ Define *methodName* como um método executado após de cada classe de teste ser criada. `TEST_CLASS_INITIALIZE` só pode ser definido uma vez em uma classe de teste e deve ser definido no escopo da classe de teste.
 
 ```cpp
 TEST_CLASS_CLEANUP(methodName)
@@ -643,5 +643,5 @@ public:
 ## <a name="see-also"></a>Consulte também
 
 - [Efetuar teste de unidade em seu código](../test/unit-test-your-code.md)
-- [Escrever Testes de Unidade para C/C++](writing-unit-tests-for-c-cpp.md)
+- [Escrever testes de unidade para C/C++](writing-unit-tests-for-c-cpp.md)
 

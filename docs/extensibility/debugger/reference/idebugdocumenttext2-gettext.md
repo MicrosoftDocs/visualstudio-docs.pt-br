@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6b5adaccf5a74119ee5e697c9dfd7b7ad46d6151
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fe2b5ef3804c4ccfafbf164a8eb144e7822a6fdc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905500"
 ---
 # <a name="idebugdocumenttext2gettext"></a>IDebugDocumentText2::GetText
 Recupera o texto da posição especificada no documento.  
@@ -52,13 +53,13 @@ int GetText(
  [in] O número máximo de caracteres do texto a ser recuperado.  
   
  `pText`  
- [out no] Um ponteiro para um buffer que é preenchido com o texto desejado. Esse buffer deve ser capaz de conter pelo menos `cMaxChars` número de caracteres largos.  
+ [no, out] Um ponteiro para um buffer que deve ser preenchido com o texto desejado. Esse buffer deve ser capaz de conter pelo menos `cMaxChars` número de caracteres largos.  
   
  `pcNumChars`  
  [out] Retorna o número de caracteres realmente recuperados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como esse método pode ser chamado do c#.  

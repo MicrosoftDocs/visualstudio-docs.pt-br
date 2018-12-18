@@ -1,12 +1,9 @@
 ---
-title: "Instalar uma página inicial personalizada ou alterar o item de inicialização no Visual Studio | Microsoft Docs"
-ms.custom: 
+title: Instalar uma página inicial personalizada ou alterar o item de inicialização no Visual Studio
 ms.date: 02/01/2017
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.ToolsOptionsPages.Startup
 helpviewer_keywords:
@@ -15,14 +12,15 @@ helpviewer_keywords:
 - Visual Studio Start Page
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ecc22bd23b5b245173321ed3a12379c6fe5622af
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: b5e32a311bcd60542df80518c791b1fbe413a7b2
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31916601"
 ---
 # <a name="customize-the-start-page-for-visual-studio"></a>Personalizar a página inicial do Visual Studio
 
@@ -30,7 +28,7 @@ ms.lasthandoff: 02/09/2018
 
 ## <a name="to-change-the-startup-item"></a>Para alterar o item de inicialização
 
-1. Na barra de menus, escolha **Ferramentas**, **Opções**.
+1. Na barra de menus, escolha **Ferramentas** > **Opções**.
 
 1. Expanda **Ambiente** e escolha **Inicialização**.
 
@@ -40,11 +38,11 @@ ms.lasthandoff: 02/09/2018
 
 Você pode [criar sua própria página inicial personalizada](../extensibility/creating-a-custom-start-page.md) usando o SDK do Visual Studio ou usar uma que alguém criou. Por exemplo, você pode encontrar as páginas iniciais personalizadas no [Visual Studio Marketplace](https://marketplace.visualstudio.com/search?target=VS&category=Tools&vsVersion=&subCategory=Start%20Pages&sortBy=Downloads).
 
-Para instalar uma página inicial personalizada, abra um arquivo .vsix ou copie e cole os arquivos de página inicial na pasta **%USERPROFILE% \Documents\Visual Studio 2017\StartPages** do computador.
+Para instalar uma página inicial personalizada, abra um arquivo *.vsix* ou copie e cole os arquivos de página inicial na pasta *%USERPROFILE% \Documents\Visual Studio 2017\StartPages* do computador.
 
 ### <a name="to-select-which-custom-start-page-to-display"></a>Para selecionar qual página inicial personalizada exibir
 
-1. Na barra de menus, escolha **Ferramentas**, **Opções**.
+1. Na barra de menus, escolha **Ferramentas** > **Opções**.
 
 1. Expanda **Ambiente** e escolha **Inicialização**.
 
@@ -55,4 +53,4 @@ Para instalar uma página inicial personalizada, abra um arquivo .vsix ou copie 
 
 ## <a name="see-also"></a>Consulte também
 
-[Personalizar o IDE do Visual Studio](../ide/personalizing-the-visual-studio-ide.md)
+- [Personalizar o IDE do Visual Studio](../ide/personalizing-the-visual-studio-ide.md)

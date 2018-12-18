@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8c9bb5fab8386046f9b409e0d3ef801b4020e88c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 189bae80873e100be3371813add133982926edab
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915224"
 ---
 # <a name="idebugcomplussymbolprovidergetarraytypefromaddress"></a>IDebugComPlusSymbolProvider::GetArrayTypeFromAddress
-Recupera informações sobre a matriz especificada, dada seu endereço de depuração de tipo.  
+Recupera informações de tipo sobre a matriz especificada, dada seu endereço de depuração.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,16 +54,16 @@ int GetArrayTypeFromAddress(
  [in] A matriz para examinar.  
   
  `dwSigLength`  
- [in] Tamanho em bytes da `pSig` matriz.  
+ [in] Comprimento em bytes do `pSig` matriz.  
   
  `ppField`  
  [out] Retorna o tipo de matriz, conforme representado por um [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) interface.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto que expõe o [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto que expõe a [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::GetArrayTypeFromAddress(  

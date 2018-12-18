@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b73a625e21da8e8ba026df140e437e96bdeb1ff5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5ceb6c85c510269877dfe34e091d50095dc7a50c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49821676"
 ---
 # <a name="bplocation"></a>BP_LOCATION
 Especifica o tipo de estrutura usada para descrever o local do ponto de interrupção.  
@@ -54,7 +55,7 @@ public struct BP_LOCATION {
   
 ## <a name="members"></a>Membros  
  `bpLocationType`  
- Um valor da [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) enumeração usada para interpretar o `bpLocation` união ou `unionmemberX` membros.  
+ Um valor da [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) enumeração usada para interpretar a `bpLocation` união ou o `unionmemberX` membros.  
   
  `bpLocation`.`bplocCodeFileLine`  
  [C++] Contém o [BP_LOCATION_CODE_FILE_LINE](../../../extensibility/debugger/reference/bp-location-code-file-line.md) estrutura se `bpLocationType`  =  `BPLT_CODE_FILE_LINE`.  
@@ -78,21 +79,21 @@ public struct BP_LOCATION {
  [C++] Contém o [BP_LOCATION_RESOLUTION](../../../extensibility/debugger/reference/bp-location-resolution.md) estrutura se `bpLocationType`  =  `BPLT_RESOLUTION`.  
   
  `unionmember1`  
- [Apenas c#] Consulte os comentários sobre como interpretar.  
+ [Somente c#] Consulte os comentários sobre como interpretar.  
   
  `unionmember2`  
- [Apenas c#] Consulte os comentários sobre como interpretar.  
+ [Somente c#] Consulte os comentários sobre como interpretar.  
   
  `unionmember3`  
- [Apenas c#] Consulte os comentários sobre como interpretar.  
+ [Somente c#] Consulte os comentários sobre como interpretar.  
   
  `unionmember4`  
- [Apenas c#] Consulte os comentários sobre como interpretar.  
+ [Somente c#] Consulte os comentários sobre como interpretar.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é membro do [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) e [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) estruturas.  
+ Essa estrutura é um membro do [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) e [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) estruturas.  
   
- [Apenas c#] O `unionmemberX` membros são interpretados de acordo com a tabela a seguir. Examine a coluna à esquerda para a `bpLocationType` valor, em seguida, procure pelas outras colunas para determinar o que cada `unionmemberX` membro representa e empacotar o `unionmemberX` adequadamente. Consulte o exemplo de uma maneira de interpretar uma parte dessa estrutura em c#.  
+ [Somente c#] O `unionmemberX` membros são interpretados de acordo com a tabela a seguir. Procure abaixo da coluna da esquerda para a `bpLocationType` de valor, em seguida, procure em outras colunas para determinar o que cada `unionmemberX` membro representa e marshaling o `unionmemberX` adequadamente. Veja o exemplo de uma maneira de interpretar uma parte dessa estrutura em c#.  
   
 |`bpLocationType`|`unionmember1`|`unionmember2`|`unionmember3`|`unionmember4`|  
 |----------------------|--------------------|--------------------|--------------------|--------------------|  
@@ -105,7 +106,7 @@ public struct BP_LOCATION {
 |`BPLT_RESOLUTION`|[IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md)|-|-|-|  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo mostra como interpretar o `BP_LOCATION` estrutura em c# para o `BPLT_DATA_STRING` tipo. Esse tipo específico mostra como interpretar os quatro `unionmemberX` membros em todos os possíveis formatos (objeto, cadeia de caracteres e número).  
+ Este exemplo mostra como interpretar a `BP_LOCATION` estrutura em c# para o `BPLT_DATA_STRING` tipo. Esse tipo específico mostra como interpretar os quatro `unionmemberX` membros em todos os formatos possíveis (objeto de cadeia de caracteres e número).  
   
 ```csharp  
 using System;  

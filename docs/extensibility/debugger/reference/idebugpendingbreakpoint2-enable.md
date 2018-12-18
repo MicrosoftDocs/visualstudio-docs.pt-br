@@ -16,11 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 930e806616ef5f4c30aa39b8c6e8ac156ab4a1ba
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 51309f1af6a96663e9d2ad71348a5b56a0fab6f8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855476"
 ---
 # <a name="idebugpendingbreakpoint2enable"></a>IDebugPendingBreakpoint2::Enable
 Alterna o estado habilitado do ponto de interrupção pendente.  
@@ -41,15 +42,15 @@ int Enable(
   
 #### <a name="parameters"></a>Parâmetros  
  `fEnable`  
- [in] Definido como zero (`TRUE`) para habilitar um ponto de interrupção pendente, ou para zero (`FALSE`) para desabilitar.  
+ [in] Definido como não zero (`TRUE`) para habilitar um ponto de interrupção pendente, ou zero (`FALSE`) para desabilitar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o ponto de interrupção foi excluído.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o ponto de interrupção tiver sido excluído.  
   
 ## <a name="remarks"></a>Comentários  
  Quando um ponto de interrupção pendente está habilitado ou desabilitado, todos os pontos de interrupção associados dele são definidos para o mesmo estado.  
   
- Esse método pode ser chamado como quantas vezes forem necessárias, mesmo se o ponto de interrupção já está habilitado ou desabilitado.  
+ Esse método pode ser chamado quantas vezes forem necessárias, mesmo se o ponto de interrupção já está habilitado ou desabilitado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como implementar esse método para um simples `CPendingBreakpoint` objeto que expõe o [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) interface.  

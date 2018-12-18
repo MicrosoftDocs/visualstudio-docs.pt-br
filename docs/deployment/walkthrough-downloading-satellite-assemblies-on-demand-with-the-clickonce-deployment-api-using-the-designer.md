@@ -22,53 +22,54 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a8a56cc87978ebc5b8c64c0a2a6774186048efa7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 79c5616a9233466c71ca036c4c0cb70d43649979
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154853"
 ---
-# <a name="walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>Instruções passo a passo: baixando assemblies satélite por demanda com a API de implantação do ClickOnce usando o designer
-Aplicativos de formulários do Windows podem ser configurados para várias culturas com o uso de assemblies de satélite. Um *assembly satélite* é um assembly que contém recursos de aplicativos para uma cultura diferente de cultura do padrão do aplicativo.  
+# <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>Passo a passo: Fazer o Download de assemblies satélite por demanda com a implantação do ClickOnce usando o Designer de API
+Aplicativos do Windows Forms podem ser configurados para várias culturas com o uso de assemblies satélite. Um *assembly satélite* é um assembly que contém os recursos de aplicativo para uma cultura que não seja a cultura padrão do aplicativo.  
   
- Conforme discutido em [Localizando os aplicativos ClickOnce](../deployment/localizing-clickonce-applications.md), você pode incluir vários assemblies de satélite para várias culturas dentro do mesmo [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] implantação. Por padrão, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] baixará todos os assemblies satélite em sua implantação para o computador cliente, embora um único cliente provavelmente exigirá assembly satélite apenas um.  
+ Conforme discutido em [localizando aplicativos do ClickOnce](../deployment/localizing-clickonce-applications.md), você pode incluir vários assemblies de satélite para várias culturas dentro do mesmo [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] implantação. Por padrão, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] baixará todos os assemblies de satélite em sua implantação para o computador cliente, embora um único cliente provavelmente exigirá apenas um assembly satélite.  
   
- Este passo a passo demonstra como marcar seus assemblies de satélite como opcional e baixar apenas o assembly precisa de um computador cliente para suas configurações de cultura atual.  
+ Este passo a passo demonstra como marcar seus assemblies satélites como opcionais e baixar somente o assembly precisa de um computador cliente para suas configurações de cultura.  
   
 > [!NOTE]
->  Para fins de teste, os exemplos de código a seguir programaticamente definem a cultura `ja-JP`. Consulte a seção "Próximas etapas" mais adiante neste tópico para obter informações sobre como ajustar esse código para um ambiente de produção.  
+>  Para fins de teste, os exemplos de código a seguir por meio de programação definem a cultura `ja-JP`. Consulte a seção "Próximas etapas" mais adiante neste tópico para obter informações sobre como ajustar esse código para um ambiente de produção.  
   
-### <a name="to-mark-satellite-assemblies-as-optional"></a>Marcar assemblies de satélite como opcional  
+### <a name="to-mark-satellite-assemblies-as-optional"></a>Para marcar os assemblies satélites como opcionais  
   
-1.  Criar o projeto. Isso irá gerar assemblies de satélite para todas as culturas que você está localizando para.  
+1.  Criar o projeto. Isso irá gerar assemblies de satélite para todas as culturas que você estiver localizando a.  
   
 2.  Clique com botão direito no nome do projeto no Gerenciador de soluções e, em seguida, clique em **propriedades**.  
   
-3.  Clique o **publicar** guia e, em seguida, clique em **arquivos de aplicativo**.  
+3.  Clique o **Publish** guia e, em seguida, clique em **arquivos de aplicativo**.  
   
-4.  Selecione o **Mostrar todos os arquivos** caixa de seleção para exibir os assemblies satélite. Por padrão, todos os assemblies de satélite serão incluídos em sua implantação e ficarão visíveis na caixa de diálogo.  
+4.  Selecione o **Mostrar todos os arquivos** caixa de seleção para exibir os assemblies satélites. Por padrão, todos os assemblies satélite serão incluídos em sua implantação e estarão visíveis na caixa de diálogo.  
   
-     Um assembly satélite terá um nome no formato *isoCode*\ApplicationName.resources.dll, onde *isoCode* é um identificador de idioma no formato RFC 1766.  
+     Um assembly satélite terá um nome na forma  *\<isoCode > \ApplicationName.resources.dll*, onde \<isoCode > é um identificador de idioma no formato RFC 1766.  
   
-5.  Clique em **novo...**  no **grupo de Download** lista para cada identificador de idioma. Quando solicitado a fornecer um nome de grupo de download, insira o identificador de idioma. Por exemplo, para um assembly satélite japonês, você deve especificar o nome do grupo de download `ja-JP`.  
+5.  Clique em **New** na **grupo de Download** lista para cada identificador de idioma. Quando solicitado a fornecer um nome de grupo de download, insira o identificador de idioma. Por exemplo, para um assembly satélite japonês, você especificaria o nome do grupo de download `ja-JP`.  
   
 6.  Fechar o **arquivos de aplicativo** caixa de diálogo.  
   
-### <a name="to-download-satellite-assemblies-on-demand-in-c"></a>Para baixar os assemblies satélite por demanda em c# #
+### <a name="to-download-satellite-assemblies-on-demand-in-c"></a>Para baixar os assemblies satélite sob demanda em c# 
   
-1.  Abra o arquivo Program.cs. Se você não vir esse arquivo no Gerenciador de soluções, selecione o seu projeto e, no **projeto** menu, clique em **Mostrar todos os arquivos**.  
+1.  Abra o arquivo *Program.cs*. Se você não vir esse arquivo no Gerenciador de soluções, selecione seu projeto e sobre o **projeto** menu, clique em **Mostrar todos os arquivos**.  
   
-2.  Use o código a seguir para baixar o assembly satélite e iniciar o aplicativo.  
+2.  Use o código a seguir para baixar o assembly satélite adequado e iniciar o aplicativo.  
   
      [!code-csharp[ClickOnce.SatelliteAssemblies#1](../deployment/codesnippet/CSharp/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_1.cs)]  
   
-### <a name="to-download-satellite-assemblies-on-demand-in-visual-basic"></a>Para baixar os assemblies satélite por demanda no Visual Basic  
+### <a name="to-download-satellite-assemblies-on-demand-in-visual-basic"></a>Para baixar os assemblies satélite sob demanda no Visual Basic  
   
 1.  No **propriedades** janela do aplicativo, clique no **aplicativo** guia.  
   
 2.  Na parte inferior da página da guia, clique em **exibir eventos do aplicativo**.  
   
-3.  Adicione a seguir importa para o início do arquivo Project.  
+3.  Adicione as importações a seguir ao início do *ApplicationEvents* arquivo.  
   
      [!code-vb[ClickOnce.SatelliteAssembliesVB#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_2.vb)]  
   
@@ -77,8 +78,8 @@ Aplicativos de formulários do Windows podem ser configurados para várias cultu
      [!code-vb[ClickOnce.SatelliteAssembliesVB#2](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_3.vb)]  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Em um ambiente de produção, você provavelmente precisará remover a linha nos exemplos de código que define <xref:System.Threading.Thread.CurrentUICulture%2A> para um valor específico, como cliente máquinas serão tem o valor correto definida por padrão. Quando seu aplicativo é executado em um computador cliente em japonês, por exemplo, <xref:System.Threading.Thread.CurrentUICulture%2A> será `ja-JP` por padrão. Definir programaticamente o valor é uma boa maneira de testar seus assemblies satélites antes de implantar seu aplicativo.  
+ Em um ambiente de produção, provavelmente será necessário remover a linha nos exemplos de código que define <xref:System.Threading.Thread.CurrentUICulture%2A> como um valor específico, porque máquinas de cliente será tem o valor correto definido por padrão. Quando seu aplicativo é executado em um computador cliente japonês, por exemplo, <xref:System.Threading.Thread.CurrentUICulture%2A> será `ja-JP` por padrão. Defini-lo por meio de programação é uma boa maneira de testar seus assemblies satélites antes de implantar seu aplicativo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Passo a passo: Baixando Assemblies satélite por demanda com a API de implantação do ClickOnce](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md)   
- [Localizando aplicativos ClickOnce](../deployment/localizing-clickonce-applications.md)
+ [Passo a passo: Fazer o Download de assemblies satélite por demanda com a API de implantação do ClickOnce](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md)   
+ [Localizar aplicativos ClickOnce](../deployment/localizing-clickonce-applications.md)

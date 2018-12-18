@@ -13,17 +13,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d79399ebea9fd5dedd645b148910d6a4ced47902
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ba2590c17a41d200f0a8dd3c38c7c9ae8c8a85cc
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572092"
 ---
-# <a name="visual-studio-profiler-api-reference-native"></a>Referência da API do Visual Studio Profiler (nativo)
-APIs do criador de perfil do Visual Studio permitem que você controle programaticamente a quantidade de dados coletados e insira marcas de carimbo de data/hora e perfil durante a criação de perfil. Para usar as APIs nativas, inclua o arquivo de cabeçalho VSPerf.h e adicione o VSPerf.lib em seu projeto.  
+# <a name="visual-studio-profiler-api-reference-native"></a>Referência da API do criador de perfil do Visual Studio (nativo)
+As APIs do criador de perfil do Visual Studio permitem que você controle de forma programática a quantidade de dados coletados e insira marcas de carimbo de data/hora e de perfil durante a criação de perfil. Para usar as APIs nativas, inclua o arquivo de cabeçalho *VSPerf.h* e adicione o *VSPerf.lib* ao projeto.  
   
 > [!NOTE]
->  Por padrão, VSPerf.h e VSPerf.lib estão localizados em uma pasta chamada PerfSDK. \<unidade>:\Arquivos de Programas\Microsoft Visual Studio 14.0\Team Tools\Performance Tools\diretório PerfSDK, por exemplo.  
+>  Por padrão, *VSPerf.h* e *VSPerf.lib* estão localizados em uma pasta chamada *PerfSDK*. Diretório *\<unidade>:\Arquivos de Programas\Microsoft Visual Studio 14.0\Team Tools\Performance Tools\PerfSDK*, por exemplo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [CommentMarkAtProfile](../profiling/commentmarkatprofile.md)  
@@ -46,4 +47,4 @@ APIs do criador de perfil do Visual Studio permitem que você controle programat
   
 ## <a name="see-also"></a>Consulte também  
  [APIs de ferramentas de criação de perfil](../profiling/profiling-tools-apis.md)   
- [Passo a passo: usando APIs do criador de perfil](../profiling/walkthrough-using-profiler-apis.md)
+ [Instruções passo a passo: usando APIs do criador de perfil](../profiling/walkthrough-using-profiler-apis.md)

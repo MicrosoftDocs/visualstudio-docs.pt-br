@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31477759"
 ---
 # <a name="graphics-object-table"></a>Tabela de objetos de gráfico
 A tabela de objeto de gráficos na análise de gráficos do Visual Studio ajuda você a entender os objetos de Direct3D que dão suporte a um quadro de seu aplicativo ou um jogo.  

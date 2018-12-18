@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135816"
 ---
 # <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>Suporte para a janela Autos em um serviço de linguagem herdado
 O **Autos** janela exibe expressões como variáveis e parâmetros que estão no escopo quando o programa que está sendo depurado está em pausa (seja devido a um ponto de interrupção ou exceção). As expressões podem incluir variáveis, locais ou globais e os parâmetros que foram alterados no escopo local. O **Autos** janela também pode incluir instâncias de uma classe, estrutura ou algum outro tipo. Tudo o que pode avaliar um avaliador de expressão potencialmente pode ser mostrado no **Autos** janela.  

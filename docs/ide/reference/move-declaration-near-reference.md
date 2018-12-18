@@ -1,21 +1,22 @@
 ---
-title: Mover declaração de variável para perto da referência no Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Mover a declaração de variável para perto da referência no Visual Studio
 ms.date: 01/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
-author: kuhlenh
-ms.author: kaseyu
+author: gewarren
+ms.author: gewarren
 manager: douge
 dev_langs:
-- csharp
+- CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7c78904123da54fd2259558f29832742d9a103d2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b3a231aafce69bfeeaff7defee6d5f85c7ffc8b2
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896595"
 ---
 # <a name="move-declaration-near-reference-refactoring"></a>Mover declaração de variável para perto da referência no Visual Studio
 
@@ -36,9 +37,9 @@ Esta refatoração aplica-se a:
 1. Depois, siga um destes procedimentos:
 
    - **Teclado**
-     - Pressione **Ctrl**+**.** para disparar o menu **Ações Rápidas e Refatorações** e selecionar **Mover declaração para próximo da referência** no pop-up da janela Visualização.
+      - Pressione **Ctrl**+**.** para disparar o menu **Ações Rápidas e Refatorações** e selecionar **Mover declaração para próximo da referência** no pop-up da janela Visualização.
    - **Mouse**
-     - Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Mover declaração para próximo da referência** no pop-up da janela Visualização.
+      - Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Mover declaração para próximo da referência** no pop-up da janela Visualização.
 
 1. Quando estiver satisfeito com a alteração, pressione **Enter** ou clique na correção no menu e as alterações serão confirmadas.
 

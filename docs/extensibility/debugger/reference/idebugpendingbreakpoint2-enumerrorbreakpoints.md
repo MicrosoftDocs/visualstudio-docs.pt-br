@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9bf419ccf3b0935dccf1fa4e56ec156bc4338da6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4c43c3bd314ae9db7025448b2632562e9ae947c4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942264"
 ---
 # <a name="idebugpendingbreakpoint2enumerrorbreakpoints"></a>IDebugPendingBreakpoint2::EnumErrorBreakpoints
-Obtém uma lista de todos os pontos de interrupção de erro resultantes deste ponto de interrupção pendente.  
+Obtém uma lista de todos os pontos de interrupção de erro que resultou de ponto de interrupção pendente.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,13 +44,13 @@ int EnumErrorBreakpoints(
   
 #### <a name="parameters"></a>Parâmetros  
  `bpErrorType`  
- [in] Uma combinação de valores da [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) enumeração que seleciona o tipo de erros para enumerar.  
+ [in] Uma combinação de valores de [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) enumeração que seleciona o tipo de erros para enumerar.  
   
  `ppEnum`  
  [out] Retorna um [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) objeto que contém uma lista de [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) objetos.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o ponto de interrupção foi excluído.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o ponto de interrupção tiver sido excluído.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como implementar esse método para um simples `CPendingBreakpoint` objeto que expõe o [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) interface.  

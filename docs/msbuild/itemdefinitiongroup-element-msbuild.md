@@ -20,21 +20,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c064f3398ac29cfa4187c19139e9264e2925689f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 09aa3046c66b9b4beb825dad8e8bc648d50851d0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887183"
 ---
 # <a name="itemdefinitiongroup-element-msbuild"></a>Elemento ItemDefinitionGroup (MSBuild)
-O elemento `ItemDefinitionGroup` permite definir um conjunto de Definições de Item, que são valores de metadados aplicados por padrão a todos os itens do projeto. ItemDefinitionGroup substitui a necessidade de usar a [Tarefa CreateItem](../msbuild/createitem-task.md) e [Tarefa CreateProperty](../msbuild/createproperty-task.md). Para obter mais informações, consulte [Definições de item](../msbuild/item-definitions.md).  
+O elemento `ItemDefinitionGroup` permite definir um conjunto de Definições de Item, que são valores de metadados aplicados por padrão a todos os itens do projeto. ItemDefinitionGroup substitui a necessidade de usar a [tarefa CreateItem](../msbuild/createitem-task.md) e [tarefa CreateProperty](../msbuild/createproperty-task.md). Para obter mais informações, confira [Definições de item](../msbuild/item-definitions.md).  
 
  \<Project>  
  \<ItemDefinitionGroup>  
 
 ## <a name="syntax"></a>Sintaxe  
 
-```  
+```xml  
 <ItemDefinitionGroup Condition="'String A' == 'String B'">  
     <Item1>... </Item1>  
     <Item2>... </Item2>  
@@ -58,9 +59,9 @@ O elemento `ItemDefinitionGroup` permite definir um conjunto de Definições de 
 
 ### <a name="parent-elements"></a>Elementos pai  
 
-|Elemento|Descrição|  
-|-------------|-----------------|  
-|[Projeto](../msbuild/project-element-msbuild.md)|Elemento raiz necessário de um arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].|  
+| Elemento | Descrição |
+| - | - |
+| [Projeto](../msbuild/project-element-msbuild.md) | Elemento raiz necessário de um arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
 
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir define dois itens de metadados, m e n, em um ItemDefinitionGroup. Nesse exemplo, os metadados padrão "m" são aplicados ao Item "i" porque os metadados "m" não estão explicitamente definidos pelo Item "i". No entanto, os metadados padrão "n" não são aplicados ao Item "i" porque os metadados "n" já estão definidos pelo Item "i".  
@@ -84,5 +85,5 @@ O elemento `ItemDefinitionGroup` permite definir um conjunto de Definições de 
 ```  
 
 ## <a name="see-also"></a>Consulte também  
- [Referência do esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)   
+ [Referência de esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)   
  [Itens](../msbuild/msbuild-items.md)

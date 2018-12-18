@@ -1,6 +1,7 @@
 ---
 title: 'CA1010: as coleções devem implementar a interface genérica'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,59 +16,61 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f588a1539e85ce9aa81a7d126decafba71f32462
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5264292e6dc1e8cf86a64d41dc15154d836a8444
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915276"
 ---
 # <a name="ca1010-collections-should-implement-generic-interface"></a>CA1010: as coleções devem implementar a interface genérica
+
 |||
 |-|-|
 |NomeDoTipo|CollectionsShouldImplementGenericInterface|
 |CheckId|CA1010|
 |Categoria|Microsoft.Design|
-|Alteração Significativa|Não recentes|
+|Alteração Significativa|Não são significativas|
 
 ## <a name="cause"></a>Causa
- Implementa um tipo visível externamente a <xref:System.Collections.IEnumerable?displayProperty=fullName> interface mas não implementa o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> interface e os destinos de assembly contendo [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]. Essa regra ignora os tipos que implementam <xref:System.Collections.IDictionary?displayProperty=fullName>.
+ Um tipo visível externamente implementa o <xref:System.Collections.IEnumerable?displayProperty=fullName> interface, mas não implementa o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> interface e os destinos de assembly que contém [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]. Essa regra sempre ignora os tipos que implementam <xref:System.Collections.IDictionary?displayProperty=fullName>.
 
-## <a name="rule-description"></a>Descrição da Regra
- Para ampliar a usabilidade de uma coleção, implemente uma das interfaces da coleção genéricas. Em seguida, a coleção pode ser usada para popular os tipos de coleções genéricas, como o seguinte:
+## <a name="rule-description"></a>Descrição da regra
+ Para ampliar a usabilidade de uma coleção, implemente uma das interfaces da coleção genéricas. Em seguida, a coleção pode ser usada para popular tipos de coleção genérica, como o seguinte:
 
--   <xref:System.Collections.Generic.List%601?displayProperty=fullName>
+- <xref:System.Collections.Generic.List%601?displayProperty=fullName>
 
--   <xref:System.Collections.Generic.Queue%601?displayProperty=fullName>
+- <xref:System.Collections.Generic.Queue%601?displayProperty=fullName>
 
--   <xref:System.Collections.Generic.Stack%601?displayProperty=fullName>
+- <xref:System.Collections.Generic.Stack%601?displayProperty=fullName>
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, implemente uma das seguintes interfaces de coleção genérica:
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, implemente uma das seguintes interfaces de coleção genérica:
 
--   <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>
+- <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>
 
--   <xref:System.Collections.Generic.ICollection%601?displayProperty=fullName>
+- <xref:System.Collections.Generic.ICollection%601?displayProperty=fullName>
 
--   <xref:System.Collections.Generic.IList%601?displayProperty=fullName>
+- <xref:System.Collections.Generic.IList%601?displayProperty=fullName>
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- É seguro suprimir um aviso dessa regra; No entanto, a coleção terá um uso mais limitado.
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+ É seguro suprimir um aviso nessa regra; No entanto, a coleção terá um uso mais limitado.
 
 ## <a name="example-violation"></a>Violação de exemplo
 
 ### <a name="description"></a>Descrição
- O exemplo a seguir mostra uma classe (tipo de referência) que deriva de não-genérica `CollectionBase` classe que viola essa regra.
+ O exemplo a seguir mostra uma classe (tipo de referência) que deriva de não-genérica `CollectionBase` classe, que viola essa regra.
 
 ### <a name="code"></a>Código
  [!code-csharp[FxCop.Design.CollectionsGenericViolation#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_1.cs)]
 
 ### <a name="comments"></a>Comentários
- Para corrigir uma violação dessa violação, você deve implementar as interfaces genéricas ou alterar a classe base para um tipo que já implementa as duas interfaces genéricas e não genéricas, como o `Collection<T>` classe.
+ Para corrigir uma violação dessa violação, você deve implementar as interfaces genéricas ou altere a classe base para um tipo que já implementa ambas as interfaces genéricas e não genéricas, como o `Collection<T>` classe.
 
-## <a name="fix-by-base-class-change"></a>Corrigir alteração de classe Base
+## <a name="fix-by-base-class-change"></a>Corrigir pela mudança de classe Base
 
 ### <a name="description"></a>Descrição
- O exemplo a seguir corrige a violação, alterando a classe base da coleção de não-genérica `CollectionBase` classe genérica `Collection<T>` (`Collection(Of T)` em [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) classe.
+ O exemplo a seguir corrige a violação ao alterar a classe base da coleção de não-genérica `CollectionBase` classe genérica `Collection<T>` (`Collection(Of T)` em [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) classe.
 
 ### <a name="code"></a>Código
  [!code-csharp[FxCop.Design.CollectionsGenericBase#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_2.cs)]

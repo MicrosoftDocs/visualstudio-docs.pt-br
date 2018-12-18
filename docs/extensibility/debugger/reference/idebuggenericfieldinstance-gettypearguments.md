@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0521405cfd9991ca0de72690e7b50ca22baaa67e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3a73000e7c4ff4514005c47555cc4860c60e7466
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49932683"
 ---
 # <a name="idebuggenericfieldinstancegettypearguments"></a>IDebugGenericFieldInstance::GetTypeArguments
-Recupera os argumentos de parâmetro de tipo para essa instância.  
+Recupera os argumentos de parâmetro de tipo para esta instância.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,10 +50,10 @@ int GetTypeArguments(
  [out] Retorna uma matriz de parâmetros de tipo.  
   
  `pcArgs`  
- [out no] Número de membros a `ppArgs` matriz.  
+ [no, out] Número de membros no `ppArgs` matriz.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)

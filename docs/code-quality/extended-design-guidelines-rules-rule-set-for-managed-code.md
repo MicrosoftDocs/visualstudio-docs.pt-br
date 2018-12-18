@@ -1,6 +1,7 @@
 ---
 title: Conjunto de regras de diretrizes do design estendido para código gerenciado
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: a338caf2-b75d-4f23-a0f9-3024fa0bceac
@@ -9,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: d03dfd0dce846bd18d35e05e30e32502f38d030b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2842db460d0a8e3a31921d80cf4a0c3ea0bbc847
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31927094"
 ---
 # <a name="extended-design-guidelines-rules-rule-set-for-managed-code"></a>Conjunto de regras de diretrizes do design estendido para código gerenciado
 O conjunto de regras de regras de diretrizes de Design estendido Microsoft expande as regras de diretriz do design básico para maximizar os problemas de usabilidade e manutenção que são relatados. É dada ênfase adicional diretrizes de nomenclatura. Você deve considerar como essa regra definida se seu projeto incluir código de biblioteca ou se você deseja impor os mais altos padrões para escrever código que é fácil de manter.

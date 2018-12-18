@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31457261"
 ---
 # <a name="dataset-visualizer-dialog-box"></a>Caixa de diálogo Visualizador do Conjunto de Dados
 O Visualizador de DataSet permite que você exiba o conteúdo de um objeto de DataSet, DataTable, DataView ou DataViewManager. Você pode acessar esse visualizador clicando no ícone de lupa que aparece ao lado do valor para um desses objetos em uma janela de variáveis do depurador ou em um DataTip.  

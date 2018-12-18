@@ -9,24 +9,26 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 221985f8bfbac82e294422c57d684322b9036d5f
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 90668c751005e697c4b78d0f3caf58f8a85db925
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812018"
 ---
 # <a name="text-template-control-blocks"></a>Blocos de controle do modelo de texto
 Blocos de controle permitem que você escreva código em seu modelo de texto para variar a saída. Há três tipos de blocos de controle, que são diferenciados por seus colchetes de abertura:
 
--   `<# Standard control blocks #>` podem conter instruções.
+-   `<# Standard control blocks #>` pode conter instruções.
 
 -   `<#= Expression control blocks #>` pode conter expressões.
 
 -   `<#+ Class feature control blocks #>` pode conter métodos, campos e propriedades.
 
 ## <a name="standard-control-block"></a>Bloco de controle padrão
- Blocos de controle padrão contém instruções. Por exemplo, o bloco padrão a seguir obtém os nomes de todos os atributos no documento XML:
+ Blocos de controle padrão contêm instruções. Por exemplo, o bloco padrão a seguir obtém os nomes de todos os atributos no documento XML:
 
 ```
 <#@ assembly name="System.Xml.dll" #>
@@ -47,7 +49,7 @@ Blocos de controle permitem que você escreva código em seu modelo de texto par
 #>
 ```
 
- Você pode inserir texto sem formatação dentro de uma instrução composta como `if` ou `for`. Por exemplo, este fragmento gera uma linha de saída em cada iteração do loop:
+ Você pode inserir, como texto sem formatação em uma instrução composta `if` ou `for`. Por exemplo, este fragmento gera uma linha de saída em cada iteração do loop:
 
 ```
 <#
@@ -62,7 +64,7 @@ Found another one!
 ```
 
 > [!WARNING]
->  Sempre use {...} delimitar instruções aninhadas que contêm texto sem formatação incorporado. O exemplo a seguir pode não funcionar corretamente:
+>  Sempre use {...} delimitar instruções aninhadas que contêm inserido texto sem formatação. O exemplo a seguir pode não funcionar corretamente:
 >
 >  `<# if (ShouldPrint) #> Some text. -- WRONG`
 >
@@ -78,11 +80,10 @@ Some text.
 <#
  }
 #>
-
 ```
 
 ## <a name="expression-control-block"></a>Bloco de controle de expressão
- Blocos de controle de expressão são usados para o código que fornece cadeias de caracteres a ser gravado no arquivo de saída. Por exemplo, o exemplo acima, você pode imprimir os nomes dos atributos para o arquivo de saída, modificando o bloco de código da seguinte maneira:
+ Blocos de controle de expressão são usados para o código que fornece as cadeias de caracteres a ser gravado no arquivo de saída. Por exemplo, no exemplo acima, você pode imprimir os nomes dos atributos para o arquivo de saída, modificando o bloco de código da seguinte maneira:
 
 ```
 <#
@@ -100,7 +101,7 @@ Some text.
 ```
 
 ## <a name="class-feature-control-block"></a>Bloco de controle de recurso de classe
- Você pode usar os blocos de controle de recurso de classe para adicionar métodos, propriedades, campos ou classes aninhadas mesmo ao seu modelo de texto. O uso mais comum de blocos de recurso de classe é fornecer funções auxiliares para o código em outras partes do modelo de texto. Por exemplo, o seguinte bloco de recurso de classe coloca em maiuscula a primeira letra do nome do atributo (ou, se o nome contiver espaços em branco, ele coloca em maiuscula a primeira letra de cada palavra):
+ Você pode usar blocos de controle de recurso de classe para adicionar métodos, propriedades, campos ou as classes aninhadas, mesmo ao seu modelo de texto. O uso mais comum de blocos de recurso de classe é fornecer funções auxiliares para o código em outras partes do modelo de texto. Por exemplo, o seguinte bloco de recurso de classe coloca em maiuscula a primeira letra do nome do atributo (ou, se o nome contiver espaços em branco, ele coloca em maiuscula a primeira letra de cada palavra):
 
 ```
 <#@ import namespace="System.Globalization" #>
@@ -116,9 +117,9 @@ Some text.
 ```
 
 > [!NOTE]
->  Um bloco de controle de recurso de classe não deve ser seguido por blocos de controle padrão no mesmo arquivo de modelo. No entanto, essa restrição não se aplica ao resultado do uso de `<#@include#>` diretivas. Cada arquivo incluído pode ter seguidos por blocos de recurso de classe de blocos padrão.
+>  Um bloco de controle de recurso de classe não deve ser seguido por blocos de controle padrão no mesmo arquivo de modelo. No entanto, essa restrição não se aplica ao resultado do uso de `<#@include#>` diretivas. Cada arquivo incluído pode ter blocos padrão, seguidos por blocos de recurso de classe.
 
- Você pode criar uma função que gera a saída inserindo blocos de texto e a expressão dentro de um bloco de controle de recurso de classe. Por exemplo:
+ Você pode criar uma função que gera a saída ao inserir blocos de texto e a expressão dentro de um bloco de controle de recurso de classe. Por exemplo:
 
 ```
 <#+
@@ -131,7 +132,7 @@ Some text.
 #>
 ```
 
- Você poderia chamar essa função de um bloco padrão ou de outro bloco de recurso de classe:
+ Você poderia chamar essa função a partir de um bloco padrão ou outro bloco de recurso de classe:
 
 ```
 <# foreach (Attribute attribute in item.Attributes)
@@ -142,21 +143,21 @@ Some text.
 ```
 
 ## <a name="how-to-use-control-blocks"></a>Como usar blocos de controle
- Todo o código em todos os blocos de controle padrão e a expressão em um único modelo (incluindo todo o código em modelos incluídos) é combinadas para formar o `TransformText()` método do código gerado. (Para obter mais informações sobre como incluir outros modelos de texto com o `include` diretiva, consulte [diretivas de modelo de texto T4](../modeling/t4-text-template-directives.md).)
+ Todo o código em todos os blocos de controle padrão e a expressão em um único modelo (incluindo todo o código em modelos incluídos) é combinado para formar o `TransformText()` método do código gerado. (Para obter mais informações sobre como incluir outros modelos de texto com o `include` diretiva, consulte [diretivas de modelo de texto T4](../modeling/t4-text-template-directives.md).)
 
  Você deve ter em mente as seguintes considerações ao usar blocos de controle:
 
--   **Idioma.** Você pode usar o código c# ou Visual Basic em um modelo de texto. O idioma padrão é c#, mas você pode especificar o Visual Basic com o `language` parâmetro o `template` diretiva. (Para obter mais informações sobre o `template` diretiva, consulte [diretivas de modelo de texto T4](../modeling/t4-text-template-directives.md).)
+-   **Idioma.** Você pode usar o código c# ou Visual Basic em um modelo de texto. O idioma padrão é c#, mas você pode especificar o Visual Basic com o `language` parâmetro do `template` diretiva. (Para obter mais informações sobre o `template` diretiva, consulte [diretivas de modelo de texto T4](../modeling/t4-text-template-directives.md).)
 
-     O idioma usado em blocos de controle não tem nada a ver com o idioma ou o formato do texto que você gerar um modelo de texto. Você pode gerar c# usando o Visual Basic código ou vice-versa.
+     O idioma usado nos blocos de controle não tem nada a ver com o idioma ou o formato do texto gerado em um modelo de texto. Você pode gerar em C# usando o Visual Basic código ou vice-versa.
 
-     Você pode usar apenas um idioma em um modelo de texto especificado, incluindo todos os modelos de texto que você incluir com a `include` diretiva.
+     Você pode usar apenas um idioma em um modelo de texto especificado, incluindo todos os modelos de texto incluem com o `include` diretiva.
 
--   **Variáveis locais.** Como blocos de todo o código no controle padrão e a expressão em um modelo de texto será gerado como um único método, verifique se que não haja nenhum conflito com os nomes de variáveis locais. Se você estiver incluindo outros modelos de texto, você deve se certificar que os nomes de variáveis são exclusivos em incluídos todos os modelos. Uma maneira de garantir que isso é adicionar uma cadeia de caracteres para cada nome de variável local que identifica o modelo de texto no qual ela foi declarada.
+-   **Variáveis locais.** Como todo o código no controle padrão e a expressão de blocos em um modelo de texto é gerado como um único método, você deve Certifique-se de que não haja nenhum conflito com os nomes de variáveis locais. Se você estiver incluindo outros modelos de texto, certifique-se de que os nomes de variáveis são exclusivos em incluído todos os modelos. Uma maneira de garantir isso é adicionar uma cadeia de caracteres para cada nome de variável local que identifica o modelo de texto no qual ela foi declarada.
 
-     Também é uma boa ideia para inicializar as variáveis locais a sensatos valores quando você declará-los, especialmente quando você está incluindo vários modelos de texto.
+     Também é uma boa ideia para inicializar as variáveis locais para valores razoáveis, quando você declará-los, especialmente quando você está incluindo vários modelos de texto.
 
--   **Aninhamento de blocos de controle.** Blocos de controle não podem ser aninhados dentro de outro. Você sempre deve encerrar um bloco de controle fornecido antes de você abrir uma outra. Por exemplo, o exemplo a seguir mostra como imprimir um texto em um bloco da expressão como parte de um bloco de controle padrão.
+-   **Aninhamento de blocos de controle.** Blocos de controle não podem ser aninhados dentro uns aos outros. Você sempre deve encerrar um bloco de controle fornecido antes de abrir outra. Por exemplo, a seguir mostra como imprimir um texto em um bloco de expressão como parte de um bloco de controle padrão.
 
     ```
     <#
@@ -168,4 +169,4 @@ Some text.
     <# } #>
     ```
 
--   **Refatoração.** Para manter seus modelos de texto curtos e fácil de entender, é altamente recomendável que você evite código repetitivo fatorar o código reutilizável em funções auxiliares em blocos de recurso de classe ou criar sua própria classe de modelo de texto que herda a classe TextTransformation.
+-   **Refatoração.** Para manter seus modelos de texto curtos e fácil de entender, é altamente recomendável que você evite código repetitivo por fatorar o código reutilizável em funções auxiliares em blocos de recurso de classe ou criando sua própria classe de modelo de texto que herda a classe TextTransformation.

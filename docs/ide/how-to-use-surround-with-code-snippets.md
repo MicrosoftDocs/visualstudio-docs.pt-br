@@ -1,25 +1,23 @@
 ---
-title: "Como usar trechos de código de “Envolver com” | Microsoft Docs"
-ms.custom: 
+title: Como usar trechos de código de “Envolver com” | Microsoft Docs
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - surround-with snippets
 - snippets [C#], surround with
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 685f227205deb306d7d18dcea2e620e2366ad73f
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: e2c5211291fbfe3bb7c8ab3fe1eaa371a2dd8e2c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31943183"
 ---
 # <a name="how-to-use-surround-with-code-snippets"></a>Como usar trechos de código de “Envolver com”
 
@@ -29,7 +27,7 @@ Os procedimentos a seguir descrevem como usar trechos de código surround-with. 
 
 1. No IDE do Visual Studio, abra o arquivo que deseja editar.
 
-1. No Editor de Código, selecione o texto a cercar.
+1. No **Editor de Códigos**, selecione o texto a cercar.
 
 1. Digite **Ctrl**+**K**, **Ctrl**+**S**.
 
@@ -39,7 +37,7 @@ Os procedimentos a seguir descrevem como usar trechos de código surround-with. 
 
 1. No IDE do Visual Studio, abra o arquivo que deseja editar.
 
-1. No Editor de Código, selecione o texto a cercar.
+1. No **Editor de Códigos**, selecione o texto a cercar.
 
 1. No menu **Editar**, selecione **IntelliSense** e, em seguida, selecione o comando **Surround-With**.
 
@@ -51,7 +49,7 @@ Os procedimentos a seguir descrevem como usar trechos de código surround-with. 
 
 1. No IDE do Visual Studio, abra o arquivo que deseja editar.
 
-1. No Editor de Código, selecione o texto a cercar.
+1. No **Editor de Códigos**, selecione o texto a cercar.
 
 1. Clique com o botão direito do mouse no texto selecionado e, em seguida, selecione o comando **Surround-With** no menu de contexto.
 
@@ -61,5 +59,5 @@ Os procedimentos a seguir descrevem como usar trechos de código surround-with. 
 
 ## <a name="see-also"></a>Consulte também
 
-[Trechos de código C#](../ide/visual-csharp-code-snippets.md)  
-[Seletor de trecho de código](../ide/reference/code-snippet-picker.md)
+- [Trechos de código C#](../ide/visual-csharp-code-snippets.md)
+- [Seletor de trecho de código](../ide/reference/code-snippet-picker.md)

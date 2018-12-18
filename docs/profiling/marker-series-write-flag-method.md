@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6469e6f1b2e32993dbca196b0d4b86999569d71d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: faff304831f8f2ffabed925d2ab3dfc5d64c18af
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237452"
 ---
 # <a name="markerserieswriteflag-method"></a>Método marker_series::write_flag
 Grava um sinalizador para o arquivo de rastreamento da Visualização Simultânea.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 void write_flag(  
    _In_ LPCTSTR _Format,  
    ...  
@@ -59,7 +60,7 @@ void write_flag(
  Categoria.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** cvmarkersobj.h  
+ **Cabeçalho:** *cvmarkersobj.h*  
   
  **Namespace:** Concurrency::diagnostic  
   

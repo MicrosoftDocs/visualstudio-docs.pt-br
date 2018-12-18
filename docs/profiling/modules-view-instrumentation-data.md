@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c7db34fb4913e3576f286aa7c34fe3cf80296ed
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c849971da7681322b15365bc0d59ce8b3529f508
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35256104"
 ---
 # <a name="modules-view---instrumentation-data"></a>Exibição Módulos – dados de instrumentação
 A exibição Módulos mostra dados de desempenho agrupados pelos módulos que estavam nos dados de criação de perfil. As funções do módulo são listadas abaixo do nó do módulo.  
@@ -37,7 +38,7 @@ A exibição Módulos mostra dados de desempenho agrupados pelos módulos que es
 |**Sobrecarga de Investigação Exclusiva de Tempo**|A sobrecarga de tempo para essa função ou módulo devido à instrumentação.|  
 |**Sobrecarga de Investigação Inclusiva de Tempo**|A sobrecarga de tempo para essa função ou módulo e suas funções filho devido à instrumentação.|  
   
-## <a name="elapsed-inclusive-values"></a>Valores Inclusivos Decorridos  
+## <a name="elapsed-inclusive-values"></a>Valores inclusivos decorridos  
  Os valores inclusivos decorridos indicam o tempo que uma função ficou na pilha de chamadas. O tempo inclui o tempo gasto em funções filho e em chamadas para o sistema operacional, como operações de entrada/saída e de mudanças de contexto.  
   
 |Column|Descrição|  
@@ -48,7 +49,7 @@ A exibição Módulos mostra dados de desempenho agrupados pelos módulos que es
 |**Tempo Inclusivo Decorrido Máximo**|– Para uma função, o tempo inclusivo decorrido máximo de uma chamada para essa função.<br />– Para um módulo, o tempo inclusivo decorrido máximo de todas as chamadas para funções no módulo.|  
 |**Tempo Inclusivo Decorrido Mínimo**|– Para uma função, o tempo inclusivo decorrido mínimo de uma chamada para esse módulo ou função.<br />– Para um módulo, o tempo inclusivo decorrido mínimo de todas as chamadas para funções no módulo.|  
   
-## <a name="elapsed-exclusive-values"></a>Valores Exclusivos Decorridos  
+## <a name="elapsed-exclusive-values"></a>Valores exclusivos decorridos  
  Valores exclusivos decorridos indicam o tempo durante o qual uma função estava diretamente em execução no topo da pilha de chamadas. O tempo inclui o tempo gasto em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto, mas não inclui o tempo gasto em funções filho.  
   
 |Column|Descrição|  
@@ -59,7 +60,7 @@ A exibição Módulos mostra dados de desempenho agrupados pelos módulos que es
 |**Tempo Exclusivo Decorrido Máximo**|– Para uma função, o tempo exclusivo decorrido máximo de uma chamada para essa função.<br />– Para um módulo, o tempo exclusivo decorrido máximo de todas as chamadas para funções no módulo.|  
 |**Tempo Exclusivo Decorrido Mínimo**|– Para uma função, o tempo exclusivo decorrido mínimo de uma chamada para esse módulo ou função.<br />– Para um módulo, o tempo exclusivo decorrido mínimo de todas as chamadas para funções no módulo.|  
   
-## <a name="application-inclusive-values"></a>Valores Inclusivos do Aplicativo  
+## <a name="application-inclusive-values"></a>Valores inclusivos do aplicativo  
  Os valores inclusivos do aplicativo indicam o tempo que uma função ficou na pilha de chamadas. O tempo não inclui o tempo gasto em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto. No entanto, o tempo inclui o tempo gasto em funções filho.  
   
 |Column|Descrição|  
@@ -70,7 +71,7 @@ A exibição Módulos mostra dados de desempenho agrupados pelos módulos que es
 |**Tempo Inclusivo Máximo do Aplicativo**|– Para uma função, o tempo inclusivo máximo do aplicativo de uma chamada para essa função.<br />– Para um módulo, o tempo inclusivo máximo do aplicativo de todas as chamadas para funções no módulo.|  
 |**Tempo Inclusivo Mínimo do Aplicativo**|– Para uma função, o tempo inclusivo mínimo do aplicativo de uma chamada para esse módulo ou função.<br />– Para um módulo, o tempo inclusivo mínimo do aplicativo de todas as chamadas para funções no módulo.|  
   
-## <a name="application-exclusive-values"></a>Valores Exclusivos do Aplicativo  
+## <a name="application-exclusive-values"></a>Valores exclusivos do aplicativo  
  Valores exclusivos do aplicativo indicam o tempo gasto no módulo ou função. Isso exclui o tempo gasto em funções filho e também exclui as chamadas para o sistema operacional, como mudanças de contexto e operações de entrada/saída.  
   
 |Column|Descrição|  
@@ -83,5 +84,5 @@ A exibição Módulos mostra dados de desempenho agrupados pelos módulos que es
   
 ## <a name="see-also"></a>Consulte também  
  [Exibição Módulos](../profiling/modules-view-sampling-data.md)   
- [Exibição Módulos – Instrumentação](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
+ [Exibição Módulos – instrumentação](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
  [Exibição Módulos – amostragem](../profiling/modules-view-dotnet-memory-sampling-data.md)

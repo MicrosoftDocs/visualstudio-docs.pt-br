@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e0217360b2a8e9c6c8e723561aff383ed3226d1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b1f05bc8a19377576788fdb72400bf0af566b796
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638105"
 ---
 # <a name="reference-element-visual-studio-templates"></a>Elemento de referência (modelos do Visual Studio)
-Especifica a referência de assembly para adicionar quando o item é adicionado a um projeto.  
+Especifica a referência de assembly a ser adicionada quando o item for adicionado a um projeto.  
   
  \<VSTemplate >  
  \<TemplateContent >  
@@ -32,7 +33,7 @@ Especifica a referência de assembly para adicionar quando o item é adicionado 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <Reference>  
     <Assembly> ... </Assembly>  
 </Reference>  
@@ -54,17 +55,17 @@ Especifica a referência de assembly para adicionar quando o item é adicionado 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[Referências](../extensibility/references-element-visual-studio-templates.md)|Agrupa as referências de assembly que adiciona o modelo para projetos.|  
+|[Referências](../extensibility/references-element-visual-studio-templates.md)|Agrupa as referências de assembly que o modelo adiciona aos projetos.|  
   
 ## <a name="remarks"></a>Comentários  
  O `Reference` é um elemento filho obrigatório de `References`.  
   
- O `Reference` e `References` elementos só podem ser usados em arquivos. vstemplate que têm um `Type` valor de atributo `Item`.  
+ O `Reference` e `References` elementos só podem ser usados na *. vstemplate* arquivos que têm uma `Type` valor de atributo `Item`.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir ilustra o `TemplateContent` elemento de um modelo de item. Esse XML adiciona referências aos assemblies System. dll e System.Data.dll.  
+ O exemplo a seguir ilustra o `TemplateContent` elemento de um modelo de item. Esse XML adiciona as referências para o *System. dll* e *dll* assemblies.  
   
-```  
+```xml  
 <TemplateContent>  
     <References>  
         <Reference>  
@@ -84,4 +85,4 @@ Especifica a referência de assembly para adicionar quando o item é adicionado 
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)
+ [Criar modelos de projeto e de item](../ide/creating-project-and-item-templates.md)

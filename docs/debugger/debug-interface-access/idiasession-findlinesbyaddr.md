@@ -1,5 +1,5 @@
 ---
-title: ': Findlinesbyaddr | Microsoft Docs'
+title: 'Idiasession:: Findlinesbyaddr | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ff28045b9a845ac873e7d9325b52d336ff8dc519
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 29718d355e1b6afb1f85fbb27b5d7b5dc7cfd610
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819869"
 ---
 # <a name="idiasessionfindlinesbyaddr"></a>IDiaSession::findLinesByAddr
-Recupera as linhas em um compiland especificado que contém um endereço especificado.  
+Recupera as linhas que contêm um endereço especificado em um compiland especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +37,7 @@ HRESULT findLinesByAddr (
   
 #### <a name="parameters"></a>Parâmetros  
  `seg`  
- [in] Especifica o componente da seção de endereço específico.  
+ [in] Especifica o componente de seção de endereço específico.  
   
  `offset`  
  [in] Especifica o componente de deslocamento de endereço específico.  
@@ -45,10 +46,10 @@ HRESULT findLinesByAddr (
  [in] Especifica o número de bytes do intervalo de endereços para cobrir com essa consulta.  
   
  `ppResult`  
- [out] Retorna um [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objeto que contém uma lista de todas as linha de números que abrange o intervalo de endereços especificado.  
+ [out] Retorna um [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objeto que contém uma lista de todas as linha de números que abrangem o intervalo de endereços especificado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra uma função que obtém todos os números de linha contidos em uma função usando o endereço e o comprimento da função.  

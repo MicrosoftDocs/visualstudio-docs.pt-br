@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31468692"
 ---
 # <a name="debug-interface-access-sdk-reference"></a>Referência do SDK de Acesso à Interface de Depuração
 Uma referência completa para todas as interfaces e suporte enumerações e estruturas no SDK do DIA.  

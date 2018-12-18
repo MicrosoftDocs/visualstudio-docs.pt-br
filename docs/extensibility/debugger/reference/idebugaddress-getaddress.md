@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e7f93b57d3cdbea71d3cf9cbe3d51645251c9628
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 869094fabca44eca352a9610ac59a6627df74dd7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873351"
 ---
 # <a name="idebugaddressgetaddress"></a>IDebugAddress::GetAddress
-Retorna uma estrutura que descreve um objeto e seu local em seu escopo ou contêiner.  
+Retorna uma estrutura que descreve um objeto e sua localização em seu escopo ou contêiner.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,13 +41,13 @@ int GetAddress(
   
 #### <a name="parameters"></a>Parâmetros  
  `pAddress`  
- [out no] Um [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) estrutura é preenchida por este método.  
+ [no, out] Um [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) estrutura que é preenchida por este método.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- O [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) estrutura é passada para este método, que preenche com as informações apropriadas. Como essas informações são interpretadas depende do tipo de informações retornadas e o manipulador de símbolo em si. Consulte [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) para obter mais detalhes.  
+ O [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) estrutura é passada para esse método, que, em seguida, preenche-o com as informações apropriadas. Como essas informações são interpretadas depende do tipo de informações retornadas e o manipulador de símbolo em si. Ver [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) para obter mais detalhes.  
   
 ## <a name="see-also"></a>Consulte também  
  [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)

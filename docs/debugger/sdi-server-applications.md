@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475656"
 ---
 # <a name="sdi-server-applications"></a>Aplicativos de servidor SDI
 Se você estiver depurando um aplicativo de servidor SDI, você deve especificar `/Embedding` ou `/Automation` no **argumentos de linha de comando** propriedade o *projeto* caixa de diálogo páginas de propriedades para C/C++, c#, ou Projetos do Visual Basic.  

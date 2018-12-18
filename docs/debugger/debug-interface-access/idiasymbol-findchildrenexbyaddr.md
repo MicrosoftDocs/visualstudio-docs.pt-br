@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ed0ec0f91cc8a16ab7078715872057c9cbe3fd3d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 7398f3afdf8a6895d0feaec35ca33b95e9054060
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834858"
 ---
 # <a name="idiasymbolfindchildrenexbyaddr"></a>IDiaSymbol::findChildrenExByAddr
 Recupera os filhos do símbolo que são válidos em um endereço especificado.  
@@ -37,25 +38,25 @@ HRESULT findChildrenExByAddr (
   
 #### <a name="parameters"></a>Parâmetros  
  `symtag`  
- [in] Especifica as marcas de símbolo de filhos a serem recuperados, conforme definido no [SymTagEnum enumeração](../../debugger/debug-interface-access/symtagenum.md). Definido como `SymTagNull` para todos os filhos a serem recuperados.  
+ [in] Especifica as marcas de símbolo dos filhos a serem recuperados, conforme definido na [enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md). Definido como `SymTagNull` para todos os filhos a serem recuperados.  
   
  `name`  
  [in] Especifica o nome dos filhos a serem recuperados. Definido como `NULL` para todos os filhos a serem recuperados.  
   
  `compareFlags`  
- [in] Especifica as opções de comparação a ser aplicado a correspondência de nomes. Os valores do [enumeração NameSearchOptions](../../debugger/debug-interface-access/namesearchoptions.md) enumeração pode ser usada sozinha ou em combinação.  
+ [in] Especifica as opções de comparação a ser aplicado à correspondência de nomes. Os valores do [enumeração NameSearchOptions](../../debugger/debug-interface-access/namesearchoptions.md) enumeração pode ser usada sozinho ou em combinação.  
   
  `address`  
  [in] O endereço do símbolo.  
   
  `ppResult`  
- [out] Retorna um [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) recuperado do objeto que contém uma lista dos símbolos filho.  
+ [out] Retorna um [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) recuperado do objeto que contém uma lista dos símbolos de filho.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna `S_OK` se pelo menos um filho do símbolo foi encontrado ou retorna `S_FALSE` se nenhum filho foi encontrado; caso contrário, retornará um código de erro.  
+ Retorna `S_OK` se pelo menos um filho do símbolo foi encontrado ou retorna `S_FALSE` se nenhum filho foram encontrado; caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Os símbolos locais que são retornados incluem informações sobre o intervalo de tempo real.  
+ Os símbolos de locais que são retornados incluem informações de intervalo em tempo real.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: Dia2.h  
@@ -68,5 +69,5 @@ HRESULT findChildrenExByAddr (
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)   
  [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)   
- [: Findchildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
+ [Idiasession:: Findchildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
  [Enumeração NameSearchOptions](../../debugger/debug-interface-access/namesearchoptions.md)

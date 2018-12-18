@@ -12,19 +12,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 39bc1acd059c9a915f330c74140c89d5f4fa40ff
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8cdb171d16b6612562ea21608cdeb622f4ef8bb5
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39179041"
 ---
 # <a name="msbuild-inline-tasks"></a>Tarefas embutidas do MSBuild
 As tarefas do MSBuild normalmente são criadas ao compilar uma classe que implementa a interface <xref:Microsoft.Build.Framework.ITask>. Para obter mais informações, consulte [Tarefas](../msbuild/msbuild-tasks.md).  
   
  A partir do .NET Framework versão 4, você pode criar tarefas embutidas no arquivo de projeto. Você não precisa criar um assembly separado para hospedar a tarefa. Isso facilita o controle do código-fonte e a implantação da tarefa. O código-fonte é integrado ao script.  
   
-## <a name="the-structure-of-an-inline-task"></a>A estrutura de uma tarefa em linha  
- Uma tarefa em linha é contida por um elemento [UsingTask](../msbuild/usingtask-element-msbuild.md). A tarefa em linha e o elemento `UsingTask` que a contém normalmente são incluídos em um arquivo .targets e importados para outros arquivos de projeto conforme a necessidade. Veja uma tarefa básica em linha. Observe que ela não faz nada.  
+
+ No MSBuild 15.8, foi adicionada a [RoslynCodeTaskFactory](../msbuild/msbuild-roslyncodetaskfactory.md), que pode criar tarefas embutidas multiplataforma do .NET Standard.  Caso precise usar tarefas embutidas no .NET Core, use a RoslynCodeTaskFactory.
+## <a name="the-structure-of-an-inline-task"></a>A estrutura de uma tarefa embutida  
+ Uma tarefa em linha é contida por um elemento [UsingTask](../msbuild/usingtask-element-msbuild.md). Normalmente, a tarefa embutida e o elemento `UsingTask` que a contém são incluídos em um arquivo *.targets* e importados para outros arquivos de projeto conforme a necessidade. Veja uma tarefa básica em linha. Observe que ela não faz nada.  
   
 ```xml  
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -51,23 +54,23 @@ As tarefas do MSBuild normalmente são criadas ao compilar uma classe que implem
 -   O atributo `TaskFactory` nomeia a classe que implementa a fábrica de tarefas em linha.  
   
 -   O atributo `AssemblyFile` fornece o local da fábrica de tarefas em linha. Como alternativa, você pode usar o atributo `AssemblyName` para especificar o nome totalmente qualificado da classe de fábrica de tarefas em linha, que normalmente está localizado no GAC (cache de assembly global).  
+
+Os elementos restantes da tarefa `DoNothing` estão vazios w são fornecidos para ilustrar a ordem e a estrutura de uma tarefa em linha. Um exemplo mais robusto será apresentado posteriormente neste tópico.  
   
- Os elementos restantes da tarefa `DoNothing` estão vazios w são fornecidos para ilustrar a ordem e a estrutura de uma tarefa em linha. Um exemplo mais robusto será apresentado posteriormente neste tópico.  
-  
--   O elemento `ParameterGroup` é opcional. Quando especificado, ele declara os parâmetros para a tarefa. Para saber mais sobre os parâmetros de entrada e saídas, confira "Parâmetros de entrada e saída" posteriormente neste tópico.  
+-   O elemento `ParameterGroup` é opcional. Quando especificado, ele declara os parâmetros para a tarefa. Para obter mais informações sobre parâmetros de entrada e de saída, confira [Parâmetros de entrada e de saída](#input-and-output-parameters) mais adiante neste tópico.  
   
 -   O elemento `Task` descreve e contém o código de origem da tarefa.  
   
 -   O elemento `Reference` especifica referências aos assemblies do .NET que você está usando em seu código. Isso equivale à adição de uma referência a um projeto no Visual Studio. O atributo `Include` especifica o caminho do assembly referenciado.  
   
 -   O elemento `Using` lista os namespaces que você deseja acessar. Isso se assemelha à instrução `Using` no Visual C#. O atributo `Namespace` especifica o namespace a ser incluído.  
-  
- Os elementos `Reference`e `Using` independem da linguagem. As tarefas em linha podem ser escritas em qualquer idioma com suporte do CodeDom .NET, por exemplo, Visual Basic ou Visual C#.  
+
+Os elementos `Reference`e `Using` independem da linguagem. As tarefas em linha podem ser escritas em qualquer idioma com suporte do CodeDom .NET, por exemplo, Visual Basic ou Visual C#.  
   
 > [!NOTE]
 >  Os elementos contidos pelo elemento `Task` são específicos da fábrica de tarefas, nesse caso, a fábrica de tarefas de código.  
   
-### <a name="code-element"></a>Elemento Code  
+### <a name="code-element"></a>Elemento de código  
  O último elemento filho a aparecer no elemento `Task` é o elemento `Code`. O elemento `Code` contém ou localiza o código que você deseja compilar em uma tarefa. O que é colocado no elemento `Code` depende de como você deseja escrever a tarefa.  
   
  O atributo `Language` especifica a linguagem em que seu código é escrito. Os valores aceitáveis são `cs` para C#, `vb` para Visual Basic.  
@@ -79,15 +82,15 @@ As tarefas do MSBuild normalmente são criadas ao compilar uma classe que implem
 -   Se o valor de `Type` é `Method`, o código define uma substituição do método `Execute` da interface <xref:Microsoft.Build.Framework.ITask>.  
   
 -   Se o valor de `Type` é `Fragment`, o código define o conteúdo do método `Execute`, mas não a assinatura ou a instrução `return`.  
+
+O próprio código normalmente aparece entre um marcador `<![CDATA[` e um marcador `]]>`. Como o código está em uma seção CDATA, você não precisa se preocupar com o escape de caracteres reservados, por exemplo, "\<" ou ">".  
   
- O próprio código normalmente aparece entre um marcador `<![CDATA[` e um marcador `]]>`. Como o código está em uma seção CDATA, você não precisa se preocupar com o escape de caracteres reservados, por exemplo, "\<" ou ">".  
-  
- Como alternativa, você pode usar o atributo `Source` do elemento `Code` para especificar o local de um arquivo que contém o código da sua tarefa. O código no arquivo de origem deve ser do tipo especificado pelo atributo `Type`. Se o atributo `Source` estiver presente, o valor padrão de `Type` será `Class`. Se `Source` é não estiver presente, o valor padrão será `Fragment`.  
+Como alternativa, você pode usar o atributo `Source` do elemento `Code` para especificar o local de um arquivo que contém o código da sua tarefa. O código no arquivo de origem deve ser do tipo especificado pelo atributo `Type`. Se o atributo `Source` estiver presente, o valor padrão de `Type` será `Class`. Se `Source` é não estiver presente, o valor padrão será `Fragment`.  
   
 > [!NOTE]
 >  Ao definir a classe de tarefa no arquivo de origem, o nome da classe deve concordar com o atributo `TaskName` do elemento [UsingTask](../msbuild/usingtask-element-msbuild.md) correspondente.  
   
-## <a name="hello-world"></a>Hello World  
+## <a name="helloworld"></a>HelloWorld  
  Vejamos uma tarefa em linha mais robusta. A tarefa HelloWorld exibe "Hello, world!" no dispositivo de registro de erros em log padrão, que é normalmente o console do sistema ou a janela **Saída** do Visual Studio. O elemento `Reference` no exemplo é incluído apenas para ilustração.  
   
 ```xml  
@@ -113,7 +116,7 @@ Log.LogError("Hello, world!");
 </Project>  
 ```  
   
- Você pode salvar a tarefa HelloWorld em um arquivo chamado HelloWorld.targets e chamá-la de um projeto da maneira a seguir.  
+ Salve a tarefa HelloWorld em um arquivo chamado *HelloWorld.targets* e, em seguida, invoque-o em um projeto conforme mostrado a seguir.  
   
 ```xml  
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -124,7 +127,7 @@ Log.LogError("Hello, world!");
 </Project>  
 ```  
   
-## <a name="input-and-output-parameters"></a>Parâmetros de entrada e saída  
+## <a name="input-and-output-parameters"></a>Parâmetros de entrada e de saída  
  Os parâmetros de tarefa em linha são elementos filhos de um elemento `ParameterGroup`. Cada parâmetro tem o nome do elemento que o define. O código a seguir define o parâmetro `Text`.  
   
 ```xml  
@@ -141,7 +144,7 @@ Log.LogError("Hello, world!");
   
 -   `Output` é um atributo opcional que é `false` por padrão. Se `true`, o parâmetro deve receber um valor antes de retornar do método Execute.  
   
- Por exemplo,  
+Por exemplo,  
   
 ```xml  
 <ParameterGroup>  
@@ -151,15 +154,15 @@ Log.LogError("Hello, world!");
 </ParameterGroup>  
 ```  
   
- define esses três parâmetros:  
+define esses três parâmetros:  
   
 -   `Expression` é um parâmetro de entrada obrigatório do tipo System.String.  
   
 -   `Files` é um parâmetro de entrada de lista do item obrigatório.  
   
 -   `Tally`é um parâmetro de saída do tipo System.Int32.  
-  
- Se o elemento `Code` tem o atributo `Type` de `Fragment` ou `Method`, as propriedades são criadas automaticamente para cada parâmetro. Caso contrário, as propriedades devem ser declaradas explicitamente no código-fonte da tarefa e devem coincidir exatamente com suas definições de parâmetro.  
+
+Se o elemento `Code` tem o atributo `Type` de `Fragment` ou `Method`, as propriedades são criadas automaticamente para cada parâmetro. Caso contrário, as propriedades devem ser declaradas explicitamente no código-fonte da tarefa e devem coincidir exatamente com suas definições de parâmetro.  
   
 ## <a name="example"></a>Exemplo  
  A tarefa em linha a seguir substitui todas as ocorrências de um token no arquivo especificado pelo valor especificado.  
@@ -191,4 +194,4 @@ File.WriteAllText(Path, content);
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas](../msbuild/msbuild-tasks.md)   
- [Passo a passo: criando uma tarefa embutida](../msbuild/walkthrough-creating-an-inline-task.md)
+ [Passo a passo: Criar uma tarefa embutida](../msbuild/walkthrough-creating-an-inline-task.md)

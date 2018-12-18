@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e94e4b67727308657becac829bcdd30e571a2be6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e6c3eae15aaa4aa7b81148915fc2c59fee723230
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639507"
 ---
 # <a name="numberofparentcategoriestorollup-visual-studio-templates"></a>NumberOfParentCategoriesToRollUp (modelos do Visual Studio)
-Especifica o número de categorias pai que exibirá o modelo de **novo projeto** caixa de diálogo.  
+Especifica o número de categorias pai que exibirá o modelo na **novo projeto** caixa de diálogo.  
   
  \<VSTemplate >  
  \<TemplateData >  
@@ -50,18 +51,18 @@ Especifica o número de categorias pai que exibirá o modelo de **novo projeto**
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Categoriza o modelo e define como ele exibe em um a **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo.|  
   
 ## <a name="text-value"></a>Valor de texto  
  Um `integer` valor é necessário.  
   
- Esse valor Especifica o número de categorias pai que exibirá o modelo de **novo projeto** caixa de diálogo.  
+ Esse valor Especifica o número de categorias pai que exibirá o modelo na **novo projeto** caixa de diálogo.  
   
 ## <a name="remarks"></a>Comentários  
  `NumberOfParentCategoriesToRollUp` é um elemento opcional.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo ilustra os metadados para um [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplicativo do Windows. Se um modelo de metadados é colocado dois níveis abaixo do nível superior [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] nó, o modelo aparecerá no nó de nível superior no **novo projeto** caixa de diálogo. Se o `NumberOfParentCategoriesToRollUp` não está definida, o modelo só aparece no nó no qual ele está localizado fisicamente.  
+ Este exemplo ilustra os metadados para um [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplicativo do Windows. Se um modelo com esses metadados é colocado dois níveis de pasta abaixo do nível superior [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] nó, o modelo aparecerá no nó de nível superior na **novo projeto** caixa de diálogo. Se o `NumberOfParentCategoriesToRollUp` não for definido, o modelo aparece somente no nó no qual ele está localizado fisicamente.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  

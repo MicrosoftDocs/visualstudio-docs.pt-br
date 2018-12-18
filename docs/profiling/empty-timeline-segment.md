@@ -14,13 +14,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f45306283d6aaa2346b121455cca398e918b66e2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ad8d87c0574ac2c7671012fff6a81a568d6bff5f
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764524"
 ---
-# <a name="empty-timeline-segment"></a>Segmento da linha de tempo vazio
+# <a name="empty-timeline-segment"></a>Segmento vazio da linha do tempo
 Na Visualização Simultânea, o motivo pelo qual uma seção da linha do tempo está vazia (tem uma tela de fundo branca) depende do tipo de canal.  
   
 -   Para um canal de thread de CPU, isso significa que o thread não existia durante esta parte da linha do tempo. Se estiver interessado no thread, você poderá encontrar sua seção de execução usando o controle de aplicação de zoom ou rolando horizontalmente.  
@@ -33,4 +34,4 @@ Na Visualização Simultânea, o motivo pelo qual uma seção da linha do tempo 
   
 ## <a name="see-also"></a>Consulte também  
  [Exibição Threads](../profiling/threads-view-parallel-performance.md)   
- [Controle de zoom (exibição de Threads)](../profiling/zoom-control-threads-view.md)
+ [Controle de zoom (exibição de threads)](../profiling/zoom-control-threads-view.md)

@@ -1,6 +1,7 @@
 ---
 title: 'CA2151: campos com tipos críticos devem ser críticos para segurança'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: 09db9d25-7d58-4725-a252-4a07baadf046
@@ -9,13 +10,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ae4c0375d4fa8ab059b13bf3aa5cbb492fa9094
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 14df76b363f4df5d09b06436765b5f0c66ad2c5d
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551874"
 ---
 # <a name="ca2151-fields-with-critical-types-should-be-security-critical"></a>CA2151: campos com tipos críticos devem ser críticos para segurança
+
 |||
 |-|-|
 |NomeDoTipo||
@@ -24,7 +27,8 @@ ms.lasthandoff: 04/19/2018
 |Alteração Significativa|Quebra|
 
 ## <a name="cause"></a>Causa
- Um campo transparente de segurança ou um campo de segurança crítica é declarado. O tipo é especificado como de segurança crítica. Por exemplo:
+
+Um campo transparente de segurança ou um campo de segurança crítica é declarado. O tipo é especificado como de segurança crítica. Por exemplo:
 
 ```csharp
 [assembly: AllowPartiallyTrustedCallers]
@@ -36,16 +40,17 @@ ms.lasthandoff: 04/19/2018
    {
       Type1 m_field; // CA2151, transparent field of critical type
    }
-
 ```
 
- Neste exemplo, `m_field` é um campo transparente de segurança de um tipo de segurança crítica.
+Neste exemplo, `m_field` é um campo transparente de segurança de um tipo de segurança crítica.
 
-## <a name="rule-description"></a>Descrição da Regra
- Para usar tipos de segurança crítica, o código que faz referência ao tipo deve ser de segurança crítica ou de segurança crítica segura. Isso será verdadeiro mesmo que a referência seja indireta. Por exemplo, ao fazer referência a um campo transparente de tipo crítico, o código deve ser de segurança crítica ou de segurança. Por isso, ter um campo de segurança transparente ou de segurança crítica é enganoso porque o código transparente continuará incapaz de acessar o campo.
+## <a name="rule-description"></a>Descrição da regra
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação dessa regra, marque o campo com o atributo <xref:System.Security.SecurityCriticalAttribute> ou crie o tipo referenciado pela segurança transparente ou crítica do campo.
+Para usar tipos de segurança crítica, o código que faz referência ao tipo deve ser de segurança crítica ou de segurança crítica segura. Isso será verdadeiro mesmo que a referência seja indireta. Por exemplo, ao fazer referência a um campo transparente de tipo crítico, o código deve ser de segurança crítica ou de segurança. Por isso, ter um campo de segurança transparente ou de segurança crítica é enganoso porque o código transparente continuará incapaz de acessar o campo.
+
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+
+Para corrigir uma violação dessa regra, marque o campo com o <xref:System.Security.SecurityCriticalAttribute> de atributo ou tornar o tipo que é referenciado pelo campo qualquer segurança transparente ou crítica.
 
 ```csharp
 // Fix 1: Make the referencing field security critical
@@ -70,13 +75,12 @@ ms.lasthandoff: 04/19/2018
       [SecurityCritical]
       Type1 m_field; // Fixed: critical type, critical field
    }
-
 ```
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- Não suprima um aviso nessa regra.
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+
+Não suprima um aviso nessa regra.
 
 ### <a name="code"></a>Código
- [!code-csharp[FxCop.Security.CA2145.TransparentMethodsShouldNotUseSuppressUnmanagedCodeSecurity#1](../code-quality/codesnippet/CSharp/ca2151-fields-with-critical-types-should-be-security-critical_1.cs)]
 
-### <a name="comments"></a>Comentários
+[!code-csharp[FxCop.Security.CA2145.TransparentMethodsShouldNotUseSuppressUnmanagedCodeSecurity#1](../code-quality/codesnippet/CSharp/ca2151-fields-with-critical-types-should-be-security-critical_1.cs)]

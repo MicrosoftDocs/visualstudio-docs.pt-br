@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9fdf3b6aee272990fb22feee13f8e46ee8550073
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eb2388d93c05500dc3c12bb5d57cd17293f5e16c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816762"
 ---
 # <a name="bperrorresolutioninfo"></a>BP_ERROR_RESOLUTION_INFO
-Descreve a resolução de um ponto de interrupção de erro, inclusive local, o programa e o thread.  
+Descreve a resolução de um ponto de interrupção de erro, incluindo local, o programa e o thread.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,10 +51,10 @@ public struct BP_ERROR_RESOLUTION_INFO {
   
 ## <a name="members"></a>Membros  
  `dwFields`  
- Uma combinação de valores da [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) enumeração que especifica quais campos dessa estrutura são preenchidos.  
+ Uma combinação de valores de [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) enumeração que especifica quais campos dessa estrutura são preenchidos.  
   
  `bpResLocation`  
- O [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) union, que especifica o local de resolução do ponto de interrupção.  
+ O [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) união, que especifica o local de resolução de ponto de interrupção.  
   
  `pProgram`  
  O [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objeto que representa o aplicativo no qual ocorreu o erro de ponto de interrupção.  
@@ -62,10 +63,10 @@ public struct BP_ERROR_RESOLUTION_INFO {
  O [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objeto que representa o thread que está executando o aplicativo que gerou o erro de ponto de interrupção.  
   
  `bstrMessage`  
- Uma cadeia de caracteres que contém qualquer mensagem de aviso ou erro resultantes da resolução erro.  
+ Uma cadeia de caracteres que contém qualquer mensagem de aviso ou erro resultantes dessa resolução de erro.  
   
  `dwType`  
- Um valor da [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) enumeração que especifica o tipo de erro do ponto de interrupção.  
+ Um valor a partir de [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) enumeração que especifica o tipo de erro de ponto de interrupção.  
   
 ## <a name="remarks"></a>Comentários  
  Essa estrutura é retornada a partir de [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) método.  

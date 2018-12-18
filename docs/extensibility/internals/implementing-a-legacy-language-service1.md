@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129321"
 ---
 # <a name="implementing-a-legacy-language-service"></a>Implementar um serviço de linguagem herdado
 Você pode usar classes do framework de pacote gerenciado (MPF) para implementar um serviço de linguagem herdada que dá suporte a uma ampla variedade de recursos, como o realce de sintaxe, a correspondência de chaves e a conclusão do IntelliSense.  

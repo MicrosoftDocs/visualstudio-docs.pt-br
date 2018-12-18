@@ -24,23 +24,24 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dd2dbb0651aa35243090fb554fa9142573e04e04
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 57b254323fac5d670cd44399cd8d22c9530c4510
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37056596"
 ---
 # <a name="macros-for-reporting"></a>Macros para relatórios
-Você pode usar o **rptn**, e **rptfn** macros, definidas em CRTDBG. H para substituir o uso de `printf` instruções para depuração. Essas macros desaparecem automaticamente em sua versão de compilação quando **Debug** não estiver definida, portanto não é necessário colocá-los em **#ifdef**s.  
+Para depuração, você pode usar o **rptn** e **rptfn** macros, definidas em CRTDBG. H, para substituir o uso de `printf` instruções. Você não precisa inclose-los no **#ifdef**s, porque eles desaparecem automaticamente na sua versão de compilação quando **Debug** não está definido.  
   
 |Macro|Descrição|  
 |-----------|-----------------|  
-|**RPT0**, **RPT1**, **RPT2**, **RPT3**, **RPT4**|Gera uma cadeia de caracteres de mensagem e zero a quatro argumentos. Para rpt1 por meio de **rpt4**, a cadeia de caracteres de mensagem serve como uma cadeia de caracteres de formatação de estilo printf para os argumentos.|  
-|**RPTF0**, **RPTF1**, **, RPTF2**, **RPTF4**|Mesmo que **rptn**, mas essas macros também o número de linha e de nome de arquivo onde se encontra a macro de saída.|  
+|**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3**, **_RPT4**|Gera uma cadeia de caracteres de mensagem e zero a quatro argumentos. Para _RPT1 até **_RPT4**, a cadeia de caracteres de mensagem serve como uma cadeia de caracteres de formatação de estilo printf para os argumentos.|  
+|**_RPTF0**, **_RPTF1**, **_RPTF2**, **_RPTF4**|Mesmo que **rptn**, mas essas macros também o número de linha e de nome de arquivo onde se encontra a macro de saída.|  
   
  Considere o exemplo a seguir:  
   
-```  
+```cpp
 #ifdef _DEBUG  
     if ( someVar > MAX_SOMEVAR )  
         printf( "OVERFLOW! In NameOfThisFunc( ),  
@@ -49,15 +50,15 @@ Você pode usar o **rptn**, e **rptfn** macros, definidas em CRTDBG. H para subs
 #endif  
 ```  
   
- Esse código gera os valores de `someVar` e `otherVar` para **stdout**. Você pode usar a seguinte chamada para `_RPTF2` para reportar os mesmos valores e, além disso, o nome de arquivo e o número de linha:  
+ Esse código gera os valores de `someVar` e `otherVar` à **stdout**. Você pode usar a seguinte chamada para `_RPTF2` para reportar os mesmos valores e, além disso, o nome de arquivo e o número de linha:  
   
-```  
+```cpp
 if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d, otherVar= %d\n", someVar, otherVar );  
 ```  
   
- Se você achar que um aplicativo específico precisa de um relatório de depuração que as macros fornecidas com a biblioteca em tempo de execução C não fornecem, poderá escrever uma macro criada especificamente para se adaptar a seus próprios requisitos. Em um de seus arquivos de cabeçalho, por exemplo, você pode incluir código como o seguinte para definir uma macro chamado **ALERT_IF2**:  
+Você pode achar que um aplicativo específico precisa depurar relatórios que não forneçam as macros fornecidas com a biblioteca de tempo de execução C. Nesses casos, você pode escrever uma macro criada especificamente para atender às suas próprias necessidades. Em um dos arquivos de cabeçalho, por exemplo, você pode incluir código como o seguinte para definir uma macro chamada **ALERT_IF2**:  
   
-```  
+```cpp
 #ifndef _DEBUG                  /* For RELEASE builds */  
 #define  ALERT_IF2(expr, msg, arg1, arg2)  do {} while (0)  
 #else                           /* For DEBUG builds   */  
@@ -71,14 +72,14 @@ if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d,
 #endif  
 ```  
   
- Uma chamada para **ALERT_IF2** pode executar todas as funções do **printf** código no início deste tópico:  
+ Uma chamada para **ALERT_IF2** poderia fazer todas as funções da **printf** código:  
   
-```  
+```cpp
 ALERT_IF2(someVar > MAX_SOMEVAR, "OVERFLOW! In NameOfThisFunc( ),   
 someVar=%d, otherVar=%d.\n", someVar, otherVar );  
 ```  
   
- Como uma macro personalizada pode ser alterada facilmente para reportar mais ou menos informações para os destinos diferentes (dependendo do que é mais conveniente), essa abordagem pode ser útil principalmente à medida que seus requisitos de depuração evoluem.  
+ Você pode alterar facilmente uma macro personalizada para relatar informações para diferentes destinos de mais ou menos. Essa abordagem é particularmente útil conforme suas necessidades de depuração evoluem.  
   
 ## <a name="see-also"></a>Consulte também  
  [Técnicas de depuração CRT](../debugger/crt-debugging-techniques.md)

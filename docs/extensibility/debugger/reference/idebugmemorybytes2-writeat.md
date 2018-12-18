@@ -16,11 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4d1d79d88baf9688fe68ff44d59dcd4d19baf9f8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a2d164f0ef816285e2df4a9e49b09d55feb90d25
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864264"
 ---
 # <a name="idebugmemorybytes2writeat"></a>IDebugMemoryBytes2::WriteAt
 Grava o número especificado de bytes de memória, iniciando no endereço especificado.  
@@ -51,13 +52,13 @@ int WriteAt(
  [in] O número de bytes a serem gravados.  
   
  `rgbMemory`  
- [in] Os bytes a serem gravados. Essa matriz deve para ser pelo menos `dwCount` bytes de tamanho.  
+ [in] Bytes a serem gravados. Essa matriz deve para ter pelo menos `dwCount` bytes de tamanho.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` se nem todos os bytes pode ser gravados ou retorna um código de erro (geralmente `E_FAIL`).  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` se nem todos os bytes poderia ser escritos ou retorna um código de erro (normalmente `E_FAIL`).  
   
 ## <a name="remarks"></a>Comentários  
- Se o endereço inicial não está dentro da janela de memória representada por esse [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) do objeto, nenhuma gravação ocorre e um código de erro `E_FAIL` será retornado, mesmo que se sobreponha a quantidade para gravar no espaço de memória.  
+ Se o endereço inicial não está dentro da janela de memória, representada por este [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) do objeto, nenhuma gravação ocorrerá e um código de erro `E_FAIL` é retornado — mesmo que se sobreponha a quantidade para gravar no espaço de memória.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   

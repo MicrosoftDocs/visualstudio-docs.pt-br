@@ -20,11 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 787d1dd1f7ae9b005d1d61c5c0fb09a81f6dc17d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c33f32e46621bb2f56231b2c992712fd42126f1e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49841384"
 ---
 # <a name="onerror-element-msbuild"></a>Elemento OnError (MSBuild)
 Faz com que um ou mais destinos sejam executados se o atributo `ContinueOnError` for `false` para uma tarefa com falha.  
@@ -35,7 +36,7 @@ Faz com que um ou mais destinos sejam executados se o atributo `ContinueOnError`
 
 ## <a name="syntax"></a>Sintaxe  
 
-```  
+```xml  
 <OnError ExecuteTargets="TargetName"  
     Condition="'String A'=='String B'" />  
 ```  
@@ -55,14 +56,14 @@ Faz com que um ou mais destinos sejam executados se o atributo `ContinueOnError`
 
 ### <a name="parent-elements"></a>Elementos pai  
 
-|Elemento|Descrição|  
-|-------------|-----------------|  
-|[Target](../msbuild/target-element-msbuild.md)|Elemento contêiner para tarefas [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].|  
+| Elemento | Descrição |
+| - | - |
+| [Target](../msbuild/target-element-msbuild.md) | Elemento contêiner para tarefas [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
 
 ## <a name="remarks"></a>Comentários  
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] executa o elemento `OnError` se uma das tarefas do elemento `Target` falha com o atributo `ContinueOnError` definido como `ErrorAndStop` (ou `false`). Quando a tarefa falhar, os destinos especificados no atributo `ExecuteTargets` serão executados. Se houver mais de um elemento `OnError` no destino, os elementos `OnError` serão executados sequencialmente quando a tarefa falhar.  
 
- Para obter informações sobre o atributo `ContinueOnError`, consulte [Elemento Task (MSBuild)](../msbuild/task-element-msbuild.md). Para obter mais informações sobre os destinos, consulte [Destinos](../msbuild/msbuild-targets.md).  
+ Para saber mais sobre o atributo `ContinueOnError`, confira [Elemento Task (MSBuild)](../msbuild/task-element-msbuild.md). Para obter mais informações sobre os destinos, consulte [Destinos](../msbuild/msbuild-targets.md).  
 
 ## <a name="example"></a>Exemplo  
  O código a seguir executa as tarefas `TaskOne` e `TaskTwo`. Se `TaskOne` falhar, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] avaliará o elemento `OnError` e executará o destino `OtherTarget`.  
@@ -78,5 +79,5 @@ Faz com que um ou mais destinos sejam executados se o atributo `ContinueOnError`
 ```  
 
 ## <a name="see-also"></a>Consulte também  
- [Referência do esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)   
+ [Referência de esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)   
  [Destinos](../msbuild/msbuild-targets.md)

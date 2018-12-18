@@ -1,5 +1,5 @@
 ---
-title: Métodos de ponto de interrupção | Microsoft Docs
+title: Métodos relacionados ao ponto de interrupção | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,44 +14,45 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ce44a7d3d3578d5157bcefcf14172d92ece677d2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e7e823c5fef66077ba03d4cb9eec4367b79038db
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152136"
 ---
-# <a name="breakpoint-related-methods"></a>Métodos de ponto de interrupção
-Um mecanismo de depuração (DE) deve dar suporte a configuração de pontos de interrupção. Depuração do Visual Studio suporta os seguintes tipos de pontos de interrupção:  
+# <a name="breakpoint-related-methods"></a>Métodos relacionados ao ponto de interrupção
+Um mecanismo de depuração (DES) deve dar suporte a configuração de pontos de interrupção. Depuração do Visual Studio suporta os seguintes tipos de pontos de interrupção:  
   
 -   Associado  
   
-     Solicitado por meio da interface do usuário e associado com êxito para um local de código especificada  
+     Solicitado por meio da interface do usuário e associar com êxito para um local de código especificada  
   
 -   Pendente  
   
-     Solicitado por meio de interface do usuário, mas ainda não é vinculado a real de instruções  
+     Solicitado por meio da interface do usuário, mas ainda não é vinculado com o real de instruções  
   
 ## <a name="discussion"></a>Discussão  
- Por exemplo, um ponto de interrupção pendente ocorre quando as instruções ainda não foram carregadas. Quando o código é carregado, pendente tente pontos de interrupção para associar ao código no local indicado, ou seja, para inserir instruções de interrupção no código. Eventos são enviados para o Gerenciador de sessão de depuração (SDM) para indicar a associação com êxito, ou para notificar que houve erros de associação.  
+ Por exemplo, um ponto de interrupção pendente ocorre quando as instruções ainda não foram carregadas. Quando o código é carregado, pendentes try pontos de interrupção para associar ao código no local prescrito, ou seja, para inserir instruções de interrupção no código. Eventos são enviados para o Gerenciador de sessão de depuração (SDM) para indicar a associação com êxito ou para notificar que não houve erros de ligação.  
   
- Um ponto de interrupção pendente também gerencia sua própria lista interna de pontos de interrupção associada correspondente. Um pendente de ponto de interrupção pode causar a inserção de muitos pontos de interrupção no código. A depuração da interface do usuário do Visual Studio mostra uma exibição de árvore de pendente pontos de interrupção e seus correspondente associadas a pontos de interrupção.  
+ Um ponto de interrupção pendente também gerencia sua própria lista interna de pontos de interrupção associadas correspondentes. Uma pendente do ponto de interrupção pode causar a inserção de vários pontos de interrupção no código. Depuração da interface do usuário do Visual Studio mostra uma exibição de árvore dos pontos de interrupção pendentes e suas respectivas associadas a pontos de interrupção.  
   
- Criação e uso de pendente pontos de interrupção exigem a implementação do [IDebugEngine2::CreatePendingBreakpoint](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) método, bem como os seguintes métodos de [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) interfaces.  
+ Criação e uso de pontos de interrupção pendentes exigem a implementação do [IDebugEngine2::CreatePendingBreakpoint](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) método, bem como os seguintes métodos da [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) interfaces.  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[CanBind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)|Determina se um especificado pendente de ponto de interrupção pode ser associado a um local de código.|  
-|[Ligação](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)|Associa um especificado pendente de ponto de interrupção em um ou mais locais de código.|  
+|[CanBind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)|Determina se um especificado pendente do ponto de interrupção pode associar a um local de código.|  
+|[associar](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)|Associa um especificado pendente do ponto de interrupção em um ou mais locais de código.|  
 |[GetState](../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)|Obtém o estado de um ponto de interrupção pendente.|  
 |[GetBreakpointRequest](../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md)|Obtém a solicitação de ponto de interrupção usada para criar um ponto de interrupção pendente.|  
 |[Habilitar](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)|Alterna o estado ativado de um ponto de interrupção pendente.|  
 |[EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)|Enumera todos os pontos de interrupção associados de um ponto de interrupção pendente.|  
-|[EnumErrorBreakpoints](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)|Enumera todos os pontos de interrupção de erro resultantes de um ponto de interrupção pendente.|  
+|[EnumErrorBreakpoints](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)|Enumera todos os pontos de interrupção de erro que resultam de um ponto de interrupção pendente.|  
 |[Excluir](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)|Exclui um ponto de interrupção pendente e todos os pontos de interrupção associados dele.|  
   
- Para enumerar os pontos de interrupção associados e os pontos de interrupção de erro, você deve implementar todos os métodos de [IEnumDebugBoundBreakpoints2](../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) e [IEnumDebugErrorBreakpoints2](../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md).  
+ Para enumerar os pontos de interrupção associados e os pontos de interrupção de erro, você deve implementar todos os métodos de [IEnumDebugBoundBreakpoints2](../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) e da [IEnumDebugErrorBreakpoints2](../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md).  
   
- Pendente pontos de interrupção que se vincular a um código local exigem implementação dos seguintes [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) métodos.  
+ Pontos de interrupção que se associam a um código pendentes local exigir a implementação dos seguintes [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) métodos.  
   
 |Método|Descrição|  
 |------------|-----------------|  
@@ -66,14 +67,14 @@ Um mecanismo de depuração (DE) deve dar suporte a configuração de pontos de 
 |Método|Descrição|  
 |------------|-----------------|  
 |[GetBreakpointType](../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)|Obtém o tipo do ponto de interrupção representado por uma resolução.|  
-|[GetResolutionInfo](../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)|Obtém as informações de resolução do ponto de interrupção que descreve um ponto de interrupção.|  
+|[GetResolutionInfo](../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)|Obtém as informações de resolução de ponto de interrupção que descreve um ponto de interrupção.|  
   
- Requer a resolução de erros que podem ocorrer durante a associação de implementação dos seguintes [IDebugErrorBreakpoint2](../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) métodos.  
+ Resolução de erros que podem ocorrer durante a vinculação requer a implementação dos seguintes [IDebugErrorBreakpoint2](../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) métodos.  
   
 |Método|Descrição|  
 |------------|-----------------|  
 |[GetPendingBreakpoint](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md)|Obtém o ponto de interrupção pendente que contém um ponto de interrupção de erro.|  
-|[GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md)|Obtém a resolução de erro do ponto de interrupção que descreve um ponto de interrupção de erro.|  
+|[GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md)|Obtém a resolução de erro de ponto de interrupção que descreve um ponto de interrupção de erro.|  
   
  Resolução de erros que podem ocorrer durante a associação também requer os seguintes métodos de [IDebugErrorBreakpointResolution2](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md).  
   
@@ -82,7 +83,7 @@ Um mecanismo de depuração (DE) deve dar suporte a configuração de pontos de 
 |[GetBreakpointType](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md)|Obtém o tipo de um ponto de interrupção.|  
 |[GetResolutionInfo](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)|Obtém as informações de resolução de um ponto de interrupção.|  
   
- Exibindo o código-fonte em um ponto de interrupção exige que você implemente os métodos de [IDebugStackFrame2::GetDocumentContext](../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) e/ou os métodos de [IDebugStackFrame2::GetCodeContext](../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md).  
+ Exibir o código-fonte em um ponto de interrupção exige que você implemente os métodos de [IDebugStackFrame2::GetDocumentContext](../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) e/ou os métodos da [IDebugStackFrame2::GetCodeContext](../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Controle de execução e avaliação de estado](../../extensibility/debugger/execution-control-and-state-evaluation.md)
+ [Avaliação de controle e o estado de execução](../../extensibility/debugger/execution-control-and-state-evaluation.md)

@@ -1,25 +1,23 @@
 ---
-title: "Definir como destino uma versão do .NET Framework no Visual Studio | Microsoft Docs"
-ms.custom: 
+title: Definir uma versão do .NET Framework como destino no Visual Studio
 ms.date: 02/06/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - targeting .NET Framework [Visual Studio]
 - .NET Framework version [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 03d8b734833fad5a47f0d5517b21a7851d9258a6
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 36599475e743259d8cf09d24172a633b54b09693
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34752301"
 ---
 # <a name="how-to-target-a-version-of-the-net-framework"></a>Como definir uma versão do .NET Framework como destino
 
@@ -32,7 +30,7 @@ Este documento descreve como destinar a uma versão do .NET Framework quando voc
 
 Quando você cria um projeto, as versões do .NET Framework disponíveis dependem de quais versões estão instaladas e o modelo selecionado na caixa de diálogo **Novo Projeto**.
 
-1. Na barra de menus, selecione **Arquivo** > **Novo** > **Projeto...**
+1. Na barra de menus, selecione **Arquivo** > **Novo** > **Projeto**.
 
 1. Na lista de modelos instalados, escolha o tipo de projeto que você deseja criar, e insira um nome para o projeto.
 
@@ -52,11 +50,11 @@ Para obter informações sobre como alterar a versão de destino de projetos do 
 
 1. No **Gerenciador de Soluções**, abra o menu de atalho do projeto que você deseja alterar e, em seguida, escolha **Propriedades**.
 
-    ![Propriedades do Gerenciador de Soluções do Visual Studio](../ide/media/vs_slnexplorer_properties.png "vs_slnExplorer_Properties")
+    ![Propriedades do Gerenciador de Soluções do Visual Studio](../ide/media/vs_slnexplorer_properties.png)
 
-1. Na coluna esquerda da janela Propriedades, escolha a guia **Aplicativo**.
+1. Na coluna esquerda da janela **Propriedades**, escolha a guia **Aplicativo**.
 
-    ![Guia Aplicativo de Propriedades do Aplicativo do Visual Studio](../ide/media/vs_slnexplorer_properties_applicationtab.png "vs_slnExplorer_Properties_ApplicationTab")
+    ![Guia Aplicativo de Propriedades de Aplicativo do Visual Studio](../ide/media/vs_slnexplorer_properties_applicationtab.png)
 
     > [!NOTE]
     > Depois de criar um aplicativo UWP, não é possível alterar a versão de destino do Windows ou do .NET Framework.
@@ -72,8 +70,8 @@ Para obter informações sobre como alterar a versão de destino de projetos do 
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão Geral do Visual Studio Multiplataforma](../ide/visual-studio-multi-targeting-overview.md)  
-[Solução de problemas com erros de direcionamento do .NET Framework](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)  
-[Página Aplicativo, Designer de Projeto (C#)](../ide/reference/application-page-project-designer-csharp.md)  
-[Página de Aplicativo, Designer de Projeto (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)  
-[Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma (C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)
+- [Visão geral de multiplataforma no Visual Studio](../ide/visual-studio-multi-targeting-overview.md)
+- [Solução de problemas de erros de definição de destino do .NET Framework](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)
+- [Página Aplicativo, Designer de Projeto (C#)](../ide/reference/application-page-project-designer-csharp.md)
+- [Página Aplicativo, Designer de Projeto (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)
+- [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma (C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)

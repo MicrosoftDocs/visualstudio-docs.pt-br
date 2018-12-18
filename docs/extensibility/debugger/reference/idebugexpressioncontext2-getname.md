@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84ac767c8e2cd53045dec9921f6d90300f1a87e0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5664710d69b8c6d7af315de600fd1fcd27a2b36d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873520"
 ---
 # <a name="idebugexpressioncontext2getname"></a>IDebugExpressionContext2::GetName
 Recupera o nome do contexto de avaliação.  
@@ -43,10 +44,10 @@ int GetName(
  [out] Retorna o nome do contexto de avaliação.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- O nome é a descrição deste contexto de avaliação. Geralmente, é algo que podem ser analisados por um avaliador de expressão que faz referência a este contexto de avaliação exato. Por exemplo, em C++ o nome é da seguinte maneira:  
+ O nome é a descrição deste contexto de avaliação. Geralmente, é algo que pode ser analisado por um avaliador de expressão que se refere a este contexto de avaliação exato. Por exemplo, em C++ o nome é da seguinte maneira:  
   
 ```  
 "{ function-name, source-file-name, module-file-name }"  

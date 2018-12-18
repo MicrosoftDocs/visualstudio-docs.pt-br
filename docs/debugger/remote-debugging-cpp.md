@@ -1,5 +1,5 @@
 ---
-title: Um projeto do Visual C++ de depuração remota | Microsoft Docs
+title: Remoto depurar um projeto do Visual C++ | Microsoft Docs
 ms.custom: remotedebugging
 ms.date: 08/14/2017
 ms.technology: vs-ide-debug
@@ -18,87 +18,88 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 334a0b964033282458c211d69af30aad20dbd6bc
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 4677380081aaa0ac79f589ea7594f19f78750613
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844101"
 ---
 # <a name="remote-debugging-a-visual-c-project-in-visual-studio"></a>Um projeto do Visual C++ no Visual Studio de depuração remota
-Para depurar um aplicativo do Visual Studio em um computador diferente, instalar e executar as ferramentas remotas no computador onde você implantará o aplicativo, configure seu projeto para se conectar ao computador remoto do Visual Studio e, em seguida, implantar e executar seu aplicativo.
+Para depurar um aplicativo do Visual Studio em um computador diferente, instalar e executar as ferramentas remotas no computador onde você implantará seu aplicativo, configure seu projeto para se conectar ao computador remoto do Visual Studio e, em seguida, implantar e executar seu aplicativo.
 
 ![Componentes do depurador remoto](../debugger/media/remote-debugger-client-apps.png "Remote_debugger_components")
 
-Para obter informações sobre aplicativos de Windows Universal (UWP) a depuração remota, consulte [depurar um pacote de aplicativos instalado](debug-installed-app-package.md).
+Para obter informações sobre aplicativos Universal do Windows (UWP) de depuração remota, consulte [depurar um pacote do aplicativo instalado](debug-installed-app-package.md).
 
 ## <a name="requirements"></a>Requisitos
 
-O depurador remoto é suportado no Windows 7 e versões mais recentes (não phone) e versões do Windows Server, iniciando com o Windows Server 2008 Service Pack 2. Para obter uma lista completa dos requisitos, consulte [requisitos](../debugger/remote-debugging.md#requirements_msvsmon).
+O depurador remoto tem suporte no Windows 7 e mais recente (não de telefone) e versões do Windows Server a partir do Windows Server 2008 Service Pack 2. Para obter uma lista completa dos requisitos, consulte [requisitos de](../debugger/remote-debugging.md#requirements_msvsmon).
 
 > [!NOTE]
-> Não há suporte para a depuração entre dois computadores conectados por meio de um proxy. Depuração em uma conexão de baixa largura de banda, como dial-up da Internet, ou de alta latência, ou pela Internet entre países não é recomendado e pode falhar ou ser muito lento.
+> Não há suporte para depuração entre dois computadores conectados por meio de um proxy. Depuração em uma alta latência ou a conexão de baixa largura de banda, como dial-up da Internet, ou pela Internet entre países não é recomendado e pode falhar ou ser muito lento.
   
 ## <a name="download-and-install-the-remote-tools"></a>Baixe e instale as ferramentas remotas
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
   
 > [!TIP]
-> Em alguns cenários, pode ser mais eficiente para executar o depurador remoto de um compartilhamento de arquivos. Para obter mais informações, consulte [executar o depurador remoto de um compartilhamento de arquivo](../debugger/remote-debugging.md#fileshare_msvsmon).
+> Em alguns cenários, pode ser mais eficiente para executar o depurador remoto de um compartilhamento de arquivos. Para obter mais informações, consulte [executar o depurador remoto de um compartilhamento de arquivos](../debugger/remote-debugging.md#fileshare_msvsmon).
   
 ## <a name="BKMK_setup"></a> Configurar o depurador remoto
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
 > [!NOTE]
-> Se você precisa adicionar permissões para usuários adicionais, alterar o modo de autenticação ou número da porta para o depurador remoto, consulte [configurar o depurador remoto](../debugger/remote-debugging.md#configure_msvsmon).
+> Se você precisar adicionar permissões para usuários adicionais, alterar o modo de autenticação ou número da porta para o depurador remoto, consulte [configurar o depurador remoto](../debugger/remote-debugging.md#configure_msvsmon).
 
-## <a name="remote_cplusplus"></a> Depuração remota um projeto do Visual C++  
- No procedimento a seguir, o nome e caminho do projeto é C:\remotetemp\MyMfc e o nome do computador remoto é **MJO DL**.  
+## <a name="remote_cplusplus"></a> Depuração remota de um projeto do Visual C++  
+ No procedimento a seguir, o nome e caminho do projeto é C:\remotetemp\MyMfc e é o nome do computador remoto **MJO DL**.  
   
-1.  Criar um aplicativo MFC chamado **mymfc.**  
+1. Criar um aplicativo MFC chamado **mymfc.**  
   
-2.  Definir um ponto de interrupção em algum lugar no aplicativo que facilmente for atingido, por exemplo, em **MainFrm.cpp**, no início de `CMainFrame::OnCreate`.  
+2. Defina um ponto de interrupção em algum lugar no aplicativo que é atingido com facilidade, por exemplo, no **MainFrm.cpp**, no início de `CMainFrame::OnCreate`.  
   
-3.  No Gerenciador de soluções, clique com botão direito no projeto e selecione **propriedades**. Abra o **depuração** guia.  
+3. No Gerenciador de soluções, clique com botão direito no projeto e selecione **propriedades**. Abra o **depuração** guia.  
   
-4.  Definir o **depurador a iniciar** para **Remote Windows Debugger**.  
+4. Defina as **depurador a iniciar** à **depurador remoto do Windows**.  
   
-     ![RemoteDebuggingCPlus](../debugger/media/remotedebuggingcplus.png "RemoteDebuggingCPlus")  
+    ![RemoteDebuggingCPlus](../debugger/media/remotedebuggingcplus.png "RemoteDebuggingCPlus")  
   
-5.  Faça as seguintes alterações nas propriedades:  
+5. Faça as seguintes alterações nas propriedades:  
   
-    |Configuração|Valor|
-    |-|-|  
-    |Comando remoto|C:\remotetemp\mymfc.exe|  
-    |Diretório de trabalho|C:\remotetemp|  
-    |Nome do servidor remoto|MJO-DL:*portnumber*|  
-    |Conexão|Remoto sem Autenticação do Windows|  
-    |Tipo de Depurador|Somente Nativo|  
-    |Diretório de implantação|C:\remotetemp.|  
-    |Arquivos adicionais a implantar|C:\data\mymfcdata.txt.|  
+   |Configuração|Valor|
+   |-|-|  
+   |Comando remoto|C:\remotetemp\mymfc.exe|  
+   |Diretório de trabalho|C:\remotetemp|  
+   |Nome do servidor remoto|MJO-DL:*portnumber*|  
+   |Conexão|Remoto sem Autenticação do Windows|  
+   |Tipo de Depurador|Somente Nativo|  
+   |Diretório de implantação|C:\remotetemp.|  
+   |Arquivos adicionais a implantar|C:\data\mymfcdata.txt.|  
   
-     Se você implantar arquivos adicionais (opcionais), a pasta deve existir nos dois computadores.  
+    Se você implantar arquivos adicionais (opcionais), a pasta deve existir nos dois computadores.  
   
-6.  No Gerenciador de soluções, clique com botão direito a solução e escolha **do Configuration Manager**.  
+6. No Gerenciador de soluções, clique com botão direito a solução e escolha **Configuration Manager**.  
   
-7.  Para o **depurar** configuração, selecione o **implantar** caixa de seleção.  
+7. Para o **Debug** configuração, selecione o **implantar** caixa de seleção.  
   
-     ![RemoteDebugCplusDeploy](../debugger/media/remotedebugcplusdeploy.png "RemoteDebugCplusDeploy")  
+    ![RemoteDebugCplusDeploy](../debugger/media/remotedebugcplusdeploy.png "RemoteDebugCplusDeploy")  
   
-8.  Iniciar a depuração (**Depurar > Iniciar depuração**, ou **F5**).  
+8. Iniciar a depuração (**Depurar > Iniciar depuração**, ou **F5**).  
   
-9. O executável é implantado automaticamente ao computador remoto.  
+9. O executável é implantado automaticamente para o computador remoto.  
   
 10. Se solicitado, insira as credenciais de rede para se conectar ao computador remoto.  
   
-     As credenciais necessárias são específicas para a configuração de segurança da sua rede. Por exemplo, em um computador de domínio, você pode escolher um certificado de segurança ou inserir seu nome de domínio e senha. Em um computador de fora do domínio, insira o nome do computador e um nome de conta de usuário válido, como **MJO-DL\name@something.com**, junto com a senha correta.  
+     As credenciais necessárias são específicas para a configuração de segurança da sua rede. Por exemplo, em um computador de domínio, você pode escolher um certificado de segurança ou insira seu nome de domínio e senha. Em um computador fora do domínio, você pode inserir o nome do computador e um nome de conta de usuário válido, como <strong>MJO-DL\name@something.com</strong>, junto com a senha correta.  
   
-11. No computador do Visual Studio, você verá que a execução é interrompida no ponto de interrupção.  
+11. No computador do Visual Studio, você deve ver que a execução é interrompida no ponto de interrupção.  
   
     > [!TIP]
     >  Como alternativa, você pode implantar os arquivos como uma etapa separada. No **Gerenciador de soluções,** com o botão direito do **mymfc** nó e, em seguida, escolha **implantar**.  
   
- Se você tiver arquivos de código não precisam ser usados pelo aplicativo, você precisa incluí-las no projeto do Visual Studio. Crie uma pasta de projeto para os arquivos adicionais (da **Solution Explorer**, clique em **Adicionar > nova pasta**.) Em seguida, adicionar os arquivos na pasta (no **Solution Explorer**, clique em **Adicionar > Item existente**, em seguida, selecione os arquivos). Sobre o **propriedades** para cada arquivo, defina **copiar para diretório de saída** para **copiar sempre**.
+    Se você tiver arquivos sem código que precisam ser usados pelo aplicativo, você precisará incluí-los no projeto do Visual Studio. Crie uma pasta de projeto para os arquivos adicionais (na **Gerenciador de soluções**, clique em **Adicionar > nova pasta**.) Em seguida, adicione os arquivos na pasta (na **Gerenciador de soluções**, clique em **Adicionar > Item existente**, em seguida, selecione os arquivos). Sobre o **propriedades** para cada arquivo, defina **Copy to Output Directory** para **copiar sempre**.
   
 ## <a name="set-up-debugging-with-remote-symbols"></a>Configurar a depuração com símbolos remotos 
 

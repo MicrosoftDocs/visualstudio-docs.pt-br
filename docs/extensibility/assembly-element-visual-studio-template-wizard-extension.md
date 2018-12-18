@@ -16,13 +16,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1610df76bfce303bd13c69cb8298ac62106fd7e6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9fa0728be191086ba84de86110deea122316466f
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153850"
 ---
-# <a name="assembly-element-visual-studio-template-wizard-extension"></a>Elemento de assembly (Extensão do Assistente de Modelo do Visual Studio)
+# <a name="assembly-element-visual-studio-template-wizard-extension"></a>Elemento Assembly (extensão de Assistente de modelo do Visual Studio)
 Especifica o nome ou o nome forte do assembly que implementa o `IWizard` interface.  
   
  \<VSTemplate >  
@@ -53,7 +54,7 @@ Especifica o nome ou o nome forte do assembly que implementa o `IWizard` interfa
 ## <a name="text-value"></a>Valor de texto  
  Um valor de texto é obrigatório.  
   
- Esse texto Especifica o assembly que implementa o `IWizard` interface. Esse nome de assembly deve ser especificado como um nome completo do assembly. Por exemplo, `MyAssembly, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11dd0a3a, Custom = null`.  
+ Esse texto Especifica o assembly que implementa o `IWizard` interface. O nome do assembly deve ser especificado como um nome completo do assembly. Por exemplo, `MyAssembly, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11dd0a3a, Custom = null`.  
   
 ## <a name="remarks"></a>Comentários  
  O `Assembly` é um elemento filho obrigatório de `WizardExtension`.  
@@ -91,5 +92,5 @@ Especifica o nome ou o nome forte do assembly que implementa o `IWizard` interfa
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)   
- [Como usar assistentes com modelos do projeto](../extensibility/how-to-use-wizards-with-project-templates.md)
+ [Criando modelos de projeto e item](../ide/creating-project-and-item-templates.md)   
+ [Como: usar assistentes com modelos de projeto](../extensibility/how-to-use-wizards-with-project-templates.md)

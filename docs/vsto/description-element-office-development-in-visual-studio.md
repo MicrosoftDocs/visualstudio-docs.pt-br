@@ -1,5 +1,5 @@
 ---
-title: '&lt;Descrição&gt; elemento (desenvolvimento do Office no Visual Studio) | Microsoft Docs'
+title: '&lt;Descrição&gt; elemento (desenvolvimento do Office no Visual Studio)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,18 +17,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 13755a20b091696bf741c1f25360941e01b65945
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9fcdac1e950d98394b5703322f40dd1823b246f6
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34265109"
 ---
 # <a name="ltdescriptiongt-element-office-development-in-visual-studio"></a>&lt;Descrição&gt; elemento (desenvolvimento do Office no Visual Studio)
   O `description` elemento o `vstov4` namespace armazena a descrição para a solução do Office que aparece na caixa de diálogo COM os suplementos de aplicativos do Microsoft Office.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <description>  
 </description>  
 ```  
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="code"></a>Código  
   
-```  
+```xml  
 <vstov4:description>  
   ContosoOutlookAddIn - Outlook add-in   
   created with Visual Studio Tools for Office  
@@ -55,6 +56,6 @@ ms.lasthandoff: 04/16/2018
 ## <a name="see-also"></a>Consulte também  
  [Manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md)   
  [Manifestos de implantação para soluções do Office](../vsto/deployment-manifests-for-office-solutions.md)   
- [Manifesto de aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest)  
+ [Manifesto do aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest)  
   
   

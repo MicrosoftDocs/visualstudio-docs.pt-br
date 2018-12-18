@@ -18,21 +18,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fe1ef9e06c7e14ecb28fff9ceb48b2243a129e68
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c40fd9e5f21940be77af7dfbddf496594502641e
+ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751018"
 ---
 # <a name="importgroup-element"></a>Elemento ImportGroup
-Contém uma coleção de elementos `Import` que são agrupados em uma condição opcional. Para obter mais informações, consulte [Importar Elemento (MSBuild)](../msbuild/import-element-msbuild.md).  
+Contém uma coleção de elementos `Import` que são agrupados em uma condição opcional. Para obter mais informações, confira [Elemento Import (MSBuild)](../msbuild/import-element-msbuild.md).  
 
  \<Project>  
  \<ImportGroup>  
 
 ## <a name="syntax"></a>Sintaxe  
 
-```  
+```xml  
 <ImportGroup Condition="'String A' == 'String B'">  
     <Import ... />  
     <Import ... />  
@@ -56,11 +57,9 @@ Contém uma coleção de elementos `Import` que são agrupados em uma condição
 
 ### <a name="parent-elements"></a>Elementos pai  
 
-|Elemento|Descrição|  
-|-------------|-----------------|  
-|[Projeto](../msbuild/project-element-msbuild.md)|Elemento raiz necessário de um arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].|  
-
-## <a name="remarks"></a>Comentários  
+| Elemento | Descrição |
+| - | - |
+| [Projeto](../msbuild/project-element-msbuild.md) | Elemento raiz necessário de um arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
 
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir mostra o elemento `ImportGroup`.  
@@ -68,13 +67,13 @@ Contém uma coleção de elementos `Import` que são agrupados em uma condição
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     <ImportGroup>  
-        <Import Project="$(Targets1.targets) />  
-        <Import Project="$(Targets2.targets) />  
+        <Import Project="$(Targets1.targets)" />  
+        <Import Project="$(Targets2.targets)" />  
     </ImportGroup>  
 ...  
 </Project>  
 ```  
 
 ## <a name="see-also"></a>Consulte também  
- [Referência do esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)   
+ [Referência de esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)   
  [Itens](../msbuild/msbuild-items.md)

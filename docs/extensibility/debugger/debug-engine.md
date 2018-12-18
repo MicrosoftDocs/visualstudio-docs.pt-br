@@ -13,31 +13,32 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1816d19425897a2f63fa7e5cbe30771bd5eac3d4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 78bd5b732d7ea1714bb1c5627b570976e33a82c4
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203882"
 ---
 # <a name="debug-engine"></a>Mecanismo de depuração
-Um mecanismo de depuração (DE) funciona com o sistema operacional ou interpretador para fornecer serviços de depuração, como avaliação de expressão, os pontos de interrupção e controle de execução. O DE é responsável por monitorar o estado de um programa que está sendo depurado. Para fazer isso, o DE usa qualquer métodos estão disponíveis para ele no tempo de execução com suporte, se da CPU ou APIs fornecidos pelo tempo de execução.  
+Um mecanismo de depuração (DES) funciona com o sistema operacional ou interpretador para fornecer serviços de depuração, como avaliação de expressão, os pontos de interrupção e controle de execução. A Alemanha é responsável por monitorar o estado de um programa que está sendo depurado. Para fazer isso, o DE usa quaisquer métodos estão disponíveis para ele no tempo de execução com suporte, se da CPU ou de APIs fornecidas pelo tempo de execução.  
   
- Por exemplo, o common language runtime (CLR) fornece mecanismos para monitorar um programa em execução por meio de interfaces ICorDebugXXX. A DE que suporta o CLR usa as interfaces de ICorDebugXXX apropriadas para manter o controle de um programa de código gerenciado que está sendo depurado. Ele se comunica as alterações de estado para o Gerenciador de depuração de sessão (SDM), que encaminha essas informações para o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE.  
+ Por exemplo, o common language runtime (CLR) fornece mecanismos para monitorar um programa em execução por meio de interfaces ICorDebugXXX. A DE que dá suporte a CLR usa as interfaces de ICorDebugXXX apropriadas para manter o controle de um programa de código gerenciado que está sendo depurado. Ele se comunica as alterações de estado para o Gerenciador de depuração de sessão (SDM), que encaminha essas informações para o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE.  
   
 > [!NOTE]
->  Um mecanismo de depuração tem como alvo um tempo de execução específico, ou seja, o sistema no qual o programa que está sendo depurado é executado. O CLR é o tempo de execução de código gerenciado e o tempo de execução do Win32 é para aplicativos nativos do Windows. Se o idioma que você criar pode direcionar um desses dois tempos de execução [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] já fornece os mecanismos de depuração necessárias. Tudo o que você precisa implementar é um avaliador de expressão.  
+>  Um mecanismo de depuração tem como alvo um tempo de execução específico, ou seja, o sistema em que o programa que está sendo depurado é executado. O CLR é o tempo de execução para código gerenciado e o tempo de execução do Win32 é para aplicativos nativos do Windows. Se o idioma que você cria pode direcionar um dos dois desses tempos de execução, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] já fornece mecanismos de depuração necessárias. Tudo o que você tem que implementar é um avaliador de expressão.  
   
 ## <a name="debug-engine-operation"></a>Operação do mecanismo de depuração  
- Os serviços de monitoramentos são implementados por meio DE interfaces e podem fazer com que o pacote de depuração para fazer a transição entre os modos operacionais diferentes. Para obter mais informações, consulte [modos operacionais](../../extensibility/debugger/operational-modes.md). Normalmente, há apenas uma implementação DE por ambiente de tempo de execução.  
+ Os serviços de monitoramento são implementados por meio DE interfaces e podem fazer com que o pacote de depuração para fazer a transição entre os modos operacionais diferentes. Para obter mais informações, consulte [modos operacionais](../../extensibility/debugger/operational-modes.md). Normalmente, há apenas uma implementação DE cada ambiente de tempo de execução.  
   
 > [!NOTE]
->  Embora haja em implementações DE separadas para o Transact-SQL e [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)], VBScript e [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] compartilham um único DE.  
+>  Embora existam implementações DE separadas para o Transact-SQL e [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)], VBScript e [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] compartilham um único DE.  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Habilita depuração depuração mecanismos para executar uma das seguintes maneiras: no mesmo processo que o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] de shell ou no mesmo processo que o programa de destino que está sendo depurado. O segundo formulário normalmente ocorre quando o processo que está sendo depurado é realmente um script em execução sob um intérprete e o mecanismo de depuração deve ter conhecimento profundo do intérprete para monitorar o script. Observe que, nesse caso, o interpretador é realmente um tempo de execução; mecanismos de depuração são para implementações de tempo de execução específica. Além disso, a implementação de um único DE pode ser dividida em limites de processo e de máquina (por exemplo, a depuração remota).  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Habilita depuração depuração mecanismos para executar uma das duas maneiras: no mesmo processo que o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] de shell ou no mesmo processo que o programa de destino que está sendo depurado. A segunda forma normalmente ocorre quando o processo que está sendo depurado é, na verdade, um script em execução em um interpretador. O mecanismo de depuração deve ter um conhecimento profundo do interpretador para monitorar o script. Nesse caso, o interpretador é, na verdade, um tempo de execução; mecanismos de depuração são para implementações de tempo de execução específico. Além disso, a implementação de um único DE pode ser dividida em limites de processo e de máquina (por exemplo, depuração remota).  
   
- O DE expõe o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] interfaces de depuração. Toda a comunicação está usando COM. Se o DE é carregado no processo, fora do processo ou em outro computador, ele não afeta a comunicação de componente.  
+ O DE expõe o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] interfaces de depuração. Toda a comunicação está usando COM. Se a Alemanha é carregada no processo, out-of-process ou em outro computador, ela não afeta a comunicação de componente.  
   
- O DE funciona com um componente do avaliador de expressão para habilitar o DE para esse tempo de execução específico entender a sintaxe das expressões. O DE também funciona com um componente do manipulador de símbolo para acessar as informações de depuração simbólicas geradas pelo compilador de linguagem. Para obter mais informações, consulte [avaliador de expressão](../../extensibility/debugger/expression-evaluator.md) e [provedor símbolo](../../extensibility/debugger/symbol-provider.md).  
+ O DE funciona com um componente do avaliador de expressão para habilitar o DE para determinado tempo de execução entender a sintaxe de expressões. O DE também funciona com um componente de manipulador de símbolo para acessar as informações de depuração simbólica geradas pelo compilador de linguagem. Para obter mais informações, consulte [avaliador de expressão](../../extensibility/debugger/expression-evaluator.md) e [provedor de símbolos](../../extensibility/debugger/symbol-provider.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Componentes do depurador](../../extensibility/debugger/debugger-components.md)   

@@ -16,14 +16,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fbcd319ac2a2a4a1a327388c22a57d28515a2247
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d0bf92b01828764652cd75de648b1def01bb722c
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844076"
 ---
 # <a name="how-to-manually-create-performance-sessions"></a>Como criar manualmente sessões de desempenho
-Você pode criar manualmente uma sessão de desempenho. Não é necessário abrir um projeto no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para fazer isso. Para obter mais informações, consulte [Configurando sessões de desempenho](../profiling/configuring-performance-sessions.md).  
+Você pode criar manualmente uma sessão de desempenho. Não é necessário abrir um projeto no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para fazer isso. Para obter mais informações, confira [Configurar sessões de desempenho](../profiling/configuring-performance-sessions.md).  
   
 ### <a name="to-manually-create-a-performance-session"></a>Para criar manualmente uma sessão de desempenho  
   

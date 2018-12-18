@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 41b35475bb56b417729fa70d0e980411ae0f0e3a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8b53b8f2cd7819650abbb4fc88a7ec3f4b6dfe21
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903186"
 ---
 # <a name="idebugarrayobject2getbaseindices"></a>IDebugArrayObject2::GetBaseIndices
-Recupera o índice de base (limites inferiores) para cada índice dado o número de dimensões da matriz.  
+Recupera o índice de base (limites inferiores) para cada índice devido ao número de dimensões na matriz.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,16 +42,16 @@ int GetBaseIndices (
   
 #### <a name="parameters"></a>Parâmetros  
  `dwRank`  
- [in] O número de dimensões (classificação) da matriz.  
+ [in] O número de dimensões (rank) da matriz.  
   
  `dwIndices`  
- [out] Os índices base (limite inferior) para a matriz.  
+ [out] Os índices base (limites inferiores) para a matriz.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Por exemplo, essa função retornará 5 para a matriz criada por meio de código c# a seguir:  
+ Por exemplo, essa função retornará '5' para a matriz criada pelo código a seguir em C#:  
   
 ```  
 int[] lengths = { 12 };  

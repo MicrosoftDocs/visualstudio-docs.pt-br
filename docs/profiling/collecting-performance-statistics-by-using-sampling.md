@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fea27cdfbcc843b30fbb4500dd9528df5b65c3d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a09253dbeff9adb2bed6ea21545675f343e15974
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836249"
 ---
-# <a name="collecting-performance-statistics-by-using-sampling"></a>Coletando estatísticas de desempenho usando amostragem
+# <a name="collect-performance-statistics-by-using-sampling"></a>Coletar estatísticas de desempenho usando amostragem
 
 Por padrão, o método de amostragem das Ferramentas de Criação de Perfil do Visual Studio coleta informações de criação de perfil cada 10.000.000 de ciclos do processador (aproximadamente a cada um centésimo de segundo em um computador de 1 GHz). O método de amostragem é útil para localizar problemas de utilização do processador e é o método sugerido para iniciar a maioria das investigações de desempenho.
 
@@ -33,11 +34,11 @@ Por padrão, o método de amostragem das Ferramentas de Criação de Perfil do V
 
 ## <a name="common-tasks"></a>Tarefas comuns
 
-É possível especificar outras opções na caixa de diálogo *Sessão de Desempenho***Páginas de Propriedades** da sessão de desempenho. Para abrir essa caixa de diálogo:
+É possível especificar outras opções na caixa de diálogo _Sessão de Desempenho_**Páginas de Propriedades** da sessão de desempenho. Para abrir essa caixa de diálogo:
 
 - No **Gerenciador de Desempenho**, clique com o botão direito do mouse no nome da sessão de desempenho e clique em **Propriedades**.
 
- As tarefas na tabela a seguir descrevem as opções que podem ser especificadas na caixa de diálogo *Sessão de Desempenho***Páginas de Propriedades** quando você cria o perfil usando o método de amostragem.
+  As tarefas na tabela a seguir descrevem as opções que podem ser especificadas na caixa de diálogo _Sessão de Desempenho_**Páginas de Propriedades** quando você cria o perfil usando o método de amostragem.
 
 |Tarefa|Conteúdo relacionado|
 |----------|---------------------|

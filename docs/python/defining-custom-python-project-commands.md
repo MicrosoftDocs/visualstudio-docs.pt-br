@@ -1,39 +1,34 @@
 ---
-title: Como definir comandos de menu personalizados para projetos Python | Microsoft Docs
-description: Demonstra como editar arquivos de projeto e de destinos para adicionar comandos personalizados ao menu de contexto do projeto Python no Visual Studio. Os comandos podem ser invocados em programas executáveis, scripts, módulos, trechos de código embutido e pip.
-ms.custom: ''
-ms.date: 02/02/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+title: Como definir comandos de menu personalizados para projetos Python
+description: Demonstra como editar arquivos de projeto e de destinos para adicionar comandos personalizados ao menu de contexto do projeto Python no Visual Studio. Os comandos podem ser invocados em programas executáveis, scripts, módulos, snippets de código embutido e pip.
+ms.date: 11/12/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a8e7f1f05ba6a93e696ee13e2f28305b8784d7c2
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: cce4400a4cecb3bb0937c3f4ce41ea148edcc49f
+ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607842"
 ---
-# <a name="defining-custom-commands-for-python-projects"></a>Definindo comandos personalizados para projetos Python
+# <a name="define-custom-commands-for-python-projects"></a>Definir comandos personalizados para projetos do Python
 
-No processo de trabalhar com seus projetos Python, é provável que você precise alternar para uma janela de comando para executar scripts ou módulos específicos, executar comandos de pip ou executar uma outra ferramenta qualquer. Para melhorar o fluxo de trabalho, você pode adicionar comandos personalizados ao submenu **Python** no menu de contexto do projeto Python. Esses comandos podem ser executados em uma janela de console ou na janela de saída do Visual Studio. Você também pode usar expressões regulares para instruir o Visual Studio como analisar os erros e avisos da saída do comando.
+Enquanto você trabalha com os projetos Python, é provável que você precise alternar para uma janela Comando para executar scripts ou módulos específicos, executar comandos do Pip ou executar outra ferramenta qualquer. Para melhorar o fluxo de trabalho, você pode adicionar comandos personalizados ao submenu **Python** no menu de contexto do projeto Python. Esses comandos podem ser executados em uma janela de console ou na janela **Saída** do Visual Studio. Você também pode usar expressões regulares para instruir o Visual Studio como analisar os erros e avisos da saída do comando.
 
-Por padrão, esse menu contém apenas o único comando **Executar Pylint**:
+Por padrão, esse menu contém apenas o único comando **Executar PyLint**:
 
 ![Aparência padrão do submenu Python no menu de contexto do projeto](media/custom-commands-default-menu.png)
 
-Os comandos personalizados aparecem nesse mesmo menu de contexto. Os comandos personalizados são adicionados diretamente a um arquivo de projeto, aplicando-se a esse projeto individual. Você também pode definir comandos personalizados em um arquivo `.targets` que pode ser facilmente importado em vários arquivos de projeto.
+Os comandos personalizados aparecem nesse mesmo menu de contexto. Os comandos personalizados são adicionados diretamente a um arquivo de projeto, aplicando-se a esse projeto individual. Defina também comandos personalizados em um arquivo *.targets* que pode ser importado com facilidade para vários arquivos de projeto.
 
-Alguns modelos de projeto Python no Visual Studio já adicionam seus próprios comandos personalizados usando arquivos `.targets`. Por exemplo, os modelos Projeto Bottle Web e Projeto Flask Web adicionam dois comandos, **Iniciar servidor** e **iniciar servidor de depuração**. O modelo Projeto Django Web adiciona esses mesmos comandos além de alguns outros:
+Alguns modelos de projeto do Python no Visual Studio já adicionam seus próprios comandos personalizados usando arquivos *.targets*. Por exemplo, os modelos Projeto Bottle Web e Projeto Flask Web adicionam dois comandos, **Iniciar servidor** e **iniciar servidor de depuração**. O modelo Projeto Django Web adiciona esses mesmos comandos além de alguns outros:
 
 ![Aparência do submenu Python em um menu de contexto do projeto Django](media/custom-commands-django-menu.png)
 
@@ -42,21 +37,21 @@ Cada comando personalizado pode se referir a um arquivo Python, um módulo Pytho
 > [!Tip]
 > Sempre que você fizer alterações em um arquivo de projeto em um editor de texto, será necessário recarregar o projeto no Visual Studio para aplicar essas alterações. Por exemplo, você precisará recarregar o projeto depois de adicionar definições de comando personalizadas para que esses comandos sejam exibidos no menu de contexto do projeto.
 >
-> Como você deve saber, o Visual Studio fornece um meio para editar diretamente o arquivo de projeto. Primeiro, clique com o botão direito do mouse no arquivo de projeto e selecione **Descarregar projeto**, em seguida, clique com botão direito do mouse novamente e selecione **Editar (nome-do-projeto)** para abrir o projeto no editor do Visual Studio. Em seguida, faça edições e salve-as, clique com botão direito do mouse no projeto mais uma vez e selecione **Recarregar projeto**, que também solicita que você confirme o fechamento do arquivo de projeto no editor.
+> Como você deve saber, o Visual Studio fornece um meio para editar o arquivo de projeto diretamente. Primeiro, clique com o botão direito do mouse no arquivo de projeto e selecione **Descarregar projeto**. Em seguida, clique com o botão direito do mouse novamente e selecione **Editar \<nome-do-projeto->** para abrir o projeto no editor do Visual Studio. Em seguida, faça edições e salve-as, clique com botão direito do mouse no projeto mais uma vez e selecione **Recarregar projeto**, que também solicita que você confirme o fechamento do arquivo de projeto no editor.
 >
-> No entanto, ao desenvolver um comando personalizado, pode ser entendiante realizar todos esses cliques. Para obter um fluxo de trabalho mais eficiente, carregue o projeto no Visual Studio e também abra o arquivo `'.pyproj` em um editor completamente separado (como outra instância do Visual Studio, o Visual Studio Code, o bloco de notas, etc.). Quando você salvar as alterações no editor e alternar para o Visual Studio, o Visual Studio detectará alterações e perguntará se você deseja recarregar o projeto ["O projeto (name) foi modificado fora do ambiente."]. Selecione **Recarregar** e as alterações serão aplicadas imediatamente em apenas uma etapa.
+> No entanto, ao desenvolver um comando personalizado, pode ser entendiante realizar todos esses cliques. Para obter um fluxo de trabalho mais eficiente, carregue o projeto no Visual Studio e abra também o arquivo *.pyproj* em um editor completamente separado (como outra instância do Visual Studio, o Visual Studio Code, o Bloco de notas, etc.). Quando você salvar as alterações no editor e alternar para o Visual Studio, o Visual Studio detectará alterações e perguntará se você deseja recarregar o projeto (**O projeto \<nome> foi modificado fora do ambiente.**). Selecione **Recarregar** e as alterações serão aplicadas imediatamente em apenas uma etapa.
 
-## <a name="walkthrough-add-a-command-to-a-project-file"></a>Passo a passo: adicionar um comando em um arquivo de projeto
+## <a name="walkthrough-add-a-command-to-a-project-file"></a>Passo a passo: Adicionar um comando a um arquivo de projeto
 
-Para familiarizar-se com comandos personalizados, esta seção apresenta um exemplo simples que executa diretamente um arquivo de inicialização de projeto usando python.exe. (Esse comando é efetivamente o mesmo que usar **Depurar > Iniciar Sem Depuração**.)
+Para se familiarizar com comandos personalizados, esta seção apresenta um exemplo simples que executa diretamente um arquivo de inicialização do projeto usando *python.exe*. (Esse comando é efetivamente o mesmo que usar **Depurar** > **Iniciar sem Depuração**.)
 
-1. Crie um novo projeto chamado "Python-CustomCommands" usando o modelo "Aplicativo Python". (Confira [Início rápido: criar um projeto do Python com base em um modelo no Visual Studio](quickstart-02-python-in-visual-studio-project-from-template.md) para obter instruções, se você ainda não estiver familiarizado com o processo.)
+1. Crie um projeto chamado "Python-CustomCommands" usando o modelo **Aplicativo do Python**. (Confira [Início rápido: criar um projeto do Python com base em um modelo no Visual Studio](quickstart-02-python-in-visual-studio-project-from-template.md) para obter instruções, se você ainda não estiver familiarizado com o processo.)
 
-1. Em `Python_CustomCommands.py`, adicione o código `print("Hello custom commands")`.
+1. Em *Python_CustomCommands.py*, adicione o código `print("Hello custom commands")`.
 
 1. Clique com botão direito do mouse no projeto em **Gerenciador de Soluções**, selecione **Python** e observe que o único comando que aparece no submenu é **Executar PyLint**. Seus comandos personalizados aparecem neste mesmo submenu.
 
-1. Como sugerido na introdução, abra `Python-CustomCommands.pyproj` em um editor de texto separado. Em seguida, adicione as seguintes linhas ao final do arquivo, dentro do `</Project>` de fechamento e salve o arquivo.
+1. Conforme sugerido na introdução, abra *Python-CustomCommands.pyproj* em um editor de texto separado. Em seguida, adicione as seguintes linhas ao final do arquivo, dentro do `</Project>` de fechamento e salve o arquivo.
 
     ```xml
     <PropertyGroup>
@@ -68,7 +63,7 @@ Para familiarizar-se com comandos personalizados, esta seção apresenta um exem
 
 1. Retorne ao Visual Studio e selecione **Recarregar** quando ele perguntar sobre a alteração no arquivo. Em seguida, verifique o menu do **Python** novamente para ver se **Executar PyLint** ainda é o único item mostrado, porque as linhas que você adicionou somente replicam o grupo de propriedades padrão do `<PythonCommands>` que contém o comando PyLint.
 
-1. Alterne para o editor com o arquivo de projeto e adicione a seguinte definição de `<Target>` após o `<PropertyGroup>`. Conforme será explicado mais adiante neste artigo, esse elemento `Target` define um comando personalizado para executar o arquivo de inicialização (identificado pela propriedade "StartupFile") usando `python.exe` em uma janela de console. O atributo `ExecuteIn="consolepause"` usa um console que espera até que você pressione uma tecla antes de ser fechado.
+1. Alterne para o editor com o arquivo de projeto e adicione a seguinte definição de `<Target>` após o `<PropertyGroup>`. Conforme será explicado mais adiante neste artigo, este elemento `Target` define um comando personalizado para executar o arquivo de inicialização (identificado pela propriedade "StartupFile") usando *python.exe* em uma janela de console. O atributo `ExecuteIn="consolepause"` usa um console que espera até que você pressione uma tecla antes de ser fechado.
 
     ```xml
     <Target Name="Example_RunStartupFile" Label="Run startup file" Returns="@(Commands)">
@@ -94,11 +89,11 @@ Para familiarizar-se com comandos personalizados, esta seção apresenta um exem
 
     Se você quiser que o comando apareça antes daqueles que já estão definidos em `$(PythonCommands)`, coloque-os antes desse token.
 
-1. Salve o arquivo de projeto, alterne para o Visual Studio e recarregue o projeto quando solicitado. Clique com o botão direito do mouse no projeto "Python-CustomCommands" e selecione **Python**. Um item **Executar arquivo de inicialização** deverá ser exibido no menu. Se o item de menu não for exibido, verifique se você adicionou o nome ao elemento `<PythonCommands>`. Confira também a [Solução de problemas](#troubleshooting) posteriormente neste artigo.
+1. Salve o arquivo de projeto, alterne para o Visual Studio e recarregue o projeto quando solicitado. Em seguida, clique com o botão direito do mouse no projeto **Python-CustomCommands** e selecione **Python**. Um item **Executar arquivo de inicialização** deverá ser exibido no menu. Se o item de menu não for exibido, verifique se você adicionou o nome ao elemento `<PythonCommands>`. Confira também a [Solução de problemas](#troubleshooting) posteriormente neste artigo.
 
     ![Comando personalizado que aparece no submenu de contexto Python](media/custom-commands-walkthrough-menu-item.png)
 
-1. Selecione o comando **Executar arquivo de inicialização** e uma janela de comando deverá aparecer com o texto "Olá comandos personalizados" e "Pressione qualquer tecla para continuar. . .".  Pressione uma tecla para fechar a janela.
+1. Selecione o comando **Executar arquivo de inicialização** e uma janela Comando deverá ser exibida com o texto **Olá, comandos personalizados** seguida de **Pressione qualquer tecla para continuar**.  Pressione uma tecla para fechar a janela.
 
     ![Saída do comando personalizado em uma janela de console](media/custom-commands-walkthrough-console.png)
 
@@ -149,14 +144,14 @@ Todos os valores de atributo não diferenciam maiúsculas de minúsculas.
 
 | Atributo | Necessária | Descrição |
 | --- | --- | --- |
-| TargetType | Sim | Especifica o que atributo de destino contém e como ele é usado junto com o atributo de argumentos:<ul><li>**executable**: executar o executável nomeado em Target, acrescentando o valor em Arguments, como se fosse inserido diretamente na linha de comando. O valor deve conter apenas um nome de programa sem argumentos.</li><li>**script**: executar `python.exe` com o nome do arquivo em Target, seguido pelo valor em Arguments.</li><li>**module**: executar `python -m` seguido pelo nome do módulo em Target, seguido pelo valor em Arguments.</li><li>**code**: executar o código embutido contido em Target. O valor de Arguments é ignorado.</li><li>**pip**: executar `pip` com o comando em Target, seguido por Arguments; é ExecuteIn é definido como "output", no entanto, o pip assume o comando `install` e usa o Target como o nome do pacote.</li></ul> |
+| TargetType | Sim | Especifica o que atributo de destino contém e como ele é usado junto com o atributo de argumentos:<ul><li>**executable**: executar o executável nomeado em Target, acrescentando o valor em Arguments, como se fosse inserido diretamente na linha de comando. O valor deve conter apenas um nome de programa sem argumentos.</li><li>**script**: execute *python.exe* com o nome de arquivo em Target, seguido pelo valor em Arguments.</li><li>**module**: executar `python -m` seguido pelo nome do módulo em Target, seguido pelo valor em Arguments.</li><li>**code**: executar o código embutido contido em Target. O valor de Arguments é ignorado.</li><li>**pip**: executar `pip` com o comando em Target, seguido por Arguments; é ExecuteIn é definido como "output", no entanto, o pip assume o comando `install` e usa o Target como o nome do pacote.</li></ul> |
 | Destino | Sim | O nome de arquivo, o nome do módulo, o código ou comando pip a ser usado, dependendo do TargetType. |
-| Arguments | Opcional | Especifica uma cadeia de caracteres de argumentos (se houver) a ser fornecida ao destino. Observe que, quando o TargetType é `script`, os argumentos são fornecidos para o programa Python, não ao `python.exe`. Ignorado para o TargetType `code`. |
-| ExecuteIn | Sim | Especifica o ambiente no qual o comando deve ser executado:<ul><li>**console**: (padrão) executa o Target e os argumentos como se eles fossem inseridos diretamente na linha de comando. Uma janela de comando aparece quando o Target está em execução, em seguida, ela é fechada automaticamente.</li><li>**consolepause**: igual a um console, mas espera por um pressionamento de tecla antes de fechar a janela.</li><li>**output**: executa o Target e exibe seus resultados na janela de saída no Visual Studio. Se o TargetType for "pip", o Visual Studio usará o Target como o nome do pacote e acrescentará Arguments.</li><li>**repl**: executa o Target na [Janela Interativa do Python](python-interactive-repl-in-visual-studio.md). O nome de exibição opcional é usado para o título da janela.</li><li>**none**: comporta-se como o console.</li></ul>|
+| Arguments | Opcional | Especifica uma cadeia de caracteres de argumentos (se houver) a ser fornecida ao destino. Observe que, quando o TargetType é `script`, os argumentos são fornecidos para o programa Python, não para *python.exe*. Ignorado para o TargetType `code`. |
+| ExecuteIn | Sim | Especifica o ambiente no qual o comando deve ser executado:<ul><li>**console**: (padrão) executa o Target e os argumentos como se eles fossem inseridos diretamente na linha de comando. Uma janela de comando aparece quando o Target está em execução, em seguida, ela é fechada automaticamente.</li><li>**consolepause**: o mesmo que um console, mas aguarda um pressionamento de tecla antes de fechar a janela.</li><li>**output**: executa o Target e exibe seus resultados na janela de **Saída** do Visual Studio. Se o TargetType for "pip", o Visual Studio usará o Target como o nome do pacote e acrescentará Arguments.</li><li>**repl**: executa o Target na janela [Interativa do Python](python-interactive-repl-in-visual-studio.md); o nome de exibição opcional é usado para o título da janela.</li><li>**none**: comporta-se como o console.</li></ul>|
 | WorkingDirectory | Opcional | A pasta na qual o comando deve ser executado. |
-| ErrorRegex<br>WarningRegEx | Opcional | Usado somente quando ExecuteIn é `output`. Ambos os valores especificam uma expressão regular com a qual o Visual Studio analisa a saída do comando para mostrar erros e avisos na janela Lista de Erros. Se não for especificado, o comando não afetará a janela Lista de Erros. Para obter mais informações sobre o que o Visual Studio espera, confira [Grupos de captura nomeados](#named-capture-groups-for-regular-expressions). |
-| RequiredPackages | Opcional | Uma lista dos requisitos de pacote para o comando usando o mesmo formato que [requirements.txt](https://pip.readthedocs.io/en/1.1/requirements.html) (pip.readthedocs.io). O comando **Executar PyLint**, por exemplo, especifica `pylint>=1.0.0`. Antes de executar o comando, o Visual Studio verifica se todos os pacotes na lista estão instalados. O Visual Studio usa o pip para instalar todos os pacotes ausentes. |
-| Ambiente | Opcional | Uma cadeia de caracteres de variáveis de ambiente a ser definida antes da execução do comando. Cada variável usa o formato NOME=VALOR com várias variáveis separadas por ponto e vírgula. Uma variável com vários valores precisa estar entre aspas simples ou duplas, como 'NAME=VALUE1;VALUE2'. |
+| ErrorRegex<br>WarningRegEx | Opcional | Usado somente quando ExecuteIn é `output`. Ambos os valores especificam uma expressão regular com a qual o Visual Studio analisa a saída do comando para mostrar erros e avisos na janela **Lista de Erros**. Se não for especificado, o comando não afetará a janela **Lista de Erros**. Para obter mais informações sobre o que o Visual Studio espera, confira [Grupos de captura nomeados](#named-capture-groups-for-regular-expressions). |
+| RequiredPackages | Opcional | Uma lista dos requisitos de pacote para o comando usando o mesmo formato de [*requirements.txt*](https://pip.readthedocs.io/en/1.1/requirements.html) (pip.readthedocs.io). O comando **Executar PyLint**, por exemplo, especifica `pylint>=1.0.0`. Antes de executar o comando, o Visual Studio verifica se todos os pacotes na lista estão instalados. O Visual Studio usa o pip para instalar todos os pacotes ausentes. |
+| Ambiente | Opcional | Uma cadeia de caracteres de variáveis de ambiente a ser definida antes da execução do comando. Cada variável usa o formato \<NAME>=\<VALUE> com várias variáveis separadas por ponto e vírgula. Uma variável com vários valores precisa estar entre aspas simples ou duplas, como 'NAME=VALUE1;VALUE2'. |
 
 #### <a name="named-capture-groups-for-regular-expressions"></a>Grupos de captura nomeados para expressões regulares
 
@@ -183,11 +178,11 @@ Para permitir que o Visual Studio extraia as informações corretas desses aviso
 
 (Observe que `msg_id` no valor deve ser realmente `code`, confira o [Problema 3680](https://github.com/Microsoft/PTVS/issues/3680).)
 
-## <a name="creating-a-targets-file-with-custom-commands"></a>Criando um arquivo .targets com comandos personalizados
+## <a name="create-a-targets-file-with-custom-commands"></a>Criar um arquivo .targets com comandos personalizados
 
-Definir comandos personalizados em um arquivo de projeto disponibiliza esses comandos apenas para esse arquivo de projeto. Para usar os comandos em vários arquivos de projeto, defina o grupo de propriedades `<PythonCommands>` e todos os elementos `<Target>` em um arquivo `.targets`. Em seguida, importe esse arquivo nos arquivos de projeto individuais.
+A definição de comandos personalizados em um arquivo de projeto disponibiliza esses comandos apenas para esse arquivo de projeto. Para usar os comandos em vários arquivos de projeto, defina o grupo de propriedades `<PythonCommands>` e todos os elementos `<Target>` em um arquivo *.targets*. Em seguida, importe esse arquivo nos arquivos de projeto individuais.
 
-O arquivo `.targets` é formatado da seguinte maneira:
+O arquivo *.targets* é formatado da seguinte maneira:
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -206,20 +201,20 @@ O arquivo `.targets` é formatado da seguinte maneira:
 </Project>
 ```
 
-Para carregar um arquivo `.targets` em um projeto, coloque um elemento `<Import Project="(path)">` em qualquer lugar dentro do elemento `<Project>`. Por exemplo, se você tiver um arquivo chamado `CustomCommands.targets` em uma subpasta `targets` em seu projeto, use o seguinte código:
+Para carregar um arquivo *.targets* em um projeto, coloque um elemento `<Import Project="(path)">` em qualquer lugar dentro do elemento `<Project>`. Por exemplo, se você tiver um arquivo chamado *CustomCommands.targets* em uma subpasta *targets* no projeto, use o seguinte código:
 
 ```xml
 <Import Project="targets/CustomCommands.targets"/>
 ```
 
 > [!Note]
-> Sempre que você alterar o arquivo `.targets`, será necessário recarregar a *solução* que contém o projeto, não recarregar apenas o projeto.
+> Sempre que você alterar o arquivo *.targets*, precisará recarregar a *solução* que contém o projeto, não recarregar apenas o projeto.
 
 ## <a name="example-commands"></a>Comandos de exemplo
 
 ### <a name="run-pylint-module-target"></a>Executar PyLint (destino do módulo)
 
-O código a seguir aparece no arquivo `Microsoft.PythonTools.targets`:
+O seguinte código é exibido no arquivo *Microsoft.PythonTools.targets*:
 
 ```xml
 <PropertyGroup>
@@ -246,7 +241,7 @@ O código a seguir aparece no arquivo `Microsoft.PythonTools.targets`:
 
 ### <a name="run-pip-install-with-a-specific-package-pip-target"></a>Executar a instalação de pip com um pacote específico (destino de pip)
 
-O comando a seguir executa `pip install my-package` na janela de saída. Esse comando pode ser usado, por exemplo, ao desenvolver um pacote e testar sua instalação. Observe que Target contém o nome do pacote em vez do comando `install`, que é considerado ao usar `ExecuteIn="output"`.
+O comando a seguir executa `pip install my-package` na janela de **Saída**. Você pode usar esse comando ao desenvolver um pacote e testar sua instalação. Observe que Target contém o nome do pacote em vez do comando `install`, que é considerado ao usar `ExecuteIn="output"`.
 
 ```xml
 <PropertyGroup>
@@ -378,7 +373,7 @@ Por exemplo, nos elementos a seguir, o nome "Example" no grupo de propriedades n
   </Target>
 ```
 
-### <a name="message-an-error-occurred-while-running-command-name-failed-to-get-command-target-name-from-project"></a>Mensagem: Ocorreu um erro durante a execução de (nome do comando). Falha ao obter o comando (nome do destino) do projeto.
+### <a name="message-an-error-occurred-while-running-command-name-failed-to-get-command-target-name-from-project"></a>Mensagem: "Ocorreu um erro durante a execução de \<nome do comando>. Falha ao obter o comando \<nome-do-destino> do projeto."
 
 Indica que o conteúdo dos elementos `<Target>` ou `<CreatePythonCommandItem>` estão incorretos. Os motivos possíveis incluem:
 
@@ -388,12 +383,12 @@ Indica que o conteúdo dos elementos `<Target>` ou `<CreatePythonCommandItem>` e
 - `ErrorRegex` ou `WarningRegex` está especificado sem a configuração de `ExecuteIn="output"`.
 - Atributos não reconhecidos existem no elemento. Por exemplo, você pode ter usado `Argumnets` (escrito de forma incorreta) em vez de `Arguments`.
 
-Os valores de atributo poderão ficar vazios se você fizer referência a uma propriedade que não esteja definida. Por exemplo, se você usar o token `$(StartupFile)`, mas nenhum arquivo de inicialização tiver sido definido no projeto, o token será resolvido como uma cadeia de caracteres vazia. Nesses casos, é interessante definir um valor padrão. Por exemplo, os comandos **Executar servidor** e **Executar servidor de depuração** definidos nos modelos de projeto Bottle, Flask e Django considerarão `manage.py` como o padrão se você não especificar um arquivo de inicialização do servidor nas propriedades do projeto.
+Os valores de atributo poderão ficar vazios se você fizer referência a uma propriedade que não esteja definida. Por exemplo, se você usar o token `$(StartupFile)`, mas nenhum arquivo de inicialização tiver sido definido no projeto, o token será resolvido como uma cadeia de caracteres vazia. Nesses casos, é interessante definir um valor padrão. Por exemplo, os comandos **Executar servidor** e **Executar servidor de depuração** definidos nos modelos de projeto do Bottle, do Flask e do Django usarão como padrão *manage.py* se você não especificar um arquivo de inicialização do servidor nas propriedades do projeto.
 
 ### <a name="visual-studio-hangs-and-crashes-when-running-the-command"></a>O Visual Studio trava e falha ao executar o comando
 
 Provavelmente você está tentando executar um comando do console com `ExecuteIn="output"` e, nesse caso, o Visual Studio pode falhar ao tentar analisar a saída. Use `ExecuteIn="console"` em seu lugar. (Confira o [Problema 3682](https://github.com/Microsoft/PTVS/issues/3681).)
 
-### <a name="executable-command-is-not-recognized-as-an-internal-or-external-command-operate-program-or-batch-file"></a>O comando executável "não é reconhecido como um comando interno ou externo, programa de operação ou arquivo em lotes"
+### <a name="executable-command-is-not-recognized-as-an-internal-or-external-command-operable-program-or-batch-file"></a>O comando executável "não é reconhecido como um comando interno ou externo, programa operável ou arquivo em lotes"
 
-Ao usar `TargetType="executable"`, o valor em `Target` precisa ser *somente* o nome do programa sem argumentos, como "python" ou "python.exe". Mover argumentos para o atributo `Arguments`.
+Ao usar `TargetType="executable"`, o valor em `Target` precisa ser *somente* o nome do programa sem argumentos, como somente *python* ou *python.exe*. Mover argumentos para o atributo `Arguments`.

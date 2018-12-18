@@ -20,9 +20,10 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 99fc861c627a094f9f5e4e67a6b034ecdd407688
 ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476218"
 ---
 # <a name="how-to-display-wpf-trace-information"></a>Como exibir informações de acompanhamento WPF
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] pode receber informações de rastreamento de depuração de aplicativos do WPF e exibir essas informações no **saída** janela. Para exibir informações de rastreamento de depuração, o rastreamento do WPF deve ser habilitado.  

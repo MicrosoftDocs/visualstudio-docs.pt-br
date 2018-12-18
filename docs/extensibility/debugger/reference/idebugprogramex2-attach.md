@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c58f576a0126472ad60ceeb5fc5289b668bd54dd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7ac2e86c25f9f74b7be4b9606e6e1ec721743878
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906904"
 ---
 # <a name="idebugprogramex2attach"></a>IDebugProgramEx2::Attach
 Anexe uma sessão em um programa.  
@@ -45,22 +46,22 @@ int Attach(
   
 #### <a name="parameters"></a>Parâmetros  
  `pCallback`  
- [in] Um [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objeto que representa a função de retorno de chamada que o mecanismo de depuração anexado envia eventos para.  
+ [in] Uma [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objeto que representa a função de retorno de chamada que o mecanismo de depuração anexado envia eventos para.  
   
  `dwReason`  
- [in] Um valor da [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) enumeração que descreve o motivo para a operação de anexação.  
+ [in] Um valor a partir de [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) enumeração que descreve o motivo para a operação de anexação.  
   
  `pSession`  
- [in] Um valor que identifica exclusivamente a sessão que está anexando ao programa.  
+ [in] Um valor que identifica exclusivamente a sessão que está sendo anexado ao programa.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Esse método deve retornar `E_ATTACH_DEBUGGER_ALREADY_ATTACHED` se o programa já está anexado.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará um código de erro. Esse método deverá retornar `E_ATTACH_DEBUGGER_ALREADY_ATTACHED` se o programa já está anexado.  
   
 ## <a name="remarks"></a>Comentários  
- A porta que contém o programa pode usar o valor em `pSession` para determinar qual sessão está tentando a conexão para o programa. Por exemplo, se uma porta permite que a sessão de depuração somente uma anexar a um processo por vez, a porta pode determinar se a mesma sessão já está anexada a outros programas no processo.  
+ A porta que contém o programa pode usar o valor em `pSession` para determinar qual sessão está tentando anexar ao programa. Por exemplo, se uma porta permite que a sessão de depuração somente uma anexar a um processo por vez, a porta pode determinar se a mesma sessão já está anexada a outros programas no processo.  
   
 > [!NOTE]
->  A interface passado `pSession` deve ser tratada apenas como um cookie, um valor que identifica exclusivamente o Gerenciador de sessão de depuração anexar a este programa; nenhum dos métodos na interface fornecido estão funcionando.  
+>  A interface passado `pSession` deve ser tratada apenas como um cookie, um valor que identifica exclusivamente o Gerenciador de sessão de depuração anexar a este programa; nenhum dos métodos na interface fornecido são funcionais.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)

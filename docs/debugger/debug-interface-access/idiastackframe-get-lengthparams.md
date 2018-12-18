@@ -1,5 +1,5 @@
 ---
-title: ': Get_lengthparams | Microsoft Docs'
+title: 'Idiastackframe:: Get_lengthparams | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a78e85e505c86c3b33b6803433dd8c7af0100d8
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 6754a729d6493defaad05266fd8b44d996b3ebfd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875198"
 ---
 # <a name="idiastackframegetlengthparams"></a>IDiaStackFrame::get_lengthParams
 Recupera o número de bytes de parâmetros enviados por push na pilha.  
@@ -36,7 +37,7 @@ HRESULT get_lengthParams (
  [out] Retorna o número de bytes de parâmetros.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se a propriedade não é suportada. Caso contrário, retornará um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para a propriedade. Caso contrário, retornará um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

@@ -1,5 +1,5 @@
 ---
-title: Conceitos básicos de integração de controle de origem | Microsoft Docs
+title: Fundamentos da integração do controle de origem | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,44 +15,45 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0c3e93eb86fdc252f162331033207db5bdaa1569
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4533cac0ba6cbbcf5cf4354afdb29eefc5b2b726
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49879162"
 ---
-# <a name="source-control-integration-essentials"></a>Conceitos básicos de integração de controle de origem
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] dá suporte a dois tipos de integração de controle de origem: um plug-in de controle de origem que fornece a funcionalidade básica e é criado usando a API de plug-in de controle de origem (anteriormente conhecida como a API MSSCCI) e uma solução de integração de controle de origem baseado em VSPackage que fornece a funcionalidade mais robusta.  
+# <a name="source-control-integration-essentials"></a>Conceitos básicos da integração do controle do código-fonte
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] dá suporte a dois tipos de integração de controle do código-fonte: um plug-in de controle de origem que fornece a funcionalidade básica e é criado usando a API de plug-in de controle do código-fonte (anteriormente conhecido como a API de MSSCCI) e uma solução de integração de controle do código-fonte com base em VSPackage que fornece a funcionalidade mais robusta.  
   
-## <a name="source-control-plug-in"></a>Plug-in de controle de origem  
- Um plug-in de controle de origem é gravado como uma DLL que implementa a API de plug-in de controle de origem. Funcionalidade de integração de controle de origem e de registro é fornecida por meio da API. Essa abordagem é mais fácil de implementar do que um controle de origem VSPackage e usa o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] interface de usuário (UI) para a maioria das operações de controle de origem.  
+## <a name="source-control-plug-in"></a>Plug-in de controle do código-fonte  
+ Um plug-in de controle do código-fonte é gravada como uma DLL que implementa a API de plug-in de controle do código-fonte. Funcionalidade de integração de controle de origem e de registro é fornecida por meio da API. Essa abordagem é mais fácil de implementar do que um VSPackage de controle do código-fonte e usa o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] interface do usuário (UI) para a maioria das operações de controle do código-fonte.  
   
- Para implementar um plug-in de usando a API de plug-in de controle de origem de controle de origem, siga estas etapas:  
+ Para implementar um plug-in para usar a API de plug-in de controle do código-fonte do controle de fonte, siga estas etapas:  
   
-1.  Criar uma DLL que implementa as funções especificadas na [Plug-ins de controle de origem](../../extensibility/source-control-plug-ins.md).  
+1. Criar uma DLL que implementa as funções especificadas na [Plug-ins de controle de origem](../../extensibility/source-control-plug-ins.md).  
   
-2.  Registrar a DLL, tornando as entradas do registro apropriada, conforme descrito em [como: instalar um plug-in de controle de origem](../../extensibility/internals/how-to-install-a-source-control-plug-in.md).  
+2. Registrar a DLL, tornando as entradas de registro apropriadas, conforme descrito em [como: instalar um plug-in de controle do código-fonte](../../extensibility/internals/how-to-install-a-source-control-plug-in.md).  
   
-3.  Criar um auxiliar de interface do usuário e exibi-lo quando solicitado pelo pacote de adaptador de controle de origem (o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] componente que lida com a funcionalidade de controle de origem por meio de plug-ins de controle de origem).  
+3. Criar um auxiliar de interface do usuário e exibi-la quando for solicitado pelo pacote de adaptador de controle de origem (o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] componente que manipula a funcionalidade de controle do código-fonte por meio do plug-ins de controle do código-fonte).  
   
- Para obter mais informações, consulte [criar um plug-in de controle de origem](../../extensibility/internals/creating-a-source-control-plug-in.md).  
+   Para obter mais informações, consulte [criando um plug-in de controle do código-fonte](../../extensibility/internals/creating-a-source-control-plug-in.md).  
   
 ## <a name="source-control-vspackage"></a>VSPackage de controle do código-fonte  
- Um controle de origem VSPackage implementação permite que você desenvolva uma substituição personalizada para o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] da interface do usuário do controle de origem. Essa abordagem fornece controle total sobre a integração de controle de origem, mas você deve fornecer os elementos de interface do usuário e implementar as interfaces de controle de origem caso contrário, pode ser fornecidas com a abordagem de plug-in.  
+ Um implementação de VSPackage do controle de origem permite que você desenvolva uma substituição personalizada para o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] da interface do usuário do controle de origem. Essa abordagem fornece controle total sobre a integração de controle do código-fonte, mas exige que você forneça os elementos de interface do usuário e implementam as interfaces de controle do código-fonte que outra forma seriam fornecidas sob a abordagem de plug-in.  
   
- Para implementar um VSPackage de controle do código-fonte, você deve:  
+ Para implementar um VSPackage de controle do código-fonte, faça o seguinte:  
   
-1.  Criar e registrar o seu próprio controle de origem VSPackage, conforme descrito em [registro e seleção](../../extensibility/internals/registration-and-selection-source-control-vspackage.md).  
+1. Criar e registrar seu próprio controle do código-fonte VSPackage, conforme descrito em [registro e seleção](../../extensibility/internals/registration-and-selection-source-control-vspackage.md).  
   
-2.  Substitua o controle da fonte padrão da interface do usuário com a interface do usuário personalizada. Consulte [Interface de usuário personalizada](../../extensibility/internals/custom-user-interface-source-control-vspackage.md).  
+2. Substitua o controle de fonte padrão da interface do usuário com sua interface do usuário personalizada. Ver [Interface do usuário personalizada](../../extensibility/internals/custom-user-interface-source-control-vspackage.md).  
   
-3.  Especifique os glifos para ser usado e lidar com **Solution Explorer** eventos de glifo. Consulte [controle de glifo](../../extensibility/internals/glyph-control-source-control-vspackage.md).  
+3. Especificar glifos a ser usada e manipular **Gerenciador de soluções** eventos de glifo. Ver [controle de glifo](../../extensibility/internals/glyph-control-source-control-vspackage.md).  
   
-4.  Manipular eventos de consulta editar e salvar consulta, conforme mostrado no [consulta Editar consulta salvar](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md).  
+4. Manipular eventos de consulta de editar e salvar consulta, conforme mostrado na [consulta Editar consulta salvar](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md).  
   
- Para obter mais informações, consulte [criar um VSPackage de controle do código-fonte](../../extensibility/internals/creating-a-source-control-vspackage.md).  
+   Para obter mais informações, consulte [criando um VSPackage de controle do código-fonte](../../extensibility/internals/creating-a-source-control-vspackage.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral](../../extensibility/internals/source-control-integration-overview.md)   
- [Criando um controle de origem plug-in](../../extensibility/internals/creating-a-source-control-plug-in.md)   
+ [Criando um controle de fonte plug-in](../../extensibility/internals/creating-a-source-control-plug-in.md)   
  [Criar um VSPackage de controle do código-fonte](../../extensibility/internals/creating-a-source-control-vspackage.md)

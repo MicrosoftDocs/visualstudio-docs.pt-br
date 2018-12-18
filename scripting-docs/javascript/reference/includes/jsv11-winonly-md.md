@@ -1,3 +1,0 @@
-Com suporte no modo de documento padrões do Internet Explorer 11. Com suporte também em aplicativos da Windows Store (Windows 8.1). Consulte [Informações sobre versão](../../../javascript/reference/javascript-version-information.md).  
-  
- Sem suporte nos seguintes modos de documento: Quirks, padrões do Internet Explorer 6, padrões do Internet Explorer 7, padrões do Internet Explorer 8, padrões do Internet Explorer 9 e padrões do Internet Explorer 10. Sem suporte no Windows 8 ou no Windows Phone 8.1.

@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6897c3085f14be785e4baaace0de7a4e92fea9ae
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 433f9724a712620e86cb78ab64e1ce27e6151d30
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920099"
 ---
 # <a name="idebugport2getportrequest"></a>IDebugPort2::GetPortRequest
 Obtém a descrição de uma porta que foi usada anteriormente para criar a porta (se disponível).  
@@ -43,9 +44,9 @@ int GetPortRequest(
  [out] Retorna um [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) objeto que representa a solicitação que foi usada para criar a porta.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  Retorna `E_PORT_NO_REQUEST` se uma porta não foi criada usando um [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) solicitação de porta.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  Retorna `E_PORT_NO_REQUEST` se uma porta não foi criada usando um [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) solicitação de porta.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   
  [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)   
- [Adicionar porta](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md)
+ [AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md)

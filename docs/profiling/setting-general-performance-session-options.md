@@ -11,13 +11,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 61d4506f4b9ee68e7920fa4bbb4c463d00cceb73
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d6c44435f69b5a94433081a518be14f8ffd1756e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834221"
 ---
-# <a name="setting-general-performance-session-options"></a>Definindo opções de sessão de desempenho geral
+# <a name="set-general-performance-session-options"></a>Configurar opções gerais da sessão de desempenho
 
 Você pode definir o método de coleção e convenções de nomenclatura de dados de criação de perfil para uma sessão de desempenho das Ferramentas de Criação de Perfil do no Visual Studio na página **Geral** da caixa de diálogo Propriedades da sessão de desempenho. Para abrir a caixa de diálogo **Gerenciador de Desempenho**, clique com o botão direito do mouse na sessão de desempenho e, em seguida, clique em **Propriedades**.
 
@@ -35,13 +36,14 @@ Definir o método de coleção base selecionando uma das opções em **Coleção
 
 |||
 |-|-|
-|**Coletar informações de alocação de objeto do .NET**. Por padrão, os dados incluem o número e tamanho dos objetos alocados. Marque ou desmarque esta caixa de seleção para habilitar ou desabilitar a coleta de dados de memória do .NET.<br /><br /> **Também coletar informações de tempo de vida do objeto .NET**. Marque esta caixa de seleção para incluir dados sobre as gerações de coleta de lixo que foram usados para recuperar os objetos de memória.|- [Coletando a alocação de memória do .NET e os dados de tempo de vida](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)|
+|**Coletar informações de alocação de objeto do .NET**. Por padrão, os dados incluem o número e tamanho dos objetos alocados. Marque ou desmarque esta caixa de seleção para habilitar ou desabilitar a coleta de dados de memória do .NET. |- [Coletando a alocação de memória do .NET e os dados de tempo de vida](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)|
+|**Também coletar informações de tempo de vida do objeto .NET**. Marque esta caixa de seleção para incluir dados sobre as gerações de coleta de lixo que foram usados para recuperar os objetos de memória.|- [Coletando a alocação de memória do .NET e os dados de tempo de vida](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md) |
 
  Uma página de sessão de criação de perfil aparece quando você começar a criar o perfil de um aplicativo, no qual você pode pausar, retomar e parar criação de perfil.
 
  ![Página de sessão de criação de perfil](../profiling/media/prof_profilingsessionpage.png "PROF_ProfilingSessionPage")
 
-## <a name="setting-profiling-data-file-options"></a>Configurar opções de arquivo de dados de criação de perfil
+## <a name="set-profiling-data-file-options"></a>Configurar opções de arquivo de dados de criação de perfil
 
 |||
 |-|-|

@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f922731f5c595f7308f78269b8386b7da20e2398
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 80f1f35e8699c04101936bcfa31abfdde751a236
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823093"
 ---
 # <a name="idebugproperty2getpropertyinfo"></a>IDebugProperty2::GetPropertyInfo
 Obtém o [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) estrutura que descreve uma propriedade.  
@@ -50,25 +51,25 @@ int GetPropertyInfo (
   
 #### <a name="parameters"></a>Parâmetros  
  `dwFields`  
- [in] Uma combinação de valores da [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) enumeração que especifica quais campos devem ser preenchidas no `pPropertyInfo` estrutura.  
+ [in] Uma combinação de valores da [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) enumeração que especifica quais campos devem ser preenchidos `pPropertyInfo` estrutura.  
   
  `nRadix`  
  [in] Base a ser usada na formatação de todas as informações numéricas.  
   
  `dwTimeout`  
- [in] Especifica o tempo máximo, em milissegundos, de espera antes de retornar desse método. Use `INFINITE` aguardar indefinidamente.  
+ [in] Especifica o tempo máximo, em milissegundos, para aguardar antes de retornar do método. Use `INFINITE` para aguardar indefinidamente.  
   
  `rgpArgs`  
- [out no] Reservado para uso futuro; definido como um valor nulo.  
+ [no, out] Reservado para uso futuro; definido como um valor nulo.  
   
  `dwArgCount`  
  [in] Reservado para uso futuro; definido como zero.  
   
  `pPropertyInfo`  
- [out] Um [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) estrutura que é preenchida com a descrição da propriedade.  
+ [out] Um [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) estrutura será preenchida com a descrição da propriedade.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna o código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará o código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   

@@ -1,7 +1,7 @@
 ---
-title: Implantar em uma pasta local - Visual Studio | Microsoft Docs
+title: Implantar em uma pasta local
 ms.custom: ''
-ms.date: 11/22/2017
+ms.date: 06/22/2018
 ms.technology: vs-ide-deployment
 ms.topic: quickstart
 helpviewer_keywords:
@@ -12,58 +12,49 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 024d191628e413f07cd510595eac5c7d9fca085b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
-ms.translationtype: MT
+ms.openlocfilehash: 517698aa2e042d74138579dae3633930b338cd61
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38781907"
 ---
-# <a name="deploy-a-web-app-or-net-core-app-to-a-local-folder-using-the-visual-studio-publish-tool"></a>Implantar um aplicativo web ou aplicativo .NET Core para uma pasta local usando a ferramenta de publicação do Visual Studio
+# <a name="deploy-an-app-to-a-local-folder-using-visual-studio"></a>Implantar um aplicativo em uma pasta local usando o Visual Studio
 
-Você pode usar o **publicar** ferramenta para publicar seu aplicativo para uma pasta local. 
+É possível usar a ferramenta **Publicar** para publicar aplicativos ASP.NET, ASP.NET Core, .NET Core e Python em uma pasta local do Visual Studio. Para Node.js, há suporte para as etapas, mas a interface do usuário é diferente.
 
-Essas etapas se aplicam ao ASP.NET, ASP.NET Core, .NET Core e aplicativos de Python no Visual Studio. Para Node. js, as etapas são suportadas, mas a interface do usuário é diferente.
-
-## <a name="create-a-new-project"></a>Criar um novo projeto 
-
-1. No Visual Studio, escolha **Arquivo > Novo Projeto**.
-
-1. Em **Visual C#** ou **Visual Basic**, escolha **.NET Core**e, em seguida, no painel central, escolha **aplicativo de Console (.NET Core)**.
-
-1. Digite um nome como **MyLocalApp** e clique em **Okey**.
-
-    O Visual Studio cria o projeto.
+[!INCLUDE [quickstart-prereqs](includes/quickstart-prereqs.md)]
 
 ## <a name="deploy-to-a-local-folder"></a>Implantar em uma pasta local
 
-1. No Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione **Publicar**.
+1. No Gerenciador de Soluções, clique com o botão direito do mouse no projeto e escolha **Publicar** (ou use o item de menu **Criar** > **Publicar**).
 
-    ![Escolher publicar](../deployment/media/quickstart-publish.png "escolher publicar")
+    ![O comando Publicar no menu de contexto de projeto no Gerenciador de Soluções](../deployment/media/quickstart-publish.png "Escolha Publicar")
 
-1. No **publicar** painel, escolha **pasta**.
+1. Se você já tiver configurado anteriormente quaisquer perfis de publicação, o painel **Publicar** será exibido. Selecione **Criar novo perfil**.
 
-    ![Escolha a pasta](../deployment/media/quickstart-publish-folder.png "Escolher pasta")
+1. Na caixa de diálogo **Escolher um destino de publicação**, escolha **Pasta**.
 
-1. Insira um caminho ou clique em **procurar** para navegar até uma pasta local.
+    ![Escolher pasta local como um destino de publicação](../deployment/media/quickstart-publish-folder.png "Escolher pasta")
 
-1. Clique em **Publicar**.
+1. Insira um caminho ou selecione **Procurar** para especificar uma pasta local.
 
-    O Visual Studio compila o projeto e publica a pasta especificada.
+1. Selecione **Publicar**. O Visual Studio cria o projeto e o publica na pasta especificada. O painel **Publicar** das propriedades do projeto é exibido, mostrando um resumo do perfil.
 
-    O painel de publicação mostra um perfil de resumo.
+    ![Publicar painel de propriedade mostrando um resumo do perfil](../deployment/media/quickstart-publish-folder-summary.png)
 
-1. Para definir as configurações de implantação, clique em **configurações** no perfil de resumo.
+1. Para definir as configurações de implantação, selecione **Configurar** no resumo do perfil e selecione a guia **Configurações**.
 
-    ![Configurações de perfil](../deployment/media/quickstart-profile-settings.png "as configurações de perfil") 
+    ![Configurações de perfil](../deployment/media/quickstart-profile-settings.png "Configurações de perfil")
 
-1. Configurar opções de como implantar uma configuração de Debug ou Release e, em seguida, clique em **salvar**.
+1. Configure opções como se deseja implantar uma configuração de depuração ou de versão e, em seguida, selecione **Salvar**.
 
-1. Para publicar novamente, clique em **publicar**.
+1. Para republicar, selecione **Publicar**.
 
-Implante os arquivos publicados na maneira que desejar. Por exemplo, você pode empacotá-las em um arquivo Zip, usar um comando de cópia simples ou implantá-las com qualquer pacote de instalação de sua escolha.
+Implante os arquivos publicados na maneira que desejar. Por exemplo, é possível empacotá-los em um arquivo *.zip*, usar um simples comando para copiar ou implantá-los com qualquer pacote de instalação de sua escolha.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Implantar um aplicativo do .NET Core com a ferramenta Publicar](/dotnet/core/deploying/deploy-with-vs)
-- [Empacotar um aplicativo da área de trabalho para a Microsoft Store (Ponte de Desktop)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
+- [Implantar um aplicativo do .NET Core com a ferramenta Publicar](/dotnet/core/deploying/deploy-with-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+- [Empacotar um aplicativo da área de trabalho para a Microsoft Store (Ponte de Desktop)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 - (.NET) [Implantar o .NET Framework e aplicativos](/dotnet/framework/deployment/)

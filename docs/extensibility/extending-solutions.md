@@ -11,18 +11,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 24a6758acc3b78399d48a311bd146e037daad500
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9671899b5e5574599bcd9125b74b06675be4b4b3
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636860"
 ---
-# <a name="extending-solutions"></a>Estendendo soluções
+# <a name="extend-solutions"></a>Estender soluções
 Uma solução é um agrupamento de um ou mais projetos que trabalham juntos para criar um aplicativo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  As instruções a seguir mostra algumas maneiras em que você pode estender as soluções.  
   
-1.  [Estender o filtro do Pesquisador de objetos de solução](../extensibility/extending-the-solution-explorer-filter.md) explica como filtrar o que exibe o Gerenciador de soluções.  
+1.  [Estender o filtro do Gerenciador de soluções](../extensibility/extending-the-solution-explorer-filter.md) explica como filtrar o que exibe o Gerenciador de soluções.  
   
-2.  [Gerenciando o carregamento do projeto em uma solução](../extensibility/managing-project-loading-in-a-solution.md) explica como gerenciar o carregamento do projeto para melhorar o desempenho quando um usuário carrega uma solução.
+2.  [Gerenciar o carregamento do projeto em uma solução](../extensibility/managing-project-loading-in-a-solution.md) explica como gerenciar o carregamento do projeto para melhorar o desempenho quando um usuário carrega uma solução.

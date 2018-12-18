@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0563f037f77c18cc5e686c1ea6acf429c91ad06d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9a17d0b422b65093721a55d4bf8d632aba271a55
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950780"
 ---
 # <a name="contextcompare"></a>CONTEXT_COMPARE
 Especifica os critérios para comparar dois contextos de memória.  
@@ -57,13 +58,13 @@ public enum enum_CONTEXT_COMPARE {
   
 ## <a name="members"></a>Membros  
  CONTEXT_EQUAL  
- Localize o contexto de memória primeiro na lista que é igual para o contexto de memória de destino.  
+ Localize o contexto de memória primeiro na lista que é igual ao contexto de memória de destino.  
   
  CONTEXT_LESS_THAN  
  Localize o contexto de memória primeiro na lista que é menor que o contexto de memória de destino.  
   
  CONTEXT_GREATER_THAN  
- Localize o contexto de memória primeiro na lista que é maior do que o contexto de memória de destino.  
+ Localize o contexto de memória primeiro na lista que é maior que o contexto de memória de destino.  
   
  CONTEXT_LESS_THAN_OR_EQUAL  
  Localize o contexto de memória primeiro na lista que é menor ou igual ao contexto de memória de destino.  
@@ -86,7 +87,7 @@ public enum enum_CONTEXT_COMPARE {
 ## <a name="remarks"></a>Comentários  
  Passado como um argumento para o [comparar](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md) método.  
   
- Esses valores são usados para localizar o contexto de memória primeiro em uma lista que satisfaz os critérios de comparação especificado. Um contexto de memória é fornecido uma lista de contextos de memória para comparar a próprio contra por meio de `IDebugMemoryContext2::Compare` método. O contexto de memória primeiro na lista para o qual o operador de comparação é `true` , em seguida, é retornado.  
+ Esses valores são usados para localizar o contexto de memória primeiro em uma lista que satisfaz os critérios de comparação especificado. Um contexto de memória é dada uma lista de contextos de memória para comparar a próprio em relação a por meio de `IDebugMemoryContext2::Compare` método. O contexto de memória primeiro na lista para o qual o operador de comparação é `true` , em seguida, será retornado.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

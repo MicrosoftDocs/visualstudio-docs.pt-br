@@ -1,5 +1,5 @@
 ---
-title: ': Symsareequiv | Microsoft Docs'
+title: 'Idiasession:: Symsareequiv | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cc92a38305e7cc8c74b4ada0d560b314ed92da8f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: bdaa1ab070b6d95af0f28f5bdaa005b9ac808766
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49850978"
 ---
 # <a name="idiasessionsymsareequiv"></a>IDiaSession::symsAreEquiv
-Verifica se os dois símbolos são equivalentes.  
+Verifica se dois símbolos são equivalentes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,13 +35,13 @@ HRESULT symsAreEquiv (
   
 #### <a name="parameters"></a>Parâmetros  
  `symbolA`  
- [in] A primeira [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) objeto usado na comparação.  
+ [in] A primeira [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) usado na comparação de objeto.  
   
  `symbolB`  
- [in] O segundo `IDiaSymbol` objeto usado na comparação.  
+ [in] O segundo `IDiaSymbol` usado na comparação de objeto.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se os símbolos forem equivalentes, retorna `S_OK`; caso contrário, retorna `S_FALSE`, os símbolos não são equivalentes. Caso contrário, retorna um código de erro.  
+ Se os símbolos são equivalentes, retornará `S_OK`; caso contrário, retorna `S_FALSE`, os símbolos não são equivalentes. Caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   

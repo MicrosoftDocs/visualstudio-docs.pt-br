@@ -14,19 +14,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ac6fe1bc08ce4bed17b2f42c568769ad4314023
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ba1bc49cc9b2a16f32c854805fdd31b095af1629
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35255396"
 ---
 # <a name="per-thread-summary-report"></a>Relatório de resumo por thread
 Este gráfico de barras mostra a proporção de tempo que cada thread não oculta gasta em cada categoria de atividade durante o intervalo de tempo visível no momento. “Execução” significa que o thread está em execução; todas as outras categorias significam que o thread está aguardando algo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tempo de execução (exibição de threads)](../profiling/execution-time-threads-view.md)   
- [Tempo de E/S (exibição de threads)](../profiling/i-o-time-threads-view.md)   
- [Hora de gerenciamento da memória](../profiling/memory-management-time.md)   
+ [Tempo de execução (exibição Threads)](../profiling/execution-time-threads-view.md)   
+ [Tempo de E/S (exibição Threads)](../profiling/i-o-time-threads-view.md)   
+ [Tempo de gerenciamento de memória](../profiling/memory-management-time.md)   
  [Tempo de preempção](../profiling/preemption-time.md)   
  [Tempo de suspensão](../profiling/sleep-time.md)   
  [Tempo de sincronização](../profiling/synchronization-time.md)   

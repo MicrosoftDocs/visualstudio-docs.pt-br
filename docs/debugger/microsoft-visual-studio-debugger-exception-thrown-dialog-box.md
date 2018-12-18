@@ -1,6 +1,7 @@
 ---
-title: Caixa de diálogo (exceção lançada) de depurador do Microsoft Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Microsoft Visual Studio (exceção lançada) caixa de diálogo do depurador | Microsoft Docs
+titleSuffix: ''
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: reference
@@ -22,23 +23,24 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 24ccb3de6b22f54b239b5b772490a8d05a990dbd
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 5609f87063d3b2852b6a45f7174cfd3db90a1ccd
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062726"
 ---
 # <a name="microsoft-visual-studio-debugger-exception-thrown-dialog-box"></a>Caixa de diálogo Depurador do Microsoft Visual Studio (exceção gerada)
 Ocorreu uma exceção no seu programa. Esta caixa de diálogo relata o tipo de exceção lançada. Seu código precisa tratar essa exceção. Você pode escolher entre as seguintes opções para tratar a exceção:  
   
- **Quebra**  
+ **Interromper**  
  Permite que a execução seja interrompida no depurador. O manipulador de exceção não será invocado antes da interrupção. Se você continuar a partir da interrupção, o manipulador de exceção será invocado.  
   
  **Continue**  
- Permite que a execução continue, dando ao manipulador de exceção a possibilidade de tratar a exceção. Essa opção não está disponível para determinados tipos de exceções. **Continuar** permitirá que o aplicativo continuar. Em um aplicativo nativo, ela fará com que a exceção seja relançada. Em um aplicativo gerenciado, ela fará com que o programa seja encerrado ou a exceção seja tratada por um aplicativo de hospedagem.  
+ Permite que a execução continue, dando ao manipulador de exceção a possibilidade de tratar a exceção. Essa opção não está disponível para determinados tipos de exceções. **Continuar** permitirá que o aplicativo continue. Em um aplicativo nativo, ela fará com que a exceção seja relançada. Em um aplicativo gerenciado, ela fará com que o programa seja encerrado ou a exceção seja tratada por um aplicativo de hospedagem.  
   
 > [!NOTE]
->  Você não pode continuar depois de uma exceção sem tratamento em código gerenciado. Escolhendo **continuar** depois de depuração a parar faz com que uma exceção sem tratamento no código gerenciado.  
+>  Você não pode continuar depois de uma exceção sem tratamento em código gerenciado. A escolha de **Continuar** depois de uma exceção sem tratamento no código gerenciado faz com que a depuração pare.  
   
  **Ignorar**  
  Permite que a execução continue sem invocar o manipulador de exceção. Como o manipulador de exceção não é invocado, isso poderá resultar em outras consequências, incluindo erros e exceções adicionais. Essa opção não está disponível para determinados tipos de exceções.  

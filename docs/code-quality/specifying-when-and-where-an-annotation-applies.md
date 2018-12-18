@@ -1,6 +1,7 @@
 ---
 title: Especificando quando e onde uma anotação se aplica
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
@@ -14,11 +15,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 288d422de6d4e4c0f372820d838d0173c990f2a8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9d99ebce3adc27039763e11ed4882a20199e8469
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31920609"
 ---
 # <a name="specifying-when-and-where-an-annotation-applies"></a>Especificando quando e onde uma anotação se aplica
 Quando uma anotação condicional, ele pode exigir outras anotações para especificar que o analisador.  Por exemplo, se uma função tem uma variável que pode ser síncronas ou assíncronas, a função se comporta da seguinte maneira: no caso síncrono sempre eventualmente tiver êxito, mas no caso assíncrono relata um erro se ele não pode ser bem-sucedida imediatamente. Quando a função é chamada de forma síncrona, verificar o valor do resultado não fornece um valor para o analisador de código porque não poderia ter retornado.  No entanto, quando a função é chamada de forma assíncrona e o resultado da função não estiver marcado, pode ocorrer um erro grave. Este exemplo ilustra uma situação em que você pode usar o `_When_` anotação — descrito posteriormente neste artigo, para habilitar a verificação.

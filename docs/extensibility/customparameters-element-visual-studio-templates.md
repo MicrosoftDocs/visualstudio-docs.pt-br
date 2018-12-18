@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4c09d320b1a9185e79e36d54ff0363219d3dabc6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 464c4720dc4693ef2fb968a23a538e74d03d1a26
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498643"
 ---
 # <a name="customparameters-element-visual-studio-templates"></a>Elemento CustomParameters (modelos do Visual Studio)
-Agrupa os parâmetros personalizados que devem ser passados para o Assistente de modelo quando o assistente faz as substituições de parâmetro.  
+Agrupa os parâmetros personalizados devem ser passados para o Assistente de modelo quando o assistente faz as substituições de parâmetro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +55,7 @@ Agrupa os parâmetros personalizados que devem ser passados para o Assistente de
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar vários parâmetros personalizados em um modelo. Quando um projeto ou item é criado de um modelo com os seguintes parâmetros personalizados, todas as instâncias de `$color1$` e `$color2$` no modelo de arquivos serão substituídos por `Red` e `Blue`, respectivamente.  
+ O exemplo a seguir mostra como usar vários parâmetros personalizados em um modelo. Quando um projeto ou item é criado de um modelo com os seguintes parâmetros personalizados, todas as instâncias do `$color1$` e `$color2$` no modelo de arquivos serão substituídos pela `Red` e `Blue`, respectivamente.  
   
 ```  
 <CustomParameters>  

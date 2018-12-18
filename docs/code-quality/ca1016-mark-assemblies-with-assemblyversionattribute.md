@@ -1,6 +1,7 @@
 ---
 title: 'CA1016: marcar assemblies com AssemblyVersionAttribute'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,43 +14,51 @@ ms.assetid: 4340aed8-d92b-4cde-a398-cb6963c6da5a
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CPP
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c4f05003fdd05a4dde82d19ba11e47c35666fbc
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7fbc3fa747171892066705ddc32a114cb34e1b02
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47858169"
 ---
 # <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: marcar assemblies com AssemblyVersionAttribute
+
 |||
 |-|-|
 |NomeDoTipo|MarkAssembliesWithAssemblyVersion|
 |CheckId|CA1016|
 |Categoria|Microsoft.Design|
-|Alteração Significativa|Não recentes|
+|Alteração Significativa|Não são significativas|
 
 ## <a name="cause"></a>Causa
- O assembly não tem um número de versão.
 
-## <a name="rule-description"></a>Descrição da Regra
- A identidade de um assembly é composta das seguintes informações:
+O assembly não tem um número de versão.
 
--   Nome do assembly
+## <a name="rule-description"></a>Descrição da regra
 
--   Número de versão
+A identidade de um assembly é composta das seguintes informações:
 
--   Cultura
+- Nome do assembly
 
--   Chave pública (para assemblies de nomeados forte).
+- Número de versão
 
- O [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] usa o número de versão para identificar com exclusividade um assembly e associar a tipos em assemblies altamente nomeados. O número de versão é usado com a versão e a política do publicador. Por padrão, os aplicativos só são executados com a versão do assembly com que foram criados.
+- Cultura
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, adicione um número de versão para o assembly usando o <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName> atributo. Consulte o exemplo a seguir.
+- Chave pública (para assemblies fortemente nomeados).
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- Não suprima um aviso dessa regra para assemblies que são usados por terceiros, ou em um ambiente de produção.
+O .NET Framework usa o número de versão para identificar exclusivamente um assembly e associar a tipos em assemblies fortemente nomeados. O número de versão é usado com a versão e a política do publicador. Por padrão, os aplicativos só são executados com a versão do assembly com que foram criados.
+
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, adicionar um número de versão ao assembly usando o <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName> atributo. Consulte o exemplo a seguir.
+
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+ Não suprima um aviso nessa regra para assemblies que são usados por terceiros ou em um ambiente de produção.
 
 ## <a name="example"></a>Exemplo
  O exemplo a seguir mostra um assembly que tem o <xref:System.Reflection.AssemblyVersionAttribute> atributo aplicado.
@@ -59,4 +68,6 @@ ms.lasthandoff: 04/19/2018
  [!code-cpp[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/CPP/ca1016-mark-assemblies-with-assemblyversionattribute_1.cpp)]
 
 ## <a name="see-also"></a>Consulte também
- [Controle de versão do assembly](/dotnet/framework/app-domains/assembly-versioning) [como: criar uma política de editor](/dotnet/framework/configure-apps/how-to-create-a-publisher-policy)
+
+- [Controle de versão do assembly](/dotnet/framework/app-domains/assembly-versioning)
+- [Como criar uma política de editor](/dotnet/framework/configure-apps/how-to-create-a-publisher-policy)

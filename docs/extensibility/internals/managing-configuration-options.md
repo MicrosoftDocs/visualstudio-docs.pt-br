@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134754"
 ---
 # <a name="managing-configuration-options"></a>Gerenciar opções de configuração
 Quando você cria um novo tipo de projeto, você deve gerenciar o projeto e solução de definições de configuração que determinam como o projeto será criado, pacotes, implantado e execução. Os tópicos a seguir abordam a configuração de projeto e solução.  

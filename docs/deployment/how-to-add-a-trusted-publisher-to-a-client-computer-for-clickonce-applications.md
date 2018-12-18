@@ -17,31 +17,32 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c9d718eba01a35c1f6991ab50d217c8b5f63065
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 05fec72b143ccd36cb0a07f17d4bea4b6319eb20
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39155308"
 ---
-# <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>Como adicionar um fornecedor confiável a um computador cliente para aplicativos ClickOnce
-Com a implantação de aplicativos confiáveis, você pode configurar computadores cliente para que seu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativos executados com um nível mais alto de confiança sem avisar o usuário. Os procedimentos a seguir mostram como usar a ferramenta de linha de comando CertMgr.exe para adicionar um certificado de editor para o repositório de editores confiáveis em um computador cliente.  
+# <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>Como: adicionar um fornecedor confiável a um computador cliente para aplicativos ClickOnce
+Com a implantação de aplicativos confiáveis, você pode configurar computadores cliente para que seu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativos executados com um nível mais alto de confiança, sem avisar o usuário. Os procedimentos a seguir mostram como usar a ferramenta de linha de comando CertMgr.exe para adicionar um certificado de editor para o repositório de editores confiáveis em um computador cliente.  
   
- Os comandos que você usar variam ligeiramente, dependendo se a autoridade de certificação (CA) que emitiu o certificado faz parte de raiz confiável do cliente. Se um computador cliente do Windows for parte de um domínio, ele conterá, na lista de autoridades de certificação que são considerados confiáveis. Essa lista é geralmente configurada pelo administrador do sistema. Se seu certificado foi emitido por um essas raízes confiáveis, ou por uma autoridade de certificação que se conecte a um desses raízes confiáveis, você pode adicionar o certificado ao repositório de raiz confiável do cliente. Se, por outro lado, o certificado não foi emitido por uma dessas raízes confiáveis, você deve adicionar o certificado ao armazenamento raiz confiável do cliente e o repositório de editores confiáveis.  
+ Os comandos usados variam um pouco dependendo se a autoridade de certificação (CA) que emitiu o certificado for parte de raiz confiável de um cliente. Se um computador de cliente do Windows fizer parte de um domínio, ele conterá, em uma lista, autoridades de certificação que são considerados raízes confiáveis. Geralmente, essa lista é configurada pelo administrador do sistema. Se seu certificado foi emitido por uma dessas raízes confiáveis ou por uma autoridade de certificação que se encadeie a um dessas raízes confiáveis, você pode adicionar o certificado ao repositório de raiz confiável do cliente. Se, por outro lado, o seu certificado não foi emitido por uma dessas raízes confiáveis, você deve adicionar o certificado para o repositório de raiz confiável do cliente e armazenamento de fornecedor confiável.  
   
 > [!NOTE]
->  Você deve adicionar certificados dessa maneira em cada computador cliente para o qual você planeja implantar um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo que requer permissões elevadas. Você adicionar os certificados manualmente ou por meio de um aplicativo que você implantar em seus clientes. Você precisa configurar esses computadores de uma vez, após o qual você pode implantar qualquer número de [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativos assinados com o mesmo certificado.  
+>  Você deve adicionar certificados dessa maneira em cada computador cliente para o qual você planeja implantar uma [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo que requer permissões elevadas. Adicione os certificados manualmente ou por meio de um aplicativo que você distribuir aos seus clientes. Você só precisará configurar esses computadores de uma vez, após o qual você pode implantar qualquer quantidade de [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativos assinados com o mesmo certificado.  
   
- Você também pode adicionar um certificado a um repositório programaticamente usando o <xref:System.Security.Cryptography.X509Certificates.X509Store> classe.  
+ Você também pode adicionar um certificado para um armazenamento de forma programática, usando o <xref:System.Security.Cryptography.X509Certificates.X509Store> classe.  
   
- Para obter uma visão geral da implantação de aplicativos confiáveis, consulte [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md).  
+ Para uma visão geral da implantação de aplicativos confiáveis, consulte [visão geral da implantação de aplicativo confiável](../deployment/trusted-application-deployment-overview.md).  
   
-### <a name="to-add-a-certificate-to-the-trusted-publishers-store-under-the-trusted-root"></a>Para adicionar um certificado para o repositório de editores confiáveis sob a raiz confiável  
+### <a name="to-add-a-certificate-to-the-trusted-publishers-store-under-the-trusted-root"></a>Para adicionar um certificado no repositório de editores confiáveis sob a raiz confiável  
   
 1.  Obter um certificado digital de uma autoridade de certificação.  
   
-2.  Exporte o certificado no formato Base64 x. 509 (. cer). Para obter mais informações sobre os formatos de certificado, consulte [exportar um certificado](http://go.microsoft.com/fwlink/?LinkId=164793).  
+2.  Exportar o certificado nos x. 509 Base64 (*. cer*) formato. Para obter mais informações sobre formatos de certificado, consulte [exportar um certificado](http://go.microsoft.com/fwlink/?LinkId=164793).  
   
-3.  No prompt de comando nos computadores cliente, execute o seguinte comando:  
+3.  Do prompt de comando em computadores cliente, execute o seguinte comando:  
   
      **certmgr.exe-adicionar chaves públicas - c -s - r localMachine TrustedPublisher**  
   
@@ -49,24 +50,24 @@ Com a implantação de aplicativos confiáveis, você pode configurar computador
   
 1.  Obter um certificado digital de uma autoridade de certificação.  
   
-2.  Exporte o certificado no formato Base64 x. 509 (. cer). Para obter mais informações sobre os formatos de certificado, consulte [exportar um certificado](http://go.microsoft.com/fwlink/?LinkId=164793).  
+2.  Exportar o certificado nos x. 509 Base64 (*. cer*) formato. Para obter mais informações sobre formatos de certificado, consulte [exportar um certificado](http://go.microsoft.com/fwlink/?LinkId=164793).  
   
-3.  No prompt de comando nos computadores cliente, execute o seguinte comando:  
+3.  Do prompt de comando em computadores cliente, execute o seguinte comando:  
   
      **certmgr.exe-adicionar good.cer - c -s - r localMachine raiz**  
   
      **certmgr.exe-adicionar good.cer - c -s - r localMachine TrustedPublisher**  
   
 ## <a name="see-also"></a>Consulte também  
- [Walkthrough: Manually Deploying a ClickOnce Application](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)  (Instruções passo a passo: implantando manualmente um aplicativo ClickOnce)  
- [Protegendo aplicativos ClickOnce](../deployment/securing-clickonce-applications.md)   
+ [Passo a passo: Implantar um aplicativo ClickOnce manualmente](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)   
+ [Proteger aplicativos ClickOnce](../deployment/securing-clickonce-applications.md)   
  [Segurança de acesso do código para aplicativos ClickOnce](../deployment/code-access-security-for-clickonce-applications.md)   
  [ClickOnce e Authenticode](../deployment/clickonce-and-authenticode.md)   
- [Visão geral da implantação de aplicativos confiáveis](../deployment/trusted-application-deployment-overview.md)   
- [Como habilitar configurações de segurança do ClickOnce](../deployment/how-to-enable-clickonce-security-settings.md)   
- [Como definir uma zona de segurança para um aplicativo ClickOnce](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
- [Como definir permissões personalizadas para um aplicativo ClickOnce](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
- [Como depurar um aplicativo ClickOnce com permissões restritas](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
+ [Visão geral da implantação de aplicativo confiável](../deployment/trusted-application-deployment-overview.md)   
+ [Como: Habilitar configurações de segurança do ClickOnce](../deployment/how-to-enable-clickonce-security-settings.md)   
+ [Como: definir uma zona de segurança para um aplicativo ClickOnce](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
+ [Como: definir permissões personalizadas para um aplicativo ClickOnce](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
+ [Como: depurar um aplicativo ClickOnce com permissões restritas](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
  [Como: adicionar um fornecedor confiável a um computador cliente para aplicativos ClickOnce](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)   
  [Como: assinar novamente os manifestos de aplicativo e implantação](../deployment/how-to-re-sign-application-and-deployment-manifests.md)   
- [Como configurar o comportamento do prompt confiável do ClickOnce](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md)
+ [Como: configurar o comportamento do prompt confiável do ClickOnce](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md)

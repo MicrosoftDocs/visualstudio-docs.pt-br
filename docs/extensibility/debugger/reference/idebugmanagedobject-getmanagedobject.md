@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 81b90a43f1de02ba4d195f43b78ee1179c562eff
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f30c76dfd0c2f9dafa4844f815ce2506e70346f3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917928"
 ---
 # <a name="idebugmanagedobjectgetmanagedobject"></a>IDebugManagedObject::GetManagedObject
 Retorna uma interface que representa o objeto gerenciado.  
@@ -43,10 +44,10 @@ int GetManagedObject(
  [out] Retorna uma interface que representa o objeto gerenciado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- A interface retornada deste método pode ser consultada para qualquer interface implementada pela classe gerenciada, permitindo que os seus métodos sejam chamados.  
+ A interface retornada desse método pode ser consultada para qualquer interface implementada pela classe gerenciada, permitindo que seus métodos sejam chamados.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

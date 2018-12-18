@@ -1,5 +1,5 @@
 ---
-title: Texto de interface do usuário e a Ajuda do Visual Studio | Microsoft Docs
+title: Texto da interface do usuário e a Ajuda do Visual Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,21 +11,22 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 697c794d17f3004b0f37e668ff67afb703490e18
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 52260b2cd401f8cdbd3a94704ab29db2f64fdc6d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842229"
 ---
-# <a name="ui-text-and-help-for-visual-studio"></a>Texto de interface do usuário e a Ajuda do Visual Studio
-##  <a name="BKMK_UITextAndTerminology"></a> Texto de interface do usuário e terminologia  
- Texto abrangente é crucial para a interface de usuário efetivada. Software que os usuários tendem a ler rótulos primeiro, ou seja, aqueles mais relevantes para a conclusão da tarefa em questão. Texto estático é lido com menos frequência. Plano para usuários iniciar suas sessões de trabalho com uma verificação rápida de toda a janela, seguida por uma leitura da interface do usuário nesta ordem aproximado:  
+# <a name="ui-text-and-help-for-visual-studio"></a>Texto da interface do usuário e a Ajuda do Visual Studio
+##  <a name="BKMK_UITextAndTerminology"></a> Terminologia e o texto de interface do usuário  
+ Texto compreensível é crucial para a interface de usuário efetivada. Os usuários de software tendem a leitura de rótulos em primeiro lugar, ou seja, aqueles mais relevantes para concluir a tarefa em questão. Texto estático é lido com menos frequência. Plano para os usuários iniciar suas sessões de trabalho com uma verificação rápida de toda a janela, seguida por uma leitura da interface do usuário nesta ordem aproximado:  
   
 1.  Controles interativos no Centro  
   
-2.  Confirmar botões  
+2.  Botões de confirmação  
   
-3.  Controles interativos localizados em outro lugar  
+3.  Controles interativos encontrados em outro lugar  
   
 4.  Instruções principais  
   
@@ -35,45 +36,45 @@ ms.lasthandoff: 04/16/2018
   
 7.  Outro texto estático no corpo principal  
   
-### <a name="usage-patterns-for-ui-text"></a>Padrões de uso para o texto de interface do usuário  
+### <a name="usage-patterns-for-ui-text"></a>Padrões de uso para o texto da interface do usuário  
   
 #### <a name="title-bar-text"></a>Texto da barra de título  
- Texto da barra de título deve coincidir com o comando que gerou a interface do usuário.  
+ Texto da barra de título deve corresponder o comando que é gerado a interface do usuário.  
   
 #### <a name="instructional-text-helper-text"></a>Texto de instrução (texto auxiliar)  
- Em algumas caixas de diálogo, é útil fornecer instruções principais proeminentes para explicar o que fazer na janela ou na página. Às vezes, isso é conhecido como "texto auxiliar".  
+ Algumas caixas de diálogo, é útil fornecer instruções principais proeminentes para explicar o que fazer na janela ou na página. Às vezes, isso é conhecido como "texto auxiliar".  
   
-##### <a name="writing-style-rules-for-helper-text"></a>Escrevendo regras de estilo para o texto de ajuda  
+##### <a name="writing-style-rules-for-helper-text"></a>Escrever regras de estilo para o texto do auxiliar  
   
 -   Não explicam o óbvio. A menos que seja absolutamente necessário, não inclua texto de instrução.  
   
 -   Texto de instrução sempre é colocado na parte superior da caixa de diálogo e deve se referir à tarefa que está sendo executada.  
   
--   Precisamente explica aos usuários que precisam para realizar. Evite a redundância e comunicação excessiva.  
+-   Precisamente explica aos usuários o que precisam. Evite a redundância e a comunicação excessiva.  
   
--   Examine cada janela e eliminar instruções e palavras duplicadas.  
+-   Examine cada janela e eliminar as instruções e palavras duplicadas.  
   
--   Manter o texto de instrução curto. Se necessário para determinados usuários ou cenários mais informações, forneça um link para o tópico online conceitual detalhado.  
+-   Mantenha o texto de instrução curto. Se saber é necessário para determinados usuários ou cenários, em seguida, forneça um link para um tópico de online conceitual detalhado.  
   
 -   Escreva o texto para que contém o peso de cada palavra e é necessária.  
   
--   Siga as diretrizes da Microsoft existente para [texto de Interface do usuário](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742478\(v=vs.85\).aspx) e [estilo e o tom](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742477\(v=vs.85\).aspx).  
+-   Siga as diretrizes da Microsoft existente para [texto de Interface do usuário](/windows/desktop/uxguide/text-ui) e [estilo e tom](/windows/desktop/uxguide/text-style-tone).  
   
 #### <a name="supplemental-instructions"></a>Instruções complementares  
- Instruções complementares fornecem informações adicionais que ajudam o usuário a entender os controles ou agrupamentos de controle. Isso também pode incluir texto de dica necessário entender o formato que o controle de entrada está esperando. Use instruções complementares com moderação. Reservá-los para casos em que é provável que o usuário não compreenda plenamente as consequências da opção que eles estão fazendo.  
+ Instruções complementares fornecem informações adicionais que ajuda o usuário a entender os controles ou agrupamentos de controle. Isso também pode incluir texto de dica necessário para compreender qual formato o controle de entrada está esperando. Use instruções complementares com moderação. Reservá-los para casos em que é provável que o usuário não compreenda totalmente as implicações da opção que eles estão fazendo.  
   
- ![Texto complementar no Visual Studio](../../extensibility/ux-guidelines/media/0601-b_supplementaltext1.png "b_SupplementalText1 0601")  
+ ![Texto suplementar no Visual Studio](../../extensibility/ux-guidelines/media/0601-b_supplementaltext1.png "b_SupplementalText1 0601")  
   
- **Texto complementar no Visual Studio**  
+ **Texto suplementar no Visual Studio**  
   
- ![Texto complementar no Visual Studio](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "c_SupplementalText2 0601")  
+ ![Texto suplementar no Visual Studio](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "c_SupplementalText2 0601")  
   
- **Texto complementar no Visual Studio**  
+ **Texto suplementar no Visual Studio**  
   
 #### <a name="infotips"></a>InfoTips  
- Normalmente, o texto de instrução pode ser muito demorado para posicionar o local na interface de usuário ou pode ser útil somente novos usuários, pareçam resíduos para usuários experientes. Nesse caso, o texto das instruções informativas deve ser colocado como uma dica de ferramenta em uma InfoDica.  
+ Muitas vezes, o texto de instrução pode ser muito demorado para posicionar no local na interface do usuário ou pode ser útil somente para novos usuários, pareçam resíduos para usuários experientes. Nesse caso, o texto das instruções informativas deve ser colocado como uma dica de ferramenta em uma InfoDica.  
   
- InfoTips deve ser colocada próximo os controles que eles estão relacionados e devem usar o ícone de InfoDica específico, que é discreto ainda notável.  
+ InfoTips deve ser colocado perto os controles que eles estão relacionados e devem usar o ícone de InfoDica específico, que é discreto ainda notável.  
   
  ![InfoDica no Visual Studio](../../extensibility/ux-guidelines/media/0601-d_infotip.png "d_InfoTip 0601")  
   
@@ -81,51 +82,51 @@ ms.lasthandoff: 04/16/2018
   
 ##### <a name="writing-style-rules-for-infotips"></a>Regras de estilo de escrita para InfoTips  
   
--   Grave InfoTips como frases. Eles exigem verbos específicos, caso oração e pontuação final.  
+-   Grave InfoTips como frases completas. Eles exigem a verbos específicos, diferenciam maiusculas de minúsculas e pontuação final.  
   
--   Use InfoTips para completar sua instrução principal ou informações. Se estiver usando apenas palavras diferentes para reformular a ideia principal, não é necessário uma InfoDica.  
+-   Use InfoTips para complementar sua instrução principal ou informações. Se você estiver usando apenas palavras diferentes para declarar novamente a ideia principal, não será necessário uma InfoDica.  
   
--   Manter InfoTips diretos. Use palavras pequenas e simples, linguagem cotidiana que oferece suporte e incentivo o usuário.  
+-   Manter InfoTips curto e bonito. Use palavras pequenas e sem formatação, linguagem cotidiana que dá suporte e incentivo para o usuário.  
   
--   Siga as diretrizes da Microsoft existente para [texto de Interface do usuário](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742478\(v=vs.85\).aspx) e [estilo e o tom](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742477\(v=vs.85\).aspx).  
+-   Siga as diretrizes da Microsoft existente para [texto de Interface do usuário](/windows/desktop/uxguide/text-ui) e [estilo e tom](/windows/desktop/uxguide/text-style-tone).  
   
 #### <a name="control-labels"></a>Rótulos de controle  
- Rótulos de controle devem ser curto, concisa e siga o [orientação de área de trabalho do Windows para controles](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742399\(v=vs.85\).aspx).  
+ Rótulos de controle devem ser curta e concisa e siga as [diretrizes de área de trabalho do Windows para controles](/windows/desktop/uxguide/controls).  
   
- Para obter mais informações sobre o formato do rótulo de controle e posicionamento dentro da interface do usuário, consulte [Layout para o Visual Studio](../../extensibility/ux-guidelines/layout-for-visual-studio.md).  
+ Para obter mais informações sobre o formato do rótulo de controle e o posicionamento dentro da interface do usuário, consulte [Layout para o Visual Studio](../../extensibility/ux-guidelines/layout-for-visual-studio.md).  
   
 #### <a name="help-links"></a>Links de ajuda  
- Links de Ajuda pode ser posicionado dentro do texto de instrução ou no corpo da interface do usuário. Eles podem ser links para Ajuda ou iniciar caixas de diálogo internas.  
+ Links de Ajuda pode ser posicionado dentro do texto de instrução ou no corpo da interface do usuário. Eles podem ser links de Ajuda ou abrem caixas de diálogo internas.  
   
 ##### <a name="visual-style-rules-for-help-links"></a>Regras de estilo visual para links de ajuda  
   
--   Use as cores do ambiente correto de hiperlinks. Um hiperlink corretamente com estilo não pisca brevemente vermelho quando clicado. Se você vir isso, é uma indicação de que as cores de ambiente não estão sendo usadas.  
+-   Use as cores de ambiente correta de hiperlinks. Um hiperlink corretamente com estilo não piscará brevemente vermelho quando clicado. Se você vir isso, é uma indicação de que as cores de ambiente não estão sendo usadas.  
   
--   Sublinhados só devem ser usados em foco ou quando o link é inserido em um parágrafo.  
+-   Sublinhados só devem ser usados em foco ou quando o link é incorporado em um parágrafo.  
   
--   Para obter mais informações sobre estilos visuais e interação de hiperlinks, ver botões e hiperlinks.  
+-   Para obter mais informações sobre estilos visuais e interação de hiperlinks, consulte botões e hiperlinks.  
   
 ##### <a name="writing-style-rules-for-help-links"></a>Regras de estilo de escrita para links de ajuda  
   
--   Ao iniciar as caixas de diálogo, manter os padrões elipses: nenhum botão de reticências para navegação, elipses se a tarefa requer adicional da interface do usuário.  
+-   Ao iniciar as caixas de diálogo, manter os padrões para elipses: nenhum botão de reticências de navegação, elipses, se a tarefa requer adicional da interface do usuário.  
   
      ![Link de Ajuda no Visual Studio](../../extensibility/ux-guidelines/media/0601-e_helplink.png "e_HelpLink 0601")  
   
-     **Reticências (...) em um link de ajuda indicam que a tarefa exigirá adicional da interface do usuário.**  
+     **Um sinal de reticências (...) em um link de ajuda indica que a tarefa exigirá adicional da interface do usuário.**  
   
--   Links não deve começar com "Saiba", já que não é a intenção do usuário. O usuário deseja responder a uma pergunta específica, não receberá um treinamento geral.  
+-   Links não deve começar com "Saiba", isso não é a intenção do usuário. O usuário deseja responder uma pergunta específica, não receberá uma educação geral.  
   
--   Links de ajuda de frase para que eles fazer a pergunta que o tópico responderá.  
+-   Links de ajuda de frase, de modo que eles a pergunta que o tópico responderá.  
   
      Incorreto:  
-     "Saiba mais sobre preços de serviços móveis do Windows Azure"  
+     "Saiba mais sobre os preços de serviços móveis do Windows Azure"  
   
      Corrigi:  
      "Quais opções de preços estão disponíveis para serviços móveis do Windows Azure?"  
   
 -   Nunca use *clique em...*  para o texto do link.  
   
--   Nunca link apenas a palavra "aqui". Isso é problemático para alguns leitores de tela, que serão apenas a palavra hiperlink de voz.  
+-   Nunca vincular apenas a palavra "aqui". Isso é problemático para alguns leitores de tela, que serão de voz apenas a palavra com hiperlink.  
   
      Incorreto:  
      "Para obter informações sobre serviços móveis do Windows Azure **aqui**"  
@@ -133,10 +134,10 @@ ms.lasthandoff: 04/16/2018
      Corrigi:  
      "Quais opções de preços estão disponíveis para serviços móveis do Windows Azure?"  
   
--   Para obter mais informações sobre o estilo de texto correto para links de Ajuda, consulte o [orientação de área de trabalho do Windows para obter ajuda](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742494\(v=vs.85\).aspx).  
+-   Para obter mais informações sobre o estilo de escrita correto para links de Ajuda, consulte o [diretrizes de área de trabalho do Windows para obter ajuda](/windows/desktop/uxguide/winenv-help).  
   
 #### <a name="hint-text"></a>Texto de dica  
- Texto de dica aparece como uma marca d'água em um controle ou abaixo do controle. A formatação correta será aplicada usando o token VSColors apropriado, `Environment.GrayText`.  
+ Texto de dica é exibido como uma marca d'água em um controle ou abaixo do controle. A formatação correta será aplicada usando o token VSColors apropriado, `Environment.GrayText`.  
   
  Ele pode aparecer em um número de formulários.  
   
@@ -148,14 +149,14 @@ ms.lasthandoff: 04/16/2018
   
      ![Dica de texto no Visual Studio](../../extensibility/ux-guidelines/media/0601-g_hinttext2.png "g_HintText2 0601")  
   
--   Com texto indicando uma entrada necessária:  
+-   Com o texto que indica uma entrada necessária:  
   
      ![Dica de texto no Visual Studio](../../extensibility/ux-guidelines/media/0601-h_hinttext3.png "h_HintText3 0601")  
   
 #### <a name="watermark-text"></a>Texto de marca d'água  
- Em uma superfície de design vazio, o texto deve indicar o que fazer, bem como fornecer links para abrir outras janelas relacionadas, se apropriado:  
+ Em uma superfície de design vazio, o texto deve indicar o que fazer, bem como fornecem links para abrir outras janelas relacionadas, se apropriado:  
   
- ![Marca d'água de texto no Visual Studio](../../extensibility/ux-guidelines/media/0601-i_watermarktext.png "i_WatermarkText 0601")  
+ ![Texto do Visual Studio de marca d'água](../../extensibility/ux-guidelines/media/0601-i_watermarktext.png "i_WatermarkText 0601")  
   
  **Exemplo de texto de marca d'água no Visual Studio**  
   
@@ -163,130 +164,130 @@ ms.lasthandoff: 04/16/2018
   
 |Termo|Explicação|Comentário|  
 |----------|-----------------|-------------|  
-|Entrar / sair|Verbos usados como sinônimo de web para a representação de autenticação em uma propriedade de web. Os clientes, usamos isso vez como uma noção de nível superior para entrar e sair da conexão de usuário do IDE, que representa uma identidade de nível superior que fornece recursos de nível superior como roaming e licenciamento que não estão disponíveis com todas as outras conexões.|O usuário de IDE é o único recurso que deve representar uma página de entrada / sair verbo, que representa o usuário IDE de nível superior.|  
-|Conectar / desconectar|Use em locais em que um recurso mantém uma única conexão a um serviço online.|Gerenciador de servidores, onde você pode ter apenas uma conexão do Azure ativa por vez, é um exemplo de conectar/desconectar.|  
-|Adicionar / remover|Não destrutiva. Use quando estiver adicionando ou removendo algo em uma lista.|A caixa de diálogo de lista de servidor do Gerenciador de Conexão do TFS é um exemplo de como adicionar ou remover.|  
-|Excluir|Destrutiva. Use somente quando o elemento que está sendo removido será permanentemente descartado ou excluído do disco.|"Delete" geralmente requer um prompt, se o resultado é excluindo um arquivo de disco.|  
+|Entrar / sair|Verbos usados como sinônimos com a web para a representação de autenticação em uma propriedade da web. Dentro de clientes, nós usamos isso vez como uma noção de nível superior para a assinatura dentro e fora de conexão de usuário do IDE, que representa uma identidade de nível superior que fornece recursos de nível mais altos, como o roaming e licenciamento que não estão disponíveis com todas as outras conexões.|O usuário do IDE é o único recurso que deve representar uma entrada / sair verbo, porque ele representa o usuário do IDE de nível superior.|  
+|Conectar / desconectar|Use em lugares onde um recurso mantém uma única conexão a um serviço online.|Gerenciador de servidores, onde você pode ter apenas uma conexão do Azure Active Directory por vez, é um exemplo de como conectar/desconectar.|  
+|Adicionar / remover|Não-destrutiva. Use quando estiver adicionando ou removendo algo em uma lista.|A caixa de diálogo de lista de servidores do Gerenciador de Conexão do TFS é um exemplo de como adicionar ou remover.|  
+|Excluir|Destrutiva. Use somente quando o elemento que está sendo removido será permanentemente descartado ou excluído do disco.|Geralmente requer um prompt de "Excluir" se o resultado é excluir um arquivo de disco.|  
   
 ## <a name="error-messages"></a>Mensagens de erro  
   
 ### <a name="overview"></a>Visão geral  
- Erros de acontecem. Definir limitações em que o usuário pode fazer é uma primeira etapa a sensata evitar mensagens de erro evitáveis. No entanto, quando ocorre um erro, uma mensagem de erro bem escrito pode ir um longo caminho para atenuar o problema. Mensagens de erro são possivelmente um dos tipos mais importantes de notificação de que o usuário vê, porque eles são síncronos e indicam um problema que precisa ser resolvido. Mensagens de erro de escrita inadequadamente deixam os usuários em seus próprios para decidir a causa dos erros e todas as soluções possíveis.  
+ Erros acontecem. Definindo as limitações em que o usuário pode fazer é uma primeira etapa sensata impedindo que mensagens de erro podem ser evitados. No entanto, quando ocorre um erro, uma mensagem de erro bem escrito pode percorrem um longo caminho em direção a atenuar o problema. Mensagens de erro são possivelmente um dos tipos mais importantes de notificação de que o usuário vê, porque eles são síncronos e indicam um problema que precisa ser resolvido. Mensagens de erro mal-escrito deixarem os usuários sobre suas próprias para decidir a causa dos erros e quaisquer possíveis soluções.  
   
- Os usuários podem parar prestar atenção ao uso excessivo ou confuso mensagens de erro, portanto experimentar mensagens somente necessário de gravação que agregam valor ao usuário. Se a mensagem é simplesmente uma notificação, use uma apresentação alternativa.  
+ Os usuários podem parar prestando atenção para o uso excessivo ou confuso mensagens de erro, portanto, a experiência de gravação de mensagens somente é necessário que adicionam valor ao usuário. Se a mensagem é simplesmente uma notificação, em seguida, use uma apresentação alternativa.  
   
 ### <a name="rules-for-creating-an-error-message"></a>Regras para criar uma mensagem de erro  
   
--   Ao construir mensagens de erro, escolha o nível de erro apropriado para o público. Visar resumos simples que fornecem uma ação que o usuário pode tomar, se aplicável. Estado não tudo o que o usuário não precisa saber.  
+-   Ao construir mensagens de erro, escolha o nível de erro apropriada para o público-alvo. Tenha como objetivo resumos simples que fornecem uma ação que o usuário pode executar, se aplicável. Não o estado de qualquer coisa que o usuário não precisa saber.  
   
--   Fornece assistência construtivas. É mais fácil de ler e agir em uma mensagem de erro que contém a instrução.  
+-   Fornece assistência construtivo. É mais fácil de ler e agir em uma mensagem de erro que contém a instrução.  
   
 -   Não use negativas duplas.  
   
--   Executar ambos um automatizada e uma ortografia e gramática manual verificar qualquer mensagem de erro que você escrever.  
+-   Executar os dois um automatizados e um manual gramática e ortografia verificar qualquer mensagem de erro que você escreve.  
   
--   Para mensagens de erro complexo, evite comunicações sequenciais. Nunca use uma conexão de F1 para a mensagem de erro. A própria mensagem deve ser suficiente.  
+-   Para mensagens de erro complexas, evite comunicações sequenciais. Nunca use uma conexão de F1 para a mensagem de erro. A mensagem em si deve ser suficiente.  
   
 -   Use o ícone correto.  
   
--   Faça perguntas fáceis de entender e usar os botões que tem opções claras, como "Excluir" e "Cancelar".  
+-   Faça perguntas fácil de entender e usar os botões que têm opções claras, como "Excluir" e "Cancelar".  
   
--   Para avisos, estar claro sobre a consequência de continuar. Os botões devem indicar a consequência.  
+-   Para avisos, ser claro sobre qual será a consequência de continuar. Os botões devem indicar a consequência.  
   
--   Para erros, descreva o que o usuário pode fazer para corrigir o problema. Botões devem ser ações ou dizer "Fechar". Não use um botão "Okey" para uma mensagem de erro.  
+-   Para erros, descrevem o que o usuário pode fazer para corrigir o problema. Botões devem ser ações ou dizer "Fechar". Não use um botão de "Okey" para uma mensagem de erro.  
   
--   Algumas perguntas para perguntar ao construir uma mensagem de erro:  
+-   Algumas perguntas se perguntar ao construir uma mensagem de erro:  
   
     -   O usuário pode descobrir como resolver o problema com este erro sozinho?  
   
-    -   O usuário usa o mesmo vocabulário como esse erro?  
+    -   O usuário usa o mesmo vocabulário que esse erro?  
   
     -   É esse erro ambigious ou compartilhados em várias situações? Nesse caso, como você orientar os usuários para a solução que precisam?  
   
 #### <a name="build-errors"></a>Erros de compilação  
- Como o Visual Studio é uma ferramenta de desenvolvimento de software, muitos de seus componentes têm uma compilação, converter ou codificação etapa para converter o trabalho do desenvolvedor em um formato binário. Essas conversões podem causar erros quando o compilador não pode processar arquivos criados incorretamente ou quando as opções de compilador não foram definidas corretamente.  
+ Como o Visual Studio é uma ferramenta de desenvolvimento de software, muitos de seus componentes têm uma compilação, convertendo, codificação ou etapa para converter o trabalho do desenvolvedor em formato binário. Essas conversões podem causar erros quando o compilador não pode processar arquivos criados incorretamente ou quando as opções do compilador não foram definidas corretamente.  
   
- Usuários do Visual Studio podem passar um enorme número de horas de desenvolvimento, Resolvendo erros de compilação. Esse tempo de resolução aumenta quando erros têm dependências ou quando as mensagens de erro estão mal gravadas, que pode dificultar descobrir a origem do erro.  
+ Usuários do Visual Studio podem gastar um número enorme de horas de desenvolvimento Resolvendo erros de compilação. Esse tempo de resolução aumenta quando erros têm dependências ou quando as mensagens de erro são mal escritas, que pode dificultar descobrir a origem do erro.  
   
- Os erros de compilação recomendados são aquelas que não ocorrem em primeiro lugar, o que faz com que o Visual Studio fornece preenchimento automático e a linha ondulante do IntelliSense. Validador de esquema e ferramentas semelhantes fornecem o mesmo tipo de comentários. Esses mecanismos proativamente orientam o usuário para construir códigos bem formado, reduzindo a chance de erros de compilação.  
+ Os erros de compilação melhores são aquelas que não ocorrem em primeiro lugar, razão pela qual o Visual Studio fornece preenchimento automático e rabisca do IntelliSense. Os validadores de esquema e ferramentas semelhantes fornecem o mesmo tipo de comentários. Esses mecanismos proativamente orientam o usuário para construir o código bem formado, pois isso reduz a chance de erros de compilação.  
   
- O Visual Studio fornece uma janela de ferramenta em que os usuários podem ler e percorrer os erros que ocorreram na janela do documento. Atalhos de teclado são fornecidos para que o usuário possa rapidamente navegue grandes quantidades de código e ir diretamente para o local do problema. O Visual Studio também permite que cada erro de compilação a ser vinculado a uma ID de contexto/palavra-chave de ajuda específica, para que o usuário possa ir diretamente para um tópico da Ajuda que fornece informações mais detalhadas sobre o erro.  
+ O Visual Studio fornece uma janela de ferramentas em que os usuários podem ler e percorrer os erros que ocorreram em suas janelas de documento. Atalhos de teclado são fornecidos para que o usuário possa rapidamente grandes quantidades de código de navegar e ir diretamente para o local do problema. Visual Studio também permite que cada erro de build estar vinculado a uma determinada identificação de palavra-chave/contexto de ajuda para que o usuário pode ir diretamente para um tópico da Ajuda que fornece informações mais detalhadas sobre o erro.  
   
  Erros de compilação claras e concisas de gravação:  
   
--   **Usar linguagem simples** que explica o problema com pouca ou nenhuma jargão do compilador. O texto de um erro de compilação não deve ser excessivamente técnico.  
+-   **Use uma linguagem simples** que explica o problema com pouca ou nenhuma jargão do compilador. O texto de um erro de compilação não deve ser excessivamente técnico.  
   
--   **Descrever as possíveis causas.** Por exemplo, "faltando um vírgula entre a propriedade e o valor de ' (propriedade): (valor)' declaração."  
+-   **Descrever as possíveis causas.** Por exemplo, "faltando dois pontos entre a propriedade e o valor no ' (propriedade): (valor)' declaração."  
   
--   Fornecer detalhes sobre possíveis correções. Se não houver espaço suficiente, detalhes adicionais podem ser colocados em um tópico da Ajuda correspondente.  
+-   Fornecer detalhes sobre possíveis correções. Se não houver espaço suficiente, detalhes adicionais podem ser colocados para o tópico da Ajuda correspondente.  
   
 ### <a name="components-of-a-well-written-error-message"></a>Componentes de uma mensagem de erro bem escrito  
   
 #### <a name="use-the-shell-dialog-service-for-error-messages"></a>Use o serviço de caixa de diálogo do shell para mensagens de erro.  
- Usar o serviço de shell diálogo lhe permite controlar a aparência da mensagem, fontes em particular, sem alterações importantes para elementos individuais. Use o **IErrorInfo** mecanismos e relatá-los usando **IVsUIShell::SetErrorInfo/ReportErrorInfo**.  
+ Usando o serviço de caixa de diálogo de shell permite controlar a aparência da mensagem, fontes em particular, sem grandes alterações aos elementos individuais. Use o **IErrorInfo** mecanismos e relatá-los usando **IVsUIShell::SetErrorInfo/ReportErrorInfo**.  
   
-#### <a name="choose-an-effective-and-appropriate-notification-presentation"></a>Escolha uma apresentação efetivo e apropriado a notificação.  
- Use uma caixa de diálogo modal com um aviso crítico se uma ação imediata é necessária para evitar perda de dados (notificação síncrona). Ícones críticas são reservados para situações em que a mensagem sem leitura fechando pode levar a consequências negativas. Perda de dados é uma situação crítica que exige uma resposta de nível de alarme. Uso excessivo do ícone crítico desensitizes usuários em sua importância. Se a mensagem de erro é informativa por natureza, considere as alternativas para uma caixa de diálogo modal (notificação assíncrona).  
+#### <a name="choose-an-effective-and-appropriate-notification-presentation"></a>Escolha uma apresentação de notificação efetivo e apropriado.  
+ Use uma caixa de diálogo modal com um aviso crítico se uma ação imediata é necessária para evitar a perda de dados (notificação síncrona). Ícones críticos são reservados para situações em que a mensagem sem leitura fechando pode levar a consequências negativas. Perda de dados é uma situação crítica que requer uma resposta de nível de alarme. Uso excessivo do ícone crítico desensitizes que os usuários façam sua importância. Se a mensagem de erro é informativa por natureza, considere alternativas para uma caixa de diálogo modal (notificação assíncrona).  
   
-#### <a name="provide-a-clean-succinct-explanation-of-why-the-problem-occurred-rather-than-a-technical-explanation"></a>Fornece uma explicação sucinta, limpa de por que o problema ocorreu em vez de uma explicação técnica.  
- Sobrecarregar os usuários com detalhes técnicos na explicação tornará mais provável ignorar as mensagens de erro. Exemplos de mensagens bom:  
+#### <a name="provide-a-clean-succinct-explanation-of-why-the-problem-occurred-rather-than-a-technical-explanation"></a>Fornece uma explicação limpa e sucinta por que o problema ocorreu em vez de uma explicação técnica.  
+ Sobrecarregar os usuários com detalhes técnicos a explicação os tornará mais provável ignorar as mensagens de erro. Exemplos de mensagens boa:  
   
 -   "Não é possível abrir o arquivo solicitado."  
   
 -   "Não é possível conectar à Internet."  
   
 #### <a name="provide-information-about-how-to-fix-the-problem"></a>Fornecem informações sobre como corrigir o problema.  
- Oferece as sugestões de usuário de como corrigir o problema. Ser verdade com o usuário se não houver nenhuma sugestão. Forneça links diretos para fontes online alternativas, como o suporte técnico ou o suporte da comunidade. Tente direcionar os usuários para informações pertinentes ao problema de online específicas. Para uma ID de erro, considere a vinculação de usuários a um segmento de discussão sobre esse erro específico. Exemplos de mensagens bom:  
+ As sugestões de usuário de como corrigir o problema da oferta. Ser honesto com o usuário se não houver nenhuma sugestão. Fornece links diretos para fontes online alternativos, como o suporte técnico ou suporte da comunidade. Tente apontar os usuários a informações online específicas pertinentes ao problema. Para uma ID de erro, considere a vinculação de usuários a um thread de discussão sobre esse erro específico. Exemplos de mensagens boa:  
   
 -   "Certifique-se de que você está conectado à Internet e tente a operação novamente."  
   
 -   "Certifique-se de que o arquivo existe e se você tem permissão para abri-lo."  
   
-#### <a name="write-a-message-that-is-short-and-to-the-point"></a>Grave uma mensagem curta e para o ponto.  
- Uma mensagem de erro pode notificar, explicar e oferecem uma solução mas ser ignorada se for muito prolixo. Uma solução é usar divulgação progressiva com um botão de detalhes. Por exemplo, forneça uma descrição curta/solução e, em seguida, colocar mais detalhes em um botão de detalhes. Se os usuários optarem ler mais informações sobre o erro, eles podem fazer isso.  
+#### <a name="write-a-message-that-is-short-and-to-the-point"></a>Grave uma mensagem que é curto e para o ponto.  
+ Uma mensagem de erro pode notificar, explicar e oferecem uma solução mas ainda ser ignorado se ele está muito prolixo. Uma solução é usar divulgação progressiva com um botão de detalhes. Por exemplo, dê uma breve descrição/solução e, em seguida, colocar mais detalhes em um botão de detalhes. Se os usuários optar por ler mais informações sobre o erro, eles podem fazer isso.  
   
  O idioma da mensagem deve ser:  
   
--   **Domínio apropriado.** Use linguagem que entenda o usuário. Mesmo que os clientes são desenvolvedores, geralmente não têm o contexto e terminologia que temos.  
+-   **Domínio apropriado.** Use linguagem que entenderá o usuário. Mesmo que nossos clientes estão os desenvolvedores, eles geralmente não têm o contexto e a terminologia que nós temos.  
   
--   **Específico.** Evite palavras vagas e dar nomes específicos e localizações de objetos envolvidos. Por exemplo, uma mensagem de erro como "o caractere é inválido" não é útil. O caractere? "Arquivo não encontrado". Qual arquivo?  
+-   **Específico.** Evite texto vago e dar nomes específicos e os locais dos objetos envolvidos. Por exemplo, uma mensagem de erro como "o caractere é inválido" não é útil. O caractere? "Arquivo não encontrado". Qual arquivo?  
   
--   **Cortês.** Não culpam o usuário ou os fazem sentir tolos. Evite linguagem hostil ou ofensiva (kill, execução, encerrar, fatal, inválido). Evite texto em maiusculas, que geralmente é visto como shouting e não é mais legíveis. Não use humor.  
+-   **Cortês.** Não culpe o usuário ou torná-los se sentir tolos. Evite linguagem ofensiva ou hostil (kill, executar, encerrar, fatal, inválida). Evite texto em maiusculas, que é normalmente visto como shouting e não está tão legível. Não use o humor.  
   
--   **Corrigi.** Use corrigir a ortografia e gramática (mesmo em alfabeto). Erros de digitação são não profissional e inconveniente.  
+-   **Corrigi.** Use a gramática e ortografia correta (mesmo em Alfas). Erros de digitação são capricho e embaraçoso.  
   
--   **Contextualmente apropriadas.** Use o texto do botão apropriado. Evite o botão "Okey" e em vez disso, use "Continue" ou "Sim/não".  
+-   **Contextualmente apropriadas.** Use o texto do botão apropriado. Evite o botão "Okey" e em vez disso, use "Continuar" ou "Sim/não".  
   
 ### <a name="error-message-examples"></a>Exemplos de mensagem de erro  
   
-|Bom|Incorreta|  
+|Bom|incorreta|  
 |----------|---------|  
-|"O número discado não está mais no serviço. Verifique o número e disque novamente ou discar 0 para o operador."|-"(449) de erro: número inválido"<br />-"Esta exceção sem tratamento de erro indica que a operação foi concluída com êxito."<br /><br /> ![Mensagem de erro inválido no Visual Studio](../../extensibility/ux-guidelines/media/0602-a_errordialog.png "0602 a_ErrorDialog")|  
+|"O número discado não está mais no serviço. Verifique o número e discar novamente ou discar 0 para o operador."|-"Erro (449): número inválido"<br />-"Esse erro de exceção sem tratamento indica que a operação foi concluída com êxito."<br /><br /> ![Mensagem de erro inválido no Visual Studio](../../extensibility/ux-guidelines/media/0602-a_errordialog.png "a_ErrorDialog 0602")|  
   
 ## <a name="accessing-help"></a>Acessando a Ajuda  
   
 ### <a name="overview"></a>Visão geral  
- Além de documentação no MSDN, um usuário do Visual Studio tem vários pontos de acesso para ajudar o usuário enquanto na interface de usuário. Para garantir que esses pontos de acesso estejam consistentemente disponíveis, é necessário tirar proveito do sistema de ajuda oferecido pelo ambiente de equipes de recursos. Esses pontos de acesso são:  
+ Além de documentação no MSDN, um usuário do Visual Studio tem vários pontos de acesso para ajudar o usuário enquanto estiver na interface do usuário. Para garantir que esses pontos de acesso estejam consistentemente disponíveis, as equipes de recursos precisam tirar proveito do sistema de ajuda oferecido pelo ambiente. Esses pontos de acesso são:  
   
--   **Texto de instrução e complementar em caixas de diálogo.** Texto estático que dá a direção ou explicação, na interface do usuário superfície ou passe o mouse sobre um ícone de InfoDica está disponível.  
+-   **Texto suplementar e das instruções nas caixas de diálogo.** Texto estático que fornece a direção ou explicação, na interface do usuário disponível em passe o mouse sobre um ícone de InfoDica ou superfície.  
   
--   **Ajuda de F1** (somente no editor). No editor do Visual Studio, o usuário pode confiar que a qualquer momento, pressionando F1 abrirá um tópico de ajuda específico à seleção atual. Verifique se os tópicos associados F1 são apropriadas e informativos.  
+-   **Ajuda de F1** (editor). No editor do Visual Studio, um usuário pode confiar que a qualquer momento pressionando F1 abrirá um tópico de ajuda específico para a seleção atual. Certifique-se de que tópicos associados F1 são apropriados e informativos.  
   
--   **Hiperlinks para tópicos de Ajuda.** Um hiperlink em uma caixa de diálogo, a janela da ferramenta ou a superfície de design que inicia um tópico para ajudar o usuário em saber mais sobre uma tecnologia, recurso ou obter informações sobre como realizar uma tarefa.  
+-   **Hiperlinks para tópicos de Ajuda.** Um hiperlink dentro de uma caixa de diálogo, a janela de ferramentas ou a superfície de design que inicia um tópico para ajudar o usuário a aprender mais sobre uma tecnologia, recurso ou obter informações sobre como realizar uma tarefa.  
   
--   **Mecanismos de interface do usuário de auxiliar, como marcas inteligentes e caixas de diálogo de criação.** Esses mecanismos ajudar o usuário Noções básicas sobre um elemento de interface do usuário ou facilitam uma tarefa, como marcas inteligentes ou caixas de diálogo do construtor.  
+-   **Mecanismos de interface do usuário de auxiliar, como marcas inteligentes e caixas de diálogo de criação.** Esses mecanismos ajudam o usuário a compreender um elemento de interface do usuário ou facilitam uma tarefa, como marcas inteligentes ou caixas de diálogo do construtor.  
   
--   **Botões de Ajuda da IU da** (preterido). Um indicador visível na barra de título que fornece acesso para o tópico da Ajuda de F1 relacionado.  
+-   **Botões de Ajuda da interface do usuário** (preterido). Um indicador visível na barra de título que fornece acesso para o tópico da Ajuda F1 relacionado.  
   
 ### <a name="text"></a>Texto  
   
-#### <a name="instructional-and-supplemental-text-in-dialogs"></a>Texto de instrução e complementar em caixas de diálogo  
- Nas caixas de diálogo que oferecem suporte a tarefas complexas, pode haver a necessidade de fornecer texto de instrução na interface do usuário, geralmente na parte superior da caixa de diálogo ou próximo controles complexos. Consulte [UI texto e terminologia](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology) para obter detalhes sobre o estilo de texto.  
+#### <a name="instructional-and-supplemental-text-in-dialogs"></a>Texto suplementar e das instruções nas caixas de diálogo  
+ Caixas de diálogo que dão suporte a tarefas complexas, pode haver a necessidade de dar o texto de instrução dentro da interface do usuário, geralmente na parte superior da caixa de diálogo ou próximo controles complexos. Ver [interface do usuário do texto e a terminologia](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology) para obter detalhes sobre 1&gt;Writing.  
   
 #### <a name="infotips"></a>InfoTips  
- Normalmente, texto de instrução pode ser muito demorado para posicionar o local na interface do usuário ou pode ser útil somente novos usuários, pareçam resíduos para usuários experientes. Nesse caso, o texto das instruções informativas deve ser colocado como uma dica de ferramenta em uma InfoDica.  
+ Muitas vezes, o texto com instrução pode ser muito demorado para posicionar em vigor na interface do usuário ou pode ser útil somente para novos usuários, pareçam resíduos para usuários experientes. Nesse caso, o texto das instruções informativas deve ser colocado como uma dica de ferramenta em uma InfoDica.  
   
- InfoTips deve ser colocada próximo os controles que eles estão relacionados e devem usar o ícone de InfoDica específico, que é discreto ainda notável.  
+ InfoTips deve ser colocado perto os controles que eles estão relacionados e devem usar o ícone de InfoDica específico, que é discreto ainda notável.  
   
  ![InfoDica no Visual Studio](../../extensibility/ux-guidelines/media/0601-d_infotip.png "d_InfoTip 0601")  
   
@@ -298,34 +299,34 @@ ms.lasthandoff: 04/16/2018
  Ajuda F1 é necessária em um editor ou a superfície de design, mas não em outro lugar no ambiente do Visual Studio.  
   
 #### <a name="hyperlinks-to-help-topics"></a>Hiperlinks para tópicos de ajuda  
- Hiperlinks podem ser usados para executar uma ação, navegue no IDE ou iniciar a Ajuda em um navegador. Consulte [UI texto e terminologia](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology) para obter detalhes sobre o idioma e 07.10.01 botões e hiperlinks para diretrizes visual e layout.  
+ Hiperlinks podem ser usados para executar uma ação, navegar dentro do IDE ou iniciar a Ajuda em um navegador. Ver [interface do usuário do texto e a terminologia](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology) para obter detalhes sobre a linguagem e 07.10.01 botões e hiperlinks para diretrizes visual e layout.  
   
 #### <a name="help--buttons-in-dialog-title-bars-deprecated"></a>Ajuda [?] botões em barras de título da caixa de diálogo (preteridas)  
- A maior parte do tempo, os botões de Ajuda [?] na barra de título de caixas de diálogo são preteridos. Tópicos de interface do usuário não fazem parte de nosso modelo de documento e, portanto, talvez não haja um tópico relevante para vincular a. Essencialmente, o botão da barra de título era a mesma coisa que ajuda F1, e que não é mais necessário em caixas de diálogo. Em alguns casos, isso pode ainda ser usado como um indicador de que há mais informações conceituais ou procedimentos disponíveis, embora os hiperlinks são mais comumente usados na interface do usuário mais recente.  
+ Geralmente, os botões de Ajuda [?] na barra de título das caixas de diálogo são preteridos. Tópicos de interface do usuário não fazem mais parte de nosso modelo de documento e, portanto, talvez não haja um tópico relevante para vincular a. Essencialmente, o botão da barra de título era a mesma coisa que ajuda F1, e que não é mais necessário nas caixas de diálogo. Em alguns casos, isso pode ainda ser usado como um indicador de que há mais informações processuais ou conceituais, embora os hiperlinks são mais comumente usados na interface do usuário mais recente.  
   
-##### <a name="dialogs-created-through-the-environment"></a>Caixas de diálogo criadas através do ambiente  
- Muitas caixas de diálogo do shell são criadas por meio de **VBDialogBoxParam** função. Essa função compartilhada foi atualizada para auxiliar na movimentação de **ajuda** botão da caixa de diálogo para o **?** botão mantendo uma arquitetura com versões anteriores compatível e extensível.  
+##### <a name="dialogs-created-through-the-environment"></a>Caixas de diálogo criadas por meio do ambiente  
+ Muitas caixas de diálogo de shell são criadas por meio de **VBDialogBoxParam** função. Essa função compartilhada foi atualizada para auxiliar na movimentação a **ajudar** botão na caixa de diálogo para o **?** botão, mantendo uma arquitetura que é com versões anteriores compatível e extensível.  
   
- Especificamente, o **VBDialogBoxParam** função examina o modelo de caixa de diálogo para um botão cuja ID é **IDHELP** (9) ou rótulo é **ajuda** ou **& Ajuda**. Se um botão de ajuda for encontrado, ele é oculto e o **WS_EX_CONTEXTHELP** estilo é adicionado à caixa de diálogo, o que coloca o **?** botão na barra de título da caixa de diálogo.  
+ Especificamente, o **VBDialogBoxParam** função analisa o modelo de caixa de diálogo para um botão cuja ID é **IDHELP** (9) ou o rótulo é **ajuda** ou **& Ajuda**. Se um botão de ajuda for encontrado, ele está oculto e o **WS_EX_CONTEXTHELP** estilo é adicionado à caixa de diálogo, o que coloca o **?** botão na barra de título da caixa de diálogo.  
   
- Quando a caixa de diálogo é criada, ele envia proc a caixa de diálogo para uma pilha e invoca a caixa de diálogo com um processo de caixa de diálogo pré-processando denominado **DialogPreProc**. Quando o **?** botão é clicado, ele envia um **WM_SYSCOMMAND** de **SC_CONTEXTHELP** à caixa de diálogo. O **DialogPreProc** captura este comando e o altera para um **WM_HELP** mensagem, que é passada para o procedimento original. a caixa de diálogo  
+ Quando a caixa de diálogo é criada, ele envia o proc. caixa de diálogo para uma pilha e invoca a caixa de diálogo com um procedimento de caixa de diálogo pré-processando denominado **DialogPreProc**. Quando o **?** botão é clicado, ele envia uma **WM_SYSCOMMAND** dos **SC_CONTEXTHELP** na caixa de diálogo. O **DialogPreProc** captura esse comando e o altera para um **WM_HELP** mensagem, que é passada para o procedimento original. a caixa de diálogo  
   
- A maioria das caixas de diálogo Criar ambiente têm um botão de ajuda na caixa de diálogo. Quando a caixa de diálogo é exibida, o botão Ajuda estiver oculto automática e somente o **?** botão funciona. Se o **?** botão nunca é removido ou alterado no Windows, essa solução permite que você voltar rapidamente para os botões de ajuda originais.  
+ A maioria das caixas de diálogo ambiente criado tem um botão de ajuda na caixa de diálogo. Quando a caixa de diálogo é exibida, o botão Ajuda é ocultada automaticamente e somente o **?** botão funciona. Se o **?** botão nunca é removida ou alterada no Windows, essa solução permite que você rapidamente mover de volta para os botões de ajuda originais.  
   
- Esta solução pressupõe quatro que poderiam causar erros:  
+ Essa solução faz quatro suposições que poderiam causar bugs:  
   
--   Botão de Ajuda da caixa de diálogo é **IDHELP** (9).  
+- Botão de Ajuda da caixa de diálogo estiver **IDHELP** (9).  
   
--   A caixa de diálogo parece correta quando o botão Ajuda é oculto.  
+- A caixa de diálogo parece correta quando o botão Ajuda estiver oculto.  
   
--   A caixa de diálogo não substitua seu winproc.  
+- A caixa de diálogo não substitui sua winproc.  
   
--   A caixa de diálogo não será inserida dentro de outra caixa de diálogo.  
+- A caixa de diálogo não será inserida dentro de outra caixa de diálogo.  
   
- Se a caixa de diálogo reside no msenv e não usa **VBDialogBoxParam**, investigue aproveitando **VBDialogBoxParam** antes de implementar seu próprio manipulador.  
+  Se a caixa de diálogo reside no msenv e não usar **VBDialogBoxParam**, investigue aproveitando **VBDialogBoxParam** antes de implementar seu próprio manipulador.  
   
 ##### <a name="dialogs-created-through-other-packages"></a>Caixas de diálogo criadas por meio de outros pacotes  
- Você pode implementar sua própria solução para caixas de diálogo que residem fora msenv. Para uma classe de caixa de diálogo compartilhadas no seu VSPackage, considere mover o botão de barra de título ou implementar um manipulador em cada caixa de diálogo. O código a seguir é um esqueleto de uma implementação para ajudá-lo a começar:  
+ Você pode implementar sua própria solução para caixas de diálogo que residem fora do msenv. Para uma classe de caixa de diálogo compartilhadas em seu VSPackage, considere mover o botão à barra de título ou implementar um manipulador em cada caixa de diálogo. O código a seguir é um esqueleto de uma implementação para ajudar você a começar:  
   
 ```  
 struct DLGPROCITEM  
@@ -381,8 +382,8 @@ INT_PTR CALLBACK DialogPreProc(HWND hwndDlg, UINT uMsg,
 }  
 ```  
   
-##### <a name="help-buttons-in-managed-code"></a>Botões de Ajuda no código gerenciado  
- Substituindo o comportamento de padrão do botão da barra de ajuda janela título é fácil em código gerenciado. Abaixo está um aplicativo de demonstração completo que demonstra esse comportamento. Em essência, você precisa substituir o formulário **WndProc** método e, em seguida, incêndio desativar a Ajuda de F1 solicitações quando uma **SC_CONTEXTHELP** mensagem é interceptada.  
+##### <a name="help-buttons-in-managed-code"></a>Botões de Ajuda em código gerenciado  
+ Substituindo o comportamento de padrão do botão da barra de ajuda janela título é fácil em código gerenciado. Abaixo está um aplicativo de demonstração completo que demonstra esse comportamento. Em essência, você precisa substituir seu formulário **WndProc** solicitações de método e, em seguida, incêndio desativar a Ajuda de F1 quando um **SC_CONTEXTHELP** mensagem é interceptada.  
   
 ```  
 using System;  

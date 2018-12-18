@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ae1d22af6796c2de72c763137c8f96feb7885407
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7693c4ed3442cf86a0e310a6e2dd6d75655fcb69
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49904720"
 ---
 # <a name="idebugarrayobjectgetelements"></a>IDebugArrayObject::GetElements
 Obtém um enumerador de todos os elementos da matriz.  
@@ -40,10 +41,10 @@ int GetElements(
   
 #### <a name="parameters"></a>Parâmetros  
  `ppEnum`  
- [out] Retorna um [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md) objeto que permite ao enumerar sobre todos os elementos.  
+ [out] Retorna um [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md) objeto que permite enumerar em todos os elementos.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  Como alternativa, use o [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md) e [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) métodos para iterar por meio de elementos.  

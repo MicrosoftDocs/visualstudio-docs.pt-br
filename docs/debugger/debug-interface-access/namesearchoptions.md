@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f95d5ed2e91b847b99d063b6fcba485fb96c3290
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: c4b8771ad1bf2ee97ec1f22636a4684bc9aa7ee8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950336"
 ---
 # <a name="namesearchoptions"></a>NameSearchOptions
-Especifica as opções de pesquisa de símbolo e nomes de arquivos.  
+Especifica as opções de pesquisa para nomes de arquivo e símbolos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,16 +55,16 @@ enum NameSearchOptions {
  Aplica-se uma correspondência de nome diferencia maiusculas de minúsculas.  
   
  `nsfFNameExt`  
- Trata nomes como caminhos e aplica uma correspondência de nome de arquivo filename. ext.  
+ Trata nomes como caminhos e aplica-se uma correspondência de nome de arquivo filename. ext.  
   
  `nsfRegularExpression`  
  Aplica-se uma correspondência de nome diferencia maiusculas de minúsculas usando asteriscos (*) e pontos de interrogação (?) como caracteres curinga.  
   
  `nsfUndecoratedName`  
- Aplica-se somente a símbolos que têm não decorados e nomes decorados.  
+ Aplica-se apenas aos símbolos que têm não decorados e nomes decorados.  
   
 ## <a name="remarks"></a>Comentários  
- Os valores da enumeração são passados para os seguintes métodos:  
+ Os valores dessa enumeração são passados para os seguintes métodos:  
   
 -   [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)  
   
@@ -76,6 +77,6 @@ enum NameSearchOptions {
   
 ## <a name="see-also"></a>Consulte também  
  [Enumerações e estruturas](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [: Findchildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
- [: FindFile](../../debugger/debug-interface-access/idiasession-findfile.md)   
+ [Idiasession:: Findchildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
+ [Idiasession:: FindFile](../../debugger/debug-interface-access/idiasession-findfile.md)   
  [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)

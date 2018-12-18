@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 371a5c45e7df725babab96587e5064e5290d80ac
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f200f02ec3a79c3ccdece3a4cc0ae5b10e2b491c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49927587"
 ---
 # <a name="idebugengine2setexception"></a>IDebugEngine2::SetException
-Especifica como o mecanismo de depuração (DE) deve tratar uma exceção especificada.  
+Especifica como o mecanismo de depuração (DES) deve lidar com uma determinada exceção.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,13 +41,13 @@ int SetException(
   
 #### <a name="parameters"></a>Parâmetros  
  `pException`  
- [in] Um [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) estrutura que descreve a exceção e depurá-lo.  
+ [in] Uma [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) estrutura que descreve a exceção e como depurá-lo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- A DE pode ser instruída para parar o programa de gerar uma exceção na primeira instância, a segunda oportunidade, ou não.  
+ A DE podia ser instruída para interromper o programa gerar uma exceção em primeira chance, segunda chance, ou nenhum.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   

@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: af7102a049cd3db072506cbf492799908196df32
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e4a71f839c2129bcfb699188dec09b02b18d4cd1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920112"
 ---
 # <a name="sccismulticheckoutenabled-function"></a>Função SccIsMultiCheckoutEnabled
-Essa função verifica se o plug-in de controle de origem permite vários check-outs em um arquivo.  
+Essa função verifica se o plug-in de controle do código-fonte permite vários check-outs em um arquivo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,10 +39,10 @@ SCCRTN SccIsMultiCheckoutEnabled(
  [in] A estrutura de contexto de plug-in de controle de origem.  
   
  pbMultiCheckout  
- [out] Especifica se vários check-outs estão habilitados para este projeto (diferente de zero significa que vários check-outs têm suporte).  
+ [out] Especifica se vários check-outs estão habilitadas para este projeto (diferente de zero significa que vários check-outs têm suporte).  
   
 ## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+ A implementação de plug-in de controle do código-fonte desta função deve retornar um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -49,7 +50,7 @@ SCCRTN SccIsMultiCheckoutEnabled(
 |SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Falha não específica.|  
   
 ## <a name="remarks"></a>Comentários  
- O IDE faz duas verificações para determinar se arquivos podem fazer check-out simultaneamente por mais de um usuário. Primeiro, o sistema de controle de origem deve dar suporte a vários check-outs. O plug-in de controle de origem pode especificar esse recurso durante a inicialização, especificando o `SCC_CAP_MULTICHECKOUT`. Depois disso, como uma segunda verificação, o IDE chama esta função para determinar se o projeto atual dá suporte a vários check-outs. Se vários check-outs têm suporte para o projeto selecionado, a plug-in retorna um caso de sucesso de código e define `pbMultiCheckout` como diferente de zero (`TRUE`) ou `FALSE`.  
+ O IDE faz duas verificações para determinar se arquivos podem fazer check-out simultaneamente por mais de um usuário. Primeiro, o sistema de controle do código-fonte deve oferecer suporte a vários check-outs. O plug-in de controle de origem pode especificar esse recurso durante a inicialização, especificando o `SCC_CAP_MULTICHECKOUT`. Depois disso, como uma segunda verificação, o IDE chama essa função para determinar se o projeto atual dá suporte a vários check-outs. Se vários check-outs têm suporte para o projeto selecionado, a plug-in retorna um sucesso de código e definirá `pbMultiCheckout` como não zero (`TRUE`) ou `FALSE`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções de API do plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)

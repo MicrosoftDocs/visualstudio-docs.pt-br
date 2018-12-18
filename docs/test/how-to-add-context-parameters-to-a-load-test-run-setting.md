@@ -1,27 +1,31 @@
 ---
-title: Adicionar parâmetros de contexto a uma configuração de execução de teste de carga no Visual Studio | Microsoft Docs
+title: Adicionar parâmetros de contexto a uma configuração de execução de teste de carga no Visual Studio
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, run settings, context parameters
 - load tests, context parameters
 ms.assetid: a8a0b97e-8040-4711-85ab-36548b130ed2
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 03db08b701574a4e910b96c843d0f2638e71a4f7
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: c351079f0a29176ded3172d6e0e26893a1163354
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894099"
 ---
 # <a name="how-to-add-context-parameters-to-a-load-test-run-setting"></a>Como adicionar parâmetros de contexto a uma configuração de execução de teste de carga
 
 Depois de criar seu teste de carga usando o **Novo Assistente de Teste de Carga**, você poderá usar o **Editor de Teste de Carga** para alterar as propriedades de cenários para que eles atendam às suas metas e necessidades de teste.
 
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
 > [!NOTE]
-> Para obter uma lista completa das propriedades das configurações de execução e suas descrições, consulte [Propriedades de configurações de execução de teste de carga](../test/load-test-run-settings-properties.md).
+> Para obter uma lista completa das propriedades das configurações de execução e suas descrições, confira [Propriedades de configurações de execução de teste de carga](../test/load-test-run-settings-properties.md).
 
 Você pode criar os parâmetros de contexto a serem usados em uma configuração de execução de teste de carga usando o Editor de testes de carga. Os parâmetros de contexto permitem parametrizar uma cadeia de caracteres.
 
@@ -34,19 +38,19 @@ Se atribuir o valor do parâmetro de contexto Webserver1 como `http://CorporateS
 
 Além disso, atribuindo valores diferentes a um parâmetro de contexto usando o mesmo nome em diferentes configurações de execução de teste de carga, você pode executar o teste de carga usando diferentes ambientes:
 
--   Configuração da execução do servidor Web de preparo corporativo: o parâmetro de contexto chamado WebServer1=http://CorporateStagingWebServer
+- Configuração de execução do servidor Web de preparo empresarial: o parâmetro de contexto chamado `WebServer1=http://CorporateStagingWebServer`
 
--   Configuração da execução do servidor Web de produção corporativo: o parâmetro de contexto chamado WebServer1=http://CorporateProductionWebServer
+- Configuração de execução do servidor Web de produção empresarial: o parâmetro de contexto chamado `WebServer1=http://CorporateProductionWebServer`
 
- **Alterando a configuração de execução na linha de comando**
+  **Alterando a configuração de execução na linha de comando**
 
- Se você quiser usar configurações de execução diferentes na linha de comando para se beneficiar da estratégia do parâmetro de contexto, use os seguintes comandos:
+  Se você quiser usar configurações de execução diferentes na linha de comando para se beneficiar da estratégia do parâmetro de contexto, use os seguintes comandos:
 
- **Set Test.UseRunSetting= CorporateStagingWebServer**
+  **Set Test.UseRunSetting= CorporateStagingWebServer**
 
- -e-
+  -e-
 
- **mstest /testcontainer:loadtest1.loadtest**
+  **mstest /testcontainer:loadtest1.loadtest**
 
 ## <a name="to-add-a-context-parameter-to-a-run-setting"></a>Para adicionar um parâmetro de contexto a uma configuração de execução
 
@@ -62,12 +66,12 @@ Além disso, atribuindo valores diferentes a um parâmetro de contexto usando o 
 
      Se a configuração de execução já contém uma pasta **Parâmetros de contexto**, você pode clicar com o botão direito do mouse nela e escolher **Adicionar parâmetro de contexto**.
 
-4.  Na janela Propriedades, altere o valor de **Nome** conforme apropriado (por exemplo, WebServer1). Na janela Propriedades, altere **Valor** para o parâmetro que deseja usar (por exemplo, http://CorporateStagingWebServer).
+4.  Na janela **Propriedades**, altere o valor de **Nome** conforme apropriado (por exemplo, WebServer1). Na janela **Propriedades**, altere **Valor** para o parâmetro que você deseja usar (por exemplo, `http://CorporateStagingWebServer`).
 
-5.  (Opcional) Repita as etapas de 3 a 5 e use uma cadeia de caracteres diferente para a propriedade **Valor** (por exemplo, http://CorporateProductionWebServer).
+5.  (Opcional) Repita as etapas 3 a 5 e use uma cadeia de caracteres diferente para a propriedade **Valor** (por exemplo, `http://CorporateProductionWebServer`).
 
 6.  Selecione as configurações de execução que quer que estejam ativas. Abra o menu de atalho nas configurações de execução e selecione **Definir como ativo**.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Definindo configurações de execução de teste de carga](../test/configure-load-test-run-settings.md)
+- [Definir configurações de execução de teste de carga](../test/configure-load-test-run-settings.md)

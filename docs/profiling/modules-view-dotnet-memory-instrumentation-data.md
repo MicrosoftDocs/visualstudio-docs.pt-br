@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c04ecdc1de848a95ad9f5051cc9ec54da02a3625
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a0dd74f25ed5dc7f76b9d35ae3d2d9833f8e4ab8
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35255519"
 ---
-# <a name="modules-view---net-memory-instrumentation-data"></a>Exibição Módulos – Dados de instrumentação da memória do .NET
+# <a name="modules-view---net-memory-instrumentation-data"></a>Exibição Módulos – dados de instrumentação de memória do .NET
 A exibição Módulos de dados de alocação de memória do .NET coletados usando o método de instrumentação agrupa os dados de tempo e memória pelos módulos que foram executados na execução de criação de perfil. Os dados de criação de perfil das funções do módulo são listados abaixo do nó do módulo.  
   
 ## <a name="general"></a>Geral  
@@ -54,7 +55,7 @@ A exibição Módulos de dados de alocação de memória do .NET coletados usand
 |**Bytes Inclusivos**|– Para uma função, o número de bytes que foram alocados pela função. Esse número inclui bytes que foram alocados em funções que foram chamadas pela função.<br />– Para um módulo, o número de bytes que foram alocados em uma execução de criação de perfil que foram alocados quando pelo menos uma função do módulo estava em execução. Esse número inclui objetos que foram criados em todas as funções que foram chamadas pelas funções do módulo.|  
 |**% de Bytes Inclusivos**|O percentual de todos os bytes que foram alocados na execução de criação de perfil que eram bytes inclusivos do módulo ou função.|  
   
-## <a name="elapsed-inclusive-values"></a>Valores Inclusivos Decorridos  
+## <a name="elapsed-inclusive-values"></a>Valores inclusivos decorridos  
  Os valores inclusivos decorridos indicam o tempo que uma função ficou na pilha de chamadas. O tempo inclui o tempo gasto em funções filho e em chamadas para o sistema operacional, como operações de entrada/saída e de mudanças de contexto.  
   
 |Column|Descrição|  
@@ -65,7 +66,7 @@ A exibição Módulos de dados de alocação de memória do .NET coletados usand
 |**Tempo Inclusivo Decorrido Máximo**|– Para uma função, o tempo inclusivo decorrido máximo de uma chamada para essa função.<br />– Para um módulo, o tempo inclusivo decorrido máximo de todas as chamadas para funções no módulo.|  
 |**Tempo Inclusivo Decorrido Mínimo**|– Para uma função, o tempo inclusivo decorrido mínimo de uma chamada para esse módulo ou função.<br />– Para um módulo, o tempo inclusivo decorrido mínimo de todas as chamadas para funções no módulo.|  
   
-## <a name="elapsed-exclusive-values"></a>Valores Exclusivos Decorridos  
+## <a name="elapsed-exclusive-values"></a>Valores exclusivos decorridos  
  Valores exclusivos decorridos indicam o tempo durante o qual uma função estava diretamente em execução no topo da pilha de chamadas. O valor não inclui o tempo gasto em funções filho, mas inclui chamadas ao sistema operacional, como mudanças de contexto e operações de entrada/saída.  
   
 |Column|Descrição|  
@@ -76,7 +77,7 @@ A exibição Módulos de dados de alocação de memória do .NET coletados usand
 |**Tempo Exclusivo Decorrido Máximo**|– Para uma função, o tempo exclusivo decorrido máximo de uma chamada para essa função.<br />– Para um módulo, o tempo exclusivo decorrido máximo de todas as chamadas para funções no módulo.|  
 |**Tempo Exclusivo Decorrido Mínimo**|– Para uma função, o tempo exclusivo decorrido mínimo de uma chamada para esse módulo ou função.<br />– Para um módulo, o tempo exclusivo decorrido mínimo de todas as chamadas para funções no módulo.|  
   
-## <a name="application-inclusive-values"></a>Valores Inclusivos do Aplicativo  
+## <a name="application-inclusive-values"></a>Valores inclusivos do aplicativo  
  Os valores inclusivos do aplicativo indicam o tempo que uma função ficou na pilha de chamadas. O tempo não inclui o tempo gasto em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto, mas inclui o tempo gasto em funções filho.  
   
 |Column|Descrição|  
@@ -87,7 +88,7 @@ A exibição Módulos de dados de alocação de memória do .NET coletados usand
 |**Tempo Inclusivo Máximo do Aplicativo**|– Para uma função, o tempo inclusivo máximo do aplicativo de uma chamada para essa função.<br />– Para um módulo, o tempo inclusivo máximo do aplicativo de todas as chamadas para funções no módulo.|  
 |**Tempo Inclusivo Mínimo do Aplicativo**|– Para uma função, o tempo inclusivo mínimo do aplicativo de uma chamada para esse módulo ou função.<br />– Para um módulo, o tempo inclusivo mínimo do aplicativo de todas as chamadas para funções no módulo.|  
   
-## <a name="application-exclusive-values"></a>Valores Exclusivos do Aplicativo  
+## <a name="application-exclusive-values"></a>Valores exclusivos do aplicativo  
  Valores exclusivos do aplicativo indicam o tempo gasto no módulo ou função, excluindo o tempo gasto em funções filho. O tempo indicado também exclui as chamadas para o sistema operacional, como alterações de contexto e operações de entrada/saída.  
   
 |Column|Descrição|  

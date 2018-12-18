@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: debb6d9e8f37ed34c67c8df659160949cfcf6158
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dbd9e3d683336d2009e8ff9f02665f7610f988f9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915185"
 ---
 # <a name="bpresolutioncode"></a>BP_RESOLUTION_CODE
-Descreve o local de um ponto de interrupção do código.  
+Descreve o local de um ponto de interrupção de código.  
   
 ## <a name="syntax"></a>Sintaxe  
   

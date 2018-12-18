@@ -1,14 +1,14 @@
 ---
 title: Propriedade SCRIPTPROP_HOSTKEEPALIVE | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bfa199f2-28ba-4320-bc0f-2320fad018bd
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -17,6 +17,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24734136"
 ---
 # <a name="scriptprophostkeepalive-property"></a>Propriedade SCRIPTPROP_HOSTKEEPALIVE
 Usado para especificar se o mecanismo de script deve ser mantido totalmente funcional, se houver referências pendentes.  

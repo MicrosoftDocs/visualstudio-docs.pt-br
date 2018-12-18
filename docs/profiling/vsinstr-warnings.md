@@ -16,19 +16,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 60ea2bcf1770e8c20db61c93a2b4ed6516b0daff
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a306276e015d06fe3becf297d0bb5834f640a1a7
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34571640"
 ---
 # <a name="vsinstr-warnings"></a>Avisos de VSInstr
-A tabela a seguir lista avisos emitidos pela ferramenta VSInstr.exe. Você pode usar a opção NOWARN junto com os números de aviso para suprimir o aviso seja exibido.  
+A tabela a seguir lista os avisos emitidos pela ferramenta *VSInstr.exe*. Você pode usar a opção NOWARN junto com os números de aviso para suprimir o aviso seja exibido.  
   
 |Número do aviso|Descrição|  
 |--------------------|-----------------|  
 |**VSP2000**|Erro interno. Não é possível obter o nome de arquivo do módulo para este executável.|  
-|**VSP2001**|\<assembly name> é um assembly de nome forte. Ele deve ser assinado novamente antes de ser executado.<br /><br /> Este aviso ocorre quando um assembly assinado é instrumentado. Você pode usar a ferramenta sn.exe desistir binário ou desativar temporariamente o requisito de nome forte. Para saber mais, veja [Sn.exe (Ferramenta de Nome Forte)](/dotnet/framework/tools/sn-exe-strong-name-tool).|  
+|**VSP2001**|\<assembly name> é um assembly de nome forte. Ele deve ser assinado novamente antes de ser executado.<br /><br /> Este aviso ocorre quando um assembly assinado é instrumentado. Use a ferramenta *sn.exe* para desistir do binário ou desligar temporariamente o requisito de nome forte. Para obter mais informações, confira [Sn.exe (ferramenta de nome forte)](/dotnet/framework/tools/sn-exe-strong-name-tool).|  
 |**VSP2002**|Não foi possível localizar a função \<funcname > no arquivo \<filename ><br /><br /> Este aviso ocorrerá se uma função não puder ser localizada no arquivo especificado.|  
 |**VSP2003**|Não foi possível encontrar um salto cruzado para a função \<funcname> no arquivo \<filename>.<br /><br /> Este aviso ocorre se VSInstr não puder anular saltos cruzados. Saltos cruzados são usados para otimização do código.|  
 |**VSP2004**|A função \<funcname> foi excluída por meio da opção de linha de comando EXCLUDE, mas ela era necessária porque continha um salto cruzado.<br /><br /> Este aviso ocorre se a função foi excluída usando a opção EXCLUDE, mas é necessária durante o processo de instrumentação. O criador de perfil inclui automaticamente a função necessária.|  

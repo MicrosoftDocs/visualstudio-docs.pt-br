@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7466051b7dd541e4361feb654c4ae5dfcd3c21bd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d061f6a059fba9f43a57efe2c7f22b75b77cbef8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925468"
 ---
 # <a name="ienumcodepaths2clone"></a>IEnumCodePaths2::Clone
 Retorna uma cópia da enumeração atual como um objeto separado.  
@@ -43,10 +44,10 @@ int Clone(
  [out] Retorna uma cópia dessa enumeração como um objeto separado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- A cópia da enumeração tem o mesmo estado original no momento em que este método é chamado. No entanto, o original e da cópia estados são separados e podem ser alterados individualmente.  
+ A cópia da enumeração tem o mesmo estado original no momento em que esse método é chamado. No entanto, a cópia e o original estados são separados e podem ser alterados individualmente.  
   
 ## <a name="see-also"></a>Consulte também  
  [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md)

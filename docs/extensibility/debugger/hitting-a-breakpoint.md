@@ -1,5 +1,5 @@
 ---
-title: Alcançar um ponto de interrupção | Microsoft Docs
+title: Atingindo um ponto de interrupção | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f4788f8a038a274d6d94b4edf368e30ef495665
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8a9b110abdaf0ebfaed720dd5d09c0e215a6b2e7
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231549"
 ---
-# <a name="hitting-a-breakpoint"></a>Alcançar um ponto de interrupção
-O seguinte descreve o processo quando o mecanismo de depuração (DE) atinge um ponto de interrupção durante a execução passo a passo:  
+# <a name="hit-a-breakpoint"></a>Atingir um ponto de interrupção
+A seção a seguir descreve o processo quando o mecanismo de depuração (DES) atinge um ponto de interrupção durante a execução ou passo a passo:  
   
-## <a name="troubleshooting-a-hit-breakpoint"></a>Solucionando problemas de um ponto de interrupção de ocorrência  
+## <a name="troubleshoot-a-hit-breakpoint"></a>Solucionar problemas de um ponto de interrupção de ocorrência  
   
 1.  O envia DE um [IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md) interface como um **EVENT_SYNC_STOP**.  
   

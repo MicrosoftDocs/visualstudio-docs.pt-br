@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b5210859115947115bce6525cd5b6cd15c4d59d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5938809aa7fcd2e913743fc778c66205e39988e8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49901093"
 ---
 # <a name="idebugclassfieldenumbaseclasses"></a>IDebugClassField::EnumBaseClasses
-Cria um enumerador para as classes base desta classe.  
+Cria um enumerador para as classes base dessa classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +47,7 @@ int EnumBaseClasses(
  Se for bem-sucedido, Retorna S_OK, retorna S_SH_NO_BASE_CLASSES se não houver nenhuma classe base (e o `ppEnum` parâmetro for definido como um valor nulo); caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- As classes base do objeto de enumerador são especificadas na ordem da classe base mais imediata (ou mais derivada) para a classe base mais remota. Por exemplo, considerando as classes C++:  
+ As classes base no objeto de enumerador são especificadas na ordem da classe base mais imediata (ou mais derivada) para a classe base mais remota. Por exemplo, considerando as classes do C++:  
   
 ```  
 class Root { }  

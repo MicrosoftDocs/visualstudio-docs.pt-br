@@ -1,5 +1,5 @@
 ---
-title: Entrar no modo de quebra | Microsoft Docs
+title: Entrar no modo de interrupção | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,20 +14,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb601ca4cf00ca2cc811f75ec27ad12bc6be32db
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0f9b41a111ecc6118c9bae0ff518d8421a9f2320
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231932"
 ---
-# <a name="entering-break-mode"></a>Entrar no modo de interrupção
-O exemplo a seguir descreve o processo que ocorre quando um ponto de interrupção é encontrado após entrar em uma função, executando para a linha do código-fonte que contém o cursor ou para um ponto de interrupção.  
+# <a name="enter-break-mode"></a>Insira o modo de interrupção
+As informações a seguir descrevem o processo que ocorre quando um ponto de interrupção é encontrado depois de entrar em uma função, em execução para a linha de código-fonte que contém o cursor de ou em execução para um ponto de interrupção.  
   
 ## <a name="break-mode-process"></a>Processo do modo de interrupção  
   
-1.  O mecanismo de depuração (DE) envia [IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md), [IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md), ou qualquer outro evento de interrupção para fazer com que o IDE entrar no modo de interrupção.  
+1.  O mecanismo de depuração (DES) envia [IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md), [IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md), ou qualquer outro evento de interrupção para fazer com que o IDE entrar no modo de interrupção.  
   
-2.  O SDM obtém as informações de pilha de chamada do thread, da seguinte maneira:  
+2.  O SDM obtém as informações de pilha de chamadas do thread, da seguinte maneira:  
   
     -   [IDebugThread2::EnumFrameInfo](../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)  
   
@@ -39,7 +40,7 @@ O exemplo a seguir descreve o processo que ocorre quando um ponto de interrupç�
   
     -   [IDebugDocumentContext2::GetName](../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md) para obter o nome do arquivo  
   
-    -   [IDebugDocumentContext2::GetStatementRange](../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md) para obter o intervalo de instrução  
+    -   [IDebugDocumentContext2::GetStatementRange](../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md) obter o intervalo de instrução  
   
     -   [IDebugStackFrame2::GetCodeContext](../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md) para obter informações de memória  
   

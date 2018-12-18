@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 479206b75325c1b7e6bba0e4cc4e9b53944d73d3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7fa10fb5ebe2f9a78d44997c29ae51bc02e2c842
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934932"
 ---
 # <a name="idebugprocessex2"></a>IDebugProcessEx2
-Essa interface permite que a sessão de depuração manager (SDM) notificar um processo que está anexando a ou desanexar do processo.  
+Essa interface permite que a sessão de Gerenciador de depuração (SDM) notificar um processo que está anexando a ou desanexar do processo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,19 +32,19 @@ IDebugProcessEx2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- Um fornecedor de porta personalizada implementa essa interface no mesmo objeto, como o [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) interface para:  
+ Um fornecedor de porta personalizada implementa essa interface no mesmo objeto como o [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) de interface para:  
   
--   Suporte a controle de sessões conectadas a um processo  
+- Suporte ao acompanhamento de sessões conectadas a um processo  
   
--   Suporte a anexação automática em vários mecanismos de depuração  
+- Suporte a anexação automática entre vários mecanismos de depuração  
   
- O fornecedor de porta personalizada pode implementar essa interface se escolhe.  
+  O fornecedor de porta personalizada pode implementar essa interface se optar por.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
   
 -   As chamadas SDM [QueryInterface](/cpp/atl/queryinterface) em um `IDebugProcess2` interface para obter essa interface.  
   
-## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
+## <a name="methods-in-vtable-order"></a>Métodos na ordem de Vtable  
  A tabela a seguir mostra os métodos de `IDebugProcessEx2`.  
   
 |Método|Descrição|  
@@ -53,7 +54,7 @@ IDebugProcessEx2 : IUnknown
 |[AddImplicitProgramNodes](../../../extensibility/debugger/reference/idebugprocessex2-addimplicitprogramnodes.md)|Adiciona nós de programa para obter uma lista de mecanismos de depuração.|  
   
 ## <a name="remarks"></a>Comentários  
- Esta interface é privada entre o SDM e o processo.  
+ Essa interface é privada entre o SDM e o processo.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: Portpriv.h  
@@ -63,5 +64,5 @@ IDebugProcessEx2 : IUnknown
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Consulte também  
- [Interfaces de núcleo](../../../extensibility/debugger/reference/core-interfaces.md)   
+ [Principais Interfaces](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

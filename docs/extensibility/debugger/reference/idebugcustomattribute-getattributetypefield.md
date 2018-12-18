@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 53511cf8549071795576c661e6a38f0c0973d269
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e5a01f5c0aeb9d22d0dc07ef9e436e8649c6bd3b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846324"
 ---
 # <a name="idebugcustomattributegetattributetypefield"></a>IDebugCustomAttribute::GetAttributeTypeField
 Obtém o tipo de classe de atributo personalizado.  
@@ -43,10 +44,10 @@ int GetAttributeTypeField(
  [out] Retorna o [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objeto que representa a classe da qual o atributo personalizado é uma instância.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Um atributo personalizado é sempre uma classe. Esse método fornece acesso a um [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objeto que descreve a classe.  
+ Um atributo personalizado é sempre uma classe. Esse método fornece acesso a um [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objeto que descreve essa classe.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)   

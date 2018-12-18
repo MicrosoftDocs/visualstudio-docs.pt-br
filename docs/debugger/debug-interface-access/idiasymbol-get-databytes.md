@@ -1,5 +1,5 @@
 ---
-title: ': Get_databytes | Microsoft Docs'
+title: 'Idiasymbol:: Get_databytes | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a1e87eb61c70f3c3be28058c2acbc39f24d919c9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 98febaa0d72071ac990cb88cec2d56845b3e9d67
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911818"
 ---
 # <a name="idiasymbolgetdatabytes"></a>IDiaSymbol::get_dataBytes
 Recupera os bytes de dados de um símbolo de OEM.  
@@ -35,16 +36,16 @@ HRESULT get_dataBytes (
   
 #### <a name="parameters"></a>Parâmetros  
  `cbData`  
- [in] Tamanho do buffer para armazenar os dados.  
+ [in] Tamanho do buffer para manter os dados.  
   
  `pcbData`  
  [out] Retorna o número de bytes gravados, ou, se o `data` parâmetro é `NULL`, retorna o número de bytes disponíveis.  
   
  `data[]`  
- [out] Um buffer é preenchido com os bytes de dados.  
+ [out] Um buffer que será preenchido com os bytes de dados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
@@ -54,7 +55,7 @@ HRESULT get_dataBytes (
 |Requisito|Descrição|  
 |-----------------|-----------------|  
 |Cabeçalho:|dia2.h|  
-|Versão:|Versão 7.0 do DIA SDK|  
+|Versão:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

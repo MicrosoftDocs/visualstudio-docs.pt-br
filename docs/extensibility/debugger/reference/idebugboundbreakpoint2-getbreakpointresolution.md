@@ -16,11 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 35337b26053876c9009be124bba9791743f53009
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7d58c58dbbaad6d57518c8f13620029034ae4b76
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920385"
 ---
 # <a name="idebugboundbreakpoint2getbreakpointresolution"></a>IDebugBoundBreakpoint2::GetBreakpointResolution
 Obtém a resolução de ponto de interrupção que descreve este ponto de interrupção.  
@@ -43,15 +44,15 @@ int GetBreakpointResolution(
  `ppBPResolution`  
  [out] Retorna o [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) interface que representa um dos seguintes:  
   
--   O objeto de resolução do ponto de interrupção que descreve o local no código onde um ponto de interrupção do código foi vinculado.  
+-   O objeto de resolução de ponto de interrupção que descreve o local no código em que um ponto de interrupção de código foi vinculado.  
   
--   O local de dados em que um ponto de interrupção de dados tiver associado.  
+-   O local de dados onde um ponto de interrupção de dados foi associado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o estado do objeto de ponto de interrupção associado é definido como `BPS_DELETED` (parte do [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeração).  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o estado do objeto associado de ponto de interrupção é definido como `BPS_DELETED` (parte do [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeração).  
   
 ## <a name="remarks"></a>Comentários  
- Chamar o [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md) método para determinar se a resolução de ponto de interrupção para códigos ou dados.  
+ Chame o [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md) método para determinar se a resolução de ponto de interrupção para código ou dados.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como implementar esse método para um simples `CBoundBreakpoint` objeto que expõe o [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) interface.  

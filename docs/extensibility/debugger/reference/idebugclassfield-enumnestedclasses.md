@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 382e822a03a7a4e4a9ae30b41b4b9a4a7ec1643f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a313e27c3dcbca0136b00bfb789e444174474369
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49937519"
 ---
 # <a name="idebugclassfieldenumnestedclasses"></a>IDebugClassField::EnumNestedClasses
 Cria um enumerador para as classes aninhadas nessa classe.  
@@ -43,10 +44,10 @@ int EnumNestedClasses(
  [out] Retorna um [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objeto que representa a lista de classes aninhadas. Retorna um valor nulo se não houver nenhuma classe aninhada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK ou retornará S_FALSE se não houver nenhuma classe aninhada. Caso contrário, retornará um código de erro.  
+ Se for bem-sucedido, Retorna S_OK ou retornará S_FALSE se não houver nenhuma classe aninhada. Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Cada elemento da enumeração é uma [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objeto que descreve uma classe aninhada.  
+ Cada elemento da enumeração é um [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objeto que descreve uma classe aninhada.  
   
  Uma classe aninhada é uma classe definida dentro de outra classe. Por exemplo:  
   
@@ -56,7 +57,7 @@ class RootClass {
 };  
 ```  
   
- O [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumeração contém um objeto representando o `NestedClass` classe.  
+ O [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumeração conteria um objeto que representa o `NestedClass` classe.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129596"
 ---
 # <a name="services-provided-source-control-vspackage"></a>Serviços fornecidos (VSPackage de controle de origem)
 Serviços são o mecanismo principal por meio do qual funcionalidade é compartilhada entre VSPackages e entre o ambiente de desenvolvimento integrado (IDE) do Visual Studio e seus VSPackages instalado. Para obter uma descrição detalhada dos serviços e sua importância no IDE do Visual Studio, consulte[usando e fornecer serviços](../../extensibility/using-and-providing-services.md).  

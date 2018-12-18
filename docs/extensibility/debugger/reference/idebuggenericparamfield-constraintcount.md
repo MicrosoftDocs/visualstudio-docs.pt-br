@@ -14,11 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bd4cfa82c754625968730ce6828cc08ee9254c8d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9139478b4e3f8134bcb002e51fa3aaab7c10ddbd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921049"
 ---
 # <a name="idebuggenericparamfieldconstraintcount"></a>IDebugGenericParamField::ConstraintCount
 Retorna o número de restrições que estão associados esse parâmetro genérico.  
@@ -39,13 +40,13 @@ int ConstraintCount(
   
 #### <a name="parameters"></a>Parâmetros  
  `pcConst`  
- [out no] Número de restrições que estão associados esse campo.  
+ [no, out] Número de restrições que estão associados esse campo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CDebugGenericParamFieldType** objeto que expõe o [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) interface.  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugGenericParamFieldType** objeto que expõe a [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) interface.  
   
 ```cpp  
 HRESULT CDebugGenericParamFieldType::ConstraintCount(ULONG32* pcConst)  

@@ -1,6 +1,7 @@
 ---
-title: Teste de unidade de código do Visual C# no Visual Studio | Microsoft Docs
+title: Testes de unidade de código do Visual C#
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -8,29 +9,30 @@ manager: douge
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: 32f76e3ebd6827ecb9ce0c27fa69b17a3da02f4e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 76c20fb987bb1380cb4d3f00e078aac81f26e89f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064848"
 ---
 # <a name="unit-testing-visual-c-code"></a>Testes de unidade de código do Visual C#
 
-Este tópico descreve uma maneira de criar testes de unidade para uma classe do Visual C# em um aplicativo UWP. A classe Rooter demonstra memórias vagas da teoria de limite do cálculo implementando uma função que calcula uma estimativa da raiz quadrada de um determinado número. O aplicativo de matemática pode usar essa função para mostrar a um usuário as coisas divertidas que podem ser feitas com a matemática.
+Este artigo descreve uma maneira de criar testes de unidade para uma classe Visual C# em um aplicativo UWP. A classe Rooter demonstra memórias vagas da teoria de limite do cálculo implementando uma função que calcula uma estimativa da raiz quadrada de um determinado número. O aplicativo de matemática pode usar essa função para mostrar a um usuário as coisas divertidas que podem ser feitas com a matemática.
 
-Este tópico demonstra como usar teste de unidade como a primeira etapa do desenvolvimento. Nessa abordagem, primeiramente, você escreve um método de teste que verifique um comportamento específico no sistema que está sendo testado e, em seguida, escreve um código que passe no teste. Ao fazer alterações na ordem dos procedimentos a seguir, é possível reverter essa estratégia para primeiro escrever o código que deseja testar e depois escrever as unidades de teste.
+Este artigo demonstra como usar o teste de unidade como a primeira etapa do desenvolvimento. Nessa abordagem, primeiramente, você escreve um método de teste que verifique um comportamento específico no sistema que está sendo testado e, em seguida, escreve um código que passe no teste. Ao fazer alterações na ordem dos procedimentos a seguir, é possível reverter essa estratégia para primeiro escrever o código que deseja testar e depois escrever as unidades de teste.
 
-Este tópico também cria uma única solução do Visual Studio e projetos separados para os testes de unidade e a DLL que você deseja testar. Também é possível incluir os testes de unidade diretamente no projeto de DLL ou criar soluções separadas para os testes de unidade e a DLL.
+Este artigo também cria uma única solução do Visual Studio e projetos separados para os testes de unidade e a DLL que você deseja testar. Também é possível incluir os testes de unidade diretamente no projeto de DLL ou criar soluções separadas para os testes de unidade e a DLL.
 
 ## <a name="create-the-solution-and-the-unit-test-project"></a>Criar a solução e o projeto de teste de unidade
 
-1. No menu **Arquivo**, escolha **Novo** > **Projeto...**.
+1. No menu **Arquivo**, escolha **Novo** > **Projeto**.
 
 2. Na caixa de diálogo **Novo Projeto**, expanda **Instalado** > **Visual C#** e escolha **Windows Universal**. Escolha então **Aplicativo em Branco** na lista de modelos de projeto.
 
 3. Dê ao projeto o nome `Maths` e verifique se a opção **Criar diretório para a solução** está selecionada.
 
-4. No Gerenciador de Soluções, escolha o nome da solução, escolha **Adicionar** no menu de atalho e escolha **Novo Projeto**.
+4. No **Gerenciador de Soluções**, escolha o nome da solução, escolha **Adicionar** no menu de atalho e, em seguida, escolha **Novo Projeto**.
 
 5. Na caixa de diálogo **Novo Projeto**, expanda **Instalado** e, em seguida, expanda **Visual C#** e escolha **Windows Universal**. Em seguida, escolha **Aplicativo de Teste de Unidade (Windows Universal)** na lista de modelos de projeto.
 
@@ -64,11 +66,11 @@ Este tópico também cria uma única solução do Visual Studio e projetos separ
 
         Quando os testes são executados, uma instância de cada classe de teste é criada. Os métodos de teste são chamados em uma ordem não especificada.
 
-   - Você pode definir métodos especiais que são invocados antes e depois de cada módulo, classe ou método. Para saber mais, veja [Uso da estrutura MSTest em testes de unidade](../test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md).
+   - Você pode definir métodos especiais que são invocados antes e depois de cada módulo, classe ou método. Para obter mais informações, confira [Usar a estrutura MSTest em testes de unidade](../test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md).
 
 ## <a name="verify-that-the-tests-run-in-test-explorer"></a>Verificar se o testes são executados no Gerenciador de Testes
 
-1. Insira um código de teste em TestMethod1 do arquivo **UnitTest1.cs**:
+1. Insira um código de teste em TestMethod1 do arquivo *UnitTest1.cs*:
 
    ```csharp
    [TestMethod]
@@ -82,13 +84,13 @@ Este tópico também cria uma única solução do Visual Studio e projetos separ
 
 2. No menu **Testar**, escolha **Executar** e **Executar Todos**.
 
-   O projeto de teste é compilado e executado. A janela Gerenciador de Testes é exibida e o teste é listado em **Testes Aprovados**. O painel Resumo, na parte inferior da janela, fornece mais detalhes sobre o teste selecionado.
+   O projeto de teste é compilado e executado. A janela **Gerenciador de Testes** é exibida e o teste é listado em **Testes Aprovados**. O painel **Resumo** na parte inferior da janela fornece mais detalhes sobre o teste selecionado.
 
    ![Gerenciador de Testes](../test/media/ute_cpp_testexplorer_testmethod1.png)
 
 ## <a name="add-the-rooter-class-to-the-maths-project"></a>Adicionar a classe Rooter ao projeto Matemática
 
-1. No Gerenciador de Soluções, escolha o nome do projeto **Matemática**. Do menu de atalho, escolha **Adicionar** e, então, **Classe**.
+1. No **Gerenciador de Soluções**, escolha o nome de projeto **Maths**. Do menu de atalho, escolha **Adicionar** e, então, **Classe**.
 
 2. Dê ao arquivo da classe o nome *Rooter.cs*.
 
@@ -114,7 +116,7 @@ Este tópico também cria uma única solução do Visual Studio e projetos separ
 
 1. Adicione uma referência ao aplicativo Matemática para o projeto RooterTests.
 
-    1. No Gerenciador de Soluções, escolha o projeto **RooterTests** e, em seguida, escolha **Adicionar Referência...** no menu de atalho.
+    1. No **Gerenciador de Soluções**, escolha o projeto **RooterTests** e, em seguida, escolha **Adicionar Referência** no menu de atalho.
 
     2. Na caixa de diálogo **Adicionar Referência - RooterTests**, expanda **Solução** e escolha **Projetos**. Então, selecione o item **Matemática**.
 
@@ -146,9 +148,9 @@ Este tópico também cria uma única solução do Visual Studio e projetos separ
 
 4. Compile a solução.
 
-   O novo teste é exibido no Gerenciador de Testes, no nó **Não Executar Testes**.
+   O novo teste é exibido no **Gerenciador de Testes**, no nó **Não Executar Testes**.
 
-5. No Gerenciador de Testes, escolha **Executar Todos**.
+5. No **Gerenciador de Testes**, escolha **Executar Todos**.
 
    ![Êxito no Teste básico](../test/media/ute_cpp_testexplorer_basictest.png)
 
@@ -178,7 +180,7 @@ Você configurou o teste e os projetos de código, além de ter verificado que p
    >
    > Quando os usuários alterarem os respectivos requisitos, desabilite os testes que não estejam mais corretos. Escreva novos testes e faça-os funcionar, um por vez, da mesma maneira incremental.
 
-2. No Gerenciador de Testes, escolha **Executar Todos**.
+2. No **Gerenciador de Testes**, escolha **Executar Todos**.
 
 3. O teste falhará.
 
@@ -270,7 +272,7 @@ Você configurou o teste e os projetos de código, além de ter verificado que p
         }
         ```
 
-4. No Gerenciador de Testes, escolha **Executar Tudo** para testar o método corrigido e ter certeza de que você não introduziu uma regressão.
+4. No **Gerenciador de Testes**, escolha **Executar Tudo** para testar o método corrigido e ter certeza de que você não introduziu uma regressão.
 
 Todos os testes agora foram aprovados.
 

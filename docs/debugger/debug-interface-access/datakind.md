@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c3de9ef6128c3cd5ca6eae80a257b3dc2982cd0f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 8f2b46e420db8addf19ef8694112058bdb8b2f91
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867618"
 ---
 # <a name="datakind"></a>DataKind
 Indica o escopo específico de um valor de dados.  
@@ -57,7 +58,7 @@ enum DataKind {
  Item de dados é um ponteiro de objeto (`this`).  
   
  DataIsFileStatic  
- Item de dados é uma variável de escopo de arquivo.  
+ Item de dados é uma variável no escopo do arquivo.  
   
  DataIsGlobal  
  Item de dados é uma variável global.  
@@ -72,7 +73,7 @@ enum DataKind {
  Item de dados é um valor constante.  
   
 ## <a name="remarks"></a>Comentários  
- Os valores nesta enumeração são retornados pelo [: Get_datakind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md) método.  
+ Os valores nesta enumeração são retornados pelo [idiasymbol:: Get_datakind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: cvconst.h  

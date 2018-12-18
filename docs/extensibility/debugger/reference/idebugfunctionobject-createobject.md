@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 15b41cc5ff9f60143cdbf006005358cb86eb7f30
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d0af1607d8352b158c28248fc4bd85ed0fbaf7b3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908633"
 ---
 # <a name="idebugfunctionobjectcreateobject"></a>IDebugFunctionObject::CreateObject
 Cria um objeto usando um construtor.  
@@ -46,10 +47,10 @@ int CreateObject(
   
 #### <a name="parameters"></a>Parâmetros  
  `pConstructor`  
- [in] Um [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) objeto que representa o construtor do objeto a ser criado.  
+ [in] Uma [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) objeto que representa o construtor do objeto a ser criado.  
   
  `dwArgs`  
- [in] O número de parâmetros na `pArg` matriz. Representa o número de parâmetros passados para o construtor.  
+ [in] O número de parâmetros no `pArg` matriz. Representa o número de parâmetros passados para o construtor.  
   
  `pArg`  
  [in] Uma matriz de [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objetos que representam os parâmetros passados para o construtor.  
@@ -58,12 +59,12 @@ int CreateObject(
  [out] Retorna um `IDebugObject` que representa o objeto recém-criado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Chame esse método para criar um objeto que representa uma instância de uma classe (ou outro tipo complexo que requer um construtor) que é um parâmetro para a função que é representado pelo [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) interface.  
+ Chame esse método para criar um objeto que representa uma instância de uma classe (ou outro tipo complexo que exige um construtor) que é um parâmetro para a função que é representado pela [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) interface.  
   
- Se o parâmetro de objeto não tem um construtor, chame o [CreateObjectNoConstructor](../../../extensibility/debugger/reference/idebugfunctionobject-createobjectnoconstructor.md) método.  
+ Se o parâmetro de objeto não exige um construtor, chame o [CreateObjectNoConstructor](../../../extensibility/debugger/reference/idebugfunctionobject-createobjectnoconstructor.md) método.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)   

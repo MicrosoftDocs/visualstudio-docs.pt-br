@@ -10,23 +10,25 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7575f08f3b84e69f0d23557e3a1843efa4bc5bf3
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 700b6c42cbdbf0a8b8c6f604a4c25f0042e2bffe
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966772"
 ---
 # <a name="create-uml-modeling-projects-and-diagrams"></a>Criar projetos e diagramas de modelagem UML
 
-A partir do Visual Studio de 2017, os Designers de UML foram removidos do Visual Studio. Para obter mais informações, consulte [postagem de blog](https://blogs.msdn.microsoft.com/visualstudioalm/2016/10/14/uml-designers-have-been-removed-layer-designer-now-supports-live-architectural-analysis/).
+Começando com o Visual Studio 2017, os Designers de UML foram removidos do Visual Studio. Para obter mais informações, consulte este [postagem de blog](https://blogs.msdn.microsoft.com/devops/2016/10/14/uml-designers-have-been-removed-layer-designer-now-supports-live-architectural-analysis/).
 
-Se você ainda precisar usar UML, você pode usar a edição do Visual Studio 2015 Enterprise, que é compatível com o lado a lado com versões posteriores do Visual Studio.
+Se você ainda precisar usar UML, você pode usar o Visual Studio 2015 Enterprise edition, que é compatível com o lado a lado com versões posteriores do Visual Studio.
 
-Para obter informações sobre o uso de UML no Visual Studio 2015, consulte:
+Para obter informações sobre como usar o UML no Visual Studio 2015, consulte:
 
-* [Analisar e modelar a sua arquitetura](https://msdn.microsoft.com/library/57b85fsc%28v=vs.140%29.aspx)
-* [Criar modelos para o aplicativo](https://msdn.microsoft.com/library/dd409436%28v=vs.140%29.aspx)
-* [Usar modelos no processo de desenvolvimento](https://msdn.microsoft.com/library/dd409423%28v=vs.140%29.aspx)
-* [Validar o sistema durante o desenvolvimento](https://msdn.microsoft.com/library/dd409448%28v=vs.140%29.aspx)
-* [Estender modelos e diagramas UML](https://msdn.microsoft.com/library/ee329484%28v=vs.140%29.aspx)
+* [Analisar e modelar a sua arquitetura](analyze-and-model-your-architecture.md)
+* [Criar modelos para o aplicativo](create-models-for-your-app.md)
+* [Usar modelos no processo de desenvolvimento](use-models-in-your-development-process.md)
+* [Validar o sistema durante o desenvolvimento](validate-your-system-during-development.md)
+* [Estender modelos e diagramas UML](extend-uml-models-and-diagrams.md)

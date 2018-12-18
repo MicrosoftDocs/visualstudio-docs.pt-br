@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31147327"
 ---
 # <a name="evaluation-tools-for-visual-studio"></a>Ferramentas de avaliação do Visual Studio
 ## <a name="craftsmanship-checklist-for-visual-studio"></a>Lista de verificação de habilidade para Visual Studio  

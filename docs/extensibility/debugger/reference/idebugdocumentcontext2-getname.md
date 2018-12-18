@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ded573db818b2343c13a8618f5b76323b8543a96
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 83fb1927f6772c9ded79405d13f1d9958f92cc8e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903602"
 ---
 # <a name="idebugdocumentcontext2getname"></a>IDebugDocumentContext2::GetName
-Obtém o nome de exibição do documento que contém este contexto de documento.  
+Obtém o nome de exibição do documento que contém o contexto do documento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,16 +43,16 @@ int GetName(
   
 #### <a name="parameters"></a>Parâmetros  
  `gnType`  
- [in] Um valor da [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) enumeração que especifica o tipo de nome a ser retornado.  
+ [in] Um valor a partir de [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) enumeração que especifica o tipo de nome a ser retornado.  
   
  `pbstrFileName`  
  [out] Retorna o nome do arquivo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Geralmente, esse método encaminha a chamada para o [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md) método, a menos que o contexto do documento é gravado para armazenar o nome do documento em si (como a apresentação de exemplo).  
+ Geralmente, esse método encaminha a chamada para o [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md) método, a menos que o contexto do documento é gravado para armazenar o nome do documento em si (como mostra o exemplo).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como implementar esse método para um simples `CDebugContext` objeto que expõe o [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) interface.  

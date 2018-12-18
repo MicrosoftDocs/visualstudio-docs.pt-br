@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31146813"
 ---
 # <a name="using-visual-studio-interop-assemblies"></a>Usando Assemblies de interoperabilidade do Visual Studio
 Assemblies de interoperabilidade do Visual Studio permitem que aplicativos gerenciados acessar as interfaces COM que fornecem a extensibilidade do Visual Studio. Há algumas diferenças entre as interfaces normais e suas versões de interoperabilidade. Por exemplo, HRESULTs são geralmente representados como valores de int e precisam ser manipulados da mesma maneira como exceções e parâmetros (especialmente os parâmetros de saída) são tratados de forma diferente.  

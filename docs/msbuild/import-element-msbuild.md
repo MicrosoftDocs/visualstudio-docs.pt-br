@@ -20,11 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e3ebe16f03c185437bc0ab79fe7c038748c5eb50
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7dd5b0aa6f0ed56aaa3315c03aeef6ed1b77ad62
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839603"
 ---
 # <a name="import-element-msbuild"></a>Elemento Import (MSBuild)
 Importa o conteúdo de um arquivo de projeto para outro arquivo de projeto.  
@@ -34,7 +35,7 @@ Importa o conteúdo de um arquivo de projeto para outro arquivo de projeto.
 
 ## <a name="syntax"></a>Sintaxe  
 
-```  
+```xml  
 <Import Project="ProjectPath"  
     Condition="'String A'=='String B'" />  
 ```  
@@ -54,15 +55,15 @@ Importa o conteúdo de um arquivo de projeto para outro arquivo de projeto.
 
 ### <a name="parent-elements"></a>Elementos pai  
 
-|Elemento|Descrição|  
-|-------------|-----------------|  
-|[Projeto](../msbuild/project-element-msbuild.md)|Elemento raiz necessário de um arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].|  
-|[ImportGroup](../msbuild/importgroup-element.md)|Contém uma coleção de elementos `Import` agrupados em uma condição opcional.|  
+| Elemento | Descrição |
+| - | - |
+| [Projeto](../msbuild/project-element-msbuild.md) | Elemento raiz necessário de um arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| [ImportGroup](../msbuild/importgroup-element.md) | Contém uma coleção de elementos `Import` agrupados em uma condição opcional. |
 
 ## <a name="remarks"></a>Comentários  
  Ao usar o elemento `Import`, você pode reutilizar o código que é comum a vários arquivos de projeto. Isso facilita a manutenção do código porque as atualizações feitas no código compartilhado são propagadas a todos os projetos o importam.  
 
- Por convenção, os arquivos de projeto importados compartilhados são salvos como arquivos .targets, mas são arquivos de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] padrão. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] não impede a importação de um projeto que tem uma extensão de nome de arquivo diferente, mas recomendamos que você use a extensão .targets para manter a consistência.  
+ Por convenção, os arquivos de projeto importados compartilhados são salvos como arquivos *.targets*, mas são arquivos de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] padrão. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] não impede a importação de um projeto que tem uma extensão de nome de arquivo diferente, mas recomendamos que você use a extensão *.targets* para manter a consistência.  
 
  Caminhos relativos em projetos importados são interpretados em relação ao diretório do projeto de importação. Portanto, se um arquivo de projeto for importado em vários arquivos de projeto em locais diferentes, os caminhos relativos no arquivo de projeto importado serão interpretados de maneira diferente para cada projeto importado.  
 
@@ -74,13 +75,13 @@ Importa o conteúdo de um arquivo de projeto para outro arquivo de projeto.
 
 > [!NOTE]
 >  Embora instruções de importação condicional funcionam na linha de comando MSBuilds, elas não funcionam com o MSBuild no ambiente de desenvolvimento integrado (IDE) do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Importações condicionais são avaliadas usando os valores de configuração e plataforma que são definidos quando o projeto é carregado. Se forem feitas alterações subsequentes que exigem uma reavaliação das condições no arquivo de projeto, por exemplo, alterando a plataforma, o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] reavalia as condições em itens e propriedades, mas não em importações. Como a condicional de importação não é reavaliada, a importação é ignorada.  
->   
->  Para solucionar esse problema, coloque importações condicionais nos arquivos .targets ou coloque o código em um bloco condicional, como um bloco [Elemento Choose (MSBuild)](../msbuild/choose-element-msbuild.md).  
+> 
+>  Para solucionar esse problema, coloque importações condicionais nos arquivos *.targets* ou coloque o código em um bloco condicional, como um bloco [Elemento Choose (MSBuild)](../msbuild/choose-element-msbuild.md).  
 
 ## <a name="wildcards"></a>Curingas  
  No .NET Framework 4, o MSBuild permite caracteres curinga no atributo Projeto. Quando houver caracteres curinga, todas as correspondências encontradas são classificadas (para capacidade de reprodução) e, em seguida, elas são importadas na ordem como se a ordem tivesse sido definida explicitamente.  
 
- Isso é útil se você quiser oferecer um ponto de extensibilidade para que outra pessoa possa importar um arquivo sem exigir que você adicione explicitamente o nome do arquivo ao arquivo de importação. Para essa finalidade, o Microsoft.Common.Targets contém a seguinte linha na parte superior do arquivo.  
+ Isso é útil se você quiser oferecer um ponto de extensibilidade para que outra pessoa possa importar um arquivo sem exigir que você adicione explicitamente o nome do arquivo ao arquivo de importação. Para essa finalidade, o *Microsoft.Common.Targets* contém a linha a seguir na parte superior do arquivo.  
 
 ```xml  
 <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\$(MSBuildThisFile)\ImportBefore\*" Condition="'$(ImportByWildcardBeforeMicrosoftCommonTargets)' == 'true' and exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\$(MSBuildThisFile)\ImportBefore')"/>  
@@ -113,5 +114,5 @@ Importa o conteúdo de um arquivo de projeto para outro arquivo de projeto.
 ```  
 
 ## <a name="see-also"></a>Consulte também  
- [Referência do esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)   
+ [Referência de esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)   
  [Como usar o mesmo destino em vários arquivos de projeto](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)

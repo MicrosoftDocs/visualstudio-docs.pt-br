@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2280740766e20a048f57e58590cc529d98b85264
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a9530e950ddd5dbf75fb10b5391dc658bdf899fc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49869932"
 ---
 # <a name="bperesifields"></a>BPERESI_FIELDS
 Especifica as informações a serem recuperados sobre uma falha na resolução de um ponto de interrupção.  
@@ -51,27 +52,27 @@ public enum enum_BPERESI_FIELDS {
   
 ## <a name="members"></a>Membros  
  PERESI_BPRESLOCATION  
- Inicializar/usar o `bpResLocation` campo (localização de resolução do ponto de interrupção) do [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) estrutura.  
+ Inicialização/usar o `bpResLocation` campo (localização de resolução de ponto de interrupção) a [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) estrutura.  
   
  BPERESI_PROGRAM  
- Inicializar/usar o `pProgram` campo o `BP_ERROR_RESOLUTION_INFO` estrutura.  
+ Inicialização/usar o `pProgram` campo do `BP_ERROR_RESOLUTION_INFO` estrutura.  
   
  BPERESI_THREAD  
- Inicializar/usar o `pThread` campo o `BP_ERROR_RESOLUTION_INFO` estrutura.  
+ Inicialização/usar o `pThread` campo do `BP_ERROR_RESOLUTION_INFO` estrutura.  
   
  BPERESI_MESSAGE  
- Inicializar/usar o `bstrMessage` campo o `BP_ERROR_RESOLUTION_INFO` estrutura.  
+ Inicialização/usar o `bstrMessage` campo do `BP_ERROR_RESOLUTION_INFO` estrutura.  
   
  BPERESI_TYPE  
- Inicializar/usar o `dwType` campo (tipo de ponto de interrupção) da `BP_ERROR_RESOLUTION_INFO` estrutura.  
+ Inicialização/usar o `dwType` campo (tipo de ponto de interrupção) da `BP_ERROR_RESOLUTION_INFO` estrutura.  
   
  BPERESI_ALLFIELDS  
- Todos os campos de inicialização/usar o `BP_ERROR_RESOLUTION_INFO` estrutura.  
+ Inicialização/usar todos os campos do `BP_ERROR_RESOLUTION_INFO` estrutura.  
   
 ## <a name="remarks"></a>Comentários  
- Passado como um parâmetro para o [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) método para indicar quais campos do [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) estrutura devem ser inicializado.  
+ Passado como um parâmetro para o [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) método para indicar quais campos da [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) são de estrutura a ser inicializado.  
   
- Esses valores também são usados para indicar quais campos o `BP_ERROR_RESOLUTION_INFO` estrutura são válidos e usadas quando essa estrutura é retornada.  
+ Esses valores também são usados para indicar quais campos no `BP_ERROR_RESOLUTION_INFO` estrutura são usados e válidos quando essa estrutura é retornada.  
   
  Esses valores podem ser combinados com um bit a bit `OR`.  
   

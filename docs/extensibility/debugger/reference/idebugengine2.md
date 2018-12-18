@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31113088"
 ---
 # <a name="idebugengine2"></a>IDebugEngine2
 Essa interface representa um mecanismo de depuração (DE). Ele é usado para gerenciar vários aspectos de uma sessão de depuração, da criação de pontos de interrupção para configuração e limpar exceções.  

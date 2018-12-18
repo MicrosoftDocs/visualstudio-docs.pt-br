@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: df4e45c442745652b3305fd91146bd31ffe79e4b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1514c21345356bbece6680b9ccd212d15dbfa191
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920970"
 ---
 # <a name="idebugproperty3createobjectid"></a>IDebugProperty3::CreateObjectID
 Cria uma ID exclusiva para essa propriedade para garantir que ele seja exclusivo entre todas as outras propriedades.  
@@ -37,15 +38,15 @@ int CreateObjectID();
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método é chamado quando deseja que o Gerenciador de sessão de depuração certificar-se de que essa propriedade é identificada exclusivamente entre todas as outras propriedades. O mecanismo de depuração (DE) oferece suporte a esse método, a menos que as propriedades que ela trata já exclusivamente são identificadas. Se o DE não dá suporte a esse método, ele retorna `E_NOTIMPL`.  
+ Esse método é chamado quando o Gerenciador de sessão de depuração quer ter certeza de que essa propriedade é identificada exclusivamente entre todas as outras propriedades. O mecanismo de depuração (DES) dá suporte a esse método, a menos que as propriedades que ele lida com são identificadas já exclusivamente. Se o DE não oferece suporte a esse método, ele retorna `E_NOTIMPL`.  
   
- Nenhum ID exclusivo criado com `CreateObjectID` é destruída quando o [DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md) é chamado de método; isso também sinaliza o término da necessidade para identificar exclusivamente essa propriedade.  
+ Qualquer ID exclusiva é criada com `CreateObjectID` é destruído quando o [DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md) é chamado de método; isso também sinaliza o término da necessidade de identificando exclusivamente esta propriedade.  
   
 > [!NOTE]
->  Não há nenhum método para recuperar essa ID exclusiva, por isso o DE fazer o que quiser para identificações exclusivas quando o `CreateObjectID` método é chamado.  
+>  Não há nenhum método para recuperar essa ID exclusiva, portanto, o DE pode fazer o que quiser para IDs exclusivas quando o `CreateObjectID` método é chamado.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   

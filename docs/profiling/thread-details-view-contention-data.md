@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d45d2da94535f4f017fab838a661a3c3e4bc438d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e832088c49366cee3cb2a4f45df7a1250171e7df
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849522"
 ---
-# <a name="thread-details-view---contention-data"></a>Exibição Detalhes do Thread – Dados de contenção
+# <a name="thread-details-view---contention-data"></a>Exibição Detalhes do Thread – dados de contenção
 A exibição Detalhes do Thread apresenta um gráfico de linha do tempo dos eventos de bloqueio no thread selecionado de uma execução de criação de perfil que foram causados por contenções em recursos. Um evento de bloqueio ocorre quando o thread é forçado a suspender a execução porque outro thread bloqueou o acesso a um recurso.  
   
- Esta exibição representa a linha do tempo de execução do thread como uma barra horizontal e os eventos de bloqueio como uma barra vertical em uma linha do tempo horizontal do thread. Quando necessário, é possível ampliar uma seção da linha do tempo para exibir os eventos individuais. Para exibir o caminho de execução das funções que levaram ao evento, clique na barra de eventos. As funções aparecem na janela Pilha de Chamadas. Quando o código-fonte de uma função está disponível, é possível clicar no nome da função para editar o arquivo de origem na IDE do Visual Studio.  
+ Esta exibição representa a linha do tempo de execução do thread como uma barra horizontal e os eventos de bloqueio como uma barra vertical em uma linha do tempo horizontal do thread. Quando necessário, é possível ampliar uma seção da linha do tempo para exibir os eventos individuais. Para exibir o caminho de execução das funções que levaram ao evento, clique na barra de eventos. As funções aparecem na janela **Pilha de Chamadas**. Quando o código-fonte de uma função está disponível, é possível clicar no nome da função para editar o arquivo de origem na IDE do Visual Studio.  
   
-## <a name="navigating-the-timeline"></a>Navegando pela linha do tempo  
+## <a name="navigate-the-timeline"></a>Navegar pela linha do tempo  
   
 #### <a name="to-zoom-in-on-a-timeline-segment"></a>Para ampliar um segmento de linha do tempo  
   
@@ -41,17 +42,17 @@ A exibição Detalhes do Thread apresenta um gráfico de linha do tempo dos even
   
 #### <a name="to-view-the-call-stack-of-an-event"></a>Para exibir a pilha de chamadas de um evento  
   
--   No gráfico de linha do tempo, clique na barra vertical que representa o evento.  
+-   No grafo de linha do tempo, clique na barra vertical que representa o evento.  
   
 #### <a name="to-view-or-edit-the-source-code-of-a-function-in-the-call-stack"></a>Para exibir ou editar o código-fonte de uma função na pilha de chamadas  
   
--   Na janela Pilha de Chamadas, clique no nome da função.  
+- Na janela **Pilha de Chamadas**, clique no nome da função.  
   
- O código-fonte da função deve fazer parte do projeto atual.  
+  O código-fonte da função deve fazer parte do projeto atual.  
   
 #### <a name="to-view-the-contention-events-of-a-resource-in-all-threads-in-the-profiling-run"></a>Para exibir os eventos de contenção de um recurso em todos os threads na execução de criação de perfil  
   
--   No gráfico de linha do tempo, clique no nome ou na ID do recurso.  
+-   No grafo de linha do tempo, clique no nome ou na ID do recurso.  
   
      A [Exibição Detalhes do Recurso](../profiling/resource-details-view-contention-data.md) é mostrada para o recurso selecionado.  
   

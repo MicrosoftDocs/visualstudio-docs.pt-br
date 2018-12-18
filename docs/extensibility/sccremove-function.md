@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 71a79ac1b61b3f8f69d0698ead6fa3284fe37ce0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 28aa5c5aa887b08992b15adeb48128168b8cfa29
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49835053"
 ---
 # <a name="sccremove-function"></a>Função SccRemove
 Esta função exclui os arquivos do sistema de controle de origem.  
@@ -46,10 +47,10 @@ SCCRTN SccRemove(
  [in] Um identificador para a janela do IDE que o plug-in de controle de origem pode usar como um pai para todas as caixas de diálogo que ele oferece.  
   
  nFiles  
- [in] Número de arquivos especificados na `lpFileNames` matriz.  
+ [in] Número de arquivos especificados no `lpFileNames` matriz.  
   
  lpFileNames  
- [in] Matriz de nomes de caminho local totalmente qualificado de arquivos a serem removidos.  
+ [in] Matriz de nomes de caminho local totalmente qualificado dos arquivos a serem removidos.  
   
  lpComment  
  [in] O comentário a ser aplicado a cada arquivo que está sendo removido.  
@@ -61,15 +62,15 @@ SCCRTN SccRemove(
  [in] Opções de plug-in específico de controle de origem.  
   
 ## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+ A implementação de plug-in de controle do código-fonte desta função deve retornar um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |SCC_OK|Remoção foi bem-sucedida.|  
-|SCC_E_FILENOTCONTROLLED|O arquivo selecionado não está sob controle de origem.|  
-|SCC_E_OPNOTSUPPORTED|O sistema de controle de origem não oferece suporte a esta operação.|  
-|SCC_E_ISCHECKEDOUT|Não é possível remover um arquivo porque um usuário tiver feito check-out no momento.|  
-|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle de origem, provavelmente devido a problemas de rede ou de contenção.|  
+|SCC_E_FILENOTCONTROLLED|O arquivo selecionado não está sob controle do código-fonte.|  
+|SCC_E_OPNOTSUPPORTED|O sistema de controle do código-fonte não suporta esta operação.|  
+|SCC_E_ISCHECKEDOUT|Não é possível remover um arquivo, porque um usuário tiver feito check-out no momento.|  
+|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle do código-fonte, provavelmente devido a problemas de rede ou de contenção.|  
 |SCC_E_NOTAUTHORIZED|O usuário não tem permissão para executar esta operação.|  
 |SCC_E_NONSPECIFICERROR|Falha não específica; arquivo não foi removido.|  
 |SCC_I_OPERATIONCANCELED|A operação foi cancelada antes da conclusão.|  

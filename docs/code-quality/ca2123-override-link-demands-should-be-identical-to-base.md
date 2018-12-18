@@ -1,6 +1,7 @@
 ---
 title: 'CA2123: as demandas de link de substituição devem ser idênticas à base'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7aa696c1d08b71078ff4ae3beed7283d0b0333e2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ebb37743f9259390aba400a5d89d24b5f41a0d49
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45546974"
 ---
 # <a name="ca2123-override-link-demands-should-be-identical-to-base"></a>CA2123: as demandas de link de substituição devem ser idênticas à base
+
 |||
 |-|-|
 |NomeDoTipo|OverrideLinkDemandsShouldBeIdenticalToBase|
@@ -30,23 +33,25 @@ ms.lasthandoff: 04/19/2018
 |Alteração Significativa|Quebra|
 
 ## <a name="cause"></a>Causa
- Um método público ou protegido em um tipo público substitui um método ou implementa uma interface e não tem o mesmo [demandas de Link](/dotnet/framework/misc/link-demands) como a interface ou método virtual.
+ Um método público ou protegido em um tipo público ou substitui um método implementa uma interface e não tem o mesmo [demandas de Link](/dotnet/framework/misc/link-demands) como a interface ou método virtual.
 
-## <a name="rule-description"></a>Descrição da Regra
+## <a name="rule-description"></a>Descrição da regra
  Esta regra compara um método ao método de base, que é uma interface ou um método virtual em outro tipo e, em seguida, compara as exigências de vínculo em cada um. Uma violação será relatada se o método ou o método base tem uma demanda de link e o outro não.
 
- Se esta regra for violada, um chamador mal-intencionado pode ignorar a demanda de link simplesmente chamando o método não seguro.
+ Se essa regra for violada, um chamador mal-intencionado poderá ignorar a demanda de link simplesmente chamando o método não seguro.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, aplica a mesma demanda de link para o método de substituir ou implementação. Se isso não for possível, marcar o método com uma solicitação total ou remova o atributo completamente.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, aplica a mesma demanda de link para o método de substituição ou implementação. Se isso não é possível marcar o método com uma demanda completa ou remova o atributo completamente.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
  Não suprima um aviso nessa regra.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir mostra várias violações desta regra.
+ O exemplo a seguir mostra as diversas violações dessa regra.
 
  [!code-csharp[FxCop.Security.OverridesAndSecurity#1](../code-quality/codesnippet/CSharp/ca2123-override-link-demands-should-be-identical-to-base_1.cs)]
 
 ## <a name="see-also"></a>Consulte também
- [Diretrizes de codificação segura](/dotnet/standard/security/secure-coding-guidelines) [demandas de Link](/dotnet/framework/misc/link-demands)
+
+- [Diretrizes de codificação segura](/dotnet/standard/security/secure-coding-guidelines)
+- [Demandas de link](/dotnet/framework/misc/link-demands)

@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab51e2dbc75de33bcafe28295b5e47e4b4358538
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e6ec1e09628b2bd1da23bda6baaa1fa157dfbf08
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928094"
 ---
 # <a name="idebugobject2isencoutdated"></a>IDebugObject2::IsEncOutdated
-Este método determina se o status de editar e continuar do objeto ou do contêiner pai está desatualizado. O avaliador de expressão personalizada não implementa esse método e sempre retorna `E_NOTIMPL`.  
+Este método determina se o status de editar e continuar desse objeto ou do contêiner pai está desatualizado. Um avaliador de expressão personalizada não implementa esse método e sempre retorna `E_NOTIMPL`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,10 +44,10 @@ int IsEncOutdated(
  [out] Diferente de zero (`TRUE`) se o estado de editar e continuar está desatualizado, zero (`FALSE`) se não for.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 > [!NOTE]
->  O avaliador de expressão personalizada deve retornar sempre `E_NOTIMPL`.  
+>  Um avaliador de expressão personalizada deve sempre retornar `E_NOTIMPL`.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

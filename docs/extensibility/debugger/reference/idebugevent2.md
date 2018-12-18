@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31111169"
 ---
 # <a name="idebugevent2"></a>IDebugEvent2
 Essa interface é usada para comunicar informações de depuração de críticos, como parar em um ponto de interrupção e informações não-críticas, como uma mensagem de depuração.  

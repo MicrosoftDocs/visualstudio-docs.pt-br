@@ -1,6 +1,7 @@
 ---
 title: 'CA1006: não aninhar tipos genéricos em assinaturas de membro'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,20 @@ ms.assetid: dfc867bc-f4af-45d7-b071-db04a248f9fc
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 120acca8486d65962a5d8e3cd26a05ae8cc5ac78
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e5f7021de24ec9b0a6d7c31d53893528790f2cf2
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548850"
 ---
 # <a name="ca1006-do-not-nest-generic-types-in-member-signatures"></a>CA1006: não aninhar tipos genéricos em assinaturas de membro
+
 |||
 |-|-|
 |NomeDoTipo|DoNotNestGenericTypesInMemberSignatures|
@@ -32,14 +38,14 @@ ms.lasthandoff: 04/19/2018
 ## <a name="cause"></a>Causa
  Um membro visível externamente tem uma assinatura que contém um argumento de tipo aninhado.
 
-## <a name="rule-description"></a>Descrição da Regra
+## <a name="rule-description"></a>Descrição da regra
  Um argumento de tipo aninhado é um argumento de tipo que também é um tipo genérico. Para chamar um membro cuja assinatura contenha um argumento de tipo aninhado, o usuário deve criar uma instância de um tipo genérico e passar esse tipo para o construtor de um segundo tipo genérico. O procedimento e a sintaxe obrigatórios são complexos e devem ser evitados.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, altere o design para remover o argumento de tipo aninhado.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, altere o design para remover o argumento de tipo aninhado.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- Não suprima um aviso nessa regra. Fornecer genéricos em uma sintaxe que seja fácil de entender e usar reduz o tempo que é necessário para saber mais e aumenta a taxa de adoção de novas bibliotecas.
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+ Não suprima um aviso nessa regra. Fornecer genéricos em uma sintaxe fácil de entender e usar reduz o tempo que é necessário para saber mais e aumenta a taxa de adoção de novas bibliotecas.
 
 ## <a name="example"></a>Exemplo
  O exemplo a seguir mostra um método que viola a regra e a sintaxe necessária para chamar o método de violação.

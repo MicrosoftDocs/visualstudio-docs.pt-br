@@ -1,7 +1,7 @@
 ---
-title: Renomear um nome de arquivo para corresponder a um tipo no Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Renomear um nome de arquivo para corresponder a um tipo no Visual Studio
 ms.date: 01/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
@@ -12,11 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: accc8e0934ca18eb72cec03de4a53bb070fedef2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8407e89d9e28c501358877df9c244175ca8155c8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942316"
 ---
 # <a name="sync-a-type-to-a-filename-or-a-filename-to-a-type-refactoring"></a>Refatoração Sincronizar um tipo para um nome de arquivo ou um nome de arquivo para um tipo
 
@@ -38,33 +39,33 @@ Esta refatoração aplica-se a:
 
    - C#:
 
-    ![Código realçado – C#](media/synctype-highlight-cs.png)
+       ![Código realçado – C#](media/synctype-highlight-cs.png)
 
    - Visual Basic:
 
-    ![Código realçado – Visual Basic](media/synctype-highlight-vb.png)
+       ![Código realçado – Visual Basic](media/synctype-highlight-vb.png)
 
-1. Depois, siga um destes procedimentos:
+2. Depois, siga um destes procedimentos:
 
    - **Teclado**
-     - Pressione **Ctrl**+**.** para disparar o menu **Ações Rápidas e Refatorações** e selecionar **Renomear o arquivo para *TypeName*.cs** no pop-up da janela Visualização, onde *TypeName* é o nome do tipo selecionado.
-     - Pressione **Ctrl**+**.** para disparar o menu **Ações Rápidas e Refatorações** e selecione **Renomear tipo para _Filename_** no pop-up da janela Visualização, onde *Filename* é o nome do arquivo atual.
+      - Pressione **Ctrl**+**.** para disparar o menu **Ações Rápidas e Refatorações** e selecionar **Renomear o arquivo para *TypeName*.cs** no pop-up da janela Visualização, onde *TypeName* é o nome do tipo selecionado.
+      - Pressione **Ctrl**+**.** para disparar o menu **Ações Rápidas e Refatorações** e selecione **Renomear tipo para _Filename_** no pop-up da janela Visualização, onde *Filename* é o nome do arquivo atual.
    - **Mouse**
-     - Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Renomear o arquivo para *TypeName*.cs** no pop-up da janela Visualização, onde *TypeName* é o nome do tipo selecionado.
-     - Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Renomear o tipo para _Filename_** no pop-up da janela Visualização, onde *Filename* é o nome do arquivo atual.
+      - Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Renomear o arquivo para *TypeName*.cs** no pop-up da janela Visualização, onde *TypeName* é o nome do tipo selecionado.
+      - Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Renomear o tipo para _Filename_** no pop-up da janela Visualização, onde *Filename* é o nome do arquivo atual.
 
    O tipo ou o arquivo foi renomeado.
 
    - C#: no exemplo abaixo, o arquivo **MyClass.cs** foi renomeado para **MyNewClass.cs** para corresponder ao nome do tipo.
 
-      ![Resultado embutido em C#](media/synctype-result-cs.png)
+       ![Resultado embutido em C#](media/synctype-result-cs.png)
 
    - Visual Basic: no exemplo abaixo, o arquivo **Employee.vb** foi renomeado para **Person.vb** para corresponder ao nome do tipo.
 
-      ![Resultado embutido em Visual Basic](media/synctype-result-vb.png)
+       ![Resultado embutido em Visual Basic](media/synctype-result-vb.png)
 
 > ![NOTE] Esta refatoração ainda não está disponível para projetos .NET Core e .NET Standard.
 
 ## <a name="see-also"></a>Consulte também
 
-[Refatoração](../refactoring-in-visual-studio.md)
+- [Refatoração](../refactoring-in-visual-studio.md)

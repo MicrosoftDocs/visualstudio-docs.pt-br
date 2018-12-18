@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9ea79a27b933380bcfc9e21add841b3a5fc6beeb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 514e34830fde908b9cea0e4f213ae200d31ec678
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926885"
 ---
 # <a name="idebugbreakpointboundevent2enumboundbreakpoints"></a>IDebugBreakpointBoundEvent2::EnumBoundBreakpoints
-Cria um enumerador de pontos de interrupção que foram associados a esse evento.  
+Cria um enumerador dos pontos de interrupção que estavam vinculados a este evento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,16 +41,16 @@ int EnumBoundBreakpoints(
   
 #### <a name="parameters"></a>Parâmetros  
  `ppEnum`  
- [out] Retorna um [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) objeto que enumera todos os pontos de interrupção associado desse evento.  
+ [out] Retorna um [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) associado do objeto que enumera todos os pontos de interrupção desse evento.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver nenhum ponto de interrupção associado; caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- A lista de pontos de interrupção associada para esses associados a esse evento e não pode ser toda a lista de pontos de interrupção associado de um ponto de interrupção pendente. Para obter uma lista de todos os pontos de interrupção associado a um ponto de interrupção pendente, chame o [GetPendingBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-getpendingbreakpoint.md) método para obter o associado [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) do objeto e, em seguida, chame o [ EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) método para obter um [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) objeto que contém todos os pontos de interrupção associados para o ponto de interrupção pendente.  
+ A lista de pontos de interrupção associadas é para aqueles associados a esse evento e pode não ser toda a lista de pontos de interrupção associados de um ponto de interrupção pendente. Para obter uma lista de todos os pontos de interrupção associada a um ponto de interrupção pendente, chame o [GetPendingBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-getpendingbreakpoint.md) método obter associado [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) do objeto e, em seguida, chame o [ EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) método para obter uma [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) objeto que contém todos os pontos de interrupção associados para o ponto de interrupção pendente.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CBreakpointSetDebugEventBase** objeto que expõe o [IDebugBreakpointBoundEvent2](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) interface.  
+ O exemplo a seguir mostra como implementar esse método para um **CBreakpointSetDebugEventBase** objeto que expõe a [IDebugBreakpointBoundEvent2](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) interface.  
   
 ```cpp  
 STDMETHODIMP CBreakpointSetDebugEventBase::EnumBoundBreakpoints(  

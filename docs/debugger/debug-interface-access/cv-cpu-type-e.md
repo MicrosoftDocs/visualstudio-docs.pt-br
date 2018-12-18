@@ -14,17 +14,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a52c65823bb5e4f6ee93522648b235feba691d0
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f5dc2c5f053d14a42bac59f56f58d4aa6227980c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925716"
 ---
 # <a name="cvcputypee"></a>CV_CPU_TYPE_e
 Especifica o processador de destino.  
   
 > [!NOTE]
->  O processador é identificado no elemento enumeração após o `CV_CFL_*` prefixo.  
+>  O processador é identificado no elemento de enumeração após o `CV_CFL_*` prefixo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -96,7 +97,7 @@ typedef enum CV_CPU_TYPE_e {
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Os valores nesta enumeração são retornados por uma chamada para o [: Get_platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md) método.  
+ Os valores nesta enumeração são retornados por uma chamada para o [idiasymbol:: Get_platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: cvconst.h  

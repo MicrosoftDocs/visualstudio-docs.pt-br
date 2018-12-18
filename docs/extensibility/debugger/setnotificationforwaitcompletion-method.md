@@ -13,18 +13,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a005ee7d624604dd716042bd839b48b7a367dd48
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 42c5bca56bc46c0b8124fbfaf7ca046c2c1e59ec
+ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276332"
 ---
 # <a name="setnotificationforwaitcompletion-method"></a>Método SetNotificationForWaitCompletion
 Define ou limpa o bit de estado TASK_STATE_WAIT_COMPLETION_NOTIFICATION.  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Assembly:** mscorlib (em mscorlib.dll)  
+ **Assembly:** mscorlib (em *mscorlib. dll*)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,15 +33,15 @@ Define ou limpa o bit de estado TASK_STATE_WAIT_COMPLETION_NOTIFICATION.
 internal void SetNotificationForWaitCompletion(bool enabled)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  `enabled`  
   
- `true` Para definir o bit; `false` para desproteger o bit.  
+ `true` Para definir o bit; `false` para remover o bit.  
   
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- O depurador define esse bit para ajudar a etapa fora de um corpo de método assíncrono. Se `enabled` é `true`, esse método deve ser chamado apenas em uma tarefa que ainda não foi concluída. Se `enabled` é `false`, esse método pode ser chamado em tarefas concluídas. Em ambos os casos, ele só deve ser usado para tarefas de estilo promessa.  
+ O depurador definirá esse bit para ajudá-lo fora de um corpo de método assíncrono. Se `enabled` é `true`, esse método deve ser chamado somente em uma tarefa que ainda não foi concluída. Quando `enabled` é `false`, esse método pode ser chamado em tarefas concluídas. Em ambos os casos, ele só deve ser usado para tarefas de estilo de promessa.  
   
 ## <a name="requirements"></a>Requisitos  
   

@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e6a174b07950ea81321c7d7a422cbb84997568dc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 08d07f087ad30fee76d90f33448a614e8728925b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49913014"
 ---
 # <a name="ienumdebugports2next"></a>IEnumDebugPorts2::Next
 Retorna o próximo conjunto de elementos da enumeração.  
@@ -44,10 +45,10 @@ int Next(
   
 #### <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de elementos para recuperar. Também especifica o tamanho máximo da `rgelt` matriz.  
+ [in] O número de elementos a serem recuperados. Também especifica o tamanho máximo da `rgelt` matriz.  
   
  `rgelt`  
- [out no] Matriz de [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) elementos devem ser preenchidos.  
+ [no, out] Matriz de [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) elementos a serem preenchidos.  
   
  `pceltFetched`  
  [out] Retorna o número de elementos realmente retornados em `rgelt`.  

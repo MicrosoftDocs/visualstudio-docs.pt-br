@@ -1,6 +1,7 @@
 ---
 title: 'CA2120: proteger construtores de serialização'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 06d6dd2bab5bf47b4e384c6d260cda4221155fde
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 123bff32b847342f4081a73abb1d8b899cc0efec
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548498"
 ---
 # <a name="ca2120-secure-serialization-constructors"></a>CA2120: proteger construtores de serialização
+
 |||
 |-|-|
 |NomeDoTipo|SecureSerializationConstructors|
@@ -30,15 +33,15 @@ ms.lasthandoff: 04/19/2018
 |Alteração Significativa|Quebra|
 
 ## <a name="cause"></a>Causa
- O tipo implementa o <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> interface, não é um delegado ou a interface e é declarada em um assembly que permite que os chamadores parcialmente confiáveis. O tipo tem um construtor que aceita um <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> objeto e um <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> (a assinatura do construtor de serialização) do objeto. Este construtor não é protegido por uma verificação de segurança, mas um ou mais dos construtores regulares no tipo é protegido.
+ O tipo implementa o <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> interface, não é um delegado ou interface e é declarado em um assembly que permite que os chamadores parcialmente confiáveis. O tipo tem um construtor que usa um <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> objeto e um <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> objeto (a assinatura do construtor de serialização). Este construtor não é protegido por uma verificação de segurança, mas um ou mais dos construtores regulares no tipo é protegida.
 
-## <a name="rule-description"></a>Descrição da Regra
- Essa regra é relevante para tipos que oferecem suporte a serialização personalizada. Um tipo oferece suporte à serialização personalizada se ele implementa o <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> interface. O construtor de serialização é necessário e é usado para desserializar ou recriar os objetos que foi serializados usando o <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> método. Como o construtor de serialização aloca e inicializa os objetos, verificações de segurança que estão presentes em construtores regulares também devem estar presentes no construtor de serialização. Se violam essa regra, chamadores que, caso contrário, não foi possível criar uma instância podem usar o construtor de serialização para fazer isso.
+## <a name="rule-description"></a>Descrição da regra
+ Essa regra é relevante para tipos que oferecem suporte a serialização personalizada. Um tipo é compatível com a serialização personalizada se ele implementa o <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> interface. O construtor de serialização é necessário e é usado para desserializar ou recriar objetos que foram serializados usando a <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> método. Como o construtor de serialização aloca e inicializa os objetos, as verificações de segurança que estão presentes nos construtores regulares também devem estar presentes no construtor de serialização. Se você violar essa regra, os chamadores que, caso contrário, não foi possível criar uma instância poderia usar o construtor de serialização para fazer isso.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, protege o construtor de serialização com exigências de segurança que são idênticas às Protegendo outros construtores.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, proteja o construtor de serialização com demandas de segurança que são idênticas àquelas Protegendo outros construtores.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
  Não suprima uma violação da regra.
 
 ## <a name="example"></a>Exemplo
@@ -52,4 +55,7 @@ ms.lasthandoff: 04/19/2018
  [CA2237: marcar tipos ISerializable com SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)
 
 ## <a name="see-also"></a>Consulte também
- <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName><xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName><xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>
+
+- <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>
+- <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>
+- <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>

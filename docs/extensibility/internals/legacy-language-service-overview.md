@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131725"
 ---
 # <a name="legacy-language-service-overview"></a>Visão geral do serviço de linguagem herdada
 Um serviço de linguagem fornece suporte de editor que permite que você implemente certos [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] recursos. As classes de serviço de linguagem gerenciada pacote MPF (estrutura) oferecem suporte completo para recursos usados e suporte parcial para outros recursos.  

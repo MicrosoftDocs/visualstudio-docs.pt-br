@@ -32,15 +32,16 @@ f1_keywords:
 - VC.Project.VCLinkerTool.LibraryDependencies
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 3611268c17d26328d131eacafb92b1ce55c7d07f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1b491257c561af337afdfd0d066c9ed8cd550c15
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39230940"
 ---
-# <a name="clang-linker-properties-android-c"></a>Propriedades do vinculador Clang (Android C++)
+# <a name="clang-linker-properties-android-c"></a>Propriedades do vinculador Clang (C++ para Android)
 
-propriedade | Descrição | Opções
+Propriedade | Descrição | Opções
 --- | ---| ---
 Arquivo de saída | A opção substitui o nome e o local padrão do programa que o vinculador cria. (-o)
 Mostrar progresso | Imprime mensagens de progresso do vinculador.
@@ -62,4 +63,4 @@ Exigir pilha executável | Essa opção marca a saída para não exigir uma pilh
 Arquivo morto inteiro | O arquivo morto inteiro usa todo o código das fontes e das dependências adicionais.
 Opções Adicionais | Opções adicionais.
 Dependências adicionais | Especifica itens adicionais a serem adicionados à linha de comando do link.
-Dependências de biblioteca | Essa opção permite especificar as bibliotecas adicionais a serem adicionadas à linha de comando do vinculador. As bibliotecas adicionais serão adicionadas ao final da linha de comando do vinculador, começando com 'lib' e terminando com extensão '.a' ou '.so'.  (-lFILE)
+Dependências de biblioteca | Essa opção permite especificar as bibliotecas adicionais a serem adicionadas à linha de comando do vinculador. As bibliotecas adicionais serão adicionadas ao final da linha de comando do vinculador, começando com *lib* e terminando com extensão *.a* ou *.so*.  (-lFILE)

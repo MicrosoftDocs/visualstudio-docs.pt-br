@@ -1,5 +1,5 @@
 ---
-title: 'Como: enviar email | Microsoft Docs'
+title: 'Como: enviar email'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,32 +18,33 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c3ee656a8a4965f01969bad19d66d0ea6215bcbe
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 32977852ffbc4bb1411ed699cc97bb54035fada4
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35670714"
 ---
-# <a name="how-to-programmatically-send-e-mail"></a>Como: enviar email  
-  Este exemplo envia uma mensagem de email para contatos que têm o nome de domínio **example.com** em seus endereços de email.  
+# <a name="how-to-programmatically-send-email"></a>Como: enviar email  
+  Este exemplo envia uma mensagem de email para contatos que têm o nome de domínio **exemplo.com** em seus endereços de email.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[Trin_OL_ProgramEmail#1](../vsto/codesnippet/CSharp/Trin_OL_ProgramEMail/thisaddin.cs#1)]  
   
-## <a name="compiling-the-code"></a>Compilando o código  
+## <a name="compile-the-code"></a>Compilar o código  
  Este exemplo requer:  
   
--   Contatos que têm o nome de domínio **example.com** em seus endereços de email.  
+-   Contatos que têm o nome de domínio **exemplo.com** em seus endereços de email.  
   
 ## <a name="robust-programming"></a>Programação robusta  
- Não remova o código de filtro que procura o nome de domínio **example.com**. Sua solução enviará mensagens de email para todos os seus contatos, se você remover o filtro.  
+ Não remova o código de filtro que procura o nome de domínio **exemplo.com**. Sua solução enviará mensagens de email para todos os seus contatos, se você remover o filtro.  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhando com itens de email](../vsto/working-with-mail-items.md)   
- [Como: criar programaticamente um Item de email](../vsto/how-to-programmatically-create-an-e-mail-item.md)   
- [Como: acessar programaticamente os contatos do Outlook](../vsto/how-to-programmatically-access-outlook-contacts.md)   
- [Como executar ações de forma programática quando uma mensagem de email é recebida](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)  
+ [Trabalhar com itens de email](../vsto/working-with-mail-items.md)   
+ [Como: criar programaticamente um item de email](../vsto/how-to-programmatically-create-an-e-mail-item.md)   
+ [Como: acessar contatos do Outlook de forma programática](../vsto/how-to-programmatically-access-outlook-contacts.md)   
+ [Como: executar ações programaticamente quando uma mensagem de email é recebida](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)  
   
   

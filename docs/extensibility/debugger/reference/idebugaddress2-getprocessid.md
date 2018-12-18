@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7fbe84371deb7306300c69f4890398fd43c3061f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 12a2b5c056dd34ebba9690306134e20e78b94bcb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842801"
 ---
 # <a name="idebugaddress2getprocessid"></a>IDebugAddress2::GetProcessID
-Recupera a ID do processo que possui o objeto representado por esse [IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md) interface.  
+Recupera a ID do processo que possui o objeto representado por este [IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md) interface.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +44,7 @@ int GetProcessID (
  [out] A ID de processo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md)

@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 384966b842db1ed685f365b2bead228e5dadd23f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2896cff4133db49ca02aa3b0a08f227f389ab713
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834104"
 ---
 # <a name="metadataaddressfield"></a>METADATA_ADDRESS_FIELD
-Esta estrutura representa o endereço de um campo de uma classe ou estrutura.  
+Essa estrutura representa o endereço de um campo de uma classe ou estrutura.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,10 +43,10 @@ public struct METADATA_ADDRESS_FIELD {
  tokField  
  A ID do token de campo.  
   
- [C++] `_mdToken` é um `typedef` para 32 bits `int`.  
+ [C++] `_mdToken` é um `typedef` de 32 bits `int`.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é parte da união no [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) estrutura quando o `dwKind` campo do `DEBUG_ADDRESS_UNION` estrutura é definida como `ADDRESS_KIND_FIELD` (um valor da [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeração).  
+ Essa estrutura é parte da união na [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) estrutura quando o `dwKind` campo dos `DEBUG_ADDRESS_UNION` estrutura é definida como `ADDRESS_KIND_FIELD` (um valor da [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeração).  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: sh.h  

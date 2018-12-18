@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5a2153b6f97727cbf436c66686160cece15c287
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8fafceac4da4b80bea73a8ab969f0ecfb52b394d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825823"
 ---
 # <a name="threadstate"></a>THREADSTATE
 Especifica o estado do thread.  
@@ -49,10 +50,10 @@ public enum enum_THREADSTATE {
   
 ## <a name="members"></a>Membros  
  THREADSTATE_RUNNING  
- Indica se o thread está em execução.  
+ Indica que o thread está em execução.  
   
  THREADSTATE_STOPPED  
- Indica que o thread está parado devido a um ponto de interrupção.  
+ Indica que o thread é interrompido devido a um ponto de interrupção.  
   
  THREADSTATE_FRESH  
  Indica que o thread foi criado, mas ainda não está executando o código.  
@@ -64,7 +65,7 @@ public enum enum_THREADSTATE {
  Indica que o thread está congelado (nenhuma execução pode ser executada).  
   
 ## <a name="remarks"></a>Comentários  
- Usado para o `dwThreadState` campo o [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) estrutura.  
+ Usado para o `dwThreadState` campo do [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) estrutura.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

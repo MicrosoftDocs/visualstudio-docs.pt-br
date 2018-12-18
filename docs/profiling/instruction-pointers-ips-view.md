@@ -19,11 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f34df089219fda6a27e68c59a1b67f1e48a0839
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3c72d0d1cca803996461ccfba9d7f04811b9048e
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844193"
 ---
 # <a name="instruction-pointers-ips-view"></a>Exibição de ponteiros de instrução (IPs)
 A exibição dos Ponteiros de Instrução permite ver as instruções específicas executadas durante a criação de perfil de amostragem.  
@@ -36,5 +37,5 @@ A exibição dos Ponteiros de Instrução permite ver as instruções específic
   
 ## <a name="see-also"></a>Consulte também  
  [Exibição de IPs (ponteiros de instrução)](../profiling/instruction-pointers-ips-view-sampling-data.md)   
- [Exibição de IPs (ponteiros de instrução) – Amostragem](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)   
+ [Exibição de IPs (ponteiros de instrução) – amostragem](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)   
  [Exibição de IPs (ponteiros de instrução)](../profiling/instruction-pointers-ips-view-contention-data.md)

@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 833ba9131a8c6b1449833bbeca52d0f1d7b53649
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dd0fa6dd8d587ade2ca06c3f39f65fb3a5fd295d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822183"
 ---
 # <a name="idebugcodecontext2getdocumentcontext"></a>IDebugCodeContext2::GetDocumentContext
-Obtém o contexto de documento que corresponde a este contexto de código. O contexto de documento representa uma posição no arquivo de origem que corresponde ao código-fonte que gerou essa instrução.  
+Obtém o contexto do documento que corresponde a este contexto de código. O contexto do documento representa uma posição no arquivo de origem que corresponde ao código-fonte que gerou essa instrução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,13 +41,13 @@ int GetDocumentContext(
   
 #### <a name="parameters"></a>Parâmetros  
  `ppSrcCxt`  
- [out] Retorna o [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) objeto corresponde ao contexto de código.  
+ [out] Retorna o [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) objeto que corresponde ao contexto de código.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Em geral, o contexto do documento pode ser pensado como uma posição em um arquivo de origem enquanto o contexto do código é uma posição de uma instrução de código em um fluxo de execução.  
+ Em geral, o contexto do documento pode ser pensado como uma posição em um arquivo de código-fonte enquanto o contexto de código é uma posição de uma instrução de código em um fluxo de execução.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)   

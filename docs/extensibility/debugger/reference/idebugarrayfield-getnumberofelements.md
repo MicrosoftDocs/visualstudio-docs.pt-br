@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 16606683b516ab87c4b2b03a2aac987ae98af583
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1fbb550c438799a02821c255405d94bc9737b3c6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934750"
 ---
 # <a name="idebugarrayfieldgetnumberofelements"></a>IDebugArrayField::GetNumberOfElements
 Obtém o número de elementos na matriz.  
@@ -43,7 +44,7 @@ int GetNumberOfElements(
  [out] Retorna o número de elementos na matriz.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  O valor retornado é o número total de elementos na matriz, independentemente do número de dimensões.  

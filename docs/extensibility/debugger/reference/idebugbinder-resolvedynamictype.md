@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6ac7d69bf1a3308e6eebfb11356506b8ea7fc062
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6b49e3d42e8fbcc39d259c25081405c21ca1bc15
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49892799"
 ---
 # <a name="idebugbinderresolvedynamictype"></a>IDebugBinder::ResolveDynamicType
 Esse método retorna o tipo exato de uma variável.  
@@ -42,13 +43,13 @@ int ResolveDynamicType(
   
 #### <a name="parameters"></a>Parâmetros  
  `pDynamic`  
- [in] Um [IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md) representando um tipo de uma variável.  
+ [in] Uma [IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md) que representa um tipo de uma variável.  
   
  `ppResolved`  
  [out] Retorna um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) fornecendo informações específicas sobre o tipo da variável.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   

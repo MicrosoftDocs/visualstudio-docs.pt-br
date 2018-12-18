@@ -1,5 +1,5 @@
 ---
-title: Elemento (modelos do Visual Studio) do projeto | Microsoft Docs
+title: Elemento (modelos do Visual Studio) Project | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,13 +16,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3ef09516237ad30a18f9790ddae40260d834af21
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 464f6498ccf06f5087c0fa6b12a456082a36c2bd
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639133"
 ---
-# <a name="project-element-visual-studio-templates"></a>Elemento de projeto (Modelos do Visual Studio)
+# <a name="project-element-visual-studio-templates"></a>Elemento Project (modelos do Visual Studio)
 Especifica os arquivos ou diretórios a serem adicionados ao projeto.  
   
  \<VSTemplate >  
@@ -48,17 +49,17 @@ Especifica os arquivos ou diretórios a serem adicionados ao projeto.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`File`|Atributo obrigatório.<br /><br /> Especifica o nome do arquivo do projeto no modelo de arquivo. zip.|  
-|`ReplaceParameters`|Atributo opcional.<br /><br /> Um valor booleano que especifica se o arquivo de projeto com valores de parâmetros que devem ser substituídos quando um projeto é criado a partir do modelo. O valor padrão é `false`.|  
-|`TargetFileName`|Atributo opcional.<br /><br /> Especifica o nome do arquivo do projeto quando um projeto é criado a partir do modelo.|  
-|`IgnoreProjectParameter`|Atributo opcional.<br /><br /> Especifica se o projeto deve ser adicionado à solução atual. Se o valor de parâmetro personalizado, "$*myCustomParameter*$" existe no arquivo de substituição de parâmetro, o projeto é criado, mas não adicionado como parte da solução atualmente aberta.|  
+|`File`|Atributo obrigatório.<br /><br /> Especifica o nome do arquivo de projeto no modelo *. zip* arquivo.|  
+|`ReplaceParameters`|Atributo opcional.<br /><br /> Um valor booliano que especifica se o arquivo de projeto tem valores de parâmetros que devem ser substituídas quando um projeto é criado a partir do modelo. O valor padrão é `false`.|  
+|`TargetFileName`|Atributo opcional.<br /><br /> Especifica o nome do arquivo de projeto quando um projeto é criado a partir do modelo.|  
+|`IgnoreProjectParameter`|Atributo opcional.<br /><br /> Especifica se o projeto deve ser adicionado à solução atual. Se o valor do parâmetro personalizado, "$*myCustomParameter*$" existe no arquivo de substituição de parâmetro, o projeto é criado, mas não é adicionado como parte da solução atualmente aberta.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[Pasta](../extensibility/folder-element-visual-studio-project-templates.md)|Elemento opcional.<br /><br /> Especifica uma pasta para adicionar ao projeto.|  
-|[Item de projeto](../extensibility/projectitem-element-visual-studio-project-templates.md)|Elemento opcional.<br /><br /> Especifica um arquivo a ser adicionado a um projeto.|  
+|[Pasta](../extensibility/folder-element-visual-studio-project-templates.md)|Elemento opcional.<br /><br /> Especifica uma pasta a ser adicionada ao projeto.|  
+|[Item de projeto](../extensibility/projectitem-element-visual-studio-project-templates.md)|Elemento opcional.<br /><br /> Especifica um arquivo para adicionar a um projeto.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -71,9 +72,9 @@ Especifica os arquivos ou diretórios a serem adicionados ao projeto.
   
  O `Project` elemento é usado para especificar um projeto e, portanto, só é válido em modelos de projeto.  
   
- `Project` elementos podem ter [pasta](../extensibility/folder-element-visual-studio-project-templates.md) elementos filhos ou [ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md) elementos filhos, mas não uma combinação dos dois `Folder` e `ProjectItem` elementos filhos.  
+ `Project` elementos podem ter [pasta](../extensibility/folder-element-visual-studio-project-templates.md) elementos filhos ou [ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md) elementos filhos, mas não uma mistura de ambos `Folder` e `ProjectItem` elementos filhos.  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Renomeia automaticamente o nome do arquivo de projeto com base no nome inserido pelo usuário no **novo projeto** caixa de diálogo. Use o `TargetFileName` se você deseja fornecer um nome de arquivo alternativo para os arquivos de projeto criados com o modelo de atributo.  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Renomeia automaticamente o nome do arquivo de projeto com base no nome inserido pelo usuário na **novo projeto** caixa de diálogo. Use o `TargetFileName` se você quiser fornecer um nome de arquivo alternativo para os arquivos de projeto criados com o modelo de atributo.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra os metadados para um modelo de projeto para um [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplicativo.  
@@ -104,6 +105,6 @@ Especifica os arquivos ou diretórios a serem adicionados ao projeto.
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)   
+ [Criando modelos de projeto e item](../ide/creating-project-and-item-templates.md)   
  [Elemento ProjectItem (modelos de projeto do Visual Studio)](../extensibility/projectitem-element-visual-studio-project-templates.md)   
- [Elemento Folder (Modelos do Visual Studio)](../extensibility/folder-element-visual-studio-project-templates.md)
+ [Elemento folder (modelos de projeto do Visual Studio)](../extensibility/folder-element-visual-studio-project-templates.md)

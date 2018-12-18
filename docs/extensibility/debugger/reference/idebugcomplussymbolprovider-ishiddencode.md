@@ -13,11 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d7a1a559b6ed3b9d92299fe9d4c2cc13c11319e0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 73c1242a21dbbcc52a81e5515c19c6fd8084da74
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842983"
 ---
 # <a name="idebugcomplussymbolproviderishiddencode"></a>IDebugComPlusSymbolProvider::IsHiddenCode
 Determina se o código no endereço depurador especificado está oculto.  
@@ -41,10 +42,10 @@ int IsHiddenCode(
  [in] O endereço de depuração que é representado por um [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna se o código estiver oculto, `S_OK`; caso contrário, retorna `S_FALSE`.  
+ Se o código estiver oculta, retorna `S_OK`; caso contrário, retorna `S_FALSE`.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto que expõe o [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto que expõe a [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::IsHiddenCode(  

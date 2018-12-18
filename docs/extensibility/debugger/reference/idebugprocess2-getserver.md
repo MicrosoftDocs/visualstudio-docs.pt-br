@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0d816393aa33c976b881a6e943fb1d27e44e9ff3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: deb394f3f3e07bb9d4a2e7419ac87966aa839c87
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49930447"
 ---
 # <a name="idebugprocess2getserver"></a>IDebugProcess2::GetServer
 Obtém o que esse processo está em execução no servidor.  
@@ -40,13 +41,13 @@ int GetServer(
   
 #### <a name="parameters"></a>Parâmetros  
  `ppServer`  
- [out] Retorna um [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) objeto que representa o servidor no qual esse processo está sendo executado.  
+ [out] Retorna um [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) objeto que representa o servidor em que esse processo é executado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Mais de um servidor pode ser executados em um único computador.  
+ Mais de um servidor pode estar em execução em um único computador.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   

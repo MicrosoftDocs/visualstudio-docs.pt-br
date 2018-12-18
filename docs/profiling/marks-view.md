@@ -15,25 +15,26 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1008f09e7511a26613b6cb5984513c1d049f61ba
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 93dbaf0d8c3d1f3542683a05b175c43c0c43b948
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220704"
 ---
 # <a name="marks-view"></a>Exibição de marcas
 A exibição Marcas mostra os eventos de amostragem e ETW que foram inseridos no aplicativo.  
   
  As marcas padrão que são pré-populadas no rótulo de relatório no início e no final do programa.  
   
- Dados de contadores do Windows das marcas geradas automaticamente também são apresentadas nesta exibição. Para obter mais informações, consulte [Como coletar dados de contadores do Windows](../profiling/how-to-collect-windows-counter-data.md).  
+ Dados de contadores do Windows das marcas geradas automaticamente também são apresentadas nesta exibição. Para obter mais informações, confira [Como coletar dados de contadores do Windows](../profiling/how-to-collect-windows-counter-data.md).  
   
  Para criar um filtro entre duas marcas, selecione a marca, clique com o botão direito do mouse clique em **Adicionar filtro por marcas** ou **Adicionar filtro por carimbo de data/hora**.  
   
  A tabela a seguir fornece as definições de colunas que estão disponíveis na exibição Marcas.  
   
  **ID de Marca**  
- O identificador exclusivo da marca de criação de perfil.  
+ Identificador exclusivo da marca de criação de perfil.  
   
  **Nome da Marca**  
  O nome do evento.  
@@ -45,6 +46,6 @@ A exibição Marcas mostra os eventos de amostragem e ETW que foram inseridos no
  Quando os dados do contador de desempenho do Windows são coletados, os valores são exibidos em uma coluna que tem o nome do contador.  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral de Relatório de Desempenho](../profiling/performance-report-overview.md)   
+ [Visão geral do relatório de desempenho](../profiling/performance-report-overview.md)   
  [Como coletar dados do contador do Windows](../profiling/how-to-collect-windows-counter-data.md)   
- [&#91;NIB&#93; Janela de Controle de Coleta de Dados](http://msdn.microsoft.com/en-us/98d740d8-459f-4605-bf04-fb17aafaaa8f)
+ [&#91;NIB&#93; janela de controle de coleta de dados](https://msdn.microsoft.com/98d740d8-459f-4605-bf04-fb17aafaaa8f)

@@ -7,42 +7,46 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 3b68345961e2209506b0c759d7197c1115083446
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 6a2388619dea31696fe4416032cc12cd1fe5b372
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860362"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>Como estender o Designer de Linguagem Específica do Domínio
-Você pode fazer as extensões para o designer que você usa para editar as definições de DSL. Tipos de extensão que você pode fazer incluem a adição de comandos de menu, adicionar manipuladores para arrastar e clique duas vezes em gestos e regras que são disparadas quando alterar determinados tipos de valores ou relações. As extensões podem ser empacotadas como o Visual Studio Integration extensão (VSIX) e distribuídas a outros usuários.
 
- Para o código de exemplo e obter mais informações sobre esse recurso, consulte o Visual Studio [site visualização e modelagem SDK (VMSDK)](http://go.microsoft.com/fwlink/?LinkID=186128).
+Você pode tornar as extensões para o designer que você pode usar para editar as definições de DSL. Tipos de extensão que você pode fazer incluem a adição de comandos de menu, adicionando manipuladores para arrastar e clique duas vezes em gestos e regras que são disparadas quando determinados tipos de valores ou relacionamentos são alterados. As extensões podem ser empacotadas como o Visual Studio Integration extensão (VSIX) e distribuídas para outros usuários.
 
-## <a name="setting-up-the-solution"></a>Configurando a solução
- Configure um projeto que contém o código de sua extensão e um projeto do VSIX que exporta o projeto. A solução pode conter outros projetos que são incorporados na mesma VSIX.
+Para código de exemplo e obter mais informações sobre esse recurso, consulte o Visual Studio [SDK de visualização e modelagem](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db).
 
-#### <a name="to-create-a-dsl-designer-extension-solution"></a>Para criar uma solução de extensão DSL do Designer
+## <a name="set-up-the-solution"></a>Configurar a solução
 
-1.  Crie um novo projeto usando o modelo de projeto de biblioteca de classes. No **novo projeto** caixa de diálogo, clique em **Visual C#** e, na janela do meio, clique em **biblioteca de classes**.
+Configure um projeto que contém o código de sua extensão e um projeto VSIX que exporta o projeto. A solução pode conter outros projetos que são incorporados ao mesmo VSIX.
 
-     Este projeto contém o código de suas extensões.
+### <a name="to-create-a-dsl-designer-extension-solution"></a>Para criar uma solução de extensão do Designer de DSL
 
-2.  Crie um novo projeto usando o modelo de projeto do VSIX. No **novo projeto** caixa de diálogo caixa, expanda **Visual C#**, clique em **extensibilidade**e, em seguida, na janela intermediária selecione **projeto VSIX**.
+1.  Crie um novo projeto usando o modelo de projeto de biblioteca de classes. No **novo projeto** caixa de diálogo, clique em **Visual c#** e, na janela do meio, clique em **biblioteca de classes**.
 
-     Selecione **adicionar à solução**.
+     Esse projeto conterá o código de suas extensões.
 
-     Source.Extension.vsixmanifest é aberto no editor de manifesto do VSIX.
+2.  Crie um novo projeto usando o modelo de projeto do VSIX. No **novo projeto** diálogo caixa, expanda **Visual c#**, clique em **extensibilidade**e, em seguida, na janela Central selecione **projeto VSIX**.
+
+     Selecione **adicionar a solução**.
+
+     Vsixmanifest é aberto no editor de manifesto do VSIX.
 
 3.  Acima do campo de conteúdo, clique em **adicionar conteúdo**.
 
-4.  No **adicionar conteúdo** caixa de diálogo, defina **selecionar um tipo de conteúdo** para **MEF componente**e defina **projeto** ao seu projeto de biblioteca de classe.
+4.  No **adicionar conteúdo** caixa de diálogo, defina **selecionar um tipo de conteúdo** para **componente MEF**e defina **projeto** ao seu projeto de biblioteca de classe.
 
-5.  Clique em **selecione edições** e certifique-se de que **Visual Studio Enterprise** é verificada.
+5.  Clique em **selecionar edições** e certifique-se de que **Visual Studio Enterprise** é verificada.
 
-6.  Certifique-se de que o projeto do VSIX é o projeto de inicialização da solução.
+6.  Certifique-se de que o projeto VSIX é o projeto de inicialização da solução.
 
-7.  No projeto de biblioteca de classe, adicione referências para os seguintes assemblies:
+7.  No projeto de biblioteca de classes, adicione referências aos assemblies a seguir:
 
      Microsoft.VisualStudio.CoreUtility
 
@@ -62,29 +66,31 @@ Você pode fazer as extensões para o designer que você usa para editar as defi
 
      System.Windows.Forms
 
-## <a name="testing-and-deployment"></a>Teste e implantação
- Para testar qualquer uma das extensões neste tópico, compilar e executar a solução. Uma instância experimental do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] é aberto. Neste exemplo, abra uma solução DSL. Edite o diagrama de DslDefinition. O comportamento da extensão pode ser visto.
+## <a name="test-and-deployment"></a>Teste e implantação
 
- Para implantar as extensões para o principal [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]e a outros computadores, siga estas etapas:
+Para testar qualquer uma das extensões neste tópico, compile e execute a solução. Uma instância experimental do Visual Studio é aberto. Nesse caso, abra uma solução DSL. Edite o diagrama de DslDefinition. O comportamento de extensão pode ser visto.
+
+Para implantar as extensões do Visual Studio principal e a outros computadores, siga estas etapas:
 
 1.  Localize o arquivo de instalação de VSIX, no seu projeto do VSIX na gaveta\\*\*\\\*.vsix
 
 2.  Copie esse arquivo para o computador de destino e, em seguida, no Windows Explorer (ou Explorador de arquivos), clique duas vezes nele.
 
-     O [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Gerenciador de extensão é aberto para confirmar se a extensão foi instalada.
+     O Gerenciador de extensões do Visual Studio é aberto para confirmar se a extensão foi instalada.
 
- Para desinstalar a extensão, siga estas etapas:
+Para desinstalar a extensão, siga estas etapas:
 
-1.  em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], no **ferramentas** menu, clique em **Gerenciador de extensões**.
+1.  No Visual Studio, sobre o **ferramentas** menu, clique em **Gerenciador de extensões**.
 
 2.  Selecione a extensão e excluí-lo.
 
-## <a name="adding-a-shortcut-menu-command"></a>Adicionar um comando de Menu de atalho
- Para fazer com que um comando de menu de atalho aparecem na superfície de Designer DSL ou na janela do Explorer DSL, escreva uma classe a seguir.
+## <a name="add-a-shortcut-menu-command"></a>Adicionar um comando de Menu de atalho
 
- A classe deve implementar `ICommandExtension` e deve ter o atributo `DslDefinitionModelCommandExtension`.
+Para fazer com que um comando de menu de atalho aparecem na superfície de Designer de DSL ou na janela do Gerenciador de DSL, escreva uma classe que se assemelha a seguir.
 
-```
+A classe deve implementar `ICommandExtension` e deve ter o atributo `DslDefinitionModelCommandExtension`.
+
+```csharp
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
@@ -144,10 +150,11 @@ namespace Fabrikam.SimpleDslDesignerExtension
 }
 ```
 
-## <a name="handling-mouse-gestures"></a>Tratamento de gestos do Mouse
- O código é semelhante ao código do comando de menu.
+## <a name="handle-mouse-gestures"></a>Lidar com gestos do Mouse
 
-```
+O código é semelhante ao código do comando de menu.
+
+```csharp
 [DslDefinitionModelGestureExtension]
  class MouseGesturesExtensions : IGestureExtension
  {
@@ -205,10 +212,11 @@ namespace Fabrikam.SimpleDslDesignerExtension
  }
 ```
 
-## <a name="responding-to-value-changes"></a>Responder a alterações de valor
- Este manipulador precisa de um modelo de domínio para funcionar corretamente. Fornecemos um modelo de domínio simples.
+## <a name="respond-to-value-changes"></a>Responder a alterações de valor
 
-```
+Esse manipulador precisa de um modelo de domínio para funcionar corretamente. Nós fornecemos um modelo de domínio simples.
+
+```csharp
 using System.Diagnostics;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.DslDefinition;
@@ -246,9 +254,9 @@ namespace Fabrikam.SimpleDslDesignerExtension
 } }  }  );
 ```
 
- O código a seguir implementa um modelo simples. Crie um novo GUID para substituir o espaço reservado.
+O código a seguir implementa um modelo simples. Crie um novo GUID para substituir o espaço reservado.
 
-```
+```csharp
 using System;
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Modeling;

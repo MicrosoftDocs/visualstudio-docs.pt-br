@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee951c5bc18fbf92f94f557c5ade4cd7f39159f2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f638fe36131969c50e7572ac36ef54b3ad0d10e0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873390"
 ---
 # <a name="bpcondition"></a>BP_CONDITION
-Descreve as condições sob as quais um ponto de interrupção é acionado.  
+Descreve as condições sob as quais um ponto de interrupção é disparado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +52,7 @@ public struct BP_CONDITION {
  O [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objeto que representa o thread ativo para o aplicativo que contém o ponto de interrupção.  
   
  `styleCondition`  
- Um valor da [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md) enumeração que descreve o estilo dessa condição de ponto de interrupção.  
+ Um valor a partir de [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md) enumeração que descreve o estilo dessa condição de ponto de interrupção.  
   
  `bstrContext`  
  O local do ponto de interrupção.  
@@ -60,10 +61,10 @@ public struct BP_CONDITION {
  A condição de disparo do ponto de interrupção.  
   
  `nRadix`  
- Base a ser usada na avaliação de todas as informações numéricas.  
+ Base a ser usado na avaliação de todas as informações numéricas.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é membro do [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) e [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) estruturas.  
+ Essa estrutura é um membro do [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) e [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) estruturas.  
   
  Essa estrutura também é passada como um parâmetro para o [SetCondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md) e [SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md) métodos.  
   

@@ -14,18 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 71979bd4f859257555c9d72ac5521a5ae21b9ed4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8d88acb221abfc26c45c9002abb92f704936334b
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500375"
 ---
 # <a name="idsymbol-element"></a>Elemento IDSymbol
-O `IDSymbol` elemento contém a ID do par GUID:ID que representa um menu, o grupo ou o comando. O GUID é proveniente do pai `GuidSymbol` elemento. O `IDSymbol` elemento tem um `name` atributo que forneça um nome amigável para a ID, que está contida no `value` atributo.  
+O `IDSymbol` elemento contém a ID do par GUID:ID que representa um menu, um grupo ou um comando. O GUID é proveniente do pai `GuidSymbol` elemento. O `IDSymbol` elemento tem um `name` que fornece um nome amigável para a ID, que está contida no atributo de `value` atributo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <IDSymbol name=ElementName value="0x0010" />  
 ```  
   
@@ -37,7 +38,7 @@ O `IDSymbol` elemento contém a ID do par GUID:ID que representa um menu, o grup
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |name|Necessário. Nome do símbolo de ID.|  
-|Valor |Necessário. Valor numérico da ID do símbolo ID.|  
+|Valor |Necessário. Valor numérico da ID do símbolo de ID.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -46,10 +47,10 @@ O `IDSymbol` elemento contém a ID do par GUID:ID que representa um menu, o grup
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[Elemento GuidSymbol](../extensibility/guidsymbol-element.md)|Contém o GUID do par GUID:ID que representa um menu, o grupo ou o comando. Agrupa elementos `IDSymbol`.|  
+|[Elemento GuidSymbol](../extensibility/guidsymbol-element.md)|Contém o GUID do par GUID:ID que representa um menu, um grupo ou um comando. Agrupa elementos `IDSymbol`.|  
   
 ## <a name="remarks"></a>Comentários  
- Cada `IDSymbol` elemento em um determinado `GuidSymbol` elemento deve ter uma única `value`. No entanto, `IDSymbol` elementos que têm valores idênticos podem existir em um pacote, desde que eles têm diferentes pais.  
+ Cada `IDSymbol` elemento em um determinado `GuidSymbol` elemento deve ter um único `value`. No entanto, `IDSymbol` elementos que têm valores idênticos podem existir em um pacote, desde que eles tenham pais diferentes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquivos da tabela de comandos do Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+ [Arquivos de tabela (. VSCT) de comando do Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

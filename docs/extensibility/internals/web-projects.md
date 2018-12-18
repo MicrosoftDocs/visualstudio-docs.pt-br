@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31141113"
 ---
 # <a name="web-projects"></a>Projetos da Web
 Um sistema de projeto da Web é um sistema de projeto que cria projetos da Web. Projetos da Web por sua vez criam aplicativos da Web. Você pode programar uma página da Web usando as linguagens de programação tradicionais, como [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] ou [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)], para coletar e processar informações de um usuário, armazene-o em um banco de dados e assim por diante. Páginas da Web com o código associado são chamadas de smart páginas da Web.  

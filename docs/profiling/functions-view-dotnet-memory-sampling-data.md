@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: eea5a55f57ed6b3fb710195dfe94839bdb17fb7e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1a4380d3367177bec4036aecd819ed6513c0efd6
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238141"
 ---
-# <a name="functions-view---net-memory-sampling-data"></a>Exibição de Funções – Dados de Amostragem de Memória do .NET
+# <a name="functions-view---net-memory-sampling-data"></a>Exibição Funções – dados de amostragem de memória do .NET
 A exibição Funções dos dados de criação de perfil de alocação de memória do .NET que foram coletados usando o método de amostragem lista as funções que alocaram a memória durante a execução da criação de perfil e reporta o tamanho e quantidade de alocações.  
   
 |Column|Descrição|  
@@ -41,6 +42,6 @@ A exibição Funções dos dados de criação de perfil de alocação de memóri
 |**% de Bytes Exclusivos**|O percentual de todos os bytes de memória que foram alocados na execução de criação de perfil que eram bytes exclusivos dessa função.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibição de Funções – Instrumentação](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
+ [Exibição Funções – instrumentação](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
  [Exibição de Funções](../profiling/functions-view-sampling-data.md)   
  [Exibição Funções](../profiling/functions-view-instrumentation-data.md)

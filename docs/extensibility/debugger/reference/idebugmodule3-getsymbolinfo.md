@@ -16,11 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 53d84b9ef6cdabc12c88e30fc65d506cad673a26
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2e121434f5db1edc1e4c13df3e832cba5be7d471
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876120"
 ---
 # <a name="idebugmodule3getsymbolinfo"></a>IDebugModule3::GetSymbolInfo
 Recupera uma lista de caminhos que são pesquisados para símbolos, bem como os resultados da pesquisa de cada caminho.  
@@ -47,26 +48,26 @@ int GetSymbolInfo(
  [in] Uma combinação de sinalizadores do [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) enumeração que especifica quais campos de `pInfo` devem ser preenchidos.  
   
  `pInfo`  
- [out] Um [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md) estrutura cujos membros são para ser preenchido com as informações especificadas. Se isso for um valor nulo, este método retorna `E_INVALIDARG`.  
+ [out] Um [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md) estrutura cujos membros são a ser preenchida com as informações especificadas. Se isso for um valor nulo, esse método retorna `E_INVALIDARG`.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Se o método for bem-sucedido, ele retorna `S_OK`; caso contrário, ele retorna um código de erro.  
   
 > [!NOTE]
->  A cadeia de caracteres retornada (no `MODULE_SYMBOL_SEARCH_INFO` estrutura) pode estar vazio mesmo se `S_OK` é retornado. Nesse caso, não houve nenhuma informação de pesquisa para retornar.  
+>  A cadeia de caracteres retornada (na `MODULE_SYMBOL_SEARCH_INFO` estrutura) pode estar vazio, mesmo se `S_OK` é retornado. Nesse caso, não houve nenhuma informação de pesquisa para retornar.  
   
 ## <a name="remarks"></a>Comentários  
- Se o `bstrVerboseSearchInfo` campo o `MODULE_SYMBOL_SEARCH_INFO` estrutura não for vazia, contém uma lista de caminhos pesquisados e os resultados da pesquisa. A lista é formatada com um caminho, seguido por um sinal de reticências ("..."), seguido pelo resultado. Se houver mais de um par de resultados de caminho, cada par é separado por um par de (carro-retorno/alimentação de linha) "\r\n". O padrão é semelhante a:  
+ Se o `bstrVerboseSearchInfo` campo do `MODULE_SYMBOL_SEARCH_INFO` estrutura não estiver vazia, ele contém uma lista de caminhos pesquisados e os resultados da pesquisa. A lista é formatada com um caminho, seguido por um sinal de reticências (""...), seguido pelo resultado. Se houver mais de um par de resultado do caminho, em seguida, cada par é separado por um par de "\r\n" (carro-retorno/avanço de linha). O padrão tem esta aparência:  
   
  \<caminho >... \<resultado > \r\n\<caminho >... \<resultado > \r\n\<caminho >... \<resultado >  
   
  Observe que a última entrada não tem uma sequência \r\n.  
   
 ## <a name="example"></a>Exemplo  
- Neste exemplo, esse método retorna três caminhos com três diferentes resultados. Cada linha é encerrada com um par de carro-retorno/alimentação de linha. O exemplo de saída apenas imprime os resultados da pesquisa como uma única cadeia de caracteres.  
+ Neste exemplo, esse método retorna três caminhos com três resultados de pesquisa diferentes. Cada linha é encerrada com um par carro-retorno/avanço de linha. A saída de exemplo apenas imprime os resultados da pesquisa como uma única cadeia de caracteres.  
   
 > [!NOTE]
->  Um resultado de status é tudo imediatamente após o "…" até o fim da linha.  
+>  Um resultado de status é tudo o que imediatamente após o ""... até o final da linha.  
   
 ```cpp  
 void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)  
@@ -86,7 +87,7 @@ void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)
   
  **c:\symbols\user32.PDB... Arquivo não encontrado.**  
 **c:\winnt\symbols\user32.PDB... Versão não corresponde.**  
-**\\\symbols\symbols\user32.dll\0a8sd0ad8ad\user32.PDB... Símbolos carregados.**   
+**\\\symbols\symbols\user32.dll\0a8sd0ad8ad\user32.PDB... Os símbolos carregados.**   
 ## <a name="see-also"></a>Consulte também  
  [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md)   
  [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md)   

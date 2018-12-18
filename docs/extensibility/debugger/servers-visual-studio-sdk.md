@@ -1,5 +1,5 @@
 ---
-title: Servidores (SDK do Visual Studio) | Microsoft Docs
+title: Servidores (Visual Studio SDK) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2904641e8188abc6ef2382b2da272a9f96fd0f81
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 871eeb59832c640ede32e0fcd188941605c4afcb
+ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276647"
 ---
 # <a name="servers-visual-studio-sdk"></a>Servidores (SDK do Visual Studio)
-Em termos de arquitetura do depurador, um **server**:  
+Na arquitetura do depurador, uma *server*:  
   
--   É um contêiner de portas e os fornecedores de porta e é usado para se comunicar portas e os fornecedores de porta para o Gerenciador de sessão de depuração (SDM) e mecanismos de depuração.  
+-   É um contêiner de portas e os fornecedores de porta e comunica as portas e fornecedores de porta para o Gerenciador de sessão de depuração (SDM) e mecanismos de depuração.  
   
 -   Pode identificar-se por nome e enumerar suas portas e os fornecedores de porta.  
   

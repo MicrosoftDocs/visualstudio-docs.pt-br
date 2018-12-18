@@ -1,5 +1,5 @@
 ---
-title: ': Symbolbyrva | Microsoft Docs'
+title: 'Idiaenumsymbolsbyaddr:: Symbolbyrva | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4cdeaef2bc963eca894403bf90e1c9fb720efd4d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 1e746cf0b93f5a9c0944a80c6cbaabedfbb9cc23
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49895217"
 ---
 # <a name="idiaenumsymbolsbyaddrsymbolbyrva"></a>IDiaEnumSymbolsByAddr::symbolByRVA
-Posiciona o enumerador executando uma pesquisa por endereço virtual relativo (RVA).  
+Posiciona o enumerador ao executar uma pesquisa por endereço virtual relativo (RVA).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,5 +45,5 @@ HRESULT symbolByRVA (
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)   
- [: Symbolbyva](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyva.md)   
+ [Idiaenumsymbolsbyaddr:: Symbolbyva](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyva.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

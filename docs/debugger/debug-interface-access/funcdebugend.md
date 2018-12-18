@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31461854"
 ---
 # <a name="funcdebugend"></a>FuncDebugEnd
 Se uma função tem um ponto definido no qual a depuração é até o fim, o ponto de partida de depuração é identificada por um símbolo com um `SymTagFuncDebugEnd` marca.  

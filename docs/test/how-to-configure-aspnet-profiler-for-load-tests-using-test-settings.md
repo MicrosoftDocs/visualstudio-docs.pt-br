@@ -1,5 +1,5 @@
 ---
-title: Configurar o Criador de Perfil do ASP.NET para testes de carga no Visual Studio | Microsoft Docs
+title: Configurar o criador de perfil do ASP.NET para testes de carga no Visual Studio
 ms.date: 10/13/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,16 +8,20 @@ ms.assetid: 6832fe39-04d5-4d94-8a18-3e2730bad423
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 68bc1c8b21a2f14ba319792afae0d77f233c5d94
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 36176ce14b51af1cf692b6b04d862882a48d7e4e
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895191"
 ---
-# <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>Como: Configurar o ASP.NET Profiler para carregar testes usando configurações do teste no Visual Studio
+# <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>Como configurar o criador de perfil do ASP.NET para carregar testes usando configurações de teste no Visual Studio
 
 Você pode usar o adaptador de dados de diagnóstico do criador de perfil do ASP.NET para coletar informações do criador de perfil do ASP.NET. Esse adaptador de dados de diagnóstico coleta dados de desempenho de aplicativos ASP.NET.
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
 > Esse adaptador de dados de diagnóstico não pode ser usado para testes que são executados usando o Microsoft Test Manager. Você pode usar o adaptador de diagnóstico do Criador de Perfil do ASP.NET com testes de carga usando sites que exigem apenas o Visual Studio Enterprise.
@@ -25,22 +29,18 @@ Você pode usar o adaptador de dados de diagnóstico do criador de perfil do ASP
 O adaptador de dados de diagnóstico do criador de perfil do ASP.NET permite coletar dados do criador de perfil do ASP.NET da camada de aplicativo quando você executa um teste de carga. Você não deve executar o criador de perfis para testes de carga longos, por exemplo, que durem mais de uma hora. Isso porque o arquivo do criador de perfis pode ficar grande, talvez com centenas de megabytes. Em vez disso, execute testes de carga mais curtos usando o criador de perfil do ASP.NET, o que ainda lhe proporcionará o benefício de diagnosticar detalhadamente os problemas de desempenho.
 
 > [!NOTE]
-> O adaptador de dados de diagnóstico do criador de perfil do ASP.NET analisa o processo de IIS (Serviços de Informações da Internet). Desse modo, ele não funcionará em um servidor Web de desenvolvimento. Para analisar o site no teste de carga, você precisa instalar um agente de teste no computador em que o IIS está sendo executado. O agente de teste não vai gerar carga, mas será um agente apenas de coleta. Para obter mais informações, consulte [Instalar e configurar agentes de teste](../test/lab-management/install-configure-test-agents.md).
+> O adaptador de dados de diagnóstico do criador de perfil do ASP.NET analisa o processo de IIS (Serviços de Informações da Internet). Desse modo, ele não funcionará em um servidor Web de desenvolvimento. Para analisar o site em seu teste de carga, você precisa instalar um agente de teste no computador em que o IIS está sendo executado. O agente de teste não vai gerar carga, mas será um agente apenas de coleta. Para obter mais informações, consulte [Instalar e configurar agentes de teste](../test/lab-management/install-configure-test-agents.md).
 
-Para obter mais informações, consulte [Como criar uma configuração de teste para um teste de carga distribuído](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md).
+Para obter mais informações, confira [Como criar uma configuração de teste para um teste de carga distribuída](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md).
 
-O procedimento a seguir descreve como configurar o adaptador de dados de diagnóstico para o criador de perfil do ASP.NET.
-
-## <a name="to-configure-the-aspnet-profiler-for-your-test-settings"></a>Para configurar o criador de perfil do ASP.NET para suas configurações de teste
+## <a name="configure-the-aspnet-profiler-for-your-test-settings"></a>Configurar o criador de perfil do ASP.NET para suas configurações do teste
 
 Antes de executar as etapas neste procedimento, você deverá abrir as configurações de teste no Visual Studio e selecionar a página **Dados e Diagnósticos**.
-
-### <a name="to-configure-the-aspnet-profiler-for-your-test-settings"></a>Para configurar o criador de perfil do ASP.NET para suas configurações de teste
 
 1.  Selecione a função a ser usada para coletar dados do criador de perfil do ASP.NET.
 
     > [!WARNING]
-    > Essa função deve ser um servidor Web.
+    > Essa função deve ser de um servidor Web.
 
 2.  Selecione **Criador de Perfil do ASP.NET** para permitir a coleta de dados de criação de perfil do ASP.NET e, então, escolha **Configurar**.
 
@@ -50,7 +50,7 @@ Antes de executar as etapas neste procedimento, você deverá abrir as configura
 
 4.  Para habilitar a criação de perfil de interação de camada, selecione **Habilitar Criação de Perfil de Interação de Camada**.
 
-     A criação de perfil de interação de camada conta o número de solicitações que são enviadas ao servidor Web para cada artefato (por exemplo, MyPage.aspx ou CompanyLogo.gif) e o tempo que leva para atender a cada uma delas. Além disso, a criação de perfil de interação de camada coleta quais conexões ADO.NET foram usadas como parte da solicitação de página, bem como quantas consultas e chamadas de procedimentos armazenados foram executadas como parte de uma prestação de serviços da solicitação.
+     A criação de perfil de interação de camada conta o número de solicitações que são enviadas ao servidor Web para cada artefato (por exemplo, *MyPage.aspx* ou *CompanyLogo.gif*) e o tempo necessário para atender a cada solicitação. Além disso, a criação de perfil de interação de camada coleta quais conexões ADO.NET foram usadas como parte da solicitação de página, bem como quantas consultas e chamadas de procedimentos armazenados foram executadas como parte de uma prestação de serviços da solicitação.
 
      Dois conjuntos diferentes de informações de medição de tempo são coletados:
 

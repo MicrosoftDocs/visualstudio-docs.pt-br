@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 664111f28ef23e6bf78fc96f26808d1b7ccb7a85
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4880bfc80f27c362deb056b176492eb62ec6f975
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941536"
 ---
 # <a name="idebugengine2removesetexception"></a>IDebugEngine2::RemoveSetException
-Remove a exceção especificada para que ele não é tratado pelo mecanismo de depuração.  
+Remove a exceção especificada, para que ele não é tratado pelo mecanismo de depuração.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,15 +41,15 @@ int RemoveSetException(
   
 #### <a name="parameters"></a>Parâmetros  
  `pException`  
- [in] Um [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) estrutura que descreve a exceção a ser removido.  
+ [in] Uma [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) estrutura que descreve a exceção a ser removido.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- A exceção que está sendo removida deve ter sido previamente definida por uma chamada anterior para o [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) método.  
+ A exceção que está sendo removida deve ter sido anteriormente definida por uma chamada anterior para o [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) método.  
   
- Para remover todas as exceções do conjunto de uma só vez, chame o [RemoveAllSetExceptions](../../../extensibility/debugger/reference/idebugengine2-removeallsetexceptions.md) método.  
+ Para remover todas as exceções do conjunto ao mesmo tempo, chame o [RemoveAllSetExceptions](../../../extensibility/debugger/reference/idebugengine2-removeallsetexceptions.md) método.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   

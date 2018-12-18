@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31125897"
 ---
 # <a name="reference-visual-studio-debugging-apis"></a>Referência (Visual Studio APIs de depuração)
 As referências de SDK de depuração do Visual Studio descrevem o modelo básico para a arquitetura de tempo de execução e a funcionalidade do depurador e seus componentes. A documentação pressupõe mínimo possível sobre os componentes e interfaces que ele descreve, além do comportamento que define por meio de interfaces.  

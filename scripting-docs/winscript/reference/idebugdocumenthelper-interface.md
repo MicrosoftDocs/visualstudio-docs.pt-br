@@ -1,16 +1,16 @@
 ---
 title: Interface IDebugDocumentHelper | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDebugDocumentHelper interface
 ms.assetid: b652a31e-b87b-45f1-b586-94f2b6e822db
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +19,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24728946"
 ---
 # <a name="idebugdocumenthelper-interface"></a>Interface IDebugDocumentHelper
 Fornecer implementações de várias interfaces necessárias para um host inteligente, como o `IDebugDocument`, `IDebugDocumentContext`, `IDebugDocumentProvider`, `IDebugDocumentText`, e `IDebugDocumentTextEvents` interfaces.  

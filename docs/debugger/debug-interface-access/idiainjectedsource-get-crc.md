@@ -1,5 +1,5 @@
 ---
-title: ': Get_crc | Microsoft Docs'
+title: 'Idiainjectedsource:: Get_crc | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aa3aba392769465b03aecafc7e135a15e748879e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f99c48af26f2b40969ec818743ec8f4d220f8404
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900612"
 ---
 # <a name="idiainjectedsourcegetcrc"></a>IDiaInjectedSource::get_crc
 Recupera uma verificação de redundância cíclica (CRC) calculada a partir de bytes do código-fonte.  
@@ -33,7 +34,7 @@ HRESULT get_crc (
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Retorna o CRC calculado de bytes do código-fonte.  
+ [out] Retorna o CRC calculado a partir de bytes do código-fonte.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.  

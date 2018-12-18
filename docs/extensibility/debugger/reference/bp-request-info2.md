@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11402c5ad188b72600debb5cb64b7f2811e75ee9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 68bdf873cdd108428ec05bda6429de70a80e71a8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888782"
 ---
 # <a name="bprequestinfo2"></a>BP_REQUEST_INFO2
-Contém as informações necessárias para implementar um ponto de interrupção, incluindo fornecedor GUID, restrição e tracepoint.  
+Contém as informações necessárias para implementar um ponto de interrupção, incluindo o GUID do fornecedor, restrição e tracepoint.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -70,7 +71,7 @@ public struct BP_REQUEST_INFO2 {
  O GUID do idioma.  
   
  `bpLocation`  
- O [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura que especifica o tipo do local do ponto de interrupção.  
+ O [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura que especifica o tipo do local de ponto de interrupção.  
   
  `pProgram`  
  O [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objeto que representa o aplicativo no qual o ponto de interrupção ocorre.  
@@ -79,7 +80,7 @@ public struct BP_REQUEST_INFO2 {
  O nome do aplicativo no qual o ponto de interrupção ocorre.  
   
  `pThread`  
- O [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objeto que representa o thread em que o ponto de interrupção ocorre.  
+ O [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objeto que representa o thread no qual o ponto de interrupção ocorre.  
   
  `bstrThreadName`  
  O nome do thread no qual o ponto de interrupção ocorre.  

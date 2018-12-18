@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ff66a2c23f96ad083d84a937a45c1b2b8cf3ddec
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 37e78c8f03412b101a6d1fa3b57b984377f79cac
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49859413"
 ---
 # <a name="bpreqifields"></a>BPREQI_FIELDS
 Especifica as informações a serem recuperados sobre uma solicitação de ponto de interrupção.  
@@ -67,51 +68,51 @@ public enum enum_BPREQI_FIELDS {
   
 ## <a name="members"></a>Membros  
  BPREQI_BPLOCATION  
- Inicializar/usar o `bpLocation` campo (localização do ponto de interrupção) do [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) ou [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) estrutura.  
+ Inicialização/usar o `bpLocation` campo (localização do ponto de interrupção) a [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) ou [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) estrutura.  
   
  BPREQI_LANGUAGE  
- Inicializar/usar o `guidLanguage` campo o `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
+ Inicialização/usar o `guidLanguage` campo do `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
   
  BPREQI_PROGRAM  
- Inicializar/usar o `pProgram` campo o `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
+ Inicialização/usar o `pProgram` campo do `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
   
  BPREQI_PROGRAMNAME  
- Inicializar/usar o `bstrProgramName` campo o `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
+ Inicialização/usar o `bstrProgramName` campo do `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
   
  BPREQI_THREAD  
- Inicializar/usar o `pThread` campo o `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
+ Inicialização/usar o `pThread` campo do `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
   
  BPREQI_THREADNAME  
- Inicializar/usar o `bstrThreadName` campo o `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
+ Inicialização/usar o `bstrThreadName` campo do `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
   
  BPREQI_PASSCOUNT  
- Inicializar/usar o `bpPassCount` campo o `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
+ Inicialização/usar o `bpPassCount` campo do `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
   
  BPREQI_CONDITION  
- Inicializar/usar o `bpCondition` campo (condição de ponto de interrupção) da `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
+ Inicialização/usar o `bpCondition` campo (condição de ponto de interrupção) da `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
   
  BPREQI_FLAGS  
- Inicializar/usar o `dwFlags` campo o `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
+ Inicialização/usar o `dwFlags` campo do `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
   
  BPREQI_ALLOLDFIELDS  
- Inicializar/usar todos os campos para o do `BP_REQUEST_INFO` estrutura.  
+ Inicialização/usar todos os campos para o do `BP_REQUEST_INFO` estrutura.  
   
  BPREQI_VENDOR  
- Inicializar/usar o `guidVendor` campo `BP_REQUEST_INFO2` estrutura.  
+ Inicialização/usar o `guidVendor` campo de `BP_REQUEST_INFO2` estrutura.  
   
  BPREQI_CONSTRAINT  
- Inicializar/usar o `bstrConstraint` campo `BP_REQUEST_INFO2` estrutura.  
+ Inicialização/usar o `bstrConstraint` campo de `BP_REQUEST_INFO2` estrutura.  
   
  BPREQI_TRACEPOINT  
- Inicializar/usar o `bstrTracepoint` campo `BP_REQUEST_INFO2` estrutura.  
+ Inicialização/usar o `bstrTracepoint` campo de `BP_REQUEST_INFO2` estrutura.  
   
  BPREQI_ALLFIELDS  
  Especifica todos os campos para o `BP_REQUEST_INFO2` estrutura.  
   
 ## <a name="remarks"></a>Comentários  
- Passado como um argumento para o [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) e [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) métodos para especificar quais campos do [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) e [BP_REQUEST_INFO2 ](../../../extensibility/debugger/reference/bp-request-info2.md) estruturas devem ser inicializado.  
+ Passado como um argumento para o [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) e [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) métodos para especificar quais campos dos [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) e [BP_REQUEST_INFO2 ](../../../extensibility/debugger/reference/bp-request-info2.md) estruturas são a ser inicializado.  
   
- Esses sinalizadores também são usados para indicar quais campos do `BP_REQUEST_INFO` e `BP_REQUEST_INFO2` estruturas são usadas e válidos quando cada estrutura é retornada.  
+ Esses sinalizadores também são usados para indicar quais campos do `BP_REQUEST_INFO` e `BP_REQUEST_INFO2` estruturas são usadas e é válido quando cada estrutura é retornada.  
   
  Esses valores podem ser combinados com um bit a bit `OR`.  
   

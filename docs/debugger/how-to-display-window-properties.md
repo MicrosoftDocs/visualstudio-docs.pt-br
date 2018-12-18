@@ -12,17 +12,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a345f5ac8fc6a77b10ef549a6c2be859106ee00
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 204121f40fa1cfc32040185286e7c566bbb59214
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872415"
 ---
 # <a name="how-to-display-window-properties"></a>Como exibir Propriedades da Janela
-Para obter mais informações sobre uma janela listada na [exibição Windows](../debugger/windows-view.md), use o [janela caixa de diálogo de propriedades](../debugger/window-properties-dialog-box.md).  
+Para obter mais informações sobre uma janela listada na [modo de exibição do Windows](../debugger/windows-view.md), use o [caixa de diálogo de propriedades de janela](../debugger/window-properties-dialog-box.md).  
   
 ### <a name="to-open-the-window-properties-dialog-box"></a>Para abrir a caixa de diálogo Propriedades da janela  
   
-1.  Selecione o item e escolha **propriedades** do **exibição** menu.  
+1. Selecione o item e, em seguida, escolha **propriedades** da **exibição** menu.  
   
- Caixas de diálogo de propriedades não são restritas. Enquanto você clica entre os itens em uma janela de exibição, a caixa de diálogo é automaticamente atualizada com informações sobre cada item selecionado.
+   Caixas de diálogo de propriedades não são modais. Enquanto você clica entre os itens em uma janela de exibição, a caixa de diálogo é automaticamente atualizada com informações sobre cada item selecionado.

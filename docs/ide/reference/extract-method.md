@@ -1,7 +1,7 @@
 ---
-title: Extrair um método no Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Extrair um método no Visual Studio
 ms.date: 01/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
@@ -14,11 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e2766159413255543a6022fe0bd52ed6084db96
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6978457fdc976f87a8334b181ab69dfd78ef240c
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51294534"
 ---
 # <a name="extract-a-method-refactoring"></a>Refatoração Extrair um método
 
@@ -40,36 +41,36 @@ Esta refatoração aplica-se a:
 
    - C#:
 
-    ![Código realçado – C#](media/extractmethod-highlight-cs.png)
+       ![Código realçado – C#](media/extractmethod-highlight-cs.png)
 
    - Visual Basic:
 
-    ![Código realçado – Visual Basic](media/extractmethod-highlight-vb.png)
+       ![Código realçado – Visual Basic](media/extractmethod-highlight-vb.png)
 
-1. Depois, siga um destes procedimentos:
+2. Depois, siga um destes procedimentos:
 
    - **Teclado**
-     - Pressione **Ctrl+R**, em seguida, **Ctrl+M**. (Observe que o atalho de teclado pode ser diferente com base no perfil selecionado.)
-     - Pressione **Ctrl**+**.** para disparar o menu **Ações Rápidas e Refatorações** e selecionar **Extrair Método** no pop-up da janela Visualização.
+      - Pressione **Ctrl+R**, em seguida, **Ctrl+M**. (Observe que o atalho de teclado pode ser diferente com base no perfil selecionado.)
+      - Pressione **Ctrl**+**.** para disparar o menu **Ações Rápidas e Refatorações** e selecionar **Extrair Método** no pop-up da janela Visualização.
    - **Mouse**
-     - Selecione **Editar > Refatorar > Extrair Método**.
-     - Clique com o botão direito do mouse no código e selecione **Refatorar > Extrair > Extrair Método**.
-     - Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Extrair Método** no pop-up da janela Visualização.
+      - Selecione **Editar > Refatorar > Extrair Método**.
+      - Clique com o botão direito do mouse no código e selecione **Refatorar > Extrair > Extrair Método**.
+      - Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Extrair Método** no pop-up da janela Visualização.
 
    O método será criado imediatamente. A partir daqui, agora você pode renomear o método digitando o novo nome.
 
    > [!TIP]
-   > Também é possível atualizar os comentários e outras cadeias de caracteres para usar esse novo nome, bem como [visualizar as alterações](../../ide/preview-changes.md) antes de salvar usando as caixas de seleção na caixa **Renomear** que aparece na parte superior direita do seu IDE.
+   > Também é possível atualizar os comentários e outras cadeias de caracteres para usar esse novo nome, bem como [visualizar as alterações](../../ide/preview-changes.md) antes de salvar usando as caixas de seleção na caixa **Renomear**, que aparece na parte superior direita do seu IDE.
 
    - C#:
 
-    ![Renomear método – C#](media/extractmethod-rename-cs.png)
+      ![Renomear método – C#](media/extractmethod-rename-cs.png)
 
    - Visual Basic:
 
-    ![Renomear método – Visual Basic](media/extractmethod-rename-vb.png)
+      ![Renomear método – Visual Basic](media/extractmethod-rename-vb.png)
 
-1. Quando estiver satisfeito com a alteração, escolha **Aplicar** ou pressione **Enter** e as alterações serão confirmadas.
+3. Quando estiver satisfeito com a alteração, escolha **Aplicar** ou pressione **Enter** e as alterações serão confirmadas.
 
 ## <a name="see-also"></a>Consulte também
 

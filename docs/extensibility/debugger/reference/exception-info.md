@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c48772ed5835daeff9d47773e6e48526993fa425
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4bbefc02a05d03dc966c05941ca08c05cce0a5a5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49947889"
 ---
 # <a name="exceptioninfo"></a>EXCEPTION_INFO
-Descreve um erro de tempo de execução gerada pelo programa que está sendo depurado ou exceção.  
+Descreve uma exceção ou erro de tempo de execução gerado pelo programa que está sendo depurado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,13 +63,13 @@ public struct EXCEPTION_INFO {
  O código de identificação para o erro de exceção ou tempo de execução.  
   
  dwState  
- Um valor da [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md) enumeração que define o estado da exceção.  
+ Um valor a partir de [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md) enumeração que define o estado da exceção.  
   
  guidType  
- O identificador de idioma GUID, `guidLang` ou `guidEng`.  
+ O identificador de idioma GUID, seja `guidLang` ou `guidEng`.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é passada como um parâmetro para o [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) e [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md) métodos. Essa estrutura também é passada para o [GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md) método a ser preenchido.  
+ Essa estrutura é passada como um parâmetro para o [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) e o [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md) métodos. Essa estrutura também é passada para o [GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md) método a ser preenchido.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

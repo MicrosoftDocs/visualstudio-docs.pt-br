@@ -1,32 +1,32 @@
 ---
 title: Atualizando o Visual Studio para Mac
 description: Instruções para atualizar o Visual Studio para Mac e acessar as versões prévias.
-author: asb3993
-ms.author: amburns
-ms.date: 04/14/2017
+author: conceptdev
+ms.author: crdun
+ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: DB8DC9FE-FF21-4061-8A96-3F9FC08A4F8F
-ms.openlocfilehash: eeda1afa2e9cd311c09660f2af5190b224b9c341
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 6f60b32b66dc2c33a0ecbcd71f80fd613d273b64
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51294397"
 ---
-# <a name="updating-visual-studio-for-mac"></a>Atualizando o Visual Studio para Mac
+# <a name="update-visual-studio-for-mac"></a>Atualizar o Visual Studio para Mac
 
 O Visual Studio para Mac distribui as atualizações para o IDE e estruturas compatíveis regularmente. Essas atualizações podem incluir novos recursos, melhorias e correções de bugs.
 
 O Visual Studio para Mac fornece três canais para obter essas versões mais recentes:
 
 * **Estável** –Fornece atualizações amplamente testadas. Esse canal é o recomendado para obter a melhor experiência de desenvolvimento.
-* **Beta** – Fornece acesso antecipado às atualizações que são candidatas para liberação no Canal Estável.
-* **Alfa** – Fornece acesso antecipado a atualizações que adicionam novos recursos, mas que podem não ser confiáveis para o uso cotidiano.
+* **Beta** / **Alfa** – Fornece acesso antecipado às atualizações candidatas a lançamento no Canal Estável. Essas versões podem não ser confiáveis para uso diário.
 
 ## <a name="checking-for-updates"></a>Verificar se há atualizações
 
 Você pode usar a caixa **Atualizador do Visual Studio** para verificar se há novas atualizações, alterar os canais e baixar e instalar as atualizações.
 
-Para abrir o **Atualizador do Visual Studio**, navegue para **Visual Studio > Verificar se há atualizações...**:
+Para abrir o **Atualizador do Visual Studio**, navegue até **Visual Studio > Verificar se há atualizações**:
 
 ![Opções Verificar se há atualizações](media/update-image1.png)
 
@@ -51,3 +51,7 @@ Para começar a instalar as atualizações, selecione o botão **Reiniciar e ins
 ![Botão para começar a instalar as atualizações](media/update-image4.png)
 
 Dependendo dos componentes que precisam ser instalados, poderá ser necessário aceitar licenças adicionais ou inserir o nome de usuário e senha do administrador do computador.
+
+## <a name="see-also"></a>Consulte também
+
+- [Atualizar o Visual Studio (no Windows)](/visualstudio/install/update-visual-studio)

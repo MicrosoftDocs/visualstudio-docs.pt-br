@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130648"
 ---
 # <a name="providing-automation-for-code"></a>Fornece automação de código
 Não é necessário criar um modelo de automação para seu código. O SDK de ambiente não fornece um exemplo para fazer isso. Para mais informações sobre modelos de código, consulte o <xref:EnvDTE.CodeModel> objeto.  

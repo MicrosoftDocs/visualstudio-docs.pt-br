@@ -1,5 +1,5 @@
 ---
-title: 'Como: adicionar texto e formatação a células em tabelas do Word programaticamente | Microsoft Docs'
+title: 'Como: adicionar texto e formatação a células em tabelas do Word programaticamente'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,22 +18,23 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c7d50a5531bdb4e073c2760ae6d4e746b4970af6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a7fff8451c469e58d7c23ab6bd3366db2fa10d59
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35256338"
 ---
-# <a name="how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables"></a>Como adicionar texto e formatação a células em tabelas do Word programaticamente
-  Cada tabela consiste em uma coleção de células. Cada indivíduo <xref:Microsoft.Office.Interop.Word.Cell> objeto representa uma célula na tabela. Você se referir a cada célula por sua localização na tabela. Este exemplo refere-se à célula localizada na primeira linha e a primeira coluna da tabela; adiciona texto à célula; e aplica formatação.  
+# <a name="how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables"></a>Como: adicionar texto e formatação a células em tabelas do Word programaticamente
+  Cada tabela consiste em uma coleção de células. Cada indivíduo <xref:Microsoft.Office.Interop.Word.Cell> objeto representa uma célula na tabela. Você pode se referir a cada célula de acordo com seu local na tabela. Este exemplo refere-se para a célula localizada na primeira linha e primeira coluna da tabela; adiciona texto à célula; e se aplica a formatação.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-### <a name="to-add-text-and-formatting-to-cells"></a>Para adicionar texto e formatação a células  
+## <a name="to-add-text-and-formatting-to-cells"></a>Para adicionar texto e formatação a células  
   
-1.  Fazer referência à célula por sua localização na tabela, adicionar texto à célula e aplique a formatação.  
+1.  Fazer referência à célula por seu local na tabela, adicionar texto à célula e aplicar a formatação.  
   
-     O exemplo de código a seguir pode ser usado em uma personalização no nível do documento. Para usar este exemplo, executá-la na `ThisDocument` classe em seu projeto.  
+     O exemplo de código a seguir pode ser usado em uma personalização no nível de documento. Para usar este exemplo, executá-la na `ThisDocument` classe em seu projeto.  
   
      [!code-vb[Trin_VstcoreWordAutomation#97](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#97)]
      [!code-csharp[Trin_VstcoreWordAutomation#97](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#97)]  
@@ -44,8 +45,8 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#97](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#97)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: criar programaticamente tabelas do Word](../vsto/how-to-programmatically-create-word-tables.md)   
- [Como: adicionar programaticamente as linhas e colunas a tabelas do Word](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)   
- [Como preencher tabelas do Word com propriedades do documento de forma programática](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)  
+ [Como: criar tabelas do Word de forma programática](../vsto/how-to-programmatically-create-word-tables.md)   
+ [Como: adicionar linhas e colunas de forma programática a tabelas do Word](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)   
+ [Como: programaticamente preencher tabelas do Word com propriedades do documento](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)  
   
   

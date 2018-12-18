@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31471015"
 ---
 # <a name="dump-file-summary-extensibility-api"></a>API de extensibilidade de resumo do arquivo de despejo
 Usando os APIs de extensibilidade nesta seção, você pode estender o. Sistema de projeto exe e **despejar resumo** página para uso com seu próprio mecanismo de depuração personalizada.  

@@ -14,24 +14,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 18cd3ec809df921d6baefbf8018fefc77db238d3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 97b7531a60f72405d41a5a72c391ba8da91958dc
+ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276306"
 ---
 # <a name="taskscheduler-class---internal-members"></a>Classe TaskScheduler - membros internos
-Este tópico descreve os membros internos do <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> classe ajudá-lo a implementar um depurador personalizado. Para obter informações gerais sobre esta classe, consulte o <xref:System.Threading.Tasks.TaskScheduler> tópico de referência.  
+Este artigo descreve os membros internos do <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> classe que ajudam você a implementar um depurador personalizado. Para obter informações gerais sobre essa classe, consulte o <xref:System.Threading.Tasks.TaskScheduler> artigo de referência.  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Assembly:** mscorlib (em mscorlib.dll)  
+ **Assembly:** mscorlib (em *mscorlib. dll*)  
   
  Porque você não pode acessar esses membros internos do .NET Framework, a sintaxe a seguir é fornecida em comum Intermediate Language (CIL).  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp  
 .class public abstract auto ansi beforefieldinit System.Threading.Tasks.TaskScheduler  
        extends System.Object  
 ```  

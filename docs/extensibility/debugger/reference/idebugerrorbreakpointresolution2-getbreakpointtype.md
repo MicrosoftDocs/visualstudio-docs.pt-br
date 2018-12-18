@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 71ef91425338c4aaed2393c89ad03be602228ad2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c001e47b7393daa07b799ff78f31019d21ec5ee2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951477"
 ---
 # <a name="idebugerrorbreakpointresolution2getbreakpointtype"></a>IDebugErrorBreakpointResolution2::GetBreakpointType
 Obtém o tipo de ponto de interrupção.  
@@ -43,7 +44,7 @@ int GetBreakpointType(
  [out] Retorna um valor da [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) enumeração que descreve o tipo de ponto de interrupção.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  Esse método retorna o tipo do ponto de interrupção que falha ao associar, exigindo assim que um evento de erro de ponto de interrupção.  

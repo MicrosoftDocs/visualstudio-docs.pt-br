@@ -1,21 +1,22 @@
 ---
-title: Trabalhando com dados XML | Microsoft Docs
-ms.custom: ''
+title: Trabalhando com dados XML
 ms.date: 11/04/2016
-ms.technology: vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-xml-tools
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e92bd40eba56c486c95be4d85e376f80beffccf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 579d535348a8f5f2b7c728aa4d8ad5fbb434bdda
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349335"
 ---
-# <a name="working-with-xml-data"></a>Trabalhando com dados XML
+# <a name="working-with-xml-data"></a>Trabalhar com dados XML
 
 O Visual Studio inclui ferramentas e recursos que facilitam trabalhar com os esquemas XML, XSLT e XML.
 
@@ -25,7 +26,7 @@ O editor de XML é usado para editar documentos XML. Ele fornece verificação c
 
 Os recursos adicionais incluem:
 
-- Suporte de trecho de XML, incluindo trechos gerados por esquema.
+- Suporte de snippet de XML, incluindo snippets gerados por esquema.
 
 - Estrutura de tópicos de documento de modo que os elementos possam ser expandidos e recolhidos.
 
@@ -35,38 +36,26 @@ Os recursos adicionais incluem:
 
 - Suporte para editar folhas de estilos XSLT, incluindo suporte a IntelliSense.
 
-- XML Schema Explorer.
+- **XML Schema Explorer**.
 
 ## <a name="xml-schema-designer"></a>Designer de esquema XML
 
-O Designer de esquema XML é integrado com o Visual Studio e o Editor de XML para que você possa trabalhar com esquemas de linguagem XSD de definição de esquema XML.
+O Designer de esquema XML está integrado com o Visual Studio e o Editor XML para que você possa trabalhar com esquemas XSD (linguagem) de definição de esquema XML.
 
 ## <a name="xslt-debugging"></a>Depuração de XSLT
 
 O Visual Studio dá suporte a depuração de folhas de estilos XSLT. Usando o depurador, você pode definir pontos de quebra em uma folha de estilos XSLT, entrar em uma folha de estilos XSLT a partir do código, e assim por diante.
 
-## <a name="in-this-section"></a>Nesta seção
-
-[Editor de XML](../xml-tools/xml-editor.md)  
-Apresenta o editor de XML.
-
-[Designer de Esquema XML](../xml-tools/xml-schema-designer.md)  
-Discute o designer de esquema XML e trabalha com esquemas da linguagem XSD.
-
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Depuração de XSLT](../xml-tools/debugging-xslt.md)  
-Descreve como depurar folhas de estilos usando o depurador do Visual Studio.
+[Depuração XSLT](../xml-tools/debugging-xslt.md) discute como depurar folhas de estilos usando o depurador do Visual Studio.
 
-[XML Standards Reference](http://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401) (Referência de padrões XML)  
-Fornece informações sobre as tecnologias XML, incluindo XML, Definição de Tipo de Documento (DTD), linguagem XSD do XML e XSLT.
+[Referência a padrões XML](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401) fornece informações sobre tecnologias XML, incluindo XML, definição de tipo de documento (DTD), linguagem de definição de esquema XML (XSD) e XSLT.
 
-[Criar e configurar conjuntos de dados no Visual Studio](../data-tools/create-and-configure-datasets-in-visual-studio.md)  
-Fornece uma explicação sobre as ferramentas em tempo de design para criar conjuntos de dados.
+[Criar e configurar conjuntos de dados no Visual Studio](../data-tools/create-and-configure-datasets-in-visual-studio.md) fornece uma explicação das ferramentas de tempo de design para a criação de conjuntos de dados.
 
-[XML Web Services no código gerenciado](http://msdn.microsoft.com/c9a7dc25-3e68-4723-bfb7-de4320830196)  
-Descreve como criar e implantar serviços Web XML e como acessar serviços Web XML.
+[XML web services em código gerenciado](/previous-versions/visualstudio/visual-studio-2008/xy59yt45\(v\=vs.90\)) discute como criar e implantar XML web services e como acessar serviços web XML.
 
 ## <a name="see-also"></a>Consulte também
 
-[Ferramentas XML no Visual Studio](../xml-tools/xml-tools-in-visual-studio.md)
+- [Ferramentas XML no Visual Studio](../xml-tools/xml-tools-in-visual-studio.md)

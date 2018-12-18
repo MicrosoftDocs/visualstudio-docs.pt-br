@@ -20,18 +20,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: df186776e9f1fe431343c8643e5186ff522dfff6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fc1cab2fdb0a175fc9365b2a8b4b17dca46a30a2
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077666"
 ---
-# <a name="ltstringsgt-element-bootstrapper"></a>&lt;Cadeias de caracteres&gt; elemento (Bootstrapper)
+# <a name="ltstringsgt-element-bootstrapper"></a>&lt;Cadeias de caracteres&gt; elemento (bootstrapper)
 Define as cadeias de caracteres localizadas para nomes de produtos, nomes de pacote e mensagens de erro de instalação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <Strings>  
     <String  
         Name  
@@ -41,10 +42,10 @@ Define as cadeias de caracteres localizadas para nomes de produtos, nomes de pac
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementos e atributos  
- O `Strings` elemento é um filho de `Package` elemento. Ele não tem atributos.  
+ O `Strings` um filho do elemento é o `Package` elemento. Ele não tem atributos.  
   
 ## <a name="string"></a>Cadeia de Caracteres  
- O `String` elemento é um filho de `Strings` elemento. Um `Strings` elemento pode ter um ou mais `String` elementos.  
+ O `String` um filho do elemento é o `Strings` elemento. Um `Strings` elemento pode ter um ou mais `String` elementos.  
   
  `String` tem o seguinte atributo.  
   
@@ -55,7 +56,7 @@ Define as cadeias de caracteres localizadas para nomes de produtos, nomes de pac
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir especifica que todas as cadeias de caracteres em inglês para o [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] installer.  
   
-```  
+```xml  
 <Strings>  
     <String Name="DisplayName">.NET Framework 2.0</String>  
     <String Name="Culture">en</String>  

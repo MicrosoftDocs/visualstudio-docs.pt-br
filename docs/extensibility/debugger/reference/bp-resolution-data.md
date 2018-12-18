@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f76cba8fa2b1ea01a2cbd7670a05b449d476127b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0f7ad3c88f0dd804daba2ee52126c7c6321a2a2b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876081"
 ---
 # <a name="bpresolutiondata"></a>BP_RESOLUTION_DATA
 Descreve o resultado da associação a um ponto de interrupção de dados.  
@@ -46,16 +47,16 @@ public struct BP_RESOLUTION_DATA {
   
 ## <a name="members"></a>Membros  
  `bstrDataExpr`  
- A expressão de dados associado.  
+ A expressão de dados que foi associada.  
   
  `bstrFunc`  
- O nome da função do ponto de interrupção de dados foi associada em (se houver).  
+ O nome da função de ponto de interrupção de dados tem associado no (se houver).  
   
  `bstrImage`  
- O nome do módulo (MyModule.dll, por exemplo) que o ponto de interrupção de dados foi associado na.  
+ O nome do módulo (MyModule.dll, por exemplo) que o ponto de interrupção de dados tenha associado no.  
   
  `dwFlags`  
- Um valor da [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md) enumeração que descreve como o ponto de interrupção de dados é implementado.  
+ Um valor a partir de [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md) enumeração, que descreve como o ponto de interrupção de dados é implementado.  
   
 ## <a name="remarks"></a>Comentários  
  Essa estrutura é um membro do [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) estrutura, que está em um membro de ativar o [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) estrutura retornada pelo [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)método.  

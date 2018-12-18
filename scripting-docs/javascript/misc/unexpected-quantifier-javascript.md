@@ -1,13 +1,13 @@
 ---
 title: Quantificador inesperado (JavaScript) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5018
@@ -16,31 +16,32 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: ba6d34f9-2d6f-486c-a929-6cd9818be322
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fb6d6d3129057c399dd7369c6f69eb7396f07ab4
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: ef0955bac35009d9b6c82f1856bb9005a08043ad
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44282255"
 ---
 # <a name="unexpected-quantifier-javascript"></a>Quantificador inesperado (JavaScript)
-Ao compor o padrão de pesquisa de expressão regular, você criou um elemento padrão com um fator de repetição inválida. Por exemplo, o padrão  
+Ao redigir o padrão de pesquisa de expressão regular, você criou um elemento padrão com um fator de repetição inválida. Por exemplo, o padrão  
   
 ```  
 /^+/  
 ```  
   
- é inválido porque o elemento ^ (início de entrada) não pode ter um fator de repetição. A tabela a seguir lista os elementos que não podem ter fatores de repetição.  
+ é ilegal porque o elemento ^ (início da entrada) não pode ter um fator de repetição. A tabela a seguir lista os elementos que não podem ter os fatores de repetição.  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |^|Início da entrada|  
-|$|fim de entrada|  
+|$|Fim da entrada|  
 |\b|Limite de palavra|  
-|\B|Limite de palavra não|  
+|\B|Limite não pertencente a palavras|  
 |*|Zero ou mais repetições|  
 |+|Um ou mais repetições|  
 |?|Repetições de zero ou um|  
@@ -50,8 +51,8 @@ Ao compor o padrão de pesquisa de expressão regular, você criou um elemento p
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Certifique-se de que o elemento padrão de pesquisa contém apenas os fatores de repetição legal.  
+-   Verifique se que o elemento padrão de pesquisa contém apenas fatores de repetição legal.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto de expressão regular](../../javascript/reference/regular-expression-object-javascript.md)   
- [Sintaxe de expressão regular (JavaScript)](http://msdn.microsoft.com/en-us/ab0766e1-7037-45ed-aa23-706f58358c0e)
+ [Sintaxe de expressão regular (JavaScript)](https://msdn.microsoft.com/library/1400241x)

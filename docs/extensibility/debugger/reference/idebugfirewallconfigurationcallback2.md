@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31110859"
 ---
 # <a name="idebugfirewallconfigurationcallback2"></a>IDebugFirewallConfigurationCallback2
 Permite que um mecanismo de depuração que usa o DCOM para solicitar o [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] interface do usuário para certificar-se de que o firewall não bloqueará a depuração remota.  

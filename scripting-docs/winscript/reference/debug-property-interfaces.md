@@ -1,17 +1,17 @@
 ---
-title: "Interfaces de propriedade de depuração | Microsoft Docs"
-ms.custom: 
+title: Interfaces de propriedade de depuração | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Debug property interfaces
 - dbgprop.h
 ms.assetid: 89aecd23-1439-4707-98d8-7b8f98c8b454
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -20,6 +20,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24641176"
 ---
 # <a name="debug-property-interfaces"></a>Interfaces de propriedade de depuração
 O arquivo de cabeçalho DbgProp.h fornece as interfaces listadas nesta seção.  

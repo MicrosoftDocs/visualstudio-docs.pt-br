@@ -13,16 +13,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 95745cbef015e9f6ceddb9b84d75b52ec9805dea
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 37c62ebad5b5f119c9acf5b62b14db6743949c19
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500443"
 ---
-# <a name="inside-the-core-editor"></a>Dentro do Editor de núcleo
-O [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] editor principal é um conjunto de vários componentes que permitem que você modifique e consultar informações textuais. Se você tiver personalizado o editor de núcleo usando a API herdada, você pode continuar a usar essas personalizações, que serão roteadas por meio de adaptadores de editor. Recomenda-se, no entanto, que você os adapte suas personalizações para o novo editor de API.  
+# <a name="inside-the-core-editor"></a>Dentro do editor de núcleo
+O [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] editor principal é um conjunto de vários componentes que permitem que você modifique e consultar informações textuais. Se você tiver personalizado o editor principal usando a API herdada, você pode continuar a usar essas personalizações, que serão roteadas por meio de adaptadores do editor. No entanto, ele é recomendável que você adapte suas personalizações para o novo editor de API.  
   
- As áreas a seguir estão alguns aspectos importantes do editor principais:  
+ As áreas a seguir estão alguns aspectos importantes do que o editor principal:  
   
 -   Buffer de texto  
   
@@ -37,42 +38,42 @@ O [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] editor principal é 
 -   Integração com serviços de linguagem  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Criando o Editor de núcleo usando a API herdado](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)  
+ [Criar uma instância o editor principal usando a API herdada](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)  
  Fornece instruções passo a passo sobre como usar <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> para criar uma instância do núcleo do editor.  
   
- [Acessando o Buffer de texto usando a API herdado](../extensibility/accessing-the-text-buffer-by-using-the-legacy-api.md)  
- Discute a função do buffer de texto no editor de núcleo, explica os sistemas associados que são usados para acessar o buffer e fornece uma lista de interfaces implementadas pelo objeto de buffer de texto, <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>.  
+ [Acessar o buffer de texto, usando a API herdada](../extensibility/accessing-the-text-buffer-by-using-the-legacy-api.md)  
+ Discute a função do buffer de texto no editor de núcleo, explica os sistemas associados que são usados para acessar o buffer e fornece uma lista das interfaces implementadas pelo objeto de buffer de texto, <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>.  
   
- [Eventos de Buffer de texto na API herdado](../extensibility/text-buffer-events-in-the-legacy-api.md)  
- Fornece uma lista das interfaces que são usadas para notificação de eventos de buffer de texto.  
+ [Eventos de buffer de texto na API herdada](../extensibility/text-buffer-events-in-the-legacy-api.md)  
+ Fornece uma lista das interfaces que são usados para a notificação de eventos do buffer de texto.  
   
- [Como: registrar eventos de Buffer de texto com a API herdado de](../extensibility/how-to-register-for-text-buffer-events-with-the-legacy-api.md)  
+ [Como: se registrar para eventos de buffer de texto com a API herdada](../extensibility/how-to-register-for-text-buffer-events-with-the-legacy-api.md)  
  Descreve como eventos de buffer de texto de aviso.  
   
- [Usando o Gerenciador de texto para monitorar as configurações globais](../extensibility/using-the-text-manager-to-monitor-global-settings.md)  
- Discute como o Gerenciador de texto é usado para compartilhar informações globais com os componentes principais do editor e a receber notificações de eventos do Gerenciador de texto.  
+ [Use o Gerenciador de texto para monitorar as configurações globais](../extensibility/using-the-text-manager-to-monitor-global-settings.md)  
+ Discute como o Gerenciador de texto é usado para compartilhar informações de preferências globais com os componentes principais do editor e como receber notificação de eventos do Gerenciador de texto.  
   
- [Acessando theText exibição usando a API herdado](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)  
+ [Exibição de theText de acesso usando a API herdada](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)  
  Descreve a função do modo de exibição de texto no editor de núcleo e lista as interfaces implementadas pelo <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> objeto.  
   
- [Personalização do Windows de código usando a API herdado](../extensibility/customizing-code-windows-by-using-the-legacy-api.md)  
- Fornece informações sobre como uma janela de código é usada para incluir o modo de texto, discute como o Gerenciador de janelas de código é usado para fornecer decorações para a janela de código e fornece a notificação de novos modos de exibição.  
+ [Personalizar janelas de código usando a API herdada](../extensibility/customizing-code-windows-by-using-the-legacy-api.md)  
+ Fornece informações sobre como uma janela de código é usada para delimitar a exibição de texto, discute como o Gerenciador de janelas de código é usado para fornecer as decorações de janela de código e fornece notificação de novos modos de exibição.  
   
- [Alterar configurações de exibição usando a API herdado](../extensibility/changing-view-settings-by-using-the-legacy-api.md)  
- Fornece instruções passo a passo sobre como forçar as configurações de exibição e como remover configurações forçadas.  
+ [Alterar as configurações de exibição usando a API herdada](../extensibility/changing-view-settings-by-using-the-legacy-api.md)  
+ Fornece instruções passo a passo sobre como forçar as configurações de exibição e como remover as configurações de forçado.  
   
- [Serviços de idioma e o Editor de núcleo](../extensibility/language-services-and-the-core-editor.md)  
- Descreve a instanciação de um serviço de linguagem para decorações de código do controle.  
+ [Serviços de linguagem e o editor de núcleo](../extensibility/language-services-and-the-core-editor.md)  
+ Descreve a instanciação de um serviço de linguagem para as decorações de código do controle.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Passo a passo: Criando um Editor de núcleo e registrando um tipo de arquivo do Editor](../extensibility/walkthrough-creating-a-core-editor-and-registering-an-editor-file-type.md)  
- Fornece instruções passo a passo sobre como iniciar o editor de núcleo de código gerenciado.  
+ [Passo a passo: Criar um editor de núcleo e registrar um tipo de arquivo do editor](../extensibility/walkthrough-creating-a-core-editor-and-registering-an-editor-file-type.md)  
+ Fornece instruções passo a passo sobre como iniciar o editor principal do código gerenciado.  
   
  [Barra de menu suspenso](../extensibility/drop-down-bar.md)  
  Discute como a barra de menu suspenso é usada na janela de código e descreve as interfaces que são usadas quando você implementa uma barra de menu suspenso.  
   
- [Usar marcadores de texto com a API herdado](../extensibility/using-text-markers-with-the-legacy-api.md)  
- Explica o conceito de marcadores de texto e como eles são usados no editor de núcleo e lista as interfaces que são usadas para acessar e gerenciar marcadores de texto.  
+ [Usar marcadores de texto com a API herdada](../extensibility/using-text-markers-with-the-legacy-api.md)  
+ Explica o conceito de marcadores de texto e como elas são usadas no editor de núcleo e lista as interfaces que são usadas para acessar e gerenciar marcadores de texto.  
   
  [Como: adicionar marcadores de texto padrão](../extensibility/how-to-add-standard-text-markers.md)  
  Fornece instruções passo a passo sobre como criar um marcador de texto e como adicionar um comando personalizado a um menu de atalho.  

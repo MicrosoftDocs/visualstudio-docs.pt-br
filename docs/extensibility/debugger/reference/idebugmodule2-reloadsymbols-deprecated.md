@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dcd383130c1af1765014adfa438482543c336ede
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 09f2e81699683ec49155faceb375da3d636ed4c4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934035"
 ---
 # <a name="idebugmodule2reloadsymbolsdeprecated"></a>IDebugModule2::ReloadSymbols_Deprecated
 OBSOLETO. NÃO USE. Recarrega os símbolos para esse módulo.  
@@ -42,16 +43,16 @@ int ReloadSymbols(
   
 #### <a name="parameters"></a>Parâmetros  
  `pszUrlToSymbols`  
- [in] O caminho para o armazenamento de símbolo.  
+ [in] O caminho para o repositório de símbolos.  
   
  `pbstrDebugMessage`  
- [out] Retorna uma mensagem informativa, como uma mensagem de erro ou de status, que é exibida à direita do nome do módulo na janela de módulos.  
+ [out] Retorna uma mensagem informativa, como uma mensagem de status ou erro, que é exibida à direita do nome do módulo na janela de módulos.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Um mecanismo de depuração deve retornar sempre `E_FAIL`.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Um mecanismo de depuração deve retornar sempre `E_FAIL`.  
   
 ## <a name="remarks"></a>Comentários  
- Não há suporte para esse método. Implementar o [LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md) método em vez disso.  
+ Esse método não é mais suportado. Implemente a [LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md) método em vez disso.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)   

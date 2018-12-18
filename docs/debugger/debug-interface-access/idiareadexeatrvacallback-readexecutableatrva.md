@@ -1,5 +1,5 @@
 ---
-title: ': Readexecutableatrva | Microsoft Docs'
+title: 'Idiareadexeatrvacallback:: Readexecutableatrva | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f71db30a3e4cba957e6aba0981587276af714e3e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 69afacf68c77dcb2bca7c951dbd2a1ee9a344cfb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917267"
 ---
 # <a name="idiareadexeatrvacallbackreadexecutableatrva"></a>IDiaReadExeAtRVACallback::ReadExecutableAtRVA
-Lê o número especificado de bytes, começando no relativo virtual endereço especificado (RVA) do arquivo executável.  
+Lê o número especificado de bytes começando no especificado endereço virtual relativo (RVA) do arquivo executável.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +37,7 @@ HRESULT ReadExecutableAtRVA (
   
 #### <a name="parameters"></a>Parâmetros  
  `relativeVirtualAddress`  
- [in] RVA no arquivo executável para iniciar a leitura.  
+ [in] O RVA no arquivo executável para iniciar a leitura.  
   
  `cbData`  
  [in] Número de bytes a serem lidos.  
@@ -45,10 +46,10 @@ HRESULT ReadExecutableAtRVA (
  [out] Retorna o número de bytes lidos.  
   
  `data[]`  
- [out no] Uma matriz que é preenchida com bytes lidos do arquivo.  
+ [no, out] Uma matriz que é preenchida com bytes lidos do arquivo.  
   
 ## <a name="remarks"></a>Comentários  
- Este método é chamado pelo código de suporte do DIA para carregar os bytes de dados de um executável usando um endereço virtual relativo. Este método é chamado suportados de [: Loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) método.  
+ Este método é chamado pelo código de suporte do DIA para carregar os bytes de dados de um executável usando um endereço virtual relativo. Esse método é chamado suportados a [idiadatasource:: Loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) método.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaReadExeAtRVACallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md)   

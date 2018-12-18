@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e58ef7e706ff23edf28cefbf375d5f79a548b9a8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d602aa7da2f82258a7f0d9b0ba7d1d803d05cc7d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926326"
 ---
 # <a name="idebugobject2getfield"></a>IDebugObject2::GetField
-Obtém o tipo do objeto.  
+Obtém o tipo desse objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +44,7 @@ int GetField(
  [out] Retorna um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto se não for um valor nulo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  Um campo descreve o tipo do objeto.  

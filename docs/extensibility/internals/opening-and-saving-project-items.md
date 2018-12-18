@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130583"
 ---
 # <a name="opening-and-saving-project-items"></a>Abrir e salvar itens de projeto
 Quando você adiciona um novo tipo de projeto, você deve gerenciar a abrir e salvar seus arquivos de projetos no [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ambiente de desenvolvimento integrado (IDE). Os tópicos a seguir abordam as diferentes abordagens para abrir e salvar arquivos.  

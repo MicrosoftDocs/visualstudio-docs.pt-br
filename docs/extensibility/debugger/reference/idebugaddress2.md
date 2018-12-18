@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31100267"
 ---
 # <a name="idebugaddress2"></a>IDebugAddress2
 Essa interface fornece acesso para a ID do processo que possui o objeto cujo endereço é representado por esta interface.  

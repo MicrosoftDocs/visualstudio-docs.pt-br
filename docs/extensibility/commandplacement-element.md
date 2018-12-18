@@ -14,21 +14,22 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14f28c8e2758d2dde9cf38db268abc9fa9b4f863
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4d7288de9b0724d8ff4ef7b6174f59e747a9879d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49870257"
 ---
 # <a name="commandplacement-element"></a>Elemento CommandPlacement
-Permite que o elemento CommandPlacement botões, grupos e menus devem ser incluídos em mais de um grupo ou menu. Usando o elemento CommandPlacement, você não precisa redefinir completamente esses itens para modificar a aparência de uma interface de usuário.  
+O elemento CommandPlacement permite que os botões, grupos e menus a serem incluídos em mais de um grupo ou menu. Usando o elemento CommandPlacement, não é preciso redefinir completamente esses itens para modificar a aparência de uma interface do usuário.  
   
- Para obter mais informações, consulte [criando grupos reutilizável de botões](../extensibility/creating-reusable-groups-of-buttons.md).  
+ Para obter mais informações, consulte [criar grupos reutilizáveis de botões](../extensibility/creating-reusable-groups-of-buttons.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-<CommandPlacement guid=guidMyCommandSet" id="MyCommand" priority="0x001" >  
+<CommandPlacement guid="guidMyCommandSet" id="MyCommand" priority="0x001" >  
   <Parent>... </Parent>  
 </CommandPlacement>  
 ```  
@@ -40,16 +41,16 @@ Permite que o elemento CommandPlacement botões, grupos e menus devem ser inclu�
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|GUID|Necessário. O guid do conjunto de comando, conforme definido no [símbolos elemento](../extensibility/symbols-element.md).|  
-|id|Necessário. A id do menu, o grupo ou o comando será colocado, conforme definido no `Symbols Element`.|  
+|GUID|Necessário. O guid do conjunto de comandos, conforme definido na [elemento Symbols](../extensibility/symbols-element.md).|  
+|id|Necessário. A id do menu, grupo ou o comando a ser colocado, conforme definido no `Symbols Element`.|  
 |priority|Necessário. Determina a posição visual do item em seu elemento pai.|  
-|Condição|Opcional. Consulte [atributos condicionais](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|Condição|Opcional. Ver [Aattributes condicional](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|Pai|Necessário. O menu ou grupo que hospeda o item será colocado.|  
+|Pai|Necessário. O menu ou grupo que hospeda o item a ser colocado.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -70,4 +71,4 @@ Permite que o elemento CommandPlacement botões, grupos e menus devem ser inclu�
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento CommandPlacements](../extensibility/commandplacements-element.md)   
- [Arquivos da tabela de comandos do Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+ [Arquivos de tabela (. VSCT) de comando do Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

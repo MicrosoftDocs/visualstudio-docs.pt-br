@@ -15,26 +15,27 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a7ce7bfbe9d68a7edcc0711c1f7e954612e67d0c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7bfc700f0757d99686e28942ff796cf117b1456f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951217"
 ---
 # <a name="function-details-view"></a>Exibição de detalhes da função
 A janela **Exibição Detalhes da Função** exibe as seguintes informações:  
   
--   O gráfico de barras **Distribuição de Custos** representa os relacionamentos entre uma função selecionada e as funções de chamada que executaram a função selecionada e entre a função selecionada e as funções que foram chamadas por ela.  
+- O gráfico de barras **Distribuição de Custos** representa os relacionamentos entre uma função selecionada e as funções de chamada que executaram a função selecionada e entre a função selecionada e as funções que foram chamadas por ela.  
   
--   A tabela **Detalhes de Desempenho da Função** que mostra um resumo dos dados de criação para a função que você especificar.  
+- A tabela **Detalhes de Desempenho da Função** que mostra um resumo dos dados de criação para a função que você especificar.  
   
--   A janela **Exibição Código de Função**, que mostra o código de função quando o código está disponível.  
+- A janela **Exibição Código de Função**, que mostra o código de função quando o código está disponível.  
   
- A janela **Exibição Código de Função** é um painel separado. Por padrão, os dois painéis são divididos horizontalmente e a janela **Exibição Código de Função** encontra-se na parte inferior do quadro.  
+  A janela **Exibição Código de Função** é um painel separado. Por padrão, os dois painéis são divididos horizontalmente e a janela **Exibição Código de Função** encontra-se na parte inferior do quadro.  
   
--   Para dividir os dois painéis verticalmente, clique em **Dividir a Tela Verticalmente** na barra de ferramentas.  
+- Para dividir os dois painéis verticalmente, clique em **Dividir a Tela Verticalmente** na barra de ferramentas.  
   
--   Para alterar o tamanho relativo dos painéis, clique na borda sombreada entre os quadros e arraste-a para um local diferente.  
+- Para alterar o tamanho relativo dos painéis, clique na borda sombreada entre os quadros e arraste-a para um local diferente.  
   
 ## <a name="cost-distribution-bar-chart"></a>Gráfico de barras da distribuição de custo  
   
@@ -48,25 +49,25 @@ A janela **Exibição Detalhes da Função** exibe as seguintes informações:
   
  Você pode clicar no nome de uma função de chamada para transformá-la na função selecionada da exibição.  
   
--   Se houver muitas funções de chamada para listar, as funções com as menor contribuição serão coletadas em um bloco **Outros**. Clique em **Outros** para exibir todas as funções que chamam são chamadas pela função selecionada na janela **Exibição de Chamador/Receptor**. Para obter mais informações, consulte a [Exibição de Chamador/Computador chamado](../profiling/caller-callee-view.md).  
+- Se houver muitas funções de chamada para listar, as funções com as menor contribuição serão coletadas em um bloco **Outros**. Clique em **Outros** para exibir todas as funções que chamam são chamadas pela função selecionada na janela **Exibição de Chamador/Receptor**. Para obter mais informações, consulte a [Exibição de Chamador/Computador chamado](../profiling/caller-callee-view.md).  
   
--   Se não houver nenhuma função de chamada ou se a função for a função de entrada de um thread ou processo, um bloco **Topo da Pilha** será exibido.  
+- Se não houver nenhuma função de chamada ou se a função for a função de entrada de um thread ou processo, um bloco **Topo da Pilha** será exibido.  
   
- **Função selecionada**  
+  **Função selecionada**  
   
- A barra de função selecionada mostra as contribuições de funções chamadas e do código na função selecionada para a métrica de desempenho total da função selecionada. O tamanho do bloco que contém uma função chamada ou o corpo da função é proporcional à contribuição ao valor total da métrica de desempenho para a função selecionada.  
+  A barra de função selecionada mostra as contribuições de funções chamadas e do código na função selecionada para a métrica de desempenho total da função selecionada. O tamanho do bloco que contém uma função chamada ou o corpo da função é proporcional à contribuição ao valor total da métrica de desempenho para a função selecionada.  
   
- Você pode clicar no nome de uma função chamada para transformá-la na função selecionada da exibição.  
+  Você pode clicar no nome de uma função chamada para transformá-la na função selecionada da exibição.  
   
--   O valor **Total** é a métrica de desempenho para a função selecionada.  
+- O valor **Total** é a métrica de desempenho para a função selecionada.  
   
--   O bloco **Corpo da Função** representa o valor do total da métrica de desempenho que ocorreu na execução direta do código no corpo da função.  
+- O bloco **Corpo da Função** representa o valor do total da métrica de desempenho que ocorreu na execução direta do código no corpo da função.  
   
--   Funções que são chamadas pela função selecionada são listadas em blocos. O tamanho do bloco de funções selecionadas representa a quantidade da métrica de desempenho total para a função selecionada que ocorreu na função chamada.  
+- Funções que são chamadas pela função selecionada são listadas em blocos. O tamanho do bloco de funções selecionadas representa a quantidade da métrica de desempenho total para a função selecionada que ocorreu na função chamada.  
   
--   Se houver muitas funções de chamada para listar, as funções com as menor contribuição serão coletadas em um bloco **Outros**. Clique em **Outros** para exibir todas as funções que chamam são chamadas pela função selecionada na janela **Exibição de Chamador/Receptor**. Para obter mais informações, consulte a [Exibição de Chamador/Computador chamado](../profiling/caller-callee-view.md).  
+- Se houver muitas funções de chamada para listar, as funções com as menor contribuição serão coletadas em um bloco **Outros**. Clique em **Outros** para exibir todas as funções que chamam são chamadas pela função selecionada na janela **Exibição de Chamador/Receptor**. Para obter mais informações, consulte a [Exibição de Chamador/Computador chamado](../profiling/caller-callee-view.md).  
   
--   Se não houver nenhuma função chamada, um bloco **Fundo da Pilha** será exibido.  
+- Se não houver nenhuma função chamada, um bloco **Fundo da Pilha** será exibido.  
   
 ## <a name="function-performance-details"></a>Detalhes de Desempenho da Função  
  A tabela de Detalhes de Desempenho da Função fornece dados de resumo para as métricas de desempenho da função selecionada. O valor e o percentual aparecem. Especifique os dados de criação de perfil que aparecem no gráfico e a tabela de detalhes na lista **Métrica de desempenho**.  

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol | Microsoft Docs
+title: 'Idiasymbol:: Get_length | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 00d58442f0b6e95732dab5a2bc5702e6c500d70a
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 9f99a2012d0c3f009540c988df6e41b0a7d0cf4e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844505"
 ---
 # <a name="idiasymbolgetlength"></a>IDiaSymbol::get_length
-Recupera o número de bits ou bytes de memória usada pelo objeto representado por esse símbolo.  
+Recupera o número de bits ou de bytes de memória usada pelo objeto representado por este símbolo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,10 +34,10 @@ HRESULT get_length (
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Retorna o número de bytes ou bits de memória usada pelo objeto representado por esse símbolo.  
+ [out] Retorna o número de bytes ou bits de memória usada pelo objeto representado por este símbolo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
@@ -57,7 +58,7 @@ pSymbol->get_length( &length );
 |Requisito|Descrição|  
 |-----------------|-----------------|  
 |Cabeçalho:|dia2.h|  
-|Versão:|Versão 7.0 do DIA SDK|  
+|Versão:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

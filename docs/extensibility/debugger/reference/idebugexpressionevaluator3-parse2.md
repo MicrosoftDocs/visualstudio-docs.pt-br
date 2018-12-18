@@ -13,14 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 64344d66bcdd0ab64f6dd1e944f161e286c132de
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 46f7b503cb1cc90ad1058761274e6974a11ee35a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867215"
 ---
 # <a name="idebugexpressionevaluator3parse2"></a>IDebugExpressionEvaluator3::Parse2
-Converte uma cadeia de caracteres de expressão em uma expressão analisada considerando o provedor de símbolo e o endereço do quadro de avaliar.  
+Converte uma cadeia de caracteres de expressão em uma expressão analisada, considerando o provedor de símbolo e o endereço da estrutura de avaliação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,10 +53,10 @@ HRESULT Parse2 (
   
 #### <a name="parameters"></a>Parâmetros  
  `upstrExpression`  
- [in] A cadeia de caracteres de expressão a ser analisada.  
+ [in] A cadeia de caracteres de expressão a ser analisado.  
   
  `dwFlags`  
- [in] Uma coleção de [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) constantes que determinam como a expressão é para ser analisado.  
+ [in] Uma coleção de [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) constantes que determinam como a expressão deve ser analisados.  
   
  `nRadix`  
  [in] Base a ser usado para interpretar todas as informações numéricas.  
@@ -64,10 +65,10 @@ HRESULT Parse2 (
  [in] Interface do provedor de símbolo.  
   
  `pAddress`  
- [in] Endereço do quadro de avaliar.  
+ [in] Endereço da estrutura de avaliação.  
   
  `pbstrError`  
- [out] Retorna o erro como texto legível.  
+ [out] Retorna o erro como texto legível por humanos.  
   
  `pichError`  
  [out] Retorna a posição do caractere do início do erro na cadeia de caracteres de expressão.  
@@ -76,13 +77,13 @@ HRESULT Parse2 (
  [out] Retorna a expressão analisada em um [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) objeto.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método gera uma expressão analisada, não um valor real. Uma expressão analisada está pronta para ser avaliada, ou seja, convertido em um valor.  
+ Esse método produz uma expressão analisada, não um valor real. Uma expressão analisada está pronta para ser avaliada, ou seja, convertido em um valor.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CEE** objeto que expõe o [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md) interface.  
+ O exemplo a seguir mostra como implementar esse método para um **CEE** objeto que expõe a [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md) interface.  
   
 ```cpp  
 HRESULT CEE::Parse2 ( LPCOLESTR in_szExprText,  

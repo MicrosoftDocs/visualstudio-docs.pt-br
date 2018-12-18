@@ -13,13 +13,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9bebc312858e16688598ba289e4c53d93010122b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6e5baebb527c09d833e405a98bd701ad02b7fe86
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928055"
 ---
-# <a name="walkthrough-using-profiler-apis"></a>Instruções passo a passo: usando APIs do criador de perfil
+# <a name="walkthrough-using-profiler-apis"></a>Passo a passo: usando APIs do criador de perfil
+
 O passo a passo usa um aplicativo C# para demonstrar como usar as APIs de Ferramentas de criação de perfil do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Você usará as APIs do criador de perfil para limitar a quantidade de dados coletados durante a criação de perfil de instrumentação.  
   
  As etapas neste passo a passo geralmente se aplicam a um aplicativo C/C++. Para cada idioma, você precisará configurar o ambiente de compilação adequadamente.  
@@ -30,9 +32,9 @@ O passo a passo usa um aplicativo C# para demonstrar como usar as APIs de Ferram
   
  O criador de perfil do Visual Studio permite que você limite a coleta de dados. Este passo a passo oferece um exemplo de como limitar a coleta de dados usando as APIs do criador de perfil. O criador de perfil do Visual Studio fornece uma API para controlar a coleta de dados de dentro de um aplicativo.  
   
- Para o código nativo, as APIs do criador de perfil do Visual Studio estão em VSPerf.dll. Por padrão, VSPerf.h e VSPerf.lib, e a biblioteca de importação, VSPerf.lib, estão localizados no diretório Microsoft Visual Studio 9\Team Tools\Performance Tools.  
+ Para o código nativo, as APIs do criador de perfil do Visual Studio estão em *VSPerf.dll*. O arquivo de cabeçalho, *VSPerf.h*, e a biblioteca de importação, *VSPerf.lib*, estão localizados no diretório *Microsoft Visual Studio 9\Team Tools\Performance Tools*.  
   
- Para o código gerenciado, as APIs do criador de perfil estão na Microsoft.VisualStudio.Profiler.dll. Essa DLL está no diretório Microsoft Visual Studio 9\Team Tools\Performance Tools. Para obter mais informações, consulte <xref:Microsoft.VisualStudio.Profiler>.  
+ Para o código gerenciado, as APIs do criador de perfil estão na *Microsoft.VisualStudio.Profiler.dll*. Essa DLL é encontrada no diretório *Microsoft Visual Studio 9\Team Tools\Performance Tools*. Para obter mais informações, consulte <xref:Microsoft.VisualStudio.Profiler>.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Este passo a passo pressupõe que a escolha do ambiente de desenvolvimento está configurada para dar suporte à depuração e amostragem. Os tópicos a seguir fornecem uma visão geral desses pré-requisitos:  
@@ -43,72 +45,76 @@ O passo a passo usa um aplicativo C# para demonstrar como usar as APIs de Ferram
   
  Por padrão, quando o criador de perfil é iniciado, ele coleta dados no nível global. O código a seguir no início do programa desativa a criação de perfil global.  
   
-```  
+```csharp  
 DataCollection.StopProfile(  
 ProfileLevel.Global,  
 DataCollection.CurrentId);  
 ```  
   
- Você pode desativar a coleta de dados na linha de comando sem o uso de uma chamada de API. As etapas a seguir pressupõem que o ambiente de compilação de linha de comando está configurado para executar as ferramentas de criação de perfil e como suas ferramentas de desenvolvimento. Isso inclui as configurações necessárias para VSInstr e VSPerfCmd. Confira as Ferramentas de criação de perfil de linha de comando.  
+ Você pode desativar a coleta de dados na linha de comando sem usar uma chamada de API. As etapas a seguir pressupõem que o ambiente de compilação de linha de comando está configurado para executar as ferramentas de criação de perfil e como suas ferramentas de desenvolvimento. Isso inclui as configurações necessárias para VSInstr e VSPerfCmd. Confira as [Ferramentas de criação de perfil de linha de comando](../profiling/using-the-profiling-tools-from-the-command-line.md).  
   
-## <a name="limiting-data-collection-using-profiler-apis"></a>Limitação da coleta de dados usando APIs do criador de perfil  
+## <a name="limit-data-collection-using-profiler-apis"></a>Limitar a coleta de dados usando APIs do criador de perfil  
   
 #### <a name="to-create-the-code-to-profile"></a>Para criar o código para o perfil  
   
 1.  Crie um novo projeto C# no Visual Studio, ou use uma compilação de linha de comando, dependendo de sua preferência.  
   
     > [!NOTE]
-    >  A compilação deve fazer referência à biblioteca Microsoft.VisualStudio.Profiler.dll, localizada no diretório Microsoft Visual Studio 9\Team Tools\Performance Tools.  
+    >  A compilação deve fazer referência à biblioteca *Microsoft.VisualStudio.Profiler.dll*, localizada no diretório *Microsoft Visual Studio 9\Team Tools\Performance Tools*.  
   
 2.  Copie e cole o código a seguir em seu projeto:  
   
-    ```  
+    ```csharp  
     using System;  
     using System.Collections.Generic;  
     using System.Text;  
     using Microsoft.VisualStudio.Profiler;  
   
-    namespace ConsoleApplication2  
+    namespace ConsoleApplication1  
     {  
         class Program  
         {  
             public class A  
             {  
-             private int _x;  
+                private int _x;  
   
-             public A(int x)  
-             {  
-              _x = x;  
-             }  
+                public A(int x)  
+                {  
+                    _x = x;  
+                }  
   
-             public int DoNotProfileThis()  
-             {  
-              return _x * _x;  
-             }  
+                public int DoNotProfileThis()  
+                {  
+                    return _x * _x;  
+                }  
   
-             public int OnlyProfileThis()  
-             {  
-              return _x + _x;  
-             }  
+                public int OnlyProfileThis()  
+                {  
+                    return _x + _x;  
+                }  
   
-             public static void Main()  
-             {  
-            DataCollection.StopProfile(  
-            ProfileLevel.Global,  
-            DataCollection.CurrentId);  
-              A a;  
-              a = new A(2);  
-              int x;      
-              Console.WriteLine("2 square is {0}", a.DoNotProfileThis());  
-              DataCollection.StartProfile(  
-                  ProfileLevel.Global,  
-                  DataCollection.CurrentId);  
-              x = a.OnlyProfileThis();  
-              DataCollection.StopProfile(  
-                  ProfileLevel.Global,   
-                  DataCollection.CurrentId);  
-              Console.WriteLine("2 doubled is {0}", x);  
-             }  
+                public static void Main()  
+                {  
+                    DataCollection.StopProfile(  
+                    ProfileLevel.Global,  
+                    DataCollection.CurrentId); 
+
+                    A a = new A(2);  
+                    Console.WriteLine("2 square is {0}", a.DoNotProfileThis()); 
+
+                    DataCollection.StartProfile(  
+                    ProfileLevel.Global,  
+                    DataCollection.CurrentId);
+
+                    int x;  
+                    x = a.OnlyProfileThis();  
+
+                    DataCollection.StopProfile(  
+                    ProfileLevel.Global,   
+                    DataCollection.CurrentId);  
+
+                    Console.WriteLine("2 doubled is {0}", x);  
+                }  
             }  
   
         }  
@@ -117,21 +123,21 @@ DataCollection.CurrentId);
   
 #### <a name="to-collect-and-view-data-in-the-visual-studio-ide"></a>Para coletar e exibir dados no IDE do Visual Studio  
   
-1.  Abra o IDE do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. No menu **Analisar**, aponte para **Criador de Perfil** e, em seguida, selecione **Nova Sessão de Desempenho**  
+1. Abra o IDE do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. No menu **Analisar**, aponte para **Criador de Perfil** e, em seguida, selecione **Nova Sessão de Desempenho**.  
   
-2.  Adicione o binário compilado à lista **Destinos** na janela **Gerenciador de Desempenho**. Clique com botão direito do mouse em **Destinos** e, em seguida, selecione **Adicionar Binário de Destino**. Localize o binário na caixa de diálogo **Adicionar Binário de Destino** e clique em **Abrir**.  
+2. Adicione o binário compilado à lista **Destinos** na janela **Gerenciador de Desempenho**. Clique com botão direito do mouse em **Destinos** e, em seguida, selecione **Adicionar Binário de Destino**. Localize o binário na caixa de diálogo **Adicionar Binário de Destino** e clique em **Abrir**.  
   
-3.  Selecione **Instrumentação**, na lista **Método**, na barra de ferramentas **Gerenciador de Desempenho**.  
+3. Selecione **Instrumentação**, na lista **Método**, na barra de ferramentas **Gerenciador de Desempenho**.  
   
-4.  Clique em **Iniciar a Criação de Perfil**.  
+4. Clique em **Iniciar a Criação de Perfil**.  
   
-     O criador de perfil instrumentará e executará o binário e criará um arquivo de relatório de desempenho. O arquivo de relatório de desempenho aparecerá no nó **Relatórios** do **Gerenciador de Desempenho**.  
+    O criador de perfil instrumentará e executará o binário e criará um arquivo de relatório de desempenho. O arquivo de relatório de desempenho aparecerá no nó **Relatórios** do **Gerenciador de Desempenho**.  
   
-5.  Abra o arquivo de relatório de desempenho resultante.  
+5. Abra o arquivo de relatório de desempenho resultante.  
   
- Por padrão, quando o criador de perfil for iniciado, ele coletará dados no nível global. O código a seguir no início do programa desativa a criação de perfil global.  
+   Por padrão, quando o criador de perfil for iniciado, ele coletará dados no nível global. O código a seguir no início do programa desativa a criação de perfil global.  
   
-```  
+```csharp  
 DataCollection.StopProfile(  
 ProfileLevel.Global,  
 DataCollection.CurrentId);  
@@ -143,24 +149,24 @@ DataCollection.CurrentId);
   
 2.  Para criar o perfil de um aplicativo gerenciado, digite o comando a seguir para definir as variáveis de ambiente apropriadas:  
   
-     **VsPefCLREnv /traceon**  
+     **VsPerfCLREnv /traceon**  
   
-3.  Digite este comando:**VSInstr \<filename>.exe**  
+3.  Digite este comando: **VSInstr \<filename>.exe**  
   
-4.  Digite este comando:**VSPerfCmd /start:trace /output:\<filename>.vsp**  
+4.  Digite este comando: **VSPerfCmd /start:trace /output:\<filename>.vsp**  
   
-5.  Digite este comando:**VSPerfCmd /globaloff**  
+5.  Digite este comando: **VSPerfCmd /globaloff**  
   
 6.  Execute seu programa.  
   
-7.  Digite este comando:**VSPerfCmd /shutdown**  
+7.  Digite este comando: **VSPerfCmd /shutdown**  
   
-8.  Digite este comando:**VSPerfReport /calltrace:\<filename>.vsp**  
+8.  Digite este comando: **VSPerfReport /calltrace:\<filename>.vsp**  
   
-     Um arquivo .csv é criado no diretório atual com os dados de desempenho resultantes.  
+     Um arquivo .*csv* é criado no diretório atual com os dados de desempenho resultantes.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualStudio.Profiler>   
  [Referência da API do criador de perfil do Visual Studio (nativo)](../profiling/visual-studio-profiler-api-reference-native.md)   
  [Introdução](../profiling/getting-started-with-performance-tools.md)   
- [Criando perfil na linha de comando](../profiling/using-the-profiling-tools-from-the-command-line.md)
+ [Criar perfil da linha de comando](../profiling/using-the-profiling-tools-from-the-command-line.md)

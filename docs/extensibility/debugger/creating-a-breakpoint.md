@@ -1,5 +1,5 @@
 ---
-title: Criar um ponto de interrupção | Microsoft Docs
+title: Criando um ponto de interrupção | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 88f5b75defc1bceff4aacd580474b145df32bf68
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 04eefdca7459f95da3ddef0430a59f9af52e581e
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203895"
 ---
-# <a name="creating-a-breakpoint"></a>Criar um ponto de interrupção
+# <a name="create-a-breakpoint"></a>Criar um ponto de interrupção
 O exemplo a seguir descreve o processo de criação de um ponto de interrupção.  
   
 ## <a name="methods-in-breakpoint-creation"></a>Métodos de criação de ponto de interrupção  
- Quando o módulo que é necessário para associar um ponto de interrupção é carregado, o Gerenciador de sessão de depuração (SDM) chama os seguintes métodos:  
+ Quando o módulo que é necessária para associar um ponto de interrupção é carregado, o Gerenciador de sessão de depuração (SDM) chama os seguintes métodos:  
   
 1.  [IDebugPendingBreakpoint2::Enable](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)  
   
@@ -33,7 +34,7 @@ O exemplo a seguir descreve o processo de criação de um ponto de interrupção
 3.  [IDebugPendingBreakpoint2::CanBind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)  
   
     > [!NOTE]
-    >  **CanBind** é chamado apenas quando um usuário faz um ponto de interrupção na janela pontos de interrupção.  
+    >  **CanBind** é chamado somente quando um usuário faz um ponto de interrupção do **pontos de interrupção** janela.  
   
 4.  [IDebugPendingBreakpoint2::Bind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)  
   

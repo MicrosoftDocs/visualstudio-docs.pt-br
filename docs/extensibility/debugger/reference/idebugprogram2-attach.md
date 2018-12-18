@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: aff1e5f6c887b42b6f49e0c8cfa426cade814006
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5de330bc800e4f967fdc1f3c08af18f6bf46fecd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935101"
 ---
 # <a name="idebugprogram2attach"></a>IDebugProgram2::Attach
-Anexa o programa.  
+Anexa ao programa.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,19 +41,19 @@ int Attach(
   
 #### <a name="parameters"></a>Parâmetros  
  `pCallback`  
- [in] Um [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objeto a ser usado para notificação de eventos de depuração.  
+ [in] Uma [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objeto a ser usado para notificação de eventos de depuração.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. A tabela a seguir mostra alguns possíveis códigos de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. A tabela a seguir mostra algumas possíveis códigos de erro.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`|O programa especificado já está anexado ao depurador.|  
 |`E_ATTACH_DEBUGGEE_PROCESS_SECURITY_VIOLATION`|Ocorreu uma violação de segurança durante o procedimento de anexação.|  
-|`E_ATTACH_CANNOT_ATTACH_TO_DESKTOP`|Um programa de área de trabalho não é possível anexar o depurador.|  
+|`E_ATTACH_CANNOT_ATTACH_TO_DESKTOP`|Um programa de desktop não pode ser anexado ao depurador.|  
   
 ## <a name="remarks"></a>Comentários  
- Um mecanismo de depuração (DE) nunca chama esse método para conectar a um programa. Se o DE é executado no espaço de endereço do programa, o [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) método é chamado. Se o espaço de endereço de execuções DE no Gerenciador de depuração de sessão (SDM) a [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) método é chamado.  
+ Um mecanismo de depuração (DES) nunca chama esse método para conectar a um programa. Se a Alemanha é executado no espaço de endereço do programa, o [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) método é chamado. Se as execuções DE no Gerenciador de depuração de sessão (SDM) endereço espaço, o [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) método é chamado.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   

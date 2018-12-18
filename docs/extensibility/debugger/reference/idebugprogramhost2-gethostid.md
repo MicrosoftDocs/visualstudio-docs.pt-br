@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84225cf6d8f89bcf25f657b3f3b7dda74339272e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 74e4575eca8a9f67446a60737c051a574109b97e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831090"
 ---
 # <a name="idebugprogramhost2gethostid"></a>IDebugProgramHost2::GetHostId
-Obtém o identificador de processo do processo de hospedagem este programa.  
+Obtém o identificador de processo do processo que hospeda este programa.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,10 +41,10 @@ int GetHostId(
   
 #### <a name="parameters"></a>Parâmetros  
  `pdwId`  
- [out no] Um [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) estrutura que é preenchida com as informações de identificador de processo.  
+ [no, out] Uma [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) estrutura será preenchida com as informações de identificador de processo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProgramHost2](../../../extensibility/debugger/reference/idebugprogramhost2.md)   

@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5a1c8dfe689aae30fc54d76739a1f3233d2f2e00
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1d35341309473e3f107649fceb954f77e05640de
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908637"
 ---
 # <a name="idebugprocess2enumprograms"></a>IDebugProcess2::EnumPrograms
 Recupera uma lista de todos os programas contidos por esse processo.  
@@ -43,7 +44,7 @@ int EnumPrograms(
  [out] Retorna um [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md) objeto que contém uma lista de todos os programas no processo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   

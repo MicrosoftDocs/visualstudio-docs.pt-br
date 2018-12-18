@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129363"
 ---
 # <a name="outlining-and-hidden-text-in-a-legacy-language-service"></a>Texto de estrutura de tópicos e ocultado em um serviço de linguagem herdado
 Estrutura de tópicos torna possível recolher uma sequência de linhas de texto em uma única linha. Por exemplo, em C++ todos os métodos podem ser recolhidos para uma única linha, mostrando apenas a assinatura do método. Texto oculto é a sequência de linhas de texto que podem ser mostrados ou ocultados.  

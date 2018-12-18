@@ -1,20 +1,23 @@
 ---
 layout: LandingPage
-author: jasongroce
-ms.author: apexprodleads
-ms.topic: landing-page
-ms.technology: vs-ide-mobile
-title: Desenvolvimento móvel com Documentação do C++ | Microsoft Docs
+title: Desenvolvimento Móvel com C++
 description: Crie aplicativos nativos em C++ para dispositivos iOS, Android e Windows com o Visual Studio.
+ms.date: 10/31/2018
+author: jasongroce
+ms.author: jasgro
+ms.topic: landing-page
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-mobile
 ms.workload:
 - apexprodleads
-ms.openlocfilehash: e190ad0dbe908fb1d4549023729d60db88177ea6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 59d244e4224e408c43fbcee44d103313fcfa1d1e
+ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751031"
 ---
-# <a name="mobile-development-with-c-documentation"></a>Documentação de desenvolvimento móvel com C++
+# <a name="mobile-development-with-c-documentation"></a>Desenvolvimento móvel com documentação do C++
 
 Crie aplicativos nativos em C++ para dispositivos iOS, Android e Windows com o Visual Studio.
 
@@ -26,12 +29,12 @@ Crie aplicativos nativos em C++ para dispositivos iOS, Android e Windows com o V
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_setup.svg" alt="">
+                            <img src="/media/common/i_setup.svg" alt="Set up Visual C++ for cross-platform mobile apps">
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Instalar o Visual C++ para Desenvolvimento Móvel Multiplataforma</h3>
-                        <p>Configure as ferramentas necessárias para criar aplicativos móveis para várias plataformas.</p>
+                        <h3>Instalar o Visual C++ para desenvolvimento móvel multiplataforma</h3>
+                        <p>Configure as ferramentas necessárias para criar aplicativos móveis multiplataformas.</p>
                     </div>
                 </div>
             </div>
@@ -45,11 +48,11 @@ Crie aplicativos nativos em C++ para dispositivos iOS, Android e Windows com o V
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_learn-about.svg" alt="">
+                            <img src="/media/common/i_learn-about.svg" alt="Learn about Visual C++ for cross-platform mobile develpment">
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Saiba mais sobre o Visual C++ para Desenvolvimento Móvel Multiplataforma</h3>
+                        <h3>Saiba mais sobre o Visual C++ para desenvolvimento móvel multiplataforma</h3>
                         <p>Obtenha uma visão geral do desenvolvimento móvel em várias plataforma com o Visual C++.</p>
                     </div>
                 </div>
@@ -64,12 +67,12 @@ Crie aplicativos nativos em C++ para dispositivos iOS, Android e Windows com o V
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_xplat-code.svg" alt="">
+                            <img src="/media/common/i_xplat-code.svg" alt="Cross-platform mobile development examples">
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>Exemplos de desenvolvimento móvel multiplataforma</h3>
-                        <p>Exemplos para você começar com o desenvolvimento móvel de multiplataforma.</p>
+                        <p>Veja exemplos para ajudar você a começar com o desenvolvimento móvel multiplataforma.</p>
                     </div>
                 </div>
             </div>
@@ -88,7 +91,7 @@ Crie aplicativos nativos em C++ para dispositivos iOS, Android e Windows com o V
                 <div class="card">
                     <div class="cardText">
                         <h3><a href="/cpp/visual-cpp-in-visual-studio">Visual C++</a></h3>
-                        <p><a href="/cpp/ide/ide-and-tools-for-visual-cpp-development">IDE e ferramentas para desenvolvimento no Visual C++</a><p>
+                        <p><a href="/cpp/ide/ide-and-tools-for-visual-cpp-development">IDE e ferramentas para desenvolvimento do Visual C++</a><p>
                     </div>
                 </div>
             </div>
@@ -100,9 +103,9 @@ Crie aplicativos nativos em C++ para dispositivos iOS, Android e Windows com o V
                 <div class="card">
                     <div class="cardText">
                         <h3>Plataformas</h3>
-                        <p><a href="/cpp/windows/universal-windows-apps-cpp">Documentação do UWP (Plataforma Universal do Windows)</a></p>
-                        <p><a href="https://developer.apple.com/reference">Documentação de API do iOS</a></p>
-                        <p><a href="https://developer.android.com/guide/index.html">Documentação de API do Android</a></p>
+                        <p><a href="/cpp/windows/universal-windows-apps-cpp">documentação do UWP (Plataforma Universal do Windows)</a></p>
+                        <p><a href="https://developer.apple.com/reference">documentação de API do iOS</a></p>
+                        <p><a href="https://developer.android.com/guide/index.html">documentação de API do Android</a></p>
                     </div>
                 </div>
             </div>

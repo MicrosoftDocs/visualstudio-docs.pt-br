@@ -13,14 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c278e5713432c19eaea1a964534c79522e36500b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 37abff77fa0c969be7186413f0e3e2531c8d94d6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915393"
 ---
 # <a name="idebugprocessquerypropertiesqueryproperties"></a>IDebugProcessQueryProperties::QueryProperties
-Consultas esse método para valores de propriedade especificada do processo de depuração.  
+Essa consulta método um valores de propriedade especificados do processo de depuração.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,20 +46,20 @@ int QueryProperties(
  `dwPropType`  
  [in] Uma matriz que contém as definições das propriedades consultadas. Os valores possíveis são:  
   
--   PROCESS_PROPERTY_COMMAND_LINE = 1  
+- PROCESS_PROPERTY_COMMAND_LINE = 1  
   
--   PROCESS_PROPERTY_CURRENT_DIRECTORY = 2  
+- PROCESS_PROPERTY_CURRENT_DIRECTORY = 2  
   
--   PROCESS_PROPERTY_ENVIRONMENT_VARIABLES = 3  
+- PROCESS_PROPERTY_ENVIRONMENT_VARIABLES = 3  
   
- `pvarPropValue`  
- [out] Uma matriz que contém os valores de propriedade.  
+  `pvarPropValue`  
+  [out] Uma matriz que contém os valores de propriedade.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método é usado raramente.  
+ Esse método é raramente usado.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProcessQueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties.md)

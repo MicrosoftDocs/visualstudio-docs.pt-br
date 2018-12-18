@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b9d9a354bf6d336d220f8700b6f8b818663986f5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a9fa7008d73084450e505809f22c5de87747c83d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855918"
 ---
 # <a name="ienumdebugprograms2clone"></a>IEnumDebugPrograms2::Clone
 Retorna uma cópia da enumeração atual como um objeto separado.  
@@ -43,10 +44,10 @@ int Clone(
  [out] Retorna uma cópia dessa enumeração como um objeto separado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- A cópia da enumeração tem o mesmo estado original no momento em que este método é chamado. No entanto, o original e da cópia estados são separados e podem ser alterados individualmente.  
+ A cópia da enumeração tem o mesmo estado original no momento em que esse método é chamado. No entanto, a cópia e o original estados são separados e podem ser alterados individualmente.  
   
 ## <a name="see-also"></a>Consulte também  
  [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md)

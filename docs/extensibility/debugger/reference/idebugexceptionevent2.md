@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31119670"
 ---
 # <a name="idebugexceptionevent2"></a>IDebugExceptionEvent2
 O mecanismo de depuração (DE) envia essa interface para o Gerenciador de sessão de depuração (SDM) quando uma exceção é lançada no programa que está sendo executado no momento.  

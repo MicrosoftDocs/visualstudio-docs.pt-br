@@ -13,11 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 47c1482d5ad2e748bb2664b796e272ce8e9c03d5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7746f85eeec41b708bd4c1537ee725d2096c41ef
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920619"
 ---
 # <a name="programdestroyflags"></a>PROGRAM_DESTROY_FLAGS
 Enumera o válido sinalizadores de destruir os valores do programa.  
@@ -44,7 +45,7 @@ public enum enum_PPROGRAM_DESTROY_FLAGS
  Destruir o programa, mas continuar a depuração.  
   
 ## <a name="remarks"></a>Comentários  
- A enumeração é retornada pelo [GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md) método.  
+ A enumeração é retornada pela [GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: Msdbg.h  

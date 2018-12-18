@@ -1,5 +1,5 @@
 ---
-title: ': Get_machinetype | Microsoft Docs'
+title: 'Idiasymbol:: Get_machinetype | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f001450f874969007e5f592824bc1a9d693e1cac
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f7969a82ac6103a81b7849bc9f983842c9ebd6e4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876758"
 ---
 # <a name="idiasymbolgetmachinetype"></a>IDiaSymbol::get_machineType
 Recupera o tipo do destino da CPU.  
@@ -36,7 +37,7 @@ HRESULT get_machineType (
  [out] Retorna um valor da [enumeração CV_CPU_TYPE_e](../../debugger/debug-interface-access/cv-cpu-type-e.md) enumeração que especifica o tipo de CPU de destino.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  

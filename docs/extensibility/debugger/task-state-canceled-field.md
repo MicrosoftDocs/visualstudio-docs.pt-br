@@ -13,24 +13,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e5196b7a5b137e648c5ef35fa3f3bf13885b5e5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a934a70028f392a2a851c11c1b7bc9005dc4a38c
+ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276774"
 ---
 # <a name="taskstatecanceled-field"></a>Campo TASK_STATE_CANCELED
-A tarefa foi cancelada antes de que atingiu o estado de execução ou confirmada seu cancelamento e concluído sem exceção.  
+A tarefa foi cancelada antes que atingiu o estado de execução, ou confirmar seu cancelamento e concluído sem exceção.  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Assembly:** mscorlib (em mscorlib.dll)  
+ **Assembly:** mscorlib (em mscorlib. dll)  
   
  Porque você não pode acessar esse membro interno do .NET Framework, a sintaxe a seguir é fornecida em comum Intermediate Language (CIL).  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp  
 .field static assembly literal int32 TASK_STATE_CANCELED = int32(0x00800000)  
 ```  
   

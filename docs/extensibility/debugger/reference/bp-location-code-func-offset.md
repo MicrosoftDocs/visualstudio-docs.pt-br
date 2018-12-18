@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d312824bb88022cba9b58945cb5f3e78c13b837
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9a1828a7cea62893ecddec6d28f44ca6475352dd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911389"
 ---
 # <a name="bplocationcodefuncoffset"></a>BP_LOCATION_CODE_FUNC_OFFSET
 Descreve o local de deslocamento de um ponto de interrupção em uma função no código.  
@@ -41,7 +42,7 @@ typedef struct _BP_LOCATION_CODE_FUNC_OFFSET {
  O [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md) objeto que descreve o nome da função e a posição relativa do início da função.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é membro do [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura como parte de uma união.  
+ Essa estrutura é um membro do [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura como parte de uma união.  
   
  O `pFuncPos` membro indica onde definir o ponto de interrupção de função.  
   

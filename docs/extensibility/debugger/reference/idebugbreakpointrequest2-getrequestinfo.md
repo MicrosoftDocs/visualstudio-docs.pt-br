@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c9cfbf39ad6ff0dc889f18276a0aad2e4510434c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 80bba52a25d6931a83724ffb17e9e34d2bbf923b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864303"
 ---
 # <a name="idebugbreakpointrequest2getrequestinfo"></a>IDebugBreakpointRequest2::GetRequestInfo
 Obtém as informações de solicitação de ponto de interrupção que descreve esta solicitação de ponto de interrupção.  
@@ -42,13 +43,13 @@ int GetRequestInfo(
   
 #### <a name="parameters"></a>Parâmetros  
  `dwFields`  
- [in] Uma combinação de sinalizadores do [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) enumeração que determina quais campos o `pBPRequestInfo` parâmetro devem ser preenchidos.  
+ [in] Uma combinação de sinalizadores do [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) enumeração que determina quais campos no `pBPRequestInfo` parâmetro devem ser preenchidos.  
   
  `pBPRequestInfo`  
  [out] Especifica o [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) estrutura a ser preenchida com a descrição da solicitação de ponto de interrupção.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como implementar esse método para um simples `CDebugBreakpointRequest` objeto que expõe o [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) interface.  

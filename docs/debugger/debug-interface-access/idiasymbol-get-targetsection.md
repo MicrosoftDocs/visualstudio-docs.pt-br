@@ -1,5 +1,5 @@
 ---
-title: ': Get_targetsection | Microsoft Docs'
+title: 'Idiasymbol:: Get_targetsection | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f8e624182226215c08d563e3ec5d1dd248f13e4b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 145ef7ea1391e21ba1f7d472d616fd9e6d2ee01b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836587"
 ---
 # <a name="idiasymbolgettargetsection"></a>IDiaSymbol::get_targetSection
-Recupera a seção de endereço de um destino de conversão.  
+Recupera a seção de endereço de um destino da conversão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +37,7 @@ HRESULT get_targetSection (
  [out] Parte da seção de um endereço de destino da conversão.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  

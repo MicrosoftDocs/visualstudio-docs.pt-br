@@ -1,5 +1,5 @@
 ---
-title: ': Get_hasmanagedcode | Microsoft Docs'
+title: 'Idiasymbol:: Get_hasmanagedcode | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: a42007a07f4c97a09e3e61d2c9fe5e9b571b3488
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 2b14033b2212095c191ead3c26f7b59cf9c43b52
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934464"
 ---
 # <a name="idiasymbolgethasmanagedcode"></a>IDiaSymbol::get_hasManagedCode
 Recupera um sinalizador que indica se o módulo contém o código gerenciado.  
@@ -33,16 +34,16 @@ HRESULT get_hasManagedCode(
   
 #### <a name="parameters"></a>Parâmetros  
  `pFlag`  
- [out] Retorna `TRUE` se o módulo contém o código gerenciado; caso contrário, retornará `FALSE`, o código é um código não gerenciado.  
+ [out] Retorna `TRUE` se o módulo contém o código gerenciado; caso contrário, retornará `FALSE`, o código é o código não gerenciado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
   
 ## <a name="remarks"></a>Comentários  
- Essa propriedade está disponível na `SymTagCompilandDetails` tipo de símbolo (consulte [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)).  
+ Essa propriedade está disponível do `SymTagCompilandDetails` tipo de símbolo (consulte [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)).  
   
 ## <a name="requirements"></a>Requisitos  
   

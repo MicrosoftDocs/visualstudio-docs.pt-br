@@ -14,24 +14,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 656663c14b4c5b8b77645eb4fc0fd221e1786800
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6a14079c4d936dcc6cd632e28d7b8628983cb990
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495681"
 ---
-# <a name="visual-studio-sdk-reference"></a>Referência SDK do Visual Studio
-Esta seção contém informações sobre namespaces do Visual Studio, dos namespaces relacionados e outras áreas de interesse para os desenvolvedores que usam o SDK do Visual Studio.  
+# <a name="visual-studio-sdk-reference"></a>Referência do Visual Studio SDK
+Esta seção contém informações sobre namespaces, namespaces relacionados e outras áreas de interesse do Visual Studio para desenvolvedores que usam o SDK do Visual Studio.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  <xref:Microsoft.VisualStudio.TextManager.Interop>  
- Interfaces de interoperabilidade herdados usadas para os serviços de editor e o idioma.  
+ Interfaces de interoperabilidade herdados usados para os serviços do editor e linguagem.  
   
  <xref:Microsoft.VisualStudio.Editor>  
  Classes usadas no novo editor.  
   
  <xref:Microsoft.VisualStudio.Language.Intellisense>  
- Classes usadas no novo editor para IntelliSense.  
+ Classes usadas no novo editor para o IntelliSense.  
   
  <xref:Microsoft.VisualStudio.Language.StandardClassification>  
  Classes usadas no novo editor.  
@@ -40,7 +41,7 @@ Esta seção contém informações sobre namespaces do Visual Studio, dos namesp
  Classes usadas no novo editor.  
   
  <xref:Microsoft.VisualStudio.Text.Adornments>  
- Classes usadas no novo editor para adornos.  
+ Classes usadas no novo editor de adornos.  
   
  <xref:Microsoft.VisualStudio.Text.Classification>  
  Classes usadas no novo editor para classificação.  
@@ -61,7 +62,7 @@ Esta seção contém informações sobre namespaces do Visual Studio, dos namesp
  Classes usadas no novo editor.  
   
  <xref:Microsoft.VisualStudio.Text.Formatting>  
- Classes usadas no novo editor de formatação.  
+ Classes usadas no novo editor para a formatação.  
   
  <xref:Microsoft.VisualStudio.Text.IncrementalSearch>  
  Classes usadas no novo editor para a pesquisa incremental.  
@@ -73,10 +74,10 @@ Esta seção contém informações sobre namespaces do Visual Studio, dos namesp
  Classes usadas no novo editor para a estrutura de tópicos.  
   
  <xref:Microsoft.VisualStudio.Text.Projection>  
- Classes usadas no novo editor para a projeção.  
+ Classes usadas no novo editor para projeção.  
   
  <xref:Microsoft.VisualStudio.Text.Tagging>  
- Classes usadas no novo editor de marcação.  
+ Classes usadas no novo editor para a marcação.  
   
  <xref:Microsoft.VisualStudio.Utilities>  
  Classes usadas no novo editor.  
@@ -88,13 +89,13 @@ Esta seção contém informações sobre namespaces do Visual Studio, dos namesp
  Microsoft somente para uso interno.  
   
  <xref:Microsoft.VisualStudio>  
- Classes de constantes do Visual Studio e auxiliares.  
+ Classes para constantes do Visual Studio e auxiliares.  
   
  <xref:Microsoft.VisualStudio.CommandBars>  
- Classes das barras de comando do Visual Studio.  
+ Classes para barras de comando do Visual Studio.  
   
  <xref:Microsoft.VisualStudio.ComponentModelHost>  
- Classes usadas para o Managed Extensibility Framework (MEF) no Visual Studio.  
+ Classes usadas para a estrutura de MEF (Managed Extensibility) no Visual Studio.  
   
  <xref:Microsoft.VisualStudio.Designer.Interfaces>  
  Interfaces usadas com designers do Visual Studio.  
@@ -106,10 +107,10 @@ Esta seção contém informações sobre namespaces do Visual Studio, dos namesp
  Classes usadas para publicação de aplicativos.  
   
  <xref:Microsoft.VisualStudio.OLE.Interop>  
- Interfaces de interoperabilidade usadas no Visual Studio para componentes OLE.  
+ Interfaces de interoperabilidade usados no Visual Studio para componentes OLE.  
   
  <xref:Microsoft.VisualStudio.Package>  
- Classes usadas para serviços de linguagem do Visual Studio gerenciado.  
+ Classes usadas para serviços de linguagem do Visual Studio gerenciados.  
   
  <xref:Microsoft.VisualStudio.PlatformUI>  
  Classes usadas no shell do Visual Studio.  
@@ -139,7 +140,7 @@ Esta seção contém informações sobre namespaces do Visual Studio, dos namesp
  Classes usadas para projetos do Visual Studio.  
   
  <xref:Microsoft.VisualStudio.Shell.Interop>  
- Interoperabilidade interfaces usadas para o shell do Visual Studio.  
+ Interfaces de interoperabilidade usados para o shell do Visual Studio.  
   
  <xref:Microsoft.VisualStudio.Shell.Settings>  
  Classes usadas no shell do Visual Studio.  
@@ -214,15 +215,15 @@ Esta seção contém informações sobre namespaces do Visual Studio, dos namesp
  Usado para a automação de projeto c# e Visual Basic.  
   
  <xref:Microsoft.VisualStudio.Language.CallHierarchy>  
- Usado para automação c# e Visual Basic.  
+ Usado para a automação de c# e Visual Basic.  
   
  <xref:Microsoft.VisualStudio.Language.NavigateTo.Interfaces>  
- Usado para automação c# e Visual Basic.  
+ Usado para a automação de c# e Visual Basic.  
   
  <xref:Microsoft.VisualStudio.Threading>  
  Usado para threading do Visual Studio.  
   
- [Namespace Microsoft.VisualStudio.ConnectedServices](https://msdn.microsoft.com/library/microsoft.visualstudio.connectedservices.aspx) usada para serviços do Visual Studio conectado.  
+ [Namespace Microsoft.VisualStudio.ConnectedServices](/dotnet/api/microsoft.visualstudio.connectedservices) usados para serviços conectados do Visual Studio.  
   
  [IntelliSenseHostFlags](../extensibility/intellisensehostflags.md) enumeração  
  Especifica os sinalizadores de host do IntelliSense.  
@@ -234,16 +235,16 @@ Esta seção contém informações sobre namespaces do Visual Studio, dos namesp
  Fornece uma lista de GUIDs usados em todo o SDK.  
   
  [Constantes de COM em código gerenciado](../extensibility/com-constants-in-managed-code.md)  
- Fornece uma lista de identificadores para elementos de interface do usuário usados em todo o SDK de ambiente.  
+ Fornece uma lista de identificadores para elementos de interface do usuário usados em todo o SDK do ambiente.  
   
  [Plug-ins de controle do código-fonte](../extensibility/source-control-plug-ins.md)  
- Links para tópicos para a API de plug-in de controle de origem.  
+ Links para tópicos para a API de plug-in de controle do código-fonte.  
   
  [Opções de linha de comando](../extensibility/command-line-switches-visual-studio-sdk.md)  
- Links para tópicos que abordam como os desenvolvedores podem automatizar diversas tarefas de linha de comando.  
+ Contém links para tópicos que abordam como os desenvolvedores podem automatizar várias tarefas da linha de comando.  
   
  [Tratamento de erros e valores de retorno](../extensibility/error-handling-and-return-values.md)  
- Explica a arquitetura de erro para VSPackages, que é o mesmo que o empregado em outras janelas de programação.  
+ Explica a arquitetura de erro para VSPackages, que é o mesmo que empregado em outros Windows de programação.  
   
  [Objetos](../extensibility/objects.md)  
  Fornece uma lista dos objetos que são usados no ambiente.  
@@ -301,4 +302,4 @@ Esta seção contém informações sobre namespaces do Visual Studio, dos namesp
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [SDK do Visual Studio](../extensibility/visual-studio-sdk.md)  
- Inclui documentação, exemplos e código para ajudar você a desenvolver produtos que se integram ao Visual Studio.
+ Inclui documentação, exemplos e código para ajudar você a desenvolver produtos integrados ao Visual Studio.

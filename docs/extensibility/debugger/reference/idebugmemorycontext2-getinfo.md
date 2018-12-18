@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8cc0af2cfc56b22e2b6488056a73004d653431d9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2c76d197a03d644fa841e55e7e7910f4d0541840
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49841982"
 ---
 # <a name="idebugmemorycontext2getinfo"></a>IDebugMemoryContext2::GetInfo
-Recupera um [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) estrutura que descreve o contexto.  
+Recupera uma [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) estrutura que descreve o contexto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,13 +44,13 @@ int GetInfo(
   
 #### <a name="parameters"></a>Parâmetros  
  `dwFields`  
- [in] Uma combinação de sinalizadores do [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) enumeração que indicam quais campos do [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) estrutura devem ser preencher.  
+ [in] Uma combinação de sinalizadores do [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) enumeração que indicam quais campos da [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) estrutura devem ser preencher.  
   
  `pInfo`  
- [out no] O `CONTEXT_INFO` estrutura está preenchida.  
+ [no, out] O `CONTEXT_INFO` estrutura que é preenchida.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31459734"
 ---
 # <a name="exe"></a>Exe
 Exe é símbolos sem qualquer um de um léxico ou classe pai, o único que representa o escopo global do arquivo .exe ou. dll. Há apenas um símbolo com o `SymTagExe` marca por arquivo. O [: Get_globalscope](../../debugger/debug-interface-access/idiasession-get-globalscope.md) método retorna o símbolo.  

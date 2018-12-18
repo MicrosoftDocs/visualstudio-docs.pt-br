@@ -1,6 +1,7 @@
 ---
 title: 'CA1011: considere a passagem dos tipos base como parâmetros'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,21 @@ ms.assetid: ce1e1241-dcf4-419b-9363-1d5bc4989279
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CPP
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: ac73d2be980791d41b172ba0669387fd68a331fb
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b968a94b76f0b2161eef84fdad2cf01288165e65
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899403"
 ---
 # <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: considere a passagem dos tipos base como parâmetros
+
 |||
 |-|-|
 |NomeDoTipo|ConsiderPassingBaseTypesAsParameters|
@@ -30,31 +37,37 @@ ms.lasthandoff: 04/19/2018
 |Alteração Significativa|Quebra|
 
 ## <a name="cause"></a>Causa
- Uma declaração de método inclui um parâmetro formal que é um tipo derivado, e o método chama somente os membros do tipo base do parâmetro.
 
-## <a name="rule-description"></a>Descrição da Regra
- Quando um tipo de base é especificado como um parâmetro em uma declaração de método, qualquer tipo derivado do tipo de base pode ser passado como o argumento correspondente ao método. Quando o argumento é usado dentro do corpo de método, o método específico que é executado depende do tipo do argumento. Se a funcionalidade adicional que é fornecida pelo tipo derivado não for necessária, use o tipo de base permite o uso mais amplo do método.
+Uma declaração de método inclui um parâmetro formal que é um tipo derivado e o método chama apenas os membros do tipo base do parâmetro.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, altere o tipo do parâmetro ao seu tipo base.
+## <a name="rule-description"></a>Descrição da regra
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- É seguro suprimir um aviso da regra
+Quando um tipo de base é especificado como um parâmetro em uma declaração de método, qualquer tipo derivado do tipo de base pode ser passado como o argumento correspondente ao método. Quando o argumento é usado dentro do corpo do método, o método específico que é executado depende do tipo do argumento. Se a funcionalidade adicional que é fornecida por um tipo derivado não for necessária, o uso do tipo base permite um uso mais amplo do método.
 
--   Se o método requer que a funcionalidade específica que é fornecida pelo tipo derivado
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+
+Para corrigir uma violação dessa regra, altere o tipo do parâmetro para seu tipo base.
+
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+
+É seguro suprimir um aviso nessa regra
+
+- Se o método requer a funcionalidade específica que é fornecida por um tipo derivado
 
      \- ou -
 
--   para impor que apenas o tipo derivado, ou um tipo mais derivado, é passada para o método.
+- para impor que apenas o tipo derivado, ou um tipo mais derivado, é passado para o método.
 
- Nesses casos, o código será mais robusto devido o forte verificação de tipo que é fornecido pelo compilador e tempo de execução.
+Nesses casos, o código será mais robusto devido à forte verificação de tipo que é fornecido pelo compilador e tempo de execução.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir mostra um método `ManipulateFileStream`, que pode ser usado somente com um <xref:System.IO.FileStream> objeto, o que viola essa regra. Um segundo método, `ManipulateAnyStream`, atenda a regra, substituindo o <xref:System.IO.FileStream> parâmetro usando um <xref:System.IO.Stream>.
 
- [!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CSharp/ca1011-consider-passing-base-types-as-parameters_1.cs)]
- [!code-cpp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CPP/ca1011-consider-passing-base-types-as-parameters_1.cpp)]
- [!code-vb[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/VisualBasic/ca1011-consider-passing-base-types-as-parameters_1.vb)]
+O exemplo a seguir mostra um método `ManipulateFileStream`, que pode ser usado apenas com um <xref:System.IO.FileStream> objeto, o que viola essa regra. Um segundo método, `ManipulateAnyStream`, satisfaz a regra, substituindo o <xref:System.IO.FileStream> parâmetro usando um <xref:System.IO.Stream>.
+
+[!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CSharp/ca1011-consider-passing-base-types-as-parameters_1.cs)]
+[!code-cpp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CPP/ca1011-consider-passing-base-types-as-parameters_1.cpp)]
+[!code-vb[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/VisualBasic/ca1011-consider-passing-base-types-as-parameters_1.vb)]
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1059: os membros não devem expor determinados tipos concretos](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)
+
+[CA1059: os membros não devem expor determinados tipos concretos](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)

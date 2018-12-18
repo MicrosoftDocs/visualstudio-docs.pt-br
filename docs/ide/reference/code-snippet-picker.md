@@ -1,9 +1,9 @@
 ---
-title: Seletor de trecho de código | Microsoft Docs
-ms.custom: ''
+title: Seletor de trecho de código
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.expansionpicker
 helpviewer_keywords:
@@ -15,11 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fb01cfc51591264b258518f4c90276a7ece11250
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 774ee47f02fe146caade0540be5ee2fb7f59904e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31944174"
 ---
 # <a name="code-snippet-picker"></a>Seletor de trecho de código
 
@@ -47,15 +48,17 @@ Na maioria das linguagens de desenvolvimento do Visual Studio, é possível usar
 
 ## <a name="uielement-list"></a>Lista UIElement
 
-Nome do Item  
+Nome do Item
+
 Um campo de texto editável que exibe o nome do item selecionado na **Lista de Itens**. Para executar uma pesquisa incremental do item que você deseja, comece digitando seu nome neste campo. Continue adicionando letras até que o item desejado seja selecionado na **Lista de Itens**.
 
-Lista de Itens  
+Lista de Itens
+
 Uma lista de trechos de código disponíveis para inserção ou uma lista de pastas que contêm trechos de código. Para inserir um trecho ou expandir uma pasta, selecione o item desejado e pressione Enter.
 
 ## <a name="see-also"></a>Consulte também
 
-[Melhores práticas para usar trechos de código](../../ide/best-practices-for-using-code-snippets.md)  
-[Trechos de Código do Visual Basic IntelliSense](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)  
-[Configurando identificadores no código](../../ide/setting-bookmarks-in-code.md)  
-[Como usar trechos de código Surround-with](../../ide/how-to-use-surround-with-code-snippets.md)
+- [Melhores práticas para usar trechos de código](../../ide/best-practices-for-using-code-snippets.md)
+- [Trechos de Código do Visual Basic IntelliSense](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)
+- [Configurando identificadores no código](../../ide/setting-bookmarks-in-code.md)
+- [Como usar trechos de código Surround-with](../../ide/how-to-use-surround-with-code-snippets.md)

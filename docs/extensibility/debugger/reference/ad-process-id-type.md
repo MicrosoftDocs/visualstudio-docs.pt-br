@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f8318efdc64adf9792e44ccf2f4ad4aa9f74dd67
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1fa934610778479551d411a4b231a4b190f29bcd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49937402"
 ---
 # <a name="adprocessidtype"></a>AD_PROCESS_ID_TYPE
-Especifica como interpretar uma ID de processo de [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) estrutura.  
+Especifica como interpretar uma ID de processo na [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) estrutura.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,13 +44,13 @@ public enum enum_AD_PROCESS_ID {
   
 ## <a name="members"></a>Membros  
  AD_PROCESS_ID_SYSTEM  
- ID do processo é um identificador de sistema. Use o `ProcessId.dwProcessId` campo o [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) estrutura.  
+ ID do processo é um identificador de sistema. Use o `ProcessId.dwProcessId` campo do [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) estrutura.  
   
  AD_PROCESS_ID_GUID  
- ID do processo é um GUID. Use o `ProcessId.guidProcessId` campo o `AD_PROCESS_ID` estrutura.  
+ ID do processo é um GUID. Use o `ProcessId.guidProcessId` campo do `AD_PROCESS_ID` estrutura.  
   
 ## <a name="remarks"></a>Comentários  
- Usado para o `ProcessIdType` membro o [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) estrutura para identificar o tipo de ID de processo que está contido na estrutura. Determina como interpretar o `ProcessId` union na estrutura.  
+ Usado para o `ProcessIdType` membro do [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) estrutura para identificar o tipo de ID do processo que está contido na estrutura. Determina como interpretar o `ProcessId` union na estrutura.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

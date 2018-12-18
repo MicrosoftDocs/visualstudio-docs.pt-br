@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c52cecb30bdaa4daab46c7359e255d52d71d1597
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e85e1c571ecb900d5ce7ffdecf8e85b8c367de5c
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844128"
 ---
 # <a name="how-to-specify-the-net-framework-runtime"></a>Como especificar o tempo de execução do .NET Framework
 
@@ -37,9 +38,9 @@ Com o lançamento do [!INCLUDE[net_v40_long](../code-quality/includes/net_v40_lo
 
 ## <a name="to-specify-the-net-framework-run-time-to-profile-when-attaching-the-profiler-to-an-application"></a>Para especificar o tempo de execução do .NET Framework a ser analisado ao anexar o criador de perfil a um aplicativo
 
-1. No menu Analisar, aponte para Criador de Perfil e, em seguida, clique em Anexar/Desanexar.
+1. No menu **Analisar**, aponte para **Criador de Perfil** e, em seguida, clique em **Anexar/Desanexar**.
 
-2. Na caixa de diálogo Anexar Criador de Perfil a Processo, clique no processo você deseja analisar.
+2. Na caixa de diálogo **Anexar Criador de Perfil a Processo**, clique no processo cujo perfil deseja criar.
 
      A caixa de listagem **Versão do CLR de Destino** exibe **Automático** e as versões de tempo de execução do [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] que estão instaladas no computador.
 

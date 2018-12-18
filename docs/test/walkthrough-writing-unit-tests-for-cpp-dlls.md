@@ -1,6 +1,7 @@
 ---
-title: Como gravar testes de unidade para DLLs em C++ | Microsoft Docs
+title: Como gravar testes de unidade para DLLs em C++
 ms.date: 11/04/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: mblome
@@ -8,11 +9,12 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: e4ff7d931b614d6d3c243539efc42bf051878fb0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9458fd6886243102f6479166fb9df21f9e4869fd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877244"
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>Como gravar testes de unidade para DLLs em C++
 
@@ -36,19 +38,19 @@ Este passo a passo descreve como desenvolver uma DLL nativa em C++ usando a meto
 
 ##  <a name="create_test_project"></a> Criar um projeto de teste de unidade nativo
 
-1.  No menu **Arquivo**, escolha **Novo | Projeto**.
+1.  No menu **Arquivo**, escolha **Novo** > **Projeto**.
 
-     Na caixa de diálogo, expanda **Instalados | Modelos | Visual C++ | Teste**.
+     Na caixa de diálogo, expanda **Instalados** > **Modelos** > **Visual C++** > **Teste**.
 
      Escolha o modelo de **Projeto de Teste de Unidade Nativo** ou qualquer estrutura instalada de sua preferência. Se você escolher outro modelo, como Google Test ou Boost.Test, os princípios básicos são os mesmos, embora alguns detalhes serão diferentes.
 
      Nestas instruções passo a passo, o projeto de teste é chamado `NativeRooterTest`.
 
-     ![Criando um Projeto de Teste de Unidade em C++](../test/media/utecpp01.png "UteCpp01")
+     ![Criando um projeto de teste de unidade em C++](../test/media/utecpp01.png)
 
 2.  No novo projeto, inspecione **unittest1.cpp**
 
-     ![Projeto de teste com TEST&#95;CLASS e TEST&#95;METHOD](../test/media/utecpp2.png "UteCpp2")
+     ![Projeto de teste com TEST&#95;CLASS e TEST&#95;METHOD](../test/media/utecpp2.png)
 
      Observe que:
 
@@ -73,15 +75,15 @@ Este passo a passo descreve como desenvolver uma DLL nativa em C++ usando a meto
 
          Observe que a classe `Assert` fornece vários métodos estáticos que você pode usar para verificar os resultados em métodos de teste.
 
-    2.  No menu **Teste**, escolha **Executar | Todos os Testes**.
+    2.  No menu **Teste**, escolha **Executar** > **Todos os Testes**.
 
          O teste é compilado e executado.
 
-         O Gerenciador de Testes é exibido.
+         O **Gerenciador de Testes** é exibido.
 
          O teste aparece em **Testes Aprovados**.
 
-         ![Gerenciador de Testes de Unidade com um teste aprovado](../test/media/utecpp04.png "UteCpp04")
+         ![Gerenciador de Testes de Unidade com um teste aprovado](../test/media/utecpp04.png)
 
 ##  <a name="create_dll_project"></a> Criar um projeto de DLL
 
@@ -89,21 +91,21 @@ Este passo a passo descreve como desenvolver uma DLL nativa em C++ usando a meto
 
      Nestas instruções passo a passo, o projeto é chamado `RootFinder`.
 
-     ![Criando um projeto Win32 em C++](../test/media/utecpp05.png "UteCpp05")
+     ![Criando um projeto Win32 em C++](../test/media/utecpp05.png)
 
 2.  Selecione **DLL** e **Exportar Símbolos** no Assistente de Aplicativo Win32.
 
      A opção **Exportar Símbolos** gera uma macro conveniente que você pode usar para declarar métodos exportados.
 
-     ![Assistente do projeto C++ definido para DLL e Exportar Símbolos](../test/media/utecpp06.png "UteCpp06")
+     ![Assistente do projeto C++ definido para DLL e Exportar Símbolos](../test/media/utecpp06.png)
 
-3.  Declare uma função exportada no arquivo .h da entidade de segurança:
+3.  Declare uma função exportada no arquivo *.h* da entidade de segurança:
 
-     ![Novo projeto de código de DLL e arquivo .h com macros de API](../test/media/utecpp07.png "UteCpp07")
+     ![Novo projeto de código de DLL e arquivo .h com macros de API](../test/media/utecpp07.png)
 
      O declarador `__declspec(dllexport)` faz com que os membros públicos e protegidos da classe fiquem visíveis fora da DLL. Para obter mais informações, consulte [Usando dllimport e dllexport em classes C++](/cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes).
 
-4.  No arquivo .cpp da entidade de segurança, adicione um corpo mínimo para a função:
+4.  No arquivo *.cpp* da entidade de segurança, adicione um corpo mínimo à função:
 
     ```cpp
         // Find the square root of a number.
@@ -115,53 +117,53 @@ Este passo a passo descreve como desenvolver uma DLL nativa em C++ usando a meto
 
 ##  <a name="make_functions_visible"></a> Acoplar o projeto de teste ao projeto de DLL
 
-1.  Adicione o projeto de DLL às referências de projeto do projeto de teste:
+1. Adicione o projeto de DLL às referências de projeto do projeto de teste:
 
-    1.  Abra as propriedades do projeto de teste e escolha **Propriedades Comuns**, **Estrutura e Referências**.
+   1.  Abra as propriedades do projeto de teste e escolha **Propriedades Comuns** > **Estrutura e Referências**.
 
-         ![Propriedades de projeto C++ | Estrutura e Referências](../test/media/utecpp08.png "UteCpp08")
+        ![Propriedades de projeto C++ | Estrutura e Referências](../test/media/utecpp08.png)
 
-    2.  Escolha **Adicionar Nova Referência**.
+   2.  Escolha **Adicionar Nova Referência**.
 
-         Na caixa de diálogo **Adicionar Referência**, selecione o projeto de DLL e escolha **Adicionar**.
+        Na caixa de diálogo **Adicionar Referência**, selecione o projeto de DLL e escolha **Adicionar**.
 
-         ![Propriedades de projeto C++ | Adicionar Nova Referência](../test/media/utecpp09.png "UteCpp09")
+        ![Propriedades de projeto C++ | Adicionar Nova Referência](../test/media/utecpp09.png)
 
-2.  No arquivo .cpp do teste de unidade da entidade de segurança, inclua o arquivo .h do código da DLL:
+2. No arquivo *.cpp* do teste de unidade da entidade de segurança, inclua o arquivo *.h* do código da DLL:
 
-    ```cpp
-    #include "..\RootFinder\RootFinder.h"
-    ```
+   ```cpp
+   #include "..\RootFinder\RootFinder.h"
+   ```
 
-3.  Adicione um teste básico que usa a função exportada:
+3. Adicione um teste básico que usa a função exportada:
 
-    ```cpp
-    TEST_METHOD(BasicTest)
-    {
-       CRootFinder rooter;
-       Assert::AreEqual(
-          // Expected value:
-          0.0,
-          // Actual value:
-          rooter.SquareRoot(0.0),
-          // Tolerance:
-          0.01,
-         // Message:
-         L"Basic test failed",
-         // Line number - used if there is no PDB file:
-         LINE_INFO());
-    }
-    ```
+   ```cpp
+   TEST_METHOD(BasicTest)
+   {
+      CRootFinder rooter;
+      Assert::AreEqual(
+         // Expected value:
+         0.0,
+         // Actual value:
+         rooter.SquareRoot(0.0),
+         // Tolerance:
+         0.01,
+        // Message:
+        L"Basic test failed",
+        // Line number - used if there is no PDB file:
+        LINE_INFO());
+   }
+   ```
 
-4.  Compile a solução.
+4. Compile a solução.
 
-     O novo teste aparece no Gerenciador de Testes.
+    O novo teste é exibido no **Gerenciador de Testes**.
 
-5.  No Gerenciador de Testes, escolha **Executar Todos**.
+5. No **Gerenciador de Testes**, escolha **Executar Todos**.
 
-     ![Gerenciador de Testes de Unidade &#45; Teste básico aprovado](../test/media/utecpp10.png "UteCpp10")
+    ![Gerenciador de Testes de Unidade &#8211; Teste básico aprovado](../test/media/utecpp10.png)
 
- Você configurou o teste e os projetos de código, além de ter verificado que pode executar testes que executam funções no projeto de código. Agora, você pode começar a escrever testes e códigos reais.
+   Você configurou o teste e os projetos de código, além de ter verificado que pode executar testes que executam funções no projeto de código. Agora, você pode começar a escrever testes e códigos reais.
 
 ##  <a name="iterate"></a> Aumentar iterativamente os testes e fazer com que sejam aprovados
 
@@ -184,11 +186,11 @@ Este passo a passo descreve como desenvolver uma DLL nativa em C++ usando a meto
     >
     > Quando os usuários alterarem os respectivos requisitos, desabilite os testes que não estejam mais corretos. Escreva novos testes e faça-os funcionar, um por vez, da mesma maneira incremental.
 
-2.  Compile a solução e, no Gerenciador de Testes, escolha **Executar Todos**.
+2.  Compile a solução e, em seguida, no **Gerenciador de Testes**, escolha **Executar Todos**.
 
      Falha no novo teste.
 
-     ![Falha em RangeTest](../test/media/ute_cpp_testexplorer_rangetest_fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")
+     ![Falha de RangeTest](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
 
     > [!TIP]
     > Verifique se os testes falham imediatamente após escrevê-los. Isso ajuda a impedir a facilidade de errar ao escrever um teste que nunca falha.
@@ -212,11 +214,11 @@ Este passo a passo descreve como desenvolver uma DLL nativa em C++ usando a meto
     }
     ```
 
-4.  Compile a solução e, no Gerenciador de Testes, escolha **Executar Todos**.
+4.  Compile a solução e, no **Gerenciador de Testes**, escolha **Executar Todos**.
 
      Ambos os testes são aprovados.
 
-     ![Gerenciador de Testes de Unidade &#45; Teste de intervalo aprovado](../test/media/utecpp12.png "UteCpp12")
+     ![Gerenciador de Testes de Unidade &#8211; Teste de intervalo aprovado](../test/media/utecpp12.png)
 
     > [!TIP]
     > Desenvolva o código adicionando testes, um de cada vez. Verifique se todos os testes passaram após cada iteração.
@@ -260,9 +262,9 @@ Este passo a passo descreve como desenvolver uma DLL nativa em C++ usando a meto
 
 3.  Abra (ou clique duas vezes) no teste com falha.
 
-     A asserção com falha é realçada. A mensagem de falha fica visível no painel de detalhes do Gerenciador de Testes.
+     A asserção com falha é realçada. A mensagem de falha fica visível no painel de detalhes do **Gerenciador de Testes**.
 
-     ![Falha em NegativeRangeTests](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")
+     ![Falha de NegativeRangeTests](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
 
 4.  Para ver o motivo da falha do teste, percorra a função:
 
@@ -290,16 +292,17 @@ Este passo a passo descreve como desenvolver uma DLL nativa em C++ usando a meto
 
 6.  Todos os testes agora foram aprovados.
 
-     ![Todos os testes foram aprovados](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")
+     ![Todos os testes serão aprovados](../test/media/ute_ult_alltestspass.png)
 
 > [!TIP]
->  Se os testes individuais não tiverem dependências que os impeçam de serem executados em qualquer ordem, ative a execução de teste em paralelo com o botão de alternância ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") na barra de ferramentas. Isso pode reduzir consideravelmente o tempo necessário para executar todos os testes.
+> Se os testes individuais não tiverem dependências que os impeçam de serem executados em qualquer ordem, ative a execução de teste em paralelo com o botão de alternância ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png) na barra de ferramentas. Isso pode reduzir consideravelmente o tempo necessário para executar todos os testes.
+
 
 ##  <a name="refactor"></a> Refatorar o código sem alterar os testes
 
 1.  Simplifique o cálculo central na função SquareRoot:
 
-    ```
+    ```cpp
     // old code:
     //   result = result - (result*result - v)/(2*result);
     // new code:
@@ -326,8 +329,8 @@ Este passo a passo descreve como desenvolver uma DLL nativa em C++ usando a meto
 
 ## <a name="see-also"></a>Consulte também
 
-- [Adicionando testes de unidade a aplicativos do C++ existentes](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)
-- [Usando Microsoft.VisualStudio.TestTools.CppUnitTestFramework](../test/using-microsoft-visualstudio-testtools-cppunittestframework.md)
-- [Depurando código nativo](../debugger/debugging-native-code.md)
-- [Instruções passo a passo: criando e usando uma biblioteca de vínculo dinâmico (C++)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)
-- [Importando e exportando](/cpp/build/importing-and-exporting)
+- [Adicionar testes de unidade a aplicativos C++ existentes](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)
+- [Usando Microsoft.VisualStudio.TestTools.CppUnitTestFramework](how-to-use-microsoft-test-framework-for-cpp.md)
+- [Depurar código nativo](../debugger/debugging-native-code.md)
+- [Passo a passo: Criando e usando uma biblioteca de vínculo dinâmico (C++)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)
+- [Importar e exportar](/cpp/build/importing-and-exporting)

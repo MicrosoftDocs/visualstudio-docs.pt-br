@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129437"
 ---
 # <a name="model-for-source-control-packages"></a>Modelo de pacotes de controle de origem
 O modelo a seguir representa um exemplo de uma implementação de controle de origem. No modelo, você verá as interfaces que você deve implementar e os serviços de ambiente que você deve chamar. Como todos os serviços, você realmente chamar os métodos de uma interface específica que você pode obter por meio do serviço. Os nomes das classes são identificados para facilitar ainda mais ver como controle de origem é realizado.  

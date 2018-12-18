@@ -1,6 +1,7 @@
 ---
 title: 'CA1303: não passar literais como parâmetros localizados'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -14,46 +15,52 @@ ms.assetid: 904d284e-76d0-4b8f-a4df-0094de8d7aac
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CPP
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b621306bab673172c1c437ca0a959e4bc36f6da
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8716a16ea3b141e7c5053e526d92531d0a77bc1e
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859400"
 ---
 # <a name="ca1303-do-not-pass-literals-as-localized-parameters"></a>CA1303: não passar literais como parâmetros localizados
+
 |||
 |-|-|
 |NomeDoTipo|DoNotPassLiteralsAsLocalizedParameters|
 |CheckId|CA1303|
 |Categoria|Microsoft.Globalization|
-|Alteração Significativa|Não separáveis|
+|Alteração Significativa|Não separável|
 
 ## <a name="cause"></a>Causa
- Um método passa uma cadeia de caracteres literal como um parâmetro para um construtor ou método de [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] biblioteca de classes e que a cadeia de caracteres deve ser localizável.
+ Um método passa uma cadeia de caracteres literal como um parâmetro para um construtor ou método na biblioteca de classes do .NET Framework, e essa cadeia de caracteres deve ser localizável.
 
- Esse aviso é gerado quando uma cadeia de caracteres literal é passada como um valor para um parâmetro ou uma propriedade e uma ou mais das seguintes situações forem verdadeira:
+ Esse aviso é acionado quando uma cadeia de caracteres literal é passada como um valor para um parâmetro ou uma propriedade e um ou mais dos casos a seguir forem verdadeira:
 
--   O <xref:System.ComponentModel.LocalizableAttribute> atributo do parâmetro ou propriedade é definido como true.
+- O <xref:System.ComponentModel.LocalizableAttribute> atributo do parâmetro ou da propriedade é definido como true.
 
--   O nome de parâmetro ou a propriedade contém "Text", "Mensagem" ou "Legenda".
+- O nome de parâmetro ou a propriedade contém "Text", "Mensagem" ou "Legenda".
 
--   O nome do parâmetro de cadeia de caracteres que é passado para um método Write ou console. WriteLine é "valor" ou "formato".
+- O nome do parâmetro de cadeia de caracteres que é passado para um método console. Write ou console. WriteLine é "valor" ou "formato".
 
-## <a name="rule-description"></a>Descrição da Regra
+## <a name="rule-description"></a>Descrição da regra
  Literais de cadeia de caracteres que são inseridos no código-fonte são difíceis de localizar.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, substitua a cadeia de caracteres literal com uma cadeia de caracteres recuperada por meio de uma instância do <xref:System.Resources.ResourceManager> classe.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, substitua a cadeia de caracteres literal com uma cadeia de caracteres recuperada por meio de uma instância da <xref:System.Resources.ResourceManager> classe.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- É seguro suprimir um aviso de que essa regra se a biblioteca de código não será localizada, ou se a cadeia de caracteres não é exposta ao usuário final ou um desenvolvedor usando a biblioteca de código.
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+ É seguro suprimir um aviso nessa regra, se a biblioteca de código não será localizada ou se a cadeia de caracteres não é exposta ao usuário final ou um desenvolvedor que usa a biblioteca de código.
 
- Os usuários podem eliminar o ruído em métodos que não devem ser passados cadeias de caracteres localizadas renomeando o parâmetro ou a propriedade chamada ou marcando esses itens como condicional.
+ Os usuários podem eliminar o ruído em relação a métodos que não devem ser passados cadeias de caracteres localizadas, renomeando o parâmetro ou uma propriedade chamada ou marcando esses itens como condicional.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir mostra um método que gera uma exceção quando qualquer um dos dois argumentos estiver fora do intervalo. Para o primeiro argumento, o construtor de exceção é passado uma cadeia de caracteres literal, o que viola essa regra. Para o segundo argumento, o construtor é passado corretamente uma cadeia de caracteres recuperada por meio de um <xref:System.Resources.ResourceManager>.
+ O exemplo a seguir mostra um método que lança uma exceção quando qualquer um dos dois argumentos estão fora do intervalo. Para o primeiro argumento, o construtor de exceção é passado uma cadeia de caracteres literal, o que viola essa regra. Para o segundo argumento, o construtor corretamente é passado uma cadeia de caracteres recuperada por meio de um <xref:System.Resources.ResourceManager>.
 
  [!code-cpp[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/CPP/ca1303-do-not-pass-literals-as-localized-parameters_1.cpp)]
  [!code-vb[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/VisualBasic/ca1303-do-not-pass-literals-as-localized-parameters_1.vb)]

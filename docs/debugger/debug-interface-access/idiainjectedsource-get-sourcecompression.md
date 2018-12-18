@@ -1,5 +1,5 @@
 ---
-title: ': Get_sourcecompression | Microsoft Docs'
+title: 'Idiainjectedsource:: Get_sourcecompression | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a56d1eac34c5076be8dbcd7b4e38363a12fe392f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 46ad24a6bf8e4efbcb0c1a0009bb8210247ccb5e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941354"
 ---
 # <a name="idiainjectedsourcegetsourcecompression"></a>IDiaInjectedSource::get_sourceCompression
-Recupera o indicador de origem de compactação de usado.  
+Recupera o indicador da compactação de fonte usado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,13 +34,13 @@ HRESULT get_sourceCompression (
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Retorna o indicador de origem de compactação de usado. Um valor de zero indica que foi usada nenhuma compactação de origem.  
+ [out] Retorna o indicador de que a compactação de fonte usado. Um valor de zero indica que nenhuma compactação de origem foi usada.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- O valor retornado por esse método é específico para o compilador usado. Por exemplo, um compilador pode usar compactação Huffman-estilo ou codificação de comprimento de execução.  
+ O valor retornado por esse método é específico para o compilador usado. Por exemplo, um compilador pode usar a compactação de codificação de comprimento de execução ou estilo de Huffman.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

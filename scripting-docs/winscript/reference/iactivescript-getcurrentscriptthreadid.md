@@ -1,11 +1,11 @@
 ---
 title: IActiveScript::GetCurrentScriptThreadID | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IActiveScript.GetCurrentScriptThreadID
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - IActiveScript_GetCurrentScriptThreadID
 ms.assetid: b09e8b48-4209-480e-8b71-e99ee9ae2e17
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24640786"
 ---
 # <a name="iactivescriptgetcurrentscriptthreadid"></a>IActiveScript::GetCurrentScriptThreadID
 Recupera um script mecanismo-identificador definido para o thread em execução no momento. O identificador pode ser usado em chamadas subsequentes para métodos de controle de execução de thread de script, como o [IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md) método.  

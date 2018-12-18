@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a8735992574699ba2b108fc493e9003ca52c9b2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9489b8c4399ae72bf7f6a70011eec347d870ca80
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928328"
 ---
 # <a name="disassemblystreamfields"></a>DISASSEMBLY_STREAM_FIELDS
-Especifica quais informações recuperar sobre um campo de desmontagem.  
+Especifica quais informações devem ser recuperadas sobre um campo de desmontagem.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -65,37 +66,37 @@ public enum enum_DISASSEMBLY_STREAM_FIELDS {
   
 ## <a name="members"></a>Membros  
  DSF_ADDRESS  
- Inicializar/usar o `bstrAddress` campo.  
+ Inicialização/usar o `bstrAddress` campo.  
   
  DSF_ADDRESSOFFSET  
- Inicializar/usar o `bstrAddressOffset` campo.  
+ Inicialização/usar o `bstrAddressOffset` campo.  
   
  DSF_CODEBYTES  
- Inicializar/usar o `bstrCodeBytes` campo.  
+ Inicialização/usar o `bstrCodeBytes` campo.  
   
  DSF_OPCODE  
- Inicializar/usar o `bstrOpCode` campo.  
+ Inicialização/usar o `bstrOpCode` campo.  
   
  DSF_OPERANDS  
- Inicializar/usar o `bstrOperands` campo.  
+ Inicialização/usar o `bstrOperands` campo.  
   
  DSF_SYMBOL  
- Inicializar/usar o `bstrSymbol` campo.  
+ Inicialização/usar o `bstrSymbol` campo.  
   
  DSF_CODELOCATIONID  
- Inicializar/usar o `uCodeLocationId` campo.  
+ Inicialização/usar o `uCodeLocationId` campo.  
   
  DSF_POSITION  
- Inicializar/usar o `posBeg` e `posEnd` campos.  
+ Inicialização/usar o `posBeg` e `posEnd` campos.  
   
  DSF_DOCUMENTURL  
- Inicializar/usar o `bstrDocumentUrl` campo.  
+ Inicialização/usar o `bstrDocumentUrl` campo.  
   
  DSF_BYTEOFFSET  
- Inicializar/usar o `dwByteOffset` campo.  
+ Inicialização/usar o `dwByteOffset` campo.  
   
  DSF_FLAGS  
- Inicializar/usar o `dwFlags` ([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) campo.  
+ Inicialização/usar o `dwFlags` ([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) campo.  
   
  DSF_OPERANDS_SYMBOLS  
  Incluir nomes de símbolos no `bstrOperands` campo.  
@@ -104,7 +105,7 @@ public enum enum_DISASSEMBLY_STREAM_FIELDS {
  Especifica todos os campos para o fluxo de desmontagem.  
   
 ## <a name="remarks"></a>Comentários  
- Passado como um parâmetro para o [leitura](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) método para indicar quais campos do [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) estrutura devem ser inicializado.  
+ Passado como um parâmetro para o [leitura](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) método para indicar quais campos da [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) são de estrutura a ser inicializado.  
   
  Usado para o `dwFields` membro o `DisassemblyData` estrutura para indicar quais campos são usados e válidos quando a estrutura é retornada.  
   

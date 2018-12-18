@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f51fdb05fb44a23227a1a35fd6504f2d18aa804
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f41f26c824a779133a335c0d3d5080373b791d06
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920983"
 ---
 # <a name="idebugthread2resume"></a>IDebugThread2::Resume
 Retoma a execução de um thread.  
@@ -43,12 +44,12 @@ int Resume (
  [out] Retorna a contagem de suspensão após a operação de retomada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Cada chamada para diminui esse método de contagem de suspensão até alcançar 0 nesse momento, a execução é retomada realmente. Essa contagem suspend é exibida no **Threads** janela de depuração.  
+ Cada chamada para diminui esse método de contagem de suspensões até alcançar 0 nesse momento, a execução, na verdade, é retomada. A contagem de suspensões é exibida na **Threads** janela de depuração.  
   
- Para cada chamada para esse método, deve haver uma chamada anterior para o [Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md) método. A contagem de suspensão determina quantas vezes o `IDebugThread2::Suspend` método foi chamado até o momento.  
+ Para cada chamada para esse método, deve haver uma chamada anterior para o [Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md) método. A contagem de suspensões determina quantas vezes o `IDebugThread2::Suspend` método foi chamado até o momento.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   

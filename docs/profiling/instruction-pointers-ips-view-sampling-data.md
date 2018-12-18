@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 617ff8d4ed59aebefd3a4456ad36f148b1ee3de0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2fdc7069ee0d422fd59b297b4b99a982d265e3a2
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844274"
 ---
-# <a name="instruction-pointers-ips-view---sampling-data"></a>Exibição de IPs (ponteiros de instrução) – Dados de amostragem
+# <a name="instruction-pointers-ips-view---sampling-data"></a>Exibição de IPs (ponteiros de instrução) – dados de amostragem
 A exibição de IPs dos dados de amostragem lista os dados de desempenho das instruções de assembly que estavam diretamente em execução quando as amostras foram coletadas na criação de perfil.  
   
 > [!NOTE]
@@ -43,4 +44,4 @@ A exibição de IPs dos dados de amostragem lista os dados de desempenho das ins
 |**% de Amostras Exclusivas**|O percentual de todas as amostras coletadas na criação de perfil durante a execução da instrução.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibição de IPs (ponteiros de instrução) – Amostragem](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)
+ [Exibição de IPs (ponteiros de instrução) – amostragem](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)

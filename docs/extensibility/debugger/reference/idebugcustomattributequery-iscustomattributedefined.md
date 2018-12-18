@@ -14,11 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3f99523ea5c4ae955be86bfb9da1acd1f99143be
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5d4ee98e4a843227f1855a456fae0f698286b3dc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893736"
 ---
 # <a name="idebugcustomattributequeryiscustomattributedefined"></a>IDebugCustomAttributeQuery::IsCustomAttributeDefined
 Determina se o atributo personalizado especificado é definido.  
@@ -42,10 +43,10 @@ int IsCustomAttributeDefined(
  [in] Nome do atributo personalizado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se o atributo personalizado é definido, retorna `S_OK`; caso contrário, retorna `S_FALSE`.  
+ Se o atributo personalizado é definido, retornará `S_OK`; caso contrário, retorna `S_FALSE`.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CDebugClassFieldSymbol** objeto que expõe o [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) interface.  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugClassFieldSymbol** objeto que expõe a [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) interface.  
   
 ```cpp  
 HRESULT CDebugClassFieldSymbol::IsCustomAttributeDefined(  

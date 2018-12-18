@@ -23,13 +23,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cd3f7e6c5075ad024e227c847ff05f186f7b016
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0a261c6c692fe0a1bc08f185f0b37c73e8838375
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37945917"
 ---
-# <a name="copy-task"></a>Tarefa Copy
+# <a name="copy-task"></a>tarefa Copy
 Copia os arquivos para um novo local no sistema de arquivos.  
   
 ## <a name="parameters"></a>Parâmetros  
@@ -43,7 +44,7 @@ Copia os arquivos para um novo local no sistema de arquivos.
 |`OverwriteReadOnlyFiles`|Parâmetro `Boolean` opcional.<br /><br /> Substitua arquivos mesmo se eles estiverem marcados como arquivos somente leitura|  
 |`Retries`|Parâmetro `Int32` opcional.<br /><br /> Especifica o número de tentativas de cópia, se todas as tentativas anteriores falharam. Usa zero como padrão.<br /><br /> **Observação:** o uso de repetições pode mascarar um problema de sincronização no processo de build.|  
 |`RetryDelayMilliseconds`|Parâmetro `Int32` opcional.<br /><br /> Especifica o atraso entre as tentativas necessárias. Usa como padrão o argumento RetryDelayMillisecondsDefault, que é passado para o construtor CopyTask.|  
-|`SkipUnchangedFiles`|Parâmetro `Boolean` opcional.<br /><br /> Se for `true`, ignorará a cópia dos arquivos inalterados entre a origem e o destino. A tarefa `Copy` considera os arquivos como inalterados se eles têm o mesmo tamanho e a mesma hora da última modificação. **Observação:** se você definir esse parâmetro como `true`, não deverá usar a análise de dependência no destino recipiente, pois isso apenas executará a tarefa se as horas de última modificação dos arquivos de origem forem mais recentes do que as horas de última modificação dos arquivos de destino.|  
+|`SkipUnchangedFiles`|Parâmetro `Boolean` opcional.<br /><br /> Se for `true`, ignorará a cópia dos arquivos inalterados entre a origem e o destino. A tarefa `Copy` considera os arquivos como inalterados se eles têm o mesmo tamanho e a mesma hora da última modificação. <br /><br /> **Observação:** se você definir esse parâmetro como `true`, não deverá usar a análise de dependência no destino recipiente, pois isso apenas executará a tarefa se as horas de última modificação dos arquivos de origem forem mais recentes do que as horas de última modificação dos arquivos de destino.|  
 |`SourceFiles`|Parâmetro <xref:Microsoft.Build.Framework.ITaskItem>`[]` obrigatório.<br /><br /> Especifica os arquivos a serem copiados.|  
 |`UseHardlinksIfPossible`|Parâmetro `Boolean` opcional.<br /><br /> Se for `true`, criará Links Físicos para os arquivos copiados em vez de copiar os arquivos.|  
   
@@ -69,10 +70,10 @@ Copia os arquivos para um novo local no sistema de arquivos.
 ## <a name="remarks"></a>Comentários  
  O parâmetro `DestinationFolder` ou `DestinationFiles` deve ser especificado, mas não ambos. Se os dois forem especificados, a tarefa falhará e um erro será registrado.  
   
- Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, confira [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir copia os itens da coleção de itens `MySourceFiles` para a pasta c:c:\MyProject\Destination.  
+ O exemplo a seguir copia os itens da coleção de itens `MySourceFiles` para a pasta *c:\MyProject\Destination*.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -92,7 +93,7 @@ Copia os arquivos para um novo local no sistema de arquivos.
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como fazer uma cópia recursiva. Este projeto copia todos os arquivos recursivamente de c:\MySourceTree para c:\MyDestinationTree, mantendo a estrutura do diretório.  
+ O exemplo a seguir demonstra como fazer uma cópia recursiva. Esse projeto copia todos os arquivos recursivamente de *c:\MySourceTree* para *c:\MyDestinationTree*, mantendo a estrutura do diretório.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  

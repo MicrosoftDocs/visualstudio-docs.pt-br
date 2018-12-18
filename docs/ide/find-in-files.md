@@ -1,12 +1,9 @@
 ---
-title: Localizar nos Arquivos | Microsoft Docs
-ms.custom: 
+title: Localizar em Arquivos
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.findinfiles
 - vs.findinfiles
@@ -21,13 +18,15 @@ helpviewer_keywords:
 - Find in Files tab, Find and Replace window
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0e87022cb3159e48a92e35ee07987bef6ce68f9e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: e1470868e207687a7b35f46724b80b0da0a0e71c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31946553"
 ---
 # <a name="find-in-files"></a>Localizar em Arquivos
 
@@ -37,7 +36,7 @@ O **Localizar nos Arquivos** permite pesquisar um conjunto de arquivos especific
 
 ## <a name="to-display-find-in-files"></a>Para exibir Localizar nos Arquivos
 
-1. Na barra de menus, escolha **Editar**, **Localizar e Substituir**.
+1. Na barra de menus, escolha **Editar** > **Localizar e Substituir**.
 
 1. Escolha **Localizar nos Arquivos**.
 
@@ -71,16 +70,20 @@ Especifica que as subpastas da pasta **Examinar** serão pesquisadas.
 
 É possível expandir ou recolher a seção **Localizar opções**. As opções a seguir podem ser marcadas ou desmarcadas:
 
-Diferenciar maiúsculas de minúsculas  
+**Diferenciar maiúsculas de minúsculas**
+
 Quando selecionada, uma pesquisa **Localizar Resultados** diferenciará maiúsculas de minúsculas
 
-Coincidir palavra inteira  
+**Coincidir palavra inteira**
+
 Quando selecionadas, as janelas **Localizar Resultados** retornarão apenas correspondências de palavras inteiras.
 
-Usar Expressões Regulares  
+**Usar Expressões Regulares**
+
 Se essa caixa de seleção estiver marcada, será possível usar notações especiais para definir padrões de texto a serem correspondidos nas caixas de texto **Localizar** ou **Substituir por**. Para obter uma lista dessas notações, consulte [Usando expressões regulares no Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
 
-Procurar nestes tipos de arquivos  
+**Procurar nestes tipos de arquivos**
+
 Essa lista indica os tipos de arquivos a serem pesquisados nos diretórios **Examinar**. Se esse campo estiver em branco, todos os arquivos nos diretórios **Examinar** serão pesquisados.
 
 Selecione qualquer item na lista para inserir uma cadeia de caracteres de pesquisa pré-configurada que localizará arquivos desses tipos específicos.
@@ -89,20 +92,24 @@ Selecione qualquer item na lista para inserir uma cadeia de caracteres de pesqui
 
 É possível expandir ou recolher a seção **Opções de resultado**. As opções a seguir podem ser marcadas ou desmarcadas:
 
-Janela Localizar Resultados 1  
+**Janela Localizar Resultados 1**
+
 Quando selecionada, os resultados da pesquisa atual substituirão o conteúdo da janela **Localizar Resultados 1**. Esta janela é aberta automaticamente para exibir os resultados da pesquisa. Para abrir essa janela manualmente, selecione **Outras Janelas** no menu **Exibir** e escolha **Localizar Resultados 1**.
 
-Janela Localizar Resultados 2  
+**Janela Localizar Resultados 2**
+
 Quando selecionada, os resultados da pesquisa atual substituirão o conteúdo da janela **Localizar Resultados 2**. Esta janela é aberta automaticamente para exibir os resultados da pesquisa. Para abrir essa janela manualmente, selecione **Outras Janelas** no menu **Exibir** e escolha **Localizar Resultados 2**.
 
-Exibir apenas nomes de arquivos  
+**Exibir apenas nomes de arquivos**
+
 Exibe uma lista de arquivos que contém correspondências de pesquisa em vez de exibir as próprias correspondências de pesquisa.
 
-Acrescentar resultados  
+**Acrescentar resultados**
+
 Acrescenta os resultados da pesquisa aos resultados da pesquisa anterior.
 
 ## <a name="see-also"></a>Consulte também
 
-[Localizando e substituindo texto](../ide/finding-and-replacing-text.md)  
-[Substituir nos Arquivos](../ide/replace-in-files.md)  
-[Comandos do Visual Studio](../ide/reference/visual-studio-commands.md)
+- [Localizando e substituindo texto](../ide/finding-and-replacing-text.md)
+- [Substituir nos Arquivos](../ide/replace-in-files.md)
+- [Comandos do Visual Studio](../ide/reference/visual-studio-commands.md)

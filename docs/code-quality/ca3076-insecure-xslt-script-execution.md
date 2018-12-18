@@ -1,6 +1,7 @@
 ---
-title: 'CA3076: A execução do Script XSLT insegura'
+title: 'CA3076: execução de script XSLT não seguro'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 author: gewarren
@@ -8,44 +9,45 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c918f3a69fcafd751dad61b5291db3b891a4ccf9
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 74fe556d775e60dec5dde4528a1924e55ab4c2ed
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45546386"
 ---
-# <a name="ca3076-insecure-xslt-script-execution"></a>CA3076: A execução do Script XSLT insegura
+# <a name="ca3076-insecure-xslt-script-execution"></a>CA3076: execução de script XSLT não seguro
 
 |||
 |-|-|
 |NomeDoTipo|InsecureXSLTScriptExecution|
 |CheckId|CA3076|
 |Categoria|Microsoft.Security|
-|Alteração Significativa|Não separáveis|
+|Alteração Significativa|Não separável|
 
 ## <a name="cause"></a>Causa
 
-Se você executar transformações de linguagem de folhas de estilo extensível (XSLT) em aplicativos .NET maneira insegura, o processador pode resolver referências URI não confiáveis que podem divulgar informações confidenciais para invasores, levando a negação de serviço e entre sites ataques. Para obter mais informações, consulte [XSLT segurança Considerations(.NET Guide)](/dotnet/standard/data/xml/xslt-security-considerations).
+Se você executar maneira insegura extensível folhas de estilos XSLT (linguagem) em aplicativos .NET, o processador pode resolver referências URI não confiáveis que poderiam revelar informações confidenciais para invasores, levando a negação de serviço e entre sites os ataques. Para obter mais informações, consulte [XSLT segurança Considerations(.NET Guide)](/dotnet/standard/data/xml/xslt-security-considerations).
 
-## <a name="rule-description"></a>Descrição da Regra
+## <a name="rule-description"></a>Descrição da regra
 
-**XSLT** é um padrão de World Wide Web Consortium (W3C) para transformar dados XML. XSLT normalmente é usada para gravar folhas de estilo para transformar dados XML em outros formatos, como HTML, fixa texto de comprimento, texto separado por vírgula ou outro formato XML. Embora proibido por padrão, você poderá habilitá-lo para seu projeto.
+**XSLT** é um padrão de World Wide Web Consortium (W3C) para transformar os dados XML. XSLT normalmente é usado para gravar as folhas de estilo para transformar dados XML em outros formatos, como HTML, texto de comprimento fixo, texto separado por vírgula ou outro formato XML. Embora proibidas por padrão, você pode optar por habilitá-la para seu projeto.
 
-Para garantir que você não estiver expondo a superfície de ataque, essa regra sempre que dispara o XslCompiledTransform.<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> recebe instâncias combinação insegura de <xref:System.Xml.Xsl.XsltSettings> e <xref:System.Xml.XmlResolver>, que permite o processamento de um script mal-intencionado.
+Para garantir que você não estiver expondo uma superfície de ataque, essa regra dispara sempre que o XslCompiledTransform.<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> recebe a instâncias de combinação inseguro de <xref:System.Xml.Xsl.XsltSettings> e <xref:System.Xml.XmlResolver>, que permite o processamento de script mal-intencionado.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
+## <a name="how-to-fix-violations"></a>Como corrigir violações
 
-- Substitua o argumento XsltSettings inseguro XsltSettings.<xref:System.Xml.Xsl.XsltSettings.Default%2A> ou com uma instância que desabilitou a execução de script e de função do documento.
+- Substitua o argumento XsltSettings inseguro XsltSettings.<xref:System.Xml.Xsl.XsltSettings.Default%2A> ou, com uma instância que desabilitou a execução de script e a função do documento.
 
-- Substitua o <xref:System.Xml.XmlResolver> argumento com null ou um <xref:System.Xml.XmlSecureResolver> instância.
+- Substitua os <xref:System.Xml.XmlResolver> argumento com null ou um <xref:System.Xml.XmlSecureResolver> instância.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
 
 A menos que você tiver certeza de que a entrada é conhecida por ser de uma fonte confiável, não suprima uma regra deste aviso.
 
 ## <a name="pseudo-code-examples"></a>Exemplos de código pseudo
 
-### <a name="violationmdashuses-xsltsettingstrustedxslt"></a>Violation&mdash;uses XsltSettings.TrustedXslt
+### <a name="violation-that-uses-xsltsettingstrustedxslt"></a>Violação que usa XsltSettings.TrustedXslt
 
 ```csharp
 using System.Xml;
@@ -66,7 +68,7 @@ namespace TestNamespace
 }
 ```
 
-### <a name="solutionmdashuse-xsltsettingsdefault"></a>Solução&mdash;usar XsltSettings.Default
+### <a name="solution-that-uses-xsltsettingsdefault"></a>Solução que usa XsltSettings.Default
 
 ```csharp
 using System.Xml;
@@ -87,7 +89,7 @@ namespace TestNamespace
 }
 ```
 
-### <a name="violationmdashdocument-function-and-script-execution-not-disabled"></a>Violação de&mdash;documento função e script de execução não está desabilitada
+### <a name="violationmdashdocument-function-and-script-execution-not-disabled"></a>Violação de&mdash;documentar a execução de função e o script não está desabilitada
 
 ```csharp
 using System.Xml;
@@ -112,7 +114,7 @@ namespace TestNamespace
 }
 ```
 
-### <a name="solutionmdashdisable-document-function-and-script-execution"></a>Solução&mdash;desabilitar a execução de script e de função do documento
+### <a name="solutionmdashdisable-document-function-and-script-execution"></a>Solução&mdash;desabilitar a execução de função e script de documento
 
 ```csharp
 using System.Xml;
@@ -141,4 +143,4 @@ namespace TestNamespace
 
 ## <a name="see-also"></a>Consulte também
 
-[Considerações de segurança XSLT (guia .NET)](/dotnet/standard/data/xml/xslt-security-considerations)
+- [Considerações de segurança XSLT (guia do .NET)](/dotnet/standard/data/xml/xslt-security-considerations)

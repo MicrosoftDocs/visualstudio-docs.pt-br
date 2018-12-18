@@ -13,18 +13,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ae602e6f28fc30c20c5b1f3c466d2e7afe458b8f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c42fc37837673305fb13c99856e778c45a4a3a8b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49858492"
 ---
 # <a name="commentmarkprofile"></a>CommentMarkProfile
-A `CommentMarkProfile` função insere um marcador numérico e uma cadeia de texto no arquivo .vsp. Para que a marcação e o comentário sejam inseridos, a criação de perfil para o thread que contém a função `CommentMarkProfile` deve ser ON.  
+A função `CommentMarkProfile` insere um marcador numérico e uma cadeia de caracteres de texto no arquivo .*vsp*. Para que a marcação e o comentário sejam inseridos, a criação de perfil para o thread que contém a função `CommentMarkProfile` deve ser ON.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(  
                                    long lMarker,   
                                    LPCTSTR szComment);  
@@ -39,7 +40,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
   
  Ponteiro para a cadeia de texto para inserir. A cadeia de caracteres deve ser menor que 256 caracteres, incluindo o terminador NULO.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor retornado  
  A função indica êxito ou falha usando a enumeração **PROFILE_COMMAND_STATUS**. O valor de retorno pode ser um dos seguintes:  
   
 |Enumerador|Descrição|  
@@ -55,7 +56,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 ## <a name="remarks"></a>Comentários  
  O estado de criação de perfil para o thread que contém a função de perfil de marca deve estar ligado quando as marcas e os comentários são inseridos com o comando VSInstr Mark ou com as funções (CommentMarkAtProfile, CommentMarkProfile ou MarkProfile).  
   
- Marcas de perfis são globais no escopo. Por exemplo, uma marca de perfil inserida em um thread pode ser usada para marcar o início ou término de um segmento de dados em um thread no arquivo .vsp.  
+ Marcas de perfis são globais no escopo. Por exemplo, uma marca de perfil inserida em um thread pode ser usada para marcar o início ou término de um segmento de dados em um thread no arquivo .*vsp*.  
   
 > [!IMPORTANT]
 >  O método CommentMarkProfile só pode ser usado com a instrumentação.  
@@ -74,7 +75,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 ## <a name="example"></a>Exemplo  
  O código a seguir ilustra a chamada da função CommentMarkProfile. O exemplo pressupõe o uso de macros de cadeia de caracteres do Win32 e as configurações do compilador de Unicode para determinar se o código chama a chamada da função [!INCLUDE[vcpransi](../profiling/includes/vcpransi_md.md)].  
   
-```  
+```cpp  
 void ExerciseCommentMarkProfile()  
 {  
     // Declare and initalize variables to pass to   

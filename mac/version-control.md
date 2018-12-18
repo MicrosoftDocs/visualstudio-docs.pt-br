@@ -1,15 +1,16 @@
 ---
 title: Controle de versão
 description: Usando o Git e o Subversion no Visual Studio para Mac.
-author: asb3993
-ms.author: amburns
-ms.date: 04/14/2017
+author: conceptdev
+ms.author: crdun
+ms.date: 05/06/2018
 ms.assetid: 49917483-28AA-4598-A847-71F1F2E0DCB5
-ms.openlocfilehash: 8d7e281907488d3b9229ad1fefe90e3df64e2a36
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 0505177e01afd701fe5506df7dd0fc2a2e1f859c
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51294715"
 ---
 # <a name="version-control"></a>Controle de versão
 
@@ -23,11 +24,15 @@ O Subversion é um sistema centralizado de controle de versões, o que significa
 
 O Git é um sistema de controle de versão distribuído que permite que as equipes trabalhem nos mesmos documentos simultaneamente. Com o Git, pode haver um único servidor que contém todos os arquivos, mas o repositório inteiro está clonado localmente para seu computador sempre que um repositório passar por check-out dessa fonte central.
 
-# <a name="basic-concepts"></a>Conceitos básicos 
+## <a name="basic-concepts"></a>Conceitos básicos
 
 O Visual Studio para Mac dá suporte aos sistemas de controle de versão do Git e do Subversion. O artigos a seguir exploram a configuração de repositórios do Git e do Subversion por meio do Visual Studio para Mac, bem como funcionalidades simples como revisar, confirmar e efetuar push nas alterações.
 
-* [Configurando um Repositório Git](~/set-up-git-repository.md) 
-* [Trabalhando com Git](~/working-with-git.md)
-* [Configurando um Repositório do Subversion](~/set-up-subversion-repository.md)
-* [Trabalhando com o Subversion](~/working-with-subversion.md)
+* [Configurando um Repositório Git](set-up-git-repository.md)
+* [Trabalhando com Git](working-with-git.md)
+* [Configurando um Repositório do Subversion](set-up-subversion-repository.md)
+* [Trabalhando com o Subversion](working-with-subversion.md)
+
+## <a name="see-also"></a>Consulte também
+
+* [Controle de versão no Visual Studio (no Windows)](/visualstudio/version-control/)

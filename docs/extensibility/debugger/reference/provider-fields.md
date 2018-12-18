@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: deda42120dc98e0222910c48b0faf574a57f03dd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3d71ab824017d054b8543770b7eaf1efe2856867
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860338"
 ---
 # <a name="providerfields"></a>PROVIDER_FIELDS
 Especifica as propriedades associadas a um provedor de programa.  
@@ -49,7 +50,7 @@ public enum enum_PROVIDER_FIELDS {
  O `fIsDebuggerPresent` campo é válido.  
   
 ## <a name="remarks"></a>Comentários  
- Esses valores são retornados no `Fields` membro o [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) estrutura para indicar quais campos da estrutura foram preenchidos explicitamente.  
+ Esses valores são retornados na `Fields` membro a [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) estrutura para indicar quais campos da estrutura foram preenchidos explicitamente.  
   
  Esses valores podem ser combinados com um bit a bit `OR`.  
   

@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f7347ad8bb8bbe39208d8d4d562ac580d520cc5d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a560b9c1f576ee35acec4a95ef1c0a3870423680
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860572"
 ---
 # <a name="idebugprogram2getengineinfo"></a>IDebugProgram2::GetEngineInfo
-Obtém o nome e o GUID do mecanismo de depuração (DE) executando esse programa.  
+Obtém o nome e o GUID do mecanismo de depuração (DES) executar este programa.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,10 +49,10 @@ int GetEngineInfo(
  [out] Retorna o GUID do DE executar este programa.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Cada ir define seu próprio GUID para identificação.  
+ Cada Alemanha define seu próprio GUID para identificação.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

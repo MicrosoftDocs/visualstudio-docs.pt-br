@@ -1,12 +1,9 @@
 ---
-title: 'Passo a passo: associando dados no Designer XAML| Microsoft Docs'
-ms.custom: 
+title: Associar dados no Designer XAML
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.XamlDesigner.DataBinding
 dev_langs:
@@ -14,28 +11,29 @@ dev_langs:
 - VB
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: ef8826fd01c0eec45f2daea5900c5e440a5cebb0
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.openlocfilehash: f1effd15666839b6e48bcebf46120585c4cfc36c
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44282879"
 ---
-# <a name="walkthrough-binding-to-data-in-xaml-designer"></a>Passo a passo: associando dados no Designer XAML
+# <a name="walkthrough-bind-to-data-in-xaml-designer"></a>Passo a passo: associar dados no Designer XAML
 
 No Designer XAML, você pode definir as propriedades de associação de dados usando o artboard e a janela Propriedades. O exemplo neste passo a passo mostra como associar dados a um controle. Especificamente, o procedimento mostra como criar uma classe simples de carrinho de compras com [DependencyProperty](/uwp/api/Windows.UI.Xaml.DependencyProperty) chamado de `ItemCount` e associar a propriedade `ItemCount` à propriedade **Text** de um controle de [TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock).
 
 ## <a name="to-create-a-class-to-use-as-a-data-source"></a>Para criar uma classe para usar como fonte de dados
 
-1. No menu **Arquivo**, escolha **Novo**> **Projeto**.
+1. No menu **Arquivo**, escolha **Novo** > **Projeto**.
 
 1. Na caixa de diálogo **Novo Projeto**, escolha o nó **Visual C#** ou **Visual Basic**, expanda o nó **Área de Trabalho do Windows** e escolha o modelo **Aplicação WPF**.
 
 1. Nomeie o projeto como **BindingTest** e escolha o botão **OK**.
 
-1. Abra o arquivo MainWindow.xaml.cs (ou MainWindow.xaml.vb) e adicione o código a seguir. Em C#, adicione o código ao namespace `BindingTest` (antes do parêntese de fechamento no arquivo). No Visual Basic, adicione a nova classe.
+1. Abra o arquivo **MainWindow.xaml.cs** (ou **MainWindow.xaml.vb**) e adicione o código a seguir. Em C#, adicione o código ao namespace `BindingTest` (antes do parêntese de fechamento no arquivo). No Visual Basic, adicione a nova classe.
 
    ```csharp
    public class ShoppingCart : DependencyObject
@@ -75,7 +73,7 @@ No Designer XAML, você pode definir as propriedades de associação de dados us
 
 ## <a name="to-bind-the-itemcount-property-to-a-textblock-control"></a>Para associar a propriedade ItemCount a um controle TextBlock
 
-1. No Gerenciador de Soluções, abra o menu de atalho de MainWindow.xaml e escolha **Designer de Exibição**.
+1. No Gerenciador de Soluções, abra o menu de atalho de **MainWindow.xaml** e escolha **Designer de Exibição**.
 
 1. Na caixa de ferramentas, escolha um controle de [Grade](/uwp/api/Windows.UI.Xaml.Controls.Grid) e adicione-o ao formulário.
 
@@ -85,7 +83,7 @@ No Designer XAML, você pode definir as propriedades de associação de dados us
 
      A ilustração a seguir mostra a caixa de diálogo **Selecionar Objeto** com a opção **ShoppingCart** selecionada.
 
-     ![Caixa de diálogo Selecionar objeto](../designers/media/blendselectobject.PNG "BlendSelectObject")
+     ![Caixa de diálogo Selecionar Objeto](../designers/media/blendselectobject.png)
 
 1. Na **Caixa de ferramentas**, escolha um controle de `TextBlock` e adicione-o ao formulário.
 
@@ -95,7 +93,7 @@ No Designer XAML, você pode definir as propriedades de associação de dados us
 
      A ilustração a seguir mostra a caixa de diálogo **Criar Vinculação de Dados** com a propriedade **ItemCount** selecionada.
 
-     ![caixa de diálogo Criar Vinculação de Dados](../designers/media/xaml_create_data_binding.png "xaml_create_data_binding")
+     ![Caixa de diálogo Criar associação de dados](../designers/media/xaml_create_data_binding.png)
 
 1. Pressione **F5** para executar o aplicativo.
 
@@ -103,5 +101,5 @@ No Designer XAML, você pode definir as propriedades de associação de dados us
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando uma interface do usuário usando o Designer XAML](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)  
-[Caixa de diálogo Adicionar Conversor de Valor](https://msdn.microsoft.com/c5f3d110-a541-4b55-8bca-928f77778af8)
+- [Criar uma interface do usuário usando o Designer XAML](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)
+- [Caixa de diálogo Adicionar Conversor de Valor](https://msdn.microsoft.com/library/c5f3d110-a541-4b55-8bca-928f77778af8)

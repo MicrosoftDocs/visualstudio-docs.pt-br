@@ -1,7 +1,7 @@
 ---
-title: IntelliSense no Visual Studio | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
+title: Informações do parâmetro, listar membros e informações rápidas
+ms.date: 05/25/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -17,15 +17,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d6e87113f8c8a703a6eb4d893c0ca54a90bfb8d1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5e00b43f1705079a86d511239d7b38119868d8f4
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748469"
 ---
-# <a name="using-intellisense-in-visual-studio"></a>Usando o IntelliSense no Visual Studio
+# <a name="intellisense-in-visual-studio"></a>IntelliSense no Visual Studio
 
-O IntelliSense é o termo geral para vários recursos: Listar Membros, Informações do Parâmetro, Informação Rápida e Completar Palavra. Esses recursos ajudam você a aprender mais sobre o código que está usando, a manter o acompanhamento dos parâmetros que está digitando e a adicionar chamadas a métodos e propriedades pressionando apenas algumas teclas.
+O IntelliSense é uma ajuda de preenchimento de código que inclui inúmeras funcionalidades: Listar Membros, Informações do Parâmetro, Informações Rápidas e Completar Palavra. Essas funcionalidades ajudam você a aprender mais sobre o código que está usando, a manter o acompanhamento dos parâmetros que está digitando e a adicionar chamadas a métodos e propriedades pressionando apenas algumas teclas.
 
 Vários aspectos do IntelliSense são específicos do idioma. Para obter mais informações sobre o IntelliSense para diferentes idiomas, consulte os tópicos listados na seção [Consulte também](#see-also).
 
@@ -35,39 +36,39 @@ Uma lista de membros válidos de um tipo (ou namespace) aparece depois que você
 
 Após selecionar um item, você poderá inseri-lo em seu código pressionando **Tab** ou inserindo um espaço. Se você selecionar um item e digitar um ponto, o item aparecerá seguido pelo ponto, que abrirá outra lista de membros. Ao selecionar um item, mas antes de inseri-lo, você obtém a Informação Rápida do item.
 
-Na lista de membros, o ícone à esquerda representa o tipo do membro, como namespace, classe, função ou variável. Para obter uma lista de ícones, consulte [Class View and Object Browser Icons (Modo de Exibição de Classe e ícones do Pesquisador de Objetos)](../ide/class-view-and-object-browser-icons.md). A lista pode ser muito longa, de modo que você pode pressionar **PgUp** e **PgDn** para mover para cima ou para baixo na lista.
+Na lista de membros, o ícone à esquerda representa o tipo do membro, como namespace, classe, função ou variável. Para obter uma lista de ícones, consulte [Modo de Exibição de Classe e ícones do Pesquisador de Objetos](../ide/class-view-and-object-browser-icons.md). A lista pode ser muito longa, de modo que você pode pressionar **PgUp** e **PgDn** para mover para cima ou para baixo na lista.
 
-![Lista de membros do Visual Studio](../ide/media/vs2015_intellisense.png "vs2015_Intellisense")
+![Lista de membros do Visual Studio](../ide/media/vs2015_intellisense.png)
 
-É possível invocar o recurso **Listar membros** manualmente, digitando **CTRL** + **J**, selecionando **Editar** > **IntelliSense** > **Listar Membros** ou escolhendo o botão **Listar Membros** na barra de ferramentas do editor. Quando é invocada em uma linha em branco ou fora de um escopo reconhecível, a lista exibe símbolos no namespace global.
+Invoque o recurso **Listar Membros** manualmente digitando **Ctrl**+**J**, escolhendo **Editar** > **IntelliSense** > **Listar Membros** ou escolhendo o botão **Listar Membros** na barra de ferramentas do editor. Quando é invocada em uma linha em branco ou fora de um escopo reconhecível, a lista exibe símbolos no namespace global.
 
 Para desativar Listar Membros por padrão (para que ele não seja exibido, exceto se invocado especificamente), acesse **Ferramentas** > **Opções** > **Todas as linguagens** e desmarque **Listar membros automaticamente**. Se você deseja desligar Listar Membros somente para uma linguagem específica, vá para as configurações **Gerais** dessa linguagem.
 
-Você também pode alterar para o modo de sugestão, no qual apenas o texto que você digita é inserido no código. Por exemplo, se você inserir um identificador que não está na lista e pressionar a **Guia**, no modo de preenchimento, a entrada poderá substituir o identificador digitado. Para alternar entre o modo de preenchimento e o modo de sugestão, pressione **Ctrl** + **Alt** + **ESPAÇO** ou escolha **Editar** > **IntelliSense** > **Ativar/Desativar Modo de Preenchimento**.
+Você também pode alterar para o modo de sugestão, no qual apenas o texto que você digita é inserido no código. Por exemplo, se você inserir um identificador que não está na lista e pressionar a **Guia**, no modo de preenchimento, a entrada poderá substituir o identificador digitado. Para alternar entre o modo de preenchimento e o modo de sugestão, pressione **Ctrl**+**Alt**+**Espaço** ou escolha **Editar** > **IntelliSense** > **Ativar/Desativar Modo de Preenchimento**.
 
 ## <a name="parameter-info"></a>Informações de Parâmetro
 
 Informações de Parâmetro fornecem informações sobre o número, os nomes e os tipos de parâmetros exigidos por um método, um parâmetro de tipo genérico de atributo (em C#) ou um modelo (em C++).
 
-O parâmetro em negrito indica o próximo parâmetro que é necessário à medida que você digita a função. Para funções sobrecarregadas, você pode usar as teclas de seta PARA CIMA e PARA BAIXO para exibir informações de parâmetro alternativas para as sobrecargas de função.
+O parâmetro em negrito indica o próximo parâmetro que é necessário à medida que você digita a função. Para funções sobrecarregadas, use as teclas de direção **Para Cima** e **Para Baixo** para exibir informações de parâmetro alternativas para as sobrecargas de função.
 
-![Informações do parâmetro](../ide/media/vs2015_param_info.png "VS2015_param_Info")
+![Informações de Parâmetro](../ide/media/vs2015_param_info.png)
 
-Quando você anota funções e parâmetros com comentários da Documentação XML, os comentários são exibidos como Informações do Parâmetro. Para obter mais informações, consulte [Fornecendo comentários de código XML](../ide/supplying-xml-code-comments.md).
+Quando você anota funções e parâmetros com comentários da Documentação XML, os comentários são exibidos como Informações do Parâmetro. Para obter mais informações, consulte [Fornecer comentários de código XML](../ide/supplying-xml-code-comments.md).
 
-É possível invocar manualmente Informações do Parâmetro ao selecionar **Editar** > **IntelliSense** > **Informações do Parâmetro**, digitar **Ctrl** + **Shift** + **ESPAÇO** ou ao escolher o botão **Informações do Parâmetro** na barra de ferramentas do editor.
+Invoque a opção Informações do Parâmetro manualmente escolhendo **Editar** > **IntelliSense** > **Informações do Parâmetro**, pressionando **Ctrl**+**Shift**+**Espaço** ou escolhendo o botão **Informações do Parâmetro** na barra de ferramentas do editor.
 
 ## <a name="quick-info"></a>Informação Rápida
 
 Informação Rápida exibe a declaração completa de qualquer identificador no seu código.
 
-![Informações rápidas do Visual Studio](../ide/media/vs2015_quick_info.png "VS2015_Quick_info")
+![Informações rápidas sobre o Visual Studio](../ide/media/vs2015_quick_info.png)
 
 Quando você seleciona um membro na caixa **Listar Membros**, as Informações Rápidas também são exibidas.
 
-![Informações do parâmetro em um arquivo de código C&#35;](../ide/media/vs2015_paraminfo.png "VS2015_ParamInfo")
+![Informações do parâmetro em um arquivo de código C&#35;](../ide/media/vs2015_paraminfo.png)
 
-É possível invocar Informações Rápidas ao selecionar **Editar** > **IntelliSense** > **Informações Rápidas**, pressionar **Ctrl** + **I** ou escolher o botão **Informações Rápidas** na barra de ferramentas do editor.
+É possível invocar Informações Rápidas ao selecionar **Editar** > **IntelliSense** > **Informações Rápidas**, pressionar **Ctrl**+**I** ou escolher o botão **Informações Rápidas** na barra de ferramentas do editor.
 
 Se uma função estiver sobrecarregada, o IntelliSense não poderá exibir informações de todos os formulários da sobrecarga.
 
@@ -81,7 +82,7 @@ Completar Palavra completa o restante de uma variável, um comando ou um nome de
 
 As opções do IntelliSense são ativadas por padrão. Para desativá-las, escolha **Ferramentas** > **Opções** > **Editor de Texto** e desmarque a seleção **Informações do parâmetro** ou **Listar membros automaticamente** se você não deseja o recurso Listar Membros.
 
-## <a name="troubleshooting-intellisense"></a>Solução de problemas do IntelliSense
+## <a name="troubleshoot-intellisense"></a>Solução de problemas do IntelliSense
 
 As opções do IntelliSense podem não funcionar como você espera em alguns casos.
 
@@ -99,8 +100,8 @@ MessageBox( hWnd, "String literal|")
 
 ## <a name="see-also"></a>Consulte também
 
-[IntelliSense do Visual Basic](../ide/visual-basic-specific-intellisense.md)  
-[C# IntelliSense](../ide/visual-csharp-intellisense.md)  
-[JavaScript IntelliSense](../ide/javascript-intellisense.md)  
-[Escrevendo e refatorando código (C++)](/cpp/ide/writing-and-refactoring-code-cpp)  
-[Fornecendo comentários de código XML](../ide/supplying-xml-code-comments.md)
+- [IntelliSense do Visual Basic](../ide/visual-basic-specific-intellisense.md)
+- [C# IntelliSense](../ide/visual-csharp-intellisense.md)
+- [JavaScript IntelliSense](../ide/javascript-intellisense.md)
+- [Escrever e refatorar o código (C++)](/cpp/ide/writing-and-refactoring-code-cpp)
+- [Fornecer comentários de código XML](../ide/supplying-xml-code-comments.md)

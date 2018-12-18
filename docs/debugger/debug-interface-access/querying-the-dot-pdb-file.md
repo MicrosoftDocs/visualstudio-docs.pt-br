@@ -1,5 +1,5 @@
 ---
-title: Consultando o. O arquivo PDB | Microsoft Docs
+title: Consultando o. Arquivo PDB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -15,18 +15,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b552300926ae0448aacd084b54934f03527f81e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: a13f98e9d1507c0044057099d61b625e1142929e
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44282047"
 ---
 # <a name="querying-the-pdb-file"></a>Consultando o arquivo .Pdb
-Um arquivo de banco de dados do programa (extensão. PDB) é um arquivo binário que contém o tipo e informações de depuração simbólicas coletadas durante o curso de compilar e vincular o projeto. Um arquivo PDB é criado quando você compila um programa C/C++ com **/ZI** ou **/Zi** ou um [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)], [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)], ou [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] de programa com o **/Debug** opção. Arquivos de objeto contêm referências para o arquivo. PDB para informações de depuração. Para obter mais informações sobre arquivos pdb, consulte [arquivos PDB](http://msdn.microsoft.com/en-us/1761c84e-8c2c-4632-9649-b5f99964ed3f). Um aplicativo de DIA pode usar as seguintes etapas gerais para obter detalhes sobre os vários símbolos, objetos e elementos de dados em uma imagem executável.  
+Um arquivo de banco de dados do programa (extensão. PDB) é um arquivo binário que contém o tipo e informações de depuração simbólicas coletados ao longo do compilando e vinculando o projeto. Um arquivo PDB é criado quando você compila um programa C/C++ com **/ZI** ou **/Zi** ou uma [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)], [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)], ou [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] programar com o **/Debug** opção. Arquivos de objeto contêm referências no arquivo. PDB para informações de depuração. Para obter mais informações sobre arquivos pdb, consulte [arquivos PDB](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100)). Um aplicativo de DIA pode usar as seguintes etapas gerais para obter detalhes sobre os vários símbolos, objetos e elementos de dados dentro de uma imagem executável.  
   
 ### <a name="to-query-the-pdb-file"></a>Para consultar o arquivo. PDB  
   
-1.  Adquirir uma fonte de dados, criando um [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md) interface.  
+1.  Adquirir uma fonte de dados com a criação de um [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md) interface.  
   
     ```C++  
     CComPtr<IDiaDataSource> pSource;  
@@ -42,7 +43,7 @@ Um arquivo de banco de dados do programa (extensão. PDB) é um arquivo binário
     }  
     ```  
   
-2.  Chamar [: Loaddatafrompdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) ou [: Loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) para carregar as informações de depuração.  
+2.  Chame [idiadatasource:: Loaddatafrompdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) ou [idiadatasource:: Loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) para carregar as informações de depuração.  
   
     ```C++  
     wchar_t wszFilename[ _MAX_PATH ];  
@@ -56,7 +57,7 @@ Um arquivo de banco de dados do programa (extensão. PDB) é um arquivo binário
     }  
     ```  
   
-3.  Chamar [: Opensession](../../debugger/debug-interface-access/idiadatasource-opensession.md) para abrir um [IDiaSession](../../debugger/debug-interface-access/idiasession.md) para acessar as informações de depuração.  
+3.  Chame [idiadatasource:: Opensession](../../debugger/debug-interface-access/idiadatasource-opensession.md) para abrir um [IDiaSession](../../debugger/debug-interface-access/idiasession.md) para acessar as informações de depuração.  
   
     ```C++  
     CComPtr<IDiaSession> psession;  
@@ -66,7 +67,7 @@ Um arquivo de banco de dados do programa (extensão. PDB) é um arquivo binário
     }  
     ```  
   
-4.  Use os métodos no `IDiaSession` para consultar os símbolos na fonte de dados.  
+4.  Use os métodos em `IDiaSession` para consultar os símbolos na fonte de dados.  
   
     ```C++  
     CComPtr<IDiaSymbol> pglobal;  

@@ -1,10 +1,11 @@
 ---
-title: Página de propriedades do aplicativo para aplicativos UWP | Microsoft Docs
+title: Página de propriedades do aplicativo para aplicativos UWP
 ms.date: 01/23/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
-- AppPackage.Properties.Application"
+- AppPackage.Properties.Application
 helpviewer_keywords:
 - Application page [UWP project]
 author: gewarren
@@ -12,11 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 691a4d2c367bb8f283c4381629f33529fa743c62
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 206c856eb87243fd6021c4ff8bb9f6890b8eaf25
+ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384208"
 ---
 # <a name="application-property-page-uwp-projects"></a>Página de propriedades do aplicativo (projetos UWP)
 
@@ -44,9 +46,9 @@ Para acessar essa propriedade de forma programática, consulte <xref:VSLangProj.
 
 Você pode definir a versão de destino e a versão mínima do Windows 10 para seu aplicativo usando as listas suspensas nesta seção. Recomendamos que você direcione para a versão mais recente do Windows 10, e se você estiver desenvolvendo um aplicativo empresarial, que também ofereça suporte a uma versão mínima mais antiga. Para saber mais sobre qual versão do Windows 10 escolher, confira [Escolher uma versão do UWP](/windows/uwp/updates-and-versions/choose-a-uwp-version).
 
-Para obter informações sobre a plataforma de direcionamento no Visual Studio 2017, consulte [Direcionamento da plataforma](https://www.visualstudio.com/productinfo/vs2017-compatibility-vs#a-iddevelopwindows-avisual-studio-2017-support-for-windows-development).
+Para obter informações sobre a plataforma de direcionamento no Visual Studio 2017, consulte [Direcionamento da plataforma](/visualstudio/productinfo/vs2017-compatibility-vs#platform-targeting).
 
 ## <a name="see-also"></a>Consulte também
 
-[Criar seu primeiro aplicativo UWP](/windows/uwp/get-started/your-first-app)  
-[Escolher uma versão de UWP](/windows/uwp/updates-and-versions/choose-a-uwp-version)
+- [Criar seu primeiro aplicativo UWP](/windows/uwp/get-started/your-first-app)
+- [Escolher uma versão de UWP](/windows/uwp/updates-and-versions/choose-a-uwp-version)

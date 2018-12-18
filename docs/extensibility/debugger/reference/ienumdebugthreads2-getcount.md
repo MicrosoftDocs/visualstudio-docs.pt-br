@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca08caeae6b0490ed6ee0f983b6be2ac7bfaf60a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cd99749354979f01f5852c80cf88e6171641b52d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942199"
 ---
 # <a name="ienumdebugthreads2getcount"></a>IEnumDebugThreads2::GetCount
 Retorna o número de elementos na enumeração.  
@@ -43,10 +44,10 @@ int GetCount(
  [out] Retorna o número de elementos na enumeração.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Este método não é parte da interface habitual de enumeração COM que especifica que somente o `Next`, `Clone`, `Skip`, e `Reset` métodos precisam ser implementado.  
+ Esse método não é parte do que a interface de enumeração COM habitual que especifica que somente o `Next`, `Clone`, `Skip`, e `Reset` métodos precisam ser implementados.  
   
 ## <a name="see-also"></a>Consulte também  
  [IEnumDebugThreads2](../../../extensibility/debugger/reference/ienumdebugthreads2.md)

@@ -1,13 +1,9 @@
 ---
 title: VSPerfCmd | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - performance tools, VSPerfCmd tool
 - command-line tools, VSPerfCmd tool
@@ -15,26 +11,26 @@ helpviewer_keywords:
 - profiling tools,VSPerfCmd
 - VSPerfCmd tool
 ms.assetid: 778bc105-7643-46c4-a338-f3620e31125a
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: af5636866e2d91cc5aac5c8054a92961aeb3d042
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 23abc362b3c91579585272e4ebf1b190cab55dde
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44320976"
 ---
 # <a name="vsperfcmd"></a>VSPerfCmd
-A ferramenta **VSPerfCmd.exe** é usada para iniciar e interromper a coleta de dados de desempenho. Ela usa a seguinte sintaxe:  
+A ferramenta *VSPerfCmd.exe* é usada para iniciar e interromper a coleta de dados de desempenho. Ela usa a seguinte sintaxe:  
   
-```  
+```cmd  
 VSPerfCmd [/U] [/options]  
 ```  
   
- As tabelas a seguir descrevem as opções da ferramenta **VSPerfCmd.exe**.  
+ As tabelas a seguir descrevem as opções da ferramenta *VSPerfCmd.exe*.  
   
 |Opção|Descrição|  
 |------------|-----------------|  
@@ -48,7 +44,7 @@ VSPerfCmd [/U] [/options]
 |[QueryCounters](../profiling/querycounters.md)|Exibe uma lista de contadores de CPU válido para a máquina atual.|  
 |[WinCounter](../profiling/wincounter.md) **:** *path*|Especifica um evento de contador de desempenho do Windows para incluir com os dados de marca. Use somente com **Start**.|  
 |[AutoMark](../profiling/automark.md) **:** *n*|Especifica o intervalo de tempo (em milissegundos) entre os eventos de coleta de dados do contador de desempenho do Windows. Use com **WinCounter**.|  
-|[Events](../profiling/events-vsperfcmd.md) **:** `option`|Controla a coleta de eventos especificados do ETW (Rastreamento de Eventos para Windows). Os dados de ETW são coletados em um arquivo .itl que não é o arquivo de dados de criação de perfil (.vsp).|  
+|[Events](../profiling/events-vsperfcmd.md) **:** `option`|Controla a coleta de eventos especificados do ETW (Rastreamento de Eventos para Windows). Os dados do ETW são coletados em um arquivo .*itl* que não é o arquivo de dados de criação de perfil (.*vsp*).|  
 |[Status](../profiling/status.md)|Exibe o estado do criador de perfil, informações sobre processos que estão passando pela criação de perfil e contas que possuem autoridade para controlar o criador de perfil.|  
 |[Shutdown](../profiling/shutdown.md)[**:**`n`]|Fecha o arquivo de dados de criação de perfil e desativa o criador de perfil.|  
 |[GlobalOn](../profiling/globalon-and-globaloff.md)|Retoma a coleta de dados após uma chamada para **VSPerfCmdGlobalOff**.|  
@@ -57,9 +53,9 @@ VSPerfCmd [/U] [/options]
 |[ProcessOff](../profiling/processon-and-processoff.md) **:** `pid`|Interrompe a coleta de dados do processo especificado.|  
 |[ThreadOn e ThreadOff](../profiling/threadon-and-threadoff.md) **:** *tid*|Retoma a criação de perfil do processo especificado após a criação de perfil ser pausada por uma chamada a **VSPerfCmdThreadOff**. Use **ThreadOn** apenas ao criar um perfil com o método de instrumentação.|  
 |[ThreadOn e ThreadOff](../profiling/threadon-and-threadoff.md) **:** *tid*|Pausa a criação de perfil do thread especificado. Use **ThreadOff** apenas ao criar um perfil com o método de instrumentação.|  
-|[Mark](../profiling/mark.md) **:** *MarkNum*[**,***MarkText***]**|Insere uma marca no arquivo de dados de criação de perfil, com texto opcional.|  
+|[Mark](../profiling/mark.md) **:** _MarkNum_[**,**_MarkText_**]**|Insere uma marca no arquivo de dados de criação de perfil, com texto opcional.|  
   
-## <a name="sampling-method-options"></a>Opções do método de amostragem  
+## <a name="sample-method-options"></a>Opções do método de amostragem  
  As opções a seguir só estarão disponíveis quando você estiver usando o método de criação de perfil de amostragem.  
   
 |Opção|Descrição|  
@@ -67,18 +63,18 @@ VSPerfCmd [/U] [/options]
 |[Launch](../profiling/launch.md) **:** *Executable*|Inicia o aplicativo especificado e começa a criação de perfil.|  
 |[Args](../profiling/args.md) **:** *Arguments*|Especifica argumentos de linha de comando a serem passados para o aplicativo iniciado.|  
 |[Console](../profiling/console.md)|Inicia o comando especificado em uma nova janela de prompt de comando.|  
-|[Attach](../profiling/attach.md) **:** *PID*[**,***PID*]|Inicia a criação de perfil dos processos especificados. Os processos podem ser identificados pela id do processo ou pelo nome do processo.|  
-|[Detach](../profiling/detach.md)[**:***PID*[,*PID*]]|Para a criação de perfil dos processos especificados. Os processos podem ser identificados pela id do processo ou pelo nome do processo. Se nenhum processo for especificado, a criação de perfil será interrompida para todos os processos.|  
+|[Attach](../profiling/attach.md) **:** *PID*[**,**_PID_]|Inicia a criação de perfil dos processos especificados. Os processos podem ser identificados pela ID ou pelo nome do processo.|  
+|[Detach](../profiling/detach.md)[**:**_PID_[,_PID_]]|Para a criação de perfil dos processos especificados. Os processos podem ser identificados pela ID ou pelo nome do processo. Se nenhum processo for especificado, a criação de perfil será interrompida para todos os processos.|  
 |[GC](../profiling/gc-vsperfcmd.md)[**:**{**Allocation**`&#124;`**Lifetime**}]|Coleta dados de alocação de memória e de tempo de vida do objeto .NET. Use somente com a opção **VSPerfCmdLaunch**.|  
   
-### <a name="sampling-interval-options"></a>Opções do intervalo de amostragem  
+### <a name="sample-interval-options"></a>Opções do intervalo de amostragem  
  As opções a seguir especificam o tipo e a duração dos intervalos de amostragem. O padrão é **Timer**. Você também pode especificar um contador de CPU como o intervalo usando a opção **Counter**. Essas opções só podem ser especificadas com **Launch** ou com o primeiro **Attach** de uma sessão de criação de perfil.  
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|[PF](../profiling/pf.md)[**:***n*]|Realiza a amostragem a cada número especificado de falhas de página (padrão=10).|  
-|[Sys](../profiling/sys-vsperfcmd.md)[**:***n*]|Realiza a amostragem a cada número especificado de chamada do sistema (padrão=10).|  
-|[Timer](../profiling/timer.md)[**:***n*]|Realiza a amostragem a cada número especificado de ciclo do processador (padrão=10000000).|  
+|[PF](../profiling/pf.md)[**:**_n_]|Realiza a amostragem a cada número especificado de falhas de página (padrão=10).|  
+|[Sys](../profiling/sys-vsperfcmd.md)[**:**_n_]|Realiza a amostragem a cada número especificado de chamada do sistema (padrão=10).|  
+|[Timer](../profiling/timer.md)[**:**_n_]|Realiza a amostragem a cada número especificado de ciclo do processador (padrão=10000000).|  
   
 ## <a name="service-component-and-kernel-mode-device-options"></a>Opções de componente do serviço e do dispositivo de modo kernel  
  As opções de Administração a seguir oferecem suporte aos componentes do serviço de criação de perfil ou aos drivers de dispositivo de modo kernel. As opções de Administração definem as permissões de criação de perfil e controlam o serviço com perfil criado ou driver de dispositivo.  
@@ -87,7 +83,7 @@ VSPerfCmd [/U] [/options]
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**Admin:Security** \<**ALLOW&#124;DENY**> *Right*[ *Right*] \<*User*&#124;*Group*>|Permite ou nega o acesso do usuário ou grupo especificado aos serviços de criação de perfil.<br /><br /> `Right` pode ser:<br /><br /> CrossSession - dá ao usuário acesso ao serviço a fim de executar a criação cruzada de perfil.<br /><br /> SampleProfiling - dá ao usuário acesso ao driver para habilitar a criação de perfil de amostragem. Também é usado para acessar informações de transição de kernel durante a criação de perfil de rastreamento.<br /><br /> FullAccess - dá ao usuário acesso ao CrossSession e ao SampleProfiling.|  
+|**Admin:Security**, \<**ALLOW&#124;DENY**>, *Right*[ *Right*], \<*User*&#124;*Group*>|Permite ou nega o acesso do usuário ou grupo especificado aos serviços de criação de perfil.<br /><br /> `Right` pode ser:<br /><br /> CrossSession - dá ao usuário acesso ao serviço a fim de executar a criação cruzada de perfil.<br /><br /> SampleProfiling - dá ao usuário acesso ao driver para habilitar a criação de perfil de amostragem. Também é usado para acessar informações de transição de kernel durante a criação de perfil de rastreamento.<br /><br /> FullAccess - dá ao usuário acesso ao CrossSession e ao SampleProfiling.|  
 |**Admin:Security, List**|Lista o estado atual dos serviços de criação de perfil e lista as permissões de usuário.|  
 |**Admin:** \<*Service*&#124;*Driver*>\<**START**&#124;**STOP**&#124;**INSTALL**&#124;**UNINSTALL**>|Inicia, para, instala ou desinstala o componente de serviço de criação de perfil (serviço) ou o driver de dispositivo de modo kernel (driver).|  
 |**Admin:** \<*Service*&#124;*Driver*>**AutoStart**\<**ON**&#124;**OFF**>|Habilita ou desabilita a inicialização automática do serviço de criação de perfil (serviço) ou driver de dispositivo de modo kernel (driver) após a reinicialização.|  

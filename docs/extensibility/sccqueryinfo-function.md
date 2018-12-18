@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5e2838709d7c2c2ad6e6b1eeef36c2cc0018a1a1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2a1930cbaab4ac6e175f102e78a0b5b037938ed6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49913170"
 ---
 # <a name="sccqueryinfo-function"></a>Função SccQueryInfo
-Esta função obtém as informações de status para um conjunto de arquivos selecionados no controle de origem.  
+Essa função obtém as informações de status para um conjunto de arquivos selecionados no controle de origem.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,39 +41,39 @@ SCCRTN SccQueryInfo(
  [in] A estrutura de contexto de plug-in de controle de origem.  
   
  nFiles  
- [in] Número de arquivos especificados no `lpFileNames` matriz e o comprimento do `lpStatus` matriz.  
+ [in] Número de arquivos especificados na `lpFileNames` matriz e o comprimento do `lpStatus` matriz.  
   
  lpFileNames  
  [in] Uma matriz de nomes de arquivos a ser consultado.  
   
  lpStatus  
- [out no] Uma matriz na qual o plug-in de controle de origem retorna os sinalizadores de status para cada arquivo. Para obter mais informações, consulte [código de Status do arquivo](../extensibility/file-status-code-enumerator.md).  
+ [no, out] Uma matriz no qual o plug-in de controle de origem retorna os sinalizadores de status para cada arquivo. Para obter mais informações, consulte [código de Status do arquivo](../extensibility/file-status-code-enumerator.md).  
   
 ## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+ A implementação de plug-in de controle do código-fonte desta função deve retornar um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |SCC_OK|Consulta foi bem-sucedida.|  
-|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle de origem, provavelmente causado por problemas de rede ou de contenção. Recomenda-se uma nova tentativa.|  
+|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle do código-fonte, provavelmente causado por problemas de rede ou de contenção. É recomendável uma nova tentativa.|  
 |SCC_E_PROJNOTOPEN|O projeto não está aberto no controle de origem.|  
 |SCC_E_NONSPECIFICERROR|Falha não específica.|  
   
 ## <a name="remarks"></a>Comentários  
- Se `lpFileName` é uma cadeia de caracteres vazia, atualmente, não há nenhuma informação de status para atualizar. Caso contrário, é o nome de caminho completo do arquivo para o qual as informações de status podem ter sido alterado.  
+ Se `lpFileName` é uma cadeia de caracteres vazia, atualmente, não há nenhuma informação de status de atualização. Caso contrário, ele é o nome de caminho completo do arquivo para o qual as informações de status podem ter sido alterado.  
   
- A matriz de retorno pode ser um bitmask de `SCC_STATUS_xxxx` bits. Para obter mais informações, consulte [código de Status do arquivo](../extensibility/file-status-code-enumerator.md). Um sistema de controle do código-fonte não pode oferecer suporte a todos os tipos de bit. Por exemplo, se `SCC_STATUS_OUTOFDATE` não é oferecido, o bit não está definido.  
+ Matriz de retorno pode ser uma bitmask de `SCC_STATUS_xxxx` bits. Para obter mais informações, consulte [código de Status do arquivo](../extensibility/file-status-code-enumerator.md). Um sistema de controle do código-fonte pode não suportar todos os tipos de bit. Por exemplo, se `SCC_STATUS_OUTOFDATE` não é oferecido, o bit não está definido.  
   
- Ao usar essa função para check-out de arquivos, observe o seguinte `MSSCCI` requisitos de status:  
+ Ao usar essa função para fazer check-out de arquivos, observe o seguinte `MSSCCI` requisitos de status:  
   
 -   `SCC_STATUS_OUTBYUSER` é definido quando o usuário atual fez check-out do arquivo.  
   
--   `SCC_STATUS_CHECKEDOUT` não é possível definir a menos que `SCC_STATUS_OUTBYUSER` está definido.  
+-   `SCC_STATUS_CHECKEDOUT` não pode ser definida, a menos que `SCC_STATUS_OUTBYUSER` está definido.  
   
 -   `SCC_STATUS_CHECKEDOUT` só é definido quando o arquivo é extraído no diretório de trabalho designado.  
   
--   Se o arquivo está com check-out pelo usuário atual em um diretório que não seja o diretório de trabalho, `SCC_STATUS_OUTBYUSER` está definida, mas `SCC_STATUS_CHECKEDOUT` não é.  
+-   Se o arquivo está com check-out do usuário atual em um diretório que não seja o diretório de trabalho `SCC_STATUS_OUTBYUSER` está definida, mas `SCC_STATUS_CHECKEDOUT` não é.  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)   
- [Código de Status do arquivo](../extensibility/file-status-code-enumerator.md)
+ [Funções de API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)   
+ [Código de status do arquivo](../extensibility/file-status-code-enumerator.md)

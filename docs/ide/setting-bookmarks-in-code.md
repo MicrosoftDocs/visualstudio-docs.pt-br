@@ -1,7 +1,7 @@
 ---
-title: Definir indicadores de código no Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Definir indicadores de código no Visual Studio
 ms.date: 02/23/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -12,11 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b2c51b360a8df39abfd38e3da175de65c38d59bf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2e0154a9d410e7bbe60913b757f216225239704b
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34448812"
 ---
 # <a name="set-bookmarks-in-code"></a>Definir indicadores no código
 
@@ -43,4 +44,4 @@ Você pode desligar indicadores (sem removê-los) escolhendo o botão **Desabili
 
 ## <a name="see-also"></a>Consulte também
 
-- [Gravando código no editor](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Recursos do Editor de Códigos](../ide/writing-code-in-the-code-and-text-editor.md)

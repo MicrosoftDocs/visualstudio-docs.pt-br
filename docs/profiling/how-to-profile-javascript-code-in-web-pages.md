@@ -13,15 +13,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7da608523430724e279efc3d5c7c5d5b27564845
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 007603f0695a658b6bfa6c1ab1173b4483004c13
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843917"
 ---
-# <a name="how-to-profile-javascript-code-in-web-pages"></a>Como analisar código JavaScript em páginas da Web
+# <a name="how-to-profile-javascript-code-in-web-pages"></a>Como criar perfil de código JavaScript em páginas da Web
 
-As Ferramentas de Criação de Perfil do Visual Studio podem coletar dados de desempenho para o código JavaScript que é executado em um aplicativo Web do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], em uma página da Web arbitrária ou em um aplicativo JavaScript usando o método de criação de perfil de instrumentação. Exige o Internet Explorer 8 ou posterior.
+As Ferramentas de Criação de Perfil do Visual Studio podem coletar dados de desempenho do código JavaScript que é executado em um aplicativo Web do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], em uma página da Web arbitrária ou em um aplicativo JavaScript usando o método de criação de perfil por instrumentação. Exige o Internet Explorer 8 ou posterior.
 
 > [!WARNING]
 > Para analisar JavaScript em aplicativos UWP, consulte [Memória de JavaScript](../profiling/javascript-memory.md) 
@@ -30,11 +31,11 @@ Você pode usar o Assistente de Criação de Perfil para criar uma sessão de de
 
 Ao especificar criação de perfil JavaScript, o código JavaScript que é executado no navegador e o código do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] que é executado no servidor serão analisados.
 
-- Para um aplicativo Web do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], o código JavaScript que é executado no navegador e o código do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] que é executado no servidor serão analisados.
+- Para um aplicativo Web do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], é criado um perfil do código JavaScript que é executado no navegador e do código do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] que é executado no servidor.
 
-- Para uma página da Web arbitrária, o código JavaScript que é executado no navegador é analisado.
+- Para uma página da Web arbitrária, é criado o perfil do código JavaScript que é executado no navegador.
 
-## <a name="to-profile-javascript-in-an-aspnet-web-application-project"></a>Para analisar JavaScript em um projeto de aplicativo Web ASP .NET
+## <a name="to-profile-javascript-in-an-aspnet-web-application-project"></a>Para criar perfil do JavaScript em um projeto de aplicativo Web ASP.NET
 
 1. Abra o projeto Web [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] no Visual Studio.
 
@@ -52,7 +53,7 @@ Ao especificar criação de perfil JavaScript, o código JavaScript que é execu
 
 8. Para encerrar a sessão de criação de perfil, feche o navegador.
 
-### <a name="to-profile-javascript-in-individual-web-pages-or-a-javascript-applications"></a>Para analisar JavaScript em páginas da Web individuais ou em aplicativos JavaScript
+### <a name="to-profile-javascript-in-individual-web-pages-or-a-javascript-applications"></a>Para criar o perfil do JavaScript em páginas da Web ou em aplicativos JavaScript individuais
 
 1. Abra o Visual Studio.
 

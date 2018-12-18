@@ -1,5 +1,5 @@
 ---
-title: ': Framebyva | Microsoft Docs'
+title: 'Idiaenumframedata:: Framebyva | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d19dcff2890291ca198092314b667cc3a0a7d33
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: fa12d481811538430385aeda08c1ea01a156d924
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854007"
 ---
 # <a name="idiaenumframedataframebyva"></a>IDiaEnumFrameData::frameByVA
-Retorna um intervalo de endereço virtual (VA).  
+Retorna um quadro por endereço virtual (VA).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +41,7 @@ HRESULT frameByVA(
  [out] Retorna um [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) objeto que representa o quadro que contém o endereço fornecido.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se nenhum dado de quadro coincide com o endereço especificado. Caso contrário, retornará um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se o endereço especificado não corresponde a nenhum dado de quadro. Caso contrário, retornará um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)   

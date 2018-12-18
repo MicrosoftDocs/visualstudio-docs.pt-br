@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31456419"
 ---
 # <a name="assertion-failed-dialog-box"></a>Caixa de diálogo Falha de Asserção
 Uma instrução de declaração especifica uma condição que você espera ser verdadeira em algum ponto específico em seu programa. Se essa condição não se aplicar, a asserção falhará, a execução do programa será interrompida e essa caixa de diálogo será exibida.  

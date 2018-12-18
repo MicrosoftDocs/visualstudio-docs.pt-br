@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 033122a925313117d007c20bb7a6d4f5f513b76c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 196bc890458d820b4280144e6f6a76655e7d8c93
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923869"
 ---
 # <a name="idiastackframegetsystemexceptionhandling"></a>IDiaStackFrame::get_systemExceptionHandling
-Recupera um sinalizador que indica se o tratamento de exceção do sistema está em vigor.  
+Recupera um sinalizador que indica se o tratamento de exceções do sistema está em vigor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,15 +34,15 @@ HRESULT get_systemExceptionHandling (
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Retorna `TRUE` se o tratamento de exceção do sistema está em vigor para este quadro; caso contrário, retornará `FALSE`.  
+ [out] Retorna `TRUE` se a manipulação de exceção do sistema está em vigor para esse quadro; caso contrário, retornará `FALSE`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se a propriedade não é suportada. Caso contrário, retornará um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para a propriedade. Caso contrário, retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Tratamento de exceção do sistema também é conhecida como tratamento estruturado de exceções. Isso não é a mesma coisa que o tratamento de exceções C++.  
+ Tratamento de exceções do sistema também é conhecida como tratamento de exceções estruturado. Isso não é a mesma coisa que o tratamento de exceções C++.  
   
- Para determinar se o tratamento de exceções C++ está em vigor, chame o [: Get_cplusplusexceptionhandling](../../debugger/debug-interface-access/idiastackframe-get-cplusplusexceptionhandling.md) método.  
+ Para determinar se o tratamento de exceções C++ está em vigor, chame o [idiastackframe:: Get_cplusplusexceptionhandling](../../debugger/debug-interface-access/idiastackframe-get-cplusplusexceptionhandling.md) método.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)   

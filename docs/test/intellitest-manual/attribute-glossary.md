@@ -1,8 +1,9 @@
 ---
-title: Glossário do atributo | Ferramenta de teste do desenvolvedor do Microsoft IntelliTest | Microsoft Docs
+title: Glossário do atributo | Ferramenta de teste do desenvolvedor do Microsoft IntelliTest
 ms.date: 05/02/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Attribute glossary
 ms.author: gewarren
@@ -10,11 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: fd799598f7e497c217024965d7a83ff1df322acd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0a83a7bd2fc40862411bbfd85f72b804318983c5
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51294208"
 ---
 # <a name="attribute-glossary"></a>Glossário do atributo
 
@@ -50,7 +52,7 @@ Esse atributo declara que o valor controlado não pode ser **nulo**. Ele pode se
 
 * um **parâmetro** de um método de teste parametrizado
 
-  ```
+  ```csharp
   // assume foo is not null
   [PexMethod]
   public void SomeTest([PexAssumeNotNull]IFoo foo, ...) {}
@@ -58,7 +60,7 @@ Esse atributo declara que o valor controlado não pode ser **nulo**. Ele pode se
 
 * um **campo**
 
-  ```
+  ```csharp
   public class Foo {
      // this field should not be null
      [PexAssumeNotNull]
@@ -68,7 +70,7 @@ Esse atributo declara que o valor controlado não pode ser **nulo**. Ele pode se
 
 * Um **tipo**
 
-  ```
+  ```csharp
   // never consider null for Foo types
   [PexAssumeNotNull]
   public class Foo {}
@@ -93,7 +95,7 @@ Também é altamente recomendável tornar essas classes **parciais** para que o 
 
 **Pacotes de teste e categorias adicionais**:
 
-```
+```csharp
 [TestClass] // MSTest test fixture attribute
 [PexClass(Suite = "checkin")] // fixture attribute
 public partial class MyTests { ... }
@@ -101,7 +103,7 @@ public partial class MyTests { ... }
 
 **Especificando o tipo em teste**:
 
-```
+```csharp
 [PexClass(typeof(Foo))] // this is a test for Foo
 public partial class FooTest { ... }
 ```
@@ -130,7 +132,7 @@ O teste de unidade parametrizado:
 
 **Exemplo**
 
-```
+```csharp
 [PexClass]
 public partial class MyTests {
      [PexMethod]
@@ -142,14 +144,14 @@ public partial class MyTests {
 <a name="pexexplorationattributebase"></a>
 ## <a name="pexexplorationattributebase"></a>PexExplorationAttributeBase
 
-[Mais informações](https://msdn.microsoft.com/library/microsoft.pex.framework.pexexplorationattributebase.aspx)
+[Mais informações](xref:Microsoft.Pex.Framework.PexExplorationAttributeBase)
 
 <a name="pexassemblysettings"></a>
 ## <a name="pexassemblysettings"></a>PexAssemblySettings
 
 Este atributo pode ser definido no nível de assembly para substituir os valores de configuração padrão para todas as explorações.
 
-```
+```csharp
 using Microsoft.Pex.Framework;
 // overriding the test framework selection
 [assembly: PexAssemblySettings(TestFramework = "Naked")]
@@ -160,7 +162,7 @@ using Microsoft.Pex.Framework;
 
 Esse atributo especifica um assembly que está sendo testado pelo projeto de teste atual. 
 
-```
+```csharp
 [assembly: PexAssemblyUnderTest("MyAssembly")]
 ```
 
@@ -171,7 +173,7 @@ Este atributo é usado para especificar um assembly a ser instrumentado.
 
 **Exemplo**
 
-```
+```csharp
 using Microsoft.Pex.Framework;
 
 // the assembly containing ATypeFromTheAssemblyToInstrument should be instrumented
@@ -188,7 +190,7 @@ Este atributo diz ao IntelliTest que ele pode usar um tipo específico para cria
 
 **Exemplo**
 
-```
+```csharp
 [PexMethod]
 [PexUseType(typeof(A))]
 [PexUseType(typeof(B))]
@@ -207,7 +209,7 @@ Se esse atributo estiver anexado a um [PexMethod](#pexmethod) (ou a uma [PexClas
 
 O teste a seguir especifica que o construtor de **Stack** pode gerar um **ArgumentOutOfRangeException**:
 
-```
+```csharp
 class Stack {
   int[] _elements;
   int _count;
@@ -222,7 +224,7 @@ class Stack {
 
 O filtro é anexado a um acessório da seguinte maneira (ele também pode ser definido no nível de assembly ou de teste):
 
-```
+```csharp
 [PexMethod]
 [PexAllowedException(typeof(ArgumentOutOfRangeException))]
 class CtorTest(int capacity) {
@@ -233,18 +235,18 @@ class CtorTest(int capacity) {
 <a name="pexallowedexceptionfromassembly"></a>
 ## <a name="pexallowedexceptionfromassembly"></a>PexAllowedExceptionFromAssembly
 
-[Mais informações](https://msdn.microsoft.com/library/microsoft.pex.framework.validation.pexallowedexceptionfromassemblyattribute.aspx)
+[Mais informações](xref:Microsoft.Pex.Framework.Validation.PexAllowedExceptionFromAssemblyAttribute)
 
 <a name="pexallowedexceptionfromtype"></a>
 ## <a name="pexallowedexceptionfromtype"></a>PexAllowedExceptionFromType
 
-[Mais informações](https://msdn.microsoft.com/library/microsoft.pex.framework.validation.pexallowedexceptionfromtypeattribute.aspx)
+[Mais informações](xref:Microsoft.Pex.Framework.Validation.PexAllowedExceptionFromTypeAttribute)
 
 <a name="pexallowedexceptionfromtypeundertest"></a>
 ## <a name="pexallowedexceptionfromtypeundertest"></a>PexAllowedExceptionFromTypeUnderTest
 
-[Mais informações](https://msdn.microsoft.com/library/microsoft.pex.framework.validation.pexallowedexceptionfromtypeundertestattribute.aspx)
+[Mais informações](xref:Microsoft.Pex.Framework.Validation.PexAllowedExceptionFromTypeUnderTestAttribute)
 
 ## <a name="got-feedback"></a>Recebeu comentários?
 
-Poste suas ideias e solicitações de recursos no  **[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)**.
+Poste suas ideias e solicitações de recursos na [Comunidade de Desenvolvedores](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).

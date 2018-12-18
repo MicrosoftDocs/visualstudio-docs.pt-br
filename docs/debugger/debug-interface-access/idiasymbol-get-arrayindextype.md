@@ -1,5 +1,5 @@
 ---
-title: ': Get_arrayindextype | Microsoft Docs'
+title: 'Idiasymbol:: Get_arrayindextype | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1212bb62888d1bed546a7c12ae4cfc48c22d0a07
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: a3d8890e4a1a891cc1efe622b78e185b83a32f81
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882399"
 ---
 # <a name="idiasymbolgetarrayindextype"></a>IDiaSymbol::get_arrayIndexType
 Recupera a interface de símbolo do tipo de índice de matriz do símbolo.  
@@ -36,20 +37,20 @@ HRESULT get_arrayIndexType (
  [out] Retorna um [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) objeto que representa o tipo de índice de matriz do símbolo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
   
 ## <a name="remarks"></a>Comentários  
- Alguns idiomas podem especificar o tipo usado como um índice em uma matriz. O símbolo retornado deste método especifica desse tipo.  
+ Algumas linguagens podem especificar o tipo usado como um índice para uma matriz. O símbolo retornado desse método especifica desse tipo.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Requisito|Descrição|  
 |-----------------|-----------------|  
 |Cabeçalho:|dia2.h|  
-|Versão:|Versão 7.0 do DIA SDK|  
+|Versão:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

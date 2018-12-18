@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31468802"
 ---
 # <a name="compilanddetails"></a>CompilandDetails
 Informações Compiland são divididas entre os símbolos com um `SymTagCompiland` marca (nível baixo de detalhe) e um `SymTagCompilandDetails` marca (alta detalhes). `SymTagCompilandDetails` requer o carregamento de símbolos adicionais. No entanto, ele fornece uma grande quantidade de informações sobre o compiland não está disponível com um `SymTagCompiland` símbolo.  

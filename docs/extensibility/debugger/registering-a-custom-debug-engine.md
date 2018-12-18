@@ -1,5 +1,5 @@
 ---
-title: Mecanismo de depuração de registrar um personalizado | Microsoft Docs
+title: Registrando um personalizado de mecanismo de depuração | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,28 +13,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 99ff41f116e569baaae312acd17408928a6c79f4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7c87b3749c2ea63e89e2e8fb0caf773434a38df2
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281384"
 ---
-# <a name="registering-a-custom-debug-engine"></a>Registrando um mecanismo de depuração personalizado
-O mecanismo de depuração deve se registrar como uma fábrica de classe segue as convenções de COM, bem como registrar com o Visual Studio por meio da subchave do registro do Visual Studio.  
+# <a name="register-a-custom-debug-engine"></a>Registrar um mecanismo de depuração personalizado
+O mecanismo de depuração deve se registrar como uma fábrica de classes, seguir as convenções de COM, bem como se registrar com o Visual Studio por meio da subchave do registro do Visual Studio.  
   
 > [!NOTE]
->  Um exemplo de como registrar um mecanismo de depuração pode ser encontrado no exemplo TextInterpreter, que é criado como parte do [Tutorial: Criando um depurar mecanismo usando COM ATL](http://msdn.microsoft.com/en-us/9097b71e-1fe7-48f7-bc00-009e25940c24).  
+>  Você pode encontrar um exemplo de como registrar um mecanismo de depuração em uma amostra TextInterpreter, que é criado como parte do [Tutorial: Criando um mecanismo de depuração usando COM ATL](https://msdn.microsoft.com/library/9097b71e-1fe7-48f7-bc00-009e25940c24).  
   
-## <a name="dll-server-process"></a>Processo do servidor de DLL  
- Normalmente, um mecanismo de depuração é implementado em seu próprio DLL como um servidor COM. Isso significa que o mecanismo de depuração deve registrar o CLSID de sua fábrica de classe com para que Visual Studio pode acessá-lo. Em seguida, o mecanismo de depuração deve ser registrado com o próprio Visual Studio para estabelecer as propriedades (conhecido como métricas) de depuração mecanismo oferece suporte. A escolha de métricas que são gravadas para a subchave de registro do Visual Studio para o mecanismo de depuração depende dos recursos que suporta o mecanismo de depuração.  
+## <a name="dll-server-process"></a>Processo do servidor DLL  
+ Um mecanismo de depuração normalmente é configurado em sua própria DLL como um servidor COM. Como tal, o mecanismo de depuração deve registrar o CLSID da sua fábrica de classe COM antes que o Visual Studio pode acessá-lo. Em seguida, o mecanismo de depuração deve ser registrado com o Visual Studio para estabelecer as propriedades (conhecido como métricas) de depuração dá suporte a do mecanismo. A escolha das métricas gravadas até a subchave de registro do Visual Studio depende dos recursos que o mecanismo de depuração suporta.  
   
- [Auxiliares do SDK para depuração](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) descreve não apenas os locais de registro necessários para registrar um mecanismo de depuração; ele também descreve a biblioteca de dbgmetric.lib, que contém um número de funções úteis e declarações para os desenvolvedores de C++ que fazem Manipulando o registro mais fácil.  
+ [Auxiliares do SDK para depuração](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) descreve não apenas os locais do Registro necessários para registrar um mecanismo de depuração; ele também descreve o *dbgmetric.lib* biblioteca, que contém um número de funções úteis e declarações para desenvolvedores de C++ que tornam a manipular o registro mais fácil.  
   
 ### <a name="example"></a>Exemplo  
- A seguir está um exemplo típico (da amostra TextInterpreter) mostrando como usar o `SetMetric` função (de dbgmetric.lib) para registrar um mecanismo de depuração com o Visual Studio. As métricas que está sendo passadas também são definidas no dbgmetric.lib.  
+ O exemplo a seguir (do exemplo TextInterpreter) mostra como usar o `SetMetric` função (de *dbgmetric.lib*) para registrar um mecanismo de depuração com o Visual Studio. As métricas que está sendo passadas também são definidas no *dbgmetric.lib*.  
   
 > [!NOTE]
->  TextInterpreter é um mecanismo de depuração básico; ele não implementa — e, portanto, não registrar — todos os outros recursos. Um mecanismo de depuração mais completo teria uma lista completa de `SetMetric` chamadas ou seus equivalentes, uma para cada recurso, o mecanismo de depuração oferece suporte.  
+>  TextInterpreter é um mecanismo de depuração básica; ele não configurado – e, portanto, não registra — outros recursos. Um mecanismo de depuração mais completo teria uma lista completa de `SetMetric` chamadas ou seus equivalentes, uma para cada recurso, o mecanismo de depuração dá suporte.  
   
 ```  
 // Define base registry subkey to Visual Studio.  
@@ -53,4 +54,4 @@ HRESULT CTextInterpreterModule::RegisterServer(BOOL bRegTypeLib, const CLSID * p
 ## <a name="see-also"></a>Consulte também  
  [Criando um mecanismo de depuração personalizado](../../extensibility/debugger/creating-a-custom-debug-engine.md)   
  [Auxiliares do SDK para depuração](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   
- [Tutorial: Criando um mecanismo de depuração usando COM ATL](http://msdn.microsoft.com/en-us/9097b71e-1fe7-48f7-bc00-009e25940c24)
+ [Tutorial: Criando um mecanismo de depuração usando COM ATL](https://msdn.microsoft.com/library/9097b71e-1fe7-48f7-bc00-009e25940c24)

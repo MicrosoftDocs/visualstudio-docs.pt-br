@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 102ad26fcc746c8400cfa5114d9559fc11729dee
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 31b7baad0350ef0524aee81e61f9019b8e91a9de
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49857140"
 ---
 # <a name="bplocationcodestring"></a>BP_LOCATION_CODE_STRING
-Usada para definir pontos de interrupção de código com base em uma cadeia de caracteres que o usuário pode inserir no ambiente de desenvolvimento integrado (IDE).  
+Usada para definir pontos de interrupção de código com base em uma cadeia de caracteres que o usuário pode inserir do ambiente de desenvolvimento integrado (IDE).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,13 +36,13 @@ typedef struct _BP_LOCATION_CODE_STRING {
   
 ## <a name="members"></a>Membros  
  `bstrContext`  
- O contexto do ponto de interrupção no código, geralmente um nome de método ou função como visto em uma pilha de chamadas.  
+ O contexto do ponto de interrupção dentro do código, geralmente, um nome de método ou função, como visto em uma pilha de chamadas.  
   
  `bstrCodeExpr`  
- A cadeia de caracteres que o usuário digita para descrever o ponto de interrupção do código.  
+ A cadeia de caracteres que o usuário digita para descrever o ponto de interrupção de código.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é membro do [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura como parte de uma união.  
+ Essa estrutura é um membro do [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura como parte de uma união.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

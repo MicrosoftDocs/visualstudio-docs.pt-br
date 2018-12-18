@@ -9,11 +9,12 @@ description: Localize uma lista dos downloads de software incluídos com a sua a
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: c59565e903947df54ec0ae593421ee0cc447e8c5
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 7958ccedb28a14763264cd590e83d5e8e7fbbcdf
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335834"
 ---
 # <a name="how-do-i-know-what-software-is-available-for-download"></a>Como saber qual software está disponível para download?
 
@@ -21,7 +22,7 @@ A [lista de downloads de software](http://download.microsoft.com/download/1/5/4/
 
 Se você já tem uma assinatura do Visual Studio: 
 1. Acesse [https://my.visualstudio.com/downloads](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs)
-2. Entre em sua assinatura.  (Para obter ajuda, [entre](/visualstudio/subscriptions/signing-in)).
+2. Entre em sua assinatura.  (Para obter ajuda, [entre](signing-in.md)).
 3. Após entrar com êxito, você poderá pesquisar os downloads desejados.  Você também pode ver uma lista de downloads populares, que podem ser classificados por qualquer um dos vários critérios. 
 
 Para localizar produtos rapidamente, use as funções de "Pesquisar" na parte superior da página ou clique nos diferentes tipos de produtos à esquerda.

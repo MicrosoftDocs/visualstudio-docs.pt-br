@@ -1,6 +1,7 @@
 ---
 title: 'CA2004: remover chamadas para GC.KeepAlive'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,28 +16,30 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e2f05764f5147a064815cdb744420686fb6a5a7c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bea4af6c0ae0e21e15a79d52f4c7205a51a3ea46
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819115"
 ---
 # <a name="ca2004-remove-calls-to-gckeepalive"></a>CA2004: remover chamadas para GC.KeepAlive
+
 |||
 |-|-|
 |NomeDoTipo|RemoveCallsToGCKeepAlive|
 |CheckId|CA2004|
 |Categoria|Microsoft.Reliability|
-|Alteração Significativa|Não recentes|
+|Alteração Significativa|Não são significativas|
 
 ## <a name="cause"></a>Causa
- Uso de classes `SafeHandle` , mas ainda contêm chamadas para `GC.KeepAlive`.
+ Classes usam `SafeHandle` , mas ainda contém chamadas para `GC.KeepAlive`.
 
-## <a name="rule-description"></a>Descrição da Regra
- Se você estiver convertendo em `SafeHandle` uso, remova todas as chamadas para `GC.KeepAlive` (object). Nesse caso, não devem ter classes chamar `GC.KeepAlive`, supondo que eles não têm um finalizador, mas dependem `SafeHandle` para concluir o identificador de sistema operacional para eles.  Embora o custo de deixar em uma chamada para `GC.KeepAlive` podem ser muito importantes, conforme medido pelo desempenho, a percepção que uma chamada para `GC.KeepAlive` é necessário ou suficientes para resolver um problema que talvez não exista mais difícil para o código de tempo de vida Manter.
+## <a name="rule-description"></a>Descrição da regra
+ Se você estiver convertendo em `SafeHandle` uso, remova todas as chamadas para `GC.KeepAlive` (objeto). Nesse caso, as classes não deve chamar `GC.KeepAlive`, supondo que eles não têm um finalizador, mas dependem `SafeHandle` para concluir o identificador de sistema operacional para eles.  Embora o custo de deixar em uma chamada para `GC.KeepAlive` pode ser insignificante, conforme medido pelo desempenho, a percepção de que uma chamada para `GC.KeepAlive` é necessária ou suficiente para resolver um problema que talvez não exista mais torna mais difícil para o código de tempo de vida Manter.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Remover chamadas ao `GC.KeepAlive`.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Remover chamadas para `GC.KeepAlive`.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- Você pode suprimir esse aviso somente se não for tecnicamente correta converter em `SafeHandle` uso na sua classe.
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
+ Você pode suprimir esse aviso somente se ele não é tecnicamente certo converter em `SafeHandle` uso na sua classe.

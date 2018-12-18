@@ -1,5 +1,5 @@
 ---
-title: Página inicial de criar um personalizado | Microsoft Docs
+title: Página inicial de criação personalizado | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,38 +11,39 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 71892262d98b175b111218068a02d03ad3d04caa
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 30c161478bb04dcf964cb2054e714689c13b6538
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39497632"
 ---
-# <a name="creating-a-custom-start-page"></a>Criando uma página de início personalizado
+# <a name="creating-a-custom-start-page"></a>Criando uma página inicial personalizada
 Você pode criar uma página inicial personalizada, seguindo as etapas neste documento.  
   
-## <a name="creating-a-blank-start-page"></a>Criando uma página em branco inicial  
- Primeiro, verifique uma página em branco começar criando um arquivo. XAML que tem uma estrutura de marca que reconheça o Visual Studio. Em seguida, adicione a marcação e o code-behind para produzir a aparência e a funcionalidade desejada.  
+## <a name="create-a-blank-start-page"></a>Criar uma página em branco do início  
+ Primeiro, verifique uma página em branco iniciar com a criação de um *. XAML* arquivo que tem uma estrutura de marca que o Visual Studio reconheça. Em seguida, adicione a marcação e code-behind para produzir a aparência e funcionalidade desejada.  
   
-#### <a name="to-create-a-blank-start-page"></a>Para criar uma página de início em branco  
+### <a name="to-create-a-blank-start-page"></a>Para criar uma página em branco do início  
   
-1.  Criar um novo projeto do tipo **aplicativo WPF** (**Visual C# / área de trabalho do Windows**.  
+1.  Criar um novo projeto do tipo **aplicativo WPF** (**Visual c#** > **área de trabalho do Windows**).  
   
 2.  Adicione uma referência ao `Microsoft.VisualStudio.Shell.14.0`.  
   
-3.  Abra o arquivo XAML no editor de XML e alterar o nível superior \<Janela > elemento para uma \<UserControl > elemento sem remover qualquer uma das declarações de namespace.  
+3.  Abra o arquivo XAML no editor de XML e altere o nível superior \<Janela > elemento para um \<UserControl > elemento sem a remoção de qualquer uma das declarações de namespace.  
   
-4.  Remover o `x:Class` declaração do elemento de nível superior. Isso torna o conteúdo XAML compatível com a janela de ferramenta do Visual Studio que hospeda a página inicial.  
+4.  Remover o `x:Class` declaração do elemento de nível superior. Isso torna o conteúdo XAML compatível com a janela de ferramentas do Visual Studio que hospeda a página de início.  
   
 5.  Adicione as seguintes declarações de namespace para o nível superior \<UserControl > elemento.  
   
-    ```  
+    ```vb  
     xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.14.0"  
     xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"  
     ```  
   
-     Esses namespaces permitem acessar comandos do Visual Studio, controles e as configurações de interface do usuário. Para obter mais informações, consulte [adicionando comandos do Visual Studio para uma página de início](../extensibility/adding-visual-studio-commands-to-a-start-page.md).  
+     Esses namespaces permite que você acesse as configurações de interface do usuário, controles e comandos do Visual Studio. Para obter mais informações, consulte [comandos de adicionar o Visual Studio para uma página inicial](../extensibility/adding-visual-studio-commands-to-a-start-page.md).  
   
-     O exemplo a seguir mostra a marcação no arquivo. XAML para uma página de início em branco. Qualquer conteúdo personalizado deve entrar interna <xref:System.Windows.Controls.Grid> elemento.  
+     O exemplo a seguir mostra a marcação na *. XAML* arquivo para uma página em branco do início. Qualquer conteúdo personalizado deve ficar no interno <xref:System.Windows.Controls.Grid> elemento.  
   
     ```vb  
     <UserControl  
@@ -62,32 +63,32 @@ Você pode criar uma página inicial personalizada, seguindo as etapas neste doc
     </UserControl>  
     ```  
   
-6.  Adicionar controles a vazio \<UserControl > elemento para preencher a página inicial personalizada. Para obter informações sobre como adicionar a funcionalidade específica para o Visual Studio, consulte [adicionando comandos do Visual Studio para uma página de início](../extensibility/adding-visual-studio-commands-to-a-start-page.md).  
+6.  Adicionar controles ao vazio \<UserControl > elemento para preencher sua página inicial personalizada. Para obter informações sobre como adicionar funcionalidade específica para o Visual Studio, consulte [comandos de adicionar o Visual Studio para uma página inicial](../extensibility/adding-visual-studio-commands-to-a-start-page.md).  
   
-## <a name="testing-and-applying-the-custom-start-page"></a>Página inicial do teste e aplicando personalizado  
- Não defina a instância primária do Visual Studio para executar a página inicial personalizada até que você verificar que ele não pane no Visual Studio. Em vez disso, teste-o na instância experimental.  
+## <a name="test-and-apply-the-custom-start-page"></a>Testar e aplicar a página inicial personalizada  
+ Não defina a instância primária do Visual Studio para executar a página inicial personalizada até que você verificar que ele não falhe Visual Studio. Em vez disso, testá-lo na instância experimental.  
   
-#### <a name="to-test-a-manually-created-custom-start-page"></a>Para testar uma página de início personalizados criados manualmente  
+### <a name="to-test-a-manually-created-custom-start-page"></a>Para testar uma criados manualmente página inicial personalizada  
   
-1.  Copie seu arquivo XAML e quaisquer arquivos de texto de suporte ou marcação arquivos, como o **%USERPROFILE%\My Documentos\Visual Studio 2015\StartPages\\**  pasta.  
+1.  Copie seu arquivo XAML e quaisquer arquivos de texto de suporte ou marcação arquivos, como o *%USERPROFILE%\My Documents\Visual Studio 2015\StartPages\\*  pasta.  
   
-2.  Se sua página inicial referenciar os controles ou tipos em assemblies que não estão instalados pelo Visual Studio, copie os assemblies e, em seguida, cole-os em * pasta de instalação do Visual Studio ***\Common7\IDE\PrivateAssemblies\\** .  
+2.  Se sua página inicial faz referência a quaisquer controles ou tipos em assemblies que não estão instalados pelo Visual Studio, copie os assemblies e, em seguida, cole-os nas *{pasta de instalação do Visual Studio} \Common7\IDE\PrivateAssemblies\\* .  
   
-3.  Em um prompt de comando do Visual Studio, digite **/rootsuffix devenv Exp** para abrir uma instância experimental do Visual Studio.  
+3.  Em um prompt de comando do Visual Studio, digite **devenv /rootsuffix Exp** para abrir uma instância experimental do Visual Studio.  
   
-4.  Na instância experimental, vá para o **Ferramentas / opções / ambiente / inicialização** página e selecione seu arquivo XAML do **Personalizar página inicial** lista suspensa.  
+4.  Na instância experimental, vá para o **ferramentas** > **opções** > **ambiente** > **deinicialização** página e selecione seu arquivo XAML a partir de **Personalizar página inicial** lista suspensa.  
   
-5.  Sobre o **exibição** menu, clique em **página inicial**.  
+5.  Sobre o **modo de exibição** menu, clique em **Start Page**.  
   
-     A página de início personalizado deve ser exibida. Se você deseja alterar todos os arquivos, você deve fechar a instância experimental, faça as alterações, copie e cole os arquivos alterados e, em seguida, reabra a instância experimental para exibir as alterações.  
+     Sua página inicial personalizada deve ser exibida. Se você deseja alterar todos os arquivos, você deve fechar a instância experimental, faça as alterações, copie e cole os arquivos alterados e, em seguida, reabra a instância experimental para exibir as alterações.  
   
-#### <a name="to-apply-the-custom-start-page-in-the-primary-instance-of-visual-studio"></a>Para aplicar personalizado página inicial na instância primária do Visual Studio  
+### <a name="to-apply-the-custom-start-page-in-the-primary-instance-of-visual-studio"></a>Para aplicar a personalizar página inicial na instância primária do Visual Studio  
   
--   Depois de testar sua página de início e consideramos estável, use o **Personalizar página inicial** opção o **opções** caixa de diálogo para selecioná-la como a página de início na instância primária do Visual Studio  
+-   Depois de testar sua página inicial e determinou que ele seja estável, use o **Personalizar página inicial** opção a **opções** caixa de diálogo, selecioná-la como a página inicial na instância primária do Visual Studio  
   
 ## <a name="see-also"></a>Consulte também  
- [Passo a passo: Adicionando XAML personalizado para a página inicial](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)   
- [Adicionar um controle de usuário para a página inicial](../extensibility/adding-user-control-to-the-start-page.md)   
- [Adicionando comandos do Visual Studio para uma página de início](../extensibility/adding-visual-studio-commands-to-a-start-page.md)   
- [Passo a passo: Salvando as configurações do usuário em uma página de início](../extensibility/walkthrough-saving-user-settings-on-a-start-page.md)   
- [Implantar páginas iniciais personalizadas](../extensibility/deploying-custom-start-pages.md)
+ [Passo a passo: Adicionar XAML personalizado para a página de início](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)   
+ [Adicionar controle de usuário para a página de início](../extensibility/adding-user-control-to-the-start-page.md)   
+ [Adicionar comandos do Visual Studio para uma página inicial](../extensibility/adding-visual-studio-commands-to-a-start-page.md)   
+ [Passo a passo: Salvar configurações do usuário em uma página inicial](../extensibility/walkthrough-saving-user-settings-on-a-start-page.md)   
+ [Implantar páginas de inicialização personalizada](../extensibility/deploying-custom-start-pages.md)

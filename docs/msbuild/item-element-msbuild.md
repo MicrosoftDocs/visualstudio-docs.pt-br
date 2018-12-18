@@ -18,11 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b55cadc738fb54b1a7fe07a2d891103c0daa755d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6e33f057f3184a9a9bb19311f7206c6ab273dab8
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081014"
 ---
 # <a name="item-element-msbuild"></a>Elemento Item (MSBuild)
 Contém um item definido pelo usuário e seus metadados. Cada item usado em um projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] deve ser especificado como o filho de um elemento `ItemGroup`.  
@@ -33,7 +34,7 @@ Contém um item definido pelo usuário e seus metadados. Cada item usado em um p
 
 ## <a name="syntax"></a>Sintaxe  
 
-```  
+```xml  
 <Item Include="*.cs"  
         Exclude="MyFile.cs"  
         Remove="RemoveFile.cs"  
@@ -95,9 +96,9 @@ No entanto, é possível passar os metadados `Version` como um atributo, como na
 ## <a name="remarks"></a>Comentários  
  Os elementos `Item` definem entradas no sistema de compilação e são agrupados em coleções de itens com base em seus nomes de coleção definida pelo usuário. Essas coleções de itens podem ser usadas como parâmetros para [tarefas](../msbuild/msbuild-tasks.md), que usam os itens individuais nas coleções para executar as etapas do processo de build. Para obter mais informações, consulte [Itens](../msbuild/msbuild-items.md).  
 
- O uso da notação `@(`*myType*`)` permite que uma coleção de itens do tipo *myType* seja expandida em uma lista de cadeias de caracteres delimitada por ponto e vírgula e passada para um parâmetro. Se o parâmetro for do tipo `string`, então o valor do parâmetro será a lista de elementos, separados por ponto e vírgula. Se o parâmetro for uma matriz de cadeias de caracteres (`string[]`), então cada elemento será inserido na matriz com base na localização dos pontos e vírgulas. Se o parâmetro de tarefa for do tipo <xref:Microsoft.Build.Framework.ITaskItem>`[]`, então o valor é o conteúdo da coleção de itens juntamente com quaisquer metadados anexados. Para delimitar cada item usando um caractere que não seja ponto e vírgula, use a sintaxe `@(`*myType*`, '`*separator*`')`.  
+ O uso da notação @(\<myType>) permite que uma coleção de itens do tipo \<myType> seja expandida em uma lista de cadeias de caracteres delimitadas por ponto e vírgula e passada para um parâmetro. Se o parâmetro for do tipo `string`, então o valor do parâmetro será a lista de elementos, separados por ponto e vírgula. Se o parâmetro for uma matriz de cadeias de caracteres (`string[]`), então cada elemento será inserido na matriz com base na localização dos pontos e vírgulas. Se o parâmetro de tarefa for do tipo <xref:Microsoft.Build.Framework.ITaskItem>`[]`, então o valor é o conteúdo da coleção de itens juntamente com quaisquer metadados anexados. Para delimitar cada item usando um caractere que não seja um ponto e vírgula, use a sintaxe @(<myType>, '<separator>').  
 
- O mecanismo [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] pode avaliar curingas como `*` e `?`, bem como curingas recursivos como `/**/*.cs`. Para obter mais informações, consulte [Itens](../msbuild/msbuild-items.md).  
+ O mecanismo [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] pode avaliar curingas como `*` e `?`, bem como curingas recursivos como */\*\*/\*.cs*. Para obter mais informações, consulte [Itens](../msbuild/msbuild-items.md).  
 
 ## <a name="examples"></a>Exemplos  
  O exemplo de código a seguir mostra como declarar dois itens do tipo `CSFile`. O segundo item declarado contém metadados que possuem `MyMetadata` definidos como `HelloWorld`.  
@@ -110,7 +111,7 @@ No entanto, é possível passar os metadados `Version` como um atributo, como na
     </CSFile>  
 </ItemGroup>  
 ```  
-O exemplo de código a seguir mostra como usar o atributo `Update` para modificar os metadados em um arquivo chamado somefile.cs que foi incluído por meio de um glob. (Disponível somente para projetos do .NET Core no Visual Studio 2017 ou posterior.)
+O exemplo de código a seguir mostra como usar o atributo `Update` para modificar os metadados em um arquivo chamado *somefile.cs* incluído por meio de um glob. (Disponível somente para projetos do .NET Core no Visual Studio 2017 ou posterior.)
 
 ```xml  
 <ItemGroup>
@@ -124,4 +125,4 @@ O exemplo de código a seguir mostra como usar o atributo `Update` para modifica
 ## <a name="see-also"></a>Consulte também  
  [Itens](../msbuild/msbuild-items.md)   
  [Propriedades do MSBuild](../msbuild/msbuild-properties.md)   
- [Referência do esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)
+ [Referência de esquema de arquivos de projeto](../msbuild/msbuild-project-file-schema-reference.md)

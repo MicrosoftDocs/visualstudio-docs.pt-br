@@ -18,15 +18,16 @@ f1_keywords:
 - VC.Project.VCNMakeTool.ForcedIncludes
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 9f38994aa67722e96709f604164818f0bc15ebd6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cace2ed08c82c274649c7554bfe8127ef9c6d152
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39252168"
 ---
-# <a name="nmake-properties-android-c"></a>Propriedades de NMake (Android C++)
+# <a name="nmake-properties-android-c"></a>Propriedades do NMake (Android C++)
 
-propriedade | Descrição
+Propriedade | Descrição
 --- | ---
 Linha de comando de build | Especifica a linha de comando a ser executada para o comando ‘Build’.
 Linha de comando de Rebuild All | Especifica a linha de comando a ser executada para o comando ‘Rebuild All’.

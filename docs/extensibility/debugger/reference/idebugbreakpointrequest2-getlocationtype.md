@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: faa536c269e8c0ebd2772617ab9bd0e3412f35b2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 70189d61752643d78c545a5d33106a4638961c1b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936232"
 ---
 # <a name="idebugbreakpointrequest2getlocationtype"></a>IDebugBreakpointRequest2::GetLocationType
 Obtém o tipo de local de ponto de interrupção dessa solicitação de ponto de interrupção.  
@@ -43,7 +44,7 @@ int GetLocationType(
  [out] Retorna um valor da [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) enumeração que descreve o local dessa solicitação de ponto de interrupção.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Retorna `E_FAIL` se o `bpLocation` campo associado [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) estrutura não é válida.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Retorna `E_FAIL` se o `bpLocation` campo associado [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) estrutura não é válida.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como implementar esse método para um simples `CDebugBreakpointRequest` objeto que expõe o[IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) interface.  

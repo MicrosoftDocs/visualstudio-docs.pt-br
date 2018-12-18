@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a771345d9c3cf0cbfb7324e82eb9519069499eb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 05cd4729635042d67f063bbba412c19a4a2f89f7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818335"
 ---
 # <a name="idebugcanstopevent2getcodecontext"></a>IDebugCanStopEvent2::GetCodeContext
 Obtém o contexto de código que descreve o local desse evento.  
@@ -43,12 +44,12 @@ int GetCodeContext(
  [out] Retorna o [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objeto que representa o local atual do código.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Para a maioria das arquiteturas de tempo de execução, um contexto de código pode ser pensado como um endereço no fluxo de execução do programa, apontando para uma instrução específica.  
+ Para a maioria das arquiteturas de tempo de execução, um contexto de código pode ser pensado como um endereço no fluxo de execução de um programa, que aponta para uma instrução específica.  
   
- Para obter o contexto do documento, que é orientado para linhas do código-fonte, chame o [GetDocumentContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getdocumentcontext.md) método.  
+ Para obter o contexto de documento, que é orientado para linhas de código-fonte, chame o [GetDocumentContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getdocumentcontext.md) método.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)   

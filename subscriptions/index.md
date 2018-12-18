@@ -1,25 +1,28 @@
 ---
 title: Assinaturas do Visual Studio
 Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
+Ms.author: tglee
+Manager: lank
 layout: LandingPage
-Ms.date: 02/26/2018
+Ms.date: 06/25/2018
 Ms.topic: landing-page
 Description: Welcome to Visual Studio Subscriptions
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: a2d1d0bc8f443953477a4178780621d16fd7aa39
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 083522aae47abdfdec37d5add756457f18590953
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49856817"
 ---
 # <a name="visual-studio-subscriptions"></a>Assinaturas do Visual Studio
+
 As assinaturas do Visual Studio são um conjunto abrangente de recursos para criar, implantar e gerenciar grandes aplicativos em suas plataformas e dispositivos preferidos, incluindo Windows, iOS, Android e Linux.  Os benefícios das assinaturas são: acesso a ferramentas para desenvolvedores, serviços de nuvem e software, treinamento e suporte para necessidades de desenvolvimento e teste.
 
-##  <a name="get-started"></a>Introdução
+## <a name="get-started"></a>Introdução
+
 Os administradores entram em [https://manage.visualstudio.com](https://manage.visualstudio.com) para atribuir assinaturas às suas equipes.<br>
 Os assinantes entram em [https://my.visualstudio.com](https://my.visualstudio.com) para acessar os benefícios da assinatura.
 
@@ -61,7 +64,7 @@ Os assinantes entram em [https://my.visualstudio.com](https://my.visualstudio.co
         </a>
     </li>
     <li>
-        <a href="/vsts/">
+        <a href="/azure/devops/">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -71,7 +74,7 @@ Os assinantes entram em [https://my.visualstudio.com](https://my.visualstudio.co
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Visual Studio Team Services</h3>
+                        <h3>Azure DevOps Services</h3>
                     </div>
                 </div>
             </div>
@@ -131,8 +134,14 @@ Os assinantes entram em [https://my.visualstudio.com](https://my.visualstudio.co
             </div>
         </div>
         </a>
-    </li>   
+    </li>
 </ul>
+
+---
+
+## <a name="whats-new"></a>O que há de novo
+
+Para tornar sua assinatura ainda mais útil, podemos adicionar e atualizar os benefícios de assinatura com frequência. Para saber mais, veja a página [Novidades em assinaturas](whats-new-in-subscriptions.md).
 
 ---
 
@@ -148,9 +157,8 @@ Os assinantes entram em [https://my.visualstudio.com](https://my.visualstudio.co
                         <ul>
                             <li><a href="/visualstudio/subscriptions/vs-ide-benefit">Visual Studio</a></li>
                             <li>Visual Studio para Mac</li>
-                            <li><a href="/visualstudio/subscriptions/vs-vsts">Visual Studio Team Services</a></li>
                             <li>Team Foundation Server e CAL do TFS</li>
-                        </ul>                        
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -165,12 +173,12 @@ Os assinantes entram em [https://my.visualstudio.com](https://my.visualstudio.co
                         <p>Com a assinatura do Visual Studio, você recebe créditos Azure todo mês e pode acessar gratuitamente os serviços do Azure, além de taxas de desenvolvimento e teste com desconto e acesso exclusivo a uma galeria de imagens disponível apenas para assinantes com máquinas virtuais pré-configuradas. De acordo com a sua assinatura, os serviços de nuvem podem incluir:</p>
                         <ul>
                             <li><a href="/visualstudio/subscriptions/vs-azure">Azure</a></li>
-                            <li><a href="/visualstudio/subscriptions/vs-vsts">Visual Studio Team Services</a></li>
                             <li><a href="/visualstudio/subscriptions/vs-visual-studio-app-center">Visual Studio App Center</a></li>
+                            <li><a href="/visualstudio/subscriptions/vs-vsts">Azure DevOps Services</a></li>
                             <li><a href="/visualstudio/subscriptions/vs-office-dev">Assinatura de Desenvolvedor do Office 365</a></li>
                             <li><a href="/visualstudio/subscriptions/vs-pbi">Conta de Desenvolvedor do Windows</a></li>
                             <li>Power BI Pro</li>
-                        </ul>                        
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -192,7 +200,7 @@ Os assinantes entram em [https://my.visualstudio.com](https://my.visualstudio.co
                             <li><a href="/visualstudio/subscriptions/vs-tech-support">Incidentes de Suporte Técnico Profissional da Microsoft</a></li>
                             <li><a href="/visualstudio/subscriptions/vs-azure-advisory-chat">Chat de Consultoria do Azure</a></li>
                             <li><a href="/visualstudio/subscriptions/vs-azure-community">Comunidade do Azure</a></li>
-                        </ul>                        
+                        </ul>
                     </div>
                 </div>
             </div>

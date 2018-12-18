@@ -19,25 +19,26 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a8c79669da0e20bc7376d68c4ea782d280eb6df3
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 37298dcbb2443755136c4c57eb4633fcb3197a87
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849509"
 ---
 # <a name="error-unable-to-automatically-step-into-the-server"></a>Erro: não é possível intervir automaticamente no servidor
 O erro é:  
   
  Não é possível realizar a depuração completa do servidor automaticamente. O depurador não foi notificado antes do procedimento remoto ter sido executado  
   
- Esse erro pode ocorrer quando você está tentando entrar em um serviço da web (consulte [depuração em um serviço XML Web](http://msdn.microsoft.com/en-us/8e67de38-bf5f-41cc-a457-1b88ce63d764)). Pode ocorrer sempre que o [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] não estiver configurado corretamente.  
+ Esse erro pode ocorrer quando você está tentando entrar em um serviço web (consulte [passo a passo em um serviço Web XML](https://msdn.microsoft.com/library/8e67de38-bf5f-41cc-a457-1b88ce63d764)). Pode ocorrer sempre que o [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] não estiver configurado corretamente.  
   
  Possíveis causas:  
   
--   O arquivo Web. config para seu [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplicativo não definiu a depuração como "true" no (consulte [modo de depuração em aplicativos ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)).  
+- O arquivo Web. config para seu [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplicativo não definiu a depuração como "true" (consulte [modo de depuração em aplicativos ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)).  
   
--   Uma versão de [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] foi instalado após instalação do Visual Studio. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] deve ser instalado antes do Visual Studio. Para corrigir esse problema, use o Windows **painel de controle > Programas e recursos** para reparar a instalação do Visual Studio.  
+- Uma versão do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] foi instalado depois que o Visual Studio foi instalado. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] deve ser instalado antes do Visual Studio. Para corrigir esse problema, use o Windows **painel de controle > Programas e recursos** para reparar a instalação do Visual Studio.  
   
 ## <a name="see-also"></a>Consulte também  
- [Erros de depuração remota e solução de problemas](../debugger/remote-debugging-errors-and-troubleshooting.md)   
+ [Solução de problemas e erros de depuração remota](../debugger/remote-debugging-errors-and-troubleshooting.md)   
  [Depuração remota](../debugger/remote-debugging.md)

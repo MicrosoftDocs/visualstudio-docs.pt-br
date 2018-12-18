@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d8848fd5628fbbb7e0e642de2389d6b98375fa6f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e9a70ca947a6b794f74baec9805941c5a9610936
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825686"
 ---
 # <a name="ieevisualizerdataprovidercansetobjectforvisualizer"></a>IEEVisualizerDataProvider::CanSetObjectForVisualizer
-Este método determina se o visualizador pode ter o objeto de dados representa atualizado.  
+Este método determina se o visualizador pode ter o objeto de dados que ele representa atualizado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,13 +41,13 @@ int CanSetObjectForVisualizer(
   
 #### <a name="parameters"></a>Parâmetros  
  `b`  
- [out] Diferente de zero (`TRUE`) se o objeto sobre o visualizador pode ser atualizado, zero (`FALSE`) se ele não é possível.  
+ [out] Diferente de zero (`TRUE`) se o objeto sobre o visualizador pode ser atualizado, zero (`FALSE`) se não for possível.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Um objeto pode não ser mutável se ele é associado à memória somente leitura, por exemplo.  
+ Um objeto pode não ser mutável se eles estiverem associados a memória somente leitura, por exemplo.  
   
 ## <a name="see-also"></a>Consulte também  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)

@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 329661e857859a1f6452506ba2984ac962bf4ff2
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: fcf5e120e769b69c064306432c3026194eb0d851
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853913"
 ---
 # <a name="stackframetypeenum"></a>StackFrameTypeEnum
 Especifica o tipo de quadro de pilha.  
@@ -53,10 +54,10 @@ enum StackFrameTypeEnum {
  Ponteiro de quadro especificado; Informações de dados de quadro disponíveis.  
   
  `FrameTypeUnknown`  
- Quadros que não tem nenhuma informação de depuração.  
+ Quadro que não tem nenhuma informação de depuração.  
   
 ## <a name="remarks"></a>Comentários  
- Os valores nesta enumeração são retornados por uma chamada para o [Idiastackframe](../../debugger/debug-interface-access/idiastackframe-get-type.md) método.  
+ Os valores nesta enumeração são retornados por uma chamada para o [idiastackframe:: Get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: cvconst.h  

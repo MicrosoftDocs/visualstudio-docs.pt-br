@@ -18,17 +18,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 85d45bb5494f3cf3a4bd06103e05fb17d6f1d00b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 54562e26e0da5568ba74d40425cf377260d41000
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37945114"
 ---
 # <a name="findinlist-task"></a>Tarefa FindInList
 Em uma lista especificada, localiza um item com o itemspec correspondente.  
   
 ## <a name="parameters"></a>Parâmetros  
- A tabela a seguir descreve os parâmetros da [Tarefa FindInList](../msbuild/findinlist-task.md).  
+ A tabela a seguir descreve os parâmetros da [tarefa FindInList](../msbuild/findinlist-task.md).  
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
@@ -40,7 +41,7 @@ Em uma lista especificada, localiza um item com o itemspec correspondente.
 |`MatchFileNameOnly`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, corresponde apenas com a parte do nome do arquivo do itemspec; caso contrário, corresponde com o itemspec inteiro. O valor padrão é `true`.|  
   
 ## <a name="remarks"></a>Comentários  
- Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, confira [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas](../msbuild/msbuild-tasks.md)   

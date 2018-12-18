@@ -18,27 +18,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c53dcbec5d41b6aa93eef115bba966076fcfda2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fbacad455f6663eae13aea42d0424091a0e3ec6a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920919"
 ---
 # <a name="how-to-attach-and-detach-performance-tools-to-running-processes"></a>Como anexar e desanexar ferramentas de desempenho de processos em execução
 O criador de perfil pode ser usado para anexar ou desanexar de um processo em execução para facilitar a amostragem e a coleta de dados de desempenho. É possível usar esse método para criar o perfil de um processo quando você deseja evitar a coleta de dados sobre o tempo de carregamento do aplicativo ou para monitorar o desempenho de um processo após ele atingir um estado específico.  
   
 > [!NOTE]
->  As etapas a seguir se aplicam aos processos de anexar e desanexar de dentro do IDE (ambiente de desenvolvimento integrado) do [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]. Para obter informações sobre como usar ferramentas de linha de comando, consulte [Criação de perfil da linha de comando](../profiling/using-the-profiling-tools-from-the-command-line.md). Para obter informações sobre como criar o perfil de serviços, consulte [Criando o perfil de serviços](../profiling/command-line-profiling-of-services.md).  
+>  As etapas a seguir se aplicam aos processos de anexar e desanexar de dentro do IDE (ambiente de desenvolvimento integrado) do [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]. Para obter informações de como usar as ferramentas de linha de comando, confira [Perfil na linha de comando](../profiling/using-the-profiling-tools-from-the-command-line.md). Para obter informações de como criar perfil de serviços, confira [Criar perfil de serviços](../profiling/command-line-profiling-of-services.md).  
   
  Os processos que estão disponíveis para criação de perfil dependem das Permissões de acesso do usuário definidas por um administrador do computador. Uma conta de usuário pode, por exemplo, ter permissão para qualquer um dos seguintes:  
   
--   Recursos avançados de criação de perfil, quando o administrador tiver configurado o início do driver e do serviço.  
+- Recursos avançados de criação de perfil, quando o administrador tiver configurado o início do driver e do serviço.  
   
--   Criação de perfil de amostra apenas (usuários de domínio).  
+- Criação de perfil de amostra apenas (usuários de domínio).  
   
--   Acesso negado à criação de perfil para todos.  
+- Acesso negado à criação de perfil para todos.  
   
- Para obter mais informações, consulte [Criação de perfil e segurança do Windows Vista](../profiling/profiling-and-windows-vista-security.md) e as opções de administração em [VSPerfCmd](../profiling/vsperfcmd.md).  
+  Para obter mais informações, confira [Criação de perfil e segurança do Windows Vista](../profiling/profiling-and-windows-vista-security.md) e as opções de administração em [VSPerfCmd](../profiling/vsperfcmd.md).  
   
 ### <a name="to-attach-to-a-running-process"></a>Para anexar a um processo em execução  
   
@@ -61,8 +62,8 @@ O criador de perfil pode ser usado para anexar ou desanexar de um processo em ex
 3.  Clique em **Desanexar**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Controlling Data Collection](../profiling/controlling-data-collection.md)  (Controlando a coleta de dados)  
+ [Coleta de dados de controle](../profiling/controlling-data-collection.md)   
  [Visão geral da sessão de desempenho](../profiling/performance-session-overview.md)   
- [Como iniciar e encerrar a coleta de dados de desempenho](../profiling/how-to-start-and-end-performance-data-collection.md)   
+ [Como iniciar e terminar a coleta de dados de desempenho](../profiling/how-to-start-and-end-performance-data-collection.md)   
  [Criação de perfil e segurança do Windows Vista](../profiling/profiling-and-windows-vista-security.md)   
  [VSPerfCmd](../profiling/vsperfcmd.md)

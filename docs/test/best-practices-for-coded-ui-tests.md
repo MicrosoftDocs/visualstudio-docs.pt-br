@@ -1,6 +1,7 @@
 ---
-title: Melhores práticas para testes de IU codificados no Visual Studio | Microsoft Docs
+title: Práticas recomendadas para testes de IU codificados
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,15 +11,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 916432986ef18331a16a797eab77b468d7ed7ef8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ed2ab3ff15e94bf0e014b99b6451840e6f26a04e
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896010"
 ---
 # <a name="best-practices-for-coded-ui-tests"></a>Práticas recomendadas para testes de IU codificados
 
 Este tópico descreve algumas recomendações para desenvolver testes de IU codificados.
+
+[!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
 ## <a name="best-practices"></a>Práticas recomendadas
 
@@ -26,9 +30,9 @@ Use as orientações a seguir para criar um teste de IU codificado flexível.
 
 -   Use o **Construtor de Teste de IU Codificado** sempre que possível.
 
--   Não modifique o arquivo `UIMap.designer.cs` diretamente. Se você modificar o arquivo, as alterações serão substituídas.
+-   Não modifique o arquivo *UIMap.Designer.cs* diretamente. Se você modificar o arquivo, as alterações serão substituídas.
 
--   Crie o teste como uma sequência de métodos registrados. Para saber mais sobre como registrar um método, consulte [Criando Testes de IU Codificados](../test/use-ui-automation-to-test-your-code.md).
+-   Crie o teste como uma sequência de métodos registrados. Para obter mais informações de como registrar um método, confira [Criando testes de IU codificados](../test/use-ui-automation-to-test-your-code.md).
 
 -   Cada método registrado deve agir em uma única página, formulário ou caixa de diálogo. Crie um novo método de teste para cada nova página, formulário ou caixa de diálogo.
 
@@ -36,21 +40,21 @@ Use as orientações a seguir para criar um teste de IU codificado flexível.
 
 -   Quando possível, limite cada método registrado a menos de 10 ações. Essa abordagem modular torna mais fácil substituir um método se a interface do usuário for alterada.
 
--   Crie cada asserção usando o **Construtor de Teste de IU Codificado**, que adiciona automaticamente um método de asserção ao arquivo `UIMap.Designer.cs`.
+-   Crie cada asserção usando o **Construtor de teste de IU codificado**, que adiciona automaticamente um método de asserção ao arquivo *UIMap.Designer.cs*.
 
 -   Se a interface do usuário (IU) for alterada, registre novamente os métodos de teste, os métodos de asserção ou as seções afetadas de um método de teste existente.
 
--   Crie um arquivo <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> separado para cada módulo em seu aplicativo em teste. Para obter mais informações, consulte [Testar um Aplicativo Grande com Vários Mapas de Interface do Usuário](../test/testing-a-large-application-with-multiple-ui-maps.md).
+-   Crie um arquivo <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> separado para cada módulo em seu aplicativo em teste. Para obter mais informações, confira [Testando um aplicativo grande com vários mapas de interface do usuário](../test/testing-a-large-application-with-multiple-ui-maps.md).
 
 -   No aplicativo em teste, use nomes significativos ao criar os controles de interface do usuário. Usar nomes significativos confere mais clareza e usabilidade aos nomes de controle gerados automaticamente.
 
--   Caso esteja criando asserções por meio de codificação com a API, crie um método para cada asserção na parte da classe <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> que está no arquivo `UIMap.cs`. Para executar a asserção, chame esse método de seu método de teste.
+-   Se você estiver criando asserções por meio de codificação com a API, crie um método para cada asserção na parte da classe <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> que está no arquivo *UIMap.cs*. Para executar a asserção, chame esse método de seu método de teste.
 
--   Se estiver codificando diretamente com a API, use as propriedades e métodos nas classes geradas no arquivo `UIMap.Designer.cs` do código o tanto quanto for possível. Essas classes tornarão o trabalho mais fácil e confiável e aumentarão a produtividade.
+-   Se estiver codificando diretamente com a API, use as propriedades e os métodos nas classes geradas no arquivo *UIMap.Designer.cs* do código o tanto quanto for possível. Essas classes tornarão o trabalho mais fácil e confiável e aumentarão a produtividade.
 
 Os testes de IU codificados se adaptam automaticamente a várias alterações na interface do usuário. Se, por exemplo, a posição ou cor de um elemento da interface do usuário forem alteradas, na maioria das vezes, o teste de IU codificado ainda encontrará o elemento correto.
 
-Durante uma execução de teste, os controles de interface do usuário são localizados pela estrutura de teste usando um conjunto de propriedades de pesquisa. As propriedades de pesquisa são aplicadas a cada classe de controle nas definições criadas pelo **Construtor de Teste de IU Codificado** no arquivo `UIMap.Designer.cs`. As propriedades de pesquisa contêm pares nome-valor de nomes e valores da propriedade que podem ser usados para identificar o controle, como as propriedades <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A>, <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A> e <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> do controle. Se as propriedades de pesquisa não forem alteradas, o teste de IU codificado encontrará o controle na interface do usuário com êxito. Se as propriedades de pesquisa forem alteradas, os teste de IU codificados terão um algoritmo de correspondência inteligente que aplica heurística para encontrar controles e janelas na interface do usuário. Quando a interface do usuário é alterada, pode ser possível modificar as propriedades de pesquisa dos elementos identificados anteriormente para garantir que eles sejam encontrados.
+Durante uma execução de teste, os controles de interface do usuário são localizados pela estrutura de teste usando um conjunto de propriedades de pesquisa. As propriedades de pesquisa são aplicadas a cada classe de controle nas definições criadas pelo **Construtor de Teste de IU Codificado** no arquivo *UIMap.Designer.cs*. As propriedades de pesquisa contêm pares nome-valor de nomes e valores da propriedade que podem ser usados para identificar o controle, como as propriedades <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A>, <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A> e <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> do controle. Se as propriedades de pesquisa não forem alteradas, o teste de IU codificado encontrará o controle na interface do usuário com êxito. Se as propriedades de pesquisa forem alteradas, os teste de IU codificados terão um algoritmo de correspondência inteligente que aplica heurística para encontrar controles e janelas na interface do usuário. Quando a interface do usuário é alterada, pode ser possível modificar as propriedades de pesquisa dos elementos identificados anteriormente para garantir que eles sejam encontrados.
 
 ## <a name="if-your-user-interface-changes"></a>Se a interface do usuário for alterada
 
@@ -66,7 +70,7 @@ Interfaces do usuário mudam frequentemente durante o desenvolvimento. Aqui est�
 
     -   Adicione uma nova asserção arrastando o botão de fios para o controle de interface do usuário, abra o mapa da interface do usuário e adicione a nova asserção.
 
-Para saber mais sobre como registrar testes de IU codificados, consulte [Usar a Automação de Interface do Usuário para Testar o Código](../test/use-ui-automation-to-test-your-code.md).
+Para obter mais informações de como gravar testes de IU codificados, confira [Usar a automação da interface do usuário para testar seu código](../test/use-ui-automation-to-test-your-code.md).
 
 ## <a name="if-a-background-process-needs-to-complete-before-the-test-can-continue"></a>Se um processo de segundo plano precisar ser concluído antes de continuar o teste
 
@@ -87,7 +91,7 @@ Playback.PlaybackSettings.WaitForReadyLevel = WaitForReadyLevel.UIThreadOnly;
 
 - <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>
 - <xref:Microsoft.VisualStudio.TestTools.UITesting>
-- [Usar automação de interface do usuário para testar código](../test/use-ui-automation-to-test-your-code.md)
+- [Usar a automação de interface do usuário para testar seu código](../test/use-ui-automation-to-test-your-code.md)
 - [Criando testes de IU codificados](../test/use-ui-automation-to-test-your-code.md)
 - [Testando um aplicativo grande com vários mapas de interface do usuário](../test/testing-a-large-application-with-multiple-ui-maps.md)
-- [Configurações e plataformas com suporte para testes de IU codificados e gravações das ações](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Configurações e plataformas compatíveis para testes de IU codificados e gravações de ação](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

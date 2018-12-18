@@ -18,18 +18,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ab58cb90f9486c3a233d5173db340be3ee5f034
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c9d72eafb03f22a01d22894bb887085648c324e3
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080627"
 ---
 # <a name="ltassemblygt-element-clickonce-deployment"></a>&lt;assembly&gt; elemento (implantação do ClickOnce)
 O elemento de nível superior para o manifesto de implantação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
   
       <assembly    
    manifestVersion  
@@ -37,7 +38,7 @@ O elemento de nível superior para o manifesto de implantação.
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementos e atributos  
- O `assembly` elemento é o elemento raiz e é necessário. O primeiro elemento independente deve ser um `assemblyIdentity` elemento. Os manifestos elementos devem estar nos seguintes namespaces: `urn:schemas-microsoft-com:asm.v1`, `urn:schemas-microsoft-com:asm.v2`, e `http://www.w3.org/2000/09/xmldsig#`. Elementos filho do assembly devem ser também nesses namespaces, por herança ou marcação.  
+ O `assembly` elemento é o elemento raiz e é necessário. O primeiro elemento independente deve ser um `assemblyIdentity` elemento. Os elementos do manifesto devem estar nos seguintes namespaces: `urn:schemas-microsoft-com:asm.v1`, `urn:schemas-microsoft-com:asm.v2`, e `http://www.w3.org/2000/09/xmldsig#`. Elementos filho do assembly também devem ser nesses namespaces, por herança ou marcação.  
   
  O `assembly` elemento tem o seguinte atributo.  
   
@@ -48,7 +49,7 @@ O elemento de nível superior para o manifesto de implantação.
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir ilustra uma `assembly` elemento em um manifesto de implantação para um aplicativo implantado usando [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]. Este exemplo de código é parte de um exemplo maior fornecido para o [manifesto de implantação do ClickOnce](../deployment/clickonce-deployment-manifest.md) tópico.  
   
-```  
+```xml  
 <asmv1:assembly   
   xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd"  
   manifestVersion="1.0"  

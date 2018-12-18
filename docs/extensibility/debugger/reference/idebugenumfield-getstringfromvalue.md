@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a0b7ac4f7cde93d4637906202f7b4c643750d8e0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e9c1bd0887c8d154501a87ea9a2227e079bbb083
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872753"
 ---
 # <a name="idebugenumfieldgetstringfromvalue"></a>IDebugEnumField::GetStringFromValue
 Esse método obtém o nome da constante de enumeração recebe seu valor.  
@@ -48,10 +49,10 @@ int GetStringFromValue(
  [out] Retorna o nome da constante de enumeração.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` se o valor sem nome associado ou retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` se o valor não tem nenhum nome associado ou retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Se houver mais de um nome de associado com o mesmo valor, o nome definido na enumeração será retornado.  
+ Se houver mais de um nome associado com o mesmo valor, o nome definido na enumeração será retornado.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)

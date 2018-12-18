@@ -1,5 +1,5 @@
 ---
-title: 'Como: excluir programaticamente contatos do Outlook | Microsoft Docs'
+title: 'Como: excluir contatos do Outlook de forma programática'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,14 +16,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8ec65235da186081cd614a0c725d489cba445676
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1ada08de2259554c8371170214a1e00c2d928774
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257164"
 ---
-# <a name="how-to-programmatically-delete-outlook-contacts"></a>Como excluir contatos do Outlook programaticamente
-  Este exemplo exclui um contato. O exemplo presume que existe um contato denominado "Armando Pinto" no **contatos** pasta.  
+# <a name="how-to-programmatically-delete-outlook-contacts"></a>Como: excluir contatos do Outlook de forma programática
+  Este exemplo exclui um contato. O exemplo supõe a existência de um contato denominado "Armando fixar em" na **contatos** pasta.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
@@ -32,8 +33,8 @@ ms.lasthandoff: 04/16/2018
  [!code-csharp[Trin_Outlook_RL_DeleteContacts#1](../vsto/codesnippet/CSharp/Trin_Outlook_RL_DeleteContacts/thisaddin.cs#1)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhando com itens de contato](../vsto/working-with-contact-items.md)   
- [Como: procurar um contato específico programaticamente](../vsto/how-to-programmatically-search-for-a-specific-contact.md)   
- [Como acessar contatos do Outlook de forma programática](../vsto/how-to-programmatically-access-outlook-contacts.md)  
+ [Trabalhar com itens de contato](../vsto/working-with-contact-items.md)   
+ [Como: pesquisar um contato específico de forma programática](../vsto/how-to-programmatically-search-for-a-specific-contact.md)   
+ [Como: acessar contatos do Outlook de forma programática](../vsto/how-to-programmatically-access-outlook-contacts.md)  
   
   

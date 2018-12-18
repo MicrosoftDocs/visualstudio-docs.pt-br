@@ -1,6 +1,7 @@
 ---
 title: Nós do Designer de Sombreador
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: f5192fbd-c78f-40a8-a4d4-443209610268
@@ -9,17 +10,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f7d4bb2633571a552c13bda0795d05447f9e340c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 827da75bb9faadf7506002780273979f628f20cb
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078567"
 ---
 # <a name="shader-designer-nodes"></a>Nós do Designer de Sombreador
 Os artigos nesta seção da documentação contêm informações sobre os vários nós do Designer de Sombreador que você pode usar para criar efeitos gráficos.
 
 ## <a name="nodes-and-node-types"></a>Nós e tipos de nó
- O Designer de Sombreador representa os efeitos visuais, como um grafo. Esses grafos são criados de nós que são especificamente escolhidos e conectados de modo a obter o efeito desejado. Cada nó representa uma parte das informações ou de uma função matemática e as conexões entre eles representam como as informações fluem através do grafo para produzir o resultado. O Designer de Sombreador fornece seis tipos de nós diferentes — filtros, nós de textura, parâmetros, constantes, nós de utilitário e nós de matemática — e vários nós individuais pertencem a cada tipo. Esses nós e tipos de nó são descritos em outros artigos nesta seção. Consulte os links no final deste documento.
+ O Designer de Sombreador representa os efeitos visuais, como um grafo. Esses grafos são criados com base em nós especificamente escolhidos e conectados de formas precisas, a fim de obter o efeito desejado. Cada nó representa uma parte das informações ou de uma função matemática e as conexões entre eles representam como as informações fluem através do grafo para produzir o resultado. O Designer de Sombreador fornece seis tipos de nós diferentes — filtros, nós de textura, parâmetros, constantes, nós de utilitário e nós de matemática — e vários nós individuais pertencem a cada tipo. Esses nós e os tipos de nó são descritos nos outros artigos desta seção. Para obter mais informações, confira os links ao final deste documento.
 
 ## <a name="node-structure"></a>Estrutura de nó
  Todos os nós são compostos de uma combinação de elementos comuns. Cada nó tem pelo menos um terminal de saída no seu lado direito (exceto o nó de cor final, que representa a saída do sombreador). Nós que representam cálculos ou amostras de textura têm terminais de entrada do lado esquerdo, mas nós que representam informações não têm terminais de entrada. Terminais de saída estão conectados a terminais de entrada para mover informações de um nó para outro.

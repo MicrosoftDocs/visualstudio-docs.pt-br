@@ -1,30 +1,30 @@
 ---
-title: "Desenvolver código no Visual Studio sem projetos nem soluções | Microsoft Docs"
+title: Desenvolver código no Visual Studio sem projetos nem soluções
 ms.date: 02/21/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - open folder [Visual Studio]
 - anycode [Visual Studio]
 - projects and solutions, develop code without
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 08c50a07992a1856ad0d5f45c0200e0b8a232cb7
-ms.sourcegitcommit: 3abca1c733af876c8146daa43a62e829833be280
+ms.openlocfilehash: 7ba1ad9158431a157bdba588b88f366eac45889a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812069"
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>Desenvolver código no Visual Studio sem projetos nem soluções
 
 No Visual Studio 2017, é possível abrir códigos de quase todos os tipos de projeto baseado em diretório no Visual Studio sem a necessidade de um arquivo de solução ou de projeto. Isso significa que você pode, por exemplo, clonar um repositório no GitHub, abri-lo diretamente no Visual Studio e começar o desenvolvimento sem precisar criar uma solução ou um projeto. Se for necessário, você pode especificar as tarefas de compilação personalizadas e iniciar os parâmetros por meio de arquivos JSON simples.
 
-Depois de abrir os arquivos do código no Visual Studio, o Gerenciador de Soluções exibe todos os arquivos na pasta. Você pode clicar em qualquer arquivo para começar a editá-lo. Em segundo plano, o Visual Studio inicia a indexação dos arquivos para habilitar os recursos de IntelliSense, navegação e refatoração. À medida que você edita, cria, move ou exclui arquivos, o Visual Studio rastreia as alterações automaticamente e atualiza continuamente seu índice do IntelliSense. O código será exibido com a colorização de sintaxe e, em muitos casos, incluirá o preenchimento instrução básico do IntelliSense.
+Após você abrir os arquivos do código no Visual Studio, o **Gerenciador de Soluções** exibirá todos os arquivos na pasta. Você pode clicar em qualquer arquivo para começar a editá-lo. Em segundo plano, o Visual Studio inicia a indexação dos arquivos para habilitar os recursos de IntelliSense, navegação e refatoração. À medida que você edita, cria, move ou exclui arquivos, o Visual Studio rastreia as alterações automaticamente e atualiza continuamente seu índice do IntelliSense. O código será exibido com a colorização de sintaxe e, em muitos casos, incluirá o preenchimento instrução básico do IntelliSense.
 
 ## <a name="open-any-code"></a>Abra qualquer código
 
@@ -32,7 +32,7 @@ Você pode abrir o código no Visual Studio usando uma destas maneiras:
 
 - Na barra de menus do Visual Studio, escolha **Arquivo** > **Abrir** > **Pasta** e, em seguida, navegue até o local do código.
 - No menu de contexto (acesso por clique com o botão direito do mouse) de uma pasta que contém o código, escolha o comando **Abrir no Visual Studio**.
-- Escolha o link **Abrir Pasta** na Página Inicial do Visual Studio.
+- Escolha o link **Abrir Pasta** na **Página Inicial** do Visual Studio.
 - Se você for usuário de teclado, pressione **Ctrl**+**Shift**+**Alt**+**O** no Visual Studio.
 - Abra o código de um repositório GitHub clonado.
 
@@ -46,7 +46,7 @@ O exemplo a seguir mostra como clonar um repositório GitHub e, em seguida, abri
 
    ![Botão de clone do GitHub](./media/VSIDE_Code_Clone.png)
 
-1. No Visual Studio, escolha a guia **Team Explorer** para abrir o Team Explorer. Se você não vir a guia, abra-a em **Exibir** > **Team Explorer**.
+1. No Visual Studio, escolha a guia **Team Explorer** para abrir o **Team Explorer**. Se você não vir a guia, abra-a em **Exibir** > **Team Explorer**.
 
 1. No Team Explorer, na seção **Repositórios Git Locais**, escolha o comando **Clonar** e, em seguida, cole a URL da página do GitHub na caixa de texto.
 
@@ -54,19 +54,19 @@ O exemplo a seguir mostra como clonar um repositório GitHub e, em seguida, abri
 
 1. Escolha o botão **Clonar** para clonar os arquivos do projeto para um repositório Git local. Dependendo do tamanho do repositório, esse processo poderá levar vários minutos.
 
-1. Depois que o repositório for clonado para o sistema, no Team Explorer, escolha o comando **Abrir** no menu de contexto (acesso com clique com o botão direito do mouse) do repositório recém-clonado.
+1. Depois que o repositório for clonado para o sistema, no **Team Explorer**, escolha o comando **Abrir** no menu de contexto (acesso com clique com o botão direito do mouse) do repositório recém-clonado.
 
    ![Repositório clonado](./media/VSIDE_Code_Clone3.png)
 
-1. Escolha o comando **Mostrar Exibição de Pasta** para exibir os arquivos no Gerenciador de Soluções
+1. Escolha o comando **Mostrar Modo de Exibição da Pasta** para exibir os arquivos no **Gerenciador de Soluções**.
 
    ![Mostrar exibição de pasta](./media/VSIDE_Code_Clone3_show.png)
 
    Agora é possível procurar pastas e arquivos no repositório clonado, além de exibir e pesquisar o código no editor de códigos do Visual Studio, completo com colorização de sintaxe e outros recursos.
 
-|         |         |
+| | |
 |---------|---------|
-|  ![ícone de câmera para vídeo](../install/media/video-icon.png "Assistir a um vídeo")|    [Assista a um vídeo](https://mva.microsoft.com/en-us/training-courses/getting-started-with-visual-studio-2017-17798?l=lp3TOKD6D_6711787171) sobre como clonar e abrir o código de um repositório do GitHub no Visual Studio. |
+| ![ícone de câmera para vídeo](../install/media/video-icon.png)| [Assista a um vídeo](https://mva.microsoft.com/en-us/training-courses/getting-started-with-visual-studio-2017-17798?l=lp3TOKD6D_6711787171) sobre como clonar e abrir o código de um repositório do GitHub no Visual Studio. |
 
 ## <a name="run-and-debug-your-code"></a>Executar e depurar seu código
 
@@ -89,7 +89,7 @@ Se a base de código usar ferramentas de compilação personalizadas, você deve
 
 Se a sua base de código contiver código Python ou JavaScript, não será necessário configurar arquivos *.json*, mas você precisa instalar a carga de trabalho correspondente. Você também precisa configurar o script de inicialização:
 
-1. Instale a carga de trabalho [Desenvolvimento em Node.js](https://www.visualstudio.com/vs/node-js/) ou [Desenvolvimento em Python](https://www.visualstudio.com/vs/python/) escolhendo **Ferramentas** > **Obter Ferramentas e Recursos...** ou fechando o Visual Studio e executando o Instalador do Visual Studio.
+1. Instale a carga de trabalho [Desenvolvimento em Node.js](https://visualstudio.microsoft.com/vs/node-js/) ou [Desenvolvimento em Python](https://visualstudio.microsoft.com/vs/python/) escolhendo **Ferramentas** > **Obter Ferramentas e Recursos** ou fechando o Visual Studio e executando o Instalador do Visual Studio.
 
    ![Cargas de trabalho de desenvolvimento do Node.js e Python](media/python_nodejs_workloads.png)
 

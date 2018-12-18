@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 762bda21f8480224347bd0c8c202c282298e07cc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7c0284dd268621fddeaa9322c9a3cc17de7a3e71
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811615"
 ---
 # <a name="sccenumchangedfiles-function"></a>Função SccEnumChangedFiles
-Dada uma lista de arquivos locais, essa função determina quais arquivos são diferentes das versões correspondentes no banco de dados de controle de código fonte.  
+Dada uma lista de arquivos locais, esta função determina quais arquivos são diferentes das versões correspondentes no banco de dados de controle de código fonte.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,24 +37,24 @@ SCCRTN SccEnumChangedFiles(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  pContext  
- [in] O ponteiro de contexto de plug-in de controle de origem.  
+ [in] O ponteiro de contexto de plug-in de controle do código-fonte.  
   
  hWnd  
  [in] Um identificador para a janela do IDE que o plug-in de controle de origem pode usar como um pai para todas as caixas de diálogo que ele oferece.  
   
  cFiles  
- [in] Número de nomes de arquivo especificados na `lpFileNames` matriz. Também especifica o tamanho do `plIsFileDifferent` matriz.  
+ [in] Número de nomes de arquivo especificados no `lpFileNames` matriz. Também especifica o tamanho do `plIsFileDifferent` matriz.  
   
  lpFileNames  
  [in] Matriz de nomes de arquivo local para verificar.  
   
  plIsFileDifferent  
- [out no] Matriz de valores que indica o status de diferença de cada arquivo (matriz deve ter pelo menos `cFiles` entradas). Diferente de zero significa que o arquivo é diferente.  
+ [no, out] Matriz de valores que indicam o status de diferença de cada arquivo (matriz deve ter pelo menos `cFiles` entradas). Diferente de zero significa que o arquivo é diferente.  
   
-## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+## <a name="return-value"></a>Valor retornado  
+ A implementação de plug-in de controle do código-fonte desta função deve retornar um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -61,4 +62,4 @@ SCCRTN SccEnumChangedFiles(
 |SCC_UNSPECIFIEDERROR|Erro genérico.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções de API do plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
+ [Funções de API de plug-in da controle de origem](../extensibility/source-control-plug-in-api-functions.md)

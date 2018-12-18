@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e2daf2b92073db6b2c9eca9b1ea482142eb3ba4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2ce4fb6b9a57db78e3dbb7f3082a87df9ffb7360
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254687"
 ---
 # <a name="performance-session-properties"></a>Propriedades da sessão de desempenho
 
@@ -37,7 +38,7 @@ Para obter mais informações, consulte:
 
 [Como escolher métodos de coleta](../profiling/how-to-choose-collection-methods.md)
 
-[Coletando a alocação de memória do .NET e os dados de tempo de vida](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)
+[Coletar a alocação de memória do .NET e os dados de tempo de vida](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)
 
  [Como definir opções do nome do arquivo de dados de desempenho](../profiling/how-to-set-performance-data-file-name-options.md)
 
@@ -45,7 +46,7 @@ Para obter mais informações, consulte:
 
 Essas configurações permitem selecionar em uma lista de binários e especificar a ordem de inicialização dos binários.
 
-Para obter mais informações, [Como especificar o início do binário](../profiling/how-to-specify-the-binary-to-start.md)
+Para obter mais informações, confira [Como especificar o binário a ser iniciado](../profiling/how-to-specify-the-binary-to-start.md)
 
 ## <a name="sampling"></a>Amostragem
 
@@ -57,14 +58,14 @@ Essas configurações permitem que você selecione o intervalo de amostragem e d
 - Contadores de Desempenho – para problemas de baixo desempenho
 - Eventos de amostragem adicionais podem ser especificados com base nos contadores de desempenho disponíveis
 
-Para obter mais informações, consulte [Como escolher os eventos de amostragem](../profiling/how-to-choose-sampling-events.md)
+Para obter mais informações, confira [Como escolher os eventos de amostragem](../profiling/how-to-choose-sampling-events.md)
 
 ## <a name="binary"></a>Binário
-Essas configurações permitem que você especifique se deseja realocar o binário instrumentado para outro local. Por exemplo, se você está criando o perfil My.DLL e optar por não realocar o binário instrumentado, uma cópia de backup de My.DLL chamada My.Orig.DLL será criada. Posteriormente, My.DLL será modificado inserindo investigações para coletar dados. Se você decidir realocar o binário instrumentado, o binário original não será renomeado e o binário instrumentado é copiado para o local especificado para uso durante a instrumentação.
+Essas configurações permitem que você especifique se deseja realocar o binário instrumentado para outro local. Por exemplo, se você estiver criando o perfil de *My.DLL* e optar por não realocar o binário instrumentado, será criada uma cópia de backup de *My.DLL* denominada *My.Orig.DLL*. Em seguida, *My.DLL* será modificado pela inserção de investigações para coletar dados. Se você decidir realocar o binário instrumentado, o binário original não será renomeado e o binário instrumentado é copiado para o local especificado para uso durante a instrumentação.
 
-Para obter mais informações, [Como especificar o início do binário](../profiling/how-to-specify-the-binary-to-start.md)
+Para obter mais informações, confira [Como especificar o binário a ser iniciado](../profiling/how-to-specify-the-binary-to-start.md)
 
-## <a name="tier-interactions"></a>Interações de Camada
+## <a name="tier-interactions"></a>Interações de camada
 
 Para obter mais informações, consulte [Coletando dados de interação entre camadas](../profiling/collecting-tier-interaction-data.md)
 
@@ -82,11 +83,11 @@ Para obter mais informações, consulte:
 
 Essas configurações permitem que você colete dados sobre contadores de desempenho da CPU quando estiver usando o método de criação de perfil de instrumentação. Contadores de desempenho portáteis estão disponíveis independentemente do design ou fabricante da CPU. Eventos de plataforma são específicos para o design e fabricante da CPU. Para obter mais informações sobre contadores de desempenho on-chip, consulte a documentação específica do processador.
 
-Para obter mais informações, consulte [Como coletar dados do contador de CPU](../profiling/how-to-collect-cpu-counter-data.md)
+Para obter mais informações, confira [Como coletar dados do contador de CPU](../profiling/how-to-collect-cpu-counter-data.md)
 
 ## <a name="windows-events"></a>Eventos do Windows
 
-Durante a criação de perfil, você pode coletar dados de provedores de rastreamento de eventos. Você pode exibir os dados usando a opção `/calltrace` da ferramenta de linha de comando VSPerfReport.exe. Para obter mais informações sobre o ETW (Rastreamento de Eventos para Windows), consulte [Sobre o rastreamento de eventos](http://go.microsoft.com/fwlink/?linkid=90752).
+Durante a criação de perfil, você pode coletar dados de provedores de rastreamento de eventos. Você pode exibir os dados usando a opção `/calltrace` da ferramenta de linha de comando *VSPerfReport.exe*. Para obter mais informações sobre o ETW (Rastreamento de Eventos para Windows), consulte [Sobre o rastreamento de eventos](http://go.microsoft.com/fwlink/?linkid=90752).
 
 Para obter mais informações, consulte:
 
@@ -98,7 +99,7 @@ Para obter mais informações, consulte:
 
 Essa opção permite que você colete dados de contadores do Monitor de Desempenho do Windows. Para coletar esses dados, marque a caixa de seleção rotulada **Coletar contadores de desempenho do Windows**. O intervalo de coleta pode ser definido na caixa **Intervalo de Coleta**. **Categoria do Contador** e **Instância** também podem estar disponíveis. Alguns contadores do Monitor de Desempenho do Windows padrão estão disponíveis.
 
- Para obter mais informações, consulte [Como coletar dados de contadores do Windows](../profiling/how-to-collect-windows-counter-data.md).
+ Para obter mais informações, confira [Como coletar dados de contadores do Windows](../profiling/how-to-collect-windows-counter-data.md).
 
 ## <a name="advanced"></a>Avançado
 
@@ -113,5 +114,5 @@ Para obter mais informações, consulte:
 ## <a name="see-also"></a>Consulte também
 
 [Visões gerais](../profiling/overviews-performance-tools.md)  
-[Configurando sessões de desempenho](../profiling/configuring-performance-sessions.md)  
-[Controlando a coleta de dados](../profiling/controlling-data-collection.md)
+[Configurar sessões de desempenho](../profiling/configuring-performance-sessions.md)  
+[Controlar a coleta de dados](../profiling/controlling-data-collection.md)

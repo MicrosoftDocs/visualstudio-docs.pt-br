@@ -13,14 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8aee6e8b763cbc46af1cf426971e68e2e22ea1e1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4a38f023da9f4603bee9c87cb119bd41ec7e6d98
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638011"
 ---
 # <a name="enableeditoflocationfield-element-visual-studio-templates"></a>Elemento EnableEditOfLocationField (modelos do Visual Studio)
-Especifica se o usuário pode editar o campo de local.  
+Especifica se o usuário pode editar o campo de localização.  
   
  \<VSTemplate >  
  \<TemplateData >  
@@ -45,15 +46,15 @@ Especifica se o usuário pode editar o campo de local.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele exibe em um a **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo.|  
   
 ## <a name="text-value"></a>Valor de texto  
  Um valor de texto é obrigatório.  
   
- O texto deve ser `true` ou `false`, indicando se o usuário pode editar o **local** caixa de texto a **novo projeto** caixa de diálogo.  
+ O texto deve ser `true` ou `false`, indicando que se o usuário pode editar o **local** caixa de texto na **novo projeto** caixa de diálogo.  
   
 ## <a name="remarks"></a>Comentários  
- `EnableEditOfLocationField` é um elemento opcional. O valor padrão é `true`, que permite que o usuário edite o valor de **local** caixa de texto a **novo projeto** caixa de diálogo.  
+ `EnableEditOfLocationField` é um elemento opcional. O valor padrão é `true`, que permite que o usuário edite o valor a **local** caixa de texto a **novo projeto** caixa de diálogo.  
   
  No **novo projeto** caixa de diálogo, o **local** caixa de texto Especifica o diretório em que um novo projeto é salvo.  
   

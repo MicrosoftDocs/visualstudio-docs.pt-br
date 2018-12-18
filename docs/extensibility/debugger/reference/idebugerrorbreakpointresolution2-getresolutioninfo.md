@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 54d7f713eb070a578993d79bf80dc3a7b74833f0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 475bfaae3e55af761eb1d19841d9b0aadad7a9e7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877062"
 ---
 # <a name="idebugerrorbreakpointresolution2getresolutioninfo"></a>IDebugErrorBreakpointResolution2::GetResolutionInfo
-Obtém as informações de resolução de erro do ponto de interrupção.  
+Obtém as informações de resolução de erro de ponto de interrupção.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,13 +46,13 @@ int GetResolutionInfo(
  [in] Uma combinação de sinalizadores do [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) enumeração que determinam quais campos de `pErrorResolutionInfo` devem ser preenchidos.  
   
  `pErrorResolutionInfo`  
- [out no] O [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) estrutura que é preenchida com a descrição da resolução do ponto de interrupção.  
+ [no, out] O [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) estrutura será preenchida com a descrição da resolução de ponto de interrupção.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir implementa este método para um simples `CDebugErrorBreakpointResolution` objeto que expõe o [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) interface.  
+ O exemplo a seguir implementa esse método para um simples `CDebugErrorBreakpointResolution` objeto que expõe o [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) interface.  
   
 ```  
 HRESULT CDebugErrorBreakpointResolution::GetResolutionInfo(  

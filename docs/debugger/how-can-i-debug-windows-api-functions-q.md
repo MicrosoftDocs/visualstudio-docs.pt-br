@@ -1,6 +1,6 @@
 ---
-title: Como depurar funções de API do Windows? | Microsoft Docs
-ms.custom: ''
+title: Depurar funções de API do Windows | Microsoft Docs
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -23,25 +23,26 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 28d9aa387861de41b7d3f782fec85d8d26c7d3ae
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 2959e5580cc227f18dbd84f88f83fbd5690aa7f4
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065067"
 ---
 # <a name="how-can-i-debug-windows-api-functions"></a>Como depurar funções de API do Windows?
 Se você desejar depurar uma função de API do Windows que tenha os símbolos do NT carregados, deverá fazer o seguinte.  
   
 ### <a name="to-set-a-breakpoint-on-a-windows-api-function-with-nt-symbols-loaded"></a>Para definir um ponto de interrupção em uma função de API do Windows com os símbolos do NT carregados  
   
--   Digite o nome da função junto com o nome da DLL em que a função reside. No código de 32 bits, use a forma decorada do nome da função. Para definir um ponto de interrupção em **MessageBeep**, por exemplo, você deve inserir o seguinte.  
+-   Digite o nome da função junto com o nome da DLL em que a função reside. No código de 32 bits, use a forma decorada do nome da função. Para definir um ponto de interrupção em **MessageBeep**, por exemplo, você precisa inserir o seguinte.  
   
-    ```  
+    ```cpp
     {,,USER32.DLL}_MessageBeep@4  
     ```  
   
-     Para obter o nome decorado, consulte [exibindo nomes decorados](http://msdn.microsoft.com/en-us/f79e2717-a4db-4d12-a689-69830cce2be0).  
+     Para obter o nome decorado, consulte [exibindo nomes decorados](https://msdn.microsoft.com/library/f79e2717-a4db-4d12-a689-69830cce2be0).  
   
 ## <a name="see-also"></a>Consulte também  
- [Perguntas frequentes de código nativo de depuração](../debugger/debugging-native-code-faqs.md)   
+ [Perguntas frequentes sobre depuração de código nativo](../debugger/debugging-native-code-faqs.md)   
  [Depurando código nativo](../debugger/debugging-native-code.md)

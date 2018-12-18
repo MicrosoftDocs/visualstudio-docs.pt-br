@@ -19,16 +19,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a754f5aef53eed581deb9ccafa0bf5c453d8086d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: eea3fbb882a2ed2b8036b6fe5bbb280d99c0f270
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177027"
 ---
 # <a name="fileclassifier-task"></a>Tarefa FileClassifier
 O <xref:Microsoft.Build.Tasks.Windows.FileClassifier> classifica um conjunto de recursos de origem uma vez que eles serão inseridos em um assembly. Se um recurso não for localizável, ele será inserido no assembly principal do aplicativo; caso contrário, ele será inserido em um assembly satélite.  
   
-## <a name="task-parameters"></a>Parâmetros da tarefa  
+## <a name="task-parameters"></a>Parâmetros de tarefa  
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
@@ -65,8 +66,8 @@ O <xref:Microsoft.Build.Tasks.Windows.FileClassifier> classifica um conjunto de 
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência MSBuild do WPF](../msbuild/wpf-msbuild-reference.md)   
+ [Referência do WPF MSBuild](../msbuild/wpf-msbuild-reference.md)   
  [Referência de tarefas](../msbuild/wpf-msbuild-task-reference.md)   
  [Referência do MSBuild](../msbuild/msbuild-reference.md)   
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)   
- [Como compilar um aplicativo WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+ [Compilar um aplicativo WPF](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

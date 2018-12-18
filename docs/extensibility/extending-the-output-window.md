@@ -1,5 +1,5 @@
 ---
-title: Estender a janela de saída | Microsoft Docs
+title: Estendendo a janela de saída | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,21 +13,22 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8b9a8b260c1a3cab126d19f0cedc0c1e5362cf81
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 33e34a78fc06bc2b7f40129e33b6d2d78ff561c5
+ms.sourcegitcommit: 20d1b9a5bf041bb28453501eb63bc0537a8e4f54
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51645205"
 ---
-# <a name="extending-the-output-window"></a>Estender a janela de saída
-O **saída** janela é um conjunto de painéis de texto de leitura/gravação. O Visual Studio tem esses painéis internos: **criar**, em quais projetos se comunicar mensagens sobre compilações, e **geral**, no qual [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] transmite mensagens sobre o IDE. Projetos obtém uma referência para o **criar** automaticamente por meio do painel a <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> métodos de interface e o Visual Studio oferece acesso direto ao **geral** painel por meio do <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> serviço. Além de painéis internos, você pode criar e gerenciar seus próprios painéis personalizados.  
+# <a name="extend-the-output-window"></a>Estender a janela de saída
+O **saída** janela é um conjunto de painéis de texto de leitura/gravação. O Visual Studio tem esses painéis internos: **compilar**, em quais projetos de se comunicar mensagens sobre compilações, e **gerais**, no qual [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] transmite mensagens sobre o IDE. Projetos de obtém uma referência para o **compilar** automaticamente por meio do painel a <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> métodos de interface e o Visual Studio oferece acesso direto ao **geral** painel por meio do <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> serviço. Além de painéis internos, você pode criar e gerenciar seus próprios painéis personalizados.  
   
- Você pode controlar o **saída** janela diretamente por meio de <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> e <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> interfaces. O <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> interface, que é oferecida pelo <xref:Microsoft.VisualStudio.Shell.Interop.SVsOutputWindow> de serviço, que define métodos para criar, recuperar e destruição de **saída** painéis de janela. O <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> interface define os métodos para mostrando painéis, ocultando painéis e manipular seu texto. Uma maneira alternativa de controlar o **saída** janela é por meio de <xref:EnvDTE.OutputWindow> e <xref:EnvDTE.OutputWindowPane> objetos no modelo de objeto de automação do Visual Studio. Esses objetos encapsulam quase toda a funcionalidade do <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> e <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> interfaces. Além disso, o <xref:EnvDTE.OutputWindow> e <xref:EnvDTE.OutputWindowPane> objetos adicionam algumas funcionalidades de alto nível para tornar mais fácil enumerar o **saída** painéis janela e para recuperar o texto de painéis.  
+ Você pode controlar a **saída** janela diretamente por meio de <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> e <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> interfaces. O <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> interface, que é oferecido pelo <xref:Microsoft.VisualStudio.Shell.Interop.SVsOutputWindow> do serviço, que define métodos para criar, recuperar e destruindo **saída** painéis de janela. O <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> interface define os métodos para mostrar painéis, ocultando painéis e manipular seu texto. Uma maneira alternativa de controlar os **saída** janela é por meio de <xref:EnvDTE.OutputWindow> e <xref:EnvDTE.OutputWindowPane> objetos no modelo de objeto de automação do Visual Studio. Esses objetos encapsulam quase toda a funcionalidade do <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> e <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> interfaces. Além disso, o <xref:EnvDTE.OutputWindow> e <xref:EnvDTE.OutputWindowPane> objetos adicionam alguma funcionalidade de nível mais alto para tornar mais fácil enumerar os **saída** painéis de janela e para recuperar o texto de painéis.  
   
-## <a name="creating-an-extension-that-uses-the-output-pane"></a>Criando uma extensão que usa o painel de saída  
- Você pode fazer uma extensão que faz uso de aspectos diferentes do painel de saída.  
+## <a name="create-an-extension-that-uses-the-output-pane"></a>Criar uma extensão que usa o painel de saída  
+ Você pode tornar uma extensão que exercite diferentes aspectos do painel de saída.  
   
-1.  Crie um projeto do VSIX denominado `TestOutput` com um comando de menu denominado **TestOutput**. Para obter mais informações, consulte [criando uma extensão com um comando de Menu](../extensibility/creating-an-extension-with-a-menu-command.md).  
+1.  Crie um projeto do VSIX chamado `TestOutput` com um comando de menu denominado **TestOutput**. Para obter mais informações, consulte [criar uma extensão com um comando de menu](../extensibility/creating-an-extension-with-a-menu-command.md).  
   
 2.  Adicione as seguintes referências:  
   
@@ -35,14 +36,14 @@ O **saída** janela é um conjunto de painéis de texto de leitura/gravação. O
   
     2.  EnvDTE80  
   
-3.  Em TestOutput.cs, adicione a seguinte instrução using:  
+3.  Na *TestOutput.cs*, adicione a seguinte instrução using:  
   
     ```f#  
     using EnvDTE;  
     using EnvDTE80;  
     ```  
   
-4.  TestOutput.cs, exclua o método ShowMessageBox. Adicione o stub de método a seguir:  
+4.  Na *TestOutput.cs*, exclua o `ShowMessageBox` método. Adicione o seguinte stub do método:  
   
     ```csharp  
     private void OutputCommandHandler(object sender, EventArgs e)  
@@ -63,7 +64,7 @@ O **saída** janela é um conjunto de painéis de texto de leitura/gravação. O
     }  
     ```  
   
-6.  As seções a seguir têm métodos diferentes que mostram maneiras diferentes de lidar com o painel de saída. Você pode chamar esses métodos ao corpo do método OutputCommandHandler(). Por exemplo, o código a seguir adiciona o método CreatePane() fornecido na próxima seção.  
+6.  As seções a seguir têm diferentes métodos que mostram diferentes maneiras de lidar com o painel de saída. Você pode chamar esses métodos ao corpo do `OutputCommandHandler()` método. Por exemplo, o código a seguir adiciona o `CreatePane()` método fornecido na próxima seção.  
   
     ```csharp  
     private void OutputCommandHandler(object sender, EventArgs e)  
@@ -72,8 +73,8 @@ O **saída** janela é um conjunto de painéis de texto de leitura/gravação. O
     }  
     ```  
   
-## <a name="creating-an-output-window-with-ivsoutputwindow"></a>Criando uma janela de saída com IVsOutputWindow  
- Este exemplo mostra como criar um novo **saída** painel da janela usando o <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> interface.  
+## <a name="create-an-output-window-with-ivsoutputwindow"></a>Criar uma janela de saída com IVsOutputWindow  
+ Este exemplo mostra como criar um novo **saída** painel de janela usando o <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> interface.  
   
 ```csharp  
 void CreatePane(Guid paneGuid, string title,   
@@ -97,10 +98,10 @@ void CreatePane(Guid paneGuid, string title,
 }  
 ```  
   
- Se você adicionar esse método para a extensão fornecida na seção anterior, quando você clica o **invocar TestOutput** de comando, você verá o **saída** janela com um cabeçalho que diz **Mostrar saída de: CreatedPane** e as palavras **este é o painel criado** no painel em si.  
+ Se você adicionar esse método para a extensão fornecida na seção anterior, quando você clica o **invocar TestOutput** comando você deve ver o **saída** janela com um cabeçalho que diz **Mostrar saída de: CreatedPane** e as palavras **isso é o painel criado** no painel em si.  
   
-## <a name="creating-an-output-window-with-outputwindow"></a>Criando uma janela de saída com OutputWindow  
- Este exemplo mostra como criar um **saída** painel da janela usando o <xref:EnvDTE.OutputWindow> objeto.  
+## <a name="create-an-output-window-with-outputwindow"></a>Criar uma janela de saída com OutputWindow  
+ Este exemplo mostra como criar uma **saída** painel de janela usando o <xref:EnvDTE.OutputWindow> objeto.  
   
 ```csharp  
 void CreatePane(string title)  
@@ -122,12 +123,12 @@ void CreatePane(string title)
 }  
 ```  
   
- Embora o <xref:EnvDTE.OutputWindowPanes> coleção permite que você recupere um **saída** painel da janela pelo seu título, títulos do painel não há garantia de exclusividade. Quando você duvidar a exclusividade de um título, use o <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow.GetPane%2A> método para recuperar o painel correto pelo seu GUID.  
+ Embora o <xref:EnvDTE.OutputWindowPanes> coleção permite que você recupere um **saída** painel da janela pelo seu título, títulos do painel não têm garantia de ser exclusivo. Quando você tiver dúvidas a exclusividade de um título, use o <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow.GetPane%2A> método para recuperar o painel correto pelo seu GUID.  
   
- Se você adicionar esse método para a extensão fornecida na seção anterior, quando você clica o **invocar TestOutput** comando, você verá a janela de saída com um cabeçalho que diz **Mostrar saída de: DTEPane** e as palavras **adicionado DTE painel** no painel em si.  
+ Se você adicionar esse método para a extensão fornecida na seção anterior, quando você clica o **invocar TestOutput** comando você deve ver a janela de saída com um cabeçalho que diz **Mostrar saída de: DTEPane** e as palavras **adicionado painel de DTE** no painel em si.  
   
-## <a name="deleting-an-output-window"></a>Excluindo uma janela de saída  
- Este exemplo mostra como excluir um **saída** painel da janela.  
+## <a name="delete-an-output-window"></a>Excluir uma janela de saída  
+ Este exemplo mostra como excluir uma **saída** painel da janela.  
   
 ```csharp  
 void DeletePane(Guid paneGuid)  
@@ -149,10 +150,10 @@ void DeletePane(Guid paneGuid)
 }  
 ```  
   
- Se você adicionar esse método para a extensão fornecida na seção anterior, quando você clicar no **invocar TestOutput** comando, você verá a janela de saída com um cabeçalho que diz **Mostrar saída de: painel novo** e as palavras **adicionado painel criado** no painel em si. Se você clicar no **TestOutput invocar** comando novamente, o painel é excluído.  
+ Se você adicionar esse método para a extensão fornecida na seção anterior, quando você clica o **invocar TestOutput** comando você deve ver a janela de saída com um cabeçalho que diz **Mostrar saída de: painel novo** e as palavras **adicionado painel criado** no painel em si. Se você clicar na **TestOutput invocar** comando novamente, o painel é excluído.  
   
-## <a name="getting-the-general-pane-of-the-output-window"></a>Obtendo o painel geral da janela de saída  
- Este exemplo mostra como obter o interno **geral** painel do **saída** janela.  
+## <a name="get-the-general-pane-of-the-output-window"></a>Obter painel geral da janela de saída  
+ Este exemplo mostra como obter o interno **gerais** painel da **saída** janela.  
   
 ```csharp  
 void GetGeneralPane()  
@@ -162,10 +163,10 @@ void GetGeneralPane()
 }  
 ```  
   
- Se você adicionar esse método para a extensão fornecida na seção anterior, quando você clica o **invocar TestOutput** comando, você verá que o **saída** janela mostra as palavras **encontrado geral painel** no painel.  
+ Se você adicionar esse método para a extensão fornecida na seção anterior, quando você clica o **invocar TestOutput** comando, você deverá ver que o **saída** janela mostra as palavras **geral encontrado painel** no painel.  
   
-## <a name="getting-the-build-pane-of-the-output-window"></a>Obtendo o painel de compilação da janela de saída  
- Este exemplo mostra como localizar o painel de compilação e gravar nele. Como o painel de compilação não está ativado por padrão, ele será ativado-lo também.  
+## <a name="get-the-build-pane-of-the-output-window"></a>Obter o painel de Build da janela de saída  
+ Este exemplo mostra como localizar o **Build** painel e gravação a ela. Uma vez que o **Build** painel não está ativado por padrão, ele ativa também.  
   
 ```csharp  
 void OutputTaskItemStringExExample(string buildMessage)  

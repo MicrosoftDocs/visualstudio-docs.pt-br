@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0d1a6272f8a04316c8695f301d5c45512b05f2d3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f02f90ce8325a0ba75c31904a689e84705a5273a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866162"
 ---
 # <a name="ieevisualizerdataprovidersetobjectforvisualizer"></a>IEEVisualizerDataProvider::SetObjectForVisualizer
 Esse método altera o objeto que representa o visualizador.  
@@ -47,16 +48,16 @@ int SetObjectForVisualizer(
  [in] O objeto a ser definido.  
   
  `error`  
- [out] Se houver um erro ao definir o objeto, essa cadeia de caracteres contém a mensagem de erro.  
+ [out] Se houver um erro ao configurar o objeto, essa cadeia de caracteres contém a mensagem de erro.  
   
  `pException`  
  [out] Se houver um erro, esse objeto contém as informações de exceção.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Cabe implementador para determinar como as informações de erro são retornadas. No entanto, é possível que alguns chamadores podem somente, veja se um objeto de exceção foi retornado saber existe foi um erro, então esse método sempre deve retornar um objeto de exceção se ocorreu um erro. A cadeia de caracteres de erro também deve ser fornecida no caso do chamador deseja fazer usá-lo.  
+ Cabe ao implementador para determinar como as informações de erro são retornadas. No entanto, é possível que alguns os chamadores podem ser somente olhada para ver se um objeto de exceção foi retornado, sabemos que existe foi um erro, portanto, esse método sempre deve retornar um objeto de exceção se ocorreu um erro. A cadeia de caracteres de erro também deve ser fornecida, caso o chamador deseja tornar usá-lo.  
   
 ## <a name="see-also"></a>Consulte também  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)   

@@ -1,5 +1,5 @@
 ---
-title: Depuração histórica | Microsoft Docs
+title: Histórico de depuração | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,27 +10,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a75dfc04bd5ce3b1e61cc2c8e8fe293c13560cf9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0a622fcb91ad40e7d0777f37ce87e9a2cb950695
+ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46542397"
 ---
-# <a name="historical-debugging"></a>Depuração histórica
-Depuração histórica é um modo de depuração que depende das informações coletadas pelo IntelliTrace. Ele permite que retroceder e Avançar pela execução de seu aplicativo e inspecionar o estado.  
+# <a name="historical-debugging"></a>Depuração de histórico
+Depuração de histórico é um modo de depuração que depende das informações coletadas pelo IntelliTrace. Ele permite que você voltar para encaminhar por meio da execução do seu aplicativo e inspecionar seu estado.  
   
- Você pode usar o IntelliTrace na edição Enterprise do Visual Studio (mas não nas edições Professional ou comunidade).  
+ Você pode usar o IntelliTrace no Visual Studio Enterprise edition (mas não as edições Professional ou Community).  
   
-## <a name="why-use-historical-debugging"></a>Por que usar a depuração histórica?  
- Definir pontos de interrupção para localizar erros pode ser uma questão bastante hit-or-miss. Você define um ponto de interrupção perto o lugar no seu código onde você suspeitar que o bug a ser, em seguida, executar o aplicativo no depurador e esperança que seu ponto de interrupção é atingido, e que o local em que a execução é interrompida pode revelar a origem do erro. Caso contrário, você precisará, tente definir um ponto de interrupção em outro lugar no código e execute novamente o depurador, executando as etapas de teste repetidamente até encontrar o problema.  
+## <a name="why-use-historical-debugging"></a>Por que usar o histórico de depuração?  
+ Definir pontos de interrupção para encontrar bugs pode ser uma questão em vez disso, tanto inexata. Você define um ponto de interrupção perto o lugar em seu código onde você suspeitar que o bug seja e executar o aplicativo no depurador e esperança de que seu ponto de interrupção obtém ocorrências e que o local em que a execução quebra pode revelar a origem do erro. Caso contrário, você terá que tente definir um ponto de interrupção em outro lugar no código e execute novamente o depurador, executando as etapas de teste repetidamente até encontrar o problema.  
   
  ![definindo um ponto de interrupção](../debugger/media/breakpointprocesa.png "BreakpointProcesa")  
   
- Você pode usar o IntelliTrace e depuração histórica se movem em torno de seu aplicativo e inspecione o seu estado (pilha de chamadas e variáveis locais) sem a necessidade de definir pontos de interrupção, reinicie a depuração e repita as etapas de teste. Isso pode economizar muito tempo, especialmente quando o erro está localizado profundo em um cenário de teste que leva muito tempo para executar.  
+ Você pode usar o IntelliTrace e a depuração histórica circulem por em seu aplicativo e inspecionar o estado (pilha de chamadas e variáveis locais) sem precisar definir pontos de interrupção, reinicie a depuração e repita as etapas de teste. Isso pode economizar muito tempo, especialmente quando o bug estiver localizado profundo em um cenário de teste que leva muito tempo para ser executado.  
   
-## <a name="how-do-i-start-using-historical-debugging"></a>Como iniciar usando a depuração histórica?  
- IntelliTrace está ativado por padrão. Tudo o que você precisa fazer é decidir quais eventos e chamadas de função são do seu interesse e, se você deseja exibir instantâneos sua completa do estado do aplicativo. Para obter mais informações sobre como definir o que você deseja procurar, consulte [funcionalidades do IntelliTrace](../debugger/intellitrace-features.md).  
+## <a name="how-do-i-start-using-historical-debugging"></a>Como posso começar a usar a depuração de histórico?  
+ IntelliTrace está ativado por padrão. Tudo o que você precisa fazer é decidir quais eventos e chamadas de função são interessantes para você, e se você deseja exibir instantâneos do estado completo do aplicativo. Para obter mais informações sobre como definir o que você deseja procurar, consulte [recursos do IntelliTrace](../debugger/intellitrace-features.md).  
 
- - Para exibir instantâneos com depuração histórica, consulte [exibir instantâneos usando IntelliTrace etapa-back](../debugger/how-to-use-intellitrace-step-back.md)
- - Para saber como inspecionar variáveis e navegar pelo código, consulte [inspecionar o seu aplicativo com depuração histórica](../debugger/historical-debugging-inspect-app.md)
- - Para saber mais sobre a depuração com os eventos do IntelliTrace, consulte [passo a passo: usando o IntelliTrace](../debugger/walkthrough-using-intellitrace.md).
+ - Para exibir instantâneos de histórico de depuração, consulte [inspecionar estados anteriores do aplicativo usando o IntelliTrace](../debugger/view-historical-application-state.md)
+ - Para aprender a inspecionar variáveis e navegar no código, consulte [inspecionar seu aplicativo com o histórico de depuração](../debugger/historical-debugging-inspect-app.md)
+ - Para saber mais sobre depuração com eventos do IntelliTrace, consulte [instruções passo a passo: usando o IntelliTrace](../debugger/walkthrough-using-intellitrace.md).

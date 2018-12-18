@@ -14,11 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 91e4c4648108cdc6afa28f5a5dd8f9bfd46fcf59
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 04bc34de6e7ecbc438cfc63ed08c684cf4224366
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917018"
 ---
 # <a name="processinfoflags"></a>PROCESS_INFO_FLAGS
 
@@ -51,17 +52,17 @@ PIFLAG_SYSTEM_PROCESS
 Indica que o processo é um processo do sistema.
 
 PIFLAG_DEBUGGER_ATTACHED  
-Indica que o processo está sendo depurado por um depurador. Pode ser um [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] depurador, ou pode ser algum outro depurador, por exemplo, WinDbg.
+Indica que o processo está sendo depurado por um depurador. Pode ser um [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] depurador, ou ele pode ser de alguns outro depurador, por exemplo, o WinDbg.
 
 PIFLAG_PROCESS_STOPPED  
-Indica que o processo será interrompido. Válido somente se `PIFLAG_DEBUGGER_ATTACHED` também for especificado. Disponível no Visual Studio 2005 e versões posteriores.
+Indica que o processo é interrompido. Válido somente se `PIFLAG_DEBUGGER_ATTACHED` também for especificado. Disponível no Visual Studio 2005 e versões posteriores.
 
 PIFLAG_PROCESS_RUNNING  
-Indica que o processo está sendo executado. Válido somente se `PIFLAG_DEBUGGER_ATTACHED` também for especificado. Disponível no Visual Studio 2005 e versões posteriores.
+Indica que o processo está em execução. Válido somente se `PIFLAG_DEBUGGER_ATTACHED` também for especificado. Disponível no Visual Studio 2005 e versões posteriores.
 
 ## <a name="remarks"></a>Comentários
 
-Usado para o `Flags` membro o [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) estrutura.
+Usado para o `Flags` membro a [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) estrutura.
 
 Esses sinalizadores podem ser combinados com um bit a bit `OR`.
 

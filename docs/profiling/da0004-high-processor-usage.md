@@ -15,13 +15,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dab522c19971e734e5a42f607d99f38f8e44930d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 87f418c8f145d13dee575c9d45d192a59547e6a0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920879"
 ---
 # <a name="da0004-high-processor-usage"></a>DA0004: uso do processador elevado
+
 |||  
 |-|-|  
 |ID de regra|DA0004|  
@@ -29,14 +31,14 @@ ms.lasthandoff: 04/19/2018
 |Métodos de criação de perfil|Instrumentação<br /><br /> Amostragem|  
 |Mensagem|O uso do processador é consistentemente superior a 75%. Considere o uso do modo de Amostragem para aplicativos associados à CPU.|  
 |Tipo de regra|Informações|  
-  
+
  Ao criar o perfil usando a amostragem, a memória do .NET ou métodos de contenção de recursos, é necessário coletar pelo menos 10 amostras para disparar essa regra.  
-  
+
 ## <a name="cause"></a>Causa  
- A utilização do processador (CPU) estava muito alta em dados de criação de perfil que foram coletados usando o método de instrumentação. Considere o uso do método de criação de perfil de amostragem ao criar o perfil de um aplicativo associado à CPU.  
-  
-## <a name="rule-description"></a>Descrição da Regra  
- Durante essa execução de criação de perfil, os processadores estavam consistentemente muito ocupados. A alta utilização da CPU pode indicar um aplicativo associado à CPU. Geralmente, perfis instrumentados não são a maneira mais eficiente de investigar cenários de uso da CPU. Em geral, a amostragem é mais eficaz quando você está criando o perfil de aplicativos que gastam muito tempo para executar instruções no processador.  
-  
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações  
+ A utilização do processador (CPU) estava alta em dados de criação de perfil que foram coletados usando o método de instrumentação. Considere o uso do método de criação de perfil de amostragem ao criar o perfil de um aplicativo associado à CPU.  
+
+## <a name="rule-description"></a>Descrição da regra  
+ Durante essa execução de criação de perfil, o processador (ou os processadores) estava consistentemente ocupado. A alta utilização da CPU pode indicar um aplicativo associado à CPU. Perfis instrumentados não são a maneira mais eficiente de investigar cenários de uso da CPU. A amostragem é mais eficaz quando você está criando o perfil de aplicativos que gastam muito tempo para executar instruções no processador.  
+
+## <a name="how-to-fix-violations"></a>Como corrigir violações  
  Considere uma nova criação de perfil do aplicativo usando o método de amostragem em vez do método de instrumentação, a menos que você precise de tempos de função ou esteja mais interessado em entender a entrada/saída do que os gargalos do processador.

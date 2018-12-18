@@ -13,14 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: add7f9b34119fb11938064598b213e26000ecb1a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fe4d3d2f2a3d76bbaec8c92c8053bac07e352389
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812082"
 ---
 # <a name="idebugsettingscallback2enumees"></a>IDebugSettingsCallback2::EnumEEs
-Enumera os avaliadores de expressão disponível considerando os identificadores de idioma e fornecedor.  
+Enumera os avaliadores de expressão disponível considerando os identificadores de idioma e o fornecedor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,19 +45,19 @@ public int EnumEEs(
   
 #### <a name="parameters"></a>Parâmetros  
  `celtBuffer`  
- [in] Número de elementos de `pceltEEs` buffer.  
+ [in] Número de elementos no `pceltEEs` buffer.  
   
  `rgguidLang`  
- [out no] Identificador exclusivo para a linguagem de programação.  
+ [no, out] Identificador exclusivo para a linguagem de programação.  
   
  `rgguidVendor`  
- [out no] Identificador exclusivo do fornecedor.  
+ [no, out] Identificador exclusivo para o fornecedor.  
   
  `pceltEEs`  
- [out no] Matriz de avaliadores de expressão.  
+ [no, out] Matriz de avaliadores de expressão.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

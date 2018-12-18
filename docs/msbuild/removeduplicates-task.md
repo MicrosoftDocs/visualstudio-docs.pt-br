@@ -20,11 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 596c066018a5f6f731c4ca0cefbefae458646ec1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b121090196b5b9222799cdcce4e4f9af096e483f
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153066"
 ---
 # <a name="removeduplicates-task"></a>Tarefa RemoveDuplicates
 Remove itens duplicados da coleção do item especificado.  
@@ -40,7 +41,7 @@ Remove itens duplicados da coleção do item especificado.
 ## <a name="remarks"></a>Comentários  
  Esta tarefa não diferencia maiusculas de minúsculas e não compara os metadados do item ao determinar as duplicatas.  
   
- Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, confira [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa a tarefa `RemoveDuplicates` para remover itens duplicados da `MyItems` coleção de itens. Quando a tarefa for concluída, a coleção de item `FilteredItems` contém um item.  
@@ -67,7 +68,7 @@ Remove itens duplicados da coleção do item especificado.
 </Project>  
 ```  
 
- O exemplo a seguir mostra que a tarefa `RemoveDuplicates` preserva a ordem de entrada. Quando a tarefa for concluída, a coleção de itens `FilteredItems` conterá os itens "MyFile2.cs", "MyFile1.cs" e "MyFile3.cs" nessa ordem.  
+ O exemplo a seguir mostra que a tarefa `RemoveDuplicates` preserva a ordem de entrada. Após a conclusão da tarefa, a coleção de itens `FilteredItems` conterá os itens *MyFile2.cs*, *MyFile1.cs* e *MyFile3.cs*, nessa ordem.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  

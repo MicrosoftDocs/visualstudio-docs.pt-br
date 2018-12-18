@@ -13,30 +13,31 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 203144e5b262c093204fe9eafa3a2a5db85eccb3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d3bef6030b6a21eeda708a5258c47c9dfdcfc0a3
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39497307"
 ---
-# <a name="determining-whether-to-implement-a-source-control-vspackage"></a>Determinar se deve implementar um VSPackage de controle do código-fonte
-Esta seção aborda as opções de plug-ins de controle de origem e de controle de origem VSPackages para estender o controle de origem soluções e fornece diretrizes gerais sobre como escolher um caminho de integração adequada.  
+# <a name="determine-whether-to-implement-a-source-control-vspackage"></a>Determinar se deve implementar um VSPackage de controle do código-fonte
+Esta seção aborda as opções de plug-ins de controle do código-fonte e os VSPackages de controle de origem para estender o controle de fonte de soluções e fornece diretrizes amplas sobre como escolher um caminho de integração adequada.  
   
-## <a name="small-source-control-solution-with-limited-resources"></a>Solução de controle de origem pequeno com recursos limitados  
- Se você tiver recursos limitados e não pode ser sobrecarregado com a sobrecarga de gravação de um pacote de controle de origem, você pode criar plug-ins baseada em API de plug-in de controle de origem. Isso permite que você trabalhe lado a lado com pacotes de controle de origem, e você pode alternar entre plug-ins de controle do código-fonte e pacotes sob demanda. Para obter mais informações, consulte [registro e seleção](../../extensibility/internals/registration-and-selection-source-control-vspackage.md).  
+## <a name="small-source-control-solution-with-limited-resources"></a>Solução de controle de origem pequenas com recursos limitados  
+ Se você tiver recursos limitados e não pode ser sobrecarregado com a sobrecarga de escrever um pacote de controle do código-fonte, você pode criar plug-ins baseados na API de plug-in de controle do código-fonte. Isso permite que você trabalhe lado a lado com pacotes de controle do código-fonte, e você pode alternar entre pacotes sob demanda e plug-ins de controle de origem. Para obter mais informações, consulte [registro e seleção](../../extensibility/internals/registration-and-selection-source-control-vspackage.md).  
   
-## <a name="large-source-control-solution-with-a-rich-feature-set"></a>Solução de controle de origem grandes com um conjunto avançado de recursos  
- Se você quiser implementar uma solução de controle de origem que fornece um modelo de controle de origem avançada que não é capturado adequadamente usando a API de plug-in de controle de origem, você pode considerar um pacote de controle de origem como o caminho de integração. Isso se aplica especialmente se você substituiria o pacote de adaptador de controle de origem (que se comunica com plug-ins de controle de origem e fornece um controle de origem básico da interface do usuário) em vez disso, com seus próprios para que você pode manipular os eventos de controle de origem de forma personalizada. Se você já tiver uma fonte satisfatório controlar a interface do usuário e deseja preservar essa experiência em [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], a opção de pacote de controle de origem permite fazer exatamente isso. O pacote de controle de origem não é genérico e destina-se somente para uso com [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE.  
+## <a name="large-source-control-solution-with-a-rich-feature-set"></a>Solução de controle de origem grande com um rico conjunto de recursos  
+ Se você quiser implementar uma solução de controle do código-fonte que fornece um modelo de controle de fonte avançada que não é capturado adequadamente, usando a API de plug-in de controle do código-fonte, você pode considerar um pacote de controle do código-fonte como o caminho de integração. Isso se aplica especialmente se você substituiria o pacote do adaptador de controle de origem (que se comunica com o plug-ins de controle do código-fonte e fornece um controle de origem básico da interface do usuário) em vez disso, com seu próprio para que você pode manipular os eventos de controle de origem de uma maneira personalizada. Se você já tiver uma fonte satisfatória de controle da interface do usuário e deseja preservar essa experiência em [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], a opção de controle de origem do pacote lhe permite fazer exatamente isso. O pacote de controle de origem não é genérico e destina-se unicamente para uso com [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE.  
   
- Se você quiser implementar uma solução de controle de origem que fornece a flexibilidade e maior controle sobre a lógica de controle de origem e a interface do usuário, talvez você prefira a rota de integração do pacote de controle de origem. Você pode:  
+ Se você quiser implementar uma solução de controle do código-fonte que fornece flexibilidade e controle avançado sobre a lógica de controle do código-fonte e a interface do usuário, talvez você prefira a rota de integração de pacote de controle de origem. Você pode:  
   
-1.  Registrar seu próprio controle de origem VSPackage (consulte [registro e seleção](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)).  
+1.  Registrar seu próprio VSPackage de controle do código-fonte (consulte [registro e seleção](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)).  
   
-2.  Substitua o controle da fonte padrão da interface do usuário com a interface do usuário personalizada (consulte [Interface de usuário personalizada](../../extensibility/internals/custom-user-interface-source-control-vspackage.md)).  
+2.  Substitua o controle de fonte padrão da interface do usuário com sua interface do usuário personalizada (consulte [interface do usuário personalizada](../../extensibility/internals/custom-user-interface-source-control-vspackage.md)).  
   
-3.  Especifique os glifos a ser usada e tratar eventos de glifo de Gerenciador de soluções (consulte [controle de glifo](../../extensibility/internals/glyph-control-source-control-vspackage.md)).  
+3.  Especifique os glifos a ser usada e manipular eventos de glifo do Gerenciador de soluções (veja [controle de glifo](../../extensibility/internals/glyph-control-source-control-vspackage.md)).  
   
-4.  Manipular eventos de consulta editar e salvar consulta (consulte [consulta Editar consulta salvar](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)).  
+4.  Manipular eventos de consulta de editar e salvar consulta (consulte [consulta Editar consulta salvar](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)).  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar um plug-in de controle do código-fonte](../../extensibility/internals/creating-a-source-control-plug-in.md)
+ [Criar um controle de fonte plug-in](../../extensibility/internals/creating-a-source-control-plug-in.md)

@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4276009244f1d49b89311d5d158a34bebf3fcf23
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: a7ab7b278c03d092e1e559f1eb74f5d6bdc86d85
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816842"
 ---
 # <a name="disassemblydata"></a>DisassemblyData
 Descreve uma instrução de desmontagem para o ambiente de desenvolvimento integrado (IDE) para exibir.  
@@ -67,7 +68,7 @@ public struct DisassemblyData {
  O [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) constante que especifica quais campos são preenchidos.  
   
  `bstrAddress`  
- O endereço como um deslocamento do ponto inicial (geralmente o início da função associada).  
+ O endereço como um deslocamento de algum ponto de partida (geralmente o início da função associada).  
   
  `bstrCodeBytes`  
  Os bytes de código para essa instrução.  
@@ -82,23 +83,23 @@ public struct DisassemblyData {
  O nome do símbolo, se houver, associado ao endereço (símbolos públicos, rótulo e assim por diante).  
   
  `uCodeLocationId`  
- O identificador de local de código para esta linha desmontado. Se o endereço de contexto de código de uma linha é maior que o endereço de contexto de código de outro, o identificador de local de código desmontado do primeiro também será maior que o identificador de local de código da segunda.  
+ O identificador de local de código para essa linha desmontado. Se o endereço de contexto de código de uma linha for maior que o endereço de contexto de código de outro, o identificador de local do código desmontado do primeiro também será maior que o identificador de local do código do segundo.  
   
  `posBeg`  
- O [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) que corresponde à posição em um documento onde os dados de desmontagem começam.  
+ O [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) que corresponde à posição em um documento em que os dados de desmontagem começam.  
   
  `posEnd`  
  O [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) que corresponde à posição em um documento em que os dados de desmontagem termina.  
   
  `bstrDocumentUrl`  
- Para documentos de texto que podem ser representados como nomes de arquivo, o `bstrDocumentUrl` é preenchido com o nome do arquivo onde a fonte pode ser encontrada, usando o formato `file://file name`.  
+ Para documentos de texto que podem ser representados como nomes de arquivo, o `bstrDocumentUrl` campo é preenchido com o nome do arquivo onde a fonte pode ser encontrada, usando o formato `file://file name`.  
   
- Para documentos de texto que não podem ser representados como nomes de arquivos, `bstrDocumentUrl` é um identificador exclusivo para o documento e o mecanismo de depuração deve implementar o [GetDocument](../../../extensibility/debugger/reference/idebugdisassemblystream2-getdocument.md) método.  
+ Para documentos de texto que não podem ser representados como nomes de arquivo `bstrDocumentUrl` é um identificador exclusivo para o documento e o mecanismo de depuração deve implementar a [GetDocument](../../../extensibility/debugger/reference/idebugdisassemblystream2-getdocument.md) método.  
   
- Este campo também pode conter informações adicionais sobre as somas de verificação. Consulte comentários para obter detalhes.  
+ Este campo também pode conter informações adicionais sobre as somas de verificação. Consulte os comentários para obter detalhes.  
   
  `dwByteOffset`  
- O número de bytes que a instrução for desde o início da linha de código.  
+ O número de bytes que a instrução é desde o início da linha de código.  
   
  `dwFlags`  
  O [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md) constante que especifica quais sinalizadores estão ativos.  
@@ -106,14 +107,14 @@ public struct DisassemblyData {
 ## <a name="remarks"></a>Comentários  
  Cada `DisassemblyData` estrutura descreve uma instrução de desmontagem. Uma matriz dessas estruturas é retornada do [leitura](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) método.  
   
- O [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) estrutura é usada para apenas documentos com base em texto. O intervalo de código de origem para essa instrução é preenchido apenas para a primeira instrução gerada a partir de uma instrução ou uma linha, por exemplo, quando `dwByteOffset == 0`.  
+ O [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) estrutura é usada para documentos com base em texto apenas. O intervalo de código de origem para essa instrução é preenchido somente para a primeira instrução gerada a partir de uma instrução ou uma linha, por exemplo, quando `dwByteOffset == 0`.  
   
- Para documentos que são não textuais, um contexto de documento pode ser obtido do código e o `bstrDocumentUrl` campo deve ser um valor nulo. Se o `bstrDocumentUrl` campo é o mesmo que o `bstrDocumentUrl` campo anterior `DisassemblyData` elemento da matriz, em seguida, defina o `bstrDocumentUrl` com um valor nulo.  
+ Para documentos que são não textuais, um contexto de documento pode ser obtido a partir do código e o `bstrDocumentUrl` campo deve ser um valor nulo. Se o `bstrDocumentUrl` campo é o mesmo que o `bstrDocumentUrl` campo anterior `DisassemblyData` elemento da matriz, em seguida, defina o `bstrDocumentUrl` com um valor nulo.  
   
- Se o `dwFlags` campo tem o `DF_DOCUMENT_CHECKSUM` o sinalizador será definido, e informações de soma de verificação adicionais seguem a cadeia de caracteres apontada pelo `bstrDocumentUrl` campo. Especificamente, após o terminador de cadeia de caracteres nula, há segue um GUID que identifica o algoritmo de soma de verificação, que por sua vez é seguido por um valor de 4 bytes que indica o número de bytes na soma de verificação e que por sua vez é seguido pelos bytes de soma de verificação. Consulte o exemplo neste tópico sobre como codificar e decodificar esse campo em [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)].  
+ Se o `dwFlags` campo tem o `DF_DOCUMENT_CHECKSUM` sinalizador definido, em seguida, as informações de soma de verificação adicional seguem a cadeia de caracteres apontada pelo `bstrDocumentUrl` campo. Especificamente, após o terminador de cadeia de caracteres nula, existe segue um GUID que identifica o algoritmo de soma de verificação, que por sua vez é seguido por um valor de 4 bytes indicando o número de bytes em que a soma de verificação e o que por sua vez é seguido pelos bytes da soma de verificação. Veja o exemplo neste tópico sobre como codificar e decodificar esse campo em [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)].  
   
 ## <a name="example"></a>Exemplo  
- O `bstrDocumentUrl` campo pode conter informações adicionais que não seja uma cadeia de caracteres se o `DF_DOCUMENT_CHECKSUM` sinalizador é definido. O processo de criar e ler esta cadeia de caracteres codificada é simples no [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)]. No entanto, em [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)], é outra questão. Para aqueles que estiver curioso, o exemplo a seguir mostra uma maneira de criar a cadeia de caracteres codificada de [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] e é uma maneira de decodificar a cadeia de caracteres codificada em [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)].  
+ O `bstrDocumentUrl` campo pode conter informações adicionais que não seja uma cadeia de caracteres se o `DF_DOCUMENT_CHECKSUM` sinalizador está definido. O processo de criar e ler essa cadeia de caracteres codificada é bem simples no [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)]. No entanto, em [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)], é outra questão. Para aqueles que estão curiosos, o exemplo a seguir mostra uma maneira de criar a cadeia de caracteres codificada de [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] e uma maneira para decodificar a cadeia de caracteres codificada em [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)].  
   
 ```csharp  
 using System;  

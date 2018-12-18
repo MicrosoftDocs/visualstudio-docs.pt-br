@@ -13,13 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ea0937af4a697b3cf789738d06b5e2ad0282a7d0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9929fc5acfe58d51de9142abc7addd539cf2b74e
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34549000"
 ---
-# <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>Padrões comuns para aplicativos multithread de mau comportamento
+# <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>Padrões comuns para aplicativos multi-threaded com mau comportamento
 
 A Visualização Simultânea ajuda os desenvolvedores a visualizarem o comportamento de um aplicativo multithread. Essa ferramenta inclui uma galeria de padrões comuns para aplicativos multithread com mau comportamento. A galeria inclui padrões visual comuns e reconhecíveis expostos por meio da ferramenta, juntamente com uma explicação do comportamento representado por cada padrão, o resultado provável desse comportamento e a abordagem mais comum para resolvê-lo.
 
@@ -31,7 +32,7 @@ A Visualização Simultânea ajuda os desenvolvedores a visualizarem o comportam
 
 Conforme mostrado na ilustração a seguir, a Visualização Simultânea também pode expor esse sintoma no Modo de Exibição de Utilização da CPU, em que, mesmo na presença de vários threads, o aplicativo consome apenas um núcleo lógico.
 
-Para obter mais informações, consulte "Performance Pattern 1: Identifying Lock Contention (Padrão de desempenho 1: identificando a contenção de bloqueio)" no blog de Hazim Shafi [Parallel Performance Tools For Windows (Ferramentas de desempenho paralelo para Windows)](http://go.microsoft.com/fwlink/?LinkID=160569) no site da Web do blog do MSDN.
+Para obter mais informações, confira "Performance pattern 1: Identifying lock contention" (Padrão de desempenho 1: identificando a contenção de bloqueio) no blog de Hazim Shafi [Parallel Performance Tools For Windows](http://go.microsoft.com/fwlink/?LinkID=160569) (Ferramentas de desempenho paralelo para o Windows) no site do blog do MSDN.
 
 ![Contenção de bloqueio](../profiling/media/lockcontention_2.png "LockContention_2")
 

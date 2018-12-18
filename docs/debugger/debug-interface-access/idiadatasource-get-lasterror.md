@@ -1,5 +1,5 @@
 ---
-title: ': Get_lasterror | Microsoft Docs'
+title: 'Idiadatasource:: Get_lasterror | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 08d17e0532d4d5d987d69afa7de062a193371950
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e197262b84fcf964afb74f85e86ff384daa26c9e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819831"
 ---
 # <a name="idiadatasourcegetlasterror"></a>IDiaDataSource::get_lastError
-Recupera o nome do arquivo para o último erro de carga.  
+Recupera o nome do arquivo para o último erro de carregamento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,7 +34,7 @@ HRESULT get_lastError (
   
 #### <a name="parameters"></a>Parâmetros  
  pRetVal  
- [out] Retorna uma cadeia de caracteres que contém o nome do arquivo. PDB associado com o último erro de carga.  
+ [out] Retorna uma cadeia de caracteres que contém o nome do arquivo. PDB associado com o último erro de carregamento.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Retorna o último código de erro causado por uma operação de carregamento. Retorna `E_INVALIDARG` se o `pRetVal` parâmetro é `NULL`.  

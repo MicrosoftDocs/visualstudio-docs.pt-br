@@ -15,6 +15,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31584575"
 ---
 # <a name="resource-monitoring-performance-rules"></a>Regras de desempenho do monitoramento de recurso
 As mensagens de desempenho da categoria Monitoramento de Recurso fornecem dados adicionais sobre o desempenho do aplicativo. É possível utilizar esses dados para analisar problemas de desempenho. Essas regras são informativas e relatadas para todas as execuções de criação de perfil.  

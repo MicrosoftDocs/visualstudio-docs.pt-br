@@ -10,23 +10,24 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: acb8959aa18741c61e4a6719641645eb9be9ea70
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3e6c28682bb6b93a2a72aaa353a2af68a9450cb9
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37058585"
 ---
-# <a name="visualizing-eventsource-events-as-markers"></a>Visualizando eventos EventSource como marcadores
+# <a name="visualize-eventsource-events-as-markers"></a>Visualizar eventos EventSource como marcadores
 A Visualização Simultânea pode exibir eventos do EventSource como marcadores e você pode controlar como os marcadores são exibidos. Para exibir os marcadores do EventSource, registre o GUID do provedor ETW usando a caixa de diálogo [Configurações Avançadas](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md). A Visualização Simultânea tem convenções padrão para representar eventos do EventSource como [Marcadores de Sinalizador](../profiling/flag-markers.md), [Marcadores de Período](../profiling/span-markers.md) e [Marcadores de Mensagem](../profiling/message-markers.md). Você pode personalizar como os eventos EventSource são exibidos, adicionando campos personalizados aos eventos. Para obter mais informações sobre marcadores, consulte [Marcadores da Visualização Simultânea](../profiling/concurrency-visualizer-markers.md). Para obter mais informações sobre eventos do EventSource, consulte <xref:System.Diagnostics.Tracing>.  
   
-## <a name="default-visualization-of-eventsource-events"></a>Visualização Padrão de Eventos do EventSource  
+## <a name="default-visualization-of-eventsource-events"></a>Visualização padrão de eventos do EventSource  
  Por padrão, a Visualização Simultânea usa as seguintes convenções para representar eventos do EventSource.  
   
 ### <a name="marker-type"></a>Tipo de marcador  
   
-1.  Eventos que tenham [Opcode](http://msdn.microsoft.com/en-us/d97953df-669b-4c55-b1a8-925022b339b7) win:Start ou win:Stop são tratados como o início ou fim de um período, respectivamente.  Períodos aninhados ou sobrepostos não podem ser exibidos. Pares de eventos que começam em um thread e terminam em outro não podem ser exibidos.  
+1.  Eventos que tenham [Opcode](/windows/desktop/WES/eventmanifestschema-opcodetype-complextype) win:Start ou win:Stop são tratados como o início ou fim de um período, respectivamente.  Períodos aninhados ou sobrepostos não podem ser exibidos. Pares de eventos que começam em um thread e terminam em outro não podem ser exibidos.  
   
-2.  Um evento cujo Opcode não é win:Start nem win:Stop é tratado como um sinalizador de marcador, a menos que seu [Nível](http://msdn.microsoft.com/en-us/dfa4e0a9-4d89-4f50-aef9-1dae0dc11726) (campo de EVENT_RECORD.EVENT_HEADER.EVENT_DESCRIPTOR) seja win:Verbose ou superior.  
+2.  Um evento cujo Opcode não é win:Start nem win:Stop é tratado como um sinalizador de marcador, a menos que seu [Nível](/windows/desktop/WES/defining-severity-levels) (campo de EVENT_RECORD.EVENT_HEADER.EVENT_DESCRIPTOR) seja win:Verbose ou superior.  
   
 3.  Em todos os outros casos, o evento é tratado como uma mensagem.  
   
@@ -52,7 +53,7 @@ A Visualização Simultânea pode exibir eventos do EventSource como marcadores 
 ### <a name="text"></a>Texto  
  Se uma mensagem de texto formatada do tipo printf tiver sido definida para o evento, ela será exibida como a descrição do Marcador. Caso contrário, a descrição será o nome do evento e o valor de cada campo de carga.  
   
-## <a name="customizing-visualization-of-eventsource-events"></a>Personalizando a Visualização de Eventos do EventSource  
+## <a name="customize-visualization-of-eventsource-events"></a>Personalizar a visualização de Eventos do EventSource  
  Você pode personalizar como os eventos do EventSource são exibidos, adicionando os campos apropriados ao evento, conforme descrito nas seções a seguir.  
   
 ### <a name="marker-type"></a>Tipo de marcador  
@@ -95,4 +96,4 @@ A Visualização Simultânea pode exibir eventos do EventSource como marcadores 
 >  O uso de SpanID para aninhar intervalos, permitir que eles parcialmente sobreponham o mesmo thread ou permitir que eles comecem em um thread e terminem em outro não tem suporte.  
   
 ## <a name="see-also"></a>Consulte também  
- [Marcadores da Visualização Simultânea](../profiling/concurrency-visualizer-markers.md)
+ [Marcadores do visualizador de simultaneidade](../profiling/concurrency-visualizer-markers.md)

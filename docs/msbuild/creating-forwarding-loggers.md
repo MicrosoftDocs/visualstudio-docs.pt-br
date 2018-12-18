@@ -13,18 +13,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b95b0725e0cbb3a7568e51298fb83f05b74f18fb
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6597bfcdcbfb5acddbbbf8804d198036c5b98c53
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880964"
 ---
-# <a name="creating-forwarding-loggers"></a>Criando agentes de log de encaminhamento
+# <a name="create-forwarding-loggers"></a>Criar agentes de encaminhamento
 Agentes de encaminhamento melhoram a eficiência de log, permitindo que você escolha os eventos que deseja monitorar ao compilar projetos em um sistema com vários processadores. Ao habilitar agentes de encaminhamento, você pode impedir que eventos indesejados sobrecarreguem o agente central, diminuindo o tempo de build e desorganizando o log.  
   
  Para criar um agente de encaminhamento, você pode implementar a interface <xref:Microsoft.Build.Framework.IForwardingLogger> e, em seguida, implementar seus métodos manualmente ou usar a classe <xref:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger> e seus métodos pré-configurados. (O último será suficiente para a maioria dos aplicativos.)  
   
-## <a name="register-events-and-respond-to-them"></a>Registre eventos e responda a eles  
+## <a name="register-events-and-respond-to-them"></a>Registrar eventos e responder a eles  
  Um agente de encaminhamento reúne informações sobre eventos de build à medida que são relatados pelo mecanismo de build secundária, que é um processo de trabalho criado pelo processo de build principal durante um build em um sistema com vários processadores. Em seguida, o agente de encaminhamento seleciona eventos para encaminhar para o agente central, com base nas instruções que você atribuiu a ele.  
   
  Você deve registrar os agentes de encaminhamento para manipular os eventos que deseja monitorar. Para registrar-se para eventos, os agentes devem substituir o método <xref:Microsoft.Build.Utilities.Logger.Initialize%2A>. Este método agora inclui um parâmetro opcional, `nodecount`, que pode ser definido como o número de processadores no sistema. (Por padrão, o valor é 1.)  
@@ -34,12 +35,12 @@ Agentes de encaminhamento melhoram a eficiência de log, permitindo que você es
  Em um ambiente com vários processadores, mensagens de evento, provavelmente, serão recebidas fora de ordem. Portanto, você deve avaliar os eventos usando o manipulador de eventos no agente de encaminhamento e programá-lo para determinar quais eventos passar para o redirecionador para serem encaminhados para o agente central. Para fazer isso, você pode usar a classe <xref:Microsoft.Build.Framework.BuildEventContext>, que está anexada a cada mensagem, para ajudar a identificar eventos que deseja encaminhar e, em seguida, transmitir os nomes de eventos para a classe <xref:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger> (ou uma subclasse dela). Quando você usa esse método, nenhuma outra codificação específica é necessária para encaminhar eventos.  
   
 ## <a name="specify-a-forwarding-logger"></a>Especificar um agente de encaminhamento  
- Depois que o agente de encaminhamento tiver sido compilado em um assembly, você deve informar o [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] para usá-lo durante builds. Para fazer isso, use as opções `/FileLogger`, `/FileLoggerParameters` e `/DistributedFileLogger` junto com MSBuild.exe. A opção `/FileLogger` informa ao MSBuild.exe que o agente está diretamente anexado. A opção `/DistributedFileLogger` significa que há um arquivo de log por nó. Para definir parâmetros no agente de encaminhamento, use a opção `/FileLoggerParameters`. Para obter mais informações sobre essas e outras opções do MSBuild.exe, consulte [Referência de Linha de Comando](../msbuild/msbuild-command-line-reference.md).  
+ Depois que o agente de encaminhamento tiver sido compilado em um assembly, você deve informar o [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] para usá-lo durante builds. Para fazer isso, use as opções `-FileLogger`, `-FileLoggerParameters` e `-DistributedFileLogger` junto com *MSBuild.exe*. A opção `-FileLogger` informa ao *MSBuild.exe* de que o agente está diretamente anexado. A opção `-DistributedFileLogger` significa que há um arquivo de log por nó. Para definir parâmetros no agente de encaminhamento, use a opção `-FileLoggerParameters`. Para obter mais informações sobre essas e outras opções do *MSBuild.exe*, confira [Referência de linha de comando](../msbuild/msbuild-command-line-reference.md).  
   
 ## <a name="multi-processor-aware-loggers"></a>Agentes com reconhecimento de multiprocessador  
- Quando você cria um projeto em um sistema com vários processadores, as mensagens de build de cada processador não são intercaladas automaticamente em uma sequência unificada. Em vez disso, você deve estabelecer uma prioridade de agrupamento de mensagens usando a classe <xref:Microsoft.Build.Framework.BuildEventContext> que está anexada a cada mensagem. Para obter mais informações sobre o build de vários processadores, consulte [Registrando em log em um ambiente multiprocessador](../msbuild/logging-in-a-multi-processor-environment.md).  
+ Quando você cria um projeto em um sistema com vários processadores, as mensagens de build de cada processador não são intercaladas automaticamente em uma sequência unificada. Em vez disso, você deve estabelecer uma prioridade de agrupamento de mensagens usando a classe <xref:Microsoft.Build.Framework.BuildEventContext> que está anexada a cada mensagem. Para obter mais informações sobre o build de multiprocessador, confira [Registrando em log em um ambiente multiprocessador](../msbuild/logging-in-a-multi-processor-environment.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Obtaining Build Logs (Obtendo logs de build)](../msbuild/obtaining-build-logs-with-msbuild.md)   
- [Agentes de Log de Build](../msbuild/build-loggers.md)   
+ [Obter logs de build](../msbuild/obtaining-build-logs-with-msbuild.md)   
+ [Agentes de build](../msbuild/build-loggers.md)   
  [Registrando em log em um ambiente multiprocessador](../msbuild/logging-in-a-multi-processor-environment.md)

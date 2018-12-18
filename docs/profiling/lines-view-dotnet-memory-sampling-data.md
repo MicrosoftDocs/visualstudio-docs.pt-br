@@ -12,34 +12,35 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: cb92e37a8bc1543cfdf2efa142768d9edbea4f69
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 67148180fab5c712ee15551cf60a8874f427dc0a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854839"
 ---
-# <a name="lines-view---net-memory-sampling-data"></a>Exibição de linhas – Dados de Amostragem de Memória do .NET
+# <a name="lines-view---net-memory-sampling-data"></a>Exibição de linhas – dados de amostragem de memória do .NET
 A exibição de Linhas dos dados de criação de perfil de alocação de memória do .NET que usa o método de amostragem lista as instruções que alocaram memória durante o processo de criação de perfil. As colunas também incluem o tamanho e o número de alocações.  
   
  Em um arquivo de origem, uma instrução pode abranger mais de uma linha em um arquivo de origem, e uma única linha pode incluir mais de uma instrução.  
   
  Uma instrução é identificada pelo seguinte:  
   
--   O arquivo de origem que contém a instrução da função.  
+- O arquivo de origem que contém a instrução da função.  
   
--   A função que contém a instrução.  
+- A função que contém a instrução.  
   
--   A linha de origem em que a instrução se inicia.  
+- A linha de origem em que a instrução se inicia.  
   
--   O caractere na linha de origem em que a instrução se inicia.  
+- O caractere na linha de origem em que a instrução se inicia.  
   
--   A linha de origem em que a instrução termina.  
+- A linha de origem em que a instrução termina.  
   
--   O caractere na linha de origem em que a instrução termina.  
+- O caractere na linha de origem em que a instrução termina.  
   
- A coluna de Nome de Linha fornece uma concatenação classificável dos dados do identificador.  
+  A coluna de Nome de Linha fornece uma concatenação classificável dos dados do identificador.  
   
- Por definição, uma instrução não chama outras funções. Portanto, apenas valores exclusivos são listados.  
+  Por definição, uma instrução não chama outras funções. Portanto, apenas valores exclusivos são listados.  
   
 |Column|Descrição|  
 |------------|-----------------|  

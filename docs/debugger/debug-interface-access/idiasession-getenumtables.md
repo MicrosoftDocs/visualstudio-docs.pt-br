@@ -1,5 +1,5 @@
 ---
-title: ': Getenumtables | Microsoft Docs'
+title: 'Idiasession:: Getenumtables | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7556999e1455dcfa0d79b131ee4661a77732990f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 4f68da36fc527e0390789df22ed4550a6165adbb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49885831"
 ---
 # <a name="idiasessiongetenumtables"></a>IDiaSession::getEnumTables
 Recupera um enumerador para todas as tabelas contidas no repositório de símbolos.  
@@ -36,7 +37,7 @@ HRESULT getEnumTables (
  [out] Retorna um [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md) objeto. Use esta interface para enumerar as tabelas no repositório de símbolos.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo apresenta uma função geral que usa o `getEnumTables` método para obter um objeto de enumerador específico. Se o enumerador for encontrado, a função retorna um ponteiro que pode ser convertido para a interface desejada; Caso contrário, a função retornará `NULL`.  

@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 56f14b399a904c2584e81c2b6c8f344654b69a18
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 587104668449fe9c2ec0dd36fe20e76fec6be6fa
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837497"
 ---
 # <a name="idebugprocess2attach"></a>IDebugProcess2::Attach
-Anexa o Gerenciador de sessão de depuração (SDM) para o processo.  
+O Gerenciador de sessão de depuração (SDM) é anexado ao processo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,28 +47,28 @@ int Attach(
   
 #### <a name="parameters"></a>Parâmetros  
  `pCallback`  
- [in] Um [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objeto que é usado para notificação de eventos de depuração.  
+ [in] Uma [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objeto que é usado para notificação de eventos de depuração.  
   
  `rgguidSpecificEngines`  
- [in] Uma matriz de GUIDs de mecanismos de depuração a ser usado para depurar programas em execução no processo. Esse parâmetro pode ser um valor nulo. Consulte comentários para obter detalhes.  
+ [in] Uma matriz de GUIDs de mecanismos de depuração a ser usado para depurar programas em execução no processo. Esse parâmetro pode ser um valor nulo. Consulte os comentários para obter detalhes.  
   
  `celtSpecificEngines`  
- [in] O número de depuração mecanismos no `rgguidSpecificEngines` matriz e o tamanho do `rghrEngineAttach` matriz.  
+ [in] O número de depuração mecanismos na `rgguidSpecificEngines` matriz e o tamanho do `rghrEngineAttach` matriz.  
   
  `rghrEngineAttach`  
- [out no] Uma matriz de códigos HRESULT retornado por mecanismos de depuração. O tamanho dessa matriz é especificado no `celtSpecificEngines` parâmetro. Cada código é normalmente `S_OK` ou `S_ATTACH_DEFERRED`. O segundo indica que o DE está atualmente anexado ao nenhum programa.  
+ [no, out] Uma matriz de códigos HRESULT retornado pelos mecanismos de depuração. O tamanho dessa matriz é especificado no `celtSpecificEngines` parâmetro. Cada código é normalmente `S_OK` ou `S_ATTACH_DEFERRED`. O último indica que o DE está atualmente conectado a nenhum programa.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. A tabela a seguir mostra os outros valores possíveis.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. A tabela a seguir mostra os outros valores possíveis.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`|O processo especificado já está anexado ao depurador.|  
 |`E_ATTACH_DEBUGGEE_PROCESS_SECURITY_VIOLATION`|Ocorreu uma violação de segurança durante o procedimento de anexação.|  
-|`E_ATTACH_CANNOT_ATTACH_TO_DESKTOP`|Um processo de área de trabalho não é possível anexar o depurador.|  
+|`E_ATTACH_CANNOT_ATTACH_TO_DESKTOP`|Um processo de área de trabalho não pode ser anexado ao depurador.|  
   
 ## <a name="remarks"></a>Comentários  
- Anexar a um processo anexa o SDM para todos os programas em execução no processo que pode ser depurado por mecanismos de depuração (DE) especificados no `rgguidSpecificEngines` matriz. Definir o `rgguidSpecificEngines` parâmetro para um valor nulo de valor ou incluir `GUID_NULL` na matriz para anexar a todos os programas no processo.  
+ Anexar a um processo anexa o SDM para todos os programas em execução no processo que pode ser depurado com os mecanismos de depuração (DES) especificados no `rgguidSpecificEngines` matriz. Defina a `rgguidSpecificEngines` parâmetro para um valor nulo de valor ou incluir `GUID_NULL` na matriz para anexar a todos os programas no processo.  
   
  Todos os eventos de depuração que ocorrem no processo são enviados para o determinado [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objeto. Isso `IDebugEventCallback2` objeto é fornecido quando o SDM chama esse método.  
   

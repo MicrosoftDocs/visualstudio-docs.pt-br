@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9083a2efd9b1d0bf889610f0c6b74447175ee464
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: af32775430efb375cca1afcc78d3a463cc2ae749
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925767"
 ---
 # <a name="idebugcomplussymbolprovidergetassemblyname"></a>IDebugComPlusSymbolProvider::GetAssemblyName
-Recupera o nome do assembly fornecido seu domínio de aplicativo e o módulo.  
+Recupera o nome do assembly dado seu domínio de aplicativo e o módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +46,7 @@ int GetAssemblyName(
   
 #### <a name="parameters"></a>Parâmetros  
  `ulAppDomainID`  
- [in] Identificador para o domínio de aplicativo.  
+ [in] Identificador para o domínio do aplicativo.  
   
  `guidModule`  
  [in] Identificador exclusivo para o módulo.  
@@ -54,10 +55,10 @@ int GetAssemblyName(
  [out] Retorna o nome do assembly.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto que expõe o [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto que expõe a [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::GetAssemblyName(  

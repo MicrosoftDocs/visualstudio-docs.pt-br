@@ -1,3 +1,0 @@
-Com suporte no Microsoft Edge (navegador Edge). Com suporte também em aplicativos da Windows Store (Microsoft Edge no Windows 10). Consulte [Informações sobre versão](../../../javascript/reference/javascript-version-information.md).  
-  
- Não há suporte nos seguintes modos de documento: Quirks, padrões Internet Explorer 6, padrões Internet Explorer 7, padrões Internet Explorer 8, padrões Internet Explorer 9, padrões Internet Explorer 10, padrões Internet Explorer 11. Sem suporte no Windows 8.1.

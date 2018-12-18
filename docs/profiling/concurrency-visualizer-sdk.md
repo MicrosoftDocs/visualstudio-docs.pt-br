@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7268e786c7d68d642778f0c0dca31de170b424b4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c02959f30f89b8f7c79527026404099a4452a827
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34691180"
 ---
 # <a name="concurrency-visualizer-sdk"></a>SDK do Visualizador de Simultaneidade
 Descreve como instrumentalizar o código-fonte usando o SDK de Visualização Simultânea para exibir informações adicionais na Visualização Simultânea. É possível associar os dados adicionais a fases e eventos em seu código. Estas visualizações adicionais são conhecidas como *marcadores*.  Para ver um passo a passo introdutório, consulte [Apresentando o SDK da Visualização Simultânea](http://go.microsoft.com/fwlink/?LinkId=235405).  
@@ -59,7 +60,7 @@ Descreve como instrumentalizar o código-fonte usando o SDK de Visualização Si
   
 4.  Adicione uma instrução using ao seu código.  
   
-    ```  
+    ```cpp  
     using namespace Concurrency::diagnostic;  
     ```  
   
@@ -120,7 +121,7 @@ Descreve como instrumentalizar o código-fonte usando o SDK de Visualização Si
     CvWriteFlag(series, _T("Writing a flag"));  
     ```  
   
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="see-also"></a>Consulte também  
   
 |Título|Descrição|  
 |-----------|-----------------|  

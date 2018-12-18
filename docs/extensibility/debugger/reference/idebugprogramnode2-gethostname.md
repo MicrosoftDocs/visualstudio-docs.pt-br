@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 80b26d0113e9d627a567a1381ec04eec54b062b0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6e47b8a18c631fe99b67020a4805d019b29fc234
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816764"
 ---
 # <a name="idebugprogramnode2gethostname"></a>IDebugProgramNode2::GetHostName
-Obtém o nome do processo que está hospedando o programa.  
+Obtém o nome do processo que hospeda o programa.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,16 +43,16 @@ int GetHostName (
   
 #### <a name="parameters"></a>Parâmetros  
  `dwHostNameType`  
- [in] Um valor da [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) enumeração que especifica o tipo de nome a ser retornado.  
+ [in] Um valor a partir de [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) enumeração que especifica o tipo de nome a ser retornado.  
   
  `pbstrHostName`  
  [out] Retorna o nome do processo de hospedagem.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um simples `CProgram` objeto que expõe o [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) interface. Este exemplo ignora o `dwHostNameType` parâmetro e retorna somente o nome do programa, conforme extraído do nome base do caminho de arquivo do módulo.  
+ O exemplo a seguir mostra como implementar esse método para um simples `CProgram` objeto que expõe o [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) interface. Este exemplo ignora o `dwHostNameType` parâmetro e retorna somente o nome do programa, conforme extraído o nome base do caminho do arquivo do módulo.  
   
 ```cpp  
 HRESULT CProgram::GetHostName(DWORD dwHostNameType, BSTR* pbstrHostName) {    

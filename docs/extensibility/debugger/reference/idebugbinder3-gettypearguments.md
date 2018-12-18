@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f5e06b51cfea731d94cd0eb53d91b4dbdf6b471
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6ed4e1863313dae173d6737970765ca3d5f0b0b3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49879441"
 ---
 # <a name="idebugbinder3gettypearguments"></a>IDebugBinder3::GetTypeArguments
 Esse método recupera uma lista de tipos de argumento associado a este objeto.  
@@ -52,13 +53,13 @@ int GetTypeArguments(
  [in] O número de campos de argumento para retornar (também especifica o tamanho do `ppFields` matriz).  
   
  `ppFields`  
- [out no] Uma matriz de campos que serão preenchidos no retorno deste método.  
+ [no, out] Uma matriz de campos que serão preenchidos no retorno desse método.  
   
  `pFetched`  
- [out] \(opcional) O número de argumento de tipo campos retornados na verdade.  
+ [out] \(opcional) O número de argumento de tipo campos realmente retornados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  O número de tipos de argumento pode ser obtido com antecedência com [GetTypeArgumentCount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md).  

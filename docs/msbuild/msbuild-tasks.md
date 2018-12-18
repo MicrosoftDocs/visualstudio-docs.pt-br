@@ -13,13 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c2dcb47ec974d4c8735cbada4115c865f7ede4c0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6a380917f3a4eaba71a00ff32f1bc627f47f5d4d
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153196"
 ---
-# <a name="msbuild-tasks"></a>Tarefas do MSBuild
+# <a name="msbuild-tasks"></a>tarefas MSBuild
 Uma plataforma de build precisa de capacidade para executar qualquer número de ações durante o processo de build. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] usa *tarefas* para executar essas ações. Uma tarefa é uma unidade de código executável usada por [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] para executar operações atômicas de build.  
   
 ## <a name="task-logic"></a>Lógica da tarefa  
@@ -29,9 +30,9 @@ Uma plataforma de build precisa de capacidade para executar qualquer número de 
   
  A classe de tarefa também define os parâmetros de entrada e saída disponíveis para a tarefa no arquivo de projeto. Todas as propriedades públicas não estáticas e não abstratas configuráveis expostas pela classe de tarefa podem ser acessadas no arquivo de projeto colocando um atributo correspondente com o mesmo nome no elemento de [tarefa](../msbuild/task-element-msbuild.md).  
   
- Você pode escrever sua própria tarefa por meio da criação de uma classe gerenciada que implementa a interface <xref:Microsoft.Build.Framework.ITask>. Para obter mais informações, consulte [Gravação de tarefas](../msbuild/task-writing.md).  
+ Você pode escrever sua própria tarefa por meio da criação de uma classe gerenciada que implementa a interface <xref:Microsoft.Build.Framework.ITask>. Para saber mais, confira [Produção de tarefas](../msbuild/task-writing.md).  
   
-## <a name="executing-a-task-from-a-project-file"></a>Executando uma tarefa de um arquivo de projeto  
+## <a name="execute-a-task-from-a-project-file"></a>Executar uma tarefa de um arquivo de projeto  
  Antes de executar uma tarefa no seu arquivo de projeto, primeiro você deve mapear o tipo no assembly que implementa a tarefa para o nome da tarefa com o elemento [UsingTask](../msbuild/usingtask-element-msbuild.md). Isso permite que [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] saiba onde procurar a lógica de execução da sua tarefa ao encontrá-la em seu arquivo de projeto.  
   
  Para executar uma tarefa em um arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], crie um elemento com o nome da tarefa como um filho de um elemento `Target`. Se uma tarefa aceita parâmetros, eles são passados como atributos do elemento.  
@@ -60,13 +61,13 @@ Uma plataforma de build precisa de capacidade para executar qualquer número de 
 ```  
   
 ## <a name="included-tasks"></a>Tarefas incluídas  
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] é fornecido com várias tarefas, como [Copiar](../msbuild/copy-task.md), que copia arquivos, [MakeDir](../msbuild/makedir-task.md), que cria diretórios e [Csc](../msbuild/csc-task.md), que compila arquivos de código-fonte [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]. Para obter uma lista completa das tarefas disponíveis e informações de uso, consulte [Referência das tarefas](../msbuild/msbuild-task-reference.md).  
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] é fornecido com várias tarefas, como [Copiar](../msbuild/copy-task.md), que copia arquivos, [MakeDir](../msbuild/makedir-task.md), que cria diretórios e [Csc](../msbuild/csc-task.md), que compila arquivos de código-fonte [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]. Para obter uma lista completa das tarefas disponíveis e informações de uso, confira [Referência de tarefas](../msbuild/msbuild-task-reference.md).  
   
 ## <a name="overridden-tasks"></a>Tarefas substituídas  
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] procura por tarefas em vários locais. O primeiro local está em arquivos com a extensão .OverrideTasks armazenados nos diretórios do .NET Framework. As tarefas nesses arquivos substituem quaisquer outras tarefas com os mesmos nomes, incluindo tarefas no arquivo de projeto. O segundo local está nos arquivos com a extensão .Tasks nos diretórios do .NET Framework. Se a tarefa não for encontrada em um desses locais, a tarefa no arquivo de projeto será usada.  
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] procura por tarefas em vários locais. O primeiro local está em arquivos com a extensão *.OverrideTasks* armazenada nos diretórios do .NET Framework. As tarefas nesses arquivos substituem quaisquer outras tarefas com os mesmos nomes, incluindo tarefas no arquivo de projeto. O segundo local está nos arquivos com a extensão *.Tasks* nos diretórios do .NET Framework. Se a tarefa não for encontrada em um desses locais, a tarefa no arquivo de projeto será usada.  
   
 ## <a name="see-also"></a>Consulte também  
  [Conceitos do MSBuild](../msbuild/msbuild-concepts.md)   
  [MSBuild](../msbuild/msbuild.md)   
- [Escrevendo tarefas](../msbuild/task-writing.md)   
+ [Produção de tarefas](../msbuild/task-writing.md)   
  [Tarefas embutidas](../msbuild/msbuild-inline-tasks.md)

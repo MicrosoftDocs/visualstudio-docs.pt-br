@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31468964"
 ---
 # <a name="idiaaddressmap"></a>IDiaAddressMap
 Fornece controle sobre como o DIA SDK calcula endereços virtuais virtuais e relativos para objetos de depuração.  

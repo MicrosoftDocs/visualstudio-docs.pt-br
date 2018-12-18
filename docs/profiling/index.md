@@ -1,19 +1,21 @@
 ---
 layout: LandingPage
-title: Criação de perfil de seus aplicativos com o Visual Studio | Microsoft Docs
+title: Meça o desempenho do aplicativo usando a criação de perfil | Microsoft Docs
 description: Saiba como usar o Visual Studio 2017 para criar o perfil do desempenho dos seus aplicativos, serviços e ferramentas na linguagem de sua escolha.
+ms.custom: seodec18
 ms.topic: landing-page
 ms.technology: vs-ide-debug
 author: mikejo5000
 ms.author: mikejo
 manager: douge
-ms.openlocfilehash: f574f5e1e87f8fb35a9e8333f7290a8406ede1d7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 972e4b8b58229786d403451ddfd7a49a3fe4d6a0
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065539"
 ---
-# <a name="profiling-in-visual-studio"></a>Criação de perfis no Visual Studio
+# <a name="measure-app-performance-in-visual-studio"></a>Meça o desempenho do aplicativo no Visual Studio
 
 Ferramentas de diagnóstico e criação de perfil ajudam você a diagnosticar o uso de memória e de CPU, além de outros problemas no aplicativo. Com essas ferramentas, você pode acumular dados (como valores de variáveis, chamadas de função e eventos) ao longo do tempo em que você executar o aplicativo no depurador. Você pode exibir o estado do seu aplicativo em pontos diferentes durante a execução do seu código. 
 
@@ -25,7 +27,7 @@ Ferramentas de diagnóstico e criação de perfil ajudam você a diagnosticar o 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_road-map.svg" alt="">
+                            <img src="/media/common/i_road-map.svg" alt="Feature Tour of the Profiler">
                         </div>
                     </div>
                     <div class="cardText">
@@ -43,7 +45,7 @@ Ferramentas de diagnóstico e criação de perfil ajudam você a diagnosticar o 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_code-performance.svg" alt="">
+                            <img src="/media/common/i_code-performance.svg" alt="Get Started with the Diagnostics Tools (CPU Usage)">
                         </div>
                     </div>
                     <div class="cardText">
@@ -61,7 +63,7 @@ Ferramentas de diagnóstico e criação de perfil ajudam você a diagnosticar o 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_video.svg" alt="">
+                            <img src="/media/common/i_video.svg" alt="Watch a Video on the Diagnostics Tools">
                         </div>
                     </div>
                     <div class="cardText">
@@ -79,7 +81,7 @@ Ferramentas de diagnóstico e criação de perfil ajudam você a diagnosticar o 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_code-performance.svg" alt="">
+                            <img src="/media/common/i_code-performance.svg" alt="Get Started analyzing Memory Usage">
                         </div>
                     </div>
                     <div class="cardText">
@@ -97,7 +99,7 @@ Ferramentas de diagnóstico e criação de perfil ajudam você a diagnosticar o 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_get-started.svg" alt="">
+                            <img src="/media/common/i_get-started.svg" alt="Analyze Resource Consumption (XAML)">
                         </div>
                     </div>
                     <div class="cardText">
@@ -115,7 +117,7 @@ Ferramentas de diagnóstico e criação de perfil ajudam você a diagnosticar o 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_get-started.svg" alt="">
+                            <img src="/media/common/i_get-started.svg" alt="Analyze Network Usage (UWP Apps)">
                         </div>
                     </div>
                     <div class="cardText">
@@ -133,7 +135,7 @@ Ferramentas de diagnóstico e criação de perfil ajudam você a diagnosticar o 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_get-started.svg" alt="">
+                            <img src="/media/common/i_get-started.svg" alt="Analyze GPU Usage (Direct3D)">
                         </div>
                     </div>
                     <div class="cardText">
@@ -151,7 +153,7 @@ Ferramentas de diagnóstico e criação de perfil ajudam você a diagnosticar o 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_get-started.svg" alt="">
+                            <img src="/media/common/i_get-started.svg" alt="Analyze Energy Use (UWP Apps)">
                         </div>
                     </div>
                     <div class="cardText">
@@ -169,7 +171,7 @@ Ferramentas de diagnóstico e criação de perfil ajudam você a diagnosticar o 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_whats-new.svg" alt="">
+                            <img src="/media/common/i_whats-new.svg" alt="See What&#39;s New in Profiling Tools">
                         </div>
                     </div>
                     <div class="cardText">

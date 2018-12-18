@@ -1,5 +1,5 @@
 ---
-title: ': Get_initializeddata | Microsoft Docs'
+title: 'Idiasectioncontrib:: Get_initializeddata | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a41c521bbf2a9046c91b9df12f8c14661da91cfc
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 7b972c70fd0cc8a9c7f02476434a7f8f9394a8a2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866500"
 ---
 # <a name="idiasectioncontribgetinitializeddata"></a>IDiaSectionContrib::get_initializedData
 Recupera um sinalizador que indica se a seção contém dados inicializados.  

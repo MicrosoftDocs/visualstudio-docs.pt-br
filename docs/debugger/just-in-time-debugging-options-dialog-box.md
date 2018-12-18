@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de opções Just-In-Time, depuração, | Microsoft Docs
+title: Caixa de diálogo de Just-In-Time, depuração, opções | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -22,27 +22,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7be7dacbe7b3b89b8bdc09515c23d7597e7e55e5
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: a6736e0646193754dbd932e5501a6473ee18c7e6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936323"
 ---
 # <a name="just-in-time-debugging-options-dialog-box"></a>Caixa de diálogo Just-In-Time, Depuração, Opções
-Para acessar o **Just-In-Time** página, vá para o **ferramentas** menu e clique em **opções**. No **opções** caixa de diálogo caixa, expanda o **depuração** nó e selecione **Just-In-Time**. Essa página permite habilitar a depuração Just-In-Time para o código gerenciado, o código nativo e o script. Para obter mais informações, consulte [depuração Just-in-](../debugger/just-in-time-debugging-in-visual-studio.md).  
+Para acessar o **Just-In-Time** página, vá para o **ferramentas** menu e clique em **opções**. No **opções** diálogo caixa, expanda o **depuração** nó e selecione **Just-In-Time**. Essa página permite habilitar a depuração Just-In-Time para o código gerenciado, o código nativo e o script. Para obter mais informações, consulte [depuração Just-in-](../debugger/just-in-time-debugging-in-visual-studio.md).  
   
  Você pode habilitar a depuração Just-In-Time para estes tipos de programa:  
   
--   Gerenciado  
+- Gerenciado  
   
--   Nativo  
+- Nativo  
   
--   script  
+- script  
   
- A depuração Just-In-Time é uma técnica para depurar um programa que é iniciado fora do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Você pode executar um programa criado no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] fora do ambiente do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Se você tiver habilitado a depuração Just-In-Time, uma falha exibirá uma caixa de diálogo que perguntará se você quer depurar.  
+  A depuração Just-In-Time é uma técnica para depurar um programa que é iniciado fora do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Você pode executar um programa criado no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] fora do ambiente do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Se você tiver habilitado a depuração Just-In-Time, uma falha exibirá uma caixa de diálogo que perguntará se você quer depurar.  
   
 ## <a name="associated-warnings"></a>Avisos associados  
- Quando você visita a esta página do **opções** caixa de diálogo, você poderá ver uma mensagem de aviso como esta:  
+ Quando você visita esta página do **opções** caixa de diálogo, você poderá ver uma mensagem de aviso como esta:  
   
  **Outro depurador se registrou como Just-In-Time depurador. Para reparar, habilite Just-In-Time depurar ou executar o reparo do Visual Studio.**  
   
@@ -52,10 +53,10 @@ Para acessar o **Just-In-Time** página, vá para o **ferramentas** menu e cliqu
   
  **Just-In-Time depuração detectados erros de registro. Para reparar, habilite Just-In-Time depurar ou executar o reparo do Visual Studio.**  
   
- Se você ver algum desses avisos, depuração com Just-In-Time [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] requer privilégios de administrador até que você resolveu o problema. Se você tentar habilitar como um não administrador nessas condições, verá a seguinte mensagem de erro:  
+ Se você vir qualquer um desses avisos, depuração com Just-In-Time [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] requer privilégios de administrador até que você tiver corrigido o problema. Se você tentar habilitar como um não administrador nessas condições, verá a seguinte mensagem de erro:  
   
- **O acesso é negado. Um administrador habilitar Just-In-Time de depuração ou repare a instalação do Visual Studio.**  
+ **O acesso é negado. Têm um administrador habilitar Just-In-Time de depuração ou repare a instalação do Visual Studio.**  
   
 ## <a name="see-also"></a>Consulte também  
- [Depurando, caixa de diálogo Opções](../debugger/debugging-options-dialog-box.md)   
+ [Caixa de diálogo depuração, opções](../debugger/debugging-options-dialog-box.md)   
  [Como especificar configurações do depurador](../debugger/how-to-specify-debugger-settings.md)

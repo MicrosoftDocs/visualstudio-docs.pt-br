@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0facdbd5da7d17061039e0a9e7faed2be3bbe4b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b450af1437f9522509913d34976e648da31b91fb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843334"
 ---
 # <a name="idebugcoreserver3diagnosewebdebuggingerror"></a>IDebugCoreServer3::DiagnoseWebDebuggingError
 Falha nas tentativas de determinar o motivo pelo qual um auto-attach.  
@@ -40,14 +41,14 @@ int DiagnoseWebDebuggingError(
   
 #### <a name="parameters"></a>Parâmetros  
  `pszUrl`  
- [in] Não usado no momento; deve ser sempre definido como um valor nulo.  
+ [in] Não usado no momento; sempre deve ser definido como um valor nulo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Estes são os outros códigos de retorno típicos:  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Estes são os outros códigos de retorno típicos:  
   
 |Código|Descrição|  
 |----------|-----------------|  
-|`S_WEBDBG_UNABLE_TO_DIAGNOSE`|Não é possível determinar por que o servidor remoto falhou ao iniciar a depuração.|  
+|`S_WEBDBG_UNABLE_TO_DIAGNOSE`|Não é possível determinar o motivo de falha de servidor remoto iniciar a depuração.|  
 |`S_WEBDBG_DEBUG_VERB_BLOCKED`|Não é possível depurar em um servidor remoto, possivelmente devido a permissões insuficientes ou porque o verbo DEBUG não está habilitado.|  
 |`E_WEBDBG_DEBUG_VERB_BLOCKED`|O servidor web foi bloqueado e está bloqueando o verbo DEBUG, que é necessário para habilitar a depuração.|  
   

@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 519281487e85ec7dffc0e7bb470d044dc2bae885
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 61f82cdeda76cd8660fff47e30edf37c81d154f5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867787"
 ---
 # <a name="idebugbinder3getexceptionobjectandtype"></a>IDebugBinder3::GetExceptionObjectAndType
 Esse método recupera a exceção associada a um objeto, se houver.  
@@ -45,13 +46,13 @@ int GetExceptionObjectAndType(
  [out] Retorna o objeto que representa a exceção.  
   
  `ppField`  
- [out] Retorna o objeto que representa um campo que pode ter causado a exceção (Isso pode ser um valor nulo).  
+ [out] Retorna o objeto que representa um campo específico que pode ter causado a exceção (Isso pode ser um valor nulo).  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 > [!NOTE]
->  Para verificar se há uma exceção, verifique o valor retornado por `ppException`: se ele é um valor nulo, nenhuma exceção é associada este objeto.  
+>  Para verificar se há uma exceção, verifique o valor retornado por `ppException`: se ele for um valor nulo, nenhuma exceção está associada este objeto.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

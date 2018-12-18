@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8bc3fcbced64b7bcd460b1a25e0dc442b6970795
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 97b3289119ec77c191d540285b235bab443ab6f3
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35256862"
 ---
 # <a name="modules-view---sampling-data"></a>Exibição Módulos – dados de amostragem
 A exibição Módulos dos dados de amostragem mostra dados de desempenho agrupados pelos módulos que tiveram a amostragem realizada nos dados de criação de perfil. Cada módulo é a raiz de uma árvore hierárquica. As funções que tiveram a amostragem realizada do módulo são listadas abaixo do nó do módulo.  
@@ -43,5 +44,5 @@ A exibição Módulos dos dados de amostragem mostra dados de desempenho agrupad
   
 ## <a name="see-also"></a>Consulte também  
  [Exibição Módulos – amostragem](../profiling/modules-view-dotnet-memory-sampling-data.md)   
- [Exibição Módulos – Instrumentação](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
+ [Exibição Módulos – instrumentação](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
  [Exibição Módulos](../profiling/modules-view-instrumentation-data.md)

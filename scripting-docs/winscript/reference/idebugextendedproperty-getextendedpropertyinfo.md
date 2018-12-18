@@ -1,11 +1,11 @@
 ---
 title: IDebugExtendedProperty::GetExtendedPropertyInfo | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IDebugExtendedProperty.GetExtendedPropertyInfo
@@ -14,18 +14,19 @@ apilocation:
 helpviewer_keywords:
 - IDebugExtendedProperty::GetExtendedPropertyInfo
 ms.assetid: 56edf538-5082-4653-82b6-e6640d6f61ba
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7109346dd8189395cfdd366ff622dfac00744382
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: f314a9c777eef1716a382c74b9ea250846542da7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935465"
 ---
 # <a name="idebugextendedpropertygetextendedpropertyinfo"></a>IDebugExtendedProperty::GetExtendedPropertyInfo
-Informações estendidas para uma propriedade estendida, que é mais informações do que a mais simples de busca `IDebugProperty`.  
+Informações estendidas para uma propriedade estendida, que é mais informações do que o mais simples de busca `IDebugProperty`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +43,7 @@ HRESULT GetExtendedPropertyInfo(
  [in] Especifica as constantes EX_DBGPROP_INFO_FLAGS que determinam os campos a serem preenchidos no `ExtendedDebugPropertyInfo` estrutura.  
   
  `nRadix`  
- [in] Base a ser usada na interpretação todas as informações numéricas.  
+ [in] Base a ser usado na interpretação de todas as informações numéricas.  
   
  `pExtendedPropertyInfo`  
  [out] Retorna o `ExtendedDebugPropertyInfo` estrutura que descreve a propriedade.  

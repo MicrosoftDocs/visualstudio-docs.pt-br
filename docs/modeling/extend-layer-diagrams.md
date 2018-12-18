@@ -1,6 +1,7 @@
 ---
 title: Estender diagramas de dependência
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,11 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 39d8324479e390d76e25f2c7187ed2c184d3af04
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 304e1fe6356768ae5243ae38748d920444be41e9
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31949274"
 ---
 # <a name="extend-dependency-diagrams"></a>Estender diagramas de dependência
 Você pode escrever código para criar e atualizar diagramas de dependência e validar a estrutura do seu código de programa em diagramas de dependência no Visual Studio. Você pode adicionar comandos que aparecem no menu de atalho (contexto) dos diagramas, personalizar gestos de arrastar e soltar e acessar o modelo de camada de modelos de texto. Você pode empacotar essas extensões para o Visual Studio Integration extensão (VSIX) e distribuí-los para outros usuários do Visual Studio.

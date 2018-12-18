@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132072"
 ---
 # <a name="persisting-data-in-the-msbuild-project-file"></a>Manter os dados no arquivo de projeto do MSBuild
 Talvez seja necessário um subtipo de projeto manter dados específicos de subtipo para o arquivo de projeto para uso posterior. Um subtipo de projeto usa a persistência de arquivo de projeto para atender aos seguintes requisitos:  

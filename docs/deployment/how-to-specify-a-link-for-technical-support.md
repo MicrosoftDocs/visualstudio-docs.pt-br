@@ -22,16 +22,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 24052420ecc04ab8a369f739efa885a6fa821fbd
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 27014dd06f3d368ea0777a8f9e16c27a6d7d7884
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078820"
 ---
-# <a name="how-to-specify-a-link-for-technical-support"></a>Como especificar um link para suporte técnico
-Ao publicar um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo, o **URL de suporte** propriedade identifica uma página da Web ou o compartilhamento de arquivos onde os usuários podem ir para obter informações sobre o aplicativo. Essa propriedade é opcional. Se fornecido, a URL será exibida na entrada do aplicativo **adicionar ou remover programas** caixa de diálogo.  
+# <a name="how-to-specify-a-link-for-technical-support"></a>Como: especificar um link para obter suporte técnico
+Ao publicar uma [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo, o **URL de suporte** propriedade identifica uma página da Web ou compartilhamento de arquivos em que os usuários podem ir para obter informações sobre o aplicativo. Essa propriedade é opcional. Se fornecido, a URL será exibida na entrada do aplicativo **adicionar ou remover programas** caixa de diálogo.  
   
- O **URL de suporte** propriedade pode ser definida no **publicar** página do **Project Designer**.  
+ O **URL de suporte** propriedade pode ser definida na **publicar** página da **Project Designer**.  
   
 ### <a name="to-specify-a-support-url"></a>Para especificar uma URL de suporte  
   
@@ -43,8 +44,8 @@ Ao publicar um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]
   
 4.  Clique em **descrição**.  
   
-5.  No **URL de suporte** campo, insira um caminho totalmente qualificado para um compartilhamento UNC, página da Web ou site da Web.  
+5.  No **URL de suporte** , insira um caminho totalmente qualificado para um compartilhamento UNC, página da Web ou site da Web.  
   
 ## <a name="see-also"></a>Consulte também  
- [Publicando aplicativos ClickOnce](../deployment/publishing-clickonce-applications.md)   
- [Como publicar um aplicativo ClickOnce usando o Assistente de Publicação](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+ [Publicar aplicativos ClickOnce](../deployment/publishing-clickonce-applications.md)   
+ [Como: publicar um aplicativo ClickOnce usando o Assistente de publicação](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

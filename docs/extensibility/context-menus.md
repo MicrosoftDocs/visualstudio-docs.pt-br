@@ -13,17 +13,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa957e949127663eca7d4e619919edcc07c7a29b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: afd67578bee63408b50e402fb0bd8b29be3fc6eb
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232527"
 ---
 # <a name="context-menus"></a>Menus de contexto
-Menus de contexto são exibidos quando um usuário clica com o botão direito em uma região ativa da área cliente e desmarque quando o botão direito do mouse é liberado.  
+Menus de contexto são exibidos quando um usuário clica com o botão direito em uma região ativa da área de cliente e limpar quando o botão direito do mouse é liberado.  
   
-## <a name="editor-context-menus"></a>Menus de Contexto do Editor  
- Interceptando `ECMD_SHOWCONTEXTMENU`, seu serviço de linguagem pode controlar os menus de contexto que serão exibido no editor. Para exibir seu próprio menu de contexto, lidar com esse comando quando ele é passado para o <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> chamando <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowContextMenu%2A>. Se você não lidar com este comando, o IDE exibe um menu de contexto padrão fornecido para o editor. Você também pode controlar o conteúdo do menu de contexto em uma base por marcador. Para obter mais informações sobre isso, consulte [usando marcadores de texto com a API herdado](../extensibility/using-text-markers-with-the-legacy-api.md) e [interceptando comandos de serviço de linguagem herdado](../extensibility/internals/intercepting-legacy-language-service-commands.md).  
+## <a name="editor-context-menus"></a>Menus de contexto do Editor  
+ Interceptando `ECMD_SHOWCONTEXTMENU`, seu serviço de linguagem pode controlar os menus de contexto serão exibido no editor. Para exibir seu próprio menu de contexto, lidar com esse comando quando ele é passado para seus <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> chamando <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowContextMenu%2A>. Se você não tratar esse comando, o IDE exibirá um menu de contexto padrão fornecido para o editor. Você também pode controlar o conteúdo do menu de contexto em uma base por marcador. Para obter mais informações sobre isso, consulte [usar marcadores de texto com a API herdada](../extensibility/using-text-markers-with-the-legacy-api.md) e [interceptar comandos do serviço de linguagem herdado](../extensibility/internals/intercepting-legacy-language-service-commands.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Desenvolver um serviço de linguagem herdado](../extensibility/internals/developing-a-legacy-language-service.md)   

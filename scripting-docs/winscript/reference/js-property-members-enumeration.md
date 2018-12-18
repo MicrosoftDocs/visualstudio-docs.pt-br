@@ -1,16 +1,18 @@
 ---
-title: "Enumeração JS_PROPERTY_MEMBERS | Microsoft Docs"
-ms.custom: 
+title: Enumeração JS_PROPERTY_MEMBERS | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: JS_PROPERTY_MEMBERS
-apilocation: jscript9diag.dll
+apiname:
+- JS_PROPERTY_MEMBERS
+apilocation:
+- jscript9diag.dll
 ms.assetid: 3b870e5c-5518-4073-8384-f0c9c1777d9e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +21,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24733846"
 ---
 # <a name="jspropertymembers-enumeration"></a>Enumeração JS_PROPERTY_MEMBERS
 Sinaliza para especificar o tipo de informação a ser retornada em uma solicitação para membros de um objeto.  

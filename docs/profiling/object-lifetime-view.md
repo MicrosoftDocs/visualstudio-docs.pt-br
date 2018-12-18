@@ -18,14 +18,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a160e3298d14d406b756493a97b31f0f12cdad1d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 247c81d46ee8f5ae916a2a024620e4f4eb864194
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35255613"
 ---
 # <a name="object-lifetime-view"></a>Exibição do tempo de vida do objeto
-A exibição de Tempo de vida do objeto está disponível quando **Também coletar dados de tempo de vida do objeto .NET** estiver marcada nas páginas de propriedade de Sessão de desempenho.  
+A exibição Tempo de Vida do Objeto está disponível quando **Também coletar dados de tempo de vida do objeto .NET** está marcada nas páginas de propriedades da **Sessão de Desempenho**.  
   
  O coletor de lixo do [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] gerencia a alocação e liberação de memória para seu aplicativo. Para otimizar o desempenho do coletor de lixo, o heap gerenciado é dividido em três gerações: 0, 1 e 2. O coletor de lixo do tempo de execução armazena novos objetos na geração 0. Os objetos que sobrevivem as coletas são promovidos e armazenados para as gerações 1 e 2.  
   
@@ -41,7 +42,7 @@ A exibição de Tempo de vida do objeto está disponível quando **Também colet
 |**Nome do Módulo**|O nome do módulo que contém a função.|  
 |**Caminho do Módulo**|O demarcador do módulo que contém a função.|  
   
-## <a name="instance-data"></a>Dados de Instância  
+## <a name="instance-data"></a>Dados de instância  
  Dados de instância indicam o número de objetos do tipo que foram criados na execução de criação de perfil e a geração na qual os objetos foram desalocados pelo coletor de lixo.  
   
 |Column|Descrição|  
@@ -53,7 +54,7 @@ A exibição de Tempo de vida do objeto está disponível quando **Também colet
 |**Instâncias de Ger 2 Coletadas**|O número de instâncias do tipo que foram desalocadas na geração 2 do algoritmo de coleta de lixo.|  
 |**Instâncias Ativas ao Final**|O número de instâncias do tipo que não foram desalocadas até o final da execução de criação de perfil.|  
   
-## <a name="size-byte-data"></a>Dados de Tamanho (Byte)  
+## <a name="size-byte-data"></a>Dados de tamanho (bytes)  
  Dados de tamanho (byte) indicam o tamanho de objetos do tipo que foram criados na execução de criação de perfil e a quantidade de memória que foi recuperada em cada geração na qual os objetos foram desalocados.  
   
 |Column|Descrição|  
@@ -64,7 +65,7 @@ A exibição de Tempo de vida do objeto está disponível quando **Também colet
 |**Bytes de Ger 1 Coletados**|O tamanho das instâncias do tipo que foram desalocadas na geração 1 do algoritmo de coleta de lixo.|  
 |**Bytes de Ger 2 Coletados**|O tamanho das instâncias do tipo que foram desalocadas na geração 2 do algoritmo de coleta de lixo.|  
   
-## <a name="large-object-heap-data"></a>Dados de Heap de Objetos Grandes  
+## <a name="large-object-heap-data"></a>Dados de heap de objeto grande  
  O alocador de memória .NET gerencia objetos muito grandes em um local separado de heap gerenciado padrão. Dados de heap de objeto grande indicam o número e tamanho dos objetos do tipo que foram gerenciados neste local.  
   
 |Column|Descrição|  

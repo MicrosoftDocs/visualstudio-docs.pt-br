@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b5fc3fb1ad607eb7efb1ba20265545c18b1c1b46
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2b288d9995797a000f16533fcee9dafd85171722
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864602"
 ---
 # <a name="idebugexpression2evaluatesync"></a>IDebugExpression2::EvaluateSync
 Esse método avalia a expressão de forma síncrona.  
@@ -49,24 +50,24 @@ int EvaluateSync(
  [in] Uma combinação de sinalizadores do [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) enumeração que controlam a avaliação da expressão.  
   
  `dwTimeout`  
- [in] Tempo máximo, em milissegundos, de espera antes de retornar desse método. Use `INFINITE` aguardar indefinidamente.  
+ [in] Tempo máximo, em milissegundos, para aguardar antes de retornar do método. Use `INFINITE` para aguardar indefinidamente.  
   
  `pExprCallback`  
  [in] Esse parâmetro é sempre um valor nulo.  
   
  `ppResult`  
- [out] Retorna o [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objeto que contém o resultado da avaliação de expressão.  
+ [out] Retorna o [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objeto que contém o resultado da avaliação da expressão.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Alguns códigos de erro comuns são:  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará um código de erro. Alguns códigos de erro típicos são:  
   
 |Erro|Descrição|  
 |-----------|-----------------|  
-|E_EVALUATE_BUSY_WITH_EVALUATION|Outra expressão atualmente está sendo avaliada, e não há suporte para a avaliação da expressão simultâneas.|  
+|E_EVALUATE_BUSY_WITH_EVALUATION|Outra expressão está sendo avaliada no momento, e não há suporte para a avaliação da expressão simultâneas.|  
 |E_EVALUATE_TIMEOUT|Avaliação atingiu o tempo limite.|  
   
 ## <a name="remarks"></a>Comentários  
- Para avaliação síncrona, não é necessário enviar um evento para o Visual Studio após a conclusão da avaliação.  
+ Para avaliação síncrona, não é necessário enviar um evento retorne ao Visual Studio após a conclusão da avaliação.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como implementar esse método para um simples `CExpression` objeto que implementa o [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) interface.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131308"
 ---
 # <a name="source-control-design-decisions"></a>Decisões de Design de controle do código-fonte
 As decisões de design a seguir devem ser consideradas para projetos ao implementar o controle de origem.  

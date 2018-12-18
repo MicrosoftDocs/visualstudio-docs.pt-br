@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ae83bf4d0f8ba6435a962f5c1477e460d69ae27f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8c740c853fff0701bf27d3c37d69141440525b44
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875769"
 ---
 # <a name="bplocationdatastring"></a>BP_LOCATION_DATA_STRING
-Usada para definir pontos de interrupção de dados se baseiam em uma cadeia de caracteres que o usuário pode inserir no ambiente de desenvolvimento integrado (IDE).  
+Usada para definir pontos de interrupção de dados se baseiam em uma cadeia de caracteres que o usuário pode inserir do ambiente de desenvolvimento integrado (IDE).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,16 +41,16 @@ typedef struct _BP_LOCATION_DATA_STRING {
  O [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objeto que representa o thread em que o ponto de interrupção ocorre.  
   
  `bstrContext`  
- O contexto do ponto de interrupção no código, geralmente um nome de método ou função como visto em uma pilha de chamadas.  
+ O contexto do ponto de interrupção dentro do código, geralmente, um nome de método ou função, como visto em uma pilha de chamadas.  
   
  `bstrDataExpr`  
  A cadeia de caracteres de dados que o usuário insere para definir o ponto de interrupção.  
   
  `dwNumElements`  
- O número de elementos na cadeia de dados no qual o ponto de interrupção ocorre.  
+ O número de elementos na cadeia de caracteres de dados no qual o ponto de interrupção ocorre.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é membro do [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura como parte de uma união.  
+ Essa estrutura é um membro do [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura como parte de uma união.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

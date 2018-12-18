@@ -1,5 +1,5 @@
 ---
-title: ': Findlinesbyrva | Microsoft Docs'
+title: 'Idiasession:: Findlinesbyrva | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e14b41fe3e7595ef56364fa92b0153f4f457fdd6
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 2e2f3713407ad17f468e125a1592ee8d684d27d3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49869737"
 ---
 # <a name="idiasessionfindlinesbyrva"></a>IDiaSession::findLinesByRVA
-Recupera as linhas em um compiland especificado que contém um endereço relativo virtual (RVA) especificado.  
+Recupera as linhas em um compiland especificado que contêm um endereço relativo virtual (RVA) especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,13 +42,13 @@ HRESULT findLinesByRVA (
  [in] Especifica o número de bytes do intervalo de endereços para cobrir com essa consulta.  
   
  `ppResult`  
- [out] Retorna um [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objeto que contém uma lista de todas as linha de números que abrange o intervalo de endereços especificado.  
+ [out] Retorna um [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objeto que contém uma lista de todas as linha de números que abrangem o intervalo de endereços especificado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo mostra uma função que obtém todos os números de linha contidos na função especificada usando o endereço de virtual relativo da função e comprimento.  
+ Este exemplo mostra uma função que obtém todos os números de linha contidos na função especificada usando o endereço virtual relativo da função e o comprimento.  
   
 ```C++  
 IDiaEnumLineNumbers* GetLineNumbersByRVA(IDiaSymbol *pFunc, IDiaSession *pSession)  

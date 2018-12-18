@@ -1,5 +1,5 @@
 ---
-title: Interface de usuário personalizada (VSPackage de controle do código-fonte) | Microsoft Docs
+title: Interface do usuário personalizada (VSPackage de controle do código-fonte) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,48 +14,49 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ebd2361e94e9b1430f5bac99f2e71dc53a02ebf1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bc8158325d975aec4bd522fddad2375001d2f72e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49919332"
 ---
-# <a name="custom-user-interface-source-control-vspackage"></a>Interface de usuário personalizada (VSPackage de controle de origem)
-Um VSPackage declara seus itens de menu e seus estados de padrão por meio do arquivo de tabela de comando do Visual Studio (. VSCT). O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ambiente de desenvolvimento integrado (IDE) exibe os itens de menu em seus estados padrão até que o VSPackage é carregado. Subsequentemente, o <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> método é chamado para habilitar ou desabilitar itens de menu.  
+# <a name="custom-user-interface-source-control-vspackage"></a>Interface do usuário personalizada (VSPackage de controle de origem)
+Um VSPackage declara seus itens de menu e seus estados padrão por meio da tabela de comando do Visual Studio (*VSCT*) arquivos. O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] o ambiente de desenvolvimento integrado (IDE) exibe os itens de menu em seus estados padrão até que o VSPackage seja carregado. Subsequentemente, o <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> método é chamado para habilitar ou desabilitar itens de menu.  
   
- Um VSPackage pode definir uma chave do registro para que o VSPackage possa ser carregado automaticamente dependendo do contexto de interface do usuário de um usuário de comando, embora normalmente uma fonte de controlar VSPackage deve carregar sob demanda em vez de simplesmente alternar para um determinado contexto de interface do usuário. Para obter mais informações sobre a chave de registro AutoLoadPackages, consulte [Gerenciando VSPackages](../../extensibility/managing-vspackages.md).  
+ Um VSPackage pode definir uma chave do registro para que o VSPackage possa ser carregado automaticamente, dependendo do contexto de (UI) de interface de usuário um comando, embora geralmente controlam a uma fonte de VSPackage deve ser carregado sob demanda em vez de simplesmente alternar para um determinado contexto de interface do usuário. Para obter mais informações sobre o **AutoLoadPackages** registro chave, consulte [gerenciar VSPackages](../../extensibility/managing-vspackages.md).  
   
-## <a name="vspackage-ui"></a>Interface de usuário VSPackage  
- Um pacote de controle de origem é implementado como um VSPackage e não usa nenhuma interface do usuário do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Cada controle de origem VSPackage deve especificar seus próprio elementos de interface do usuário como itens de menu, grupos de menus, janelas de ferramentas, barras de ferramentas e qualquer interface de usuário necessária para definir opções específicas para o controle de origem VSPackage. Esses elementos de interface do usuário podem ser habilitados estática ou dinamicamente. Elementos de interface do usuário estáticos são definidos em um arquivo. VSCT e são exibidos se o VSPackage está carregado ou não. Elementos de interface do usuário dinâmicos podem estar visíveis dependendo de contexto de interface do usuário um comando específico, como <xref:EnvDTE.Constants.vsContextNoSolution>, ou como resultado de uma chamada para o <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> método. A visibilidade dos elementos de interface do usuário dinâmicas está em conformidade com a estratégia para carregamento atrasado de VSPackages.  
+## <a name="vspackage-ui"></a>Interface do usuário do VSPackage  
+ Um pacote de controle do código-fonte é implementado como um VSPackage e não usa nenhuma interface do usuário do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Cada VSPackage de controle do código-fonte deve especificar seus próprios elementos de interface do usuário, como itens de menu, grupos de menus, janelas de ferramentas, barras de ferramentas e qualquer interface do usuário necessária para definir as opções específicas para o VSPackage de controle de origem. Esses elementos de interface do usuário podem ser habilitados estática ou dinamicamente. Elementos de interface do usuário estáticos são definidos em uma *. VSCT* de arquivo e são exibidos se o VSPackage está carregado ou não. Elementos de interface do usuário dinâmicos podem estar visíveis, dependendo do contexto de interface do usuário um comando específico, como <xref:EnvDTE.Constants.vsContextNoSolution>, ou como resultado de uma chamada para o <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> método. A visibilidade dos elementos de interface do usuário dinâmicas é compatível com a estratégia para carregamento atrasado de VSPackages.  
   
-## <a name="ui-constraints-on-source-control-vspackages"></a>Restrições de interface do usuário em VSPackages de controle do código-fonte  
- Como não é possível remover o controle de origem VSPackage IDE depois que ela é carregada, o VSPackage deve ser capaz de entrar em um estado inativo. Quando um VSPackage recebe notificação que ele não está mais ativo, o VSPackage desabilita sua interface de usuário e ignora qualquer interação externa do IDE. Implementação do VSPackage o <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> método deve ocultar comandos quando o VSPackage não está ativo.  
+## <a name="ui-constraints-on-source-control-vspackages"></a>Restrições de interface do usuário no controle do código-fonte VSPackages  
+ Porque o VSPackage de controle de origem não é possível remover o IDE depois que ele for carregado, o VSPackage deve ser capaz de entrar em um estado inativo. Quando um VSPackage recebe a notificação de que ele não está mais ativo, o VSPackage desabilita sua interface do usuário e ignora qualquer interação externa do IDE. Implementação do VSPackage o <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> método deve ocultar comandos quando o VSPackage não está ativo.  
   
- Cada controle de origem VSPackage deve implementar o `IVsSccProvider` interface. Dois métodos na interface, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetActive%2A> e <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetInactive%2A>, deve ser implementada pelo VSPackage.  
+ Cada controle de origem VSPackage deve implementar o `IVsSccProvider` interface. Dois métodos na interface, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetActive%2A> e <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetInactive%2A>, devem ser implementados por VSPackage.  
   
- O controle de origem VSPackage pode se inscreveu para vários eventos IDE, que são implementados pelo <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3>, <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2>e assim por diante. Além disso, o VSPackage pode ter implementado interfaces habilitadas para registro de retorno de chamada, como o <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence>. Estes devem todas ser ignorados quando inativo.  
+ O controle de fonte VSPackage pode se inscrever para vários eventos IDE, que são implementados pelo <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3>, <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2>e assim por diante. Além disso, o VSPackage pode ter implementado interfaces habilitadas para registro de retorno de chamada, como o <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence>. Todas essas interfaces devem ser ignoradas quando inativo.  
   
- A lista a seguir mostra as interfaces com o estado ativo de um controle de origem VSPackage:  
+ A lista a seguir mostra as interfaces afetadas pelo estado ativo de um VSPackage de controle de origem:  
   
--   Rastrear eventos de documentos do projeto.  
+- Acompanhar eventos de documentos do projeto.  
   
--   Eventos de solução.  
+- Eventos de solução.  
   
--   Interfaces de persistência de solução. Quando inativo, pacotes não devem gravar os arquivos. sln e. suo.  
+- Interfaces de persistência da solução. Quando estiver inativo, pacotes não devem gravar *. sln* e *suo* arquivos.  
   
--   Extensores de propriedade.  
+- Extensores de propriedade.  
   
- Obrigatório <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> e <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>, e também quaisquer interfaces opcionais associados a controle de origem, não são chamados quando o controle de origem VSPackage está inativo.  
+  Exigida <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> e <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>, e também quaisquer interfaces opcionais associados ao controle do código-fonte, não são chamados quando o VSPackage de controle de origem está inativo.  
   
- Quando o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE inicia, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] define o contexto de interface do usuário de comando para a identificação do controle de origem padrão atual ID VSPackage. Isso faz com que a interface do usuário estático do controle de origem ativa VSPackage apareça no IDE sem carregar realmente o VSPackage. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] faz uma pausa para o VSPackage registrar com [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] por meio de <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterScciProvider> antes de fazer qualquer chamada para o VSPackage.  
+  Quando o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] é iniciado do IDE, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] define o contexto de interface do usuário do comando para a ID do controle de origem de padrão atual ID VSPackage. Isso faz com que a interface do usuário estática do controle de origem ativa VSPackage sejam exibidos no IDE sem realmente carregar o VSPackage. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] faz uma pausa para registrar com o VSPackage [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] por meio de <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterScciProvider> antes que ele faz com que todas as chamadas para o VSPackage.  
   
- A tabela a seguir descreve os detalhes específicos sobre como o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE oculta diferentes itens de interface do usuário.  
+  A tabela a seguir descreve detalhes específicos sobre como o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE oculta diferentes itens de interface do usuário.  
   
-|Item de interface do usuário|Descrição|  
-|-------------|-----------------|  
-|Menus e barras de ferramentas|O pacote de controle de origem deve definir os estados de visibilidade inicias do menu e barra de ferramentas para a ID de pacote de controle de origem no [VisibilityConstraints](../../extensibility/visibilityconstraints-element.md) seção do arquivo. VSCT. Isso permite que o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE para definir o estado dos itens de menu adequadamente sem carregar o VSPackage e chamar uma implementação de <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> método.|  
-|Janelas de ferramentas|O controle de origem VSPackage oculta quaisquer janelas de ferramentas que possui quando ela se torna inativo.|  
-|Opções de controle de origem específico VSPackage páginas|A chave do registro HKLM\SOFTWARE\Microsoft\VisualStudio\X.Y\ToolsOptionsPages\VisibilityCmdUIContexts permite que um VSPackage defina os contextos em que ele requer que suas páginas de opções a serem exibidos. Uma entrada de registro sob essa chave precisa ser criada usando o serviço SID (ID) do serviço de controle de origem e atribuindo um valor DWORD de 1. Sempre que ocorre um evento de interface do usuário em um contexto VSPackage é registrado com o controle de origem, o VSPackage será chamado se ele estiver ativo.|  
+| Item de interface do usuário | Descrição |
+| - | - |
+| Menus e barras de ferramentas | O pacote de controle de origem deve definir os estados iniciais de visibilidade de menu e barra de ferramentas para a ID de pacote de controle do código-fonte na [VisibilityConstraints](../../extensibility/visibilityconstraints-element.md) seção o *. VSCT* arquivo. Isso permite que o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE para definir o estado dos itens de menu adequadamente sem carregar o VSPackage e chamar uma implementação do <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> método. |
+| Janelas de ferramentas | O controle do código-fonte VSPackage oculta quaisquer janelas de ferramenta que possui quando ela se torna inativo. |
+| Páginas de opções específicas de VSPackage do controle de origem | A chave do registro **HKLM\SOFTWARE\Microsoft\VisualStudio\X.Y\ToolsOptionsPages\VisibilityCmdUIContexts** permite que um VSPackage definir os contextos em que ele requer que suas páginas de opções a serem exibidos. Uma entrada de registro sob essa chave precisa ser criada usando o serviço SID (ID) do serviço de controle de origem e atribuindo um valor DWORD de 1. Sempre que ocorrer um evento de interface do usuário em um contexto de VSPackage é registrado com o controle de origem, o VSPackage será chamado se ele estiver ativo. |
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>   

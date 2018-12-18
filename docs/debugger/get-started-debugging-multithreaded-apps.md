@@ -1,7 +1,8 @@
 ---
-title: Começar a depurar aplicativos multithread | Microsoft Docs
+title: Saiba como depurar aplicativos multithread
+description: Depurar usando as janelas de pilhas paralelas e inspeção paralela no Visual Studio
 ms.custom: H1HackMay2017
-ms.date: 06/02/2017
+ms.date: 11/16/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
@@ -18,44 +19,45 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 067f28cfbc90d26088b37eb40b730edca37533d2
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 2a6ded522a917dd7207da7731850303535e19fdb
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948979"
 ---
-# <a name="get-started-debugging-a-multithreaded-application-in-visual-studio"></a>Começar a depuração de um aplicativo multithread no Visual Studio
-Visual Studio fornece várias ferramentas e elementos de interface do usuário para ajudá-lo a depurar aplicativos multithread. Este tutorial mostra como usar marcadores de thread, o **pilhas paralelas** janela, o **inspeção paralela** janela pontos de interrupção condicionais e pontos de interrupção de filtro. Este tutorial leva apenas alguns minutos, mas concluí-la irá familiarizá-lo com os recursos para depurar aplicativos multithread.
+# <a name="get-started-debugging-multithreaded-applications"></a>Introdução ao depurar aplicativos multithread
+Visual Studio fornece várias ferramentas e os elementos de interface do usuário para ajudá-lo a depurar aplicativos multi-threaded. Este tutorial mostra como usar marcadores de thread, o **pilhas paralelas** janela, o **inspeção paralela** janela pontos de interrupção condicionais e pontos de interrupção de filtro. Concluir este tutorial você se familiarizará com recursos do Visual Studio para depurar aplicativos multithread.
 
-|         |         |
+| | |
 |---------|---------|
-|  ![ícone de câmera para vídeo](../install/media/video-icon.png "Assistir a um vídeo")  |    [Assista a um vídeo](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugging-Multi-threaded-Apps-in-Visual-Studio-2017-MoZPKMD6D_111787171) na depuração com multithread que mostra as etapas semelhantes. |
+| ![ícone de câmera para vídeo](../install/media/video-icon.png "Assistir a um vídeo") | [Assista a um vídeo](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugging-Multi-threaded-Apps-in-Visual-Studio-2017-MoZPKMD6D_111787171) sobre depuração com multithread que mostra etapas semelhantes. |
 
-Outros tópicos fornecem informações adicionais sobre como usar outras ferramentas de depuração multithread:
+Esses dois tópicos fornecem informações adicionais sobre como usar outras ferramentas de depuração multithread:
 
-- Para um tópico semelhante que mostra como usar o **local do depurador** barra de ferramentas e o **Threads** janela, consulte [passo a passo: depurar um aplicativo multithread](../debugger/how-to-use-the-threads-window.md).
+- Para usar o **local de depuração** barra de ferramentas e o **Threads** janela, consulte [passo a passo: depurar um aplicativo multi-threaded](../debugger/how-to-use-the-threads-window.md).
 
-- Para um tópico semelhante com um exemplo que usa <xref:System.Threading.Tasks.Task> (código gerenciado) e o tempo de execução de simultaneidade (C++), consulte [passo a passo: depurando um aplicativo paralelo](../debugger/walkthrough-debugging-a-parallel-application.md). Para obter dicas de depuração gerais que se aplicam a tipos de aplicativos multithread mais, leia este tópico e o tópico vinculado.
+- Para obter um exemplo que usa <xref:System.Threading.Tasks.Task> (código gerenciado) e o tempo de execução de simultaneidade (C++), consulte [passo a passo: depurar um aplicativo paralelo](../debugger/walkthrough-debugging-a-parallel-application.md). Para dicas de depuração gerais que se aplicam a tipos de aplicativos multithread mais, leia esse tópico e esta.
   
-Para iniciar este tutorial, você precisa de um projeto de aplicativo multi-threaded. Siga as etapas listadas aqui para criar o projeto.  
+Você precisará primeiro um projeto de aplicativo multithread. Segue um exemplo.  
   
-#### <a name="to-create-the-multithreaded-app-project"></a>Para criar o projeto de aplicativo multithread  
+## <a name="create-a-multithreaded-app-project"></a>Criar um projeto de aplicativo multithread  
   
-1.  Sobre o **arquivo** menu, escolha **novo** e, em seguida, clique em **projeto**.  
+1.  No menu **Arquivo**, selecione **Novo** > **Projeto**.  
   
      A caixa de diálogo **Novo Projeto** é exibida.  
   
-2.  No **tipo de projeto**s caixa, clique no idioma de sua escolha: **Visual C#**, **Visual C++**, ou **Visual Basic**.  
+2.  Selecione um idioma: **Visual C#** , **Visual C++**, ou **Visual Basic**.  
   
-3.  No **modelos** caixa, escolha **aplicativo de Console**.  
+3.  Sob **área de trabalho do Windows**, escolha **aplicativo de Console**.  
   
-4.  No **nome** caixa, digite o nome MyThreadWalkthroughApp.  
+4.  No **nome** , insira MyThreadWalkthroughApp.  
   
-5.  Clique em **OK**.  
+5.  Selecione **OK**.  
   
-     Um novo projeto de console é exibido. Quando o projeto tiver sido criado, um arquivo de origem aparecerá. Dependendo do idioma escolhido, o arquivo de origem pode ser chamado Program.cs, MyThreadWalkthroughApp.cpp ou Module1. vb.  
+     Um novo projeto de console é exibido. Depois que o projeto tiver sido criado, um arquivo de origem é exibido. Dependendo da linguagem escolhida, o arquivo de origem pode ser chamado *Program.cs*, *mythreadwalkthroughapp. cpp*, ou *Module1.vb*.  
   
-6.  Excluir o código que aparece no arquivo de origem e substitua-o com o código de exemplo mostrado aqui.
+6.  Exclua o código que aparece no arquivo de origem e substitua-o com o código de exemplo apropriado listando abaixo.
 
     ```csharp
     using System;
@@ -110,25 +112,27 @@ Para iniciar este tutorial, você precisa de um projeto de aplicativo multi-thre
     #include <iostream>
     #include <vector>
 
+    using namespace;
+
     int count = 0;
 
     void doSomeWork() {
 
-        std::cout << "The doSomeWork function is running on another thread." << std::endl;
+        cout << "The doSomeWork function is running on another thread." << endl;
         int data = count++;
         // Pause for a moment to provide a delay to make
         // threads more apparent.
-        std::this_thread::sleep_for(std::chrono::seconds(3));
-        std::cout << "The function called by the worker thread has ended." << std::endl;
+        this_thread::sleep_for(chrono::seconds(3));
+        cout << "The function called by the worker thread has ended." << endl;
     }
 
     int main() {
-        std::vector<std::thread> threads;
+        vector<thread> threads;
 
         for (int i = 0; i < 10; ++i) {
 
-            threads.push_back(std::thread(doSomeWork));
-            std::cout << "The Main() thread calls this after starting the new thread" << std::endl;
+            threads.push_back(thread(doSomeWork));
+            cout << "The Main() thread calls this after starting the new thread" << endl;
         }
 
         for (auto& thread : threads) {
@@ -190,11 +194,11 @@ Para iniciar este tutorial, você precisa de um projeto de aplicativo multi-thre
     End Class
     ```
   
-7.  Sobre o **arquivo** menu, clique em **Salvar tudo**.  
+7.  Sobre o **arquivo** menu, selecione **Salvar tudo**.  
   
-#### <a name="to-begin-the-tutorial"></a>Para começar o tutorial  
+## <a name="debug-the-multithreaded-app"></a>Depurar o aplicativo com multithread  
   
--   No editor de código fonte, procure o seguinte código: 
+1. No editor de código fonte, procure por um dos seguintes trechos de código: 
   
     ```csharp  
     Thread.Sleep(3000);  
@@ -202,181 +206,145 @@ Para iniciar este tutorial, você precisa de um projeto de aplicativo multi-thre
     ```  
   
     ```C++  
-    Thread::Sleep(3000);  
-    Console.WriteLine();  
+    this_thread::sleep_for(chrono::seconds(3));
+    cout << "The function called by the worker thread has ended." << endl; 
     ```  
+
     ```VB
     Thread.Sleep(3000)
     Console.WriteLine()
     ```
-  
-#### <a name="to-start-debugging"></a>Para iniciar a depuração  
-  
-1.  Clique na medianiz esquerda do `Thread.Sleep` ou `Thread::Sleep` instrução para inserir um novo ponto de interrupção.  
-  
-     Na medianiz no lado esquerdo do editor de código fonte, um círculo vermelho é exibido. Isso indica que um ponto de interrupção agora está definido nesse local. 
-  
-2.  Sobre o **depurar** menu, clique em **iniciar depuração** (**F5**).  
-  
-     O Visual Studio compila a solução, o aplicativo começa a ser executada com o depurador anexado e, em seguida, o aplicativo for interrompida no ponto de interrupção.  
-  
-    > [!NOTE]
-    > Se você alternar o foco para a janela do console, clique no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] janela para retornar o foco para [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
-  
-4.  No editor de código fonte, localize a linha que contém o ponto de interrupção:  
-  
-    ```csharp  
-    Thread.Sleep(3000);  
-    ```  
-  
-    ```C++  
-    Thread::Sleep(3000);  
-    ```
 
-    ```VB
-    Thread.Sleep(3000)
-    ```    
+1. Botão esquerdo do mouse na medianiz esquerda do `Thread.Sleep` ou `this_thread::sleep_for` instrução para inserir um novo ponto de interrupção.  
   
-#### <a name="ShowThreadsInSource"></a>Para descobrir o marcador de thread  
+    Na medianiz, um círculo vermelho indica que um ponto de interrupção está definido neste local. 
+  
+2. Sobre o **Debug** menu, selecione **iniciar depuração** (**F5**).  
+  
+    Visual Studio compila a solução, o aplicativo começa a ser executado com o depurador anexado e, em seguida, o aplicativo for interrompida no ponto de interrupção.  
+  
+3. No editor de código fonte, localize a linha que contém o ponto de interrupção.
+  
+### <a name="ShowThreadsInSource"></a>Descobrir o marcador de thread  
 
-1.  Na barra de ferramentas Depurar, clique o **Mostrar Threads na origem** botão ![Mostrar Threads na origem](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker").
+1.  Na barra de ferramentas de depuração, selecione o **Mostrar Threads em origem** botão ![Mostrar Threads em origem](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker").
 
 2. Pressione **F11** uma vez para Avançar a linha de um do depurador de código.
   
-3.  Examine a medianiz no lado esquerdo da janela. Nessa linha, você verá um *marcador de thread* ícone ![marcador de Thread](../debugger/media/dbg-thread-marker.png "ThreadMarker") que se parece com dois threads pano. O marcador de thread indica que um thread está parado nesse local.
+3.  Examine a medianiz no lado esquerdo da janela. Nessa linha, você verá uma *marcador de thread* ícone ![marcador de Thread](../debugger/media/dbg-thread-marker.png "ThreadMarker") que se parece com dois threads trançados. O marcador de thread indica que um thread está parado nesse local.
 
-    Observe que um marcador de thread pode ser parcialmente oculto por um ponto de interrupção. 
+    Um marcador de thread pode ser parcialmente ocultos, um ponto de interrupção. 
   
-4.  Passe o ponteiro sobre o marcador de thread. Um DataTip aparece. O DataTip mostra o nome e o número de ID do thread para cada thread parado. Nesse caso, o nome é provavelmente `<noname>`. 
+4.  Passe o ponteiro sobre o marcador de thread. Um DataTip é exibido informando que o número de ID de nome e o thread para cada thread parado. Nesse caso, o nome é provavelmente `<noname>`. 
   
-5.  Clique no marcador de thread para ver as opções disponíveis no menu de atalho.
+5.  Selecione o marcador de thread para ver as opções disponíveis no menu de atalho.
     
-## <a name="ParallelStacks"></a>Exibe o local de Threads
+### <a name="ParallelStacks"></a>Exibir os locais de thread
 
-No **pilhas paralelas** janela, você pode alternar entre uma exibição de Threads e (para programação com base em tarefa) modo de exibição de tarefas e você pode exibir informações de pilha de chamada para cada thread. Neste aplicativo, podemos usar o modo de exibição de Threads.
+No **pilhas paralelas** janela, você pode alternar entre um modo de exibição de Threads e (para a programação baseada em tarefa) o modo de exibição de tarefas e você pode exibir informações de pilha de chamada para cada thread. Neste aplicativo, podemos usar o modo de exibição de Threads.
 
-1. Abra o **pilhas paralelas** janela escolhendo **Depurar > Windows > pilhas paralelas**. Você verá algo semelhante a este (a informação exata será diferente dependendo do local atual de cada thread, o hardware e a linguagem de programação).
+1. Abra o **pilhas paralelas** janela escolhendo **Debug** > **Windows** > **pilhas paralelas**. Você deverá ver algo semelhante ao seguinte. As informações exatas variarão dependendo do local atual de cada thread, o hardware e a linguagem de programação.
 
     ![Janela de pilhas paralelas](../debugger/media/dbg-multithreaded-parallel-stacks.png "ParallelStacksWindow")
 
-    Neste exemplo, da esquerda para direita obtemos essas informações:
+    Neste exemplo, da esquerda para direita, podemos ver essas informações para código gerenciado:
     
-    - O thread principal (lado esquerdo) foi interrompido no `Thread.Start` (o ponto de interrupção é indicado pelo ícone de marcador de thread ![marcador de Thread](../debugger/media/dbg-thread-marker.png "ThreadMarker")).
-    - Dois threads inseriu o `ServerClass.InstanceMethod`, um dos quais é o thread atual (seta amarela), enquanto o outro thread foi interrompido no `Thread.Sleep`.
-    - Um novo thread (à direita) também está iniciando (interrompido em `ThreadHelper.ThreadStart`).
+    - O thread principal (lado esquerdo) foi interrompido no `Thread.Start`, onde o ponto de interrupção é indicado pelo ícone de marcador de thread ![marcador de Thread](../debugger/media/dbg-thread-marker.png "ThreadMarker").
+    - Dois threads inseriu a `ServerClass.InstanceMethod`, um dos quais é o thread atual (seta amarela), enquanto o outro thread foi interrompido no `Thread.Sleep`.
+    - Um novo thread (à direita) também está sendo iniciado, mas é interrompido no `ThreadHelper.ThreadStart`.
 
 2.  Clique com botão direito entradas na **pilhas paralelas** janela para ver as opções disponíveis no menu de atalho.
 
-    Você pode executar várias ações desses menus de atalho, mas para este tutorial mostraremos mais esses detalhes no **inspeção paralela** janela (próximas seções).
+    Você pode executar várias ações desses menus de atalho, mas para este tutorial, mostraremos mais desses detalhes na **inspeção paralela** janela (próximas seções).
 
     > [!NOTE]
-    > Se você está mais interessado em ver uma lista de exibir informações sobre cada thread, use o **Threads** janela em vez disso. Consulte [passo a passo: depurar um aplicativo multithread](../debugger/how-to-use-the-threads-window.md).
+    > Para ver uma lista para exibir informações sobre cada thread, use o **Threads** janela em vez disso. Ver [instruções passo a passo: depurar um aplicativo multi-threaded](../debugger/how-to-use-the-threads-window.md).
 
-## <a name="set-a-watch-on-a-variable"></a>Definir uma inspeção em uma variável
+### <a name="set-a-watch-on-a-variable"></a>Definir uma inspeção em uma variável
 
-1. Abra o **inspeção paralela** janela escolhendo **Depurar > Windows > inspeção paralela > paralela inspecionar 1**.
+1. Abra o **inspeção paralela** janela selecionando **Debug** > **Windows** > **inspeção paralela**  >  **Inspeção 1 paralela**.
 
-2. Clique na célula onde você pode ver o `<Add Watch>` texto (ou a célula de cabeçalho vazio na coluna 4º), tipo `data`, e pressione Enter.
+2. Selecione a célula em que você consulte os `<Add Watch>` texto (ou a célula de cabeçalho vazio na coluna 4º) e insira `data`.
 
     Os valores para a variável de dados para cada thread aparecem na janela.
 
-3. Clique novamente na célula onde você pode ver o `<Add Watch>` texto (ou a célula de cabeçalho vazio na coluna 5), tipo `count`, e pressione Enter.
+3. Selecione a célula em que você consulte os `<Add Watch>` texto (ou a célula de cabeçalho vazio na coluna 5ª) e insira `count`.
 
-    Os valores para a variável de contagem para cada thread aparecem na janela. (Se você não ver essa quantidade de informações, pressione F11 mais algumas vezes para Avançar a execução de threads no depurador.)
+    Os valores para o `count` variável para cada thread aparecem na janela. Se você não vir ainda muitas informações, tente pressionar **F11** algumas vezes para Avançar a execução dos threads no depurador.
 
-    ![Janela Inspecionar paralelas](../debugger/media/dbg-multithreaded-parallel-watch.png "ParallelWatchWindow")
+    ![Janela de inspeção em paralelo](../debugger/media/dbg-multithreaded-parallel-watch.png "ParallelWatchWindow")
 
-4. Clique em uma das linhas na janela para exibir as opções disponíveis.
+4. Clique duas vezes em uma das linhas na janela para ver as opções disponíveis.
 
-## <a name="flagging-and-unflagging-threads"></a>Sinalizando e removendo a sinalização de threads  
-Você pode sinalizar threads para dar atenção especial. Sinalizar threads é uma boa maneira de controlar os threads importantes e ignorar threads que não faz sobre.  
+### <a name="flag-and-unflag-threads"></a>Sinalizar e remover sinalizador de threads  
+Você pode sinalizar os threads para manter o controle de threads importantes e ignorar os outros threads.  
   
-#### <a name="to-flag-threads"></a>Para sinalizar threads  
+1. No **inspeção paralela** janela, mantenha pressionada a **Shift** de chave e selecionar várias linhas.
 
-1. No **inspeção paralela** janela, mantenha a tecla SHIFT pressionada e selecione várias linhas.
+2. Clique com botão direito e selecione **sinalizador**.
 
-2. Clique com botão direito e escolha **sinalizador**.
-
-    Agora, todos os threads sinalizados. Agora, você pode filtrar para mostrar somente threads sinalizados.
+    Todos os threads sinalizados. Agora, você pode filtrar para mostrar somente threads sinalizados.
   
-3.  No **inspeção paralela** janela, localize a **Mostrar somente Threads sinalizados** botão ![Mostrar Threads sinalizados](../debugger/media/dbg-threads-show-flagged.png "ThreadMarker").  
+3.  No **inspeção paralela** janela, selecione a **Mostrar somente Threads sinalizados** botão ![Mostrar Threads sinalizados](../debugger/media/dbg-threads-show-flagged.png "ThreadMarker").  
   
-4.  Clique o **Mostrar somente Threads sinalizados** botão.  
-  
-    Somente o thread sinalizado agora aparece na lista.
+    Apenas os threads sinalizados aparecem na lista.
 
     > [!TIP]
-    > Quando você sinalizou alguns threads, você pode clique uma linha de código no editor de código e escolha **executar Threads sinalizados Cursor** (certifique-se de que você escolha o código que todos os threads sinalizados alcançará). Isso irá pausar threads na linha selecionada de código, tornando mais fácil controlar a ordem de execução pelo [congelar e descongelar threads](#bkmk_freeze).
+    > Depois que você sinalizou alguns threads, pode ser uma linha de código no editor de códigos com o botão direito e escolha **executar Threads sinalizados Cursor**. Certifique-se de escolher entrará em código que todos os threads sinalizados. Visual Studio fará uma pausa segmentos na linha selecionada de código, tornando mais fácil controlar a ordem de execução pelo [congelando e Descongelando threads](#bkmk_freeze).
 
-5.  Clique o **Mostrar somente Threads sinalizados** botão para voltar ao **Mostrar todos os Threads** modo.
+4.  Selecione o **Mostrar somente Threads sinalizados** botão novamente para voltar ao **Mostrar todos os Threads** modo.
     
-#### <a name="to-unflag-threads"></a>Para remover a sinalização de threads
+5. Para remover a sinalização de threads, clique com botão direito um ou mais threads sinalizados na **inspeção paralela** janela e selecione **Remover sinalização**.
 
-Para sinalizar threads, clique uma ou mais threads sinalizados no **inspeção paralela** janela e escolha **Unflag**.
-
-## <a name="bkmk_freeze"></a> Congelar e descongelar a execução do thread 
+### <a name="bkmk_freeze"></a> Congelar e descongelar a execução de thread 
 
 > [!TIP]
-> Você pode congelar e descongelar (suspender e retomar) threads para controlar a ordem na qual os threads executam trabalho. Isso pode ajudá-lo a resolver problemas de simultaneidade, como deadlocks e condições de corrida.
-  
-#### <a name="to-freeze-and-unfreeze-threads"></a>Para congelar e descongelar threads  
-  
+> Você pode congelar e descongelar (suspender e retomar) threads para controlar a ordem na qual threads executam o trabalho. Isso pode ajudá-lo a resolver problemas de simultaneidade, como deadlocks e condições de corrida.
+   
 1.  No **inspeção paralela** janela, com todas as linhas selecionadas, clique com botão direito e selecione **congelar**.
 
-    Na segunda coluna, um ícone de pausar agora é exibido para cada linha. O ícone de pausa indica que o thread está congelado.
+    Na segunda coluna, um ícone de pausa é exibido para cada linha. O ícone de pausa indica que o thread está congelado.
 
-2.  Desmarque as linhas clicando em apenas uma linha.
+2.  Desmarque todas as outras linhas, selecionando apenas uma linha.
 
-3.  Clique em uma linha e selecione **descongelar**.
+3.  Uma linha com o botão direito e selecione **descongelar**.
 
-    O ícone de pausar desaparece nesta linha, que indica que o thread não está congelado.
+    O ícone de pausa desaparece nesta linha, que indica que o thread não está congelado.
 
-4.  Alterne para o editor de código e clique em **F11**. Executa somente o thread não congelado.
+4.  Alterne para o editor de código e pressione **F11**. Somente as execuções de thread não congeladas.
 
-    O aplicativo também pode criar uma instância de alguns novos threads. Observe que quaisquer novos threads são sem sinalizador e não estão congelados.
+    O aplicativo também pode criar uma instância de alguns novos threads. Quaisquer novos threads são sem sinalização e não estão congelados.
 
-## <a name="bkmk_follow_a_thread"></a> Execute um único Thread usando pontos de interrupção condicionais
+### <a name="bkmk_follow_a_thread"></a> Execute um único thread com pontos de interrupção condicionais
 
-Às vezes, pode ser útil acompanhar a execução de um único thread no depurador. Uma forma que você pode fazer isso é congelando threads que não estão interessados em, mas em alguns cenários, talvez seja conveniente seguir um único thread sem congelamento de outros threads (para reprodução de um determinado erro, por exemplo). Para seguir um segmento sem congelamento de outros threads, você deve evitar dividir em código, exceto no thread que você está interessado. Você pode fazer isso definindo uma [ponto de interrupção condicional](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression).
+Ele pode ser útil acompanhar a execução de um único thread no depurador. É uma maneira de fazer isso ao congelar threads que não está interessado. Em alguns cenários você precisa seguir um único thread sem congelamento de outros threads, por exemplo, para reproduzir um bug específico. Para seguir um thread sem congelamento de outros threads, você deve evitar a interrupção no código, exceto no thread em que você está interessado. Você pode fazer isso definindo uma [ponto de interrupção condicional](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression).
 
-Você pode definir pontos de interrupção em diferentes condições, como o nome do thread ou a ID do thread. Outro método que pode ser útil é definir a condição nos dados que você sabe que serão exclusivos para cada thread. Este é um cenário comum de depuração, no qual você está mais interessado em alguns valores de dados específico que em qualquer thread específico.
+Você pode definir pontos de interrupção em diferentes condições, como o nome do thread ou a ID do thread. Pode ser útil é definir a condição nos dados que você sabe que é exclusivo para cada thread. Isso é um cenário comum de depuração, no qual você está mais interessado em alguns valores de dados específico que em qualquer thread específico.
 
-#### <a name="to-follow-a-single-thread"></a>A seguir um único thread
+1. O ponto de interrupção que você criou anteriormente com o botão direito e selecione **condições**.
 
-1. Clique com botão direito no ponto de interrupção que você criou anteriormente e escolha **condições**.
-
-2. No **configurações de ponto de interrupção** , digite `data == 5` para a expressão condicional.
+2. No **configurações de ponto de interrupção** janela, digite `data == 5` para a expressão condicional.
 
     ![Ponto de interrupção condicional](../debugger/media/dbg-multithreaded-conditional-breakpoint.png "ConditionalBreakpoint")
 
     > [!TIP]
-    > Se você está mais interessado em um segmento específico, use um nome de thread ou a ID do thread para a condição. Para fazer isso no **configurações de ponto de interrupção** janela, selecione **filtro** em vez de **expressão condicional**e siga as dicas de filtro. Talvez você queira nomear seus threads no código do aplicativo (como segmentos IDs alterar quando você reiniciar o depurador).
+    > Se você estiver mais interessado em um thread específico, use um nome de thread ou a ID do thread para a condição. Para fazer isso na **configurações de ponto de interrupção** janela, selecione **filtro** em vez de **expressão condicional**e siga as dicas de filtro. Você talvez queira nomear seus threads no código do aplicativo, conforme as IDs de threads mudam quando você reiniciar o depurador.
 
 3. Fechar o **configurações de ponto de interrupção** janela.
 
-4. Clique a reinicialização ![aplicativo reiniciar](../debugger/media/dbg-tour-restart.png "RestartApp") botão reiniciar a sessão de depuração.
+4. Selecione a reinicialização ![aplicativo reinicie](../debugger/media/dbg-tour-restart.png "RestartApp") botão reiniciar a sessão de depuração.
 
-    Você interromperá em código no thread para o qual a variável de dados é 5. Examinar a seta amarela (contexto do depurador atual) a **inspeção paralela** janela para verificar se.
+    Você vai entrar no código no thread em que o valor da variável de dados é 5. No **inspeção paralela** janela, procure a seta amarela indicando o contexto atual do depurador.
 
-5. Agora, passar por código (F10) e entrar no código (F11) e acompanhar a execução de thread único.
+5. Agora, você poderá passar por código (**F10**) e intervir no código (**F11**) e siga a execução de thread único.
 
-    Desde que a condição de ponto de interrupção é exclusiva para o thread, e o depurador não ocorrências de qualquer outro ponto de interrupção em outros threads (talvez seja necessário desabilitá-las), você pode percorrer o código e entrar no código sem alternar para outro thread.
+    Desde que a condição de ponto de interrupção é exclusiva para o thread e o depurador não usar quaisquer outros pontos de interrupção em outros threads (talvez seja necessário desabilitá-las), você pode step over no código e intervir no código sem alternar para outros threads.
 
     > [!NOTE]
-    > Quando você avança o depurador, todos os threads serão executados. No entanto, o depurador não entrará no código em outros threads, a menos que um dos outros threads atinge um ponto de interrupção. 
-  
-## <a name="more-about-the-multithreaded-debugging-windows"></a>Mais informações sobre janelas de depuração com multithread 
-
-#### <a name="to-switch-to-another-thread"></a>Para alternar para outro thread 
-
-- Para alternar para outro thread, consulte [como: alternar para outro Thread enquanto depuração](../debugger/how-to-switch-to-another-thread-while-debugging.md) 
-
-#### <a name="to-learn-more-about-the-parallel-stack-and-parallel-watch-windows"></a>Para saber mais sobre as janelas de pilha paralelo e inspeção paralela  
-  
-- Consulte [como: usar a janela de pilha paralela](../debugger/using-the-parallel-stacks-window.md) 
-
-- Consulte [como: usar a janela Inspeção paralela](../debugger/how-to-use-the-parallel-watch-window.md) 
+    > Quando você avança o depurador, todos os threads serão executados. No entanto, o depurador não quebre em código em outros threads, a menos que um dos outros threads atinge um ponto de interrupção. 
   
 ## <a name="see-also"></a>Consulte também  
- [Depurar aplicativos multithread](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [Como mudar para outro thread durante a depuração](../debugger/how-to-switch-to-another-thread-while-debugging.md)
+[Depurar aplicativos multi-threaded](../debugger/debug-multithreaded-applications-in-visual-studio.md)  
+[Como mudar para outro thread durante a depuração](../debugger/how-to-switch-to-another-thread-while-debugging.md)  
+[Como: usar a janela de pilha paralela](../debugger/using-the-parallel-stacks-window.md)  
+[Como usar a janela Inspeção Paralela](../debugger/how-to-use-the-parallel-watch-window.md)  

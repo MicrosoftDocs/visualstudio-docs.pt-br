@@ -7,28 +7,30 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 566558390e29f9198b2328463dfce26327f76565
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 332d7599543efbe5ee6e15ccc89d5fce595e5341
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566873"
 ---
 # <a name="customizing-element-tools"></a>Ferramentas de elemento personalizadas
-Algumas definições de DSL representam um conceito único como um grupo de elementos. Por exemplo, se você criar um modelo no qual um componente tem um conjunto fixo de portas, convém sempre ter as portas a serem criados ao mesmo tempo como seu componente pai. Portanto, você precisa personalizar a ferramenta de criação de elemento para que ele cria um grupo de elementos em vez de apenas um. Para fazer isso, você pode personalizar como a ferramenta de criação do elemento é inicializada.
+Em algumas definições de DSL, você pode representar um conceito único como um grupo de elementos. Por exemplo, se você criar um modelo no qual um componente tem um conjunto fixo de portas, você sempre queira as portas a serem criados ao mesmo tempo como seu componente pai. Portanto, você precisa personalizar a ferramenta de criação de elemento para que ele cria um grupo de elementos em vez de apenas um. Para fazer isso, você pode personalizar como a ferramenta de criação de elemento é inicializada.
 
  Você também pode substituir o que acontece quando a ferramenta é arrastada para o diagrama ou um elemento.
 
 ## <a name="customizing-the-content-of-an-element-tool"></a>Personalizar o conteúdo de uma ferramenta de elemento
- Cada ferramenta do elemento armazena uma instância de um <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> EGP (), que contém uma versão serializada de um ou mais elementos de modelo e links. Por padrão, o EGP de uma ferramenta de elemento contém uma instância da classe que você especificar para a ferramenta. Você pode alterar isso substituindo *YourLanguage*`ToolboxHelper.CreateElementToolPrototype`. Esse método é chamado quando o pacote DSL é carregado.
+ Cada ferramenta do elemento armazena uma instância de um <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> (EGP), que contém uma versão serializada de um ou mais elementos de modelo e links. Por padrão, o EGP de uma ferramenta de elemento contém uma instância da classe que você especificar para a ferramenta. Você pode alterar isso substituindo *YourLanguage*`ToolboxHelper.CreateElementToolPrototype`. Esse método é chamado quando o pacote DSL é carregado.
 
- Um parâmetro do método é a ID da classe que você especificou na definição de DSL. Quando o método é chamado com a classe que você está interessado, você pode adicionar elementos adicionais para o EGP.
+ Um parâmetro do método é a ID da classe que você especificou na definição de DSL. Quando o método é chamado com a classe que você está interessado, você pode adicionar elementos adicionais no EGP.
 
- O EGP deve incluir a incorporação de links de um elemento principal para os elementos da subsidiária. Ele também pode incluir links de referência.
+ O EGP deve incluir links de um elemento principal para os elementos da subsidiária de incorporação. Ele também pode incluir links de referência.
 
- O exemplo a seguir cria um elemento principal e dois elementos inseridos. A classe principal é chamada resistência e tem duas relações de incorporação para elementos nomeados Terminal. Propriedades da função inserido são denominadas Terminal1 e Terminal2, e têm uma multiplicidade de 1..1.
+ O exemplo a seguir cria um elemento principal e dois elementos incorporados. A classe principal é chamada Resistor, e ele tem duas relações de incorporação para elementos nomeados de Terminal. As propriedades da função de inserção são nomeadas Terminal1 e Terminal2 e ambos tenham uma multiplicidade de 1..1.
 
-```
+```csharp
 using Microsoft.VisualStudio.Modeling; ...
 public partial class CircuitDiagramToolboxHelper
 {

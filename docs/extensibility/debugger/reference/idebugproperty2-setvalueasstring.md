@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5fb55fb6f9a90cf39120be408428524f64463d3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d8f165ade12f6a4d8661ca4b0070efb1452ec09a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903030"
 ---
 # <a name="idebugproperty2setvalueasstring"></a>IDebugProperty2::SetValueAsString
 Define o valor de uma propriedade de uma determinada cadeia de caracteres.  
@@ -47,13 +48,13 @@ int SetValueAsString (
  [in] Uma cadeia de caracteres que contém o valor a ser definido.  
   
  `nRadix`  
- [in] Uma base a ser usada na interpretação todas as informações numéricas. Isso pode ser 0 para tentar determinar a base automaticamente.  
+ [in] Uma base a ser usado na interpretação de todas as informações numéricas. Isso pode ser 0 para tentar determinar a base automaticamente.  
   
  `dwTimeout`  
- [in] Especifica o tempo máximo, em milissegundos, de espera antes de retornar desse método. Use `INFINITE` aguardar indefinidamente.  
+ [in] Especifica o tempo máximo, em milissegundos, para aguardar antes de retornar do método. Use `INFINITE` para aguardar indefinidamente.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna o código de erro. A tabela a seguir mostra os outros valores possíveis.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará o código de erro. A tabela a seguir mostra os outros valores possíveis.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  

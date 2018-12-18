@@ -13,21 +13,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e06757307a71d34e2d38aa24695915b7e64bc8d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 64b83107d4dda72aea7db9e9c911305c96de7097
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836366"
 ---
 # <a name="how-to-control-messages-view"></a>Como controlar a exibição de mensagens
 Com Spy + +, você tem controle considerável sobre o conteúdo de um [exibição de mensagens](../debugger/messages-view.md) janela. Você pode [iniciar e parar](../debugger/how-to-start-and-stop-the-message-log-display.md) exibir as mensagens a qualquer momento e você pode especificar:  
   
--   Quais tipos de mensagem que você deseja ver.  
+- Quais tipos de mensagem que você deseja ver.  
   
--   Qual o windows que você deseja monitorar.  
+- Qual o windows que você deseja monitorar.  
   
--   O formato de exibição de linhas de mensagem.  
+- O formato de exibição para linhas de mensagem.  
   
- Essas configurações estão disponíveis a partir de [caixa de diálogo de opções de mensagem](../debugger/message-options-dialog-box.md), e se aplicam somente ao ativo [exibição de mensagens](../debugger/messages-view.md) janela. Para abrir essa caixa de diálogo, escolha **mensagens de Log** do **Spy** menu.  
+  Essas configurações estão disponíveis a partir o [caixa de diálogo de opções de mensagem](../debugger/message-options-dialog-box.md), e elas se aplicam apenas à visualização ativa [exibição de mensagens](../debugger/messages-view.md) janela. Para abrir essa caixa de diálogo, escolha **mensagens de Log** da **Spy** menu.  
   
- Três painéis com guias Opções de mensagem estão disponíveis. Para obter mais informações, consulte [guia janelas, caixa de diálogo de opções de mensagem](../debugger/windows-tab-message-options-dialog-box.md), [guia mensagens, caixa de diálogo de opções de mensagem](../debugger/messages-tab-message-options-dialog-box.md), e [guia saída, caixa de diálogo de opções de mensagem](../debugger/output-tab-message-options-dialog-box.md).
+  Três painéis com guias Opções de mensagem estão disponíveis. Para obter mais informações, consulte [guia do Windows, a caixa de diálogo de opções de mensagem](../debugger/windows-tab-message-options-dialog-box.md), [guia mensagens, caixa de diálogo de opções de mensagem](../debugger/messages-tab-message-options-dialog-box.md), e [guia saída, caixa de diálogo de opções de mensagem](../debugger/output-tab-message-options-dialog-box.md).

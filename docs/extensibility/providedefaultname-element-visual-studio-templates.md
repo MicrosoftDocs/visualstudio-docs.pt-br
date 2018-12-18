@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c56ad565dfffd454eeca465aa4097c077fdc0a65
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a187df0e50a2948ab6f1ef3a0fffea651dca23b9
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636006"
 ---
 # <a name="providedefaultname-element-visual-studio-templates"></a>Elemento ProvideDefaultName (modelos do Visual Studio)
-Especifica se o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sistema de projeto irá gerar um nome padrão para o modelo de **Adicionar Novo Item** ou **novo projeto** caixa de diálogo.  
+Especifica se o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sistema de projeto irá gerar um nome padrão para o modelo a **Adicionar Novo Item** ou **novo projeto** caixa de diálogo.  
   
  \<VSTemplate >  
  \<TemplateData >  
@@ -30,7 +31,7 @@ Especifica se o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sistem
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <ProvideDefaultName> true/false </ProvideDefaultName>  
 ```  
   
@@ -47,22 +48,22 @@ Especifica se o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sistem
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele exibe em um a **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo.|  
   
 ## <a name="text-value"></a>Valor de texto  
  Um valor de texto é obrigatório.  
   
- O texto deve ser `true` ou `false`, que indica se deve ou não gerar um nome padrão para o modelo de **Adicionar Novo Item** ou **novo projeto** caixa de diálogo.  
+ O texto deve ser `true` ou `false`, que indica se deve ou não gerar um nome padrão para o modelo na **Adicionar Novo Item** ou **novo projeto** caixa de diálogo.  
   
 ## <a name="remarks"></a>Comentários  
  `ProvideDefaultName` é um elemento opcional. O valor padrão é `true`.  
   
- Se o `ProvideDefaultName` elemento `false`, o **nome** caixas do **Adicionar Novo Item** e **novo projeto** caixas de diálogo contêm o valor `<Enter_name>`.  
+ Se o `ProvideDefaultName` elemento é `false`, o **nome** caixas dos **Add New Item** e **novo projeto** caixas de diálogo contêm o valor `<Enter_name>`.  
   
- Use o [DefaultName](../extensibility/defaultname-element-visual-studio-templates.md) elemento para especificar o nome padrão do projeto ou item de **Adicionar Novo Item** e **novo projeto** caixas de diálogo.  
+ Use o [DefaultName](../extensibility/defaultname-element-visual-studio-templates.md) elemento para especificar o nome padrão do projeto ou item a **Adicionar Novo Item** e **novo projeto** caixas de diálogo. Quando o valor da `ProvideDefaultName` elemento é `true`, omissão do `DefaultName` elemento para projetos preenche a caixa de diálogo com o nome do modelo, ou seja, o valor da [nome](../extensibility/name-element-visual-studio-templates.md) elemento.
   
 ## <a name="example"></a>Exemplo  
- O seguinte exemplo de código define o `ProvideDefaultName` elemento `false`.  
+ O seguinte exemplo de código define a `ProvideDefaultName` elemento para `false`.  
   
 ```  
 <VSTemplate Type="Item" Version="3.0.0"  
@@ -82,4 +83,4 @@ Especifica se o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sistem
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)
+ [Criar modelos de projeto e de item](../ide/creating-project-and-item-templates.md)

@@ -1,6 +1,7 @@
 ---
 title: 'CA2230: usar parâmetros para argumentos variáveis'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b4496173284eef595097148046f727c844da39f2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e8139153be130ef05c150bd9d96d4298554c1269
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866708"
 ---
 # <a name="ca2230-use-params-for-variable-arguments"></a>CA2230: usar parâmetros para argumentos variáveis
+
 |||
 |-|-|
 |NomeDoTipo|UseParamsForVariableArguments|
@@ -32,21 +35,23 @@ ms.lasthandoff: 04/19/2018
 ## <a name="cause"></a>Causa
  Um tipo público ou protegido contém um método público ou protegido que usa o `VarArgs` convenção de chamada.
 
-## <a name="rule-description"></a>Descrição da Regra
- O `VarArgs` convenção de chamada é usada com determinadas definições de método que levam a um número variável de parâmetros. Um método usando o `VarArgs` convenção de chamada não é Common Language Specification (CLS) compatível e pode não estar acessível em linguagens de programação.
+## <a name="rule-description"></a>Descrição da regra
+ O `VarArgs` convenção de chamada é usada com determinadas definições de método que levam a um número variável de parâmetros. Um método usando o `VarArgs` convenção de chamada não é Common Language Specification (CLS) em conformidade e pode não estar acessível em linguagens de programação.
 
- No c#, o `VarArgs` convenção de chamada é usada quando a lista de parâmetros do método termina com a `__arglist` palavra-chave. Visual Basic não dá suporte a `VarArgs` chamando convenção e Visual C++ permite o uso apenas em código não gerenciado que usa a elipse `...` notação.
+ No c#, o `VarArgs` convenção de chamada é usada quando a lista de parâmetros do método termina com o `__arglist` palavra-chave. Visual Basic não oferece suporte a `VarArgs` convenção de chamada e Visual C++ permite que seu uso apenas em código não gerenciado que usa a elipse `...` notação.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra em c#, use o [params](/dotnet/csharp/language-reference/keywords/params) palavra-chave em vez de `__arglist`.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra no c#, use o [params](/dotnet/csharp/language-reference/keywords/params) palavra-chave, em vez de `__arglist`.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
  Não suprima um aviso nessa regra.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir mostra dois métodos, um que viola a regra e um que atenda a regra.
+ O exemplo a seguir mostra dois métodos, um que viola a regra e um que satisfaz a regra.
 
  [!code-csharp[FxCop.Usage.UseParams#1](../code-quality/codesnippet/CSharp/ca2230-use-params-for-variable-arguments_1.cs)]
 
 ## <a name="see-also"></a>Consulte também
- <xref:System.Reflection.CallingConventions?displayProperty=fullName> [Independência da linguagem e componentes independentes da linguagem](/dotnet/standard/language-independence-and-language-independent-components)
+
+- <xref:System.Reflection.CallingConventions?displayProperty=fullName>
+- [Componentes de independência de linguagem e componentes independentes da linguagem](/dotnet/standard/language-independence-and-language-independent-components)

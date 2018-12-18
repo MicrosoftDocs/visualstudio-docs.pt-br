@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6e28756873339d504efba417d9e2fe2cc00000b4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b28770482357b7e006793f15438e7880f7efb1ec
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896998"
 ---
 # <a name="moduleinfo"></a>MODULE_INFO
 Descreve um módulo específico (DLL, EXE ou assembly).  
@@ -89,7 +90,7 @@ public struct MODULE_INFO {
  A ordem de carregamento do módulo.  
   
  m_TimeStamp  
- A hora em que o arquivo de símbolo foi modificada pela última vez.  
+ A hora em que o arquivo de símbolo foi modificado pela última vez.  
   
  m_bstrUrlSymbolLocation  
  O local do arquivo de símbolo (por exemplo, ".\\") especificado no módulo. Usado como um local de partida para localizar símbolos para um módulo.  
@@ -98,9 +99,9 @@ public struct MODULE_INFO {
  Uma combinação de sinalizadores do [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) enumeração que descreve o módulo.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é passada para o [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) método em que ele é preenchido.  
+ Essa estrutura é passada para o [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) método onde ele é preenchido.  
   
- Essa estrutura corresponde a cada módulo listado no **módulos** janela.  
+ Essa estrutura corresponde a cada módulo listado na **módulos** janela.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

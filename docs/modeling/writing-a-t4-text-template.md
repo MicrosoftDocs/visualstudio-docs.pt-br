@@ -11,15 +11,17 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: e41ece25a3dbf3caec47f55c6eb8ec865805d17b
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 0d697f1fed2a7b17862ff4c6f72488674859f754
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967292"
 ---
 # <a name="writing-a-t4-text-template"></a>Gravando um modelo de texto T4
-Um modelo de texto contém o texto que será gerado a partir dele. Por exemplo, um modelo que cria uma página da web contém "\<html >..." e todas as outras partes padrão de uma página HTML. Inserido no modelo são *blocos de controle*, que são fragmentos de código do programa. Os blocos de controle fornecem valores variáveis​e permitem que partes do texto sejam condicionadas e repetidas.
+Um modelo de texto contém o texto que será gerado a partir dele. Por exemplo, um modelo que cria uma página da web conterá "\<html >..." e todas as outras partes padrão de uma página HTML. Inserido no modelo são *blocos de controle*, que são fragmentos de código do programa. Os blocos de controle fornecem valores variáveis​e permitem que partes do texto sejam condicionadas e repetidas.
 
  Essa estrutura facilita o desenvolvimento de um modelo, porque você pode começar com um protótipo do arquivo gerado e inserir, gradativamente, blocos de controle que variam o resultado.
 
@@ -27,11 +29,11 @@ Um modelo de texto contém o texto que será gerado a partir dele. Por exemplo, 
 
 -   **Diretivas** -elementos que controlam como o modelo é processado.
 
--   **Blocos de texto** - conteúdo que é copiado diretamente para a saída.
+-   **Blocos de texto** – conteúdo que é copiado diretamente para a saída.
 
--   **Blocos de controle** -código que insere os valores de variáveis no texto e controles condicionais ou repetidas partes do texto de programa.
+-   **Blocos de controle** -código de programa que insere valores de variáveis no texto e controla partes condicionais ou repetidas do texto.
 
- Para testar os exemplos neste tópico, copiá-los em um arquivo de modelo conforme descrito em [geração de código de tempo de Design usando modelos de texto T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md). Depois de editar o arquivo de modelo, salvá-lo e, em seguida, inspecione a saída **. txt** arquivo.
+Para testar os exemplos neste tópico, copiá-los em um arquivo de modelo conforme descrito em [geração de código de tempo de Design usando modelos de texto T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md). Depois de editar o arquivo de modelo, salvá-lo e, em seguida, inspecione a saída **. txt** arquivo.
 
 ## <a name="directives"></a>Diretivas
  As diretivas de modelo de texto fornecem instruções gerais ao mecanismo de modelagem de texto sobre como gerar o código de transformação e o arquivo de saída.
@@ -39,11 +41,10 @@ Um modelo de texto contém o texto que será gerado a partir dele. Por exemplo, 
  Por exemplo, a diretiva a seguir especifica que o arquivo de saída deve ter uma extensão .txt:
 
 ```
-
 <#@ output extension=".txt" #>
 ```
 
- Para obter mais informações sobre as diretivas, consulte [diretivas de modelo de texto T4](../modeling/t4-text-template-directives.md).
+ Para obter mais informações sobre diretivas, consulte [diretivas de modelo de texto T4](../modeling/t4-text-template-directives.md).
 
 ## <a name="text-blocks"></a>Blocos de texto
  Um bloco de texto insere o texto diretamente no arquivo de saída. Não há formatação especial para os blocos de texto. Por exemplo, o modelo de texto a seguir produzirá um arquivo de texto que contém a palavra "Olá":
@@ -70,8 +71,7 @@ Hello
  Por exemplo, o seguinte bloco de texto e bloco de controle fazem com que o arquivo de saída contenha a linha "0, 1, 2, 3, 4 Olá!":
 
 ```
-
-      <#
+<#
     for(int i = 0; i < 4; i++)
     {
         Write(i + ", ");
@@ -96,7 +96,7 @@ Hello!
  Você pode inserir um bloco de texto sempre que uma instrução `Write();` for permitida no código.
 
 > [!NOTE]
->  Quando você inserir um bloco de texto dentro de uma instrução composta como um loop ou condicional, sempre use chaves {...} para conter o bloco de texto.
+>  Quando você inserir um bloco de texto dentro de uma instrução composta, como um loop ou condicional, sempre use chaves {...} para conter o bloco de texto.
 
 ### <a name="expression-control-blocks"></a>Blocos de controle de expressão
  Um bloco de controle de expressão avalia uma expressão e a converte em uma cadeia de caracteres. Essa cadeia é inserida no arquivo de saída.
@@ -154,7 +154,7 @@ private int Square(int i)
 
  Os recursos de classe devem ser colocados no final do arquivo em que são gravados. Entretanto, você pode `<#@include#>` um arquivo que contenha um recurso de classe, mesmo que a diretiva `include` seja seguida por blocos de texto comum ou de controle padrão.
 
- Para obter mais informações sobre blocos de controle, consulte [blocos de controle do modelo de texto](../modeling/text-template-control-blocks.md).
+ Para obter mais informações sobre os blocos de controle, consulte [blocos de controle de modelo de texto](../modeling/text-template-control-blocks.md).
 
 ### <a name="class-feature-blocks-can-contain-text-blocks"></a>Blocos de recurso de classe podem conter blocos de texto
  Você pode gravar um método que gera texto. Por exemplo:
@@ -193,7 +193,7 @@ private void WriteSquareLine(int i)
 <#@ assembly name="$(SolutionDir)library\MyAssembly.dll" #>
 ```
 
- A diretiva de assembly não tem nenhum efeito um [modelo de texto pré-processados](../modeling/run-time-text-generation-with-t4-text-templates.md).
+ A diretiva de assembly não tem nenhum efeito um [modelo de texto pré-processado](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
  Para obter mais informações, consulte [diretiva de Assembly T4](../modeling/t4-assembly-directive.md).
 
@@ -206,16 +206,18 @@ private void WriteSquareLine(int i)
 
  Você pode criar quantas diretivas quiser de `assembly` e `import`. Você deve posicioná-las antes de blocos de texto e de controle.
 
- Para obter mais informações, consulte [a diretiva de importação T4](../modeling/t4-import-directive.md).
+ Para obter mais informações, consulte [diretiva de importação T4](../modeling/t4-import-directive.md).
 
-###  <a name="Include"></a> Incluindo código e texto
+### <a name="Include"></a> Incluindo código e texto
  A diretiva `include` insere o texto de outro arquivo de modelo. Por exemplo, esta diretiva insere o conteúdo de `test.txt`.
 
- `<#@ include file="c:\test.txt" #>`
+```
+<#@ include file="c:\test.txt" #>
+```
 
  O conteúdo incluído é processado quase como se fizesse parte do modelo de texto de inclusão. Entretanto, você pode incluir um arquivo que contenha um bloco de recursos de classe `<#+...#>` mesmo se a diretiva include for seguida por blocos de texto comum ou de controle padrão.
 
- Para obter mais informações, consulte [T4 incluem diretiva](../modeling/t4-include-directive.md).
+ Para obter mais informações, consulte [diretiva Include do T4](../modeling/t4-include-directive.md).
 
 ### <a name="utility-methods"></a>Métodos de utilitários
  Existem vários métodos, tal como `Write()`, que estão sempre disponíveis para você em um bloco de controle. Eles incluem métodos para ajudá-lo a recuar a saída e relatar erros.
@@ -229,7 +231,7 @@ private void WriteSquareLine(int i)
 
  Existem várias abordagens para a leitura do arquivo de origem.
 
- **Ler um arquivo no modelo de texto**. Esta é a maneira mais simples de colocar dados no modelo:
+ **Ler um arquivo de modelo de texto**. Esta é a maneira mais simples de colocar dados no modelo:
 
 ```
 <#@ import namespace="System.IO" #>
@@ -238,12 +240,12 @@ private void WriteSquareLine(int i)
 
  **Carregar um arquivo como um modelo navegável**. Um método mais eficiente é ler os dados como um modelo, pelo qual o código do modelo de texto pode navegar. Por exemplo, você pode carregar um arquivo XML e navegá-lo com expressões XPath. Você também pode usar [xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765) para criar um conjunto de classes com o qual você pode ler os dados XML.
 
- **Edite o arquivo de modelo em um diagrama ou um formulário.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] fornece ferramentas que permitem que você editar um modelo como um diagrama ou um formulário do Windows. Isso facilita discutir o modelo com os usuários do aplicativo gerado. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] também cria um conjunto de classes fortemente tipado que reflete a estrutura do modelo. Para obter mais informações, consulte [código de geração de uma linguagem específica de domínio](../modeling/generating-code-from-a-domain-specific-language.md).
+ **Edite o arquivo de modelo em um diagrama ou formulário.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] fornece ferramentas que permitem editar um modelo como um diagrama ou formulário do Windows. Isso facilita discutir o modelo com os usuários do aplicativo gerado. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] também cria um conjunto de classes fortemente tipado que reflete a estrutura do modelo. Para obter mais informações, consulte [código de geração de uma linguagem específica do domínio](../modeling/generating-code-from-a-domain-specific-language.md).
 
 ### <a name="relative-file-paths-in-design-time-templates"></a>Caminhos de arquivo relativos em modelos de tempo de design
- Em um [modelo de texto de tempo de design](../modeling/design-time-code-generation-by-using-t4-text-templates.md), se você quiser fazer referência a um arquivo em um local em relação ao modelo de texto, o uso `this.Host.ResolvePath()`. Você também pode definir `hostspecific="true"` na diretiva `template`:
+ Em um [modelo de texto de tempo de design](../modeling/design-time-code-generation-by-using-t4-text-templates.md), se você quiser referenciar um arquivo em um local relativo ao modelo de texto, use `this.Host.ResolvePath()`. Você também pode definir `hostspecific="true"` na diretiva `template`:
 
-```csharp
+```
 <#@ template hostspecific="true" language="C#" #>
 <#@ output extension=".txt" #>
 <#@ import namespace="System.IO" #>
@@ -253,16 +255,15 @@ private void WriteSquareLine(int i)
 #>
 Content of MyFile.txt is:
 <#= myFile #>
-
 ```
 
-Você também pode obter outros serviços fornecidos pelo host. Para obter mais informações, consulte [acessando o Visual Studio ou outros Hosts a partir de um modelo](http://msdn.microsoft.com/0556f20c-fef4-41a9-9597-53afab4ab9e4).
+Você também pode obter outros serviços fornecidos pelo host. Para obter mais informações, consulte [acessando o Visual Studio ou outros Hosts de um modelo](/previous-versions/visualstudio/visual-studio-2010/gg604090\(v\=vs.100\)).
 
 ### <a name="design-time-text-templates-run-in-a-separate-appdomain"></a>Modelos de texto em tempo de design executados em um AppDomain separado
 
- Você deve estar ciente de que um [modelo de texto de tempo de design](../modeling/design-time-code-generation-by-using-t4-text-templates.md) é executado em um AppDomain separado do aplicativo principal. Na maioria dos casos, isso não é importante, mas você pode descobrir restrições em certos casos complexos. Por exemplo, se você quiser passar dados dentro ou fora do modelo a partir de um serviço separado, o serviço deve fornecer uma API serializável.
+ Você deve estar ciente que uma [modelo de texto de tempo de design](../modeling/design-time-code-generation-by-using-t4-text-templates.md) é executado em um AppDomain separado do aplicativo principal. Na maioria dos casos, isso não é importante, mas você pode descobrir restrições em certos casos complexos. Por exemplo, se você quiser passar dados dentro ou fora do modelo a partir de um serviço separado, o serviço deve fornecer uma API serializável.
 
- (Isso não é verdade para uma [modelo de texto de tempo de execução](../modeling/run-time-text-generation-with-t4-text-templates.md), que fornece o código que é compilado com o restante do seu código.)
+ (Isso não é verdadeiro para um [modelo de texto de tempo de execução](../modeling/run-time-text-generation-with-t4-text-templates.md), que fornece o código compilado junto com o restante do seu código.)
 
 ## <a name="editing-templates"></a>Editando modelos
  Editores de modelo de texto especializados podem ser baixados da Galeria Online do Gerenciador de Extensões. Sobre o **ferramentas** menu, clique em **Gerenciador de extensões**. Clique em **Galeria Online**e, em seguida, use a ferramenta de pesquisa.
@@ -270,10 +271,10 @@ Você também pode obter outros serviços fornecidos pelo host. Para obter mais 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 |Tarefa|Tópico|
-|----------|-----------|
+|-|-|
 |Gravando um modelo.|[Diretrizes para escrever modelos de texto T4](../modeling/guidelines-for-writing-t4-text-templates.md)|
 |Gere texto usando código de programa.|[Estrutura do modelo de texto](../modeling/writing-a-t4-text-template.md)|
-|Gerar arquivos em uma solução do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|[Geração de código no tempo de design usando modelos de texto T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
-|Execute geração de texto fora do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|[Gerando arquivos com o utilitário TextTransform](../modeling/generating-files-with-the-texttransform-utility.md)|
+|Gere arquivos em uma solução do Visual Studio.|[Geração de código no tempo de design usando modelos de texto T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
+|Execute a geração de texto fora do Visual Studio.|[Gerando arquivos com o utilitário TextTransform](../modeling/generating-files-with-the-texttransform-utility.md)|
 |Transforme dados na forma de uma linguagem específica do domínio.|[Gerando código com base em uma linguagem específica de domínio](../modeling/generating-code-from-a-domain-specific-language.md)|
 |Grave processadores de diretivas para transformar suas próprias fontes de dados.|[Personalizando a transformação de texto T4](../modeling/customizing-t4-text-transformation.md)|

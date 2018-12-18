@@ -1,5 +1,5 @@
 ---
-title: Testes de desempenho Web codificados no Visual Studio | Microsoft Docs
+title: Testes de desempenho Web codificados no Visual Studio
 ms.date: 10/03/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,20 +14,24 @@ dev_langs:
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: aa6f1e07bffc59030865018610c4367489d4ba9a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 76b2e7eebf66bb4a9c2564ca30a72a7b17dbdcfc
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895503"
 ---
 # <a name="generate-and-run-a-coded-web-performance-test"></a>Gerar e executar um teste de desempenho Web codificado
 
 Testes de desempenho Web são gravados navegando-se no aplicativo Web. Os testes são incluídos em testes de carga para medir o desempenho de seu aplicativo Web sob o estresse de vários usuários. Um teste de desempenho na Web pode ser convertido em um script baseado em código que você pode editar e personalizar como qualquer outro código-fonte. Por exemplo, você pode adicionar constructos de loop e de ramificação.
 
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
 ## <a name="generate-a-coded-web-performance-test"></a>Gerar um teste de desempenho na Web codificado
 
-1.  Se não tiver criado um teste de desempenho Web, consulte [Gravar um teste de desempenho Web](/vsts/load-test/run-performance-tests-app-before-release#create-a-web-performance-and-load-test-project).
+1.  Se não tiver criado um teste de desempenho Web, consulte [Gravar um teste de desempenho Web](/azure/devops/test/load-test/run-performance-tests-app-before-release#create-a-web-performance-and-load-test-project?view=vsts).
 
 2.  Gere o teste codificado.
 
@@ -55,7 +59,7 @@ Testes de desempenho Web são gravados navegando-se no aplicativo Web. Os testes
     }
     else
     {
-        WebTestRequest customRequest = new WebTestRequest("http://msdn.microsoft.com/");
+        WebTestRequest customRequest = new WebTestRequest("https://msdn.microsoft.com/");
         yield return customRequest;
     }
     ```
@@ -65,7 +69,7 @@ Testes de desempenho Web são gravados navegando-se no aplicativo Web. Os testes
         Dim customRequest As WebTestRequest = New WebTestRequest("http://weather.msn.com/")
         MyBase.Send(customRequest)
     Else
-        Dim customRequest As WebTestRequest = New WebTestRequest("http://msdn.microsoft.com/")
+        Dim customRequest As WebTestRequest = New WebTestRequest("https://msdn.microsoft.com/")
         MyBase.Send(customRequest)
     End If
     ```
@@ -74,19 +78,19 @@ Testes de desempenho Web são gravados navegando-se no aplicativo Web. Os testes
 
 6.  Execute o teste.
 
-     ![Executar o teste de desempenho Web codificado](../test/media/web_test_coded_generate_run.png "Web_Test_Coded_Generate_Run")
+     ![Executar o teste de desempenho Web codificado](../test/media/web_test_coded_generate_run.png)
 
      E calhou do teste ter acontecido em uma quarta-feira…
 
-     ![Resultados de teste de desempenho Web codificado](../test/media/web_test_coded_generate_results.png "Web_Test_Coded_Generate_Results")
+     ![Resultados de teste de desempenho Web codificado](../test/media/web_test_coded_generate_results.png)
 
 ## <a name="qa"></a>PERGUNTAS E RESPOSTAS
 
 ### <a name="q-can-i-run-more-than-one-test-at-a-time"></a>P: Posso executar mais de um teste por vez?
- **R** Sim, use o menu de contexto no Gerenciador de Soluções.
+ **R** Sim, use o menu de contexto no **Gerenciador de Soluções**.
 
 ### <a name="q-should-i-add-a-data-source-before-or-after-i-generate-a-coded-test"></a>P: Devo adicionar uma fonte de dados antes ou depois de gerar um teste codificado?
- **R** É mais fácil usar uma [fonte de dados](../test/add-a-data-source-to-a-web-performance-test.md) antes de gerar o teste codificado, pois o código será gerado automaticamente para você.
+ **R** É mais fácil adicionar uma [fonte de dados](../test/add-a-data-source-to-a-web-performance-test.md) antes de gerar o teste codificado, pois o código será gerado automaticamente para você.
 
  Ao executar um teste codificado com uma fonte de dados, você talvez veja a seguinte mensagem de erro:
 
@@ -95,4 +99,4 @@ Testes de desempenho Web são gravados navegando-se no aplicativo Web. Os testes
  Isso pode ocorrer porque você tem um DataSourceAttribute definido para a classe de teste, sem um DataBindingAttribute correspondente. Para resolver esse erro, adicione um DataBindingAttribute apropriado, exclua-o ou insira um comentário fora do código.
 
 ### <a name="q-should-i-add-validation-and-extraction-rules-before-or-after-i-generate-a-coded-test"></a>P: Devo adicionar regras de validação e extração antes ou depois de gerar um teste codificado?
- **R:** É mais fácil usar as regras de validação e de extração antes de gerar o teste codificado. No entanto, recomendamos que você use [testes de IU codificados](../test/use-ui-automation-to-test-your-code.md) para fins de validação.
+ **R:** É mais fácil adicionar as regras de validação e de extração antes de gerar o teste codificado. No entanto, recomendamos que você use [testes de IU codificados](../test/use-ui-automation-to-test-your-code.md) para fins de validação.

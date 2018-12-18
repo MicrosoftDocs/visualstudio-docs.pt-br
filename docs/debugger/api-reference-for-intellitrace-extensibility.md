@@ -1,7 +1,7 @@
 ---
-title: Referência de API para extensibilidade do IntelliTrace | Microsoft Docs
+title: Referência da API para extensibilidade do IntelliTrace | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 11/07/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,23 +12,27 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 907b47aacf7ad0d63c79f22dcf992ac042dd2e7e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 04ac7a4947576b8c06741ac2c407c35e3663acd0
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349511"
 ---
-# <a name="api-reference-for-intellitrace-extensibility"></a>Referência API para o extensibilidade do IntelliTrace
+# <a name="api-reference-for-intellitrace-extensibility"></a>Referência da API para extensibilidade do IntelliTrace
+
 Usando as informações contidas nesta seção, você pode usar APIs de extensibilidade do IntelliTrace para ler e decodificar arquivos .itrace em seu aplicativo.  
   
-## <a name="in-this-section"></a>Nesta seção  
- Essas APIs de extensibilidade do IntelliTrace estão contidas em um namespace  
+## <a name="in-this-section"></a>Nesta seção
+
+Este namespace contém as APIs de extensibilidade do IntelliTrace:
   
--   <xref:Microsoft.VisualStudio.IntelliTrace>  
+- <xref:Microsoft.VisualStudio.IntelliTrace>  
   
-## <a name="related-sections"></a>Seções relacionadas  
- [IntelliTrace](../debugger/intellitrace.md)  
- Fornece informações sobre como depurar com o IntelliTrace.  
+## <a name="related-sections"></a>Seções relacionadas
+
+[IntelliTrace](../debugger/intellitrace.md)  
+Fornece informações sobre como depurar com o IntelliTrace.  
   
- [Galeria de códigos do MSDN](http://go.microsoft.com/fwlink/?LinkId=166091)  
- Hospeda um aplicativo de exemplo que mostra como usar a extensibilidade do IntelliTrace.
+[Exemplos de código para desenvolvedores](https://code.msdn.microsoft.com/)  
+Hospeda um aplicativo de exemplo que mostra como usar a extensibilidade do IntelliTrace.

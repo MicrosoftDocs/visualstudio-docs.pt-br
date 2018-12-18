@@ -1,62 +1,76 @@
 ---
-title: "Como acompanhar o código personalizando a barra de rolagem | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Modo de mapa e modo de barra da barra de rolagem
+ms.date: 09/25/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
+f1_keywords:
+- VS.ToolsOptionsPages.Text_Editor.All_Languages.Scroll_Bars
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8f56e834e6c2b80706e4ed1d1a91583e1015791b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: fca9b8dd8f4c3cd17ee6ca7f23b3622fc1a9e4ee
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897050"
 ---
-# <a name="how-to-track-your-code-by-customizing-the-scrollbar"></a>Como acompanhar o código personalizando a barra de rolagem
+# <a name="how-to-customize-the-scroll-bar"></a>Como: personalizar a barra de rolagem
 
-Quando você está trabalhando com arquivos de código longo, pode ser difícil manter controle de tudo. Você pode personalizar a barra de rolagem da janela de código para ter um panorama geral do que está acontecendo em seu código.
+Quando se trabalha com longos arquivos de código, às vezes torna-se difícil manter o controle de onde está tudo no arquivo. É possível personalizar a barra de rolagem do editor de código para ter um panorama geral do que está acontecendo no código.
 
-## <a name="to-show-annotations-on-the-scroll-bar"></a>Para mostrar anotações na barra de rolagem
+## <a name="annotations"></a>Anotações
 
-1. É possível configurar a barra de rolagem para mostrar alterações de código, pontos de interrupção, erros e indicadores.
+Você pode selecionar se a barra de rolagem deve mostrar anotações, como alterações de código, pontos de interrupção, indicadores, erros e posição do cursor.
 
-    Abra a página de opções da **Barra de Rolagem**, selecionando **Ferramentas** > **Opções** > **Editor de Texto**  >  **Todas as Linguagens** ou uma linguagem específica, ou inserindo a **barra de rolagem** na janela Início Rápido.
+   1. Abra a página de opções **Barras de rolagem** escolhendo **Ferramentas** > **Opções** > **Editor de Texto** > **Todos os Idiomas** > **Barras de rolagem**.
 
-2. Selecione **Mostrar anotações sobre a barra de rolagem vertical** e selecione as anotações que deseja ver.
+   2. Selecione **Mostrar anotações sobre a barra de rolagem vertical** e selecione as anotações que deseja ver. As anotações disponíveis são:
 
-    A opção **Marcas** inclui pontos de interrupção e indicadores.
+      - alterações
+      - marcas
+      - erros
+      - posição do cursor
 
-3. Agora tente. Abra um arquivo de código grande e substitua algo que ocorre em vários locais do arquivo. A barra de rolagem mostra o efeito das substituições, de modo que você pode desfazer suas alterações se tiver substituído algo que não deveria.
+      > [!TIP]
+      > A opção **Exibir marcas** inclui pontos de interrupção e indicadores.
 
-    Esta é a aparência da barra de rolagem após o usuário pesquisar por uma cadeia de caracteres. Observe que todas as instâncias da cadeia de caracteres são exibidas.
+Faça a experiência abrindo um grande arquivo de código e substituindo partes do texto que ocorrem em vários locais no arquivo. A barra de rolagem mostra o efeito das substituições, de modo que você pode desfazer suas alterações se tiver substituído algo que não deveria.
 
-    ![A barra de rolagem após pesquisar por uma cadeia de caracteres. ] (../ide/media/enhancedscrollbarsearch.png "EnhancedScrollbarSearch")
+Esta é a aparência da barra de rolagem após o usuário pesquisar por uma cadeia de caracteres. Observe que todas as instâncias da cadeia de caracteres são exibidas na barra de rolagem.
 
-    Esta é a barra de rolagem após a substituição de todas as instâncias da cadeia de caracteres. Você pode ver imediatamente que a operação causou alguns problemas.
+![A barra de rolagem do Visual Studio após a pesquisa de uma cadeia de caracteres](../ide/media/enhancedscrollbarsearch.png)
 
-    ![A barra de rolagem após a substituição de uma cadeia de caracteres com erros](../ide/media/enhancedscrollbarreplace.png "EnhancedScrollbarReplace")
+Esta é a barra de rolagem após a substituição de todas as instâncias da cadeia de caracteres. As marcas vermelhas na barra de rolagem mostram em que local a substituição de texto introduziu erros.
 
-## <a name="to-set-the-display-mode-for-the-scroll-bar"></a>Para definir o modo de exibição para a barra de rolagem
+![A barra de rolagem do Visual Studio depois da substituição de uma cadeia de caracteres com erros](../ide/media/enhancedscrollbarreplace.png)
 
-1. A barra de rolagem tem dois modos: o modo de barra (padrão) e o modo de mapa. O modo de barra exibe apenas indicadores de anotação na barra de rolagem. No modo de mapa, as linhas de código são representadas na barra de rolagem. Você pode escolher sua largura e se elas mostram o código subjacente quando você posiciona o ponteiro sobre elas. Quando você clica em um local na barra de rolagem, o cursor se move para esse local no código. Regiões recolhidas são sombreadas de forma diferente; elas são expandidas quando você clica duas vezes nelas.
+## <a name="display-modes"></a>Modos de exibição
 
-    Na página de opções **Barra de Rolagem**, selecione **Usar modo de barra para barra de rolagem vertical** ou **Usar modo de mapa para barra de rolagem vertical**. Você pode escolher a largura na lista suspensa **Visualização da fonte**.
+A barra de rolagem tem dois modos: o modo de barra e o modo de mapa.
 
-    Veja qual é a aparência do exemplo de pesquisa quando o modo de mapa está ativado e a largura está definida como Médio:
+### <a name="bar-mode"></a>Modo de barra
 
-    ![A barra de rolagem no modo de mapa](../ide/media/enhancedscrollbar.png "EnhancedScrollbar")
+O *modo de barra* exibe indicadores de anotação na barra de rolagem. Clicar na barra de rolagem rola a página para cima ou para baixo, mas não avança para aquele local no arquivo.
 
-2. No modo de mapa, para habilitar visualizações do código quando você move o cursor para cima e para baixo na barra de rolagem, selecione a opção **Mostrar Dica de Ferramenta de Visualização**. Veja como deve ser sua aparência:
+### <a name="map-mode"></a>Modo de mapa
 
-    ![A barra de rolagem com uma dica de ferramenta](../ide/media/enhancedscrollbarsearchtooltip.png "EnhancedScrollbarSearchTooltip")
+No *modo de mapa*, quando você clica em um local na barra de rolagem, o cursor avança para aquele local no arquivo em vez de simplesmente rolar para cima ou para baixo em uma página. As linhas de código são mostradas em miniatura na barra de rolagem. É possível escolher a largura da coluna de mapa selecionando um valor em **Visão geral do código-fonte**. Para habilitar uma visualização maior do código quando você parar o ponteiro no mapa, selecione a opção **Mostrar dica de ferramenta de visualização**. As regiões recolhidas ficam sombreadas de forma diferente e se expandem quando você clica duas vezes nelas.
 
-    Se quiser manter o comportamento de rolagem do modo de mapa e a dica de ferramenta de visualização, mas não quiser ter a visão geral do código-fonte, defina a **Visualização da fonte** como **Desativada**.
+> [!TIP]
+> Você pode desativar a exibição de código em miniatura no modo de mapa definindo a**Visão geral do código-fonte** para **Desativado**. Se a opção **Mostrar dica de ferramenta de visualização** estiver selecionada, você ainda verá uma visualização do código nesse local ao passar o ponteiro do mouse sobre a barra de rolagem, e o cursor ainda avançará para esse local no arquivo quando você clicar.
+
+A imagem a seguir mostra o exemplo de pesquisa quando o modo de mapa está ativado e a largura está definida como **Média**:
+
+![Barra de rolagem do Visual Studio no modo de mapa](../ide/media/enhancedscrollbar.png)
+
+A imagem a seguir mostra a opção **Mostrar dica de ferramenta de visualização**:
+
+![Barra de rolagem do Visual Studio com uma dica de ferramenta](../ide/media/enhancedscrollbarsearchtooltip.png)
 
 ## <a name="see-also"></a>Consulte também
 
-[Gravando código no editor](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Recursos do Editor de Códigos](../ide/writing-code-in-the-code-and-text-editor.md)

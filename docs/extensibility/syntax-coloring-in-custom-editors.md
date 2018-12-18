@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31139455"
 ---
 # <a name="syntax-coloring-in-custom-editors"></a>Cores de sintaxe no editores personalizados
 Editores do Visual Studio SDK de ambiente, incluindo o editor de núcleo, usam os serviços de idioma para identificar itens sintáticos específicos e exibi-los com cores especificadas para um modo de exibição do documento fornecido.

@@ -1,5 +1,5 @@
 ---
-title: ': Get_localsbase | Microsoft Docs'
+title: 'Idiastackframe:: Get_localsbase | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d7b7f16adbef5f60648129d80776b556b776bec7
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0f86d123dc0f1eb4152f831a0717a6d3ec796454
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910908"
 ---
 # <a name="idiastackframegetlocalsbase"></a>IDiaStackFrame::get_localsBase
-Recupera o endereço base das variáveis de local para o quadro.  
+Recupera o endereço básico das variáveis locais para o quadro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,10 +34,10 @@ HRESULT get_localsBase (
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Retorna o endereço base das variáveis locais.  
+ [out] Retorna o endereço básico das variáveis locais.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se a propriedade não é suportada. Caso contrário, retornará um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para a propriedade. Caso contrário, retornará um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

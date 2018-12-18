@@ -17,11 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fcfd22d45eaffea926989dc87d8f0f587a925fe7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a01dbd11411204affa082bfa0772530662657853
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39230785"
 ---
 # <a name="writecontexttlogs"></a>WriteContextTLogs
 Grava arquivos de log para o contexto atual.  
@@ -43,7 +44,7 @@ HRESULT WINAPI WriteContextTLogs(LPCTSTR intermediateDirectory, LPCTSTR tlogRoot
  Um **HRESULT** com o conjunto de bits **SUCCEEDED** se o contexto de acompanhamento foi criado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** FileTracker.h  
+ **Cabeçalho:** *FileTracker.h*  
   
 ## <a name="see-also"></a>Consulte também  
  [WriteAllTLogs](../msbuild/writealltlogs.md)

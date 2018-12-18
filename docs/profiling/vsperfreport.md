@@ -17,35 +17,36 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c7460b287b22ead961a5701fe4f8fa8bb22fc2d2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1c679acf7ce6a767702da05bde6fb4a1e6f8a7df
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572209"
 ---
 # <a name="vsperfreport"></a>VSPerfReport
-Ferramenta de linha de comando VSPerfReport é usada para criar relatórios usando [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ferramentas de criação de perfil de arquivos de dados de criação de perfil. O formato de relatório padrão é um arquivo .csv.  
+Ferramenta de linha de comando VSPerfReport é usada para criar relatórios usando [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ferramentas de criação de perfil de arquivos de dados de criação de perfil. O formato de relatório padrão é um arquivo .*csv*.  
   
  VSPerfReport usa a seguinte sintaxe:  
   
-```  
+```cmd  
 VSPerfReport [/U] vspfilename [/options]  
 ```  
   
- Observe que `filename` deve ser um arquivo .vsp ou .vsps válido.  
+ Observe que `filename` deve ser um arquivo .*vsp* ou .*vsps* válido.  
   
- A ferramenta de linha de comando VSPerfReport também é usada para comparar arquivos .vsp ou .vsps. Para gerar um relatório de diferença ("diff"), use a seguinte sintaxe:  
+ A ferramenta de linha de comando VSPerfReport também é usada para comparar arquivos .*vsp* ou .*vsps*. Para gerar um relatório de diferença ("diff"), use a seguinte sintaxe:  
   
-```  
+```cmd  
 VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]  
 ```  
   
- `vspfilename1 and vspfilename2` devem ser arquivos .vsp ou .vsps válidos.  
+ `vspfilename1 and vspfilename2` precisam ser arquivos .*vsp* ou .*vsps* válidos.  
   
-## <a name="symbol-files"></a>Arquivos de Símbolo  
+## <a name="symbol-files"></a>Arquivos de símbolo  
  Para exibir informações de símbolo como nomes de função e números de linha, o VSPerfReport necessita de acesso aos arquivos de símbolo (.PDB) dos componentes analisados e aos arquivos de símbolo do Windows. Para saber mais, confira [Como especificar locais de arquivos de símbolo na linha de comando](../profiling/how-to-specify-symbol-file-locations-from-the-command-line.md).  
   
-## <a name="general-report-options"></a>Opções de Relatório Geral  
+## <a name="general-report-options"></a>Opções de relatório geral  
  A tabela a seguir descreve o opções e as opções que selecionar os dados a serem relatados de formatação do relatório geral.  
   
 |Opções|Descrição|  
@@ -57,7 +58,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 |**ClearPackedSymbols**|Remove símbolos inseridos anteriormente de um arquivo de dados do criador de perfil. Execute esse comando antes de executar PackSymbols uma segunda vez.|  
 |**SymbolPath:** `path`|Especifica um ou mais caminhos de pesquisa ou servidores de símbolo que contêm símbolos para o arquivo de dados do criador de perfil.|  
 |**DebugSymPath**|Lista os locais pesquisados para símbolos e se eles são encontrados. Essa opção é útil para resolver problemas de resolução de símbolo.|  
-|**PackSymbols**|Salva os símbolos no arquivo de criação de perfil de dados (.vsp) para que não seja necessário analisar os arquivos de símbolo (.pdb).|  
+|**PackSymbols**|Salva os símbolos no arquivo de dados de criação de perfil (.vsp) para que os arquivos de símbolo (.*pdb*) não sejam necessários para a análise.|  
 |**Saída:** *caminho*&#124;*nomedoarquivo*|Especifica um local alternativo para os arquivos de relatório gerados. Por padrão, os relatórios são criados no diretório atual.|  
 |**SummaryFile**|Analise e salve as informações analisadas em um arquivo de resumo .vsps.|  
 |**PrintMarks**|Mostre os nomes e os carimbos de data e hora para todas as marcas no arquivo de relatório especificado.|  
@@ -79,12 +80,12 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 |**Thread:**[*threadid*]|Mostra apenas os dados do thread especificado.|  
 |**Thread:**[*threadid,processid*]|Mostra apenas os dados do thread especificado associado ao processo especificado.|  
   
-## <a name="difference-report-options"></a>Opções de Relatório de Diferença  
+## <a name="difference-report-options"></a>Opções de relatório de diferenças  
  A tabela a seguir descreve as opções para comparar arquivos de relatório.  
   
 |Opções|Descrição|  
 |-------------|-----------------|  
-|**Diff**  `vspfile1 vspfile2`|Compare dois arquivos de relatório ( .vsp ou .vsps). As opções de resumo serão ignoradas usando a opção diff.|  
+|**Diff**  `vspfile1 vspfile2`|Compara dois arquivos de relatório (.*vsp* ou .*vsps*). As opções de resumo serão ignoradas usando a opção diff.|  
 |**Diff:**[*value*]|A diferença entre dois valores será desconsiderada abaixo desse valor de limite. Além disso, os novos dados com valores sob esse limite não serão exibidos.|  
 |**DiffTable:**[*tablename*]|Use essa tabela específica para comparar arquivos. O padrão é a tabela de funções.|  
 |**DiffColumn:**[*columnname*]|Use estes valores de comparação de colunas específicos. O padrão é a coluna de porcentagem de amostras exclusivas.|  

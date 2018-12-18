@@ -18,16 +18,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b0c19d009ddfb60d3e8fa33cf4a976df44ab4c2a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e9754d4f324c178c117e14ff5949bd6c8ef352e9
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254804"
 ---
 # <a name="vsperfmon"></a>VSPerfMon
-Você pode usar a ferramenta VSPerfMon para coletar dados de desempenho para um aplicativo. Normalmente essa ferramenta é iniciada pelo VSPerfCmd.exe. VSPerfMon exibe informações adicionais sobre como anexar ou desanexar processo que não está disponível usando a ferramenta VSPerfCmd. Para exibir essas informações, inicie o VSPerfMon em uma janela separada. Para invocar VSPerfMon use a seguinte sintaxe:  
+Use a ferramenta VSPerfMon para coletar dados de desempenho de um aplicativo. Normalmente, essa ferramenta é iniciada pelo *VSPerfCmd.exe*. VSPerfMon exibe informações adicionais sobre como anexar ou desanexar processo que não está disponível usando a ferramenta VSPerfCmd. Para exibir essas informações, inicie o VSPerfMon em uma janela separada. Para invocar VSPerfMon use a seguinte sintaxe:  
   
-```  
+```cmd  
 VSPerfMon [/U] </TRACE [/COUNTER:cfg] | /SAMPLE | /COVERAGE> /CROSSSESSION /OUTPUT <file name> [/WINCOUNTER:cfg] [/USER [DOMAIN\]username]  
 ```  
   

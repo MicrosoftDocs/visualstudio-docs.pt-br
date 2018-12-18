@@ -18,17 +18,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9efb3a997eb0e6aa0d731f4fbf5d9d8ce0e9e978
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d2e380c6207b3f59b1717ebff6f17261acc7ee52
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946775"
 ---
 # <a name="combinepath-task"></a>Tarefa CombinePath
 Combina os caminhos especificados em um único caminho.  
   
-## <a name="task-parameters"></a>Parâmetros da tarefa  
- A tabela a seguir descreve os parâmetros da [Tarefa CombinePath](../msbuild/combinepath-task.md).  
+## <a name="task-parameters"></a>Parâmetros de tarefa  
+ A tabela a seguir descreve os parâmetros da [tarefa CombinePath](../msbuild/combinepath-task.md).  
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
@@ -37,7 +38,7 @@ Combina os caminhos especificados em um único caminho.
 |`CombinedPaths`|Parâmetro de saída <xref:Microsoft.Build.Framework.ITaskItem>`[]` opcional.<br /><br /> O caminho combinado é criado por essa tarefa.|  
   
 ## <a name="remarks"></a>Comentários  
- Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, confira [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas](../msbuild/msbuild-tasks.md)   

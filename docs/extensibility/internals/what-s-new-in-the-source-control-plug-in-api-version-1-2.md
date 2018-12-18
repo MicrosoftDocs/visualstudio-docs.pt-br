@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31136413"
 ---
 # <a name="what39s-new-in-the-source-control-plug-in-api-version-12"></a>O que&#39;s novos na fonte de controlar o plug-in API versão 1.2
 Esta seção destaca a funcionalidade de controle do código fonte avançadas na API de plug-in de controle de origem versão 1.2. O exemplo a seguir lista os novos recursos na versão 1.2:  

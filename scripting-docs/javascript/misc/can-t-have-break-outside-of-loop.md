@@ -1,13 +1,13 @@
 ---
-title: Pode &#39; t ter &#39; quebra &#39; fora do loop | Microsoft Docs
-ms.custom: 
+title: Pode&#39;tem &#39;break&#39; fora do loop | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1019
@@ -16,28 +16,29 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: 11d02172-2a78-4705-a730-d21111db5f42
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: bb23f1bc3de087515cad9ba4910cf2ebaf640353
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928549"
 ---
-# <a name="can39t-have-39break39-outside-of-loop"></a>Pode &#39; t ter &#39; quebra &#39; fora do loop
-Você tentou usar o **quebra** palavra-chave fora de um loop. O **quebra** palavra-chave é usada para encerrar um loop ou `switch` instrução. Ele deve ser inserido no corpo de um loop ou `switch` instrução. No entanto, um **rótulo** pode seguir a palavra-chave break.  
+# <a name="can39t-have-39break39-outside-of-loop"></a>Pode&#39;tem &#39;break&#39; fora do loop
+Você tentou usar o **quebra** palavra-chave fora de um loop. O **quebra** palavra-chave é usada para encerrar um loop ou `switch` instrução. Ele deve ser inserido no corpo de um loop ou `switch` instrução. No entanto, uma **rótulo** pode seguir a palavra-chave break.  
   
 ```  
 break labelname;  
 ```  
   
- Você só precisa de forma de rotulado o **quebra** loops aninhados de palavra-chave quando você está usando ou `switch` instruções e precisa interromper um loop que não é o mais interno.  
+ Você só precisa rotulada forma do **quebra** loops aninhados de palavra-chave quando você estiver usando ou `switch` instruções e a necessidade de interromper um loop não é o mais interno.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Verifique se o **quebra** palavra-chave aparece dentro de uma instrução de circunscrição loop ou comutador.  
+-   Verifique se o **quebra** palavra-chave aparece dentro de uma instrução de loop ou opção de circunscrição.  
   
 ## <a name="see-also"></a>Consulte também  
  [Instrução break](../../javascript/reference/break-statement-javascript.md)   

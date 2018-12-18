@@ -13,29 +13,30 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 32039843f3aef60f6e7087b0d26f8b5e1efd1df8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 21ccf237bec0b3ab7bf3ad96f6f4d24df240db0e
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34263923"
 ---
 # <a name="common-data-views"></a>Exibições de dados comuns
 Esta seção contém informações de referência sobre as exibições e os relatórios dos arquivos de dados do criador de perfil comuns a todos os métodos de criação de perfil.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Exibição de Resumo](../profiling/summary-view.md)  
+ [Exibição de resumo](../profiling/summary-view.md)  
  Descreve o modo de exibição e o relatório de Resumo. As colunas de dados dependem do método de criação de perfil.  
   
- [Exibição Chamador/Receptor da Chamada](../profiling/caller-callee-view.md)  
+ [Exibição de Chamador/Receptor](../profiling/caller-callee-view.md)  
  Descreve o modo de exibição e o relatório de Árvore de Chamadas. As colunas de dados dependem do método de criação de perfil.  
   
- [Modo de exibição de árvore de Chamadas](../profiling/call-tree-view.md)  
+ [Modo de exibição de árvore de chamadas](../profiling/call-tree-view.md)  
  Descreve o modo de exibição e o relatório de Árvore de Chamadas. As colunas de dados dependem do método de criação de perfil.  
   
- [Exibição Módulos](../profiling/modules-view.md)  
+ [Exibição de Módulos](../profiling/modules-view.md)  
  Descreve o modo de exibição e o relatório de Módulos. As colunas de dados dependem do método de criação de perfil.  
   
- [Exibição Funções](../profiling/functions-view.md)  
+ [Exibição de Funções](../profiling/functions-view.md)  
  Descreve o modo de exibição e o relatório de Funções. As colunas de dados dependem do método de criação de perfil.  
   
  [Exibição de Linhas](../profiling/lines-view.md)  
@@ -47,7 +48,7 @@ Esta seção contém informações de referência sobre as exibições e os rela
  [Exibição de Processo](../profiling/process-view.md)  
  Lista o processo e as horas final e inicial do thread.  
   
- [Exibição de Marcas](../profiling/marks-view.md)  
+ [Exibição de marcas](../profiling/marks-view.md)  
  Lista ETW e eventos de amostragem inseridos em um arquivo de dados de criação de perfil.  
   
 ## <a name="related-sections"></a>Seções relacionadas  

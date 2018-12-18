@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d10fc7975f3e3624b00dcb77f77ba82fa8956cce
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 881ecd1dcec9bc05bcb5e99ad6691bd3b0e7f42e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942654"
 ---
 # <a name="ienumdebugprograms2reset"></a>IEnumDebugPrograms2::Reset
 Redefine a enumeração para o primeiro elemento.  
@@ -37,10 +38,10 @@ int Reset();
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Depois que este método é chamado, a próxima chamada para o [próximo](../../../extensibility/debugger/reference/ienumdebugprograms2-next.md) método retorna o primeiro elemento da enumeração.  
+ Depois que esse método é chamado, a próxima chamada para o [próxima](../../../extensibility/debugger/reference/ienumdebugprograms2-next.md) método retorna o primeiro elemento da enumeração.  
   
 ## <a name="see-also"></a>Consulte também  
  [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md)

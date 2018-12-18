@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31472001"
 ---
 # <a name="vsgdefaultrunfilename"></a>VSG_DEFAULT_RUN_FILENAME
 Define o nome de arquivo padrão do arquivo de log do gráfico.  

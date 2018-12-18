@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0877d374317e3a7142996b012ff6abefc6b94724
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 76ed39186796b692dd6bc93ab0eaea50f217b7af
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636279"
 ---
 # <a name="locationfield-element-visual-studio-project-templates"></a>Elemento LocationField (modelos de projeto do Visual Studio)
-Especifica se ou não o **local** caixa de texto de **novo projeto** caixa de diálogo está habilitada, desabilitada ou ocultada para o modelo de projeto.  
+Especifica se ou não a **local** caixa de texto a **novo projeto** caixa de diálogo é habilitada, desabilitada ou ocultada para o modelo de projeto.  
   
  \<VSTemplate >  
  \<TemplateData >  
@@ -47,25 +48,25 @@ Especifica se ou não o **local** caixa de texto de **novo projeto** caixa de di
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele exibe em ambos os **novo projeto**.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto**.|  
   
 ## <a name="text-value"></a>Valor de texto  
  Um valor de texto é obrigatório.  
   
  Os valores de texto válidos são:  
   
--   `Enabled`, que especifica que o **local** caixa do **novo projeto** caixa de diálogo está habilitada.  
+-   `Enabled`, que especifica que o **local** caixa da **novo projeto** caixa de diálogo está habilitada.  
   
--   `Disabled`, que especifica que o **local** caixa do **novo projeto** caixa de diálogo está desabilitada.  
+-   `Disabled`, que especifica que o **local** caixa da **novo projeto** caixa de diálogo está desabilitada.  
   
--   `Hidden`, que especifica que o **local** caixa do **novo projeto** caixa de diálogo está oculto.  
+-   `Hidden`, que especifica que o **local** caixa da **novo projeto** caixa de diálogo está oculto.  
   
 ## <a name="remarks"></a>Comentários  
  O valor padrão é `Enabled`.  
   
- O **local** caixa de texto de **novo projeto** caixa de diálogo permite que os usuários alterem o diretório padrão no qual novos projetos são salvos.  
+ O **local** caixa de texto a **novo projeto** caixa de diálogo permite que os usuários alterem o diretório padrão no qual os novos projetos são salvos.  
   
- O valor especificado no `Location` elemento será considerado somente pela caixa de diálogo se o sistema de projeto subjacente oferece suporte a ele.  
+ O valor especificado no `Location` elemento só será considerado por caixa de diálogo se o sistema de projeto subjacente suportá-lo.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir ilustra os metadados para um [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] modelo.  

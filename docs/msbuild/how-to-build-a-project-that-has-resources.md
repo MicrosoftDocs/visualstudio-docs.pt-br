@@ -15,17 +15,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f1fef7a6a5d585625471794df3c6e98b8c149a82
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e7724969a4677bc0d8480b794ae72b2dbee74a86
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39180341"
 ---
-# <a name="how-to-build-a-project-that-has-resources"></a>Como compilar um projeto que tem recursos
-Se você estiver compilando versões localizadas de um projeto, todos os elementos da interface do usuário devem ser separados em arquivos de recursos para os diferentes idiomas. Se o projeto usar somente cadeias de caracteres, os arquivos de recursos poderão usar arquivos de texto. Uma alternativa é usar arquivos .resx como os arquivos de recurso.  
+# <a name="how-to-build-a-project-that-has-resources"></a>Como criar um projeto que tem recursos
+Se você estiver compilando versões localizadas de um projeto, todos os elementos da interface do usuário devem ser separados em arquivos de recursos para os diferentes idiomas. Se o projeto usar somente cadeias de caracteres, os arquivos de recursos poderão usar arquivos de texto. Como alternativa, você pode usar arquivos *.resx* como os arquivos de recurso.  
   
-## <a name="compiling-resources-with-msbuild"></a>Compilando recursos com o MSBuild  
- A biblioteca de tarefas comuns fornecida com o [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] inclui uma tarefa `GenerateResource` que você pode usar para compilar recursos em arquivos .resx ou de texto. Esta tarefa inclui o parâmetro `Sources` para especificar quais arquivos de recurso compilar e o parâmetro `OutputResources` para especificar nomes para os arquivos de recurso de saída. Para obter mais informações sobre a tarefa `GenerateResource`, consulte [Tarefa GenerateResource](../msbuild/generateresource-task.md).  
+## <a name="compile-resources-with-msbuild"></a>Compilar recursos com o MSBuild  
+ A biblioteca de tarefas comuns fornecida com o [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] inclui uma tarefa `GenerateResource` que você pode usar para compilar recursos em arquivos *.resx* ou de texto. Esta tarefa inclui o parâmetro `Sources` para especificar quais arquivos de recurso compilar e o parâmetro `OutputResources` para especificar nomes para os arquivos de recurso de saída. Para obter mais informações sobre a tarefa `GenerateResource`, confira [Tarefa GenerateResource](../msbuild/generateresource-task.md).  
   
 #### <a name="to-compile-resources-with-msbuild"></a>Para compilar recursos com o MSBuild  
   
@@ -38,7 +39,7 @@ Se você estiver compilando versões localizadas de um projeto, todos os element
 4.  Use o item criado do elemento `Output` como uma entrada em outra tarefa.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir mostra como o elemento `Output` especifica que o atributo `OutputResources` da tarefa `GenerateResource` conterá os arquivos de recurso compilados `alpha.resources` e `beta.resources` e que esses dois arquivos serão colocados dentro da lista de itens `Resources`. Identificando esses arquivos de recursos como uma coleção de itens de mesmo nome, você poderá facilmente usá-los como entradas para outra tarefa, como a tarefa [Csc](../msbuild/csc-task.md).  
+ O exemplo de código a seguir mostra como o elemento `Output` especifica que o atributo `OutputResources` da tarefa `GenerateResource` conterá os arquivos de recurso compilados *alpha.resources* e *beta.resources* e que esses dois arquivos serão colocados na lista de itens `Resources`. Identificando esses arquivos *.resources* como uma coleção de itens de mesmo nome, você pode usá-los com facilidade como entradas para outra tarefa, como a tarefa [Csc](../msbuild/csc-task.md).  
   
  Essa tarefa é equivalente a usar o comutador **/compile** para [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator):  
   

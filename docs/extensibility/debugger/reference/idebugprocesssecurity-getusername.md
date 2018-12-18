@@ -13,11 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94fcc74943deb33e7f98ba24e9d7389a9d5746fb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f13d7597877104613f0e6ef6380abf0b6bc2a594
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891460"
 ---
 # <a name="idebugprocesssecuritygetusername"></a>IDebugProcessSecurity::GetUserName
 Obtém o nome de usuário do fornecedor de porta.  
@@ -41,10 +42,10 @@ int GetUserName (
  [out] Uma cadeia de caracteres que contém o nome de usuário.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se o método for bem-sucedido, ele retornará `S_OK`. Caso contrário, ele retorna um código de erro.  
+ Se o método for bem-sucedido, ele retornará `S_OK`. Caso contrário, ele retornará um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- `GetUserName` Retorna o nome de usuário que é exibido no **nome de usuário** coluna o **anexar ao processo** caixa de diálogo. Para exibir o **anexar ao processo** caixa de diálogo, clique em **anexar ao processo** no **ferramentas** menu no [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] ambiente de desenvolvimento integrado (IDE).  
+ `GetUserName` Retorna o nome de usuário que é exibido na **nome de usuário** coluna o **anexar ao processo** caixa de diálogo. Para exibir o **anexar ao processo** caixa de diálogo, clique em **anexar ao processo** no **ferramentas** menu no [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] o ambiente de desenvolvimento integrado (IDE).  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProcessSecurity](../../../extensibility/debugger/reference/idebugprocesssecurity.md)

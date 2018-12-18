@@ -1,5 +1,5 @@
 ---
-title: ': Get_code | Microsoft Docs'
+title: 'Idiasymbol:: Get_code | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: abe363ca4b5dff450c8324f49e8408681d64d6c4
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d157e33581054e3aa8f79f60cb1d3609dc16b6ba
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49841657"
 ---
 # <a name="idiasymbolgetcode"></a>IDiaSymbol::get_code
 Recupera um sinalizador que especifica se o símbolo se refere a um endereço de código.  
@@ -33,10 +34,10 @@ HRESULT get_code (
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Retorna `TRUE` se o símbolo se refere a um endereço de código, caso contrário, retornará `FALSE`.  
+ [out] Retorna `TRUE` se o símbolo de se referir a um endereço de código, caso contrário, retornará `FALSE`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
@@ -46,7 +47,7 @@ HRESULT get_code (
 |Requisito|Descrição|  
 |-----------------|-----------------|  
 |Cabeçalho:|dia2.h|  
-|Versão:|Versão 7.0 do DIA SDK|  
+|Versão:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

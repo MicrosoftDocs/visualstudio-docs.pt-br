@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9d0fcb648f25667d47a164c14443bafd14cc315f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3f1a8153326fbb88a569680c84376b8c7c911622
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49883291"
 ---
 # <a name="idebugstackframe2getdebugproperty"></a>IDebugStackFrame2::GetDebugProperty
 Obtém uma descrição das propriedades de um quadro de pilha.  
@@ -43,10 +44,10 @@ int GetDebugProperty (
  [out] Retorna um [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objeto que descreve as propriedades deste quadro de pilha.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Chamando o [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) método com os filtros apropriados pode recuperar as variáveis locais, parâmetros de método, registra e ponteiro "this" associado ao quadro de pilha.  
+ Chamar o [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) método com os filtros apropriados pode recuperar as variáveis locais, parâmetros de método, registros e ponteiro "this" associado ao quadro de pilha.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   

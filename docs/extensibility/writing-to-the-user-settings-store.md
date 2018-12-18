@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31145406"
 ---
 # <a name="writing-to-the-user-settings-store"></a>Gravar no repositório de configurações do usuário
 Configurações de usuário são graváveis como os de **Ferramentas / opções** caixa de diálogo, janelas Propriedades e outras caixas de diálogo determinados. Extensões do Visual Studio podem usá-los para armazenar pequenas quantidades de dados. Este passo a passo mostra como adicionar o bloco de notas para o Visual Studio como uma ferramenta externa, leitura e gravação para o repositório de configurações do usuário.  

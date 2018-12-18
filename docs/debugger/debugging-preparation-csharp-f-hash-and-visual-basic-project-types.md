@@ -1,6 +1,6 @@
 ---
-title: 'Preparação da depuração: C#, F # e Visual Basic tipos de projeto | Microsoft Docs'
-ms.custom: ''
+title: Preparar para depurar C#, F#e projetos do VB | Microsoft Docs
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -22,16 +22,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d590a186f5198feea6a89320897d9d4fa5c4481
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
-ms.translationtype: MT
+ms.openlocfilehash: 67833f3b4387c0606c3ce1f0b99cac50f0c0b501
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MTE95
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063442"
 ---
-# <a name="debugging-preparation-c-f-and-visual-basic-project-types"></a>Preparação de depuração: tipos de projeto C#, F# e Visual Basic
+# <a name="debugging-preparation-c-f-and-visual-basic-project-types"></a>Preparação de depuração: Tipos de projeto C#, F# e Visual Basic
 Os tópicos nessa seção descrevem como depurar os tipos de projeto C#, F# e [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] criados pelos modelos de projeto do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
- Observe que os tipos de projeto que criam DLLs como sua saída foram agrupados em [depurar projetos de DLL](../debugger/debugging-dll-projects.md) devido os recursos comuns que eles compartilham.  
+ Observe que esses tipos de projeto que criam dll como suas saídas foram agrupados em [depuração de projetos de DLL](../debugger/debugging-dll-projects.md) devido aos recursos comuns eles compartilham.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Configurações de propriedade recomendadas](../debugger/managed-debugging-recommended-property-settings.md)  

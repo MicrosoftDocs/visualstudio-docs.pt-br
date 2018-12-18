@@ -15,13 +15,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c030d001932d5b1cdeaa4c9b4a2ed82b321ee56f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d6f06b360348ad06df6433c67a4cae7f543ea5ce
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815828"
 ---
-# <a name="how-to-customize-report-view-columns"></a>Como personalizar as colunas de exibição do relatório
+# <a name="how-to-customize-report-view-columns"></a>Como personalizar as colunas de exibição de relatório
 As ferramentas de desempenho no Visual Studio Team System Development Edition são totalmente integradas ao IDE (ambiente de desenvolvimento integrado) para proporcionar uma experiência perfeita para o usuário. A lista a seguir representa as exibições que podem ser personalizadas adicionando, removendo e reorganizando as colunas:  
   
 -   [Exibição Módulos](../profiling/modules-view.md)  

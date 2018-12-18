@@ -15,11 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b1f3cf4ca3cb79a6b58d4f3549d05d355764148f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a6acd54a140d3281f4fd539cc12d07adb11cfd6d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897375"
 ---
 # <a name="how-to-set-permissions"></a>Como definir permissões
 
@@ -58,7 +59,7 @@ Membros do grupo Usuários podem executar as ferramentas de criação de perfil 
 
      O caminho dessa pasta pode ser parecido com o seguinte:
 
-    ```
+    ```cmd
     D:\ourProject
     ```
 
@@ -82,13 +83,13 @@ Membros do grupo Usuários podem executar as ferramentas de criação de perfil 
 
 2. Altere o diretório para:
 
-    ```
+    ```cmd
     <drive>:\Program Files\Microsoft Visual Studio 10\Team Tools\Performance Tools
     ```
 
 3. Execute o seguinte comando:
 
-    ```
+    ```cmd
     vsperfcmd /admin:driver,start /admin:service,start
     ```
 
@@ -100,7 +101,7 @@ Membros do grupo Usuários podem executar as ferramentas de criação de perfil 
 
 4. Execute o comando para permitir o acesso à funcionalidade do driver de criação de perfil por um usuário ou grupo que não tem acesso de administrador no computador:
 
-    ```
+    ```cmd
     vsperfcmd /admin:security,allow,<right[,right],<user name|group name>
     ```
 
@@ -114,14 +115,14 @@ Membros do grupo Usuários podem executar as ferramentas de criação de perfil 
 
 5. (Opcional) Para preservar os resultados de qualquer uma das etapas anteriores depois que o computador reiniciar, execute o seguinte comando:
 
-    ```
+    ```cmd
     vsperfcmd /admin:driver,autostart,on
     ```
 
- Os usuários especificados, após o logon, agora poderão usar as ferramentas de criação de perfil sem permissões de Administrador.
+   Os usuários especificados, após o logon, agora poderão usar as ferramentas de criação de perfil sem permissões de Administrador.
 
 ## <a name="see-also"></a>Consulte também
 
-[Configurando sessões de desempenho](../profiling/configuring-performance-sessions.md)  
+[Configurar sessões de desempenho](../profiling/configuring-performance-sessions.md)  
 [VSPerfCmd](../profiling/vsperfcmd.md)  
 [Criação de perfil e segurança do Windows Vista](../profiling/profiling-and-windows-vista-security.md)

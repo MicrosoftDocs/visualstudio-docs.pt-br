@@ -1,5 +1,5 @@
 ---
-title: Tamanho do arquivo de log para testes de carga no Visual Studio | Microsoft Docs
+title: Tamanho do arquivo de log para testes de carga no Visual Studio
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,20 +8,24 @@ ms.assetid: 417059bf-37ae-4e7a-b9b0-29bd71f1414f
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: b7ce416a587a325565a274ddb8a9f8e9bd5730c3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 22cc77426abca46a95fd12c8954fd0965a194f5e
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894424"
 ---
 # <a name="how-to-specify-the-maximum-size-for-the-log-file-for-load-tests"></a>Como especificar o tamanho máximo do arquivo de log para testes de carga
 
 Por padrão, o tamanho máximo do arquivo de log que é usado para testes de carga é definido como 20 megabytes. É possível alterar esse valor editando o arquivo de configuração associado ao serviço do controlador.
 
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
 ## <a name="specify-the-maximum-log-file-size-for-load-test"></a>Especificar o tamanho máximo do arquivo de log para teste de carga
 
-1.  Abra o arquivo de configuração XML *QTCcontroller.exe.config* localizado em %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.config.
+1.  Abra o arquivo de configuração XML *QTCcontroller.exe.config* localizado em *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.config*.
 
 2.  Localize a entrada `<add key="LogSizeLimitInMegs" value="20"/>` na marca `<appSettings>`.
 
@@ -44,5 +48,5 @@ Por padrão, o tamanho máximo do arquivo de log que é usado para testes de car
 
 ## <a name="see-also"></a>Consulte também
 
-- [Modificando configurações de registro em log de teste de carga](../test/modify-load-test-logging-settings.md)
-- [Configurando portas para Test Controllers e Test Agents](../test/configure-ports-for-test-controllers-and-test-agents.md)
+- [Modificar configurações de registro em log de testes de carga](../test/modify-load-test-logging-settings.md)
+- [Configurar portas para controladores e agentes de teste](../test/configure-ports-for-test-controllers-and-test-agents.md)

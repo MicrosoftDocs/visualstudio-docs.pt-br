@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f5864b3503b19e8a473f45e4167aad835181da50
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9957b0aaf81048c5040e3f7ff54f3fa9be742dc1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49858557"
 ---
 # <a name="debugrefinfoflags"></a>DEBUGREF_INFO_FLAGS
-Especifica quais informações recuperar sobre um objeto de referência de depuração.  
+Especifica quais informações devem ser recuperadas sobre um objeto de referência de depuração.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,34 +58,34 @@ public enum enum_DEBUGREF_INFO_FLAGS {
   
 ## <a name="members"></a>Membros  
  DEBUGREF_INFO_NAME  
- Inicializar/usar o `bstrName` campo na estrutura.  
+ Inicialização/usar o `bstrName` campo na estrutura.  
   
  DEBUGREF_INFO_TYPE  
- Inicializar/usar o `bstrType` campo na estrutura.  
+ Inicialização/usar o `bstrType` campo na estrutura.  
   
  DEBUGREF_INFO_VALUE  
- Inicializar/usar o `bstrValue` campo na estrutura.  
+ Inicialização/usar o `bstrValue` campo na estrutura.  
   
  DEBUGREF_INFO_ATTRIB  
- Inicializar/usar o `dwAttrib` campo na estrutura.  
+ Inicialização/usar o `dwAttrib` campo na estrutura.  
   
  DEBUGREF_INFO_REFTYPE  
- Inicializar/usar o `dwRefType` campo na estrutura.  
+ Inicialização/usar o `dwRefType` campo na estrutura.  
   
  DEBUGREF_INFO_REF  
- Inicializar/usar o `pReference` campo na estrutura.  
+ Inicialização/usar o `pReference` campo na estrutura.  
   
  DEBUGREF_INFO_VALUE_AUTOEXPAND  
- O campo de valor deve conter o valor expandido automaticamente, se disponível, para este tipo de objeto.  
+ O campo de valor deve conter o valor expandida automaticamente, se disponível, para esse tipo de objeto.  
   
  DEBUGREF_INFO_NONE  
- Indica que nenhum sinalizador definido.  
+ Indica que nenhum sinalizador está definido.  
   
  DEBUGREF_INFO_ALL  
  Indica uma máscara dos sinalizadores.  
   
 ## <a name="remarks"></a>Comentários  
- Esses sinalizadores são passados para o [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) e [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) métodos para indicar quais campos do [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) estrutura devem ser inicializado.  
+ Esses sinalizadores são passados para o [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) e [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) métodos para indicar quais campos dos [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) são de estrutura a ser inicializado.  
   
  Usado para o `dwFields` membro o `DEBUG_REFERENCE_INFO` estrutura para indicar quais campos são usados e válidos quando a estrutura é retornada.  
   

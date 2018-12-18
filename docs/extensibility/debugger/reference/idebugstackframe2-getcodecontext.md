@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f5e5d41489b83283723717a262030bb96ca900a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 283946310c44ae2a125d731e10de42ac2b454004
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876276"
 ---
 # <a name="idebugstackframe2getcodecontext"></a>IDebugStackFrame2::GetCodeContext
-Obtém o contexto de código para este quadro de pilhas.  
+Obtém o contexto de código para este registro de ativação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,10 +41,10 @@ int GetCodeContext (
   
 #### <a name="parameters"></a>Parâmetros  
  `ppCodeCxt`  
- [out] Retorna um [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objeto que representa o ponteiro de instrução atual deste quadro de pilhas.  
+ [out] Retorna um [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objeto que representa o ponteiro de instrução atual neste quadro de pilha.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   

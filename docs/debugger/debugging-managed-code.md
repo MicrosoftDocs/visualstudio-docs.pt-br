@@ -18,15 +18,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 227dfcf82a179a83428900f75d0b5c9b85248479
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 92485f93bb4c2d1782f907acdb1e5252f611cdbe
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "39179473"
 ---
 # <a name="debugging-managed-code"></a>Depurando código gerenciado
 
-Esta seção aborda problemas e técnicas de depuração comuns para aplicativos gerenciados, ou aplicativos escritos em linguagens destinadas ao Common Language Runtime, como Visual Basic, C# e C++. As técnicas descritas aqui são técnicas de alto nível. Para obter mais informações, consulte [usando o depurador](../debugger/debugger-basics.md).
+Esta seção aborda problemas e técnicas de depuração comuns para aplicativos gerenciados, ou aplicativos escritos em linguagens destinadas ao Common Language Runtime, como Visual Basic, C# e C++. As técnicas descritas aqui são técnicas de alto nível. Para obter mais informações, consulte [usando o depurador](../debugger/getting-started-with-the-debugger.md).
 
 ## <a name="in-this-section"></a>Nesta seção
 
@@ -49,20 +50,20 @@ Fornece exemplos de código para permitir que você depure o método `OnStart` d
 Discute aplicativos de modo misto de depuração. Isso significa qualquer aplicativo que combine código nativo com código gerenciado.
 
 [Erro: a depuração não é possível porque um depurador de kernel está habilitado no sistema](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)  
-Descreve uma mensagem de erro que ocorrerá se você tentar depurar código gerenciado em um [!INCLUDE[win7](../debugger/includes/win7_md.md)], [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)], [!INCLUDE[winxp](../code-quality/includes/winxp_md.md)], [!INCLUDE[Win2kFamily](../code-quality/includes/win2kfamily_md.md)], ou o sistema Windows NT que tenha sido iniciado no modo de depuração.
+Descreve uma mensagem de erro que ocorre se você tentar depurar código gerenciado em uma [!INCLUDE[win7](../debugger/includes/win7_md.md)], [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)], [!INCLUDE[winxp](../code-quality/includes/winxp_md.md)], [!INCLUDE[Win2kFamily](../code-quality/includes/win2kfamily_md.md)], ou de sistema do Windows NT que foi iniciado no modo de depuração.
 
 [Otimização e depuração JIT](../debugger/jit-optimization-and-debugging.md)  
 Descreve os efeitos da otimização JIT na depuração.
 
-[Depurando LINQ e DLINQ](../debugger/debugging-linq.md)  
+[Depuração LINQ e DLINQ&lt;1}](../debugger/debugging-linq.md)  
 Discute técnicas para depurar consultas LINQ.
 
 [Passo a passo: depurando um aplicativo paralelo](../debugger/walkthrough-debugging-a-parallel-application.md)  
-Descreve como usar o **tarefas paralelas** e **pilhas paralelas** ferramenta windows para depurar um aplicativo em paralelo.
+Descreve como usar o **tarefas paralelas** e **pilhas paralelas** janelas para depurar um aplicativo paralelo.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[IntelliTrace](../debugger/intellitrace.md) localizar bugs mais rápidos e mais fácil por meio do registro de histórico de execução do seu aplicativo com o IntelliTrace. Retroceda e avance pelos eventos e pelas chamadas registrados para examinar o estado do aplicativo nos pontos-chave em tempo. Depure seu código sem definir muitos pontos de interrupção ou reiniciar o aplicativo com tanta frequência. Requer o Visual Studio Enterprise.
+[IntelliTrace](../debugger/intellitrace.md) encontrar bugs mais rápidos e fácil, gravando o histórico de execução do seu aplicativo com o IntelliTrace. Retroceda e avance pelos eventos e pelas chamadas registrados para examinar o estado do aplicativo nos pontos-chave em tempo. Depure seu código sem definir muitos pontos de interrupção ou reiniciar o aplicativo com tanta frequência. Requer o Visual Studio Enterprise.
 
 [Rastreando e instrumentando aplicativos](/dotnet/framework/debug-trace-profile/tracing-and-instrumenting-applications)  
 Descreve o rastreamento, uma maneira de monitorar a execução do aplicativo enquanto está em execução, e a instrumentação, que envolve a colocação de instruções de rastreamento em locais estratégicos em seu código. Este tópico também fornece links para uma introdução à instrumentação e ao rastreamento, alternâncias de rastreamento, ouvintes de rastreamento, código de rastreamento em um aplicativo, adição de instruções de rastreamento no código do aplicativo, e criando condicionalmente com <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace>.
@@ -70,7 +71,7 @@ Descreve o rastreamento, uma maneira de monitorar a execução do aplicativo enq
 [/ASSEMBLYDEBUG](/cpp/build/reference/assemblydebug-add-debuggableattribute)  
 Descreve uma opção de vinculador que adiciona <xref:System.Diagnostics.DebuggableAttribute> ao código escrito com C++. Esse atributo é necessário para usar os recursos de depuração como, por exemplo, anexar com C++.
 
-[Depuração aplicativos de serviço do Windows](/dotnet/framework/windows-services/how-to-debug-windows-service-applications)  
+[Depurando aplicativos de serviço do Windows](/dotnet/framework/windows-services/how-to-debug-windows-service-applications)  
 Fornece considerações para depurar aplicativos de serviço do Windows, incluindo configuração, anexação ao processo, depuração do código do método `OnStart` do serviço e o código no método principal, definindo pontos de interrupção e usando o Gerenciador de Controle de Serviços para iniciar, parar, pausar e retomar seu serviço.
 
 [Depuração e criação de perfil](/dotnet/framework/debug-trace-profile/index)  
@@ -79,15 +80,15 @@ Discute a depuração de aplicativos do .NET Framework e os requisitos de config
 [Depuração de scripts e aplicativos da Web](../debugger/debugging-web-applications-and-script.md)  
 Descreve os problemas comuns de depuração e técnicas que você pode encontrar ao depurar aplicativos de script e Web.
 
-[O que há de novo para o depurador no Visual Studio 2015](../debugger/what-s-new-for-the-debugger-in-visual-studio.md)  
+[O que há de novo no depurador no Visual Studio 2015](../debugger/what-s-new-for-the-debugger-in-visual-studio.md)  
 Descrição de novos recursos de depuração adicionados nesta versão do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
 
-[Página inicial de depuração](../debugger/debugger-feature-tour.md)  
+[Depurar página inicial](../debugger/debugger-feature-tour.md)  
 Fornece links para as maiores seções de documentação de depuração. A informação inclui: novidades no depurador, configurações e preparação, pontos de interrupção, tratamentos de exceção, edição e continuação, depuração de código gerenciado, depuração de projetos do Visual C++, depuração de COM e ActiveX, depuração de DLLs, depuração de SQL e referências à interface do usuário.
 
 ## <a name="see-also"></a>Consulte também
 
-[Passo a passo: Depurar personalizada do Windows Forms de controles em tempo de Design](/dotnet/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time)
+[Passo a passo: Depurando Windows personalizado do Forms a controles em tempo de Design](/dotnet/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time)
 [segurança do depurador](../debugger/debugger-security.md)
 [depuração no Visual Studio](../debugger/index.md) 
  [ Tour pelos recursos do depurador](../debugger/debugger-feature-tour.md)

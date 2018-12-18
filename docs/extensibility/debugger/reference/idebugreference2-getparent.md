@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ef39d82f7220913fa5e4031d39cdb25f5a176181
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0c6fe4c6fa66d2a5f8b514028c5633727b003992
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49913016"
 ---
 # <a name="idebugreference2getparent"></a>IDebugReference2::GetParent
-Obtém a referência ao pai de uma referência. Reservado para uso futuro.  
+Obtém a referência pai de uma referência. Reservado para uso futuro.  
   
 ## <a name="syntax"></a>Sintaxe  
   

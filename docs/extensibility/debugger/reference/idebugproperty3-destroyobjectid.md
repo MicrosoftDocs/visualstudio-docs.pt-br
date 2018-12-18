@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0db5ef80a1734aedb819c109aa4c27c40224886e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f776feafe86180c60df7cc69a2c4afb6a3070012
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917941"
 ---
 # <a name="idebugproperty3destroyobjectid"></a>IDebugProperty3::DestroyObjectID
-Destrói a ID exclusiva associada a essa propriedade, indicando que o chamador não se importa identificar essa propriedade exclusivamente de todas as outras propriedades.  
+Destrói a ID exclusiva associada a essa propriedade, que indica que o chamador não precisa mais identificar essa propriedade exclusivamente de todas as outras propriedades.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,12 +38,12 @@ int DestroyObjectID();
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Se o mecanismo de depuração não precisa oferecer suporte a IDs exclusivas para uma propriedade (porque ele já rastreia exclusivamente internamente), em seguida, ele pode simplesmente retornar `E_NOTIMPL` para este método.  
+ Se o mecanismo de depuração não precisa dar suporte a IDs exclusivas para uma propriedade (porque ele já acompanha-los exclusivamente internamente), em seguida, ele pode simplesmente retornar `E_NOTIMPL` para esse método.  
   
- IDs exclusivos são criados com uma chamada para o [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md) método quando quiser que o chamador certificar-se de que essa propriedade é identificada exclusivamente entre todas as outras propriedades.  
+ IDs exclusivas são criadas com uma chamada para o [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md) método quando o chamador quer ter certeza de que essa propriedade é identificada exclusivamente entre todas as outras propriedades.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   

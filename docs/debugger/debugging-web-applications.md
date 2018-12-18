@@ -1,5 +1,5 @@
 ---
-title: Depurando aplicativos da Web | Microsoft Docs
+title: Depurando aplicativos Web | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -20,11 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d8638bccca59bdcf497feeeef2b311cc22e5d79c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0e649e5d795df537e48afe3dad738c73ee5b7b51
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178911"
 ---
 # <a name="debugging-web-applications"></a>Depurando aplicativos Web
 Esta seção explica como depurar vários tipos de aplicativos Web.  
@@ -40,6 +41,6 @@ Esta seção explica como depurar vários tipos de aplicativos Web.
 ## <a name="see-also"></a>Consulte também  
  [Depurando aplicativos Web e script](../debugger/debugging-web-applications-and-script.md)   
  [Preparação e configurações do depurador](../debugger/debugger-settings-and-preparation.md)   
- [Noções básicas do depurador](../debugger/debugger-basics.md)   
+ [Noções básicas do depurador](../debugger/getting-started-with-the-debugger.md)   
  [Depurando no Visual Studio](../debugger/index.md)  
  [Tour dos recursos do depurador](../debugger/debugger-feature-tour.md)

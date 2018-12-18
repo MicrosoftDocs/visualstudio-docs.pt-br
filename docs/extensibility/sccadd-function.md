@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2933d00b7450f946a5fd5409bcaeecc2527a9f64
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: defb9a682b7f382f414d7bedfe60509d73cea64b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49840019"
 ---
 # <a name="sccadd-function"></a>Função SccAdd
 Essa função adiciona novos arquivos ao sistema de controle de origem.  
@@ -38,7 +39,7 @@ SCCRTN SccAdd(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  pvContext  
  [in] A estrutura de contexto de plug-in de controle de origem.  
   
@@ -46,30 +47,30 @@ SCCRTN SccAdd(
  [in] Um identificador para a janela do IDE que o plug-in de controle de origem pode usar como um pai para todas as caixas de diálogo que ele oferece.  
   
  nFiles  
- [in] Número de arquivos selecionados para serem adicionados ao projeto atual conforme fornecido na `lpFileNames` matriz.  
+ [in] Número de arquivos selecionados a serem adicionados ao projeto atual, conforme indicado no `lpFileNames` matriz.  
   
  lpFileNames  
- [in] Matriz de nomes totalmente qualificados de locais de arquivos a ser adicionado.  
+ [in] Matriz de nomes totalmente qualificados de locais de arquivos a serem adicionados.  
   
  lpComment  
  [in] O comentário a ser aplicado a todos os arquivos que está sendo adicionados.  
   
  pfOptions  
- [in] Matriz de sinalizadores de comando fornecido em uma base por arquivo.  
+ [in] Matriz de sinalizadores de comando, fornecidos em uma base por arquivo.  
   
  pvOptions  
  [in] Opções de plug-in específico de controle de origem.  
   
-## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+## <a name="return-value"></a>Valor retornado  
+ A implementação de plug-in de controle do código-fonte desta função deve retornar um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |SCC_OK|A operação de adição foi bem-sucedida.|  
-|SCC_E_FILEALREADYEXISTS|O arquivo selecionado já está sob controle de origem.|  
-|SCC_E_TYPENOTSUPPORTED|Não há suporte para o tipo de arquivo (por exemplo, binário) pelo sistema de controle de origem.|  
-|SCC_E_OPNOTSUPPORTED|O sistema de controle de origem não oferece suporte a esta operação.|  
-|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle de origem, provavelmente devido a problemas de rede ou de contenção. Recomenda-se uma nova tentativa.|  
+|SCC_E_FILEALREADYEXISTS|O arquivo selecionado já está sob controle do código-fonte.|  
+|SCC_E_TYPENOTSUPPORTED|O tipo do arquivo (por exemplo, binário) não é suportado pelo sistema de controle de origem.|  
+|SCC_E_OPNOTSUPPORTED|O sistema de controle do código-fonte não suporta esta operação.|  
+|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle do código-fonte, provavelmente devido a problemas de rede ou de contenção. É recomendável uma nova tentativa.|  
 |SCC_E_NOTAUTHORIZED|O usuário não tem permissão para executar esta operação.|  
 |SCC_E_NONSPECIFICERROR|Falha não específica; Adicione não executada.|  
 |SCC_I_OPERATIONCANCELED|A operação foi cancelada antes da conclusão.|  
@@ -77,23 +78,23 @@ SCCRTN SccAdd(
 |SCC_E_FILENOTEXIST|Arquivo local não foi encontrado.|  
   
 ## <a name="remarks"></a>Comentários  
- O usual `fOptions` são substituídos aqui por uma matriz, `pfOptions`, com um `LONG` opção especificação por arquivo. Isso ocorre porque o tipo de arquivo pode variar para cada arquivo.  
+ O usual `fOptions` são substituídos aqui por uma matriz `pfOptions`, com um `LONG` opção especificação por arquivo. Isso ocorre porque o tipo de arquivo pode variar de um arquivo para o arquivo.  
   
 > [!NOTE]
->  Não é válido especificar ambos `SCC_FILETYPE_TEXT` e `SCC_FILETYPE_BINARY` opções para o mesmo arquivo, mas ele é válido para especificar nenhum. A configuração não é a mesma configuração `SCC_FILETYPE_AUTO`, caso em que a fonte de controlar este plug-in detecta automaticamente o tipo de arquivo.  
+>  Não é válido especificar ambos `SCC_FILETYPE_TEXT` e `SCC_FILETYPE_BINARY` opções para o mesmo arquivo, mas ele é válido para especificar que nenhum dos dois. A configuração de nenhum dos dois é o mesmo que definir `SCC_FILETYPE_AUTO`, caso em que o controle de fonte este plug-in detecta automaticamente o tipo de arquivo.  
   
  Abaixo está a lista de sinalizadores usados no `pfOptions` matriz:  
   
 |Opção|Valor|Significado|  
 |------------|-----------|-------------|  
-|SCC_FILETYPE_AUTO|0x00|O plug-in de controle de origem deve detectar o tipo de arquivo.|  
+|SCC_FILETYPE_AUTO|0x00|O plug-in de controle do código-fonte deve detectar o tipo de arquivo.|  
 |SCC_FILETYPE_TEXT|0x01|Indica um arquivo de texto ASCII.|  
 |SCC_FILETYPE_BINARY|0x02|Indica um tipo de arquivo diferente de texto ASCII.|  
-|SCC_ADD_STORELATEST|0x04|Armazena apenas a cópia mais recente do arquivo, sem deltas.|  
+|SCC_ADD_STORELATEST|0x04|Armazena apenas a cópia mais recente do arquivo, nenhum delta.|  
 |SCC_FILETYPE_TEXT_ANSI|0x08|Trata o arquivo como texto ANSI.|  
-|SCC_FILETYPE_UTF8|0x10|Trata o arquivo como texto em Unicode no formato UTF8.|  
+|SCC_FILETYPE_UTF8|0x10|Trata o arquivo como texto Unicode no formato UTF8.|  
 |SCC_FILETYPE_UTF16LE|0x20|Trata o arquivo como texto Unicode em UTF16 Little Endian formato.|  
 |SCC_FILETYPE_UTF16BE|0x40|Trata o arquivo como texto Unicode em UTF16 Big Endian Formatar.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções de API do plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
+ [Funções de API de plug-in da controle de origem](../extensibility/source-control-plug-in-api-functions.md)

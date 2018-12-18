@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9379d474f135c5d6bbe82fd3391e7e4d8241f1b9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5f747185dd696f6d70cc4c514f54eaddef5bfa7a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864433"
 ---
 # <a name="idebugproperty3setvalueasstringwitherror"></a>IDebugProperty3::SetValueAsStringWithError
 Define o valor dessa propriedade e retorna uma mensagem de erro, se necessário.  
@@ -52,19 +53,19 @@ int SetValueAsStringWithError(
  [in] A base do valor que está sendo definido.  
   
  `dwTimeout`  
- [in] O período de tempo de espera para o valor a ser definido (`INFINITE` significa espera indefinidamente).  
+ [in] O período de tempo de espera para o valor a ser definido (`INFINITE` significa espera para sempre).  
   
  `errorString`  
  [out] Se houver um erro ao definir o valor, isso mantém o motivo da falha.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
  O valor de entrada pode ser uma expressão a ser avaliada.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CProperty** objeto que expõe o [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) interface.  
+ O exemplo a seguir mostra como implementar esse método para um **CProperty** objeto que expõe a [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) interface.  
   
 ```cpp  
 HRESULT CProperty::SetValueAsStringWithError(   

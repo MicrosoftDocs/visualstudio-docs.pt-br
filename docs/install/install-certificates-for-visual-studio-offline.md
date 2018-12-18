@@ -1,27 +1,25 @@
 ---
 title: Instalar os certificados necessários para instalação offline do Visual Studio | Microsoft Docs
-description: Descreve as etapas necessárias para instalar certificados para instalação offline do Visual Studio
+description: Saiba como instalar certificados para instalação offline do Visual Studio.
 ms.date: 08/30/2017
-ms.reviewer: tims
-ms.suite: ''
-ms.technology:
-- vs-acquisition
-ms.tgt_pltfrm: ''
+ms.technology: vs-acquisition
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 9750A3F3-89C7-4A8F-BA75-B0B06BD772C2
-author: tglee
+author: TerryGLee
 ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 548e00743381e6a2c39d87d82c587b26f944702a
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: 78e37097aa4181bec86ca901ab29dffa52b4d010
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49886286"
 ---
 # <a name="install-certificates-required-for-visual-studio-offline-installation"></a>Instalar os certificados necessários para instalação offline do Visual Studio
 
@@ -36,6 +34,8 @@ Há três opções para instalar ou atualizar certificados em um ambiente offlin
 ### <a name="option-1---manually-install-certificates-from-a-layout-folder"></a>Opção 1 – Instalar manualmente os certificados de uma pasta de layout
 
 Ao criar um layout de rede, os certificados necessários são baixados para a pasta Certificados. Depois, você pode instalar manualmente os certificados clicando duas vezes em cada um dos arquivos de certificado e clicando no assistente Gerenciador de Certificados. Se for solicitado a fornecer uma senha, deixe-a em branco.
+
+**Atualização**: no caso do Visual Studio 2017 versão 15.8 versão prévia 2 ou posterior, é possível instalar manualmente os certificados; para isso, basta clicar com o botão direito do mouse em cada um dos arquivos de certificado, selecionar Instalar Certificado e clicar no assistente do Gerenciador de Certificados.
 
 ### <a name="option-2---distribute-trusted-root-certificates-in-an-enterprise-environment"></a>Opção 2 – Distribuir certificados raiz confiáveis em um ambiente empresarial
 
@@ -62,6 +62,15 @@ Se estiver usando o script de implantação do Visual Studio em um ambiente offl
 
    certmgr.exe -add -c certificates\vs_installer_opc.SignCertificates.p12 -n "Microsoft Root Certificate Authority" -s -r LocalMachine root
    ```
+   **Atualização**: no caso do Visual Studio 2017 versão 15.8 versão prévia 2 ou posterior, crie o arquivo em lotes com os seguintes comandos:
+
+   ```cmd
+   certmgr.exe -add [layout path]\certificates\manifestSignCertificates.cer -n "Microsoft Root Certificate Authority 2011" -s -r LocalMachine root
+
+   certmgr.exe -add [layout path]\certificates\manifestCounterSignCertificates.cer -n "Microsoft Root Certificate Authority 2010" -s -r LocalMachine root
+
+   certmgr.exe -add [layout path]\certificates\vs_installer_opc.SignCertificates.cer -n "Microsoft Root Certificate Authority" -s -r LocalMachine root
+   ```
 
 3. Implante o arquivo em lotes para o cliente. Este comando deve ser executado de um processo elevado.
 
@@ -84,6 +93,8 @@ Os três arquivos .P12 nesta pasta contêm um certificado intermediário e um ce
         * Necessário para todos os sistemas. Observe que os sistemas com todas as atualizações aplicadas pelo Windows Update podem não ter esse certificado.
     * Certificado raiz: **Autoridade de Certificação Raiz da Microsoft**
         * Necessário. Esse certificado é fornecido com os sistemas que executam o Windows 7 ou posterior.
+
+**Atualização**: no caso do Visual Studio 2017 versão 15.8 versão prévia 2 ou posterior, o Instalador do Visual Studio exige apenas a instalação dos certificados raiz no sistema.
 
 ## <a name="why-are-the-certificates-from-the-certificates-folder-not-installed-automatically"></a>Por que os certificados da pasta Certificados não são instalados automaticamente?
 
@@ -115,16 +126,10 @@ Se os nomes dos certificados não estiverem na coluna **Emitido Para**, eles ter
 
 Depois de instalar os certificados, a implantação do Visual Studio pode continuar usando as instruções da seção [Implantação de uma instalação de rede](create-a-network-installation-of-visual-studio.md#deploying-from-a-network-installation) da página "Criar uma instalação de rede do Visual Studio".
 
-## <a name="get-support"></a>Obter suporte
-Às vezes, as coisas podem dar errado. Caso a instalação do Visual Studio falhe, confira a página [Solução de problemas de instalação e atualização do Visual Studio 2017](troubleshooting-installation-issues.md). Se nenhuma das etapas de solução de problemas ajudar, entre em contato conosco por meio de um chat ao vivo para obter ajuda com a instalação (somente em inglês). Para saber mais detalhes, confira a [página de suporte do Visual Studio](https://www.visualstudio.com/vs/support/#talktous).
-
-Aqui estão algumas outras opções de suporte:
-* Você pode nos relatar problemas do produto por meio da ferramenta [Relatar um Problema](../ide/how-to-report-a-problem-with-visual-studio-2017.md), exibida no Instalador do Visual Studio e no IDE do Visual Studio.
-* Você pode compartilhar uma sugestão de produto conosco no [UserVoice](https://visualstudio.uservoice.com/forums/121579).
-* É possível acompanhar os problemas do produto na [Comunidade de Desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/), além de fazer perguntas e encontrar respostas.
-* Você pode também interagir conosco e com outros desenvolvedores do Visual Studio por meio das [conversas sobre o Visual Studio na comunidade do Gitter](https://gitter.im/Microsoft/VisualStudio).  (Esta opção requer uma conta do [GitHub](https://github.com/).)
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Consulte também
+
 * [Instalar o Visual Studio](install-visual-studio.md)
 * [Guia do administrador do Visual Studio](visual-studio-administrator-guide.md)
 * [Usar parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)

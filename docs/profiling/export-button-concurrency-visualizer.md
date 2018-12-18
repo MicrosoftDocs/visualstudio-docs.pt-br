@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c773d3135cff3d898c93ed6d9df43b36c387747c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c977c147aa9edc7dc83e76dc3d9c07dd959c3f9c
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764703"
 ---
-# <a name="export-button-concurrency-visualizer"></a>Botão Exportar (Visualizador de Simultaneidade)
-O botão **Exportar** permite que você exporte a pilha de chamadas como um arquivo .csv para seus próprios registros ou para uso em outra ferramenta como o Microsoft Excel.  
+# <a name="export-button-concurrency-visualizer"></a>Botão Exportar (Visualização Simultânea)
+O botão **Exportar** permite que você exporte a pilha de chamadas como um arquivo .*csv* para seus próprios registros ou para uso com outra ferramenta como o Microsoft Excel.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visualização Simultânea](../profiling/concurrency-visualizer.md)   

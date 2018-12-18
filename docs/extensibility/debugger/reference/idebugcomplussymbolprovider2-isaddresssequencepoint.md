@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a49723bb585f65ce544c0508bf886d9daba5c6b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ec0aefd8f59793fdd555ff0cc14f767c10e8972a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829905"
 ---
 # <a name="idebugcomplussymbolprovider2isaddresssequencepoint"></a>IDebugComPlusSymbolProvider2::IsAddressSequencePoint
-Determina se o endereço de depuração especificado é um ponto de sequência.  
+Determina se o endereço de depuração especificada é um ponto de sequência.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,13 +40,13 @@ int IsAddressSequencePoint(
   
 #### <a name="parameters"></a>Parâmetros  
  `pAddress`  
- [in] Depurar o endereço que é representado pelo [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
+ [in] Depurar o endereço que é representado pela [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna se o endereço de depuração é um ponto de sequência, `S_OK`; caso contrário, retorna `S_FALSE`.  
+ Se o endereço de depuração é um ponto de sequência, retornará `S_OK`; caso contrário, retorna `S_FALSE`.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto que expõe o [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) interface.  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto que expõe a [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) interface.  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::IsAddressSequencePoint(  

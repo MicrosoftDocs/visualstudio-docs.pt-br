@@ -14,49 +14,50 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f823334f3686bdba3406daac69b2a98d203780a7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ae0b9d48e2a2292229b40e3aaf2a1c755e4c844e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49815735"
 ---
-# <a name="walkthrough-publishing-a-visual-studio-extension"></a>Passo a passo: Publicando uma extensão do Visual Studio
+# <a name="walkthrough-publish-a-visual-studio-extension"></a>Passo a passo: Publicar uma extensão do Visual Studio
 
-Este passo a passo mostra como publicar uma extensão do Visual Studio para o Visual Studio Marketplace. Quando você adicionar a extensão Marketplace, os desenvolvedores podem usar **extensões e atualizações** existe procurar extensões novas e atualizadas.
+Este passo a passo mostra como publicar uma extensão do Visual Studio no Visual Studio Marketplace. Quando você adiciona sua extensão no Marketplace, os desenvolvedores podem usar **extensões e atualizações** para navegar pelas extensões novas e atualizadas.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
- Para acompanhar este passo a passo, você deve instalar o SDK do Visual Studio. Para obter mais informações, consulte [instalar o SDK do Visual Studio](../extensibility/installing-the-visual-studio-sdk.md).
+ Para seguir este passo a passo, você deve instalar o SDK do Visual Studio. Para obter mais informações, consulte [instalar o SDK do Visual Studio](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-visual-studio-extension"></a>Criar uma extensão do Visual Studio
 
-Nesse caso, usaremos uma extensão de VSPackage padrão, mas as mesmas etapas são válidas para cada tipo de extensão.
+Este artigo usa uma extensão de VSPackage padrão, mas as etapas são válidas para cada tipo de extensão.
 
-1. Crie um VSPackage no c# chamado "TestPublish" que tem um comando de menu. Para obter mais informações, consulte [criando sua primeira extensão: Hello World](../extensibility/extensibility-hello-world.md).
+1. Criar um VSPackage no c#, chamado `TestPublish` que possui um comando de menu. Para obter mais informações, consulte [criar sua primeira extensão: Olá, mundo](../extensibility/extensibility-hello-world.md).
 
-## <a name="package-your-extension"></a>A extensão do pacote
+## <a name="package-your-extension"></a>Empacotar sua extensão
 
-1. Atualize a extensão vsixmanifest com as informações corretas sobre o nome do produto, autor e versão.
+1. Atualizar a extensão *.vsixmanifest* com as informações corretas sobre o nome do produto, autor e versão.
 
-  ![Atualizar vsixmanifest de extensão](media/update-extension-vsixmanifest.png)
+   ![atualizar a extensão vsixmanifest](media/update-extension-vsixmanifest.png)
 
-2. A extensão de compilação **versão** modo. Agora a sua extensão será ser empacotada como um VSIX na pasta \bin\Release.
+2. Compile sua extensão **versão** modo. Agora sua extensão é empacotada como um VSIX na pasta \bin\Release.
 
 3. Você pode clicar duas vezes o VSIX para verificar a instalação.
 
 ## <a name="test-the-extension"></a>A extensão de teste
 
- Antes de distribuir a extensão, compilação e teste para verificar se que ele está instalado corretamente na instância experimental do Visual Studio.
+ Antes de distribuir a extensão, compilar e testar para verificar se que ele está instalado corretamente na instância experimental do Visual Studio.
 
-1. No Visual Studio, inicie a depuração. Para abrir uma instância experimental do Visual Studio.
+1. No Visual Studio, inicie a depuração para abrir uma instância experimental do Visual Studio.
 
-2. Na instância experimental, vá para o **ferramentas** menu e clique em **extensões e atualizações...** . A extensão TestPublish deve aparecer no painel central e ser habilitada.
+2. Na instância experimental, vá para o **ferramentas** menu e clique em **extensões e atualizações**. A extensão TestPublish deve aparecer no painel central e ser habilitada.
 
-3. Sobre o **ferramentas** menu, verifique se o comando de teste.
+3. Sobre o **ferramentas** menu, verifique se você vir o comando de teste.
 
 ## <a name="publish-the-extension-to-the-visual-studio-marketplace"></a>Publicar a extensão para o Visual Studio Marketplace
 
-1. Certifique-se de que você criou a versão de lançamento de sua extensão e que está atualizado.
+1. Certifique-se de que você criou a versão de lançamento da sua extensão e que ela seja atualizada.
 
 2. Em um navegador da web, abra o [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) site.
 
@@ -64,100 +65,100 @@ Nesse caso, usaremos uma extensão de VSPackage padrão, mas as mesmas etapas s�
 
 4. Use sua conta da Microsoft para entrar. Se você não tiver uma conta da Microsoft, você pode criar um neste momento.
 
-5. Clique em **publicar extensões**.  Isso fará com que você navegue para a página de gerenciamento para todas as suas extensões.  Se você não tiver uma conta do publicador, você precisará criar um neste momento.
+5. Clique em **publicar extensões**.  Essa opção, você é direcionado para a página Gerenciar todas as suas extensões. Se você não tiver uma conta de editor, você precisará criar um neste momento.
 
-  ![Carregar no Marketplace](media/upload-to-marketplace.png)
+   ![Carregar no Marketplace](media/upload-to-marketplace.png)
 
-6. Escolha o editor que você deseja usar para carregar a extensão.  Você pode alterar os editores clicando nos nomes de publicador listados à esquerda.  Clique em **nova extensão** e selecione **Visual Studio**.
+6. Escolha o editor que você deseja usar para carregar sua extensão. Você pode alterar os editores clicando em nomes de publicador listados à esquerda. Clique em **nova extensão** e selecione **Visual Studio**.
 
-7. Em **1: carregar a extensão**, você pode optar por carregar um arquivo VSIX diretamente no Visual Studio Marketplace ou simplesmente adiciona um link para seu próprio site. Nesse caso, estamos carregará nossa extensão, TestPublish.vsix.  Arraste e solte a sua extensão ou use o **clique** link para navegar até o arquivo.  A extensão pode ser encontrada na pasta \bin\Release. do projeto.  Clique em **Continue**.
+7. Na **1: carregar a extensão**, você pode optar por carregar um arquivo VSIX diretamente no Visual Studio Marketplace ou simplesmente adicionar um link para seu próprio site. Neste exemplo, a extensão *TestPublish.vsix* é carregado. Arraste e solte sua extensão ou use o **clique** link para navegar para o arquivo. Encontre sua extensão na pasta \bin\Release do projeto.  Clique em **Continue**.
 
-8. Em **2: fornecer detalhes da extensão**, alguns campos são preenchidos automaticamente no arquivo source.extension.vsixmanifest da sua extensão.  Para obter mais detalhes sobre cada um podem ser encontrados abaixo:
+8. Na **2: fornecer detalhes da extensão**, alguns campos são preenchidos automaticamente da *vsixmanifest* arquivo da sua extensão. Encontre mais detalhes sobre cada abaixo:
 
-    * **Nome interno** será usado na URL da página de detalhes da extensão. Por exemplo, uma extensão sob o nome do publicador "myname" de publicação e especificando o nome interno para ser "myextension" resultará em uma URL de "marketplace.visualstudio\.com/items?itemName=myname.myextension" para a sua extensão. página de detalhes.
+    * **Nome interno** é usado na URL da página de detalhes da extensão. Por exemplo, publicar uma extensão sob o nome do publicador "myname" e especificando o nome interno seja "extensão my" resulta em uma URL de "marketplace.visualstudio\.com/items?itemName=myname.myextension" para obter detalhes da sua extensão página.
     
-    * **Nome de exibição** de sua extensão.  Isso é preenchido automaticamente do arquivo source.extension.vsixmanifest.
+    * **Nome de exibição** da sua extensão. Esse nome é preenchido automaticamente do *vsixmanifest* arquivo.
    
-    * **Versão** número da extensão que você está carregando.  Isso é preenchido automaticamente do arquivo source.extension.vsixmanifest.
+    * **Versão** número da extensão que você está carregando. Esta versão é preenchido automaticamente do *vsixmanifest* arquivo.
     
-    * **ID do VSIX** é o identificador exclusivo que o Visual Studio usa para a sua extensão.  Isso é necessário se você gostaria de ter a extensão a ser atualizado automaticamente.  Isso é preenchido automaticamente do arquivo source.extension.vsixmanifest.
+    * **ID do VSIX** é o identificador exclusivo que o Visual Studio usa para a sua extensão. Esse identificador é necessário se você gostaria de ter sua extensão atualizadas automaticamente. Esse identificador é preenchido automaticamente do *vsixmanifest* arquivo.
     
-   * **Logotipo** que será usado para a sua extensão.  Ele será preenchido automaticamente o arquivo source.extension.vsixmanifest se fornecido.
+   * **Logotipo** que é usado para a sua extensão. Esse logotipo é preenchido automaticamente do *vsixmanifest* arquivo se fornecido.
     
-    * **Descrição breve** do que faz a sua extensão.  Ele será preenchido automaticamente o arquivo source.extension.vsixmanifest.
+     * **Descrição breve** do que faz a sua extensão. Essa descrição é preenchido automaticamente do *vsixmanifest* arquivo.
     
-    * **Visão geral** é um bom lugar para incluir capturas de tela e informações detalhadas sobre o que faz a sua extensão.
+     * **Visão geral** é um bom lugar para incluir capturas de tela e informações detalhadas sobre o que faz a sua extensão.
     
-    * **Suporte para versões do Visual Studio** permite que você escolha quais versões do Visual Studio funcione em sua extensão.  A extensão será instalada apenas para essas versões.
+     * **Suporte para versões do Visual Studio** permite que você escolha quais versões do Visual Studio que sua extensão funcionará em. Sua extensão for instalada apenas para essas versões.
     
-    * **Edições do Visual Studio** permite que você escolha quais edições do Visual Studio funcionem em sua extensão.  A extensão será instalada apenas para essas edições.
+     * * * Suporte para o Visual Studio edition permite que você escolha quais edições do Visual Studio que sua extensão funcionará em. Sua extensão for instalada apenas para essas edições.
     
-    * **Tipo**.  O tipo mais comum de extensões são **ferramentas**.
+     * **Tipo**. O tipo mais comum de extensões são **ferramentas**.
     
-    * **Categorias**.  Selecione até três são o melhor ajuste para a sua extensão.
+     * **Categorias**. Escolha até três que são uma opção melhor para sua extensão.
     
-    * **Marcas** são palavras-chave que ajudam os usuários a localizar a extensão. Marcas podem ajudar a aumentar a relevância da pesquisa de suas extensões no Marketplace.
+     * **Marcas** são palavras-chave que ajudam os usuários a encontrar sua extensão. As marcas podem ajudar a aumentar a relevância de pesquisa de suas extensões no Marketplace.
     
-    * **Categoria de preços** é o custo de sua extensão.
+     * **Categoria de preços** é o custo da sua extensão.
     
-    * **Repositório de código fonte** permite que você compartilhe um link para seu código-fonte com a comunidade.
+     * **Repositório de código fonte** permite que você compartilhe um link para seu código-fonte com a comunidade.
     
-    * **Permitir que o p e r para a sua extensão** permitirá que os usuários deixem perguntas em sua página de entrada de extensão.
+     * **Permitir perguntas e respostas para a sua extensão** permite que os usuários deixe perguntas em sua página de entrada de extensão.
 
-9. Clique em **salvar e carregar**. Isso o levará página Gerenciar de volta para o publicador.  A extensão ainda não foram publicada.  Para publicar sua extensão, com o botão direito em sua extensão e selecione **tornar público**.  Você pode exibir a sua extensão de aparência semelhante no Marketplace selecionando **exibição extensão**.  Para obter números de aquisição, clique em **relatórios**.  Para fazer alterações em sua extensão, clique em **editar*.
+9. Clique em **salvar e carregar**. Essa opção retorná-lo ao seu editor de página Gerenciar. Sua extensão ainda não foi publicada. Para publicar sua extensão, clique com botão direito em sua extensão e selecione **tornar público**. Você pode exibir a sua extensão de aparência, como no Marketplace, selecionando **extensão do modo de exibição**. Para números de aquisição, clique em **relatórios**. Para fazer alterações em sua extensão, clique em **editar**.
 
-  ![Menu de entrada de extensão](media/extension-entry-menu.png)
+   ![Menu da entrada de extensão](media/extension-entry-menu.png)
 
-10. Depois de clicar em **tornar público**, sua extensão agora é pública.  Pesquise o Visual Studio Marketplace para a sua extensão.
+10. Depois de clicar em **tornar público**, sua extensão agora é pública. Pesquise no Visual Studio Marketplace para a sua extensão.
 
-## <a name="add-additional-users-to-manage-your-publisher-account"></a>Adicionar usuários para gerenciar sua conta do publicador
+## <a name="add-additional-users-to-manage-your-publisher-account"></a>Adicionar usuários adicionais para gerenciar sua conta de editor
 
-Marketplace oferece suporte a concessão de permissões de usuários adicionais para acessar e gerenciar uma conta do publicador.
+Marketplace dá suporte a concessão de permissões de usuários adicionais para acessar e gerenciar uma conta de editor.
 
-1. Navegue até a conta de editor que você deseja acrescentar usuários adicionais.
+1. Navegue até a conta de editor que você deseja acrescentar usuários adicionais ao.
 
-2. Selecione **membros** e clique em **adicionar**
+2. Selecione **membros** e clique em **Add**.
 
-  ![Adicionar usuário adicional](media/add-users.png)
+   ![Adicionar usuário adicional](media/add-users.png)
 
-3. Em seguida, você pode especificar o endereço de email do usuário que você deseja adicionar e conceder o nível certo de acesso em **selecionar uma função**.  É possível escolher entre as seguintes opções:
+3. Em seguida, você pode especificar o endereço de email do usuário que você deseja adicionar e conceder o nível certo de acesso sob **selecionar uma função**.  Você pode escolher entre as seguintes opções:
 
-  * **Criador**: O usuário pode publicar extensões, mas não é possível exibir ou gerenciar extensões publicadas por outros usuários.
+   * **Criador**: O usuário pode publicar extensões, mas não é possível exibir ou gerenciar extensões publicadas por outros usuários.
   
-  * **Leitor**: O usuário pode exibir extensões, mas não é possível publicar ou gerenciar extensões.
+   * **Leitor**: O usuário pode exibir as extensões, mas não é possível publicar ou gerenciar extensões.
   
-  * **Colaborador**: O usuário pode publicar e gerenciar extensões, mas não é possível editar configurações do publicador ou gerenciar o acesso.
+   * **Colaborador**: O usuário pode publicar e gerenciar extensões, mas não é possível editar configurações do publicador ou gerenciar o acesso.
   
-  * **Proprietário**: O usuário pode publicar e gerenciar extensões, editar configurações do publicador e gerenciar o acesso.
+   * **Proprietário**: O usuário pode publicar e gerenciar extensões, edite as configurações do publicador e gerenciar o acesso.
   
 ## <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Instalar a extensão do Visual Studio Marketplace
 
-Agora que a extensão é publicada, instale-o no Visual Studio e testá-lo lá.
+Agora que a extensão for publicada, instalá-lo no Visual Studio e testá-lo lá.
 
-1. No Visual Studio, no **ferramentas** menu, clique em **extensões e atualizações...** .
+1. No Visual Studio, sobre o **ferramentas** menu, clique em **extensões e atualizações**.
 
-2. Clique em **Online** e, em seguida, procure TestPublish.
+2. Clique em **Online** e, em seguida, pesquise por **TestPublish**.
 
-3. Clique em **Baixar**. A extensão, em seguida, será agendada para instalação.
+3. Clique em **Baixar**. Então, a extensão está agendada para instalação.
 
 4. Para concluir a instalação, feche todas as instâncias do Visual Studio.
 
-## <a name="remove-the-extension"></a>Remova a extensão
+## <a name="remove-the-extension"></a>Remover a extensão
 
-Você pode remover a extensão do Visual Studio Marketplace e do computador.
+Você pode remover a extensão do Visual Studio Marketplace e do seu computador.
 
 ### <a name="to-remove-the-extension-from-the-visual-studio-marketplace"></a>Para remover a extensão do Visual Studio Marketplace
 
 1. Abra o [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) site.
 
-2. No canto superior direito, clique em **publicar** extensões.  Selecione o editor que é usado para publicar TestPublish.  A listagem de TestPublish é exibida.
+2. No canto superior direito, clique em **publicar** extensões. Escolher o editor que você usou para publicar **TestPublish**. Na listagem **TestPublish** é exibida.
 
-3. Clique na entrada de extensão e clique em **remover** você será solicitado a confirmar se deseja remover a extensão.  Clique em **OK**.
+3. Clique com botão direito na entrada de extensão e clique em **remover**. Você será solicitado para confirmar se deseja remover a extensão. Clique em **OK**.
 
-### <a name="to-remove-the-extension-from-your-computer"></a>Para remover a extensão do computador
+### <a name="to-remove-the-extension-from-your-computer"></a>Para remover a extensão do seu computador
 
-1. No Visual Studio, no **ferramentas** menu, clique em **extensão e atualizações...** .
+1. No Visual Studio, sobre o **ferramentas** menu, clique em **extensões e atualizações**.
 
-2. Selecione TestPublish e, em seguida, clique em **desinstalação**. A extensão, em seguida, será agendada para desinstalação.
+2. Selecione **TestPublish** e, em seguida, clique em **desinstalar**. Então, a extensão está agendada para desinstalação.
 
 3. Para concluir a desinstalação, feche todas as instâncias do Visual Studio.

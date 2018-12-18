@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31133097"
 ---
 # <a name="test-area-4-check-in"></a>Área de teste 4: Check-In
 Essa área de plug-in de teste de controle de origem abrange enviar itens atualizados para o armazenamento de versão por meio de **Check-In** comando.  

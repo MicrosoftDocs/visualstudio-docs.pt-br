@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 336c0b52e50731ff63fb790a1a1b201b0646caea
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2596023628086ce5e921eeb8499956828d4c8a5c
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39497155"
 ---
 # <a name="define-element"></a>Definir o elemento
-Define um par de nome e valor do símbolo. Este símbolo pode ser avaliado por atributos condicionais. Para obter mais informações, consulte [atributos condicionais](../extensibility/vsct-xml-schema-conditional-attributes.md). Consulte também o [símbolos elemento](../extensibility/symbols-element.md).  
+Define um par de nome e o valor do símbolo. Este símbolo pode ser avaliado por atributos condicionais. Para obter mais informações, consulte [atributos condicionais](../extensibility/vsct-xml-schema-conditional-attributes.md). Consulte também o [elemento Symbols](../extensibility/symbols-element.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +37,7 @@ Define um par de nome e valor do símbolo. Este símbolo pode ser avaliado por a
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|name|Necessário. O nome do símbolo:<br /><br /> Name = "Mode"|  
+|name|Necessário. O nome do símbolo:<br /><br /> nome = "Modo"|  
 |Valor |Necessário. O valor do símbolo:<br /><br /> valor = "Padrão"|  
 |Condição|Opcional. Para obter mais informações, consulte [atributos condicionais](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
@@ -57,4 +58,4 @@ Define um par de nome e valor do símbolo. Este símbolo pode ser avaliado por a
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquivos da tabela de comandos do Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+ [Arquivos de tabela (. VSCT) de comando do Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

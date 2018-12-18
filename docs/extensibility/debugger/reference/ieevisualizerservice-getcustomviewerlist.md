@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0fd16834e941109ccdb4f177ad2080bb710480af
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a3a8c70064849f602110adbc3aaadd00cd114f6d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49856217"
 ---
 # <a name="ieevisualizerservicegetcustomviewerlist"></a>IEEVisualizerService::GetCustomViewerList
-Esse método retorna uma lista de visualizadores de tipo que este serviço conhece.  
+Esse método retorna uma lista de visualizadores de tipo que esse serviço conhece.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,18 +53,18 @@ int GetCustomViewerList(
  [in] Número de visualizadores para recuperar (também especifica o tamanho do `rgViewers` matriz).  
   
  `rgViewers`  
- [out no] Matriz de [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) estruturas devem ser preenchidos.  
+ [no, out] Matriz de [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) estruturas a serem preenchidos.  
   
  `pceltFetched`  
  [out] Número de visualizadores realmente recuperados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) passa a solicitação para esse método como parte de seu suporte para visualizadores de tipo. Se o avaliador de expressão também fornece visualizadores personalizados para o mesmo tipo, ele pode acrescentar adequadamente preenchido [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) estruturas para os visualizadores personalizados à lista. Verifique se [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) reflete os visualizadores adicionais.  
+ [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) passa a solicitação para esse método como parte de seu suporte para visualizadores de tipo. Se o avaliador de expressão também fornece visualizadores personalizados para o mesmo tipo, ele pode acrescentar adequadamente preenchido [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) estruturas para os visualizadores personalizados à lista. Certifique-se de que [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) reflete os visualizadores adicionais.  
   
- Consulte [Visualizador de tipo e o visualizador personalizado](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md) para obter detalhes sobre as diferenças entre os visualizadores e visualizadores.  
+ Ver [Visualizador de tipo e visualizador personalizado](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md) para obter detalhes sobre as diferenças entre os visualizadores e visualizadores.  
   
 ## <a name="see-also"></a>Consulte também  
  [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)   

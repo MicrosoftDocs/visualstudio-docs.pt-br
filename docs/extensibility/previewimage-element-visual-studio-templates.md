@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee25a764326572531e02eb91985aa6150c310715
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5265a2d5632bd014103b557a9f024d3b7d5c5062
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638971"
 ---
 # <a name="previewimage-element-visual-studio-templates"></a>Elemento PreviewImage (modelos do Visual Studio)
-Especifica a imagem de visualização, como um nome de arquivo para a imagem de visualização que aparecerá no **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.  
+Especifica a imagem de visualização, como um nome de arquivo para a imagem de visualização que aparecerá em ambos os **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.  
   
  \<VSTemplate >  
  \<TemplateData >  
@@ -46,7 +47,7 @@ Especifica a imagem de visualização, como um nome de arquivo para a imagem de 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e define como ele é exibido em qualquer um de **novo projeto** ou **Adicionar Novo Item** caixa de diálogo.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Categoriza o modelo e a define como ele é exibido em qualquer um de **novo projeto** ou o **Adicionar Novo Item** caixa de diálogo.|  
   
 ## <a name="text-value"></a>Valor de texto  
  Um valor de texto é obrigatório.  

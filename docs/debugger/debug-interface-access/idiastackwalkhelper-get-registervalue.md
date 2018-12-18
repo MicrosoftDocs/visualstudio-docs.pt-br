@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ccc491ec9e966b8d893b6d669aafc64ebc5c8cf
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: af5f68aaf5b2caed50d28a1a53022a095d478e60
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887911"
 ---
 # <a name="idiastackwalkhelpergetregistervalue"></a>IDiaStackWalkHelper::get_registerValue
 Recupera o valor de um registro.  
@@ -34,16 +35,16 @@ HRESULT get_registerValue (
   
 #### <a name="parameters"></a>Parâmetros  
  `index`  
- [in] Um valor da [enumeração CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md) especificando qual registrar para obter o valor de enumeração.  
+ [in] Um valor da [enumeração CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md) enumeração que especifica qual registrar para obter o valor.  
   
  `pRetVal`  
  [out] Retorna o valor atual do registro.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Apesar do tamanho do `pRetVal` parâmetro, uma implementação deve armazenar apenas o que o registro normalmente contém. Por exemplo, um registro de 8 bits contém apenas o mais baixo 8 bits do valor especificado. Esse valor de 8 bits é expandido para 64 bits quando retornado deste método.  
+ Apesar do tamanho do `pRetVal` parâmetro, uma implementação deve armazenar só o que o registro normalmente mantém. Por exemplo, um registro de 8 bits contém apenas o mais baixo 8 bits do valor fornecido. Esse valor de 8 bits é expandido para 64-bits quando retornado deste método.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   

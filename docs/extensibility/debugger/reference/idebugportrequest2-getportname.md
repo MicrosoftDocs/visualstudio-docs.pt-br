@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c81bdc6586766cb4a241bf29e653cb1b10f66f2f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 490381f183a19e33fd391b133562fc2a463c6ee9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920840"
 ---
 # <a name="idebugportrequest2getportname"></a>IDebugPortRequest2::GetPortName
 Obtém o nome da porta.  
@@ -43,10 +44,10 @@ int GetPortName(
  [out] Retorna o nome da porta.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- O [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) interface é normalmente passada de um pacote de depuração (cliente) para um fornecedor de porta (o servidor) para obter uma conexão a uma porta. O pacote de depuração e o fornecedor de porta estão cientes de opções possíveis para a porta. Se uma cadeia de caracteres simple pode descrever a porta, o `IDebugPortRequest2::GetPortName` método tem informações suficientes para fazer a conexão. Caso contrário, as interfaces adicionais podem ser fornecidas pelo cliente, o que pode ser obtido usando o servidor `IDebugPortRequest2::QueryInterface`.  
+ O [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) interface é normalmente passado de um pacote de depuração (o cliente) para um fornecedor de porta (o servidor) para obter uma conexão a uma porta. O pacote de depuração e o fornecedor de porta estão cientes das possíveis opções para a porta. Se uma cadeia de caracteres simple pode descrever a porta, o `IDebugPortRequest2::GetPortName` método tem informações suficientes para fazer a conexão. Caso contrário, as interfaces adicionais podem ser fornecidos pelo cliente, que pode ser obtido usando o servidor `IDebugPortRequest2::QueryInterface`.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)

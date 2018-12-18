@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31144363"
 ---
 # <a name="source-control-plug-in-api-functions"></a>Funções de API de plug-in de controle de origem
 A API de plug-in de controle de origem contém as seguintes funções, que devem ser implementadas pelo plug-in de acordo com essa API de controle de origem. As assinaturas de cada função e a semântica associada com os sinalizadores de bit e outros parâmetros são descritos em detalhes nesta referência.  

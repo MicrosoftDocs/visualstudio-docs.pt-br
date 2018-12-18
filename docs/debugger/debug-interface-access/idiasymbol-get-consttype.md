@@ -1,5 +1,5 @@
 ---
-title: ': Get_consttype | Microsoft Docs'
+title: 'Idiasymbol:: Get_consttype | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a489aadca4ed61f826a9e5d94cee6ee68caec26
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0880e8b22a31809a1d6e2d4d673c00e2dac2ff60
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49870621"
 ---
 # <a name="idiasymbolgetconsttype"></a>IDiaSymbol::get_constType
 Recupera um sinalizador que especifica se o tipo de dados definido pelo usuário é constante.  
@@ -33,10 +34,10 @@ HRESULT get_constType (
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Retorna `TRUE` se o tipo de dados definido pelo usuário é constante; caso contrário, retornará `FALSE`.  
+ [out] Retorna `TRUE` se o tipo de dados definido pelo usuário for constante; caso contrário, retornará `FALSE`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
@@ -46,7 +47,7 @@ HRESULT get_constType (
 |Requisito|Descrição|  
 |-----------------|-----------------|  
 |Cabeçalho:|dia2.h|  
-|Versão:|Versão 7.0 do DIA SDK|  
+|Versão:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -17,18 +17,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f59ef1d00951d4c49c1bcb19c6c9122e281c3ca
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 62e099f949af3cc3ea336663224c1dd92726ac53
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080019"
 ---
 # <a name="ltfileassociationgt-element-clickonce-application"></a>&lt;fileAssociation&gt; elemento (aplicativo ClickOnce)
 Identifica uma extensão de arquivo a ser associado com o aplicativo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <fileAssociation  
     xmlns="urn:schemas-microsoft-com:clickonce.v1"  
     extension  
@@ -46,17 +47,17 @@ Identifica uma extensão de arquivo a ser associado com o aplicativo.
 |`extension`|Necessário. A extensão de arquivo a ser associado com o aplicativo.|  
 |`description`|Necessário. Uma descrição do tipo de arquivo para uso pelo shell.|  
 |`progid`|Necessário. Um nome que identifica exclusivamente o tipo de arquivo.|  
-|`defaultIcon`|Necessário. Especifica o ícone a ser usado para arquivos com essa extensão. O arquivo de ícone deve ser especificado usando o [ \<arquivo > elemento](../deployment/file-element-clickonce-application.md) dentro de [ \<assembly > elemento](../deployment/assembly-element-clickonce-application.md) que contém este elemento.|  
+|`defaultIcon`|Necessário. Especifica o ícone a ser usado para arquivos com essa extensão. O arquivo de ícone deve ser especificado usando o [ \<arquivo > elemento](../deployment/file-element-clickonce-application.md) dentro de [ \<assembly > elemento](../deployment/assembly-element-clickonce-application.md) que contém esse elemento.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse elemento deve incluir uma referência ao namespace XML para "urn: schemas-microsoft-com:clickonce.v1". Se o `<fileAssociation>` elemento for usado, ele deve vir após o `<application>` elemento em seu pai [ \<assembly > elemento](../deployment/assembly-element-clickonce-application.md).  
+ Esse elemento deve incluir uma referência ao namespace XML para "urn: schemas-microsoft-com:clickonce.v1". Se o `<fileAssociation>` elemento é usado, ele deve vir após o `<application>` elemento em seu pai [ \<assembly > elemento](../deployment/assembly-element-clickonce-application.md).  
   
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] não substituirá as associações de arquivo existente. No entanto, um aplicativo ClickOnce pode substituir a extensão de arquivo para o usuário atual. Após a desinstalação do aplicativo ClickOnce, ClickOnce exclui a associação de arquivo para o usuário e a associação por máquina está ativa novamente.  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] não substituirá as associações de arquivo existente. No entanto, um aplicativo ClickOnce pode substituir a extensão de arquivo para o usuário atual. Após a desinstalação do aplicativo ClickOnce, ClickOnce exclui a associação de arquivo para o usuário e a associação de por máquina está ativa novamente.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir ilustra `fileAssociation` elementos em um aplicativo de manifesto para um aplicativo de editor de texto implantado usando [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]. Este exemplo de código também inclui o [ \<arquivo > elemento](../deployment/file-element-clickonce-application.md) exigido pelo `defaultIcon` atributo.  
   
-```  
+```xml  
 <file name="text.ico" size="4286">  
   <hash>  
     <dsig:Transforms>  
@@ -80,4 +81,4 @@ Identifica uma extensão de arquivo a ser associado com o aplicativo.
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Manifesto de aplicativo ClickOnce](../deployment/clickonce-application-manifest.md)
+ [Manifesto do aplicativo ClickOnce](../deployment/clickonce-application-manifest.md)

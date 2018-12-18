@@ -1,11 +1,11 @@
 ---
-title: Codificando uma regra de validação personalizada para um teste de desempenho Web no Visual Studio | Microsoft Docs
+title: Codificando uma regra de validação personalizada para um teste de desempenho Web
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - custom validation rules
 - validation rules, creating
-- Web performance tests, creating custom validation rules
+- web performance tests, creating custom validation rules
 - rules, validation
 - validation rules
 ms.assetid: 989124bc-1a86-41f7-b37d-8f9e54dd4f0b
@@ -15,19 +15,23 @@ dev_langs:
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 0c2e3eb6d9b0411a078c5d7531105230dfc82457
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 407c6e5b8beec118ce8f25edb35e66722990e8ca
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53047668"
 ---
-# <a name="coding-a-custom-validation-rule-for-a-web-performance-test"></a>Codificando uma regra de validação personalizada para um teste de desempenho Web
+# <a name="code-a-custom-validation-rule-for-a-web-performance-test"></a>Codificar uma regra de validação personalizada para um teste de desempenho Web
 
 Você pode criar suas próprias regras de validação. Para fazer isso, você deve derivar sua própria classe de regra de uma classe de regra de validação. As regras de validação derivam-se da classe base <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule>.
 
 > [!NOTE]
 > Também é possível criar regras de extração personalizadas. Para obter mais informações, consulte [Criar código personalizado e plug-ins para testes de carga](../test/create-custom-code-and-plug-ins-for-load-tests.md).
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="to-create-custom-validation-rules"></a>Para criar regras de validação personalizadas
 
@@ -59,7 +63,7 @@ Você pode criar suas próprias regras de validação. Para fazer isso, você de
 O código a seguir mostra uma implementação de uma regra de validação personalizada. Essa regra de validação imita o comportamento da regra de validação de marca obrigatória predefinida. Use este exemplo como ponto de partida para suas próprias regras de validação personalizadas.
 
 > [!WARNING]
->  As propriedades públicas no código de um validador personalizado não podem conter valores nulos.
+> As propriedades públicas no código de um validador personalizado não podem conter valores nulos.
 
 ```csharp
 using System;
@@ -136,11 +140,11 @@ namespace SampleWebTestRules
             {
                 if (numTagsFound > 0)
                 {
-                    e.Message = String.Format("Only found {0} occurences of the tag", numTagsFound);
+                    e.Message = String.Format("Only found {0} occurrences of the tag", numTagsFound);
                 }
                 else
                 {
-                    e.Message = String.Format("Did not find any occurences of tag '{0}'", RequiredTagName);
+                    e.Message = String.Format("Did not find any occurrences of tag '{0}'", RequiredTagName);
                 }
             }
         }
@@ -231,9 +235,9 @@ Namespace SampleWebTestRules
             ' If the validation fails, set the error text that the user sees
             If Not (validated) Then
                 If numTagsFound > 0 Then
-                    e.Message = String.Format("Only found {0} occurences of the tag", numTagsFound)
+                    e.Message = String.Format("Only found {0} occurrences of the tag", numTagsFound)
                 Else
-                    e.Message = String.Format("Did not find any occurences of tag '{0}'", RequiredTagName)
+                    e.Message = String.Format("Did not find any occurrences of tag '{0}'", RequiredTagName)
                 End If
             End If
         End Sub

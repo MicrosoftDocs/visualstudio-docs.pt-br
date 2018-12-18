@@ -1,7 +1,9 @@
 ---
-title: 'Como: usar o Designer variável | Microsoft Docs'
+title: 'Designer de fluxo de trabalho - como: usar o Designer variável'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Activities.Presentation.View.DesignTimeVariable.UI
 ms.assetid: 0318dfb0-bf8f-4f92-9b86-ae4c1b2161ad
@@ -10,20 +12,22 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c5ea858c6ebe448b7faf77533395a044bcc2fb32
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dc180df4a9be83c0f0b755bffd7ed40009b41497
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31970093"
 ---
 # <a name="how-to-use-the-variable-designer"></a>Como: Use o designer variável
+
 O designer variável é usado para criar variáveis para uso em cenários e em instruções condicionais de associação de dados. O designer é acessado clicando o **variáveis** botão no canto inferior esquerdo da tela de design. O designer contém uma lista de variáveis que aparecem em um formato tabular e podem ser classificados por cada um dos cabeçalhos de coluna, exceto para o **padrão** coluna. Cada variável contém um nome, um tipo de variável, um escopo, e um valor padrão (se houver). O nome e o valor padrão são campos editáveis de texto, e o tipo e escopo são gota- suspensa. O escopo é a atividade que foi selecionada quando o designer variável foi chamado. Se uma variável não pode ser criado no escopo de seleção, então o escopo usará padrão a atividade a mais próxima de ancestral de seleção que permite variáveis criado em seu escopo. Para obter mais informações, consulte [variáveis e argumentos (.NET)](/dotnet/framework/windows-workflow-foundation/variables-and-arguments).
 
  A ordem de classificação não é aplicado até que o usuário explicitamente use um dos controles de classificação, feche e reabra o designer variável, ou cria outra variável.
 
-### <a name="to-create-a-new-variable"></a>Para criar uma nova variável
+## <a name="to-create-a-new-variable"></a>Para criar uma nova variável
 
-1.  Abra uma solução de fluxo de trabalho ou de atividade em [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)].
+1.  Abra uma solução de fluxo de trabalho ou atividade no Visual Studio.
 
 2.  Na tela de design, selecione uma atividade no fluxo de trabalho.
 

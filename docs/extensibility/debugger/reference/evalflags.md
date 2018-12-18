@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c718414749bb6c748f25fb90837644fe984a274
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ef229fb06f8b265b76dc40019b18ae3c796740f7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829957"
 ---
 # <a name="evalflags"></a>EVALFLAGS
 Especifica sinalizadores que controlam a avaliação da expressão.  
@@ -53,13 +54,13 @@ public enum enum_EVALFLAGS {
   
 ## <a name="members"></a>Membros  
  EVAL_RETURNVALUE  
- Especifica que o valor de retorno, se houver, deve ser avaliada.  
+ Especifica que o valor de retorno, se houver, ser avaliado.  
   
  EVAL_NOSIDEEFFECTS  
- Especifica que efeitos colaterais não serão permitidas.  
+ Especifica que os efeitos colaterais não serão permitidas.  
   
  EVAL_ALLOWBPS  
- Especifica a parada em pontos de interrupção.  
+ Especifica parando em pontos de interrupção.  
   
  EVAL_ALLOWERRORREPORT  
  Especifica o relatório de erros para o host a ser permitido. Usado principalmente para a avaliação da expressão no script no Internet Explorer.  
@@ -68,10 +69,10 @@ public enum enum_EVALFLAGS {
  Funções de força a ser avaliada como endereços, em vez de invocar a função.  
   
  EVAL_NOFUNCEVAL  
- Impede que a função que está sendo avaliada. Por exemplo, considere o `int` token na expressão `myExpression(int) + 10`. Essa função pode ser avaliada corretamente como um endereço, mas não como um valor.  
+ Impede que a função que está sendo avaliado. Por exemplo, considere a `int` token na expressão `myExpression(int) + 10`. Essa função pode ser avaliada corretamente como um endereço, mas não como um valor.  
   
  EVAL_NOEVENTS  
- Sinalizador para indicar que os eventos que ocorrem durante a avaliação de expressão não devem ser enviados para o Gerenciador de sessão de depuração (SDM) ou para o IDE.  
+ Sinalizador para indicar que os eventos que ocorrem durante a avaliação da expressão não devem ser enviados para o Gerenciador de sessão de depuração (SDM) ou para o IDE.  
   
 ## <a name="remarks"></a>Comentários  
  Esses sinalizadores são passados como um argumento para o [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) e [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) métodos.  

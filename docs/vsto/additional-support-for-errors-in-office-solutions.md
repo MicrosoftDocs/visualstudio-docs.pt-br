@@ -1,9 +1,9 @@
 ---
-title: Suporte adicional para erros em soluções do Office | Microsoft Docs
+title: Suporte adicional para erros em soluções do Office
 ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
+ms.technology: office-development
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - VST.MSBuild.errAppInfoTaskInsertCtlFailed
@@ -54,46 +54,44 @@ helpviewer_keywords:
 - Office development in Visual Studio, troubleshooting
 - troubleshooting [Office development in Visual Studio]
 - Office development in Visual Studio, errors
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9a9a4c0d4df2e97d151b6a6a310848812b02d77d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4706360581749fbc6e84f3250324bad3663e7a9a
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52304448"
 ---
 # <a name="additional-support-for-errors-in-office-solutions"></a>Suporte adicional para erros em soluções do Office
   Você pode usar os seguintes recursos para ajudá-lo a encontrar respostas para problemas encontrados ao criar soluções do Office no Visual Studio.  
   
-## <a name="troubleshooting-specific-errors"></a>Solucionando problemas de erros específicos  
+## <a name="troubleshoot-specific-errors"></a>Solucionar problemas de erros específicos  
  Para obter assistência com alguns erros comuns em soluções do Office, consulte os tópicos a seguir:  
   
--   [Solução de problemas de erros em Soluções do Office](../vsto/troubleshooting-errors-in-office-solutions.md)  
+-   [Solucionar problemas de erros em soluções do Office](../vsto/troubleshooting-errors-in-office-solutions.md)  
   
--   [Solução de problemas de segurança da solução do Office](../vsto/troubleshooting-office-solution-security.md)  
+-   [Solucionar problemas de segurança de solução do Office](../vsto/troubleshooting-office-solution-security.md)  
   
--   [Solução de problemas da implantação de solução do Office](../vsto/troubleshooting-office-solution-deployment.md)  
+-   [Solucionar problemas de implantação de solução do Office](../vsto/troubleshooting-office-solution-deployment.md)  
   
 ## <a name="other-resources"></a>Outros recursos  
- [Visual Studio Tools para Office fórum](http://go.microsoft.com/fwlink/?LinkId=149744)  
- Fornece um fórum para perguntas sobre as ferramentas de desenvolvedor do Office no Visual Studio.  
+ [Ferramentas do Visual Studio para o fórum do Office](http://go.microsoft.com/fwlink/?LinkId=149744)  
+ Fornece um fórum para perguntas sobre o Office developer tools no Visual Studio.  
   
- [Grupos de discussão do Office](http://go.microsoft.com/fwlink/?LinkId=63585)  
- Fornece uma experiência de grupo de notícias para perguntas sobre os aplicativos do Office. Use os grupos de notícias programação aqui para fazer perguntas sobre tarefas específicas relacionadas aos modelos de objeto dos aplicativos do Office.  
-  
- [Ajuda e Suporte da Microsoft](http://go.microsoft.com/fwlink/?LinkID=108287)  
+ [Microsoft ajuda e suporte](http://go.microsoft.com/fwlink/?LinkID=108287)  
  Fornece acesso a artigos da Base de Dados de Conhecimento (KB), downloads e atualizações, Webcasts de suporte e outros serviços.  
   
- [Recursos adicionais para desenvolvimento de soluções do Office](../vsto/additional-resources-for-developing-office-solutions.md)  
- Fornece links para recursos adicionais para aprender mais sobre como desenvolver soluções do Office e o desenvolvimento do Office no Visual Studio.  
+ [Recursos adicionais para o desenvolvimento de soluções do Office](../vsto/additional-resources-for-developing-office-solutions.md)  
+ Fornece links para recursos adicionais para aprender mais sobre como desenvolver soluções do Office e o desenvolvimento do Office com o Visual Studio.  
   
 ## <a name="see-also"></a>Consulte também  
- [Solucionando problemas de erros em soluções do Office](../vsto/troubleshooting-errors-in-office-solutions.md)   
- [Solucionando problemas de segurança de solução do Office](../vsto/troubleshooting-office-solution-security.md)   
- [Solucionando problemas de implantação de solução do Office](../vsto/troubleshooting-office-solution-deployment.md)   
- [Recursos adicionais para desenvolvimento de soluções do Office](../vsto/additional-resources-for-developing-office-solutions.md)  
+ [Solucionar problemas de erros em soluções do Office](../vsto/troubleshooting-errors-in-office-solutions.md)   
+ [Solucionar problemas de segurança de solução do Office](../vsto/troubleshooting-office-solution-security.md)   
+ [Solucionar problemas de implantação de solução do Office](../vsto/troubleshooting-office-solution-deployment.md)   
+ [Recursos adicionais para o desenvolvimento de soluções do Office](../vsto/additional-resources-for-developing-office-solutions.md)  
   
   

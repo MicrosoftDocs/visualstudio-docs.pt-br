@@ -16,11 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0336859833762d80cc702e844600ded84dbc5d8b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c91c470a9478c7015972be66afe5f41174073047
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636994"
 ---
 # <a name="projectcollection-element-visual-studio-templates"></a>Elemento ProjectCollection (modelos do Visual Studio)
 Especifica a organização e o conteúdo de modelos de vários projetos.  
@@ -31,7 +32,7 @@ Especifica a organização e o conteúdo de modelos de vários projetos.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <ProjectCollection>  
     <ProjectTemplateLink> ... </ProjectTemplateLink>  
     <SolutionFolder> ... </SolutionFolder>  
@@ -48,7 +49,7 @@ Especifica a organização e o conteúdo de modelos de vários projetos.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[ProjectTemplateLink](../extensibility/projecttemplatelink-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Especifica um projeto em um modelo de multiprojeto.|  
+|[ProjectTemplateLink](../extensibility/projecttemplatelink-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Especifica um projeto em um modelo multiprojeto.|  
 |[SolutionFolder](../extensibility/solutionfolder-element-visual-studio-templates.md)|Elemento opcional.<br /><br /> Agrupa projetos em modelos de vários projetos.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -58,10 +59,10 @@ Especifica a organização e o conteúdo de modelos de vários projetos.
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Elemento obrigatório.<br /><br /> Especifica o conteúdo do modelo.|  
   
 ## <a name="remarks"></a>Comentários  
- Os modelos de vários projetos atuam como contêineres para dois ou mais projetos. O `ProjectCollection` elemento é usado para especificar os projetos contêm no modelo. Para obter mais informações sobre modelos de multiprojeto, consulte [como: criar modelos de multiprojeto](../ide/how-to-create-multi-project-templates.md).  
+ Os modelos de vários projetos atuam como contêineres para dois ou mais projetos. O `ProjectCollection` elemento é usado para especificar os projetos que contenham no modelo. Para obter mais informações sobre modelos de vários projetos, consulte [como: criar modelos multiprojetos](../ide/how-to-create-multi-project-templates.md).  
   
 ## <a name="example"></a>Exemplo  
- Esse exemplo mostra um arquivo simples .vstemplate raiz de vários projetos. Neste exemplo, o modelo contém dois projetos, `My Windows Application` e `My Class Library`. O atributo `ProjectName` no elemento `ProjectTemplateLink` define o nome do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para atribuir este projeto. Se o atributo `ProjectName` não existir, o nome do arquivo .vstemplate é usado como o nome do projeto.  
+ Este exemplo mostra uma raiz multiprojeto simple *. vstemplate* arquivo. Neste exemplo, o modelo contém dois projetos, `My Windows Application` e `My Class Library`. O atributo `ProjectName` no elemento `ProjectTemplateLink` define o nome do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para atribuir este projeto. Se o `ProjectName` atributo não existir, o nome da *. vstemplate* arquivo é usado como o nome do projeto.  
   
 ```  
 <VSTemplate Version="3.0.0" Type="ProjectGroup"  
@@ -87,5 +88,5 @@ Especifica a organização e o conteúdo de modelos de vários projetos.
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)   
- [Como criar modelos multiprojeto](../ide/how-to-create-multi-project-templates.md)
+ [Criar modelos de projeto e item](../ide/creating-project-and-item-templates.md)   
+ [Como: criar modelos multiprojetos](../ide/how-to-create-multi-project-templates.md)

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31460001"
 ---
 # <a name="friend-debug-interface-access-sdk"></a>Friend (SDK de Acesso à Interface de Depuração)
 Funções de amigo e classes Friend são identificadas por `SymTagFriend` símbolos. Eles são filhos do pai tipos definidos pelo usuário (UDTs) e têm um [: Get_classparent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md) propriedade.  

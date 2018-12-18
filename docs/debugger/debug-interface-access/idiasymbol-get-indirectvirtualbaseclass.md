@@ -1,5 +1,5 @@
 ---
-title: ': Get_indirectvirtualbaseclass | Microsoft Docs'
+title: 'Idiasymbol:: Get_indirectvirtualbaseclass | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b7806d8e8faa64dbf1f7faaaf3afdb128f8a03b5
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d7dcde1aa61ed9ce39fea15a6a21776afba24786
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933463"
 ---
 # <a name="idiasymbolgetindirectvirtualbaseclass"></a>IDiaSymbol::get_indirectVirtualBaseClass
 Recupera um sinalizador que especifica se o tipo de dados definido pelo usuário é uma classe base virtual indireta.  
@@ -36,7 +37,7 @@ HRESULT get_indirectVirtualBaseClass (
  [out] Retorna `TRUE` se o tipo de dados definido pelo usuário é uma classe base virtual indireta; caso contrário, retornará `FALSE`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
@@ -46,7 +47,7 @@ HRESULT get_indirectVirtualBaseClass (
 |Requisito|Descrição|  
 |-----------------|-----------------|  
 |Cabeçalho:|dia2.h|  
-|Versão:|Versão 7.0 do DIA SDK|  
+|Versão:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,5 +1,5 @@
 ---
-title: API de Teste de Desempenho Web no Visual Studio | Microsoft Docs
+title: API de teste de desempenho Web no Visual Studio
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,23 +9,27 @@ ms.assetid: 93a6a1dd-663b-4ab5-8760-7d6b081561d3
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: ed7cbc7375cbf416d82a56c140479925569dad8d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1f0fc5bdc5b17c13bfb0d4adf07a4a48347ce38b
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896452"
 ---
 # <a name="how-to-use-the-web-performance-test-api"></a>Como usar a API de teste de desempenho Web
 
 Você pode escrever o código para os testes de desempenho na Web. A API de teste de desempenho na Web é usada para criar testes de desempenho na Web codificados, plug-ins de teste de desempenho na Web, plug-ins de solicitação, solicitações, regras de extração e regras de validação. As classes que compõem esses tipos são as classes principais nessa API. Os outros tipos nessa API são usados para oferecer suporte à criação de objetos <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTest>, <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin>, <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin>, <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequest>, <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule> e <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule>. Você usa o namespace <xref:Microsoft.VisualStudio.TestTools.WebTesting> para criar testes de desempenho na Web personalizados.
 
- Você também pode usar a API de teste de desempenho na Web para criar e salvar programaticamente testes de desempenho na Web declarativos. Para fazer isso, use as classes <xref:Microsoft.VisualStudio.TestTools.WebTesting.DeclarativeWebTest> e <xref:Microsoft.VisualStudio.TestTools.WebTesting.DeclarativeWebTestSerializer>.
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
+
+Você também pode usar a API de teste de desempenho na Web para criar e salvar programaticamente testes de desempenho na Web declarativos. Para fazer isso, use as classes <xref:Microsoft.VisualStudio.TestTools.WebTesting.DeclarativeWebTest> e <xref:Microsoft.VisualStudio.TestTools.WebTesting.DeclarativeWebTestSerializer>.
 
 > [!TIP]
->  Use o pesquisador de objetos para examinar o namespace <xref:Microsoft.VisualStudio.TestTools.WebTesting>. Os editores do Visual C# e do Visual Basic oferecem suporte do IntelliSense para codificação com as classes no namespace.
+> Use o pesquisador de objetos para examinar o namespace <xref:Microsoft.VisualStudio.TestTools.WebTesting>. Os editores do Visual C# e do Visual Basic oferecem suporte do IntelliSense para codificação com as classes no namespace.
 
- Você também pode criar plug-ins para teste de carga. Para obter mais informações, consulte [Como usar a API de teste de carga](../test/how-to-use-the-load-test-api.md) e [Como criar um plug-in de teste de carga](../test/how-to-create-a-load-test-plug-in.md).
+Você também pode criar plug-ins para teste de carga. Para obter mais informações, confira [Como usar a API de teste de carga](../test/how-to-use-the-load-test-api.md) e [Como criar um plug-in de teste de carga](../test/how-to-create-a-load-test-plug-in.md).
 
 ## <a name="to-use-the-webtesting-namespace"></a>Para usar o namespace WebTesting
 
@@ -43,13 +47,13 @@ Você pode escrever o código para os testes de desempenho na Web. A API de test
 
 7.  Compile o projeto.
 
-8.  Adicione o novo plug-in de teste de desempenho na Web usando o Editor de Teste de Desempenho na Web:
+8.  Adicione o novo plug-in de teste de desempenho na Web usando o Editor de Testes de Desempenho Web:
 
     1.  Escolha **Adicionar plug-in de teste na Web** na barra de ferramentas.
 
          A caixa de diálogo **Adicionar plug-in de teste na Web** é exibida.
 
-    2.  Em **Selecionar um plug-in**, selecione a classe do plug-in do teste de desempenho Web.
+    2.  Em **Selecionar um plug-in**, selecione a classe do plug-in do teste de desempenho da Web.
 
     3.  No painel **Propriedades do plug-in selecionado**, defina os valores iniciais a serem usados pelo plug-in em tempo de execução.
 
@@ -60,7 +64,7 @@ Você pode escrever o código para os testes de desempenho na Web. A API de test
 
 9. Execute o teste de desempenho na Web.
 
-     Para ver um exemplo de implementação de <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin>, consulte [Como criar um plug-in de teste de desempenho Web](../test/how-to-create-a-web-performance-test-plug-in.md).
+     Para obter um exemplo de implementação de <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin>, confira [Como criar um plug-in de teste de desempenho Web](../test/how-to-create-a-web-performance-test-plug-in.md).
 
 ## <a name="see-also"></a>Consulte também
 

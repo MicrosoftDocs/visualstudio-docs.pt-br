@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131511"
 ---
 # <a name="query-edit-query-save-source-control-vspackage"></a>Editar consulta salvar (VSPackage de controle de origem)
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] editores podem transmitir eventos de consulta Editar consulta salvar (QEQS). [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Stub de controle do código-fonte implementa o serviço QEQS, para que ele é o destinatário de eventos do QEQS. Esses eventos são, em seguida, delegados para o controle de origem ativa atualmente VSPackage. O controle de origem ativa VSPackage implementa o <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> e seus métodos. Os métodos do `IVsQueryEditQuerySave2` interface normalmente são chamadas imediatamente antes de um documento é editado pela primeira vez e imediatamente antes de um documento é salvo.  

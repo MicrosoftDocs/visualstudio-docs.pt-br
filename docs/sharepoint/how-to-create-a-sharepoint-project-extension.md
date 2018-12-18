@@ -17,16 +17,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a47e7c4fbd78241d52b30ed80ab59eb548ab97d5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 25644a11ddbef3f8d493b64f8ca288dbaa87a14c
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37118357"
 ---
-# <a name="how-to-create-a-sharepoint-project-extension"></a>Como criar uma extensão do projeto do SharePoint
-  Crie uma extensão de projeto quando você deseja adicionar funcionalidade a qualquer projeto do SharePoint que está aberto no Visual Studio. Para obter mais informações, consulte [estendendo o sistema de projeto do SharePoint](../sharepoint/extending-the-sharepoint-project-system.md).  
+# <a name="how-to-create-a-sharepoint-project-extension"></a>Como: criar uma extensão de projeto do SharePoint
+  Crie uma extensão de projeto quando você deseja adicionar funcionalidade a qualquer projeto do SharePoint que está aberto no Visual Studio. Para obter mais informações, consulte [estender o sistema de projeto do SharePoint](../sharepoint/extending-the-sharepoint-project-system.md).  
 
-### <a name="to-create-a-project-extension"></a>Para criar um projeto de extensão  
+### <a name="to-create-a-project-extension"></a>Para criar uma extensão de projeto  
 
 1.  Crie um projeto de biblioteca de classes.  
 
@@ -38,12 +39,12 @@ ms.lasthandoff: 04/16/2018
 
 3.  Crie uma nova classe que implemente a interface <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension>.  
 
-4.  Adicionar o <xref:System.ComponentModel.Composition.ExportAttribute> à classe. Este atributo permite que o Visual Studio para descobrir e carregar sua <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> implementação. Passar o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> tipo para o construtor de atributo.  
+4.  Adicionar o <xref:System.ComponentModel.Composition.ExportAttribute> à classe. Esse atributo permite que o Visual Studio descobrir e carregar seu <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> implementação. Passar o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> tipo para o construtor de atributo.  
 
-5.  Na implementação do <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension.Initialize%2A> método, use os membros do *projectService* parâmetro para definir o comportamento de sua extensão. Esse parâmetro é um <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> objeto que fornece acesso para os eventos definidos no <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents> interface.  
+5.  Em sua implementação do <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension.Initialize%2A> método, use os membros a *projectService* parâmetro para definir o comportamento da sua extensão. Esse parâmetro é um <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> objeto que fornece acesso para os eventos definidos na <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents> interface.  
 
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir demonstra como criar uma extensão de projeto simples que manipula a maioria dos eventos de projeto do SharePoint que são definidos pelo <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents> interface. Para testar o código, crie um projeto do SharePoint no [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] e, em seguida, adicionar mais projetos à solução, alterar valores de propriedade do projeto, ou excluir ou excluir um projeto. A extensão de notificações de eventos escrevendo mensagens para o **saída** janela e **lista de erros** janela.  
+ O exemplo de código a seguir demonstra como criar uma extensão de projeto simples que manipula a maioria dos eventos de projeto do SharePoint que são definidos pelo <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents> interface. Para testar o código, crie um projeto do SharePoint no [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] e, em seguida, adicionar mais projetos à solução, altere os valores de propriedade de projeto, ou excluir ou excluir um projeto. A extensão notifica você sobre os eventos, escrevendo mensagens para o **saída** janela e **lista de erros** janela.  
 
   ```vb  
     Imports Microsoft.VisualStudio.SharePoint
@@ -187,22 +188,22 @@ ms.lasthandoff: 04/16/2018
   }  
   ```  
 
-Este exemplo usa o serviço de projeto do SharePoint para gravar a mensagem para o **saída** janela e **lista de erros** janela. Para obter mais informações, consulte [usando o serviço de projeto do SharePoint](../sharepoint/using-the-sharepoint-project-service.md).  
+Este exemplo usa o serviço de projeto do SharePoint para gravar a mensagem para o **saída** janela e **lista de erros** janela. Para obter mais informações, consulte [usar o serviço de projeto do SharePoint](../sharepoint/using-the-sharepoint-project-service.md).  
 
- Para obter exemplos que demonstram como tratar o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectMenuItemsRequested> e <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertiesRequested> eventos, consulte [como: adicionar um Item de Menu de atalho a projetos do SharePoint](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md) e [como: adicionar uma propriedade a projetos SharePoint](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md).  
+ Para obter exemplos que demonstram como lidar com o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectMenuItemsRequested> e <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertiesRequested> eventos, consulte [como: adicionar um item de menu de atalho a projetos do SharePoint](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md) e [como: adicionar uma propriedade a projetos do SharePoint](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md).  
 
-## <a name="compiling-the-code"></a>Compilando o código  
- Este exemplo requer referências para os seguintes assemblies:  
+## <a name="compile-the-code"></a>Compilar o código  
+ Este exemplo requer referências aos assemblies a seguir:  
 
 -   Microsoft.VisualStudio.SharePoint  
 
 -   System.ComponentModel.Composition  
 
-## <a name="deploying-the-extension"></a>Implantando a extensão  
- Para implantar a extensão, criar um [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] pacote de extensão (VSIX) para o assembly e outros arquivos que você quer distribuir com a extensão. Para obter mais informações, consulte [implantação de extensões para ferramentas do SharePoint no Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).  
+## <a name="deploy-the-extension"></a>Implantar a extensão  
+ Para implantar a extensão, crie um [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] pacote de extensão (VSIX) para o assembly e outros arquivos que você deseja distribuir com a extensão. Para obter mais informações, consulte [das ferramentas de implantar extensões para o SharePoint no Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).  
 
-## <a name="see-also"></a>Consulte também  
- [Estendendo o sistema de projeto do SharePoint](../sharepoint/extending-the-sharepoint-project-system.md)   
- [Como: adicionar um Item de Menu de atalho a projetos do SharePoint](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md)   
+## <a name="see-also"></a>Consulte também
+ [Estender o sistema de projeto do SharePoint](../sharepoint/extending-the-sharepoint-project-system.md)   
+ [Como: adicionar um item de menu de atalho a projetos do SharePoint](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md)   
  [Como: adicionar uma propriedade a projetos do SharePoint](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)   
- [Instruções passo a passo: criando uma extensão de projeto do SharePoint](../sharepoint/walkthrough-creating-a-sharepoint-project-extension.md)  
+ [Passo a passo: Criar uma extensão de projeto do SharePoint](../sharepoint/walkthrough-creating-a-sharepoint-project-extension.md)  

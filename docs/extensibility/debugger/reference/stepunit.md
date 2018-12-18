@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 993c92d457baa2008387aad2bc6749ce7ad9387b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a88cb7126166462e64680938eb5f1b0d456a75f4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49901106"
 ---
 # <a name="stepunit"></a>STEPUNIT
-Especifica a unidade de etapa de revisão.  
+Especifica a unidade da etapa de passo a passo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +52,7 @@ enum enum_STEPUNIT {
  Etapas por linha.  
   
  STEP_INSTRUCTION  
- Etapas pela instrução.  
+ Etapas de instrução.  
   
 ## <a name="remarks"></a>Comentários  
  Passado como um argumento para o [etapa](../../../extensibility/debugger/reference/idebugprocess3-step.md) método.  

@@ -1,31 +1,28 @@
 ---
-title: "Como especificar um ícone do aplicativo (Visual Basic, C#) | Microsoft Docs"
-ms.custom: 
+title: Como especificar um ícone do aplicativo (Visual Basic, C#)
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - icons [Visual Studio], application
 - application properties [Visual Studio], icons
 - application icons [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3309b02a50f3f14d166044c2d1cea35bdab3922f
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 8da1de87031db962ede178a742325d9206e808c3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31945214"
 ---
 # <a name="how-to-specify-an-application-icon-visual-basic-c"></a>Como especificar um ícone do aplicativo (Visual Basic, C#)
 
-A propriedade `Icon` de um projeto especifica o arquivo de ícone (.ico) que será exibido para o aplicativo compilado no Explorador de Arquivos e na barra de tarefas do Windows.
+A propriedade `Icon` de um projeto especifica o arquivo do ícone (*.ico*) que será exibido para o aplicativo compilado no **Explorador de Arquivos** e na barra de tarefas do Windows.
 
 A propriedade `Icon` pode ser acessada no painel **Aplicativo** do **Designer de Projeto**, ele contém uma lista de ícones que foram adicionados a um projeto como recursos ou arquivos de conteúdo.
 
@@ -40,11 +37,11 @@ A propriedade `Icon` pode ser acessada no painel **Aplicativo** do **Designer de
 
 1. Quando o **Designer de Projeto** for exibido, escolha a guia **Aplicativo**.
 
-1. **(Visual Basic)** &mdash;Na lista **Ícone**, escolha um arquivo de ícone (.ico).
+1. **(Visual Basic)** &mdash;Na lista **Ícone**, escolha um arquivo de ícone (*.ico*).
 
     **C#**&mdash; Próximo à lista **Ícone**, escolha o botão **\<Procurar...>** e navegue até o local do ícone de arquivo desejado.
 
 ## <a name="see-also"></a>Consulte também
 
-[Página de Aplicativo, Designer de Projeto (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)  
-[Página Aplicativo, Designer de Projeto (C#)](../ide/reference/application-page-project-designer-csharp.md)
+- [Página Aplicativo, Designer de Projeto (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)
+- [Página Aplicativo, Designer de Projeto (C#)](../ide/reference/application-page-project-designer-csharp.md)

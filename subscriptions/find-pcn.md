@@ -9,11 +9,12 @@ description: Saiba como localizar seu PCN (número do cliente) ou seu número de
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 224cb02d2ffdeceb4c2288175968324badd0911c
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: da4a9f1342abfc5701aadf32798305e349eb3ed7
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39637013"
 ---
 # <a name="how-do-i-locate-my-public-customer-number-pcn-or-authorization-number"></a>Como localizar meu "Número de Cliente Público" (PCN) ou Número de Autorização?
 
@@ -23,16 +24,15 @@ Para concluir a integração da sua organização ao portal de administração d
 
 1.  Faça logon no Centro de Empresas da Microsoft em: [https://www.Microsoft.com/licensing/servicecenter](https://www.Microsoft.com/licensing/servicecenter).
 
-    ![Entre no VLSC](_img/vlsc/vlsc-login.png)
-
 2. Na guia Assinaturas, selecione **Assinaturas do Visual Studio**.
-
-    ![Escolha as assinaturas no VLSC](_img/vlsc/vlsc-subscriptions.png)
+    > [!div class="mx-imgBorder"]
+    > ![Escolher assinaturas no VLSC](_img/vlsc/vlsc-subscriptions.png)
 
 3. O Número de Cliente público, ou PCN, está localizado na metade da página.
-    
-    ![Localizar o PCN no VLSC](_img/vlsc/vlsc-pcn.png)
+    > [!div class="mx-imgBorder"]
+    > ![Localizar o PCN no VLSC](_img/vlsc/vlsc-pcn.png)
 
+    
 Se você não visualizar a página acima e for redirecionado para a página de logon do Visual Studio, copie e cole o link a seguir no navegador: https://www.microsoft.com/Licensing/servicecenter/Subscription/AgreementSearch.
 
 ## <a name="if-i-have-more-than-one-pcn-which-one-should-i-use"></a>Se eu tiver mais de um PCN, qual deles deverei usar?

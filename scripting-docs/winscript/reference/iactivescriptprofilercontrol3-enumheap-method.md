@@ -1,14 +1,14 @@
 ---
-title: "Método IActiveScriptProfilerControl3::EnumHeap | Microsoft Docs"
-ms.custom: 
+title: Método IActiveScriptProfilerControl3::EnumHeap | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2799d06d-20dd-4c12-9646-554c0ea3606e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -17,6 +17,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24724556"
 ---
 # <a name="iactivescriptprofilercontrol3enumheap-method"></a>Método IActiveScriptProfilerControl3::EnumHeap
 Retorna uma interface ([IActiveScriptProfilerHeapEnum Interface](../../winscript/reference/iactivescriptprofilerheapenum-interface.md)) que pode ser usado para iterar sobre os objetos do heap de GC no contexto do mecanismo de script associados.  

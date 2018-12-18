@@ -13,13 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f4b1eddfd2d4b0ab0f285b727b6bc6638ca2e8d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9084aad27d14825f4b3d0a648f0880d4db329c78
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237488"
 ---
-# <a name="functions-view---sampling-data"></a>Exibição de Funções – Dados de Amostragem
+# <a name="functions-view---sampling-data"></a>Exibição Funções – dados de amostragem
 O modo de exibição de relatório de Funções do método de perfil de amostragem lista as funções que foram amostradas durante a criação de perfil.  
   
 > [!NOTE]
@@ -41,7 +42,7 @@ O modo de exibição de relatório de Funções do método de perfil de amostrag
 |**% de Amostras Exclusivas**|O percentual de todas as amostras na execução de criação de perfil que eram amostras exclusivas dessa função.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Como personalizar as colunas de exibição do relatório](../profiling/how-to-customize-report-view-columns.md)   
- [Exibição de Funções – Instrumentação](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
- [Exibição de Funções – Amostragem](../profiling/functions-view-dotnet-memory-sampling-data.md)   
+ [Como personalizar as colunas de exibição de relatório](../profiling/how-to-customize-report-view-columns.md)   
+ [Exibição Funções – instrumentação](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
+ [Exibição Funções – amostragem](../profiling/functions-view-dotnet-memory-sampling-data.md)   
  [Exibição Funções](../profiling/functions-view-instrumentation-data.md)

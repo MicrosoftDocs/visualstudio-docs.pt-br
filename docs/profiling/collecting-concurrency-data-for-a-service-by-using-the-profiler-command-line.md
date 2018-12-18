@@ -10,13 +10,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ef4809752fcc3ce77eb185aa3fc3d8fda3856b8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6fb73d202251df71a165c586d02d345329b97342
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34267359"
 ---
-# <a name="collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line"></a>Coletando dados de simultaneidade para um serviço usando a linha de comando do criador de perfil
+# <a name="collect-concurrency-data-for-a-service-by-using-the-profiler-command-line"></a>Coletar dados de simultaneidade para um serviço usando a linha de comando do criador de perfil
 O método de simultaneidade das Ferramentas de Criação de Perfil [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] permite coletar dados de contenção de recursos e dados de atividade do thread que mostram a utilização da CPU, contenção e migração do thread, atrasos na sincronização, áreas de ES sobrepostas e outros eventos do sistema.  
   
 > [!NOTE]
@@ -26,28 +27,28 @@ O método de simultaneidade das Ferramentas de Criação de Perfil [!INCLUDE[vsp
   
 |Tarefa|Conteúdo relacionado|  
 |----------|---------------------|  
-|**Attach to a running .NET service (Anexar a um serviço do .NET em execução)**|-   [How to: Attach the Profiler to a .NET Service to Collect Concurrency Data (Como anexar o criador de perfil a um serviço do .NET para coletar dados de simultaneidade)](../profiling/how-to-attach-the-profiler-to-a-dotnet-service-to-collect-concurrency-data-by-using-the-command-line.md)|  
-|**Add tier-interaction data (Adicionar dados de interação de camada)**|-   [Coletando dados de interação entre camadas](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
-|**Anexar a um serviço do C/C++ em execução**|-   [How to: Attach the Profiler to a Native Service to Collect Concurrency Data (Como anexar o criador de perfil a um serviço nativo para coletar dados de simultaneidade)](../profiling/how-to-attach-the-profiler-to-a-native-service-to-collect-concurrency-data-by-using-the-command-line.md)|  
+|**Attach to a running .NET service (Anexar a um serviço do .NET em execução)**|-   [Como anexar o criador de perfil a um serviço do .NET para coletar dados de simultaneidade](../profiling/how-to-attach-the-profiler-to-a-dotnet-service-to-collect-concurrency-data-by-using-the-command-line.md)|  
+|**Add tier-interaction data (Adicionar dados de interação de camada)**|-   [Coletar dados de interação entre camadas](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
+|**Anexar a um serviço do C/C++ em execução**|-   [Como anexar o criador de perfil a um serviço nativo para coletar dados de simultaneidade](../profiling/how-to-attach-the-profiler-to-a-native-service-to-collect-concurrency-data-by-using-the-command-line.md)|  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
   
-### <a name="profiling-windows-services"></a>Criando o perfil de Serviços Microsoft Windows  
+### <a name="profile-windows-services"></a>Criar perfil de serviços do Windows  
   
 |Tarefa|Conteúdo relacionado|  
 |----------|---------------------|  
-|**Criar perfil usando o método de amostragem**|-   [Coletando estatísticas do aplicativo usando amostragem](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md)|  
-|**Criar perfil usando o método de instrumentação**|-   [Coletando dados de tempo detalhados usando a instrumentação](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method-from-the-profiler-command-line.md)|  
-|**Criar o perfil de alocação de memória e coleta de lixo do .NET**|-   [Coletando dados de memória do .NET](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md)|  
+|**Criar perfil usando o método de amostragem**|-   [Coletar estatísticas do aplicativo usando amostragem](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md)|  
+|**Criar perfil usando o método de instrumentação**|-   [Coletar dados de tempo detalhados usando a instrumentação](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md)|  
+|**Criar o perfil de alocação de memória e coleta de lixo do .NET**|-   [Coletar dados de memória do .NET](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md)|  
   
-### <a name="profiling-concurrency-data"></a>Criando o perfil de dados de simultaneidade  
+### <a name="profile-concurrency-data"></a>Criar perfil de dados de simultaneidade  
   
 |Tarefa|Conteúdo relacionado|  
 |----------|---------------------|  
-|**Aplicativos Autônomos de Perfil**|-   [Coletando dados de simultaneidade](../profiling/collecting-concurrency-data-for-stand-alone-applications-by-using-the-profiler-command-line.md)|  
-|**Criar o perfil de aplicativos Web ASP.NET**|-   [Coletando dados de simultaneidade](../profiling/collecting-concurrency-data-for-an-aspnet-web-application-using-the-profiler-command-line.md)|  
+|**Aplicativos Autônomos de Perfil**|-   [Coletar dados de simultaneidade](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|  
+|**Criar o perfil de aplicativos Web ASP.NET**|-   [Coletar dados de simultaneidade](../profiling/collecting-concurrency-data-for-an-aspnet-web-application.md)|  
   
-### <a name="analyzing-concurrency-data-views-and-reports"></a>Analisando modos de exibição e relatórios de Dados de Simultaneidade  
+### <a name="analyze-concurrency-data-views-and-reports"></a>Analisar modos de exibição e relatórios de Dados de Simultaneidade  
  [Exibições de dados da contenção de recurso](../profiling/resource-contention-data-views.md)  
   
  [Visualização Simultânea](../profiling/concurrency-visualizer.md)  

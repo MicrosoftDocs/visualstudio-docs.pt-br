@@ -1,5 +1,5 @@
 ---
-title: Erros de depuração e caixas de diálogo de aviso | Microsoft Docs
+title: Depurando erros e caixas de diálogo de aviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -23,11 +23,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b87a662b888582a14526a03edf9df13e6492880b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: bb7ed7b66483bcda01df00e92907801d994553e9
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44279035"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>Caixas de diálogo Depurando Erros e Avisos
 Veja abaixo as caixas de diálogo de erros e avisos que você pode encontrar ao depurar o aplicativo.  
@@ -45,26 +46,26 @@ Veja abaixo as caixas de diálogo de erros e avisos que você pode encontrar ao 
   
  [Caixa de diálogo do Depurador do Microsoft Visual Studio (Exceção Lançada)](../debugger/microsoft-visual-studio-debugger-exception-thrown-dialog-box.md)  
   
- [Nenhum código-fonte disponível para a caixa de diálogo de local atual](../debugger/no-source-available.md)  
+ [Nenhum código-fonte disponível para a caixa de diálogo local atual](../debugger/no-source-available.md)  
   
- [Nenhuma caixa de diálogo informações simbólicas](http://msdn.microsoft.com/en-us/18de4888-9cca-4059-a165-48b135fee4c9)  
+ [Nenhuma caixa de diálogo de informações simbólicas](https://msdn.microsoft.com/library/18de4888-9cca-4059-a165-48b135fee4c9)  
   
  [Caixa de diálogo Resolver Ambiguidade](../debugger/resolve-ambiguity-dialog-box.md)  
   
  [Caixa de diálogo Aviso de Código Obsoleto](../debugger/stale-code-warning-dialog-box.md)  
   
- [Não é possível conectar ao computador](../debugger/error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md)  
+ [Não é possível conectar à máquina](../debugger/error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md)  
   
  [Erro: a depuração não é possível porque um depurador de kernel está habilitado no sistema](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Depuração de Script e da Web: erros e solução de problemas](../debugger/debugging-web-applications-errors-and-troubleshooting.md)  
+ [Depurando Script e Web: erros e solução de problemas](../debugger/debugging-web-applications-errors-and-troubleshooting.md)  
   
- [Erros de depuração remotos](../debugger/remote-debugging-errors-and-troubleshooting.md)  
+ [Erros de depuração remota](../debugger/remote-debugging-errors-and-troubleshooting.md)  
   
- [Anexar erros](http://msdn.microsoft.com/en-us/2820d904-a068-4fcb-bbfb-bbbe5195d6ae)  
+ [Erros de anexo](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/8dbb3we5(v=vs.100))  
   
- [Solucionando problemas de configuração de depuração de SQL](http://msdn.microsoft.com/en-us/b3ec8303-4c0d-449c-8d19-4932c1d820a7)  
+ [Solução de problemas de instalação de depuração de SQL](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/s7ahaxtd(v=vs.100))  
   
  [Perguntas frequentes do Visual C++ de depuração](../debugger/debugging-native-code-faqs.md)  
   

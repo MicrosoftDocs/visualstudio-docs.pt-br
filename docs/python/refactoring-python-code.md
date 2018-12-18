@@ -1,7 +1,7 @@
 ---
 title: Refatorando o código do Python
 description: Como refatorar facilmente o código Python no Visual Studio renomeando identificadores, extraindo métodos, adicionando importações e removendo importações não utilizadas.
-ms.date: 07/12/2017
+ms.date: 11/12/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,13 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: bc06ba43261a90dcfe6677a73c8a267a7efdcb1c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a612e7e6a59087d219d2afc6233b57f02ed99314
+ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607738"
 ---
-# <a name="refactoring-python-code"></a>Refatorando o código do Python
+# <a name="refactor-python-code"></a>Refatorar o código do Python
 
 O Visual Studio fornece vários comandos para transformar e limpar o código-fonte do Python automaticamente:
 
@@ -26,32 +27,30 @@ O Visual Studio fornece vários comandos para transformar e limpar o código-fon
 - [Adicionar importação](#add-import) fornece uma marcação inteligente para adicionar uma importação ausente
 - [Remover importações não utilizadas](#remove-unused-imports) remove importações não utilizadas
 
-<a name="rename-variable"</a>
-
 ## <a name="rename"></a>Renomear
 
-1. Clique com o botão direito do mouse no identificador que você deseja renomear e selecione **Renomear**, coloque o cursor no identificador e selecione o comando de menu **Editar > Refatorar > Renomear...**  (F2).
-1. Na caixa de diálogo **Renomear** exibida, insira o novo nome do identificador e selecione **OK**:
+1. Clique com o botão direito do mouse no identificador que você deseja renomear e escolha **Renomear** ou coloque o cursor no identificador e escolha o comando de menu **Editar** > **Refatorar** > **Renomear** (**F2**).
+2. Na caixa de diálogo **Renomear** exibida, insira o novo nome do identificador e selecione **OK**:
 
-  ![Renomear o prompt com o novo nome do identificador](media/code-refactor-rename-1.png)
+   ![Renomear o prompt com o novo nome do identificador](media/code-refactor-rename-1.png)
 
-1. Na próxima caixa de diálogo, selecione os arquivos e as instâncias no código aos quais a renomeação será aplicada; selecione uma instância individual para visualizar a alteração específica:
+3. Na próxima caixa de diálogo, selecione os arquivos e as instâncias no código aos quais a renomeação será aplicada; selecione uma instância individual para visualizar a alteração específica:
 
-  ![Renomear a caixa de diálogo para selecionar o local em que as alterações serão aplicadas](media/code-refactor-rename-2.png)
+   ![Renomear a caixa de diálogo para selecionar o local em que as alterações serão aplicadas](media/code-refactor-rename-2.png)
 
-1. Selecione **Aplicar** para fazer as alterações nos arquivos de código-fonte. (Não é possível desfazer esta ação.)
+4. Selecione **Aplicar** para fazer as alterações nos arquivos de código-fonte. (Não é possível desfazer esta ação.)
 
 ## <a name="extract-method"></a>Extrair método
 
 1. Selecione as linhas de código ou a expressão a ser extraída para um método separado.
-1. Selecione o comando de menu **Editar > Refatorar > Extrair método...** ou digite Ctrl-R, M.
-1. Na caixa de diálogo exibida, insira um novo nome de método, indique o local em que ele deverá ser extraído e selecione as variáveis de fechamento. As variáveis não selecionadas para fechamento são transformadas em argumentos de método:
+2. Escolha o comando de menu **Editar** > **Refatorar** > **Extrair método** ou digite **Ctrl**+**R** > **M**.
+3. Na caixa de diálogo exibida, insira um novo nome de método, indique o local em que ele deverá ser extraído e selecione as variáveis de fechamento. As variáveis não selecionadas para fechamento são transformadas em argumentos de método:
 
-  ![Extrair a caixa de diálogo do método](media/code-refactor-extract-method-1.png)
+   ![Extrair a caixa de diálogo do método](media/code-refactor-extract-method-1.png)
 
-1. Selecione **OK** e o código será modificado de acordo:
+4. Selecione **OK** e o código será modificado de acordo:
 
-  ![Efeito da extração de um método](media/code-refactor-extract-method-2.png)
+   ![Efeito da extração de um método](media/code-refactor-extract-method-2.png)
 
 ## <a name="add-import"></a>Adicionar importação
 
@@ -68,8 +67,6 @@ O Visual Studio tenta filtrar os membros que não estão realmente definidos em 
 Da mesma forma, o Visual Studio filtra funções importadas de outros módulos ou do namespace interno. Por exemplo, se um módulo importa a função `settrace` do módulo `sys`, em teoria, é possível importá-lo desse módulo. Porém, é melhor usar `import settrace from sys` diretamente, assim, o Visual Studio oferecerá essa instrução especificamente.
 
 Por fim, se algo normalmente precisar ser excluído devido às regras acima, mas tiver outros valores que serão incluídos (devido ao fato de o nome ter recebido um valor no módulo, por exemplo), o Visual Studio ainda excluirá a importação. Esse comportamento pressupõe que o valor não deverá ser exportado, pois ele é definido em outro módulo e, portanto, a atribuição adicional provavelmente será um valor fictício que também não é exportado.
-
-<a name="remove-imports"</a>
 
 ## <a name="remove-unused-imports"></a>Remover importações não utilizadas
 

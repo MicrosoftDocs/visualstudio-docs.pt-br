@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31457833"
 ---
 # <a name="compiland"></a>Compiland
 Há um `SymTagCompiland` símbolo para cada Compiland vinculado ao arquivo .exe. Informações de Compiland são divididas entre os símbolos com um `SymTagCompiland` marca, que pode ser recuperada sem carregar símbolos compiland adicionais, e símbolos com um `SymTagCompilandDetails` marca, o que pode exigir carregar símbolos adicionais.  

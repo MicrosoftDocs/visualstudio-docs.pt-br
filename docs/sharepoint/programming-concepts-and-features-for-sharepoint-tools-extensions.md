@@ -15,30 +15,30 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 67aa5bcb83b1ab820286ad70a74cd36c101dbe86
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3347b36f64ac84082bee5c3087c035571c6a6b08
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37118440"
 ---
-# <a name="programming-concepts-and-features-for-sharepoint-tools-extensions"></a>Conceitos e funcionalidades de programação para extensões de ferramentas do SharePoint
-  Há vários importantes conceitos de programação e recursos que estão relacionados às ferramentas do SharePoint no Visual Studio. Os conceitos e recursos desempenham um papel importante na maioria das extensões de ferramentas do SharePoint.  
+# <a name="programming-concepts-and-features-for-sharepoint-tools-extensions"></a>Conceitos de programação e recursos para extensões de ferramentas do SharePoint
+  Há vários conceitos importantes de programação e recursos que estão relacionados às ferramentas do SharePoint no Visual Studio. Esses conceitos e recursos de desempenham um papel importante na maioria das extensões de ferramentas do SharePoint.  
   
-## <a name="in-this-section"></a>Nesta seção  
- [Chamando os modelos de objeto do SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md)  
- Compara usando o cliente do SharePoint e os modelos de objeto de servidor do SharePoint de extensões de ferramentas do SharePoint e fornece informações sobre como você pode criar *comandos do SharePoint* para chamar o modelo de objeto de servidor do SharePoint.  
+## <a name="in-this-section"></a>Nesta seção
+ [Chamar os modelos de objeto do SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md)  
+ Compara usando o cliente do SharePoint e modelos de objeto de servidor do SharePoint de extensões de ferramentas do SharePoint e fornece informações sobre como você pode criar *comandos do SharePoint* para chamar o modelo de objeto de servidor do SharePoint.  
   
- [Usando o serviço de projeto do SharePoint](../sharepoint/using-the-sharepoint-project-service.md)  
+ [Usar o serviço de projeto do SharePoint](../sharepoint/using-the-sharepoint-project-service.md)  
  Descreve os recursos que o serviço de projeto do SharePoint fornece para extensões de ferramentas do SharePoint e fornece instruções para recuperar o serviço em diferentes tipos de extensões.  
   
- [Associando dados personalizados a extensões de Ferramentas do SharePoint](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)  
- Descreve como associar dados personalizados a determinados tipos de objetos em extensões de ferramentas do SharePoint.  
+ [Associar dados personalizados a extensões de ferramentas do SharePoint](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)  
+ Descreve como associar dados personalizados com determinados tipos de objetos em extensões de ferramentas do SharePoint.  
   
-## <a name="see-also"></a>Consulte também  
- [Estendendo as ferramentas do SharePoint no Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)   
- [Estendendo o sistema de projeto do SharePoint](../sharepoint/extending-the-sharepoint-project-system.md)   
- [Estendendo o nó de conexões do SharePoint no Gerenciador de servidores](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
- [Depurando extensões para ferramentas do SharePoint no Visual Studio](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)   
- [Implantando extensões para as Ferramentas do SharePoint no Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)  
-  
+## <a name="see-also"></a>Consulte também
+ [Estender as ferramentas do SharePoint no Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)   
+ [Estender o sistema de projeto do SharePoint](../sharepoint/extending-the-sharepoint-project-system.md)   
+ [Estender o nó de conexões do SharePoint no Gerenciador de servidores](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
+ [Depurar extensões para ferramentas do SharePoint no Visual Studio](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)   
+ [Implantar extensões para ferramentas do SharePoint no Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)  
   

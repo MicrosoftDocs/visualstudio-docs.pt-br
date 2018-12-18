@@ -10,24 +10,26 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 57ba3e2b2df938a41129fdf2d05bfa02690d2cce
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 8ca10b8504dc4383ad6251e3819c14b7102d32d3
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566733"
 ---
 # <a name="navigate-and-update-layer-models-in-program-code"></a>Navegar e atualizar modelos de camada no código do programa
 
 Este artigo descreve os elementos e relações em modelos de camada, o que você pode navegar e atualizar usando o código do programa. Para obter mais informações sobre diagramas de dependência do ponto de vista do usuário, consulte [diagramas de dependência: referência](../modeling/layer-diagrams-reference.md) e [diagramas de dependência: diretrizes](../modeling/layer-diagrams-guidelines.md).
 
-O <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer> modelo descrito neste tópico é uma fachada em geral mais <xref:Microsoft.VisualStudio.GraphModel> modelo. Se você estiver escrevendo um [extensão gesto ou comando de menu](../modeling/add-commands-and-gestures-to-layer-diagrams.md), use o `Layer` modelo. Se você estiver escrevendo um [extensão de validação de camada](../modeling/add-custom-architecture-validation-to-layer-diagrams.md), é mais fácil de usar o `GraphModel`.
+O <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer> modelo descrito neste tópico é uma fachada em um mais geral <xref:Microsoft.VisualStudio.GraphModel> modelo. Se você estiver escrevendo uma [extensão de gesto ou comando de menu](../modeling/add-commands-and-gestures-to-layer-diagrams.md), use o `Layer` modelo. Se você estiver escrevendo uma [extensão de validação de camada](../modeling/add-custom-architecture-validation-to-layer-diagrams.md), é mais fácil de usar o `GraphModel`.
 
 ## <a name="transactions"></a>Transações
 
-Quando você atualiza um modelo, considere a possibilidade de colocar as alterações em um `ILinkedUndoTransaction`, que agrupa as alterações em uma transação. Se qualquer uma das alterações falhar, a transação inteira é revertida. Se o usuário desfaça uma alteração, todas as alterações são desfeitas juntos.
+Quando você atualiza um modelo, considere incluir as alterações em um `ILinkedUndoTransaction`, que agrupa as alterações em uma transação. Se qualquer uma das alterações falhar, toda a transação será revertida. Se o usuário desfizer uma alteração, todas as alterações serão desfeitas em conjunto.
 
-```
+```csharp
 using (ILinkedUndoTransaction t =
         LinkedUndoContext.BeginTransaction("a name"))
 {
@@ -90,7 +92,7 @@ Cada `ILayerElement` tem um dicionário de cadeia chamado `Properties`. Você po
 
 ## <a name="artifact-references"></a>Referências de artefato
 
-Uma referência de artefato (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>) representa um vínculo entre uma camada e um item de projeto, como um arquivo, classe ou pasta. O usuário cria artefatos quando eles criarem uma camada ou adicione a ele arrastando itens do Gerenciador de soluções, o modo de exibição de classe ou o Pesquisador de objetos para um diagrama de dependência. Qualquer número de referências de artefato pode ser vinculado a uma camada.
+Uma referência de artefato (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>) representa um vínculo entre uma camada e um item de projeto, como um arquivo, classe ou pasta. O usuário cria artefatos quando criar uma camada ou adicionar a ele arrastando itens do Gerenciador de soluções, exibição de classe ou Pesquisador de objetos para um diagrama de dependência. Qualquer número de referências de artefato pode ser vinculado a uma camada.
 
 Cada linha do Gerenciador de Camadas exibe uma referência de artefato. Para obter mais informações, consulte [criar diagramas de dependência do seu código](../modeling/create-layer-diagrams-from-your-code.md).
 
@@ -104,13 +106,13 @@ Referências de artefato de camada são diferentes para artefatos em diagramas d
 
 ## <a name="shapes-and-diagrams"></a>Formas e diagramas
 
-Dois objetos são usados para representar cada elemento em um modelo de camadas: um <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement> e um <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape>. O `IShape` representa a posição e o tamanho da forma no diagrama. Em modelos de camada, cada `ILayerElement` tem um `IShape`e cada `IShape` em uma dependência de diagrama tem um `ILayerElement`. `IShape` também é usado para modelos UML. Portanto, nem todo `IShape` tem um elemento de camada.
+Dois objetos são usados para representar cada elemento em um modelo de camadas: um <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement> e um <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape>. O `IShape` representa a posição e o tamanho da forma no diagrama. Nos modelos de camadas, cada `ILayerElement` tem um `IShape`e cada `IShape` em uma dependência diagrama tem um `ILayerElement`. `IShape` também é usado para modelos UML. Portanto, nem todo `IShape` tem um elemento de camada.
 
 Da mesma maneira, o <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel> é exibido em um <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>.
 
 No código de um comando personalizado ou manipulador de gestos, você pode obter o diagrama atual e a seleção atual de formas da importação do `DiagramContext`:
 
-```
+```csharp
 public class ... {
 [Import]
     public IDiagramContext DiagramContext { get; set; }

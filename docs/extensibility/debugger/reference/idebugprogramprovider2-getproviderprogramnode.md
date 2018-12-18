@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b6984a89d39dc99351acaa0e37f2c3d9b1e47f1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d26b74928985feefda3acdc8594c35096fc4e0b4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49821312"
 ---
 # <a name="idebugprogramprovider2getproviderprogramnode"></a>IDebugProgramProvider2::GetProviderProgramNode
 Recupera o nó de programa para um programa específico.  
@@ -50,31 +51,31 @@ int GetProviderProgramNode(
   
 #### <a name="parameters"></a>Parâmetros  
  `Flags`  
- [in] Uma combinação de sinalizadores do [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) enumeração. Os seguintes sinalizadores são típicos para esta chamada:  
+ [in] Uma combinação de sinalizadores do [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) enumeração. Os sinalizadores a seguir são típicos para essa chamada:  
   
 |Sinalizador|Descrição|  
 |----------|-----------------|  
 |`PFLAG_REMOTE_PORT`|Chamador está em execução no computador remoto.|  
-|`PFLAG_DEBUGGEE`|No momento está sendo depurado chamador (informações adicionais sobre o empacotamento serão retornadas para cada nó).|  
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|Chamador foi anexado ao, mas não iniciado pelo depurador.|  
+|`PFLAG_DEBUGGEE`|Chamador está atualmente em depuração (informações adicionais sobre a realização de marshaling serão retornadas para cada nó).|  
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|Chamador foi anexado ao, mas não é iniciado pelo depurador.|  
   
  `pPort`  
  [in] A porta que o processo de chamada está em execução.  
   
  `processId`  
- [in] Um [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) estrutura que contém a ID do processo que contém o programa em questão.  
+ [in] Uma [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) estrutura que contém a ID do processo que contém o programa em questão.  
   
  `guidEngine`  
- [in] GUID do mecanismo de depuração que o programa está anexado a (se houver).  
+ [in] GUID do mecanismo de depuração que o programa é anexado ao (se houver).  
   
  `programId`  
- [in] ID do programa para o qual obter o nó de programa.  
+ [in] ID do programa para o qual obter o nó do programa.  
   
  `ppProgramNode`  
- [out] Um [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objeto que representa o nó de programa solicitado.  
+ [out] Uma [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objeto que representa o nó de programa solicitado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)   

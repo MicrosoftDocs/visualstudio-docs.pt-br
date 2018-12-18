@@ -13,14 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 90bb999a976b72fc444b6c9bdf41d9ec427dffde
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 27e023a9b0b1c05f93209e460bc6dbc45bee4f2d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49927288"
 ---
 # <a name="idebugsettingscallback2geteemetricfile"></a>IDebugSettingsCallback2::GetEEMetricFile
-Recupera o arquivo métrica de avaliador de expressão fornecido o nome ou a métrica.  
+Recupera o arquivo métrica de avaliador de expressão considerando o nome ou a métrica.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,10 +54,10 @@ private int GetEEMetricFile(
  [in] Nome da métrica.  
   
  `pbstrValue`  
- [out] Retorna o conteúdo do arquivo métrico como uma cadeia de caracteres.  
+ [out] Retorna o conteúdo do arquivo de métrica como uma cadeia de caracteres.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

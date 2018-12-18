@@ -1,7 +1,7 @@
 ---
-title: Melhores práticas para uso de trechos de código | Microsoft Docs
-ms.custom: ''
+title: Práticas recomendadas para usar trechos de código
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,11 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d11dcc87a4303937c226e5b7a4efebe8617f6f0f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b8c7a04f2a2fb2ef59a41953c82da4254f213084
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39179525"
 ---
 # <a name="best-practices-for-using-code-snippets"></a>Práticas recomendadas para usar trechos de código
 
@@ -70,6 +71,6 @@ Os trechos de código do IntelliSense instalados pelo Visual Studio não são em
 
 ## <a name="see-also"></a>Consulte também
 
-[Trechos de código do Visual Basic IntelliSense](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)  
-[Como proteger aplicativos](../ide/securing-applications.md)  
-[Trechos de código](../ide/code-snippets.md)
+- [Trechos de código do Visual Basic IntelliSense](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)
+- [Como proteger aplicativos](../ide/securing-applications.md)
+- [Trechos de código](../ide/code-snippets.md)

@@ -1,16 +1,16 @@
 ---
 title: Interface IDebugAsyncOperation | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDebugAsyncOperation interface
 ms.assetid: ebb2ea75-1443-4d8a-812d-171a166f5f9d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +19,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24726096"
 ---
 # <a name="idebugasyncoperation-interface"></a>Interface IDebugAsyncOperation
 O processo de depuração Manager implementa o `IDebugAsyncOperation` interface. Um mecanismo de linguagem chama o `IDebugApplication::CreateAsyncDebugOperation` método para obter uma referência a esta interface. O mecanismo de linguagem pode usar o `IDebugAsyncOperation` interface para fornecer acesso assíncrono a uma operação síncrona de depuração.  

@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0040795564aa1d1d599a55928b888ec7cfcfd97e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6403beec680341416940a2cb4f65476408e095be
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949078"
 ---
 # <a name="fieldmodifiers"></a>FIELD_MODIFIERS
-Especifica os modificadores de um tipo de campo.  
+Especifica os modificadores para um tipo de campo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -111,16 +112,16 @@ public enum enum_FIELD_MODIFIERS {
  Indica que o campo tem acesso público.  
   
  FIELD_MOD_ACCESS_PROTECTED  
- Indica que o campo tenha acesso protegido.  
+ Indica que o campo tem acesso protegido.  
   
  FIELD_MOD_ACCESS_PRIVATE  
  Indica que o campo tem acesso privado.  
   
  FIELD_MOD_NOMODIFIERS  
- Indica que o campo não tem nenhum modificador.  
+ Indica que o campo não tiver nenhum modificador.  
   
  FIELD_MOD_STATIC  
- Indica que o campo estático.  
+ Indica que o campo é estático.  
   
  FIELD_MOD_CONSTANT  
  Indica que o campo é uma constante.  
@@ -135,7 +136,7 @@ public enum enum_FIELD_MODIFIERS {
  Indica que o campo é abstrato.  
   
  FIELD_MOD_NATIVE  
- Indica que o campo nativo.  
+ Indica que o campo é nativo.  
   
  FIELD_MOD_SYNCHRONIZED  
  Indica que o campo será sincronizado.  
@@ -147,7 +148,7 @@ public enum enum_FIELD_MODIFIERS {
  Indica que o campo é uma interface.  
   
  FIELD_MOD_FINAL  
- Indica que o campo final.  
+ Indica que o campo é final.  
   
  FIELD_MOD_SENTINEL  
  Indica que o campo é uma Sentinela.  
@@ -162,7 +163,7 @@ public enum enum_FIELD_MODIFIERS {
  Indica que o campo é um argumento de referência. Isso é especificamente para argumentos de método.  
   
  FIELD_MOD_HIDDEN  
- Indica que o campo deve ser ocultado ou apresentado em outro contexto; Por exemplo, [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] locais estáticos.  
+ Indica que o campo deve ser ocultado ou apresentado em outro contexto; Por exemplo, [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] estáticos locais.  
   
  FIELD_MOD_MARSHALASOBJECT  
  Indica que o campo representa um objeto com um `IUnknown` interface.  
@@ -174,16 +175,16 @@ public enum enum_FIELD_MODIFIERS {
  Indica que o campo tem o `Overloads` palavra-chave aplicada a ele ([!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] somente).  
   
  FIELD_MOD_WRITEONLY  
- Indica que o campo é somente gravação. Esse valor não está incluído no `FIELD_MOD_ALL`, como o uso apenas desses campos somente gravação para a avaliação da função. Um usuário deve solicitar explicitamente `FIELD_MOD_WRITEONLY` campos.  
+ Indica que o campo é somente gravação. Esse valor não está incluído no `FIELD_MOD_ALL`, conforme o uso apenas esses campos somente gravação é para a avaliação da função. Um usuário deve solicitar explicitamente `FIELD_MOD_WRITEONLY` campos.  
   
  FIELD_MOD_ACCESS_MASK  
- Indica uma máscara de acesso ao campo.  
+ Indica uma máscara de acesso de campo.  
   
  FIELD_MOD_MASK  
  Indica uma máscara para modificadores de campo.  
   
 ## <a name="remarks"></a>Comentários  
- Usado para o `dwModifiers` membro o [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) estrutura.  
+ Usado para o `dwModifiers` membro a [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) estrutura.  
   
  Esses valores também são passados para o [EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md) método para filtrar por campos específicos.  
   

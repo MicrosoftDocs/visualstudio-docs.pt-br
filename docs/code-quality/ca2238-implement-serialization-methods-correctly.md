@@ -1,6 +1,7 @@
 ---
 title: 'CA2238: implementar métodos de serialização corretamente'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,42 +14,47 @@ ms.assetid: 00882cf9-e10d-4d40-9126-3e6753e3c934
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 3aaed1be0ba5f44f3d426e9c9e825d063688a865
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c6f25aa6aa574f856bcce7601602ed2f195e785a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949533"
 ---
 # <a name="ca2238-implement-serialization-methods-correctly"></a>CA2238: implementar métodos de serialização corretamente
+
 |||
 |-|-|
 |NomeDoTipo|ImplementSerializationMethodsCorrectly|
 |CheckId|CA2238|
 |Categoria|Microsoft.Usage|
-|Alteração Significativa|Quebrar - se o método é visível fora do assembly.<br /><br /> Não separáveis - se o método não é visível fora do assembly.|
+|Alteração Significativa|Quebrando - se o método é visível fora do assembly.<br /><br /> Não separável - se o método não é visível fora do assembly.|
 
 ## <a name="cause"></a>Causa
  Um método que trata um evento de serialização não tem a assinatura, o tipo de retorno ou a visibilidade corretos.
 
-## <a name="rule-description"></a>Descrição da Regra
+## <a name="rule-description"></a>Descrição da regra
  Um método é designado um manipulador de eventos de serialização, aplicando um dos seguintes atributos de evento de serialização:
 
--   <xref:System.Runtime.Serialization.OnSerializingAttribute?displayProperty=fullName>
+- <xref:System.Runtime.Serialization.OnSerializingAttribute?displayProperty=fullName>
 
--   <xref:System.Runtime.Serialization.OnSerializedAttribute?displayProperty=fullName>
+- <xref:System.Runtime.Serialization.OnSerializedAttribute?displayProperty=fullName>
 
--   <xref:System.Runtime.Serialization.OnDeserializingAttribute?displayProperty=fullName>
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute?displayProperty=fullName>
 
--   <xref:System.Runtime.Serialization.OnDeserializedAttribute?displayProperty=fullName>
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute?displayProperty=fullName>
 
- Manipuladores de eventos de serialização usam um único parâmetro do tipo <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>retornam `void`e ter `private` visibilidade.
+  Manipuladores de eventos de serialização usam um único parâmetro do tipo <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>, return `void`e ter `private` visibilidade.
 
-## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação desta regra, corrija a assinatura, o tipo de retorno ou a visibilidade do manipulador de eventos de serialização.
+## <a name="how-to-fix-violations"></a>Como corrigir violações
+ Para corrigir uma violação dessa regra, corrija a assinatura, o tipo de retorno ou a visibilidade do manipulador de eventos de serialização.
 
-## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
+## <a name="when-to-suppress-warnings"></a>Quando suprimir avisos
  Não suprima um aviso nessa regra.
 
 ## <a name="example"></a>Exemplo

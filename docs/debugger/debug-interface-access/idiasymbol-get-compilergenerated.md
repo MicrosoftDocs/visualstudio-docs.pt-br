@@ -1,5 +1,5 @@
 ---
-title: ': Get_compilergenerated | Microsoft Docs'
+title: 'Idiasymbol:: Get_compilergenerated | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 27a3e432784d7164c14b99fa15c135cc09052800
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 207a92e8e510b01b817e6633830b0478b325254b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49918773"
 ---
 # <a name="idiasymbolgetcompilergenerated"></a>IDiaSymbol::get_compilerGenerated
 Recupera um sinalizador que indica se o símbolo foi gerado pelo compilador.  
@@ -33,10 +34,10 @@ HRESULT get_compilerGenerated (
   
 #### <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Retorna `TRUE` se o compilador gerado o símbolo; caso contrário, retornará `FALSE` se o símbolo foi gerado de fonte gravados pelo usuário.  
+ [out] Retorna `TRUE` se o compilador gerou o símbolo; caso contrário, retornará `FALSE` se o símbolo foi gerado a partir do código-fonte escrito pelo usuário.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
@@ -46,7 +47,7 @@ HRESULT get_compilerGenerated (
 |Requisito|Descrição|  
 |-----------------|-----------------|  
 |Cabeçalho:|dia2.h|  
-|Versão:|Versão 7.0 do DIA SDK|  
+|Versão:|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,5 +1,5 @@
 ---
-title: ': Get_registerid | Microsoft Docs'
+title: 'Idiasymbol:: Get_registerid | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f6a4583206666f90adb90cbebebf9417e66fc78
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0acc6d79e1e5da810e2f2da699df5d4def424df9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861456"
 ---
 # <a name="idiasymbolgetregisterid"></a>IDiaSymbol::get_registerId
 Recupera o designador de registro do local quando o [enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) é definido como `LocIsEnregistered`.  
@@ -36,13 +37,13 @@ HRESULT get_registerId (
  [out] Retorna o designador de registro do local.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  
   
 ## <a name="remarks"></a>Comentários  
- Se o símbolo é em relação a um registro, ou seja, se o símbolo [enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) é definido como `LocIsRegRel`, use o `get_registerId` método seguido por uma chamada para o [: Get_offset](../../debugger/debug-interface-access/idiasymbol-get-offset.md) método para obter o deslocamento do registro onde se encontra o símbolo.  
+ Se o símbolo for em relação a um registro, ou seja, se o símbolo [enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) é definido como `LocIsRegRel`, use o `get_registerId` método seguido por uma chamada para o [idiasymbol:: Get_offset](../../debugger/debug-interface-access/idiasymbol-get-offset.md) método para obter o deslocamento a partir do registro de onde se encontra o símbolo.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

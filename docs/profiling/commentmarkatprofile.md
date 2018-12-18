@@ -13,18 +13,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d4484e5fdee3158b61e7d1ae6d33966141e2a6a5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4eb29336b401b020df52d1ccaa743bb7240e1d2b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854797"
 ---
 # <a name="commentmarkatprofile"></a>CommentMarkAtProfile
-O método `CommentMarkAtProfile` insere um valor de carimbo de data/hora, uma marca numérica e uma cadeia de caracteres de comentário no arquivo .vsp. O valor de carimbo de data/hora pode ser usado para sincronizar os eventos externos. Para que a marcação e o comentário sejam inseridos, a criação de perfil para o thread que contém a função CommentMarkAtProfile deve ser ON.  
+O método `CommentMarkAtProfile` insere um valor de carimbo de data/hora, uma marca numérica e uma cadeia de caracteres de comentário no arquivo .*vsp*. O valor de carimbo de data/hora pode ser usado para sincronizar os eventos externos. Para que a marcação e o comentário sejam inseridos, a criação de perfil para o thread que contém a função CommentMarkAtProfile deve ser ON.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (  
                                    __int64 dnTimestamp,  
                                    long lMarker,  
@@ -44,7 +45,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
   
  Um ponteiro para a cadeia de texto para inserir. A cadeia de caracteres deve ser menor que 256 caracteres, incluindo o terminador NULO.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor retornado  
  A função indica êxito ou falha usando a enumeração **PROFILE_COMMAND_STATUS**. O valor de retorno pode ser um dos seguintes:  
   
 |Enumerador|Descrição|  
@@ -64,20 +65,20 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
 >  Os métodos CommentMarkAtProfile devem ser usados somente com a instrumentação.  
   
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Microsoft.VisualStudio.Profiler.dll  
+ *Microsoft.VisualStudio.Profiler.dll*  
   
 ## <a name="function-information"></a>Informações de função  
   
 |||  
 |-|-|  
-|**Header**|Inclui VSPerf.h|  
-|**Library**|Use VSPerf.lib|  
+|**Header**|Incluir *VSPerf.h*|  
+|**Library**|Usar *VSPerf.lib*|  
 |**Unicode**|Implementado como CommentMarkAtProfileW (Unicode) e CommentMarkAtProfileA (ANSI).|  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir ilustra o uso da chamada da função genérica de CommentMarkAtProfile. O exemplo pressupõe o uso de macros da cadeia de caracteres do Win32 e as configurações do compilador para ANSI para determinar se o código chama a função habilitada do ANSI.  
   
-```  
+```cpp  
 void ExerciseCommentMarkAtProfile(void)  
 {  
     // Declare and initalize variables to pass to   
@@ -116,4 +117,4 @@ void ExerciseCommentMarkAtProfile(void)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da API do criador de perfil do Visual Studio (nativo)](../profiling/visual-studio-profiler-api-reference-native.md)
+ [Referência da API do criador de perfil do Visual Studio (nativa)](../profiling/visual-studio-profiler-api-reference-native.md)

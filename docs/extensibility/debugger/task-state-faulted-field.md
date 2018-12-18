@@ -13,24 +13,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1db50b1b3fa2ca33bd6ab97500a10a6ad48021bf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7c9b3b831e998b11c76a45831586c7ec58483e63
+ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276904"
 ---
 # <a name="taskstatefaulted-field"></a>Campo TASK_STATE_FAULTED
 A tarefa foi concluída devido a uma exceção sem tratamento.  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Assembly:** mscorlib (em mscorlib.dll)  
+ **Assembly:** mscorlib (em *mscorlib. dll*)  
   
  Porque você não pode acessar esse membro interno do .NET Framework, a sintaxe a seguir é fornecida em comum Intermediate Language (CIL).  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp  
 .field static assembly literal int32 TASK_STATE_FAULTED = int32(0x00400000)  
 ```  
   

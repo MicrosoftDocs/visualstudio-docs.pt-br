@@ -12,18 +12,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f71b91b606eb10947f6b794d6311efe6627bd12e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1e03abc331d59504b1b08136c8c81fe12c8ba2af
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34264189"
 ---
 # <a name="stopprofile"></a>StopProfile
 A função `StopProfile` define o contador como 0 (off) para o nível de criação de perfil especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 PROFILE_COMMAND_STATUS PROFILERAPI StopProfile(  
                        PROFILE_CONTROL_LEVEL Level,   
                        unsigned int dwId);  
@@ -44,8 +45,8 @@ PROFILE_COMMAND_STATUS PROFILERAPI StopProfile(
   
  O identificador de processo ou thread gerado pelo sistema.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
- A função indica êxito ou falha usando a enumeração **PROFILE_COMMAND_STATUS**. O valor de retorno pode ser um dos seguintes:  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/valor retornado  
+ A função indica êxito ou falha usando a enumeração **PROFILE_COMMAND_STATUS**. O valor retornado pode ser um dos seguintes:  
   
 |Enumerador|Descrição|  
 |----------------|-----------------|  
@@ -65,7 +66,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI StopProfile(
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  Microsoft.VisualStudio.Profiler.dll  
   
-## <a name="function-information"></a>Informações de Função  
+## <a name="function-information"></a>Informações de função  
  Cabeçalho: declarado em VSPerf.h  
   
  Biblioteca de importação: VSPerf.lib  
@@ -73,7 +74,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI StopProfile(
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir ilustra a chamada para o método StopProfile. O exemplo supõe que uma chamada para o método StartProfile foi feita para o mesmo thread ou processo identificado por [PROFILE_CURRENTID](../profiling/profile-currentid.md).  
   
-```  
+```cpp  
 void ExerciseStopProfile()  
 {  
     // StartProfile and StopProfile control the   

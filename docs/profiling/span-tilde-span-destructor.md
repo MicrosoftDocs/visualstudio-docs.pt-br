@@ -14,23 +14,24 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 489490033530befa31f8109d8dfa717e8236cc8e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ebde2e9659716a73943e2861f8856f6a9817b34b
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35668281"
 ---
 # <a name="spanspan-destructor"></a>Destruidor span::~span
 Destrói o objeto `span` e libera seus recursos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 ~span();  
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** cvmarkersobj.h  
+ **Cabeçalho:** *cvmarkersobj.h*  
   
  **Namespace:** Concurrency::diagnostic
  

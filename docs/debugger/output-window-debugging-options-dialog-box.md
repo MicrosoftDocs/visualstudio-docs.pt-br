@@ -19,23 +19,24 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 35c424632e51cbc7de81fb581dd2e8429341677e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: c6e339be389e629970a5f9b3bb1813165b1fcc7e
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572271"
 ---
 # <a name="output-window-debugging-options-dialog-box"></a>Caixa de diálogo Janela de Saída, Depuração, Opções
-Você pode especificar quais tipos de informações de depuração são exibidos no **saída** janela. Para exibir essas opções, abra o **ferramentas** menu, clique em **opções**, expanda o **depuração** nó e clique em **a janela de saída**.  
+Você pode especificar quais tipos de informações de depuração são exibidos no **saída** janela. Para exibir essas opções, abra o **ferramentas** menu, clique em **opções**, expanda o **depuração** nó e clique em **a janela de saída**.
+
+**Configurações gerais de saída** essa categoria contém controles que determinam se as mensagens de depuração gerais aparecem no **saída** janela. Você pode especificar se cada tipo de mensagem aparece.  
+
+**Configurações de rastreamento do WPF** essa categoria contém controles que determinam o nível das mensagens de rastreamento do WPF que aparecem no **saída** janela. Você pode especificar se cada tipo de mensagem é exibida e especificar um nível de **crítico** para **todos os**.
+
+Para obter mais informações, consulte [como: exibir informações de rastreamento do WPF](../debugger/how-to-display-wpf-trace-information.md).
+
+Se você precisar restaurar as configurações padrão, você pode fazer essa usando **ferramentas** > **importar e exportar configurações** > **redefinir todas as configurações**. Se você quiser redefinir um subconjunto de configurações, salvar suas configurações no **Assistente de importação e exportação configurações** antes de fazer as alterações que você deseja testar, em seguida, importar as configurações salvas mais tarde.
   
- **Configurações de saída geral**  
- Esta categoria contém controles que determinam se as mensagens de depuração gerais aparecem no **saída** janela. Você pode especificar se cada tipo de mensagem aparece.  
-  
- **Configurações de rastreamento do WPF**  
- Esta categoria contém controles que determinam o nível das mensagens de rastreamento do WPF que aparecem no **saída** janela. Você pode especificar se cada tipo de mensagem é exibida e especificar um nível de **crítico** para **todos os**.  
-  
- Para obter mais informações, consulte [como: exibir informações de rastreamento do WPF](../debugger/how-to-display-wpf-trace-information.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Depurando, caixa de diálogo Opções](../debugger/debugging-options-dialog-box.md)   
- [Janela de Saída](../ide/reference/output-window.md)
+## <a name="see-also"></a>Consulte também
+[Depurando, caixa de diálogo Opções](../debugger/debugging-options-dialog-box.md)   
+[Janela de Saída](../ide/reference/output-window.md)

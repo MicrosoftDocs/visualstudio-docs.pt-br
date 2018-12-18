@@ -15,17 +15,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c125ce9b7b8feb27bd8568e52cd363e3d451bd40
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b52d0c894aadd829806e7cc41ac9e78e95df32ba
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39513252"
 ---
 # <a name="how-to-generate-registry-information-for-an-installer"></a>Como: gerar informações de registro para um instalador
-O utilitário RegPkg.exe pode ser usado para gerar um manifesto de registro para um VSPackage gerenciado. O manifesto pode ser incorporado em um pacote de instalação do Windows Installer. RegPkg também pode gerar um arquivo que pode ser incluído em um arquivo de origem de instalação com base no [o conjunto de ferramentas do Windows Installer XML](http://go.microsoft.com/fwlink/?LinkId=62238).  
+O *RegPkg.exe* utilitário pode ser usado para gerar um manifesto de registro para um VSPackage gerenciado. O manifesto pode ser incorporado a um pacote de instalação do Windows Installer. RegPkg também pode gerar um arquivo que pode ser incluído em um arquivo de origem de instalação com base nas [conjunto de ferramentas do Windows Installer XML](http://go.microsoft.com/fwlink/?LinkId=62238).  
   
 > [!IMPORTANT]
->  RegPkg gera nomes de caminho que são específicos para seu sistema de desenvolvimento, portanto toda vez que você usar RegPkg, você deve editar a saída para uso apropriado do Windows Installer formatada propriedades. Por exemplo, o valor de InprocServer32 deve ser **[SystemFolder]mscoree.dll** e caminhos devem usar **[#filekey]** e **[$componentkey]**. Ajustando a saída dessa forma dá suporte a computadores com Windows instalado em uma unidade diferente ou em um diretório diferente, os nomes de diretório localizado e caminhos que os usuários podem escolher. Para obter mais informações, consulte [formatados](http://go.microsoft.com/fwlink/?LinkId=71120) no SDK do Windows Installer. Se você seguir as convenções de RegPkg para caminhos de sistema de desenvolvimento — por exemplo, arquivo IDs do formulário File _*filename*— você precisa fazer alterações menos.  
+>  RegPkg gera nomes de caminho que são específicos para seu sistema de desenvolvimento, portanto, toda vez que usar RegPkg, você deve editar a saída para usar o instalador apropriado do Windows formatada propriedades. Por exemplo, o `InprocServer32` o valor deve ser  *\<Pastasistema\>mscoree. dll* e caminhos devem usar *\<#filekey\>* e  *\<$componentkey\>*. Ajustar a saída dessa maneira oferece suporte a computadores com Windows instalado em uma unidade diferente ou em um diretório diferente, os nomes de diretório localizado e caminhos que os usuários podem escolher. Para obter mais informações, consulte [formatado](http://go.microsoft.com/fwlink/?LinkId=71120) no SDK do Windows Installer. Se você seguir as convenções de RegPkg para seus caminhos de sistema de desenvolvimento — por exemplo, IDs no formato de arquivo *aplicado\<filename\>*— você precisa fazer menos alterações.  
   
 ### <a name="to-create-a-registration-manifest"></a>Para criar um manifesto de registro  
   
@@ -34,14 +35,14 @@ O utilitário RegPkg.exe pode ser usado para gerar um manifesto de registro para
      Por exemplo, no prompt de comando, você digitaria algo semelhante ao seguinte:  
   
     ```  
-    [Visual Studio SDK installation path]\VisualStudioIntegration\Tools\Bin\RegPkg /regfile:MyRegFile.reg MyPackage.dll  
+    <Visual Studio SDK installation path>\VisualStudioIntegration\Tools\Bin\RegPkg /regfile:MyRegFile.reg MyPackage.dll  
     ```  
   
 ### <a name="to-view-a-registration-manifest"></a>Para exibir um manifesto de registro  
   
--   Abra o registro de manifesto em qualquer editor de texto.  
+-   Abra o manifesto de registro em qualquer editor de texto.  
   
-     O exemplo a seguir é o manifesto de registro RegPkg cria para o serviço de linguagem IronPython:  
+     O exemplo a seguir está o manifesto de registro RegPkg cria para o serviço de linguagem do IronPython:  
   
     ```  
     REGEDIT4  
@@ -98,21 +99,21 @@ O utilitário RegPkg.exe pode ser usado para gerar um manifesto de registro para
   
     ```  
   
-### <a name="to-create-a-windows-installer-xml-toolset-include-file"></a>Para criar um conjunto de ferramentas do Windows Installer XML do arquivo de inclusão  
+### <a name="to-create-a-windows-installer-xml-toolset-include-file"></a>Arquivo de inclusão do conjunto de ferramentas para criar um Windows Installer XML  
   
 -   Executar RegPkg com o **/wixfile** alternar. Fornece outras opções, o nome do arquivo de saída e o caminho do VSPackage.  
   
      Por exemplo, no prompt de comando, você digitaria algo semelhante ao seguinte:  
   
     ```  
-    [Visual Studio SDK installation path]\VisualStudioIntegration\Tools\Bin\RegPkg /codebase /wixfile:IronPython.LanguageService.wxi ..\bin\Release\IronPython.LanguageService.dll  
+    <Visual Studio SDK installation path>\VisualStudioIntegration\Tools\Bin\RegPkg /codebase /wixfile:IronPython.LanguageService.wxi ..\bin\Release\IronPython.LanguageService.dll  
     ```  
   
-### <a name="to-view-a-windows-installer-xml-toolset-include-file"></a>Para exibir um conjunto de ferramentas do Windows Installer XML do arquivo de inclusão  
+### <a name="to-view-a-windows-installer-xml-toolset-include-file"></a>Arquivo de inclusão do conjunto de ferramentas para exibir um Windows Installer XML  
   
 -   Abra o conjunto de ferramentas do Windows Installer XML incluir arquivo em qualquer editor de texto.  
   
-     O exemplo a seguir é o arquivo de inclusão RegPkg cria para o serviço de linguagem IronPython:  
+     O exemplo a seguir é o arquivo de inclusão RegPkg cria para o serviço de linguagem do IronPython:  
   
     ```  
     <Include>  
@@ -183,5 +184,5 @@ O utilitário RegPkg.exe pode ser usado para gerar um manifesto de registro para
     ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Registrando VSPackages](http://msdn.microsoft.com/en-us/31e6050f-1457-4849-944a-a3c36b76f3dd)   
+ [Registrar VSPackages](http://msdn.microsoft.com/en-us/31e6050f-1457-4849-944a-a3c36b76f3dd)   
  [VSPackages](../../extensibility/internals/vspackages.md)

@@ -14,16 +14,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c1a2f67204fd6df7c8eb12ce5f13e8d1f4ec29d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: aa1e52e61f4003a9495e1bff5bd64e4edc40a323
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078648"
 ---
-# <a name="msbuild-special-characters"></a>Caracteres especiais no MSBuild
+# <a name="msbuild-special-characters"></a>Caracteres especiais do MSBuild
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] reserva alguns caracteres para uso especial em contextos específicos. Você precisa apenas tais caracteres de escape se desejar usá-los literalmente no contexto no qual eles estão reservados. Por exemplo, um asterisco tem um significado especial somente nos atributos `Include` e `Exclude` de uma definição de item e, em chamadas para `CreateItem`. Se você quiser que um asterisco seja exibido como um asterisco em um desses contextos, você deve usar um caractere de escape. Nos outros contextos, basta digitar o asterisco onde você deseja que ele apareça.  
   
- Para escapar um caractere especial, use a sintaxe %*xx*, onde *xx* representa o valor hexadecimal de ASCII do caractere. Para obter mais informações, confira [Como: usar caracteres especiais no MSBuild](../msbuild/how-to-escape-special-characters-in-msbuild.md).  
+ Para fazer o escape de um caractere especial, use a sintaxe %\<xx>, em que \<xx> representa o valor hexadecimal de ASCII do caractere. Para obter mais informações, confira [Como fazer o escape de caracteres especiais no MSBuild](../msbuild/how-to-escape-special-characters-in-msbuild.md).  
   
 ## <a name="special-characters"></a>Caracteres especiais  
  A tabela a seguir lista os caracteres especiais do [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]:  

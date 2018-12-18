@@ -1,5 +1,5 @@
 ---
-title: ': FindFile | Microsoft Docs'
+title: 'Idiasession:: FindFile | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b91d23cdd92943a40dfa649e82964b101f68739d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 32c8fa5c6f3cd8ec3cf1cead397eadadb99e050d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909935"
 ---
 # <a name="idiasessionfindfile"></a>IDiaSession::findFile
 Recupera os arquivos de origem pelo nome e compiland.  
@@ -36,19 +37,19 @@ HRESULT findFile (
   
 #### <a name="parameters"></a>Parâmetros  
  `pCompiland`  
- [in] Um [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) objeto que representa o compiland a ser usado como um contexto para a pesquisa. Definir esse parâmetro como `NULL` para localizar arquivos de origem em todos os compilandos.  
+ [in] Uma [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) objeto que representa o compiland a ser usado como um contexto para a pesquisa. Definir esse parâmetro como `NULL` para localizar arquivos de origem em todos os compilandos.  
   
  `name`  
- [in] Especifica o nome do arquivo de origem a serem recuperados. Definir esse parâmetro como `NULL` para todos os arquivos a serem recuperados de origem.  
+ [in] Especifica o nome do arquivo de origem a ser recuperado. Definir esse parâmetro como `NULL` para todos os arquivos de origem para ser recuperado.  
   
  `option`  
- [in] Especifica as opções de comparação aplicadas à pesquisa de nome. Os valores do [enumeração NameSearchOptions](../../debugger/debug-interface-access/namesearchoptions.md) enumeração pode ser usada sozinha ou em combinação.  
+ [in] Especifica as opções de comparação aplicadas à pesquisa de nome. Os valores do [enumeração NameSearchOptions](../../debugger/debug-interface-access/namesearchoptions.md) enumeração pode ser usada sozinho ou em combinação.  
   
  `ppResult`  
  [out] Retorna um [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md) recuperado do objeto que contém uma lista dos arquivos de origem.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="example"></a>Exemplo  
   

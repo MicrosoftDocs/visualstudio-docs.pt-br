@@ -10,31 +10,23 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b0b0941959b0d70fa5dfb0ae72aed181b1cd42e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5c841e6930db8f65aaf93c314359656689ecfd1c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903537"
 ---
 # <a name="vsperf"></a>VSPerf
 Use a ferramenta de linha de comando **VsPerf** para:  
   
-1.  Crie perfil de aplicativos UWP na linha de comando quando o Visual Studio não estiver instalado no dispositivo.  
+1. Crie perfil de aplicativos UWP na linha de comando quando o Visual Studio não estiver instalado no dispositivo.  
   
-2.  Crie perfil de aplicativos de área de trabalho do Windows 8 e aplicativos do Windows Server 2012 usando o método de criação de perfil de amostragem.  
+2. Crie perfil de aplicativos de área de trabalho do Windows 8 e aplicativos do Windows Server 2012 usando o método de criação de perfil de amostragem.  
   
- Para obter mais informações sobre opções de criação de perfil, consulte [Ferramentas de desempenho em aplicativos do Windows 8 e Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
+   Para obter mais informações sobre opções de criação de perfil, consulte [Ferramentas de desempenho em aplicativos do Windows 8 e Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
   
-##  <a name="BKMK_In_this_topic"></a> Neste tópico  
- Este tópico descreve as opções que você pode usar com a ferramenta de linha de comando `vsperf.exe`. Este tópico contém as seguintes seções:  
-  
- [Apenas os aplicativos UWP](#BKMK_windows_store_apps_only)  
-  
- [Somente aplicativos da área de trabalho do Windows 8 e do Windows Server 2012](#BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only)  
-  
- [Todos os aplicativos](#BKMK_All_applications)  
-  
-##  <a name="BKMK_windows_store_apps_only"></a> Apenas os aplicativos UWP  
+## <a name="uwp-apps-only"></a>Apenas os aplicativos UWP  
  Essas opções se aplicam somente aos aplicativos UWP.  
   
 |||  
@@ -45,7 +37,7 @@ Use a ferramenta de linha de comando **VsPerf** para:
 |**/noclr**|Opcional. Não colete dados CLR.<br /><br /> Use somente com /package ou /attach.<br /><br /> Otimização, nenhum símbolo gerenciado será resolvido.|  
 |**/listapps**|Lista nomes de aplicativos instalados e PackageFullNames.|  
   
-##  <a name="BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only"></a> Somente aplicativos da área de trabalho do Windows 8 e do Windows Server 2012  
+## <a name="windows-8-desktop-applications-and-windows-server-2012-applications-only"></a>Somente aplicativos da área de trabalho do Windows 8 e do Windows Server 2012  
  Essas opções não funcionam em aplicativos UWP.  
   
 |||  
@@ -54,7 +46,7 @@ Use a ferramenta de linha de comando **VsPerf** para:
 |**/args:{ExecutableArguments}**|Especifica os argumentos de linha de comando que passarão o destino **/launch**.|  
 |**/console**|Executa o destino **/launch** em uma nova janela de comando.|  
   
-##  <a name="BKMK_All_applications"></a> Todos os aplicativos  
+## <a name="all-applications"></a>Todos os aplicativos  
  Essas opções aplicam-se a qualquer aplicativo Windows 8 ou o Windows Server 2012.  
   
 |||  
@@ -68,5 +60,5 @@ Use a ferramenta de linha de comando **VsPerf** para:
 |**/status**|Mostre status do criador de perfil.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Ferramentas de desempenho em aplicativos do Windows 8 e Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)   
- [Criando perfil na linha de comando](../profiling/using-the-profiling-tools-from-the-command-line.md)
+ [Ferramentas de desempenho em aplicativos do Windows 8 e do Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)   
+ [Criar perfil da linha de comando](../profiling/using-the-profiling-tools-from-the-command-line.md)

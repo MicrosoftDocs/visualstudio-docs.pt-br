@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31465880"
 ---
 # <a name="functiontype"></a>FunctionType
 Cada assinatura de função exclusiva é identificada por um `SymTagFunctionType` símbolo. Cada parâmetro é identificado como um símbolo de filho de classe com um `SymTagFunctionArgType` marca.  

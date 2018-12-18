@@ -1,6 +1,7 @@
 ---
-title: Geração de teste | Ferramenta de teste do desenvolvedor do Microsoft IntelliTest | Microsoft Docs
+title: Geração de teste | Ferramenta de teste para desenvolvedores do Microsoft IntelliTest
 ms.date: 05/02/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +11,24 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 259ff0818cebde6d7c603428c6cdb88cd51ca293
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 20bacca2343cb2689ed52096c1a9b0d9c3d74703
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295859"
 ---
 # <a name="test-generation"></a>Geração de teste
 
-No teste de unidade tradicional, são necessários vários componentes para compor um teste:
+Nos testes de unidade tradicionais, um teste de consiste em várias coisas:
 
-```
+* Uma [sequência de chamadas de método](test-generation.md#test-generators)
+* Os argumentos com os quais os métodos são chamados. Os argumentos são as [entradas de teste](input-generation.md)
+* Validação do comportamento pretendido do aplicativo testado informando um conjunto de [declarações](#assumptions-and-assertions)
+
+A seguir está um exemplo de estrutura de teste:
+
+```csharp
 [Test]
 void MyTest() {
     // data
@@ -34,12 +42,6 @@ void MyTest() {
     Assert.AreEqual(a[0], 5);
 }
 ```
-
-O teste é composto por diferentes aspectos:
-
-* Ele corrige uma [sequência de chamadas de método](test-generation.md#test-generators)
-* Ele corrigirá os argumentos com os quais os métodos são chamados, os argumentos são as [entradas de teste](input-generation.md)
-* Ele valida o comportamento pretendido do aplicativo testado um informando um conjunto de [declarações](#assumptions-and-assertions)
 
 O IntelliTest geralmente pode determinar valores de argumento relevantes para [Testes de Unidade Parametrizados](#parameterized-unit-testing) mais gerais, o que fornece a sequência das chamadas de método e declarações.
 
@@ -59,7 +61,7 @@ Quando o IntelliTest precisa construir objetos, chamadas para construtores e mé
 
 Os PUTs são definidos usando o atributo personalizado [PexMethod](attribute-glossary.md#pexmethod) de forma semelhante ao MSTest (ou NUnit, xUnit). Os PUTs são métodos de instância agrupados logicamente em classes marcadas com [PexClass](attribute-glossary.md#pexclass). O exemplo a seguir mostra um PUT simples armazenado na classe **MyPexTest**:
 
-```
+```csharp
 [PexMethod]
 void ReplaceFirstChar(string target, char c) {
 
@@ -71,7 +73,7 @@ void ReplaceFirstChar(string target, char c) {
 
 em que **ReplaceFirstChar** é um método que substitui o primeiro caractere de uma cadeia de caracteres:
 
-```
+```csharp
 class StringHelper {
     static string ReplaceFirstChar(string target, char c) {
         if (target == null) throw new ArgumentNullException();
@@ -83,7 +85,7 @@ class StringHelper {
 
 Deste teste, o IntelliTest pode [gerar entradas](input-generation.md) automaticamente para um PUT que abrange muitos caminhos de execução do código testado. Cada entrada que abrange um caminho de execução diferente é “serializada” como um teste de unidade:
 
-```
+```csharp
 [TestMethod, ExpectedException(typeof(ArgumentNullException))]
 void ReplaceFirstChar0() {
     this.ReplaceFirstChar(null, 0);
@@ -100,7 +102,7 @@ void ReplaceFirstChar10() {
 
 Os testes de unidade parametrizados podem ser métodos genéricos. Nesse caso, o usuário deve especificar os tipos usados para criar a instância do método usando [PexGenericArguments](attribute-glossary.md#pexgenericarguments).
 
-```
+```csharp
 [PexClass]
 public partial class ListTest {
     [PexMethod]
@@ -118,7 +120,7 @@ O IntelliTest fornece vários atributos de validação para ajudar na triagem de
 
 As exceções esperadas geram casos de teste negativos com a anotação apropriada, como **ExpectedException(typeof(*xxx*))**, enquanto exceções inesperadas geram casos de teste com falha.
 
-```
+```csharp
 [PexMethod, PexAllowedException(typeof(ArgumentNullException))]
 void SomeTest() {...}
 ```
@@ -135,7 +137,7 @@ Os validadores são:
 
 O IntelliTest pode "testar" tipos internos, desde que ele pode vê-los. Para o IntelliTest ver os tipos, o seguinte atributo é adicionado ao seu projeto de teste ou produto pelos assistentes do IntelliTest do Visual Studio:
 
-```
+```csharp
 [assembly: InternalsVisibleTo("Microsoft.Pex, PublicKey=002400000480000094000000060200000024000052534131000400000100010007d1fa57c4aed9f0a32e84aa0faefd0de9e8fd6aec8f87fb03766c834c99921eb23be79ad9d5dcc1dd9ad236132102900b723cf980957fc4e177108fc607774f29e8320e92ea05ece4e821c0a5efe8f1645c4c0c93c1ab99285d622caa652c1dfad63d745d6f2de5f17e5eaf0fc4963d261c8a12436518206dc093344d5ad293
 ```
 
@@ -146,7 +148,7 @@ Os usuários podem usar suposições e declarações para expressar [pré-condi�
 
 As declarações são um conceito conhecido em estruturas de teste de unidade regulares, portanto o IntelliTest já "compreende" as classes **Assert** internas fornecidas por cada estrutura de teste com suporte. No entanto, a maioria das estruturas não fornece uma classe **Assume**. Nesse caso, o IntelliTest fornece a classe [PexAssume](static-helper-classes.md#pexassume). Se você não quiser usar uma estrutura de teste existente, o IntelliTest também terá a classe [PexAssert](static-helper-classes.md#pexassert).
 
-```
+```csharp
 [PexMethod]
 public void Test1(object o) {
     // precondition: o should not be null
@@ -158,7 +160,7 @@ public void Test1(object o) {
 
 Em particular, a suposição não nula pode ser codificada como um atributo personalizado:
 
-```
+```csharp
 [PexMethod]
 public void Test2([PexAssumeNotNull] object o)
 // precondition: o should not be null
@@ -204,7 +206,7 @@ Como parte da integração com estruturas de teste, o IntelliTest dá suporte à
 
 **Exemplo**
 
-```
+```csharp
 using Microsoft.Pex.Framework;
 using NUnit.Framework;
 
@@ -232,15 +234,14 @@ namespace MyTests
         }
     }
 }
-
 ```
 
 <a name="further-reading"></a>
 ## <a name="further-reading"></a>Leitura adicional
 
-* [Test to code binding](https://blogs.msdn.microsoft.com/visualstudioalm/2015/04/18/smart-unit-tests-test-to-code-binding-test-case-management/) (Teste para a associação de código)
-* [One Test to rule them all](https://blogs.msdn.microsoft.com/visualstudioalm/2015/07/05/intellitest-one-test-to-rule-them-all/) (Um teste para controlar todos)
+* [Test to code binding](https://blogs.msdn.microsoft.com/devops/2015/04/18/smart-unit-tests-test-to-code-binding-test-case-management/) (Teste para a associação de código)
+* [One Test to rule them all](https://blogs.msdn.microsoft.com/devops/2015/07/05/intellitest-one-test-to-rule-them-all/) (Um teste para controlar todos)
 
 ## <a name="got-feedback"></a>Recebeu comentários?
 
-Poste suas ideias e solicitações de recursos no  **[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)**.
+Poste suas ideias e solicitações de recursos na [Comunidade de Desenvolvedores](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).

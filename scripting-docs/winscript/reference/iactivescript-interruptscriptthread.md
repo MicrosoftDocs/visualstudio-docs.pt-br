@@ -1,11 +1,11 @@
 ---
 title: IActiveScript::InterruptScriptThread | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IActiveScript.InterruptScriptThread
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - IActiveScript_InterruptScriptThread
 ms.assetid: 2304d035-6d39-4811-acd3-8a9640fdbef6
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24641846"
 ---
 # <a name="iactivescriptinterruptscriptthread"></a>IActiveScript::InterruptScriptThread
 Interrompe a execução de um thread em execução do script (um coletor de eventos, a execução imediata ou uma chamada de macro). Esse método pode ser usado para finalizar um script que está preso (por exemplo, em um loop infinito). Ele pode ser chamado de threads não base sem resultando em um texto explicativo de base não a objetos de host ou para o [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md) método.  

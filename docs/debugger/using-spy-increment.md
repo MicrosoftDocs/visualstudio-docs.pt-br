@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475788"
 ---
 # <a name="using-spy"></a>Usando Spy++
 Spy + + (SPYXX. EXE) é um utilitário Win32 que fornece uma exibição gráfica de processos, threads, windows e as mensagens de janela do sistema. Esta seção do Spy + + ajuda inclui os seguintes tópicos:  

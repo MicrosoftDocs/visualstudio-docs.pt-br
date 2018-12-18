@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31481068"
 ---
 # <a name="how-to-start-and-stop-the-message-log-display"></a>Como iniciar e parar a exibição do log de mensagem
 Quando um [exibição de mensagens](../debugger/messages-view.md) janela está ativa, um **Iniciar registro** ou **parar log** escolha aparecerá no Spy + + **mensagens** menu e o correspondente **Iniciar registro** ou **parar log** botão da barra de ferramentas se torna ativa.  

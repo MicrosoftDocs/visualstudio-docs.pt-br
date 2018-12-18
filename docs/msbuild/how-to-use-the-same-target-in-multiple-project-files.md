@@ -13,17 +13,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 41c1ed02a32136d6c80e24f0644e0fab660e8ed0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8fe68d4d6d970ee0c1e5db566caf7c812436589c
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077514"
 ---
 # <a name="how-to-use-the-same-target-in-multiple-project-files"></a>Como usar o mesmo destino em vários arquivos de projeto
 Se você tiver criado vários arquivos de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], talvez você tenha descoberto que precisa usar as mesmas tarefas e destinos em diferentes arquivos de projeto. Em vez de incluir a descrição completa dessas tarefas ou destinos em todos os arquivos de projeto, você pode salvar um destino em um arquivo de projeto separado e, em seguida, importar o projeto para qualquer outro projeto que precise usar o destino.  
   
-## <a name="using-the-import-element"></a>Usando o elemento de Import  
- O elemento `Import` é usado para inserir um arquivo de projeto em outro arquivo de projeto. O arquivo de projeto que está sendo importado deve ser um arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] válido e conter XML bem formado. O atributo `Project` especifica o caminho para o arquivo de projeto importado. Para obter mais informações sobre o elemento `Import`, consulte [elemento Import (MSBuild)](../msbuild/import-element-msbuild.md).  
+## <a name="use-the-import-element"></a>Usar o elemento Import  
+ O elemento `Import` é usado para inserir um arquivo de projeto em outro arquivo de projeto. O arquivo de projeto que está sendo importado deve ser um arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] válido e conter XML bem formado. O atributo `Project` especifica o caminho para o arquivo de projeto importado. Para obter mais informações sobre o elemento `Import`, confira [Elemento Import (MSBuild)](../msbuild/import-element-msbuild.md).  
   
 #### <a name="to-import-a-project"></a>Para importar um projeto  
   
@@ -38,7 +39,7 @@ Se você tiver criado vários arquivos de projeto [!INCLUDE[vstecmsbuild](../ext
 ## <a name="order-of-evaluation"></a>Ordem de avaliação  
  Quando [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] atinge um elemento `Import`, o projeto importado é inserido efetivamente no projeto para o qual está sendo realizada a importação, no local do elemento `Import`. Portanto, o local do elemento `Import` pode afetar os valores de propriedades e de itens. É importante entender as propriedades e os itens que são definidos pelo projeto importado e as propriedades e itens usados pelo projeto importado.  
   
- Quando o projeto é compilado, todas as propriedades são avaliadas primeiro, seguidas dos itens. Por exemplo, o XML a seguir define o arquivo de projeto importado MyCommon.targets:  
+ Quando o projeto é compilado, todas as propriedades são avaliadas primeiro, seguidas dos itens. Por exemplo, o seguinte XML define o arquivo de projeto importado *MyCommon.targets*:  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -52,7 +53,7 @@ Se você tiver criado vários arquivos de projeto [!INCLUDE[vstecmsbuild](../ext
 </Project>  
 ```  
   
- O XML a seguir define MyApp.proj, que importa MyCommon.targets:  
+ O seguinte XML define *MyApp.proj*, que importa *MyCommon.targets*:  
   
 ```xml  
 <Project  
@@ -69,7 +70,7 @@ Se você tiver criado vários arquivos de projeto [!INCLUDE[vstecmsbuild](../ext
   
  `Name="MyCommon"`  
   
- Já que o projeto é importado após a propriedade `Name` ter sido definida em MyApp.proj, a definição de `Name` em MyCommon.targets substitui a definição em MyApp.proj. Se o projeto for importado antes da propriedade Name ser definida, o build exibirá a seguinte mensagem:  
+ Como o projeto é importado depois de a propriedade `Name` ser definida em *MyApp.proj*, a definição de `Name` em *MyCommon.targets* substitui a definição em *MyApp.proj*. Se o projeto é importado antes de a propriedade Name ser definida, o build exibe a seguinte mensagem:  
   
  `Name="MyApp"`  
   
@@ -82,7 +83,7 @@ Se você tiver criado vários arquivos de projeto [!INCLUDE[vstecmsbuild](../ext
 3.  Defina, no arquivo de projeto, todas as propriedades e itens que devem substituir as definições padrão de propriedades e itens no projeto importado.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir mostra o arquivo MyCommon.targets, importado pelo segundo exemplo de código. O arquivo .targets avalia propriedades do projeto para o qual está sendo realizada a importação para configurar o build.  
+ O exemplo de código a seguir mostra o arquivo *MyCommon.targets*, importado pelo segundo exemplo de código. O arquivo *.targets* avalia propriedades do projeto de importação para configurar o build.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -100,7 +101,7 @@ Se você tiver criado vários arquivos de projeto [!INCLUDE[vstecmsbuild](../ext
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir importa o arquivo MyCommon.targets.  
+ O exemplo de código a seguir importa o arquivo *MyCommon.targets*.  
   
 ```xml  
 <Project DefaultTargets="Build"  

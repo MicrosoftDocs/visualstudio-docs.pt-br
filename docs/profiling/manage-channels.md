@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 045059c1ab0c33026369b065649c4d4b82a480df
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 89c5727b8bc294ae28f48a6e1fc3194b258b9555
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844417"
 ---
 # <a name="manage-channels"></a>Gerenciar canais
 Em **Exibição de Threads** na Visualização Simultânea, você pode organizar os canais para o seu processo, de forma que você possa examinar padrões específicos. Você pode classificar os canais, movê-los para cima e para baixo, ocultá-los ou mostrá-los.  
@@ -44,7 +45,7 @@ Em **Exibição de Threads** na Visualização Simultânea, você pode organizar
 ## <a name="move-selected-channel-to-top-or-bottom"></a>Mover o canal selecionado para a parte superior ou inferior  
  Você pode mover os canais selecionados para a parte superior ou inferior da lista para que você pode examinar um determinado padrão ou mover alguns canais para fora do caminho enquanto examina outros.  
   
-## <a name="hide-selected-channels"></a>Ocultar Canais Selecionados  
+## <a name="hide-selected-channels"></a>Ocultar canais selecionados  
  Escolha este controle quando quiser ocultar canais. Por exemplo, se um thread tiver 100 por cento da sincronização da vida útil de seu processo gerenciado, você poderá ocultá-lo ao analisar outros threads.  
   
 > [!NOTE]
@@ -53,13 +54,13 @@ Em **Exibição de Threads** na Visualização Simultânea, você pode organizar
 ## <a name="show-all-channels"></a>Mostrar todos os canais  
  Esse controle é ativado quando um ou mais canais estão ocultos. Se você clicar nele, todos os elementos ocultos serão mostrados e retornados aos cálculos de tempo.  
   
-## <a name="move-markers-to-top"></a>Mova os marcadores para o início  
+## <a name="move-markers-to-top"></a>Mover marcadores para cima  
  Se um rastreamento tiver eventos de marcador, você poderá usar esse comando para mover os canais de marcador para o início da linha do tempo. Sua ordem relativa é preservada.  
   
-## <a name="group-markers-by-thread"></a>Agrupar Marcadores por Thread  
+## <a name="group-markers-by-thread"></a>Agrupar marcadores por thread  
  Se um rastreamento tiver eventos de marcador, você poderá usar esse comando para os canais do marcador de grupo sob o thread que gerou os eventos do marcador.  Os canais de disco são movidos para a parte superior da lista de canais e os canais GPU são movidos para a parte inferior.  
   
 ## <a name="see-also"></a>Consulte também  
- [Controle de Zoom (Exibição de Threads)](../profiling/zoom-control-threads-view.md)   
- [Ativar/desativar modo de medidas](../profiling/measure-mode-on-off.md)   
+ [Controle de zoom (exibição de threads)](../profiling/zoom-control-threads-view.md)   
+ [Modo de medida ativado/desativado](../profiling/measure-mode-on-off.md)   
  [Exibição de Threads](../profiling/threads-view-parallel-performance.md)

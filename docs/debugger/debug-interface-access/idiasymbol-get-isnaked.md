@@ -1,5 +1,5 @@
 ---
-title: ': Get_isnaked | Microsoft Docs'
+title: 'Idiasymbol:: Get_isnaked | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6004652b9f47f39b8b083b4047b91613ec63bb03
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 32280a8b4baaf82867065898b5478c11842a33df
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915068"
 ---
 # <a name="idiasymbolgetisnaked"></a>IDiaSymbol::get_isNaked
-Recupera um sinalizador que especifica se a função tem o [naked](/cpp/cpp/naked-cpp) atributo (ou seja, a função não possui nenhum código de prólogo ou epílogo adicionado pelo compilador).  
+Recupera um sinalizador que especifica se a função tem o [naked](/cpp/cpp/naked-cpp) atributo (ou seja, a função não tem nenhum código de prólogo ou epílogo adicionado pelo compilador).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +37,7 @@ HRESULT get_isNaked(
  [out] Retorna `TRUE` se a função tem o `naked` atributo; caso contrário, retornará `FALSE`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.  
   
 > [!NOTE]
 >  Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.  

@@ -14,71 +14,72 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 71b624cee0e55f95f90a86eac943828bbc26ac97
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0ef0bf2811e9858925398637e835be8684c7f9ef
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928939"
 ---
 # <a name="visual-studio-shell"></a>Shell do Visual Studio
-O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] shell é o principal agente de integração em [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. O shell fornece a funcionalidade necessária para habilitar VSPackages compartilhar serviços comuns. Como a meta de arquitetura de [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] é casaco principal funcionalidade em VSPackages, o shell é uma estrutura para fornecer a funcionalidade básica e dar suporte a comunicação cruzada entre seu componente VSPackages.  
+O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] shell é o principal agente de integração no [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. O shell fornece a funcionalidade necessária para habilitar os VSPackages compartilhar serviços comuns. Porque o objetivo de arquitetura de [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] é casaco principal funcionalidade em VSPackages, o shell é uma estrutura para fornecer a funcionalidade básica e dar suporte a comunicação cruzada entre seu componente VSPackages.  
   
 ## <a name="shell-responsibilities"></a>Responsabilidades do shell  
- O shell tem as seguintes responsabilidades de chave:  
+ O shell tem as seguintes responsabilidades principais:  
   
--   Elementos básicos de suporte (por meio de interfaces COM) da interface do usuário (IU). Esses incluem menus padrão e barras de ferramentas, quadros de janela de documento ou janelas filho de interface de documentos múltiplos (MDI), os quadros de janela de ferramenta e suporte de encaixe.  
+- Elementos básicos que dão suporte a (por meio de interfaces COM) da interface do usuário (IU). Eles incluem barras de ferramentas e menus padrão, janelas filho de interface de vários documentos (MDI), ou quadros de janela de documento e quadros de janela de ferramenta e suporte de encaixe.  
   
--   Manter uma lista de execução de todos os documentos abertos em uma tabela de documento (RDT) em execução para coordenar a persistência de documentos e a garantia de que um documento não pode ser aberto em mais de uma forma ou formas incompatível.  
+- Manter uma lista de todos os documentos abertos no momento em uma tabela de documento (RDT) em execução para coordenar a persistência de documentos e a garantia de que um documento não pode ser aberto em mais de uma forma ou em formas incompatíveis.  
   
--   Suporte a interface de roteamento de comando e manipulação de comandos, `IOleCommandTarget`.  
+- Suporte a interface do roteamento de comando e manipulação de comandos, `IOleCommandTarget`.  
   
--   Carregando VSPackages em momentos apropriados. Um VSPackage de carregamento de atraso é necessário para melhorar o desempenho do shell.  
+- Carregar VSPackages em momentos apropriados. Carregamento de atraso de um VSPackage é necessário para melhorar o desempenho do shell.  
   
--   Gerenciando determinados serviços compartilhados, como <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>, que fornece a funcionalidade básica do shell, e <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>, que fornece a funcionalidade básica de janelas.  
+- Gerenciando determinados serviços compartilhados, tais como <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>, que fornece a funcionalidade básica de shell e <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>, que fornece a funcionalidade básica de janelas.  
   
--   Gerenciando os arquivos de solução (. sln). As soluções contêm grupos de projetos relacionados, semelhantes aos arquivos de espaço de trabalho (dsw) no Visual C++ 6.0.  
+- Gerenciando os arquivos de solução (. sln). As soluções contêm grupos de projetos relacionados, semelhantes aos arquivos de espaço de trabalho (dsw) no Visual C++ 6.0.  
   
--   Seleção de todo o shell do controle de contexto e moeda. O shell rastreia os seguintes tipos de itens:  
+- Seleção de todo o shell de acompanhamento, o contexto e moeda. O shell rastreia os seguintes tipos de itens:  
   
-    -   O projeto atual  
+  -   O projeto atual  
   
-    -   O item de projeto atual ou ItemID atual <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>  
+  -   O item de projeto atual ou ItemID atual <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>  
   
-    -   A seleção atual para o **propriedades** janela ou `SelectionContainer`  
+  -   A seleção atual para o **propriedades** janela ou `SelectionContainer`  
   
-    -   O contexto de interface do usuário IDs ou CmdUIGuids que controlam a visibilidade de comandos, menus e barras de ferramentas  
+  -   O contexto de interface do usuário IDs ou CmdUIGuids que controlam a visibilidade de comandos, menus e barras de ferramentas  
   
-    -   Os elementos ativos no momento, como a janela ativa, o documento e o Gerenciador de desfazer  
+  -   Os elementos ativos no momento, como a janela ativa, o documento e o Gerenciador de desfazer  
   
-    -   Os atributos de contexto de usuário que orientam ajuda dinâmica  
+  -   Os atributos de contexto de usuário que orientam a Ajuda dinâmica  
   
- O shell também atua como mediador comunicação entre VSPackages instalados e os serviços atuais. Ele dá suporte a recursos principais do shell e torna disponível para todos os VSPackages integrados no [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Esses recursos principais incluem os seguintes itens:  
+  O shell também atua como mediador de comunicação entre os VSPackages instalados e os serviços atuais. Ele dá suporte aos principais recursos do shell e torna-os disponíveis para todos os VSPackages integrados no [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Esses principais recursos incluem os seguintes itens:  
   
--   **Sobre** tela inicial e de caixa de diálogo  
+- **Sobre** tela inicial e de caixa de diálogo  
   
--   **Adicionar novo e Adicionar Item existente** caixas de diálogo  
+- **Adicionar novo e Adicionar Item existente** caixas de diálogo  
   
--   **Exibição de classe** janela e **Pesquisador de objetos**  
+- **Exibição de classe** janela e **Pesquisador de objetos**  
   
--   **Referências** caixa de diálogo  
+- **Referências** caixa de diálogo  
   
--   **Estrutura de tópicos de documento** janela  
+- **Estrutura de tópicos de documento** janela  
   
--   **Ajuda dinâmica** janela  
+- **Ajuda dinâmica** janela  
   
--   **Localizar** e **substituir**  
+- **Encontre** e **substituir**  
   
--   **Abra o projeto** e **abrir arquivo** em caixas de diálogo o **novo** menu  
+- **Abrir projeto** e **abrir arquivo** caixas de diálogo sobre o **New** menu  
   
--   **Opções de** caixa de diálogo de **ferramentas** menu  
+- **As opções** caixa de diálogo de **ferramentas** menu  
   
--   **Propriedades** janela  
+- Janela **Propriedades**  
   
--   **Gerenciador de Soluções**  
+- **Gerenciador de Soluções**  
   
--   **Lista de tarefas** janela  
+- **Lista de tarefas** janela  
   
--   **Caixa de Ferramentas**  
+- **Caixa de Ferramentas**  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>   

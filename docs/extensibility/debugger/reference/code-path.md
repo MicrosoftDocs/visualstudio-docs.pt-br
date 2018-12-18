@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6c88737638b20eafdef0ef84f5c45e494cf39607
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a9618d28aeadaa85d97e9018fdf57ee8952ac3fd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920255"
 ---
 # <a name="codepath"></a>CODE_PATH
 Descreve uma chamada de método ou função.  
@@ -42,13 +43,13 @@ public struct CODE_PATH {
   
 ## <a name="members"></a>Membros  
  bstrName  
- O nome do caminho de código.  
+ O nome do caminho do código.  
   
  pCode  
  O [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objeto identifica onde no código para entrar em uma função.  
   
 ## <a name="remarks"></a>Comentários  
- Essa estrutura é usada para implementar a entrar em uma função. [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md) retorna todas as chamadas do local atual no programa que está sendo depurado. Esta estrutura representa um essa chamada.  
+ Essa estrutura é usada para implementar a entrar em uma função. [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md) retorna todas as chamadas do local atual no programa que está sendo depurado. Essa estrutura representa uma chamada.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  
