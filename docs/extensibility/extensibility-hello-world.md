@@ -72,7 +72,7 @@ Agora você deve ver o projeto HelloWorld no **Solution Explorer**.
 
 Etapa 1. Se você selecionar o arquivo *manifesto .vsixmanifest,* poderá ver quais opções podem ser mutáveis, como descrição, autor e versão.
 
-Etapa 2. Clique com o botão direito do mouse no projeto (não na solução). No menu de contexto, **selecione Adicionar**e, em seguida, **Novo Item**.
+Etapa 2. Clique com o botão direito do mouse no projeto (não na solução). No menu de contexto, **selecione Adicionar** e, em seguida, **Novo Item**.
 
 Etapa 3. Selecione a seção **Extensibility** e escolha **Comando**.
 
