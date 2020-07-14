@@ -2,7 +2,7 @@
 title: Como configurar projetos para terem várias plataformas como destino
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - projects [Visual Studio], targeting platforms
 - platforms, changing target platforms
@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b86a5c95131a4dcb2e6af199b57e9c8302790b5
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0618d571258817b5e9653a38a7801c2e4d14e687
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114457"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284562"
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>Como configurar projetos para terem várias plataformas como destino
 
@@ -29,7 +29,7 @@ A caixa de diálogo **Configuration Manager** permite criar e definir configura�
 
 1. No menu **Compilar**, clique em **Gerenciador de Configurações**.
 
-2. Na caixa **Plataforma da solução ativa**, selecione a plataforma a que você deseja que a solução seja destinada ou selecione **\<Novo >** para criar uma nova plataforma. O Visual Studio compilará seu aplicativo para direcionar a plataforma definida como a plataforma ativa na caixa de diálogo **Configuration Manager**.
+2. Na **caixa plataforma de solução ativa**, selecione a plataforma que você deseja que sua solução direcione ou selecione **\<New>** para criar uma nova plataforma. O Visual Studio compilará seu aplicativo para direcionar a plataforma definida como a plataforma ativa na caixa de diálogo **Configuration Manager**.
 
 ## <a name="remove-a-platform"></a>Remover uma plataforma
 
@@ -37,7 +37,7 @@ Se perceber que não precisa de uma plataforma, você pode removê-la usando a c
 
 1. No menu **Compilar**, clique em **Gerenciador de Configurações**.
 
-2. Na caixa **Plataforma da solução ativa**, selecione **\<Editar>**. A caixa de diálogo **Editar Plataformas de Solução** é aberta.
+2. Na **caixa plataforma de solução ativa**, selecione **\<Edit>** . A caixa de diálogo **Editar Plataformas de Solução** é aberta.
 
 3. Clique na plataforma que deseja remover e clique em **Remover**.
 
@@ -61,8 +61,8 @@ Uma vez que pode alterar as configurações com base na combinação de definiç
 
    É possível ter uma plataforma de solução definida como, por exemplo, [!INCLUDE[vcprx64](../extensibility/internals/includes/vcprx64_md.md)], e não ter projetos na solução destinados à mesma plataforma. Também é possível ter vários projetos em sua solução, cada um destinado a plataformas diferentes. É recomendável que, se tiver uma dessas situações, você crie uma nova configuração com um nome descritivo para evitar confusão.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Como criar e editar configurações](../ide/how-to-create-and-edit-configurations.md)
-- [Compreender configurações de build](../ide/understanding-build-configurations.md)
+- [Noções sobre configurações de build](../ide/understanding-build-configurations.md)
 - [Criar e limpar projetos e soluções no Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)

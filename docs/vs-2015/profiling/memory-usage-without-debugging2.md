@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 64f739039d17af7fbee9718da93e8610e2619a85
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.openlocfilehash: ce7d30b66106b8d0d861fcf782a77ee7f461196b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586952"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532035"
 ---
 # <a name="memory-usage-without-debugging"></a>Uso de memória sem depuração
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -79,7 +79,7 @@ Você pode usar a ferramenta **Uso de Memória** sem depuração para fazer o se
   
   Os itens numerados na imagem de exibição do instantâneo são links que abrem exibições de relatório de uso de memória.  
   
-|||  
+|Imagem|Descrição|  
 |-|-|  
 |![Etapa 1](../profiling/media/procguid-1.png "ProcGuid_1")|O texto do link mostra o número total de bytes na memória quando o instantâneo foi tirado.<br /><br /> Selecione esse link para exibir um relatório de detalhes do instantâneo, que é classificado pelo tamanho total de instâncias do tipo.|  
 |![Etapa 2](../profiling/media/procguid-2.png "ProcGuid_2")|O texto do link mostra o número total de objetos na memória quando o instantâneo foi tirado.<br /><br /> Selecione esse link para exibir um relatório de detalhes do instantâneo, que é classificado pela contagem de instâncias dos tipos.|  
@@ -135,7 +135,7 @@ Você pode usar a ferramenta **Uso de Memória** sem depuração para fazer o se
   
  ![Árvore de heap gerenciada](../profiling/media/memuse-snapshotdetails-managedheaptree.png "MEMUSE__SnapshotDetails_ManagedHeapTree")  
   
-|||  
+|Nome|Descrição|  
 |-|-|  
 |**Tipo de Objeto**|O nome do tipo ou instância de objeto.|  
 |**Count**|O número de instâncias do objeto do tipo. O número é sempre 1 para uma instância.|  
@@ -154,7 +154,7 @@ Você pode usar a ferramenta **Uso de Memória** sem depuração para fazer o se
   
  ![Árvore Objjects referenciada para instâncias](../profiling/media/memuse-snapshotdetails-referencedobjects-instance.png "MEMUSE_SnapshotDetails_ReferencedObjects_Instance")  
   
-|||  
+|Nome|Descrição|  
 |-|-|  
 |**Tipo/Instância de Objeto**|O nome do tipo ou instância de objeto.|  
 |**Tamanho (Bytes)**|No caso de um tipo, o tamanho de todas as instâncias do tipo, excluindo o tamanho dos objetos contidos no tipo.<br /><br /> No caso de uma instância, o tamanho do objeto, excluindo o tamanho dos objetos contidos no objeto.|  
@@ -176,7 +176,7 @@ Você pode usar a ferramenta **Uso de Memória** sem depuração para fazer o se
   
  Observe que as colunas **Contagem**, **Tamanho (Bytes)** e **Tamanho Inclusivo (Bytes)** foram recolhidas na imagem.  
   
-|||  
+|Nome|Descrição|  
 |-|-|  
 |**Tipo de Objeto**|O nome do tipo ou instância de objeto.|  
 |**Count**|O número de instâncias de um tipo no instantâneo primário. **Count** é sempre 1 para uma instância.|  
@@ -196,7 +196,7 @@ Você pode usar a ferramenta **Uso de Memória** sem depuração para fazer o se
   
  ![Árvore Objjects referenciada para instâncias](../profiling/media/memuse-snapshotdetails-referencedobjects-instance.png "MEMUSE_SnapshotDetails_ReferencedObjects_Instance")  
   
-|||  
+|Nome|Descrição|  
 |-|-|  
 |**Tipo/Instância de Objeto**|O nome do tipo ou instância de objeto.|  
 |**Tamanho (Bytes)**|No caso de uma instância, o tamanho do objeto no instantâneo primário, excluindo o tamanho dos objetos contidos na instância.<br /><br /> No caso de um tipo, o tamanho total das instâncias do tipo no instantâneo primário, excluindo o tamanho dos objetos contidos na instância.|  

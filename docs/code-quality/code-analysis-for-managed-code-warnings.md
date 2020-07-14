@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d18763f3638442de4e0142204d696ee13b1bdb19
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 383f488fcc9ebe614257b035732162100b9c7fd2
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587753"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85521050"
 ---
 # <a name="code-analysis-for-managed-code-warnings"></a>Avisos da análise de código para código gerenciado
 A ferramenta de análise de código gerenciado fornece avisos que indicam violações de regra em bibliotecas de código gerenciado. Os avisos são organizados em áreas de regras, como design, localização, desempenho e segurança. Cada aviso significa uma violação de uma regra de análise de código gerenciado. Esta seção fornece discussões detalhadas e exemplos para cada aviso de análise de código gerenciado.
@@ -29,7 +29,7 @@ A ferramenta de análise de código gerenciado fornece avisos que indicam viola�
 
 |Item|Descrição|
 |----------|-----------------|
-|{1&gt;Tipo&lt;1}|O TypeName da regra.|
+|Type|O TypeName da regra.|
 |CheckId|O identificador exclusivo da regra. O CheckId e a categoria são usados para a supressão na origem de um aviso.|
 |Categoria|A categoria do aviso.|
 |Alteração significativa|Se a correção de uma violação da regra é uma alteração significativa. Alteração significativa significa que um assembly que tem uma dependência no destino que causou a violação não será recompilado com a nova versão fixa ou pode falhar em tempo de execução devido à alteração. Quando há várias correções disponíveis e pelo menos uma correção é uma alteração significativa e uma correção não é especificada, tanto ' quebra ' quanto ' não separável ' são especificados.|
@@ -42,7 +42,7 @@ A ferramenta de análise de código gerenciado fornece avisos que indicam viola�
 
 ## <a name="in-this-section"></a>Nesta seção
 
-|||
+|Categoria|Descrição|
 |-|-|
 |[Avisos por CheckId](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|Lista todos os avisos por CheckId|
 |[Avisos de criptografia](../code-quality/cryptography-warnings.md)|Avisos que dão suporte a bibliotecas e aplicativos mais seguros por meio do uso correto de criptografia.|
@@ -50,12 +50,12 @@ A ferramenta de análise de código gerenciado fornece avisos que indicam viola�
 |[Avisos de documentação](../code-quality/documentation-warnings.md)|Avisos que dão suporte ao design de biblioteca bem documentada por meio do uso correto de comentários de documentação XML.|
 |[Avisos de globalização](../code-quality/globalization-warnings.md)|Avisos que dão suporte a bibliotecas e aplicativos preparados para o mundo.|
 |[Avisos de interoperabilidade](../code-quality/interoperability-warnings.md)|Avisos que dão suporte à interação com clientes COM.|
-|[Avisos de facilidade de manutenção](../code-quality/maintainability-warnings.md)|Avisos que dão suporte à manutenção da biblioteca e do aplicativo.|
+|[Avisos de manutenção](../code-quality/maintainability-warnings.md)|Avisos que dão suporte à manutenção da biblioteca e do aplicativo.|
 |[Avisos de mobilidade](../code-quality/mobility-warnings.md)|Avisos que dão suporte ao uso de energia eficiente.|
-|[Avisos de Nomenclatura](../code-quality/naming-warnings.md)|Avisos que dão suporte à adesão às convenções de nomenclatura das diretrizes de design do .NET.|
+|[Avisos de nomenclatura](../code-quality/naming-warnings.md)|Avisos que dão suporte à adesão às convenções de nomenclatura das diretrizes de design do .NET.|
 |[Avisos de desempenho](../code-quality/performance-warnings.md)|Avisos que dão suporte a bibliotecas e aplicativos de alto desempenho.|
 |[Avisos de portabilidade](../code-quality/portability-warnings.md)|Avisos que dão suporte à portabilidade em diferentes plataformas.|
 |[Avisos de confiabilidade](../code-quality/reliability-warnings.md)|Avisos que dão suporte à confiabilidade de biblioteca e aplicativo, como a memória correta e o uso de thread.|
 |[Avisos de segurança](../code-quality/security-warnings.md)|Avisos que dão suporte a bibliotecas e aplicativos mais seguros.|
-|[Avisos de Uso](../code-quality/usage-warnings.md)|Avisos que dão suporte ao uso apropriado do .NET.|
-|[Erros da política de análise de código](../code-quality/code-analysis-policy-errors.md)|Erros que ocorrem se a política de análise de código não for satisfeita no check-in.|
+|[Avisos de uso](../code-quality/usage-warnings.md)|Avisos que dão suporte ao uso apropriado do .NET.|
+|[Erros de política de análise de código](../code-quality/code-analysis-policy-errors.md)|Erros que ocorrem se a política de análise de código não for satisfeita no check-in.|

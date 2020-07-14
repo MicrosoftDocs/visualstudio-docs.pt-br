@@ -1,7 +1,7 @@
 ---
 title: IDiaLineNumber | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 819fe28b9ba3fb95e749f0be53702dd7fdccf008
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c5b1bafd47f4888d9fa352553c4337d0c6c932bd
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743101"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466787"
 ---
 # <a name="idialinenumber"></a>IDiaLineNumber
 Acessa informações que descrevem o processo de mapeamento a partir de um bloco de bytes de texto de imagem para um número de linha de arquivo de origem.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaLineNumber : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Métodos em ordem vtable
-A tabela a seguir mostra os métodos de `IDiaLineNumber`.
+A tabela a seguir mostra os métodos de `IDiaLineNumber` .
 
 |Método|Descrição|
 |------------|-----------------|
@@ -54,7 +54,7 @@ A tabela a seguir mostra os métodos de `IDiaLineNumber`.
 Obtenha essa interface chamando os métodos [IDiaEnumLineNumbers:: item](../../debugger/debug-interface-access/idiaenumlinenumbers-item.md) ou [IDiaEnumLineNumbers:: Next](../../debugger/debug-interface-access/idiaenumlinenumbers-next.md) .
 
 ## <a name="example"></a>Exemplo
-A função a seguir exibe os números de linha usados em uma função (representada por `pSymbol`).
+A função a seguir exibe os números de linha usados em uma função (representada por `pSymbol` ).
 
 ```C++
 void dumpFunctionLines( IDiaSymbol* pSymbol, IDiaSession* pSession )
@@ -141,7 +141,7 @@ Biblioteca: diaguids. lib
 
 DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 - [IDiaEnumLineNumbers::Item](../../debugger/debug-interface-access/idiaenumlinenumbers-item.md)

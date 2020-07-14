@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_offset | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: feb7620e507c5e57cf025211e42d541440af22f3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 71105c6c3f93f259bdb6ce8e5f46abe30c5953c2
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739585"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462612"
 ---
 # <a name="idiasymbolget_offset"></a>IDiaSymbol::get_offset
-Recupera o deslocamento do local do símbolo. Use quando a [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) for `LocIsRegRel` ou `LocIsBitField`.
+Recupera o deslocamento do local do símbolo. Use quando a [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) for `LocIsRegRel` ou `LocIsBitField` .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -35,14 +35,14 @@ HRESULT get_offset ( 
 
 fora Retorna o deslocamento em bytes do local do símbolo.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
 ## <a name="remarks"></a>Comentários
- O deslocamento é de um ponto conhecido anteriormente determinado. Por exemplo, o deslocamento de um tipo de local de `LocIsBitField` é normalmente do início da classe que a contém.
+ O deslocamento é de um ponto conhecido anteriormente determinado. Por exemplo, o deslocamento para um `LocIsBitField` tipo de local é normalmente do início da classe que a contém.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -51,6 +51,6 @@ fora Retorna o deslocamento em bytes do local do símbolo.
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md)

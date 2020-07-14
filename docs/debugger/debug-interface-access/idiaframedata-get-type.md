@@ -1,7 +1,7 @@
 ---
 title: IDiaFrameData::get_type | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a4af060a4a0c36067a07a78166d1cf9cbc62e90e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2526fd4991677eca60b908d6ab1f4b3e6e8189af
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743479"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467193"
 ---
 # <a name="idiaframedataget_type"></a>IDiaFrameData::get_type
 Recupera o tipo de quadro específico do compilador.
@@ -35,9 +35,9 @@ HRESULT get_type ( 
 
 fora Retorna um valor da enumeração de [Enumeração StackFrameTypeEnum](../../debugger/debug-interface-access/stackframetypeenum.md) que indica o tipo de quadro específico do compilador.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver suporte para essa propriedade. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [Enumeração StackFrameTypeEnum](../../debugger/debug-interface-access/stackframetypeenum.md)

@@ -2,7 +2,7 @@
 title: Examinar o código do sistema após uma exceção | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 98f3eb98024e20350151904f297f7e7b4d6f1fea
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9fe2dcc283f84bbcd5cd0b5a04dd5d1c300d9e14
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733382"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349647"
 ---
 # <a name="how-to-examine-system-code-after-an-exception"></a>Como examinar um código de sistema após uma exceção
 Quando uma exceção ocorre, você poderá precisar examinar o código dentro de uma chamada do sistema para determinar a causa da exceção. O procedimento a seguir explica como fazer isso se você não tiver os símbolos carregados para o código do sistema ou se Just My Code estiver habilitado.
@@ -43,5 +43,5 @@ Quando uma exceção ocorre, você poderá precisar examinar o código dentro de
 
 4. Agora você pode examinar o código do sistema na janela **Pilha de Chamadas** e em outras janelas. Por exemplo, você pode clicar duas vezes em um registro de ativação de chamadas para exibir o código em uma fonte ou na janela **Desmontagem**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Gerenciando exceções com o depurador](../debugger/managing-exceptions-with-the-debugger.md)

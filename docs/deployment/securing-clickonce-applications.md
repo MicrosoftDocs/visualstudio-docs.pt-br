@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24b8416508ee5800ab581a1a58cedee1e5725cab
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: d99cbf4aaa30e1afb95a98743c223edee94d98fe
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184439"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286291"
 ---
 # <a name="secure-clickonce-applications"></a>Proteger aplicativos ClickOnce
 Os aplicativos [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] estão sujeitos às restrições de segurança de acesso a código no .NET Framework para ajudar a limitar o acesso que o código tem a recursos e operações protegidos. Por esse motivo, é importante compreender as implicações de segurança de acesso a código para desenvolver seus aplicativos [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] adequadamente. Seus aplicativos podem usar o modo Confiança Total ou zonas parciais, como as zonas da Internet e intranet, para limitar o acesso.
@@ -50,7 +50,7 @@ Os aplicativos [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]
  Para saber mais sobre a segurança de acesso do código e o ClickOnce, veja [Segurança de acesso do código para aplicativos ClickOnce](../deployment/code-access-security-for-clickonce-applications.md).
 
 ## <a name="code-signing-certificates"></a>Certificados de assinatura de código
- Para publicar um aplicativo usando a implantação de [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], você pode assinar os manifestos do aplicativo e de implantação para o aplicativo ao usar um par de chaves pública/privada. As ferramentas para assinar um manifesto estão disponíveis na página **Assinando** do **Designer de Projeto**. Para saber mais, veja [Página de Assinatura, Designer de Projeto](../ide/reference/signing-page-project-designer.md). Como alternativa, você pode assinar os manifestos com um arquivo de chave durante o processo de publicação usando o Assistente de Publicação.
+ Para publicar um aplicativo usando a implantação de [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], você pode assinar os manifestos do aplicativo e de implantação para o aplicativo ao usar um par de chaves pública/privada. As ferramentas para assinar um manifesto estão disponíveis na página **Assinando** do **Designer de Projeto**. Para saber mais, veja [Página de Assinatura, Designer de Projeto](../ide/reference/signing-page-project-designer.md).
 
  Depois que os manifestos são assinados, as informações do editor baseadas na assinatura Authenticode serão exibidas para o usuário na caixa de diálogo de permissões durante a instalação, para mostrar que o aplicativo é oriundo de uma fonte confiável.
 

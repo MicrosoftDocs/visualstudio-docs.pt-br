@@ -1,7 +1,7 @@
 ---
 title: 'Como: adicionar controles ao modo de exibição de Backstage '
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -20,17 +20,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 87cea877928baf52b0442ed9b0d952fcf649f155
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 5b4ea5cdcd869f16f987e9431359511831af9573
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986018"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538340"
 ---
 # <a name="how-to-add-controls-to-the-backstage-view"></a>Como: adicionar controles ao modo de exibição de Backstage
   Você pode usar o designer de faixa de Ribbon para adicionar controles ao menu que é aberto quando você clica na guia **arquivo** . Quando você executa o aplicativo, os controles que você adiciona à guia **arquivo** aparecem um grupo chamado **suplementos**.
 
- Você não pode posicionar os controles antes ou depois dos controles internos usando o designer de faixa de bits no Visual Studio. Um controle interno é um controle que já aparece no modo de exibição de Backstage. Se você quiser posicionar controles antes ou depois de controles internos, deverá usar um XML da faixa de bits. Para obter mais informações sobre a **faixa de faixas (XML)** , consulte [XML da faixa](../vsto/ribbon-xml.md)de para. Para obter mais informações sobre como personalizar o modo de exibição de Backstage, consulte [introdução ao modo de exibição de Backstage do office 2010 para desenvolvedores](/previous-versions/office/developer/office-2010/ee691833(v=office.14)) e [Personalizar o modo de exibição do Backstage do Office 2010 para desenvolvedores](/previous-versions/office/developer/office-2010/ee815851(v=office.14)).
+ Você não pode posicionar os controles antes ou depois dos controles internos usando o designer de faixa de bits no Visual Studio. Um controle interno é um controle que já aparece no modo de exibição de Backstage. Se você quiser posicionar controles antes ou depois de controles internos, deverá usar um XML da faixa de bits. Para obter mais informações sobre a **faixa de faixas (XML)**, consulte [XML da faixa](../vsto/ribbon-xml.md)de para. Para obter mais informações sobre como personalizar o modo de exibição de Backstage, consulte [introdução ao modo de exibição de Backstage do office 2010 para desenvolvedores](/previous-versions/office/developer/office-2010/ee691833(v=office.14)) e [Personalizar o modo de exibição do Backstage do Office 2010 para desenvolvedores](/previous-versions/office/developer/office-2010/ee815851(v=office.14)).
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
@@ -64,7 +64,7 @@ ms.locfileid: "72986018"
 
 ## <a name="see-also"></a>Consulte também
 - [Visão geral da faixa de faixas](../vsto/ribbon-overview.md)
-- [Designer da faixa de opções](../vsto/ribbon-designer.md)
+- [Designer de faixa de das](../vsto/ribbon-designer.md)
 - [XML da faixa de opções](../vsto/ribbon-xml.md)
 - [Como: começar a personalizar a faixa de faixas](../vsto/how-to-get-started-customizing-the-ribbon.md)
 - [Walkthrough: criar uma guia personalizada usando o designer de faixa de faixas](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)

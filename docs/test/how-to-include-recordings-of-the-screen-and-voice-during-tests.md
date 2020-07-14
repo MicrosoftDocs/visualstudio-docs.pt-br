@@ -1,19 +1,19 @@
 ---
 title: Tela de registro e de voz durante testes
 ms.date: 10/03/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - test settings, recording desktop video
 ms.assetid: 2cefe8c2-430a-4cb4-bbe0-f3edb2e5bc03
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: d53f03ed711b613a44aaf7cd243bd9aadeb2c93b
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+ms.openlocfilehash: 4fb186c97126d843cc47c16fa16a836914ed2e9b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880319"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287760"
 ---
 # <a name="how-to-include-recordings-of-the-screen-and-voice-during-tests-using-test-settings"></a>Como incluir gravações da tela e de voz durante testes usando as configurações de teste
 
@@ -64,10 +64,10 @@ O gravador de tela e voz pode ser usado com testes manuais ou automatizados. Por
     ::: moniker-end
     ::: moniker range=">=vs-2019"
     > [!TIP]
-    > Para redefinir a configuração deste adaptador de dados de diagnóstico, escolha **Redefinir a configuração padrão** no Visual Studio.
+    > Para redefinir a configuração para este adaptador de dados de diagnóstico, escolha **Redefinir para a configuração padrão** no Visual Studio.
     ::: moniker-end
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Coletar dados de diagnóstico durante testes (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)
 - [Coletar dados de diagnóstico em testes manuais (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)

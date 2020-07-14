@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_baseSymbolId | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: cd504d2b-194f-4106-8de5-2de827a79cbd
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3248721afd14ce46745e1eab40a3c4b4f9fbe76a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: beed26b3f5556216c55e2c32c2c100642d112db5
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740930"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464208"
 ---
 # <a name="idiasymbolget_basesymbolid"></a>IDiaSymbol::get_baseSymbolId
 Recupera a ID do símbolo do qual o ponteiro se baseia.
@@ -32,9 +32,9 @@ HRESULT get_baseSymbolId(
 
 fora Um ponteiro para um `DWORD` que contém a ID do símbolo do qual o ponteiro se baseia.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaSymbol::get_baseSymbol](../../debugger/debug-interface-access/idiasymbol-get-basesymbol.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_virtualBaseDispIndex | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b42c735c110208d563f908baef90a3bd0699fbe8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 99e65f8c869a55127fb39e18aa76058f46b3c602
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738872"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461465"
 ---
 # <a name="idiasymbolget_virtualbasedispindex"></a>IDiaSymbol::get_virtualBaseDispIndex
 Recupera o índice do símbolo na tabela de deslocamento de base virtual.
@@ -35,11 +35,11 @@ HRESULT get_virtualBaseDispIndex (
 
 fora Retorna o índice na tabela de deslocamento de base virtual.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

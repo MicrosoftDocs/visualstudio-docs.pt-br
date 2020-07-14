@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94ac6e9e85a2d7dd504b2d2bd83bd1bbdb265ea0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f18a636d83210b2329d103b1babdf47e697fd5c7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62776771"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537079"
 ---
 # <a name="channels-threads-view"></a>Canais (exibição de threads)
 A Visualização Simultânea mostra quatro tipos de canais: canais de thread, canais de disco, canais de marcador e canais da GPU.
@@ -25,7 +25,7 @@ A Visualização Simultânea mostra quatro tipos de canais: canais de thread, ca
 ## <a name="thread-channels"></a>Canais de thread
  Um canal de thread mostra o estado do thread, por cor, para apenas um thread. Quando você pausa no nome do canal, a função de início para o thread determinado é exibida. A Visualização Simultânea detecta vários tipos de threads. Os tipos mais comuns são mostrados na tabela a seguir.
 
-|||
+|Thread|Descrição|
 |-|-|
 |Thread principal|O thread que iniciou o aplicativo.|
 |Thread de trabalho|Um thread que foi criado pelo thread principal do aplicativo.|
@@ -48,4 +48,4 @@ A Visualização Simultânea mostra quatro tipos de canais: canais de thread, ca
  Canais da GPU exibem informações sobre a atividade do DirectX 11 no sistema.  Cada mecanismo DirectX associado à placa gráfica tem um canal separado.  Os segmentos individuais representam o tempo gasto no processamento de um pacote DMA.
 
 ## <a name="see-also"></a>Confira também
-- [exibição Threads](../profiling/threads-view-parallel-performance.md)
+- [Exibição de threads](../profiling/threads-view-parallel-performance.md)

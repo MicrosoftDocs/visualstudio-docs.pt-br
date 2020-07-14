@@ -2,7 +2,7 @@
 title: Gravar uma função de relatório de erros em tempo de execução | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b145e34b0dfeafbb7fde436dd561721962a89f3b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 073943d8b6a3dbf5ee3af653a43046c3b389fbfd
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72731803"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348399"
 ---
 # <a name="how-to-write-a-run-time-error-reporting-function-c"></a>Como escrever uma função de relatório de erro em tempo de execução (C++)
 Uma função personalizada de relatório para erros em tempo de execução deve ter a mesma declaração que `_CrtDbgReportW`. Deve retornar um valor de 1 para o depurador.
@@ -122,5 +122,5 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 [Personalização das verificações de tempo de execução nativas](../debugger/native-run-time-checks-customization.md)

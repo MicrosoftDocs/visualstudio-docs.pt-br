@@ -1,7 +1,7 @@
 ---
 title: Personalizar o Visualizador da Ajuda
 ms.date: 11/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - hv_options
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8edcdee8ffe4c2b8a97f4ed65ae86f925db42b1c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
-ms.translationtype: HT
+ms.openlocfilehash: 5d1f4de5e5ace63f748c6a75d45d8311ea3eb71b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825025"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284966"
 ---
 # <a name="customize-the-help-viewer"></a>Personalizar o Help Viewer
 Você pode personalizar o layout das janelas do Help Viewer, bem como outras opções, como tamanho da fonte, número máximo de resultados e se deseja incluir conteúdo em inglês.
@@ -43,8 +43,8 @@ Abra a caixa de diálogo **Opções do Visualizador** escolhendo o botão **Opç
 |Alterar o tamanho da fonte em que o texto é exibido|Escolha um tamanho na lista **Tamanho do Texto**.|
 |Alterar o número máximo de resultados da pesquisa exibidos na guia **Pesquisar**|Escolha um valor na lista **Máximo de Resultados da Pesquisa**.|
 |Alterar o número máximo de entradas de histórico que aparecem na janela **Favoritos**|Escolha um valor na lista **Máximo de entradas do Histórico salvas**.|
-|Incluir ou excluir conteúdo em inglês quando você exibir conteúdo de uma versão diferente do inglês de um produto.|Marque ou desmarque a caixa de seleção **Incluir conteúdo em inglês em todas as guias de navegação e solicitações F1**. **Cuidado:**  esse recurso também controla se você pode baixar o conteúdo em inglês na guia **Gerenciar Conteúdo**.|
+|Incluir ou excluir conteúdo em inglês quando você exibir conteúdo de uma versão diferente do inglês de um produto.|Marque ou desmarque a caixa de seleção **Incluir conteúdo em inglês em todas as guias de navegação e solicitações F1**. **Cuidado:** esse recurso também controla se você pode baixar o conteúdo em inglês na guia **Gerenciar Conteúdo**.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Microsoft Help Viewer](../help-viewer/overview.md)

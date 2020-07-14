@@ -5,7 +5,7 @@ ms.date: 01/18/2017
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - Windows Script Host, implementing hosts
 ms.assetid: 9d5f6471-b318-40f3-be01-d9cd0b1cdd47
@@ -13,12 +13,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8468f578ee44487acd2575e81e01d65969110437
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 51053dec1f8362aa9eef80e4867d2f92a06454cb
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72568819"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835323"
 ---
 # <a name="windows-script-hosts"></a>Windows Script Hosts
 Ao implementar um host do Microsoft Windows Script, você pode supor com segurança que um mecanismo de script só chama a interface [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) no contexto do thread base se o host faz o seguinte:  
@@ -40,5 +40,5 @@ Ao implementar um host do Microsoft Windows Script, você pode supor com seguran
 ## <a name="remarks"></a>Comentários  
  Nenhuma dessas restrições se aplicam a um host que opta por implementar uma interface [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) de thread livre e um modelo de objeto de thread livre. Um host desse tipo pode usar a interface [IActiveScript](../winscript/reference/iactivescript.md) de qualquer thread, sem restrição.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Interfaces do Windows Script](../winscript/windows-script-interfaces.md)

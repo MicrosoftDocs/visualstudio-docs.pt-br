@@ -14,23 +14,23 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 639a42e26442e31f7bbbbb2245af0289c6a04fd8
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 96e0614bc5c08c83008af4e67a2aa865f08f74f3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918224"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547804"
 ---
-# <a name="ca1726-use-preferred-terms"></a>CA1726: usar termos preferenciais
+# <a name="ca1726-use-preferred-terms"></a>CA1726: Usar termos preferenciais
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Para obter a documentação mais recente sobre o Visual Studio, consulte [CA1726: usar os termos preferenciais](/visualstudio/code-quality/ca1726-use-preferred-terms).
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|UsePreferredTerms|
+|TypeName|UsePreferredTerms|
 |CheckId|CA1726|
-|Categoria|Microsoft.Naming|
+|Categoria|Microsoft. Naming|
 |Alteração Significativa|Quebra-quando acionado em assemblies<br /><br /> Não separável-quando acionado em parâmetros de tipo|
 
 ## <a name="cause"></a>Causa
@@ -73,4 +73,4 @@ Para obter a documentação mais recente sobre o Visual Studio, consulte [CA1726
  Suprimir um aviso dessa regra somente se o nome do identificador for intencional e estiver relacionado especificamente ao termo original em vez do termo preferido.
 
 ## <a name="related-rules"></a>Regras relacionadas
- [Avisos de Nomenclatura](../code-quality/naming-warnings.md)
+ [Avisos de nomenclatura](../code-quality/naming-warnings.md)

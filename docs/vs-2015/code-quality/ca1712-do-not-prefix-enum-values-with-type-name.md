@@ -15,19 +15,19 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8c79ed71290d54f97bb4ed143d32095b157e2e3e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4773a34ab7112434813990b4d25cbeeb865f3a08
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669122"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543891"
 ---
-# <a name="ca1712-do-not-prefix-enum-values-with-type-name"></a>CA1712: não use valores enum como prefixo com o nome do tipo
+# <a name="ca1712-do-not-prefix-enum-values-with-type-name"></a>CA1712: Não prefixar valores de enumeração com um nome de tipo
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|DoNotPrefixEnumValuesWithTypeName|
+|TypeName|DoNotPrefixEnumValuesWithTypeName|
 |CheckId|CA1712|
 |Categoria|Microsoft. Naming|
 |Alteração Significativa|Quebra|
@@ -54,11 +54,11 @@ ms.locfileid: "72669122"
  [!code-vb[FxCop.Naming.EnumValues#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.EnumValues/vb/FxCop.Naming.EnumValues.vb#1)]
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1711: os identificadores não devem ter sufixo incorreto](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
+ [CA1711: Identificadores não devem ter um sufixo incorreto](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
 
- [CA1027: marcar enums com FlagsAttribute](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+ [CA1027: Marcar enumerações com FlagsAttribute](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
 
- [CA2217: não marcar enums com FlagsAttribute](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+ [CA2217: Não marcar enumerações com FlagsAttribute](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  <xref:System.Enum?displayProperty=fullName>

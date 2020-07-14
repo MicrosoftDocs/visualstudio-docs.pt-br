@@ -15,19 +15,19 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f59a1c88701cf132a46c66eb6550f03eb870d63d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1e753083e9b4bda1e33553021ccb0027a2af2533
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669173"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544008"
 ---
-# <a name="ca1711-identifiers-should-not-have-incorrect-suffix"></a>CA1711: os identificadores não devem ter sufixo incorreto
+# <a name="ca1711-identifiers-should-not-have-incorrect-suffix"></a>CA1711: Identificadores não devem ter um sufixo incorreto
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|IdentifiersShouldNotHaveIncorrectSuffix|
+|TypeName|IdentifiersShouldNotHaveIncorrectSuffix|
 |CheckId|CA1711|
 |Categoria|Microsoft. Naming|
 |Alteração Significativa|Quebra|
@@ -49,15 +49,15 @@ ms.locfileid: "72669173"
 |EventHandler|Um delegado de manipulador de eventos|
 |Exceção|<xref:System.Exception?displayProperty=fullName>|
 |Permissão|<xref:System.Security.IPermission?displayProperty=fullName>|
-|Espera|<xref:System.Collections.Queue?displayProperty=fullName>|
+|Fila|<xref:System.Collections.Queue?displayProperty=fullName>|
 |Pilha|<xref:System.Collections.Stack?displayProperty=fullName>|
-|Fluxo|<xref:System.IO.Stream?displayProperty=fullName>|
+|STREAM|<xref:System.IO.Stream?displayProperty=fullName>|
 
  Além disso, os seguintes sufixos **não** devem ser usados:
 
-- delegado
+- Delegar
 
-- Enum
+- Enumeração
 
 - Impl-use ' Core ' em vez disso
 
@@ -72,7 +72,7 @@ ms.locfileid: "72669173"
  Não suprimir um aviso dessa regra, a menos que o sufixo tenha um significado não ambíguo no domínio do aplicativo.
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1710: os identificadores devem ter o sufixo correto](../code-quality/ca1710-identifiers-should-have-correct-suffix.md)
+ [CA1710: Identificadores devem ter um sufixo correto](../code-quality/ca1710-identifiers-should-have-correct-suffix.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Atributos](https://msdn.microsoft.com/library/ee0038ef-b247-4747-a650-3c5c5cd58d8b) [NIB: eventos e delegados](https://msdn.microsoft.com/d98fd58b-fa4f-4598-8378-addf4355a115)

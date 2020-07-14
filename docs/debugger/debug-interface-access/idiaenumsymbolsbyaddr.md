@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSymbolsByAddr | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d8cddaa39635be534e2247b48a370ed88b29ab4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 92062883ea97fdc6251ffa600e31230fb448f73b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743820"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467578"
 ---
 # <a name="idiaenumsymbolsbyaddr"></a>IDiaEnumSymbolsByAddr
 Enumera por endereço os vários símbolos contidos na fonte de dados.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumSymbolsByAddr : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Métodos em ordem vtable
-A tabela a seguir mostra os métodos de `IDiaEnumSymbolsByAddr`.
+A tabela a seguir mostra os métodos de `IDiaEnumSymbolsByAddr` .
 
 |Método|Descrição|
 |------------|-----------------|
@@ -41,7 +41,7 @@ A tabela a seguir mostra os métodos de `IDiaEnumSymbolsByAddr`.
 |[IDiaEnumSymbolsByAddr::Clone](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-clone.md)|Faz uma cópia de um objeto.|
 
 ## <a name="remarks"></a>Comentários
-Essa interface fornece símbolos agrupados por endereço. Para trabalhar com símbolos agrupados por tipo, por exemplo `SymTagUDT` (tipo definido pelo usuário) ou `SymTagBaseClass`, use a interface [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) .
+Essa interface fornece símbolos agrupados por endereço. Para trabalhar com símbolos agrupados por tipo, por exemplo `SymTagUDT` (tipo definido pelo usuário) ou `SymTagBaseClass` , use a interface [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) .
 
 ## <a name="notes-for-callers"></a>Observações para chamadores
 Obtenha essa interface chamando o método [IDiaSession:: getSymbolsByAddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md) .
@@ -100,7 +100,7 @@ Biblioteca: diaguids. lib
 
 DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaSession::getSymbolsByAddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

@@ -15,19 +15,19 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: fd81f9ea250cd1592f755a2aa6cb3ca09280a533
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ff42cc2b8543fe8e1cf980a3574ae15922febf9b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666036"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85521037"
 ---
-# <a name="ca2104-do-not-declare-read-only-mutable-reference-types"></a>CA2104: não declarar tipos de referência mutáveis somente leitura
+# <a name="ca2104-do-not-declare-read-only-mutable-reference-types"></a>CA2104: Não declarar tipos de referência mutáveis somente leitura
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|DoNotDeclareReadOnlyMutableReferenceTypes|
+|TypeName|DoNotDeclareReadOnlyMutableReferenceTypes|
 |CheckId|CA2104|
 |Categoria|Microsoft.Security|
 |Alteração Significativa|Sem interrupção|
@@ -36,9 +36,9 @@ ms.locfileid: "72666036"
  Um tipo visível externamente contém um campo somente leitura visível externamente que é um tipo de referência mutável.
 
 ## <a name="rule-description"></a>Descrição da Regra
- Um tipo mutável é um tipo cujos dados da instância podem ser modificados. A classe <xref:System.Text.StringBuilder?displayProperty=fullName> é um exemplo de um tipo de referência mutável. Ele contém membros que podem alterar o valor de uma instância da classe. Um exemplo de um tipo de referência imutável é a classe <xref:System.String?displayProperty=fullName>. Depois de ter sido instanciado, seu valor nunca pode ser alterado.
+ Um tipo mutável é um tipo cujos dados da instância podem ser modificados. A <xref:System.Text.StringBuilder?displayProperty=fullName> classe é um exemplo de um tipo de referência mutável. Ele contém membros que podem alterar o valor de uma instância da classe. Um exemplo de um tipo de referência imutável é a <xref:System.String?displayProperty=fullName> classe. Depois de ter sido instanciado, seu valor nunca pode ser alterado.
 
- O modificador somente leitura ([ReadOnly](https://msdn.microsoft.com/library/2f8081f6-0de2-4903-898d-99696c48d2f4) em C#, [ReadOnly](https://msdn.microsoft.com/library/e868185d-6142-4359-a2fd-a7965cadfce8) em [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] e [const](https://msdn.microsoft.com/library/b21c0271-1ad0-40a0-b21c-5e812bba0318) in C++) em um campo de tipo de referência (ponteiro C++em) impede que o campo seja substituído por uma instância diferente do tipo de referência. No entanto, o modificador não impede que os dados da instância do campo sejam modificados por meio do tipo de referência.
+ O modificador somente leitura ([ReadOnly](https://msdn.microsoft.com/library/2f8081f6-0de2-4903-898d-99696c48d2f4) em C#, [ReadOnly](https://msdn.microsoft.com/library/e868185d-6142-4359-a2fd-a7965cadfce8) em [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] e [const](https://msdn.microsoft.com/library/b21c0271-1ad0-40a0-b21c-5e812bba0318) em c++) em um campo de tipo de referência (ponteiro em c++) impede que o campo seja substituído por uma instância diferente do tipo de referência. No entanto, o modificador não impede que os dados da instância do campo sejam modificados por meio do tipo de referência.
 
  Os campos de matriz somente leitura são isentos dessa regra, mas, em vez disso, causam uma violação dos [campos CA2105: array não devem ser somente leitura](../code-quality/ca2105-array-fields-should-not-be-read-only.md) .
 

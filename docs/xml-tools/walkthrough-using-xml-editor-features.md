@@ -1,19 +1,19 @@
 ---
 title: 'Walkthrough: usando recursos do editor de XML'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ea8dc357-2e66-455a-aec2-7ccaccfc9adf
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d2cf35730b70fc8c8bbec392c73b444b6e8e0aaa
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1cebf6f7621fb5fada37b8e4592efd429bdc85e6
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592458"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817392"
 ---
 # <a name="walkthrough-use-xml-editor-features"></a>Walkthrough: usar recursos do editor de XML
 
@@ -30,7 +30,7 @@ As etapas nessa explicação passo a passo mostram como criar um novo documento 
 
      Um novo arquivo é aberto no editor. O arquivo contém uma declaração XML padrão, `<?xml version="1.0" encoding="utf-8">`.
 
-3. Na janela Propriedades do documento, clique no botão procurar ( **...** ) no campo **esquemas** .
+3. Na janela Propriedades do documento, clique no botão procurar (**...**) no campo **esquemas** .
 
      A caixa de diálogo **esquemas XSD** é exibida.
 
@@ -58,13 +58,13 @@ As etapas nessa explicação passo a passo mostram como criar um novo documento 
 
     - **funcionário** para adicionar o elemento raiz.
 
-2. Selecione **&lt;!--** para adicionar um nó de comentário e pressione **Enter**.
+2. Selecione ** &lt; !--** para adicionar um nó de comentário e pressione **Enter**.
 
      O editor insere uma marca de fim do comentário e colocar o cursor entre o início e marcas de comentário final.
 
 3. Digite o **arquivo XML de teste**.
 
-4. Em uma nova linha, digite `<`e selecione **funcionário** na lista de membros.
+4. Em uma nova linha, digite `<` e selecione **funcionário** na lista de membros.
 
      O editor adiciona o início de um elemento XML, `<employee`. Neste momento você pode adicionar atributos para o elemento ou você pode fechar a tag de início digitando `>`.
 
@@ -88,7 +88,7 @@ As etapas nessa explicação passo a passo mostram como criar um novo documento 
 
      O sublinhado ondulado e a **dica de ferramenta** são apagados sob o valor do elemento ID. A **dica de ferramenta** para a marca de fim de funcionário agora exibe a mensagem: **o elemento ' Employee ' tem conteúdo incompleto. ' Data de contratação ' esperado**.
 
-11. Coloque o cursor após a marca de fim de ID, digite `<`, selecione **contratação-Data** na lista de membros e digite `>`.
+11. Coloque o cursor após a marca de fim de ID, digite em `<` , selecione **contratação-Data** na lista de membros e digite `>` .
 
      O editor adicione o elemento XML, `<hire-date></hire-date>`, e posicionar o cursor após a marca de início da data de admissão.
 
@@ -96,7 +96,7 @@ As etapas nessa explicação passo a passo mostram como criar um novo documento 
 
 ## <a name="to-format-the-xml-document"></a>Para formatar o documento XML
 
-- Selecione o botão **Formatar documento** na barra de ferramentas do editor de XML ou pressione **Ctrl**+**E**,**D**.
+- Selecione o botão **Formatar documento** na barra de ferramentas do editor de XML ou pressione **Ctrl** + **E**,**D**.
 
    ![Botão Formatar documento XML no Visual Studio](media/format-xml-document.png)
 
@@ -104,9 +104,9 @@ As etapas nessa explicação passo a passo mostram como criar um novo documento 
 
 ## <a name="to-save-the-xml-document"></a>Para salvar o documento XML
 
-1. No menu **arquivo** , selecione **Salvar como**.
+1. No menu **arquivo**, selecione **Salvar como**.
 
-     A caixa de diálogo **salvar arquivo como** é exibida. O nome de arquivo padrão é *' xmlarquivo1 '* .
+     A caixa de diálogo **salvar arquivo como** é exibida. O nome de arquivo padrão é *' xmlarquivo1 '*.
 
 2. Insira o nome do arquivo e o local para o documento XML e clique em **salvar**.
 

@@ -1,7 +1,7 @@
 ---
-title: 'Como: Incluir arquivos usando um módulo | Microsoft Docs'
+title: 'Como: incluir arquivos usando um módulo | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,47 +13,46 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5813a6f89062bf53f7f8c0b57b4ed3a8ef9c4edf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 1ada86be30e207e36c7e0d84d3fd5dd877605e4d
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62813638"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016300"
 ---
-# <a name="how-to-include-files-by-using-a-module"></a>Como: Incluir arquivos usando um módulo
-  *Módulos* (não deve ser confundido com [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] módulos) são contêineres que permitem que você implante imagens, arquivos de texto ou arquivos como páginas mestras do ASPX no SharePoint.
+# <a name="how-to-include-files-by-using-a-module"></a>Como: incluir arquivos usando um módulo
+  *Módulos* (não devem ser confundidos com [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] módulos) são contêineres que permitem implantar arquivos como páginas mestras aspx, arquivos de texto ou imagens no SharePoint.
 
- Você pode optar por implantar um arquivo em uma biblioteca de documentos ou como um arquivo normal (por exemplo, default. aspx) fora de uma biblioteca de documentos. Para adicionar um arquivo a uma biblioteca de documentos, especifique `Type="GhostableInLibrary"` como um atributo na **arquivo** elemento. Esta configuração instrui o SharePoint para criar um item de lista para ir com o arquivo quando ele é adicionado à biblioteca. Para implantar um arquivo fora de uma biblioteca de documentos, especifique `Type="Ghostable"` ou apenas omita a **tipo** atributo.
+ Você pode optar por implantar um arquivo em uma biblioteca de documentos ou como um arquivo normal (por exemplo, Default. aspx) fora de uma biblioteca de documentos. Para adicionar um arquivo a uma biblioteca de documentos, especifique `Type="GhostableInLibrary"` como um atributo no elemento **File** . Essa configuração instrui o SharePoint a criar um item de lista para ir com o arquivo quando ele é adicionado à biblioteca. Para implantar um arquivo fora de uma biblioteca de documentos, especifique `Type="Ghostable"` ou simplesmente omita o atributo de **tipo** .
 
 ## <a name="add-a-module-to-a-sharepoint-solution"></a>Adicionar um módulo a uma solução do SharePoint
 
 #### <a name="to-add-a-module"></a>Para adicionar um módulo
 
-1. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], abra ou crie um projeto do SharePoint.
+1. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , abra ou crie um projeto do SharePoint.
 
-     Para obter mais informações, consulte [SharePoint modelos de item de projeto e projeto](../sharepoint/sharepoint-project-and-project-item-templates.md).
+     Para obter mais informações, consulte [projeto do SharePoint e modelos de item de projeto](../sharepoint/sharepoint-project-and-project-item-templates.md).
 
-2. Na **Gerenciador de soluções**, escolha o nó do projeto e, em seguida, na barra de menus, escolha **Project** > **Add New Item**.
+2. Em **Gerenciador de soluções**, escolha o nó do projeto e, na barra de menus, escolha **projeto**  >  **Adicionar novo item**.
 
      A caixa de diálogo **Adicionar Novo Item** é aberta.
 
-3. Na lista de modelos do SharePoint, escolha o **módulo** modelo e, em seguida, escolha o **Add** botão.
+3. Na lista de modelos do SharePoint, escolha o modelo de **módulo** e, em seguida, escolha o botão **Adicionar** .
 
-     Esta etapa cria um nó do projeto chamado Module1.
+     Esta etapa cria um nó no projeto chamado Module1.
 
-4. Em Module1, exclua o *txt* arquivo.
+4. Em Module1, exclua o arquivo *Sample.txt* .
 
-     Txt está incluído em todos os novos módulos fins por exemplo e não é necessária. (Observe que excluir o arquivo também remove sua entrada do módulo *Elements. XML* arquivo.)
+     Sample.txt está incluído em todos os novos módulos, para fins de exemplo, e não é necessário. (Observe que a exclusão do arquivo também remove sua entrada do arquivo de *Elements.xml* do módulo.)
 
-5. Se você quiser que seus arquivos para implantar em uma estrutura de pasta específica no SharePoint, criar essas pastas em Module1 na [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] escolhendo o nó Module1 e, em seguida, na barra de menus, escolhendo **Project**, **novo Pasta**.
+5. Se você quiser que os arquivos sejam implantados em uma determinada estrutura de pastas no SharePoint, crie essas pastas em Module1 no, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] escolhendo o nó Module1 e, na barra de menus, escolhendo **projeto**, **nova pasta**.
 
-6. Escolha a pasta na qual você deseja adicionar o arquivo e, em seguida, na barra de menus, escolha **Project**, **Add Existing Item**.
+6. Escolha a pasta na qual você deseja adicionar o arquivo e, na barra de menus, escolha **projeto**, **Adicionar item existente**.
 
-7. Escolha um ou mais arquivos que você deseja implantar no SharePoint e, em seguida, escolha o **adicionar** botão.
+7. Escolha um ou mais arquivos que você deseja implantar no SharePoint e, em seguida, escolha o botão **Adicionar** .
 
-     Quando você adiciona um arquivo ao projeto, uma entrada para que ele é automaticamente adicionada ao arquivo Elements XML do módulo. Quando o projeto é implantado, os arquivos são copiados para o servidor do SharePoint, relativo ao diretório raiz do projeto, que é especificado pela **arquivo** do elemento **Url** atributo, como `Url="Module1/New Folder/SomeFile.doc`. Se você quiser alterar o local de implantação para um arquivo, mova-lo para outra pasta **Gerenciador de soluções** ou altere seu **Url** configuração.
+     Quando você adiciona um arquivo ao projeto, uma entrada para ele é adicionada automaticamente ao arquivo de Elements.xml do módulo. Quando o projeto é implantado, os arquivos são copiados para o servidor do SharePoint, em relação ao diretório raiz do projeto, que é especificado pelo atributo **URL** do elemento **File** , como `Url="Module1/New Folder/SomeFile.doc` . Se você quiser alterar o local de implantação de um arquivo, mova-o para outra pasta em **Gerenciador de soluções** ou altere sua configuração de **URL** .
 
-8. Para todos os arquivos que você deseja que apareça em uma biblioteca de documentos, acrescente a `Type="GhostableInLibrary"` atributo de entrada na *Elements. XML*. Por exemplo,
+8. Para todos os arquivos que você deseja que apareçam em uma biblioteca de documentos, anexe o `Type="GhostableInLibrary"` atributo à sua entrada no *Elements.xml*. Por exemplo,
 
     ```xml
     <File Path="Module1\Some Folder\SomePage.aspx" Url="Module1/Some Folder/SomePage.aspx" Type="GhostableInLibrary" />
@@ -61,7 +60,7 @@ ms.locfileid: "62813638"
 
 9. Implante o projeto.
 
-     Copie os arquivos para os locais especificados no SharePoint.
+     Os arquivos são copiados para os locais especificados no SharePoint.
 
 ## <a name="see-also"></a>Consulte também
 - [Empacotar e implantar soluções do SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

@@ -1,7 +1,7 @@
 ---
 title: Personalizando o armazenamento de arquivos e a serialização XML
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.dsltools.dsldesigner.xmlbehavior
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d8fe9fb5086b93861c7ca12a208affe7aa979df2
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 07592247e0afb870f3c4774c6f2023a6e8141cd1
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114429"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542734"
 ---
 # <a name="customize-file-storage-and-xml-serialization"></a>Personalizar o armazenamento de arquivos e a serialização XML
 
@@ -53,7 +53,7 @@ Cada modelo é geralmente salvo em dois arquivos:
 
 Para criar um exemplo para este tópico, a definição de DSL a seguir foi usada.
 
-![Modelo de árvore &#45; da família de diagrama de definição de DSL](../modeling/media/familyt_person.png)
+![Diagrama de definição de DSL &#45; modelo de árvore da família](../modeling/media/familyt_person.png)
 
 Essa DSL foi usada para criar um modelo com a seguinte aparência na tela.
 
@@ -85,13 +85,13 @@ Observe os seguintes pontos sobre o modelo serializado:
 
 - Cada relação é serializada como um nó XML aninhado dentro da extremidade de origem da relação. O nó tem o mesmo nome que a propriedade da função de origem, mas com um caractere inicial de minúsculas.
 
-     Por exemplo, na definição de DSL, uma função nomeada **pessoas** é originada na classe **FamilyTree** .  No XML, isso é representado pelo nó chamado `people` aninhado dentro do nó `familyTreeModel`.
+     Por exemplo, na definição de DSL, uma função nomeada **pessoas** é originada na classe **FamilyTree** .  No XML, isso é representado pelo nó nomeado `people` aninhado dentro do `familyTreeModel` nó.
 
-- A extremidade de destino de cada relação de incorporação é serializada como um nó aninhado na relação. Por exemplo, o nó `people` contém vários nós `person`.
+- A extremidade de destino de cada relação de incorporação é serializada como um nó aninhado na relação. Por exemplo, o `people` nó contém vários `person` nós.
 
 - A extremidade de destino de cada relação de referência é serializada como um *moniker*, que codifica uma referência ao elemento de destino.
 
-     Por exemplo, em um nó de `person`, pode haver uma relação de `children`. Este nó contém monikers, como:
+     Por exemplo, em um `person` nó, pode haver uma `children` relação. Este nó contém monikers, como:
 
     ```xml
     <personMoniker name="/f817b728-e920-458e-bb99-98edc469d78f/Elizabeth I" />
@@ -99,7 +99,7 @@ Observe os seguintes pontos sobre o modelo serializado:
 
 ## <a name="understand-monikers"></a>Entender os monikers
 
-Os monikers são usados para representar referências cruzadas entre diferentes partes do modelo e dos arquivos de diagrama. Eles também são usados no arquivo `.diagram` para se referir a nós no arquivo de modelo. Há duas formas de moniker:
+Os monikers são usados para representar referências cruzadas entre diferentes partes do modelo e dos arquivos de diagrama. Eles também são usados no `.diagram` arquivo para se referir a nós no arquivo de modelo. Há duas formas de moniker:
 
 - *Monikers de ID* citam o GUID do elemento de destino. Por exemplo:
 
@@ -116,7 +116,7 @@ Os monikers são usados para representar referências cruzadas entre diferentes 
     <songMoniker title="/My Favorites/Jazz after Teatime/Hot tea" />
     ```
 
-     Os identificadores de chave qualificados serão usados se a classe de destino tiver uma propriedade de domínio para a qual a opção **é a chave de moniker** esteja definida como `true` no comportamento de **serialização XML**. No exemplo, essa opção é definida para propriedades de domínio chamadas "title" nas classes de domínio "Album" e "Song".
+     Os monikers de chave qualificados serão usados se a classe de destino tiver uma propriedade de domínio para a qual a opção **é a chave de moniker** esteja definida como `true` em **comportamento de serialização XML**. No exemplo, essa opção é definida para propriedades de domínio chamadas "title" nas classes de domínio "Album" e "Song".
 
 Os moniker de chave qualificados são mais fáceis de ler do que os monikers de ID. Se você pretende que o XML de seus arquivos de modelo seja lido por pessoas, considere o uso de moniker de chave qualificados. No entanto, é possível que o usuário defina mais de um elemento para ter a mesma chave de moniker. Chaves duplicadas podem fazer com que o arquivo não recarregue corretamente. Portanto, se você definir uma classe de domínio que é referenciada usando moniker de chave qualificados, deverá considerar as maneiras de impedir que o usuário salve um arquivo com monikers duplicados.
 
@@ -124,31 +124,31 @@ Os moniker de chave qualificados são mais fáceis de ler do que os monikers de 
 
 1. Certifique-se de que a **chave de moniker** seja `false` para cada propriedade de domínio na classe e suas classes base.
 
-    1. No Gerenciador de DSL, expanda **XML serialização Behavior\Class data\\\<a classe de domínio > dados \Element**.
+    1. No Gerenciador de DSL, expanda **XML serialização Behavior\Class data \\ \<the domain class> \Element data**.
 
-    2. Verifique se a **chave do moniker** está `false` para cada propriedade de domínio.
+    2. Verifique se a **chave de moniker** é `false` para cada propriedade de domínio.
 
     3. Se a classe de domínio tiver uma classe base, repita o procedimento nessa classe.
 
-2. Defina **Serialize Id** = `true` para a classe de domínio.
+2. Defina **Serialize ID**  =  `true` para a classe de domínio.
 
      Essa propriedade pode ser encontrada em **comportamento de serialização XML**.
 
 ### <a name="to-set-a-domain-class-to-be-referenced-by-qualified-key-monikers"></a>Para definir uma classe de domínio a ser referenciada por moniker de chave qualificados
 
-- Set **é a chave do moniker** para uma propriedade de domínio de uma classe de domínio existente. O tipo da propriedade deve ser `string`.
+- Set **é a chave do moniker** para uma propriedade de domínio de uma classe de domínio existente. O tipo da propriedade deve ser `string` .
 
-    1. No Gerenciador de DSL, expanda **XML serialização Behavior\Class data\\\<a classe de domínio > dados \Element**e, em seguida, selecione a propriedade domínio.
+    1. No Gerenciador de DSL, expanda **XML serialização Behavior\Class data \\ \<the domain class> \Element data**e, em seguida, selecione a propriedade domínio.
 
-    2. Na janela Propriedades, defina **é a chave do moniker** para `true`.
+    2. Na janela Propriedades, defina **é a chave do moniker** para `true` .
 
-- \- ou -
+- \- ou –
 
      Crie uma nova classe de domínio usando a ferramenta de **classe de domínio nomeada** .
 
-     Essa ferramenta cria uma nova classe que tem uma propriedade de domínio chamada nome. O **nome do elemento is** e as propriedades de **chave do moniker** dessa propriedade de domínio são inicializadas para `true`.
+     Essa ferramenta cria uma nova classe que tem uma propriedade de domínio chamada nome. O **nome do elemento is** e as propriedades de **chave do moniker** dessa propriedade de domínio são inicializadas como `true` .
 
-- \- ou -
+- \- ou –
 
      Crie uma relação de herança da classe de domínio para outra classe que tenha uma propriedade de chave de moniker.
 
@@ -158,13 +158,13 @@ Se você usar moniker de chave qualificados, é possível que dois elementos no 
 
 Há vários métodos que ajudam a evitar essa situação:
 
-- Set **é o nome do elemento** = `true` para a propriedade de domínio de chave. Selecione a propriedade Domain no diagrama de definição de DSL e defina o valor na janela Propriedades.
+- Defina **é**  =  `true` o nome do elemento para a propriedade de domínio de chave. Selecione a propriedade Domain no diagrama de definição de DSL e defina o valor na janela Propriedades.
 
      Quando o usuário cria uma nova instância da classe, esse valor faz com que a propriedade de domínio seja atribuída automaticamente a um valor diferente. O comportamento padrão adiciona um número ao final do nome da classe. Isso não impede que o usuário altere o nome para uma duplicata, mas ajuda no caso em que o usuário não define o valor antes de salvar o modelo.
 
-- Habilite a validação para a DSL. No Gerenciador de DSL, selecione Editor\Validation e defina as propriedades **uses...** como `true`.
+- Habilite a validação para a DSL. No Gerenciador de DSL, selecione Editor\Validation e defina as propriedades **uses...** como `true` .
 
-     Há um método de validação gerado automaticamente que verifica se há ambiguidades. O método está na categoria de validação de `Load`. Isso garante que o usuário será avisado de que talvez não seja possível reabrir o arquivo.
+     Há um método de validação gerado automaticamente que verifica se há ambiguidades. O método está na `Load` categoria validação. Isso garante que o usuário será avisado de que talvez não seja possível reabrir o arquivo.
 
      Para obter mais informações, consulte [validação em uma linguagem específica de domínio](../modeling/validation-in-a-domain-specific-language.md).
 
@@ -191,7 +191,7 @@ No entanto, se os álbuns forem referenciados por ID, em vez disso, os monikers 
 
 Observe que, como um GUID é exclusivo, ele nunca é prefixado pelo moniker de seu pai.
 
-Se você souber que uma determinada propriedade de domínio sempre terá um valor exclusivo dentro de um modelo, você pode definir o **qualificador de moniker** para `true` para essa propriedade. Isso fará com que ele seja usado como um qualificador, sem usar o moniker do pai. Por exemplo, se você definir ambos como um **qualificador de moniker** e **for a chave de moniker** para a propriedade de domínio title da classe Album, o nome ou o identificador do modelo não será usado em monikers para o álbum e seus filhos incorporados:
+Se você souber que uma determinada propriedade de domínio sempre terá um valor exclusivo dentro de um modelo, você poderá definir o **qualificador de moniker** como `true` para essa propriedade. Isso fará com que ele seja usado como um qualificador, sem usar o moniker do pai. Por exemplo, se você definir ambos como um **qualificador de moniker** e **for a chave de moniker** para a propriedade de domínio title da classe Album, o nome ou o identificador do modelo não será usado em monikers para o álbum e seus filhos incorporados:
 
 ```xml
 <albumMoniker name="Jazz after Teatime" />
@@ -230,7 +230,7 @@ Para fazer as personalizações a seguir, expanda o nó **comportamento de seria
     </familyTreeModel>
     ```
 
-- Defina **representação** = **elemento** para ter uma propriedade de domínio salva como um elemento em vez de como um valor de atributo.
+- Defina **Representation**  =  o**elemento** de representação para ter uma propriedade de domínio salva como um elemento em vez de como um valor de atributo.
 
     ```xml
     <person name="Elizabeth I" birthYear="1533">
@@ -266,39 +266,37 @@ A tabela a seguir resume as opções que você pode definir nesta seção da def
 
 Esses elementos são encontrados no Gerenciador de DSL em **dados de Behavior\Class de serialização XML**.
 
-|||
+|Propriedade|Descrição|
 |-|-|
-|propriedade|Descrição|
 |Tem Esquema de elemento personalizado|Se for true, indica que a classe de domínio tem um esquema de elemento personalizado|
 |É personalizado|Defina como **true** se você quiser escrever seu próprio código de serialização e desserialização para essa classe de domínio.<br /><br /> Compile a solução e investigue os erros para descobrir instruções detalhadas.|
 |Classe de domínio|Classe de domínio à qual este nó de dados de classe se aplica. Somente leitura.|
-|Nome de elemento|Nome do nó XML para elementos desta classe. O valor padrão é uma versão em minúsculas do nome da classe de domínio.|
-|Nome do atributo do moniker|Nome do atributo usado nos elementos do moniker para conter a referência. Se estiver em branco, o nome da propriedade ou da ID de chave será usado.<br /><br /> Neste exemplo, é "Name": `<personMoniker name="/Mike Nash"/>`|
+|Nome do elemento|Nome do nó XML para elementos desta classe. O valor padrão é uma versão em minúsculas do nome da classe de domínio.|
+|Nome do atributo do moniker|Nome do atributo usado nos elementos do moniker para conter a referência. Se estiver em branco, o nome da propriedade ou da ID de chave será usado.<br /><br /> Neste exemplo, é "Name":`<personMoniker name="/Mike Nash"/>`|
 |Nome do elemento do moniker|Nome do elemento XML usado para monikers que se referem a elementos dessa classe.<br /><br /> O valor padrão é uma versão em minúsculas do nome de classe sufixos por "moniker". Por exemplo, `personMoniker`.|
-|Nome do tipo de moniker|Nome do tipo XSD gerado para os monikers para elementos desta classe. O XSD está no **código Dsl\Generated\\\*Schema. xsd**|
+|Nome do tipo de moniker|Nome do tipo XSD gerado para os monikers para elementos desta classe. O XSD está no **Dsl\Generated de esquema de código \\ \* . xsd**|
 |Serializar ID|Se for true, o elemento GUID será incluído no arquivo. Isso deve ser verdadeiro se não houver nenhuma propriedade marcada como **moniker chave** e a DSL definir relações de referência para essa classe.|
-|Nome do tipo|Nome do tipo XML gerado no XSD a partir da classe de domínio designada.|
-|{1&gt;Observações&lt;1}|Notas informais associadas a este elemento|
+|Nome do Tipo|Nome do tipo XML gerado no XSD a partir da classe de domínio designada.|
+|Observações|Notas informais associadas a este elemento|
 
 ### <a name="xml-property-data"></a>Dados de propriedade XML
 
 Nós de propriedade XML são encontrados sob os nós de classe.
 
-|||
+|Propriedade|Descrição|
 |-|-|
-|propriedade|Descrição|
 |Propriedade de domínio|Propriedade à qual se aplica os dados de configuração de serialização XML. Somente leitura.|
 |É chave de moniker|Se for true, a propriedade será usada como a chave para criar monikers que referenciam instâncias dessa classe de domínio.|
 |É qualificador de moniker|Se for true, a propriedade será usada para criar o qualificador em moniker. Se for false, e se Serializeid não for verdadeiro para essa classe de domínio, os monikers serão qualificados pelo moniker do elemento pai na árvore de incorporação.|
 |Representação|Se for o atributo, a propriedade será serializada como um atributo XML; Se for o elemento, ele será serializado como um elemento; Se ignorar, ele não será serializado.|
 |Nome do XML|Nome usado para o atributo ou elemento XML que representa a propriedade. Por padrão, essa é uma versão em minúsculas do nome da propriedade de domínio.|
-|{1&gt;Observações&lt;1}|Notas informais associadas a este elemento|
+|Observações|Notas informais associadas a este elemento|
 
 ### <a name="xml-role-data"></a>Dados da função XML
 
 Nós de dados de função são encontrados nos nós de classe de origem.
 
-|propriedade|Descrição|
+|Propriedade|Descrição|
 |-|-|
 |Tem moniker personalizado|Defina como true se você quiser fornecer seu próprio código para gerar e resolver monikers que atravessam essa relação.<br /><br /> Para obter instruções detalhadas, crie a solução e clique duas vezes nas mensagens de erro.|
 |Relacionamento de domínio|Especifica a relação à qual essas opções se aplicam. Somente leitura.|
@@ -306,7 +304,7 @@ Nós de dados de função são encontrados nos nós de classe de origem.
 |Nome do elemento de função|Especifica o nome do elemento XML que é derivado da função de origem. O valor padrão é o nome da propriedade de função.|
 |Usar forma completa|Se for true, cada elemento de destino ou moniker será colocado em um nó XML que representa a relação. Isso deve ser definido como true se a relação tiver suas próprias propriedades de domínio.|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Navegando por um modelo no código do programa e atualizando-o](../modeling/navigating-and-updating-a-model-in-program-code.md)
-- [Gerando código com base em uma linguagem específica de domínio](../modeling/generating-code-from-a-domain-specific-language.md)
+- [Navegando e atualizando um modelo no código do programa](../modeling/navigating-and-updating-a-model-in-program-code.md)
+- [Gerando código a partir de uma linguagem específica do domínio](../modeling/generating-code-from-a-domain-specific-language.md)

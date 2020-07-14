@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_oemSymbolId | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 60d1486ba654ddba9fdd1dae6439cafbb1f81f29
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 401894a921f2ad6a9649e337059c8ee142858f84
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739589"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462619"
 ---
 # <a name="idiasymbolget_oemsymbolid"></a>IDiaSymbol::get_oemSymbolId
 Recupera o valor da ID do símbolo do OEM (fabricante original do equipamento).
@@ -35,8 +35,8 @@ HRESULT get_oemSymbolId ( 
 
 fora Retorna a ID de símbolo atribuída internamente de um OEM.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
@@ -44,8 +44,8 @@ fora Retorna a ID de símbolo atribuída internamente de um OEM.
 ## <a name="remarks"></a>Comentários
  O identificador é um valor exclusivo criado pelo DIA SDK para marcar todos os símbolos como exclusivos.
 
- Essa propriedade só se aplica a símbolos com um tipo de [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) de `SymTagCustomType`.
+ Essa propriedade aplica-se somente a símbolos com um tipo de [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) de `SymTagCustomType` .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)

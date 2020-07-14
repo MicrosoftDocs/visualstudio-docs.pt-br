@@ -15,19 +15,19 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7de098d264dbdd6d7d9daea385de2e03d4e1ba35
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 29cc322dd59dc0de66af8f92a46524d15b0022c7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653816"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539575"
 ---
-# <a name="ca1053-static-holder-types-should-not-have-constructors"></a>CA1053: os tipos de suporte estático não devem ter construtores
+# <a name="ca1053-static-holder-types-should-not-have-constructors"></a>CA1053: Tipos de suporte estático não devem ter construtores
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|StaticHolderTypesShouldNotHaveConstructors|
+|TypeName|StaticHolderTypesShouldNotHaveConstructors|
 |CheckId|CA1053|
 |Categoria|Microsoft. Design|
 |Alteração Significativa|Quebra|
@@ -48,6 +48,6 @@ ms.locfileid: "72653816"
  Não suprima um aviso nessa regra. A presença do Construtor sugere que o tipo não é um tipo estático.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir mostra um tipo que viola essa regra. Observe que não há nenhum construtor padrão no código-fonte. Quando esse código é compilado em um assembly, o C# compilador insere um construtor padrão, que violará essa regra. Para corrigir isso, declare um Construtor privado.
+ O exemplo a seguir mostra um tipo que viola essa regra. Observe que não há nenhum construtor padrão no código-fonte. Quando esse código é compilado em um assembly, o compilador C# insere um construtor padrão, que violará essa regra. Para corrigir isso, declare um Construtor privado.
 
  [!code-csharp[FxCop.Design.StaticTypes#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.StaticTypes/cs/FxCop.Design.StaticTypes.cs#1)]

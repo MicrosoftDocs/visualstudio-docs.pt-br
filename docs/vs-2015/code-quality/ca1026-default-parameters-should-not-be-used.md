@@ -15,19 +15,19 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8fffbdc2cf9f4e09fe98c8e14b6692802ab3f275
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a63d6e788dd1722d0c593469b225a4f1aeb4738d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661951"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548429"
 ---
-# <a name="ca1026-default-parameters-should-not-be-used"></a>CA1026: parâmetros padrão não devem ser usados
+# <a name="ca1026-default-parameters-should-not-be-used"></a>CA1026: Parâmetros padrão não devem ser usados
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|DefaultParametersShouldNotBeUsed|
+|TypeName|DefaultParametersShouldNotBeUsed|
 |CheckId|CA1026|
 |Categoria|Microsoft. Design|
 |Alteração Significativa|Quebra|
@@ -38,7 +38,7 @@ ms.locfileid: "72661951"
 ## <a name="rule-description"></a>Descrição da Regra
  Os métodos que usam parâmetros padrão são permitidos no Common Language Specification (CLS); no entanto, o CLS permite que os compiladores ignorem os valores atribuídos a esses parâmetros. O código que é escrito para compiladores que ignoram valores de parâmetro padrão deve fornecer explicitamente argumentos para cada parâmetro padrão. Para manter o comportamento que você deseja em linguagens de programação, os métodos que usam parâmetros padrão devem ser substituídos por sobrecargas de método que fornecem os parâmetros padrão.
 
- O compilador ignora os valores dos parâmetros padrão para a extensão gerenciada C++ para quando ele acessa o código gerenciado. O compilador Visual Basic dá suporte a métodos que têm parâmetros padrão que usam a palavra-chave [opcional](https://msdn.microsoft.com/library/4571ce88-a539-4115-b230-54eb277c6aa7) .
+ O compilador ignora os valores dos parâmetros padrão para a extensão gerenciada para C++ quando ele acessa o código gerenciado. O compilador Visual Basic dá suporte a métodos que têm parâmetros padrão que usam a palavra-chave [opcional](https://msdn.microsoft.com/library/4571ce88-a539-4115-b230-54eb277c6aa7) .
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
  Para corrigir uma violação dessa regra, substitua o método que usa parâmetros padrão com sobrecargas de método que fornecem os parâmetros padrão.
@@ -52,7 +52,7 @@ ms.locfileid: "72661951"
  [!code-vb[FxCop.Design.DefaultParameters#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.DefaultParameters/vb/FxCop.Design.DefaultParameters.vb#1)]
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1025: substituir argumentos repetitivos por matriz de parâmetros](../code-quality/ca1025-replace-repetitive-arguments-with-params-array.md)
+ [CA1025: Substituir argumentos repetitivos por matriz de parâmetros](../code-quality/ca1025-replace-repetitive-arguments-with-params-array.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Componentes de independência de linguagem e componentes independentes da linguagem](https://msdn.microsoft.com/library/4f0b77d0-4844-464f-af73-6e06bedeafc6)

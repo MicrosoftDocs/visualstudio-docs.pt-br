@@ -1,7 +1,7 @@
 ---
 title: IDiaSectionContrib::get_uninitializedData | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 014b7436f0439214062a8b19393269421a2dfcff
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 934d2295d97d89b58704ada2eba58f0e2ec9aea1
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742501"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466087"
 ---
 # <a name="idiasectioncontribget_uninitializeddata"></a>IDiaSectionContrib::get_uninitializedData
 Recupera um sinalizador que indica se a seção contém dados não inicializados.
@@ -33,10 +33,10 @@ HRESULT get_uninitializedData ( 
 #### <a name="parameters"></a>Parâmetros
  `pRetVal`
 
-fora Retorna `TRUE` se a seção contiver dados não inicializados; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se a seção contém dados não inicializados; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver suporte para essa propriedade. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

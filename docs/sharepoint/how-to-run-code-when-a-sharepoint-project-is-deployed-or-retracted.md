@@ -1,7 +1,7 @@
 ---
-title: Executar o código quando o projeto do SharePoint é implantado ou cancelado
+title: Executar o código quando o projeto do SharePoint for implantado ou retraído
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,47 +12,46 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9e3f46ff9d2e83307f745180288e69839a0d336e
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
-ms.translationtype: MT
+ms.openlocfilehash: 5bd60c9d7b30d4620630d1f6752bd4c7e8bf1182
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66401770"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016068"
 ---
-# <a name="how-to-run-code-when-a-sharepoint-project-is-deployed-or-retracted"></a>Como: Executar o código quando um projeto do SharePoint é implantado ou cancelado
-  Se você quiser realizar tarefas adicionais quando um projeto do SharePoint é implantado ou cancelado, você pode manipular eventos que são gerados pelo Visual Studio. Para obter mais informações, consulte [estender o SharePoint empacotamento e implantação](../sharepoint/extending-sharepoint-packaging-and-deployment.md).
+# <a name="how-to-run-code-when-a-sharepoint-project-is-deployed-or-retracted"></a>Como executar código quando um projeto do SharePoint é implantado ou retraído
+  Se você quiser executar tarefas adicionais quando um projeto do SharePoint for implantado ou retraído, poderá manipular eventos gerados pelo Visual Studio. Para obter mais informações, consulte [estender o empacotamento e a implantação do SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md).
 
-### <a name="to-run-code-when-a-sharepoint-project-is-deployed-or-retracted"></a>Para executar código quando um projeto do SharePoint é implantado ou cancelado
+### <a name="to-run-code-when-a-sharepoint-project-is-deployed-or-retracted"></a>Para executar o código quando um projeto do SharePoint é implantado ou retraído
 
-1. Crie uma extensão de item de projeto, uma extensão de projeto ou uma definição de um novo tipo de item de projeto. Para mais informações, consulte os seguintes tópicos:
+1. Crie uma extensão de item de projeto, uma extensão de projeto ou uma definição de um novo tipo de item de projeto. Para obter mais informações, consulte estes tópicos:
 
-   - [Como: Criar uma extensão de item de projeto do SharePoint](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)
+   - [Como: criar uma extensão de item de projeto do SharePoint](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)
 
-   - [Como: Criar uma extensão de projeto do SharePoint](../sharepoint/how-to-create-a-sharepoint-project-extension.md)
+   - [Como: criar uma extensão de projeto do SharePoint](../sharepoint/how-to-create-a-sharepoint-project-extension.md)
 
-   - [Como: Definir um tipo de item de projeto do SharePoint](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)
+   - [Como definir um tipo de item de projeto do SharePoint](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)
 
-2. Na extensão, acesse o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> objeto. Para obter mais informações, confira [Como: Recuperar o serviço de projeto do SharePoint](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md).
+2. Na extensão, acesse o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> objeto. Para obter mais informações, consulte [como recuperar o serviço de projeto do SharePoint](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md).
 
-3. Lidar com o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted> e <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted> eventos do serviço de projeto.
+3. Manipule os <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted> eventos e do serviço de projeto.
 
-4. No evento manipuladores, use o <xref:Microsoft.VisualStudio.SharePoint.DeploymentEventArgs> para obter informações sobre a sessão atual de implantação. Por exemplo, você pode determinar qual projeto é na sessão atual de implantação e se ele está sendo implantado ou cancelado.
+4. Nos manipuladores de eventos, use o <xref:Microsoft.VisualStudio.SharePoint.DeploymentEventArgs> parâmetro para obter informações sobre a sessão de implantação atual. Por exemplo, você pode determinar qual projeto está na sessão de implantação atual e se ele está sendo implantado ou cancelado.
 
-   O exemplo de código a seguir demonstra como lidar com o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted> e <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted> eventos em uma extensão de projeto. Essa extensão grava uma mensagem adicional para o **saída** janela quando a implantação é iniciada e concluída para um projeto do SharePoint.
+   O exemplo de código a seguir demonstra como manipular <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted> os <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted> eventos e em uma extensão de projeto. Essa extensão grava uma mensagem adicional na janela de **saída** quando a implantação é iniciada e concluída para um projeto do SharePoint.
 
    [!code-csharp[SPExtensibility.ProjectSystemExtension.General#12](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/handleprojectdeploymentevents.cs#12)]
    [!code-vb[SPExtensibility.ProjectSystemExtension.General#12](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/handleprojectdeploymentevents.vb#12)]
 
 ## <a name="compile-the-code"></a>Compilar o código
- Este exemplo requer referências aos assemblies a seguir:
+ Este exemplo requer referências aos seguintes assemblies:
 
-- Microsoft.VisualStudio.SharePoint
+- Microsoft. VisualStudio. SharePoint
 
-- System.ComponentModel.Composition
+- System. ComponentModel. composição
 
 ## <a name="deploy-the-extension"></a>Implantar a extensão
- Para implantar a extensão, crie um [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] pacote de extensão (VSIX) para o assembly e outros arquivos que você deseja distribuir com a extensão. Para obter mais informações, consulte [implantar extensões para ferramentas do SharePoint no Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
+ Para implantar a extensão, crie um [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] pacote de VSIX (extensão) para o assembly e quaisquer outros arquivos que você deseja distribuir com a extensão. Para obter mais informações, consulte [implantar extensões para as ferramentas do SharePoint no Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
 
 ## <a name="see-also"></a>Consulte também
-- [Estender o SharePoint empacotamento e implantação](../sharepoint/extending-sharepoint-packaging-and-deployment.md)
-- [Como: Executar código quando etapas de implantação são executadas](../sharepoint/how-to-run-code-when-deployment-steps-are-executed.md)
+- [Estender o empacotamento e a implantação do SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md)
+- [Como executar código quando as etapas de implantação são executadas](../sharepoint/how-to-run-code-when-deployment-steps-are-executed.md)

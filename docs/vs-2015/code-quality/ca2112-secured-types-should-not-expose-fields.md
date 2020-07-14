@@ -15,19 +15,19 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b9c91a7c9833d3d9d5ae283c28ae4d437bd07734
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4267b4f55f78106a4d1e8f3b2f9b296be9ddf618
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658743"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546530"
 ---
-# <a name="ca2112-secured-types-should-not-expose-fields"></a>CA2112: os tipos seguros não devem expor campos
+# <a name="ca2112-secured-types-should-not-expose-fields"></a>CA2112: Tipos protegidos não devem expor campos
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|SecuredTypesShouldNotExposeFields|
+|TypeName|SecuredTypesShouldNotExposeFields|
 |CheckId|CA2112|
 |Categoria|Microsoft.Security|
 |Alteração Significativa|Quebra|
@@ -45,7 +45,7 @@ ms.locfileid: "72658743"
  Para problemas de segurança e para um bom design, você deve corrigir violações tornando os campos públicos não públicos. Você poderá suprimir um aviso dessa regra se o campo não mantiver informações que devem permanecer protegidas e se você não depender do conteúdo do campo.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir é composto de um tipo de biblioteca (`SecuredTypeWithFields`) com campos não seguros, um tipo (`Distributor`) que pode criar instâncias do tipo de biblioteca e as instâncias de passagens incorretas para os tipos não têm permissão para criá-las e o código do aplicativo que pode ler um os campos da instância, embora não tenham a permissão que protege o tipo.
+ O exemplo a seguir é composto de um tipo de biblioteca ( `SecuredTypeWithFields` ) com campos não seguros, um tipo ( `Distributor` ) que pode criar instâncias do tipo de biblioteca e as instâncias de passes incorretas para os tipos não têm permissão para criá-las e o código do aplicativo que pode ler os campos de uma instância, embora não tenha a permissão que protege o tipo.
 
  O código de biblioteca a seguir viola a regra.
 
@@ -64,11 +64,11 @@ ms.locfileid: "72658743"
  Este exemplo gerencia a seguinte saída.
 
  **Criando uma instância de SecuredTypeWithFields.** 
-**campos de tipo protegido: 22, 33** 
-**alterar o campo do tipo protegido...** 
-**campos de objeto em cache: 99, 33**
+ **Campos de tipo protegido: 22, 33** 
+ **Alterando campo do tipo protegido...** 
+ **Campos de objeto em cache: 99, 33**
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1051: não declarar campos de instância visíveis](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)
+ [CA1051: Não declarar campos de instância visíveis](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Dados e modelagem de](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6) [demandas de link](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)

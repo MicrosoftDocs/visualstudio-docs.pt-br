@@ -1,7 +1,7 @@
 ---
 title: 'Como: usar um arquivo de recurso para especificar nomes, propriedades e permissões localizadas | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -19,12 +19,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fa2fec260921d66328b2c16075d44b38686c08de
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: a87cc8a3eb8f98ea19a87e93c37aae5303151ecf
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72982561"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015396"
 ---
 # <a name="how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions"></a>Como: usar um arquivo de recurso para especificar nomes, propriedades e permissões localizadas
   Usando um arquivo de recurso, você pode fornecer nomes localizados, definir propriedades e aplicar permissões Tor objetos que são definidos em um modelo de BDC (conectividade de dados corporativos). Para especificar essas informações, você adiciona um item de **recurso de conectividade de dados corporativos** a um projeto que contém um item de **modelo de conectividade de dados corporativos** . Em seguida, especifique nomes, propriedades e permissões editando o XML para o arquivo de recurso.
@@ -33,7 +32,7 @@ ms.locfileid: "72982561"
 
 1. Em **Gerenciador de soluções**, expanda a pasta do projeto do SharePoint e escolha a pasta que contém o modelo do BDC.
 
-2. Na barra de menus, escolha **Projeto** > **Adicionar Novo Item**.
+2. Na barra de menus, escolha **projeto**  >  **Adicionar novo item**.
 
 3. Expanda o nó do **SharePoint** e escolha o nó **2010** .
 

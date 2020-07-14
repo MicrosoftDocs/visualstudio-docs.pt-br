@@ -1,7 +1,7 @@
 ---
-title: 'Erro: Verifique se o DNS está configurado corretamente no computador de destino | Microsoft Docs'
+title: Erro-Verifique se o DNS está configurado corretamente no computador de destino | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.callback_dns_failed
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c8a9a5346016964882bb524187d01ca83c203be1
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: e374e75caca3dec28800a2eac86d921c861888ab
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911554"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460819"
 ---
 # <a name="error-ensure-that-dns-is-correctly-configured-on-the-target-computer"></a>Erro: verifique se o DNS está configurado corretamente no computador de destino
 Ao tentar fazer a depuração remota, você pode receber a seguinte mensagem de erro:
@@ -30,7 +30,7 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
 
  Esse erro ocorre quando o computador de destino não pode resolver o nome do computador host do depurador do Visual Studio. Verifique as configurações DNS no computador de destino.
 
-- Para obter informações sobre como exibir sua configuração de DNS no Windows 8.1, vista, Windows 7, Windows Server 2012, Windows Server 2008 ou Windows Server 2008 R2, faça o seguinte: no menu **Iniciar** , escolha **ajuda e suporte**e, em seguida, procure **alterar TCP/IP configurações**.
+- Para obter informações sobre como exibir sua configuração de DNS em Windows 8.1, vista, Windows 7, Windows Server 2012, Windows Server 2008 ou Windows Server 2008 R2, faça o seguinte: no menu **Iniciar** , escolha **ajuda e suporte**e, em seguida, procure **alterar configurações TCP/IP**.
 
 - Para obter mais informações, vá para o [site do Microsoft Windows](https://www.microsoft.com/windows/) e pesquise **Alterar configurações de TCP/IP**.
 

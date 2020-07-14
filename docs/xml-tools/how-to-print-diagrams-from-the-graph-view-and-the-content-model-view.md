@@ -1,19 +1,19 @@
 ---
 title: 'Esquema XML: diagramas de impressão na exibição de gráfico & exibição de modelo de conteúdo'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 7e1785e4-4aaf-4c66-8735-51e7ca035565
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1253e5470b176f04d715adc4caa10cec202a4c9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e5aef4b2a7bc040a75a97bc66f26526053f4cada
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592615"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817119"
 ---
 # <a name="how-to-print-diagrams-from-the-graph-view-and-the-content-model-view"></a>Como: imprimir diagramas da exibição de gráfico e do modo de exibição de modelo de conteúdo
 
@@ -31,6 +31,6 @@ Este tópico descreve como imprimir um diagrama da exibição de gráfico ou da 
 
 ## <a name="see-also"></a>Veja também
 
-- [Exibição de Gráfico](../xml-tools/graph-view.md)
+- [Exibição de gráfico](../xml-tools/graph-view.md)
 - [Exibição do modelo de conteúdo](../xml-tools/content-model-view.md)
-- [Espaço de trabalho do designer de esquema XML](../xml-tools/xml-schema-designer-workspace.md)
+- [Workspace de designer de esquema XML](../xml-tools/xml-schema-designer-workspace.md)

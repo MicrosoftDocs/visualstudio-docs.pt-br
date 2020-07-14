@@ -1,7 +1,7 @@
 ---
 title: Exibir informações personalizadas usando DebuggerDisplay | Microsoft Docs
 ms.date: 01/09/2019
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - attributes, debugger
 - DebuggerDisplay attribute
@@ -12,35 +12,35 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc2abb054a0e09d0715e708cc4d1d6fcbed476e0
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2387c5e9a920f0811a65ca400d8da48aa81dccd3
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72728673"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85418776"
 ---
-# <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Diga ao depurador o que mostrar usando o atributo DebuggerDisplay (C#, Visual Basic, F#, C++/CLI)
+# <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Diga ao depurador o que mostrar usando o atributo DebuggerDisplay (C#, Visual Basic, F #, C++/CLI)
 
 O <xref:System.Diagnostics.DebuggerDisplayAttribute> controla como um objeto, propriedade ou campo é exibido nas janelas da variável do depurador. Esse atributo pode ser aplicado a tipos, delegados, propriedades, campos e assemblies. Se aplicado a um tipo base, o atributo também se aplicará a uma subclasse.
 
 O atributo `DebuggerDisplay` tem um único argumento, que é uma cadeia de caracteres a ser exibida na coluna de valor para instâncias do tipo. Essa cadeia de caracteres pode conter chaves (`{` e `}`). O texto dentro de um par de chaves é avaliado como um campo, propriedade ou método.
 
-Se uma classe tiver um método `ToString()` substituído, o depurador usará o método substituído em vez do `{<typeName>}` padrão. Portanto, se você tiver substituído o método `ToString()`, o depurador usará o método substituído em vez do `{<typeName>}` padrão, e você não precisará usar `DebuggerDisplay`. Se você usar ambos, o atributo `DebuggerDisplay` terá precedência sobre o método substituído `ToString()`. O atributo `DebuggerDisplay` também tem precedência sobre o método substituído `ToString()` em uma subclasse.
+Se uma classe tiver um `ToString()` método substituído, o depurador usará o método substituído em vez do padrão `{<typeName>}` . Portanto, se você tiver substituído o `ToString()` método, o depurador usará o método substituído em vez do padrão `{<typeName>}` , e você não precisará usar `DebuggerDisplay` . Se você usar ambos, o `DebuggerDisplay` atributo terá precedência sobre o `ToString()` método substituído. O `DebuggerDisplay` atributo também tem precedência sobre o `ToString()` método substituído em uma subclasse.
 
-Se o depurador avalia essa chamada implícita `ToString()` depende de uma configuração de usuário na caixa de diálogo **ferramentas/opções/depuração** . O Visual Basic não implementa esta avaliação de `ToString()` implícita.
+Se o depurador avaliar essa chamada implícita `ToString()` depende de uma configuração de usuário na caixa de diálogo **ferramentas/opções/depuração** .
 
 > [!IMPORTANT]
-> Se a caixa de seleção **Mostrar estrutura bruta de objetos em variáveis do Windows** estiver marcada na caixa de diálogo **ferramentas/opts/Debugging** , o atributo `DebuggerDisplay` será ignorado.
+> Se a caixa de seleção **Mostrar estrutura bruta de objetos em variáveis do Windows** estiver marcada na caixa de diálogo **ferramentas/opções/depuração** , o `DebuggerDisplay` atributo será ignorado.
 
 > [!NOTE]
-> Para código nativo, esse atributo tem suporte apenas no C++código/CLI.
+> Para código nativo, esse atributo tem suporte apenas no código C++/CLI.
 
 A tabela a seguir mostra alguns usos possíveis do atributo `DebuggerDisplay` e saídas de exemplo.
 
 |Atributo|Saída aparecendo na coluna Valor|
 |---------------| - |
 |`[DebuggerDisplay("x = {x} y = {y}")]`<br /><br /> Usado em um tipo com campos `x` e `y`.|`x = 5 y = 18`|
-|A sintaxe do parâmetro `[DebuggerDisplay("String value is {getString()}")]`pode variar entre linguagens. Em virtude disso, use com cuidado.|`String value is [5, 6, 6]`|
+|`[DebuggerDisplay("String value is {getString()}")]`A sintaxe de parâmetro pode variar entre linguagens. Em virtude disso, use com cuidado.|`String value is [5, 6, 6]`|
 
 `DebuggerDisplay` também pode aceitar parâmetros nomeados.
 
@@ -58,7 +58,7 @@ cd <directory containing autoexp.cs>
 csc /t:library autoexp.cs
 ```
 
-As alterações em autoexp. dll serão selecionadas na próxima sessão de depuração.
+As alterações a autoexp.dll serão selecionadas na próxima sessão de depuração.
 
 ## <a name="using-expressions-in-debuggerdisplay"></a>Usando expressões em DebuggerDisplay
 Embora você possa usar uma expressão geral entre as chaves em um atributo DebuggerDisplay, esta prática não é recomendada.
@@ -96,7 +96,7 @@ O sufixo ", NQ" informa o avaliador de expressão para remover as aspas ao exibi
 ## <a name="example"></a>Exemplo
 O exemplo de código a seguir mostra como usar `DebuggerDisplay` junto com `DebuggerBrowseable` e `DebuggerTypeProxy`. Quando exibido em uma janela variáveis de depurador, como, por exemplo, a janela **Inspeção**, ele produz uma expansão semelhante ao seguinte:
 
-|**Nome**|**Value**|**Tipo**|
+|**Nome**|**Valor**|**Tipo**|
 |--------------|---------------|--------------|
 |Chave|"three"|object {string}|
 |Valor|3|object {int}|
@@ -179,9 +179,9 @@ class MyHashtable
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Usando o atributo DebuggerTypeProxy](../debugger/using-debuggertypeproxy-attribute.md)
 - [Criar exibições personalizadas de objetos gerenciados](../debugger/create-custom-views-of-managed-objects.md)
-- [Especificadores de formato em C#](../debugger/format-specifiers-in-csharp.md)
-- [Aprimorando a depuração com os atributos de exibição do depurador](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)
+- [Especificadores de formato em C #](../debugger/format-specifiers-in-csharp.md)
+- [Melhorando a depuração com os atributos de exibição do depurador](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)

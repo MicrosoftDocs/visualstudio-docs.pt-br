@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_value | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ea0a0a2df1687d965437a8977eea649f77ea1ce4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c9a36da3feecfe1af664e35fa50d616d2a94fb0a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738926"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461507"
 ---
 # <a name="idiasymbolget_value"></a>IDiaSymbol::get_value
 Recupera o valor de uma constante.
@@ -33,10 +33,10 @@ HRESULT get_value (
 #### <a name="parameters"></a>Parâmetros
 `pRetVal`
 
-[entrada, saída] Um objeto `VARIANT` que é preenchido com o valor de uma constante.
+[entrada, saída] Um `VARIANT` objeto que é preenchido com o valor de uma constante.
 
-## <a name="return-value"></a>Valor retornado
-Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
@@ -69,5 +69,5 @@ void ProcessValue2(IDiaSymbol *pSymbol)
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

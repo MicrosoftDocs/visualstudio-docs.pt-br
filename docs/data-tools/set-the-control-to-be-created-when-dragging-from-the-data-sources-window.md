@@ -1,7 +1,7 @@
 ---
 title: Definir o controle para criar ao arrastar da janela fontes de dados
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Data Sources Window, select controls
 - Windows Forms, displaying data
@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5193f3e3a0a1f4a06cc4830036ecf63806a1dbee
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8f5a3cf2d1f34ca9a3d0c2918a8f3f0a3e05260f
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586179"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281533"
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>Definir o controle a ser criado quando arrastado da janela Fontes de Dados
 
@@ -37,7 +37,7 @@ Nesse contexto, o termo *objeto* refere-se a um objeto comercial personalizado, 
 2. Na janela **fontes de dados** , selecione o item que representa a tabela de dados ou o objeto que você deseja definir.
 
    > [!TIP]
-   > Se a janela **fontes de dados** não estiver aberta, você poderá abri-la selecionando **Exibir** > outras **fontes de dados**do **Windows** > .
+   > Se a janela **fontes de dados** não estiver aberta, você poderá abri-la selecionando **Exibir**  >  **outras**  >  **fontes de dados**do Windows.
 
 3. Clique no menu suspenso do item e, em seguida, clique em um dos seguintes itens no menu:
 

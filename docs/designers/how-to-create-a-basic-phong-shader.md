@@ -1,19 +1,19 @@
 ---
 title: Como criar um sombreador Phong básico
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c7c69da8-142b-4d3b-9be9-4be0d5970b25
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3059048f44524b9a838a8dfefc948ec4018dd05
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 718607d74be1a74a799f8de9f4883e1df9fb7ef5
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769181"
 ---
 # <a name="how-to-create-a-basic-phong-shader"></a>Como criar um sombreador Phong básico
 
@@ -46,7 +46,7 @@ Antes de começar, verifique se a janela **Propriedades** e a **Caixa de Ferrame
 
 ![Grafo de sombreador e uma versão prévia de seu efeito](../designers/media/digit-lighting-graph.png)
 
-Determinadas formas podem fornecer melhores visualizações para alguns sombreadores. Para obter mais informações sobre como visualizar sombreadores no Shader Designer, consulte a seção Shaders de visualização no [Shader Designer](../designers/shader-designer.md)
+Determinadas formas podem fornecer melhores visualizações para alguns sombreadores. Para obter mais informações sobre como Visualizar sombreadores no designer do sombreador, consulte a seção visualizações de sombreadores no [Designer de sombreador](../designers/shader-designer.md)
 
 A ilustração a seguir mostra o sombreador que é descrito neste documento, aplicado a um modelo 3D. A propriedade **MaterialSpecular** foi definida como (1,00, 0,50, 0,20, 0,00) e sua propriedade **MaterialSpecularPower** foi definida como 16.
 
@@ -61,8 +61,8 @@ Para obter mais informações de como aplicar um sombreador a um modelo 3D, conf
 
 ## <a name="see-also"></a>Confira também
 
-- [Como: Aplicar um sombreador a um modelo 3D](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
-- [Como: Exportar um sombreador](../designers/how-to-export-a-shader.md)
+- [Como: aplicar um sombreador a um modelo 3D](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [Como: exportar um sombreador](../designers/how-to-export-a-shader.md)
 - [Como criar um sombreador Lambert básico](../designers/how-to-create-a-basic-lambert-shader.md)
-- [Designer de Sombreador](../designers/shader-designer.md)
-- [Nós do Designer de Sombreador](../designers/shader-designer-nodes.md)
+- [Designer de sombreador](../designers/shader-designer.md)
+- [Nós do designer do sombreador](../designers/shader-designer-nodes.md)

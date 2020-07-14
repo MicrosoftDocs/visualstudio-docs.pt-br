@@ -1,7 +1,7 @@
 ---
 title: Passar dados entre formulários
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 358cdc4822aa0da1d980f22196618aeaada4b1be
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 198eb09cabe16c72415520aa493a3395cdbf6d48
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586361"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281871"
 ---
 # <a name="pass-data-between-forms"></a>Passar dados entre formulários
 
@@ -47,7 +47,7 @@ As tarefas ilustradas neste passo a passo incluem:
 
 - Passar dados entre formulários.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este passo a passos usa SQL Server Express LocalDB e o banco de dados de exemplo Northwind.
 
@@ -69,7 +69,7 @@ Este passo a passos usa SQL Server Express LocalDB e o banco de dados de exemplo
 
 1. No Visual Studio, no menu **Arquivo**, selecione **Novo** > **Projeto**.
 
-2. Expanda **o C# Visual** ou **Visual Basic** no painel esquerdo e, em seguida, selecione **área de trabalho do Windows**.
+2. Expanda o **Visual C#** ou **Visual Basic** no painel esquerdo e, em seguida, selecione **área de trabalho do Windows**.
 
 3. No painel central, selecione o tipo de projeto **Windows Forms aplicativo** .
 
@@ -154,11 +154,11 @@ Adicione uma consulta do TableAdapter ao Form2 para carregar pedidos para o clie
 
 6. Clique em **Avançar**.
 
-7. Para obter **um nome de DataTableMethod de preenchimento**, digite `FillByCustomerID`.
+7. Para o **preenchimento de um nome de DataTableMethod**, digite `FillByCustomerID` .
 
 8. Desmarque a opção **Retornar uma DataTable** e clique em **Avançar**.
 
-9. Clique em **Finalizar**.
+9. Clique em **Concluir**.
 
 ## <a name="create-a-method-on-form2-to-pass-data-to"></a>Criar um método no Form2 para passar dados para
 
@@ -190,7 +190,7 @@ Adicione uma consulta do TableAdapter ao Form2 para carregar pedidos para o clie
 
 - Clique duas vezes em um registro de cliente no **Form1** para abrir o **Form2** com pedidos do cliente.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Dependendo dos requisitos de aplicativo, existem várias etapas que você talvez queira realizar após passar dados entre formulários. Entre algumas das melhorias que você poderia fazer nessa explicação passo a passo estão:
 
@@ -200,4 +200,4 @@ Dependendo dos requisitos de aplicativo, existem várias etapas que você talvez
 
 ## <a name="see-also"></a>Veja também
 
-- [Associando controles do Windows Forms a dados no Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
+- [Associar controles do Windows Forms a dados no Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

@@ -1,19 +1,19 @@
 ---
 title: Tempo de rampa de etapa para um padrão de carga de etapa em teste de carga
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - load tests, load patterns
 ms.assetid: 4a69e857-f93b-4907-9a01-fd1b66291205
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a40f7ce4aacfdc03b5e05becbfc83439945f7e8a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5ae00c3d9d647eff6f9df448c1681ae1d6c54bcb
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588909"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287318"
 ---
 # <a name="how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern"></a>Como especificar a propriedade de tempo de rampa de etapa para um padrão de carga de etapa
 
@@ -24,7 +24,7 @@ Depois de criar seu teste de carga com o **Novo Assistente de Teste de Carga**, 
 > [!NOTE]
 > Para obter uma lista completa das propriedades de cenário de teste de carga e suas descrições, confira [Propriedades do cenário de teste de carga](../test/load-test-scenario-properties.md).
 
-A propriedade **Step Ramp Time** está definida na janela **Propriedades.** Edite as propriedades de cenário de teste de carga no **Editor de Teste de Carga**.
+A propriedade **time da rampa de etapas** é definida na janela **Propriedades** . Edite as propriedades de cenário de teste de carga no **Editor de Teste de Carga**.
 
 A propriedade **Tempo de rampa de etapa** é usada apenas com um padrão de carga de etapa. Para obter mais informações, confira [Editar padrões de carga para modelar atividades de usuário virtual](../test/edit-load-patterns-to-model-virtual-user-activities.md).
 
@@ -43,7 +43,7 @@ O padrão de carga em etapa é usado para aumentar a carga nos servidores à med
 Essas configurações têm o teste de carga em execução por 30 minutos (1.800 segundos) nas cargas de 100, 200, 300, até 2.000 usuários.
 
 > [!NOTE]
-> A propriedade **Step Ramp Time** é a única dessas propriedades que não está disponível para escolher no Assistente de Teste de Nova **Carga**.
+> A propriedade **time da rampa de etapas** é a única dessas propriedades que não está disponível para escolher na **nova assistente de teste de carga**.
 
 A propriedade **Tempo de rampa de etapa** permite que o aumento de uma etapa para a seguinte (por exemplo, de 100 para 200 usuários) seja gradual e não imediata. No exemplo, a carga de usuário seria aumentada de 100 para 200 usuários durante um período de 20 segundos (um aumento de cinco usuários por segundo).
 
@@ -68,7 +68,7 @@ A propriedade **Tempo de rampa de etapa** permite que o aumento de uma etapa par
 
 6. Depois de alterar a propriedade, escolha **Salvar** no menu **Arquivo**. Em seguida, você pode executar o teste de carga usando o novo valor de **Tempo de rampa de etapa**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Editar cenários de teste de carga](../test/edit-load-test-scenarios.md)
 - [Controladores de teste e agentes de teste](configure-test-agents-and-controllers-for-load-tests.md)

@@ -2,7 +2,7 @@
 title: Como criar e editar configurações
 ms.date: 06/21/2017
 ms.technology: vs-ide-compile
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - solution build configurations, editing
 - build configurations, creating
@@ -19,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 754d2ceef776ab0dea2d8d51151d4170839173b9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a5b3ecd4abb05148130b0d87e287cbe199557951
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114706"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284497"
 ---
 # <a name="how-to-create-and-edit-configurations"></a>Como criar e editar configurações
 
@@ -40,7 +40,7 @@ ms.locfileid: "76114706"
 Para abrir a caixa de diálogo do **Configuration Manager**, no **Gerenciador de Soluções**, abra o menu de atalho da solução e, em seguida, escolha **Configuration Manager**.
 
 > [!NOTE]
-> Se o comando do **Configuration Manager** não for exibido no menu de atalho, procure no menu **Build** na barra de menus. Se ele não aparecer lá também, na barra de menu, escolha**Opções de** **ferramentas** > e, em seguida, no painel esquerdo da caixa de diálogo **Opções,** expanda **Projetos e Soluções** > **Gerais,** e no painel direito, selecione a caixa de seleção **de configurações de compilação avançada Show.**
+> Se o comando do **Configuration Manager** não for exibido no menu de atalho, procure no menu **Build** na barra de menus. Se ele não aparecer lá, na barra de menus, escolha **ferramentas**  >  **Opções**e, no painel esquerdo da caixa de diálogo **Opções** , expanda **projetos e soluções**  >  **geral**e, no painel direito, marque a caixa de seleção **Mostrar configurações avançadas de Build** .
 
 Na caixa de diálogo **Configuration Manager** é possível usar a lista suspensa **Configuração da solução ativa** para selecionar uma configuração de build em toda a solução, modificar uma existente ou criar uma nova configuração. É possível usar a lista suspensa **Plataforma da solução ativa** para selecionar a plataforma que a configuração define como destino, modificar uma existente ou adicionar uma nova plataforma. O painel **Contextos do projeto** lista os projetos na solução. Para cada projeto, é possível selecionar configuração e plataforma específicas de projeto, modificar existentes ou criar uma nova configuração ou adicionar uma nova plataforma. Também é possível marcar caixas de seleção que indicam se cada projeto está incluído quando você usa a configuração em toda a solução para compilar ou implantar a solução.
 
@@ -118,9 +118,9 @@ Para obter mais informações sobre as configurações da página de propriedade
 
 3. No painel **Contextos do projeto**, para cada projeto, selecione a **Configuração** e a **Plataforma** desejadas e selecione se deseja **Criá-la** e se deseja **Implantá-la**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Compreender configurações de build](../ide/understanding-build-configurations.md)
+- [Noções sobre configurações de build](../ide/understanding-build-configurations.md)
 - [Criar e limpar projetos e soluções no Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
-- [Gerenciar propriedades de projetos e soluções](managing-project-and-solution-properties.md)
+- [Gerenciar propriedades do projeto e da solução](managing-project-and-solution-properties.md)
 - [Criar e editar configurações (Visual Studio para Mac)](/visualstudio/mac/create-and-edit-configurations)

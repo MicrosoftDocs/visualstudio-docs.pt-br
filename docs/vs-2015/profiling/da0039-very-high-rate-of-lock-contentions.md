@@ -13,23 +13,23 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7fcb38184a1d432ca036be88c4d957c0e4d4f419
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 7ae2b836549918fa1179e4e70d51d760efbe2c35
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917161"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544918"
 ---
-# <a name="da0039-very-high-rate-of-lock-contentions"></a>DA0039: taxa muito alta de contenções de bloqueio
+# <a name="da0039-very-high-rate-of-lock-contentions"></a>DA0039: Taxa muito alta de contenções de bloqueio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Para obter a documentação mais recente sobre o Visual Studio, consulte [DA0039: taxa muito alta de contenções de bloqueio](/visualstudio/profiling/da0039-very-high-rate-of-lock-contentions).  
   
-|||  
+|Item|Valor|  
 |-|-|  
-|Id da Regra|DA0039|  
+|ID de regra|DA0039|  
 |Categoria|Uso do .NET Framework|  
-|Métodos de criação de perfil|Amostragem<br /><br /> Instrumentação<br /><br /> Memória do .NET|  
+|Métodos de criação de perfil|amostragem<br /><br /> Instrumentação<br /><br /> Memória do .NET|  
 |Mensagem|Uma taxa muito alta de contenções de Bloqueio do .NET está ocorrendo. Investigue o motivo dessa contenção de bloqueio executando um perfil de Simultaneidade.|  
 |Tipo de regra|Aviso|  
   
@@ -39,7 +39,7 @@ Para obter a documentação mais recente sobre o Visual Studio, consulte [DA0039
  Os dados de desempenho do sistema coletados com os dados de criação de perfil indicam que ocorreu uma taxa excessivamente alta de contenções de bloqueio durante a execução do aplicativo. Considere uma nova criação de perfil usando o método de criação de perfil de simultaneidade para descobrir a causa da contenção.  
   
 ## <a name="rule-description"></a>Descrição da Regra  
- Os bloqueios são usados para proteger seções críticas do código que devem ser executadas em série por um thread por vez em um aplicativo multi-threaded. O CLR (Common Language Runtime) do Microsoft .NET fornece um conjunto completo de primitivos de sincronização e bloqueio. Por exemplo, a linguagem C# dá suporte a uma instrução de bloqueio (SyncLock no Visual Basic). Um aplicativo gerenciado pode chamar os métodos `Monitor.Enter` e `Monitor.Exit` no namespace System. Threading para adquirir e liberar um bloqueio diretamente. O .NET Framework dá suporte a primitivos de sincronização e bloqueio adicionais, incluindo classes que dão suporte a Mutexes, ReaderWriterLocks e Semaphores. Para obter mais informações, consulte [Visão geral dos primitivos de sincronização](https://msdn.microsoft.com/library/ms228964.aspx) no Guia do Desenvolvedor do .NET Framework no site do MSDN. As classes do .NET Framework são colocadas em camada por conta própria sobre os serviços de sincronização de nível inferior internos do sistema operacional Windows. Eles incluem objetos de seção crítica e várias funções de sinalização de evento e de Espera diferentes. Para obter mais informações, consulte a seção [Synchronization](https://msdn.microsoft.com/library/ms686353.aspx) (Sincronização) do Desenvolvimento do Win32 e COM na Biblioteca MSDN  
+ Os bloqueios são usados para proteger seções críticas do código que devem ser executadas em série por um thread por vez em um aplicativo multi-threaded. O CLR (Common Language Runtime) do Microsoft .NET fornece um conjunto completo de primitivos de sincronização e bloqueio. Por exemplo, a linguagem C# dá suporte a uma instrução de bloqueio (SyncLock no Visual Basic). Um aplicativo gerenciado pode chamar os `Monitor.Enter` `Monitor.Exit` métodos e no namespace System. Threading para adquirir e liberar um bloqueio diretamente. O .NET Framework dá suporte a primitivos de sincronização e bloqueio adicionais, incluindo classes que dão suporte a Mutexes, ReaderWriterLocks e Semaphores. Para obter mais informações, consulte [Visão geral dos primitivos de sincronização](https://msdn.microsoft.com/library/ms228964.aspx) no Guia do Desenvolvedor do .NET Framework no site do MSDN. As classes do .NET Framework são colocadas em camada por conta própria sobre os serviços de sincronização de nível inferior internos do sistema operacional Windows. Eles incluem objetos de seção crítica e várias funções de sinalização de evento e de Espera diferentes. Para obter mais informações, consulte a seção [Synchronization](https://msdn.microsoft.com/library/ms686353.aspx) (Sincronização) do Desenvolvimento do Win32 e COM na Biblioteca MSDN  
   
  Subjacentes às classes do .NET Framework e aos objetos nativos do Windows que são usados para sincronização e bloqueio estão os locais de memória compartilhada que devem ser alterados usando operações sincronizadas. As operações sincronizadas usam instruções específicas ao hardware que operam em locais de memória compartilhada para alterar seu estado usando operações atômicas. Operações atômicas têm a garantia de serem consistentes em todos os processadores no computador. Locks e WaitHandles são objetos do .NET que usam operações sincronizadas automaticamente quando são definidos ou redefinidos. Pode haver outras estruturas de dados de memória compartilhada no aplicativo que também exigem o uso de operações sincronizadas para que sejam atualizadas de uma forma thread-safe. Para obter mais informações, consulte [Operações sincronizadas](https://msdn.microsoft.com/library/sbhbke0y.aspx) na seção do .NET Framework da biblioteca MSND  
   

@@ -1,7 +1,7 @@
 ---
 title: Como importar uma página mestra ou tema | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,23 +13,22 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2c5078d31e2dcb7f11e5c19e0f8cb228e2f75d50
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 7abca9e9141fdc8d4540e8a38e9579862fc540f1
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984196"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015294"
 ---
 # <a name="how-to-import-a-master-page-or-theme"></a>Como importar uma página mestra ou tema
-  Você pode dar uma aparência consistente às páginas do seu site do SharePoint criando e usando páginas mestras e temas. o [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] não fornece modelos para esses elementos, mas você pode criá-los no SharePoint Designer e, em seguida, importá-los para o [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Para obter mais informações, consulte [bloco de construção: páginas e interface do usuário](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)) no site da Microsoft.
+  Você pode dar uma aparência consistente às páginas do seu site do SharePoint criando e usando páginas mestras e temas. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]o não fornece modelos para esses elementos, mas você pode criá-los no SharePoint Designer e, em seguida, importá-los para o [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Para obter mais informações, consulte [bloco de construção: páginas e interface do usuário](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)) no site da Microsoft.
 
 ### <a name="to-import-a-master-page-or-theme"></a>Para importar uma página mestra ou tema
 
-1. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], crie ou abra um projeto do SharePoint.
+1. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , crie ou abra um projeto do SharePoint.
 
      Para obter informações sobre como criar um projeto do SharePoint, consulte [projeto do SharePoint e modelos de item de projeto](../sharepoint/sharepoint-project-and-project-item-templates.md).
 
-2. Na barra de menus, escolha **Projeto** > **Adicionar Novo Item**.
+2. Na barra de menus, escolha **projeto**  >  **Adicionar novo item**.
 
 3. Na caixa de diálogo **Adicionar novo item** , expanda o nó **SharePoint** e escolha o nó **2010** .
 
@@ -37,11 +36,11 @@ ms.locfileid: "72984196"
 
      Um módulo contém arquivos (por exemplo, página mestra ou arquivos de tema) para implantação em um local que você especificar no SharePoint.
 
-5. No módulo, exclua o arquivo padrão, chamado *Sample. txt*.
+5. No módulo, exclua o arquivo padrão, denominado *Sample.txt*.
 
 6. Escolha o nó do módulo.
 
-7. Na barra de menus, escolha **projeto** > **Adicionar item existente**e, em seguida, escolha a página mestra ou o arquivo de tema.
+7. Na barra de menus, escolha **projeto**  >  **Adicionar item existente**e, em seguida, escolha a página mestra ou o arquivo de tema.
 
      Os arquivos de página mestra têm uma extensão. Master, e os arquivos de tema têm uma extensão. thmx.
 
@@ -50,9 +49,9 @@ ms.locfileid: "72984196"
     > [!NOTE]
     > Poderão ocorrer erros se o nome da página mestra for o mesmo que o nome de uma página mestra existente marcada como página mestra padrão ou página mestra personalizada. Para obter informações sobre como resolver esse problema, consulte [Walkthrough: importar uma página mestra personalizada e uma página do site com uma imagem](../sharepoint/walkthrough-import-a-custom-master-page-and-site-page-with-an-image.md).
 
-9. No módulo, abra *Elements. xml*.
+9. No módulo, abra *Elements.xml*.
 
-     Você deve atualizar o arquivo *Elements. xml* para fazer referência à página mestra ou ao tema que você adicionou.
+     Você deve atualizar o arquivo de *Elements.xml* para fazer referência à página mestra ou ao tema que você adicionou.
 
 10. Para uma página mestra, substitua a marcação de módulo existente pela marcação a seguir.
 
@@ -74,7 +73,7 @@ ms.locfileid: "72984196"
 
      Certifique-se de substituir os valores de espaço reservado pelos nomes reais do módulo e da página mestra ou tema.
 
-     O atributo `Type="GhostableInLibrary"` indica que o item é adicionado ao banco de dados de conteúdo e o atributo `Url` do módulo especifica onde armazenar o arquivo no banco de dados de conteúdo do SharePoint.
+     O atributo `Type="GhostableInLibrary"` indica que o item é adicionado ao banco de dados de conteúdo, e o `Url` atributo do módulo especifica onde armazenar o arquivo no banco de dados de conteúdo do SharePoint.
 
 11. Para alterar o escopo de implantação de uma página mestra, em **Gerenciador de soluções**, abra o arquivo de recurso no designer de recursos e, em seguida, escolha um novo escopo de implantação na lista **escopo** .
 
@@ -83,7 +82,7 @@ ms.locfileid: "72984196"
     > [!NOTE]
     > Como os temas se aplicam somente ao nível de conjunto de sites, recomendamos que você não defina o escopo de um tema para qualquer coisa que não seja o **site**. Poderão ocorrer erros se um tema for usado em um subsite.
 
-12. Na barra de menus, escolha **compilar** > **implantar solução**.
+12. Na barra de menus, escolha **Compilar**  >  **implantar solução**.
 
 13. Para verificar se os arquivos foram implantados corretamente, abra o site do SharePoint, escolha o menu **ações do site** , escolha o comando **configurações do site** e escolha o link **páginas mestras** ou o link **temas** .
 

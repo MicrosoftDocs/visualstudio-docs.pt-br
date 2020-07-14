@@ -1,5 +1,5 @@
 ---
-title: 'Como: Definir opções de nome de arquivo de dados de desempenho | Microsoft Docs'
+title: Como definir opções de nome de arquivo de dados de desempenho | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -9,14 +9,14 @@ caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: faaa78d34c71d1f0b436b861ccb1ac4892267e9b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 71ac053a24b3f765a58fc050ceec84115e1a4e3d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68205792"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548389"
 ---
-# <a name="how-to-set-performance-data-file-name-options"></a>Como: Configurar as opções de nome de arquivo de dados de desempenho
+# <a name="how-to-set-performance-data-file-name-options"></a>Como definir opções de nome de arquivo de dados de desempenho
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Por padrão, um arquivo de dados de criação de perfil (.vsp) é salvo usando a sintaxe a seguir:  
@@ -29,12 +29,12 @@ Por padrão, um arquivo de dados de criação de perfil (.vsp) é salvo usando a
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
-|||  
+|Elemento Syntax|Descrição|  
 |-|-|  
-|*Path*|O diretório que contém o relatório. O local padrão é a pasta da solução ou o local padrão para projetos e soluções do usuário.|  
-|*VSP-File*|O nome do arquivo de dados de criação de perfil. O nome padrão é o nome da solução ou do executável que está sendo analisado.|  
+|*Caminho*|O diretório que contém o relatório. O local padrão é a pasta da solução ou o local padrão para projetos e soluções do usuário.|  
+|*VSP-arquivo*|O nome do arquivo de dados de criação de perfil. O nome padrão é o nome da solução ou do executável que está sendo analisado.|  
 |*AAMMDD*|Um carimbo de data que mostra o ano, mês e dia em que os dados de criação de perfil foram coletados.|  
-|*(N)*|Se houver mais de um arquivo de dados de criação de perfil, um número incrementado será adicionado ao nome de arquivo entre parênteses.|  
+|*P*|Se houver mais de um arquivo de dados de criação de perfil, um número incrementado será adicionado ao nome de arquivo entre parênteses.|  
   
 ### <a name="to-change-the-naming-syntax-of-the-profiling-data-files-of-a-performance-session"></a>Para alterar a sintaxe de nomenclatura dos arquivos de dados de criação de perfil de uma sessão de desempenho  
   
@@ -44,7 +44,7 @@ Por padrão, um arquivo de dados de criação de perfil (.vsp) é salvo usando a
   
 3. Em **Relatório**, altere qualquer uma das seguintes configurações:  
   
-    |||  
+    |Nome|Descrição|  
     |-|-|  
     |**Local do relatório**|Especifica um diretório para armazenar os arquivos de dados de criação de perfil.|  
     |**Nome do relatório**|Especifica um nome de base para os arquivos.|  

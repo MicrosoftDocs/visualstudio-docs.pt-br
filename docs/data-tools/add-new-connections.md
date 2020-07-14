@@ -1,28 +1,28 @@
 ---
 title: Adicionar novas conexões
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 65c4e28eb9dfa3e3677f70d0557bb53ad8f9c3b2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 5f6f34c28a6bbba236a4d90e2f936fad0b2a3f60
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587063"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283054"
 ---
 # <a name="add-new-connections"></a>Adicionar novas conexões
 
 Você pode testar a conexão com um banco de dados ou serviço e explorar o conteúdo e os esquemas do banco de dados, usando **Gerenciador de servidores**, **Cloud Explorer**ou **pesquisador de objetos do SQL Server**. A funcionalidade dessas janelas se sobrepõe a alguma extensão. As diferenças básicas são:
 
-- conexões de servidor
+- Gerenciador de Servidores
 
    Instalado por padrão no Visual Studio. Pode ser usado para testar conexões e exibir SQL Server bancos de dados, qualquer outro banco de dados que tenha um provedor ADO.NET instalado e alguns serviços do Azure. Também mostra objetos de baixo nível, como contadores de desempenho do sistema, logs de eventos e filas de mensagens. Se uma fonte de dados não tiver um provedor ADO.NET, ela não aparecerá aqui, mas você ainda poderá usá-la no Visual Studio conectando-se programaticamente.
 
-- Cloud Explorer
+- Gerenciador de Nuvem
 
    Instale essa janela manualmente como uma extensão do Visual Studio de [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.CloudExplorerForVS). Fornece uma funcionalidade especializada para explorar e se conectar aos serviços do Azure.
 
@@ -50,7 +50,7 @@ Se a fonte de dados não for o que você deseja, clique no botão **alterar** pa
 
 Depois de escolher a fonte de dados, clique em **testar conexão**. Se não tiver sucesso, será necessário solucionar problemas com base na documentação do fornecedor.
 
-![Testar Conexão](../data-tools/media/raddata-test-connection.png)
+![Teste a conexão](../data-tools/media/raddata-test-connection.png)
 
 Se o teste for bem sucedido, você estará pronto para criar uma *fonte de dados*, que é um termo do Visual Studio que significa realmente um *modelo de dados* com base no serviço ou banco subjacente.
 

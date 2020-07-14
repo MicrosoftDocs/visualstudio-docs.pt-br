@@ -5,12 +5,13 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: FB253757-DB00-4889-A6BF-E44722E25BD1
-ms.openlocfilehash: 0165594b4c2d77005c2a9ef921cce457f6f2d0f6
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: overview
+ms.openlocfilehash: 532a245b8e217ea278bf5a3424a194ce87ae43f4
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74983609"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950036"
 ---
 # <a name="compiling-and-building-in-visual-studio-for-mac"></a>Compilação e criação no Visual Studio para Mac
 
@@ -46,9 +47,9 @@ Consulte o conteúdo do [MSBuild](/visualstudio/msbuild/msbuild) para ver mais i
 
 ## <a name="building-from-azure-pipelines"></a>Compilação no Azure Pipelines
 
-* [Construa seu aplicativo Xamarin](/vsts/pipelines/apps/mobile/xamarin?view=vsts&tabs=vsts)
+* [Compilar seu aplicativo Xamarin](/vsts/pipelines/apps/mobile/xamarin?view=vsts&tabs=vsts)
 * [Integração contínua com o Xamarin](https://developer.xamarin.com/guides/cross-platform/ci/)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Compilar e criar (Visual Studio no Windows)](/visualstudio/ide/compiling-and-building-in-visual-studio)

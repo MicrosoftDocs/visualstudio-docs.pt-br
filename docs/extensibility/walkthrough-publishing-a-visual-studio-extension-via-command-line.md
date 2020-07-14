@@ -1,7 +1,7 @@
 ---
-title: Publicar extensão usando linha de comando
+title: Publicar a extensão usando a linha de comando
 ms.date: 07/12/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - publishing extensions
 - extension, publishing
@@ -11,74 +11,74 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 40be0252218f39b4ff98b58caedd7f9f20ce6d5d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 5108f4afa382c00376424432d2086f0494e34a03
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80697120"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904674"
 ---
-# <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>Passo a passo: Publicar uma extensão do Visual Studio via linha de comando
+# <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>Walkthrough: publicando uma extensão do Visual Studio via linha de comando
 
-Este passo a passo mostra como publicar uma extensão do Visual Studio no Visual Studio Marketplace usando a linha de comando. Quando você adiciona sua extensão ao Marketplace, os desenvolvedores podem usar a caixa de diálogo [**Extensões e Atualizações**](../ide/finding-and-using-visual-studio-extensions.md) para navegar por extensões novas e atualizadas.
+Este tutorial mostra como publicar uma extensão do Visual Studio para o Visual Studio Marketplace usando a linha de comando. Quando você adiciona sua extensão ao Marketplace, os desenvolvedores podem usar a caixa de diálogo [**extensões e atualizações**](../ide/finding-and-using-visual-studio-extensions.md) para procurar por extensões novas e atualizadas.
 
-VsixPublisher.exe é a ferramenta de linha de comando para publicar extensões do Visual Studio no Marketplace. Ele pode ser acessado a partir de ${VSInstallDir}\VSSDK\VisualStudioIntegration\Tools\Bin\VsixPublisher.exe. Os comandos disponíveis nesta ferramenta são: **publicar,** **criarPublisher,** **excluirPublisher,** **excluirExtensão,** **login,** **logout**.
+VsixPublisher.exe é a ferramenta de linha de comando para publicar extensões do Visual Studio no Marketplace. Ele pode ser acessado a partir de $ {VSInstallDir} \VSSDK\VisualStudioIntegration\Tools\Bin\VsixPublisher.exe. Os comandos disponíveis nesta ferramenta são: **Publish**, **createpublicarer**, **deletePublisher**, **deleteExtension**, **login**, **logout**.
 
 ## <a name="commands"></a>Comandos
 
 ### <a name="publish"></a>Publicar
 
-Publica uma extensão para o Marketplace. A extensão pode ser um vsix, um arquivo exe/msi ou um link. Se a extensão já existir com a mesma versão, ela substituirá a extensão. Se a extensão ainda não existir, criará uma nova extensão.
+Publica uma extensão para o Marketplace. A extensão pode ser um VSIX, um arquivo exe/msi ou um link. Se a extensão já existir com a mesma versão, ela substituirá a extensão. Se a extensão ainda não existir, ela criará uma nova extensão.
 
 |Opções de comando |Descrição |
 |---------|---------|
-|carga útil (necessária) | Ou um caminho para a carga útil a ser publicada ou um link para usar como "URL mais informações". |
-|publicarManifesto (obrigatório) | Caminho para o arquivo manifesto de publicação para usar. |
-|ignorar avisos | Lista de avisos a ignorar ao publicar uma extensão. Esses avisos são mostrados como mensagens de linha de comando ao publicar uma extensão. (por exemplo, "VSIXValidatorWarning01, VSIXValidatorWarning02")
-|personalAccessToken | Pat (Personal Access Token, token de acesso pessoal) usado para autenticar o editor. Caso não seja fornecido, o PAT é adquirido dos usuários conectados. |
+|carga (obrigatório) | Um caminho para a carga a ser publicada ou um link a ser usado como "URL mais informações". |
+|publishManifest (obrigatório) | Caminho para o arquivo de manifesto de publicação a ser usado. |
+|ignoreWarnings | Lista de avisos a serem ignorados ao publicar uma extensão. Esses avisos são mostrados como mensagens de linha de comando ao publicar uma extensão. (por exemplo, "VSIXValidatorWarning01, VSIXValidatorWarning02")
+|personalAccessToken | PAT (token de acesso pessoal) usado para autenticar o Publicador. Se não for fornecido, o PAT será adquirido dos usuários conectados. |
 
 ```
 VsixPublisher.exe publish -payload "{path to vsix}" -publishManifest "{path to vs-publish.json}" -ignoreWarnings "VSIXValidatorWarning01,VSIXValidatorWarning02"
 ```
 
-### <a name="createpublisher"></a>Createpublisher
+### <a name="createpublisher"></a>CreatePublisher
 
-Cria um editor no Marketplace. Também registra o editor na máquina para ações futuras (por exemplo, excluindo/publicando uma extensão).
+Cria um Publicador no Marketplace. Também registra o Publicador no computador para futuras ações (por exemplo, excluir/publicar uma extensão).
 
 |Opções de comando |Descrição |
 |---------|---------|
-|displayName (obrigatório) | Nome de exibição do editor. |
-|editorName (obrigatório) | O nome do editor (por exemplo, o identificador). |
-|personalAccessToken (obrigatório) | Token de acesso pessoal que é usado para autenticar o editor. |
-|shortDescription | Uma breve descrição do editor (não um arquivo). |
-|Longdescription | Uma longa descrição do editor (não um arquivo). |
+|displayName (obrigatório) | Nome de exibição do Publicador. |
+|PublisherName (obrigatório) | O nome do Publicador (por exemplo, o identificador). |
+|personalAccessToken (obrigatório) | Token de acesso pessoal que é usado para autenticar o Publicador. |
+|shortDescription | Uma breve descrição do Publicador (não um arquivo). |
+|longDescription | Uma descrição longa do Publicador (não um arquivo). |
 
 ```
 VsixPublisher.exe createPublisher -publisherName "{Publisher Name}" -displayName "{Publisher Display Name}" -personalAccessToken "{Personal Access Token}"
 ```
 
-### <a name="deletepublisher"></a>excluirEditor
+### <a name="deletepublisher"></a>deletePublisher
 
-Exclui um editor no Marketplace.
+Exclui um Publicador no Marketplace.
 
 |Opções de comando |Descrição |
 |---------|---------|
-|editorName (obrigatório) | O nome do editor (por exemplo, o identificador). |
-|personalAccessToken (obrigatório) | Token de acesso pessoal que é usado para autenticar o editor. |
+|PublisherName (obrigatório) | O nome do Publicador (por exemplo, o identificador). |
+|personalAccessToken (obrigatório) | Token de acesso pessoal que é usado para autenticar o Publicador. |
 
 ```
 VsixPublisher.exe deletePublisher -publisherName "{Publisher Name}" -personalAccessToken "{Personal Access Token}"
 ```
 
-### <a name="deleteextension"></a>excluirExtensão
+### <a name="deleteextension"></a>deleteExtension
 
 Exclui uma extensão do Marketplace.
 
 |Opções de comando |Descrição |
 |---------|---------|
-|extensãoNome (obrigatório) | O nome da extensão para excluir. |
-|editorName (obrigatório) | O nome do editor (por exemplo, o identificador). |
-|personalAccessToken | Token de acesso pessoal que é usado para autenticar o editor. Se não for fornecido, o pat é adquirido dos usuários conectados. |
+|ExtensionName (obrigatório) | O nome da extensão a ser excluída. |
+|PublisherName (obrigatório) | O nome do Publicador (por exemplo, o identificador). |
+|personalAccessToken | Token de acesso pessoal que é usado para autenticar o Publicador. Se não for fornecido, o Pat será adquirido dos usuários conectados. |
 
 ```
 VsixPublisher.exe deleteExtension -extensionName "{Extension Name}" -publisherName "{Publisher Name}"
@@ -86,13 +86,13 @@ VsixPublisher.exe deleteExtension -extensionName "{Extension Name}" -publisherNa
 
 ### <a name="login"></a>login
 
-Registra um editor na máquina.
+Registra um Publicador no computador.
 
 |Opções de comando |Descrição |
 |---------|---------|
-|personalAccessToken (obrigatório | Token de acesso pessoal que é usado para autenticar o editor. |
-|editorName (obrigatório) | O nome do editor (por exemplo, o identificador). |
-|substituir | Especifica que qualquer editor existente deve ser substituído com o novo token de acesso pessoal. |
+|personalAccessToken (obrigatório | Token de acesso pessoal que é usado para autenticar o Publicador. |
+|PublisherName (obrigatório) | O nome do Publicador (por exemplo, o identificador). |
+|substituir | Especifica que qualquer Publicador existente deve ser substituído pelo novo token de acesso pessoal. |
 
 ```
 VsixPublisher.exe login -personalAccessToken "{Personal Access Token}" -publisherName "{Publisher Name}"
@@ -100,22 +100,22 @@ VsixPublisher.exe login -personalAccessToken "{Personal Access Token}" -publishe
 
 ### <a name="logout"></a>logout
 
-Tire um editor da máquina.
+Registra um Publicador fora do computador.
 
 |Opções de comando |Descrição |
 |---------|---------|
-|editorName (obrigatório) | O nome do editor (por exemplo, o identificador). |
-|ignorarMissingEditor | Especifica que a ferramenta não deve errar se o editor especificado ainda não estiver logado. |
+|PublisherName (obrigatório) | O nome do Publicador (por exemplo, o identificador). |
+|ignoreMissingPublisher | Especifica que a ferramenta não deve ser erro se o Publicador especificado ainda não estiver conectado. |
 
 ```
 VsixPublisher.exe logout -publisherName "{Publisher Name}"
 ```
 
-## <a name="publishmanifest-file"></a>publicarArquivo Manifest
+## <a name="publishmanifest-file"></a>arquivo publishManifest
 
-Um arquivo publishManifest é usado pelo comando **publish.** Ele representa todos os metadados sobre a extensão que o Marketplace precisa saber. Se a extensão que está sendo carregada for de uma extensão VSIX, a propriedade "identidade" só deve ter o conjunto "internalName". Isso porque o resto das propriedades de "identidade" podem ser geradas a partir do arquivo vsixmanifest. Se a extensão for um msi/exe ou uma extensão de link, o usuário deverá fornecer os campos necessários na propriedade "identidade". O restante do manifesto contém informações específicas para o Marketplace (por exemplo, categorias, se Q&A está habilitado, etc.).
+Um arquivo publishManifest é usado pelo comando **Publish** . Ele representa todos os metadados sobre a extensão que o Marketplace precisa saber. Se a extensão que está sendo carregada for de uma extensão do VSIX, a propriedade "Identity" só deverá ter o conjunto "internalName". Isso ocorre porque o restante das propriedades de "identidade" pode ser gerado a partir do arquivo vsixmanifest. Se a extensão for uma MSI/exe ou uma extensão de link, o usuário deverá fornecer os campos obrigatórios na propriedade "Identity". O restante do manifesto contém informações específicas para o Marketplace (por exemplo, categorias, se Q&A está habilitada, etc.).
 
-A extensão VSIX publica amostra de arquivo Manifesto:
+Exemplo de arquivo publishManifest de extensão do VSIX:
 
 ```json
 {
@@ -134,7 +134,7 @@ A extensão VSIX publica amostra de arquivo Manifesto:
 }
 ```
 
-MSI/EXE ou LINK publicam amostra de arquivo Manifesto:
+Exemplo de arquivo MSI/EXE ou LINK publishManifest:
 
 ```json
 {
@@ -165,9 +165,9 @@ MSI/EXE ou LINK publicam amostra de arquivo Manifesto:
 }
 ```
 
-## <a name="asset-files"></a>Arquivos de ativos
+## <a name="asset-files"></a>Arquivos de ativo
 
-Arquivos de ativos podem ser fornecidos para incorporar coisas como imagens no arquivo readme. Por exemplo, se uma extensão tiver o seguinte documento de "visão geral" markdown:
+Os arquivos de ativo podem ser fornecidos para a inserção de coisas como imagens no arquivo Leiame. Por exemplo, se uma extensão tiver o seguinte documento de redução de "visão geral":
 
 ```markdown
 TestExtension
@@ -176,7 +176,7 @@ This is test extension.
 ![Test logo](images/testlogo.png "Test logo")
 ```
 
-Para resolver "images/testlogo.png" no exemplo anterior, um usuário pode fornecer "assetFiles" em seu manifesto de publicação como abaixo:
+Para resolver "imagens/testlogo.png" no exemplo anterior, um usuário pode fornecer "assetFiles" em seu manifesto de publicação, como abaixo:
 
 ```json
 {
@@ -190,59 +190,59 @@ Para resolver "images/testlogo.png" no exemplo anterior, um usuário pode fornec
 }
 ```
 
-## <a name="publishing-walkthrough"></a>Passo a passo da publicação
+## <a name="publishing-walkthrough"></a>Orientações de publicação
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
-Para acompanhar este passo a passo, você deve instalar o Visual Studio SDK. Para obter mais informações, consulte [Instalando o Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+Para seguir este passo a passos, você deve instalar o SDK do Visual Studio. Para obter mais informações, consulte [instalando o SDK do Visual Studio](../extensibility/installing-the-visual-studio-sdk.md).
 
-### <a name="create-a-visual-studio-extension"></a>Crie uma extensão do Visual Studio
+### <a name="create-a-visual-studio-extension"></a>Criar uma extensão do Visual Studio
 
-Neste caso, usaremos uma extensão VSPackage padrão, mas as mesmas etapas são válidas para todo tipo de extensão.
+Nesse caso, usaremos uma extensão VSPackage padrão, mas as mesmas etapas são válidas para cada tipo de extensão.
 
-1. Crie um VSPackage em C# chamado "TestPublish" que tenha um comando de menu. Para obter mais informações, consulte [Criando sua Primeira Extensão: Hello World](../extensibility/extensibility-hello-world.md).
+1. Crie um VSPackage em C# chamado "TestPublish" que tenha um comando de menu. Para obter mais informações, consulte [criando sua primeira extensão: Olá, mundo](../extensibility/extensibility-hello-world.md).
 
 ### <a name="package-your-extension"></a>Empacotar sua extensão
 
-1. Atualize a extensão vsixmanifest com as informações corretas sobre nome do produto, autor e versão.
+1. Atualize a extensão vsixmanifest com as informações corretas sobre o nome do produto, o autor e a versão.
 
-   ![atualizar extensão vsixmanifest](media/update-extension-vsixmanifest.png)
+   ![atualizar vsixmanifest de extensão](media/update-extension-vsixmanifest.png)
 
-2. Construa sua extensão no modo **de liberação.** Agora, sua extensão será embalada como um VSIX na pasta \bin\Release.
+2. Crie sua extensão no modo de **versão** . Agora, sua extensão será empacotada como um VSIX na pasta \bin\Release.
 
 3. Você pode clicar duas vezes no VSIX para verificar a instalação.
 
-### <a name="test-the-extension"></a>Teste a extensão
+### <a name="test-the-extension"></a>Testar a extensão
 
- Antes de distribuir a extensão, construa e teste-a para ter certeza de que ela está instalada corretamente na instância experimental do Visual Studio.
+ Antes de distribuir a extensão, compile e teste-a para verificar se ela está instalada corretamente na instância experimental do Visual Studio.
 
-1. No Visual Studio, comece a depurar. para abrir uma instância experimental do Visual Studio.
+1. No Visual Studio, inicie a depuração. para abrir uma instância experimental do Visual Studio.
 
-2. Na instância experimental, vá para o menu **Ferramentas** e clique **em Extensões e Atualizações...**. A extensão TestPublish deve aparecer no painel central e ser ativada.
+2. Na instância experimental, vá para o menu **ferramentas** e clique em **extensões e atualizações...**. A extensão TestPublish deve aparecer no painel central e ser habilitada.
 
-3. No menu **Ferramentas,** certifique-se de ver o comando de teste.
+3. No menu **ferramentas** , verifique se você vê o comando de teste.
 
-### <a name="publish-the-extension-to-the-marketplace-via-command-line"></a>Publique a extensão para o Marketplace via linha de comando
+### <a name="publish-the-extension-to-the-marketplace-via-command-line"></a>Publicar a extensão para o Marketplace por meio da linha de comando
 
-1. Certifique-se de que você construiu a versão de versão de sua extensão e que ela está atualizada.
+1. Certifique-se de que você criou a versão de lançamento da extensão e que ela está atualizada.
 
-2. Certifique-se de ter criado arquivos publishmanifest.json e overview.md.
+2. Certifique-se de ter criado publishmanifest.jsem arquivos e overview.md.
 
-3. Abra a linha de comando e navegue até ${VSInstallDir}\VSSDK\VisualStudioIntegration\Tools\Bin\.
+3. Abra a linha de comando e navegue até o diretório $ {VSInstallDir} \VSSDK\VisualStudioIntegration\Tools\Bin\.
 
-4. Para criar um novo editor, use o seguinte comando:
+4. Para criar um novo Publicador, use o seguinte comando:
 
    ```
    VsixPublisher.exe createPublisher -publisherName "TestVSIXPublisher" -displayName "Test VSIX Publisher" -personalAccessToken "{Personal Access Token that is used to authenticate the publisher. If not provided, the pat is acquired from the logged-in users.}"
    ```
 
-5. Na criação bem-sucedida do publisher, você verá a seguinte mensagem de linha de comando:
+5. Após a criação bem-sucedida do Publicador, você verá a seguinte mensagem de linha de comando:
 
    ```
    Added 'Test VSIX Publisher' as a publisher on the Marketplace.
    ```
 
-6. Você pode verificar o novo editor que você criou navegando para [o Visual Studio Marketplace](https://marketplace.visualstudio.com/manage/publishers)
+6. Você pode verificar o novo Publicador criado navegando até [Visual Studio Marketplace](https://marketplace.visualstudio.com/manage/publishers)
 
 7. Para publicar uma nova extensão, use o seguinte comando:
 
@@ -250,31 +250,31 @@ Neste caso, usaremos uma extensão VSPackage padrão, mas as mesmas etapas são 
    VsixPublisher.exe publish -payload "{Path to vsix file}"  -publishManifest "{path to publishManifest file}"
    ```
 
-8. Na criação bem-sucedida do publisher, você verá a seguinte mensagem de linha de comando:
+8. Após a criação bem-sucedida do Publicador, você verá a seguinte mensagem de linha de comando:
 
    ```
    Uploaded 'MyVsixExtension' to the Marketplace.
    ```
 
-9. Você pode verificar a nova extensão que você publicou navegando para [o Visual Studio Marketplace](https://marketplace.visualstudio.com/)
+9. Você pode verificar a nova extensão que você publicou navegando até [Visual Studio Marketplace](https://marketplace.visualstudio.com/)
 
-### <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Instale a extensão do Visual Studio Marketplace
+### <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Instalar a extensão do Visual Studio Marketplace
 
 Agora que a extensão foi publicada, instale-a no Visual Studio e teste-a lá.
 
-1. No Visual Studio, no menu **Ferramentas,** clique em **Extensões e Atualizações...**.
+1. No Visual Studio, no menu **ferramentas** , clique em **extensões e atualizações...**.
 
-2. Clique **em Online** e, em seguida, procure por TestPublish.
+2. Clique em **online** e procure por TestPublish.
 
-3. Clique em **Download**. Em seguida, a prorrogação será agendada para instalação.
+3. Clique em **Download**. A extensão será então agendada para instalação.
 
 4. Para concluir a instalação, feche todas as instâncias do Visual Studio.
 
 ## <a name="remove-the-extension"></a>Remover a extensão
 
-Você pode remover a extensão do Visual Studio Marketplace e do seu computador.
+Você pode remover a extensão da Visual Studio Marketplace e do seu computador.
 
-### <a name="to-remove-the-extension-from-the-marketplace-via-command-line"></a>Para remover a extensão do Marketplace via linha de comando
+### <a name="to-remove-the-extension-from-the-marketplace-via-command-line"></a>Para remover a extensão do Marketplace por meio da linha de comando
 
 1. Se você quiser remover uma extensão, use o seguinte comando:
 
@@ -282,7 +282,7 @@ Você pode remover a extensão do Visual Studio Marketplace e do seu computador.
    VsixPublisher.exe deleteExtension -publisherName "TestVSIXPublisher" -extensionName "MyVsixExtension"
    ```
 
-2. Na exclusão bem-sucedida da extensão, você verá a seguinte mensagem de linha de comando:
+2. Após a exclusão bem-sucedida da extensão, você verá a seguinte mensagem de linha de comando:
 
    ```
    Removed 'MyVsixExtension' from the Marketplace.
@@ -290,8 +290,8 @@ Você pode remover a extensão do Visual Studio Marketplace e do seu computador.
 
 ### <a name="to-remove-the-extension-from-your-computer"></a>Para remover a extensão do seu computador
 
-1. No Visual Studio, no menu **Ferramentas,** clique em **Extensões e Atualizações**.
+1. No Visual Studio, no menu **ferramentas** , clique em **extensões e atualizações**.
 
-2. Selecione "MyVsixExtension" e clique em **Desinstalar**. Em seguida, a prorrogação será programada para desinstalação.
+2. Selecione "MyVsixExtension" e clique em **desinstalar**. A extensão será então agendada para desinstalação.
 
 3. Para concluir a desinstalação, feche todas as instâncias do Visual Studio.

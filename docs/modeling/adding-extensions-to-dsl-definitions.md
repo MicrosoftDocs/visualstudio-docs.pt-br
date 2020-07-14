@@ -2,17 +2,17 @@
 title: Adicionando extensões a definições de DSL
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3e44c79783479c46247e4026788725d6ae16da7
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2500fc8d9e09d95d7972a4b151b01937a5570a08
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747651"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544229"
 ---
 # <a name="add-extensions-to-dsl-definitions"></a>Adicionar extensões a definições de DSL
 
@@ -36,4 +36,4 @@ Um usuário de uma DSL estendida pode criar e salvar um modelo que contém inst�
 
 ## <a name="see-also"></a>Consulte também
 
-- [Postagens de blog relacionadas](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)
+- [Postagens de blogs relacionadas](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)

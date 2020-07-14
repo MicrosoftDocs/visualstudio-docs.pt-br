@@ -6,12 +6,13 @@ ms.author: dominicn
 ms.date: 04/14/2017
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
 ms.custom: video
-ms.openlocfilehash: 728a225f4a1d14af986039cae7cb2fc8a493ecc9
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: 58d749a1d014288754dcd9eb7e620730933d742a
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74983311"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950403"
 ---
 # <a name="include-a-nuget-package-in-your-project"></a>Incluir um pacote NuGet em seu projeto
 
@@ -31,15 +32,15 @@ Primeiro, crie um projeto chamado `HelloNuget` conforme ilustrado abaixo. Este e
 
 ## <a name="adding-a-package"></a>Adicionar um pacote
 
-Com o projeto aberto no Visual Studio for Mac, clique com o botão direito do mouse na pasta **Pacotes** no **Bloco de Soluções** e **selecione Adicionar pacotes**:
+Com o projeto aberto no Visual Studio para Mac, clique com o botão direito do mouse na pasta **pacotes** na **painel de soluções** e selecione **adicionar pacotes**:
 
 ![Ação de contexto Adicionar novo pacote NuGet](media/nuget-walkthrough-PackagesMenu.png)
 
-Isso inicia a janela **Adicionar pacotes.** Verifique se a lista suspensa Origem está definida como `nuget.org`:
+Isso inicia a janela **adicionar pacotes** . Verifique se a lista suspensa Origem está definida como `nuget.org`:
 
 ![Lista suspensa Origem](media/nuget-walkthrough-Source.png)
 
-Quando a janela abre, ele carrega uma lista de pacotes da fonte padrão do pacote: nuget.org. Os resultados iniciais são assim:
+Quando a janela é aberta, ela carrega uma lista de pacotes da origem do pacote padrão: nuget.org. Os resultados iniciais têm a seguinte aparência:
 
 ![Listar pacotes NuGet](media/nuget-walkthrough-AddPackages1.png)
 
@@ -93,9 +94,9 @@ Também é possível clicar com o botão direito do mouse em pacotes individuais
 
 ## <a name="adding-package-sources"></a>Adicionando origens de pacotes
 
-Os pacotes disponíveis para instalação são inicialmente recuperados de nuget.org. No entanto, você pode adicionar outros locais de pacote ao Visual Studio para Mac. Isso pode ser útil para testar seus próprios pacotes NuGet em desenvolvimento ou para usar um servidor NuGet privado dentro de sua empresa ou organização.
+Os pacotes disponíveis para instalação são recuperados inicialmente de nuget.org. No entanto, você pode adicionar outros locais de pacote ao Visual Studio para Mac. Isso pode ser útil para testar seus próprios pacotes NuGet em desenvolvimento ou para usar um servidor NuGet privado dentro de sua empresa ou organização.
 
-No Visual Studio for Mac, navegue até **o Visual Studio > Preferências > NuGet > Sources** para visualizar e editar a lista de fontes de pacotes. Observe que as origens podem ser um servidor remoto (especificado por uma URL) ou um diretório local.
+Em Visual Studio para Mac, navegue até **Visual Studio > preferências > NuGet > fontes** para exibir e editar a lista de origens do pacote. Observe que as origens podem ser um servidor remoto (especificado por uma URL) ou um diretório local.
 
 ![Origens dos pacotes](media/nuget-walkthrough-PackageSource.png)
 
@@ -119,6 +120,6 @@ Consulte a documentação do controle do código-fonte específico para ver deta
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Using-NuGet/player]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 * [Instalar e usar um pacote no Visual Studio (no Windows)](/nuget/quickstart/install-and-use-a-package-in-visual-studio)

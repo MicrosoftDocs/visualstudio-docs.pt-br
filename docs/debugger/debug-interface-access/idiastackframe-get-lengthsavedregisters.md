@@ -1,7 +1,7 @@
 ---
 title: 'IDiaStackFrame:: get_lengthSavedRegisters | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a06e96091a32f1425495a941f418a292f4155d2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 246152e781faf233b944b16149d4e7d0c11c31dd
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741666"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465069"
 ---
 # <a name="idiastackframeget_lengthsavedregisters"></a>IDiaStackFrame::get_lengthSavedRegisters
 Recupera o número de bytes de registros salvos enviados por push na pilha.
@@ -35,8 +35,8 @@ HRESULT get_lengthSavedRegisters ( 
 
 fora Retorna o número de bytes de registros salvos.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se a propriedade não tiver suporte. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se a propriedade não tem suporte. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

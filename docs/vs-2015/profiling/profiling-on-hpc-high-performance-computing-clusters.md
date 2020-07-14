@@ -21,19 +21,19 @@ caps.latest.revision: 27
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: eeb5375d636ef16fde658b88dbf662cdd9f1e27d
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.openlocfilehash: b63f9ddf29ff74a4aa4bf089c266e12e37bb2f50
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983800"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535532"
 ---
 # <a name="profiling-on-hpc-high-performance-computing-clusters"></a>Criando perfil em clusters HPC (computação de alto desempenho)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Você pode criar um perfil em nós de computação de clusters do Microsoft Windows HPC usando o método de amostragem de Ferramentas de Criação de Perfil do [!INCLUDE[vsPreExt](../includes/vspreext-md.md)] ou [!INCLUDE[vsUltExt](../includes/vsultext-md.md)]. Para obter mais informações sobre o HPC, consulte [Big Compute: hpc & lote](https://azure.microsoft.com/solutions/big-compute/) no site da Microsoft.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para criar o perfil em um nó de computação do HPC, faça o seguinte:  
   
 - Instale o Microsoft HPC Pack 2008 no mesmo computador como [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]. O computador não precisa fazer parte do cluster de HPC. Você pode instalar o HPC Pack por meio do [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=2800).  
@@ -48,13 +48,13 @@ Você pode criar um perfil em nós de computação de clusters do Microsoft Wind
   
     1. `clusrun /all /scheduler:` *%HeadNode% %FxPath%* `/q /norestart`  
   
-    2. `clusrun /all /scheduler:` *%HeadNode%* `shutdown /r /t 0 /d u:4:2 /c "Microsoft .NET Framework install required restart"`  
+    2. `clusrun /all /scheduler:`*% Cabeçalho%*`shutdown /r /t 0 /d u:4:2 /c "Microsoft .NET Framework install required restart"`  
   
     3. `clusrun /all /scheduler:` *%HeadNode% %ProfilerPath%* `/q /norestart`  
   
-|||  
+|Elemento Syntax|Descrição|  
 |-|-|  
-|*%HeadNode%*|Nome do nó principal do cluster.|  
+|*Cabeçalho*|Nome do nó principal do cluster.|  
 |*%FxPath%*|Caminho para o instalador de [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)]. No [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)], o caminho de mídia de instalação é: WCU\dotNetFramework\dotNetFx40_Full_x86_x64.exe|  
 |*%ProfilerPath%*|Caminho para a versão autônoma do instalador das Ferramentas de Criação de Perfil. Na mídia de instalação [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)], o caminho é: Standalone Profiler\x64\vs_profiler.exe|  
   
@@ -71,9 +71,9 @@ Você pode criar um perfil em nós de computação de clusters do Microsoft Wind
   
     - Para analisar um projeto que está aberto no momento no [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)], selecione a opção **Um ou mais projetos disponíveis** e, em seguida, selecione o nome do projeto na lista.  
   
-    - Para analisar um binário que não está em um projeto aberto, selecione a opção **Um executável (arquivo .EXE)** .  
+    - Para analisar um binário que não está em um projeto aberto, selecione a opção **Um executável (arquivo .EXE)**.  
   
-4. Clique em **Avançar**.  
+4. Clique em **Próximo**.  
   
 5. Na terceira página do assistente:  
   
@@ -85,7 +85,7 @@ Você pode criar um perfil em nós de computação de clusters do Microsoft Wind
   
     - Em **Local de implantação**, especifique o caminho para o diretório HPC server usa para imagens do estágio de implantação.  
   
-6. Clique em **Avançar**.  
+6. Clique em **Próximo**.  
   
 7. Na quarta página do assistente:  
   
@@ -99,13 +99,13 @@ Você pode criar um perfil em nós de computação de clusters do Microsoft Wind
   
          Para analisar processos que são executados em um nó específico no cluster de HPC, selecione a opção **Perfil no nó** e, em seguida, selecione o nó da lista suspensa.  
   
-8. Clique em **Avançar**.  
+8. Clique em **Próximo**.  
   
 9. Na quinta página do assistente, você pode escolher iniciar imediatamente o criador de perfil e o processo de criação de perfil ou iniciar a criação de perfil posteriormente usando o Gerenciador de Desempenho.  
   
     - Selecione **Inicializar a criação de perfil após a conclusão do assistente** para iniciar a criação de perfil imediatamente ou desmarque a caixa de seleção para iniciar a criação de perfil manualmente.  
   
-10. Clique em **Finalizar**.  
+10. Clique em **Concluir**.  
   
 ## <a name="setting-hpc-profiling-properties-by-using-performance-session-property-pages"></a>Definindo propriedades de criação de perfil HPC usando páginas de propriedade da sessão de desempenho  
  Você pode alterar as propriedades de sessão de desempenho definidas no Assistente de criação de perfil HPC na página Propriedades de inicialização do HPC da página de propriedades de sessão de desempenho. Defina as opções adicionais na página Propriedades Avançadas do HPC.  
@@ -126,9 +126,9 @@ Você pode criar um perfil em nós de computação de clusters do Microsoft Wind
   
 ### <a name="hpc-launch-properties"></a>Propriedades de inicialização do HPC  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
-|**Nó principal**|Especifica o computador que atua como o nó principal do HPC na criação de perfil.|  
+|**Nó de cabeçalho**|Especifica o computador que atua como o nó principal do HPC na criação de perfil.|  
 |**Número de processos**|Especifica o número de instâncias do aplicativo a serem executadas no aplicativo analisado.|  
 |**Perfil na classificação**|Para analisar um processo específico no cluster, selecione a opção **Perfil na classificação** e, em seguida, selecione a classificação do processo na lista suspensa.|  
 |**Perfil no nó**|Para analisar processos que são executados em um nó específico no cluster de HPC, selecione a opção **Perfil no nó** e, em seguida, selecione o nó da lista suspensa.|  
@@ -137,11 +137,11 @@ Você pode criar um perfil em nós de computação de clusters do Microsoft Wind
   
 ### <a name="advanced-properties"></a>Propriedades avançadas  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**Nome do projeto**|O nome do projeto ou solução [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] atual.|  
 |**Limpar quando o criador de perfil é interrompido**|Quando verdadeiro, remove os binários que foram implantados para o diretório de execução. Arquivos e diretórios criados pelo programa de usuário não são removidos nesta etapa. Se o diretório de execução e o diretório de implantação foram criadas pelo IDE, o IDE tenta removê-los, mas não o fará se eles tiverem arquivos não implantados pelo IDE.|  
-|**Arquivos adicionais a serem implantados**|Especifica uma lista separada por ponto e vírgula de arquivos adicionais para implantar em um nó de computação. Você pode clicar no botão de reticências ( **...** ) para selecionar vários arquivos usando uma caixa de diálogo.|  
+|**Arquivos adicionais a serem implantados**|Especifica uma lista separada por ponto e vírgula de arquivos adicionais para implantar em um nó de computação. Você pode clicar no botão de reticências (**...**) para selecionar vários arquivos usando uma caixa de diálogo.|  
 |**Comando Mpiexec**|Especifica o aplicativo que inicia o aplicativo MPI. O valor padrão é **mpiexec.exe**|  
 |**Argumentos Mpiexec**|Especifica os argumentos para passar para o comando mpiexec.exe.|  
 |**Nós solicitados no cluster**|Especifica o número de nós no cluster no qual executar o aplicativo.|  

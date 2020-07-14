@@ -3,7 +3,7 @@ title: Mensagens de erro (desenvolvimento do Office no Visual Studio)
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: error-reference
 dev_langs:
 - VB
 - CSharp
@@ -14,22 +14,22 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6f00597c7d0cd55deb3a8747f6d23c658d83c2e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7eb12578f10847c9afc6cbcef67e9b3d3b678db5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62951977"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543540"
 ---
 # <a name="error-messages-office-development-in-visual-studio"></a>Mensagens de erro (desenvolvimento do Office no Visual Studio)
-  Cada tópico de mensagem de erro fornece informações sobre possíveis causas do erro e possíveis soluções ou soluções alternativas para solucionar o problema.
+  Cada tópico de mensagem de erro fornece informações sobre as possíveis causas de um erro e soluções potenciais ou soluções alternativas para resolver o problema.
 
  Você pode obter informações sobre uma mensagem de erro das seguintes maneiras.
 
 |Método|Descrição|
 |-|-|
-|F1|Se você receber um erro, você pode pressionar **F1**. Isso abrirá o tópico de mensagem de erro correspondente na documentação online.|
-|Pesquisa de texto completo|Você pode usar a pesquisa de texto completo usando palavras da primeira frase no texto da mensagem de erro. Sobre o **ajudar** menu, clique em **pesquisa**.|
+|F1|Se você receber um erro, poderá pressionar **F1**. Isso abrirá o tópico de mensagem de erro correspondente na documentação online.|
+|Pesquisa de texto completo|Você pode usar a pesquisa de texto completo usando palavras da primeira frase no texto da mensagem de erro. No menu **Ajuda**, clique em **Pesquisar**.|
 
-## <a name="see-also"></a>Consulte também
-- [Desenvolvimento do Office e SharePoint no Visual Studio](../vsto/office-and-sharepoint-development-in-visual-studio.md)
+## <a name="see-also"></a>Confira também
+- [Desenvolvimento do Office e do SharePoint no Visual Studio](../vsto/office-and-sharepoint-development-in-visual-studio.md)

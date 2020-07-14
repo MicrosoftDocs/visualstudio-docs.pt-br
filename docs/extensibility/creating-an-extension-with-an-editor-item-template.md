@@ -1,7 +1,7 @@
 ---
 title: Criando uma extensão com um modelo de item do editor | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - extensions
 ms.assetid: fa3b993b-ab95-47fa-a38b-b788f3a5b2d8
@@ -10,91 +10,91 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ac19d99bf75c79ad011bfd0d5a56ecf3880b100
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 91daa7e195435f33b93e6286cb19d820b4418d48
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739509"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903839"
 ---
-# <a name="create-an-extension-with-an-editor-item-template"></a>Crie uma extensão com um modelo de item do editor
-Você pode usar modelos de itens incluídos no Visual Studio SDK para criar extensões básicas do editor que adicionam classificadores, adornos e margens ao editor. Os modelos de itens do editor estão disponíveis para projetos Visual C# ou Visual Basic VSIX.
+# <a name="create-an-extension-with-an-editor-item-template"></a>Criar uma extensão com um modelo de item do editor
+Você pode usar modelos de item que estão incluídos no SDK do Visual Studio para criar extensões básicas do editor que adicionam classificadores, adornos e margens ao editor. Os modelos de item do editor estão disponíveis para projetos VSIX do Visual C# ou Visual Basic.
 
 ## <a name="prerequisites"></a>Pré-requisitos
- A partir do Visual Studio 2015, você não instala o Visual Studio SDK a partir do centro de downloads. Ele está incluído como um recurso opcional na configuração do Visual Studio. Você também pode instalar o VS SDK mais tarde. Para obter mais informações, consulte [Instalar o Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+ A partir do Visual Studio 2015, você não instala o SDK do Visual Studio a partir do centro de download. Ele é incluído como um recurso opcional na instalação do Visual Studio. Você também pode instalar o SDK do VS mais tarde. Para obter mais informações, consulte [instalar o SDK do Visual Studio](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="create-a-classifier-extension"></a>Crie uma extensão de classificador
- O modelo de item do Editor Classifier cria um classificador de editor que colore o texto apropriado (neste caso, tudo) em qualquer arquivo de texto.
+## <a name="create-a-classifier-extension"></a>Criar uma extensão de classificador
+ O modelo de item classificador de editor cria um classificador de editor que colore o texto apropriado (nesse caso, tudo) em qualquer arquivo de texto.
 
-1. Na caixa de diálogo **Novo Projeto,** expanda **visual C#** ou **Visual Basic** e clique **em Extensibility**. No **painel Templates,** selecione **Projeto VSIX**. Na caixa **Nome**, digite `TestClassifier`. Clique em **OK**.
+1. Na caixa de diálogo **novo projeto** , expanda **Visual C#** ou **Visual Basic** e clique em **extensibilidade**. No painel **modelos** , selecione **projeto VSIX**. Na caixa **Nome**, digite `TestClassifier`. Clique em **OK**.
 
-2. No **Solution Explorer,** clique com o botão direito do mouse no nó do projeto e **selecione Adicionar** > **novo item**. Vá para o nó de **extensibilidade** Visual C# e selecione **Editor Classifier**. Deixe o nome do arquivo padrão *(EditorClassifier1.cs).*
+2. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Vá para o nó **extensibilidade** do Visual C# e selecione **classificador de editor**. Deixe o nome de arquivo padrão (*EditorClassifier1.cs*).
 
-3. Existem quatro arquivos de código, como segue:
+3. Há quatro arquivos de código, da seguinte maneira:
 
-    - *EditorClassifier1.cs* contém `EditorClassifier1` a classe.
+    - *EditorClassifier1.cs* contém a `EditorClassifier1` classe.
 
-    - *EditorClassifier1ClassificationDefinition.cs* contém `EditorClassifier1ClassificationDefinition` a classe.
+    - *EditorClassifier1ClassificationDefinition.cs* contém a `EditorClassifier1ClassificationDefinition` classe.
 
-    - *EditorClassifier1Format.cs* contém `EditorClassifier1Format` a classe.
+    - *EditorClassifier1Format.cs* contém a `EditorClassifier1Format` classe.
 
-    - *EditorClassifier1Provider.cs* contém `EditorClassifier1Provider` a classe.
+    - *EditorClassifier1Provider.cs* contém a `EditorClassifier1Provider` classe.
 
-4. Compile o projeto e comece a depuração. A instância experimental do Visual Studio aparece.
+4. Compile o projeto e comece a depuração. A instância experimental do Visual Studio é exibida.
 
-     Se você abrir um arquivo de texto, todo o texto será sublinhado em um fundo violeta.
+     Se você abrir um arquivo de texto, todo o texto será sublinhado em relação a um plano de fundo violeta.
 
-## <a name="create-a-text-relative-adornment-extension"></a>Crie uma extensão de adorno relativo ao texto
- O modelo De adorno de texto do editor cria um adorno relativo ao texto que decora todas as instâncias do caractere de texto 'a' usando uma caixa que tem um contorno vermelho e um fundo azul. É relativo ao texto porque a caixa sempre sobrepõe os caracteres 'a', mesmo quando eles são movidos ou reformados.
+## <a name="create-a-text-relative-adornment-extension"></a>Criar uma extensão Adornment relativa a texto
+ O modelo de texto Adornment do editor cria um Adornment relativo a texto que decora todas as instâncias do caractere de texto ' a ' usando uma caixa que tem um contorno vermelho e um plano de fundo azul. Ele é relativo a texto porque a caixa sempre sobrepõe os caracteres ' a ', mesmo quando eles são movidos ou reformatados.
 
-1. Na caixa de diálogo **Novo Projeto,** expanda **visual C#** ou **Visual Basic** e clique **em Extensibility**. No **painel Templates,** selecione **Projeto VSIX**. Na caixa **Nome**, digite `TestAdornment`. Clique em **OK**.
+1. Na caixa de diálogo **novo projeto** , expanda **Visual C#** ou **Visual Basic** e clique em **extensibilidade**. No painel **modelos** , selecione **projeto VSIX**. Na caixa **Nome**, digite `TestAdornment`. Clique em **OK**.
 
-2. No **Solution Explorer,** clique com o botão direito do mouse no nó do projeto e **selecione Adicionar** > **novo item**. Vá para o nó de **extensibilidade** Visual C# e selecione **Adorno de Texto do Editor**. Deixe o nome do arquivo padrão *(TextAdornment1.cs/vb).*
+2. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Vá para o nó **extensibilidade** do Visual C# e selecione **texto do editor Adornment**. Deixe o nome de arquivo padrão (*TextAdornment1.cs/vb*).
 
-3. Existem dois arquivos de código, como segue:
+3. Há dois arquivos de código, da seguinte maneira:
 
-    - *TextAdornment1.cs* contém `TextAdornment1` a classe.
+    - *TextAdornment1.cs* contém a `TextAdornment1` classe.
 
-    - *TextAdornment1TextViewCreationListener.cs* contém `TextAdornment1TextViewCreationListener` a classe.
+    - *TextAdornment1TextViewCreationListener.cs* contém a `TextAdornment1TextViewCreationListener` classe.
 
-4. Compile o projeto e comece a depuração. A instância experimental aparece. Se você abrir um arquivo de texto, todos os caracteres 'a' no texto serão delineados em vermelho contra um fundo azul.
+4. Compile o projeto e comece a depuração. A instância experimental é exibida. Se você abrir um arquivo de texto, todos os caracteres ' a ' no texto serão contornados em vermelho em relação a um plano de fundo azul.
 
-## <a name="create-a-viewport-relative-adornment-extension"></a>Criar uma extensão de adornamento relativo à viewport
- O modelo Deadornmento do Editor Viewport cria um adorno relativo à viewport que adiciona uma caixa violeta que tem um contorno vermelho no canto superior direito da porta de exibição.
+## <a name="create-a-viewport-relative-adornment-extension"></a>Criar uma extensão Adornment relativa ao visor
+ O modelo visor Adornment do editor cria um Adornment relativo ao visor que adiciona uma caixa violeta que tem um contorno vermelho no canto superior direito do visor.
 
 > [!NOTE]
-> O **viewport** é a área da exibição de texto exibida atualmente.
+> O **visor** é a área da exibição de texto exibida no momento.
 
-### <a name="to-create-a-viewport-adornment-extension-by-using-the-editor-viewport-adornment-template"></a>Para criar uma extensão de adornamento de porta de exibição usando o modelo De adornamento do Editor Viewport
+### <a name="to-create-a-viewport-adornment-extension-by-using-the-editor-viewport-adornment-template"></a>Para criar uma extensão Adornment do visor usando o modelo Adornment do visor do editor
 
-1. Na caixa de diálogo **Novo Projeto,** expanda **visual C#** ou **Visual Basic** e clique **em Extensibility**. No **painel Templates,** selecione **Projeto VSIX**. Na caixa **Nome**, digite `ViewportAdornment`. Clique em **OK**.
+1. Na caixa de diálogo **novo projeto** , expanda **Visual C#** ou **Visual Basic** e clique em **extensibilidade**. No painel **modelos** , selecione **projeto VSIX**. Na caixa **Nome**, digite `ViewportAdornment`. Clique em **OK**.
 
-2. No **Solution Explorer,** clique com o botão direito do mouse no nó do projeto e **selecione Adicionar** > **novo item**. Vá para o nó de **extensibilidade** Visual C# e selecione **Adorno de Porta de Visualização do Editor**. Deixe o nome do arquivo padrão *(ViewportAdornment1.cs/vb).*
+2. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Vá para o nó **extensibilidade** do Visual C# e selecione **Editor visor Adornment**. Deixe o nome de arquivo padrão (*ViewportAdornment1.cs/vb*).
 
-3. Existem dois arquivos de código, como segue:
+3. Há dois arquivos de código, da seguinte maneira:
 
-    - *ViewportAdornment1.cs* contém `ViewportAdornment1` a classe.
+    - *ViewportAdornment1.cs* contém a `ViewportAdornment1` classe.
 
-    - *ViewportAdornment1TextViewCreationListener.cs* contém `ViewportAdornment1TextViewCreationListener` a classe
+    - *ViewportAdornment1TextViewCreationListener.cs* contém a `ViewportAdornment1TextViewCreationListener` classe
 
-4. Compile o projeto e comece a depuração. A instância experimental aparece. Se você criar um novo arquivo de texto, uma caixa violeta que tenha um contorno vermelho será exibida no canto superior direito da porta de exibição.
+4. Compile o projeto e comece a depuração. A instância experimental é exibida. Se você criar um novo arquivo de texto, uma caixa violeta que tem um contorno vermelho será exibida no canto superior direito do visor.
 
 ## <a name="create-a-margin-extension"></a>Criar uma extensão de margem
- O modelo Margem do Editor cria uma margem verde que aparece junto com as palavras **Olá mundo!* abaixo da barra de rolagem horizontal.
+ O modelo de margem do editor cria uma margem verde que aparece junto com as palavras **Olá, mundo!* abaixo da barra de rolagem horizontal.
 
-### <a name="to-create-a-margin-extension-by-using-the-editor-margin-template"></a>Para criar uma extensão de margem usando o modelo Margem do Editor
+### <a name="to-create-a-margin-extension-by-using-the-editor-margin-template"></a>Para criar uma extensão de margem usando o modelo de margem do editor
 
-1. Na caixa de diálogo **Novo Projeto,** expanda **visual C#** ou **Visual Basic** e clique **em Extensibility**. No **painel Templates,** selecione **Projeto VSIX**. Na caixa **Nome**, digite `MarginExtension`. Clique em **OK**.
+1. Na caixa de diálogo **novo projeto** , expanda **Visual C#** ou **Visual Basic** e clique em **extensibilidade**. No painel **modelos** , selecione **projeto VSIX**. Na caixa **Nome**, digite `MarginExtension`. Clique em **OK**.
 
-2. No **Solution Explorer,** clique com o botão direito do mouse no nó do projeto e **selecione Adicionar** > **novo item**. Vá para o nó de **extensibilidade** Visual C# e selecione **Margem do Editor**. Deixe o nome do arquivo padrão (EditorMargin1.cs/vb).
+2. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Vá para o nó **extensibilidade** do Visual C# e selecione **margem do editor**. Deixe o nome de arquivo padrão (EditorMargin1.cs/vb).
 
-3. Existem dois arquivos de código, como segue:
+3. Há dois arquivos de código, da seguinte maneira:
 
-    - *EditorMargin1.cs* contém `EditorMargin1` a classe.
+    - *EditorMargin1.cs* contém a `EditorMargin1` classe.
 
-    - *EditorMargin1Factory.cs* contém `EditorMargin1Factory` a classe.
+    - *EditorMargin1Factory.cs* contém a `EditorMargin1Factory` classe.
 
-4. Construa este projeto e comece a depurar. A instância experimental aparece. Se você abrir um arquivo de texto, uma margem verde que tenha as palavras **Hello EditorMargin1** será exibida abaixo da barra de rolagem horizontal.
+4. Compile este projeto e inicie a depuração. A instância experimental é exibida. Se você abrir um arquivo de texto, uma margem verde com as palavras **Hello EditorMargin1** será exibida abaixo da barra de rolagem horizontal.
 
 ## <a name="see-also"></a>Confira também
-- [Pontos de extensão de serviços de idiomas e editores](../extensibility/language-service-and-editor-extension-points.md)
+- [Pontos de extensão do serviço de linguagem e do editor](../extensibility/language-service-and-editor-extension-points.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaImageData::get_virtualAddress | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 414e065cd9e772e74c573b51bf52f11bcb987b6d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 04807518555572f43c333bfc4d4d6fdded4f4442
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743420"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467137"
 ---
 # <a name="idiaimagedataget_virtualaddress"></a>IDiaImageData::get_virtualAddress
 Recupera o local na memória virtual da imagem.
@@ -35,8 +35,8 @@ HRESULT get_virtualAddress ( 
 
 fora Retorna o endereço virtual da imagem.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)

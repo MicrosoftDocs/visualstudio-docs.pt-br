@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_editAndContinueEnabled | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2dd1d3c7cefe76feec5c65176450d0e73a77a25
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d4d2de1dab8fda2deacf43d9c3072d0e6fe0efa0
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740694"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463949"
 ---
 # <a name="idiasymbolget_editandcontinueenabled"></a>IDiaSymbol::get_editAndContinueEnabled
 Recupera um sinalizador que indica se o módulo foi compilado com a opção de compilador [/Z7,/Zi,/Zi (debug Information Format)](/cpp/build/reference/z7-zi-zi-debug-information-format) .
@@ -33,13 +33,13 @@ HRESULT get_editAndContinueEnabled ( 
 #### <a name="parameters"></a>Parâmetros
  `pRetVal`
 
-fora Retorna `TRUE` se o Edit-and-Continue foi habilitado na compilação; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se o Edit-and-Continue foi habilitado na compilação; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
-> Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
+> Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,6 +48,6 @@ fora Retorna `TRUE` se o Edit-and-Continue foi habilitado na compilação; caso 
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
-- [/Z7, /Zi, /ZI (Formato de Informações de Depuração)](/cpp/build/reference/z7-zi-zi-debug-information-format)
+- [/Z7,/Zi,/ZI (formato de informações de depuração)](/cpp/build/reference/z7-zi-zi-debug-information-format)

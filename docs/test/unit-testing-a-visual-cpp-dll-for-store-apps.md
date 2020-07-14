@@ -1,20 +1,20 @@
 ---
-title: Como testar um DLL C++ para aplicativos UWP
+title: Como testar uma DLL do C++ para aplicativos UWP
 ms.date: 05/01/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: corob
 manager: jillfra
 ms.workload:
 - uwp
 author: corob-msft
-ms.openlocfilehash: 540ff59838343988e7a27f42f8a10d723de1f649
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 7b556f085ae4e4a9c610aefa87b3f9125fb27042
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77274450"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285603"
 ---
-# <a name="how-to-test-a-c-dll"></a>Como testar uma DLL C++
+# <a name="how-to-test-a-c-dll"></a>Como testar uma DLL do C++
 
 Este tópico descreve uma maneira de criar testes de unidade para uma DLL do C++ para aplicativos UWP (Plataforma Universal do Windows) com o Microsoft Test Framework para C++. A DLL RooterLib demonstra memórias vagas da teoria de limite do cálculo implementando uma função que calcula uma estimativa da raiz quadrada de um determinado número. A DLL, em seguida, pode ser incluída em um aplicativo UWP que mostra a um usuário as coisas divertidas que podem ser feitas com matemática.
 
@@ -22,7 +22,7 @@ Este tópico demonstra como usar teste de unidade como a primeira etapa do desen
 
 Este tópico também cria uma única solução do Visual Studio e projetos separados para os testes de unidade e a DLL que você deseja testar. Também é possível incluir os testes de unidade diretamente no projeto de DLL ou criar soluções separadas para os testes de unidade e a .DLL. Consulte [Adicionar teste de unidade de aplicativos C++ existentes](../test/how-to-use-microsoft-test-framework-for-cpp.md) para obter dicas sobre a estrutura a ser usada.
 
-## <a name="create-the-solution-and-the-unit-test-project"></a><a name="Create_the_solution_and_the_unit_test_project"></a>Crie a solução e o projeto de teste unitário
+## <a name="create-the-solution-and-the-unit-test-project"></a><a name="Create_the_solution_and_the_unit_test_project"></a>Criar a solução e o projeto de teste de unidade
 
 ::: moniker range="vs-2019"
 
@@ -58,7 +58,7 @@ Comece criando um novo projeto de teste. No menu **Arquivo**, escolha **Novo** >
 
          Quando os testes são executados, uma instância de cada classe de teste é criada. Os métodos de teste são chamados em uma ordem não especificada. Você pode definir métodos especiais que são invocados antes e depois de cada módulo, classe ou método. Para obter mais informações, confira [Usando o Microsoft.VisualStudio.TestTools.CppUnitTestFramework](how-to-use-microsoft-test-framework-for-cpp.md).
 
-## <a name="verify-that-the-tests-run-in-test-explorer"></a><a name="Verify_that_the_tests_run_in_Test_Explorer"></a>Verifique se os testes são executados no Test Explorer
+## <a name="verify-that-the-tests-run-in-test-explorer"></a><a name="Verify_that_the_tests_run_in_Test_Explorer"></a>Verificar se os testes são executados no Gerenciador de testes
 
 1. Insira algum código de teste:
 
@@ -73,11 +73,11 @@ Comece criando um novo projeto de teste. No menu **Arquivo**, escolha **Novo** >
 
 2. No menu **Testar**, escolha **Executar** e **Executar Todos**.
 
-     O projeto de teste é compilado e executado. A janela **Test Explorer** aparece e o teste é listado em **Testes Aprovados**. O painel **Resumo** na parte inferior da janela fornece detalhes adicionais sobre o teste selecionado.
+     O projeto de teste é compilado e executado. A janela **Gerenciador de testes** é exibida e o teste é listado em **testes aprovados**. O painel **Resumo** na parte inferior da janela fornece detalhes adicionais sobre o teste selecionado.
 
      ![Gerenciador de Testes](../test/media/ute_cpp_testexplorer_testmethod1.png)
 
-## <a name="add-the-dll-project-to-the-solution"></a><a name="Add_the_DLL_project_to_the_solution"></a>Adicione o projeto DLL à solução
+## <a name="add-the-dll-project-to-the-solution"></a><a name="Add_the_DLL_project_to_the_solution"></a>Adicionar o projeto DLL à solução
 
 ::: moniker range="vs-2019"
 
@@ -130,7 +130,7 @@ No **Gerenciador de Soluções**, escolha o nome da solução. No menu de atalho
 
     2. Na caixa de diálogo **Página de Propriedades de RooterLib**, expanda **Propriedades de Configuração**, expanda **C++** e escolha **Pré-processador**.
 
-    3. Escolha ** \<Editar...>** na lista **Dedefinições de pré-processador** e, em seguida, adicione `ROOTERLIB_EXPORTS` a caixa de diálogo **Definições de pré-processador.**
+    3. Escolha na **\<Edit...>** lista **definições de pré-processador** e, em seguida, adicione `ROOTERLIB_EXPORTS` na caixa de diálogo **definições de pré-processador** .
 
 4. Adicione implementações mínimas das funções declaradas. Abra *RooterLib.cpp* e adicione o seguinte código:
 
@@ -166,7 +166,7 @@ No **Gerenciador de Soluções**, escolha o nome da solução. No menu de atalho
        #include "..\RooterLib\RooterLib.h"
        ```
 
-3. Adicione um teste que use a função importada. Adicione o seguinte código ao *unittest1.cpp:*
+3. Adicione um teste que use a função importada. Adicione o seguinte código a *UnitTest1. cpp*:
 
    ```cpp
    TEST_METHOD(BasicTest)
@@ -188,7 +188,7 @@ No **Gerenciador de Soluções**, escolha o nome da solução. No menu de atalho
 
 4. Compile a solução.
 
-    O novo teste aparece no **Test Explorer** no nó Testes **não executados.**
+    O novo teste é exibido no **Gerenciador de testes** no nó **não executar testes** .
 
 5. No **Gerenciador de Testes**, escolha **Executar Todos**.
 
@@ -196,7 +196,7 @@ No **Gerenciador de Soluções**, escolha o nome da solução. No menu de atalho
 
    Você configurou o teste e os projetos de código, além de ter verificado que pode executar testes que executam funções no projeto de código. Agora, você pode começar a escrever testes e códigos reais.
 
-## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="Iteratively_augment_the_tests_and_make_them_pass"></a>Aumentar iterativamente os testes e fazê-los passar
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="Iteratively_augment_the_tests_and_make_them_pass"></a>Aumentar iterativamente os testes e fazer com que eles passem
 
 1. Adicione um novo teste:
 
@@ -249,14 +249,14 @@ No **Gerenciador de Soluções**, escolha o nome da solução. No menu de atalho
 
     ```
 
-5. Construa a solução e, em seguida, no **Test Explorer,** escolha **Executar tudo**.
+5. Compile a solução e, em seguida, no **Gerenciador de testes**, escolha **executar tudo**.
 
      Ambos os testes são aprovados.
 
 > [!TIP]
 > Desenvolva o código adicionando testes, um de cada vez. Verifique se todos os testes passaram após cada iteração.
 
-## <a name="debug-a-failing-test"></a><a name="Debug_a_failing_test"></a>Depurar um teste de falha
+## <a name="debug-a-failing-test"></a><a name="Debug_a_failing_test"></a>Depurar um teste com falha
 
 1. Adicionar outro teste a *unittest1.cpp*:
 
@@ -291,7 +291,7 @@ No **Gerenciador de Soluções**, escolha o nome da solução. No menu de atalho
 
 2. No **Gerenciador de Testes**, escolha **Executar Todos**.
 
-    O teste falhará. Escolha o nome de teste no **Test Explorer**. A asserção com falha é realçada. A mensagem de falha fica visível no painel de detalhes do **Gerenciador de Testes**.
+    O teste falhará. Escolha o nome do teste no **Gerenciador de testes**. A asserção com falha é realçada. A mensagem de falha fica visível no painel de detalhes do **Gerenciador de Testes**.
 
     ![Falha de NegativeRangeTests](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
 
@@ -319,7 +319,7 @@ No **Gerenciador de Soluções**, escolha o nome da solução. No menu de atalho
 
        ```
 
-   1. No **Test Explorer,** escolha **Executar tudo** para testar o método corrigido e certifique-se de que você não introduziu uma regressão.
+   1. No **Gerenciador de testes**, escolha **executar tudo** para testar o método corrigido e certifique-se de que você não introduziu uma regressão.
 
    Todos os testes agora foram aprovados.
 

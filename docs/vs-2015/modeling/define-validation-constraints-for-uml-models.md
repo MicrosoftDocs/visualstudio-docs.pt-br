@@ -11,12 +11,12 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 32f249b971e8a37bc5b596203cde6bc7b0bcf6f1
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 258fc138f032d34e57df69386b6849fc3a0650a0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849736"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547583"
 ---
 # <a name="define-validation-constraints-for-uml-models"></a>Definir restrições de validação para modelos UML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,7 +27,7 @@ Você pode definir restrições de validação que testam se o modelo atende a u
 
  Para ver quais versões do Visual Studio oferecem suporte a modelos UML, consulte [suporte de versão para ferramentas de arquitetura e modelagem](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
  Consulte [requisitos](../modeling/extend-uml-models-and-diagrams.md#Requirements).
 
  Para ver quais versões do Visual Studio oferecem suporte a esse recurso, consulte [suporte de versão para ferramentas de arquitetura e modelagem](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
@@ -35,7 +35,7 @@ Você pode definir restrições de validação que testam se o modelo atende a u
 ## <a name="applying-validation-constraints"></a>Aplicando restrições de validação
  As restrições de validação são aplicadas em três casos: quando você salva um modelo; Quando você abre um modelo; e ao clicar em **validar modelo UML** no menu **arquitetura** . Em cada caso, somente as restrições que foram definidas para esse caso serão aplicadas, embora normalmente você defina cada restrição a ser aplicada em mais de um caso.
 
- Os erros de validação são relatados na janela [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] erros e você pode clicar duas vezes no erro para selecionar os elementos do modelo que estão com erro.
+ Os erros de validação são relatados na [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] janela erros e você pode clicar duas vezes no erro para selecionar os elementos do modelo que estão com erro.
 
  Para obter mais informações sobre como aplicar a validação, consulte [validar seu modelo UML](../modeling/validate-your-uml-model.md).
 
@@ -55,7 +55,7 @@ Você pode definir restrições de validação que testam se o modelo atende a u
     Para obter mais informações, consulte [avaliando a restrição de validação](#Implementing).
 
    > [!IMPORTANT]
-   > Verifique se os arquivos **. cs** contêm a seguinte instrução de `using`:
+   > Verifique se os arquivos **. cs** contêm a seguinte `using` instrução:
    >
    >  `using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;`
 
@@ -63,9 +63,9 @@ Você pode definir restrições de validação que testam se o modelo atende a u
 
 4. Teste suas restrições pressionando F5. Para obter mais informações, consulte [executando uma restrição de validação](#Executing).
 
-5. Instale o comando de menu em outro computador copiando o arquivo **bin\\\*\\\*. vsix** criado pelo seu projeto. Para obter mais informações, consulte [Instalando e desinstalando uma extensão](#Installing).
+5. Instale o comando de menu em outro computador copiando o arquivo **bin \\ \* \\ \* . vsix** criado pelo seu projeto. Para obter mais informações, consulte [Instalando e desinstalando uma extensão](#Installing).
 
-   Ao adicionar outros arquivos **. cs** , normalmente você precisará das seguintes instruções de `using`:
+   Ao adicionar outros arquivos **. cs** , normalmente você precisará das seguintes `using` instruções:
 
 ```csharp
 using System.Collections.Generic;
@@ -85,13 +85,13 @@ using Microsoft.VisualStudio.Uml.Classes;
 
     1. No menu **Arquivo**, escolha **Novo**, **Projeto**.
 
-    2. Em **modelos instalados**, expanda **Visual C#**  ou **Visual Basic**e, em seguida, na coluna do meio, escolha **biblioteca de classes**.
+    2. Em **modelos instalados**, expanda **Visual C#** ou **Visual Basic**e, em seguida, na coluna do meio, escolha **biblioteca de classes**.
 
 2. A menos que sua solução já contenha uma, crie um projeto VSIX:
 
     1. No **Gerenciador de soluções**, no menu de atalho da solução, escolha **Adicionar**, **novo projeto**.
 
-    2. Em **modelos instalados**, expanda **Visual C#**  ou **Visual Basic**, em seguida, escolha **extensibilidade**. Na coluna do meio, clique em **projeto VSIX**.
+    2. Em **modelos instalados**, expanda **Visual C#** ou **Visual Basic**, em seguida, escolha **extensibilidade**. Na coluna do meio, clique em **projeto VSIX**.
 
 3. Defina o projeto VSIX como o projeto de inicialização da solução.
 
@@ -105,17 +105,17 @@ using Microsoft.VisualStudio.Uml.Classes;
 
     3. Na guia **ativos** , escolha um **novo**e, na caixa de diálogo, defina:
 
-         **Tipo** = **componente MEF**
+         **Tipo**  =  de **Componente MEF**
 
-         **Fonte** = **um projeto na solução atual**
+         **Origem**  =  do **Um projeto na solução atual**
 
-         **Projeto** = *seu projeto de biblioteca de classes*
+         **Projeto**  =  do *Seu projeto de biblioteca de classes*
 
 #### <a name="to-define-the-validation-class"></a>Para definir a classe de validação
 
 1. Você não precisará desse procedimento se tiver criado uma classe de validação com seu próprio VSIX do modelo de projeto de validação.
 
-2. No projeto de classe de validação, adicione referências aos seguintes assemblies de [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)]:
+2. No projeto de classe de validação, adicione referências aos seguintes [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)] assemblies:
 
      `Microsoft.VisualStudio.Modeling.Sdk.[version]`
 
@@ -178,7 +178,7 @@ using Microsoft.VisualStudio.Uml.Classes;
     }
     ```
 
-## <a name="Executing"></a>Executando uma restrição de validação
+## <a name="executing-a-validation-constraint"></a><a name="Executing"></a>Executando uma restrição de validação
  Para fins de teste, execute seus métodos de validação no modo de depuração.
 
 #### <a name="to-test-the-validation-constraint"></a>Para testar a restrição de validação
@@ -187,15 +187,15 @@ using Microsoft.VisualStudio.Uml.Classes;
 
      Uma instância experimental do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] é iniciada.
 
-     **Solução de problemas**: se um novo [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] não iniciar:
+     **Solução de problemas**: se um novo não [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Iniciar:
 
     - Se você tiver mais de um projeto, verifique se o projeto VSIX está definido como o projeto de inicialização da solução.
 
-    - No Gerenciador de Soluções, no menu de atalho do projeto de inicialização ou somente, escolha **Propriedades**. No editor de propriedades do projeto, selecione a guia **depurar** . Verifique se a cadeia de caracteres no campo **Iniciar programa externo** é o nome de caminho completo de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], normalmente:
+    - No Gerenciador de Soluções, no menu de atalho do projeto de inicialização ou somente, escolha **Propriedades**. No editor de propriedades do projeto, selecione a guia **depurar** . Verifique se a cadeia de caracteres no campo **Iniciar programa externo** é o nome de caminho completo de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , normalmente:
 
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
-2. No [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]experimental, abra ou crie um projeto de modelagem e abra ou crie um diagrama de modelagem.
+2. Em experimental [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , abra ou crie um projeto de modelagem e abra ou crie um diagrama de modelagem.
 
 3. Para configurar um teste para a restrição de exemplo fornecida na seção anterior:
 
@@ -213,14 +213,14 @@ using Microsoft.VisualStudio.Uml.Classes;
 
     - O projeto de validação é listado como um componente MEF na guia **ativos** em **Source. Extensions. manifest** no projeto VSIX.
 
-    - Os atributos corretos de `Export` e `ValidationMethod` são anexados aos métodos de validação.
+    - Os atributos corretos `Export` e `ValidationMethod` são anexados aos métodos de validação.
 
-    - `ValidationCategories.Menu` está incluído no argumento para o atributo `ValidationMethod` e é composto com outros valores usando OR lógico (&#124;).
+    - `ValidationCategories.Menu`é incluído no argumento para o `ValidationMethod` atributo e é composto com outros valores usando OR lógico (&#124;).
 
-    - Os parâmetros de todos os atributos de `Import` e `Export` são válidos.
+    - Os parâmetros de todos os `Import` `Export` atributos e são válidos.
 
-## <a name="Implementing"></a>Avaliando a restrição
- O método de validação deve determinar se a restrição de validação que você deseja aplicar é true ou false. Se for true, ele não deverá fazer nada. Se for false, ele deverá relatar um erro usando os métodos fornecidos pelo parâmetro `ValidationContext`.
+## <a name="evaluating-the-constraint"></a><a name="Implementing"></a>Avaliando a restrição
+ O método de validação deve determinar se a restrição de validação que você deseja aplicar é true ou false. Se for true, ele não deverá fazer nada. Se for false, ele deverá relatar um erro usando os métodos fornecidos pelo `ValidationContext` parâmetro.
 
 > [!NOTE]
 > Os métodos de validação não devem alterar o modelo. Não há nenhuma garantia de quando ou em qual ordem as restrições serão executadas. Se você precisar passar informações entre execuções sucessivas de um método de validação em uma execução de validação, poderá usar o cache de contexto descrito em [coordenação de várias validações](#ContextCache).
@@ -256,35 +256,35 @@ public void ValidateSomething
 
  Os atributos e parâmetros de cada método de validação são os seguintes:
 
-|||
+|Assinatura|Descrição|
 |-|-|
 |`[Export(typeof(System.Action <ValidationContext, object>))]`|Define o método como uma restrição de validação usando Managed Extensibility Framework (MEF).|
-|`[ValidationMethod (ValidationCategories.Menu)]`|Especifica quando a validação será executada. Use OR-bit&#124;() ou () se desejar combinar mais de uma opção.<br /><br /> `Menu` = invocado pelo menu validar.<br /><br /> `Save` = invocado ao salvar o modelo.<br /><br /> `Open` = invocado na abertura do modelo. `Load` = invocado ao salvar o modelo, mas para um contravention avisa ao usuário que talvez não seja possível reabrir o modelo. Também chamado no carregamento, antes de o modelo ser analisado.|
+|`[ValidationMethod (ValidationCategories.Menu)]`|Especifica quando a validação será executada. Use OR-bit ou (&#124;) se desejar combinar mais de uma opção.<br /><br /> `Menu`= invocado pelo menu validar.<br /><br /> `Save`= invocado ao salvar o modelo.<br /><br /> `Open`= invocado ao abrir o modelo. `Load`= invocado ao salvar o modelo, mas para um contravention avisa ao usuário que talvez não seja possível reabrir o modelo. Também chamado no carregamento, antes de o modelo ser analisado.|
 |`public void ValidateSomething`<br /><br /> `(ValidationContext context,`<br /><br /> `IElement element)`|Substitua o segundo parâmetro `IElement` pelo tipo de elemento ao qual você deseja aplicar a restrição. O método de restrição será invocado em todos os elementos no tipo especificado.<br /><br /> O nome do método não é importante.|
 
  Você pode definir quantos métodos de validação desejar, com tipos diferentes no segundo parâmetro. Quando a validação é invocada, cada método de validação será chamado em cada elemento de modelo que esteja de acordo com o tipo de parâmetro.
 
 ### <a name="reporting-validation-errors"></a>Erros de validação de relatórios
- Para criar um relatório de erros, use os métodos fornecidos pelo `ValidationContext`:
+ Para criar um relatório de erros, use os métodos fornecidos por `ValidationContext` :
 
  `context.LogError("error string", errorCode, elementsWithError);`
 
-- `"error string"` aparece na [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Lista de Erros
+- `"error string"`aparece na [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] lista de erros
 
-- `errorCode` é uma cadeia de caracteres que deve ser um identificador exclusivo do erro
+- `errorCode`é uma cadeia de caracteres que deve ser um identificador exclusivo do erro
 
-- `elementsWithError` identifica elementos no modelo. Quando o usuário clica duas vezes no relatório de erros, a forma que representa esse elemento será selecionada.
+- `elementsWithError`identifica elementos no modelo. Quando o usuário clica duas vezes no relatório de erros, a forma que representa esse elemento será selecionada.
 
-  `LogError(),` `LogWarning()` e `LogMessage()` Coloque as mensagens em diferentes seções da lista de erros.
+  `LogError(),``LogWarning()`e `LogMessage()` Coloque as mensagens em seções diferentes da lista de erros.
 
 ## <a name="how-validation-methods-are-applied"></a>Como os métodos de validação são aplicados
  A validação é aplicada a todos os elementos no modelo, incluindo relações e as partes de elementos maiores, como atributos de uma classe e parâmetros de uma operação.
 
- Cada método de validação é aplicado a cada elemento que está de acordo com o tipo em seu segundo parâmetro. Isso significa que, por exemplo, se você definir um método de validação com um segundo parâmetro de `IUseCase` e outro com seu `IElement`de supertipo, então esses dois métodos serão aplicados a cada caso de uso no modelo.
+ Cada método de validação é aplicado a cada elemento que está de acordo com o tipo em seu segundo parâmetro. Isso significa que, por exemplo, se você definir um método de validação com um segundo parâmetro de `IUseCase` e outro com seu supertipo `IElement` , então esses dois métodos serão aplicados a cada caso de uso no modelo.
 
  A hierarquia de tipos é resumida em [tipos de elementos de modelo UML](../modeling/uml-model-element-types.md).
 
- Você também pode acessar elementos seguindo as relações. Por exemplo, se você definiu um método de validação em `IClass`, poderia executar um loop por suas propriedades Propriedade:
+ Você também pode acessar elementos seguindo as relações. Por exemplo, se você definiu um método de validação em `IClass` , poderia executar um loop pelas propriedades de propriedade dele:
 
 ```
 public void ValidateTypeName(ValidationContext context, IClass c)
@@ -304,7 +304,7 @@ public void ValidateTypeName(ValidationContext context, IClass c)
 ```
 
 ### <a name="creating-a-validation-method-on-the-model"></a>Criando um método de validação no modelo
- Se você quiser garantir que um método de validação seja chamado exatamente uma vez durante cada execução de validação, você poderá validar o `IModel`:
+ Se você quiser garantir que um método de validação seja chamado exatamente uma vez durante cada execução de validação, você poderá validar o `IModel` :
 
 ```
 using Microsoft.VisualStudio.Uml.AuxiliaryConstructs; ...
@@ -327,7 +327,7 @@ using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation;
 public IDiagramContext DiagramContext { get; set; }
 ```
 
- Em um método de validação, você pode usar `DiagramContext` para acessar o diagrama de foco atual, se houver um:
+ Em um método de validação, você pode usar `DiagramContext` o para acessar o diagrama de foco atual, se houver:
 
 ```
 [Export(typeof(System.Action<ValidationContext, object>))]
@@ -342,29 +342,29 @@ public void ValidateModel(ValidationContext context, IModel model)
     { ...
 ```
 
- Para registrar um erro, você deve obter o elemento de modelo que a forma representa, porque não é possível passar uma forma para `LogError`:
+ Para registrar um erro, você deve obter o elemento de modelo que a forma representa, porque não é possível passar uma forma para `LogError` :
 
 ```
 IUseCase useCase = useCaseShape.Element;
 context.LogError(... , usecase);
 ```
 
-### <a name="ContextCache"></a>Coordenação de várias validações
+### <a name="coordinating-multiple-validations"></a><a name="ContextCache"></a>Coordenação de várias validações
  Quando a validação é invocada, por exemplo, pelo usuário de um menu de diagrama, cada método de validação é aplicado a cada elemento de modelo. Isso significa que, em uma única invocação da estrutura de validação, o mesmo método pode ser aplicado muitas vezes a elementos diferentes.
 
  Isso apresenta um problema para validações que lidam com as relações entre os elementos. Por exemplo, você pode escrever uma validação que começa em, digamos, um caso de uso e percorre as relações de **inclusão** para verificar se não há loops. Mas quando o método é aplicado a cada caso de uso em um modelo que tem muitos links **include** , é provável que ele processe repetidamente as mesmas áreas do modelo.
 
  Para evitar essa situação, há um cache de contexto no qual as informações são preservadas durante uma execução de validação. Você pode usá-lo para passar informações entre diferentes execuções dos métodos de validação. Por exemplo, você pode armazenar uma lista dos elementos que já foram tratados com a nesta execução de validação. O cache é criado no início de cada execução de validação e não pode ser usado para passar informações entre execuções de validação diferentes.
 
-|||
+|Sintaxe|Descrição|
 |-|-|
 |`context.SetCacheValue<T> (name, value)`|Armazenar um valor|
 |`context.TryGetCacheValue<T> (name, out value)`|Obter um valor. Retornará true se for bem-sucedido.|
 |`context.GetValue<T>(name)`|Obter um valor.|
 |`Context.GetValue<T>()`|Obtém um valor do tipo especificado.|
 
-## <a name="Installing"></a>Instalando e desinstalando uma extensão
- Você pode instalar uma extensão de [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] no seu próprio computador e em outros computadores.
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>Instalando e desinstalando uma extensão
+ Você pode instalar uma [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] extensão no seu próprio computador e em outros computadores.
 
 #### <a name="to-install-an-extension"></a>Para instalar uma extensão
 
@@ -372,7 +372,7 @@ context.LogError(... , usecase);
 
     1. No **Gerenciador de soluções**, no menu de atalho do projeto VSIX, escolha **abrir pasta no Windows Explorer**.
 
-    2. Localize o arquivo **bin\\\*\\** _seuprojeto_ **. vsix**
+    2. Localize o arquivo **bin \\ \* \\ **_seuprojeto_**. vsix**
 
 2. Copie o arquivo **. vsix** para o computador de destino no qual você deseja instalar a extensão. Este pode ser seu próprio computador ou outro.
 
@@ -382,7 +382,7 @@ context.LogError(... , usecase);
 
      O **instalador de extensão do Visual Studio** é aberto e instala a extensão.
 
-4. Inicie ou reinicie o [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)].
+4. Iniciar ou reiniciar [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] .
 
 #### <a name="to-uninstall-an-extension"></a>Para desinstalar uma extensão
 
@@ -392,11 +392,11 @@ context.LogError(... , usecase);
 
 3. Selecione a extensão e escolha **desinstalar**.
 
-   Raramente, uma extensão defeituosa não carrega e cria um relatório na janela de erro, mas não aparece no Gerenciador de extensões. Nesse caso, você pode remover a extensão excluindo o arquivo do seguinte local em que *% LocalAppData%* normalmente é *driveName*: \Users\\*username*\AppData\Local:
+   Raramente, uma extensão defeituosa não carrega e cria um relatório na janela de erro, mas não aparece no Gerenciador de extensões. Nesse caso, você pode remover a extensão excluindo o arquivo do seguinte local em que *% LocalAppData%* normalmente é *driveName*: \Users \\ *username*\AppData\Local:
 
-   *%LocalAppData%* **\Microsoft\VisualStudio\\[version]\Extensions**
+   *% LocalAppData%* **\Microsoft\VisualStudio \\ [versão] \Extensions**
 
-## <a name="Example"></a> Exemplo
+## <a name="example"></a><a name="Example"></a>Exemplo
  Este exemplo localiza loops na relação de dependência entre elementos.
 
  Ele será validado em salvar e no comando de menu validar.
@@ -473,5 +473,5 @@ private bool NoDependencyLoops(ValidationContext context,
 }
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
  [Definir e instalar uma programação de extensão de modelagem](../modeling/define-and-install-a-modeling-extension.md) [com a API UML](../modeling/programming-with-the-uml-api.md)

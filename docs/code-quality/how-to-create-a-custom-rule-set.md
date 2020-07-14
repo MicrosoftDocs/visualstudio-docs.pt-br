@@ -1,7 +1,7 @@
 ---
 title: Criar um conjunto de regras de análise de código personalizado
 ms.date: 11/02/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.codeanalysis.addremoverulesets
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b9f23b2badb40effd4222e21ab9e67b2907513c2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 81462db07941c73b847c009ef8353b00d28fff4f
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587544"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371905"
 ---
 # <a name="customize-a-rule-set"></a>Personalizar um conjunto de regras
 
@@ -24,7 +24,7 @@ Você pode criar um conjunto de regras personalizadas para atender às necessida
 
 ## <a name="create-a-custom-rule-set-from-an-existing-rule-set"></a>Criar um conjunto de regras personalizado a partir de um conjunto de regras existente
 
-Para criar um conjunto de regras personalizado, você pode abrir um conjunto de regras internas no **Editor de conjunto de regras**. A partir daí, você pode adicionar ou remover regras específicas e pode alterar a ação que ocorre quando uma regra é violada&mdash;por exemplo, mostrar um aviso ou um erro.
+Para criar um conjunto de regras personalizado, você pode abrir um conjunto de regras internas no **Editor de conjunto de regras**. A partir daí, você pode adicionar ou remover regras específicas e pode alterar a ação que ocorre quando uma regra é violada, &mdash; por exemplo, mostrar um aviso ou um erro.
 
 1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Propriedades**.
 
@@ -44,9 +44,9 @@ Para criar um conjunto de regras personalizado, você pode abrir um conjunto de 
 
    - Selecione o conjunto de regras que você deseja personalizar.
 
-     \- ou -
+     \- ou –
 
-   - Selecione **\<procurar >** para especificar um conjunto de regras existente que não esteja na lista.
+   - Selecione **\<Browse>** para especificar um conjunto de regras existente que não esteja na lista.
 
 4. Selecione **abrir** para exibir as regras no editor de conjunto de regras.
 
@@ -57,7 +57,7 @@ Para criar um conjunto de regras personalizado, você pode abrir um conjunto de 
 
 Você pode criar um novo arquivo de conjunto de regras a partir da caixa de diálogo **novo arquivo** :
 
-1. Selecione **arquivo** > **novo** **arquivo**de > ou pressione **Ctrl**+**N**.
+1. Selecione **arquivo**  >  **novo**  >  **arquivo**ou pressione **Ctrl** + **N**.
 
 2. Na caixa de diálogo **novo arquivo** , selecione a categoria **geral** à esquerda e, em seguida, selecione **conjunto de regras de análise de código**.
 
@@ -76,13 +76,13 @@ Você pode criar um novo arquivo de conjunto de regras a partir da caixa de diá
 
 ::: moniker range="vs-2017"
 
-3. Selecione **\<escolher vários conjuntos de regras >** de **executar este conjunto de regras**.
+3. Selecione **\<Choose multiple rule sets>** em **executar este conjunto de regras**.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. Selecione **\<escolher vários conjuntos de regras >** de **regras ativas**.
+3. Selecione uma **\<Choose multiple rule sets>** das **regras ativas**.
 
 ::: moniker-end
 
@@ -111,7 +111,7 @@ Você pode criar um novo arquivo de conjunto de regras a partir da caixa de diá
 
 - Se a mesma regra estiver listada duas ou mais vezes em um conjunto de regras com a *mesma* gravidade, você poderá ver o seguinte aviso no **lista de erros**:
 
-   **CA0063: falha ao carregar o arquivo de conjunto de regras '\[seu]. RuleSet ' ou um de seus arquivos de conjunto de regras dependentes. O arquivo não está em conformidade com o esquema do conjunto de regras.**
+   **CA0063: falha ao carregar o arquivo de conjunto \[ de regras ' Your]. RuleSet ' ou um de seus arquivos de conjunto de regras dependentes. O arquivo não está em conformidade com o esquema do conjunto de regras.**
 
 - Se o conjunto de regras incluir uma regra filho definida usando uma marca **include** , e os conjuntos de regras filho e Parent listarem a mesma regra, mas com severidades diferentes, a severidade no conjunto de regras pai terá precedência. Por exemplo:
 
@@ -136,9 +136,9 @@ Você pode criar um novo arquivo de conjunto de regras a partir da caixa de diá
 
 ## <a name="name-and-description"></a>Nome e descrição
 
-Para alterar o nome de exibição de um conjunto de regras que está aberto no editor, abra a janela **Propriedades** selecionando **Exibir** > **janela Propriedades** na barra de menus. Insira o nome de exibição na caixa **nome** . Você também pode inserir uma descrição para o conjunto de regras.
+Para alterar o nome de exibição de um conjunto de regras que está aberto no editor, abra a janela **Propriedades** selecionando janela **Exibir**  >  **Propriedades** na barra de menus. Insira o nome de exibição na caixa **nome** . Você também pode inserir uma descrição para o conjunto de regras.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Agora que você tem um conjunto de regras, a próxima etapa é personalizar as regras adicionando ou removendo regras ou modificando a gravidade das violações de regra.
 
@@ -148,4 +148,4 @@ Agora que você tem um conjunto de regras, a próxima etapa é personalizar as r
 ## <a name="see-also"></a>Veja também
 
 - [Como configurar a análise de código para um projeto de código gerenciado](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)
-- [Referência do conjunto de regras de análise de código](../code-quality/rule-set-reference.md)
+- [Referência do conjunto de regras da análise de código](../code-quality/rule-set-reference.md)

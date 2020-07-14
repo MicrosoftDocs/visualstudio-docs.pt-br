@@ -5,22 +5,22 @@ ms.author: lank
 manager: lank
 ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
 ms.date: 03/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: Saiba como contatar o administrador da assinatura para obter assistência em caso de dúvidas ou problemas.
-ms.openlocfilehash: b203feee61bf44af99ea802992e1fdc3c416c037
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 2bf4857ebb794baef8098194d90cff7fee1ecc8f
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232630"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904569"
 ---
-# <a name="get-assistance-from-your-subscriptions-administrator"></a>Obtenha assistência do administrador de assinaturas
+# <a name="get-assistance-from-your-subscriptions-administrator"></a>Obtenha assistência de seu administrador de assinaturas
 Caso sua assinatura do Visual Studio seja fornecida pelo trabalho ou pela escola, provavelmente, ela foi atribuída a você por um administrador de assinaturas ou "administrador".  Os administradores podem atribuir ou remover assinaturas, alterar endereços de email de credenciais, determinar se você tem a capacidade de baixar software e executar outras funções relacionadas à sua assinatura.
 
 Considerando o porte e a complexidade de muitas organizações, você pode não estar ciente de quem é o administrador; portanto, pode ser difícil saber onde obter ajuda.  Adicionamos um novo recurso ao portal do assinante para ajudá-lo a contatar o administrador.   
 
 ## <a name="how-to-contact-your-admin"></a>Como contatar o administrador
-1. Entre no portal do assinante em https://my.visualstudio.com
+1. Entre no portal do assinante em <https://my.visualstudio.com>
 2. Clique na guia **Assinaturas**. 
 3. Clique no botão **Contatar meu Administrador** no canto superior direito. 
    > [!div class="mx-imgBorder"]
@@ -30,7 +30,7 @@ Considerando o porte e a complexidade de muitas organizações, você pode não 
 6. Por fim, clique em **Enviar**.
 
 > [!NOTE]
-> **Super admins:**  Para definir o endereço de e-mail para o qual são enviadas as solicitações "Entre em contato com meu admin", especifique esse endereço nas [Preferências](admin-prefs.md#contact-email-address)de Acordo .
+> **Superadministradores:**  Para definir o endereço de email para o qual as solicitações "contatar meu administrador" são enviadas, especifique esse endereço nas [preferências de contrato](admin-prefs.md#contact-email-address).
 
 ## <a name="resources"></a>Recursos
 - [Suporte à administração e às assinaturas do Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
@@ -43,7 +43,7 @@ Considerando o porte e a complexidade de muitas organizações, você pode não 
 
 ## <a name="next-steps"></a>Próximas etapas
 Caso ainda não tenha feito isso, recomendamos a ativação desses benefícios para aproveitar ao máximo sua assinatura do Visual Studio:
-- [Visual Studio IDE](vs-ide-benefit.md)
+- [IDE do Visual Studio](vs-ide-benefit.md)
 - [Azure](vs-azure.md)
 - [Azure DevOps](vs-azure-devops.md)
 

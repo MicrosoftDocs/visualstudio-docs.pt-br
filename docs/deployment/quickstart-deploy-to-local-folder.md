@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3355636eba7556a472d8ce272437fb07c30714be
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: da13cb2b249146c7a29abbab03b66f77594abf4b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184143"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285394"
 ---
 # <a name="deploy-an-app-to-a-local-folder-using-visual-studio"></a>Implantar um aplicativo em uma pasta local usando o Visual Studio
 
@@ -34,7 +34,7 @@ ms.locfileid: "84184143"
 
 1. Na caixa de diálogo **publicar** , selecione **pasta**.
 
-    ![Escolher pasta como um destino de publicação](../deployment/media/quickstart-publish-folder.png "Escolher pasta")
+    ![Escolher pasta como um destino de publicação](../deployment/media/quickstart-publish-folder-new.png "Escolher pasta")
 
 1. Insira um caminho ou selecione **procurar** para especificar uma pasta.
 

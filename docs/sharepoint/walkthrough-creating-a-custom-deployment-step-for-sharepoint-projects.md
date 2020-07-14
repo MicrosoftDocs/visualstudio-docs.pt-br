@@ -1,7 +1,7 @@
 ---
 title: Criar etapa de implantação personalizada para projetos do SharePoint
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0053b279dfdc0fd80608efb7fb663cacf217f1c7
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 56fac2be1e73de5df9da8aa13e6631c4cc9d1022
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984949"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015889"
 ---
 # <a name="walkthrough-create-a-custom-deployment-step-for-sharepoint-projects"></a>Walkthrough: criar uma etapa de implantação personalizada para projetos do SharePoint
   Quando você implanta um projeto do SharePoint, o Visual Studio executa uma série de etapas de implantação em uma ordem específica. O Visual Studio inclui muitas etapas de implantação internas, mas você também pode criar as suas próprias.
@@ -39,7 +38,7 @@ ms.locfileid: "72984949"
 
 - Testando a nova etapa de implantação.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
  Você precisa dos seguintes componentes no computador de desenvolvimento para concluir este passo a passos:
 
 - Edições com suporte do Windows, SharePoint e Visual Studio.
@@ -69,9 +68,9 @@ ms.locfileid: "72984949"
 
 1. Inicie o [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
 
-2. Na barra de menus, selecione **Arquivo** > **Novo** > **Projeto**.
+2. Na barra de menus, escolha **arquivo**  >  **novo**  >  **projeto**.
 
-3. Na caixa de diálogo **novo projeto** , expanda os nós  **C# Visual** ou **Visual Basic** e, em seguida, escolha o nó **extensibilidade** .
+3. Na caixa de diálogo **novo projeto** , expanda os nós **Visual C#** ou **Visual Basic** e, em seguida, escolha o nó **extensibilidade** .
 
     > [!NOTE]
     > O nó **extensibilidade** só estará disponível se você instalar o SDK do Visual Studio. Para obter mais informações, consulte a seção pré-requisitos anteriormente neste tópico.
@@ -80,19 +79,19 @@ ms.locfileid: "72984949"
 
 5. Escolha o modelo de **projeto VSIX** , nomeie o projeto **UpgradeDeploymentStep**e, em seguida, escolha o botão **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adiciona o projeto **UpgradeDeploymentStep** ao **Gerenciador de soluções**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Adiciona o projeto **UpgradeDeploymentStep** ao **Gerenciador de soluções**.
 
 #### <a name="to-create-the-extension-project"></a>Para criar o projeto de extensão
 
 1. No **Gerenciador de soluções**, abra o menu de atalho para o nó da solução UpgradeDeploymentStep, escolha **Adicionar**e, em seguida, escolha **novo projeto**.
 
-2. Na caixa de diálogo **novo projeto** , expanda os nós  **C# Visual** ou **Visual Basic** e, em seguida, escolha o nó **Windows** .
+2. Na caixa de diálogo **novo projeto** , expanda os nós **Visual C#** ou **Visual Basic** e, em seguida, escolha o nó **Windows** .
 
 3. Na parte superior da caixa de diálogo, escolha **.NET Framework 4,5** na lista de versões do .NET Framework.
 
 4. Escolha o modelo de projeto de **biblioteca de classes** , nomeie o projeto **DeploymentStepExtension**e, em seguida, escolha o botão **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adiciona o projeto **DeploymentStepExtension** à solução e abre o arquivo de código de Class1 padrão.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Adiciona o projeto **DeploymentStepExtension** à solução e abre o arquivo de código de Class1 padrão.
 
 5. Exclua o arquivo de código Class1 do projeto.
 
@@ -100,7 +99,7 @@ ms.locfileid: "72984949"
 
 1. No **Gerenciador de soluções**, abra o menu de atalho para o nó da solução UpgradeDeploymentStep, escolha **Adicionar**e, em seguida, escolha **novo projeto**.
 
-2. Na caixa de diálogo **novo projeto** , expanda  **C# Visual** ou **Visual Basic**e, em seguida, escolha o nó **Windows** .
+2. Na caixa de diálogo **novo projeto** , expanda **Visual C#** ou **Visual Basic**e, em seguida, escolha o nó **Windows** .
 
 3. Na parte superior da caixa de diálogo, escolha **.NET Framework 3,5** na lista de versões do .NET Framework.
 
@@ -140,7 +139,7 @@ ms.locfileid: "72984949"
     - Microsoft. VisualStudio. SharePoint. Commands
 
 ## <a name="define-the-custom-deployment-step"></a>Definir a etapa de implantação personalizada
- Crie uma classe que define a etapa de implantação de atualização. Para definir a etapa de implantação, a classe implementa a interface <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep>. Implemente essa interface sempre que desejar definir uma etapa de implantação personalizada.
+ Crie uma classe que define a etapa de implantação de atualização. Para definir a etapa de implantação, a classe implementa a <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep> interface. Implemente essa interface sempre que desejar definir uma etapa de implantação personalizada.
 
 #### <a name="to-define-the-custom-deployment-step"></a>Para definir a etapa de implantação personalizada
 
@@ -155,7 +154,7 @@ ms.locfileid: "72984949"
 ## <a name="create-a-deployment-configuration-that-includes-the-custom-deployment-step"></a>Criar uma configuração de implantação que inclui a etapa de implantação personalizada
  Crie uma extensão de projeto para a nova configuração de implantação, que inclui várias etapas de implantação internas e a nova etapa de implantação de atualização. Ao criar essa extensão, você ajuda os desenvolvedores do SharePoint a usar a etapa de implantação de atualização em projetos do SharePoint.
 
- Para criar a configuração de implantação, a classe implementa a interface <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension>. Implemente essa interface sempre que desejar criar uma extensão de projeto do SharePoint.
+ Para criar a configuração de implantação, a classe implementa a <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> interface. Implemente essa interface sempre que desejar criar uma extensão de projeto do SharePoint.
 
 #### <a name="to-create-the-deployment-configuration"></a>Para criar a configuração de implantação
 
@@ -205,7 +204,7 @@ ms.locfileid: "72984949"
 6. Na lista **tipo** , escolha **Microsoft. VisualStudio. MefComponent**.
 
     > [!NOTE]
-    > Esse valor corresponde ao elemento `MefComponent` no arquivo extension. vsixmanifest. Esse elemento Especifica o nome de um assembly de extensão no pacote VSIX. Para obter mais informações, consulte [elemento MEFComponent (esquema VSX)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\)).
+    > Esse valor corresponde ao `MefComponent` elemento no arquivo extension. vsixmanifest. Esse elemento Especifica o nome de um assembly de extensão no pacote VSIX. Para obter mais informações, consulte [elemento MEFComponent (esquema VSX)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\)).
 
 7. Na lista **origem** , escolha **um projeto na solução atual**.
 
@@ -224,7 +223,7 @@ ms.locfileid: "72984949"
 
 12. Na lista **projeto** , escolha **SharePointCommands**e, em seguida, escolha o botão **OK** .
 
-13. Na barra de menus, escolha **compilar** > **Compilar solução**e, em seguida, certifique-se de que a solução seja compilada sem erros.
+13. Na barra de menus, escolha **criar**  >  **solução de compilação**e, em seguida, certifique-se de que a solução seja compilada sem erros.
 
 14. Verifique se a pasta de saída da compilação do projeto UpgradeDeploymentStep agora contém o arquivo UpgradeDeploymentStep. vsix.
 
@@ -239,21 +238,21 @@ ms.locfileid: "72984949"
 
 1. Reinicie o Visual Studio com credenciais administrativas e, em seguida, abra a solução UpgradeDeploymentStep.
 
-2. No projeto DeploymentStepExtension, abra o arquivo de código UpgradeStep e, em seguida, adicione um ponto de interrupção à primeira linha de código no `CanExecute` e `Execute` métodos.
+2. No projeto DeploymentStepExtension, abra o arquivo de código UpgradeStep e, em seguida, adicione um ponto de interrupção à primeira linha de código nos `CanExecute` `Execute` métodos e.
 
-3. Inicie a depuração escolhendo a tecla **F5** ou, na barra de menus, escolhendo **debug** > **iniciar a depuração**.
+3. Inicie a depuração escolhendo a tecla **F5** ou, na barra de menus, escolhendo **depurar**  >  **Iniciar Depuração**.
 
 4. O Visual Studio instala a extensão para a etapa de implantação%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Upgrade para o SharePoint Projects\1.0 e inicia uma instância experimental do Visual Studio. Você testará a etapa de implantação de atualização nesta instância do Visual Studio.
 
 #### <a name="to-create-a-sharepoint-project-with-a-list-definition-and-a-list-instance"></a>Para criar um projeto do SharePoint com uma definição de lista e uma instância de lista
 
-1. Na instância experimental do Visual Studio, na barra de menus, escolha **arquivo** > **novo** **projeto**de > .
+1. Na instância experimental do Visual Studio, na barra de menus, escolha **arquivo**  >  **novo**  >  **projeto**.
 
-2. Na caixa de diálogo **novo projeto** , expanda o nó **Visual C#**  ou o nó **Visual Basic** , expanda o nó **SharePoint** e escolha o nó **2010** .
+2. Na caixa de diálogo **novo projeto** , expanda o nó do **Visual C#** ou o nó **Visual Basic** , expanda o nó **SharePoint** e escolha o nó **2010** .
 
 3. Na parte superior da caixa de diálogo, verifique se **.NET Framework 3,5** aparece na lista de versões do .NET Framework.
 
-    Os projetos para [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] e [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] exigem esta versão do .NET Framework.
+    Projetos para [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] e [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] exigem esta versão do .NET Framework.
 
 4. Na lista de modelos de projeto, escolha **projeto do SharePoint 2010**, nomeie o projeto **EmployeesListDefinition**e, em seguida, escolha o botão **OK** .
 
@@ -264,9 +263,9 @@ ms.locfileid: "72984949"
    > [!NOTE]
    > A etapa de implantação de atualização não dá suporte a soluções em área restrita.
 
-7. Escolha o botão **concluir** .
+7. Escolha o botão **Concluir**.
 
-    [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] cria o projeto EmployeesListDefinition.
+    [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]cria o projeto EmployeesListDefinition.
 
 8. Abra o menu de atalho para o projeto EmployeesListDefinition, escolha **Adicionar**e, em seguida, escolha **novo item**.
 
@@ -284,23 +283,23 @@ ms.locfileid: "72984949"
 
     3. **Padrão (em branco)** é escolhido na lista **criar uma lista personalizável baseada em:** .
 
-       [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] cria o item de lista Employees com uma coluna Title e uma única instância vazia e abre o designer de lista.
+       [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]cria o item de lista Employees com uma coluna Title e uma única instância vazia e abre o designer de lista.
 
 12. No designer de lista, na guia **colunas** , escolha a linha **digite um nome de coluna novo ou existente** e, em seguida, adicione as seguintes colunas na lista **nome de exibição da coluna** :
 
     1. Nome
 
-    2. Corporativa
+    2. Empresa
 
     3. Telefone comercial
 
-    4. Mensagens
+    4. Email
 
 13. Salve todos os arquivos e, em seguida, feche o designer de lista.
 
 14. Em **Gerenciador de soluções**, expanda o nó **lista de funcionários** e, em seguida, expanda o nó filho da instância da **lista de funcionários** .
 
-15. No arquivo *Elements. xml* , substitua o XML padrão neste arquivo pelo XML a seguir. Esse XML altera o nome da lista para **Employees** e adiciona informações para um funcionário chamado Jim Hance.
+15. No arquivo *Elements.xml* , substitua o XML padrão neste arquivo pelo XML a seguir. Esse XML altera o nome da lista para **Employees** e adiciona informações para um funcionário chamado Jim Hance.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -325,7 +324,7 @@ ms.locfileid: "72984949"
     </Elements>
     ```
 
-16. Salve e feche o arquivo *Elements. xml* .
+16. Salve e feche o arquivo *Elements.xml* .
 
 17. Abra o menu de atalho para o projeto EmployeesListDefinition e, em seguida, escolha **abrir** ou **Propriedades**.
 
@@ -339,17 +338,17 @@ ms.locfileid: "72984949"
 
 2. Na janela **Propriedades** , verifique se a propriedade **configuração de implantação ativa** está definida como **padrão**.
 
-3. Escolha a tecla **F5** ou, na barra de menus, escolha **depurar** > **Iniciar Depuração**.
+3. Escolha a tecla **F5** ou, na barra de menus, escolha **depurar**  >  **Iniciar Depuração**.
 
 4. Verifique se o projeto é compilado com êxito, se o navegador da Web abre no site do SharePoint, se o item **listas** na barra de início rápido inclui a nova lista **Employees** e se a lista **Employees** inclui a entrada para Jim Hance.
 
-5. Feche o navegador da Web.
+5. Feche o navegador da web.
 
 #### <a name="to-modify-the-list-definition-and-list-instance-and-redeploy-them"></a>Para modificar a definição da lista e a instância da lista e reimplantá-las
 
-1. No projeto EmployeesListDefinition, abra o arquivo *Elements. xml* que é um filho do item de projeto **instância da lista de funcionários** .
+1. No projeto EmployeesListDefinition, abra o arquivo *Elements.xml* que é um filho do item de projeto **instância da lista de funcionários** .
 
-2. Remova o elemento `Data` e seus filhos para remover a entrada de Jim Hance da lista.
+2. Remova o `Data` elemento e seus filhos para remover a entrada de Jim Hance da lista.
 
      Quando você concluir, o arquivo deverá conter o XML a seguir.
 
@@ -365,7 +364,7 @@ ms.locfileid: "72984949"
     </Elements>
     ```
 
-3. Salve e feche o arquivo *Elements. xml* .
+3. Salve e feche o arquivo *Elements.xml* .
 
 4. Abra o menu de atalho para o item de projeto **lista de funcionários** e, em seguida, escolha **abrir** ou **Propriedades**.
 
@@ -377,7 +376,7 @@ ms.locfileid: "72984949"
 
      Essa ação remove esses campos da exibição padrão da lista de **funcionários** no site do SharePoint.
 
-8. Inicie a depuração escolhendo a tecla **F5** ou, na barra de menus, escolhendo **debug** > **iniciar a depuração**.
+8. Inicie a depuração escolhendo a tecla **F5** ou, na barra de menus, escolhendo **depurar**  >  **Iniciar Depuração**.
 
 9. Verifique se a caixa de diálogo **conflitos de implantação** é exibida.
 
@@ -432,15 +431,15 @@ ms.locfileid: "72984949"
 
     Essa ação remove esses campos da exibição padrão da lista de **funcionários** no site do SharePoint.
 
-5. Inicie a depuração escolhendo a tecla **F5** ou, na barra de menus, escolhendo **debug** > **iniciar a depuração**.
+5. Inicie a depuração escolhendo a tecla **F5** ou, na barra de menus, escolhendo **depurar**  >  **Iniciar Depuração**.
 
-6. Verifique se o código na outra instância do Visual Studio é interrompido no ponto de interrupção que você definiu anteriormente no método `CanExecute`.
+6. Verifique se o código na outra instância do Visual Studio é interrompido no ponto de interrupção que você definiu anteriormente no `CanExecute` método.
 
-7. Escolha a tecla **F5** novamente ou, na barra de menus, escolha **depurar** > **continuar**.
+7. Escolha a tecla **F5** novamente ou, na barra de menus, escolha **depurar**  >  **continuar**.
 
-8. Verifique se o código é interrompido no ponto de interrupção que você definiu anteriormente no método `Execute`.
+8. Verifique se o código é interrompido no ponto de interrupção que você definiu anteriormente no `Execute` método.
 
-9. Escolha a tecla **F5** ou, na barra de menus, escolha **depurar** > **continuar** uma hora final.
+9. Escolha a tecla **F5** ou, na barra de menus, escolha **depurar**  >  **continuar** uma hora final.
 
      O navegador da Web abre o site do SharePoint.
 
@@ -467,13 +466,13 @@ ms.locfileid: "72984949"
 
 #### <a name="to-remove-the-list-definition-from-the-sharepoint-site"></a>Para remover a definição de lista do site do SharePoint
 
-1. Na instância experimental do Visual Studio, na barra de menus, escolha **criar** > **Cancelar**.
+1. Na instância experimental do Visual Studio, na barra de menus, escolha **criar**  >  **Cancelar**.
 
      O Visual Studio cancela a definição de lista do site do SharePoint.
 
 #### <a name="to-uninstall-the-extension"></a>Para desinstalar a extensão
 
-1. Na instância experimental do Visual Studio, na barra de menus, escolha **ferramentas** > **extensões e atualizações**.
+1. Na instância experimental do Visual Studio, na barra de menus, escolha **ferramentas**  >  **extensões e atualizações**.
 
      A caixa de diálogo **Extensões e Atualizações** é aberta.
 

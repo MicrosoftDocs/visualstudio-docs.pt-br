@@ -6,21 +6,21 @@ manager: jillfra
 assetId: a4fb79ed-384f-4183-9f74-5cac257206b9
 ms.custom: vs-azure
 ms.workload: azure-vs
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 7b9df8c5609c92a6b6631d1ed9fdda8d65e9b605
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: 8c9f65291d43a55ee75840591698c26fdde6e967
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301695"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280538"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>Configurando seu projeto do Azure no Visual Studio para usar várias configurações de serviço
 
 Um projeto de serviço de nuvem do Azure no Visual Studio inclui três arquivos de configuração: `ServiceDefinition.csdef`, `ServiceConfiguration.Local.cscfg` e `ServiceConfiguration.Cloud.cscfg`:
 
-- O `ServiceDefinition.csdef` é implantado no Azure para descrever os requisitos do serviço de nuvem e suas funções, e para fornecer as configurações que se aplicam a todas as instâncias. As configurações podem ser lidas em tempo de execução usando a API de tempo de execução do azure Service Hosting. Esse arquivo poderá ser atualizado no Azure somente quando o serviço de nuvem for interrompido.
+- O `ServiceDefinition.csdef` é implantado no Azure para descrever os requisitos do serviço de nuvem e suas funções, e para fornecer as configurações que se aplicam a todas as instâncias. As configurações podem ser lidas em tempo de execução usando a API de tempo de execução de Hospedagem de serviço do Azure. Esse arquivo poderá ser atualizado no Azure somente quando o serviço de nuvem for interrompido.
 - O `ServiceConfiguration.Local.cscfg` e o `ServiceConfiguration.Cloud.cscfg` fornecem valores para as configurações no arquivo de definição e especificam o número de instâncias a serem executadas para cada função. O arquivo "Local" contém os valores usados na depuração local; o arquivo "Nuvem" é implantado no Azure como `ServiceConfiguration.cscfg` e fornece as configurações para o ambiente do servidor. Esse arquivo pode ser atualizado enquanto o serviço de nuvem está em execução no Azure.
 
 Os parâmetros de configuração são gerenciados e modificados no Visual Studio usando as páginas de propriedade para a função aplicável (clique com o botão direito na função e selecione **Propriedades** ou clique duas vezes na função). As alterações podem ser definidas para qualquer configuração que seja escolhida na lista suspensa **Configuração do serviço**. As propriedades para funções da Web e de trabalho são semelhantes, exceto onde estiver descrito nas seções a seguir.
@@ -39,13 +39,13 @@ Seleciona qual arquivo do `ServiceConfiguration.*.cscfg` é afetado pelas altera
 
 Definir a **instância** propriedade de contagem para o número de instâncias o serviço deve ser executado para esta função.
 
-Defina a propriedade **Tamanho da VM** como **Extra Pequena**, **Pequena**, **Média**, **Grande** ou **Extra Grande**.  Para obter mais informações, consulte [Tamanhos para Serviços em Nuvem](/azure/cloud-services/cloud-services-sizes-specs).
+Defina a propriedade **Tamanho da VM** como **Extra Pequena**, **Pequena**, **Média**, **Grande** ou **Extra Grande**.  Para obter mais informações, consulte [tamanhos dos serviços de nuvem](/azure/cloud-services/cloud-services-sizes-specs).
 
 ### <a name="startup-action-web-role-only"></a>Ação de inicialização (somente função Web)
 
 Defina essa propriedade para especificar que o Visual Studio deve iniciar um navegador da Web para os pontos de extremidade HTTP ou os pontos de extremidade HTTPS, ou ambos, quando você iniciar a depuração.
 
-A opção **ponto final HTTPS** só está disponível se você já tiver definido um ponto final HTTPS para sua função. Você pode definir um ponto de extremidade HTTPS na página de propriedades **pontos de extremidade** .
+A opção de **ponto de extremidade https** só estará disponível se você já tiver definido um ponto de extremidade HTTPS para sua função. Você pode definir um ponto de extremidade HTTPS na página de propriedades **pontos de extremidade** .
 
 Se você já tiver adicionado um ponto de extremidade HTTPS, a opção de ponto de extremidade HTTPS será habilitada por padrão e o Visual Studio iniciará um navegador para esse ponto de extremidade quando você iniciar a depuração, além de um navegador para o ponto de extremidade HTTP, supondo que as opções de inicialização estejam habilitadas.
 
@@ -55,7 +55,7 @@ Por padrão, o diagnóstico é habilitado para a função web. A conta de armaze
 
 ## <a name="settings-page"></a>Página Configurações
 
-Na página **Configurações**, você pode adicionar as configurações a uma configuração como pares nome-valor. O código em execução na função pode ler os valores de suas configurações em tempo de execução usando classes fornecidas pela Biblioteca Gerenciada do [Azure,](/previous-versions/azure/dn602775(v=azure.11))especificamente, o método [GetConfigurationSettingValue.](/previous-versions/azure/reference/ee772857(v=azure.100))
+Na página **Configurações**, você pode adicionar as configurações a uma configuração como pares nome-valor. O código em execução na função pode ler os valores de suas definições de configuração em tempo de execução usando classes fornecidas pela [biblioteca gerenciada do Azure](/previous-versions/azure/dn602775(v=azure.11)), especificamente, o método [GetConfigurationSettingValue](/previous-versions/azure/reference/ee772857(v=azure.100)) .
 
 ### <a name="configuring-a-connection-string-for-a-storage-account"></a>Configurando uma cadeia de conexão para uma conta de armazenamento
 

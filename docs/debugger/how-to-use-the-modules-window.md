@@ -1,9 +1,9 @@
 ---
-title: Exibir as DLLs e executáveis
+title: Exibir DLLs e executáveis
 titleSuffix: Visual Studio Modules window
 ms.custom: seodec18
 ms.date: 11/04/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.modules
 dev_langs:
@@ -25,59 +25,59 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 400961eaa14b87d70a685a87be5df48ac92c8281
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4fa284a44f75503a2890a15981d2b4f9947be2fa
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62906136"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348672"
 ---
-# <a name="view-dlls-and-executables-in-the-modules-window-c-c-visual-basic-f"></a>Exibir as DLLs e executáveis na janela de módulos (C#, C++, Visual Basic, F#)
+# <a name="view-dlls-and-executables-in-the-modules-window-c-c-visual-basic-f"></a>Exibir DLLs e executáveis na janela módulos (C#, C++, Visual Basic, F #)
 
-Durante a depuração do Visual Studio, o **módulos** janela lista e mostra informações sobre as DLLs e executáveis (*.exe* arquivos) seu aplicativo usa.
+Durante a depuração do Visual Studio, a janela **módulos** lista e mostra informações sobre as DLLs e os executáveis (arquivos *. exe* ) que seu aplicativo usa.
 
 > [!NOTE]
-> A janela de módulos não está disponível para depuração de script ou SQL.
+> A janela Modules não está disponível para depuração de script ou SQL.
 
 ## <a name="use-the-modules-window"></a>Usar a janela Módulos
 
-Para abrir a janela de módulos, enquanto você estiver depurando, selecione **Debug** > **Windows** > **módulos** (ou pressione **Ctrl + Alt + U** ).
+Para abrir a janela módulos, enquanto estiver Depurando, selecione **depurar**  >  **Windows**  >  **módulos** do Windows (ou pressione **Ctrl + Alt + U**).
 
-Por padrão, a janela **Módulos** classifica os módulos pela ordem de carregamento. Para classificar por qualquer coluna da janela, selecione o cabeçalho na parte superior da coluna.
+Por padrão, a janela **Módulos** classifica os módulos pela ordem de carregamento. Para classificar por qualquer coluna de janela, selecione o cabeçalho na parte superior da coluna.
 
 ## <a name="load-symbols"></a>Carregar símbolos
 
-O **Status do símbolo** coluna o **módulos** janela mostra quais módulos têm símbolos de depuração carregados. Se o status for **carregamento de símbolos ignorado**, **não é possível localizar ou abrir o arquivo PDB**, ou **carregamento desabilitado pela configuração de inclusão/exclusão**, você pode carregar símbolos manualmente. Para obter mais informações sobre como carregar e usando símbolos, consulte [especificar arquivos de símbolo (. PDB) e código-fonte](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
+A coluna **status do símbolo** na janela **módulos** mostra quais módulos têm símbolos de depuração carregados. Se o status for **ignorado ao carregar símbolos**, **não for possível localizar ou abrir o arquivo PDB**ou **carregar desabilitado pela configuração incluir/excluir**, você poderá carregar os símbolos manualmente. Para obter mais informações sobre como carregar e usar símbolos, consulte [especificar símbolo (. pdb) e arquivos de origem](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
-**Para carregar símbolos manualmente:**
+**Para carregar os símbolos manualmente:**
 
-1. No **módulos** janela, clique com botão direito do módulo para o qual os símbolos não carregados.
+1. Na janela **módulos** , clique com o botão direito do mouse no módulo para o qual os símbolos não foram carregados.
 
-   - Selecione **informações de carga de símbolo** para obter detalhes sobre por que os símbolos não foi carregado.
+   - Selecione **informações de carregamento de símbolo** para obter detalhes sobre por que os símbolos não foram carregados.
 
    - Selecione **carregar símbolos** para carregar os símbolos manualmente.
 
-1. Se os símbolos não são carregados, selecione **configurações de símbolo** para abrir o **opções** caixa de diálogo e especificar ou alterar locais de carregamento de símbolo.
+1. Se os símbolos não forem carregados, selecione **configurações de símbolo** para abrir a caixa de diálogo **Opções** e especifique ou altere os locais de carregamento de símbolos.
 
-   Você pode baixar os símbolos de servidores públicos de símbolos Microsoft ou de outros servidores ou carregar símbolos de uma pasta no seu computador. Para obter detalhes, consulte [especificar locais de símbolo e o comportamento de carregamento](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#BKMK_Specify_symbol_locations_and_loading_behavior).
+   Você pode baixar símbolos dos servidores de símbolos públicos da Microsoft ou outros servidores ou carregar símbolos de uma pasta no seu computador. Para obter detalhes, consulte [especificar locais de símbolo e comportamento de carregamento](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#BKMK_Specify_symbol_locations_and_loading_behavior).
 
-**Para alterar as configurações de comportamento de carregamento de símbolo:**
+**Para alterar as configurações de comportamento de carregamento de símbolos:**
 
 1. Na janela **Módulos**, clique com o botão direito do mouse direito em qualquer módulo.
 
 1. Selecione **configurações de símbolo**.
 
-1. Selecione **carregar todos os símbolos**, ou selecione quais módulos para incluir ou excluir.
+1. Selecione **carregar todos os símbolos**ou selecione os módulos a serem incluídos ou excluídos.
 
-1. Selecione **OK**. As alterações entram em vigor na próxima sessão de depuração.
+1. Selecione **OK**. As alterações entrarão em vigor na próxima sessão de depuração.
 
-**Para alterar o comportamento de um módulo específico de carregamento de símbolo:**
+**Para alterar o comportamento de carregamento de símbolos para um módulo específico:**
 
 1. Na janela **Módulos**, clique com o botão direito do mouse no módulo.
 
-1. No menu de atalho, marque ou desmarque **sempre carregar automaticamente**. As alterações entram em vigor na próxima sessão de depuração.
+1. No menu de clique com o botão direito do mouse, selecione ou desmarque **sempre carregar automaticamente**. As alterações entrarão em vigor na próxima sessão de depuração.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Interrompendo a execução](/previous-versions/visualstudio/visual-studio-2010/7z9se2d8(v=vs.100))
-- [Exibição de dados no depurador](../debugger/viewing-data-in-the-debugger.md)
-- [Especificar arquivos de símbolo (.pdb) e de origem](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
+- [Exibindo dados no depurador](../debugger/viewing-data-in-the-debugger.md)
+- [Especificar o símbolo (. pdb) e os arquivos de origem](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

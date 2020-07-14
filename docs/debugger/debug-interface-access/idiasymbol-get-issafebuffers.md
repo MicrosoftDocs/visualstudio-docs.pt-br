@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_isSafeBuffers | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f4c3ab653c0a5540410d8e3e0b5426c4d0bcde5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 84123d88bc379ea670caca90d66207fc6e16f26f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740085"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463207"
 ---
 # <a name="idiasymbolget_issafebuffers"></a>IDiaSymbol::get_isSafeBuffers
-Recupera um sinalizador que especifica se a diretiva de pré-processador para um buffer seguro é usada. Use quando a [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) for definida como `SymTagFunction`.
+Recupera um sinalizador que especifica se a diretiva de pré-processador para um buffer seguro é usada. Use quando a [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) for definida como `SymTagFunction` .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,10 +33,10 @@ HRESULT get_isSafeBuffers( 
 #### <a name="parameters"></a>Parâmetros
  `pRetVal`
 
-fora Retorna `TRUE` se o ponteiro usa uma diretiva de pré-processador para um buffer seguro; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se o ponteiro usa uma diretiva de pré-processador para um buffer seguro; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
@@ -50,6 +50,6 @@ fora Retorna `TRUE` se o ponteiro usa uma diretiva de pré-processador para um b
 
  DLL: msdia100.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [strict_gs_check](/cpp/preprocessor/strict-gs-check)

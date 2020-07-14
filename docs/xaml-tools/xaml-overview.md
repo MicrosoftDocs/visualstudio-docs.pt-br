@@ -1,16 +1,16 @@
 ---
 title: Visão geral do XAML
-ms.date: 05/20/2020
-ms.topic: reference
+ms.date: 06/23/2020
+ms.topic: overview
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 97f3bc7777023903d5fc38ad1bda7cde45b683b6
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: e14e23f9820301374bd435484ba784edf50294bb
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183477"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331942"
 ---
 # <a name="overview-of-xaml"></a>Visão geral do XAML
 
@@ -28,15 +28,21 @@ O código XAML a seguir define um controle de botão simples.
 
 O XAML também é usado para definir fluxos de trabalho em [aplicativos do WF (Windows Workflow Foundation)](/dotnet/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml).
 
+## <a name="xaml-code-editor"></a>Editor de código XAML
+
+O [Editor de código XAML](xaml-code-editor.md) no IDE do Visual Studio inclui todas as ferramentas necessárias para criar aplicativos WPF e UWP para a plataforma Windows e para Xamarin. Forms. E, embora o IDE (ambiente de desenvolvimento integrado) no Visual Studio tenha muitos recursos que você pode usar para desenvolver aplicativos para outras plataformas, ele também tem alguns recursos que são exclusivos do XAML.
+
 ## <a name="xaml-designer"></a>XAML Designer
 
-O Visual Studio e o Blend para Visual Studio fornecem um Designer XAML que ajuda a criar interfaces do usuário (IU) para aplicativos WPF, UWP e Xamarin.Forms. Você pode arrastar controles das janelas Caixa de ferramentas ou Ativos e definir propriedades na janela Propriedades. Quando você faz isso, o Visual Studio e o Blend para Visual Studio criam o código XAML correspondente. Se você preferir, também poderá editar diretamente o código XAML.
-
-Os artigos neste conjunto de documentação discutem o Designer XAML no Visual Studio e no Blend para Visual Studio.
+O Visual Studio e o Blend para Visual Studio fornecem um [Designer XAML](creating-a-ui-by-using-xaml-designer-in-visual-studio.md) que ajuda a criar interfaces de usuário (IU) para aplicativos WPF, UWP e Xamarin. Forms. Você pode arrastar controles das janelas Caixa de ferramentas ou Ativos e definir propriedades na janela Propriedades. Quando você faz isso, o Visual Studio e o Blend para Visual Studio criam o código XAML correspondente. Se você preferir, também poderá editar diretamente o código XAML.
 
 ## <a name="whats-new"></a>Novidades
 
-Para obter as informações mais recentes, consulte as novidades [em ferramentas de desenvolvedor XAML na](https://devblogs.microsoft.com/visualstudio/whats-new-in-xaml-developer-tools-in-visual-studio-2019-for-wpf-uwp/) postagem do blog do visual Studio 2019, os aprimoramentos das ferramentas XAML na postagem do blog do [visual studio 2019 versão 16,7 Preview 1](https://devblogs.microsoft.com/visualstudio/improvements-to-xaml-tooling-in-visual-studio-2019-version-16-7-preview-1/) e os [novos recursos XAML no vídeo do Visual Studio](https://youtu.be/yI9OyA4ZM2E) no YouTube.
+Para obter as informações mais recentes, consulte os seguintes recursos:
+
+- As **[melhorias nas ferramentas XAML na postagem no blog do Visual Studio 2019 versão 16,7 Preview 1](https://devblogs.microsoft.com/visualstudio/improvements-to-xaml-tooling-in-visual-studio-2019-version-16-7-preview-1/)**
+- A postagem **[novidades nas ferramentas de desenvolvedor XAML na publicação do blog do Visual Studio 2019](https://devblogs.microsoft.com/visualstudio/whats-new-in-xaml-developer-tools-in-visual-studio-2019-for-wpf-uwp/)**
+- Os **[novos recursos XAML no vídeo do Visual Studio](https://youtu.be/yI9OyA4ZM2E)** sobre o YouTube
 
 ## <a name="see-also"></a>Veja também
 

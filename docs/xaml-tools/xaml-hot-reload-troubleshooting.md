@@ -9,15 +9,14 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 73d8653b2bcf06801c18e21d9a13b21843abc7d7
-ms.sourcegitcommit: 9de7d25056da59df0941508c80c0b12766ba6580
+ms.openlocfilehash: 447725fd27ab81b85890d37a8f0df8a35ad5fbee
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77706374"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328473"
 ---
 # <a name="troubleshooting-xaml-hot-reload"></a>Solução de problemas de Recarga Dinâmica de XAML
 
@@ -35,30 +34,30 @@ O recurso é habilitado por padrão. Quando você começar a depurar seu aplicat
 
 ![Hot recarregamento de XAML disponível](../debugger/media/xaml-hot-reload-available.png)
 
-Se você não vir a barra de ferramentas no aplicativo, abra **as opções** de > de **depuração** > **geral**. Verifique se as duas opções, **habilitar ferramentas de depuração da interface do usuário para XAML** e **habilitar o Hot recarregamento de XAML** estão selecionadas.
+Se você não vir a barra de ferramentas no aplicativo, abra **Debug**  >  **as opções**de depuração  >  **geral**. Verifique se as duas opções, **habilitar ferramentas de depuração da interface do usuário para XAML** e **habilitar o Hot recarregamento de XAML** estão selecionadas.
 
 ![Habilitar o Hot recarregamento de XAML](../debugger/media/xaml-hot-reload-enable.png)
 
-Se essas opções forem selecionadas, vá para a árvore visual dinâmica (**depuração** > **árvore visual**do **Windows** > Live) e verifique se a opção **Mostrar ferramentas de tempo de execução no aplicativo** (na extrema esquerda) está selecionada.
+Se essas opções forem selecionadas, vá para árvore visual dinâmica (**depurar**  >  **Windows**  >  **árvore visual**do Windows Live) e certifique-se de que **Mostrar ferramentas de tempo de execução no** botão da barra de ferramentas do aplicativo (na extrema esquerda) esteja selecionado.
 
 ![Habilitar o Hot recarregamento de XAML](../debugger/media/xaml-hot-reload-show-runtime-tools.png)
 
 ## <a name="verify-that-you-use-start-debugging-rather-than-attach-to-process"></a>Verifique se você usa iniciar depuração em vez de anexar ao processo
 
-O Hot recarregamento de XAML requer que a variável de ambiente `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` seja definida como 1 no momento em que o aplicativo é iniciado. O Visual Studio define isso automaticamente como parte do comando **Debug** > **iniciar a depuração** (ou **F5**). Se você quiser usar o recarregamento de XAML com a **depuração** > **anexar ao comando processar** , em vez disso, defina a variável de ambiente por conta própria.
+O Hot recarregamento de XAML requer que a variável de ambiente `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` seja definida como 1 no momento em que o aplicativo é iniciado. O Visual Studio define isso automaticamente como parte do comando **depurar**  >  **Iniciar Depuração** (ou **F5**). Se você quiser usar o Hot recarregamento de XAML com o comando **debug**  >  **Attach to Process** , em vez disso, defina a variável de ambiente por conta própria.
 
 > [!NOTE]
-> Para definir uma variável de ambiente, use o botão Iniciar para procurar "variável de ambiente" e escolha **Editar as variáveis de ambiente do sistema**. Na caixa de diálogo que é aberta, escolha **variáveis de ambiente**, em seguida, adicione-a como uma variável de usuário e defina o valor como `1`. Para limpar, remova a variável quando terminar a depuração.
+> Para definir uma variável de ambiente, use o botão Iniciar para procurar "variável de ambiente" e escolha **Editar as variáveis de ambiente do sistema**. Na caixa de diálogo que é aberta, escolha **variáveis de ambiente**, em seguida, adicione-a como uma variável de usuário e defina o valor como `1` . Para limpar, remova a variável quando terminar a depuração.
 
 ## <a name="verify-that-your-msbuild-properties-are-correct"></a>Verifique se as propriedades do MSBuild estão corretas
 
-Por padrão, as informações de origem são incluídas em uma configuração de depuração. Ele é controlado pelas propriedades do MSBuild em seus arquivos de projeto (como *. csproj). Para o WPF, a propriedade é `XamlDebuggingInformation`, que deve ser definida como `True`. Para UWP, a propriedade é `DisableXbfLineInfo`, que deve ser definida como `False`. Por exemplo:
+Por padrão, as informações de origem são incluídas em uma configuração de depuração. Ele é controlado pelas propriedades do MSBuild em seus arquivos de projeto (como *. csproj). Para o WPF, a propriedade é `XamlDebuggingInformation` , que deve ser definida como `True` . Para UWP, a propriedade é `DisableXbfLineInfo` , que deve ser definida como `False` . Por exemplo:
 
 WPF:
 
 `<XamlDebuggingInformation>True</XamlDebuggingInformation>`
 
-UWP:
+UWP
 
 `<DisableXbfLineInfo>False</DisableXbfLineInfo>`
 
@@ -70,6 +69,6 @@ Você deve definir manualmente a propriedade correta do MSBuild para dar suporte
 
 Se o arquivo XAML mostrar erros no **lista de erros**, o Hot recarregamento XAML pode não funcionar.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Gravar e depurar o código XAML em execução com o Hot recarregamento de XAML](xaml-hot-reload.md)

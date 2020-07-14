@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f013464143929732da409f5dd9684ed73bcc705
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 56d3267e0c96747a9534f390191e9f8a84effdb8
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633441"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289281"
 ---
 # <a name="msbuild-advanced-concepts"></a>Conceitos avançados do MSBuild
 
@@ -25,14 +25,15 @@ Os documentos desta seção descrevem como usar técnicas avançadas para aprimo
 
 |Title|Descrição|
 |-----------|-----------------|
-|[Lotes](../msbuild/msbuild-batching.md)|Descreve como enviar em lote destinos de build e tarefas baseadas em metadados de item.|
+|[Envio em lote](../msbuild/msbuild-batching.md)|Descreve como enviar em lote destinos de build e tarefas baseadas em metadados de item.|
 |[Transformações](../msbuild/msbuild-transforms.md)|Explica como usar transformações para habilitar a análise de dependência.|
-|[Integração visual studio](../msbuild/visual-studio-integration-msbuild.md)|Discute como usar arquivos de projeto do MSBuild ao compilar o código do Visual Studio IDE.|
-|[Construa vários projetos em paralelo](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)|Descreve como compilar diversos projetos mais rapidamente em computadores com vários processadores ou processadores de vários núcleos.|
-|[Multitargeting](../msbuild/msbuild-multitargeting-overview.md)|Descreve como compilar um aplicativo para ser executado em qualquer uma das várias versões do .NET Framework.|
+|[Integração do Visual Studio](../msbuild/visual-studio-integration-msbuild.md)|Discute como usar arquivos de projeto do MSBuild ao compilar o código do Visual Studio IDE.|
+|[Crie vários projetos em paralelo](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)|Descreve como compilar diversos projetos mais rapidamente em computadores com vários processadores ou processadores de vários núcleos.|
+|[Multidirecionamento](../msbuild/msbuild-multitargeting-overview.md)|Descreve como compilar um aplicativo para ser executado em qualquer uma das várias versões do .NET Framework.|
 |[Práticas recomendadas](../msbuild/msbuild-best-practices.md)|Recomenda as melhores práticas para escrever scripts MSBuild.|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Conceitos do MSBuild](../msbuild/msbuild-concepts.md)
 - [Registrando em log no MSBuild](../msbuild/logging-in-msbuild.md)
+- [Como o MSBuild compila projetos](build-process-overview.md)

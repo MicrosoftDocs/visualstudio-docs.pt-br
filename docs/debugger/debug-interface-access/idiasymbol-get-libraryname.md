@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_libraryName | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b49c9ad6926b963345bc4c1341ab3c7db03c916
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4551fab61ab2ffd4fa499a4337d8dd5e5517eec2
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739939"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463053"
 ---
 # <a name="idiasymbolget_libraryname"></a>IDiaSymbol::get_libraryName
 Recupera o nome do arquivo da biblioteca ou do arquivo de objeto do qual o objeto foi carregado.
@@ -35,11 +35,11 @@ HRESULT get_libraryName ( 
 
 fora Retorna o nome do arquivo da biblioteca ou do arquivo de objeto do qual o objeto foi carregado.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

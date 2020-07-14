@@ -1,19 +1,19 @@
 ---
 title: 'Designer de Fluxo de Trabalho: Depurar XAML'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d9305dbc-af62-4bdd-b03f-c54e3fe9ecc7
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 81c3e20e858fb8501c1c1a564a91270af6a4aaa3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 9be7c8da251a9698e0fceba64e3941ba8fbdf803
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817509"
 ---
 # <a name="how-to-debug-xaml-with-the-workflow-designer"></a>Como: Depuração XAML com designers de Fluxo de Trabalho
 

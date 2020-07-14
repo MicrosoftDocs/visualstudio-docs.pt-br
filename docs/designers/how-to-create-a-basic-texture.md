@@ -1,19 +1,19 @@
 ---
 title: Como criar uma textura básica
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 0222e8bf-d29f-421b-9b1f-123d500fa179
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 916be87824a86e96d6fcb791cf8181d70e1e8104
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b356d8596581b1c289d9b9aa13a3d5b362e39e58
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769090"
 ---
 # <a name="how-to-create-a-basic-texture"></a>Como criar uma textura básica
 
@@ -89,4 +89,4 @@ Como uma próxima etapa, você pode gerar níveis de MIP para essa textura. Para
 
 ## <a name="see-also"></a>Confira também
 
-- [Editor de imagens](../designers/image-editor.md)
+- [Editor de imagem](../designers/image-editor.md)

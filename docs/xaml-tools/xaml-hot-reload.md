@@ -1,6 +1,6 @@
 ---
-title: Escrever e depurar XAML usando XAML Hot Reload
-description: XAML Hot Reload, ou XAML edit e continua, permite que você faça alterações no seu código XAML enquanto executa aplicativos
+title: Gravar e depurar XAML usando o Hot recarregamento de XAML
+description: O Hot recarregamento de XAML ou editar e continuar XAML permite que você faça alterações no código XAML durante a execução de aplicativos
 ms.date: 08/05/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,66 +9,65 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 120ae30b3a33a04f17bd2ec23b747ac41c9427cf
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+ms.openlocfilehash: 875608fbaa2e5c7532371fd95858fe87cdc81ca1
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880089"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815884"
 ---
-# <a name="write-and-debug-running-xaml-code-with-xaml-hot-reload-in-visual-studio"></a>Escreva e depurar o código XAML com XAML Hot Reload no Visual Studio
+# <a name="write-and-debug-running-xaml-code-with-xaml-hot-reload-in-visual-studio"></a>Escrever e depurar o código XAML em execução com o Hot recarregamento de XAML no Visual Studio
 
-O XAML Hot Reload ajuda você a construir sua interface de usuário de aplicativo WPF ou UWP (UI) permitindo que você faça alterações no código XAML enquanto seu aplicativo está em execução. Hot Reload está disponível tanto no Visual Studio quanto no Blend para o Visual Studio. Esse recurso permite que você construa e teste gradualmente o código XAML com o benefício do contexto de dados, estado de autenticação e outra complexidade do mundo real que é difícil de simular durante o tempo de projeto. Se você precisar de ajuda para solucionar problemas XAML Hot Reload, consulte [Solução de problemas XAML Hot Reload](xaml-hot-reload-troubleshooting.md) em vez disso.
+O Hot recarregamento de XAML ajuda você a criar sua interface do usuário do aplicativo do WPF ou UWP, permitindo que você faça alterações no código XAML enquanto seu aplicativo está em execução. A recarga ativa está disponível no Visual Studio e no Blend para Visual Studio. Esse recurso permite criar e testar incrementalmente o código XAML com o benefício do contexto de dados do aplicativo em execução, o estado de autenticação e outras complexidades do mundo real que são difíceis de simular durante o tempo de design. Se você precisar de ajuda para solucionar problemas de recarregamento dinâmico de XAML, consulte [Solucionando problemas de recarga em XAML](xaml-hot-reload-troubleshooting.md) .
 
 > [!NOTE]
-> Se você estiver usando Xamarin.Forms, consulte [XAML Hot Reload for Xamarin.Forms](/xamarin/xamarin-forms/xaml/hot-reload).
+> Se você estiver usando o Xamarin. Forms, consulte [a Hot recarga XAML para Xamarin. Forms](/xamarin/xamarin-forms/xaml/hot-reload).
 
-XAML Hot Reload é especialmente útil nesses cenários:
+O Hot recarregamento de XAML é especialmente útil nesses cenários:
 
-* Corrigindo problemas de iu encontrados em seu código XAML depois que o aplicativo foi iniciado no modo de depuração.
+* Correção de problemas de interface do usuário encontrados no código XAML depois que o aplicativo foi iniciado no modo de depuração.
 
-* Construindo um novo componente de interface do bolso para um aplicativo que está em desenvolvimento, aproveitando o contexto de tempo de execução do seu aplicativo.
+* Criar um novo componente de interface do usuário para um aplicativo que está em desenvolvimento, aproveitando, ao mesmo tempo, o contexto do tempo de execução do aplicativo.
 
-|Tipos de aplicativos suportados|Sistema Operacional e Ferramentas|
+|Tipos de aplicativos com suporte|Sistema operacional e ferramentas|
 |-|-|-|
-|Windows Presentation Foundation (WPF) |.NET Framework 4.6+ e .NET Core</br>Windows 7 e acima |
-|Aplicativos Universais do Windows (UWP)|Windows 10 e acima, com o [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) 14393+ |
+|Windows Presentation Foundation (WPF) |.NET Framework 4.6 + e .NET Core</br>Windows 7 e posterior |
+|Aplicativos universais do Windows (UWP)|Windows 10 e posterior, com o [SDK do Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk) 14393 + |
 
-A ilustração a seguir mostra o uso da Árvore Visual Ao Vivo para abrir seu código-fonte e, em seguida, XAML Hot Reload para alterar o texto do botão e a cor do botão.
+A ilustração a seguir mostra o uso da árvore visual ao vivo para abrir o código-fonte e, em seguida, o recarregamento de XAML para alterar o texto do botão e a cor do botão.
 
 ![Recarga Dinâmica de XAML](../debugger/media/xaml-hot-reload-using.gif)
 
 > [!NOTE]
-> Visual Studio XAML Hot Reload é atualmente suportado apenas ao executar seu aplicativo no Visual Studio ou Blend for Visual Studio com o depurador conectado **(F5** ou **Iniciar depuração).** Você não pode habilitar essa experiência usando [Attach to process](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md) a menos que você [defina manualmente uma variável de ambiente](xaml-hot-reload-troubleshooting.md#verify-that-you-use-start-debugging-rather-than-attach-to-process).
+> Atualmente, há suporte para o Hot recarregamento XAML do Visual Studio apenas ao executar seu aplicativo no Visual Studio ou Blend para Visual Studio com o depurador anexado (**F5** ou **iniciar a depuração**). Não é possível habilitar essa experiência usando [anexar ao processo](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md) , a menos que você [defina manualmente uma variável de ambiente](xaml-hot-reload-troubleshooting.md#verify-that-you-use-start-debugging-rather-than-attach-to-process).
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-As seguintes limitações são conhecidas do XAML Hot Reload. Para contornar qualquer limitação que você encontrar, basta parar o depurador e, em seguida, concluir a operação.
+Veja a seguir as limitações conhecidas do Hot recarregamento XAML. Para solucionar qualquer limitação que você encontrar, basta parar o depurador e concluir a operação.
 
 |Limitações|WPF|UWP|Observações|
 |-|-|-|-|
-|Fiação de eventos para controles enquanto o aplicativo está em execução|Sem suporte|Sem suporte|Ver erro: *Garantir falha do evento*. Observe que no WPF você pode referenciar um manipulador de eventos existente. Nos aplicativos UWP, não é suportado o suporte a um manipulador de eventos existente.|
-|Criando objetos de recursos em um dicionário de recursos, como aqueles na Página/Janela do seu aplicativo ou *app.xaml*|Suportado a partir do Visual Studio 2019 Update 2|Com suporte|Exemplo: adicionar `SolidColorBrush` a em um dicionário `StaticResource`de recursos para uso como um .</br>Nota: Recursos estáticos, conversores de estilo e outros elementos escritos em um dicionário de recursos podem ser aplicados/usados durante o uso do XAML Hot Reload. Apenas a criação do recurso não é suportada.</br> Alterando a `Source` propriedade do dicionário de recursos.|
-|Adicionando novos controles, classes, janelas ou outros arquivos ao seu projeto enquanto o aplicativo está sendo executado|Sem suporte|Sem suporte|Nenhum|
-|Gerenciamento de pacotes NuGet (adicionando/removendo/atualizando pacotes)|Sem suporte|Sem suporte|Nenhum|
-|Alterando a vinculação de dados que usa a extensão de marcação {x:Bind}|N/D|Suportado a partir do Visual Studio 2019|Isso requer a versão 1809 do Windows 10 (build 10.0.17763). Não suportado no Visual Studio 2017 ou versões anteriores.|
-|A alteração das diretivas x:Uid não é suportada|N/D|Sem suporte|Nenhum|
-|Múltiplos processos | Sem suporte | Sem suporte | A recarga quente só pode ser usada contra 1 processo de cada vez. |
+|Eventos de fiação para controles enquanto o aplicativo está em execução|Sem suporte|Sem suporte|Consulte erro: *falha no evento de garantia*. Observe que no WPF você pode fazer referência a um manipulador de eventos existente. Em aplicativos UWP, não há suporte para a referência a um manipulador de eventos existente.|
+|Criando objetos de recurso em um dicionário de recursos, como aqueles na página/janela do seu aplicativo ou *app. XAML*|Com suporte a partir do Visual Studio 2019 atualização 2|Com suporte|Exemplo: adicionando um a `SolidColorBrush` um dicionário de recursos para uso como um `StaticResource` .</br>Observação: recursos estáticos, conversores de estilo e outros elementos gravados em um dicionário de recursos podem ser aplicados/usados ao usar o Hot recarregamento de XAML. Somente a criação do recurso não tem suporte.</br> Alterando a propriedade do dicionário de recursos `Source` .|
+|Adicionar novos controles, classes, janelas ou outros arquivos ao seu projeto enquanto o aplicativo está em execução|Sem suporte|Sem suporte|Nenhum|
+|Gerenciando pacotes NuGet (adicionando/removendo/atualizando pacotes)|Sem suporte|Sem suporte|Nenhum|
+|Alterando a associação de dados que usa a extensão de marcação {x:Bind}|N/D|Com suporte a partir do Visual Studio 2019|Isso requer o Windows 10 versão 1809 (Build 10.0.17763). Sem suporte no Visual Studio 2017 ou em versões anteriores.|
+|Não há suporte para a alteração de diretivas x:Uid|N/D|Sem suporte|Nenhum|
+|Vários processos | Sem suporte | Sem suporte | A recarga a quente só pode ser usada em um processo de cada vez. |
 
 ## <a name="error-messages"></a>Mensagens de erro
 
-Você pode encontrar os seguintes erros ao usar o XAML Hot Reload.
+Você pode se deparar com os seguintes erros ao usar o Hot recarregamento de XAML.
 
-|Mensagem de erro|Descrição|
+|Mensagem de erro|Description|
 |-|-|
-|Garantir falha no evento|O erro indica que você está tentando conectar um evento a um de seus controles, que não é suportado enquanto seu aplicativo estiver em execução.|
-|Esta alteração não é suportada pelo XAML Hot Reload e não será aplicada durante a sessão de depuração.|O erro indica que a alteração que você está tentando não é suportada pelo XAML Hot Reload. Interrompa a sessão de depuração, faça a alteração e, em seguida, reinicie a sessão de depuração. Se você encontrar um cenário sem suporte que você gostaria de ver suportado, use nossa nova opção "Sugerir um recurso" na [Comunidade de Desenvolvedores](https://developercommunity.visualstudio.com/spaces/8/index.html)do Visual Studio . |
+|Verifique se o evento falhou|Erro indica que você está tentando vincular um evento a um de seus controles, o que não tem suporte enquanto o aplicativo está em execução.|
+|Essa alteração não é suportada pelo Hot recarregamento XAML e não será aplicada durante a sessão de depuração.|Erro indica que a alteração que você está tentando executar não é suportada pelo Hot recarregamento XAML. Pare a sessão de depuração, faça a alteração e reinicie a sessão de depuração. Se você encontrar um cenário sem suporte que gostaria de ver com suporte, use nossa nova opção "sugerir um recurso" na [comunidade de desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html). |
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 * [Solução de problemas de Recarga Dinâmica de XAML](xaml-hot-reload-troubleshooting.md)
-* [Recarga quente xaml para xamarin.forms](/xamarin/xamarin-forms/xaml/hot-reload)
+* [Recarga Dinâmica de XAML para Xamarin.Forms](/xamarin/xamarin-forms/xaml/hot-reload)
 * [Editar e continuar (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)

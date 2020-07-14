@@ -1,7 +1,7 @@
 ---
-title: 'Erro: há suporte para a depuração de modo misto somente ao usar o Microsoft .NET Framework 2,0 ou superior | Microsoft Docs'
+title: Erro-a depuração de modo misto tem suporte apenas ao usar o Microsoft .NET Framework 2,0 ou superior | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.interop_unsupported_to_old
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c85dac85146c59d8aeba9f9cf85351b5bc17a81c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: de19f6b735f990b0e419c040291e1bf538f680f5
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737620"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460618"
 ---
 # <a name="error-mixed-mode-debugging-is-supported-only-when-using-microsoft-net-framework-20-or-greater"></a>Erro: a depuração de modo misto só é suportada durante o uso do Microsoft .NET Framework 2.0 ou superior
 Para depurar código nativo e gerenciado Misto, você deve ter .NET Framework versão 2,0, 3,0. 3.5 ou 4.0. Não há suporte para a depuração de modo misto com versões anteriores do .NET Framework.
@@ -28,5 +28,5 @@ Para depurar código nativo e gerenciado Misto, você deve ter .NET Framework ve
 
 - Atualize o .NET Framework para a versão 2,0, 3,0, 3,5 ou 4,0.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Depuração remota](../debugger/remote-debugging.md)

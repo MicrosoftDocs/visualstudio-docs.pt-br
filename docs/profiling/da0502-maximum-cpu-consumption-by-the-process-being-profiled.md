@@ -1,7 +1,7 @@
 ---
-title: 'DA0502: consumo máximo de CPU pelo processo do qual o perfil está sendo criado | Microsoft Docs'
+title: DA0502-consumo máximo de CPU pelo processo que está sendo criado com perfil | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.rules.DA0502
 - vs.performance.DA0502
@@ -13,16 +13,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c3cb5169d078ba1242bf898ba93e31a7a488bb8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a2555344b402513bdea7795e2e71fde1683b08d1
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779331"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544554"
 ---
 # <a name="da0502-maximum-cpu-consumption-by-the-process-being-profiled"></a>DA0502: consumo máximo da CPU pelo processo que está sendo analisado
 
-|||
+|Item|Valor|
 |-|-|
 |ID de regra|DA0502|
 |Categoria|Monitoramento de recursos|

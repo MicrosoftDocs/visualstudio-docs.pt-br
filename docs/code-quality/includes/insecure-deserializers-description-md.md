@@ -10,4 +10,4 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68147086"
 ---
-Desserializadores inseguros estão vulneráveis ao desserializar dados não confiáveis. Um invasor poderia modificar os dados serializados para incluir tipos inesperados para injetar objetos com efeito colateral mal-intencionado. Um ataque contra um desserializador inseguro poderia, por exemplo, executar comandos no sistema operacional subjacente, se comunicar pela rede ou excluir arquivos.
+Desserializadores inseguros são vulneráveis ao desserializar dados não confiáveis. Um invasor pode modificar os dados serializados para incluir tipos inesperados para injetar objetos com efeitos colaterais mal-intencionados. Um ataque contra um desserializador inseguro pode, por exemplo, executar comandos no sistema operacional subjacente, comunicar-se pela rede ou excluir arquivos.

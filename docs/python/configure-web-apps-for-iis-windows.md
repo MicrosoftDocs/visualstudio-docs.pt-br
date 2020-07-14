@@ -2,7 +2,7 @@
 title: Configurar aplicativos Web do Python para o IIS
 description: Como configurar aplicativos Web do Python para execução com os Serviços de Informações da Internet de uma máquina virtual do Windows.
 ms.date: 12/06/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -11,12 +11,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 551cff18849f0e8ad9fcd6f2c1e08561291b177f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3c756f3d9a89294ecce054650037be3f7b26c291
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62957366"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540927"
 ---
 # <a name="configure-python-web-apps-for-iis"></a>Configurar aplicativos Web do Python para o IIS
 
@@ -86,7 +86,7 @@ Em seguida, modifique o arquivo *web.config* do aplicativo para incluir os camin
     </system.webServer>
     ```
 
-1. Na `<appSettings>` seção *web.config,* adicione `WSGI_HANDLER` `WSGI_LOG` teclas para `PYTHONPATH`, (opcional) e :
+1. Na `<appSettings>` seção de *web.config*, adicione chaves para `WSGI_HANDLER` , `WSGI_LOG` (opcional) e `PYTHONPATH` :
 
     ```xml
     <appSettings>
@@ -139,7 +139,7 @@ Em seguida, modifique o arquivo *web.config* do aplicativo para incluir os camin
     ALLOWED_HOSTS = ['1.2.3.4']
     ```
 
-    Falha em adicionar sua URL ao array resulta no erro **DespermitidoHost at / Invalid HTTP_HOST header:\<' URL\>do site '. Você pode precisar\<adicionar\>' URL do site ' ao ALLOWED_HOSTS.**
+    A falha ao adicionar a URL à matriz resulta no erro **DisallowedHost/cabeçalho de HTTP_HOST inválido: ' \<site URL\> '. Talvez seja necessário adicionar ' \<site URL\> ' a ALLOWED_HOSTS.**
 
     Observe que, quando a matriz estiver vazia, o Django permitirá automaticamente 'localhost' e '127.0.0.1', mas adicionar sua URL de produção removerá essas funcionalidades. Por esse motivo, talvez você queira manter cópias do *settings.py* de desenvolvimento e de produção separadas ou usar variáveis de ambiente para controlar os valores de tempo de execução.
 

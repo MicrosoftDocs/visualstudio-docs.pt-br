@@ -15,19 +15,19 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: dfe8495184bf4daadb3bf8899ee2857a9743c842
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c068fcda7d03ae91435c040d2110d632668d832a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661384"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538730"
 ---
-# <a name="ca1308-normalize-strings-to-uppercase"></a>CA1308: normalizar cadeias de caracteres para maiúsculas
+# <a name="ca1308-normalize-strings-to-uppercase"></a>CA1308: Normalizar cadeias de caracteres em maiúsculas
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|NormalizeStringsToUppercase|
+|TypeName|NormalizeStringsToUppercase|
 |CheckId|CA1308|
 |Categoria|Microsoft. Globalization|
 |Alteração Significativa|Sem interrupção|
@@ -44,5 +44,5 @@ ms.locfileid: "72661384"
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
  É seguro suprimir uma mensagem de aviso quando você não está tomando decisão de segurança com base no resultado (por exemplo, quando você a exibe na interface do usuário).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Avisos de globalização](../code-quality/globalization-warnings.md)

@@ -1,7 +1,7 @@
 ---
 title: Criar um adaptador de dados de diagnóstico para teste
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Diagnostic Data Adapter [Visual Studio ALM]
 - Diagnostic Data Adapter
@@ -9,12 +9,12 @@ ms.assetid: b0b53fae-7007-4ad9-a604-21685937622f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2eadce12890e483f1b1c7aafccb61d9a6ee28e3a
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+ms.openlocfilehash: 2a9b6880b2f71079b6b70eeb6c2e9f7b4e81fc19
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880293"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288735"
 ---
 # <a name="create-a-diagnostic-data-adapter-to-collect-custom-data-or-affect-a-test-machine"></a>Criar um adaptador de dados de diagnóstico para coletar dados personalizados ou afetar um computador de teste
 
@@ -25,10 +25,10 @@ Você pode fornecer as informações padrão para o adaptador de dados de diagn�
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-Você pode fornecer as informações padrão para o adaptador de dados de diagnóstico personalizado usando um arquivo de parâmetros de configuração. Por exemplo, você pode fornecer informações sobre o local do arquivo que deseja coletar e anexar aos resultados do teste, ou quanto espaço em disco você deseja deixar no sistema. Esses dados podem ser configurados para cada parâmetro de teste criado. Você pode criar seu próprio controle de usuário para usar como editor. Todas as alterações feitas na configuração do adaptador no editor são armazenadas com as configurações de teste.
+Você pode fornecer as informações padrão para o adaptador de dados de diagnóstico personalizado usando um arquivo de parâmetros de configuração. Por exemplo, você pode fornecer informações sobre o local do arquivo que deseja coletar e anexar aos resultados do teste, ou quanto espaço em disco você deseja deixar no sistema. Esses dados podem ser configurados para cada parâmetro de teste criado. Você pode criar seu próprio controle de usuário para usar como um editor. Todas as alterações feitas na configuração do adaptador no editor são armazenadas com as configurações de teste.
 ::: moniker-end
 
-Se você estiver executando seus testes do Visual Studio, deverá definir essas configurações de teste como ativas. Para obter mais informações sobre as configurações do teste, consulte [Coletar informações de diagnóstico usando as configurações do teste](../test/collect-diagnostic-information-using-test-settings.md).
+Se você estiver executando seus testes do Visual Studio, deverá definir essas configurações de teste como ativas. Para obter mais informações sobre configurações de teste, consulte [coletar informações de diagnóstico usando configurações de teste](../test/collect-diagnostic-information-using-test-settings.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -38,9 +38,9 @@ Use os tópicos a seguir como auxílio para criar adaptadores de dados de diagn�
 
 |Tarefas|Tópicos associados|
 |-|-----------------------|
-|**Criar um adaptador de dados de diagnóstico:** você cria um adaptador de dados de diagnóstico criando uma biblioteca de classes e usa as APIs de diagnóstico do adaptador de dados para coletar informações desejadas ou afetar um sistema de teste usado para executar os testes.|-   [Como: Criar um adaptador de dados de diagnóstico](../test/how-to-create-a-diagnostic-data-adapter.md)|
+|**Criar um adaptador de dados de diagnóstico:** você cria um adaptador de dados de diagnóstico criando uma biblioteca de classes e usa as APIs de diagnóstico do adaptador de dados para coletar informações desejadas ou afetar um sistema de teste usado para executar os testes.|-   [Como: criar um adaptador de dados de diagnóstico](../test/how-to-create-a-diagnostic-data-adapter.md)|
 |**Selecionar um adaptador de dados de diagnóstico personalizado para usar quando testes forem executados:** você pode selecionar qual adaptador de dados de diagnóstico será usado para suas configurações de teste, de forma que o adaptador seja usado quando os testes forem executados.|-   [Coletar dados de diagnóstico durante testes (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)<br />-   [Coletar dados de diagnóstico em testes manuais (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Coletar informações de diagnóstico usando configurações de teste](../test/collect-diagnostic-information-using-test-settings.md)

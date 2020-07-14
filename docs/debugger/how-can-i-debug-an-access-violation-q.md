@@ -1,8 +1,8 @@
 ---
-title: Depurar uma C++ violação de acesso | Microsoft Docs
+title: Depurar uma violação de acesso de C++ | Microsoft Docs
 ms.custom: seodec18
 ms.date: 02/05/2019
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.access
 dev_langs:
@@ -19,14 +19,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0235cc00a740069a77afd492cd585788ea666d2
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 803f81d1a26438c2134349a85369d341353e17cf
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911473"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350414"
 ---
-# <a name="how-can-i-debug-a-c-access-violation"></a>Como posso depurar uma violação C++ de acesso?
+# <a name="how-can-i-debug-a-c-access-violation"></a>Como posso depurar uma violação de acesso de C++?
 
 ## <a name="problem-description"></a>Descrição do problema
 
@@ -79,5 +79,5 @@ Se você executar esse código no Visual Studio 2015 atualização 1, verá a se
 
 Se você não puder determinar por que o ponteiro causou uma violação de acesso, rastreie o código para certificar-se de que o ponteiro que está causando o problema tenha sido atribuído corretamente.  Se ele for passado como um parâmetro, verifique se ele foi passado corretamente e se você não está criando acidentalmente uma [cópia superficial](https://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy). Em seguida, verifique se os valores não estão sendo acidentalmente alterados em algum lugar no programa criando um ponto de interrupção de dados para o ponteiro em questão para verificar se ele não está sendo modificado em outro lugar no programa. Para obter mais informações sobre pontos de interrupção de dados, consulte a seção ponto de interrupção de dados em [usando pontos de interrupção](../debugger/using-breakpoints.md).
 
-## <a name="see-also"></a>Consulte também
-- [Perguntas frequentes de depuração de código nativo](../debugger/debugging-native-code-faqs.md)
+## <a name="see-also"></a>Veja também
+- [Perguntas frequentes de depuração do código nativo](../debugger/debugging-native-code-faqs.md)

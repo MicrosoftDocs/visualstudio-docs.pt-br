@@ -1,7 +1,7 @@
 ---
 title: Como especificar comandos pré e pós-instrumento | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.performance.property.instrument
 helpviewer_keywords:
@@ -15,12 +15,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 22ad5558ed01e5bb1b8d12b7a4cc65b4d677d0cd
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ba91e04342b9b78e3c6acae5296857a6f00f2aba
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778707"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329000"
 ---
 # <a name="how-to-specify-pre--and-post-instrument-commands"></a>Como especificar comandos de pré e pós-instrumentação
 
@@ -45,7 +45,7 @@ Para obter o caminho para as ferramentas de criação de perfil, confira [Especi
 3. Digite o comando na caixa de texto **Linha de comando** em **Eventos Pré-Instrumento**.
 
     > [!NOTE]
-    > Você pode clicar no botão ellipsis **(...)** que é adjacente à caixa **de linha de comando** para navegar e selecionar o arquivo apropriado .exe, .cmd ou .bat.
+    > Você pode clicar no botão de reticências **(...)** que está adjacente à caixa de **linha de comando** para procurar e selecionar o arquivo. exe,. cmd ou. bat apropriado.
 
 4. Clique em **OK**.
 
@@ -64,12 +64,12 @@ Para obter o caminho para as ferramentas de criação de perfil, confira [Especi
 3. Digite o comando na caixa de texto **Linha de comando** em **Eventos Pós-Instrumento**.
 
     > [!NOTE]
-    > Você pode clicar no botão ellipsis **(...)** que é adjacente à caixa **de linha de comando** para navegar e selecionar o arquivo apropriado .exe, .cmd ou .bat.
+    > Você pode clicar no botão de reticências **(...)** que está adjacente à caixa de **linha de comando** para procurar e selecionar o arquivo. exe,. cmd ou. bat apropriado.
 
 4. Clique em **OK**.
 
      Para desabilitar a execução do comando sem removê-lo, selecione a caixa de seleção **Excluir da instrumentação**. Para modificar as configurações do vinculador ou do compilador, use as páginas de propriedades do projeto.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Configure sessões de desempenho](../profiling/configuring-performance-sessions.md)
+[Configurar sessões de desempenho](../profiling/configuring-performance-sessions.md)

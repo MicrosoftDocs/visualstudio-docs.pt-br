@@ -15,25 +15,25 @@ caps.latest.revision: 23
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b190e007cfdb016e54148cf0295c68baf68c5033
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a240a6eea86075bbf7f721f8620b6d135d594c20
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661957"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546660"
 ---
-# <a name="ca1024-use-properties-where-appropriate"></a>CA1024: usar propriedades quando apropriado
+# <a name="ca1024-use-properties-where-appropriate"></a>CA1024: Usar propriedades quando apropriado
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|UsePropertiesWhereAppropriate|
+|TypeName|UsePropertiesWhereAppropriate|
 |CheckId|CA1024|
 |Categoria|Microsoft. Design|
 |Alteração Significativa|Quebra|
 
 ## <a name="cause"></a>Causa
- Um método público ou protegido tem um nome que começa com `Get`, não usa parâmetros e retorna um valor que não é uma matriz.
+ Um método público ou protegido tem um nome que começa com `Get` , não usa parâmetros e retorna um valor que não é uma matriz.
 
 ## <a name="rule-description"></a>Descrição da Regra
  Na maioria dos casos, as propriedades representam dados e métodos executam ações. As propriedades são acessadas como campos, o que as torna mais fáceis de usar. Um método é um bom candidato a se tornar uma propriedade se uma dessas condições estiver presente:
@@ -67,7 +67,7 @@ ms.locfileid: "72661957"
 ## <a name="controlling-property-expansion-in-the-debugger"></a>Controlando a expansão da propriedade no depurador
  Um motivo pelo qual os programadores evitam o uso de uma propriedade é porque não querem que o depurador a expanda automaticamente. Por exemplo, a propriedade pode envolver a alocação de um objeto grande ou a chamada de P/Invoke, mas pode não ter realmente nenhum efeito colateral observável.
 
- Você pode impedir que o depurador expanda Propriedades automaticamente aplicando <xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName>. O exemplo a seguir mostra esse atributo sendo aplicado a uma propriedade de instância.
+ Você pode impedir que o depurador expanda automaticamente as propriedades aplicando <xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName> . O exemplo a seguir mostra esse atributo sendo aplicado a uma propriedade de instância.
 
 ```vb
 Imports System

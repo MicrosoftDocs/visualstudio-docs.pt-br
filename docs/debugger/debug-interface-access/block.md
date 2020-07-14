@@ -1,7 +1,7 @@
 ---
 title: Bloquear | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -14,20 +14,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c39c69900859957f0d0746c688334f31c8419d5f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 45e1d97c694806857d9ee7920e6d4fd640db4582
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745467"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462263"
 ---
-# <a name="block"></a>Bloco
-Cada bloco de código é identificado por um símbolo de `SymTagBlock`. Os símbolos de bloco são usados para identificar escopos aninhados dentro de funções.
+# <a name="block"></a>Bloquear
+Cada bloco de código é identificado por um `SymTagBlock` símbolo. Os símbolos de bloco são usados para identificar escopos aninhados dentro de funções.
 
 ## <a name="properties"></a>Propriedades
  A tabela a seguir mostra as propriedades que são válidas para esse tipo de símbolo.
 
-|propriedade|Tipo de dados|Descrição|
+|Propriedade|Tipo de dados|Descrição|
 |--------------|---------------|-----------------|
 |[IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)|`DWORD`|Parte de deslocamento do local; para obter detalhes, consulte a [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md).|
 |[IDiaSymbol::get_addressSection](../../debugger/debug-interface-access/idiasymbol-get-addresssection.md)|`DWORD`|Parte da seção do local; para obter detalhes, consulte a [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md).|
@@ -41,7 +41,7 @@ Cada bloco de código é identificado por um símbolo de `SymTagBlock`. Os símb
 |[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Retorna `SymTagBlock` (um dos valores de [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) ).|
 |[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|`ULONGLONG`|Retorna o endereço virtual deste bloco no executável.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Hierarquia lexical de tipos de símbolo](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)
 - [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md)
 - [Locais de símbolos](../../debugger/debug-interface-access/symbol-locations.md)

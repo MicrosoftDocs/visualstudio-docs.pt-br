@@ -9,14 +9,14 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 6de07c705129aaef705d0c9651d53fdf35e6d0c0
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 20f7003bbcd319a6a8487d496697d3dcd0b7a18a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850744"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548415"
 ---
-# <a name="network-usage"></a>Uso da Rede
+# <a name="network-usage"></a>Uso de Rede
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 A ferramenta de diagnóstico de **rede** do Visual Studio coleta dados sobre as operações de rede executadas usando a [API Windows.Web.Http](https://msdn.microsoft.com/library/windows/apps/windows.web.http.aspx). Analisar os dados pode ajudar a resolver problemas, como problemas de autenticação e acesso, uso incorreto de cache e exibição ruim e desempenho de download.  
@@ -29,9 +29,9 @@ A ferramenta de diagnóstico de **rede** do Visual Studio coleta dados sobre as 
 ## <a name="collecting-network-tool-data"></a>Coleta de dados da ferramenta de rede  
  Você deve executar a ferramenta de **rede** com um projeto aberto do Visual Studio no computador do Visual Studio.  
   
-1. {1&gt;Abra o projeto no Visual Studio.&lt;1}  
+1. Abra o projeto no Visual Studio.  
   
-2. No menu, clique em **criador de perfil de depuração/desempenho...** . Escolha **rede**e, em seguida, escolha **Iniciar**.  
+2. No menu, clique em **criador de perfil de depuração/desempenho...**. Escolha **rede**e, em seguida, escolha **Iniciar**.  
   
 3. A ferramenta de rede começa coletando o tráfego HTTP do seu aplicativo.  
   
@@ -54,13 +54,13 @@ A ferramenta de diagnóstico de **rede** do Visual Studio coleta dados sobre as 
   
  ![Painel de detalhes da ferramenta de rede](../profiling/media/network-detailsviewpane.png "NETWORK_DetailsViewPane")  
   
-|||  
+|Nome|Descrição|  
 |-|-|  
 |**Cabeçalhos**|Informações sobre os cabeçalhos de solicitação do evento.|  
 |**Corpo**|A solicitação e os dados de carga de resposta.|  
 |**Parâmetros**|Os valores e os nomes de parâmetro de cadeia de caracteres de consulta.|  
 |**Cookies**|Dados de cookie de solicitação e resposta.|  
-|**Tempo**|Um gráfico dos estágios de aquisição dos recursos selecionados.|  
+|**Timings**|Um gráfico dos estágios de aquisição dos recursos selecionados.|  
   
  A barra de **resumo** de rede mostra o número de operações de rede que são exibidos em qualquer ponto, a quantidade de dados que foi transferida, quanto tempo levou para baixar e o número de erros (solicitações com respostas 4xx ou 5xx) visível.  
   
@@ -73,7 +73,7 @@ A ferramenta de diagnóstico de **rede** do Visual Studio coleta dados sobre as 
   
 3. O botão de impressão de resposta (dentro da guia Corpo) pode ajudá-lo a analisar as cargas de resposta JSON, XML, HTML, CSS, JavaScript e TypeScript aumentando a legibilidade do conteúdo.  
   
-## <a name="see-also"></a>Veja também  
+## <a name="see-also"></a>Consulte Também  
  [Executar ferramentas de criação de perfil sem depuração](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01)   
- [Blog do Visual Studio: Apresentando o inspetor de rede do Visual Studio](https://blogs.msdn.com/b/visualstudio/)   
+ [Blog do Visual Studio: introdução ao inspetor de rede do Visual Studio](https://blogs.msdn.com/b/visualstudio/)   
  [Vídeo do Channel 9: ferramentas de diagnóstico do VS – novo criador de perfil de rede](https://channel9.msdn.com/Series/ConnectOn-Demand/206)

@@ -1,7 +1,7 @@
 ---
-title: 'Erro: a depuração&#39;não é possível porque um depurador de kernel está habilitado no sistema | Microsoft Docs'
+title: Erro-a depuração não&#39;t possível porque um depurador de kernel está habilitado no sistema | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.kernel_dbg_enabled
 dev_langs:
@@ -16,14 +16,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a966869ff1d200a51c6019a6ae937bea7c447bd
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 80c27ef642697a8514a0809095b980d8c38a47d8
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737739"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460859"
 ---
-# <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>Erro: a depuração&#39;não é possível porque um depurador de kernel está habilitado no sistema
+# <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>Erro: a depuração não&#39;o t possível porque um depurador de kernel está habilitado no sistema
 Quando você depura o código gerenciado, talvez receba a seguinte mensagem de erro:
 
 ```cmd
@@ -42,15 +42,15 @@ Debugging isn't possible because a kernel debugger is enabled on the system
 
 - Atualizar seu aplicativo para usar a versão 4.0 ou 4.5 do CLR
 
-   —ou—
+   — ou —
 
 - Desabilite a depuração de kernel e depure-a no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
 
-   —ou—
+   — ou —
 
 - Depure usando o depurador de kernel em vez do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
 
-   —ou—
+   — ou —
 
 - No depurador de kernel, desabilite as exceções em modo de usuário.
 
@@ -98,6 +98,6 @@ Debugging isn't possible because a kernel debugger is enabled on the system
 
      `gn`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Segurança do depurador](../debugger/debugger-security.md)
 - [Depurando código gerenciado](../debugger/debugging-managed-code.md)

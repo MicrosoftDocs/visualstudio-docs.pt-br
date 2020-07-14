@@ -4,12 +4,13 @@ description: Saiba como gerenciar mais de um contêiner e se comunicar entre ele
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 06/17/2019
-ms.openlocfilehash: 487945399252ca3627d625e3572637b5b2af2916
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: tutorial
+ms.openlocfilehash: 03adc2385c202710425fbc8e6b12c832526b5f90
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74983965"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85938943"
 ---
 # <a name="create-a-multi-container-app-with-docker-compose"></a>Criar um aplicativo de vários contêineres com o Docker Compose
 
@@ -23,10 +24,10 @@ Neste tutorial, você aprenderá a gerenciar mais de um contêiner e a se comuni
 ## <a name="create-an-aspnet-core-web-application-and-add-docker-support"></a>Criar um Aplicativo Web ASP.NET Core e adicionar suporte ao Docker
 
 1. Crie uma nova solução acessando **Arquivo > Nova Solução**.
-1. Em **.NET Core > App** escolha o modelo de Aplicação da **Web:** ![Crie um novo aplicativo de ASP.NET](media/docker-quickstart-1.png)
-1. Selecione a estrutura de destino. Neste exemplo, usaremos o .NET ![Core 2.2: Definir o framework de destino](media/docker-quickstart-2.png)
+1. Em **.NET Core > aplicativo** , escolha o modelo de **aplicativo Web** : ![ criar um novo aplicativo ASP.net](media/docker-quickstart-1.png)
+1. Selecione a estrutura de destino. Neste exemplo, usaremos o .NET Core 2,2: ![ definir estrutura de destino](media/docker-quickstart-2.png)
 1. Insira os detalhes do projeto, como o Nome do Projeto (_DockerDemoFrontEnd_ neste exemplo) e o Nome da Solução (_DockerDemo_). O projeto criado contém todos os princípios necessários para compilar e executar um site do ASP.NET Core.
-1. No Bloco de Soluções, clique com o botão direito do mouse no projeto DockerDemoFrontEnd e selecione **Adicionar > adicionar suporte ao Docker**: ![Adicione suporte ao docker](media/docker-quickstart-3.png)
+1. Na Painel de Soluções, clique com o botão direito do mouse no projeto DockerDemoFrontEnd e selecione **adicionar > adicionar suporte ao Docker**: ![ Adicionar suporte ao Docker](media/docker-quickstart-3.png)
 
 O Visual Studio para Mac vai adicionar automaticamente um novo projeto à sua solução denominado **docker-compose** e um **Dockerfile** ao seu projeto existente.
 

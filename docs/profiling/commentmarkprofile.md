@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d45bab6b909fffa107158236d9050632f114c530
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2972f9d470bebe3a65b7d525aa2b358d68ad5f1c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74772775"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546582"
 ---
 # <a name="commentmarkprofile"></a>CommentMarkProfile
 A função `CommentMarkProfile` insere um marcador numérico e uma cadeia de caracteres de texto no arquivo .*vsp*. Para que a marcação e o comentário sejam inseridos, a criação de perfil para o thread que contém a função `CommentMarkProfile` deve ser ON.
@@ -30,7 +30,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
                                    LPCTSTR szComment);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
  `lMarker`
 
  Marcador numérico para inserir. O marcador deve ser maior ou igual a 0 (zero).
@@ -55,7 +55,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 ## <a name="remarks"></a>Comentários
  O estado de criação de perfil para o thread que contém a função de perfil de marca deve estar ligado quando as marcas e os comentários são inseridos com o comando VSInstr Mark ou com as funções (CommentMarkAtProfile, CommentMarkProfile ou MarkProfile).
 
- Marcas de perfis são globais no escopo. Por exemplo, uma marca de perfil inserida em um segmento pode ser usada para marcar o início ou o fim de um segmento de dados em qualquer segmento no . *arquivo vsp.*
+ Marcas de perfis são globais no escopo. Por exemplo, uma marca de perfil inserida em um thread pode ser usada para marcar o início ou o fim de um segmento de dados em qualquer thread no. arquivo *VSP* .
 
 > [!IMPORTANT]
 > O método CommentMarkProfile só pode ser usado com a instrumentação.
@@ -65,7 +65,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 
 ## <a name="function-information"></a>Informações de função
 
-|||
+|Item|Valor|
 |-|-|
 |**Cabeçalho**|Inclui VSPerf.h|
 |**Biblioteca**|Use VSPerf.lib|
@@ -111,4 +111,4 @@ void ExerciseCommentMarkProfile()
 ```
 
 ## <a name="see-also"></a>Confira também
-- [Referência de API do profiler do Visual Studio (nativa)](../profiling/visual-studio-profiler-api-reference-native.md)
+- [Referência da API do criador de perfil do Visual Studio (nativo)](../profiling/visual-studio-profiler-api-reference-native.md)

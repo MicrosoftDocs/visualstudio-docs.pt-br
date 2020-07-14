@@ -13,17 +13,17 @@ helpviewer_keywords:
 - key files [Visual Studio]
 - assemblies [Visual Studio], signing
 ms.assetid: 64173505-8bfb-41cf-a0de-b9075173f3a2
-author: TerryGLee
-ms.author: tglee
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fbf25301095ac5ff438514c37f61337e46342860
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 7e04827dd8d8d393af8bc3448df75a7503c8eec3
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769787"
 ---
 # <a name="how-to-sign-application-and-deployment-manifests"></a>Como assinar manifestos de aplicativo e de implantação
 
@@ -71,7 +71,7 @@ Para obter informações sobre como criar arquivos de chave, consulte [Como cria
 4. Insira a senha para acessar o arquivo de chave e, em seguida, selecione **Enter**.
 
 > [!NOTE]
-> O arquivo *.pfx* não pode incluir informações de encadeamento de certificados. Se isso acontecer, ocorrerá o seguinte erro de importação: **Não é possível encontrar o certificado e a chave privada para descriptografia**. Para remover as informações de encadeamento do certificado, você pode usar *certmgr.msc* e [desativar a opção](/previous-versions/aa730868(v=vs.80)) de Incluir todos os **certificados** ao exportar o arquivo *.pfx.
+> O arquivo *.pfx* não pode incluir informações de encadeamento de certificados. Se tiver, ocorrerá o seguinte erro de importação: **não é possível localizar o certificado e a chave privada para descriptografia**. Para remover as informações de encadeamento de certificado, você pode usar *certmgr. msc* e [desabilitar a opção](/previous-versions/aa730868(v=vs.80)) para **incluir todos os certificados** ao exportar o arquivo *. pfx.
 
 ## <a name="sign-using-a-test-certificate"></a>Assinar usando um certificado de teste
 
@@ -113,7 +113,7 @@ Por padrão, o ClickOnce gera manifestos assinados automaticamente, a menos que 
 
 ## <a name="see-also"></a>Confira também
 
-- [Assembléias com nomes fortes](/dotnet/framework/app-domains/strong-named-assemblies)
+- [Assemblies de nome forte](/dotnet/framework/app-domains/strong-named-assemblies)
 - [Como criar um par de chaves pública/privada](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair)
-- [Página de Assinatura, Designer de Projeto](../ide/reference/signing-page-project-designer.md)
+- [Página de assinatura, designer de projeto](../ide/reference/signing-page-project-designer.md)
 - [Segurança e implantação do ClickOnce](../deployment/clickonce-security-and-deployment.md)

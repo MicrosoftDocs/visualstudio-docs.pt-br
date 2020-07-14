@@ -1,7 +1,7 @@
 ---
 title: Testar um aplicativo grande com vários mapas de interface do usuário
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - coded UI tests, multiple UI maps
 - coded UI tests, for large applications
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fa5afd01ad25d4eebdc0b29e924cb2430d9c775
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 99e703d10d2bc6ed8fd573f4973e73f7ad40a937
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590287"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286577"
 ---
 # <a name="test-a-large-application-with-multiple-ui-maps"></a>Testar um aplicativo grande com vários Mapas de Interface do Usuário
 
@@ -50,7 +50,7 @@ Crie diversos mapas em cada uma destas situações:
 
 ### <a name="to-add-a-ui-map-to-your-coded-ui-test-project"></a>Para adicionar um mapa de interface do usuário ao seu projeto de teste de IU codificado
 
-1. No **Solution Explorer,** para criar uma pasta no projeto de teste de ida e volta codificado para armazenar todos os Mapas de UI, clique com o botão direito do mouse no arquivo de projeto de teste de ida e volta codificado, aponte para **Adicionar**e escolha **Nova pasta**. Por exemplo, você pode atribuir o nome `UIMaps`.
+1. No **Gerenciador de soluções**, para criar uma pasta em seu projeto de teste de interface do usuário codificado para armazenar todos os mapas da interface do usuário, clique com o botão direito do mouse no arquivo de projeto de teste de interface do usuário codificado, aponte para **Adicionar**e escolha **nova pasta**. Por exemplo, você pode atribuir o nome `UIMaps`.
 
     A nova pasta é exibida no projeto de teste de IU codificado.
 
@@ -139,10 +139,10 @@ namespace ContosoProject
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [UIMap](/previous-versions/dd580454(v=vs.140))
 - <xref:Microsoft.VisualStudio.TestTools.UITesting.BrowserWindow.CopyFrom%2A>
 - [Usar a automação da interface do usuário para testar o código](../test/use-ui-automation-to-test-your-code.md)
 - [Criar testes de IU codificados](../test/use-ui-automation-to-test-your-code.md)
-- [Anatomia de um teste de iude codificado](../test/anatomy-of-a-coded-ui-test.md)
+- [Anatomia de um teste de interface do usuário codificado](../test/anatomy-of-a-coded-ui-test.md)

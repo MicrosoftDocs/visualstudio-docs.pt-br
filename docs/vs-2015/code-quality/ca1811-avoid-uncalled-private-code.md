@@ -15,19 +15,19 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ccc439e0d84d1fced4ba0359385a6964356d5df6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 223b2ff9aa25ddd94a3c62eb9e641127a1cace4e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668459"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543813"
 ---
-# <a name="ca1811-avoid-uncalled-private-code"></a>CA1811: evitar código privado não chamado
+# <a name="ca1811-avoid-uncalled-private-code"></a>CA1811: Evitar código particular não chamado
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|AvoidUncalledPrivateCode|
+|TypeName|AvoidUncalledPrivateCode|
 |CheckId|CA1811|
 |Categoria|Microsoft. performance|
 |Alteração Significativa|Sem interrupção|
@@ -41,7 +41,7 @@ ms.locfileid: "72668459"
 
 - Construtores de serialização.
 
-- Métodos marcados com <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> ou <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName>.
+- Métodos marcados com <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> ou <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> .
 
 - Membros que são substituições.
 
@@ -55,8 +55,8 @@ ms.locfileid: "72668459"
  É seguro suprimir um aviso dessa regra.
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1812: evitar classes internas sem instâncias](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
+ [CA1812: Evitar classes internas sem instâncias](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
 
- [CA1801: examinar parâmetros não usados](../code-quality/ca1801-review-unused-parameters.md)
+ [CA1801: Examinar parâmetros não utilizados](../code-quality/ca1801-review-unused-parameters.md)
 
- [CA1804: remover locais não usados](../code-quality/ca1804-remove-unused-locals.md)
+ [CA1804: Remover locais não utilizados](../code-quality/ca1804-remove-unused-locals.md)

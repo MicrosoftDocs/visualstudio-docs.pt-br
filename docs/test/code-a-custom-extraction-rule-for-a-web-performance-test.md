@@ -1,7 +1,7 @@
 ---
 title: Codificando uma regra de extração personalizada para um teste de desempenho Web
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - extraction rules
 - Web performance tests, creating custom extraction rules
@@ -13,12 +13,12 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 92cce705135daa8bc54a7fab301cf5dcd8cf96d6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 00001662667ed7020909d23cf3cfbd4b8437eabf
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591171"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288878"
 ---
 # <a name="code-a-custom-extraction-rule-for-a-web-performance-test"></a>Codificar uma regra de extração personalizada para um teste de desempenho Web
 
@@ -48,7 +48,7 @@ Você pode criar suas próprias regras de extração. Para fazer isso, você dev
 
 7. No projeto de teste, abra um teste de desempenho Web no **Editor de Testes de Desempenho Web**.
 
-8. Para adicionar a regra de extração personalizada, clique com o botão direito do mouse em uma solicitação de teste de desempenho da Web e selecione **Adicionar regra de extração**.
+8. Para adicionar a regra de extração Personalizada, clique com o botão direito do mouse em uma solicitação de teste de desempenho Web e selecione **Adicionar regra de extração**.
 
      A caixa de diálogo **Adicionar Regra de Extração** é exibida. Você verá a regra de validação personalizada na lista **Selecionar Uma Regra**, juntamente com as regras de validação predefinidas. Selecione a regra de extração personalizada e escolha **OK**.
 
@@ -206,7 +206,7 @@ End Namespace
 
 O método <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule.Extract*> contém a funcionalidade principal de uma regra de extração. O método <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule.Extract*> no exemplo anterior usa um <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionEventArgs> que fornece a resposta gerada pela solicitação que essa regra de extração cobre. A resposta contém um <xref:Microsoft.VisualStudio.TestTools.WebTesting.HtmlDocument> que contém todos os marcadores na resposta. Os marcadores de entrada são filtrados no <xref:Microsoft.VisualStudio.TestTools.WebTesting.HtmlDocument>. Cada marcação de entrada é examinada quanto a um atributo chamado `name`, cujo valor é igual àquele fornecido pelo usuário para a propriedade `Name`. Se uma marcação com esse atributo correspondente for encontrada, será feita uma tentativa de extrair um valor contido no atributo `value`, se um atributo de valor existir. Se existir, o nome e o valor do marcador serão extraídos e adicionados ao contexto de teste de desempenho na Web. A regra de extração é aprovada.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule>
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.Rules>

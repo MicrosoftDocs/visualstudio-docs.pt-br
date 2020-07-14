@@ -12,12 +12,12 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 17ec8199e99e76d5995e49570c82ad8523505ebe
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 377bf06ceffe9f4f3004be665dec1c5d3629202a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75915987"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532958"
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>Instruções passo a passo: conectando um host a um processador de diretriz gerado
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,14 +37,14 @@ Você pode escrever seu próprio host que processa modelos de texto. Um host per
 
 - Testando o host personalizado com o processador de diretiva gerado.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
  Para definir uma DSL, é necessário ter instalados os seguintes componentes:
 
-|||
+|Produto|Link de download|
 |-|-|
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[https://www.visualstudio.com/](https://www.visualstudio.com/)|
 |[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[SDK do Visual Studio](../extensibility/visual-studio-sdk.md)|
-|{1&gt;{2&gt;SDK de Visualização e Modelagem do Visual Studio&lt;2}&lt;1}|[Download do SDK de modelagem](https://www.microsoft.com/download/details.aspx?id=48148)|
+|SDK de Visualização e Modelagem do Visual Studio|[Download do SDK de modelagem](https://www.microsoft.com/download/details.aspx?id=48148)|
 
  Além disso, você deve ter a transformação de modelo de texto personalizado criada em [passo a passo: Criando um host de modelo de texto personalizado](../modeling/walkthrough-creating-a-custom-text-template-host.md).
 
@@ -70,15 +70,15 @@ Você pode escrever seu próprio host que processa modelos de texto. Um host per
    > [!IMPORTANT]
    > Esta etapa gera o processador de diretiva e adiciona a chave para ele no registro.
 
-3. No menu **Depuração**, clique em **Iniciar Depuração**.
+3. No menu **depurar** , clique em **Iniciar Depuração**.
 
-    Uma segunda instância do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] é aberta.
+    Uma segunda instância de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] é aberta.
 
 4. Na compilação experimental, em **Gerenciador de soluções**, clique duas vezes no arquivo **Sample. min**.
 
     O arquivo é aberto no designer. Observe que o modelo tem dois elementos, ExampleElement1 e ExampleElement2, e um link entre eles.
 
-5. Feche a segunda instância do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+5. Feche a segunda instância do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 6. Salve a solução e, em seguida, feche a Designer de Linguagem Específica de Domínio.
 
@@ -95,17 +95,17 @@ Você pode escrever seu próprio host que processa modelos de texto. Um host per
 
 3. Adicione as seguintes referências:
 
-    - Microsoft.VisualStudio.Modeling.Sdk.11.0
+    - Microsoft. VisualStudio. Modeling. Sdk. 11.0
 
-    - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
+    - Microsoft. VisualStudio. Modeling. Sdk. Diagrams. 11.0
 
-    - Microsoft.VisualStudio.TextTemplating.11.0
+    - Microsoft. VisualStudio. TextTemplating. 11.0
 
-    - Microsoft.VisualStudio.TextTemplating.Interfaces.11.0
+    - Microsoft. VisualStudio. TextTemplating. interfaces. 11.0
 
-    - Microsoft.VisualStudio.TextTemplating.Modeling.11.0
+    - Microsoft. VisualStudio. TextTemplating. Modeling. 11.0
 
-    - Microsoft.VisualStudio.TextTemplating.VSHost.11.0
+    - Microsoft. VisualStudio. TextTemplating. VSHost. 11.0
 
 4. Na parte superior de Program.cs ou Module1. vb, adicione a seguinte linha de código:
 
@@ -117,7 +117,7 @@ Você pode escrever seu próprio host que processa modelos de texto. Um host per
     Imports Microsoft.Win32
     ```
 
-5. Localize o código para a propriedade `StandardAssemblyReferences`e substitua-o pelo seguinte código:
+5. Localize o código da propriedade `StandardAssemblyReferences` e substitua-o pelo código a seguir:
 
     > [!NOTE]
     > Nesta etapa, você adiciona referências aos assemblies que são exigidos pelo processador de diretiva gerado ao qual seu host dará suporte.
@@ -153,7 +153,7 @@ Você pode escrever seu próprio host que processa modelos de texto. Um host per
     }
     ```
 
-6. Localize o código para a função `ResolveDirectiveProcessor`e substitua-o pelo seguinte código:
+6. Localize o código para a função `ResolveDirectiveProcessor` e substitua-o pelo seguinte código:
 
     > [!IMPORTANT]
     > Esse código contém referências embutidas em código para o nome do processador de diretiva gerado ao qual você deseja se conectar. Você poderia facilmente tornar isso mais geral. nesse caso, ele procura todos os processadores de diretiva listados no registro e tenta encontrar uma correspondência. Nesse caso, o host funcionaria com qualquer processador de diretiva gerado.
@@ -227,7 +227,7 @@ Você pode escrever seu próprio host que processa modelos de texto. Um host per
             }
     ```
 
-7. No menu **Arquivo**, clique em **Salvar tudo**.
+7. No menu **Arquivo** , clique em **Salvar Tudo**.
 
 8. No menu **Compilar**, clique em **Compilar Solução**.
 
@@ -236,7 +236,7 @@ Você pode escrever seu próprio host que processa modelos de texto. Um host per
 
 #### <a name="to-create-a-text-template-to-test-the-custom-host"></a>Para criar um modelo de texto para testar o host personalizado
 
-1. Crie um arquivo de texto e nomeie-o `TestTemplateWithDP.tt`. Você pode usar qualquer editor de texto, como o bloco de notas, para criar o arquivo.
+1. Crie um arquivo de texto e nomeie-o `TestTemplateWithDP.tt` . Você pode usar qualquer editor de texto, como o bloco de notas, para criar o arquivo.
 
 2. Adicione o seguinte ao arquivo de texto:
 
@@ -310,13 +310,13 @@ Você pode escrever seu próprio host que processa modelos de texto. Um host per
     #>
     ```
 
-3. No código, substitua \<seu caminho > pelo caminho do arquivo Sample. min da linguagem específica do design criada no primeiro procedimento.
+3. No código, substitua \<YOUR PATH> pelo caminho do arquivo Sample. min da linguagem específica do design criada no primeiro procedimento.
 
 4. Salve e feche o arquivo.
 
 #### <a name="to-test-the-custom-host"></a>Para testar o host personalizado
 
-1. {1&gt;Abra uma janela do Prompt de Comando. &lt;1}
+1. Abra uma janela de Prompt de Comando.
 
 2. Digite o caminho do arquivo executável para o host personalizado, mas não pressione ENTER ainda.
 
@@ -325,7 +325,7 @@ Você pode escrever seu próprio host que processa modelos de texto. Um host per
      `<YOUR PATH>CustomHost\bin\Debug\CustomHost.exe`
 
     > [!NOTE]
-    > Em vez de digitar o endereço, você pode navegar até o arquivo CustomHost. exe no **Windows Explorer**e, em seguida, arrastar o arquivo para a janela de prompt de comando.
+    > Em vez de digitar o endereço, você pode navegar até o arquivo CustomHost.exe no **Windows Explorer**e, em seguida, arrastar o arquivo para a janela de prompt de comando.
 
 3. Digite um espaço.
 
@@ -336,13 +336,13 @@ Você pode escrever seu próprio host que processa modelos de texto. Um host per
      `<YOUR PATH>TestTemplateWithDP.txt`
 
     > [!NOTE]
-    > Em vez de digitar o endereço, você pode navegar até o arquivo TestTemplateWithDP. txt no **Windows Explorer**e, em seguida, arrastar o arquivo para a janela de prompt de comando.
+    > Em vez de digitar o endereço, você pode navegar até o arquivo TestTemplateWithDP.txt no **Windows Explorer**e, em seguida, arrastar o arquivo para a janela de prompt de comando.
 
      O aplicativo host personalizado é executado e inicia o processo de transformação do modelo de texto.
 
-5. No **Windows Explorer**, navegue até a pasta que contém o arquivo TestTemplateWithDP. txt.
+5. No **Windows Explorer**, navegue até a pasta que contém o arquivo TestTemplateWithDP.txt.
 
-     A pasta também contém o arquivo TestTemplateWithDP1. txt.
+     A pasta também contém o arquivo TestTemplateWithDP1.txt.
 
 6. Abra esse arquivo para ver os resultados da transformação do modelo de texto.
 
@@ -358,5 +358,5 @@ Você pode escrever seu próprio host que processa modelos de texto. Um host per
     Linked from: ExampleElement1
     ```
 
-## <a name="see-also"></a>Veja também
- [Passo a passo: criando um host de modelo de texto personalizado](../modeling/walkthrough-creating-a-custom-text-template-host.md)
+## <a name="see-also"></a>Consulte Também
+ [Instruções passo a passo: criando um host de modelo de texto personalizado](../modeling/walkthrough-creating-a-custom-text-template-host.md)

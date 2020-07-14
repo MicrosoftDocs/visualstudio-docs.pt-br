@@ -3,7 +3,7 @@ title: Importar ou exportar configurações de instalação
 titleSuffix: ''
 description: Saiba como exportar sua configuração de instalação para um arquivo .vsconfig para compartilhar com outras pessoas e como importá-lo para clonar.
 ms.date: 05/18/2019
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.about
 helpviewer_keywords:
@@ -18,12 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 12d22334094b848350d44d245685532fed196389
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4dcad21ce0a77e18bed0b077f731a509916e9e63
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114848"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85418815"
 ---
 # <a name="import-or-export-installation-configurations"></a>Importar ou exportar configurações de instalação
 
@@ -70,7 +70,7 @@ Quando estiver pronto para importar um arquivo de configuração de instalação
 
 ## <a name="automatically-install-missing-components"></a>Instalar automaticamente os componentes ausentes
 
-**Novidade no Visual Studio 2019**: Quando você salva um arquivo .vsconfig no diretório raiz da solução e, em seguida, abre uma solução, o Visual Studio detecta automaticamente quais componentes estão faltando e solicita que você os instale.
+**Novo no Visual Studio 2019**: quando você salva um arquivo. vsconfig no diretório raiz da solução e, em seguida, abre uma solução, o Visual Studio detecta automaticamente quais componentes estão ausentes e solicita que você os instale.
 
 ![O Gerenciador de Soluções sugere os componentes adicionais](../install/media/vs-2019/solution-explorer-config-file.png)
 
@@ -91,9 +91,9 @@ Você também pode gerar um arquivo .vsconfig diretamente no Gerenciador de Solu
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 * [Criar uma instalação de rede do Visual Studio](create-a-network-installation-of-visual-studio.md)
 * [Atualizar uma instalação em rede do Visual Studio](update-a-network-installation-of-visual-studio.md)
-* [Atualizações de controle para implantações do Visual Studio](controlling-updates-to-visual-studio-deployments.md)
+* [Controlar atualizações de implantações do Visual Studio](controlling-updates-to-visual-studio-deployments.md)
 * [Definir padrões para implantações empresariais](set-defaults-for-enterprise-deployments.md)

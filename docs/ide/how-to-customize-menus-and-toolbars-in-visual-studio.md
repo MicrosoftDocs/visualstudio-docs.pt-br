@@ -1,7 +1,7 @@
 ---
 title: Personalizar menus e barras de ferramentas
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.renametoolbar
 - vs.customize.toolbars
@@ -27,12 +27,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed425b120d5d47fb684294ce17bd7d48374c638e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ed85d3a3406cf7abf4bc08e728cc647d605e16ae
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79301849"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284393"
 ---
 # <a name="how-to-customize-menus-and-toolbars-in-visual-studio"></a>Como personalizar menus e barras de ferramentas no Visual Studio
 
@@ -43,7 +43,7 @@ Para personalizar o Visual Studio, além de adicionar e remover barras de ferram
 
 ## <a name="add-remove-or-move-a-menu-on-the-menu-bar"></a>Adicionar, remover ou mover um menu na barra de menus
 
-1. Na barra de menus, escolha **Ferramentas** > **Personalizar**.
+1. Na barra de menus, escolha **ferramentas**  >  **Personalizar**.
 
      A caixa de diálogo **Personalizar** é aberta.
 
@@ -59,7 +59,7 @@ Para personalizar o Visual Studio, além de adicionar e remover barras de ferram
 
 ## <a name="add-remove-or-move-a-toolbar"></a>Adicionar, remover ou mover uma barra de ferramentas
 
-1. Na barra de menus, escolha **Ferramentas** > **Personalizar**.
+1. Na barra de menus, escolha **ferramentas**  >  **Personalizar**.
 
      A caixa de diálogo **Personalizar** é aberta.
 
@@ -83,7 +83,7 @@ Para personalizar o Visual Studio, além de adicionar e remover barras de ferram
 
 ## <a name=""></a><a name="customizing_menu">Personalizar um menu ou uma barra de ferramentas</a>
 
-1. Na barra de menus, escolha **Ferramentas** > **Personalizar**.
+1. Na barra de menus, escolha **ferramentas**  >  **Personalizar**.
 
     A caixa de diálogo **Personalizar** é aberta.
 
@@ -105,7 +105,7 @@ Para personalizar o Visual Studio, além de adicionar e remover barras de ferram
 
 ## <a name="reset-a-menu-or-a-toolbar"></a>Redefinir um menu ou uma barra de ferramentas
 
-1. Na barra de menus, escolha **Ferramentas** > **Personalizar**.
+1. Na barra de menus, escolha **ferramentas**  >  **Personalizar**.
 
     A caixa de diálogo **Personalizar** é aberta.
 
@@ -117,7 +117,7 @@ Para personalizar o Visual Studio, além de adicionar e remover barras de ferram
 
     Também é possível redefinir todos os menus e barras de ferramentas escolhendo o botão **Redefinir Tudo**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Personalize o IDE](../ide/personalizing-the-visual-studio-ide.md)
-- [Personalize o editor](../ide/how-to-change-text-case-in-the-editor.md)
+- [Personalizar o IDE](../ide/personalizing-the-visual-studio-ide.md)
+- [Personalizar o editor](../ide/how-to-change-text-case-in-the-editor.md)

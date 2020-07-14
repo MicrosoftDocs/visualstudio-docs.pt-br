@@ -14,19 +14,19 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f3f53e8b5eab78e79387c24643500888db27b764
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2c88144e788fb35a3c330aa28b4e9d8b91ff8003
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663238"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545451"
 ---
-# <a name="ca1012-abstract-types-should-not-have-constructors"></a>CA1012: tipos abstratos não devem ter construtores
+# <a name="ca1012-abstract-types-should-not-have-constructors"></a>CA1012: Tipos abstratos não devem ter construtores
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|AbstractTypesShouldNotHaveConstructors|
+|TypeName|AbstractTypesShouldNotHaveConstructors|
 |CheckId|CA1012|
 |Categoria|Microsoft. Design|
 |Alteração Significativa|Sem interrupção|
@@ -50,7 +50,7 @@ ms.locfileid: "72663238"
  [!code-vb[FxCop.Design.AbstractTypeBad#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.AbstractTypeBad/vb/FxCop.Design.AbstractTypeBad.vb#1)]
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir corrige a violação anterior alterando a acessibilidade do construtor de `public` para `protected`.
+ O exemplo a seguir corrige a violação anterior alterando a acessibilidade do construtor de `public` para `protected` .
 
  [!code-csharp[FxCop.Design.AbstractTypeGood#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AbstractTypeGood/cs/FxCop.Design.AbstractTypeGood.cs#1)]
  [!code-vb[FxCop.Design.AbstractTypeGood#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.AbstractTypeGood/vb/FxCop.Design.AbstractTypeGood.vb#1)]

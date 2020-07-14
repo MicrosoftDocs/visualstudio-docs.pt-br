@@ -1,7 +1,7 @@
 ---
 title: IDiaDataSource::loadAndValidateDataFromPdb | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97afff946827c37ec2f84457016525377977dc8b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3e3a4b73cbbfe16cb87108c5f157dada135e71ee
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744995"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468535"
 ---
 # <a name="idiadatasourceloadandvalidatedatafrompdb"></a>IDiaDataSource::loadAndValidateDataFromPdb
 Abre e verifica se o arquivo do banco de dados do programa (. pdb) corresponde às informações de assinatura fornecidas e prepara o arquivo. pdb como uma fonte de dado de depuração.
@@ -40,7 +40,7 @@ no O caminho para o arquivo. pdb.
 
 `pcsig70`
 
-no A assinatura de GUID a ser verificada em relação à assinatura do arquivo. pdb. Somente arquivos. pdb no [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] e versões posteriores têm assinaturas de GUID.
+no A assinatura de GUID a ser verificada em relação à assinatura do arquivo. pdb. Somente arquivos. pdb no [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] e posterior têm assinaturas de GUID.
 
 `sig`
 
@@ -50,8 +50,8 @@ no A assinatura de 32 bits a ser verificada em relação à assinatura do arquiv
 
 no Valor de idade a ser verificado. A idade não corresponde necessariamente a nenhum valor de tempo conhecido, ela é usada para determinar se um arquivo. pdb está fora de sincronia com um arquivo. exe correspondente.
 
-## <a name="return-value"></a>Valor retornado
-Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. A tabela a seguir mostra os possíveis valores de retorno para esse método.
+## <a name="return-value"></a>Valor Retornado
+Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. A tabela a seguir mostra os possíveis valores de retorno para esse método.
 
 |Valor|Descrição|
 |-----------|-----------------|
@@ -91,7 +91,7 @@ if (FAILED(hr))
 
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)
 - [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)
 - [IDiaDataSource::loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)

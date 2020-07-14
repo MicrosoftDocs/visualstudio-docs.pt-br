@@ -1,6 +1,6 @@
 ---
-title: Geral, Depuração, Caixa de Diálogo de Opções | Microsoft Docs
-ms.date: 11/12/2019
+title: Caixa de diálogo geral, depuração, opções | Microsoft Docs
+ms.date: 06/04/2020
 ms.topic: reference
 f1_keywords:
 - vs.debug.options.General
@@ -21,166 +21,179 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 98bbd65d11b26d9b35000e4acbe4d28a585f8ddc
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: c5b03d7b45e488d7e8026a7d6835bbfba1efa210
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80472691"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286551"
 ---
 # <a name="general-debugging-options"></a>Opções gerais de depuração
 
-Para definir as opções de depuração do Visual Studio, selecione **Opções de** > **ferramentas**e, em **Depuração,** selecione ou desmarque as caixas ao lado das opções **Geral.** Você pode restaurar todas as configurações padrão com **as** > **configurações** > de importação e exportação de ferramentas**Redefinir todas as configurações**. Para redefinir um subconjunto de configurações, salve suas configurações com o **Assistente de Configurações de Importação e Exportação** antes de fazer as alterações que deseja testar e, em seguida, importe as configurações salvas depois.
+Para definir opções do depurador do Visual Studio, selecione opções de **ferramentas**  >  **Options**e, em **depuração** , marque ou desmarque as caixas ao lado das opções **gerais** . Você pode restaurar todas as configurações padrão com **ferramentas**  >  **importar e exportar configurações**  >  **redefinir todas as configurações**. Para redefinir um subconjunto de configurações, salve suas configurações com o **Assistente de importação e exportação de configurações** antes de fazer as alterações que você deseja testar e, em seguida, importe as configurações salvas posteriormente.
 
-Você pode definir as seguintes opções **gerais:**
+Você pode definir as seguintes opções **gerais** :
 
-**Pergunte antes de excluir todos os pontos de interrupção**: Requer confirmação antes de completar o comando Excluir todos os pontos de **interrupção.**
+**Perguntar antes de excluir todos os pontos de interrupção**: requer confirmação antes de concluir o comando **excluir todos os pontos de interrupção** .
 
-**Quebre todos os processos quando um processo se rompe:** Simultaneamente quebra todos os processos aos quais o depurador é anexado, quando ocorre uma quebra.
+**Interromper todos os processos quando um processo for interrompido**: interrompe simultaneamente todos os processos aos quais o depurador está anexado, quando ocorre uma interrupção.
 
-**Quebre quando as exceções cruzarem os limites do AppDomain ou do gerenciado/nativo:** Na depuração gerenciada ou de modo misto, o tempo de execução do idioma comum pode capturar exceções que cruzam os limites do domínio do aplicativo ou os limites gerenciados/nativos quando as seguintes condições são verdadeiras:
+**Quebra quando as exceções cruzam os limites de AppDomain ou gerenciado/nativo**: em depuração de modo misto ou gerenciado, o Common Language Runtime pode capturar exceções que cruzam limites de domínio de aplicativo ou limites nativos/gerenciados quando as seguintes condições são verdadeiras:
 
-1. Quando o código nativo chama o código gerenciado usando a interoperabilidade COM e o código gerenciado aciona uma exceção. Consulte [Introdução ao COM Interop](/dotnet/articles/visual-basic/programming-guide/com-interop/introduction-to-com-interop).
+1. Quando o código nativo chama o código gerenciado usando a interoperabilidade COM e o código gerenciado aciona uma exceção. Consulte [introdução à interoperabilidade com](/dotnet/articles/visual-basic/programming-guide/com-interop/introduction-to-com-interop).
 
-2. Quando o código gerenciado rodando no domínio do aplicativo 1 chama código gerenciado no domínio do aplicativo 2, e o código no domínio do aplicativo 2 lança uma exceção. Consulte [Programação com domínios de aplicativos](/dotnet/articles/framework/app-domains/index).
+2. Quando o código gerenciado executado no domínio do aplicativo 1 chama o código gerenciado no domínio 2 do aplicativo, e o código no aplicativo domínio 2 gera uma exceção. Consulte [programação com domínios de aplicativo](/dotnet/articles/framework/app-domains/index).
 
-3. Quando o código chama uma função usando reflexão, e essa função lança uma exceção. Ver [Reflexão](/dotnet/framework/reflection-and-codedom/reflection).
+3. Quando o código chama uma função usando reflexão, e essa função gera uma exceção. Consulte [reflexão](/dotnet/framework/reflection-and-codedom/reflection).
 
-Nas condições 2 e 3, a exceção `mscorlib` às vezes é capturada por código gerenciado em vez de pelo tempo de execução da linguagem comum. Esta opção não afeta a quebra em exceções capturadas por `mscorlib`.
+Nas condições 2 e 3, às vezes, a exceção é capturada pelo código gerenciado em `mscorlib` vez de pelo Common Language Runtime. Esta opção não afeta a quebra em exceções capturadas por `mscorlib`.
 
-**Habilitar depuração no nível do endereço**: Habilita recursos avançados para depuração no nível do endereço (a janela **Desmontagem,** a janela **Registros** e pontos de interrupção de endereço).
+**Habilitar depuração no nível de endereço**: habilita recursos avançados para depuração no nível de endereço (a janela de **desmontagem** , a janela de **registros** e pontos de interrupção de endereço).
 
-- **Mostrar desmontagem se a fonte não estiver disponível**: Mostra automaticamente a janela **Desmontagem** quando você depura o código para o qual a fonte não está disponível.
+- **Mostrar desmontagem se a origem não estiver disponível**: mostra automaticamente a janela de **desmontagem** quando você depura o código para o qual a origem está indisponível.
 
-**Habilitar filtros de ponto de interrupção**: Permite definir filtros em pontos de interrupção para que eles afetem apenas processos específicos, threads ou computadores.
+**Habilitar filtros de ponto de interrupção**: permite que você defina filtros em pontos de interrupção para que afetem apenas processos, threads ou computadores específicos.
 
-**Use o novo Helper de exceção**: Habilita o Helper de exceção que substitui o assistente de exceção. (O Helper de Exceção é suportado a partir do Visual Studio 2017)
+**Usar o novo auxiliar de exceção**: habilita o auxiliar de exceção que substitui o assistente de exceção. (O auxiliar de exceção tem suporte a partir do Visual Studio 2017)
 
 > [!NOTE]
-> Para código gerenciado, essa opção foi previamente chamada **De habilitar o assistente de exceção** .
+> Para código gerenciado, essa opção anteriormente era chamada **habilitar o assistente de exceção** .
 
-**Habilitar apenas meu código**: O depurador exibe e entra apenas no código do usuário ("Meu Código"), ignorando o código do sistema e outro código que é otimizado ou que não tenha símbolos de depuração.
+**Habilitar apenas meu código**: o depurador exibe e percorre as etapas do código do usuário ("meu código") apenas, ignorando o código do sistema e outro código que é otimizado ou que não tem símbolos de depuração.
 
-- **Aviso se não houver código de usuário no lançamento (somente gerenciado)**: Quando a depuração começar com Apenas Meu Código ativado, esta opção avisa se não houver código de usuário ("Meu Código").
+- **Avisar se não houver código de usuário na inicialização (somente gerenciado)**: quando a depuração começar com apenas meu código habilitado, essa opção avisará se não houver código de usuário ("meu código").
 
-**Habilitar a revisão da fonte .NET Framework**: Permite que o depurador entre na fonte .NET Framework. A ativação dessa opção desativa automaticamente O Meu Código. Os símbolos do .NET Framework serão baixados para um local de cache. Alterar o local do cache com a caixa de diálogo **Opções,** categoria **Depuração,** Página **Símbolos.**
+**Habilitar .NET Framework a depuração de origem**: permite que o depurador entre .NET Framework fonte. Habilitar essa opção desabilita automaticamente Apenas Meu Código. .NET Framework símbolos serão baixados em um local de cache. Altere o local do cache com a caixa de diálogo **Opções** , categoria **depuração** , página **símbolos** .
 
-**Passo sobre propriedades e operadores (somente gerenciado)**: Impede que o depurador entre em propriedades e operadores em código gerenciado.
+**Percorrer Propriedades e operadores (somente gerenciado)**: impede que o depurador percorra em Propriedades e operadores em código gerenciado.
 
-**Habilitar avaliação de propriedades e outras chamadas de função implícita**: Ativa a avaliação automática das propriedades e chamadas de função implícita em variáveis janelas e a caixa de diálogo **QuickWatch.**
+**Habilitar a avaliação de propriedade e outras chamadas de função implícitas**: ativa a avaliação automática de propriedades e chamadas de função implícitas em janelas de variáveis e na caixa de diálogo **QuickWatch** .
 
-- **Função de conversão de seqüência de chamadas em objetos em janelas variáveis (c# e somente JavaScript)**: Executa uma chamada de conversão de string implícita ao avaliar objetos em janelas variáveis. O resultado é exibido como uma seqüência em vez do nome do tipo. Aplica-se somente à depuração no código em C. Essa configuração pode ser substituída pelo atributo DebuggerDisplay (veja [Usando o atributo DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md)).
+- **Chamar função de conversão de cadeia de caracteres em objetos em janelas de variáveis (somente C# e JavaScript)**: executa uma chamada de conversão de cadeia de caracteres implícita ao avaliar objetos em janelas de variáveis. O resultado é exibido como uma cadeia de caracteres em vez do nome do tipo. Aplica-se somente à depuração no código em C. Essa configuração pode ser substituída pelo atributo DebuggerDisplay (consulte [usando o atributo DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md)).
 
-**Habilitar suporte ao servidor de origem**: Informa o depurador do Visual Studio`srcsrv.dll`para obter arquivos de origem de servidores de origem que implementam o protocolo SrcSrv ( ). O Team Foundation Server e as Ferramentas de Depuração para o Windows são dois servidores de origem que implementam o protocolo. Para obter mais informações sobre a configuração do SrcSrv, consulte a documentação [do SrcSrv.](/windows-hardware/drivers/debugger/srcsrv) Além disso, consulte [Especificar símbolo (.pdb) e arquivos de origem](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
-
-> [!IMPORTANT]
-> Como a leitura de arquivos *.pdb* pode executar código arbitrário nos arquivos, certifique-se de confiar no servidor.
-
-- **Imprimir mensagens de diagnóstico do servidor de origem para a janela Saída**: Quando o suporte ao servidor de origem estiver ativado, essa configuração ativa a exibição de diagnóstico.
-
-- **Permitir servidor de origem para conjuntos de confiança parcial (somente gerenciado)**: Quando o suporte ao servidor de origem estiver ativado, essa configuração substitui o comportamento padrão de não recuperar fontes para conjuntos de confiança parcial.
-
-- **Sempre execute comandos de servidor de origem não confiáveis sem solicitação**: Quando o suporte ao servidor de origem estiver ativado, essa configuração substitui o comportamento padrão de solicitação ao executar um comando não confiável.
-
-**Habilitar suporte ao Source Link**: Informa o depurador do Visual Studio para baixar arquivos de origem para arquivos *.pdb* que contenham informações do Source Link. Para obter mais informações sobre o Source Link, consulte a [especificação do link Origem](/dotnet/standard/library-guidance/sourcelink).
+**Habilitar o suporte ao servidor de origem**: informa ao depurador do Visual Studio para obter arquivos de origem de servidores de origem que implementam o protocolo SrcSrv ( `srcsrv.dll` ). O Team Foundation Server e as Ferramentas de Depuração para o Windows são dois servidores de origem que implementam o protocolo. Para obter mais informações sobre a configuração do SrcSrv, consulte a documentação do [srcsrv](/windows-hardware/drivers/debugger/srcsrv) . Além disso, consulte [especificar símbolo (. pdb) e arquivos de origem](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
 > [!IMPORTANT]
-> Como o Source Link baixará arquivos usando http ou https, certifique-se de confiar no arquivo *.pdb.*
+> Como a leitura de arquivos *. pdb* pode executar código arbitrário nos arquivos, certifique-se de confiar no servidor.
 
-- **Volte para a autenticação do Git Credential Manager para todas as solicitações do Source Link**: Quando o suporte ao Source Link estiver ativado e uma solicitação do Source Link falhar na autenticação, o Visual Studio então chama o Gerenciador de Credenciais do Git.
+- **Imprimir mensagens de diagnóstico do servidor de origem na janela de saída**: quando o suporte ao servidor de origem está habilitado, essa configuração ativa a exibição de diagnóstico.
 
-**Destaque toda a linha para pontos de interrupção e declaração atual (somente C++):** Quando o depurador destaca um ponto de interrupção ou uma declaração atual, ele destaca toda a linha.
+- **Permitir servidor de origem para assemblies de confiança parcial (somente gerenciado)**: quando o suporte ao servidor de origem está habilitado, essa configuração substitui o comportamento padrão de não recuperar fontes para assemblies de confiança parcial.
 
-**Exigir arquivos de origem para corresponder exatamente à versão original**: Diz ao depurador para verificar se um arquivo de origem corresponde à versão do código-fonte usado para construir o executável que você está depurando. Quando a versão não corresponde, você é solicitado a encontrar uma fonte correspondente. Se uma fonte compatível não for encontrada, o código-fonte não será exibido durante a depuração.
+- **Sempre executar comandos de servidor de origem não confiáveis sem avisar**: quando o suporte ao servidor de origem está habilitado, essa configuração substitui o comportamento padrão de solicitação ao executar um comando não confiável.
 
-**Redirecione todo o texto da janela de saída para a janela Imediato**: Envia todas as mensagens de depurador que normalmente apareceriam na janela **Saída** para a janela **'Imediato'.**
+**Habilitar suporte ao link de origem**: informa o depurador do Visual Studio para baixar arquivos de origem para arquivos *. pdb* que contêm informações de link de origem. Para obter mais informações sobre o link de origem, consulte a [especificação do link de origem](/dotnet/standard/library-guidance/sourcelink).
 
-**Mostrar estrutura bruta de objetos em janelas variáveis**: Desliga todas as personalizações de visualização da estrutura do objeto. Para obter mais informações sobre personalizações de visualização, consulte [Criar visualizações personalizadas de objetos gerenciados](../debugger/create-custom-views-of-managed-objects.md).
+> [!IMPORTANT]
+> Como o link de origem baixará arquivos usando http ou HTTPS, certifique-se de confiar no arquivo *. pdb* .
 
-**Suprimir a otimização do JIT na carga do módulo (somente gerenciada)**: Desativa a otimização JIT do código gerenciado quando um módulo é carregado e o JIT é compilado enquanto o depurador é conectado. Desativar a otimização pode facilitar a depuração de alguns problemas, embora às custas de desempenho. Se você estiver usando Apenas Meu Código, a supressão da otimização de JIT poderá fazer com que código que não seja do usuário apareça como código do usuário ("Meu Código"). Para obter mais informações, consulte [otimização e depuração do JIT](../debugger/jit-optimization-and-debugging.md).
+- **Volte para a autenticação do git Credential Manager para todas as solicitações de link de origem**: quando o suporte ao link de origem está habilitado e uma solicitação de link de origem falha na autenticação, o Visual Studio chama o Git Credential Manager.
 
-**Habilite a depuração do JavaScript para ASP.NET (Chrome, Microsoft Edge e IE)**: Habilita o depurador de script para aplicativos ASP.NET. No primeiro uso no Chrome, talvez seja necessário entrar no navegador para habilitar as extensões do Chrome instaladas. Desabilite essa opção para reverter ao comportamento legado.
+**Realçar toda a linha de origem para pontos de interrupção e a instrução atual (somente C++)**: quando o depurador realça um ponto de interrupção ou uma instrução atual, ele realça a linha inteira.
 
-**Habilitar ferramentas de desenvolvedor de borda para aplicativos JavaScript UWP (Experimental)**: Permite ferramentas de desenvolvedor para aplicativos JavaScript UWP no Microsoft Edge.
+**Exigir que os arquivos de origem correspondam exatamente à versão original**: diz ao depurador para verificar se um arquivo de origem corresponde à versão do código-fonte usado para criar o executável que você está depurando. Quando a versão não corresponder, você será solicitado a localizar uma fonte correspondente. Se uma fonte compatível não for encontrada, o código-fonte não será exibido durante a depuração.
 
-**Habilite o depurador Chrome JavaScript legado para ASP.NET**: Habilita o depurador de script Chrome JavaScript legado para aplicativos ASP.NET. No primeiro uso no Chrome, talvez seja necessário entrar no navegador para habilitar as extensões do Chrome instaladas.
+**Redirecionar todo o texto da janela de saída para a janela imediata**: envia todas as mensagens do depurador que normalmente apareceriam na janela de **saída** para a janela **imediata** .
 
-**Use uma maneira experimental de iniciar a depuração do Chrome JavaScript ao executar o Visual Studio como Administrador**: Diz ao Visual Studio para tentar uma nova maneira de iniciar o Chrome durante a depuração do JavaScript.
+**Mostrar estrutura bruta de objetos em janelas de variáveis**: desativa todas as personalizações de exibição de estrutura de objeto. Para obter mais informações sobre as personalizações de exibição, consulte [criar exibições personalizadas de objetos gerenciados](../debugger/create-custom-views-of-managed-objects.md).
 
-**Carregar as exportações de dll (somente nativo):** Carrega tabelas de exportação dll. Informações de símbolos das tabelas de exportação de dll podem ser úteis se você estiver trabalhando com mensagens do Windows, procedimentos do Windows (WindowProcs), objetos COM, ou marshaling, ou qualquer dll para a qual você não tem símbolos. A leitura das informações de exportação de dll gera certa sobrecarga. Desse modo, esse recurso é desativado por padrão.
+**Suprimir a otimização JIT na carga do módulo (somente gerenciado)**: desabilita a otimização JIT do código gerenciado quando um módulo é carregado e JIT é compilado enquanto o depurador é anexado. Desativar a otimização pode facilitar a depuração de alguns problemas, embora às custas de desempenho. Se você estiver usando Apenas Meu Código, a supressão da otimização de JIT poderá fazer com que código que não seja do usuário apareça como código do usuário ("Meu Código"). Para obter mais informações, consulte [otimização e depuração JIT](../debugger/jit-optimization-and-debugging.md).
+
+**Habilitar depuração de JavaScript para ASP.net (Chrome, Microsoft Edge e IE)**: habilita o depurador de script para aplicativos ASP.net. Na primeira utilização no Chrome, talvez seja necessário entrar no navegador para habilitar as extensões do Chrome que você instalou. Desabilite esta opção para reverter para o comportamento herdado.
+
+::: moniker range=">= vs-2019"
+**Habilitar o uso do depurador de JavaScript multidirecional para Depurar JavaScript em destinos aplicáveis (requer depuração de reinicialização)** Habilita a conexão ao navegador e ao back-end simultaneamente, permitindo que você depure seu código em execução no cliente e no servidor diretamente do editor.
+::: moniker-end
+
+**Carregar exportações de dll (somente nativo)**: carrega tabelas de exportação de dll. Informações de símbolos das tabelas de exportação de dll podem ser úteis se você estiver trabalhando com mensagens do Windows, procedimentos do Windows (WindowProcs), objetos COM, ou marshaling, ou qualquer dll para a qual você não tem símbolos. A leitura das informações de exportação de dll gera certa sobrecarga. Desse modo, esse recurso é desativado por padrão.
 
 Para ver quais símbolos estão disponíveis na tabela de exportação de uma dll, use `dumpbin /exports`. Os símbolos estão disponíveis para qualquer dll de 32 bits do sistema. Ao ler a saída `dumpbin /exports`, você pode ver o nome exato da função, incluindo caracteres não alfanuméricos. Isso é útil para definir um ponto de interrupção em uma função. Os nomes de função de tabelas de exportação de dll podem aparecer truncados em qualquer outro lugar no depurador. As chamadas são listadas na ordem de chamada, com a função atual (a mais profundamente aninhada) na parte superior. Para obter mais informações, confira [dumpbin /exports](/cpp/build/reference/dash-exports).
 
-**Mostrar pilhas paralelas diagrama de baixo para cima**: Controla a direção em que as pilhas são exibidas na janela **Pilhas Paralelas.**
+**Mostrar diagrama de pilhas paralelas de baixo para cima**: controla a direção em que as pilhas são exibidas na janela **pilhas paralelas** .
 
-**Ignore as exceções de acesso à memória GPU se os dados gravados não alterarem o valor**: Ignora as condições de corrida detectadas durante a depuração se os dados não mudarem. Para obter mais informações, consulte [Código de GPU de depuração](../debugger/debugging-gpu-code.md).
+**Ignorar exceções de acesso à memória GPU se os dados gravados não alteraram o valor**: ignora as condições de corrida detectadas durante a depuração se os dados não foram alterados. Para obter mais informações, consulte [depuração de código de GPU](../debugger/debugging-gpu-code.md).
 
-**Use o modo de compatibilidade gerenciada**: Substitui o mecanismo de depuração padrão por uma versão herdada para habilitar esses cenários:
+**Usar modo de compatibilidade gerenciado**: substitui o mecanismo de depuração padrão por uma versão herdada para habilitar estes cenários:
 
-- Você está usando uma linguagem .NET diferente de C#, Visual Basic ou F# que fornece seu próprio Avaliador de Expressão (isso inclui C++/CLI).
+- Você está usando uma linguagem .NET diferente de C#, Visual Basic ou F # que fornece seu próprio avaliador de expressão (isso inclui C++/CLI).
 
-- Você deseja ativar projetos Editar e Continuar para projetos C++ durante a depuração do modo misto.
+- Você deseja habilitar editar e continuar para projetos C++ durante a depuração de modo misto.
 
 > [!NOTE]
-> A escolha do modo de compatibilidade gerenciada desativa alguns recursos que são implementados apenas no mecanismo de depuração padrão. O motor de depuração legado foi substituído no Visual Studio 2012.
+> A escolha do modo de compatibilidade gerenciado desabilita alguns recursos que são implementados somente no mecanismo de depuração padrão. O mecanismo de depuração herdado foi substituído no Visual Studio 2012.
 
-**Use os avaliadores de expressão C# e VB legados**: O depurador usará os avaliadores de expressão Visual Studio 2013 C# ou Visual Basic em vez dos avaliadores de expressão baseados em Roslyn 2015.
-
-**Alerte ao usar visualizadores personalizados de depuradores contra processos potencialmente inseguros (somente gerenciados):** O Visual Studio avisa quando você está usando um visualizador de depurador personalizado que está executando o código no processo dedepurado, porque ele pode estar executando código inseguro.
-
-**Habilite o alocador de pilha de depuração do Windows (somente nativo):** Permite que o monte de depuração do windows melhore os diagnósticos de pilha. A ativação dessa opção afetará o desempenho da depuração.
-
-**Habilitar ferramentas de depuração de ui para XAML**: A árvore visual ao vivo e as janelas Live Property Explore aparecerão quando você começar a depurar (**F5**) um tipo de projeto suportado. Para obter mais informações, consulte [Inspecione as propriedades XAML durante a depuração](../xaml-tools/inspect-xaml-properties-while-debugging.md).
-
-- **Visualizar elementos selecionados em Live Visual Tree**: O elemento XAML cujo contexto é selecionado também é selecionado na janela Árvore Visual Ao **Vivo.**
-
-- **Mostrar ferramentas de tempo de execução no aplicativo**: Mostra os comandos **Live Visual Tree** em uma barra de ferramentas na janela principal do aplicativo XAML que está sendo depurado. Esta opção foi introduzida no Visual Studio 2015 Update 2.
-
-- **Habilitar XAML Hot Reload**: Permite que você use o recurso XAML Hot Reload com código XAML quando seu aplicativo estiver em execução. (Este recurso foi anteriormente chamado de "XAML Edit and Continue")
-
-::: moniker range=">= vs-2019" 
-- **Habilitar Apenas Meu XAML**: A partir da versão 16.4 do Visual Studio 2019, a **Árvore Visual Ao Vivo** por padrão mostra apenas XAML que é classificado como código de usuário. Se você desativar essa opção, todo o código XAML gerado será mostrado na ferramenta.
-
-- **Desative o modo de seleção quando um elemento é selecionado** A partir da versão 16.4 do Visual Studio 2019, o botão seletor de elementos da barra de ferramentas no aplicativo **(Habilitar seleção)** desliga quando um elemento é selecionado. Se você desativar essa opção, a seleção de elementos permanecerá ativada até que você clique no botão da barra de ferramentas do aplicativo novamente.
+::: moniker range="vs-2017"
+**Use os avaliadores de expressão c# e VB herdados**: o depurador usará o Visual Studio 2013 os avaliadores de expressão c# ou Visual Basic em vez dos avaliadores de expressão baseados em Roslyn do Visual Studio 2015.
 ::: moniker-end
 
-**Habilite ferramentas de diagnóstico durante a depuração**: A janela **Ferramentas de diagnóstico** é exibida enquanto você está depurando.
+**Avisar ao usar visualizadores de depurador personalizados contra processos potencialmente não seguros (somente gerenciados)**: o Visual Studio avisa quando você está usando um visualizador de depurador personalizado que está executando código no processo depurado, pois ele poderia estar executando código não seguro.
 
-**Mostrar tempo decorrido PerfTip durante a depuração**: A janela de código exibe o tempo decorrido de uma determinada chamada de método quando você está depurando.
+**Habilitar o alocador de heap de depuração do Windows (somente nativo)**: habilita o heap de depuração do Windows para melhorar o diagnóstico de heap. Habilitar essa opção afetará o desempenho da depuração.
 
-**Ativar editar e continuar**: Habilita ristindo a funcionalidade Editar e Continuar durante a depuração.
+**Habilitar ferramentas de depuração de interface do usuário para XAML**: a árvore visual ao vivo e a propriedade ao vivo explorando o Windows aparecerão quando você iniciar a depuração (**F5**) de um tipo de projeto com suporte. Para obter mais informações, consulte [inspecionar propriedades XAML durante a depuração](../xaml-tools/inspect-xaml-properties-while-debugging.md).
 
-- **Habilite editar e continuar nativo**: Você pode usar a funcionalidade Editar e Continuar enquanto depura o código C++ nativo. Para obter mais informações, consulte [Editar e Continuar (C++)](../debugger/edit-and-continue-visual-cpp.md).
+- **Visualizar elementos selecionados na árvore visual dinâmica**: o elemento XAML cujo contexto está selecionado também é selecionado na janela da **árvore visual ao vivo** .
 
-- **Aplique alterações em continuar (somente nativo)**: O Visual Studio compila automaticamente e aplica quaisquer alterações de código pendentes que você tenha feito ao continuar o processo a partir de um estado de ruptura. Se não for selecionado, você pode optar por aplicar alterações usando o item **Aplicar Alterações de Código** no menu **Depuração.**
+- **Mostrar ferramentas de tempo de execução no aplicativo**: mostra os comandos de **árvore visual ao vivo** em uma barra de ferramentas na janela principal do aplicativo XAML que está sendo depurado. Essa opção foi introduzida no Visual Studio 2015 atualização 2.
 
-- **Alerte sobre o código obsoleto (somente nativo):** Obtenha avisos sobre código sumido.
+- **Habilitar o recarregamento de XAML**: permite que você use o recurso de recarregamento ativo em XAML com código XAML quando seu aplicativo está em execução. (Anteriormente, esse recurso era chamado de "edição XAML e continuação")
 
-**Mostrar executar para clicar no botão no editor durante a depuração**: Quando esta opção estiver selecionada, o botão [Executar para clicar](../debugger/debugger-feature-tour.md#run-to-a-point-in-your-code-quickly-using-the-mouse) será mostrado durante a depuração.
+::: moniker range=">= vs-2019" 
+- **Habilitar apenas meu XAML**: a partir do Visual Studio 2019 versão 16,4, a **árvore visual ativa** , por padrão, mostra apenas o XAML que é classificado como código de usuário. Se você desabilitar essa opção, todo o código XAML gerado será mostrado na ferramenta.
 
-**Feche automaticamente o console quando a depuração parar**: Diz ao Visual Studio para fechar o console no final de uma sessão de depuração.
+- Desligar **o modo de seleção quando um elemento é selecionado** A partir do Visual Studio 2019 versão 16,4, o botão seletor do elemento da barra de ferramentas no aplicativo (**habilitar seleção**) é desativado quando um elemento é selecionado. Se você desabilitar essa opção, a seleção de elementos permanecerá ativada até você clicar no botão da barra de ferramentas no aplicativo novamente.
+
+- **Aplicar o Hot recarregamento de XAML ao salvar documento** A partir do Visual Studio 2019 versão 16,6, o aplica o Hot recarregamento de XAML quando você salva o documento.
+
+::: moniker-end
+
+**Habilitar ferramentas de diagnóstico durante a depuração**: a janela **ferramentas de diagnóstico** aparece enquanto você está depurando.
+
+**Mostrar tempo decorrido dica durante a depuração**: a janela de código exibe o tempo decorrido de uma determinada chamada de método quando você está depurando.
+
+**Habilitar editar e continuar**: habilita a funcionalidade Editar e continuar durante a depuração.
+
+- **Habilitar editar e continuar nativo**: você pode usar a funcionalidade Editar e continuar ao depurar código C++ nativo. Para obter mais informações, consulte [Editar e continuar (C++)](../debugger/edit-and-continue-visual-cpp.md).
+
+- **Aplicar alterações ao continuar (somente nativo)**: o Visual Studio compila automaticamente e aplica todas as alterações de código pendentes feitas ao continuar o processo a partir de um estado de interrupção. Se não estiver selecionado, você poderá optar por aplicar as alterações usando o item **aplicar alterações de código** no menu **depurar** .
+
+- **Avisar sobre código obsoleto (somente nativo)**: obter avisos sobre código obsoleto.
+
+**Mostrar executar para clicar no botão no editor durante a depuração**: quando esta opção for selecionada, o botão [Executar para clicar](../debugger/debugger-feature-tour.md#run-to-a-point-in-your-code-quickly-using-the-mouse) será exibido durante a depuração.
+
+**Fechar automaticamente o console quando a depuração for interrompida**: informa ao Visual Studio para fechar o console no final de uma sessão de depuração.
 
 ::: moniker range=">= vs-2019"
-**Habilite a avaliação rápida de expressão (somente gerenciada):** Permite que o depurador tente uma avaliação mais rápida simulando a execução de propriedades e métodos simples.
+**Habilitar a avaliação rápida de expressão (somente gerenciado)**: permite que o depurador tente uma avaliação mais rápida simulando a execução de propriedades e métodos simples.
+
+**Carregar símbolos de depuração no processo externo (somente nativo)** Habilita essa [otimização de memória](https://devblogs.microsoft.com/cppblog/out-of-process-debugger-for-c-in-visual-studio-2019/) durante a depuração.
+
+**Traga o Visual Studio para o primeiro plano ao interromper o depurador** Alterna o Visual Studio para o primeiro plano quando você pausa no depurador.
 ::: moniker-end
 
 ## <a name="options-available-in-older-versions-of-visual-studio"></a>Opções disponíveis em versões mais antigas do Visual Studio
 
-Se você estiver usando uma versão mais antiga do Visual Studio, algumas opções adicionais podem estar presentes.
+Se você estiver usando uma versão mais antiga do Visual Studio, algumas opções adicionais poderão estar presentes.
 
-**Habilitar o assistente de exceção**: Para código gerenciado, habilita o assistente de exceção. A partir do Visual Studio 2017, o Helper de Exceção substituiu o assistente de exceção.
+**Habilitar ferramentas para desenvolvedores de borda para aplicativos de JavaScript UWP (experimental)**: habilita as ferramentas de desenvolvedor para aplicativos de JavaScript UWP no Microsoft Edge.
 
-**Descontrair a pilha de chamadas em exceções não manuseadas**: Faz com que a janela **Pilha de chamadas** reverta a pilha de chamadas para o ponto antes que a exceção não tratada ocorreu.
+**Habilitar depurador de JavaScript do Chrome herdado para ASP.net**: habilita o depurador de script do JavaScript Chrome herdado para aplicativos ASP.net. Na primeira utilização no Chrome, talvez seja necessário entrar no navegador para habilitar as extensões do Chrome que você instalou.
 
-**Aviso se não houver símbolos no lançamento (somente nativo):** Exibe uma caixa de diálogo de aviso quando você depura um programa para o qual o depurador não tem informações de símbolos.
+**Habilitar o assistente de exceção**: para código gerenciado, habilita o assistente de exceção. A partir do Visual Studio 2017, o auxiliar de exceção substituiu o assistente de exceção.
 
-**Avisar se a depuração do script estiver desativada no lançamento**: Exibe uma caixa de diálogo de aviso quando o depurador é iniciado com a depuração de script desativada.
+**Desenrolar a pilha de chamadas em exceções sem tratamento**: faz com que a janela **pilha de chamadas** reverta a pilha de chamadas até o ponto antes que a exceção sem tratamento ocorra.
 
-**Use o modo de compatibilidade nativa**: Quando esta opção é selecionada, o depurador usa o depurador nativo do Visual Studio 2010 em vez do novo depurador nativo.
+**Use uma maneira experimental de iniciar a depuração de JavaScript do Chrome ao executar o Visual Studio como administrador**: diz ao Visual Studio para experimentar uma nova maneira de iniciar o Chrome durante a depuração do JavaScript.
 
-- Use esta opção quando estiver depurando o código .NET C++, porque o novo mecanismo de depuração não suporta a avaliação de expressões .NET C++. No entanto, ativar o Modo de Compatibilidade Nativa desativa muitos recursos que dependem da implementação atual do depurador para funcionar. Por exemplo, o motor legado carece de muitos visualizadores para tipos embutidos, como `std::string` em projetos do Visual Studio 2015.   Use projetos do Visual Studio 2013 para a melhor experiência de depuração nesses casos.
+**Avisar se nenhum símbolo for iniciado (somente nativo)**: exibe uma caixa de diálogo de aviso quando você depura um programa para o qual o depurador não tem informações de símbolo.
 
-## <a name="see-also"></a>Confira também
+**Avisar se a depuração de script estiver desabilitada na inicialização**: exibe uma caixa de diálogo de aviso quando o depurador é iniciado com a depuração de script desabilitada.
+
+**Usar o modo de compatibilidade nativa**: quando essa opção é selecionada, o depurador usa o depurador nativo do Visual Studio 2010 em vez do novo depurador nativo.
+
+- Use esta opção quando estiver depurando o código .NET C++, pois o novo mecanismo de depuração não oferece suporte à avaliação de expressões .NET C++. No entanto, habilitar o modo de compatibilidade nativa desabilita muitos recursos que dependem da implementação do depurador atual para operar. Por exemplo, o mecanismo herdado não tem muitos visualizadores para tipos internos, como `std::string` nos projetos do Visual Studio 2015.   Use Visual Studio 2013 projetos para a experiência de depuração ideal nesses casos.
+
+## <a name="see-also"></a>Veja também
 
 - [Depurando no Visual Studio](../debugger/index.yml)
-- [Primeiro olhe para o depurador](../debugger/debugger-feature-tour.md)
+- [Introdução ao depurador](../debugger/debugger-feature-tour.md)

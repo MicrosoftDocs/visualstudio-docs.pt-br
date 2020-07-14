@@ -1,7 +1,7 @@
 ---
 title: Codificando uma regra de validação personalizada para um teste de desempenho para Web
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - custom validation rules
 - validation rules, creating
@@ -15,12 +15,12 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9780a4ee81a4d063b5cfb7f66b1a5ea023d8fa2f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8bdf7f7f8f5bfcc7f8403740bea924c967bf3964
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75573398"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288865"
 ---
 # <a name="code-a-custom-validation-rule-for-a-web-performance-test"></a>Codificar uma regra de validação personalizada para um teste de desempenho Web
 
@@ -48,7 +48,7 @@ Você pode criar suas próprias regras de validação. Para fazer isso, você de
 
 6. (Opcional) No projeto de teste, adicione uma referência ao projeto de biblioteca de classes que contenha a regra de validação personalizada.
 
-7. No Projeto de Teste, abra um teste de desempenho web no **Web Performance Test Editor**.
+7. No projeto de teste, abra um teste de desempenho da Web no **Editor de testes de desempenho Web**.
 
 8. Para adicionar a regra de validação personalizada a uma solicitação de teste de desempenho da Web, clique com o botão direito do mouse em uma solicitação e selecione **Adicionar regra de validação**.
 
@@ -243,7 +243,7 @@ Namespace SampleWebTestRules
 End Namespace
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule>
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.Rules>

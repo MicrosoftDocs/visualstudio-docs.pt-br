@@ -28,12 +28,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: cec66cdb2de3f89358cd0ee90867154cc374a7fd
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f646d52e3aae3d52f6cd24d75421fbdc71d30d66
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75568198"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544086"
 ---
 # <a name="options-text-editor-xaml-miscellaneous"></a>Opções, Editor de texto, XAML, Diversos
 
@@ -43,7 +43,7 @@ Use a página de propriedades **Diversos** para especificar como elementos e atr
 
 Use essa configuração para controlar quando marcas e aspas são geradas automaticamente.
 
-|||
+|Nome|Descrição|
 |-|-|
 |**Marcas de fechamento**|Especifica se a marcação de fechamento de um elemento é gerada automaticamente ao você fechar a marcação de abertura com o caractere de maior que (>).|
 |**Citações de atributo**|Especifica se as aspas de fechamento são geradas quando um valor de atributo é selecionado na lista suspensa de preenchimento de declaração.|

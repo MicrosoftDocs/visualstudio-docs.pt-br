@@ -1,7 +1,7 @@
 ---
 title: IDiaSourceFile::get_uniqueId | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30a210c12384cbde55dafe6f3410b8fc840e8507
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b3f159211854e5b408d34c253a77893caf763bf2
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741789"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465195"
 ---
 # <a name="idiasourcefileget_uniqueid"></a>IDiaSourceFile::get_uniqueId
 Recupera um valor de chave de inteiro simples que é exclusivo para esta imagem.
@@ -35,11 +35,11 @@ HRESULT get_uniqueId ( 
 
 fora Retorna um valor de chave de inteiro simples que é exclusivo para esta imagem.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
  Comparar chaves em vez de cadeias de caracteres pode acelerar o processamento de números de linha.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

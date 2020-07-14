@@ -1,7 +1,7 @@
 ---
-title: 'Como: Por meio de programação contar caracteres em documentos'
+title: 'Como: contar caracteres programaticamente em documentos'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,28 +14,28 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fb4bbb124575346c930fa5539801deb3c9981cac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 81ee7c3d798ae2c38ed80b261a6d87190daa59a2
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62575238"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546062"
 ---
-# <a name="how-to-programmatically-count-characters-in-documents"></a>Como: Por meio de programação contar caracteres em documentos
-  É o primeiro caractere em um documento na posição do caractere 0, que representa o ponto de inserção. A última posição de caractere é igual ao número total de caracteres no documento. Você pode determinar o número de caracteres em um documento usando o <xref:Microsoft.Office.Interop.Word.Characters.Count%2A> propriedade do <xref:Microsoft.Office.Interop.Word.Characters> coleção.
+# <a name="how-to-programmatically-count-characters-in-documents"></a>Como: contar caracteres programaticamente em documentos
+  O primeiro caractere em um documento está na posição do caractere 0, que representa o ponto de inserção. A última posição de caractere é igual ao número total de caracteres no documento. Você pode determinar o número de caracteres em um documento usando a <xref:Microsoft.Office.Interop.Word.Characters.Count%2A> propriedade da <xref:Microsoft.Office.Interop.Word.Characters> coleção.
 
- Todos os caracteres no documento são contados, incluindo espaços, marcas de parágrafo e outros caracteres que normalmente estão ocultas. Até mesmo um novo documento em branco retorna uma contagem de um caractere, porque ela contém uma marca de parágrafo.
+ Todos os caracteres no documento são contados, incluindo espaços, marcas de parágrafo e outros caracteres que normalmente são ocultos. Mesmo um novo documento em branco retorna uma contagem de um caractere, pois ele contém uma marca de parágrafo.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="to-display-the-number-of-characters-in-a-document-level-customization"></a>Para exibir o número de caracteres em uma personalização no nível de documento
+## <a name="to-display-the-number-of-characters-in-a-document-level-customization"></a>Para exibir o número de caracteres em uma personalização em nível de documento
 
 1. Selecione o documento inteiro.
 
      [!code-vb[Trin_VstcoreWordAutomation#98](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#98)]
      [!code-csharp[Trin_VstcoreWordAutomation#98](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#98)]
 
-2. Exiba o número de caracteres do documento em uma caixa de mensagem.
+2. Exibe o número de caracteres no documento em uma caixa de mensagem.
 
      [!code-vb[Trin_VstcoreWordAutomation#99](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#99)]
      [!code-csharp[Trin_VstcoreWordAutomation#99](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#99)]
@@ -47,11 +47,11 @@ ms.locfileid: "62575238"
      [!code-vb[Trin_VstcoreWordAutomationAddIn#98](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#98)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#98](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#98)]
 
-2. Exiba o número de caracteres do documento em uma caixa de mensagem.
+2. Exibe o número de caracteres no documento em uma caixa de mensagem.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#99](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#99)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#99](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#99)]
 
 ## <a name="see-also"></a>Consulte também
-- [Como: Recuperar caracteres iniciais e finais em intervalos de forma programática](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)
-- [Como: Definir e selecionar intervalos em documentos programaticamente](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
+- [Como recuperar programaticamente caracteres de início e término em intervalos](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)
+- [Como: definir e selecionar intervalos de forma programática em documentos](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)

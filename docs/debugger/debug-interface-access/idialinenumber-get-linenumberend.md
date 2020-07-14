@@ -1,7 +1,7 @@
 ---
 title: IDiaLineNumber::get_lineNumberEnd | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c43c1d4b3b6a59f6601684fe20e238782448decb
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: aaf1a2144831c9c0a34ebfe27cb5082887454890
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743165"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466871"
 ---
 # <a name="idialinenumberget_linenumberend"></a>IDiaLineNumber::get_lineNumberEnd
 Recupera o número de linha de origem baseado em um onde a instrução ou expressão termina.
@@ -35,8 +35,8 @@ HRESULT get_lineNumberEnd ( 
 
 fora Retorna o número de linha onde a instrução ou a expressão termina. Se o valor for zero, as informações finais não estão presentes.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver suporte para essa propriedade. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

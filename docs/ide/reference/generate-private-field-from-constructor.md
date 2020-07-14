@@ -1,6 +1,6 @@
 ---
-title: Gerar campo particular do construtor
-ms.date: 03/10/2020
+title: Gerar campo privado e Propriedade do Construtor
+ms.date: 06/20/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
@@ -10,37 +10,37 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4eb5dd39d0fb2d4cd9ba8ade0d0408d6e36a4854
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 56bd361d2bffb4ff17b03ac6743837032d1934e1
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79094020"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283717"
 ---
-# <a name="generate-private-field-from-constructor"></a>Gerar campo particular do construtor
+# <a name="generate-private-field-and-property-from-constructor"></a>Gerar campo privado e Propriedade do Construtor
 
 Esta refatoração aplica-se a: 
 
 - C# 
 
-- Visual Basic
+**O que:** Gerar um campo ou propriedade particular de um construtor. 
 
-**O que é isso?** Gerar um campo privado a partir de um construtor. 
+**Quando:** Você deseja adicionar e inicializar rapidamente um campo ou propriedade particular de um construtor.
 
-**Quando:** Você deseja adicionar rapidamente um campo privado de um construtor.
-
-**Por que:** Escrever campos privados pode ser demorado e repetitivo. O uso dessa refatoração é rápido e torna o programa mais robusto.
+**Por que:** Escrever campos e propriedades particulares pode ser demorado e repetitivo. O uso dessa refatoração é rápido e torna o programa mais robusto.
 
 ## <a name="how-to"></a>Como fazer 
 
 1. Coloque o cursor no nome do parâmetro dentro do construtor.
 
-2. Pressione **Ctrl**+**.** para acionar o menu **Ações e Refatorações Rápidas**.
+2. Pressione **Ctrl** + **.** para acionar o menu **Ações e Refatorações Rápidas**.
    
-3. Selecione a opção **Para Criar e inicializar o campo**.
+3. Em seguida, selecione de um dos seguintes:
+
+- **Criar e inicializar campo** ou **criar e inicializar Propriedade**.
 
    ![Gerar campo particular do construtor](media/generate-private-field-from-constructor.png)
 
-## <a name="see-also"></a>Confira também 
+## <a name="see-also"></a>Veja também 
 
 - [Refatoração](../refactoring-in-visual-studio.md)

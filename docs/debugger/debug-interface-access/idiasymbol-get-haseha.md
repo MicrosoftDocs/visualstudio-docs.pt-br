@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_hasEHa | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f010fee3243a9ce202451fc9cc5cff1ed908118
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6c565a8c13b31feb78c8d60bf0b18bbc923f14f5
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740525"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463746"
 ---
 # <a name="idiasymbolget_haseha"></a>IDiaSymbol::get_hasEHa
 Recupera um sinalizador que especifica se a função contém manipulação de exceção assíncrona (estruturada).
@@ -33,16 +33,16 @@ HRESULT get_hasEHa(
 #### <a name="parameters"></a>Parâmetros
  `pFlag`
 
-fora Retorna `TRUE` se a função tiver qualquer manipulação de exceção assíncrona; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se a função tem qualquer manipulação de exceção assíncrona; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
-> Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
+> Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
 ## <a name="remarks"></a>Comentários
- É possível misturar a manipulação de exceção assíncrona ou estruturada com C++manipulação de exceção de estilo, mas requer uma opção de compilador específica,/EHA, para habilitá-la.
+ É possível misturar a manipulação de exceção assíncrona ou estruturada com a manipulação de exceção em estilo C++, mas requer uma opção de compilador específica,/EHa, para habilitá-la.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -51,5 +51,5 @@ fora Retorna `TRUE` se a função tiver qualquer manipulação de exceção ass�
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

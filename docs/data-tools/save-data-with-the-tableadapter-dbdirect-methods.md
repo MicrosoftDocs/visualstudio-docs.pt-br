@@ -1,7 +1,7 @@
 ---
 title: Salvar os dados com os métodos TableAdapter DBDirect
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,20 +16,20 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 16ba6fcab6ef0f7a60f8cb8373a10a7c4383676b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 77d7aa0859ee383258f80dfd74f36d584790e464
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586205"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281603"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>Salvar os dados com os métodos TableAdapter DBDirect
 
-Este tutorial fornece instruções detalhadas para executar instruções SQL diretamente em um banco de dados usando os métodos DBDirect de um TableAdapter. Os métodos DBDirect de um TableAdapter fornecem um bom nível de controle sobre as atualizações do seu banco de dados. Você pode usá-los para executar instruções SQL específicas e procedimentos armazenados chamando os métodos individuais `Insert`, `Update`e `Delete` conforme necessário pelo seu aplicativo (ao contrário do método `Update` sobrecarregado que executa as instruções UPDATE, INSERT e DELETE em uma única chamada).
+Este tutorial fornece instruções detalhadas para executar instruções SQL diretamente em um banco de dados usando os métodos DBDirect de um TableAdapter. Os métodos DBDirect de um TableAdapter fornecem um bom nível de controle sobre as atualizações do seu banco de dados. Você pode usá-los para executar instruções SQL específicas e procedimentos armazenados chamando os `Insert` métodos individuais, `Update` e `Delete` conforme necessário pelo seu aplicativo (em oposição ao `Update` método sobrecarregado que executa as instruções UPDATE, INSERT e Delete em uma única chamada).
 
 Durante este passo a passo, você aprenderá a:
 
-- Criar um novo **Aplicativo do Windows Forms**.
+- Crie um novo **aplicativo Windows Forms**.
 
 - Crie e configure um conjunto de dados com o [Assistente de configuração de fonte de dados](../data-tools/media/data-source-configuration-wizard.png).
 
@@ -39,7 +39,7 @@ Durante este passo a passo, você aprenderá a:
 
 - Adicione métodos para acessar diretamente o banco de dados e executar inserções, atualizações e exclusões.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este passo a passos usa SQL Server Express LocalDB e o banco de dados de exemplo Northwind.
 
@@ -63,7 +63,7 @@ A primeira etapa é criar um **aplicativo Windows Forms**.
 
 1. No Visual Studio, no menu **Arquivo**, selecione **Novo** > **Projeto**.
 
-2. Expanda **o C# Visual** ou **Visual Basic** no painel esquerdo e, em seguida, selecione **área de trabalho do Windows**.
+2. Expanda o **Visual C#** ou **Visual Basic** no painel esquerdo e, em seguida, selecione **área de trabalho do Windows**.
 
 3. No painel central, selecione o tipo de projeto **Windows Forms aplicativo** .
 
@@ -81,7 +81,7 @@ Esta etapa usa o **Assistente de Configuração de Fonte de Dados** para criar u
 
    A janela **Fontes de Dados** é aberta.
 
-2. Na janela **Fontes de Dados**, selecione **Adicionar Nova Fonte de Dados** para iniciar o **Assistente de Configuração de Fonte de Dados**.
+2. Na janela **fontes de dados** , selecione **Adicionar nova fonte de dados** para iniciar o **Assistente de configuração de fonte de dados**.
 
 3. Na tela **escolher um tipo de fonte de dados** , selecione **banco**de dado e, em seguida, selecione **Avançar**.
 
@@ -89,7 +89,7 @@ Esta etapa usa o **Assistente de Configuração de Fonte de Dados** para criar u
 
     - Se uma conexão de dados com o banco de dados de exemplo Northwind estiver disponível na lista suspensa, selecione-o.
 
-         - ou -
+         -ou-
 
     - Selecione **Nova Conexão** para inicializar a caixa de diálogo **Adicionar/Modificar Conexão**.
 
@@ -99,7 +99,7 @@ Esta etapa usa o **Assistente de Configuração de Fonte de Dados** para criar u
 
 7. Na tela **escolher seus objetos de banco de dados** , expanda o nó **tabelas** .
 
-8. Selecione a tabela `Region` e, em seguida, selecione **concluir**.
+8. Selecione a `Region` tabela e, em seguida, selecione **concluir**.
 
      O **NorthwindDataSet** é adicionado ao projeto e a tabela `Region` aparece na janela **Fontes de Dados**.
 
@@ -109,7 +109,7 @@ Crie controles de associação de dados arrastando itens da janela **Fontes de D
 
 Para criar controles associados a dados no Windows Form, arraste o nó da **região** principal da janela **fontes de dados** para o formulário.
 
-Um controle <xref:System.Windows.Forms.DataGridView> e uma faixa de ferramentas (<xref:System.Windows.Forms.BindingNavigator>) para navegação em registros são exibidos no formulário. Um [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `RegionTableAdapter`, <xref:System.Windows.Forms.BindingSource>e <xref:System.Windows.Forms.BindingNavigator> aparecem na bandeja de componentes.
+Um controle <xref:System.Windows.Forms.DataGridView> e uma faixa de ferramentas (<xref:System.Windows.Forms.BindingNavigator>) para navegação em registros são exibidos no formulário. Um [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `RegionTableAdapter` , <xref:System.Windows.Forms.BindingSource> e <xref:System.Windows.Forms.BindingNavigator> aparecem na bandeja do componente.
 
 ### <a name="to-add-buttons-that-will-call-the-individual-tableadapter-dbdirect-methods"></a>Para adicionar botões que chamam os métodos individuais DbDirect de um TableAdapter
 
@@ -117,11 +117,11 @@ Um controle <xref:System.Windows.Forms.DataGridView> e uma faixa de ferramentas 
 
 2. Defina as propriedades **Nome** e **Texto** a seguir em cada botão.
 
-    |Name|Texto|
+    |Nome|Texto|
     |----------|----------|
     |`InsertButton`|**Inserir**|
-    |`UpdateButton`|**Atualizar**|
-    |`DeleteButton`|**Excluir**|
+    |`UpdateButton`|**Atualização**|
+    |`DeleteButton`|**Delete (excluir)**|
 
 ### <a name="to-add-code-to-insert-new-records-into-the-database"></a>Para adicionar código para inserir novos registros no banco de dados
 
@@ -160,7 +160,7 @@ Um controle <xref:System.Windows.Forms.DataGridView> e uma faixa de ferramentas 
 
 - Selecione o botão **excluir** e verifique se o registro foi removido da grade.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Dependendo dos requisitos do aplicativo, há várias etapas que você pode querer executar depois de criar um formulário associado a dados. Entre algumas das melhorias que você poderia fazer nessa explicação passo a passo estão:
 

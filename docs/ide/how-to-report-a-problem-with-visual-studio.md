@@ -2,19 +2,19 @@
 title: Como relatar um problema com o Visual Studio
 description: Saiba como relatar um problema com o Visual Studio
 ms.date: 03/11/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: bee01179-cde5-4419-9095-190ee0ba5902
 author: madskristensen
 ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37dcfd6351cfa3adde4c1825518dd2bea7ce9b34
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 1c985d6699c75a78900366204c8bd5275f4c051d
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84180552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769927"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>Como relatar um problema com o Visual Studio para Mac ou com o Instalador do Visual Studio
 
@@ -117,7 +117,7 @@ Se você não quiser ou não puder usar o Visual Studio para relatar um problema
 
 Se você não tem um problema a ser relatado, mas deseja sugerir um recurso, há um local para fazer isso também. Para saber mais, confira a página [Sugerir um recurso](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 * [Opções de comentários do Visual Studio](../ide/feedback-options.md)
 * [Relatar um problema com o Visual Studio para Mac](/visualstudio/mac/report-a-problem)

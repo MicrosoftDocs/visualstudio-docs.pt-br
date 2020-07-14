@@ -1,7 +1,7 @@
 ---
 title: IDiaLineNumber::get_compilandId | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ab4776029f13a68746a6b4d6ca0343450f477a9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4989e8f5436b9da842e7a72173a73aced8591c25
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743215"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466913"
 ---
 # <a name="idialinenumberget_compilandid"></a>IDiaLineNumber::get_compilandId
 Recupera um identificador exclusivo para o compiland que contribuiu para esta linha.
@@ -35,8 +35,8 @@ HRESULT get_compilandId ( 
 
 fora Retorna `DWORD` que contém o identificador exclusivo para o compiland que contribuiu para esta linha.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver suporte para essa propriedade. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

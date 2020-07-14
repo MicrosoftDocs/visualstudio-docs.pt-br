@@ -1,19 +1,19 @@
 ---
 title: Configurar o Criador de Perfil do ASP.NET para testes de carga
 ms.date: 10/13/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - test settings, ASP.NET
 ms.assetid: 6832fe39-04d5-4d94-8a18-3e2730bad423
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 07df32104394dffcd61d1561309b77e61593f6e6
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+ms.openlocfilehash: c4f82f8f4c518a9c72399b6e28a01d112f5678c9
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880228"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288202"
 ---
 # <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>Como configurar o criador de perfil do ASP.NET para carregar testes usando configurações de teste no Visual Studio
 
@@ -22,7 +22,7 @@ Você pode usar o adaptador de dados de diagnóstico do criador de perfil do ASP
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
-> Este adaptador de dados de diagnóstico não pode ser usado para testes que são executados usando o Microsoft Test Manager (preterido no Visual Studio 2017). Você pode usar o adaptador de diagnóstico do Criador de Perfil do ASP.NET com testes de carga usando sites que exigem apenas o Visual Studio Enterprise.
+> Este adaptador de dados de diagnóstico não pode ser usado para testes que são executados usando Microsoft Test Manager (preterido no Visual Studio 2017). Você pode usar o adaptador de diagnóstico do Criador de Perfil do ASP.NET com testes de carga usando sites que exigem apenas o Visual Studio Enterprise.
 
 O adaptador de dados de diagnóstico do criador de perfil do ASP.NET permite coletar dados do criador de perfil do ASP.NET da camada de aplicativo quando você executa um teste de carga. Você não deve executar o criador de perfis para testes de carga longos, por exemplo, que durem mais de uma hora. Isso porque o arquivo do criador de perfis pode ficar grande, talvez com centenas de megabytes. Em vez disso, execute testes de carga mais curtos usando o criador de perfil do ASP.NET, o que ainda lhe proporcionará o benefício de diagnosticar detalhadamente os problemas de desempenho.
 
@@ -58,7 +58,7 @@ Antes de executar as etapas neste procedimento, você deverá abrir as configura
 
 Com o adaptador de dados de diagnóstico do criador de perfil do ASP.NET definido nas suas configurações de teste, você pode coletar dados de criação de perfil do ASP.NET no seu aplicativo Web ASP.NET.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Coletar informações de diagnóstico usando configurações de teste](../test/collect-diagnostic-information-using-test-settings.md)
 - [Como criar uma configuração de teste para um teste de carga distribuída](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)

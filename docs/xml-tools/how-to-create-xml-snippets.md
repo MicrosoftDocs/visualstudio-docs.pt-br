@@ -1,19 +1,19 @@
 ---
 title: 'Como: Crie snippets XML'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d8556dd7-1382-4af7-ba80-3e873c9416be
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: df3c2592036f085fcf89d80bcefb1a469b3c1e15
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2b86962221dcdeff59b1152baf7b7cddcc55293e
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815390"
 ---
 # <a name="how-to-create-xml-snippets"></a>Como: criar trechos XML
 
@@ -33,7 +33,7 @@ Para criar um novo trecho de código XML, crie um novo arquivo XML e use o recur
 
 5. Faça as alterações para o novo snippet.
 
-6. No menu **arquivo** , selecione **salvar xmlfile. xml**.
+6. No menu **arquivo** , selecione **salvar XMLFile.xml**.
 
      A caixa de diálogo **salvar arquivo como** é exibida.
 
@@ -56,7 +56,7 @@ Suporte do editor dois tipos de snippet:
 </SnippetTypes>
 ```
 
-O tipo de `Expansion` determina se o trecho de código aparece quando você invoca o comando **Inserir trecho de código** . O tipo de `SurroundsWith` determina se o trecho de código aparece quando você invoca o comando **Circundar com** .
+O `Expansion` tipo determina se o trecho de código aparece quando você invoca o comando **Insert Snippet** . O `SurroundsWith` tipo determina se o trecho de código é exibido quando você invoca o comando **Circundar com** .
 
 ### <a name="code-element"></a>Elemento de código
 
@@ -104,7 +104,7 @@ O elemento de `Literal` é usado para identificar o texto de substituição que 
 </Literal
 ```
 
-Literais também podem se referir funções. O editor de XML inclui uma função chamada **LookupPrefix**. A função **LookupPrefix** pesquisa o URI de namespace fornecido do local no documento XML para o qual esse trecho é invocado e retorna o prefixo de namespace definido para esse namespace, se houver, e inclui os dois-pontos (:) nesse nome. Veja a seguir um exemplo de um elemento `Literal` que usa a função **LookupPrefix** .
+Literais também podem se referir funções. O editor de XML inclui uma função chamada **LookupPrefix**. A função **LookupPrefix** pesquisa o URI de namespace fornecido do local no documento XML para o qual esse trecho é invocado e retorna o prefixo de namespace definido para esse namespace, se houver, e inclui os dois-pontos (:) nesse nome. Veja a seguir um exemplo de um `Literal` elemento que usa a função **LookupPrefix** .
 
 ```xml
 <Literal Editable="false">
@@ -117,6 +117,6 @@ A variável de $prefix$ pode então ser usado em qualquer lugar no seu snippet X
 
 ## <a name="see-also"></a>Veja também
 
-- [Trechos de código XML](../xml-tools/xml-snippets.md)
+- [Snippets XML](../xml-tools/xml-snippets.md)
 - [Como: usar trechos XML](../xml-tools/how-to-use-xml-snippets.md)
 - [Como gerar um trecho XML a partir de um esquema XML](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)

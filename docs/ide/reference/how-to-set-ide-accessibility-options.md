@@ -4,7 +4,7 @@ description: Saiba como definir opções de acessibilidade no Visual Studio que 
 ms.date: 08/23/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - accessibility [Visual Studio]
 ms.assetid: ddc96c4c-0600-46c1-8267-7dce4c44ad24
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63bba4e8defcd727f05dbc209aa2f48f7d5f2c92
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ac857d961b1ae736645ba2cfda3f1ef5755d0fa1
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "70107779"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770282"
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>Como definir opções de acessibilidade do IDE
 
@@ -38,7 +38,7 @@ Além disso, o Visual Studio fornece suporte a layouts de teclado Dvorak, que to
 
 ## <a name="editors-dialogs-and-tool-windows"></a>Editores, caixas de diálogo e janelas de ferramentas
 
-Por padrão, caixas de diálogo e janelas de ferramentas no Visual Studio usam o mesmo tamanho de fonte e as mesmas cores do sistema operacional. As configurações de cor do quadro do IDE, das caixas de diálogo, das barras de ferramentas e das janelas de ferramentas são baseadas em um esquema de cores: clara ou escuro. Você pode alterar o tema de cor atual na [caixa de diálogo Opções: Ambiente > Geral](../../ide/reference/general-environment-options-dialog-box.md).
+Por padrão, caixas de diálogo e janelas de ferramentas no Visual Studio usam o mesmo tamanho de fonte e as mesmas cores do sistema operacional. As configurações de cor do quadro do IDE, das caixas de diálogo, das barras de ferramentas e das janelas de ferramentas são baseadas em um esquema de cores: clara ou escuro. Você pode alterar o tema de cor atual na [caixa de diálogo opções: ambiente > geral](../../ide/reference/general-environment-options-dialog-box.md).
 
 Também é possível exibir janelas pop-up no modo de exibição de Código do editor. Essas janelas podem fornecer membros disponíveis no objeto atual e os parâmetros para concluir uma função ou instrução. Essas janelas podem ser úteis se você tiver dificuldades para digitar. No entanto, elas interferem no foco do editor de código, o que pode ser um problema para alguns usuários.
 
@@ -46,7 +46,7 @@ Veja como desativar as janelas pop-up:
 
 1. No menu **Ferramentas**, escolha **Opções**.
 
-1. Escolha **o Editor de** > Texto**All Languages** > **General**.
+1. Escolha **Editor de texto**  >  **todos os idiomas**  >  **geral**.
 
 1. Desmarque as caixas de seleção **Listar membros automaticamente** e **Informações de parâmetros**.
 
@@ -62,7 +62,7 @@ Também é possível alterar as configurações de como o texto é exibido no ed
 
 1. No menu **Ferramentas**, escolha **Opções**.
 
-1. Escolha**Fontes e cores do** **ambiente** > .
+1. Escolha **Environment**  >  **fontes e cores**do ambiente.
 
 1. Selecione uma opção no menu suspenso **Mostrar configurações de**.
 
@@ -83,7 +83,7 @@ Também é possível alterar as configurações de como o texto é exibido no ed
     > [!TIP]
     > Para redefinir o tamanho do texto em editores e janelas de ferramentas baseadas em texto, escolha **Usar Padrões**.
 
-7. Escolha **OK**.
+7. Selecione **OK**.
 
 ### <a name="change-the-colors-that-are-used-in-the-ide"></a>Alterando as cores usadas no IDE
 
@@ -99,10 +99,10 @@ Você pode optar por alterar as cores padrão de texto, indicadores de margem, e
 
 1. Selecione configurações de exibição entre as opções a seguir: **Primeiro plano do item**, **Tela de fundo do item** e **Negrito**.
 
-1. Escolha **OK**.
+1. Selecione **OK**.
 
 > [!TIP]
-> Para usar cores de alto contraste para todas as janelas de aplicação do sistema operacional, **pressione Left Alt**+**Left Shift**+**PrtScn**. Feche e reabra o Visual Studio, se estiver aberto, para implementar completamente as cores de alto contraste.
+> Para usar cores de alto contraste para todas as janelas de aplicativos em seu sistema operacional, pressione **ALT esquerda**com + **SHIFT esquerda** + **PrtScn**. Feche e reabra o Visual Studio, se estiver aberto, para implementar completamente as cores de alto contraste.
 
 ## <a name="toolbars"></a>Barras de Ferramentas
 
@@ -114,7 +114,7 @@ Para melhorar a acessibilidade e a usabilidade da barra de ferramentas, você po
 
 1. Na caixa de diálogo **Personalizar**, selecione a guia **Comandos**.
 
-1. Selecione **Barra de ferramentas**e escolha o nome da barra de ferramentas que contém o botão para o qual você pretende exibir o texto.
+1. Selecione **barra de ferramentas**e, em seguida, escolha o nome da barra de ferramentas que contém o botão para o qual você pretende exibir o texto.
 
 1. Na lista, selecione o comando que deseja alterar.
 
@@ -132,4 +132,4 @@ Para melhorar a acessibilidade e a usabilidade da barra de ferramentas, você po
 
 * [Recursos de acessibilidade do Visual Studio](../../ide/reference/accessibility-features-of-visual-studio.md)
 * [Acessibilidade para Visual Studio para Mac](/visualstudio/mac/accessibility/)
-* [Recursos para projetar aplicativos acessíveis](../../ide/reference/resources-for-designing-accessible-applications.md)
+* [Recursos para a criação de aplicativos acessíveis](../../ide/reference/resources-for-designing-accessible-applications.md)

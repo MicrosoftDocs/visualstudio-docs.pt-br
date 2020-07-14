@@ -1,7 +1,7 @@
 ---
 title: Como criar herança entre tipos (Designer de Classe)
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.classdesigner.inheritanceline
 helpviewer_keywords:
@@ -13,22 +13,22 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fbf540056318e092db13521dc80478cc7eb91948
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e1ffae72a3fe171b6bd16cfbc623a777f4d4d2e4
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590365"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770206"
 ---
 # <a name="how-to-create-inheritance-between-types-in-class-designer"></a>Como criar herança entre tipos no Designer de Classe
 
-Para criar uma relação de herança entre dois tipos em um diagrama de classe usando **Class Designer,** conecte o tipo base com seu tipo ou tipos derivados. Você pode ter uma relação de herança entre duas classes, entre uma classe e uma interface ou entre duas interfaces.
+Para criar uma relação de herança entre dois tipos em um diagrama de classe usando **Designer de classe**, conecte o tipo base com seu tipo ou tipos derivados. Você pode ter uma relação de herança entre duas classes, entre uma classe e uma interface ou entre duas interfaces.
 
 ## <a name="to-create-an-inheritance-between-types"></a>Para criar uma herança entre tipos
 
-1. A partir do seu projeto no **Solution Explorer,** abra um arquivo de diagrama de classe (.cd).
+1. Em seu projeto no **Gerenciador de soluções**, abra um arquivo de diagrama de classe (. CD).
 
-     Se você não possuir um diagrama de classes, crie um. [Veja como: Adicionar diagramas de classe a projetos](how-to-add-class-diagrams-to-projects.md).
+     Se você não possuir um diagrama de classes, crie um. Consulte [como: Adicionar diagramas de classe a projetos](how-to-add-class-diagrams-to-projects.md).
 
 2. Na **Caixa de Ferramentas**, no **Designer de Classe**, clique em **Herança**.
 

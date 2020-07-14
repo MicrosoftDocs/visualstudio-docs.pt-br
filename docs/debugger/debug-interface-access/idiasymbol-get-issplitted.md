@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_isSplitted | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9511551a2f3530adc14bee0f6eec3cf360b41c03
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2c2bae3d054aa8e331db3a345743e4f0e9c20b49
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740047"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463172"
 ---
 # <a name="idiasymbolget_issplitted"></a>IDiaSymbol::get_isSplitted
 Recupera um sinalizador que especifica se o símbolo de dados foi dividido em uma agregação ou coleção de outros símbolos; o compilador trata os símbolos como entidades separadas, mesmo que eles realmente façam parte de um símbolo maior.
@@ -33,10 +33,10 @@ HRESULT get_isSplitted(
 #### <a name="parameters"></a>Parâmetros
  `pFlag`
 
-fora Retorna `TRUE` se o símbolo foi dividido em uma agregação de símbolos; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se o símbolo foi dividido em uma agregação de símbolos; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
@@ -51,6 +51,6 @@ fora Retorna `TRUE` se o símbolo foi dividido em uma agregação de símbolos; 
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaSymbol::get_isAggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md)

@@ -11,15 +11,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c9e6974f1b676b623c58eea451270bde98ddcff7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: afe4063f2d96b2ae46664ec6642ec1a4e98ab892
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585971"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535259"
 ---
 # <a name="walkthrough-create-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>Walkthrough: criar classes de LINQ to SQL usando herança de tabela única (O/R Designer)
-As [ferramentas de LINQ to SQL no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) oferecem suporte à herança de tabela única, pois normalmente são implementadas em sistemas relacionais. Este tutorial se expande sobre as etapas genéricas fornecidas em [como configurar a herança usando o tópico o/R Designer](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) e fornece alguns dados reais para demonstrar o uso de herança no [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].
+As [ferramentas de LINQ to SQL no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) oferecem suporte à herança de tabela única, pois normalmente são implementadas em sistemas relacionais. Este tutorial se expande sobre as etapas genéricas fornecidas em [como configurar a herança usando o tópico o/R Designer](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) e fornece alguns dados reais para demonstrar o uso de herança no [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] .
 
 Durante este passo a passos, você executa as seguintes tarefas:
 
@@ -38,7 +38,7 @@ Durante este passo a passos, você executa as seguintes tarefas:
 - Exibir os dados em um Windows Form.
 
 ## <a name="create-a-table-to-inherit-from"></a>Criar uma tabela da qual herdar
-Para ver como a herança funciona, crie uma pequena tabela de `Person`, use-a como uma classe base e, em seguida, crie um objeto de `Employee` que herde dela.
+Para ver como a herança funciona, crie uma pequena `Person` tabela, use-a como uma classe base e, em seguida, crie um `Employee` objeto que herde dela.
 
 ### <a name="to-create-a-base-table-to-demonstrate-inheritance"></a>Para criar uma tabela base para demonstrar a herança
 
@@ -47,14 +47,14 @@ Para ver como a herança funciona, crie uma pequena tabela de `Person`, use-a co
     > [!NOTE]
     > Você pode usar o banco de dados Northwind ou qualquer outro banco de dados ao qual você possa adicionar uma tabela.
 
-2. No **Designer de Tabela**, adicione as seguintes colunas à tabela:
+2. No **Designer de tabela**, adicione as seguintes colunas à tabela:
 
-    |Nome da Coluna|Tipo de dados do|Permitir nulos|
+    |Nome da coluna|Tipo de Dados|Permitir Nulos|
     |-----------------|---------------|-----------------|
-    |**ID**|**int**|**False**|
+    |**ID**|**int**|**For**|
     |**Tipo**|**int**|**True**|
-    |**FirstName**|**nvarchar(200)**|**False**|
-    |**LastName**|**nvarchar(200)**|**False**|
+    |**Nome**|**nvarchar(200)**|**For**|
+    |**Sobrenome**|**nvarchar(200)**|**For**|
     |**Gerente**|**int**|**True**|
 
 3. Defina a coluna de identificação como a chave primária.
@@ -70,9 +70,8 @@ Para que você possa verificar se a herança está configurada corretamente, a t
 
 2. Copie os seguintes dados na tabela. (Você pode copiá-lo e, em seguida, colá-lo na tabela selecionando a linha inteira no painel de **resultados** .)
 
-    ||||||
+    |**ID**|**Tipo**|**Nome**|**Sobrenome**|**Gerente**|
     |-|-|-|-|-|
-    |**ID**|**Tipo**|**FirstName**|**LastName**|**Gerente**|
     |**1**|**1**|**Anne**|**Wallace**|**NULL**|
     |**2**|**1**|**Carlos**|**Grilo**|**NULL**|
     |**3**|**1**|**Yael**|**Peled**|**NULL**|
@@ -86,14 +85,14 @@ Para que você possa verificar se a herança está configurada corretamente, a t
     |**11**|**2**|**Mindy**|**Martin**|**3**|
     |**12**|**2**|**Ken**|**Kwok**|**3**|
 
-## <a name="create-a-new-project"></a>Crie um novo projeto
+## <a name="create-a-new-project"></a>Criar um novo projeto
 Agora que você criou a tabela, crie um novo projeto demonstrar a configuração de herança.
 
 ### <a name="to-create-the-new-windows-forms-application"></a>Para criar o novo aplicativo Windows Forms
 
 1. No Visual Studio, no menu **Arquivo**, selecione **Novo** > **Projeto**.
 
-2. Expanda **o C# Visual** ou **Visual Basic** no painel esquerdo e, em seguida, selecione **área de trabalho do Windows**.
+2. Expanda o **Visual C#** ou **Visual Basic** no painel esquerdo e, em seguida, selecione **área de trabalho do Windows**.
 
 3. No painel central, selecione o tipo de projeto **Windows Forms aplicativo** .
 
@@ -105,7 +104,7 @@ Agora que você criou a tabela, crie um novo projeto demonstrar a configuração
 
 ### <a name="to-add-a-linq-to-sql-file-to-the-project"></a>Para adicionar um arquivo LINQ to SQL ao projeto
 
-1. No menu **Projeto**, clique em **Adicionar Novo Item**.
+1. No menu **Projeto** , clique em **Adicionar Novo Item**.
 
 2. Clique no modelo **Classes LINQ to SQL** e clique em **Adicionar**.
 
@@ -138,7 +137,7 @@ Configure a herança arrastando um objeto **Herança** da **Caixa de Ferramentas
 
 11. Defina a propriedade **Padrão de Herança** como **Pessoa**.
 
-12. Crie o projeto.
+12. Compile o projeto.
 
 ## <a name="query-the-inherited-class-and-display-the-data-on-the-form"></a>Consultar a classe herdada e exibir os dados no formulário
 Agora você adiciona um código ao formulário que consulta uma classe específica no modelo de objeto.
@@ -175,7 +174,7 @@ Agora você adiciona um código ao formulário que consulta uma classe específi
     ```
 
 ## <a name="test-the-application"></a>Testar o aplicativo
-Execute o aplicativo e verifique se os registros exibidos na caixa de listagem são todos empregados (os registros que têm um valor de 2 na coluna **Tipo**).
+Execute o aplicativo e verifique se os registros exibidos na caixa de listagem são todos os funcionários (registros que têm um valor de 2 em sua coluna de **tipo** ).
 
 ### <a name="to-test-the-application"></a>Para testar o aplicativo
 
@@ -183,12 +182,12 @@ Execute o aplicativo e verifique se os registros exibidos na caixa de listagem s
 
 2. Verifique se apenas os registros que têm um valor de 2 na coluna **Tipo** são exibidos.
 
-3. Feche o formulário. (No menu **Depurar**, clique em **Parar Depuração**.)
+3. Feche o formulário. (No menu **depurar** , clique em **parar depuração**.)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Ferramentas do LINQ to SQL no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [Passo a passo: criando classes LINQ to SQL (Designer Relacional de Objetos)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
 - [Como atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Designer Relacional de Objetos)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)
 - [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
-- [Como gerar o modelo de objeto em Visual Basic ou C#](/dotnet/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp)
+- [Como gerar o modelo de objeto em Visual Basic ou C #](/dotnet/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp)

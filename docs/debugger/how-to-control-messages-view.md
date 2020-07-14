@@ -1,7 +1,7 @@
 ---
-title: 'Como: Exibição de mensagens de controle | Microsoft Docs'
+title: Como controlar a exibição de mensagens | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Spy++, Messages View
 - Messages view, controlling
@@ -11,22 +11,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0007d1ad1e87b2e1f2d34b039b4105bb525578a7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a95e257950a93ff61c27f7ea599b0de12e09677d
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894627"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350245"
 ---
-# <a name="how-to-control-messages-view"></a>Como: Controlar a exibição de mensagens
-Com Spy + +, você tem controle considerável sobre o conteúdo de um [exibição de mensagens](../debugger/messages-view.md) janela. Você pode [iniciar e parar](../debugger/how-to-start-and-stop-the-message-log-display.md) exibir as mensagens a qualquer momento e você pode especificar:
+# <a name="how-to-control-messages-view"></a>Como controlar a exibição de mensagens
+Com o Spy + +, você tem um controle considerável sobre o conteúdo de uma janela de [exibição de mensagens](../debugger/messages-view.md) . Você pode [Iniciar e parar](../debugger/how-to-start-and-stop-the-message-log-display.md) de exibir as mensagens a qualquer momento e pode especificar:
 
-- Quais tipos de mensagem que você deseja ver.
+- Quais tipos de mensagem você deseja ver.
 
-- Qual o windows que você deseja monitorar.
+- Qual Windows você deseja monitorar.
 
 - O formato de exibição para linhas de mensagem.
 
-  Essas configurações estão disponíveis a partir o [caixa de diálogo de opções de mensagem](../debugger/message-options-dialog-box.md), e elas se aplicam apenas à visualização ativa [exibição de mensagens](../debugger/messages-view.md) janela. Para abrir essa caixa de diálogo, escolha **mensagens de Log** da **Spy** menu.
+  Essas configurações estão disponíveis na [caixa de diálogo opções de mensagem](../debugger/message-options-dialog-box.md)e se aplicam somente à janela [exibição de mensagens](../debugger/messages-view.md) ativas. Para abrir essa caixa de diálogo, escolha **mensagens de log** no menu do **Spy** .
 
-  Três painéis com guias Opções de mensagem estão disponíveis. Para obter mais informações, consulte [guia do Windows, a caixa de diálogo de opções de mensagem](../debugger/windows-tab-message-options-dialog-box.md), [guia mensagens, caixa de diálogo de opções de mensagem](../debugger/messages-tab-message-options-dialog-box.md), e [guia saída, caixa de diálogo de opções de mensagem](../debugger/output-tab-message-options-dialog-box.md).
+  Três painéis com guias de opções de mensagem estão disponíveis. Para obter mais informações, consulte a [guia Windows, caixa de diálogo opções de mensagem](../debugger/windows-tab-message-options-dialog-box.md), [guia mensagens, caixa de diálogo opções de mensagem](../debugger/messages-tab-message-options-dialog-box.md)e [guia saída, caixa de diálogo opções de mensagem](../debugger/output-tab-message-options-dialog-box.md).

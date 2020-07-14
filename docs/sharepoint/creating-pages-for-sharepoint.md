@@ -1,7 +1,7 @@
 ---
 title: Criando páginas para o SharePoint | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -17,12 +17,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 297ebf0e7c2ed1273dd5a8ac973ce497c4c64781
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 942891bc9281c07966160ea9df065408fcbfd5ff
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986350"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015169"
 ---
 # <a name="create-pages-for-sharepoint"></a>Criar páginas para o SharePoint
   Você pode criar páginas de aplicativo, páginas de site, páginas mestras e layouts de página para um site do SharePoint.
@@ -39,7 +38,7 @@ ms.locfileid: "72986350"
 |Páginas do aplicativo|Crie uma página de aplicativo se desejar que a página contenha código personalizado ou que você queira que a página seja compartilhada entre vários sites. Caso contrário, uma página do site pode ser a melhor opção.|
 |Páginas do site|Crie uma página do site se desejar executar qualquer uma das seguintes tarefas:<br /><br /> -Adicione a página a uma biblioteca do SharePoint.<br />– Habilite a página para hospedar recursos como Web Parts dinâmicos e zonas de Web Part.<br />– Permitir que os usuários personalizem a página usando o SharePoint Designer.<br /><br /> Não crie uma página do site se desejar que a página contenha código personalizado. Embora você possa adicionar código personalizado a uma página do site, o código parará de ser executado quando o usuário personalizar a página usando o SharePoint Designer.|
 |Páginas mestras|Crie uma página mestra se desejar definir uma estrutura comum para páginas do site e páginas do aplicativo.|
-|Layouts de página|Os layouts de página são específicos para [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] e permitem que você defina ainda mais uma estrutura comum para páginas do site e páginas do aplicativo.|
+|Layouts de página|Os layouts de página são específicos para [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] o e permitem que você defina ainda mais uma estrutura comum para páginas do site e páginas do aplicativo.|
 
  Para obter uma visão geral de cada tipo de página, consulte [bloco de construção: páginas e a interface do usuário](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)), [layouts de página e páginas mestras](/previous-versions/office/developer/sharepoint-2010/ms543497(v=office.14)).
 
@@ -62,7 +61,7 @@ ms.locfileid: "72986350"
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|Descrição|
+|Title|Descrição|
 |-----------|-----------------|
 |[Criar páginas de aplicativo para o SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md)|Descreve como adicionar páginas de aplicativos: conteúdo *. aspx* que é mesclado com uma página mestra do SharePoint.|
 |[Como: criar uma página de aplicativo](../sharepoint/how-to-create-an-application-page.md)|Mostra como criar páginas do ASP.NET que são executadas em um site do SharePoint.|

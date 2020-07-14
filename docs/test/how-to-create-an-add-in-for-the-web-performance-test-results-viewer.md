@@ -1,7 +1,7 @@
 ---
 title: Criar um suplemento para o Visualizador de Resultados do Teste de Desempenho Web
 ms.date: 10/20/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Web performance tests, Visual Studio Add-in
 - Visual Studio Add-in, Web performance tests
@@ -9,14 +9,14 @@ ms.assetid: 1118c604-4b1b-4b21-a04e-45995b676fa8
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a6da2686a5a68325101e7161a51a8144e7ef42b6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 736c43a83a956c02b760b4909a427a82c6fa9e4c
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589078"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287825"
 ---
-# <a name="how-to-create-an-add-in-for-the-web-performance-test-results-viewer"></a>Como: Criar um complemento para o visualizador de resultados do teste de desempenho da Web
+# <a name="how-to-create-an-add-in-for-the-web-performance-test-results-viewer"></a>Como: criar um suplemento para o Visualizador de Resultados de Teste de desempenho da Web
 
 Você pode estender a interface do usuário para o **Visualizador de Testes de Desempenho Web** usando os seguintes namespaces:
 
@@ -24,7 +24,7 @@ Você pode estender a interface do usuário para o **Visualizador de Testes de D
 
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting>
 
-Além disso, você precisa adicionar uma referência à pasta LoadTestPackage DLL, que está localizada na pasta *%ProgramFiles(x86)%\Microsoft Visual Studio\\\<versão>\Enterprise\Common7\IDE\PrivateAssemblies.*
+Além disso, você precisa adicionar uma referência ao LoadTestPackage DLL, que está localizado na pasta *% ProgramFiles (x86)% \ Microsoft Visual Studio \\ \<version> \Enterprise\Common7\IDE\PrivateAssemblies*
 
 Para estender a interface do usuário do **Visualizador de Testes de Desempenho Web**, você precisa criar um suplemento do Visual Studio e um controle de usuário. Os procedimentos a seguir explicam como criar o suplemento, o controle de usuário e como implementar as classes necessárias para estender interface de usuário do **Visualizador de Testes de Desempenho Web**.
 
@@ -37,7 +37,7 @@ Para estender a interface do usuário do **Visualizador de Testes de Desempenho 
 Crie ou abra uma solução de não produção com a qual você poderá fazer experiências e que contenha um aplicativo Web do ASP.NET e um projeto de desempenho na Web, além de carregar o projeto de teste com um ou mais testes de desempenho na Web para o aplicativo Web do ASP.NET.
 
 > [!NOTE]
-> Você pode criar um ASP.NET aplicativo web e projeto de teste de desempenho e carga da Web que contenham testes de desempenho da Web seguindo os procedimentos em [Como: Criar um teste de serviço web](../test/how-to-create-a-web-service-test.md) e gerar e executar um teste de desempenho web [codificado.](../test/generate-and-run-a-coded-web-performance-test.md)
+> Você pode criar um aplicativo Web ASP.NET e um projeto de teste de carga e desempenho na Web que contém testes de desempenho da Web seguindo os procedimentos em [como criar um teste de serviço Web](../test/how-to-create-a-web-service-test.md) e [gerar e executar um teste de desempenho da Web codificado](../test/generate-and-run-a-coded-web-performance-test.md).
 
 ## <a name="create-a-visual-studio-add-in"></a>Criar um suplemento do Visual Studio
 
@@ -49,13 +49,13 @@ Você usará o **Gerenciador de Suplementos** ao final deste artigo.
 
 ### <a name="to-create-an-add-in-by-using-the-add-in-wizard"></a>Para criar um suplemento usando o Assistente de Suplemento
 
-1. No **Solution Explorer,** clique com o botão direito do mouse na solução, escolha **Adicionar**e, em seguida, selecione **Novo Projeto**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse na solução, escolha **Adicionar**e, em seguida, selecione **novo projeto**.
 
 2. Criar um projeto de **suplemento do Visual Studio**.
 
     O **Assistente de Suplemento** do Visual Studio é iniciado.
 
-3. Escolha **a seguir**.
+3. Escolha **Próxima**.
 
 4. Na página **Selecione uma Linguagem de Programação**, selecione a linguagem de programação que deseja usar para gravar o suplemento.
 
@@ -64,13 +64,13 @@ Você usará o **Gerenciador de Suplementos** ao final deste artigo.
 
 5. Na página **Selecione um Aplicativo Host**, selecione **Visual Studio** e desmarque **Macros do Visual Studio**.
 
-6. Escolha **a seguir**.
+6. Escolha **Próxima**.
 
 7. Digite um nome e uma descrição para o suplemento na página **Digite um Nome e uma Descrição**.
 
      Após o suplemento ser criado, seu nome e sua descrição serão exibidos na lista **Suplementos Disponíveis** no **Gerenciador de Suplementos**. Adicione detalhes o suficiente à descrição do suplemento de modo que os usuários possam saber o que o suplemento faz, como funciona etc.
 
-8. Escolha **a seguir**.
+8. Escolha **Próxima**.
 
 9. Na página **Escolha Opções de Suplemento**, selecione **Desejo que o suplemento seja carregado quando o aplicativo host for iniciado**.
 
@@ -80,7 +80,7 @@ Você usará o **Gerenciador de Suplementos** ao final deste artigo.
 
      As informações que podem ser adicionadas à caixa de diálogo **Sobre** do Visual Studio incluem o número de versão, os detalhes de suporte, os dados de licenciamento etc.
 
-12. Escolha **a seguir**.
+12. Escolha **Próxima**.
 
 13. As opções que você selecionou são exibidas na página **Resumo** para análise. Se você estiver satisfeito, escolha **Finalizar** para criar o suplemento. Se quiser alterar algo, escolha o botão **Voltar**.
 
@@ -90,7 +90,7 @@ Você usará o **Gerenciador de Suplementos** ao final deste artigo.
 
     Após um suplemento ser criado, será necessário registrá-lo no Visual Studio para que ele possa ser ativado no **Gerenciador de Suplementos**. Faça isso usando um arquivo XML que tenha uma extensão de nome de arquivo *.addin*.
 
-    O arquivo *.addin* descreve as informações que o Visual Studio requer para exibir o complemento no **Gerenciador de Add-In**. Quando o Visual Studio é iniciado, ele fica no local do arquivo *.addin* para quaisquer arquivos *.addin* disponíveis. Se encontrar algum, ele lerá o arquivo XML e fornecerá ao **Gerenciador de Suplementos** as informações necessárias para iniciar o suplemento quando clicado.
+    O arquivo *. AddIn* descreve as informações que o Visual Studio exige para exibir o suplemento no **Gerenciador de suplementos**. Quando o Visual Studio é iniciado, ele procura no local do arquivo *. AddIn* quaisquer arquivos *. AddIn* disponíveis. Se encontrar algum, ele lerá o arquivo XML e fornecerá ao **Gerenciador de Suplementos** as informações necessárias para iniciar o suplemento quando clicado.
 
     O arquivo *.addin* é criado automaticamente quando você cria um suplemento usando o **Assistente de Suplemento**.
 
@@ -109,7 +109,7 @@ O suplemento do Visual Studio criado no procedimento anterior referencia um proj
 
 ### <a name="to-create-a-control-to-be-used-in-the-web-test-results-viewer"></a>Para criar um controle a ser usado no Visualizador de Resultados de Teste de Desempenho na Web
 
-1. No **Solution Explorer,** clique com o botão direito do mouse na solução, escolha **Adicionar**e, em seguida, selecione **Novo Projeto**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse na solução, escolha **Adicionar**e, em seguida, selecione **novo projeto**.
 
 2. Crie um projeto da **Biblioteca de Controle do Windows Forms**.
 
@@ -133,7 +133,7 @@ O suplemento do Visual Studio criado no procedimento anterior referencia um proj
 
     7. Escolha **Fechar**.
 
-5. Na janela **Propriedades,** altere a propriedade <xref:System.Windows.Forms.DataGridView> **(Nome)** do **resultadoControlDataGridView**.
+5. Na janela **Propriedades** , altere a propriedade **(Name)** de <xref:System.Windows.Forms.DataGridView> para **resultControlDataGridView**.
 
 6. Clique com o botão direito do mouse na superfície de design e selecione **Exibir Código**.
 
@@ -158,7 +158,7 @@ O suplemento do Visual Studio criado no procedimento anterior referencia um proj
 
 ## <a name="add-code-to-the-webperftestresultsvieweraddin"></a>Adicionar um código ao WebPerfTestResultsViewerAddin
 
-1. No **Solution Explorer,** clique com o botão direito do mouse no nó **Referências** no projeto WebPerfTestResultsViewerAddin e **selecione Adicionar referência**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no nó **referências** no projeto WebPerfTestResultsViewerAddin e selecione **Adicionar referência**.
 
 2. Na caixa de diálogo **Adicionar Referência**, escolha a guia **.NET**.
 
@@ -170,7 +170,7 @@ O suplemento do Visual Studio criado no procedimento anterior referencia um proj
 
 6. Na caixa de diálogo **Adicionar Referência**, clique na guia **Procurar**.
 
-7. Escolha a lista de itens de **ida** e navegue até *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies* e selecione o arquivo *Microsoft.VisualStudio.QualityTools.LoadTestPackage.dll.*
+7. Escolha a lista suspensa para **examinar** e navegue até *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies* e selecione o arquivo *Microsoft.VisualStudio.QualityTools.LoadTestPackage.dll* .
 
 8. Escolha **OK**.
 
@@ -180,7 +180,7 @@ O suplemento do Visual Studio criado no procedimento anterior referencia um proj
 
 11. Em **Nome do Projeto,** selecione o projeto **WebPerfTestResultsViewerControl** e escolha **OK**.
 
-12. Se o arquivo *Connect.cs* ainda não estiver aberto, no **Solution Explorer,** clique com o botão direito do **Connect.cs** no projeto WebPerfTestResultsViewerAddin e selecione **'Código de exibição '''**
+12. Se o arquivo *Connect.cs* ainda não estiver aberto, em **Gerenciador de soluções**, clique com o botão direito do mouse no arquivo **Connect.cs** no projeto WebPerfTestResultsViewerAddin e selecione **Exibir código**.
 
 13. No arquivo *Connect.cs*, adicione as seguintes instruções Using:
 
@@ -204,7 +204,7 @@ O suplemento do Visual Studio criado no procedimento anterior referencia um proj
     private Dictionary<Guid, List<UserControl>> m_controls = new Dictionary<Guid, List<UserControl>>();        private List<string> temporaryFilePaths = new List<string>();
     ```
 
-15. O arquivo *Connect.cs* instancia uma <xref:Extensibility.IDTExtensibility2> classe chamada Connect da classe e também inclui alguns métodos para implementar o complemento do Visual Studio. Um dos métodos é o método OnConnection, que recebe a notificação de que o suplemento está sendo carregado. No método OnConnection, você usará a classe LoadTestPackageExt para criar seu pacote de extensibilidade para o **Visualizador de Testes de Desempenho Web**. Adicione o seguinte código ao método OnConnection:
+15. O arquivo *Connect.cs* instancia uma classe chamada Connect da <xref:Extensibility.IDTExtensibility2> classe e também inclui alguns métodos para implementar o suplemento do Visual Studio. Um dos métodos é o método OnConnection, que recebe a notificação de que o suplemento está sendo carregado. No método OnConnection, você usará a classe LoadTestPackageExt para criar seu pacote de extensibilidade para o **Visualizador de Testes de Desempenho Web**. Adicione o seguinte código ao método OnConnection:
 
     ```csharp
     public void OnConnection(object application, ext_ConnectMode connectMode, object addInInst, ref Array custom)
@@ -254,13 +254,13 @@ O suplemento do Visual Studio criado no procedimento anterior referencia um proj
 
 ## <a name="add-code-to-the-webperftestresultsviewercontrol"></a>Adicionar código ao WebPerfTestResultsViewerControl
 
-1. No **Solution Explorer,** clique com o botão direito do mouse no nó do projeto WebPerfTestResultsViewerControl e selecione **Propriedades**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto WebPerfTestResultsViewerControl e selecione **Propriedades**.
 
-2. Selecione a guia **Aplicativo** e, em seguida, escolha a lista suspensa **Estrutura de destino** e selecione **.NET Framework 4** (ou posterior). Feche a janela **Propriedades.**
+2. Selecione a guia **Aplicativo** e, em seguida, escolha a lista suspensa **Estrutura de destino** e selecione **.NET Framework 4** (ou posterior). Feche a janela **Propriedades** .
 
    Isso é necessário para dar suporte às referências de DLL necessárias para estender o **Visualizador de Testes de Desempenho Web**.
 
-3. No **Solution Explorer,** no projeto WebPerfTestResultsViewerControl, clique com o botão direito do mouse no nó **Referências** e **selecione Adicionar referência**.
+3. Em **Gerenciador de soluções**, no projeto WebPerfTestResultsViewerControl, clique com o botão direito do mouse no nó **referências** e selecione **Adicionar referência**.
 
 4. Na caixa de diálogo **Adicionar Referência**, clique na guia **.NET**.
 
@@ -324,17 +324,17 @@ O suplemento do Visual Studio criado no procedimento anterior referencia um proj
 
 Para melhorar a segurança impedindo que suplementos mal-intencionados sejam ativados automaticamente, o Visual Studio fornece configurações em uma página de **Opções de Ferramentas** chamada **Segurança de Macros/Suplemento**.
 
-Além disso, esta página de opções permite especificar as pastas nas quais o Visual Studio procura *. Adicionararquivos de* registro. Isso melhora a segurança, permitindo que você limite os locais em que os arquivos de registro *.AddIn* podem ser lidos. Isso ajuda a impedir que arquivos *.AddIn* mal-intencionados sejam usados acidentalmente.
+Além disso, essa página de opções permite que você especifique as pastas nas quais o Visual Studio procura *. *Arquivos de registro do suplemento. Isso melhora a segurança, permitindo que você limite os locais em que os arquivos de registro *.AddIn* podem ser lidos. Isso ajuda a impedir que arquivos *.AddIn* mal-intencionados sejam usados acidentalmente.
 
 **Configurações de Segurança do Suplemento**
 
 As configurações no Visual Studio relacionadas à segurança do suplemento são:
 
-- **Permitir a carga de componentes adicionais.** Selecionadas por padrão. Quando selecionado, os suplementos têm permissão para serem carregados no Visual Studio. Quando não selecionados, os suplementos são proibidos de serem carregados no Visual Studio.
+- **Permitir que os componentes do suplemento sejam carregados.** Selecionadas por padrão. Quando selecionado, os suplementos têm permissão para serem carregados no Visual Studio. Quando não selecionados, os suplementos são proibidos de serem carregados no Visual Studio.
 
 - **Permitir carregamento de componentes de Suplemento de uma URL.** Não é selecionado por padrão. Quando forem selecionados, os suplementos poderão ser carregados de sites externos. Quando não selecionados, os suplementos remotos são proibidos de serem carregados no Visual Studio. Se um suplemento não puder ser carregado por algum motivo, ele não poderá ser carregado na Web. Essa configuração controla somente o carregamento da DLL do suplemento. Os arquivos de registro *.Addin* precisam estar sempre localizados no sistema local.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.UserControl>
 - <xref:Microsoft.VisualStudio.TestTools.LoadTesting>

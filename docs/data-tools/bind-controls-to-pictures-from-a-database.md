@@ -1,7 +1,7 @@
 ---
 title: Associar controles a imagens de um banco de dados
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - images [Visual Basic], displaying on Windows Forms
 - data binding [Windows Forms], pictures
@@ -17,16 +17,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a4155a246516bef074a56e5644712912b2ce5af6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e9093c2a2d7cec95e4fdd08ff4273ae8f8126a36
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586998"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282978"
 ---
 # <a name="bind-controls-to-pictures-from-a-database"></a>Associar controles a imagens de um banco de dados
 
-Você pode usar a janela **Data Sources** para associar uma imagem em um banco de dados a um controle em seu aplicativo. Por exemplo, você pode associar uma imagem a um controle de <xref:System.Windows.Controls.Image> em um aplicativo WPF ou a um controle de <xref:System.Windows.Forms.PictureBox> em um aplicativo Windows Forms.
+Você pode usar a janela **Data Sources** para associar uma imagem em um banco de dados a um controle em seu aplicativo. Por exemplo, você pode associar uma imagem a um <xref:System.Windows.Controls.Image> controle em um aplicativo WPF ou a um <xref:System.Windows.Forms.PictureBox> controle em um aplicativo Windows Forms.
 
 As imagens em um banco de dados normalmente são armazenadas como matrizes de bytes. Os itens na janela **fontes de dados** que são armazenados como matrizes de bytes têm seu tipo de controle definido como **nenhum** por padrão, pois as matrizes de bytes podem conter qualquer coisa de uma matriz simples de bytes para o arquivo executável de um aplicativo grande. Para criar um controle de associação de dados para um item de matriz de bytes na janela **fontes de dados** que representa uma imagem, você deve selecionar o controle a ser criado.
 
@@ -39,7 +39,7 @@ O procedimento a seguir pressupõe que a janela de **fontes de dados** já estej
 2. Na janela **fontes de dados** , expanda a tabela ou o objeto desejado para exibir suas colunas ou propriedades.
 
    > [!TIP]
-   > Se a janela **fontes de dados** não estiver aberta, abra-a selecionando **Exibir** > outras **fontes de dados**do **Windows** > .
+   > Se a janela **fontes de dados** não estiver aberta, abra-a selecionando **Exibir**  >  **outras**  >  **fontes de dados**do Windows.
 
 3. Selecione a coluna ou propriedade que contém os dados da imagem e selecione um dos seguintes controles na lista suspensa controle:
 

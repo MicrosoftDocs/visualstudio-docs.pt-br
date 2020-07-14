@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_unmodifiedType | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 47841f5fe4abeafe7c522784db337b1960081439
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ee138fd361d883fb465711e679d09e6c96ddac4b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738978"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461577"
 ---
 # <a name="idiasymbolget_unmodifiedtype"></a>IDiaSymbol::get_unmodifiedType
 Recupera o tipo original deste símbolo. Use quando a [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) for definida como um tipo.
@@ -35,8 +35,8 @@ HRESULT get_unmodifiedType( 
 
 fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que representa o tipo original deste símbolo.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
@@ -51,5 +51,5 @@ fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasy
 
  DLL: msdia100.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -15,19 +15,19 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 824a65e765f21748b97292beea64ea6c9bd64a1b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4bd57d76acd0c46e39bb2c01449146715abc0666
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671557"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543878"
 ---
-# <a name="ca1804-remove-unused-locals"></a>CA1804: remover locais não usados
+# <a name="ca1804-remove-unused-locals"></a>CA1804: Remover locais não utilizados
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|RemoveUnusedLocals|
+|TypeName|RemoveUnusedLocals|
 |CheckId|CA1804|
 |Categoria|Microsoft. performance|
 |Alteração Significativa|Sem interrupção|
@@ -39,7 +39,7 @@ ms.locfileid: "72671557"
  As variáveis locais não utilizadas e as atribuições desnecessárias aumentam o tamanho de um assembly e diminuem o desempenho.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação dessa regra, remova ou use a variável local. Observe que o C# compilador incluído com [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] remove variáveis locais não utilizadas quando a opção `optimize` está habilitada.
+ Para corrigir uma violação dessa regra, remova ou use a variável local. Observe que o compilador C# incluído com [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] Remove variáveis locais não utilizadas quando a `optimize` opção está habilitada.
 
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
  Suprimir um aviso dessa regra se a variável foi emitida pelo compilador. Também é seguro suprimir um aviso dessa regra ou desabilitar a regra, se o desempenho e a manutenção de código não forem preocupações principais.
@@ -51,10 +51,10 @@ ms.locfileid: "72671557"
  [!code-vb[FxCop.Performance.UnusedLocals#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Performance.UnusedLocals/vb/FxCop.Performance.UnusedLocals.vb#1)]
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1809: evitar locais excessivos](../code-quality/ca1809-avoid-excessive-locals.md)
+ [CA1809: Evitar locais excessivos](../code-quality/ca1809-avoid-excessive-locals.md)
 
- [CA1811: evitar código privado não chamado](../code-quality/ca1811-avoid-uncalled-private-code.md)
+ [CA1811: Evitar código particular não chamado](../code-quality/ca1811-avoid-uncalled-private-code.md)
 
- [CA1812: evitar classes internas sem instâncias](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
+ [CA1812: Evitar classes internas sem instâncias](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
 
- [CA1801: examinar parâmetros não usados](../code-quality/ca1801-review-unused-parameters.md)
+ [CA1801: Examinar parâmetros não utilizados](../code-quality/ca1801-review-unused-parameters.md)

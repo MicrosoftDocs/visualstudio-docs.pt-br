@@ -1,21 +1,21 @@
 ---
 title: Adicionar comandos e gestos a diagramas de dependência
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - dependency diagrams, adding custom commands
 - dependency diagrams, adding custom gestures
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d54936c61606b67c298992cd003723327042eb0a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4ff23e07bd6e81b11d94a8256c33b57b4b0c558c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747665"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85531385"
 ---
 # <a name="add-commands-and-gestures-to-dependency-diagrams"></a>Adicionar comandos e gestos a diagramas de dependência
 
@@ -38,13 +38,13 @@ O método mais rápido de criar uma extensão é usar o modelo de projeto. Isso 
 
    O modelo cria um projeto que contém um pequeno exemplo de trabalho.
 
-2. Para testar a extensão, pressione **Ctrl** +**F5** ou **F5**.
+2. Para testar a extensão, pressione **Ctrl** + **F5** ou **F5**.
 
     Uma instância experimental do Visual Studio é iniciada. Nesta instância, crie um diagrama de dependência. O comando ou a extensão do gesto deve funcionar neste diagrama.
 
 3. Feche a instância experimental e modifique o código de exemplo.
 
-4. Você pode adicionar mais manipuladores de comando ou de gesto ao mesmo projeto. Para obter mais informações, consulte uma das seguintes seções:
+4. Você pode adicionar mais manipuladores de comando ou de gesto ao mesmo projeto. Saiba mais em uma das seções a seguir:
 
     [Definindo um comando de menu](#command)
 
@@ -96,19 +96,19 @@ Se você quiser criar um VSIX que contém comandos, validadores de camada e outr
    |Microsoft. VisualStudio. Modeling. Sdk. versão|Definir extensões de modelagem|
    |Microsoft. VisualStudio. Modeling. Sdk. Diagrams. versão|Atualizar formas e diagramas|
 
-6. Edite o arquivo de classe C# no projeto de biblioteca de classes para conter o código para sua extensão. Para obter mais informações, consulte uma das seguintes seções:
+6. Edite o arquivo de classe no projeto de biblioteca de classes C# para conter o código para sua extensão. Saiba mais em uma das seções a seguir:
 
      [Definindo um comando de menu](#command)
 
      [Definindo um manipulador de gestos](#gesture)
 
-7. Para testar o recurso, pressione **Ctrl** +**F5** ou **F5**.
+7. Para testar o recurso, pressione **Ctrl** + **F5** ou **F5**.
 
    Uma instância experimental do Visual Studio é aberta. Nesta instância, crie ou abra um diagrama de dependência.
 
 8. Para instalar o VSIX na instância principal do Visual Studio ou em outro computador, localize o arquivo **. vsix** no diretório **bin** do projeto VSIX. Copie-o para o computador em que você deseja instalar o VSIX. Clique duas vezes no arquivo VSIX no explorador de arquivos.
 
-## <a name="command"></a>Definindo um comando de menu
+## <a name="defining-a-menu-command"></a><a name="command"></a>Definindo um comando de menu
 
 Você pode adicionar mais definições de comando de menu a um gesto ou projeto de comando existente. Cada comando é definido por uma classe que tem as seguintes características:
 
@@ -118,19 +118,19 @@ Você pode adicionar mais definições de comando de menu a um gesto ou projeto 
 
    `[Export(typeof(ICommandExtension))]`
 
-   `public class`*MyLayerCommand* `: ICommandExtension { ... }`
+   `public class`  *MyLayerCommand*  `: ICommandExtension { ... }`
 
 - O namespace e o nome da classe não são importantes.
 
 - Os métodos que implementam `ICommandExtension` são os seguintes:
 
-  - `string Text {get;}`-o rótulo que aparece no menu.
+  - `string Text {get;}`-O rótulo que aparece no menu.
 
   - `void QueryStatus(IMenuCommand command)`-chamado quando o usuário clica com o botão direito do mouse no diagrama e determina se o comando deve ser visível e habilitado para a seleção atual do usuário.
 
   - `void Execute(IMenuCommand command)`-chamado quando o usuário seleciona o comando.
 
-- Para determinar a seleção atual, você pode importar `IDiagramContext`:
+- Para determinar a seleção atual, você pode importar `IDiagramContext` :
 
    `[Import]`
 
@@ -212,7 +212,7 @@ namespace MyLayerExtension // Change to your preference.
 }
 ```
 
-## <a name="gesture"></a>Definindo um manipulador de gestos
+## <a name="defining-a-gesture-handler"></a><a name="gesture"></a>Definindo um manipulador de gestos
 
 Um manipulador de gestos responde quando o usuário arrasta itens para o diagrama de dependência e quando o usuário clica duas vezes em qualquer lugar no diagrama.
 
@@ -238,7 +238,7 @@ namespace MyLayerExtensions // change to your preference
 
 Observe os seguintes pontos sobre manipuladores de gestos:
 
-- Os membros de `IGestureExtension` são os seguintes:
+- Os membros do `IGestureExtension` são os seguintes:
 
      **OnDoubleClick** – chamado quando o usuário clica duas vezes em qualquer lugar do diagrama.
 
@@ -246,7 +246,7 @@ Observe os seguintes pontos sobre manipuladores de gestos:
 
      **OnDragDrop** – chamado quando o usuário remove um item no diagrama.
 
-- O primeiro argumento para cada método é um `IShape`, a partir do qual você pode obter o elemento de camada. Por exemplo:
+- O primeiro argumento para cada método é um `IShape` , a partir do qual você pode obter o elemento de camada. Por exemplo:
 
     ```csharp
     public void OnDragDrop(IShape target, IDataObject data)
@@ -259,8 +259,8 @@ Observe os seguintes pontos sobre manipuladores de gestos:
     }
     ```
 
-- Os manipuladores para alguns tipos de itens arrastados já estão definidos. Por exemplo, o usuário pode arrastar itens do Gerenciador de Soluções para um diagrama de dependência. Você não pode definir um manipulador de arrastar para esses tipos de item. Nesses casos, seus métodos de `DragDrop` não serão invocados.
+- Os manipuladores para alguns tipos de itens arrastados já estão definidos. Por exemplo, o usuário pode arrastar itens do Gerenciador de Soluções para um diagrama de dependência. Você não pode definir um manipulador de arrastar para esses tipos de item. Nesses casos, seus `DragDrop` métodos não serão invocados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Adicionar validação de arquitetura personalizada a diagramas de dependência](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)

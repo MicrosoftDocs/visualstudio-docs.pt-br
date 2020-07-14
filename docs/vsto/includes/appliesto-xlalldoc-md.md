@@ -6,4 +6,4 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68143686"
 ---
-  **Aplica-se a:** As informações neste tópico se aplicam ao documento\-projetos no nível do Excel. Para obter mais informações, consulte [recursos disponíveis por tipo de projeto e aplicativo do Office](../../vsto/features-available-by-office-application-and-project-type.md).
+  **** Aplicável a:\- as informações neste tópico são aplicáveis aos projetos no nível de documento para Excel. Para obter mais informações, consulte [recursos disponíveis por aplicativo do Office e tipo de projeto](../../vsto/features-available-by-office-application-and-project-type.md).

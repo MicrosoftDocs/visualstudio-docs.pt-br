@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_signature | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: da52e72f218d7ef3207d13c843df7e1bc5f8c40b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 0f61ec7fafba66f241d737205de45153a46cec4c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739351"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461987"
 ---
 # <a name="idiasymbolget_signature"></a>IDiaSymbol::get_signature
 Recupera o valor de assinatura do símbolo.
@@ -35,11 +35,11 @@ HRESULT get_signature ( 
 
 fora Retorna o valor de assinatura do símbolo.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
-> Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
+> Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

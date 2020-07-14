@@ -1,7 +1,7 @@
 ---
 title: Usar um ambiente de laboratório para DevOps
 ms.date: 05/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - lab environment, test lab
 ms.author: mikejo
@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 499f335edabe77d001a1a2486e7b559abe6c7a8a
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+ms.openlocfilehash: 2f4733bd52e44409ec9c2cc9a1e8828864712ceb
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880332"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286824"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>Usar um ambiente de laboratório para suas operações de desenvolvimento
 
@@ -64,7 +64,7 @@ Se utilizar o Lab Management junto ao System Center Virtual Machine Manager (SCV
 
 * **Reproduzir rapidamente as configurações do computador** − Você pode armazenar as coleções das máquinas virtuais que são configuradas para recriar ambientes típicos de produção. Assim, você pode aplicar cada execução de teste em uma nova cópia de um ambiente armazenado.
 
-* **Reproduza as condições exatas de um bug** - Quando uma execução de teste falha, você pode armazenar uma cópia do estado do seu ambiente de laboratório e acessá-la a partir de seus resultados de compilação ou de um item de trabalho.
+* **Reproduzir as condições exatas de um bug** -quando uma execução de teste falhar, você poderá armazenar uma cópia do estado do seu ambiente de laboratório e acessá-la de seus resultados de compilação ou de um item de trabalho.
 
 * **Executar várias cópias de um ambiente de laboratório ao mesmo tempo** – Você pode executar várias cópias de seu ambiente de laboratório ao mesmo tempo sem conflitos de nome.
 
@@ -96,19 +96,19 @@ Ambientes padrão e SCVMM oferecem suporte a vários dos mesmos recursos. No ent
 |Recurso|Ambiente SCVMM|Ambientes padrão|
 |-|------------------------|-|
 |**Teste**|||
-|Executar testes manuais|Com suporte|Com suporte|
-|Executar IU codificado e outros testes automáticos|Com suporte|Com suporte|
-|Arquivo com muitos bugs usando adaptadores de diagnóstico|Com suporte|Com suporte|
+|Executar testes manuais|Suportado|Suportado|
+|Executar IU codificado e outros testes automáticos|Suportado|Suportado|
+|Arquivo com muitos bugs usando adaptadores de diagnóstico|Suportado|Suportado|
 |**Compilar implantação**|||
-|Fluxos de trabalho compilar/implantar/testar automáticos|Com suporte|Com suporte|
+|Fluxos de trabalho compilar/implantar/testar automáticos|Suportado|Suportado|
 |**Criação e gerenciamento de ambiente**|||
 |Usar máquinas físicas, além de virtuais|Sem suporte|Com suporte|
 |Usar máquinas virtuais de terceiros|Sem suporte|Com suporte|
-|Instalar automaticamente agentes de teste em computadores com ambiente de laboratório|Com suporte|Com suporte|
+|Instalar automaticamente agentes de teste em computadores com ambiente de laboratório|Suportado|Suportado|
 |Salvar e implantar o estado de um ambiente de laboratório usando instantâneos de ambiente|Com suporte|Sem suporte|
 |Criar ambientes de laboratório a partir de modelos VM|Com suporte|Sem suporte|
 |Ambiente de início/parada/instantâneo|Com suporte|Sem suporte|
-|Conecte-se ao ambiente usando o Visualizador de Ambiente|Com suporte|Com suporte|
+|Conecte-se ao ambiente usando o Visualizador de Ambiente|Suportado|Com suporte|
 |Executa várias cópias de um ambiente ao mesmo tempo usando isolamento de rede|Com suporte|Sem suporte|
 
 ### <a name="lab-management-concepts"></a>Conceitos de Lab Management
@@ -139,7 +139,7 @@ Para saber mais sobre como configurar ambientes, veja:
 * [Criando e usando um ambiente de rede isolado](https://msdn.microsoft.com/library/ee518924.aspx)
 ::: moniker-end
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 * [Instalar e configurar agentes de teste](../../test/lab-management/install-configure-test-agents.md)
 * [Guia do Lab Management do Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2015/04/22/library-of-tooling-and-guidance-solutions-aka-msvsarsolutions/)

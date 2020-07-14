@@ -8,17 +8,17 @@ helpviewer_keywords:
 - list call stack command
 - Debug.ListCallStack command
 ms.assetid: a8b20bf2-81d2-4069-aea8-23e6b15b4347
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f62852550c161566832a7ab78d4058d1d14028f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 34de768f41079311505ae7948502bb4356814ec7
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72748717"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770688"
 ---
 # <a name="list-call-stack-command"></a>Comando Listar Pilha de Chamadas
 Exibe a pilha de chamadas atual.
@@ -110,9 +110,9 @@ para definir o registro de ativação atual para o segundo quadro.
 
 ## <a name="see-also"></a>Confira também
 
-- [Comando Listar Desmontagem](../../ide/reference/list-disassembly-command.md)
-- [Comando List Threads](../../ide/reference/list-threads-command.md)
+- [Comando listar desmontagem](../../ide/reference/list-disassembly-command.md)
+- [Comando listar threads](../../ide/reference/list-threads-command.md)
 - [Comandos do Visual Studio](../../ide/reference/visual-studio-commands.md)
-- [Janela Comando](../../ide/reference/command-window.md)
-- [Caixa Localizar/Comando](../../ide/find-command-box.md)
+- [Janela de comando](../../ide/reference/command-window.md)
+- [Caixa Localizar/comando](../../ide/find-command-box.md)
 - [Aliases de comando do Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

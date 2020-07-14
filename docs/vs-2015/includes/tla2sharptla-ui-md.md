@@ -6,4 +6,4 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68189481"
 ---
-Interface de Usuário
+UI

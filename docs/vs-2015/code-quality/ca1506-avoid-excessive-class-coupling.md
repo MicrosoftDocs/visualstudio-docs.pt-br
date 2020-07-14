@@ -15,19 +15,19 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e85ac61e404ac9bc1afb9459716c2395233c5080
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 07f19cb9d4aa2ed118898a1816092479cbd16565
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72607402"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545698"
 ---
-# <a name="ca1506-avoid-excessive-class-coupling"></a>CA1506: evitar acoplamento de classes excessivo
+# <a name="ca1506-avoid-excessive-class-coupling"></a>CA1506: Evitar acoplamento de classes excessivo
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|AvoidExcessiveClassCoupling|
+|TypeName|AvoidExcessiveClassCoupling|
 |CheckId|CA1506|
 |Categoria|Microsoft. Maintainabilidade|
 |Alteração Significativa|Quebra|
@@ -46,5 +46,5 @@ ms.locfileid: "72607402"
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
  Exclua este aviso quando o tipo ou método ainda for considerado passível de manutenção, apesar de seu grande número de dependências em outros tipos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Avisos de facilidade](../code-quality/maintainability-warnings.md) [de manutenção medindo a complexidade e a manutenção do código gerenciado](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)

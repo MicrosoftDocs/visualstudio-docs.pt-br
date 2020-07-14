@@ -1,20 +1,21 @@
 ---
-title: Projetos e soluções
+title: Soluções e Projetos
 description: Este documento fornece uma visão geral dos Projetos e Soluções no Visual Studio para Mac.
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 8254505D-D96E-48BD-8A5E-CF6A917897EA
-ms.openlocfilehash: d0cf61c94161e6d6bef6cd580e5fb342a177c1c4
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: overview
+ms.openlocfilehash: 9ef6ecdb5dce8d337aa74232a0bffa8a63f87ea8
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74983514"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85939033"
 ---
-# <a name="projects-and-solutions"></a>Projetos e soluções
+# <a name="projects-and-solutions"></a>Soluções e Projetos
 
-O Visual Studio for Mac fornece um _Pad_ de solução para exibir uma visão de árvore de toda a solução aberta. O Painel de **Soluções** facilita o acesso ao código-fonte, aos recursos, às interfaces do usuário e às referências de assembly contidos em projetos individuais. Por padrão, o Painel de Soluções abre uma solução por vez. Cada solução pode incluir vários projetos e cada projeto pode conter vários itens.
+Visual Studio para Mac fornece uma _painel de soluções_   para exibir um modo de exibição de árvore de toda a solução aberta. O Painel de **Soluções** facilita o acesso ao código-fonte, aos recursos, às interfaces do usuário e às referências de assembly contidos em projetos individuais. Por padrão, o Painel de Soluções abre uma solução por vez. Cada solução pode incluir vários projetos e cada projeto pode conter vários itens.
 
 ## <a name="using-projects-and-solutions"></a>Usando os Projetos e Soluções
 

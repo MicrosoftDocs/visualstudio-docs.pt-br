@@ -1,7 +1,7 @@
 ---
 title: IDiaTable::get_Count | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ce325c51a9dfcee32093a0a1fafe82ea6a7fdd6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7c48db236e7cd416929d26d3473c537c2d81ac06
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738746"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461326"
 ---
 # <a name="idiatableget_count"></a>IDiaTable::get_Count
 Recupera o número de itens na tabela.
@@ -35,9 +35,9 @@ HRESULT get_Count ( 
 
 fora Retorna o número de itens na tabela.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaTable](../../debugger/debug-interface-access/idiatable.md)
 - [IDiaTable::Item](../../debugger/debug-interface-access/idiatable-item.md)

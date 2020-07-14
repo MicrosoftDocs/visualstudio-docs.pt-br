@@ -1,45 +1,45 @@
 ---
-title: Oferta de DevTest do Azure Enterprise Agreement
+title: Oferta do Azure Enterprise Agreement DevTest
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: a335ed23-34ee-40cb-83c6-6c93dee57424
 ms.date: 02/23/2020
-ms.topic: conceptual
-description: Saiba como aproveitar os preços especiais do Azure DevTest disponíveis para clientes com Contratos Corporativos
-ms.openlocfilehash: 09da80ad735548e9b0c450b9675cebece0b0c60c
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.topic: how-to
+description: Saiba como aproveitar os preços especiais do Azure DevTest disponíveis para clientes com Enterprise Agreements
+ms.openlocfilehash: 6d7ad872568ead5c7c53dcd8d0429f2ff0444095
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232639"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903141"
 ---
-# <a name="azure-enterprise-agreement-devtest-offer"></a>Oferta de DevTest do Azure Enterprise Agreement
+# <a name="azure-enterprise-agreement-devtest-offer"></a>Oferta do Azure Enterprise Agreement DevTest
 
-Esta oferta, que faz parte do Enterprise Agreement, é para que equipes de assinantes ativos do Visual Studio executem cargas de trabalho de dev/teste no Microsoft Azure, fornecendo tarifas com desconto em máquinas virtuais windows e acesso a imagens exclusivas na Galeria Azure. Esta oferta limita-se apenas ao desenvolvimento e ao uso de testes, e não pode ser usada na produção.  
+Essa oferta, que faz parte do Enterprise Agreement, é para equipes de assinantes ativos do Visual Studio executarem cargas de trabalho de desenvolvimento/teste em Microsoft Azure, fornecendo tarifas com desconto em máquinas virtuais do Windows e acesso a imagens exclusivas na galeria do Azure. Esta oferta é limitada apenas ao desenvolvimento e ao teste de uso e não pode ser usada na produção.  
 
-O uso das ofertas é um processo de duas etapas:
-1. As ofertas devem ser habilitadas por um administrador no Portal EA.
-2. Assinantes individuais precisam criar assinaturas para seu uso. 
+O uso de ofertas é um processo de duas etapas:
+1. As ofertas devem ser habilitadas por um administrador no portal de EA.
+2. Os assinantes individuais precisam criar assinaturas para seu uso. 
 
-Um [vídeo tutorial](https://channel9.msdn.com/blogs/EA.Azure.com/Enabling-and-Creating-EA-DevTest-Subscriptions-through-the-EA-Portal) também está disponível para demonstrar o processo.  
+Um [vídeo do tutorial](https://channel9.msdn.com/blogs/EA.Azure.com/Enabling-and-Creating-EA-DevTest-Subscriptions-through-the-EA-Portal) também está disponível para demonstrar o processo.  
 
-## <a name="enable-offers-in-the-ea-portal"></a>Habilitar ofertas no Portal EA
+## <a name="enable-offers-in-the-ea-portal"></a>Habilitar ofertas no portal de EA
 Para habilitar as ofertas:
-1. Faça login [https://ea.azure.com/manage](https://ea.azure.com/manage)em .
-0. Clique no menu **Conta.**
-0. Localize a conta para a qual você deseja habilitar ofertas.  Se você tiver inúmeras contas, você pode querer usar a **Pesquisa** para localizar rapidamente a conta. 
-0. Passar o tempo sobre o nome da conta. 
-0. Clique no ícone **de edição** (lápis) na extrema direita. 
-0. Clique na caixa de seleção **Dev/Test.**
+1. Entre em [https://ea.azure.com/manage](https://ea.azure.com/manage).
+0. Clique no menu **conta** .
+0. Localize a conta para a qual você deseja habilitar ofertas.  Se você tiver várias contas, talvez queira usar a **pesquisa** para localizar rapidamente a conta. 
+0. Passe o mouse sobre o nome da conta. 
+0. Clique no ícone de **edição** (lápis) na extrema direita. 
+0. Clique na caixa de seleção **desenvolvimento/teste** .
 0. Clique em **Salvar**.
 
-## <a name="create-individual-subscriptions-within-the-account"></a>Crie assinaturas individuais dentro da conta
-Cada assinante na conta pode criar uma assinatura seguindo estas etapas:
-1. Faça login [https://account.windowsazure.com/signup?showCatalogs=True](https://account.windowsazure.com/signup?showCatalogs=True)em .
-0. Escolha a oferta **enterprise dev/test.**
-0. Clique na caixa de seleção para reconhecer que a assinatura é regida pelo Contrato Empresarial. 
-0. Clique em **Comprar**.  (Com esta oferta, você não está realmente comprando nada.)
+## <a name="create-individual-subscriptions-within-the-account"></a>Criar assinaturas individuais dentro da conta
+Cada Assinante na conta pode criar uma assinatura seguindo estas etapas:
+1. Entre em [https://account.windowsazure.com/signup?showCatalogs=True](https://account.windowsazure.com/signup?showCatalogs=True).
+0. Escolha a oferta de **desenvolvimento/teste Enterprise** .
+0. Clique na caixa de seleção para confirmar que a assinatura é regida pelo Enterprise Agreement. 
+0. Clique em **Comprar**.  (Com essa oferta, você não está realmente comprando nada.)
 
 ## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](https://docs.microsoft.com/visualstudio/)
@@ -53,7 +53,7 @@ Saiba mais sobre como gerenciar assinaturas do Visual Studio.
 - [Atribuir várias assinaturas](assign-license-bulk.md)
 - [Editar assinaturas](edit-license.md)
 - [Excluir assinaturas](delete-license.md)
-- [Determine o uso máximo](maximum-usage.md)
+- [Determinar o uso máximo](maximum-usage.md)
 
 
 

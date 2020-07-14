@@ -13,12 +13,12 @@ helpviewer_keywords:
 - updating templates [Visual Studio]
 - template tagging, updating
 - template tags, updating
-ms.openlocfilehash: ef26a566229c228711ba6e57de50402df255c3dd
-ms.sourcegitcommit: dab57cebd484228e6f0cf7ab1b9685c575410c06
+ms.openlocfilehash: 37a1965712920420bdc4d784a003dbfbd2f2167a
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153024"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285212"
 ---
 # <a name="add-tags-to-project-templates"></a>Adicionar marcas aos modelos de projeto
 
@@ -122,7 +122,7 @@ O exemplo a seguir mostra os metadados para um modelo de projeto de um aplicativ
         <Name>My template</Name>
         <Description>A basic template</Description>
         <Icon>TemplateIcon.ico</Icon>
-        <ProjectType>CSharp</ProjectType>
+        <ProjectType>csharp</ProjectType>
         <LanguageTag>C#</LanguageTag>
         <PlatformTag>windows</PlatformTag>
         <PlatformTag>linux</PlatformTag>

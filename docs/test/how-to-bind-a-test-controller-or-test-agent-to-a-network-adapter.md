@@ -1,7 +1,7 @@
 ---
 title: Associar um controlador de teste ou um agente de teste a um adaptador de rede
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - controllers, netwrok adapter
 - agents, configuring
@@ -11,12 +11,12 @@ ms.assetid: 7eb9290a-f9f6-4e41-9caa-796fcfaf0610
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 6383d7a16839ba8934bb7f91664379e99da17a36
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 925df819b903be3de3d44127243f3b18d1e9aff5
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594780"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288241"
 ---
 # <a name="how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter"></a>Como associar um controlador de teste ou agente de teste a um adaptador de rede
 
@@ -25,7 +25,7 @@ Se um computador com o software de controlador de teste ou agente de teste insta
 > [!WARNING]
 > Quando tentar configurar um agente de teste, você pode receber o seguinte erro:
 >
-> **Erro 8110. Não é possível conectar-se ao computador controlador especificado ou acessar o objeto controlador**
+> **Erro 8110. Não é possível se conectar ao computador do controlador especificado ou acessar o objeto do controlador**
 >
 > Esse erro pode ser causado pela instalação do controlador de teste em um computador que tenha mais de um adaptador de rede. Também é possível instalar agentes com êxito e não ver esse problema até tentar executar um teste.
 
@@ -128,9 +128,9 @@ Se um computador com o software de controlador de teste ou agente de teste insta
 
     `net start vsttagent`
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Instalar e configurar agentes de teste](../test/lab-management/install-configure-test-agents.md)
 - [Modificar configurações de registro em log de testes de carga](../test/modify-load-test-logging-settings.md)
 - [Configurar portas para controladores e agentes de teste](../test/configure-ports-for-test-controllers-and-test-agents.md)
-- [Como: Especificar períodos de tempo para controladores de teste e agentes de teste](../test/how-to-specify-timeout-periods-for-test-controllers-and-test-agents.md)
+- [Como especificar períodos de tempo limite para controladores de teste e agentes de teste](../test/how-to-specify-timeout-periods-for-test-controllers-and-test-agents.md)

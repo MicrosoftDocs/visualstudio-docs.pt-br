@@ -2,7 +2,7 @@
 title: Anexar o criador de perfil ao aplicativo nativo e coletar dados de simultaneidade
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 12d3e0f3-4b74-4e66-8fbf-8ac99bd4f91c
 author: mikejo5000
 ms.author: mikejo
@@ -10,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 367c91035f5d37bd8b0c20f1df84c7a2ee2d487a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: dcc125f795a29f53abb07920aa11c9a5e6ee966b
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74776921"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329523"
 ---
 # <a name="how-to-attach-the-profiler-to-a-native-stand-alone-application-and-collect-concurrency-data-by-using-the-command-line"></a>Como anexar o criador de perfil a um aplicativo independente nativo e coletar dados de simultaneidade usando a linha de comando
 Este artigo descreve como usar as ferramentas de linha de comando das Ferramentas de Criação de Perfil do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para anexar o criador de perfil a um aplicativo independente nativo (C/C++) em execução e coletar dados de contenção do thread.
@@ -37,15 +37,15 @@ Este artigo descreve como usar as ferramentas de linha de comando das Ferramenta
 
     |Opção|Descrição|
     |------------|-----------------|
-    |[/usuário:](../profiling/user-vsperfcmd.md) **:**`Domain\`[ ]`Username`|Especifica o domínio e o nome de usuário opcional da conta que receberá acesso ao criador de perfil.|
-    |[/sessão cruzada](../profiling/crosssession.md)|Habilita a criação de perfil de processos em outras sessões de logon.|
-    |[/wincounter:](../profiling/wincounter.md) **:**`WinCounterPath`|Especifica um contador de desempenho do Windows que deve ser coletado durante a criação de perfil.|
-    |[/marca automática:](../profiling/automark.md) **:**`Interval`|Use somente com **/wincounter**. Especifica o número de milissegundos entre eventos de coleta do contador de desempenho do Windows. O valor padrão é 500.|
-    |[/eventos:](../profiling/events-vsperfcmd.md) **:**`Config`|Especifica um evento de ETW (Rastreamento de Eventos para Windows) a ser coletado durante a criação de perfil. Eventos de ETW são coletados em um arquivo separado (.etl).|
+    |[/User](../profiling/user-vsperfcmd.md) **:**[ `Domain\` ]`Username`|Especifica o domínio e o nome de usuário opcional da conta que receberá acesso ao criador de perfil.|
+    |[/CrossSession](../profiling/crosssession.md)|Habilita a criação de perfil de processos em outras sessões de logon.|
+    |[/WinCounter](../profiling/wincounter.md) **:**`WinCounterPath`|Especifica um contador de desempenho do Windows que deve ser coletado durante a criação de perfil.|
+    |[/AutoMark](../profiling/automark.md) **:**`Interval`|Use somente com **/wincounter**. Especifica o número de milissegundos entre eventos de coleta do contador de desempenho do Windows. O valor padrão é 500.|
+    |[/Events](../profiling/events-vsperfcmd.md) **:**`Config`|Especifica um evento de ETW (Rastreamento de Eventos para Windows) a ser coletado durante a criação de perfil. Eventos de ETW são coletados em um arquivo separado (.etl).|
 
 2. Anexe o criador de perfil ao aplicativo de destino digitando o seguinte comando:
 
-     **VSPerfCmd**[/attach](../profiling/attach.md) `PID` **:**{&#124;`ProcName`}  
+     **VSPerfCmd**  [/Attach](../profiling/attach.md) **:**{ `PID`&#124;`ProcName` }
 
      `PID` especifica a ID do processo ou o nome do aplicativo de destino. É possível exibir as IDs de processo de todos os processos em execução no Gerenciador de Tarefas do Windows.
 
@@ -58,9 +58,9 @@ Este artigo descreve como usar as ferramentas de linha de comando das Ferramenta
 
     |Opção|Descrição|
     |------------|-----------------|
-    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|Inicia (**/globalon**) ou interrompe (**/globaloff**) a coleta de dados para todos os processos.|
-    |[/processon:](../profiling/processon-and-processoff.md) **:** `PID` [/processoff:](../profiling/processon-and-processoff.md) **:**`PID`|Inicia (**/processon**) ou interrompe (**/processoff**) a coleta de dados para o processo que a ID de processo (`PID`) especificar.|
-    |[/attach:](../profiling/attach.md) **:**`PID` { `ProcName`&#124;} [/desapego](../profiling/detach.md)[**:**{`PID`&#124;`ProcName`}]|**/attach** começa a coletar dados para o processo que a ID de processo (`PID`) ou o nome de processo (*ProcName*) especificar. **/detach** interrompe a coleta de dados para o processo especificado ou para todos os processos se nenhum processo for especificado.|
+    |[/GLOBALON/GLOBALOFF](../profiling/globalon-and-globaloff.md)|Inicia (**/globalon**) ou interrompe (**/globaloff**) a coleta de dados para todos os processos.|
+    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [/ProcessOff](../profiling/processon-and-processoff.md) **:**`PID`|Inicia (**/processon**) ou interrompe (**/processoff**) a coleta de dados para o processo que a ID de processo (`PID`) especificar.|
+    |[/Attach](../profiling/attach.md) **:**{ `PID`&#124;`ProcName` } [/Detach](../profiling/detach.md)[**:**{ `PID`&#124;`ProcName` }]|**/attach** começa a coletar dados para o processo que a ID de processo (`PID`) ou o nome de processo (*ProcName*) especificar. **/detach** interrompe a coleta de dados para o processo especificado ou para todos os processos se nenhum processo for especificado.|
 
 ## <a name="end-the-profiling-session"></a>Encerrar a sessão de criação de perfil
  Para encerrar uma sessão de criação de perfil, o criador de perfil não pode estar coletando dados. É possível interromper a coleta de dados de um aplicativo cujo perfil foi criado com o método de amostragem, fechando o aplicativo ou invocando a opção **VSPerfCmd/detach**. Depois, invoque a opção **VSPerfCmd /shutdown** para desativar o criador de perfil e fechar o arquivo de dados de criação de perfil.
@@ -73,4 +73,4 @@ Este artigo descreve como usar as ferramentas de linha de comando das Ferramenta
 
 2. Desligue o criador de perfil digitando o seguinte comando:
 
-     **VSPerfCmd**  [/shutdown](../profiling/shutdown.md)
+     **VSPerfCmd**  [/Shutdown](../profiling/shutdown.md)

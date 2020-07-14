@@ -15,19 +15,19 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a05b7098d75d368f893b2504f7663675611bc0ce
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 03918353b66c36698b5d17b332da052b6d95c87a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658716"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544385"
 ---
-# <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108: revisar segurança declarativa em tipos de valor
+# <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108: Examinar a segurança declarativa em tipos de valor
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|ReviewDeclarativeSecurityOnValueTypes|
+|TypeName|ReviewDeclarativeSecurityOnValueTypes|
 |CheckId|CA2108|
 |Categoria|Microsoft.Security|
 |Alteração Significativa|Sem interrupção|
@@ -45,7 +45,7 @@ ms.locfileid: "72658716"
  Você pode suprimir um aviso dessa regra se qualquer chamador puder obter instâncias do tipo de valor em seu estado padrão sem passar uma ameaça à segurança.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir mostra uma biblioteca que contém um tipo de valor que viola essa regra. Observe que o tipo de `StructureManager` pressupõe que um chamador que passa uma instância do tipo de valor tem permissão para criar ou acessar a instância.
+ O exemplo a seguir mostra uma biblioteca que contém um tipo de valor que viola essa regra. Observe que o `StructureManager` tipo supõe que um chamador que passa uma instância do tipo Value tem permissão para criar ou acessar a instância.
 
  [!code-csharp[FxCop.Security.DemandOnValueType#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.DemandOnValueType/cs/FxCop.Security.DemandOnValueType.cs#1)]
 
@@ -57,7 +57,7 @@ ms.locfileid: "72658716"
  Este exemplo gerencia a seguinte saída.
 
  **Construtor personalizado de estrutura: falha na solicitação.** 
-**novos valores SecuredTypeStructure 100 100** 
-**novos valores SecuredTypeStructure 200 200**
-## <a name="see-also"></a>Consulte também
+ **Novos valores SecuredTypeStructure 100 100** 
+ **Novos valores SecuredTypeStructure 200 200**
+## <a name="see-also"></a>Consulte Também
  [Dados e modelagem de](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6) [demandas de link](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)

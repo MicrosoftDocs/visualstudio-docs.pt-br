@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f188b40938c62ae8c3692f096217618f9cb7ff6
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: b3b8a67d1b01d7f3a3ada7b391423676b9294e8d
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183737"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286295"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>Instruções passo a passo: escrevendo um visualizador em C\#
 
@@ -60,7 +60,7 @@ Siga as tarefas abaixo para criar um visualizador.
 
 3. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Referências** e escolha **Adicionar Referência** no menu de atalho.
 
-4. Na caixa de diálogo **Adicionar referência** , na guia **procurar** , selecione **procurar** e localize o Microsoft. VisualStudio. DebuggerVisualizers. dll.
+4. Na caixa de diálogo **Adicionar referência** , na guia **procurar** , selecione **procurar** e localize o Microsoft.VisualStudio.DebuggerVisualizers.DLL.
 
     Você pode encontrar a DLL no subdiretório * \<Visual Studio Install Directory> \Common7\IDE\PublicAssemblies* do diretório de instalação do Visual Studio.
 
@@ -106,7 +106,7 @@ Siga as tarefas abaixo para criar um visualizador.
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Referências** e escolha **Adicionar Referência** no menu de atalho.
 
-2. Na caixa de diálogo **Adicionar referência** , na guia **procurar** , selecione **procurar**e localize o System. Windows. Forms. dll.
+2. Na caixa de diálogo **Adicionar referência** , na guia **procurar** , selecione **procurar**e localize o System.Windows.Forms.DLL.
 
     Você pode encontrar a DLL em *C:\Windows\Microsoft.NET\Framework\v4.0.30319*.
 
@@ -187,7 +187,7 @@ No código do lado do depurador, você especifica o tipo a ser visualizado (a or
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **MyTestConsole** e escolha **Adicionar Referência** no menu de atalho.
 
-2. Na caixa de diálogo **Adicionar referência** , guia **procurar** , escolha Microsoft. VISUALSTUDIO. DebuggerVisualizers. dll.
+2. Na caixa de diálogo **Adicionar referência** , guia **procurar** , escolha Microsoft.VisualStudio.DebuggerVisualizers.DLL.
 
 3. Clique em **OK**.
 
@@ -235,6 +235,8 @@ No código do lado do depurador, você especifica o tipo a ser visualizado (a or
 
    Se você quiser usar o visualizador no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] em vez de apenas chamá-lo do teste automatizado, será preciso instalá-lo. Para obter mais informações, consulte [como: instalar um visualizador](../debugger/how-to-install-a-visualizer.md).
 
+::: moniker range="vs-2017"
+
 ## <a name="create-a-visualizer-using-the-visualizer-item-template"></a>Criar um visualizador usando o modelo de item do Visualizador
 
 Até agora, este passo a passo mostrou como criar um visualizador manualmente. Isto foi feito como um exercício de aprendizado. Agora que você sabe como um visualizador simples funciona, há uma forma mais fácil de criar um: usando o modelo de item do visualizador.
@@ -268,6 +270,7 @@ Primeiro, você precisará criar um novo projeto de biblioteca de classes.
 5. Clique em **Adicionar**.
 
    É tudo que se precisa. Examine o arquivo SecondVisualizer.cs e exiba o código que o modelo adicionou para você. Agora tente com o código. Agora que você conhece as noções básicas, está em condições de criar visualizadores mais complexos e úteis.
+::: moniker-end
 
 ## <a name="see-also"></a>Veja também
 

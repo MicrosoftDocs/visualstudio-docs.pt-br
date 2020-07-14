@@ -1,7 +1,7 @@
 ---
-title: Alterar idioma do aplicativo ClickOnce de publicar
+title: Alterar idioma de publicação para aplicativo ClickOnce
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,35 +16,35 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e80a65b65d75d925decdf60b633a7d51ea9bafce
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 0252cf39f8f5ee268adbf625f03a9b5a305b903a
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263169"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382582"
 ---
-# <a name="how-to-change-the-publish-language-for-a-clickonce-application"></a>Como: Alterar o idioma de publicação de um aplicativo ClickOnce
+# <a name="how-to-change-the-publish-language-for-a-clickonce-application"></a>Como alterar o idioma de publicação para um aplicativo ClickOnce
 
-Ao publicar um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo, a interface do usuário exibida durante a instalação padrão é o idioma e cultura do computador de desenvolvimento. Se você estiver publicando um aplicativo localizado, você precisará especificar um idioma e cultura para coincidir com a versão localizada. Isso é determinado pelo `Publish language` propriedade para o seu projeto.
+Ao publicar um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo, a interface do usuário exibida durante a instalação usa como padrão o idioma e a cultura do seu computador de desenvolvimento. Se você estiver publicando um aplicativo localizado, será necessário especificar um idioma e uma cultura para corresponder à versão localizada. Isso é determinado pela `Publish language` Propriedade do seu projeto.
 
-O `Publish language` propriedade pode ser definida **opções de publicação** caixa de diálogo, acessível a partir o **publicar** página do **Designer de projeto**.
+A `Publish language` propriedade pode ser definida na caixa de diálogo **Opções de publicação** , acessível na página **publicar** do **Designer de projeto**.
 
 > [!NOTE]
-> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Redefinir as configurações](../ide/environment-settings.md#reset-settings).
+> As caixas de diálogo e os comandos de menu encontrados podem diferir daqueles descritos na Ajuda, dependendo das configurações ativas ou edição. Para alterar suas configurações, selecione **Importar e Exportar Configurações** no menu **Ferramentas** . Para obter mais informações, confira [Redefinir as configurações](../ide/environment-settings.md#reset-settings).
 
-## <a name="to-change-the-publish-language"></a>Para alterar o idioma de publicação
+## <a name="to-change-the-publish-language"></a>Para alterar a linguagem de publicação
 
-1. Com um projeto selecionado no **Gerenciador de Soluções**, no menu **Projeto**, clique em **Propriedades**.
+1. Com um projeto selecionado no **Gerenciador de soluções**, no menu **projeto** , clique em **Propriedades**.
 
-2. Clique o **publicar** guia.
+2. Clique na guia **Publicar**.
 
-3. Clique o **opções** para abrir o **opções de publicação** caixa de diálogo.
+3. Clique no botão **Opções** para abrir a caixa de diálogo **Opções de publicação** .
 
-4. Clique em **descrição**.
+4. Clique em **Descrição**.
 
-5. No **opções de publicação** diálogo caixa, selecione um idioma e cultura da **linguagem de publicação** lista suspensa e clique **Okey**.
+5. Na caixa de diálogo **Opções de publicação** , selecione um idioma e uma cultura na lista suspensa **idioma de publicação** e clique em **OK**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Publicar aplicativos ClickOnce](../deployment/publishing-clickonce-applications.md)
-- [Como: Publicar um aplicativo ClickOnce usando o assistente de publicação](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+- [Como publicar um aplicativo ClickOnce usando o assistente de publicação](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

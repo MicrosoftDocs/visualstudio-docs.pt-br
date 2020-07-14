@@ -2,7 +2,7 @@
 title: Analisar o uso de memória do JavaScript em aplicativos UWP | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - JavaScript
 helpviewer_keywords:
@@ -20,12 +20,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cfbc0dcecbf9b30afdfb268117e34c2fcfc0341e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 22a9c7a4b58613c0c4bd94ea4f4ce6162f620553
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "73189390"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331266"
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>Analisar o uso de memória do JavaScript em aplicativos UWP
 O analisador de memória do JavaScript está disponível no Visual Studio para ajudar você a entender o uso de memória e a localizar vazamentos de memória em seus aplicativos UWP compilados para o Windows usando JavaScript. Os aplicativos com suporte incluem aplicativos para Aplicativos Universais do Windows.
@@ -40,7 +40,7 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
 
 - Reduzir informações não acionáveis nos dados heap JavaScript.
 
-     Objetos que não são criados diretamente no código do aplicativo são filtrados automaticamente. Você também pode filtrar dados por nome do objeto.
+     Os objetos que não são criados diretamente no seu código de aplicativo são filtrados automaticamente. Você também pode filtrar dados por nome de objeto.
 
 ## <a name="run-the-javascript-memory-analyzer"></a>Executar o analisador de memória de JavaScript
  Use o analisador de memória quando tiver um aplicativo de trabalho UWP aberto no Visual Studio.
@@ -51,11 +51,11 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
 
 2. Se estiver executando o aplicativo pelo Visual Studio, na lista **Iniciar Depuração** na barra de ferramentas **Padrão**, escolha o destino de depuração do seu projeto: **Máquina Local** ou **Dispositivo**.
 
-3. Na barra de menu, escolha **Debug** > **Performance Profiler**.
+3. Na barra de menus, escolha **debug**  >  **Performance Profiler**.
 
      Por padrão, o projeto de inicialização atual é analisado. Se desejar alterar o destino da análise, escolha **Alterar Destino**.
 
-     ![Alvo de análise de alteração](../profiling/media/js_tools_target.png "JS_Tools_Target")
+     ![Destino da análise de alterações](../profiling/media/js_tools_target.png "JS_Tools_Target")
 
      As seguintes opções estão disponíveis para o destino de análise:
 
@@ -75,7 +75,7 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
 
      Interaja com o aplicativo para testar os cenários relevantes do uso de memória e exibir o gráfico de memória, conforme discutido nas seções a seguir.
 
-6. Mude para o Visual Studio pressionando **Alt**+**Tab**.
+6. Alterne para o Visual Studio pressionando a **tecla Alt** + **Tab**.
 
 7. Para exibir os dados reunidos pelo analisador de memória, escolha **Obter uma imagem instantânea do heap**. Consulte [Exibir um resumo de instantâneo](#view-a-snapshot-summary) posteriormente neste tópico.
 
@@ -84,19 +84,19 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
 
  Use as seguintes exibições para ajudar a identificar vazamentos de memória em um aplicativo:
 
-- [Exibir resumo de uso de memória ao vivo](#view-live-memory-usage-summary). Use o gráfico de uso de memória para procurar aumento repentino do uso de memória ou uso de memória que aumenta de forma contínua, resultante de ações específicas. Use a exibição resumida do uso da memória ativa para tirar instantâneos do heap. Os instantâneos aparecem como uma coleção abaixo do gráfico de uso da memória.
+- [Exibir Resumo de uso de memória dinâmica](#view-live-memory-usage-summary). Use o gráfico de uso de memória para procurar aumento repentino do uso de memória ou uso de memória que aumenta de forma contínua, resultante de ações específicas. Use a exibição resumida do uso da memória ativa para tirar instantâneos do heap. Os instantâneos aparecem como uma coleção abaixo do gráfico de uso da memória.
 
     > [!TIP]
     > Você verá um aumento no uso de memória quando tirar um instantâneo. Use os resumos de instantâneo para ter uma indicação mais exata do crescimento.
 
-- [Exibir um resumo de instantâneos](#view-a-snapshot-summary). Você pode exibir informações resumidas de instantâneo durante ou após uma sessão de criação de perfil de memória. Use os resumos de instantâneo para acessar detalhes de instantâneo e exibições diferenciais de instantâneo.
+- [Exiba um resumo de instantâneo](#view-a-snapshot-summary). Você pode exibir informações resumidas de instantâneo durante ou após uma sessão de criação de perfil de memória. Use os resumos de instantâneo para acessar detalhes de instantâneo e exibições diferenciais de instantâneo.
 
     > [!TIP]
     > Normalmente, as exibições diferenciais de instantâneo fornecem as informações mais úteis sobre vazamentos de memória.
 
 - [Exibir detalhes do instantâneo](#view-snapshot-details). Mostra dados do uso de memória detalhados para um único instantâneo.
 
-- [Exibir um diferencial de instantâneo](#view-a-snapshot-diff). Mostra valores diferenciais entre instantâneos. Essas exibições mostram diferenças de tamanho e número de objetos.
+- [Exibir uma comparação de instantâneos](#view-a-snapshot-diff). Mostra valores diferenciais entre instantâneos. Essas exibições mostram diferenças de tamanho e número de objetos.
 
 ## <a name="isolate-a-memory-leak"></a>Isolar um vazamento de memória
  Estas etapas fornecem um fluxo de trabalho que pode ajudá-lo a usar o analisador de memória de JavaScript com mais eficiência. Estas etapas podem ser úteis se você suspeitar de vazamento de memória em seu aplicativo. Para ver um tutorial que percorre o processo de identificação de perda de memória em um aplicativo em funcionamento, consulte [Passo a passo: localizar uma perda de memória (JavaScript)](javascript-memory.md).
@@ -112,13 +112,13 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
    > [!TIP]
    > Ao repetir o cenário de teste várias vezes, você pode ajudar a garantir que o trabalho de inicialização seja descartado dos resultados.
 
-5. Mude para Visual Studio (pressione **Alt**+**Tab**).
+5. Alterne para o Visual Studio (pressione a tecla **ALT** + **Tab**).
 
 6. Obtenha um instantâneo do heap da linha de base escolhendo **Obter uma imagem instantânea do heap**.
 
     A ilustração a seguir mostra um exemplo de um instantâneo de linha de base.
 
-    ![Instantâneo da linha de base](../profiling/media/js_mem_leak_workflow_baseline.png "JS_Mem_Leak_Workflow_Baseline")
+    ![Instantâneo de linha de base](../profiling/media/js_mem_leak_workflow_baseline.png "JS_Mem_Leak_Workflow_Baseline")
 
    > [!TIP]
    > Para ter um controle mais preciso do intervalo entre os instantâneos, use o comando [Associar o código-fonte com os dados de uso de memória](#associate-source-code-with-memory-usage-data) no seu código.
@@ -156,7 +156,7 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
 
      A ilustração a seguir mostra uma exibição de comparação dos objetos restantes desde o instantâneo 2.
 
-     ![Visualização de difusor instantâneo mostrando tipos](../profiling/media/js_mem_snapshot_diff.png "JS_Mem_Snapshot_Diff")
+     ![Exibição de comparação de instantâneos mostrando tipos](../profiling/media/js_mem_snapshot_diff.png "JS_Mem_Snapshot_Diff")
 
      Na ilustração anterior, vemos que há dois objetos restantes desde o instantâneo anterior. Verifique se esse é o comportamento esperado para seu aplicativo. Caso não seja, isso pode indicar um vazamento de memória.
 
@@ -169,7 +169,7 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
 
  O gráfico de memória mostra uma exibição em tempo real da memória do processo do aplicativo, que inclui bytes particulares, a memória nativa e o heap de JavaScript. O gráfico de memória é uma exibição rolável da memória do processo. Veja como ela se parece:
 
- ![Gráfico de memória do analisador de memória JavaScript](../profiling/media/js_mem_memory_graph.png "JS_Mem_Memory_Graph")
+ ![Grafo de memória do analisador de memória JavaScript](../profiling/media/js_mem_memory_graph.png "JS_Mem_Memory_Graph")
 
  Se você tiver adicionado marcas de usuário ao código do aplicativo (consulte [Associar o código-fonte com os dados de uso de memória](#associate-source-code-with-memory-usage-data)), um triângulo invertido aparecerá no gráfico de uso de memória para indicar quando essa seção de código for atingida.
 
@@ -208,7 +208,7 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
 
  Esta ilustração mostra a exibição Tipos, em um detalhe do instantâneo, com os dados de uso da memória classificados por tamanho retido.
 
- ![Visualização de detalhes de instantâneo mostrando possíveis problemas](../profiling/media/js_mem_snapshot_details.png "JS_Mem_Snapshot_Details")
+ ![Exibição de detalhes do instantâneo mostrando possíveis problemas](../profiling/media/js_mem_snapshot_details.png "JS_Mem_Snapshot_Details")
 
  Na exibição de detalhes de instantâneo, você pode examinar os dados de uso de memória por dominador, tipo ou raiz, escolhendo uma opção da barra de ferramentas:
 
@@ -226,7 +226,7 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
 
   Todas as três exibições mostram os tipos de valores semelhantes, incluindo:
 
-- **Identificador(s)**. Nome que melhor identifica o objeto. Por exemplo, para elementos HTML, os detalhes do instantâneo mostram o valor do atributo ID, se um for usado.
+- **Identificador (es)**. Nome que melhor identifica o objeto. Por exemplo, para elementos HTML, os detalhes do instantâneo mostram o valor do atributo ID, se um for usado.
 
 - **Tipo**. Tipo de objeto (por exemplo, elemento de link HTML ou elemento div).
 
@@ -234,7 +234,7 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
 
 - **Tamanho retido**. Tamanho do objeto mais o tamanho de todos os objetos filho que não têm outro pai. Para fins práticos, essa é a quantidade de memória retida pelo objeto, então, se você excluir o objeto, recuperará a quantidade de memória especificada.
 
-- **Conde.** Número de instâncias de objeto. Esse valor aparece apenas na exibição Tipos.
+- **Contagem**. Número de instâncias de objeto. Esse valor aparece apenas na exibição Tipos.
 
 ## <a name="view-a-snapshot-diff"></a>Exibir a diferença de um instantâneo
  No analisador de memória de JavaScript, você pode comparar um instantâneo com o instantâneo anterior nas exibições diferenciais.
@@ -245,7 +245,7 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
 
  Esta ilustração mostra a exibição Tipos em uma diferença de instantâneo.
 
- ![Visualização de difusor instantâneo mostrando tipos](../profiling/media/js_mem_snapshot_diff.png "JS_Mem_Snapshot_Diff")
+ ![Exibição de comparação de instantâneos mostrando tipos](../profiling/media/js_mem_snapshot_diff.png "JS_Mem_Snapshot_Diff")
 
  Na janela de comparação de instantâneos, as exibições de Dominadores, Tipos e Raízes são as mesmas que na janela [Exibir detalhes do instantâneo](#view-snapshot-details). A diferença de instantâneo mostra as mesmas informações dos detalhes do instantâneo, com estes valores adicionais:
 
@@ -255,24 +255,24 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
 
   Para filtrar informações de comparação entre os instantâneos, escolha um dos filtros de **Escopo** na parte superior das exibições de comparação.
 
-- **Objetos restantes do instantâneo nº\<<number>**. Esse filtro mostra o diferencial entre os objetos adicionados ao heap e removidos do heap em comparação com o instantâneo de linha de base e o instantâneo anterior. Por exemplo, se o resumo de instantâneo mostrar +205 / -195 na contagem de objetos, esse filtro mostrará a você os 10 objetos que foram adicionados, mas não removidos.
+- **Objetos restantes do instantâneo # \<number> **. Esse filtro mostra o diferencial entre os objetos adicionados ao heap e removidos do heap em comparação com o instantâneo de linha de base e o instantâneo anterior. Por exemplo, se o resumo de instantâneo mostrar +205 / -195 na contagem de objetos, esse filtro mostrará a você os 10 objetos que foram adicionados, mas não removidos.
 
   > [!TIP]
   > Para mostrar as informações mais úteis nesse filtro, siga as etapas descritas em [Isolar uma perda de memória](#isolate-a-memory-leak).
 
-- **Objetos adicionados entre os instantâneos nº\<number> e nº \<number>**. Esse filtro mostra todos os objetos adicionados ao heap desde o instantâneo anterior.
+- **Objetos adicionados entre o instantâneo # \<number> e \<number> #**. Esse filtro mostra todos os objetos adicionados ao heap desde o instantâneo anterior.
 
-- **Todos os objetos no instantâneo nº \<number>**. Essa configuração de filtro não descarta objetos no heap.
+- **Todos os objetos no instantâneo \<number> #**. Essa configuração de filtro não descarta objetos no heap.
 
-  Para mostrar referências de objeto que não correspondem ao filtro **escopo** atual, **selecione Mostrar referências não correspondentes** na lista de configurações ![As configurações caem&#45;lista para baixo no analisador](../profiling/media/js_mem_settings.png "JS_Mem_Settings") de memória no canto superior direito do painel. Se habilitar esta configuração, as referências não coincidentes são exibidas em cinza.
+  Para mostrar referências de objeto que não correspondem ao filtro de **escopo** atual, selecione **Mostrar referências não correspondentes** nas configurações da lista de configurações ![drop&#45;lista suspensa no analisador de memória](../profiling/media/js_mem_settings.png "JS_Mem_Settings") no canto superior direito do painel. Se habilitar esta configuração, as referências não coincidentes são exibidas em cinza.
 
 > [!TIP]
 > Recomendamos que você siga as etapas em [Isolar uma perda de memória](#isolate-a-memory-leak) e use os objetos que sobraram do filtro de **Escopo** para ajudar a identificar os objetos com perda de memória.
 
 ## <a name="view-objects-by-dominator"></a>Exibir objetos por dominador
- Nas exibições Tipos e Dominadores, você pode optar por exibir os objetos classificados pelos dominadores (esta é a exibição padrão na guia **Dominadores**). Ao selecionar esta exibição, somente os dominadores são mostrados na exibição superior dos objetos. (Objetos descendentes de objetos não globais estão escondidos da exibição de nível superior.) Para alguns aplicativos, isso pode esclarecer quais objetos estão causando um vazamento de memória reduzindo o ruído nos dados.
+ Nas exibições Tipos e Dominadores, você pode optar por exibir os objetos classificados pelos dominadores (esta é a exibição padrão na guia **Dominadores**). Ao selecionar esta exibição, somente os dominadores são mostrados na exibição superior dos objetos. (Objetos que são descendentes de objetos não globais são ocultados da exibição de nível superior.) Para alguns aplicativos, isso pode esclarecer quais objetos estão causando um vazamento de memória, reduzindo o ruído nos dados.
 
- Para alternar a exibição de objetos por dominador, pressione o botão **Dobrar objetos pelo dominador**. ![Objetos dobráveis em seus dominadores](../profiling/media/js_mem_fold_objects.png "JS_Mem_Fold_Objects")
+ Para alternar a exibição de objetos por dominador, pressione o botão **Dobrar objetos pelo dominador**. ![Dobrando objetos em seus dominadores](../profiling/media/js_mem_fold_objects.png "JS_Mem_Fold_Objects")
 
  Para obter mais informações sobre dominadores, consulte [Exibir detalhes do instantâneo](#view-snapshot-details).
 
@@ -290,16 +290,16 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
 > [!NOTE]
 > Referências circulares são exibidas com um (*) asterisco e uma dica de ferramenta informativa e não podem ser expandidas. Do contrário, elas impediriam que você percorra a árvore de referências e identifique objetos que estão retendo memória.
 
- Se você quiser ajuda adicional para identificar objetos **equivalentes, escolha Exibir IDs de objeto** na lista de configurações As ![configurações ficam&#45;lista para baixo no analisador](../profiling/media/js_mem_settings.png "JS_Mem_Settings") de memória no canto superior direito do painel superior. Essa opção exibe IDs de objetos ao lado dos nomes dos objetos na lista **Identificador(es)** (as IDs aparecem em todas as exibições, não apenas na lista de Referências de objeto). Os objetos que têm a mesma ID são referências compartilhadas.
+ Se você quiser obter ajuda adicional para identificar objetos equivalentes, escolha **Exibir IDs de objeto** nas configurações listar ![configurações drop&#45;lista suspensa no analisador de memória](../profiling/media/js_mem_settings.png "JS_Mem_Settings") no canto superior direito do painel superior. Essa opção exibe IDs de objetos ao lado dos nomes dos objetos na lista **Identificador(es)** (as IDs aparecem em todas as exibições, não apenas na lista de Referências de objeto). Os objetos que têm a mesma ID são referências compartilhadas.
 
  A ilustração a seguir mostra a lista Referências de objeto para um item selecionado com as IDs exibidas.
 
- ![Referências de objeto com IDs exibidos](../profiling/media/js_mem_shared_refs.png "JS_Mem_Shared_Refs")
+ ![Referências de objeto com IDs exibidas](../profiling/media/js_mem_shared_refs.png "JS_Mem_Shared_Refs")
 
 ## <a name="show-built-in-objects"></a>Mostrar objetos internos
  Por padrão, as exibições Dominadores e Tipos mostram apenas a objetos criados em seu aplicativo. Isso ajuda a filtrar informações desnecessárias e isolar problemas relacionados ao aplicativo. No entanto, às vezes pode ser útil exibir todos os objetos gerados pelo runtime JavaScript para o aplicativo.
 
- Para exibir esses objetos, escolha **Mostrar entradas** na lista de configurações ![As configurações estão&#45;lista para baixo no analisador](../profiling/media/js_mem_settings.png "JS_Mem_Settings") de memória no canto superior direito do painel.
+ Para exibir esses objetos, escolha **Mostrar incorporados** na lista configurações&#45;lista ![de configurações, menu para baixo no analisador de memória](../profiling/media/js_mem_settings.png "JS_Mem_Settings") no canto superior direito do painel.
 
 ## <a name="save-diagnostic-session-files"></a>Salvar arquivos de sessão de diagnóstico
  Os resumos de instantâneo de diagnóstico e as exibições detalhadas associadas são salvos como arquivos .*diagsession*. O **Gerenciador de Soluções** exibe sessões de diagnóstico anteriores na pasta Sessões de Diagnóstico. No **Gerenciador de Soluções**, você pode abrir sessões anteriores ou remover ou renomear arquivos.
@@ -324,7 +324,7 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
 > [!TIP]
 > Use `console.takeHeapSnapshot` para acelerar a análise ao repetir cenários de uso de memória.
 
- Esses comandos geram uma exceção se você os adiciona ao aplicativo e o executa fora do analisador de memória de JavaScript. No entanto, você pode testar se os comandos existem antes de usá-los. (Os comandos não existem no início da fase de inicialização da sessão.) Para verificar se você `takeHeapSnapshot`pode ligar com segurança, use este código:
+ Esses comandos geram uma exceção se você os adiciona ao aplicativo e o executa fora do analisador de memória de JavaScript. No entanto, você pode testar se os comandos existem antes de usá-los. (Os comandos não existem no início da fase de inicialização da sessão.) Para verificar se você pode chamar com segurança `takeHeapSnapshot` , use este código:
 
 ```javascript
 if (console && console.takeHeapSnapshot) {
@@ -347,13 +347,13 @@ if (performance && performance.mark) {
 
 ## <a name="tips-to-identify-memory-issues"></a>Dicas para identificar problemas de memória
 
-- Siga o fluxo de trabalho descrito em [Isolar perda de memória](#isolate-a-memory-leak) e use o filtro **Objetos que sobraram do instantâneo nº\<number>** na exibição de comparação para identificar possíveis fontes para as perdas de memória.
+- Siga o fluxo de trabalho descrito em [isolar uma perda de memória](#isolate-a-memory-leak) e use os **objetos restantes \<number> do filtro instantâneo #** em uma exibição de comparação para identificar prováveis candidatos a vazamentos de memória.
 
 - Use [Localizar um objeto na árvore de objetos](#find-an-object-in-the-object-tree) para ver onde um objeto é referenciado na hierarquia da memória. A exibição Raiz mostra como um objeto é vinculado ao objeto global, o que o impediria de ser coletado como lixo.
 
 - Quando a causa de um problema de memória for difícil de identificar, use as diversas exibições (como Dominadores e Tipos) para buscar aspectos em comum, especialmente para ajudar a identificar um objeto (ou alguns objetos) que possam conter referências a muitos dos outros objetos que aparecem na exibição.
 
-- Procurar os objetos retidos acidentalmente na memória depois que o usuário navegar para uma nova página, que é uma causa comum de problemas de memória. Por exemplo: 
+- Procurar os objetos retidos acidentalmente na memória depois que o usuário navegar para uma nova página, que é uma causa comum de problemas de memória. Por exemplo:
 
   - o uso incorreto da função [URL.CreateObjectUrl](https://developer.mozilla.org/docs/Web/API/URL/createObjectURL) pode causar esse problema.
 

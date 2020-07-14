@@ -1,19 +1,19 @@
 ---
 title: Configurar atrasos de início de cenário para testes de carga
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - load tests, scenarios, start delays
 ms.assetid: 2f634fba-8dfa-4c7a-a8b9-be867b78d16a
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f962306462538717df694d3bc47719fe31b1e1fe
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0d425b457056e256c5c9ed927c99adf002b78dd9
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76111482"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288787"
 ---
 # <a name="configure-scenario-start-delays-in-load-tests"></a>Configurar atrasos de início do cenário em testes de carga
 
@@ -83,7 +83,7 @@ A propriedade **Desabilitar durante aquecimento** é usada para indicar se o cen
 
 4. Depois de alterar a propriedade, escolha **Salvar** no menu **Arquivo**. Assim, você pode executar o teste de carga usando o novo valor de **Desabilitar durante aquecimento**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Editando cenários de teste de carga](../test/edit-load-test-scenarios.md)
 - [Configurar agentes de teste e controladores de teste para testes de carga](../test/configure-test-agents-and-controllers-for-load-tests.md)

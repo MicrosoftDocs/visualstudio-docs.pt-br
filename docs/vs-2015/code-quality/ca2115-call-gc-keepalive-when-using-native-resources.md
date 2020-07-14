@@ -15,52 +15,52 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e0aa10cc453919a2a79ee6d3d46db95c19d8756e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c668172ca318000068fb4e90f4848e456c32208d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658694"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543618"
 ---
-# <a name="ca2115-call-gckeepalive-when-using-native-resources"></a>CA2115: chamar GC.KeepAlive durante o uso de recursos nativos
+# <a name="ca2115-call-gckeepalive-when-using-native-resources"></a>CA2115: Chamar GC.KeepAlive ao usar recursos nativos
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|CallGCKeepAliveWhenUsingNativeResources|
+|TypeName|CallGCKeepAliveWhenUsingNativeResources|
 |CheckId|CA2115|
 |Categoria|Microsoft.Security|
 |Alteração Significativa|Sem interrupção|
 
 ## <a name="cause"></a>Causa
- Um método declarado em um tipo com um finalizador faz referência a um campo <xref:System.IntPtr?displayProperty=fullName> ou <xref:System.UIntPtr?displayProperty=fullName>, mas não chama <xref:System.GC.KeepAlive%2A?displayProperty=fullName>.
+ Um método declarado em um tipo com um finalizador faz referência a um <xref:System.IntPtr?displayProperty=fullName> <xref:System.UIntPtr?displayProperty=fullName> campo ou, mas não chama <xref:System.GC.KeepAlive%2A?displayProperty=fullName> .
 
 ## <a name="rule-description"></a>Descrição da Regra
  A coleta de lixo Finaliza um objeto se não houver mais referências a ele no código gerenciado. Referências não gerenciadas a objetos não impedem a coleta de lixo. Esta regra detecta erros que podem ocorrer porque um recurso não gerenciado está sendo finalizado, enquanto ainda está sendo usado em código não gerenciado.
 
- Essa regra pressupõe que os campos <xref:System.IntPtr> e <xref:System.UIntPtr> armazenem ponteiros para recursos não gerenciados. Como a finalidade de um finalizador é liberar recursos não gerenciados, a regra pressupõe que o finalizador liberará o recurso não gerenciado apontado pelos campos de ponteiro. Essa regra também pressupõe que o método está referenciando o campo ponteiro para passar o recurso não gerenciado para código não gerenciado.
+ Essa regra pressupõe que <xref:System.IntPtr> e <xref:System.UIntPtr> campos armazenem ponteiros para recursos não gerenciados. Como a finalidade de um finalizador é liberar recursos não gerenciados, a regra pressupõe que o finalizador liberará o recurso não gerenciado apontado pelos campos de ponteiro. Essa regra também pressupõe que o método está referenciando o campo ponteiro para passar o recurso não gerenciado para código não gerenciado.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação dessa regra, adicione uma chamada para <xref:System.GC.KeepAlive%2A> ao método, passando a instância atual (`this` em C# e C++) como o argumento. Posicione a chamada após a última linha de código em que o objeto deve ser protegido da coleta de lixo. Imediatamente após a chamada para <xref:System.GC.KeepAlive%2A>, o objeto é considerado novamente pronto para coleta de lixo, supondo que não haja nenhuma referência gerenciada a ele.
+ Para corrigir uma violação dessa regra, adicione uma chamada para <xref:System.GC.KeepAlive%2A> ao método, passando a instância atual ( `this` em C# e C++) como o argumento. Posicione a chamada após a última linha de código em que o objeto deve ser protegido da coleta de lixo. Imediatamente após a chamada para <xref:System.GC.KeepAlive%2A> , o objeto é considerado novamente pronto para coleta de lixo, supondo que não haja nenhuma referência gerenciada a ele.
 
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
  Essa regra faz algumas suposições que podem levar a falsos positivos. Você pode suprimir com segurança um aviso dessa regra se:
 
-- O finalizador não libera o conteúdo do campo <xref:System.IntPtr> ou <xref:System.UIntPtr> referenciado pelo método.
+- O finalizador não libera o conteúdo do <xref:System.IntPtr> <xref:System.UIntPtr> campo ou referenciado pelo método.
 
-- O método não passa o campo <xref:System.IntPtr> ou <xref:System.UIntPtr> para o código não gerenciado.
+- O método não passa o <xref:System.IntPtr> campo ou <xref:System.UIntPtr> para o código não gerenciado.
 
   Revise cuidadosamente outras mensagens antes de exclui-las. Essa regra detecta erros que são difíceis de reproduzir e depurar.
 
 ## <a name="example"></a>Exemplo
- No exemplo a seguir, `BadMethod` não inclui uma chamada para `GC.KeepAlive` e, portanto, viola a regra. `GoodMethod` contém o código corrigido.
+ No exemplo a seguir, não `BadMethod` inclui uma chamada para `GC.KeepAlive` e, portanto, viola a regra. `GoodMethod`contém o código corrigido.
 
 > [!NOTE]
 > Este exemplo é pseudo-código, embora o código seja compilado e executado, o aviso não é acionado porque um recurso não gerenciado não é criado ou liberado.
 
  [!code-csharp[FxCop.Security.IntptrAndFinalize#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.IntptrAndFinalize/cs/FxCop.Security.IntptrAndFinalize.cs#1)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  <xref:System.GC.KeepAlive%2A?displayProperty=fullName> <xref:System.IntPtr?displayProperty=fullName>
  <xref:System.Object.Finalize%2A?displayProperty=fullName>
  <xref:System.UIntPtr?displayProperty=fullName>

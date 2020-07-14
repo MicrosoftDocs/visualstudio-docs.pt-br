@@ -1,7 +1,7 @@
 ---
-title: 'Erro: Firewall no computador Local | Microsoft Docs'
+title: Erro-firewall no computador local | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.firewall.localmachine
 dev_langs:
@@ -14,14 +14,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87a1813410a092ced335f37b9df4cf6547ca1cc3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 115546a0fd3a9aad804391816ce8bac88429d0ec
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851051"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460746"
 ---
-# <a name="error-firewall-on-local-machine"></a>Erro: Firewall no computador local
+# <a name="error-firewall-on-local-machine"></a>Erro: firewall na máquina local
 O firewall de conexão da Internet no computador local, o computador no qual você está executando o Visual Studio, não está configurado para permitir a depuração remota. Para a depuração remota gerenciada ou nativa com o transporte padrão, a porta TCP 135 deve estar aberta para o tráfego de DCOM. O compartilhamento de arquivos e impressoras deve ser aberto e o devenv.exe deve ser adicionado à lista de exceções. Abrir algumas portas de IPSEC pode ser necessário também.
 
  Para obter mais informações, consulte [depuração remota](../debugger/remote-debugging.md).

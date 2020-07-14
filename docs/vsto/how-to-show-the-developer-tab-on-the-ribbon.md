@@ -1,7 +1,7 @@
 ---
-title: 'Como: Mostrar a guia Desenvolvedor na faixa de faixas'
+title: 'Como: mostrar a guia Desenvolvedor na faixa de das'
 ms.date: 08/14/2019
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,19 +13,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7b6641cca4ef2288452b2f6959482b311a5b07a4
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 41070c92d0c27c1ee8fbf480f7461c22421b8fdc
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551780"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545841"
 ---
-# <a name="how-to-show-the-developer-tab-on-the-ribbon"></a>Como: Mostrar a guia Desenvolvedor na faixa de faixas
+# <a name="how-to-show-the-developer-tab-on-the-ribbon"></a>Como: mostrar a guia Desenvolvedor na faixa de das
   Para acessar a guia **desenvolvedor** na faixa de faixas de um aplicativo do Office, você deve configurá-lo para mostrar essa guia porque ela não aparece por padrão. Por exemplo, você deve mostrar essa guia se quiser adicionar um <xref:Microsoft.Office.Tools.Word.GroupContentControl> a uma personalização em nível de documento para o Word.
 
 > [!NOTE]
-> Esta orientação se aplica somente ao Office 2010 ou a aplicativos posteriores. Se você quiser mostrar essa guia no sistema de Microsoft Office de 2007, consulte a seguinte versão deste tópico [como: Mostre a guia Desenvolvedor na faixa de](https://web.archive.org/web/20140303033431/msdn.microsoft.com/library/bb608625(v=vs.90).aspx
-)faixas.
+> Esta orientação se aplica somente ao Office 2010 ou a aplicativos posteriores. Se você quiser mostrar essa guia no sistema de Microsoft Office de 2007, consulte a seguinte versão deste tópico [como mostrar a guia Desenvolvedor na faixa](https://web.archive.org/web/20140303033431/msdn.microsoft.com/library/bb608625(v=vs.90).aspx
+)de opções.
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
@@ -56,11 +56,11 @@ ms.locfileid: "69551780"
 
      A figura a seguir mostra a caixa de diálogo Options e o botão **Custom Ribbon da faixa** de **opções** no Excel 2010. O local desse botão é semelhante em todos os outros aplicativos listados na seção "aplica-se a", próximo à parte superior deste tópico.
 
-     ![O botão Personalizar faixa de] medida (../vsto/media/vsto-office2010-customizeribbonbutton.png "O botão Personalizar faixa de") medida
+     ![O botão Personalizar faixa de medida](../vsto/media/vsto-office2010-customizeribbonbutton.png "O botão Personalizar faixa de medida")
 
 4. Na lista de guias principais, marque a caixa de seleção **desenvolvedor** .
 
-     A figura a seguir mostra a caixa de seleção do **desenvolvedor** no [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)]Word 2010 e. O local dessa caixa de seleção é semelhante em todos os outros aplicativos listados na seção "aplica-se a" na parte superior deste tópico.
+     A figura a seguir mostra a caixa de seleção do **desenvolvedor** no Word 2010 e [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] . O local dessa caixa de seleção é semelhante em todos os outros aplicativos listados na seção "aplica-se a" na parte superior deste tópico.
 
      ![A caixa de seleção do desenvolvedor no diálogo opções do Word](../vsto/media/vsto-office2010-developercheckbox.png "A caixa de seleção do desenvolvedor no diálogo opções do Word")
 

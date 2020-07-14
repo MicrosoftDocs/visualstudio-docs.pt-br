@@ -5,19 +5,19 @@ description: Visão geral do processo de Build das ferramentas de contêiner
 ms.author: ghogen
 ms.date: 06/06/2019
 ms.technology: vs-azure
-ms.topic: conceptual
-ms.openlocfilehash: 1b23d918621d79756fd77a1dd9b98009b2769ed3
-ms.sourcegitcommit: 596f92fcc84e6f4494178863a66aed85afe0bb08
+ms.topic: reference
+ms.openlocfilehash: 427a70d9bc4f6ef326ffb16e7d26df9d8fae2365
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82189485"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283197"
 ---
 # <a name="container-tools-build-properties"></a>Propriedades de compilação das ferramentas de contêiner
 
 Você pode personalizar como o Visual Studio cria seus projetos de contêiner definindo as propriedades que o MSBuild usa para criar seu projeto. Por exemplo, você pode alterar o nome do Dockerfile, especificar marcas e rótulos para suas imagens, fornecer argumentos adicionais passados para comandos do Docker e controlar se o Visual Studio realiza determinadas otimizações de desempenho, como a criação fora do ambiente de contêiner. Você também pode definir propriedades de depuração, como o nome do executável a ser iniciado, e os argumentos de linha de comando a serem fornecidos.
 
-Para definir o valor de uma propriedade, edite o arquivo de projeto. Por exemplo, suponha que seu Dockerfile seja chamado de *MyDockerfile*. Você pode definir a `DockerfileFile` Propriedade no arquivo de projeto da seguinte maneira.
+Para definir o valor de uma propriedade, edite o arquivo de projeto. Por exemplo, suponha que seu Dockerfile seja chamado de *MyDockerfile*. Você pode definir a `DockerfileFile` propriedade no arquivo de projeto da seguinte maneira.
 
 ```xml
 <PropertyGroup>
@@ -25,7 +25,7 @@ Para definir o valor de uma propriedade, edite o arquivo de projeto. Por exemplo
 </PropertyGroup>
 ```
 
-Você pode adicionar a configuração de propriedade a um `PropertyGroup` elemento existente ou, se não houver um, crie um `PropertyGroup` novo elemento.
+Você pode adicionar a configuração de propriedade a um `PropertyGroup` elemento existente ou, se não houver um, crie um novo `PropertyGroup` elemento.
 
 A tabela a seguir mostra as propriedades do MSBuild disponíveis para projetos de contêiner. A versão do pacote NuGet aplica-se a [Microsoft. VisualStudio. Azure. containers. Tools. targets](https://www.nuget.org/packages/Microsoft.VisualStudio.Azure.Containers.Tools.Targets/).
 
@@ -80,7 +80,7 @@ O arquivo de projeto a seguir mostra exemplos de algumas dessas configurações.
 
 Para obter informações sobre propriedades do MSBuild em geral, consulte [Propriedades do MSBuild](../msbuild/msbuild-properties.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Docker Compose Propriedades de compilação](docker-compose-properties.md)
 

@@ -1,7 +1,7 @@
 ---
-title: 'Como: restaurar comandos do depurador ocultos | Microsoft Docs'
+title: Como restaurar os comandos ocultos do depurador | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a45791843abe3051bacb9655c773ac9dfc6b9045
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 13b4db03a75decd41430c282a67276caa60182d8
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732909"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349374"
 ---
 # <a name="how-to-restore-hidden-debugger-commands"></a>Como restaurar comandos de depurador ocultos
 Ao configurar o Visual Studio, será solicitado que você escolha um conjunto de configurações padrão da IDE para a sua linguagem de programação principal. As configurações padrão da IDE para algumas linguagens podem ocultar alguns comandos do depurador.
@@ -34,11 +34,11 @@ Ao configurar o Visual Studio, será solicitado que você escolha um conjunto de
 
 1. Com um projeto aberto, no menu **Ferramentas**, clique em **Personalizar**.
 
-2. Na caixa de diálogo **Personalizar**, clique na guia **Comandos**.
+2. Na caixa de diálogo **Personalizar** , clique na guia **Comandos** .
 
 3. Na lista suspensa da **barra de menus**:, selecione o menu **Depurar** que você deseja que contenha o comando restaurado.
 
-4. Clique no botão **Adicionar Comando...** .
+4. Clique no botão **Adicionar Comando...**.
 
 5. Na caixa **Adicionar Comando**, selecione o comando que você deseja adicionar, e clique em **OK**.
 
@@ -60,18 +60,18 @@ Ao configurar o Visual Studio, será solicitado que você escolha um conjunto de
 
 3. Na página **Salvar configurações atuais**, decida se deseja salvar as configurações existentes e clique em **Avançar**.
 
-4. Na página **Escolha uma coleção de configurações a importar**, na pasta **Configurações padrão**, escolha uma coleção de configurações de desenvolvimento que tenha os comandos que você deseja usar. Se você não souber qual coleção escolher, experimente **Configurações de desenvolvimento gerais** ou **Configurações de desenvolvimento do Visual C++** , que fornecem a maioria dos comandos do depurador.
+4. Na página **Escolha uma coleção de configurações a importar**, na pasta **Configurações padrão**, escolha uma coleção de configurações de desenvolvimento que tenha os comandos que você deseja usar. Se você não souber qual coleção escolher, experimente **Configurações de desenvolvimento gerais** ou **Configurações de desenvolvimento do Visual C++**, que fornecem a maioria dos comandos do depurador.
 
 5. Clique em **Avançar**.
 
 6. Na página **Escolha as configurações a importar**, em **Opções**, verifique se **Depurando** está selecionado. Desmarque as outras caixas de seleção, a menos que você também queira importar essas configurações.
 
-7. Clique em **Finalizar**.
+7. Clique em **Concluir**.
 
 8. Na página **Importação Concluída**, revise todos os erros associados à redefinição das configurações em **Detalhes**.
 
-9. Clique em **Fechar**.
+9. Clique em **fechar**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Segurança do depurador](../debugger/debugger-security.md)
 - [Introdução ao depurador](../debugger/debugger-feature-tour.md)

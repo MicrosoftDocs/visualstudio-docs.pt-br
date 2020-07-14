@@ -1,7 +1,7 @@
 ---
 title: Como mover-se no IDE
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - environments [Visual Studio], navigation
 - documents [Visual Studio], navigating
@@ -17,12 +17,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2febdedf5cf472132de936c37cad787df3d77518
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1052deb04a93d11349ef9beb2ff667893095902f
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590989"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769842"
 ---
 # <a name="how-to-move-around-in-the-visual-studio-ide"></a>Como mover-se no IDE do Visual Studio
 
@@ -43,9 +43,9 @@ Navegar para Trás e Navegar para Frente percorre os arquivos abertos no editor 
 
 ### <a name="to-move-through-open-files-in-order-of-use"></a>Para percorrer os arquivos abertos por ordem de uso
 
-- Para ativar documentos abertos na ordem em que foram tocados mais recentemente, **pressione Ctrl** + **-** (hífen).
+- Para ativar os documentos abertos na ordem em que foram tocadas recentemente, pressione **Ctrl** + **-** (hífen).
 
-- Para ativar documentos abertos na ordem inversa, **pressione Ctrl**+**Shift** + **-** (hífen).
+- Para ativar documentos abertos na ordem inversa, pressione **Ctrl** + **Shift** + **-** (hífen).
 
     > [!NOTE]
     > As opções **Navegar para Trás** e **Navegar para Frente** também podem ser encontradas no menu **Exibir**.
@@ -63,7 +63,7 @@ O `Window.PreviousDocumentWindowNav` permite ir para o arquivo acessado mais rec
 
 ### <a name="to-switch-to-specific-files-in-the-editor"></a>Para mudar para arquivos específicos no editor
 
-- Pressione a**guia** **Ctrl**+para exibir o **Navegador IDE**. Mantenha pressionada a tecla **Ctrl** e **pressione A guia** repetidamente até selecionar o arquivo para o qual pretende mudar.
+- Pressione **Ctrl** + **Tab** para exibir o **navegador IDE**. Mantenha pressionada a tecla **Ctrl** e pressione **Tab** repetidamente até selecionar o arquivo para o qual você pretende alternar.
 
     > [!TIP]
     > Para inverter a ordem em que você percorre a lista **Arquivos Ativos**, mantenha pressionadas as teclas **CTRL**+**SHIFT** e pressione a tecla **TAB**.
@@ -74,7 +74,7 @@ O `Window.PreviousDocumentWindowNav` permite ir para o arquivo acessado mais rec
 
     \- ou –
 
-- Na barra de menus, escolha **Janelas** > **de janelas**.
+- Na barra de menus, escolha **Window**  >  **janelas**de janelas.
 
 - Na lista, selecione o arquivo que você deseja exibir e, em seguida, escolha **Ativar**.
 
@@ -87,7 +87,7 @@ O **Navegador de IDE** também permite percorrer as janelas de ferramenta aberta
 
 ### <a name="to-switch-to-a-specific-tool-window-in-the-ide"></a>Para mudar para uma janela de ferramentas específica no IDE
 
-- Pressione **Alt**+**F7** para exibir o **Navegador IDE**. Mantenha pressionada a tecla **Alt** e pressione **F7** repetidamente até selecionar a janela para a qual pretende mudar.
+- Pressione **ALT** + **F7** para exibir o **navegador IDE**. Mantenha pressionada a tecla **ALT** e pressione **F7** repetidamente até selecionar a janela para a qual você pretende alternar.
 
     > [!TIP]
     > Para inverter a ordem em que você percorre a lista **Janelas de Ferramentas Ativas**, mantenha pressionada as teclas **Shift**+**Alt** e pressione **F7**.

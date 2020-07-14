@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_unmodifiedTypeId | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4f7fc73c-f524-4d7a-b378-a9ab99a96104
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 49cf159501e3f582010d514a586151e0626fc8f7
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f6205bf2a80f362d803b5f5e23397a5578ddc2b3
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738965"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461584"
 ---
 # <a name="idiasymbolget_unmodifiedtypeid"></a>IDiaSymbol::get_unmodifiedTypeId
 Recupera a ID do tipo original (não modificado).
@@ -32,8 +32,8 @@ HRESULT get_unmodifiedTypeId(
 
 fora Um ponteiro para um `DWORD` que contém a ID.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

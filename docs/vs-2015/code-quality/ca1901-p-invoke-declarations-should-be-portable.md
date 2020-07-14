@@ -15,19 +15,19 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d1b4c0c5bcf22db6558f156fd1acd0be94026b08
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e669d87ad5ecc53c1523db16ab77578c6a703a33
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661057"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545256"
 ---
 # <a name="ca1901-pinvoke-declarations-should-be-portable"></a>CA1901: as declarações de P/Invoke devem ser portáteis
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|PInvokeDeclarationsShouldBePortable|
+|TypeName|PInvokeDeclarationsShouldBePortable|
 |CheckId|CA1901|
 |Categoria|Microsoft. portabilidade|
 |Alteração Significativa|Quebrando – se o P/Invoke estiver visível fora do assembly. Não separável – se a P/Invoke não estiver visível fora do assembly.|
@@ -38,12 +38,12 @@ ms.locfileid: "72661057"
 ## <a name="rule-description"></a>Descrição da Regra
  Qualquer um dos seguintes cenários viola essa regra ocorre:
 
-- O valor ou o parâmetro de retorno é digitado como um inteiro de tamanho fixo quando deve ser digitado como um `IntPtr`.
+- O valor ou o parâmetro de retorno é digitado como um inteiro de tamanho fixo quando deve ser digitado como um `IntPtr` .
 
 - O valor ou o parâmetro de retorno é digitado como um `IntPtr` quando deve ser digitado como um inteiro de tamanho fixo.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Você pode corrigir essa violação usando `IntPtr` ou `UIntPtr` para representar identificadores em vez de `Int32` ou `UInt32`.
+ Você pode corrigir essa violação usando `IntPtr` ou `UIntPtr` para representar identificadores em vez de `Int32` ou `UInt32` .
 
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
  Você não deve suprimir este aviso.
@@ -60,7 +60,7 @@ internal class NativeMethods
 }
 ```
 
- Neste exemplo, o parâmetro `nIconIndex` é declarado como um `IntPtr`, que tem 4 bytes de largura em uma plataforma de 32 bits e 8 bytes de largura em uma plataforma de 64 bits. Na declaração não gerenciada a seguir, você pode ver que `nIconIndex` é um inteiro sem sinal de 4 bytes em todas as plataformas.
+ Neste exemplo, o `nIconIndex` parâmetro é declarado como um `IntPtr` , que tem 4 bytes de largura em uma plataforma de 32 bits e 8 bytes de largura em uma plataforma de 64 bits. Na declaração não gerenciada a seguir, você pode ver que `nIconIndex` é um inteiro não assinado de 4 bytes em todas as plataformas.
 
 ```csharp
 HICON ExtractIcon(HINSTANCE hInst, LPCTSTR lpszExeFileName,
@@ -78,5 +78,5 @@ internal class NativeMethods{
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Avisos de portabilidade](../code-quality/portability-warnings.md)

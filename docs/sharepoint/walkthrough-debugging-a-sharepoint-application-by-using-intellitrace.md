@@ -1,7 +1,7 @@
 ---
 title: Depurar aplicativo do SharePoint usando o IntelliTrace
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,12 +16,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fe1130880db42e920e656d5efef1ea6a5af4d2d0
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 041a110ee39ae7711756b8d689bdf68ae2368caf
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984148"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015757"
 ---
 # <a name="walkthrough-debug-a-sharepoint-application-by-using-intellitrace"></a>Walkthrough: Depurar um aplicativo do SharePoint usando o IntelliTrace
 
@@ -31,23 +30,23 @@ Usando o IntelliTrace, você pode depurar soluções do SharePoint com mais faci
 
  **Aplica-se a:** As informações neste tópico se aplicam às soluções do SharePoint 2010 e do SharePoint 2013 que foram criadas no Visual Studio.
 
- Esta explicação passo a passo ilustra as seguintes tarefas:
+ Este passo a passo ilustra as seguintes tarefas:
 
-- [Criar um receptor de recursos](#create-a-feature-receiver)
+- [Criar um Receptor do Recurso](#create-a-feature-receiver)
 
-- [Adicionar código ao receptor de recursos](#add-code-to-the-feature-receiver)
+- [Adicionar Código ao Receptor do Recurso](#add-code-to-the-feature-receiver)
 
 - [Testar o projeto](#test-the-project)
 
 - [Coletar dados do IntelliTrace usando Microsoft Monitoring Agent](#collect-intellitrace-data-by-using-microsoft-monitoring-agent)
 
-- [Depurar e corrigir a solução do SharePoint](#debug-and-fix-the-sharepoint-solution)
+- [Depurar e Corrigir a Solução do SharePoint](#debug-and-fix-the-sharepoint-solution)
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
+Você precisará dos seguintes componentes para concluir este passo a passo:
 
 - Edições com suporte do Windows e do SharePoint.
 
@@ -73,9 +72,9 @@ Primeiro, você cria um projeto do SharePoint vazio que tem um receptor de recur
 
 ## <a name="add-code-to-the-feature-receiver"></a>Adicionar código ao receptor de recursos
 
-Em seguida, adicione o código a dois métodos no receptor de recursos: `FeatureActivated` e `FeatureDeactivating`. Esses métodos são disparados sempre que um recurso é ativado ou desativado no SharePoint, respectivamente.
+Em seguida, adicione o código a dois métodos no receptor de recursos: `FeatureActivated` e `FeatureDeactivating` . Esses métodos são disparados sempre que um recurso é ativado ou desativado no SharePoint, respectivamente.
 
-1. Na parte superior da classe `Feature1EventReceiver`, adicione o código a seguir, que declara variáveis que especificam o site e o subsite do SharePoint:
+1. Na parte superior da `Feature1EventReceiver` classe, adicione o código a seguir, que declara variáveis que especificam o site e o subsite do SharePoint:
 
     ```vb
     ' SharePoint site and subsite.
@@ -245,7 +244,7 @@ Em seguida, adicione o código a dois métodos no receptor de recursos: `Feature
     }
     ```
 
-## <a name="test-the-project"></a>Testar o projeto
+## <a name="test-the-project"></a>Teste do projeto
 
 Agora que o código foi adicionado ao receptor de recursos e o coletor de dados está em execução, implante e execute a solução do SharePoint para testar se ele funciona corretamente.
 
@@ -258,7 +257,7 @@ Agora que o código foi adicionado ao receptor de recursos e o coletor de dados 
 
 2. Exibir o conteúdo das listas de anúncios e tarefas.
 
-     A lista de anúncios deve ter um novo comunicado chamado **recurso ativado: IntelliTraceTest_Feature1**e a lista de tarefas deve ter uma nova tarefa denominada **desativar recurso: IntelliTraceTest_Feature1**. Se um desses itens estiver ausente, verifique se o recurso está ativado. Se não estiver ativado, ative-o.
+     A lista de comunicados deve ter um novo comunicado chamado **recurso ativado: IntelliTraceTest_Feature1**e a lista de tarefas deve ter uma nova tarefa denominada **recurso desativar: IntelliTraceTest_Feature1**. Se um desses itens estiver ausente, verifique se o recurso está ativado. Se não estiver ativado, ative-o.
 
 3. Desative o recurso executando as seguintes etapas:
 
@@ -295,7 +294,7 @@ Se você instalar Microsoft Monitoring Agent no sistema que está executando o S
 
 3. Na janela do PowerShell, execute o comando [Stop-WebApplicationMonitoring](/previous-versions/system-center/powershell/system-center-2012-r2/dn472753(v=sc.20)) para criar o arquivo. itrace, parar o monitoramento e reiniciar a solução do SharePoint.
 
-     **Stop-WebApplicationMonitoring**  *"\<SharePointSite >\\< SharePointAppName\>"*
+     **Stop-WebApplicationMonitoring***" \<SharePointSite> \\<SharePointAppName \> "*  
 
 ## <a name="debug-and-fix-the-sharepoint-solution"></a>Depurar e corrigir a solução do SharePoint
 

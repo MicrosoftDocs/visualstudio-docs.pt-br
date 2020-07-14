@@ -1,7 +1,7 @@
 ---
 title: Atualizar uma instalação baseada em rede
 description: Saiba como atualizar uma instalação do Visual Studio baseada em rede usando o comando --layout
-ms.date: 01/08/2020
+ms.date: 06/29/2020
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 68acfcd4acc06ff2b370f3d77a30bd4ec21eb6d1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f54ee1191dd998d34e46a442debafc175ce98c8b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114969"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545425"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Atualizar uma instalação em rede do Visual Studio
 
@@ -29,23 +29,23 @@ ms.locfileid: "76114969"
 ## <a name="how-to-update-a-network-layout"></a>Como atualizar um layout de rede
 
 > [!IMPORTANT]
-> Essas instruções supõem que você já criou um layout de instalação de rede. Para obter mais informações sobre como fazê-lo, consulte a instalação de uma rede da página [do Visual Studio.](create-a-network-installation-of-visual-studio.md)
+> Essas instruções pressupõem que você criou anteriormente um layout de instalação de rede. Para obter mais informações sobre como fazer isso, consulte a página [criar uma instalação de rede do Visual Studio](create-a-network-installation-of-visual-studio.md) .
 
 Para atualizar o compartilhamento de instalação de rede para que ele inclua as últimas atualizações, execute o comando `--layout` para baixar pacotes atualizados de forma incremental.
 
 ::: moniker range="vs-2017"
 
-**Novo em 15.3**: Se você selecionou um layout parcial quando [criou o layout da rede pela primeira vez,](create-a-network-installation-of-visual-studio.md)essas configurações serão salvas. Comandos de layout futuros usam as opções anteriores e quaisquer novas opções que você especificar. Porém, se você está usando um layout de uma versão anterior, use os mesmos parâmetros de linha de comando utilizados ao criar o layout de instalação de rede pela primeira vez (em outras palavras, as mesmas cargas de trabalho e os mesmos idiomas) para atualizar o conteúdo.
+**Novo no 15,3**: se você selecionou um layout parcial quando [criou o layout de rede pela primeira vez](create-a-network-installation-of-visual-studio.md), essas configurações serão salvas. Comandos de layout futuros usam as opções anteriores e quaisquer novas opções que você especificar. Porém, se você está usando um layout de uma versão anterior, use os mesmos parâmetros de linha de comando utilizados ao criar o layout de instalação de rede pela primeira vez (em outras palavras, as mesmas cargas de trabalho e os mesmos idiomas) para atualizar o conteúdo.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Se você selecionou um layout parcial quando [criou o layout da rede pela primeira vez,](create-a-network-installation-of-visual-studio.md)essas configurações serão salvas. Comandos de layout futuros usam as opções anteriores e quaisquer novas opções que você especificar.
+Se você selecionou um layout parcial quando [criou o layout de rede pela primeira vez](create-a-network-installation-of-visual-studio.md), essas configurações serão salvas. Comandos de layout futuros usam as opções anteriores e quaisquer novas opções que você especificar.
 
 ::: moniker-end
 
-Se você hospedar um layout em um compartilhamento de arquivos, você deve atualizar uma cópia privada do layout (por exemplo, c:\VSLayout) e, \\em seguida, depois que todo o conteúdo atualizado for baixado, copie-o para o seu compartilhamento de arquivos (por exemplo, server\products\VS). Se você não fizer isso, haverá uma chance maior de que quaisquer usuários que executem a instalação enquanto o layout está sendo atualizado não consigam obter todo o conteúdo do layout, pois ele não estará completamente atualizado.
+Se você hospedar um layout em um compartilhamento de arquivos, deverá atualizar uma cópia privada do layout (por exemplo, c:\VSLayout) e, depois, depois que todo o conteúdo atualizado for baixado, copie-o para o compartilhamento de arquivos (por exemplo, \\ server\products\VS). Se você não fizer isso, haverá uma chance maior de que quaisquer usuários que executem a instalação enquanto o layout está sendo atualizado não consigam obter todo o conteúdo do layout, pois ele não estará completamente atualizado.
 
 Vamos examinar alguns exemplos de como criar e, em seguida, atualizar um layout:
 
@@ -67,24 +67,24 @@ Vamos examinar alguns exemplos de como criar e, em seguida, atualizar um layout:
   vs_enterprise.exe --layout c:\VSLayout --passive
   ```
 
-* Veja aqui como adicionar uma carga de trabalho e idioma traduzido adicionais.  (Este comando adiciona a carga de trabalho de desenvolvimento do *Azure.)*  Agora, tanto o Desktop Gerenciado quanto o Azure estão incluídos neste layout.  Os recursos de idioma para inglês e alemão também estão incluídos para todas essas cargas de trabalho.  Além disso, o layout é atualizado para a versão mais recente disponível.
+* Veja aqui como adicionar uma carga de trabalho e idioma traduzido adicionais.  (Esse comando adiciona a carga de trabalho de *desenvolvimento do Azure* .)  Agora, a área de trabalho gerenciada e o Azure estão incluídos nesse layout.  Os recursos de idioma para inglês e alemão também estão incluídos para todas essas cargas de trabalho.  Além disso, o layout é atualizado para a versão mais recente disponível.
 
   ```cmd
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --lang de-DE
   ```
 
     > [!IMPORTANT]
-    > Uma operação de atualização não instala componentes opcionais recém-adicionados, mesmo se você inclui esses componentes em uma seção de "adição" de um [arquivo de resposta](automated-installation-with-response-file.md). Isso ocorre porque a operação de adição não é usada durante uma atualização.
+    > Uma operação de atualização não instala componentes opcionais recém-adicionados. Se você precisar dos componentes opcionais adicionados recentemente, remova os componentes opcionais antigos no `Layout.JSON` [arquivo de resposta](automated-installation-with-response-file.md) e inclua os componentes necessários na seção "Adicionar" de `Layout.JSON` . 
     >
-    > **Solução de solução**: Execute uma operação de modificação separada após uma atualização para instalar os componentes ausentes.
+    > **Solução alternativa**: execute uma operação de modificação separada após uma atualização para instalar os componentes ausentes.
 
-* E, finalmente, eis aqui como adicionar uma carga de trabalho e um idioma traduzido adicionais sem atualizar a versão. (Este comando adiciona a *carga de trabalho de desenvolvimento ASP.NET e web.)*  Agora, as cargas de trabalho gerenciadas de desktop, Azure e ASP.NET & desenvolvimento da Web estão incluídas neste layout. Os recursos de idioma para inglês, alemão e francês também estão incluídos para todas essas cargas de trabalho.  No entanto, o layout não foi atualizado para a versão mais recente disponível quando esse comando foi executado. Ele permanece com a versão existente.
+* E, finalmente, eis aqui como adicionar uma carga de trabalho e um idioma traduzido adicionais sem atualizar a versão. (Esse comando adiciona o ASP.NET e a carga de trabalho de *desenvolvimento da Web* .)  Agora, a área de trabalho gerenciada, o Azure e o ASP.NET & as cargas de desenvolvimento da Web estão incluídas nesse layout. Os recursos de idioma para inglês, alemão e francês também estão incluídos para todas essas cargas de trabalho.  No entanto, o layout não foi atualizado para a versão mais recente disponível quando esse comando foi executado. Ele permanece com a versão existente.
 
   ```cmd
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.NetWeb --lang fr-FR --keepLayoutVersion
   ```
 
-## <a name="deploy-an-update-to-client-machines"></a>Implantar uma atualização nas máquinas clientes
+## <a name="deploy-an-update-to-client-machines"></a>Implantar uma atualização em computadores cliente
 
 Dependendo de como o ambiente de rede é configurado, uma atualização pode ser implantada por um administrador de empresa ou iniciada de um computador cliente.
 
@@ -114,7 +114,7 @@ Dependendo de como o ambiente de rede é configurado, uma atualização pode ser
 > [!TIP]
 > Para obter detalhes sobre como controlar quando as notificações de atualização são apresentadas aos usuários, confira [Controlar as atualizações nas implantações do Visual Studio com base em rede](controlling-updates-to-visual-studio-deployments.md).
 
-## <a name="verify-a-layout"></a>Verifique um layout
+## <a name="verify-a-layout"></a>Verificar um layout
 
 Use `--verify` para executar a verificação no cache offline fornecido. Ele verifica se os arquivos de pacotes estão ausentes ou são inválidos. No final da verificação, imprime a lista de arquivos ausentes e arquivos inválidos.
 
@@ -168,19 +168,19 @@ c:\VSLayout\vs_enterprise.exe --layout c:\VSLayout --clean c:\VSLayout\Archive\1
 
 Quando você executa esse comando, a instalação analisa sua pasta de cache offline para localizar a lista de arquivos que ela removerá. Você terá a oportunidade de examinar os arquivos que serão excluídos e confirmar as exclusões.
 
-## <a name="get-support-for-your-offline-installer"></a>Obtenha suporte para o instalador off-line
+## <a name="get-support-for-your-offline-installer"></a>Obtenha suporte para o instalador offline
 
 Caso tenha um problema com a instalação offline, gostaríamos de saber a respeito. A melhor maneira de fazer isso é usando a ferramenta [Relatar um Problema](../ide/how-to-report-a-problem-with-visual-studio.md). Ao usar essa ferramenta, é possível enviar-nos a telemetria e os logs necessários para nos ajudar a diagnosticar e corrigir o problema.
 
-Também oferecemos uma opção de suporte [**ao chat ao vivo**](https://visualstudio.microsoft.com/vs/support/#talktous) (somente em inglês) para problemas relacionados à instalação.
+Também oferecemos uma opção de suporte de [**chat ao vivo**](https://visualstudio.microsoft.com/vs/support/#talktous) (somente em inglês) para problemas relacionados à instalação.
 
 Também temos outras opções de suporte disponíveis. Para obter uma lista, confira nossa página de [comentários](../ide/feedback-options.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-* [Instale o Visual Studio](install-visual-studio.md)
-* [Guia de administrador do Visual Studio](visual-studio-administrator-guide.md)
-* [Use parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
+* [Instalar o Visual Studio](install-visual-studio.md)
+* [Guia do administrador do Visual Studio](visual-studio-administrator-guide.md)
+* [Usar parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
 * [Ferramentas para detectar e gerenciar instâncias do Visual Studio](tools-for-managing-visual-studio-instances.md)
 * [Atualizações de controle para implantações do Visual Studio com base em rede](controlling-updates-to-visual-studio-deployments.md)
-* [Ciclo de vida e manutenção do produto Visual Studio](/visualstudio/releases/2019/servicing/)
+* [Ciclo de vida do produto Visual Studio e manutenção](/visualstudio/releases/2019/servicing/)

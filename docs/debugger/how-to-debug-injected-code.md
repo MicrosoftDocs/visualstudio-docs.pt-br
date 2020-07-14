@@ -1,7 +1,7 @@
 ---
-title: 'Como: Depurar código injetado | Microsoft Docs'
+title: Como depurar código injetado | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.injected
 dev_langs:
@@ -24,17 +24,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 35d2343343bf554df7592c8616e7697d88665baf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a63a593a907908205d6724f3faf2c06d405bf0e2
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62847785"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350037"
 ---
-# <a name="how-to-debug-injected-code"></a>Como: Depurar código injetado
+# <a name="how-to-debug-injected-code"></a>Como depurar código injetado
 
 > [!NOTE]
-> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha Importar e Exportar Configurações no menu Ferramentas. Para obter mais informações, confira [Redefinir as configurações](../ide/environment-settings.md#reset-settings).
+> As caixas de diálogo e os comandos de menu encontrados podem diferir daqueles descritos na Ajuda, dependendo das configurações ativas ou edição. Para alterar as configurações, escolha Importar e Exportar Configurações no menu Ferramentas. Para obter mais informações, confira [Redefinir as configurações](../ide/environment-settings.md#reset-settings).
 
 Usar atributos pode simplificar muito a programação C++. Para obter mais informações, consulte [conceitos](/cpp/windows/attributed-programming-concepts). Alguns atributos são interpretados diretamente pelo compilador. Outros atributos injetam o código na origem do programa, que o compilador em seguida compila. Este código injetado facilita a programação reduzindo a quantidade de códigos que você precisa escrever. Entretanto, às vezes, um bug pode causar falha no aplicativo ao executar o código injetado. Quando isso acontece, você provavelmente desejará examinar o código injetado. O Visual Studio fornece duas maneiras de ver o código injetado:
 
@@ -66,7 +66,7 @@ A janela **Desmontagem** mostra as instruções da linguagem assembly que corres
 
 2. No menu **Depurar**, escolha **Windows** e clique em **Desmontagem**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Segurança do depurador](../debugger/debugger-security.md)
 - [Depurando código nativo](../debugger/debugging-native-code.md)

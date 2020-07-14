@@ -1,7 +1,7 @@
 ---
-title: 'Como: Por meio de programação se referir a intervalos de planilhas em código'
+title: Como fazer referência programaticamente a intervalos de planilha no código
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,45 +15,45 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2e82b884965c5c7362951c7d94199f90c93fbfc3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 93673fcc270ce2f1ac43804cb1d794281f28c702
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955947"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547388"
 ---
-# <a name="how-to-programmatically-refer-to-worksheet-ranges-in-code"></a>Como: Por meio de programação se referir a intervalos de planilhas em código
-  Usar um processo semelhante para referir-se ao conteúdo de um <xref:Microsoft.Office.Tools.Excel.NamedRange> controle ou um objeto de intervalo do Excel nativo.
+# <a name="how-to-programmatically-refer-to-worksheet-ranges-in-code"></a>Como fazer referência programaticamente a intervalos de planilha no código
+  Você usa um processo semelhante para fazer referência ao conteúdo de um <xref:Microsoft.Office.Tools.Excel.NamedRange> controle ou a um objeto Range do Excel nativo.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
 ## <a name="use-a-namedrange-control"></a>Usar um controle NamedRange
- O exemplo a seguir adiciona um <xref:Microsoft.Office.Tools.Excel.NamedRange> para uma planilha e, em seguida, adiciona texto para a célula no intervalo.
+ O exemplo a seguir adiciona um <xref:Microsoft.Office.Tools.Excel.NamedRange> a uma planilha e, em seguida, adiciona o texto à célula no intervalo.
 
-### <a name="to-refer-to-a-namedrange-control"></a>Para se referir a um controle NamedRange
+### <a name="to-refer-to-a-namedrange-control"></a>Para fazer referência a um controle NamedRange
 
-1. Atribuir uma cadeia de caracteres para o <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> propriedade do <xref:Microsoft.Office.Tools.Excel.NamedRange> controle. Esse código deve ser colocado em uma classe de folha, não no `ThisWorkbook` classe.
+1. Atribua uma cadeia de caracteres à <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> Propriedade do <xref:Microsoft.Office.Tools.Excel.NamedRange> controle. Esse código deve ser colocado em uma classe de planilha, não na `ThisWorkbook` classe.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#46](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#46)]
      [!code-vb[Trin_VstcoreExcelAutomation#46](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#46)]
 
-## <a name="use-native-excel-ranges"></a>Use o native intervalos do Excel
- O exemplo a seguir adiciona um intervalo do Excel nativo a uma planilha e, em seguida, adiciona texto para a célula no intervalo.
+## <a name="use-native-excel-ranges"></a>Usar intervalos nativos do Excel
+ O exemplo a seguir adiciona um intervalo do Excel nativo a uma planilha e, em seguida, adiciona o texto à célula no intervalo.
 
-### <a name="to-refer-to-a-native-range-object"></a>Para se referir a um objeto range nativo
+### <a name="to-refer-to-a-native-range-object"></a>Para fazer referência a um objeto de intervalo nativo
 
-1. Atribuir uma cadeia de caracteres para o <xref:Microsoft.Office.Interop.Excel.Range.Value2%2A> propriedade do intervalo.
+1. Atribua uma cadeia de caracteres à <xref:Microsoft.Office.Interop.Excel.Range.Value2%2A> Propriedade do intervalo.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#47](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#47)]
      [!code-vb[Trin_VstcoreExcelAutomation#47](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#47)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Trabalhar com intervalos](../vsto/working-with-ranges.md)
-- [Como: Verificar a ortografia em planilhas de forma programática](../vsto/how-to-programmatically-check-spelling-in-worksheets.md)
-- [Como: Aplicar estilos a intervalos em pastas de trabalho programaticamente](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)
-- [Como: Por meio de programação automaticamente preencher intervalos com dados alterados em incrementos](../vsto/how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data.md)
-- [Como: Pesquisar texto em intervalos de planilhas de forma programática](../vsto/how-to-programmatically-search-for-text-in-worksheet-ranges.md)
+- [Como: verificar a ortografia em planilhas programaticamente](../vsto/how-to-programmatically-check-spelling-in-worksheets.md)
+- [Como: aplicar estilos programaticamente a intervalos em pastas de trabalho](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)
+- [Como: preencher intervalos de forma programática automaticamente com dados em alteração incremental](../vsto/how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data.md)
+- [Como: Pesquisar por programação de texto em intervalos de planilhas](../vsto/how-to-programmatically-search-for-text-in-worksheet-ranges.md)
 - [Controle NamedRange](../vsto/namedrange-control.md)
-- [Visão geral dos controles de host e de itens de host](../vsto/host-items-and-host-controls-overview.md)
+- [Visão geral de itens de host e controles de host](../vsto/host-items-and-host-controls-overview.md)
 - [Limitações programáticas de itens de host e controles de host](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 - [Parâmetros opcionais em soluções do Office](../vsto/optional-parameters-in-office-solutions.md)

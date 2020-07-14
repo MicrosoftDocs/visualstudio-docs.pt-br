@@ -1,18 +1,18 @@
 ---
 title: Usando o comando Inspecionar Definição
 ms.date: 01/10/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9eac5c8c47c208f39f74f542fbbff89c8340a93f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 753d26e2c48f6263ccbc9c403f255948b5077924
+ms.sourcegitcommit: a466720759426265b18b0f8d74a970e72493d700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591340"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86092304"
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>Como visualizar e editar códigos usando a janela Inspecionar Definição (Alt+F12)
 
@@ -24,7 +24,7 @@ Você pode usar **Inspecionar Definição** com código C#, Visual Basic e C++. 
 
 ### <a name="open-a-peek-definition-window"></a>Abrir uma janela Inspecionar Definição
 
-1. Você pode inspecionar uma definição escolhendo **Inspecionar Definição** no menu do clique com o botão direito para um tipo ou membro que deseja explorar. Se a opção estiver habilitada, você também poderá espiar uma definição usando o mouse, pressionando **Ctrl** (ou outro modificador) e clicando no nome do membro. Ou, a partir do teclado, **pressione Alt**+**F12**.
+1. Você pode inspecionar uma definição escolhendo **Inspecionar Definição** no menu do clique com o botão direito para um tipo ou membro que deseja explorar. Se a opção estiver habilitada, você também poderá espiar uma definição usando o mouse, pressionando **Ctrl** (ou outro modificador) e clicando no nome do membro. Ou, no teclado, pressione **ALT** + **F12**.
 
      Esta ilustração mostra a janela **Inspecionar Definição** de um método que é chamado `Print()`:
 
@@ -58,7 +58,7 @@ Quando você começa a editar dentro de uma janela **Espiar Definição**, o arq
 
 ### <a name="to-change-options-for-peek-definition"></a>Para alterar as opções de Espiar Definição
 
-1. Vá para **Ferramentas** > **Opções** > **Editor geral de** > **General**texto .
+1. Vá para **ferramentas**  >  **Opções**  >  **Editor de texto**  >  **geral**.
 
 1. Selecione a opção **Abrir definição na exibição de espiada**.
 
@@ -70,14 +70,14 @@ Quando você começa a editar dentro de uma janela **Espiar Definição**, o arq
 
 Você pode usar estes atalhos de teclado com a janela **Inspecionar Definição**:
 
-|Funcionalidade|Atalho do teclado|
+|Funcionalidade|Atalho de teclado|
 |-------------------|:-----------------------:|
-|Abrir a janela de definição|**Alt**+**F12**|
+|Abrir a janela de definição|**ALT** + **F12**|
 |Fechar a janela de definição|**Esc**|
-|Promover a janela de definição para uma guia de documento regular|**Shift**+**Alt**+**Home**|
-|Navegar entre janelas de definição|**Ctrl**+**Alt** + **-** e **Ctrl**+**Alt**+**=**|
-|Navegar entre vários resultados|**F8** e **Shift**+**F8**|
-|Alternar entre a janela do editor de códigos e a janela de definição|**Turno**+**Esc**|
+|Promover a janela de definição para uma guia de documento regular|**Ctrl** + **ALT** + **Página inicial**|
+|Navegar entre janelas de definição|**Ctrl** + **Alt** + ALT **-** e **Ctrl** + **ALT**+**=**|
+|Navegar entre vários resultados|**F8** e **Shift** + **F8**|
+|Alternar entre a janela do editor de códigos e a janela de definição|**Shift** + **ESC**|
 
 > [!NOTE]
 > Você também pode usar os mesmos atalhos de teclado para editar código em uma janela **Inspecionar Definição**, como usa em qualquer outro lugar no Visual Studio.

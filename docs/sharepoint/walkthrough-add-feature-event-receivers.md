@@ -1,7 +1,7 @@
 ---
-title: 'Passo a passo: Adicionar receptores de evento | Microsoft Docs'
+title: 'Walkthrough: Adicionar receptores de evento de recurso | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,17 +16,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0fc22e0c8ae0b0bdaf0729b3cdb3847cd25f580f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: f40358c157ec24557947f36b0c6eadb6d8a2622d
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63008152"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015360"
 ---
-# <a name="walkthrough-add-feature-event-receivers"></a>Passo a passo: Adicionar receptores de evento
-  Receptores de evento são métodos executados quando ocorre por um dos seguintes eventos relacionados ao recurso no SharePoint:
+# <a name="walkthrough-add-feature-event-receivers"></a>Walkthrough: Adicionar receptores de evento de recurso
+  Os receptores de evento de recurso são métodos que são executados quando um dos seguintes eventos relacionados ao recurso ocorre no SharePoint:
 
-- Um recurso é instalado.
+- Um recurso está instalado.
 
 - Um recurso é ativado.
 
@@ -34,18 +33,18 @@ ms.locfileid: "63008152"
 
 - Um recurso é removido.
 
-  Este passo a passo demonstra como adicionar um receptor de eventos para um recurso em um projeto do SharePoint. Ele demonstra as seguintes tarefas:
+  Este tutorial demonstra como adicionar um receptor de eventos a um recurso em um projeto do SharePoint. Ele demonstra as seguintes tarefas:
 
-- Criando um projeto vazio com um receptor de evento do recurso.
+- Criando um projeto vazio com um receptor de eventos de recurso.
 
-- Manipulando o **FeatureDeactivating** método.
+- Manipulando o método **FeatureDeactivating** .
 
-- Usando o modelo de objeto de projeto do SharePoint para adicionar um comunicado para a lista de avisos.
+- Usando o modelo de objeto de projeto do SharePoint para adicionar um comunicado à lista de anúncios.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
- Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
+## <a name="prerequisites"></a>Pré-requisitos
+ Você precisará dos seguintes componentes para concluir este passo a passo:
 
 - Edições com suporte do Microsoft Windows e do SharePoint.
 
@@ -54,70 +53,70 @@ ms.locfileid: "63008152"
 ## <a name="create-a-feature-event-receiver-project"></a>Criar um projeto de receptor de evento de recurso
  Primeiro, crie um projeto para conter o receptor de evento de recurso.
 
-#### <a name="to-create-a-project-with-a-feature-event-receiver"></a>Para criar um projeto com um receptor de evento de recurso
+#### <a name="to-create-a-project-with-a-feature-event-receiver"></a>Para criar um projeto com um receptor de eventos de recurso
 
-1. Na barra de menus, escolha **arquivo** > **New** > **projeto** para exibir o **novo projeto** caixa de diálogo.
+1. Na barra de menus, escolha **arquivo**  >  **novo**  >  **projeto** para exibir a caixa de diálogo **novo projeto** .
 
-2. Expanda o **SharePoint** nó em um **Visual c#** ou **Visual Basic**e, em seguida, escolha o **2010** nó.
+2. Expanda o nó **do SharePoint** sob o **Visual C#** ou **Visual Basic**e escolha o nó **2010** .
 
-3. No **modelos** painel, escolha o **o projeto do SharePoint 2010** modelo.
+3. No painel **modelos** , escolha o modelo de **projeto do SharePoint 2010** .
 
-     Você pode usar esse tipo de projeto para receptores de evento porque eles têm nenhum modelo de projeto.
+     Você usa esse tipo de projeto para receptores de eventos de recurso porque eles não têm nenhum modelo de projeto.
 
-4. No **nome** , digite **FeatureEvtTest**e, em seguida, escolha o **Okey** botão para exibir o **o Assistente para personalização do SharePoint**.
+4. Na caixa **nome** , digite **FeatureEvtTest**e, em seguida, escolha o botão **OK** para exibir o assistente para **personalização do SharePoint**.
 
-5. Sobre o **especificar o nível de site e segurança para depuração** página, insira a URL do servidor do site do SharePoint ao qual você deseja adicionar o novo item de campo personalizado ou usar o local padrão (http://\<*sistema nome*> /).
+5. Na página **especificar o site e o nível de segurança para depuração** , insira a URL do site do SharePoint Server ao qual você deseja adicionar o novo item de campo personalizado ou use o local padrão (http:// \<*system name*> /).
 
-6. No **qual é o nível de confiança para essa solução do SharePoint?** , escolha o **implantar como uma solução de farm** botão de opção.
+6. Na seção **o que é o nível de confiança para esta solução do SharePoint?** , escolha o botão de opção **implantar como uma solução de farm** .
 
-     Para obter mais informações sobre soluções em área restrita em comparação com soluções de farm, consulte [considerações sobre a solução em área restrita](../sharepoint/sandboxed-solution-considerations.md).
+     Para obter mais informações sobre soluções em área restrita versus soluções de farm, consulte [Considerações sobre a solução em área restrita](../sharepoint/sandboxed-solution-considerations.md).
 
-7. Escolha o **terminar** botão e, em seguida, observe que um recurso chamado Feature1 aparece sob o **recursos** nó.
+7. Escolha o botão **concluir** e observe que um recurso chamado Feature1 aparece sob o nó **recursos** .
 
-## <a name="add-an-event-receiver-to-the-feature"></a>Adicionar um receptor de eventos para o recurso
- Em seguida, adicionar um receptor de eventos para o recurso e adicione o código que é executado quando o recurso for desativado.
+## <a name="add-an-event-receiver-to-the-feature"></a>Adicionar um receptor de eventos ao recurso
+ Em seguida, adicione um receptor de eventos ao recurso e adicione o código que é executado quando o recurso é desativado.
 
-#### <a name="to-add-an-event-receiver-to-the-feature"></a>Para adicionar um receptor de eventos para o recurso
+#### <a name="to-add-an-event-receiver-to-the-feature"></a>Para adicionar um receptor de eventos ao recurso
 
-1. Abra o menu de atalho para o nó de recursos e, em seguida, escolha **adicionar recurso** para criar um recurso.
+1. Abra o menu de atalho do nó recursos e escolha **Adicionar recurso** para criar um recurso.
 
-2. Sob o **recursos** nó, abra o menu de atalho **Feature1**e, em seguida, escolha **adicionar receptor de evento** para adicionar um receptor de eventos para o recurso.
+2. No nó **recursos** , abra o menu de atalho para **Feature1**e escolha **Adicionar receptor de eventos** para adicionar um receptor de eventos ao recurso.
 
-     Isso adiciona um arquivo de código em Feature1. Nesse caso, ele é denominado *Feature1.EventReceiver.cs* ou *Feature1.EventReceiver.vb*, dependendo da linguagem de desenvolvimento do seu projeto.
+     Isso adiciona um arquivo de código em Feature1. Nesse caso, ele é nomeado *Feature1.EventReceiver.cs* ou *Feature1. EventReceiver. vb*, dependendo da linguagem de desenvolvimento do seu projeto.
 
-3. Se seu projeto é escrito em [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)], adicione o seguinte código na parte superior do receptor do evento, se ele não ainda estiver lá:
+3. Se o projeto for escrito em [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)] , adicione o seguinte código na parte superior do receptor de eventos se ele ainda não estiver lá:
 
      [!code-csharp[SP_FeatureEvt#1](../sharepoint/codesnippet/CSharp/featureevttest2/features/feature1/feature1.eventreceiver.cs#1)]
 
-4. A classe de receptor de evento contém vários métodos de comentada que atuam como eventos. Substitua os **FeatureDeactivating** método com o seguinte:
+4. A classe receptor de evento contém vários métodos comentados que atuam como eventos. Substitua o método **FeatureDeactivating** pelo seguinte:
 
      [!code-vb[SP_FeatureEvt#2](../sharepoint/codesnippet/VisualBasic/featureevt2vb/features/feature1/feature1.eventreceiver.vb#2)]
      [!code-csharp[SP_FeatureEvt#2](../sharepoint/codesnippet/CSharp/featureevttest2/features/feature1/feature1.eventreceiver.cs#2)]
 
-## <a name="test-the-feature-event-receiver"></a>O receptor de evento do recurso de teste
- Em seguida, desativar o recurso para testar se o **FeatureDeactivating** método gera um comunicado para a lista de anúncios do SharePoint.
+## <a name="test-the-feature-event-receiver"></a>Testar o receptor de eventos de recurso
+ Em seguida, desative o recurso para testar se o método **FeatureDeactivating** gera um comunicado para a lista de anúncios do SharePoint.
 
 #### <a name="to-test-the-feature-event-receiver"></a>Para testar o receptor de evento de recurso
 
-1. Defina o valor do projeto **configuração de implantação ativa** propriedade **sem ativação**.
+1. Defina o valor da propriedade de **configuração de implantação ativa** do projeto como **sem ativação**.
 
-     Definir essa propriedade impede que o recurso de ativação no SharePoint e permite que você depure receptores de evento. Para obter mais informações, consulte [soluções do SharePoint depurar](../sharepoint/debugging-sharepoint-solutions.md).
+     Definir essa propriedade impede que o recurso seja ativado no SharePoint e permite que você depure os receptores de evento de recurso. Para obter mais informações, consulte [depurar soluções do SharePoint](../sharepoint/debugging-sharepoint-solutions.md).
 
-2. Escolha o **F5** tecla para executar o projeto e implantá-lo no SharePoint.
+2. Escolha a tecla **F5** para executar o projeto e implantá-lo no SharePoint.
 
-3. Na parte superior da página da Web do SharePoint, abra o **ações do Site** menu e, em seguida, escolha **configurações de Site**.
+3. Na parte superior da página da Web do SharePoint, abra o menu **ações do site** e escolha **configurações do site**.
 
-4. Sob o **ações do Site** seção o **configurações de Site** , escolha o **gerenciar recursos do site** link.
+4. Na seção **ações do site** da página **configurações do site** , escolha o link **gerenciar recursos do site** .
 
-5. No **recursos** , escolha o **ativar** lado de **FeatureEvtTest Feature1** recurso.
+5. Na página **recursos** , escolha o botão **Ativar** ao lado do recurso **FeatureEvtTest Feature1** .
 
-6. No **recursos** , escolha o **Deactivate** lado a **FeatureEvtTest Feature1** recurso e, em seguida, escolha o **desativar esse recurso**  link de confirmação para desativar o recurso.
+6. Na página **recursos** , escolha o botão **desativar** ao lado do recurso **FeatureEvtTest Feature1** e escolha o link **desativar este recurso** para desativar o recurso.
 
-7. Escolha o **Home** botão.
+7. Escolha o botão **página inicial** .
 
-     Observe que um anúncio é exibido na **anúncios** lista depois que o recurso é desativado.
+     Observe que um anúncio aparece na lista **comunicados** depois que o recurso é desativado.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Criar um receptor de eventos](../sharepoint/how-to-create-an-event-receiver.md)
+- [Como: criar um receptor de eventos](../sharepoint/how-to-create-an-event-receiver.md)
 - [Desenvolver soluções do SharePoint](../sharepoint/developing-sharepoint-solutions.md)

@@ -18,12 +18,12 @@ caps.latest.revision: 45
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d05b8a492768dfe9163d7ede55c2bf4aef084c26
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f87e3a3adda270f6b78b9134c7535bda6c73d952
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668021"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533140"
 ---
 # <a name="how-to-create-types-by-using-class-designer"></a>Como criar tipos usando Designer de Classe
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,21 +36,21 @@ Para o design de novos tipos para projetos do Visual C# .NET and Visual Basic .N
 
 - [Aplicar um atributo personalizado a um membro de tipo](#CustAttributeMember)
 
-## <a name="CreateType"></a> Criar um novo tipo
+## <a name="create-a-new-type"></a><a name="CreateType"></a>Criar um novo tipo
 
 1. Na Caixa de Ferramentas, em Designer de Classe, arraste um dos itens abaixo para um diagrama de classes:
 
     - **Classe** ou **Classe Abstrata**
 
-    - **Enum**
+    - **Enumeração**
 
     - **Interface**
 
     - **Estrutura** (VB) ou **Struct** (C#)
 
-    - **Delegado**
+    - **Delegar**
 
-    - **Módulo** (apenas VB)
+    - **Módulo** (somente vb)
 
 2. Dê um nome ao tipo. Selecione o nível de acesso.
 
@@ -64,18 +64,17 @@ Para o design de novos tipos para projetos do Visual C# .NET and Visual Basic .N
 
 4. Agora adicione outros itens para definir o tipo:
 
-    |||
+    |**Fins**|**Adicionar**|
     |-|-|
-    |**Para**|**Adicionar**|
     |Classes, classes abstratas, estruturas ou structs|Métodos, propriedades, campos, eventos, construtores (método), destruidores (método) e constantes que definem o tipo|
-    |Enums|Valores de campo que compõem a enumeração|
+    |Enumerações|Valores de campo que compõem a enumeração|
     |Interfaces|Métodos, propriedades e eventos que compõem a interface|
-    |delegado|Parâmetros que definem o representante|
+    |Delegar|Parâmetros que definem o representante|
     |Módulo|Métodos, propriedades, campos, eventos, construtores (método) e constantes que definem o módulo|
 
      Consulte [Criando membros](../ide/creating-and-configuring-type-members-class-designer.md#CreateMembers).
 
-## <a name="CustAttributeType"></a> Aplicar um atributo personalizado a um tipo
+## <a name="apply-a-custom-attribute-to-a-type"></a><a name="CustAttributeType"></a> Aplicar um atributo personalizado a um tipo
 
 1. Clique na forma do tipo em um diagrama de classes.
 
@@ -85,7 +84,7 @@ Para o design de novos tipos para projetos do Visual C# .NET and Visual Basic .N
 
      Quando terminar, os atributos personalizados são aplicados ao tipo.
 
-## <a name="CustAttributeMember"></a> Aplicar um atributo personalizado a um membro de tipo
+## <a name="apply-a-custom-attribute-to-a-type-member"></a><a name="CustAttributeMember"></a>Aplicar um atributo personalizado a um membro de tipo
 
 1. Clique no nome do membro na forma de seu tipo em um diagrama de classes ou em sua linha na janela Detalhes da Classe.
 
@@ -95,5 +94,5 @@ Para o design de novos tipos para projetos do Visual C# .NET and Visual Basic .N
 
      Quando terminar, os atributos personalizados são aplicados ao tipo.
 
-## <a name="see-also"></a>Consulte também
- [Como: criar herança entre tipos (Designer de classe)](../ide/how-to-create-inheritance-between-types-class-designer.md) [como criar associações entre tipos (Designer de classe)](../ide/how-to-create-associations-between-types-class-designer.md) [criando e configurando membros de tipo (Designer de classe)](../ide/creating-and-configuring-type-members-class-designer.md) [trabalhando com diagramas de classe (Designer de classe)](../ide/working-with-class-diagrams-class-designer.md) [Criando classes e tipos (Designer de classe)](../ide/designing-classes-and-types-class-designer.md)
+## <a name="see-also"></a>Consulte Também
+ [Como: criar herança entre tipos (Designer de classe)](../ide/how-to-create-inheritance-between-types-class-designer.md) [como criar associações entre tipos (Designer de classe)](../ide/how-to-create-associations-between-types-class-designer.md) [criando e configurando membros de tipo (Designer de classe)](../ide/creating-and-configuring-type-members-class-designer.md) [trabalhando com diagramas de classe (Designer de Classe)](../ide/working-with-class-diagrams-class-designer.md) criando [classes e tipos (Designer de classe)](../ide/designing-classes-and-types-class-designer.md)

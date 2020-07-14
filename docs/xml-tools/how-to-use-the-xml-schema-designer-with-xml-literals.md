@@ -1,7 +1,7 @@
 ---
 title: 'Como: Use o designer de esquema XML com literais XML'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d11803e7-f81a-41a2-a145-ba494a45cc93
 author: TerryGLee
 ms.author: tglee
@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: b4001e705cc69e07242abeeef5919573b264c5e8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b515092087ab213db5d3002f00c56753c2e3de14
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592653"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814636"
 ---
 # <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>Como: usar o designer de esquema XML com literais XML
 
@@ -23,7 +23,7 @@ Este tópico descreve como exibir um esquema associado com um literal XML em um 
 
 ## <a name="create-a-new-visual-basic-project"></a>Criar um novo projeto de Visual Basic
 
-1. {1&gt;Abra o Visual Studio.&lt;1}
+1. Abra o Visual Studio.
 
 2. Crie um novo projeto de **aplicativo de Console** Visual Basic chamado **xmlliterais**.
 

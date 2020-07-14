@@ -15,19 +15,19 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9a4663fe3bc09b27bad9eeec05e325f07a3de6f3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d8e267b1e6203759efc91936a3b13059368a3862
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72603062"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545386"
 ---
-# <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: os tipos não devem estender determinados tipos base
+# <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Tipos não devem estender determinados tipos base
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|TypesShouldNotExtendCertainBaseTypes|
+|TypeName|TypesShouldNotExtendCertainBaseTypes|
 |CheckId|CA1058|
 |Categoria|Microsoft. Design|
 |Alteração Significativa|Quebra|
@@ -52,7 +52,7 @@ ms.locfileid: "72603062"
 - <xref:System.Collections.Stack?displayProperty=fullName>
 
 ## <a name="rule-description"></a>Descrição da Regra
- Para [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] versão 1, era recomendável derivar novas exceções de <xref:System.ApplicationException>. A recomendação foi alterada e as novas exceções devem derivar de <xref:System.Exception?displayProperty=fullName> ou de uma de suas subclasses no namespace <xref:System>.
+ Para [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] a versão 1, era recomendável derivar novas exceções do <xref:System.ApplicationException> . A recomendação foi alterada e as novas exceções devem derivar de <xref:System.Exception?displayProperty=fullName> ou de uma de suas subclasses no <xref:System> namespace.
 
  Não crie uma subclasse de <xref:System.Xml.XmlDocument> se desejar criar uma exibição XML de um modelo de objeto subjacente ou fonte de dados.
 
@@ -87,4 +87,4 @@ public class MyReadOnlyCollection : ReadOnlyCollection<T>
  Para corrigir uma violação dessa regra, derive o tipo de um tipo base diferente ou uma coleção genérica.
 
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- Não suprimir um aviso desta regra para violações sobre <xref:System.ApplicationException>. É seguro suprimir um aviso dessa regra em busca de violações sobre <xref:System.Xml.XmlDocument>. É seguro suprimir um aviso sobre uma coleção não genérica se o código tiver sido liberado anteriormente.
+ Não suprimir um aviso desta regra para violações <xref:System.ApplicationException> . É seguro suprimir um aviso desta regra para violações <xref:System.Xml.XmlDocument> . É seguro suprimir um aviso sobre uma coleção não genérica se o código tiver sido liberado anteriormente.

@@ -15,41 +15,41 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ebce51d360518d1cc66f652714c59d27751586b2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 960c74625a04b209dc9aa251256e994517a3a52f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668876"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538522"
 ---
-# <a name="ca2219-do-not-raise-exceptions-in-exception-clauses"></a>CA2219: não acione exceções em cláusulas de exceção
+# <a name="ca2219-do-not-raise-exceptions-in-exception-clauses"></a>CA2219: Não acionar exceções em cláusulas de exceção
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|DoNotRaiseExceptionsInExceptionClauses|
+|TypeName|DoNotRaiseExceptionsInExceptionClauses|
 |CheckId|CA2219|
 |Categoria|Microsoft. Usage|
 |Alteração Significativa|Sem interrupção, quebra|
 
 ## <a name="cause"></a>Causa
- Uma exceção é gerada de uma cláusula `finally`, Filter ou Fault.
+ Uma exceção é lançada de uma `finally` cláusula, filtro ou falha.
 
 ## <a name="rule-description"></a>Descrição da Regra
  Quando uma exceção é gerada em uma cláusula de exceção, aumenta muito a dificuldade de depuração.
 
- Quando uma exceção é gerada em uma cláusula `finally` ou Fault, a nova exceção oculta a exceção ativa, se presente. Isso torna o erro original difícil de detectar e depurar.
+ Quando uma exceção é gerada em uma `finally` cláusula ou falha, a nova exceção oculta a exceção ativa, se presente. Isso torna o erro original difícil de detectar e depurar.
 
  Quando uma exceção é gerada em uma cláusula de filtro, o tempo de execução captura silenciosamente a exceção e faz com que o filtro seja avaliado como falso. Não há como dizer a diferença entre o filtro avaliando como falso e uma exceção sendo emitida de um filtro. Isso torna difícil detectar e depurar erros na lógica do filtro.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir essa violação dessa regra, não gere explicitamente uma exceção de uma cláusula `finally`, Filter ou Fault.
+ Para corrigir essa violação dessa regra, não gere explicitamente uma exceção de uma `finally` cláusula, filtro ou falha.
 
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
  Não suprimir um aviso para esta regra. Não há cenários sob os quais uma exceção gerada em uma cláusula de exceção fornece um benefício para o código em execução.
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1065: não acionar exceções em locais inesperados](../code-quality/ca1065-do-not-raise-exceptions-in-unexpected-locations.md)
+ [CA1065: Não acionar exceções em locais inesperados](../code-quality/ca1065-do-not-raise-exceptions-in-unexpected-locations.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Avisos de design](../code-quality/design-warnings.md)

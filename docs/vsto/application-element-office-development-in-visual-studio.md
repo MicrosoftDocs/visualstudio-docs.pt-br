@@ -1,8 +1,8 @@
 ---
-title: '&lt;aplicativo&gt; elemento (desenvolvimento do Office no Visual Studio)'
+title: '&lt;&gt;elemento Application (desenvolvimento do Office no Visual Studio)'
 titleSuffix: ''
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -13,17 +13,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 80652f6752b87cf0413b0b3166b0cf3292231c25
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3540df77b4498376dcde389730e17e7506647fb8
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62942891"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543735"
 ---
-# <a name="ltapplicationgt-element-office-development-in-visual-studio"></a>&lt;aplicativo&gt; elemento (desenvolvimento do Office no Visual Studio)
-  O `application` elemento o `vstav3` namespace encapsula a descrição das soluções do Office. Os elementos filho são diferentes para personalizações no nível de documento e suplementos do VSTO.
+# <a name="ltapplicationgt-element-office-development-in-visual-studio"></a>&lt;&gt;elemento Application (desenvolvimento do Office no Visual Studio)
+  O `application` elemento do `vstav3` namespace encapsula a descrição das soluções do Office. Os elementos filho são diferentes para as personalizações em nível de documento e os suplementos do VSTO.
 
-## <a name="syntax-for-document-level-customizations"></a>Sintaxe para personalizações no nível do documento
+## <a name="syntax-for-document-level-customizations"></a>Sintaxe para personalizações em nível de documento
 
 ```xml
 <application>
@@ -54,19 +54,19 @@ ms.locfileid: "62942891"
 ```
 
 ## <a name="elements-and-attributes"></a>Elementos e atributos
- O `application` elemento do `vstav3` namespace é o nó que encapsula todas as informações de personalização específicos que estão contidas no `vstov4` namespace.
+ O `application` elemento do `vstav3` namespace é o nó que encapsula todas as informações específicas de personalização contidas no `vstov4` namespace.
 
  O `application` elemento não tem atributos.
 
- O `application` elemento tem o seguinte elemento.
+ O `application` elemento tem o elemento a seguir.
 
 ### <a name="customization"></a>Personalização
- A função do `customization` elemento na `vstov3` namespace está definido no [ &#60;personalização&#62; elemento &#40;desenvolvimento do Office no Visual Studio&#41;](../vsto/customization-element-office-development-in-visual-studio.md).
+ A função do `customization` elemento no `vstov3` namespace é definida em [&#60;elemento&#62; de personalização &#40;desenvolvimento do Office no Visual Studio&#41;](../vsto/customization-element-office-development-in-visual-studio.md).
 
-## <a name="document-level-customization-example"></a>Exemplo de personalização no nível de documento
+## <a name="document-level-customization-example"></a>Exemplo de personalização no nível do documento
 
 ### <a name="description"></a>Descrição
- O exemplo de código a seguir ilustra uma `application` elemento em uma solução do Office em nível de documento implantado usando [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Este exemplo de código é parte de um exemplo maior fornecido no [manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).
+ O exemplo de código a seguir ilustra um `application` elemento em uma solução do Office de nível de documento implantada usando [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Este exemplo de código faz parte de um exemplo maior fornecido em [manifestos do aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Código
 
@@ -85,7 +85,7 @@ ms.locfileid: "62942891"
 ## <a name="vsto-add-in-example"></a>Exemplo de suplemento do VSTO
 
 ### <a name="description"></a>Descrição
- O exemplo de código a seguir ilustra uma `application` elemento em uma solução do Office de nível de aplicativo implantado usando [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Este exemplo de código é parte de um exemplo maior fornecido no [manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).
+ O exemplo de código a seguir ilustra um `application` elemento em uma solução do Office de nível de aplicativo implantada usando [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Este exemplo de código faz parte de um exemplo maior fornecido em [manifestos do aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Código
 
@@ -119,8 +119,8 @@ ms.locfileid: "62942891"
 </vstav3:application>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md)
+- [Manifestos do aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md)
 - [Manifestos de implantação para soluções do Office](../vsto/deployment-manifests-for-office-solutions.md)
 - [Manifesto do aplicativo ClickOnce](../deployment/clickonce-application-manifest.md)

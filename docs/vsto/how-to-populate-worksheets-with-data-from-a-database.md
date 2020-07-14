@@ -1,7 +1,7 @@
 ---
 title: 'Como: preencher planilhas com dados de um banco de dado'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0a1e01f5c9fc1372cda4d7d31f8ba56b90e166e7
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 1b594014b2564b5730c1895a007294ee66e07637
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985854"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520114"
 ---
 # <a name="how-to-populate-worksheets-with-data-from-a-database"></a>Como: preencher planilhas com dados de um banco de dado
 
@@ -41,9 +41,9 @@ O exemplo a seguir mostra como adicionar controles vinculados a dados em projeto
 
 Um dos seguintes controles é criado na planilha:
 
-- Se você arrastar um campo, um controle de <xref:Microsoft.Office.Tools.Excel.NamedRange> será criado na planilha. Para obter mais informações, consulte [controle NamedRange](../vsto/namedrange-control.md).
+- Se você arrastar um campo, um <xref:Microsoft.Office.Tools.Excel.NamedRange> controle será criado na planilha. Para obter mais informações, consulte [controle NamedRange](../vsto/namedrange-control.md).
 
-- Se você arrastar uma tabela, um controle de <xref:Microsoft.Office.Tools.Excel.ListObject> será criado na planilha. Para obter mais informações, consulte o [controle ListObject](../vsto/listobject-control.md).
+- Se você arrastar uma tabela, um <xref:Microsoft.Office.Tools.Excel.ListObject> controle será criado na planilha. Para obter mais informações, consulte o [controle ListObject](../vsto/listobject-control.md).
 
 Você pode adicionar um controle diferente selecionando a tabela ou o campo na janela **fontes de dados** e escolhendo um controle diferente na lista suspensa.
 
@@ -63,15 +63,15 @@ Quando você executa o projeto, o controle exibe o primeiro registro na fonte de
 
 ### <a name="to-scroll-through-the-records"></a>Para percorrer os registros
 
-- Use <xref:System.Windows.Forms.BindingSource> métodos como <xref:System.Windows.Forms.BindingSource.MoveNext%2A> e <xref:System.Windows.Forms.BindingSource.MovePrevious%2A>.
+- Use <xref:System.Windows.Forms.BindingSource> métodos como <xref:System.Windows.Forms.BindingSource.MoveNext%2A> e <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> .
 
 Para obter informações sobre como enviar atualizações para o dataset tipado e o banco de [dados, consulte How to: Update a data source with data of a host Control](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Associar dados a controles em soluções do Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Adicionar novas fontes de dados](../data-tools/add-new-data-sources.md)
-- [Associando controles do Windows Forms a dados no Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
+- [Associar controles do Windows Forms a dados no Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
 - [Como: popular documentos com dados de objetos](../vsto/how-to-populate-documents-with-data-from-objects.md)
 - [Como: popular documentos com dados de um banco de dado](../vsto/how-to-populate-documents-with-data-from-a-database.md)
 - [Como: popular documentos com dados de serviços](../vsto/how-to-populate-documents-with-data-from-services.md)

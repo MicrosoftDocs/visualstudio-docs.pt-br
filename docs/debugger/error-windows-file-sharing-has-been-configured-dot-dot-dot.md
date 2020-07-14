@@ -1,7 +1,7 @@
 ---
-title: 'Erro: Compartilhamento de arquivos do Windows foi configurado... | Microsoft Docs'
+title: Erro-o compartilhamento de arquivos do Windows foi configurado... | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.remote_credentials_prohibited
 dev_langs:
@@ -14,14 +14,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 89224dc5394f248ea82d428731ef387cb705ff27
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: af92ff07958656d350f30fb6b7f8f2a2ea5898f1
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850053"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460046"
 ---
-# <a name="error-windows-file-sharing-has-been-configured"></a>Erro: O compartilhamento de arquivos do Windows foi configurado...
+# <a name="error-windows-file-sharing-has-been-configured"></a>Erro: o compartilhamento de arquivos do Windows foi configurado...
 O compartilhamento de arquivos do Windows foi configurado de forma que você se conectará ao computador remoto usando um nome do usuário diferente. Isso é incompatível com a depuração remota
 
  A configuração de compartilhamento de arquivos atual está configurada para conectar ao computador remoto usando um nome do usuário diferente. A depuração remota não é possível nesse cenário.
@@ -34,7 +34,7 @@ O compartilhamento de arquivos do Windows foi configurado de forma que você se 
 
 1. Faça logon em seu computador local, o computador do qual você está depurando, usando o outro nome da conta.
 
-     —ou—
+     — ou —
 
      . Desconecte-se do computador remoto e reconfigure o compartilhamento de arquivos para se conectar ao outro computador usando seu nome de conta:
 

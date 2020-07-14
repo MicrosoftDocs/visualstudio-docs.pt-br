@@ -1,7 +1,7 @@
 ---
-title: Executar programaticamente as ações se a mensagem de email é recebida
+title: Executar ações programaticamente se a mensagem de email for recebida
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +15,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a0787db2f7055bc65871227b9fcf8cbbb60ec1d8
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 75278a52fb989e5142e5981dab604bf3da49bd99
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402194"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537859"
 ---
-# <a name="how-to-programmatically-perform-actions-when-an-email-message-is-received"></a>Como: Executar ações programaticamente quando uma mensagem de email é recebida
+# <a name="how-to-programmatically-perform-actions-when-an-email-message-is-received"></a>Como executar programaticamente ações quando uma mensagem de email é recebida
   Este exemplo executa ações personalizadas quando o usuário recebe uma mensagem de email.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "66402194"
  [!code-vb[Trin_Outlook_RL_PerformActions#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_RL_PerformActions/thisaddin.vb#1)]
  [!code-csharp[Trin_Outlook_RL_PerformActions#1](../vsto/codesnippet/CSharp/Trin_Outlook_RL_PerformActions/thisaddin.cs#1)]
 
-## <a name="see-also"></a>Consulte também
-- [Como: Criar manipuladores de eventos em projetos do Office](../vsto/how-to-create-event-handlers-in-office-projects.md)
+## <a name="see-also"></a>Confira também
+- [Como: criar manipuladores de eventos em projetos do Office](../vsto/how-to-create-event-handlers-in-office-projects.md)
 - [Trabalhar com itens de email](../vsto/working-with-mail-items.md)
-- [Introdução à programação VSTO Add-ins](../vsto/getting-started-programming-vsto-add-ins.md)
+- [Introdução à programação de suplementos do VSTO](../vsto/getting-started-programming-vsto-add-ins.md)

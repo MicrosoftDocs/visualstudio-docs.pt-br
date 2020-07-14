@@ -15,19 +15,19 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 32339852d67d4f3f28fedd204a056440ad49e075
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7f273ea5f58babf7a0c04f6b0758732d43aab7db
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665963"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547765"
 ---
-# <a name="ca2107-review-deny-and-permit-only-usage"></a>CA2107: revisar uso de deny e permit only
+# <a name="ca2107-review-deny-and-permit-only-usage"></a>CA2107: Examinar uso de deny e permit only
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|ReviewDenyAndPermitOnlyUsage|
+|TypeName|ReviewDenyAndPermitOnlyUsage|
 |CheckId|CA2107|
 |Categoria|Microsoft.Security|
 |Alteração Significativa|Quebra|
@@ -36,7 +36,7 @@ ms.locfileid: "72665963"
  Um método contém uma verificação de segurança que especifica a ação de segurança PermitOnly ou Deny.
 
 ## <a name="rule-description"></a>Descrição da Regra
- O [uso do método PermitOnly e das](https://msdn.microsoft.com/8c7bdb7f-882f-45b7-908c-6cbaa1767649) ações de segurança <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName> deve ser usado somente por aqueles que têm um conhecimento avançado de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] segurança. O código que usa essas ações de segurança deve passar por uma revisão de segurança.
+ O [uso do método PermitOnly e das](https://msdn.microsoft.com/8c7bdb7f-882f-45b7-908c-6cbaa1767649) <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName> ações de segurança deve ser usado somente por aqueles que têm um conhecimento avançado de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] segurança. O código que usa essas ações de segurança deve passar por uma revisão de segurança.
 
  Deny altera o comportamento padrão da movimentação de pilha que ocorre em resposta a uma demanda de segurança. Ele permite que você especifique permissões que não devem ser concedidas durante o método de negação, independentemente das permissões reais dos chamadores na pilha de chamadas. Se a movimentação da pilha detectar um método protegido por Deny e se a permissão solicitada estiver incluída nas permissões negadas, a movimentação da pilha falhará. PermitOnly também altera o comportamento padrão da movimentação da pilha. Ele permite que o código especifique somente as permissões que podem ser concedidas, independentemente das permissões dos chamadores. Se a movimentação da pilha detectar um método protegido por PermitOnly e se a permissão solicitada não estiver incluída nas permissões especificadas pelo PermitOnly, a movimentação da pilha falhará.
 
@@ -73,10 +73,10 @@ ms.locfileid: "72665963"
  Este exemplo gerencia a seguinte saída.
 
  **Demanda: a negação do chamador não tem nenhum efeito sob demanda com a permissão declarada.** 
-**LinkDemand: o Deny do chamador não tem nenhum efeito em LinkDemand com a permissão declarada.** 
-**LinkDemand: o Deny do chamador não tem nenhum efeito com código protegido por LinkDemand.** 
-**LinkDemand: essa negação não tem efeito com Código protegido por LinkDemand.**
-## <a name="see-also"></a>Consulte também
+ **LinkDemand: Deny do chamador não tem efeito em LinkDemand com a permissão declarada.** 
+ **LinkDemand: Deny do chamador não tem efeito com código protegido por LinkDemand.** 
+ **LinkDemand: essa negação não tem efeito com código protegido por LinkDemand.**
+## <a name="see-also"></a>Consulte Também
  <xref:System.Security.CodeAccessPermission.PermitOnly%2A?displayProperty=fullName> <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>
  <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName>
  <xref:System.Security.IStackWalk.PermitOnly%2A?displayProperty=fullName>

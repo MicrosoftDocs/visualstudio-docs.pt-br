@@ -1,19 +1,19 @@
 ---
 title: Examinar nós usando a exibição de modelo de conteúdo no designer de esquema XML
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c42ddac8-b0e3-48d6-9832-112a19d6c104
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5a7e6e311a4fbd02973edf94c6eb117f69d6cea
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 81bf6294aeac9a23168bf9cf9aaec26efbfc6c1f
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815975"
 ---
 # <a name="how-to-examine-the-content-model-of-nodes-using-the-content-model-view"></a>Como examinar o modelo de conteúdo de nós usando a exibição do modelo de conteúdo
 
@@ -27,9 +27,9 @@ Este tópico descreve como explorar seus nós usando a [exibição de modelo de 
 
 3. Copie o código de exemplo do esquema XML do [esquema XML de exemplo: ordem de compra esquema](../xml-tools/sample-xsd-file-purchase-order-schema.md) e cole-o para substituir o código que foi adicionado ao novo arquivo XSD por padrão.
 
-4. Selecione o elemento `purchaseOrder` no Gerenciador de esquema clicando com o botão direito do mouse no elemento `purchaseOrder` no editor de XML e selecionando **Mostrar no Gerenciador de XML**.
+4. Selecione o `purchaseOrder` elemento no Gerenciador de esquema clicando com o botão direito do mouse no `purchaseOrder` elemento no editor de XML e selecionando **Mostrar no Gerenciador de XML**.
 
-5. Clique com o botão direito do mouse na `purchaseOrder` no Gerenciador de XML e selecione **Mostrar na exibição de modelo de conteúdo**.
+5. Clique com o botão direito do mouse no `purchaseOrder` no Gerenciador de XML e selecione **Mostrar no modo de exibição de modelo de conteúdo**.
 
      A exibição do modelo de conteúdo exibe o elemento de `purchaseOrder` na superfície de design.
 
@@ -41,4 +41,4 @@ Este tópico descreve como explorar seus nós usando a [exibição de modelo de 
 
 8. Clique no botão **Mostrar documentação** na barra de ferramentas XSD para alternar a documentação. Você também pode clicar com o botão direito do mouse na superfície de design para ativar /desativar a documentação.
 
-9. Clique com o botão direito do mouse no nó `purchaseOrder` e selecione **gerar XML de exemplo** para ver o documento de instância XML.
+9. Clique com o botão direito do mouse no `purchaseOrder` nó e selecione **gerar XML de exemplo** para ver o documento de instância XML.

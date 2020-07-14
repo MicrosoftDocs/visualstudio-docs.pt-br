@@ -1,7 +1,7 @@
 ---
 title: Criar fluxo de trabalho com formulários de associação e de inicialização
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,12 +17,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7946e48502ea4fd8e9e9382a20de3c8ce25987b3
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 6f257dfed2fe439c5ab22ab9951b6258116c6567
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984687"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017128"
 ---
 # <a name="walkthrough-create-a-workflow-with-association-and-initiation-forms"></a>Walkthrough: criar um fluxo de trabalho com formulários de associação e de inicialização
   Este tutorial demonstra como criar um fluxo de trabalho seqüencial básico que incorpora o uso de associação e formulários de inicialização. Esses são formulários ASPX que permitem que os parâmetros sejam adicionados a um fluxo de trabalho quando ele é associado pela primeira vez pelo administrador do SharePoint (o formulário de associação) e quando o fluxo de trabalho é iniciado pelo usuário (o formulário de inicialização).
@@ -35,9 +34,9 @@ ms.locfileid: "72984687"
 
 - Se o total de um relatório de despesas do funcionário exceder o limite predefinido do administrador, uma tarefa será criada para o gerente do funcionário aprovar o relatório de despesas. No entanto, se o total do relatório de despesas de um funcionário for menor ou igual ao limite de despesas, uma mensagem aprovada automaticamente será gravada na lista de histórico do fluxo de trabalho.
 
-  Esta explicação passo a passo ilustra as seguintes tarefas:
+  Este passo a passo ilustra as seguintes tarefas:
 
-- Criando um projeto de fluxo de trabalho Sequencial de definição de lista do SharePoint no [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+- Criando um projeto de fluxo de trabalho Sequencial de definição de lista do SharePoint no [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 - Criando um agendamento de fluxo de trabalho.
 
@@ -52,23 +51,23 @@ ms.locfileid: "72984687"
 > [!NOTE]
 > Embora este passo a passos use um projeto de fluxo de trabalho Sequencial, o processo é o mesmo para fluxos de trabalho de máquina de estado.
 >
-> Além disso, o computador pode mostrar diferentes nomes ou locais para alguns dos elementos da interface do usuário [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] nas instruções a seguir. A edição do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] que você tem e as configurações que você usa determinam esses elementos. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
+> Além disso, o computador pode mostrar diferentes nomes ou locais para alguns dos [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] elementos da interface do usuário nas instruções a seguir. A [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] edição que você tem e as configurações que você usa determinam esses elementos. Para obter mais informações, consulte [Personalizar o IDE do Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Prerequisites
- Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
+## <a name="prerequisites"></a>Pré-requisitos
+ Você precisará dos seguintes componentes para concluir este passo a passo:
 
-- Edições com suporte do [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] e do SharePoint.
+- Edições com suporte do [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] e SharePoint.
 
 - Visual Studio.
 
 ## <a name="create-a-sharepoint-sequential-workflow-project"></a>Criar um projeto de fluxo de trabalho Sequencial do SharePoint
- Primeiro, crie um projeto de fluxo de trabalho Sequencial no [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Um fluxo de trabalho Sequencial é uma série de etapas executadas em ordem até que a última atividade seja concluída. Neste procedimento, você criará um fluxo de trabalho Sequencial que se aplica à lista de documentos compartilhados no SharePoint. O assistente do fluxo de trabalho permite associar o fluxo de trabalho ao site ou à definição de lista e permite que você determine quando o fluxo de trabalho será iniciado.
+ Primeiro, crie um projeto de fluxo de trabalho Sequencial no [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Um fluxo de trabalho Sequencial é uma série de etapas executadas em ordem até que a última atividade seja concluída. Neste procedimento, você criará um fluxo de trabalho Sequencial que se aplica à lista de documentos compartilhados no SharePoint. O assistente do fluxo de trabalho permite associar o fluxo de trabalho ao site ou à definição de lista e permite que você determine quando o fluxo de trabalho será iniciado.
 
 #### <a name="to-create-a-sharepoint-sequential-workflow-project"></a>Para criar um projeto de fluxo de trabalho Sequencial do SharePoint
 
-1. Na barra de menus, escolha **arquivo**  > **novo** **projeto** de  >  para exibir a caixa de diálogo **novo projeto** .
+1. Na barra de menus, escolha **arquivo**  >  **novo**  >  **projeto** para exibir a caixa de diálogo **novo projeto** .
 
-2. Expanda o nó do **SharePoint** sob o  **C# Visual** ou **Visual Basic**e escolha o nó **2010** .
+2. Expanda o nó **do SharePoint** sob o **Visual C#** ou **Visual Basic**e escolha o nó **2010** .
 
 3. No painel **modelos** , escolha o modelo projeto de **projeto do SharePoint 2010** .
 
@@ -82,21 +81,21 @@ ms.locfileid: "72984687"
 
 6. Em **Gerenciador de soluções**, escolha o nó do projeto.
 
-7. Na barra de menus, escolha **Projeto** > **Adicionar Novo Item**.
+7. Na barra de menus, escolha **projeto**  >  **Adicionar novo item**.
 
-8. Em **Visual C#**  ou **Visual Basic**, expanda o nó do **SharePoint** e escolha o nó **2010** .
+8. Em **Visual C#** ou **Visual Basic**, expanda o nó do **SharePoint** e escolha o nó **2010** .
 
 9. No painel **modelos** , escolha o modelo **fluxo de trabalho Sequencial (somente solução de farm)** e, em seguida, escolha o botão **Adicionar** .
 
      O **Assistente para personalização do SharePoint** é exibido.
 
-10. Na página **especificar o nome do fluxo de trabalho para depuração** , aceite o nome padrão (**ExpenseReport-Workflow1**). Mantenha o valor do tipo de modelo de fluxo de trabalho padrão (**listar fluxo de trabalho)** . Escolha o botão **Avançar**.
+10. Na página **especificar o nome do fluxo de trabalho para depuração** , aceite o nome padrão (**ExpenseReport-Workflow1**). Mantenha o valor do tipo de modelo de fluxo de trabalho padrão (**listar fluxo de trabalho)**. Escolha o botão **Avançar**.
 
 11. Na página **você gostaria que o Visual Studio associasse automaticamente o fluxo de trabalho em uma sessão de depuração?** , desmarque a caixa que associará automaticamente seu modelo de fluxo de trabalho, caso ele esteja marcado.
 
      Esta etapa permite que você associe manualmente o fluxo de trabalho com a lista de documentos compartilhados posteriormente, que exibe o formulário associação.
 
-12. Escolha o botão **concluir** .
+12. Escolha o botão **Concluir**.
 
 ## <a name="add-an-association-form-to-the-workflow"></a>Adicionar um formulário de associação ao fluxo de trabalho
  Em seguida, crie um. Formulário de associação ASPX que aparece quando o administrador do SharePoint primeiro associa o fluxo de trabalho a um documento de relatório de despesas.
@@ -105,9 +104,9 @@ ms.locfileid: "72984687"
 
 1. Escolha o nó **Workflow1** em **Gerenciador de soluções**.
 
-2. Na barra de menus, escolha **projeto** > **Adicionar novo item** para exibir a caixa de diálogo **Adicionar novo item** .
+2. Na barra de menus, escolha **projeto**  >  **Adicionar novo item** para exibir a caixa de diálogo **Adicionar novo item** .
 
-3. Na exibição de árvore da caixa de diálogo, expanda **Visual C#**  ou **Visual Basic** (dependendo da linguagem do seu projeto), expanda o nó do **SharePoint** e escolha o nó **2010** .
+3. Na exibição de árvore da caixa de diálogo, expanda **Visual C#** ou **Visual Basic** (dependendo da linguagem do seu projeto), expanda o nó do **SharePoint** e escolha o nó **2010** .
 
 4. Na lista de modelos, escolha o modelo de **formulário Associação de fluxo de trabalho** .
 
@@ -120,7 +119,7 @@ ms.locfileid: "72984687"
 
 #### <a name="to-design-and-code-the-association-form"></a>Para criar e codificar o formulário de associação
 
-1. No formulário associação (ExpenseReportAssocForm. aspx), localize o elemento `asp:Content` que tem `ID="Main"`.
+1. No formulário associação (ExpenseReportAssocForm. aspx), localize o `asp:Content` elemento que tem `ID="Main"` .
 
 2. Diretamente após a primeira linha nesse elemento de conteúdo, adicione o seguinte código para criar um rótulo e uma caixa de texto que solicite o limite de aprovação de despesas (*AutoApproveLimit*):
 
@@ -134,11 +133,11 @@ ms.locfileid: "72984687"
 3. Expanda o arquivo **ExpenseReportAssocForm. aspx** em **Gerenciador de soluções** para exibir seus arquivos dependentes.
 
     > [!NOTE]
-    > Se o seu projeto estiver em [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)], você deverá escolher o botão **Exibir todos os arquivos** para executar essa etapa.
+    > Se o seu projeto estiver no [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] , você deverá escolher o botão **Exibir todos os arquivos** para executar essa etapa.
 
 4. Abra o menu de atalho para o arquivo ExpenseReportAssocForm. aspx e escolha **Exibir código**.
 
-5. Substitua o método `GetAssociationData` por:
+5. Substitua o `GetAssociationData` método por:
 
     ```vb
     Private Function GetAssociationData() As String
@@ -166,9 +165,9 @@ ms.locfileid: "72984687"
 
 1. Escolha o nó **Workflow1** em **Gerenciador de soluções**.
 
-2. Na barra de menus, escolha **projeto** > **Adicionar novo item** exibir a caixa de diálogo **Adicionar novo item** .
+2. Na barra de menus, escolha **projeto**  >  **Adicionar novo item** exibir a caixa de diálogo **Adicionar novo item** .
 
-3. Na exibição de árvore da caixa de diálogo, expanda **Visual C#**  ou **Visual Basic** (dependendo da linguagem do seu projeto), expanda o nó do **SharePoint** e escolha o nó **2010** .
+3. Na exibição de árvore da caixa de diálogo, expanda **Visual C#** ou **Visual Basic** (dependendo da linguagem do seu projeto), expanda o nó do **SharePoint** e escolha o nó **2010** .
 
 4. Na lista de modelos, escolha o modelo **formulário de inicialização do fluxo de trabalho** .
 
@@ -181,7 +180,7 @@ ms.locfileid: "72984687"
 
 #### <a name="to-code-the-initiation-form"></a>Para codificar o formulário de inicialização
 
-1. No formulário de inicialização (ExpenseReportInitForm. aspx), localize o elemento `asp:Content` que contém `ID="Main"`.
+1. No formulário de inicialização (ExpenseReportInitForm. aspx), localize o `asp:Content` elemento que contém `ID="Main"` .
 
 2. Diretamente após a primeira linha nesse elemento de conteúdo, adicione o código a seguir para criar um rótulo e uma caixa de texto que exibe o limite de aprovação de despesa (*AutoApproveLimit*) que foi inserido no formulário de associação e outro rótulo e caixa de texto para solicitar o total de despesas (*ExpenseTotal*):
 
@@ -200,7 +199,7 @@ ms.locfileid: "72984687"
 
 4. Abra o menu de atalho para o arquivo ExpenseReportInitForm. aspx e escolha **Exibir código**.
 
-5. Substitua o método `Page_Load` pelo seguinte exemplo:
+5. Substitua o `Page_Load` método pelo exemplo a seguir:
 
     ```vb
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As
@@ -222,7 +221,7 @@ ms.locfileid: "72984687"
     }
     ```
 
-6. Substitua o método `GetInitiationData` pelo seguinte exemplo:
+6. Substitua o `GetInitiationData` método pelo exemplo a seguir:
 
     ```vb
     ' This method is called when the user clicks the button to start the workflow.
@@ -287,7 +286,7 @@ ms.locfileid: "72984687"
 
 14. Adicione essa atividade ao fluxo de trabalho executando uma das seguintes etapas:
 
-    - Abra o menu de atalho para a atividade **LogToHistoryListActivity** , escolha **copiar**, abra o menu de atalho para as outras **atividades soltar aqui** na área de **IfElseActivity1** no designer de fluxo de trabalho e escolha **colar** .
+    - Abra o menu de atalho para a atividade **LogToHistoryListActivity** , escolha **copiar**, abra o menu de atalho para as outras **atividades soltar aqui** na área de **IfElseActivity1** no designer de fluxo de trabalho e escolha **colar**.
 
     - Arraste a atividade **LogToHistoryListActivity** da **caixa de ferramentas**e solte-a em outras **atividades soltar aqui** na área de **IfElseActivity1**.
 
@@ -325,9 +324,9 @@ ms.locfileid: "72984687"
     ```
 
     > [!NOTE]
-    > No código, substitua `somedomain\\someuser` por um domínio e nome de usuário para o qual uma tarefa será criada, como "`Office\\JoeSch`". Para teste, é mais fácil usar a conta com a qual você está desenvolvendo.
+    > No código, substitua `somedomain\\someuser` por um domínio e nome de usuário para o qual uma tarefa será criada, como " `Office\\JoeSch` ". Para teste, é mais fácil usar a conta com a qual você está desenvolvendo.
 
-3. Abaixo do método `MethodInvoking`, adicione o seguinte exemplo:
+3. Abaixo do `MethodInvoking` método, adicione o seguinte exemplo:
 
     ```vb
     Private Sub checkApprovalNeeded(ByVal sender As Object, ByVal e As
@@ -361,9 +360,9 @@ ms.locfileid: "72984687"
 
 6. Expanda a propriedade **condição** escolhendo o sinal de adição (![TreeView Plus](../sharepoint/media/plus.gif "TreeView Plus")) ao lado dele e, em seguida, defina seu valor como *checkApprovalNeeded*.
 
-7. No designer de fluxo de trabalho, abra o menu de atalho para a atividade **logToHistoryListActivity1** e escolha **gerar manipuladores** para gerar um método vazio para o evento `MethodInvoking`.
+7. No designer de fluxo de trabalho, abra o menu de atalho da atividade **logToHistoryListActivity1** e escolha **gerar manipuladores** para gerar um método vazio para o `MethodInvoking` evento.
 
-8. Substitua o código de `MethodInvoking` pelo seguinte:
+8. Substitua o `MethodInvoking` código pelo seguinte:
 
     ```vb
     Private Sub logToHistoryListActivity1_MethodInvoking(ByVal sender As
@@ -438,7 +437,7 @@ ms.locfileid: "72984687"
 
 11. Insira um valor na página de inicialização que seja menor ou igual ao valor inserido na página associação (**1200**).
 
-     Quando isso ocorre, uma entrada na lista de histórico é criada em vez de uma tarefa. A entrada é exibida na seção **histórico do fluxo de trabalho** da página status do fluxo de trabalho. Observe a mensagem na coluna **resultado** do evento de histórico. Ele contém o texto inserido no evento `logToHistoryListActivity1.MethodInvoking` que inclui o valor que foi aprovado automaticamente.
+     Quando isso ocorre, uma entrada na lista de histórico é criada em vez de uma tarefa. A entrada é exibida na seção **histórico do fluxo de trabalho** da página status do fluxo de trabalho. Observe a mensagem na coluna **resultado** do evento de histórico. Ele contém o texto inserido no `logToHistoryListActivity1.MethodInvoking` evento que inclui o valor que foi aprovado automaticamente.
 
 ## <a name="next-steps"></a>Próximas etapas
  Você pode aprender mais sobre como criar modelos de fluxo de trabalho a partir destes tópicos:

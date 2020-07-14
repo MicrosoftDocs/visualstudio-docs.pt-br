@@ -1,18 +1,18 @@
 ---
 title: Testes de unidade direcionados a uma versão anterior do .NET Framework
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: 32380ddc802d1421f39d4920073fc277876cfef4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 670ec672c55d591496e26435db5a3112c345a44d
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596015"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288163"
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>Como configurar testes de unidade para usar uma versão anterior do .NET Framework como destino
 
@@ -24,7 +24,7 @@ Você pode criar projetos de teste de unidade que se destinam a versões especí
 
 - Você pode executar testes de unidade direcionados a uma versão específica do .NET Framework no Visual Studio no computador local.
 
-- Você pode executar testes unitários que visam uma versão específica do .NET Framework usando *MSTest.exe* a partir do prompt de comando.
+- Você pode executar testes de unidade direcionados a uma versão específica do .NET Framework usando *MSTest.exe* do prompt de comando.
 
 - Você pode executar testes de unidade em um agente de build como parte de um build.
 
@@ -64,7 +64,7 @@ As seguintes limitações se aplicam quando você redireciona projetos de teste 
 
 ## <a name="retargeting-for-c-unit-test-projects"></a>Redirecionando para projetos de teste de unidade do C#
 
-1. Crie um novo projeto de **projeto de teste de unidade** C#.
+1. Crie um novo projeto de **projeto de teste de unidade** em C#.
 
 2. No **Gerenciador de Soluções**, escolha **Propriedades** no menu aberto ao clicar com o botão direito do mouse do novo projeto de teste do C#.
 
@@ -83,9 +83,9 @@ As seguintes limitações se aplicam quando você redireciona projetos de teste 
 
 2. No **Gerenciador de Soluções**, escolha **Descarregar Projeto** do novo projeto de teste do C++.
 
-3. No **Gerenciador de Soluções**, escolha o projeto de teste descarregado do C++ e, em seguida, escolha **Editar \<nome do projeto>.vcxproj**.
+3. Em **Gerenciador de soluções**, escolha o projeto de teste do C++ descarregado e, em seguida, escolha **Editar \<project name> . vcxproj**.
 
-   O arquivo *.vcxproj* é aberto no editor.
+   O arquivo *. vcxproj* é aberto no editor.
 
 4. Defina o `TargetFrameworkVersion` para a versão 3.5 ou posterior no `PropertyGroup` rotulado `"Globals"`. Não especifique uma versão de cliente:
 
@@ -100,12 +100,12 @@ As seguintes limitações se aplicam quando você redireciona projetos de teste 
       </PropertyGroup>
     ```
 
-5. Salvar e fechar o arquivo *.vcxproj.*
+5. Salve e feche o arquivo *. vcxproj* .
 
 6. No **Gerenciador de Soluções**, escolha **Recarregar Projeto** no menu aberto ao clicar com o botão direito do mouse do novo projeto de teste do C++.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Criar soluções SharePoint](../sharepoint/create-sharepoint-solutions.md)
+- [Criar soluções do SharePoint](../sharepoint/create-sharepoint-solutions.md)
 - [Compilar e depurar soluções do SharePoint](../sharepoint/building-and-debugging-sharepoint-solutions.md)
-- [Caixa de diálogo de configurações de compilador avançado (Visual Basic)](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)
+- [Caixa de diálogo Configurações avançadas do compilador (Visual Basic)](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)

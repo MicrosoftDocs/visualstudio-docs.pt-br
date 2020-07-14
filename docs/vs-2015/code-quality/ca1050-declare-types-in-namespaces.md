@@ -15,19 +15,19 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: c56de70daeabd05215f68024339d5855686d529b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a0a4dcc53fac7dc9b7e189686a3b32e2fb4fd030
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653831"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539588"
 ---
-# <a name="ca1050-declare-types-in-namespaces"></a>CA1050: declarar tipos em namespaces
+# <a name="ca1050-declare-types-in-namespaces"></a>CA1050: Declarar tipos em namespaces
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|DeclareTypesInNamespaces|
+|TypeName|DeclareTypesInNamespaces|
 |CheckId|CA1050|
 |Categoria|Microsoft. Design|
 |Alteração Significativa|Quebra|
@@ -51,7 +51,7 @@ ms.locfileid: "72653831"
  [!code-vb[FxCop.Design.TypesLiveInNamespaces#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.TypesLiveInNamespaces/vb/FxCop.Design.TypesLiveInNamespaces.vb#1)]
 
 ## <a name="example"></a>Exemplo
- O aplicativo a seguir usa a biblioteca que foi definida anteriormente. Observe que o tipo declarado fora de um namespace é criado quando o nome `Test` não é qualificado por um namespace. Observe também que, para acessar o tipo `Test` em `Goodspace`, o nome do namespace é necessário.
+ O aplicativo a seguir usa a biblioteca que foi definida anteriormente. Observe que o tipo declarado fora de um namespace é criado quando o nome `Test` não é qualificado por um namespace. Observe também que, para acessar o `Test` tipo `Goodspace` , o nome do namespace é necessário.
 
  [!code-csharp[FxCop.Design.TestTypesLive#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.TestTypesLive/cs/FxCop.Design.TestTypesLive.cs#1)]
  [!code-vb[FxCop.Design.TestTypesLive#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.TestTypesLive/vb/FxCop.Design.TestTypesLive.vb#1)]

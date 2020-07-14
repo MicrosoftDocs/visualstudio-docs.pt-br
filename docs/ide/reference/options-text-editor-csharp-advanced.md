@@ -10,25 +10,25 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d0e04a011612cdebebd244fc061981b713b858a7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ff42473c6f56d69a56cfbd811f2687ba544c7c5e
+ms.sourcegitcommit: 4d932000a0f7e79c9475fe66c02fe9addcd7e47a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79431482"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86181060"
 ---
 # <a name="options-text-editor-c-advanced"></a>Opções, Editor de Texto, C#, Avançado
 
-Use a página de opções **Avançado** para modificar as configurações de formatação do editor, de refatoração de código e de comentários da documentação XML para C#. Para acessar esta página de opções, escolha **Opções de** > **ferramentas**e, em seguida, escolha Editor de >  **texto****C#** > **Avançado**.
+Use a página de opções **Avançado** para modificar as configurações de formatação do editor, de refatoração de código e de comentários da documentação XML para C#. Para acessar essa página de opções, escolha **ferramentas**  >  **Opções**e, em seguida, escolha **Editor de texto**  >  **C#**  >  **avançado**.
 
 > [!NOTE]
 > É possível que nem todas as opções estejam listadas aqui.
 
 ## <a name="analysis"></a>Análise
 
-- Análise de código ao vivo ou escopo de análise de antecedentes
+- Análise de código ao vivo ou escopo de análise em segundo plano
 
-   Configure o escopo de análise de fundo para código gerenciado. Para obter mais informações, [consulte Como: Configurar o escopo de análise de código ao vivo para código gerenciado](../../code-quality/configure-live-code-analysis-scope-managed-code.md).
+   Configure o escopo de análise em segundo plano para código gerenciado. Para obter mais informações, consulte [como: configurar o escopo de análise de código ao vivo para código gerenciado](../../code-quality/configure-live-code-analysis-scope-managed-code.md).
 
 ## <a name="using-directives"></a>Usando diretivas
 
@@ -87,7 +87,14 @@ Use a página de opções **Avançado** para modificar as configurações de for
    using System.Linq;
    ```
 
-- Sugerir usos para tipos em conjuntos de framework .NET
+::: moniker range=">=vs-2019"                                              
+- Sugerir o uso de tipos em assemblies de .NET Framework
+::: moniker-end
+                                         
+::: moniker range="vs-2017"                                                
+- Sugerir usos para tipos em assemblies de referência
+::: moniker-end                                                            
+
 - Sugerir usos para tipos em pacotes NuGet
 
    Quando essas opções estiverem selecionadas, uma [Ação Rápida](../quick-actions.md) estará disponível para instalar um pacote NuGet e para adicionar uma diretiva `using` para tipos não referenciados.
@@ -118,7 +125,7 @@ Use a página de opções **Avançado** para modificar as configurações de for
 
 ## <a name="block-structure-guides"></a>Guias de estrutura de bloco
 
-Selecione estas caixas de seleção para exibir**{}** linhas verticais pontilhadas entre os suportes encaracolados () em seu código. Isso permite que você veja facilmente blocos individuais de código para o seu nível de declaração e construções no nível do código.
+Marque essas caixas de seleção para exibir linhas verticais pontilhadas entre chaves ( **{}** ) em seu código. Isso permite que você veja facilmente blocos individuais de código para o seu nível de declaração e construções no nível do código.
 
 ## <a name="editor-help"></a>Ajuda do Editor
 
@@ -126,10 +133,10 @@ Selecione estas caixas de seleção para exibir**{}** linhas verticais pontilhad
 
    Quando selecionado, insere os elementos XML dos comentários da documentação XML depois que você digita a introdução de comentário `///`. Para obter mais informações sobre a documentação XML, confira [Comentários da documentação XML (Guia de Programação em C#)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Como inserir comentários XML para geração de documentação](../../ide/reference/generate-xml-documentation-comments.md)
-- [Comentários de documentação XML (Guia de Programação C#)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
+- [Comentários de documentação XML (guia de programação C#)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
 - [Documentar o código com comentários XML (guia do C#)](/dotnet/csharp/codedoc)
-- [Defina opções de editor específicas para o idioma](../../ide/reference/setting-language-specific-editor-options.md)
+- [Definir opções do editor específicas a um idioma](../../ide/reference/setting-language-specific-editor-options.md)
 - [C# IntelliSense](../../ide/visual-csharp-intellisense.md)

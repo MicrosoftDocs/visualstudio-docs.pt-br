@@ -1,7 +1,7 @@
 ---
 title: Exibir dados relacionados em aplicativos WPF
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - data [WPF], displaying
 - WPF, data binding in Visual Studio
@@ -16,16 +16,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6ab1301e421f8326cf4cdda97556ecb19e394c29
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6694d3c1521a6a405323edc33adc44dac0e66829
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586673"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282547"
 ---
 # <a name="display-related-data-in-wpf-applications"></a>Exibir dados relacionados em aplicativos WPF
 
-Em alguns aplicativos, talvez você queira trabalhar com dados provenientes de várias tabelas ou entidades relacionadas entre si em uma relação pai-filho. Por exemplo, talvez você queira exibir uma grade que exibe os clientes de uma tabela `Customers`. Quando o usuário seleciona um cliente específico, outra grade exibe os pedidos desse cliente de uma tabela de `Orders` relacionada.
+Em alguns aplicativos, talvez você queira trabalhar com dados provenientes de várias tabelas ou entidades relacionadas entre si em uma relação pai-filho. Por exemplo, talvez você queira exibir uma grade que exibe os clientes de uma `Customers` tabela. Quando o usuário seleciona um cliente específico, outra grade exibe os pedidos desse cliente de uma tabela relacionada `Orders` .
 
 Você pode criar controles vinculados a dados que exibem dados relacionados arrastando itens da janela **fontes de dados** para o designer do WPF.
 
@@ -49,7 +49,7 @@ Você pode criar controles vinculados a dados que exibem dados relacionados arra
 
 7. Arraste o nó filho (ou qualquer item individual no nó filho) da janela **fontes de dados** para um destino de soltura válido no designer.
 
-     O Visual Studio gera um XAML que cria novos controles vinculados a dados para cada um dos itens que você arrasta. O XAML também adiciona um novo <xref:System.Windows.Data.CollectionViewSource> para a tabela ou objeto filho aos recursos do destino de soltura. Essa nova <xref:System.Windows.Data.CollectionViewSource> está associada à propriedade da tabela ou objeto pai que você acabou de arrastar para o designer. Para algumas fontes de dados, o Visual Studio também gera código para carregar os dados na tabela ou no objeto filho.
+     O Visual Studio gera um XAML que cria novos controles vinculados a dados para cada um dos itens que você arrasta. O XAML também adiciona um novo <xref:System.Windows.Data.CollectionViewSource> para a tabela ou objeto filho aos recursos do destino de soltura. Esse novo <xref:System.Windows.Data.CollectionViewSource> é associado à propriedade da tabela ou objeto pai que você acabou de arrastar para o designer. Para algumas fontes de dados, o Visual Studio também gera código para carregar os dados na tabela ou no objeto filho.
 
      A figura a seguir demonstra a tabela de **pedidos** relacionados da tabela **Customers** em um conjunto de dados na janela **Data Sources** .
 

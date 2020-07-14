@@ -5,15 +5,15 @@ ms.author: jillfra
 manager: jillfra
 monikerRange: vs-2017
 ms.date: 11/13/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: 416a3358f6fab1fa106f54a360fc156abc16c6dc
-ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
+ms.openlocfilehash: 8c0909259291bc5d2db2c4a9c8b87b1a0321d362
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80638635"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371710"
 ---
 # <a name="create-an-ai-project-from-existing-code"></a>Criar um projeto IA com base no código existente
 
@@ -36,11 +36,11 @@ Depois de [instalar as Ferramentas do Visual Studio para IA](installation.md), �
 
 4. Para definir um arquivo de inicialização, localize o arquivo no **Gerenciador de Soluções**, clique com o botão direito do mouse e selecione **Definir como Arquivo de Inicialização**.
 
-5. Execute o programa pressionando **Ctrl**+**F5** ou selecionando **Debug > Start Sem Depuração**.
+5. Execute o programa pressionando **Ctrl** + **F5** ou selecionando **debug > iniciar sem depuração**.
 
 > [!div class="nextstepaction"]
 > [Tutorial: trabalhando com o Python no Visual Studio](../python/tutorial-working-with-python-in-visual-studio-step-00-installation.md)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Identificar manualmente um ambiente de Python existente](../python/managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)

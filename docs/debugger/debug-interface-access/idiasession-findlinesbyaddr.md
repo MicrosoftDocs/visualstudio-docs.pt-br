@@ -1,7 +1,7 @@
 ---
 title: IDiaSession::findLinesByAddr | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 328589df0e662ca27db634017005344d44491275
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 24c6d927d129a8005bf2e43c6bb69d6523cb8790
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742116"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465667"
 ---
 # <a name="idiasessionfindlinesbyaddr"></a>IDiaSession::findLinesByAddr
 Recupera as linhas em um compiland especificado que contém um endereço especificado.
@@ -50,8 +50,8 @@ no Especifica o número de bytes de intervalo de endereços a serem abordados co
 
 fora Retorna um objeto [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) que contém uma lista de todos os números de linha que abrangem o intervalo de endereços especificado.
 
-## <a name="return-value"></a>Valor retornado
-Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo
 Este exemplo mostra uma função que obtém todos os números de linha contidos em uma função usando o endereço e o comprimento da função.
@@ -75,7 +75,7 @@ IDiaEnumLineNumbers* GetLineNumbersByAddr(IDiaSymbol *pFunc,
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSession::findLinesByVA](../../debugger/debug-interface-access/idiasession-findlinesbyva.md)

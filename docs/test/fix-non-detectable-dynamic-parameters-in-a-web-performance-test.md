@@ -1,7 +1,7 @@
 ---
 title: Corrigir parâmetros dinâmicos não detectáveis em um teste de desempenho Web
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - walkthroughs, load tests
 - load tests, walkthroughs
@@ -10,12 +10,12 @@ ms.assetid: 92dff25c-36ee-4135-acdd-315c4962fa11
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b4328c5b71fa7023ec9c2ab68ae6725f5855ada5
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 25df1c0d0d3165ba8afb068fc416a872af737a82
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589637"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288748"
 ---
 # <a name="fix-non-detectable-dynamic-parameters-in-a-web-performance-test"></a>Corrigir parâmetros dinâmicos não detectáveis em um teste de desempenho para Web
 
@@ -122,7 +122,7 @@ Para demonstrar um parâmetro dinâmico perceptível e um não perceptível, nó
 
      ![Definir a página inicial em Querystring.aspx](../test/media/web_test_dynamicparameter_setstartpage.png)
 
-15. Pressione **Ctrl**+**F5** para executar o aplicativo web no navegador. Copie a URL. Você precisará disso quando registrar seu teste.
+15. Pressione **Ctrl** + **F5** para executar o aplicativo Web no navegador. Copie a URL. Você precisará disso quando registrar seu teste.
 
 16. Tente ambos os links. Todos eles devem exibir a mensagem “Sucesso. Parâmetro querystring dinâmico encontrado."
 

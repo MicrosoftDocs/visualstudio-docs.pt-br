@@ -15,19 +15,19 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 78702298bab484a95bb8108150415ec0b31ede7d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ad467e880b3281a75db2627108af0e0b2f90ea99
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662905"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534453"
 ---
-# <a name="ca2214-do-not-call-overridable-methods-in-constructors"></a>CA2214: não chamar métodos substituíveis em construtores
+# <a name="ca2214-do-not-call-overridable-methods-in-constructors"></a>CA2214: Não chamar métodos substituíveis em construtores
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|DoNotCallOverridableMethodsInConstructors|
+|TypeName|DoNotCallOverridableMethodsInConstructors|
 |CheckId|CA2214|
 |Categoria|Microsoft. Usage|
 |Alteração Significativa|Sem interrupção|
@@ -45,7 +45,7 @@ ms.locfileid: "72662905"
  Não suprima um aviso nessa regra. O construtor deve ser reprojetado para eliminar a chamada para o método virtual.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir demonstra o efeito de violar essa regra. O aplicativo de teste cria uma instância de `DerivedType`, que faz com que seu construtor de classe base (`BadlyConstructedType`) seja executado. o construtor de `BadlyConstructedType` chama incorretamente o método virtual `DoSomething`. Como mostra a saída, `DerivedType.DoSomething()` é executado e faz isso antes que o construtor de `DerivedType` seja executado.
+ O exemplo a seguir demonstra o efeito de violar essa regra. O aplicativo de teste cria uma instância do `DerivedType` , que faz com que seu construtor de classe base ( `BadlyConstructedType` ) seja executado. `BadlyConstructedType`o construtor do chama incorretamente o método virtual `DoSomething` . Como a saída mostra, `DerivedType.DoSomething()` executa e faz isso antes `DerivedType` da execução do construtor.
 
  [!code-csharp[FxCop.Usage.CtorVirtual#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.CtorVirtual/cs/FxCop.Usage.CtorVirtual.cs#1)]
  [!code-vb[FxCop.Usage.CtorVirtual#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.CtorVirtual/vb/FxCop.Usage.CtorVirtual.vb#1)]
@@ -53,5 +53,5 @@ ms.locfileid: "72662905"
  Este exemplo gerencia a seguinte saída.
 
  **Chamando o construtor base.** 
-**algo derivado é chamado-Initialized? Nenhum** 
-**chamando o Construtor derivado.**
+ **Doitem derivado é chamado-Initialized? Nenhum** 
+ **Construtor derivado de chamada.**

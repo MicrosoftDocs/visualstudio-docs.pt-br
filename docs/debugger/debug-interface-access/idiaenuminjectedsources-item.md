@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumInjectedSources::Item | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 91be2f4f437cfeed30b0741d10bf719ba0ed2b71
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 76e89c89bca8b164645c71df6083b230850e61ca
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744512"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468269"
 ---
 # <a name="idiaenuminjectedsourcesitem"></a>IDiaEnumInjectedSources::Item
 Recupera uma fonte injetada por meio de um índice.
@@ -34,15 +34,15 @@ HRESULT Item ( 
 #### <a name="parameters"></a>Parâmetros
  índice
 
-no Índice do objeto [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) a ser recuperado. O índice é o intervalo de 0 a `count`-1, em que `count` é retornado pelo método [IDiaEnumInjectedSources:: get_Count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md) .
+no Índice do objeto [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) a ser recuperado. O índice é o intervalo de 0 a `count` -1, em que `count` é retornado pelo método [IDiaEnumInjectedSources:: get_Count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md) .
 
  injectedSource
 
 fora Retorna um objeto [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) que representa a fonte injetada.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

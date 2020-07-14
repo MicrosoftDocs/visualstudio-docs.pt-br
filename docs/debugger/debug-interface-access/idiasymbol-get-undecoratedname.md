@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_undecoratedName | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 533fc28da8cdd500234e07d2294a9d503476568e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: eeb6fa8a2ed90325c061e0e0633e991ebd318917
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739007"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461605"
 ---
 # <a name="idiasymbolget_undecoratedname"></a>IDiaSymbol::get_undecoratedName
-Recupera o nome não decorado para C++ um nome decorado ou de vinculação.
+Recupera o nome não decorado para um nome de C++ decorado ou de vinculação.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,13 +33,13 @@ HRESULT get_undecoratedName ( 
 #### <a name="parameters"></a>Parâmetros
  `pRetVal`
 
-fora Retorna o nome não decorado para C++ um nome decorado.
+fora Retorna o nome não decorado para um nome decorado em C++.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

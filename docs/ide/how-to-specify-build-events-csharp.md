@@ -2,7 +2,7 @@
 title: Como especificar eventos de build (C#)
 ms.date: 03/21/2019
 ms.technology: vs-ide-compile
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - pre-build events
 - events [Visual Studio], builds
@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 134a5b7cd4bb0ffc9c00a41df12ed196dd2a9212
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e1a3083b59ad0cec727f753395768a214ff571b7
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76115128"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283990"
 ---
 # <a name="how-to-specify-build-events-c"></a>Como especificar eventos de build (C#)
 
@@ -49,7 +49,7 @@ Quando um projeto é compilado, eventos de pré-build são adicionados a um arqu
 6. Na caixa **Executar o evento de pós-build**, especifique em que condições o evento pós-build deve ser executado.
 
    > [!NOTE]
-   > Para adicionar sintaxe longa ou selecionar quaisquer macros de compilação na caixa de diálogo de linha de diálogo de linha de diálogo de [evento pré-construção/pós-construção,](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)clique no botão elipse **(...**) para exibir uma caixa de edição.
+   > Para adicionar uma sintaxe demorada ou para selecionar qualquer macro de compilação na caixa de diálogo linha de comando do evento de [pré-compilação/pós-](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)compilação, clique no botão de reticências (**...**) para exibir uma caixa de edição.
 
    A sintaxe do evento de build pode incluir qualquer comando que seja válido em um prompt de comando ou em um arquivo *.bat*. O nome de um arquivo em lote deve ser precedido por `call` para garantir que todos os comandos posteriores sejam executados.
 
@@ -72,7 +72,7 @@ O procedimento a seguir mostra como definir a versão mínima do sistema operaci
 
 1. Crie um projeto de **Aplicativo de Console** para o comando. Dê ao projeto o nome **ChangeOSVersionCS**.
 
-2. Em *Program.cs,* adicione a seguinte `using` linha às outras diretivas na parte superior do arquivo:
+2. No *Program.cs*, adicione a seguinte linha às outras `using` diretivas na parte superior do arquivo:
 
    ```csharp
    using System.Xml;
@@ -174,9 +174,9 @@ Em seguida, invoque este comando em um evento de pós-build para modificar o man
    <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
    ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Página De Construir Eventos, Project Designer (C#)](../ide/reference/build-events-page-project-designer-csharp.md)
-- [Caixa de diálogo da linha de comando do evento de pré-build/evento de pós-build](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)
-- [Como: Especificar eventos de construção (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)
+- [Página de eventos de compilação, designer de projeto (C#)](../ide/reference/build-events-page-project-designer-csharp.md)
+- [Caixa de diálogo linha de comando de evento de pré-compilação/evento de pós-compilação](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)
+- [Como especificar eventos de compilação (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)
 - [Compilação e construção](../ide/compiling-and-building-in-visual-studio.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_baseType | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a3d1bb8b2f3095fd35488c47f823e7b3603995b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: aea1205abf5c7a4bf7e4fd6b035651cc7ad52be6
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740915"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464201"
 ---
 # <a name="idiasymbolget_basetype"></a>IDiaSymbol::get_baseType
 Recupera o tipo base deste símbolo<em>.</em>
@@ -35,11 +35,11 @@ HRESULT get_baseType (
 
 fora Retorna um valor da enumeração de [Enumeração BasicType](../../debugger/debug-interface-access/basictype.md) especificando o tipo base do símbolo.
 
-## <a name="return-value"></a>Valor retornado
-Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
-> Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
+> Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
 ## <a name="remarks"></a>Comentários
 O tipo básico para um símbolo pode ser determinado pela primeira vez que obter o tipo do símbolo e, em seguida, interrogar esse tipo retornado para o tipo base. Observe que alguns símbolos podem não ter um tipo base — por exemplo, um nome de estrutura.
@@ -66,7 +66,7 @@ if (pType->get_type( &pBaseType ) == S_OK)
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração BasicType](../../debugger/debug-interface-access/basictype.md)
 - [IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)

@@ -4,18 +4,18 @@ description: Depuração de um Serviço de Nuvem ou Máquina Virtual no Visual S
 author: mikejo5000
 manager: jillfra
 ms.assetid: 945e06e0-2100-41af-b218-72347367ddab
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: vs-azure
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
 ms.technology: vs-ide-debug
-ms.openlocfilehash: 2536a56f76a048cab6a3bf9a5ec026d22fe112a7
-ms.sourcegitcommit: 59a8732dc563242590f7c6ccf4ced6c6d195533c
+ms.openlocfilehash: 06344d536f0bb6db5f13329ece2c5202205bcefb
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81489734"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280707"
 ---
 # <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>Depurando um serviço de nuvem ou máquina virtual do Azure no Visual Studio
 
@@ -25,7 +25,7 @@ O Visual Studio oferece a você opções diferentes de depuração dos serviços
 
 Você pode economizar tempo e dinheiro usando o emulador de computação para depurar o serviço de nuvem em um computador local. Ao depurar um serviço localmente antes de implantá-lo, você pode aprimorar a confiabilidade e o desempenho sem pagar pelo tempo de computação. No entanto, alguns erros podem ocorrer somente quando você executa um serviço de nuvem no Azure em si. Você poderá depurar esses erros se habilitar a depuração remota quando publica o serviço e depois anexar o depurador a uma instância de função.
 
-O emulador simula o serviço de computação do Azure e o executa no ambiente local para que você possa testar e depurar o serviço de nuvem antes de implantá-lo. O emulador trata o ciclo de vida das instâncias de função e fornece acesso a recursos simulados, como armazenamento local. Quando você depura ou executa seu serviço no Visual Studio, ele inicia automaticamente o emulador como um aplicativo em segundo plano e, em seguida, implanta o serviço para o emulador. É possível usar o emulador para exibir o serviço quando ele é executado no ambiente local. Você pode executar a versão completa ou a versão expressa do emulador. (A partir do Azure 2.3, a versão expressa do emulador é o padrão.) Consulte [Usando o Emulator Express para executar e depurar um serviço de nuvem localmente](vs-azure-tools-emulator-express-debug-run.md).
+O emulador simula o serviço de computação do Azure e o executa no ambiente local para que você possa testar e depurar o serviço de nuvem antes de implantá-lo. O emulador trata o ciclo de vida das instâncias de função e fornece acesso a recursos simulados, como armazenamento local. Quando você depura ou executa seu serviço no Visual Studio, ele inicia automaticamente o emulador como um aplicativo em segundo plano e, em seguida, implanta o serviço para o emulador. É possível usar o emulador para exibir o serviço quando ele é executado no ambiente local. Você pode executar a versão completa ou a versão expressa do emulador. (A partir do Azure 2,3, a versão expressa do emulador é o padrão.) Consulte [usando o Emulator Express para executar e depurar um serviço de nuvem localmente](vs-azure-tools-emulator-express-debug-run.md).
 
 ### <a name="to-debug-your-cloud-service-on-your-local-computer"></a>Para depurar o serviço de nuvem no computador local
 
@@ -187,6 +187,6 @@ Os projetos ASP.NET do Visual Studio oferecem uma opção para criar uma máquin
 
 ## <a name="next-steps"></a>Próximas etapas
 
-* Use **o IntelliTrace** para coletar um registro de chamadas e eventos de um servidor de versão. Consulte [Depurando um serviço de nuvem publicado com o IntelliTrace e o Visual Studio](vs-azure-tools-IntelliTrace-debug-published-cloud-services.md).
+* Use o **IntelliTrace** para coletar um log de chamadas e eventos de um servidor de versão. Consulte [Depurando um serviço de nuvem publicado com o IntelliTrace e o Visual Studio](vs-azure-tools-IntelliTrace-debug-published-cloud-services.md).
 
 * Use o **Diagnóstico do Azure** para registrar em log informações detalhadas do código em execução nas funções, estejam elas em execução no ambiente de desenvolvimento ou no Azure. Consulte [Coletando dados de log usando o Diagnóstico do Azure](/azure/cloud-services/cloud-services-dotnet-diagnostics).

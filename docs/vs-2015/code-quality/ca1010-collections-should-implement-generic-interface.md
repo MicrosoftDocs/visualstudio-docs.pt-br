@@ -15,25 +15,25 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 20238a844b45221207ca952d90d172ac720136ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b141d755c717ad6650d2a49c98c2b26547066b7a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655246"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545516"
 ---
-# <a name="ca1010-collections-should-implement-generic-interface"></a>CA1010: as coleções devem implementar a interface genérica
+# <a name="ca1010-collections-should-implement-generic-interface"></a>CA1010: Coleções devem implementar uma interface genérica
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|CollectionsShouldImplementGenericInterface|
+|TypeName|CollectionsShouldImplementGenericInterface|
 |CheckId|CA1010|
 |Categoria|Microsoft. Design|
 |Alteração Significativa|Sem interrupção|
 
 ## <a name="cause"></a>Causa
- Um tipo visível externamente implementa a interface <xref:System.Collections.IEnumerable?displayProperty=fullName>, mas não implementa a interface <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> e o assembly que a contém tem como destino [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)]. Essa regra ignora os tipos que implementam <xref:System.Collections.IDictionary?displayProperty=fullName>.
+ Um tipo visível externamente implementa a <xref:System.Collections.IEnumerable?displayProperty=fullName> interface, mas não implementa a <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> interface e os destinos de assembly que a contêm [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] . Essa regra ignora os tipos que implementam <xref:System.Collections.IDictionary?displayProperty=fullName> .
 
 ## <a name="rule-description"></a>Descrição da Regra
  Para ampliar a usabilidade de uma coleção, implemente uma das interfaces da coleção genéricas. Em seguida, a coleção pode ser usada para preencher tipos de coleção genéricos, como o seguinte:
@@ -59,18 +59,18 @@ ms.locfileid: "72655246"
 ## <a name="example-violation"></a>Violação de exemplo
 
 ### <a name="description"></a>Descrição
- O exemplo a seguir mostra uma classe (tipo de referência) que deriva da classe não genérica `CollectionBase`, que viola essa regra.
+ O exemplo a seguir mostra uma classe (tipo de referência) que deriva da classe não genérica `CollectionBase` , que viola essa regra.
 
 ### <a name="code"></a>Código
  [!code-csharp[FxCop.Design.CollectionsGenericViolation#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.CollectionsGenericViolation/cs/FxCop.Design.CollectionsGenericViolation.cs#1)]
 
 ### <a name="comments"></a>Comentários
- Para corrigir uma violação dessa violação, você deve implementar as interfaces genéricas ou alterar a classe base para um tipo que já implemente as interfaces genéricas e não genéricas, como a classe `Collection<T>`.
+ Para corrigir uma violação dessa violação, você deve implementar as interfaces genéricas ou alterar a classe base para um tipo que já implemente as interfaces genéricas e não genéricas, como a `Collection<T>` classe.
 
 ## <a name="fix-by-base-class-change"></a>Correção por alteração de classe base
 
 ### <a name="description"></a>Descrição
- O exemplo a seguir corrige a violação alterando a classe base da coleção da classe de `CollectionBase` não genérica para a classe `Collection<T>` genérica (`Collection(Of T)` na [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]).
+ O exemplo a seguir corrige a violação alterando a classe base da coleção da classe não genérica `CollectionBase` para a `Collection<T>` classe genérica ( `Collection(Of T)` in [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ).
 
 ### <a name="code"></a>Código
  [!code-csharp[FxCop.Design.CollectionsGenericBase#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.CollectionsGenericBase/cs/FxCop.Design.CollectionsGenericBase.cs#1)]
@@ -81,25 +81,25 @@ ms.locfileid: "72655246"
 ## <a name="fix-by-interface-implementation"></a>Corrigir por implementação de interface
 
 ### <a name="description"></a>Descrição
- O exemplo a seguir corrige a violação implementando essas interfaces genéricas: `IEnumerable<T>`, `ICollection<T>` e `IList<T>` (`IEnumerable(Of T)`, `ICollection(Of T)` e `IList(Of T)` no [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]).
+ O exemplo a seguir corrige a violação implementando essas interfaces genéricas: `IEnumerable<T>` , `ICollection<T>` , e `IList<T>` ( `IEnumerable(Of T)` , `ICollection(Of T)` e `IList(Of T)` em [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ).
 
 ### <a name="code"></a>Código
  [!code-csharp[FxCop.Design.CollectionsGenericInterface#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.CollectionsGenericInterface/cs/FxCop.Design.CollectionsGenericInterface.cs#1)]
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1005: evitar parâmetros excessivos em tipos genéricos](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
+ [CA1005: Evitar parâmetros excessivos em tipos genéricos](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
 
- [CA1000: não declarar membros estáticos em tipos genéricos](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
+ [CA1000: Não declarar membros estáticos em tipos genéricos](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
 
- [CA1002: não expor listas genéricas](../code-quality/ca1002-do-not-expose-generic-lists.md)
+ [CA1002: Não expor listas genéricas](../code-quality/ca1002-do-not-expose-generic-lists.md)
 
- [CA1006: não aninhar tipos genéricos em assinaturas de membro](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
+ [CA1006: Não aninhar tipos genéricos em assinaturas de membro](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
 
- [CA1004: os métodos genéricos devem fornecer o parâmetro de tipo](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
+ [CA1004: Métodos genéricos devem fornecer um parâmetro de tipo](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
 
- [CA1003: usar instâncias do manipulador de eventos genéricos](../code-quality/ca1003-use-generic-event-handler-instances.md)
+ [CA1003: Usar instâncias do manipulador de eventos genérico](../code-quality/ca1003-use-generic-event-handler-instances.md)
 
- [CA1007: usar genéricos quando apropriado](../code-quality/ca1007-use-generics-where-appropriate.md)
+ [CA1007: Usar genéricos quando apropriado](../code-quality/ca1007-use-generics-where-appropriate.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Genéricos](https://msdn.microsoft.com/library/75ea8509-a4ea-4e7a-a2b3-cf72482e9282)

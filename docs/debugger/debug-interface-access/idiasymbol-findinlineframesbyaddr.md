@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::findInlineFramesByAddr | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 36a122e6-f27e-40cd-9784-cdaf279e1905
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 57cb155d5cfcb4f2b59c101388dcc4907e1b6d80
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3c45e99ecab38146f6ccba9fbaf176cdf5fddb67
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741179"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464481"
 ---
 # <a name="idiasymbolfindinlineframesbyaddr"></a>IDiaSymbol::findInlineFramesByAddr
 Recupera uma enumeração que permite que um cliente Itere em todos os quadros embutidos em um determinado endereço.
@@ -41,12 +41,12 @@ no Especifica o componente de deslocamento do endereço.
 
  `ppResult`
 
-fora Mantém um objeto `IDiaEnumSymbols` que contém a lista de quadros recuperados.
+fora Mantém um `IDiaEnumSymbols` objeto que contém a lista de quadros recuperados.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)

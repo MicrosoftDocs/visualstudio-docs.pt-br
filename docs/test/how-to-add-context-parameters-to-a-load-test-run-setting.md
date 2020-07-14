@@ -1,7 +1,7 @@
 ---
 title: Adicionar parâmetros de contexto a uma configuração de execução de teste de carga
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - load tests, run settings, context parameters
 - load tests, context parameters
@@ -9,16 +9,16 @@ ms.assetid: a8a0b97e-8040-4711-85ab-36548b130ed2
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 05efbba005a9455af3b9d2e8755b580a8af30d0a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 10a410b18391b3fbaee98f10be56cdc70c0f3562
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75584472"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288410"
 ---
 # <a name="how-to-add-context-parameters-to-a-load-test-run-setting"></a>Como adicionar parâmetros de contexto a uma configuração de execução de teste de carga
 
-Depois de criar seu teste de carga usando o **Novo Assistente de Teste de Carga,** você pode usar o Load Test **Editor** para alterar as propriedades de cenários para atender às suas necessidades e metas de teste.
+Depois de criar o teste de carga usando o **novo assistente de teste de carga**, você pode usar o **Editor de teste de carga** para alterar as propriedades de cenários para atender às suas necessidades e metas de teste.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -64,12 +64,12 @@ Além disso, atribuindo valores diferentes a um parâmetro de contexto usando o 
 
      Se a configuração de execução já contém uma pasta **Parâmetros de contexto**, você pode clicar com o botão direito do mouse nela e escolher **Adicionar parâmetro de contexto**.
 
-4. Na janela **Propriedades**, altere o valor de **Nome** conforme apropriado (por exemplo, WebServer1). Na janela **Propriedades,** altere **o valor** para o parâmetro `http://CorporateStagingWebServer`que deseja usar (por exemplo, ).
+4. Na janela **Propriedades**, altere o valor de **Nome** conforme apropriado (por exemplo, WebServer1). Na janela **Propriedades** , altere o **valor** para o parâmetro que você deseja usar (por exemplo, `http://CorporateStagingWebServer` ).
 
 5. (Opcional) Repita as etapas 3 a 5 e use uma cadeia de caracteres diferente para a propriedade **Valor** (por exemplo, `http://CorporateProductionWebServer`).
 
 6. Selecione as configurações de execução que quer que estejam ativas. Abra o menu de atalho nas configurações de execução e selecione **Definir como ativo**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Configure as configurações de execução do teste de carga](../test/configure-load-test-run-settings.md)
+- [Definir configurações de execução de teste de carga](../test/configure-load-test-run-settings.md)

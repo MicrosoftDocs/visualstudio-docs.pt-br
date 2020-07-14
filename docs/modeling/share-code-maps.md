@@ -1,18 +1,18 @@
 ---
 title: Exportar e salvar mapas de código
 ms.date: 05/16/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 57989de2cca3582b3193a7b55b81d1d444dcf1c1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ef7f72010623d20e79a327877a512f0b7352bac5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591925"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542565"
 ---
 # <a name="share-code-maps"></a>Compartilhar mapas de códigos
 
@@ -22,9 +22,9 @@ Você pode salvar mapas de código como parte de um projeto do Visual Studio, co
 
 Use o menu **arquivo** para salvar o mapa.
 
-- ou -
+-ou-
 
-Para salvar o mapa como parte do projeto específico, na barra de ferramentas do mapa, escolha **compartilhar** > **mover \<CodeMapName >. dgml para**e, em seguida, escolha o projeto no qual você deseja salvar o mapa.
+Para salvar o mapa como parte do projeto específico, na barra de ferramentas do mapa, escolha **compartilhar**  >  **mover \<CodeMapName> . dgml em**e, em seguida, escolha o projeto no qual você deseja salvar o mapa.
 
 ![Mover um mapa para outro projeto](../modeling/media/codemapsmovemapmenu.png)
 
@@ -43,7 +43,7 @@ O Visual Studio salva o mapa como um arquivo *. dgml* que você pode compartilha
 
 Ao exportar um mapa de código como uma imagem, você pode copiá-lo em outros aplicativos, como o Microsoft Word ou o PowerPoint.
 
-1. Na barra de ferramentas do mapa de códigos, escolha **compartilhar** > **email como imagem** ou **copiar imagem**.
+1. Na barra de ferramentas do mapa de códigos, escolha **compartilhar**  >  **email como imagem** ou **copiar imagem**.
 
 2. Cole a imagem em outro aplicativo.
 
@@ -51,12 +51,12 @@ Ao exportar um mapa de código como uma imagem, você pode copiá-lo em outros a
 
 Ao exportar um mapa de código como um arquivo XPS, você pode vê-lo em visualizadores XML ou XAML como o Internet Explorer.
 
-1. Na barra de ferramentas do mapa de códigos, escolha **compartilhar** > **email como XPS portátil** ou **salvar como XPS portátil**.
+1. Na barra de ferramentas do mapa de códigos, escolha **compartilhar**  >  **email como XPS portátil** ou **salvar como XPS portátil**.
 
 2. Navegue para onde você deseja salvar o arquivo.
 
-3. Nomeie o mapa de código. Verifique se a caixa **salvar como tipo** está definida como **arquivos XPS (\*. XPS)** . Selecione **Salvar**.
+3. Nomeie o mapa de código. Verifique se a caixa **salvar como tipo** está definida como **arquivos XPS ( \* . XPS)**. Selecione **Salvar**.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Mapear dependências com mapas de código](../modeling/map-dependencies-across-your-solutions.md)

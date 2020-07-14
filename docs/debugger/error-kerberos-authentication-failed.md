@@ -1,7 +1,7 @@
 ---
-title: 'Erro: falha na autenticação Kerberos | Microsoft Docs'
+title: Erro-falha na autenticação Kerberos | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.callback_kerberos_auth_failed
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fbe13fd3d0dc7e29fc12d369ec0865bcbc97b1a4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 07afa4aca82a83f5b7ba64ad0e9958710582a6a0
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737663"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460671"
 ---
 # <a name="error-kerberos-authentication-failed"></a>Erro: falha na autenticação Kerberos
 Ao tentar fazer a depuração remota, você poderá receber a seguinte mensagem de erro:
@@ -34,7 +34,7 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
 
 - O computador de destino ou o computador host do depurador está em um grupo de trabalho, em vez de em um domínio
 
-   \- ou -
+   \- ou –
 
 - Kerberos foi desabilitado no controlador de domínio.
 
@@ -46,7 +46,7 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
 
 1. No computador de destino, abra o menu **Iniciar**, aponte para **Acessórios** e clique em **Prompt de Comando**.
 
-2. Na janela **Prompt de Comando**, digite:
+2. Na janela do **prompt de comando** , digite:
 
     ```cmd
     ping <debugger_host_computer_name>
@@ -58,6 +58,6 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
 
 5. Compare os valores de endereço IP.
 
-## <a name="see-also"></a>Consulte também
-- [Erros e solução de problemas de depuração remota](../debugger/remote-debugging-errors-and-troubleshooting.md)
+## <a name="see-also"></a>Veja também
+- [Erros de depuração remota e solução de problemas](../debugger/remote-debugging-errors-and-troubleshooting.md)
 - [Depuração remota](../debugger/remote-debugging.md)

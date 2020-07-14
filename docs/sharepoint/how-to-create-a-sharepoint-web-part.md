@@ -1,7 +1,7 @@
 ---
-title: 'Como: Criar uma Web Part do SharePoint | Microsoft Docs'
+title: 'Como: criar uma Web Part do SharePoint | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,42 +13,41 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 304e9f29d317a5258467e4ff45248d0dd2066d4f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 2a8c02cce2f55374b4d62ba5663e8b3fe85b55b5
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62966803"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016446"
 ---
-# <a name="how-to-create-a-sharepoint-web-part"></a>Como: Criar uma web part do SharePoint
-  Você pode criar e personalizar uma web part adicionando um **Web Part** de item para qualquer projeto do SharePoint e, em seguida, editando o arquivo de código para a web part ou usando um designer. Para obter mais informações, confira [Como: Criar uma web part do SharePoint usando um designer](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md).
+# <a name="how-to-create-a-sharepoint-web-part"></a>Como: criar uma Web Part do SharePoint
+  Você pode criar e personalizar uma Web Part adicionando um item de **Web Part** a qualquer projeto do SharePoint e, em seguida, editando o arquivo de código para a Web Part ou usando um designer. Para obter mais informações, consulte [como: criar uma Web Part do SharePoint usando um designer](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md).
 
-### <a name="to-create-a-sharepoint-web-part"></a>Para criar uma web part do SharePoint
+### <a name="to-create-a-sharepoint-web-part"></a>Para criar uma Web Part do SharePoint
 
 1. Crie ou abra um projeto do SharePoint.
 
-     Para obter mais informações, consulte [SharePoint modelos de item de projeto e projeto](../sharepoint/sharepoint-project-and-project-item-templates.md).
+     Para obter mais informações, consulte [projeto do SharePoint e modelos de item de projeto](../sharepoint/sharepoint-project-and-project-item-templates.md).
 
-2. Escolha o nó de projeto do SharePoint no **Gerenciador de soluções** e, em seguida, escolha **Project** > **Add New Item**.
+2. Escolha o nó do projeto do SharePoint em **Gerenciador de soluções** e, em seguida, escolha **projeto**  >  **Adicionar novo item**.
 
-3. No **Adicionar Novo Item** diálogo caixa, expanda o **SharePoint** nó e, em seguida, escolha o **2010** nó.
+3. Na caixa de diálogo **Adicionar novo item** , expanda o nó **SharePoint** e escolha o nó **2010** .
 
 4. Na lista de modelos do SharePoint, escolha **Web Part**.
 
-5. No **nome** caixa, especifique um nome para a web part e, em seguida, escolha o **Add** botão.
+5. Na caixa **nome** , especifique um nome para a Web Part e, em seguida, escolha o botão **Adicionar** .
 
-     A web part aparece na **Gerenciador de soluções**. Para obter mais informações sobre os arquivos que inclui uma web part, consulte [criar web parts para SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md).
+     A Web Part aparece em **Gerenciador de soluções**. Para obter mais informações sobre os arquivos incluídos em uma Web Part, consulte [criar Web Parts para SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md).
 
-6. Na **Gerenciador de soluções**, abra o arquivo de código para a web part que você acabou de criar.
+6. No **Gerenciador de soluções**, abra o arquivo de código para a Web Part que você acabou de criar.
 
-     Por exemplo, se for o nome da sua web part *WebPart1*, abra *WebPart1.vb* (no Visual Basic) ou *WebPart1.cs* (em c#).
+     Por exemplo, se o nome de sua Web Part for *WebPart1*, abra *WebPart1. vb* (em Visual Basic) ou *WebPart1.cs* (em C#).
 
-7. O arquivo de código, adicionar controles para o <xref:System.Web.UI.Control.CreateChildControls%2A> método.
+7. No arquivo de código, adicione controles ao <xref:System.Web.UI.Control.CreateChildControls%2A> método.
 
-     Para obter um exemplo, confira [Passo a passo: Criar uma web part do SharePoint](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md).
+     Para obter um exemplo, consulte [Walkthrough: criar uma Web Part para o SharePoint](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md).
 
 ## <a name="see-also"></a>Consulte também
-- [Criar web parts para SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)
-- [Como: Criar uma web part do SharePoint usando um designer](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)
-- [Passo a passo: Criar uma web part do SharePoint](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)
-- [Passo a passo: Criar uma web part para SharePoint usando um designer](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)
+- [Criar Web Parts para SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)
+- [Como: criar uma Web Part do SharePoint usando um designer](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)
+- [Walkthrough: criar uma Web Part para o SharePoint](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)
+- [Walkthrough: criar uma Web Part para o SharePoint usando um designer](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)

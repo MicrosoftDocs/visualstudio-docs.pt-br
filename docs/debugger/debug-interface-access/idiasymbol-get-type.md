@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_type | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 60f9b9fd91535cc16b96da530db8ab43c4eaabf2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 738d3045c524700e803fe82c8902d4f1b77948b5
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739102"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461742"
 ---
 # <a name="idiasymbolget_type"></a>IDiaSymbol::get_type
 Recupera o símbolo que representa o tipo deste símbolo.
@@ -35,8 +35,8 @@ HRESULT get_type (
 
 fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que representa o tipo deste símbolo.
 
-## <a name="return-value"></a>Valor retornado
-Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
@@ -57,7 +57,7 @@ if (SUCCEEDED(pType->get_type( &pBaseType ))) {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaSymbol::get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)
 - [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)

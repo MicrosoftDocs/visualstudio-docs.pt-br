@@ -1,7 +1,7 @@
 ---
 title: 'Walkthrough: criando perfil de um aplicativo do SharePoint | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 27024f3b28b97a1a5d0befc3d70dbf8144fb9e24
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
-ms.translationtype: MT
+ms.openlocfilehash: c900a1496d3ef864e50d40092379348c05a4706b
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77277654"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017105"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>Walkthrough: criar perfil de um aplicativo do SharePoint
   Este tutorial mostra como usar as ferramentas de criação de perfil no Visual Studio para otimizar o desempenho de um aplicativo do SharePoint. O aplicativo de exemplo é um receptor de evento de recurso do SharePoint que contém um loop ocioso que degrada o desempenho do receptor de evento de recurso. O criador de perfil do Visual Studio permite que você localize e elimine a parte mais cara (com desempenho mais lento) do projeto, também conhecida como o *caminho quente*.
@@ -37,7 +36,7 @@ ms.locfileid: "77277654"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
  Você precisará dos seguintes componentes para concluir este passo a passo:
 
 - Edições com suporte do Microsoft Windows e do SharePoint.
@@ -49,9 +48,9 @@ ms.locfileid: "77277654"
 
 ### <a name="to-create-a-sharepoint-project"></a>Para criar um projeto do SharePoint
 
-1. Na barra de menus, escolha **arquivo** > **novo** **projeto** de > para exibir a caixa de diálogo **novo projeto** .
+1. Na barra de menus, escolha **arquivo**  >  **novo**  >  **projeto** para exibir a caixa de diálogo **novo projeto** .
 
-2. Expanda o nó do **SharePoint** sob o  **C# Visual** ou **Visual Basic**e escolha o nó **2010** .
+2. Expanda o nó **do SharePoint** sob o **Visual C#** ou **Visual Basic**e escolha o nó **2010** .
 
 3. No painel modelos, escolha o modelo de **projeto do SharePoint 2010** .
 
@@ -65,7 +64,7 @@ ms.locfileid: "77277654"
 
     No momento, você só pode criar o perfil de soluções de farm. Para obter mais informações sobre soluções em área restrita versus soluções de farm, consulte [Considerações sobre a solução em área restrita](../sharepoint/sandboxed-solution-considerations.md).
 
-7. Escolha o botão **Concluir** . O projeto aparece no **Gerenciador de soluções**.
+7. Escolha o botão **Concluir**. O projeto aparece no **Gerenciador de soluções**.
 
 ## <a name="add-a-feature-and-feature-event-receiver"></a>Adicionar um receptor de evento de recurso e recurso
  Em seguida, adicione um recurso ao projeto junto com um receptor de evento para o recurso. Esse receptor de evento conterá o código a ser criado para o perfil.
@@ -92,7 +91,7 @@ ms.locfileid: "77277654"
     private string webUrl = "/";
     ```
 
-4. Substitua o procedimento `FeatureActivated` pelo código a seguir.
+4. Substitua o `FeatureActivated` procedimento pelo código a seguir.
 
     ```vb
     Public Overrides Sub FeatureActivated(properties As SPFeatureReceiverProperties)
@@ -151,7 +150,7 @@ ms.locfileid: "77277654"
     }
     ```
 
-5. Adicione o procedimento a seguir abaixo do procedimento de `FeatureActivated`.
+5. Adicione o procedimento a seguir abaixo do `FeatureActivated` procedimento.
 
     ```vb
 
@@ -212,7 +211,7 @@ ms.locfileid: "77277654"
      O assistente habilita a criação de perfil de aplicativo no servidor, exibe a janela de **Gerenciador de desempenho** e, em seguida, compila, implanta e executa o aplicativo do SharePoint.
 
 ## <a name="run-the-sharepoint-application"></a>Executar o aplicativo do SharePoint
- Ative o recurso no SharePoint, disparando o código do evento `FeatureActivation` a ser executado.
+ Ative o recurso no SharePoint, disparando o `FeatureActivation` código do evento a ser executado.
 
 ### <a name="to-run-the-sharepoint-application"></a>Para executar o aplicativo do SharePoint
 
@@ -222,7 +221,7 @@ ms.locfileid: "77277654"
 
 3. Na lista de **recursos** , escolha o botão **Ativar** ao lado de **ProfileTest Feature1**.
 
-     Há uma pausa quando você faz isso, devido ao loop ocioso sendo chamado na função `FeatureActivated`.
+     Há uma pausa quando você faz isso, devido ao loop ocioso sendo chamado na `FeatureActivated` função.
 
 4. Na barra **início rápido** , escolha **listas** e, em seguida, na lista **listas** , escolha **anúncios**.
 
@@ -237,17 +236,17 @@ ms.locfileid: "77277654"
 
 ### <a name="to-view-and-interpret-the-profile-results"></a>Para exibir e interpretar os resultados do perfil
 
-1. Na seção **funções fazendo o mais individual** do relatório de criação de perfil de exemplo, observe que `TimeCounter` está próximo da parte superior da lista.
+1. Na seção **funções fazendo o mais individual** do relatório de criação de perfil de exemplo, observe que `TimeCounter` está próximo à parte superior da lista.
 
      Esse local indica que `TimeCounter` foi uma das funções com o maior número de amostras, o que significa que se trata de um dos maiores afunilamentos de desempenho no aplicativo. No entanto, essa situação não é surpreendente porque foi projetada de forma intencional para fins de demonstração.
 
-2. Na seção **funções fazendo o trabalho mais individual** , escolha o link `ProcessRequest` para exibir a distribuição de custo para a função `ProcessRequest`.
+2. Na seção **funções fazendo o trabalho mais individual** , escolha o `ProcessRequest` link para exibir a distribuição de custo para a `ProcessRequest` função.
 
-     Na seção **funções chamadas** para `ProcessRequest`, observe que a função **FeatureActiviated** está listada como a função chamada mais cara.
+     Na seção **funções chamadas** para `ProcessRequest` , observe que a função **FeatureActiviated** está listada como a função chamada mais cara.
 
 3. Na seção **funções chamadas** , escolha o botão **FeatureActivated** .
 
-     Na seção **funções chamadas** para **FeatureActivated**, a função `TimeCounter` é listada como a função chamada mais cara. No painel **exibição de código de função** , o código realçado (`TimeCounter`) é o ponto de interativação e indica onde a correção é necessária.
+     Na seção **funções chamadas** para **FeatureActivated**, a `TimeCounter` função é listada como a função chamada mais cara. No painel **exibição de código de função** , o código realçado ( `TimeCounter` ) é o HotSpot e indica onde a correção é necessária.
 
 4. Feche o relatório de criação de perfil de exemplo.
 
@@ -258,7 +257,7 @@ ms.locfileid: "77277654"
 
 ### <a name="to-fix-the-code-and-reprofile-the-application"></a>Para corrigir o código e recriar o perfil do aplicativo
 
-1. No código do receptor de evento de recurso, comente a chamada do método `TimeCounter` em `FeatureActivated` para impedir que ela seja chamada.
+1. No código do receptor de evento de recurso, comente a `TimeCounter` chamada de método no `FeatureActivated` para impedir que ela seja chamada.
 
 2. Salve o projeto.
 
@@ -272,7 +271,7 @@ ms.locfileid: "77277654"
 
      O recurso deve ser ativado muito mais rapidamente agora que a chamada para o loop ocioso foi eliminada. O relatório de criação de perfil de exemplo deve refletir isso.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Visão geral da sessão de desempenho](../profiling/performance-session-overview.md)
-- [Guia do iniciante à criação de perfil de desempenho](../profiling/beginners-guide-to-performance-profiling.md)
-- [Encontre afunilamentos de aplicativos com o criador de perfil do Visual Studio](https://msdn.microsoft.com/magazine/cc337887.aspx)
+- [Guia do iniciante à criação de perfil do desempenho](../profiling/beginners-guide-to-performance-profiling.md)
+- [Encontrar afunilamentos de aplicativos com o Visual Studio Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)

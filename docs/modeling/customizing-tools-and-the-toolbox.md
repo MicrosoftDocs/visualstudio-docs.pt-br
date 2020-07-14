@@ -1,7 +1,7 @@
 ---
 title: Personalizando ferramentas e a caixa de ferramentas
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.dsltools.dsldesigner.selectiondialog
 - vs.dsltools.dsldesigner.selecticondialog
@@ -13,18 +13,18 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e8e9fc3a9ecbadc47c3390d2d4a9b504a316658
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 685da1184706e106f3bdd2088b4d937e0aa7cc9f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589715"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548285"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>Personalizando ferramentas e a caixa de ferramentas
 
 É necessário definir os itens da caixa de ferramentas para os elementos que deseja disponibilizar para os usuários adicionarem aos seus modelos. Há dois tipos de ferramentas: ferramentas de elemento e ferramentas de conexão. No designer gerado, um usuário pode selecionar uma ferramenta do elemento para arrastar formas para o diagrama e pode selecionar uma ferramenta de conexão para desenhar links entre as formas. Em geral, as ferramentas do elemento permitem aos usuários adicionarem instâncias de classe de domínio aos seus modelos e as ferramentas de conexão permitem que eles adicionem instâncias de relações de domínio.
 
-## <a name="ToolboxDef"></a>Como a caixa de ferramentas é definida
+## <a name="how-the-toolbox-is-defined"></a><a name="ToolboxDef"></a>Como a caixa de ferramentas é definida
  No DSL Explorer, expanda o nó do Editor e o nó abaixo dele. Geralmente aparecerá uma hierarquia que lembra isto:
 
 ```
@@ -69,7 +69,7 @@ A propriedade do **Construtor de conexões** de uma ferramenta de conexão refer
 
 3. Defina a propriedade do **ícone da caixa de ferramentas** como referência a um bitmap de 16x16.
 
-     Se você quiser definir um novo ícone, crie um arquivo de bitmap em Gerenciador de Soluções na pasta **Dsl\Resources** O arquivo deve ter os seguintes valores de propriedade: **criar ação** = **conteúdo**; **Copiar para o diretório de saída** = não **copiar**.
+     Se você quiser definir um novo ícone, crie um arquivo de bitmap em Gerenciador de Soluções na pasta **Dsl\Resources** O arquivo deve ter os seguintes valores de propriedade: **criar**  =  **conteúdo**de ação; **Copiar para diretório**  =  de saída Não **copiar**.
 
 4. **Para uma ferramenta de elemento:** Defina a propriedade **Class** da ferramenta como referência a uma classe de domínio concreto mapeada para uma forma.
 
@@ -79,7 +79,7 @@ A propriedade do **Construtor de conexões** de uma ferramenta de conexão refer
 
      Se a ferramenta não for exibida, pare o Visual Studio experimental. No menu **Iniciar** do Windows, execute **redefinir a instância Experimental do Microsoft Visual Studio 2010**. No menu **Compilar**, clique em **Recompilar Solução**. Em seguida, teste o DSL novamente.
 
-## <a name="customizing"></a>Personalizando ferramentas de elemento
+## <a name="customizing-element-tools"></a><a name="customizing"></a>Personalizando ferramentas de elemento
  Por padrão, a ferramenta criará uma única instância da classe especificada, mas é possível variar isso de duas maneiras:
 
 - Defina as Diretivas de Mescla de Elemento em outras classes, permitindo-lhes aceitar novas instâncias dessa classe e permitindo-lhes criar links adicionais quando o novo elemento é criado. Por exemplo, é possível permitir ao usuário soltar um Comentário em outro elemento, criando dessa maneira um link de referência entre os dois.
@@ -90,7 +90,7 @@ A propriedade do **Construtor de conexões** de uma ferramenta de conexão refer
 
 - Escreva um código para personalizar a ferramenta para que ela possa criar grupos de elementos. A ferramenta é inicializada por métodos no ToolboxHelper.cs que podem ser substituídos. Para obter mais informações, consulte [criando grupos de elementos de uma ferramenta](#groups).
 
-## <a name="groups"></a>Criando grupos de elementos de uma ferramenta
+## <a name="creating-groups-of-elements-from-a-tool"></a><a name="groups"></a>Criando grupos de elementos de uma ferramenta
  Cada ferramenta do elemento contém um protótipo de elementos que ela deve criar. Por padrão, cada ferramenta do elemento cria um único elemento, mas também é possível criar um grupo de objetos relacionados a uma ferramenta. Para isso, é necessário inicializar a ferramenta com um <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> que contém os itens relacionados.
 
  O exemplo a seguir é tomado de um DSL no qual há um Transistor de tipo. Cada Transistor possui três Terminais nomeados. A ferramenta do elemento dos Transistores armazena um protótipo contendo quatro elementos de modelo e três links de relacionamento. Quando o usuário arrasta a ferramenta no diagrama, o protótipo é instalado e conectado à raiz do modelo.
@@ -139,7 +139,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 }  }    }
 ```
 
-## <a name="connections"></a>Personalizando ferramentas de conexão
+## <a name="customizing-connection-tools"></a><a name="connections"></a>Personalizando ferramentas de conexão
  Normalmente, é criada uma ferramenta de elemento ao criar uma nova classe do conector. Como alternativa, é possível sobrecarregar uma ferramenta permitindo que os tipos das duas extremidades determinem o tipo de relação. Por exemplo, é possível definir uma ferramenta de conexão que poderia criar relações pessoa-pessoa e relações pessoa-cidade.
 
  As ferramentas de conexão invocam os construtores de conexão. Use construtores de conexão para especificar como os usuários podem conectar elementos no designer gerado. Os construtores de conexão especificam os elementos que podem ser conectados e o tipo de link que é criada entre eles.
@@ -182,19 +182,19 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
  Também é possível personalizar o que ocorre quando a conexão é feita. Por exemplo, é possível personalizar apenas o caso onde o arrasto ocorre para ou de uma determinada classe, todos os casos que um diretiva de conexão de link regula ou o construtor de conexão FlowBuilder todo. Para cada uma dessas opções, é possível ajustar sinalizadores personalizados no nível apropriado. Quando transformar todos os modelos e tentar compilar a solução, as mensagens de erro irão direcioná-lo para os comentários que estão no código gerado. Esses comentários identificam o que deve ser fornecido.
 
- No exemplo de Diagrama de Componentes, o construtor de conexão da relação do domínio de Conexão é personalizado para restringir as conexões que podem ser feitas entre as portas. As ilustrações a seguir mostram que é possível fazer conexões somente a partir dos elementos da `OutPort` para os elementos `InPort`, mas é possível aninhar os componentes dentro uns aos outros.
+ No exemplo de Diagrama de Componentes, o construtor de conexão da relação do domínio de Conexão é personalizado para restringir as conexões que podem ser feitas entre as portas. As ilustrações a seguir mostram que é possível fazer conexões somente a partir dos elementos da `OutPort` para os elementos `InPort`, mas é possível aninhar os componentes dentro uns aos outros. 
 
- **Conexão entrando em uma porta de um componente aninhado**
+ **Conexão vindo para uma OutPort de um Componente Aninhado**
 
  ![Construtor de conexões](../modeling/media/connectionbuilder_3.png)
 
  Portanto, pode ser desejável especificar que uma conexão pode vir de um componente aninhado para uma OutPort. Para especificar essa conexão, você define **usa a aceitação personalizada** no tipo de **inporta** como função de origem e o tipo de **porta** como função de destino na janela **detalhes de DSL** , conforme mostrado nas seguintes ilustrações:
 
- **Diretiva de conexão de link no Gerenciador de DSL**
+ **Diretiva de conexão de link no DSL Explorer**
 
  ![Imagem do construtor de conexões](../modeling/media/connectionbuilder_4a.png)
 
- **Diretiva de conexão de link na janela de detalhes de DSL**
+ **Diretiva de conexão de link na janela DSL Details**
 
  ![Diretiva de conexão de link na janela de detalhes de DSL](../modeling/media/connectionbuilder_4b.png)
 
@@ -232,10 +232,10 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
  Você usa código personalizado para aplicar restrições "rígidas", mas deve considerar se os usuários devem ser capazes de fazer conexões inválidas temporariamente. Se o devem, é possível modificar as restrições para que as conexões não são validadas até que os usuários tentem salvar as alterações.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Personalizando a criação e o movimento de elementos](../modeling/customizing-element-creation-and-movement.md)
 - [Personalizando o comportamento de cópia](../modeling/customizing-copy-behavior.md)
 - [Como adicionar um manipulador de evento do tipo "arrastar e soltar"](../modeling/how-to-add-a-drag-and-drop-handler.md)
-- [Navegando por um modelo no código do programa e atualizando-o](../modeling/navigating-and-updating-a-model-in-program-code.md)
+- [Navegando e atualizando um modelo no código do programa](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Diagramas de circuito de exemplo DSL](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)

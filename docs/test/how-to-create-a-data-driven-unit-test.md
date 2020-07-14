@@ -1,7 +1,7 @@
 ---
 title: Criar um testes de unidade controlados por dados
 ms.date: 05/08/2019
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.test.testresults.unittest.datadriven
 - vs.test.testresults.unittest.datadriven.failure
@@ -14,14 +14,14 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: f50dad637d9efa2db347ff9f1b4828abf8c733af
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 936c6b2ee9e05d059c09c2aa074829b35b6ca5fd
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589182"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287981"
 ---
-# <a name="how-to-create-a-data-driven-unit-test"></a>Como: Criar um teste de unidade orientado por dados
+# <a name="how-to-create-a-data-driven-unit-test"></a>Como: criar um teste de unidade controlado por dados
 
 Você pode usar a estrutura de teste de unidade da Microsoft para o código gerenciado para configurar um método de teste de unidade para recuperar valores de uma fonte de dados. O método é executado sucessivamente para cada linha na fonte de dados, o que facilita o teste de uma variedade de entradas usando um único método.
 
@@ -129,9 +129,9 @@ O atributo DataSource tem três construtores.
 [DataSource(dataSourceSettingName)]
 ```
 
-Um construtor com um parâmetro usa informações de conexão armazenadas no arquivo *app.config* para a solução. O *dataSourceSettingsName* é o nome do elemento XML no arquivo de configuração que especifica as informações de conexão.
+Um construtor com um parâmetro usa informações de conexão que são armazenadas no arquivo de *app.config* para a solução. O *dataSourceSettingsName* é o nome do elemento XML no arquivo de configuração que especifica as informações de conexão.
 
-O uso de um arquivo *app.config* permite alterar a localização da fonte de dados sem fazer alterações no próprio teste da unidade. Para obter informações sobre como criar e usar um arquivo *app.config,* consulte [Passo a Passo: Usando um arquivo de configuração para definir uma fonte de dados](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)
+O uso de um arquivo de *app.config* permite que você altere o local da fonte de dados sem fazer alterações no próprio teste de unidade. Para obter informações sobre como criar e usar um arquivo de *app.config* , consulte [Walkthrough: usando um arquivo de configuração para definir uma fonte de dados](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)
 
 ```csharp
 [DataSource(connectionString, tableName)]
@@ -160,23 +160,23 @@ int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);
 
 ## <a name="run-the-test-and-view-results"></a>Executar o teste e exibir os resultados
 
-Ao terminar de escrever um método de teste, compile o projeto de teste. O método de teste é exibido em **Gerenciador de Testes**, no grupo **Testes Não Executados**. À medida que você executa, escreve e reexecuta seus testes, o **Test Explorer** exibe os resultados em grupos de **testes fracassados,** **testes aprovados**e **testes não executados.** Você pode escolher **Run All** para executar todos os seus testes, ou escolher **Executar** para escolher um subconjunto de testes para executar.
+Ao terminar de escrever um método de teste, compile o projeto de teste. O método de teste é exibido em **Gerenciador de Testes**, no grupo **Testes Não Executados**. À medida que você executa, escreve e executa novamente os testes, o **Gerenciador de testes** exibe os resultados em grupos de **testes com falha**, **aprovados**nos testes e **não executa testes**. Você pode escolher **executar tudo** para executar todos os seus testes ou escolher **executar** para escolher um subconjunto de testes a serem executados.
 
-A barra de resultados de teste na parte superior do **Gerenciador de Testes** é animada enquanto o teste é executado. Ao final da execução de teste, a barra ficará verde se todos os testes passaram ou vermelha se algum dos testes falhou. Um resumo da execução do teste aparece no painel de detalhes na parte inferior da janela do Explorador de **Teste.** Selecione um teste para exibir seus detalhes no painel inferior.
+A barra de resultados de teste na parte superior do **Gerenciador de Testes** é animada enquanto o teste é executado. Ao final da execução de teste, a barra ficará verde se todos os testes passaram ou vermelha se algum dos testes falhou. Um resumo da execução de teste é exibido no painel detalhes na parte inferior da janela **Gerenciador de testes** . Selecione um teste para exibir seus detalhes no painel inferior.
 
 > [!NOTE]
 > Há um resultado para cada linha de dados e também um resumo de resultados. Se o teste foi aprovado em cada linha de dados, o resumo de execução mostra como **Aprovado**. Se o teste falhou em alguma linha de dados, o resumo de execução mostra como **Falha**.
 
-Se você executou o método `AddIntegers_FromDataSourceTest` de nosso exemplo, a barra de resultados fica vermelha e o método de teste é movido para **Testes Reprovados**. Um teste controlado por dados falha se um dos métodos iterados da fonte de dados falha. Quando você escolhe um teste baseado em dados com falha na janela Do Explorador de **testes,** o painel de detalhes exibe os resultados de cada iteração que é identificada pelo índice da linha de dados. Em nosso exemplo, parece que o algoritmo `AddIntegers` não manipula valores negativos corretamente.
+Se você executou o método `AddIntegers_FromDataSourceTest` de nosso exemplo, a barra de resultados fica vermelha e o método de teste é movido para **Testes Reprovados**. Um teste controlado por dados falha se um dos métodos iterados da fonte de dados falha. Quando você escolhe um teste controlado por dados com falha na janela **Gerenciador de testes** , o painel Detalhes exibe os resultados de cada iteração identificada pelo índice de linha de dados. Em nosso exemplo, parece que o algoritmo `AddIntegers` não manipula valores negativos corretamente.
 
 Quando o método em teste é corrigido e o teste é novamente executado, a barra de resultados ficará verde e o método de teste é movido para o grupo **Teste Aprovado**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute?displayProperty=fullName>
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext?displayProperty=fullName>
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A?displayProperty=fullName>
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert?displayProperty=fullName>
-- [Unidade teste seu código](../test/unit-test-your-code.md)
-- [Execução de testes de unidade com o gerenciador de testes](../test/run-unit-tests-with-test-explorer.md)
+- [Teste de unidade em seu código](../test/unit-test-your-code.md)
+- [Executar testes de unidade com o Gerenciador de Testes](../test/run-unit-tests-with-test-explorer.md)
 - [Escrever testes de unidade para o .NET com a estrutura de teste de unidade da Microsoft](../test/unit-test-your-code.md)

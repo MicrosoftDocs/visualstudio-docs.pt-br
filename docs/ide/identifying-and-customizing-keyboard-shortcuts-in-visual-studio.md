@@ -1,7 +1,7 @@
 ---
 title: Identificar e personalizar atalhos de teclado
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Keyboard
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ce87385314ec84c7c0ed9d30c806a6287bb91d9e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4b551e3f980e962733d2797924331e4cd6dbefa5
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770850"
 ---
 # <a name="identify-and-customize-keyboard-shortcuts-in-visual-studio"></a>Identificar e personalizar atalhos de teclado no Visual Studio
 
@@ -43,7 +43,7 @@ Se um atalho for atribuído a um comando no contexto *Global* e em mais nenhum o
 
 ## <a name="identify-a-keyboard-shortcut"></a>Identificar um atalho de teclado
 
-1. Na barra de menus, escolha **Opções de** > **ferramentas**.
+1. Na barra de menus, escolha **ferramentas**  >  **Opções**.
 
 2. Expanda **Ambiente** e escolha **Teclado**.
 
@@ -63,7 +63,7 @@ Se um atalho for atribuído a um comando no contexto *Global* e em mais nenhum o
 
 ## <a name="customize-a-keyboard-shortcut"></a>Personalizar um atalho de teclado
 
-1. Na barra de menus, escolha **Opções de** > **ferramentas**.
+1. Na barra de menus, escolha **ferramentas**  >  **Opções**.
 
 2. Expanda **Ambiente** e escolha **Teclado**.
 
@@ -105,7 +105,7 @@ Você pode compartilhar os atalhos de teclado personalizados exportando-os para 
 
 ### <a name="to-export-only-keyboard-shortcuts"></a>Para exportar apenas atalhos de teclado
 
-1. Na barra de menus, escolha**Configurações de importação e exportação de** **ferramentas** > .
+1. Na barra de menus, escolha **ferramentas**  >  **importar e exportar configurações**.
 
 2. Escolha **Exportar configurações de ambiente selecionadas** e escolha **Avançar**.
 
@@ -119,7 +119,7 @@ Você pode compartilhar os atalhos de teclado personalizados exportando-os para 
 
 ::: moniker range="vs-2017"
 
-Por padrão, seus atalhos são salvos em um arquivo na pasta *%USERPROFILE%\Documents\Visual Studio 2017\Configurações.* O nome do arquivo reflete a data de quando as configurações foram exportadas, e a extensão é *.vssettings*.
+Por padrão, os atalhos são salvos em um arquivo na pasta *%USERPROFILE%\Documents\Visual Studio 2017 \ Settings* . O nome do arquivo reflete a data de quando as configurações foram exportadas, e a extensão é *.vssettings*.
 
 ::: moniker-end
 
@@ -131,7 +131,7 @@ Por padrão, os atalhos são salvos em um arquivo na pasta *%USERPROFILE%\Docume
 
 ### <a name="to-import-only-keyboard-shortcuts"></a>Para importar apenas atalhos de teclado
 
-1. Na barra de menus, escolha**Configurações de importação e exportação de** **ferramentas** > .
+1. Na barra de menus, escolha **ferramentas**  >  **importar e exportar configurações**.
 
 2. Escolha o botão de opção **Importar configurações de ambiente selecionadas** e **Avançar**.
 
@@ -139,7 +139,7 @@ Por padrão, os atalhos são salvos em um arquivo na pasta *%USERPROFILE%\Docume
 
 4. Em **Minhas Configurações**, escolha o arquivo que contém os atalhos que deseja importar, ou escolha o botão **Procurar** para localizar o arquivo correto.
 
-5. Escolha **a seguir**.
+5. Escolha **Próxima**.
 
 6. Em **Quais configurações você deseja importar?**, desmarque a caixa de seleção **Todas as Configurações**, expanda **Opções** e expanda **Ambiente**.
 

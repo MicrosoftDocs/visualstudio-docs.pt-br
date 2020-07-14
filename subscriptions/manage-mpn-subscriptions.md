@@ -5,14 +5,14 @@ ms.author: lank
 manager: lank
 ms.assetid: 83efe4ee-9a9d-4776-b27c-852d89dadafd
 ms.date: 03/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: Como atribuir assinaturas do Visual Studio a usuários finais, para parceiros do MPN.
-ms.openlocfilehash: aecc9892b60951f869c6a6bc721b746d2c013db5
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: fc35178a0d66a048a41ee04d27ae2993949972c8
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232421"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902867"
 ---
 # <a name="manage-visual-studio-subscriptions-offered-through-the-microsoft-partner-network-mpn"></a>Gerenciar assinaturas do Visual Studio oferecidas pelo MPN (Microsoft Partner Network)
 Os parceiros que ganham uma competência ou que compram o Action Pack no MPN estão qualificados para usar assinaturas do Visual Studio. Essas assinaturas são licenciadas por usuário e são válidas somente quando atribuídas a um usuário nomeado específico que trabalha para a empresa parceira.
@@ -29,9 +29,9 @@ Assinante do Microsoft Action Pack e assinaturas do Visual Studio
 6. Selecione **Privilégios**
 7. Selecione **Assinaturas do Visual Studio** (observação: atualização pendente da assinatura do Visual Studio)
 8. Selecione o **Indivíduo** desejado
-9. Clique **em Enviar**
+9. Clique em **Enviar**
 10. A pessoa receberá um email
-11. O indivíduo designado [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) terá acesso ao login
+11. O indivíduo atribuído será acessado [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) para entrar
 12. Uma página de perfil do Visual Studio pode ser exibida, incluindo:
     - Nome
     - Sobrenome
@@ -43,9 +43,9 @@ Assinante do Microsoft Action Pack e assinaturas do Visual Studio
 2. Selecione **Privilégios**
 3. Selecione **Assinaturas do MSDN** (observação: em breve essa opção será renomeada como "Assinaturas do Visual Studio")
 4. Localize o **indivíduo** desejado
-5. Clique **em Enviar**
+5. Clique em **Enviar**
 6. A pessoa receberá um email
-7. O indivíduo designado [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) terá acesso ao login
+7. O indivíduo atribuído será acessado [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) para entrar
 8. Uma página de perfil do Visual Studio pode ser exibida
     - Nome
     - Sobrenome

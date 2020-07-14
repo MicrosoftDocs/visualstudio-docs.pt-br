@@ -6,19 +6,19 @@ manager: jillfra
 assetId: ec580df7-3dcc-45a9-a1d9-8c110678dfb5
 ms.custom: vs-azure
 ms.workload: azure-vs
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/19/2019
 ms.author: ghogen
-ms.openlocfilehash: 23e2db0b42fb12872feb5942d9f4eeaab96d3c2d
-ms.sourcegitcommit: 59a8732dc563242590f7c6ccf4ced6c6d195533c
+ms.openlocfilehash: ef5acada89d48ed91dbf5b0f5fe7c9801337d47f
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81489747"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280369"
 ---
 # <a name="create-an-azure-cloud-service-project-with-visual-studio"></a>Criar um projeto de serviço de nuvem do Azure com o Visual Studio
 
-O Visual Studio fornece um modelo de projeto que permite criar um [serviço de nuvem do Azure,](/azure/cloud-services/cloud-services-choose-me)que é um serviço azure de uso geral simples. Após a criação do projeto, o Visual Studio permite configurar, depurar e implantar o serviço de nuvem no Azure.
+O Visual Studio fornece um modelo de projeto que permite criar um [serviço de nuvem do Azure](/azure/cloud-services/cloud-services-choose-me), que é um serviço do Azure de uso geral simples. Após a criação do projeto, o Visual Studio permite configurar, depurar e implantar o serviço de nuvem no Azure.
 
 ## <a name="steps-to-create-an-azure-cloud-service-project-in-visual-studio"></a>Etapas para criar um projeto de serviço de nuvem do Azure no Visual Studio
 Esta seção explica como criar um projeto de serviço de nuvem do Azure no Visual Studio com uma ou mais funções web.
@@ -60,7 +60,7 @@ Esta seção explica como criar um projeto de serviço de nuvem do Azure no Visu
 
 O projeto do Azure no Visual Studio tem associações aos projetos de função na solução. Ele também inclui o *arquivo de definição de serviço* e o *arquivo de configuração de serviço*:
 
-- **Arquivo de definição de serviço** - Define as configurações de tempo de execução para o seu aplicativo, incluindo quais funções são necessárias, pontos finais e tamanho da máquina virtual.
+- **Arquivo de definição de serviço** – define as configurações de tempo de execução para seu aplicativo, incluindo quais funções são necessárias, pontos de extremidade e tamanho da máquina virtual.
 - **Arquivo de configuração de serviço** – configura quantas instâncias de uma função são executadas e os valores das configurações definidas para uma função.
 
 Para obter mais informações sobre esses arquivos, consulte [Configurar as funções para um serviço de nuvem do Azure com o Visual Studio](vs-azure-tools-configure-roles-for-cloud-service.md).

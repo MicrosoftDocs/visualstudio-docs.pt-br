@@ -1,23 +1,23 @@
 ---
 title: Método marker_series::is_enabled | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
-- cvmarkersobj/Concurrency::diagnostic::marker_series::is_enabled
+- cvmarkersobj/Concurrency, diagnostic::marker_series::is_enabled
 helpviewer_keywords:
-- Concurrency::diagnostic::marker_series::is_enabled method
+- Concurrency, diagnostic::marker_series::is_enabled method
 ms.assetid: 8ce4dd50-ca29-4c72-98d6-582693f7d501
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22a7baa08a29cd77506e48762179118b3bbb2d1a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 7ff6b0449c877b5ae925ba2088917d7bacab4c34
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "63002759"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330669"
 ---
 # <a name="marker_seriesis_enabled-method"></a>Método marker_series::is_enabled
 Determina se alguma sessão habilitou o provedor.
@@ -32,7 +32,7 @@ bool is_enabled(
 );
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
  `_Importance` Nível de prioridade.
 
  `_Category` Categoria.
@@ -44,5 +44,5 @@ bool is_enabled(
 
  **Namespace:** Concurrency::diagnostic
 
-## <a name="see-also"></a>Confira também
-- [Classe marker_series](../profiling/marker-series-class.md)
+## <a name="see-also"></a>Veja também
+- [classe marker_series](../profiling/marker-series-class.md)

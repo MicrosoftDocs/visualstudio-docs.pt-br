@@ -8,4 +8,4 @@ ms.lasthandoff: 07/15/2019
 ms.locfileid: "68145039"
 ---
 > [!NOTE]
-> O **transformação de modelo de texto** componente é instalado automaticamente como parte do **desenvolvimento de extensões do Visual Studio** carga de trabalho. Você também pode instalá-lo do **componentes individuais** guia do instalador do Visual Studio, sob o **SDKs, bibliotecas e estruturas** categoria. Instalar o **SDK de modelagem** componente dos **componentes individuais** guia.
+> O componente de **transformação de modelo de texto** é instalado automaticamente como parte da carga de trabalho de desenvolvimento de extensão do **Visual Studio** . Você também pode instalá-lo na guia **componentes individuais** do instalador do Visual Studio, na categoria **SDKs, bibliotecas e estruturas** . Instale o componente **SDK de modelagem** da guia **componentes individuais** .

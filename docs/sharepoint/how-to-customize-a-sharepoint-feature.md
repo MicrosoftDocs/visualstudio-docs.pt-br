@@ -1,7 +1,7 @@
 ---
-title: 'Como: Personalizar um recurso do SharePoint | Microsoft Docs'
+title: 'Como: personalizar um recurso do SharePoint | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.RAD.FeatureDesigner.SwitchView
 - VS.SharePointTools.RAD.featureDesigner.Manifest
@@ -16,78 +16,77 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e7a00f3c58f917e7355a63ebca71c74127826a2e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a330f3c4cbe1e410ddc6a1612796c92eeda281b8
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63429222"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016900"
 ---
-# <a name="how-to-customize-a-sharepoint-feature"></a>Como: Personalizar um recurso do SharePoint
-  Você pode criar e personalizar os recursos do SharePoint usando o Designer de recursos no Visual Studio. Por exemplo, você pode definir o escopo do recurso e adicionar outros recursos como dependências. Por padrão, o Designer de recursos é aberto quando você adiciona um novo recurso no Gerenciador de soluções ou o Explorador de pacotes do SharePoint.
+# <a name="how-to-customize-a-sharepoint-feature"></a>Como: personalizar um recurso do SharePoint
+  Você pode criar e personalizar recursos do SharePoint usando o Feature designer no Visual Studio. Por exemplo, você pode definir o escopo do recurso e adicionar outros recursos como dependências. Por padrão, o designer de recursos é aberto quando você adiciona um novo recurso no Gerenciador de Soluções ou no Gerenciador de pacotes do SharePoint.
 
-## <a name="opening-the-feature-designer"></a>Abrir o Designer de recursos
- Você pode adicionar ou remover itens de projeto do SharePoint para um recurso usando o Designer de recursos.
+## <a name="opening-the-feature-designer"></a>Abrindo o designer de recursos
+ Você pode adicionar ou remover itens de projeto do SharePoint para um recurso usando o designer de recursos.
 
-#### <a name="to-open-the-feature-designer"></a>Para abrir o Designer de recursos
+#### <a name="to-open-the-feature-designer"></a>Para abrir o designer de recursos
 
-1. Na **Gerenciador de soluções**, expanda **recursos**.
+1. Em **Gerenciador de soluções**, expanda **recursos**.
 
-2. Clique duas vezes o *Feature1* de item, ou abra o menu de atalho para o *Feature1* de item e, em seguida, escolha **View Designer**.
+2. Clique duas vezes no item *Feature1* ou abra o menu de atalho para o item *Feature1* e escolha **Designer de exibição**.
 
-## <a name="view-the-packaged-manifest-file"></a>Exibir o arquivo de manifesto de pacote
- Você pode usar o Designer de recursos para modificar e gerar o arquivo de manifesto de pacote para o recurso (*Feature*). Em seguida, você pode exibir o código XML para esse arquivo no Visual Studio.
+## <a name="view-the-packaged-manifest-file"></a>Exibir o arquivo de manifesto empacotado
+ Você pode usar o designer de recursos para modificar e gerar o arquivo de manifesto empacotado para o recurso (*feature.xml*). Em seguida, você pode exibir o código XML para este arquivo no Visual Studio.
 
-#### <a name="to-view-the-packaged-manifest-file"></a>Para exibir o arquivo de manifesto de pacote
+#### <a name="to-view-the-packaged-manifest-file"></a>Para exibir o arquivo de manifesto empacotado
 
-1. No **Designer de recursos**, escolha o **manifesto** guia.
+1. No **Designer de recursos**, escolha a guia **manifesto** .
 
-#### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>Para exibir o arquivo de manifesto empacotado usando o Gerenciador de soluções
+#### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>Para exibir o arquivo de manifesto empacotado usando Gerenciador de Soluções
 
-1. Na **Gerenciador de soluções**, escolha o **Mostrar todos os arquivos** ícone.
+1. Em **Gerenciador de soluções**, escolha o ícone **Mostrar todos os arquivos** .
 
-2. Expanda recursos, expanda o nome do recurso, expanda FeatureName.feature e, em seguida, abra o  *\<FeatureName >. Template* arquivo.
+2. Expanda recursos, expanda FeatureName, expanda FeatureName. Feature e, em seguida, abra o arquivo * \<FeatureName>.Template.xml* .
 
     > [!NOTE]
-    > Quando você abre o arquivo de manifesto de modelo de recurso XML, os arquivos são validados automaticamente e os avisos que aparecem na janela lista de erros podem ser ignorados.
+    > Quando você abre o arquivo XML de manifesto do modelo de recurso, os arquivos são validados automaticamente e os avisos que aparecem na janela de Lista de Erros podem ser ignorados.
 
 ## <a name="change-the-manifest-template"></a>Alterar o modelo de manifesto
- Você pode alterar o código XML para o arquivo de manifesto de recurso no Editor de XML do Visual Studio ou no painel de modelo de manifesto. Todas as alterações no código XML é mesclado no arquivo de manifesto do pacote para o recurso. Por exemplo, você talvez queira alterar o modelo de manifesto para personalizar uma propriedade de recurso.
+ Você pode alterar o código XML para o arquivo de manifesto de recurso no editor de XML do Visual Studio ou no painel de modelo de manifesto. Todas as alterações no código XML são mescladas no arquivo de manifesto empacotado para o recurso. Por exemplo, talvez você queira alterar o modelo de manifesto para personalizar uma propriedade de recurso.
 
-#### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>Para alterar o modelo de manifesto usando o Editor de XML
+#### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>Para alterar o modelo de manifesto usando o editor de XML
 
-1. No **Designer de recursos**, escolha o **manifesto** guia, expanda o **editar opções** nó e, em seguida, escolha o **aberto no Editor de XML** link.
+1. No **Designer de recursos**, escolha a guia **manifesto** , expanda o nó opções de **edição** e, em seguida, escolha o link **abrir no editor de XML** .
 
-     Alterações ao XML sejam mescladas no arquivo de manifesto do pacote.
+     As alterações no XML são mescladas no arquivo de manifesto empacotado.
 
-#### <a name="to-change-the-manifest-template-by-using-the-manifest-template-pane"></a>Para alterar o modelo de manifesto usando o painel do modelo de manifesto
+#### <a name="to-change-the-manifest-template-by-using-the-manifest-template-pane"></a>Para alterar o modelo de manifesto usando o painel modelo de manifesto
 
-1. No **Designer de recursos**, escolha o **manifesto** guia, expanda o **editar opções** nó e altere o XML que aparece no painel modelo de manifesto.
+1. No **Designer de recursos**, escolha a guia **manifesto** , expanda o nó opções de **edição** e, em seguida, altere o XML que aparece no painel modelo de manifesto.
 
-     Alterações ao XML aparecem na **versão prévia do empacotado manifesto** painel.
+     As alterações no XML aparecem na **visualização do painel manifesto empacotado** .
 
-## <a name="overwrite-the-packaged-manifest-file"></a>Substituir o arquivo de manifesto de pacote
- Você pode desabilitar o Designer de recursos e criar o *Feature* arquivo manualmente. Na primeira vez que você executar esse procedimento, as configurações atuais no Designer de recurso são salvas no arquivo de XML do modelo de recurso. Em seguida, você pode modificar ou substituir o código XML.
+## <a name="overwrite-the-packaged-manifest-file"></a>Substituir o arquivo de manifesto empacotado
+ Você pode desabilitar o designer de recursos e criar o arquivo de *feature.xml* manualmente. Na primeira vez que você executar esse procedimento, as configurações atuais no designer de recursos serão salvas no arquivo XML do modelo de recurso. Em seguida, você pode modificar ou substituir o código XML.
 
 > [!NOTE]
-> Se você adicionar ou remove itens de projeto do SharePoint no arquivo XML, enquanto o Designer de recursos estiver desabilitado, esses itens de projeto não são compactados.
+> Se você adicionar ou remover itens de projeto do SharePoint no arquivo XML enquanto o designer de recursos estiver desabilitado, esses itens de projeto não serão empacotados.
 
-#### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>Para substituir o arquivo de manifesto empacotado, desabilitando o designer
+#### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>Para substituir o arquivo de manifesto empacotado desabilitando o designer
 
-1. No **Designer de recursos**, escolha o **manifesto** guia.
+1. No **Designer de recursos**, escolha a guia **manifesto** .
 
-2. Expanda o **editar opções** nó, escolher o **substituição XML e editar manifesto gerado no editor de XML** vincular e, em seguida, escolha o **Sim** botão.
+2. Expanda o nó **Opções de edição** , escolha o link **substituir XML gerado e editar manifesto no editor de XML** e, em seguida, escolha o botão **Sim** .
 
-     O modelo é atualizado com o arquivo de manifesto de pacote atual.
+     O modelo é atualizado com o arquivo de manifesto empacotado atual.
 
-## <a name="enable-the-feature-designer"></a>Habilitar o Designer de recursos
- Você pode habilitar novamente o Designer de recursos para personalizar o *Feature* arquivo.
+## <a name="enable-the-feature-designer"></a>Habilitar o designer de recursos
+ Você pode reabilitar o designer de recursos para personalizar o arquivo de *feature.xml* .
 
-#### <a name="to-re-enable-the-designer"></a>Para habilitar novamente o designer
+#### <a name="to-re-enable-the-designer"></a>Para reabilitar o designer
 
-1. No **Designer de recursos**, escolha o **descarte as edições de manifesto e habilite novamente o designer** vincular e, em seguida, escolha o **Sim** botão.
+1. No **Designer de recursos**, escolha o **manifesto descartar edições e reabilitar o link do designer** e, em seguida, escolha o botão **Sim** .
 
-2. O modelo é atualizado com o texto original, e todas as alterações ao XML serão perdidas.
+2. O modelo é atualizado com o texto original e todas as alterações no XML são perdidas.
 
 ## <a name="see-also"></a>Consulte também
 - [Empacotar e implantar soluções do SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 9a925e7f3c31b8347148c15b050692fcee26fcb1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 45c7a5ba87c006332b601b93143cbf8acfda16b5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75585607"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547297"
 ---
 # <a name="xaml-designer-options-page"></a>Página de opções do Designer XAML
 
@@ -34,35 +34,35 @@ As configurações a seguir aplicam-se somente quando o XAML Designer está habi
 
 Use essa configuração para controlar se o modo de exibição de Design aparece quando documentos XAML são carregados.
 
-|||
+|Nome|Descrição|
 |-|-|
 |**Modo de Exibição de Fonte**|Especifica se somente a fonte de XAML aparece no modo de exibição XAML. Isso é útil ao carregar documentos grandes.|
-|**Exibição de design**|Especifica se apenas um XAML Designer visual aparece no modo de exibição XAML.|
-|**Modo Divisão**|Especifica se o XAML Designer visual e a fonte de XAML aparecem próximos um do outro no modo de exibição XAML (local com base na configuração **Orientação de Divisão**).|
+|**Modo de exibição de Design**|Especifica se apenas um XAML Designer visual aparece no modo de exibição XAML.|
+|**Exibição de divisão**|Especifica se o XAML Designer visual e a fonte de XAML aparecem próximos um do outro no modo de exibição XAML (local com base na configuração **Orientação de Divisão**).|
 
 ## <a name="split-orientation"></a>Orientação de Divisão
 
 Use essa configuração para controlar quando e como o XAML Designer aparece ao editar um documento XAML. Essas configurações aplicam-se somente quando a **Exibição do documento padrão** está definida como **Modo Divisão**.
 
-|||
+|Nome|Descrição|
 |-|-|
 |**Vertical**|A fonte de XAML aparece no lado esquerdo do modo de exibição XAML e o XAML Designer aparece no outro lado.|
-|**Horizontal**|O XAML Designer aparece na parte superior do modo de exibição XAML e a fonte de XAML aparece abaixo dele.|
-|**Padrão**|O documento XAML usa a orientação de divisão recomendada para a plataforma de destino do projeto do documento. Para a maioria das plataformas, isso é equivalente a **Horizontal**.|
+|**Na**|O XAML Designer aparece na parte superior do modo de exibição XAML e a fonte de XAML aparece abaixo dele.|
+|**Default**|O documento XAML usa a orientação de divisão recomendada para a plataforma de destino do projeto do documento. Para a maioria das plataformas, isso é equivalente a **Horizontal**.|
 
 ## <a name="zoom-by-using"></a>Aplicar zoom usando
 
 Use essa configuração para determinar o funcionamento de aplicar zoom ao editar um documento XAML.
 
-|||
+|Nome|Descrição|
 |-|-|
-|**Roda de rato**|Ampliar o XAML Designer ao rolar o botão de rolagem do mouse.|
-|**Ctrl + roda de rato**|Amplie o Designer XAML pressionando a tecla **Ctrl** enquanto rola a roda do mouse.|
-|**Alt + botão de rolagem do mouse**|Amplie o XAML Designer pressionando a tecla **Alt** enquanto rola a roda do mouse.|
+|**Botão de rolagem do mouse**|Ampliar o XAML Designer ao rolar o botão de rolagem do mouse.|
+|**CTRL + roda do mouse**|Aplique zoom na Designer XAML pressionando a tecla **Ctrl** enquanto rola a roda do mouse.|
+|**Alt + botão de rolagem do mouse**|Aplique zoom na Designer XAML pressionando a tecla **ALT** ao rolar a roda do mouse.|
 
 Essas configurações determinam o comportamento do Designer ao editar um documento XAML.
 
-|||
+|Nome|Descrição|
 |-|-|
 |**Nomear automaticamente os elementos interativos na criação**|Especifica se um nome padrão é fornecido para um novo elemento interativo ao adicioná-lo no Designer.|
 |**Inserir automaticamente as propriedades de layout na criação de elemento**|Especifica se as propriedades de layout são fornecidas a um novo elemento ao adicioná-lo no Designer. As propriedades de layout são aquelas que afetam o layout de um controle, por exemplo, VerticalAlignment ou Margin. O XAML a seguir mostra como criar um botão com e sem essa opção selecionada:<br />`<Button Content="Button" HorizontalAlignment="Left" Margin="245,56,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>`<br />`<Button Content="Button" Grid.Row="1"/>`|
@@ -73,7 +73,7 @@ Essas configurações determinam o comportamento do Designer ao editar um docume
 
 Use essas opções para determinar as configurações ao editar arquivos XAML usando o Blend.
 
-|||
+|Nome|Descrição|
 |-|-|
 |**Aplicar zoom usando**|Ampliar o Designer XAML ao rolar o botão de rolagem do mouse ou ao pressionar a tecla **CTRL** ou **ALT** ao mesmo tempo em que rola o botão de rolagem do mouse.|
 |**Digitar unidades**|Especifica se as medidas no designer são baseadas em pontos ou pixels. Como os Aplicativos Universais do Windows não oferecem suporte a pontos, as unidades serão automaticamente convertidas em pixels se **Pontos** estiver selecionado.|
@@ -84,7 +84,7 @@ Use essas configurações para determinar o comportamento do XAML Designer ao ed
 
 ### <a name="snapping"></a>Ajustando
 
-|||
+|Nome|Descrição|
 |-|-|
 |**Mostrar grade de ajuste**|Quando essa opção é selecionada, as linhas de grade aparecem no designer para ajudá-lo a alinhar os controles. Os controles adicionados ao designer ajustam-se a essas linhas de grade quando a opção **Ajustar às linhas de grade** está selecionada.|
 |**Ajustar às linhas de grade**|Quando os controles são adicionados ou movidos no designer, eles se encaixam às linhas de grade.|
@@ -101,7 +101,7 @@ Use essa configuração para determinar se um aviso é exibido quando animaçõe
 
 Use essas configurações para determinar se efeitos são renderizados ao editar arquivos XAML no XAML Designer usando o Blend.
 
-|||
+|Nome|Descrição|
 |-|-|
 |**Renderizar efeitos**|Especifica se efeitos renderizam ao editar arquivos XAML no XAML Designer usando o Blend.|
 |**Limite de zoom**|Especifica o percentual de ampliação com a qual os efeitos são renderizados quando a caixa de seleção **Renderizar efeitos** está selecionada. Se você aplicar zoom além dessa configuração os efeitos não serão mais renderizados no XAML Designer.|

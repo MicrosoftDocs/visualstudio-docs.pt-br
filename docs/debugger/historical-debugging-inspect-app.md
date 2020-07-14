@@ -1,27 +1,27 @@
 ---
-title: Inspecionar seu aplicativo com o histórico de depuração | Microsoft Docs
+title: Inspecione seu aplicativo com a depuração histórica | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 629b5d93-39b2-430a-b8ba-d2a47fdf2584
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dea338f940cca0ce24cc200ed933adadb7d5643f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: efabc8cd185daed4f018e3e4209e391b5bc39f44
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62848220"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350440"
 ---
-# <a name="inspect-your-app-with-intellitrace-historical-debugging-in-visual-studio-c-visual-basic-c"></a>Inspecionar seu aplicativo com o IntelliTrace histórico de depuração no Visual Studio (C#, Visual Basic, C++)
+# <a name="inspect-your-app-with-intellitrace-historical-debugging-in-visual-studio-c-visual-basic-c"></a>Inspecione seu aplicativo com a depuração histórica do IntelliTrace no Visual Studio (C#, Visual Basic, C++)
 
-Você pode usar [depuração histórica](../debugger/historical-debugging.md) para retroceder e encaminhe por meio da execução do seu aplicativo e inspecionar seu estado.
+Você pode usar a [depuração histórica](../debugger/historical-debugging.md) para retroceder e avançar pela execução do seu aplicativo e inspecionar seu estado.
 
-Você pode usar o IntelliTrace no Visual Studio Enterprise edition, mas não as edições Professional ou Community.
+Você pode usar o IntelliTrace no Visual Studio Enterprise Edition, mas não as edições Professional ou Community.
 
-## <a name="navigate-your-code-with-historical-debugging"></a>Navegar pelo código com o histórico de depuração
+## <a name="navigate-your-code-with-historical-debugging"></a>Navegar pelo seu código com a depuração histórica
 
 Vamos começar com um programa simples que tem um bug. Em um aplicativo de console em C#, adicione o seguinte código:
 
@@ -51,33 +51,33 @@ private static int AddInt(int add)
 }
 ```
 
-Vamos supor que o valor esperado `resultInt` depois de chamar `AddAll()` é 20 (o resultado de incrementar `testInt` 20 vezes). (Vamos também supor que você não consegue ver o bug no `AddInt()`). Mas o resultado é, na verdade, 44. Como pode localizar o bug sem percorrendo `AddAll()` 10 vezes? Podemos usar depuração histórica para encontrar bugs mais rápido e mais facilmente. Veja como:
+Vamos pressupor que o valor esperado de `resultInt` após a chamada `AddAll()` seja 20 (o resultado de incrementos `testInt` 20 vezes). (Também vamos supor que você não consiga ver o bug no `AddInt()` ). Mas o resultado é, na verdade, 44. Como podemos encontrar o bug sem passar por `AddAll()` 10 vezes? Podemos usar a depuração histórica para encontrar o bug com mais rapidez e facilidade. Veja como:
 
-1. Na **Ferramentas > Opções > IntelliTrace > geral**, certifique-se de que o IntelliTrace está habilitado e selecione **eventos do IntelliTrace e informações de chamada**. Se você não selecionar essa opção, você não poderá ver a medianiz de navegação (conforme explicado abaixo).
+1. Em **ferramentas > opções > intellitrace > geral**, verifique se o IntelliTrace está habilitado e selecione **eventos do IntelliTrace e informações de chamada**. Se você não selecionar essa opção, não será possível ver a medianiz de navegação (conforme explicado abaixo).
 
-2. Defina um ponto de interrupção a `Console.WriteLine(resultInt);` linha.
+2. Defina um ponto de interrupção na linha `Console.WriteLine(resultInt);`.
 
-3. Inicie a depuração. O código é executado no ponto de interrupção. No **Locals** janela, você pode ver que o valor de `resultInt` é 44.
+3. Inicie a depuração. O código é executado para o ponto de interrupção. Na janela **locais** , você pode ver que o valor de `resultInt` é 44.
 
-4. Abra o **ferramentas de diagnóstico** janela (**Depurar > Mostrar ferramentas de diagnóstico**). A janela de código deve ter esta aparência:
+4. Abra a janela de **ferramentas de diagnóstico** (**depurar > mostrar ferramentas de diagnóstico**). A janela de código deve ter a seguinte aparência:
 
     ![Janela de código no ponto de interrupção](../debugger/media/historicaldebuggingbreakpoint.png "HistoricalDebuggingBreakpoint")
 
-5. Você deve ver uma seta dupla na margem esquerda, logo acima do ponto de interrupção. Essa área é chamada a medianiz de navegação e é usada para depuração de histórico. Clique na seta.
+5. Você deve ver uma seta dupla ao lado da margem esquerda, logo acima do ponto de interrupção. Essa área é chamada de medianiz de navegação e é usada para depuração histórica. Clique na seta.
 
-    Na janela de código, você deverá ver que a linha de código anterior (`int resultInt = AddIterative(testInt);`) é colorido em rosa. Acima da janela, você deve ver uma mensagem que você está agora na depuração histórica.
+    Na janela de código, você verá que a linha de código anterior ( `int resultInt = AddIterative(testInt);` ) é cor rosa. Acima da janela, você verá uma mensagem informando que agora está na depuração histórica.
 
-    A janela de código agora fica assim:
+    A janela de código agora tem esta aparência:
 
     ![janela de código no modo de depuração histórica](../debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")
 
-6. Agora você pode intervir a `AddAll()` método (**F11**, ou o **intervir** botão na medianiz de navegação. Vá para frente (**F10**, ou **ir para próxima chamada** na medianiz de navegação. A linha rosa agora, é o `j = AddInt(j);` linha. **F10** nesse caso, não a etapa para a próxima linha de código. Em vez disso, ele etapas para a próxima chamada de função. Depuração histórica navega de uma chamada e, em seguida, ele ignora as linhas de código que não incluem uma chamada de função.
+6. Agora você pode entrar no `AddAll()` método (**F11**ou no botão entrar **Step Into** na medianiz de navegação. Avançar (**F10**ou **ir para próxima chamada** na medianiz de navegação. A linha rosa está agora na `j = AddInt(j);` linha. O **F10** , nesse caso, não faz a etapa para a próxima linha de código. Em vez disso, ele percorre a próxima chamada de função. A depuração histórica navega da chamada para chamada e ignora as linhas de código que não incluem uma chamada de função.
 
-7. Entrar agora o `AddInt()` método. Você deve ver o bug nesse código imediatamente.
+7. Agora, percorra o `AddInt()` método. Você deve ver o bug neste código imediatamente.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Este procedimento apenas uma pequena amostra do que você pode fazer com a depuração histórica.
+Esse procedimento apenas arranha a superfície do que você pode fazer com a depuração histórica.
 
-- Para exibir instantâneos durante a depuração, consulte [inspecionar estados anteriores do aplicativo usando o IntelliTrace](../debugger/view-historical-application-state.md).
-- Para obter mais informações sobre as diferentes configurações e os efeitos dos botões diferentes na medianiz de navegação, consulte [recursos do IntelliTrace](../debugger/intellitrace-features.md).
+- Para exibir instantâneos durante a depuração, consulte [inspecionar os Estados de aplicativos anteriores usando o IntelliTrace](../debugger/view-historical-application-state.md).
+- Para saber mais sobre as diferentes configurações e os efeitos dos diferentes botões na medianiz de navegação, consulte recursos do [IntelliTrace](../debugger/intellitrace-features.md).

@@ -1,7 +1,7 @@
 ---
 title: IDiaDataSource::loadDataFromPdb | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7526ba6e62c9df22a2338adc80f5d56578502cdb
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 582b211b83ed519470100b7c5b47184c2256894f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744935"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468493"
 ---
 # <a name="idiadatasourceloaddatafrompdb"></a>IDiaDataSource::loadDataFromPdb
 Abre e prepara um arquivo de banco de dados do programa (. pdb) como uma fonte de dado de depuração.
@@ -35,8 +35,8 @@ pdbPath
 
 no O caminho para o arquivo. pdb.
 
-## <a name="return-value"></a>Valor retornado
-Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. A tabela a seguir mostra os possíveis valores de retorno para esse método.
+## <a name="return-value"></a>Valor Retornado
+Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. A tabela a seguir mostra os possíveis valores de retorno para esse método.
 
 |Valor|Descrição|
 |-----------|-----------------|
@@ -64,7 +64,7 @@ if (FAILED(hr))
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)
 - [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)
 - [IDiaDataSource::loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)

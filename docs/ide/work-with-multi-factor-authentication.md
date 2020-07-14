@@ -1,5 +1,5 @@
 ---
-title: Trabalhar com contas que exigem autenticação multifator
+title: Trabalhar com contas que exigem a autenticação multifator
 ms.date: 05/27/2020
 ms.topic: conceptual
 description: Saiba como usar o Visual Studio com contas que exigem autenticação multifator.
@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 696664aa5aa92a3e9a675df4803a3e65e3e81f36
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 699580689bcf00d00d2a6e07f814be4d1265bb1d
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84185612"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283540"
 ---
 # <a name="how-to-use-visual-studio-with-accounts-that-require-multi-factor-authentication"></a>Como usar o Visual Studio com contas que exigem autenticação multifator
 
@@ -33,7 +33,11 @@ Na versão 16,6, adicionamos novos recursos ao Visual Studio 2019 que simplifica
 > [!WARNING]
 > Não usar esse fluxo de trabalho pode disparar uma experiência degradada, resultando em vários prompts de autenticação adicionais ao adicionar ou reautenticar contas do Visual Studio. 
 
-### <a name="enabling-system-web-browser"></a>Habilitando o navegador da Web do sistema  
+### <a name="enabling-system-web-browser"></a>Habilitando o navegador da Web do sistema
+
+> [!NOTE] 
+> Para obter a melhor experiência, recomendamos que você apague os dados do navegador da Web padrão do seu sistema antes de prosseguir com esse fluxo de trabalho. Além disso, se você tiver contas corporativas ou de estudante em suas configurações do Windows 10 em **acesso corporativo ou de estudante**, verifique se elas estão autenticadas corretamente.
+
 Para habilitar este fluxo de trabalho, vá para a caixa de diálogo opções do Visual Studio **(ferramentas > opções...)**, selecione a guia **contas** e selecione **navegador da Web do sistema** em **Adicionar e autenticar contas usando:** DropDown. 
 
 :::image type="content" source="media/select-system-web-browser.png" alt-text="Selecione navegador da Web do sistema no menu.":::
@@ -43,20 +47,22 @@ Depois que o fluxo de trabalho do navegador da Web do sistema estiver habilitado
 </br>
 :::image type="content" source="media/add-personalization-account.png" alt-text="Adicione uma nova conta de personalização ao Visual Studio." border="false":::
 
-Essa ação abrirá o navegador da Web padrão do sistema, solicitará que você entre em sua conta e validará qualquer política de MFA necessária. 
+Essa ação abrirá o navegador da Web padrão do sistema, solicitará que você entre em sua conta e validará qualquer política de MFA necessária.
+
+Com base em suas atividades de desenvolvimento e configuração de recursos, você pode ser solicitado a inserir novamente suas credenciais durante a sessão. Isso pode ocorrer quando você adiciona um novo recurso ou tenta acessar um recurso sem ter atendido anteriormente seus requisitos de autorização de autoridade de certificação/MFA.
 
 > [!NOTE] 
-> Mantenha seu navegador aberto por todo o processo para obter a melhor experiência, já que o fechamento do navegador pode disparar prompts de autorização adicionais. 
+> Para obter a melhor experiência, mantenha seu navegador aberto até que todas as políticas de CA/MFA sejam validadas para seus recursos. Fechar o navegador pode resultar na perda do estado de MFA criado anteriormente e pode solicitar prompts de autorização adicionais.
 
 ## <a name="reauthenticating-an-account"></a>Reautenticando uma conta  
 Se houver um problema com sua conta, o Visual Studio poderá solicitar que você insira novamente suas credenciais de conta.  
 
 :::image type="content" source="media/reauthenticate-account.png" alt-text="Reautenticar sua conta do Visual Studio.":::
 
-Clicar em **reinserir suas credenciais** abrirá o navegador da Web padrão do sistema e tentará atualizar automaticamente suas credenciais. Se não for bem-sucedida, você será solicitado a entrar em sua conta e validar qualquer política de MFA necessária. 
+Clicar em **reinserir suas credenciais** abrirá o navegador da Web padrão do sistema e tentará atualizar automaticamente suas credenciais. Se não for bem-sucedida, você será solicitado a entrar em sua conta e validar qualquer política de CA/MFA necessária.
 
 > [!NOTE] 
-> Mantenha seu navegador aberto por todo o processo para obter a melhor experiência, já que o fechamento do navegador pode disparar prompts de autorização adicionais. 
+> Para obter a melhor experiência, mantenha seu navegador aberto até que todas as políticas de CA/MFA sejam validadas para seus recursos. Fechar o navegador pode resultar na perda do estado de MFA criado anteriormente e pode solicitar prompts de autorização adicionais.
 
 ## <a name="how-to-opt-out-of-using-a-specific-azure-active-directory-tenant-in-visual-studio"></a>Como recusar o uso de um locatário específico de Azure Active Directory no Visual Studio
 

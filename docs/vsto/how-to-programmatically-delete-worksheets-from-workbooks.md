@@ -1,7 +1,7 @@
 ---
 title: 'Como: excluir programaticamente planilhas de pastas de trabalho'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 04c7eafd99d122c0b502e4b804b050bf7c59761f
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 38aa92ae1c320ae9eb5ad4bdb1e43b761048661f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985835"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547128"
 ---
 # <a name="how-to-programmatically-delete-worksheets-from-workbooks"></a>Como: excluir programaticamente planilhas de pastas de trabalho
   Você pode excluir qualquer planilha em uma pasta de trabalho. Para excluir uma planilha, use o item de host da planilha ou acesse a planilha usando a coleção planilhas da pasta de trabalho.
@@ -26,7 +26,7 @@ ms.locfileid: "72985835"
  [!INCLUDE[appliesto_xlalldocapp](includes/appliesto-xlalldocapp-md.md)]
 
 ## <a name="use-the-worksheet-host-item"></a>Usar o item de host da planilha
- Se a planilha foi adicionada em tempo de design em uma personalização em nível de documento, use o método <xref:Microsoft.Office.Tools.Excel.Worksheet.Delete%2A> para excluir uma planilha especificada. O código a seguir exclui uma planilha de uma pasta de trabalho referenciando o item de host de planilha diretamente.
+ Se a planilha foi adicionada em tempo de design em uma personalização em nível de documento, use o <xref:Microsoft.Office.Tools.Excel.Worksheet.Delete%2A> método para excluir uma planilha especificada. O código a seguir exclui uma planilha de uma pasta de trabalho referenciando o item de host de planilha diretamente.
 
 > [!IMPORTANT]
 > Esse código é executado somente em projetos que você cria usando qualquer um dos seguintes modelos de projeto:
@@ -46,7 +46,7 @@ ms.locfileid: "72985835"
      [!code-vb[Trin_VstcoreExcelAutomation#17](codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#17)]
 
 ## <a name="use-the-sheets-collection-of-the-excel-workbook"></a>Usar a coleção Sheets da pasta de trabalho do Excel
- Acesse planilhas por meio da coleção Microsoft Office <xref:Microsoft.Office.Interop.Excel.Sheets> do Excel nos seguintes casos:
+ Acesse planilhas por meio da <xref:Microsoft.Office.Interop.Excel.Sheets> coleção Microsoft Office Excel nos seguintes casos:
 
 - Você deseja excluir uma planilha em um suplemento do VSTO.
 
@@ -59,12 +59,12 @@ ms.locfileid: "72985835"
 
 ### <a name="to-delete-a-worksheet-by-using-the-sheets-collection-of-the-excel-workbook"></a>Para excluir uma planilha usando a coleção Sheets da pasta de trabalho do Excel
 
-1. Chame o método <xref:Microsoft.Office.Interop.Excel._Worksheet.Delete%2A> da coleção <xref:Microsoft.Office.Interop.Excel.Sheets>.
+1. Chame o <xref:Microsoft.Office.Interop.Excel._Worksheet.Delete%2A> método da <xref:Microsoft.Office.Interop.Excel.Sheets> coleção.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#18](codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#18)]
      [!code-vb[Trin_VstcoreExcelAutomation#18](codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#18)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Trabalhar com planilhas](working-with-worksheets.md)
 - [Como: ocultar planilhas programaticamente](how-to-programmatically-hide-worksheets.md)
 - [Como: mover planilhas programaticamente dentro de pastas de trabalho](how-to-programmatically-move-worksheets-within-workbooks.md)

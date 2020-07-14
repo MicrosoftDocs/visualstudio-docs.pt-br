@@ -1,7 +1,7 @@
 ---
 title: IDiaStackWalkHelper::pdataForVA | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d51736a80021847881db164c9e176a010124638
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d6e9b3e812311ef3d9555584d72ebb966098232a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741394"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464705"
 ---
 # <a name="idiastackwalkhelperpdataforva"></a>IDiaStackWalkHelper::pdataForVA
 Retorna o bloco de dados PDATA associado ao endereço virtual.
@@ -50,13 +50,13 @@ fora Retorna o tamanho real dos dados em bytes que foram obtidos.
 
 [entrada, saída] Um buffer que é preenchido com os dados solicitados. Não pode ser `NULL`.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver nenhum PDATA para o endereço especificado. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver nenhum pData para o endereço especificado. Caso contrário, retornará um código de erro.
 
 ## <a name="remarks"></a>Comentários
  O PDATA (a seção denominada ". pData") de um compiland contém informações sobre a manipulação de exceção para funções.
 
- O chamador sabe a quantidade de dados a ser retornada para que o chamador não precise solicitar a quantidade de dados disponível. Portanto, é aceitável que uma implementação desse método retorne um erro se o parâmetro `pbData` for `NULL`.
+ O chamador sabe a quantidade de dados a ser retornada para que o chamador não precise solicitar a quantidade de dados disponível. Portanto, é aceitável que uma implementação desse método retorne um erro se o `pbData` parâmetro for `NULL` .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

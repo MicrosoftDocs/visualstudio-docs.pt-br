@@ -1,7 +1,7 @@
 ---
-title: 'DA0026: excesso de processamento de tempo de CPU do kernel | Microsoft Docs'
+title: DA0026-processamento excessivo de tempo de CPU do kernel | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.rules.DA0026
 - vs.performance.DA0026
@@ -13,16 +13,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c8b4cb63eb4647ddab4220ed6729894fe8a456f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: cd3d96ccf3fc8463908ab5cf27b52e91fb1d05ef
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777483"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544619"
 ---
-# <a name="da0026-excessive-kernel-cpu-time-processing"></a>DA0026: processamento de tempo de CPU do kernel excessivo
+# <a name="da0026-excessive-kernel-cpu-time-processing"></a>DA0026: Processamento de tempo de CPU do kernel excessivo
 
-|||
+|Item|Valor|
 |-|-|
 |ID de regra|TODO|
 |Categoria|Uso das ferramentas de criação de perfil|

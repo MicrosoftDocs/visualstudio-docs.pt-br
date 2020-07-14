@@ -1,7 +1,7 @@
 ---
 title: IDiaAddressMap::set_addressMap | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8414788af44d78943088b78b2d3e42a5a8d8c50b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4af506da822a7f8e38a8952d7c1d0d15fc1995d2
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745024"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468549"
 ---
 # <a name="idiaaddressmapset_addressmap"></a>IDiaAddressMap::set_addressMap
 Fornece um mapa de endereços para dar suporte a traduções de layout de imagem.
@@ -35,7 +35,7 @@ HRESULT set_addressMap ( 
 #### <a name="parameters"></a>Parâmetros
  `cbData`
 
-no O número de elementos no parâmetro `data`.
+no O número de elementos no `data` parâmetro.
 
  `data[]`
 
@@ -43,15 +43,15 @@ no Uma matriz de estruturas de [estrutura DiaAddressMapEntry](../../debugger/deb
 
  `imagetoSymbols`
 
-[in] `TRUE` se o parâmetro `data` define um mapa do layout da nova imagem para o layout original (conforme descrito pelos símbolos de depuração). `FALSE` se `data` é um mapa para o novo layout de imagem obtido do layout original.
+[in] `TRUE` Se o `data` parâmetro definir um mapa do layout da nova imagem para o layout original (conforme descrito pelos símbolos de depuração). `FALSE`Se `data` é um mapa para o novo layout de imagem obtido do layout original.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
- Normalmente, o DIA recupera mapas de conversão de endereços do arquivo de banco de dados do programa (. pdb). Se esses valores estiverem ausentes, o método [IDiaAddressMap:: set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) será chamado duas vezes, uma vez com o parâmetro `imagetoSymbols` definido como `TRUE` e uma vez com o parâmetro `imagetoSymbols` definido como `FALSE`. As traduções do mapa de endereços não podem ser habilitadas usando o método [IDiaAddressMap::P ut_addressmapenabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md) , a menos que ambos os mapas de tradução sejam fornecidos.
+ Normalmente, o DIA recupera mapas de conversão de endereços do arquivo de banco de dados do programa (. pdb). Se esses valores estiverem ausentes, o método [IDiaAddressMap:: set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) será chamado duas vezes, uma vez com o `imagetoSymbols` parâmetro definido como `TRUE` e com o `imagetoSymbols` parâmetro definido como `FALSE` . As traduções do mapa de endereços não podem ser habilitadas usando o método [IDiaAddressMap::p ut_addressMapEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md) , a menos que ambos os mapas de tradução sejam fornecidos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Estrutura DiaAddressMapEntry](../../debugger/debug-interface-access/diaaddressmapentry.md)
 - [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)
 - [IDiaAddressMap::put_addressMapEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Erro: o usuário não pôde executar o procedimento armazenado Sp_enable_sql_debug | Microsoft Docs'
+title: Erro-o usuário não pôde executar o procedimento armazenado sp_enable_sql_debug | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 dev_langs:
 - CSharp
 - VB
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bdc6ecb03572d824f6e3b887090d67be416cdef
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c1da494b5bb8c168775e2183f41113f00d021792
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736545"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460059"
 ---
 # <a name="error-user-could-not-execute-stored-procedure-sp_enable_sql_debug"></a>Erro: o usuário não conseguiu executar o procedimento armazenado sp_enable_sql_debug
 
@@ -29,7 +29,7 @@ A depuração do Procedimento Armazenado sp_enable_sql_debug não pode ser execu
 
 Para obter mais informações, consulte [How to: Set SQL Server Permissions for Debugging](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Como definir permissões de SQL Server para depuração](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)
+- [Como configurar permissões para depuração no SQL Server](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)
 - [Configurando a depuração SQL](/previous-versions/visualstudio/visual-studio-2010/s4sszxst\(v\=vs.100\))

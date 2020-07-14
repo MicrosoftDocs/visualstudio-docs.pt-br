@@ -15,21 +15,21 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 2df740abf25344253627b614fdbd80dce86c7bfa
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: ddfc95d27179f48aef9444819cc0437a3143d5a0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75847479"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539250"
 ---
-# <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065: não acione exceções em locais inesperados
+# <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065: Não acionar exceções em locais inesperados
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|DoNotRaiseExceptionsInUnexpectedLocations|
+|TypeName|DoNotRaiseExceptionsInUnexpectedLocations|
 |CheckId|CA1065|
-|Categoria|Microsoft.Design|
+|Categoria|Microsoft. Design|
 |Alteração Significativa|Sem interrupção|
 
 ## <a name="cause"></a>Causa
@@ -65,24 +65,24 @@ ms.locfileid: "75847479"
 
  As exceções a seguir podem ser geradas de um método Get de propriedade:
 
-- <xref:System.InvalidOperationException?displayProperty=fullName> e todos os derivativos (incluindo <xref:System.ObjectDisposedException?displayProperty=fullName>)
+- <xref:System.InvalidOperationException?displayProperty=fullName>e todos os derivativos (incluindo <xref:System.ObjectDisposedException?displayProperty=fullName> )
 
-- <xref:System.NotSupportedException?displayProperty=fullName> e todos os derivativos
+- <xref:System.NotSupportedException?displayProperty=fullName>e todos os derivativos
 
-- <xref:System.ArgumentException?displayProperty=fullName> (somente de Get indexado)
+- <xref:System.ArgumentException?displayProperty=fullName>(somente de Get indexado)
 
-- <xref:System.Collections.Generic.KeyNotFoundException> (somente de Get indexado)
+- <xref:System.Collections.Generic.KeyNotFoundException>(somente de Get indexado)
 
 ### <a name="event-accessor-methods"></a>Métodos de acessadores de eventos
  Os acessadores de evento devem ser operações simples que não geram exceções. Um evento não deve gerar uma exceção quando você tenta adicionar ou remover um manipulador de eventos.
 
  As exceções a seguir podem ser geradas de um acessador de evento:
 
-- <xref:System.InvalidOperationException?displayProperty=fullName> e todos os derivativos (incluindo <xref:System.ObjectDisposedException?displayProperty=fullName>)
+- <xref:System.InvalidOperationException?displayProperty=fullName>e todos os derivativos (incluindo <xref:System.ObjectDisposedException?displayProperty=fullName> )
 
-- <xref:System.NotSupportedException?displayProperty=fullName> e todos os derivativos
+- <xref:System.NotSupportedException?displayProperty=fullName>e todos os derivativos
 
-- <xref:System.ArgumentException> e derivativos
+- <xref:System.ArgumentException>e derivativos
 
 ### <a name="equals-methods"></a>Métodos iguais
  Os métodos **iguais** a seguir não devem gerar exceções:
@@ -91,18 +91,18 @@ ms.locfileid: "75847479"
 
 - [M:IEquatable.Equals](https://msdn2.microsoft.com/library/ms131190(VS.80).aspx)
 
-  Um método **Equals** deve retornar `true` ou `false` em vez de lançar uma exceção. Por exemplo, se Equals for passado por dois tipos incompatíveis, ele deverá apenas retornar `false` em vez de lançar um <xref:System.ArgumentException>.
+  Um método **Equals** deve retornar `true` ou `false` em vez de lançar uma exceção. Por exemplo, se Equals for passado dois tipos incompatíveis, ele deverá retornar apenas `false` em vez de lançar um <xref:System.ArgumentException> .
 
 ### <a name="gethashcode-methods"></a>Métodos GetHashCode
  Os seguintes métodos **GetHashCode** normalmente não devem gerar exceções:
 
 - <xref:System.Object.GetHashCode%2A>
 
-- [M:IEqualityComparer.GetHashCode(T)](https://msdn2.microsoft.com/library/system.collections.iequalitycomparer.gethashcode.aspx)
+- [M:IEqualityComparer.GetHashCode (T)](https://msdn2.microsoft.com/library/system.collections.iequalitycomparer.gethashcode.aspx)
 
   **GetHashCode** sempre deve retornar um valor. Caso contrário, você pode perder itens na tabela de hash.
 
-  As versões de **GetHashCode** que usam um argumento podem lançar um <xref:System.ArgumentException>. No entanto, **Object. GetHashCode** nunca deve gerar uma exceção.
+  As versões de **GetHashCode** que usam um argumento podem lançar um <xref:System.ArgumentException> . No entanto, **Object. GetHashCode** nunca deve gerar uma exceção.
 
 ### <a name="tostring-methods"></a>Métodos ToString
  O depurador usa <xref:System.Object.ToString%2A?displayProperty=fullName> para ajudar a exibir informações sobre objetos no formato de cadeia de caracteres. Portanto, **ToString** não deve alterar o estado de um objeto e não deve gerar exceções.
@@ -114,7 +114,7 @@ ms.locfileid: "75847479"
  Lançar uma exceção de um finalizador faz com que o CLR fail fast, que destrói o processo. Portanto, gerar exceções em um finalizador sempre deve ser evitado.
 
 ### <a name="dispose-methods"></a>Métodos Dispose
- Um método <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> não deve gerar uma exceção. Dispose é geralmente chamado como parte da lógica de limpeza em uma cláusula `finally`. Portanto, lançar explicitamente uma exceção de Dispose força o usuário a adicionar manipulação de exceção dentro da cláusula `finally`.
+ Um <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> método não deve gerar uma exceção. Dispose é geralmente chamado como parte da lógica de limpeza em uma `finally` cláusula. Portanto, lançar explicitamente uma exceção de Dispose força o usuário a adicionar manipulação de exceção dentro da `finally` cláusula.
 
  O caminho do código **Dispose (false)** nunca deve gerar exceções, pois isso quase sempre é chamado de um finalizador.
 
@@ -133,7 +133,7 @@ ms.locfileid: "75847479"
  É seguro suprimir um aviso dessa regra se a violação tiver sido causada por uma declaração de exceção em vez de uma exceção gerada.
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA2219: não acionar exceções em cláusulas de exceção](../code-quality/ca2219-do-not-raise-exceptions-in-exception-clauses.md)
+ [CA2219: Não acionar exceções em cláusulas de exceção](../code-quality/ca2219-do-not-raise-exceptions-in-exception-clauses.md)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
  [Avisos de design](../code-quality/design-warnings.md)

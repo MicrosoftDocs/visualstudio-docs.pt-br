@@ -6,12 +6,13 @@ ms.author: dominicn
 ms.date: 05/06/2018
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
-ms.openlocfilehash: f62ebe21dcc5eb60927c0bc14617051aba3363e8
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: overview
+ms.openlocfilehash: 5db0cd7a9c1fc21f5b109a3c103a06a35d348755
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74985021"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85938795"
 ---
 # <a name="debugging-with-xamarin"></a>Depuração com Xamarin
 
@@ -80,7 +81,7 @@ Quando um ponto de interrupção for atingido, as Ferramentas de depuração per
 Esses são os quatro botões:
 
 * **Executar** – Inicia a execução do código até o próximo ponto de interrupção.
-* **Step Over** - Isso executará a próxima linha de código. Se a próxima linha for uma chamada de função, Step Over executará a função e interromperá na próxima linha de código *após* a função.
+* Passar **por cima** – isso executará a próxima linha de código. Se a próxima linha for uma chamada de função, passará a executar a função e será interrompido na próxima linha de código *após* a função.
 * **Intervir** – Também executa a próxima linha de código. Se a próxima linha é uma chamada de função, Intervir parará na primeira linha da função, permitindo que você continue a depuração da função linha a linha. Se a próxima linha não for uma função, ela se comportará como Passar.
 * **Sair** – Retorna para a linha na qual a função atual foi chamada.
 

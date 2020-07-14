@@ -5,12 +5,13 @@ author: sayedihashimi
 ms.author: sayedha
 ms.date: 05/30/2019
 ms.assetid: 771C2F8E-46BC-4280-AFE8-ED9D5C7790CE
-ms.openlocfilehash: 5600fd2f0b6d83a3bd27350a4d4f0137ea44ced2
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: b0337f283fe5bb78f2f63e2f3da12eb9f2679450
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75398272"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85939200"
 ---
 # <a name="building-aspnet-core-applications-in-visual-studio-for-mac"></a>Como criar aplicativos ASP.NET Core no Visual Studio para Mac
 
@@ -33,13 +34,13 @@ Neste laboratório, você criará e explorar um aplicativo ASP.NET Core com o Vi
 
 Este laboratório destina-se a desenvolvedores que estão familiarizados com o C#, embora uma ampla experiência não seja necessária.
 
-## <a name="task-1-creating-a-new-aspnet-core-application"></a>Tarefa 1: Criar um novo aplicativo ASP.NET Core
+## <a name="task-1-creating-a-new-aspnet-core-application"></a>Tarefa 1: Criando um novo aplicativo de ASP.NET Core
 
-1. Lançar **o Visual Studio para Mac**.
+1. Iniciar **Visual Studio para Mac**.
 
 2. Selecione **Arquivo > Nova Solução**.
 
-3. Selecione a categoria **.NET Core > Aplicativo** e o modelo **Aplicativo Web ASP.NET Core (C#)**. Clique em **Avançar**.
+3. Selecione a categoria **.NET Core > Aplicativo** e o modelo **Aplicativo Web ASP.NET Core (C#)**. Clique em **Próximo**.
 
     ![](media/netcore-image1.png)
 
@@ -47,7 +48,7 @@ Este laboratório destina-se a desenvolvedores que estão familiarizados com o C
 
     ![](media/netcore-image2.png)
 
-## <a name="task-2-touring-the-solution"></a>Tarefa 2: Visitando a solução
+## <a name="task-2-touring-the-solution"></a>Tarefa 2: Tour pela solução
 
 1. O modelo padrão produzirá uma solução com um único projeto ASP.NET Core chamado **CoreLab**. Expanda o nó do projeto para expor seu conteúdo.
 
@@ -73,11 +74,11 @@ Este laboratório destina-se a desenvolvedores que estão familiarizados com o C
 
     ![](media/netcore-image8.png)
 
-7. Também há uma variedade de arquivos de configuração que servem para gerenciar o projeto, seus pacotes e o aplicativo no runtime. Por exemplo, a [configuração](/aspnet/core/fundamentals/configuration) de aplicativo padrão é armazenada em **appsettings.json**. Aninhado abaixo do arquivo appsettings.json está as **configurações. Arquivo Development.json.** Aqui, você pode substituir algumas/todas essas configurações por ambiente. Visual Studio para Mac irá aninhar arquivos desta maneira usando a mesma lógica que o Visual Studio para Windows, de modo que os arquivos que você precisa acessar com mais freqüência estão na vanguarda. 
+7. Também há uma variedade de arquivos de configuração que servem para gerenciar o projeto, seus pacotes e o aplicativo no runtime. Por exemplo, a [configuração](/aspnet/core/fundamentals/configuration) de aplicativo padrão é armazenada em **appsettings.json**. Aninhado abaixo do appsettings.jsno arquivo é o **appsettings.Development.jsno** arquivo. Aqui, você pode substituir algumas ou todas essas configurações em uma base por ambiente. Visual Studio para Mac aninhará arquivos dessa maneira usando a mesma lógica que o Visual Studio para Windows, para que os arquivos que você precisa acessar com mais frequência estejam no Forefront. 
 
     ![](media/netcore-build-nested.png)
 
-## <a name="task-3-understanding-how-the-application-is-hosted"></a>Tarefa 3: Entender como o aplicativo está hospedado
+## <a name="task-3-understanding-how-the-application-is-hosted"></a>Tarefa 3: entendendo como o aplicativo é hospedado
 
 1. No **Gerenciador de Soluções**, abra **Program.cs**. Esse é o bootstrapper que executará seu aplicativo.
 
@@ -111,7 +112,7 @@ Este laboratório destina-se a desenvolvedores que estão familiarizados com o C
 
     ![](media/netcore-image17.png)
 
-## <a name="task-4-running-and-debugging-the-application"></a>Tarefa 4: Executar e depurar o aplicativo
+## <a name="task-4-running-and-debugging-the-application"></a>Tarefa 4: executando e Depurando o aplicativo
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó do projeto **CoreLab** e selecione **Opções**.
 
@@ -125,7 +126,7 @@ Este laboratório destina-se a desenvolvedores que estão familiarizados com o C
 
     ![](media/netcore-image19.png)
 
-5. Pressione **F5** para construir e executar o aplicativo. Como alternativa, você pode selecionar **Executar > Iniciar Depuração**.
+5. Pressione **F5** para compilar e executar o aplicativo. Como alternativa, você pode selecionar **Executar > Iniciar Depuração**.
 
 6. O Visual Studio para Mac iniciará duas janelas. A primeira é uma janela de console que fornece uma exibição do aplicativo para servidores auto-hospedados.
 
@@ -171,7 +172,7 @@ Este laboratório destina-se a desenvolvedores que estão familiarizados com o C
 
 18. Feche a janela do navegador de teste e o aplicativo de console. Isso interromperá a depuração também.
 
-## <a name="task-5-application-startup-configuration"></a>Tarefa 5: Configuração de inicialização do aplicativo
+## <a name="task-5-application-startup-configuration"></a>Tarefa 5: configuração de inicialização do aplicativo
 
 1. No **Gerenciador de Soluções**, abra **Startup.cs**. Você pode observar alguns rabiscos vermelhos inicialmente, conforme os pacotes NuGet são restaurados em segundo plano e o compilador Roslyn cria um panorama completo das dependências do projeto.
 
@@ -197,7 +198,7 @@ Este laboratório destina-se a desenvolvedores que estão familiarizados com o C
 
     ![](media/netcore-image35.png)
 
-## <a name="task-6-inserting-application-middleware"></a>Tarefa 6: Inserir middleware de aplicativo
+## <a name="task-6-inserting-application-middleware"></a>Tarefa 6: inserindo middleware de aplicativo
 
 1. Localize o método **Configure** na classe **Startup**. É nele em que todo o middleware é configurado para que possa ser inserido no pipeline HTTP e usado para processar cada solicitação ao servidor. Embora esse método seja chamado apenas uma vez, o conteúdo dos métodos (como **UseStaticFiles**) pode ser executado em cada solicitação.
 

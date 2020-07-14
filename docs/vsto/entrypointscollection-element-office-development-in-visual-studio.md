@@ -1,9 +1,9 @@
 ---
-title: '&lt;entryPointsCollection&gt; elemento (desenvolvimento do Office no Visual Studio)'
+title: '&lt;&gt;elemento entryPointsCollection (desenvolvimento do Office no Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -16,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4e877e186538622b3604e850040cbed0b018911d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ffa3c76f0f1afa0c9c445cfaf6f5f92484a73ba7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62951886"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543553"
 ---
-# <a name="ltentrypointscollectiongt-element-office-development-in-visual-studio"></a>&lt;entryPointsCollection&gt; elemento (desenvolvimento do Office no Visual Studio)
-  O `entryPointsCollection` elemento do `vstav3` namespace contém tudo o `entryPoints` elementos associados às soluções do Office.
+# <a name="ltentrypointscollectiongt-element-office-development-in-visual-studio"></a>&lt;&gt;elemento entryPointsCollection (desenvolvimento do Office no Visual Studio)
+  O `entryPointsCollection` elemento do `vstav3` namespace contém todos os `entryPoints` elementos associados às soluções do Office.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,19 +42,19 @@ ms.locfileid: "62951886"
 ```
 
 ## <a name="elements-and-attributes"></a>Elementos e atributos
- O `entryPointsCollection` elemento é necessário e está no `vstav3` namespace. Elementos filho também devem ser neste namespace. Há apenas um `entryPointsCollection` elemento definido em um manifesto de aplicativo.
+ O `entryPointsCollection` elemento é obrigatório e está no `vstav3` namespace. Os elementos filho também devem estar nesse namespace. Há apenas um `entryPointsCollection` elemento definido em um manifesto do aplicativo.
 
  O `entryPointsCollection` elemento não tem atributos.
 
- `entryPointsCollection` tem os seguintes elementos.
+ `entryPointsCollection`tem os elementos a seguir.
 
 ### <a name="entrypoints"></a>entryPoints
- Necessário. A função do `entryPoints` elemento na `vstav3` namespace está definido no [ &#60;pontos de entrada&#62; elemento &#40;desenvolvimento do Office no Visual Studio&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md).
+ Obrigatórios. A função do `entryPoints` elemento no `vstav3` namespace é definida no [elemento&#60;entrypoints&#62; &#40;o desenvolvimento do Office no Visual Studio&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md).
 
-## <a name="document-level-customization-example"></a>Exemplo de personalização no nível de documento
+## <a name="document-level-customization-example"></a>Exemplo de personalização no nível do documento
 
 ### <a name="description"></a>Descrição
- O exemplo de código a seguir ilustra a `entryPointsCollection` elemento em um manifesto de aplicativo para uma solução de nível de documento implantado usando [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Este exemplo de código é parte de um exemplo maior fornecido no [manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).
+ O exemplo de código a seguir ilustra o `entryPointsCollection` elemento em um manifesto de aplicativo para uma solução em nível de documento implantada usando o [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Este exemplo de código faz parte de um exemplo maior fornecido em [manifestos do aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Código
 
@@ -100,7 +100,7 @@ ms.locfileid: "62951886"
 ## <a name="vsto-add-in-example"></a>Exemplo de suplemento do VSTO
 
 ### <a name="description"></a>Descrição
- O exemplo de código a seguir ilustra uma `entryPointsCollection` elemento em um manifesto de aplicativo para uma solução de nível de aplicativo implantado usando [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Este exemplo de código é parte de um exemplo maior fornecido no [manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).
+ O exemplo de código a seguir ilustra um `entryPointsCollection` elemento em um manifesto de aplicativo para uma solução de nível de aplicativo implantada usando o [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Este exemplo de código faz parte de um exemplo maior fornecido em [manifestos do aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Código
 
@@ -122,7 +122,7 @@ ms.locfileid: "62951886"
 ## <a name="multi-project-deployment-example"></a>Exemplo de implantação de vários projetos
 
 ### <a name="description"></a>Descrição
- O exemplo de código a seguir ilustra um `entryPointsCollection` elemento em um manifesto de aplicativo para a implantação de vários projeto com duas soluções do Office. Este exemplo de código é parte de um exemplo maior fornecido no [manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).
+ O exemplo de código a seguir ilustra um `entryPointsCollection` elemento em um manifesto de aplicativo para implantação de vários projetos com duas soluções do Office. Este exemplo de código faz parte de um exemplo maior fornecido em [manifestos do aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Código
 
@@ -177,8 +177,8 @@ ms.locfileid: "62951886"
     </vstav3:entryPointsCollection>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md)
+- [Manifestos do aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md)
 - [Manifestos de implantação para soluções do Office](../vsto/deployment-manifests-for-office-solutions.md)
 - [Manifesto do aplicativo ClickOnce](../deployment/clickonce-application-manifest.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Como: Verificar as configurações de propriedade do IIS | Microsoft Docs'
+title: Como verificar as configurações de Propriedade do IIS | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -19,23 +19,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3dd516151f7a3656da1bae195870e8cc29528cfa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f37a1ee196b14ec1f8c7b03ffc6e6d826ced02d8
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62846422"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348464"
 ---
-# <a name="how-to-verify-iis-property-settings"></a>Como: Verificar as configurações de propriedade do IIS
+# <a name="how-to-verify-iis-property-settings"></a>Como verificar as configurações de propriedade do IIS
 
 Você pode definir as propriedades de um aplicativo Web usando a ferramenta de administração do IIS. Essas propriedades devem ser definidas corretamente para que o aplicativo seja executado, de modo que verificar essas configurações geralmente é uma etapa necessária na solução de problemas.
 
 > [!NOTE]
-> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Redefinir as configurações](../ide/environment-settings.md#reset-settings).
+> As caixas de diálogo e os comandos de menu encontrados podem diferir daqueles descritos na Ajuda, dependendo das configurações ativas ou edição. Para alterar suas configurações, selecione **Importar e Exportar Configurações** no menu **Ferramentas** . Para obter mais informações, confira [Redefinir as configurações](../ide/environment-settings.md#reset-settings).
 
 ## <a name="to-check-iis-settings-for-the-web-application"></a>Para verificar as configurações do IIS para o aplicativo Web
 
-1. Abra o **ferramentas administrativas** janela: Sobre o **inicie** , aponte para **programas**e, em seguida, clique em **ferramentas administrativas**. Se **Ferramentas Administrativas** não aparecer no menu **Programas**, procure no **Painel de Controle**.
+1. Abra a janela **Ferramentas Administrativas**: no menu **Iniciar**, aponte para **Programas** e clique em **Ferramentas Administrativas**. Se **Ferramentas Administrativas** não aparecer no menu **Programas**, procure no **Painel de Controle**.
 
    - No Windows 2000, selecione **Gerenciador de Serviços de Internet**.
 
@@ -59,7 +59,7 @@ Você pode definir as propriedades de um aplicativo Web usando a ferramenta de a
 
    3. Clique em **OK** para fechar a caixa de diálogo **Métodos de Autenticação**.
 
-5. Para um aplicativo do servidor ATL, verifique se o verbo DEBUG está associado à extensão ISAPI. Para obter mais informações, confira [Como: Associar o verbo DEBUG com extensão](https://msdn.microsoft.com/library/50d261d3-4bd4-41c0-b44e-3591086f121e).
+5. Para um aplicativo do servidor ATL, verifique se o verbo DEBUG está associado à extensão ISAPI. Para obter mais informações, consulte [como associar o verbo de depuração com extensão](https://msdn.microsoft.com/library/50d261d3-4bd4-41c0-b44e-3591086f121e).
 
 6. Para um aplicativo do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], verifique se a pasta virtual para o aplicativo tem um Nome de Aplicativo definido no **Gerenciador de IIS (Serviços de Informações da Internet)**, **Gerenciador de Serviços de Internet** ou **Serviços de Informações da Internet**.
 
@@ -77,6 +77,6 @@ Você pode definir as propriedades de um aplicativo Web usando a ferramenta de a
 
 9. Clique em **OK** para fechar a caixa de diálogo **Gerenciador de IIS (Serviços de Informações da Internet)**, **Gerenciador de Serviços de Internet** ou **Serviços de Informações da Internet**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Solução de problemas](../debugger/debugging-web-applications-troubleshooting.md)

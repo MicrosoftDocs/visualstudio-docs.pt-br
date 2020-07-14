@@ -20,29 +20,29 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68149166"
 ---
-1. No computador remoto, localizar e iniciar o **depurador remoto** da **iniciar** menu. 
+1. No computador remoto, localize e inicie o **depurador remoto** no menu **Iniciar** . 
    
-   Se você não tiver permissões administrativas no computador remoto, clique com botão direito do **depurador remoto** aplicativo e selecione **executar como administrador**. Caso contrário, apenas iniciá-lo normalmente.
+   Se você não tiver permissões administrativas no computador remoto, clique com o botão direito do mouse no aplicativo do **depurador remoto** e selecione **Executar como administrador**. Caso contrário, basta iniciá-lo normalmente.
 
-   Se você estiver planejando anexar a um processo que está sendo executado como um administrador ou está em execução em um usuário diferente da conta (como o IIS), clique com botão direito do **depurador remoto** aplicativo e selecione **executar como administrador**. Para obter mais informações, consulte [executar o depurador remoto como um administrador](../remote-debugging-errors-and-troubleshooting.md#run-the-remote-debugger-as-an-administrator).
+   Se você estiver planejando anexar a um processo que está sendo executado como administrador ou que está sendo executado em uma conta de usuário diferente (como o IIS), clique com o botão direito do mouse no aplicativo do **depurador remoto** e selecione **Executar como administrador**. Para obter mais informações, consulte [executar o depurador remoto como administrador](../remote-debugging-errors-and-troubleshooting.md#run-the-remote-debugger-as-an-administrator).
    
-1. Na primeira vez que você inicia o depurador remoto (ou antes você tiver configurado), o **configuração de depuração remota** caixa de diálogo é exibida.  
+1. Na primeira vez que você iniciar o depurador remoto (ou antes de configurá-lo), a caixa de diálogo **configuração de depuração remota** será exibida.  
   
-    ![Configuração do depurador remoto](../media/remotedebuggerconfwizardpage.png "configuração do depurador remoto")  
+    Configuração do depurador(../media/remotedebuggerconfwizardpage.png "remoto") de ![configuração do depurador]remoto  
   
-1. Se a API de serviços de Web do Windows não estiver instalada, o que ocorre apenas no Windows Server 2008 R2, selecione a **instalar** botão.  
+1. Se a API dos serviços Web do Windows não estiver instalada, o que acontece apenas no Windows Server 2008 R2, selecione o botão **instalar** .  
   
-1. Selecione pelo menos um tipo de rede que deseja usar as ferramentas remotas no. Se os computadores estiverem conectados por meio de um domínio, você deve escolher o primeiro item. Se os computadores estiverem conectados por meio de um grupo de trabalho ou um grupo doméstico, escolha o item de segundo ou terceiro conforme apropriado.  
+1. Selecione pelo menos um tipo de rede no qual você deseja usar as ferramentas remotas. Se os computadores estiverem conectados por meio de um domínio, você deverá escolher o primeiro item. Se os computadores estiverem conectados por meio de um grupo de trabalho ou grupos domésticos, escolha o segundo ou terceiro item, conforme apropriado.  
   
-1. Selecione **configurar a depuração remota** para configurar o firewall e iniciar o depurador remoto.  
+1. Selecione **Configurar depuração remota** para configurar o firewall e iniciar o depurador remoto.  
   
-1. Quando a configuração for concluída, o **depurador remoto** janela é exibida.
+1. Quando a configuração estiver concluída, a janela do **depurador remoto** será exibida.
   
-    ![Janela de depurador remoto](../media/remotedebuggerwindow.png "janela do depurador remoto")
+    Janela de depurador(../media/remotedebuggerwindow.png "remoto") da ![janela do depurador remoto]
   
-    O depurador remoto agora está aguardando uma conexão. Use o nome do servidor e porta número mostrado para definir a configuração de conexão remota no Visual Studio.  
+    O depurador remoto agora está aguardando uma conexão. Use o nome do servidor e o número da porta mostrada para definir a configuração de conexão remota no Visual Studio.  
   
-Para interromper o depurador remoto, selecione **arquivo** > **Exit**. Você pode reiniciá-lo partir o **iniciar** menu, ou da linha de comando:  
+Para interromper o depurador remoto, selecione **arquivo**  >  **sair**. Você pode reiniciá-lo no menu **Iniciar** ou na linha de comando:  
   
 ```cmd
 <Remote debugger installation directory>\msvsmon.exe

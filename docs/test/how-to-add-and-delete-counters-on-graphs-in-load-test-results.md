@@ -1,7 +1,7 @@
 ---
 title: Adicionar e excluir contadores em grafos nos resultados do teste de carga
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - load test results graphs, adding counters
 - load test results graph
@@ -11,12 +11,12 @@ ms.assetid: 81536233-1962-40d9-9511-0b4633814d90
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: acb08edf74d3ca35a2449f588976681d679caeb4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2b2cefc56d299c9ec917aea555aec1cd9ca53887
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76115182"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288462"
 ---
 # <a name="how-to-add-and-delete-counters-on-graphs-in-load-test-results"></a>Como adicionar e excluir contadores em gráficos em resultados de teste de carga
 
@@ -26,7 +26,7 @@ Você pode usar o painel **Contadores** para adicionar contadores de desempenho 
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-**Considerações do intervalo de contraamostragem de desempenho**
+**Considerações de intervalo de amostragem do contador de desempenho**
 
 Escolha um valor para a propriedade **Taxa de Amostragem** nas configurações de execução de teste de carga com base na duração do seu teste de carga. Uma taxa de amostragem menor, como o valor padrão de cinco segundos, requer mais espaço no banco de dados dos resultados de testes de carga. Para testes de carga mais longos, aumentar a taxa de amostragem reduzirá a quantidade de dados coletados. Para saber mais, confira [Como especificar a taxa de amostragem](../test/how-to-specify-the-sample-rate-for-a-load-test.md).
 
@@ -39,7 +39,7 @@ Veja algumas diretrizes para taxas de amostragem:
 |8 a 24 horas|30 segundos|
 |> 24 horas|60 segundos|
 
-**Considerações para incluir detalhes de tempo para coletar dados percentis**
+**Considerações para incluir detalhes de tempo para coletar dados de percentil**
 
 Há uma propriedade nas configurações de execução no Editor de Teste de Carga denominada **Armazenamento de detalhes de medição de tempo**. Se a propriedade **Armazenamento de detalhes de medição de tempo** estiver habilitada, o tempo para execução de cada teste, transação e página individual durante o teste de carga será armazenado no repositório de resultados de testes de carga. Isso permite que os 90º e 95º dados de percentil sejam mostrados no **Analisador de Teste de Carga** nas tabelas Testes, Transações e Páginas.
 
@@ -82,7 +82,7 @@ Para saber mais, confira [Como especificar a propriedade de armazenamento dos de
     > [!NOTE]
     > Você também pode optar por colocar um contador de desempenho na legenda, mas não no gráfico, usando o comando **Adicionar contador na legenda**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Analisar resultados do teste de carga na exibição Grafos](../test/analyze-load-test-results-in-the-graphs-view.md)
-- [Como: Criar gráficos personalizados](../test/how-to-create-custom-graphs-in-load-test-results.md)
+- [Como criar gráficos personalizados](../test/how-to-create-custom-graphs-in-load-test-results.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumFrameData::get_Count | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ec182918cccb42cf4d1c3cfdb3ae816aeef97a73
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6b0e14272474724579a34480254e399c92d825f1
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744636"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468339"
 ---
 # <a name="idiaenumframedataget_count"></a>IDiaEnumFrameData::get_Count
 Recupera o número de elementos de dados de quadro.
@@ -35,9 +35,9 @@ HRESULT get_Count ( 
 
 fora Retorna o número de elementos de dados de quadro.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)
 - [IDiaEnumFrameData::Item](../../debugger/debug-interface-access/idiaenumframedata-item.md)

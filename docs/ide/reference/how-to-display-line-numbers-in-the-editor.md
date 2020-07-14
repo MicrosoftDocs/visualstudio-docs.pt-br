@@ -1,7 +1,7 @@
 ---
 title: Exibir números de linhas no código
 ms.date: 03/28/2019
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - line numbers, displaying
 - Code Editor, line numbers
@@ -13,20 +13,20 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5392ad3efaee8a3c29e58bd2b75272e4206215a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ff6e0c50ab41f3d18458c736e48b0a4360b8b286
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75569134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770357"
 ---
-# <a name="how-to-display-line-numbers-in-the-editor"></a>Como: Exibir números de linha no editor
+# <a name="how-to-display-line-numbers-in-the-editor"></a>Como: exibir números de linha no editor
 
 Você pode exibir ou ocultar a numeração de linhas em seu código.
 
 ## <a name="display-line-numbers-in-code"></a>Exibir números de linhas no código
 
-1. Na barra de menus, escolha **Opções de** > **ferramentas**. Expanda o nó **Editor de Texto** e selecione o idioma que você está usando ou **Todos os Idiomas** para ativar os números de linha em todos os idiomas. Ou digite **número de linha** na caixa de pesquisa e escolha **Ativar ou desativar números de linha** dos resultados.
+1. Na barra de menus, escolha **ferramentas**  >  **Opções**. Expanda o nó **Editor de Texto** e selecione o idioma que você está usando ou **Todos os Idiomas** para ativar os números de linha em todos os idiomas. Ou digite **número de linha** na caixa de pesquisa e escolha **Ativar ou desativar números de linha** dos resultados.
 
 2. Marque a caixa de seleção **Números de linha**.
 

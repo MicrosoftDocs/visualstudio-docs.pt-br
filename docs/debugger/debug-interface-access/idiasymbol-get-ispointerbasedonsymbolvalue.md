@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_isPointerBasedOnSymbolValue | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 577c8011-9269-4373-8577-b4822a983724
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a7e7546454ddb60babff757f86aab023ce5bb7d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f0d6e653bbafc09a9182cac743bdc97a23a6c58e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740137"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463291"
 ---
 # <a name="idiasymbolget_ispointerbasedonsymbolvalue"></a>IDiaSymbol::get_isPointerBasedOnSymbolValue
-Especifica se o ponteiro de `this` é baseado em um valor de símbolo.
+Especifica se o `this` ponteiro é baseado em um valor de símbolo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,10 +30,10 @@ HRESULT get_isPointerBasedOnSymbolValue(
 #### <a name="parameters"></a>Parâmetros
  `pRetVal`
 
-fora Um ponteiro para um `BOOL` que especifica se o ponteiro de `this` é baseado em um valor de símbolo.
+fora Um ponteiro para um `BOOL` que especifica se o `this` ponteiro é baseado em um valor de símbolo.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

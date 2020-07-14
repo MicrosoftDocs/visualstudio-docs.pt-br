@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_isMultipleInheritance | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 0aa356a1-5c5c-4ee4-8b48-bae0a2610013
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4eb6e1509a46c4e584e98403439188581df97c10
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 14a9963de56dd02504cb74ed31c6a0ee2d3f08df
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740173"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463340"
 ---
 # <a name="idiasymbolget_ismultipleinheritance"></a>IDiaSymbol::get_isMultipleInheritance
-Especifica se o ponteiro de `this` aponta para um membro de dados com várias heranças.
+Especifica se o `this` ponteiro aponta para um membro de dados com várias heranças.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,10 +30,10 @@ HRESULT get_isMultipleInheritance(
 #### <a name="parameters"></a>Parâmetros
  `pRetVal`
 
-fora Um ponteiro para um `BOOL` que especifica se o ponteiro de `this` aponta para um membro de dados com várias heranças.
+fora Um ponteiro para um `BOOL` que especifica se o `this` ponteiro aponta para um membro de dados com várias heranças.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

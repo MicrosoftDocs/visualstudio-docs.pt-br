@@ -1,7 +1,7 @@
 ---
 title: Estender a funcionalidade de um TableAdapter
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 34a5c1601071a36ca11005503e2f443a72ca3dfe
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 245ea6791fde96c1ff08d43d138c522f43749c6b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586634"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282417"
 ---
 # <a name="extend-the-functionality-of-a-tableadapter"></a>Estender a funcionalidade de um TableAdapter
 
@@ -32,15 +32,15 @@ As classes parciais permitem que o código de uma classe específica seja dividi
 
 ## <a name="locate-tableadapters-in-code"></a>Localizar TableAdapters no código
 
-Embora os TableAdapters sejam projetados com o **Designer de conjunto de dados**, as classes do TableAdapter geradas não são classes aninhadas de <xref:System.Data.DataSet>. Os TableAdapters estão localizados em um namespace com base no nome do DataSet associado do TableAdapter. Por exemplo, se seu aplicativo contiver um conjunto de um DataSet chamado `HRDataSet`, os TableAdapters estarão localizados no namespace `HRDataSetTableAdapters`. (A convenção de nomenclatura segue este padrão: *DatasetName* + `TableAdapters`).
+Embora os TableAdapters sejam projetados com o **Designer de conjunto de dados**, as classes do TableAdapter geradas não são classes aninhadas de <xref:System.Data.DataSet> . Os TableAdapters estão localizados em um namespace com base no nome do DataSet associado do TableAdapter. Por exemplo, se seu aplicativo contiver um conjunto de um DataSet chamado `HRDataSet` , os TableAdapters estarão localizados no `HRDataSetTableAdapters` namespace. (A Convenção de nomenclatura segue este padrão: *DataSetName*  +  `TableAdapters` ).
 
-O exemplo a seguir pressupõe que um TableAdapter chamado `CustomersTableAdapter`está em um projeto com `NorthwindDataSet`.
+O exemplo a seguir pressupõe que um TableAdapter nomeado `CustomersTableAdapter` está em um projeto com `NorthwindDataSet` .
 
 ### <a name="to-create-a-partial-class-for-a-tableadapter"></a>Para criar uma classe parcial para um TableAdapter
 
 1. Adicione uma nova classe ao seu projeto acessando o menu **projeto** e selecionando **Adicionar classe**.
 
-2. Nomeie a classe `CustomersTableAdapterExtended`.
+2. Nome da classe `CustomersTableAdapterExtended`.
 
 3. Selecione **Adicionar**.
 

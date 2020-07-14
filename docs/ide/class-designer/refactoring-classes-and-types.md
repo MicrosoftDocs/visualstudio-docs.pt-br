@@ -1,7 +1,7 @@
 ---
 title: Renomear e mover classes e tipos no Designer de Classe
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.ClassDesigner.OverrideMembersDialog
 helpviewer_keywords:
@@ -19,12 +19,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e060f044af666f5a4357e527819286d3bd87267
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: baf0e9d9d0f4bb45ef965f64c256bd9360af112b
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590742"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768609"
 ---
 # <a name="refactor-classes-and-types-in-class-designer"></a>Refatorar classes e tipos no Designer de Classe
 
@@ -61,7 +61,7 @@ No Designer de Classe, é possível renomear um tipo ou membro de um tipo no dia
 
 2. Na coluna **Nome**, altere o nome do membro de tipo
 
-3. Para afastar o foco da célula, **pressione** a tecla Enter ou clique para longe da célula.
+3. Para mover o foco para fora da célula, pressione a tecla **Enter** ou clique fora da célula.
 
     > [!NOTE]
     > Na janela **Detalhes da Classe**, é possível alterar o nome de um membro, mas não um tipo.

@@ -1,19 +1,19 @@
 ---
 title: Criar um editor de corpo HTTP personalizado para o Editor de Testes de Desempenho Web
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Web performance tests, custom HTTP body editor
 ms.assetid: a0b2d8ff-3e2a-487e-9172-90047174f336
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: efc9a959fa02b62583e7bf366e8c580b2876a4a1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 02faf2a6c495d7fd5566c8f4291ecaad20ef5eb7
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589195"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288137"
 ---
 # <a name="how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor"></a>Como criar um editor de corpo HTTP personalizado para o Editor de Testes de Desempenho Web
 
@@ -39,9 +39,9 @@ Essas interfaces estão contidas no namespace <xref:Microsoft.VisualStudio.TestT
 
 1. Escolha o glifo de marcação de ação (![Glifo de Marcação Inteligente](../test/media/vs_winformsmttagglyph.gif)) no canto superior direito do controle <xref:System.Windows.Forms.RichTextBox> e, em seguida, selecione **Encaixar no Contêiner Pai**.
 
-1. No **Solution Explorer,** clique com o botão direito do mouse no projeto Biblioteca de formulários do Windows e selecione **Propriedades**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto de biblioteca Windows Forms e selecione **Propriedades**.
 
-1. Nas **Propriedades,** selecione a guia **Aplicativo.**
+1. Nas **Propriedades**, selecione a guia **aplicativo** .
 
 1. Na lista suspensa **Estrutura de destino**, selecione .NET Framework 4 (ou posterior).
 
@@ -49,13 +49,13 @@ Essas interfaces estão contidas no namespace <xref:Microsoft.VisualStudio.TestT
 
 1. Escolha **Sim**.
 
-1. No **Solution Explorer,** clique com o botão direito do mouse no nó **Referências** e selecione **Adicionar referência**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no nó **referências** e selecione **Adicionar referência**.
 
 1. A caixa de diálogo **Adicionar Referência** é exibida.
 
 1. Escolha a guia .**NET**, role para baixo e selecione **Microsoft.VisualStudio.QualityTools.WebTestFramework** e clique em **OK**.
 
-1. Se **o View Designer** ainda não estiver aberto, no Solution **Explorer**, clique com o botão direito **do UserControl1.cs** e selecione **'Exibir designer**'.
+1. Se o **Designer de exibição** ainda não estiver aberto, em **Gerenciador de soluções**, clique com o botão direito do mouse em **UserControl1.cs** e selecione **Designer de exibição**.
 
 1. Na superfície de design, clique com o botão direito do mouse e selecione **Exibir Código**.
 
@@ -123,11 +123,11 @@ Quando a edição do corpo da cadeia de caracteres terminar e o usuário clicar 
 
 ### <a name="create-a-class-and-implement-the-istringhttpbodyeditorplugin-interface"></a>Criar uma classe e implementar a interface IStringHttpBodyEditorPlugin
 
-1. No **Solution Explorer,** clique com o botão direito do mouse no projeto Biblioteca de Controle de Formulários do Windows e selecione **Adicionar novo item**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto de biblioteca de controle de Windows Forms e selecione **Adicionar novo item**.
 
    A caixa de diálogo **Adicionar novo item** é exibida.
 
-2. Selecionar **Classe**.
+2. Selecione **classe**.
 
 3. Na caixa de texto **Nome**, digite um nome significativo para a classe, por exemplo, `MessageEditorPlugins`.
 
@@ -264,14 +264,14 @@ Quando a edição do corpo da cadeia de caracteres terminar e o usuário clicar 
 
 ## <a name="build-and-deploy-the-plug-ins"></a>Compilar e implantar os plug-ins
 
-1. No menu **Build**, escolha **Compilar \<nome do projeto da Biblioteca de Controles do Windows Form>**.
+1. No menu **Compilar** , escolha **Compilar \<Windows Form Control Library project name> **.
 
 2. Feche todas as instâncias do Visual Studio.
 
    > [!NOTE]
    > Fechar o Visual Studio garante que o arquivo *.dll* não seja bloqueado antes que você tente copiá-lo.
 
-3. Copie o arquivo *.dll* resultante da pasta *bin\debug* do seu projeto (por exemplo, *MessageEditors.dll*) para *%ProgramFiles%\Microsoft Visual Studio\2017\\\<edition>\Common7\IDE\PrivateAssemblies\WebTestPlugins*.
+3. Copie o arquivo *. dll* resultante da pasta *bin\Debug* do projeto (por exemplo, *MessageEditors.dll*) para *%ProgramFiles%\Microsoft Visual Studio\2017 \\ \<edition> \Common7\IDE\PrivateAssemblies\WebTestPlugins*.
 
 4. Abra o Visual Studio.
 
@@ -283,9 +283,9 @@ Quando a edição do corpo da cadeia de caracteres terminar e o usuário clicar 
 
 2. Crie um teste de desempenho Web e insira uma URL no navegador para um serviço Web.
 
-3. Ao concluir a gravação, no Web Performance Test Editor, expanda a solicitação para o serviço web e selecione um **Corpo de Cordas** ou um Corpo **Binário**.
+3. Quando você concluir a gravação, na Editor de Testes de Desempenho Web, expanda a solicitação para o serviço Web e selecione um **corpo de cadeia de caracteres** ou um **corpo binário**.
 
-4. Na janela **Propriedades,** selecione Corpo de Corda ou Corpo Binário e escolha a elipse **(...)**.
+4. Na janela **Propriedades** , selecione corpo da cadeia de caracteres ou corpo binário e escolha as reticências **(...)**.
 
    A caixa de diálogo **Editar corpo de dados HTTP** é exibida.
 
@@ -297,7 +297,7 @@ Verifique se o framework de destino para o projeto da Biblioteca de Controles do
 
 Para obter mais informações, confira [Página Aplicativo, Designer de Projeto (C#)](../ide/reference/application-page-project-designer-csharp.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin>
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin>
@@ -310,4 +310,4 @@ Para obter mais informações, confira [Página Aplicativo, Designer de Projeto 
 - [Codificar uma regra de validação personalizada para um teste de desempenho Web](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
 - [Como criar um plug-in de teste de carga](../test/how-to-create-a-load-test-plug-in.md)
 - [Gerar e executar um teste de desempenho para Web codificado](../test/generate-and-run-a-coded-web-performance-test.md)
-- [Como: Criar um complemento do Visual Studio para o visualizador de resultados do teste de desempenho da Web](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)
+- [Como: criar um suplemento do Visual Studio para o Visualizador de Resultados de Teste de desempenho da Web](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)

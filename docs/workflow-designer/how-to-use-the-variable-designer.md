@@ -1,7 +1,7 @@
 ---
 title: 'Designer de Fluxo de Trabalho-como: usar o designer de variável'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - System.Activities.Presentation.View.DesignTimeVariable.UI
 ms.assetid: 0318dfb0-bf8f-4f92-9b86-ae4c1b2161ad
@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ec5e6d16d17024b0b49f977b87ddacc275e5860
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f02aab6c5ecf545e0f754f1a88fa7e26a88f206d
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593168"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817405"
 ---
 # <a name="how-to-use-the-variable-designer"></a>Como: Use o designer variável
 
@@ -39,5 +39,5 @@ O designer variável é usado para criar variáveis para uso em cenários e em i
 ## <a name="see-also"></a>Veja também
 
 - [Usando o Designer de Fluxo de Trabalho](developing-applications-with-the-workflow-designer.md)
-- [Variables and Arguments](/dotnet/framework/windows-workflow-foundation/variables-and-arguments) (Variáveis e argumentos)
+- [Variáveis e argumentos](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)
 - [Como usar o designer de argumento](../workflow-designer/how-to-use-the-argument-designer.md)

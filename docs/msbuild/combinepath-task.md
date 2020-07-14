@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 533f87eba9032efa7dc60ac682bbe400cb640727
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f7e6a79198ad54d3432f30fe9b57b3133a94165e
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634429"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288956"
 ---
 # <a name="combinepath-task"></a>Tarefa CombinePath
 
@@ -41,7 +41,33 @@ Combina os caminhos especificados em um único caminho.
 
  Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, confira [Classe base TaskExtension](../msbuild/taskextension-base-class.md).
 
-## <a name="see-also"></a>Confira também
+ O exemplo a seguir mostra como criar uma estrutura de pasta de saída usando `CombinePath` o para construir a propriedade `$(OutputDirectory)` combinando um caminho raiz `$(PublishRoot)` concatenado com `$(ReleaseDirectory)` e uma lista de subpastas `$(LangDirectories)` .
+
+ ```xml
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PublishRoot>C:\Site1\Release</PublishRoot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <LangDirectories Include="en-us\;fr-fr\"/>
+  </ItemGroup>
+
+  <Target Name="CreateOutputDirectories" AfterTargets="Build">
+    <CombinePath BasePath="$(PublishRoot)" Paths="@(LangDirectories)" >
+      <Output TaskParameter="CombinedPaths" ItemName="OutputDirectories"/>
+    </CombinePath>
+    <MakeDir Directories="@(OutputDirectories)" />
+  </Target>
+```
+
+A única propriedade que `CombinePath` permite ser uma lista é `Paths` , caso em que a saída também é uma lista. Portanto, se `$(PublishRoot)` for *C:\Site1 \\ *e `$(ReleaseDirectory)` for *Release \\ *e `@(LangDirectories)` for *en-US \; fr-fr \\ *, este exemplo criará as pastas:
+
+- C:\Site1\Release\en-us\
+- C:\Site1\Release\fr-fr\
+
+## <a name="see-also"></a>Veja também
 
 - [Tarefas](../msbuild/msbuild-tasks.md)
-- [Referência de tarefas](../msbuild/msbuild-task-reference.md)
+- [Referência de tarefa](../msbuild/msbuild-task-reference.md)

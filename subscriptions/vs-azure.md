@@ -5,14 +5,14 @@ ms.author: lank
 manager: lank
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 04/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: Saiba como ativar o benefício de crédito individual do Azure DevTest incluído na sua assinatura do Visual Studio.
-ms.openlocfilehash: 50e784a60dc50232bc390233e2ad80dc91d0f4ab
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 3c529b746d647f0f26306e89c56c73171ba50c1d
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183607"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902915"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Usar o Microsoft Azure nas assinaturas do Visual Studio
 Como assinante do Visual Studio, você pode usar o Microsoft Azure sem custo adicional.  Com o [crédito individual do Azure DevTest mensal](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/), o Azure é sua área restrita pessoal para desenvolvimento/teste.  Você pode provisionar máquinas virtuais, serviços de nuvem e outros recursos do Azure.  Os valores de crédito variam de acordo com o nível da assinatura.
@@ -106,7 +106,7 @@ R: O envio de um incidente de suporte do Portal do Azure é um processo de três
 
 Visite a documentação de [suporte técnico](vs-tech-support.md) para obter detalhes completos.
 
-### <a name="q-how-owns-the-intellectual-property-i-create-using-my-azure-devtest-individual-credit"></a>P: como é proprietário da propriedade intelectual que crio usando meu crédito individual do Azure DevTest?
+### <a name="q-who-owns-the-intellectual-property-i-create-using-my-azure-devtest-individual-credit"></a>P: quem é proprietário da propriedade intelectual que crio usando meu crédito individual do Azure DevTest?
 R: a propriedade intelectual produzida por um funcionário criado nos recursos fornecidos pela empresa é, portanto, a propriedade intelectual da empresa que fornece o recurso. Portanto, se você recebeu sua assinatura do Visual Studio por meio de seu empregador, suas políticas de propriedade intelectual seriam aplicáveis. 
 
 ## <a name="support-resources"></a>Recursos de suporte
@@ -116,7 +116,7 @@ R: a propriedade intelectual produzida por um funcionário criado nos recursos f
 - Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio.
 - Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Documentação do Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Documentação do Azure](https://docs.microsoft.com/azure/)
@@ -126,4 +126,4 @@ R: a propriedade intelectual produzida por um funcionário criado nos recursos f
 Para obter mais informações sobre ferramentas e serviços da Microsoft, confira a documentação do:
 - [Azure](/azure/)
 - [Azure DevOps](/azure/devops/)
-- [Visual Studio IDE](/visualstudio/)
+- [IDE do Visual Studio](/visualstudio/)

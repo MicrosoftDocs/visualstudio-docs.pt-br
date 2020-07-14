@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSymbols::get__NewEnum | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dccfb37d2abe38a9fd1c805f03acd7172ca01af6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d988d40df1033c95b57d916b7d1587deff109254
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743955"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467781"
 ---
 # <a name="idiaenumsymbolsget__newenum"></a>IDiaEnumSymbols::get__NewEnum
-Recupera a versão <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> deste enumerador.
+Recupera a <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> versão deste enumerador.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,10 +33,10 @@ HRESULT get__NewEnum ( 
 #### <a name="parameters"></a>Parâmetros
  pRetVal
 
-fora Retorna a interface de `IUnknown` que representa a versão de <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> deste enumerador.
+fora Retorna a `IUnknown` interface que representa a <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> versão deste enumerador.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

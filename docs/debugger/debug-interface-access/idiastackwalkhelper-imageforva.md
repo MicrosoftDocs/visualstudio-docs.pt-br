@@ -1,7 +1,7 @@
 ---
 title: IDiaStackWalkHelper::imageForVA | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 609a9370181937323f2bc3e8ca0a0765cd1f4a12
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9f28af62a4e5eaa89e92db533bf461dbecaf039d
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741382"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464712"
 ---
 # <a name="idiastackwalkhelperimageforva"></a>IDiaStackWalkHelper::imageForVA
 Retorna o início da imagem de um executável na memória, dado um endereço virtual em algum lugar no espaço de memória do executável.
@@ -40,8 +40,8 @@ no O endereço virtual que está em algum lugar no espaço do executável.
 
 fora Retorna o endereço virtual inicial da imagem do executável.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

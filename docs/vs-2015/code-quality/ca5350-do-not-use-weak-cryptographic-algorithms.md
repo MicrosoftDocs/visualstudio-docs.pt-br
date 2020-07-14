@@ -8,19 +8,19 @@ caps.latest.revision: 11
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b9c2c996c383c8834e44e16f382c14b695c83f26
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: afadf41fc753051047e858758bfe0677987d726d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668992"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545061"
 ---
-# <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: não use algoritmos criptográficos fracos
+# <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: Não usar algoritmos de criptografia fracos
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|DoNotUseWeakCryptographicAlgorithms|
+|TypeName|DoNotUseWeakCryptographicAlgorithms|
 |CheckId|CA5350|
 |Categoria|Microsoft. Cryptography|
 |Alteração Significativa|Sem interrupção|
@@ -29,9 +29,9 @@ ms.locfileid: "72668992"
 > Esse aviso foi atualizado pela última vez em 2015 de novembro.
 
 ## <a name="cause"></a>Causa
- Os algoritmos de criptografia, como <xref:System.Security.Cryptography.TripleDES> e algoritmos de hash, como <xref:System.Security.Cryptography.SHA1> e <xref:System.Security.Cryptography.RIPEMD160>, são considerados fracos.
+ Os algoritmos de criptografia, como <xref:System.Security.Cryptography.TripleDES> e os algoritmos de hash, como <xref:System.Security.Cryptography.SHA1> e <xref:System.Security.Cryptography.RIPEMD160> são considerados fracos.
 
- Esses algoritmos de criptografia não fornecem tanta garantia de segurança quanto as contrapartes mais modernas. Os algoritmos de hash criptográfico <xref:System.Security.Cryptography.SHA1> e <xref:System.Security.Cryptography.RIPEMD160> fornecem menos resistência à colisão do que os algoritmos de hash mais modernos. O algoritmo de criptografia <xref:System.Security.Cryptography.TripleDES> fornece menos bits de segurança do que os algoritmos de criptografia mais modernos.
+ Esses algoritmos de criptografia não fornecem tanta garantia de segurança quanto as contrapartes mais modernas. Algoritmos de hash criptográfico <xref:System.Security.Cryptography.SHA1> e <xref:System.Security.Cryptography.RIPEMD160> fornecem menos resistência à colisão que os mais modernos algoritmos de hash. O algoritmo de criptografia <xref:System.Security.Cryptography.TripleDES> fornece menos bits de segurança do que mais algoritmos de criptografia modernos.
 
 ## <a name="rule-description"></a>Descrição da Regra
  Algoritmos de criptografia fracos e funções de hash são usados hoje por vários motivos, mas não devem ser usados para garantir a confidencialidade dos dados que eles protegem.
@@ -41,9 +41,9 @@ ms.locfileid: "72668992"
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
  Use opções criptograficamente mais fortes:
 
-- Para a criptografia TripleDES, use a criptografia <xref:System.Security.Cryptography.Aes>.
+- Para criptografia TripleDES, use <xref:System.Security.Cryptography.Aes> criptografia.
 
-- Para funções de hash SHA1 ou RIPEMD160, use aquelas na família [SHA-2](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx) (por exemplo, <xref:System.Security.Cryptography.SHA512>, <xref:System.Security.Cryptography.SHA384>, <xref:System.Security.Cryptography.SHA256>).
+- Para funções de hash SHA1 ou RIPEMD160, use aquelas na família [SHA-2](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx) (por exemplo <xref:System.Security.Cryptography.SHA512> , <xref:System.Security.Cryptography.SHA384> , <xref:System.Security.Cryptography.SHA256> ).
 
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
  Suprimir um aviso dessa regra quando o nível de proteção necessário para os dados não exigir uma garantia de segurança.

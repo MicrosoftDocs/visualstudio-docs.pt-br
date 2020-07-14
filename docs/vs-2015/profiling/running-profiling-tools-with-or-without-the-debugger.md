@@ -9,12 +9,12 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b242bd0eec4f7faa3f7a27923de289c494ccf798
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 6fb07e9bc6c308e27e3ad054c5aeb0b12c092054
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298207"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533998"
 ---
 # <a name="running-profiling-tools-with-or-without-the-debugger"></a>Executando ferramentas de criação de perfil com ou sem o depurador
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,12 +38,12 @@ O Visual Studio agora oferece a opção de ferramentas de desempenho, algumas da
   
      Builds de depuração não têm determinadas otimizações que builds de Versão fornecem, como por exemplo, constantes e chamadas de função embutidas, remoção de caminhos de código não utilizados e armazenamento de variáveis de maneiras que não podem ser usadas pelo depurador. O próprio depurador altera os tempos de desempenho, pois ele executa determinadas operações que são necessárias para depuração (por exemplo, interceptar exceções e eventos de módulo de carga). Por isso, os números de desempenho nas ferramentas integradas ao depurador são precisão apenas na faixa de dezenas de milissegundos. Números de desempenho para as configurações de Versão com as ferramentas de não depurador são muito mais precisos.  
   
-## <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Coletar dados de criação de perfil ao depurar  
+## <a name="collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Coletar dados de criação de perfil ao depurar  
  A seção a seguir lida com a depuração local. Você pode descobrir mais sobre a depuração em um dispositivo ou a depuração remota nas próximas seções.  
   
 1. Abra o projeto que você deseja depurar e clique em **Depurar / Iniciar Depuração** (ou **Iniciar** na barra de ferramentas ou **F5**).  
   
-2. A janela **Ferramentas de Diagnóstico** é exibida automaticamente, a menos que tenha sido desativada. Para abrir a janela novamente, clique em **Depurar/Windows/Mostrar Ferramentas de Diagnóstico**.  
+2. A janela de **ferramentas de diagnóstico** aparece automaticamente, a menos que você a tenha desativado. Para abrir a janela novamente, clique em **Depurar/Windows/Mostrar Ferramentas de Diagnóstico**.  
   
 3. Execute os cenários dos quais deseja coletar dados.  
   
@@ -51,7 +51,7 @@ O Visual Studio agora oferece a opção de ferramentas de desempenho, algumas da
   
     O gráfico a seguir mostra a janela **Ferramentas de Diagnóstico** no Visual Studio 2015 Atualização 1:  
   
-    ![DiagnosticTools&#45;atualização1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-Atualização1")  
+    ![DiagnosticTools&#45;Atualização1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-Atualização1")  
   
 4. Você pode optar por ver **Uso de Memória** ou **Utilização de CPU** (ou ambos) com as configurações **Selecionar Ferramentas** na barra de ferramentas. Se você estiver executando o Visual Studio Enterprise, poderá habilitar ou desabilitar o IntelliTrace em **Ferramentas / Opções / IntelliTrace**.  
   
@@ -72,7 +72,7 @@ O Visual Studio agora oferece a opção de ferramentas de desempenho, algumas da
 ## <a name="collect-profiling-data-without-debugging"></a>Coletar dados de criação de perfil sem depuração  
  Algumas ferramentas de criação de perfil requerem privilégios de administrador para serem executadas. Você pode abrir o Visual Studio como administrador ou optar por executar as ferramentas como administrador ao iniciar a sessão de diagnóstico.  
   
-1. {1&gt;Abra o projeto no Visual Studio.&lt;1}  
+1. Abra o projeto no Visual Studio.  
   
 2. No menu **depurar** , escolha **criador de perfil de desempenho...** (tecla de atalho: Alt + F2).  
   
@@ -99,17 +99,17 @@ O Visual Studio agora oferece a opção de ferramentas de desempenho, algumas da
 ## <a name="the-profiling-report"></a>O relatório de criação de perfil  
  ![Relatório de ferramentas de diagnóstico](../profiling/media/diag-report.png "DIAG_Report")  
   
-|||  
+|Imagem|Descrição|  
 |-|-|  
-|![Etapa 1](../profiling/media/procguid-1.png "ProcGuid_1")|{1&gt;A linha de tempo mostra a duração da sessão de criação de perfil, os eventos de ativação de ciclo de vida do aplicativo e as marcas de usuário.&lt;1}|  
-|![Etapa 2](../profiling/media/procguid-2.png "ProcGuid_2")|{1&gt;Você pode restringir o relatório a uma parte da linha do tempo arrastando as barras azuis para selecionar uma região da linha do tempo.&lt;1}|  
-|![Etapa 3](../profiling/media/procguid-3.png "ProcGuid_3")|Uma ferramenta exibe um ou mais gráficos mestres. Se sua sessão de diagnóstico for criada com várias ferramentas, todos os gráficos mestres serão exibidos.|  
-|![Etapa 4](../profiling/media/procguid-4.png "ProcGuid_4")|{1&gt;Você pode recolher e expandir os gráficos individuais.&lt;1}|  
-|![Etapa 5](../profiling/media/procguid-6.png "ProcGuid_6")|{1&gt;Quando seus dados incluem informações de várias ferramentas, os detalhes da ferramenta são coletados sob as guias.&lt;1}|  
+|![Etapa 1](../profiling/media/procguid-1.png "ProcGuid_1")|A linha de tempo mostra a duração da sessão de criação de perfil, os eventos de ativação de ciclo de vida do aplicativo e as marcas de usuário.|  
+|![Etapa 2](../profiling/media/procguid-2.png "ProcGuid_2")|Você pode restringir o relatório a uma parte da linha do tempo arrastando as barras azuis para selecionar uma região da linha do tempo.|  
+|![Etapa 3](../profiling/media/procguid-3.png "ProcGuid_3")|Uma ferramenta exibe um ou mais grafos mestres. Se sua sessão de diagnóstico for criada com várias ferramentas, todos os grafos mestres serão exibidos.|  
+|![Etapa 4](../profiling/media/procguid-4.png "ProcGuid_4")|Você pode recolher e expandir os gráficos individuais.|  
+|![Etapa 5](../profiling/media/procguid-6.png "ProcGuid_6")|Quando seus dados incluem informações de várias ferramentas, os detalhes da ferramenta são coletados sob as guias.|  
 |![Etapa 6](../profiling/media/procguid-6a.png "ProcGuid_6a")|Uma ferramenta poder ter uma ou mais exibições de detalhes. A exibição é filtrada pela região selecionada da linha do tempo.|  
   
 ## <a name="setting-the-analysis-target-to-another-device"></a>Configurando o destino da análise para outro dispositivo  
- Além de iniciar o aplicativo no projeto do Visual Studio, você também pode executar sessões de diagnóstico em destinos alternativos. Por exemplo, você pode diagnosticar problemas de desempenho em uma versão de seu aplicativo que foi instalado por meio da Windows Store.  
+ Além de iniciar o aplicativo a partir do projeto do Visual Studio, você também pode executar sessões de diagnóstico em destinos alternativos. Por exemplo, você pode diagnosticar problemas de desempenho em uma versão de seu aplicativo que foi instalado por meio da Windows Store.  
   
  ![Escolher destino de análise de ferramentas de diagnóstico](../profiling/media/pdhub-chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")  
   

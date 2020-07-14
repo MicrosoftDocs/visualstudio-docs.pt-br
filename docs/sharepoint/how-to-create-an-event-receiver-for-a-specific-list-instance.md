@@ -1,7 +1,7 @@
 ---
-title: 'Como: Criar um receptor de evento para uma instância de lista específica | Microsoft Docs'
+title: 'Como: criar um receptor de eventos para uma instância de lista específica | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,78 +13,77 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 34114c12ef47fb796de7354aa3133af1fc704267
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 54c384742afba3d5af7f08ee62a9ec56c7f1438c
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63408545"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016957"
 ---
-# <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>Como: Criar um receptor de evento para uma instância de lista específica
-  Um receptor de evento da instância de lista responde a eventos que ocorrem em qualquer instância de uma definição de lista. Embora o modelo de receptor de evento não permite o direcionamento de uma instância de lista específica, você pode modificar um receptor de eventos com escopo em uma definição de lista para responder a eventos em uma instância de lista específica.
+# <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>Como: criar um receptor de eventos para uma instância de lista específica
+  Um receptor de eventos de instância de lista responde a eventos que ocorrem em qualquer instância de uma definição de lista. Embora o modelo receptor de eventos não habilite o direcionamento de uma instância de lista específica, você pode modificar um receptor de eventos que tem como escopo uma definição de lista para responder a eventos em uma instância de lista específica.
 
- Usar como destino de uma instância de lista específica, na *Elements. XML* para o receptor de evento, substitua `ListTemplateId` com `ListUrl` e adicione a URL da instância de lista.
+ Para direcionar uma instância de lista específica, no *Elements.xml* para o receptor de evento, substitua `ListTemplateId` por `ListUrl` e adicione a URL da instância da lista.
 
-## <a name="create-a-list-instance-event-receiver"></a>Criar um receptor de evento de instância de lista
- As etapas a seguir mostram como modificar um receptor de evento de item de lista para responder apenas a eventos que ocorrem em uma instância de lista de avisos personalizados.
+## <a name="create-a-list-instance-event-receiver"></a>Criar um receptor de eventos de instância de lista
+ As etapas a seguir mostram como modificar um receptor de evento de item de lista para responder somente a eventos que ocorrem em uma instância de lista de anúncios personalizados.
 
 #### <a name="to-modify-an-event-receiver-to-respond-to-a-specific-list-instance"></a>Para modificar um receptor de eventos para responder a uma instância de lista específica
 
 1. Em um navegador, abra o site do SharePoint.
 
-2. No painel de navegação **lista** link.
+2. No painel de navegação, **liste** link.
 
-3. No **todo o conteúdo do Site** , escolha o **criar** link.
+3. Na página **conteúdo do site inteiro** , escolha o link **criar** .
 
-4. No **Create** caixa de diálogo, escolha o **anúncios** digite, nomeie o comunicado **TestAnnouncements**e, em seguida, escolha o **criar**botão.
+4. Na caixa de diálogo **criar** , escolha o tipo de **comunicados** , nomeie o anúncio **TestAnnouncements**e, em seguida, escolha o botão **criar** .
 
-5. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], criar um projeto de receptor de evento.
+5. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , crie um projeto receptor de eventos.
 
-6. No **que tipo de receptor de eventos você deseja?** , escolha **eventos de Item de lista**.
+6. Na lista **que tipo de receptor de evento você deseja?** , escolha **eventos de item de lista**.
 
     > [!NOTE]
-    > Você também pode selecionar qualquer outro tipo de receptor de evento que tem como escopo a uma definição de lista, por exemplo, **listar eventos de Email** ou **eventos de fluxo de trabalho de lista**.
+    > Você também pode selecionar qualquer outro tipo de receptor de evento que seja escopos para uma definição de lista, por exemplo, **listar eventos de email** ou **listar eventos de fluxo de trabalho**.
 
-7. No **qual item deve ser a origem do evento?** , escolha **anúncios**.
+7. Na lista o **item que deve ser a origem do evento?** , escolha **anúncios**.
 
-8. No **manipular os eventos a seguir** lista, selecione o **um item está sendo adicionado** caixa de seleção e, em seguida, escolha o **concluir** botão.
+8. Na lista **manipular os eventos a seguir** , marque a caixa de seleção **um item está sendo adicionado** e, em seguida, escolha o botão **concluir** .
 
-9. Na **Gerenciador de soluções**, em EventReceiver1, abra *Elements. XML*.
+9. Em **Gerenciador de soluções**, em EventReceiver1, abra *Elements.xml*.
 
-     O receptor de evento atualmente faz referência a definição de lista de anúncios, usando a seguinte linha:
+     Atualmente, o receptor de eventos faz referência à definição da lista de anúncios usando a seguinte linha:
 
     ```xml
     <Receivers ListTemplateId="104">
     ```
 
-     Altere essa linha ao texto a seguir:
+     Altere esta linha para o seguinte texto:
 
     ```xml
     <Receivers ListUrl="Lists/TestAnnouncements">
     ```
 
-     Isso instrui o receptor de eventos para responder apenas a eventos que ocorrem no novo **TestAnnouncements** lista de avisos que você acabou de criar. Você pode alterar o `ListURL` atributo para fazer referência a qualquer instância de lista no servidor do SharePoint.
+     Isso instrui o receptor de eventos a responder somente a eventos que ocorrem na nova lista de anúncios do **TestAnnouncements** que você acabou de criar. Você pode alterar o `ListURL` atributo para fazer referência a qualquer instância de lista no servidor do SharePoint.
 
-10. Abra o arquivo de código para o receptor de evento e colocar um ponto de interrupção no método ItemAdding.
+10. Abra o arquivo de código do receptor de eventos e coloque um ponto de interrupção no método de adição.
 
-11. Escolha o **F5** tecla para compilar e executar a solução.
+11. Escolha a tecla **F5** para compilar e executar a solução.
 
-12. No SharePoint, escolha o **TestAnnouncements** link no painel de navegação.
+12. No SharePoint, escolha o link **TestAnnouncements** no painel de navegação.
 
-13. Escolha o **adicionar novo comunicado** link.
+13. Escolha o link **Adicionar novo comunicado** .
 
-14. Insira um título para o comunicado e, em seguida, escolha o **salvar** botão.
+14. Insira um título para o comunicado e, em seguida, escolha o botão **salvar** .
 
      Observe que o ponto de interrupção é atingido quando o novo item é adicionado à lista de anúncios personalizados.
 
-15. Escolha o **F5** tecla para continuar.
+15. Escolha a tecla **F5** para retomar.
 
-16. No painel de navegação, escolha o **listas** vincular e, em seguida, escolha o **anúncios** link.
+16. No painel de navegação, escolha o link **listas** e, em seguida, escolha o link **anúncios** .
 
-17. Adicione um novo anúncio.
+17. Adicione um novo comunicado.
 
-     Observe que o receptor de evento não disparam no anúncio novo porque o receptor está configurado para responder apenas a eventos na instância de lista de comunicado personalizado, **TestAnnouncements**.
+     Observe que o receptor de eventos não é disparado no novo comunicado porque o receptor está configurado para responder somente a eventos na instância de lista de anúncios personalizada, **TestAnnouncements**.
 
 ## <a name="see-also"></a>Consulte também
-- [Como: Criar um receptor de eventos](../sharepoint/how-to-create-an-event-receiver.md)
+- [Como: criar um receptor de eventos](../sharepoint/how-to-create-an-event-receiver.md)
 - [Desenvolver soluções do SharePoint](../sharepoint/developing-sharepoint-solutions.md)

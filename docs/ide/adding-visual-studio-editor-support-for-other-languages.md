@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 955a968c52c963c8c6f0204f7687de2bd8482260
-ms.sourcegitcommit: c3b6af7367bef67a02c37404534229b935f713a9
+ms.openlocfilehash: 247567030d47a55b29a3fca901e12948ddd85916
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80892769"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533751"
 ---
 # <a name="add-visual-studio-editor-support-for-other-languages"></a>Adicionar suporte para outras linguagens ao editor do Visual Studio
 
@@ -35,14 +35,43 @@ Os recursos no editor do Visual Studio, como colorização de sintaxe, preenchim
 
 No momento, o Visual Studio oferece suporte à colorização de sintaxe e preenchimento de declaração básico para as seguintes linguagens usando [gramáticas TextMate](https://manual.macromates.com/en/language_grammars). Se sua linguagem de programação favorita não estiver na tabela, não se preocupe&mdash;será possível adicioná-la.
 
-|||||||
-|-|-|-|-|-|-|
-|Bat|F#|Java|Markdown|Rust|Visual Basic|
-|Clojure|Go|JavaDoc|Objective-C|ShaderLab|C#|
-|CMake|Groovy|JSON|Perl|ShellScript|Visual C++|
-|CoffeeScript|HTML|LESS|Python|SQL|VBNet|
-|CSS|INI|LUA|R|Swift|XML|
-|Docker|Jade|Faça|Ruby|TypeScript|YAML|
+
+- Bat
+- F#
+- Java
+- Markdown
+- Rust
+- Visual Basic
+- Clojure
+- Go
+- JavaDoc
+- Objective-C
+- ShaderLab
+- C#
+- CMake
+- Groovy
+- JSON
+- Perl
+- ShellScript
+- Visual C++
+- CoffeeScript
+- HTML
+- LESS
+- Python
+- SQL
+- VBNet
+- CSS
+- INI
+- LUA
+- R
+- Swift
+- XML
+- Docker
+- Jade
+- Faça
+- Ruby
+- TypeScript
+- YAML
 
 Além da colorização de sintaxe e do preenchimento de declaração, o Visual Studio também tem um recurso chamado [Navegar até](https://blogs.msdn.microsoft.com/benwilli/2015/04/09/visual-studio-tip-3-use-navigate-to/). Esse recurso permite pesquisar rapidamente arquivos de código, caminhos de arquivo e símbolos de código. O Visual Studio oferece suporte Navegar até para as seguintes linguagens.
 
@@ -76,11 +105,11 @@ Nesse caminho base, adicione as pastas a seguir se forem aplicáveis à sua situ
 
 |Nome da Pasta|Descrição|
 |-----------------|-----------------|
-|\\*\<nome da língua>*|A pasta da linguagem. Substitua o * \<nome do idioma>* com o nome do idioma. Por exemplo, *\Matlab*.|
+|\\*\<language name>*|A pasta da linguagem. Substituir *\<language name>* pelo nome do idioma. Por exemplo, *\Matlab*.|
 |*\Syntaxes*|A pasta da gramática. Contém os arquivos *.json* da gramática para a linguagem, como *Matlab.json*.|
-|*\Trechos*|A pasta de snippets. Contém snippets da linguagem.|
+|*\Snippets*|A pasta de snippets. Contém snippets da linguagem.|
 
-No Windows, *%userprofile%* determina o caminho: *c:\Usuários\\\<nome do usuário >*. Se a pasta *Extensões* não existir em seu sistema, será necessário criá-la. Se a pasta já existir, ela será oculta.
+No Windows, *% USERPROFILE%* é resolvido para o caminho: *c:\Users \\ \<user name> *. Se a pasta *Extensões* não existir em seu sistema, será necessário criá-la. Se a pasta já existir, ela será oculta.
 
 > [!TIP]
 > Se você tiver arquivos abertos no editor, precisará fechá-los e reabri-los para ver o realce de sintaxe depois de adicionar as Gramáticas TextMate.
@@ -92,5 +121,5 @@ Para obter detalhes sobre como criar Gramáticas TextMate, confira [TextMate: in
 - [Adicionar uma extensão do Language Server Protocol](../extensibility/adding-an-lsp-extension.md)
 - [Passo a passo: Para criar um snippet de código](../ide/walkthrough-creating-a-code-snippet.md)
 - [Passo a passo: exibir preenchimento de declaração](../extensibility/walkthrough-displaying-statement-completion.md)
-- [Exemplo de código: TextMate Grammar](https://github.com/microsoft/VSSDK-Extensibility-Samples/tree/master/TextmateGrammar)
-- [Código de exemplo: suporte personalizado ao idioma](https://github.com/microsoft/VSSDK-Extensibility-Samples/tree/master/Ook_Language_Integration)
+- [Código de exemplo: Grammar](https://github.com/microsoft/VSSDK-Extensibility-Samples/tree/master/TextmateGrammar)
+- [Código de exemplo: suporte a idioma personalizado](https://github.com/microsoft/VSSDK-Extensibility-Samples/tree/master/Ook_Language_Integration)

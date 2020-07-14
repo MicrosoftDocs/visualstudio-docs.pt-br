@@ -1,7 +1,7 @@
 ---
-title: 'Como: Determinar o item atual do Outlook de forma programática'
+title: 'Como: determinar programaticamente o item atual do Outlook'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,15 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5566538b428502c8e63e752463b0271daeac2918
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 94d7e16b011b153a43e3d1666451a90b0e44c8b1
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62814813"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547154"
 ---
-# <a name="how-to-programmatically-determine-the-current-outlook-item"></a>Como: Determinar o item atual do Outlook de forma programática
-  Este exemplo usa o `Explorer.SelectionChange` evento para exibir o nome da pasta atual e algumas informações sobre o item selecionado. O código, em seguida, exibe o item selecionado.
+# <a name="how-to-programmatically-determine-the-current-outlook-item"></a>Como: determinar programaticamente o item atual do Outlook
+  Este exemplo usa o `Explorer.SelectionChange` evento para exibir o nome da pasta atual e algumas informações sobre o item selecionado. Em seguida, o código exibe o item selecionado.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -34,9 +34,9 @@ ms.locfileid: "62814813"
 ## <a name="compile-the-code"></a>Compilar o código
  Este exemplo requer:
 
-- Compromisso, contatos e itens de email no Microsoft Office Outlook.
+- Itens de compromisso, contato e email no Microsoft Office Outlook.
 
-## <a name="see-also"></a>Consulte também
-- [Visão geral de modelo de objeto do Outlook](../vsto/outlook-object-model-overview.md)
-- [Como: Recuperar uma pasta por nome de forma programática](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
-- [Como: Pesquisar um contato específico de forma programática](../vsto/how-to-programmatically-search-for-a-specific-contact.md)
+## <a name="see-also"></a>Confira também
+- [Visão geral do modelo de objeto do Outlook](../vsto/outlook-object-model-overview.md)
+- [Como: recuperar programaticamente uma pasta por nome](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
+- [Como: pesquisar programaticamente por um contato específico](../vsto/how-to-programmatically-search-for-a-specific-contact.md)

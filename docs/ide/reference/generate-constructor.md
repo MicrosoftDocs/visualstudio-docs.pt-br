@@ -1,18 +1,18 @@
 ---
 title: Ação rápida de geração de construtor
-ms.date: 01/26/2018
+ms.date: 07/10/2020
 ms.topic: reference
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3c8259841af4511bd782bca1be222353634638f5
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ead3242c348acdf846fb57ec06057cc50c4b1c3b
+ms.sourcegitcommit: 8b1314ceab58e0d562cdbb1367fa738fdca7bf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79301807"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285401"
 ---
 # <a name="generate-a-constructor-in-visual-studio"></a>Gerar um construtor no Visual Studio
 
@@ -31,7 +31,8 @@ Esta geração de código aplica-se a:
 **Como:** há várias maneiras de gerar um construtor:
 
 - [Gerar construtor e selecionar membros](#pick)
-- [Gerar construtor a partir de campos selecionados](#selection)
+- [Gerar Construtor com propriedades](#with)
+- [Gerar Construtor a partir dos campos selecionados](#selection)
 - [Gerar construtor desde uma nova utilização](#usage)
 - [Adicionar o parâmetro ao construtor existente](#addparameter)
 - [Criar e inicializar o campo/propriedade de um parâmetro de construtor](#create)
@@ -45,10 +46,10 @@ Esta geração de código aplica-se a:
 1. Depois, siga um destes procedimentos:
 
    - **Teclado**
-      - Pressione **Ctrl**+**.** para acionar o menu **Ações e Refatorações Rápidas**.
+      - Pressione **Ctrl** + **.** para acionar o menu **Ações e Refatorações Rápidas**.
    - **Mouse**
       - Clique com o botão direito do mouse e selecione o menu **Ações Rápidas e Refatorações**.
-      - Clique no ícone de ![chave de fenda](media/screwdriver.png) ícone que aparece na margem esquerda quando o cursor de texto já está na linha vazia na classe.
+      - Clique no botão ![chave de fenda](media/screwdriver.png) ícone que aparece na margem esquerda quando o cursor de texto já está na linha vazia na classe.
 
    ![Visualização da geração do construtor](media/constructor1-preview-cs.png)
 
@@ -56,7 +57,7 @@ Esta geração de código aplica-se a:
 
    A caixa de diálogo **Selecionar membros** abre.
 
-1. Selecione os membros que você deseja incluir como parâmetros do construtor. Você pode ordená-los usando as setas para cima e para baixo. Escolha **OK**.
+1. Selecione os membros que você deseja incluir como parâmetros do construtor. Você pode ordená-los usando as setas para cima e para baixo. Selecione **OK**.
 
    ![Caixa de diálogo Escolher membros](media/constructor1-dialog-cs.png)
 
@@ -67,6 +68,16 @@ Esta geração de código aplica-se a:
 
    ![Resultado da geração do construtor](media/constructor1-result-cs.png)
 
+## <a name="generate-constructor-with-properties-c-only"></a><a id = "with"></a>Gerar Construtor com Propriedades (somente C#)
+
+1. Coloque o cursor na instância.
+
+2. Pressione **Ctrl** + **.** para acionar o menu **Ações e Refatorações Rápidas**.
+
+3. Selecione **gerar Construtor em `<QualifiedName>` (com propriedades)**.
+
+   ![Visualização da geração do construtor](media/generate-constructor-with-properties.png)
+
 ## <a name="generate-constructor-from-selected-fields-c-only"></a><a id="selection"></a> Gerar construtor usando campos selecionados (somente C#)
 
 1. Realce os membros que você deseja inserir no construtor gerado:
@@ -76,10 +87,10 @@ Esta geração de código aplica-se a:
 1. Depois, siga um destes procedimentos:
 
    - **Teclado**
-      - Pressione **Ctrl**+**.** para acionar o menu **Ações e Refatorações Rápidas**.
+      - Pressione **Ctrl** + **.** para acionar o menu **Ações e Refatorações Rápidas**.
    - **Mouse**
       - Clique com o botão direito do mouse e selecione o menu **Ações Rápidas e Refatorações**.
-      - Clique no ícone de ![chave de fenda](media/screwdriver.png) ícone que aparece na margem esquerda quando o cursor de texto já está na linha com a seleção.
+      - Clique no botão ![chave de fenda](media/screwdriver.png) ícone que aparece na margem esquerda quando o cursor de texto já está na linha com a seleção.
 
       ![Visualização da geração do construtor](media/constructor2-preview-cs.png)
 
@@ -104,11 +115,11 @@ Esta geração de código aplica-se a:
 2. Depois, siga um destes procedimentos:
 
    - **Teclado**
-      - Pressione **Ctrl**+**.** para acionar o menu **Ações e Refatorações Rápidas**.
+      - Pressione **Ctrl** + **.** para acionar o menu **Ações e Refatorações Rápidas**.
    - **Mouse**
       - Clique com o botão direito do mouse e selecione o menu **Ações Rápidas e Refatorações**.
       - Passe o mouse sobre o rabisco vermelho e clique no ícone de ![lâmpada de erro](media/error-bulb.png) ícone que aparece.
-      - Clique no ícone de ![lâmpada de erro](media/error-bulb.png) ícone que aparece na margem esquerda quando o cursor de texto já está na linha com o rabisco vermelho.
+      - Clique no botão ![lâmpada de erro](media/error-bulb.png) ícone que aparece na margem esquerda quando o cursor de texto já está na linha com o rabisco vermelho.
 
       ![Visualização da geração do construtor](media/constructor-preview-cs.png)
 
@@ -138,11 +149,11 @@ Esta geração de código aplica-se a:
 3. Depois, siga um destes procedimentos:
 
    - **Teclado**
-      - Pressione **Ctrl**+**.** para acionar o menu **Ações e Refatorações Rápidas**.
+      - Pressione **Ctrl** + **.** para acionar o menu **Ações e Refatorações Rápidas**.
    - **Mouse**
       - Clique com o botão direito do mouse e selecione o menu **Ações Rápidas e Refatorações**.
       - Passe o mouse sobre o rabisco vermelho e clique no ícone de ![lâmpada de erro](media/error-bulb.png) ícone que aparece.
-      - Clique no ícone de ![lâmpada de erro](media/error-bulb.png) ícone que aparece na margem esquerda quando o cursor de texto já está na linha com o rabisco vermelho.
+      - Clique no botão ![lâmpada de erro](media/error-bulb.png) ícone que aparece na margem esquerda quando o cursor de texto já está na linha com o rabisco vermelho.
 
       ![Visualização da geração do construtor](media/constructor4-preview-cs.png)
 
@@ -165,10 +176,10 @@ Também é possível adicionar um parâmetro a um método existente. Para saber 
 1. Depois, siga um destes procedimentos:
 
    - **Teclado**
-      - Pressione **Ctrl**+**.** para acionar o menu **Ações e Refatorações Rápidas**.
+      - Pressione **Ctrl** + **.** para acionar o menu **Ações e Refatorações Rápidas**.
    - **Mouse**
       - Clique com o botão direito do mouse e selecione o menu **Ações Rápidas e Refatorações**.
-      - Clique no ícone de ![chave de fenda](media/screwdriver.png) ícone que aparece na margem esquerda quando o cursor de texto já está na linha com o parâmetro adicionado.
+      - Clique no botão ![chave de fenda](media/screwdriver.png) ícone que aparece na margem esquerda quando o cursor de texto já está na linha com o parâmetro adicionado.
 
    ![Visualização da geração do construtor](media/constructor5-preview-cs.png)
 

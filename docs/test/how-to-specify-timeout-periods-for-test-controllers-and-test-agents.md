@@ -1,7 +1,7 @@
 ---
 title: Períodos de tempo limite para controladores de teste e agentes de teste
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - agents, configuring
 - agetns, timeouts
@@ -11,12 +11,12 @@ ms.assetid: 777d0db5-0073-458a-a2a3-58b1c1f24c60
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 64ce566369f2c60a52e9026e8f92fc30836d523c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 7b06dc7d363cefd568a6e1432582744f486fa222
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594754"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287279"
 ---
 # <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>Como especificar períodos de tempo limite para controladores e agentes de teste
 
@@ -46,7 +46,7 @@ Para editar várias configurações de tempo limite de um controlador de teste o
 
 ## <a name="to-specify-agent-timeout-options-for-a-test-controller"></a>Para especificar opções de tempo limite de agente para um controlador de teste
 
-1. Abra o arquivo de configuração *QTCcontroller.exe.config* XML localizado em *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE*.
+1. Abra o arquivo de configuração XML *QTCcontroller.exe.config* localizado em *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE*.
 
 2. Localize a marcação `<appSettings>`.
 
@@ -80,7 +80,7 @@ Para editar várias configurações de tempo limite de um controlador de teste o
 
 ## <a name="to-specify-agent-timeout-options-for-a-test-agent"></a>Para especificar opções de tempo limite de agente para um agente de teste
 
-1. Abra o arquivo de configuração *QTAgentService.exe.config* XML localizado em *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE*.
+1. Abra o arquivo de configuração XML *QTAgentService.exe.config* localizado em *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE*.
 
 2. Localize a marcação `<appSettings>`.
 
@@ -112,9 +112,9 @@ Para editar várias configurações de tempo limite de um controlador de teste o
     </appSettings>
     ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Instalar e configurar agentes de teste](../test/lab-management/install-configure-test-agents.md)
 - [Modificar configurações de registro em log de testes de carga](../test/modify-load-test-logging-settings.md)
 - [Configurar portas para controladores e agentes de teste](../test/configure-ports-for-test-controllers-and-test-agents.md)
-- [Como: Vincular um controlador de teste ou agente de teste a um adaptador de rede](../test/how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter.md)
+- [Como associar um controlador de teste ou um agente de teste a um adaptador de rede](../test/how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter.md)

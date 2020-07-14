@@ -9,14 +9,15 @@ ms.author: sayedha
 manager: unniravindranathan
 ms.prod: visual-studio-mac
 ms.custom: video
+ms.topic: how-to
 ms.workload:
 - azure
-ms.openlocfilehash: e4ce4273b72a57a2b9456974a108809dcd73b4e0
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 81ae8c8dde91655a4b9b3b8dcb4d0033af34e4d5
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "70222726"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950508"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio-for-mac"></a>Publicar um aplicativo Web no Serviço de Aplicativo do Azure usando o Visual Studio para Mac
 

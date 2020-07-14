@@ -2,7 +2,7 @@
 title: Usar o PyLint para o código Python
 description: Execute o PyLint no Visual Studio para verificar problemas no código Python, incluindo opções de linha de comando para personalizar o linting.
 ms.date: 03/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: bf503cff7d8de2c00a93385113de05de00059390
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d410fd7575b6f71f272f6924d15249f89aa6ebcc
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62956792"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540095"
 ---
 # <a name="use-pylint-to-check-python-code"></a>Usar o PyLint para verificar o código do Python
 
@@ -29,7 +29,7 @@ Basta clicar com o botão direito do mouse em um projeto Python no **Gerenciador
 
 Usando esses prompts de comando você instala o PyLint no ambiente ativo se ele ainda não estiver presente.
 
-Avisos e erros de PyLint aparecem na janela **Lista de erros:**
+Os avisos e os erros do PyLint aparecem na janela de **lista de erros** :
 
 ![Lista de erros do PyLint](media/code-pylint-error-list.png)
 
@@ -50,7 +50,7 @@ Por exemplo, para suprimir os avisos “docstring ausente” mostrados na imagem
    pylint --generate-rcfile > .pylintrc
    ```
 
-1. No Visual Studio Solution Explorer, clique com o botão direito do mouse no projeto, **selecione Adicionar** > **item existente,** navegue até o novo arquivo *.pylintrc,* selecione-o e selecione **Adicionar**.
+1. No Visual Studio Gerenciador de soluções, clique com o botão direito do mouse em seu projeto, selecione **Adicionar**  >  **Item existente**, navegue até o novo arquivo *. pylintrc* , selecione-o e selecione **Adicionar**.
 
 1. Abra o arquivo para edição, que contém várias configurações com as quais você pode trabalhar. Para desabilitar um aviso, localize a seção `[MESSAGES CONTROL]` e, em seguida, localize a configuração `disable` nessa seção. Há uma longa cadeia de mensagens específicas, à qual é possível acrescentar os avisos desejados. Neste exemplo, acrescente `,missing-docstring` (incluindo a vírgula delimitadora).
 

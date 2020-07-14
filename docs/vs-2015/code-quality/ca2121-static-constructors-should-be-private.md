@@ -15,19 +15,19 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9f28c1dadaef2dc88a3d728322dee1053ccdd69c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7f95b33e1391ca755a6c0df261fa2bd05bd3c7a0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663073"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544307"
 ---
-# <a name="ca2121-static-constructors-should-be-private"></a>CA2121: os construtores estáticos devem ser privados
+# <a name="ca2121-static-constructors-should-be-private"></a>CA2121: Construtores estáticos devem ser particulares
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|StaticConstructorsShouldBePrivate|
+|TypeName|StaticConstructorsShouldBePrivate|
 |CheckId|CA2121|
 |Categoria|Microsoft.Security|
 |Alteração Significativa|Quebra|
@@ -38,7 +38,7 @@ ms.locfileid: "72663073"
 ## <a name="rule-description"></a>Descrição da Regra
  Um construtor estático, também conhecido como Construtor de classe, é usado para inicializar um tipo. O sistema chama o construtor estático antes que a primeira instância do tipo seja criada ou que outros membros estáticos sejam referenciados. O usuário não tem controle sobre quando o construtor estático é chamado. Se não for privado, um construtor estático poderá ser chamado por um código diferente do sistema. Dependendo das operações realizadas no construtor, isso pode causar um comportamento inesperado.
 
- Essa regra é imposta pelos compiladores C# e Visual Basic .net.
+ Essa regra é imposta pelos compiladores C# e Visual Basic .NET.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
  As violações geralmente são causadas por uma das seguintes ações:

@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_nested | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 16bbc876f3fcafea0c542daec02dbc8a108f203a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a9f2fda5fb6effff1d528ac3c98d84b670ea2c09
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739774"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462850"
 ---
 # <a name="idiasymbolget_nested"></a>IDiaSymbol::get_nested
 Recupera um sinalizador que especifica se o tipo de dados definido pelo usuário está aninhado.
@@ -33,13 +33,13 @@ HRESULT get_nested ( 
 #### <a name="parameters"></a>Parâmetros
  `pRetVal`
 
-fora Retorna `TRUE` se o tipo de dados definido pelo usuário estiver aninhado; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se o tipo de dados definido pelo usuário está aninhado; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
-> Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
+> Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -60,12 +60,12 @@ caps.latest.revision: 46
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8793dd08a5ed4aaf83c1ddd52948db4c8b22034b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: aa647d8a8d52588481d18347cb3400141978bd20
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662631"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548025"
 ---
 # <a name="writing-code-in-the-code-and-text-editor"></a>Escrevendo código no editor de códigos e de texto
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -73,7 +73,7 @@ O editor do Visual Studio fornece muitos recursos que tornam mais fácil para vo
 
  Você pode exibir seu código de várias maneiras diferentes. Para ver um modo de exibição de classe de sua solução, você pode abrir a janela **Modo de Exibição de Classe** ou expandir os nós no **Gerenciador de Soluções** em seus arquivos de classe.
 
- Você pode pesquisar e substituir texto para um ou vários arquivos. Para obter mais informações, consulte [Localizando e substituindo texto](../ide/finding-and-replacing-text.md). Se você usar expressões regulares, observe que localizar e substituir agora usa expressões regulares do .NET. Para obter mais informações, consulte [Usando expressões regulares no Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
+ Você pode pesquisar e substituir texto para um ou vários arquivos. Para obter mais informações, consulte [localizando e substituindo texto](../ide/finding-and-replacing-text.md). Se você usar expressões regulares, observe que localizar e substituir agora usa expressões regulares do .NET. Para obter mais informações, consulte [Usando expressões regulares no Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
 
  As diferentes linguagens do Visual Studio oferecem conjuntos de recursos diferentes e, em alguns casos, os recursos se comportam de forma diferente nas diferentes linguagens. Muitas dessas diferenças são especificadas nas descrições dos recursos, mas para obter mais informações, consulte as seções sobre as linguagens específicas do Visual Studio.
 
@@ -82,23 +82,23 @@ O editor do Visual Studio fornece muitos recursos que tornam mais fácil para vo
 
 ## <a name="editor-features"></a>Recursos do Editor
 
-|||
+|Recurso|Descrição|
 |-|-|
 |Coloração de sintaxe|Alguns elementos de sintaxe dos arquivos de código e de marcação são coloridos de maneiras diferentes para diferenciá-los. Por exemplo, palavras-chave (como `using` no C# e `Imports` no Visual Basic) são de uma cor, mas tipos (como `Console` e `Uri`) são de outra cor. Outros elementos de sintaxe também são coloridos, como comentários e literais de cadeia de caracteres. O C++ usa cores para fazer diferenciação entre tipos, enumerações e macros, entre outros tokens.<br /><br /> Você pode ver a cor padrão de cada tipo e pode alterar a cor de qualquer elemento de sintaxe específico na [caixa de diálogo Fontes e Cores, Ambiente, Opções](../ide/reference/fonts-and-colors-environment-options-dialog-box.md), que pode ser aberta no menu **Ferramentas**.|
-|Marcas de Erro e Aviso|Enquanto adiciona código e compila sua solução, você pode ver: (a)sublinhados ondulados de cores diferentes (conhecidos como rabiscos) ou (b) lâmpadas que aparecem em seu código. Rabiscos vermelhos indicam erros de sintaxe, azul indica erros de compilador, verde indica avisos e roxo indica outros tipos de erros. [As lâmpadas](../ide/perform-quick-actions-with-light-bulbs.md) sugerem correções para problemas e facilitam a aplicação da correção.<br /><br /> Você pode ver a cor padrão de cada rabisco de erro e de aviso na caixa de diálogo **Ferramentas/Opções/Ambiente/Fontes e Cores**. Procure por **Erro de Sintaxe**, **Erro do Compilador**, **Aviso** e **Outro Erro**.|
-|Correspondência de chave|Quando o ponto de inserção é colocado em uma chave de abertura em um arquivo de código, essa chave de abertura e a chave de fechamento são realçadas. Esse recurso fornece comentários imediatos sobre chaves no local incorreto ou ausentes. Você pode ativar ou desativar a correspondência de chaves com a configuração **Realce automático de delimitadores** (**Ferramentas/Opções/Editor de Texto**). Você pode alterar a cor do realce na configuração **Fontes e Cores** (**Ferramentas/Opções/Ambiente**). Procure **Correspondência de Chaves (Realce)** ou **Correspondência de Chaves (Retângulo)** .|
-|Números de Linha|Os números de linha podem ser exibidos na margem esquerda da janela de código. Eles não são exibidos por padrão. Você poderá ativar essa opção nas configurações **Todas as Linguagens do Editor de Texto** (**Ferramentas/Opções/Editor de Texto/Todas as Linguagens**). Você pode exibir números de linha para linguagens de programação individuais, alterando as configurações para essas linguagens (**Ferramentas/Opções/Editor de Texto/\<linguagem>** ). Para imprimir os números de linha é necessário selecionar Incluir números de linha na caixa de diálogo **Imprimir**.|
-|Controle de Alterações|A cor da margem esquerda permite que você mantenha o controle das alterações feitas em um arquivo. As alterações que foram feitas desde que o arquivo foi aberto mas não foram salvas são indicadas por uma barra amarela na margem esquerda (conhecida como a margem de seleção). Depois de salvar as alterações (mas antes de fechar o arquivo), a barra ficará verde. Se você desfizer uma alteração depois de salvar o arquivo, a barra ficará laranja. Para desativar e ativar esse recurso, altere a opção **Controlar Alterações** nas configurações **Editor de Texto** (**Ferramentas/Opções/Editor de Texto**).|
-|Seleção de código e texto|É possível selecionar texto no modo padrão de fluxo contínuo ou no modo de caixa, no qual você seleciona uma parte retangular do texto em vez de um conjunto de linhas. Para fazer uma seleção no modo de caixa, pressione a tecla ALT enquanto arrasta o mouse sobre a seleção (ou pressione ALT + SHIFT + \<tecla de direção>). A seleção inclui todos os caracteres dentro do retângulo definido pelo primeiro caractere e o último caractere na seleção. Tudo que é digitado ou colado na área selecionada é inserido no mesmo ponto em cada linha.|
-|Aplicar Zoom|Você pode ampliar ou reduzir em qualquer janela de código pressionando a tecla CTRL e, mantendo-a pressionada, mover a roda de rolagem do mouse (ou CTRL + SHIFT +. para aumentar e CTRL + SHIFT +, para diminuir). Você também pode usar a caixa de Zoom no canto inferior esquerdo da janela de código para definir um percentual específico de aplicação de zoom. O recurso de aplicar zoom não funciona em janelas de ferramentas.|
-|Espaço virtual|Por padrão, as linhas nos editores do Visual Studio terminam após o último caractere de forma que a tecla SETA PARA A DIREITA, ao final de uma linha, move o cursor para o início da próxima linha. Em alguns editores uma linha não termina depois do último caractere e é possível colocar o cursor em qualquer lugar na linha. Você pode habilitar o espaço virtual no editor nas configurações **Ferramentas/Opções/Editor de Texto/Todas as Linguagens**. Observe que você pode habilitar **Espaço virtual** ou **Quebra automática de linha**, mas não ambos.|
-|Imprimindo|Você pode usar as opções da caixa de diálogo **Imprimir** para incluir números de linha ou ocultar regiões de código recolhidas ao imprimir um arquivo. Na caixa de diálogo **Configuração de Página** também é possível imprimir o caminho completo e o nome do arquivo, escolhendo **Cabeçalho de Página**.<br /><br /> Você pode definir opções de impressão a cores na caixa de diálogo **Ferramentas/Opções/Ambiente/Fontes e Cores**. Escolha **Impressora** na lista **Mostrar configurações de** para personalizar a impressão a cores. Você pode especificar cores para imprimir um arquivo diferentes das cores para edição de um arquivo.|
+|Marcas de Erro e Aviso|Enquanto adiciona código e compila sua solução, você pode ver: (a)sublinhados ondulados de cores diferentes (conhecidos como rabiscos) ou (b) lâmpadas que aparecem em seu código. Rabiscos vermelhos indicam erros de sintaxe, azul indica erros de compilador, verde indica avisos e roxo indica outros tipos de erros. [As lâmpadas](../ide/perform-quick-actions-with-light-bulbs.md) sugerem correções para problemas e facilitam a aplicação da correção.<br /><br /> Você pode ver a cor padrão de cada erro e aviso rabiscar na caixa de diálogo **ferramentas/opções/ambiente/fontes e cores** . Procure por **Erro de Sintaxe**, **Erro do Compilador**, **Aviso** e **Outro Erro**.|
+|Correspondência de chave|Quando o ponto de inserção é colocado em uma chave de abertura em um arquivo de código, essa chave de abertura e a chave de fechamento são realçadas. Esse recurso fornece comentários imediatos sobre chaves no local incorreto ou ausentes. Você pode ativar ou desativar a correspondência de chaves com a configuração de **realce de delimitador automático** (**ferramentas/opções/editor de texto**). Você pode alterar a cor de realce na configuração **fontes e cores** (**ferramentas/opções/ambiente**). Procure **Correspondência de Chaves (Realce)** ou **Correspondência de Chaves (Retângulo)**.|
+|Números de Linha|Os números de linha podem ser exibidos na margem esquerda da janela de código. Eles não são exibidos por padrão. Você pode ativar essa opção no editor de **texto todas** as configurações de idiomas (**ferramentas/opções/editor de texto/todos os idiomas**). Você pode exibir números de linha para linguagens de programação individuais alterando as configurações para esses idiomas (**ferramentas/opções/ \<language> Editor de texto/**). Para imprimir os números de linha é necessário selecionar Incluir números de linha na caixa de diálogo **Imprimir**.|
+|Controle de Alterações|A cor da margem esquerda permite que você mantenha o controle das alterações feitas em um arquivo. As alterações que foram feitas desde que o arquivo foi aberto mas não foram salvas são indicadas por uma barra amarela na margem esquerda (conhecida como a margem de seleção). Depois de salvar as alterações (mas antes de fechar o arquivo), a barra ficará verde. Se você desfizer uma alteração depois de salvar o arquivo, a barra ficará laranja. Para desativar e ativar esse recurso, altere a opção **controlar alterações** nas configurações do **Editor de texto** (**ferramentas/opções/editor de texto**).|
+|Seleção de código e texto|É possível selecionar texto no modo padrão de fluxo contínuo ou no modo de caixa, no qual você seleciona uma parte retangular do texto em vez de um conjunto de linhas. Para fazer uma seleção no modo de caixa, pressione ALT ao arrastar o mouse sobre a seleção (ou pressione ALT + SHIFT + \<arrow key> ). A seleção inclui todos os caracteres dentro do retângulo definido pelo primeiro caractere e o último caractere na seleção. Tudo que é digitado ou colado na área selecionada é inserido no mesmo ponto em cada linha.|
+|Zoom|Você pode ampliar ou reduzir em qualquer janela de código pressionando a tecla CTRL e, mantendo-a pressionada, mover a roda de rolagem do mouse (ou CTRL + SHIFT +. para aumentar e CTRL + SHIFT +, para diminuir). Você também pode usar a caixa de Zoom no canto inferior esquerdo da janela de código para definir um percentual específico de aplicação de zoom. O recurso de aplicar zoom não funciona em janelas de ferramentas.|
+|Espaço virtual|Por padrão, as linhas nos editores do Visual Studio terminam após o último caractere de forma que a tecla SETA PARA A DIREITA, ao final de uma linha, move o cursor para o início da próxima linha. Em alguns editores uma linha não termina depois do último caractere e é possível colocar o cursor em qualquer lugar na linha. Você pode habilitar o espaço virtual no editor nas configurações de **ferramentas/opções/editor de texto/todas as linguagens** . Observe que você pode habilitar **Espaço virtual** ou **Quebra automática de linha**, mas não ambos.|
+|Imprimindo|Você pode usar as opções da caixa de diálogo **Imprimir** para incluir números de linha ou ocultar regiões de código recolhidas ao imprimir um arquivo. Na caixa de diálogo **Configuração de Página** também é possível imprimir o caminho completo e o nome do arquivo, escolhendo **Cabeçalho de Página**.<br /><br /> Você pode definir opções de impressão de cores na caixa de diálogo **ferramentas/opções/ambiente/fontes e cores** . Escolha **Impressora** na lista **Mostrar configurações de** para personalizar a impressão a cores. Você pode especificar cores para imprimir um arquivo diferentes das cores para edição de um arquivo.|
 |Desfazer global e Refazer|O comandos **Desfazer Última Ação Global** e **Refazer Última Ação Global** no menu **Editar** desfazem ou refazem ações globais que afetam vários arquivos. As ações globais incluem renomeação de uma classe ou namespace, executar uma operação de localização e substituição em uma solução, refatoração de um banco de dados ou qualquer outra ação que altera vários arquivos. Você pode aplicar os comandos desfazer e refazer global para ações na sessão atual do Visual Studio, mesmo depois de fechar a solução na qual a ação foi aplicada.|
 
 ## <a name="advanced-editing-features"></a>Recursos de edição avançada
  Você pode encontrar uma série de recursos avançados no submenu **Editar/Avançado**. Nem todos esses recursos estão disponíveis para todos os tipos de arquivos de código.
 
-|||
+|Recurso|Descrição|
 |-|-|
 |Formatar Documento|Define o recuo adequado das linhas de código e move as chaves para separar linhas no documento.|
 |Formatar Seleção|Define o recuo adequado das linhas de código e move as chaves para separar linhas na seleção.|
@@ -108,31 +108,31 @@ O editor do Visual Studio fornece muitos recursos que tornam mais fácil para vo
 |Colocar em Minúsculas|Alterar todos os caracteres na seleção para minúsculos ou se não houver nenhuma seleção, altera o caractere no ponto de inserção para minúsculo.|
 |Validar Documento|Valida os arquivos de código JScript.|
 |Excluir Espaço em Branco Horizontal|Exclui tabulações ou espaços ao final da linha atual.|
-|Exibir Espaço em Branco|Exibe espaços como pontos elevados e tabulações como setas. O final de um arquivo é exibido como um glifo retangular. Se **Ferramentas/Opções/Editor de Texto/Todas as Linguagens/Quebra automática de linha/Mostrar glifos visíveis para quebra automática de linha** estiver selecionado, esse glifo também será exibido.|
+|Exibir Espaço em Branco|Exibe espaços como pontos elevados e tabulações como setas. O final de um arquivo é exibido como um glifo retangular. Se **ferramentas/opções/editor de texto/todos os idiomas/quebra automática de palavra/Mostrar glifos visíveis para quebra automática de palavra** for selecionado, esse glifo também será exibido.|
 |Quebra automática de linha|Faz com que todas as linhas em um documento sejam visíveis na janela de código. Você pode ativar e desativar a quebra automática de linha na configuração Todas as Linguagens do Editor de Texto (**Ferramentas/Opções/Editor de Texto/Todas as Linguagens**).|
-|Remover Comentários da Seleção|Adiciona caracteres de comentários na seleção ou na linha atual.|
-|Comentar Seleção|Remove caracteres de comentários da seleção ou da linha atual.|
-|Aumentar recuo de linha|Adiciona uma tabulação (ou os espaços equivalentes) nas linhas selecionadas ou na linha atual.|
-|Diminuir recuo de linha|Remove uma tabulação (ou os espaços equivalentes) das linhas selecionadas ou da linha atual.|
+|Remover comentário de seleção|Adiciona caracteres de comentários na seleção ou na linha atual.|
+|Comentário de seleção|Remove caracteres de comentários da seleção ou da linha atual.|
+|Aumentar Recuo de Linha|Adiciona uma tabulação (ou os espaços equivalentes) nas linhas selecionadas ou na linha atual.|
+|Diminuir Recuo de Linha|Remove uma tabulação (ou os espaços equivalentes) das linhas selecionadas ou da linha atual.|
 |Selecionar Marca|Em um documento que contém marcas (por exemplo, XML ou HTML), seleciona a marca.|
 |Selecionar Conteúdo da Marca|Em um documento que contém marcas (por exemplo, XML ou HTML), seleciona o conteúdo.|
 
 ## <a name="navigate-in-the-code-window"></a>Navegar na janela de código
  Você pode se mover em um documento de várias maneiras diferentes. Além das operações padrão, você pode usar os botões **Navegar para Trás** (ou CTRL + SINAL DE SUBTRAÇÃO) e **Navegar para Frente** (CTRL + SHIFT + SINAL DE SUBTRAÇÃO) na barra de ferramentas para mover o ponto de inserção para locais anteriores ou retornar para locais mais recentes no documento ativo. Esses botões retém os últimos 20 locais do ponto de inserção.
 
- ![Botões de navegação Avançar e voltar](../ide/media/vs2015-nav-buttons.png "VS2015_Nav_buttons")
+ ![Botões de navegação para frente e para trás](../ide/media/vs2015-nav-buttons.png "VS2015_Nav_buttons")
 
  Você também pode usar a barra de rolagem avançada em uma janela de código para obter uma visão geral do seu código. No modo de mapa, você pode obter visualizações do código ao mover o cursor para cima e para baixo da barra de rolagem, para obter mais informações, consulte [Como controlar seu código personalizando a barra de rolagem](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md).
 
  Os comandos a seguir são métodos de navegação específicos do código:
 
-|||
+|Comando|Descrição|
 |-|-|
-|Ir para \<número de linha>|(**Editar/Ir para** ou CTRL + G): mover-se até um número de linha específico no documento ativo.|
+|Ir para\<line number>|(**Editar/Ir para** ou CTRL + G): mover-se até um número de linha específico no documento ativo.|
 |Navegar para|(**Editar/Navegar Para** ou CTRL + ,): localiza um símbolo ou um arquivo na solução ativa. Ele ajuda você a escolher um bom conjunto de resultados correspondentes de uma consulta. Você pode pesquisar por palavras-chave que estão contidas em um símbolo usando caracteres de minúsculas concatenadas e caracteres de sublinhado para dividir o símbolo em palavras-chave.|
 |Localizar Todas as Referências|(menu de contexto): localiza todas as referências ao elemento selecionado na solução.|
 |Ir para definição|(menu de contexto ou F12): localiza a definição do elemento selecionado.|
-|Inspecionar Definição|(menu de contexto ou Alt + F12): localiza a definição do elemento selecionado e a exibe em uma janela pop-up. Para obter mais informações, consulte [How to: View and Edit Code by Using Peek Definition (Alt+F12)](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md) (Como exibir e editar códigos usando Inspecionar Definição (Alt + F12)).|
+|Inspecionar Definição|(menu de contexto ou Alt + F12): localiza a definição do elemento selecionado e a exibe em uma janela pop-up. Para obter mais informações, consulte [como exibir e editar código usando a definição de Peek (Alt + F12)](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md).|
 |Próximo método, Método anterior|(**Editar/Próximo método, Método anterior**) nos arquivos de código do Visual Basic, use estes comandos para mover o ponto de inserção para métodos diferentes.|
 |Realce de referência|Quando você clica em um símbolo no código-fonte, todas as instâncias desse símbolo são realçadas no documento. Os símbolos realçados podem incluir declarações e referências e muitos outros símbolos que **Localizar Todas as Referências** retornaria. Isso inclui os nomes de classes, objetos, variáveis, métodos e propriedades. No código do Visual Basic, as palavras-chave de muitas estruturas de controle também são realçadas. Para mover-se para o próximo símbolo realçado ou para o anterior, pressione CTRL + SHIFT + SETA PARA BAIXO ou CTRL + SHIFT + SETA PARA CIMA. Você pode alterar a cor do realce em **Ferramentas/Opções/Ambiente/Fontes e Cores/Referência Realçada.**|
 |Localizar informações relacionadas ao código|Você pode localizar informações sobre o código específico, como alterações e quem fez essas alterações, referências, bugs, itens de trabalho, revisões de código e status de teste de unidade ao usar o CodeLens no editor de código. O CodeLens funciona como uma exibição de alerta quando você usa o Visual Studio Enterprise com o Team Foundation Server. Consulte [Localizar alterações de código e outros históricos](../ide/find-code-changes-and-other-history-with-codelens.md).|
@@ -161,23 +161,23 @@ O comando "Navegar Para" do Visual Studio faz uma pesquisa restrita do código p
 ### <a name="navigate-code-using-navigate-to"></a>Navegar no código usando Navegar Para
 
 1. No Visual Studio, abra uma solução ou uma pasta.
-1. No menu principal, escolha **Editar**, **Navegar Para** ou pressione **CTRL + ,** .
+1. No menu principal, escolha **Editar**, **Navegar Para** ou pressione **CTRL + ,**.
 
     Uma pequena caixa de texto é exibida no canto superior do editor de código.
 1. Na caixa de texto, digite o nome do elemento de código que você deseja localizar.
 
-    ![Navegar para a janela](../ide/media/vside-navigatetowindow.png "Janela Navegar Para")
+    ![Janela Navegar Para](../ide/media/vside-navigatetowindow.png "Janela Navegar Para")
 
     Conforme você digita, os resultados são exibidos em uma lista suspensa abaixo da caixa de texto.
 1. Para ir até um elemento, escolha-o na lista.
 
 ### <a name="filter-your-search"></a>Filtrar sua pesquisa
 
-Para limitar a pesquisa a apenas símbolos de código, preceda sua navegação para consulta com um caractere "\@". Por exemplo, se você pesquisar `@application`, O Navegar Para exibe, por exemplo, somente as classes que têm a palavra "aplicativo" nelas.
+Para limitar a pesquisa a apenas símbolos de código, preceda sua navegação para consulta com um \@ caractere "". Por exemplo, se você pesquisar `@application`, O Navegar Para exibe, por exemplo, somente as classes que têm a palavra "aplicativo" nelas.
 
 Se você usar minúsculas concatenadas em seu código, você poderá encontrar elementos de código de forma mais rápida inserindo somente as letras maiúsculas do nome do elemento de código. Por exemplo, se o código tem um componente chamado `ViewSwitcher`, você poderá encontrá-lo inserindo apenas as letras maiúsculas do nome (`"VS"`) na janela do Navegar Para.
 
-![Navegue até janela-pesquisando com maiúsculas](../ide/media/vside-capitalsearch.png "Janela Navegar Para – pesquisando com letras maiúsculas")
+![Janela Navegar Para – pesquisando com letras maiúsculas](../ide/media/vside-capitalsearch.png "Janela Navegar Para – pesquisando com letras maiúsculas")
 
 Esse recurso é particularmente útil se seu código tem nomes longos.
 
@@ -190,7 +190,7 @@ Esse recurso é particularmente útil se seu código tem nomes longos.
 
 - [Configurações do Visual Basic](https://msdn.microsoft.com/library/2712b3b1-18f2-430c-ae91-28468bbf5f32)
 
-- [Usando o Ambiente de Desenvolvimento do Visual Studio para C#](../csharp-ide/using-the-visual-studio-development-environment-for-csharp.md)
+- [Usando o ambiente de desenvolvimento do Visual Studio para C#](../csharp-ide/using-the-visual-studio-development-environment-for-csharp.md)
 
 - [Opções, Editor de Texto, JavaScript, Formatação](../ide/reference/options-text-editor-javascript-formatting.md)
 
@@ -210,23 +210,23 @@ Esse recurso é particularmente útil se seu código tem nomes longos.
 
 - [Personalizando o editor](../ide/customizing-the-editor.md)
 
-- [Como acompanhar o código personalizando a barra de rolagem](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md)
+- [Como controlar seu código Personalizando a barra de rolagem](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md)
 
-- [Como exibir e editar o código usando Inspecionar Definição (Alt + F12)](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)
+- [Como visualizar e editar códigos usando a janela Inspecionar definição (Alt+F12)](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)
 
 - [Realizar ações rápidas com lâmpadas](../ide/perform-quick-actions-with-light-bulbs.md)
 
 - [Snippets de código](../ide/code-snippets.md)
 
-- [Usando a caixa de ferramentas](../ide/using-the-toolbox.md)
+- [Usando a Caixa de Ferramentas](../ide/using-the-toolbox.md)
 
 - [Exibindo a estrutura do código](../ide/viewing-the-structure-of-code.md)
 
-- [Configurando identificadores no código](../ide/setting-bookmarks-in-code.md)
+- [Configurando indicadores no código](../ide/setting-bookmarks-in-code.md)
 
 - [Usando a Lista de Tarefas](../ide/using-the-task-list.md)
 
 - [Localizar alterações de código e outros históricos](../ide/find-code-changes-and-other-history-with-codelens.md)
 
-## <a name="see-also"></a>Consulte também
- [Visual Studio IDE](../ide/visual-studio-ide.md)
+## <a name="see-also"></a>Consulte Também
+ [IDE do Visual Studio](../ide/visual-studio-ide.md)

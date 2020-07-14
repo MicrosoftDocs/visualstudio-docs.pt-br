@@ -1,7 +1,7 @@
 ---
 title: 'Walkthrough: importar um fluxo de trabalho reutilizável do SharePoint Designer para o Visual Studio | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.WSPImport.ImportWF
 dev_langs:
@@ -15,19 +15,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9924b3d709f882fdd552708a795a4b23bd22b070
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MT
+ms.openlocfilehash: 6a589f14ea60d50c0062d85be81523f27c81b455
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665408"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015701"
 ---
 # <a name="walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio"></a>Walkthrough: importar um fluxo de trabalho reutilizável do SharePoint Designer para o Visual Studio
-  Este tutorial demonstra como importar um fluxo de trabalho reutilizável criado no SharePoint Designer 2010 para um projeto de fluxo de trabalho do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint.
+  Este tutorial demonstra como importar um fluxo de trabalho reutilizável criado no SharePoint Designer 2010 para um [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projeto de fluxo de trabalho do SharePoint.
 
  Os fluxos de trabalho criados no SharePoint Designer, ou *fluxos de trabalho declarativos*, consistem em [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] instruções em vez de código. O SharePoint Designer 2010 apresenta fluxos de trabalho *reutilizáveis*, que são fluxos de trabalho portáteis e declarativos que podem ser usados por listas diferentes em sites do SharePoint.
 
- Os fluxos de trabalho criados em [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)], como fluxos de trabalho sequenciais e de máquina de estado, são chamados de *fluxos de trabalho de código*. Os fluxos de trabalho de código consistem em arquivos XML e módulos de código nos quais os usuários podem personalizar o comportamento do fluxo de trabalho.
+ Os fluxos de trabalho criados no [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] , como fluxos de trabalho de máquina de estado e sequenciais, são chamados de *fluxos de trabalho de código*. Os fluxos de trabalho de código consistem em arquivos XML e módulos de código nos quais os usuários podem personalizar o comportamento do fluxo de trabalho.
 
  O Visual Studio permite que você importe fluxos de trabalho reutilizáveis criados no SharePoint Designer 2010 e converta-os em fluxos de trabalho de código para uso em seus sites do SharePoint.
 
@@ -37,7 +36,7 @@ ms.locfileid: "72665408"
 
 - Exportar o fluxo de trabalho reutilizável do SharePoint Designer para um arquivo *. wsp* e para o SharePoint.
 
-- Importar o arquivo *. wsp* para [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] usando o projeto importar fluxo de trabalho reutilizável.
+- Importando o arquivo *. wsp* no usando [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] o projeto importar fluxo de trabalho reutilizável.
 
 - Alterando o fluxo de trabalho adicionando código.
 
@@ -45,10 +44,10 @@ ms.locfileid: "72665408"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
- Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
+## <a name="prerequisites"></a>Pré-requisitos
+ Você precisará dos seguintes componentes para concluir este passo a passo:
 
-- Edições com suporte do [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] e do SharePoint.
+- Edições com suporte do [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] e SharePoint.
 
 - Visual Studio.
 
@@ -59,7 +58,7 @@ ms.locfileid: "72665408"
 
 #### <a name="to-create-sharepoint-subsites"></a>Para criar subsites do SharePoint
 
-1. No SharePoint Designer 2010, na barra de menus, escolha **arquivo**  > **novo site da Web em branco**.
+1. No SharePoint Designer 2010, na barra de menus, escolha **arquivo**  >  **novo site em branco**.
 
 2. Na caixa de diálogo **novo site em branco** , navegue até um site do SharePoint no qual você deseja criar o fluxo de trabalho ou use o valor de http://<em>SystemName</em>/e, em seguida, escolha o botão **OK** .
 
@@ -73,7 +72,7 @@ ms.locfileid: "72665408"
 
     Isso abre o novo subsite no SharePoint Designer. Feche esta instância do SharePoint Designer e volte para a primeira instância (o site de nível superior).
 
-6. Repita as etapas 3-5 para criar o segundo subsite, desta vez substituindo o **subsite** do word no [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] com **SPD2**.
+6. Repita as etapas 3-5 para criar o segundo subsite, desta vez substituindo o **subsite** do Word no [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] com **SPD2**.
 
 ## <a name="create-a-sharepoint-designer-reusable-workflow"></a>Criar um fluxo de trabalho reutilizável do SharePoint Designer
  Como o SharePoint não inclui nenhum fluxo de trabalho reutilizável que você possa usar para este exemplo, você criará um. Nesse fluxo de trabalho simples, quando um usuário insere uma nova tarefa na lista de tarefas que tem um título específico, a tarefa é atribuída a esse usuário.
@@ -121,7 +120,7 @@ ms.locfileid: "72665408"
      A instrução de ação agora lê o **conjunto atribuído ao item atual: CreatedBy**.
 
 ## <a name="save-and-deploy-the-reusable-workflow"></a>Salvar e implantar o fluxo de trabalho reutilizável
- Como [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] pode importar somente arquivos *. wsp* , você deve salvar o fluxo de trabalho reutilizável como um arquivo *. wsp* e implantá-lo no SharePoint antes de importá-lo para o [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+ Como [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] o pode importar somente arquivos *. wsp* , você deve salvar o fluxo de trabalho reutilizável como um arquivo *. wsp* e implantá-lo no SharePoint antes de importá-lo para o [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 > [!IMPORTANT]
 > Se você receber um erro de tempo de execução executando o procedimento a seguir, será necessário executar o procedimento em um sistema que tenha acesso ao site do SharePoint.
@@ -149,13 +148,13 @@ ms.locfileid: "72665408"
 9. Na caixa de diálogo **download de arquivo** , escolha o botão **salvar** para salvar o arquivo *. wsp* no sistema local.
 
 ## <a name="import-the-wsp-file-into-visual-studio"></a>Importar o arquivo. wsp para o Visual Studio
- Importe o arquivo *. wsp* para [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] usando um projeto de fluxo de trabalho de importação reutilizável. Este projeto converte o fluxo de trabalho de um fluxo de trabalho reutilizável e declarativo em um fluxo de trabalho de código. Depois que o fluxo de trabalho for convertido, você usará o código para modificar seu comportamento.
+ Importe o arquivo *. wsp* no usando [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] um projeto de fluxo de trabalho de importação reutilizável. Este projeto converte o fluxo de trabalho de um fluxo de trabalho reutilizável e declarativo em um fluxo de trabalho de código. Depois que o fluxo de trabalho for convertido, você usará o código para modificar seu comportamento.
 
 #### <a name="to-import-a-workflow-from-a-wsp-file-and-modify-it"></a>Para importar um fluxo de trabalho a partir de um arquivo .wsp e modificá-lo
 
-1. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], na barra de menus, escolha **arquivo**  > **novo** **projeto**de  > .
+1. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , na barra de menus, escolha **arquivo**  >  **novo**  >  **projeto**.
 
-2. Na caixa de diálogo **novo projeto** , expanda o nó do **SharePoint** em  **C# Visual** ou **Visual Basic**e, em seguida, escolha o nó **2010** .
+2. Na caixa de diálogo **novo projeto** , expanda o nó do **SharePoint** em **Visual C#** ou **Visual Basic**e, em seguida, escolha o nó **2010** .
 
 3. No painel **modelos** , escolha o modelo **importar fluxo de trabalho do SharePoint 2010 reutilizável** , deixe o nome do projeto como **WorkflowImportProject1**e, em seguida, escolha o botão **OK** .
 
@@ -176,13 +175,13 @@ ms.locfileid: "72665408"
 
 7. Na caixa **selecionar itens a serem importados** , escolha o fluxo de trabalho do fluxo de trabalho **tarefa SPD** e escolha o botão **concluir** .
 
-    Depois que a operação de importação for concluída, um projeto chamado **WorkflowImportProject1** será criado contendo um fluxo de trabalho chamado **SPD_Workflow_TestFT**. Nessa pasta está o arquivo de definição do fluxo de trabalho *Elements. xml* e o arquivo do designer de fluxo de trabalho ( *. xoml*). O designer contém dois arquivos: o arquivo de regras (. Rules) e o arquivo code-behind ( *. cs* ou *. vb*, dependendo da linguagem de programação do seu projeto).
+    Depois que a operação de importação for concluída, um projeto chamado **WorkflowImportProject1** será criado contendo um fluxo de trabalho chamado **SPD_Workflow_TestFT**. Nessa pasta está o arquivo de definição do fluxo de trabalho *Elements.xml* e o arquivo do designer de fluxo de trabalho (*. xoml*). O designer contém dois arquivos: o arquivo de regras (. Rules) e o arquivo code-behind ( *. cs* ou *. vb*, dependendo da linguagem de programação do seu projeto).
 
 8. Em **Gerenciador de soluções**, exclua a pasta **outros arquivos importados** .
 
-9. No arquivo *Elements. xml* , exclua `InstantiationURL="_layouts/IniErkflIP.sspx"`.
+9. No arquivo *Elements.xml* , exclua `InstantiationURL="_layouts/IniErkflIP.sspx"` .
 
-10. Em **Gerenciador de soluções**, escolha **WorkflowImportProject1**e, na barra de menus, escolha **projeto**  > **definir como projeto de inicialização** para definir **WorkflowImportProject1** como o item de inicialização.
+10. Em **Gerenciador de soluções**, escolha **WorkflowImportProject1**e, na barra de menus, escolha **projeto**  >  **definido como projeto de inicialização** para definir **WorkflowImportProject1** como o item de inicialização.
 
      Isso exibe a lista imediatamente quando você depura o projeto.
 
@@ -194,7 +193,7 @@ ms.locfileid: "72665408"
 
     3. Preencha os valores ausentes no Assistente para personalização do SharePoint e, em seguida, escolha o botão **concluir** .
 
-12. Escolha o arquivo. xoml e, na barra de menus, escolha **exibir**  > **Designer** para exibir o fluxo de trabalho importado no designer de fluxo de trabalho.
+12. Escolha o arquivo. xoml e, na barra de menus, escolha Designer de **exibição**  >  **Designer** para exibir o fluxo de trabalho importado no designer de fluxo de trabalho.
 
 13. No nó **Windows Workflow v 3.0** da caixa de **ferramentas**, execute uma das seguintes etapas:
 
@@ -225,7 +224,7 @@ ms.locfileid: "72665408"
 
 #### <a name="to-deploy-the-project-and-associate-the-workflow"></a>Para implantar o projeto e associar o fluxo de trabalho
 
-1. Em [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], escolha a tecla **F5** para executar e implantar o projeto de fluxo de trabalho convertido.
+1. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , escolha a tecla **F5** para executar e implantar o projeto de fluxo de trabalho convertido.
 
 2. Na barra de início rápido, escolha o link **tarefas** para exibir a lista de tarefas.
 

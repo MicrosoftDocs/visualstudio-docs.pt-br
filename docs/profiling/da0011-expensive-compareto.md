@@ -1,7 +1,7 @@
 ---
-title: 'DA0011: CompareTo dispendioso | Microsoft Docs'
+title: DA0011-CompareTo caro | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.DA0011
 - vs.performance.rules.DAExpensiveCompareTo
@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d0eb4566fd4c8a513b1492cecffc16cb94a1fd83
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 58c94e5a24eab1c638397d7b1391596e503207fa
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779422"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520660"
 ---
-# <a name="da0011-expensive-compareto"></a>DA0011: função CompareTo dispendiosa
+# <a name="da0011-expensive-compareto"></a>DA0011: Função CompareTo dispendiosa
 
-|||
+|Item|Valor|
 |-|-|
 |ID de regra|DA0011|
 |Categoria|Uso do .NET Framework|

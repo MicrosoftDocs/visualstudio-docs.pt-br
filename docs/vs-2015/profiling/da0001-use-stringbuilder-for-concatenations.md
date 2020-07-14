@@ -14,23 +14,23 @@ caps.latest.revision: 19
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 6a871f726dc13f91c1dfd57471c12ee5cbfeb245
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 5e2e52b0688f69fd154425887077c40fc3e6c265
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918858"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85531398"
 ---
-# <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001: usar StringBuilder para concatenações
+# <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001: Usar StringBuilder para concatenações
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Para obter a documentação mais recente sobre o Visual Studio, consulte [DA0001: usar StringBuilder para concatenações](/visualstudio/profiling/da0001-use-stringbuilder-for-concatenations).  
   
-|||  
+|Item|Valor|  
 |-|-|  
-|Id da Regra|DA0001|  
+|ID de regra|DA0001|  
 |Categoria|Uso do .NET Framework|  
-|Métodos de criação de perfil|Amostragem<br /><br /> Instrumentação|  
+|Métodos de criação de perfil|amostragem<br /><br /> Instrumentação|  
 |Mensagem|Considere o uso de StringBuilder para concatenações de cadeias de caracteres|  
 |Tipo de mensagem|Aviso|  
   

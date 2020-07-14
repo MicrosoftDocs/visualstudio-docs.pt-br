@@ -1,7 +1,7 @@
 ---
 title: Ampliar grafos no resultado do teste de carga
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.test.load.monitor.graphzoom
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.assetid: 729b4c30-4bc3-4698-91b3-17a676897443
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a22f1a9b6aa772224b217b5de4136687df1462a1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 836e4f30e2c84bf0093366f4cc38a2cb7f58b545
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594351"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287019"
 ---
 # <a name="how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results"></a>Como ampliar uma região do grafo nos resultados do teste de carga
 
@@ -73,7 +73,7 @@ Quando vários gráficos forem exibidos, você poderá mantê-los sincronizados 
 
 ### <a name="to-synchronize-zooming-and-scrolling"></a>Para sincronizar a ampliação e a rolagem
 
-1. No **analisador de teste de carga,** escolha **Sincronizar controles de zoom horizontais**.
+1. No **analisador de testes de carga**, escolha **sincronizar controles de zoom horizontais**.
 
      Quando o botão **Sincronizar Controles de Zoom Horizontal** for selecionado, a ampliação e a rolagem da escala de tempo de um grafo individual também ampliará e rolará a escala de tempo dos outros grafos.
 
@@ -113,8 +113,8 @@ Quando vários gráficos forem exibidos, você poderá mantê-los sincronizados 
 
      Isso reduz para mostrar a duração inteira da execução de teste de carga.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Analisar resultados do teste de carga na exibição Grafos](../test/analyze-load-test-results-in-the-graphs-view.md)
-- [Analisar os resultados do teste de carga](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Analisar resultados do teste de carga](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
 - [Como: Adicionar e excluir contadores em gráficos](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)

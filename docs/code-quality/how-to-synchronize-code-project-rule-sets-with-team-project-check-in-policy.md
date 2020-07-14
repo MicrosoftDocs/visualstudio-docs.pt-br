@@ -1,7 +1,7 @@
 ---
 title: Sincronizar conjuntos de regras de projeto com a política de check-in
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.codeanalysis.selecttfsruleset
 ms.assetid: 9b02f934-2db6-41ec-aaff-9c31ceec2f04
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a765bcdd6eefbb5c256603bb73c0684c8782f803
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 5e27987f7fa298ddcedf52a9f01a80f57d3d329f
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587401"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371775"
 ---
 # <a name="how-to-synchronize-code-project-rule-sets-with-an-azure-devops-project-check-in-policy"></a>Como: sincronizar conjuntos de regras de projeto de código com uma política de check-in do projeto DevOps do Azure
 
@@ -31,7 +31,7 @@ Sincronize as configurações de análise de código para projetos de código pa
 
 ## <a name="to-specify-a-microsoft-standard-rule-set"></a>Para especificar um conjunto de regras padrão da Microsoft
 
-1. Na **Gerenciador de soluções**, clique com botão direito no projeto de código e, em seguida, clique em **propriedades**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto de código e clique em **Propriedades**.
 
 2. Clique em **Análise de código**.
 
@@ -51,19 +51,19 @@ Sincronize as configurações de análise de código para projetos de código pa
 
 1. Se necessário, execute uma operação get no arquivo de conjunto de regras que especifica a política de check-in.
 
-2. Na **Gerenciador de soluções**, clique com botão direito no projeto de código e, em seguida, clique em **propriedades**.
+2. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto de código e clique em **Propriedades**.
 
 3. Clique em **Análise de código**.
 
 ::: moniker range="vs-2017"
 
-4. Na lista **executar este conjunto de regras** , clique em **\<procurar >** .
+4. Na lista **executar este conjunto de regras** , clique em **\<Browse>** .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. Na lista **regras ativas** , clique em **\<procurar >** .
+4. Na lista **regras ativas** , clique em **\<Browse>** .
 
 ::: moniker-end
 

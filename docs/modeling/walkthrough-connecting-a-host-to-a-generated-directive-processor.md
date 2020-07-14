@@ -1,7 +1,7 @@
 ---
 title: Conectar host ao processador de diretivas gerado
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - walkthroughs [text templates], connecting host to processor
 - text templates, custom directive hosts
@@ -13,12 +13,12 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: a27b856b9c5129f725381afa34bd134009002216
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c782b84f39419272c271f41d217442cc9e001b3f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593974"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535857"
 ---
 # <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>Passo a passo: conectar um host a um processador de diretiva gerado
 
@@ -37,15 +37,15 @@ Esta explicação passo a passo inclui as seguintes tarefas:
 
 - Testando o host personalizado com o processador de diretiva gerado.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para definir uma DSL, é necessário ter instalados os seguintes componentes:
 
 | | |
 |-|-|
-| {1&gt;Visual Studio&lt;1} | [http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com/) |
+| Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com/) |
 | [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index) |
-| {1&gt;{2&gt;SDK de Visualização e Modelagem do Visual Studio&lt;2}&lt;1} | |
+| SDK de Visualização e Modelagem do Visual Studio | |
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
@@ -72,7 +72,7 @@ Neste tutorial, você usa o assistente de Designer de Linguagem Específica de D
    > [!IMPORTANT]
    > Esta etapa gera o processador de diretiva e adiciona a chave para ele no registro.
 
-3. No menu **Depuração**, clique em **Iniciar Depuração**.
+3. No menu **depurar** , clique em **Iniciar Depuração**.
 
     Uma segunda instância do Visual Studio é aberta.
 
@@ -96,17 +96,17 @@ Depois de gerar o processador de diretiva, você conecta o processador de direti
 
 3. Adicione as seguintes referências:
 
-    - Microsoft.VisualStudio.Modeling.Sdk.11.0
+    - Microsoft. VisualStudio. Modeling. Sdk. 11.0
 
-    - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
+    - Microsoft. VisualStudio. Modeling. Sdk. Diagrams. 11.0
 
-    - Microsoft.VisualStudio.TextTemplating.11.0
+    - Microsoft. VisualStudio. TextTemplating. 11.0
 
-    - Microsoft.VisualStudio.TextTemplating.Interfaces.11.0
+    - Microsoft. VisualStudio. TextTemplating. interfaces. 11.0
 
-    - Microsoft.VisualStudio.TextTemplating.Modeling.11.0
+    - Microsoft. VisualStudio. TextTemplating. Modeling. 11.0
 
-    - Microsoft.VisualStudio.TextTemplating.VSHost.11.0
+    - Microsoft. VisualStudio. TextTemplating. VSHost. 11.0
 
 4. Na parte superior de Program.cs ou Module1. vb, adicione a seguinte linha de código:
 
@@ -118,7 +118,7 @@ Depois de gerar o processador de diretiva, você conecta o processador de direti
     Imports Microsoft.Win32
     ```
 
-5. Localize o código para a propriedade `StandardAssemblyReferences`e substitua-o pelo seguinte código:
+5. Localize o código da propriedade `StandardAssemblyReferences` e substitua-o pelo código a seguir:
 
     > [!NOTE]
     > Nesta etapa, você adiciona referências aos assemblies que são exigidos pelo processador de diretiva gerado ao qual seu host dará suporte.
@@ -154,7 +154,7 @@ Depois de gerar o processador de diretiva, você conecta o processador de direti
     }
     ```
 
-6. Localize o código para a função `ResolveDirectiveProcessor`e substitua-o pelo seguinte código:
+6. Localize o código para a função `ResolveDirectiveProcessor` e substitua-o pelo seguinte código:
 
     > [!IMPORTANT]
     > Esse código contém referências embutidas em código para o nome do processador de diretiva gerado ao qual você deseja se conectar. Você poderia facilmente tornar isso mais geral. nesse caso, ele procura todos os processadores de diretiva listados no registro e tenta encontrar uma correspondência. Nesse caso, o host funcionaria com qualquer processador de diretiva gerado.
@@ -228,7 +228,7 @@ Depois de gerar o processador de diretiva, você conecta o processador de direti
             }
     ```
 
-7. No menu **Arquivo**, clique em **Salvar tudo**.
+7. No menu **Arquivo** , clique em **Salvar Tudo**.
 
 8. No menu **Compilar**, clique em **Compilar Solução**.
 
@@ -238,7 +238,7 @@ Para testar o host de modelo de texto personalizado, primeiro você deve escreve
 
 ### <a name="create-a-text-template-to-test-the-custom-host"></a>Criar um modelo de texto para testar o host personalizado
 
-1. Crie um arquivo de texto e nomeie-o `TestTemplateWithDP.tt`. Você pode usar qualquer editor de texto, como o bloco de notas, para criar o arquivo.
+1. Crie um arquivo de texto e nomeie-o `TestTemplateWithDP.tt` . Você pode usar qualquer editor de texto, como o bloco de notas, para criar o arquivo.
 
 2. Adicione o seguinte ao arquivo de texto:
 
@@ -312,13 +312,13 @@ Para testar o host de modelo de texto personalizado, primeiro você deve escreve
     #>
     ```
 
-3. No código, substitua \<seu caminho > pelo caminho do arquivo Sample. min da linguagem específica do design criada no primeiro procedimento.
+3. No código, substitua \<YOUR PATH> pelo caminho do arquivo Sample. min da linguagem específica do design criada no primeiro procedimento.
 
 4. Salve e feche o arquivo.
 
 ### <a name="test-the-custom-host"></a>Testar o host personalizado
 
-1. {1&gt;Abra uma janela do Prompt de Comando. &lt;1}
+1. Abra uma janela de Prompt de Comando.
 
 2. Digite o caminho do arquivo executável para o host personalizado, mas não pressione ENTER ainda.
 
@@ -327,7 +327,7 @@ Para testar o host de modelo de texto personalizado, primeiro você deve escreve
      `<YOUR PATH>CustomHost\bin\Debug\CustomHost.exe`
 
     > [!NOTE]
-    > Em vez de digitar o endereço, você pode navegar até o arquivo CustomHost. exe no **Windows Explorer**e, em seguida, arrastar o arquivo para a janela de prompt de comando.
+    > Em vez de digitar o endereço, você pode navegar até o arquivo CustomHost.exe no **Windows Explorer**e, em seguida, arrastar o arquivo para a janela de prompt de comando.
 
 3. Digite um espaço.
 
@@ -338,13 +338,13 @@ Para testar o host de modelo de texto personalizado, primeiro você deve escreve
      `<YOUR PATH>TestTemplateWithDP.txt`
 
     > [!NOTE]
-    > Em vez de digitar o endereço, você pode navegar até o arquivo TestTemplateWithDP. txt no **Windows Explorer**e, em seguida, arrastar o arquivo para a janela de prompt de comando.
+    > Em vez de digitar o endereço, você pode navegar até o arquivo TestTemplateWithDP.txt no **Windows Explorer**e, em seguida, arrastar o arquivo para a janela de prompt de comando.
 
      O aplicativo host personalizado é executado e inicia o processo de transformação do modelo de texto.
 
-5. No **Windows Explorer**, navegue até a pasta que contém o arquivo TestTemplateWithDP. txt.
+5. No **Windows Explorer**, navegue até a pasta que contém o arquivo TestTemplateWithDP.txt.
 
-     A pasta também contém o arquivo TestTemplateWithDP1. txt.
+     A pasta também contém o arquivo TestTemplateWithDP1.txt.
 
 6. Abra esse arquivo para ver os resultados da transformação do modelo de texto.
 
@@ -360,6 +360,6 @@ Para testar o host de modelo de texto personalizado, primeiro você deve escreve
     Linked from: ExampleElement1
     ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Passo a passo: criando um host de modelo de texto personalizado](../modeling/walkthrough-creating-a-custom-text-template-host.md)
+- [Instruções passo a passo: criando um host de modelo de texto personalizado](../modeling/walkthrough-creating-a-custom-text-template-host.md)

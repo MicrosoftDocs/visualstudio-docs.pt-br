@@ -1,7 +1,7 @@
 ---
-title: 'DA0006: substituir Equals() para tipos de valor | Microsoft Docs'
+title: DA0006-override Equals () para tipos Value | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.rules.DAOverrideEquals
 - vs.performance.6
@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e097d6d8c9a7b82fac53fd37951644eb7eb5e59
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4309b1a38e99cda262bf7558f050754656419e88
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779526"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520816"
 ---
-# <a name="da0006-override-equals-for-value-types"></a>DA0006: substituir Equals() para tipos de valor
+# <a name="da0006-override-equals-for-value-types"></a>DA0006: Substituir Equals() por tipos de valor
 
-|||
+|Item|Valor|
 |-|-|
 |ID de regra|DA0006|
 |Categoria|Uso do .NET Framework|

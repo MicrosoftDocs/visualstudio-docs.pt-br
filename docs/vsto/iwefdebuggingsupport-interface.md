@@ -1,7 +1,7 @@
 ---
 title: Interface IWefDebuggingSupport
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: interface
 dev_langs:
 - VB
 - CSharp
@@ -10,15 +10,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a71adf5371275fbbdc19cdf09be96ef900ec073d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0a4883d36c1833c66a2539380184521b070f5c2a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62583757"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544723"
 ---
 # <a name="iwefdebuggingsupport-interface"></a>Interface IWefDebuggingSupport
-  Implementado por um ambiente de depuração, como o Visual Studio, para facilitar a depuração de aplicativos para Office. O aplicativo do Office, como o Word ou Excel, obtenha essa interface do Visual Studio e, em seguida, chama métodos na interface em determinados pontos durante a sessão de depuração.
+  Implementado por um ambiente de depuração, como o Visual Studio, para facilitar a depuração de aplicativos para o Office. O aplicativo do Office, como o Word ou o Excel, obtém essa interface do Visual Studio e, em seguida, chama métodos na interface em determinados pontos durante a sessão de depuração.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,9 +37,9 @@ interface IWefDebuggingSupport : IUnknown
 ```
 
 ## <a name="methods"></a>Métodos
- A tabela a seguir lista os métodos que define a interface IWefDebuggingSupport.
+ A tabela a seguir lista os métodos que a interface IWefDebuggingSupport define.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Método GetAutoInsertExtensions](../vsto/getautoinsertextensions-method.md)|Obtém informações sobre os aplicativos do Office que serão inseridos automaticamente durante a depuração.|
-|[Método SetWefProcessId](../vsto/setwefprocessid-method.md)|Fornece o identificador do processo que executará o conteúdo de estrutura de extensões da Web (WEF).|
+|[Método GetAutoInsertExtensions](../vsto/getautoinsertextensions-method.md)|Obtém informações sobre os aplicativos para o Office que devem ser inseridos automaticamente durante a depuração.|
+|[Método SetWefProcessId](../vsto/setwefprocessid-method.md)|Fornece o identificador do processo que executará o conteúdo do WEF (Web Extensions Framework).|

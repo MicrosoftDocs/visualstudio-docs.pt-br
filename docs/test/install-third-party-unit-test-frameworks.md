@@ -1,18 +1,18 @@
 ---
 title: Instalar estruturas de teste de unidade de terceiros
 ms.date: 04/01/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: b70e26adc7c0c9a8dc409d9b4b971b233418b8e1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: fb9a08d0d3119724e8db631841aca35c6c6e9fe5
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594273"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286967"
 ---
 # <a name="install-unit-test-frameworks"></a>Instalar estruturas de teste de unidade
 
@@ -38,7 +38,7 @@ Atualização para o adaptador de teste estável mais recente para aproveitar me
 
 ### <a name="to-update-to-the-latest-stable-test-adapter-version"></a>Para atualizar para a versão estável mais recente do adaptador de teste
 
-1. Abra o Nuget Package Manager para sua solução navegando para **ferramentas** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**.
+1. Abra o Gerenciador de pacotes NuGet para sua solução navegando até **ferramentas**  >  **Gerenciador de pacotes NuGet**  >  **gerenciar pacotes NuGet para solução**.
 
 2. Clique na guia **Atualizações** e pesquise os adaptadores de teste do MSTest, NUnit ou xUnit que estão instalados.
 
@@ -48,6 +48,6 @@ Atualização para o adaptador de teste estável mais recente para aproveitar me
 
    ![Atualizar adaptador de teste](media/install-adapter-upgrade.png)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Unidade teste seu código](../test/unit-test-your-code.md)
+- [Teste de unidade em seu código](../test/unit-test-your-code.md)

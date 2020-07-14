@@ -1,7 +1,7 @@
 ---
 title: IDiaStackWalkFrame | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b2657127726e387e81a5b28c639abbaa5399019
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ee80b9bbb6d16f2aa4264491593d1864bdade690
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741435"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464803"
 ---
 # <a name="idiastackwalkframe"></a>IDiaStackWalkFrame
 Mantém o contexto de pilha entre invocações do método [IDiaFrameData:: execute](../../debugger/debug-interface-access/idiaframedata-execute.md) .
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaStackWalkFrame : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Métodos em ordem vtable
- A tabela a seguir mostra os métodos de `IDiaStackWalkFrame`.
+ A tabela a seguir mostra os métodos de `IDiaStackWalkFrame` .
 
 |Método|Descrição|
 |------------|-----------------|
@@ -43,7 +43,7 @@ IDiaStackWalkFrame : IUnknown
  Essa interface é usada durante a execução do programa para ler e gravar registros, bem como para acessar a memória e localizar endereços de retorno.
 
 ## <a name="notes-for-callers"></a>Observações para chamadores
- O aplicativo cliente implementa essa interface e passa uma instância da interface para o método [IDiaFrameData:: execute](../../debugger/debug-interface-access/idiaframedata-execute.md) . A mesma instância dessa interface é usada novamente e novamente para manter o estado dos registros durante cada invocação do método de `execute`. O método `execute` também usa essa interface para determinar o endereço de retorno.
+ O aplicativo cliente implementa essa interface e passa uma instância da interface para o método [IDiaFrameData:: execute](../../debugger/debug-interface-access/idiaframedata-execute.md) . A mesma instância dessa interface é usada novamente e novamente para manter o estado dos registros durante cada invocação do `execute` método. O `execute` método também usa essa interface para determinar o endereço de retorno.
 
 ## <a name="requirements"></a>Requisitos
  Cabeçalho: dia2. h
@@ -52,6 +52,6 @@ IDiaStackWalkFrame : IUnknown
 
  DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaFrameData::execute](../../debugger/debug-interface-access/idiaframedata-execute.md)

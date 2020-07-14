@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::findSymbolsForAcceleratorPointerTag | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: fb66852c-c5f7-4140-b9fe-20cb4e51a9fe
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1544471bd4ff9166d4c8f4c10f48840db6f576f3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3219312a96e5ad23c0eef519d077faedacb2b824
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741124"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464418"
 ---
 # <a name="idiasymbolfindsymbolsforacceleratorpointertag"></a>IDiaSymbol::findSymbolsForAcceleratorPointerTag
-Retorna o número de marcas do ponteiro do acelerador em uma C++ função de stub de amp.
+Retorna o número de marcas do ponteiro do acelerador em uma C++ AMP função de stub.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -35,11 +35,11 @@ no O valor da marca do ponteiro para o qual os registros de símbolo do ponto s�
 
  `ppResult`
 
-fora Um ponteiro para um ponteiro de interface `IDiaEnumSymbols` que é inicializado com o resultado.
+fora Um ponteiro para um `IDiaEnumSymbols` ponteiro de interface que é inicializado com o resultado.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

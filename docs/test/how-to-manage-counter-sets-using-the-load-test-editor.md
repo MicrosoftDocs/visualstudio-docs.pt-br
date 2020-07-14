@@ -1,7 +1,7 @@
 ---
 title: Conjuntos de contadores de teste de carga
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.test.load.dialog.countersetmapping
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: 64315c2f-a0b2-4378-be16-0774b99beef5
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 224ac14a0d670648f8047a82a8abef0c2b7b2654
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1eeb99d58a9fc0547d118c529878d8b02cc83dda
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76113431"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287682"
 ---
 # <a name="how-to-manage-counter-sets-using-the-load-test-editor"></a>Como gerenciar conjuntos de contadores usando o Editor de Teste de Carga
 
@@ -60,8 +60,8 @@ Gerenciar conjuntos de contadores envolve escolher o conjunto de computadores do
 
 6. Escolha **OK**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Controladores de teste e agentes de teste](configure-test-agents-and-controllers-for-load-tests.md)
 - [Especificar os conjuntos de contadores e as regras de limite para computadores em um teste de carga](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
-- [Configure as configurações de execução do teste de carga](../test/configure-load-test-run-settings.md)
+- [Definir configurações de execução de teste de carga](../test/configure-load-test-run-settings.md)

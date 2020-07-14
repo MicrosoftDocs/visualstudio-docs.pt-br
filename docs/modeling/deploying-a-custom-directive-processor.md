@@ -1,7 +1,7 @@
 ---
 title: Implantando um processador de diretiva personalizada
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - text templates, custom directive processors
 author: JoshuaPartlow
@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a10252d8465373c8637681763e59511b1e2d621
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 4762ad21f117bebe22ecfce1c846f15d154b1bf5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596665"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536013"
 ---
 # <a name="deploying-a-custom-directive-processor"></a>Implantando um processador de diretiva personalizada
 
@@ -52,25 +52,25 @@ Há várias maneiras de criar um arquivo .vsix. O procedimento a seguir descreve
 
     1. No editor de manifesto do VSIX, na guia **ativos** , escolha **novo** e defina as propriedades do novo item:
 
-         **Tipo de conteúdo** = **VSPackage**
+         **Tipo**  =  de conteúdo **VSPackage**
 
-         O **projeto de origem** = \<*projeto atual*>
+         **Projeto de origem** = \<*the current project*>
 
     2. Clique em **edições selecionadas** e verifique os tipos de instalação nos quais você deseja que o processador de diretiva seja utilizável.
 
 3. Adicione um arquivo .pkgdef e defina suas propriedades para ser incluídas no VSIX.
 
-    1. Crie um arquivo de texto e nomeie-o \<*assemblyName*>. pkgdef.
+    1. Crie um arquivo de texto e nomeie-o \<*assemblyName*> . pkgdef.
 
-         \<*assemblyName*> geralmente é o mesmo que o nome do projeto.
+         \<*assemblyName*>é geralmente o mesmo que o nome do projeto.
 
     2. Selecione-o no Gerenciador de Soluções e defina suas propriedades da seguinte maneira:
 
-         **Ação de Compilação** = **Conteúdo**
+         **Ação**  =  de Build **Conteúdo** do
 
-         **Copiar para o diretório de saída** = **copiar sempre**
+         **Copiar para diretório**  =  de saída **Copiar sempre**
 
-         **Incluir no VSIX** = **verdadeiro**
+         **Incluir no VSIX**  =  **Verdadeiro**
 
     3. Defina o nome da VSIX e verifique se a ID é exclusiva.
 
@@ -89,11 +89,11 @@ Há várias maneiras de criar um arquivo .vsix. O procedimento a seguir descreve
 
 5. Adicione as seguintes referências ao projeto:
 
-    - **Microsoft.VisualStudio.TextTemplating.\*.0**
+    - **Microsoft. VisualStudio. TextTemplating. \* . 0**
 
-    - **Microsoft.VisualStudio.TextTemplating.Interfaces.\*.0**
+    - **Microsoft. VisualStudio. TextTemplating. interfaces. \* . 0**
 
-    - **Microsoft.VisualStudio.TextTemplating.VSHost.\*.0**
+    - **Microsoft. VisualStudio. TextTemplating. VSHost. \* . 0**
 
 6. Adicione sua classe de processador de diretriz personalizado ao projeto.
 
@@ -124,7 +124,7 @@ Há várias maneiras de criar um arquivo .vsix. O procedimento a seguir descreve
 
 - O método `IsDirectiveSupported` deve retornar `true` quando o nome de seu `CustomDirective` é aprovado.
 
-- Se você não conseguir ver a extensão no Gerenciador de extensões, mas o sistema não permitirá que você a instale, exclua a extensão de **%localappdata%\Microsoft\VisualStudio\\\*0 \ extensões\\** .
+- Se você não conseguir ver a extensão no Gerenciador de extensões, mas o sistema não permitirá que você a instale, exclua a extensão de **%LocalAppData%\Microsoft\VisualStudio \\ \* 0 \ extensões \\ **.
 
 - Abra o arquivo .vsix e inspecione seu conteúdo. Para abri-lo, altere a extensão do nome do arquivo para .zip. Verifique se contém os arquivos .dll, .pkgdef e extension.vsixmanifest. O arquivo extension.vsixmanifest deve conter a lista apropriada no nó SupportedProducts e deve conter também um nó VsPackage, sob o nó Conteúdo:
 
@@ -156,7 +156,7 @@ Há várias maneiras de criar um arquivo .vsix. O procedimento a seguir descreve
  Esse método de instalação de um processador de diretriz personalizado é o menos preferido. Não fornece uma maneira conveniente de habilitar e desabilitar o processador de diretriz, e não fornece um método de distribuição do processador de diretriz para outros usuários.
 
 > [!CAUTION]
-> A edição incorreta do registro pode danificar gravemente o sistema. Antes de alterar o Registro, faça o backup de todos os dados importantes no computador.
+> A edição incorreta do Registro pode danificar seriamente o sistema. Antes de alterar o Registro, faça o backup de todos os dados importantes no computador.
 
 #### <a name="to-register-a-directive-processor-by-setting-a-registry-key"></a>Para registrar um processador de diretriz definindo uma chave do Registro
 
@@ -164,7 +164,7 @@ Há várias maneiras de criar um arquivo .vsix. O procedimento a seguir descreve
 
 2. Em regedit, navegue até
 
-    **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\\*.0\TextTemplating\DirectiveProcessors**
+    **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \\ \* . 0 \ TextTemplating\DirectiveProcessors**
 
     Se você quiser instalar o processador de diretiva na versão experimental do Visual Studio, insira "exp" após "11,0".
 
@@ -182,20 +182,20 @@ Há várias maneiras de criar um arquivo .vsix. O procedimento a seguir descreve
 
    Se o processador de diretriz personalizado não estiver no GAC, as subchaves do Registro deverão se parecer como na tabela a seguir:
 
-|Name|{1&gt;Tipo&lt;1}|Dados|
+|Nome|Type|Dados|
 |-|-|-|
 |(Padrão)|REG_SZ|(valor não definido)|
-|Classe|REG_SZ|**Nome do namespace de \<>.\<nome da classe >**|
-|CodeBase|REG_SZ|**\<seu caminho >\\< seu nome de assembly\>**|
+|Classe|REG_SZ|**\<Namespace Name>.\<Class Name>**|
+|CodeBase|REG_SZ|**\<Your Path>\\<o nome do assembly\>**|
 
  Se o assembly estiver no GAC, as subchaves do Registro deverão se parecer como na tabela a seguir:
 
-|Name|{1&gt;Tipo&lt;1}|Dados|
+|Nome|Type|Dados|
 |-|-|-|
 |(Padrão)|REG_SZ|(valor não definido)|
-|Classe|REG_SZ|\<**seu nome de classe totalmente qualificado**>|
-|Assembly|REG_SZ|\<**o nome do assembly no GAC**>|
+|Classe|REG_SZ|\<**Your Fully Qualified Class Name**>|
+|Assembly|REG_SZ|\<**Your Assembly Name in the GAC**>|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Criando processadores de diretiva de modelo de texto T4 personalizados](../modeling/creating-custom-t4-text-template-directive-processors.md)

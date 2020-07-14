@@ -6,12 +6,12 @@ ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
 caps.latest.revision: 38
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 4352575c811d76241721fc8343b6a48c012eddb7
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 102e41e45caac8d0567786579130e0953ec68b30
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917412"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85521232"
 ---
 # <a name="image-service-and-catalog"></a>Catálogo e o serviço de imagem
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -20,9 +20,8 @@ Este manual contém diretrizes e práticas recomendadas para adotar o serviço d
 
  O serviço de imagem introduzido no Visual Studio 2015 permite que os desenvolvedores obtenham as melhores imagens para o dispositivo e o tema escolhido pelo usuário para exibir a imagem, incluindo as correções corretas para o contexto no qual elas são exibidas. A adoção do serviço de imagem ajudará a eliminar os principais pontos problemáticos relacionados à manutenção de ativos, ao dimensionamento de HDPI e a temas.  
 
-|||  
-|-|-|  
 |**Problemas hoje**|**Soluções**|  
+|-|-|  
 |Mistura de cores de plano de fundo|Mesclagem alfa interna|  
 |(Algumas) imagens|Metadados do tema|  
 |Modo de Alto Contraste|Recursos de Alto Contraste alternativos|  
@@ -43,7 +42,7 @@ Este manual contém diretrizes e práticas recomendadas para adotar o serviço d
 
   ![Serviço de imagem antes e depois](../extensibility/media/image-service-before-and-after.png "Serviço de imagem antes e depois")  
 
-## <a name="how-it-works"></a>Como funciona  
+## <a name="how-it-works"></a>Como ele funciona  
  O serviço de imagem pode fornecer uma imagem de bitmap adequada para qualquer estrutura de interface do usuário com suporte:  
 
 - WPF: BitmapSource  
@@ -102,13 +101,12 @@ Este manual contém diretrizes e práticas recomendadas para adotar o serviço d
 </Symbols>  
 ```  
 
-|||  
-|-|-|  
 |**Subelemento**|**Definição**|  
+|-|-|  
 |Importar|Importa os símbolos do arquivo de manifesto fornecido para uso no manifesto atual|  
-|{1&gt;Guid&lt;1}|O símbolo representa um GUID e deve corresponder à formatação do GUID|  
+|Guid|O símbolo representa um GUID e deve corresponder à formatação do GUID|  
 |ID|O símbolo representa uma ID e deve ser um inteiro não negativo|  
-|Cadeia de caracteres|O símbolo representa um valor de cadeia de caracteres arbitrária|  
+|String|O símbolo representa um valor de cadeia de caracteres arbitrária|  
 
  Os símbolos diferenciam maiúsculas de minúsculas e são referenciados usando a sintaxe $ (Symbol-Name):  
 
@@ -118,24 +116,23 @@ Este manual contém diretrizes e práticas recomendadas para adotar o serviço d
 </Image>  
 ```  
 
- Alguns símbolos são predefinidos para todos os manifestos. Eles podem ser usados no atributo URI do > de origem \<ou \<elemento > para fazer referência a caminhos no computador local.  
+ Alguns símbolos são predefinidos para todos os manifestos. Eles podem ser usados no atributo URI do \<Source> \<Import> elemento ou para fazer referência a caminhos no computador local.  
 
-|||  
-|-|-|  
 |**Símbolo**|**Descrição**|  
+|-|-|  
 |CommonProgramFiles|O valor da variável de ambiente% CommonProgramFiles%|  
 |LocalAppData|O valor da variável de ambiente% LocalAppData%|  
 |ManifestFolder|A pasta que contém o arquivo de manifesto|  
 |MyDocuments|O caminho completo da pasta meus documentos do usuário atual|  
 |ProgramFiles|O valor da variável de ambiente% ProgramFiles%|  
-|System|A pasta Windows\System32|  
+|Sistema|A pasta Windows\System32|  
 |WinDir|O valor da variável de ambiente% WinDir%|  
 
- **Image**  
+ **Imagem**  
 
- O elemento \<Image > define uma imagem que pode ser referenciada por um moniker. O GUID e a ID agrupados formam o moniker da imagem. O moniker da imagem deve ser exclusivo em toda a biblioteca de imagens. Se mais de uma imagem tiver um determinado moniker, o primeiro encontrado durante a criação da biblioteca é aquele que é mantido.  
+ O \<Image> elemento define uma imagem que pode ser referenciada por um moniker. O GUID e a ID agrupados formam o moniker da imagem. O moniker da imagem deve ser exclusivo em toda a biblioteca de imagens. Se mais de uma imagem tiver um determinado moniker, o primeiro encontrado durante a criação da biblioteca é aquele que é mantido.  
 
- Ele deve conter pelo menos uma fonte. Fontes de tamanho neutro fornecerão os melhores resultados em uma grande variedade de tamanhos, mas eles não são obrigatórios. Se o serviço for solicitado a fornecer uma imagem de um tamanho não definido no elemento \<Image > e não houver uma fonte de tamanho neutro, o serviço escolherá a melhor fonte de tamanho específico e a dimensionará para o tamanho solicitado.  
+ Ele deve conter pelo menos uma fonte. Fontes de tamanho neutro fornecerão os melhores resultados em uma grande variedade de tamanhos, mas eles não são obrigatórios. Se o serviço for solicitado a fornecer uma imagem de um tamanho não definido no \<Image> elemento e não houver fonte de tamanho neutro, o serviço escolherá a melhor fonte de tamanho específico e a dimensionará para o tamanho solicitado.  
 
 ```xml  
 <Image Guid="guid" ID="int" AllowColorInversion="true/false">  
@@ -144,16 +141,15 @@ Este manual contém diretrizes e práticas recomendadas para adotar o serviço d
 </Image>  
 ```  
 
-|||  
+|**Atributo**|**Definição**|  
 |-|-|  
-|**Attribute**|**Definição**|  
-|{1&gt;Guid&lt;1}|Necessária A parte GUID do moniker da imagem|  
+|Guid|Necessária A parte GUID do moniker da imagem|  
 |ID|Necessária A parte de ID do moniker da imagem|  
 |AllowColorInversion|[Opcional, padrão verdadeiro] Indica se a imagem pode ter suas cores programaticamente invertidas quando usada em um plano de fundo escuro.|  
 
- **Source**  
+ **Origem**  
 
- O elemento de > de origem \<define um ativo de origem de imagem única (XAML e PNG).  
+ O \<Source> elemento define um ativo de origem de imagem única (XAML e png).  
 
 ```xml  
 <Source Uri="uri" Background="background">  
@@ -163,36 +159,34 @@ Este manual contém diretrizes e práticas recomendadas para adotar o serviço d
 
 |               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Attribute** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                            **Definição**                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|      URI      |                                                                                                                                                                                                                                                                                                               Necessária Um URI que define de onde a imagem pode ser carregada. Pode ser um dos seguintes:<br /><br /> -Um [pacote URI](https://msdn.microsoft.com/library/aa970069\(v=vs.100\).aspx) usando a autoridade Application:///<br />-Uma referência de recurso de componente absoluto<br />-Um caminho para um arquivo que contém um recurso nativo                                                                                                                                                                                                                                                                                                               |
-|  Segundo Plano   | Adicional Indica em que tipo de plano de fundo a origem deve ser usada.<br /><br /> Pode ser um dos seguintes:<br /><br /> *Luz:* A origem pode ser usada em um plano de fundo claro.<br /><br /> <em>Escuro:</em> A origem pode ser usada em um plano de fundo escuro.<br /><br /> *HighContrast:* A origem pode ser usada em qualquer plano de fundo no modo de Alto Contraste.<br /><br /> *HighContrastLight:* A origem pode ser usada em um plano de fundo claro no modo de Alto Contraste.<br /><br /> *HighContrastDark:* A origem pode ser usada em um plano de fundo escuro no modo de Alto Contraste.<br /><br /> Se o atributo de plano de fundo for omitido, a origem poderá ser usada em qualquer plano de fundo.<br /><br /> Se o plano de fundo for *claro*, *escuro*, *HighContrastLight*ou *HighContrastDark*, as cores da fonte nunca serão invertidas. Se o plano de fundo for omitido ou definido como *HighContrast*, a inversão das cores da origem será controlada pelo atributo **AllowColorInversion** da imagem. |
+| **Atributo** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                            **Definição**                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|      Uri      |                                                                                                                                                                                                                                                                                                               Necessária Um URI que define de onde a imagem pode ser carregada. Pode ser um dos seguintes:<br /><br /> -Um [pacote URI](https://msdn.microsoft.com/library/aa970069\(v=vs.100\).aspx) usando a autoridade Application:///<br />-Uma referência de recurso de componente absoluto<br />-Um caminho para um arquivo que contém um recurso nativo                                                                                                                                                                                                                                                                                                               |
+|  Segundo plano   | Adicional Indica em que tipo de plano de fundo a origem deve ser usada.<br /><br /> Pode ser um dos seguintes:<br /><br /> *Luz:* A origem pode ser usada em um plano de fundo claro.<br /><br /> <em>Escuro:</em> A origem pode ser usada em um plano de fundo escuro.<br /><br /> *HighContrast:* A origem pode ser usada em qualquer plano de fundo no modo de Alto Contraste.<br /><br /> *HighContrastLight:* A origem pode ser usada em um plano de fundo claro no modo de Alto Contraste.<br /><br /> *HighContrastDark:* A origem pode ser usada em um plano de fundo escuro no modo de Alto Contraste.<br /><br /> Se o atributo de plano de fundo for omitido, a origem poderá ser usada em qualquer plano de fundo.<br /><br /> Se o plano de fundo for *claro*, *escuro*, *HighContrastLight*ou *HighContrastDark*, as cores da fonte nunca serão invertidas. Se o plano de fundo for omitido ou definido como *HighContrast*, a inversão das cores da origem será controlada pelo atributo **AllowColorInversion** da imagem. |
 |               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
- Um elemento de > de origem \<pode ter exatamente um dos seguintes subelementos opcionais:  
+ Um \<Source> elemento pode ter exatamente um dos seguintes subelementos opcionais:  
 
-||||  
-|-|-|-|  
 |**Elemento**|**Atributos (todos obrigatórios)**|**Definição**|  
-|Tamanho de \<|Value|A fonte será usada para imagens do tamanho determinado (em unidades do dispositivo). A imagem será quadrada.|  
-|\<SizeRange >|MinSize, MaxSize|A fonte será usada para imagens de MinSize para MaxSize (em unidades de dispositivo) inclusivamente. A imagem será quadrada.|  
-|Dimensões de \<|Width, Height|A fonte será usada para imagens da largura e da altura especificadas (em unidades do dispositivo).|  
-|\<DimensionRange >|MinWidth, MinHeight,<br /><br /> MaxWidth, MaxHeight|A fonte será usada para imagens da largura/altura mínima até a largura/altura máxima (em unidades do dispositivo), inclusive.|  
+|-|-|-|  
+|\<Size>|Valor|A fonte será usada para imagens do tamanho determinado (em unidades do dispositivo). A imagem será quadrada.|  
+|\<SizeRange>|MinSize, MaxSize|A fonte será usada para imagens de MinSize para MaxSize (em unidades de dispositivo) inclusivamente. A imagem será quadrada.|  
+|\<Dimensions>|Largura, Altura|A fonte será usada para imagens da largura e da altura especificadas (em unidades do dispositivo).|  
+|\<DimensionRange>|MinWidth, MinHeight,<br /><br /> MaxWidth, MaxHeight|A fonte será usada para imagens da largura/altura mínima até a largura/altura máxima (em unidades do dispositivo), inclusive.|  
 
- Um elemento de > de origem \<também pode ter um subelemento opcional \<NativeResource >, que define um \<de código-fonte > que é carregado de um assembly nativo em vez de um assembly gerenciado.  
+ Um \<Source> elemento também pode ter um \<NativeResource> subelemento opcional, que define um \<Source> que é carregado de um assembly nativo em vez de um assembly gerenciado.  
 
 ```xml  
 <NativeResource Type="type" ID="int" />  
 ```  
 
-|||  
+|**Atributo**|**Definição**|  
 |-|-|  
-|**Attribute**|**Definição**|  
-|{1&gt;Tipo&lt;1}|Necessária O tipo do recurso nativo, XAML ou PNG|  
+|Type|Necessária O tipo do recurso nativo, XAML ou PNG|  
 |ID|Necessária A parte da ID de número inteiro do recurso nativo|  
 
  **ImageList**  
 
- O elemento \<ImageList > define uma coleção de imagens que podem ser retornadas em uma única faixa. A faixa é criada sob demanda, conforme necessário.  
+ O \<ImageList> elemento define uma coleção de imagens que podem ser retornadas em uma única faixa. A faixa é criada sob demanda, conforme necessário.  
 
 ```xml  
 <ImageList>  
@@ -201,10 +195,9 @@ Este manual contém diretrizes e práticas recomendadas para adotar o serviço d
  </ImageList>  
 ```  
 
-|||  
+|**Atributo**|**Definição**|  
 |-|-|  
-|**Attribute**|**Definição**|  
-|{1&gt;Guid&lt;1}|Necessária A parte GUID do moniker da imagem|  
+|Guid|Necessária A parte GUID do moniker da imagem|  
 |ID|Necessária A parte de ID do moniker da imagem|  
 |Externo|[Opcional, padrão false] Indica se o moniker da imagem faz referência a uma imagem no manifesto atual.|  
 
@@ -229,7 +222,7 @@ Este manual contém diretrizes e práticas recomendadas para adotar o serviço d
 
   - **EmbedInteropTypes** deve ser definido como true  
 
-- **Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime**  
+- **Microsoft. VisualStudio. Shell. Interop. 14.0. designtime**  
 
   - Necessário se você usar o tipo **IVsImageService2**  
 
@@ -239,7 +232,7 @@ Este manual contém diretrizes e práticas recomendadas para adotar o serviço d
 
   - Necessário se você usar o **BrushToColorConverter** para o ImageThemingUtilities. **ImageBackgroundColor** em sua interface do usuário do WPF  
 
-- **Microsoft.VisualStudio.Shell.\<VSVersion>.0**  
+- **Microsoft. VisualStudio. Shell. \<VSVersion> . 0**  
 
   - Necessário se você usar o tipo **IVsUIObject**  
 
@@ -252,29 +245,29 @@ Este manual contém diretrizes e práticas recomendadas para adotar o serviço d
 ### <a name="first-steps-native"></a>Primeiras etapas (nativas)  
  Para usar o serviço de imagem, você precisa incluir alguns ou todos os cabeçalhos a seguir em seu projeto:  
 
-- **KnownImageIds.h**  
+- **KnownImageIds. h**  
 
   - Necessário se você usar o **KnownMonikers**do catálogo de imagens interno, mas não puder usar o tipo **ImageMoniker** , como ao retornar valores de chamadas **getguidproperty** ou **GetProperty** .  
 
-- **KnownMonikers.h**  
+- **KnownMonikers. h**  
 
   - Necessário se você usar o **KnownMonikers**do catálogo de imagens interno.  
 
-- **ImageParameters140.h**  
+- **ImageParameters140. h**  
 
   - Necessário se você usar os tipos **ImageMoniker** e **ImageAttributes** .  
 
-- **VSShell140.h**  
+- **VSShell140. h**  
 
   - Necessário se você usar o tipo **IVsImageService2** .  
 
-- **ImageThemingUtilities.h**  
+- **ImageThemingUtilities. h**  
 
   - Necessário se não for possível permitir que o serviço de imagem manipule-o para você.  
 
   - Não use esse cabeçalho se o serviço de imagem puder manipular sua imagem.  
 
-- **VSUIDPIHelper.h**  
+- **VSUIDPIHelper. h**  
 
   - Necessário se você usar os auxiliares de DPI para obter o DPI atual.  
 
@@ -312,7 +305,7 @@ Este manual contém diretrizes e práticas recomendadas para adotar o serviço d
 
  A atualização da interface do usuário existente do WPF é um processo relativamente simples, que consiste em três etapas básicas:  
 
-1. Substituir todos os elementos de > de imagem de \<em sua interface do usuário por \<elementos de > de CrispImage  
+1. Substituir todos os \<Image> elementos em sua interface do usuário por \<CrispImage> elementos  
 
 2. Alterar todos os atributos de origem para atributos de moniker  
 
@@ -493,7 +486,7 @@ Bitmap bitmap = (Bitmap)GelUtilities.GetObjectData(uiObj); // Use this if you ne
 
  **E se meu arquivo. vsct também precisar ser lido por versões mais antigas do Visual Studio?**  
 
- As versões mais antigas do Visual Studio não reconhecem o sinalizador de comando **IconIsMoniker** . Você pode usar imagens do serviço de imagem em versões do Visual Studio que dão suporte a ela, mas continuar usando imagens de estilo antigo em versões mais antigas do Visual Studio. Para fazer isso, você deixaria o arquivo. vsct inalterado (e, portanto, compatível com versões anteriores do Visual Studio) e criaria um arquivo CSV (valores separados por vírgula) que mapeia de pares GUID/ID definidos em um arquivo. vsct \<bitmaps > elemento para os pares GUID/ID do moniker da imagem.  
+ As versões mais antigas do Visual Studio não reconhecem o sinalizador de comando **IconIsMoniker** . Você pode usar imagens do serviço de imagem em versões do Visual Studio que dão suporte a ela, mas continuar usando imagens de estilo antigo em versões mais antigas do Visual Studio. Para fazer isso, deixe o arquivo. vsct inalterado (e, portanto, compatível com versões anteriores do Visual Studio) e crie um arquivo CSV (valores separados por vírgula) que mapeia de pares GUID/ID definidos no elemento do arquivo. vsct para os \<Bitmaps> pares GUID/ID do moniker da imagem.  
 
  O formato do arquivo CSV de mapeamento é:  
 
@@ -509,18 +502,18 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 [ProvideMenuResource("MyPackage.ctmenu", 1, IconMappingFilename="IconMappings.csv")]  
 ```  
 
- O **IconMappingFilename** é um caminho relativo com raiz implícita em $PackageFolder $ (como no exemplo acima) ou um caminho absoluto com raiz explícita em um diretório definido por uma variável de ambiente, como @ "%USERPROFILE%\dir1\dir2\MyMappingFile.csv".  
+ O **IconMappingFilename** é um caminho relativo com raiz implícita em $PackageFolder $ (como no exemplo acima) ou um caminho absoluto com raiz explícita em um diretório definido por uma variável de ambiente, como @ "% UserProfile% \dir1\dir2\MyMappingFile.csv".  
 
 ## <a name="how-do-i-port-a-project-system"></a>Como fazer portar um sistema de projeto?  
  **Como fornecer ImageMonikers para um projeto**  
 
 1. Implemente **VSHPROPID_SupportsIconMonikers** no **IVsHierarchy**do projeto e retorne true.  
 
-2. Implemente qualquer **VSHPROPID_IconMonikerImageList** (se o projeto original usado **VSHPROPID_IconImgList**) ou **VSHPROPID_IconMonikerGuid**, **VSHPROPID_IconMonikerId**, **VSHPROPID_OpenFolderIconMonikerGuid**, VSHPROPID_OpenFolderIconMonikerId (se o projeto original usado **VSHPROPID_IconHandle** e **VSHPROPID_OpenFolderIconHandle**).  
+2. Implemente qualquer **VSHPROPID_IconMonikerImageList** (se o projeto original usado **VSHPROPID_IconImgList**) ou **VSHPROPID_IconMonikerGuid**, **VSHPROPID_IconMonikerId**, **VSHPROPID_OpenFolderIconMonikerGuid**, VSHPROPID_OpenFolderIconMonikerId (se o projeto original usado **VSHPROPID_IconHandle** e **VSHPROPID_OpenFolderIconHandle**). **VSHPROPID_OpenFolderIconMonikerId**  
 
 3. Altere a implementação do VSHPROPIDs original para ícones para criar versões "herdadas" dos ícones se os pontos de extensão os solicitarem. O **IVsImageService2** fornece a funcionalidade necessária para obter esses ícones  
 
-   **Requisitos extras para VB/C# projetos de tipos**  
+   **Requisitos extras para tipos de projeto VB/C#**  
 
    Só implemente **VSHPROPID_SupportsIconMonikers** se você detectar que o seu projeto é o **tipo mais externo**. Caso contrário, o tipo real mais externo pode não dar suporte a monikers de imagem na realidade, e seu tipo base pode efetivamente "Ocultar" imagens personalizadas.  
 
@@ -570,17 +563,17 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
 2. Se você estiver usando apenas **KnownMonikers**, faça o seguinte:  
 
-   - Substitua a seção \<imagens > do manifesto por \<imagens/>.  
+   - Substitua a \<Images> seção do manifesto por \<Images/> .  
 
-   - Remova todas as IDs de subimagem (qualquer coisa com \<nome imagestrip > _ # #).  
+   - Remova todas as IDs de subimagem (qualquer coisa com \<imagestrip name> _ # #).  
 
    - Recomendado: renomeie o símbolo AssetsGuid e o símbolo da faixa de imagem para se adequar ao seu uso.  
 
-   - Substitua o GUID de cada **ContainedImage**por $ (ImageCatalogGuid), substitua cada ID de **ContainedImage**por $ (\<moniker >) e adicione o atributo external = "true" a cada **ContainedImage**  
+   - Substitua o GUID de cada **ContainedImage**por $ (ImageCatalogGuid), substitua cada ID de **ContainedImage**por $ ( \<moniker> ) e adicione o atributo external = "true" a cada **ContainedImage**  
 
-       - \<> do moniker deve ser substituído pelo **KnownMoniker** que corresponde à imagem, mas com o "KnownMonikers". removido do nome.  
+       - \<moniker>deve ser substituído pelo **KnownMoniker** que corresponde à imagem, mas com o "KnownMonikers". removido do nome.  
 
-   - Adicione < importar manifesto = "$ (ManifestFolder)\\< caminho de dir de instalação relativa para\>\Microsoft.VisualStudio.ImageCatalog.imagemanifest"/\> na parte superior da seção \<símbolos >.  
+   - Adicione <importar manifesto = "$ (ManifestFolder) \\<caminho dir de instalação relativa a \> \Microsoft.VisualStudio.ImageCatalog.imagemanifest"/ \> na parte superior da \<Symbols> seção.  
 
        - O caminho relativo é determinado pelo local de implantação definido na criação da instalação para o manifesto.  
 
@@ -654,10 +647,10 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
 ## <a name="additional-resources"></a>Recursos adicionais  
 
-### <a name="samples"></a>Exemplos do  
+### <a name="samples"></a>Exemplos  
  Vários dos exemplos do Visual Studio no GitHub foram atualizados para mostrar como usar o serviço de imagem como parte de vários pontos de extensibilidade do Visual Studio.  
 
- Verifique [http://github.com/Microsoft/VSSDK-Extensibility-Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples) para obter os exemplos mais recentes.  
+ Verifique [http://github.com/Microsoft/VSSDK-Extensibility-Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples) os exemplos mais recentes.  
 
 ### <a name="tooling"></a>Ferramentas  
  Um conjunto de ferramentas de suporte para o serviço de imagem foi criado para auxiliar na criação/atualização da interface do usuário que funciona com o serviço de imagem. Para obter mais informações sobre cada ferramenta, consulte a documentação que acompanha as ferramentas. As ferramentas são incluídas como parte do [SDK do Visual Studio 2015.](https://msdn.microsoft.com/library/bb166441.aspx)  
@@ -668,7 +661,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
  **ManifestToCode**  
 
- A ferramenta de manifest to code usa um arquivo de manifesto de imagem e gera um arquivo de wrapper para referenciar osC++valores C#de manifesto nos arquivos de código (, ou VB) ou. vsct.  
+ A ferramenta de Manifest to Code usa um arquivo de manifesto de imagem e gera um arquivo de wrapper para referenciar os valores de manifesto nos arquivos de código (C++, C# ou VB) ou. vsct.  
 
  **ImageLibraryViewer**  
 
@@ -676,7 +669,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
 ## <a name="faq"></a>Perguntas frequentes  
 
-- Há alguma dependência que você deve incluir ao carregar \<referência include = "Microsoft. VisualStudio. *. Interop. 14.0. designtime "/>?  
+- Há alguma dependência que você deve incluir ao carregar \<Reference Include="Microsoft.VisualStudio.*.Interop.14.0.DesignTime" /> ?  
 
   - Defina EmbedInteropTypes = "true" em todas as DLLs de interoperabilidade.  
 
@@ -690,75 +683,74 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
   - Elas foram removidas quando o CPS foi atualizado para usar monikers. Você não precisa mais chamar o **StockIconService**, basta passar o **KnownMoniker** desejado para o método ou a propriedade usando o método de extensão **ToProjectSystemType ()** nos utilitários do CPS. Você pode encontrar um mapeamento de **ImageName** para **KnownMonikers** abaixo:  
 
-    |||  
-    |-|-|  
     |**ImageName**|**KnownMoniker**|  
-    |ImageName.OfflineWebApp|KnownImageIds.Web|  
-    |ImageName.WebReferencesFolder|KnownImageIds.Web|  
-    |ImageName.OpenReferenceFolder|KnownImageIds.FolderOpened|  
-    |ImageName.ReferenceFolder|KnownImageIds.Reference|  
-    |ImageName.Reference|KnownImageIds.Reference|  
-    |ImageName.SdlWebReference|KnownImageIds.WebReferenceFolder|  
-    |ImageName.DiscoWebReference|KnownImageIds.DynamicDiscoveryDocument|  
-    |ImageName.Folder|KnownImageIds.FolderClosed|  
-    |ImageName.OpenFolder|KnownImageIds.FolderOpened|  
-    |ImageName.ExcludedFolder|KnownImageIds.HiddenFolderClosed|  
-    |ImageName.OpenExcludedFolder|KnownImageIds.HiddenFolderOpened|  
-    |ImageName.ExcludedFile|KnownImageIds.HiddenFile|  
-    |ImageName.DependentFile|KnownImageIds.GenerateFile|  
-    |ImageName.MissingFile|KnownImageIds.DocumentWarning|  
-    |ImageName.WindowsForm|KnownImageIds.WindowsForm|  
-    |ImageName.WindowsUserControl|KnownImageIds.UserControl|  
-    |ImageName.WindowsComponent|KnownImageIds.ComponentFile|  
-    |ImageName.XmlSchema|KnownImageIds. XMLSchema|  
-    |ImageName.XmlFile|KnownImageIds.XMLFile|  
-    |ImageName.WebForm|KnownImageIds.Web|  
-    |ImageName.WebService|KnownImageIds.WebService|  
-    |ImageName.WebUserControl|KnownImageIds.WebUserControl|  
-    |ImageName.WebCustomUserControl|KnownImageIds.WebCustomControl|  
-    |ImageName.AspPage|KnownImageIds.ASPFile|  
-    |ImageName.GlobalApplicationClass|KnownImageIds.SettingsFile|  
-    |ImageName.WebConfig|KnownImageIds.ConfigurationFile|  
+    |-|-|  
+    |ImageName. OfflineWebApp|KnownImageIds. Web|  
+    |ImageName. WebReferencesFolder|KnownImageIds. Web|  
+    |ImageName. OpenReferenceFolder|KnownImageIds.FolderOpened|  
+    |ImageName. ReferenceFolder|KnownImageIds. Reference|  
+    |ImageName. Reference|KnownImageIds. Reference|  
+    |ImageName. SdlWebReference|KnownImageIds.WebReferenceFolder|  
+    |ImageName. DiscoWebReference|KnownImageIds.DynamicDiscoveryDocument|  
+    |ImageName. Folder|KnownImageIds.FolderClosed|  
+    |ImageName. OpenFolder|KnownImageIds.FolderOpened|  
+    |ImageName. ExcludedFolder|KnownImageIds.HiddenFolderClosed|  
+    |ImageName. OpenExcludedFolder|KnownImageIds.HiddenFolderOpened|  
+    |ImageName. excludefile|KnownImageIds. Hiddenfile|  
+    |ImageName. Dependentfile|KnownImageIds. Gerarfile|  
+    |ImageName. Missingfile|KnownImageIds.DocumentWarning|  
+    |ImageName. WindowsForm|KnownImageIds.WindowsForm|  
+    |ImageName. WindowsUserControl|KnownImageIds. UserControl|  
+    |ImageName. WindowsComponent|KnownImageIds. Componentfile|  
+    |Esquema de ImageName.Xml|Esquema de KnownImageIds.XML|  
+    |Arquivo de ImageName.Xml|Arquivo de KnownImageIds.XML|  
+    |ImageName. WebForms|KnownImageIds. Web|  
+    |ImageName. WebService|KnownImageIds. WebService|  
+    |ImageName. webusercontrol|KnownImageIds. webusercontrol|  
+    |ImageName. WebCustomUserControl|KnownImageIds.WebCustomControl|  
+    |ImageName. AspPage|KnownImageIds.ASPFile|  
+    |ImageName. GlobalApplicationClass|KnownImageIds. SettingsFile|  
+    |ImageName. WebConfig|KnownImageIds.ConfigurationFile|  
     |ImageName.HtmlPage|KnownImageIds.HTMLFile|  
-    |ImageName.StyleSheet|KnownImageIds.StyleSheet|  
-    |ImageName.ScriptFile|KnownImageIds.JSScript|  
-    |ImageName.TextFile|KnownImageIds.Document|  
-    |ImageName.SettingsFile|KnownImageIds.Settings|  
-    |ImageName.Resources|KnownImageIds.DocumentGroup|  
-    |ImageName.Bitmap|KnownImageIds.Image|  
-    |ImageName.Icon|KnownImageIds.IconFile|  
-    |ImageName.Image|KnownImageIds.Image|  
-    |ImageName.ImageMap|KnownImageIds.ImageMapFile|  
-    |ImageName.XWorld|KnownImageIds.XWorldFile|  
-    |ImageName.Audio|KnownImageIds.Sound|  
-    |ImageName.Video|KnownImageIds.Media|  
-    |ImageName.Cab|KnownImageIds.CABProject|  
-    |ImageName.Jar|KnownImageIds.JARFile|  
-    |ImageName.DataEnvironment|KnownImageIds.DataTable|  
-    |ImageName.PreviewFile|KnownImageIds.Report|  
-    |ImageName.DanglingReference|KnownImageIds.ReferenceWarning|  
-    |ImageName.XsltFile|KnownImageIds.XSLTransform|  
-    |ImageName.Cursor|KnownImageIds.CursorFile|  
-    |ImageName.AppDesignerFolder|KnownImageIds.Property|  
-    |ImageName.Data|KnownImageIds.Database|  
-    |ImageName.Application|KnownImageIds.Application|  
-    |ImageName.DataSet|KnownImageIds.DatabaseGroup|  
-    |ImageName.Pfx|KnownImageIds.Certificate|  
-    |ImageName.Snk|KnownImageIds.Rule|  
-    |ImageName.VisualBasicProject|KnownImageIds.VBProjectNode|  
-    |ImageName.CSharpProject|KnownImageIds.CSProjectNode|  
-    |ImageName.Empty|KnownImageIds.Blank|  
-    |ImageName.MissingFolder|KnownImageIds.FolderOffline|  
-    |ImageName.SharedImportReference|KnownImageIds.SharedProject|  
-    |ImageName.SharedProjectCs|KnownImageIds.CSSharedProject|  
-    |ImageName.SharedProjectVc|KnownImageIds.CPPSharedProject|  
-    |ImageName.SharedProjectJs|KnownImageIds.JSSharedProject|  
-    |ImageName.CSharpCodeFile|KnownImageIds.CSFileNode|  
-    |ImageName.VisualBasicCodeFile|KnownImageIds.VBFileNode|  
+    |ImageName. StyleSheet|KnownImageIds. StyleSheet|  
+    |ImageName. scriptfile|KnownImageIds.JSscript|  
+    |ImageName. textfile|KnownImageIds.Document|  
+    |ImageName. SettingsFile|KnownImageIds. Settings|  
+    |ImageName. Resources|KnownImageIds.DocumentGroup|  
+    |ImageName. bitmap|KnownImageIds. Image|  
+    |ImageName. Icon|KnownImageIds. IconFile|  
+    |ImageName. Image|KnownImageIds. Image|  
+    |ImageName. ImageMap|KnownImageIds. ImageMapfile|  
+    |ImageName. XWorld|KnownImageIds.XWorldFile|  
+    |ImageName. Audio|KnownImageIds. Sound|  
+    |ImageName. Video|KnownImageIds. Media|  
+    |ImageName.Cab|KnownImageIds.CABprojeto|  
+    |ImageName. jar|KnownImageIds. JARFile|  
+    |ImageName. DataEnvironment|KnownImageIds. DataTable|  
+    |ImageName. previewfile|KnownImageIds. Report|  
+    |ImageName. DanglingReference|KnownImageIds.ReferenceWarning|  
+    |ImageName. xsltfile|KnownImageIds. XSLTransform|  
+    |ImageName. cursor|KnownImageIds. cursorFile|  
+    |ImageName. AppDesignerFolder|KnownImageIds. Property|  
+    |ImageName. Data|KnownImageIds. Database|  
+    |ImageName. Application|KnownImageIds. Application|  
+    |ImageName. DataSet|KnownImageIds. Database|  
+    |ImageName. pfx|KnownImageIds. Certificate|  
+    |ImageName. SNK|KnownImageIds. Rule|  
+    |ImageName. VisualBasicProject|KnownImageIds.VBProjectNode|  
+    |ImageName. CSharpProject|KnownImageIds.CSProjectNode|  
+    |ImageName. Empty|KnownImageIds. Blank|  
+    |ImageName. MissingFolder|KnownImageIds.FolderOffline|  
+    |ImageName. SharedImportReference|KnownImageIds.SharedProject|  
+    |ImageName. SharedProjectCs|KnownImageIds.CSSharedProject|  
+    |ImageName. SharedProjectVc|KnownImageIds.CPPSharedProject|  
+    |ImageName. SharedProjectJs|KnownImageIds.JSSharedProject|  
+    |ImageName. CSharpCodeFile|KnownImageIds.CSFileNode|  
+    |ImageName. VisualBasicCodeFile|KnownImageIds.VBFileNode|  
 
   - Estou atualizando meu provedor de lista de conclusão. Que **KnownMonikers** corresponde aos valores antigos de **StandardGlyphGroup** e **StandardGlyph** ?  
 
-    ||||  
+    |Nome|Nome|Nome|  
     |-|-|-|  
     |GlyphGroupClass|GlyphItemPublic|ClassPublic|  
     |GlyphGroupClass|GlyphItemInternal|ClassInternal|  
@@ -915,7 +907,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |GlyphGroupIntrinsic|GlyphItemFriend|Objectinterna|  
     |GlyphGroupIntrinsic|GlyphItemProtected|Objectprotect|  
     |GlyphGroupIntrinsic|GlyphItemPrivate|Objectprivate|  
-    |GlyphGroupIntrinsic|GlyphItemShortcut|ObjectShortcut|  
+    |GlyphGroupIntrinsic|GlyphItemShortcut|Objectshortcut|  
     |GlyphGroupJSharpMethod|GlyphItemPublic|MethodPublic|  
     |GlyphGroupJSharpMethod|GlyphItemInternal|MethodInternal|  
     |GlyphGroupJSharpMethod|GlyphItemFriend|MethodInternal|  
@@ -949,7 +941,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |GlyphGroupError||StatusError|  
     |GlyphBscFile||Classe de|  
     |GlyphAssembly||Referência|  
-    |GlyphLibrary||Biblioteca do|  
+    |GlyphLibrary||Biblioteca|  
     |GlyphVBProject||VBProjectNode|  
     |GlyphCoolProject||CSProjectNode|  
     |GlyphCppProject||CPPProjectNode|  
@@ -962,10 +954,10 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |GlyphKeyword||IntellisenseKeyword|  
     |GlyphInformation||StatusInformation|  
     |GlyphReference||ClassMethodReference|  
-    |GlyphRecursion||{1&gt;Recursão&lt;1}|  
+    |GlyphRecursion||Recursão|  
     |GlyphXmlItem||Marca|  
     |GlyphJSharpProject||DocumentCollection|  
-    |GlyphJSharpDocument||Documento|  
+    |GlyphJSharpDocument||Document|  
     |GlyphForwardType||GoToNext|  
     |GlyphCallersGraph||Chamar|  
     |GlyphCallGraph||CallFrom|  

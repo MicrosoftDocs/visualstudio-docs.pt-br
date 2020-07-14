@@ -15,19 +15,19 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 13a6f80bb0500286dd44e9c5ca9378e95d4b891d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 779d3ec1ed520d5d48043f90e7cb6272553012a6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661315"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535038"
 ---
-# <a name="ca1405-com-visible-type-base-types-should-be-com-visible"></a>CA1405: os tipos base de tipo visível em COM devem ser visíveis em COM
+# <a name="ca1405-com-visible-type-base-types-should-be-com-visible"></a>CA1405: Tipos base de tipo visível no COM devem ser visíveis no COM
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|ComVisibleTypeBaseTypesShouldBeComVisible|
+|TypeName|ComVisibleTypeBaseTypesShouldBeComVisible|
 |CheckId|CA1405|
 |Categoria|Microsoft. Interoperability|
 |Alteração Significativa|DependsOnFix|
@@ -36,7 +36,7 @@ ms.locfileid: "72661315"
  Um tipo visível Component Object Model (COM) deriva de um tipo que não é visível COM.
 
 ## <a name="rule-description"></a>Descrição da Regra
- Quando um tipo visível COM adiciona membros em uma nova versão, ele deve obedecer a diretrizes estritas para evitar a interrupção de clientes COM que se associam à versão atual. Um tipo invisível para COM pressupõe que ele não precisa seguir essas regras de controle de versão COM ao adicionar novos membros. No entanto, se um tipo visível COM for derivado do tipo invisível COM e expõe uma interface de classe de <xref:System.Runtime.InteropServices.ClassInterfaceType?displayProperty=fullName> ou <xref:System.Runtime.InteropServices.ClassInterfaceType> (o padrão), todos os membros públicos do tipo base (a menos que estejam explicitamente marcados como COM invisível, que seriam redundantes) serão expostos a Interfaces. Se o tipo base adicionar novos membros em uma versão subsequente, todos os clientes COM que se associarem à interface de classe do tipo derivado poderão ser interrompidos. Tipos visíveis COM devem derivar somente de tipos visíveis COM para reduzir a chance de quebrar clientes COM.
+ Quando um tipo visível COM adiciona membros em uma nova versão, ele deve obedecer a diretrizes estritas para evitar a interrupção de clientes COM que se associam à versão atual. Um tipo invisível para COM pressupõe que ele não precisa seguir essas regras de controle de versão COM ao adicionar novos membros. No entanto, se um tipo visível COM for derivado do tipo invisível COM e expor uma interface de classe de <xref:System.Runtime.InteropServices.ClassInterfaceType?displayProperty=fullName> ou <xref:System.Runtime.InteropServices.ClassInterfaceType> (o padrão), todos os membros públicos do tipo base (a menos que estejam explicitamente marcados como com invisível, que seriam redundantes) serão expostos ao com. Se o tipo base adicionar novos membros em uma versão subsequente, todos os clientes COM que se associarem à interface de classe do tipo derivado poderão ser interrompidos. Tipos visíveis COM devem derivar somente de tipos visíveis COM para reduzir a chance de quebrar clientes COM.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
  Para corrigir uma violação dessa regra, torne os tipos base COM visíveis ou o tipo derivado COM invisível.
@@ -50,5 +50,5 @@ ms.locfileid: "72661315"
  [!code-csharp[FxCop.Interoperability.ComBaseTypes#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Interoperability.ComBaseTypes/cs/FxCop.Interoperability.ComBaseTypes.cs#1)]
  [!code-vb[FxCop.Interoperability.ComBaseTypes#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Interoperability.ComBaseTypes/vb/FxCop.Interoperability.ComBaseTypes.vb#1)]
 
-## <a name="see-also"></a>Consulte também
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute?displayProperty=fullName> [introdução à interface de classe](https://msdn.microsoft.com/733c0dd2-12e5-46e6-8de1-39d5b25df024) [interoperar com código não gerenciado](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)
+## <a name="see-also"></a>Consulte Também
+ <xref:System.Runtime.InteropServices.ClassInterfaceAttribute?displayProperty=fullName>[Introdução à interface de classe](https://msdn.microsoft.com/733c0dd2-12e5-46e6-8de1-39d5b25df024) [interoperação com código não gerenciado](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)

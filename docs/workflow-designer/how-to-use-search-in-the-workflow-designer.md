@@ -1,19 +1,19 @@
 ---
 title: 'Como: Use Pesquisa em Designer de Fluxo de Trabalho'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: f42d3115-2ed2-4941-8f1e-92dac41c30fa
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 12bda4af085b8ab41d3e11841f24cd5dfd389738
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 63ad6f8b6d3afd1f30f2e9a02eaa4927fb3608d2
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650304"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817470"
 ---
 # <a name="how-to-use-search-in-the-workflow-designer"></a>Como: Use Pesquisa em Designer de Fluxo de Trabalho
 
@@ -27,13 +27,13 @@ A localização rápida localiza o seguinte no designer:
 
 - Variáveis
 
-- Arguments
+- Argumentos
 
 - Expressões
 
 ### <a name="use-quick-find"></a>Usar localização rápida
 
-1. Com o designer de fluxo de trabalho aberto, pressione **Ctrl + F**ou selecione **Editar**  > **Localizar e substituir**  > **localização rápida**.
+1. Com o designer de fluxo de trabalho aberto, pressione **Ctrl + F**ou selecione **Editar**  >  **Localizar e substituir**localização  >  **rápida**.
 
 2. Insira o termo de pesquisa na caixa de texto **Localizar** e clique em **Localizar próximo**.
 
@@ -47,7 +47,7 @@ Localizar em arquivos localiza cadeias de caracteres em arquivos de fluxo de tra
 
 ### <a name="use-find-in-files"></a>Usar Localizar em arquivos
 
-1. No Visual Studio, pressione **Ctrl** +**Shift** +**F**ou selecione **editar**  > **Localizar e substituir**  > **localizar nos arquivos**.
+1. No Visual Studio, pressione **Ctrl** + **Shift** + **F**ou selecione **Editar**  >  **Localizar e substituir**  >  **localizar nos arquivos**.
 
 2. Insira o item de pesquisa na caixa de texto **Localizar** e clique em **Localizar tudo**.
 

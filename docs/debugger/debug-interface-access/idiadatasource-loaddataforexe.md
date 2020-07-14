@@ -1,7 +1,7 @@
 ---
 title: IDiaDataSource::loadDataForExe | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a86abb00ebc090c37f03a5533376ae0b9c3e8ae
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2ed61f8ffc95d0004213483d5b5d507c45ef2647
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744966"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468514"
 ---
 # <a name="idiadatasourceloaddataforexe"></a>IDiaDataSource::loadDataForExe
 Abre e prepara os dados de depuração associados ao arquivo. exe/. dll.
@@ -43,10 +43,10 @@ no Caminho alternativo para pesquisar dados de depuração.
 
 pCallback
 
-no Uma interface `IUnknown` para um objeto que dá suporte a uma interface de retorno de chamada de depuração, como [IDiaLoadCallback](../../debugger/debug-interface-access/idialoadcallback.md), [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md), [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)e/ou as interfaces [IDiaReadExeAtRVACallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md) .
+no Uma `IUnknown` interface para um objeto que dá suporte a uma interface de retorno de chamada de depuração, como [IDiaLoadCallback](../../debugger/debug-interface-access/idialoadcallback.md), [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md), [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)e/ou as interfaces [IDiaReadExeAtRVACallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md) .
 
-## <a name="return-value"></a>Valor retornado
-Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. A tabela a seguir mostra alguns dos possíveis códigos de erro para esse método.
+## <a name="return-value"></a>Valor Retornado
+Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. A tabela a seguir mostra alguns dos possíveis códigos de erro para esse método.
 
 |Valor|Descrição|
 |-----------|-----------------|
@@ -60,9 +60,9 @@ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de e
 ## <a name="remarks"></a>Comentários
 O cabeçalho de depuração do arquivo. exe/. dll nomeia o local de dados de depuração associado.
 
-Esse método lê o cabeçalho de depuração e, em seguida, pesquisa e prepara os dados de depuração. O progresso da pesquisa pode, opcionalmente, ser relatado e controlado por meio de retornos de chamada. Por exemplo, o [IDiaLoadCallback:: NotifyDebugDir](../../debugger/debug-interface-access/idialoadcallback-notifydebugdir.md) é invocado quando o método `IDiaDataSource::loadDataForExe` localiza e processa um diretório de depuração.
+Esse método lê o cabeçalho de depuração e, em seguida, pesquisa e prepara os dados de depuração. O progresso da pesquisa pode, opcionalmente, ser relatado e controlado por meio de retornos de chamada. Por exemplo, o [IDiaLoadCallback:: NotifyDebugDir](../../debugger/debug-interface-access/idialoadcallback-notifydebugdir.md) é invocado quando o `IDiaDataSource::loadDataForExe` método localiza e processa um diretório de depuração.
 
-As interfaces [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md) e [IDiaReadExeAtRVACallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md) permitem que o aplicativo cliente forneça métodos alternativos para a leitura de dados do arquivo executável quando o arquivo não pode ser acessado diretamente por meio do padrão e/s de arquivo.
+As interfaces [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md) e [IDiaReadExeAtRVACallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md) permitem que o aplicativo cliente forneça métodos alternativos para ler dados do arquivo executável quando o arquivo não pode ser acessado diretamente por meio de e/s de arquivo padrão.
 
 Para carregar um arquivo. pdb sem validação, use o método [IDiaDataSource:: loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) .
 
@@ -86,7 +86,7 @@ if (FAILED(hr))
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)
 - [IDiaLoadCallback](../../debugger/debug-interface-access/idialoadcallback.md)
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

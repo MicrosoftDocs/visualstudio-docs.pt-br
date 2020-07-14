@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_classParent | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 36dfed97fb8abd30f97c4068da94148715cae5c7
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d8b20552d29f5d649ddf669187632814986a388b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740850"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464103"
 ---
 # <a name="idiasymbolget_classparent"></a>IDiaSymbol::get_classParent
 Recupera uma referência para a classe pai do símbolo.
@@ -35,11 +35,11 @@ HRESULT get_classParent ( 
 
 fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que representa a classe pai do símbolo.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
-> Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
+> Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -51,6 +51,6 @@ fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasy
 ## <a name="remarks"></a>Comentários
  Os tipos de símbolos que podem ser pais de classe são documentados na [hierarquia de classes de tipos de símbolo](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Hierarquia de classes de tipos de símbolo](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)

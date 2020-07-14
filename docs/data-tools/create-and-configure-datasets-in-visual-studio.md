@@ -1,7 +1,7 @@
 ---
 title: Criar e configurar conjuntos de dados
 ms.date: 11/21/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - typed datasets, creating
 - datasets, creating
@@ -11,22 +11,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8222b1985ab7f765be9b06fdd6abf7cb1e1cb2dc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1065c5efdcf73016e61ee0f016511579d41acd88
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586907"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282742"
 ---
 # <a name="how-to-create-and-configure-datasets-in-visual-studio"></a>Como: criar e configurar conjuntos de valores no Visual Studio
 
 Um DataSet é um conjunto de objetos que armazenam dados de um Database na memória e dão suporte ao controle de alterações para permitir operações de criação, leitura, atualização e exclusão (CRUD) nesses dados sem a necessidade de sempre estar conectado ao banco de dado. Os conjuntos de dados foram projetados para *formulários simples em* aplicativos de negócios de data. Para novos aplicativos, considere o uso de Entity Framework para armazenar e modelar dados na memória. Para trabalhar com conjuntos de dados, você deve ter um conhecimento básico dos conceitos de banco de dados.
 
-Você pode criar uma classe <xref:System.Data.DataSet> tipada no Visual Studio em tempo de design usando o **Assistente de configuração de fonte de dados**. Para obter informações sobre como criar conjuntos de dados programaticamente, consulte [criando um conjunto de dados (ADO.net)](/dotnet/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset).
+Você pode criar uma classe tipada <xref:System.Data.DataSet> no Visual Studio em tempo de design usando o **Assistente de configuração de fonte de dados**. Para obter informações sobre como criar conjuntos de dados programaticamente, consulte [criando um conjunto de dados (ADO.net)](/dotnet/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset).
 
 ## <a name="create-a-new-dataset-by-using-the-data-source-configuration-wizard"></a>Criar um novo conjunto de dados usando o assistente de configuração de fonte de dados
 
-1. Abra o projeto no Visual Studio e escolha **projeto** > **Adicionar nova fonte de dados** para iniciar o assistente de configuração de **fonte de dados**.
+1. Abra o projeto no Visual Studio e escolha **projeto**  >  **Adicionar nova fonte de dados** para iniciar o **Assistente de configuração de fonte de dados**.
 
 2. Escolha o tipo de fonte de dados ao qual você estará se conectando.
 
@@ -40,13 +40,13 @@ Você pode criar uma classe <xref:System.Data.DataSet> tipada no Visual Studio e
 
      ![Escolher objetos de banco de dados](../data-tools/media/raddata-chose-objects.png)
 
-5. Clique em **Finalizar**.
+5. Clique em **Concluir**.
 
    O conjunto de um é exibido como um nó no **Gerenciador de soluções**.
 
    ![Conjunto de Gerenciador de Soluções](../data-tools/media/dataset-in-solution-explorer.png)
 
-6. Clique no nó do conjunto de um **Gerenciador de soluções** para abrir o conjunto **de um DataSet.** Cada tabela no conjunto de resultados tem um objeto `TableAdapter` associado, que é representado na parte inferior. O adaptador de tabela é usado para popular o conjunto de dados e, opcionalmente, para enviar comandos para o Database.
+6. Clique no nó do conjunto de um **Gerenciador de soluções** para abrir o conjunto **de um DataSet.** Cada tabela no conjunto de resultados tem um `TableAdapter` objeto associado, que é representado na parte inferior. O adaptador de tabela é usado para popular o conjunto de dados e, opcionalmente, para enviar comandos para o Database.
 
    ![Designer de Conjunto de Dados](../data-tools/media/dataset-designer.png)
 
@@ -82,11 +82,11 @@ Este procedimento mostra como adicionar uma tabela do mesmo banco de dados que v
 
 1. Abra o conjunto de dados no **Designer de Conjunto de Dados**.
 
-2. Arraste uma classe <xref:System.Data.DataTable> da guia **DataSet** da caixa de **ferramentas** para a **Designer de conjunto de dados**.
+2. Arraste uma <xref:System.Data.DataTable> classe da guia **DataSet** da caixa de **ferramentas** para a **Designer de conjunto de dados**.
 
-3. Adicione colunas para definir a tabela de dados. Clique com o botão direito do mouse na tabela e escolha **adicionar** > **coluna**. Use a janela **Propriedades** para definir o tipo de dados da coluna e uma chave, se necessário.
+3. Adicione colunas para definir a tabela de dados. Clique com o botão direito do mouse na tabela e escolha **Adicionar**  >  **coluna**. Use a janela **Propriedades** para definir o tipo de dados da coluna e uma chave, se necessário.
 
-Tabelas autônomas precisam implementar `Fill` lógica em tabelas autônomas para que você possa preenchê-las com dados. Para obter informações sobre como preencher tabelas de dados autônomas, consulte [Populando um DataSet de um DataAdapter](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter).
+Tabelas autônomas precisam implementar a `Fill` lógica em tabelas autônomas para que você possa preenchê-las com dados. Para obter informações sobre como preencher tabelas de dados autônomas, consulte [Populando um DataSet de um DataAdapter](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter).
 
 ## <a name="see-also"></a>Veja também
 

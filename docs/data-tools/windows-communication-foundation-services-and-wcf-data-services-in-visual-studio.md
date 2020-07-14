@@ -1,7 +1,7 @@
 ---
 title: Windows Communication Foundation e WCF Data Services
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -35,12 +35,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: abcfde777223ada130e06ab7766319e1d982258c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c1f24a33a482b1994d0d8667b4fc71cf968e4625
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585932"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281039"
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Serviços do Windows Communication Foundation e WCF Data Services no Visual Studio
 
@@ -52,25 +52,25 @@ O Windows Communication Foundation (WCF) é uma estrutura unificada para criar a
 
 ### <a name="what-are-wcf-data-services"></a>O que são WCF Data Services
 
-WCF Data Services é uma implementação do padrão de protocolo OData (Open Data).  WCF Data Services permite que você exponha dados tabulares como um conjunto de APIs REST, permitindo que você retorne dados usando verbos HTTP padrão, como GET, POST, PUT ou DELETE. No lado do servidor, WCF Data Services estão sendo substituídas por [ASP.NET Web API](https://dotnet.microsoft.com/apps/aspnet/apis) para criar novos serviços OData. A biblioteca de cliente do WCF Data Services continua sendo uma boa opção para consumir serviços OData em um aplicativo .NET do Visual Studio (**Project** > **Adicionar referência de serviço**). Para obter mais informações, consulte [WCF Data Services 4,5](/dotnet/framework/data/wcf).
+WCF Data Services é uma implementação do padrão de protocolo OData (Open Data).  WCF Data Services permite que você exponha dados tabulares como um conjunto de APIs REST, permitindo que você retorne dados usando verbos HTTP padrão, como GET, POST, PUT ou DELETE. No lado do servidor, WCF Data Services estão sendo substituídas por [ASP.NET Web API](https://dotnet.microsoft.com/apps/aspnet/apis) para criar novos serviços OData. A biblioteca de cliente do WCF Data Services continua sendo uma boa opção para consumir serviços OData em um aplicativo .net do Visual Studio (**Project**  >  **Adicionar referência de serviço**). Para obter mais informações, consulte [WCF Data Services 4,5](/dotnet/framework/data/wcf).
 
 ### <a name="wcf-programming-model"></a>Modelo de programação do WCF
 
-O modelo de programação do WCF se baseia na comunicação entre duas entidades: um serviço WCF e um cliente WCF. O modelo de programação é encapsulado no namespace <xref:System.ServiceModel> no .NET.
+O modelo de programação do WCF se baseia na comunicação entre duas entidades: um serviço WCF e um cliente WCF. O modelo de programação é encapsulado no <xref:System.ServiceModel> namespace no .net.
 
 ### <a name="wcf-service"></a>Serviço WCF
 
-Um serviço WCF é baseado em uma interface que define um contrato entre o serviço e o cliente. Ele é marcado com um atributo <xref:System.ServiceModel.ServiceContractAttribute>, conforme mostrado no código a seguir:
+Um serviço WCF é baseado em uma interface que define um contrato entre o serviço e o cliente. Ele é marcado com um <xref:System.ServiceModel.ServiceContractAttribute> atributo, conforme mostrado no código a seguir:
 
 [!code-csharp[WCFWalkthrough#6](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_1.cs)]
 [!code-vb[WCFWalkthrough#6](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_1.vb)]
 
-Você define funções ou métodos que são expostos por um serviço WCF marcando-os com um atributo <xref:System.ServiceModel.OperationContractAttribute>.
+Você define funções ou métodos que são expostos por um serviço WCF marcando-os com um <xref:System.ServiceModel.OperationContractAttribute> atributo.
 
 [!code-csharp[WCFWalkthrough#1](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_2.cs)]
 [!code-vb[WCFWalkthrough#1](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_2.vb)]
 
-Além disso, você pode expor dados serializados marcando um tipo composto com um atributo <xref:System.Runtime.Serialization.DataContractAttribute>. Isso habilita a vinculação de dados em um cliente.
+Além disso, você pode expor dados serializados marcando um tipo composto com um <xref:System.Runtime.Serialization.DataContractAttribute> atributo. Isso habilita a vinculação de dados em um cliente.
 
 Depois que uma interface e seus métodos são definidos, eles são encapsulados em uma classe que implementa a interface. Uma única classe de serviço WCF pode implementar vários contratos de serviço.
 
@@ -82,9 +82,9 @@ Vários pontos de extremidade podem ser expostos para um único serviço WCF. Is
 
 ### <a name="wcf-client"></a>Cliente de WCF
 
-Um cliente WCF consiste em um *proxy* que permite que um aplicativo se comunique com um serviço WCF e um ponto de extremidade que corresponde a um ponto de extremidade definido para o serviço. O proxy é gerado no lado do cliente no arquivo *app. config* e inclui informações sobre os tipos e métodos que são expostos pelo serviço. Para serviços que expõem vários pontos de extremidade, o cliente pode selecionar aquele que melhor atenda às suas necessidades, por exemplo, para se comunicar via HTTP e usar a autenticação do Windows.
+Um cliente WCF consiste em um *proxy* que permite que um aplicativo se comunique com um serviço WCF e um ponto de extremidade que corresponde a um ponto de extremidade definido para o serviço. O proxy é gerado no lado do cliente no arquivo de *app.config* e inclui informações sobre os tipos e métodos que são expostos pelo serviço. Para serviços que expõem vários pontos de extremidade, o cliente pode selecionar aquele que melhor atenda às suas necessidades, por exemplo, para se comunicar via HTTP e usar a autenticação do Windows.
 
-Após a criação de um cliente WCF, você faz referência ao serviço em seu código, assim como faria com qualquer outro objeto. Por exemplo, para chamar o método `GetData` mostrado anteriormente, você escreveria um código semelhante ao seguinte:
+Após a criação de um cliente WCF, você faz referência ao serviço em seu código, assim como faria com qualquer outro objeto. Por exemplo, para chamar o `GetData` método mostrado anteriormente, você escreveria um código semelhante ao seguinte:
 
 [!code-csharp[WCFWalkthrough#3](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_3.cs)]
 [!code-vb[WCFWalkthrough#3](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_3.vb)]
@@ -111,7 +111,7 @@ Quando você inicia o depurador do Visual Studio (pressionando **F5**) para um p
 
 Usando o host de serviço do WCF, você pode testar um serviço WCF sem gravar código extra ou confirmá-lo em um host específico durante o desenvolvimento.
 
-Para saber mais sobre o host de serviço WCF, consulte [host de serviço WCF (WcfSvcHost. exe)](/dotnet/framework/wcf/wcf-service-host-wcfsvchost-exe).
+Para saber mais sobre o host de serviço WCF, consulte [host de serviço WCF (WcfSvcHost.exe)](/dotnet/framework/wcf/wcf-service-host-wcfsvchost-exe).
 
 #### <a name="wcf-test-client"></a>Cliente de teste do WCF
 
@@ -119,11 +119,11 @@ A ferramenta de cliente de teste do WCF permite que você insira parâmetros de 
 
 Quando você pressiona **F5** para depurar um projeto de serviço WCF, o cliente de teste do WCF é aberto e exibe uma lista de pontos de extremidade de serviço que são definidos no arquivo de configuração. Você pode testar os parâmetros e iniciar o serviço e repetir esse processo para testar e validar continuamente seu serviço.
 
-Para saber mais sobre o cliente de teste do WCF, consulte [cliente de teste do WCF (WcfTestClient. exe)](/dotnet/framework/wcf/wcf-test-client-wcftestclient-exe).
+Para saber mais sobre o cliente de teste do WCF, consulte [WCF Test Client (WcfTestClient.exe)](/dotnet/framework/wcf/wcf-test-client-wcftestclient-exe).
 
 ### <a name="accessing-wcf-services-in-visual-studio"></a>Acessando serviços WCF no Visual Studio
 
-O Visual Studio simplifica a tarefa de criar clientes WCF, gerando automaticamente um proxy e um ponto de extremidade para os serviços que você adiciona usando a caixa de diálogo **Adicionar referência de serviço** . Todas as informações de configuração necessárias são adicionadas ao arquivo *app. config* . Na maioria das vezes, tudo o que você precisa fazer é instanciar o serviço para usá-lo.
+O Visual Studio simplifica a tarefa de criar clientes WCF, gerando automaticamente um proxy e um ponto de extremidade para os serviços que você adiciona usando a caixa de diálogo **Adicionar referência de serviço** . Todas as informações de configuração necessárias são adicionadas ao arquivo de *app.config* . Na maioria das vezes, tudo o que você precisa fazer é instanciar o serviço para usá-lo.
 
 A caixa de diálogo **Adicionar referência de serviço** permite que você insira o endereço de um serviço ou procure um serviço que esteja definido em sua solução. A caixa de diálogo retorna uma lista de serviços e as operações fornecidas por esses serviços. Ele também permite que você defina o namespace pelo qual você fará referência aos serviços no código.
 
@@ -154,24 +154,24 @@ Nesse caso, você pode especificar o `endpointConfigurationName` como um parâme
     > [!NOTE]
     > Substitua o *inreference* pelo namespace para a referência de serviço e substitua *Service1Client* pelo nome do serviço.
 
-3. Uma lista do IntelliSense é exibida, incluindo as sobrecargas do construtor. Selecione a sobrecarga de `endpointConfigurationName As String`.
+3. Uma lista do IntelliSense é exibida, incluindo as sobrecargas do construtor. Selecione a `endpointConfigurationName As String` sobrecarga.
 
 4. Após a sobrecarga, digite `=` *ConfigurationName*, em que *ConfigurationName* é o nome do ponto de extremidade que você deseja usar.
 
     > [!NOTE]
-    > Se você não souber os nomes dos pontos de extremidade disponíveis, poderá encontrá-los no arquivo *app. config* .
+    > Se você não souber os nomes dos pontos de extremidade disponíveis, poderá encontrá-los no arquivo de *app.config* .
 
 ### <a name="to-find-the-available-endpoints-for-a-wcf-service"></a>Para localizar os pontos de extremidade disponíveis para um serviço WCF
 
-1. No **Gerenciador de soluções**, clique com o botão direito do mouse no arquivo **app. config** do projeto que contém a referência de serviço e clique em **abrir**. O arquivo aparece no editor de código.
+1. No **Gerenciador de soluções**, clique com o botão direito do mouse no arquivo **app.config** do projeto que contém a referência de serviço e clique em **abrir**. O arquivo aparece no editor de código.
 
-2. Procure a marca `<Client>` no arquivo.
+2. Procure a `<Client>` marca no arquivo.
 
-3. Pesquise abaixo da marca de `<Client>` para uma marca que começa com `<Endpoint>`.
+3. Pesquise abaixo da `<Client>` marca para obter uma marca que comece com `<Endpoint>` .
 
-     Se a referência de serviço fornecer vários pontos de extremidade, haverá duas ou mais marcas de `<Endpoint`.
+     Se a referência de serviço fornecer vários pontos de extremidade, haverá duas ou mais `<Endpoint` marcas.
 
-4. Dentro da marca `<EndPoint>`, você encontrará um parâmetro `name="`*SomeService*`"` (em que *SomeService* representa um nome de ponto de extremidade). Esse é o nome do ponto de extremidade que pode ser passado para a sobrecarga de `endpointConfigurationName As String` de um construtor para uma referência de serviço.
+4. Dentro da `<EndPoint>` marca, você encontrará um `name="` parâmetro *SomeService* `"` (em que *SomeService* representa um nome de ponto de extremidade). Esse é o nome do ponto de extremidade que pode ser passado para a `endpointConfigurationName As String` sobrecarga de um construtor para uma referência de serviço.
 
 ## <a name="how-to-call-a-service-method-asynchronously"></a>Como: chamar um método de serviço de forma assíncrona
 
@@ -210,7 +210,7 @@ Você pode associar dados retornados por um serviço de Windows Communication Fo
 
 5. Clique no tipo de controle ao qual você deseja associar.
 
-6. Arraste o campo para um formulário. O controle é adicionado ao formulário, junto com um componente <xref:System.Windows.Forms.BindingSource> e um componente <xref:System.Windows.Forms.BindingNavigator>.
+6. Arraste o campo para um formulário. O controle é adicionado ao formulário, junto com um <xref:System.Windows.Forms.BindingSource> componente e um <xref:System.Windows.Forms.BindingNavigator> componente.
 
 7. Repita as etapas 4 a 6 para todos os outros campos que você deseja associar.
 
@@ -224,7 +224,7 @@ Você pode associar dados retornados por um serviço de Windows Communication Fo
 
 4. Clique em **DataGridView** para exibir os dados em uma grade ou **detalhes** para exibir os dados em controles individuais.
 
-5. Arraste o nó para o formulário. Os controles são adicionados ao formulário, junto com um componente <xref:System.Windows.Forms.BindingSource> e um componente <xref:System.Windows.Forms.BindingNavigator>.
+5. Arraste o nó para o formulário. Os controles são adicionados ao formulário, junto com um <xref:System.Windows.Forms.BindingSource> componente e um <xref:System.Windows.Forms.BindingNavigator> componente.
 
 ## <a name="how-to-configure-a-service-to-reuse-existing-types"></a>Como: configurar um serviço para reutilizar tipos existentes
 
@@ -252,16 +252,16 @@ Para evitar esse problema, os tipos em assemblies referenciados são compartilha
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-| Cargo | Descrição |
+| Title | Descrição |
 | - | - |
 | [Passo a passo: criando um Serviço WCF em Windows Forms](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md) | Fornece uma demonstração passo a passo de como criar e usar serviços WCF no Visual Studio. |
-| [Passo a passo: criando um serviço de dados WCF com WPF e Entity Framework](../data-tools/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md) | Fornece uma demonstração passo a passo de como criar e usar WCF Data Services no Visual Studio. |
+| [Walkthrough: Criando um serviço de dados WCF com o WPF e Entity Framework](../data-tools/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md) | Fornece uma demonstração passo a passo de como criar e usar WCF Data Services no Visual Studio. |
 | [Usando as ferramentas de desenvolvimento do WCF](/dotnet/framework/wcf/using-the-wcf-development-tools) | Discute como criar e testar serviços WCF no Visual Studio. |
-| | [Como adicionar, atualizar ou remover uma referência de WCF Data Service](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md) |
-| [Solução de problemas de referências de serviço](../data-tools/troubleshooting-service-references.md) | Apresenta alguns erros comuns que podem ocorrer com referências de serviço e como evitá-los. |
+| | [Como: Adicionar, atualizar ou remover uma referência do WCF Data Service](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md) |
+| [Solucionando problemas de referências de serviço](../data-tools/troubleshooting-service-references.md) | Apresenta alguns erros comuns que podem ocorrer com referências de serviço e como evitá-los. |
 | [Depurando serviços WCF](../debugger/debugging-wcf-services.md) | Descreve problemas comuns de depuração e técnicas que você pode encontrar ao depurar serviços WCF. |
-| [Passo a passo: criando um aplicativo de dados de N camadas](../data-tools/walkthrough-creating-an-n-tier-data-application.md) | Fornece instruções passo a passo para criar um conjunto de dados tipado e separar o código do TableAdapter e do conjunto de dados em vários projetos. |
-| [Configurar a caixa de diálogo de referência de serviço](../data-tools/configure-service-reference-dialog-box.md) | Descreve os elementos da interface do usuário da caixa de diálogo **Configurar referência de serviço** . |
+| [Walkthrough: Criando um aplicativo de dados de n camadas](../data-tools/walkthrough-creating-an-n-tier-data-application.md) | Fornece instruções passo a passo para criar um conjunto de dados tipado e separar o código do TableAdapter e do conjunto de dados em vários projetos. |
+| [Caixa de diálogo Configurar Referência de Serviço](../data-tools/configure-service-reference-dialog-box.md) | Descreve os elementos da interface do usuário da caixa de diálogo **Configurar referência de serviço** . |
 
 ## <a name="reference"></a>Referência
 

@@ -1,7 +1,7 @@
 ---
 title: 'Designer de Fluxo de Trabalho-como: usar o designer de importações'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - System.Activities.Presentation.View.ImportDesigner.UI
 ms.assetid: 61328ab6-9b66-4e12-8630-22e30ee8c9d1
@@ -10,18 +10,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f221efea08444a4dc3e31ade2a081753eb77242c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 77da016b062d032965fcf7042cedba2004e3fdf5
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817418"
 ---
 # <a name="how-to-use-the-imports-designer"></a>Como: Use o designer imports
 
-O designer imports permite que você inserir em namespaces para os tipos que você usará em suas expressões. Assim como as **importações** ou o **uso** de palavras-chave no C#Visual Basic e, a especificação de namespaces no designer de importações permite que você simplesmente Insira um nome de tipo em sua expressão em vez de um nome de tipo de versão totalmente qualificado.
+O designer imports permite que você inserir em namespaces para os tipos que você usará em suas expressões. Assim como as **importações** ou o **uso** de palavras-chave em Visual Basic e C#, a especificação de namespaces no designer de importações permite que você simplesmente Insira um nome de tipo em sua expressão em vez de um nome de tipo de versão totalmente qualificado.
 
-O designer imports reage a alterações na interface do usuário e as alterações feitas quando o fluxo de trabalho é salvo. Quando o fluxo de trabalho é salvo, namespaces podem ser adicionados automaticamente ao designer imports. Eles incluem o seguinte:
+O designer imports reage a alterações na interface do usuário e as alterações feitas quando o fluxo de trabalho é salvo. Quando o fluxo de trabalho é salvo, namespaces podem ser adicionados automaticamente ao designer imports. Entre elas estão as seguintes:
 
 - Namespaces para alguns tipos usados em declarações de variável e argumento.
 

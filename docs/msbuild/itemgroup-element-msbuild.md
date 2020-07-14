@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c058a5986f72192a86d0e554d9e0d0b9bdce1b42
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: a62b4df06d1c180a6a6d62b0231dce1136fb8059
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173506"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288969"
 ---
 # <a name="itemgroup-element-msbuild"></a>Elemento ItemGroup (MSBuild)
 
@@ -51,7 +51,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 |Atributo|Descrição|
 |---------------|-----------------|
 |`Condition`|Atributo opcional. Condição a ser avaliada. Para obter mais informações, consulte [Condições](../msbuild/msbuild-conditions.md).|
-|`Label`|Atributo opcional. Identifica o `ItemGroup`.|
+|`Label`|Atributo opcional. Identifica o `ItemGroup`. |
 
 ### <a name="child-elements"></a>Elementos filho
 
@@ -90,6 +90,8 @@ O exemplo de código a seguir mostra as coleções de itens definidos pelo usuá
 Em um arquivo de projeto simples, você normalmente usa um único `ItemGroup` elemento, mas também pode usar vários `ItemGroup` elementos. Quando vários `ItemGroup` elementos são usados, os itens são combinados em um único `ItemGroup` . Por exemplo, alguns itens podem ser incluídos por um `ItemGroup` elemento separado que é definido em um arquivo importado.
 
 Os RowGroups podem ter condições aplicadas usando o `Condition` atributo. Nesse caso, os itens só serão adicionados à lista de itens se a condição for satisfeita. Consulte as [condições do MSBuild](msbuild-conditions.md)
+
+O `Label` atributo é usado em alguns sistemas de compilação como uma maneira de controlar os comportamentos de compilação. Você pode usá-lo somente em declarações, como uma maneira de criar scripts MSBuild mais compreensíveis ou como uma configuração de controle para afetar as ações de compilação.
 
 ## <a name="see-also"></a>Veja também
 

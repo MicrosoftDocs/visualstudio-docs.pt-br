@@ -1,7 +1,7 @@
 ---
-title: 'Erro: falha na depuração porque a autenticação integrada do Windows não está habilitada | Microsoft Docs'
+title: Erro-falha na depuração porque a autenticação integrada do Windows não está habilitada | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.webdbg_ntlm_authn_not_enabled
 dev_langs:
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c508951a3b54a7f84f142c5029b5305c8ef579ea
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: b9c4f0e25449b0e108ac39662ec52a0ba9abc217
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911542"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460832"
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>Erro: falha na depuração porque a autenticação integrada do Windows não está habilitada
 A autenticação do usuário que solicitou a depuração foi impedida por um erro de autenticação. Isso pode ocorrer ao tentar entrar em um aplicativo Web ou serviço Web XML. Uma causa desse erro é que a autenticação integrada do Windows não está habilitada. Para habilitá-la, siga as etapas em “Para habilitar a autenticação integrada do Windows”.
@@ -33,7 +33,7 @@ A autenticação do usuário que solicitou a depuração foi impedida por um err
 
 1. Faça logon no servidor Web com uma conta de administrador.
 
-2. Clique em **Iniciar** e em **Painel de Controle**.
+2. Clique em **Iniciar** e em **painel de controle**.
 
 3. No **Painel de Controle**, clique duas vezes em **Ferramentas Administrativas**.
 
@@ -97,7 +97,7 @@ A autenticação do usuário que solicitou a depuração foi impedida por um err
 
 4. Clique em **Exibição clássica** e clique duas vezes em **Ferramentas Administrativas**.
 
-5. Clique na coluna **Nome** e clique duas vezes em **Gerenciador do IIS (Serviços de Informações da Internet)** .
+5. Clique na coluna **Nome** e clique duas vezes em **Gerenciador do IIS (Serviços de Informações da Internet)**.
 
 6. Na coluna **Conexões**, expanda o nó para o servidor.
 
@@ -111,9 +111,9 @@ A autenticação do usuário que solicitou a depuração foi impedida por um err
 
 9. No painel **Autenticação**, na coluna **Nome**, clique com o botão direito do mouse em **Autenticação do Windows** e clique em **Habilitar**.
 
-10. Feche a janela **Gerenciador do IIS (Serviços de Informações da Internet)** .
+10. Feche a janela **Gerenciador do IIS (Serviços de Informações da Internet)**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Depurando aplicativos Web: erros e solução de problemas](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
 - [Autenticação do Microsoft Digest](/windows/win32/secauthn/microsoft-digest-authentication)
 - [Executando aplicativos Web no Windows Vista com o IIS 7,0 e o Visual Studio](https://msdn.microsoft.com/Library/262a82ac-dd0e-4096-86c6-fb463e88be66)

@@ -1,7 +1,7 @@
 ---
 title: 'Como: criar uma associação entre entidades | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - AssociationGroupTool
 dev_langs:
@@ -21,12 +21,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cba9d712e2bcfa90ae37d47e3c518697f10b6add
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 75d4fcc9b99c9c5e2960e152eb5dac1da1343109
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981840"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016933"
 ---
 # <a name="how-to-create-an-association-between-entities"></a>Como: criar uma associação entre entidades
   Você pode definir relações entre entidades em seu modelo de BDC (conectividade de dados corporativos) Criando associações. O Visual Studio gera métodos que fornecem aos consumidores do modelo informações sobre cada associação. Esses métodos podem ser consumidos por Web Parts do SharePoint, listas ou aplicativos personalizados para exibir relações de dados em uma interface do usuário.
@@ -45,11 +44,11 @@ ms.locfileid: "72981840"
 
     1. Na coluna **ID da origem** da tabela de **mapeamento de identificadores** , escolha o identificador ao lado de cada descritor de tipo correspondente que aparece na coluna **campo** .
 
-         Por exemplo, na coluna **ID de origem** , selecione `ContactID` ao lado do descritor de tipo `ReadList.salesOrderList.SalesOrderList.SalesOrder.ContactID` e o descritor de tipo `ReadItem.salesOrder.SalesOrder.ContactID`.
+         Por exemplo, na coluna **ID de origem** , selecione `ContactID` ao lado do `ReadList.salesOrderList.SalesOrderList.SalesOrder.ContactID` descritor de tipo e o `ReadItem.salesOrder.SalesOrder.ContactID` descritor de tipo.
 
 4. Se você quiser criar uma associação de um reless estrangeiro, desmarque a caixa de seleção **é Associação de chave estrangeira** .
 
-5. Selecione o botão **OK**.
+5. Clique no botão **OK**.
 
 6. No BDC designer, uma linha que representa a associação aparece entre a entidade de origem e a entidade de destino.
 

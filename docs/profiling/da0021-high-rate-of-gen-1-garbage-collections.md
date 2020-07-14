@@ -1,7 +1,7 @@
 ---
-title: 'DA0021: alta taxa de coletas de lixo da Ger 1 | Microsoft Docs'
+title: DA0021-alta taxa de coletas de lixo de Gen 1 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.21
 - vs.performance.DA0021
@@ -13,16 +13,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 36350b59a3d70f8553fddc5f58bf5c79716fa3aa
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b22341f1e4944b91f86a16af19494a85a2abd013
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777654"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544684"
 ---
-# <a name="da0021-high-rate-of-gen-1-garbage-collections"></a>DA0021: taxa alta de coletas de lixo Gen 1
+# <a name="da0021-high-rate-of-gen-1-garbage-collections"></a>DA0021: Alta taxa de coletas de lixo de Geração 1
 
-|||
+|Item|Valor|
 |-|-|
 |ID de regra|DA0021|
 |Categoria|Uso do .NET Framework|

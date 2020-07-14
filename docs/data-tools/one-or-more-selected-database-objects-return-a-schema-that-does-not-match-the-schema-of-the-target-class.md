@@ -1,19 +1,19 @@
 ---
 title: Um ou mais objetos de base de dados selecionado retornam um esquema que não corresponde ao esquema de classe de destino
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: error-reference
 ms.assetid: 3794e88b-4d3d-4e7a-ade6-8208eabe3eae
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 24729d319d35ee400248a3f961d435e28eb38770
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: c4bba0b227321e30f86aa552add245195b34e3b5
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76113622"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281897"
 ---
 # <a name="one-or-more-selected-database-objects-return-a-schema-that-does-not-match-the-schema-of-the-target-class"></a>Um ou mais objetos de base de dados selecionado retornam um esquema que não corresponde ao esquema de classe de destino
 
@@ -21,7 +21,7 @@ Um ou mais objetos de base de dados selecionado retornam um esquema que não cor
 
 Quando você arrastar objetos de base de dados existentes em classes de entidade, os dados retornados pelo objeto base de dados devem coincidir com o esquema de classe de entidade de destino. Verifique se o objeto de base de dados correto é selecionado e que a classe correta de entidade está sendo destino atual.
 
-## <a name="to-correct-this-error"></a>Para corrigir esse erro
+## <a name="to-correct-this-error"></a>Para corrigir este erro
 
 1. Clique **OK** para descartar a caixa de diálogo.
 

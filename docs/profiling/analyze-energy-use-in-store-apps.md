@@ -14,12 +14,12 @@ manager: jillfra
 ms.workload:
 - uwp
 monikerRange: vs-2017
-ms.openlocfilehash: 0fc78a84d0c2f86e8db6c4703cc7404a32508d72
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 524eb76696414cbbdba72266cc732ccb7e089f86
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "73144739"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537235"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>Analisar o uso de energia em aplicativos UWP
 
@@ -91,7 +91,7 @@ if (performance && performance.mark) {
 
 1. No menu **Depurar**, escolha **Iniciar Diagnóstico Sem Depurar**.
 
-     ![Escolha o consumo de energia no centro de diagnósticos](../profiling/media/energyprof_diagnosticshub.png "ENERGYPROF_DiagnosticsHub")
+     ![Escolha consumo de energia no Hub de diagnóstico](../profiling/media/energyprof_diagnosticshub.png "ENERGYPROF_DiagnosticsHub")
 
 2. Selecione **Consumo de Energia** e então **Iniciar**.
 
@@ -102,7 +102,7 @@ if (performance && performance.mark) {
 
 4. Para interromper a criação do perfil, retorne ao Visual Studio (Alt + Tab) e selecione **Interromper a coleta** na página Hub de diagnóstico.
 
-     ![Pare de coletar dados](../profiling/media/xamlprof_stopcollection.png "XAMLProf_StopCollection")
+     ![Parar coleta de dados](../profiling/media/xamlprof_stopcollection.png "XAMLProf_StopCollection")
 
      O Visual Studio analisa os dados coletados e exibe os resultados.
 
@@ -122,16 +122,16 @@ if (performance && performance.mark) {
 ## <a name="analyze-energy-profile-data"></a>Analisar dados do perfil de energia
  Os dados do perfil de energia são exibidos na janela do documento do Visual Studio:
 
- ![Página do relatório do perfil de energia](../profiling/media/energyprof_all.png "ENERGYPROF_All")
+ ![Página de relatório do Energy Profiler](../profiling/media/energyprof_all.png "ENERGYPROF_All")
 
-|||
+|Imagem|Descrição|
 |-|-|
 |![Etapa 1](../profiling/media/procguid_1.png "ProcGuid_1")|O arquivo de relatório é chamado Report*AAAAMMDD-HHMM*.diagsession. Você poderá alterar o nome se decidir salvar o relatório.|
 |![Etapa 2](../profiling/media/procguid_2.png "ProcGuid_2")|A linha de tempo mostra a duração da sessão de criação de perfil, os eventos de ativação de ciclo de vida do aplicativo e as marcas de usuário.|
 |![Etapa 3](../profiling/media/procguid_3.png "ProcGuid_3")|Você pode restringir o relatório a uma parte da linha do tempo arrastando as barras azuis para selecionar uma região da linha do tempo.|
-|![Passo 4](../profiling/media/procguid_4.png "ProcGuid_4")|O gráfico **Consumo de Energia** é um gráfico de várias linhas que exibe a alteração na saída de potência causada por um recurso do dispositivo durante uma sessão de criação de perfil. O criador de perfil Consumo de Energia controla a energia usada pela CPU, pela atividade de rede e pelo monitor.|
-|![Passo 5](../profiling/media/procguid_6.png "ProcGuid_6")|O gráfico **Recursos (Ativado/Desativado)** fornece detalhes dos custos de energia de rede. A barra **Rede** representa o tempo em que a conexão de rede permaneceu aberta. A barra filha **Transferência de Dados** corresponde ao tempo em que o aplicativo recebeu ou enviou dados pela rede.|
-|![Passo 6](../profiling/media/procguid_6a.png "ProcGuid_6a")|O **Resumo do Consumo de Energia** mostra a quantidade proporcional de energia total usada na linha do tempo selecionada pela CPU, pela atividade de rede e pela tela.|
+|![Etapa 4](../profiling/media/procguid_4.png "ProcGuid_4")|O gráfico **Consumo de Energia** é um gráfico de várias linhas que exibe a alteração na saída de potência causada por um recurso do dispositivo durante uma sessão de criação de perfil. O criador de perfil Consumo de Energia controla a energia usada pela CPU, pela atividade de rede e pelo monitor.|
+|![Etapa 5](../profiling/media/procguid_6.png "ProcGuid_6")|O gráfico **Recursos (Ativado/Desativado)** fornece detalhes dos custos de energia de rede. A barra **Rede** representa o tempo em que a conexão de rede permaneceu aberta. A barra filha **Transferência de Dados** corresponde ao tempo em que o aplicativo recebeu ou enviou dados pela rede.|
+|![Etapa 6](../profiling/media/procguid_6a.png "ProcGuid_6a")|O **Resumo do Consumo de Energia** mostra a quantidade proporcional de energia total usada na linha do tempo selecionada pela CPU, pela atividade de rede e pela tela.|
 
  **Para analisar os dados do perfil de energia**
 
@@ -140,11 +140,11 @@ if (performance && performance.mark) {
 ## <a name="optimize-energy-use"></a>Otimizar o uso de energia
  Além de transmitir dados, as conexões de rede implicam custos de energia para inicializar, manter e encerrar a conexão. Algumas redes mantêm a conexão por um período depois que os dados são enviados ou recebidos para permitir que mais dados sejam transmitidos por uma única conexão. Você pode usar o painel **Recursos (Ativado/Desativado)** para examinar a maneira como seu aplicativo interage com a conexão.
 
- ![Recursos &#40;no painel&#47;Off&#41;](../profiling/media/energyprof_resources.png "ENERGYPROF_Resources")
+ ![&#40;de recursos no painel&#47;off&#41;](../profiling/media/energyprof_resources.png "ENERGYPROF_Resources")
 
  Se as barras **Rede** e **Transferência de Dados** mostrarem que a conexão está aberta por um longo período para transmitir uma série de pacotes pequenos de dados de maneira intermitente, você poderá dividir os dados em lotes para enviá-los em uma transmissão, reduzir o tempo em que a rede fica aberta e, portanto, economizar em custos de energia.
 
- ![Painel de resumo de consumo de energia](../profiling/media/energyprof_summary.png "ENERGYPROF_Summary")
+ ![Painel Resumo de consumo de energia](../profiling/media/energyprof_summary.png "ENERGYPROF_Summary")
 
  Você tem menos controle sobre os custos de energia da tela. A maioria das telas exige mais energia para exibir cores claras do que cores mais escuras, portanto, usar uma tela de fundo escuro é uma maneira de reduzir custos.
 
@@ -154,7 +154,7 @@ if (performance && performance.mark) {
 
    O simulador do Visual Studio para aplicativos UWP permite que você simule propriedades de conexão de dados das APIs de informações de rede. Consulte [Executar aplicativos UWP no simulador](../debugger/run-windows-store-apps-in-the-simulator.md)
 
-- As ferramentas de **Uso da CPU** podem ajudar a reduzir a carga da CPU quando ela for causada por funções ineficientes. Consulte [Analisar o uso da CPU](../profiling/beginners-guide-to-performance-profiling.md).
+- As ferramentas de **Uso da CPU** podem ajudar a reduzir a carga da CPU quando ela for causada por funções ineficientes. Consulte [analisar o uso da CPU](../profiling/beginners-guide-to-performance-profiling.md).
 
 ## <a name="see-also"></a>Confira também
 

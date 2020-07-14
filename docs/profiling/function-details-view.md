@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e5bd33d9924784220addafca85a63f550df02c7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2fa53ba1d2e805f744d6a817c65b77428d757a25
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779253"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536988"
 ---
 # <a name="function-details-view"></a>Exibição de detalhes da função
 A janela **Exibição Detalhes da Função** exibe as seguintes informações:
@@ -85,14 +85,14 @@ A janela **Exibição Detalhes da Função** exibe as seguintes informações:
 ### <a name="sampling"></a>amostragem
  A tabela a seguir explica os valores na lista Métrica de Desempenho para os dados de criação de perfil coletados usando o método de amostragem.
 
-|||
+|Valor|Descrição|
 |-|-|
 |**Amostras Inclusivas (Amostras Coletadas)**|‑   Para uma função de chamada, o número de amostras que foram coletados quando a função selecionada foi chamada por essa função de chamada.<br />‑   Para o Corpo da Função, o número de exemplos que foram coletados quando a função selecionada estava executando seu próprio código.<br />‑   Para uma função chamada, o número de amostras que foram coletados quando a função chamada estava em execução devido a uma chamada da função selecionada.|
 
 ### <a name="instrumentation"></a>Instrumentação
  A tabela a seguir explica os valores na lista Métrica de Desempenho para os dados de criação de perfil coletados usando o método de instrumentação.
 
-|||
+|Valor|Descrição|
 |-|-|
 |**Tempo Inclusivo Decorrido (Tempo Decorrido)**|O tempo decorrido inclui o tempo gasto em chamadas para o sistema operacional, como operações de entrada/saída e de mudanças de contexto.<br /><br /> ‑   Para uma **Função de Chamada**, a quantidade de tempo decorrido gasto para executar as instâncias da função selecionada que foram chamadas pela função. O tempo gasto nas funções que foram chamadas pela função selecionada é incluído.<br />‑   Para o **Corpo da Função**, a quantidade total de tempo decorrido gasto para executar o código da função selecionada. O tempo gasto nas funções chamadas não é incluído.<br />‑   Para uma função chamada, a quantidade de tempo decorrido gasto para executar as instâncias da função que foram chamadas pela função selecionada. O total inclui o tempo gasto em funções que foram chamadas pela função. O tempo gasto nas funções que foram chamadas pela função selecionada é incluído.|
 |**Tempo Inclusivo do Aplicativo (Tempo de Aplicação)**|O tempo de aplicação não inclui o tempo gasto em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto.<br /><br /> ‑   Para uma **Função de Chamada**, a quantidade de tempo de aplicação que foi gasto para executar as instâncias da função selecionada que foram chamadas pela função. O tempo gasto nas funções que foram chamadas pela função selecionada é incluído.<br />‑   Para o **Corpo da Função**, a quantidade total de tempo de aplicação gasto para executar o código da função selecionada. O tempo gasto nas funções chamadas não é incluído.<br />‑   Para uma função chamada, a quantidade de tempo de aplicação gasto para executar as instâncias da função que foram chamadas pela função selecionada. O total inclui o tempo gasto em funções que foram chamadas pela função.|
@@ -100,7 +100,7 @@ A janela **Exibição Detalhes da Função** exibe as seguintes informações:
 ### <a name="net-memory"></a>Memória do .NET
  A tabela a seguir explica os valores na lista Métrica de Desempenho para os dados de criação de perfil coletados usando o método de criação de perfil de memória .NET.
 
-|||
+|Valor|Descrição|
 |-|-|
 |**Alocações Inclusivas (Alocações)**|–   Para uma **Função de Chamada**, o número de objetos alocados pelas instâncias da função selecionada que a função chamou. O número inclui objetos que foram alocados por funções que a função selecionada chamou.<br />–   Para o **Corpo da Função**, o número de objetos que foram coletados pela função selecionada quando estava executando seu próprio código. Objetos alocados em funções chamadas por essa função selecionada não são incluídos.<br />–   Para uma função chamada, o número de objetos que foram alocados pela instância da função que foram chamados pela função selecionada. O número inclui objetos que foram alocados por funções que a função chamou.|
 |**Bytes Inclusivos (Bytes)**|–   Para uma **Função de Chamada**, o número de bytes alocados pelas instâncias da função selecionada que a função chamou. O número inclui bytes que foram alocados por funções que a função selecionada chamou.<br />–   Para o **Corpo da Função**, o número total de bytes que foram alocados pela função selecionada quando ela estava executando seu próprio código. Bytes alocados em funções chamadas pela função selecionada não são incluídos.<br />–   Para uma função chamada, o número de bytes que foram alocados pela instância da função que foram chamados pela função selecionada. O número inclui bytes que foram alocados por funções que a função chamou.|
@@ -108,7 +108,7 @@ A janela **Exibição Detalhes da Função** exibe as seguintes informações:
 ### <a name="concurrency"></a>Simultaneidade
  A tabela a seguir explica os valores na lista Métrica de Desempenho para os dados de criação de perfil coletados usando o método de simultaneidade.
 
-|||
+|Valor|Descrição|
 |-|-|
 |**Contenções Inclusivas (Contenções)**|–   Para uma **Função de Chamada**, o número de eventos de contenção de recursos que ocorreram nas instâncias da função selecionada que a função chamou. O número inclui eventos de contenção em funções que a função selecionada chamou.<br />–   Para o **Corpo da Função**, o número total de eventos de contenção que ocorreram quando a função estava executando seu próprio código. As contenções que ocorreram nas funções que foram chamadas pelas função selecionada não são incluídas.<br />–   Para uma função chamada, o número de eventos de contenção que ocorreram nas instâncias da função que foram chamadas pela função selecionada. O número inclui eventos de contenção que ocorreram nas funções que a função chamou.|
 |**Tempo Bloqueado Inclusivo (Tempo Bloqueado)**|–   Para uma função de chamada, o tempo gasto em eventos de contenção de recursos para as instâncias da função selecionada que a função chamou. O tempo inclui o tempo bloqueado em funções que a função selecionada chamou.<br />–   Para o **Corpo da Função**, o tempo total que foi gasto em eventos de contenção que ocorreram quando a função estava executando seu próprio código. As contenções que ocorreram nas funções que a função selecionada chamou não são incluídas.<br />–   Para uma função chamada, o tempo gasto em eventos de contenção de recursos para as instâncias da função que a função selecionada chamou. O tempo inclui o tempo bloqueado que ocorreu em funções que a função selecionada chamou.|

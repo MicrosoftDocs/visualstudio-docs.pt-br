@@ -15,19 +15,19 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 943b52f9703e60f14756bde97ce6f27c0c6f5296
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a8172490b267949686dd3390c85ed6d86531b192
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672511"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85521168"
 ---
-# <a name="ca2003-do-not-treat-fibers-as-threads"></a>CA2003: não tratar fibras como threads
+# <a name="ca2003-do-not-treat-fibers-as-threads"></a>CA2003: Não tratar fibras como threads
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|DoNotTreatFibersAsThreads|
+|TypeName|DoNotTreatFibersAsThreads|
 |CheckId|CA2003|
 |Categoria|Microsoft. confiabilidade|
 |Alteração Significativa|Sem interrupção|

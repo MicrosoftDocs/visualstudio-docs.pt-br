@@ -20,12 +20,12 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 14bae318e052d0c1eb0e23638c0ad78b70e62f7d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ad2a26e36c83c4a3b3ad051504bc3944663ee2ad
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670416"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544970"
 ---
 # <a name="microsoft-help-viewer"></a>Microsoft Help Viewer
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +35,7 @@ Você pode instalar e exibir o conteúdo de vários produtos e tecnologias em se
 > [!WARNING]
 > Quando você instala o Visual Studio, pode obter o Help Viewer. Para começar a ler os tópicos do Help Viewer, em vez de no site de download do MSDN, acesse o menu **Ajuda** no Visual Studio, selecione **Definir Preferência de Ajuda** e, em seguida, selecione **Iniciar no Help Viewer**. Os tópicos da ajuda offline para uma determinada versão do Visual Studio estão disponíveis somente após o lançamento final da respectiva versão.
 
- Você pode fazer o seguinte:
+ É possível fazer o seguinte:
 
 - Localize e baixe conjuntos de conteúdo, que também são chamados de livros.
 
@@ -50,7 +50,7 @@ Você pode instalar e exibir o conteúdo de vários produtos e tecnologias em se
 ## <a name="navigating-the-help-viewer"></a>Navegando no Help Viewer
  Você pode encontrar informações no conteúdo instalado usando as guias de navegação, exibir conteúdo instalado na guia ou guias de tópico e gerenciar conteúdo usando a guia **gerenciar conteúdo** . Você também pode executar tarefas adicionais usando os botões na barra de ferramentas e encontrar informações adicionais no canto inferior direito da janela.
 
-|||
+|Cenário|Descrição|
 |-|-|
 |Navegação|Usando a guia **Conteúdo**, você pode exibir o conteúdo instalado como uma hierarquia e especificar os critérios para filtrar os títulos que aparecem.<br /><br /> Usando a guia **Pesquisa**, você pode pesquisar termos em qualquer lugar no conteúdo, inclusive código e títulos de tópico.<br /><br /> Usando a guia **Índice**, você pode pesquisar no índice, especificar os critérios para filtrar as entradas e exigir que entradas de índice contenham ou comecem com texto que você especificar.<br /><br /> Usando a guia **Favoritos**, você pode salvar links para os tópicos mais usados e exibir uma lista de tópicos exibidos recentemente.|
 |Exibição de tópico|Cada tópico aparece em uma guia, e você pode abrir vários tópicos ao mesmo tempo.|
@@ -74,5 +74,5 @@ Você pode instalar e exibir o conteúdo de vários produtos e tecnologias em se
 
   A área inferior da janela do Help Viewer contém informações sobre o tamanho total de downloads pendentes, a quantidade de espaço em disco necessária que eles exigem e a quantidade de espaço em disco disponível. Essa área também contém informações sobre os erros que podem ter ocorrido e um link que você pode escolher para atualizar o conteúdo instalado, se houver atualizações disponíveis.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Guia do administrador do Help Viewer](../ide/help-viewer-administrator-guide.md) [instalar e gerenciar conteúdo local](../ide/install-and-manage-local-content.md) [Localize informações](../ide/locate-information.md) [solução de problemas do Visualizador da ajuda](../ide/troubleshooting-the-help-viewer.md)

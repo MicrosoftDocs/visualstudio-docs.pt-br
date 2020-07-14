@@ -1,18 +1,18 @@
 ---
 title: Escrever testes de unidade para DLLs C++
 ms.date: 05/01/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 856bc21fdee8945ddcd97e3978f46af0008af616
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3bfbe5fd0147a04d6fc6142fd1d722f8f2304586
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77279278"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287032"
 ---
 # <a name="write-unit-tests-for-c-dlls-in-visual-studio"></a>Escrever testes de unidade para DLLs em C++ no Visual Studio
 
@@ -44,7 +44,7 @@ Vá para o procedimento [Para adicionar testes de unidade no mesmo projeto](#sam
 
   1. No **Gerenciador de Soluções**, no menu de atalho do projeto em teste, selecione **Propriedades**. A janela **Propriedades** do projeto é aberta.
 
-  2. Escolha **propriedades de** > configuração**geral**.
+  2. Escolha **Propriedades de configuração**  >  **geral**.
 
   3. Defina **Tipo de Configuração** como **Biblioteca Estática (.lib)**.
 
@@ -76,7 +76,7 @@ Vá para o procedimento [Para adicionar testes de unidade no mesmo projeto](#sam
 
   1. Nas propriedades do projeto de teste, adicione o local do projeto em teste a Incluir Diretórios.
 
-       Escolha **propriedades de configuração** > **VC++ Diretórios** > **incluem diretórios**.
+       Escolha **Propriedades de configuração**  >  **diretórios vc + +**  >  **incluir diretórios**.
 
        Escolha **Editar**e adicione o diretório de cabeçalho do projeto que está sendo testado.
 
@@ -100,17 +100,17 @@ Vá para o procedimento [Para adicionar testes de unidade no mesmo projeto](#sam
 
       ::: moniker-end
 
-  2. No **Solution Explorer**, no menu de atalho do projeto de teste, escolha **Propriedades**.
+  2. No **Gerenciador de soluções**, no menu de atalho do projeto de teste, escolha **Propriedades**.
 
-  3. Escolha **propriedades de configuração** > **Entrada de** > **entrada** > **dependências adicionais**.
+  3. Escolha **configurações Propriedades**do  >  **vinculador**  >  **entrada**  >  **dependências adicionais**.
 
        Escolha **Editar**e adicione os nomes dos arquivos **.obj** ou **.lib**. Não use os nomes de caminho completo.
 
-  4. Escolha os**diretórios de biblioteca adicionais do** > **Linker** > **Geral** > de propriedades de **configuração**.
+  4. Escolha **Propriedades de configuração**  >  **vinculador**  >  **geral**  >  **diretórios de biblioteca adicionais**.
 
        Escolha **Editar**e adicione o caminho do diretório dos arquivos **.obj** ou **.lib**. O caminho fica geralmente dentro da pasta de compilação do projeto em teste.
 
-  5. Escolha **propriedades de configuração** > **VC++ Diretórios** > **incluem diretórios**.
+  5. Escolha **Propriedades de configuração**  >  **diretórios vc + +**  >  **incluir diretórios**.
 
        Escolha **Editar**e adicione o diretório de cabeçalho do projeto que está sendo testado.
 
@@ -122,7 +122,7 @@ Vá para o procedimento [Para adicionar testes de unidade no mesmo projeto](#sam
 
    1. No **Gerenciador de Soluções**, no menu de atalho do projeto em teste, escolha **Propriedades**. A janela **Propriedades** do projeto é aberta.
 
-   2. Escolha **propriedades de** > configuração**VC++ Diretórios**.
+   2. Escolha **Propriedades de configuração**  >  **diretórios vc + +**.
 
    3. Edite os diretórios Incluir e Biblioteca:
 
@@ -141,7 +141,7 @@ Vá para o procedimento [Para adicionar testes de unidade no mesmo projeto](#sam
 
 1. Em cada arquivo de código de teste de unidade, adicione uma instrução `#include` aos cabeçalhos do projeto em teste.
 
-2. Adicione métodos e classes de teste aos arquivos de código do teste de unidade. Por exemplo: 
+2. Adicione métodos e classes de teste aos arquivos de código do teste de unidade. Por exemplo:
 
     ```cpp
     #include "stdafx.h"
@@ -167,13 +167,13 @@ Vá para o procedimento [Para adicionar testes de unidade no mesmo projeto](#sam
 
 1. Caso todos os testes não estejam visíveis na janela, crie o projeto de teste clicando com o botão direito no mouse no nó do **Gerenciador de Soluções** e escolhendo **Criar** ou **Recompilar**.
 
-1. No **Test Explorer,** escolha **Executar tudo**ou selecione os testes específicos que deseja executar. Clique com o botão direito do mouse para ver outras opções, incluindo a execução em modo de depuração com pontos de interrupção habilitados.
+1. No **Gerenciador de testes**, escolha **executar tudo**ou selecione os testes específicos que você deseja executar. Clique com o botão direito do mouse para ver outras opções, incluindo a execução em modo de depuração com pontos de interrupção habilitados.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Escrever testes de unidade para C/C++](writing-unit-tests-for-c-cpp.md)
-- [Referência da API Microsoft.VisualStudio.TestTools.CppUnitTestFramework](../test/microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)
-- [Depurar código nativo](../debugger/debugging-native-code.md)
+- [Referência da API Microsoft. VisualStudio. TestTools. CppUnitTestFramework](../test/microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)
+- [Depurar o código nativo](../debugger/debugging-native-code.md)
 - [Passo a passo: Criando e usando uma biblioteca de vínculo dinâmico (C++)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)
-- [Importar e exportar](/cpp/build/importing-and-exporting)
+- [Importação e exportação](/cpp/build/importing-and-exporting)
 - [Início Rápido: Desenvolvimento orientado por testes com o Gerenciador de Testes](../test/quick-start-test-driven-development-with-test-explorer.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Como: Inserir texto de forma programática em documentos do Word'
+title: 'Como: inserir texto de forma programática em documentos do Word'
 ms.date: 08/14/2019
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,14 +16,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8ff5e0314e9834bd3d0f048bc82780d7e4af073d
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: aef597099964333771fd488e0541b4ea4daf4553
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551810"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541499"
 ---
-# <a name="how-to-programmatically-insert-text-into-word-documents"></a>Como: Inserir texto de forma programática em documentos do Word
+# <a name="how-to-programmatically-insert-text-into-word-documents"></a>Como: inserir texto de forma programática em documentos do Word
   Há três maneiras principais de inserir texto em Microsoft Office documentos do Word:
 
 - Inserir texto em um intervalo.
@@ -89,23 +89,23 @@ ms.locfileid: "69551810"
      [!code-csharp[Trin_VstcoreWordAutomation#55](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#55)]
 
 ## <a name="insert-text-using-typetext"></a>Inserir texto usando TypeText
- O <xref:Microsoft.Office.Interop.Word.Selection.TypeText%2A> método insere texto na seleção. <xref:Microsoft.Office.Interop.Word.Selection.TypeText%2A>comporta-se de forma diferente dependendo das opções definidas no computador do usuário. O código no procedimento a seguir declara uma <xref:Microsoft.Office.Interop.Word.Selection> variável de objeto e desativa a opção **sobrescrever** se ela estiver ativada. Se a opção sobrescrever estiver ativada, qualquer texto ao lado do cursor será substituído.
+ O <xref:Microsoft.Office.Interop.Word.Selection.TypeText%2A> método insere texto na seleção. <xref:Microsoft.Office.Interop.Word.Selection.TypeText%2A>comporta-se de forma diferente dependendo das opções definidas no computador do usuário. O código no procedimento a seguir declara uma <xref:Microsoft.Office.Interop.Word.Selection> variável de objeto e desativa a opção **sobrescrever** se ela estiver ativada. Se a opção **sobrescrever** estiver ativada, qualquer texto ao lado do cursor será substituído.
 
 ### <a name="to-insert-text-using-the-typetext-method"></a>Para inserir texto usando o método TypeText
 
-1. Declare uma <xref:Microsoft.Office.Interop.Word.Selection> variável de objeto.
+1. Declare uma variável do objeto <xref:Microsoft.Office.Interop.Word.Selection>.
 
     [!code-vb[Trin_VstcoreWordAutomation#57](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#57)]
     [!code-csharp[Trin_VstcoreWordAutomation#57](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#57)]
 
-2. Desative a opção sobrescrever se ela estiver ativada.
+2. Desative a opção **sobrescrever** se ela estiver ativada.
 
     [!code-vb[Trin_VstcoreWordAutomation#58](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#58)]
     [!code-csharp[Trin_VstcoreWordAutomation#58](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#58)]
 
 3. Teste para ver se a seleção atual é um ponto de inserção.
 
-    Se for, o código inserirá uma frase usando <xref:Microsoft.Office.Interop.Word.Selection.TypeText%2A>e, em seguida, uma marca de <xref:Microsoft.Office.Interop.Word.Selection.TypeParagraph%2A> parágrafo usando o método.
+    Se for, o código inserirá uma frase usando <xref:Microsoft.Office.Interop.Word.Selection.TypeText%2A> e, em seguida, uma marca de parágrafo usando o <xref:Microsoft.Office.Interop.Word.Selection.TypeParagraph%2A> método.
 
     [!code-vb[Trin_VstcoreWordAutomation#59](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#59)]
     [!code-csharp[Trin_VstcoreWordAutomation#59](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#59)]
@@ -120,7 +120,7 @@ ms.locfileid: "69551810"
     [!code-vb[Trin_VstcoreWordAutomation#61](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#61)]
     [!code-csharp[Trin_VstcoreWordAutomation#61](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#61)]
 
-   Você também pode usar o <xref:Microsoft.Office.Interop.Word.Selection.TypeBackspace%2A> método <xref:Microsoft.Office.Interop.Word.Selection> do objeto, que imita a funcionalidade da tecla backspace no teclado. No entanto, quando se trata de inserir e manipular texto, o <xref:Microsoft.Office.Interop.Word.Range> objeto oferece a você mais controle.
+   Você também pode usar o <xref:Microsoft.Office.Interop.Word.Selection.TypeBackspace%2A> método do <xref:Microsoft.Office.Interop.Word.Selection> objeto, que imita a funcionalidade da tecla **Backspace** no teclado. No entanto, quando se trata de inserir e manipular texto, o <xref:Microsoft.Office.Interop.Word.Range> objeto oferece a você mais controle.
 
    O exemplo a seguir mostra todo o código. Para usar este exemplo, execute o código da `ThisDocument` classe ou `ThisAddIn` em seu projeto.
 
@@ -128,6 +128,6 @@ ms.locfileid: "69551810"
    [!code-csharp[Trin_VstcoreWordAutomation#56](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#56)]
 
 ## <a name="see-also"></a>Consulte também
-- [Como: Formatar texto de forma programática em documentos](../vsto/how-to-programmatically-format-text-in-documents.md)
-- [Como: Definir e selecionar intervalos de forma programática em documentos](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
-- [Como: Estender intervalos programaticamente em documentos](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
+- [Como: formatar texto de forma programática em documentos](../vsto/how-to-programmatically-format-text-in-documents.md)
+- [Como: definir e selecionar intervalos de forma programática em documentos](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
+- [Como: estender intervalos programaticamente em documentos](../vsto/how-to-programmatically-extend-ranges-in-documents.md)

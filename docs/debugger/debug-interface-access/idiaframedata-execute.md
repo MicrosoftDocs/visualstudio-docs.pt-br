@@ -1,7 +1,7 @@
 ---
 title: IDiaFrameData::execute | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 88c9af8293dfc6a35e5f0e42d9596494d74b10aa
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2587d10b613200b1bf850636f613abbb497e04de
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743693"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467445"
 ---
 # <a name="idiaframedataexecute"></a>IDiaFrameData::execute
 Executa o desenrolamento de pilha e retorna os resultados em uma interface de quadro de movimentação de pilha.
@@ -35,8 +35,8 @@ HRESULT execute ( 
 
 no Um objeto [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md) que contém o estado dos registros de quadro.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. A tabela a seguir mostra os possíveis valores de retorno para esse método.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. A tabela a seguir mostra os possíveis valores de retorno para esse método.
 
 |Valor|Descrição|
 |-----------|-----------------|
@@ -46,8 +46,8 @@ no Um objeto [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastac
 |E_DIA_VALUE|Erro na computação de um valor (por exemplo, divisão por zero).|
 
 ## <a name="remarks"></a>Comentários
- Esse método é chamado durante a depuração para desenrolar a pilha. O objeto [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md) é implementado pelo aplicativo cliente para receber atualizações para os registros e para fornecer métodos usados pelo método `execute`.
+ Esse método é chamado durante a depuração para desenrolar a pilha. O objeto [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md) é implementado pelo aplicativo cliente para receber atualizações para os registros e para fornecer métodos usados pelo `execute` método.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

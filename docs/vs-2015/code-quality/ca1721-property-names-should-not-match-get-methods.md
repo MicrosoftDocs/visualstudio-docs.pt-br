@@ -15,19 +15,19 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 366932c83328c6810e0103308db1c73a3e3076cb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 77ec48a1164c7065ba5033ef51eb704b8361dc1c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671602"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544450"
 ---
-# <a name="ca1721-property-names-should-not-match-get-methods"></a>CA1721: os nomes de propriedade não devem corresponder a métodos get
+# <a name="ca1721-property-names-should-not-match-get-methods"></a>CA1721: Nomes de propriedades não devem corresponder a métodos get
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|PropertyNamesShouldNotMatchGetMethods|
+|TypeName|PropertyNamesShouldNotMatchGetMethods|
 |CheckId|CA1721|
 |Categoria|Microsoft. Naming|
 |Alteração Significativa|Quebra|
@@ -56,4 +56,4 @@ ms.locfileid: "72671602"
  [!code-vb[FxCop.Naming.GetMethod#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.GetMethod/vb/FxCop.Naming.GetMethod.vb#1)]
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1024: usar propriedades quando apropriado](../code-quality/ca1024-use-properties-where-appropriate.md)
+ [CA1024: Usar propriedades quando apropriado](../code-quality/ca1024-use-properties-where-appropriate.md)

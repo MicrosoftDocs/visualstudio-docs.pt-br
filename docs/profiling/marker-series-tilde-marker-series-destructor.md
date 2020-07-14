@@ -1,23 +1,23 @@
 ---
 title: Destruidor marker_series::marker_series | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
-- cvmarkersobj/Concurrency::diagnostic::marker_series::~marker_series
+- cvmarkersobj/Concurrency, diagnostic::marker_series::~marker_series
 helpviewer_keywords:
-- Concurrency::diagnostic::marker_series::~marker_series destructor
+- Concurrency, diagnostic::marker_series::~marker_series destructor
 ms.assetid: 5632523b-fd58-40aa-8523-f29ee9083a65
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9de1d51eb99fa6914f792ed4c34668f861caee02
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a864a0940c6ff8ab66a492c76c84ecf3a35910f5
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62831365"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329641"
 ---
 # <a name="marker_seriesmarker_series-destructor"></a>Destruidor marker_series::~marker_series
 Destrói o objeto marker_series e libera todos os recursos alocados.
@@ -33,5 +33,5 @@ Destrói o objeto marker_series e libera todos os recursos alocados.
 
  **Namespace:** Concurrency::diagnostic
 
-## <a name="see-also"></a>Confira também
-- [Classe marker_series](../profiling/marker-series-class.md)
+## <a name="see-also"></a>Veja também
+- [classe marker_series](../profiling/marker-series-class.md)

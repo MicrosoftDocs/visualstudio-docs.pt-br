@@ -9,17 +9,17 @@ helpviewer_keywords:
 - application manifests [Visual Studio]
 - assemblies [Visual Studio], signing
 ms.assetid: 6c1ef36b-25f7-4ad0-b29a-51801b7a5420
-author: TerryGLee
-ms.author: tglee
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f13df00059523ca87e720a999c596e203b20e49
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a17ce633515979ca7a3fd3ac5a7e1d8802996944
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75593675"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770409"
 ---
 # <a name="manage-assembly-and-manifest-signing"></a>Gerenciar assinatura de assembly e de manifesto
 
@@ -29,7 +29,7 @@ Um nome forte consiste na identidade do assembly (nome de texto simples, número
 
 Para obter informações sobre como assinar assemblies em projetos do Visual Basic e do C#, confira [Criar e usar assemblies de nomes fortes](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).
 
-Para obter informações sobre a assinatura de montagens em projetos C++, consulte [Montagens com nome forte (C++/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli).
+Para obter informações sobre como assinar assemblies em projetos C++, consulte [assemblies de nome forte (C++/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli).
 
 > [!NOTE]
 > A assinatura de nome forte não protege contra a engenharia reversa do assembly. Para se proteger contra a engenharia reversa, confira a [Dotfuscator Community](dotfuscator/index.md).
@@ -69,9 +69,9 @@ Você também pode apontar para uma chave já criada. Para obter mais informaç�
 
 Se você só tiver acesso a uma chave pública, use a assinatura com atraso para adiar a atribuição da chave. Habilite a assinatura com atraso selecionando a caixa de seleção **Somente sinal de atraso**. Um projeto assinado com atraso não é executado e não pode ser depurado. No entanto, você pode ignorar a verificação durante o desenvolvimento usando a [ferramenta de nome forte Sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) com a opção `-Vr`.
 
-Para obter informações sobre a assinatura de manifestos, consulte [Como: Assinar manifestos de aplicação e implantação](../ide/how-to-sign-application-and-deployment-manifests.md).
+Para obter informações sobre manifestos de assinatura, consulte [como assinar manifestos de aplicativo e implantação](../ide/how-to-sign-application-and-deployment-manifests.md).
 
 ## <a name="see-also"></a>Confira também
 
-- [Assembléias com nomes fortes](/dotnet/framework/app-domains/strong-named-assemblies)
+- [Assemblies de nome forte](/dotnet/framework/app-domains/strong-named-assemblies)
 - [Assemblies de nome forte (C++/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli)

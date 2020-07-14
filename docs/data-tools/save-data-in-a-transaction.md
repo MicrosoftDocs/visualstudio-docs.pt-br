@@ -1,7 +1,7 @@
 ---
 title: 'Passo a passo: salvar dados em uma transação'
 ms.date: 09/08/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,18 +17,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c0efdda51a52b18697828e1772eb4a71435753e8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: caeb06ac3f38293b493463ff456e222f148ef93a
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586231"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281624"
 ---
 # <a name="walkthrough-save-data-in-a-transaction"></a>Passo a passo: salvar dados em uma transação
 
-Este tutorial demonstra como salvar dados em uma transação usando o namespace <xref:System.Transactions>. Neste tutorial, você criará um aplicativo Windows Forms. Você usará o assistente de configuração de fonte de dados para criar um conjunto de dado para duas tabelas no banco de dados de exemplo Northwind. Você adicionará controles associados a dados a um Windows Form e modificará o código para o botão salvar do BindingNavigator para atualizar o banco de dados dentro de um TransactionScope.
+Este tutorial demonstra como salvar dados em uma transação usando o <xref:System.Transactions> namespace. Neste tutorial, você criará um aplicativo Windows Forms. Você usará o assistente de configuração de fonte de dados para criar um conjunto de dado para duas tabelas no banco de dados de exemplo Northwind. Você adicionará controles associados a dados a um Windows Form e modificará o código para o botão salvar do BindingNavigator para atualizar o banco de dados dentro de um TransactionScope.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este passo a passos usa SQL Server Express LocalDB e o banco de dados de exemplo Northwind.
 
@@ -52,7 +52,7 @@ A primeira etapa é criar um **aplicativo Windows Forms**.
 
 1. No Visual Studio, no menu **Arquivo**, selecione **Novo** > **Projeto**.
 
-2. Expanda **o C# Visual** ou **Visual Basic** no painel esquerdo e, em seguida, selecione **área de trabalho do Windows**.
+2. Expanda o **Visual C#** ou **Visual Basic** no painel esquerdo e, em seguida, selecione **área de trabalho do Windows**.
 
 3. No painel central, selecione o tipo de projeto **Windows Forms aplicativo** .
 
@@ -62,11 +62,11 @@ A primeira etapa é criar um **aplicativo Windows Forms**.
 
 ## <a name="create-a-database-data-source"></a>Criar uma fonte de dados de banco
 
-Esta etapa usa o **Assistente de configuração de fonte de dados** para criar uma fonte de dados com base nas tabelas `Customers` e `Orders` no banco de dados de exemplo Northwind.
+Esta etapa usa o **Assistente de configuração de fonte de dados** para criar uma fonte de dados com base nas `Customers` `Orders` tabelas e no banco de dados de exemplo Northwind.
 
 1. Para abrir a janela **fontes de dados** , no menu **dados** , selecione **mostrar fontes de dados**.
 
-2. Na janela **Fontes de Dados**, selecione **Adicionar Nova Fonte de Dados** para iniciar o **Assistente de Configuração de Fonte de Dados**.
+2. Na janela **fontes de dados** , selecione **Adicionar nova fonte de dados** para iniciar o **Assistente de configuração de fonte de dados**.
 
 3. Na tela **escolher um tipo de fonte de dados** , selecione **banco**de dado e, em seguida, selecione **Avançar**.
 
@@ -74,7 +74,7 @@ Esta etapa usa o **Assistente de configuração de fonte de dados** para criar u
 
     - Se uma conexão de dados com o banco de dados de exemplo Northwind estiver disponível na lista suspensa, selecione-o.
 
-         - ou -
+         -ou-
 
     - Selecione **Nova Conexão** para inicializar a caixa de diálogo **Adicionar/Modificar Conexão** e criar uma conexão com o banco de dados Northwind.
 
@@ -84,19 +84,19 @@ Esta etapa usa o **Assistente de configuração de fonte de dados** para criar u
 
 7. Na tela **escolher seus objetos de banco de dados** , expanda o nó **tabelas** .
 
-8. Selecione as tabelas `Customers` e `Orders` e, em seguida, selecione **concluir**.
+8. Selecione as `Customers` tabelas e e `Orders` , em seguida, selecione **concluir**.
 
      O **NorthwindDataSet** é adicionado ao projeto e as tabelas `Customers` e `Orders` aparecem na janela **Fontes de Dados**.
 
 ## <a name="add-controls-to-the-form"></a>Adicionar controles ao formulário
 
-Você pode criar controles de associação de dados arrastando itens da janela **Fontes de Dados** para um formulário.
+Você pode criar os controles associados a dados arrastando itens da janela **fontes de dados** para o formulário.
 
 1. Na janela **fontes de dados** , expanda o nó **clientes** .
 
 2. Arraste o nó principal **Clientes** da janela **Fontes de Dados** para **Form1**.
 
-   Um controle <xref:System.Windows.Forms.DataGridView> e uma faixa de ferramentas (<xref:System.Windows.Forms.BindingNavigator>) para navegação em registros são exibidos no formulário. Um [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `CustomersTableAdapter`, <xref:System.Windows.Forms.BindingSource>e <xref:System.Windows.Forms.BindingNavigator> aparecem na bandeja de componentes.
+   Um controle <xref:System.Windows.Forms.DataGridView> e uma faixa de ferramentas (<xref:System.Windows.Forms.BindingNavigator>) para navegação em registros são exibidos no formulário. Um [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `CustomersTableAdapter` , <xref:System.Windows.Forms.BindingSource> e <xref:System.Windows.Forms.BindingNavigator> aparecem na bandeja do componente.
 
 3. Arraste o nó **pedidos** relacionados (não o nó **pedidos** principais, mas o nó de tabela filho relacionado abaixo da coluna **fax** ) no formulário abaixo do **customersDataGridView**.
 
@@ -116,7 +116,7 @@ As transações usam o namespace <xref:System.Transactions>. Uma referência do 
 
 ## <a name="modify-the-code-in-the-bindingnavigators-saveitem-button"></a>Modificar o código no botão SaveItem do BindingNavigator
 
-Para a primeira tabela descartada em seu formulário, o código é adicionado por padrão ao evento `click` do botão salvar na <xref:System.Windows.Forms.BindingNavigator>. É necessário adicionar manualmente o código para atualizar quaisquer tabelas adicionais. Para esta explicação, refatoro o código de salvamento existente do manipulador de eventos de clique do botão salvar. Também criamos mais alguns métodos para fornecer uma funcionalidade de atualização específica com base em se a linha precisa ser adicionada ou excluída.
+Para a primeira tabela descartada em seu formulário, o código é adicionado por padrão ao `click` evento do botão salvar no <xref:System.Windows.Forms.BindingNavigator> . É necessário adicionar manualmente o código para atualizar quaisquer tabelas adicionais. Para esta explicação, refatoro o código de salvamento existente do manipulador de eventos de clique do botão salvar. Também criamos mais alguns métodos para fornecer uma funcionalidade de atualização específica com base em se a linha precisa ser adicionada ou excluída.
 
 ### <a name="to-modify-the-auto-generated-save-code"></a>Para modificar o código salvar gerado automaticamente
 
@@ -129,13 +129,13 @@ Para a primeira tabela descartada em seu formulário, o código é adicionado po
 
 A ordem para reconciliar as alterações aos dados relacionados é a seguinte:
 
-- Excluir registros filho. (Nesse caso, exclua os registros da tabela `Orders`.)
+- Excluir registros filho. (Nesse caso, exclua os registros da `Orders` tabela.)
 
-- Excluir registros pai. (Nesse caso, exclua os registros da tabela `Customers`.)
+- Excluir registros pai. (Nesse caso, exclua os registros da `Customers` tabela.)
 
-- Inserir registros pai. (Nesse caso, insira registros na tabela `Customers`.)
+- Inserir registros pai. (Nesse caso, insira registros na `Customers` tabela.)
 
-- Inserir registros filho. (Nesse caso, insira registros na tabela `Orders`.)
+- Inserir registros filho. (Nesse caso, insira registros na `Orders` tabela.)
 
 ### <a name="to-delete-existing-orders"></a>Para excluir pedidos existentes
 

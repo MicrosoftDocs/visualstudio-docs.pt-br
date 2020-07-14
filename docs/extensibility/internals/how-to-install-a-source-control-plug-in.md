@@ -1,7 +1,7 @@
 ---
-title: 'Como: Instalar um Plug-in de controle de origem | Microsoft Docs'
+title: Como instalar um plug-in de controle do código-fonte | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - installation [Visual Studio SDK], source control plug-ins
 - source control plug-ins, installing
@@ -11,110 +11,110 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9c0ac87aec3d6ac2532909772238e020e33bf78f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 3f88e4781115fa7a5fac54826304ab32472eeefb
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80707989"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905364"
 ---
-# <a name="how-to-install-a-source-control-plug-in"></a>Como: Instalar um plug-in de controle de origem
+# <a name="how-to-install-a-source-control-plug-in"></a>Como instalar um plug-in de controle do código-fonte
 A criação de um plug-in de controle de origem envolve três etapas:
 
-1. Crie uma DLL com as funções definidas na seção de referência da API plug-in de controle de fonte desta documentação.
+1. Crie uma DLL com as funções definidas na seção referência da API de plug-in de controle do código-fonte desta documentação.
 
-2. Implemente as funções definidas pela API do Controle de Origem. Quando [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] for chamada, disponibilize interfaces e caixas de diálogo no plug-in.
+2. Implemente as funções definidas pela API de plug-in de controle do código-fonte. Quando [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] chamadas para ela, torne interfaces e caixas de diálogo disponíveis do plug-in.
 
-3. Registre o DLL fazendo entradas de registro apropriadas.
+3. Registre a DLL fazendo entradas de registro apropriadas.
 
 ## <a name="integration-with-visual-studio"></a>Integração com o Visual Studio
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]suporta plug-ins de controle de origem que estejam em conformidade com a API plug-in de controle de origem.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]dá suporte a plug-ins de controle do código-fonte que estão em conformidade com a API de plug-in de controle do código
 
-### <a name="register-the-source-control-plug-in"></a>Registre o plug-in de controle de origem
- Antes que um ambiente de desenvolvimento integrado em execução (IDE) possa chamar para o sistema de controle de origem, ele deve primeiro encontrar o DLL plug-in de controle de origem que exporta a API.
+### <a name="register-the-source-control-plug-in"></a>Registrar o plug-in de controle do código-fonte
+ Antes que um IDE (ambiente de desenvolvimento integrado) em execução possa chamar o sistema de controle do código-fonte, primeiro ele deve localizar a DLL de plug-in de controle do código-fonte que exporta a API.
 
-#### <a name="to-register-the-source-control-plug-in-dll"></a>Para registrar o dll plug-in de controle de origem
+#### <a name="to-register-the-source-control-plug-in-dll"></a>Para registrar a DLL de plug-in de controle do código-fonte
 
-1. Adicione duas entradas na tecla **HKEY_LOCAL_MACHINE** na subchave **SOFTWARE** que especifica a subchave do nome da empresa, seguida pela subchave do nome do produto. O padrão é **\\\<HKEY_LOCAL_MACHINE\SOFTWARE \\ \<nome \\ \<da empresa>nome do produto>** *valor*de entrada> = . As duas entradas são sempre chamadas **sCCServerName** e **SCCServerPath**. Cada uma é uma corda normal.
+1. Adicione duas entradas sob a chave de **HKEY_LOCAL_MACHINE** na subchave de **software** que especifica a subchave de nome da empresa seguida pela subchave de nome do produto. O padrão é **HKEY_LOCAL_MACHINE \\ \<company name> \\ \<product name> \\ \<entry> **  =  *valor*\Software. As duas entradas são sempre chamadas **SCCServerName** e **SCCServerPath**. Cada uma é uma cadeia de caracteres regular.
 
-    Por exemplo, se o nome da empresa for Microsoft e seu produto de controle de origem for chamado SourceSafe, esse caminho de registro será **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe**. Nesta subchave, a primeira entrada, **SCCServerName,** é uma string legível pelo usuário nomeando seu produto. A segunda entrada, **SCCServerPath,** é o caminho completo para o DLL de controle de origem ao que o IDE deve conectar. O seguinte fornece entradas de registro de amostra:
+    Por exemplo, se o nome da sua empresa for a Microsoft e seu produto de controle do código-fonte for chamado de SourceSafe, esse caminho do registro será **HKEY_LOCAL_MACHINE \software\microsoft\sourcesafe**. Nessa subchave, a primeira entrada, **SCCServerName**, é uma cadeia de caracteres legível pelo usuário que nomeia seu produto. A segunda entrada, **SCCServerPath**, é o caminho completo para a DLL de plug-in de controle do código-fonte à qual o IDE deve se conectar. O seguinte fornece exemplos de entradas do registro:
 
-   |Entrada do Registro de Amostras|Valor de exemplo|
+   |Entrada de registro de exemplo|Valor de exemplo|
    |---------------------------|------------------|
-   |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe\SCCServerName|Microsoft Visual SourceSafe|
-   |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe\SCCServerPath|*c:\vss\win32\ssscc.dll*|
+   |HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\SourceSafe\SCCServerName|Microsoft Visual SourceSafe|
+   |HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\SourceSafe\SCCServerPath|*c:\vss\win32\ssscc.dll*|
 
    > [!NOTE]
-   > SCCServerPath é o caminho completo para o plug-in SourceSafe. Seu plug-in de controle de origem usará diferentes nomes de empresas e produtos, mas os mesmos caminhos de entrada de registro.
+   > SCCServerPath é o caminho completo para o plug-in SourceSafe. Seu plug-in de controle do código-fonte usará nomes diferentes da empresa e do produto, mas os mesmos caminhos de entrada do registro.
 
-2. As seguintes entradas de registro opcionais podem ser usadas para modificar o comportamento do plug-in de controle de origem. Essas entradas vão na mesma subchave que **SccServerName** e **SccServerPath**.
+2. As seguintes entradas de registro opcionais podem ser usadas para modificar o comportamento do seu plug-in de controle do código-fonte. Essas entradas entram na mesma subchave que **SccServerName** e **SccServerPath**.
 
-   - A entrada **HideInVisualStudioregistry** pode ser usada se você não quiser que seu plug-in [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]de controle de origem apareça na lista De seleção de **plug-in** de . Esta entrada também afetará a comutação automática para o plug-in de controle de origem. Um possível uso para esta entrada é se você fornecer um pacote de controle de origem que substitui o plug-in de controle de origem, mas você deseja tornar mais fácil para o usuário migrar do uso do plug-in de controle de origem para o pacote de controle de origem. Quando o pacote de controle de origem é instalado, ele define esta entrada de registro, que oculta o plug-in.
+   - A entrada **HideInVisualStudioregistry** pode ser usada se você não quiser que o plug-in de controle do código-fonte apareça na lista de **seleção de plug-in** de [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Essa entrada também afetará a alternância automática para o plug-in de controle do código-fonte. Um possível uso dessa entrada é se você fornecer um pacote de controle do código-fonte que substitua seu plug-in de controle do código-fonte, mas você deseja tornar mais fácil para o usuário migrar do usando o plug-in de controle do código-fonte para o pacote de controle do código-fonte. Quando o pacote de controle do código-fonte é instalado, ele define essa entrada do registro, que oculta o plug-in.
 
-      **HideInVisualStudio** é um valor DWORD e está definido como *1* para ocultar o plug-in ou *0* para mostrar o plug-in. Se a entrada do registro não aparecer, o comportamento padrão é mostrar o plug-in.
+      **HideInVisualStudio** é um valor DWORD e é definido como *1* para ocultar o plug-in ou *0* para mostrar o plug-in. Se a entrada do registro não for exibida, o comportamento padrão será mostrar o plug-in.
 
-   - A entrada de registro **DisableSccManager** pode ser usada para desativar ou ocultar a opção de menu de menu **de>do Servidor de Controle de Origem de Origem de Lançamento \<** que normalmente aparece no submenu Controle de origem**de** **arquivo.** >  A seleção desta opção de menu chama a função [SccRunScc.](../../extensibility/sccrunscc-function.md) Seu plug-in de controle de origem pode não suportar um programa externo e, portanto, você pode querer desativar ou até mesmo ocultar a opção **De** iniciar menu.
+   - A entrada de registro **DisableSccManager** pode ser usada para desabilitar ou ocultar a opção de menu ** \<Source Control Server> Iniciar** que normalmente aparece no **File**  >  submenu**controle de origem** de arquivo. A seleção dessa opção de menu chama a função [SccRunScc](../../extensibility/sccrunscc-function.md) . O plug-in de controle do código-fonte pode não dar suporte a um programa externo e, portanto, talvez você queira desabilitar ou até mesmo ocultar a opção de menu **Iniciar** .
 
-      **DesabiliteSccManager** é um valor DWORD e está definido como *0* para habilitar a opção de menu **de menu do Servidor de Controle de Fonte de Lançamento \<>,** definida como *1* para desativar a opção de menu e definida como *2* para ocultar a opção de menu. Se esta entrada de registro não aparecer, o comportamento padrão será mostrar a opção menu.
+      **DisableSccManager** é um valor DWORD e é definido como *0* para habilitar a opção de menu **Iniciar \<Source Control Server> ** , defina como *1* para desabilitar a opção de menu e defina como *2* para ocultar a opção de menu. Se essa entrada de registro não for exibida, o comportamento padrão será mostrar a opção de menu.
 
-   | Entrada de registro de amostra | Valor de exemplo |
+   | Entrada de registro de exemplo | Valor de exemplo |
    | - |--------------|
-   | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe\HideinVisualStudio | 1 |
-   | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe\DisableSccManager | 1 |
+   | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\SourceSafe\HideInVisualStudio | 1 |
+   | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\SourceSafe\DisableSccManager | 1 |
 
-3. Adicione a subchave, **SourceCodeControlProvider**, sob a **chave HKEY_LOCAL_MACHINE** na subchave **SOFTWARE.**
+3. Adicione a subchave, **SourceCodeControlProvider**, na chave **HKEY_LOCAL_MACHINE** na subchave **software** .
 
-    Sob esta subchave, o Provedor de entrada **de registroRegKey** é definido como uma string que representa a subchave que você colocou no registro na etapa 1. O padrão é **HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\ProviderRegKey** = *SOFTWARE\\<nome\> \\ da empresa<nome\>do produto*.
+    Sob essa subchave, a entrada do registro **ProviderRegKey** é definida como uma cadeia de caracteres que representa a subchave que você colocou no registro na etapa 1. O padrão é **HKEY_LOCAL_MACHINE**  =  *software \software\sourcecodecontrolprovider\providerregkey \\<nome da empresa \> \\<nome \> do produto*.
 
-    A seguir está o conteúdo da amostra desta subchave.
+    Veja a seguir o conteúdo de exemplo desta subchave.
 
-   |Entrada de Registro|Valor de exemplo|
+   |Entrada de registro|Valor de exemplo|
    |--------------------|------------------|
-   |HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\ProviderRegKey|SOFTWARE\Microsoft\SourceSafe|
+   |HKEY_LOCAL_MACHINE \SOFTWARE\SourceCodeControlProvider\ProviderRegKey|SOFTWARE\Microsoft\SourceSafe|
 
    > [!NOTE]
-   > Seu plug-in de controle de origem usará a mesma subchave e nomes de entrada, mas o valor será diferente.
+   > O plug-in de controle do código-fonte usará a mesma subchave e nomes de entrada, mas o valor será diferente.
 
-4. Crie uma subchave chamada **InstalledSCCProviders** sob a sub-chave **SourceCodeControlProvider** e, em seguida, coloque uma entrada sob essa subchave.
+4. Crie uma subchave chamada **InstalledSCCProviders** na subchave **SourceCodeControlProvider** e coloque uma entrada nessa subchave.
 
-    O nome desta entrada é o nome legível pelo usuário do provedor (o mesmo que o valor especificado para a entrada SCCServerName), e o valor é, mais uma vez, a subchave criada na etapa 1. O padrão é **\\ HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\InstalledSCCProviders\><nome** = de exibição*SOFTWARE\\<nome\> \\ da empresa<nome\>do produto*.
+    O nome dessa entrada é o nome legível pelo usuário do provedor (o mesmo que o valor especificado para a entrada SCCServerName) e o valor é, mais uma vez, a subchave criada na etapa 1. O padrão é **HKEY_LOCAL_MACHINE \software\sourcecodecontrolprovider\installedsccproviders \\<nome \> de exibição**  =  *software \\ \> \\ \><nome da empresa<* nome do produto.
 
     Por exemplo:
 
-   |Entrada de registro de amostra|Valor de exemplo|
+   |Entrada de registro de exemplo|Valor de exemplo|
    |---------------------------|------------------|
-   |HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\InstalledSCCProviders\Microsoft Visual SourceSafe|SOFTWARE\Microsoft\SourceSafe|
+   |HKEY_LOCAL_MACHINE \SOFTWARE\SourceCodeControlProvider\InstalledSCCProviders\Microsoft Visual SourceSafe|SOFTWARE\Microsoft\SourceSafe|
 
    > [!NOTE]
-   > Pode haver vários plug-ins de controle de origem registrados desta forma. É assim [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] que se encontra todos os plug-ins instalados baseados em API de controle de fonte.
+   > Pode haver vários plug-ins de controle do código-fonte registrados dessa maneira. É assim que [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] localiza todos os plug-ins baseados na API de plug-in de controle do código-fonte instalado.
 
-## <a name="how-an-ide-locates-the-dll"></a>Como um IDE localiza o DLL
- O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE tem duas maneiras de encontrar o DLL plug-in de controle de origem:
+## <a name="how-an-ide-locates-the-dll"></a>Como um IDE localiza a DLL
+ O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE tem duas maneiras de localizar a DLL de plug-in de controle do código-fonte:
 
-- Encontre o plug-in padrão do controle de origem e conecte-se a ele silenciosamente.
+- Localize o plug-in de controle do código-fonte padrão e conecte-se a ele silenciosamente.
 
-- Encontre todos os plug-ins de controle de origem registrados, dos quais o usuário escolhe um.
+- Localiza todos os plug-ins de controle do código-fonte registrados, dos quais o usuário escolhe um.
 
-  Para localizar a DLL de primeira forma, o IDE procura sob a **subchave HKEY_LOCAL_MACHINE\Software\SourceCodeControlProvider** para o **provedor de entradaRegKey**. O valor desta entrada aponta para outra subchave. Em seguida, o IDE procura uma entrada chamada **SccServerPath** nessa segunda subchave sob **HKEY_LOCAL_MACHINE**. O valor desta entrada aponta o IDE para o DLL.
-
-> [!NOTE]
-> O IDE não carrega DLLs de caminhos relativos (por exemplo, *.\NewProvider.DLL*). Um caminho completo para a DLL deve ser especificado (por exemplo, *c:\Providers\NewProvider.DLL*). Isso reforça a segurança do IDE, impedindo o carregamento de DLLs plug-in não autorizados ou personificados.
-
- Para localizar a DLL de segunda forma, o IDE analisa a **subchave HKEY_LOCAL_MACHINE\Software\SourceCodeControlProvider\InstalledSCCProviders** para todas as entradas. Cada entrada tem um nome e um valor. O IDE exibe uma lista desses nomes para o usuário. Quando o usuário escolhe um nome, o IDE encontra o valor para o nome selecionado que aponta para uma subchave. O IDE procura uma entrada chamada **SccServerPath** nessa subchave em **HKEY_LOCAL_MACHINE**. O valor dessa entrada aponta o IDE para a DLL correta.
-
- Um plug-in de controle de origem precisa suportar ambas as formas de encontrar a DLL e, consequentemente, define **ProviderRegKey**, substituindo qualquer configuração anterior. Mais importante, ele deve adicionar-se à lista de **Provedores instalados** para que o usuário possa ter uma escolha de qual plug-in de controle de origem usar.
+  Para localizar a DLL da primeira forma, o IDE examina a subchave **HKEY_LOCAL_MACHINE \software\sourcecodecontrolprovider** para a entrada **ProviderRegKey**. O valor dessa entrada aponta para outra subchave. Em seguida, o IDE procura uma entrada chamada **SccServerPath** na segunda subchave em **HKEY_LOCAL_MACHINE**. O valor dessa entrada aponta o IDE para a DLL.
 
 > [!NOTE]
-> Como a chave **HKEY_LOCAL_MACHINE** é usada, apenas um plug-in de controle de origem pode ser [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] registrado como o plug-in padrão de controle de origem em uma determinada máquina (no entanto, permite que os usuários determinem qual plug-in de controle de origem eles querem realmente usar para uma determinada solução). Durante o processo de instalação, verifique se um plug-in de controle de origem já está definido; se assim for, pergunte ao usuário se deve ou não definir o novo plug-in de controle de origem sendo instalado como padrão. Durante a desinstalação, não remova outras subchaves de registro comuns a todos os plug-ins de controle de origem em **HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider**; remover apenas a sua subchave SCC particular.
+> O IDE não carrega DLLs de caminhos relativos (por exemplo, *.\NewProvider.DLL*). Um caminho completo para a DLL deve ser especificado (por exemplo, *c:\Providers\NewProvider.DLL*). Isso reforça a segurança do IDE, impedindo o carregamento de DLLs de plug-in não autorizadas ou representadas.
+
+ Para localizar a DLL da segunda maneira, o IDE examina a subchave **HKEY_LOCAL_MACHINE \software\sourcecodecontrolprovider\installedsccproviders** para todas as entradas. Cada entrada tem um nome e um valor. O IDE exibe uma lista desses nomes para o usuário. Quando o usuário escolhe um nome, o IDE localiza o valor para o nome selecionado que aponta para uma subchave. O IDE procura uma entrada chamada **SccServerPath** nessa subchave em **HKEY_LOCAL_MACHINE**. O valor dessa entrada aponta o IDE para a DLL correta.
+
+ Um plug-in de controle do código-fonte precisa dar suporte a ambas as maneiras de localizar a DLL e, consequentemente, define **ProviderRegKey**, substituindo qualquer configuração anterior. Mais importante, ele deve se adicionar à lista de **InstalledSccProviders** para que o usuário possa ter a opção de qual plug-in de controle do código-fonte usar.
+
+> [!NOTE]
+> Como a chave de **HKEY_LOCAL_MACHINE** é usada, somente um plug-in de controle do código-fonte pode ser registrado como o plug-in de controle do código-fonte padrão em um determinado computador (no entanto, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] permite que os usuários determinem qual plug-in de controle do código-fonte eles desejam realmente usar para uma solução específica). Durante o processo de instalação, verifique se um plug-in de controle do código-fonte já está definido; Nesse caso, pergunte ao usuário se deseja ou não definir o novo plug-in de controle do código-fonte que está sendo instalado como o padrão. Durante a desinstalação, não remova outras subchaves do registro que são comuns a todos os plug-ins de controle do código-fonte em **HKEY_LOCAL_MACHINE \software\sourcecodecontrolprovider**; Remova apenas sua subchave SCC específica.
 
 ## <a name="how-the-ide-detects-version-1213-support"></a>Como o IDE detecta o suporte à versão 1.2/1.3
- Como [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] detecta se um plug-in suporta a funcionalidade 1.2 e 1.3 do Source Control Plug-in? Para declarar capacidade avançada, o plug-in de controle de origem deve implementar a função correspondente:
+ Como o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] detecta se um plug-in dá suporte à funcionalidade de API de plug-in de controle de origem versão 1,2 e 1,3? Para declarar a funcionalidade avançada, o plug-in de controle do código-fonte deve implementar a função correspondente:
 
- Primeiro, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] verifica o valor devolvido ligando para o [SccGetVersion](../../extensibility/sccgetversion-function.md). Deve ser maior ou igual a 1,2.
+ Primeiro, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] verifica o valor retornado chamando o [SccGetVersion](../../extensibility/sccgetversion-function.md). Ele deve ser maior ou igual a 1,2.
 
- Em [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] seguida, determina se o novo recurso em `lpSccCaps` particular é suportado examinando o argumento no [SccInitialize](../../extensibility/sccinitialize-function.md).
+ Em seguida, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] determina se a nova funcionalidade específica tem suporte examinando o `lpSccCaps` argumento no [SccInitialize](../../extensibility/sccinitialize-function.md).
 
- Se ambas as condições forem atendidas, as novas funções suportadas nas versões 1.2 e 1.3 podem ser chamadas.
+ Se ambas as condições forem atendidas, as novas funções com suporte nas versões 1,2 e 1,3 poderão ser chamadas.
 
 ## <a name="see-also"></a>Confira também
-- [Comece com plug-ins de controle de origem](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)
+- [Introdução aos plug-ins de controle do código-fonte](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)

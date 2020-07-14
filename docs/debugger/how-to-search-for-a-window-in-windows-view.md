@@ -1,7 +1,7 @@
 ---
-title: 'Como: Pesquisar por uma janela no modo de exibição do Windows | Microsoft Docs'
+title: Como pesquisar uma janela no modo de exibição do Windows | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - windows, searching in Windows view
 ms.assetid: 30306970-b861-4315-acf8-f86a43d4e73b
@@ -10,41 +10,41 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ba5c8469885fd62c99a672e894cde82700c980d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: fb5fb871ebf03595c0baca0336e8449fe39029f3
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63389287"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349231"
 ---
-# <a name="how-to-search-for-a-window-in-windows-view"></a>Como: Procurar uma janela na exibição de janelas
-Você pode procurar uma janela específica no modo de exibição do Windows, usando seu identificador, legenda, classe ou uma combinação de sua legenda e a classe como critérios de pesquisa. Você também pode especificar a direção inicial da pesquisa. Os campos na caixa de diálogo mostrará os atributos da janela selecionada na árvore de janela.
+# <a name="how-to-search-for-a-window-in-windows-view"></a>Como procurar uma janela na exibição de janelas
+Você pode pesquisar uma janela específica no modo de exibição do Windows usando seu identificador, legenda, classe ou uma combinação de sua legenda e classe como critérios de pesquisa. Você também pode especificar a direção inicial da pesquisa. Os campos na caixa de diálogo mostrarão os atributos da janela selecionada na árvore de janelas.
 
- Iniciar com a árvore expandida para o segundo nível (todos os windows que são filhos da área de trabalho), para que você possa identificar windows de nível de área de trabalho por seu nome de classe e o título. Depois de ter escolhido uma janela de nível de área de trabalho, você pode expandir esse nível para encontrar uma janela filho específicos.
+ Comece com a árvore expandida para o segundo nível (todas as janelas que são filhos da área de trabalho), para que você possa identificar as janelas de nível de desktop pelo nome e título da classe. Depois de escolher uma janela de nível de desktop, você pode expandir esse nível para localizar uma janela filho específica.
 
 ### <a name="to-search-for-a-window-in-windows-view"></a>Para procurar uma janela no modo de exibição do Windows
 
-1. Organizar as janelas assim que Spy + +, o [modo de exibição do Windows](../debugger/windows-view.md) janela e a janela de destino estão visíveis.
+1. Organize suas janelas para que o Spy + +, a janela [exibição do Windows](../debugger/windows-view.md) e a janela de destino fiquem visíveis.
 
-2. Dos **pesquisa** menu, escolha **localizar janela**.
+2. No menu **Pesquisar** , escolha **localizar janela**.
 
-    O [caixa de diálogo de pesquisa de janela](../debugger/window-search-dialog-box.md) é aberta.
+    A [caixa de diálogo pesquisa de janela](../debugger/window-search-dialog-box.md) é aberta.
 
    > [!TIP]
-   > Para reduzir a desordem na tela, selecione a **Spy ocultar** opção. Esta opção oculta a janela principal do Spy + + e deixa somente o **pesquisa de janela** caixa de diálogo visível na parte superior de seus outros aplicativos. A janela principal do Spy + + é restaurada quando você clica **Okey** ou **Cancelar**, ou quando você desmarca a **ocultar Spy + +** opção.
+   > Para reduzir a desordem na tela, selecione a opção **ocultar Spy** . Essa opção oculta a janela principal do Spy + + e deixa apenas a caixa de diálogo **pesquisa de janela** visível sobre seus outros aplicativos. A janela principal Spy + + é restaurada quando você clica em **OK** ou em **Cancelar**, ou quando você desmarca a opção **ocultar Spy + +** .
 
-3. Arraste o **ferramenta Descobridora** sobre a janela de destino. À medida que você arrasta a ferramenta, o **pesquisa de janela** caixa de diálogo exibe detalhes sobre a janela selecionada.
-
-   - ou –
-
-     Se você souber o identificador da janela desejado (por exemplo, do depurador), você pode digitar no **manipular** caixa.
+3. Arraste a **ferramenta localizador** sobre a janela de destino. À medida que você arrasta a ferramenta, a caixa de diálogo **pesquisa de janela** exibe detalhes na janela selecionada.
 
    - ou –
 
-     Se você souber a legenda e/ou a classe de janela que você deseja, você pode digitá-los a **legenda** e **classe** caixas de texto e desmarque o **manipular** caixa de texto.
+     Se você souber o identificador da janela que deseja (por exemplo, do depurador), poderá digitá-lo na caixa **identificador** .
 
-4. Escolher **para cima** ou **para baixo** para a direção inicial da pesquisa.
+   - ou –
+
+     Se você souber a legenda e/ou a classe da janela desejada, poderá digitá-las nas caixas de texto **legenda** e **classe** e desmarcar a caixa de texto **identificador** .
+
+4. Escolha para **cima** ou para **baixo** na direção inicial da pesquisa.
 
 5. Clique em **OK**.
 
-    Se uma janela correspondente for encontrada, ele é realçado na [modo de exibição do Windows](../debugger/windows-view.md) janela.
+    Se uma janela correspondente for encontrada, ela será realçada na janela [exibição do Windows](../debugger/windows-view.md) .

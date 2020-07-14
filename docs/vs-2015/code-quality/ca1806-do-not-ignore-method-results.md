@@ -15,19 +15,19 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f68ab71d9ce4fab1b0612f15d866c58e302a317e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 726cde42eb08ee5508481887fae2e9d2b059256c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671503"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543865"
 ---
-# <a name="ca1806-do-not-ignore-method-results"></a>CA1806: não ignore resultados do método
+# <a name="ca1806-do-not-ignore-method-results"></a>CA1806: Não ignorar resultados do método
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|DoNotIgnoreMethodResults|
+|TypeName|DoNotIgnoreMethodResults|
 |CheckId|CA1806|
 |Categoria|Microsoft. Usage|
 |Alteração Significativa|Sem interrupção|
@@ -52,7 +52,7 @@ ms.locfileid: "72671503"
 
  Se o método A chama o método B, mas não usa a nova instância de cadeia de caracteres que o método B retorna. Passe a instância como um argumento para outro método, atribua a instância a uma variável. Ou remova a chamada se ela for desnecessária.
 
- \- ou -
+ -ou-
 
  Se o método A chama o método B, mas não usa o HRESULT ou o código de erro retornado pelo método. Use o resultado em uma instrução condicional, atribua o resultado a uma variável ou passe-o como um argumento para outro método.
 

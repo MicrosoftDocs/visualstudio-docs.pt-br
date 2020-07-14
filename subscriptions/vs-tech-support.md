@@ -5,35 +5,35 @@ ms.author: v-evwin
 manager: lank
 ms.assetid: 2e0fd8bb-8f20-487c-b350-b8fde405ea5e
 ms.date: 03/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: Saiba como ativar o benefício do suporte técnico incluído na assinatura do Visual Studio.
-ms.openlocfilehash: 7fd2bd8b3e2f192f82dd2cccf89798b9b2413e62
-ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
+ms.openlocfilehash: f195c0f2a165dae1d17697fb351ee6f576864a37
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80301944"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85906094"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Ativar e usar o benefício do Suporte Técnico em assinaturas do Visual Studio
 O benefício de Suporte Técnico em assinaturas do Visual Studio destina-se a resolver problemas de interrupção/reparo em **ambientes de não produção** para os produtos que ainda estão na fase de suporte base do [ciclo de vida de suporte](https://support.microsoft.com/lifecycle/search). As assinaturas de nuvem anual e padrão do Visual Studio Enterprise recebem quatro incidentes, enquanto as assinaturas de nuvem anual e padrão do Visual Studio Professional recebem dois incidentes, por até 1 ano a contar da ativação do benefício. A ativação do benefício precisa ocorrer enquanto a assinatura é atual.
 
 > [!NOTE]
-> A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Os novos clientes são incentivados a acessar https://visualstudio.microsoft.com/vs/pricing/ para explorar diferentes opções de compra de assinaturas do Visual Studio.
+> A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Os novos clientes são incentivados a acessar <https://visualstudio.microsoft.com/vs/pricing/> para explorar diferentes opções de compra de assinaturas do Visual Studio.
 
 > [!NOTE]
 > Nem todas as assinaturas de um determinado nível são elegíveis para receber incidentes de suporte. As assinaturas adquiridas por meio do FTE, do NFR, do MPN, do MCT e de outros programas não recebem incidentes de suporte. Se sua assinatura não for elegível para receber os incidentes de suporte técnico, o bloco Suporte Técnico não aparecerá em seus benefícios disponíveis.
 
-**Para enviar uma solicitação de suporte usando o benefício, você deve primeiro ativá-lo.  Siga os passos na próxima seção para concluir a ativação.**
+**Para enviar uma solicitação de suporte usando o benefício, você deve primeiro ativá-la.  Siga as etapas na próxima seção para concluir a ativação.**
 
 ## <a name="supported-products"></a>Produtos compatíveis 
-Ferramentas de desenvolvedor, como o Visual Studio IDE e o Azure DevOps Server receberão suporte mainstream e estendido através de assinaturas do Visual Studio.
+Ferramentas para Desenvolvedores como o IDE do Visual Studio e o Azure DevOps Server receberão suporte básico e estendido por meio de assinaturas do Visual Studio.
 
-Produtos não-desenvolvedores (como SQL, Windows, SharePoint) baixados das assinaturas do Visual Studio são elegíveis apenas para suporte mainstream. Esses produtos são licenciados apenas para ambientes de desenvolvimento para projetar, desenvolver, testar ou demonstrar aplicações. Estes produtos não são licenciados para ambientes de produção.
+Os produtos sem desenvolvedores (como SQL, Windows, SharePoint) baixados das assinaturas do Visual Studio são elegíveis apenas para suporte base. Esses produtos são licenciados apenas para ambientes de desenvolvimento para projetar, desenvolver, testar ou demonstrar aplicativos. Esses produtos não são licenciados para ambientes de produção.
 
-Descrições do nível do produto: Expanda **planos de suporte indisponíveis**. Se você vir **o plano de suporte não pode ser usado para suporte no produto especificado (Código: 8)**, seu contrato de suporte não poderá ser usado para a versão do produto selecionada.
+Descrições de nível de produto: expanda **planos de suporte indisponíveis**. Se você vir **o plano de suporte não pode ser usado para suporte no produto especificado (código: 8)**, o contrato de suporte não poderá ser usado para a versão do produto que você selecionou.
 
 ## <a name="how-to-activate-the-benefit"></a>Como ativar o benefício
-1. Acesse https://my.visualstudio.com/Benefits, role a página para baixo até a seção Suporte e, no bloco Suporte Técnico, clique em **Conversar para ativar**.
+1. Acesse <https://my.visualstudio.com/Benefits>, role a página para baixo até a seção Suporte e, no bloco Suporte Técnico, clique em **Conversar para ativar**.
     > [!div class="mx-imgBorder"]
     > ![Bloco do benefício do Suporte Técnico](_img/vs-tech-support/vs-tech-support-tile.png)
 2. Isso iniciará uma sessão de chat com um representante que poderá criar a **ID do Contrato** e a **ID de Acesso** e fornecê-las para você por email, de modo a tê-los para seus registros.
@@ -44,7 +44,7 @@ Descrições do nível do produto: Expanda **planos de suporte indisponíveis**.
    - Seu nome completo
    - O endereço de email usado para entrar em sua assinatura
    - Seu número de telefone
-   - O ID de Assinatura, que pode ser encontrado na guia [Assinaturas.](https://my.visualstudio.com/subscriptions)
+   - A ID da assinatura, que pode ser encontrada na guia [assinaturas](https://my.visualstudio.com/subscriptions) .
 
    > [!div class="mx-imgBorder"]
    > ![Benefício do suporte técnico: encontrar a ID da assinatura](_img/vs-tech-support/vs-tech-support-subID-cropped.png)
@@ -83,7 +83,7 @@ Ao enviar um incidente online, primeiro você deverá entrar. Usando a lista sus
    > [!div class="mx-imgBorder"]
    > ![Envio de Incidente do Benefício de Suporte Técnico – Adicionar Contrato](_img/vs-tech-support/vs-tech-support-add-contract.png)
 
-4. Digite seu **ID de acesso** e **ID de contrato**.  Clique em **Adicionar**.
+4. Insira sua **ID de acesso** e a **ID do contrato**.  Clique em **Adicionar**.
 
    > [!div class="mx-imgBorder"]
    > ![Envio de Incidente do Benefício de Suporte Técnico – Adicionar ID do Contrato](_img/vs-tech-support/vs-tech-support-add-contract-id.png)
@@ -105,7 +105,7 @@ Se desejar criar um incidente de suporte por telefone, localize o número de tel
 Para usar o benefício de suporte técnico da assinatura do Visual Studio para problemas relacionados ao Azure, será necessário vincular a ID do Contrato e a ID do Acesso à sua assinatura do Azure.
 
 1. Acesse https://portal.azure.com e entre
-2. Na navegação à esquerda clique em **Ajuda + Suporte**
+2. Na navegação à esquerda, clique em **ajuda + suporte**
 3. Em "Suporte", clique em **Nova Solicitação de Suporte**
 
 ## <a name="eligibility"></a>Qualificação
@@ -113,19 +113,19 @@ Para usar o benefício de suporte técnico da assinatura do Visual Studio para p
 | Nível de Assinatura                                                 |     Canais                                            | Benefício                                                          | Renovável?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard)   | VL, Azure, Comercial, NFR selecionado<sup>1</sup> | 4 incidentes       |  Sim|
-| Visual Studio Enterprise com GitHub Enterprise | Vl | 4 incidentes       |  Sim|
+| Visual Studio Enterprise com GitHub Enterprise | VL | 4 incidentes       |  Sim|
 | Visual Studio Professional (Standard) | VL, Azure, Retail, NFR<sup>2</sup> selecionado                                        | 2 incidentes                                                          |Sim         |
-| Visual Studio Professional com GitHub Enterprise | Vl                                     | 2 incidentes                                                          |Sim         |
+| Visual Studio Professional com GitHub Enterprise | VL                                     | 2 incidentes                                                          |Sim         |
 | Visual Studio Test Professional (Padrão)                         | VL, Retail                                              | 2 incidentes                                             |  Sim         |
 | Plataformas MSDN (Padrão)                                          | VL, Retail                                              | 2 incidentes                                               | Sim         |
 | Visual Studio Enterprise, Visual Studio Professional (nuvem mensal) | Azure                                       | Não disponível                                                           |NA|
 ||
 
-<sup>1</sup> *Inclui: Imagine Premium, BizSpark. Exclui: Não para revenda (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), FTE, MCT Software & Services Developer, Imagine Standard, Most Valuable Professional (MVP), Regional Director (RD), MCT Software & Services.*
+<sup>1</sup> *inclui: Imagine Premium, BizSpark. Exclusões: não para revenda (NFR), parceiro do setor do Visual Studio (VSIP), Microsoft Partner Network (MPN), FTE, MCT software & Services Developer, imagine Standard, profissional mais valioso (MVP), diretor regional (RD), MCT software & Services.*
 
 <sup>2</sup> *inclui: Imagine Standard.*
 
-Não tem certeza de qual assinatura você está usando?  Conecte-se [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) para ver todas as assinaturas atribuídas ao seu endereço de e-mail. Se não vir todas as suas assinaturas, talvez você tenha uma ou mais atribuídas a outro endereço de email.  Você precisará entrar com esse endereço de email para ver as assinaturas.
+Não tem certeza de qual assinatura você está usando?  Conecte-se ao [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) para ver todas as assinaturas atribuídas ao seu endereço de email. Se não vir todas as suas assinaturas, talvez você tenha uma ou mais atribuídas a outro endereço de email.  Você precisará entrar com esse endereço de email para ver as assinaturas.
 
 ## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](https://docs.microsoft.com/visualstudio/)

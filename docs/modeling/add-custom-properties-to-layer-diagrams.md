@@ -1,7 +1,7 @@
 ---
 title: Adicionar propriedades personalizadas a diagramas de dependência
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - dependency diagrams, adding custom properties
 author: JoshuaPartlow
@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3623a0c2380188cbb16f6186bddc3f3f2f0c3bd7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3c68d8a75ca8203a790684506ffd44b3d890648a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590586"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546907"
 ---
 # <a name="add-custom-properties-to-dependency-diagrams"></a>Adicionar propriedades personalizadas a diagramas de dependência
 
@@ -75,7 +75,7 @@ Você pode definir propriedades em [ILayerElement](/previous-versions/ff644511(v
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir é um descritor de propriedade personalizada típico. Ele define uma propriedade booliana no modelo de camada (`ILayerModel`) que permite que o usuário forneça valores para um método de validação personalizado.
+O código a seguir é um descritor de propriedade personalizada típico. Ele define uma propriedade booliana no modelo de camada ( `ILayerModel` ) que permite que o usuário forneça valores para um método de validação personalizado.
 
 ```csharp
 using System;
@@ -160,6 +160,6 @@ namespace MyNamespace
 }
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Estender diagramas de dependência](../modeling/extend-layer-diagrams.md)

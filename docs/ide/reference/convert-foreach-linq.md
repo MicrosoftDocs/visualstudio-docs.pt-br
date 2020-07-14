@@ -1,22 +1,21 @@
 ---
 title: Converter um loop foreach em LINQ
 descritpion: Convert any foreach loop that uses an IEnumerable to a LINQ query or a LINQ call form (also known as a LINQ method).
-ms.date: 03/10/2020
+ms.date: 07/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
-- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 12c03830ccd37e0970e3c74bc78cdd9c8a8732b7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 390e66fa01d49f217140c3c030bcc54fd349e402
+ms.sourcegitcommit: 8b1314ceab58e0d562cdbb1367fa738fdca7bf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79094221"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285388"
 ---
 # <a name="convert-a-foreach-loop-to-linq"></a>Converter um loop foreach em LINQ
 
@@ -24,11 +23,9 @@ Esta refatoração aplica-se a:
 
 - C#
 
-- Visual Basic
+**O que:** Permite que você converta facilmente seu loop *foreach* que usa um IEnumerable para uma consulta LINQ ou um formulário de chamada LINQ (também conhecido como um método LINQ).
 
-**O que é isso?** Permite converter facilmente o loop *foreach* que usa um IEnumerable para uma consulta LINQ ou um formulário de chamada LINQ (também conhecido como método LINQ).
-
-**Quando:** Você tem um loop foreach que usa um IEnumerable, e você quer que esse loop seja lido como uma consulta LINQ.
+**Quando:** Você tem um loop foreach que usa um IEnumerable e deseja que esse loop seja lido como uma consulta LINQ.
 
 **Por que:** Você prefere usar a sintaxe LINQ em vez de um loop foreach. O [LINQ](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq) faz uma consulta em um constructo de linguagem de primeira classe no C#. O LINQ pode reduzir a quantidade de código em um arquivo, facilitar a leitura e permitir que diferentes fontes de dados tenham padrões de expressão de consulta semelhantes.
 
@@ -41,7 +38,7 @@ Esta refatoração aplica-se a:
 
     ![Exemplo de foreach com IEnumerable](media/convert-foreach-to-LINQ.png)
 
-2. Pressione **Ctrl**+**.** para acionar o menu **Ações e Refatorações Rápidas**.
+2. Pressione **Ctrl** + **.** para acionar o menu **Ações e Refatorações Rápidas**.
 
    ![Converter em um exemplo de menu LINQ](media/convert-foreach-to-LINQ-codefix.png)
 

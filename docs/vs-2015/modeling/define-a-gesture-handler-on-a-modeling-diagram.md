@@ -12,12 +12,12 @@ caps.latest.revision: 36
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 67946ffb674a7f4a2346229b958ba8316d6ff919
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: af4123b24ab9286e306a1034de4416a31ae76f2b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850488"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533062"
 ---
 # <a name="define-a-gesture-handler-on-a-modeling-diagram"></a>Definir um manipulador de gestos em um diagrama de modelagem
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ No Visual Studio, você pode definir comandos que são executados quando o usuá
 
  Se já houver um comportamento interno para o tipo de diagrama e o tipo de elemento que você deseja arrastar, talvez você não consiga adicionar ou substituir esse comportamento.
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
  Consulte [requisitos](../modeling/extend-uml-models-and-diagrams.md#Requirements).
 
  Para ver quais versões do Visual Studio oferecem suporte a esse recurso, consulte [suporte de versão para ferramentas de arquitetura e modelagem](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
@@ -42,23 +42,23 @@ No Visual Studio, você pode definir comandos que são executados quando o usuá
 
 1. Na caixa de diálogo **novo projeto** , em **modelagem de projetos**, selecione **extensão do gesto**.
 
-2. Abra o arquivo **. cs** no novo projeto e modifique a classe `GestureExtension` para implementar o manipulador de gestos.
+2. Abra o arquivo **. cs** no novo projeto e modifique a `GestureExtension` classe para implementar o manipulador de gestos.
 
     Para obter mais informações, consulte [implementando o manipulador de gestos](#Implementing).
 
 3. Teste o manipulador de gestos pressionando F5. Para obter mais informações, consulte [executando o manipulador de gestos](#Executing).
 
-4. Instale o manipulador de gestos em outro computador copiando o arquivo **bin\\\*\\\*. vsix** criado pelo seu projeto. Para obter mais informações, consulte [Instalando e desinstalando uma extensão](#Installing).
+4. Instale o manipulador de gestos em outro computador copiando o arquivo **bin \\ \* \\ \* . vsix** criado pelo seu projeto. Para obter mais informações, consulte [Instalando e desinstalando uma extensão](#Installing).
 
    Este é o procedimento alternativo:
 
 #### <a name="to-create-a-separate-class-library-dll-project-for-the-gesture-handler"></a>Para criar um projeto de biblioteca de classes (DLL) separado para o manipulador de gestos
 
-1. Crie um projeto de biblioteca de classes, em uma nova solução de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou em uma solução existente.
+1. Crie um projeto de biblioteca de classes, seja em uma nova [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] solução ou em uma solução existente.
 
    1. No menu **Arquivo**, escolha **Novo**, **Projeto**.
 
-   2. Em **modelos instalados**, expanda **Visual C#**  ou **Visual Basic**e, em seguida, na coluna do meio, escolha **biblioteca de classes**.
+   2. Em **modelos instalados**, expanda **Visual C#** ou **Visual Basic**e, em seguida, na coluna do meio, escolha **biblioteca de classes**.
 
 2. Adicione as referências a seguir ao seu projeto.
 
@@ -74,7 +74,7 @@ No Visual Studio, você pode definir comandos que são executados quando o usuá
 
     `System.Windows.Forms`
 
-    `Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer` – você só precisará disso se estiver estendendo diagramas de camada. Para obter mais informações, consulte [estender diagramas de camada](../modeling/extend-layer-diagrams.md).
+    `Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer`– Você só precisará disso se estiver estendendo diagramas de camada. Para obter mais informações, consulte [estender diagramas de camada](../modeling/extend-layer-diagrams.md).
 
 3. Adicione um arquivo de classe ao projeto e defina seu conteúdo para o código a seguir.
 
@@ -210,7 +210,7 @@ No Visual Studio, você pode definir comandos que são executados quando o usuá
 
     1. No **Gerenciador de soluções**, no menu de atalho da solução, escolha **Adicionar**, **novo projeto**.
 
-    2. Em **modelos instalados**, expanda **Visual C#**  ou **Visual Basic**e, em seguida, selecione **extensibilidade**. Na coluna do meio, escolha **projeto VSIX**.
+    2. Em **modelos instalados**, expanda **Visual C#** ou **Visual Basic**e, em seguida, selecione **extensibilidade**. Na coluna do meio, escolha **projeto VSIX**.
 
 3. Defina o projeto VSIX como o projeto de inicialização da solução.
 
@@ -224,13 +224,13 @@ No Visual Studio, você pode definir comandos que são executados quando o usuá
 
     3. Na guia **ativos** , escolha um **novo**e, na caixa de diálogo, defina:
 
-         **Tipo** = **componente MEF**
+         **Tipo**  =  de **Componente MEF**
 
-         **Fonte** = **um projeto na solução atual**
+         **Origem**  =  do **Um projeto na solução atual**
 
-         **Projeto** = *seu projeto de biblioteca de classes*
+         **Projeto**  =  do *Seu projeto de biblioteca de classes*
 
-## <a name="Executing"></a>Executando o manipulador de gestos
+## <a name="executing-the-gesture-handler"></a><a name="Executing"></a>Executando o manipulador de gestos
  Para fins de teste, execute o manipulador de gestos no modo de depuração.
 
 #### <a name="to-test-the-gesture-handler"></a>Para testar o manipulador de gestos
@@ -239,15 +239,15 @@ No Visual Studio, você pode definir comandos que são executados quando o usuá
 
     Uma instância experimental do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] é iniciada.
 
-    **Solução de problemas**: se um novo [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] não iniciar:
+    **Solução de problemas**: se um novo não [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Iniciar:
 
    - Se você tiver mais de um projeto, verifique se o projeto VSIX está definido como o projeto de inicialização da solução.
 
-   - No Gerenciador de Soluções, no menu de atalho do projeto de inicialização ou somente, escolha Propriedades. No editor de propriedades do projeto, escolha a guia **depurar** . Verifique se a cadeia de caracteres no campo **Iniciar programa externo** é o nome de caminho completo de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], normalmente:
+   - No Gerenciador de Soluções, no menu de atalho do projeto de inicialização ou somente, escolha Propriedades. No editor de propriedades do projeto, escolha a guia **depurar** . Verifique se a cadeia de caracteres no campo **Iniciar programa externo** é o nome de caminho completo de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , normalmente:
 
         `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
-2. No [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]experimental, abra ou crie um projeto de modelagem e abra ou crie um diagrama de modelagem. Use um diagrama que pertença a um dos tipos listados nos atributos da classe do manipulador de gestos.
+2. Em experimental [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , abra ou crie um projeto de modelagem e abra ou crie um diagrama de modelagem. Use um diagrama que pertença a um dos tipos listados nos atributos da classe do manipulador de gestos.
 
 3. Clique duas vezes em qualquer lugar do diagrama. O manipulador de clique duplo deve ser chamado.
 
@@ -257,34 +257,34 @@ No Visual Studio, você pode definir comandos que são executados quando o usuá
 
 - O projeto do manipulador de gestos é listado como um componente do MEF na guia **ativos** em **Source. Extensions. manifest** no projeto VSIX.
 
-- Os parâmetros de todos os atributos de `Import` e `Export` são válidos.
+- Os parâmetros de todos os `Import` `Export` atributos e são válidos.
 
-- O método `CanDragDrop` não está retornando `false`.
+- O `CanDragDrop` método não está retornando `false` .
 
 - O tipo de diagrama de modelo que você está usando (classe UML, sequência etc.) está listado como um dos atributos de classe do manipulador de gestos [ClassDesignerExtension], [SequenceDesignerExtension] e assim por diante.
 
 - Não há nenhuma funcionalidade interna já definida para esse tipo de destino e elemento Descartado.
 
-## <a name="Implementing"></a>Implementando o manipulador de gestos
+## <a name="implementing-the-gesture-handler"></a><a name="Implementing"></a>Implementando o manipulador de gestos
 
 ### <a name="the-gesture-handler-methods"></a>Os métodos do manipulador de gestos
- A classe do manipulador de gestos implementa e exporta <xref:Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement.IGestureExtension>. Os métodos que você precisa definir são os seguintes:
+ A classe do manipulador de gestos implementa e exporta <xref:Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement.IGestureExtension> . Os métodos que você precisa definir são os seguintes:
 
-|||
+|Assinatura|Descrição|
 |-|-|
-|`bool CanDragDrop (ShapeElement target, DiagramDragEventArgs dragEvent)`|Retornar `true` para permitir que o elemento de origem referenciado no `dragEvent` seja Descartado nesse destino.<br /><br /> Esse método não deve fazer alterações no modelo. Ele deve funcionar rapidamente, pois é usado para determinar o estado da seta à medida que o usuário move o mouse.|
-|`void OnDragDrop (ShapeElement target, DiagramDragEventArgs dragEvent)`|Atualize o modelo com base no objeto de origem referenciado em `dragEvent`e o destino.<br /><br /> Chamado quando o usuário libera o mouse após arrastar.|
-|`void OnDoubleClick (ShapeElement target, DiagramPointEventArgs pointEvent)`|`target` é a forma com que o usuário clicou duas vezes.|
+|`bool CanDragDrop (ShapeElement target, DiagramDragEventArgs dragEvent)`|Retorne `true` para permitir que o elemento de origem referenciado no `dragEvent` seja Descartado neste destino.<br /><br /> Esse método não deve fazer alterações no modelo. Ele deve funcionar rapidamente, pois é usado para determinar o estado da seta à medida que o usuário move o mouse.|
+|`void OnDragDrop (ShapeElement target, DiagramDragEventArgs dragEvent)`|Atualize o modelo com base no objeto de origem referenciado em `dragEvent` e no destino.<br /><br /> Chamado quando o usuário libera o mouse após arrastar.|
+|`void OnDoubleClick (ShapeElement target, DiagramPointEventArgs pointEvent)`|`target`é a forma com que o usuário clicou duas vezes.|
 
- Você pode escrever manipuladores que podem aceitar não apenas UML também uma ampla variedade de outros itens, como arquivos, nós em uma exibição de classe do .NET e assim por diante. O usuário pode arrastar qualquer um desses itens para um diagrama UML, desde que você escreva um método `OnDragDrop` que possa decodificar a forma serializada dos itens. Os métodos de decodificação variam de um tipo de item para outro.
+ Você pode escrever manipuladores que podem aceitar não apenas UML também uma ampla variedade de outros itens, como arquivos, nós em uma exibição de classe do .NET e assim por diante. O usuário pode arrastar qualquer um desses itens para um diagrama UML, desde que você escreva um `OnDragDrop` método que possa decodificar a forma serializada dos itens. Os métodos de decodificação variam de um tipo de item para outro.
 
  Os parâmetros desses métodos são:
 
 - `ShapeElement target`. A forma ou o diagrama no qual o usuário arrastou algo.
 
-    `ShapeElement` é uma classe na implementação que se baseia nas ferramentas de modelagem UML. Para reduzir o risco de colocar o modelo UML e os diagramas em um estado inconsistente, recomendamos que você não use os métodos dessa classe diretamente. Em vez disso, empacote o elemento em um `IShape`e, em seguida, use os métodos descritos em [exibir um modelo UML em diagramas](../modeling/display-a-uml-model-on-diagrams.md).
+    `ShapeElement`é uma classe na implementação que se baseia nas ferramentas de modelagem UML. Para reduzir o risco de colocar o modelo UML e os diagramas em um estado inconsistente, recomendamos que você não use os métodos dessa classe diretamente. Em vez disso, empacote o elemento em um `IShape` e, em seguida, use os métodos descritos em [exibir um modelo UML em diagramas](../modeling/display-a-uml-model-on-diagrams.md).
 
-  - Para obter uma `IShape`:
+  - Para obter um `IShape` :
 
       ```
       IShape targetIShape = target.CreateIShape(target);
@@ -317,7 +317,7 @@ No Visual Studio, você pode definir comandos que são executados quando o usuá
     System.Windows.Forms.IDataObject data = eventArgs.Data;
     ```
 
-     Você pode arrastar elementos de vários tipos diferentes para um diagrama, de diferentes partes do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ou da área de trabalho do Windows. Diferentes tipos de elemento são codificados de maneiras diferentes no `IDataObject`. Para extrair os elementos dele, consulte a documentação do tipo apropriado de objeto.
+     Você pode arrastar elementos de vários tipos diferentes para um diagrama, de partes diferentes do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou da área de trabalho do Windows. Diferentes tipos de elemento são codificados de maneiras diferentes no `IDataObject` . Para extrair os elementos dele, consulte a documentação do tipo apropriado de objeto.
 
      Se o objeto de origem for um elemento UML arrastado do Gerenciador de modelos UML ou de outro diagrama UML, consulte [obter elementos de modelo UML de IDataObject](../modeling/get-uml-model-elements-from-idataobject.md).
 
@@ -348,8 +348,8 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
  Para obter mais informações, consulte [navegar no modelo UML](../modeling/navigate-the-uml-model.md).
 
-## <a name="Installing"></a>Instalando e desinstalando uma extensão
- Você pode instalar uma extensão de [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] no seu próprio computador e em outros computadores.
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>Instalando e desinstalando uma extensão
+ Você pode instalar uma [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] extensão no seu próprio computador e em outros computadores.
 
 #### <a name="to-install-an-extension"></a>Para instalar uma extensão
 
@@ -357,7 +357,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
     1. No **Gerenciador de soluções**, no menu de atalho do projeto VSIX, escolha **abrir pasta no Windows Explorer**.
 
-    2. Localize o arquivo **bin\\\*\\** _seuprojeto_ **. vsix**
+    2. Localize o arquivo **bin \\ \* \\ **_seuprojeto_**. vsix**
 
 2. Copie o arquivo **. vsix** para o computador de destino no qual você deseja instalar a extensão. Este pode ser seu próprio computador ou outro.
 
@@ -367,7 +367,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
      O **instalador de extensão do Visual Studio** é aberto e instala a extensão.
 
-4. Inicie ou reinicie o [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)].
+4. Iniciar ou reiniciar [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] .
 
 #### <a name="to-uninstall-an-extension"></a>Para desinstalar uma extensão
 
@@ -379,9 +379,9 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
    Raramente, uma extensão defeituosa não carrega e cria um relatório na janela de erro, mas não aparece no Gerenciador de extensões. Nesse caso, você pode remover a extensão excluindo o arquivo de:
 
-   *%LocalAppData%* **\Local\Microsoft\VisualStudio\\[version]\Extensions**
+   *% LocalAppData%* **\Local\Microsoft\VisualStudio \\ [versão] \Extensions**
 
-## <a name="DragExample"></a> Exemplo
+## <a name="example"></a><a name="DragExample"></a>Exemplo
  O exemplo a seguir mostra como criar linhas de vida em um diagrama de sequência, com base nas partes e portas de um componente, arrastados de um diagrama de componente.
 
  Para testá-lo, pressione F5. Uma instância experimental do Visual Studio é aberta. Nessa instância, abra um modelo UML e crie um componente em um diagrama de componente. Adicione a esse componente algumas interfaces e partes de componentes internas. Selecione as interfaces e as partes. Em seguida, arraste as interfaces e partes para um diagrama de sequência. (Arraste do diagrama de componente até a guia do diagrama de sequência e, em seguida, para baixo até o diagrama de sequência.) Uma linha de vida será exibida para cada interface e parte.
@@ -517,7 +517,7 @@ public class CreateLifelinesFromComponentParts : IGestureExtension
 
 ```
 
- O código de `GetModelElementsFromDragEvent()` é descrito em [obter elementos de modelo UML do IDataObject](../modeling/get-uml-model-elements-from-idataobject.md).
+ O código de `GetModelElementsFromDragEvent()` é descrito em [obter elementos de modelo UML de IDataObject](../modeling/get-uml-model-elements-from-idataobject.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
  [Definir e instalar uma extensão de modelagem](../modeling/define-and-install-a-modeling-extension.md) [estender modelos e diagramas UML](../modeling/extend-uml-models-and-diagrams.md) [definir um comando de menu em um diagrama de modelagem](../modeling/define-a-menu-command-on-a-modeling-diagram.md) [definir restrições de validação para programação de modelos UML](../modeling/define-validation-constraints-for-uml-models.md) [com a API UML](../modeling/programming-with-the-uml-api.md)

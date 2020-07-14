@@ -17,16 +17,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5134e17c26ffd7b34c0277c571173ba03d758bee
-ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
+ms.openlocfilehash: d3a7c5eb8aa489da9ced0803e0f83855734825ff
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80638779"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537365"
 ---
 # <a name="measure-application-performance-by-analyzing-cpu-usage"></a>Medir o desempenho do aplicativo analisando o uso da CPU
 
-Você pode usar as ferramentas de criação de perfil do Visual Studio para analisar problemas de desempenho em seu aplicativo. Este artigo mostra como usar a guia **de uso** da CPU das Ferramentas de Diagnóstico para obter dados de desempenho para o seu aplicativo.
+Você pode usar as ferramentas de criação de perfil do Visual Studio para analisar problemas de desempenho em seu aplicativo. Este artigo mostra como usar a guia **uso da CPU** das ferramentas de diagnóstico para obter dados de desempenho para seu aplicativo.
 
 Quando o depurador pausa, a ferramenta **Uso de CPU** coleta informações sobre as funções que estão em execução no aplicativo. A ferramenta lista as funções que estavam executando o trabalho e fornece um gráfico de linha do tempo que você pode usar para se concentrar em segmentos específicos da sessão de amostragem.
 
@@ -35,7 +35,7 @@ O Hub de diagnósticos oferece várias outras opções para executar e gerenciar
 > [!Important]
 > As Ferramentas de Diagnóstico têm suporte para desenvolvimento de .NET no Visual Studio, incluindo o ASP.NET e para desenvolvimento nativo/C++.
 
-Neste artigo, abordaremos a análise do uso de CPU no fluxo de trabalho de depuração normal. Você também pode analisar o uso da CPU sem um depurador conectado ou mirando um aplicativo em execução. Para obter mais informações, consulte [Executar ferramentas de criação de perfil com ou sem o depurador](../profiling/running-profiling-tools-with-or-without-the-debugger.md). Você também pode usar outra ferramenta de criação de perfil, [PerfTips,](../profiling/perftips.md)para passar pelo código e identificar quanto tempo leva funções ou blocos de código para ser concluído.
+Neste artigo, abordaremos a análise do uso de CPU no fluxo de trabalho de depuração normal. Você também pode analisar o uso da CPU sem um depurador anexado ou direcionando a um aplicativo em execução. Para obter mais informações, consulte [executar ferramentas de criação de perfil com ou sem o depurador](../profiling/running-profiling-tools-with-or-without-the-debugger.md). Você também pode usar outra ferramenta de criação de perfil, [PerfTips](../profiling/perftips.md), para percorrer o código e identificar quanto tempo as funções específicas ou os blocos de código são concluídos.
 
 Você pode usar as ferramentas de criação de perfil sem o depurador com o Windows 7 e posteriores. O Windows 8 ou posterior é necessário para executar ferramentas de criação de perfil com o depurador (janela **Ferramentas de Diagnóstico**).
 
@@ -53,27 +53,27 @@ Neste tutorial, você irá:
 
     Definindo dois pontos de interrupção, você pode limitar a coleta de dados às partes do código que deseja analisar.
 
-3. A janela **Ferramentas de Diagnóstico** aparece automaticamente, a menos que você a tenha desligado. Para trazer a janela novamente, clique em **Depurar** > **ferramentas de diagnóstico do****Windows** > Show .
+3. A janela de **ferramentas de diagnóstico** aparece automaticamente, a menos que você a tenha desativado. Para exibir a janela novamente, clique em **depurar**  >  **janelas**  >  **Mostrar ferramentas de diagnóstico**.
 
-4. Você pode optar por ver **Uso de CPU** e/ou [Uso de Memória](../profiling/Memory-Usage.md), com a configuração **Selecionar Ferramentas** na barra de ferramentas. Se você estiver executando o Visual Studio Enterprise, você também pode ativar ou desativar o IntelliTrace nas**opções de** >  **ferramentas** > **IntelliTrace**.
+4. Você pode optar por ver **Uso de CPU** e/ou [Uso de Memória](../profiling/Memory-Usage.md), com a configuração **Selecionar Ferramentas** na barra de ferramentas. Se estiver executando Visual Studio Enterprise, você também poderá habilitar ou desabilitar o IntelliTrace no **Tools**  >  **Options**  >  **IntelliTrace**opções de ferramentas.
 
      ![Mostrar ferramentas de diagnóstico](../profiling/media/diag-tools-select-tool.png "DiagToolsSelectTool")
 
      Vamos observar principalmente a utilização da CPU, portanto verifique se **Uso de CPU** está habilitado (é habilitado por padrão).
 
-5. Clique **em Depurar** > **Depuração** (ou **Iniciar** na barra de ferramentas ou **F5**).
+5. Clique em **depurar**  >  **Iniciar Depuração** (ou **Iniciar** na barra de ferramentas ou **F5**).
 
-     Quando o aplicativo terminar de ser carregado, a exibição Resumo das Ferramentas de Diagnóstico será exibida. Se você precisar abrir a janela, clique em **Depurar** > **ferramentas de diagnóstico do****Windows** > Show .
+     Quando o aplicativo terminar de ser carregado, a exibição Resumo das Ferramentas de Diagnóstico será exibida. Se você precisar abrir a janela, clique em **depurar**  >  **janelas**  >  **Mostrar ferramentas de diagnóstico**.
 
-     ![Guia de resumo das ferramentas de diagnóstico](../profiling/media/diag-tools-summary-tab.png "DiagToolsSummaryTab")
+     ![Guia Resumo das ferramentas de diagnóstico](../profiling/media/diag-tools-summary-tab.png "DiagToolsSummaryTab")
 
-     Para obter mais informações sobre os eventos, consulte [Pesquisar e filtrar a guia Eventos da janela Ferramentas de Diagnóstico](https://devblogs.microsoft.com/devops/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window/).
+     Para obter mais informações sobre os eventos, consulte [pesquisando e filtrando a guia eventos da janela ferramentas de diagnóstico](https://devblogs.microsoft.com/devops/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window/).
 
 6. Execute o cenário que fará com que o primeiro ponto de interrupção seja atingido.
 
 7. Enquanto o depurador estiver em pausa, habilite a coleta dos dados de Uso da CPU e, em seguida, abra a guia **Uso da CPU**.
 
-     ![As ferramentas de diagnóstico permitem a criação de perfis de CPU](../profiling/media/diag-tools-enable-cpu-profiling.png "DiagToolsEnableCPUProfiling")
+     ![Ferramentas de diagnóstico Habilitar criação de perfil de CPU](../profiling/media/diag-tools-enable-cpu-profiling.png "DiagToolsEnableCPUProfiling")
 
      Quando você escolher **Registrar perfil de CPU**, o Visual Studio começará a registrar suas funções e quanto tempo elas levam para ser executadas. Você somente poderá exibir esses dados coletados quando o aplicativo for parado em um ponto de interrupção.
 
@@ -83,11 +83,11 @@ Neste tutorial, você irá:
 
      O criador de perfil começa a preparar os dados de thread. Aguarde sua conclusão.
 
-     ![Ferramentas de diagnóstico preparando segmentos](../profiling/media/diag-tools-preparing-data.png "DiagToolsPreparandothreads")
+     ![Ferramentas de diagnóstico preparando threads](../profiling/media/diag-tools-preparing-data.png "DiagToolsPreparingThreads")
 
      A ferramenta de Uso de CPU exibe o relatório na guia **Uso da CPU**.
 
-     ![Guia de uso da CPU da Diagnostics Tools](../profiling/media/diag-tools-cpu-usage-tab.png "DiagToolsCPUUseTab")
+     ![Guia uso de CPU das ferramentas de diagnóstico](../profiling/media/diag-tools-cpu-usage-tab.png "DiagToolsCPUUsageTab")
 
 9. Se você quiser selecionar uma região de código mais específica para analisar, selecione uma região na linha do tempo da CPU (deve ser uma região que mostre dados de criação de perfil).
 
@@ -96,7 +96,7 @@ Neste tutorial, você irá:
      Neste ponto, você pode começar a analisar os dados.
 
      > [!TIP]
-     >  Ao tentar identificar problemas de desempenho, faça várias medições. O desempenho naturalmente varia de run-to-run, e os caminhos de código normalmente executam mais lentos na primeira vez que são executados devido ao trabalho de inicialização única, como carregar DLLs, métodos de compilação JIT e inicializar caches. Ao fazer várias medições, você tem uma ideia melhor do alcance e mediana da métrica que está sendo mostrada, o que permite comparar a primeira vez versus o desempenho de estado estável de uma área de código.
+     >  Ao tentar identificar problemas de desempenho, faça várias medições. O desempenho naturalmente varia de execução para execução, e os caminhos de código normalmente são executados mais lentamente na primeira vez em que são executados devido a um trabalho de inicialização única, como o carregamento de DLLs, métodos de compilação JIT e inicialização de caches. Ao fazer várias medições, você obtém uma ideia melhor do intervalo e da mediana da métrica que está sendo mostrada, que permite que você compare a primeira vez em comparação com o desempenho de estado estável de uma área de código.
 
 ## <a name="step-2-analyze-cpu-usage-data"></a>Etapa 2: Analisar os dados de uso de CPU
 
@@ -104,7 +104,7 @@ Recomendamos que você comece a analisar os dados examinando a lista de funçõe
 
 1. Na lista de funções, examine as funções que fazem a maior parte do trabalho.
 
-    ![Lista de funções de uso da CPU da Diagnostics Tools](../profiling/media/diag-tools-cpu-usage-function-list.png "DiagToolsCPUUseFunctionList")
+    ![Lista de funções de uso de CPU das ferramentas de diagnóstico](../profiling/media/diag-tools-cpu-usage-function-list.png "DiagToolsCPUUsageFunctionList")
 
     > [!TIP]
     > As funções são listadas em ordem, começando com as que fazem a maior parte do trabalho (elas não ficam na ordem de chamada). Isso ajuda a identificar rapidamente as funções com execução mais longa.
@@ -128,18 +128,18 @@ Recomendamos que você comece a analisar os dados examinando a lista de funçõe
     Cada área enumerada na figura está relacionada a uma etapa do procedimento.
 
     ::: moniker range=">=vs-2019"
-    ![Ferramentas de diagnóstico chamada árvore](../profiling/media/vs-2019/diag-tools-call-tree.png "DiagToolsCallTree")
+    ![Árvore de chamadas de ferramentas de diagnóstico](../profiling/media/vs-2019/diag-tools-call-tree.png "DiagToolsCallTree")
     ::: moniker-end
     ::: moniker range="vs-2017"
-    ![Ferramentas de diagnóstico chamada árvore](../profiling/media/diag-tools-call-tree.png "DiagToolsCallTree")
+    ![Árvore de chamadas de ferramentas de diagnóstico](../profiling/media/diag-tools-call-tree.png "DiagToolsCallTree")
     ::: moniker-end
 
-    |||
+    |Imagem|Descrição|
     |-|-|
     |![Etapa 1](../profiling/media/ProcGuid_1.png "ProcGuid_1")|O nó de nível superior nas árvores de chamada de uso da CPU é um pseudo-nó|
     |![Etapa 2](../profiling/media/ProcGuid_2.png "ProcGuid_2")|Na maioria dos aplicativos, quando a opção [Mostrar Código Externo](#view-external-code) está desabilitada, o nó de segundo nível é um nó **[Código Externo]** que contém o código do sistema e da estrutura que inicia e para o aplicativo, desenha a interface do usuário, controla o agendamento de thread e fornece ao aplicativo outros serviços de nível inferior.|
     |![Etapa 3](../profiling/media/ProcGuid_3.png "ProcGuid_3")|Os filhos do nó de segundo nível são métodos e rotinas assíncronas do código de usuário que são chamados ou criados pelo sistema de segundo nível e código do framework.|
-    |![Passo 4](../profiling/media/ProcGuid_4.png "ProcGuid_4")|Os nós filhos de um método só contêm dados das chamadas do método pai. Quando **Mostrar Código Externo** é desabilitado, os métodos de aplicativo também podem conter um nó **[Código Externo]**.|
+    |![Etapa 4](../profiling/media/ProcGuid_4.png "ProcGuid_4")|Os nós filhos de um método só contêm dados das chamadas do método pai. Quando **Mostrar Código Externo** é desabilitado, os métodos de aplicativo também podem conter um nó **[Código Externo]**.|
 
     Aqui há mais informações sobre os valores de coluna:
 
@@ -152,7 +152,7 @@ Recomendamos que você comece a analisar os dados examinando a lista de funçõe
     ::: moniker range=">=vs-2019"
     Para ver as chamadas de função que usam a maior porcentagem de CPU no modo de exibição de árvore de chamadas, clique em **Expandir Afunilamento**.
 
-    ![Ferramentas de diagnóstico Hot Path](../profiling/media/vs-2019/diag-tools-hot-path.png "DiagToolsHotPath")
+    ![Caminho de aquecimento das ferramentas de diagnóstico](../profiling/media/vs-2019/diag-tools-hot-path.png "DiagToolsHotPath")
     ::: moniker-end
 
     > [!NOTE]
@@ -164,18 +164,18 @@ O código externo são funções nos componentes do sistema e da estrutura execu
 
 Se você quiser exibir os caminhos de chamada do código externo, escolha **Mostrar Código Externo** na lista **Filtrar exibição** e, em seguida, escolha **Aplicar**.
 
-![Escolha a visualização do filtro e, em seguida, mostre o código externo](../profiling/media/diag-tools-show-external-code.png "DiagToolsShowExternalCode")
+![Escolha o modo de exibição de filtro e, em seguida, mostrar código externo](../profiling/media/diag-tools-show-external-code.png "DiagToolsShowExternalCode")
 
 Saiba que muitas correntes de chamada de código externo são muito aninhadas, de forma que a largura da coluna Nome da Função pode exceder a largura da tela de todos os monitores de computador, exceto dos maiores. Quando isso acontece, os nomes de função são mostrados como **[...] **.
 
 Use a caixa de pesquisa para localizar um nó que você esteja procurando e use a barra de rolagem horizontal para exibir os dados.
 
 > [!TIP]
-> Se você analisar um código externo que chama funções do Windows, deverá garantir que tem os arquivos .*pdb* mais atuais. Sem esses arquivos, as exibições de relatório listarão nomes de funções do Windows criptografadas e difíceis de entender. Para obter mais informações sobre como garantir que você tenha os arquivos necessários, consulte [Especificar símbolo (.pdb) e arquivos de origem no depurador](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
+> Se você analisar um código externo que chama funções do Windows, deverá garantir que tem os arquivos .*pdb* mais atuais. Sem esses arquivos, as exibições de relatório listarão nomes de funções do Windows criptografadas e difíceis de entender. Para obter mais informações sobre como verificar se você tem os arquivos necessários, consulte especificar o [símbolo (. pdb) e os arquivos de origem no depurador](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 
 Neste tutorial, você aprendeu como coletar e analisar dados de uso da CPU. Se você já concluiu o [Introdução às ferramentas de criação de perfil](../profiling/profiling-feature-tour.md), obtenha uma visão geral de como analisar o uso de memória em seus aplicativos.
 
 > [!div class="nextstepaction"]
-> [Analisar o uso de memória no Visual Studio](../profiling/memory-usage.md)
+> [Uso de memória de perfil no Visual Studio](../profiling/memory-usage.md)

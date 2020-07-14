@@ -6,15 +6,15 @@ manager: jillfra
 assetId: 521ec044-ad4b-4828-8864-01decde2e758
 ms.custom: vs-azure
 ms.workload: azure-vs
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/26/2017
 ms.author: ghogen
-ms.openlocfilehash: ca65086ce7ce09a1ca288c2f5cd04c31e00f8e95
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: ddb0f2610473841a69ec69600cf9ef83cb898340
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911891"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280677"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>Adicionando armazenamento do Azure usando os serviços conectados do Visual Studio
 
@@ -47,7 +47,7 @@ Após a conclusão, a caixa de diálogo **Adicionar Serviços Conectados** exibe
 
 1. Na caixa de diálogo **Armazenamento do Azure**, selecione uma conta de armazenamento existente e escolha **Adicionar**.
 
-    Se você precisar criar uma conta de armazenamento, passe para a próxima etapa. Caso contrário, pule para a etapa 6.
+    Se você precisar criar uma conta de armazenamento, passe para a próxima etapa. Caso contrário, ignore a etapa 6.
 
     ![Adicionar conta de armazenamento existente ao projeto](./media/vs-azure-tools-connected-services-storage/select-azure-storage-account.png)
 
@@ -72,9 +72,9 @@ Quando você acaba de fazer suas escolhas na caixa de diálogo, o Visual Studio 
 - Projeto de serviço de nuvem (funções Web e funções de trabalho) — [O que aconteceu — projetos Serviço de Nuvem](/azure/visual-studio/vs-storage-cloud-services-getting-started-blobs)
 - Projetos de Trabalho Web — [O que aconteceu — projetos de Trabalho Web](/azure/visual-studio/vs-storage-webjobs-what-happened)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Fórum do MSDN: armazenamento do Azure](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
+- [Fórum do MSDN: Armazenamento do Azure](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
 - [Blog da equipe do Armazenamento do Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [Documentação do Armazenamento do Azure](/azure/storage/)
 - [Serviço conectados (Visual Studio para Mac)](/visualstudio/mac/connected-services)

@@ -1,7 +1,7 @@
 ---
 title: Consultando o. Arquivo PDB | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a22bc8fbe65795a3c5162607a12690081e565666
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 7a7cff092d06b8845993dcf1a35b271da0c0a33c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917114"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461157"
 ---
 # <a name="querying-the-pdb-file"></a>Consultando o arquivo .Pdb
-Um arquivo de banco de dados do programa (Extension. pdb) é um arquivo binário que contém informações sobre tipo e depuração simbólicas coletadas ao longo do curso da compilação e vinculação do projeto. Um arquivo PDB é criado quando você compila um C/C++ Program com **/Zi** ou **/Zi** ou um programa [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)], [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]ou [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] com a opção **/debug** . Os arquivos de objeto contêm referências ao arquivo. pdb para informações de depuração. Para obter mais informações sobre arquivos PDB, consulte [arquivos PDB](/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100)). Um aplicativo DIA pode usar as seguintes etapas gerais para obter detalhes sobre os vários símbolos, objetos e elementos de dados em uma imagem executável.
+Um arquivo de banco de dados do programa (Extension. pdb) é um arquivo binário que contém informações sobre tipo e depuração simbólicas coletadas ao longo do curso da compilação e vinculação do projeto. Um arquivo PDB é criado quando você compila um programa C/C++ com **/Zi** ou **/Zi** , ou [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] um [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] programa, ou [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] com a opção **/debug** . Os arquivos de objeto contêm referências ao arquivo. pdb para informações de depuração. Para obter mais informações sobre arquivos PDB, consulte [arquivos PDB](/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100)). Um aplicativo DIA pode usar as seguintes etapas gerais para obter detalhes sobre os vários símbolos, objetos e elementos de dados em uma imagem executável.
 
 ### <a name="to-query-the-pdb-file"></a>Para consultar o arquivo. pdb
 
@@ -75,7 +75,7 @@ Um arquivo de banco de dados do programa (Extension. pdb) é um arquivo binário
     }
     ```
 
-5. Use as interfaces de `IDiaEnum*` para enumerar e examinar os símbolos ou outros elementos de informações de depuração.
+5. Use as `IDiaEnum*` interfaces para enumerar e examinar os símbolos ou outros elementos de informações de depuração.
 
     ```C++
     CComPtr<IDiaEnumTables> pTables;

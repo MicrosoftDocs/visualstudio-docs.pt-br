@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumFrameData::Next | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fe478e503ed6e16ee570f309f91434c658ebd27
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2755ce3f48e22d239622dd49800e98ce49c496c7
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744592"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468318"
 ---
 # <a name="idiaenumframedatanext"></a>IDiaEnumFrameData::Next
 Recupera um número especificado de elementos de dados de quadro na sequência de enumeração.
@@ -45,9 +45,9 @@ fora Uma matriz de objetos [IDiaFrameData](../../debugger/debug-interface-access
 
 fora Retorna o número de elementos de dados de quadro no enumerador obtido.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver mais registros. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

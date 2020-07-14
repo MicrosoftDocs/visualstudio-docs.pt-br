@@ -1,7 +1,7 @@
 ---
 title: IDiaLineNumber::get_columnNumberEnd | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4433bc243a7a4f5352f0476370853572be8ddd38
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 26645878ffca7c8c6ea0c51e02aa24668764a757
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743241"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466920"
 ---
 # <a name="idialinenumberget_columnnumberend"></a>IDiaLineNumber::get_columnNumberEnd
 Recupera o número da coluna de origem baseada em um onde a expressão ou instrução termina.
@@ -35,11 +35,11 @@ HRESULT get_columnNumberEnd ( 
 
 fora Retorna o número da coluna onde a expressão ou instrução termina. Se o valor for zero, as informações de término da coluna não estão presentes.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver suporte para essa propriedade. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
 ## <a name="remarks"></a>Comentários
  O valor da coluna retornado por esse método é um deslocamento de byte na linha até a posição após o último caractere da instrução na linha.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

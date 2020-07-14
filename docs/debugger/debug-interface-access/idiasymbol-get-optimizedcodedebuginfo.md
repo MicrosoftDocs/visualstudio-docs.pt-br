@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_optimizedCodeDebugInfo | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 590603e0fd44d8ee6da84790a98cfd8ef8be0b98
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: bf547835179aa203b9ecc4bb0c8050c34e213fdd
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739550"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462598"
 ---
 # <a name="idiasymbolget_optimizedcodedebuginfo"></a>IDiaSymbol::get_optimizedCodeDebugInfo
 Recupera um sinalizador que indica se a função contém informações de depuração específicas para o código otimizado.
@@ -33,10 +33,10 @@ HRESULT get_optimizedCodeDebugInfo(
 #### <a name="parameters"></a>Parâmetros
  `pFlag`
 
-fora Retorna `TRUE` se a função ou o rótulo otimizado contiver informações de depuração; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se a função ou o rótulo otimizado contém informações de depuração; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
@@ -47,5 +47,5 @@ fora Retorna `TRUE` se a função ou o rótulo otimizado contiver informações 
 |-----------------|-----------------|
 |Cabeçalho:|dia2.h|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

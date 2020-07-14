@@ -15,19 +15,19 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7d66c2c52b6ee7f7d1d2fbbd461ca8c1251ce13d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1054330b26cf145ebcbc943a56dc699fe793999f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652709"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548454"
 ---
-# <a name="ca1413-avoid-non-public-fields-in-com-visible-value-types"></a>CA1413: evitar campos não públicos em tipos de valor visíveis COM
+# <a name="ca1413-avoid-non-public-fields-in-com-visible-value-types"></a>CA1413: Evitar campos não públicos em tipos de valor visíveis no COM
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|AvoidNonpublicFieldsInComVisibleValueTypes|
+|TypeName|AvoidNonpublicFieldsInComVisibleValueTypes|
 |CheckId|CA1413|
 |Categoria|Microsoft. Interoperability|
 |Alteração Significativa|Quebra|
@@ -38,10 +38,10 @@ ms.locfileid: "72652709"
 ## <a name="rule-description"></a>Descrição da Regra
  Os campos de instância não pública dos tipos de valor visíveis por COM permanecem visíveis para clientes COM. Examine o conteúdo do campo para obter informações que não devem ser expostas, ou que terão um efeito de design ou segurança indesejado.
 
- Por padrão, todos os tipos de valor público são visíveis para COM. No entanto, para reduzir os falsos positivos, essa regra requer que a visibilidade de COM do tipo seja explicitamente declarada. O assembly contentor deve ser marcado com o <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> definido como `false` e o tipo deve ser marcado com o <xref:System.Runtime.InteropServices.ComVisibleAttribute> definido como `true`.
+ Por padrão, todos os tipos de valor público são visíveis para COM. No entanto, para reduzir os falsos positivos, essa regra requer que a visibilidade de COM do tipo seja explicitamente declarada. O assembly contentor deve ser marcado com o <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> definido como `false` e o tipo deve ser marcado com o <xref:System.Runtime.InteropServices.ComVisibleAttribute> definido como `true` .
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação dessa regra e manter o campo oculto, altere o tipo de valor para um tipo de referência ou remova o atributo <xref:System.Runtime.InteropServices.ComVisibleAttribute> do tipo.
+ Para corrigir uma violação dessa regra e manter o campo oculto, altere o tipo de valor para um tipo de referência ou remova o <xref:System.Runtime.InteropServices.ComVisibleAttribute> atributo do tipo.
 
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
  É seguro suprimir um aviso dessa regra se a exposição pública do campo for aceitável.
@@ -53,9 +53,9 @@ ms.locfileid: "72652709"
  [!code-vb[FxCop.Interoperability.NonpublicField#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Interoperability.NonpublicField/vb/FxCop.Interoperability.NonpublicField.vb#1)]
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1407: evitar membros estáticos em tipos visíveis em COM](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)
+ [CA1407: Evitar membros estáticos em tipos visíveis no COM](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)
 
- [CA1017: marcar assemblies com ComVisibleAttribute](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
+ [CA1017: Marcar assemblies com ComVisibleAttribute](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  Interoperação com tipos .NET qualificados de [código não gerenciado](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258) [para interoperabilidade](https://msdn.microsoft.com/library/4b8afb52-fb8d-4e65-b47c-fd82956a3cdd)

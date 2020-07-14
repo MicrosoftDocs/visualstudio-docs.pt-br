@@ -1,7 +1,7 @@
 ---
 title: THUNK_ORDINAL | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1de2d6c9700dcb7b1106c3693d855bb1d8ae2cfa
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d2fe7c62ce04e61a8476731ed14ee14f60e2b044
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738503"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461038"
 ---
 # <a name="thunk_ordinal"></a>THUNK_ORDINAL
 Designa tipos de conversão.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```C++
 typedef enum THUNK_ORDINAL {
@@ -39,19 +39,19 @@ typedef enum THUNK_ORDINAL {
 ```
 
 ## <a name="elements"></a>Elementos
-Conversão padrão de THUNK_ORDINAL_NOTYPE.
+THUNK_ORDINAL_NOTYPE conversão padrão.
 
-THUNK_ORDINAL_ADJUSTOR uma conversão de `this` do ajustador.
+THUNK_ORDINAL_ADJUSTOR uma `this` conversão de ajustador.
 
 Conversão de chamada virtual THUNK_ORDINAL_VCALL.
 
-THUNK_ORDINAL_PCODE P-conversão de código.
+Conversão de código P THUNK_ORDINAL_PCODE.
 
-Conversão de carga de atraso THUNK_ORDINAL_LOAD.
+Conversão de carga de THUNK_ORDINAL_LOAD atraso.
 
-Conversão incremental de trampoline THUNK_ORDINAL_TRAMP_INCREMENTAL (uma conversão trampoline é usada para chamar chamadas de um espaço de memória para outro).
+THUNK_ORDINAL_TRAMP_INCREMENTAL conversão incremental de trampoline (uma conversão de trampoline é usada para chamar chamadas de um espaço de memória para outro).
 
-Trampoline conversão do ponto de ramificação THUNK_ORDINAL_TRAMP_BRANCHISLAND.
+THUNK_ORDINAL_TRAMP_BRANCHISLAND conversão de ponto de ramificação trampoline.
 
 ## <a name="remarks"></a>Comentários
 Os valores nessa enumeração são retornados de uma chamada para o método [IDiaSymbol:: get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md) .
@@ -59,6 +59,6 @@ Os valores nessa enumeração são retornados de uma chamada para o método [IDi
 ## <a name="requirements"></a>Requisitos
 Cabeçalho: cvconst. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Enumerações e estruturas](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSymbol::get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)

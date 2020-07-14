@@ -1,7 +1,7 @@
 ---
-title: 'Como: Depurar código Assembly embutido | Microsoft Docs'
+title: Como depurar código de assembly embutido | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.inline
 dev_langs:
@@ -19,14 +19,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87e76b2668d8777c46404f0b304eeb56d1821bb8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 528defb516b704f0425ac4389a2fd65befef7063
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894294"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350024"
 ---
-# <a name="how-to-debug-inline-assembly-code"></a>Como: Depurar o código do assembly embutido
+# <a name="how-to-debug-inline-assembly-code"></a>Como depurar código de assembly embutido
 
 > [!NOTE]
 > As caixas de diálogo e os comandos do menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da edição ou das configurações ativas. Para alterar as configurações, escolha Importar e Exportar Configurações no menu Ferramentas. Para obter mais informações, confira [Redefinir as configurações](../ide/environment-settings.md#reset-settings).
@@ -39,7 +39,7 @@ O depurador fornece duas janelas para depurar o código do assembly embutido, a 
 
 2. Use a janela **Registros** para exibir conteúdo do registro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Segurança do depurador](../debugger/debugger-security.md)
 - [Depurando código nativo](../debugger/debugging-native-code.md)

@@ -9,16 +9,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 735a4cc533312bcfa3823410780b09caa4f53fde
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 4aa978098c459d9e55ef0dc1423080357e067a5b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173935"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282755"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>Criar um aplicativo de dados simples com o WPF e o Entity Framework 6
 
-Este tutorial mostra como criar um aplicativo básico "formulários sobre dados" no Visual Studio. O aplicativo usa SQL Server LocalDB, o banco de dados Northwind, Entity Framework 6 e Windows Presentation Foundation. Ele mostra como fazer DataBinding básica com um modo de exibição de detalhes mestre e também tem um navegador de associação personalizado com botões para **mover próximo**, **mover**para o **início**, mover para **o fim**, **Atualizar** e **excluir**.
+Este tutorial mostra como criar um aplicativo básico "formulários sobre dados" no Visual Studio. O aplicativo usa SQL Server LocalDB, o banco de dados Northwind, Entity Framework 6 (não Entity Framework Core) e Windows Presentation Foundation para .NET Framework (não .NET Core). Ele mostra como fazer DataBinding básica com um modo de exibição de detalhes mestre e também tem um navegador de associação personalizado com botões para **mover próximo**, **mover**para o **início**, mover para **o fim**, **Atualizar** e **excluir**.
 
 Este artigo se concentra no uso de ferramentas de dados no Visual Studio e não tenta explicar as tecnologias subjacentes em qualquer profundidade. Ele pressupõe que você tenha uma familiaridade básica com XAML, Entity Framework e SQL. Este exemplo também não demonstra a arquitetura MVVM (Model-View-ViewModel), que é o padrão para aplicativos do WPF. No entanto, você pode copiar esse código em seu próprio aplicativo MVVM com poucas modificações.
 
@@ -423,7 +423,7 @@ Adicione esses métodos de manipulador à classe MainWindow em *MainWindow.XAML.
 
 [!code-csharp[CommandHandlers#3](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#3)]
 
-## <a name="run-the-application"></a>Execute o aplicativo
+## <a name="run-the-application"></a>Executar o aplicativo
 
 Para iniciar a depuração, pressione **F5**. Você deve ver os dados do cliente e do pedido populados na grade e os botões de navegação devem funcionar conforme o esperado. Clique em **confirmar** para adicionar um novo cliente ou pedido ao modelo depois de inserir os dados. Clique em **Cancelar** para voltar a um novo formulário de cliente ou de novo pedido sem salvar os dados. Você pode fazer edições em clientes e pedidos existentes diretamente nas caixas de texto, e essas alterações são gravadas automaticamente no modelo.
 

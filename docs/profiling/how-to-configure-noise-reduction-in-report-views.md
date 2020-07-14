@@ -1,7 +1,7 @@
 ---
-title: Como configurar redução de ruído em exibições de relatório | Microsoft Docs
+title: Como configurar a redução de ruído em exibições de relatório | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.performance.noisereduction.dialog
 helpviewer_keywords:
@@ -15,12 +15,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ccfb9dab504bc3fa9405bb56c9fce82ed18820ac
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2920d2d7f6a77fe8fdbd62a0788f570818390eea
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74776326"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330806"
 ---
 # <a name="how-to-configure-noise-reduction-in-report-views"></a>Como configurar a redução de ruído em visualizações de relatório
 Os relatórios de desempenho podem ser configurados para redução de ruído, limitando a quantidade de dados que são apresentados no modo de exibição de Árvore de Chamadas e na exibição de Alocação. Ao usar a redução de ruído, os problemas de desempenho serão mais proeminentes. Isso é útil ao analisar relatórios de desempenho.
@@ -77,8 +77,8 @@ Os relatórios de desempenho podem ser configurados para redução de ruído, li
 
 4. Clique em **OK**.
 
-## <a name="see-also"></a>Confira também
-- [Personalizar as exibições de relatório das ferramentas de desempenho](../profiling/customizing-performance-tools-report-views.md)
-- [Como: Excluir ou incluir funções curtas da instrumentação](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)
-- [Chamada Tree View](../profiling/call-tree-view.md)
+## <a name="see-also"></a>Veja também
+- [Personalizar modos de exibição de relatório das ferramentas de desempenho](../profiling/customizing-performance-tools-report-views.md)
+- [Como: excluir ou incluir funções curtas da instrumentação](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)
+- [Exibição de árvore de chamadas](../profiling/call-tree-view.md)
 - [Exibição de alocações](../profiling/dotnet-memory-allocations-view.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_count | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d8574b610bb913e2cf2dda8a4778dead8a1b2fe
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 515ef7571192271b5458d36257120d6eef2fe02f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740758"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464005"
 ---
 # <a name="idiasymbolget_count"></a>IDiaSymbol::get_count
 Recupera o número de itens em uma lista ou matriz.
@@ -35,11 +35,11 @@ HRESULT get_count ( 
 
 fora Retorna o número de itens em uma lista ou matriz.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
-> Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
+> Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,5 +48,5 @@ fora Retorna o número de itens em uma lista ou matriz.
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

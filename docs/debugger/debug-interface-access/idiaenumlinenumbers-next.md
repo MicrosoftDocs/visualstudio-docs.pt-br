@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumLineNumbers::Next | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 07402ef7028ecfb7bb5b2c6e33ae06bc98ffe709
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1546c0bc7b8682b918d583769a9f580323c9dda4
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744386"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468206"
 ---
 # <a name="idiaenumlinenumbersnext"></a>IDiaEnumLineNumbers::Next
 Recupera um número especificado de números de linha na sequência de enumeração.
@@ -45,10 +45,10 @@ fora Retorna uma matriz de objetos [IDiaLineNumber](../../debugger/debug-interfa
 
 fora Retorna o número de números de linha no enumerador obtido.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver mais números de linha. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
 - [IDiaSession::findLinesByLinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)

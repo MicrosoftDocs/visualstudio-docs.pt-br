@@ -15,19 +15,19 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: efa328fdff9c357e0183fc2ca80e4d77d4f6782e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 19077a63d5aa22bda3f968943703a82488e2745d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661110"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545282"
 ---
-# <a name="ca1824-mark-assemblies-with-neutralresourceslanguageattribute"></a>CA1824: marcar assemblies com NeutralResourcesLanguageAttribute
+# <a name="ca1824-mark-assemblies-with-neutralresourceslanguageattribute"></a>CA1824: Marque assemblies com NeutralResourcesLanguageAttribute
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|MarkAssembliesWithNeutralResourcesLanguage|
+|TypeName|MarkAssembliesWithNeutralResourcesLanguage|
 |CheckId|CA1824|
 |Categoria|Microsoft. performance|
 |Alteração Significativa|Sem interrupção|

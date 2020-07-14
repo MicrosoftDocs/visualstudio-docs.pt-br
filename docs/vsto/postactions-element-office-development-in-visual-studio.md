@@ -1,7 +1,7 @@
 ---
-title: '&lt;postActions&gt; elemento (desenvolvimento do Office no Visual Studio)'
+title: '&lt;&gt;elemento de ações (desenvolvimento do Office no Visual Studio)'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -14,15 +14,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 548396e6393720824c93c07e55046ec2d91797a2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bfe9ae171f0f6fac1c2b5add5340de1c11f3da0f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62561455"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544411"
 ---
-# <a name="ltpostactionsgt-element-office-development-in-visual-studio"></a>&lt;postActions&gt; elemento (desenvolvimento do Office no Visual Studio)
-  O `postActions` elemento do `vstav3` namespace contém tudo o `postAction` elementos que descrevem as ações de pós-implantação, que são executados após a instalação de soluções do Office.
+# <a name="ltpostactionsgt-element-office-development-in-visual-studio"></a>&lt;&gt;elemento de ações (desenvolvimento do Office no Visual Studio)
+  O `postActions` elemento do `vstav3` namespace contém todos os `postAction` elementos que descrevem as ações pós-implantação, que são executadas após a instalação das soluções do Office.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,19 +38,19 @@ ms.locfileid: "62561455"
 ```
 
 ## <a name="elements-and-attributes"></a>Elementos e atributos
- O `postActions` elemento é opcional e está no `vstav3` namespace. Há apenas um `postActions` elemento definido em um manifesto de aplicativo.
+ O `postActions` elemento é opcional e está no `vstav3` namespace. Há apenas um `postActions` elemento definido em um manifesto do aplicativo.
 
  O `postActions` elemento não tem atributos.
 
- `postActions` tem o seguinte elemento.
+ `postActions`tem o seguinte elemento.
 
-### <a name="postaction"></a>postAction
- Opcional. A função do `postAction` elemento na `vstav3` namespace está definido no [ &#60;postAction&#62; elemento &#40;desenvolvimento do Office no Visual Studio&#41;](../vsto/postaction-element-office-development-in-visual-studio.md).
+### <a name="postaction"></a>Ação
+ Opcional. A função do `postAction` elemento no `vstav3` namespace é definida no [elemento&#60;ação&#62; &#40;desenvolvimento do Office no Visual Studio&#41;](../vsto/postaction-element-office-development-in-visual-studio.md).
 
-## <a name="post-deployment-action-example"></a>Exemplo de ação de pós-implantação
+## <a name="post-deployment-action-example"></a>Exemplo de ação pós-implantação
 
 ### <a name="description"></a>Descrição
- O exemplo de código a seguir ilustra a `postActions` elemento em um manifesto de aplicativo implantada por meio de uma solução do Office [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Este exemplo de código é parte de um exemplo maior fornecido no [manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).
+ O exemplo de código a seguir ilustra o `postActions` elemento em um manifesto de aplicativo para uma solução do Office implantada usando o [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Este exemplo de código faz parte de um exemplo maior fornecido em [manifestos do aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Código
 
@@ -73,6 +73,6 @@ ms.locfileid: "62561455"
 
 ## <a name="see-also"></a>Consulte também
 
-- [Manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md)
+- [Manifestos do aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md)
 - [Manifestos de implantação para soluções do Office](../vsto/deployment-manifests-for-office-solutions.md)
 - [Manifesto do aplicativo ClickOnce](../deployment/clickonce-application-manifest.md)

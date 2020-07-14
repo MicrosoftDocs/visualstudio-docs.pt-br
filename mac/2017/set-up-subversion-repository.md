@@ -5,12 +5,13 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 0D58FB37-530E-495B-BED6-FD499477A9B6
-ms.openlocfilehash: 7133ffd01d8f384efa91d95bc8ea05aa75b7dd0d
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: ae67bdd9a9dac8daed268105d830064fa6ef4cae
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74985221"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950414"
 ---
 # <a name="set-up-a-subversion-repository"></a>Configurar um repositório do Subversion
 
@@ -56,6 +57,6 @@ Após instalar o Subversion no computador, siga as etapas a seguir para publicar
 
 8. Todos os comandos de controle de versão disponíveis agora devem estar visíveis no menu de controle de versão.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Trabalhando com o Subversion](working-with-subversion.md)

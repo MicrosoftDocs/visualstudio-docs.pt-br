@@ -5,21 +5,21 @@ ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.HTML.Miscellaneous
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b100defd8f50b4a487e46eef4183457e724a015
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8aa26144a7c0a2f7edad58ecfb26e3a7d402a994
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72666190"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770903"
 ---
 # <a name="options-text-editor-html-web-forms-miscellaneous"></a>Opções, Editor de Texto, HTML (Web Forms), Diversos
 
-Use a página de opções **Diversos** para definir as preferências de como o editor de HTML lida com elementos colados na página. Para acessar esta página, na barra de menus, escolha **Opções de** > **ferramentas**e, em seguida, expanda **o Editor de** > texto**HTML (Formulários da Web)** > **Diversos**.
+Use a página de opções **Diversos** para definir as preferências de como o editor de HTML lida com elementos colados na página. Para acessar essa página, na barra de menus, escolha **ferramentas**  >  **Opções**e expanda diversos do **Editor**  >  **de texto HTML (Web Forms)**  >  **Miscellaneous**.
 
 ## <a name="miscellaneous-html-options"></a>Opções de HTML diversas
 
@@ -29,7 +29,7 @@ Use a página de opções **Diversos** para definir as preferências de como o e
 
 - **Exigir "<" para disparar janela de conclusão de marca**
 
-   Quando essa caixa de seleção estiver marcada, a janela de conclusão de marca será exibida quando você digitar o caractere menor do que ("<").
+   Quando essa caixa de seleção é marcada, a janela de conclusão de marca é exibida quando você digita o caractere menor que ("<").
 
 ## <a name="see-also"></a>Confira também
 

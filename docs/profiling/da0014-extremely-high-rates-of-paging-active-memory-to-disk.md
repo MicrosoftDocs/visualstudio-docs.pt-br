@@ -1,7 +1,7 @@
 ---
-title: 'DA0014: taxas extremamente altas de paginação de memória ativa em disco | Microsoft Docs'
+title: DA0014-taxas extremamente altas de paginação de memória ativa para o disco | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.rules.DAMemoryBound
 - vs.performance.DA0014
@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e068771ba0fcc9b044ba7ff5243a75ceb3161e03
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ae9e1af2cd68b3d3d2ff829fca1dbcab8d7098b4
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779397"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544710"
 ---
-# <a name="da0014-extremely-high-rates-of-paging-active-memory-to-disk"></a>DA0014: taxas extremamente elevadas de paginação de memória ativa em disco
+# <a name="da0014-extremely-high-rates-of-paging-active-memory-to-disk"></a>DA0014: Taxas de paginação de memória ativa para o disco extremamente altas
 
-|||
+|Item|Valor|
 |-|-|
 |ID de regra|DA0014|
 |Categoria|Memória e paginação|
@@ -45,7 +45,7 @@ ms.locfileid: "74779397"
 > Essa regra é acionada quando os níveis de paginação de memória ativa atingem uma taxa muito alta. Quando o nível de paginação é significativo, mas não extremo, a regra informativa [DA0017: altas taxas de paginação de memória ativa em disco](../profiling/da0017-high-rates-of-paging-active-memory-to-disk.md) é acionada.
 
 ## <a name="how-to-fix-violations"></a>Como corrigir violações
- Clique duas vezes na mensagem na janela Lista de erros para navegar até a exibição [Marcas.](../profiling/marks-view.md) Encontre a coluna **Memória\Páginas/s**. Determine se há fases específicas da execução do programa em que a atividade de E/S de paginação é mais pesada do que em outras.
+ Clique duas vezes na mensagem na janela Lista de Erros para navegar até o modo de exibição de [marcas](../profiling/marks-view.md) . Encontre a coluna **Memória\Páginas/s**. Determine se há fases específicas da execução do programa em que a atividade de E/S de paginação é mais pesada do que em outras.
 
  Se estiver coletando dados de perfil para um aplicativo ASP.NET em um cenário de teste de carga, tente executar novamente o teste de carga em um computador configurado com memória física (ou RAM) adicional.
 

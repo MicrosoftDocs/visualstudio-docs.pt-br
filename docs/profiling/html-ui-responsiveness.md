@@ -2,7 +2,7 @@
 title: Analisar a capacidade de resposta de interface do usuário HTML em aplicativos UWP | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - JavaScript
 helpviewer_keywords:
@@ -17,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: a483d1382ea1f67c14aa4674016331bfe0f76e7d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 9fdc2b7fc459d655748444759913cab903dfe782
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "73189375"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331412"
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>Analisar a capacidade de resposta de interface do usuário HTML em Aplicativos Universais do Windows
 Este tópico descreve como isolar problemas de desempenho nos aplicativos usando o Criador de Perfil de Capacidade de Resposta da Interface do Usuário, uma ferramenta de desempenho disponível para Aplicativos Universais do Windows.
@@ -40,11 +40,11 @@ Este tópico descreve como isolar problemas de desempenho nos aplicativos usando
 
 1. Se você estiver executando o aplicativo no Visual Studio, na barra de ferramentas **Padrão**, na lista **Iniciar Depuração**, escolha um destino de implantação como **Máquina Local** ou **Dispositivo**.
 
-2. No menu **Debug,** escolha **'Profiler de desempenho'.**
+2. No menu **depurar** , escolha **criador de perfil de desempenho**.
 
      Se você quiser alterar o destino da análise do criador de perfil, escolha **Alterar Destino**.
 
-     ![Alvo de análise de alteração](../profiling/media/js_tools_target.png "JS_Tools_Target")
+     ![Destino da análise de alterações](../profiling/media/js_tools_target.png "JS_Tools_Target")
 
      As seguintes opções estão disponíveis para o destino de análise:
 
@@ -76,11 +76,11 @@ Este tópico descreve como isolar problemas de desempenho nos aplicativos usando
 
 1. Abra o aplicativo no Visual Studio.
 
-2. Teste seu aplicativo quanto a problemas de capacidade de resposta da interface de usuário. **(Pressione Ctrl**+**F5** para iniciar seu aplicativo sem depuração.)
+2. Teste seu aplicativo quanto a problemas de capacidade de resposta da interface de usuário. (Pressione **Ctrl** + **F5** para iniciar seu aplicativo sem depuração.)
 
      Se você encontrar um problema, continue testando para limitar o período em que ocorre o problema ou tente identificar gatilhos que provocam esse comportamento.
 
-3. Mude para o Visual Studio (pressione **Alt**+**Tab**) e pare seu aplicativo **(Shift**+**F5**).
+3. Alterne para o Visual Studio (pressione a tecla **ALT** + **Tab**) e pare seu aplicativo (**Shift** + **F5**).
 
 4. Opcionalmente, adicione marcas de usuário ao seu código usando [Marcar código para análise](#ProfileMark).
 
@@ -95,7 +95,7 @@ Este tópico descreve como isolar problemas de desempenho nos aplicativos usando
 
 8. Se você tiver adicionado marcas de usuário, elas aparecerão na opção [Exibir a linha do tempo da sessão de diagnóstico](#Ruler) do criador de perfil. A ilustração a seguir mostra uma única marca de usuário usada para especificar uma operação específica em seu código.
 
-     ![Régua de diagnóstico mostrando uma marca de usuário](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")
+     ![Regra de diagnóstico mostrando uma marca de usuário](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")
 
 9. Identifique uma área de interesse na linha de tempo e nos gráficos do criador de perfil usando marcas de usuário, eventos de ciclo de vida do aplicativo ou dados visíveis nos gráficos. Veja a seguir algumas diretrizes para ajudá-lo a analisar e usar os dados dos gráficos:
 
@@ -109,7 +109,7 @@ Este tópico descreve como isolar problemas de desempenho nos aplicativos usando
 
      A ilustração a seguir mostra o gráfico de utilização da CPU com uma área de interesse realçada.
 
-     ![Gráfico de utilização da CPU](../profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")
+     ![Grafo de utilização da CPU](../profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")
 
 11. Use a opção [Exibir detalhes da linha de tempo](#TimelineDetails) para obter informações detalhadas sobre os eventos que são realizados com muita frequência ou demorando muito tempo para terminar. Por exemplo, procure o seguinte:
 
@@ -152,7 +152,7 @@ if (performance && performance.mark) {
 
  A ilustração a seguir mostra a régua de diagnóstico com uma única marca de usuário e sua dica de ferramenta.
 
- ![Régua de diagnóstico mostrando uma marca de usuário](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")
+ ![Regra de diagnóstico mostrando uma marca de usuário](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")
 
  Você também pode criar eventos gerados por ferramenta na exibição dos detalhes da linha do tempo para ver quanto tempo se passa entre duas marcas de usuário. O código a seguir adiciona uma segunda marca de usuário e uma medida do tempo decorrido entre a execução de duas marcas de usuário (o código anterior mostra a primeira marca de usuário).
 
@@ -197,7 +197,7 @@ if (performance.mark && performance.measure) {
 
  Este exemplo mostra a aparência do gráfico da utilização da CPU:
 
- ![Gráfico de utilização da CPU](../profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")
+ ![Grafo de utilização da CPU](../profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")
 
  Use este gráfico para:
 
@@ -295,7 +295,7 @@ if (performance.mark && performance.measure) {
 ### <a name="group-events-by-frame"></a><a name="GroupFrames"></a> Agrupar eventos por quadro
  Você pode agrupar os eventos que aparecem na exibição dos detalhes da linha do tempo em quadros individuais. Tais eventos de quadros são eventos gerados por ferramenta e representam contêineres de evento de nível superior, para todo o trabalho de thread da interface do usuário que ocorre entre os eventos de pintura. Para habilitar esta exibição, selecione **Agrupar eventos de nível superior por quadro**.
 
- ![Eventos de nível superior do grupo por quadro](../profiling/media/js_htmlvizprofiler_frame_grouping_button.png "JS_HTMLVizProfiler_Frame_Grouping_Button")
+ ![Agrupar eventos de nível superior por quadro](../profiling/media/js_htmlvizprofiler_frame_grouping_button.png "JS_HTMLVizProfiler_Frame_Grouping_Button")
 
  Ao agrupar os eventos por quadro, cada um dos eventos de nível superior na exibição de detalhes da linha do tempo representa um quadro.
 
@@ -307,15 +307,15 @@ if (performance.mark && performance.measure) {
 ## <a name="profiler-event-reference"></a>Referência de evento do criador de perfil
  Os eventos do Criador de Perfis são categorizados e codificados por cor no Criador de Perfis de Capacidade de Resposta de Interface de Usuário. Essas são as categorias de evento:
 
-- **Carregar.** Indica o tempo gasto para recuperar recursos do aplicativo e analisar HTML e CSS quando o aplicativo é carregado pela primeira vez. Isso pode incluir solicitações de rede.
+- **Carregado.** Indica o tempo gasto para recuperar recursos do aplicativo e analisar HTML e CSS quando o aplicativo é carregado pela primeira vez. Isso pode incluir solicitações de rede.
 
 - **Script.** Indica a análise de tempo gasto e o JavaScript em execução. Isso inclui eventos DOM, temporizadores, avaliação de script e trabalho de quadro de animação. Inclui o código do usuário e o código da biblioteca.
 
-- **Gc.** Indica o tempo gasto na coleta de lixo.
+- **GCS.** Indica o tempo gasto na coleta de lixo.
 
-- **Estilização.** Indica o tempo gasto analisando o CSS e calculando a apresentação e o layout do elemento.
+- **Estiliza.** Indica o tempo gasto analisando o CSS e calculando a apresentação e o layout do elemento.
 
-- **Renderização.** Indica o tempo gasto na pintura da tela.
+- **Tratamento.** Indica o tempo gasto na pintura da tela.
 
 - **Decodificação de imagem.** Indica o tempo gasto com a descompactação e a decodificação de imagens.
 
@@ -331,22 +331,22 @@ if (performance.mark && performance.measure) {
 |Análise de HTML|Carregando|Um novo conteúdo HTML foi encontrado e foi feita uma tentativa de analisa-lo em nós e de inseri-lo na árvore DOM.|
 |Solicitação HTTP|Carregando|Um recurso remoto foi encontrado no DOM, ou uma XMLHttpRequest foi criada resultando em uma solicitação HTTP.|
 |Download especulativo|Carregando|O conteúdo HTML da página foi pesquisado para obter os recursos necessários de modo que as solicitações HTTP subsequentes para os recursos pudessem ser agendadas rapidamente.|
-|Função de retorno de chamada do quadro de animação|Scripting|O navegador estava prestes a renderizar outro quadro e isso disparou uma função de retorno de chamada fornecida pelo aplicativo.|
-|Evento DOM|Scripting|Um evento DOM ocorreu e foi executado.<br /><br /> A propriedade `context` para o evento DOM, como `DOMContentLoaded` ou `click` é mostrada entre parênteses.|
-|Ouvinte de eventos|Scripting|Um ouvinte de evento foi chamado e executado.|
-|Ouvinte de consulta de mídia|Scripting|Uma consulta de mídia registrada foi invalidada, resultando na execução dos seus ouvintes associados.|
-|Observador de mutação|Scripting|Um ou mais elementos DOM observados foram modificados, resultando na execução de um retorno de chamada associado do MutationObserver.|
-|Avaliação de script|Scripting|Um novo elemento SCRIPT foi encontrado no DOM e foi feita uma tentativa de analisar e executar o script.|
-|Timer|Scripting|Um temporizador agendado teve o tempo decorrido, e isso resultou na execução de sua função associada de retorno de chamada.|
-|Função de retorno de chamada assíncrona do Windows Runtime|Scripting|Uma operação assíncrona que disparou uma função de retorno de chamada `Promise` foi concluída por um objeto do Windows Runtime.|
-|Evento do Windows Runtime|Scripting|Um evento ocorrido em um objeto do Windows Runtime disparou um ouvinte registrado.|
+|Função de retorno de chamada do quadro de animação|Script|O navegador estava prestes a renderizar outro quadro e isso disparou uma função de retorno de chamada fornecida pelo aplicativo.|
+|Evento DOM|Script|Um evento DOM ocorreu e foi executado.<br /><br /> A propriedade `context` para o evento DOM, como `DOMContentLoaded` ou `click` é mostrada entre parênteses.|
+|Ouvinte de eventos|Script|Um ouvinte de evento foi chamado e executado.|
+|Ouvinte de consulta de mídia|Script|Uma consulta de mídia registrada foi invalidada, resultando na execução dos seus ouvintes associados.|
+|Observador de mutação|Script|Um ou mais elementos DOM observados foram modificados, resultando na execução de um retorno de chamada associado do MutationObserver.|
+|Avaliação de script|Script|Um novo elemento SCRIPT foi encontrado no DOM e foi feita uma tentativa de analisar e executar o script.|
+|Timer|Script|Um temporizador agendado teve o tempo decorrido, e isso resultou na execução de sua função associada de retorno de chamada.|
+|Função de retorno de chamada assíncrona do Windows Runtime|Script|Uma operação assíncrona que disparou uma função de retorno de chamada `Promise` foi concluída por um objeto do Windows Runtime.|
+|Evento do Windows Runtime|Script|Um evento ocorrido em um objeto do Windows Runtime disparou um ouvinte registrado.|
 |Coleta de lixo|GC|O tempo foi gasto na coleta de memória para objetos que não estão mais em uso.|
 |Cálculo CSS|Estilo|Foram feitas alterações no DOM que exigiram que as propriedades de estilo de todos os elementos afetados fossem recalculadas.|
 |Layout|Estilo|Foram feitas alterações no DOM que exigiram que o tamanho e/ou a posição de todos os elementos afetados fossem recalculados.|
 |Pintura|Renderização|Foram feitas alterações visuais no DOM além de uma tentativa de renderizar novamente partes da página.|
 |Renderizar camada|Renderização|Foram feitas alterações visuais em um fragmento do DOM (chamado de camada) renderizado independentemente, e as alterações exigiram que uma parte da página fosse renderizada.|
 |Decodificação de imagem|Decodificação de Imagem|Foi incluída uma imagem no DOM e foi feita uma tentativa de descompactar decodificar a imagem do seu formato original para bitmap.|
-|Frame|N/D|Foram feitas alterações visuais no DOM, o que exigiu que todas as partes afetadas da página fossem redesenhadas. Este é um evento gerado por ferramenta usado para agrupamento.|
+|Quadro|N/D|Foram feitas alterações visuais no DOM, o que exigiu que todas as partes afetadas da página fossem redesenhadas. Este é um evento gerado por ferramenta usado para agrupamento.|
 |Medida do usuário|N/D|Um cenário específico do aplicativo foi medido usando o método `performance.measure`. Este é um evento gerado por ferramenta usado para analisar códigos.|
 
 ## <a name="additional-information"></a>Informações adicionais
@@ -357,5 +357,5 @@ if (performance.mark && performance.measure) {
 
 - Para obter informações sobre o modelo e desempenho de execução de código de thread único, consulte [Executando código](/previous-versions/windows/apps/hh781217\(v\=win.10\)).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Introdução às ferramentas de criação de perfil](../profiling/profiling-feature-tour.md)

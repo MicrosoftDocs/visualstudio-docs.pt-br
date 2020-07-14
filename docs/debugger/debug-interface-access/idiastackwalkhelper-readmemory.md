@@ -1,7 +1,7 @@
 ---
 title: IDiaStackWalkHelper::readMemory | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 57afd033b2d969a4ed57dc713b2c4266e0ead632
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: bc768db3f42f610a8efd30cea567e721929cb291
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741357"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464691"
 ---
 # <a name="idiastackwalkhelperreadmemory"></a>IDiaStackWalkHelper::readMemory
 Lê um bloco de dados da imagem do executável na memória.
@@ -49,15 +49,15 @@ no O tamanho do buffer de dados em bytes.
 
  `pcbData`
 
-fora Retorna o número de bytes realmente lidos. Se `pbData` for `NULL`, esse será o número total de bytes de dados disponíveis.
+fora Retorna o número de bytes realmente lidos. Se `pbData` for `NULL` , este é o número total de bytes de dados disponíveis.
 
  `pbData`
 
 [entrada, saída] Um buffer que é preenchido com a leitura de memória.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
 - [Enumeração MemoryTypeEnum](../../debugger/debug-interface-access/memorytypeenum.md)

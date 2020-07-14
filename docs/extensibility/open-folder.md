@@ -1,49 +1,49 @@
 ---
-title: Visão geral da extensibilidade do Visual Studio abrir pasta | Microsoft Docs
+title: Visão geral da extensibilidade de pastas abertas do Visual Studio | Microsoft Docs
 ms.date: 02/21/2018
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: 94c3f8bf-1de3-40ea-aded-7f40c4b314c7
 author: vukelich
 ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2bb74703f639848d643f536edf620e30b1836310
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d213a7add358c46f7088f504d8c54352cda44a1c
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62806427"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905977"
 ---
-# <a name="open-folder-extensibility"></a>Extensibilidade de pasta aberta
+# <a name="open-folder-extensibility"></a>Abrir extensibilidade de pasta
 
-O [Abrir pasta](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) recurso permite aos usuários abrir qualquer base de código no Visual Studio sem a necessidade de arquivos de projeto ou solução. Abrir pasta fornece que os recursos que os usuários esperam do Visual Studio como:
+O recurso [abrir pasta](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) permite que os usuários abram qualquer base de código no Visual Studio sem a necessidade de arquivos de projeto ou solução. Abrir pasta fornece os recursos que os usuários esperam do Visual Studio, como:
 
-* Pesquisa e integração do Gerenciador de soluções
-* Colorização de editor
+* Integração e pesquisa de Gerenciador de Soluções
+* Colorização do editor
 * Ir para navegação
-* Localizar em arquivos de pesquisa
+* Localizar na pesquisa de arquivos
 
-Quando usado com cargas de trabalho como para desenvolvimento .NET e C++, os usuários também obtém:
+Quando usado com cargas de trabalho, como para desenvolvimento em .NET e C++, os usuários também recebem:
 
-* Rich Intellisense
-* Funcionalidade específica ao idioma
+* IntelliSense avançado
+* Funcionalidade específica a um idioma
 
-Com Abrir pasta, os autores de extensão podem criar recursos avançados para qualquer idioma. Existem APIs para dar suporte à construção, depuração e a pesquisa de símbolo para qualquer arquivo em um usuário da Base de código. Extensores atuais podem atualizar seus recursos existentes do Visual Studio para entender o código sem o apoio de projetos ou uma solução.
+Com a pasta aberta, os autores de extensão podem criar recursos avançados para qualquer linguagem. Há APIs para dar suporte à criação, depuração e pesquisa de símbolo para qualquer arquivo na base de código de um usuário. Os extensores atuais podem atualizar seus recursos existentes do Visual Studio para entender o código sem o backup de projetos ou uma solução.
 
 ## <a name="an-api-without-project-systems"></a>Uma API sem sistemas de projeto
 
-Historicamente, o Visual Studio compreendido apenas arquivos em uma solução e seus projetos usando sistemas de projeto. Um sistema de projeto é responsável pelas interações do usuário e a funcionalidade de um projeto carregado. Ele compreende contém quais arquivos seu projeto, a representação visual do conteúdo do projeto, as dependências em outros projetos, e o arquivo de projeto de modificação de subjacente. É por meio dessas hierarquias e os recursos que outros componentes funcionam em nome do usuário. Nem todas as bases de código também são representados em uma estrutura de projeto e solução. Linguagens de script e código-fonte aberto escrito em C++ para Linux são bons exemplos. Com Abrir pasta, o Visual Studio fornece aos usuários uma nova maneira de interagir com seu código-fonte.
+Historicamente, o Visual Studio entendeu apenas os arquivos em uma solução e seus projetos usando sistemas de projetos. Um sistema de projeto é responsável pela funcionalidade e pelas interações de usuário de um projeto carregado. Ele compreende os arquivos que seu projeto contém, a representação visual do conteúdo do projeto, as dependências de outros projetos e a modificação do arquivo de projeto subjacente. É por meio dessas hierarquias e recursos que outros componentes funcionam em nome do usuário. Nem todas as bases de código são bem representadas em uma estrutura de projeto e solução. As linguagens de script e o código-fonte aberto escritos em C++ para Linux são bons exemplos. Com o Open Folder, o Visual Studio oferece aos usuários uma nova maneira de interagir com seu código-fonte.
 
-As APIs de pasta aberta estão sob o `Microsoft.VisualStudio.Workspace.*` namespace e estão disponíveis para os extensores produzir e consumir dados ou ações em torno de arquivos na pasta aberta. Extensões podem usar essas APIs para fornecer funcionalidade para muitas áreas, incluindo:
+As APIs de pasta aberta estão sob o `Microsoft.VisualStudio.Workspace.*` namespace e estão disponíveis para extensores produzirem e consumirem dados ou ações em torno de arquivos na pasta aberta. As extensões podem usar essas APIs para fornecer funcionalidade para muitas áreas, incluindo:
 
-- [Espaços de trabalho](workspaces.md) : A partir de extensibilidade do ponto de abrir pasta é o espaço de trabalho e suas APIs.
-- [Ações e os contextos de arquivo](workspace-file-contexts.md) -intelligence específicas do código fornecido por meio de contextos de arquivo do arquivo.
-- [Indexação](workspace-indexing.md) - coletar e manter os dados sobre espaços de trabalho de abrir pasta.
-- [Serviços de linguagem](workspace-language-services.md) -integrar serviços de linguagem em espaços de trabalho de abrir pasta.
-- [Compilar](workspace-build.md) -suporte para espaços de trabalho de abrir pasta de compilação.
+- [Espaços de trabalho](workspaces.md) -o ponto inicial da extensibilidade de pasta aberta é o espaço de trabalho e suas APIs.
+- [Contextos e ações de arquivo](workspace-file-contexts.md) – inteligência de código específica de arquivo fornecida por meio de contextos de arquivo.
+- [Indexação](workspace-indexing.md) – coletar e persistir dados sobre espaços de trabalho de pastas abertas.
+- [Serviços de linguagem](workspace-language-services.md) – integre serviços de idiomas em espaços de trabalho de pasta aberta.
+- [Compilação](workspace-build.md) -suporte de compilação para espaços de trabalho de pasta aberta.
 
-Serão necessário adotar novas APIs para dar suporte a abrir pasta recursos que usam os seguintes tipos:
+Os recursos que usam os seguintes tipos precisarão adotar novas APIs para dar suporte à pasta aberta:
 
 - `IVsHierarchy`
 - `IVsProject`
@@ -51,8 +51,8 @@ Serão necessário adotar novas APIs para dar suporte a abrir pasta recursos que
 
 ## <a name="feedback-comments-issues"></a>Comentários, comentários, problemas
 
-Abra a pasta e o `Microsoft.VisualStudio.Workspace.*` APIs estão em desenvolvimento ativo. Se você vir um comportamento inesperado, em seguida, consulte os problemas conhecidos para a versão de seu interesse. [Comunidade de desenvolvedores](https://developercommunity.visualstudio.com) é o local recomendado para votar e crie quaisquer problemas. Para cada comentário, é altamente recomendável obter uma descrição detalhada do problema. Inclua a versão do Visual Studio que você está desenvolvendo para, as APIs que você está usando (o que você já implementou e o que você está interagindo com), o resultado esperado e o resultado real. Se possível, inclua um despejo do processo devenv.exe. Use o problema do GitHub de controle para fornecer comentários sobre isso e documentação relacionada.
+Abra a pasta e as `Microsoft.VisualStudio.Workspace.*` APIs estão em desenvolvimento ativo. Se você vir um comportamento inesperado, consulte os problemas conhecidos para o lançamento de interesse. A [comunidade de desenvolvedores](https://developercommunity.visualstudio.com) é o lugar recomendado para votar e criar problemas. Para cada comentário, é altamente recomendável uma descrição detalhada do seu problema. Inclua a versão do Visual Studio para a qual você está desenvolvendo, as APIs que você está usando (tanto o que você implementou e o que está interagindo), o resultado esperado e o resultado real. Se possível, inclua um despejo do processo de devenv.exe. Use o rastreamento de problemas do GitHub para fornecer comentários sobre este e sobre a documentação relacionada.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-* [Espaços de trabalho](workspaces.md) -Saiba mais sobre o espaço de trabalho de abrir pasta API.
+* [Espaços de trabalho](workspaces.md) -saiba mais sobre a API de espaço de trabalho de pasta aberta.

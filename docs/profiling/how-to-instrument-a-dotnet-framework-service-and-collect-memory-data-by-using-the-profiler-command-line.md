@@ -1,7 +1,7 @@
 ---
-title: 'Linha de comando Profiler: Serviço Instrument .NET, obtenha dados de memória'
+title: Linha de comando do profiler – serviço .NET do instrumento, obter dados de memória
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 2fa072fc-05fe-4420-99c0-51d2ea3ac4ce
 author: mikejo5000
 ms.author: mikejo
@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8697f1451e3d528ff27beb2467ff7758e04267cc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 042f01bcc53f12c240276374bdce5fb965c67be4
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74775477"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330125"
 ---
 # <a name="how-to-instrument-a-net-framework-service-and-collect-memory-data-by-using-the-profiler-command-line"></a>Como instrumentar um serviço do .NET Framework e coletar dados de memória usando a linha de comando do criador de perfil
 Este artigo descreve como usar as ferramentas de linha de comando das Ferramentas de Criação de Perfil do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para instrumentar um serviço .NET Framework e coletar dados de uso de memória. É possível coletar dados de alocação de memória ou coletar dados de alocação de memória e dados de tempo de vida do objeto.
@@ -61,11 +61,11 @@ Este artigo descreve como usar as ferramentas de linha de comando das Ferramenta
 
 7. Inicie o criador de perfil. Tipo:
 
-    **VSPerfCmd**  [/start](../profiling/start.md) **:trace**  [/output](../profiling/output.md) **:** `OutputFile` [`Options`]
+    **VSPerfCmd**  [/Start](../profiling/start.md) **: Trace**  [/output](../profiling/output.md) **:** `OutputFile` [ `Options` ]
 
    - A opção **/start: contention** inicializa o criador de perfil.
 
-   - A **/saída:** `OutputFile` opção é necessária com **/start**. `OutputFile` especifica o nome e o local do arquivo de dados de criação de perfil (.vsp).
+   - A opção **/output:** `OutputFile` é necessária com **/Start**. `OutputFile` especifica o nome e o local do arquivo de dados de criação de perfil (.vsp).
 
      É possível usar qualquer uma das opções a seguir com a opção **/start:sample**.
 
@@ -74,14 +74,14 @@ Este artigo descreve como usar as ferramentas de linha de comando das Ferramenta
 
    | Opção | Descrição |
    | - | - |
-   | [/usuário:](../profiling/user-vsperfcmd.md) **:**`Domain`**\\**[ ]`UserName` | Especifica o domínio e o nome de usuário da conta proprietária do processo de trabalho ASP.NET analisado. Esta opção será necessária se o processo estiver sendo executado como um usuário diferente do usuário conectado. O proprietário do processo é listado na coluna Nome de Usuário na guia Processos do Gerenciador de Tarefas do Windows. |
-   | [/sessão cruzada](../profiling/crosssession.md) | Habilita a criação de perfil de processos em outras sessões de logon. Esta opção será necessária se o aplicativo ASP.NET estiver em execução em uma sessão diferente. O id da sessão está listado na coluna **ID** de sessão na guia **Processos** do Gerenciador de Tarefas do Windows. **/CS** pode ser especificado como uma abreviação de **/crosssession**. |
-   | [/waitstart](../profiling/waitstart.md)[**:**`Interval`] | Especifica o número de segundos para aguardar o criador de perfil inicializar antes de retornar um erro. Se `Interval` não for especificado, o criador de perfil aguardará indefinidamente. Por padrão, **/start** retorna imediatamente. |
+   | [/User](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName` | Especifica o domínio e o nome de usuário da conta proprietária do processo de trabalho ASP.NET analisado. Esta opção será necessária se o processo estiver sendo executado como um usuário diferente do usuário conectado. O proprietário do processo é listado na coluna Nome de Usuário na guia Processos do Gerenciador de Tarefas do Windows. |
+   | [/CrossSession](../profiling/crosssession.md) | Habilita a criação de perfil de processos em outras sessões de logon. Esta opção será necessária se o aplicativo ASP.NET estiver em execução em uma sessão diferente. A ID da sessão é listada na coluna **ID da sessão** na guia **processos** do Gerenciador de tarefas do Windows. **/CS** pode ser especificado como uma abreviação de **/crosssession**. |
+   | [/WaitStart](../profiling/waitstart.md)[**:** `Interval` ] | Especifica o número de segundos para aguardar o criador de perfil inicializar antes de retornar um erro. Se `Interval` não for especificado, o criador de perfil aguardará indefinidamente. Por padrão, **/start** retorna imediatamente. |
    | [/globaloff](../profiling/globalon-and-globaloff.md) | Para iniciar o criador de perfil com a coleta de dados em pausa, adicione a opção **/globaloff** na linha de comando **/start**. Use **/globalon** para retomar a criação de perfil. |
-   | [/contador:](../profiling/counter.md) **:**`Config` | Coleta informações do contador de desempenho do processador especificado em Config. As informações de contador são adicionadas aos dados coletados em cada evento de criação de perfil. |
-   | [/wincounter:](../profiling/wincounter.md) **:**`WinCounterPath` | Especifica um contador de desempenho do Windows que deve ser coletado durante a criação de perfil. |
-   | [/marca automática:](../profiling/automark.md) **:**`Interval` | Use somente com **/wincounter**. Especifica o número de milissegundos entre eventos de coleta do contador de desempenho do Windows. O padrão é 500 ms. |
-   | [/eventos:](../profiling/events-vsperfcmd.md) **:**`Config` | Especifica um evento de ETW (Rastreamento de Eventos para Windows) a ser coletado durante a criação de perfil. Os eventos ETW são coletados separadamente (.* etl*) arquivo. |
+   | [/Counter](../profiling/counter.md) **:**`Config` | Coleta informações do contador de desempenho do processador especificado em configuração. As informações do contador são adicionadas aos dados coletados em cada evento de criação de perfil. |
+   | [/WinCounter](../profiling/wincounter.md) **:**`WinCounterPath` | Especifica um contador de desempenho do Windows que deve ser coletado durante a criação de perfil. |
+   | [/AutoMark](../profiling/automark.md) **:**`Interval` | Use somente com **/wincounter**. Especifica o número de milissegundos entre eventos de coleta do contador de desempenho do Windows. O padrão é 500 ms. |
+   | [/Events](../profiling/events-vsperfcmd.md) **:**`Config` | Especifica um evento de ETW (Rastreamento de Eventos para Windows) a ser coletado durante a criação de perfil. Os eventos ETW são coletados em um separado (.* ETL*). |
 
 8. Se necessário, inicie o serviço.
 
@@ -96,13 +96,13 @@ Este artigo descreve como usar as ferramentas de linha de comando das Ferramenta
 
 #### <a name="to-start-and-stop-data-collection"></a>Para iniciar e interromper a coleta de dados
 
-- Os seguintes pares de opções **VSPerfCmd** iniciam e param a coleta de dados. Especifique cada opção em uma linha de comando separada. É possível ativar e desativar a coleta de dados várias vezes.
+- Os pares de opções **VSPerfCmd** a seguir iniciam e param a coleta de dados. Especifique cada opção em uma linha de comando separada. É possível ativar e desativar a coleta de dados várias vezes.
 
     |Opção|Descrição|
     |------------|-----------------|
-    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|Inicia (**/globalon**) ou interrompe (**/globaloff**) a coleta de dados para todos os processos.|
-    |[/processon:](../profiling/processon-and-processoff.md) **:** `PID` [/processoff:](../profiling/processon-and-processoff.md) **:**`PID`|Inicia (**/processon**) ou interrompe (**/processoff**) a coleta de dados para o processo especificado pela ID de processo (`PID`).|
-    |[/threadon:](../profiling/threadon-and-threadoff.md) **:** `TID` [/threadoff:](../profiling/threadon-and-threadoff.md) **:**`TID`|Inicia (**/threadon**) ou interrompe (**/threadoff**) a coleta de dados para o thread especificado pela ID do thread (`TID`).|
+    |[/GLOBALON/GLOBALOFF](../profiling/globalon-and-globaloff.md)|Inicia (**/globalon**) ou interrompe (**/globaloff**) a coleta de dados para todos os processos.|
+    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [/ProcessOff](../profiling/processon-and-processoff.md) **:**`PID`|Inicia (**/processon**) ou interrompe (**/processoff**) a coleta de dados para o processo especificado pela ID de processo (`PID`).|
+    |[/ThreadOn](../profiling/threadon-and-threadoff.md) **:** `TID` [/ThreadOff](../profiling/threadon-and-threadoff.md) **:**`TID`|Inicia (**/threadon**) ou interrompe (**/threadoff**) a coleta de dados para o thread especificado pela ID do thread (`TID`).|
 
 ## <a name="end-the-profiling-session"></a>Encerrar a sessão de criação de perfil
  Para encerrar uma sessão de criação de perfil, feche o aplicativo que está executando o componente instrumentado e, em seguida, inicie a opção **VSPerfCmd** [/shutdown](../profiling/shutdown.md) para desligar o criador de perfil e fechar o arquivo de dados de criação de perfil. O comando **VSPerfClrEnv /globaloff** limpa as variáveis de ambiente da criação de perfil.
@@ -123,6 +123,6 @@ Este artigo descreve como usar as ferramentas de linha de comando das Ferramenta
 
 4. Reinicie o computador.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Profile services (Serviços de perfil)](../profiling/command-line-profiling-of-services.md)
-- [Exibições de dados de memória .NET](../profiling/dotnet-memory-data-views.md)
+- [Exibições de dados de memória do .NET](../profiling/dotnet-memory-data-views.md)

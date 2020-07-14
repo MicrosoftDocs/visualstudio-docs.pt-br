@@ -1,18 +1,18 @@
 ---
 title: Criar modelos de item
 ms.date: 01/02/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - item templates [Visual Studio], creating
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 62004c5c96fa708f98ab49f4810ec2fc1c38eadc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0a0d4122d36c0946b6c1c98ef0f1523ce35751a6
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594715"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284471"
 ---
 # <a name="how-to-create-item-templates"></a>Como criar modelos de item
 
@@ -36,13 +36,13 @@ Este artigo mostra como criar um modelo de item usando o **Assistente de Exporta
 
 1. Na página **Selecionar Opções do Modelo**, insira o nome do modelo e a descrição opcional, um ícone e uma imagem de exibição e, em seguida, escolha **Concluir**.
 
-    Os arquivos do modelo são adicionados a um arquivo *.zip* e copiados no diretório que você especificou na caixa de diálogo. O local padrão é *%USERPROFILE%\Documents\Visual Studio \<versão\>\My Exported Templates*.
+    Os arquivos do modelo são adicionados a um arquivo *.zip* e copiados no diretório que você especificou na caixa de diálogo. O local padrão é o *%USERPROFILE%\Documents\Visual Studio \<version\> \Meus modelos exportados*.
 
-1. Se você não tiver selecionado a opção **Importar automaticamente o modelo no Visual Studio** no **Assistente de Exportação de Modelo**, localize o modelo exportado. Em seguida, copie-o para o diretório de modelo de item do usuário. O local padrão é *%USERPROFILE%\Documents\Visual Studio \<versão\>\Templates\ItemTemplates*.
+1. Se você não tiver selecionado a opção **Importar automaticamente o modelo no Visual Studio** no **Assistente de Exportação de Modelo**, localize o modelo exportado. Em seguida, copie-o para o diretório de modelo de item do usuário. O local padrão é o *%USERPROFILE%\Documents\Visual Studio \<version\> \Templates\ItemTemplates*.
 
 1. Feche o Visual Studio e, em seguida, o reabra.
 
-1. Crie um novo projeto ou abra um projeto existente e escolha **'Adicionar** > **novo item'** ou **pressione O**+**turno**+**A**.
+1. Crie um novo projeto ou abra um projeto existente e, em seguida, escolha **projeto**  >  **Adicionar novo item** ou pressione **Ctrl** + **Shift** + **a**.
 
    O modelo de item aparece na caixa de diálogo **Adicionar Novo Item**. Se você adicionou uma descrição no **Assistente para Exportar Modelo**, a descrição será exibida no lado direito da caixa de diálogo.
 
@@ -119,7 +119,7 @@ Em alguns casos, convém criar um modelo de item manualmente, desde o início.
 
 6. Salve o arquivo *.vstemplate* e feche-o.
 
-7. No **Windows Explorer**, selecione os arquivos que você deseja incluir no modelo. Clique com o botão direito do mouse na seleção e escolha **Enviar para a** > **pasta Compactada (com zíper).** Os arquivos selecionados são compactados em um arquivo *.zip.*
+7. No **Windows Explorer**, selecione os arquivos que você deseja incluir no modelo. Clique com o botão direito do mouse na seleção e escolha **Enviar para**  >  **pasta compactada (zipada)**. Os arquivos que você selecionou são compactados em um arquivo *. zip* .
 
 ::: moniker range="vs-2017"
 
@@ -133,8 +133,8 @@ Em alguns casos, convém criar um modelo de item manualmente, desde o início.
 
 ::: moniker-end
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Criar modelos de projeto e itens](../ide/creating-project-and-item-templates.md)
+- [Criar modelos de projeto e de item](../ide/creating-project-and-item-templates.md)
 - [Como criar modelos de item multiarquivos](../ide/how-to-create-multi-file-item-templates.md)
 - [Referência de esquema de modelo do Visual Studio (extensibilidade)](../extensibility/visual-studio-template-schema-reference.md)

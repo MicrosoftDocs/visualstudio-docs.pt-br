@@ -1,7 +1,7 @@
 ---
 title: IDiaSectionContrib::get_code16bit | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94fcc9ae93a515890025bb74a810733f213c869a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5cf76f2c335af44a3dc1b0ebdd388ae1a26c462c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742743"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466353"
 ---
 # <a name="idiasectioncontribget_code16bit"></a>IDiaSectionContrib::get_code16bit
 Recupera um sinalizador que indica se a seção contém código de 16 bits.
@@ -33,13 +33,13 @@ HRESULT get_code16bit(
 #### <a name="parameters"></a>Parâmetros
  `pRetVal`
 
-fora Retorna `TRUE` se o código na seção for de 16 bits; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se o código na seção for de 16 bits; caso contrário, retornará `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
  Esse método indica apenas se o código é de 16 bits. Se o código não for de 16 bits, poderia ser qualquer outra coisa, como o código de 32 bits ou de 64 bits.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

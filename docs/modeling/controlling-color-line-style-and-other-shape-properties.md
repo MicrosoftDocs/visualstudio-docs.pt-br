@@ -1,18 +1,18 @@
 ---
 title: Controlando cor, estilo de linha e outras propriedades de formas
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+ms.topic: how-to
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bcc7e3a80650edff411506b9e651885b3852383
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: eee36ad0361f40f23c29c5672b155fc5e5405dbe
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654153"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546673"
 ---
 # <a name="controlling-color-line-style-and-other-shape-properties"></a>Controlando cor, estilo de linha e outras propriedades de formas
 

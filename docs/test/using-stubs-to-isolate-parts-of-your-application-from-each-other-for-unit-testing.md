@@ -1,7 +1,7 @@
 ---
 title: Usar stubs para isolar partes do aplicativo para testes
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: mikejo
 manager: jillfra
 ms.workload:
@@ -10,12 +10,12 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 328551a78464c7b682eea6a988c20e742f2797c9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1d66dcd0a59edfbfb199a68f81ecebe608afccb1
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75568542"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289047"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>Use stubs para isolar partes de seu aplicativo umas das outras para teste de unidade
 
@@ -35,7 +35,7 @@ Como os stubs dependem de sua capacidade de estruturar seu código dessa forma, 
 
 ### <a name="design-for-dependency-injection"></a>Design para injeção de dependência
 
-Para usar stubs, seu aplicativo precisa ser criado de forma que os diferentes componentes não sejam dependentes um do outro, mas apenas dependentes das definições de interface. Em vez de ser acoplados no tempo de compilação, os componentes são conectados no tempo de execução. Esse padrão ajuda a criar um software robusto e fácil de atualizar, pois as alterações tendem a não ser propagadas além dos limites dos componentes. Recomendamos segui-lo mesmo que você não use stubs. Se você está escrevendo um novo código, é fácil seguir o padrão [de injeção de dependência.](https://en.wikipedia.org/wiki/Dependency_injection) Se você está escrevendo testes para um software existente, talvez seja necessário refatorá-lo. Caso isso seja impraticável, você pode considerar o uso de shims.
+Para usar stubs, seu aplicativo precisa ser criado de forma que os diferentes componentes não sejam dependentes um do outro, mas apenas dependentes das definições de interface. Em vez de ser acoplados no tempo de compilação, os componentes são conectados no tempo de execução. Esse padrão ajuda a criar um software robusto e fácil de atualizar, pois as alterações tendem a não ser propagadas além dos limites dos componentes. Recomendamos segui-lo mesmo que você não use stubs. Se você estiver escrevendo um novo código, será fácil seguir o padrão de [injeção de dependência](https://en.wikipedia.org/wiki/Dependency_injection) . Se você está escrevendo testes para um software existente, talvez seja necessário refatorá-lo. Caso isso seja impraticável, você pode considerar o uso de shims.
 
 Vamos começar esta discussão com um exemplo motivador, que se encontra no diagrama. A classe StockAnalyzer lê preços de ações e gera alguns resultados interessantes. Ela tem alguns métodos públicos, que queremos testar. Para simplificar as coisas, vamos conferir apenas um desses métodos, um muito simples que relata o preço atual de uma ação específica. Queremos escrever um teste de unidade desse método. Este é o primeiro rascunho de um teste:
 
@@ -147,7 +147,7 @@ Para usar stubs, você deve primeiro gerar tipos de stub a partir das definiçõ
 
 #### <a name="add-a-fakes-assembly"></a>Adicionar um Assembly do Fakes
 
-1. No **Solution Explorer,** expanda as **referências**do projeto de teste da unidade.
+1. Em **Gerenciador de soluções**, expanda as **referências**do seu projeto de teste de unidade.
 
    Caso esteja trabalhando no Visual Basic, selecione **Mostrar Todos os Arquivos** na barra de ferramentas do **Gerenciador de Soluções** para ver o nó **Referências**.
 
@@ -218,7 +218,7 @@ Os stubs também são gerados para getters e setters de propriedades, para event
 
 ### <a name="verify-parameter-values"></a>Verificar valores de parâmetros
 
-Você pode verificar que, quando seu componente chama outro componente, ele passa os valores corretos. Você pode colocar uma asserção no stub ou armazenar o valor e verificá-lo no corpo principal do teste. Por exemplo: 
+Você pode verificar que, quando seu componente chama outro componente, ele passa os valores corretos. Você pode colocar uma asserção no stub ou armazenar o valor e verificá-lo no corpo principal do teste. Por exemplo:
 
 ```csharp
 [TestClass]
@@ -390,7 +390,7 @@ Se o código fosse chamar `GetValue<T>` com qualquer outra instanciação, o stu
 
 ### <a name="stubs-of-virtual-classes"></a>Stubs de classes virtuais
 
-Nos exemplos anteriores, os stubs foram gerados a partir de interfaces. Você também pode gerar stubs a partir de uma classe que tenha membros virtuais ou abstratos. Por exemplo: 
+Nos exemplos anteriores, os stubs foram gerados a partir de interfaces. Você também pode gerar stubs a partir de uma classe que tenha membros virtuais ou abstratos. Por exemplo:
 
 ```csharp
 // Base class in application under test
@@ -458,6 +458,6 @@ O comportamento também pode ser modificado globalmente para todos os objetos st
 StubBehaviors.Current = BehavedBehaviors.DefaultValue;
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Isolar o código em teste com elementos fictícios da Microsoft](../test/isolating-code-under-test-with-microsoft-fakes.md)

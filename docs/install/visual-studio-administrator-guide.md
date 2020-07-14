@@ -4,7 +4,7 @@ titleSuffix: ''
 description: Saiba mais sobre como implantar o Visual Studio em um ambiente corporativo.
 ms.date: 03/09/2020
 ms.custom: seodec18
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords:
 - network installation, Visual Studio
 - administrator guide, Visual Studio
@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: bda9a73a7a1aabb2d288653ff4d7b20b1c40db8c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 70eb53c2e2a1625f167844d1e774915fdb1304ac
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79190281"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419257"
 ---
 # <a name="visual-studio-administrator-guide"></a>Guia do administrador do Visual Studio
 
@@ -40,7 +40,7 @@ Antes de implantar o Visual Studio em sua organização, há algumas decisões a
 
 * Decida sobre suas necessidades de manutenção.
 
-  Se sua empresa precisa ficar em um conjunto de recursos por mais tempo, mas ainda deseja atualizações de manutenção regulares, você deve planejar usar uma linha de base de manutenção. Para obter mais informações, consulte as ***opções de suporte para clientes Corporativos e Profissionais*** da página de vida e manutenção do [produto Visual Studio,](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers) bem como o [How to: Update Visual Studio durante uma](update-servicing-baseline.md) página de base de manutenção.
+  Se sua empresa precisa ficar em um conjunto de recursos por mais tempo, mas ainda deseja atualizações de manutenção regulares, você deve planejar usar uma linha de base de manutenção. Para obter mais informações, consulte a seção ***Opções de suporte para clientes corporativos e profissionais*** da página de [ciclo de vida do produto e manutenção do Visual Studio](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers) , além de como [: atualizar o Visual Studio enquanto estiver em uma](update-servicing-baseline.md) página de linha de base de manutenção.
 
   Se planeja aplicar atualizações de manutenção juntamente com atualizações de recursos cumulativas, você pode escolher as partes mais recentes.
 
@@ -62,7 +62,7 @@ Antes de implantar o Visual Studio em sua organização, há algumas decisões a
 
 * Decida sobre suas necessidades de manutenção.
 
-  Se sua empresa precisa ficar em um conjunto de recursos por mais tempo, mas ainda deseja atualizações de manutenção regulares, você deve planejar usar uma linha de base de manutenção. Para obter mais informações, consulte o ***suporte para versões mais antigas da*** seção Visual Studio do ciclo de vida e manutenção do produto Visual [Studio,](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio) bem como o [How to: Update Visual Studio durante uma](update-servicing-baseline.md) página de base de manutenção.
+  Se sua empresa precisa ficar em um conjunto de recursos por mais tempo, mas ainda deseja atualizações de manutenção regulares, você deve planejar usar uma linha de base de manutenção. Para obter mais informações, consulte a seção ***suporte para versões mais antigas do Visual Studio*** da página de [ciclo de vida do produto e manutenção do Visual Studio](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio) , além de como [: atualizar o Visual Studio enquanto estiver em uma](update-servicing-baseline.md) página de linha de base de manutenção.
 
   Se planeja aplicar atualizações de manutenção juntamente com atualizações de recursos cumulativas, você pode escolher as partes mais recentes.
 
@@ -109,7 +109,7 @@ Antes de implantar o Visual Studio em sua organização, há algumas decisões a
 
 * [Atualize seu local de rede com as atualizações mais recentes](update-a-network-installation-of-visual-studio.md?view=vs-2019) do Visual Studio ao executar o comando usado na etapa 1 regularmente para adicionar componentes atualizados.
 
-  Você pode atualizar o Visual Studio usando um script de atualização. Para isso, use [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) o parâmetro de linha de comando.
+  Você pode atualizar o Visual Studio usando um script de atualização. Para fazer isso, use o [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) parâmetro de linha de comando.
 
 ## <a name="step-5---optional-use-visual-studio-tools"></a>Etapa 5 – (opcional) usar ferramentas do Visual Studio
 
@@ -117,11 +117,11 @@ Temos várias ferramentas disponíveis para ajudar você a [detectar e gerenciar
 
 ## <a name="advanced-configuration"></a>Configuração avançada
 
-Por padrão, a instalação do Visual Studio permite a inclusão de tipos personalizados em pesquisas de Bing a partir da lista de erros F1 e links de código. Você pode configurar o Visual Studio para desativar o mecanismo de pesquisa de incluir quaisquer tipos de usuário personalizados alterando o valor da seguinte chave de registro por política:
+Por padrão, a instalação do Visual Studio permite a inclusão de tipo personalizado em pesquisas do Bing na lista de erros F1 e links de código. Você pode configurar o Visual Studio para desabilitar o mecanismo de pesquisa de incluir qualquer tipo de usuário personalizado, alterando o valor da seguinte chave do registro por política:
 
-**"PutCustomtypeINBingSearch" DWORD 0**
+**"PutCustomTypeInBingSearch" DWORD 0**
 
-O registro está localizado no *Software\Microsoft\VisualStudio\16.0_{InstanceId}\Roslyn\Internal\Diagnostics\* diretório de sua colmeia de registro privado. Para obter instruções sobre como abrir a colmeia de registro, consulte [a edição do registro de uma instância do Visual Studio](tools-for-managing-visual-studio-instances.md?view=vs-2019#editing-the-registry-for-a-visual-studio-instance).
+O registro está localizado no diretório * Software\Microsoft\VisualStudio\16.0_ {InstanceId} \ Roslyn\Internal\Diagnostics \* do seu hive de registro privado. Para obter instruções sobre como abrir o hive do registro, consulte [editando o registro para uma instância do Visual Studio](tools-for-managing-visual-studio-instances.md?view=vs-2019#editing-the-registry-for-a-visual-studio-instance).
 
 ::: moniker-end
 
@@ -156,7 +156,7 @@ O registro está localizado no *Software\Microsoft\VisualStudio\16.0_{InstanceId
 
 * [Atualize seu local de rede com as atualizações mais recentes](update-a-network-installation-of-visual-studio.md?view=vs-2017) do Visual Studio ao executar o comando usado na etapa 1 regularmente para adicionar componentes atualizados.
 
-  Você pode atualizar o Visual Studio usando um script de atualização. Para isso, use [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) o parâmetro de linha de comando.
+  Você pode atualizar o Visual Studio usando um script de atualização. Para fazer isso, use o [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) parâmetro de linha de comando.
 
 ## <a name="step-5---optional-use-visual-studio-tools"></a>Etapa 5 – (opcional) usar ferramentas do Visual Studio
 
@@ -164,21 +164,21 @@ Temos várias ferramentas disponíveis para ajudar você a [detectar e gerenciar
 
 ## <a name="advanced-configuration"></a>Configuração avançada
 
-Por padrão, a instalação do Visual Studio permite a inclusão de tipos personalizados em pesquisas de Bing a partir da lista de erros F1 e links de código. Você pode configurar o Visual Studio para desativar o mecanismo de pesquisa de incluir quaisquer tipos de usuário personalizados alterando o valor da seguinte chave de registro por política:
+Por padrão, a instalação do Visual Studio permite a inclusão de tipo personalizado em pesquisas do Bing na lista de erros F1 e links de código. Você pode configurar o Visual Studio para desabilitar o mecanismo de pesquisa de incluir qualquer tipo de usuário personalizado, alterando o valor da seguinte chave do registro por política:
 
-**"PutCustomtypeINBingSearch" DWORD 0**
+**"PutCustomTypeInBingSearch" DWORD 0**
 
-O registro está localizado no *Software\Microsoft\VisualStudio\15.0_{InstanceId}\Roslyn\Internal\Diagnostics\* diretório de sua colmeia de registro privado. Para obter instruções sobre como abrir a colmeia de registro, consulte [a edição do registro de uma instância do Visual Studio](tools-for-managing-visual-studio-instances.md?view=vs-2017#editing-the-registry-for-a-visual-studio-instance).
+O registro está localizado no diretório * Software\Microsoft\VisualStudio\15.0_ {InstanceId} \ Roslyn\Internal\Diagnostics \* do seu hive de registro privado. Para obter instruções sobre como abrir o hive do registro, consulte [editando o registro para uma instância do Visual Studio](tools-for-managing-visual-studio-instances.md?view=vs-2017#editing-the-registry-for-a-visual-studio-instance).
 
 ::: moniker-end
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 * [Exemplos de parâmetro de linha de comando](command-line-parameter-examples.md)
 * [Instalar os certificados necessários para instalação offline do Visual Studio](install-certificates-for-visual-studio-offline.md)
 * [Importar ou exportar configurações de instalação](import-export-installation-configurations.md)
 * [Arquivos de instalação do Visual Studio](https://devblogs.microsoft.com/setup/tag/vs2017/)
-* [Ciclo de vida e manutenção do produto Visual Studio](/visualstudio/releases/2019/servicing/)
+* [Ciclo de vida do produto Visual Studio e manutenção](/visualstudio/releases/2019/servicing/)
 * [Configurações de carregamento automático síncrono](../extensibility/synchronously-autoloaded-extensions.md)

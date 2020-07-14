@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 51028dce1d60c0d01c83cee509a1ed7321855437
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ee9eb5353109bcf5df6903e7e607a11b8bfd0536
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777836"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545607"
 ---
 # <a name="commentmarkatprofile"></a>CommentMarkAtProfile
 O método `CommentMarkAtProfile` insere um valor de carimbo de data/hora, uma marca numérica e uma cadeia de caracteres de comentário no arquivo .*vsp*. O valor de carimbo de data/hora pode ser usado para sincronizar os eventos externos. Para que a marcação e o comentário sejam inseridos, a criação de perfil para o thread que contém a função CommentMarkAtProfile deve ser ON.
@@ -31,7 +31,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
                                    LPCTSTR szComment);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
  `dnTimestamp`
 
  Um inteiro de 64 bits que representa um valor de carimbo de data/hora.
@@ -68,7 +68,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
 
 ## <a name="function-information"></a>Informações de função
 
-|||
+|Item|Valor|
 |-|-|
 |**Cabeçalho**|Incluir *VSPerf.h*|
 |**Biblioteca**|Usar *VSPerf.lib*|
@@ -116,4 +116,4 @@ void ExerciseCommentMarkAtProfile(void)
 ```
 
 ## <a name="see-also"></a>Confira também
-- [Referência de API do Visual Studio Profiler (nativa)](../profiling/visual-studio-profiler-api-reference-native.md)
+- [Referência da API do criador de perfil do Visual Studio (nativo)](../profiling/visual-studio-profiler-api-reference-native.md)

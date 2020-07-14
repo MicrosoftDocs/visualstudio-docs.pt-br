@@ -1,7 +1,7 @@
 ---
 title: Salvar dados em um banco de dados (várias tabelas)
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8d4dd98a622a3aa09b2ec11f4f3521ce1839ce8c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b512263cd5d0ca8c83b0ba6848fb16feca1a71f6
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586244"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281637"
 ---
 # <a name="save-data-to-a-database-multiple-tables"></a>Salvar dados em um banco de dados (várias tabelas)
 
@@ -41,7 +41,7 @@ As tarefas ilustradas neste passo a passo incluem:
 
 - Modificando o código para enviar os dados atualizados no conjunto de dados de volta ao banco de dados.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este passo a passos usa SQL Server Express LocalDB e o banco de dados de exemplo Northwind.
 
@@ -61,7 +61,7 @@ Este passo a passos usa SQL Server Express LocalDB e o banco de dados de exemplo
 
 ## <a name="create-the-windows-forms-application"></a>Criar o aplicativo Windows Forms
 
-Crie um novo projeto de **aplicativo Windows Forms** para C# o ou o Visual Basic. Nomeie o projeto **UpdateMultipleTablesWalkthrough**.
+Crie um novo projeto de **aplicativo Windows Forms** para C# ou Visual Basic. Nomeie o projeto **UpdateMultipleTablesWalkthrough**.
 
 ## <a name="create-the-data-source"></a>Criar a fonte de dados
 
@@ -71,7 +71,7 @@ Esta etapa cria uma fonte de dados com base em um banco de dados Northwind usand
 
    A janela **Fontes de Dados** é aberta.
 
-2. Na janela **Fontes de Dados**, selecione **Adicionar Nova Fonte de Dados** para iniciar o **Assistente de Configuração de Fonte de Dados**.
+2. Na janela **fontes de dados** , selecione **Adicionar nova fonte de dados** para iniciar o **Assistente de configuração de fonte de dados**.
 
 3. Na tela **escolher um tipo de fonte de dados** , selecione **banco**de dado e, em seguida, selecione **Avançar**.
 
@@ -79,7 +79,7 @@ Esta etapa cria uma fonte de dados com base em um banco de dados Northwind usand
 
     - Se uma conexão de dados com o banco de dados de exemplo Northwind estiver disponível na lista suspensa, selecione-o.
 
-         - ou -
+         -ou-
 
     - Selecione **Nova Conexão** para abrir a caixa de diálogo **Adicionar/Modificar Conexão**.
 
@@ -95,7 +95,7 @@ Esta etapa cria uma fonte de dados com base em um banco de dados Northwind usand
 
 ## <a name="set-the-controls-to-be-created"></a>Definir os controles a serem criados
 
-Para este passo a passos, os dados na tabela `Customers` estão em um layout de **detalhes** em que os dados são exibidos em controles individuais. Os dados da tabela `Orders` estão em um layout de **grade** que é exibido em um controle de <xref:System.Windows.Forms.DataGridView>.
+Para esta explicação, os dados na `Customers` tabela estão em um layout de **detalhes** em que os dados são exibidos em controles individuais. Os dados da `Orders` tabela estão em um layout de **grade** que é exibido em um <xref:System.Windows.Forms.DataGridView> controle.
 
 ### <a name="to-set-the-drop-type-for-the-items-in-the-data-sources-window"></a>Definir o tipo de remoção dos itens na Janela Fontes de Dados
 
@@ -105,11 +105,11 @@ Para este passo a passos, os dados na tabela `Customers` estão em um layout de 
 
 ## <a name="create-the-data-bound-form"></a>Criar o formulário associado a dados
 
-Você pode criar controles de associação de dados arrastando itens da janela **Fontes de Dados** para um formulário.
+Você pode criar os controles associados a dados arrastando itens da janela **fontes de dados** para o formulário.
 
 1. Arraste o nó principal **Clientes** da janela **Fontes de Dados** para **Form1**.
 
-     Os controles de associação de dados com rótulos descritivos são exibidos no formulário, juntamente com uma faixa de ferramentas (<xref:System.Windows.Forms.BindingNavigator>) para registros de navegação. Um [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `CustomersTableAdapter`, <xref:System.Windows.Forms.BindingSource>e <xref:System.Windows.Forms.BindingNavigator> aparecem na bandeja de componentes.
+     Os controles de associação de dados com rótulos descritivos são exibidos no formulário, juntamente com uma faixa de ferramentas (<xref:System.Windows.Forms.BindingNavigator>) para registros de navegação. Um [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `CustomersTableAdapter` , <xref:System.Windows.Forms.BindingSource> e <xref:System.Windows.Forms.BindingNavigator> aparecem na bandeja do componente.
 
 2. Arraste o nó **Ordens** relacionado da janela **Fontes de Dados** para **Form1**.
 
@@ -120,14 +120,14 @@ Você pode criar controles de associação de dados arrastando itens da janela *
 
 ## <a name="add-code-to-update-the-database"></a>Adicionar código para atualizar o banco de dados
 
-É possível atualizar os bancos de dados chamando os métodos `Update` dos TableAdapters **Clientes** e **Ordens**. Por padrão, um manipulador de eventos para o botão **salvar** do<xref:System.Windows.Forms.BindingNavigator> é adicionado ao código do formulário para enviar atualizações para o banco de dados. Esse procedimento modifica o código para enviar atualizações na ordem correta. Isso elimina a possibilidade de gerar erros de integridade referencial. O código também implementa manipulação de erros com a quebra automática da chamada de atualização em um bloco try-catch. Você pode mudar o código para atender às necessidades do seu aplicativo.
+É possível atualizar os bancos de dados chamando os métodos `Update` dos TableAdapters **Clientes** e **Ordens**. Por padrão, um manipulador de eventos para o botão **salvar** do <xref:System.Windows.Forms.BindingNavigator> é adicionado ao código do formulário para enviar atualizações para o banco de dados. Esse procedimento modifica o código para enviar atualizações na ordem correta. Isso elimina a possibilidade de gerar erros de integridade referencial. O código também implementa manipulação de erros com a quebra automática da chamada de atualização em um bloco try-catch. Você pode mudar o código para atender às necessidades do seu aplicativo.
 
 > [!NOTE]
 > Para maior clareza, este passo a passos não usa uma transação. No entanto, se você estiver atualizando duas ou mais tabelas relacionadas, inclua toda a lógica de atualização em uma transação. Uma transação é um processo que garante que todas as alterações relacionadas a um banco de dados sejam bem-sucedidas antes que as alterações sejam confirmadas. Para obter mais informações, consulte [Transações e simultaneidade](/dotnet/framework/data/adonet/transactions-and-concurrency).
 
 ### <a name="to-add-update-logic-to-the-application"></a>Para adicionar lógica de atualização ao aplicativo
 
-1. Selecione o botão **salvar** na <xref:System.Windows.Forms.BindingNavigator>. Isso abre o editor de código para o manipulador de eventos `bindingNavigatorSaveItem_Click`.
+1. Selecione o botão **salvar** no <xref:System.Windows.Forms.BindingNavigator> . Isso abre o editor de código para o `bindingNavigatorSaveItem_Click` manipulador de eventos.
 
 2. Substitua o código no manipulador de eventos para chamar os métodos `Update` dos TableAdapters relacionados. O código a seguir primeiro cria três tabelas de dados temporárias para armazenar as informações de cada <xref:System.Data.DataRowState> (<xref:System.Data.DataRowState.Deleted>, <xref:System.Data.DataRowState.Added> e <xref:System.Data.DataRowState.Modified>). As atualizações são executadas na ordem correta. O código deve se parecer com o seguinte:
 

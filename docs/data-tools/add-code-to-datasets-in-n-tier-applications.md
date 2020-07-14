@@ -1,7 +1,7 @@
 ---
 title: Adicionar código aos conjuntos de dados em aplicativos de n camadas
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3d35ff68144e92af12f2ee6284076118493c6be9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a57a05ddb8317ea31b852ded369ad7ef69d40bd0
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587115"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283080"
 ---
 # <a name="add-code-to-datasets-in-n-tier-applications"></a>Adicionar código aos conjuntos de dados em aplicativos de n camadas
 
@@ -32,7 +32,7 @@ Por padrão, depois de separar o DataSet e o código do TableAdapter, o resultad
 > Quando você separa DataSets e TableAdapters (definindo a propriedade de **projeto DataSet** ), as classes parciais DataSet existentes no projeto não serão movidas automaticamente. As classes parciais de DataSet existentes devem ser movidas manualmente para o projeto do conjunto de um.
 
 > [!NOTE]
-> Quando o código de validação precisa ser adicionado, o dataset tipado fornece funcionalidade para gerar <xref:System.Data.DataTable.ColumnChanging> e <xref:System.Data.DataTable.RowChanging> manipuladores de eventos. Para obter mais informações, consulte [Adicionar validação a um conjunto](../data-tools/add-validation-to-an-n-tier-dataset.md)de dados de n camadas.
+> Quando o código de validação precisa ser adicionado, o dataset tipado fornece a funcionalidade de geração <xref:System.Data.DataTable.ColumnChanging> e <xref:System.Data.DataTable.RowChanging> manipuladores de eventos. Para obter mais informações, consulte [Adicionar validação a um conjunto](../data-tools/add-validation-to-an-n-tier-dataset.md)de dados de n camadas.
 
 ## <a name="to-add-code-to-datasets-in-n-tier-applications"></a>Para adicionar código a conjuntos de valores em aplicativos de n camadas
 

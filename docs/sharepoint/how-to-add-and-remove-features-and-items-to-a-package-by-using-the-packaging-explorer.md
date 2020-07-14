@@ -1,7 +1,7 @@
 ---
-title: 'Packaging Explorer: Adicionar e remover recursos e itens de pacote'
+title: 'Gerenciador de empacotamento: Adicionar & remover recursos & itens ao pacote'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.RAD.PackagingExplorer
 dev_langs:
@@ -14,51 +14,50 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0f01ecb67cb82ffe325ea471ad5fb5913c8e4d28
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
-ms.translationtype: MT
+ms.openlocfilehash: c3ea7e30737855cbbb9434e8763f4903d80b82da
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66401557"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014556"
 ---
-# <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer"></a>Como: Adicionar e remover funcionalidades e itens de um pacote usando o Packaging Explorer
-  Para configurar um pacote para implantar recursos e itens do SharePoint, você pode usar o Packaging Explorer. Você pode ajustar os itens de projeto do SharePoint e recursos em seu arquivo. wsp.
+# <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer"></a>Como adicionar e remover recursos e itens para um pacote usando o Gerenciador de empacotamento
+  Para configurar um pacote para implantar itens e recursos do SharePoint, você pode usar o Gerenciador de empacotamento. Você pode ajustar os itens e recursos de projeto do SharePoint dentro de seu arquivo. wsp.
 
- Como alternativa, você pode usar o Designer de empacotamento para exibir e reordenar os recursos para alterar a ordem de ativação. Para obter mais informações, confira [Como: Adicionar e remover funcionalidades e itens de um pacote usando o Designer de pacote](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md).
+ Como alternativa, você pode usar o designer de empacotamento para exibir e reordenar os recursos para alterar a ordem de ativação. Para obter mais informações, consulte [como adicionar e remover recursos e itens para um pacote usando o designer de pacotes](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md).
 
-## <a name="open-the-packaging-explorer"></a>Abra o Gerenciador de empacotamento
- Você pode usar o procedimento a seguir para abrir o Gerenciador de pacotes, se sua solução do Visual Studio tem pelo menos um projeto do SharePoint. Como alternativa, o Packaging Explorer é aberto automaticamente quando você exibe um designer de pacote ou recurso. Depois de fechar todos os designers de recurso e pacote, também fecha o Packaging Explorer.
+## <a name="open-the-packaging-explorer"></a>Abrir o Gerenciador de empacotamento
+ Você pode usar o procedimento a seguir para abrir o Gerenciador de empacotamento, se sua solução do Visual Studio tiver pelo menos um projeto do SharePoint. Como alternativa, o Gerenciador de empacotamento é aberto automaticamente quando você exibe um recurso ou designer de pacote. Depois de fechar todos os designers de recursos e pacotes, o Gerenciador de pacotes também é fechado.
 
 #### <a name="to-open-the-packaging-explorer"></a>Para abrir o Gerenciador de empacotamento
 
-1. Na barra de menus, escolha **modo de exibição** > **Other Windows** > **Packaging Explorer**.
+1. Na barra de menus, escolha **Exibir**  >  **outro Windows**  >  **Packaging Explorer**.
 
-     O **Packaging Explorer** aparece na **caixa de ferramentas**.
+     O **Gerenciador de empacotamento** aparece na **caixa de ferramentas**.
 
-## <a name="adding-a-feature-to-a-package"></a>Adicionar um recurso a um pacote
- Você pode adicionar recursos novos e existentes a um pacote usando o Packaging Explorer.
+## <a name="adding-a-feature-to-a-package"></a>Adicionando um recurso a um pacote
+ Você pode adicionar recursos novos e existentes a um pacote usando o Gerenciador de empacotamento.
 
 #### <a name="to-add-a-sharepoint-feature"></a>Para adicionar um recurso do SharePoint
 
-1. Abra o **Packaging Explorer**, abra o menu de atalho para o projeto e, em seguida, escolha **adicionar recurso**.
+1. Abra o **Gerenciador de empacotamento**, abra o menu de atalho para o projeto e escolha **Adicionar recurso**.
 
 #### <a name="to-move-an-existing-sharepoint-feature"></a>Para mover um recurso existente do SharePoint
 
-1. Abra o **Packaging Explorer**e, em seguida, execute uma das seguintes etapas:
+1. Abra o **Gerenciador de empacotamento**e execute uma das seguintes etapas:
 
-    - Arraste uma **recurso** de um projeto para outro projeto.
+    - Arraste um **recurso** de um projeto para outro projeto.
 
-    - Abra o menu de atalho para um recurso, escolha **Recortar**, abra o menu de atalho para o projeto ao qual você deseja mover o recurso e, em seguida, escolha **colar**.
+    - Abra o menu de atalho para um recurso, escolha **recortar**, abra o menu de atalho do projeto para o qual você deseja mover o recurso e, em seguida, escolha **colar**.
 
     > [!NOTE]
     > Use este procedimento se você tiver mais de um projeto do SharePoint em sua solução.
 
-## <a name="validate-a-feature-or-package"></a>Validar um pacote ou recurso
- Você pode identificar problemas potenciais nos recursos do SharePoint e os pacotes por meio da validação de arquivos. Avisos e erros são exibidos na janela lista de erros e janela de saída.
+## <a name="validate-a-feature-or-package"></a>Validar um recurso ou pacote
+ Você pode identificar possíveis problemas nos recursos e pacotes do SharePoint Validando os arquivos. Avisos e erros são exibidos na janela de saída e na janela de Lista de Erros.
 
-#### <a name="to-validate-a-sharepoint-feature-or-package"></a>Para validar um pacote ou recurso do SharePoint
+#### <a name="to-validate-a-sharepoint-feature-or-package"></a>Para validar um recurso ou pacote do SharePoint
 
-1. Abra o **Packaging Explorer**.
+1. Abra o **Gerenciador de empacotamento**.
 
 2. Abra um menu de atalho para um recurso ou pacote e, em seguida, escolha **validar**.
 

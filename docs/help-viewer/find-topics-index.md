@@ -1,7 +1,7 @@
 ---
 title: Usar o índice do Help Viewer
 ms.date: 11/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Index tab [Help Viewer]
 - Help Viewer, using the index
@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f80b0d63bc7e7fdb89f69607e4529e18f26cc30
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
-ms.translationtype: HT
+ms.openlocfilehash: ff72fc3e65b48e195c8ffc9587bdbb3c5fc382be
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825936"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284952"
 ---
 # <a name="find-topics-by-using-the-help-viewer-index"></a>Localizar tópicos usando o índice do Visualizador da Ajuda
 
@@ -35,7 +35,7 @@ Na guia **Índice**, execute uma das tarefas a seguir:
     Escolhendo o botão de filtro perto da parte superior da guia, você pode exibir todas as entradas que contêm o texto especificado ou apenas as entradas que começam com o texto especificado.
 
     > [!NOTE]
-    > Quando o botão de filtro é exibido em uma tela de fundo mais escura com uma borda, as entradas devem _conter_ o texto especificado. Se a tela de fundo e a borda não aparecerem, as entradas deverão _começar com_ o texto especificado.
+    > Quando o botão de filtro é exibido em um plano de fundo mais escuro com uma borda, as entradas devem _conter_ o texto que você especificar. Se o plano de fundo e a borda não aparecerem, as entradas deverão _começar com_ o texto que você especificar.
 
 - Percorra o índice e escolha uma palavra-chave.
 
@@ -77,8 +77,8 @@ Se você não encontrar uma entrada para a palavra ou frase inserida, tente o se
 
     Por exemplo, se tiver inserido o termo "compilando", tente "criando".
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Como: Encontrar tópicos no sumário](../help-viewer/find-topics-toc.md)
-- [Como: Pesquisar tópicos](../help-viewer/find-topics.md)
+- [Como localizar tópicos no Sumário](../help-viewer/find-topics-toc.md)
+- [Como pesquisar tópicos](../help-viewer/find-topics.md)
 - [Microsoft Help Viewer](../help-viewer/overview.md)

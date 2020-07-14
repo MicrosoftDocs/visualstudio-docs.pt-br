@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumDebugStreamData | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5929f6f36c183d3a580ab605d313695cb584664
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b12c0c8823bbaf687e7157c272b64e50e7dd02b1
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744850"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468423"
 ---
 # <a name="idiaenumdebugstreamdata"></a>IDiaEnumDebugStreamData
 Fornece acesso aos registros em um fluxo de dados de depuração.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumDebugStreamData : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Métodos em ordem vtable
-A tabela a seguir mostra os métodos de `IDiaEnumDebugStreamData`.
+A tabela a seguir mostra os métodos de `IDiaEnumDebugStreamData` .
 
 |Método|Descrição|
 |------------|-----------------|
@@ -46,7 +46,7 @@ A tabela a seguir mostra os métodos de `IDiaEnumDebugStreamData`.
 Essa interface representa um fluxo de registros em um fluxo de dados de depuração. O tamanho e a interpretação de cada registro dependem do fluxo de dados do qual o registro vem. Essa interface efetivamente fornece acesso aos bytes de dados brutos no arquivo de símbolo.
 
 ## <a name="notes-for-callers"></a>Observações para chamadores
-Chame os métodos [IDiaEnumDebugStreams:: item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md) ou [IDiaEnumDebugStreams:: Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md) para obter um objeto `IDiaEnumDebugStreamData`.
+Chame os métodos [IDiaEnumDebugStreams:: item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md) ou [IDiaEnumDebugStreams:: Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md) para obter um `IDiaEnumDebugStreamData` objeto.
 
 ## <a name="example"></a>Exemplo
  Este exemplo mostra como acessar um único fluxo de dados e seus registros.
@@ -109,7 +109,7 @@ Biblioteca: diaguids. lib
 
 DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumDebugStreams::Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)
 - [IDiaEnumDebugStreams::Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md)

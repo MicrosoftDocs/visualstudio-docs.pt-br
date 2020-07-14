@@ -1,18 +1,18 @@
 ---
 title: Como abrir um modelo a partir de um arquivo no código do programa
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fae71f748f1f64480c046ae157e1fbca0dd0bec9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 19cec066d66b08d3f02f3885908722aad047172b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594611"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532477"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>Como abrir um modelo a partir de um arquivo no código do programa
 
@@ -39,9 +39,9 @@ Adicione estas referências ao seu projeto de aplicativo do Visual Studio:
 
 - `Microsoft.VisualStudio.Modeling.Sdk.11.0`
 
-  - Se você não vir isso na guia **.net** da caixa de diálogo **Adicionar referências** , clique na guia **procurar** e navegue até `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\`.
+  - Se você não vir isso na guia **.net** da caixa de diálogo **Adicionar referências** , clique na guia **procurar** e navegue até `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\` .
 
-- Seu assembly DSL, que será encontrado na pasta bin do seu projeto DSL. Seu nome normalmente é do formato: *suaempresa*.`.Dsl.dll`*seuprojeto* .
+- Seu assembly DSL, que será encontrado na pasta bin do seu projeto DSL. Seu nome normalmente é do formato: *suaempresa*. *Seuprojeto* `.Dsl.dll` .
 
 ## <a name="important-classes-in-the-dsl"></a>Classes importantes na DSL
 
@@ -49,11 +49,11 @@ Antes de escrever o código que lê sua DSL, você deve saber os nomes de alguma
 
 Essas são as classes que você deve identificar:
 
-- *YourDslRootClass* -este é o nome da classe raiz em seu `DslDefinition.dsl`.
+- *YourDslRootClass* -este é o nome da classe raiz no seu `DslDefinition.dsl` .
 
-- *YourDslName* `SerializationHelper`-essa classe é definida em `SerializationHelper.cs` em seu projeto DSL.
+- *YourDslName* `SerializationHelper` -Essa classe é definida em `SerializationHelper.cs` em seu projeto DSL.
 
-- *YourDslName* `DomainModel`-essa classe é definida em `DomainModel.cs` em seu projeto DSL.
+- *YourDslName* `DomainModel` -Essa classe é definida em `DomainModel.cs` em seu projeto DSL.
 
 ## <a name="read-from-a-file"></a>Ler de um arquivo
 

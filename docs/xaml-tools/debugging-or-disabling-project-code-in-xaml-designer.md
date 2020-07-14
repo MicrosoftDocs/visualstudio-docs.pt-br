@@ -1,17 +1,17 @@
 ---
 title: Depurar ou desabilitar o código do projeto no Designer XAML
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ac600581-8fc8-49e3-abdf-1569a3483d74
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: ce29bcef43877ec8a41235545652278645cad123
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fba240c29cb8142a9ec4b4d28c71112c1974a5b1
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592990"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331065"
 ---
 # <a name="debug-or-disable-project-code-in-xaml-designer"></a>Depurar ou desabilitar o código do projeto no Designer XAML
 
@@ -35,7 +35,7 @@ Quando o código do projeto está desabilitado, o Visual Studio mostra espaços 
 
 1. Na caixa de diálogo de exceção sem tratamento, selecione o link **Clique aqui para recarregar o designer**.
 
-2. Na barra de menus, selecione **Depurar** > **Iniciar Depuração** para compilar e executar o aplicativo.
+2. Na barra de menus, escolha **depurar**  >  **Iniciar Depuração** para compilar e executar o aplicativo.
 
      Se o aplicativo for compilado e executado com êxito, a exceção de tempo de design pode ser causada pela execução do seu código de projeto no designer.
 
@@ -53,7 +53,7 @@ Quando o código do projeto está desabilitado, o Visual Studio mostra espaços 
 
 5. Defina um ponto de interrupção no código do projeto.
 
-6. Na nova instância do Visual Studio, na barra de menus, selecione **Depurar** > **Anexar ao Processo**.
+6. Na nova instância do Visual Studio, na barra de menus, escolha **depurar**  >  **anexar para processar**.
 
 7. Na caixa de diálogo **Anexar ao Processo**, na lista de **Processos Disponíveis** selecione **XDesProc.exe** e, em seguida, selecione o botão **Anexar**.
 
@@ -61,7 +61,7 @@ Quando o código do projeto está desabilitado, o Visual Studio mostra espaços 
 
      Este é o processo para o designer XAML na primeira instância do Visual Studio.
 
-8. Na primeira instância do Visual Studio, na barra de menus, escolha **Depurar** > **Iniciar Depuração**.
+8. Na primeira instância do Visual Studio, na barra de menus, escolha **depurar**  >  **Iniciar Depuração**.
 
      Agora, você pode intervir em seu código que está sendo executado no designer.
 

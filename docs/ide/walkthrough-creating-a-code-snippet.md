@@ -1,7 +1,7 @@
 ---
 title: 'Passo a passo: Para criar um snippet de código'
 ms.date: 03/31/2020
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - code snippets, creating
 - code snippets, shortcut
@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bfadb4b8d1836d131b669ea43f28f522f3fbd8b
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: 8f46dc6a1871b6d44c37c1931bf65f1b4a11c9ae
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80472813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770787"
 ---
 # <a name="walkthrough-create-a-code-snippet"></a>Passo a passo: Para criar um snippet de código
 
@@ -54,7 +54,7 @@ O seguinte XML é o modelo básico de snippet:
 
 2. Preencha o título do snippet no elemento **Título**. Use o título **Raiz Quadrada**.
 
-3. Preencha a linguagem do snippet no atributo **Language** do elemento **Code**. Para C#, use **CSharp**, para Visual Basic, use **VB**, e para C++, use **CPP**.
+3. Preencha a linguagem do snippet no atributo **Language** do elemento **Code**. Para o C#, use **Csharp**, por Visual Basic, use o **VB**e, para C++, use **cpp**.
 
    > [!TIP]
    > Para ver todos os valores de linguagem disponíveis, procure a [seção Atributos de elemento de código](code-snippets-schema-reference.md#attributes) na página [Referência de esquema de snippets de código](code-snippets-schema-reference.md).
@@ -84,7 +84,7 @@ O seguinte XML é o modelo básico de snippet:
 
 ## <a name="import-a-code-snippet"></a>Importar um snippet de código
 
-1. Importe um snippet para a instalação do Visual Studio usando o **Gerenciador de Snippets de Código**. Abra-o escolhendo O**Gerenciador de Snippets de Código de** **Ferramentas** > .
+1. Importe um snippet para a instalação do Visual Studio usando o **Gerenciador de Snippets de Código**. Abra-o escolhendo **ferramentas**  >  **códigos trechos de código Gerenciador**.
 
 2. Clique no botão **Importar**.
 
@@ -96,19 +96,19 @@ O seguinte XML é o modelo básico de snippet:
 
    ::: moniker range="vs-2017"
 
-   *%USERPROFILE%\Documents\Visual Studio 2017\Code Snippets\Visual C#\My Code Snippets*
-    *%USERPROFILE%\Documents\Visual Studio 2017\Code Snippets\Visual Basic\My Code Snippets*
+   *%USERPROFILE%\Documents\Visual Studio 2017 \ código Snippets\Visual C# \Meus trechos* 
+    de código *%USERPROFILE%\Documents\Visual Studio 2017 \ código Snippets\Visual Basic\My trechos de código*
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   *%USERPROFILE%\Documents\Visual Studio 2019\Code Snippets\Visual C#\My Code Snippets*
-    *%USERPROFILE%\Documents\Visual Studio 2019\Code Snippets\Visual Basic\My Code Snippets*
+   *%USERPROFILE%\Documents\Visual Studio 2019 \ Code Snippets\Visual C# \Meus trechos* 
+    de código *%USERPROFILE%\Documents\Visual Studio 2019 \ Code Snippets\Visual Basic\My trechos de código*
 
    ::: moniker-end
 
-6. Teste o snippet abrindo um projeto C# ou Visual Basic. Com um arquivo de código aberto no editor, escolha **Snippets** > **Insert Snippet** no menu com o botão direito do mouse e, em **seguida, Meus trechos de código**. Você deverá ver um snippet chamado **Raiz Quadrada**. Clique duas vezes nesse item.
+6. Teste o snippet abrindo um projeto C# ou Visual Basic. Com um arquivo de código aberto no editor, escolha **trechos**  >  **Inserir trecho** no menu do botão direito do mouse, em seguida, **meus trechos de código**. Você deverá ver um snippet chamado **Raiz Quadrada**. Clique duas vezes nesse item.
 
    O snippet de código é inserido no arquivo de código.
 

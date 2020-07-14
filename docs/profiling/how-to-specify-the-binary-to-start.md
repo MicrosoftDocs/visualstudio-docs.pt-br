@@ -1,7 +1,7 @@
 ---
-title: Como especificar o binário para iniciar | Microsoft Docs
+title: Como especificar o binário a ser iniciado | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.performance.property.itemlaunch
 helpviewer_keywords:
@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fd3379b9769cfd6bfe1335b12545e635a9bde782
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 7f7cfd0d7a578d2ddaff28e9821f1d190bb2e10d
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778681"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331447"
 ---
 # <a name="how-to-specify-the-binary-to-start"></a>Como especificar o binário a ser iniciado
 
-Para traçar o perfil de binários, como DLLs, você deve inserir informações na ** \<** caixa de diálogo Página> Páginas de Propriedade. Essa informação indica onde o projeto DLL pode localizar o aplicativo de chamada.
+Para criar perfis de binários, como DLLs, você deve inserir informações na caixa de diálogo ** \<Target> páginas de propriedades** . Essa informação indica onde o projeto DLL pode localizar o aplicativo de chamada.
 
 1. No **Gerenciador de Desempenho**, clique com o botão direito do mouse no binário de destino e, em seguida, clique em **Propriedades**.
 
@@ -39,6 +39,6 @@ Para traçar o perfil de binários, como DLLs, você deve inserir informações 
 
 7. Clique em **OK**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Configure sessões de desempenho](../profiling/configuring-performance-sessions.md)
+[Configurar sessões de desempenho](../profiling/configuring-performance-sessions.md)

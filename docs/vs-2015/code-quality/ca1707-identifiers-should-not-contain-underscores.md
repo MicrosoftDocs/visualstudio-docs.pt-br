@@ -15,23 +15,23 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5a06e87f8d28ceb225e240d7702a47e00122feea
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: fe6b90ef971bd00392381f47860d85f34e10dc26
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919170"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544021"
 ---
-# <a name="ca1707-identifiers-should-not-contain-underscores"></a>CA1707: os identificadores não devem conter sublinhados
+# <a name="ca1707-identifiers-should-not-contain-underscores"></a>CA1707: Identificadores não devem conter sublinhados
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Para obter a documentação mais recente sobre o Visual Studio, consulte [CA1707: identificadores não devem conter sublinhados](/visualstudio/code-quality/ca1707-identifiers-should-not-contain-underscores).
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|IdentifiersShouldNotContainUnderscores|
+|TypeName|IdentifiersShouldNotContainUnderscores|
 |CheckId|CA1707|
-|Categoria|Microsoft.Naming|
+|Categoria|Microsoft. Naming|
 |Alteração Significativa|Quebra-quando elevado em assemblies<br /><br /> Não separável-quando elevado em parâmetros de tipo|
 
 ## <a name="cause"></a>Causa
@@ -49,6 +49,6 @@ Para obter a documentação mais recente sobre o Visual Studio, consulte [CA1707
  Não suprima um aviso nessa regra.
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1709: os identificadores devem ter maiúsculas e minúsculas corretas](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+ [CA1709: Identificadores devem ter maiúsculas e minúsculas corretas](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 
- [CA1708: os identificadores devem ser diferentes além de maiúsculas de minúsculas](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+ [CA1708: Identificadores devem ser diferentes em algo além das maiúsculas e minúsculas](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)

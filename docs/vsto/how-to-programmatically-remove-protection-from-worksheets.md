@@ -1,7 +1,7 @@
 ---
-title: 'Como: Remover a proteção de planilhas programaticamente'
+title: 'Como: remover programaticamente a proteção de planilhas'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,37 +15,37 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ccf7de70c3ef741119ec22f8fa9bc76868a47030
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 72448f9d1e5c24c917459b8c2c59e317190e0a11
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955931"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85519867"
 ---
-# <a name="how-to-programmatically-remove-protection-from-worksheets"></a>Como: Remover a proteção de planilhas programaticamente
-  Você poderá remover programaticamente a proteção de uma planilha do Microsoft Office Excel.
+# <a name="how-to-programmatically-remove-protection-from-worksheets"></a>Como: remover programaticamente a proteção de planilhas
+  Você pode remover programaticamente a proteção de uma planilha Microsoft Office Excel.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
- O exemplo a seguir usa a variável `getPasswordFromUser`, que contém uma senha obtida do usuário.
+ O exemplo a seguir usa a variável `getPasswordFromUser` , que contém uma senha obtida do usuário.
 
-## <a name="to-unprotect-a-worksheet-in-a-document-level-customization"></a>Para desproteger uma planilha em uma personalização no nível de documento
+## <a name="to-unprotect-a-worksheet-in-a-document-level-customization"></a>Para desproteger uma planilha em uma personalização em nível de documento
 
-1. Chamar o <xref:Microsoft.Office.Tools.Excel.Worksheet.Unprotect%2A> método da planilha e passe a senha, se necessário. Este exemplo pressupõe que você está trabalhando com uma planilha denominada `Sheet1`.
+1. Chame o <xref:Microsoft.Office.Tools.Excel.Worksheet.Unprotect%2A> método da planilha e passe a senha, se necessário. Este exemplo pressupõe que você está trabalhando com uma planilha chamada `Sheet1` .
 
      [!code-csharp[Trin_VstcoreExcelAutomation#28](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#28)]
      [!code-vb[Trin_VstcoreExcelAutomation#28](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#28)]
 
 ## <a name="to-unprotect-a-worksheet-in-a-vsto-add-in"></a>Para desproteger uma planilha em um suplemento do VSTO
 
-1. Chamar o <xref:Microsoft.Office.Interop.Excel._Worksheet.Unprotect%2A> método da planilha ativa e passe a senha, se necessário.
+1. Chame o <xref:Microsoft.Office.Interop.Excel._Worksheet.Unprotect%2A> método da planilha ativa e passe a senha, se necessário.
 
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#18](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#18)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#18](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#18)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Trabalhar com planilhas](../vsto/working-with-worksheets.md)
-- [Como: Proteger planilhas programaticamente](../vsto/how-to-programmatically-protect-worksheets.md)
-- [Como: Proteger pastas de trabalho de forma programática](../vsto/how-to-programmatically-protect-workbooks.md)
-- [Como: Ocultar planilhas programaticamente](../vsto/how-to-programmatically-hide-worksheets.md)
+- [Como: proteger planilhas programaticamente](../vsto/how-to-programmatically-protect-worksheets.md)
+- [Como: proteger pastas de trabalho programaticamente](../vsto/how-to-programmatically-protect-workbooks.md)
+- [Como: ocultar planilhas programaticamente](../vsto/how-to-programmatically-hide-worksheets.md)
 - [Acesso global a objetos em projetos do Office](../vsto/global-access-to-objects-in-office-projects.md)

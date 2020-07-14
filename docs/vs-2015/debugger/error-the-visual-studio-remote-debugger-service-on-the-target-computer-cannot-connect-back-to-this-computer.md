@@ -1,5 +1,5 @@
 ---
-title: 'Erro: O serviço de depurador remoto do Visual Studio no computador de destino não pode se conectar novamente a esse computador | Microsoft Docs'
+title: 'Erro: o serviço de Depurador Remoto do Visual Studio no computador de destino não pode se conectar novamente a este computador | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -16,23 +16,22 @@ caps.latest.revision: 15
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8f598d765e45b1f97d6a3e95d1ad57c325ea38fe
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 80a7de83f118b38d9a3c71f1c7e7febf48e0f5bc
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65697353"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520504"
 ---
-# <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>Erro: O serviço do Depurador Remoto do Visual Studio no computador de destino não pode se conectar novamente a esse computador
+# <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>Erro: o serviço Depurador Remoto do Visual Studio no computador de destino não pode se reconectar a este computador
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Esse erro significa que o serviço de depurador remoto do Visual Studio está em execução em uma conta de usuário que não pode autenticar ao tentar se conectar ao computador do qual você está depurando.  
   
  A tabela a seguir mostra quais contas podem acessar o computador:  
   
-|||||  
-|-|-|-|-|  
-||Conta de LocalSystem|Conta de domínio|Contas locais que têm o mesmo nome de usuário e senha nos dois computadores|  
+|Cenário|Conta de LocalSystem|Conta do domínio|Contas locais que têm o mesmo nome de usuário e senha nos dois computadores|  
+|-|-|-|-|-|  
 |Ambos os computadores no mesmo domínio|Sim|Sim|Sim|  
 |Ambos os computadores em domínios que tenham a confiança bidirecional|Não|Não|Sim|  
 |Um ou ambos os computadores em um grupo de trabalho|Não|Não|Sim|  
@@ -48,7 +47,7 @@ Esse erro significa que o serviço de depurador remoto do Visual Studio está em
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Verifique se o serviço de depurador remoto do Visual Studio está configurado corretamente no computador remoto. Para obter mais informações, consulte [definir configurar as ferramentas remotas no dispositivo](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c).  
+1. Verifique se o serviço de depurador remoto do Visual Studio está configurado corretamente no computador remoto. Para obter mais informações, consulte [Configurar o ferramentas remotas no dispositivo](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c).  
   
 2. Execute o serviço de depurador remoto com uma conta que possa acessar o computador host do depurador, conforme mostrado na tabela anterior.  
   
@@ -76,6 +75,6 @@ Esse erro significa que o serviço de depurador remoto do Visual Studio está em
   
 - Execute o Monitor de Depuração Remota como um aplicativo em vez de um serviço.  
   
-## <a name="see-also"></a>Consulte também  
- [Solução de problemas e erros de depuração remota](../debugger/remote-debugging-errors-and-troubleshooting.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Erros de depuração remota e solução de problemas](../debugger/remote-debugging-errors-and-troubleshooting.md)   
  [Depuração remota](../debugger/remote-debugging.md)

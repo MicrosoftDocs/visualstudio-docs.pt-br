@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumTables::get_Count | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e2a03072d2987275144d0e89b678e5282b077f0e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: fed5b7f6cf3b18e854a9607b163b5e538f734915
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743784"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467564"
 ---
 # <a name="idiaenumtablesget_count"></a>IDiaEnumTables::get_Count
 Recupera o número de tabelas.
@@ -35,9 +35,9 @@ HRESULT get_Count (    LONG* pRetVal
 
 fora Retorna o número de tabelas.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)
 - [IDiaEnumTables::Item](../../debugger/debug-interface-access/idiaenumtables-item.md)

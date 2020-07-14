@@ -7,15 +7,15 @@ ms.author: jillfra
 manager: jillfra
 monikerRange: vs-2017
 ms.date: 11/13/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: f5ff05fa7c8fe68d7c09f4881efc249a74959b2b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 4bcc1932bad5b34d9695257feb163654f6b99514
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84180214"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371619"
 ---
 # <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>Criar um projeto de IA da galeria do Azure Machine Learning no Visual Studio
 

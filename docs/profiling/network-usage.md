@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 16c17c6f39980b115b34869fdc6b4912ca94ab0b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 00fd0c03bf460cd8b72a10d15501994d7a2aa10a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "73144693"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541707"
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>Analisar o uso de rede em aplicativos UWP
 A ferramenta de diagnóstico de **rede** do Visual Studio coleta dados sobre as operações de rede executadas usando a [API Windows.Web.Http](/uwp/api/windows.web.http). Analisar os dados pode ajudar a resolver problemas, como problemas de autenticação e acesso, uso incorreto de cache e exibição ruim e desempenho de download.
@@ -23,14 +23,14 @@ A ferramenta de diagnóstico de **rede** do Visual Studio coleta dados sobre as 
  A ferramenta de Rede oferece suporte apenas a aplicativos UWP. Outras plataformas não têm suporte no momento.
 
 > [!NOTE]
-> Para obter uma descrição mais completa da ferramenta Rede, consulte [Introduzindo a ferramenta de rede do Visual Studio](https://devblogs.microsoft.com/visualstudio/introducing-visual-studios-network-tool/).
+> Para obter uma descrição mais completa da ferramenta de rede, consulte [introdução à ferramenta de rede do Visual Studio](https://devblogs.microsoft.com/visualstudio/introducing-visual-studios-network-tool/).
 
 ## <a name="collect-network-tool-data"></a>Coletar dados da ferramenta de rede
  Você deve executar a ferramenta de **rede** com um projeto aberto do Visual Studio no computador do Visual Studio.
 
 1. Abra o projeto no Visual Studio.
 
-2. No menu, clique **em Debug / Performance Profiler**. Escolha **Rede**, **Iniciar**.
+2. No menu, clique em **criador de perfil de depuração/desempenho**. Escolha **Rede**, **Iniciar**.
 
 3. A ferramenta de rede começa coletando o tráfego HTTP do seu aplicativo.
 
@@ -40,7 +40,7 @@ A ferramenta de diagnóstico de **rede** do Visual Studio coleta dados sobre as 
 
    A janela de relatório deve ser semelhante a essa:
 
-   ![A janela Rede](../profiling/media/network_fullwindow.png "NETWORK_FullWindow")
+   ![A janela rede](../profiling/media/network_fullwindow.png "NETWORK_FullWindow")
 
 ## <a name="analyze-data"></a>Analisar dados
  Você pode analisar o tráfego HTTP capturado enquanto o aplicativo é executado ou mesmo depois que o aplicativo foi fechado, selecionando qualquer uma das operações de rede exibidas no modo de exibição de resumo.
@@ -53,7 +53,7 @@ A ferramenta de diagnóstico de **rede** do Visual Studio coleta dados sobre as 
 
  ![Painel de detalhes da ferramenta de rede](../profiling/media/network_detailsviewpane.png "NETWORK_DetailsViewPane")
 
-|||
+|Name|Descrição|
 |-|-|
 |**Cabeçalhos**|Informações sobre os cabeçalhos de solicitação do evento.|
 |**Corpo**|A solicitação e os dados de carga de resposta.|
@@ -72,10 +72,10 @@ A ferramenta de diagnóstico de **rede** do Visual Studio coleta dados sobre as 
 
 3. O botão de impressão de resposta (dentro da guia Corpo) pode ajudá-lo a analisar as cargas de resposta JSON, XML, HTML, CSS, JavaScript e TypeScript aumentando a legibilidade do conteúdo.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Execute ferramentas de criação de perfil com ou sem o depurador](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
-- [Visual Studio blog: Apresentando o inspetor de rede do Visual Studio](https://devblogs.microsoft.com/visualstudio/)
-- [Canal 9 Vídeo: Ferramentas de diagnóstico VS - novo Profiler de rede](https://channel9.msdn.com/Series/ConnectOn-Demand/206)
+- [Executar ferramentas de criação de perfil com ou sem o depurador](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
+- [Blog do Visual Studio: introdução ao inspetor de rede do Visual Studio](https://devblogs.microsoft.com/visualstudio/)
+- [Vídeo do Channel 9: ferramentas de diagnóstico do VS – criador de perfil de nova rede](https://channel9.msdn.com/Series/ConnectOn-Demand/206)
 - [Criação de perfis no Visual Studio](../profiling/index.yml)
 - [Introdução às ferramentas de criação de perfil](../profiling/profiling-feature-tour.md)

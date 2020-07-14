@@ -12,12 +12,12 @@ caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 28535db3e129029d6767ac969d121ee4cbb1aec5
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.openlocfilehash: 750ce3cbcae593aee315998ec8b205a71e004d41
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63416542"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543034"
 ---
 # <a name="commentmarkprofile"></a>CommentMarkProfile
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,7 +41,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
   
  Ponteiro para a cadeia de texto para inserir. A cadeia de caracteres deve ser menor que 256 caracteres, incluindo o terminador NULO.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  A função indica êxito ou falha usando a enumeração **PROFILE_COMMAND_STATUS**. O valor de retorno pode ser um dos seguintes:  
   
 |Enumerador|Descrição|  
@@ -65,12 +65,12 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  Microsoft.VisualStudio.Profiler.dll  
   
-## <a name="function-information"></a>Informações de função  
+## <a name="function-information"></a>Informações de Função  
   
-|||  
+|Item|Valor|  
 |-|-|  
-|**Header**|Inclui VSPerf.h|  
-|**Library**|Use VSPerf.lib|  
+|**Cabeçalho**|Inclui VSPerf.h|  
+|**Biblioteca**|Use VSPerf.lib|  
 |**Unicode**|Implementado como `CommentMarkProfileW` (Unicode) e `CommentMarkProfileA` (ANSI).|  
   
 ## <a name="example"></a>Exemplo  
@@ -112,5 +112,5 @@ void ExerciseCommentMarkProfile()
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência da API do criador de perfil do Visual Studio (nativo)](../profiling/visual-studio-profiler-api-reference-native.md)

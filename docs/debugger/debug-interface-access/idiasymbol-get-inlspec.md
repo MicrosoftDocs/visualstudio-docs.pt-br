@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_InlSpec | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5675239e35ab3bef809e3d54544d87d7a9e8bb75
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 676ae888de9cbf6a32e77571848d84a0632d0cc0
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740389"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463564"
 ---
 # <a name="idiasymbolget_inlspec"></a>IDiaSymbol::get_InlSpec
-Essa função recupera um sinalizador que indica se a função foi marcada como embutida (usando um dos atributos [inline, __inline, \__forceinline](/cpp/cpp/inline-functions-cpp) ).
+Essa função recupera um sinalizador que indica se a função foi marcada como embutida (usando um dos atributos [inline, __inline \_ _forceinline](/cpp/cpp/inline-functions-cpp) ).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,13 +33,13 @@ HRESULT get_inlSpec(
 #### <a name="parameters"></a>Parâmetros
  `pRetVal`
 
-fora Retorna `TRUE` se a função foi marcada como embutida; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se a função foi marcada como embutida; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
-> Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
+> Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,6 +48,6 @@ fora Retorna `TRUE` se a função foi marcada como embutida; caso contrário, re
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
-- [inline, __inline, \__forceinline](/cpp/cpp/inline-functions-cpp)
+- [inline, __inline, \_ _forceinline](/cpp/cpp/inline-functions-cpp)

@@ -1,27 +1,27 @@
 ---
 title: Criar um plug-in de gravador para testes de desempenho Web
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Web performance tests, recorder plug-in
 ms.assetid: 6fe13be1-aeb5-4927-9bff-35950e194da9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5e32faa4525edc79da3d759d67ad2b5676f38fc2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3f75114683a4f456d0514af20c1c201c373bd4b0
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589132"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287995"
 ---
 # <a name="how-to-create-a-recorder-plug-in"></a>Como criar um plug-in de gravação
 
-O <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin> permite que você modifique um teste de desempenho na Web gravado. A modificação ocorre depois que você escolhe **Stop** na barra de ferramentas **do Gravador de Teste de Desempenho da Web,** mas antes do teste ser salvo e apresentado no Web Performance Test Editor.
+O <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin> permite que você modifique um teste de desempenho na Web gravado. A modificação ocorre depois que você escolhe **parar** na barra de ferramentas do **gravador de teste de desempenho da Web** , mas antes do teste ser salvo e apresentado na editor de testes de desempenho Web.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Um plug-in de gravador permite que você execute sua própria correlação personalizada em parâmetros dinâmicos. Com a funcionalidade de correlação incorporada, os testes de desempenho da Web detectam os parâmetros dinâmicos na gravação da Web após a conclusão ou quando você usa os **Parâmetros dinâmicos de promoção para parâmetros de teste da Web** na barra de ferramentas do Web Performance **Editor.** No entanto, a funcionalidade de detecção interna nem sempre encontra todos os parâmetros dinâmicos. Por exemplo, ela não encontra uma ID da sessão, que normalmente tem seu valor alterado entre 5 a 30 minutos. Portanto, você precisa executar manualmente o processo de correlação.
+Um plug-in de gravador permite que você execute sua própria correlação personalizada em parâmetros dinâmicos. Com a funcionalidade interna de correlação, os testes de desempenho na Web detectam os parâmetros dinâmicos na gravação da Web após a conclusão, ou quando você usa os **parâmetros dinâmicos de promoção de parâmetros dinâmicas para teste na Web** na barra de ferramentas **Editor de testes de desempenho Web** . No entanto, a funcionalidade de detecção interna nem sempre encontra todos os parâmetros dinâmicos. Por exemplo, ela não encontra uma ID da sessão, que normalmente tem seu valor alterado entre 5 a 30 minutos. Portanto, você precisa executar manualmente o processo de correlação.
 
 O <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin> permite que você escreva código para seu próprio plug-in personalizado. Este plug-in pode executar a correlação ou modificar o teste de desempenho na Web de várias maneiras antes de ser salvo e apresentado no Editor de Testes de Desempenho Web. Portanto, se você determinar que uma variável dinâmica específica deve ser correlacionada para muitas de suas gravações, será possível automatizar o processo.
 
@@ -37,7 +37,7 @@ Os procedimentos a seguir descrevem como criar o código rudimentar para um plug
 
 2. Adicione um novo projeto de **Biblioteca de Classes** à solução.
 
-3. No **Solution Explorer,** na nova pasta de projeto de biblioteca de classe, clique com o botão direito do mouse na pasta **Referências** e selecione **Adicionar referência**.
+3. Em **Gerenciador de soluções**, na nova pasta de projeto biblioteca de classes, clique com o botão direito do mouse na pasta **referências** e selecione **Adicionar referência**.
 
     > [!TIP]
     > Um exemplo de uma nova pasta de projeto de biblioteca de classes é **RecorderPlugins**.
@@ -48,7 +48,7 @@ Os procedimentos a seguir descrevem como criar o código rudimentar para um plug
 
 5. Role para baixo, selecione **Microsoft.VisualStudio.QualityTools.WebTestFramework** e escolha **OK**.
 
-     O **Microsoft.VisualStudio.QualityTools.WebTestFramework** é adicionado na pasta **Referências** no **Solution Explorer**.
+     O **Microsoft. VisualStudio. QualityTools. WebTestFramework** é adicionado à pasta **referências** em **Gerenciador de soluções**.
 
 6. Escreva o código para o plug-in de gravação. Primeiro, crie uma nova classe pública que derive de <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin>.
 
@@ -71,7 +71,7 @@ Os procedimentos a seguir descrevem como criar o código rudimentar para um plug
 
 8. Adicione mais código de acordo com o que você deseja que o plug-in de gravação execute depois da gravação da Web. Por exemplo, você pode adicionar código para manipular a correlação personalizada, conforme mostrado no exemplo abaixo. Também é possível criar um plug-in de gravação para tarefas como converter comentários em transações ou adicionar regras de validação ao teste de desempenho na Web.
 
-9. No menu **Build**, escolha **Compilar \<nome do projeto de biblioteca de classes>**.
+9. No menu **Compilar** , escolha **Compilar \<class library project name> **.
 
 Em seguida, implante o plug-in de gravador para que ele seja registrado com o Visual Studio.
 
@@ -99,7 +99,7 @@ Depois de compilar o plug-in de gravação, coloque a DLL resultante em um dos d
     > [!WARNING]
     > Você talvez receba um erro semelhante ao seguinte quando executar um teste de desempenho na Web ou um teste de carga usando seu plug-in:
     >
-    > **Falha na solicitação: Exceção no \<> caso: Não\<foi possível carregar o arquivo ou o\<conjunto "Nome plug-in".dll file>, Version= n.n.n.n>, Culture=neutral, PublicKeyToken=null' ou uma de suas dependências. O sistema não consegue encontrar o arquivo especificado.**
+    > **Falha na solicitação: exceção no \<plug-in> evento: não foi possível carregar o arquivo ou assembly ' \<"Plug-in name".dll file> , versão = \<n.n.n.n> , cultura = neutral, PublicKeyToken = null ' ou uma de suas dependências. O sistema não pode localizar o arquivo especificado.**
     >
     > Isso acontecerá se você fizer alterações no código de qualquer um de seus plug-ins e criar uma nova versão de DLL **(versão=0.0.0.0)**, mas o plug-in ainda estiver referenciando a versão original do plug-in. Para corrigir esse problema, siga estas etapas:
     >
@@ -243,7 +243,7 @@ namespace RecorderPlugin
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin>
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin.PostWebTestRecording*>

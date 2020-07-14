@@ -1,7 +1,7 @@
 ---
 title: Criando Web Parts para SharePoint | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 f1_keywords:
 - Microsoft.SharePoint.WebControls.DateTimeControl
 - Microsoft.SharePoint.WebControls.CssLink
@@ -23,12 +23,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 82e0d860f21f0fe2744c8c05c4ebeb3590be68fc
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 3825ef7d2c1c90f63a90f5028063c74332543841
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984472"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015048"
 ---
 # <a name="create-web-parts-for-sharepoint"></a>Criar Web Parts para SharePoint
   Usando Web Parts, você pode modificar o conteúdo, a aparência e o comportamento de páginas de um site do SharePoint usando um navegador. As Web Parts são controles do lado do servidor que são executados dentro de uma página de Web Part: são os blocos de construção de páginas que aparecem em um site do SharePoint. Consulte [bloco de construção: Web Parts](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14)).
@@ -45,7 +44,7 @@ ms.locfileid: "72984472"
 
 |Arquivo|Descrição|
 |----------|-----------------|
-|*Elements. xml*|Contém informações que o arquivo de definição de recurso em seu projeto usa para implantar a Web Part.|
+|*Elements.xml*|Contém informações que o arquivo de definição de recurso em seu projeto usa para implantar a Web Part.|
 |arquivo. WebPart|Fornece informações que o SharePoint precisa para exibir sua Web Part em uma galeria de Web Parts.|
 |Arquivo de código|Contém métodos que adicionam controles à Web Part e que geram conteúdo personalizado dentro da Web Part.|
 
@@ -91,16 +90,16 @@ ms.locfileid: "72984472"
 
    Embora você possa adicionar JavaScript embutido a um arquivo de marcação do lado do servidor, a depuração não tem suporte para pontos de interrupção adicionados à marcação. Para depurar o JavaScript, faça referência a um arquivo JavaScript externo no arquivo de marcação e, em seguida, defina os pontos de interrupção no arquivo JavaScript.
 
-- A depuração de código de [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] embutido deve ser feita no arquivo de código gerado em vez de no arquivo de marcação.
+- A depuração de [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] código embutido deve ser feita no arquivo de código gerado em vez de no arquivo de marcação.
 
-- Web Parts visuais não dão suporte ao uso da diretiva `<@ Assembly Src=`.
+- Web Parts visuais não dão suporte ao uso da `<@ Assembly Src=` diretiva.
 
-- Não há suporte para controles da Web do SharePoint e alguns controles de [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] no ambiente de área restrita do SharePoint. Se controles sem suporte forem usados em uma Web Part Visual em uma solução de área restrita, o erro "o tipo ou o nome do namespace ' Theme ' não existirá no namespace ' Microsoft. SharePoint. WebControls '" será exibido.
+- Não há suporte para controles da Web do SharePoint e alguns [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] controles no ambiente de área restrita do SharePoint. Se controles sem suporte forem usados em uma Web Part Visual em uma solução de área restrita, o erro "o tipo ou o nome do namespace ' Theme ' não existirá no namespace ' Microsoft. SharePoint. WebControls '" será exibido.
 
   Para obter mais informações sobre soluções em área restrita, consulte [diferenças entre as soluções de área restrita e de farm](../sharepoint/differences-between-sandboxed-and-farm-solutions.md).
 
 ## <a name="create-older-style-sharepoint-based-web-parts"></a>Criar Web Parts baseadas no SharePoint com estilo antigo
- Você pode usar os modelos no Visual Studio para criar Web Parts [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] personalizadas para o SharePoint. [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] Web Parts são criadas sobre a infraestrutura do [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] Web Part e são o tipo recomendado para novos projetos.
+ Você pode usar os modelos no Visual Studio para criar [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] Web Parts personalizadas para o SharePoint. [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)]as Web Parts são criadas sobre a [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] infraestrutura da Web Part e são o tipo recomendado para novos projetos.
 
  Em poucos casos, talvez seja necessário criar uma Web Part usando a Web Part com estilo mais antigo do SharePoint. Você pode usar o Visual Studio para criar esses tipos de Web Parts, mas o Visual Studio não fornece modelos projetados especificamente para ajudá-lo a criá-los.
 
@@ -108,7 +107,7 @@ ms.locfileid: "72984472"
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|Descrição|
+|Title|Descrição|
 |-----------|-----------------|
 |[Como: criar uma Web Part do SharePoint](../sharepoint/how-to-create-a-sharepoint-web-part.md)|Mostra como criar Web Parts para páginas do SharePoint.|
 |[Como: criar uma Web Part do SharePoint usando um designer](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)|Mostra como criar Web Parts para o SharePoint usando uma superfície de Design Visual.|

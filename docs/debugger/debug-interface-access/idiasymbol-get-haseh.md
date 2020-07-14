@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_hasEH | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f08cd539d3042ff0715a5c84445e4cc40214a41
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 178bc2744e74867c1954474a20e8c3640ade49c5
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740544"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463753"
 ---
 # <a name="idiasymbolget_haseh"></a>IDiaSymbol::get_hasEH
-Recupera um sinalizador que especifica se a função contém qualquer manipulação de exceção C++de estilo não gerenciado (por exemplo, um bloco try/catch).
+Recupera um sinalizador que especifica se a função contém qualquer manipulação de exceção de estilo C++ não gerenciado (por exemplo, um bloco try/catch).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,10 +33,10 @@ HRESULT get_hasEH(
 #### <a name="parameters"></a>Parâmetros
  `pFlag`
 
-fora Retorna `TRUE` se a função tiver manipulação C++de exceção de estilo algum; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se a função tem qualquer manipulação de exceção em estilo C++; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
@@ -48,5 +48,5 @@ fora Retorna `TRUE` se a função tiver manipulação C++de exceção de estilo 
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

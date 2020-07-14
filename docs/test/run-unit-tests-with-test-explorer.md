@@ -2,7 +2,7 @@
 title: Executar e executar testes de unidade com o Gerenciador de Testes
 description: Saiba como executar testes com o Gerenciador de Testes no Visual Studio. Este tópico aborda como habilitar execuções de teste automáticas após o build, exibir resultados do teste, agrupar e filtrar a lista de testes, criar playlists, depurar testes e usar atalhos de teste.
 ms.date: 07/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.unittesting.testexplorer.overview
 author: mikejo5000
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 429892e3022854cac157605117f955fd672f8997
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 35bd6f26b56ea7c3a1d578e5721504a91f60b74c
+ms.sourcegitcommit: 46547f0bf3fc1a81e1a906762106dec5855e6e4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84182918"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86156826"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Executar testes de unidade com o Gerenciador de Testes
 
@@ -149,21 +149,21 @@ Você pode definir seus próprios níveis de hierarquia e de grupo por **Estado*
 ### <a name="test-explorer-groups"></a>Grupos de Gerenciador de Testes
 
 ::: moniker range="vs-2017"
-|Agrupar|Descrição|
+|Grupo|Descrição|
 |-|-----------------|
 |**Duration**|Agrupa teste pelo tempo de execução: **rápido**, **médio** e **lento**.|
 |**Resultado**|Agrupa testes por resultados da execução: **testes com falha**, **testes ignorados**, **testes aprovados**.|
 |**Características**|Agrupa teste por pares de categoria/valor que você define. A sintaxe para especificar valores e categorias de característica é definida pela estrutura de teste de unidade.|
-|**Project**|Agrupa teste por nome dos projetos.|
+|**Projeto**|Agrupa teste por nome dos projetos.|
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-|Agrupar|Descrição|
+|Grupo|Descrição|
 |-|-----------------|
 |**Duration**|Agrupa testes por tempo de execução: **rápido**, **médio**e **lento**.|
 |**State**|Agrupa testes por resultados de execução: **testes com falha**, **testes ignorados**, **testes aprovados**, **não executados**|
 |**Estrutura de destino** | Agrupa testes pela estrutura de seus projetos de destino |
 |**Namespace**|Agrupa testes pelo namespace contido.|
-|**Project**|Agrupa testes pelo projeto contido.|
+|**Projeto**|Agrupa testes pelo projeto contido.|
 |**Classe**|Agrupa testes pela classe contida.|
 ::: moniker-end
 
@@ -211,11 +211,21 @@ Se os testes individuais não tiverem dependências que os impeçam de serem exe
 
 A lista de reprodução é aberta em uma nova guia do Gerenciador de testes. Você pode usar essa playlist uma vez e descartá-la, ou pode clicar no botão **salvar** na barra de ferramentas da janela da lista de reprodução e, em seguida, selecionar um nome e um local para salvar a lista de reprodução.
 
-![A playlist é aberta em uma guia separada do Gerenciador de Testes](../test/media/vs-2019/test-explorer-playlist-tab-16-2.png)
+![A playlist é aberta em uma guia separada do Gerenciador de Testes](../test/media/vs-2019/test-explorer-playlist-tab-16-7.png)
 
 **Para criar uma lista de reprodução**, escolha um ou mais testes no Gerenciador de Testes. Clique com o botão direito do mouse e escolha **Adicionar à lista de**reprodução nova lista de reprodução  >  **New playlist**.
 
 **Para abrir uma playlist**, escolha o ícone da playlist na barra de ferramentas do Visual Studio e selecione no menu um arquivo de playlist salvo anteriormente.
+
+**Para editar uma lista de reprodução**, você pode clicar com o botão direito do mouse em qualquer teste e usar as opções de menu para adicioná-lo ou removê-lo de uma lista de reprodução.
+
+A partir do Visual Studio 2019 versão 16,7, você pode escolher o botão **Editar** na barra de ferramentas. As caixas de seleção serão exibidas ao lado de seus testes mostrando quais testes são incluídos e excluídos na playlist. Edite os grupos conforme desejado.
+
+![Botão Editar playlist](../test/media/vs-2019/test-explorer-playlist-edit-16-7.png)
+
+Você também pode marcar ou desmarcar as caixas dos grupos pai na hierarquia. Essa ação cria uma lista de reprodução dinâmica que sempre atualiza a lista de reprodução com base nos testes que estão nesse grupo. Por exemplo, se você posicionar uma marca de seleção ao lado de uma classe, qualquer teste adicionado dessa classe se tornará parte dessa lista de reprodução. Se você excluir um teste dessa classe, ele será removido da lista de reprodução. Você pode saber mais sobre as regras salvando a lista de reprodução com o botão salvar na barra de ferramentas e abrindo o arquivo *. playlist* criado no disco. Esse arquivo lista todas as regras e testes individuais que compõem uma lista de reprodução.
+
+![Arquivo XML de playlist](../test/media/vs-2019/test-explorer-playlist-xml-file.png)
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
@@ -267,7 +277,7 @@ Para filtrar por um critério diferente:
 |Qualificador|Descrição|
 |-|-----------------|
 |**Característica**|Procura categoria de característica e valor para correspondência. A sintaxe para especificar valores e categorias de característica é definida pela estrutura de teste de unidade.|
-|**Project**|Procura os nomes de projeto de teste para correspondências.|
+|**Projeto**|Procura os nomes de projeto de teste para correspondências.|
 |**Mensagem de erro**|Procura nas mensagens de erro definidas pelo usuário retornadas por falhas para encontrar correspondências.|
 |**Caminho do arquivo**|Procura o nome de arquivo totalmente qualificado dos arquivos de origem do teste para encontrar correspondências.|
 |**Nome Totalmente Qualificado**|Pesquisa o nome totalmente qualificado de namespaces de teste, classes e métodos para encontrar correspondências.|
@@ -280,7 +290,7 @@ Para filtrar por um critério diferente:
 |**State**|Procura os nomes de categoria do Gerenciador de Testes para encontrar correspondências: **testes com falha**, **testes ignorados**, **testes aprovados**.|
 |**Características**|Procura categoria de característica e valor para correspondência. A sintaxe para especificar valores e categorias de característica é definida pela estrutura de teste de unidade.|
 |**Nome Totalmente Qualificado**|Pesquisa o nome totalmente qualificado de namespaces de teste, classes e métodos para encontrar correspondências.|
-|**Project**|Procura os nomes de projeto de teste para correspondências.|
+|**Projeto**|Procura os nomes de projeto de teste para correspondências.|
 |**Estrutura de destino**|Procura os nomes de categoria do Gerenciador de Testes para encontrar correspondências: **testes com falha**, **testes ignorados**, **testes aprovados**.|
 |**Namespace**|Pesquisa os namespaces de teste para encontrar correspondências.|
 |**Classe**|Pesquisa os nomes de classes de teste para encontrar correspondências.|

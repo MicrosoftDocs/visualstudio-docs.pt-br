@@ -15,33 +15,33 @@ caps.latest.revision: 30
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: c4da0414c9923a8ed7bb01456f38000433641522
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 14c50ed94f05401cc5575af9f8b98472c35b261d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919228"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543995"
 ---
-# <a name="ca1709-identifiers-should-be-cased-correctly"></a>CA1709: os identificadores do recurso devem ter maiúsculas e minúsculas corretas
+# <a name="ca1709-identifiers-should-be-cased-correctly"></a>CA1709: Identificadores devem ter maiúsculas e minúsculas corretas
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Para obter a documentação mais recente sobre o Visual Studio, consulte [CA1709: os identificadores devem estar em maiúsculas e minúsculas](/visualstudio/code-quality/ca1709-identifiers-should-be-cased-correctly).
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|IdentifiersShouldBeCasedCorrectly|
+|TypeName|IdentifiersShouldBeCasedCorrectly|
 |CheckId|CA1709|
-|Categoria|Microsoft.Naming|
+|Categoria|Microsoft. Naming|
 |Alteração Significativa|Quebra-quando gerado em assemblies, namespaces, tipos, membros e parâmetros.<br /><br /> Não separável-quando acionado em parâmetros de tipo genérico.|
 
 ## <a name="cause"></a>Causa
  O nome de um identificador não está em maiúsculas corretamente.
 
- \- ou -
+ \- ou –
 
  O nome de um identificador contém um acrônimo de duas letras e a segunda letra é minúscula.
 
- \- ou -
+ \- ou –
 
  O nome de um identificador contém um acrônimo de três ou mais letras maiúsculas.
 
@@ -65,4 +65,4 @@ Para obter a documentação mais recente sobre o Visual Studio, consulte [CA1709
  Você também pode adicionar termos, abreviações e acrônimos específicos a um dicionário personalizado de análise de código. Os termos especificados no dicionário personalizado não causarão violações dessa regra. Para obter mais informações, consulte [como: personalizar o dicionário de análise de código](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1708: os identificadores devem ser diferentes além de maiúsculas de minúsculas](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+ [CA1708: Identificadores devem ser diferentes em algo além das maiúsculas e minúsculas](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)

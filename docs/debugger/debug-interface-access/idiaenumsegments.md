@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSegments | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eff457d539317d2f8c7d77dfc85eb16063650c14
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: cd6a0716d0bae5a223cff3439834c87b9650e7a5
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744152"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467942"
 ---
 # <a name="idiaenumsegments"></a>IDiaEnumSegments
 Enumera os vários segmentos contidos na fonte de dados.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumSegments : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Métodos em ordem vtable
-A tabela a seguir mostra os métodos de `IDiaEnumSegments`.
+A tabela a seguir mostra os métodos de `IDiaEnumSegments` .
 
 |Método|Descrição|
 |------------|-----------------|
@@ -44,10 +44,10 @@ A tabela a seguir mostra os métodos de `IDiaEnumSegments`.
 ## <a name="remarks"></a>Comentários
 
 ## <a name="notes-for-callers"></a>Observações para chamadores
-Obtenha essa interface chamando o método `QueryInterface` em um objeto [IDiaTable](../../debugger/debug-interface-access/idiatable.md) . Consulte o exemplo para obter detalhes.
+Obtenha essa interface chamando o `QueryInterface` método em um objeto [IDiaTable](../../debugger/debug-interface-access/idiatable.md) . Consulte o exemplo para obter detalhes.
 
 ## <a name="example"></a>Exemplo
-Este exemplo mostra como obter a interface de `IDiaEnumSections` de uma tabela. Para obter um exemplo mais completo de como usar segmentos, consulte a interface [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) .
+Este exemplo mostra como obter a `IDiaEnumSections` interface de uma tabela. Para obter um exemplo mais completo de como usar segmentos, consulte a interface [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) .
 
 ```C++
 void ShowSegments(IDiaTable *pTable, IDiaSession *pSession)
@@ -71,7 +71,7 @@ Biblioteca: diaguids. lib
 
 DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaTable](../../debugger/debug-interface-access/idiatable.md)
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

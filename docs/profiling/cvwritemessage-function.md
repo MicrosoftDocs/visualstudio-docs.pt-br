@@ -1,7 +1,7 @@
 ---
 title: Função CvWriteMessage | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvWriteMessageW
 - cvmarkers/CvWriteMessageExW
@@ -26,12 +26,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ea9fd21c346a61939683ee05e3cb9ef3123cc03d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 66fb584090a0b6483c18f8254eb4a96b6186d51e
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62936654"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332132"
 ---
 # <a name="cvwritemessage-function"></a>Função CvWriteMessage
 Grava uma mensagem para o arquivo de rastreamento da Visualização Simultânea.
@@ -92,7 +92,7 @@ HRESULT CvWriteMessageExVA(
     _In_ va_list argList);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
  `argList` Lista de argumentos.
 
  `category` Categoria do período
@@ -113,5 +113,5 @@ HRESULT CvWriteMessageExVA(
 
  **ANSI:** CvWriteMessageA, CvWriteMessageVA, CvWriteMessageExA, CvWriteMessageExVA
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Referência da biblioteca C++](../profiling/cpp-library-reference.md)

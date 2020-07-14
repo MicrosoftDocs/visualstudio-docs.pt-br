@@ -1,7 +1,7 @@
 ---
 title: IDiaSession | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,29 +12,29 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f983275974ed0ec3fb0e6091f5b9e73cdccd76ef
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e7fb8c5336a14180b3742fa02a91e6532b6e5831
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741851"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465345"
 ---
 # <a name="idiasession"></a>IDiaSession
 Fornece um contexto de consulta para símbolos de depuração.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaSession : IUnknown
 ```
 
 ## <a name="methods"></a>Métodos
-A tabela a seguir mostra os métodos de `IDiaSession`.
+A tabela a seguir mostra os métodos de `IDiaSession` .
 
 |Método|Descrição|
 |------------|-----------------|
-|[IDiaSession::get_loadAddress](../../debugger/debug-interface-access/idiasession-get-loadaddress.md)|Recupera o endereço de carregamento do arquivo executável que corresponde aos símbolos neste repositório de símbolos. Esse é o mesmo valor que foi passado para o método `put_loadAddress`.|
-|[IDiaSession::put_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md)|Define o endereço de carregamento para o arquivo executável que corresponde aos símbolos neste repositório de símbolos. **Observação:**  É importante chamar esse método quando você obtém um objeto `IDiaSession` e antes de começar a usar o objeto.|
+|[IDiaSession::get_loadAddress](../../debugger/debug-interface-access/idiasession-get-loadaddress.md)|Recupera o endereço de carregamento do arquivo executável que corresponde aos símbolos neste repositório de símbolos. Esse é o mesmo valor que foi passado para o `put_loadAddress` método.|
+|[IDiaSession::put_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md)|Define o endereço de carregamento para o arquivo executável que corresponde aos símbolos neste repositório de símbolos. **Observação:**  É importante chamar esse método quando você recebe um `IDiaSession` objeto e antes de começar a usar o objeto.|
 |[IDiaSession::get_globalScope](../../debugger/debug-interface-access/idiasession-get-globalscope.md)|Recupera uma referência ao escopo global.|
 |[IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)|Recupera um enumerador para todas as tabelas contidas no repositório de símbolos.|
 |[IDiaSession::getSymbolsByAddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md)|Recupera um enumerador para todos os símbolos nomeados em locais estáticos.|
@@ -71,10 +71,10 @@ A tabela a seguir mostra os métodos de `IDiaSession`.
 |[IDiaSession::findAcceleratorInlineesByLinenum](../../debugger/debug-interface-access/idiasession-findacceleratorinlineesbylinenum.md)|Retorna uma enumeração de símbolos para quadros embutidos que correspondem ao local de origem especificado.|
 
 ## <a name="remarks"></a>Comentários
-É importante chamar o método [IDiaSession::P ut_loadaddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) depois de criar o objeto `IDiaSession` — e o valor passado para o método `put_loadAddress` deve ser diferente de zero — para que qualquer propriedade de endereço virtual (VA) de símbolos seja acessível. O endereço de carregamento é proveniente de qualquer programa que carregou o executável que está sendo depurado. Por exemplo, você pode chamar a função do Win32 `GetModuleInformation` para recuperar o endereço de carregamento do executável, dado um identificador para o executável.
+É importante chamar o método [IDiaSession::p ut_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) depois de criar o `IDiaSession` objeto — e o valor passado para o `put_loadAddress` método deve ser diferente de zero — para que qualquer propriedade de endereço virtual (VA) de símbolos seja acessível. O endereço de carregamento é proveniente de qualquer programa que carregou o executável que está sendo depurado. Por exemplo, você pode chamar a função do Win32 `GetModuleInformation` para recuperar o endereço de carregamento do executável, dado um identificador para o executável.
 
 ## <a name="example"></a>Exemplo
-Este exemplo mostra como obter a interface `IDiaSession` como parte de uma inicialização geral do DIA SDK.
+Este exemplo mostra como obter a `IDiaSession` interface como parte de uma inicialização geral do dia SDK.
 
 ```C++
 CComPtr<IDiaDataSource> pSource;
@@ -116,9 +116,9 @@ Biblioteca: diaguids. lib
 
 DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
-- [Visão Geral](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)
+- [Visão geral](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)
 - [Exe](../../debugger/debug-interface-access/exe.md)
 - [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)
 - [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)

@@ -1,7 +1,7 @@
 ---
 title: Usar o sumário do Help Viewer
 ms.date: 11/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - hv_contents
 helpviewer_keywords:
@@ -15,14 +15,14 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd55a95675505648179161ae3fb7cacea6a83104
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
-ms.translationtype: HT
+ms.openlocfilehash: f9bd332b5767dbfffcfbaa44637e0cc92051f7b1
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825067"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284926"
 ---
-# Como: Localizar tópicos no sumário
+# Como localizar tópicos no sumário
 
 Na guia **Sumário**, você pode usar o sumário para localizar informações. O sumário é uma lista expansível que contém todos os tópicos nos livros instalados. Para obter informações de acessibilidade sobre como navegar pelo sumário, consulte [Teclas de atalho (Visualizador da Ajuda)](../help-viewer/shortcut-keys.md).
 
@@ -31,7 +31,7 @@ Na guia **Sumário**, você pode usar o sumário para localizar informações. O
 
 ## Filtrar o sumário
 
-Você pode filtrar o sumário para restringir o escopo dos tópicos que aparecem na guia **Sumário**. Títulos aparecem na lista somente se contiverem a raiz do termo que você especificar. Por exemplo, se você especificar "solucionar" como filtro, somente títulos que contiverem "solucionar" ou "solucionar problemas" aparecerão. Nós cujos títulos não contiverem o termo serão recolhidos para um único nó com um sinal de reticências ( **...** ).
+Você pode filtrar o Sumário para restringir o escopo dos tópicos que aparecem na guia **conteúdo** . os títulos aparecem na lista somente se contiverem a raiz do termo que você especificar. Por exemplo, se você especificar "solucionar" como filtro, somente títulos que contiverem "solucionar" ou "solucionar problemas" aparecerão. Nós cujos títulos não contiverem o termo serão recolhidos para um único nó com um sinal de reticências (**...**).
 
 1. Escolha a guia **Sumário**.
 
@@ -46,12 +46,12 @@ Se tiver aberto um tópico usando os recursos de pesquisa de texto completo ou o
 
 1. Exibir um tópico.
 
-2. Clique no botão **Mostrar Tópico no Conteúdo** na barra de ferramentas ou pressione **Ctrl**+**S**.
+2. Clique no botão **Mostrar tópico no conteúdo** na barra de ferramentas ou pressione **Ctrl** + **S**.
 
      A guia **Sumário** é aberta e exibe o local do tópico no Sumário.
 
-## Consulte também
+## Veja também
 
-- [Como: Localizar tópicos no índice](../help-viewer/find-topics-index.md)
-- [Como: Pesquisar tópicos](../help-viewer/find-topics.md)
+- [Como localizar tópicos no índice](../help-viewer/find-topics-index.md)
+- [Como pesquisar tópicos](../help-viewer/find-topics.md)
 - [Microsoft Help Viewer](../help-viewer/overview.md)

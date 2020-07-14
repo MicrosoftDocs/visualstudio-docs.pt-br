@@ -1,7 +1,7 @@
 ---
-title: 'Como: Proteger planilhas programaticamente'
+title: 'Como: proteger planilhas programaticamente'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +15,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 931bfba9aeac76132ca2dd5e6115abef9869a1df
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: d51a6557b2204d7b6ff3d8865c82de091f5a59d0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254582"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545893"
 ---
-# <a name="how-to-programmatically-protect-worksheets"></a>Como: Proteger planilhas programaticamente
+# <a name="how-to-programmatically-protect-worksheets"></a>Como: proteger planilhas programaticamente
   O recurso de proteção no Microsoft Office Excel ajuda a impedir que usuários e código modifiquem objetos em uma planilha. Por padrão, todas as células são bloqueadas depois que você ativa a proteção.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "71254582"
 
 ### <a name="to-protect-a-worksheet-by-using-code-in-a-document-level-customization"></a>Para proteger uma planilha usando código em uma personalização em nível de documento
 
-1. Chame o <xref:Microsoft.Office.Tools.Excel.Worksheet.Protect%2A> método da planilha. Este exemplo pressupõe que você está trabalhando com uma planilha chamada `Sheet1`.
+1. Chame o <xref:Microsoft.Office.Tools.Excel.Worksheet.Protect%2A> método da planilha. Este exemplo pressupõe que você está trabalhando com uma planilha chamada `Sheet1` .
 
      [!code-csharp[Trin_VstcoreExcelAutomation#27](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#27)]
      [!code-vb[Trin_VstcoreExcelAutomation#27](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#27)]
@@ -65,11 +65,11 @@ ms.locfileid: "71254582"
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#17](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#17)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#17](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#17)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Trabalhar com planilhas](../vsto/working-with-worksheets.md)
-- [Como: Remover programaticamente a proteção de planilhas](../vsto/how-to-programmatically-remove-protection-from-worksheets.md)
-- [Como: Proteger pastas de trabalho programaticamente](../vsto/how-to-programmatically-protect-workbooks.md)
-- [Como: Ocultar planilhas programaticamente](../vsto/how-to-programmatically-hide-worksheets.md)
+- [Como: remover programaticamente a proteção de planilhas](../vsto/how-to-programmatically-remove-protection-from-worksheets.md)
+- [Como: proteger pastas de trabalho programaticamente](../vsto/how-to-programmatically-protect-workbooks.md)
+- [Como: ocultar planilhas programaticamente](../vsto/how-to-programmatically-hide-worksheets.md)
 - [Visão geral de itens de host e controles de host](../vsto/host-items-and-host-controls-overview.md)
 - [Item de host de planilha](../vsto/worksheet-host-item.md)
 - [Acesso global a objetos em projetos do Office](../vsto/global-access-to-objects-in-office-projects.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Como: Abrir soluções do Office sem executar código'
+title: 'Como: abrir soluções do Office sem executar código'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -18,39 +18,39 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 366416e4f18435bd01391657eb2fc4f65f8a4d62
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: d84515c2c3159b61b96f77555b23eef0df0ae961
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441777"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543475"
 ---
-# <a name="how-to-open-office-solutions-without-running-code"></a>Como: Abrir soluções do Office sem executar código
-  Uma solução do Microsoft Office criada com extensões de código gerenciado é executado, mesmo se a configuração de segurança no aplicativo do Office do usuário final é definida como alta. Isso ocorre porque a segurança de código do assembly .NET é gerenciada pelo Microsoft .NET Framework, não pelo Microsoft Office.
+# <a name="how-to-open-office-solutions-without-running-code"></a>Como: abrir soluções do Office sem executar código
+  Uma solução Microsoft Office criada com extensões de código gerenciado é executada mesmo se a configuração de segurança no aplicativo do Office do usuário final estiver definida como alta. Isso ocorre porque a segurança do código do assembly .NET é gerenciada pelo Microsoft .NET Framework, não por Microsoft Office.
 
- No entanto, há vezes quando você talvez queira abrir um documento sem executar o código. Por exemplo, código executado quando o documento é aberto pode alterar o conteúdo, mas você deseja atualizar a aparência do documento antes das alterações de código-lo. Ou você talvez queira enviar o documento com determinadas informações nele para alguém, e você não deseja que o código para executar e, possivelmente, alterar o conteúdo.
+ No entanto, há ocasiões em que você talvez queira abrir um documento sem executar o código. Por exemplo, o código que é executado quando o documento é aberto pode alterar o conteúdo, mas você deseja atualizar a aparência do documento antes de o código alterá-lo. Ou talvez você queira enviar o documento com determinadas informações para alguém e não quer que o código seja executado e possivelmente alterar o conteúdo.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Há várias maneiras de abrir um documento ou pasta de trabalho que contém as extensões de código gerenciado sem executar o código do assembly.
+ Há várias maneiras de abrir um documento ou pasta de trabalho que contém extensões de código gerenciado sem executar o código do assembly.
 
 ## <a name="to-bypass-the-assembly-by-using-the-shift-key"></a>Para ignorar o assembly usando a tecla Shift
 
-- Abrir documentos e pastas de trabalho do **arquivo** menu enquanto mantém pressionada a **Shift** chave para evitar que o Word e Excel da geração de eventos de inicialização enquanto está abrindo o documento.
+- Abra documentos e pastas de trabalho no menu **arquivo** enquanto mantém a tecla **Shift** pressionada para impedir que o Word e o Excel prolançam eventos de inicialização enquanto o documento está sendo aberto.
 
     > [!NOTE]
-    > Se você abrir um documento ou pasta de trabalho da **guia de Introdução** painel de tarefas, mantendo pressionada **Shift** não ignora o código. Além disso, mantendo pressionada a tecla SHIFT não impedir que eventos que está sendo gerado depois que o documento está aberto.
+    > Se você abrir um documento ou pasta de trabalho no painel de tarefas **introdução** , manter pressionada a **tecla Shift** não ignorará o código. Além disso, manter pressionada a tecla SHIFT não impede que os eventos sejam gerados depois que o documento é aberto.
 
-     Esse método é útil se você quiser abrir um documento para fazer alterações sem o código em execução e alterar o documento pela primeira vez.
+     Esse método será útil se você quiser abrir um documento para fazer alterações sem o código em execução e alterar o documento primeiro.
 
-## <a name="to-bypass-an-assembly-by-renaming-or-removing-it"></a>Para ignorar a um assembly renomeando ou removê-lo
+## <a name="to-bypass-an-assembly-by-renaming-or-removing-it"></a>Para ignorar um assembly renomeando-o ou removendo-o
 
-- Se você tiver as permissões necessárias no computador onde o assembly está localizado, você pode renomear ou remover o assembly para que o documento ou pasta de trabalho não é possível encontrá-lo. Isso resulta em um erro que está sendo gerado sempre que o documento do Office é aberto.
+- Se você tiver as permissões necessárias no computador em que o assembly está localizado, poderá renomear ou remover o assembly para que o documento ou pasta de trabalho não possa localizá-lo. Isso resulta em um erro gerado toda vez que o documento do Office é aberto.
 
-     Se a solução é usada por várias pessoas, esse método impede que a solução em execução para todos eles. Isso pode ser útil se um problema for encontrado no código ou em um servidor referenciado e você deseja parar todos os usuários de executá-lo.
+     Se a solução for usada por várias pessoas, esse método impedirá que a solução seja executada para todos eles. Isso pode ser útil se um problema for encontrado no código ou em um servidor referenciado e você quiser impedir que todos os usuários o executem.
 
-## <a name="see-also"></a>Consulte também
-- [Proteger as soluções do Office](../vsto/securing-office-solutions.md)
+## <a name="see-also"></a>Confira também
+- [Proteger soluções do Office](../vsto/securing-office-solutions.md)
 - [Implantar uma solução do Office](../vsto/deploying-an-office-solution.md)
 - [Projetar e criar soluções do Office](../vsto/designing-and-creating-office-solutions.md)
 - [Manifestos de aplicativo e implantação em soluções do Office](../vsto/application-and-deployment-manifests-in-office-solutions.md)

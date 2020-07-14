@@ -2,7 +2,7 @@
 title: Como especificar eventos de build (Visual Basic)
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - pre-build events
 - events [Visual Studio], builds
@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33cf9cadc8fbf091fb213926fb25b232d14dc0d7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5986576fdf668aba952609dbf241e31d4b3dbf3d
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76115098"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283964"
 ---
 # <a name="how-to-specify-build-events-visual-basic"></a>Como especificar eventos de build (Visual Basic)
 
@@ -35,7 +35,7 @@ Eventos de build são especificados na caixa de diálogo **Eventos de Build**, d
 
 ### <a name="to-specify-a-build-event"></a>Para especificar um evento de build
 
-1. Com um projeto selecionado no **Solution Explorer,** no menu **Projeto,** clique em **Propriedades**.
+1. Com um projeto selecionado no **Gerenciador de soluções**, no menu **projeto** , clique em **Propriedades**.
 
 2. Clique na guia **Compilar**.
 
@@ -51,7 +51,7 @@ Eventos de build são especificados na caixa de diálogo **Eventos de Build**, d
 
 ## <a name="example-how-to-change-manifest-information-using-a-post-build-event"></a>Exemplo: como alterar informações de manifesto usando um evento de pós-build
 
-O procedimento a seguir mostra como definir a versão mínima do sistema operacional no manifesto do aplicativo usando um comando *.exe* chamado de um evento pós-construção (o arquivo *.exe.manifest* no diretório do projeto). A versão mínima do sistema operacional é um número de quatro partes, como 4.10.0.0. Para fazer isso, o comando alterará a seção `<dependentOS>` do manifesto:
+O procedimento a seguir mostra como definir a versão mínima do sistema operacional no manifesto do aplicativo usando um comando *. exe* chamado a partir de um evento de pós-compilação (o arquivo. *exe. manifest* no diretório do projeto). A versão mínima do sistema operacional é um número de quatro partes, como 4.10.0.0. Para fazer isso, o comando alterará a seção `<dependentOS>` do manifesto:
 
 ```xml
 <dependentOS>
@@ -63,11 +63,11 @@ O procedimento a seguir mostra como definir a versão mínima do sistema operaci
 
 ### <a name="to-create-an-exe-command-to-change-the-application-manifest"></a>Para criar um comando .exe para alterar o manifesto do aplicativo
 
-1. Crie um aplicativo de console para o comando. No menu **Arquivo,** clique em **Novo**e clique em **Projeto**.
+1. Crie um aplicativo de console para o comando. No menu **arquivo** , clique em **novo**e em **projeto**.
 
 2. Na caixa de diálogo **Novo Projeto**, no nó **Visual Basic**, selecione **Windows** e, em seguida, o modelo **Aplicativo de Console**. Dê ao projeto o nome de `ChangeOSVersionVB`.
 
-3. No *Módulo1.vb,* adicione a seguinte `Imports` linha às outras instruções na parte superior do arquivo:
+3. No *Module1. vb*, adicione a seguinte linha às outras `Imports` instruções na parte superior do arquivo:
 
    ```vb
    Imports System.Xml
@@ -116,7 +116,7 @@ O procedimento a seguir mostra como definir a versão mínima do sistema operaci
    End Sub
    ```
 
-   O comando utiliza dois argumentos. O primeiro argumento é o caminho para o manifesto de aplicação (ou seja, a pasta em que o processo de compilação cria o manifesto, tipicamente * \<ProjectName>.publish*). O segundo argumento é a nova versão do sistema operacional.
+   O comando utiliza dois argumentos. O primeiro argumento é o caminho para o manifesto do aplicativo (ou seja, a pasta na qual o processo de compilação cria o manifesto, normalmente * \<ProjectName> . publish*). O segundo argumento é a nova versão do sistema operacional.
 
 5. No menu **Compilar**, clique em **Compilar Solução**.
 
@@ -126,7 +126,7 @@ O procedimento a seguir mostra como definir a versão mínima do sistema operaci
 
 ### <a name="to-invoke-a-post-build-event-to-change-the-application-manifest"></a>Para invocar um evento de pós-build para alterar o manifesto do aplicativo
 
-1. Crie um aplicativo do Windows para o projeto a ser publicado. No menu **Arquivo,** clique em **Novo**e clique em **Projeto**.
+1. Crie um aplicativo do Windows para o projeto a ser publicado. No menu **arquivo** , clique em **novo**e em **projeto**.
 
 2. Na caixa de diálogo **Novo Projeto**, no nó **Visual Basic**, selecione **Área de Trabalho do Windows** e, em seguida, o modelo **Aplicativo do Windows Forms**. Dê ao projeto o nome de `VBWinApp`.
 3. Com o projeto selecionado no **Gerenciador de Soluções**, no menu **Projeto**, clique em **Propriedades**.
@@ -143,7 +143,7 @@ O procedimento a seguir mostra como definir a versão mínima do sistema operaci
     <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
     ```
 
-6. Na **caixa de diálogo Projeto Designer,** vá para a guia **Compilar** e clique no botão **Construir eventos** para abrir a caixa de diálogo **Construir eventos.**
+6. No **Designer de projeto**, vá para a guia **Compilar** e clique no botão **criar eventos** para abrir a caixa de diálogo compilar **eventos** .
 
 7. Na caixa **Linha de Comando do Evento de Pós-Build**, digite o seguinte comando:
 
@@ -151,7 +151,7 @@ O procedimento a seguir mostra como definir a versão mínima do sistema operaci
 
      Ao compilar o projeto, esse comando alterará a versão mínima do sistema operacional no manifesto do aplicativo para 5.1.2600.0.
 
-     A macro `$(TargetPath)` expressa o caminho completo para o arquivo executável que está sendo criado. Portanto, *$(TargetPath).manifest* especificará o manifesto do aplicativo criado no diretório *bin.* A publicação copiará esse manifesto para o local de publicação definido anteriormente.
+     A macro `$(TargetPath)` expressa o caminho completo para o arquivo executável que está sendo criado. Portanto, *$ (TargetPath). manifest* especificará o manifesto do aplicativo criado no diretório *bin* . A publicação copiará esse manifesto para o local de publicação definido anteriormente.
 
 8. Publique o projeto novamente. Acesse a página **Publicar** e clique em **Publicar Agora**.
 
@@ -163,9 +163,9 @@ O procedimento a seguir mostra como definir a versão mínima do sistema operaci
     <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
     ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Página de Compilação, Designer de Projeto (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)
-- [Publicar página, Designer de Projeto](../ide/reference/publish-page-project-designer.md)
-- [Caixa de diálogo da linha de comando do evento de pré-build/evento de pós-build](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)
-- [Como: Especificar eventos de compilação (C#)](../ide/how-to-specify-build-events-csharp.md)
+- [Compilar página, designer de projeto (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)
+- [Publicar página, designer de projeto](../ide/reference/publish-page-project-designer.md)
+- [Caixa de diálogo linha de comando de evento de pré-compilação/evento de pós-compilação](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)
+- [Como especificar eventos de compilação (C#)](../ide/how-to-specify-build-events-csharp.md)

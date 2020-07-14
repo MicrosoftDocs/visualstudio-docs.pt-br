@@ -1,7 +1,7 @@
 ---
 title: IDiaSectionContrib::get_addressSection | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ccca5decf432169add7ebf6d70a33fe6b5c1c9e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f95e986240742599d1762be77a1d55bff54ec268
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742770"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466388"
 ---
 # <a name="idiasectioncontribget_addresssection"></a>IDiaSectionContrib::get_addressSection
 Recupera a parte da seção do endereço da contribuição.
@@ -35,8 +35,8 @@ HRESULT get_addressSection ( 
 
 fora Retorna a parte da seção do endereço da contribuição.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver suporte para essa propriedade. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

@@ -1,7 +1,7 @@
 ---
 title: Depurando um controle ActiveX associado a dados | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82376be37eeb7dd7946b44556a2931e761e2824d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 460277670d76ddcc1001ba2d6060107ea405601e
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738238"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350518"
 ---
 # <a name="debugging-a-data-bound-activex-control"></a>Depurando um controle ActiveX com ligação de dados
 Se você estiver desenvolvendo um controle ActiveX que será associado a um controle da fonte de dados, poderá criar seu próprio aplicativo de contêiner e usar esse contêiner para depurar o controle ActiveX.
@@ -34,6 +34,6 @@ Se você estiver desenvolvendo um controle ActiveX que será associado a um cont
 
  Se você precisar entrar no código do contêiner enquanto está depurando, use a versão de depuração do contêiner ou use a versão de depuração do contêiner de teste ActiveX. Para obter mais informações, consulte [TSTCON exemplo: Contêiner de teste de controle ActiveX](https://msdn.microsoft.com/library/72fa40ef-27d3-400c-813f-10b03236e600).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Depuração de COM e ActiveX](../debugger/com-and-activex-debugging.md)
 - [Controles ActiveX](/cpp/mfc/activex-controls)

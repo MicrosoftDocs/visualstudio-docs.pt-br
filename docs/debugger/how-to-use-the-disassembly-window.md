@@ -2,7 +2,7 @@
 title: Exibir o código de desmontagem no depurador | Microsoft Docs
 ms.custom: seodec18
 ms.date: 10/30/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.disassembly
 dev_langs:
@@ -22,55 +22,55 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 43214ee122b3aa5c3907b9176631f2dc22c9178e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0570aec5e8571e75cf64418a2c8c7c95cf507d31
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62846384"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348698"
 ---
-# <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Exibir o código de desmontagem no depurador do Visual Studio (C#, C++, Visual Basic, F#)
+# <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Exibir o código de desmontagem no depurador do Visual Studio (C#, C++, Visual Basic, F #)
 
-A janela **Desmontagem** mostra o código assembly correspondente às instruções criadas pelo compilador. Se você estiver depurando código gerenciado, essas instruções de assembly correspondem ao código nativo criado pelo compilador Just-in-Time (JIT), não a Microsoft intermediate language (MSIL criado pelo compilador do Visual Studio).
+A janela **Desmontagem** mostra o código assembly correspondente às instruções criadas pelo compilador. Se você estiver depurando código gerenciado, essas instruções de assembly corresponderão ao código nativo criado pelo compilador JIT (just-in-time), não pela MSIL (Microsoft Intermediate Language) criado pelo compilador do Visual Studio.
 
 > [!NOTE]
-> Para aproveitar ao máximo os **desmontagem** janela, entender ou aprender os fundamentos da [programação da linguagem de assembly](https://wikipedia.org/wiki/Assembly_language).
+> Para aproveitar ao máximo a janela de **desmontagem** , entenda ou Aprenda os conceitos básicos da [programação de linguagem de assembly](https://wikipedia.org/wiki/Assembly_language).
 
-Esse recurso só estará disponível se a depuração do nível de endereços estiver habilitada. Ele não está disponível para depuração de SQL ou script.
+Esse recurso só estará disponível se a depuração no nível de endereço estiver habilitada. Ele não está disponível para depuração de script ou SQL.
 
 Além das instruções de assembly, a janela **Desmontagem** pode mostrar as seguintes informações opcionais:
 
-- Endereço de memória onde cada instrução está localizada. Para aplicativos nativos, ele é o endereço de memória real. Para o Visual Basic ou C#, ele é um deslocamento do início da função.
+- Endereço de memória onde cada instrução está localizada. Para aplicativos nativos, é o endereço de memória real. Para Visual Basic ou C#, é um deslocamento do início da função.
 
 - O código-fonte do qual o código do assembly deriva.
 
-- Código de bytes, ou seja, as representações de byte do computador real ou instruções MSIL.
+- Bytes de código, ou seja, as representações de byte do computador ou das instruções MSIL reais.
 
 - Nomes do símbolo para os endereços de memória.
 
 - Números de linha que correspondem ao código-fonte.
 
-Instruções de linguagem assembly consistem *mnemônicos*, que são abreviações para nomes de instrução, e *símbolos* para variáveis, registros e constantes. Cada instrução de linguagem de máquina é representada por um mnemônico da linguagem assembly opcionalmente seguido por um ou mais símbolos.
+As instruções de linguagem de assembly consistem em *mnemônicos*, que são abreviações de nomes de instrução e *símbolos* para variáveis, registros e constantes. Cada instrução de linguagem de computador é representada por um mnemônico de linguagem de assembly, opcionalmente seguido por um ou mais símbolos.
 
-Código de assembly depende intensamente registros do processador ou, para código gerenciado, registradores common language runtime. Você pode usar o **desmontagem** janela juntamente com o **registra** janela, que permite que você examine o conteúdo do registro.
+O código do assembly depende muito dos registros do processador ou, para o código gerenciado, Common Language Runtime registra. Você pode usar a janela de **desmontagem** junto com a janela de **registros** , que permite examinar o conteúdo do registro.
 
-Para exibir instruções de código de máquina em sua forma bruta de numérica, em vez de linguagem assembly, use o **memória** janela ou selecione **Bytes de código** no menu de atalho no **desmontagem**  janela.
+Para exibir as instruções de código do computador em sua forma numérica bruta, em vez de na linguagem do assembly, use a janela **memória** ou selecione **bytes de código** no menu de atalho na janela **desmontagem** .
 
 ## <a name="use-the-disassembly-window"></a>Usar a janela Desmontagem
 
-Para habilitar o **desmontagem** janela, em **ferramentas** > **opções** (ou **ferramentas**  >  **As opções**) > **Debugging**, selecione **Habilitar depuração no nível do endereço**.
+Para habilitar a janela de **desmontagem** , em **ferramentas**  >  **Opções** (ou **ferramentas**  >  **Opções**) > **depuração**, selecione **Habilitar depuração no nível de endereço**.
 
-Para abrir o **desmontagem** janela durante a depuração, selecione **Windows** > **desmontagem** ou pressione **Alt** + **8**.
+Para abrir a janela de **desmontagem** durante a depuração **Windows**, selecione  >  **desmontagem** do Windows ou pressione **ALT** + **8**.
 
 > [!NOTE]
-> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Redefinir as configurações](../ide/environment-settings.md#reset-settings).
+> As caixas de diálogo e os comandos de menu encontrados podem diferir daqueles descritos na Ajuda, dependendo das configurações ativas ou edição. Para alterar suas configurações, selecione **Importar e Exportar Configurações** no menu **Ferramentas** . Para obter mais informações, confira [Redefinir as configurações](../ide/environment-settings.md#reset-settings).
 
-Para ativar ou desativar informações opcionais, clique com botão direito no **desmontagem** janela e defina ou desmarque as opções desejadas no menu de atalho.
+Para ativar ou desativar as informações opcionais, clique com o botão direito do mouse na janela **desmontagem** e defina ou desmarque as opções desejadas no menu de atalho.
 
 Uma seta amarela na margem esquerda marca o ponto de execução atual. Para código nativo, o ponto de execução corresponde ao contador de programa da CPU. Este local mostra a próxima instrução que será executada em seu programa.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Paginação para cima ou para baixo na memória](../debugger/how-to-page-up-or-down-in-memory.md)
-* [Exibição de dados no depurador](../debugger/viewing-data-in-the-debugger.md)
-* [Como: Usar a janela Registros](../debugger/how-to-use-the-registers-window.md)
+* [Exibindo dados no depurador](../debugger/viewing-data-in-the-debugger.md)
+* [Como: usar a janela de registros](../debugger/how-to-use-the-registers-window.md)

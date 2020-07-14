@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::findInlineFramesByRVA | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: e7a6d9cb-2726-4ac7-9f38-415ad215bf9c
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e174db264a7d8c3576054fcccf8da333d3e1e76
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f15a686c8539bf3668b880c8f506b20a5f9892a6
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741164"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464460"
 ---
 # <a name="idiasymbolfindinlineframesbyrva"></a>IDiaSymbol::findInlineFramesByRVA
 Recupera uma enumeração que permite que um cliente Itere em todos os quadros embutidos em um endereço virtual relativo (RVA) específico.
@@ -35,12 +35,12 @@ no Especifica o endereço como um RVA.
 
  `ppResult`
 
-fora Mantém um objeto `IDiaEnumSymbols` que contém a lista de quadros recuperados.
+fora Mantém um `IDiaEnumSymbols` objeto que contém a lista de quadros recuperados.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)

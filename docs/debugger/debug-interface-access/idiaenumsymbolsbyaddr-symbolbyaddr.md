@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSymbolsByAddr::symbolByAddr | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b0891cc5eb244b781b69e231d4282b92aa064b91
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9750c57bc9a6cacc8d945b0acdd7723769e74e53
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743842"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467627"
 ---
 # <a name="idiaenumsymbolsbyaddrsymbolbyaddr"></a>IDiaEnumSymbolsByAddr::symbolByAddr
 Posiciona o enumerador executando uma pesquisa por número de seção de imagem e deslocamento.
@@ -45,9 +45,9 @@ no Deslocamento na seção.
 
 fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que representa o símbolo encontrado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se o símbolo não foi encontrado. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

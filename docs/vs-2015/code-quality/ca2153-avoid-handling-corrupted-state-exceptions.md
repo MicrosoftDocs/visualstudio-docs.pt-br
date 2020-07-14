@@ -8,19 +8,19 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9d4ca2668f2d6241e9a3cca88b4722ee5348abc3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 27d837c09e5f2f90796c149bf58d1114d7e6352d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667419"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546309"
 ---
-# <a name="ca2153-avoid-handling-corrupted-state-exceptions"></a>CA2153: evite manipular exceções de estado corrompido
+# <a name="ca2153-avoid-handling-corrupted-state-exceptions"></a>CA2153: Evitar tratamento de exceções de estado corrompido
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|AvoidHandlingCorruptedStateExceptions|
+|TypeName|AvoidHandlingCorruptedStateExceptions|
 |CheckId|CA2153|
 |Categoria|Microsoft.Security|
 |Alteração Significativa|Sem interrupção|
@@ -29,7 +29,7 @@ ms.locfileid: "72667419"
  As [exceções de estado corrompidas (CSE)](https://msdn.microsoft.com/magazine/dd419661.aspx) indicam que há corrupção de memória em seu processo. A captura deles, em vez de permitir que o processo falhe, pode levar a vulnerabilidades de segurança se um invasor puder fazer uma exploração na região de memória corrompida.
 
 ## <a name="rule-description"></a>Descrição da Regra
- CSE indica que o estado de um processo foi corrompido e não detectado pelo sistema. No cenário de estado corrompido, um manipulador geral só capturará a exceção se você marcar seu método com o atributo de `HandleProcessCorruptedStateExceptions` apropriado. Por padrão, o [CLR (Common Language Runtime)](https://msdn.microsoft.com/library/8bs2ecf4.aspx) não invocará manipuladores catch para CSEs.
+ CSE indica que o estado de um processo foi corrompido e não detectado pelo sistema. No cenário de estado corrompido, um manipulador geral só capturará a exceção se você marcar o método com o `HandleProcessCorruptedStateExceptions` atributo apropriado. Por padrão, o [CLR (Common Language Runtime)](https://msdn.microsoft.com/library/8bs2ecf4.aspx) não invocará manipuladores catch para CSEs.
 
  Permitir que o processo falhe sem capturar esses tipos de exceções é a opção mais segura, pois mesmo o código de registro em log pode permitir que os invasores explorem bugs de corrupção de memória.
 

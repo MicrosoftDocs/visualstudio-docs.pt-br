@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_offsetInUdt | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f0eeffba743d7fae1d473c45eb350fbfc8bcd0b9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: cb70f66ca23f9710b2d41e39b4cd626829a095d0
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739565"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462605"
 ---
 # <a name="idiasymbolget_offsetinudt"></a>IDiaSymbol::get_offsetInUdt
 Recupera o deslocamento para o início de um tipo definido pelo usuário (UDT) de um membro no UDT.
@@ -35,8 +35,8 @@ HRESULT get_offsetInUdt( 
 
 fora Retorna o deslocamento em bytes do local do símbolo.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
@@ -51,5 +51,5 @@ fora Retorna o deslocamento em bytes do local do símbolo.
 
  DLL: msdia100.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

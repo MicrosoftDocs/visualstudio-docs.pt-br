@@ -1,7 +1,7 @@
 ---
 title: Como exibir herança entre tipos (Designer de Classe)
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.classdesigner.AssociationTypeNotFoundError
 helpviewer_keywords:
@@ -14,16 +14,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 47907493451841b631d561bfddb74676a460ff29
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d5c35279421ad17e62afe707d62dbc879d03b384
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591769"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769906"
 ---
 # <a name="how-to-view-inheritance-between-types-in-class-designer"></a>Como exibir herança entre tipos no Designer de Classe
 
-Você poderá localizar a relação de herança, se ela existir, entre um tipo base e seus tipos derivados em um diagrama de classe no **Designer de Classe**. Para criar uma relação de herança, se não existir nenhuma, entre dois tipos, [consulte Como: Criar herança entre os tipos](how-to-create-inheritance-between-types.md).
+Você poderá localizar a relação de herança, se ela existir, entre um tipo base e seus tipos derivados em um diagrama de classe no **Designer de Classe**. Para criar uma relação de herança, se não houver nenhuma, entre dois tipos, consulte [como: criar herança entre tipos](how-to-create-inheritance-between-types.md).
 
 ## <a name="to-find-the-base-type"></a>Para localizar o tipo base
 
@@ -48,4 +48,4 @@ Você pode também clicar com o botão direito do mouse no tipo cujos tipos deri
 ## <a name="see-also"></a>Confira também
 
 - [Como criar associações entre tipos](how-to-create-associations-between-types.md)
-- [Visualização de tipos e relacionamentos](designing-and-viewing-classes-and-types.md)
+- [Exibindo tipos e relações](designing-and-viewing-classes-and-types.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_virtualBaseTableType | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aaddb8b71ba96511af3682b442c1e5c8e84a409c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 858f149abb0bec444c43ea706e638def4ff930ce
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738837"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461437"
 ---
 # <a name="idiasymbolget_virtualbasetabletype"></a>IDiaSymbol::get_virtualBaseTableType
 Recupera o tipo de um ponteiro de tabela base virtual.
@@ -36,14 +36,14 @@ HRESULT get_virtualBaseTableType(
 |---------------|-----------------|
 |`pRetVal`|fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que especifica o tipo de tabela base.|
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
 ## <a name="remarks"></a>Comentários
- Um ponteiro de tabela base virtual (`vbtptr`) é um ponteiro oculto em uma [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] vtable que manipula a herança de classes base virtuais. Um `vbtptr` pode ter tamanhos diferentes dependendo das classes herdadas.
+ Um ponteiro de tabela base virtual ( `vbtptr` ) é um ponteiro oculto em uma [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] vtable que manipula a herança de classes base virtuais. Um `vbtptr` pode ter tamanhos diferentes dependendo das classes herdadas.
 
  Esse método retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que pode ser usado para determinar o tamanho do vbtptr.
 
@@ -54,5 +54,5 @@ HRESULT get_virtualBaseTableType(
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,19 +1,19 @@
 ---
 title: Criar e editar um arquivo de esquema XSD
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 91b10cd7-c0cd-4e5a-a46b-4fed60dff542
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 976448709f7ecf9eaff0a563b867f12b3d9fa770
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 95f7b9d52f6eaf1aa95728b28268e6d4bcba8aed
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592757"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815403"
 ---
 # <a name="how-to-create-and-edit-an-xsd-schema-file"></a>Como: criar e editar um arquivo de esquema XSD
 
@@ -21,7 +21,7 @@ Este tópico descreve como criar um novo arquivo de esquema XML (XSD) e, em segu
 
 ## <a name="to-create-a-new-xml-schema-file"></a>Para criar um novo arquivo de esquema XML
 
-1. No Visual Studio, abra o menu **arquivo** e selecione **novo** > **arquivo**. Ou use o atalho de teclado **Ctrl**+**N** .
+1. No Visual Studio, abra o menu **arquivo** e selecione **novo**  >  **arquivo**. Ou use o atalho de teclado **Ctrl** + **N** .
 
 2. Na caixa de diálogo **novo arquivo** , selecione **esquema XML** e, em seguida, selecione **abrir**.
 

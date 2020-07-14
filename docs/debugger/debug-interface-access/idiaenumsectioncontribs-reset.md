@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSectionContribs::Reset | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b319a753cd425c64129df29607da9a6fcbeaa6a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 08a630f2a417edb2f7e34619cd6258c1aaaf6c3c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744288"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468096"
 ---
 # <a name="idiaenumsectioncontribsreset"></a>IDiaEnumSectionContribs::Reset
 Redefine uma sequência de enumeração para o início.
@@ -31,5 +31,5 @@ HRESULT Reset();
 ## <a name="return-value"></a>Valor retornado
  Retorna `S_OK`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)

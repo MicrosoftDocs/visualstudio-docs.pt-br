@@ -1,7 +1,7 @@
 ---
-title: 'Como: Pesquisar por um processo na exibição de processos | Microsoft Docs'
+title: Como pesquisar um processo no modo de exibição de processos | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Processes view
 - processes, searching for
@@ -11,33 +11,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a6b57226b14963759bb4d78afff3beb5559a63e
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: e823ecb1f7523c1a6f094d5669f4a37a72e84f60
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64798982"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349283"
 ---
-# <a name="how-to-search-for-a-process-in-processes-view"></a>Como: Pesquise um processo na exibição de processos
-Você pode procurar um processo específico na exibição de processos por meio de sua cadeia de caracteres de ID ou o módulo de processo como critérios de pesquisa. Você também pode especificar a direção inicial da pesquisa. Os campos na caixa de diálogo mostrará os atributos do processo selecionado na árvore de processo.
+# <a name="how-to-search-for-a-process-in-processes-view"></a>Como procurar um processo na exibição de processos
+Você pode pesquisar um processo específico na exibição de processos usando sua ID de processo ou cadeia de caracteres de módulo como critérios de pesquisa. Você também pode especificar a direção inicial da pesquisa. Os campos na caixa de diálogo mostrarão os atributos do processo selecionado na árvore de processo.
 
-### <a name="to-search-for-a-process-in-processes-view"></a>Para pesquisar por um processo na exibição de processos
+### <a name="to-search-for-a-process-in-processes-view"></a>Para procurar um processo na exibição de processos
 
-1. Organizar as janelas assim que Spy + + e um ativo [exibição de processos](../debugger/processes-view.md) janela são visíveis.
+1. Organize suas janelas para que o Spy + + e uma janela de [exibição de processos](../debugger/processes-view.md) ativos fiquem visíveis.
 
-2. Dos **pesquisa** menu, escolha **localizar processo**
+2. No menu **Pesquisar** , escolha **Localizar processo**
 
-    O [caixa de diálogo de pesquisa de processo](../debugger/process-search-dialog-box.md) é aberta.
+    A [caixa de diálogo pesquisa de processo](../debugger/process-search-dialog-box.md) é aberta.
 
-3. Como critérios de pesquisa, digite a ID do processo ou uma cadeia de caracteres do módulo.
+3. Digite a ID do processo ou uma cadeia de caracteres do módulo como critérios de pesquisa.
 
-4. Limpe todos os campos para o qual você deseja especificar valores.
+4. Desmarque os campos para os quais você não deseja especificar valores.
 
    > [!TIP]
-   > Para localizar todos os processos pertencentes a um módulo, desmarque a **processo** caixa e digite o nome do módulo na **módulo** caixa. Em seguida, use **Localizar próximo** para continuar a pesquisa de processos.
+   > Para localizar todos os processos pertencentes a um módulo, desmarque a caixa **processar** e digite o nome do módulo na caixa **módulo** . Em seguida, use **Localizar próximo** para continuar pesquisando processos.
 
-5. Escolher **para cima** ou **para baixo** para a direção inicial da pesquisa.
+5. Escolha para **cima** ou para **baixo** na direção inicial da pesquisa.
 
 6. Clique em **OK**.
 
-   Se um processo de correspondência for encontrado, ele é realçado na **exibição de processo** janela.
+   Se um processo de correspondência for encontrado, ele será realçado na janela de **exibição de processo** .

@@ -15,19 +15,19 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 62a2adc6f01e5cb26a6af26d71a124f8b81e07fb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 09e932651576f9b6d595657ad024b8f2697ad016
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671973"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535740"
 ---
-# <a name="ca2243-attribute-string-literals-should-parse-correctly"></a>CA2243: os literais da cadeia de caracteres de atributo devem ser analisados corretamente
+# <a name="ca2243-attribute-string-literals-should-parse-correctly"></a>CA2243: Literais de cadeias de caracteres de atributo devem ser analisados corretamente
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|AttributeStringLiteralsShouldParseCorrectly|
+|TypeName|AttributeStringLiteralsShouldParseCorrectly|
 |CheckId|CA2243|
 |Categoria|Microsoft. Usage|
 |Alteração Significativa|Sem interrupção|
@@ -36,7 +36,7 @@ ms.locfileid: "72671973"
  O parâmetro literal da cadeia de caracteres de um atributo não é analisado corretamente para uma URL, GUID ou versão.
 
 ## <a name="rule-description"></a>Descrição da Regra
- Como os atributos são derivados de <xref:System.Attribute?displayProperty=fullName>, e os atributos são usados no momento da compilação, somente valores constantes podem ser passados para seus construtores. Os parâmetros de atributo que devem representar URLs, GUIDs e versões não podem ser digitados como <xref:System.Uri?displayProperty=fullName>, <xref:System.Guid?displayProperty=fullName> e <xref:System.Version?displayProperty=fullName>, pois esses tipos não podem ser representados como constantes. Em vez disso, eles devem ser representados por cadeias de caracteres.
+ Como os atributos são derivados de <xref:System.Attribute?displayProperty=fullName> , e os atributos são usados no momento da compilação, somente valores constantes podem ser passados para seus construtores. Os parâmetros de atributo que devem representar URLs, GUIDs e versões não podem ser digitados como <xref:System.Uri?displayProperty=fullName> , <xref:System.Guid?displayProperty=fullName> e <xref:System.Version?displayProperty=fullName> , porque esses tipos não podem ser representados como constantes. Em vez disso, eles devem ser representados por cadeias de caracteres.
 
  Como o parâmetro é digitado como uma cadeia de caracteres, é possível que um parâmetro formatado incorretamente possa ser passado no momento da compilação.
 
@@ -61,5 +61,5 @@ ms.locfileid: "72671973"
 
 - Parâmetros que contêm ' URI ', ' urn ' ou ' URL ' e não podem ser analisados para System. Uri.
 
-## <a name="see-also"></a>Consulte também
- [CA1054: os parâmetros de URI não devem ser cadeias de caracteres](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)
+## <a name="see-also"></a>Consulte Também
+ [CA1054: Parâmetros de URI não devem ser cadeias de caracteres](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)

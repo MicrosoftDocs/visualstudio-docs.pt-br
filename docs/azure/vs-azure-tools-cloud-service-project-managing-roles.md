@@ -6,15 +6,15 @@ manager: jillfra
 assetId: 5ec9ae2e-8579-4e5d-999e-8ae05b629bd1
 ms.custom: vs-azure
 ms.workload: azure-vs
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: f03ac134a54f3a32108175fa858d22b5c4aec8af
-ms.sourcegitcommit: 59a8732dc563242590f7c6ccf4ced6c6d195533c
+ms.openlocfilehash: 72aba423567f0b23f09e002073fdca89c99e6f4f
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81489682"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280831"
 ---
 # <a name="managing-roles-in-azure-cloud-services-with-visual-studio"></a>Gerenciando funções nos serviços de nuvem do Azure com o Visual Studio
 Depois de criar o serviço de nuvem do Azure, é possível adicionar novas funções a ele ou remover funções existentes. Você também pode importar um projeto existente e convertê-lo em uma função. Por exemplo, você pode importar um aplicativo Web ASP.NET e designá-lo como uma função web.
@@ -46,7 +46,7 @@ As etapas a seguir explicarão como remover uma função web ou de trabalho de u
 ## <a name="readding-a-role-to-an-azure-cloud-service-project"></a>Lendo uma função de um projeto de serviço de nuvem do Azure
 Se você remove uma função de seu projeto de serviço de nuvem, mas decide posteriormente adicionar a função de volta ao projeto, somente a declaração de função e os atributos básicos, como informações de diagnóstico e pontos de extremidade são adicionados. Nenhum recurso ou referência adicional é adicionado ao `ServiceDefinition.csdef` arquivo ou ao arquivo `ServiceConfiguration.cscfg`. Se desejar adicionar essas informações, adicione-as manualmente nesses arquivos.
 
-Por exemplo, você pode remover uma função de serviço Web e decidir posteriormente adicionar essa função de volta em sua solução. Se você fizer isso, ocorrerá um erro. Para evitar esse erro, é necessário adicionar o elemento `<LocalResources>` mostrado no XML a seguir ao arquivo `ServiceDefinition.csdef`. Use o nome da função de serviço web que você adicionou ** \<** de volta ao projeto como parte do atributo nome para o elemento LocalStorage>. Neste exemplo, o nome da função de serviço Web é **WCFServiceWebRole1**.
+Por exemplo, você pode remover uma função de serviço Web e decidir posteriormente adicionar essa função de volta em sua solução. Se você fizer isso, ocorrerá um erro. Para evitar esse erro, é necessário adicionar o elemento `<LocalResources>` mostrado no XML a seguir ao arquivo `ServiceDefinition.csdef`. Use o nome da função de serviço Web que você adicionou de volta ao projeto como parte do atributo de nome do **\<LocalStorage>** elemento. Neste exemplo, o nome da função de serviço Web é **WCFServiceWebRole1**.
 
 ```xml
 <WebRole name="WCFServiceWebRole1">

@@ -1,18 +1,18 @@
 ---
 title: Como gravar testes de unidade para DLLs em C++
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 752a2bb53e25954824a1400ee178cd0cbf4adcf2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 16020c0928229c80a9eb33b3bc4804b004d9f432
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77275429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816001"
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>Como gravar testes de unidade para DLLs em C++
 
@@ -38,8 +38,8 @@ Este passo a passo descreve como desenvolver uma DLL nativa em C++ usando a meto
 
 1. No menu **Arquivo**, escolha **Novo** > **Projeto**.
 
-     **Visual Studio 2017 e anterior**: Expanda**modelos** >  **instalados** > **Teste Visual C++.** > **Test**
-     **Visual Studio 2019**: Defina **o Idioma** para C++ e digite "teste" na caixa de pesquisa.
+     **Visual Studio 2017 e anterior**: expanda os modelos **instalados**  >  **Templates**  >  **Visual C++**  >  **teste**.
+     **Visual Studio 2019**: defina o **idioma** como C++ e digite "teste" na caixa de pesquisa.
 
      Escolha o modelo de **Projeto de Teste de Unidade Nativo** ou qualquer estrutura instalada de sua preferência. Se você escolher outro modelo, como Google Test ou Boost.Test, os princípios básicos são os mesmos, embora alguns detalhes serão diferentes.
 
@@ -82,13 +82,13 @@ Este passo a passo descreve como desenvolver uma DLL nativa em C++ usando a meto
 
          ![Gerenciador de Testes de Unidade com um teste aprovado](../test/media/utecpp04.png)
 
-## <a name="create-a-dll-project"></a><a name="create_dll_project"></a>Criar um projeto DLL
+## <a name="create-a-dll-project"></a><a name="create_dll_project"></a>Criar um projeto de DLL
 
 ::: moniker range="vs-2019"
 
 As etapas a seguir mostram como criar um projeto de DLL no Visual Studio 2019.
 
-1. Crie um projeto C++ usando o **Assistente de Desktop do Windows**: Clique com o botão direito do mouse no nome da solução no Solution **Explorer** e escolha **Adicionar** > **novo projeto**. Defina a **Linguagem de programação** como C++ e, em seguida, digite "windows" na caixa de pesquisa. Escolha **Assistente de área de trabalho do Windows** na lista de resultados.
+1. Criar um projeto C++ usando o **Assistente de área de trabalho do Windows**: clique com o botão direito do mouse no nome da solução em **Gerenciador de soluções** e escolha **Adicionar**  >  **novo projeto**. Defina a **Linguagem de programação** como C++ e, em seguida, digite "windows" na caixa de pesquisa. Escolha **Assistente de área de trabalho do Windows** na lista de resultados.
 
      Nestas instruções passo a passo, o projeto é chamado `RootFinder`.
 
@@ -194,7 +194,7 @@ As etapas a seguir mostram como criar um projeto de DLL no Visual Studio 2017.
 
    Você configurou o teste e os projetos de código, além de ter verificado que pode executar testes que executam funções no projeto de código. Agora, você pode começar a escrever testes e códigos reais.
 
-## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="iterate"></a>Aumentar iterativamente os testes e fazê-los passar
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="iterate"></a>Aumentar iterativamente os testes e fazer com que eles passem
 
 1. Adicione um novo teste:
 
@@ -243,7 +243,7 @@ As etapas a seguir mostram como criar um projeto de DLL no Visual Studio 2017.
     }
     ```
 
-4. Construa a solução e, em seguida, no **Test Explorer,** escolha **Executar tudo**.
+4. Compile a solução e, em seguida, no **Gerenciador de testes**, escolha **executar tudo**.
 
      Ambos os testes são aprovados.
 
@@ -252,7 +252,7 @@ As etapas a seguir mostram como criar um projeto de DLL no Visual Studio 2017.
     > [!TIP]
     > Desenvolva o código adicionando testes, um de cada vez. Verifique se todos os testes passaram após cada iteração.
 
-## <a name="debug-a-failing-test"></a><a name="debug"></a>Depurar um teste de falha
+## <a name="debug-a-failing-test"></a><a name="debug"></a>Depurar um teste com falha
 
 1. Adicione outro teste:
 
@@ -358,7 +358,7 @@ As etapas a seguir mostram como criar um projeto de DLL no Visual Studio 2017.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- **Isolamento.** A maioria das DLLs são dependentes de outros subsistemas, como bancos de dados e outras DLLs. Geralmente, esses outros componentes são desenvolvidos em paralelo. Para permitir que os testes de unidade sejam executados enquanto os outros componentes ainda não estiverem disponíveis, você precisará substituir o fictício ou
+- **Isolado.** A maioria das DLLs são dependentes de outros subsistemas, como bancos de dados e outras DLLs. Geralmente, esses outros componentes são desenvolvidos em paralelo. Para permitir que os testes de unidade sejam executados enquanto os outros componentes ainda não estiverem disponíveis, você precisará substituir o fictício ou
 
 - **Testes de aceitação do build.** Você pode executar testes no servidor de build da sua equipe em intervalos definidos. Isso garante que não sejam introduzidos bugs quando o trabalho de vários membros da equipe são integrados.
 
@@ -366,10 +366,10 @@ As etapas a seguir mostram como criar um projeto de DLL no Visual Studio 2017.
 
    Você também pode exigir um nível mínimo de cobertura de código.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Adicionar testes de unidade a aplicativos C++ existentes](../test/how-to-use-microsoft-test-framework-for-cpp.md)
 - [Usando Microsoft.VisualStudio.TestTools.CppUnitTestFramework](how-to-use-microsoft-test-framework-for-cpp.md)
-- [Depurar código nativo](../debugger/debugging-native-code.md)
+- [Depurar o código nativo](../debugger/debugging-native-code.md)
 - [Passo a passo: Criando e usando uma biblioteca de vínculo dinâmico (C++)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)
-- [Importar e exportar](/cpp/build/importing-and-exporting)
+- [Importação e exportação](/cpp/build/importing-and-exporting)

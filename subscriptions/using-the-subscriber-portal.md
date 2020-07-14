@@ -5,20 +5,20 @@ ms.author: v-evwin
 manager: lank
 ms.assetid: 8470f035-2a82-4052-9a12-6f24ce796861
 ms.date: 07/19/2019
-ms.topic: conceptual
+ms.topic: overview
 description: Saiba mais sobre a gama completa de benefícios disponíveis para você no portal de assinaturas do Visual Studio
-ms.openlocfilehash: 5403880dc5a2ac62cd23800cea5acacd2766bc6f
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: b2ace2416950336e7c4a872e378684d8160e2897
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232194"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902882"
 ---
 # <a name="using-the-subscriber-portal---myvisualstudiocom"></a>Usando o Portal do Assinante – my.visualstudio.com
 
-O Portal de Assinaturas [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)do Visual Studio é o seu recurso all-in-one para aproveitar toda a gama de benefícios fornecidos através de sua assinatura do Visual Studio.
+O portal de assinaturas do Visual Studio, [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) , é o recurso All-in-One, para aproveitar toda a gama de benefícios fornecidos por meio de sua assinatura do Visual Studio.
 
-O uso do portal requer que você entre com a identidade associada à a assinatura.  Esta pode ser sua Conta Microsoft (MSA) ou um endereço de e-mail fornecido a você por uma organização, como seu empregador ou escola.  Saiba mais sobre como [entrar](signing-in.md).
+O uso do portal requer que você entre com a identidade associada à a assinatura.  Essa pode ser sua conta da Microsoft (MSA) ou um endereço de email fornecido a você por uma organização, como seu empregador ou escola.  Saiba mais sobre como [entrar](signing-in.md).
 
 O portal está organizado em seis páginas.  Cada página fornece acesso a diferentes produtos ou serviços incluídos na assinatura.  As seis páginas são Benefícios, Downloads, Chaves do Produto, Assinaturas, Suporte e Marketplace.
 
@@ -39,7 +39,7 @@ Dependendo da assinatura ou do programa, você tem acesso a downloads de softwar
 
 Para que seja simples para assinantes que têm várias assinaturas associadas a uma única conta, quando acessar a página Downloads, você verá os downloads disponíveis para a assinatura mais alta que possui.  Dessa forma, você pode ver todos os downloads, independentemente da assinatura que está usando no momento.
 
-## <a name="product-keys"></a>[Chaves do Produto](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)
+## <a name="product-keys"></a>[Chaves do produto](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)
 Acesse a página Chaves do Produto para obter as chaves para instalar e ativar produtos e ver quais chaves você já solicitou.  Você pode até exportar uma lista de todas as chaves, para fins de proteção.
 
 ## <a name="subscriptions"></a>[Assinaturas](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)
@@ -60,4 +60,4 @@ Além dos benefícios individuais encontrados na categoria de Suporte na página
 - [Documentação do Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Próximas etapas
-Faça login no [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) portal e confira seus benefícios.  Também é possível saber mais sobre como entrar no portal com sua [MSA](sign-in-msa.md) (Conta Microsoft), sua [conta corporativa ou de estudante](sign-in-work.md) e até mesmo [sua conta do GitHub](sign-in-github.md). 
+Entre no portal em [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) e Confira seus benefícios.  Também é possível saber mais sobre como entrar no portal com sua [MSA](sign-in-msa.md) (Conta Microsoft), sua [conta corporativa ou de estudante](sign-in-work.md) e até mesmo [sua conta do GitHub](sign-in-github.md). 

@@ -15,31 +15,31 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 86dc7042a48faa200ef9c360829b1756bc261ab0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5685ad7a760e00392b5f9684cdf399ee320d4a0c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652725"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540251"
 ---
-# <a name="ca1412-mark-comsource-interfaces-as-idispatch"></a>CA1412: marcar interfaces ComSource como IDispatch
+# <a name="ca1412-mark-comsource-interfaces-as-idispatch"></a>CA1412: Marcar interfaces ComSource como IDispatch
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|MarkComSourceInterfacesAsIDispatch|
+|TypeName|MarkComSourceInterfacesAsIDispatch|
 |CheckId|CA1412|
 |Categoria|Microsoft. Interoperability|
 |Alteração Significativa|Quebra|
 
 ## <a name="cause"></a>Causa
- Um tipo é marcado com o atributo <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> e pelo menos uma interface especificada não é marcada com o atributo <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> definido como o valor `InterfaceIsDispatch`.
+ Um tipo é marcado com o <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> atributo e pelo menos uma interface especificada não é marcada com o <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> atributo definido como o `InterfaceIsDispatch` valor.
 
 ## <a name="rule-description"></a>Descrição da Regra
- <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> é usado para identificar as interfaces de evento que uma classe expõe para clientes Component Object Model (COM). Essas interfaces devem ser expostas como `InterfaceIsIDispatch` para permitir que Visual Basic COM clientes COM 6 recebam notificações de eventos. Por padrão, se uma interface não estiver marcada com o atributo <xref:System.Runtime.InteropServices.InterfaceTypeAttribute>, ela será exposta como uma interface dupla.
+ <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>é usado para identificar as interfaces de evento que uma classe expõe para clientes Component Object Model (COM). Essas interfaces devem ser expostas como `InterfaceIsIDispatch` para permitir que clientes COM Visual Basic 6 recebam notificações de eventos. Por padrão, se uma interface não estiver marcada com o <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> atributo, ela será exposta como uma interface dupla.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação dessa regra, adicione ou modifique o atributo <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> para que seu valor seja definido como InterfaceIsIDispatch para todas as interfaces especificadas com o atributo <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>.
+ Para corrigir uma violação dessa regra, adicione ou modifique o <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> atributo para que seu valor seja definido como InterfaceIsIDispatch para todas as interfaces especificadas com o <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> atributo.
 
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
  Não suprima um aviso nessa regra.
@@ -51,7 +51,7 @@ ms.locfileid: "72652725"
  [!code-vb[FxCop.Interoperability.MarkIDispatch#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Interoperability.MarkIDispatch/vb/FxCop.Interoperability.MarkIDispatch.vb#1)]
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1408: não usar AutoDual ClassInterfaceType](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)
+ [CA1408: Não usar AutoDual ClassInterfaceType](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Como gerar eventos manipulados por um coletor de com](https://msdn.microsoft.com/7c9944b2-e951-4c3e-a0a1-59b2ae37d7fd) [interoperação com código não gerenciado](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)

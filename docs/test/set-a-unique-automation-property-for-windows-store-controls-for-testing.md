@@ -1,18 +1,18 @@
 ---
 title: Definir uma propriedade de automação exclusiva para controles UWP para teste
 ms.date: 05/31/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
 author: mikejo5000
-ms.openlocfilehash: 51e16dcaa48a08ae97bc80be1d33163c6f3af875
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 62409dc4aac8f640c7b58b112f7f86215ba2043b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590443"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286707"
 ---
 # <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>Definir uma propriedade de automação exclusiva para controles UWP para teste
 
@@ -22,7 +22,7 @@ Se desejar executar testes de interface do usuário codificados no aplicativo UW
 
 ## <a name="static-xaml-definition"></a>Definição XAML estática
 
-Para especificar uma propriedade de automação única para um controle definido em seu arquivo XAML, você pode definir o **AutomationProperties.AutomationId** ou **AutomationProperties.Name** implicitamente ou explicitamente, como mostrado nos exemplos a seguir. Configurar qualquer um desses valores dá ao controle uma propriedade de automação exclusiva que pode ser usada para identificar o controle ao criar uma gravação da ação ou teste de IU codificado.
+Para especificar uma propriedade de automação exclusiva para um controle definido em seu arquivo XAML, você pode definir o **AutomationProperties. AutomationId** ou **AutomationProperties.Name** implicitamente ou explicitamente, conforme mostrado nos exemplos a seguir. Configurar qualquer um desses valores dá ao controle uma propriedade de automação exclusiva que pode ser usada para identificar o controle ao criar uma gravação da ação ou teste de IU codificado.
 
 ### <a name="set-the-property-implicitly"></a>Definir a propriedade implicitamente
 
@@ -56,11 +56,11 @@ Defina **AutomationProperties.Name** como **ButtonY** explicitamente no XAML do 
 
 No Blend para Visual Studio, selecione uma opção para atribuir nomes exclusivos a elementos interativos como botões, caixas de listagem, caixas de combinação e caixas de texto, que fornece aos controles valores exclusivos para **AutomationProperties.Name**.
 
-Para atribuir nomes exclusivos aos controles existentes, selecione **Ferramentas** > **Nomeie Elementos Interativos**.
+Para atribuir nomes exclusivos a controles existentes, selecione **ferramentas**  >  **nome elementos interativos**.
 
 ![Nomear elementos interativos no Blend para Visual Studio](../test/media/cuit_windowsstoreproperty_blend_1.png)
 
-Para dar automaticamente nomes exclusivos aos novos controles que você adiciona, selecione **Opções de** > **ferramentas** para abrir a caixa de diálogo **Opções.** Selecione **Designer XAML** e **Nomear automaticamente elementos interativos na criação**. Selecione **OK** para fechar a caixa de diálogo.
+Para fornecer automaticamente nomes exclusivos aos novos controles que você adicionar, selecione **ferramentas**  >  **Opções** para abrir a caixa de diálogo **Opções** . Selecione **Designer XAML** e **Nomear automaticamente elementos interativos na criação**. Selecione **OK** para fechar a caixa de diálogo.
 
 ## <a name="use-a-data-template"></a>Usar um modelo de dados
 
@@ -163,6 +163,6 @@ private void CreateCheckBox(string txt, StackPanel panel)
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Teste aplicativos UWP com testes de interface do usuário codificados](../test/test-uwp-app-with-coded-ui-test.md)
+- [Testar aplicativos UWP com testes de IU codificados](../test/test-uwp-app-with-coded-ui-test.md)

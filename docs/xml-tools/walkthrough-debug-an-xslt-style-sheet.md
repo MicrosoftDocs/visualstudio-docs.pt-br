@@ -1,106 +1,106 @@
 ---
 title: Depurar folhas de estilo XSLT
 ms.date: 03/05/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 3db9fa5a-f619-4cb6-86e7-64b364e58e5d
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd5882cc606bf241a281940464ba028e77986807
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: 8c75d3cae07101363f6c986a1defb375f602f466
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301716"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815117"
 ---
-# <a name="walkthrough-debug-an-xslt-style-sheet"></a>Passo a passo: Depurar uma folha de estilos XSLT
+# <a name="walkthrough-debug-an-xslt-style-sheet"></a>Walkthrough: Depurar uma folha de estilos XSLT
 
-As etapas nessa explicação passo a passo demonstra como usar o depurador XSLT. As etapas incluem variáveis de exibição, pontos de interrupção, e percorrendo o código. O depurador permite que você execute uma linha de código de cada vez.
+As etapas nessa explicação passo a passo demonstra como usar o depurador XSLT. As etapas incluem variáveis de exibição, pontos de interrupção, e percorrendo o código. O depurador permite que você execute o código uma linha por vez.
 
-Para se preparar para este passo a passo, primeiro copie os dois [arquivos de amostra](#sample-files) para o seu computador local. Uma é a folha de estilos, e uma é o arquivo XML que usaremos como entrada para a folha de estilos. Neste passo a passo, a folha de estilo que usamos encontra todos os livros cujo custo está abaixo do preço médio do livro.
+Para se preparar para este passo a passos, primeiro copie os dois [arquivos de exemplo](#sample-files) para o computador local. Um é a folha de estilo e um é o arquivo XML que usaremos como entrada para a folha de estilos. Neste tutorial, a folha de estilos que usamos localiza todos os livros cujo custo está abaixo do preço médio do livro.
 
 > [!NOTE]
 > O depurador XSLT só está disponível na edição Enterprise do Visual Studio.
 
 ## <a name="start-debugging"></a>Iniciar a depuração
 
-1. No menu **Arquivo,** escolha **Abrir** > **arquivo**.
+1. No menu **arquivo** , escolha **abrir**  >  **arquivo**.
 
-2. Localize o arquivo *abaixo da média.xsl* e escolha **Abrir**.
+2. Localize o arquivo *below-Average. xsl* e escolha **abrir**.
 
-   A folha de estilo é aberta no editor XML.
+   A folha de estilos é aberta no editor de XML.
 
-3. Clique no botão de navegação **(...**) no campo **entrada** da janela propriedades do documento. (Se a janela **Propriedades** não estiver visível, clique com o botão direito do mouse em qualquer lugar no arquivo aberto no editor e, em seguida, escolha **Propriedades**.)
+3. Clique no botão procurar (**...**) no campo de **entrada** da janela Propriedades do documento. (Se a janela **Propriedades** não estiver visível, clique com o botão direito do mouse em qualquer lugar do arquivo aberto no editor e escolha **Propriedades**.)
 
-4. Localize o arquivo *books.xml* e escolha **Abrir**.
+4. Localize o arquivo *books.xml* e, em seguida, escolha **abrir**.
 
-   Isso define o arquivo de documento de origem usado para a transformação XSLT.
+   Isso define o arquivo de documento de origem que é usado para a transformação XSLT.
 
-5. Defina um [ponto de breakpoint](../debugger/using-breakpoints.md) na linha 12 de abaixo da *média.xsl*. Você pode fazer isso de várias maneiras:
+5. Defina um [ponto de interrupção](../debugger/using-breakpoints.md) na linha 12 de *below-Average. xsl*. Você pode fazer isso de várias maneiras:
 
    - Clique na margem do editor na linha 12.
 
-   - Clique em qualquer lugar na linha 12 e, em seguida, pressione **F9**.
+   - Clique em qualquer lugar na linha 12 e pressione **F9**.
 
-   - Clique com `xsl:if` o botão direito do mouse na tag inicial e, em seguida, escolha **Breakpoint** > **Insert Breakpoint**.
+   - Clique com o botão direito do mouse na `xsl:if` marca de início e escolha ponto de interrupção de inserção de **pontos**de interrupção  >  **Insert Breakpoint**.
 
-      ![Inserir ponto de ruptura no arquivo XSL no Visual Studio](media/insert-breakpoint.PNG)
+      ![Inserir ponto de interrupção no arquivo XSL no Visual Studio](media/insert-breakpoint.PNG)
 
-6. Na barra de menu, escolha **XML** > **Start XSLT Debugging** (ou, pressione **Alt**+**F5**).
+6. Na barra de menus, escolha **XML**  >  **Iniciar Depuração XSLT** (ou pressione **ALT** + **F5**).
 
-   O processo de depuração começa.
+   O processo de depuração é iniciado.
 
-   No editor, o depurador é `xsl:if` posicionado sobre o elemento da folha de estilos. Outro arquivo nomeado *abaixo da média.xml* é aberto no editor; este é o arquivo de saída que será preenchido à medida que cada nó no arquivo de entrada *books.xml* é processado.
+   No editor, o depurador é posicionado no `xsl:if` elemento da folha de estilos. Outro arquivo chamado *below-average.xml* é aberto no editor; Esse é o arquivo de saída que será populado como cada nó no arquivo de entrada *books.xml* é processado.
 
-   As **janelas Autos**, **Locals**e **Watch 1** aparecem na parte inferior da janela do Visual Studio. A janela **Locals** exibe todas as variáveis locais e seus valores atuais. Isso inclui variáveis definidos na folha de estilos e também variáveis que o depurador usa para controlar os nós que estão atualmente no contexto.
+   As janelas **automáticos**, **locais**e **inspecionar 1** aparecem na parte inferior da janela do Visual Studio. A janela **locais** exibe todas as variáveis locais e seus valores atuais. Isso inclui variáveis definidos na folha de estilos e também variáveis que o depurador usa para controlar os nós que estão atualmente no contexto.
 
 ## <a name="watch-window"></a>Janela Inspecionar
 
-Vamos adicionar duas variáveis à janela **do Relógio 1** para que possamos examinar seus valores à medida que o arquivo de entrada é processado. (Você também pode usar a janela **Locais** para examinar valores se as variáveis que você deseja assistir já estiverem lá.)
+Adicionaremos duas variáveis à janela **Watch 1** para que possamos examinar seus valores à medida que o arquivo de entrada for processado. (Você também pode usar a janela **locais** para examinar valores se as variáveis que você deseja observar já estiverem lá.)
 
-1. No menu **Debug,** escolha **o Windows** > **Watch** > Watch**1**.
+1. No menu **depurar** , escolha **Windows**  >  **Watch**  >  **Watch 1**.
 
-   A janela **do Relógio 1** torna-se visível.
+   A janela **Watch 1** torna-se visível.
 
-2. Digite `$bookAverage` o **campo Nome** e, em seguida, **pressione Enter**.
+2. Digite `$bookAverage` o campo **nome** e pressione **Enter**.
 
-   O valor `$bookAverage` da variável é exibido no campo **Valor.**
+   O valor da `$bookAverage` variável é exibido no campo **valor** .
 
-3. Na próxima linha, `self::node()` digite no campo **Nome** e, em seguida, **pressione Enter**.
+3. Na próxima linha, digite `self::node()` o campo **nome** e pressione **Enter**.
 
-   `self::node()`é uma expressão XPath que avalia o nó de contexto atual. O valor da expressão XPath de `self::node()` é o primeiro nó de livro. Isso é alterado como nós progredimos com a transformação.
+   `self::node()`é uma expressão XPath que é avaliada como o nó de contexto atual. O valor da expressão XPath de `self::node()` é o primeiro nó de livro. Isso é alterado como nós progredimos com a transformação.
 
-4. Expanda `self::node()` o nó e, em seguida, expanda o valor `price`do nó.
+4. Expanda o `self::node()` nó e, em seguida, expanda o nó que é o valor `price` .
 
-   ![Janela de relógio durante a depuração xslt no Visual Studio](media/xslt-debugging-watch-window.png)
+   ![janela Inspeção durante a depuração XSLT no Visual Studio](media/xslt-debugging-watch-window.png)
 
-   Você pode ver o valor do preço do livro para `$bookAverage` o nó do livro atual e compará-lo com o valor. Como o preço do livro `xsl:if` está abaixo da média, a condição deve ter sucesso quando você continuar o processo de depuração.
+   Você pode ver o valor do preço do livro para o nó do livro atual e compará-lo com o `$bookAverage` valor. Como o preço do livro está abaixo da média, a `xsl:if` condição deve ter sucesso quando você continua o processo de depuração.
 
-## <a name="step-through-the-code"></a>Passe o código
+## <a name="step-through-the-code"></a>Percorrer o código
 
 1. Pressione **F5** para continuar.
 
-   Como o primeiro nó `xsl:if` do livro satisfez a condição, o nó do livro é adicionado ao arquivo de saída abaixo da *média.xml.* O depurador continuará a ser executado até que está localizado novamente no elemento de `xsl:if` na folha de estilos. O depurador está agora posicionado no segundo nó do livro no arquivo *books.xml.*
+   Como o primeiro nó de livro satisfez a `xsl:if` condição, o nó de livro é adicionado ao arquivo de saída *below-average.xml* . O depurador continuará a ser executado até que está localizado novamente no elemento de `xsl:if` na folha de estilos. O depurador agora está posicionado no segundo nó de livro no arquivo de *books.xml* .
 
-   Na janela **Relógio 1,** o `self::node()` valor muda para o segundo nó do livro. Examinando o valor do elemento de preço, você pode determinar que o preço está acima da média, então a condição de `xsl:if` deve falhar.
+   Na janela **Watch 1** , o `self::node()` valor muda para o segundo nó de livro. Examinando o valor do elemento de preço, você pode determinar que o preço está acima da média, então a condição de `xsl:if` deve falhar.
 
 2. Pressione **F5** para continuar.
 
-   Como o segundo nó do `xsl:if` livro não atende à condição, o nó do livro não é adicionado ao arquivo de saída abaixo da *média.xml.* O depurador continua a ser executado até que `xsl:if` esteja posicionado novamente sobre o elemento na folha de estilos. O depurador está agora posicionado `book` no terceiro nó no arquivo *books.xml.*
+   Como o segundo nó de livro não atende à `xsl:if` condição, o nó de livro não é adicionado ao arquivo de saída *below-average.xml* . O depurador continuará a ser executado até ser posicionado novamente no `xsl:if` elemento na folha de estilos. O depurador agora está posicionado no terceiro `book` nó do arquivo de *books.xml* .
 
-   Na janela **Relógio 1,** o `self::node()` valor muda para o nó do terceiro livro. Ao examinar o valor `price` do elemento, você pode determinar que o preço está abaixo da média. A `xsl:if` condição deve ter sucesso.
+   Na janela **Watch 1** , o `self::node()` valor muda para o terceiro nó de livro. Examinando o valor do `price` elemento, você pode determinar se o preço está abaixo da média. A `xsl:if` condição deve ter sucesso.
 
 3. Pressione **F5** para continuar.
 
-   Como `xsl:if` a condição foi satisfeita, o terceiro livro é adicionado ao arquivo de saída abaixo da *média.xml.* Todos os livros no documento XML foram processados e paradas do depurador.
+   Como a `xsl:if` condição foi satisfeita, o terceiro livro é adicionado ao arquivo de saída *below-average.xml* . Todos os livros no documento XML foram processados e paradas do depurador.
 
 ## <a name="sample-files"></a>Arquivos de exemplo
 
 Os seguintes dois arquivos são usados por passo a passo.
 
-### <a name="below-averagexsl"></a>abaixo da média.xsl
+### <a name="below-averagexsl"></a>below-Average. xsl
 
 ```xml
 <?xml version='1.0'?>
@@ -155,6 +155,6 @@ Os seguintes dois arquivos são usados por passo a passo.
 </bookstore>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Depuração de XSLT](../xml-tools/debugging-xslt.md)

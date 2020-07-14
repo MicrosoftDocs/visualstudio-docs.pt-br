@@ -1,7 +1,7 @@
 ---
 title: Depurar usando conteúdo de pré-busca em aplicativos UWP | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 28a73974a71df7fa652e4b246043e901df76e94c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 65b889452a23bb970cbee4c65455679a3473abab
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72730565"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348061"
 ---
 # <a name="debug-uwp-apps-using-prefetched-content-in-visual-studio"></a>Depurar aplicativos UWP usando conteúdo de pré-busca no Visual Studio
 
@@ -39,5 +39,5 @@ ms.locfileid: "72730565"
 > [!NOTE]
 > Repita estas etapas sempre que adicionarem ou modificar o conteúdo da Web especificado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Postagem no blog: disparando a pré-busca para aplicativos da Windows Store no Visual Studio 2013 atualização 2](https://devblogs.microsoft.com/devops/triggering-prefetch-for-windows-store-apps-in-visual-studio-2013-update-2/)

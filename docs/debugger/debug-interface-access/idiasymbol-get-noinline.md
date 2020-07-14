@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_noInline | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e5cc592f6be2e3fdd4f791c637e588e10a187ae2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 74a2cd3daa2c1ca466b0e302c916a220fa31e7d0
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739744"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462836"
 ---
 # <a name="idiasymbolget_noinline"></a>IDiaSymbol::get_noInline
 Recupera um sinalizador que especifica se a função foi marcada como não embutida (usando o atributo [noinline](/cpp/cpp/noinline) ).
@@ -33,10 +33,10 @@ HRESULT get_noInline(
 #### <a name="parameters"></a>Parâmetros
  `pFlag`
 
-fora Retorna `TRUE` se a função tiver o atributo `noinline`; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se a função tem o `noinline` atributo; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
@@ -48,6 +48,6 @@ fora Retorna `TRUE` se a função tiver o atributo `noinline`; caso contrário, 
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [noinline](/cpp/cpp/noinline)

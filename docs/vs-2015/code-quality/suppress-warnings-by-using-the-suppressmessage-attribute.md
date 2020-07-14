@@ -19,21 +19,21 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8df4972cb1d54b88d6e716254574ea95bcaed4b7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a5d64a27759cf844550297beb19b026bbeaa0e40
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672438"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546816"
 ---
 # <a name="suppress-warnings-by-using-the-suppressmessage-attribute"></a>Suprimir avisos usando o atributo SuppressMessage
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Geralmente, é útil indicar que o aviso não é aplicável para permitir que os membros da equipe saibam que o código foi revisado e foi determinado que o aviso deve ser suprimido. Na supressão de origem (ISS) permite que um desenvolvedor Coloque o atributo que suprime um aviso próximo ao local que gerou o aviso. Você pode adicionar o atributo ISS diretamente ao arquivo de origem ou pode usar o menu de atalho no IDE [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+Geralmente, é útil indicar que o aviso não é aplicável para permitir que os membros da equipe saibam que o código foi revisado e foi determinado que o aviso deve ser suprimido. Na supressão de origem (ISS) permite que um desenvolvedor Coloque o atributo que suprime um aviso próximo ao local que gerou o aviso. Você pode adicionar o atributo ISS diretamente ao arquivo de origem ou pode usar o menu de atalho no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE.
 
 ## <a name="in-this-section"></a>Nesta seção
 
-|||
+|Title|Descrição|
 |-|-|
 |[Visão geral de supressão na origem](../code-quality/in-source-suppression-overview.md)|Saiba mais sobre o ISS e como usá-lo em seu código.|
 |[Como suprimir avisos usando o item de menu](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md)|Saiba como suprimir avisos no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE usando o menu de atalho.|

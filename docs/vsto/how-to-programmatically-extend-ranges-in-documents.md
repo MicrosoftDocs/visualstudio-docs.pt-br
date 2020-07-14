@@ -1,7 +1,7 @@
 ---
-title: 'Como: Por meio de programação estender intervalos em documentos'
+title: 'Como: estender intervalos programaticamente em documentos'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,15 +13,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 26213477e7cec69da9171c5197371772973be5d3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 35ef0ea0352141f18945632f996237c2d9d90204
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62812726"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547414"
 ---
-# <a name="how-to-programmatically-extend-ranges-in-documents"></a>Como: Por meio de programação estender intervalos em documentos
-  Depois de definir uma <xref:Microsoft.Office.Interop.Word.Range> do objeto em um documento do Microsoft Office Word, alterar seus pontos inicial e final usando o <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> e <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> métodos. O <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> e <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> métodos usam os mesmos dois argumentos *unidade* e *contagem*. O *contagem* argumento é o número de unidades a serem movidas e o *unidade* argumento pode ser um dos seguintes <xref:Microsoft.Office.Interop.Word.WdUnits> valores:
+# <a name="how-to-programmatically-extend-ranges-in-documents"></a>Como: estender intervalos programaticamente em documentos
+  Depois de definir um <xref:Microsoft.Office.Interop.Word.Range> objeto em um Microsoft Office documento do Word, você altera seus pontos inicial e final usando os <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> métodos e. Os <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> métodos e usam os mesmos dois argumentos, *unidade* e *contagem*. O argumento *Count* é o número de unidades a serem movidas e o argumento *Unit* pode ser um dos seguintes <xref:Microsoft.Office.Interop.Word.WdUnits> valores:
 
 - <xref:Microsoft.Office.Interop.Word.WdUnits.wdCharacter>
 
@@ -45,13 +45,13 @@ ms.locfileid: "62812726"
 
   [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-  O exemplo a seguir define um intervalo de sete caracteres. Ele move a posição inicial dos caracteres de intervalo de sete, em seguida, após a posição inicial do original. Como a posição final do intervalo também era sete caracteres após a posição inicial, o resultado é um intervalo que consiste em caracteres. O código, em seguida, move os sete caracteres do final posição após a posição final atual.
+  O exemplo a seguir define um intervalo de sete caracteres. Em seguida, ele move a posição inicial do intervalo de sete caracteres após a posição inicial original. Como a posição final do intervalo também tinha sete caracteres após a posição inicial, o resultado é um intervalo que consiste em zero caracteres. Em seguida, o código move a posição final sete caracteres após a posição final atual.
 
 ## <a name="to-extend-a-range"></a>Para estender um intervalo
 
-1. Defina um intervalo de caracteres. Para obter mais informações, confira [Como: Definir e selecionar intervalos em documentos programaticamente](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md).
+1. Defina um intervalo de caracteres. Para obter mais informações, consulte [como: definir e selecionar intervalos por meio de programação em documentos](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md).
 
-     O exemplo de código a seguir pode ser usado em uma personalização no nível de documento.
+     O exemplo de código a seguir pode ser usado em uma personalização em nível de documento.
 
      [!code-vb[Trin_VstcoreWordAutomation#39](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#39)]
      [!code-csharp[Trin_VstcoreWordAutomation#39](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#39)]
@@ -61,37 +61,37 @@ ms.locfileid: "62812726"
      [!code-vb[Trin_VstcoreWordAutomationAddIn#39](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#39)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#39](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#39)]
 
-2. Use o <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> método da <xref:Microsoft.Office.Interop.Word.Range> objeto para mover a posição de início do intervalo.
+2. Use o <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> método do <xref:Microsoft.Office.Interop.Word.Range> objeto para mover a posição inicial do intervalo.
 
      [!code-vb[Trin_VstcoreWordAutomation#40](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#40)]
      [!code-csharp[Trin_VstcoreWordAutomation#40](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#40)]
 
-3. Use o <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> método da <xref:Microsoft.Office.Interop.Word.Range> objeto para mover a posição final do intervalo.
+3. Use o <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> método do <xref:Microsoft.Office.Interop.Word.Range> objeto para mover a posição final do intervalo.
 
      [!code-vb[Trin_VstcoreWordAutomation#41](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#41)]
      [!code-csharp[Trin_VstcoreWordAutomation#41](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#41)]
 
-## <a name="document-level-customization-code"></a>Código de personalização de nível de documento
+## <a name="document-level-customization-code"></a>Código de personalização no nível do documento
 
-### <a name="to-extend-a-range-in-a-document-level-customization"></a>Para estender um intervalo em uma personalização no nível de documento
+### <a name="to-extend-a-range-in-a-document-level-customization"></a>Para estender um intervalo em uma personalização no nível do documento
 
-1. O exemplo a seguir mostra o código completo para uma personalização no nível de documento. Para usar esse código, executá-la na `ThisDocument` classe em seu projeto.
+1. O exemplo a seguir mostra o código completo de uma personalização em nível de documento. Para usar esse código, execute-o da `ThisDocument` classe em seu projeto.
 
      [!code-vb[Trin_VstcoreWordAutomation#38](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#38)]
      [!code-csharp[Trin_VstcoreWordAutomation#38](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#38)]
 
-## <a name="vsto-add-in-code"></a>Código de suplemento do VSTO
+## <a name="vsto-add-in-code"></a>Código do suplemento do VSTO
 
-### <a name="to-extend-a-range-in-an-application-level-vsto-add-in"></a>Para estender um intervalo em um suplemento do VSTO do nível de aplicativo
+### <a name="to-extend-a-range-in-an-application-level-vsto-add-in"></a>Para estender um intervalo em um suplemento do VSTO em nível de aplicativo
 
-1. O exemplo a seguir mostra o código completo para um suplemento do VSTO. Para usar esse código, executá-la na `ThisAddIn` classe em seu projeto.
+1. O exemplo a seguir mostra o código completo de um suplemento do VSTO. Para usar esse código, execute-o da `ThisAddIn` classe em seu projeto.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#38](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#38)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#38](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#38)]
 
-## <a name="see-also"></a>Consulte também
-- [Como: Por meio de programação redefinir intervalos em documentos do Word](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md)
-- [Como: Por meio de programação recolher intervalos ou seleções em documentos](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)
-- [Como: Definir e selecionar intervalos em documentos programaticamente](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
-- [Como: Recuperar caracteres iniciais e finais em intervalos de forma programática](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)
-- [Como: Por meio de programação excluir marcas de parágrafo ao criar intervalos](../vsto/how-to-programmatically-exclude-paragraph-marks-when-creating-ranges.md)
+## <a name="see-also"></a>Confira também
+- [Como: redefinição de intervalos programaticamente em documentos do Word](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md)
+- [Como: reduzir programaticamente intervalos ou seleções em documentos](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)
+- [Como: definir e selecionar intervalos de forma programática em documentos](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
+- [Como recuperar programaticamente caracteres de início e término em intervalos](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)
+- [Como: excluir programaticamente marcas de parágrafo ao criar intervalos](../vsto/how-to-programmatically-exclude-paragraph-marks-when-creating-ranges.md)

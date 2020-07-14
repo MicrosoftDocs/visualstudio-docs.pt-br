@@ -1,7 +1,7 @@
 ---
 title: Depurar um controle WebView (UWP) | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 15c9a2b489aeb091224536bfb87398197f6e4f62
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: a96e4db66ec26870ac92c52209d7aa6f22225b21
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188662"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350635"
 ---
 # <a name="debug-a-webview-control-in-a-uwp-app"></a>Depurar um controle WebView em um aplicativo UWP
 
- Para inspecionar e depurar os controles do `WebView` em um aplicativo do Tempo de Execução do Windows, você pode configurar o Visual Studio para anexar o Depurador de Scripts quando iniciar seu aplicativo. Você tem duas maneiras de interagir com `WebView` controles usando o depurador:
+ Para inspecionar e depurar os controles do `WebView` em um aplicativo do Windows Runtime, você pode configurar o Visual Studio para anexar o Depurador de Scripts quando iniciar seu aplicativo. Você tem duas maneiras de interagir com `WebView` controles usando o depurador:
 
 - Abra o [Explorador do DOM](../debugger/quickstart-debug-html-and-css.md) para uma instância do `WebView` e inspecione os elementos de DOM, investigue os problemas de estilo de CSS e teste dinamicamente as mudanças renderizadas nos estilos.
 
@@ -31,7 +31,7 @@ ms.locfileid: "73188662"
 
 ### <a name="attach-the-debugger-c-visual-basic-c"></a>Anexar o depurador (C#, Visual Basic, C++)
 
-1. No Visual Studio, adicione um controle `WebView` ao seu aplicativo de Tempo de Execução do Windows.
+1. No Visual Studio, adicione um controle `WebView` ao seu aplicativo de Windows Runtime.
 
 2. No Gerenciador de Soluções, abra as propriedades do projeto, escolhendo **Propriedades** do menu de atalho do projeto.
 
@@ -83,6 +83,6 @@ ms.locfileid: "73188662"
 
 6. Exiba e modifique variáveis em seu aplicativo ou use comandos de console, conforme descrito em [início rápido: Depurar JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md) e [comandos de console JavaScript](../debugger/javascript-console-commands.md?view=vs-2017).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de início rápido: depurar HTML e CSS](../debugger/quickstart-debug-html-and-css.md)

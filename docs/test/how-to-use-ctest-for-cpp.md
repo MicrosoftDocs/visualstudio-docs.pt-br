@@ -1,18 +1,18 @@
 ---
 title: Como usar o CTest para C++
 ms.date: 01/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: corob
 manager: jillfra
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 78759a017575916bce3b3fff643cbce8ff303fd6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c429c9e676ead54bb9f168e3220bf2d4791fac63
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76826517"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287227"
 ---
 # <a name="how-to-use-ctest-for-c-in-visual-studio-2017-and-later"></a>Como usar o CTest para C++ no Visual Studio 2017 e posterior
 
@@ -20,7 +20,7 @@ O CMake (que inclui o CTest) está integrado por padrão ao IDE do Visual Studio
 
 ## <a name="to-write-tests"></a>Para escrever testes
 
-O suporte de CMake no Visual Studio não envolve o sistema de projetos do Visual Studio. Portanto, você grava e configura testes CTest exatamente como faria em qualquer ambiente CMake. Use `enable_testing()` o comando para habilitar `add_test()` `gtest_discover_tests()` o teste e o comando ou para adicionar um novo teste. Para saber mais sobre ctest, consulte a [documentação CMake](https://gitlab.kitware.com/cmake/community/wikis/doc/ctest/Testing-With-CTest). 
+O suporte de CMake no Visual Studio não envolve o sistema de projetos do Visual Studio. Portanto, você grava e configura testes CTest exatamente como faria em qualquer ambiente CMake. Use o `enable_testing()` comando para habilitar o teste e o `add_test()` `gtest_discover_tests()` comando ou para adicionar um novo teste. Para saber mais sobre o CTest, consulte a [documentação do cmake](https://gitlab.kitware.com/cmake/community/wikis/doc/ctest/Testing-With-CTest). 
 
 Para saber mais sobre como usar o CMake no Visual Studio, confira [Projetos CMake no Visual Studio](/cpp/build/cmake-projects-in-visual-studio).
 
@@ -34,6 +34,6 @@ A ilustração a seguir mostra os resultados de uma execução de CTest usando a
 
 Se você estiver usando CTest, mas não os adaptadores do Google ou Boost, verá resultados no nível de CTest em vez do nível de método de teste individual. Você pode depurar e percorrer executáveis apenas de CTest, mas os rastreamentos de pilha em testes individuais não têm suporte.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Escrever testes de unidade para C/C++](writing-unit-tests-for-c-cpp.md)

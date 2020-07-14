@@ -5,18 +5,18 @@ ms.date: 01/18/2017
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4c750627-6797-4857-9f5e-e5f54371f83c
 caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0aebd0857ba847d5c5eba5e3a4a8a01da73ec159
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: HT
+ms.openlocfilehash: 141f3f0e60e797a4104c3e276775631f6e9196c5
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840025"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835401"
 ---
 # <a name="windows-script-interfaces"></a>Interfaces do Windows Script
 
@@ -24,7 +24,7 @@ Interfaces do Microsoft Windows Script fornecem uma maneira para um aplicativo a
 
 A documentação do Windows Script é dividida nas seguintes seções:
 
-[Hosts de script do Windows](../winscript/windows-script-hosts.md)
+[Windows Script Hosts](../winscript/windows-script-hosts.md)
 
 [Mecanismos de script do Windows](../winscript/windows-script-engines.md)
 
@@ -36,7 +36,7 @@ A documentação do Windows Script é dividida nas seguintes seções:
 
 ## <a name="windows-script-background"></a>Contexto do Windows Script
 
-As interfaces de Script do Windows se enquadram em duas categorias: Hosts de Script do Windows e mecanismos de Script do Windows. Um host cria um mecanismo de script e chama o mecanismo para executar os scripts. Exemplos de hosts do Windows Script incluem:
+Interfaces do Windows Script se enquadram em duas categorias: hosts do Windows Script e mecanismos do Windows Script. Um host cria um mecanismo de script e chama o mecanismo para executar os scripts. Exemplos de hosts do Windows Script incluem:
 
 - Microsoft Internet Explorer
 
@@ -64,7 +64,7 @@ As etapas envolvidas na interação entre o host e o mecanismo são fornecidas n
 
 1. Criar um projeto. O host carrega um projeto ou documento. (Essa etapa não é específica para o Windows Script, mas é incluída aqui para integridade.)
 
-2. Crie o mecanismo do Windows Script. O host chama `CoCreateInstance` para criar um novo mecanismo do Windows Script, especificando o CLSID (identificador de classe) do mecanismo de script específico a ser usado. Por exemplo, o navegador HTML do Internet Explorer recebe o identificador de classe do mecanismo de script por meio do atributo CLSID= da marca HTML \<OBJECT>.
+2. Crie o mecanismo do Windows Script. O host chama `CoCreateInstance` para criar um novo mecanismo do Windows Script, especificando o CLSID (identificador de classe) do mecanismo de script específico a ser usado. Por exemplo, o navegador HTML do Internet Explorer recebe o identificador de classe do mecanismo de script por meio do atributo CLSID = da \<OBJECT> marca HTML.
 
 3. Carregue o script. Se o conteúdo do script é mantido, o host chama o método `IPersist*::Load` do mecanismo de script para alimentar o recipiente de propriedades, fluxo ou armazenamento de script. Caso contrário, o host usa o método `IPersist*::InitNew` ou [IActiveScriptParse::InitNew](../winscript/reference/iactivescriptparse-initnew.md) para criar um script nulo. Um host que mantém um script como texto pode usar [IActiveScriptParse::ParseScriptText](../winscript/reference/iactivescriptparse-parsescripttext.md) para alimentar o texto do script ao mecanismo de script, depois de chamar `IActiveScriptParse::InitNew`.
 

@@ -1,7 +1,7 @@
 ---
 title: Associar controles do WPF a um WCF Data Service
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,18 +15,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ef13f400ff762818eb97396c51330d755c0203c4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7371e08925ad9227cf15a93a339e6e0ed36d11db
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586959"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282846"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>Associar controles do WPF a um WCF Data Service
 
 Neste passo a passo, você criará um aplicativo WPF que contém controles de associação de dados. Os controles são associados a registros de cliente que são encapsulados em um serviço de dados WCF. Você também adicionará botões que os clientes podem usar para exibir e atualizar registros.
 
-Esta explicação passo a passo ilustra as seguintes tarefas:
+Este passo a passo ilustra as seguintes tarefas:
 
 - Criando um Modelo de Dados de Entidade que é gerado a partir de dados no banco de dados de exemplo AdventureWorksLT.
 
@@ -40,11 +40,11 @@ Esta explicação passo a passo ilustra as seguintes tarefas:
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
+Você precisará dos seguintes componentes para concluir este passo a passo:
 
-- {1&gt;Visual Studio&lt;1}
+- Visual Studio
 
 - Acesso a uma instância em execução do SQL Server ou SQL Server Express que tenha o banco de dados de exemplo AdventureWorksLT anexado a ele. Você pode baixar o banco de dados AdventureWorksLT do [site do CodePlex](https://archive.codeplex.com/?p=SqlServerSamples).
 
@@ -60,19 +60,19 @@ Conhecimento prévio dos conceitos a seguir também é útil, mas não é necess
 
 ## <a name="create-the-service-project"></a>Criar o projeto de serviço
 
-1. Inicie este passo a passos criando C# um ou Visual Basic projeto de **aplicativo Web ASP.net** . Nomeie o projeto **AdventureWorksService**.
+1. Inicie este passo a passos criando um projeto de **aplicativo Web** em C# ou Visual Basic ASP.net. Nomeie o projeto **AdventureWorksService**.
 
 2. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Default.aspx** e selecione **Excluir**. Este arquivo não é necessário para a explicação.
 
 ## <a name="create-an-entity-data-model-for-the-service"></a>Criar um Modelo de Dados de Entidade para o serviço
 
-Para expor dados a um aplicativo usando um serviço de dados WCF, você deve definir um modelo de dados para o serviço. O WCF Data Service dá suporte a dois tipos de modelos de dados: modelos de dados de entidade e modelos de dados personalizados que são definidos usando objetos Common Language Runtime (CLR) que implementam a interface <xref:System.Linq.IQueryable%601>. Neste passo a passo, você criará um Modelo de Dados de Entidade para o modelo de dados.
+Para expor dados a um aplicativo usando um serviço de dados WCF, você deve definir um modelo de dados para o serviço. O WCF Data Service dá suporte a dois tipos de modelos de dados: modelos de dados de entidade e modelos de dados personalizados que são definidos usando objetos Common Language Runtime (CLR) que implementam a <xref:System.Linq.IQueryable%601> interface. Neste passo a passo, você criará um Modelo de Dados de Entidade para o modelo de dados.
 
-1. No menu **Projeto**, clique em **Adicionar Novo Item**.
+1. No menu **Projeto** , clique em **Adicionar Novo Item**.
 
 2. Na lista Modelos Instalados, clique em **Dados** e selecione o item do projeto **Modelo de Dados de Entidade ADO.NET**.
 
-3. Altere o nome para `AdventureWorksModel.edmx`e clique em **Adicionar**.
+3. Altere o nome para `AdventureWorksModel.edmx` e clique em **Adicionar**.
 
      O **Assistente do Modelo de Dados de Entidade** será aberto.
 
@@ -88,17 +88,17 @@ Para expor dados a um aplicativo usando um serviço de dados WCF, você deve def
 
 7. Na página **Escolher Objetos do Banco de Dados**, expanda **Tabelas** e selecione a tabela **SalesOrderHeader**.
 
-8. Clique em **Finalizar**.
+8. Clique em **Concluir**.
 
 ## <a name="create-the-service"></a>Criar o serviço
 
 Crie um serviço de dados WCF para expor os dados no Modelo de Dados de Entidade a um aplicativo WPF:
 
-1. No menu **Projeto**, selecione **Adicionar Novo Item**.
+1. No menu **Projeto**, selecione **Adicionar novo item**.
 
 2. Na lista **Modelos Instalados**, clique em **Web** e selecione o item de projeto **Serviço de Dados WCF**.
 
-3. Na caixa **nome** , digite `AdventureWorksService.svc`e clique em **Adicionar**.
+3. Na caixa **nome** , digite `AdventureWorksService.svc` e clique em **Adicionar**.
 
      O Visual Studio adiciona o `AdventureWorksService.svc` ao projeto.
 
@@ -106,12 +106,12 @@ Crie um serviço de dados WCF para expor os dados no Modelo de Dados de Entidade
 
 Você deve configurar o serviço para operar no Modelo de Dados de Entidade que você criou:
 
-1. No arquivo de código `AdventureWorks.svc`, substitua a declaração de classe **AdventureWorksService** pelo código a seguir.
+1. No `AdventureWorks.svc` arquivo de código, substitua a declaração da classe **AdventureWorksService** pelo código a seguir.
 
      [!code-csharp[Data_WPFWCF#1](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_1.cs)]
      [!code-vb[Data_WPFWCF#1](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_1.vb)]
 
-     Esse código atualiza a classe **AdventureWorksService** , de forma que ela deriva de um <xref:System.Data.Services.DataService%601> que opera na classe de contexto de objeto `AdventureWorksLTEntities` em seu modelo de dados de entidade. Ele também atualiza o método `InitializeService` para permitir aos clientes do serviço acesso completo de leitura/gravação à entidade `SalesOrderHeader`.
+     Esse código atualiza a classe **AdventureWorksService** , de forma que ela deriva de um <xref:System.Data.Services.DataService%601> que opera na `AdventureWorksLTEntities` classe de contexto de objeto em seu modelo de dados de entidade. Ele também atualiza o método `InitializeService` para permitir aos clientes do serviço acesso completo de leitura/gravação à entidade `SalesOrderHeader`.
 
 2. Crie o projeto e verifique se ele foi criado sem erros.
 
@@ -127,7 +127,7 @@ Para exibir os dados do WCF Data Service, crie um novo aplicativo do WPF com uma
 
 4. Na caixa **Nome**, digite `AdventureWorksSalesEditor` e clique em **OK**.
 
-   O Visual Studio adiciona o projeto `AdventureWorksSalesEditor` à solução.
+   O Visual Studio adiciona o `AdventureWorksSalesEditor` projeto à solução.
 
 5. No menu **Dados**, clique em **Mostrar Fontes de Dados**.
 
@@ -135,7 +135,7 @@ Para exibir os dados do WCF Data Service, crie um novo aplicativo do WPF com uma
 
 6. Na janela **Fontes de Dados**, clique em **Adicionar Nova Fonte de Dados**.
 
-   O **Assistente de Configuração de Fonte de Dados** é aberto.
+   O assistente de **configuração de fonte de dados** é aberto.
 
 7. Na página **Escolher um Tipo de Fonte de Dados** do assistente, selecione **Serviço** e clique em **Próximo**.
 
@@ -173,11 +173,11 @@ Adicione vários botões à janela, modificando o XAML no WPF Designer. A seguir
    <Button HorizontalAlignment="Right" Margin="0,21,46,24" Name="saveButton" Width="110">Save changes</Button>
    ```
 
-3. Crie o projeto.
+3. Compile o projeto.
 
 ## <a name="create-the-data-bound-controls"></a>Criar os controles associados a dados
 
-Crie controles que exibam os registros do cliente arrastando o nó `SalesOrderHeaders` da janela **fontes de dados** para o designer.
+Crie controles que exibam os registros do cliente arrastando o `SalesOrderHeaders` nó da janela **fontes de dados** para o designer.
 
 1. Na janela **Fontes de Dados**, clique no menu suspenso para o nó **SalesOrderHeaders** e selecione **Detalhes**.
 
@@ -207,17 +207,17 @@ Crie controles que exibam os registros do cliente arrastando o nó `SalesOrderHe
 
 7. Configure a propriedade **IsReadOnly** para cada uma das seguintes caixas de texto:
 
-    - **Número da Ordem de Compra**
+    - **Número da ordem de compra**
 
     - **ID da Ordem de Venda**
 
-    - **Número da Ordem de Venda**
+    - **Sales Order Number**
 
 ## <a name="load-the-data-from-the-service"></a>Carregar os dados do serviço
 
 Use o objeto proxy de serviço para carregar dados de vendas do serviço. Em seguida, atribua os dados retornados à fonte de dados para o <xref:System.Windows.Data.CollectionViewSource> na janela do WPF.
 
-1. No designer, para criar o manipulador de eventos `Window_Loaded`, clique duas vezes no texto que lê: **MainWindow**.
+1. No designer, para criar o `Window_Loaded` manipulador de eventos, clique duas vezes no texto que lê: **MainWindow**.
 
 2. Substitua o manipulador de eventos pelo código a seguir. Substitua o endereço *localhost* neste código pelo endereço de host local no computador de desenvolvimento.
 
@@ -226,9 +226,9 @@ Use o objeto proxy de serviço para carregar dados de vendas do serviço. Em seg
 
 ## <a name="navigate-sales-records"></a>Navegar pelos registros de vendas
 
-Adicione o código que permite aos usuários rolem nos registros de vendas, usando os botões **\<** e **>** .
+Adicione o código que permite que os usuários percorram os registros de vendas usando os **\<** and **>** botões.
 
-1. No designer, clique duas vezes no botão **<** na superfície da janela.
+1. No designer, clique duas vezes no **<** botão na superfície da janela.
 
      O Visual Studio abre o arquivo code-behind e cria um novo manipulador de eventos `backButton_Click` para o evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.
 
@@ -237,7 +237,7 @@ Adicione o código que permite aos usuários rolem nos registros de vendas, usan
      [!code-csharp[Data_WPFWCF#3](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_3.cs)]
      [!code-vb[Data_WPFWCF#3](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_3.vb)]
 
-3. Retorne ao designer e clique duas vezes no botão **>** .
+3. Retorne ao designer e clique duas vezes no **>** botão.
 
      O Visual Studio abre o arquivo code-behind e cria um novo manipulador de eventos `nextButton_Click` para o evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.
 
@@ -250,7 +250,7 @@ Adicione o código que permite aos usuários rolem nos registros de vendas, usan
 
 Adicione o código que permite aos usuários exibir e salvar as alterações em registros de vendas ao usar o botão **Salvar alterações**:
 
-1. No designer, clique duas vezes no botão **Salvar Alterações**.
+1. No designer, clique duas vezes no botão **salvar alterações** .
 
      O Visual Studio abre o arquivo code-behind e cria um novo manipulador de eventos `saveButton_Click` para o evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.
 
@@ -265,7 +265,7 @@ Compile e execute o aplicativo para verificar se é possível exibir e atualizar
 
 1. No menu **Compilar** , clique em **Compilar solução**. Verifique se a solução é compilada sem erros.
 
-2. Pressione **Ctrl**+**F5**.
+2. Pressione **Ctrl** + **F5**.
 
      O Visual Studio inicia o projeto **AdventureWorksService** sem depurá-lo.
 
@@ -277,7 +277,7 @@ Compile e execute o aplicativo para verificar se é possível exibir e atualizar
 
     - As caixas de texto exibem diferentes campos de dados desde o primeiro registro de venda, que tem a ID de ordem de venda **71774**.
 
-    - Você pode clicar nos botões **>** ou **<** para navegar em outros registros de vendas.
+    - Você pode clicar nos **>** **<** botões ou para navegar por outros registros de vendas.
 
 5. Em um dos registros de vendas, digite algum texto na caixa **Comentário** e clique em **Salvar alterações**.
 
@@ -287,7 +287,7 @@ Compile e execute o aplicativo para verificar se é possível exibir e atualizar
 
 8. Feche o aplicativo.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Depois de completar este passo a passo, você poderá realizar as seguintes tarefas relacionadas:
 

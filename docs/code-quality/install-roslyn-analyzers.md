@@ -1,7 +1,7 @@
 ---
 title: Instalar analisadores do Roslyn
 ms.date: 08/03/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - code analysis, managed code
 - analyzers
@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9a833cb46811bd97467fdb048272c9feb2bb7873
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ce30dd25c43f1ac8254dbdb6b04b747a976f3557
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587375"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371749"
 ---
 # <a name="install-net-compiler-platform-code-analyzers"></a>Instalar analisadores de código .NET Compiler Platform
 
@@ -33,7 +33,7 @@ O Visual Studio inclui um conjunto principal de analisadores de .NET Compiler Pl
    > [!NOTE]
    > A página www.nuget.org para cada pacote do analisador mostra o comando a ser colado no **console do Gerenciador de pacotes**. Há até mesmo um botão útil para copiar o texto na área de transferência.
 
-   Os assemblies do analisador são instalados e exibidos em **Gerenciador de soluções** em **referências** > **analisadores**.
+   Os assemblies do analisador são instalados e exibidos em **Gerenciador de soluções** em **References**  >  **analisadores**de referências.
 
 ## <a name="to-install-vsix-analyzers"></a>Para instalar os analisadores VSIX
 
@@ -81,17 +81,17 @@ O Visual Studio inclui um conjunto principal de analisadores de .NET Compiler Pl
 
 ::: moniker range="vs-2017"
 
-Se você quiser verificar se a extensão está instalada, selecione **ferramentas** > **extensões e atualizações**. Na caixa de diálogo **extensões e atualizações** , selecione a categoria **instalado** à esquerda e, em seguida, procure a extensão por nome.
+Se você quiser verificar se a extensão está instalada, selecione **ferramentas**  >  **extensões e atualizações**. Na caixa de diálogo **extensões e atualizações** , selecione a categoria **instalado** à esquerda e, em seguida, procure a extensão por nome.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Se você quiser verificar se a extensão está instalada, selecione **extensões** > **gerenciar extensões**. Na caixa de diálogo **gerenciar extensões** , selecione a categoria **instalado** à esquerda e, em seguida, procure a extensão por nome.
+Se você quiser verificar se a extensão está instalada, selecione **extensões**  >  **gerenciar extensões**. Na caixa de diálogo **gerenciar extensões** , selecione a categoria **instalado** à esquerda e, em seguida, procure a extensão por nome.
 
 ::: moniker-end
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
 > [Usar analisadores de código no Visual Studio](../code-quality/use-roslyn-analyzers.md)

@@ -1,7 +1,7 @@
 ---
 title: Como adicionar validação a classes de entidade
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3ccd83662700794e60572eed923d10452595d726
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 5d408c67b2e54fecd6404bac93d93ecfb35de162
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586556"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282339"
 ---
 # <a name="how-to-add-validation-to-entity-classes"></a>Como adicionar validação a classes de entidade
 *Validar* classes de entidade é o processo que confirma que os valores inseridos em objetos de dados estão de acordo com as restrições do esquema de um objeto e também as regras estabelecidas para o aplicativo. Validar dados antes de enviar atualizações para o base de dados subjacente é uma boa prática que reduz erros. Também reduz o número potencial de processamentos entre um aplicativo e o base de dados.
@@ -62,7 +62,7 @@ Este procedimento mostra como validar dados quando o valor em uma coluna é alte
 
     Para projetos C#:
 
-    Como C# os projetos não geram automaticamente manipuladores de eventos, você pode usar o IntelliSense para criar os métodos parciais de alteração de coluna. Tipo `partial` e um espaço para acessar a lista de métodos parciais disponíveis. Clique no método de alteração para a coluna que você deseja adicionar validação para. O código a seguir é semelhante ao código que é gerado quando você seleciona um método parcial de alteração de coluna:
+    Como os projetos C# não geram automaticamente manipuladores de eventos, você pode usar o IntelliSense para criar os métodos parciais de alteração de coluna. Tipo `partial` e um espaço para acessar a lista de métodos parciais disponíveis. Clique no método de alteração para a coluna que você deseja adicionar validação para. O código a seguir é semelhante ao código que é gerado quando você seleciona um método parcial de alteração de coluna:
 
     ```csharp
     partial void OnCOLUMNNAMEChanging(COLUMNDATATYPE value)
@@ -106,7 +106,7 @@ Além de verificar valores alterações pendentes, você também pode validar da
 
     Para projetos C#:
 
-    Como C# os projetos não geram automaticamente manipuladores de eventos, você pode usar o IntelliSense para criar o método de `UpdateCLASSNAME` parcial. Tipo `partial` e um espaço para acessar a lista de métodos parciais disponíveis. Clique no método Update para a classe na qual você deseja adicionar a validação. O código a seguir é semelhante ao código que é gerado quando você seleciona um `UpdateCLASSNAME` método parcial:
+    Como os projetos C# não geram automaticamente manipuladores de eventos, você pode usar o IntelliSense para criar o `UpdateCLASSNAME` método parcial. Tipo `partial` e um espaço para acessar a lista de métodos parciais disponíveis. Clique no método Update para a classe na qual você deseja adicionar a validação. O código a seguir é semelhante ao código que é gerado quando você seleciona um `UpdateCLASSNAME` método parcial:
 
     ```csharp
     partial void UpdateCLASSNAME(CLASSNAME instance)

@@ -1,7 +1,7 @@
 ---
 title: IDiaReadExeAtRVACallback::ReadExecutableAtRVA | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ca1b1ec2bea56ad167951ad8b60cf849bd22e315
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6a417669c381036fffac87b4d7e56c66fa31f728
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742794"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466458"
 ---
 # <a name="idiareadexeatrvacallbackreadexecutableatrva"></a>IDiaReadExeAtRVACallback::ReadExecutableAtRVA
 Lê o número especificado de bytes começando no endereço virtual relativo (RVA) especificado do arquivo executável.
@@ -53,6 +53,6 @@ fora Retorna o número de bytes lidos.
 ## <a name="remarks"></a>Comentários
  Esse método é chamado pelo código de suporte do DIA para carregar bytes de dados de um executável usando um endereço virtual relativo. Esse método é chamado no suporte do método [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaReadExeAtRVACallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md)
 - [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)

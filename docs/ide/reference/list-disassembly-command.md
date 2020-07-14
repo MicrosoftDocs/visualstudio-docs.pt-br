@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Debug.ListDisassembly command
 - list disassembly command
 ms.assetid: eb363e35-e86a-4121-966f-991210c27e2a
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aaeab2e65088b8f1bfce3a6a12f8cd66c3245b75
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 91319a8d25aaec6bdd676ed6d709dffc47100195
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72747930"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770650"
 ---
 # <a name="list-disassembly-command"></a>Comando Listar Desmontagem
 Inicia o processo de depuração e permite que você especifique como os erros são tratados.
@@ -66,9 +66,9 @@ Opcional. Habilita a exibição de números de linha associados ao código-fonte
 
 ## <a name="see-also"></a>Confira também
 
-- [Comando List Call Stack](../../ide/reference/list-call-stack-command.md)
-- [Comando List Threads](../../ide/reference/list-threads-command.md)
+- [Comando listar pilha de chamadas](../../ide/reference/list-call-stack-command.md)
+- [Comando listar threads](../../ide/reference/list-threads-command.md)
 - [Comandos do Visual Studio](../../ide/reference/visual-studio-commands.md)
-- [Janela Comando](../../ide/reference/command-window.md)
-- [Caixa Localizar/Comando](../../ide/find-command-box.md)
+- [Janela de comando](../../ide/reference/command-window.md)
+- [Caixa Localizar/comando](../../ide/find-command-box.md)
 - [Aliases de comando do Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

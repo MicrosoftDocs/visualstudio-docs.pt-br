@@ -1,7 +1,7 @@
 ---
-title: 'Como: descobrir qual DLL seu programa falhou | Microsoft Docs'
+title: Como-descobrir qual DLL seu programa falhou | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.dll
 dev_langs:
@@ -22,14 +22,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bff4f164e16a65efe4ec3d1f057025168eab8cd2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 155fd74dc6e01f88bf04fe21b77ebdae6b04437f
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733277"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349530"
 ---
-# <a name="how-to-find-which-dll-your-program-crashed-in-c-c-visual-basic-f"></a>Como: descobrir qual DLL seu programa falhou (C#, C++, Visual Basic,) F#
+# <a name="how-to-find-which-dll-your-program-crashed-in-c-c-visual-basic-f"></a>Como: descobrir qual DLL seu programa falhou (C#, C++, Visual Basic, F #)
 
  Se houver falhas no aplicativo durante uma chamada a uma DLL do sistema ou o código de outra pessoa, você precisará descobrir qual DLL estava ativa quando a falha ocorreu. Se você tiver uma falha em uma DLL fora de seu próprio programa, poderá identificar a localização usando a janela **Módulos**.
 
@@ -49,6 +49,6 @@ ms.locfileid: "72733277"
 
 6. Examine as colunas **Nome** e **Caminho** para ver o nome e o caminho da DLL.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Depurando projetos de DLL](../debugger/debugging-dll-projects.md)
 - [Como usar a janela Módulos](../debugger/how-to-use-the-modules-window.md)

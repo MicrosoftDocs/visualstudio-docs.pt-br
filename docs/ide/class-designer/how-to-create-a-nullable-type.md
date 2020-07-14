@@ -1,7 +1,7 @@
 ---
 title: Como criar um tipo anulável (Designer de Classe)
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - nullable types, Class Designer
 - Class Designer [Visual Studio], nullable types
@@ -14,18 +14,18 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 5be8b553dfead4b8c05f29bbd18c16fcef847130
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ad371f987ab7ff0e50dc7d2fe4effeba5205e74e
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75592224"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770981"
 ---
 # <a name="how-to-create-a-nullable-type-in-class-designer"></a>Como criar um tipo que permite valor nulo no Designer de Classe
 
 Alguns tipos de valor nem sempre têm (ou precisam de) um valor definido. Essa é uma prática comum em bancos de dados, em que alguns campos podem não receber nenhum valor. Por exemplo, é possível atribuir um valor nulo a um campo de banco de dados para indicar que ele ainda não recebeu um valor.
 
-Um *tipo que permite valor nulo* é um tipo de valor que é estendido, para que ele use o intervalo de valores típico para esse tipo e também um valor nulo. Por exemplo, um tipo que permite valor nulo igual a `Int32`, também indicado como Nullable\<Int32>, pode receber qualquer valor de -2147483648 a 2147483647 ou receber um valor nulo. Um Nullable\<bool> pode receber os valores `True`, `False` ou nulo (nenhum valor).
+Um *tipo que permite valor nulo* é um tipo de valor que é estendido, para que ele use o intervalo de valores típico para esse tipo e também um valor nulo. Por exemplo, uma anulável de `Int32` , também denotada como anulável \<Int32> , pode ser atribuído a qualquer valor de-2147483648 a 2147483647, ou pode ser atribuído um valor nulo. Um Nullable \<bool> pode receber os valores `True` , `False` ou NULL (nenhum valor).
 
 Os tipos que permitem valor nulo são instâncias da estrutura <xref:System.Nullable%601>. Cada instância de um tipo que permite valor nulo tem duas propriedades públicas somente leitura, `HasValue` e `Value`:
 
@@ -88,7 +88,7 @@ Para obter mais informações sobre tipos que permitem valor nulo no C#, confira
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Nullable%601>
-- [Tipos que permitem valor nulo](/dotnet/csharp/programming-guide/nullable-types/index)
+- [Tipos anuláveis](/dotnet/csharp/programming-guide/nullable-types/index)
 - [Usando tipos que permitem valor nulo](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types)
 - [Como identificar um tipo que permite valor nulo](/dotnet/csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type)
-- [Tipos de valor anulados](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types)
+- [Tipos de valor anulável](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types)

@@ -15,19 +15,19 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f0ac183321bd2a3070b1f1ddc54402b74c8fb823
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ece9105e8a0a854837924e4a2d4f4ec485a5e202
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668413"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543930"
 ---
-# <a name="ca1814-prefer-jagged-arrays-over-multidimensional"></a>CA1814: preferir matrizes denteadas em relação às multidimensionais
+# <a name="ca1814-prefer-jagged-arrays-over-multidimensional"></a>CA1814: Preferir matrizes denteadas a matrizes multidimensionais
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|PreferJaggedArraysOverMultidimensional|
+|TypeName|PreferJaggedArraysOverMultidimensional|
 |CheckId|CA1814|
 |Categoria|Microsoft. performance|
 |Alteração Significativa|Quebra|

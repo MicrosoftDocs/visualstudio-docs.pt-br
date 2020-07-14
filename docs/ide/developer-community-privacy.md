@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e87f35778b8aec615410312c0eb7373d4e9969f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4f5b8e2d65454d75c08d3efc26af2fd93b22153b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75775883"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284796"
 ---
 # <a name="developer-community-data-privacy"></a>Privacidade de dados da Comunidade de Desenvolvedores
 
@@ -40,7 +40,8 @@ Se você está preocupado com a privacidade dos dados, não coloque nada que des
 3. Adicione a descrição e quaisquer outras informações, imagens e anexos de arquivo necessários para a reprodução. Escolha o botão **Enviar** para enviar essas informações em particular.
 
    > [!NOTE]
-   > Há um limite de 2 GB para arquivos anexados e de no máximo 10 arquivos. Se você precisar carregar um arquivo maior, envie um novo relatório de problema ou solicite uma URL de upload a um funcionário da Microsoft em um comentário particular.
+   > No site da comunidade de desenvolvedores, há um limite de 2 GB em arquivos anexados e no máximo 10 arquivos. Se você precisar carregar um arquivo maior, envie um novo relatório de problema ou solicite uma URL de upload a um funcionário da Microsoft em um comentário particular.
+   > Quando fecharmos um problema, os anexos associados serão excluídos após 90 dias.
 
 Para manter sua privacidade e manter informações confidenciais fora da exibição pública, tome cuidado para manter todas as interações com a Microsoft em respostas em um comentário com restrição de visibilidade. Respostas a outros comentários podem gerar a divulgação acidental de informações confidenciais.
 
@@ -68,7 +69,7 @@ Quando a ação **Relatar um problema** é iniciada com o Visual Studio, nós co
 
 - Logs do Python, caso existam
 
-- Windows Forms logs, se eles existem
+- Windows Forms logs, se existirem
 
 - Uma captura de tela, caso você escolha incluí-la
 
@@ -81,11 +82,11 @@ Quando a ação **Relatar um problema** é iniciada com o Visual Studio, nós co
   - Arquivo de despejo
 
 > [!NOTE]
-> Registrar arquivos, capturas de tela e gravar dados que você envia pode aumentar significativamente a capacidade da Microsoft de entender e responder ao seu problema.  Por isso recomendamos incluí-los. Para proteger sua privacidade, quaisquer arquivos de log anexados, capturas de tela e dados de gravação são enviados apenas para a Microsoft quando você fornece permissão enviando o relatório de problemas com o qual eles estão incluídos. Você pode ver quais arquivos estão incluídos na etapa 'Resumo' da janela 'Relatar um problema' antes de enviar o relatório. Você pode excluir arquivos de registro do sistema do relatório deschecando 'Anexar registros do sistema' na etapa 'Resumo'. Para referência, consulte a captura de tela a seguir. 
-  > ![Relatar um problema - Resumo dos registros coletados](media/report-a-problem-logs-collected.png)
+> Arquivos de log, capturas de tela e dados de gravação que você envia podem aumentar significativamente a capacidade da Microsoft de entender e responder ao seu problema.  Portanto, é recomendável incluí-los. Para proteger sua privacidade, todos os arquivos de log anexados, capturas de tela e dados de gravação são enviados somente à Microsoft quando você fornece permissão enviando o relatório de problema com o qual eles são incluídos. Você pode ver quais arquivos estão incluídos na etapa ' Resumo ' da janela ' relatar um problema ' antes de enviar o relatório. Você pode excluir arquivos de log do sistema do relatório desmarcando ' anexar logs do sistema ' na etapa ' Resumo '. Para referência, consulte a captura de tela a seguir. 
+  > ![Relatar um problema-Resumo dos logs coletados](media/report-a-problem-logs-collected.png)
 
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Como relatar um problema com o Visual Studio](how-to-report-a-problem-with-visual-studio.md)
 - [Privacidade de dados do relatório de problema do C++](/cpp/how-to-report-a-problem-with-the-visual-cpp-toolset#reports-and-privacy)

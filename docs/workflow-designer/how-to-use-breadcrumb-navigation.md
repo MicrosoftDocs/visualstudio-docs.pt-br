@@ -1,19 +1,19 @@
 ---
 title: 'Designer de Fluxo de Trabalho-como: usar a navegação por trilha'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4a688056-37dc-406a-9071-be2141e192fe
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 291badb04c791305f655e187ff7853fc8c5087a1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2a432d7cfc40ad6116f570d0e7beb4bfc5b40493
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75584563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817457"
 ---
 # <a name="how-to-use-breadcrumb-navigation"></a>Como: Use a navegação de rastreamento
 
@@ -47,7 +47,7 @@ Há três maneiras principais de alterar o conjunto de atividades que são exibi
 2. Depois de aplicar um estado expandir tudo ou recolher tudo, você pode clicar no botão **restaurar** que aparece para voltar ao exame do estado aplicado anteriormente a cada atividade.
 
     > [!WARNING]
-    > Se uma atividade, como <xref:System.Activities.Statements.Flowchart>, tiver optado por expansão em vigor, a funcionalidade associada aos botões **expandir tudo** e **recolher tudo** será desabilitada no designer de **fluxograma** . Para obter mais informações sobre o designer de **fluxograma** , consulte o tópico [fluxograma](../workflow-designer/flowchart-activity-designer.md) .
+    > Se uma atividade, como <xref:System.Activities.Statements.Flowchart> , tiver optado por uma expansão em vigor, a funcionalidade associada aos botões **expandir tudo** e **recolher tudo** estará desabilitada no designer de **fluxograma** . Para obter mais informações sobre o designer de **fluxograma** , consulte o tópico [fluxograma](../workflow-designer/flowchart-activity-designer.md) .
 
     > [!WARNING]
     > Expandir tudo também tem um efeito especial nos designers de atividade **switch** e **TryCatch** . Quando você clica em **expandir tudo**, todos os casos de comutador e todos os blocos try/catch/finally são exibidos. Clicar em **restaurar** ou **recolher todos** retorna esses designers ao seu estado padrão, no qual você pode clicar em um caso/bloco individual para exibir seu conteúdo.

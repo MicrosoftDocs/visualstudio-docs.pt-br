@@ -15,19 +15,19 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 70a0bab8cfb3bf14a763f759e0e44a754ad878d8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: eff09fb8f4423560c4681c94507d909f5864c69e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662773"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545230"
 ---
-# <a name="ca2233-operations-should-not-overflow"></a>CA2233: as operações não devem estourar
+# <a name="ca2233-operations-should-not-overflow"></a>CA2233: As operações não devem estourar
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|OperationsShouldNotOverflow|
+|TypeName|OperationsShouldNotOverflow|
 |CheckId|CA2233|
 |Categoria|Microsoft. Usage|
 |Alteração Significativa|Sem interrupção|
@@ -47,14 +47,14 @@ ms.locfileid: "72662773"
 ## <a name="example-of-a-violation"></a>Exemplo de uma violação
 
 ### <a name="description"></a>Descrição
- Um método no exemplo a seguir manipula um inteiro que viola essa regra. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] requer que a opção **remover** estouro de inteiro seja desabilitada para que isso seja acionado.
+ Um método no exemplo a seguir manipula um inteiro que viola essa regra. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]requer que a opção **remover** estouro de inteiro seja desabilitada para que isso seja acionado.
 
 ### <a name="code"></a>Código
  [!code-csharp[FxCop.Usage.OperationOverflow#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperationOverflow/cs/FxCop.Usage.OperationOverflow.cs#1)]
  [!code-vb[FxCop.Usage.OperationOverflow#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.OperationOverflow/vb/FxCop.Usage.OperationOverflow.vb#1)]
 
 ### <a name="comments"></a>Comentários
- Se o método neste exemplo for passado <xref:System.Int32.MinValue?displayProperty=fullName>, a operação fluirá. Isso faz com que o bit mais significativo do resultado seja Descartado. O código a seguir mostra como isso ocorre.
+ Se o método neste exemplo for passado <xref:System.Int32.MinValue?displayProperty=fullName> , a operação fluirá. Isso faz com que o bit mais significativo do resultado seja Descartado. O código a seguir mostra como isso ocorre.
 
  [C#]
 
@@ -97,15 +97,15 @@ End Sub
 ### <a name="description"></a>Descrição
  O exemplo a seguir corrige a violação anterior, encapsulando a operação em um bloco marcado. Se a operação causar um estouro, um <xref:System.OverflowException?displayProperty=fullName> será gerado.
 
- Observe que os blocos verificados não têm suporte no [!INCLUDE[vbprvb](../includes/vbprvb-md.md)].
+ Observe que os blocos verificados não têm suporte no [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .
 
 ### <a name="code"></a>Código
  [!code-csharp[FxCop.Usage.OperationOverflowChecked#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperationOverflowChecked/cs/FxCop.Usage.OperationOverflowChecked.cs#1)]
 
 ## <a name="turn-on-checked-arithmetic-overflowunderflow"></a>Ativar estouro aritmético/negativo selecionado
- Se você ativar o estouro aritmético/negativo selecionado no C#, será equivalente a encapsular cada operação de inteiro em um bloco marcado.
+ Se você ativar o estouro aritmético/negativo marcado em C#, será equivalente a encapsular cada operação de inteiro em um bloco marcado.
 
- **Para ativar o estouro aritmético/negativo selecionado emC#**
+ **Para ativar o estouro aritmético/negativo marcado em C #**
 
 1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e escolha **Propriedades**.
 
@@ -113,5 +113,5 @@ End Sub
 
 3. Selecione **verificar estouro aritmético/Subfluxo** e clique em **OK**.
 
-## <a name="see-also"></a>Consulte também
- <xref:System.OverflowException?displayProperty=fullName> [ C# operadores](https://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43) [marcados e desmarcados](https://msdn.microsoft.com/library/a84bc877-2c7f-4396-8735-1ce97c42f35e)
+## <a name="see-also"></a>Consulte Também
+ <xref:System.OverflowException?displayProperty=fullName>[Operadores C#](https://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43) [marcados e desmarcados](https://msdn.microsoft.com/library/a84bc877-2c7f-4396-8735-1ce97c42f35e)

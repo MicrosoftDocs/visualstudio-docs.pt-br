@@ -1,7 +1,7 @@
 ---
-title: 'DA0003: muitas amostras de kernel | Microsoft Docs'
+title: DA0003-muitos exemplos de kernel | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.rules.DA0003
 - vs.performance.DA0003
@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 69cd81943641e4e0585a67127c70d35a601a5396
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d0523f9a21dbdb655a02fb6263a6eb644458ab6d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777732"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548220"
 ---
-# <a name="da0003-many-kernel-samples"></a>DA0003: muitas amostras de kernel
+# <a name="da0003-many-kernel-samples"></a>DA0003: Muitas amostras de kernel
 
-|||
+|Item|Valor|
 |-|-|
 |ID de regra|DA0003|
 |Categoria|Uso das ferramentas de criação de perfil|
@@ -35,7 +35,7 @@ ms.locfileid: "74777732"
  Uma parte significativa dos exemplos de pilha de chamadas coletados para o aplicativo estavam sendo executados em modo kernel. Considere a criação de perfil para o aplicativo usando um método de criação de perfil diferente.
 
 ## <a name="rule-description"></a>Descrição da regra
- No Windows, o código pode ser executado no modo kernel ou no modo de usuário. (O modo kernel também é chamado de modo privilegiado.) Apenas o código de sistema de baixo nível, como um driver de dispositivo, é executado no modo kernel. Um aplicativo de modo de usuário pode fazer a transição para o modo kernel para executar operações de E/S, aguardar os primitivos de sincronização de thread ou de processo ou fazer chamadas do sistema.
+ No Windows, o código pode ser executado no modo kernel ou no modo de usuário. (O modo kernel também é chamado de modo privilegiado.) Somente o código do sistema de nível baixo, como um driver de dispositivo, é executado no modo kernel. Um aplicativo de modo de usuário pode fazer a transição para o modo kernel para executar operações de E/S, aguardar os primitivos de sincronização de thread ou de processo ou fazer chamadas do sistema.
 
  A amostragem é a maneira mais eficaz ao criar perfis para aplicativos que passam a maior parte do tempo em modo de usuário. O número de amostras coletadas quando o aplicativo estava sendo executado no modo kernel pode indicar operações de E/S frequentes ou que esse alternâncias de contexto estão ocorrendo. Nenhuma dessas operações podem ser investigadas usando o método de amostragem. Caso muitas amostras do modo kernel forem usadas, os dados de amostragem podem não conter amostras suficientes de modo de usuário para serem estatisticamente significativos.
 

@@ -2,7 +2,7 @@
 title: Anexar ferramentas de desempenho aos processos em execução
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.performance.attach
 helpviewer_keywords:
@@ -18,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c4ae54d6b90166de31c338a5e606eaf31ecd6cc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 58bbf5fa291d71b26cd303a7d43719fde8605c0a
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779162"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331142"
 ---
 # <a name="how-to-attach-and-detach-performance-tools-to-running-processes"></a>Como anexar e desanexar ferramentas de desempenho de processos em execução
 O criador de perfil pode ser usado para anexar ou desanexar de um processo em execução para facilitar a amostragem e a coleta de dados de desempenho. É possível usar esse método para criar o perfil de um processo quando você deseja evitar a coleta de dados sobre o tempo de carregamento do aplicativo ou para monitorar o desempenho de um processo após ele atingir um estado específico.
@@ -39,7 +39,7 @@ O criador de perfil pode ser usado para anexar ou desanexar de um processo em ex
 
 - Acesso negado à criação de perfil para todos.
 
-  Para obter mais informações, consulte [a segurança do Perfil e do Windows Vista](../profiling/profiling-and-windows-vista-security.md) e as opções de ADMIN no [VSPerfCmd](../profiling/vsperfcmd.md).
+  Para obter mais informações, consulte [criação de perfil e segurança do Windows Vista](../profiling/profiling-and-windows-vista-security.md) e as opções de administrador na [VSPerfCmd](../profiling/vsperfcmd.md).
 
 ### <a name="to-attach-to-a-running-process"></a>Para anexar a um processo em execução
 
@@ -61,9 +61,9 @@ O criador de perfil pode ser usado para anexar ou desanexar de um processo em ex
 
 3. Clique em **Desanexar**.
 
-## <a name="see-also"></a>Confira também
-- [Controle a coleta de dados](../profiling/controlling-data-collection.md)
+## <a name="see-also"></a>Veja também
+- [Controlar a coleta de dados](../profiling/controlling-data-collection.md)
 - [Visão geral da sessão de desempenho](../profiling/performance-session-overview.md)
 - [Como iniciar e terminar a coleta de dados de desempenho](../profiling/how-to-start-and-end-performance-data-collection.md)
 - [Criação de perfil e segurança do Windows Vista](../profiling/profiling-and-windows-vista-security.md)
-- [Vsperfcmd](../profiling/vsperfcmd.md)
+- [VSPerfCmd](../profiling/vsperfcmd.md)

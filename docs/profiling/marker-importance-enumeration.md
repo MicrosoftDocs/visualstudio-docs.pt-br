@@ -1,23 +1,23 @@
 ---
 title: Enumeração de marker_importance | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
-- cvmarkersobj/Concurrency::diagnostic::marker_importance
+- cvmarkersobj/Concurrency, diagnostic::marker_importance
 helpviewer_keywords:
-- Concurrency::diagnostic::marker_importance enumeration
+- Concurrency, diagnostic::marker_importance enumeration
 ms.assetid: d5524ea0-0227-4d8e-9122-332291042df5
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b3f5cfb583ec4fceb9fb7428b08c00f6ca8e26b6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d67a1806034d55147379626b6eb4f868532e4d77
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62999966"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330737"
 ---
 # <a name="marker_importance-enumeration"></a>Enumeração marker_importance
 Representa o nível de importância de um marcador da Visualização Simultânea.
@@ -44,5 +44,5 @@ enum marker_importance;
 
  **Namespace:** Concurrency::diagnostic
 
-## <a name="see-also"></a>Confira também
-- [espaço de nome diagnóstico](../profiling/diagnostic-namespace.md)
+## <a name="see-also"></a>Veja também
+- [namespace de diagnóstico](../profiling/diagnostic-namespace.md)

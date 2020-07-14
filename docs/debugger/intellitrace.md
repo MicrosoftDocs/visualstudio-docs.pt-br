@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2be69003d14d2c246f95249b5db0b1fa7d470598
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 4cbe14e1bf8c3a5e010e3c9e887a208b7e045b4c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911447"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536507"
 ---
 # <a name="intellitrace-for-visual-studio-enterprise-c-visual-basic-c"></a>IntelliTrace para Visual Studio Enterprise (C#, Visual Basic, C++)
 
@@ -39,24 +39,24 @@ Você pode usar o IntelliTrace no Visual Studio Enterprise Edition (mas não as 
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
-|||
+|Cenário|Título|
 |-|-|
-|**Depurar meu aplicativo com o IntelliTrace:**<br /><br /> – Mostrar-me eventos passados.<br />– Mostrar-me informações de chamadas com eventos passados.<br />– Salvar minha sessão do IntelliTrace.<br />– Controlar os dados que são coletados pelo IntelliTrace.|- [inspecionar os Estados do aplicativo anterior usando o IntelliTrace](../debugger/view-historical-application-state.md)<br />- [Passo a passo: usando o IntelliTrace](../debugger/walkthrough-using-intellitrace.md)<br />- [Recursos do IntelliTrace](../debugger/intellitrace-features.md)<br />- [Depuração de histórico](../debugger/historical-debugging.md)|
-|**Coletar dados do IntelliTrace de aplicativos implantados**|- [Usando o coletor IntelliTrace autônomo](../debugger/using-the-intellitrace-stand-alone-collector.md)|
-|**Iniciar a depuração a partir de um arquivo de log do IntelliTrace (arquivo .iTrace).**|- [Usando os dados salvos do IntelliTrace](../debugger/using-saved-intellitrace-data.md)|
+|**Depurar meu aplicativo com o IntelliTrace:**<br /><br /> – Mostrar-me eventos passados.<br />– Mostrar-me informações de chamadas com eventos passados.<br />– Salvar minha sessão do IntelliTrace.<br />– Controlar os dados que são coletados pelo IntelliTrace.|- [Inspecionar os Estados do aplicativo anterior usando o IntelliTrace](../debugger/view-historical-application-state.md)<br />- [Walkthrough: usando o IntelliTrace](../debugger/walkthrough-using-intellitrace.md)<br />- [Recursos do IntelliTrace](../debugger/intellitrace-features.md)<br />- [Depuração histórica](../debugger/historical-debugging.md)|
+|**Coletar dados do IntelliTrace de aplicativos implantados**|- [Usando o coletor autônomo do IntelliTrace](../debugger/using-the-intellitrace-stand-alone-collector.md)|
+|**Iniciar a depuração a partir de um arquivo de log do IntelliTrace (arquivo .iTrace).**|- [Usando dados do IntelliTrace salvos](../debugger/using-saved-intellitrace-data.md)|
 
-## <a name="IntelliTraceSupport"></a> Que aplicativos posso depurar com o IntelliTrace?
+## <a name="what-apps-can-i-debug-with-intellitrace"></a><a name="IntelliTraceSupport"></a> Que aplicativos posso depurar com o IntelliTrace?
 
-| | |
+| Nível de suporte| Tipos de aplicativos |
 |---------------------| - |
-| **Suporte completo** | -Visual Basic e aplicativos C# visuais que usam o .NET Framework 2,0 ou versões posteriores.<br/>É possível depurar a maioria dos aplicativos, inclusive ASP.NET, Microsoft Azure, Windows Forms, WCF, WPF, Windows Workflow, SharePoint 2010, SharePoint 2013 e aplicativos de 64 bits.<br/>Para depurar aplicativos do SharePoint com o IntelliTrace, consulte [Walkthrough: Depurando um aplicativo do SharePoint usando o IntelliTrace](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md).<br/> Para depurar Microsoft Azure aplicativos com o IntelliTrace, consulte [Depurando um serviço de nuvem publicado com o IntelliTrace e o Visual Studio](../azure/vs-azure-tools-intellitrace-debug-published-cloud-services.md). |
-| **Suporte limitado** | - C++ aplicativos direcionados ao suporte do Windows exibindo instantâneos usando o passo do IntelliTrace. Somente os eventos Debugger e Exception têm suporte.<br />-.NET Core e ASP.NET Core aplicativos com suporte para determinados eventos somente (eventos do controlador MVC, ADO.NET e HTTPClient) na depuração local. O coletor autônomo não tem suporte para aplicativos .NET Core ou ASP.NET Core.<br />– Aplicativos F# em uma base de avaliação<br />-Aplicativos UWP com suporte somente para eventos |
+| **Suporte completo** | -Visual Basic e aplicativos do Visual C# que usam .NET Framework 2,0 ou versões posteriores.<br/>É possível depurar a maioria dos aplicativos, inclusive ASP.NET, Microsoft Azure, Windows Forms, WCF, WPF, Windows Workflow, SharePoint 2010, SharePoint 2013 e aplicativos de 64 bits.<br/>Para depurar aplicativos do SharePoint com o IntelliTrace, consulte [Walkthrough: Depurando um aplicativo do SharePoint usando o IntelliTrace](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md).<br/> Para depurar Microsoft Azure aplicativos com o IntelliTrace, consulte [Depurando um serviço de nuvem publicado com o IntelliTrace e o Visual Studio](../azure/vs-azure-tools-intellitrace-debug-published-cloud-services.md). |
+| **Suporte limitado** | -Aplicativos C++ voltados para o suporte do Windows exibindo instantâneos usando o passo do IntelliTrace. Somente os eventos Debugger e Exception têm suporte.<br />-.NET Core e ASP.NET Core aplicativos com suporte para determinados eventos somente (eventos do controlador MVC, ADO.NET e HTTPClient) na depuração local. O coletor autônomo não tem suporte para aplicativos .NET Core ou ASP.NET Core.<br />– Aplicativos F# em uma base de avaliação<br />-Aplicativos UWP com suporte somente para eventos |
 | **Sem suporte** | -Outros idiomas e script<br />-Serviços do Windows, Silverlight, Xbox ou aplicativos Windows Mobile |
 
 > [!NOTE]
 > Se desejar depurar um processo que já esteja em execução, você poderá coletar somente eventos do IntelliTrace (sem informações de chamada). Você pode anexar a um processo de 32 bits ou 64 bits somente no computador local. Os eventos que ocorrem antes de você anexar ao processo não são coletados.
 
-## <a name="IntelliTraceVSTraditional"></a> Por que depurar com o IntelliTrace?
+## <a name="why-debug-with-intellitrace"></a><a name="IntelliTraceVSTraditional"></a> Por que depurar com o IntelliTrace?
 
 A depuração tradicional ou *dinâmica* mostra apenas o estado atual do aplicativo, com dados limitados sobre eventos passados. Você precisa inferir esses eventos com base no estado atual do aplicativo ou precisa recriar esses eventos executando novamente seu aplicativo.
 
@@ -88,7 +88,7 @@ Estes são alguns exemplos de como o IntelliTrace pode ajudar na depuração:
 
   Isso é útil quando você deseja diagnosticar problemas com os aplicativos durante a implantação. Consulte [usar o coletor autônomo do IntelliTrace](../debugger/using-the-intellitrace-stand-alone-collector.md).
 
-## <a name="WhatData"></a> Que dados são coletados pelo IntelliTrace?
+## <a name="what-data-does-intellitrace-collect"></a><a name="WhatData"></a> Que dados são coletados pelo IntelliTrace?
 
 **Coletar informações do evento**
 
@@ -118,7 +118,7 @@ Por padrão, o IntelliTrace registra apenas eventos do IntelliTrace: eventos do 
 
 - **Eventos do .NET Framework**
 
-  Por padrão, o IntelliTrace registra os eventos mais comuns do .NET Framework. Por exemplo, para um evento <xref:System.Windows.Forms.CheckBox.CheckedChanged?displayProperty=nameWithType>, o IntelliTrace coleta o estado e o texto da caixa de seleção.
+  Por padrão, o IntelliTrace registra os eventos mais comuns do .NET Framework. Por exemplo, para um <xref:System.Windows.Forms.CheckBox.CheckedChanged?displayProperty=nameWithType> evento, o IntelliTrace coleta o estado e o texto da caixa de seleção.
 
 - **Eventos de aplicativos SharePoint 2010 e SharePoint 2013**
 
@@ -161,7 +161,7 @@ Consulte [inspecionar seu aplicativo com a depuração histórica](../debugger/h
 
 Para controlar a quantidade de informações de chamadas que o IntelliTrace coleta, especifique somente os módulos que interessem a você. Isso pode ajudar a melhorar o desempenho do seu aplicativo durante a coleta. Consulte a seção [controlar a quantidade de informações que o IntelliTrace coleta](../debugger/intellitrace-features.md#ControlCallData) nos recursos do IntelliTrace.
 
-## <a name="AffectPerformance"></a>O IntelliTrace reduzirá o meu aplicativo?
+## <a name="will-intellitrace-slow-down-my-application"></a><a name="AffectPerformance"></a>O IntelliTrace reduzirá o meu aplicativo?
 
 Por padrão, o IntelliTrace coleta dados somente para eventos do IntelliTrace selecionados. Isso pode ou não retardar o seu aplicativo, dependendo da estrutura e da organização do seu código. Por exemplo, se o IntelliTrace registra um evento com frequência, isso pode tornar o aplicativo mais lento. Isso também pode fazer com que você considere refatorar seu aplicativo.
 

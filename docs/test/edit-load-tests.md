@@ -1,7 +1,7 @@
 ---
 title: Editando teste de carga
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Load Test Editor
 - load tests, Load Test Editor
@@ -9,12 +9,12 @@ ms.assetid: ba16ed02-137e-40bf-a4cb-45d87d922d37
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c61c13f6a9eca416a52221ba9da37be820dd4b89
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b95689871a987c018720c529743b8447f39b2bf6
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75593220"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288696"
 ---
 # <a name="edit-load-tests"></a>Editar testes de carga
 
@@ -48,7 +48,7 @@ Configurações de execução são propriedades que influenciam a maneira como u
 
 Para saber mais, confira [Definir configurações de execução de teste de carga](../test/configure-load-test-run-settings.md) e [Propriedades de configurações de execução de teste de carga](../test/load-test-run-settings-properties.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Analisar os resultados do teste de carga](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
-- [Analisando violações de regras de limiar](../test/analyze-threshold-rule-violations-in-load-tests.md)
+- [Analisar resultados do teste de carga](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Analisando violações de regra de limite](../test/analyze-threshold-rule-violations-in-load-tests.md)

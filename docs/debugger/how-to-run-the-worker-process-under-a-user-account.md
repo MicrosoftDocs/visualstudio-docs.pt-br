@@ -2,7 +2,7 @@
 title: Executar um processo de trabalho em uma conta de usuário | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5905ad87eb534013bdfd786a79e40e46087dff55
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6ac5bee0ffa05aa275782c57fc9b7b1c369bf65d
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732814"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349400"
 ---
 # <a name="how-to-run-the-worker-process-under-a-user-account"></a>Como executar o processo de trabalho em uma conta de usuário
 Para configurar o computador de modo que você possa executar o processo de trabalho do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] (aspnet_wp.exe ou w3wp.exe) em uma conta de usuário, siga estas etapas.
@@ -61,7 +61,7 @@ Para configurar o computador de modo que você possa executar o processo de trab
    iisreset
    ```
 
-   – ou —
+   — ou —
 
    ```cmd
    net stop iisadmin /y
@@ -72,7 +72,7 @@ Para configurar o computador de modo que você possa executar o processo de trab
 
 7. Na caixa de diálogo **Propriedades de arquivos temporários do ASP.NET**, clique na guia **Segurança**.
 
-8. Clique em **Avançadas**.
+8. Clique em **Avançado**.
 
 9. Na caixa de diálogo **Configurações de segurança avançadas para arquivos temporários do ASP.Net**, clique em **Adicionar**.
 
@@ -86,6 +86,6 @@ Para configurar o computador de modo que você possa executar o processo de trab
 
 13. Clique em **OK** para fechar a caixa de diálogo **Propriedades de arquivos temporários do ASP.NET**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Depurar aplicativos ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)
-- [Depuração do ASP.NET: requisitos do sistema](../debugger/aspnet-debugging-system-requirements.md)
+- [Depuração ASP.NET: requisitos do sistema](../debugger/aspnet-debugging-system-requirements.md)

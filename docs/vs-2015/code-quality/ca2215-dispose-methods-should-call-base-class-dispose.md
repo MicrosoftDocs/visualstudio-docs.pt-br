@@ -16,44 +16,44 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 89f3705169fb9d28a1ec773671d460f00b98d892
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4197c2faaf4aa23db930a9019538592326a84116
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662862"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534375"
 ---
-# <a name="ca2215-dispose-methods-should-call-base-class-dispose"></a>CA2215: os métodos de descarte devem chamar o descarte da classe base
+# <a name="ca2215-dispose-methods-should-call-base-class-dispose"></a>CA2215: Métodos Dispose devem chamar o descarte da classe base
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|DisposeMethodsShouldCallBaseClassDispose|
+|TypeName|DisposeMethodsShouldCallBaseClassDispose|
 |CheckId|CA2215|
 |Categoria|Microsoft. Usage|
 |Alteração Significativa|Sem interrupção|
 
 ## <a name="cause"></a>Causa
- Um tipo que implementa <xref:System.IDisposable?displayProperty=fullName> é herdado de um tipo que também implementa <xref:System.IDisposable>. O método de <xref:System.IDisposable.Dispose%2A> do tipo herdado não chama o método <xref:System.IDisposable.Dispose%2A> do tipo pai.
+ Um tipo que implementa <xref:System.IDisposable?displayProperty=fullName> herda de um tipo que também implementa <xref:System.IDisposable> . O <xref:System.IDisposable.Dispose%2A> método do tipo de herança não chama o <xref:System.IDisposable.Dispose%2A> método do tipo pai.
 
 ## <a name="rule-description"></a>Descrição da Regra
- Se um tipo for herdado de um tipo descartável, ele deverá chamar o método <xref:System.IDisposable.Dispose%2A> do tipo base de dentro de seu próprio método <xref:System.IDisposable.Dispose%2A>. Chamar o método de tipo base Dispose garante que todos os recursos criados pelo tipo base sejam liberados.
+ Se um tipo for herdado de um tipo descartável, ele deverá chamar o <xref:System.IDisposable.Dispose%2A> método do tipo base de dentro de seu próprio <xref:System.IDisposable.Dispose%2A> método. Chamar o método de tipo base Dispose garante que todos os recursos criados pelo tipo base sejam liberados.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação dessa regra, chame `base`. <xref:System.IDisposable.Dispose%2A> em seu método de <xref:System.IDisposable.Dispose%2A>.
+ Para corrigir uma violação dessa regra, chame `base` .<xref:System.IDisposable.Dispose%2A> em seu <xref:System.IDisposable.Dispose%2A> método.
 
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- É seguro suprimir um aviso dessa regra se a chamada para `base`. <xref:System.IDisposable.Dispose%2A> ocorre em um nível de chamada mais profundo do que as verificações de regra.
+ É seguro suprimir um aviso dessa regra se a chamada para `base` .<xref:System.IDisposable.Dispose%2A> ocorre em um nível de chamada mais profundo do que as verificações de regra.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir mostra um tipo `TypeA` que implementa <xref:System.IDisposable>.
+ O exemplo a seguir mostra um tipo `TypeA` que implementa <xref:System.IDisposable> .
 
  [!code-csharp[FxCop.Usage.IDisposablePattern#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.IDisposablePattern/cs/FxCop.Usage.IDisposablePattern.cs#1)]
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir mostra um tipo `TypeB` que herda do tipo `TypeA` e chama corretamente seu método <xref:System.IDisposable.Dispose%2A>.
+ O exemplo a seguir mostra um tipo `TypeB` que herda de tipo `TypeA` e chama corretamente seu <xref:System.IDisposable.Dispose%2A> método.
 
  [!code-vb[FxCop.Usage.IDisposableBaseCalled#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.IDisposableBaseCalled/vb/FxCop.Usage.IDisposableBaseCalled.vb#1)]
 
-## <a name="see-also"></a>Consulte também
- [padrão de descarte](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb) de <xref:System.IDisposable?displayProperty=fullName>
+## <a name="see-also"></a>Consulte Também
+ <xref:System.IDisposable?displayProperty=fullName>[Descartar padrão](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)

@@ -7,135 +7,133 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f16a518542e8acab636da6e395fdfee8d7a25085
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 6aa4cce032a5eb80a11568a83c1166b5690bd688
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62969780"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85279868"
 ---
 # <a name="gpu-usage"></a>Uso de GPU
 
-Use a ferramenta Uso de GPU no Hub de Desempenho e Diagnóstico do Visual Studio para entender melhor o uso de hardware de alto nível do aplicativo Direct3D. Ela ajuda a ver se o desempenho do aplicativo está associado à CPU ou à GPU e a obter informações sobre como você pode usar o hardware da plataforma com mais eficiência. O Uso de GPU dá suporte a aplicativos que usam o Direct3D 12, Direct3D 11 e Direct3D 10; ele não dá suporte a outras APIs de gráficos como Direct2D ou OpenGL.
+Use a ferramenta uso de GPU no Hub de desempenho e diagnóstico do Visual Studio para entender melhor o uso de hardware de alto nível de seu aplicativo do Direct3D. Ele ajuda você a ver se o desempenho do seu aplicativo é associado à CPU ou à GPU e a obter informações sobre como você pode usar o hardware da plataforma com mais eficiência. O uso de GPU dá suporte a aplicativos que usam o Direct3D 12, o Direct3D 11 e o Direct3D 10. Ele não dá suporte a outras APIs de gráficos, como Direct2D ou OpenGL.
 
-Esta captura de tela mostra a janela do **Relatório de Uso de GPU**:
+Esta é a aparência da janela de **relatório uso da GPU** :
 
-![O relatório de uso da GPU, com cronogramas de CPU e GPU](media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")
+![Captura de tela do relatório uso de GPU, com cronogramas de CPU e GPU](media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")
 
 ## <a name="requirements"></a>Requisitos
 
-Os seguintes requisitos para usar a ferramenta Uso de GPU são adicionados aos requisitos de Diagnóstico de gráficos.
+Além dos requisitos para Diagnóstico de Gráficos, o seguinte é necessário para usar a ferramenta de uso de GPU:
 
 - Uma GPU e drivers que dão suporte à instrumentação de intervalo necessária.
 
   > [!NOTE]
   > Para obter mais informações sobre o hardware e os drivers com suporte, consulte [Suporte de hardware e driver](#hwsupport) ao final deste documento.
 
-  Para obter mais informações sobre os requisitos do Diagnóstico de Gráficos, consulte [Introdução](../debugger/graphics/getting-started-with-visual-studio-graphics-diagnostics.md).
+Para obter mais informações sobre os requisitos de Diagnóstico de Gráficos, consulte [Guia de introdução](../debugger/graphics/getting-started-with-visual-studio-graphics-diagnostics.md).
 
-## <a name="using-the-gpu-usage-tool"></a>Usando a ferramenta Uso de GPU
+## <a name="use-the-gpu-usage-tool"></a>Usar a ferramenta de uso de GPU
 
- Quando você executa o aplicativo na ferramenta Uso de GPU, o Visual Studio cria uma sessão de diagnóstico que apresenta gráficos de informações de alto nível sobre o desempenho de renderização e o uso de GPU do aplicativo em tempo real.
+Quando você executa seu aplicativo na ferramenta de uso de GPU, o Visual Studio cria uma sessão de diagnóstico. Esta sessão grafa informações de alto nível sobre o desempenho de renderização do aplicativo e uso de GPU em tempo real.
 
-**Para iniciar a ferramenta Uso de GPU:**
+Para iniciar a ferramenta Uso de GPU:
 
-1. No menu principal, escolha **Depurar** e, em seguida, **Desempenho e Diagnóstico** (teclado: pressione Alt + F2).
+1. No menu principal, escolha **depurar**  >  **desempenho e diagnóstico** (ou, no teclado, pressione Alt + F2).
 
-2. No hub Desempenho e Diagnóstico, marque a caixa ao lado de **Uso de GPU**. Opcionalmente, marque as caixas ao lado de outras ferramentas nas quais você esteja interessado. É possível executar várias ferramentas de Desempenho e Diagnóstico simultaneamente para obter uma visão mais completa do desempenho do aplicativo.
+2. No Hub **desempenho e diagnóstico** , marque a caixa ao lado de **uso de GPU**. Opcionalmente, marque as caixas ao lado de outras ferramentas nas quais você esteja interessado. Você pode executar várias ferramentas de desempenho e diagnóstico simultaneamente para obter uma visão mais completa do desempenho do aplicativo.
 
-    ![Escolha as ferramentas de diagnóstico que deseja usar.](media/gfx_diag_diagsession_tools.png "gfx_diag_diagsession_tools")
+    ![Captura de tela do hub de desempenho e diagnóstico, com uso de GPU selecionado](media/gpuusageselected.png "Uso de GPU selecionado")
 
    > [!NOTE]
-   > Nem todas as ferramentas de Desempenho e Diagnóstico podem ser usadas ao mesmo tempo.
+   > Nem todas as ferramentas de diagnóstico e desempenho podem ser usadas ao mesmo tempo.
 
-3. Escolha o botão azul **Iniciar** na parte inferior do hub Desempenho e Diagnóstico para executar o aplicativo nas ferramentas selecionadas.
+3. Na parte inferior do Hub **desempenho e diagnóstico** , selecione **Iniciar** para executar seu aplicativo nas ferramentas que você selecionou.
 
-   As informações de alto nível exibidas em tempo real incluem o intervalo de quadros, a taxa de quadros e o uso de GPU. Cada uma dessas informações é apresentada em gráficos de maneira independente, mas usam uma escala de tempo comum para que você possa estabelecer uma relação fácil entre elas.
+As informações de alto nível mostradas em tempo real incluem tempo de quadro, taxa de quadros e uso de GPU. Cada uma dessas informações é grafada de forma independente, mas todas usam uma escala de tempo comum para que você possa entender facilmente as relações.
 
-   Os grafos **Tempo de quadro (ms)** e **Quadros por segundo (FPS)** têm duas linhas horizontais vermelhas que mostram metas de desempenho de 60 e 30 quadros por segundo. No grafo **Tempo de quadro**, o aplicativo supera a meta de desempenho quando o grafo está abaixo da linha e não alcança a meta quando o grafo está acima da linha. Para o grafo Quadros por segundo, é o oposto; seu aplicativo supera a meta de desempenho quando o grafo está acima da linha e não alcança a meta quando o grafo está abaixo da linha. Basicamente, esses grafos são usados para obter uma ideia de alto nível do desempenho do aplicativo e para identificar problemas de lentidão que talvez você deseje investigar – como uma queda repentina na taxa de quadros ou um pico na Utilização de GPU.
+Os grafos de **quadro (MS)** e **quadros por segundo (FPS)** têm duas linhas horizontais vermelhas que mostram as metas de desempenho de 60 e 30 quadros por segundo. No grafo Tempo de quadro, o aplicativo supera a meta de desempenho quando o grafo está abaixo da linha e não alcança a meta quando o grafo está acima da linha. Para o gráfico de quadros por segundo, é o oposto: seu aplicativo excede o destino de desempenho quando o grafo está acima da linha e perde o destino quando o grafo está abaixo da linha. Você usa esses gráficos principalmente para obter uma ideia de alto nível do desempenho do seu aplicativo e para identificar os lentos que talvez você queira investigar. Por exemplo, uma investigação mais aprofundada poderá ser garantida se você vir uma queda repentina na taxa de quadros ou um pico na utilização da GPU.
 
-   Enquanto o aplicativo é executado na ferramenta Uso de GPU, a sessão de diagnóstico também coleta informações detalhadas sobre eventos de gráficos que foram executados na GPU. Essas informações são usadas para gerar um relatório mais granular de como o aplicativo utiliza o hardware. Como esse relatório leva algum tempo para ser gerado com base nas informações coletadas, ele só estará disponível depois que a sessão de diagnóstico concluir a coleta de informações.
+Enquanto seu aplicativo é executado sob a ferramenta de uso da GPU, a sessão de diagnóstico também coleta informações detalhadas sobre eventos gráficos que foram executados na GPU. Você usa essas informações para gerar um relatório mais granular de como seu aplicativo utiliza o hardware. Como esse relatório leva algum tempo para ser gerado com base nas informações coletadas, ele só estará disponível depois que a sessão de diagnóstico concluir a coleta de informações.
 
-   Quando desejar examinar um problema de desempenho ou de utilização mais detalhadamente, pare a coleta de informações de desempenho para que o relatório possa ser gerado.
+Quando você quiser examinar um problema de desempenho ou utilização mais de mais de precisão, interrompa a coleta de informações de desempenho para que possa gerar o relatório.
 
-**Para gerar e exibir o Relatório de Uso de GPU:**
+Para gerar e exibir o relatório de uso de GPU:
 
-1. Na parte inferior da janela da sessão de diagnóstico, escolha o link **Parar Coleta** ou pressione **Parar** no canto superior esquerdo.
+1. Na parte inferior da janela de sessão de diagnóstico, escolha o link **parar coleção** ou selecione **parar** no canto superior esquerdo.
 
-   ![Coletar informações de tempo de GPU e CPU.](media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")
+   ![Captura de tela da janela de sessão de diagnóstico](media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")
 
-2. Na parte superior do relatório, selecione uma seção de um dos gráficos que mostra o problema que você deseja investigar. A seleção pode ser feita em até 3 segundos; seções mais longas serão truncadas no início.
+2. Na parte superior do relatório, selecione uma seção de um dos gráficos que mostra o problema que você deseja investigar. Sua seleção pode ter até 3 segundos de comprimento. As seções mais longas são truncadas em direção ao início.
 
-   ![Postar&#45;coleção, selecione uma faixa para ver detalhes](media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")
+   ![Captura de tela da janela de sessão de diagnóstico](media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")
 
-3. Na parte inferior do relatório, escolha o link **exibir detalhes** na mensagem **... clique aqui para exibir detalhes de uso de GPU para esse intervalo** para exibir uma linha do tempo detalhada da seleção.
+3. Para exibir uma linha do tempo detalhada da sua seleção, na parte inferior do relatório, na seção **... Clique aqui para exibir detalhes do uso de GPU para essa** mensagem de intervalo, selecione **Exibir detalhes**.
 
-   ![Coleção de&#45;pós, com alcance selecionado](media/gfx_diag_gpu_usage_select2.png "gfx_diag_gpu_usage_select2")
+   ![Captura de tela da janela de sessão de diagnóstico com o intervalo selecionado](media/gfx_diag_gpu_usage_select2.png "gfx_diag_gpu_usage_select2")
 
-   Essa seleção abre um novo documento com guias que contém o relatório. O relatório Uso de GPU ajuda você a ver quando um evento de gráficos é iniciado na CPU, quando ele atinge a GPU e quanto tempo a GPU leva para executá-lo. Essas informações podem ajudá-lo a identificar gargalos e oportunidades de aumento de paralelismo no código.
+Essa seleção abre um novo documento com guias que contém o relatório. O relatório uso de GPU ajuda você a ver quando um evento de gráficos é iniciado na CPU, quando ele atinge a GPU e por quanto tempo a GPU leva para executá-la. Essas informações podem ajudá-lo a identificar gargalos e oportunidades de aumento de paralelismo no código.
 
 <!-- VERSIONLESS -->
 ## <a name="export-to-gpuview-or-windows-performance-analyzer"></a>Exportar para o GPUView ou o Windows Performance Analyzer
 
-Começando com o Visual Studio 2017, é possível abrir esses dados com [GPUView](/windows-hardware/drivers/display/using-gpuview) e com o [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer). Basta selecionar os links **Abrir no GpuView** ou **Abrir no WPA** localizados no canto inferior direito da sessão de diagnóstico.
+Começando com o Visual Studio 2017, é possível abrir esses dados com [GPUView](/windows-hardware/drivers/display/using-gpuview) e com o [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer). Basta selecionar os links **abrir no GpuView** ou **abrir em WPA** localizados no canto inferior direito da sessão de diagnóstico.
 
-![Abrir em...](media/gfx_diag_open_in.png)
+![Captura de tela da janela de sessão de diagnóstico, com links realçados](media/gfx_diag_open_in.png)
 <!-- /VERSIONLESS -->
 
-## <a name="using-the-gpu-usage-report"></a>Usando o relatório Uso de GPU
+## <a name="use-the-gpu-usage-report"></a>Usar o relatório uso de GPU
 
-A parte superior do relatório Uso de GPU exibe linhas do tempo da atividade de processamento da CPU, atividade de renderização da GPU e atividade de cópia da GPU. Essas linhas do tempo são divididas por barras verticais cinza que indicam o vsync da exibição. A frequência das barras corresponde à taxa de atualização de um dos vídeos (selecionados com a lista suspensa **Exibição**) dos quais esses dados de Uso de GPU foram coletados. Como a exibição pode ter uma taxa de atualização mais alta do que a meta de desempenho do aplicativo, talvez não haja uma relação um para um entre o vsync e a taxa de quadros que você deseja que o aplicativo atinja. Para atender sua meta de desempenho, um aplicativo deve concluir todo o processamento, fazer a renderização e fazer uma chamada Present() à taxa de quadros de destino. Contudo, o quadro renderizado não será exibido até o próximo vsync após Present().
+A parte superior do relatório uso de GPU mostra linhas do tempo para a atividade de processamento da CPU, atividade de renderização da GPU e atividade de cópia de GPU. Essas linhas do tempo são divididas por barras verticais de cinza claro que indicam o vsync de exibição. A frequência das barras corresponde à taxa de atualização de uma das exibições (selecionadas usando a lista suspensa **exibição** ) da qual os dados de uso da GPU foram coletados.
 
-A parte inferior exibe uma listagem dos eventos de gráficos que ocorreram durante o período do relatório.
+Como a exibição pode ter uma taxa de atualização mais alta do que a meta de desempenho do aplicativo, talvez não haja uma relação um para um entre o vsync e a taxa de quadros que você deseja que o aplicativo atinja. Para atender a seu destino de desempenho, um aplicativo deve concluir todo o processamento, fazer a renderização e fazer uma `Present()` chamada na taxa de quadros de destino. No entanto, o quadro renderizado não será exibido até o próximo vsync `Present()` .
 
-Esta é a janela **Relatório de Uso de GPU**:
+A parte inferior do relatório uso de GPU lista os eventos gráficos que ocorreram durante o período de tempo do relatório. Quando você seleciona um evento, um marcador é exibido em eventos correspondentes nas linhas do tempo relevantes. Normalmente, um evento em um thread da CPU mostra a chamada à API, enquanto outro evento em uma das linhas do tempo da GPU mostra quando a GPU concluiu a tarefa. Da mesma forma, quando você seleciona um evento em uma linha do tempo, o relatório realça o evento gráfico correspondente na parte inferior do relatório.
 
-![O relatório de uso da GPU, com cronogramas de CPU e GPU](media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")
+Quando você estiver com um zoom das linhas do tempo na parte superior do relatório, somente os eventos mais demorados estarão visíveis. Para ver os eventos que têm uma duração menor, aplique o zoom nos cronogramas usando Ctrl + Wheel no seu dispositivo apontador ou o controle de dimensionamento no canto inferior esquerdo do painel superior. Também é possível arrastar o conteúdo do painel de linha do tempo para percorrer os eventos registrados.
 
-Quando você seleciona um evento na parte inferior do relatório, um marcador é exibido nos eventos correspondentes nas respectivas linhas do tempo. Normalmente, um evento em um thread da CPU mostra a chamada à API, enquanto outro evento em uma das linhas do tempo da GPU mostra quando a GPU concluiu a tarefa. Da mesma forma, quando você seleciona um evento em uma linha do tempo, o relatório realça o evento correspondente na parte inferior do relatório. Quando as linhas do tempo são reduzidas na parte superior do relatório, apenas os eventos mais demorados são visíveis. Para ver os eventos que têm uma duração menor, amplie as linhas do tempo usando Ctrl + roda no dispositivo apontador ou o controle de colocação em escala no canto inferior esquerdo do painel superior. Também é possível arrastar o conteúdo do painel de linha do tempo para percorrer os eventos registrados.
-
-Para ajudar a encontrar o que você está procurando, filtre o Relatório Uso da GPU com base em nomes de processo, IDs do Thread e o nome do evento. Além disso, é possível escolher qual taxa de atualização da exibição determina as linhas do vsync. Será possível classificar os eventos hierarquicamente se o aplicativo usar a interface [ID3DUserDefinedAnnotation](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3duserdefinedannotation) para agrupar comandos de renderização.
+Para ajudar a encontrar o que você está procurando, filtre o relatório uso de GPU com base em nomes de processo, IDs de thread e o nome do evento. Além disso, é possível escolher qual taxa de atualização da exibição determina as linhas do vsync. Será possível classificar os eventos hierarquicamente se o aplicativo usar a interface [ID3DUserDefinedAnnotation](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3duserdefinedannotation) para agrupar comandos de renderização.
 
  Estes são mais detalhes:
 
 |Controle de filtro|Descrição|
 |--------------------|-----------------|
-|**Processo**|O nome do processo de seu interesse. Todos os processos que usaram a GPU durante a sessão de diagnóstico são incluídos nessa lista suspensa. A cor associada ao processo nessa lista suspensa é a cor da atividade do thread nas linhas do tempo abaixo.|
-|**Thread**|A ID do thread de seu interesse. Em um aplicativo multi-threaded, essas informações podem ajudá-lo a isolar threads específicos que pertencem ao processo de seu interesse. Os eventos associados ao thread selecionado são realçados em cada linha do tempo.|
-|**Exibição**|O número do vídeo cuja taxa de atualização é exibida **Observação:** alguns drivers podem ser configurados para apresentar vários vídeos físicos como um único vídeo virtual grande. Talvez você veja apenas um vídeo listado, mesmo se o computador tiver vários vídeos anexados.|
-|**Filtrar**|Palavras-chave de seu interesse. Os eventos na parte inferior do relatório incluirão apenas aqueles que correspondem a uma palavra-chave, no todo ou em parte. É possível especificar várias palavras-chave separando-as com um ponto-e-vírgula (;).|
-|**Classificação de Hierarquia**|Uma caixa de seleção que indica se as hierarquias de eventos – definidas por meio de marcadores do usuário – são preservadas ou ignoradas.|
+|**Processo**|O nome do processo no qual você está interessado. Todos os processos que usaram a GPU durante a sessão de diagnóstico são incluídos nessa lista suspensa. A cor associada ao processo é a cor da atividade do thread nos cronogramas.|
+|**Processo**|A ID do thread em que você está interessado. Em um aplicativo multi-threaded, essas informações podem ajudá-lo a isolar threads específicos que pertencem ao processo de seu interesse. Os eventos associados ao thread selecionado são realçados em cada linha do tempo.|
+|**Exibição**|O número da exibição cuja taxa de atualização é mostrada. Alguns drivers podem ser configurados para apresentar vários vídeos físicos como um único vídeo virtual grande. Talvez você veja apenas um vídeo listado, mesmo se o computador tiver vários vídeos anexados.|
+|**Filter**|Palavras-chave nas quais você está interessado. Os eventos na parte inferior do relatório incluirão apenas aqueles que correspondem a uma palavra-chave, de forma totalmente ou parcial. É possível especificar várias palavras-chave separando-as com um ponto-e-vírgula (;).|
+|**Classificação de Hierarquia**|Uma caixa de seleção que indica se as hierarquias de eventos, definidas por meio de marcadores de usuário, são preservadas ou ignoradas.|
 
- A lista de eventos na parte inferior do Relatório de Uso de GPU exibe os detalhes de cada evento.
+A lista de eventos na parte inferior do relatório uso de GPU mostra os detalhes de cada evento.
 
 |Coluna|Descrição|
 |------------|-----------------|
-|**Nome do evento**|O nome do evento de gráficos. Normalmente, um evento corresponde a um evento em uma linha do tempo do thread de CPU e a um evento de linha do tempo de GPU.<br /><br /> Os nomes de eventos podem ser “não atribuídos” se o Uso de GPU não pôde determinar o nome de um evento. Para obter mais informações, consulte a observação abaixo desta tabela.|
+|**Nome do evento**|O nome do evento de gráficos. Normalmente, um evento corresponde a um evento em uma linha do tempo do thread de CPU e a um evento de linha do tempo de GPU. Os nomes de evento podem não ter *atributo* se o uso da GPU não puder determinar o nome de um evento. Para obter mais informações, consulte a observação após esta tabela.|
 |**Início da CPU (ns)**|A hora em que o evento foi iniciado na CPU com uma chamada a uma API do Direct3D. O tempo é medido em nanossegundos, relativo à hora de início do aplicativo.|
 |**Início da GPU (ns)**|A hora em que o evento foi iniciado na GPU. O tempo é medido em nanossegundos, relativo à hora de início do aplicativo.|
-|**Duração da GPU (ns)**|O tempo que o evento levou para ser concluído na GPU, em nanossegundos.|
+|**Duração da GPU (ns)**|O tempo, em nanossegundos, que o evento levou para ser concluído na GPU.|
 |**Nome do processo**|O nome do aplicativo do qual o evento foi originado.|
 |**ID do thread**|A ID do thread da qual o evento foi obtido.|
 
 > [!IMPORTANT]
-> Se a GPU ou o driver não derem suporte aos recursos de instrumentação necessários, todos os eventos serão exibidos como "não atribuídos". Lembre-se de atualizar o driver da GPU e tente novamente caso ocorra esse problema. Para obter mais informações, consulte [Suporte de hardware e driver](#hwsupport) abaixo.
+> Se a GPU ou o driver não oferecer suporte aos recursos de instrumentação necessários, todos os eventos aparecerão como sem *atributo*. Se você tiver esse problema, atualize seu driver de GPU e tente novamente. Para obter mais informações, consulte [suporte a hardware e driver](#hwsupport) no final deste documento.
 
 ## <a name="gpu-usage-settings"></a>Configurações de Uso de GPU
 
 É possível configurar a ferramenta Uso de GPU para adiar a coleta de informações de criação de perfil, em vez de iniciar a coleta de informações logo após a inicialização do aplicativo. Como o tamanho das informações de criação de perfil pode ser significativo, essa ação será útil quando você souber que os problemas de lentidão no desempenho do aplicativo apenas serão exibidos posteriormente.
 
-**Para adiar a criação de perfil após a inicialização do aplicativo:**
+Para adiar a criação de perfil após a inicialização do aplicativo:
 
-1. No menu principal, escolha **Depurar** e, em seguida, **Desempenho e Diagnóstico** (teclado: pressione Alt + F2).
+1. No menu principal, escolha **depurar**  >  **desempenho e diagnóstico** (ou, no teclado, pressione Alt + F2).
 
-2. No hub Desempenho e Diagnóstico, siga o link **Configurações** ao lado de **Uso de GPU**.
+2. No Hub **desempenho e diagnóstico** , ao lado de **uso de GPU**, selecione o link **configurações** .
 
-3. Em **Configuração de Criação de Perfil da GPU**, na página de propriedades **Geral**, desmarque a caixa de seleção **Iniciar a criação de perfil após a inicialização do aplicativo** para adiar a criação de perfil.
+3. Em **configuração de criação de perfil de GPU**, na página de propriedades **geral** , desmarque a caixa de seleção **Iniciar criação de perfil no início do aplicativo** para adiar a criação de perfil.
 
-   ![Configure quando a coleta de uso de GPU for iniciada](media/gfx_diag_gpu_usage_config.png "gfx_diag_gpu_usage_config")
+   ![Captura de tela das páginas de propriedades do objeto, mostrando opções de coleta](media/gfx_diag_gpu_usage_config.png "gfx_diag_gpu_usage_config")
 
 > [!IMPORTANT]
-> Não há suporte para o adiamento da criação de perfil em aplicativos Direct3D 12.
+> Neste momento, você não pode adiar a criação de perfil para aplicativos do Direct3D 12.
 
 Depois de executar seu aplicativo na ferramenta Uso de GPU, um link adicional se tornará disponível na parte inferior da janela de ferramentas Uso de GPU. Para iniciar a coleta de informações de criação de perfil, escolha o link **Iniciar** na mensagem **Iniciar coleta de dados detalhados de Uso de GPU adicionais**.
 
@@ -143,19 +141,10 @@ Depois de executar seu aplicativo na ferramenta Uso de GPU, um link adicional se
 
 Há suporte para os seguintes hardware e drivers de GPU:
 
-|Fornecedor|Descrição da GPU|Versão de driver necessária|
+|Fornecedor|Descrição da GPU|Versão do driver necessária|
 |------------|---------------------|-----------------------------|
-|Intel®|Processadores Intel® Core da 4ª geração (“Haswell”)<br /><br /> -   Intel® HD Graphics (GT1)<br />-   Intel® HD Graphics 4200 (GT2)<br />-   Intel® HD Graphics 4400 (GT2)<br />-   Intel® HD Graphics 4600 (GT2)<br />-   Intel® HD Graphics P4600 (GT2)<br />-   Intel® HD Graphics P4700 (GT2)<br />-   Intel® HD Graphics 5000 (GT3)<br />-   Intel® Iris™ Graphics 5100 (GT3)<br />-   Intel® Iris™ Pro Graphics 5200 (GT3e)|- (usar os últimos drivers)|
-|AMD®|A maioria, a partir da AMD Radeon™ HD série 7000 (excluindo AMD Radeon™ HD 7350-7670)<br /><br /> Aceleradores de GPUs AMD Radeon™, AMD FirePro™ e AMD FirePro com a arquitetura GCN (Graphics Core Next).<br /><br /> APUs (Unidades de Processamento Acelerado) AMD® série E e AMD série A com a arquitetura GCN (Graphics Core Next) (“Kaveri”, “Kabini”, “Temash”, “Beema”, “Mullins”)|14.7 RC3 ou superior|
-|NVIDIA®|A maioria, a partir da NVIDIA® GeForce® série 400.<br /><br /> Aceleradores de GPUs NVIDIA® GeForce®, NVIDIA Quadro® e NVIDIA® Tesla™ com a arquitetura Fermi™, Kepler™ ou Maxwell™.|343.37 ou superior|
+|Intel®|Processadores Intel® Core da 4ª geração (“Haswell”)<br /><br /> -   Intel® HD Graphics (GT1)<br />-   Intel® HD Graphics 4200 (GT2)<br />-   Intel® HD Graphics 4400 (GT2)<br />-   Intel® HD Graphics 4600 (GT2)<br />-   Intel® HD Graphics P4600 (GT2)<br />-   Intel® HD Graphics P4700 (GT2)<br />-   Intel® HD Graphics 5000 (GT3)<br />-   Intel® Iris™ Graphics 5100 (GT3)<br />-   Intel® Iris™ Pro Graphics 5200 (GT3e)|(usar drivers mais recentes)|
+|AMD®|A maioria desde a série AMD Radeon™ HD 7000 (exclui o AMD Radeon™ HD 7350-7670)<br /><br /> AMD Radeon™ GPU, AMD FirePro™ GPUs e aceleradores de GPU do AMD FirePro, com a arquitetura de núcleos principais a seguir (GCN)<br /><br /> APUs (Unidades de Processamento Acelerado) AMD® série E e AMD série A com a arquitetura GCN (Graphics Core Next) (“Kaveri”, “Kabini”, “Temash”, “Beema”, “Mullins”)|14,7 RC3 ou posterior|
+|NVIDIA®|A maioria desde o NVIDIA® GeForce® série 400<br /><br /> GPUs NVIDIA® GeForce®, NVIDIA Quadro® GPUs e NVIDIA® Tesla™ a arquitetura de GPU, com Fermi™, Kepler™ ou Maxwell™ Architecture|343,37 ou posterior|
 
- No momento, não há suporte para configurações de GPU múltipla, como NVIDIA® SLI™ e AMD Crossfire™. Há suporte para a configuração de elementos gráficos híbridos, como NVIDIA® Optimus™ e AMD Enduro™.
-
-## <a name="see-also"></a>Confira também
-
-- [Resolver problemas difíceis de elementos gráficos no jogo usando as ferramentas do DirectX (vídeo)](https://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools)
-- [Ferramenta Uso de GPU no Visual Studio (vídeo)](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2014/715)
-- [Ferramenta Uso de GPU no Visual Studio 2013 Atualização 4 CTP1 (blog)](https://devblogs.microsoft.com/cppblog/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1/)
-- [Uso de GPU para o DirectX no Visual Studio (blog)](https://blogs.msdn.microsoft.com/ianhu/2014/12/16/gpu-usage-for-directx-in-visual-studio/)
-- [GPUView](/windows-hardware/drivers/display/using-gpuview)
-- [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
+ As configurações de várias GPU, como NVIDIA® SLI™ e AMD Crossfire™, não têm suporte no momento. As configurações de gráficos híbridos, como NVIDIA® Optimus™ e AMD Enduro™, têm suporte.

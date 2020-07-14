@@ -12,12 +12,12 @@ ms.assetid: 95fa5214-b12e-4e1f-84e5-cc4c2d86b0d7
 caps.latest.revision: 34
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 64ac9835a085908645713f95f1f07c283d807852
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3f669c4dcfb91579ac50270914112cd6388e2743
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657052"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547973"
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>Instruções passo a passo: usando um arquivo de configuração para definir uma fonte de dados
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo a
 
 - Acessando as fontes de dados usando a classe <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute>.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
  Para concluir esta explicação passo a passo, será necessário:
 
 - Visual Studio Enterprise
@@ -47,7 +47,7 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo a
 
 #### <a name="to-add-an-appconfig-file-to-the-project"></a>Como adicionar o arquivo app.config no projeto
 
-1. Se seu projeto de teste já tem um arquivo app.config, vá para [Definir uma seção de configuração personalizada](#DefineCustomConfigurationSection).
+1. Se o projeto de teste já tiver um arquivo app.config, vá para [definir uma seção de configuração personalizada](#DefineCustomConfigurationSection).
 
 2. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto de teste, aponte para **Adicionar** e clique em **Novo Item**.
 
@@ -55,7 +55,7 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo a
 
 3. Selecione o modelo de **Arquivo de Configuração de Aplicativo** e clique em **Adicionar**.
 
-## <a name="DefineCustomConfigurationSection"></a> Defina uma seção de configuração personalizada
+## <a name="define-a-custom-configuration-section"></a><a name="DefineCustomConfigurationSection"></a>Definir uma seção de configuração personalizada
  Examine o arquivo app.config. Ele contém pelo menos a declaração XML e um elemento raiz.
 
 #### <a name="to-add-the-custom-configuration-section-to-the-appconfig-file"></a>Como adicionar a seção de configuração personalizada para o arquivo app.config
@@ -94,7 +94,7 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo a
 
  No segundo elemento `add`, crie os seguintes atributos e valores para uma conexão a uma planilha do Microsoft Excel:
 
-|||
+|Atributo|Valores|
 |-|-|
 |`name`|`"MyExcelConn"`|
 |`connectionString`|`"Dsn=Excel Files;dbq=data.xlsx;defaultdir=.; driverid=790;maxbuffersize=2048;pagetimeout=5"`|
@@ -102,7 +102,7 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo a
 
  O elemento `connectionStrings` deverá ser similar a esse:
 
-```
+```xml
 <connectionStrings>
     <add name="MyJetConn" connectionString="Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\testdatasource.accdb; Persist Security Info=False;" providerName="System.Data.OleDb" />
     <add name="MyExcelConn" connectionString="Dsn=Excel Files;dbq=data.xlsx;defaultdir=.; driverid=790;maxbuffersize=2048;pagetimeout=5" providerName="System.Data.Odbc" />
@@ -132,7 +132,7 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo a
 
 4. No primeiro elemento `add`, crie os seguintes atributos e valores para uma fonte de dados do Microsoft Access:
 
-|Atributo|Valores|
+|Atributo|Valor|
 |---------------|------------|
 |`name`|`"MyJetDataSource"`|
 |`connectionString`|`"MyJetConn"`|
@@ -141,7 +141,7 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo a
 
  No segundo elemento `add`, crie os seguintes atributos e valores para uma fonte de dados do Microsoft Excel:
 
-|||
+|Atributo|Valor|
 |-|-|
 |`Name`|`"MyExcelDataSource"`|
 |`connectionString`|`"MyExcelConn"`|
@@ -150,7 +150,7 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo a
 
  O elemento `microsoft.visualstudio.testtools` deverá ser similar a esse:
 
-```
+```xml
 <microsoft.visualstudio.testtools>
     <dataSources>
         <add name="MyJetDataSource" connectionString="MyJetConn" dataTableName="MyDataTable" dataAccessMethod="Sequential"/>
@@ -161,7 +161,7 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo a
 
  O arquivo app.config final deve ser semelhante a este:
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
     <configSections>
@@ -223,7 +223,7 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo a
 
 2. Substitua o conteúdo do teste de unidade gerado automaticamente pelo código a seguir:
 
-    ```
+    ```csharp
     using System;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -268,5 +268,5 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo a
 > [!IMPORTANT]
 > Implante itens como fontes de dados para que fiquem acessíveis para o teste no diretório de implantação.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Teste de unidade seu código](../test/unit-test-your-code.md) [criando e executando testes de unidade para testar o código existente](https://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173) [no aplicativo](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac) [como criar um teste de unidade controlado por dados](../test/how-to-create-a-data-driven-unit-test.md)

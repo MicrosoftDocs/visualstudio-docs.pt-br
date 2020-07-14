@@ -3,7 +3,7 @@ title: Acesso negado | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5
 dev_langs:
@@ -13,23 +13,23 @@ dev_langs:
 ms.assetid: 8a512060-d744-47af-a83e-4ba42ea2c5b2
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 9563cafa4895f89253b4073d788240806a86fa2a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 874f7c0e5dcfaf4881c059a77f1c5e930d8c0578
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62561072"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814831"
 ---
 # <a name="access-is-denied"></a>O acesso foi negado
 Um script tentou acessar dados de uma fonte que não é o host da página atual. A Política de Mesma Origem seguida pelo Internet Explorer e outros navegadores permite que scripts acessem dados somente de fontes com o mesmo esquema, host e porta de URL da página atual.  
   
- Por exemplo, se a página atual é `https://employees.mycompany.com`, você não pode acessar dados usando as URLs a seguir:  
+ Por exemplo, se a página atual for `https://employees.mycompany.com` , você não poderá acessar dados das seguintes URLs:  
   
-- `http://data.contoso.com`, porque ele está usando HTTP em vez de HTTPS.  
+- `http://data.contoso.com`, porque está usando HTTP em vez de HTTPS.  
   
 - `https://somedatasource.com`, porque ele é um domínio diferente.  
   
-- `https://employees.mycompany.com:8888`, pois ela usa uma porta diferente.  
+- `https://employees.mycompany.com:8888`, porque ele usa uma porta diferente.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   

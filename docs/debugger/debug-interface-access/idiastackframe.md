@@ -1,7 +1,7 @@
 ---
 title: IDiaStackFrame | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a54bd52f3783bb0bedc279cffafab2f21e0b0f39
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e3cadcfd8fed1818e18d276503c0843e0567addf
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741553"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464908"
 ---
 # <a name="idiastackframe"></a>IDiaStackFrame
 Expõe as propriedades de um quadro de pilha.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaStackFrame : IUnknown
@@ -33,9 +33,9 @@ Estes são os métodos com suporte nesta interface:
 
 |Método|Descrição|
 |------------|-----------------|
-|[IDiaStackFrame::get_allocatesBasePointer](../../debugger/debug-interface-access/idiastackframe-get-allocatesbasepointer.md)|Recupera um sinalizador que indica que o ponteiro base está alocado para o código neste intervalo de endereços. Este método foi preterido.|
+|[IDiaStackFrame::get_allocatesBasePointer](../../debugger/debug-interface-access/idiastackframe-get-allocatesbasepointer.md)|Recupera um sinalizador que indica que o ponteiro base está alocado para o código neste intervalo de endereços. Esse método é preterido.|
 |[IDiaStackFrame::get_base](../../debugger/debug-interface-access/idiastackframe-get-base.md)|Recupera a base de endereço do quadro.|
-|[IDiaStackFrame::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-cplusplusexceptionhandling.md)|Recupera um sinalizador que indica C++ que a manipulação de exceção está em vigor.|
+|[IDiaStackFrame::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-cplusplusexceptionhandling.md)|Recupera um sinalizador que indica que a manipulação de exceção do C++ está em vigor.|
 |[IDiaStackFrame::get_functionStart](../../debugger/debug-interface-access/idiastackframe-get-functionstart.md)|Recupera um sinalizador que indica que o bloco contém o ponto de entrada de uma função.|
 |[IDiaStackFrame::get_lengthLocals](../../debugger/debug-interface-access/idiastackframe-get-lengthlocals.md)|Recupera o número de bytes de variáveis locais enviadas por push na pilha.|
 |[IDiaStackFrame::get_lengthParams](../../debugger/debug-interface-access/idiastackframe-get-lengthparams.md)|Recupera o número de bytes de parâmetros enviados por push na pilha.|
@@ -54,7 +54,7 @@ Estes são os métodos com suporte nesta interface:
 Um registro de ativação é uma abstração de uma chamada de função durante sua execução.
 
 ## <a name="notes-for-callers"></a>Observações para chamadores
-Obtenha essa interface chamando o método [IDiaEnumStackFrames:: Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md) . Consulte a interface [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) para obter um exemplo de como obter a interface `IDiaStackFrame`.
+Obtenha essa interface chamando o método [IDiaEnumStackFrames:: Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md) . Consulte a interface [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) para obter um exemplo de como obter a `IDiaStackFrame` interface.
 
 ## <a name="example"></a>Exemplo
 Este exemplo exibe vários atributos de um quadro de pilha.
@@ -107,7 +107,7 @@ Biblioteca: diaguids. lib
 
 DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)
 - [IDiaEnumStackFrames::Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md)

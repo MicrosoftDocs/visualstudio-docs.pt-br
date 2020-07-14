@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_packed | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 420ba5b56342b4b1d5b8e4c2756aa828e5fe53b4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 73694e46f66014c251dbe3760dfade7baea566da
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739531"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462584"
 ---
 # <a name="idiasymbolget_packed"></a>IDiaSymbol::get_packed
 Recupera um sinalizador que especifica se o tipo de dados definido pelo usuário (UDT) está embalado.
@@ -33,16 +33,16 @@ HRESULT get_packed ( 
 #### <a name="parameters"></a>Parâmetros
  `pRetVal`
 
-fora Retorna `TRUE` se o UDT for embalado; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se o UDT é empacotado; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
-> Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
+> Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
 ## <a name="remarks"></a>Comentários
  Embalado significa que todos os membros do UDT estão posicionados o mais próximo possível, sem nenhum preenchimento intermediário para alinhar aos limites de memória.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

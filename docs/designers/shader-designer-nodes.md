@@ -1,19 +1,19 @@
 ---
 title: Nós do Designer de Sombreador
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: f5192fbd-c78f-40a8-a4d4-443209610268
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23877f9b94b498d87a89ae8e657aa2fe52984953
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 75d13aaf5d5b4257ff6ec7c2efc52adbdca7df92
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72634921"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768790"
 ---
 # <a name="shader-designer-nodes"></a>Nós do Designer de Sombreador
 Os artigos nesta seção da documentação contêm informações sobre os vários nós do Designer de Sombreador que você pode usar para criar efeitos gráficos.
@@ -43,9 +43,9 @@ Como o Designer de Sombreador, em última análise, deve gerar código-fonte HLS
 
 |Title|Descrição|
 |-----------|-----------------|
-|[Nódulos constantes](../designers/constant-nodes.md)|Descreve nós que você pode usar para representar valores literais e informações de estado de vértice interpoladas em cálculos do sombreador. Como o estado do vértice é interpolado — e, portanto, é diferente para cada pixel — cada instância de sombreador de pixel recebe uma versão diferente da constante.|
-|[Nódulos de parâmetro](../designers/parameter-nodes.md)|Descreve nós que você pode usar para representar a posição da câmera, as propriedades de material, os parâmetros de iluminação, a hora e outras informações de estado do aplicativo em cálculos do sombreador.|
-|[Nódulos de textura](../designers/texture-nodes.md)|Descreve os nós que você pode usar para amostragem de vários tipos de texturas e geometrias, e para produzir ou transformar as coordenadas de textura de maneiras comuns.|
-|[Nódulos matemáticos](../designers/math-nodes.md)|Descreve os nós que você pode usar para executar operações algébricas, lógicas, trigonométricas e outras operações matemáticas que mapeiam diretamente até as instruções do HLSL.|
+|[Nós de constante](../designers/constant-nodes.md)|Descreve nós que você pode usar para representar valores literais e informações de estado de vértice interpoladas em cálculos do sombreador. Como o estado do vértice é interpolado — e, portanto, é diferente para cada pixel — cada instância de sombreador de pixel recebe uma versão diferente da constante.|
+|[Nós de parâmetro](../designers/parameter-nodes.md)|Descreve nós que você pode usar para representar a posição da câmera, as propriedades de material, os parâmetros de iluminação, a hora e outras informações de estado do aplicativo em cálculos do sombreador.|
+|[Nós de textura](../designers/texture-nodes.md)|Descreve os nós que você pode usar para amostragem de vários tipos de texturas e geometrias, e para produzir ou transformar as coordenadas de textura de maneiras comuns.|
+|[Nós de matemática](../designers/math-nodes.md)|Descreve os nós que você pode usar para executar operações algébricas, lógicas, trigonométricas e outras operações matemáticas que mapeiam diretamente até as instruções do HLSL.|
 |[Nós de utilitário](../designers/utility-nodes.md)|Descreve os nós que você pode usar para executar cálculos de iluminação comuns e outras operações comuns que não mapeiam diretamente até as instruções do HLSL.|
-|[Tecida de filtro](../designers/filter-nodes.md)|Descreve os nós que você pode usar para executar a filtragem de textura e de cor.|
+|[Nós de filtro](../designers/filter-nodes.md)|Descreve os nós que você pode usar para executar a filtragem de textura e de cor.|

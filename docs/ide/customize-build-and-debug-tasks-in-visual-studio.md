@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e912459f45086b1bf5f96a9458f006354e982ffd
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ffd0f7378893b52e93480272c73acc2aa413320d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76542679"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533713"
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>Personalizar tarefas de compilação e depuração para desenvolvimento de "Pasta Aberta"
 
@@ -36,7 +36,7 @@ Personalizar sua base de código sem projeto usando os seguintes arquivos *.json
 Esses arquivos *.json* estão localizados em uma pasta oculta chamada *.vs* na pasta raiz de sua base de código. Os arquivos *tasks.vs.json* e *launch.vs.json* são criados pelo Visual Studio conforme a necessidade quando você escolhe **Configurar Tarefas** ou **Configurações de Depuração e de Inicialização** em um arquivo ou pasta no **Gerenciador de Soluções**. Esses arquivos *.json* ficam ocultos porque a maioria dos usuários geralmente não deseja inclui-los no controle do código-fonte. No entanto, se você quiser a possibilidade de inclui-los no controle do código-fonte, arraste os arquivos para a raiz da base de código, onde eles ficarão visíveis.
 
 > [!TIP]
-> Para visualizar arquivos ocultos no Visual Studio, escolha o botão **Mostrar todos os arquivos** na barra de ferramentas do Solution **Explorer.**
+> Para exibir arquivos ocultos no Visual Studio, escolha o botão **Mostrar todos os arquivos** na barra de ferramentas **Gerenciador de soluções** .
 
 ## <a name="define-tasks-with-tasksvsjson"></a>Definir tarefas com tasks.vs.json
 
@@ -46,13 +46,13 @@ Você pode automatizar os scripts de compilação, ou quaisquer outras operaçõ
 
 Isso cria (ou abre) o arquivo *tasks.vs.json* na pasta *.vs*. É possível definir uma tarefa de compilação ou uma tarefa arbitrária nesse arquivo e, depois, chamá-la usando o nome que você forneceu por meio do menu do clique com o botão direito no **Gerenciador de Soluções**.
 
-As tarefas personalizadas podem ser adicionadas a arquivos individuais ou a todos os arquivos de um tipo específico. Por exemplo, os arquivos de pacotes NuGet podem ser configurados para ter uma tarefa "Restaurar pacotes", ou todos os arquivos de origem podem ser configurados para ter uma tarefa de análise estática, como um linter para todos os arquivos *.js.*
+As tarefas personalizadas podem ser adicionadas a arquivos individuais ou a todos os arquivos de um tipo específico. Por exemplo, os arquivos de pacote NuGet podem ser configurados para ter uma tarefa "restaurar pacotes" ou todos os arquivos de origem podem ser configurados para ter uma tarefa de análise estática, como um pano para todos os arquivos *. js* .
 
 ### <a name="define-custom-build-tasks"></a>Definir tarefas de compilação personalizadas
 
-Se a sua base de código usar ferramentas de compilação personalizadas não reconhecidas pelo Visual Studio, não será possível executar e depurar o código no Visual Studio antes de concluir algumas etapas de configuração. O Visual Studio fornece *tarefas de compilação*, nas quais você pode informar ao Visual Studio como compilar, recompilar e limpar seu código. As *tarefas.vs.json* constroem arquivos de tarefas acoplado o loop de desenvolvimento interno do Visual Studio às ferramentas de compilação personalizadas usadas pela sua base de código.
+Se a sua base de código usar ferramentas de compilação personalizadas não reconhecidas pelo Visual Studio, não será possível executar e depurar o código no Visual Studio antes de concluir algumas etapas de configuração. O Visual Studio fornece *tarefas de compilação*, nas quais você pode informar ao Visual Studio como compilar, recompilar e limpar seu código. O *tasks.vs.jsno arquivo de* tarefa de compilação associa o loop de desenvolvimento interno do Visual Studio às ferramentas de compilação personalizadas usadas pela base de código.
 
-Considere uma base de código composta por um único arquivo em C# chamado *hello.cs*. O *arquivo de make para* tal base de código pode ser assim:
+Considere uma base de código composta por um único arquivo em C# chamado *hello.cs*. O *makefile* para tal codebase pode ser assim:
 
 <!-- markdownlint-disable MD010 -->
 ```makefile
@@ -73,7 +73,7 @@ bin:
 ```
 <!-- markdownlint-enable MD010 -->
 
-Para um *arquivo de makeque* contém metas de compilação, limpeza e reconstrução, você pode definir o seguinte arquivo *tasks.vs.json.* Ele contém três tarefas de compilação para compilar, recompilar e limpar a base de código, usando NMAKE como a ferramenta de compilação.
+Para um *makefile* que contém destinos de compilação, limpeza e recompilação, você pode definir o seguinte *tasks.vs.jsno* arquivo. Ele contém três tarefas de compilação para compilar, recompilar e limpar a base de código, usando NMAKE como a ferramenta de compilação.
 
 ```json
 {
@@ -117,7 +117,7 @@ Para um *arquivo de makeque* contém metas de compilação, limpeza e reconstru�
 }
 ```
 
-Depois de definir as tarefas de compilação em *tasks.vs.json*, ocorre a adição de outros itens do menu do clique com o botão direito (menu de contexto) aos arquivos correspondentes no **Gerenciador de Soluções**. Para este exemplo, opções de "build", "rebuild" e "clean" são adicionadas ao menu de contexto de qualquer arquivo *makefile.*
+Depois de definir as tarefas de compilação em *tasks.vs.json*, ocorre a adição de outros itens do menu do clique com o botão direito (menu de contexto) aos arquivos correspondentes no **Gerenciador de Soluções**. Neste exemplo, as opções "Build", "Rebuild" e "Clean" são adicionadas ao menu de contexto de quaisquer arquivos *makefile* .
 
 ![menu de contexto do makefile com compilação, recompilação e limpeza](media/customize-build-rebuild-clean.png)
 
@@ -130,7 +130,7 @@ Quando você seleciona uma dessas opções, a tarefa é executada. A saída é e
 
 Você pode definir tarefas arbitrárias no arquivo *tasks.vs.json*, a fim de fazer quase tudo o que você quiser. Por exemplo, você pode definir uma tarefa para exibir o nome do arquivo selecionado atualmente na janela **Saída**, ou para listar os arquivos em um diretório especificado.
 
-O exemplo a seguir mostra um arquivo *tasks.vs.json* que define uma única tarefa. Quando chamada, a tarefa exibe o nome do arquivo *.js* selecionado atualmente.
+O exemplo a seguir mostra um *tasks.vs.jsno* arquivo que define uma única tarefa. Quando chamada, a tarefa exibe o nome do arquivo *.js* selecionado atualmente.
 
 ```json
 {
@@ -201,31 +201,31 @@ Esta seção descreve algumas das propriedades que você pode especificar em *ta
 
 Você pode criar tarefas para qualquer arquivo ou pasta especificando seu nome no campo `appliesTo`, por exemplo `"appliesTo": "hello.js"`. As máscaras de arquivo a seguir podem ser usadas como valores:
 
-|||
+|Máscara de arquivo|Descrição|
 |-|-|
 |`"*"`| a tarefa está disponível para todos os arquivos e pastas no workspace|
 |`"*/"`| a tarefa está disponível para todas as pastas no workspace|
-|`"*.js"`| tarefa está disponível para todos os arquivos com a extensão *.js* no espaço de trabalho|
-|`"/*.js"`| tarefa está disponível para todos os arquivos com a extensão *.js* na raiz do espaço de trabalho|
-|`"src/*/"`| tarefa está disponível para todas as subpastas da pasta *src*|
+|`"*.js"`| a tarefa está disponível para todos os arquivos com a extensão *. js* no espaço de trabalho|
+|`"/*.js"`| a tarefa está disponível para todos os arquivos com a extensão *. js* na raiz do espaço de trabalho|
+|`"src/*/"`| a tarefa está disponível para todas as subpastas da pasta *src*|
 |`"makefile"`| a tarefa está disponível para todos os arquivos *makefile* no workspace|
-|`"/makefile"`| tarefa está disponível apenas para o *makefile* na raiz do espaço de trabalho|
+|`"/makefile"`| a tarefa está disponível somente para o *makefile* na raiz do espaço de trabalho|
 
 #### <a name="macros-for-tasksvsjson"></a>Macros para tasks.vs.json
 
-|||
+|Macro|Descrição|
 |-|-|
-|`${env.<VARIABLE>}`| Especifica qualquer variável de ambiente (por exemplo, ${env.PATH}, ${env.COMSPEC} e assim por diante) que esteja definida para o prompt de comando do desenvolvedor. Para obter mais informações, consulte [o prompt de comando do Desenvolvedor para o Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
+|`${env.<VARIABLE>}`| Especifica qualquer variável de ambiente (por exemplo, ${env.PATH}, ${env.COMSPEC} e assim por diante) que esteja definida para o prompt de comando do desenvolvedor. Para obter mais informações, consulte [prompt de comando do desenvolvedor para o Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
 |`${workspaceRoot}`| O caminho completo para a pasta do espaço de trabalho (por exemplo, *C:\sources\hello*)|
-|`${file}`| O caminho completo do arquivo ou pasta selecionado para executar essa tarefa contra (por exemplo, *C:\sources\hello\src\hello.js*)|
-|`${relativeFile}`| O caminho relativo para o arquivo ou pasta (por exemplo, *src\hello.js*)|
-|`${fileBasename}`| O nome do arquivo sem caminho ou extensão (por exemplo, *olá)*|
-|`${fileDirname}`| O caminho completo para o arquivo, excluindo o nome do arquivo (por exemplo, *C:\sources\hello\src*)|
-|`${fileExtname}`| A extensão do arquivo selecionado (por exemplo, *.js*)|
+|`${file}`| O caminho completo do arquivo ou da pasta selecionada para executar essa tarefa (por exemplo, *C:\sources\hello\src\hello.js*)|
+|`${relativeFile}`| O caminho relativo para o arquivo ou a pasta (por exemplo, *src\hello.js*)|
+|`${fileBasename}`| O nome do arquivo sem caminho ou extensão (por exemplo, *Olá*)|
+|`${fileDirname}`| O caminho completo para o arquivo, excluindo o nome de arquivo (por exemplo, *C:\sources\hello\src*)|
+|`${fileExtname}`| A extensão do arquivo selecionado (por exemplo, *. js*)|
 
 ## <a name="configure-debugging-with-launchvsjson"></a>Configurar a depuração com launch.vs.json
 
-Para configurar projetos CMake para depuração, consulte [Configurar sessões de depuração CMake](/cpp/build/configure-cmake-debugging-sessions).
+Para configurar projetos do CMake para depuração, consulte [Configurar sessões de depuração do cmake](/cpp/build/configure-cmake-debugging-sessions).
 
 1. Para configurar sua base de código para depuração, no **Gerenciador de Soluções** escolha o item de menu **Configurações de Depuração e de Inicialização** no menu de contexto ou de atalho do seu arquivo executável.
 
@@ -260,7 +260,7 @@ Para configurar projetos CMake para depuração, consulte [Configurar sessões d
    Quando você escolhe **F5**, o depurador é iniciado, e é interrompido em qualquer ponto de interrupção já criado. Todas as janelas conhecidas do depurador ficam disponíveis e funcionais.
 
    > [!IMPORTANT]
-   > Para obter detalhes adicionais sobre tarefas personalizadas de compilação e depuração em projetos de pastas abertas C++, consulte [o suporte open folder para sistemas de construção C++ no Visual Studio](/cpp/build/open-folder-projects-cpp).
+   > Para obter detalhes adicionais sobre tarefas personalizadas de compilação e depuração em projetos de pasta aberta do C++, consulte [abrir pasta suporte para sistemas de compilação c++ no Visual Studio](/cpp/build/open-folder-projects-cpp).
 
 ### <a name="specify-arguments-for-debugging"></a>Especificar argumentos para depuração
 
@@ -312,7 +312,7 @@ As configurações lidas no arquivo *.gitignore* são aplicadas ao seu diretóri
 ## <a name="see-also"></a>Confira também
 
 - [Desenvolver código sem projetos ou soluções](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
-- [Projetos de pasta aberta para C++](/cpp/build/open-folder-projects-cpp)
+- [Projetos Open Folder para C++](/cpp/build/open-folder-projects-cpp)
 - [Projetos do CMake para C++](/cpp/build/cmake-projects-in-visual-studio)
-- [Referência NMAKE](/cpp/build/reference/nmake-reference)
+- [Referência de NMAKE](/cpp/build/reference/nmake-reference)
 - [Recursos do editor de código](../ide/writing-code-in-the-code-and-text-editor.md)

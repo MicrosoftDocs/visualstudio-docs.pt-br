@@ -1,7 +1,7 @@
 ---
 title: Referência gerenciada (desenvolvimento do Office no Visual Studio)
 ms.date: 08/14/2019
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -13,15 +13,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 137031202075d1c646cc7415042dd8d6eab72b78
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 29e8a2206432555e58b47691233bd46c49791046
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985763"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85519854"
 ---
 # <a name="managed-reference-office-development-in-visual-studio"></a>Referência gerenciada (desenvolvimento do Office no Visual Studio)
-  Esta seção contém documentação de referência de API para namespaces e tipos que são usados em projetos do Office destinados ao [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] ou ao [!INCLUDE[net_v45](includes/net-v45-md.md)]. Para obter a documentação de referência de API sobre os namespaces e tipos que são usados em projetos do Office direcionados para o .NET Framework 3,5, consulte a seção de referência a seguir na documentação do Visual Studio: [referência gerenciada (desenvolvimento do Office no Visual Studio )](managed-reference-office-development-in-visual-studio.md).
+  Esta seção contém documentação de referência de API para namespaces e tipos que são usados em projetos do Office destinados ao [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] ou ao [!INCLUDE[net_v45](includes/net-v45-md.md)] . Para obter a documentação de referência de API sobre os namespaces e tipos que são usados em projetos do Office direcionados para o .NET Framework 3,5, consulte a seção de referência a seguir na documentação do Visual Studio: [referência gerenciada (desenvolvimento do Office no Visual Studio)](managed-reference-office-development-in-visual-studio.md).
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
@@ -56,22 +56,22 @@ ms.locfileid: "72985763"
 
  <xref:Microsoft.VisualStudio.Tools.Applications>
 
- Contém a classe <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> e um conjunto de classes de dados em cache relacionadas. Essas classes podem ser usadas para modificar alguns aspectos de personalizações em nível de documento em computadores que não têm o Microsoft Office instalado.
+ Contém a <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> classe e um conjunto de classes de dados em cache relacionadas. Essas classes podem ser usadas para modificar alguns aspectos de personalizações em nível de documento em computadores que não têm o Microsoft Office instalado.
 
  <xref:Microsoft.VisualStudio.Tools.Applications.Deployment>
 
- Contém a interface <xref:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction> (que pode ser implementada para criar uma *ação pós-implantação* para uma solução do Office), exceções que podem ser geradas durante a instalação de uma solução do Office e outras APIs que fazem parte da infraestrutura do Visual Studio.
+ Contém a <xref:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction> interface (que você pode implementar para criar uma *ação de pós-implantação* para uma solução do Office), exceções que podem ser geradas ao instalar uma solução do Office e outras APIs que fazem parte da infraestrutura do Visual Studio.
 
  <xref:Microsoft.VisualStudio.Tools.Applications.Runtime>
 
- Contém a maioria das exceções que podem ser geradas pelo [!INCLUDE[vsto_runtime](includes/vsto-runtime-md.md)], várias classes que podem ser usadas para armazenar dados em cache em personalizações em nível de documento e outras APIs que fazem parte da infraestrutura do Visual Studio.
+ Contém a maioria das exceções que podem ser geradas pelo [!INCLUDE[vsto_runtime](includes/vsto-runtime-md.md)] , várias classes que podem ser usadas para armazenar dados em cache em personalizações em nível de documento e outras APIs que fazem parte da infraestrutura do Visual Studio.
 
  <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks>
 
  Contém as classes de tarefa do MSBuild que são usadas para criar projetos do Office.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Visão geral do Visual Studio Tools for Office Runtime](visual-studio-tools-for-office-runtime-overview.md)
-- [Introdução &#40;ao desenvolvimento do Office no Visual Studio&#41;](getting-started-office-development-in-visual-studio.md)
+- [Introdução &#40;desenvolvimento do Office no Visual Studio&#41;](getting-started-office-development-in-visual-studio.md)
 - [Exemplos e orientações de desenvolvimento do Office](office-development-samples-and-walkthroughs.md)
 - [Projetar e criar soluções do Office](designing-and-creating-office-solutions.md)

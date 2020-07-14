@@ -1,7 +1,7 @@
 ---
 title: Como criar e aplicar um recurso
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.XamlDesigner.CreateResource
 - VS.XamlDesigner.EditResource
@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ac633f94c237bdff418375903e99f6f2da9e776
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2301ce14fcd3d2d8a9c5d003a05186513d950cd4
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592962"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330108"
 ---
 # <a name="how-to-create-and-apply-a-resource"></a>Como criar e aplicar um recurso
 
@@ -34,7 +34,7 @@ Sempre que você cria um novo recurso a partir de uma propriedade, [Estilo](xref
 
      ![Caixa de diálogo Criar recurso](../designers/media/xaml_create_resource.png)
 
-3. Na caixa **Nome (Chave)** , insira um nome de chave. Este é o nome que você pode usar quando quer que outros elementos façam referência ao recurso.
+3. Na caixa **Nome (Chave)**, insira um nome de chave. Este é o nome que você pode usar quando quer que outros elementos façam referência ao recurso.
 
 4. Em **Definir em**, escolha opção que especifica onde você deseja que o recurso seja definido:
 
@@ -52,7 +52,7 @@ Sempre que você cria um novo recurso a partir de uma propriedade, [Estilo](xref
 
 1. Na janela Estrutura de Tópicos do Documento, escolha o elemento em que você deseja aplicar um recurso.
 
-2. Siga um destes procedimentos:
+2. Realize um dos seguintes procedimentos:
 
    - Aplique um recurso a uma propriedade. Na janela **Propriedades**, escolha o marcador de propriedade ao lado do valor da propriedade, escolha **Recurso Local** ou **Recurso do Sistema** e escolha um recurso disponível na lista que é exibida.
 

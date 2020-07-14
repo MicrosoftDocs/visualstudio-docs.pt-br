@@ -1,21 +1,21 @@
 ---
 title: 'Passo a passo: Criando uma bola de bilhar realista em 3D'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: af8eb0f3-bf6a-4d1c-ab47-dcd88ab04efa
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 866f91303c224f8330a4d2be76f3d29331fcb346
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4bebaa8c197d0b0a4447739d900062bef2bda37c
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589910"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816651"
 ---
-# <a name="walkthrough-create-a-realistic-3d-billiard-ball"></a>Explicação passo a passo: criar uma bola de bilhar realista em 3D
+# <a name="walkthrough-create-a-realistic-3d-billiard-ball"></a>Passo a passo: Criar uma bola de bilhar 3D realista
 
 Este passo a passo demonstra como criar uma bola de bilhar realista em 3D usando o Designer de Sombreador e o Editor de Imagens no Visual Studio. A aparência 3D da bola de bilhar é obtida pela combinação de várias técnicas de sombreador com recursos de textura adequados.
 
@@ -161,15 +161,15 @@ A primeira etapa é criar uma textura de mapa de cubo. Em muitos tipos de aplica
 
 ### <a name="to-assemble-a-cube-map-by-using-the-directx-texture-tool"></a>Como montar um mapa de cubo usando a ferramenta de textura do DirectX
 
-1. Na ferramenta de textura DirectX, no menu principal, escolha **Arquivo** > **Nova Textura**. A caixa de diálogo **Nova Textura** é exibida.
+1. Na ferramenta textura do DirectX, no menu principal, escolha **arquivo**  >  **nova textura**. A caixa de diálogo **Nova Textura** é exibida.
 
 2. No grupo **Tipo de Textura**, escolha **Textura do Mapa de Cubo**.
 
 3. No grupo **Dimensões**, digite o valor correto para a **Largura** e a **Altura**e, em seguida, escolha **OK**. Um novo documento de textura é exibido. Por padrão, a textura mostrada pela primeira vez no documento de textura corresponde à face do cubo **X positivo**.
 
-4. Carregue a textura que você criou para o lado do cubo de textura na face do cubo. No menu principal, escolha **'Abrir arquivo'** > **para esta face cubemap**, selecione a textura que você criou para o lado do cubo e, em seguida, escolha **Abrir**.
+4. Carregue a textura que você criou para o lado do cubo de textura na face do cubo. No menu principal, escolha **arquivo**  >  **abrir para este cubemap face**, selecione a textura que você criou para o lado do cubo e, em seguida, escolha **abrir**.
 
-5. Repita a etapa 4 para as faces do cubo **X negativo**, **Z positivo** e **Z negativo**. Para fazer isso, você deve exibir a face que deseja carregar. Para ver uma face diferente do mapa do cubo, no menu principal, escolha **Exibir** > **rosto do mapa do cubo**e selecione o rosto que deseja visualizar.
+5. Repita a etapa 4 para as faces do cubo **X negativo**, **Z positivo** e **Z negativo**. Para fazer isso, você deve exibir a face que deseja carregar. Para exibir uma face de mapa de cubos diferente, no menu principal, escolha **Exibir**  >  a**face do mapa do cubo**e, em seguida, selecione a face que você deseja exibir.
 
 6. Para a face do cubo **Y positivo**, carregue a textura que você criou na parte de cima do cubo de textura.
 
@@ -207,10 +207,10 @@ A primeira etapa é criar uma textura de mapa de cubo. Em muitos tipos de aplica
 
    Nesta imagem final, observe como os efeitos que você adicionou se unem para criar uma bola de bilhar muito convincente. A forma, a textura e a iluminação criam a aparência básica de um objeto 3D e os realces especulares e os reflexos tornam a bola de bilhar mais interessante e fazem com que ela pareça fazer parte do ambiente.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Como: Exportar um sombreador](../designers/how-to-export-a-shader.md)
-- [Como: Aplicar um sombreador a um modelo 3D](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
-- [Designer de Sombreador](../designers/shader-designer.md)
-- [Editor de imagens](../designers/image-editor.md)
-- [Nós do Designer de Sombreador](../designers/shader-designer-nodes.md)
+- [Como: exportar um sombreador](../designers/how-to-export-a-shader.md)
+- [Como: aplicar um sombreador a um modelo 3D](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [Designer de sombreador](../designers/shader-designer.md)
+- [Editor de imagem](../designers/image-editor.md)
+- [Nós do designer do sombreador](../designers/shader-designer-nodes.md)

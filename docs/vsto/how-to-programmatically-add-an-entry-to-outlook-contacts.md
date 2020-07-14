@@ -1,7 +1,7 @@
 ---
-title: 'Como: Adicionar uma entrada a contatos do Outlook de forma programática'
+title: 'Como: adicionar programaticamente uma entrada aos contatos do Outlook'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,14 +12,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ed0f8a873655180ef2464b5b31c631dbd7d2d4ad
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c4d692833f7dba49a539bbaafec2156f7426170b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967703"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520095"
 ---
-# <a name="how-to-programmatically-add-an-entry-to-outlook-contacts"></a>Como: Adicionar uma entrada a contatos do Outlook de forma programática
+# <a name="how-to-programmatically-add-an-entry-to-outlook-contacts"></a>Como: adicionar programaticamente uma entrada aos contatos do Outlook
   Este exemplo cria um novo contato e insere dados no novo contato.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
@@ -28,8 +28,8 @@ ms.locfileid: "62967703"
  [!code-vb[Trin_OL_AddContact#1](../vsto/codesnippet/VisualBasic/Trin_OL_AddContact/thisaddin.vb#1)]
  [!code-csharp[Trin_OL_AddContact#1](../vsto/codesnippet/CSharp/Trin_OL_AddContact/thisaddin.cs#1)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Trabalhar com itens de contato](../vsto/working-with-contact-items.md)
-- [Como: Criar compromissos programaticamente](../vsto/how-to-programmatically-create-appointments.md)
-- [Como: Acessar os contatos do Outlook de forma programática](../vsto/how-to-programmatically-access-outlook-contacts.md)
-- [Como: Pesquisar um endereço de email em contatos de forma programática](../vsto/how-to-programmatically-search-for-an-e-mail-address-in-contacts.md)
+- [Como: criar compromissos programaticamente](../vsto/how-to-programmatically-create-appointments.md)
+- [Como programaticamente acessar contatos do Outlook](../vsto/how-to-programmatically-access-outlook-contacts.md)
+- [Como: pesquisar programaticamente por um endereço de email nos contatos](../vsto/how-to-programmatically-search-for-an-e-mail-address-in-contacts.md)

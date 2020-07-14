@@ -1,7 +1,7 @@
 ---
 title: 'Como: Adicionar e remover assemblies adicionais | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.RAD.CustomAssembly
 dev_langs:
@@ -14,12 +14,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bdcc1c478bead4df89622a7311b074965cdc0226
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 07b9016a4e246d3ed5a2697d924f556517a8226f
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985228"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014827"
 ---
 # <a name="how-to-add-and-remove-additional-assemblies"></a>Como: Adicionar e remover assemblies adicionais
   Se um pacote do SharePoint depender de outros assemblies para funcionalidade ou dados, você poderá adicionar os assemblies ao seu pacote de solução (. wsp). Dessa forma, o servidor do SharePoint garante que os assemblies personalizados sejam instalados com um pacote.

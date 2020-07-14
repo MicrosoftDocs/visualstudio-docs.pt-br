@@ -1,7 +1,7 @@
 ---
 title: Instalar a documentação de Ajuda local
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - hv_manage
 helpviewer_keywords:
@@ -23,18 +23,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 20755447ccac7f5720bdb2df2a96cd9dbec5b730
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
-ms.translationtype: HT
+ms.openlocfilehash: 70bb90856fb88738bbc82434c47e375ea453fd08
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67824953"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284900"
 ---
 # <a name="install-and-manage-local-content"></a>Instalar e gerenciar o conteúdo local
 
 Usando o Microsoft Help Viewer, você pode adicionar, remover, atualizar e mover o conteúdo de Ajuda instalado no seu computador para atender às suas necessidades de desenvolvimento de software.
 
-Para gerenciar o conteúdo em seu computador local, faça logon com uma conta que tenha permissões de administrador. Além disso, você poderá não conseguir gerenciar o conteúdo local se trabalhar em um ambiente empresarial, pois os administradores de sistema podem tomar essas decisões para sua organização. Para obter mais informações, confira o [Guia do administrador do Help Viewer](../help-viewer/administrator-guide.md).
+Para gerenciar o conteúdo em seu computador local, faça logon com uma conta que tenha permissões de administrador. Além disso, você poderá não conseguir gerenciar o conteúdo local se trabalhar em um ambiente empresarial, pois os administradores de sistema podem tomar essas decisões para sua organização. Para obter mais informações, consulte o [Guia do administrador do Help Viewer](../help-viewer/administrator-guide.md).
 
 ## <a name="change-the-content-installation-source"></a>Alterar a fonte de instalação de conteúdo
 
@@ -45,13 +45,13 @@ Por padrão, o Visualizador de Ajuda instala o conteúdo usando um serviço onli
 1. Na guia **Gerenciar Conteúdo**, escolha o botão de opção **Disco**.
 
     > [!NOTE]
-    > A opção **Disco** não estará disponível se o administrador o impediu de modificar a origem de instalação de conteúdo. Para obter mais informações, confira o [Guia do administrador do Help Viewer](../help-viewer/administrator-guide.md).
+    > A opção **Disco** não estará disponível se o administrador o impediu de modificar a origem de instalação de conteúdo. Para obter mais informações, consulte o [Guia do administrador do Help Viewer](../help-viewer/administrator-guide.md).
 
 2. Execute uma das seguintes etapas:
 
-    - Insira o caminho de um arquivo *.msha* ou a URL de um ponto de extremidade de serviço.
+    - Insira o caminho de um arquivo *. msha* ou a URL de um ponto de extremidade de serviço.
 
-    - Escolha o botão Procurar ( **...** ) para navegar para um arquivo *.msha*.
+    - Escolha o botão procurar (**...**) para navegar para um arquivo *. msha* .
 
     - Na lista, escolha a entrada usada mais recentemente.
 
@@ -104,7 +104,7 @@ Você pode economizar espaço em disco removendo conteúdo indesejado do seu com
 A barra de status indica quando estão disponíveis atualizações para o conteúdo instalado.
 
 > [!IMPORTANT]
-> Se desejar que o **Help Viewer** verifique automaticamente se há atualizações online, abra a caixa de diálogo **Opções do Visualizador** e, em seguida, marque a caixa de seleção **Ficar online para verificar se há atualizações de conteúdo**.
+> Se desejar que o **Visualizador da ajuda** verifique automaticamente se há atualizações online, abra a caixa de diálogo **Opções do visualizador** e marque a caixa de seleção **ficar online para verificar se há atualizações de conteúdo** .
 
 ### <a name="to-update-local-content"></a>Para atualizar o conteúdo local
 
@@ -129,6 +129,6 @@ Você pode economizar espaço em disco movendo conteúdo instalado do computador
 
 3. Escolha o botão **Fechar** quando o conteúdo tiver sido movido.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Microsoft Help Viewer](../help-viewer/overview.md)

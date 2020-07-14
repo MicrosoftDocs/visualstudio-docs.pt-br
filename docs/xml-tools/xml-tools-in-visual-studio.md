@@ -1,7 +1,7 @@
 ---
 title: Editor de XML e designer de esquema
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 f1_keywords:
 - vb.xmldesigner
 helpviewer_keywords:
@@ -32,22 +32,22 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87a5f069d5255a744e256bc9f7d1b48a135e85d8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e763fa3475f26b9742ea5fb7061978e711eb22ea
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592302"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816417"
 ---
-# <a name="xml-tools-in-visual-studio"></a>Ferramentas XML no Visual Studio
+# <a name="overview-of-xml-tools-in-visual-studio"></a>Visão geral das ferramentas XML no Visual Studio
 
-*Extensible Markup Language (XML)* é uma linguagem de marcação que fornece um formato para descrever dados. O XML separa os dados e sua apresentação usando folhas de estilo associadas, como XSL (Extensible Stylesheet Language) e CSS (Cascading Style Sheets). O Visual Studio inclui ferramentas e recursos que facilitam trabalhar com os esquemas XML, XSLT e XML.
+*Linguagem XML (XML)* é uma linguagem de marcação que fornece um formato para descrever os dados. O XML separa os dados e sua apresentação usando folhas de estilo associadas, como XSL (Extensible Stylesheet Language) e CSS (Cascading Style Sheets). O Visual Studio inclui ferramentas e recursos que facilitam trabalhar com os esquemas XML, XSLT e XML.
 
 ## <a name="xml-editor"></a>Editor de XML
 
 O [Editor de XML](xml-editor.md) é usado para editar documentos XML. Ele fornece verificação de sintaxe XML completa, validação de esquema enquanto você digita, codificação de cor e IntelliSense. Se um esquema ou um definição de tipo de documento forem fornecidos, ele é usado pelo IntelliSense para listar os elementos e atributos permitidos.
 
-Os recursos adicionais incluem:
+Recursos adicionais incluem:
 
 - Suporte a trecho XML, incluindo trechos de código gerados pelo esquema
 
@@ -77,5 +77,5 @@ O Visual Studio dá suporte à [depuração de folhas de estilo XSLT](../xml-too
 - <xref:System.Xml?displayProperty=fullName>
 - [Transformações XSLT](/dotnet/standard/data/xml/xslt-transformations)
 - [Processar dados XML usando o modelo de dados XPath](/dotnet/standard/data/xml/process-xml-data-using-the-xpath-data-model)
-- [DOM (Modelo de Objeto do Documento) de XML](/dotnet/standard/data/xml/xml-document-object-model-dom)
-- [XML Schema Object Model (SOM)](/dotnet/standard/data/xml/xml-schema-object-model-som) [SOM (Modelo de Objeto de Esquema) XML]
+- [XML Document Object Model (DOM)](/dotnet/standard/data/xml/xml-document-object-model-dom)
+- [SOM (Schema Object Model) XML](/dotnet/standard/data/xml/xml-schema-object-model-som)

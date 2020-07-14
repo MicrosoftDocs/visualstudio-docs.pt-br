@@ -1,7 +1,7 @@
 ---
 title: Geração de texto de tempo de execução com modelos de texto T4
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -15,12 +15,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 26897bee69f7c0e969cd42feb7604321294641fb
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 344e15b69bf3e8308c62c6fa1074720b0cd7618d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595365"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520829"
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>Geração de texto de tempo de execução com modelos de texto T4
 
@@ -53,9 +53,9 @@ Usar um modelo em seu aplicativo torna mais fácil ver a forma final da saída d
 
 ### <a name="to-create-a-run-time-text-template"></a>Para criar um modelo de texto de tempo de execução
 
-1. No Gerenciador de Soluções, no menu de atalho do seu projeto, escolha **adicionar** > **novo item**.
+1. No Gerenciador de soluções, no menu de atalho do seu projeto, escolha **Adicionar**  >  **novo item**.
 
-2. Na caixa de diálogo **Adicionar novo item** , selecione **modelo de texto de tempo de execução**. (Em Visual Basic procure em **itens comuns** > **geral**.)
+2. Na caixa de diálogo **Adicionar novo item** , selecione **modelo de texto de tempo de execução**. (Em Visual Basic procure em **itens comuns**  >  **Geral**.)
 
 3. Digite um nome para o arquivo de modelo.
 
@@ -80,7 +80,7 @@ Uma boa maneira de criar um modelo é converter um exemplo existente da saída. 
 
 ### <a name="to-convert-an-existing-text-file-to-a-run-time-template"></a>Para converter um arquivo de texto existente em um modelo de tempo de execução
 
-1. Inclua o arquivo em seu projeto do Visual Studio. No Gerenciador de Soluções, no menu de atalho do projeto, escolha **adicionar** > **Item existente**.
+1. Inclua o arquivo em seu projeto do Visual Studio. No Gerenciador de soluções, no menu de atalho do projeto, escolha **Adicionar**  >  **Item existente**.
 
 2. Defina a propriedade **ferramentas personalizadas** do arquivo como **TextTemplatingFilePreprocessor**. No Gerenciador de Soluções, no menu de atalho do arquivo, escolha **Propriedades**.
 
@@ -91,7 +91,7 @@ Uma boa maneira de criar um modelo é converter um exemplo existente da saída. 
 
 4. Remova qualquer espaço ou pontuação da parte principal do nome do arquivo. Por exemplo, "meu Page.tt da Web" estaria incorreto, mas "MyWebPage.tt" está correto. O nome do arquivo será usado como um nome de classe no código gerado.
 
-5. Insira a linha a seguir no início do arquivo. Se você estiver trabalhando em um projeto Visual Basic, substitua "C#" por "vb".
+5. Insira a linha a seguir no início do arquivo. Se você estiver trabalhando em um projeto Visual Basic, substitua "C#" por "VB".
 
     `<#@ template language="C#" #>`
 
@@ -119,7 +119,7 @@ This report is Company Confidential.
 
 ### <a name="embedded-program-code"></a>Código do programa inserido
 
-Você pode inserir o código do programa entre `<#` e `#>`. Por exemplo:
+Você pode inserir o código do programa entre `<#` e `#>` . Por exemplo:
 
 ```csharp
 <table>
@@ -144,7 +144,7 @@ Você pode inserir o código do programa entre `<#` e `#>`. Por exemplo:
 </table>
 ```
 
-Observe que as instruções são inseridas entre `<# ... #>` e as expressões são inseridas entre `<#= ... #>`. Para obter mais informações, consulte [escrevendo um modelo de texto T4](../modeling/writing-a-t4-text-template.md).
+Observe que as instruções são inseridas entre as `<# ... #>` expressões e são inseridas entre elas `<#= ... #>` . Para obter mais informações, consulte [escrevendo um modelo de texto T4](../modeling/writing-a-t4-text-template.md).
 
 ## <a name="using-the-template"></a>Usando o modelo
 
@@ -152,7 +152,7 @@ Observe que as instruções são inseridas entre `<# ... #>` e as expressões s�
 
 Quando você salva o arquivo **. tt** , um arquivo subsidiárioy **. cs** ou **. vb** é gerado. Para ver esse arquivo em **Gerenciador de soluções**, expanda o nó de arquivo **. tt** . Em um projeto Visual Basic, primeiro escolha **Mostrar todos os arquivos** na barra de ferramentas **Gerenciador de soluções** .
 
-Observe que o arquivo de subsidiária contém uma classe parcial que contém um método chamado `TransformText()`. Você pode chamar esse método do seu aplicativo.
+Observe que o arquivo de subsidiária contém uma classe parcial que contém um método chamado `TransformText()` . Você pode chamar esse método do seu aplicativo.
 
 ### <a name="generating-text-at-run-time"></a>Gerando texto em tempo de execução
 
@@ -262,7 +262,7 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
 
 #### <a name="passing-data-in-template-properties"></a>Passando dados em Propriedades de modelo
 
-Uma maneira alternativa de passar dados para o modelo é adicionar propriedades públicas à classe de modelo em uma definição de classe parcial. Seu aplicativo pode definir as propriedades antes de invocar `TransformText()`.
+Uma maneira alternativa de passar dados para o modelo é adicionar propriedades públicas à classe de modelo em uma definição de classe parcial. Seu aplicativo pode definir as propriedades antes de invocar `TransformText()` .
 
 Você também pode adicionar campos à sua classe de modelo em uma definição parcial. Isso permite que você passe dados entre execuções sucessivas do modelo.
 
@@ -272,15 +272,15 @@ Muitos desenvolvedores preferem evitar a gravação de grandes corpos de código
 
 ### <a name="assemblies-and-references"></a>Assemblies e referências
 
-Se você quiser que seu código de modelo referencie um .NET ou outro assembly, como **System. xml. dll**, adicione-o às **referências** do seu projeto da maneira usual.
+Se você quiser que seu código de modelo referencie um .NET ou outro assembly, como **System.Xml.dll**, adicione-o às **referências** do seu projeto da maneira usual.
 
-Se você quiser importar um namespace da mesma maneira que uma instrução `using`, poderá fazer isso com a diretiva `import`:
+Se você quiser importar um namespace da mesma maneira que uma `using` instrução, você pode fazer isso com a `import` diretiva:
 
 ```
 <#@ import namespace="System.Xml" #>
 ```
 
-Essas diretivas devem ser colocadas no início do arquivo, imediatamente após a diretiva de `<#@template`.
+Essas diretivas devem ser colocadas no início do arquivo, imediatamente após a `<#@template` diretiva.
 
 ### <a name="shared-content"></a>Conteúdo compartilhado
 
@@ -296,19 +296,19 @@ A diretiva include pode ser usada em qualquer lugar dentro do texto de um arquiv
 
 ### <a name="inheritance-between-run-time-text-templates"></a>Herança entre modelos de texto de tempo de execução
 
-Você pode compartilhar conteúdo entre modelos de tempo de execução escrevendo um modelo de classe base, que pode ser abstrato. Use o parâmetro `inherits` da diretiva `<@#template#>` para fazer referência a outra classe de modelo de tempo de execução.
+Você pode compartilhar conteúdo entre modelos de tempo de execução escrevendo um modelo de classe base, que pode ser abstrato. Use o `inherits` parâmetro da `<@#template#>` diretiva para fazer referência a outra classe de modelo de tempo de execução.
 
 #### <a name="inheritance-pattern-fragments-in-base-methods"></a>Padrão de herança: fragmentos em métodos de base
 
 No padrão usado no exemplo a seguir, observe os seguintes pontos:
 
-- A classe base `SharedFragments` define métodos dentro de blocos de recursos de classe `<#+ ... #>`.
+- A classe base `SharedFragments` define métodos dentro de blocos de recursos de classe `<#+ ... #>` .
 
 - A classe base não contém texto livre. Em vez disso, todos os seus blocos de texto ocorrem dentro dos métodos de funcionalidade da classe.
 
-- A classe derivada invoca os métodos definidos em `SharedFragments`.
+- A classe derivada invoca os métodos definidos em `SharedFragments` .
 
-- O aplicativo chama o método `TextTransform()` da classe derivada, mas não transforma a classe base `SharedFragments`.
+- O aplicativo chama o `TextTransform()` método da classe derivada, mas não transforma a classe base `SharedFragments` .
 
 - As classes base e derivada são modelos de texto de tempo de execução; ou seja, a propriedade de **ferramenta personalizada** é definida como **TextTemplatingFilePreprocessor**.
 
@@ -427,13 +427,13 @@ End of common template.
 End material for DerivedTemplate1.
 ```
 
-## <a name="related-topics"></a>Tópicos relacionados
+## <a name="related-topics"></a>Tópicos Relacionados
 
 Modelos de tempo de design: se você quiser usar um modelo para gerar código que se torne parte de seu aplicativo, consulte [geração de código em tempo de design usando modelos de texto T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
 
 Os modelos de tempo de execução podem ser usados em qualquer aplicativo em que os modelos e seu conteúdo sejam determinados no momento da compilação. Mas se você quiser escrever uma extensão do Visual Studio que gere texto de modelos que são alterados em tempo de execução, consulte [invocando a transformação de texto em uma extensão do vs](../modeling/invoking-text-transformation-in-a-vs-extension.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Geração de código e modelos de texto T4](../modeling/code-generation-and-t4-text-templates.md)
 - [Gravando um modelo de texto T4](../modeling/writing-a-t4-text-template.md)

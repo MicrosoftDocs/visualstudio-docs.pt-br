@@ -1,7 +1,7 @@
 ---
 title: Geração de código e modelos de texto T4
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 f1_keywords:
 - VS.ToolsOptionsPages.TextTemplating.TextTemplating
 helpviewer_keywords:
@@ -15,16 +15,16 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f0eba8b4850ee845414084ef766fce30f9efd7e6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fbcd41461ab57e3bbb5fb48849ddde8593c587fb
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597198"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548233"
 ---
 # <a name="code-generation-and-t4-text-templates"></a>Geração de código e modelos de texto T4
 
-No Visual Studio, um *modelo de texto T4* é uma mistura de blocos de texto e lógica de controle que pode gerar um arquivo de texto. A lógica de controle é escrita como fragmentos de código de programa em [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] ou [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]. No Visual Studio 2015 atualização 2 e posterior, você pode usar C# os recursos da versão 6,0 em diretivas de modelos T4. O arquivo gerado pode ser um texto de qualquer tipo, como uma página da Web, um arquivo de recurso ou um código-fonte do programa em qualquer idioma.
+No Visual Studio, um *modelo de texto T4* é uma mistura de blocos de texto e lógica de controle que pode gerar um arquivo de texto. A lógica de controle é escrita como fragmentos de código de programa no [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] ou no [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] . No Visual Studio 2015 atualização 2 e posterior, você pode usar os recursos da versão 6,0 do C# em diretivas de modelos T4. O arquivo gerado pode ser um texto de qualquer tipo, como uma página da Web, um arquivo de recurso ou um código-fonte do programa em qualquer idioma.
 
 Há dois tipos de modelos de texto T4: tempo de execução e tempo de design.
 
@@ -94,6 +94,6 @@ Para obter mais informações, consulte [geração de código em tempo de design
 
 O recurso de transformação de modelo de texto se chama *T4*.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Gerar código com base em uma linguagem específica de domínio](../modeling/generating-code-from-a-domain-specific-language.md)

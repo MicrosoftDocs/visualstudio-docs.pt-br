@@ -1,7 +1,7 @@
 ---
-title: 'Como: Criar manipuladores de eventos em projetos do Office'
+title: 'Como: criar manipuladores de eventos em projetos do Office'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,15 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 537bae766b71744a61e5158b1a859cade4cdcda7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: ee85d89dcb990cebd595dadbd7b28add4a7b371a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63419646"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538301"
 ---
-# <a name="how-to-create-event-handlers-in-office-projects"></a>Como: Criar manipuladores de eventos em projetos do Office
-  Há várias maneiras de criar manipuladores de eventos no Visual Basic e c#. No modo design, você pode criar o padrão de manipuladores de eventos para controles clicando duas vezes no controle ou usar o painel de eventos do **propriedades** janela para criar manipuladores de qualquer evento no controle. No entanto, se você estiver no modo de exibição de código, talvez não queira alternar para modo de Design para criar um manipulador de eventos.
+# <a name="how-to-create-event-handlers-in-office-projects"></a>Como: criar manipuladores de eventos em projetos do Office
+  Há várias maneiras de criar manipuladores de eventos em Visual Basic e C#. No modo Design, você pode criar os manipuladores de eventos padrão para controles clicando duas vezes no controle ou usando o painel eventos da janela **Propriedades** para criar manipuladores para qualquer evento no controle. No entanto, se você estiver no modo de exibição de código, talvez não queira alternar para modo de exibição de Design para criar um manipulador de eventos.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
@@ -31,26 +31,26 @@ ms.locfileid: "63419646"
 
 ### <a name="to-create-an-event-handler-in-visual-basic"></a>Para criar um manipulador de eventos no Visual Basic
 
-1. Dos **nome da classe** lista suspensa na parte superior do Editor de códigos, selecione o objeto que você deseja criar um manipulador de eventos.
+1. Na lista suspensa **nome da classe** na parte superior do editor de código, selecione o objeto para o qual você deseja criar um manipulador de eventos.
 
     > [!NOTE]
-    > Se você quiser criar manipuladores de eventos para `ThisDocument` ou `ThisWorkbook`, você deve selecionar **(eventos ThisDocument)** ou **(eventos ThisWorkbook)** no **nome da classe**lista suspensa
+    > Se você quiser criar manipuladores de eventos para `ThisDocument` o ou `ThisWorkbook` , deverá selecionar **(eventos ThisDocument)** ou **(eventos ThisWorkbook)** na lista suspensa **nome da classe**
 
-2. Dos **nome do método** lista suspensa na parte superior do Editor de códigos, selecione o evento.
+2. Na lista suspensa **nome do método** na parte superior do editor de código, selecione o evento.
 
-     Visual Studio cria o manipulador de eventos e move o ponto de inserção para o manipulador de eventos recém-criado. Se o manipulador de eventos já existir, o ponto de inserção se move para o manipulador de eventos existente.
+     O Visual Studio cria o manipulador de eventos e move o ponto de inserção para o manipulador de eventos recém-criado. Se o manipulador de eventos já existir, o ponto de inserção será movido para o manipulador de eventos existente.
 
 ### <a name="to-create-an-event-handler-in-c"></a>Para criar um manipulador de eventos em C\#
 
-1. Criar o delegado do evento na **inicialização** evento da classe digitando o nome de evento qualificado seguido por um espaço e, em seguida, digitar **+=** posteriormente sem espaço. Por exemplo:
+1. Crie o delegado de evento no evento **Startup** da classe digitando o nome do evento qualificado seguido por um espaço e, em seguida, digitando **+=** sem espaço depois. Por exemplo:
 
      `this.<object name>.<event name> +=`
 
 2. No final da linha de código, pressione a tecla TAB duas vezes.
 
-     Visual Studio automaticamente conclui a linha de código cria o manipulador de eventos e move o ponto de inserção para o manipulador de eventos recém-criado.
+     O Visual Studio conclui automaticamente a linha de código, cria o manipulador de eventos e move o ponto de inserção para o manipulador de eventos recém-criado.
 
 ## <a name="see-also"></a>Consulte também
 - [Escrever código em soluções do Office](../vsto/writing-code-in-office-solutions.md)
-- [Passo a passo: Programe em eventos de um controle NamedRange](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)
-- [Compilar soluções do Office](../vsto/building-office-solutions.md)
+- [Walkthrough: programa em relação a eventos de um controle NamedRange](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)
+- [Criar soluções do Office](../vsto/building-office-solutions.md)

@@ -3,7 +3,7 @@ title: Instalar os certificados necessários para uma instalação offline
 description: Saiba como instalar certificados para instalação offline do Visual Studio.
 ms.date: 08/08/2019
 ms.custom: seodec18
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: b2570876ddaa03753b1c0d3fb9f9ddc772bbbcb8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 525294d2cf3c33dfdb1c5796dabf1c2a7a78bf91
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114665"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85418802"
 ---
 # <a name="install-certificates-required-for-visual-studio-offline-installation"></a>Instalar os certificados necessários para instalação offline do Visual Studio
 
@@ -136,12 +136,12 @@ Os três arquivos .P12 nesta pasta contêm um certificado intermediário e um ce
 
 * **ManifestSignCertificates.p12** contém:
   * Certificado intermediário: **ACP de Assinatura de Código da Microsoft 2011**
-    * Não obrigatório. Melhora o desempenho em alguns cenários, se estiver presente.
+    * Não necessário. Melhora o desempenho em alguns cenários, se estiver presente.
   * Certificado raiz: **Autoridade de Certificação Raiz da Microsoft 2011**
     * Necessário nos sistemas Windows 7 Service Pack 1 que não têm as atualizações mais recentes do Windows instaladas.
 * **ManifestCounterSignCertificates.p12** contém:
   * Certificado intermediário: **ACP do carimbo de data/hora da Microsoft 2010**
-    * Não obrigatório. Melhora o desempenho em alguns cenários, se estiver presente.
+    * Não necessário. Melhora o desempenho em alguns cenários, se estiver presente.
   * Certificado raiz: **Autoridade de Certificação Raiz da Microsoft 2010**
     * Necessário para os sistemas Windows 7 Service Pack 1 que não têm as atualizações mais recentes do Windows instaladas.
 * **Vs_installer_opc.SignCertificates.p12** contém:
@@ -178,7 +178,7 @@ Quando uma assinatura é verificada em um ambiente online, as APIs do Windows s�
 
 Uma maneira de verificar no sistema de instalação é seguir estas etapas:
 
-1. Executar **mmc.exe**.<br/>
+1. Execute **mmc.exe**.<br/>
   a. Clique em **Arquivo** e selecione **Adicionar/Remover Snap-in**.<br/>
   b. Clique duas vezes em **Certificados**, selecione **Conta do computador** e clique em **Avançar**.<br/>
   c. Selecione **Computador local**, clique em **Concluir** e depois em **OK**.<br/>
@@ -191,21 +191,21 @@ Uma maneira de verificar no sistema de instalação é seguir estas etapas:
 
 2. Clique em **Arquivo** e selecione **Adicionar/Remover Snap-in**.<br/>
   a. Clique duas vezes em **Certificados**, selecione **Minha conta de usuário**, clique em **Concluir** e em **OK**.<br/>
-  b. Expandir **certificados – Usuário atual**.<br/>
+  b. Expandir **certificados – usuário atual**.<br/>
   c. Expanda **Autoridades de Certificação Intermediárias** e selecione **Certificados**.<br/>
     * Verifique os certificados intermediários necessários desta lista.<br/>
 
 Se os nomes dos certificados não estiverem na coluna **Emitido Para**, eles terão que ser instalados.  Se um certificado intermediário estiver apenas no repositório de certificados intermediários do **Usuário Atual**, ele só estará disponível para o usuário que estiver conectado. Talvez ele precise ser instalado para outros usuários.
 
-## <a name="install-visual-studio"></a>Instalar Visual Studio
+## <a name="install-visual-studio"></a>Instalar o Visual Studio
 
 Depois de instalar os certificados, a implantação do Visual Studio pode continuar usando as instruções da seção [Implantação de uma instalação de rede](create-a-network-installation-of-visual-studio.md#deploy-from-a-network-installation) da página "Criar uma instalação de rede do Visual Studio".
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-* [Instale o Visual Studio](install-visual-studio.md)
-* [Guia de administrador do Visual Studio](visual-studio-administrator-guide.md)
-* [Use parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
+* [Instalar o Visual Studio](install-visual-studio.md)
+* [Guia do administrador do Visual Studio](visual-studio-administrator-guide.md)
+* [Usar parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
 * [IDs de carga de trabalho e de componente do Visual Studio](workload-and-component-ids.md)

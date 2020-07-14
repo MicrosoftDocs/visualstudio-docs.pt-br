@@ -1,7 +1,7 @@
 ---
-title: 'Como: Editar uma configuração de implantação do SharePoint | Microsoft Docs'
+title: 'Como: editar uma configuração de implantação do SharePoint | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.Project.DeploymentConfig
 dev_langs:
@@ -14,42 +14,41 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ffa7923bbe7e8a7b44fec280a5528ab023feed37
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 74f6377bad0f62aa2c470e72afe64b85b3017ee6
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444707"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016779"
 ---
-# <a name="how-to-edit-a-sharepoint-deployment-configuration"></a>Como: Editar uma configuração de implantação do SharePoint
-  Você pode criar uma configuração de implantação ou modificar uma configuração de implantação existente. Por exemplo, você pode executar uma única etapa ou alterar a ordem das etapas no processo de implantação. Você talvez queira criar ou modificar as configurações de implantação porque não não possível alterar as configurações internas e adicionadas programaticamente.
+# <a name="how-to-edit-a-sharepoint-deployment-configuration"></a>Como: editar uma configuração de implantação do SharePoint
+  Você pode criar uma configuração de implantação ou modificar uma configuração de implantação existente. Por exemplo, você pode executar uma única etapa ou alterar a ordem das etapas no processo de implantação. Talvez você queira criar ou modificar as configurações de implantação porque as configurações internas e adicionadas programaticamente não podem ser alteradas.
 
 ## <a name="create-a-sharepoint-deployment-configuration"></a>Criar uma configuração de implantação do SharePoint
 
 #### <a name="to-create-a-sharepoint-deployment-configuration"></a>Para criar uma configuração de implantação do SharePoint
 
-1. Na **Gerenciador de soluções**, escolha um projeto do SharePoint e, em seguida, na barra de menus, escolha **Project**, _ProjectName_**propriedades**.
+1. Em **Gerenciador de soluções**, escolha um projeto do SharePoint e, na barra de menus, escolha **projeto**,**Propriedades**do _ProjectName_.
 
-2. Sobre o **SharePoint** guia, escolha o **New** botão.
+2. Na guia **SharePoint** , escolha o botão **novo** .
 
-     O **adicionar nova configuração de implantação** caixa de diálogo é exibida.
+     A caixa de diálogo **Adicionar nova configuração de implantação** é exibida.
 
-3. No **nome** texto, digite um nome para a configuração de implantação.
+3. Na caixa de texto **nome** , insira um nome para a configuração de implantação.
 
-4. No **as etapas de implantação disponíveis** painel, escolha as etapas que você deseja adicionar a configuração de implantação, escolha o (**>**) botão e, em seguida, escolha o **Okey** botão.
+4. No painel **etapas de implantação disponíveis** , escolha as etapas que você deseja adicionar à configuração de implantação, escolha o botão ( **>** ) e, em seguida, escolha o botão **OK** .
 
     > [!NOTE]
-    > Se você tiver configurado um comando de pré-implantação ou um comando de pós-implantação, essas etapas executadas somente se você adicioná-los a uma configuração de implantação personalizada.
+    > Se você tiver configurado um comando de pré-implantação ou um comando pós-implantação, essas etapas só são executadas se você adicioná-las a uma configuração de implantação personalizada.
 
 ## <a name="change-the-active-deployment-configuration"></a>Alterar a configuração de implantação ativa
 
 #### <a name="to-change-the-active-deployment-configuration"></a>Para alterar a configuração de implantação ativa
 
-1. Na **Gerenciador de soluções**, escolha um projeto do SharePoint e, em seguida, na barra de menus, escolha **Project** > **\<*ProjectName*> Propriedades**.
+1. Em **Gerenciador de soluções**, escolha um projeto do SharePoint e, na barra de menus, escolha **Project**  >  ** \<*ProjectName*> Propriedades**do projeto.
 
-2. Escolha o **SharePoint** guia.
+2. Escolha a guia **SharePoint** .
 
-3. No **configuração de implantação ativa** caixa de listagem, escolha o nome da configuração de implantação que você deseja usar.
+3. Na caixa de listagem **configuração de implantação ativa** , escolha o nome da configuração de implantação que você deseja usar.
 
 ## <a name="see-also"></a>Consulte também
 - [Empacotar e implantar soluções do SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

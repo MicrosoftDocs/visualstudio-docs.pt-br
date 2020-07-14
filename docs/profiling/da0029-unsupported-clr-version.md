@@ -1,7 +1,7 @@
 ---
-title: 'DA0029: versão da CLR sem suporte | Microsoft Docs'
+title: DA0029-versão do CLR sem suporte | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.29
 - vs.performance.rules.DA0029
@@ -16,16 +16,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: dbc0bfcdb49557e56711b60dca11977a3504d907
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 14e0bb4290ad155b7094c0f60810df4f86cb8d65
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777509"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544632"
 ---
 # <a name="da0029-unsupported-clr-version"></a>DA0029: versão do CLR não compatível
 
-|||
+|Item|Valor|
 |-|-|
 |ID de regra|DA0029|
 |Categoria|Uso das ferramentas de criação de perfil|

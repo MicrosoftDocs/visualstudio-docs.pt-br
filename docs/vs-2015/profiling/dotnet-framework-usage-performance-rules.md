@@ -9,21 +9,21 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a9c976560b39fd8a9146733d78cd3a094ed3b118
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: afae57f3223d24a4524f89f1669883de6ef1dd18
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68202459"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532802"
 ---
 # <a name="net-framework-usage-performance-rules"></a>Regras de desempenho de uso do .NET Framework
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 As regras de desempenho na categoria de uso do .NET Framework identificam métodos específicos que podem ser otimizados e também identificam padrões de uso mais gerais, como coleta de lixo e contenção de bloqueio, o que pode ser investigado para problemas de desempenho.  
   
-|||  
+|Regra|Descrição|  
 |-|-|  
-|[DA0001: Use StringBuilder para concatenações](../profiling/da0001-use-stringbuilder-for-concatenations.md)|As chamadas a <xref:System.String.Concat%28System.String%2CSystem.String%29?displayProperty=fullName> são uma proporção significativa dos dados de criação de perfil. Considere o uso da classe <xref:System.Text.StringBuilder> para construir cadeias de caracteres com base em vários segmentos.|  
+|[DA0001: Usar StringBuilder para concatenações](../profiling/da0001-use-stringbuilder-for-concatenations.md)|As chamadas a <xref:System.String.Concat%28System.String%2CSystem.String%29?displayProperty=fullName> são uma proporção significativa dos dados de criação de perfil. Considere o uso da classe <xref:System.Text.StringBuilder> para construir cadeias de caracteres com base em vários segmentos.|  
 |[DA0005: Coletas de GC2 frequentes](../profiling/da0005-frequent-gc2-collections.md)|Um número relativamente alto de objetos de memória do .NET está sendo recuperado na coleta de lixo de geração 2. Se muitos objetos de curta duração sobrevivem à coleta de geração 1, o custo de gerenciamento de memória pode facilmente se tornar excessivo.|  
 |[DA0006: Substituir Equals() por tipos de valor](../profiling/da0006-override-equals-parens-for-value-types.md)|Chama o método `Equals` ou os operadores de igualdade de um tipo de valor público são uma parte significativa dos dados de criação de perfil. Considere a implementação de um método mais eficiente.|  
 |[DA0007: Evitar usar exceções no fluxo de controle](../profiling/da0007-avoid-using-exceptions-for-control-flow.md)|Uma alta taxa de manipuladores de exceção do .NET Framework foram chamados nos dados de criação de perfil. Considere o uso de outra lógica de fluxo de controle para reduzir o número de exceções geradas.|  
@@ -35,6 +35,6 @@ As regras de desempenho na categoria de uso do .NET Framework identificam métod
 |[DA0021: Alta taxa de coletas de lixo de Geração 1](../profiling/da0021-high-rate-of-gen-1-garbage-collections.md)|Um número relativamente alto de objetos de memória do .NET está sendo recuperado na coleta de lixo de geração 1. Se muitos objetos de curta duração sobrevivem à coleta de geração 0, o custo de gerenciamento de memória pode facilmente se tornar excessivo.|  
 |[DA0022: Alta taxa de coletas de lixo de Geração 2](../profiling/da0022-high-rate-of-gen-2-garbage-collections.md)|Um número alto de objetos de memória do .NET está sendo recuperado na coleta de lixo de geração 2. Se muitos objetos de curta duração sobrevivem à coleta de geração 1, o custo de gerenciamento de memória pode facilmente se tornar excessivo. Essa regra é acionada quando a taxa de contenções de bloqueio excede o valor do limite superior da regra DA0005.|  
 |[DA0023: Tempo de CPU de GC elevado](../profiling/da0023-high-gc-cpu-time.md)|Os dados de desempenho do sistema coletados durante a criação de perfil indicam que a quantidade de tempo gasto na coleta de lixo é significativa em comparação com o tempo total de processamento do aplicativo.|  
-|[DA0024: Tempo de CPU de GC Excessivo](../profiling/da0024-excessive-gc-cpu-time.md)|Os dados de desempenho do sistema coletados durante a criação de perfil indicam que a quantidade de tempo gasto na coleta de lixo é excessivamente alta em comparação com o tempo total de processamento do aplicativo. Essa regra é acionada quando a quantidade de tempo gasto na coleta de lixo excede o valor do limite superior da regra DA0023.|  
-|[DA0038: Alta Taxa de contenções de Bloqueio](../profiling/da0038-high-rate-of-lock-contentions.md)|Os dados de desempenho do sistema coletados com os dados de criação de perfil indicam que ocorreu uma taxa consideravelmente alta de contenções de bloqueio durante a execução do aplicativo. Considere uma nova criação de perfil usando o método de criação de perfil de simultaneidade para descobrir a causa das contenções.|  
-|[DA0039: Taxa Muito Alta de contenções de Bloqueio](../profiling/da0039-very-high-rate-of-lock-contentions.md)|Os dados de desempenho do sistema coletados com os dados de criação de perfil indicam que ocorreu uma taxa excessivamente alta de contenções de bloqueio durante a execução do aplicativo. Considere uma nova criação de perfil usando o método de criação de perfil de simultaneidade para descobrir a causa das contenções. Essa regra é acionada quando a taxa de contenções de bloqueio excede o valor do limite superior da regra DA0038.|
+|[DA0024: Tempo de CPU de GC excessivo](../profiling/da0024-excessive-gc-cpu-time.md)|Os dados de desempenho do sistema coletados durante a criação de perfil indicam que a quantidade de tempo gasto na coleta de lixo é excessivamente alta em comparação com o tempo total de processamento do aplicativo. Essa regra é acionada quando a quantidade de tempo gasto na coleta de lixo excede o valor do limite superior da regra DA0023.|  
+|[DA0038: Alta taxa de contenções de bloqueio](../profiling/da0038-high-rate-of-lock-contentions.md)|Os dados de desempenho do sistema coletados com os dados de criação de perfil indicam que ocorreu uma taxa consideravelmente alta de contenções de bloqueio durante a execução do aplicativo. Considere uma nova criação de perfil usando o método de criação de perfil de simultaneidade para descobrir a causa das contenções.|  
+|[DA0039: Taxa muito alta de contenções de bloqueio](../profiling/da0039-very-high-rate-of-lock-contentions.md)|Os dados de desempenho do sistema coletados com os dados de criação de perfil indicam que ocorreu uma taxa excessivamente alta de contenções de bloqueio durante a execução do aplicativo. Considere uma nova criação de perfil usando o método de criação de perfil de simultaneidade para descobrir a causa das contenções. Essa regra é acionada quando a taxa de contenções de bloqueio excede o valor do limite superior da regra DA0038.|

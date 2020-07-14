@@ -3,105 +3,101 @@
   topicHref: /
   items:
     - name: Visual Studio
-      tocHref: /visualstudio/
-      topicHref: /visualstudio/
+      tocHref: /visualstudio/windows
+      topicHref: /visualstudio/windows/index
       items:
-        - name: Windows
-          tocHref: /visualstudio/windows
-          topicHref: /visualstudio/windows/index
+        - name: IDE
+          tocHref: /visualstudio/ide/
+          topicHref: /visualstudio/ide/
           items:
-            - name: IDE
-              tocHref: /visualstudio/ide/
-              topicHref: /visualstudio/ide/
+            - name: Qualidade do código
+              tocHref: /visualstudio/code-quality/
+              topicHref: /visualstudio/code-quality/analyzing-application-quality-by-using-code-analysis-tools
+            - name: Plataforma cruzada
+              tocHref: /visualstudio/cross-platform/
+              topicHref: /visualstudio/cross-platform/cross-platform-mobile-development-in-visual-studio
+            - name: Ferramentas de Dados
+              tocHref: /visualstudio/data-tools/
+              topicHref: /visualstudio/data-tools/index
+            - name: Depuração
+              tocHref: /visualstudio/debugger/
+              topicHref: /visualstudio/debugger/index
               items:
-                - name: Qualidade do código
-                  tocHref: /visualstudio/code-quality/
-                  topicHref: /visualstudio/code-quality/analyzing-application-quality-by-using-code-analysis-tools
-                - name: Plataforma cruzada
-                  tocHref: /visualstudio/cross-platform/
-                  topicHref: /visualstudio/cross-platform/cross-platform-mobile-development-in-visual-studio
-                - name: Ferramentas de Dados
-                  tocHref: /visualstudio/data-tools/
-                  topicHref: /visualstudio/data-tools/index
-                - name: Depuração
-                  tocHref: /visualstudio/debugger/
-                  topicHref: /visualstudio/debugger/index
-                  items:
-                    - name: SDK de Acesso à Interface de Depuração
-                      tocHref: /visualstudio/debugger/debug-interface-access/
-                      topicHref: /visualstudio/debugger/debug-interface-access/debug-interface-access-sdk
-                    - name: Gráficos
-                      tocHref: /visualstudio/debugger/graphics/
-                      topicHref: /visualstudio/debugger/graphics/overview-of-visual-studio-graphics-diagnostics
-                - name: Implantação
-                  tocHref: /visualstudio/deployment/
-                  topicHref: /visualstudio/deployment/deploying-applications-services-and-components
-                - name: Designer de Classe do IDE
-                  tocHref: /visualstudio/ide/class-designer
-                  topicHref: /visualstudio/ide/class-designer/designing-and-viewing-classes-and-types
-                - name: Arquitetura de modelagem
-                  tocHref: /visualstudio/modeling/
-                  topicHref: /visualstudio/modeling/analyze-and-model-your-architecture
-                - name: Criação de perfil
-                  tocHref: /visualstudio/profiling/
-                  topicHref: /visualstudio/profiling/index
-                - name: Testes
-                  tocHref: /visualstudio/test/
-                  topicHref: /visualstudio/test/index
-                - name: Designer de Fluxo de Trabalho
-                  tocHref: /visualstudio/workflow-designer/
-                  topicHref: /visualstudio/workflow-designer/developing-applications-with-the-workflow-designer
-                - name: Ferramentas XAML
-                  tocHref: /visualstudio/xaml-tools/
-                  topicHref: /visualstudio/xaml-tools/
-                - name: Ferramentas XML
-                  tocHref: /visualstudio/xml-tools/
-                  topicHref: /visualstudio/xml-tools/xml-tools-in-visual-studio
-                - name: 'Introdução ao C#'
-                  tocHref: /visualstudio/get-started/csharp/
-                  topicHref: /visualstudio/get-started/csharp/index
-                - name: Introdução ao Visual Basic
-                  tocHref: /visualstudio/get-started/visual-basic/
-                  topicHref: /visualstudio/get-started/visual-basic/
-            - name: Extensibilidade
-              tocHref: /visualstudio/extensibility/
-              topicHref: /visualstudio/extensibility/index
+                - name: SDK de Acesso à Interface de Depuração
+                  tocHref: /visualstudio/debugger/debug-interface-access/
+                  topicHref: /visualstudio/debugger/debug-interface-access/debug-interface-access-sdk
+                - name: Gráficos
+                  tocHref: /visualstudio/debugger/graphics/
+                  topicHref: /visualstudio/debugger/graphics/overview-of-visual-studio-graphics-diagnostics
+            - name: Implantação
+              tocHref: /visualstudio/deployment/
+              topicHref: /visualstudio/deployment/deploying-applications-services-and-components
+            - name: Designer de Classe do IDE
+              tocHref: /visualstudio/ide/class-designer
+              topicHref: /visualstudio/ide/class-designer/designing-and-viewing-classes-and-types
+            - name: Arquitetura de modelagem
+              tocHref: /visualstudio/modeling/
+              topicHref: /visualstudio/modeling/analyze-and-model-your-architecture
+            - name: Criação de perfil
+              tocHref: /visualstudio/profiling/
+              topicHref: /visualstudio/profiling/index
+            - name: Testes
+              tocHref: /visualstudio/test/
+              topicHref: /visualstudio/test/index
+            - name: Designer de Fluxo de Trabalho
+              tocHref: /visualstudio/workflow-designer/
+              topicHref: /visualstudio/workflow-designer/developing-applications-with-the-workflow-designer
+            - name: Ferramentas XAML
+              tocHref: /visualstudio/xaml-tools/
+              topicHref: /visualstudio/xaml-tools/
+            - name: Ferramentas XML
+              tocHref: /visualstudio/xml-tools/
+              topicHref: /visualstudio/xml-tools/xml-tools-in-visual-studio
+            - name: Introdução ao C#
+              tocHref: /visualstudio/get-started/csharp/
+              topicHref: /visualstudio/get-started/csharp/index
+            - name: Introdução ao Visual Basic
+              tocHref: /visualstudio/get-started/visual-basic/
+              topicHref: /visualstudio/get-started/visual-basic/
+        - name: Extensibilidade
+          tocHref: /visualstudio/extensibility/
+          topicHref: /visualstudio/extensibility/index
+          items:
+            - name: Por dentro do SDK do Visual Studio
+              tocHref: /visualstudio/extensibility/internals/
+              topicHref: /visualstudio/extensibility/internals/inside-the-visual-studio-sdk
+            - name: Extensibilidade do Depurador
+              tocHref: /visualstudio/extensibility/debugger/
+              topicHref: /visualstudio/extensibility/debugger/visual-studio-debugger-extensibility
               items:
-                - name: Por dentro do SDK do Visual Studio
-                  tocHref: /visualstudio/extensibility/internals/
-                  topicHref: /visualstudio/extensibility/internals/inside-the-visual-studio-sdk
-                - name: Extensibilidade do Depurador
-                  tocHref: /visualstudio/extensibility/debugger/
-                  topicHref: /visualstudio/extensibility/debugger/visual-studio-debugger-extensibility
-                  items:
-                    - name: Referência
-                      tocHref: /visualstudio/extensibility/debugger/reference/
-                      topicHref: /visualstudio/extensibility/debugger/reference/reference-visual-studio-debugging-apis
-                - name: Diretrizes da Experiência do Usuário
-                  tocHref: /visualstudio/extensibility/ux-guidelines/
-                  topicHref: /visualstudio/extensibility/ux-guidelines/visual-studio-user-experience-guidelines
-            - name: MSBuild
-              tocHref: /visualstudio/msbuild/
-              topicHref: /visualstudio/msbuild/msbuild
-            - name: JavaScript e TypeScript
-              tocHref: /visualstudio/javascript/
-              topicHref: /visualstudio/javascript/index
-            - name: Python
-              tocHref: /visualstudio/python/
-              topicHref: /visualstudio/python/overview-of-python-tools-for-visual-studio
-            - name: R
-              tocHref: /visualstudio/rtvs/
-              topicHref: /visualstudio/rtvs/index
-            - name: Office e SharePoint
+                - name: Referência
+                  tocHref: /visualstudio/extensibility/debugger/reference/
+                  topicHref: /visualstudio/extensibility/debugger/reference/reference-visual-studio-debugging-apis
+            - name: Diretrizes da Experiência do Usuário
+              tocHref: /visualstudio/extensibility/ux-guidelines/
+              topicHref: /visualstudio/extensibility/ux-guidelines/visual-studio-user-experience-guidelines
+        - name: MSBuild
+          tocHref: /visualstudio/msbuild/
+          topicHref: /visualstudio/msbuild/msbuild
+        - name: JavaScript e TypeScript
+          tocHref: /visualstudio/javascript/
+          topicHref: /visualstudio/javascript/index
+        - name: Python
+          tocHref: /visualstudio/python/
+          topicHref: /visualstudio/python/overview-of-python-tools-for-visual-studio
+        - name: R
+          tocHref: /visualstudio/rtvs/
+          topicHref: /visualstudio/rtvs/index
+        - name: Office e SharePoint
+          tocHref: /visualstudio/vsto/
+          topicHref: /visualstudio/vsto/office-and-sharepoint-development-in-visual-studio
+          items:
+            - name: SharePoint
+              tocHref: /visualstudio/sharepoint/
+              topicHref: /visualstudio/sharepoint/create-sharepoint-solutions
+            - name: VSTO
               tocHref: /visualstudio/vsto/
-              topicHref: /visualstudio/vsto/office-and-sharepoint-development-in-visual-studio
-              items:
-                - name: SharePoint
-                  tocHref: /visualstudio/sharepoint/
-                  topicHref: /visualstudio/sharepoint/create-sharepoint-solutions
-                - name: VSTO
-                  tocHref: /visualstudio/vsto/
-                  topicHref: /visualstudio/vsto/create-vsto-add-ins-for-office-by-using-visual-studio
-            - name: Desenvolvimento do Azure
-              tocHref: /visualstudio/azure
-              topicHref: /visualstudio/azure/index
+              topicHref: /visualstudio/vsto/create-vsto-add-ins-for-office-by-using-visual-studio
+        - name: Desenvolvimento do Azure
+          tocHref: /visualstudio/azure
+          topicHref: /visualstudio/azure/index

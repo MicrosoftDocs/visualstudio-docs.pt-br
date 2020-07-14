@@ -1,7 +1,7 @@
 ---
 title: IDiaSession::getEnumTables | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41679304986f5de948119a2958524b8f269ceb42
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4b9b229de3818b00379d95a5c19e35c7e83c845e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741916"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465422"
 ---
 # <a name="idiasessiongetenumtables"></a>IDiaSession::getEnumTables
 Recupera um enumerador para todas as tabelas contidas no repositório de símbolos.
@@ -35,11 +35,11 @@ HRESULT getEnumTables (
 
 fora Retorna um objeto [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md) . Use essa interface para enumerar as tabelas no repositório de símbolos.
 
-## <a name="return-value"></a>Valor retornado
-Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo
-Este exemplo apresenta uma função geral que usa o método `getEnumTables` para obter um objeto enumerador específico. Se o enumerador for encontrado, a função retornará um ponteiro que pode ser convertido na interface desejada; caso contrário, a função retornará `NULL`.
+Este exemplo apresenta uma função geral que usa o `getEnumTables` método para obter um objeto enumerador específico. Se o enumerador for encontrado, a função retornará um ponteiro que pode ser convertido na interface desejada; caso contrário, a função retornará `NULL` .
 
 ```C++
 IUnknown *GetTable(IDiaSession *pSession, REFIID iid)
@@ -67,6 +67,6 @@ IUnknown *GetTable(IDiaSession *pSession, REFIID iid)
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

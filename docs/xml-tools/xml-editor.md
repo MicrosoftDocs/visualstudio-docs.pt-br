@@ -1,18 +1,18 @@
 ---
 title: Editor de XML
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 10741daffff2213e8ababde2395663e78241fdc4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 64f36255a03939c649a91b4a91d15958475be3b5
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592393"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815013"
 ---
 # <a name="xml-editor"></a>Editor de XML
 
@@ -58,6 +58,6 @@ A [ferramenta de hierarquia XSLT](../xml-tools/walkthrough-using-xslt-hierarchy.
 
 - [Opções do editor de XML – formatação](../ide/reference/options-text-editor-xml-formatting.md)
 - [Opções do editor de XML – diversos](../ide/reference/options-text-editor-xml-miscellaneous.md)
-- [Recursos do Editor de Códigos](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Recursos do editor de código](../ide/writing-code-in-the-code-and-text-editor.md)
 - [Referência de padrões de XML](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)
 - [Ferramentas XML no Visual Studio](../xml-tools/xml-tools-in-visual-studio.md)

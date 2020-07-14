@@ -1,7 +1,7 @@
 ---
 title: IDiaFrameData::get_lengthBlock | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: da5b175c7e51e5ee8aaab29788f71219091d26f0
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 82f09b454b167fbba9ff267ed4293100162af237
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743583"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467319"
 ---
 # <a name="idiaframedataget_lengthblock"></a>IDiaFrameData::get_lengthBlock
 Recupera o comprimento, em bytes, do bloco de código descrito pelo quadro.
@@ -35,12 +35,12 @@ HRESULT get_lengthBlock ( 
 
 fora Retorna o número de bytes de código no quadro.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver suporte para essa propriedade. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
 ## <a name="remarks"></a>Comentários
  O valor retornado por esse método normalmente é usado na interpretação de uma cadeia de caracteres de programa (consulte o método [IDiaFrameData:: get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) para a definição de uma cadeia de caracteres de programa).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [IDiaFrameData::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md)

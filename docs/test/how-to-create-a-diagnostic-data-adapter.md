@@ -1,19 +1,19 @@
 ---
 title: Como criar um adaptador de dados de diagnóstico
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Diagnostic Data Adapter, creating
 ms.assetid: bd7ad36c-54cb-4d2a-9aea-9d10ad98d7ba
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5b198d8d3e9156b8a38325034bf19ce96b742d9e
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+ms.openlocfilehash: 43519a96e0718a0864065864d9dd4fbd2ac16b23
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880150"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288072"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>Como criar um adaptador de dados de diagnóstico
 
@@ -23,7 +23,7 @@ Para criar um *adaptador de dados de diagnóstico*, crie uma biblioteca de class
 
 Você pode criar um adaptador de dados de diagnóstico que afeta o computador onde seus testes são executados, ou um computador que é parte do ambiente que você está usando para executar o aplicativo do teste. Por exemplo, coletando arquivos em seu computador de teste onde os testes são executados ou coletando arquivos no computador que serve na função de servidor Web para seu aplicativo.
 
-Você pode dar ao seu adaptador de dados de diagnóstico um nome amigável que exibe quando você cria suas configurações de teste usando o Visual Studio ou o Microsoft Test Manager (preterido no Visual Studio 2017). As configurações de teste permitem que você defina qual função de computador executará adaptadores de dados de diagnóstico específicos em seu ambiente quando você executar os testes. Você também pode configurar os adaptadores de dados de diagnóstico ao criar suas configurações de teste. Por exemplo, você pode criar um adaptador de dados de diagnóstico que colete logs personalizados do servidor Web. Quando você cria suas configurações de teste, você pode selecionar para executar este adaptador de dados de diagnóstico no computador ou computadores que estão executando esta função do servidor Web, e pode alterar a configuração para que suas configurações de teste coletem somente os últimos três logs que foram criados. Para obter mais informações sobre as configurações do teste, consulte [Coletar informações de diagnóstico usando as configurações do teste](../test/collect-diagnostic-information-using-test-settings.md).
+Você pode dar ao adaptador de dados de diagnóstico um nome amigável que é exibido quando você cria suas configurações de teste usando o Visual Studio ou Microsoft Test Manager (preterido no Visual Studio 2017). As configurações de teste permitem que você defina qual função de computador executará adaptadores de dados de diagnóstico específicos em seu ambiente quando você executar os testes. Você também pode configurar os adaptadores de dados de diagnóstico ao criar suas configurações de teste. Por exemplo, você pode criar um adaptador de dados de diagnóstico que colete logs personalizados do servidor Web. Quando você cria suas configurações de teste, você pode selecionar para executar este adaptador de dados de diagnóstico no computador ou computadores que estão executando esta função do servidor Web, e pode alterar a configuração para que suas configurações de teste coletem somente os últimos três logs que foram criados. Para obter mais informações sobre configurações de teste, consulte [coletar informações de diagnóstico usando configurações de teste](../test/collect-diagnostic-information-using-test-settings.md).
 
 Os eventos são gerados quando você executa seus testes de modo que o adaptador de dados de diagnóstico possa executar tarefas nesse ponto no teste.
 
@@ -54,7 +54,7 @@ Para obter um projeto completo do adaptador de dados de diagnóstico de exemplo,
 
 2. Adicione o assembly **Microsoft.VisualStudio.QualityTools.ExecutionCommon**.
 
-   1. No **Solution Explorer,** clique com o botão direito do mouse **em Referências** e escolha o **comando Adicionar referência.**
+   1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **referências** e escolha o comando **Adicionar referência** .
 
    2. Escolha **.NET** e localize **Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll**.
 
@@ -62,13 +62,13 @@ Para obter um projeto completo do adaptador de dados de diagnóstico de exemplo,
 
 3. Adicione o assembly **Microsoft.VisualStudio.QualityTools.Common**.
 
-   1. No **Solution Explorer,** clique com o botão direito do mouse **referências** e selecione o **comando Adicionar referência.**
+   1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **referências** e selecione o comando **Adicionar referência** .
 
    2. Escolha **.NET** e localize **Microsoft.VisualStudio.QualityTools.Common.dll**.
 
    3. Escolha **OK**.
 
-4. Adicione as `using` seguintes diretivas ao seu arquivo de classe:
+4. Adicione as seguintes `using` diretivas ao seu arquivo de classe:
 
    ```csharp
    using Microsoft.VisualStudio.TestTools.Common;
@@ -210,7 +210,7 @@ Para obter um projeto completo do adaptador de dados de diagnóstico de exemplo,
 
      Esses arquivos são anexados aos resultados de teste. Se você criar um bug desses resultados de teste ou quando usar o [!INCLUDE[mtrlong](../test/includes/mtrlong_md.md)], os arquivos também serão anexados ao bug.
 
-     Se você quiser usar seu próprio editor para coletar dados para usar em suas configurações de teste, consulte [Como: Criar um editor personalizado para dados para o adaptador de dados de diagnóstico](../test/quickstart-create-a-load-test-project.md).
+     Se você quiser usar seu próprio editor para coletar dados a serem usados em suas configurações de teste, consulte [como criar um editor personalizado para dados para o adaptador de dados de diagnóstico](../test/quickstart-create-a-load-test-project.md).
 
 11. Para coletar um arquivo de log quando um teste for concluído com base no que o usuário configurou nas configurações de teste, é necessário criar um arquivo *App.config* e adicioná-lo à solução. Este arquivo tem o seguinte formato e deve conter o URI para que o adaptador de dados de diagnóstico identifique-o. Substitua os valores reais de "Company/ProductName/Version".
 
@@ -247,23 +247,23 @@ Para obter um projeto completo do adaptador de dados de diagnóstico de exemplo,
 
      Para obter mais informações sobre como definir suas configurações de teste para usar um ambiente ao executar testes, confira [Coletar dados de diagnóstico em testes manuais (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts).
 
-     Para obter mais informações sobre como instalar o arquivo de configuração, consulte [Como: Instalar um adaptador de dados de diagnóstico personalizado](../test/quickstart-create-a-load-test-project.md)
+     Para obter mais informações sobre como instalar o arquivo de configuração, consulte [como instalar um adaptador de dados de diagnóstico personalizado](../test/quickstart-create-a-load-test-project.md)
 
 12. Construa sua solução para criar o assembly do adaptador de dados de diagnóstico.
 
-13. Para obter informações sobre como instalar seu editor personalizado, consulte [Como: Instalar um adaptador de dados de diagnóstico personalizado](../test/quickstart-create-a-load-test-project.md).
+13. Para obter informações sobre como instalar o editor personalizado, consulte [como instalar um adaptador de dados de diagnóstico personalizado](../test/quickstart-create-a-load-test-project.md).
 
 14. Para obter mais informações sobre como definir suas configurações de teste para usar um ambiente ao executar testes, confira [Coletar dados de diagnóstico em testes manuais (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts).
 
-15. Para selecionar o adaptador de dados de diagnóstico, primeiro você deve selecionar as configurações de teste existentes ou criar uma nova no Visual Studio ou no Microsoft Test Manager (preterido no Visual Studio 2017). O adaptador é exibido na guia **Dados e Diagnósticos** das configurações de teste com o nome amigável que você atribuiu à classe.
+15. Para selecionar o adaptador de dados de diagnóstico, você deve primeiro selecionar uma configuração de teste existente ou criar uma nova no Visual Studio ou Microsoft Test Manager (preterido no Visual Studio 2017). O adaptador é exibido na guia **Dados e Diagnósticos** das configurações de teste com o nome amigável que você atribuiu à classe.
 
-16. Defina as configurações de teste como ativas. Para obter mais informações sobre as configurações do teste, consulte [Coletar informações de diagnóstico usando as configurações do teste](../test/collect-diagnostic-information-using-test-settings.md).
+16. Defina as configurações de teste como ativas. Para obter mais informações sobre configurações de teste, consulte [coletar informações de diagnóstico usando configurações de teste](../test/collect-diagnostic-information-using-test-settings.md).
 
 17. Execute seus testes usando as configurações de teste com o adaptador de dados de diagnóstico selecionado.
 
     O arquivo de dados que você especificou está anexado aos resultados do teste.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorAttribute>
 - <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents>
@@ -275,4 +275,4 @@ Para obter um projeto completo do adaptador de dados de diagnóstico de exemplo,
 - [Coletar informações de diagnóstico usando configurações de teste](../test/collect-diagnostic-information-using-test-settings.md)
 - [Coletar dados de diagnóstico em testes manuais (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)
 - [Coletar dados de diagnóstico durante testes (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)
-- [Como: Criar um editor personalizado para dados para o seu adaptador de dados de diagnóstico](../test/quickstart-create-a-load-test-project.md)
+- [Como: criar um editor personalizado para dados para o adaptador de dados de diagnóstico](../test/quickstart-create-a-load-test-project.md)

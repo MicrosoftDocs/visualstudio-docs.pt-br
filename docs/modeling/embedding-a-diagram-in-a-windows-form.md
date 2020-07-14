@@ -1,18 +1,18 @@
 ---
 title: Inserindo um diagrama em um formulário do Windows Forms
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94425c9f3bc586847f43589f7abdcef2295cf1b9
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 3e81a5ff10cd6e309ffbf17e40ffbaa9ec88f185
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114620"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547622"
 ---
 # <a name="embed-a-diagram-in-a-windows-form"></a>Inserir um diagrama em um Windows Form
 
@@ -67,7 +67,7 @@ Você pode inserir um diagrama de DSL em um controle do Windows, que aparece na 
 
 ## <a name="update-the-form-using-store-events"></a>Atualizar o formulário usando os eventos da loja
 
-1. No designer de formulário, adicione uma caixa de **listagem** chamada `listBox1`. Isso exibirá uma lista dos elementos no modelo. Ele é sincronizado com o modelo usando *eventos de armazenamento*. Para obter mais informações, consulte [manipuladores de eventos propagar alterações fora do modelo](../modeling/event-handlers-propagate-changes-outside-the-model.md).
+1. No designer de formulário, adicione uma caixa de **listagem** chamada `listBox1` . Isso exibirá uma lista dos elementos no modelo. Ele é sincronizado com o modelo usando *eventos de armazenamento*. Para obter mais informações, consulte [manipuladores de eventos propagar alterações fora do modelo](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
 2. No arquivo de código personalizado, substitua os métodos adicionais para a classe DocView:
 
@@ -141,7 +141,7 @@ Você pode inserir um diagrama de DSL em um controle do Windows, que aparece na 
 
      Observe que a caixa de listagem mostra uma lista dos elementos no modelo e que ele está correto após qualquer adição ou exclusão, e após desfazer e refazer.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Navegando por um modelo no código do programa e atualizando-o](../modeling/navigating-and-updating-a-model-in-program-code.md)
+- [Navegando e atualizando um modelo no código do programa](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Escrevendo código para personalizar uma linguagem específica de domínio](../modeling/writing-code-to-customise-a-domain-specific-language.md)

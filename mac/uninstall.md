@@ -6,12 +6,13 @@ ms.author: dominicn
 ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: 348a6ad1bde58c17b2bbb1ef4868fcfa6835ef9f
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: ee30af4ed578bbc59924fcd8968b97dcf9306619
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "76892162"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950030"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Desinstalando o Visual Studio para Mac
 
@@ -35,8 +36,8 @@ Você pode desinstalar os componentes do Visual Studio e do Xamarin de uma só v
 
 Esse script de desinstalação contém a maioria dos comandos que você encontrará no artigo. Há três omissões principais do script que não estão incluídas devido a possíveis dependências externas. Para removê-las, vá para a seção relevante abaixo e remova manualmente:
 
-- **[Desinstalação do Mono](#uninstall-mono-sdk-mdk)**
-- **[Desinstalação do Android AVD](#uninstall-android-avd)**
+- **[Desinstalando o mono](#uninstall-mono-sdk-mdk)**
+- **[Desinstalando o Android AVD](#uninstall-android-avd)**
 - **[Como desinstalar o SDK do Android e o SDK do Java](#uninstall-android-sdk-and-java-sdk)**
 
 Para executar o script, execute as seguintes etapas:
@@ -243,6 +244,6 @@ Você também pode remover o arquivo plist Preview com o seguinte comando:
 rm -rf ~/Library/Preferences/com.microsoft.visual-studio-preview.plist
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Desinstalar Visual Studio (no Windows)](/visualstudio/install/uninstall-visual-studio)

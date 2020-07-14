@@ -1,7 +1,7 @@
 ---
 title: Como limitar a instrumentação a DLLs específicas | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - performance tools, runtime profiling control window
 author: mikejo5000
@@ -10,16 +10,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 066262a3fae35e82904b011165813e9dd75d9987
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 391aeb0b1686d58116d6aaa52ad0a3defe15fb00
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778811"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85327798"
 ---
 # <a name="how-to-limit-instrumentation-to-specific-dlls"></a>Como limitar a instrumentação a DLLs específicas
 
-Ao usar o método de criação de perfil de instrumentação, é possível limitar a coleta de dados de criação de perfil a uma ou mais DLLs em um aplicativo. Para fazer o perfil de um ou mais DLLs em um aplicativo, crie uma sessão de desempenho que inclua o . *dll* arquivos como alvos. É possível especificar as DLLs que você deseja analisar como projetos em uma solução do Visual Studio ou como arquivos binários independentes.
+Ao usar o método de criação de perfil de instrumentação, é possível limitar a coleta de dados de criação de perfil a uma ou mais DLLs em um aplicativo. Para criar um perfil de uma ou mais DLLs em um aplicativo, você cria uma sessão de desempenho que inclui o. arquivos *dll* como destinos. É possível especificar as DLLs que você deseja analisar como projetos em uma solução do Visual Studio ou como arquivos binários independentes.
 
 ## <a name="to-limit-instrumentation-to-specific-dlls-in-a-visual-studio-solution"></a>Para limitar a instrumentação a DLLs específicas em uma solução do Visual Studio
 
@@ -29,7 +29,7 @@ Ao usar o método de criação de perfil de instrumentação, é possível limit
 
 3. Escolha **Instrumentação** como o método de criação de perfil e, em seguida, clique em **Avançar**.
 
-4. A partir **dos seguintes alvos disponíveis você gostaria de perfilar?**, selecione o nome do . *projeto dll* e, em seguida, clique **em Next**.
+4. De **qual dos seguintes destinos disponíveis você deseja criar o perfil?**, selecione o nome do. projeto de *dll* e clique em **Avançar**.
 
 5. Clique em **Concluir** para sair do assistente e exibir a nova sessão de desempenho na janela **Gerenciador de Desempenho**.
 
@@ -51,9 +51,9 @@ Ao usar o método de criação de perfil de instrumentação, é possível limit
 
 4. Na segunda página do assistente, realize as seguintes etapas:
 
-    - Digite o caminho e o nome do arquivo do . *dll* arquivo que você deseja perfilar no **caminho Dll**. Você também pode clicar no botão de reticências (...) para localizar o arquivo na caixa de diálogo **Biblioteca de Vínculo Dinâmico cujo perfil deve ser criado**. Observe que você deve especificar a cópia do . *dll* arquivo que será lançado pelo executável (.* exe*) arquivo que você selecionar a seguir.
+    - Digite o caminho e o nome do arquivo do. arquivo *dll* no qual você deseja criar o perfil no **caminho da dll**. Você também pode clicar no botão de reticências (...) para localizar o arquivo na caixa de diálogo **Biblioteca de Vínculo Dinâmico cujo perfil deve ser criado**. Observe que você deve especificar a cópia do. arquivo *dll* que será iniciado pelo executável (.* exe*) que você selecionar avançar.
 
-    - Digite o caminho e o nome do arquivo do executável (.* exe*) arquivo que vai exercitar o . *dll* em **caminho executável**. Você também pode clicar no botão de reticências (...) para localizar o arquivo na caixa de diálogo **Executável a Ser Iniciado**.
+    - Digite o caminho e o nome do arquivo do executável (.* exe*) que irá exercitar o. *dll* no **caminho do executável**. Você também pode clicar no botão de reticências (...) para localizar o arquivo na caixa de diálogo **Executável a Ser Iniciado**.
 
     - Opcional. Digite todos argumentos de linha de comando que você deseja passar para o arquivo executável em **Argumentos de Linha de Comando**. Se necessário, especifique o diretório de trabalho para o aplicativo em **Diretório de trabalho**.
 
@@ -63,12 +63,12 @@ Ao usar o método de criação de perfil de instrumentação, é possível limit
 
 6. Clique em **Concluir** para sair do assistente e exibir a nova sessão de desempenho na janela **Gerenciador de Desempenho**.
 
-7. Opcional. Para adicionar mais . *arquivos dll,* clique com o botão direito do mouse **Em Alvos** e, em seguida, **selecione Adicionar binário de destino**. Selecione os arquivos na caixa de diálogo **Adicionar Binário de Destino**.
+7. Opcional. Para adicionar mais. arquivos *dll* , clique com o botão direito do mouse em **destinos** e selecione **Adicionar binário de destino**. Selecione os arquivos na caixa de diálogo **Adicionar Binário de Destino**.
 
     > [!NOTE]
-    > Não especifique o executável (.* exe*) arquivo que exerce os DLLs.
+    > Não especifique o executável (.* exe*) que exercita as DLLs.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Controle a coleta de](../profiling/controlling-data-collection.md)
-dados[Como: Limitar a instrumentação a funções específicas](../profiling/how-to-limit-instrumentation-to-specific-functions.md)
+Coleta de dados de [controle](../profiling/controlling-data-collection.md) 
+ [Como limitar a instrumentação a funções específicas](../profiling/how-to-limit-instrumentation-to-specific-functions.md)

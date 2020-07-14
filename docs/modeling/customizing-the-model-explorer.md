@@ -1,7 +1,7 @@
 ---
 title: Personalizando o Gerenciador de Modelos
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.dsltools.dsldesigner.explorerbehavior
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 96c12ac2063e6b3ac04e3c0e9b0c20c69ea91a35
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 625ba0d592d0dbdaa8cb910c366852fe32c5f220
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589702"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548363"
 ---
 # <a name="customizing-the-model-explorer"></a>Personalizando o Gerenciador de Modelos
 Você pode alterar a aparência e o comportamento do Gerenciador para o designer de linguagem específica do domínio da seguinte maneira:
@@ -33,14 +33,14 @@ Você pode alterar a aparência e o comportamento do Gerenciador para o designer
  Para alterar o título da janela do Gerenciador gerado, selecione o **comportamento do Explorer** no Gerenciador de **DSL**e, em seguida, na janela **Propriedades** , defina a propriedade **título** como o título desejado.
 
 ## <a name="changing-the-tab-icon"></a>Alterando o ícone de guia
- Para alterar o ícone de guia do Gerenciador, use um ícone de 16x16 pixels em um arquivo. bmp. Coloque o arquivo de ícone na pasta \DslPackage\Resources\ e altere o nome do arquivo para **ModelExplorerToolWindowBitmaps. bmp**. Por exemplo, você pode alterar o arquivo de ícone Setup. ico do Visual Studio para o formato. bmp e renomeá-lo como **DSLLanguageName\DslPackage\Resources\ModelExplorerToolWindowBitmaps.bmp**. O designer gerado exibirá esse ícone na guia do seu Explorer quando ele estiver encaixado junto com **Gerenciador de soluções**.
+ Para alterar o ícone de guia do Gerenciador, use um ícone de 16x16 pixels em um arquivo. bmp. Coloque o arquivo de ícone na pasta \DslPackage\Resources\ e altere o nome do arquivo para **ModelExplorerToolWindowBitmaps.bmp**. Por exemplo, você pode alterar o arquivo de ícone Setup. ico do Visual Studio para o formato. bmp e renomeá-lo como **DSLLanguageName\DslPackage\Resources\ModelExplorerToolWindowBitmaps.bmp**. O designer gerado exibirá esse ícone na guia do seu Explorer quando ele estiver encaixado junto com **Gerenciador de soluções**.
 
 ## <a name="setting-custom-icons-on-explorer-nodes"></a>Configurando ícones personalizados em nós do Explorer
  Você pode personalizar os nós no seu Explorer usando as configurações de nó do Explorer. O procedimento a seguir mostra como adicionar um ícone a um nó.
 
 #### <a name="to-add-an-icon-to-an-explorer-node"></a>Para adicionar um ícone a um nó do Explorer
 
-1. Crie uma solução de [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] usando o modelo de solução de fluxo de tarefas.
+1. Crie uma [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] solução usando o modelo de solução de fluxo de tarefas.
 
 2. Coloque um arquivo. bmp que contenha um ícone de 16x16 pixels na pasta **Dsl\Resources** da solução.
 
@@ -111,6 +111,6 @@ Você pode alterar a aparência e o comportamento do Gerenciador para o designer
 
      O Gerenciador deve mostrar apenas um nó **atores** e não deve mostrar o nó de **comentários** .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Glossário das Ferramentas de Linguagem Específica de Domínio](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

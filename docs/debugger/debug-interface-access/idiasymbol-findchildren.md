@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::findChildren | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3c62271f6324e50a68de393cfa668c69ba4a935
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7f1fe583ba4932f4f534886ed1c9af34e900ba67
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741294"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464586"
 ---
 # <a name="idiasymbolfindchildren"></a>IDiaSymbol::findChildren
 Recupera os filhos do símbolo.
@@ -50,13 +50,13 @@ no Especifica as opções de comparação aplicadas à correspondência de nomes
 
 fora Retorna um objeto [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) que contém uma lista dos símbolos filho recuperados.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Retorna `S_OK` se pelo menos um filho do símbolo foi encontrado ou retorna `S_FALSE` se nenhum filho foi encontrado; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
  Esse método é idêntico à chamada do método [IDiaSession:: findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md) com este símbolo como o primeiro parâmetro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

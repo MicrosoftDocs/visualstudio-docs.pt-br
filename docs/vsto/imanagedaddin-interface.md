@@ -1,7 +1,7 @@
 ---
 title: Interface IManagedAddin
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: interface
 dev_langs:
 - VB
 - CSharp
@@ -12,15 +12,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 320b20fa40250ca47dd414b362059e152eba2c3b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b436d76164b1744cffe16593149f64d219d04bf1
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63420990"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541122"
 ---
 # <a name="imanagedaddin-interface"></a>Interface IManagedAddin
-  Implementar a interface IManagedAddin para criar um componente que carrega gerenciados VSTO Add-ins. Essa interface foi adicionada no 2007 Microsoft Office system.
+  Implemente a interface IManagedAddin para criar um componente que carregue suplementos do VSTO gerenciados. Essa interface foi adicionada no sistema de Microsoft Office de 2007.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,46 +43,46 @@ interface IManagedAddin : IUnknown
 ## <a name="methods"></a>Métodos
  A tabela a seguir lista os métodos que são definidos pela interface IManagedAddin.
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
-|[IManagedAddin::Load](../vsto/imanagedaddin-load.md)|Chamado quando um Microsoft Office aplicativo carrega um gerenciado suplemento VSTO.|
-|[IManagedAddin::Unload](../vsto/imanagedaddin-unload.md)|Chamado pouco antes de um Microsoft Office aplicativo descarrega um gerenciado suplemento VSTO.|
+|[IManagedAddin::Load](../vsto/imanagedaddin-load.md)|Chamado quando um aplicativo Microsoft Office carrega um suplemento VSTO gerenciado.|
+|[IManagedAddin::Unload](../vsto/imanagedaddin-unload.md)|Chamado logo antes de um Microsoft Office aplicativo descarrega um suplemento do VSTO gerenciado.|
 
 ## <a name="remarks"></a>Comentários
- Aplicativos do Microsoft Office, começando com o 2007 Microsoft Office system, usam a interface IManagedAddin para ajudar a carregar suplementos do VSTO do Office. Você pode implementar a interface IManagedAddin para criar seu próprio carregador de suplemento do VSTO e tempo de execução para gerenciados VSTO Add-ins, em vez de usar o carregador de suplemento do VSTO (*vstoloader. dll*) e [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]. Para obter mais informações, consulte [arquitetura do VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md).
+ Microsoft Office aplicativos, começando com o sistema de 2007 Microsoft Office, use a interface IManagedAddin para ajudar a carregar os suplementos do VSTO do Office. Você pode implementar a interface IManagedAddin para criar seu próprio carregador de suplemento do VSTO e tempo de execução para suplementos do VSTO gerenciados, em vez de usar o carregador de suplemento do VSTO (*VSTOLoader.dll*) e o [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . Para obter mais informações, consulte [arquitetura de suplementos do VSTO](../vsto/architecture-of-vsto-add-ins.md).
 
 ## <a name="how-managed-add-ins-are-loaded"></a>Como os suplementos gerenciados são carregados
- Quando um aplicativo é iniciado, ocorrem as seguintes etapas:
+ As etapas a seguir ocorrem quando um aplicativo é iniciado:
 
-1. O aplicativo descobre VSTO Add-ins procurando por entradas na seguinte chave do registro:
+1. O aplicativo descobre os suplementos do VSTO procurando entradas na seguinte chave do registro:
 
-    **HKEY_CURRENT_USER\Software\Microsoft\Office\\ *\<nome do aplicativo >* \Addins\\**
+    **HKEY_CURRENT_USER \Software\Microsoft\Office \\ *\<application name>* \Addins\\**
 
-    Cada entrada sob essa chave do registro é uma ID exclusiva do suplemento do VSTO. Normalmente, isso é o nome do assembly do suplemento do VSTO.
+    Cada entrada nessa chave do registro é uma ID exclusiva do suplemento do VSTO. Normalmente, esse é o nome do assembly do suplemento do VSTO.
 
-2. O aplicativo procura um `Manifest` entrada sob a entrada para cada suplemento do VSTO.
+2. O aplicativo procura uma `Manifest` entrada sob a entrada de cada suplemento do VSTO.
 
-    Gerenciado VSTO Add-ins pode armazenar o caminho completo de um manifesto na `Manifest` entrada sob **HKEY_CURRENT_USER\Software\Microsoft\Office\\ _\<nome do aplicativo >_ \Addins\\  _\<suplemento ID >_ **. Um manifesto é um arquivo (normalmente, um arquivo XML) que fornece informações que são usadas para ajudar a carregar o suplemento do VSTO.
+    Os suplementos do VSTO gerenciados podem armazenar o caminho completo de um manifesto na `Manifest` entrada em **HKEY_CURRENT_USER \Software\Microsoft\Office \\ _\<application name>_ \Addins \\ _\<add-in ID>_ **. Um manifesto é um arquivo (normalmente, um arquivo XML) que fornece informações que são usadas para ajudar a carregar o suplemento do VSTO.
 
-3. Se o aplicativo encontra uma `Manifest` entrada, o aplicativo tenta carregar um componente do carregador do suplemento do VSTO gerenciado. O aplicativo faz isso ao tentar criar um objeto COM que implementa a interface IManagedAddin.
+3. Se o aplicativo encontrar uma `Manifest` entrada, o aplicativo tentará carregar um componente de carregador de suplementos do VSTO gerenciado. O aplicativo faz isso tentando criar um objeto COM que implementa a interface IManagedAddin.
 
-    O [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] inclui um componente de carregador de suplemento do VSTO (*vstoloader. dll*), ou você pode criar seus próprios Implementando a interface IManagedAddin.
+    O [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] inclui um componente de carregador de suplemento do VSTO (*VSTOLoader.dll*) ou você pode criar o seu próprio implementando a interface IManagedAddin.
 
-4. O aplicativo chama o [IManagedAddin::Load](../vsto/imanagedaddin-load.md) método e passa o valor da `Manifest` entrada.
+4. O aplicativo chama o método [IManagedAddin:: Load](../vsto/imanagedaddin-load.md) e passa o valor da `Manifest` entrada.
 
-5. O [IManagedAddin::Load](../vsto/imanagedaddin-load.md) método executa as tarefas necessárias para carregar o suplemento VSTO, como configurar a política de segurança e de domínio de aplicativo para o suplemento VSTO que está sendo carregado.
+5. O método [IManagedAddin:: Load](../vsto/imanagedaddin-load.md) executa tarefas necessárias para carregar o suplemento do VSTO, como configurar o domínio do aplicativo e a política de segurança para o suplemento do VSTO que está sendo carregado.
 
-   Para obter mais informações sobre o registro de chaves usado por aplicativos do Microsoft Office para descobrir e carregar gerenciadas VSTO Add-ins, consulte [entradas do registro para suplementos VSTO](../vsto/registry-entries-for-vsto-add-ins.md).
+   Para obter mais informações sobre as chaves do registro que Microsoft Office aplicativos usam para descobrir e carregar suplementos do VSTO gerenciados, consulte [entradas do registro para suplementos do VSTO](../vsto/registry-entries-for-vsto-add-ins.md).
 
-## <a name="guidance-to-implement-imanagedaddin"></a>Diretrizes para implementar IManagedAddin
- Se você implementar IManagedAddin, você deve registrar a DLL que contém a implementação por meio do seguinte CLSID:
+## <a name="guidance-to-implement-imanagedaddin"></a>Diretrizes para implementar o IManagedAddin
+ Se você implementar IManagedAddin, deverá registrar a DLL que contém a implementação usando o seguinte CLSID:
 
  99D651D7-5F7C-470E-8A3B-774D5D9536AC
 
- Aplicativos do Microsoft Office usam este CLSID para criar o objeto COM que implementa IManagedAddin.
+ Microsoft Office aplicativos usam esse CLSID para criar o objeto COM que implementa IManagedAddin.
 
 > [!CAUTION]
-> Este CLSID também é usado pelo *vstoloader. dll* no [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]. Portanto, se você usar IManagedAddin para criar seu próprio carregador de suplemento do VSTO e o componente de tempo de execução, você não pode implantar seu componente para computadores que estão executando suplementos do VSTO que dependem de [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)].
+> Esse CLSID também é usado pelo *VSTOLoader.dll* no [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . Portanto, se você usar o IManagedAddin para criar seu próprio carregador de suplemento do VSTO e o componente de tempo de execução, não será possível implantar seu componente em computadores que executam suplementos do VSTO que dependem do [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] .
 
 ## <a name="see-also"></a>Consulte também
 - [Referência de API não gerenciada &#40;desenvolvimento do Office no Visual Studio&#41;](../vsto/unmanaged-api-reference-office-development-in-visual-studio.md)

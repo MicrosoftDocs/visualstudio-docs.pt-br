@@ -1,7 +1,7 @@
 ---
 title: Adicionar código a TableAdapters em aplicativos de n camadas
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e5d240726030a3a08d184b3015f56f65d9168e9f
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 3ea451ac60de971677ee2f7910b28b334c67dff3
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76113323"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283093"
 ---
 # <a name="add-code-to-tableadapters-in-n-tier-applications"></a>Adicionar código a TableAdapters em aplicativos de n camadas
 Você pode estender a funcionalidade de um TableAdapter criando um arquivo de classe parcial para o TableAdapter e adicionando código a ele (em vez de adicionar código ao arquivo *DataSetName. DataSet. designer* ). As classes parciais permitem que o código de uma classe específica seja dividido entre vários arquivos físicos. Para obter mais informações, consulte [parcial](/dotnet/visual-basic/language-reference/modifiers/partial) ou [parcial (tipo)](/dotnet/csharp/language-reference/keywords/partial-type).
@@ -32,7 +32,7 @@ Por padrão, depois de separar o DataSet e o código do TableAdapter, o resultad
 > Quando você separa os conjuntos de dados e os TableAdapters (configurando a propriedade **Projeto de Conjunto de Dados**), as classes dos conjuntos de dados parciais existentes no projeto não são movidas automaticamente. As classes parciais de DataSet existentes devem ser movidas manualmente para o projeto DataSet.
 
 > [!NOTE]
-> O conjunto de recursos fornece a funcionalidade para gerar <xref:System.Data.DataTable.ColumnChanging> e <xref:System.Data.DataTable.RowChanging> manipuladores de eventos quando a validação é necessária. Para obter mais informações, consulte [Adicionar validação a um conjunto](../data-tools/add-validation-to-an-n-tier-dataset.md)de dados de n camadas.
+> O conjunto de recursos fornece a funcionalidade de geração <xref:System.Data.DataTable.ColumnChanging> e <xref:System.Data.DataTable.RowChanging> manipuladores de eventos quando a validação é necessária. Para obter mais informações, consulte [Adicionar validação a um conjunto](../data-tools/add-validation-to-an-n-tier-dataset.md)de dados de n camadas.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
@@ -48,7 +48,7 @@ Por padrão, depois de separar o DataSet e o código do TableAdapter, o resultad
 
 4. Adicione o código dentro da declaração de classe parcial.
 
-5. O exemplo a seguir mostra onde adicionar código ao `CustomersTableAdapter` no `NorthwindDataSet`:
+5. O exemplo a seguir mostra onde adicionar código ao `CustomersTableAdapter` no `NorthwindDataSet` :
 
     ```vb
     Partial Public Class CustomersTableAdapter

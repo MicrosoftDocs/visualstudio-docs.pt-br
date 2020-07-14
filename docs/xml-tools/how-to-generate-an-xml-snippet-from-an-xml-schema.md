@@ -1,19 +1,19 @@
 ---
 title: 'Como: Gerencia um snippet de um esquema XML'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 2c128d2a-aaa6-4814-aa95-e07056afe338
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ec320018cc64e774751c312ca4cdeb94a6d53a9c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3c7dff8e1bb211343ccc44e0d1fd33d96c102283
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817171"
 ---
 # <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>Como gerar um trecho XML a partir de um esquema XML
 
@@ -33,7 +33,7 @@ Este recurso está disponível somente nos elementos. As seguintes regras també
 
 - O cursor deve ser localizado imediatamente à direita do nome do elemento.
 
-O snippet gerado contém todos os atributos e elementos necessários. Se `minOccurs` é maior de um, o número mínimo necessário de instâncias desse elemento é incluído no snippet, até um máximo de 100 instâncias. Todos os valores fixos encontrados no esquema levam a valores fixos no snippet. os elementos `xsd:any` e `xsd:anyAttribute` são ignorados e não resultam em construções de trecho adicionais.
+O snippet gerado contém todos os atributos e elementos necessários. Se `minOccurs` é maior de um, o número mínimo necessário de instâncias desse elemento é incluído no snippet, até um máximo de 100 instâncias. Todos os valores fixos encontrados no esquema levam a valores fixos no snippet. `xsd:any`os `xsd:anyAttribute` elementos e são ignorados e não resultam em construções de trecho adicionais.
 
 Os valores padrão são gerados e observados como valores editáveis. Se o esquema especifica um valor padrão, esse valor padrão é usado. Entretanto, se o valor padrão de esquema é uma cadeia de caracteres vazia, o editor gerencia os valores padrão da seguinte maneira:
 
@@ -56,7 +56,7 @@ As etapas nesta seção mostram como usar o recurso de trecho XML gerado pelo es
 
      Um novo arquivo é aberto no editor. O arquivo contém uma declaração XML padrão, `<?xml version="1.0" encoding="utf-8">`.
 
-3. Na janela Propriedades do documento, clique no botão procurar ( **...** ) no campo **esquemas** .
+3. Na janela Propriedades do documento, clique no botão procurar (**...**) no campo **esquemas** .
 
      A caixa de diálogo **esquemas XSD** é exibida.
 
@@ -88,7 +88,7 @@ As etapas nesta seção mostram como usar o recurso de trecho XML gerado pelo es
 
      O editor adiciona a tag de início `<Contact` e posicionar o cursor após o nome do elemento.
 
-4. Pressione **Tab** para gerar dados XML para o elemento `Contact` com base em suas informações de esquema.
+4. Pressione **Tab** para gerar dados XML para o `Contact` elemento com base em suas informações de esquema.
 
 ## <a name="input"></a>Entrada
 
@@ -141,7 +141,7 @@ O seguinte arquivo de esquema é usado por passo a passo.
 
 ### <a name="output"></a>Saída
 
-A seguir estão os dados XML que são gerados com base nas informações de esquema associada com o elemento de `Contact` . Os itens marcados como `bold` designam campos editáveis no trecho XML.
+A seguir estão os dados XML que são gerados com base nas informações de esquema associada com o elemento de `Contact` . Itens marcados como `bold` designar campos editáveis no trecho XML.
 
 ```xml
 <Contact>
@@ -156,5 +156,5 @@ A seguir estão os dados XML que são gerados com base nas informações de esqu
 
 ## <a name="see-also"></a>Veja também
 
-- [Trechos de código XML](../xml-tools/xml-snippets.md)
+- [Snippets XML](../xml-tools/xml-snippets.md)
 - [Como: usar trechos XML](../xml-tools/how-to-use-xml-snippets.md)

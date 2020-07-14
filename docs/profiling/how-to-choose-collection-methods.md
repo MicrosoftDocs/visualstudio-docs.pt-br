@@ -1,7 +1,7 @@
 ---
-title: Como escolher métodos de coleta | Microsoft Docs
+title: Como escolher métodos de coleção | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - performance tools, choosing collection method
 - profiling tools, choosing collection method
@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c633e12b2e0bf157ffd94ef06a5898fdc3ec830
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4dbc54fc394f75778f74d9b6b02e93882129cdb9
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74776339"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329267"
 ---
 # <a name="how-to-choose-collection-methods"></a>Como escolher métodos de coleta
 
@@ -84,14 +84,14 @@ Você pode usar a propriedade **Método** da sessão de desempenho para especifi
 
 ### <a name="to-select-concurrency-data-collection-by-using-performance-session-properties"></a>Para selecionar a coleta de dados de simultaneidade usando as propriedades da sessão de desempenho
 
-1. No **Performance Explorer**, clique com o botão direito do mouse na sessão de desempenho e, em seguida, clique em **Propriedades**.
+1. Em **Gerenciador de desempenho**, clique com o botão direito do mouse na sessão de desempenho e clique em **Propriedades**.
 
 2. Nas **Páginas de Propriedades**, clique em **Geral**.
 
 3. Clique em **Simultaneidade**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Configure as sessões de](../profiling/configuring-performance-sessions.md)
-desempenho[Entenda os valores dos dados amostrais Propriedades](../profiling/understanding-sampling-data-values.md)
-[da sessão de desempenho](../profiling/performance-session-properties.md)
+[Configurar sessões](../profiling/configuring-performance-sessions.md) 
+ de desempenho [Entender os valores](../profiling/understanding-sampling-data-values.md) 
+ de dados de amostragem [Propriedades da sessão de desempenho](../profiling/performance-session-properties.md)

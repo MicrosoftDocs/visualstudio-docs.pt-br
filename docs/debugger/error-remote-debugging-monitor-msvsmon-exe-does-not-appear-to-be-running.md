@@ -1,9 +1,9 @@
 ---
-title: 'Erro: o Monitor de Depuração Remota do Microsoft Visual Studio (MSVSMON.EXE) parece não estar sendo executado no computador remoto.'
+title: Erro-o Monitor de Depuração Remota de Microsoft Visual Studio (MSVSMON.EXE) não parece estar em execução no computador remoto.
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.server_machine_no_default
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cc9558ff4d470d30df19ea5982eb6acbcc708eea
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 6ba7fb30bcb5ac04a823b4ba654382ac23a966fe
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916250"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460605"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a>Erro: o Monitor de Depuração Remota do Microsoft Visual Studio (MSVSMON.EXE) parece não estar sendo executado no computador remoto.
 Essa mensagem de erro significa que o Visual Studio não pôde localizar a instância correta do Visual Studio Monitor de Depuração Remota no computador remoto. O Monitor de Depuração Remota do Visual Studio deve ser instalado para que a depuração remota funcione. Para obter informações sobre como baixar e configurar o depurador remoto, consulte [depuração remota](../debugger/remote-debugging.md).
@@ -30,7 +30,7 @@ Essa mensagem de erro significa que o Visual Studio não pôde localizar a inst�
 > Se você acreditar que recebeu esta mensagem por causa de um bug do produto, [relate esse problema ao Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md). Se precisar de mais ajuda, consulte [Fale conosco](../ide/feedback-options.md) para obter formas de entrar em contato com a Microsoft.
 
 ## <a name="i-got-this-message-while-i-was-debugging-in-visual-studio-2010-or-earlier"></a>Eu recebi essa mensagem enquanto estava Depurando no Visual Studio 2010 ou anterior
- Se a versão do Visual Studio que você está usando for o Visual Studio 2010 ou anterior, você também poderá receber esse erro se o compartilhamento de arquivos e impressoras não estiver habilitado. Para saber mais sobre esse problema, consulte a versão do Visual Studio 2010 desta documentação: [erro: o monitor de depuração remota de Microsoft Visual Studio (msvsmon. EXE) não parece estar em execução no computador remoto. -Visual Studio 2010](/previous-versions/visualstudio/visual-studio-2010/ms164726(v=vs.100))
+ Se a versão do Visual Studio que você está usando for o Visual Studio 2010 ou anterior, você também poderá receber esse erro se o compartilhamento de arquivos e impressoras não estiver habilitado. Para saber mais sobre esse problema, veja a versão do Visual Studio 2010 desta documentação: [erro: o monitor de depuração remota de Microsoft Visual Studio (MSVSMON.EXE) não parece estar em execução no computador remoto.-Visual Studio 2010](/previous-versions/visualstudio/visual-studio-2010/ms164726(v=vs.100))
 
 ## <a name="i-got-this-message-while-i-was-debugging-locally"></a>Recebi essa mensagem enquanto eu estava Depurando localmente
  Se você estiver recebendo essa mensagem enquanto estiver Depurando localmente, o software antivírus ou um firewall de terceiros poderá ser a culpa. O Visual Studio é um aplicativo de 32 bits, portanto, ele usa a versão de 64 bits do depurador remoto para depurar aplicativos de 64 bits. Os dois processos se comunicam usando a rede local no computador local. Nenhum tráfego deixa o computador, mas é possível que softwares de segurança de terceiros possam bloquear a comunicação.
@@ -51,7 +51,7 @@ Essa mensagem de erro significa que o Visual Studio não pôde localizar a inst�
 
 - Você pode interromper o depurador remoto e reiniciá-lo com a conta que você está usando no computador local.
 
-- Você pode iniciar o depurador remoto a partir da linha de comando com o parâmetro **/allow \<nome de usuário >** : `msvsmon /allow <username@computer>`
+- Você pode iniciar o depurador remoto a partir da linha de comando com o parâmetro **/Allow \<username> ** :`msvsmon /allow <username@computer>`
 
 - Você pode adicionar o usuário às permissões do depurador remoto (na janela do depurador remoto, **ferramentas > permissões**).
 
@@ -70,9 +70,9 @@ Essa mensagem de erro significa que o Visual Studio não pôde localizar a inst�
  Talvez seja necessário fazer a depuração remota em um momento diferente ou reagendar o trabalho na rede por um horário diferente.
 
 ## <a name="more-help"></a>Mais ajuda
- Para obter mais ajuda do depurador remoto, incluindo opções de linha de comando, clique em **ajuda > uso** na janela do depurador remoto. Se você não o tiver aberto, poderá ver a página da Web copiando a linha a seguir para uma janela do **Explorador de arquivos** . (Você precisa substituir \<diretório de instalação do Visual Studio > pelo local da instalação do Visual Studio.)
+ Para obter mais ajuda do depurador remoto, incluindo opções de linha de comando, clique em **ajuda > uso** na janela do depurador remoto. Se você não o tiver aberto, poderá ver a página da Web copiando a linha a seguir para uma janela do **Explorador de arquivos** . (Você precisa substituir \<Visual Studio installation directory> pelo local da instalação do Visual Studio.)
 
- res:// *\<diretório de instalação do Visual Studio >* \ COMMON7 \ IDE \ Remote %2 0 depurador \ x64 \ msvsmon. exe/help. htm
+ res:// *\<Visual Studio installation directory>* \Common7\IDE\Remote% 20Debugger\x64\msvsmon.exe/help.htm
 
 ## <a name="see-also"></a>Veja também
-- [Erros e solução de problemas de depuração remota](../debugger/remote-debugging-errors-and-troubleshooting.md)
+- [Erros de depuração remota e solução de problemas](../debugger/remote-debugging-errors-and-troubleshooting.md)

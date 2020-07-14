@@ -15,19 +15,19 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b4abf0b15a4fbba1abc61572da8a2f6126c754f2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ade0d10e203752c7412929c6f5f44d9cbfaacfa6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652154"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85521258"
 ---
-# <a name="ca2103-review-imperative-security"></a>CA2103: revisar segurança obrigatória
+# <a name="ca2103-review-imperative-security"></a>CA2103: Examinar a segurança imperativa
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|ReviewImperativeSecurity|
+|TypeName|ReviewImperativeSecurity|
 |CheckId|CA2103|
 |Categoria|Microsoft.Security|
 |Alteração Significativa|Quebra|
@@ -46,5 +46,5 @@ ms.locfileid: "72652154"
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
  É seguro suprimir um aviso dessa regra se a permissão não depender da alteração de dados. No entanto, é melhor alterar a demanda imperativa para seu equivalente declarativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Dados e modelagem de diretrizes de](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6) [codificação segura](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)

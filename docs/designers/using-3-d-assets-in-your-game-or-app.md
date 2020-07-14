@@ -1,7 +1,7 @@
 ---
 title: Usando ativos 3D em seu jogo ou aplicativo
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VC.Project.ImageContentTask.ContentOutput
 - VC.Project.MeshContentTask.ContentOutput
@@ -15,14 +15,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d38f87970d5f9ff6d90befc61073cc4ed3d4ca92
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3821262a456f9e3e764555fce5fc883b42d4ae9e
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589806"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768650"
 ---
-# <a name="how-to-use-3d-assets-in-your-game-or-app"></a>Como: Use ativos 3D em seu jogo ou aplicativo
+# <a name="how-to-use-3d-assets-in-your-game-or-app"></a>Como: Usar ativos 3D em seu jogo ou aplicativo
 
 Este artigo descreve como é possível usar o Visual Studio para processar ativos 3D e incluí-los nos builds.
 
@@ -97,7 +97,7 @@ Ao usar a ferramenta de pipeline de conteúdo da imagem para compilar um ativo d
 
 |Propriedade|Descrição|
 |--------------|-----------------|
-|**Comprimir**|Especifica o tipo de compactação usado para o arquivo de saída.<br /><br /> As opções disponíveis são:<br /><br /> -   **Sem compactação**<br />-   **compactação BC1_UNORM**<br />-   **Compactação BC1_UNORM_SRGB**<br />-   **compactação BC2_UNORM**<br />-   **Compactação BC2_UNORM_SRGB**<br />-   **compactação BC3_UNORM**<br />-   **Compactação BC3_UNORM_SRGB**<br />-   **Compactação BC4_UNORM**<br />-   **Compactação BC4_SNORM**<br />-   **Compactação BC5_UNORM**<br />-   **Compactação BC5_SNORM**<br />-   **Compactação BC6H_UF16**<br />-   **Compactação BC6H_SF16**<br />-   **Compactação BC7_UNORM**<br />-   **Compactação BC7_UNORM_SRGB**<br /><br /> Para obter informações sobre quais formatos de compactação têm suporte em diferentes versões do DirectX, consulte [Guia de programação para DXGI](/windows/win32/direct3ddxgi/dx-graphics-dxgi-overviews).|
+|**Compactar**|Especifica o tipo de compactação usado para o arquivo de saída.<br /><br /> As opções disponíveis são:<br /><br /> -   **Sem compactação**<br />-   **Compactação de BC1_UNORM**<br />-   **Compactação BC1_UNORM_SRGB**<br />-   **Compactação de BC2_UNORM**<br />-   **Compactação BC2_UNORM_SRGB**<br />-   **Compactação de BC3_UNORM**<br />-   **Compactação BC3_UNORM_SRGB**<br />-   **Compactação BC4_UNORM**<br />-   **Compactação BC4_SNORM**<br />-   **Compactação BC5_UNORM**<br />-   **Compactação BC5_SNORM**<br />-   **Compactação BC6H_UF16**<br />-   **Compactação BC6H_SF16**<br />-   **Compactação BC7_UNORM**<br />-   **Compactação BC7_UNORM_SRGB**<br /><br /> Para obter informações sobre quais formatos de compactação têm suporte em diferentes versões do DirectX, consulte [Guia de programação para DXGI](/windows/win32/direct3ddxgi/dx-graphics-dxgi-overviews).|
 |Converter para formato alfa pré-multiplicado|**Sim** para converter a imagem para um formato alfa pré-multiplicado no arquivo de saída; caso contrário, **Não**. Apenas o arquivo de saída é alterado, a imagem de origem permanece inalterada.|
 |**Gerar Mips**|**Sim** para gerar uma cadeia de MIP completa no tempo de build no arquivo de saída; caso contrário, **Não**. Se **Não** e o arquivo de origem já contiver uma cadeia de mipmap, o arquivo de saída terá uma cadeia MIP; caso contrário, o arquivo de saída não terá uma cadeia MIP.|
 |**Saída de conteúdo**|Especifica o nome do arquivo de saída. **Importante:** alterar a extensão de nome de arquivo de saída não tem efeito sobre o formato do arquivo.|
@@ -215,6 +215,6 @@ cbuffer MiscVars : register(b3)
 |-----------|-----------------|
 |[Como exportar uma textura que contenha mipmaps](../designers/how-to-export-a-texture-that-contains-mipmaps.md)|Descreve como usar o Pipeline de Conteúdo da Imagem para exportar uma textura contendo mipmaps pré-calculados.|
 |[Como exportar uma textura que tenha Alfa pré-multiplicado](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md)|Descreve como usar o Pipeline de Conteúdo da Imagem para exportar uma textura contendo valores alfa pré-multiplicados.|
-|[Como: Exportar uma textura para uso com aplicativos Direct2D ou JavaScript](../designers/how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md)|Descreve como usar o Pipeline de Conteúdo da Imagem para exportar uma textura que possa ser usada em um aplicativo Direct2D ou JavaScript.|
+|[Como: exportar uma textura para uso com aplicativos Direct2D ou JavaScript](../designers/how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md)|Descreve como usar o Pipeline de Conteúdo da Imagem para exportar uma textura que possa ser usada em um aplicativo Direct2D ou JavaScript.|
 |[Trabalhando com ativos 3D para jogos e aplicativos](../designers/working-with-3-d-assets-for-games-and-apps.md)|Descreve as ferramentas de edição que o Visual Studio fornece para criar e manipular ativos 3D, incluindo texturas e imagens, modelos 3D e sombreadores.|
-|[Como: Exportar um sombreador](../designers/how-to-export-a-shader.md)|Descreve como exportar o sombreador do Designer do Sombreador.|
+|[Como: exportar um sombreador](../designers/how-to-export-a-shader.md)|Descreve como exportar o sombreador do Designer do Sombreador.|

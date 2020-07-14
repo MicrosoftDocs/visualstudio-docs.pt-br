@@ -1,7 +1,7 @@
 ---
-title: 'Erro: o computador remoto não pôde iniciar as comunicações DCOM | Microsoft Docs'
+title: Erro-o computador remoto não pôde iniciar as comunicações DCOM | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.unmarshal_callback_failed
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d61fe145a8dc301c928b81f9b57f1a574865a1d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8a1f5216953adc1b257e432b1e4f1eb4d041b836
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737547"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460698"
 ---
 # <a name="error-remote-computer-could-not-initiate-dcom-communications"></a>Erro: o computador remoto não conseguiu iniciar a comunicação DCOM
 Um erro DCOM ocorreu quando o computador remoto tentou se comunicar com o computador local. O computador local é o computador que está
@@ -38,5 +38,5 @@ Um erro DCOM ocorreu quando o computador remoto tentou se comunicar com o comput
 
 3. Para restaurar a autenticação do Windows, tente reiniciar os dois computadores. Examine os logs de eventos nos computadores local e remoto para encontrar erros de Kerberos e entre em contato com os administradores de domínio para problemas conhecidos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
  [Depuração remota](../debugger/remote-debugging.md)

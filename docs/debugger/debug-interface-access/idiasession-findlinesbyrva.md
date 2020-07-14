@@ -1,7 +1,7 @@
 ---
 title: IDiaSession::findLinesByRVA | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b6dfe92a5c804c0c81bfff6fa457e1ca797a62f9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 671e72d9a0dc1f9d4bf539efaa75e76e2f15f23f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742084"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465604"
 ---
 # <a name="idiasessionfindlinesbyrva"></a>IDiaSession::findLinesByRVA
 Recupera as linhas em um compiland especificado que contém um endereço virtual relativo (RVA) específico.
@@ -45,8 +45,8 @@ no Especifica o número de bytes de intervalo de endereços a serem abordados co
 
 fora Retorna um objeto [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) que contém uma lista de todos os números de linha que abrangem o intervalo de endereços especificado.
 
-## <a name="return-value"></a>Valor retornado
-Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo
 Este exemplo mostra uma função que obtém todos os números de linha contidos na função especificada usando o comprimento e o endereço virtual relativo da função.
@@ -67,6 +67,6 @@ IDiaEnumLineNumbers* GetLineNumbersByRVA(IDiaSymbol *pFunc, IDiaSession *pSessio
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

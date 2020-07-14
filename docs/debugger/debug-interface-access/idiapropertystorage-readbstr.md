@@ -1,7 +1,7 @@
 ---
 title: IDiaPropertyStorage::ReadBSTR | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ef0b5bac11a1bf3da7e8081f7ae24b6a7a6f1a71
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c6e87c2ed168a262fc1a12f06fc6a18bcf73e7bc
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742925"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466591"
 ---
 # <a name="idiapropertystoragereadbstr"></a>IDiaPropertyStorage::ReadBSTR
 Lê `BSTR` valores em um conjunto de propriedades.
@@ -34,17 +34,17 @@ HRESULT ReadBSTR ( 
 #### <a name="parameters"></a>Parâmetros
  `id`
 
-no Identificador da propriedade a ser lida (`PROPID` é definido em WTypes. h como um `ULONG`).
+no Identificador da propriedade a ser lida ( `PROPID` definida em WTypes. h como um `ULONG` ).
 
  `pValue`
 
 fora Retorna o valor da propriedade.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Retornará `E_INVALIDARG` se a propriedade não for do tipo `BSTR`.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. Retorna `E_INVALIDARG` se a propriedade não é do tipo `BSTR` .
 
 ## <a name="remarks"></a>Comentários
- Uma `BSTR` é definida pelo Windows como uma cadeia de caracteres largo terminada em zero.
+ Um `BSTR` é definido pelo Windows como uma cadeia de caracteres largo terminada em zero.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

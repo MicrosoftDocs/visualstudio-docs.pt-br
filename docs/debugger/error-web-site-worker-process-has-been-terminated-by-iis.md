@@ -1,7 +1,7 @@
 ---
-title: 'Erro: o processo de trabalho do site foi encerrado pelo IIS | Microsoft Docs'
+title: Erro-o processo de trabalho do site da Web foi encerrado pelo IIS | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.web_server_process_terminated
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3231c8ba2835fb535d538e29ef7df7ea3d1c4a8a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6d61f124d906137557b17b81122eba34e471a1a4
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736350"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85459994"
 ---
 # <a name="error-web-site-worker-process-has-been-terminated-by-iis"></a>Erro: o processo de trabalho do site foi encerrado pelo IIS
 O depurador interrompeu a execução de código no site. Isso fez o IIS (Serviços de Informações da Internet) supor que o processo de trabalho parou de responder. Consequentemente, o IIS terminou o processo de trabalho.
@@ -30,17 +30,17 @@ O depurador interrompeu a execução de código no site. Isso fez o IIS (Serviç
 
 1. Abra a janela **Ferramentas Administrativas**.
 
-   1. Clique em **Iniciar** e escolha **Painel de Controle**.
+   1. Clique em **Iniciar**e escolha **painel de controle**.
 
-   2. No **Painel de Controle**, escolha **Alternar para o Modo de Exibição Clássico** se necessário e clique duas vezes em **Ferramentas Administrativas**.
+   2. No **painel de controle**, escolha **alternar para exibição clássica**, se necessário, e clique duas vezes em **Ferramentas administrativas**.
 
-2. Na janela **Ferramentas Administrativas**, clique duas vezes em **Serviços de Informações da Internet (IIS)** .
+2. Na janela **Ferramentas Administrativas**, clique duas vezes em **Serviços de Informações da Internet (IIS)**.
 
     O Gerenciador do IIS é aberto.
 
-3. No painel **Conexões**, expanda o nó \<nome do computador> se necessário.
+3. No painel **conexões** , expanda o \<computer name> nó, se necessário.
 
-4. No nó \<nome do computador>, clique em **Pools de Aplicativos**.
+4. No \<computer name> nó, clique em **pools de aplicativos**.
 
 5. Na lista **Pools de Aplicativos**, clique com o botão direito do mouse no nome do pool no qual seu aplicativo está sendo executado e clique em **Configurações Avançadas**.
 
@@ -52,9 +52,9 @@ O depurador interrompeu a execução de código no site. Isso fez o IIS (Serviç
 
      Configurar **Ping Habilitado** como **False** impede que o IIS verifique se o processo de trabalho ainda está em execução e mantém o processo de trabalho ativo até que você pare o processo depurado. Configurar **Tempo de Resposta Máximo de Ping** com um valor grande permite que o IIS continue monitorando o processo de trabalho.
 
-7. Clique em **OK** para fechar a caixa de diálogo **Configurações Avançadas**.
+7. Clique em **OK** para fechar a caixa de diálogo **Configurações Avançadas** .
 
 8. Feche o Gerenciador do IIS e a janela **Ferramentas Administrativas**.
 
-## <a name="see-also"></a>Consulte também
-- [Erros e solução de problemas de depuração remota](../debugger/remote-debugging-errors-and-troubleshooting.md)
+## <a name="see-also"></a>Veja também
+- [Erros de depuração remota e solução de problemas](../debugger/remote-debugging-errors-and-troubleshooting.md)

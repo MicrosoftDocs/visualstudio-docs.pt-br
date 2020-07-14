@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3954f271d4bcdc222841bbcb435cdadf115ac263
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b67a50623eb1924c4a18b57524c409f7eba6ab20
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748131"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546868"
 ---
 # <a name="write-code-to-customize-a-domain-specific-language"></a>Escrever o código para personalizar uma Linguagem Específica de Domínio
 
@@ -24,7 +24,7 @@ Há vários contextos nos quais você pode escrever código que funciona com uma
 
 - **Comandos personalizados.** Você pode criar um comando que os usuários podem invocar clicando com o botão direito do mouse no diagrama e que podem modificar o modelo. Para obter mais informações, consulte [como: adicionar um comando ao menu de atalho](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
 
-- **Validação.** Você pode escrever código que verifica se o modelo está em um estado correto. Para obter mais informações, consulte [validação em uma linguagem específica de domínio](../modeling/validation-in-a-domain-specific-language.md).
+- **Confirmação.** Você pode escrever código que verifica se o modelo está em um estado correto. Para obter mais informações, consulte [validação em uma linguagem específica de domínio](../modeling/validation-in-a-domain-specific-language.md).
 
 - **Substituindo o comportamento padrão.** Você pode modificar muitos aspectos do código que é gerado a partir de DslDefinition. DSL. Para obter mais informações, consulte [substituindo e estendendo as classes geradas](../modeling/overriding-and-extending-the-generated-classes.md).
 
@@ -72,6 +72,6 @@ manter os objetos na loja (em vez de objetos comuns) fornece vários benefícios
 
 - **Serialização**. O repositório fornece uma maneira padrão de serializar os objetos que ele contém em um arquivo. Você pode personalizar as regras para serialização e desserialização. Para obter mais informações, consulte [Personalizando o armazenamento de arquivos e a serialização de XML](../modeling/customizing-file-storage-and-xml-serialization.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Personalizando e estendendo uma linguagem específica de domínio](../modeling/customizing-and-extending-a-domain-specific-language.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaReadExeAtRVACallback | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2aee44ff3acc1d7423e19de8fd64be0e46d8e372
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8fc4d27f3ef8c9329feddd6bf7d8342ceae1b263
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742799"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466451"
 ---
 # <a name="idiareadexeatrvacallback"></a>IDiaReadExeAtRVACallback
 Permite que um aplicativo cliente forneça bytes de um arquivo executável, conforme especificado por um endereço virtual relativo.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaReadExeAtRVACallback : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Métodos em ordem vtable
- A tabela a seguir mostra os métodos de `IDiaReadExeAtRVACallback`.
+ A tabela a seguir mostra os métodos de `IDiaReadExeAtRVACallback` .
 
 |Método|Descrição|
 |------------|-----------------|
@@ -48,7 +48,7 @@ IDiaReadExeAtRVACallback : IUnknown
 
  DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)
 - [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)

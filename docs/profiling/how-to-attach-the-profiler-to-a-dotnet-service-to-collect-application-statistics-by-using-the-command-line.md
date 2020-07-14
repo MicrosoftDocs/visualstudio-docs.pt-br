@@ -2,7 +2,7 @@
 title: Anexar criador de perfil ao serviço do .NET para coletar estatísticas do aplicativo
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a0046c47-26c8-4bec-96a0-81da05e5104a
 author: mikejo5000
 ms.author: mikejo
@@ -10,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9294e9bf9ab35d75e0b06c620699c6e39babe1a3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ac59e0e08894ca143df6a68c49e5f5f8b24ebc50
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779136"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328707"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-application-statistics-by-using-the-command-line"></a>Como anexar o criador de perfil a um serviço do .NET para coletar estatísticas do aplicativo usando a linha de comando
 Este artigo descreve como usar as ferramentas de linha de comando das Ferramentas de Criação de Perfil do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para anexar o criador de perfil a um serviço do .NET Framework e coletar estatísticas de desempenho usando o método de amostragem.
@@ -53,11 +53,11 @@ Este artigo descreve como usar as ferramentas de linha de comando das Ferramenta
 
 6. Inicie o criador de perfil. Tipo:
 
-    **VSPerfCmd**  [/start](../profiling/start.md) **:sample**  [/output](../profiling/output.md) **:** `OutputFile` [`Options`]
+    **VSPerfCmd**  [/Start](../profiling/start.md) **: exemplo**  [/output](../profiling/output.md) **:** `OutputFile` [ `Options` ]
 
-   - A opção **/start:sample** inicializa o profiler.
+   - A opção **/Start: sample** Inicializa o criador de perfil.
 
-   - A **/saída:** `OutputFile` opção é necessária com **/start**. `OutputFile` especifica o nome e o local do arquivo de dados de criação de perfil (.vsp).
+   - A opção **/output:** `OutputFile` é necessária com **/Start**. `OutputFile` especifica o nome e o local do arquivo de dados de criação de perfil (.vsp).
 
      É possível usar qualquer uma das opções a seguir com a opção **/start:sample**.
 
@@ -66,17 +66,17 @@ Este artigo descreve como usar as ferramentas de linha de comando das Ferramenta
 
    | Opção | Descrição |
    | - | - |
-   | [/usuário:](../profiling/user-vsperfcmd.md) **:**`Domain`**\\**[ ]`UserName` | Especifica o domínio e o nome de usuário da conta que possui o processo analisado. Esta opção é necessária apenas se o processo estiver sendo executado como um usuário diferente do usuário conectado. O proprietário do processo é listado na coluna Nome de Usuário na guia Processos do Gerenciador de Tarefas do Windows. |
-   | [/sessão cruzada](../profiling/crosssession.md) | Habilita a criação de perfil de processos em outras sessões. Esta opção é necessária se o serviço estiver em execução em uma sessão diferente. A ID da sessão é listada na coluna ID da Sessão na guia Processos do Gerenciador de Tarefas do Windows. **/CS** pode ser especificado como uma abreviação de **/crosssession**. |
-   | [/wincounter:](../profiling/wincounter.md) **:**`WinCounterPath` | Especifica um contador de desempenho do Windows que deve ser coletado durante a criação de perfil. |
-   | [/marca automática:](../profiling/automark.md) **:**`Interval` | Use somente com **/wincounter**. Especifica o número de milissegundos entre eventos de coleta do contador de desempenho do Windows. O padrão é 500 ms. |
-   | [/eventos:](../profiling/events-vsperfcmd.md) **:**`Config` | Especifica um evento de ETW (Rastreamento de Eventos para Windows) a ser coletado durante a criação de perfil. Eventos de ETW são coletados em um arquivo separado (.etl). |
+   | [/User](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName` | Especifica o domínio e o nome de usuário da conta que possui o processo analisado. Esta opção é necessária apenas se o processo estiver sendo executado como um usuário diferente do usuário conectado. O proprietário do processo é listado na coluna Nome de Usuário na guia Processos do Gerenciador de Tarefas do Windows. |
+   | [/CrossSession](../profiling/crosssession.md) | Habilita a criação de perfil de processos em outras sessões. Esta opção é necessária se o serviço estiver em execução em uma sessão diferente. A ID da sessão é listada na coluna ID da Sessão na guia Processos do Gerenciador de Tarefas do Windows. **/CS** pode ser especificado como uma abreviação de **/crosssession**. |
+   | [/WinCounter](../profiling/wincounter.md) **:**`WinCounterPath` | Especifica um contador de desempenho do Windows que deve ser coletado durante a criação de perfil. |
+   | [/AutoMark](../profiling/automark.md) **:**`Interval` | Use somente com **/wincounter**. Especifica o número de milissegundos entre eventos de coleta do contador de desempenho do Windows. O padrão é 500 ms. |
+   | [/Events](../profiling/events-vsperfcmd.md) **:**`Config` | Especifica um evento de ETW (Rastreamento de Eventos para Windows) a ser coletado durante a criação de perfil. Eventos de ETW são coletados em um arquivo separado (.etl). |
 
 7. Se necessário, inicie o serviço.
 
 8. Anexe o criador de perfil ao serviço. Tipo:
 
-    **VSPerfCmd**[/attach](../profiling/attach.md) `PID` **:** {`Sample Event`&#124;`ProcName`} [[[ / / / / / / /](../profiling/targetclr.md)**:**`Version`/ / /  
+    **VSPerfCmd**[/Attach](../profiling/attach.md) **:** { `PID`&#124;`ProcName` } [ `Sample Event` ] [[/TargetCLR](../profiling/targetclr.md)**:** `Version` ]  
 
    - Especifica a ID do processo (`PID`) ou o nome do processo (ProcName) do serviço. É possível exibir as IDs de processo e nomes de todos os processos em execução no Gerenciador de Tarefas do Windows.
 
@@ -84,25 +84,25 @@ Este artigo descreve como usar as ferramentas de linha de comando das Ferramenta
 
    |Evento de Amostra|Descrição|
    |------------------|-----------------|
-   |[/temporizador:](../profiling/timer.md) **:**`Interval`|Altera o intervalo de amostragem para o número de ciclos de relógio não interrompidos especificados por `Interval`.|
-   |[/pf](../profiling/pf.md)[**:**`Interval`]|Altera o evento de amostragem para falhas de página. Se `Interval` for especificado, define o número de falhas de página entre as amostras. O padrão é 10.|
-   |[/sys](../profiling/sys-vsperfcmd.md)`:``Interval`[ ]|Altera o evento de amostragem para chamadas do sistema do processo para o kernel do sistema operacional (syscalls). Se `Interval` for especificado, define o número de chamadas entre as amostras. O padrão é 10.|
-   |[/contador:](../profiling/counter.md) **:**`Config`|Altera o evento de amostragem e o intervalo para o contador de desempenho do processador e o intervalo especificado em `Config`.|
+   |[/timer](../profiling/timer.md) **:**`Interval`|Altera o intervalo de amostragem para o número de ciclos de relógio não interrompidos especificados por `Interval`.|
+   |[/PF](../profiling/pf.md)[**:** `Interval` ]|Altera o evento de amostragem para falhas de página. Se `Interval` for especificado, define o número de falhas de página entre as amostras. O padrão é 10.|
+   |[/Sys](../profiling/sys-vsperfcmd.md)[ `:``Interval` ]|Altera o evento de amostragem para chamadas do sistema do processo para o kernel do sistema operacional (syscalls). Se `Interval` for especificado, define o número de chamadas entre as amostras. O padrão é 10.|
+   |[/Counter](../profiling/counter.md) **:**`Config`|Altera o evento de amostragem e o intervalo para o contador de desempenho do processador e o intervalo especificado em `Config`.|
 
-   - **targetclr:** `Version` especifica a versão do tempo de execução do idioma comum (CLR) para o perfil quando mais de uma versão do tempo de execução é carregada em um aplicativo. Opcional.
+   - **TargetCLR:** `Version` Especifica a versão do Common Language Runtime (CLR) para o perfil quando mais de uma versão do tempo de execução é carregada em um aplicativo. Opcional.
 
 ## <a name="control-data-collection"></a>Controlar a coleta de dados
  Quando o serviço estiver em execução, você pode usar as opções *VSPerfCmd.exe* para iniciar e parar a gravação de dados no arquivo de dados do criador de perfil. Controlar a coleta de dados permite coletar dados de uma parte específica da execução do programa, como a inicialização ou o desligamento do aplicativo.
 
 #### <a name="to-start-and-stop-data-collection"></a>Para iniciar e interromper a coleta de dados
 
-- Os seguintes pares de opções **VSPerfCmd** iniciam e param a coleta de dados. Especifique cada opção em uma linha de comando separada. É possível ativar e desativar a coleta de dados várias vezes.
+- Os pares de opções **VSPerfCmd** a seguir iniciam e param a coleta de dados. Especifique cada opção em uma linha de comando separada. É possível ativar e desativar a coleta de dados várias vezes.
 
     |Opção|Descrição|
     |------------|-----------------|
-    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|Inicia (**/globalon**) ou interrompe (**/globaloff**) a coleta de dados para todos os processos.|
-    |[/processon:](../profiling/processon-and-processoff.md) **:** `PID` [/processoff:](../profiling/processon-and-processoff.md) **:**`PID`|Inicia (**/processon**) ou interrompe (**/processoff**) a coleta de dados para o processo especificado pela ID de processo (`PID`).|
-    |**/attach:**`PID` { `ProcName`&#124;} [/desapego](../profiling/detach.md)[:{`PID`&#124;`ProcName`}]|**/attach** começa a coletar dados para o processo especificado pela ID de processo ou pelo nome de processo. **/detach** interrompe a coleta de dados para o processo especificado ou para todos os processos se nenhum processo específico for especificado.|
+    |[/GLOBALON/GLOBALOFF](../profiling/globalon-and-globaloff.md)|Inicia (**/globalon**) ou interrompe (**/globaloff**) a coleta de dados para todos os processos.|
+    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [/ProcessOff](../profiling/processon-and-processoff.md) **:**`PID`|Inicia (**/processon**) ou interrompe (**/processoff**) a coleta de dados para o processo especificado pela ID de processo (`PID`).|
+    |**/Attach:**{ `PID`&#124;`ProcName` } [/Detach](../profiling/detach.md)[: { `PID`&#124;`ProcName` }]|**/attach** começa a coletar dados para o processo especificado pela ID de processo ou pelo nome de processo. **/detach** interrompe a coleta de dados para o processo especificado ou para todos os processos se nenhum processo específico for especificado.|
 
 ## <a name="end-the-profiling-session"></a>Encerrar a sessão de criação de perfil
  Para concluir uma sessão de criação de perfil, o criador de perfil deve ser desanexado de todos os processos analisados e o criador de perfil deve ser desligado explicitamente. É possível desanexá-lo de um aplicativo que foi analisado usando o método de amostragem fechando o aplicativo ou chamando a opção **VSPerfCmd /detach**. Depois, chame a opção **VSPerfCmd /shutdown** para desativar o criador de perfil e fechar o arquivo de dados de criação de perfil.
@@ -117,7 +117,7 @@ Este artigo descreve como usar as ferramentas de linha de comando das Ferramenta
 
          -ou-
 
-    - Tipo **VSPerfCmd/desapego**
+    - Digite **VSPerfCmd/Detach**
 
 2. Desligue o criador de perfil. Tipo:
 
@@ -129,6 +129,6 @@ Este artigo descreve como usar as ferramentas de linha de comando das Ferramenta
 
 4. Reinicie o computador.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Profile services (Serviços de perfil)](../profiling/command-line-profiling-of-services.md)
-- [Visualizações de dados do método de amostragem](../profiling/profiler-sampling-method-data-views.md)
+- [Exibições de dados do método de amostragem](../profiling/profiler-sampling-method-data-views.md)

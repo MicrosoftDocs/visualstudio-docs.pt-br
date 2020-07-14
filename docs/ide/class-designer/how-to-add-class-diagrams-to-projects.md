@@ -1,7 +1,7 @@
 ---
 title: Como adicionar diagramas de classe a projetos (Designer de Classe)
 ms.date: 05/08/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - class diagrams, creating
 - Class Designer [Visual Studio], opening
@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87a6c1e996d820724138b6bf38c6440193a4c26b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a54b01f718c2faab8d36cc8e44805707fd0cc35f
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588831"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771035"
 ---
 # <a name="how-to-add-class-diagrams-to-projects"></a>Como adicionar diagramas de classe a projetos
 
@@ -42,11 +42,11 @@ Se você não tiver instalado o componente do **Designer de Classe**, siga estas
 
 ## <a name="add-a-blank-class-diagram-to-a-project"></a>Adicionar um diagrama de classe em branco a um projeto
 
-1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó do projeto e escolha **Adicionar** > **Novo Item**. Ou, **pressione Ctrl**+**Shift**+**A**.
+1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó do projeto e escolha **Adicionar** > **Novo Item**. Ou pressione **Ctrl** + **Shift** + **A**.
 
-   A caixa de diálogo **Adicionar Novo Item** é aberta.
+   A caixa de diálogo **Adicionar novo item** é aberta.
 
-2. Expanda **itens comuns** > **em geral**e selecione **Diagrama** de classe na lista de modelos. Para projetos do Visual C++, examine a categoria **Utilitário** para localizar o modelo **Diagrama de Classe**.
+2. Expanda **itens comuns**  >  **geral**e, em seguida, selecione **diagrama de classe** na lista modelo. Para projetos do Visual C++, examine a categoria **Utilitário** para localizar o modelo **Diagrama de Classe**.
 
    > [!NOTE]
    > Se você não vir o modelo **Diagrama de Classe**, [siga as etapas](#install-the-class-designer-component) para instalar o componente do **Designer de Classe** para o Visual Studio.
@@ -64,11 +64,11 @@ No **Gerenciador de Soluções**, abra o menu de contexto de um arquivo de class
 No **Modo de Exibição de Classe**, abra o namespace ou o menu de contexto de tipo e escolha **Exibir Diagrama de Classe**.
 
 > [!TIP]
-> Se **a exibição de classe** não estiver aberta, abra a **exibição** de classe no menu **Exibir.**
+> Se **modo de exibição de classe** não estiver aberto, abra **modo de exibição de classe** no menu **Exibir** .
 
 ## <a name="to-display-the-contents-of-a-complete-project-in-a-class-diagram"></a>Para exibir o conteúdo de um projeto completo em um diagrama de classe
 
-Em **Solution Explorer** ou Class View, clique com o botão direito do mouse no projeto e escolha **Exibir**e, em seguida, escolha **Exibir diagrama de classe**.
+Em **Gerenciador de soluções** ou modo de exibição de classe, clique com o botão direito do mouse no projeto e escolha **Exibir**e, em seguida, escolha **Exibir diagrama de classe**.
 
 Um diagrama de classe populado automaticamente é criado.
 
@@ -78,5 +78,5 @@ Um diagrama de classe populado automaticamente é criado.
 ## <a name="see-also"></a>Confira também
 
 - [Como criar tipos usando o Designer de Classe](how-to-create-types.md)
-- [Como: Ver os tipos existentes](how-to-view-existing-types.md)
-- [Projetar e visualizar classes e tipos](designing-and-viewing-classes-and-types.md)
+- [Como exibir tipos existentes](how-to-view-existing-types.md)
+- [Criar e exibir classes e tipos](designing-and-viewing-classes-and-types.md)

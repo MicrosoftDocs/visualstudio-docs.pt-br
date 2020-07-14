@@ -1,7 +1,7 @@
 ---
-title: Permitir que o código seja executado atrás de docs com permissões restritas
+title: Permitir que o código seja executado por trás de documentos com permissões restritas
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,39 +17,39 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 32e42954958fda71d54c3c0ac2685928644e7461
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 15cfb7ebf2f4f71e892820206f0dd1d006639992
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402255"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547505"
 ---
-# <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>Como: Permitir que o código execute documentos code-behind com permissões restritas
-  Você pode usar o recurso de gerenciamento de direitos de informação (IRM) do Microsoft Office para restringir as permissões para um documento ou pasta de trabalho. Por padrão, o código por trás de um documento do Microsoft Office Word restrito ou a pasta de trabalho do Microsoft Office Excel não é permitido para execução. Você pode alterar o padrão para que suas extensões de código gerenciado podem acessar o modelo de objeto e sua solução funcionará.
+# <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>Como: permitir que o código execute por trás de documentos com permissões restritas
+  Você pode usar o recurso de Rights Management de informações (IRM) de Microsoft Office para restringir permissões a um documento ou pasta de trabalho. Por padrão, o código por trás de um documento Microsoft Office do Word restrito ou Microsoft Office pasta de trabalho do Excel não tem permissão para ser executado. Você pode alterar o padrão para que suas extensões de código gerenciado possam acessar o modelo de objeto e sua solução funcionará.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Você deve ser o autor do documento ou pasta de trabalho ou ter acesso de controle total para ser capaz de alterar as configurações de permissão.
+ Você deve ser o autor do documento ou da pasta de trabalho ou ter acesso de controle total para poder alterar as configurações de permissão.
 
-## <a name="to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>Para permitir que o código execute documentos code-behind com permissões restritas
+## <a name="to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>Para permitir que o código execute por trás de documentos com permissões restritas
 
-1. Abra a pasta de trabalho ou documento no Word ou Excel.
+1. Abra o documento ou pasta de trabalho no Word ou Excel.
 
-2. Clique o **arquivo** guia, aponte para **preparar**, aponte para **Restringir permissão**e, em seguida, clique em **acesso restrito**.
+2. Clique na guia **arquivo** , aponte para **preparar**, aponte para **restringir permissão**e clique em **acesso restrito**.
 
    > [!NOTE]
-   > No primeiro uso, você precisará instalar o cliente Windows Rights Management. Depois de instalar o cliente, talvez seja necessário repetir as etapas.
+   > Na primeira utilização, será solicitado que você instale o cliente do Windows Rights Management. Depois de instalar o cliente, talvez seja necessário repetir as etapas.
 
-3. No **permissão** caixa de diálogo, selecione **Restringir permissão neste documento**e, em seguida, clique em **mais opções**.
+3. Na caixa de diálogo **permissão** , selecione **restringir permissão para este documento**e clique em **mais opções**.
 
-4. Sob **permissões adicionais para usuários**, selecione **acessar programaticamente o conteúdo**.
+4. Em **permissões adicionais para usuários**, selecione **acessar conteúdo programaticamente**.
 
-   Word ou Excel permitirá acesso programático ao modelo de objeto.
+   O Word ou o Excel permitirá o acesso programático ao modelo de objeto.
 
-## <a name="see-also"></a>Consulte também
-- [Gerenciamento de direitos de informação e visão geral das extensões de código gerenciado](../vsto/information-rights-management-and-managed-code-extensions-overview.md)
-- [Proteção do documento em soluções de nível de documento](../vsto/document-protection-in-document-level-solutions.md)
+## <a name="see-also"></a>Confira também
+- [Visão geral do gerenciamento de direitos de informação e extensões de código gerenciado](../vsto/information-rights-management-and-managed-code-extensions-overview.md)
+- [Proteção de documentos em soluções de nível de documento](../vsto/document-protection-in-document-level-solutions.md)
 - [Proteção por senha em documentos do Office](../vsto/password-protection-on-office-documents.md)
 - [Projetar e criar soluções do Office](../vsto/designing-and-creating-office-solutions.md)
-- [Proteger as soluções do Office](../vsto/securing-office-solutions.md)
+- [Proteger soluções do Office](../vsto/securing-office-solutions.md)
 - [Implantar uma solução do Office](../vsto/deploying-an-office-solution.md)

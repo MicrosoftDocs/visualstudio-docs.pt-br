@@ -5,21 +5,21 @@ ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.U-SQL.IntelliSense
 - VS.ToolsOptionsPages.Text_Editor.HQL.IntelliSense
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 04f7a66884238856ba6988b9f1e8c648f4ff1d16
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 91d2af8bfcd8c9d80b589e01aedd535afbd1a913
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72666649"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769473"
 ---
 # <a name="options-text-editor-u-sql-intellisense"></a>Opções, Editor de Texto, U-SQL, IntelliSense
 
-Use a página de opções **IntelliSense** para modificar algumas configurações do editor de texto para U-SQL. Para acessar esta página de opções, escolha **Opções de** > **ferramentas**e, em seguida, escolha O Editor > de **Texto****U-SQL** > **IntelliSense**.
+Use a página de opções **IntelliSense** para modificar algumas configurações do editor de texto para U-SQL. Para acessar essa página de opções, escolha **ferramentas**  >  **Opções**e, em seguida, escolha **Editor de texto**  >  **IntelliSense U-SQL**  >  **IntelliSense**.
 
 ## <a name="intellisense-settings"></a>Configurações do IntelliSense
 
@@ -29,7 +29,7 @@ Marque uma caixa de seleção para habilitar **Informações Rápidas** ou **Int
 
 - **Mostrar lista de conclusão depois que um caractere é digitado**
 
-   Quando essa opção estiver selecionada, o IntelliSense exibirá automaticamente a lista de preenchimento quando você começar a digitar. Se você não selecionar essa opção, a conclusão do IntelliSense ainda está disponível no menu IntelliSense ou pressionando **ctrl** + **Spacebar**.
+   Quando essa opção estiver selecionada, o IntelliSense exibirá automaticamente a lista de preenchimento quando você começar a digitar. Se você não selecionar essa opção, a conclusão do IntelliSense ainda estará disponível no menu do IntelliSense ou pressionando **Ctrl**  +  **barra de espaços**.
 
 - **Colocar palavras-chave em listas de preenchimento**
 

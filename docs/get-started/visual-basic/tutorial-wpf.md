@@ -5,7 +5,7 @@ ms.custom: seodec18, get-started
 ms.date: 04/23/2019
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
-ms.topic: conceptual
+ms.topic: tutorial
 dev_langs:
 - VB
 ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
@@ -14,26 +14,26 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d850f709921120fcb85f78f46eb0307d29801d11
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: bc57e3d104d7f8427e97eb6b3dd97ca3e89bc49e
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77579956"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419205"
 ---
-# <a name="tutorial-create-a-simple-application-with-visual-basic"></a>Tutorial: Crie um aplicativo simples com visual básico
+# <a name="tutorial-create-a-simple-application-with-visual-basic"></a>Tutorial: criar um aplicativo simples com Visual Basic
 
 Ao concluir este tutorial, você estará familiarizado com vários designers, ferramentas e caixas de diálogo que poderão ser usados no desenvolvimento de aplicativos com o Visual Studio. Você vai criar um aplicativo "Olá, Mundo", projetar a interface do usuário, adicionar código e depurar erros enquanto aprende sobre o trabalho no [IDE](visual-studio-ide.md) (ambiente de desenvolvimento integrado).
 
 ::: moniker range="vs-2017"
 
-Se você ainda não instalou o Visual Studio, vá para a página [de downloads](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) do Visual Studio para instalá-lo gratuitamente.
+Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Se você ainda não instalou o Visual Studio, vá para a página [de downloads](https://visualstudio.microsoft.com/downloads) do Visual Studio para instalá-lo gratuitamente.
+Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
@@ -63,7 +63,7 @@ Ao criar um aplicativo no Visual Studio, você cria primeiro um projeto e uma so
 
 ::: moniker range="vs-2017"
 
-1. Criar um novo projeto. Na barra de menu, selecione **Arquivo** > **Novo** > **Projeto**.
+1. Criar um novo projeto. Na barra de menus, selecione **arquivo**  >  **novo**  >  **projeto**.
 
      ![Na barra de menus, escolha Arquivo, Novo, Projeto](../media/exploreide-filenewproject.png)
 
@@ -100,17 +100,17 @@ Depois de criar o projeto, você poderá personalizá-lo. Ao usar a janela **Pro
 
 ### <a name="change-the-name-of-mainwindowxaml"></a>Alterar o nome de MainWindow.xaml
 
-Vamos dar um nome mais específico para MainWindow. No **Solution Explorer,** clique com o botão direito do mouse em *MainWindow.xaml* e escolha **Renomear**. Renomeie o arquivo para *Greetings.xaml*.
+Vamos dar um nome mais específico para MainWindow. Em **Gerenciador de soluções**, clique com o botão direito do mouse em *MainWindow. XAML* e escolha **renomear**. Renomeie o arquivo para *Greetings. XAML*.
 
 ## <a name="design-the-user-interface-ui"></a>Criar a interface do usuário
 
-Se o designer não estiver aberto, selecione *Greetings.xaml* no **Solution Explorer**e **pressione Shift**+**F7** para abrir o designer.
+Se o designer não estiver aberto, selecione *Greetings. XAML* em **Gerenciador de soluções**e pressione **Shift** + **F7** para abrir o designer.
 
 Adicionaremos três tipos de controles a este aplicativo: um controle <xref:System.Windows.Controls.TextBlock>, dois controles <xref:System.Windows.Controls.RadioButton> e um controle <xref:System.Windows.Controls.Button>.
 
 ### <a name="add-a-textblock-control"></a>Adicionar um controle TextBlock
 
-1. Pressione **Ctrl**+**Q** para ativar a caixa de pesquisa e digitar caixa **de ferramentas**. Escolha **Exibir > Caixa de ferramentas** na lista de resultados.
+1. Pressione **Ctrl** + **Q** para ativar a caixa de pesquisa e digite **Toolbox**. Escolha **Exibir > Caixa de ferramentas** na lista de resultados.
 
 2. No **Caixa de Ferramentas**, expanda o nó **Controles Comuns do WPF** para ver o controle TextBlock.
 
@@ -162,7 +162,7 @@ Agora você pode adicionar o texto de exibição para cada controle RadioButton.
 
 ### <a name="add-display-text-for-each-radio-button"></a>Adicionar o texto de exibição de cada botão de opção
 
-Atualize o atributo `GoodbyeButton` `"Hello"` **Conteúdo** para o `HelloButton` e para e `"Goodbye"` no XAML. A marcação XAML deve agora ser semelhante ao exemplo a seguir:
+Atualize o atributo de **conteúdo** para o `HelloButton` e `GoodbyeButton` para `"Hello"` e `"Goodbye"` no XAML. A marcação XAML deve agora ser semelhante ao exemplo a seguir:
 
    ```xaml
    <Grid>
@@ -182,11 +182,11 @@ Na exibição XAML, localize a marcação do HelloButton e adicione um atributo 
 IsChecked="True"
 ```
 
-O elemento final de iu que você adicionará é um [controle button.](/dotnet/framework/wpf/controls/button)
+O elemento da interface do usuário final que você adicionará é um controle de [botão](/dotnet/framework/wpf/controls/button) .
 
 ### <a name="add-the-button-control"></a>Adicionar o controle de botão
 
-1. Na **Caixa de Ferramentas**, localize o controle de **Botão** e, em seguida, adicione-o à superfície de design sob os controles RadioButton, arrastando-o para o formulário no modo de exibição de Design. Se você estiver usando o Visual Studio 2019 ou posterior, uma linha vermelha ajuda você a centralizar o controle.
+1. Na **Caixa de Ferramentas**, localize o controle de **Botão** e, em seguida, adicione-o à superfície de design sob os controles RadioButton, arrastando-o para o formulário no modo de exibição de Design. Se você estiver usando o Visual Studio 2019 ou posterior, uma linha vermelha o ajudará a centralizar o controle.
 
 2. Na exibição XAML, altere o valor de **Conteúdo** do controle de Botão, de `Content="Button"` para `Content="Display"` e salve as alterações.
 
@@ -228,7 +228,7 @@ Em seguida, você depurará o aplicativo para procurar erros e testar se ambas a
 
 ### <a name="find-and-fix-errors"></a>Localizar e corrigir erros
 
-Nesta etapa, você encontrará o erro que causamos anteriormente alterando o nome do arquivo *MainWindow.xaml.*
+Nesta etapa, você encontrará o erro que causamos anteriormente alterando o nome do arquivo *MainWindow. XAML* .
 
 #### <a name="start-debugging-and-find-the-error"></a>Iniciar a depuração e localizar o erro
 
@@ -238,7 +238,7 @@ Nesta etapa, você encontrará o erro que causamos anteriormente alterando o nom
 
    ![Captura de tela da mensagem de IOException](../media/exploreide-ioexception.png)
 
-2. Pare o depurador escolhendo **Debug** > **Stop Debugging**.
+2. Pare o depurador escolhendo **depurar**  >  **parar depuração**.
 
 Renomeamos o *MainWindow.xaml* como *Greetings.xaml* no início deste tutorial, mas o código ainda se refere a *MainWindow.xaml* como o URI de inicialização do aplicativo. Portanto, o projeto não pode ser iniciado.
 
@@ -261,11 +261,11 @@ Inicie o depurador novamente (pressione **F5**). Você deverá ver a janela **Sa
 
 ### <a name="debug-with-breakpoints"></a>Depurar com pontos de interrupção
 
-Você pode testar o código durante a depuração ao adicionar alguns pontos de interrupção. Você pode adicionar pontos de interrupção escolhendo **Debug** > **Toggle Breakpoint**, clicando na margem esquerda do editor ao lado da linha de código onde você deseja que a quebra ocorra, ou pressionando **F9**.
+Você pode testar o código durante a depuração ao adicionar alguns pontos de interrupção. Você pode adicionar pontos de interrupção escolhendo **depurar**  >  **alternar ponto de interrupção**, clicando na margem esquerda do editor ao lado da linha de código onde você deseja que a interrupção ocorra ou pressionando **F9**.
 
 #### <a name="add-breakpoints"></a>Adicionar pontos de interrupção
 
-1. Abra *greetings.xaml.vb*e selecione a seguinte linha:`MessageBox.Show("Hello.")`
+1. Abra o *Greetings. XAML. vb*e selecione a seguinte linha:`MessageBox.Show("Hello.")`
 
 2. Adicione um ponto de interrupção pressionando **F9** ou por meio do menu selecionando **Depurar** e, em seguida, **Ativar/Desativar Ponto de Interrupção**.
 
@@ -281,7 +281,7 @@ Você pode testar o código durante a depuração ao adicionar alguns pontos de 
 
    ![Captura de tela de ponto de interrupção no depurador](media/exploreide-debugbreakpoint.png)
 
-6. Na barra de menu, escolha **Debug** > **Step Out**.
+6. Na barra de menus, escolha **depurar depuração**  >  **Step Out**.
 
      O aplicativo retomará a execução e uma caixa de mensagem com a palavra "Olá" será exibida.
 
@@ -295,27 +295,27 @@ Você pode testar o código durante a depuração ao adicionar alguns pontos de 
 
 10. Feche a janela do aplicativo para parar a depuração.
 
-11. Na barra de menu, escolha **Desativar** > **todos os pontos de interrupção**.
+11. Na barra de menus, escolha **depurar**  >  **desabilitar todos os pontos de interrupção**.
 
-### <a name="view-a-representation-of-the-ui-elements"></a>Exibir uma representação dos elementos da UI
+### <a name="view-a-representation-of-the-ui-elements"></a>Exibir uma representação dos elementos da interface do usuário
 
-No aplicativo em execução, você deve ver um widget que aparece na parte superior da janela. Este é um ajudante de tempo de execução que fornece acesso rápido a alguns recursos úteis de depuração. Clique no primeiro botão, **Vá para Árvore Visual Ao Vivo**. Você deve ver uma janela com uma árvore que contém todos os elementos visuais de sua página. Expanda os nós para encontrar os botões adicionados.
+No aplicativo em execução, você verá um widget que aparece na parte superior da janela. Esse é um auxiliar de tempo de execução que fornece acesso rápido a alguns recursos úteis de depuração. Clique no primeiro botão, **vá para árvore visual dinâmica**. Você deve ver uma janela com uma árvore que contém todos os elementos visuais da sua página. Expanda os nós para localizar os botões que você adicionou.
 
-![Captura de tela da janela Live Visual Tree](media/vs-2019/exploreide-live-visual-tree.png)
+![Captura de tela da janela de árvore visual ao vivo](media/vs-2019/exploreide-live-visual-tree.png)
 
 ### <a name="build-a-release-version-of-the-application"></a>Criar uma versão de lançamento do aplicativo
 
 Agora que você verificou que tudo está funcionando, já pode preparar um build de versão do aplicativo.
 
-1. No menu principal, selecione **Build** > **Clean solução** para excluir arquivos intermediários e arquivos de saída que foram criados durante compilações anteriores. Isso não é necessário, mas limpa as saídas de build de depuração.
+1. No menu principal, selecione **criar**  >  **solução limpa** para excluir arquivos intermediários e arquivos de saída que foram criados durante as compilações anteriores. Isso não é necessário, mas limpa as saídas de build de depuração.
 
-2. Alterar a configuração de compilação para HelloWPFApp de **Debug** para **Release** usando o controle de dropdown na barra de ferramentas (diz "Debug" atualmente).
+2. Altere a configuração de Build de HelloWPFApp de **debug** para **Release** usando o controle DropDown na barra de ferramentas (ele diz "debug" no momento).
 
-3. Construa a solução escolhendo **build** > **build solution**.
+3. Crie a solução escolhendo **criar**  >  **solução de compilação**.
 
-Parabéns por concluir este tutorial. Você pode encontrar o *.exe* que você construiu sua solução e diretório de projeto (*...\HelloWPFApp\HelloWPFApp\bin\Release*).
+Parabéns por concluir este tutorial. Você pode encontrar o *. exe* criado sob sua solução e o diretório do projeto (*. ..\HelloWPFApp\HelloWPFApp\bin\Release*).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 ::: moniker range="vs-2017"
 
@@ -326,7 +326,7 @@ Parabéns por concluir este tutorial. Você pode encontrar o *.exe* que você co
 
 ::: moniker range="vs-2019"
 
-- [Novidades do Visual Studio 2019](../../ide/whats-new-visual-studio-2019.md)
+- [O que há de novo no Visual Studio 2019](../../ide/whats-new-visual-studio-2019.md)
 - [Dicas de produtividade](../../ide/productivity-features.md)
 
 ::: moniker-end

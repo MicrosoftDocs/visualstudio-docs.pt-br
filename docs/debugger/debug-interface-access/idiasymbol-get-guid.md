@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_guid | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e0618c3bf0c06ba0b529004f38985fd5dd90d688
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 27c672f3738585923348ac5c36df681b4de60ca7
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740603"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463816"
 ---
 # <a name="idiasymbolget_guid"></a>IDiaSymbol::get_guid
 Recupera o GUID (identificador global exclusivo) do símbolo.
@@ -35,8 +35,8 @@ HRESULT get_guid ( 
 
 fora Retorna o GUID do símbolo.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
@@ -48,5 +48,5 @@ fora Retorna o GUID do símbolo.
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -2,7 +2,7 @@
 title: Publicar um aplicativo do Python no Serviço de Aplicativo do Azure no Windows
 description: Como publicar um aplicativo Web em Python diretamente no Serviço de Aplicativo do Azure no Windows desde o Visual Studio, incluindo o conteúdo necessário para o arquivo web.config.
 ms.date: 01/07/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -11,12 +11,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: c8e7c040fb4d6df507ed5721407655accf067fb9
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.openlocfilehash: 649d40a3b95f9e3d4df51cc4ab22a3fb79ac1498
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586567"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85531840"
 ---
 # <a name="publishing-to-azure-app-service-on-windows"></a>Como publicar no Serviço de Aplicativo do Azure no Windows
 
@@ -63,7 +63,7 @@ Com uma assinatura ativa do Azure, crie um Serviço de Aplicativo com um aplicat
 
 Crie um Serviço de Aplicativo temporário sem a necessidade de uma assinatura do Azure da seguinte maneira:
 
-1. Abra o navegador para [https://azure.microsoft.com/try/app-service/web/](https://azure.microsoft.com/try/app-service/web/).
+1. Abra o navegador para [https://azure.microsoft.com/try/app-service/web/](https://azure.microsoft.com/try/app-service/web/) .
 1. Selecione **Aplicativo Web** para o tipo de aplicativo e, em seguida, selecione **Avançar**.
 1. Selecione **Site Vazio** e, depois, **Criar**.
 1. Entre com um logon social de sua escolha e, após alguns instantes, seu site estará pronto na URL exibida.
@@ -79,7 +79,7 @@ Se desejar, você também pode instalar o pacote `bottle` usando o processo naqu
 
 A publicação no Serviço de Aplicativo do Azure através do Visual Studio 2017 e posterior copia somente os arquivos do seu projeto para o servidor. Portanto, é necessário criar os arquivos pertinentes para configurar o ambiente de servidor.
 
-1. No Visual Studio **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar > novo item...**. Na caixa de diálogo exibida, selecione o modelo "Azure Web. config (CGI rápido)" e selecione OK. Isso cria um arquivo `web.config` na raiz de seu projeto.
+1. No Visual Studio **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar > novo item...**. Na caixa de diálogo que aparece, selecione o modelo "Azure web.config (CGI rápido)" e selecione OK. Isso cria um arquivo `web.config` na raiz de seu projeto.
 
 1. Modifique a entrada `PythonHandler` em `web.config` para que o caminho corresponda à instalação do Python no servidor (consulte [Referência de configuração do IIS](https://www.iis.net/configreference) (iis.net) para obter detalhes exatos). Por exemplo, para o Python 3.6.1 x64, a entrada deve ser semelhante ao seguinte:
 
@@ -129,7 +129,7 @@ A publicação no Serviço de Aplicativo do Azure através do Visual Studio 2017
     ALLOWED_HOSTS = ['vspython-test-02.azurewebsites.net']
     ```
 
-    A falha em adicionar a URL à matriz resultará no erro "DisallowedHost em / Cabeçalho HTTP_HOST inválido: '\<URL do site\>'. Talvez seja necessário adicionar a '\<URL do site\>' ao ALLOWED_HOSTS."
+    A falha ao adicionar a URL à matriz resulta no erro "DisallowedHost em/cabeçalho de HTTP_HOST inválido: ' \<site URL\> '. Talvez seja necessário adicionar ' \<site URL\> ' a ALLOWED_HOSTS ".
 
     Observe que, quando a matriz estiver vazia, o Django permitirá automaticamente 'localhost', mas adicionar sua URL de produção removerá essas funcionalidades. Por esse motivo, talvez você queira manter cópias do `settings.py` de desenvolvimento e de produção separadas ou usar variáveis de ambiente para controlar os valores de tempo de execução.
 
@@ -145,7 +145,7 @@ A publicação no Serviço de Aplicativo do Azure através do Visual Studio 2017
 
     ![Etapa 1 de publicação no Azure, Visual Studio 2017 e posterior, assinaturas existentes](media/tutorials-common-publish-1a-2017.png)
 
-    b. Se você estiver usando um serviço de aplicativo temporário em try.azurewebsites.net ou precisar usar um perfil de publicação, selecione o controle **>** para localizar o **perfil de importação**, selecione essa opção e, em seguida, selecione **publicar**. Isso solicitará o local do arquivo `.publishsettings` baixado anteriormente.
+    b. Se você estiver usando um serviço de aplicativo temporário em try.azurewebsites.net ou precisar usar um perfil de publicação, selecione o **>** controle para localizar o **perfil de importação**, selecione essa opção e, em seguida, selecione **publicar**. Isso solicitará o local do arquivo `.publishsettings` baixado anteriormente.
 
     ![Etapa 1 de publicação no Azure, Visual Studio 2017 e posterior, serviço de aplicativo temporário](media/tutorials-common-publish-1b-2017.png)
 
@@ -209,7 +209,7 @@ Como parte desse processo, o Visual Studio também executa as seguintes etapas:
 - Criar um arquivo `web.config` no servidor que contém ponteiros apropriados para a função `wsgi_app` do aplicativo e para o interpretador padrão do Python 3.4 do Serviço de Aplicativo.
 - Desligar o processamento de arquivos na pasta `static` do projeto (as regras para isso estão no `web.config`).
 - Publicar o ambiente virtual no servidor.
-- Adicionar um arquivo `web.debug.config` e as ferramentas de depuração ptvsd para habilitar a depuração remota.
+- Adicione um `web.debug.config` arquivo e as ferramentas de depuração para habilitar a depuração remota. Para o Visual Studio 2019 versão 16,4 e anterior, as ferramentas de depuração são ptvsd. Para o Visual Studio 2019 versão 16,5 e posterior, as ferramentas de depuração são debugpy.
 
 Conforme observado anteriormente, essas etapas automáticas simplificam o processo de publicação, mas tornam o controle do ambiente do Python mais difícil. Por exemplo, o arquivo `web.config` é criado somente no servidor mas não é adicionado ao seu projeto. O processo de publicação também leva mais tempo porque ele copia o ambiente virtual inteiro do seu computador de desenvolvimento em vez de confiar na configuração do servidor.
 

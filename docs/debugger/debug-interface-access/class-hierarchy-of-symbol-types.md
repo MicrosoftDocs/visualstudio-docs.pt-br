@@ -1,7 +1,7 @@
 ---
 title: Hierarquia de classes de tipos de símbolo | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c42ea4bb2d5c2ad91538bec8b31774a5a41aa4d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ed6817c5c01b66143739b2f81899f2b58886d8e8
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745453"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462269"
 ---
 # <a name="class-hierarchy-of-symbol-types"></a>Hierarquia de classes de tipos de símbolos
 A tabela a seguir descreve os tipos de símbolo na hierarquia de classes.
@@ -45,7 +45,7 @@ A tabela a seguir descreve os tipos de símbolo na hierarquia de classes.
 > [!NOTE]
 > Cada símbolo pode ter propriedades que contêm informações sobre o símbolo, bem como referências a outros símbolos. Essas propriedades são listadas nos tópicos de símbolos individuais.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Enumeração CV_access_e](../../debugger/debug-interface-access/cv-access-e.md)
 - [Hierarquia lexical de tipos de símbolo](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)
-- [Símbolos e marcações de símbolos](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)
+- [Símbolos e marcas de símbolos](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)

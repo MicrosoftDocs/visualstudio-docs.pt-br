@@ -11,28 +11,28 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0d32ebc08866a14755ddb8b2c70e2dd0c4ce61f1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ccd556a5929e56597de678ad4ad8ea6c101b7c7f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655501"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535883"
 ---
-# <a name="ca2131-security-critical-types-may-not-participate-in-type-equivalence"></a>CA2131: os tipos críticos de segurança podem não participar da equivalência de tipo
+# <a name="ca2131-security-critical-types-may-not-participate-in-type-equivalence"></a>CA2131: Tipos críticos de segurança podem não participar da equivalência de tipo
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|CriticalTypesMustNotParticipateInTypeEquivalence|
+|TypeName|CriticalTypesMustNotParticipateInTypeEquivalence|
 |CheckId|CA2131|
 |Categoria|Microsoft.Security|
 |Alteração Significativa|Quebra|
 
 ## <a name="cause"></a>Causa
- Um tipo participa da equivalência de tipo e o próprio tipo, ou um membro ou campo do tipo, é marcado com o atributo <xref:System.Security.SecurityCriticalAttribute>.
+ Um tipo participa da equivalência de tipo e o próprio tipo, ou um membro ou campo do tipo, é marcado com o <xref:System.Security.SecurityCriticalAttribute> atributo.
 
 ## <a name="rule-description"></a>Descrição da Regra
- Esta regra é acionada em qualquer tipo crítico ou em tipos que contenham métodos críticos ou campos que estejam participando da equivalência do tipo. Quando o CLR detecta esse tipo, ele falha ao carregá-lo com um <xref:System.TypeLoadException> em tempo de execução. Normalmente, essa regra só é acionada quando usuários implementam equivalência de tipo manualmente, em vez de depender de tlbimp e dos compiladores para fazer a equivalência do tipo.
+ Esta regra é acionada em qualquer tipo crítico ou em tipos que contenham métodos críticos ou campos que estejam participando da equivalência do tipo. Quando o CLR detecta esse tipo, ele não consegue carregá-lo com um <xref:System.TypeLoadException> em tempo de execução. Normalmente, essa regra só é acionada quando usuários implementam equivalência de tipo manualmente, em vez de depender de tlbimp e dos compiladores para fazer a equivalência do tipo.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
  Para corrigir uma violação dessa regra, remova o atributo SecurityCritical.
@@ -45,5 +45,5 @@ ms.locfileid: "72655501"
 
  [!code-csharp[FxCop.Security.CA2131.CriticalTypesMustNotParticipateInTypeEquivalence#1](../snippets/csharp/VS_Snippets_CodeAnalysis/fxcop.security.ca2131.criticaltypesmustnotparticipateintypeequivalence/cs/ca2131 - criticaltypesmustnotparticipateintypeequivalence.cs#1)]
 
-## <a name="see-also"></a>Consulte também
- [Segurança-código Transparent, nível 2](https://msdn.microsoft.com/library/4d05610a-0da6-4f08-acea-d54c9d6143c0)
+## <a name="see-also"></a>Consulte Também
+ [Código transparente de segurança, nível 2](https://msdn.microsoft.com/library/4d05610a-0da6-4f08-acea-d54c9d6143c0)

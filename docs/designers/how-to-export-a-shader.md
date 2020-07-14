@@ -1,19 +1,19 @@
 ---
 title: Como exportar um sombreador
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 0bd48bf4-9792-4456-a545-e462a2be668d
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f4a3aec047238786a60b1261415acccfed521695
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e9495e5aac16821927f5f61005cd16bd20e82687
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768993"
 ---
 # <a name="how-to-export-a-shader"></a>Como exportar um sombreador
 
@@ -44,4 +44,4 @@ Depois de criar um sombreador usando o Designer de Sombreador é necessário exp
 ## <a name="see-also"></a>Confira também
 
 - [Como criar um sombreador de cor básico](../designers/how-to-create-a-basic-color-shader.md)
-- [Designer de Sombreador](../designers/shader-designer.md)
+- [Designer de sombreador](../designers/shader-designer.md)

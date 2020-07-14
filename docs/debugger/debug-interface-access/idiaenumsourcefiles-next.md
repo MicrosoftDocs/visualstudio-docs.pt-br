@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSourceFiles::Next | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 526c857acbe1283e16312355c181c56c67e19883
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7081c85d64e76900d6f310cfc8ff6cde51087fc3
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744075"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467907"
 ---
 # <a name="idiaenumsourcefilesnext"></a>IDiaEnumSourceFiles::Next
 Recupera um número especificado de arquivos de origem na sequência de enumeração.
@@ -45,10 +45,10 @@ fora Uma matriz que deve ser preenchida com os objetos [IDiaSourceFile](../../de
 
 fora Retorna o número de arquivos de origem no enumerador obtido.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver mais arquivos de origem. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)
 - [IDiaSession::findLinesByLinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

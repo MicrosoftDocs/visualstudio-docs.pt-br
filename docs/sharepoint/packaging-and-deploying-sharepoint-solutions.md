@@ -1,7 +1,7 @@
 ---
 title: Empacotando e implantando soluções do SharePoint | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 45815e03d887f4d22f2559acf741f612cab34c49
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 9a4bf3394cf47b4f355fbe6a330ff5374e2da1c9
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986205"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015591"
 ---
 # <a name="package-and-deploy-sharepoint-solutions"></a>Empacotar e implantar soluções do SharePoint
   Normalmente, uma solução do SharePoint é implantada em um servidor do SharePoint usando um arquivo de pacote de solução (. wsp). Você pode usar o Visual Studio para organizar seus itens de projeto do SharePoint em recursos e criar um pacote para implantar seus recursos do SharePoint.
@@ -37,7 +36,7 @@ ms.locfileid: "72986205"
 ## <a name="create-features-and-packages"></a>Criar recursos e pacotes
  Você pode usar o Visual Studio para agrupar elementos relacionados do SharePoint em um *recurso*. Por exemplo, um recurso para uma definição de lista de contatos pode incluir a instância de lista e a definição de lista. Você pode combinar esses dois elementos em um único recurso para fins de implantação. Para obter mais informações sobre recursos, consulte [bloco de construção: recursos](/previous-versions/office/developer/sharepoint-2010/ee537350(v=office.14)).
 
- Em seguida, você pode criar um pacote de solução do SharePoint ( *. wsp*) para agrupar vários recursos, definições de site, assemblies e outros arquivos em um único pacote, que armazena os arquivos em um formato necessário ao SharePoint para implantar os arquivos no servidor. Para obter mais informações, consulte [bloco de construção: soluções](/previous-versions/office/developer/sharepoint-2010/ee537008(v=office.14)).
+ Em seguida, você pode criar um pacote de solução do SharePoint (*. wsp*) para agrupar vários recursos, definições de site, assemblies e outros arquivos em um único pacote, que armazena os arquivos em um formato necessário ao SharePoint para implantar os arquivos no servidor. Para obter mais informações, consulte [bloco de construção: soluções](/previous-versions/office/developer/sharepoint-2010/ee537008(v=office.14)).
 
 ## <a name="feature-and-packaging-tool-support"></a>Suporte a ferramentas de recurso e empacotamento
  Você pode usar as ferramentas de desenvolvimento do SharePoint no Visual Studio para organizar rapidamente seus arquivos do SharePoint em recursos e pacotes de solução para facilitar a implantação. Você pode usar as ferramentas a seguir para configurar o recurso e o pacote de solução.
@@ -95,7 +94,7 @@ ms.locfileid: "72986205"
 
  Por exemplo, para adicionar um arquivo *. xml* a um projeto do SharePoint, execute uma destas ações:
 
-- Adicione uma pasta mapeada de "layouts" do SharePoint ao seu projeto. Isso cria em **Gerenciador de soluções** uma pasta denominada **layouts** que tem uma subpasta para o projeto. Adicione o arquivo *. xml* à nova subpasta. Por padrão, o arquivo é implantado no sistema de arquivos do SharePoint em *.. \TEMPLATE\LAYOUTS\\\<nome da pasta >* . Para obter informações sobre como adicionar pastas mapeadas, consulte [como adicionar e remover pastas mapeadas](../sharepoint/how-to-add-and-remove-mapped-folders.md).
+- Adicione uma pasta mapeada de "layouts" do SharePoint ao seu projeto. Isso cria em **Gerenciador de soluções** uma pasta denominada **layouts** que tem uma subpasta para o projeto. Adicione o arquivo *. xml* à nova subpasta. Por padrão, o arquivo é implantado no sistema de arquivos do SharePoint em *.. \\\TEMPLATE\LAYOUTS \<Folder Name> *. Para obter informações sobre como adicionar pastas mapeadas, consulte [como adicionar e remover pastas mapeadas](../sharepoint/how-to-add-and-remove-mapped-folders.md).
 
 - Adicione o arquivo *. xml* à pasta de um item de projeto do SharePoint e, em seguida, altere a propriedade **tipo de implantação** do arquivo *. xml* de **NoDeployment** para outra configuração, como **RootFile** ou **ElementFile**. A configuração apropriada do **tipo de implantação** depende do arquivo e do projeto. Para obter mais informações sobre as configurações de Propriedade do **tipo de implantação** , consulte [desenvolver soluções do SharePoint](../sharepoint/developing-sharepoint-solutions.md).
 

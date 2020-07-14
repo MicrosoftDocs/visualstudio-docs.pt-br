@@ -13,17 +13,17 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4ffd105032cda050ab16132b6a4c2d54488028b8
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.openlocfilehash: 665dc76126eac964f405be06605c40b5b30cc9a5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586760"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532932"
 ---
 # <a name="visualize-code"></a>Visualizar código
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Você pode usar as ferramentas de visualização e modelagem no Visual Studio para ajudá-lo a entender o código existente e a descrever seu aplicativo. Isso permite que você aprenda visualmente como suas alterações podem afetar o código e ajudá-lo a avaliar o trabalho e os riscos resultantes dessas alterações. Por exemplo: 
+Você pode usar as ferramentas de visualização e modelagem no Visual Studio para ajudá-lo a entender o código existente e a descrever seu aplicativo. Isso permite que você aprenda visualmente como suas alterações podem afetar o código e ajudá-lo a avaliar o trabalho e os riscos resultantes dessas alterações. Por exemplo:
 
 - Para entender as relações em seu código, mapeie essas relações visualmente.
 
@@ -39,7 +39,7 @@ Você pode usar as ferramentas de visualização e modelagem no Visual Studio pa
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
-|||
+|Cenário|Artigos|
 |-|-|
 |**Entenda o código e suas relações:**<br /><br /> Mapeie as relações entre partes específicas do código.<br /><br /> Consulte uma visão geral das relações em seu código para a solução inteira.<br /><br /> **Observação**: nesta versão do Visual Studio, o termo *mapa de código* é usado no lugar do *grafo de dependência*.|-   [Mapear dependências em suas soluções](../modeling/map-dependencies-across-your-solutions.md)<br />-   [Usar mapas de código para depurar seus aplicativos](../modeling/use-code-maps-to-debug-your-applications.md)<br />-   [Localizar possíveis problemas usando analisadores de mapa de código](../modeling/find-potential-problems-using-code-map-analyzers.md)<br />-   [Mapear métodos na pilha de chamadas durante a depuração](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)|
 |**Entenda as estruturas de classe:**<br /><br /> Visualize a estrutura de classes em um projeto Criando diagramas de classe do código.|[Como adicionar diagramas de classe a projetos (Designer de Classe)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)|

@@ -1,18 +1,18 @@
 ---
 title: Controlando a visibilidade de um ícone ou decorador
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+ms.topic: how-to
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76db7caa14050c924706763214e92a6ee3d68975
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1d2082f7e26d3e335ed88bbced0f59d6d6c4780c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748495"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546634"
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>Controlando a visibilidade de um ícone ou decorador
 Um *decorador* é um ícone ou linha de texto que aparece em uma forma em uma DSL (linguagem específica do domínio). Você pode fazer com que o decorador apareça e desapareça, dependendo do estado das propriedades no modelo. Por exemplo, em uma forma que representa uma pessoa, você poderia ter ícones diferentes que aparecem dependendo do sexo da pessoa, do número de filhos e assim por diante.
@@ -58,13 +58,13 @@ Um *decorador* é um ícone ou linha de texto que aparece em uma forma em uma DS
 
 1. Adicione uma propriedade de domínio calculada à classe de domínio. Na janela **Propriedades** , defina os seguintes valores:
 
-     **Isnavegável =** `False` **-isso oculta a propriedade do usuário**
+     **Isnavegável =** `False` **-isso oculta a propriedade do usuário**    
 
-     **Kind =** `Calculated` **-isso significa que você fornecerá um código que calcula seu valor**
+     **Tipo =** `Calculated` **-isso significa que você fornecerá um código que calcula seu valor**    
 
      **Nome** , por exemplo **DecoratorControl**
 
-     **Tipo**  =  `Boolean`
+     **Escreva** = `Boolean`
 
      Para obter mais informações, consulte [Propriedades de armazenamento calculadas e personalizadas](../modeling/calculated-and-custom-storage-properties.md).
 
@@ -76,7 +76,7 @@ Um *decorador* é um ícone ou linha de texto que aparece em uma forma em uma DS
 
     3. Na **propriedade de filtro**, selecione a propriedade de controle **DecoratorControl**.
 
-    4. Em **entradas de visibilidade**, insira `True`.
+    4. Em **entradas de visibilidade**, insira `True` .
 
 3. Clique em **transformar todos os modelos** na barra de ferramentas **Gerenciador de soluções** .
 
@@ -103,9 +103,9 @@ Um *decorador* é um ícone ou linha de texto que aparece em uma forma em uma DS
 
 8. Recompile e execute a solução.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Definindo formas e conectores](../modeling/defining-shapes-and-connectors.md)
-- [Configurando uma imagem de tela de fundo em um diagrama](../modeling/setting-a-background-image-on-a-diagram.md)
-- [Navegando por um modelo no código do programa e atualizando-o](../modeling/navigating-and-updating-a-model-in-program-code.md)
+- [Definindo uma imagem de plano de fundo em um diagrama](../modeling/setting-a-background-image-on-a-diagram.md)
+- [Navegando e atualizando um modelo no código do programa](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Escrevendo código para personalizar uma linguagem específica de domínio](../modeling/writing-code-to-customise-a-domain-specific-language.md)

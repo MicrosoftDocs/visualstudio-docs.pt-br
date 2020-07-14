@@ -1,7 +1,7 @@
 ---
-title: 'DA0005: coleções de GC2 frequentes | Microsoft Docs'
+title: DA0005-coletas GC2 frequentes de coleções | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.DA0005
 - vs.performance.rules.DAManyGC2Collections
@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a50567a101d77ed6498aaae13a5fe5556d9c1056
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 28969dd6f5adf1d0f32fe419a17f14ac4069a298
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777706"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539913"
 ---
-# <a name="da0005-frequent-gc2-collections"></a>DA0005: coleções de GC2 frequentes
+# <a name="da0005-frequent-gc2-collections"></a>DA0005: Coletas de GC2 frequentes
 
-|||
+|Item|Valor|
 |-|-|
 |RuleId|DA0005|
 |Categoria|Uso do .NET Framework|
@@ -42,6 +42,6 @@ ms.locfileid: "74777706"
  Essa regra é acionada quando ocorre, proporcionalmente, um excesso de coletas de lixo da geração 2. Se um excesso de objetos de duração relativamente curta sobreviverem à coleta da geração 1, mas conseguirem ser coletados em uma coleta completa da geração 2, o custo de gerenciamento de memória poderá se tornar excessivo. Para obter mais informações, consulte a postagem [Mid-life crisis](https://blogs.msdn.microsoft.com/ricom/2003/12/04/mid-life-crisis/) (Crise de meia vida útil) em Performance Tidbits (Notícias sobre desempenho) de Rico Mariani no site do MSDN.
 
 ## <a name="how-to-investigate-a-warning"></a>Como investigar um aviso
- Revise os [relatórios de visualizações de dados de memória .NET](../profiling/dotnet-memory-data-views.md) para entender o padrão de alocação de memória do aplicativo. Use a [exibição de vida do objeto](../profiling/object-lifetime-view.md) para determinar quais dos objetos de dados do programa estão sobrevivendo à geração 2 e, em seguida, sendo recuperados a partir daí. Use a [Exibição de Alocações](../profiling/dotnet-memory-allocations-view.md) para determinar o caminho de execução que resultou nessas alocações.
+ Examine os relatórios de [exibições de dados de memória .net](../profiling/dotnet-memory-data-views.md) para entender o padrão do aplicativo de alocação de memória. Use a [exibição de tempo de vida do objeto](../profiling/object-lifetime-view.md) para determinar quais dos objetos de dados do programa estão sobreviventes à geração 2 e, em seguida, recuperados a partir daí. Use a [Exibição de Alocações](../profiling/dotnet-memory-allocations-view.md) para determinar o caminho de execução que resultou nessas alocações.
 
  Para obter informações sobre como melhorar o desempenho da coleta de lixo, consulte [Garbage Collector Basics and Performance Hints](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) (Noções básicas sobre o coletor de lixo e dicas de desempenho) no site da Microsoft. Para obter informações sobre a sobrecarga de coleta de lixo automática, consulte [O que há por trás do heap de objetos grandes](https://msdn.microsoft.com/magazine/cc534993.aspx).

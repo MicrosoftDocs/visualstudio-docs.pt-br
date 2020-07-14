@@ -1,19 +1,19 @@
 ---
 title: Adicionar nós de resultados de pesquisa do conjunto de esquema XML ao espaço de trabalho
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ff33b3cc-4db9-4b4e-9378-b45ed5999b18
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bdb21c2b9ce3f6a79bf24738c84fcb3064c24cb
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d94544fd017809b32b7a144b16da4515e6b2e4bb
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816313"
 ---
 # <a name="how-to-add-schema-set-search-result-nodes-to-the-workspace"></a>Como adicionar nós de resultado de pesquisa de conjunto de esquema ao espaço de trabalho
 
@@ -38,4 +38,4 @@ Este exemplo usa o [esquema de ordem de compra](../xml-tools/sample-xsd-file-pur
 
      ![Resultado da pesquisa do XML Schema Explorer](../xml-tools/media/schemaexplorersearchresult.gif)
 
-     O nó `purchaseOrder` e o nó `PurchaseOrderType` aparecem ao lado um do outro na superfície de design do [modo de exibição de gráfico](../xml-tools/graph-view.md). Porque os dois nós são relacionados (o elemento de `purchaseOrder` é do tipo de `PurchaseOrderType` ), uma seta é desenhada entre eles.
+     O `purchaseOrder` nó e o `PurchaseOrderType` nó aparecem ao lado um do outro na superfície de design do [modo de exibição de gráfico](../xml-tools/graph-view.md). Porque os dois nós são relacionados (o elemento de `purchaseOrder` é do tipo de `PurchaseOrderType` ), uma seta é desenhada entre eles.

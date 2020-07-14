@@ -1,7 +1,7 @@
 ---
-title: 'Como: Assinar arquivos com SignTool.exe (ClickOnce) de instalação | Microsoft Docs'
+title: Como assinar arquivos de instalação com SignTool.exe (ClickOnce) | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -18,15 +18,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f31ebeb18790ddf76c42585868aea8a04547bfb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f9e1911b6e86058b7f078f40fa10ca5e0e4e53c0
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62928406"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382062"
 ---
-# <a name="how-to-sign-setup-files-with-signtoolexe-clickonce"></a>Como: Assinar arquivos de instalação com SignTool.exe (ClickOnce)
-Você pode usar o *SignTool.exe* para assinar um programa de instalação (*setup.exe*). Esse processo ajuda a garantir que arquivos violados não sejam instalados nos computadores dos usuários finais.
+# <a name="how-to-sign-setup-files-with-signtoolexe-clickonce"></a>Como assinar arquivos de instalação com SignTool.exe (ClickOnce)
+Você pode usar *SignTool.exe* para assinar um programa de instalação (*setup.exe*). Esse processo ajuda a garantir que arquivos violados não sejam instalados nos computadores dos usuários finais.
 
  Por padrão, o ClickOnce tem manifestos e um programa de instalação assinados. No entanto, se você quiser alterar os parâmetros do programa de instalação mais tarde, assine o programa de instalação mais tarde. Se você alterar os parâmetros depois que o programa de instalação for assinado a assinatura é corrompida.
 
@@ -76,5 +76,5 @@ Você pode usar o *SignTool.exe* para assinar um programa de instalação (*setu
     signtool sign /f CertFileName Setup.exe
     ```
 
-## <a name="see-also"></a>Consulte também
-- [Como: Assinar novamente os manifestos de aplicativo e de implantação](../deployment/how-to-re-sign-application-and-deployment-manifests.md)
+## <a name="see-also"></a>Veja também
+- [Como reassinar manifestos do aplicativo e de implantação](../deployment/how-to-re-sign-application-and-deployment-manifests.md)

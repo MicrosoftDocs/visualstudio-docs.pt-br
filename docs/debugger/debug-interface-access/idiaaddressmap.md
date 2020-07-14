@@ -1,7 +1,7 @@
 ---
 title: IDiaAddressMap | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e06acf045ce1893762d5c898752dd6bc40de50a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ddf4b1c2a6a22170fb52da200bbd53c2b6b96e62
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744985"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468528"
 ---
 # <a name="idiaaddressmap"></a>IDiaAddressMap
 Fornece controle sobre como o DIA SDK computa os endereços virtuais e virtuais relativos para objetos de depuração.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaAddressMap : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Métodos em ordem vtable
- A tabela a seguir mostra os métodos de `IDiaAddressMap`.
+ A tabela a seguir mostra os métodos de `IDiaAddressMap` .
 
 |Método|Descrição|
 |------------|-----------------|
@@ -43,10 +43,10 @@ IDiaAddressMap : IUnknown
 |[IDiaAddressMap::set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)|Fornece um mapa de endereços para dar suporte a traduções de layout de imagem.|
 
 ## <a name="remarks"></a>Comentários
- O controle fornecido por essa interface é encapsulado em dois conjuntos de dados que você fornece: cabeçalhos de imagem e mapas de endereço. A maioria dos clientes usa o método [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) para localizar as informações de depuração apropriadas para uma imagem e o método normalmente pode descobrir todos os cabeçalhos necessários e mapear os próprios dados. No entanto, alguns clientes implementam processamento especializado e pesquisam dados. Esses clientes usam os métodos da interface `IDiaAddressMap` para fornecer o DIA SDK com os resultados da pesquisa.
+ O controle fornecido por essa interface é encapsulado em dois conjuntos de dados que você fornece: cabeçalhos de imagem e mapas de endereço. A maioria dos clientes usa o método [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) para localizar as informações de depuração apropriadas para uma imagem e o método normalmente pode descobrir todos os cabeçalhos necessários e mapear os próprios dados. No entanto, alguns clientes implementam processamento especializado e pesquisam dados. Esses clientes usam os métodos da `IDiaAddressMap` interface para fornecer o dia SDK com os resultados da pesquisa.
 
 ## <a name="notes-for-callers"></a>Observações para chamadores
- Essa interface está disponível no objeto de sessão DIA. O cliente chama o método `QueryInterface` na interface de objeto de sessão de DIA, geralmente [IDiaSession](../../debugger/debug-interface-access/idiasession.md), para recuperar a interface `IDiaAddressMap`.
+ Essa interface está disponível no objeto de sessão DIA. O cliente chama o `QueryInterface` método na interface de objeto de sessão do dia, geralmente [IDiaSession](../../debugger/debug-interface-access/idiasession.md), para recuperar a `IDiaAddressMap` interface.
 
 ## <a name="requirements"></a>Requisitos
  Cabeçalho: dia2. h
@@ -55,7 +55,7 @@ IDiaAddressMap : IUnknown
 
  DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

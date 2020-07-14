@@ -2,7 +2,7 @@
 title: Escrever extensões do C++ para o Python
 description: Um passo a passo da criação de uma extensão em C++ para Python usando Visual Studio, CPython e PyBind11, incluindo uma depuração de modo misto.
 ms.date: 11/19/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9c81984e8921e44e32b58ae7f5c5c27c5fe8b12f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0871361d25131b493838bac12945a64a19a0f173
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62956920"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543722"
 ---
 # <a name="create-a-c-extension-for-python"></a>Criar uma extensão do C++ para o Python
 
@@ -50,7 +50,7 @@ Para obter mais informações, confira [Instalar o suporte para Python para Visu
 
 ## <a name="create-the-python-application"></a>Criar o aplicativo do Python
 
-1. Crie um novo projeto Python no Visual Studio selecionando **File** > **New** > **Project**. Pesquise "Python", selecione o modelo **Aplicativo Python**, atribua a ele um nome e um local adequados e selecione **OK**.
+1. Crie um novo projeto Python no Visual Studio selecionando **arquivo**  >  **novo**  >  **projeto**. Pesquise "Python", selecione o modelo **Aplicativo Python**, atribua a ele um nome e um local adequados e selecione **OK**.
 
 1. O trabalho com C++ exige o uso de um interpretador de Python de 32 bits (Python 3.6 ou superior recomendado). Na janela **Gerenciador de Soluções** do Visual Studio, expanda o nó do projeto, depois o nó **Ambientes do Python**. Se você não encontrar um ambiente de 32 bits como o padrão (em negrito ou rotulado com **padrão global**), siga as instruções em [Escolher um ambiente de Python para um projeto](selecting-a-python-environment-for-a-project.md). Se você não encontrar um interpretador de 32 bits instalado, confira [Instalar interpretadores do Python](installing-python-interpreters.md).
 
@@ -91,10 +91,10 @@ Para obter mais informações, confira [Instalar o suporte para Python para Visu
         test(lambda d: [tanh(x) for x in d], '[tanh(x) for x in d] (Python implementation)')
     ```
 
-1. Execute o programa usando **Debug** > **Start sem depuração** **(Ctrl**+**F5)** para ver os resultados. Você pode ajustar a variável `COUNT` para alterar o tempo que os parâmetros de comparação levam para serem executados. Para a finalidade deste passo a passo, defina a contagem de forma que cada parâmetro de comparação leve cerca de dois segundos.
+1. Execute o programa usando **depurar**  >  **Iniciar sem depuração** (**Ctrl** + **F5**) para ver os resultados. Você pode ajustar a variável `COUNT` para alterar o tempo que os parâmetros de comparação levam para serem executados. Para a finalidade deste passo a passo, defina a contagem de forma que cada parâmetro de comparação leve cerca de dois segundos.
 
 > [!TIP]
-> Ao executar benchmarks, use sempre **o Debug** > **Start sem depuração** para evitar a sobrecarga incorrida ao executar o código dentro do depurador visual Studio.
+> Ao executar parâmetros de comparação, sempre use **debug**  >  **Start sem Debugging** para evitar a sobrecarga incorrida ao executar o código no depurador do Visual Studio.
 
 ## <a name="create-the-core-c-projects"></a>Criar os projetos principais de C++
 
@@ -122,23 +122,23 @@ Siga as instruções nesta seção para criar dois projetos de C++ idênticos ch
 
     | Tab | Propriedade | Valor |
     | --- | --- | --- |
-    | **Geral** | **General** > **Nome do alvo geral** | Especifique o nome do módulo ao qual você deseja se referir do Python nas instruções `from...import`. Você pode usar esse mesmo nome em C++ ao definir o módulo para Python. Se você quiser usar o nome do projeto como o nome do módulo, deixe o valor padrão de **$(ProjectName)**. |
-    | | **General** > **Extensão geral do alvo** | **.pyd** |
-    | | **Tipo de** > **configuração** padrão do projeto | **Biblioteca Dinâmica (.dll)** |
-    | **C/C++** > **Geral** | **Diretórios de Inclusão Adicionais** | Adicione a pasta *include* do Python conforme apropriado para sua instalação, por exemplo, `c:\Python36\include`.  |
-    | **Pré-processador C/C++** > **Preprocessor** | **Definições do Pré-processador** | **Apenas CPython**: adicione `Py_LIMITED_API;` no início da cadeia de caracteres (inclusive o ponto e vírgula). Essa definição restringe algumas das funções que podem ser chamadas do Python e torna o código mais portável entre diferentes versões do Python. Se você estiver trabalhando com PyBind11, não adicione essa definição, caso contrário, verá erros de build. |
-    | **Geração de código C/C++** > **Code Generation** | **Biblioteca de Runtime ** | **DLL com multi-thread (/MD)** (confira Aviso abaixo) |
-    | **Linker** > **Geral** | **Diretórios de Biblioteca Adicionais** | Adicione a pasta *libs* do Python que contém arquivos *.lib* conforme apropriado para sua instalação, por exemplo, `c:\Python36\libs`. (Lembre-se de apontar para a pasta *libs* que contém arquivos *.lib* e *não* para a pasta *Lib* que contém arquivos *.py*.) |
+    | **Geral** | **Geral**  >  **Nome do destino** | Especifique o nome do módulo ao qual você deseja se referir do Python nas instruções `from...import`. Você pode usar esse mesmo nome em C++ ao definir o módulo para Python. Se você quiser usar o nome do projeto como o nome do módulo, deixe o valor padrão de **$(ProjectName)**. |
+    | | **Geral**  >  **Extensão de destino** | **.pyd** |
+    | | **Padrões**  >  do projeto **Tipo de configuração** | **Biblioteca Dinâmica (.dll)** |
+    | **C/C++**  >  **Geral** | **Diretórios de Inclusão Adicionais** | Adicione a pasta *include* do Python conforme apropriado para sua instalação, por exemplo, `c:\Python36\include`.  |
+    | **C/C++**  >  **Pré-processador** | **Definições do Pré-processador** | **Apenas CPython**: adicione `Py_LIMITED_API;` no início da cadeia de caracteres (inclusive o ponto e vírgula). Essa definição restringe algumas das funções que podem ser chamadas do Python e torna o código mais portável entre diferentes versões do Python. Se você estiver trabalhando com PyBind11, não adicione essa definição, caso contrário, verá erros de build. |
+    | **C/C++**  >  **Geração de código** | **Biblioteca de Runtime ** | **DLL com multi-thread (/MD)** (confira Aviso abaixo) |
+    | **Vinculador**  >  **Geral** | **Diretórios de Biblioteca Adicionais** | Adicione a pasta *libs* do Python que contém arquivos *.lib* conforme apropriado para sua instalação, por exemplo, `c:\Python36\libs`. (Lembre-se de apontar para a pasta *libs* que contém arquivos *.lib* e *não* para a pasta *Lib* que contém arquivos *.py*.) |
 
     > [!Tip]
-    > Se a guia C/C++ não for exibida nas propriedades do projeto, isso indicará que o projeto não contém nenhum arquivo que ele identifica como arquivos de origem do C/C++. Essa condição poderá ocorrer se você criar um arquivo de origem sem uma extensão *.c* ou *.cpp*. Por exemplo, se você `module.coo` acidentalmente inseriu em vez de na caixa de `module.cpp` diálogo de novo item anteriormente, então o Visual Studio criará o arquivo, mas não definirá o tipo de arquivo como "C/C+ Code", que é o que ativa a guia de propriedades C/C++. Tal identificação errada continua sendo o caso, `.cpp`mesmo se você renomear o arquivo com . Para configurar o tipo de arquivo corretamente, clique com o botão direito do mouse no arquivo no **Gerenciador de Soluções**, escolha **Propriedades** e, em seguida, defina **Tipo de Arquivo** como **Código C/C++**.
+    > Se a guia C/C++ não for exibida nas propriedades do projeto, isso indicará que o projeto não contém nenhum arquivo que ele identifica como arquivos de origem do C/C++. Essa condição poderá ocorrer se você criar um arquivo de origem sem uma extensão *.c* ou *.cpp*. Por exemplo, se você acidentalmente inseriu `module.coo` em vez de `module.cpp` na caixa de diálogo novo item anteriormente, o Visual Studio criará o arquivo, mas não definirá o tipo de arquivo como "C/c + Code", que é o que ativa a guia de propriedades C/C++. Essa identificação indesejada permanece o caso, mesmo se você renomear o arquivo com `.cpp` . Para configurar o tipo de arquivo corretamente, clique com o botão direito do mouse no arquivo no **Gerenciador de Soluções**, escolha **Propriedades** e, em seguida, defina **Tipo de Arquivo** como **Código C/C++**.
 
     > [!Warning]
-    > Sempre defina a opção **C/C++** > **Code Generation** > **Runtime Library** como **DLL (/MD) com vários segmentos,** mesmo para uma configuração de depuração, porque é com isso que os binários Python não depurados são construídos. Com o CPython, se você definir a opção **DLL de depuração de várias rosca (/MDd),** a construção de uma configuração **Debug** produz erro **C1189: Py_LIMITED_API é incompatível com Py_DEBUG, Py_TRACE_REFS e Py_REF_DEBUG**. Além disso, se você remover `Py_LIMITED_API` (que é necessário com CPython, mas não em PyBind11) para evitar o erro de build, o Python falhará ao tentar importar o módulo. (A falha ocorre na chamada da DLL a `PyModule_Create`, conforme descrito adiante, com a mensagem de saída **Erro fatal do Python: PyThreadState_Get: nenhum thread atual**.)
+    > Sempre defina a opção de biblioteca de tempo de execução de código do **C/C++**  >  **Code Generation**  >  **Runtime Library** como **/MD (DLL de vários threads)**, mesmo para uma configuração de depuração, porque essa configuração é a qual os binários do Python sem depuração são compilados. Com o CPython, se você definir a opção **/MDD (DLL de depuração multi-threaded)** , a criação de uma configuração de **depuração** produzirá o erro **C1189: Py_LIMITED_API é incompatível com Py_DEBUG, Py_TRACE_REFS e Py_REF_DEBUG**. Além disso, se você remover `Py_LIMITED_API` (que é necessário com CPython, mas não em PyBind11) para evitar o erro de build, o Python falhará ao tentar importar o módulo. (A falha ocorre na chamada da DLL a `PyModule_Create`, conforme descrito adiante, com a mensagem de saída **Erro fatal do Python: PyThreadState_Get: nenhum thread atual**.)
     >
-    > A opção /MDd é usada para construir binários de depuração Python (como *python_d.exe),* mas `Py_LIMITED_API`selecioná-lo para uma dLL de extensão ainda causa o erro de compilação com .
+    > A opção/MDd é usada para criar os binários de depuração do Python (como *python_d.exe*), mas selecioná-lo para uma DLL de extensão ainda causa o erro de compilação com `Py_LIMITED_API` .
 
-1. Clique com o botão direito do mouse no projeto C++ e selecione **Build** para testar suas configurações **(depuração** e **liberação).** Os arquivos *.pyd* estão localizados na pasta **solução** em **Depurar** e **Versão**, não na própria pasta do projeto do C++.
+1. Clique com o botão direito do mouse no projeto C++ e selecione **Compilar** para testar suas configurações ( **depuração** e **versão**). Os arquivos *.pyd* estão localizados na pasta **solução** em **Depurar** e **Versão**, não na própria pasta do projeto do C++.
 
 1. Adicione o seguinte código ao arquivo *module.cpp* do projeto do C++:
 
@@ -206,7 +206,7 @@ Se você estiver trabalhando com o Python 2.7, consulte em vez disso [Extending 
     };
     ```
 
-1. Adicionar uma estrutura que define o módulo da maneira como você deseja fazer referência a ele em seu código Python, especificamente ao usar a instrução `from...import`. (Faça isso corresponder ao valor nas propriedades do projeto em **Configuration Properties** > **General** > **Target Name**.) No exemplo a seguir, o nome do módulo `from superfastcode import fast_tanh` "superfastcode" significa que você pode usar em Python, porque `fast_tanh` é definido dentro `superfastcode_methods`. (Nomes de arquivos internos ao projeto C++, como *module.cpp*, são inconseqüentes.)
+1. Adicionar uma estrutura que define o módulo da maneira como você deseja fazer referência a ele em seu código Python, especificamente ao usar a instrução `from...import`. (Faça isso corresponde ao valor nas propriedades do projeto em **Propriedades**  >  de configuração **Geral**  >  **Nome de destino**.) No exemplo a seguir, o nome do módulo "superfastcode" significa que você pode usar `from superfastcode import fast_tanh` no Python, porque `fast_tanh` está definido em `superfastcode_methods` . (Os nomes de FileNames internos ao projeto C++, como *Module. cpp*, são irrelevantes.)
 
     ```cpp
     static PyModuleDef superfastcode_module = {
@@ -218,7 +218,7 @@ Se você estiver trabalhando com o Python 2.7, consulte em vez disso [Extending 
     };
     ```
 
-1. Adicione um método que o Python chama quando ele `PyInit_<module-name>`carrega &lt;o&gt; módulo, que deve ser nomeado, onde o nome do módulo corresponde exatamente à propriedade **General** > **Target Name** do projeto C++ (ou seja, corresponde ao nome de arquivo do *.pyd* construído pelo projeto).
+1. Adicione um método que o Python chama quando carrega o módulo, que deve ser nomeado `PyInit_<module-name>` , em que &lt; nome do módulo &gt; corresponde exatamente à propriedade de nome de destino **geral**do projeto C++  >  **Target Name** (ou seja, corresponde ao nome de arquivo do *. PYD* compilado pelo projeto).
 
     ```cpp
     PyMODINIT_FUNC PyInit_superfastcode() {
@@ -226,7 +226,7 @@ Se você estiver trabalhando com o Python 2.7, consulte em vez disso [Extending 
     }
     ```
 
-1. Defina a configuração de destino para **Liberar** e crie novamente o projeto C++ para verificar seu código. Se encontrar erros, confira a seção [Solução de problemas](#troubleshooting) abaixo.
+1. Defina a configuração de destino como **liberar** e compilar o projeto C++ novamente para verificar seu código. Se encontrar erros, confira a seção [Solução de problemas](#troubleshooting) abaixo.
 
 ### <a name="pybind11"></a>PyBind11
 
@@ -266,7 +266,7 @@ A compilação do módulo de C++ pode falhar pelos seguintes motivos:
 
 - Não é possível localizar *Python.h* (**E1696: não é possível abrir o arquivo de software livre "Python.h"** e/ou **C1083: não é possível abrir o arquivo de inclusão: "Python.h": o arquivo ou diretório não existe**), verifique se o caminho em **C/C++** > **Geral** > **Diretórios de Inclusão Adicionais** nas propriedades do projeto aponta para a pasta *include* da instalação do Python. Veja a etapa 6 em [Criar o projeto principal do C++](#create-the-core-c-projects).
 
-- Não é possível localizar bibliotecas Python: verifique se o caminho no **Linker** > **General** > **Additional Library Directories** nas propriedades do projeto aponta para a pasta *libs* da instalação Python. Veja a etapa 6 em [Criar o projeto principal do C++](#create-the-core-c-projects).
+- Não é possível localizar bibliotecas Python: Verifique se o caminho **Linker**em diretórios de  >  **General**  >  **biblioteca adicionais** gerais do vinculador nas propriedades do projeto aponta para a pasta *bibliotecas* da sua instalação do Python. Veja a etapa 6 em [Criar o projeto principal do C++](#create-the-core-c-projects).
 
 - Erros do vinculador relacionadas à arquitetura de destino: altere a arquitetura do projeto de destino C++ para corresponder à instalação do Python. Por exemplo, se você tiver como alvo x64 com o projeto C++, mas a instalação do Python for x86, altere o projeto C++ para ter como destino x86.
 
@@ -278,7 +278,7 @@ Agora que você tem as DLLs estruturadas como extensões de Python, é possível
 
 Há duas maneiras de disponibilizar a DLL para o Python.
 
-O primeiro método funcionará se o projeto Python e o projeto C++ estiverem na mesma solução. Vá para **Solution Explorer**, clique com o botão direito do mouse no nó **Referências** no projeto Python e, em seguida, **selecione Adicionar referência**. Na caixa de diálogo que é exibida, selecione a guia **Projetos**, selecione os projetos **superfastcode** e **superfastcode2** e, em seguida, selecione **OK**.
+O primeiro método funcionará se o projeto Python e o projeto C++ estiverem na mesma solução. Vá para **Gerenciador de soluções**, clique com o botão direito do mouse no nó **referências** em seu projeto Python e selecione **Adicionar referência**. Na caixa de diálogo que é exibida, selecione a guia **Projetos**, selecione os projetos **superfastcode** e **superfastcode2** e, em seguida, selecione **OK**.
 
 ![Adicionando uma referência ao projeto superfastcode](media/cpp-add-reference.png)
 
@@ -301,7 +301,7 @@ O método alternativo, descrito nas etapas a seguir, instala o módulo no ambien
         )
     ```
 
-    Consulte [as extensões Building C e C++](https://docs.python.org/3/extending/building.html) (python.org) para obter documentação neste script.
+    Consulte [criando Python.org (extensões C e C++](https://docs.python.org/3/extending/building.html) ) para obter a documentação sobre este script.
 
     **PyBind11 (projeto superfastcode2):**
 
@@ -354,7 +354,7 @@ Após disponibilizar a DLL para o Python conforme descrito na seção anterior, 
     test(lambda d: [fast_tanh2(x) for x in d], '[fast_tanh2(x) for x in d] (PyBind11 C++ extension)')
     ```
 
-1. Execute o programa Python **(Debug** > **Start sem depuração** ou **Ctrl**+**F5**) e observe que as rotinas C++ são executadas aproximadamente cinco a vinte vezes mais rápido que a implementação python. A saída típica aparecerá como se segue:
+1. Execute o programa Python (**depuração**  >  **Iniciar sem depuração** ou **Ctrl** + **F5**) e observe que as rotinas do C++ são executadas aproximadamente cinco a vinte vezes mais rápido do que a implementação do Python. A saída típica aparecerá como se segue:
 
     ```output
     Running benchmarks with COUNT = 500000
@@ -365,9 +365,9 @@ Após disponibilizar a DLL para o Python conforme descrito na seção anterior, 
     [fast_tanh2(x) for x in d] (PyBind11 C++ extension) took 0.204 seconds
     ```
 
-    Se o comando **Iniciar sem depuração** estiver desativado, clique com o botão direito do mouse no projeto Python no **Solution Explorer** e selecione Definir como Projeto de **Inicialização**.
+    Se o comando **Iniciar sem depuração** estiver desabilitado, clique com o botão direito do mouse no projeto Python no **Gerenciador de soluções** e selecione **definir como projeto de inicialização**.
 
-1. Tente aumentar a variável `COUNT` para que as diferenças sejam mais evidentes. Uma compilação **de depuração** do módulo C++ também é mais lenta do que uma **compilação de release** porque a compilação **Debug** é menos otimizada e contém várias verificações de erro. Fique à vontade para alternar entre essas configurações para comparação.
+1. Tente aumentar a variável `COUNT` para que as diferenças sejam mais evidentes. Uma compilação de **depuração** do módulo C++ também é executada mais lentamente do que uma compilação de **versão** porque a compilação de **depuração** é menos otimizada e contém várias verificações de erro. Fique à vontade para alternar entre essas configurações para comparação.
 
 > [!NOTE]
 > Na saída, você pode ver que a extensão PyBind11 não é tão rápida quanto a extensão CPython, embora ainda seja significativamente mais rápida que a implementação direta de Python. A diferença se deve a uma pequena quantidade de sobrecarga por chamada que o PyBind11 introduz para tornar sua interface de C++ consideravelmente mais simples. Essa diferença por chamada é bastante irrelevante: como o código de teste chama as funções de extensão 500.000 vezes, os resultados que você vê aqui amplificam bastante essa sobrecarga! Normalmente, uma função de C++ faz muito mais trabalho do que os métodos `fast_tanh[2]` triviais usados aqui e, nesse caso, a sobrecarga não é importante. No entanto, se você estiver implementando métodos que podem ser chamados milhares de vezes por segundo, usar a abordagem de CPython poderá resultar em um desempenho melhor do que no caso do PyBind11.
@@ -379,17 +379,17 @@ O Visual Studio é compatível com a depuração de código de Python e C++ junt
 1. Clique com o botão direito do mouse no projeto Python, no **Gerenciador de Soluções**, escolha **Propriedades**, marque a guia **Depuração** e, em seguida, a opção **Depurar** > **Habilitar depuração de código nativo**.
 
     > [!Tip]
-    > Quando você habilita a depuração de código nativo, a janela de saída Python pode desaparecer imediatamente quando o programa estiver concluído sem dar a **tecla** usual para continuar a pausa. Para forçar uma pausa, `-i` adicione a opção ao campo **Executar** > **argumentos do intérprete** na guia **Depuração** quando você habilitar a depuração de código nativo. Este argumento coloca o interpretador Python no modo interativo após o término do código, momento em que espera que você pressione **Ctrl**+**Z** > **Enter** para sair. (Como alternativa, se você não se importar em modificar o código do Python, poderá adicionar as instruções `import os` e `os.system("pause")` ao final do programa. Esse código duplicará o prompt de pausa original.)
+    > Quando você habilita a depuração de código nativo, a janela de saída do Python pode desaparecer imediatamente quando o programa é concluído sem fornecer a você a **tecla usual para continuar** pausar. Para forçar uma pausa, adicione a `-i` opção ao campo **executar**  >  **argumentos do intérprete** na guia **depurar** ao habilitar a depuração de código nativo. Esse argumento coloca o interpretador do Python no modo interativo após a conclusão do código e, nesse ponto, ele espera que você pressione **Ctrl** + **Z**  >  **Enter** para sair. (Como alternativa, se você não se importar em modificar o código do Python, poderá adicionar as instruções `import os` e `os.system("pause")` ao final do programa. Esse código duplicará o prompt de pausa original.)
 
-1. Selecione **'Salvar** > **arquivos'** para salvar as alterações de propriedade.
+1. Selecione **arquivo**  >  **salvar** para salvar as alterações de propriedade.
 
-1. Defina a configuração de compilação **como Debug** na barra de ferramentas do Visual Studio.
+1. Defina a configuração de compilação a ser **depurada** na barra de ferramentas do Visual Studio.
 
     ![Definir a configuração de build como Depuração](media/cpp-set-debug.png)
 
 1. Como o código geralmente demora mais para ser executado no depurador, talvez seja interessante alterar a variável `COUNT` no seu arquivo *.py* para um valor que seja cerca de cinco vezes menor (por exemplo, altere-o de `500000` para `100000`).
 
-1. No código do C++, defina um ponto de interrupção na primeira linha do método `tanh_impl` e, em seguida, inicie o depurador (**F5** ou **Depurar** > **Iniciar Depuração**). O depurador para quando esse código é chamado. Se o ponto de breakpoint não for atingido, verifique se a configuração está definida como **Debug** e se você salvou o projeto (o que não acontece automaticamente ao iniciar o depurador).
+1. No código do C++, defina um ponto de interrupção na primeira linha do método `tanh_impl` e, em seguida, inicie o depurador (**F5** ou **Depurar** > **Iniciar Depuração**). O depurador para quando esse código é chamado. Se o ponto de interrupção não for atingido, verifique se a configuração está definida como **depurar** e se você salvou o projeto (o que não acontece automaticamente ao iniciar o depurador).
 
     ![Parando em um ponto de interrupção no código C++](media/cpp-debugging.png)
 
@@ -399,10 +399,10 @@ O Visual Studio é compatível com a depuração de código de Python e C++ junt
 
 Há uma variedade de meios para criar extensões Python, conforme descrito na tabela a seguir. As duas primeiras entradas para CPython e PyBind11 já foram discutidas neste artigo.
 
-| Abordagem | Ano | Usuários representantes | Vantagens | Desvantagens |
+| Abordagem | Vintage | Usuários representantes | Vantagens | Desvantagens |
 | --- | --- | --- | --- | --- |
 | Módulos de extensão do C/C++ para o CPython | 1991 | Biblioteca Padrão | [Tutoriais e documentação abrangente](https://docs.python.org/3/c-api/). Controle total. | Compilação, portabilidade, gerenciamento de referências. Profundo conhecimento sobre o C. |
-| [PyBind11](https://github.com/pybind/pybind11) (Recomendado para C++) | 2015 |  | Biblioteca leve, somente cabeçalho para a criação de associações de Python de código C++ existente. Poucas dependências. Compatibilidade de PyPy. | Mais novo, menos maduro. Uso intensivo de recursos C++ 11. Lista curta de compiladores compatíveis (o Visual Studio está incluído). |
+| [PyBind11](https://github.com/pybind/pybind11) (recomendado para C++) | 2015 |  | Biblioteca leve, somente cabeçalho para a criação de associações de Python de código C++ existente. Poucas dependências. Compatibilidade de PyPy. | Mais novo, menos maduro. Uso intensivo de recursos C++ 11. Lista curta de compiladores compatíveis (o Visual Studio está incluído). |
 | Cython (recomendado para C) | 2007 | [gevent](https://www.gevent.org/), [kivy](https://kivy.org/) | Semelhante ao Python. Altamente maduro. Alto desempenho. | Compilação, nova sintaxe, nova cadeia de ferramentas. |
 | [Boost.Python](https://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html) | 2002 | | Funciona com praticamente qualquer compilador C++. | Pacote grande e complexo de bibliotecas; contém várias soluções alternativas para compiladores antigos. |
 | ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | Sem compilação, ampla disponibilidade. | O acesso e a mutação de estruturas do C são complicados e sujeitos a erros. |

@@ -15,19 +15,19 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: aa2d07337ec48e41a9d8ad82602a387159192f92
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2ca0fb61c0973553ee6d410bc8b2718d19aeb28c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668271"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546855"
 ---
-# <a name="ca1044-properties-should-not-be-write-only"></a>CA1044: as propriedades não devem ser somente leitura
+# <a name="ca1044-properties-should-not-be-write-only"></a>CA1044: Propriedades não devem ser somente gravação
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|PropertiesShouldNotBeWriteOnly|
+|TypeName|PropertiesShouldNotBeWriteOnly|
 |CheckId|CA1044|
 |Categoria|Microsoft. Design|
 |Alteração Significativa|Quebra|
@@ -45,7 +45,7 @@ ms.locfileid: "72668271"
  É altamente recomendável que você não omita um aviso dessa regra.
 
 ## <a name="example"></a>Exemplo
- No exemplo a seguir, `BadClassWithWriteOnlyProperty` é um tipo com uma propriedade somente gravação. `GoodClassWithReadWriteProperty` contém o código corrigido.
+ No exemplo a seguir, `BadClassWithWriteOnlyProperty` é um tipo com uma propriedade somente gravação. `GoodClassWithReadWriteProperty`contém o código corrigido.
 
  [!code-csharp[FxCop.Design.PropertiesNotWriteOnly#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.PropertiesNotWriteOnly/cs/FxCop.Design.PropertiesNotWriteOnly.cs#1)]
  [!code-vb[FxCop.Design.PropertiesNotWriteOnly#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.PropertiesNotWriteOnly/vb/PropertiesNotWriteOnly.vb#1)]

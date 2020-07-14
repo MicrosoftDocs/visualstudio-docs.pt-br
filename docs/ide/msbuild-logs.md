@@ -2,7 +2,7 @@
 title: Solucionar problemas e criar logs para problemas do MSBuild
 ms.date: 06/27/2019
 ms.technology: vs-ide-compile
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords:
 - msbuild logs"
 author: corob-msft
@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - multiple
 ms.description: Generate build logs for msbuild projects to collect helpful information when troubleshooting issues.
-ms.openlocfilehash: 07b2c5e941d31ab1be853f9a89af94462329bdf2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ae91f7b9c90f0b06c449d26f67fe4fcc3434518e
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77278803"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768696"
 ---
 # <a name="troubleshoot-and-create-logs-for-msbuild-problems"></a>Solucionar problemas e criar logs para problemas do MSBuild
 
@@ -69,7 +69,7 @@ O valor de "MyMetadata" do item "Myfile.txt" será avaliado como "B" durante a c
 
 ## <a name="incremental-build-is-building-more-than-it-should"></a>A compilação incremental está compilando mais do que deveria
 
-Se o MSBuild está recompilando desnecessariamente um projeto ou item de projeto, crie um log de compilação detalhado ou binário. Você pode pesquisar no log pelo arquivo que foi criado ou compilado desnecessariamente. A saída é semelhante ao seguinte:
+Se o MSBuild está recompilando desnecessariamente um projeto ou item de projeto, crie um log de compilação detalhado ou binário. Você pode pesquisar no log pelo arquivo que foi criado ou compilado desnecessariamente. A saída é parecida com esta:
 
 ```output
   Task "CL"
@@ -106,7 +106,7 @@ Se você estiver compilando no IDE do Visual Studio (com detalhamento de janela 
     Msbuild /p:Configuration="MyConfiguration";Platform="x86" /bl MySolution.sln
     ```
 
-    ou
+    ou o
 
     ```cmd
     Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /bl MyProject.vcxproj
@@ -116,15 +116,15 @@ Um arquivo Msbuild.binlog será criado no diretório que você executou o MSBuil
 
 ## <a name="create-a-detailed-log"></a>Criar um log detalhado
 
-1. No menu principal do Visual Studio, vá para **Tools** > **Options** > **Projects and Solutions** >**Build and Run**.
-1. Configure o **Detalhamento de compilação do projeto Msbuild** como **Detalhado** nas duas caixas de combinação. O primeiro controla o detalhamento do build na **Janela de Saída** e o segundo controla o detalhamento do build no arquivo \<projectname\>.log que é criado no diretório intermediário de cada projeto durante o build.
+1. No menu principal do Visual Studio, vá para **ferramentas**  >  **Opções**  >  **projetos e soluções**  > **Compilar e executar**.
+1. Configure o **Detalhamento de compilação do projeto Msbuild** como **Detalhado** nas duas caixas de combinação. A parte superior controla o detalhamento de compilação no **janela de saída** e o segundo controla o detalhamento da compilação no \<projectname\> arquivo. log que é criado no diretório intermediário de cada projeto durante a compilação.
 2. Em um prompt de comando do desenvolvedor do Visual Studio, digite um desses comandos, substituindo o caminho real e os valores de configuração:
 
     ```cmd
     Msbuild /p:Configuration="MyConfiguration";Platform="x86" /fl MySolution.sln
     ```
 
-    ou
+    ou o
 
     ```cmd
     Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /fl MyProject.vcxproj

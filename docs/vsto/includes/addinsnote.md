@@ -11,4 +11,4 @@ ms.lasthandoff: 04/02/2020
 ms.locfileid: "80573247"
 ---
 > [!NOTE]
-> Interessado em desenvolver soluções que ampliem a experiência do Office em várias plataformas? Confira o novo [modelo de Complementos de Escritório](/office/dev/add-ins/). Os Complementos de Escritório têm uma pequena pegada em comparação com os complementos e soluções VSTO, e você pode construí-los usando quase qualquer tecnologia de programação web, como HTML5, JavaScript, CSS3 e XML.
+> Interessado em desenvolver soluções que estendam a experiência do Office em várias plataformas? Confira o novo [modelo de suplementos do Office](/office/dev/add-ins/). Os suplementos do Office têm uma pequena superfície em comparação com os suplementos e soluções do VSTO, e você pode criá-los usando praticamente qualquer tecnologia de programação da Web, como HTML5, JavaScript, CSS3 e XML.

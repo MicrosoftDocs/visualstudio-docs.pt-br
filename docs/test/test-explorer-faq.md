@@ -1,6 +1,6 @@
 ---
 title: Perguntas Frequentes sobre o Gerenciador de Testes
-ms.date: 08/14/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - Test Explorer
@@ -14,28 +14,18 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: jillfra
-ms.openlocfilehash: cec8ea3ea091ab1ea65bcad2bd4cca139fd74042
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: cf22c54da4af43c4953a8b92620031a14e25ec05
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75846817"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468737"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Perguntas frequentes sobre o Gerenciador de Testes do Visual Studio
-::: moniker range=">=vs-2019"
-
-## <a name="where-is-group-by-traits-in-visual-studio-2019"></a>Onde está o agrupamento por características no Visual Studio 2019?
-Esse agrupamento por características foi movido para uma coluna. Com a hierarquia personalizável e de várias camadas no Visual Studio 2019 versão 16.2, pensamos que incluir características como um agrupamento resultou em uma complexidade visual desnecessária. Estamos atentos e receptivos a comentários sobre esse design! https://developercommunity.visualstudio.com/content/problem/588029/no-longer-able-to-group-by-trait-in-test-explorer.html
-
-Por enquanto, você pode clicar com o botão direito do mouse na coluna no Gerenciador de Testes e selecionar Colunas. Marque a coluna Características e ela será exibida no Gerenciador de Testes. Agora você pode filtrar essa coluna por quais características está interessado.
-
-![Exibir a coluna de características](media/vs-2019/trait-column.png)
-![Filtrar a coluna de características](media/vs-2019/trait-column-filter.png)
-::: moniker-end
 
 ## <a name="dynamic-test-discovery"></a>Detecção de testes dinâmica
 
-**Test Explorer não está descobrindo meus testes que são dinamicamente definidos. (Por exemplo, teorias, adaptadores personalizados, traços personalizados, #ifdefs, etc.) Como posso descobrir esses testes?**
+**O Gerenciador de testes não está descobrindo meus testes que são definidos dinamicamente. (Por exemplo, teorias, adaptadores personalizados, características personalizadas, #ifdefs, etc.) Como posso descobrir esses testes?**
 
 ::: moniker range=">=vs-2019"
 Crie seu projeto para executar a descoberta baseada em assembly.
@@ -43,7 +33,7 @@ Crie seu projeto para executar a descoberta baseada em assembly.
 ::: moniker range="vs-2017"
 Compile o projeto e verifique se a descoberta baseada em assembly está ativada em **Ferramentas** > **Opções** > **Teste**.
 ::: moniker-end
-A [Detecção de testes em tempo real](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/) é a detecção de testes baseada na origem. Ele não pode descobrir testes que usam teorias, `#ifdef` adaptadores personalizados, traços personalizados, declarações e muito mais porque são definidos em tempo de execução. Um build é necessário para que esses testes sejam localizados com precisão. No Visual Studio 2017 versão 15.6 e posteriores, a descoberta baseada em assembly (o detector tradicional) é executada somente depois dos builds. Essa configuração significa que a detecção de testes em tempo real localiza o máximo de testes possível enquanto você está editando e a descoberta baseada em assembly permite que os testes definidos dinamicamente apareçam após um build. A detecção de testes em tempo real melhora a capacidade de resposta, mas ainda permite que você obtenha resultados completos e precisos após um build.
+A [Detecção de testes em tempo real](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/) é a detecção de testes baseada na origem. Ele não pode descobrir testes que usam teorias, adaptadores personalizados, características personalizadas, `#ifdef` instruções e muito mais, pois eles são definidos em tempo de execução. Um build é necessário para que esses testes sejam localizados com precisão. No Visual Studio 2017 versão 15.6 e posteriores, a descoberta baseada em assembly (o detector tradicional) é executada somente depois dos builds. Essa configuração significa que a detecção de testes em tempo real localiza o máximo de testes possível enquanto você está editando e a descoberta baseada em assembly permite que os testes definidos dinamicamente apareçam após um build. A detecção de testes em tempo real melhora a capacidade de resposta, mas ainda permite que você obtenha resultados completos e precisos após um build.
 
 ## <a name="test-explorer--plus-symbol"></a>Sinal de "+" (adição) do Gerenciador de Testes
 
@@ -56,7 +46,7 @@ O símbolo '+' (sinal de adição) indica que mais testes poderão ser descobert
 ::: moniker range="vs-2017"
 ## <a name="assembly-based-discovery"></a>Descoberta baseada em assembly
 
-**A descoberta baseada em montagem não está mais funcionando para o meu projeto. Como faço para ligá-lo de volta?**
+**A descoberta baseada em assembly não está mais funcionando para o meu projeto. Como fazer ativá-lo novamente?**
 
 Acesse **Ferramentas** > **Opções** > **Teste** e marque a caixa **Adicionalmente, descobrir testes de assemblies compilados após builds.**
 
@@ -65,7 +55,7 @@ Acesse **Ferramentas** > **Opções** > **Teste** e marque a caixa **Adicionalme
 
 ## <a name="real-time-test-discovery"></a>Detecção de testes em tempo real
 
-**Os testes agora aparecem no Test Explorer enquanto eu digito, sem ter que construir meu projeto. O que mudou?**
+**Os testes agora aparecem no Gerenciador de testes enquanto eu digitar, sem precisar criar meu projeto. O que mudou?**
 
 Esse recurso é chamado de [Detecção de testes em tempo real](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/). Ele usa um analisador Roslyn para encontrar testes e popular o Gerenciador de Testes em tempo real, sem exigir que você compile o projeto. Para obter mais informações sobre o comportamento da detecção de testes para testes definidos dinamicamente, como teorias ou características personalizadas, confira [Detecção de testes dinâmica](#dynamic-test-discovery).
 
@@ -79,7 +69,7 @@ A [Detecção de testes em tempo real](https://devblogs.microsoft.com/dotnet/rea
 
 **Como faço para ativar logs no Gerenciador de Testes?**
 
-Navegue até **o** > **teste** **de opções de ferramentas** > e encontre a seção Registro lá.
+Navegue até **ferramentas**  >  **Opções**  >  **testar** e localize a seção de registro em log.
 
 ## <a name="uwp-test-discovery"></a>Detecção de testes da UWP
 
@@ -91,15 +81,13 @@ Os testes UWP têm como destino um runtime diferente quando o aplicativo é impl
 
 **Como funciona a classificação de resultados de teste no modo de exibição de hierarquia?**
 
-O modo de exibição de hierarquia classifica os testes em ordem alfabética e não por resultado. As outras configurações de agrupamento normalmente classificam os resultados de teste por resultado e, em seguida, em ordem alfabética. Veja o grupo diferente pelas opções na imagem a seguir para comparação. Você pode fornecer comentários sobre o design [neste assunto do GitHub](https://github.com/Microsoft/vstest/issues/1425).
-
-![SortingExamples](media/testex-sortingex.png)
+O modo de exibição de hierarquia classifica os testes em ordem alfabética e não por resultado. Grupos anteriores por configurações classificaram os resultados de teste por resultado e, em seguida, em ordem alfabética. Você ainda pode habilitar a classificação por resultado clicando com o botão direito do mouse no cabeçalho da coluna no Gerenciador de testes, habilitando a coluna Estado e clicando no cabeçalho da coluna Estado para aplicar a classificação nessa coluna. Você pode fornecer comentários sobre o design neste [problema do GitHub](https://github.com/Microsoft/vstest/issues/1425).
 
 ## <a name="test-explorer-hierarchy-view"></a>Modo de exibição da hierarquia do Gerenciador de Testes
 
-**Na exibição de hierarquia, há ícones passados, falhos, ignorados e não executados ao lado de agrupamentos de nós-pais. O que significam esses ícones?**
+**No modo de exibição de hierarquia, há os ícones aprovado, falha, ignorado e não executado ao lado dos agrupamentos de nós pai. O que esses ícones significam?**
 
-Os ícones ao lado dos agrupamentos Projeto, Namespace e Classe mostram o estado dos testes nesse agrupamento. Consulte a tabela a seguir.
+Os ícones ao lado dos agrupamentos Projeto, Namespace e Classe mostram o estado dos testes nesse agrupamento. Confira a tabela a seguir.
 
 ![Ícones de Hierarquia do Gerenciador de Testes](media/testex-hierarchyicons.png)
 
@@ -111,7 +99,7 @@ O filtro do caminho de arquivo na caixa de pesquisa do **Gerenciador de Testes**
 
 ## <a name="remove-undocumented-interfaces"></a>Remover interfaces não documentadas
 
-**Algumas APIs relacionadas ao teste não estão mais presentes no Visual Studio 2019. O que mudou?**
+**Algumas APIs relacionadas a teste não estão mais presentes no Visual Studio 2019. O que mudou?**
 
 No Visual Studio 2019, serão removidas algumas APIs de janela de teste que foram marcadas como públicas anteriormente, mas nunca foram documentadas oficialmente. Elas foram marcadas como "preteridas" no Visual Studio 2017 para fornecer um aviso antecipado aos mantenedores de extensão. Para o nosso conhecimento, muito poucas extensões haviam encontrado essas APIs e criado uma dependência delas. Elas incluem `IGroupByProvider`, `IGroupByProvider<T>`, `KeyComparer`, `ISearchFilter`, `ISearchFilterToken`, `ISearchToken` e `SearchFilterTokenType`. Se essa alteração afetar sua extensão, fale conosco enviando um bug na [Comunidade de Desenvolvedores](https://developercommunity.visualstudio.com).
 
@@ -121,13 +109,13 @@ No Visual Studio 2019, serão removidas algumas APIs de janela de teste que fora
 
 Todos os projetos de teste devem incluir a referência ao NuGet do adaptador de teste do .NET no arquivo .csproj. Caso contrário, a saída desse teste será exibida no projeto se a detecção por uma extensão do adaptador de teste for iniciada após um build, ou se o usuário tentar executar os testes selecionados:
 
-**O {} projeto de teste não faz referência a nenhum adaptador .NET NuGet. A descoberta ou execução do teste pode não funcionar para este projeto. Recomenda-se fazer referência aos adaptadores de teste NuGet em cada projeto de teste .NET na solução.**
+**O projeto de teste {} não faz referência a nenhum adaptador .net NuGet. A descoberta de teste ou execução pode não funcionar para este projeto. É recomendável referenciar os adaptadores de teste do NuGet em cada projeto de teste .NET na solução.**
 
 Em vez de usar extensões do adaptador de teste, os projetos são solicitados a usar os pacotes do adaptador de teste do NuGet. Esse requisito melhora bastante o desempenho e causa menos problemas com a integração contínua. Leia mais sobre a substituição da extensão do adaptador de teste do .NET nas [notas de versão](/visualstudio/releasenotes/vs2017-relnotes-v15.8#testadapterextension).
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> Se você estiver usando o adaptador de teste NUnit 2 e não conseguir migrar para o adaptador de teste NUnit 3, você pode desativar esse novo comportamento de detecção na versão 15.8 do Visual Studio no**Teste****de Opções de** >  **Ferramentas** > .
+> Se você estiver usando o adaptador de teste do NUnit 2 e não puder migrar para o adaptador de teste do NUnit 3, poderá desativar esse novo comportamento de descoberta no Visual Studio versão 15,8 no teste de opções de **ferramentas**  >  **Options**  >  **Test**.
 
 ![Comportamento do Adaptador do Gerenciador de Testes nas opções de ferramentas](media/testex-adapterbehavior.png)
 ::: moniker-end
@@ -136,9 +124,9 @@ Em vez de usar extensões do adaptador de teste, os projetos são solicitados a 
 
 **Meus testes do UWP não estão mais sendo executados no Visual Studio 2017 versão 15.7 e posterior.**
 
-Projetos de teste do UWP recentes especificam uma propriedade de build da plataforma de teste que permite um melhor desempenho para identificar aplicativos de teste. Se você tiver um projeto de teste UWP que foi inicializado antes da versão 15.7 do Visual Studio, você poderá ver esse erro nos testes **de saída:** > **Tests**
+Projetos de teste do UWP recentes especificam uma propriedade de build da plataforma de teste que permite um melhor desempenho para identificar aplicativos de teste. Se você tiver um projeto de teste UWP que foi inicializado antes do Visual Studio versão 15,7, poderá ver esse erro nos testes de **saída**  >  **Tests**:
 
-**System.AggregateException: Ocorreu um ou mais erros. ---> System.InvalidOperationException: O seguinte TestContainer não foi encontrado {} em Microsoft.VisualStudio.TestWindow.Controller.TestContainerProvider \<GetTestContainerAsync>d__61.MoveNext()**
+**System.AggregateException: Um ou mais erros ocorreram. ---> System.InvalidOperationException: O seguinte TestContainer não foi encontrado {} em Microsoft.VisualStudio.TestWindow.Controller.TestContainerProvider \<GetTestContainerAsync>d__61.MoveNext()**
 
 Para corrigir esse erro: 
 
@@ -153,7 +141,12 @@ Para corrigir esse erro:
 ```XML
 <SDKReference Include="TestPlatform.Universal, Version=$(UnitTestPlatformVersion)" />
 ```
+::: moniker range=">=vs-2019"
+## <a name="using-preview-features"></a>Usando recursos de visualização
 
+No Visual Studio 2019, você pode optar por recursos de visualização em **ferramentas > opções > ambiente > recursos de visualização**.
+::: moniker-end
+::: moniker range=">=vs-2017"
 ## <a name="using-feature-flags"></a>Como usar sinalizadores de recursos
 
 **Como ativar sinalizadores de recursos para experimentar os novos recursos de teste?**
@@ -170,10 +163,10 @@ vsregedit set “C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterpri
 
 > [!NOTE]
 > Você pode desativar o sinalizador com o mesmo comando, usando o valor 0 em vez de 1 após dword.
-
-## <a name="see-also"></a>Confira também
+::: moniker-end
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=fullName>
 - [Criar e executar testes de unidade para código existente](https://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173)
-- [Unidade teste seu código](unit-test-your-code.md)
+- [Teste de unidade em seu código](unit-test-your-code.md)
 - [Perguntas frequentes sobre o Live Unit Testing](live-unit-testing-faq.md)

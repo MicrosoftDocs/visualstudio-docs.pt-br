@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumLineNumbers | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c779b82f0e62b2ba71a1ebed8ac695ab0cf0ac7e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f84e14aa3942f512ef1f4cd19bad0372c60e9fbc
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744346"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468185"
 ---
 # <a name="idiaenumlinenumbers"></a>IDiaEnumLineNumbers
 Enumera os vários números de linha contidos na fonte de dados.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumLineNumbers : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Métodos em ordem vtable
-A tabela a seguir mostra os métodos de `IDiaEnumLineNumbers`.
+A tabela a seguir mostra os métodos de `IDiaEnumLineNumbers` .
 
 |Método|Descrição|
 |------------|-----------------|
@@ -57,7 +57,7 @@ Essa interface é obtida chamando um dos seguintes métodos na interface [IDiaSe
 - [IDiaSession::findLinesByLinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)
 
 ## <a name="example"></a>Exemplo
-Este exemplo mostra como obter a interface de `IDiaEnumLineNumbers` de uma sessão. Nesse caso, o exemplo mostra como obter a enumeração de número de linha para uma função (representada por `pSymbol`). Para obter um exemplo mais completo de como usar números de linha, consulte a interface [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) .
+Este exemplo mostra como obter a `IDiaEnumLineNumbers` interface de uma sessão. Nesse caso, o exemplo mostra como obter a enumeração de número de linha para uma função (representada por `pSymbol` ). Para obter um exemplo mais completo de como usar números de linha, consulte a interface [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) .
 
 ```C++
 void dumpFunctionLines( IDiaSymbol* pSymbol, IDiaSession* pSession )
@@ -92,7 +92,7 @@ Biblioteca: diaguids. lib
 
 DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSession::findLinesByLinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)

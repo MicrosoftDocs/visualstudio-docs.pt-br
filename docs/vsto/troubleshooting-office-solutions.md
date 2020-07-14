@@ -1,7 +1,7 @@
 ---
 title: Solucionar problemas de soluções do Office
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: troubleshooting
 dev_langs:
 - VB
 - CSharp
@@ -14,46 +14,46 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 901df0b15f26624ecf2e9fca217cdc074913ceae
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7bc8db3478f6856b5d3b511e53656c65d762446c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978257"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537210"
 ---
 # <a name="troubleshoot-office-solutions"></a>Solucionar problemas de soluções do Office
-  Esta seção contém dicas para resolver problemas comuns que você pode encontrar durante a criação de soluções usando as ferramentas de desenvolvimento do Office no Visual Studio.
+  Esta seção contém dicas para solucionar problemas comuns que você pode encontrar ao criar soluções usando as ferramentas de desenvolvimento do Office no Visual Studio.
 
 ## <a name="in-this-section"></a>Nesta seção
-- [Solucionar problemas de erros em soluções do Office](../vsto/troubleshooting-errors-in-office-solutions.md)
+- [Solucionar erros em soluções do Office](../vsto/troubleshooting-errors-in-office-solutions.md)
 
- Descreve problemas comuns que podem surgir enquanto estiver criando, em execução e teste suas soluções do Office no Visual Studio.
+ Descreve problemas comuns que podem surgir enquanto você está projetando, executando e testando suas soluções do Office no Visual Studio.
 
-- [Como: Reabilitar um suplemento VSTO que tenha sido desabilitado](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md)
+- [Como: reabilitar um suplemento do VSTO que foi desabilitado](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md)
 
- Descreve como reabilitar um suplemento VSTO que foi desabilitado rígida ou flexível.
+ Descreve como reabilitar um suplemento do VSTO que tenha sido rígido ou desabilitado por software.
 
 - [Suporte adicional para erros em soluções do Office](../vsto/additional-support-for-errors-in-office-solutions.md)
 
- Descreve os outros recursos para solução de problemas de erros e avisos em soluções do Office.
+ Descreve outros recursos para solucionar erros e avisos em soluções do Office.
 
 ## <a name="related-sections"></a>Seções relacionadas
-- [Solucionar problemas de segurança de solução do Office](../vsto/troubleshooting-office-solution-security.md)
+- [Solucionar problemas de segurança da solução do Office](../vsto/troubleshooting-office-solution-security.md)
 
- Descreve problemas comuns que você pode encontrar ao trabalhar com Protegendo soluções do Office.
+ Descreve os problemas comuns que você pode encontrar ao trabalhar com a proteção das soluções do Office.
 
 - [Solucionar problemas de implantação de solução do Office](../vsto/troubleshooting-office-solution-deployment.md)
 
- Descreve problemas comuns que você pode encontrar ao implantar soluções do Office.
+ Descreve os problemas comuns que você pode encontrar ao implantar soluções do Office.
 
 - [Implantar uma solução do Office](../vsto/deploying-an-office-solution.md)
 
- Fornece links para informações sobre como implantar suas soluções, incluindo questões de segurança, bem como problemas a considerar ao escolher um modelo de implantação.
+ Fornece links para informações sobre como implantar suas soluções, incluindo preocupações de segurança, bem como problemas a serem considerados ao escolher um modelo de implantação.
 
-- [Proteger as soluções do Office](../vsto/securing-office-solutions.md)
+- [Proteger soluções do Office](../vsto/securing-office-solutions.md)
 
- Contém tópicos que explicam como soluções do Office incorporam os recursos de segurança com o .NET Framework.
+ Contém tópicos que explicam como as soluções do Office incorporam os recursos de segurança disponíveis com o .NET Framework.
 
 - [Tarefas comuns na programação do Office](../vsto/common-tasks-in-office-programming.md)
 
- Com frequência, as listas de perguntas frequentes sobre como programar soluções do Office e fornece links para tópicos que podem ajudar a resolver problemas comuns.
+ Lista perguntas frequentes sobre a programação de soluções do Office e fornece links para tópicos que podem ajudar a resolver problemas comuns.

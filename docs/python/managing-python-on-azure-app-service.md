@@ -2,7 +2,7 @@
 title: Configurar o Python no Serviço de Aplicativo do Azure (Windows)
 description: Como instalar um interpretador e bibliotecas Python no Serviço de Aplicativo do Azure, e configurar os aplicativos Web para fazer referência corretamente a esse interpretador.
 ms.date: 01/07/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -11,12 +11,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 7ffe0de939eba8af38c132fc3de5c96a9499e3f0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 34fd56b37113467b7cbb2dfb8ac6fdba01b79cc6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62535920"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543748"
 ---
 # <a name="how-to-set-up-a-python-environment-on-azure-app-service-windows"></a>Como configurar um ambiente Python no Serviço de Aplicativo do Azure (Windows)
 
@@ -94,7 +94,7 @@ Essa ação abre a página de descrição da extensão que contém o caminho:
 
 Se tiver problemas para ver o caminho para a extensão, você poderá encontrá-la manualmente usando o console:
 
-1. Na página do Serviço de Aplicativos, selecione o **Console de Ferramentas** > **de Desenvolvimento**.
+1. Na página do serviço de aplicativo, selecione o console de **ferramentas de desenvolvimento**  >  **Console**.
 1. Digite o comando `ls ../home` ou `dir ..\home` para ver as pastas de extensões de nível superior, como *Python361x64*.
 1. Digite um comando como `ls ../home/python361x64` ou `dir ..\home\python361x64` para verificar se ela contém o *python.exe* e outros arquivos de interpretador.
 
@@ -167,17 +167,17 @@ Para instalar pacotes diretamente no ambiente do servidor, use um dos seguintes 
 | [Console do Kudu do Serviço de Aplicativo do Azure](#azure-app-service-kudu-console) | Instala pacotes interativamente. Os pacotes devem ser Python puro ou publicar em wheels. |
 | [API REST do Kudu](#kudu-rest-api) | Pode ser usada para automatizar a instalação de pacote.  Os pacotes devem ser Python puro ou publicar em wheels. |
 | Pacote com aplicativo | Instala pacotes diretamente em seu projeto e, em seguida, implanta-os no Serviço de Aplicativo como se fizessem parte do seu aplicativo. Dependendo de quantas dependências você tem e da frequência com que você os atualiza, esse método pode ser a maneira mais fácil de dar início à implantação. Esteja ciente de que as bibliotecas devem corresponder à versão do Python no servidor, caso contrário, você verá erros obscuros após a implantação. Assim, como as versões do Python nas extensões de site do Serviço de Aplicativo são exatamente as mesmas que as versões lançadas em python.org, você pode obter uma versão compatível para desenvolvimento local facilmente. |
-| Ambientes virtuais | Sem suporte. Em vez disso, use o agrupamento e defina a variável de ambiente `PYTHONPATH` para apontar para o local dos pacotes. |
+| Ambientes virtuais | Não há suporte. Em vez disso, use o agrupamento e defina a variável de ambiente `PYTHONPATH` para apontar para o local dos pacotes. |
 
 ### <a name="azure-app-service-kudu-console"></a>Console do Kudu do Serviço de Aplicativo do Azure
 
 O [console Kudu](https://github.com/projectkudu/kudu/wiki/Kudu-console) fornece acesso de linha de comando com privilégios elevados e direto para o servidor do Serviço de Aplicativo e seu sistema de arquivos. Isso é uma ferramenta valiosa de depuração e também permite operações de CLI, como instalação de pacotes.
 
-1. Abra o Kudu na página do App Service no portal Azure selecionando **ferramentas** > de desenvolvimento**ferramentas avançadas**e selecionando **Go**. Essa ação navega até uma URL que é a mesmo que a URL base do Serviço de Aplicativo, exceto pelo `.scm` inserido. Por exemplo, se a URL base for `https://vspython-test.azurewebsites.net/`, o Kudu será `https://vspython-test.scm.azurewebsites.net/` (que você poderá adicionar aos favoritos):
+1. Abra o kudu na página do serviço de aplicativo na portal do Azure selecionando **ferramentas de desenvolvimento**  >  **ferramentas avançadas**e, em seguida, selecionando **ir**. Essa ação navega até uma URL que é a mesmo que a URL base do Serviço de Aplicativo, exceto pelo `.scm` inserido. Por exemplo, se a URL base for `https://vspython-test.azurewebsites.net/`, o Kudu será `https://vspython-test.scm.azurewebsites.net/` (que você poderá adicionar aos favoritos):
 
     ![O console do Kudu para o Serviço de Aplicativo do Azure](media/python-on-azure-console01.png)
 
-1. Selecione **Debug console** > **CMD** para abrir o console, no qual você pode navegar em sua instalação Python e ver quais bibliotecas já estão lá.
+1. Selecione **console de depuração**  >  **cmd** para abrir o console, no qual você pode navegar para a instalação do Python e ver quais bibliotecas já estão lá.
 
 1. Para instalar um único pacote:
 
@@ -193,7 +193,7 @@ O [console Kudu](https://github.com/projectkudu/kudu/wiki/Kudu-console) fornece 
 
     b. Execute o comando `python.exe -m pip install --upgrade -r d:\home\site\wwwroot\requirements.txt`.
 
-    O uso *do requirements.txt* é recomendado porque é fácil reproduzir o seu conjunto exato de pacotes tanto localmente quanto no servidor. Lembre-se visitar o console depois de implantar as alterações no *requirements.txt* e execute o comando novamente.
+    O uso de *requirements.txt* é recomendado porque é fácil reproduzir o conjunto exato de pacotes de forma local e no servidor. Lembre-se visitar o console depois de implantar as alterações no *requirements.txt* e execute o comando novamente.
 
 > [!Note]
 > Não há compilador de C no Serviço de Aplicativo, portanto você precisa instalar o wheel para todos os pacotes com módulos de extensão nativos. Muitos pacotes populares fornecem suas próprias rodas. Para pacotes que não o fazem, use `pip wheel <package_name>` em seu computador de desenvolvimento local e, em seguida, carregue a roda para seu site. Para obter um exemplo, confira [Gerenciar pacotes necessários com requirements.txt](managing-required-packages-with-requirements-txt.md).

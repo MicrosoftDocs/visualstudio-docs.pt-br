@@ -1,7 +1,7 @@
 ---
 title: Ferramentas de dados para .NET
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: c3175080-1dfb-4ab8-a460-92dadbb844b4
 author: ghogen
 ms.author: ghogen
@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - data-storage
 - dotnet
-ms.openlocfilehash: 1dcd8c256259baeef36939e19ce785e5efe7c80b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 67cf4969a5db8900910b375d4cf560b1e30da4eb
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586036"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281065"
 ---
 # <a name="visual-studio-data-tools-for-net"></a>Ferramentas de dados do Visual Studio para .NET
 

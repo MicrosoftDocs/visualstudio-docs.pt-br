@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_interruptReturn | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b4790748e7b2ea727e9e964fb94a52ddf67ffb70
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3173eb31ec10b812f6ca300d1e95a3c938fa1368
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740370"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463557"
 ---
 # <a name="idiasymbolget_interruptreturn"></a>IDiaSymbol::get_interruptReturn
-Recupera um sinalizador que especifica se a função contém um retorno da instrução de interrupção (por exemplo, o código do assembly x86 `iret`).
+Recupera um sinalizador que especifica se a função contém um retorno da instrução de interrupção (por exemplo, o código do assembly x86 `iret` ).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,13 +33,13 @@ HRESULT get_interruptReturn(
 #### <a name="parameters"></a>Parâmetros
  `pFlag`
 
-fora Retorna `TRUE` se a função tiver um retorno da instrução de interrupção; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se a função tem um retorno da instrução de interrupção; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
-> Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
+> Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,5 +48,5 @@ fora Retorna `TRUE` se a função tiver um retorno da instrução de interrupç�
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

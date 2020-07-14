@@ -1,19 +1,19 @@
 ---
 title: Imagens e ícones do Visual Studio | Microsoft Docs
 ms.date: 04/26/2017
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: f410325e-9cf2-4f39-b6d7-b672121c2691
 author: acangialosi
 ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e72d0ce7435a067ef9aa16ccc5b2daa7602926bf
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: edbf1542277189f37565e7ff415a52025094e595
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184816"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85906110"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Imagens e ícones para o Visual Studio
 ## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a>Uso de imagem no Visual Studio
@@ -60,44 +60,38 @@ ms.locfileid: "84184816"
 #### <a name="concept-development"></a>Desenvolvimento de conceito
  O Visual Studio tem em sua interface do usuário uma ampla variedade de tipos de ícones. Considere cuidadosamente o tipo de ícone durante o desenvolvimento. Não use objetos de interface do usuário não claros ou não comuns para seus elementos Icon. Opte pelo simbólico nesses casos, como com o ícone de marca inteligente. Observe que o significado da marca abstrata à esquerda é mais óbvio do que a versão vaga, baseada na interface do usuário, à direita:
 
-|||
-|-|-|
 |**Uso correto de imagens simbólicas**|**Uso incorreto de imagens simbólicas**|
+|-|-|
 |![Corrigir o ícone de marca inteligente](../../extensibility/ux-guidelines/media/0404-01_smarttagcorrect.png "0404-01_SmartTagCorrect")|![Ícone de marca inteligente incorreto](../../extensibility/ux-guidelines/media/0404-02_smarttagincorrect.png "0404-02_SmartTagIncorrect")|
 
  Há instâncias em que elementos de interface do usuário padrão e facilmente reconhecíveis funcionam bem para ícones. Adicionar janela é um exemplo:
 
-|||
-|-|-|
 |**Elemento de interface do usuário correto em um ícone**|**Elemento de interface do usuário incorreto em um ícone**|
+|-|-|
 |![Corrigir ícone de adicionar janela](../../extensibility/ux-guidelines/media/0404-03_addwindowcorrect.png "0404-03_AddWindowCorrect")|![Ícone de adição de janela incorreto](../../extensibility/ux-guidelines/media/0404-04_addwindowincorrect.png "0404-04_AddWindowIncorrect")|
 
  Não use um documento como elemento base, a menos que seja essencial para o significado do ícone. Sem o elemento Document no documento de adição (abaixo), o significado é perdido, ao passo que com a atualização do elemento Document é desnecessário para comunicar o significado.
 
-|||
-|-|-|
 |**Corrigir o uso do ícone de documento**|**Uso incorreto do ícone de documento**|
+|-|-|
 |![Ícone corrigir documento](../../extensibility/ux-guidelines/media/0404-05_documenticoncorrect.png "0404-05_DocumentIconCorrect")|![Ícone de documento incorreto](../../extensibility/ux-guidelines/media/0404-06_documenticonincorrect.png "0404-06_DocumentIconIncorrect")|
 
  O conceito de "Mostrar" deve ser representado pelo ícone que melhor ilustra o que está sendo mostrado, como com o exemplo de mostrar todos os arquivos. Uma metáfora de lente pode ser usada para indicar o conceito de "exibição", se necessário, como com o exemplo de Modo de Exibição de Recursos.
 
-|||
-|-|-|
 |**Mostrar**|**Exibição**|
+|-|-|
 |![Mostrar ícone](../../extensibility/ux-guidelines/media/0404-07_show.png "0404-07_Show")|![Ícone de exibição](../../extensibility/ux-guidelines/media/0404-08_view.png "0404-08_View")|
 
  O ícone de lupa para a direita deve representar apenas Pesquisar, localizar e procurar. A variante voltada para a esquerda com o sinal de adição ou de subtração deve representar apenas ampliar/reduzir.
 
-|||
-|-|-|
 |**Procurando**|**Aplicar**|
+|-|-|
 |![Ícone de pesquisa](../../extensibility/ux-guidelines/media/0404-09_search.png "0404-09_Search")|![Ícone de zoom](../../extensibility/ux-guidelines/media/0404-10_zoom.png "0404-10_Zoom")|
 
  Em exibições de árvore, não use o ícone de pasta e um modificador. Quando disponível, use apenas o modificador.
 
-|||
-|-|-|
 |**Ícones corretos de exibição de árvore**|**Ícones de exibição de árvore incorretos**|
+|-|-|
 |![Ícone de exibição de árvore correto &#40;1&#41;](../../extensibility/ux-guidelines/media/0404-11_treeviewcorrect1.png "0404-11_TreeViewCorrect1") ![ícone de exibição de árvore correto &#40;2&#41;](../../extensibility/ux-guidelines/media/0404-12_treeviewcorrect2.png "0404-12_TreeViewCorrect2")|![Ícone de exibição de árvore incorreto &#40;1&#41;](../../extensibility/ux-guidelines/media/0404-13_treeviewincorrect1.png "0404-13_TreeViewIncorrect1") ![ícone de exibição de árvore incorreto &#40;2&#41;](../../extensibility/ux-guidelines/media/0404-14_treeviewincorrect2.png "0404-14_TreeViewIncorrect2")|
 
 ### <a name="style-details"></a>Detalhes do estilo
@@ -127,23 +121,20 @@ ms.locfileid: "84184816"
 
  Para obter o alinhamento e o equilíbrio ideais, evite obstruir o elemento base do ícone com glifos de ação. Coloque o glifo próximo à parte superior esquerda do elemento base. Ao adicionar um elemento adicional, considere o alinhamento e o equilíbrio do ícone.
 
-|||
-|-|-|
 |**Corrigir alinhamento e saldo**|**Alinhamento e saldo incorretos**|
+|-|-|
 |![Corrigir o equilíbrio e o alinhamento dos ícones](../../extensibility/ux-guidelines/media/0404-22_alignbalancecorrect.png "0404-22_AlignBalanceCorrect")|![Saldo e alinhamento de ícone incorretos](../../extensibility/ux-guidelines/media/0404-23_alignbalanceincorrect.png "0404-23_AlignBalanceIncorrect")|
 
  Garanta a paridade de tamanho para ícones que compartilham elementos e são usados em conjuntos. Observe que, no emparelhamento incorreto, o círculo e a seta estão superdimensionados e não correspondem.
 
-|||
-|-|-|
 |**Paridade de tamanho correta**|**Paridade de tamanho incorreta**|
+|-|-|
 |![Tamanho e paridade corretos do ícone](../../extensibility/ux-guidelines/media/0404-24_sizeparitycorrect.png "0404-24_SizeParityCorrect")|![Tamanho e paridade de ícone incorretos](../../extensibility/ux-guidelines/media/0404-25_sizeparityincorrect.png "0404-25_SizeParityIncorrect")|
 
  Use linhas consistentes e pesos visuais. Avalie como o ícone que você está criando se compara a outros ícones usando uma comparação lado a lado. Nunca use o quadro 16x16 inteiro, use 15x15 ou menor. A proporção de negativo para positivo (escuro-para-claro) deve ser 50/50.
 
-|||
-|-|-|
 |**Corrigir a proporção de negativo para positivo**|**Taxa incorreta de negativo para positivo**|
+|-|-|
 |![Corrigir o peso Visual para os ícones &#40;1&#41;](../../extensibility/ux-guidelines/media/0404-26_visualweightcorrect1.png "0404-26_VisualWeightCorrect1")<br /><br /> ![Corrigir o peso Visual para os ícones &#40;2&#41;](../../extensibility/ux-guidelines/media/0404-27_visualweightcorrect2.png "0404-27_VisualWeightCorrect2")<br /><br /> ![Corrigir o peso visual dos ícones &#40;3&#41;](../../extensibility/ux-guidelines/media/0404-28_visualweightcorrect3.png "0404-28_VisualWeightCorrect3")|![Peso Visual incorreto para ícones](../../extensibility/ux-guidelines/media/0404-29_visualweightincorrect.png "0404-29_VisualWeightIncorrect")|
 
  Use formas simples e comparáveis e ângulos complementares para criar seus elementos sem sacrificar a integridade do elemento. Use ângulos de 45 ° ou 90 ° onde for possível.
@@ -163,16 +154,14 @@ ms.locfileid: "84184816"
 
  Use fontes de luz somente quando adicionar a clareza necessária a um objeto.
 
-|||
-|-|-|
 |**Fonte de luz correta**|**Fonte de luz incorreta**|
+|-|-|
 |![Corrigir fontes de luz para ícones](../../extensibility/ux-guidelines/media/0404-34_lightsourcescorrect.png "0404-34_LightSourcesCorrect")|![Fontes de luz incorretas para ícones](../../extensibility/ux-guidelines/media/0404-35_lightsourcesincorrect.png "0404-35_LightSourcesIncorrect")|
 
  Use contornos apenas para melhorar a legibilidade ou para comunicar melhor a metáfora. O saldo negativo positivo (escuro-claro) deve ser 50/50.
 
-|||
-|-|-|
 |**Corrigir o uso de contornos**|**Uso incorreto de contornos**|
+|-|-|
 |![Contornos corretos](../../extensibility/ux-guidelines/media/0404-36_outlinescorrect.png "0404-36_OutlinesCorrect")|![Contornos incorretos](../../extensibility/ux-guidelines/media/0404-37_outlinesincorrect.png "0404-37_OutlinesIncorrect")|
 
 #### <a name="icon-types"></a>Tipos de ícone
@@ -292,34 +281,34 @@ ms.locfileid: "84184816"
 ##### <a name="examples"></a>Exemplos
  O verde é usado para modificadores de ação positivos, como "Adicionar", "executar", "reproduzir" e "validar".
 
-|||||
+|Executar|Executar consulta|Executar todas as etapas|Adicionar controle|
 |-|-|-|-|
-|![Ícone de execução](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")<br />Execute|![Ícone executar consulta](../../extensibility/ux-guidelines/media/0405-04_executequery.png "0405-04_ExecuteQuery")<br />Executar Consulta|![Ícone reproduzir todas as etapas](../../extensibility/ux-guidelines/media/0405-05_playallsteps.png "0405-05_PlayAllSteps")<br />Executar todas as etapas|![Adicionar ícone de controle](../../extensibility/ux-guidelines/media/0405-06_addcontrol.png "0405-06_AddControl")<br />Adicionar controle|
+|![Ícone de execução](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")|![Ícone executar consulta](../../extensibility/ux-guidelines/media/0405-04_executequery.png "0405-04_ExecuteQuery")|![Ícone reproduzir todas as etapas](../../extensibility/ux-guidelines/media/0405-05_playallsteps.png "0405-05_PlayAllSteps")|![Adicionar ícone de controle](../../extensibility/ux-guidelines/media/0405-06_addcontrol.png "0405-06_AddControl")|
 
  O vermelho é usado para modificadores de ação negativas, como "excluir", "parar", "Cancelar" e "fechar".
 
-|||||
+|Excluir Relação|Excluir Coluna|Parar consulta|Conexão offline|
 |-|-|-|-|
-|![Ícone Excluir relação](../../extensibility/ux-guidelines/media/0405-07_deleterelationship.png "0405-07_DeleteRelationship")<br />Excluir Relação|![Ícone Excluir coluna](../../extensibility/ux-guidelines/media/0405-08_deletecolumn.png "0405-08_DeleteColumn")<br />Excluir Coluna|![Ícone de consulta de parada](../../extensibility/ux-guidelines/media/0405-09_stopquery.png "0405-09_StopQuery")<br />Parar consulta|![Ícone de conexão offline](../../extensibility/ux-guidelines/media/0405-10_connectionoffline.png "0405-10_ConnectionOffline")<br />Conexão offline|
+|![Ícone Excluir relação](../../extensibility/ux-guidelines/media/0405-07_deleterelationship.png "0405-07_DeleteRelationship")|![Ícone Excluir coluna](../../extensibility/ux-guidelines/media/0405-08_deletecolumn.png "0405-08_DeleteColumn")|![Ícone de consulta de parada](../../extensibility/ux-guidelines/media/0405-09_stopquery.png "0405-09_StopQuery")|![Ícone de conexão offline](../../extensibility/ux-guidelines/media/0405-10_connectionoffline.png "0405-10_ConnectionOffline")|
 
  O azul é aplicado aos modificadores de ação neutros mais comumente representados como setas, como "abrir", "Avançar", "anterior", "importar" e "exportar".
 
-|||||
+|Ir para o campo|Check-in em lote|Editor de endereço|Editor de associação|
 |-|-|-|-|
-|![Ir para o ícone de campo](../../extensibility/ux-guidelines/media/0405-11_gotofield.png "0405-11_GoToField")<br />Ir para o campo|![&#45;de verificação em lote no ícone](../../extensibility/ux-guidelines/media/0405-12_batchedcheckin.png "0405-12_BatchedCheckIn")<br />Check-in em lote|![Ícone do editor de endereços](../../extensibility/ux-guidelines/media/0405-13_addresseditor.png "0405-13_AddressEditor")<br />Editor de endereço|![Ícone do editor de associação](../../extensibility/ux-guidelines/media/0405-14_associationeditor.png "0405-14_AssociationEditor")<br />Editor de associação|
+|![Ir para o ícone de campo](../../extensibility/ux-guidelines/media/0405-11_gotofield.png "0405-11_GoToField")|![&#45;de verificação em lote no ícone](../../extensibility/ux-guidelines/media/0405-12_batchedcheckin.png "0405-12_BatchedCheckIn")|![Ícone do editor de endereços](../../extensibility/ux-guidelines/media/0405-13_addresseditor.png "0405-13_AddressEditor")|![Ícone do editor de associação](../../extensibility/ux-guidelines/media/0405-14_associationeditor.png "0405-14_AssociationEditor")|
 
  O Gold escuro é usado principalmente para o modificador "New".
 
-|||||
+|Novo Projeto|Criar novo grafo|Novo teste de unidade|Novo item de lista|
 |-|-|-|-|
-|![Ícone de novo projeto](../../extensibility/ux-guidelines/media/0405-15_newproject.png "0405-15_NewProject")<br />Novo Projeto|![Ícone criar novo grafo](../../extensibility/ux-guidelines/media/0405-16_createnewgraph.png "0405-16_CreateNewGraph")<br />Criar novo grafo|![Ícone de novo teste de unidade](../../extensibility/ux-guidelines/media/0405-17_newunittest.png "0405-17_NewUnitTest")<br />Novo teste de unidade|![Ícone de novo item de lista](../../extensibility/ux-guidelines/media/0405-18_newlistitem.png "0405-18_NewListItem")<br />Novo item de lista|
+|![Ícone de novo projeto](../../extensibility/ux-guidelines/media/0405-15_newproject.png "0405-15_NewProject")|![Ícone criar novo grafo](../../extensibility/ux-guidelines/media/0405-16_createnewgraph.png "0405-16_CreateNewGraph")|![Ícone de novo teste de unidade](../../extensibility/ux-guidelines/media/0405-17_newunittest.png "0405-17_NewUnitTest")|![Ícone de novo item de lista](../../extensibility/ux-guidelines/media/0405-18_newlistitem.png "0405-18_NewListItem")|
 
 #### <a name="special-cases"></a>Casos especiais
  Em casos especiais, um modificador de ação colorida pode ser usado independentemente como um ícone autônomo. A cor usada para o ícone reflete as ações com as quais o ícone está associado. Esse uso é limitado a um pequeno subconjunto de ícones, incluindo:
 
-||||||
+|Executar|Stop|Excluir|Salvar|Navegação Regressiva|
 |-|-|-|-|-|
-|![Ícone de execução](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")<br />Execute|![Ícone parar](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405-19_Stop")<br />Stop|![Ícone excluir](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405-20_Delete")<br />Excluir|![Ícone Salvar](../../extensibility/ux-guidelines/media/0405-21_save.png "0405-21_Save")<br />Salvar|![Ícone navegar para trás](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405-22_NavigateBack")<br />Navegação Regressiva|
+|![Ícone de execução](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")|![Ícone parar](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405-19_Stop")|![Ícone excluir](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405-20_Delete")|![Ícone Salvar](../../extensibility/ux-guidelines/media/0405-21_save.png "0405-21_Save")|![Ícone navegar para trás](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405-22_NavigateBack")|
 
 ### <a name="code-hierarchy-palette"></a>Paleta de hierarquia de código
 
@@ -346,9 +335,12 @@ ms.locfileid: "84184816"
 
 ##### <a name="examples-of-icons-with-language-modifiers"></a>Exemplos de ícones com modificadores de idioma
 
-|||||||
+|VB|C#|F#|JavaScript|Python|
 |-|-|-|-|-|-|
-|![Ícone de Visual Basic](../../extensibility/ux-guidelines/media/0405-25_vb.png "0405-25_VB")<br />VB|![Ícone de&#35; de C](../../extensibility/ux-guidelines/media/0405-26_csharp.png "0405-26_CSharp")<br />C#|![Ícone de&#43;&#43; de C](../../extensibility/ux-guidelines/media/0405-27_cplusplus.png "0405-27_CPlusPlus")<br />C++|![Ícone de&#35; de F](../../extensibility/ux-guidelines/media/0405-28_fsharp.png "0405-28_FSharp")<br />F#|![Ícone de JavaScript](../../extensibility/ux-guidelines/media/0405-29_javascript.png "0405-29_JavaScript")<br />JavaScript|![Ícone do Python](../../extensibility/ux-guidelines/media/0405-30_python.png "0405-30_Python")<br />Python|
+|![Ícone de Visual Basic](../../extensibility/ux-guidelines/media/0405-25_vb.png "0405-25_VB")|![Ícone de&#35; de C](../../extensibility/ux-guidelines/media/0405-26_csharp.png "0405-26_CSharp")|![Ícone de&#43;&#43; de C](../../extensibility/ux-guidelines/media/0405-27_cplusplus.png "0405-27_CPlusPlus")|![Ícone de&#35; de F](../../extensibility/ux-guidelines/media/0405-28_fsharp.png "0405-28_FSharp")|![Ícone de JavaScript](../../extensibility/ux-guidelines/media/0405-29_javascript.png "0405-29_JavaScript")|![Ícone do Python](../../extensibility/ux-guidelines/media/0405-30_python.png "0405-30_Python")|
+
+|HTML|WPF|ASP|CSS|TypeScript|
+|-|-|-|-|-|-|
 |![Ícone HTML](../../extensibility/ux-guidelines/media/0405-31_html.png "0405-31_HTML")<br />HTML|![Ícone do WPF](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405-32_WPF")<br />WPF|![Ícone ASP](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405-33_ASP")<br />ASP|![Ícone de CSS](../../extensibility/ux-guidelines/media/0405-34_css.png "0405-34_CSS")<br />CSS|![Ícone do TypeScript](../../extensibility/ux-guidelines/media/0405-35_typescript.png "0405-35_TypeScript")<br />TypeScript||
 
 #### <a name="intellisense"></a>IntelliSense
@@ -364,10 +356,13 @@ ms.locfileid: "84184816"
 
 ##### <a name="examples-of-intellisense-icons"></a>Exemplos de ícones do IntelliSense
 
-||||||
+|Classe|Evento particular|Delegar|Método Friend|Campo|
 |-|-|-|-|-|
-|![Ícone de classe IntelliSense](../../extensibility/ux-guidelines/media/0405-36_intellisenseclass.png "0405-36_IntelliSenseClass")<br />Classe|![Ícone de evento privado do IntelliSense](../../extensibility/ux-guidelines/media/0405-37_intellisenseprivateevent.png "0405-37_IntelliSensePrivateEvent")<br />Evento particular|![Ícone de delegado do IntelliSense](../../extensibility/ux-guidelines/media/0405-38_intellisensedelegate.png "0405-38_IntelliSenseDelegate")<br />Delegar|![Ícone de amigo do método IntelliSense](../../extensibility/ux-guidelines/media/0405-39_intellisensemethodfriend.png "0405-39_IntelliSenseMethodFriend")<br />Método Friend|![Ícone de campo](../../extensibility/ux-guidelines/media/0405-40_field.png "0405-40_Field")<br />Campo|
-|![Ícone de item de enum protegido por IntelliSense](../../extensibility/ux-guidelines/media/0405-41_intellisenseprotectedenumitem.png "0405-41_IntelliSenseProtectedEnumItem")<br />Item de enum protegido|![Ícone de objeto IntelliSense](../../extensibility/ux-guidelines/media/0405-42_intellisenseobject.png "0405-42_IntelliSenseObject")<br />Objeto|![Ícone do modelo IntelliSense](../../extensibility/ux-guidelines/media/0405-43_intellisensetemplate.png "0405-43_IntelliSenseTemplate")<br />Modelo|![Ícone de atalho de exceção do IntelliSense](../../extensibility/ux-guidelines/media/0405-44_intellisenseexceptionshortcut.png "0405-44_IntelliSenseExceptionShortcut")<br />Atalho de exceção||
+|![Ícone de classe IntelliSense](../../extensibility/ux-guidelines/media/0405-36_intellisenseclass.png "0405-36_IntelliSenseClass")|![Ícone de evento privado do IntelliSense](../../extensibility/ux-guidelines/media/0405-37_intellisenseprivateevent.png "0405-37_IntelliSensePrivateEvent")|![Ícone de delegado do IntelliSense](../../extensibility/ux-guidelines/media/0405-38_intellisensedelegate.png "0405-38_IntelliSenseDelegate")|![Ícone de amigo do método IntelliSense](../../extensibility/ux-guidelines/media/0405-39_intellisensemethodfriend.png "0405-39_IntelliSenseMethodFriend")|![Ícone de campo](../../extensibility/ux-guidelines/media/0405-40_field.png "0405-40_Field")|
+
+|Item de enum protegido|Objeto|Modelo|Atalho de exceção|
+|-|-|-|-|
+|![Ícone de item de enum protegido por IntelliSense](../../extensibility/ux-guidelines/media/0405-41_intellisenseprotectedenumitem.png "0405-41_IntelliSenseProtectedEnumItem")|![Ícone de objeto IntelliSense](../../extensibility/ux-guidelines/media/0405-42_intellisenseobject.png "0405-42_IntelliSenseObject")|![Ícone do modelo IntelliSense](../../extensibility/ux-guidelines/media/0405-43_intellisensetemplate.png "0405-43_IntelliSenseTemplate")|![Ícone de atalho de exceção do IntelliSense](../../extensibility/ux-guidelines/media/0405-44_intellisenseexceptionshortcut.png "0405-44_IntelliSenseExceptionShortcut")|
 
 ### <a name="notifications"></a>Notificações
  As notificações no Visual Studio são usadas para indicar o status. A paleta de notificação usa as quatro cores a seguir, bem como opções de preenchimento de primeiro plano preto ou branco, para definir notificações com os seguintes níveis de status.
@@ -383,6 +378,6 @@ ms.locfileid: "84184816"
 
 #### <a name="examples-of-notification-icons"></a>Exemplos de ícones de notificação
 
-|||||
+|Alerta|Aviso|Concluir|Stop|
 |-|-|-|-|
-|![Ícone de alerta](../../extensibility/ux-guidelines/media/0405-45_alert.png "0405-45_Alert")<br />Alerta|![Ícone de aviso:](../../extensibility/ux-guidelines/media/0405-48_warning.png "0405-48_Warning")<br />Aviso|![Ícone concluir](../../extensibility/ux-guidelines/media/0405-46_complete.png "0405-46_Complete")<br />Concluir|![Ícone parar](../../extensibility/ux-guidelines/media/0405-47_stop.png "0405-47_Stop")<br />Stop|
+|![Ícone de alerta](../../extensibility/ux-guidelines/media/0405-45_alert.png "0405-45_Alert")|![Ícone de aviso:](../../extensibility/ux-guidelines/media/0405-48_warning.png "0405-48_Warning")|![Ícone concluir](../../extensibility/ux-guidelines/media/0405-46_complete.png "0405-46_Complete")|![Ícone parar](../../extensibility/ux-guidelines/media/0405-47_stop.png "0405-47_Stop")|

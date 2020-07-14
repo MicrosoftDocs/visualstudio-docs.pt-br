@@ -1,11 +1,13 @@
 - name: Documentação de criação de perfil
   href: index.yml
 - name: Visão geral
-  href: profiling-overview.md
-- name: Guias de Início Rápido
   items:
     - name: Introdução à criação de perfil
       href: profiling-feature-tour.md
+    - name: Executar ferramentas de criação de perfil com ou sem o depurador
+      href: running-profiling-tools-with-or-without-the-debugger.md
+- name: Guias de Início Rápido
+  items:
     - name: Analisar o uso da CPU (gerenciado)
       href: quickstart-cpu-usage-managed.md
     - name: Analisar o uso da CPU (nativo)
@@ -20,12 +22,22 @@
       href: memory-usage.md
 - name: Conceitos
   items:
-    - name: Executar ferramentas de criação de perfil com ou sem o depurador
-      href: running-profiling-tools-with-or-without-the-debugger.md
+    - name: Entendendo sobre os métodos de coleta de desempenho
+      href: understanding-performance-collection-methods-perf-profiler.md
+    - name: Otimizar as configurações do criador de perfil
+      href: optimize-profiler-settings.md
+    - name: Usar várias ferramentas de criador de perfil simultaneamente
+      href: use-multiple-profiler-tools-simultaneously.md
 - name: Guias de instruções
   items:
-    - name: Usar PerfTips
+    - name: PerfTips
       href: perftips.md
+    - name: .NET Async
+      href: analyze-async.md
+    - name: Banco de Dados
+      href: analyze-database.md
+    - name: Visualizador de Eventos
+      href: events-viewer.md
     - name: Uso da CPU
       href: cpu-usage.md
     - name: Uso de memória

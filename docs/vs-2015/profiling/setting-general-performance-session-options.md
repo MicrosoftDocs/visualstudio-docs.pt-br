@@ -11,12 +11,12 @@ caps.latest.revision: 15
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 6e135b92cad94f2154341ca79c785d9e40ccb000
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c3bb57e2c8c5dd156fd5c96994eeb843569954af
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68160284"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544944"
 ---
 # <a name="setting-general-performance-session-options"></a>Definindo opções de sessão de desempenho geral
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,15 +30,15 @@ Você pode definir o método de coleção e convenções de nomenclatura de dado
 ## <a name="choosing-data-collection-methods"></a>Escolhendo os métodos de coleta de dados  
  Definir o método de coleção base selecionando uma das opções em **Coleção de Perfis**. As opções são descritas seguindo a tabela a seguir:  
   
-|||  
+|Opção|Descrição|  
 |-|-|  
 |**Amostragem**. O método de amostragem coleta informações de perfil em intervalos regulares. Este método é útil para localizar problemas de utilização do processador e é o método sugerido para iniciar a maioria das investigações de desempenho.|-   [Coletando estatísticas de desempenho usando amostragem](../profiling/collecting-performance-statistics-by-using-sampling.md)|  
-|**Instrumentação**. O método de instrumentação injeta em uma cópia de um módulo de código que registra cada entrada, saída e a chamada de função das funções no módulo durante uma geração de perfil de criação de perfil. Este método é útil para coletar informações detalhadas de tempo sobre uma seção do seu código e para compreender o impacto das operações de entrada e saída sobre o desempenho do aplicativo.|-   [Coletando dados de tempo detalhados usando a instrumentação](../profiling/collecting-detailed-timing-data-by-using-instrumentation.md)|  
-|**Simultaneidade**. O método de simultaneidade coleta dados para cada evento que bloqueia a execução de seu código, como quando um thread aguarda bloqueia o acesso a um recurso de aplicativo para ser liberado. Esse método é útil para analisar aplicativos multi-threaded.|-   [Coletando dados de simultaneidade do thread e do processo](../profiling/collecting-thread-and-process-concurrency-data.md)|  
+|**Instrumentação**. O método de instrumentação injeta em uma cópia de um módulo de código que registra cada entrada, saída e a chamada de função das funções no módulo durante uma geração de perfil de criação de perfil. Este método é útil para coletar informações detalhadas de tempo sobre uma seção de seu código e para compreender o impacto das operações de entrada e de saída no desempenho do aplicativo.|-   [Coletando dados de tempo detalhados usando a instrumentação](../profiling/collecting-detailed-timing-data-by-using-instrumentation.md)|  
+|**Simultaneidade**. O método de simultaneidade coleta dados para cada evento que bloqueia a execução de seu código, como quando um thread aguarda que o acesso bloqueado a um recurso de aplicativo seja liberado. Este método é útil para analisar aplicativos multi-threaded.|-   [Coletando dados de simultaneidade de processo e thread](../profiling/collecting-thread-and-process-concurrency-data.md)|  
   
  Você pode coletar dados de memória do .NET usando os métodos de amostragem ou instrumentação. Selecione o tipo de dados na **criação de perfil de memória do .NET**.  
   
-|||  
+|Opções|Artigo|  
 |-|-|  
 |**Coletar informações de alocação de objeto do .NET**. Por padrão, os dados incluem o número e tamanho dos objetos alocados. Marque ou desmarque esta caixa de seleção para habilitar ou desabilitar a coleta de dados de memória do .NET.<br /><br /> **Também coletar informações de tempo de vida do objeto .NET**. Marque esta caixa de seleção para incluir dados sobre as gerações de coleta de lixo que foram usados para recuperar os objetos de memória.|-   [Coletando a alocação de memória do .NET e os dados de tempo de vida](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)|  
   
@@ -46,8 +46,8 @@ Você pode definir o método de coleção e convenções de nomenclatura de dado
   
  ![Página de sessão de criação de perfil](../profiling/media/prof-profilingsessionpage.png "PROF_ProfilingSessionPage")  
   
-## <a name="setting-profiling-datra-file-options"></a>Configurando opções de arquivo de Datra de criação de perfil  
+## <a name="setting-profiling-data-file-options"></a>Definindo opções de arquivo de dados de criação de perfil  
   
-|||  
+|Opção|Artigo|  
 |-|-|  
-|**Relatório**. Por padrão, o arquivo de dados (.vsp) de criação de perfil é dado o nome do aplicativo com perfil e está localizado na pasta de solução ou projeto. Uma cadeia de caracteres de data também é acrescentada ao nome e um número incrementado é adicionado aos arquivos de dados que outra forma, teriam nomes duplicados. Você pode alterar essas opções.|-   [Como: Definir opções de nome de arquivo de dados de desempenho](../profiling/how-to-set-performance-data-file-name-options.md)|
+|**Relatório**. Por padrão, o arquivo de dados (.vsp) de criação de perfil é dado o nome do aplicativo com perfil e está localizado na pasta de solução ou projeto. Uma cadeia de caracteres de data também é acrescentada ao nome e um número incrementado é adicionado aos arquivos de dados que outra forma, teriam nomes duplicados. Você pode alterar essas opções.|-   [Como definir opções de nome de arquivo de dados de desempenho](../profiling/how-to-set-performance-data-file-name-options.md)|

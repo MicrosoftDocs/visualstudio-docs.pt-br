@@ -1,7 +1,7 @@
 ---
 title: Anotação | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -13,20 +13,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ebb4d71924882d0fdd54181a8692ba2eacb0a2bd
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2e1adc922021d1e2bcc9b55de0b5986ee0c1766d
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745533"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462375"
 ---
 # <a name="annotation"></a>Anotação
-Um código de programa de localização pode ser anotado com um símbolo de `SymTagAnnotation`.
+Um código de programa de localização pode ser anotado com um `SymTagAnnotation` símbolo.
 
 ## <a name="properties"></a>Propriedades
  A tabela a seguir mostra as propriedades que são válidas para esse tipo de símbolo.
 
-|propriedade|Tipo de dados|Descrição|
+|Propriedade|Tipo de dados|Descrição|
 |--------------|---------------|-----------------|
 |[IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)|`DWORD`|Parte de deslocamento do local; para obter detalhes, consulte a [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md).|
 |[IDiaSymbol::get_addressSection](../../debugger/debug-interface-access/idiasymbol-get-addresssection.md)|`DWORD`|Parte da seção do local; para obter detalhes, consulte a [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md).|
@@ -37,7 +37,7 @@ Um código de programa de localização pode ser anotado com um símbolo de `Sym
 |[IDiaSymbol::get_value](../../debugger/debug-interface-access/idiasymbol-get-value.md)|`VARIANT`|O valor dos dados constantes.|
 |[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|`ULONGLONG`|Posição desta anotação na imagem executável.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Hierarquia lexical de tipos de símbolo](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)
 - [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md)
 - [Locais de símbolos](../../debugger/debug-interface-access/symbol-locations.md)

@@ -1,7 +1,7 @@
 ---
-title: Usar o ClickOnce para implantar aplicativos multitarget
+title: Usar o ClickOnce para implantar aplicativos de multidirecionamento
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,44 +16,44 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 38418a1ca11c23ab12d64deadfb91079bc957493
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 7ede1cb4faa437d9cff8bd1239f9c271112ccf72
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747489"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85381698"
 ---
-# <a name="how-to-use-clickonce-to-deploy-applications-that-can-run-on-multiple-versions-of-the-net-framework"></a>Como: Usar o ClickOnce para implantar aplicativos que podem ser executados em várias versões do .NET Framework
-Você pode implantar um aplicativo destinado a várias versões do .NET Framework usando a tecnologia de implantação do ClickOnce. Isso exige que você deseja gerar e atualizar os manifestos do aplicativo e implantação.
+# <a name="how-to-use-clickonce-to-deploy-applications-that-can-run-on-multiple-versions-of-the-net-framework"></a>Como usar o ClickOnce para implantar aplicativos que podem ser executados em várias versões do .NET Framework
+Você pode implantar um aplicativo que tem como alvo várias versões do .NET Framework usando a tecnologia de implantação do ClickOnce. Isso requer que você gere e atualize os manifestos de implantação e de aplicativo.
 
 > [!NOTE]
-> Antes de alterar o aplicativo para direcionar a várias versões do .NET Framework, você deve garantir que seu aplicativo é executado com várias versões do .NET Framework. Versão common language runtime é diferente entre o .NET Framework 4 em comparação com o .NET Framework 2.0, .NET Framework 3.0 e 3.5 do .NET Framework.
+> Antes de alterar o aplicativo para direcionar várias versões do .NET Framework, você deve garantir que seu aplicativo seja executado com várias versões do .NET Framework. A versão Common Language Runtime é diferente entre .NET Framework 4 versus .NET Framework 2,0, .NET Framework 3,0 e .NET Framework 3,5.
 
  Esse processo exige as seguintes etapas:
 
-1. Gere os manifestos de aplicativo e implantação.
+1. Gere o aplicativo e os manifestos de implantação.
 
-2. Altere o manifesto de implantação para listar as várias versões do .NET Framework.
+2. Altere o manifesto de implantação para listar as várias versões de .NET Framework.
 
-3. Alterar o *App. config* arquivo para listar as versões compatíveis do tempo de execução do .NET Framework.
+3. Altere o arquivo de *app.config* para listar as versões de tempo de execução .NET Framework compatíveis.
 
-4. Altere o manifesto do aplicativo para marcar os assemblies dependentes como assemblies do .NET Framework.
+4. Altere o manifesto do aplicativo para marcar assemblies dependentes como .NET Framework assemblies.
 
-5. Assine o manifesto do aplicativo.
+5. Assinar o manifesto do aplicativo.
 
-6. Atualizar e assinar o manifesto de implantação.
+6. Atualize e assine o manifesto de implantação.
 
 ### <a name="to-generate-the-application-and-deployment-manifests"></a>Para gerar os manifestos de aplicativo e implantação
 
-- Use o Assistente de publicação ou a página de publicação do Project Designer para publicar o aplicativo e gerar o aplicativo e os arquivos de manifesto de implantação. Para obter mais informações, confira [Como: Publicar um aplicativo ClickOnce usando o Assistente de publicação](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md) ou [página de publicação, Designer de projeto](../ide/reference/publish-page-project-designer.md).
+- Use o assistente de publicação ou a página publicar do designer de projeto para publicar o aplicativo e gerar os arquivos de manifesto de aplicativo e implantação. Para obter mais informações, consulte [como publicar um aplicativo ClickOnce usando o assistente de publicação ou a](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md) [página publicar, designer de projeto](../ide/reference/publish-page-project-designer.md).
 
-### <a name="to-change-the-deployment-manifest-to-list-the-multiple-net-framework-versions"></a>Para alterar o manifesto de implantação para listar as várias versões do .NET Framework
+### <a name="to-change-the-deployment-manifest-to-list-the-multiple-net-framework-versions"></a>Para alterar o manifesto de implantação para listar as várias versões de .NET Framework
 
-1. No diretório de publicação, abra o manifesto de implantação usando o Editor de XML no Visual Studio. O manifesto de implantação tem a *. Application* extensão de nome de arquivo.
+1. No diretório de publicação, abra o manifesto de implantação usando o editor de XML no Visual Studio. O manifesto de implantação tem a extensão de nome de arquivo *. Application* .
 
-2. Substitua o código XML entre o `<compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">` e `</compatibleFrameworks>` elementos com XML que lista as versões do .NET Framework com suporte para o seu aplicativo.
+2. Substitua o código XML entre os `<compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">` `</compatibleFrameworks>` elementos e com XML que lista as versões de .NET Framework com suporte para seu aplicativo.
 
-     A tabela a seguir mostra algumas das versões do .NET Framework disponíveis e o XML correspondente que você pode adicionar ao manifesto de implantação.
+     A tabela a seguir mostra algumas das versões .NET Framework disponíveis e o XML correspondente que você pode adicionar ao manifesto de implantação.
 
     |Versão do .NET Framework|XML|
     |----------------------------|---------|
@@ -63,32 +63,32 @@ Você pode implantar um aplicativo destinado a várias versões do .NET Framewor
     |3.5 Full|\<framework targetVersion="3.5" profile="Full" supportedRuntime="2.0.50727" />|
     |3.0|\<framework targetVersion="3.0" supportedRuntime="2.0.50727" />|
 
-### <a name="to-change-the-appconfig-file-to-list-the-compatible-net-framework-runtime-versions"></a>Para alterar o arquivo App. config para listar as versões de tempo de execução do .NET Framework compatíveis
+### <a name="to-change-the-appconfig-file-to-list-the-compatible-net-framework-runtime-versions"></a>Para alterar o arquivo de app.config para listar as versões compatíveis do .NET Framework Runtime
 
-1. No Gerenciador de soluções, abra o *App. config* arquivo usando o Editor de XML no Visual Studio.
+1. No Gerenciador de Soluções, abra o arquivo de *app.config* usando o editor de XML no Visual Studio.
 
-2. Substituir (ou adicione) o código XML entre o `<startup>` e `</startup>` elementos com XML que lista os tempos de execução do .NET Framework com suporte para o seu aplicativo.
+2. Substitua (ou adicione) o código XML entre os `<startup>` `</startup>` elementos e com XML que lista os tempos de execução de .NET Framework com suporte para seu aplicativo.
 
-     A tabela a seguir mostra algumas das versões do .NET Framework disponíveis e o XML correspondente que você pode adicionar ao manifesto de implantação.
+     A tabela a seguir mostra algumas das versões .NET Framework disponíveis e o XML correspondente que você pode adicionar ao manifesto de implantação.
 
-    |Versão de tempo de execução do .NET framework|XML|
+    |.NET Framework versão do tempo de execução|XML|
     |------------------------------------|---------|
     |4 Client|\<supportedRuntime version="v4.0.30319" sku=".NETFramework,Version=v4.0,Profile=Client" />|
-    |4 Full|\<versão de supportedRuntime = sku de "v4.0.30319" = ". NETFramework, versão = v4.0 "/ >|
+    |4 Full|\<supportedRuntime version="v4.0.30319" sku=".NETFramework,Version=v4.0" />|
     |3.5 Full|\<supportedRuntime version="v2.0.50727"/>|
     |3.5 Client|\<supportedRuntime version="v2.0.50727" sku="Client"/>|
 
-### <a name="to-change-the-application-manifest-to-mark-dependent-assemblies-as-net-framework-assemblies"></a>Para alterar o manifesto do aplicativo para marcar os assemblies dependentes como assemblies do .NET Framework
+### <a name="to-change-the-application-manifest-to-mark-dependent-assemblies-as-net-framework-assemblies"></a>Para alterar o manifesto do aplicativo para marcar assemblies dependentes como .NET Framework assemblies
 
-1. No diretório de publicação, abra o manifesto do aplicativo usando o Editor de XML no Visual Studio. O manifesto de implantação tem a *. manifest* extensão de nome de arquivo.
+1. No diretório de publicação, abra o manifesto do aplicativo usando o editor de XML no Visual Studio. O manifesto de implantação tem a extensão de nome de arquivo *. manifest* .
 
-2. Adicione `group="framework"` para a dependência de XML para os assemblies de sentinela (`System.Core`, `WindowsBase`, `Sentinel.v3.5Client`, e `System.Data.Entity`). Por exemplo, o XML deve ser semelhante ao seguinte:
+2. Adicione `group="framework"` ao XML de dependência para os assemblies do Sentinel ( `System.Core` , `WindowsBase` , `Sentinel.v3.5Client` e `System.Data.Entity` ). Por exemplo, o XML deve ser semelhante ao seguinte:
 
    ```xml
    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true" group="framework">
    ```
 
-3. Atualizar o número de versão a `<assemblyIdentity>` elemento para Microsoft.Windows.CommonLanguageRuntime ao número de versão para o .NET Framework que é o menor denominador comum. Por exemplo, se o aplicativo for destinado ao .NET Framework 3.5 e .NET Framework 4, use o 2.0.50727.0 número de versão e o XML devem ser semelhante ao seguinte:
+3. Atualize o número de versão do `<assemblyIdentity>` elemento para Microsoft. Windows. CommonLanguageRuntime para o número de versão do .NET Framework que é o denominador comum mais baixo. Por exemplo, se o aplicativo tiver como destino .NET Framework 3,5 e .NET Framework 4, use o número de versão 2.0.50727.0 e o XML deverá ser semelhante ao seguinte:
 
    ```xml
    <dependency>
@@ -98,13 +98,13 @@ Você pode implantar um aplicativo destinado a várias versões do .NET Framewor
    </dependency>
    ```
 
-### <a name="to-update-and-re-sign-the-application-and-deployment-manifests"></a>Para atualizar e assinar novamente o aplicativo e a implantação manifestos
+### <a name="to-update-and-re-sign-the-application-and-deployment-manifests"></a>Para atualizar e assinar novamente o aplicativo e os manifestos de implantação
 
-- Atualizar e assinar novamente os manifestos de aplicativo e implantação. Para obter mais informações, confira [Como: Assinar novamente os manifestos de aplicativo e de implantação](../deployment/how-to-re-sign-application-and-deployment-manifests.md).
+- Atualize e assine novamente os manifestos de aplicativo e implantação. Para obter mais informações, consulte [como: assinar novamente manifestos de aplicativo e implantação](../deployment/how-to-re-sign-application-and-deployment-manifests.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Publicar aplicativos ClickOnce](../deployment/publishing-clickonce-applications.md)
-- [\<compatibleFrameworks > elemento](../deployment/compatibleframeworks-element-clickonce-deployment.md)
-- [\<dependência > elemento](../deployment/dependency-element-clickonce-application.md)
+- [\<compatibleFrameworks>elementos](../deployment/compatibleframeworks-element-clickonce-deployment.md)
+- [\<dependency>elementos](../deployment/dependency-element-clickonce-application.md)
 - [Manifesto de implantação do ClickOnce](../deployment/clickonce-deployment-manifest.md)
-- [Esquema de arquivos de configuração](/dotnet/framework/configure-apps/file-schema/index)
+- [Esquema do arquivo de configuração](/dotnet/framework/configure-apps/file-schema/index)

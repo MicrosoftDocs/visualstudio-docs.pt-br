@@ -11,12 +11,12 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: 6983d3ac191b8eb85d38e1d40afa3244e97dbb17
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: debf44bfe8187a7fd84e04b4362283658f636f17
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184244"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536780"
 ---
 # <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio"></a>ASP.NET Core de depuração remota no IIS no Azure no Visual Studio
 
@@ -96,7 +96,7 @@ No Visual Studio, você pode publicar e depurar rapidamente seu aplicativo para 
 
     O ponto de interrupção deve ser atingido no Visual Studio.
 
-    Pronto! O restante das etapas neste tópico se aplica à depuração remota em uma VM do Azure.
+    É isso! O restante das etapas neste tópico se aplica à depuração remota em uma VM do Azure.
 
 ## <a name="remote-debug-aspnet-core-on-an-azure-vm"></a><a name="remote_debug_azure_vm"></a>ASP.NET Core de depuração remota em uma VM do Azure
 
@@ -175,15 +175,15 @@ Você pode usar essa opção para criar um arquivo de configurações de publica
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
 
-    > [!NOTE]
-    > If you restart an Azure VM, the IP address may change.
+> [!NOTE]
+> Se você reiniciar uma VM do Azure, o endereço IP poderá ser alterado.
 
 Depois que o aplicativo for implantado com êxito, ele deverá ser iniciado automaticamente. Se o aplicativo não iniciar no Visual Studio, inicie o aplicativo no IIS para verificar se ele é executado corretamente. Por ASP.NET Core, você também precisa certificar-se de que o campo pool de aplicativos para **DefaultAppPool** esteja definido como **nenhum código gerenciado**.
 
 1. Na caixa de diálogo **configurações** , habilite a depuração clicando em **Avançar**, escolha uma configuração de **depuração** e, em seguida, escolha **remover arquivos adicionais no destino** nas opções de **publicação de arquivo** .
 
     > [!IMPORTANT]
-    > Se você escolher uma configuração de versão, desabilite a depuração no arquivo *Web. config* quando publicar.
+    > Se você escolher uma configuração de versão, desabilite a depuração no arquivo de *web.config* quando publicar.
 
 1. Clique em **salvar** e Republique o aplicativo.
 
@@ -255,11 +255,11 @@ Baixe a versão das ferramentas remotas que corresponde à sua versão do Visual
 
 6. Digite a primeira letra do nome do processo para localizar rapidamente seu aplicativo.
 
-    * Se você estiver usando o [modelo de hospedagem em processo](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models) no IIS, selecione o processo **w3wp. exe** correto. A partir do .NET Core 3, esse é o padrão.
+    * Se você estiver usando o [modelo de hospedagem em processo](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models) no IIS, selecione o processo de **w3wp.exe** correto. A partir do .NET Core 3, esse é o padrão.
 
-    * Caso contrário, selecione o processo **dotnet. exe** . (Esse é o modelo de hospedagem fora do processo.)
+    * Caso contrário, selecione o processo de **dotnet.exe** . (Esse é o modelo de hospedagem fora do processo.)
 
-    Se você tiver vários processos mostrando *w3wp. exe* ou *dotnet. exe*, verifique a coluna **nome de usuário** . Em alguns cenários, a coluna **nome de usuário** mostra o nome do pool de aplicativos, como o **IIS APPPOOL\DefaultAppPool**. Se você vir o pool de aplicativos, mas ele não for exclusivo, crie um novo pool de aplicativos nomeados para a instância do aplicativo que você deseja depurar e, em seguida, você poderá encontrá-lo facilmente na coluna **nome de usuário** .
+    Se você tiver vários processos mostrando *w3wp.exe* ou *dotnet.exe*, verifique a coluna **nome de usuário** . Em alguns cenários, a coluna **nome de usuário** mostra o nome do pool de aplicativos, como o **IIS APPPOOL\DefaultAppPool**. Se você vir o pool de aplicativos, mas ele não for exclusivo, crie um novo pool de aplicativos nomeados para a instância do aplicativo que você deseja depurar e, em seguida, você poderá encontrá-lo facilmente na coluna **nome de usuário** .
 
     ::: moniker range=">=vs-2019"
     ![RemoteDBG_AttachToProcess](../debugger/media/vs-2019/remotedbg-attachtoprocess-aspnetcore.png "RemoteDBG_AttachToProcess")

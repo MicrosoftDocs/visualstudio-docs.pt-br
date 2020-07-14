@@ -5,27 +5,27 @@ ms.author: jillfra
 manager: jillfra
 monikerRange: vs-2017
 ms.date: 11/13/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: d146d801a1519d3282b4e2c5dd72fd23b0df7206
-ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
+ms.openlocfilehash: 9bb3aa4a7aa9818f42f99860956e0e2ae73b2b7f
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80638637"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371580"
 ---
 # <a name="clone-a-repository-of-python-code-in-visual-studio"></a>Clonar um repositório de código Python no Visual Studio
 
 Depois de [instalar o suporte às Ferramentas do Visual Studio para IA](installation.md), será possível clonar facilmente um repositório de código Python e criar um projeto com base nele.
 
-1. Para se conectar aos repositórios do GitHub, execute o instalador do Visual Studio, **selecione Modificar**e selecione a guia **Componentes Individuais.** Role até a seção **Ferramentas de código,** selecione a **extensão GitHub para O Visual Studio**e selecione **Modificar**.
+1. Para se conectar a repositórios do GitHub, execute o instalador do Visual Studio, selecione **Modificar**e selecione a guia **componentes individuais** . Role para baixo até a seção **ferramentas de código** , selecione **extensão do GitHub para Visual Studio**e selecione **Modificar**.
 
     ![Selecionando a extensão GitHub no instalador do Visual Studio](media/create-project-repo/installation-github-extension.png)
 
 2. Inicie o Visual Studio.
 
-3. Selecione **Exibir > Team Explorer** para abrir a janela Team **Explorer** na qual você pode se conectar ao GitHub ou Azure DevOps ou clonar um repositório.
+3. Selecione **exibir > Team Explorer** para abrir a janela **Team Explorer** na qual você pode se conectar ao GitHub ou ao Azure DevOps, ou clonar um repositório.
 
     ![Janela do Team Explorer mostrando o Azure DevOps, o GitHub e a clonagem de um repositório](media/create-project-repo/team-explorer-devops.png)
 
@@ -38,13 +38,13 @@ Depois de [instalar o suporte às Ferramentas do Visual Studio para IA](installa
 
     ![Janela do Team Explorer, criando um novo projeto com base em um clone](media/create-project-repo/team-explorer-new-project.png)
 
-6. Na caixa de diálogo **Novo projeto** que aparece, selecione "**From Existing Python Code**", especifique um nome para o projeto, defina **'Localização'** para a mesma pasta que o repositório e selecione **OK**. No assistente que é exibido, selecione **Concluir**.
+6. Na caixa de diálogo **novo projeto** que aparece, selecione "**do código Python existente**", especifique um nome para o projeto, defina **local** para a mesma pasta que o repositório e selecione **OK**. No assistente que é exibido, selecione **Concluir**.
 
 7. Selecione **Exibir > Gerenciador de Soluções** no menu.
 
-8. No Solution Explorer, `TensorFlow Examples> MNIST` expanda o `convolutional.py`nó, clique com o botão direito do mouse e selecione **Definir como Arquivo inicial**. Esta etapa informa ao Visual Studio qual arquivo deve ser usado ao executar o projeto.
+8. Em Gerenciador de Soluções, expanda o `TensorFlow Examples> MNIST` nó, clique com o botão direito do mouse `convolutional.py` e selecione **definir como arquivo de inicialização**. Esta etapa informa ao Visual Studio qual arquivo deve ser usado ao executar o projeto.
 
-9. Pressione **Ctrl**+**F5** ou selecione **Debug > Start Sem depuração** para executar o programa. Se aparecer um erro, verifique novamente a configuração do diretório de trabalho na etapa anterior.
+9. Pressione **Ctrl** + **F5** ou selecione **depurar > iniciar sem depuração** para executar o programa. Se aparecer um erro, verifique novamente a configuração do diretório de trabalho na etapa anterior.
 
 10. Quando o programa é executado com sucesso, você o verá iniciando o download do seu treinamento, testando o conjunto de dados, treinando o modelo e transmitindo sua taxa de erros. Convém que a taxa de erro diminua com o tempo
 

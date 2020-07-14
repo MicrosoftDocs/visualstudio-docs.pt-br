@@ -1,7 +1,7 @@
 ---
-title: SDK de acesso à Interface de depuração | Microsoft Docs
+title: SDK de acesso à interface de depuração | Microsoft Docs
 ms.date: 07/24/2018
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -14,34 +14,34 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 915f594a984af41da167e0fd3d58beb2f6ddd978
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: da0ced56e8bf7e61e7fa5251e834a762d4c66650
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554903"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468689"
 ---
 # <a name="debug-interface-access-sdk"></a>SDK de Acesso à Interface de Depuração
 
-A Microsoft depurar Interface acesso Software Development Kit (DIA SDK) fornece acesso a informações de depuração armazenadas em arquivos de banco de dados (. PDB) do programa gerados por ferramentas de pós-compilador da Microsoft. Porque o formato do arquivo. PDB gerado pelas ferramentas de pós-compilador da passar por uma revisão de constante, expondo o formato é impraticável. Usando a API do DIA, você pode desenvolver aplicativos que pesquisarem e procurar informações de depuração armazenadas em um arquivo. PDB. Esses aplicativos poderia, por exemplo, relatar informações de pilha de retorno de rastreamento e analisar dados de desempenho.
+O Microsoft Debug interface Access Software Development Kit (DIA SDK) fornece acesso a informações de depuração armazenadas em arquivos do banco de dados do programa (. pdb) gerados pelas ferramentas do Microsoft CreateCompiler. Como o formato do arquivo. pdb gerado pelas ferramentas do compilador subpassa pela revisão constante, expor o formato é impraticável. Usando a API do DIA, você pode desenvolver aplicativos que pesquisem e procurem informações de depuração armazenadas em um arquivo. pdb. Tais aplicativos poderiam, por exemplo, informações de rastreamento de pilha de relatório e análise de dados de desempenho.
 
 ## <a name="in-this-section"></a>Nesta seção
 
 [Introdução](../../debugger/debug-interface-access/getting-started-debug-interface-access-sdk.md)
 
-Fornece uma visão geral do DIA SDK recursos e especifica onde o DIA SDK está instalado, bem como os arquivos de biblioteca e cabeçalho necessário.
+Fornece uma visão geral dos recursos de DIA SDK e especifica onde o DIA SDK é instalado, bem como os arquivos de cabeçalho e biblioteca necessários.
 
 [Consultando o arquivo .Pdb](../../debugger/debug-interface-access/querying-the-dot-pdb-file.md)
 
-Fornece instruções sobre como usar a API do DIA para consultar o arquivo. PDB.
+Fornece instruções sobre como usar a API do DIA para consultar o arquivo. pdb.
 
-[Símbolos e marcações de símbolos](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)
+[Símbolos e marcas de símbolos](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)
 
-Discute como os símbolos e marcações de símbolos são usadas na API do DIA.
+Discute como símbolos e marcas de símbolo são usados na API de DIA.
 
 [Referência](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)
 
-Contém as interfaces, métodos, enumerações e estruturas da API do DIA.
+Contém as interfaces, os métodos, as enumerações e as estruturas da API de DIA.
 
 [Exemplo de Dia2dump](../../debugger/debug-interface-access/dia2dump-sample.md)
 

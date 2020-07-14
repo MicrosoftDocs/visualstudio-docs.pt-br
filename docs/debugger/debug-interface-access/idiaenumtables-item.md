@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumTables:: item | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bf2d6b14f17d42a128e59446e27bfc251de40d17
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c6a65bdca680bac7c3a5b2e6a5a671045cdef093
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743748"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467529"
 ---
 # <a name="idiaenumtablesitem"></a>IDiaEnumTables::Item
 Recupera uma tabela por meio de um índice ou nome.
@@ -34,14 +34,14 @@ HRESULT Item ( 
 #### <a name="parameters"></a>Parâmetros
  `index`
 
-no Índice ou nome do [IDiaTable](../../debugger/debug-interface-access/idiatable.md) a ser recuperado. Se for usada uma variante de inteiro, ela deverá estar no intervalo de 0 a `count`-1, em que `count` é retornado pelo método [IDiaEnumTables:: get_Count](../../debugger/debug-interface-access/idiaenumtables-get-count.md) .
+no Índice ou nome do [IDiaTable](../../debugger/debug-interface-access/idiatable.md) a ser recuperado. Se for usada uma variante de inteiro, ela deverá estar no intervalo de 0 a `count` -1, onde `count` é retornado pelo método [IDiaEnumTables:: get_Count](../../debugger/debug-interface-access/idiaenumtables-get-count.md) .
 
  `table`
 
 fora Retorna um objeto [IDiaTable](../../debugger/debug-interface-access/idiatable.md) que representa a tabela desejada.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
  Se uma variante de cadeia de caracteres for especificada, a cadeia de caracteres nomeia uma tabela específica. O nome deve ser um dos nomes de tabela, conforme definido em [constantes (debug interface Access SDK)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md).
@@ -56,7 +56,7 @@ IDiaTable* pTable;
 pEnumTables->Item( var, &pTable );
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)
 - [IDiaTable](../../debugger/debug-interface-access/idiatable.md)
 - [IDiaEnumTables::get_Count](../../debugger/debug-interface-access/idiaenumtables-get-count.md)

@@ -6,4 +6,4 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68183738"
 ---
-  **Aplica-se a:** As informações neste tópico se aplicam para adicionar o VSTO\-em projetos. Para obter mais informações, consulte [recursos disponíveis por tipo de projeto e aplicativo do Office](../../vsto/features-available-by-office-application-and-project-type.md).
+  **Aplica-se a:** As informações neste tópico se aplicam ao VSTO Add \- in Projects. Para obter mais informações, consulte [recursos disponíveis por aplicativo do Office e tipo de projeto](../../vsto/features-available-by-office-application-and-project-type.md).

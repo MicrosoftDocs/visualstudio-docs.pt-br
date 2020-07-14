@@ -1,10 +1,10 @@
 ---
-title: Instalar Visual Studio
+title: Instalar o Visual Studio
 titleSuffix: ''
 description: Saiba como instalar o Visual Studio, passo a passo.
 ms.date: 12/13/2019
 ms.custom: seodec18
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.about
 helpviewer_keywords:
@@ -20,14 +20,14 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d8e6e3a857c9bbf5577cf395f698f64cfb11bddc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 132aaa8da49814c10afe3089e21d391aa2964673
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79302990"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419153"
 ---
-# <a name="install-visual-studio"></a>Instalar Visual Studio
+# <a name="install-visual-studio"></a>Instalar o Visual Studio
 
 ::: moniker range="vs-2019"
 
@@ -104,7 +104,7 @@ Em seguida, baixe o arquivo bootstrapper do Visual Studio.
 
 ::: moniker range="vs-2017"
 
-Para obter um bootstrapper para o Visual Studio 2017, consulte a página de download [de versões anteriores](https://visualstudio.microsoft.com/vs/older-downloads/) do Visual Studio para obter detalhes sobre como fazê-lo.
+Para obter um bootstrapper para o Visual Studio 2017, consulte a página de download de [versões anteriores do Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/) para obter detalhes sobre como fazer isso.
 
 ::: moniker-end
 
@@ -129,9 +129,9 @@ Execute o arquivo bootstrapper para instalar o Instalador do Visual Studio. Esse
 
    Se você receber um aviso de Controle de Conta de Usuário, escolha **Sim**.
 
-2. Pedimos que você reconheça os Termos de [Licença](https://visualstudio.microsoft.com/license-terms/) da Microsoft e a [Declaração](https://privacy.microsoft.com/privacystatement)de Privacidade da Microsoft. Escolha **Continuar**.
+2. Solicitaremos que você confirme os termos de [licença](https://visualstudio.microsoft.com/license-terms/) da Microsoft e a [política de privacidade](https://privacy.microsoft.com/privacystatement)da Microsoft. Escolha **Continuar**.
 
-   ![Termos de Licença e Declaração de Privacidade](media/privacy-and-license-terms.png "Termos de licença da Microsoft e declaração de privacidade")
+   ![Termos de licença e política de privacidade](media/privacy-and-license-terms.png "Termos de licença da Microsoft e política de privacidade")
 
 ## <a name="step-4---choose-workloads"></a>Etapa 4 – escolher cargas de trabalho
 
@@ -139,9 +139,9 @@ Após a instalação do instalador, use-o para personalizar sua instalação sel
 
  ::: moniker range="vs-2017"
 
-1. Encontre a carga de trabalho desejada no **Visual Studio Installer**.
+1. Localize a carga de trabalho desejada no **instalador do Visual Studio**.
 
-   ![Visual Studio 2017: Instale uma carga de trabalho](../install/media/vs-installer-installing-workloads.png)
+   ![Visual Studio 2017: instalar uma carga de trabalho](../install/media/vs-installer-installing-workloads.png)
 
      Por exemplo, escolha a carga de trabalho de “Desenvolvimento de área de trabalho do .NET”. Ela vem com o editor de núcleo padrão, que inclui o suporte à edição de código básico para mais de 20 linguagens, a capacidade de abrir e editar o código de qualquer pasta sem precisar de um projeto e o controle do código-fonte integrado.
 
@@ -153,9 +153,9 @@ Após a instalação do instalador, use-o para personalizar sua instalação sel
 
 ::: moniker range="vs-2019"
 
-1. Encontre a carga de trabalho desejada no **Visual Studio Installer**.
+1. Localize a carga de trabalho desejada no **instalador do Visual Studio**.
 
-   ![Visual Studio 2019: Instale uma carga de trabalho](../install/media/vs-2019/vs-installer-workloads.png)
+   ![Visual Studio 2019: instalar uma carga de trabalho](../install/media/vs-2019/vs-installer-workloads.png)
 
      Por exemplo, escolha a carga de trabalho "ASP.NET e desenvolvimento Web". Ela vem com o editor de núcleo padrão, que inclui o suporte à edição de código básico para mais de 20 linguagens, a capacidade de abrir e editar o código de qualquer pasta sem precisar de um projeto e o controle do código-fonte integrado.
 
@@ -166,21 +166,21 @@ Após a instalação do instalador, use-o para personalizar sua instalação sel
  ::: moniker-end
 
 > [!TIP]
-> A qualquer momento após a instalação, você pode instalar as cargas de trabalho ou os componentes não instalados inicialmente. Se você tiver o Visual Studio aberto, vá para **Tools** > **Get Tools and Features...** que abre o Visual Studio Installer. Outra opção é abrir o **Instalador do Visual Studio** no menu Iniciar. Assim, é possível escolher as cargas de trabalho ou os componentes que você deseja instalar. Em seguida, escolha **Modificar**.
+> A qualquer momento após a instalação, você pode instalar as cargas de trabalho ou os componentes não instalados inicialmente. Se você tiver o Visual Studio aberto, vá para **ferramentas**  >  **obter ferramentas e recursos...** que abre a instalador do Visual Studio. Outra opção é abrir o **Instalador do Visual Studio** no menu Iniciar. Assim, é possível escolher as cargas de trabalho ou os componentes que você deseja instalar. Em seguida, escolha **Modificar**.
 
 ## <a name="step-5---choose-individual-components-optional"></a>Etapa 5 – escolher componentes individuais (opcional)
 
-Se você não quiser usar o recurso Cargas de Trabalho para personalizar sua instalação do Visual Studio ou quiser adicionar mais componentes do que uma carga de trabalho instalada, você pode fazê-lo instalando ou adicionando componentes individuais da guia **Componentes Individuais.** Escolha o que deseja e siga as instruções.
+Se você não quiser usar o recurso de cargas de trabalho para personalizar a instalação do Visual Studio, ou se quiser adicionar mais componentes do que as instalações de uma carga de trabalho, poderá fazer isso instalando ou adicionando componentes individuais da guia **componentes individuais** . escolha o que deseja e siga os prompts.
 
 ::: moniker range="vs-2017"
 
-  ![Visual Studio 2017 - Instalar componentes individuais](media/vs-installer-installing-components.png "Instale componentes individuais do Visual Studio")
+  ![Visual Studio 2017-instalar componentes individuais](media/vs-installer-installing-components.png "Instalar componentes individuais do Visual Studio")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-  ![Visual Studio 2019 - Instalar componentes individuais](media/vs-2019/vs-installer-individual-components.png "Instale componentes individuais do Visual Studio")
+  ![Visual Studio 2019-instalar componentes individuais](media/vs-2019/vs-installer-individual-components.png "Instalar componentes individuais do Visual Studio")
 
 ::: moniker-end
 
@@ -190,13 +190,13 @@ Por padrão, o programa do instalador tenta encontrar a correspondência do idio
 
 ::: moniker range="vs-2017"
 
-  ![Visual Studio 2017 - Instalar pacotes de idiomas](media/vs-installer-installing-language-packs.png "Instale pacotes de idiomas do Visual Studio")
+  ![Visual Studio 2017-instalar pacotes de idiomas](media/vs-installer-installing-language-packs.png "Instalar pacotes de idiomas do Visual Studio")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-  ![Visual Studio 2019 - Instale pacotes de idiomas](media/vs-2019/vs-installer-language-packs.png "Instale pacotes de idiomas do Visual Studio")
+  ![Visual Studio 2019-instalar pacotes de idiomas](media/vs-2019/vs-installer-language-packs.png "Instalar pacotes de idiomas do Visual Studio")
 
 ::: moniker-end
 
@@ -210,7 +210,7 @@ Outra maneira de alterar o idioma padrão é executar o instalador a partir da l
 
 **Novidade no 15.7**: agora você pode reduzir o volume de instalação do Visual Studio na unidade do sistema. Você pode optar por mover o cache de download, os componentes compartilhados, os SDKs e as ferramentas para unidades diferentes e manter o Visual Studio na unidade que executá-los com mais rapidez.
 
-  ![Visual Studio 2017 - Mudar locais de instalação](media/installation-options-by-location.png "Alterar o local de instalação")
+  ![Visual Studio 2017-alterar locais de instalação](media/installation-options-by-location.png "Alterar o local de instalação")
 
 ::: moniker-end
 
@@ -218,7 +218,7 @@ Outra maneira de alterar o idioma padrão é executar o instalador a partir da l
 
 Você pode reduzir o volume de instalação do Visual Studio na unidade do sistema. Você pode optar por mover o cache de download, os componentes compartilhados, os SDKs e as ferramentas para unidades diferentes e manter o Visual Studio na unidade que executá-los com mais rapidez.
 
-  ![Visual Studio 2019 - Selecione locais de instalação](media/vs-2019/vs-installer-installation-locations.png "Selecione o local de instalação")
+  ![Visual Studio 2019 – selecionar locais de instalação](media/vs-2019/vs-installer-installation-locations.png "Selecione o local de instalação")
 
 ::: moniker-end
 
@@ -247,7 +247,7 @@ Para obter mais informações, consulte a página [Selecionar locais de instala�
 
 1. Após a conclusão da instalação do Visual Studio, escolha o botão **Iniciar** para ver a introdução ao desenvolvimento com o Visual Studio.
 
-1. Na janela inicial, escolha **Criar um novo projeto**.
+1. Na janela iniciar, escolha **criar um novo projeto**.
 
 1. Na caixa de pesquisa, insira o tipo de aplicativo que deseja criar para ver uma lista de modelos disponíveis. A lista de modelos depende das cargas de trabalho escolhidas durante a instalação. Para ver os diferentes modelos, escolha diferentes cargas de trabalho.
 
@@ -259,11 +259,11 @@ Para obter mais informações, consulte a página [Selecionar locais de instala�
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 * [Atualizar o Visual Studio](update-visual-studio.md)
 * [Modificar o Visual Studio](modify-visual-studio.md)
 * [Desinstalar o Visual Studio](uninstall-visual-studio.md)
-* [Crie uma instalação offline do Visual Studio](create-an-offline-installation-of-visual-studio.md)
-* [Use parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
-* [Instale o Visual Studio para Mac](/visualstudio/mac/installation)
+* [Criar uma instalação offline do Visual Studio](create-an-offline-installation-of-visual-studio.md)
+* [Usar parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
+* [Instalar o Visual Studio para Mac](/visualstudio/mac/installation)

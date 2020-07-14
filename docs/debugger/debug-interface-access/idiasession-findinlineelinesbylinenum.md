@@ -1,7 +1,7 @@
 ---
 title: IDiaSession::findInlineeLinesByLinenum | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: cf32ae7c-a0c8-4800-bc8f-d64fdd15fb06
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe238f3bc66d6a7c5978c5d7cbebcd185fcd43d2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ac7f2299dcfbef53c510c9e9689f92cde2132974
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742220"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465793"
 ---
 # <a name="idiasessionfindinlineelinesbylinenum"></a>IDiaSession::findInlineeLinesByLinenum
 Recupera uma enumeração que permite que um cliente itere pelas informações de número de linha de todas as funções que são embutidas, direta ou indiretamente, no arquivo de origem e no número de linha especificados.
@@ -56,10 +56,10 @@ no Especifica o número da coluna. Use zero para especificar todas as colunas. U
 
 fora Retorna um objeto [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) que contém uma lista dos números de linha que foram recuperados.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

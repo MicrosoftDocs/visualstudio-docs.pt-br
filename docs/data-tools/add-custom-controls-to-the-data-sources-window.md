@@ -1,7 +1,7 @@
 ---
 title: Adicionar controles personalizados à janela Fontes de Dados
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.datasource.howtoaddcustomcontrol
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 8c43e7d2-ba94-4d9b-96de-3aa971955afd
 author: ghogen
 ms.author: ghogen
 manager: jillfra
-ms.openlocfilehash: cd4791e118d22aab1126987461547f9fa2fec317
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 39ff272581793be9b456bbc404119a488850b3c4
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587102"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283067"
 ---
 # <a name="add-custom-controls-to-the-data-sources-window"></a>Adicionar controles personalizados à janela Fontes de Dados
 
@@ -39,7 +39,7 @@ Para adicionar ou remover controles da lista de controles disponíveis para iten
 2. Na janela **fontes de dados** , clique em um item que faz parte de uma fonte de dados que você adicionou à janela e, em seguida, clique no menu suspenso do item.
 
    > [!TIP]
-   > Se a janela fontes de dados não estiver aberta, abra-a selecionando **exibir** > outras **fontes de dados**do **Windows** > .
+   > Se a janela fontes de dados não estiver aberta, abra-a selecionando **Exibir**  >  **outras**  >  **fontes de dados**do Windows.
 
 3. No menu suspenso, clique em **Personalizar**. Uma das seguintes caixas de diálogo é aberta:
 
@@ -49,11 +49,11 @@ Para adicionar ou remover controles da lista de controles disponíveis para iten
 
 4. Na caixa de diálogo, selecione um tipo de dados na lista suspensa **tipo de dados** .
 
-    - Para personalizar a lista de controles de uma tabela ou objeto, selecione **[lista]** .
+    - Para personalizar a lista de controles de uma tabela ou objeto, selecione **[lista]**.
 
     - Para personalizar a lista de controles de uma coluna de uma tabela ou de uma propriedade de um objeto, selecione o tipo de dados da coluna ou propriedade no armazenamento de dados subjacente.
 
-    - Para personalizar a lista de controles para exibir objetos de dados que têm formas definidas pelo usuário, selecione **[outros]** . Por exemplo, selecione **[outros]** se seu aplicativo tiver um controle personalizado que exibe dados de mais de uma propriedade de um objeto específico.
+    - Para personalizar a lista de controles para exibir objetos de dados que têm formas definidas pelo usuário, selecione **[outros]**. Por exemplo, selecione **[outros]** se seu aplicativo tiver um controle personalizado que exibe dados de mais de uma propriedade de um objeto específico.
 
 5. Na caixa **controles associados** , selecione cada controle que você deseja disponibilizar para o tipo de dados selecionado ou desmarque a seleção de todos os controles que deseja remover da lista.
 
@@ -78,9 +78,9 @@ Para adicionar controles à lista de controles associados:
 
     |Atributo|Descrição|
     |---------------|-----------------|
-    |<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|Implemente esse atributo em controles simples que exibem uma única coluna (ou Propriedade) de dados, como um <xref:System.Windows.Forms.TextBox>.|
-    |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|Implemente esse atributo em controles que exibem listas (ou tabelas) de dados, como um <xref:System.Windows.Forms.DataGridView>.|
-    |<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|Implemente esse atributo em controles que exibem listas (ou tabelas) de dados, mas também precisam apresentar uma única coluna ou propriedade, como uma <xref:System.Windows.Forms.ComboBox>.|
+    |<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|Implemente esse atributo em controles simples que exibem uma única coluna (ou Propriedade) de dados, como um <xref:System.Windows.Forms.TextBox> .|
+    |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|Implemente esse atributo em controles que exibem listas (ou tabelas) de dados, como um <xref:System.Windows.Forms.DataGridView> .|
+    |<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|Implemente esse atributo em controles que exibem listas (ou tabelas) de dados, mas também precisam apresentar uma única coluna ou propriedade, como um <xref:System.Windows.Forms.ComboBox> .|
 
 2. Para Windows Forms, na caixa de diálogo **Opções** , abra a página **personalização da interface do usuário de dados** . Ou, para o WPF, abra a caixa de diálogo **Personalizar Associação de controle** . Para obter mais informações, consulte [Personalizar a lista de controles vinculáveis para um tipo de dados](#customize-the-bindable-controls-list).
 

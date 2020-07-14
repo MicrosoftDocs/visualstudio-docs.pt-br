@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_liveRangeStartAddressOffset | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b39bf1e73d8b056c1cfcbfafd41dcbbb464c40ce
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2563afe5c5323415c5d4c9d7f0b0fa89583f9736
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739916"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463032"
 ---
 # <a name="idiasymbolget_liverangestartaddressoffset"></a>IDiaSymbol::get_liveRangeStartAddressOffset
 Retorna a parte de deslocamento do endereço inicial do intervalo no qual o símbolo local é válido.
@@ -35,8 +35,8 @@ HRESULT get_liveRangeStartAddressOffset ( 
 
 fora Retorna a parte de deslocamento do intervalo de endereços inicial.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 > [!NOTE]
 > Um código de erro retornado significa que o símbolo não tem informações de intervalo dinâmico.
@@ -53,5 +53,5 @@ fora Retorna a parte de deslocamento do intervalo de endereços inicial.
 
  DLL: msdia100.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

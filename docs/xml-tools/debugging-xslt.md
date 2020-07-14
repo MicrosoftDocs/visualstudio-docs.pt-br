@@ -1,7 +1,7 @@
 ---
 title: Maneiras de depurar código XSLT
 ms.date: 03/05/2019
-ms.topic: conceptual
+ms.topic: overview
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
@@ -9,12 +9,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: f6f4a1ce60f04bcea6e21b52db9347a95292dab2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d8e3885aa895cec5ed080b7a8b4d22522d2e9edf
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592848"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815611"
 ---
 # <a name="debugging-xslt"></a>Depuração do XSLT
 
@@ -33,11 +33,11 @@ Você pode iniciar o depurador quando tiver uma folha de estilos ou um arquivo X
 
 1. Abra a folha de estilos ou o arquivo XML no Visual Studio.
 
-1. Selecione **Iniciar Depuração XSLT** no menu **XML** ou pressione **ALT**+**F5**.
+1. Selecione **Iniciar Depuração XSLT** no menu **XML** ou pressione **ALT** + **F5**.
 
 ## <a name="debug-from-an-app-that-uses-xslt"></a>Depurar de um aplicativo que usa XSLT
 
-Você pode entrar no XSLT durante a depuração de um aplicativo. Quando você pressiona **F11** em uma chamada de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName>, o depurador pode entrar no código XSLT.
+Você pode entrar no XSLT durante a depuração de um aplicativo. Quando você pressiona **F11** em uma <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName> chamada, o depurador pode entrar no código XSLT.
 
 > [!NOTE]
 > Entrar em XSLT da classe de <xref:System.Xml.Xsl.XslTransform> não é suportado. A classe de <xref:System.Xml.Xsl.XslCompiledTransform> é o único processador XSLT que suporte em avançar XSLT a depuração.

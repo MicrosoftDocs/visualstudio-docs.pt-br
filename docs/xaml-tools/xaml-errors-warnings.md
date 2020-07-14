@@ -1,23 +1,23 @@
 ---
 title: Avisos e Erros XAML
 ms.date: 03/06/2018
-ms.topic: conceptual
+ms.topic: error-reference
 ms.assetid: 34eac8a0-7ec5-4c40-b97a-0126ed367931
-author: karann-msft
+author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8a36a91f40fd4857e50d5262c1598ee096697e7
-ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
+ms.openlocfilehash: b740f0882edb2eae9f00bd7826543e7fe1b4597f
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81276462"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817262"
 ---
 # <a name="xaml-errors-and-warnings"></a>Avisos e erros de XAML
 
-Ao criar XAML, o Visual Studio analisa o código conforme você digita. Um rabisco aparece em uma linha de código quando um erro é detectado. Se você passar o mouse sobre o rabisco, verá mais informações sobre o erro ou aviso. Para alguns erros e avisos, uma lâmpada Quick Action é exibida e usando o **Ctrl**+**.** o atalho de teclado exibe as opções para corrigir o problema.
+Ao criar XAML, o Visual Studio analisa o código conforme você digita. Um rabisco aparece em uma linha de código quando um erro é detectado. Se você passar o mouse sobre o rabisco, verá mais informações sobre o erro ou aviso. Para alguns erros e avisos, é exibida uma lâmpada de ação rápida e o uso de **Ctrl** + **.** o atalho de teclado exibe as opções para corrigir o problema.
 
 ## <a name="error-types"></a>Tipos de erro
 

@@ -1,21 +1,21 @@
 ---
 title: Modificar comando de menu padrão em DSL
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - .vsct files, adding commands to a domain-specific language
 - Domain-Specific Language, adding custom commands
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ae2aa04eb415ee5c4b7aaa41ea4c6abb49333f7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a7236c074bda17023c989c744042db2de4046558
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605260"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532490"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>Como modificar um comando de menu padrão em uma linguagem específica do domínio
 
@@ -28,9 +28,9 @@ ms.locfileid: "72605260"
 
 ### <a name="to-discover-what-commands-you-can-modify"></a>Para descobrir quais comandos podem ser modificados
 
-1. No projeto `DslPackage`, abra `GeneratedCode\CommandSet.cs`. Esse C# arquivo pode ser encontrado em Gerenciador de soluções como uma subsidiária do `CommandSet.tt`.
+1. No projeto `DslPackage`, abra `GeneratedCode\CommandSet.cs`. Esse arquivo C# pode ser encontrado em Gerenciador de Soluções como uma subsidiária do `CommandSet.tt` .
 
-2. Encontre classes neste arquivo cujos nomes terminam com "`CommandSet`", por exemplo, `Language1CommandSet` e `Language1ClipboardCommandSet`.
+2. Localizar classes neste arquivo cujos nomes terminam com " `CommandSet` ", por exemplo, `Language1CommandSet` e `Language1ClipboardCommandSet` .
 
 3. Em cada classe de conjunto de comandos, digite "`override`" seguido por um espaço. O IntelliSense mostrará uma lista dos métodos que podem ser substituídos. Cada comando contém um par de métodos cujos nomes começam com "`ProcessOnStatus`" e "`ProcessOnMenu`".
 
@@ -53,7 +53,7 @@ Crie um novo arquivo que contenha uma declaração parcial da classe de conjunto
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. Em **DslPackage**, crie uma pasta chamada **código personalizado**. Nessa pasta, crie um novo arquivo de classe chamado `CommandSet.cs`.
+2. Em **DslPackage**, crie uma pasta chamada **código personalizado**. Nessa pasta, crie um novo arquivo de classe chamado `CommandSet.cs` .
 
 3. No novo arquivo, grave uma declaração parcial que contenha o mesmo namespace e o nome que a classe parcial gerada. Por exemplo:
 
@@ -70,7 +70,7 @@ Crie um novo arquivo que contenha uma declaração parcial da classe de conjunto
 
 ## <a name="override-the-command-methods"></a>Substitua os métodos de comando
 
-A maioria dos comandos tem dois métodos associados: o método com um nome como `ProcessOnStatus`... Determina se o comando deve ser visível e habilitado. É chamado sempre que o usuário clicar com o botão direito do mouse no diagrama e deve ser executado rapidamente e não realizar alterações. `ProcessOnMenu`... é chamado quando o usuário clica no comando e deve executar a função do comando. É possível substituir qualquer um dos métodos ou os dois.
+A maioria dos comandos tem dois métodos associados: o método com um nome como `ProcessOnStatus` ... Determina se o comando deve ser visível e habilitado. É chamado sempre que o usuário clicar com o botão direito do mouse no diagrama e deve ser executado rapidamente e não realizar alterações. `ProcessOnMenu`... é chamado quando o usuário clica no comando e deve executar a função do comando. É possível substituir qualquer um dos métodos ou os dois.
 
 ### <a name="to-change-when-the-command-appears-on-a-menu"></a>Para alterar quando o comando é exibido em um menu
 
@@ -129,26 +129,26 @@ Se o código fizer alterações ao Armazenamento, como criar, excluir ou atualiz
 
 Os seguintes fragmentos são úteis com frequência dentro desses métodos:
 
-- `this.CurrentSelection` A forma que o usuário clicou com o botão direito sempre é incluída nessa lista de formas e conectores. Se o usuário clicar em uma parte em branco do diagrama, o Diagrama será o único membro da lista.
+- `this.CurrentSelection`. A forma que o usuário clicou com o botão direito sempre é incluída nessa lista de formas e conectores. Se o usuário clicar em uma parte em branco do diagrama, o Diagrama será o único membro da lista.
 
-- `this.IsDiagramSelected()`  -  `true` se o usuário clicou em uma parte em branco do diagrama.
+- `this.IsDiagramSelected()` - `true`Se o usuário clicou em uma parte em branco do diagrama.
 
 - `this.IsCurrentDiagramEmpty()`
 
-- `this.IsSingleSelection()` - o usuário não selecionou múltiplas formas
+- `this.IsSingleSelection()`-o usuário não selecionou várias formas
 
-- `this.SingleSelection` - a forma ou o diagrama que o usuário clicou com o botão direito
+- `this.SingleSelection`-a forma ou o diagrama em que o usuário clicou com o botão direito
 
-- `shape.ModelElement as MyLanguageElement` - o elemento de modelo representado por uma forma.
+- `shape.ModelElement as MyLanguageElement`-o elemento de modelo representado por uma forma.
 
 Para obter mais informações sobre como navegar de elemento para elemento e sobre como criar objetos e links, consulte [navegando e atualizando um modelo no código do programa](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ComponentModel.Design.MenuCommand>
 - [Escrevendo código para personalizar uma linguagem específica de domínio](../modeling/writing-code-to-customise-a-domain-specific-language.md)
 - [Como adicionar um comando ao menu de atalho](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)
 - [Como os VSPackages adicionam elementos da interface do usuário](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [Arquivos da tabela de comandos do Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Arquivos .Vsct (Visual Studio Command Table)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 - [Referência do esquema XML do VSCT](../extensibility/vsct-xml-schema-reference.md)
 - [VMSDK-exemplo de diagramas de circuito. Ampla personalização de DSL](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)

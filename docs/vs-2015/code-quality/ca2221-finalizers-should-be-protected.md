@@ -15,19 +15,19 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3e98c2ea598bcf73b919ba10ef1ea0b53c2a40f3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e30dd2945820a61aa7c96d4e6c6fd59354e0c3ae
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651967"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540732"
 ---
-# <a name="ca2221-finalizers-should-be-protected"></a>CA2221: os finalizadores devem ser protegidos
+# <a name="ca2221-finalizers-should-be-protected"></a>CA2221: Os finalizadores devem ser protegidos
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|FinalizersShouldBeProtected|
+|TypeName|FinalizersShouldBeProtected|
 |CheckId|CA2221|
 |Categoria|Microsoft. Usage|
 |Alteração Significativa|Sem interrupção|
@@ -36,7 +36,7 @@ ms.locfileid: "72651967"
  Um tipo público implementa um finalizador que não especifica acesso de família (protegido).
 
 ## <a name="rule-description"></a>Descrição da Regra
- Os finalizadores deve usar o modificador de acesso da família. Essa regra é imposta pelos compiladores C#, Visual Basic e Visual. C++
+ Os finalizadores deve usar o modificador de acesso da família. Essa regra é imposta pelos compiladores C#, Visual Basic e Visual C++.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
  Para corrigir uma violação dessa regra, altere o finalizador para ser acessível por família.
@@ -80,5 +80,5 @@ ms.locfileid: "72651967"
 } // end of namespace
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Padrão de descarte](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)

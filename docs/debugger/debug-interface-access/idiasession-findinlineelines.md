@@ -1,7 +1,7 @@
 ---
 title: IDiaSession::findInlineeLines | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: b6822d8b-70d5-470b-8278-3aec4680326c
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5103a881b1b046479a1a3156f06038e230f5063e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a03eb23929d3a882b397a8a95f2d9c4c17abf0df
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742250"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465807"
 ---
 # <a name="idiasessionfindinlineelines"></a>IDiaSession::findInlineeLines
 Recupera uma enumeração que permite que um cliente itere pelas informações de número de linha de todas as funções que são embutidas, direta ou indiretamente, pelo símbolo pai especificado.
@@ -32,16 +32,16 @@ HRESULT findInlineeLines ( 
 #### <a name="parameters"></a>Parâmetros
  `parent`
 
-no Um objeto `IDiaSymbol` que representa o pai.
+no Um `IDiaSymbol` objeto que representa o pai.
 
  `ppResult`
 
-fora Mantém um objeto `IDiaEnumLineNumbers` que contém a lista de números de linha recuperados.
+fora Mantém um `IDiaEnumLineNumbers` objeto que contém a lista de números de linha recuperados.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)

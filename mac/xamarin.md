@@ -5,12 +5,13 @@ author: therealjohn
 ms.author: johmil
 ms.date: 06/18/2019
 ms.assetid: 339F6051-5F90-48DC-8237-EBBC8A03A32B
-ms.openlocfilehash: 31fb7fa4c2a87820285809d24b98fe8e59a6be01
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: overview
+ms.openlocfilehash: e40d9640ca2e62148e4ad166845d8f59854367ff
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "73714471"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950664"
 ---
 # <a name="xamarin-mobile-app-development"></a>Desenvolvimento de aplicativos móveis do Xamarin
 
@@ -18,11 +19,11 @@ O suporte de primeira classe para o [Xamarin](/xamarin) permite que você desenv
 
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
-XAML Hot Reload for Xamarin.Forms é incorporado no Visual Studio para Mac na versão 8.3 e posterior. Com este recurso habilitado, as alterações são refletidas instantaneamente no seu aplicativo em execução toda vez que você salvar o arquivo.
+O Hot recarregamento de XAML para Xamarin. Forms é integrado ao Visual Studio para Mac na versão 8,3 e posteriores. Com esse recurso, as alterações habilitadas são refletidas instantaneamente em seu aplicativo em execução sempre que você salvar o arquivo.
 
-A recarga quente xaml pode ser ativada verificando a caixa de seleção **Enable Xamarin Hot Reload** no **Visual Studio > Preferências > Projetos > Xamarin Hot Reload**.
+O Hot recarregamento de XAML pode ser habilitado marcando a caixa de seleção **habilitar o WebLoad do xamarin** no **Visual Studio > preferências > projetos > Xamarin Hot recarregar**.
 
-Para obter mais informações sobre o Hot Reload, consulte o [guia XAML Hot Reload for Xamarin.Forms](/xamarin/xamarin-forms/xaml/hot-reload) dentro da documentação.
+Para obter mais informações sobre a recarga a quente, consulte o [Guia de Hot recarregamento de XAML para Xamarin. Forms](/xamarin/xamarin-forms/xaml/hot-reload) na documentação.
 
 ## <a name="android"></a>Android
 

@@ -1,7 +1,7 @@
 ---
 title: Como definir a sessão atual | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - current performance sessions
 - Performance Explorer, selecting sessions
@@ -16,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 70f33888be5097d2682133cda363099bb815c5b0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: eb60a431ae1fd1f6d44b8aa1477d74705eb532d7
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778746"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328357"
 ---
 # <a name="how-to-set-the-current-session"></a>Como definir a sessão atual
 
@@ -35,9 +35,9 @@ Depois de definir uma sessão como a sessão atual, clicar em **Inicializar** na
 
      O nome da sessão aparece em negrito.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Configurar as sessões](../profiling/configuring-performance-sessions.md)
-de desempenho[Exibição de exibição da sessão](../profiling/performance-explorer-window.md)
-[de desempenho do](../profiling/performance-session-properties.md)
-Performance[Exibição geral da sessão de desempenho](../profiling/performance-session-overview.md)
+[Configurar sessões](../profiling/configuring-performance-sessions.md) 
+ de desempenho [Janela](../profiling/performance-explorer-window.md) 
+ de Gerenciador de desempenho Propriedades da sessão de [desempenho](../profiling/performance-session-properties.md) 
+ [Visão geral da sessão de desempenho](../profiling/performance-session-overview.md)

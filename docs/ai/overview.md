@@ -1,43 +1,43 @@
 ---
-title: Visão geral do Visual Studio Tools para IA
+title: Visão geral do Visual Studio Tools for AI
 author: jillre
 ms.author: jillfra
 manager: jillfra
 monikerRange: vs-2017
 ms.date: 11/13/2017
-ms.topic: conceptual
+ms.topic: overview
 ms.workload:
 - multiple
-ms.openlocfilehash: 388408f83fc18899ce34e2d58fdca05c713424bd
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: c138d09ec229343e38edc8bbba50a5cac73e000a
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81386452"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371502"
 ---
-# <a name="overview-of-visual-studio-tools-for-ai"></a>Visão geral do Visual Studio Tools para IA
+# <a name="overview-of-visual-studio-tools-for-ai"></a>Visão geral do Visual Studio Tools for AI
 
-Visual Studio Tools for AI é um ambiente de desenvolvimento integrado (IDE) que você pode usar para construir, testar e implantar soluções de deep learning. Saiba mais sobre como usar ferramentas de IA a partir dos seguintes tutoriais e amostras.
+O Visual Studio Tools for AI é um ambiente de desenvolvimento integrado (IDE) que você pode usar para criar, testar e implantar soluções de aprendizado profundo. Saiba mais sobre como usar as ferramentas de ia dos tutoriais e exemplos a seguir.
 
 ## <a name="install-the-extension"></a>Instalar a extensão
 
-Consulte a página [Install Visual Studio Tools for AI](installation.md) para saber como baixar e instalar a extensão.
+Consulte a página [instalar Visual Studio Tools for ai](installation.md) para saber como baixar e instalar a extensão.
 
-## <a name="5-minute-quickstart"></a>Início rápido de 5 minutos 
+## <a name="5-minute-quickstart"></a>início rápido de 5 minutos 
 
-Aprenda a executar solução de deep learning com [TensorFlow e Python](tensorflow-local.md)
+Saiba como executar a solução de aprendizado profundo com [TensorFlow e Python](tensorflow-local.md)
 
 ## <a name="step-by-step-tutorial"></a>Tutorial passo a passo
 
-Aprenda a construir uma solução de aprendizagem profunda a partir do [modelo Train a TensorFlow no](tensorflow-vm.md) tutorial em nuvem.
+Saiba como criar uma solução de aprendizado profundo no tutorial [treinar um modelo TensorFlow no Cloud](tensorflow-vm.md) .
 
 ## <a name="samples"></a>Exemplos
 
-Navegue pelas amostras no [repositório Samples](https://github.com/Microsoft/samples-for-ai) e na [galeria Machine Learning](https://gallery.cortanaintelligence.com/projects).
+Procure exemplos no [repositório de exemplos](https://github.com/Microsoft/samples-for-ai) e na [Galeria de Machine Learning](https://gallery.cortanaintelligence.com/projects).
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber ainda mais sobre o Visual Studio Tools for AI, incluindo requisitos do sistema e opções de suporte, consulte a página [Sobre visual studio tools para IA.](about-ai-tools.md)
+Para saber mais sobre Visual Studio Tools for AI, incluindo requisitos de sistema e opções de suporte, consulte a página [sobre Visual Studio Tools for ai](about-ai-tools.md) .
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 [Extensibilidade do Visual Studio](/visualstudio/extensibility/?view=vs-2017)

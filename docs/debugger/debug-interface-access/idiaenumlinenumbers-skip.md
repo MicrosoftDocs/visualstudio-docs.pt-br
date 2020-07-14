@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumLineNumbers::Skip | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58b959db58688fd13c3539f720315971e774a96d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9301b3567b88079c9d7ff91dbfb866a048324294
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744369"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468192"
 ---
 # <a name="idiaenumlinenumbersskip"></a>IDiaEnumLineNumbers::Skip
 Ignora um número especificado de números de linha em uma sequência de enumeração.
@@ -35,8 +35,8 @@ HRESULT Skip ( 
 
 no O número de números de linha na sequência de enumeração a serem ignorados.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará `S_FALSE` se não houver mais números de linha para ignorar.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK` ; caso contrário, retornará `S_FALSE` se não houver mais números de linha a serem ignorados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

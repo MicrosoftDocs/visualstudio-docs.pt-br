@@ -6,15 +6,15 @@ manager: jillfra
 assetId: 4a58e2c6-7a79-4051-8a2c-99182ff8b881
 ms.custom: vs-azure
 ms.workload: azure-vs
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: ae9064b6aba283c8d2fb8d1e5ec02ef1bd70e199
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
-ms.translationtype: HT
+ms.openlocfilehash: e7e7d9a6c1c417b3802ef1f94ac51fec14bf682a
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66260734"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280844"
 ---
 # <a name="retain-a-constant-virtual-ip-address-for-an-azure-cloud-service"></a>Reter um endereço IP virtual constante para um serviço de nuvem do Azure
 Quando você atualiza um serviço de nuvem que é hospedado no Azure, você precisará garantir que o VIP (endereço IP virtual) do serviço não mude. Muitos serviços de gerenciamento de domínio usam o DNS (sistema de nome de domínio) para o registro de nomes de domínio. O DNS só funciona se o VIP permanece o mesmo. Você pode usar o **Assistente de Publicação** nas Ferramentas do Azure para garantir que o VIP do seu serviço de nuvem não seja alterado quando você atualizá-lo. Para obter mais informações sobre como usar o gerenciamento de domínio DNS para serviços de nuvem, consulte [Configurando um nome de domínio personalizado para um serviço de nuvem do Azure](/azure/cloud-services/cloud-services-custom-domain-name-portal).
@@ -35,11 +35,11 @@ Você pode especificar configurações de implantação no **Assistente de Publi
 
     ![Página Publicar Aplicativo do Azure – Entrar](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/azure-publish-signin.png)
 
-4. Na guia **Configurações Comuns**, verifique se o nome do serviço de nuvem no qual você está implantando, o **Ambiente**, a **Configuração de build** e a **Configuração do serviço** estão todos corretos.
+4. Na guia **configurações comuns** , verifique se o nome do serviço de nuvem no qual você está implantando, o **ambiente**, a **configuração de compilação**e a **configuração do serviço** estão todos corretos.
 
     ![Guia Publicar aplicativo do Azure – Configurações Comuns](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/azure-publish-common-settings.png)
 
-5. Na guia **Configurações Avançadas**, verifique se o **Rótulo de implantação** e a **Conta de armazenamento** estão corretas. Verifique se a caixa de seleção **excluir implantação em caso de falha** está desmarcada e se a caixa de seleção **Atualização de implantação** está selecionada. Ao limpar a caixa de seleção **Excluir implantação em caso de falha**, você garante que o VIP não será perdido se ocorrer um erro durante a implantação. Ao marcar a caixa de seleção **Atualização de implantação**, você garante que a implantação não será excluída e que o VIP não será perdido quando você republicar o aplicativo.
+5. Na guia **Configurações Avançadas**, verifique se o **Rótulo de implantação** e a **Conta de armazenamento** estão corretas. Verifique se a caixa de seleção **excluir implantação em caso de falha** está desmarcada e se a caixa de seleção **Atualização de implantação** está selecionada. Desmarcando a caixa de seleção **excluir implantação em caso de falha** , você garante que o VIP não será perdido se ocorrer um erro durante a implantação. Ao marcar a caixa de seleção **Atualização de implantação**, você garante que a implantação não será excluída e que o VIP não será perdido quando você republicar o aplicativo.
 
     ![Guia Publicar aplicativo do Azure – Configurações Avançadas](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/azure-publish-advanced-settings.png)
 
@@ -52,4 +52,4 @@ Você pode especificar configurações de implantação no **Assistente de Publi
     ![Página Publicar Aplicativo do Azure – Resumo](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/azure-publish-summary.png)
 
 ## <a name="next-steps"></a>Próximas etapas
-- [Usando o Assistente Publicar Aplicativo do Azure do Visual Studio](vs-azure-tools-publish-azure-application-wizard.md)
+- [Uso do Assistente Publicar Aplicativo do Azure do Visual Studio](vs-azure-tools-publish-azure-application-wizard.md)

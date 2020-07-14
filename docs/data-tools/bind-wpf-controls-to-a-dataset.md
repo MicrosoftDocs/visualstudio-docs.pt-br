@@ -1,7 +1,7 @@
 ---
 title: Associar controles do WPF a um conjunto de dados
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,18 +15,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8de276bfb6d7ec8bc36380ee41d86de07fc8dd74
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3ad960054e0c2dfe6470c51adbd9f3675fc87952
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586972"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282911"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>Associar controles do WPF a um conjunto de dados
 
 Neste tutorial, você cria um aplicativo do WPF que contém controles associados a dados. Os controles são associados a registros de produto que são encapsulados em um conjunto de dados. Você também adiciona botões para navegar pelos produtos e salvar alterações em registros de produtos.
 
-Esta explicação passo a passo ilustra as seguintes tarefas:
+Este passo a passo ilustra as seguintes tarefas:
 
 - Criando um aplicativo WPF e um conjunto de dados gerado a partir de dados no banco de dados de exemplo AdventureWorksLT.
 
@@ -38,11 +38,11 @@ Esta explicação passo a passo ilustra as seguintes tarefas:
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
+Você precisará dos seguintes componentes para concluir este passo a passo:
 
-- {1&gt;Visual Studio&lt;1}
+- Visual Studio
 
 - Acesso a uma instância em execução do SQL Server ou SQL Server Express que tem o banco de dados de exemplo AdventureWorks Light (AdventureWorksLT) anexado a ele. Você pode baixar o banco de dados AdventureWorksLT do [arquivo CodePlex](https://archive.codeplex.com/?p=awlt2008dbscript).
 
@@ -50,7 +50,7 @@ Conhecimento prévio dos conceitos a seguir também é útil, mas não é necess
 
 - Conjuntos de dados e TableAdapters. Para obter mais informações, consulte [ferramentas de conjunto de dados no Visual Studio](../data-tools/dataset-tools-in-visual-studio.md) e [TableAdapters](../data-tools/create-and-configure-tableadapters.md).
 
-- Associação de dados do WPF. Para obter mais informações, consulte [Visão geral de vinculação de dados](/dotnet/desktop-wpf/data/data-binding-overview).
+- Associação de dados do WPF. Para obter mais informações, consulte [visão geral da ligação de dados](/dotnet/desktop-wpf/data/data-binding-overview).
 
 ## <a name="create-the-project"></a>Criar o projeto
 
@@ -58,9 +58,9 @@ Crie um novo projeto do WPF para exibir registros de produto.
 
 ::: moniker range="vs-2017"
 
-1. {1&gt;Abra o Visual Studio.&lt;1}
+1. Abra o Visual Studio.
 
-2. No menu **arquivo** , selecione **novo** **projeto**de >.
+2. No menu **Arquivo**, selecione **Novo** > **Projeto**.
 
 3. Expanda **Visual Basic** ou **Visual C#** e selecione **Windows**.
 
@@ -72,11 +72,11 @@ Crie um novo projeto do WPF para exibir registros de produto.
 
 ::: moniker range=">=vs-2019"
 
-1. {1&gt;Abra o Visual Studio.&lt;1}
+1. Abra o Visual Studio.
 
-2. Na tela Iniciar, selecione **Criar um novo projeto**.
+2. Na janela iniciar, escolha **criar um novo projeto**.
 
-3. Pesquise o modelo C# de projeto de **aplicativo do WPF** e siga as etapas para criar o projeto, nomeando o projeto **AdventureWorksProductsEditor**.
+3. Pesquise o modelo de projeto do **aplicativo WPF** em C# e siga as etapas para criar o projeto, nomeando o projeto **AdventureWorksProductsEditor**.
 
 ::: moniker-end
 
@@ -92,7 +92,7 @@ Antes de criar controles de associação de dados, você deve definir um modelo 
 
 2. Na janela **Fontes de Dados**, clique em **Adicionar Nova Fonte de Dados**.
 
-   O **Assistente de Configuração de Fonte de Dados** é aberto.
+   O assistente de **configuração de fonte de dados** é aberto.
 
 3. Na página **Escolher um Tipo de Fonte de Dados**, selecione **Banco de Dados** e clique em **Avançar**.
 
@@ -106,13 +106,13 @@ Antes de criar controles de associação de dados, você deve definir um modelo 
 
 6. Na página **Salvar a Cadeia de Conexão no Arquivo de Configuração do Aplicativo** marque a caixa de seleção **Sim, salvar a conexão como** e clique em **Próximo**.
 
-7. Na página **Escolher Objetos do Banco de Dados**, expanda **Tabelas** e selecione a tabela **Produto (SalesLT)** .
+7. Na página **Escolher Objetos do Banco de Dados**, expanda **Tabelas** e selecione a tabela **Produto (SalesLT)**.
 
-8. Clique em **Finalizar**.
+8. Clique em **Concluir**.
 
-   O Visual Studio adiciona um novo arquivo `AdventureWorksLTDataSet.xsd` ao projeto e adiciona um item **AdventureWorksLTDataSet** correspondente à janela fontes de **dados** . O arquivo `AdventureWorksLTDataSet.xsd` define um dataset tipado chamado `AdventureWorksLTDataSet` e um TableAdapter chamado `ProductTableAdapter`. A seguir neste passo a passo, você usará o `ProductTableAdapter` para preencher o conjunto de dados com dados e salvar as alterações no banco de dados.
+   O Visual Studio adiciona um novo `AdventureWorksLTDataSet.xsd` arquivo ao projeto e adiciona um item **AdventureWorksLTDataSet** correspondente à janela fontes de **dados** . O `AdventureWorksLTDataSet.xsd` arquivo define um dataset tipado chamado `AdventureWorksLTDataSet` e um TableAdapter chamado `ProductTableAdapter` . A seguir neste passo a passo, você usará o `ProductTableAdapter` para preencher o conjunto de dados com dados e salvar as alterações no banco de dados.
 
-9. Crie o projeto.
+9. Compile o projeto.
 
 ## <a name="edit-the-default-fill-method-of-the-tableadapter"></a>Editar o método Fill padrão do TableAdapter
 
@@ -132,7 +132,7 @@ Para preencher o conjunto de dados com dados, use o método `Fill` do `ProductTa
     WHERE ThumbnailPhotoFileName <> 'no_image_available_small.gif'
     ```
 
-4. Clique em **Finalizar**.
+4. Clique em **Concluir**.
 
 ## <a name="define-the-user-interface"></a>Definir a interface do usuário
 
@@ -140,7 +140,7 @@ Adicione vários botões à janela, modificando o XAML no WPF Designer. A seguir
 
 1. No **Gerenciador de Soluções**, clique duas vezes em *MainWindow.xaml*.
 
-    A janela é aberta no **WPF Designer**.
+    A janela é aberta no **designer do WPF**.
 
 2. Na exibição [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] do designer, adicione o seguinte código entre as marcas `<Grid>`:
 
@@ -154,11 +154,11 @@ Adicione vários botões à janela, modificando o XAML no WPF Designer. A seguir
    <Button HorizontalAlignment="Right" Margin="0,21,46,24" Name="saveButton" Width="110">Save changes</Button>
    ```
 
-3. Crie o projeto.
+3. Compile o projeto.
 
 ## <a name="create-data-bound-controls"></a>Criar controles vinculados a dados
 
-Crie controles que exibam os registros do cliente arrastando a tabela `Product` da janela **fontes de dados** para o designer do WPF.
+Crie controles que exibam os registros do cliente arrastando a `Product` tabela da janela **fontes de dados** para o designer do WPF.
 
 1. Na janela **Fontes de Dados**, abra o menu suspenso para o nó **Produto** e selecione **Detalhes**.
 
@@ -191,13 +191,13 @@ Crie controles que exibam os registros do cliente arrastando a tabela `Product` 
 
 ## <a name="navigate-product-records"></a>Navegar pelos registros de produtos
 
-Adicione o código que permite aos usuários rolar nos registros do produto ao usar os botões **\<** e **>** .
+Adicione o código que permite aos usuários rolar por meio de registros de produto usando os **\<** and **>** botões.
 
-1. No designer, clique duas vezes no botão **<** na superfície da janela.
+1. No designer, clique duas vezes no **<** botão na superfície da janela.
 
      O Visual Studio abre o arquivo code-behind e cria um novo manipulador de eventos `backButton_Click` para o evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.
 
-2. Modifique o manipulador de eventos `Window_Loaded` para que `ProductViewSource`, `AdventureWorksLTDataSet` e `AdventureWorksLTDataSetProductTableAdapter` fiquem fora do método e acessíveis a todo o formulário. Declare apenas que eles sejam globais para o formulário e atribua-os dentro do manipulador de eventos `Window_Loaded` semelhante ao seguinte:
+2. Modifique o manipulador de eventos `Window_Loaded` para que `ProductViewSource`, `AdventureWorksLTDataSet` e `AdventureWorksLTDataSetProductTableAdapter` fiquem fora do método e acessíveis a todo o formulário. Declare apenas que eles sejam globais para o formulário e atribua-os no `Window_Loaded` manipulador de eventos semelhante ao seguinte:
 
      [!code-csharp[Data_WPFDATASET#1](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_1.cs)]
      [!code-vb[Data_WPFDATASET#1](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_1.vb)]
@@ -207,7 +207,7 @@ Adicione o código que permite aos usuários rolar nos registros do produto ao u
      [!code-csharp[Data_WPFDATASET#2](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_2.cs)]
      [!code-vb[Data_WPFDATASET#2](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_2.vb)]
 
-4. Retorne ao designer e clique duas vezes no botão **>** .
+4. Retorne ao designer e clique duas vezes no **>** botão.
 
 5. Adicione o seguinte código ao manipulador de eventos do `nextButton_Click`:
 
@@ -232,7 +232,7 @@ Adicione o código que permite aos usuários salvar alterações em registros de
 
 ## <a name="test-the-application"></a>Testar o aplicativo
 
-Crie e execute o aplicativo. Verifique se você pode exibir e atualizar registros de produtos.
+Criar e executar o aplicativo. Verifique se você pode exibir e atualizar registros de produtos.
 
 1. Pressione **F5**.
 
@@ -240,7 +240,7 @@ Crie e execute o aplicativo. Verifique se você pode exibir e atualizar registro
 
     - As caixas de texto exibem dados do primeiro registro do produto que tem uma foto. Este produto tem a ID 713 e o nome **Long-Sleeve Logo Jersey, S**.
 
-    - Você pode clicar nos botões **>** ou **<** para navegar em outros registros de produto.
+    - Você pode clicar nos **>** **<** botões ou para navegar por outros registros de produto.
 
 2. Em um dos registros de produto, altere o valor **Tamanho** e clique em **Salvar Alterações**.
 
@@ -250,7 +250,7 @@ Crie e execute o aplicativo. Verifique se você pode exibir e atualizar registro
 
 5. Feche o aplicativo.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Depois de concluir este passo a passos, você pode tentar as seguintes tarefas relacionadas:
 
@@ -262,4 +262,4 @@ Depois de concluir este passo a passos, você pode tentar as seguintes tarefas r
 
 - [Associar controles WPF a dados no Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
 - [Ferramentas de conjunto de dados no Visual Studio](../data-tools/dataset-tools-in-visual-studio.md)
-- [Visão geral da vinculação de dados](/dotnet/desktop-wpf/data/data-binding-overview)
+- [Visão geral da ligação de dados](/dotnet/desktop-wpf/data/data-binding-overview)

@@ -1,23 +1,23 @@
 ---
 title: Definindo uma imagem de plano de fundo em um diagrama
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bdf30636a6c7fee1463cbe554058f0802a5f6f0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7701bf0ba1467b481f6da64d3c2e229be77a7fe7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591951"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542578"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>Definindo uma imagem de plano de fundo em um diagrama
 No SDK de visualização e modelagem do Visual Studio, você pode definir a imagem de plano de fundo para um designer gerado usando código personalizado.
 
-## <a name="setting-the-background-image"></a>Configurando a imagem de plano de fundo
+## <a name="setting-the-background-image"></a>Configuração da imagem da tela de fundo
 
 #### <a name="to-set-a-background-image-for-a-generated-designer"></a>Para configurar uma imagem de plano de fundo de um designer gerado
 
@@ -43,7 +43,7 @@ No SDK de visualização e modelagem do Visual Studio, você pode definir a imag
 
 11. Se Resources.Designer.cs estiver ausente, clique no arquivo Resources. resx em **Gerenciador de soluções**.
 
-12. Na janela **Propriedades** , defina a propriedade `Custom Tool` como `ResXFileCodeGenerator`.
+12. Na janela **Propriedades** , defina a `Custom Tool` propriedade como `ResXFileCodeGenerator` .
 
 13. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto DSL, aponte para **Adicionar**e clique em **nova pasta**.
 
@@ -53,7 +53,7 @@ No SDK de visualização e modelagem do Visual Studio, você pode definir a imag
 
 16. Na caixa de diálogo **Adicionar novo item** , na lista **modelos** , clique em **arquivo de código**.
 
-17. Na caixa **nome** , digite `BackgroundImage.cs`e clique em **Adicionar**.
+17. Na caixa **nome** , digite `BackgroundImage.cs` e clique em **Adicionar**.
 
 18. Copie o código a seguir no arquivo BackgroundImage.cs, ajustando o namespace, o nome da classe do diagrama e o nome do recurso do arquivo de imagem.
 
@@ -100,11 +100,11 @@ No SDK de visualização e modelagem do Visual Studio, você pode definir a imag
 
      Para obter mais informações sobre como personalizar o modelo com o código do programa, consulte [navegando e atualizando um modelo no código do programa](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Definindo formas e conectores](../modeling/defining-shapes-and-connectors.md)
 - [Personalizando campos de texto e imagem](../modeling/customizing-text-and-image-fields.md)
-- [Navegando por um modelo no código do programa e atualizando-o](../modeling/navigating-and-updating-a-model-in-program-code.md)
+- [Navegando e atualizando um modelo no código do programa](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Escrevendo código para personalizar uma linguagem específica de domínio](../modeling/writing-code-to-customise-a-domain-specific-language.md)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

@@ -1,5 +1,5 @@
 ---
-title: Ampliação de menus e comandos | Microsoft Docs
+title: Estendendo menus e comandos | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,39 +12,39 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dfcedd3f1b4cb48631541f1726556dab766402ab
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: c344d996c70012ef1516fa2bebe52394739bea35
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80711806"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768584"
 ---
 # <a name="extend-menus-and-commands"></a>Estender menus e comandos
-Comandos são a maneira como você adiciona ações e processos ao Visual Studio. Na maioria dos casos, os comandos são exibidos em menus ou barras de ferramentas. O modelo de projeto VSPackage mostra como implementar um comando muito básico. Para uma implementação um pouco mais longa, mas ainda básica, consulte [Criar uma extensão com um comando menu](../extensibility/creating-an-extension-with-a-menu-command.md).
+Os comandos são a maneira como você adiciona ações e processos ao Visual Studio. Na maioria dos casos, os comandos são exibidos em menus ou barras de ferramentas. O modelo de projeto VSPackage mostra como implementar um comando muito básico. Para uma implementação um pouco mais longa, mas ainda básica, consulte [criar uma extensão com um comando de menu](../extensibility/creating-an-extension-with-a-menu-command.md).
 
- Para obter mais informações sobre comandos, menus e barras de ferramentas do Visual Studio, consulte [Comandos, menus e barras de ferramentas](../extensibility/internals/commands-menus-and-toolbars.md).
+ Para obter mais informações sobre comandos, menus e barras de ferramentas do Visual Studio, consulte [comandos, menus e barras de ferramentas](../extensibility/internals/commands-menus-and-toolbars.md).
 
- Comandos, menus e barras de ferramentas são definidos no arquivo *.vsct* que faz parte dos projetos VSPackage. Você pode encontrar informações sobre o Visual Studio IDE e o arquivo *.vsct* em [Como vsPackages adicionam elementos de interface do usuário](../extensibility/internals/how-vspackages-add-user-interface-elements.md).
+ Os comandos, menus e barras de ferramentas são definidos no arquivo *. vsct* que faz parte de projetos VSPackage. Você pode encontrar informações sobre o IDE do Visual Studio e o arquivo *. vsct* em [como VSPackages adicionar elementos da interface do usuário](../extensibility/internals/how-vspackages-add-user-interface-elements.md).
 
  Os tópicos a seguir explicam como adicionar diferentes tipos de comandos, menus e barras de ferramentas.
 
 ## <a name="in-this-section"></a>Nesta seção
-- [Adicione um menu à barra de menus do Visual Studio](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) Explica como adicionar um menu à barra de menus do Visual Studio.
+- [Adicionar um menu à barra de menus do Visual Studio](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) Explica como adicionar um menu à barra de menus superior do Visual Studio.
 
-- [Vincular atalhos de teclado a itens de menu](../extensibility/binding-keyboard-shortcuts-to-menu-items.md) Explica como adicionar um atalho de teclado (como CTRL + 3) a um item do menu.
+- [Associar atalhos de teclado a itens de menu](../extensibility/binding-keyboard-shortcuts-to-menu-items.md) Explica como adicionar um atalho de teclado (como CTRL + 3) a um item de menu.
 
-- [Adicione um submenu a um menu](../extensibility/adding-a-submenu-to-a-menu.md) Explica como adicionar um submenu ao menu superior.
+- [Adicionar um submenu a um menu](../extensibility/adding-a-submenu-to-a-menu.md) Explica como adicionar um submenu ao menu superior.
 
-- [Adicione uma lista usada mais recentemente a um submenu](../extensibility/adding-a-most-recently-used-list-to-a-submenu.md) Explica como adicionar uma lista usada mais recentemente.
+- [Adicionar uma lista usada mais recentemente a um submenu](../extensibility/adding-a-most-recently-used-list-to-a-submenu.md) Explica como adicionar uma lista usada mais recentemente.
 
-- [Criar grupos reutilizáveis de botões](../extensibility/creating-reusable-groups-of-buttons.md) Descreve como agrupar itens de comando para que eles possam ser incluídos em vários menus.
+- [Criar grupos de botões reutilizáveis](../extensibility/creating-reusable-groups-of-buttons.md) Descreve como agrupar itens de comando para que eles possam ser incluídos em vários menus.
 
-- [Adicionar ícones aos comandos do menu](../extensibility/adding-icons-to-menu-commands.md) Descreve como adicionar um ícone a um comando em uma barra de ferramentas e um menu.
+- [Adicionar ícones a comandos de menu](../extensibility/adding-icons-to-menu-commands.md) Descreve como adicionar um ícone a um comando em uma barra de ferramentas e em um menu.
 
-- [Alterar o texto de um comando menu](../extensibility/changing-the-text-of-a-menu-command.md) Descreve o uso `TextChanges` do sinalizador para permitir que um item do menu seja alterado dinamicamente.
+- [Alterar o texto de um comando de menu](../extensibility/changing-the-text-of-a-menu-command.md) Descreve o uso do `TextChanges` sinalizador para permitir que um item de menu seja alterado dinamicamente.
 
-- [Alterar a aparência de um comando](../extensibility/changing-the-appearance-of-a-command.md) Descreve como ativar ou desativar dinamicamente um comando.
+- [Alterar a aparência de um comando](../extensibility/changing-the-appearance-of-a-command.md) Descreve como habilitar ou desabilitar um comando dinamicamente.
 
-- [Atualize a interface do usuário](../extensibility/updating-the-user-interface.md) Descreve como forçar uma atualização da interface do usuário para refletir as mudanças recentes.
+- [Atualizar a interface do usuário](../extensibility/updating-the-user-interface.md) Descreve como forçar uma atualização da interface do usuário para refletir as alterações recentes.
 
-- [Menu localize comandos](../extensibility/localizing-menu-commands.md) Explica como localizar comandos de menu.
+- [Comandos do menu localizar](../extensibility/localizing-menu-commands.md) Explica como localizar comandos de menu.

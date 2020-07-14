@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_intrinsic | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a300cd39e85e84ee3a008f3dc011ddcccb6ce5e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 864a86f261ca115e9c5186129577696582966e18
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740361"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463522"
 ---
 # <a name="idiasymbolget_intrinsic"></a>IDiaSymbol::get_intrinsic
 Recupera um sinalizador que especifica se uma classe é um tipo intrínseco.
@@ -33,10 +33,10 @@ HRESULT get_intrinsic( 
 #### <a name="parameters"></a>Parâmetros
  `pRetVal`
 
-fora Retorna `TRUE` se a classe for um tipo intrínseco; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se a classe é um tipo intrínseco; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
@@ -50,5 +50,5 @@ fora Retorna `TRUE` se a classe for um tipo intrínseco; caso contrário, retorn
 
  DLL: msdia100.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

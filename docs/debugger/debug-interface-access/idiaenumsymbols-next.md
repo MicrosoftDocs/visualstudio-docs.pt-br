@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSymbols::Next | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2d754c144ad876890b89ea217bf0ac55ad60b24
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 110cacc241a733289b8cdce60c2d64c6fdf298e2
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743930"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467725"
 ---
 # <a name="idiaenumsymbolsnext"></a>IDiaEnumSymbols::Next
 Recupera um número especificado de símbolos na sequência de enumeração.
@@ -45,7 +45,7 @@ fora Uma matriz que deve ser preenchida com os objetos [IDiaSymbol](../../debugg
 
 fora Retorna o número de símbolos no enumerador obtido.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver mais símbolos. Caso contrário, retornará um código de erro.
 
 ## <a name="example"></a>Exemplo
@@ -57,7 +57,7 @@ DWORD celt;
 pEnum->Next( 1, &pSym, &celt );
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
 - [IDiaSession::findLinesByLinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

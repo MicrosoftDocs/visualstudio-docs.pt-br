@@ -5,14 +5,14 @@ ms.author: v-evwin
 manager: lank
 ms.assetid: badd1d4a-90a6-46de-a037-945a91e6019b
 ms.date: 04/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: Saiba mais sobre o benefício Visual Studio App Center incluído em assinaturas do Visual Studio.
-ms.openlocfilehash: d47e3cfef8be2a3a03dab94d6a38f2ecde160f0c
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: 27d2e060cf3f4ab1aad8b81c39a5cef52ac0e770
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81649787"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85906043"
 ---
 # <a name="visual-studio-app-center-in-visual-studio-subscriptions"></a>Visual Studio App Center em assinaturas do Visual Studio
 
@@ -43,26 +43,26 @@ O App Center é o controle de missões para aplicativos.
 | Nível de Assinatura                                                 |     Canais                                            | Benefício                                                          | Renovável?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard, nuvem mensal)   | VL, Azure, Retail,  NFR<sup>1</sup> | Incluso       |  Sim          |
-| Visual Studio Enterprise com GitHub Enterprise  | Vl | Incluso       |  Sim          |
+| Visual Studio Enterprise com GitHub Enterprise  | VL | Incluso       |  Sim          |
 | Visual Studio Professional (Standard, nuvem mensal) | VL, Azure, Retail                                       | Incluso                                                            |Sim |
-| Visual Studio Professional com GitHub Enterprise | Vl                                      | Incluso                                                            |Sim |
+| Visual Studio Professional com GitHub Enterprise | VL                                      | Incluso                                                            |Sim |
 | Visual Studio Test Professional (Padrão)                         | VL, Retail                                              | Incluso                                                            |Sim |
 | Plataformas MSDN (Padrão)                                          | VL, Retail                                              | Incluso                                                            |Sim |
 ||
 
-<sup>1</sup>  *Inclui: Not for Resale (NFR), FTE, Visual Studio Industry Partner (VSIP), Imagine, Microsoft Partner Network (MPN), MCT Software & Services, MCT Software & Services Developer, BizSpark, Most Valuable Professional (MVP), Regional Director (RD).*
+<sup>1</sup>  *inclui: não para revenda (NFR), FTE, Visual Studio Industry Partner (VSIP), imagine, Microsoft Partner Network (MPN), MCT software & Services, MCT software & Services Developer, BizSpark, profissional mais valioso (MVP), diretor regional (RD).*
 
 > [!NOTE]
-> A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) ir para explorar diferentes opções para comprar o Visual Studio.
+> A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a ir para [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a fim de explorar diferentes opções para comprar o Visual Studio.
 
-Não tem certeza de qual assinatura você está usando?  Conecte-se [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) para ver todas as assinaturas atribuídas ao seu endereço de e-mail. Se não vir todas as suas assinaturas, talvez você tenha uma ou mais atribuídas a outro endereço de email.  Você precisará entrar com esse endereço de email para ver as assinaturas.
+Não tem certeza de qual assinatura você está usando?  Conecte-se ao [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) para ver todas as assinaturas atribuídas ao seu endereço de email. Se não vir todas as suas assinaturas, talvez você tenha uma ou mais atribuídas a outro endereço de email.  Você precisará entrar com esse endereço de email para ver as assinaturas.
 
 ## <a name="frequently-asked-questions"></a>Perguntas frequentes
 
 ### <a name="q--i-get-an-error-that-my-browser-is-unsupported--whats-wrong"></a>P: Eu recebo um erro de que meu navegador não tem suporte.  Qual é o problema?
 R: O App Center requer recursos mais recentes que podem não ser fornecidos por alguns navegadores mais antigos.  Se o navegador não tiver suporte, siga estas etapas:
 1. Abra um navegador diferente, como o Microsoft Edge ou as versões mais recentes do Google Chrome, do Firefox ou do Safari.
-2. Conecte-se [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) ao Visual Studio e faça login.
+2. Conecte-se ao Visual Studio [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) e entre.
 3. Agora, clique no link **Introdução** no bloco do App Center do Visual Studio.
 
 Agora você deve ser capaz de acessar o portal do App Center e criar a conta.
@@ -72,7 +72,7 @@ Agora você deve ser capaz de acessar o portal do App Center e criar a conta.
   - Obtenha orientação e respostas da Equipe do App Center no [Centro de Ajuda do App Center](https://intercom.help/appcenter/).
   - Confira a [documentação completa do App Center](/appcenter/)
 - Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio.
-- Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite [o Visual Studio Support](https://visualstudio.microsoft.com/support/).
+- Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](https://docs.microsoft.com/visualstudio/)

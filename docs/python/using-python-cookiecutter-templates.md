@@ -2,7 +2,7 @@
 title: Usar modelos do CookieCutter com o Python
 description: O Visual Studio oferece suporte à extensão Cookiecutter gráfica para descobrir os modelos para o código Python e criar projetos a partir desses modelos.
 ms.date: 01/28/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,20 +10,20 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: eeea19b1d2ff4a4d24f27280a48b9ae673406908
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 026953ff52f4aa5c34dd4656432fed8ef2a48580
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62832129"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535142"
 ---
 # <a name="use-the-cookiecutter-extension"></a>Usar a extensão Cookiecutter
 
 O [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) fornece uma interface gráfica do usuário para descobrir modelos e opções de modelo de entrada e criar projetos e arquivos. Ele é incluído no Visual Studio 2017 e posterior e pode ser instalado separadamente em versões anteriores do Visual Studio.
 
-O Cookiecutter exige o Python 3.3 ou posterior (32 ou 64 bits) ou o Anaconda 3 4.2 ou posterior (32 ou 64 bits). Se um interpretador do Python adequado não estiver disponível, o Visual Studio exibirá um aviso. Se você instalar um interpretador Python enquanto o Visual Studio estiver em execução, clique no botão **Home** na barra de ferramentas do Cookiecutter para detectar o interpretador recém-instalado. (Consulte [ambientes Python](managing-python-environments-in-visual-studio.md) para saber mais sobre ambientes em geral.)
+O Cookiecutter exige o Python 3.3 ou posterior (32 ou 64 bits) ou o Anaconda 3 4.2 ou posterior (32 ou 64 bits). Se um interpretador do Python adequado não estiver disponível, o Visual Studio exibirá um aviso. Se você instalar um interpretador do Python enquanto o Visual Studio estiver em execução, clique no botão **página inicial** na barra de ferramentas CookieCutter para detectar o intérprete recentemente instalado. (Veja [ambientes Python](managing-python-environments-in-visual-studio.md) para obter mais informações sobre ambientes em geral.)
 
-Uma vez instalado, selecione **Exibir** > **Cookiecutter Explorer** para abrir sua janela:
+Depois de instalado, selecione **Exibir**  >  **CookieCutter Explorer** para abrir sua janela:
 
 ![Janela principal do Cookiecutter](media/cookiecutter-overview.png)
 
@@ -38,7 +38,7 @@ A home page do Cookiecutter exibe uma lista de modelos a serem escolhidos, organ
 | Agrupar | Descrição |
 | --- | --- |
 | **Instalado** | Modelos que foram instalados no computador local. Quando um modelo online é usado, seu repositório é clonado automaticamente em uma subpasta de *~/.cookiecutters*. É possível excluir um modelo instalado escolhido pressionando **Delete**. |
-| **Recomendado** | Modelos carregados do feed recomendado. O feed padrão é coletado pela Microsoft. Consulte [Opções do Cookiecutter](#cookiecutter-options) abaixo para obter detalhes sobre como personalizar o feed. |
+| **Recomendadas** | Modelos carregados do feed recomendado. O feed padrão é coletado pela Microsoft. Consulte [Opções do Cookiecutter](#cookiecutter-options) abaixo para obter detalhes sobre como personalizar o feed. |
 | **GitHub** | Resultados da pesquisa do GitHub para a palavra-chave cookiecutter. Os resultados do GitHub retornam paginados e, se houver mais resultados disponíveis, a opção **Carregar Mais** será exibida ao final da lista. |
 | **Personalizado** | Quando uma localização personalizada é inserida na caixa de pesquisa, ela é exibida nesse grupo. É possível digitar um caminho completo para o repositório GitHub ou o caminho completo para uma pasta no disco local. |
 
@@ -75,13 +75,13 @@ Depois que os arquivos forem criados com êxito, o Cookiecutter fornecerá uma o
 
 ## <a name="cookiecutter-options"></a>Opções do Cookiecutter
 
-As opções de cookiecutter estão disponíveis através do **Tools** > **Options** > **Cookiecutter**:
+As opções de CookieCutter estão disponíveis por meio de **ferramentas**  >  **Opções**  >  **CookieCutter**:
 
 ![Opções do Cookiecutter](media/cookiecutter-tools-options.png)
 
 | Opção | Descrição |
 | --- | --- |
-| **URL de feed recomendado** | A localização do feed recomendado dos modelos. Pode ser uma URL ou um caminho para um arquivo local. Deixe a URL vazia para usar o feed padrão coletado pela Microsoft. O feed fornece uma lista simples de localizações de modelos, separadas por novas linhas. Para solicitar alterações ao feed coletado, faça uma solicitação pull [na fonte, no GitHub](https://github.com/Microsoft/PTVS/blob/master/Python/Product/Cookiecutter/CookiecutterFeed.txt). |
+| **URL de feed recomendada** | A localização do feed recomendado dos modelos. Pode ser uma URL ou um caminho para um arquivo local. Deixe a URL vazia para usar o feed padrão coletado pela Microsoft. O feed fornece uma lista simples de localizações de modelos, separadas por novas linhas. Para solicitar alterações ao feed coletado, faça uma solicitação pull [na fonte, no GitHub](https://github.com/Microsoft/PTVS/blob/master/Python/Product/Cookiecutter/CookiecutterFeed.txt). |
 | **Mostrar Ajuda** | Controla a visibilidade da barra de informações de ajuda na parte superior da janela do Cookiecutter. |
 
 ## <a name="optimize-cookiecutter-templates-for-visual-studio"></a>Otimizar modelos do Cookiecutter para o Visual Studio
@@ -97,10 +97,10 @@ A renderização padrão de uma variável de modelo depende do tipo de dados (ca
 
 | Propriedade | Descrição |
 | --- | --- |
-| Rótulo | Especifica o que é exibido acima do editor para a variável, em vez do nome da variável. |
+| Rotular | Especifica o que é exibido acima do editor para a variável, em vez do nome da variável. |
 | Descrição | Especifica a dica de ferramenta que é exibida no controle de edição, em vez do valor padrão dessa variável. |
 | URL | Altera o rótulo para um hiperlink, com uma dica de ferramenta que mostra a URL. Se você clicar no hiperlink, o navegador padrão do usuário será aberto nessa URL. |
-| Seletor | Permite a personalização do editor para uma variável. Atualmente, há suporte para os seguintes seletores:<ul><li>`string`: caixa de texto padrão, o padrão para cadeias de caracteres.</li><li>`list`: caixa de combinação padrão, o padrão para listas.</li><li>`yesno`: caixa de combinação para escolher entre `y` e `n`, para cadeias de caracteres.</li><li>`odbcConnection`: Caixa de texto com um **...** botão que traz à tona uma caixa de diálogo de conexão de banco de dados.</li></ul> |
+| Seletor | Permite a personalização do editor para uma variável. Atualmente, há suporte para os seguintes seletores:<ul><li>`string`: caixa de texto padrão, o padrão para cadeias de caracteres.</li><li>`list`: caixa de combinação padrão, o padrão para listas.</li><li>`yesno`: caixa de combinação para escolher entre `y` e `n`, para cadeias de caracteres.</li><li>`odbcConnection`: Caixa de texto com um botão **...** que abre um diálogo de conexão de banco de dados.</li></ul> |
 
 Exemplo:
 
@@ -156,7 +156,7 @@ Exemplo:
 ]
 ```
 
-Os comandos são especificados pelo nome e devem usar o nome não localizado (em inglês) para funcionar em instalações localizadas do Visual Studio. Você pode testar e descobrir nomes de comando na janela **do Comando do** Visual Studio.
+Os comandos são especificados pelo nome e devem usar o nome não localizado (em inglês) para funcionar em instalações localizadas do Visual Studio. Você pode testar e descobrir os nomes de comando na janela de **comando** do Visual Studio.
 
 Se desejar passar um único argumento, especifique-o como uma cadeia de caracteres, como no exemplo anterior.
 
@@ -170,7 +170,7 @@ Se não precisar passar um argumento, deixe-o como uma cadeia de caracteres vazi
 ]
 ```
 
-Use uma matriz para vários argumentos. Para opções, divida a opção e seu valor em argumentos separados e use a delimitação correta. Por exemplo: 
+Use uma matriz para vários argumentos. Para opções, divida a opção e seu valor em argumentos separados e use a delimitação correta. Por exemplo:
 
 ```json
 "_visual_studio_post_cmds": [
@@ -187,7 +187,7 @@ Use uma matriz para vários argumentos. Para opções, divida a opção e seu va
 
 Os argumentos podem se referir a outras variáveis do Cookiecutter. Nos exemplos acima, a variável `_output_folder_path` interna é usada para formar um caminho absoluto para os arquivos gerados.
 
-Observe que o comando `Python.InstallProjectRequirements` apenas funciona ao adicionar arquivos a um projeto existente. Essa limitação existe porque o comando é processado pelo projeto Python no **Gerenciador de Soluções** e não há nenhum projeto para receber a mensagem no **Gerenciador de Soluções** - **Exibição de Pasta**. Esperamos remover a limitação para ganhar uma versão futura (e fornecer um melhor suporte **ao Folder View** em geral).
+Observe que o comando `Python.InstallProjectRequirements` apenas funciona ao adicionar arquivos a um projeto existente. Essa limitação existe porque o comando é processado pelo projeto Python no **Gerenciador de Soluções** e não há nenhum projeto para receber a mensagem no **Gerenciador de Soluções** - **Exibição de Pasta**. Esperamos remover a limitação de uma versão futura (e fornecer um melhor suporte à **exibição de pasta** em geral).
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
@@ -212,7 +212,7 @@ Falhas de clone:
 
 Falhas de carregamento:
 
-- **chrisdev/wagtail-cookiecutter-foundation** (usa um tipo booleano em *cookiecutter.json*)
+- **chrisdev/wagtail-CookieCutter-Foundation** (usa um tipo booliano em *cookiecutter.jsem*)
 - **quintoandar/cookiecutter-android** (nenhuma pasta de modelos)
 
 Falhas de execução:

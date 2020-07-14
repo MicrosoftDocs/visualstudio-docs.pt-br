@@ -5,12 +5,13 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 02/15/2018
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
-ms.openlocfilehash: e6dbe3b04a39a1ffd9a6e1b8f241b497ba8a6563
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: 1d381bbfd0e83008b962968816c77f540e6a52f5
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74984854"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950455"
 ---
 # <a name="set-up-a-git-repository"></a>Configurar um repositório GIT
 
@@ -62,7 +63,7 @@ Se você tiver um projeto existente que ainda _não está_ no controle de versã
 
     Também é possível usar SSH para conectar-se ao GIT.
 
-5. Para tentar publicar o aplicativo no Git, selecione o repositório e certifique-se de que ambos os campos de texto Nome e **Mensagem** **do Módulo** estejam concluídos:
+5. Para tentar publicar o aplicativo no git, selecione o repositório e verifique se os campos **nome do módulo** e texto da **mensagem** estão concluídos:
 
     ![Tentativa de publicar o projeto para o git](media/version-control-git7.png)
 
@@ -131,7 +132,7 @@ O Visual Studio para Mac agora efetuará push das alterações para o repositór
 
 Provavelmente você precisará trabalhar com um repositório do GitHub que exista apenas remotamente e não em seu computador local. O Visual Studio para Mac permite que você faça rapidamente o check-out desse repositório. Siga as etapas abaixo para cloná-lo em seu computador:
 
-1. Na barra menu, selecione **Verificação de > de controle de versão**:
+1. Na barra de menus, selecione **controle de versão > check-out**:
 
 2. Isso exibirá a guia **Conectar ao Repositório**:
 
@@ -141,7 +142,7 @@ Provavelmente você precisará trabalhar com um repositório do GitHub que exist
 
     ![url do github exibida](media/version-control-git14.png)
 
-4. Substitua todo o texto no campo de entrada **url** na guia **Conectar ao repositório.** Isso preencherá a maioria dos outros campos nesta guia para você, conforme ilustrado na imagem na etapa #2.
+4. Substitua todo o texto no campo entrada de **URL** na guia **conectar ao repositório** . Isso preencherá a maioria dos outros campos nesta guia para você, conforme ilustrado na imagem na etapa #2.
 
 5. Insira o diretório no qual você deseja clonar o repositório e pressione **Check-out**.
 
@@ -162,6 +163,6 @@ Se houver problemas ao inicializar seu projeto com um repositório remoto vazio,
 1. Navegue para o menu de Controle de versão e escolha **Publicar no controle de versão**.
 1. Siga as etapas do tutorial acima a partir da etapa 6.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Controle de versão no Visual Studio (no Windows)](/visualstudio/version-control/)

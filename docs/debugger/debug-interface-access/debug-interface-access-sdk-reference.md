@@ -1,7 +1,7 @@
 ---
 title: Referência do SDK de acesso à interface de depuração | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5aa8e898a4f045f739eed156e181346a9a6e2df3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7fb49ee4ccd49d848b4d770459352c685469fb7b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745276"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468696"
 ---
 # <a name="debug-interface-access-sdk-reference"></a>Referência do SDK de Acesso à Interface de Depuração
 
@@ -41,10 +41,10 @@ Descreve um número de cadeias de caracteres e seus rótulos que podem ser usado
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Símbolos e marcações de símbolos](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)
+[Símbolos e marcas de símbolos](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)
 
 Descreve quais símbolos são e como eles são identificados por tipo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [SDK de Acesso à Interface de Depuração](../../debugger/debug-interface-access/debug-interface-access-sdk.md)

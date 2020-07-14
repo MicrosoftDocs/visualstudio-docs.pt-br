@@ -15,19 +15,19 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 647fef2968971cddb6a14cc19e53eed979b9c151
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 772c9bee3f43c42701bfa460c622f4a225ec59cb
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661513"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539172"
 ---
-# <a name="ca1301-avoid-duplicate-accelerators"></a>CA1301: evitar aceleradores duplicados
+# <a name="ca1301-avoid-duplicate-accelerators"></a>CA1301: Evitar aceleradores duplicados
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|AvoidDuplicateAccelerators|
+|TypeName|AvoidDuplicateAccelerators|
 |CheckId|CA1301|
 |Categoria|Microsoft. Globalization|
 |Alteração Significativa|Sem interrupção|
@@ -47,9 +47,9 @@ ms.locfileid: "72661513"
  Não suprima um aviso nessa regra.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir mostra uma forma mínima que contém dois controles que têm chaves de acesso idênticas. As chaves são armazenadas em um arquivo de recurso, que não é mostrado; no entanto, seus valores aparecem nas linhas de `checkBox.Text` comentadas. O comportamento de aceleradores duplicados pode ser examinado por meio da troca de linhas `checkBox.Text` com suas contrapartes comentadas. No entanto, nesse caso, o exemplo não gerará um aviso da regra.
+ O exemplo a seguir mostra uma forma mínima que contém dois controles que têm chaves de acesso idênticas. As chaves são armazenadas em um arquivo de recurso, que não é mostrado; no entanto, seus valores aparecem nas linhas comentadas `checkBox.Text` . O comportamento de aceleradores duplicados pode ser examinado pela troca de `checkBox.Text` linhas com suas contrapartes comentadas. No entanto, nesse caso, o exemplo não gerará um aviso da regra.
 
  [!code-csharp[FxCop.Globalization.AvoidDuplicateAccels#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Globalization.AvoidDuplicateAccels/cs/FxCop.Globalization.AvoidDuplicateAccels.cs#1)]
 
-## <a name="see-also"></a>Consulte também
- <xref:System.Resources.ResourceManager?displayProperty=fullName> [recursos em aplicativos da área de trabalho](https://msdn.microsoft.com/library/8ad495d4-2941-40cf-bf64-e82e85825890)
+## <a name="see-also"></a>Consulte Também
+ <xref:System.Resources.ResourceManager?displayProperty=fullName>[Recursos em aplicativos da área de trabalho](https://msdn.microsoft.com/library/8ad495d4-2941-40cf-bf64-e82e85825890)

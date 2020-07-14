@@ -1,7 +1,7 @@
 ---
-title: 'Erro: o servidor Web foi bloqueado e está bloqueando o verbo de depuração | Microsoft Docs'
+title: Erro-o servidor Web foi bloqueado e está bloqueando o verbo de depuração | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.webdbg_debug_verb_blocked
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9564f077a5379f44d2beb4d7851453dd6b35fa48
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: abef1edefad63e340170e7934f4ad87cce268e46
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736951"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460358"
 ---
 # <a name="error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb"></a>Erro: o servidor Web foi bloqueado e está bloqueando o verbo DEBUG
 Falha ao entrar em um aplicativo Web ou serviço Web XML porque a ferramenta de bloqueio do IIS foi executada e URLScan foi instalado e ativado. Esta condição impede o IIS de receber o verbo DEBUG.
@@ -48,6 +48,6 @@ Falha ao entrar em um aplicativo Web ou serviço Web XML porque a ferramenta de 
 
 7. Reinicie o servidor ou reinicie o IIS.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Depurando aplicativos Web: erros e solução de problemas](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
-- [Erro: o servidor Web não conseguiu localizar o recurso solicitado](../debugger/error-the-web-server-could-not-find-the-requested-resource.md)
+- [Erro: o servidor Web não pôde localizar o recurso solicitado](../debugger/error-the-web-server-could-not-find-the-requested-resource.md)

@@ -1,7 +1,7 @@
 ---
 title: Inspecionar uma exceção – Visual Studio | Microsoft Docs
 ms.date: 1/18/2020
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2dae1609486ec4f3462be89b0526467dd7414647
-ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
+ms.openlocfilehash: 75d044ed5ddaf4b7eb7a66bc09c8b3de3502a50f
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76829785"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350492"
 ---
 # <a name="inspect-an-exception-using-the-exception-helper"></a>Inspecionar uma exceção usando o auxiliar de exceção 
 
@@ -38,7 +38,7 @@ Quando o depurador interrompe uma exceção, um ícone de erro de exceção é e
 Você pode ler instantaneamente o tipo de exceção e a mensagem de exceção no auxiliar de exceção e se a exceção foi gerada ou não tratada. Você pode inspecionar e exibir as propriedades do objeto de exceção clicando no link **Exibir detalhes** .
 
 ## <a name="analyze-null-references"></a>Analisar referências nulas
-A partir do Visual Studio 2017, para .net e C/C++ Code, ao atingir um `NullReferenceException` ou um `AccessViolation`, você verá informações de análise nulas no auxiliar de exceção. A análise é exibida como texto abaixo da mensagem de exceção. Na ilustração abaixo, as informações são mostradas como "**s** eram nulas.".
+A partir do Visual Studio 2017, para o código .net e C/C++, quando você pressiona um `NullReferenceException` ou um `AccessViolation` , você vê informações de análise nulas no auxiliar de exceção. A análise é exibida como texto abaixo da mensagem de exceção. Na ilustração abaixo, as informações são mostradas como "**s** eram nulas.".
 
 ![Exceção de análise nula do auxiliar](media/debugger-exception-helper-default.png)
 
@@ -55,9 +55,9 @@ Se a exceção tiver quaisquer exceções internas ([InnerException](https://doc
 ![Auxiliar de exceção com exceção interna](media/debugger-exception-helper-innerexception.png)
 
 ## <a name="inspect-rethrown-exceptions"></a>Inspecionar exceções relançadas
-Nos casos em que uma exceção foi `thrown` o auxiliar de exceção mostra a pilha de chamadas desde a primeira vez em que a exceção foi lançada. Se a exceção foi lançada várias vezes, somente a pilha de chamadas da exceção original é mostrada.
+Nos casos em que uma exceção foi `thrown` o auxiliar de exceção, mostra a pilha de chamadas desde a primeira vez em que a exceção foi lançada. Se a exceção foi lançada várias vezes, somente a pilha de chamadas da exceção original é mostrada.
 
 ![Exceção auxiliar com exceções relançadas](media/debugger-exception-helper-innerexception.png)
 
 ## <a name="share-a-debug-session-with-live-share"></a>Compartilhar uma sessão de depuração com Live Share
-No auxiliar de exceção, você pode iniciar uma sessão de [Live share](https://docs.microsoft.com/visualstudio/liveshare/) usando o link **Iniciar Live share sessão...** . Qualquer pessoa que ingresse na sessão de Live Share pode ver o auxiliar de exceção junto com outras informações de depuração.
+No auxiliar de exceção, você pode iniciar uma sessão de [Live share](https://docs.microsoft.com/visualstudio/liveshare/) usando o link **Iniciar Live share sessão...**. Qualquer pessoa que ingresse na sessão de Live Share pode ver o auxiliar de exceção junto com outras informações de depuração.

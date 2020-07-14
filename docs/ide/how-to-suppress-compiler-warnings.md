@@ -2,22 +2,22 @@
 title: Suprimir avisos do compilador para projetos e pacotes NuGet
 ms.date: 01/24/2018
 ms.technology: vs-ide-compile
-ms.topic: conceptual
+ms.topic: how-to
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b604f6a1392353d304897a233b74c0d81fc258df
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 53db72495b64236441b9ce517c0eb25dc09a207c
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114501"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283951"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>Como suprimir avisos do compilador
 
-Você pode organizar um log de build filtrando um ou mais tipos de avisos do compilador. Por exemplo, você pode querer rever apenas algumas das saídas geradas quando você define a verbosidade do registro de compilação como **normal,** **detalhada**ou **diagnóstica.** Para saber mais sobre detalhamento, consulte [Como exibir, salvar e configurar arquivos de log de build](../ide/how-to-view-save-and-configure-build-log-files.md).
+Você pode organizar um log de build filtrando um ou mais tipos de avisos do compilador. Por exemplo, talvez você queira revisar apenas parte da saída gerada quando você define o detalhamento do log de compilação como **normal**, **detalhado**ou **diagnóstico**. Para saber mais sobre detalhamento, consulte [Como exibir, salvar e configurar arquivos de log de build](../ide/how-to-view-save-and-configure-build-log-files.md).
 
 ## <a name="suppress-specific-warnings-for-visual-c-or-f"></a>Suprimir avisos específicos para o Visual C# ou F\#
 
@@ -25,7 +25,7 @@ Use a página de propriedades **Build** para suprimir avisos específicos para p
 
 1. No **Gerenciador de Soluções**, escolha o projeto no qual você deseja suprimir avisos.
 
-1. Na barra de menu, escolha **Exibir** > **páginas de propriedade**.
+1. Na barra de menus, escolha **Exibir**  >  **páginas de propriedades**.
 
 1. Escolha a página **Build**.
 
@@ -39,7 +39,7 @@ Use a página **Propriedades da Configuração** para suprimir avisos específic
 
 1. No **Gerenciador de Soluções**, escolha o projeto ou arquivo de origem no qual deseja suprimir avisos.
 
-1. Na barra de menu, escolha **Exibir** > **páginas de propriedade**.
+1. Na barra de menus, escolha **Exibir**  >  **páginas de propriedades**.
 
 1. Escolha a categoria **Propriedades de Configuração**, escolha a categoria **C++** e escolha a página **Avançado**.
 
@@ -61,9 +61,9 @@ Este exemplo mostra como editar o arquivo *.vbproj* para suprimir avisos especí
 
 1. No **Gerenciador de Soluções**, escolha o projeto no qual você deseja suprimir avisos.
 
-1. Na barra de menus, escolha **Projeto** > **Descarregar Projeto**.
+1. Na barra de menus, escolha **projeto**  >  **descarregar projeto**.
 
-1. No **Gerenciador de Soluções**, abra o menu de atalho ou o menu de clique com o botão direito do mouse do projeto e escolha **Editar \<NomeDoProjeto>.vbproj**.
+1. No **Gerenciador de Soluções**, clique com o botão direito do mouse ou abra o menu de atalho do projeto e escolha **Editar \<ProjectName>.vbproj**.
 
     O arquivo XML do projeto é aberto no editor de códigos.
 
@@ -87,7 +87,7 @@ Este exemplo mostra como editar o arquivo *.vbproj* para suprimir avisos especí
     ```
 
    > [!NOTE]
-   > Projetos em .NET Core não contêm grupos de propriedades de configuração de build por padrão. Para suprimir avisos em um projeto em .NET Core, adicione a seção de configuração de build ao arquivo manualmente. Por exemplo: 
+   > Projetos em .NET Core não contêm grupos de propriedades de configuração de build por padrão. Para suprimir avisos em um projeto em .NET Core, adicione a seção de configuração de build ao arquivo manualmente. Por exemplo:
    >
    > ```xml
    > <Project Sdk="Microsoft.NET.Sdk">
@@ -104,9 +104,9 @@ Este exemplo mostra como editar o arquivo *.vbproj* para suprimir avisos especí
 
 1. Salve as alterações no arquivo *.vbproj*.
 
-1. Na barra de menus, escolha **Projeto** > **Recarregar Projeto**.
+1. Na barra de menus, escolha **projeto**  >  **recarregar projeto**.
 
-1. Na barra de menu, escolha **Build** > **Rebuild Solution**.
+1. Na barra de menus, escolha **Compilar**  >  **Recompilar solução**.
 
     A janela **Saída** não mostra mais os avisos especificados.
 
@@ -130,7 +130,7 @@ Em alguns casos, convém suprimir avisos do compilador NuGet para um único paco
 
    O aviso desaparece do **Gerenciador de Soluções** e da **Lista de Erros**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Passo a passo: Criar um aplicativo](../ide/walkthrough-building-an-application.md)
 - [Como exibir, salvar e configurar arquivos de log de build](../ide/how-to-view-save-and-configure-build-log-files.md)

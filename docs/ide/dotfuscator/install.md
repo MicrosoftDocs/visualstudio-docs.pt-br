@@ -2,7 +2,7 @@
 title: Instalar o Dotfuscator Community
 ms.date: 03/28/2019
 ms.devlang: dotnet
-ms.topic: conceptual
+ms.topic: how-to
 keywords: Dotfuscator, Dotfuscator Community, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, proteção, community edition, ofuscação, .NET, gratuito, Visual Studio 2017, Visual Studio 2019, Visual Studio, instalar
 helpviewer_keywords:
 - PreEmptive Protection Dotfuscator
@@ -22,12 +22,12 @@ ms.assetid: f2146651-e24a-4e24-ade8-8ddee8ff4e43
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: bb659976126713a11594ad1b4aeb536510744c38
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: befa47e5718d3d2f5d492c49e173b22fc63310e0
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596808"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769673"
 ---
 # <a name="install-dotfuscator-community"></a>Instalar o Dotfuscator Community
 
@@ -64,7 +64,7 @@ Você pode instalar o Dotfuscator Community do IDE do Visual Studio:
 1. No barra de pesquisa **Início Rápido** (Ctrl + Q), digite `dotfuscator`. <br/> <br/> ![Início Rápido](media/install_from_vs_12.png) <br/> <br/>
 
 2. Nos resultados do Início Rápido mostrado, no cabeçalho *Instalar*, selecione **PreEmptive Protection – Dotfuscator (Componente Individual)**.
-   * Se você, em vez disso, ver, o título *Menus,* **Ferramentas - Proteção Preventiva - Dotfuscator**, então o Dotfuscator CE já está instalado. Selecione essa opção para [começar][get-started].
+   * Se, em vez disso, você vir, no título *menus* , **ferramentas-Preemptive Protection-Dotfuscator**, então, o Dotfuscator CE já está instalado. Selecione essa opção para [começar][get-started].
 
 3. Uma janela do Instalador do Visual Studio será inicializada, pré-configurada para instalar o Dotfuscator Community.
    > [!NOTE]
@@ -74,7 +74,7 @@ Você pode instalar o Dotfuscator Community do IDE do Visual Studio:
 
 ::: moniker-end
 
-Uma vez que a instalação esteja concluída, você pode [começar a usar a Comunidade Dotfuscator][get-started].
+Quando a instalação for concluída, você poderá [começar a usar a Comunidade do Dotfuscator][get-started].
 
 ## <a name="during-visual-studio-installation"></a>Durante a instalação do Visual Studio
 

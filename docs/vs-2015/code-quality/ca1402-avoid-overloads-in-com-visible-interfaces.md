@@ -15,19 +15,19 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 258b7ba1444cd990c3ec68ebfd5faccc945439e8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b5c1e3af0e35bf92d72e853948c455893b417998
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661343"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534934"
 ---
-# <a name="ca1402-avoid-overloads-in-com-visible-interfaces"></a>CA1402: evitar sobrecargas em interfaces visíveis COM
+# <a name="ca1402-avoid-overloads-in-com-visible-interfaces"></a>CA1402: Evitar sobrecargas em interfaces visíveis no COM
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|AvoidOverloadsInComVisibleInterfaces|
+|TypeName|AvoidOverloadsInComVisibleInterfaces|
 |CheckId|CA1402|
 |Categoria|Microsoft. Interoperability|
 |Alteração Significativa|Quebra|
@@ -55,7 +55,7 @@ void SomeMethod_3(int valueOne, int valueTwo);
  Os clientes COM Visual Basic 6 não podem implementar métodos de interface usando um sublinhado no nome.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação dessa regra, renomeie os métodos sobrecarregados para que os nomes sejam exclusivos. Como alternativa, torne a interface invisível para COM alterando a acessibilidade para `internal` (`Friend` em [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) ou aplicando o atributo <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> definido como `false`.
+ Para corrigir uma violação dessa regra, renomeie os métodos sobrecarregados para que os nomes sejam exclusivos. Como alternativa, torne a interface invisível para COM alterando a acessibilidade para `internal` ( `Friend` em [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ) ou aplicando o <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> atributo definido como `false` .
 
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
  Não suprima um aviso nessa regra.
@@ -67,11 +67,11 @@ void SomeMethod_3(int valueOne, int valueTwo);
  [!code-vb[FxCop.Interoperability.OverloadsInterface#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Interoperability.OverloadsInterface/vb/FxCop.Interoperability.OverloadsInterface.vb#1)]
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1413: evitar campos não públicos em tipos de valor visíveis em COM](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
+ [CA1413: Evitar campos não públicos em tipos de valor visíveis no COM](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
 
- [CA1407: evitar membros estáticos em tipos visíveis em COM](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)
+ [CA1407: Evitar membros estáticos em tipos visíveis no COM](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)
 
- [CA1017: marcar assemblies com ComVisibleAttribute](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
+ [CA1017: Marcar assemblies com ComVisibleAttribute](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  Interoperação com o [tipo de dados Long](https://msdn.microsoft.com/library/b4770c34-1804-4f8c-b512-c10b0893e516) [de código não gerenciado](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)

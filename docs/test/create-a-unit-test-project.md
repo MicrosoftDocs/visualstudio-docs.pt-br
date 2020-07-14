@@ -1,25 +1,25 @@
 ---
 title: Crie um projeto de teste de unidade
 ms.date: 01/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 313083090c94c94f4e196e87f3bf6cf6df36e118
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ffa19fb9dc49d6286ef3f54c51d89043445f18ba
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75565247"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288709"
 ---
 # <a name="create-a-unit-test-project"></a>Crie um projeto de teste de unidade
 
 Geralmente, os testes de unidade refletem a estrutura do código que está sendo testado. Por exemplo, um projeto de teste de unidade será criado para cada projeto de código do produto. O projeto de teste pode estar na mesma solução que o código de produção ou em uma solução separada. É possível ter vários projetos de teste de unidade em uma solução.
 
 > [!NOTE]
-> O local dos testes de unidade para o código nativo e a estrutura do projeto de teste podem ser diferentes da estrutura descrita neste artigo. Para obter mais informações, consulte [Testes da unidade de escrita para C/C++](writing-unit-tests-for-c-cpp.md).
+> O local dos testes de unidade para o código nativo e a estrutura do projeto de teste podem ser diferentes da estrutura descrita neste artigo. Para obter mais informações, consulte [escrevendo testes de unidade para C/C++](writing-unit-tests-for-c-cpp.md).
 
 ## <a name="to-create-a-unit-test-project"></a>Para criar um projeto de teste de unidade
 
@@ -61,12 +61,12 @@ Consulte uma das seguintes seções:
 
 **Escrevendo testes de unidade**
 
-- [Unidade teste seu código](../test/unit-test-your-code.md)
+- [Teste de unidade em seu código](../test/unit-test-your-code.md)
 
-- [Testes da unidade de escrita para C/C++](writing-unit-tests-for-c-cpp.md)
+- [Escrevendo testes de unidade para C/C++](writing-unit-tests-for-c-cpp.md)
 
 - [Usar a estrutura do MSTest em testes de unidade](using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)
 
 **Executando testes de unidade**
 
-- [Execução de testes de unidade com o gerenciador de testes](../test/run-unit-tests-with-test-explorer.md)
+- [Executar testes de unidade com o Gerenciador de Testes](../test/run-unit-tests-with-test-explorer.md)

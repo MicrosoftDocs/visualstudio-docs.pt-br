@@ -6,12 +6,13 @@ ms.author: johmil
 ms.date: 5/13/2020
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
-ms.openlocfilehash: a81eb9bbae905599cc5d953f27ac3a8d06441f8b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.topic: overview
+ms.openlocfilehash: 09a761a8269fa40c3fab49a34b3e43a7f0ec63cd
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183971"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85939074"
 ---
 # <a name="debugging-with-visual-studio-for-mac"></a>Depurando com Visual Studio para Mac
 
@@ -89,7 +90,7 @@ Esses são os quatro botões:
 
 ## <a name="change-which-statement-is-executed-next"></a>Alterar qual instrução é executada em seguida
 
-Enquanto o depurador está em pausa, uma seta na margem mostra qual linha de código será executada em seguida. Você pode clicar e arrastar a seta para uma linha de código diferente para alterar a instrução que será executada. Você pode obter a mesma coisa também clicando com o botão direito do mouse em uma linha de código e selecionando **definir próxima instrução** no menu de contexto.
+Enquanto o depurador está em pausa, uma seta na margem mostra qual linha de código será executada em seguida. Você pode clicar e arrastar a seta para outra linha de código para alterar a instrução que será executada. Você pode obter a mesma coisa também clicando com o botão direito do mouse em uma linha de código e selecionando **definir próxima instrução** no menu de contexto.
 
 ![Arraste e solte a seta para definir a próxima instrução](media/debugger-drag-setnextstatement.gif)
 
@@ -106,6 +107,6 @@ Para habilitar esse recurso, navegue até **Visual Studio para Mac preferências
 
 ![Opção entrar em código externo](media/debugging-image8.png)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Depurando no Visual Studio (no Windows)](/visualstudio/debugger/)

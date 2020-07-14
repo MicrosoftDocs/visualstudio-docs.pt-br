@@ -15,36 +15,36 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68149213"
 ---
-1. No **Gerenciador de soluções**, clique com botão direito no nó do projeto e selecione **Publish** (para formulários da Web, **Publicar Web App**).
+1. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **publicar** (para Web Forms, **publicar aplicativo Web**).
 
     Se você já tiver configurado anteriormente quaisquer perfis de publicação, o painel **Publicar** será exibido. Clique em **novo perfil**.
 
-1. No **Publish** caixa de diálogo, selecione **pasta**, clique em **procurar**e crie uma nova pasta, **C:\Publish**.
+1. Na caixa de diálogo **publicar** , selecione **pasta**, clique em **procurar**e crie uma nova pasta, **C:\Publish**.
 
     ![RemoteDBG_Publish_Local](../media/remotedbg_publish_local.png "RemoteDBG_Publish_Local")
 
-    Para um aplicativo de formulários da Web, escolha **personalizado** na caixa de diálogo Publicar, insira um nome de perfil e escolha **Okey**.
+    Para um aplicativo Web Forms, escolha **personalizado** na caixa de diálogo publicar, insira um nome de perfil e escolha **OK**.
 
-1. Clique em **criar perfil** na lista suspensa (**publicar** é o valor padrão).
+1. Clique em **Criar perfil** na lista suspensa (**publicar** é o valor padrão).
 
-1. No **Publish** caixa de diálogo, clique no **configurações** vincular e, em seguida, selecione o **configurações** guia.
+1. Na caixa de diálogo **publicar** , clique no link **configurações** e, em seguida, selecione a guia **configurações** .
 
-1. Definir a configuração para **Debug**, selecione **excluir todos os arquivos existentes antes de publicar**e, em seguida, clique em **salvar**.
+1. Defina a configuração a ser **depurada**, selecione **excluir todos os arquivos existentes antes de publicar**e clique em **salvar**.
 
     > [!NOTE]
-    > Se você usar uma compilação de versão, você desabilitar depuração no arquivo Web. config quando você publica.
+    > Se você usar uma compilação de versão, desabilite a depuração no arquivo de web.config quando publicar.
 
 1. Clique em **Publicar**.
 
     ![RemoteDBG_Publish_Debug_Config](../media/remotedbg_publish_debug_config.png "RemoteDBG_Publish_Debug_Config")
 
-    O aplicativo publica uma **depurar** configuração do projeto para a pasta local. Mostra progresso na janela de saída.
+    O aplicativo publica uma configuração de **depuração** do projeto na pasta local. O progresso é mostrado na janela saída.
 
-1. Copiar o diretório de projeto do ASP.NET do computador do Visual Studio para o diretório local configurado para o aplicativo ASP.NET (neste exemplo, **C:\Publish**) no computador do Windows Server. Neste tutorial, vamos supor que você está copiando manualmente, mas você pode usar outras ferramentas como PowerShell, Xcopy ou Robocopy.
+1. Copie o diretório do projeto ASP.NET do computador do Visual Studio para o diretório local configurado para o aplicativo ASP.NET (neste exemplo, **C:\Publish**) no computador do Windows Server. Neste tutorial, supomos que você está copiando manualmente, mas pode usar outras ferramentas como PowerShell, xcopy ou Robocopy.
 
     > [!CAUTION]
-    > Se você precisar fazer alterações no código ou recompilação, você deve republicar e repita esta etapa. O executável que você copiou para o computador remoto deve corresponder exatamente, seu local de origem e símbolos.    Se você não fizer isso, você receberá um `cannot find or open the PDB file` aviso no Visual Studio quando você tenta depurar o processo.
+    > Se precisar fazer alterações no código ou recompilar, você deverá republicar e repetir essa etapa. O executável que você copiou para o computador remoto deve corresponder exatamente à fonte local e aos símbolos.    Se você não fizer isso, receberá um `cannot find or open the PDB file` aviso no Visual Studio ao tentar depurar o processo.
 
-1. No Windows Server, verifique se que você pode executar o aplicativo corretamente abrindo o aplicativo em seu navegador.
+1. No Windows Server, verifique se você pode executar o aplicativo corretamente abrindo o aplicativo em seu navegador.
 
-    Se o aplicativo não funcionar corretamente, pode haver uma incompatibilidade entre a versão do ASP.NET instalado no seu servidor e em seu computador do Visual Studio, ou você pode ter um problema com a configuração do IIS ou no site da Web. Verifique novamente as etapas anteriores.
+    Se o aplicativo não for executado corretamente, poderá haver uma incompatibilidade entre a versão do ASP.NET instalada no servidor e o computador do Visual Studio, ou talvez você tenha um problema com a configuração do IIS ou do site. Verifique novamente as etapas anteriores.

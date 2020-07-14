@@ -511,6 +511,8 @@
                   href: ca1802.md
                 - name: 'CA1804: Remover locais não utilizados'
                   href: ca1804.md
+                - name: 'CA1805: Não inicializar desnecessariamente'
+                  href: ca1805.md
                 - name: 'CA1806: Não ignorar resultados do método'
                   href: ca1806.md
                 - name: 'CA1809: Evitar locais excessivos'
@@ -551,6 +553,16 @@
                   href: ca1828.md
                 - name: 'CA1829: Usar a propriedade Length/Count em vez do método Enumerable.Count'
                   href: ca1829.md
+                - name: 'CA1830: Preferir os métodos Acrescentar e Inserir fortemente tipados provoca uma sobrecarga no StringBuilder'
+                  href: ca1830.md
+                - name: 'CA1831: Usar AsSpan em vez de indexadores baseados em intervalo na cadeia de caracteres quando apropriado'
+                  href: ca1831.md
+                - name: 'CA1832: Usar AsSpan ou AsMemory em vez de indexadores baseados em intervalo para obter a parte ReadOnlySpan ou ReadOnlyMemory de uma matriz'
+                  href: ca1832.md
+                - name: 'CA1833: Usar AsSpan ou AsMemory em vez de indexadores baseados em intervalo para obter a parte Span ou Memory de uma matriz'
+                  href: ca1833.md
+                - name: 'CA1835: Escolher as sobrecargas de memória dos métodos Stream ReadAsync/WriteAsync'
+                  href: ca1835.md
             - name: Avisos de portabilidade
               items:
                 - name: Visão geral
@@ -585,8 +597,16 @@
                   href: ca2009.md
                 - name: 'CA2011: Não atribuir a propriedade em seu próprio setter'
                   href: ca2011.md
+                - name: 'CA2012: Usar ValueTasks corretamente'
+                  href: ca2012.md
+                - name: 'CA2013: Não usar ReferenceEquals com tipos de valor'
+                  href: ca2013.md
+                - name: 'CA2014: Não usar stackalloc em loops'
+                  href: ca2014.md
                 - name: 'CA2015: Não definir finalizadores para tipos derivados do MemoryManager<T>'
                   href: ca2015.md
+                - name: 'CA2016: Encaminhe o parâmetro CancellationToken para os métodos que recebem um'
+                  href: ca2016.md
             - name: Avisos de segurança
               items:
                 - name: Visão geral
@@ -750,6 +770,8 @@
                   href: ca5358.md
                 - name: 'CA5359: Não desabilitar a validação de certificado'
                   href: ca5359.md
+                - name: 'CA5360: Não chamar métodos perigosos durante a desserialização'
+                  href: ca5360.md
                 - name: 'CA5361: Não desabilite o uso de criptografia forte do SChannel'
                   href: ca5361.md
                 - name: 'CA5362: Ciclo de referência potencial no grafo de objetos desserializado'
@@ -778,6 +800,12 @@
                   href: ca5373.md
                 - name: 'CA5374: Não usar XslTransform'
                   href: ca5374.md
+                - name: 'CA5375: Não usar a assinatura de acesso compartilhado da conta'
+                  href: ca5375.md
+                - name: 'CA5376: Usar SharedAccessProtocol HttpsOnly'
+                  href: ca5376.md
+                - name: 'CA5377: Usar política de acesso no nível de contêiner'
+                  href: ca5377.md
                 - name: 'CA5378: Não desabilite ServicePointManagerSecurityProtocols'
                   href: ca5378.md
                 - name: 'CA5379: Não usar o algoritmo de função de derivação de chaves fraca'
@@ -804,8 +832,16 @@
                   href: ca5389.md
                 - name: 'CA5390: Não embutir a chave de criptografia em código'
                   href: ca5390.md
+                - name: 'CA5391: Usar tokens antifalsificação em controladores MVC do ASP.NET Core'
+                  href: ca5391.md
+                - name: 'CA5392: Usar o atributo DefaultDllImportSearchPaths para P/Invokes'
+                  href: ca5392.md
+                - name: 'CA5393: Não usar o valor DllImportSearchPath não seguro'
+                  href: ca5393.md
                 - name: 'CA5394: Não usar aleatoriedade não segura'
                   href: ca5394.md
+                - name: 'CA5395: Ignorar o atributo HttpVerb para métodos de ação'
+                  href: ca5395.md
                 - name: 'CA5396: Definir HttpOnly como true para HttpCookie'
                   href: ca5396.md
                 - name: 'CA5397: Não usar valores de SslProtocols preteridos'
@@ -919,5 +955,9 @@
                   href: ca2245.md
                 - name: 'CA2246: Não designar um símbolo e o membro dele na mesma instrução'
                   href: ca2246.md
+                - name: 'CA2247: O argumento passado para o construtor TaskCompletionSource deve ser a enumeração TaskCreationOptions em vez da enumeração TaskContinuationOptions'
+                  href: ca2247.md
+                - name: 'CA2248: Fornecer o argumento de enumeração correto para Enum.HasFlag'
+                  href: ca2248.md
             - name: Suspensão automática de recursos
               href: automatic-feature-suspension.md

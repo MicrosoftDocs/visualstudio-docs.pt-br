@@ -16,23 +16,23 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0f5789b514d645fc670acf9307e4714c160c3b4c
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: c87836f99684c7e16c022e3e9f15bf546ba82d62
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918180"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547778"
 ---
-# <a name="ca1801-review-unused-parameters"></a>CA1801: revisar parâmetros não usados
+# <a name="ca1801-review-unused-parameters"></a>CA1801: Examinar parâmetros não utilizados
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Para obter a documentação mais recente sobre o Visual Studio, consulte [CA1801: revisar parâmetros não utilizados](/visualstudio/code-quality/ca1801-review-unused-parameters).
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|ReviewUnusedParameters|
+|TypeName|ReviewUnusedParameters|
 |CheckId|CA1801|
-|Categoria|Microsoft.Usage|
+|Categoria|Microsoft. Usage|
 |Alteração Significativa|Não separável – se o membro não estiver visível fora do assembly, independentemente da alteração feita.<br /><br /> Não separável – se você alterar o membro para usar o parâmetro dentro de seu corpo.<br /><br /> Quebrando – se você remover o parâmetro e ele estiver visível fora do assembly.|
 
 ## <a name="cause"></a>Causa
@@ -42,13 +42,13 @@ Para obter a documentação mais recente sobre o Visual Studio, consulte [CA1801
 
 - Métodos usados como manipuladores de eventos.
 
-- Métodos declarados com o modificador de `abstract` (`MustOverride` no Visual Basic).
+- Métodos declarados com o `abstract` `MustOverride` modificador (no Visual Basic).
 
-- Métodos declarados com o modificador de `virtual` (`Overridable` no Visual Basic).
+- Métodos declarados com o `virtual` `Overridable` modificador (no Visual Basic).
 
-- Métodos declarados com o modificador de `override` (`Overrides` no Visual Basic).
+- Métodos declarados com o `override` `Overrides` modificador (no Visual Basic).
 
-- Métodos declarados com o modificador de `extern` (`Declare` instrução no Visual Basic).
+- Métodos declarados com o `extern` `Declare` modificador (instrução no Visual Basic).
 
 ## <a name="rule-description"></a>Descrição da Regra
  Examine os parâmetros em métodos não virtuais que não são usados no corpo do método para certificar-se de que não existe exatidão em relação a falhas para acessá-los. Os parâmetros não utilizados incorrem em custos de desempenho e manutenção.
@@ -67,8 +67,8 @@ Para obter a documentação mais recente sobre o Visual Studio, consulte [CA1801
  [!code-csharp[FxCop.Usage.ReviewUnusedParameters#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.ReviewUnusedParameters/cs/FxCop.Usage.ReviewUnusedPerameters.cs#1)]
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1811: evitar código privado não chamado](../code-quality/ca1811-avoid-uncalled-private-code.md)
+ [CA1811: Evitar código particular não chamado](../code-quality/ca1811-avoid-uncalled-private-code.md)
 
- [CA1812: evitar classes internas sem instâncias](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
+ [CA1812: Evitar classes internas sem instâncias](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
 
- [CA1804: remover locais não usados](../code-quality/ca1804-remove-unused-locals.md)
+ [CA1804: Remover locais não utilizados](../code-quality/ca1804-remove-unused-locals.md)

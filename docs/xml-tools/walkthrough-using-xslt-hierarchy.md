@@ -1,16 +1,16 @@
 ---
 title: 'Passo a passo: Usando a hierarquia XSLT'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 892c166504b9a33fdcbbe0af2605e8268a2b06e7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 940185687544b22325d3f75751eb92e950deb685
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592445"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815026"
 ---
 # <a name="walkthrough-use-xslt-hierarchy"></a>Walkthrough: usar a hierarquia XSLT
 
@@ -103,11 +103,11 @@ O exemplo neste tópico demonstra a depuração em uma folha de estilos referenc
     </xsl:stylesheet>
     ```
 
-4. Adicione um ponto de interrupção no `<xsl:include href="xslincludefile.xsl" />`de instruções.
+4. Adicione um ponto de interrupção na instrução `<xsl:include href="xslincludefile.xsl" />` .
 
 5. Inicie a depuração.
 
-6. Quando o depurador for interrompido no `<xsl:include href="xslincludefile.xsl" />`de instruções, pressione o botão **Step Into** . A depuração pode continuar na folha de estilos referenciada. A hierarquia é visível e o designer o caminho correto.
+6. Quando o depurador parar na instrução `<xsl:include href="xslincludefile.xsl" />` , pressione o botão **Step Into** . A depuração pode continuar na folha de estilos referenciada. A hierarquia é visível e o designer o caminho correto.
 
 ## <a name="see-also"></a>Veja também
 

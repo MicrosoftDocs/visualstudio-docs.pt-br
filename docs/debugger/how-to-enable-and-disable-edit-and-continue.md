@@ -2,7 +2,7 @@
 title: Como habilitar e desabilitar editar e continuar | Microsoft Docs
 ms.custom: seodec18
 ms.date: 10/04/2018
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -26,34 +26,34 @@ manager: jillfra
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: 2c8486bdcd7bc737d3851eabd88734df4efd80b7
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 1907a67412a787148da7a6679e173383e2bb7423
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72430526"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349660"
 ---
-# <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>Como habilitar e desabilitar editar e continuar (C#, VB,) C++
+# <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>Como habilitar e desabilitar editar e continuar (C#, VB, C++)
 
-Você pode desabilitar ou habilitar **Editar e continuar** na caixa de diálogo **Opções** do Visual Studio em tempo de design. **Editar e Continuar** só funciona em builds de depuração. Para obter mais informações, confira [Editar e Continuar](../debugger/edit-and-continue.md).
+Você pode desabilitar ou habilitar **Editar e continuar** na caixa de diálogo **Opções** do Visual Studio em tempo de design. **Editar e continuar** funciona somente em compilações de depuração. Para obter mais informações, confira [Editar e Continuar](../debugger/edit-and-continue.md).
 
-Para o C++nativo, **Editar e continuar** requer o uso da opção `/INCREMENTAL`. Para obter mais informações sobre os requisitos C++de recursos no, consulte esta [postagem de blog](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/) e [EditC++and Continue ()](../debugger/edit-and-continue-visual-cpp.md).
+Para C++ nativo, **Editar e continuar** requer o uso da `/INCREMENTAL` opção. Para obter mais informações sobre os requisitos de recursos em C++, consulte esta [postagem de blog](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/) e [Editar e continuar (C++)](../debugger/edit-and-continue-visual-cpp.md).
 
 **Para habilitar ou desabilitar editar e continuar:**
 
-1. Se você estiver em uma sessão de depuração, pare a depuração (**Debug** > **Stop debugging** ou **Shift**+**F5**).
+1. Se você estiver em uma sessão de depuração, pare a depuração (**depurar**  >  **parar depuração** ou **Shift** + **F5**).
 
-1. Na **ferramentas** > **opções** > (ou **depurar** > **opções**) > **depuração**  >  **Gerais**, selecione **editar e continuar** no painel direito.
+1. Em **ferramentas**  >  **Opções** > (ou **Debug**  >  **Opções**de depuração) > **depuração**  >  **geral**, selecione **Editar e continuar** no painel direito.
 
     > [!NOTE]
     > Se IntelliTrace estiver habilitado e você coletar eventos de IntelliTrace e informações de chamada, Editar e Continuar estará desabilitado. Para obter mais informações, consulte [IntelliTrace](../debugger/intellitrace.md).
 
-1. Para C++ código, certifique-se de habilitar a opção **Editar e continuar nativo** está selecionado e defina as opções adicionais:
+1. Para código C++, verifique se **Habilitar edição nativa e continuar** está selecionado e defina as opções adicionais:
     - **Aplicar alterações ao continuar (somente nativo)**
 
-      Se selecionado, o Visual Studio compila automaticamente e aplica alterações de código quando você continua a depuração de um estado de interrupção. Caso contrário, você pode optar por aplicar as alterações usando **Debug** > **aplicar alterações de código**.
+      Se selecionado, o Visual Studio compila automaticamente e aplica alterações de código quando você continua a depuração de um estado de interrupção. Caso contrário, você pode optar por aplicar alterações usando **depurar**  >  **aplicar alterações de código**.
 
-    - **Avisar sobre código obsoleto (somente nativo)**
+    - **Avisar sobre o código obsoleto (somente nativo)**
 
       Se selecionado, fornecerá avisos sobre o código obsoleto.
 

@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumStackFrames | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 83e6adb3157b67b89ef2c05f59eaaf2c7084d9d8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c9322af6bf04e21430ed49be8e631f3a7dc63643
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744016"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467823"
 ---
 # <a name="idiaenumstackframes"></a>IDiaEnumStackFrames
 Enumera os vários quadros de pilhas disponíveis.
@@ -35,7 +35,7 @@ Enumera os vários quadros de pilhas disponíveis.
 Obtenha essa interface chamando os métodos [IDiaStackWalker:: getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md) ou [IDiaStackWalker:: getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) .
 
 ## <a name="example"></a>Exemplo
-Este exemplo mostra como obter e usar a interface `IDiaEnumStackFrames`. Consulte a interface [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) para obter uma implementação da função `PrintStackFrame`.
+Este exemplo mostra como obter e usar a `IDiaEnumStackFrames` interface. Consulte a interface [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) para uma implementação da `PrintStackFrame` função.
 
 ```C++
 void DumpStackFrames(IDiaStackWalker*     pStackWalker,
@@ -69,7 +69,7 @@ Biblioteca: diaguids. lib
 
 DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)
 - [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md)

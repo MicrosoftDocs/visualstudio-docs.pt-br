@@ -1,22 +1,22 @@
 ---
 title: Integrando modelos usando o ModelBus
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+ms.topic: how-to
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b5a0ad18c7b1472e8c08ccc2902cade7714f2b9
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: a222d5f69d19d2891b4aa20239c1874f55a056e0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985278"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536936"
 ---
 # <a name="integrate-models-by-using-visual-studio-modelbus"></a>Integrar modelos usando o Visual Studio ModelBus
 
-Visual Studio ModelBus fornece um método para criar links entre modelos e de outras ferramentas em modelos. Por exemplo, você pode vincular modelos de DSL (linguagem específica de domínio) e modelos UML. É possível criar um conjunto integrado de DSLs.
+Visual Studio ModelBus fornece um método para criar links entre modelos e de outras ferramentas em modelos. Por exemplo, é possível vincular modelos de linguagem específica de domínio (DSL) e modelos UML. É possível criar um conjunto integrado de DSLs.
 
 O ModelBus permite criar uma referência exclusiva para um modelo ou um elemento específico dentro de um modelo. Essa referência pode ser armazenada fora do modelo, por exemplo, em um elemento em outro modelo. Quando, em uma ocasião posterior, uma ferramenta desejar obter acesso ao elemento, a infraestrutura do Model Bus carregará o modelo adequado e retornará o elemento. Se desejar, é possível exibir o modelo ao usuário. Se o arquivo não puder ser acessado em seu local anterior, o ModelBus solicitará ao usuário para encontrá-lo. Se o usuário encontrar o arquivo, o ModelBus fixará todas as referências àquele arquivo.
 
@@ -31,10 +31,10 @@ Para obter informações adicionais e código de exemplo, consulte:
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="provide"></a>Fornecendo acesso a uma DSL
+## <a name="providing-access-to-a-dsl"></a><a name="provide"></a>Fornecendo acesso a uma DSL
  Antes de ser possível criar referências do ModelBus para um modelo ou seus elementos, é necessário definir um ModelBusAdapter para a DSL. A maneira mais fácil de fazer isso é usar a extensão de barramento de modelo do Visual Studio, que adiciona comandos à Designer de DSL.
 
-### <a name="expose"></a>Para expor uma definição de DSL para o barramento de modelo
+### <a name="to-expose-a-dsl-definition-to-model-bus"></a><a name="expose"></a>Para expor uma definição de DSL para o barramento de modelo
 
 1. Abra o arquivo de definição de DSL. Clique com o botão direito do mouse na superfície de design e clique em **habilitar ModelBus**.
 
@@ -56,7 +56,7 @@ Para obter informações adicionais e código de exemplo, consulte:
 
 5. Clique em **transformar todos os modelos**.
 
-6. Recompile a solução.
+6. Recriar a solução.
 
    Agora é possível para o ModelBus abrir instâncias dessa DSL.
 
@@ -74,7 +74,7 @@ Para garantir que as IDs de elemento sejam persistidas:
 
 3. Para cada classe para qual deseja criar referências do Model Bus:
 
-    Clique no nó de classe e, na janela Propriedades, verifique se a **ID de serialização** está definida como `true`.
+    Clique no nó de classe e, na janela Propriedades, verifique se a **ID de serialização** está definida como `true` .
 
    Como alternativa, se você quiser usar nomes de elementos para identificar elementos em vez de GUIDs, poderá substituir partes dos adaptadores gerados. Substituir os seguintes métodos na classe do adaptador:
 
@@ -82,7 +82,7 @@ Para garantir que as IDs de elemento sejam persistidas:
 
 - Substituir `ResolveElementReference` para localizar o elemento correto a partir de uma referência do Model Bus.
 
-## <a name="editRef"></a>Acessando uma DSL de outra DSL
+## <a name="accessing-a-dsl-from-another-dsl"></a><a name="editRef"></a>Acessando uma DSL de outra DSL
 
 É possível armazenar referências do model bus em uma propriedade de domínio em uma DSL e, é possível gerar código personalizado que as utiliza. Também é possível permitir ao usuário criar uma referência do model bus selecionando um arquivo de modelo e um elemento dentro dele.
 
@@ -96,21 +96,21 @@ Para permitir que uma DSL use referências a outra DSL, você deve primeiro torn
 
 3. No projeto Dsl da DSL consumidora, inclua os assemblies a seguir às referências do projeto. Você encontrará esses assemblies (arquivos. dll) no diretório ModelBusAdapter\bin \\ * da DSL exposta.
 
-    - O assembly de DSL exposto, por exemplo, **fabrikam. FamilyTree. DSL. dll**
+    - O assembly de DSL exposto, por exemplo **Fabrikam.FamilyTree.Dsl.dll**
 
-    - O assembly do adaptador de barramento de modelo exposto, por exemplo, **fabrikam. FamilyTree. ModelBusAdapter. dll**
+    - O assembly do adaptador de barramento de modelo exposto, por exemplo **Fabrikam.FamilyTree.ModelBusAdapter.dll**
 
 4. Inclua os assemblies .NET a seguir às referências de projeto do projeto DSL consumidor.
 
-    1. **Microsoft. VisualStudio. Modeling. Sdk. Integration. 11.0. dll**
+    1. **Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0.dll**
 
-    2. **Microsoft. VisualStudio. Modeling. Sdk. Integration. Shell. 11.0. dll**
+    2. **Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.11.0.dll**
 
 ### <a name="to-store-a-model-bus-reference-in-a-domain-property"></a>Armazenar uma Referência do Model Bus em uma propriedade de domínio
 
 1. Na Definição de DSL da DSL consumidora, inclua uma propriedade de domínio a uma classe de domínio e defina seu nome.
 
-2. No janela Propriedades, com a propriedade de domínio selecionada, defina **tipo** como `ModelBusReference`.
+2. No janela Propriedades, com a propriedade de domínio selecionada, defina **tipo** como `ModelBusReference` .
 
    Nesse estágio, o código do programa pode definir o valor da propriedade, porém será somente leitura na janela Propriedades.
 
@@ -199,7 +199,7 @@ Para criar uma referência de modelo, acesse o AdapterManager da DSL exposta e u
 No AdapterManager, é possível obter um Adaptador, que fornece acesso a elementos individuais no modelo.
 
 > [!NOTE]
-> É necessário descartar um Adaptador após usá-lo. A maneira mais conveniente de fazer isso é com uma instrução `using`. O exemplo a seguir ilustra essa situação.
+> É necessário descartar um Adaptador após usá-lo. A maneira mais conveniente de fazer isso é com uma instrução `using`. O exemplo a seguir ilustra isto.
 
 ```csharp
 // The file path of a model instance of the FamilyTree DSL:
@@ -386,9 +386,9 @@ ModelBusReference elementReferenceRestored =
 
  A MBR é desserializada em dois estágios:
 
-- `ModelBusReferencePropertySerializer` é o serializador padrão que lida com o cabeçalho da MBR. Utiliza o recipiente de propriedades do `SerializationContext` da DSL, que é armazenado no `ReferenceContext` usando a chave `ModelBusReferencePropertySerializer.ModelBusLoadContextKey`. Em específico, o `SerializationContext` deverá conter uma instância do `ModelBus`.
+- `ModelBusReferencePropertySerializer`é o serializador padrão que lida com o cabeçalho MBR. Utiliza o recipiente de propriedades do `SerializationContext` da DSL, que é armazenado no `ReferenceContext` usando a chave `ModelBusReferencePropertySerializer.ModelBusLoadContextKey`. Em específico, o `SerializationContext` deverá conter uma instância do `ModelBus`.
 
-- O Adaptador do ModelBus lida com a parte específica do adaptador da MBR. Poderá usar informações adicionais armazenadas no ReferenceContext da MBR. O adaptador simples baseado em arquivo mantém os caminhos de arquivo raiz usando as chaves `FilePathLoadContextKey` e `FilePathSaveContextKey`.
+- O Adaptador do ModelBus lida com a parte específica do adaptador da MBR. Poderá usar informações adicionais armazenadas no ReferenceContext da MBR. O adaptador simples baseado em arquivo mantém os caminhos de arquivo raiz usando as chaves `FilePathLoadContextKey` e `FilePathSaveContextKey` .
 
      Uma referência de adaptador em um arquivo de modelo é desserializada apenas quando é usada.
 
@@ -482,7 +482,7 @@ A Extensão do ModelBus realiza as alterações a seguir na solução de DSL.
 
 Ao clicar com o botão direito do mouse no diagrama de definição de DSL, clique em **habilitar ModelBus**e selecione **habilitar esta DSL para consumir o ModelBus**:
 
-- No projeto DSL, uma referência é adicionada a **Microsoft. VisualStudio. Modeling. Sdk. Integration. 11.0. dll**
+- No projeto DSL, uma referência é adicionada a **Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0.dll**
 
 - Na Definição de DSL, uma referência de Tipo Externo é incluída: `Microsoft.VisualStudio.Modeling.Integration.ModelBusReference`.
 
@@ -510,12 +510,12 @@ Ao clicar com o botão direito do mouse no diagrama de definição de DSL, cliqu
 
 - Um novo projeto `ModelBusAdapter` é incluído na solução.
 
-- Uma referência para o `ModelBusAdapter` é incluída no projeto do `DslPackage`. O `ModelBusAdapter` possui uma referência para o projeto de `Dsl`.
+- Uma referência para o `ModelBusAdapter` é incluída no projeto do `DslPackage`. `ModelBusAdapter`tem uma referência ao `Dsl` projeto.
 
 - No **DslPackage\source.extention.tt**, `|ModelBusAdapter|` é adicionado como um componente MEF.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Como abrir um modelo partindo de um arquivo no código do programa](../modeling/how-to-open-a-model-from-file-in-program-code.md)
+- [Como abrir um modelo a partir de um arquivo no código do programa](../modeling/how-to-open-a-model-from-file-in-program-code.md)
 - [Como adicionar um manipulador de evento do tipo "arrastar e soltar"](../modeling/how-to-add-a-drag-and-drop-handler.md)
 - [Usando o Visual Studio ModelBus em um modelo de texto](../modeling/using-visual-studio-modelbus-in-a-text-template.md)

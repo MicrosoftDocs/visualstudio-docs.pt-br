@@ -1,7 +1,7 @@
 ---
 title: Como definir opções de nome de arquivo de dados de desempenho | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d7a8d6b9-ab23-46fb-98ed-774781157860
 author: mikejo5000
 ms.author: mikejo
@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cc42b63524a867c0893aa255180c740d03d4b5fe
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1fc548f5e051be878382d81bd040accbb13e9755
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778759"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548116"
 ---
 # <a name="how-to-set-performance-data-file-name-options"></a>Como definir opções de nome do arquivo de dados de desempenho
 
@@ -24,12 +24,12 @@ Por padrão, um arquivo de dados de criação de perfil (.*vsp*) é salvo usando
 
 Você pode alterar qualquer parâmetro de nomeação na página **Geral** da caixa de diálogo de propriedades da sessão de desempenho.
 
-|||
+|Parâmetro|Descrição|
 |-|-|
 |*Caminho*|O diretório que contém o relatório. O local padrão é a pasta da solução ou o local padrão para projetos e soluções do usuário.|
-|*Arquivo VSP*|O nome do arquivo de dados de criação de perfil. O nome padrão é o nome da solução ou do executável que está sendo analisado.|
+|*VSP-arquivo*|O nome do arquivo de dados de criação de perfil. O nome padrão é o nome da solução ou do executável que está sendo analisado.|
 |*AAMMDD*|Um carimbo de data que mostra o ano, mês e dia em que os dados de criação de perfil foram coletados.|
-|*(N)*|Se houver mais de um arquivo de dados de criação de perfil, um número incrementado será adicionado ao nome de arquivo entre parênteses.|
+|*P*|Se houver mais de um arquivo de dados de criação de perfil, um número incrementado será adicionado ao nome de arquivo entre parênteses.|
 
 ## <a name="to-change-the-naming-syntax-of-the-profiling-data-files-of-a-performance-session"></a>Para alterar a sintaxe de nomenclatura dos arquivos de dados de criação de perfil de uma sessão de desempenho
 
@@ -39,7 +39,7 @@ Você pode alterar qualquer parâmetro de nomeação na página **Geral** da cai
 
 3. Em **Relatório**, altere qualquer uma das seguintes configurações:
 
-    |||
+    |Nome|Descrição|
     |-|-|
     |**Local do relatório**|Especifica um diretório para armazenar os arquivos de dados de criação de perfil.|
     |**Nome do relatório**|Especifica um nome de base para os arquivos.|

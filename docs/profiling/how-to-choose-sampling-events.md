@@ -1,7 +1,7 @@
 ---
 title: Como escolher eventos de amostragem | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.performance.property.sampling
 helpviewer_keywords:
@@ -19,12 +19,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 82462ae5052150da7761dfcd855e5339e1b7d821
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8473ca1f5829faa2a76b5560132c7aada152dc3a
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779045"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329284"
 ---
 # <a name="how-to-choose-sampling-events"></a>Como escolher eventos de amostragem
 Por padrão, as ferramentas de criação de perfil do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] coletam dados de desempenho em um intervalo especificado como um número de ciclos de processador que são usados pelo processo analisado. O número padrão de ciclos em um intervalo é de 10.000.000, que é aproximadamente 0,01 segundos em um computador de 1 GH. Você pode alterar o número de ciclos em um intervalo e também pode alterar o evento de amostragem. Os eventos de amostragem a seguir estão disponíveis:
@@ -42,7 +42,7 @@ Por padrão, as ferramentas de criação de perfil do [!INCLUDE[vsprvs](../code-
 
 ### <a name="to-select-a-sample-event"></a>Para selecionar um evento de amostragem
 
-1. No **Performance Explorer**, clique com o botão direito do mouse na sessão de desempenho e, em seguida, clique em **Propriedades**.
+1. Em **Gerenciador de desempenho**, clique com o botão direito do mouse na sessão de desempenho e clique em **Propriedades**.
 
 2. Nas **Páginas de Propriedades**, clique nas propriedades de **Amostragem**.
 
@@ -59,9 +59,9 @@ Por padrão, as ferramentas de criação de perfil do [!INCLUDE[vsprvs](../code-
 
 5. Ao selecionar um evento de amostra, um valor de intervalo de amostragem padrão é exibido na caixa de texto **Intervalo de Amostragem**. Se necessário, insira o valor desejado na caixa de texto.
 
-## <a name="see-also"></a>Confira também
-- [Configure sessões de desempenho](../profiling/configuring-performance-sessions.md)
-- [Como: Escolher métodos de coleta](../profiling/how-to-choose-collection-methods.md)
+## <a name="see-also"></a>Veja também
+- [Configurar sessões de desempenho](../profiling/configuring-performance-sessions.md)
+- [Como: escolher métodos de coleção](../profiling/how-to-choose-collection-methods.md)
 - [Contadores de CPU e do Windows](../profiling/cpu-and-windows-counters.md)
 - [Noções básicas sobre valores de dados de amostragem](../profiling/understanding-sampling-data-values.md)
 - [Criar perfil da linha de comando](../profiling/using-the-profiling-tools-from-the-command-line.md)

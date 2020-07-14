@@ -1,7 +1,7 @@
 ---
 title: Criar & solução de fluxo de trabalho do SharePoint de depuração
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.Workflow.WorkflowConditions
 - VS.SharePointTools.Workflow.WorkflowList
@@ -16,19 +16,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e51f346501b680b8183f8552aad48ffff84a71dd
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
-ms.translationtype: MT
+ms.openlocfilehash: 65af3cbfc799a90d640579f8eed0e051fd5888f0
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983725"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014624"
 ---
 # <a name="walkthrough-create-and-debug-a-sharepoint-workflow-solution"></a>Walkthrough: criar e depurar uma solução de fluxo de trabalho do SharePoint
   Este tutorial demonstra como criar um modelo de fluxo de trabalho seqüencial básico. O fluxo de trabalho verifica uma propriedade de uma biblioteca de documentos compartilhada para determinar se um documento foi revisado. Se o documento tiver sido revisado, o fluxo de trabalho é concluído.
 
- Esta explicação passo a passo ilustra as seguintes tarefas:
+ Este passo a passo ilustra as seguintes tarefas:
 
-- Criando um projeto de fluxo de trabalho Sequencial de definição de lista do SharePoint no [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+- Criando um projeto de fluxo de trabalho Sequencial de definição de lista do SharePoint no [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 - Criando atividades de fluxo de trabalho.
 
@@ -37,27 +36,27 @@ ms.locfileid: "73983725"
 > [!NOTE]
 > Embora este passo a passos use um projeto de fluxo de trabalho Sequencial, o processo é idêntico para um projeto de fluxo de trabalho de máquina de estado.
 >
-> Além disso, o computador pode mostrar diferentes nomes ou locais para alguns dos elementos da interface do usuário do Visual Studio nas instruções a seguir. A edição do Visual Studio que você possui e as configurações que você usa determinam esses elementos. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
+> Além disso, o computador pode mostrar diferentes nomes ou locais para alguns dos elementos da interface do usuário do Visual Studio nas instruções a seguir. A edição do Visual Studio que você possui e as configurações que você usa determinam esses elementos. Para obter mais informações, consulte [Personalizar o IDE do Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Prerequisites
- Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
+## <a name="prerequisites"></a>Pré-requisitos
+ Você precisará dos seguintes componentes para concluir este passo a passo:
 
 - Edições com suporte do Microsoft Windows e do SharePoint.
 
 - Visual Studio.
 
 ## <a name="add-properties-to-the-sharepoint-shared-documents-library"></a>Adicionar propriedades à biblioteca de documentos compartilhados do SharePoint
- Para acompanhar o status de revisão dos documentos na biblioteca de **documentos compartilhados** , criaremos três novas propriedades para documentos compartilhados em nosso site do SharePoint: `Status`, `Assignee`e `Review Comments`. Definimos essas propriedades na biblioteca de **documentos compartilhados** .
+ Para acompanhar o status de revisão dos documentos na biblioteca de **documentos compartilhados** , criaremos três novas propriedades para documentos compartilhados em nosso site do SharePoint: `Status` , `Assignee` e `Review Comments` . Definimos essas propriedades na biblioteca de **documentos compartilhados** .
 
 #### <a name="to-add-properties-to-the-sharepoint-shared-documents-library"></a>Para adicionar propriedades à biblioteca de documentos compartilhados do SharePoint
 
-1. Abra um site do SharePoint, como http://\<nome do sistema >/SitePages/Home.aspx, em um navegador da Web.
+1. Abra um site do SharePoint, como http:// \<system name> /SitePages/Home.aspx, em um navegador da Web.
 
 2. Na barra de início rápido, escolha **SharedDocuments**.
 
 3. Escolha **biblioteca** na faixa de seleção **ferramentas de biblioteca** e, em seguida, escolha o botão **criar coluna** na faixa de faixas para criar uma nova coluna.
 
-4. Nomeie a coluna **status do documento**, defina seu tipo como **Choice (menu para escolher)** , especifique as três opções a seguir e, em seguida, escolha o botão **OK** :
+4. Nomeie a coluna **status do documento**, defina seu tipo como **Choice (menu para escolher)**, especifique as três opções a seguir e, em seguida, escolha o botão **OK** :
 
     - **Revisão necessária**
 
@@ -89,9 +88,9 @@ ms.locfileid: "73983725"
 
 1. Inicie o [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
 
-2. Na barra de menus, escolha **arquivo**  > **novo** **projeto** de  >  para exibir a caixa de diálogo **novo projeto** .
+2. Na barra de menus, escolha **arquivo**  >  **novo**  >  **projeto** para exibir a caixa de diálogo **novo projeto** .
 
-3. Expanda o nó do **SharePoint** sob o  **C# Visual** ou **Visual Basic**e escolha o nó **2010** .
+3. Expanda o nó **do SharePoint** sob o **Visual C#** ou **Visual Basic**e escolha o nó **2010** .
 
 4. No painel **modelos** , escolha o modelo de **projeto do SharePoint 2010** .
 
@@ -103,9 +102,9 @@ ms.locfileid: "73983725"
 
      Esta etapa define o nível de confiança para a solução como solução de farm, a única opção disponível para projetos de fluxo de trabalho. Para obter mais informações, consulte [Considerações sobre a solução em área restrita](../sharepoint/sandboxed-solution-considerations.md).
 
-7. Em **Gerenciador de soluções**, escolha o nó do projeto e, na barra de menus, escolha **projeto** > **Adicionar novo item**.
+7. Em **Gerenciador de soluções**, escolha o nó do projeto e, na barra de menus, escolha **projeto**  >  **Adicionar novo item**.
 
-8. Em **Visual C#**  ou **Visual Basic**, expanda o nó do **SharePoint** e escolha o nó **2010** .
+8. Em **Visual C#** ou **Visual Basic**, expanda o nó do **SharePoint** e escolha o nó **2010** .
 
 9. No painel **modelos** , escolha o modelo **fluxo de trabalho Sequencial (somente solução de farm)** e, em seguida, escolha o botão **Adicionar** .
 
@@ -162,17 +161,17 @@ ms.locfileid: "73983725"
 
 12. Na janela **Propriedades** , defina as propriedades conforme mostrado na tabela a seguir.
 
-    |propriedade|Valor|
+    |Propriedade|Valor|
     |--------------|-----------|
     |**CorrelationToken**|**workflowToken**|
-    |**Solicitado**|**onWorkflowItemChanged**|
+    |**Invocado**|**onWorkflowItemChanged**|
 
 ## <a name="handle-activity-events"></a>Manipular eventos de atividade
  Por fim, verifique o status do documento de cada atividade. Se o documento tiver sido revisado, o fluxo de trabalho será concluído.
 
 #### <a name="to-handle-activity-events"></a>Para lidar com eventos de atividade
 
-1. Em *Workflow1.cs* ou *Workflow1. vb*, adicione o campo a seguir à parte superior da classe `Workflow1`. Esse campo é usado em uma atividade para determinar se o fluxo de trabalho foi concluído.
+1. Em *Workflow1.cs* ou *Workflow1. vb*, adicione o campo a seguir à parte superior da `Workflow1` classe. Esse campo é usado em uma atividade para determinar se o fluxo de trabalho foi concluído.
 
     ```vb
     Dim workflowPending As Boolean = True
@@ -182,7 +181,7 @@ ms.locfileid: "73983725"
     Boolean workflowPending = true;
     ```
 
-2. Adicione o seguinte método à classe `Workflow1`. Esse método verifica o valor da propriedade `Document Status` da lista de documentos para determinar se o documento foi revisado. Se a propriedade `Document Status` for definida como `Review Complete`, o método `checkStatus` definirá o campo `workflowPending` como **false** para indicar que o fluxo de trabalho está pronto para ser concluído.
+2. Adicione o método a seguir à classe `Workflow1`. Esse método verifica o valor da `Document Status` propriedade da lista de documentos para determinar se o documento foi revisado. Se a `Document Status` propriedade for definida como `Review Complete` , o `checkStatus` método definirá o `workflowPending` campo como **false** para indicar que o fluxo de trabalho está pronto para ser concluído.
 
     ```vb
     Private Sub checkStatus()
@@ -200,7 +199,7 @@ ms.locfileid: "73983725"
     }
     ```
 
-3. Adicione o código a seguir aos métodos `onWorkflowActivated` e `onWorkflowItemChanged` para chamar o método `checkStatus`. Quando o fluxo de trabalho é iniciado, o método `onWorkflowActivated` chama o método `checkStatus` para determinar se o documento já foi revisado. Se ele não tiver sido revisado, o fluxo de trabalho continuará. Quando o documento é salvo, o método `onWorkflowItemChanged` chama o método `checkStatus` novamente para determinar se o documento foi revisado. Enquanto o campo `workflowPending` é definido como **true**, o fluxo de trabalho continua a ser executado.
+3. Adicione o código a seguir aos `onWorkflowActivated` `onWorkflowItemChanged` métodos e para chamar o `checkStatus` método. Quando o fluxo de trabalho é iniciado, o `onWorkflowActivated` método chama o `checkStatus` método para determinar se o documento já foi revisado. Se ele não tiver sido revisado, o fluxo de trabalho continuará. Quando o documento é salvo, o `onWorkflowItemChanged` método chama o `checkStatus` método novamente para determinar se o documento foi revisado. Enquanto o `workflowPending` campo está definido como **true**, o fluxo de trabalho continua a ser executado.
 
     ```vb
     Private Sub onWorkflowActivated(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ExternalDataEventArgs)
@@ -226,7 +225,7 @@ ms.locfileid: "73983725"
     }
     ```
 
-4. Adicione o código a seguir ao método `isWorkflowPending` para verificar o status da propriedade `workflowPending`. Cada vez que o documento é salvo, a atividade **whileActivity1** chama o método `isWorkflowPending`. Esse método examina a propriedade <xref:System.Workflow.Activities.ConditionalEventArgs.Result%2A> do objeto <xref:System.Workflow.Activities.ConditionalEventArgs> para determinar se a atividade **whileActivity1** deve continuar ou terminar. Se a propriedade for definida como **true**, a atividade continuará. Caso contrário, a atividade será concluída e o fluxo de trabalho será concluído.
+4. Adicione o código a seguir ao `isWorkflowPending` método para verificar o status da `workflowPending` propriedade. Cada vez que o documento é salvo, a atividade **whileActivity1** chama o `isWorkflowPending` método. Esse método examina a <xref:System.Workflow.Activities.ConditionalEventArgs.Result%2A> Propriedade do <xref:System.Workflow.Activities.ConditionalEventArgs> objeto para determinar se a atividade **whileActivity1** deve continuar ou terminar. Se a propriedade for definida como **true**, a atividade continuará. Caso contrário, a atividade será concluída e o fluxo de trabalho será concluído.
 
     ```vb
     Private Sub isWorkflowPending(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ConditionalEventArgs)
@@ -241,10 +240,10 @@ ms.locfileid: "73983725"
     }
     ```
 
-5. Salvar o projeto.
+5. Salve o projeto.
 
 ## <a name="test-the-sharepoint-workflow-template"></a>Testar o modelo de fluxo de trabalho do SharePoint
- Quando você inicia o depurador, o [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] implanta o modelo de fluxo de trabalho no servidor do SharePoint e associa o fluxo de trabalho à lista de **documentos compartilhados** . Para testar o fluxo de trabalho, inicie uma instância do fluxo de trabalho de um documento na lista **documentos compartilhados** .
+ Quando você inicia o depurador, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] o implanta o modelo de fluxo de trabalho no servidor do SharePoint e associa o fluxo de trabalho à lista de **documentos compartilhados** . Para testar o fluxo de trabalho, inicie uma instância do fluxo de trabalho de um documento na lista **documentos compartilhados** .
 
 #### <a name="to-test-the-sharepoint-workflow-template"></a>Para testar o modelo de fluxo de trabalho do SharePoint
 
@@ -262,7 +261,7 @@ ms.locfileid: "73983725"
 
      Isso carrega o documento selecionado na lista **documentos compartilhados** e inicia o fluxo de trabalho.
 
-6. Em [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], verifique se o depurador é interrompido no ponto de interrupção ao lado do método `onWorkflowActivated`.
+6. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , verifique se o depurador para no ponto de interrupção ao lado do `onWorkflowActivated` método.
 
 7. Escolha a tecla **F5** para continuar a execução.
 

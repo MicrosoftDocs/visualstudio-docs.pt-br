@@ -16,19 +16,19 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 308c970eb21faa7e725559d0451706899b62fd19
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f01495e4238461d0b1dfe5a13a208b528df1581f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662812"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540290"
 ---
-# <a name="ca2231-overload-operator-equals-on-overriding-valuetypeequals"></a>CA2231: sobrecarregar igualdades de operador em ValueType.Equals substituídos
+# <a name="ca2231-overload-operator-equals-on-overriding-valuetypeequals"></a>CA2231: Sobrecarregar operador equals ao substituir ValueType.Equals
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|OverloadOperatorEqualsOnOverridingValueTypeEquals|
+|TypeName|OverloadOperatorEqualsOnOverridingValueTypeEquals|
 |CheckId|CA2231|
 |Categoria|Microsoft. Usage|
 |Alteração Significativa|Sem interrupção|
@@ -37,7 +37,7 @@ ms.locfileid: "72662812"
  Um tipo de valor substitui <xref:System.Object.Equals%2A?displayProperty=fullName> mas não implementa o operador de igualdade.
 
 ## <a name="rule-description"></a>Descrição da Regra
- Na maioria das linguagens de programação, não há nenhuma implementação padrão do operador de igualdade (= =) para tipos de valor. Se a linguagem de programação oferecer suporte a sobrecargas de operador, você deverá considerar a implementação do operador de igualdade. Seu comportamento deve ser idêntico ao de <xref:System.Object.Equals%2A>.
+ Na maioria das linguagens de programação, não há nenhuma implementação padrão do operador de igualdade (= =) para tipos de valor. Se a linguagem de programação oferecer suporte a sobrecargas de operador, você deverá considerar a implementação do operador de igualdade. Seu comportamento deve ser idêntico ao de <xref:System.Object.Equals%2A> .
 
  Você não pode usar o operador de igualdade padrão em uma implementação sobrecarregada do operador de igualdade. Isso causará um estouro de pilha. Para implementar o operador de igualdade, use o método Object. Equals em sua implementação. Por exemplo:
 
@@ -67,15 +67,15 @@ return left.Equals(right);
  [!code-csharp[FxCop.Usage.EqualsGetHashCode#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.EqualsGetHashCode/cs/FxCop.Usage.EqualsGetHashCode.cs#1)]
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1046: não sobrecarregar operador Equals em tipos de referência](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
+ [CA1046: Não sobrecarregar o operador equals em tipos de referência](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
 
- [CA2225: as sobrecargas do operador têm alternativos nomeados](../code-quality/ca2225-operator-overloads-have-named-alternates.md)
+ [CA2225: Sobrecargas de operador têm alternativas nomeadas](../code-quality/ca2225-operator-overloads-have-named-alternates.md)
 
- [CA2226: os operadores devem ter sobrecargas simétricas](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
+ [CA2226: Operadores devem ter sobrecargas simétricas](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
 
- [CA2224: substituir Equals ao sobrecarregar o operador Equals](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
+ [CA2224: Substituir equals ao sobrecarregar operador equals](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
 
- [CA2218: substituir GetHashCode em igualdades de substituição](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)
+ [CA2218: Substituir GetHashCode ao substituir Equals](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  <xref:System.Object.Equals%2A?displayProperty=fullName>

@@ -1,23 +1,23 @@
 ---
 title: Namespace diagnostic | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
-- cvmarkersobj/Concurrency::diagnostic
+- cvmarkersobj/Concurrency, diagnostic
 helpviewer_keywords:
-- Concurrency::diagnostic namespace
+- Concurrency, diagnostic namespace
 ms.assetid: ad786b19-7c4c-46ee-bfb6-c4752b373a09
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 03671f314dca3c016f9524bcb246b74e0eb1f837
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 680d304a8e4d21365d82f654265ae2f34582b636
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62970077"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330253"
 ---
 # <a name="diagnostic-namespace"></a>Namespace de diagnóstico
 O namespace `diagnostics` fornece funcionalidade para emitir marcadores de Visualização Simultânea.
@@ -34,7 +34,7 @@ namespace diagnostic;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[classe marker_series](../profiling/marker-series-class.md)|Representa um canal serial de eventos gerados por um único provedor.|
+|[Classe marker_series](../profiling/marker-series-class.md)|Representa um canal serial de eventos gerados por um único provedor.|
 |[Classe span](../profiling/span-class.md)|Define uma fase do aplicativo.|
 
 ### <a name="enumerations"></a>Enumerações
@@ -48,5 +48,5 @@ namespace diagnostic;
 
  **Namespace:** Simultaneidade
 
-## <a name="see-also"></a>Confira também
-- [Namespace de simultaneidade (Visualização Simultânea)](../profiling/concurrency-namespace-concurrency-visualizer.md)
+## <a name="see-also"></a>Veja também
+- [Namespace de simultaneidade (Visualizador de simultaneidade)](../profiling/concurrency-namespace-concurrency-visualizer.md)

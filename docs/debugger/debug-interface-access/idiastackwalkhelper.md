@@ -1,7 +1,7 @@
 ---
 title: IDiaStackWalkHelper | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 40c2b58778b2a1073b31acc7007388d8e8fe222c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: bdf2f54c585a8a5406a0772dc1c580112036671d
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741314"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464621"
 ---
 # <a name="idiastackwalkhelper"></a>IDiaStackWalkHelper
 Facilita a movimentação da pilha usando o arquivo de banco de dados de depuração do programa (. pdb).
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 
@@ -31,7 +31,7 @@ IDiaStackWalkHelper: IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Métodos em ordem VTable
- A tabela a seguir mostra os métodos de `IDiaStackWalkHelper`:
+ A tabela a seguir mostra os métodos de `IDiaStackWalkHelper` :
 
 |Método|Descrição|
 |------------|-----------------|
@@ -58,7 +58,7 @@ IDiaStackWalkHelper: IUnknown
 
  DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)

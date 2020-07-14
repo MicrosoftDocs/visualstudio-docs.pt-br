@@ -1,7 +1,7 @@
 ---
-title: Importar página mestre personalizada & página de site com imagem
+title: Importar página mestra personalizada & página do site com imagem
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,49 +13,48 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8bd2d9054571e52bc9fbb3906bc1880bb94e407a
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
-ms.translationtype: MT
+ms.openlocfilehash: 311124b2e0b81e70c4c2a7b40754207e6c66b749
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66400893"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015691"
 ---
-# <a name="walkthrough-import-a-custom-master-page-and-site-page-with-an-image"></a>Passo a passo: Importar uma página mestra personalizada e a página do site com uma imagem
-  Este passo a passo demonstra como importar uma página mestra personalizada do SharePoint e uma página de site que possui uma imagem em um [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projeto do SharePoint.
+# <a name="walkthrough-import-a-custom-master-page-and-site-page-with-an-image"></a>Walkthrough: importar uma página mestra personalizada e uma página do site com uma imagem
+  Este tutorial demonstra como importar uma página mestra personalizada do SharePoint e uma página do site que tem uma imagem em um [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projeto do SharePoint.
 
  Esta explicação passo a passo mostra como realizar as tarefas seguintes:
 
 - Crie uma página mestra personalizada e uma página do site usando uma imagem no SharePoint Designer.
 
-- Exportar uma página mestra personalizada, a imagem e a página do site para uma solução do SharePoint ( *. wsp*) arquivos.
+- Exporte uma página mestra personalizada, uma imagem e uma página do site para um arquivo de solução do SharePoint (*. wsp*).
 
-- Importar e implantar o *. wsp* o arquivo em um [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projeto do SharePoint usando o projeto Importar pacote de solução do SharePoint.
+- Importe e implante o arquivo *. wsp* em um [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projeto do SharePoint usando o projeto importar pacote de solução do SharePoint.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
- Você deve ter os seguintes componentes para concluir este passo a passo:
+## <a name="prerequisites"></a>Pré-requisitos
+ Você deve ter os seguintes componentes para concluir este passo a passos:
 
-- Edições com suporte do [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] e do SharePoint.
+- Edições com suporte do [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] e SharePoint.
 
 - Visual Studio.
 
 - SharePoint Designer 2010.
 
 ## <a name="create-items-in-sharepoint-designer"></a>Criar itens no SharePoint Designer
- Este exemplo mostra como criar três itens no SharePoint Designer para exportar: uma página mestra personalizada, uma página de site que referencia a página mestra personalizada e um arquivo de imagem para aparecer na página do site. A imagem é adicionada à pasta /images/ no SharePoint.
+ Este exemplo mostra como criar três itens no SharePoint Designer para exportação: uma página mestra personalizada, uma página do site que faz referência à página mestra personalizada e um arquivo de imagem a ser exibido na página do site. A imagem é adicionada à pasta/images/no SharePoint.
 
 #### <a name="to-create-a-custom-master-page-in-sharepoint-designer"></a>Para criar uma página mestra personalizada no SharePoint Designer
 
-1. No SharePoint Designer, no painel de navegação, escolha o **páginas mestras** objeto do site.
+1. No SharePoint Designer, no painel de navegação, escolha o objeto site de **páginas mestras** .
 
-2. Sobre o **páginas mestras** faixa de opções, escolha **página mestra em branco**.
+2. Na faixa de seleção **páginas mestras** , escolha **página mestra em branco**.
 
-3. Escolha a nova página mestra e, em seguida, na **páginas mestras** faixa de opções, escolha **Editar arquivo**.
+3. Escolha a nova página mestra e, na faixa de faixas **páginas mestras** , escolha **Editar arquivo**.
 
-4. Na parte inferior do SharePoint Designer, escolha o **código** guia.
+4. Na parte inferior do SharePoint Designer, escolha a guia **código** .
 
-5. Substitua a marcação existente pela seguinte marcação.
+5. Substitua a marcação existente pela marcação a seguir.
 
     ```aspx-csharp
     <%@ Master Language="C#" %>
@@ -76,39 +75,39 @@ ms.locfileid: "66400893"
     </html>
     ```
 
-6. Salve a página, escolha o **páginas mestras** guia e renomeie a página mestra conforme **mybasic1.master**.
+6. Salve a página, escolha a guia **páginas mestras** e renomeie a página mestra como **mybasic1. Master**.
 
-## <a name="add-an-image-to-the-content-database-in-sharepoint-designer"></a>Adicionar uma imagem para o banco de dados de conteúdo no SharePoint Designer
+## <a name="add-an-image-to-the-content-database-in-sharepoint-designer"></a>Adicionar uma imagem ao banco de dados de conteúdo no SharePoint Designer
  Agora você pode adicionar uma imagem a ser exibida na página do site. A imagem é implantada no banco de dados de conteúdo do SharePoint.
 
-#### <a name="to-add-an-image-to-the-content-database-in-sharepoint-designer"></a>Para adicionar uma imagem para o banco de dados de conteúdo no SharePoint Designer
+#### <a name="to-add-an-image-to-the-content-database-in-sharepoint-designer"></a>Para adicionar uma imagem ao banco de dados de conteúdo no SharePoint Designer
 
-1. No painel de navegação, escolha o **todos os arquivos** objeto de site e, em seguida, na exibição de árvore, escolha o **imagens** pasta.
+1. No painel de navegação, escolha o objeto do site **todos os arquivos** e, em seguida, no modo de exibição de árvore, escolha a pasta **imagens** .
 
-2. Sobre o **todos os arquivos** faixa de opções, escolha **importar arquivos**, escolha um arquivo de sua escolha e, em seguida, escolha o **Okey** botão. Neste exemplo, o arquivo é nomeado **myimg1.png**.
+2. Na faixa de opções **todos os arquivos** , escolha **importar arquivos**, escolha um arquivo de sua escolha e, em seguida, escolha o botão **OK** . Neste exemplo, o arquivo é denominado **myimg1.png**.
 
      Opcionalmente, você pode criar uma subpasta para ajudar a organizar as imagens.
 
-3. Fechar o **importação** caixa de diálogo.
+3. Feche a caixa de diálogo **importar** .
 
 ## <a name="create-a-site-page"></a>Criar uma página do site
- Esta página do site básico usa a página mestra personalizada e exibe a imagem que você adicionou na etapa anterior.
+ Essa página de site básica usa a página mestra personalizada e exibe a imagem que você adicionou na etapa anterior.
 
 #### <a name="to-create-a-site-page"></a>Para criar uma página do site
 
-1. No painel de navegação, escolha o **páginas do Site** objeto.
+1. No painel de navegação, escolha o objeto **páginas do site** .
 
-2. Sobre o **páginas** faixa de opções, escolha o **página** botão, escolha o **ASPX** tipo de página e, em seguida, nomeie o novo arquivo **mycontentpage1.aspx**.
+2. Na faixa de seleção **páginas** , escolha o botão **página** , escolha o tipo de página **aspx** e, em seguida, nomeie o novo arquivo **mycontentpage1. aspx**.
 
      Opcionalmente, você pode criar uma subpasta para ajudar a organizar as páginas do site.
 
-3. Na lista de páginas do site, escolha **MyContentPage1.aspx** para abrir sua página de propriedades e, em seguida, na parte inferior da página, escolha o **Editar arquivo** link.
+3. Na lista páginas do site, escolha **MyContentPage1. aspx** para abrir sua página de propriedades e, na parte inferior da página, escolha o link **Editar arquivo** .
 
-     Se uma mensagem é exibida e diz que essa página não contém quaisquer regiões editáveis no modo de segurança e pergunta se você deseja abrir essa página no modo avançado, escolha o **Sim** botão.
+     Se uma mensagem aparecer e informar que essa página não contém regiões que são editáveis no modo de segurança e pergunta se você deseja abrir esta página no modo avançado, escolha o botão **Sim** .
 
-4. Na parte inferior da página, escolha o **código** botão.
+4. Na parte inferior da página, escolha o botão **código** .
 
-5. Substitua a marcação existente pela seguinte marcação.
+5. Substitua a marcação existente pela marcação a seguir.
 
     ```aspx-csharp
     <%@ Import Namespace="Microsoft.SharePoint.ApplicationPages" %>
@@ -124,31 +123,31 @@ ms.locfileid: "66400893"
     </asp:Content>
     ```
 
-6. Salve a página do site atualizado.
+6. Salve a página do site atualizada.
 
 ## <a name="export-the-items-from-sharepoint"></a>Exportar os itens do SharePoint
- Exportar os itens do SharePoint para uma solução do SharePoint ( *. wsp*) arquivos.
+ Exporte os itens do SharePoint para um arquivo de solução do SharePoint (*. wsp*).
 
-#### <a name="to-export-items-from-sharepoint-designer"></a>Para exportar os itens do SharePoint Designer
+#### <a name="to-export-items-from-sharepoint-designer"></a>Para exportar itens do SharePoint Designer
 
-1. No SharePoint Designer, no painel de navegação, escolha o **Site de equipe** objeto e, em seguida, na **Site** faixa de opções, escolha **Salvar como modelo**.
+1. No SharePoint Designer, no painel de navegação, escolha o objeto **site da equipe** e, em seguida, na faixa de seleção do **site** , escolha **salvar como modelo**.
 
-2. No **Salvar como modelo** caixa de diálogo, digite um nome de arquivo e o nome do modelo, selecione o **incluir conteúdo** caixa de seleção e, em seguida, escolha o **Okey** botão.
+2. Na caixa de diálogo **salvar como modelo** , insira um nome de arquivo e um nome de modelo, marque a caixa de seleção **incluir conteúdo** e, em seguida, escolha o botão **OK** .
 
-     Isso salva o conteúdo do site na *. wsp* arquivo.
+     Isso salva o conteúdo do site no arquivo *. wsp* .
 
-3. Depois de exporta a solução, escolha o **Galeria de soluções** link para exibir a lista de arquivos de solução disponível.
+3. Depois que a solução for exportada, escolha o link **Galeria de soluções** para exibir a lista de arquivos de solução disponíveis.
 
-4. Abra o menu de atalho para o novo *. wsp* file e, em seguida, escolha **Salvar destino como** salvá-lo no sistema.
+4. Abra o menu de atalho para o novo arquivo *. wsp* e escolha **Salvar destino como** para salvá-lo no sistema.
 
-## <a name="import-the-items-into-visual-studio"></a>Importar os itens no Visual Studio
- Importar o *. wsp* o arquivo em [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Depois que o conteúdo for importado, você pode personalizá-lo, adicionar mais itens e, em seguida, implantá-lo.
+## <a name="import-the-items-into-visual-studio"></a>Importar os itens para o Visual Studio
+ Importe o arquivo *. wsp* para [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Depois que o conteúdo é importado, você pode personalizá-lo, adicionar mais itens e, em seguida, implantá-lo.
 
-#### <a name="to-import-items-from-the-wsp-file-into-visual-studio"></a>Para importar itens de arquivo. wsp no Visual Studio
+#### <a name="to-import-items-from-the-wsp-file-into-visual-studio"></a>Para importar itens do arquivo. wsp para o Visual Studio
 
-1. Na [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], crie um **Importar pacote de solução do SharePoint 2010** projeto.
+1. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , crie um projeto de **pacote de solução de importação do SharePoint 2010** .
 
-2. Sobre o **selecionar itens para importar** página em **módulo** no **tipo** coluna, marque as caixas de seleção para somente os arquivos na tabela a seguir para importar.
+2. Na página **selecionar itens a serem importados** , em **módulo** na coluna **tipo** , marque as caixas de seleção somente para os arquivos na tabela a seguir para importação.
 
    | Nome do Arquivo | Descrição |
    |------------------------|-----------------------------------------------|
@@ -156,27 +155,27 @@ ms.locfileid: "66400893"
    | images_ | O arquivo de imagem no sistema de arquivos do SharePoint. |
    | SitePages_ | A página do site. |
 
-3. Escolha o **concluir** botão para importar os itens selecionados.
+3. Escolha o botão **concluir** para importar os itens selecionados.
 
-4. No **Gerenciador de soluções**, escolha o \_catalogsmasterpage\_ nó e defina o valor de seu **resolução de conflitos de implantação** propriedade **automática** .
+4. Em **Gerenciador de soluções**, escolha o \_ \_ nó catalogsmasterpage e defina o valor de sua propriedade de **resolução de conflito de implantação** como **automática**.
 
-    Isso ajuda a garantir que qualquer conflito de implantação é resolvido automaticamente.
+    Isso ajuda a garantir que todos os conflitos de implantação sejam resolvidos automaticamente.
 
-5. Se a nova página mestra tem o mesmo nome que uma página existente, certifique-se de que a página existente não está marcada como uma página mestra do padrão ou uma página mestra personalizada no SharePoint Designer.
+5. Se sua nova página mestra tiver o mesmo nome de uma página existente, verifique se a página existente não está marcada como uma página mestra padrão ou uma página mestra personalizada no SharePoint Designer.
 
-    Se uma página mestra existente é marcada como a página padrão do mestre ou página mestra personalizada, você obterá um erro de implantação que afirma que a página mestra não pode ser excluída. Para evitar esse problema, faça o seguinte:
+    Se uma página mestra existente estiver marcada como página mestra padrão ou página mestra personalizada, você receberá um erro de implantação que indica que a página mestra não pode ser excluída. Para evitar esse problema, faça o seguinte:
 
-   - Se a página mestra existente é definida como a página padrão do mestre, defina temporariamente outra página mestra como a página padrão do mestre. Depois de implantar os arquivos do SharePoint, defina a nova página mestra como a página padrão do mestre.
+   - Se a página mestra existente estiver definida como página mestra padrão, defina temporariamente outra página mestra como página mestra padrão. Depois de implantar os arquivos no SharePoint, defina sua nova página mestra como página mestra padrão.
 
-   - Se a página mestra existente é definida como a página mestra personalizada, defina temporariamente outra página mestra como a página mestra personalizada. Depois de implantar os arquivos do SharePoint, defina a nova página mestra como a página mestra personalizada.
+   - Se a página mestra existente for definida como página mestra personalizada, defina temporariamente outra página mestra como página mestra personalizada. Depois de implantar os arquivos no SharePoint, defina sua nova página mestra como página mestra personalizada.
 
-6. Na barra de menus, escolha **construir** > **implantar solução**.
+6. Na barra de menus, escolha **Compilar**  >  **implantar solução**.
 
 7. Abra o site do SharePoint para exibir os itens implantados.
 
-   Uma maneira alternativa para importar arquivos no [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] e implantá-los no SharePoint é adicionar os arquivos nos módulos no [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [Como: Importar uma página mestra ou tema](../sharepoint/how-to-import-a-master-page-or-theme.md) e [usar módulos para incluir arquivos na solução](../sharepoint/using-modules-to-include-files-in-the-solution.md).
+   Uma maneira alternativa de importar arquivos [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] e implantá-los no SharePoint é adicionar os arquivos em módulos no [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][Como importar uma página mestra ou tema](../sharepoint/how-to-import-a-master-page-or-theme.md) e [usar módulos para incluir arquivos na solução](../sharepoint/using-modules-to-include-files-in-the-solution.md).
 
 ## <a name="see-also"></a>Consulte também
-- [Importando itens de um site do SharePoint existente](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
+- [Importando itens de um site existente do SharePoint](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
 - [Desenvolver soluções do SharePoint](../sharepoint/developing-sharepoint-solutions.md)
-- [Criar controles reutilizáveis para web parts ou páginas de aplicativo](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)
+- [Criar controles reutilizáveis para Web Parts ou páginas de aplicativo](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)

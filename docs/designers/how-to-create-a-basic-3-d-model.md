@@ -1,19 +1,19 @@
 ---
 title: Como criar um modelo 3D básico
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a0d97966-2df8-449b-a8cf-5a19684dc773
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ce16e436172a7d369f2df8342f6b027b574056ab
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: dbd0b2a092e47eab053d4150fd2139fb0dbdf6ea
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589520"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769260"
 ---
 # <a name="how-to-create-a-basic-3d-model"></a>Como criar um modelo 3D básico
 
@@ -40,7 +40,7 @@ Antes de começar, verifique se a janela **Propriedades** e a **Caixa de Ferrame
 
 ### <a name="to-create-a-simplified-3d-model-of-a-house"></a>Para criar um modelo 3D simplificado de uma casa
 
-1. Crie um modelo 3D com o qual trabalhar. Para obter informações sobre como adicionar um modelo ao seu projeto, consulte a seção Como Começar no [Editor de Modelos](../designers/model-editor.md).
+1. Crie um modelo 3D com o qual trabalhar. Para obter informações sobre como adicionar um modelo ao seu projeto, consulte a seção Introdução no [Editor de modelos](../designers/model-editor.md).
 
 2. Adicione um cubo para a cena. Na janela **Caixa de Ferramentas**, em **Formas**, selecione **Cubo** e mova-o para a superfície de design.
 
@@ -58,7 +58,7 @@ Antes de começar, verifique se a janela **Propriedades** e a **Caixa de Ferrame
 
     ![Um lado do cubo foi extrudado mais ainda.](../designers/media/gfx_model_demo_house_extend.png)
 
-7. Triangular o modelo. Na barra de ferramentas do Editor de modelos, escolha **Advanced** > **Tools** > **Triangulate**.
+7. Triangular o modelo. Na barra de ferramentas do editor de modelos, escolha ferramentas **avançadas**  >  **Tools**  >  **Triangulate**.
 
 8. Crie o teto da casa. Mude para o modo de seleção de borda escolhendo **Selecionar Borda** na barra de ferramentas do Editor de Modelo e, em seguida, escolha o cubo para ativá-lo. Pressione e segure a tecla **Ctrl** enquanto você seleciona as bordas que são mostradas aqui:
 
@@ -74,6 +74,6 @@ Antes de começar, verifique se a janela **Propriedades** e a **Caixa de Ferrame
 
 ## <a name="see-also"></a>Confira também
 
-- [Como: Modelo de terreno 3D](../designers/how-to-model-3-d-terrain.md)
+- [Como modelar o terreno 3D do modelo](../designers/how-to-model-3-d-terrain.md)
 - [Editor de modelos](../designers/model-editor.md)
-- [Designer de sombreado](../designers/shader-designer.md)
+- [Designer de sombreador](../designers/shader-designer.md)

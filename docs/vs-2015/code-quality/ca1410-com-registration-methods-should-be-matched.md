@@ -15,28 +15,28 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 30f507f07de858dc222b4824ac6da633c76812ab
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 43767ce04b32440a5c6753f5bfcabb91487c1232
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652740"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546699"
 ---
-# <a name="ca1410-com-registration-methods-should-be-matched"></a>CA1410: os métodos de registro COM devem ser correspondentes
+# <a name="ca1410-com-registration-methods-should-be-matched"></a>CA1410: Métodos de registro COM devem ser correspondidos
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|ComRegistrationMethodsShouldBeMatched|
+|TypeName|ComRegistrationMethodsShouldBeMatched|
 |CheckId|CA1410|
 |Categoria|Microsoft. Interoperability|
 |Alteração Significativa|Sem interrupção|
 
 ## <a name="cause"></a>Causa
- Um tipo declara um método que é marcado com o atributo <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName>, mas não declara um método que é marcado com o atributo <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName>, ou vice-versa.
+ Um tipo declara um método que é marcado com o <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> atributo, mas não declara um método que é marcado com o <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> atributo ou vice-versa.
 
 ## <a name="rule-description"></a>Descrição da Regra
- Para clientes de Component Object Model (COM) criarem um tipo de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], o tipo deve primeiro ser registrado. Se estiver disponível, um método marcado com o atributo <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> será chamado durante o processo de registro para executar o código especificado pelo usuário. Um método correspondente que é marcado com o atributo <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> é chamado durante o processo de cancelamento de registro para inverter as operações do método de registro.
+ Para clientes de Component Object Model (COM) para criar um [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] tipo, o tipo deve primeiro ser registrado. Se estiver disponível, um método marcado com o <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> atributo será chamado durante o processo de registro para executar o código especificado pelo usuário. Um método correspondente que é marcado com o <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> atributo é chamado durante o processo de cancelamento de registro para reverter as operações do método de registro.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
  Para corrigir uma violação dessa regra, adicione o registro ou o método de cancelamento de registro correspondente.
@@ -51,7 +51,7 @@ ms.locfileid: "72652740"
  [!code-vb[FxCop.Interoperability.ComRegistration#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Interoperability.ComRegistration/vb/FxCop.Interoperability.ComRegistration.vb#1)]
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1411: os métodos de registro COM não devem estar visíveis](../code-quality/ca1411-com-registration-methods-should-not-be-visible.md)
+ [CA1411: Métodos de registro COM não devem ser visíveis](../code-quality/ca1411-com-registration-methods-should-not-be-visible.md)
 
-## <a name="see-also"></a>Consulte também
- <xref:System.Runtime.InteropServices.RegistrationServices?displayProperty=fullName> [registrar assemblies com o](https://msdn.microsoft.com/library/87925795-a3ae-4833-b138-125413478551) [REGASM. exe com (ferramenta de registro de assembly)](https://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb)
+## <a name="see-also"></a>Consulte Também
+ <xref:System.Runtime.InteropServices.RegistrationServices?displayProperty=fullName>[Registrando assemblies comRegasm.exe com](https://msdn.microsoft.com/library/87925795-a3ae-4833-b138-125413478551) [(ferramenta de registro de assembly)](https://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb)

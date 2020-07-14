@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_locationType | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b10668a4767d411f48df213c79ae6508e7c0bf28
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 244f9c1b696b03a085e665c5e45abf200c5774cf
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739848"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462969"
 ---
 # <a name="idiasymbolget_locationtype"></a>IDiaSymbol::get_locationType
 Recupera o tipo de local de um símbolo de dados.
@@ -33,14 +33,14 @@ HRESULT get_locationType ( 
 #### <a name="parameters"></a>Parâmetros
  `pRetVal`
 
-fora Retorna um valor da enumeração de [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) que especifica o tipo de local de um símbolo de dados, como `static` ou `local`.
+fora Retorna um valor da enumeração de [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) que especifica o tipo de local de um símbolo de dados, `static` como `local` ou.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md)

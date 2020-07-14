@@ -1,7 +1,7 @@
 ---
 title: Isolando código em teste com falsificação da Microsoft
-ms.date: 11/04/2016
-ms.topic: conceptual
+ms.date: 06/03/2020
+ms.topic: how-to
 ms.author: mikejo
 manager: jillfra
 ms.workload:
@@ -10,12 +10,12 @@ author: mikejo5000
 dev_langs:
 - VB
 - CSharp
-ms.openlocfilehash: 662a61bf97e1726892b877dc79a0ef98340a34ec
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 49330132321c389fc5b6a4842972769896c72637
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75566885"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286954"
 ---
 # <a name="isolate-code-under-test-with-microsoft-fakes"></a>Isolar o código em teste com elementos fictícios da Microsoft
 
@@ -33,6 +33,7 @@ O Fakes vem em duas versões:
 
 - Visual Studio Enterprise
 - Um projeto do .NET Framework
+- O suporte ao projeto de estilo SDK e .NET Core está atualmente em versão prévia. [Leia mais](https://docs.microsoft.com/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects)
 
 > [!NOTE]
 > - Projetos do .NET Standard não têm suporte.
@@ -41,7 +42,7 @@ O Fakes vem em duas versões:
 ## <a name="choose-between-stub-and-shim-types"></a>Escolher entre os tipos de stub e shim
 Normalmente, você consideraria um projeto do Visual Studio para ser um componente, pois desenvolve e atualiza as classes ao mesmo tempo. Você poderia considerar o uso de stubs e shims para chamadas feitas pelo projeto para outros projetos em sua solução ou para outros assemblies que o projeto referencia.
 
-Como guia geral, use stubs para chamadas em sua solução do Visual Studio, e shims para chamadas a outros assemblies referenciados. Isso é porque em sua própria solução é uma boa prática desacoplar os componentes definindo interfaces da maneira exigida pelo stub. Mas conjuntos externos como *system.dll* normalmente não são fornecidos com definições de interface separadas, então você deve usar shims em vez disso.
+Como guia geral, use stubs para chamadas em sua solução do Visual Studio, e shims para chamadas a outros assemblies referenciados. Isso é porque em sua própria solução é uma boa prática desacoplar os componentes definindo interfaces da maneira exigida pelo stub. Mas assemblies externos, como *System.dll* normalmente não são fornecidos com definições de interface separadas, portanto, você deve usar shims em vez disso.
 
 Outras considerações são:
 
@@ -81,7 +82,7 @@ Para obter uma descrição mais detalhada, confira [Usar stubs para isolar parte
 
 2. **Adicionar Assembly do Fakes**
 
-    1. No **Solution Explorer,** expanda a lista de referência do projeto de teste. Se estiver trabalhando no Visual Basic, escolha **Mostrar Todos os Arquivos** para ver a lista de referências.
+    1. Em **Gerenciador de soluções**, expanda a lista de referência do projeto de teste. Se estiver trabalhando no Visual Basic, escolha **Mostrar Todos os Arquivos** para ver a lista de referências.
 
     2. Selecione a referência ao assembly em que a interface (por exemplo, IStockFeed) é definida. No menu de atalho dessa referência, escolha **Adicionar Assembly do Fakes**.
 
@@ -168,7 +169,7 @@ Para usar shims, você não precisa modificar o código do aplicativo ou escrev�
 
 1. **Adicionar Assembly do Fakes**
 
-     No **Solution Explorer,** abra as referências do projeto de teste da unidade e selecione a referência ao conjunto que contém o método que você deseja falsificar. Nesse exemplo, a classe `DateTime` está em *System.dll*.  Para ver as referências em um projeto do Visual Basic, escolha **Mostrar Todos os Arquivos**.
+     Em **Gerenciador de soluções**, abra as referências do projeto de teste de unidade e selecione a referência ao assembly que contém o método que você deseja falsificar. Nesse exemplo, a classe `DateTime` está em *System.dll*.  Para ver as referências em um projeto do Visual Basic, escolha **Mostrar Todos os Arquivos**.
 
      Escolha **Adicionar Assembly do Fakes**.
 

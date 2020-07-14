@@ -1,7 +1,7 @@
 ---
 title: IDiaSegment | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 855b40f3d35d884a366e8fdc36ed1ec4f2bef85a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d248bd5dcacf2c852076bc1dddbcd40d149ebf67
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742334"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465877"
 ---
 # <a name="idiasegment"></a>IDiaSegment
 Mapeia dados do número da seção para segmentos de espaço de endereço.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaSegment : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Métodos em ordem vtable
-A tabela a seguir mostra os métodos de `IDiaSegment`.
+A tabela a seguir mostra os métodos de `IDiaSegment` .
 
 |Método|Descrição|
 |------------|-----------------|
@@ -100,7 +100,7 @@ Biblioteca: diaguids. lib
 
 DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumSegments::Item](../../debugger/debug-interface-access/idiaenumsegments-item.md)
 - [IDiaEnumSegments::Next](../../debugger/debug-interface-access/idiaenumsegments-next.md)

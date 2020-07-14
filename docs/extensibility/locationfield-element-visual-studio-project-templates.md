@@ -1,8 +1,8 @@
 ---
-title: LocationField Element (Modelos de Projetos do Estúdio Visual) | Microsoft Docs
+title: Elemento LocationField (modelos de projeto do Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#LocationField
 helpviewer_keywords:
@@ -13,17 +13,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d993e84bec41486ef4dce6ad98c61f23ab2a46bd
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 8a5f2f47eef9c3cb047b5550e466585ef70e8f4e
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80702881"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770026"
 ---
 # <a name="locationfield-element-visual-studio-project-templates"></a>Elemento LocationField (modelos de projeto do Visual Studio)
-Especifica se a caixa de texto **Local** na caixa de diálogo **Projeto novo** está ativada, desativada ou oculta para o modelo do projeto.
+Especifica se a caixa de texto **local** na caixa de diálogo **novo projeto** está habilitada, desabilitada ou oculta para o modelo de projeto.
 
- \<VSTemplate>> \<de \<campo de> de localização
+ \<VSTemplate> \<TemplateData>
+ \<LocationField>
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -44,28 +45,28 @@ Especifica se a caixa de texto **Local** na caixa de diálogo **Projeto novo** e
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento necessário.<br /><br /> Categoriza o modelo e define como ele é exibido no **Novo Projeto**.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Elemento necessário.<br /><br /> Categoriza o modelo e define como ele é exibido no **novo projeto**.|
 
 ## <a name="text-value"></a>Valor de texto
  Um valor de texto é obrigatório.
 
  Os valores de texto válidos são:
 
-- `Enabled`, que especifica que a caixa **Localização** da caixa de diálogo **Novo Projeto** está ativada.
+- `Enabled`, que especifica que a caixa **local** da caixa de diálogo **novo projeto** está habilitada.
 
-- `Disabled`, que especifica que a caixa **Localização** da caixa de diálogo **Novo Projeto** está desativada.
+- `Disabled`, que especifica que a caixa **local** da caixa de diálogo **novo projeto** está desabilitada.
 
-- `Hidden`, que especifica que a caixa **Localização** da caixa de diálogo **Novo Projeto** está oculta.
+- `Hidden`, que especifica que a caixa **local** da caixa de diálogo **novo projeto** está oculta.
 
 ## <a name="remarks"></a>Comentários
  O valor padrão é `Enabled`.
 
- A caixa de texto **Localização** na caixa de diálogo **Projeto Novo** permite que os usuários alterem o diretório padrão no qual novos projetos são salvos.
+ A caixa de texto **local** na caixa de diálogo **novo projeto** permite que os usuários alterem o diretório padrão no qual novos projetos são salvos.
 
- O valor especificado `Location` no elemento só é honrado pela caixa de diálogo se o sistema de projeto subjacente o suportar.
+ O valor especificado no `Location` elemento só será respeitado pela caixa de diálogo se o sistema de projeto subjacente oferecer suporte a ele.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir ilustra [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] os metadados de um modelo.
+ O exemplo a seguir ilustra os metadados de um [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] modelo.
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -94,4 +95,4 @@ Especifica se a caixa de texto **Local** na caixa de diálogo **Projeto novo** e
 
 ## <a name="see-also"></a>Confira também
 - [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
-- [Criando modelos de projetos e itens](../ide/creating-project-and-item-templates.md)
+- [Criando modelos de projeto e item](../ide/creating-project-and-item-templates.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_isCVTCIL | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a4741c4f3a13b77dd871cefdb7a9d6430250b98
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 068720e4b35ca52e07351aeb6f74d7594fe69d1e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740266"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463431"
 ---
 # <a name="idiasymbolget_iscvtcil"></a>IDiaSymbol::get_isCVTCIL
 Recupera um sinalizador que indica se o módulo foi convertido de um módulo Common Intermediate Language (CIL) em um módulo nativo.
@@ -33,16 +33,16 @@ HRESULT get_isCVTCIL(
 #### <a name="parameters"></a>Parâmetros
  `pFlag`
 
-fora Retorna `TRUE` se o módulo foi convertido de CIL para código nativo; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se o módulo foi convertido de cil para código nativo; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
 ## <a name="remarks"></a>Comentários
- Essa propriedade está disponível no tipo de símbolo de `SymTagCompilandDetails` (consulte [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md).
+ Essa propriedade está disponível no `SymTagCompilandDetails` tipo de símbolo (consulte [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -51,6 +51,6 @@ fora Retorna `TRUE` se o módulo foi convertido de CIL para código nativo; caso
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)

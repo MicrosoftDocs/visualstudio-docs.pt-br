@@ -1,7 +1,7 @@
 ---
 title: Como gerenciar janelas do editor
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - editor windows
 - windows, managing editor windows
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4af752c99c87bf470922db03bf5d4746151fa8f2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 461593e4c77d7c90210ae1bb78741a1fff9616ec
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591015"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284185"
 ---
 # <a name="how-to-manage-editor-windows"></a>Como gerenciar janelas do editor
 
@@ -54,7 +54,7 @@ Também é possível criar várias instâncias de uma janela do editor. Esse rec
 
    Uma nova instância com guias do editor será adicionada.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Recursos do editor de código](../ide/writing-code-in-the-code-and-text-editor.md)
 - [Personalizar layouts de janela](../ide/customizing-window-layouts-in-visual-studio.md)

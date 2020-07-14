@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Meça o desempenho do aplicativo no Visual Studio
-summary: Ferramentas de Diagnóstico e Criação de Perfil ajudam você a diagnosticar o uso de memória e uso de CPU e outros problemas em nível de aplicativo. Com essas ferramentas, você pode acumular dados de desempenho enquanto executa o aplicativo.
+summary: Ferramentas de diagnóstico e criação de perfil ajudam você a diagnosticar o uso de memória e de CPU, além de outros problemas no aplicativo. Com essas ferramentas, você pode acumular dados de desempenho enquanto executa o aplicativo.
 metadata:
   title: Meça o desempenho no Visual Studio
   description: Saiba como usar o Visual Studio para medir o desempenho usando ferramentas de criação de perfil.
@@ -8,55 +8,65 @@ metadata:
   author: mikejo5000
   ms.author: mikejo
   manager: jillfra
-  ms.date: 10/30/2019
-  ms.openlocfilehash: 94bbe9a81a38b255eba6cc6b15812743328a0f27
-  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.date: 06/03/2020
+  ms.openlocfilehash: 4f522f6613424c3251344207381d2eaf31705c9c
+  ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 03/21/2020
-  ms.locfileid: "79549924"
+  ms.lasthandoff: 06/23/2020
+  ms.locfileid: "85289112"
 landingContent:
-- title: Sobre a criação de perfil
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Introdução às ferramentas de criação de perfil
-      url: profiling-feature-tour.md
-  - linkListType: concept
-    links:
-    - text: Maneiras de executar ferramentas de criação de perfil
-      url: running-profiling-tools-with-or-without-the-debugger.md
 - title: Introdução
   linkLists:
-  - linkListType: quickstart
-    links:
-    - text: Analisar o uso da CPU (C#, Visual Basic)
-      url: quickstart-cpu-usage-managed.md
-    - text: Analisar o uso da CPU (C++)
-      url: quickstart-cpu-usage-native.md
-    - text: Analisar o uso da CPU (ASP.NET)
-      url: quickstart-cpu-usage-aspnet.md
   - linkListType: tutorial
     links:
     - text: Introdução à análise de uso da CPU
       url: beginners-guide-to-performance-profiling.md
     - text: Introdução à medição de uso de memória
       url: memory-usage.md
-- title: Mais ferramentas de desempenho
-  linkLists:
   - linkListType: how-to-guide
     links:
     - text: PerfTips
       url: perftips.md
-    - text: Medir o uso da CPU na linha de comando
-      url: profile-apps-from-command-line.md
-    - text: Medir o uso de memória para objetos .NET
+- title: Princípios básicos
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Introdução às ferramentas de criação de perfil
+      url: profiling-feature-tour.md
+    - text: Maneiras de executar ferramentas de criação de perfil
+      url: running-profiling-tools-with-or-without-the-debugger.md
+  - linkListType: concept
+    links:
+    - text: Entendendo sobre os métodos de coleta de desempenho
+      url: understanding-performance-collection-methods-perf-profiler.md
+- title: Ferramentas de desempenho
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Uso da CPU
+      url: cpu-usage.md
+    - text: Banco de Dados
+      url: analyze-database.md
+    - text: Visualizador de Eventos
+      url: events-viewer.md
+    - text: Uso de Memória
+      url: memory-usage-without-debugging2.md
+    - text: Rastreamento de alocação de objeto .NET
       url: dotnet-alloc-tool.md
+    - text: Uso de GPU (Direct3D)
+      url: gpu-usage.md
+    - text: .NET Async
+      url: analyze-async.md
     - text: Analisar o consumo de recursos (XAML)
       url: application-timeline.md
-    - text: Analisar o uso de GPU (Direct3D)
-      url: gpu-usage.md
-    - text: Analisar o uso de rede (UWP)
-      url: network-usage.md
-    - text: Analisar o uso da energia (UWP)
-      url: analyze-energy-use-in-store-apps.md
+- title: Guias
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Otimizar as configurações do criador de perfil
+      url: optimize-profiler-settings.md
+    - text: Medir o desempenho na linha de comando
+      url: profile-apps-from-command-line.md
+    - text: Usar várias ferramentas de criador de perfil simultaneamente
+      url: use-multiple-profiler-tools-simultaneously.md

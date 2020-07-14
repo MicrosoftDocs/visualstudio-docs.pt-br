@@ -15,19 +15,19 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3968d81e8ee18b4b0a56bed50f7aa1f121e1c074
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f689dfd6c1d39bbd03d522a33ed8c5639a3da9f8
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663252"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545477"
 ---
-# <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: considere a passagem dos tipos base como parâmetros
+# <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: Considerar a passagem de tipos base como parâmetros
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|ConsiderPassingBaseTypesAsParameters|
+|TypeName|ConsiderPassingBaseTypesAsParameters|
 |CheckId|CA1011|
 |Categoria|Microsoft. Design|
 |Alteração Significativa|Quebra|
@@ -46,18 +46,18 @@ ms.locfileid: "72663252"
 
 - Se o método exigir a funcionalidade específica que é fornecida pelo tipo derivado
 
-   \- ou -
+   \- ou –
 
 - para impor que apenas o tipo derivado, ou um tipo mais derivado, é passado para o método.
 
   Nesses casos, o código será mais robusto devido à verificação de tipo forte que é fornecida pelo compilador e tempo de execução.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir mostra um método, `ManipulateFileStream`, que pode ser usado somente com um objeto <xref:System.IO.FileStream>, que viola essa regra. Um segundo método, `ManipulateAnyStream`, satisfaz a regra substituindo o parâmetro <xref:System.IO.FileStream> usando um <xref:System.IO.Stream>.
+ O exemplo a seguir mostra um método, `ManipulateFileStream` , que pode ser usado somente com um <xref:System.IO.FileStream> objeto, que viola essa regra. Um segundo método, `ManipulateAnyStream` , satisfaz a regra substituindo o <xref:System.IO.FileStream> parâmetro por meio de um <xref:System.IO.Stream> .
 
  [!code-cpp[FxCop.Design.ConsiderPassingBaseTypes#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.ConsiderPassingBaseTypes/cpp/FxCop.Design.ConsiderPassingBaseTypes.cpp#1)]
  [!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.ConsiderPassingBaseTypes/cs/FxCop.Design.ConsiderPassingBaseTypes.cs#1)]
  [!code-vb[FxCop.Design.ConsiderPassingBaseTypes#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.ConsiderPassingBaseTypes/vb/FxCop.Design.ConsiderPassingBaseTypes.vb#1)]
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1059: os membros não devem expor determinados tipos concretos](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)
+ [CA1059: Membros não devem expor determinados tipos concretos](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)

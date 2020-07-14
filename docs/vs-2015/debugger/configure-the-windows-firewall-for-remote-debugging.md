@@ -9,17 +9,17 @@ caps.latest.revision: 6
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8f41aa8c074f724976adabaa99df0e8ca0064fa3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f232446ed699bd7cc034e4b6d6148b665830cf2d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68161548"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535519"
 ---
 # <a name="configure-the-windows-firewall-for-remote-debugging"></a>Configurar o Firewall do Windows para depuração remota
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Este tópico descreve como configurar o firewall para habilitar a depuração remota em computadores que executam sistemas operacionais a seguir:  
+Este tópico descreve como configurar o firewall para habilitar a depuração remota em computadores que executam os seguintes sistemas operacionais:  
   
 - Windows 7  
   
@@ -33,83 +33,81 @@ Este tópico descreve como configurar o firewall para habilitar a depuração re
   
 - Windows Server 2012 R2  
   
-  Se a rede na qual você está depurando não estiver protegida por um firewall, essa configuração é desnecessária. Caso contrário, o computador que hospeda o Visual Studio e o computador remoto a ser depurado exigem alterações à configuração do firewall.  
+  Se a rede na qual você está depurando não estiver protegida por um firewall, essa configuração será desnecessária. Caso contrário, o computador que hospeda o Visual Studio e o computador remoto que será depurado exigirá alterações na configuração do firewall.  
   
-  **IPSec** se sua rede exigir que a comunicação ser realizadas usando o IPSec, você deve abrir portas adicionais no computador host do Visual Studio e o computador remoto.  
+  **IPSec** Se sua rede exigir que a comunicação seja executada usando o IPSec, você deverá abrir portas adicionais no computador host do Visual Studio e no computador remoto.  
   
-  **Servidor Web** se você estiver depurando um servidor Web remoto, você deve abrir uma porta adicional no computador remoto.  
+  **Servidor Web** Se estiver depurando um servidor Web remoto, você deverá abrir uma porta adicional no computador remoto.  
   
-  Observe que ambos os computadores não é preciso executar o mesmo sistema operacional. Por exemplo, o computador do Visual Studio pode executar o Windows 10 e o computador remoto pode executar o Windows Server 2012 R2.  
+  Observe que os dois computadores não precisam executar o mesmo sistema operacional. Por exemplo, o computador do Visual Studio pode executar o Windows 10 e o computador remoto pode executar o Windows Server 2012 R2.  
   
 ## <a name="to-configure-windows-firewall-on-the-visual-studio-computer"></a>Para configurar o Firewall do Windows no computador do Visual Studio  
- As instruções para configurar o firewall do Windows é um pouco diferem em diferentes sistemas operacionais. No Windows 7 ou Windows Server 2008, a palavra **programa** é usado; no Windows 8/8.1, Windows 10 e Windows Server 2012, a palavra **aplicativo** é usado.  Nas etapas a seguir, usaremos a palavra **aplicativo**.  
+ As instruções para configurar o Firewall do Windows diferem ligeiramente em sistemas operacionais diferentes. No Windows 7 ou no Windows Server 2008, o **programa** Word é usado; no Windows 8/8.1, Windows 10 e Windows Server 2012, o **aplicativo** Word é usado.  Nas etapas a seguir, usaremos o **aplicativo**Word.  
   
-1. Abra a página do Firewall do Windows. (Na **inicie** caixa Pesquisar do menu, digite **Firewall do Windows**).  
+1. Abra a página Firewall do Windows. (Na caixa de pesquisa do menu **Iniciar** , digite **Firewall do Windows**).  
   
-2. Clique em **permitir um aplicativo ou recurso pelo Firewall do Windows**.  
+2. Clique em **Permitir um aplicativo ou recurso pelo Firewall do Windows**.  
   
-3. No **aplicativos e recursos permitidos** lista, procure **descoberta do depurador do Visual Studio remota**. Se estiver listado, certifique-se de que ele está selecionado e que um ou mais tipos de rede também são selecionados.  
+3. Na lista **aplicativos e recursos permitidos** , procure **depurador remoto do Visual Studio descoberta**. Se estiver listado, verifique se ele está selecionado e se um ou mais tipos de rede também estão selecionados.  
   
-4. Se **descoberta do depurador do Visual Studio remota** não é listado, clique em **permitir que o outro aplicativo**. Se você ainda não estiver visível na **adicionar um aplicativo** janela, clique em **procurar** e navegue até  **\<diretório de instalação do Visual Studio > \Common7\IDE\Remotedodepurador**. Localize a pasta apropriada para o aplicativo (x86, x64, Appx) e, em seguida, selecione **msvsmon.exe**. Em seguida, clique em **adicionar**.  
+4. Se **depurador remoto do Visual Studio descoberta** não estiver listada, clique em **permitir outro aplicativo**. Se você ainda não o vir na janela **Adicionar um aplicativo** , clique em **procurar** e navegue até ** \<Visual Studio installation directory> \Common7\IDE\Remote Debugger**. Localize a pasta apropriada para o aplicativo (x86, x64, AppX) e, em seguida, selecione **msvsmon.exe**. Clique em **Adicionar**.  
   
-5. No **aplicativos e recursos permitidos** lista, selecione **Visual Studio Remote Debugging Monitor**. Verificar um ou mais tipos de rede (**domínio, Home/Work (privada), público**) que você deseja que o monitor de depuração remota para se comunicar com. Os tipos devem incluir a rede à qual o computador do Visual Studio está conectado.  
+5. Na lista **aplicativos e recursos permitidos** , selecione **Visual Studio monitor de depuração remota**. Verifique um ou mais tipos de rede (**domínio, início/trabalho (privado), público**) com os quais você deseja que o monitor de depuração remota se comunique. Os tipos devem incluir a rede à qual o computador do Visual Studio está conectado.  
   
 ## <a name="to-open-a-port-on-the-visual-studio-computer-to-enable-discovery"></a>Para abrir uma porta no computador do Visual Studio para habilitar a descoberta  
- Você deve permitir a porta UDP 3702 entrada permitir a descoberta de computadores executando o depurador remoto. Para adicioná-lo, consulte como configurar portas no Firewall.  
+ Você deve permitir a entrada da porta UDP 3702 para permitir a descoberta do (s) computador (es) que executam o depurador remoto. Para adicioná-lo, consulte como configurar portas em um firewall.  
   
-## <a name="to-configure-the-windows-firewall-of-the-remote-computer-for-remote-debugging"></a>Para configurar o firewall do Windows do computador remoto para depuração remota  
- Os componentes de depuração remotos podem ser instalados no computador remoto ou executar a partir de um diretório compartilhado. O firewall do computador remoto deve ser configurado em ambos os casos. Os componentes de depuração remotos estão localizados em:  
+## <a name="to-configure-the-windows-firewall-of-the-remote-computer-for-remote-debugging"></a>Para configurar o Firewall do Windows do computador remoto para depuração remota  
+ Os componentes de depuração remota podem ser instalados no computador remoto ou executados a partir de um diretório compartilhado. O Firewall do computador remoto deve ser configurado em ambos os casos. Os componentes de depuração remota estão localizados em:  
   
- **\<Diretório de instalação do Visual Studio > \Common7\IDE\Remote depurador**  
+ **\<Visual Studio installation directory>Depurador do \Common7\IDE\Remote**  
   
- As instruções para configurar o firewall do Windows é um pouco diferem em diferentes sistemas operacionais. No Windows 7 ou Windows Server 2008, a palavra **programa** é usado; no Windows 8/8.1, Windows 10 e Windows Server 2012, a palavra **aplicativo** é usado.  Nas etapas a seguir, usaremos a palavra **aplicativo**.  
+ As instruções para configurar o Firewall do Windows diferem ligeiramente em sistemas operacionais diferentes. No Windows 7 ou no Windows Server 2008, o **programa** Word é usado; no Windows 8/8.1, Windows 10 e Windows Server 2012, o **aplicativo** Word é usado.  Nas etapas a seguir, usaremos o **aplicativo**Word.  
   
-1. Abra a página do Firewall do Windows. (Na **inicie** caixa Pesquisar do menu, digite **Firewall do Windows**.)  
+1. Abra a página Firewall do Windows. (Na caixa de pesquisa do menu **Iniciar** , digite **Firewall do Windows**.)  
   
-2. Clique em **permitir um aplicativo ou recurso pelo Firewall do Windows**.  
+2. Clique em **Permitir um aplicativo ou recurso pelo Firewall do Windows**.  
   
-3. No **aplicativos e recursos permitidos** lista, procure **Visual Studio Remote Debugging Monitor**. Se estiver listado, certifique-se de que ele está selecionado e que um ou mais tipos de rede também são selecionados.  
+3. Na lista de **aplicativos e recursos permitidos** , procure o **Visual Studio monitor de depuração remota**. Se estiver listado, verifique se ele está selecionado e se um ou mais tipos de rede também estão selecionados.  
   
-4. Se **Visual Studio Remote Debugging Monitor** não é listado, clique em **permitir que o outro aplicativo**. Se você ainda não estiver visível na **adicionar uma janela de aplicativo**, clique em **procurar** e navegue até  **\<diretório de instalação do Visual Studio > \Common7\IDE\Remotedodepurador**. Localize a pasta apropriada para o aplicativo (x86, x64, Appx) e, em seguida, selecione **msvsmon.exe**. Em seguida, clique em **adicionar**.  
+4. Se o **Visual Studio monitor de depuração remota** não estiver listado, clique em **permitir outro aplicativo**. Se você ainda não o vir na **janela Adicionar um aplicativo**, clique em **procurar** e navegue até ** \<Visual Studio installation directory> \Common7\IDE\Remote Debugger**. Localize a pasta apropriada para o aplicativo (x86, x64, AppX) e, em seguida, selecione **msvsmon.exe**. Clique em **Adicionar**.  
   
-5. No **aplicativos permitidos** lista, selecione **Visual Studio Remote Debugging Monitor**. Verificar um ou mais tipos de rede (**domínio, Home/Work (privada), público**) que você deseja que o monitor de depuração remota para se comunicar com. Os tipos devem incluir a rede à qual o computador do Visual Studio está conectado.  
+5. Na lista de **aplicativos permitidos** , selecione **Visual Studio monitor de depuração remota**. Verifique um ou mais tipos de rede (**domínio, início/trabalho (privado), público**) com os quais você deseja que o monitor de depuração remota se comunique. Os tipos devem incluir a rede à qual o computador do Visual Studio está conectado.  
   
-## <a name="ports-on-the-remote-computer-that-enable-remote-debugging"></a>Portas que habilitar a depuração remota no computador remoto  
+## <a name="ports-on-the-remote-computer-that-enable-remote-debugging"></a>Portas no computador remoto que habilitam a depuração remota  
   
-|||||  
-|-|-|-|-|  
 |**Portas**|**Entrada/saída**|**Protocolo**|**Descrição**|  
+|-|-|-|-|
 |3702|Saída|UDP|Necessário para a descoberta de depurador remoto.|  
-|4020||TCP|Para VS 2015. O número da porta é incrementado em 2 para cada versão do Visual Studio. Para obter mais informações, consulte o Visual Studio Remote Debugger atribuições de porta.|  
-|4021||TCP|Para VS 2015. O número da porta é incrementado em 2 para cada versão do Visual Studio. Para obter mais informações, consulte o Visual Studio Remote Debugger atribuições de porta.|  
+|4020||TCP|Para VS 2015. O número da porta é incrementado por 2 para cada versão do Visual Studio. Para obter mais informações, consulte Depurador Remoto do Visual Studio atribuições de porta.|  
+|4021||TCP|Para VS 2015. O número da porta é incrementado por 2 para cada versão do Visual Studio. Para obter mais informações, consulte Depurador Remoto do Visual Studio atribuições de porta.|  
   
-## <a name="ports-on-the-remote-computer-that-enable-remote-debugging-with-managed-or-native-compatibility-mode"></a>Portas no computador remoto que habilitar a depuração remota com o modo de compatibilidade gerenciado ou nativo  
+## <a name="ports-on-the-remote-computer-that-enable-remote-debugging-with-managed-or-native-compatibility-mode"></a>Portas no computador remoto que habilitam a depuração remota com modo de compatibilidade gerenciado ou nativo  
   
-|||||  
-|-|-|-|-|  
 |**Portas**|**Entrada/saída**|**Protocolo**|**Descrição**|  
-|135, 139, 445|Saída|TCP|Necessário.|  
-|137, 138|Saída|UDP|Necessário.|  
-|500, 4500|Saída|UDP|Necessário se a sua diretiva de domínio requer comunicação de rede a ser executada por meio de IPSec.|  
-|80|Saída|TCP|Necessário para a depuração de servidor Web.|  
+|-|-|-|-|  
+|135, 139, 445|Saída|TCP|Obrigatórios.|  
+|137, 138|Saída|UDP|Obrigatórios.|  
+|500, 4500|Saída|UDP|Necessário se sua política de domínio exigir que a comunicação de rede seja executada por meio do IPSec.|  
+|80|Saída|TCP|Necessário para depuração de servidor Web.|  
   
-## <a name="how-to-configure-ports-in-windows-firewall"></a>Como configurar portas no Firewall do Windows  
+## <a name="how-to-configure-ports-in-windows-firewall"></a>Como configurar portas no firewall do Windows  
   
-1. Sobre o **inicie** menu, procure **Firewall do Windows com segurança avançada**.  
+1. No menu **Iniciar** , procure por **Firewall do Windows com segurança avançada**.  
   
-2. Clique em **regras de entrada** ou **regras de saída** e, em seguida, clique em **nova regra** no **ações** lista.  
+2. Clique em **regras de entrada** ou de **saída** e, em seguida, clique em **nova regra** na lista **ações** .  
   
-3. Sobre o **tipo de regra** página, selecione **porta** e, em seguida, clique em **próxima**.  
+3. Na página **tipo de regra** , selecione **porta** e clique em **Avançar**.  
   
-4. Sobre o **protocolo e portas** , selecione o protocolo de porta (TCP ou UDP). Selecione **portas locais específicas** e insira um ou mais números de porta que você deseja habilitar para o protocolo. Números separados por vírgulas. Clique em **Avançar**.  
+4. Na página **protocolo e portas** , selecione o protocolo de porta (TCP ou UDP). Selecione **portas locais específicas** e insira um ou mais números de porta que você deseja habilitar para o protocolo. Separe os números com vírgulas. Em seguida, clique em **Próximo**.  
   
-5. Sobre o **ação** página, selecione **permitir a conexão** e, em seguida, clique em **próxima**.  
+5. Na página **ação** , selecione **permitir a conexão** e clique em **Avançar**.  
   
-6. Sobre o **perfil** , selecione um ou mais tipos de rede para habilitar para a porta. O tipo selecionado deve incluir a rede à qual o computador remoto está conectado. Clique em **Avançar**.  
+6. Na página **perfil** , selecione um ou mais tipos de rede a serem habilitados para a porta. O tipo selecionado deve incluir a rede à qual o computador remoto está conectado. Em seguida, clique em **Próximo**.  
   
-7. Sobre o **nome** página, digite um nome para a regra e, em seguida, clique em **concluir**.  
+7. Na página **nome** , digite um nome para a regra e clique em **concluir**.  
   
-8. Você deve ver sua nova regra na **regras de entrada** ou **regras de saída** lista.  
+8. Você deve ver sua nova regra na lista **regras de entrada** ou **regras de saída** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Depuração remota](../debugger/remote-debugging.md)

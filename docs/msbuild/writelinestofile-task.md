@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b78ac2347a5143aeb532a4bcc294551430584b4a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 27673ba3691e53540bce2249700c4453cb56c166
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77630659"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286096"
 ---
 # <a name="writelinestofile-task"></a>Tarefa WriteLinesToFile
 
@@ -36,10 +36,10 @@ Grava os caminhos dos itens especificados no arquivo de texto especificado.
 |Parâmetro|Descrição|
 |---------------|-----------------|
 |`File`|Parâmetro <xref:Microsoft.Build.Framework.ITaskItem> obrigatório.<br /><br /> Especifica o arquivo no qual os itens serão gravados.|
-|`Lines`|Parâmetro opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Especifica os itens a serem gravados no arquivo.|
-|`Overwrite`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, a tarefa substituirá todo o conteúdo existente no arquivo.|
-|`Encoding`|Parâmetro `String` opcional.<br /><br /> Seleciona a codificação de caracteres, por exemplo, "Unicode".  Consulte também <xref:System.Text.Encoding>.|
-|`WriteOnlyWhenDifferent`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, o arquivo de destino especificado, se ele existir, será lido primeiro para comparar o que a tarefa teria gravado. Se idêntico, o arquivo não será gravado no disco, e o carimbo de data e hora será preservado.|
+|`Lines`|Parâmetro opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Especifica os itens a serem gravados no arquivo. O padrão é a lista vazia.|
+|`Overwrite`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, a tarefa substituirá todo o conteúdo existente no arquivo. O padrão é `false`.|
+|`Encoding`|Parâmetro `String` opcional.<br /><br /> Seleciona a codificação de caracteres, por exemplo, "Unicode". Padrão é UTF-8.  Consulte também <xref:System.Text.Encoding>.|
+|`WriteOnlyWhenDifferent`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, o arquivo de destino especificado, se ele existir, será lido primeiro para comparar o que a tarefa teria gravado. Se idêntico, o arquivo não será gravado no disco, e o carimbo de data e hora será preservado. O padrão é `false`.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -95,7 +95,7 @@ dotnet %~dp0$(AssemblyName).dll %*
 </Project>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Tarefas](../msbuild/msbuild-tasks.md)
-- [Referência de tarefas](../msbuild/msbuild-task-reference.md)
+- [Referência de tarefa](../msbuild/msbuild-task-reference.md)

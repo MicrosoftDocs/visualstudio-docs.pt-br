@@ -15,19 +15,19 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a7c64337af94f9e88944fd15480f4b7ce1e2cb08
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e7a96c95313ffee82448e3485c90868c8103814a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655264"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539796"
 ---
-# <a name="ca1004-generic-methods-should-provide-type-parameter"></a>CA1004: os métodos genéricos devem fornecer o parâmetro de tipo
+# <a name="ca1004-generic-methods-should-provide-type-parameter"></a>CA1004: Métodos genéricos devem fornecer um parâmetro de tipo
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|GenericMethodsShouldProvideTypeParameter|
+|TypeName|GenericMethodsShouldProvideTypeParameter|
 |CheckId|CA1004|
 |Categoria|Microsoft. Design|
 |Alteração Significativa|Quebra|
@@ -51,16 +51,16 @@ ms.locfileid: "72655264"
  [!code-vb[FxCop.Design.Inference#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.Inference/vb/FxCop.Design.Inference.vb#1)]
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1005: evitar parâmetros excessivos em tipos genéricos](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
+ [CA1005: Evitar parâmetros excessivos em tipos genéricos](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
 
- [CA1010: as coleções devem implementar a interface genérica](../code-quality/ca1010-collections-should-implement-generic-interface.md)
+ [CA1010: Coleções devem implementar uma interface genérica](../code-quality/ca1010-collections-should-implement-generic-interface.md)
 
- [CA1000: não declarar membros estáticos em tipos genéricos](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
+ [CA1000: Não declarar membros estáticos em tipos genéricos](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
 
- [CA1002: não expor listas genéricas](../code-quality/ca1002-do-not-expose-generic-lists.md)
+ [CA1002: Não expor listas genéricas](../code-quality/ca1002-do-not-expose-generic-lists.md)
 
- [CA1006: não aninhar tipos genéricos em assinaturas de membro](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
+ [CA1006: Não aninhar tipos genéricos em assinaturas de membro](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
 
- [CA1003: usar instâncias do manipulador de eventos genéricos](../code-quality/ca1003-use-generic-event-handler-instances.md)
+ [CA1003: Usar instâncias do manipulador de eventos genérico](../code-quality/ca1003-use-generic-event-handler-instances.md)
 
- [CA1007: usar genéricos quando apropriado](../code-quality/ca1007-use-generics-where-appropriate.md)
+ [CA1007: Usar genéricos quando apropriado](../code-quality/ca1007-use-generics-where-appropriate.md)

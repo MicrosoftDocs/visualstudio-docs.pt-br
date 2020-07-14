@@ -15,25 +15,25 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1fe2982ab9e1b3951583b268eadb44c97c8e4805
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 04691d2344b232906676180122ad67fff5405891
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663633"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539354"
 ---
-# <a name="ca1063-implement-idisposable-correctly"></a>CA1063: implementar IDisposable corretamente
+# <a name="ca1063-implement-idisposable-correctly"></a>CA1063: Implementar IDisposable corretamente
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|ImplementIDisposableCorrectly|
+|TypeName|ImplementIDisposableCorrectly|
 |CheckId|CA1063|
 |Categoria|Microsoft. Design|
 |Alteração Significativa|Sem interrupção|
 
 ## <a name="cause"></a>Causa
- o `IDisposable` não está implementado corretamente. Alguns motivos para esse problema estão listados aqui:
+ `IDisposable`Não está implementado corretamente. Alguns motivos para esse problema estão listados aqui:
 
 - IDisposable é implementado novamente na classe.
 
@@ -59,19 +59,19 @@ ms.locfileid: "72663633"
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
  Examine seu código e determine quais das resoluções a seguir corrigirão essa violação.
 
-- Remova IDisposable da lista de interfaces implementadas por {0} e substitua a implementação de descarte de classe base em vez disso.
+- Remova IDisposable da lista de interfaces que são implementadas pelo {0} e substitua a implementação de descarte de classe base em vez disso.
 
-- Remova o finalizador do tipo {0}, substitua Dispose (descarte de bool) e coloque a lógica de finalização no caminho do código onde ' disposição ' é false.
+- Remova o finalizador do tipo {0} , substitua Dispose (descarte bool) e coloque a lógica de finalização no caminho do código onde "descartar" é falso.
 
-- Remova {0}, substitua Dispose (descarte de bool) e coloque a lógica de descarte no caminho de código onde ' disposição ' é true.
+- Remover {0} , substituir Dispose (descartar bool) e colocar a lógica de descarte no caminho de código onde ' disposição ' é true.
 
-- Verifique se {0} está declarada como pública e lacrada.
+- Certifique-se de que {0} seja declarado como público e lacrado.
 
-- Renomeie {0} como ' Dispose ' e verifique se ele está declarado como público e lacrado.
+- Renomeie {0} para ' Dispose ' e verifique se ele está declarado como público e lacrado.
 
-- Verifique se {0} está declarada como protegida, virtual e sem lacre.
+- Certifique-se de que {0} seja declarado como protegido, virtual e sem lacre.
 
-- Modifique {0} para que chame Dispose (true) e, em seguida, chame GC. SuppressFinalize na instância do objeto atual (' this ' ou ' me ' em [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) e, em seguida, retorna.
+- Modifique {0} para que chame Dispose (true) e, em seguida, chame GC. SuppressFinalize na instância do objeto atual (' this ' ou ' me ' em [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ) e, em seguida, retorna.
 
 - Modifique {0} para que chame Dispose (false) e, em seguida, retorne.
 

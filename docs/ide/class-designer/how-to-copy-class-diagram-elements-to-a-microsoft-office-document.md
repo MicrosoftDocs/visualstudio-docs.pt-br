@@ -1,7 +1,7 @@
 ---
 title: Como copiar elementos de diagrama de classe para um documento do Microsoft Office (Designer de Classe)
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - class diagrams, copying elements to Office documents
 - Office documents [Visual Studio]
@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d2d08b45d913270bdc43c01b0baf92abc3589927
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0fa6d97b5087659b9fc8120d9480a241517ca8ec
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75592237"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770992"
 ---
 # <a name="how-to-copy-class-diagram-elements-to-a-microsoft-office-document"></a>Como copiar elementos do diagrama de classe para um documento do Microsoft Office
 
@@ -42,5 +42,5 @@ Você também pode escolher **Copiar** em vez de **Copiar Imagem**. **Copiar** c
 
 ## <a name="see-also"></a>Confira também
 
-- [Como: Imprimir diagramas de classe](how-to-print-class-diagrams.md)
-- [Como: Exportar diagramas de classe como imagens](how-to-export-class-diagrams-as-images.md)
+- [Como: imprimir diagramas de classe](how-to-print-class-diagrams.md)
+- [Como: exportar diagramas de classe como imagens](how-to-export-class-diagrams-as-images.md)

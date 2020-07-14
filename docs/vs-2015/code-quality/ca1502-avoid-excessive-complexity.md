@@ -15,19 +15,19 @@ caps.latest.revision: 32
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f7b830e9d3a045bb54394a91d94e036613af7d1f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5da2e2bf26bb1894987caa8b748181d952bd7c18
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72607868"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547830"
 ---
-# <a name="ca1502-avoid-excessive-complexity"></a>CA1502: evitar complexidade excessiva
+# <a name="ca1502-avoid-excessive-complexity"></a>CA1502: Evitar complexidade excessiva
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|AvoidExcessiveComplexity|
+|TypeName|AvoidExcessiveComplexity|
 |CheckId|CA1502|
 |Categoria|Microsoft. Maintainabilidade|
 |Alteração Significativa|Sem interrupção|
@@ -50,14 +50,14 @@ ms.locfileid: "72607868"
  Para corrigir uma violação dessa regra, refatore o método para reduzir sua complexidade de ciclomática.
 
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- É seguro suprimir um aviso dessa regra se a complexidade não puder ser facilmente reduzida e o método for fácil de entender, testar e manter. Em particular, um método que contém uma instrução `switch` grande (`Select` em [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) é um candidato para exclusão. O risco de desestabilizar a base de código no final do ciclo de desenvolvimento ou introduzir uma alteração inesperada no comportamento de tempo de execução no código fornecido anteriormente pode superar os benefícios de manutenção da refatoração do código.
+ É seguro suprimir um aviso dessa regra se a complexidade não puder ser facilmente reduzida e o método for fácil de entender, testar e manter. Em particular, um método que contém uma `switch` instrução ( `Select` in [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ) grande é um candidato para exclusão. O risco de desestabilizar a base de código no final do ciclo de desenvolvimento ou introduzir uma alteração inesperada no comportamento de tempo de execução no código fornecido anteriormente pode superar os benefícios de manutenção da refatoração do código.
 
 ## <a name="how-cyclomatic-complexity-is-calculated"></a>Como a complexidade do ciclomática é calculada
  A complexidade do ciclomática é calculada adicionando 1 ao seguinte:
 
-- Número de ramificações (como `if`, `while` e `do`)
+- Número de ramificações (como `if` , `while` e `do` )
 
-- Número de instruções `case` em um `switch`
+- Número de `case` instruções em um`switch`
 
   Os exemplos a seguir mostram métodos que têm complexidades ciclomática variáveis.
 
@@ -90,7 +90,7 @@ ms.locfileid: "72607868"
  [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#4](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/vb/FxCop.Maintainability.AvoidExcessiveComplexity.vb#4)]
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1501: evitar herança excessiva](../code-quality/ca1501-avoid-excessive-inheritance.md)
+ [CA1501: Evitar herança excessiva](../code-quality/ca1501-avoid-excessive-inheritance.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Medindo complexidade e facilidade de manutenção do código gerenciado](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)

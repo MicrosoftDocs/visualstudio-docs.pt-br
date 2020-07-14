@@ -1,7 +1,7 @@
 ---
 title: 'IDiaStackFrame:: get_functionStart | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b9900b6301388479fc71f1b257113974056aeb3b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 261ee4aee81eef06294c8fe2393d56663957b27a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741719"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465097"
 ---
 # <a name="idiastackframeget_functionstart"></a>IDiaStackFrame::get_functionStart
 Recupera um sinalizador que indica se o bloco contém o ponto de entrada de uma função.
@@ -33,10 +33,10 @@ HRESULT get_functionStart ( 
 #### <a name="parameters"></a>Parâmetros
  `pRetVal`
 
-fora Retorna `TRUE` se o registro de ativação contiver o ponto de entrada de uma função; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se o registro de ativação contém o ponto de entrada de uma função; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se a propriedade não tiver suporte. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se a propriedade não tem suporte. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Como: Depurar exceções ASP.NET | Microsoft Docs'
+title: Como depurar exceções ASP.NET | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -17,17 +17,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 9f8391d355b2f540db4e38486b8992d940336464
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a6808bff0a38b6ebaa3049f1655e781439f3f735
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733796"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350128"
 ---
 # <a name="how-to-debug-aspnet-exceptions"></a>Como depurar exceções do ASP.NET
 A depuração de exceções é uma parte importante do desenvolvimento de um aplicativo [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] robusto. As informações gerais sobre como depurar exceções estão no [Gerenciamento de exceções com o depurador](../debugger/managing-exceptions-with-the-debugger.md).
 
- Para depurar as exceções não tratadas do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], você deve verificar se o depurador é interrompido para elas. O tempo de execução do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] tem um manipulador de exceção de nível superior. Portanto, por padrão, o depurador nunca é interrompido em exceções não tratadas. Para interromper o depurador quando uma exceção é lançada, você deve selecionar a configuração **Interromper quando uma exceção for: Lançada** para essa exceção específica na caixa de diálogo **Exceções**.
+ Para depurar as exceções não tratadas do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], você deve verificar se o depurador é interrompido para elas. O runtime do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] tem um manipulador de exceção de nível superior. Portanto, por padrão, o depurador nunca é interrompido em exceções não tratadas. Para interromper o depurador quando uma exceção é lançada, você deve selecionar a configuração **Interromper quando uma exceção for: Lançada** para essa exceção específica na caixa de diálogo **Exceções**.
 
  Se você tiver habilitado Apenas Meu Código, **interromper quando uma exceção for: lançada** não fará com que o depurador seja interrompido imediatamente se uma exceção for lançada em um método .net ou outro código do sistema. Em vez disso, a execução continua até que o depurador atinja código que não seja do sistema, e então é interrompida. Como resultado, você não precisa depurar o código do sistema quando ocorre uma exceção.
 
@@ -47,5 +47,5 @@ A depuração de exceções é uma parte importante do desenvolvimento de um apl
 
 - Coloque blocos de `try ... catch` em torno do código que pode lançar exceções que você pode prever e sabe como manipular. Por exemplo, se o aplicativo estiver fazendo chamadas para um serviço Web XML ou diretamente para o SQL Server, o código deve estar em blocos **try … catch** porque várias exceções podem ocorrer.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Depurar aplicativos ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)

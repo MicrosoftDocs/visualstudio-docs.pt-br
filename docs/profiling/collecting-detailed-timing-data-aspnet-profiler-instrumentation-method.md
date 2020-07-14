@@ -1,7 +1,7 @@
 ---
-title: 'VSPerfCmd: Obtenha dados de tempo para ASP.NET aplicativo web usando instrumentação'
+title: VSPerfCmd-obter dados de tempo para o aplicativo Web ASP.NET usando a instrumentação
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - profiling tools,instrumentation method
 - instrumentation profiling method
@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: d764ef32cdcb061992817d433dabb6ae61b64fd9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 55f682152731391bdb0d4c0de0a307c00c16e2c7
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779643"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331840"
 ---
 # <a name="collect-detailed-timing-data-for-an-aspnet-web-application-using-the-profiler-instrumentation-method-from-the-command-line"></a>Coletar dados de tempo detalhados para um aplicativo Web ASP.NET usando o método de instrumentação do criador de perfil por meio da linha de comando
 Esta seção descreve os procedimentos e opções para coletar dados de desempenho detalhados para um aplicativo Web [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] usando a ferramenta **VSPerfCmd** da linha de comando e o método de instrumentação.
@@ -29,8 +29,8 @@ Esta seção descreve os procedimentos e opções para coletar dados de desempen
 
 |Tarefa|Conteúdo relacionado|
 |----------|---------------------|
-|**Criar perfil para binários compilados estatisticamente**|-   [Como: Instrumentar um aplicativo de ASP.NET compilado estáticamente e coletar dados de tempo detalhados](../profiling/how-to-instrument-statically-compiled-aspnet-and-collect-detailed-timing-data.md)|
-|**Criar perfil para binários compilados dinamicamente**|-   [Como: Instrumentar um aplicativo de ASP.NET compilado dinamicamente e coletar dados de tempo detalhados](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md)|
+|**Criar perfil para binários compilados estatisticamente**|-   [Como instrumentar um aplicativo ASP.NET compilado estaticamente e coletar dados de tempo detalhados](../profiling/how-to-instrument-statically-compiled-aspnet-and-collect-detailed-timing-data.md)|
+|**Criar perfil para binários compilados dinamicamente**|-   [Como instrumentar um aplicativo ASP.NET compilado dinamicamente e coletar dados de tempo detalhados](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md)|
 
 ## <a name="related-tasks"></a>Tarefas relacionadas
 
@@ -40,7 +40,7 @@ Esta seção descreve os procedimentos e opções para coletar dados de desempen
 |----------|---------------------|
 |**Criar perfil usando o método de amostragem**|-   [Coletar estatísticas do aplicativo usando amostragem](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md)|
 |**Profile memory allocation and garbage collection (Alocação de memória de perfil e coleta de lixo)**|-   [Coletar dados de memória](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|
-|**Criar perfil de contenção de recursos e atividade de thread**|-   [Coletar dados de concorrência](../profiling/collecting-concurrency-data-for-an-aspnet-web-application.md)|
+|**Criar perfil de contenção de recursos e atividade de thread**|-   [Coletar dados de simultaneidade](../profiling/collecting-concurrency-data-for-an-aspnet-web-application.md)|
 
 ### <a name="profile-by-using-the-instrumentation-method"></a>Criar perfil usando o método de instrumentação
 
@@ -50,4 +50,4 @@ Esta seção descreve os procedimentos e opções para coletar dados de desempen
 |**Profile services (Serviços de perfil)**|-   [Coletar dados de tempo detalhados usando a instrumentação](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md)|
 
 ### <a name="analyze-instrumentation-data-views-and-reports"></a>Analisar modos de exibição e relatórios de dados de instrumentação
-- [Visualizações de dados do método de instrumentação](../profiling/instrumentation-method-data-views.md)
+- [Exibições de dados do método de instrumentação](../profiling/instrumentation-method-data-views.md)

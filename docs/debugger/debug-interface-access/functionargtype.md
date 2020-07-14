@@ -1,7 +1,7 @@
 ---
 title: FunctionArgType | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,20 +12,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e3508c785dc583f6f40b055372aaf93e7f3c24a5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c732e91649116529d30591ba9182d65d4007c211
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745084"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468612"
 ---
 # <a name="functionargtype"></a>FunctionArgType
-Cada parâmetro de uma função é identificado por um símbolo de `SymTagFunctionArgType`.
+Cada parâmetro de uma função é identificado por um `SymTagFunctionArgType` símbolo.
 
 ## <a name="properties"></a>Propriedades
  A tabela a seguir mostra as propriedades válidas adicionais para esse tipo de símbolo.
 
-|propriedade|Tipo de dados|Descrição|
+|Propriedade|Tipo de dados|Descrição|
 |--------------|---------------|-----------------|
 |[IDiaSymbol::get_classParent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md)|`IDiaSymbol*`|Símbolo para o pai FunctionType.|
 |[IDiaSymbol::get_classParentId](../../debugger/debug-interface-access/idiasymbol-get-classparentid.md)|`DWORD`|ID do símbolo pai da classe.|
@@ -36,6 +36,6 @@ Cada parâmetro de uma função é identificado por um símbolo de `SymTagFuncti
 |[IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)|`IDiaSymbol*`|Tipo do parâmetro.|
 |[IDiaSymbol::get_typeId](../../debugger/debug-interface-access/idiasymbol-get-typeid.md)|`DWORD`|ID do símbolo de tipo.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Hierarquia de classes de tipos de símbolo](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)
 - [FunctionType](../../debugger/debug-interface-access/functiontype.md)

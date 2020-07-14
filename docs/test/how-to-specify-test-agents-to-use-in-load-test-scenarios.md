@@ -1,7 +1,7 @@
 ---
 title: Especificar os agentes de teste a serem usados em cenários de teste de carga
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - test agents, load tests
 - load tests, scenarios
@@ -12,23 +12,23 @@ ms.assetid: e86806dd-5897-4e4c-bfd4-8d687fb72a6e
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: d23d565752d81bff960027090ddaaf88e9d78ed5
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5d9e22200a63544b4539f7bf78c48d5711974776
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588922"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287487"
 ---
 # <a name="how-to-specify-test-agents-to-use-in-load-test-scenarios"></a>Como especificar agentes de teste a serem usados em cenários de teste de carga
 
-Depois de criar seu teste de carga usando o **Novo Assistente de Teste de Carga,** você pode usar o Load Test **Editor** para alterar as propriedades de cenários para atender às suas necessidades e metas de teste.
+Depois de criar o teste de carga usando o **novo assistente de teste de carga**, você pode usar o **Editor de teste de carga** para alterar as propriedades de cenários para atender às suas necessidades e metas de teste.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
 > Para obter uma lista completa das propriedades de cenário de teste de carga e suas descrições, confira [Propriedades do cenário de teste de carga](../test/load-test-scenario-properties.md).
 
-Os agentes são especificados usando o **Load Test Editor** para alterar a propriedade Agentes para **Usar** na janela **Propriedades.**
+Os agentes são especificados usando o **Editor de teste de carga** para alterar os **agentes para usar** a propriedade na janela **Propriedades** .
 
 Você pode especificar os agentes que deseja que seu cenário use se estiver usando controladores e agentes para executar o teste de carga remotamente. Por exemplo, talvez seja conveniente especificar um determinado conjunto de agentes para que você possa manter consistência ao analisar tendências de desempenho. Além disso, os agentes podem ser distribuídos geograficamente para que haja uma afinidade entre quais scripts eles executam e onde o agente está localizado.
 
@@ -39,7 +39,7 @@ Para obter mais informações, consulte [Controladores e agentes de teste](confi
 
 Outro motivo é que alguns, mas não todos, agentes podem ter software instalado neles que é necessário para determinado cenário.
 
-Você pode controlar a seleção do agente para uma determinada execução de teste usando funções nas configurações de teste. Para obter mais informações, consulte [Coletar informações de diagnóstico usando as configurações do teste](../test/collect-diagnostic-information-using-test-settings.md).
+Você pode controlar a seleção do agente para uma determinada execução de teste usando funções nas configurações de teste. Para obter mais informações, consulte [coletar informações de diagnóstico usando configurações de teste](../test/collect-diagnostic-information-using-test-settings.md).
 
 Se um computador de agente de teste tiver mais de 75% de utilização de CPU ou menos de 10% de memória física disponível, adicione mais agentes ao seu teste de carga para garantir que o computador do agente não se torne o gargalo em seu teste de carga.
 
@@ -64,9 +64,9 @@ Se um computador de agente de teste tiver mais de 75% de utilização de CPU ou 
 
 5. Depois de alterar a propriedade, escolha **Salvar** no menu **Arquivo**. Em seguida, você pode executar o teste de carga usando o novo valor de **Agentes a usar**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Editar cenários de teste de carga](../test/edit-load-test-scenarios.md)
-- [Passo a passo: criar e executar um teste de carga](../test/walkthrough-create-and-run-a-load-test.md)
+- [Passo a passo: Criar e executar um teste de carga](../test/walkthrough-create-and-run-a-load-test.md)
 - [Controladores de teste e agentes de teste](configure-test-agents-and-controllers-for-load-tests.md)
 - [Propriedades do cenário de teste de carga](../test/load-test-scenario-properties.md)

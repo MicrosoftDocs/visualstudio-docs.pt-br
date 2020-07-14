@@ -12,15 +12,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 192b745580ab676dab476b4dcf31c15b9095be2a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3b700239f97153cef94ab1d7010ad16ed9aa6001
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967338"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546556"
 ---
 # <a name="extensiondata-element"></a>Elemento ExtensionData
-  Representa uma coleção de itens de dados personalizados que estão associados com o item de projeto do SharePoint.
+  Representa uma coleção de itens de dados personalizados que estão associados ao item de projeto do SharePoint.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,30 +34,30 @@ ms.locfileid: "62967338"
  As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 ### <a name="attributes"></a>Atributos
- nenhuma.
+ Nenhum.
 
 ### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[ExtensionDataItem](../sharepoint/extensiondataitem-element.md)|Elemento opcional.<br /><br /> Representa um item de dados personalizado que está associado com o item de projeto do SharePoint, no formato de chave/valor. A chave e o valor devem ser cadeias de caracteres.|
+|[ExtensionDataItem](../sharepoint/extensiondataitem-element.md)|Elemento opcional.<br /><br /> Representa um item de dados personalizado que está associado ao item de projeto do SharePoint, no formato de chave/valor. Tanto a chave quanto o valor devem ser cadeias de caracteres.|
 
 ### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[ProjectItem](../sharepoint/projectitem-element.md)|Representa um item de projeto do SharePoint. Esse elemento o elemento raiz necessário do `.spdata` arquivo.|
+|[ProjectItem](../sharepoint/projectitem-element.md)|Representa um item de projeto do SharePoint. Esse elemento é o elemento raiz necessário do `.spdata` arquivo.|
 
 ## <a name="remarks"></a>Comentários
- Quando você associar dados personalizados com um item de projeto do SharePoint usando o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> propriedade de um <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> do objeto, o Visual Studio salva os dados para o **ExtensionData** elemento no `.spdata` arquivo para o projeto item. Para obter mais informações, consulte [salvar os dados nas extensões do sistema de projeto do SharePoint](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md).
+ Quando você associa dados personalizados a um item de projeto do SharePoint usando a <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> propriedade de um <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> objeto, o Visual Studio salva os dados no elemento **ExtensionData** no `.spdata` arquivo para o item de projeto. Para obter mais informações, consulte [salvar dados em extensões do sistema de projeto do SharePoint](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md).
 
-## <a name="element-information"></a>Informações sobre o elemento
+## <a name="element-information"></a>Informações do elemento
 
-|||
+|Propriedade|Valor|
 |-|-|
-|**Namespace**|http:\/\/schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
-|**Nome do esquema**|Esquema de Item de projeto do SharePoint|
-|**Arquivo de validação**|ProjectItemModelSchema.xsd|
+|**Namespace**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**Nome do esquema**|Esquema de item de projeto do SharePoint|
+|**Arquivo de validação**|ProjectItemModelSchema. xsd|
 |**Pode estar vazio**|Não|
 
 ## <a name="see-also"></a>Consulte também

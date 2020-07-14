@@ -2,7 +2,7 @@
 title: Janela interativa do Python (REPL)
 description: Use a janela interativa (REPL) para desenvolvimento rápido de código Python no Visual Studio.
 ms.date: 02/11/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7ceecffec577528484cd67fd13d3e04f368fb916
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 9608f273683865be767a44dd8f1d66106b97b7e0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79302759"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533543"
 ---
 # <a name="work-with-the-python-interactive-window"></a>Trabalhar com a janela Interativa do Python
 
@@ -34,21 +34,21 @@ O Visual Studio tem diversos modos REPL do Python à sua disposição:
 
 Este artigo descreve os modos REPL **Padrão** e **Depuração**. Para obter detalhes sobre os modos do IPython, confira [Usar o REPL do IPython](interactive-repl-ipython.md).
 
-Para obter um passo a passo detalhado com exemplos, incluindo as interações com o editor como **Ctrl**+**Enter,** consulte [Tutorial Passo 3: Use a janela REPL Interativa](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md).
+Para obter instruções detalhadas com exemplos, incluindo as interações com o editor, como **Ctrl** + **Enter**, consulte [a etapa 3 do tutorial: usar a janela interativo repl](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md).
 
 ## <a name="open-an-interactive-window"></a>Abrir uma janela Interativa
 
 Há várias maneiras de abrir a janela **Interativa** de um ambiente.
 
-Primeiro, mude para a janela Ambientes Python **(Exibir** > **outros** > **ambientes Python do** Windows ou **Ctrl**+**K** > **Ctrl)**+**`** e selecione o comando ou botão Open Interactive **Window** para um ambiente escolhido.
+Primeiro, alterne para a janela de ambientes do Python (**exiba**  >  **outros**  >  **ambientes Python** do Windows ou **Ctrl** + **K**  >  **Ctrl** + **`** ) e selecione o botão ou o comando **Abrir janela interativa** para um ambiente escolhido.
 
 ![Link Janela Interativa na janela Ambientes do Python](media/interactive-window-opening.png)
 
-Em segundo lugar, perto da parte inferior do menu **Ver** > **Outro Windows,** há um comando **Python Interactive Window** para o seu ambiente padrão, bem como um comando para mudar para a janela **Ambientes:**
+Em segundo lugar, perto da parte inferior do menu **Exibir**  >  **outro Windows** , há um comando de **janela interativa do Python** para seu ambiente padrão, bem como um comando para alternar para a janela de **ambientes** :
 
 ![Itens de menu da Janela Interativa em Exibir > Outras Janelas](media/interactive-window-menu.png)
 
-Em terceiro lugar, é possível abrir uma janela **Interativa** no arquivo de inicialização do projeto ou para um arquivo independente escolhendo o comando de menu **Depurar** > **Executar \<Projeto | Arquivo> em Python Interativo** (**Shift**+**Alt**+**F5**):
+Terceiro, você pode abrir uma janela **interativa** no arquivo de inicialização em seu projeto, ou para um arquivo autônomo, selecionando o comando **debug**  >  **Execute \<Project | File> in Python Interactive** menu (**Shift** + **ALT** + **F5**):
 
 ![Executar Projeto no menu Python Interativo](media/interactive-execute-project.png)
 
@@ -62,14 +62,14 @@ Você pode controlar vários aspectos da janela **Interativa** por meio de **Fer
 
 ## <a name="use-the-interactive-window"></a>Usar a Janela Interativa
 
-Uma vez aberta a janela **Interativa,** você pode começar ** \> \> ** a inserir código linha por linha no prompt. A janela **Interativa** executa cada linha à medida que você a insere, o que inclui módulos de importação, definindo variáveis e assim por diante:
+Quando a janela **interativa** estiver aberta, você poderá começar a inserir o código linha por linha no **\>\>\>** prompt. A janela **interativa** executa cada linha à medida que você a insere, o que inclui a importação de módulos, a definição de variáveis e assim por diante:
 
 ![Janela interativa do Python](media/interactive-window.png)
 
 A exceção é quando as linhas de código adicionais são necessárias para fazer uma instrução completa, como quando uma instrução `for` termina em dois pontos como mostrado acima. Nesses casos, o prompt de linha muda para **...**, indicando que é necessário inserir linhas adicionais no bloco, conforme mostrado na quarta e quinta linhas do gráfico acima. Ao pressionar **Enter** em uma linha em branco, a janela **Interativa** fecha o bloco e o executa no interpretador.
 
 > [!Tip]
-> A janela **Interativa** melhora a experiência habitual de repl da linha de comando Python, recuando automaticamente instruções que pertencem a um escopo circundante. Seu histórico (recuperado com a seta para cima) também fornece itens de várias linhas, enquanto o REPL de linha de comando fornece somente linhas individuais.
+> A janela **interativa** aprimora a experiência de repl de linha de comando do Python usual, recuando automaticamente as instruções que pertencem a um escopo ao redor. Seu histórico (recuperado com a seta para cima) também fornece itens de várias linhas, enquanto o REPL de linha de comando fornece somente linhas individuais.
 
 <a name="meta-commands"></a> A janela **Interativa** também dá suporte a vários metacomandos. Todos os metacomandos começam com `$` e é possível digitar `$help` para obter uma lista dos metacomandos e `$help <command>` para obter detalhes de uso de um comando específico.
 
@@ -100,14 +100,14 @@ A inserção de `dir()` em um escopo exibe os identificadores válidos no escopo
 
 ## <a name="send-to-interactive-command"></a>Comando Enviar para Interativa
 
-Além de trabalhar diretamente na janela **Interativa,** você pode selecionar código no editor, clicar com o botão direito do mouse e escolher **Enviar para Interativo** ou pressionar **Ctrl**+**Enter**.
+Além de trabalhar na janela **interativa** diretamente, você pode selecionar o código no editor, clicar com o botão direito do mouse e escolher **Enviar para interativo** ou pressionar **Ctrl** + **Enter**.
 
 ![Comando de menu Enviar para interativa](media/interactive-send-to.png)
 
-Esse comando é útil para o desenvolvimento de código iterativo ou evolucionário, incluindo o teste do código durante o desenvolvimento. Por exemplo, uma vez que você enviou um pedaço de código para a janela **Interativa** e viu sua saída, você pode pressionar a seta para cima para mostrar o código novamente, modificá-lo e testá-lo rapidamente pressionando **Ctrl**+**Enter**. (Pressionar **Enter** no final da entrada executa-o, mas pressionar **Enter** no meio da entrada insere uma nova linha.) Uma vez que você tenha o código que deseja, você pode facilmente copiá-lo de volta ao seu arquivo de projeto.
+Esse comando é útil para o desenvolvimento de código iterativo ou evolucionário, incluindo o teste do código durante o desenvolvimento. Por exemplo, depois de enviar um trecho de código para a janela **interativa** e ver sua saída, você pode pressionar a seta para cima para mostrar o código novamente, modificá-lo e testá-lo rapidamente pressionando **Ctrl** + **Enter**. (Pressionar **Enter** no final da entrada a executa, mas pressionar **Enter** no meio da entrada insere uma nova linha.) Depois de ter o código desejado, você poderá copiá-lo facilmente de volta para o arquivo de projeto.
 
 > [!Tip]
-> Por padrão, o **>>>** Visual Studio remove e **...** O REPL solicita ao colar código da janela **Interativa** para o editor. Você pode alterar esse comportamento na guia **Ferramentas** > **Opções** > **Editor de** > texto**Python** > **Advanced** usando a opção **Colar solicitações REPL.** Ver [Opções - Opções diversas](python-support-options-and-settings-in-visual-studio.md#miscellaneous-options).
+> Por padrão, o Visual Studio remove **>>>** e **...** O REPL solicita ao colar o código da janela **interativa** no editor. Você pode alterar esse comportamento na guia **ferramentas**  >  **Opções**  >  **Editor de texto**  >  do**Python**  >  **avançado** usando a opção **colar remove solicitações repl** . Consulte [Opções – opções diversas](python-support-options-and-settings-in-visual-studio.md#miscellaneous-options).
 
 <!-- After 15.3 is released, you can also press **Undo** after pasting to restore prompts. Press **Undo** a second time to remove the pasted code entirely. -->
 
@@ -115,14 +115,14 @@ Esse comando é útil para o desenvolvimento de código iterativo ou evolucioná
 
 As células de código podem ser usadas na análise de dados e são compatíveis com diversos editores de texto.
 
-Por exemplo, ao usar um arquivo de código como um bloco de rascunho, geralmente você tem um pequeno bloco de código que você deseja enviar de uma só vez. Para agrupar códigos, marque o código como uma *célula de código* adicionando um comentário começando com `#%%` ao início da célula, que termina a anterior. As células de código podem ser colapsadas e expandidas, e usando **ctrl**+**Enter** dentro de uma célula de código envia toda a célula para a janela **Interativa** e se move para a próxima.
+Por exemplo, ao usar um arquivo de código como um bloco de rascunho, geralmente você tem um pequeno bloco de código que você deseja enviar de uma só vez. Para agrupar códigos, marque o código como uma *célula de código* adicionando um comentário começando com `#%%` ao início da célula, que termina a anterior. As células de código podem ser recolhidas e expandidas e o uso de **Ctrl** + **Enter** dentro de uma célula de código envia a célula inteira para a janela **interativa** e move para a próxima.
 
-O Visual Studio também detecta células de código começando com comentários como `# In[1]:`, que é o formato que você obtém ao exportar um bloco de anotações do Jupyter como um arquivo do Python. Essa detecção facilita a execução de um notebook do [Azure Notebooks](https://notebooks.azure.com/) baixando como um arquivo Python, abrindo no Visual Studio e usando **o Ctrl**+**Enter** para executar cada célula.
+O Visual Studio também detecta células de código começando com comentários como `# In[1]:`, que é o formato que você obtém ao exportar um bloco de anotações do Jupyter como um arquivo do Python. Essa detecção facilita a execução de um bloco de anotações do [Azure notebooks](https://notebooks.azure.com/) baixando como um arquivo Python, abrindo no Visual Studio e usando **Ctrl** + **Enter** para executar cada célula.
 
 ![Células de código interativas](media/interactive-code-cells.png)
 
 ## <a name="intellisense-behavior"></a>Comportamento do IntelliSense
 
-A janela **Interativa** inclui o IntelliSense baseado nos objetos dinâmicos, ao contrário do editor de código, no qual o IntelliSense é baseado apenas na análise de código-fonte. Essas sugestões são mais corretas na janela **Interativa,** especialmente com código gerado dinamicamente. A desvantagem é que as funções com efeitos colaterais (como mensagens de log) podem afetar sua experiência de desenvolvimento.
+A janela **Interativa** inclui o IntelliSense baseado nos objetos dinâmicos, ao contrário do editor de código, no qual o IntelliSense é baseado apenas na análise de código-fonte. Essas sugestões estão mais corretas na janela **interativa** , especialmente com código gerado dinamicamente. A desvantagem é que as funções com efeitos colaterais (como mensagens de log) podem afetar sua experiência de desenvolvimento.
 
-Se esse comportamento for um problema, altere as configurações em **Ferramentas** > **Opções** > **Python** > **Interactive Windows** no grupo Modo de **Conclusão,** conforme descrito em [Opções - Opções interativas do Windows](python-support-options-and-settings-in-visual-studio.md#interactive-windows-options).
+Se esse comportamento for um problema, altere as configurações em **ferramentas**  >  **Opções**  >  **Python**  >  **Interactive Windows** no grupo **modo de conclusão** , conforme descrito em opções [– opções interativas do Windows](python-support-options-and-settings-in-visual-studio.md#interactive-windows-options).

@@ -1,7 +1,7 @@
 ---
-title: 'DA0018: aplicativo de 32 bits em execução em limites de memória gerenciada do processo | Microsoft Docs'
+title: Aplicativo DA0018-32-bit em execução em limites de memória gerenciada do processo | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.18
 - vs.performance.DA0018
@@ -13,16 +13,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7bebd25f499131b4beda109ebb9ac468c2435b1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 74fed5f0dcbac45f603f16743eb2635fcf35292a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74780059"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548142"
 ---
 # <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018: aplicativo de 32 bits em execução em limites de memória gerenciada do processo
 
-|||
+|Item|Valor|
 |-|-|
 |ID de regra|DA0018|
 |Categoria|Uso das ferramentas de criação de perfil|
@@ -47,7 +47,7 @@ ms.locfileid: "74780059"
  Como o tamanho total dos heaps gerenciados se aproxima do limite padrão, a sobrecarga de gerenciamento de memória normalmente aumenta até o ponto em que pode começar a afetar a capacidade de resposta e a escalabilidade do aplicativo.
 
 ## <a name="how-to-investigate-a-warning"></a>Como investigar um aviso
- Clique duas vezes na mensagem na janela Lista de erros para navegar até a exibição [Marcas.](../profiling/marks-view.md) Encontre as colunas **Memória do .NET CLR\\Nº de bytes em todos os heaps** e **Nº total de bytes confirmados**. Determine se há fases específicas da execução do programa em que a alocação de memória gerenciada é mais pesada do que em outras fases. Compare os valores da coluna **Nº de bytes em todos os heaps** com a taxa de coleta de lixo relatada nas colunas **Memória do .NET CLR\\Nº de coletas da Ger 0**, **Memória do .NET CLR\\Nº de coletas da Ger 1** e **Memória do .NET CLR\\Nº de coletas da Ger 2** para determinar se o padrão de alocações de memória gerenciada está afetando a taxa de coleta de lixo.
+ Clique duas vezes na mensagem na janela Lista de Erros para navegar até o modo de exibição de [marcas](../profiling/marks-view.md) . Encontre as colunas **Memória do .NET CLR\\Nº de bytes em todos os heaps** e **Nº total de bytes confirmados**. Determine se há fases específicas da execução do programa em que a alocação de memória gerenciada é mais pesada do que em outras fases. Compare os valores da coluna **Nº de bytes em todos os heaps** com a taxa de coleta de lixo relatada nas colunas **Memória do .NET CLR\\Nº de coletas da Ger 0**, **Memória do .NET CLR\\Nº de coletas da Ger 1** e **Memória do .NET CLR\\Nº de coletas da Ger 2** para determinar se o padrão de alocações de memória gerenciada está afetando a taxa de coleta de lixo.
 
  Em um aplicativo .NET Framework, o Common Language Runtime limita o tamanho total dos heaps gerenciados a um pouco menos do que uma metade do tamanho máximo da parte de área privada do espaço de endereço de um processo. Para um processo de 32 bits em execução em um computador de 32 bits, 2 GB representa o limite superior da parte privada do espaço de endereço do processo. Como o tamanho total dos Heaps gerenciados começa a se aproximar do limite padrão, a sobrecarga de gerenciamento de memória pode aumentar e o desempenho do aplicativo pode diminuir.
 
@@ -59,9 +59,9 @@ ms.locfileid: "74780059"
 
 - tomar medidas para aliviar as restrições de arquitetura em relação ao tamanho máximo de memória virtual para um processo de 32 bits
 
-  Para otimizar o uso de recursos de memória gerenciada do aplicativo, colete dados de alocação de memória gerenciada em uma execução de criação de perfil de Alocação de Memória do .NET. Revise os [relatórios de visualizações de dados de memória .NET](../profiling/dotnet-memory-data-views.md) para entender o padrão de alocação de memória do aplicativo.
+  Para otimizar o uso de recursos de memória gerenciada do aplicativo, colete dados de alocação de memória gerenciada em uma execução de criação de perfil de Alocação de Memória do .NET. Examine os relatórios de [exibições de dados de memória .net](../profiling/dotnet-memory-data-views.md) para entender o padrão do aplicativo de alocação de memória.
 
-  Use a [exibição de vida do objeto](../profiling/object-lifetime-view.md) para determinar quais dos objetos de dados do programa estão sobrevivendo à geração e, em seguida, sendo recuperados a partir daí.
+  Use a [exibição de tempo de vida do objeto](../profiling/object-lifetime-view.md) para determinar quais dos objetos de dados do programa estão sobreviventes à geração e, em seguida, recuperados a partir daí.
 
   Use a [Exibição de Alocações](../profiling/dotnet-memory-allocations-view.md) para determinar o caminho de execução que resultou nessas alocações.
 

@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f10831ac398ef8fb48337436dd33253cfb32f26c
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: ab0d62efb8abc3cfbae365312a009bc6d2efea43
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84182996"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286344"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>Introdução à implantação no Visual Studio
 
@@ -48,7 +48,7 @@ A implantação em uma pasta local é normalmente usada para teste ou para inici
 
 ## <a name="publish-to-azure"></a>Publicar no Azure
 
-- **ASP.net**, **ASP.NET Core**, **Python**e **Node. js**: publicar no serviço Azure app ou Azure app serviço Linux (usando contêineres) usando um dos métodos a seguir.
+- **ASP.net**, **ASP.NET Core**, **Python**e **Node.js**: publicar no serviço Azure app ou Azure app serviço Linux (usando contêineres) usando um dos métodos a seguir.
 
   - Para implantação contínua (ou automática) de aplicativos, use o Azure DevOps com [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops).
 
@@ -58,7 +58,7 @@ A implantação em uma pasta local é normalmente usada para teste ou para inici
 
   Para usar a ferramenta **Publicar**, clique com o botão direito do mouse no Gerenciador de Soluções e escolha **Publicar**. (Se você tiver configurado anteriormente os perfis de publicação, deverá clicar em **criar novo perfil**.) Na caixa de diálogo publicar, escolha **serviço de aplicativo** ou **máquinas virtuais do Azure**e siga as etapas de configuração.
 
-  ![Escolher serviço de Azure App](../deployment/media/quickstart-publish-azure.png "Escolher serviço de Azure App")
+  ![Escolher serviço de Azure App](../deployment/media/quickstart-publish-azure-new.png "Escolher serviço de Azure App")
 
   No Visual Studio 2017 versão 15.7 e posteriores, você pode implantar aplicativos ASP.NET Core no **Serviço de Aplicativo para Linux**.
 
@@ -91,7 +91,7 @@ No Visual Studio, você pode criar pacotes de aplicativos para implantação na 
 
 - **UWP**: você pode empacotar o aplicativo e implantá-lo usando itens de menu. Para saber mais, confira [Empacotar um aplicativo UWP usando o Visual Studio](/windows/uwp/packaging/packaging-uwp-apps).
 
-    ![Criar um pacote de aplicativo](../deployment/media/feature-tour-create-app-package.jpg)
+    ![Criar um pacote de aplicativo](../deployment/media/feature-tour-create-app-package.png)
 
 - **Área de trabalho do Windows**: você pode implantar na Microsoft Store usando a Ponte de Desktop do Visual Studio 2017 versão 15.4 em diante. Para fazer isso, comece criando um Projeto de Empacotamento de Aplicativos do Windows. Para obter mais informações, confira [Empacotar um aplicativo da área de trabalho para a Microsoft Store (Ponte de Desktop)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 

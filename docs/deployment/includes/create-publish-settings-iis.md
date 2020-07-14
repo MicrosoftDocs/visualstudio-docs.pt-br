@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 69f4f4c2b55670d510652b44a203b9f0eafcc53a
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: b8002d9e911c8d8c07a5aaf5286168e49a374a7c
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "68143536"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85292196"
 ---
 
 1. Feche e reabra o Console de gerenciamento do IIS para mostrar opções de configuração atualizadas na interface do usuário.
@@ -12,6 +12,8 @@ ms.locfileid: "68143536"
 2. No IIS, clique com o botão direito do mouse em **Site Padrão**, escolha **Implantar** > **Configurar publicação da Implantação da Web**.
 
     ![Definir a configuração da Implantação da Web](../../deployment/media/tutorial-configure-web-deploy-publishing.png)
+
+   Se você não vir o menu **implantar** , consulte a seção anterior para verificar se implantação da Web está em execução.
 
 3. Na caixa de diálogo **Configurar publicação da Implantação da Web**, examine as configurações.
 

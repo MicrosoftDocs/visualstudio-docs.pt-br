@@ -13,12 +13,12 @@ caps.latest.revision: 111
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 46790d762369ade78af6c10272fc92e4d5b53fca
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.openlocfilehash: 81eedeeb9a1b2470e87f0d865996ad3e456723fe
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586793"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520543"
 ---
 # <a name="using-the-intellitrace-stand-alone-collector"></a>Usar o coletor autônomo do IntelliTrace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,7 +41,7 @@ O **coletor autônomo do IntelliTrace** permite coletar dados de diagnóstico In
   > [!NOTE]
   > Certifique-se de salvar o símbolo arquivos (.pdb). Para depurar com o IntelliTrace e percorrer o código, você deve ter os arquivos de origem e de símbolo correspondentes. Consulte [diagnosticar problemas após a implantação](../debugger/diagnose-problems-after-deployment.md).
 
-  **Perguntas frequentes**
+  **perguntas frequentes**
 
 - [Quais aplicativos funcionam com o coletor?](#WhatApps)
 
@@ -87,7 +87,7 @@ O **coletor autônomo do IntelliTrace** permite coletar dados de diagnóstico In
 
      1. Ao lado de **IntelliTraceCollector.exe**, escolha **Baixar**.
 
-     2. Salve IntelliTraceCollector. exe no diretório do coletor, por exemplo: **C:\IntelliTraceCollector**
+     2. Salve IntelliTraceCollector.exe no diretório do coletor, por exemplo: **C:\IntelliTraceCollector**
 
      3. Execute o IntelliTraceCollector.exe. Isso extrai o arquivo IntelliTraceCollection.cab.
 
@@ -99,7 +99,7 @@ O **coletor autônomo do IntelliTrace** permite coletar dados de diagnóstico In
 
           **.. \Microsoft Visual Studio 12.0 \ Common7\IDE\CommonExtensions\Microsoft\IntelliTrace\12.0.0**
 
-     2. Coloque o IntelliTracecollection. cab no diretório do coletor, por exemplo: **C:\IntelliTraceCollector**
+     2. Coloque IntelliTraceCollection.cab no diretório do coletor, por exemplo: **C:\IntelliTraceCollector**
 
 3. Expanda o IntelliTraceCollection.cab:
 
@@ -107,7 +107,7 @@ O **coletor autônomo do IntelliTrace** permite coletar dados de diagnóstico In
 
    2. Navegue até o diretório do coletor, por exemplo: **C:\IntelliTraceCollector**
 
-   3. Use o comando **Expand** , incluindo o ponto (**.**) no final, para expandir o intellitracecollection. cab:
+   3. Use o comando **Expand** , incluindo o ponto (**.**) no final, para expandir IntelliTraceCollection.cab:
 
         `expand  /f:* IntelliTraceCollection.cab .`
 
@@ -118,21 +118,21 @@ O **coletor autônomo do IntelliTrace** permite coletar dados de diagnóstico In
 
 1. No servidor do aplicativo, abra uma janela de prompt de comando como administrador.
 
-2. Use o comando **icacls** do Windows para conceder ao administrador do servidor permissões completas para o diretório do coletor. Por exemplo: 
+2. Use o comando **icacls** do Windows para conceder ao administrador do servidor permissões completas para o diretório do coletor. Por exemplo:
 
-     `icacls "C:\IntelliTraceCollector" /grant "` *\<Domínio\IDdoAdministrador>* `":F`
+     `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\AdministratorID>* `":F`
 
 3. Para coletar dados de um aplicativo da web ou do SharePoint:
 
     1. Conceda permissão total ao diretório do coletor à pessoa que executará os cmdlets do IntelliTrace PowerShell.
 
-         Por exemplo: 
+         Por exemplo:
 
-         `icacls "C:\IntelliTraceCollector" /grant "` *\<Domínio\IDdoUsuário>* `":F`
+         `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\UserID>* `":F`
 
     2. Conceda ao pool de aplicativos para o aplicativo da web ou do SharePoint permissões de leitura e execução para o diretório do coletor.
 
-         Por exemplo: 
+         Por exemplo:
 
         - Para um aplicativo Web no pool de aplicativos **DefaultAppPool** :
 
@@ -162,7 +162,7 @@ O **coletor autônomo do IntelliTrace** permite coletar dados de diagnóstico In
 
     2. Na janela de comando do PowerShell, use o comando **Import-Module** para importar o **Microsoft.VisualStudio.IntelliTrace.PowerShell.dll**.
 
-         Por exemplo: 
+         Por exemplo:
 
          `Import-Module "C:\IntelliTraceCollector\Microsoft.VisualStudio.IntelliTrace.PowerShell.dll"`
 
@@ -180,7 +180,7 @@ O **coletor autônomo do IntelliTrace** permite coletar dados de diagnóstico In
 
 2. Para um aplicativo da web ou do SharePoint, conceda ao seu pool de aplicativos permissões totais para o diretório de arquivos .iTrace. Você pode usar o comando **icacls** do Windows ou usar o Windows Explorer (ou explorador de arquivos).
 
-    Por exemplo: 
+    Por exemplo:
 
    - Para configurar permissões com o comando **icacls** do Windows:
 
@@ -223,7 +223,7 @@ O **coletor autônomo do IntelliTrace** permite coletar dados de diagnóstico In
 
      `Start-IntelliTraceCollection "SharePoint - 80" "C:\IntelliTraceCollector\collection_plan.ASP.NET.default.xml" "C:\IntelliTraceLogFiles"`
 
-    |||
+    |Item|Descrição|
     |-|-|
     |*ApplicationPool*|O nome do pool de aplicativos onde o aplicativo é executado|
     |*PathToCollectionPlan*|O caminho para um plano de coleta, um arquivo.xml que define as configurações para o coletor.<br /><br /> Você pode especificar um plano que vem com o coletor. Os seguintes planos funcionam para aplicativos da web e do SharePoint:<br /><br /> – collection_plan.ASP.NET.default.xml<br />     Coleta apenas eventos IntelliTrace do SharePoint, incluindo exceções, chamadas de banco de dados e solicitações no servidor da web.<br />– collection_plan.ASP.NET.trace.xml<br />     Coleta chamadas de função e todos os dados no collection_plan.ASP.NET.default.xml. Esse plano é útil para uma análise detalhada, mas pode causar lentidão no seu aplicativo mais do que no collection_plan.ASP.NET.default.xml.<br /><br /> Para evitar causar lentidão no seu aplicativo, personalize esses planos ou crie seu próprio plano. Por segurança, coloque planos personalizados no mesmo local seguro que os arquivos do coletor. Consulte [criando e personalizando planos de coleta do IntelliTrace](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/) e [como fazer obter a maioria dos dados sem atrasar o meu aplicativo?](#Minimizing) **Observação:**  Por padrão, o tamanho máximo do arquivo. iTrace é de 100 MB. Quando o arquivo .iTrace atingir esse limite, o coletor exclui as entradas de mais antigas do arquivo para dar espaço às entradas mais recentes. Para alterar esse limite, edite o atributo `MaximumLogFileSize` do plano de coleta. <br /><br /> *Onde posso encontrar versões localizadas desses planos de coleta?*<br /><br /> Você pode encontrar planos localizados nas subpastas do coletor.|
@@ -237,7 +237,7 @@ O **coletor autônomo do IntelliTrace** permite coletar dados de diagnóstico In
 
 3. Para obter um instantâneo do arquivo .iTrace, use a seguinte sintaxe:
 
-     `Checkpoint-IntelliTraceCollection``"` *>\<ApplicationPool*`"`
+     `Checkpoint-IntelliTraceCollection` `"` *\<ApplicationPool>* `"`
 
 4. Para verificar o status da coleta, use a seguinte sintaxe:
 
@@ -245,7 +245,7 @@ O **coletor autônomo do IntelliTrace** permite coletar dados de diagnóstico In
 
 5. Para interromper a coleta de dados, use a seguinte sintaxe:
 
-     `Stop-IntelliTraceCollection``"` *>\<ApplicationPool*`"`
+     `Stop-IntelliTraceCollection` `"` *\<ApplicationPool>* `"`
 
     > [!IMPORTANT]
     > Depois de executar esse comando, digite **Y** para confirmar que você deseja parar a coleta de dados. Caso contrário, o coletor podem continuar com a coleta de dados, o arquivo iTrace permanecerá bloqueado ou o arquivo pode não conter dados úteis.
@@ -256,13 +256,13 @@ O **coletor autônomo do IntelliTrace** permite coletar dados de diagnóstico In
 
 1. Para iniciar o aplicativo e coletar dados ao mesmo tempo, use a seguinte sintaxe:
 
-     `\IntelliTraceSC.exe launch /cp:` `/f:` *FullPathToIntelliTraceCollectorExecutable>\<PathToCollectionPlan>* *FullPathToITraceFileDirectoryAndFileName \<>* *PathToAppExecutableFileAndFileName \<>* * \<*
+     *\<FullPathToIntelliTraceCollectorExecutable>* `\IntelliTraceSC.exe launch /cp:` *\<PathToCollectionPlan>* `/f:` *\<FullPathToITraceFileDirectoryAndFileName>* *\<PathToAppExecutableFileAndFileName>*
 
      Por exemplo, para coletar dados de um aplicativo chamado **MyApp**:
 
      `C:IntelliTraceCollectorIntelliTraceSC.exe launch /cp:"C:IntelliTraceCollectorcollection_plan.ASP.NET.default.xml" /f:"C:IntelliTraceLogFilesMyApp.itrace" "C:MyAppMyApp.exe"`
 
-    |||
+    |Item|Descrição|
     |-|-|
     |*FullPathToIntelliTraceCollectorExecutable*|O caminho completo para o coletor executável, IntelliTraceSC.exe|
     |*PathToCollectionPlan*|O caminho para um plano de coleta, um arquivo.xml que define as configurações para o coletor.<br /><br /> Você pode especificar um plano que vem com o coletor. Os seguintes planos funcionam para aplicativos gerenciados:<br /><br /> – collection_plan.ASP.NET.default.xml<br />     Coleta somente eventos do IntelliTrace, incluindo exceções, chamadas de banco de dados e solicitações no servidor da web.<br />– collection_plan.ASP.NET.trace.xml<br />     Coleta chamadas de função e todos os dados no collection_plan.ASP.NET.default.xml. Esse plano é útil para uma análise detalhada, mas pode causar lentidão no seu aplicativo mais do que no collection_plan.ASP.NET.default.xml.<br /><br /> Para evitar causar lentidão no seu aplicativo, personalize esses planos ou crie seu próprio plano. Por segurança, coloque planos personalizados no mesmo local seguro que os arquivos do coletor. Consulte [criando e personalizando planos de coleta do IntelliTrace](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/) e [como fazer obter a maioria dos dados sem atrasar o meu aplicativo?](#Minimizing) **Observação:**  Por padrão, o tamanho máximo do arquivo. iTrace é de 100 MB. Quando o arquivo .iTrace atingir esse limite, o coletor exclui as entradas de mais antigas do arquivo para dar espaço às entradas mais recentes. Para alterar esse limite, edite o atributo `MaximumLogFileSize` do plano de coleta. <br /><br /> *Onde posso encontrar versões localizadas desses planos de coleta?*<br /><br /> Você pode encontrar planos localizados nas subpastas do coletor.|

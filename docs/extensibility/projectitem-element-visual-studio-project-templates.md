@@ -1,8 +1,8 @@
 ---
-title: ProjectItem Element (Modelos de Projetos do Estúdio Visual) | Microsoft Docs
+title: Elemento ProjectItem (modelos de projeto do Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#ProjectItem
 helpviewer_keywords:
@@ -14,20 +14,22 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11052d8e585f1d06f6d787402001cfbbe2b6810f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 943f50823892e3cd942709bdcd4556b65c006b58
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80701846"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770306"
 ---
 # <a name="projectitem-element-visual-studio-project-templates"></a>Elemento ProjectItem (modelos de projeto do Visual Studio)
-Especifica um arquivo incluído no modelo do projeto.
+Especifica um arquivo que está incluído no modelo de projeto.
 
 > [!NOTE]
-> O `ProjectItem` elemento aceita atributos diferentes, dependendo se o modelo é para um projeto ou um item. Este tópico `ProjectItem` explica o elemento para modelos de projeto. Para obter uma `ProjectItem` explicação do elemento para modelos de itens, consulte [ProjectItem Element (Visual Studio Item Templates)](../extensibility/projectitem-element-visual-studio-item-templates.md).
+> O `ProjectItem` elemento aceita atributos diferentes, dependendo se o modelo é para um projeto ou um item. Este tópico explica o `ProjectItem` elemento para modelos de projeto. Para obter uma explicação do `ProjectItem` elemento para modelos de item, consulte [elemento ProjectItem (modelos de item do Visual Studio)](../extensibility/projectitem-element-visual-studio-item-templates.md).
 
- \<VSTemplate \<>TemplateConteúdo \<projeto \<> projeto> ProjetoItem>
+ \<VSTemplate> \<TemplateContent>
+ \<Project>
+ \<ProjectItem>
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -50,12 +52,12 @@ Especifica um arquivo incluído no modelo do projeto.
 
 | Atributo | Descrição |
 |---------------------| - |
-| `TargetFileName` | Atributo opcional.<br /><br /> Especifica o nome e o caminho do item do projeto quando um projeto é criado a partir do modelo. Este atributo é útil para criar uma estrutura de diretório diferente da estrutura do diretório no arquivo *.zip* do modelo ou para usar a substituição de parâmetros para criar um nome de item. |
-| `ReplaceParameters` | Atributo opcional.<br /><br /> Um valor booleano que especifica se o item tem valores de parâmetro que devem ser substituídos quando um projeto é criado a partir do modelo. O valor padrão é `false`. |
-| `OpenInEditor` | Atributo opcional.<br /><br /> Um valor booleano que especifica se o item [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] deve ser aberto em seu respectivo editor quando um projeto é criado a partir do modelo.<br /><br /> Os `OpenInWebBrowser` `OpenInHelpBrowser` e atributos são ignorados `OpenInEditor` em `true`um item com um valor de .<br /><br /> O valor padrão é `false`. |
-| `OpenInWebBrowser` | Atributo opcional.<br /><br /> Um valor booleano que especifica se o item deve ser aberto no navegador da Web quando um projeto é criado a partir do modelo.<br /><br /> Apenas arquivos HTML e arquivos de texto que são locais para o projeto podem ser abertos no navegador da Web. Urls externos não podem ser abertos com este atributo.<br /><br /> O valor padrão é `false`. |
-| `OpenInHelpBrowser` | Atributo opcional.<br /><br /> Um valor booleano que especifica se o item deve ser aberto no visualizador de ajuda quando um projeto é criado a partir do modelo.<br /><br /> Apenas arquivos HTML e arquivos de texto que são locais para o projeto podem ser abertos no navegador Ajuda. Urls externos não podem ser abertos com este atributo.<br /><br /> O valor padrão é `false`. |
-| `OpenOrder` | Atributo opcional.<br /><br /> Especifica um valor numérico que representa a ordem de que os itens serão abertos em seus respectivos editores. Todos os valores devem ser múltiplos de 10. Os itens com `OpenOrder` valores mais altos são abertos primeiro. |
+| `TargetFileName` | Atributo opcional.<br /><br /> Especifica o nome e o caminho do item de projeto quando um projeto é criado a partir do modelo. Esse atributo é útil para criar uma estrutura de diretório diferente da estrutura de diretório no arquivo template *. zip* ou para usar a substituição de parâmetro para criar um nome de item. |
+| `ReplaceParameters` | Atributo opcional.<br /><br /> Um valor booliano que especifica se o item tem valores de parâmetro que devem ser substituídos quando um projeto é criado a partir do modelo. O valor padrão é `false`. |
+| `OpenInEditor` | Atributo opcional.<br /><br /> Um valor booliano que especifica se o item deve ser aberto em seu respectivo editor em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] quando um projeto é criado a partir do modelo.<br /><br /> Os `OpenInWebBrowser` `OpenInHelpBrowser` atributos e são ignorados em um item com um `OpenInEditor` valor de `true` .<br /><br /> O valor padrão é `false`. |
+| `OpenInWebBrowser` | Atributo opcional.<br /><br /> Um valor booliano que especifica se o item deve ser aberto no navegador da Web quando um projeto é criado a partir do modelo.<br /><br /> Somente arquivos HTML e arquivos de texto que são locais para o projeto podem ser abertos no navegador da Web. Não é possível abrir URLs externas com este atributo.<br /><br /> O valor padrão é `false`. |
+| `OpenInHelpBrowser` | Atributo opcional.<br /><br /> Um valor booliano que especifica se o item deve ser aberto no Visualizador da ajuda quando um projeto é criado a partir do modelo.<br /><br /> Somente arquivos HTML e arquivos de texto que são locais para o projeto podem ser abertos no navegador da ajuda. Não é possível abrir URLs externas com este atributo.<br /><br /> O valor padrão é `false`. |
+| `OpenOrder` | Atributo opcional.<br /><br /> Especifica um valor numérico que representa a ordem em que os itens serão abertos em seus respectivos editores. Todos os valores devem ser múltiplos de 10. Os itens com `OpenOrder` valores mais altos são abertos primeiro. |
 
 ### <a name="child-elements"></a>Elementos filho
  Nenhum.
@@ -64,37 +66,37 @@ Especifica um arquivo incluído no modelo do projeto.
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Project](../extensibility/project-element-visual-studio-templates.md)|Especifica os arquivos ou diretórios para adicionar ao projeto.|
+|[Projeto](../extensibility/project-element-visual-studio-templates.md)|Especifica os arquivos ou diretórios a serem adicionados ao projeto.|
 
 ## <a name="text-value"></a>Valor de texto
  Um valor de texto é obrigatório.
 
- Um `string` que representa o nome ou o caminho para um arquivo no arquivo *modelo .zip.*
+ Um `string` que representa o nome ou o caminho para um arquivo no arquivo template *. zip* .
 
 ## <a name="remarks"></a>Comentários
- `ProjectItem`é uma criança `Project`opcional de .
+ `ProjectItem`é um filho opcional de `Project` .
 
- O `TargetFileName` atributo pode ser usado para criar uma estrutura de diretório diferente da estrutura do diretório no arquivo *.zip.* Por exemplo, se o arquivo *MyFile.vb* existir na raiz do arquivo *.zip,* mas você quiser que o arquivo seja colocado em um diretório chamado *CustomFiles* em todos os projetos criados a partir do modelo, você usaria o seguinte XML:
+ O `TargetFileName` atributo pode ser usado para criar uma estrutura de diretório diferente da estrutura de diretório no arquivo template *. zip* . Por exemplo, se o arquivo *MyFile. vb* existir na raiz do arquivo *. zip* do modelo, mas você quiser que o arquivo seja colocado em um diretório chamado *CustomFiles* em todos os projetos criados a partir do modelo, você usaria o seguinte XML:
 
 ```xml
 <ProjectItem TargetFileName="CustomFiles\MyFile.vb">MyFile.vb</ProjectItem>
 ```
 
- O `TargetFileName` atributo também pode ser usado para renomear arquivos que contenham caracteres internacionais em seus nomes de arquivos. Por exemplo, um arquivo *.zip* não pode conter nomes de arquivo com caracteres Unicode, então o arquivo deve ser renomeado antes de ser compactado em um arquivo *.zip.* O `TargetFileName` atributo pode ser usado para definir o nome do arquivo de volta ao nome original do arquivo Unicode.
+ O `TargetFileName` atributo também pode ser usado para renomear arquivos que contêm caracteres internacionais em seus nomes de arquivo. Por exemplo, um arquivo *. zip* de modelo não pode conter nomes de arquivo com caracteres Unicode, portanto, o arquivo deve ser renomeado para que possa ser compactado em um arquivo *. zip* . O `TargetFileName` atributo pode ser usado para definir o nome do arquivo de volta para o nome de arquivo Unicode original.
 
- O `TargetFileName` atributo também pode ser usado para renomear arquivos com parâmetros. O procedimento a seguir explica como renomear o arquivo *MyFile.vb*, que existe no diretório raiz do arquivo *.zip,* para um nome de arquivo com base no nome do projeto.
+ O `TargetFileName` atributo também pode ser usado para renomear arquivos com parâmetros. O procedimento a seguir explica como renomear o arquivo *MyFile. vb*, que existe no diretório raiz do arquivo template *. zip* , para um nome de arquivo com base no nome do projeto.
 
 ### <a name="to-rename-files-with-parameters"></a>Para renomear arquivos com parâmetros
 
-1. Use o Seguinte XML no arquivo *.vstemplate:*
+1. Use o seguinte XML no arquivo *. vstemplate* :
 
    ```xml
    <ProjectItem TargetFileName="$safeprojectname$.vb">MyFile.vb</ProjectItem>
    ```
 
-2. Abra o arquivo do projeto *(.vbproj* para [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]um projeto) em um editor de texto ou .
+2. Abra o arquivo de projeto (*. vbproj* para um [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projeto) em um editor de texto ou [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
-3. Localize a linha no arquivo do projeto que se pareça com o seguinte XML:
+3. Localize a linha no arquivo de projeto que se assemelha ao seguinte XML:
 
    ```xml
    <Compile Include="MyFile.vb">
@@ -106,7 +108,7 @@ Especifica um arquivo incluído no modelo do projeto.
    <Compile Include="$safeprojectname$.vb">
    ```
 
-    Quando um projeto é criado a partir deste modelo, o nome do arquivo será baseado no nome que o usuário inseriu na caixa de diálogo **Novo Projeto,** com todos os caracteres e espaços inseguros removidos. Para obter mais informações, consulte [Parâmetros de modelo](../ide/template-parameters.md).
+    Quando um projeto é criado com base nesse modelo, o nome do arquivo será baseado no nome que o usuário inseriu na caixa de diálogo **novo projeto** , com todos os caracteres e espaços não seguros removidos. Para obter mais informações, consulte [parâmetros de modelo](../ide/template-parameters.md).
 
 ## <a name="example"></a>Exemplo
  O exemplo a seguir mostra os metadados de um modelo de projeto para um [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplicativo.
@@ -139,4 +141,4 @@ Especifica um arquivo incluído no modelo do projeto.
 - [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Criar modelos de projeto e de item](../ide/creating-project-and-item-templates.md)
 - [Parâmetros de modelo](../ide/template-parameters.md)
-- [Elemento ProjectItem (modelos de itens do Visual Studio)](../extensibility/projectitem-element-visual-studio-item-templates.md)
+- [Elemento ProjectItem (modelos de item do Visual Studio)](../extensibility/projectitem-element-visual-studio-item-templates.md)

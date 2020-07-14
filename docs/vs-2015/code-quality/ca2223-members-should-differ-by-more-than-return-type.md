@@ -15,19 +15,19 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1fab269e8f583f8b55f52eb70a5a813450f8a184
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4c1071617572af44a73f98953fd435623190e0e3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658887"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540836"
 ---
-# <a name="ca2223-members-should-differ-by-more-than-return-type"></a>CA2223: os membros devem ser diferentes além do tipo de retorno
+# <a name="ca2223-members-should-differ-by-more-than-return-type"></a>CA2223: Os membros devem ser diferentes em algo além de um tipo de retorno
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|MembersShouldDifferByMoreThanReturnType|
+|TypeName|MembersShouldDifferByMoreThanReturnType|
 |CheckId|CA2223|
 |Categoria|Microsoft. Usage|
 |Alteração Significativa|Quebra|
@@ -45,7 +45,7 @@ ms.locfileid: "72658887"
  Não suprima um aviso nessa regra.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir, em MSIL (Microsoft Intermediate Language), mostra um tipo que viola essa regra. Observe que essa regra não pode ser violada usando C# o ou Visual Basic .net.
+ O exemplo a seguir, em MSIL (Microsoft Intermediate Language), mostra um tipo que viola essa regra. Observe que essa regra não pode ser violada usando C# ou Visual Basic .NET.
 
 ```
 

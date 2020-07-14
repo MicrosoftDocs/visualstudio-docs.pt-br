@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_lexicalParent | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87d44f2c8dfb723f9f2653d6f9d89a2c1c71ef5f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d1a381fe495208bf3dd1f530a2d5e3dffd7c3c76
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739968"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463060"
 ---
 # <a name="idiasymbolget_lexicalparent"></a>IDiaSymbol::get_lexicalParent
 Recupera uma referência ao pai léxico do símbolo.
@@ -35,8 +35,8 @@ HRESULT get_lexicalParent ( 
 
 fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que representa o pai léxico do símbolo.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
@@ -46,6 +46,6 @@ fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasy
 
  Os possíveis símbolos que podem aparecer como pais léxicos são documentados na [hierarquia lexical dos tipos de símbolo](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Hierarquia lexical de tipos de símbolo](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)

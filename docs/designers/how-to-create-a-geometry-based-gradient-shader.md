@@ -1,19 +1,19 @@
 ---
 title: Como criar um sombreador de gradiente com base na geometria
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4b204405-ba95-4c5e-bd51-ec033a3ebfb6
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 96326910a04294e30c410cc96bf9c600bfb3f17c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1e10fd5266ba39febe6261f41437c10c19b5c82f
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769109"
 ---
 # <a name="how-to-create-a-geometry-based-gradient-shader"></a>Como criar um sombreador de gradiente com base na geometria
 
@@ -60,9 +60,9 @@ Para obter mais informações de como aplicar um sombreador a um modelo 3D, conf
 
 ## <a name="see-also"></a>Confira também
 
-- [Como: Aplicar um sombreador a um modelo 3D](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
-- [Como: Exportar um sombreador](../designers/how-to-export-a-shader.md)
-- [Como: Modelo de terreno 3D](../designers/how-to-model-3-d-terrain.md)
-- [Como: Criar um sombreador de textura em escala de cinza](../designers/how-to-create-a-grayscale-texture-shader.md)
-- [Designer de Sombreador](../designers/shader-designer.md)
-- [Nós do Designer de Sombreador](../designers/shader-designer-nodes.md)
+- [Como: aplicar um sombreador a um modelo 3D](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [Como: exportar um sombreador](../designers/how-to-export-a-shader.md)
+- [Como modelar o terreno 3D do modelo](../designers/how-to-model-3-d-terrain.md)
+- [Como: criar um sombreador de textura em escala de cinza](../designers/how-to-create-a-grayscale-texture-shader.md)
+- [Designer de sombreador](../designers/shader-designer.md)
+- [Nós do designer do sombreador](../designers/shader-designer-nodes.md)

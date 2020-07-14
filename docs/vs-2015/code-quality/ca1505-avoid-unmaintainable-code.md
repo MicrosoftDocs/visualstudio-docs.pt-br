@@ -15,19 +15,19 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 87aacfd675181e35d289b2a054c58f83f3f790fa
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0f2f731b1ac0d87b59c7690d0cf57ade3570ed5f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72607584"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547817"
 ---
-# <a name="ca1505-avoid-unmaintainable-code"></a>CA1505: evitar código que não possa ser mantido
+# <a name="ca1505-avoid-unmaintainable-code"></a>CA1505: Evitar código de difícil manutenção
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|AvoidUnmantainableCode|
+|TypeName|AvoidUnmantainableCode|
 |CheckId|CA1505|
 |Categoria|Microsoft. Maintainabilidade|
 |Alteração Significativa|Sem interrupção|
@@ -46,5 +46,5 @@ ms.locfileid: "72607584"
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
  Exclua este aviso quando um tipo ou método ainda for considerado passível de manutenção, apesar de seu tamanho grande, ou quando o tipo ou método não puder ser dividido.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Avisos de facilidade](../code-quality/maintainability-warnings.md) [de manutenção medindo a complexidade e a manutenção do código gerenciado](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)

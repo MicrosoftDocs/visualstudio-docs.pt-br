@@ -15,19 +15,19 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d23d9cc6006997c82451ac061e3ee0353e59b1b9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d39c8d9d09cf457738df87e3c2e6e109f7bc1696
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671492"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543852"
 ---
-# <a name="ca1809-avoid-excessive-locals"></a>CA1809: evitar locais excessivos
+# <a name="ca1809-avoid-excessive-locals"></a>CA1809: Evitar locais excessivos
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|AvoidExcessiveLocals|
+|TypeName|AvoidExcessiveLocals|
 |CheckId|CA1809|
 |Categoria|Microsoft. performance|
 |Alteração Significativa|Sem interrupção|
@@ -45,4 +45,4 @@ ms.locfileid: "72671492"
  É seguro suprimir um aviso dessa regra ou desabilitar a regra, se o desempenho não for um problema.
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA1804: remover locais não usados](../code-quality/ca1804-remove-unused-locals.md)
+ [CA1804: Remover locais não utilizados](../code-quality/ca1804-remove-unused-locals.md)

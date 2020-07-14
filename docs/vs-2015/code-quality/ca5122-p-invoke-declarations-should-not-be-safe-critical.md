@@ -9,19 +9,19 @@ caps.latest.revision: 6
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5d064f3d2bb382f1131d4e2365077f3db0b2e0ea
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a6a6ee7796ae437b564f6826376219291143e449
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669034"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545087"
 ---
 # <a name="ca5122-pinvoke-declarations-should-not-be-safe-critical"></a>CA5122: declarações P/Invoke não devem ser críticas para segurança
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|PInvokesShouldNotBeSafeCriticalFxCopRule|
+|TypeName|PInvokesShouldNotBeSafeCriticalFxCopRule|
 |CheckId|CA5122|
 |Categoria|Microsoft.Security|
 |Alteração Significativa|Quebra|

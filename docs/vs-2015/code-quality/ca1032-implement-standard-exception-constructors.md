@@ -15,25 +15,25 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b471387db3ce52944ffad3841dc7e946c4d44873
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 61b0157200ddff4cb8335118b30832a0c8950f65
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661887"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542279"
 ---
-# <a name="ca1032-implement-standard-exception-constructors"></a>CA1032: implementar construtores de exceção padrão
+# <a name="ca1032-implement-standard-exception-constructors"></a>CA1032: Implementar construtores de exceção padrão
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|ImplementStandardExceptionConstructors|
+|TypeName|ImplementStandardExceptionConstructors|
 |CheckId|CA1032|
 |Categoria|Microsoft. Design|
 |Alteração Significativa|Sem interrupção|
 
 ## <a name="cause"></a>Causa
- Um tipo estende <xref:System.Exception?displayProperty=fullName> e não declara todos os construtores necessários.
+ Um tipo é ampliado <xref:System.Exception?displayProperty=fullName> e não declara todos os construtores necessários.
 
 ## <a name="rule-description"></a>Descrição da Regra
  Os tipos de exceção devem implementar os seguintes construtores:

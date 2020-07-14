@@ -6,12 +6,13 @@ ms.author: cobey
 ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 26A0DE31-2FBF-4E1B-99FB-083111AA1680
-ms.openlocfilehash: 6f6241c114d636cc8cb01cf5c4bf9ba2b5106701
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: adeab06341c0691bdb902a3bb8a813ac38d786f6
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "73716895"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85938522"
 ---
 # <a name="creating-and-editing-a-custom-editorconfig-file"></a>Criando e editando um arquivo EditorConfig personalizado
 
@@ -52,7 +53,7 @@ O EditorConfig também dá suporte a [convenções de codificação](/visualstud
 
     ![O item de solução é exibido no painel de soluções](media/editorconfig-image1a.png)
 
-4. Edite o arquivo. Por exemplo: 
+4. Edite o arquivo. Por exemplo:
 
     ```EditorConfig
     # This file is the top-most EditorConfig file
@@ -79,13 +80,13 @@ Se estiver trabalhando com um projeto ou solução que já contém um arquivo `.
 
 Talvez você queira reutilizar um arquivo `.editorconfig` existente em seu projeto. Para adicionar um arquivo existente, faça o seguinte:
 
-1. Clique com o botão direito do mouse na pasta a que deseja adicioná-la e **selecione Adicionar > Adicionar arquivos**.
+1. Clique com o botão direito do mouse na pasta à qual você deseja adicioná-la e selecione **adicionar > adicionar arquivos**.
 
 2. Navegue até o diretório do arquivo necessário.
 
 3. Arquivos começando com `.` (tais como `.editorconfig`) são arquivos ocultos no macOS, então pressione **Command + Shift + .** para tornar o arquivo `.editorconfig` visível.
 
-4. Selecione `.editorconfig` o arquivo e clique **em Abrir:**
+4. Selecione o `.editorconfig` arquivo e clique em **abrir**:
 
     ![janela adicionando um novo campo](media/editorconfig-image3b.png)
 
@@ -126,11 +127,11 @@ Cada seção é indicada por chaves (**[ ]**) e especifica informações sobre o
 
 No exemplo acima, algumas configurações são aplicadas a todos os arquivos no projeto e outras são adicionadas apenas a arquivos C#. As capturas de tela abaixo mostram antes e depois de as configurações `.editorconfig` serem aplicadas:
 
-**Antes:**
+**Antes**de:
 
 ![Antes das configurações de editorconfig serem aplicadas](media/editorconfig-image4.png)
 
-**Depois:**
+**Após**:
 
 ![após as configurações de editorconfig serem aplicadas](media/editorconfig-image5.png)
 

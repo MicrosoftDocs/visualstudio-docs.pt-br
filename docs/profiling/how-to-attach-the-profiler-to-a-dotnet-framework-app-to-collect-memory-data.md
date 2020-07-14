@@ -2,19 +2,19 @@
 title: Anexar o criador de perfil a um aplicativo do .NET para coletar dados de memória
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04dcf800074476b285a07e36db5a85fa3a366585
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: dbe8f0cdb976dfb687071b231b2907b6b7124b3a
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779123"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328738"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-memory-data-by-using-the-command-line"></a>Como anexar o criador de perfil a um aplicativo .NET Framework independente para coletar dados da memória usando a linha de comando
 
@@ -48,30 +48,30 @@ Para concluir uma sessão de criação de perfil, o criador de perfil deve ser d
 
 3. Inicie o criador de perfil. Tipo:
 
-     **VSPerfCmd /start:sample /output:** `OutputFile` [`Options`]
+     **VSPerfCmd/start: exemplo/output:** `OutputFile` [`Options`]
 
    - A opção [/start](../profiling/start.md)**:sample** inicializa o criador de perfil.
 
-   - A [opção /saída](../profiling/output.md)**:** `OutputFile` é necessária com **/start**. `OutputFile` especifica o nome e o local do arquivo de dados de criação de perfil (.vsp).
+   - A opção [/output](../profiling/output.md)**:** `OutputFile` é necessária com **/Start**. `OutputFile` especifica o nome e o local do arquivo de dados de criação de perfil (.vsp).
 
      É possível usar qualquer uma das opções a seguir com a opção **/start:sample**.
 
      | Opção | Descrição |
      | - | - |
-     | [/usuário:](../profiling/user-vsperfcmd.md) **:**`Domain`**\\**[ ]`UserName` | Especifica o domínio e o nome de usuário da conta que possui o processo analisado. Esta opção será necessária apenas se o processo estiver sendo executado como um usuário diferente do usuário conectado. O proprietário do processo é listado na coluna Nome de Usuário na guia Processos do Gerenciador de Tarefas do Windows. |
+     | [/User](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName` | Especifica o domínio e o nome de usuário da conta que possui o processo analisado. Esta opção será necessária apenas se o processo estiver sendo executado como um usuário diferente do usuário conectado. O proprietário do processo é listado na coluna Nome de Usuário na guia Processos do Gerenciador de Tarefas do Windows. |
      | [/crosssession &#124; /cs](../profiling/crosssession.md) | Habilita a criação de perfil de processos em outras sessões. Esta opção será necessária se o aplicativo estiver em execução em uma sessão diferente. O identificador da sessão é listado na coluna ID da Sessão na guia Processos do Gerenciador de Tarefas do Windows. **/CS** pode ser especificado como uma abreviação de **/crosssession**. |
-     | [/wincounter:](../profiling/wincounter.md) **:**`WinCounterPath` | Especifica um contador de desempenho do Windows que deve ser coletado durante a criação de perfil. |
-     | [/marca automática:](../profiling/automark.md) **:**`Interval` | Use somente com **/wincounter**. Especifica o número de milissegundos entre eventos de coleta do contador de desempenho do Windows. O padrão é 500 ms. |
+     | [/WinCounter](../profiling/wincounter.md) **:**`WinCounterPath` | Especifica um contador de desempenho do Windows que deve ser coletado durante a criação de perfil. |
+     | [/AutoMark](../profiling/automark.md) **:**`Interval` | Use somente com **/wincounter**. Especifica o número de milissegundos entre eventos de coleta do contador de desempenho do Windows. O padrão é 500 ms. |
 
 4. Se necessário, inicie o aplicativo de destino normalmente.
 
 5. Anexe o criador de perfil ao aplicativo de destino. Tipo:
 
-     **VSPerfCmd**[/attach](../profiling/attach.md) **:**`PID` {&#124;`ProcName`} [[/targetclr](../profiling/targetclr.md)**:**`Version`]  
+     **VSPerfCmd**[/Attach](../profiling/attach.md) **:**{ `PID`&#124;`ProcName` } [[/TargetCLR](../profiling/targetclr.md)**:** `Version` ]  
 
     - `PID` especifica a ID do processo ou o nome do aplicativo de destino. `ProcessName` especifica o nome do processo. Observe que, se você especificar `ProcessName` e vários processos que têm o mesmo nome estiverem em execução, os resultados serão imprevisíveis. É possível exibir as IDs de processo de todos os processos em execução no Gerenciador de Tarefas do Windows.
 
-    - **/targetclr:** `Version` especifica a versão do tempo de execução do idioma comum (CLR) para o perfil quando mais de uma versão do tempo de execução é carregada em um aplicativo. Opcional.
+    - **/TargetCLR:** `Version` Especifica a versão do Common Language Runtime (CLR) para o perfil quando mais de uma versão do tempo de execução é carregada em um aplicativo. Opcional.
 
 ## <a name="control-data-collection"></a>Controlar a coleta de dados
 
@@ -83,9 +83,9 @@ Quando o aplicativo de destino estiver em execução, você pode controlar a col
 
     |Opção|Descrição|
     |------------|-----------------|
-    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|Inicia (**/globalon**) ou interrompe (**/globaloff**) a coleta de dados para todos os processos.|
-    |[/processon:](../profiling/processon-and-processoff.md) **:** `PID` [/processoff:](../profiling/processon-and-processoff.md) **:**`PID`|Inicia (**/processon**) ou interrompe (**/processoff**) a coleta de dados para o processo especificado pelo `PID`.|
-    |[/attach:](../profiling/attach.md) **:**`PID` { `ProcName`&#124;} [/desapego](../profiling/detach.md)[**:**{`PID`&#124;`ProcName`}]|**/attach** começa a coletar dados para o processo especificado pelo `PID` ou pelo nome de processo (ProcName). **/detach** interrompe a coleta de dados para o processo especificado ou para todos os processos se nenhum processo específico for especificado.|
+    |[/GLOBALON/GLOBALOFF](../profiling/globalon-and-globaloff.md)|Inicia (**/globalon**) ou interrompe (**/globaloff**) a coleta de dados para todos os processos.|
+    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [/ProcessOff](../profiling/processon-and-processoff.md) **:**`PID`|Inicia (**/processon**) ou interrompe (**/processoff**) a coleta de dados para o processo especificado pelo `PID`.|
+    |[/Attach](../profiling/attach.md) **:**{ `PID`&#124;`ProcName` } [/Detach](../profiling/detach.md)[**:**{ `PID`&#124;`ProcName` }]|**/attach** começa a coletar dados para o processo especificado pelo `PID` ou pelo nome de processo (ProcName). **/detach** interrompe a coleta de dados para o processo especificado ou para todos os processos se nenhum processo específico for especificado.|
 
 ## <a name="end-the-profiling-session"></a>Encerrar a sessão de criação de perfil
 
@@ -95,7 +95,7 @@ Para concluir uma sessão de criação de perfil, o criador de perfil deve ser d
 
 1. Realize uma das etapas a seguir para desanexar o criador de perfil do aplicativo de destino:
 
-    - Tipo **VSPerfCmd/desapego**
+    - Digite **VSPerfCmd/Detach**
 
          -ou-
 
@@ -103,13 +103,13 @@ Para concluir uma sessão de criação de perfil, o criador de perfil deve ser d
 
 2. Desligue o criador de perfil. Tipo:
 
-     **VSPerfCmd**  [/shutdown](../profiling/shutdown.md)
+     **VSPerfCmd**  [/Shutdown](../profiling/shutdown.md)
 
 3. (Opcional) desmarcar as variáveis de ambiente de criação de perfil. Tipo:
 
      **VSPerfCmd /off**
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Aplicativos autônomos de perfil](../profiling/command-line-profiling-of-stand-alone-applications.md)
-[.NET visualizações de dados de memória .NET](../profiling/dotnet-memory-data-views.md)
+[Perfis de aplicativos](../profiling/command-line-profiling-of-stand-alone-applications.md) 
+ autônomos [Exibições de dados de memória do .net](../profiling/dotnet-memory-data-views.md)

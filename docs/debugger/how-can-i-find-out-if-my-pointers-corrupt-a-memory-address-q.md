@@ -2,7 +2,7 @@
 title: Descubra se meus ponteiros corromperam um endereço de memória | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -21,18 +21,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc178675e6d2423336c38e69691f081bf4b447a4
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 075569815d55ea30f688c5ce86c56990fca03cd1
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916170"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350349"
 ---
 # <a name="how-can-i-find-out-if-my-pointers-corrupt-a-memory-address"></a>Como posso saber se meus ponteiros corrompem um endereço de memória?
 ## <a name="problem-description"></a>Descrição do problema
  Eu acho que um de meus ponteiros pode estar danificando a memória no endereço 0x00408000. Como posso descobrir o que está acontecendo lá?
 
-## <a name="solution"></a>{1&gt;&lt;1} Solução
+## <a name="solution"></a>Solução
 
 #### <a name="check-for-heap-corruption"></a>Verificação de danos do heap
 
@@ -45,5 +45,5 @@ ms.locfileid: "75916170"
 2. Quando você atingir o ponto de interrupção, use a janela **Memória** para exibir o conteúdo da memória que começa em 0x00408000. Para obter mais informações, consulte [Memory Windows](../debugger/memory-windows.md).
 
 ## <a name="see-also"></a>Veja também
-- [Perguntas frequentes de depuração de código nativo](../debugger/debugging-native-code-faqs.md)
+- [Perguntas frequentes de depuração do código nativo](../debugger/debugging-native-code-faqs.md)
 - [Depurando código nativo](../debugger/debugging-native-code.md)

@@ -9,17 +9,17 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 695378404e27b64f269fe4e9820b6b9e520c9d0f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9cf95bd2095d9713d498ddccf68fd1e81e1b1e64
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660148"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535701"
 ---
 # <a name="walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>Passo a passo: Criando classes LINQ to SQL usando a herança de tabela única (Designer Relacional de Objetos)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-As [ferramentas de LINQ to SQL no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) oferecem suporte à herança de tabela única, pois normalmente são implementadas em sistemas relacionais. Este tutorial se expande sobre as etapas genéricas fornecidas em [como configurar a herança usando o tópico o/R Designer](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) e fornece alguns dados reais para demonstrar o uso de herança no [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)].
+As [ferramentas de LINQ to SQL no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) oferecem suporte à herança de tabela única, pois normalmente são implementadas em sistemas relacionais. Este tutorial se expande sobre as etapas genéricas fornecidas em [como configurar a herança usando o tópico o/R Designer](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) e fornece alguns dados reais para demonstrar o uso de herança no [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] .
 
  Durante essa explicação passo a passo, você executará as seguintes tarefas:
 
@@ -42,19 +42,19 @@ As [ferramentas de LINQ to SQL no Visual Studio](../data-tools/linq-to-sql-tools
 
 #### <a name="to-create-a-base-table-to-demonstrate-inheritance"></a>Para criar uma tabela base para demonstrar a herança
 
-1. Em **Gerenciador de Servidores** /**Gerenciador de banco de dados**, clique com o botão direito do mouse no nó **tabelas** e clique em **Adicionar nova tabela**.
+1. Em **Gerenciador de servidores** / **Gerenciador de banco de dados**, clique com o botão direito do mouse no nó **tabelas** e clique em **Adicionar nova tabela**.
 
     > [!NOTE]
     > Você pode usar o banco de dados Northwind ou qualquer outro banco de dados ao qual você possa adicionar uma tabela.
 
 2. No Designer de Tabela, adicione as seguintes colunas à tabela:
 
-    |Nome da coluna|Tipo de dados|Permitir nulos|
+    |Nome da coluna|Tipo de Dados|Permitir Nulos|
     |-----------------|---------------|-----------------|
-    |**ID**|**int**|**False**|
+    |**ID**|**int**|**For**|
     |**Tipo**|**int**|**True**|
-    |**FirstName**|**nvarchar(200)**|**False**|
-    |**LastName**|**nvarchar(200)**|**False**|
+    |**Nome**|**nvarchar(200)**|**For**|
+    |**Sobrenome**|**nvarchar(200)**|**For**|
     |**Gerente**|**int**|**True**|
 
 3. Defina a coluna de identificação como a chave primária.
@@ -66,13 +66,12 @@ As [ferramentas de LINQ to SQL no Visual Studio](../data-tools/linq-to-sql-tools
 
 #### <a name="to-add-data-to-the-table"></a>Para adicionar dados à tabela
 
-1. Abra a tabela no modo de exibição de dados. (Clique com o botão direito do mouse na tabela **Person** em **Gerenciador de servidores** /**Gerenciador de banco de dados** e clique em **Mostrar dados da tabela**.)
+1. Abra a tabela no modo de exibição de dados. (Clique com o botão direito do mouse na tabela **Person** em **Gerenciador de servidores** / **Gerenciador de banco de dados** e clique em **Mostrar dados da tabela**.)
 
 2. Copie os seguintes dados na tabela. (Você pode copiá-lo e, em seguida, colá-lo na tabela selecionando a linha inteira no painel de resultados.)
 
-    ||||||
+    |**ID**|**Tipo**|**Nome**|**Sobrenome**|**Gerente**|
     |-|-|-|-|-|
-    |**ID**|**Tipo**|**FirstName**|**LastName**|**Gerente**|
     |**1**|**1**|**Anne**|**Wallace**|**NULL**|
     |**2**|**1**|**Carlos**|**Grilo**|**NULL**|
     |**3**|**1**|**Yael**|**Peled**|**NULL**|
@@ -106,7 +105,7 @@ As [ferramentas de LINQ to SQL no Visual Studio](../data-tools/linq-to-sql-tools
 
 #### <a name="to-add-a-linq-to-sql-file-to-the-project"></a>Para adicionar um arquivo LINQ to SQL ao projeto
 
-1. No menu **Projeto**, clique em **Adicionar Novo Item**.
+1. No menu **Projeto** , clique em **Adicionar Novo Item**.
 
 2. Clique no modelo **Classes LINQ to SQL** e clique em **Adicionar**.
 
@@ -117,17 +116,17 @@ As [ferramentas de LINQ to SQL no Visual Studio](../data-tools/linq-to-sql-tools
 
 #### <a name="to-create-the-inheritance"></a>Para criar a herança
 
-1. Em **Gerenciador de Servidores** /**Gerenciador de banco de dados**, navegue até a tabela **Person** que você criou anteriormente.
+1. Em **Gerenciador de servidores** / **Gerenciador de banco de dados**, navegue até a tabela **Person** que você criou anteriormente.
 
-2. Arraste a tabela **Person** para a superfície de design [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)].
+2. Arraste a tabela **Person** para a [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] superfície de design.
 
-3. Arraste uma segunda tabela **Person** para a [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] e altere seu nome para **Employee**.
+3. Arraste uma segunda tabela **Person** para o [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] e altere seu nome para **Employee**.
 
 4. Exclua a propriedade **Manager** do objeto **Pessoa**.
 
 5. Exclua as propriedades **Type**, **ID**, **FirstName** e **LastName** do objeto **Employee**. (Em outras palavras, exclua todas as propriedades exceto **Gerente**.)
 
-6. Na guia **Object Relational Designer** da **Caixa de Ferramentas**, crie uma **Herança** entre os objetos **Pessoa** e **Funcionário**. Para fazer isso, clique no item **Herança** na **Caixa de Ferramentas** e solte o botão do mouse. Em seguida, clique no objeto **Employee** e no objeto **Person** na [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)]. A seta na linha de herança apontará para o objeto **Person** .
+6. Na guia **Object Relational Designer** da **Caixa de Ferramentas**, crie uma **Herança** entre os objetos **Pessoa** e **Funcionário**. Para fazer isso, clique no item **Herança** na **Caixa de Ferramentas** e solte o botão do mouse. Em seguida, clique no objeto **Employee** e no objeto **Person** no [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] . A seta na linha de herança apontará para o objeto **Person** .
 
 7. Clique na linha **Herança** na superfície de design.
 
@@ -184,7 +183,7 @@ As [ferramentas de LINQ to SQL no Visual Studio](../data-tools/linq-to-sql-tools
 
 2. Verifique se apenas os registros que têm um valor de 2 na coluna Tipo são exibidos.
 
-3. Feche o formulário. (No menu **Depurar**, clique em **Parar Depuração**.)
+3. Feche o formulário. (No menu **depurar** , clique em **parar depuração**.)
 
-## <a name="see-also"></a>Consulte também
- [Ferramentas de LINQ to SQL no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) [como: adicionar classes de LINQ to SQL a um projeto (o-r designer)](https://msdn.microsoft.com/library/7bb184ab-ec54-4cda-b706-604b2b4a3ed6) [Walkthrough: Criando classes de LINQ to SQL (o-r designer)](https://msdn.microsoft.com/library/35aad4a4-2e8a-46e2-ae09-5fbfd333c233) [como: atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (o/r Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md) [LINQ to SQL](https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655) [como gerar o modelo de objeto no Visual Basic ou C# ](https://msdn.microsoft.com/library/a0c73b33-5650-420c-b9dc-f49310c201ee)
+## <a name="see-also"></a>Consulte Também
+ [Ferramentas de LINQ to SQL no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) [como: adicionar classes de LINQ to SQL a um projeto (o-r designer)](https://msdn.microsoft.com/library/7bb184ab-ec54-4cda-b706-604b2b4a3ed6) [Walkthrough: Criando classes de LINQ to SQL (o-r designer)](https://msdn.microsoft.com/library/35aad4a4-2e8a-46e2-ae09-5fbfd333c233) [como: atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (o/r designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md) [LINQ to SQL](https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655) [como gerar o modelo de objeto no Visual Basic ou no C#](https://msdn.microsoft.com/library/a0c73b33-5650-420c-b9dc-f49310c201ee)

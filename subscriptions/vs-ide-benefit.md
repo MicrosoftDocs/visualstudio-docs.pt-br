@@ -5,14 +5,14 @@ ms.author: v-evwin
 manager: lank
 ms.assetid: c4b13464-76be-40f1-ad60-ed79ee264b12
 ms.date: 04/17/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: Saiba como baixar e instalar o IDE do Visual Studio incluído em sua assinatura do Visual Studio.
-ms.openlocfilehash: 84666b0fd4362002fe15b21a6f23cd96c9cdc6a1
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: b5c47c6b484d5b74f31ab8569f3895ae9ce0f984
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81649544"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904437"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>O benefício do Visual Studio 2019
 
@@ -62,23 +62,23 @@ Para baixar o IDE:
 
 | Nível de Assinatura                                                 |     Canais                                            | Benefício                                                          | Renovável?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard, nuvem mensal)   | VL, Azure, Varejo, NFR<sup>1</sup> selecionado | Disponível       |  Sim          |
-| Visual Studio Enterprise com GitHub Enterprise   | Vl | Disponível       |  Sim          |
+| Visual Studio Enterprise (Standard, nuvem mensal)   | VL, Azure, Retail, NFR<sup>1</sup> selecionado | Disponível       |  Sim          |
+| Visual Studio Enterprise com GitHub Enterprise   | VL | Disponível       |  Sim          |
 | Visual Studio Professional (Standard, nuvem mensal) | VL, Azure, Retail                                       | Disponível                                                            |  Sim          |
-| Visual Studio Professional com GitHub Enterprise | Vl   | Disponível              |  Sim          |
+| Visual Studio Professional com GitHub Enterprise | VL   | Disponível              |  Sim          |
 | Visual Studio Test Professional (Padrão)                         | VL, Retail                                              | Disponível                                             |  Sim         |
 | Plataformas MSDN (Padrão)                                          | VL, Retail                                              | Não disponível                                              |  N/D          |
 
-<sup>1</sup>  *Inclui: Not for Resale (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), FTE, MCT Software & Services Developer, BizSpark, Imagine, Most Valuable Professional (MVP), Regional Director (RD).  Exclui: MCT Software & Services.*
+<sup>1</sup>  *inclui: não para revenda (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), FTE, MCT software & Developer Services, BizSpark, imagine, profissional mais valioso (MVP), diretor regional (RD).  Exclusões: serviços de & de software do MCT.*
 
 > [!NOTE]
-> A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) ir para explorar diferentes opções para comprar o Visual Studio.
+> A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a ir para [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a fim de explorar diferentes opções para comprar o Visual Studio.
 
-Não tem certeza de qual assinatura você está usando?  Conecte-se [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) para ver todas as assinaturas atribuídas ao seu endereço de e-mail. Se não vir todas as suas assinaturas, talvez você tenha uma ou mais atribuídas a outro endereço de email.  Você precisará entrar com esse endereço de email para ver as assinaturas.
+Não tem certeza de qual assinatura você está usando?  Conecte-se ao [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) para ver todas as assinaturas atribuídas ao seu endereço de email. Se não vir todas as suas assinaturas, talvez você tenha uma ou mais atribuídas a outro endereço de email.  Você precisará entrar com esse endereço de email para ver as assinaturas.
 
 ## <a name="support-resources"></a>Recursos de suporte
 - Se precisar de ajuda com o IDE do Visual Studio, confira estes recursos:
-  - Suporte Técnico:[https://visualstudio.microsoft.com/support/](https://visualstudio.microsoft.com/support/)
+  - Suporte técnico:[https://visualstudio.microsoft.com/support/](https://visualstudio.microsoft.com/support/)
   - [Documentação](/visualstudio/)
 - Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio.
 
@@ -92,4 +92,4 @@ Não tem certeza de qual assinatura você está usando?  Conecte-se [https://my.
 Depois de instalar o Visual Studio, lembre-se de ativar estes outros benefícios importantes:
 - [Azure DevOps](vs-azure-devops.md)
 - [Crédito individual do Azure DevTest](vs-azure.md)
-- [Conta do Windows Developer](vs-windows-dev.md)
+- [Conta de desenvolvedor do Windows](vs-windows-dev.md)

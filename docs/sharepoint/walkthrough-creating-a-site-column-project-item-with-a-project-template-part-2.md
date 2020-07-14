@@ -1,7 +1,7 @@
 ---
 title: Criar item de projeto de coluna de site com modelo de projeto, parte 2
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - project items [SharePoint development in Visual Studio], creating template wizards
 - SharePoint project items, creating template wizards
@@ -11,17 +11,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c3b2fc34807be6ae03fe5aacab64439c918a0f5e
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
-ms.translationtype: MT
+ms.openlocfilehash: c3b84d901a1fd94d72ff14ec5c481e04676c5cbc
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189145"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016402"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>Walkthrough: criar um item de projeto de coluna de site com um modelo de projeto, parte 2
   Depois de definir um tipo personalizado de item de projeto do SharePoint e associá-lo a um modelo de projeto no Visual Studio, talvez você também queira fornecer um assistente para o modelo. Você pode usar o assistente para coletar informações de usuários quando eles usam seu modelo para criar um novo projeto que contém o item de projeto. As informações coletadas podem ser usadas para inicializar o item do projeto.
 
- Neste tutorial, você adicionará um assistente ao modelo de projeto de coluna de site que é demonstrado em [Walkthrough: Criando um item de projeto de coluna de site com um modelo de projeto, parte 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md). Quando um usuário cria um projeto de coluna de site, o assistente coleta informações sobre a coluna de site (como seu tipo e grupo base) e adiciona essas informações ao arquivo *Elements. xml* no novo projeto.
+ Neste tutorial, você adicionará um assistente ao modelo de projeto de coluna de site que é demonstrado em [Walkthrough: Criando um item de projeto de coluna de site com um modelo de projeto, parte 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md). Quando um usuário cria um projeto de coluna de site, o assistente coleta informações sobre a coluna de site (como seu tipo e grupo base) e adiciona essas informações ao arquivo de *Elements.xml* no novo projeto.
 
  Este tutorial demonstra as seguintes tarefas:
 
@@ -40,7 +39,7 @@ ms.locfileid: "73189145"
 > [!NOTE]
 > Para obter uma série de fluxos de trabalho de exemplo, consulte [exemplos de fluxo de trabalho do SharePoint](/sharepoint/dev/general-development/sharepoint-workflow-samples).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
  Para executar este passo a passos, você deve primeiro criar a solução SiteColumnProjectItem concluindo o [passo a passos: Criando um item de projeto de coluna de site com um modelo de projeto, parte 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md).
 
  Você também precisa dos seguintes componentes no computador de desenvolvimento para concluir este passo a passos:
@@ -51,7 +50,7 @@ ms.locfileid: "73189145"
 
   O conhecimento dos seguintes conceitos é útil, mas não é necessário, para concluir o passo a passos:
 
-- Assistentes para modelos de projeto e item no Visual Studio. Para obter mais informações, consulte [como: usar assistentes com modelos de projeto](../extensibility/how-to-use-wizards-with-project-templates.md) e a interface <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>.
+- Assistentes para modelos de projeto e item no Visual Studio. Para obter mais informações, consulte [como: usar assistentes com modelos de projeto](../extensibility/how-to-use-wizards-with-project-templates.md) e a <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface.
 
 - Colunas do site no SharePoint. Para obter mais informações, consulte [colunas](/previous-versions/office/developer/sharepoint-2010/ms196085(v=office.14)).
 
@@ -60,16 +59,16 @@ ms.locfileid: "73189145"
 
 |Componente|Descrição|
 |---------------|-----------------|
-|Implementação do assistente|Essa é uma classe chamada `SiteColumnProjectWizard`, que implementa a interface <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>. Essa interface define os métodos que o Visual Studio chama quando o assistente é iniciado e concluído e em determinados momentos durante a execução do assistente.|
-|Interface do usuário do assistente|Esta é uma janela baseada no WPF, chamada `WizardWindow`. Essa janela inclui dois controles de usuário, chamados `Page1` e `Page2`. Esses controles de usuário representam as duas páginas do assistente.<br /><br /> Neste tutorial, o método <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> da implementação do assistente exibe a interface do usuário do assistente.|
-|Modelo de dados do assistente|Essa é uma classe intermediária, chamada `SiteColumnWizardModel`, que fornece uma camada entre a interface do usuário do assistente e a implementação do assistente. Este exemplo usa essa classe para ajudar a abstrair a implementação do assistente e a interface do usuário do assistente umas das outras; Essa classe não é um componente necessário de todos os assistentes.<br /><br /> Neste tutorial, a implementação do assistente passa um objeto `SiteColumnWizardModel` para a janela do assistente quando ele exibe a interface do usuário do assistente. A interface do usuário do assistente usa métodos desse objeto para salvar os valores dos controles na interface do usuário e para executar tarefas como verificar se a URL do site de entrada é válida. Depois que o usuário concluir o assistente, a implementação do assistente usará o objeto `SiteColumnWizardModel` para determinar o estado final da interface do usuário.|
-|Gerenciador de assinatura de projeto|Essa é uma classe auxiliar, chamada `ProjectSigningManager`, que é usada pela implementação do assistente para criar um novo arquivo Key. snk em cada nova instância de projeto.|
+|Implementação do assistente|Essa é uma classe, chamada `SiteColumnProjectWizard` , que implementa a <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface. Essa interface define os métodos que o Visual Studio chama quando o assistente é iniciado e concluído e em determinados momentos durante a execução do assistente.|
+|Interface do usuário do assistente|Essa é uma janela baseada no WPF, chamada `WizardWindow` . Essa janela inclui dois controles de usuário, chamados `Page1` e `Page2` . Esses controles de usuário representam as duas páginas do assistente.<br /><br /> Neste tutorial, o <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> método da implementação do assistente exibe a interface do usuário do assistente.|
+|Modelo de dados do assistente|Essa é uma classe intermediária, chamada `SiteColumnWizardModel` , que fornece uma camada entre a interface do usuário do assistente e a implementação do assistente. Este exemplo usa essa classe para ajudar a abstrair a implementação do assistente e a interface do usuário do assistente umas das outras; Essa classe não é um componente necessário de todos os assistentes.<br /><br /> Neste tutorial, a implementação do assistente passa um `SiteColumnWizardModel` objeto para a janela do assistente quando ele exibe a interface do usuário do assistente. A interface do usuário do assistente usa métodos desse objeto para salvar os valores dos controles na interface do usuário e para executar tarefas como verificar se a URL do site de entrada é válida. Depois que o usuário concluir o assistente, a implementação do assistente usará o `SiteColumnWizardModel` objeto para determinar o estado final da interface do usuário.|
+|Gerenciador de assinatura de projeto|Essa é uma classe auxiliar, chamada `ProjectSigningManager` , que é usada pela implementação do assistente para criar um novo arquivo Key. snk em cada nova instância de projeto.|
 |comandos do SharePoint|Esses são métodos que são usados pelo modelo de dados do assistente para chamar o site do SharePoint local enquanto o assistente está em execução. Como os comandos do SharePoint devem ter como destino o .NET Framework 3,5, esses comandos são implementados em um assembly diferente do restante do código do assistente.|
 
 ## <a name="create-the-projects"></a>Criar os projetos
  Para concluir este passo a passos, você precisa adicionar vários projetos à solução SiteColumnProjectItem que você criou em [passo a passos: criar um item de projeto de coluna de site com um modelo de projeto, parte 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md):
 
-- Um projeto do WPF. Você implementará a interface <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> e definirá a interface do usuário do assistente neste projeto.
+- Um projeto do WPF. Você implementará a <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface e definirá a interface do usuário do assistente neste projeto.
 
 - Um projeto de biblioteca de classes que define os comandos do SharePoint. Este projeto deve ter como destino a estrutura the.NET 3,5.
 
@@ -77,17 +76,17 @@ ms.locfileid: "73189145"
 
 #### <a name="to-create-the-wpf-project"></a>Para criar o projeto WPF
 
-1. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], abra a solução SiteColumnProjectItem.
+1. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , abra a solução SiteColumnProjectItem.
 
 2. No **Gerenciador de soluções**, abra o menu de atalho para o nó da solução **SiteColumnProjectItem** , escolha **Adicionar**e, em seguida, escolha **novo projeto**.
 
 3. Na parte superior da caixa de diálogo **Adicionar novo projeto** , certifique-se de que **.NET Framework 4,5** seja escolhido na lista de versões do .NET Framework.
 
-4. Expanda o nó  **C# Visual** ou o nó **Visual Basic** e escolha o nó **Windows** .
+4. Expanda o nó do **Visual C#** ou o nó **Visual Basic** e escolha o nó do **Windows** .
 
 5. Na lista de modelos de projeto, escolha **biblioteca de controle de usuário do WPF**, nomeie o projeto **ProjectTemplateWizard**e, em seguida, escolha o botão **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adiciona o projeto **ProjectTemplateWizard** à solução e abre o arquivo UserControl1. XAML padrão.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Adiciona o projeto **ProjectTemplateWizard** à solução e abre o arquivo UserControl1. XAML padrão.
 
 6. Exclua o arquivo UserControl1. XAML do projeto.
 
@@ -97,11 +96,11 @@ ms.locfileid: "73189145"
 
 2. Na parte superior da caixa de diálogo **Adicionar novo projeto** , escolha **.NET Framework 3,5** na lista de versões do .NET Framework.
 
-3. Expanda o nó  **C# Visual** ou o nó **Visual Basic** e, em seguida, escolha o nó **Windows** .
+3. Expanda o nó do **Visual C#** ou o nó **Visual Basic** e, em seguida, escolha o nó do **Windows** .
 
 4. Escolha o modelo de projeto de **biblioteca de classes** , nomeie o projeto **SharePointCommands**e, em seguida, escolha o botão **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adiciona o projeto **SharePointCommands** à solução e abre o arquivo de código de Class1 padrão.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Adiciona o projeto **SharePointCommands** à solução e abre o arquivo de código de Class1 padrão.
 
 5. Exclua o arquivo de código Class1 do projeto.
 
@@ -112,11 +111,11 @@ ms.locfileid: "73189145"
 
 1. No **Gerenciador de soluções**, abra o menu de atalho para o nó do projeto **ProjectTemplateWizard** e escolha **Propriedades**.
 
-2. No **Designer de projeto**, escolha a guia **aplicativo** para um projeto C# Visual ou a guia **Compilar** para um projeto Visual Basic.
+2. No **Designer de projeto**, escolha a guia **aplicativo** para um projeto do Visual C# ou a guia **Compilar** para um projeto Visual Basic.
 
 3. Verifique se a estrutura de destino está definida como a .NET Framework 4,5, não o perfil de cliente .NET Framework 4,5.
 
-     Para obter mais informações, consulte [Como definir uma versão do .NET Framework como destino](../ide/visual-studio-multi-targeting-overview.md).
+     Para obter mais informações, consulte [como: direcionar uma versão do .NET Framework](../ide/visual-studio-multi-targeting-overview.md).
 
 4. Abra o menu de atalho para o projeto **ProjectTemplateWizard** , escolha **Adicionar**e, em seguida, escolha **novo item**.
 
@@ -172,11 +171,11 @@ ms.locfileid: "73189145"
 
 4. Escolha a seta ao lado do botão **Adicionar** e, em seguida, escolha a opção **Adicionar como link** no menu exibido.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adiciona o arquivo de código ao projeto **SharePointCommands** como um link. O arquivo de código está localizado no projeto **ProjectTemplateWizard** , mas o código no arquivo também é compilado no projeto **SharePointCommands** .
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Adiciona o arquivo de código ao projeto **SharePointCommands** como um link. O arquivo de código está localizado no projeto **ProjectTemplateWizard** , mas o código no arquivo também é compilado no projeto **SharePointCommands** .
 
 5. No projeto **SharePointCommands** , adicione outro arquivo de código chamado comandos.
 
-6. Escolha o projeto SharePointCommands e, na barra de menus, escolha **projeto** > **Adicionar referência**.
+6. Escolha o projeto SharePointCommands e, em seguida, na barra de menus, escolha **projeto**  >  **Adicionar referência**.
 
 7. Expanda o nó **assemblies** , escolha o nó **extensões** e, em seguida, marque as caixas de seleção ao lado dos seguintes assemblies:
 
@@ -233,9 +232,9 @@ ms.locfileid: "73189145"
      [!code-xml[SPExtensibility.ProjectItem.SiteColumn#10](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml#10)]
 
     > [!NOTE]
-    > A janela que é criada neste XAML é derivada da classe base <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>. Quando você adiciona uma caixa de diálogo personalizada do WPF ao Visual Studio, recomendamos que você Derive sua caixa de diálogo dessa classe para ter estilos consistentes com outras caixas de diálogo do Visual Studio e para evitar problemas de caixa de diálogo modais que poderiam ocorrer. Para obter mais informações, consulte [criando e gerenciando caixas de diálogo modais](../extensibility/creating-and-managing-modal-dialog-boxes.md).
+    > A janela que é criada neste XAML é derivada da <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> classe base. Quando você adiciona uma caixa de diálogo personalizada do WPF ao Visual Studio, recomendamos que você Derive sua caixa de diálogo dessa classe para ter estilos consistentes com outras caixas de diálogo do Visual Studio e para evitar problemas de caixa de diálogo modais que poderiam ocorrer. Para obter mais informações, consulte [criando e gerenciando caixas de diálogo modais](../extensibility/creating-and-managing-modal-dialog-boxes.md).
 
-3. Se você estiver desenvolvendo um projeto Visual Basic, remova o namespace `ProjectTemplateWizard` do nome da classe `WizardWindow` no atributo `x:Class` do elemento `Window`. Esse elemento está na primeira linha do XAML. Quando terminar, a primeira linha deverá ser parecida com o exemplo a seguir.
+3. Se você estiver desenvolvendo um projeto Visual Basic, remova o `ProjectTemplateWizard` namespace do `WizardWindow` nome da classe no `x:Class` atributo do `Window` elemento. Esse elemento está na primeira linha do XAML. Quando terminar, a primeira linha deverá ser parecida com o exemplo a seguir.
 
     ```xml
     <Window x:Class="WizardWindow"
@@ -243,7 +242,7 @@ ms.locfileid: "73189145"
 
 4. Abra o arquivo code-behind para o arquivo WizardWindow. XAML.
 
-5. Substitua o conteúdo desse arquivo, exceto as declarações de `using` na parte superior do arquivo, pelo código a seguir.
+5. Substitua o conteúdo desse arquivo, exceto pelas `using` declarações na parte superior do arquivo, pelo código a seguir.
 
      [!code-vb[SPExtensibility.ProjectItem.SiteColumn#4](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.vb#4)]
      [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#4](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.cs#4)]
@@ -256,13 +255,13 @@ ms.locfileid: "73189145"
 
      [!code-xml[SPExtensibility.ProjectItem.SiteColumn#11](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page1.xaml#11)]
 
-3. Se você estiver desenvolvendo um projeto Visual Basic, remova o namespace `ProjectTemplateWizard` do nome da classe `Page1` no atributo `x:Class` do elemento `UserControl`. Isso está na primeira linha do XAML. Quando terminar, a primeira linha deverá ser parecida com a seguinte.
+3. Se você estiver desenvolvendo um projeto Visual Basic, remova o `ProjectTemplateWizard` namespace do `Page1` nome da classe no `x:Class` atributo do `UserControl` elemento. Isso está na primeira linha do XAML. Quando terminar, a primeira linha deverá ser parecida com a seguinte.
 
     ```xml
     <UserControl x:Class="Page1"
     ```
 
-4. Substitua o conteúdo do arquivo página1. XAML, exceto pelas declarações de `using` na parte superior do arquivo, pelo código a seguir.
+4. Substitua o conteúdo do arquivo página1. XAML, exceto pelas `using` declarações na parte superior do arquivo, pelo código a seguir.
 
      [!code-vb[SPExtensibility.ProjectItem.SiteColumn#2](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.vb#2)]
      [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#2](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.cs#2)]
@@ -277,19 +276,19 @@ ms.locfileid: "73189145"
 
      [!code-xml[SPExtensibility.ProjectItem.SiteColumn#12](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page2.xaml#12)]
 
-3. Se você estiver desenvolvendo um projeto Visual Basic, remova o namespace `ProjectTemplateWizard` do nome da classe `Page2` no atributo `x:Class` do elemento `UserControl`. Isso está na primeira linha do XAML. Quando terminar, a primeira linha deverá ser parecida com a seguinte.
+3. Se você estiver desenvolvendo um projeto Visual Basic, remova o `ProjectTemplateWizard` namespace do `Page2` nome da classe no `x:Class` atributo do `UserControl` elemento. Isso está na primeira linha do XAML. Quando terminar, a primeira linha deverá ser parecida com a seguinte.
 
     ```xml
     <UserControl x:Class="Page2"
     ```
 
-4. Substitua o conteúdo do arquivo code-behind para o arquivo página2. XAML, exceto para as declarações de `using` na parte superior do arquivo, com o código a seguir.
+4. Substitua o conteúdo do arquivo code-behind do arquivo página2. XAML, exceto pelas `using` declarações na parte superior do arquivo, pelo código a seguir.
 
      [!code-vb[SPExtensibility.ProjectItem.SiteColumn#3](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.vb#3)]
      [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#3](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.cs#3)]
 
 ## <a name="implement-the-wizard"></a>Implementar o assistente
- Defina a funcionalidade principal do assistente implementando a interface <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>. Essa interface define os métodos que o Visual Studio chama quando o assistente é iniciado e concluído e em determinados momentos durante a execução do assistente.
+ Defina a funcionalidade principal do assistente implementando a <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface. Essa interface define os métodos que o Visual Studio chama quando o assistente é iniciado e concluído e em determinados momentos durante a execução do assistente.
 
 #### <a name="to-implement-the-wizard"></a>Para implementar o assistente
 
@@ -317,7 +316,7 @@ ms.locfileid: "73189145"
 
 #### <a name="to-build-your-project"></a>Para compilar seu projeto
 
-1. Na barra de menus, escolha **Compilar** > **Compilar Solução**.
+1. Na barra de menus, escolha **Compilar**compilar  >  **solução**.
 
 ## <a name="removing-the-keysnk-file-from-the-project-template"></a>Removendo o arquivo Key. SNK do modelo de projeto
  Em [Walkthrough: criar um item de projeto de coluna de site com um modelo de projeto, parte 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md), o modelo de projeto que você criou contém um arquivo Key. snk que é usado para assinar cada instância de projeto de coluna de site. Este arquivo Key. SNK não é mais necessário porque o assistente agora gera um novo arquivo Key. SNK para cada projeto. Remova o arquivo Key. SNK do modelo de projeto e remova as referências a esse arquivo.
@@ -336,7 +335,7 @@ ms.locfileid: "73189145"
 
 4. Salve e feche o arquivo.
 
-5. No nó **SiteColumnProjectTemplate** , abra o arquivo ProjectTemplate. csproj ou ProjectTemplate. vbproj e, em seguida, remova o seguinte elemento `PropertyGroup` dele.
+5. No nó **SiteColumnProjectTemplate** , abra o arquivo ProjectTemplate. csproj ou ProjectTemplate. vbproj e, em seguida, remova o seguinte `PropertyGroup` elemento dele.
 
     ```xml
     <PropertyGroup>
@@ -345,7 +344,7 @@ ms.locfileid: "73189145"
     </PropertyGroup>
     ```
 
-6. Remova o elemento `None` a seguir.
+6. Remova o elemento a seguir `None` .
 
     ```xml
     <None Include="key.snk" />
@@ -366,13 +365,13 @@ ms.locfileid: "73189145"
 
 1. No **Gerenciador de soluções**, abra o menu de atalho para o projeto **ProjectTemplateWizard** e escolha **Propriedades**.
 
-2. Na guia **assinatura** , marque a caixa de seleção **assinar o assembly** .
+2. Na guia **Assinatura**, marque a caixa de seleção **Assinar o assembly**.
 
-3. Na lista **escolher um arquivo de chave de nome forte** , escolha **\<novo... >** .
+3. Na lista **escolher um arquivo de chave de nome forte** , escolha **\<New...>** .
 
 4. Na caixa de diálogo **criar chave de nome forte** , insira um nome para o novo arquivo de chave, desmarque a caixa de seleção **proteger meu arquivo de chave com uma senha** e escolha o botão **OK** .
 
-5. Abra o menu de atalho para o projeto **ProjectTemplateWizard** e escolha **Compilar** para criar o arquivo ProjectTemplateWizard. dll.
+5. Abra o menu de atalho para o projeto **ProjectTemplateWizard** e escolha **Compilar** para criar o arquivo de ProjectTemplateWizard.dll.
 
 #### <a name="to-get-the-public-key-token-for-the-wizard-assembly"></a>Para obter o token de chave pública para o assembly do assistente
 
@@ -380,13 +379,13 @@ ms.locfileid: "73189145"
 
      Uma janela de prompt de comando do Visual Studio é aberta.
 
-2. Execute o comando a seguir, substituindo *PathToWizardAssembly* pelo caminho completo para o assembly ProjectTemplateWizard. dll criado para o projeto ProjectTemplateWizard em seu computador de desenvolvimento:
+2. Execute o comando a seguir, substituindo *PathToWizardAssembly* pelo caminho completo para o assembly de ProjectTemplateWizard.dll criado para o projeto ProjectTemplateWizard em seu computador de desenvolvimento:
 
     ```cmd
     sn.exe -T PathToWizardAssembly
     ```
 
-     O token de chave pública para o assembly ProjectTemplateWizard. dll é gravado na janela do prompt de comando do Visual Studio.
+     O token de chave pública para o assembly ProjectTemplateWizard.dll é gravado na janela do prompt de comando do Visual Studio.
 
 3. Mantenha a janela do prompt de comando do Visual Studio aberta. Você precisará do token de chave pública durante o próximo procedimento.
 
@@ -394,7 +393,7 @@ ms.locfileid: "73189145"
 
 1. Em **Gerenciador de soluções**, expanda o nó do projeto **SiteColumnProjectTemplate** e abra o arquivo SiteColumnProjectTemplate. vstemplate.
 
-2. Próximo ao final do arquivo, adicione o seguinte elemento `WizardExtension` entre as marcas `</TemplateContent>` e `</VSTemplate>`. Substitua o valor do *token* do atributo `PublicKeyToken` pelo token de chave pública que você obteve no procedimento anterior.
+2. Próximo ao final do arquivo, adicione o seguinte `WizardExtension` elemento entre as `</TemplateContent>` marcas e `</VSTemplate>` . Substitua o valor de *token* do `PublicKeyToken` atributo pelo token de chave pública que você obteve no procedimento anterior.
 
     ```xml
     <WizardExtension>
@@ -403,18 +402,18 @@ ms.locfileid: "73189145"
     </WizardExtension>
     ```
 
-     Para obter mais informações sobre o elemento `WizardExtension`, consulte [WizardExtension &#40;Element Visual Studio&#41;templates](../extensibility/wizardextension-element-visual-studio-templates.md).
+     Para obter mais informações sobre o `WizardExtension` elemento, consulte o [elemento WizardExtension &#40;modelos do Visual Studio&#41;](../extensibility/wizardextension-element-visual-studio-templates.md).
 
 3. Salve e feche o arquivo.
 
-## <a name="add-replaceable-parameters-to-the-elementsxml-file-in-the-project-template"></a>Adicionar parâmetros substituíveis ao arquivo elements. xml no modelo de projeto
- Adicione vários parâmetros substituíveis ao arquivo *Elements. xml* no projeto SiteColumnProjectTemplate. Esses parâmetros são inicializados no método `RunStarted` na classe `SiteColumnProjectWizard` que você definiu anteriormente. Quando um usuário cria um projeto de coluna de site, o Visual Studio substitui automaticamente esses parâmetros no arquivo *Elements. xml* no novo projeto com os valores que eles especificaram no assistente.
+## <a name="add-replaceable-parameters-to-the-elementsxml-file-in-the-project-template"></a>Adicionar parâmetros substituíveis ao arquivo de Elements.xml no modelo de projeto
+ Adicione vários parâmetros substituíveis ao arquivo de *Elements.xml* no projeto SiteColumnProjectTemplate. Esses parâmetros são inicializados no `RunStarted` método na `SiteColumnProjectWizard` classe que você definiu anteriormente. Quando um usuário cria um projeto de coluna de site, o Visual Studio substitui automaticamente esses parâmetros no arquivo de *Elements.xml* no novo projeto com os valores que eles especificaram no assistente.
 
  Um parâmetro substituível é um token que começa e termina com o caractere de cifrão ($). Além de definir seus próprios parâmetros substituíveis, você pode usar parâmetros internos que são definidos e inicializados pelo sistema de projeto do SharePoint. Para obter mais informações, consulte [parâmetros substituíveis](../sharepoint/replaceable-parameters.md).
 
-#### <a name="to-add-replaceable-parameters-to-the-elementsxml-file"></a>Para adicionar parâmetros substituíveis ao arquivo elements. xml
+#### <a name="to-add-replaceable-parameters-to-the-elementsxml-file"></a>Para adicionar parâmetros substituíveis ao arquivo de Elements.xml
 
-1. No projeto SiteColumnProjectTemplate, substitua o conteúdo do arquivo *Elements. xml* pelo seguinte XML.
+1. No projeto SiteColumnProjectTemplate, substitua o conteúdo do arquivo *Elements.xml* pelo seguinte XML.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -428,7 +427,7 @@ ms.locfileid: "73189145"
     </Elements>
     ```
 
-     O novo XML altera os valores dos atributos `Name`, `DisplayName`, `Type`e `Group` para parâmetros personalizados substituíveis.
+     O novo XML altera os valores dos `Name` atributos, `DisplayName` , `Type` e `Group` para parâmetros substituíveis personalizados.
 
 2. Salve e feche o arquivo.
 
@@ -461,7 +460,7 @@ ms.locfileid: "73189145"
 
 9. Na lista **projeto** , escolha o projeto **SharePointCommands** e, em seguida, escolha o botão **OK** .
 
-10. Na barra de menus, escolha **compilar** > **Compilar solução**e, em seguida, certifique-se de que a solução seja compilada sem erros.
+10. Na barra de menus, escolha **criar**  >  **solução de compilação**e, em seguida, certifique-se de que a solução seja compilada sem erros.
 
 ## <a name="test-the-wizard"></a>Testar o assistente
  Agora você está pronto para testar o assistente. Primeiro, inicie a depuração da solução SiteColumnProjectItem na instância experimental do Visual Studio. Em seguida, teste o assistente para o projeto de coluna de site na instância experimental do Visual Studio. Por fim, compile e execute o projeto para verificar se a coluna site funciona conforme o esperado.
@@ -470,27 +469,27 @@ ms.locfileid: "73189145"
 
 1. Reinicie o Visual Studio com credenciais administrativas e, em seguida, abra a solução SiteColumnProjectItem.
 
-2. No projeto ProjectTemplateWizard, abra o arquivo de código SiteColumnProjectWizard e, em seguida, adicione um ponto de interrupção à primeira linha de código no método `RunStarted`.
+2. No projeto ProjectTemplateWizard, abra o arquivo de código SiteColumnProjectWizard e, em seguida, adicione um ponto de interrupção à primeira linha de código no `RunStarted` método.
 
-3. Na barra de menus, escolha **depurar** > **exceções**.
+3. Na barra de menus, escolha **depurar**  >  **exceções**.
 
 4. Na caixa de diálogo **exceções** , certifique-se de que as caixas de seleção **lançado** e não **manipulado pelo usuário** para **exceções do Common Language Runtime** sejam limpas e, em seguida, escolha o botão **OK** .
 
-5. Inicie a depuração escolhendo a tecla **F5** ou, na barra de menus, escolhendo **debug** > **iniciar a depuração**.
+5. Inicie a depuração escolhendo a tecla **F5** ou, na barra de menus, escolhendo **depurar**  >  **Iniciar Depuração**.
 
      O Visual Studio instala a extensão para%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Site Column\1.0 e inicia uma instância experimental do Visual Studio. Você testará o item de projeto nesta instância do Visual Studio.
 
 #### <a name="to-test-the-wizard-in-visual-studio"></a>Para testar o assistente no Visual Studio
 
-1. Na instância experimental do Visual Studio, na barra de menus, escolha **arquivo** > **novo** **projeto**de > .
+1. Na instância experimental do Visual Studio, na barra de menus, escolha **arquivo**  >  **novo**  >  **projeto**.
 
-2. Expanda **o C# nó Visual** ou o nó **Visual Basic** (dependendo do idioma ao qual o modelo de projeto dá suporte), expanda o nó **SharePoint** e escolha o nó **2010** .
+2. Expanda o nó do **Visual C#** ou o nó **Visual Basic** (dependendo do idioma ao qual o modelo de projeto dá suporte), expanda o nó do **SharePoint** e escolha o nó **2010** .
 
 3. Na lista de modelos de projeto, escolha **site coluna**, nomeie o projeto **SiteColumnWizardTest**e, em seguida, escolha o botão **OK** .
 
-4. Verifique se o código na outra instância do Visual Studio é interrompido no ponto de interrupção que você definiu anteriormente no método `RunStarted`.
+4. Verifique se o código na outra instância do Visual Studio é interrompido no ponto de interrupção que você definiu anteriormente no `RunStarted` método.
 
-5. Continue a depurar o projeto escolhendo a tecla **F5** ou, na barra de menus, escolhendo **depurar** > **continuar**.
+5. Continue a depurar o projeto escolhendo a tecla **F5** ou, na barra de menus, escolhendo **depurar**  >  **continuar**.
 
 6. No **Assistente para personalização do SharePoint**, insira a URL do site que você deseja usar para depuração e, em seguida, escolha o botão **Avançar** .
 
@@ -502,9 +501,9 @@ ms.locfileid: "73189145"
 
    - Na caixa **nome** , insira **minha coluna Sim/não**e, em seguida, escolha o botão **concluir** .
 
-     No **Gerenciador de soluções**, um novo projeto é exibido e contém um item de projeto chamado **Field1**e o Visual Studio abre o arquivo *Elements. xml* do projeto no editor.
+     No **Gerenciador de soluções**, um novo projeto é exibido e contém um item de projeto chamado **Field1**e o Visual Studio abre o arquivo de *Elements.xml* do projeto no editor.
 
-8. Verifique se *Elements. xml* contém os valores que você especificou no assistente.
+8. Verifique se *Elements.xml* contém os valores que você especificou no assistente.
 
 #### <a name="to-test-the-site-column-in-sharepoint"></a>Para testar a coluna site no SharePoint
 
@@ -526,7 +525,7 @@ ms.locfileid: "73189145"
 
 #### <a name="to-clean-up-the-development-computer"></a>Para limpar o computador de desenvolvimento
 
-1. Na instância experimental do Visual Studio, na barra de menus, escolha **ferramentas** > **extensões e atualizações**.
+1. Na instância experimental do Visual Studio, na barra de menus, escolha **ferramentas**  >  **extensões e atualizações**.
 
      A caixa de diálogo **Extensões e Atualizações** é aberta.
 
@@ -536,7 +535,7 @@ ms.locfileid: "73189145"
 
 4. Feche a instância experimental do Visual Studio e a instância na qual a solução CustomActionProjectItem está aberta.
 
-     Para obter informações sobre como implantar extensões de [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], consulte [enviando extensões do Visual Studio](../extensibility/shipping-visual-studio-extensions.md).
+     Para obter informações sobre como implantar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] extensões, consulte [enviando extensões do Visual Studio](../extensibility/shipping-visual-studio-extensions.md).
 
 ## <a name="see-also"></a>Consulte também
 - [Walkthrough: criar um item de projeto de coluna de site com um modelo de projeto, parte 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)

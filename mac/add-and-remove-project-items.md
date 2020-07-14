@@ -5,12 +5,13 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 4071689D-1C21-42D7-8963-550E7BCB4B67
-ms.openlocfilehash: 94bb56fba0b90f29c291bc2c4b95976810dd21c6
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: 14f1b08464f1bc0f9e1db8a4e7ddbad23a84573e
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "67692954"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85938494"
 ---
 # <a name="adding-and-removing-project-items"></a>Adicionando e removendo itens de projeto
 
@@ -24,7 +25,7 @@ Isso exibe a caixa de diálogo Novo Arquivo, que fornece modelos de arquivos com
 
 ## <a name="adding-existing-files"></a>Adicionar arquivos existentes
 
-Você pode adicionar arquivos existentes ao seu projeto clicando com o botão direito do mouse no nó Projeto e selecionando **Adicionar > Adicionar arquivos...**. Alternativamente, para adicionar uma pasta inteira, **selecione Adicionar > Adicionar pasta existente...**. Isso exibe o navegador de arquivos, que permite que você pesquise no seu sistema o item necessário para adicionar.
+Você pode adicionar arquivos existentes ao seu projeto clicando com o botão direito do mouse no nó do projeto e selecionando **adicionar > adicionar arquivos...**. Como alternativa, para adicionar uma pasta inteira, selecione **adicionar > adicionar pasta existente...**. Isso exibe o navegador de arquivos, que permite que você pesquise seu sistema para o item necessário para adicionar.
 
 ## <a name="removing-items"></a>Removendo itens
 

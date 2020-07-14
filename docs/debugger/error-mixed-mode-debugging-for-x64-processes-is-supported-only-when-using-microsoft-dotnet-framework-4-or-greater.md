@@ -1,7 +1,7 @@
 ---
-title: 'Erro: há suporte para a depuração de modo misto para processos x64 somente ao usar o Microsoft .NET Framework 4 ou superior | Microsoft Docs'
+title: Erro-a depuração de modo misto para processos x64 tem suporte apenas ao usar o Microsoft .NET Framework 4 ou superior | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.interop_unsupported_x64
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 67b9d1c737e4490195b209abca824b2d6d51176c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9f30fe9b729df84506f6717e5fd895297390dea6
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737597"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460631"
 ---
 # <a name="error-mixed-mode-debugging-for-x64-processes-is-supported-only-when-using-microsoft-net-framework-4-or-greater"></a>Erro: depuração de modo misto para processos x64 só é suportada durante o uso do Microsoft .NET Framework 4 ou superior
 Para depurar código nativo e gerenciado Misto em um processo de 64 bits, você deve ter .NET Framework versão 4. Não há suporte para a depuração de modo misto de processos de 64 bits com versões .NET Framework anteriores a 4.
@@ -32,5 +32,5 @@ Para depurar código nativo e gerenciado Misto em um processo de 64 bits, você 
 
   - Crie uma versão de 32 bits do aplicativo para depuração.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Depuração remota](../debugger/remote-debugging.md)

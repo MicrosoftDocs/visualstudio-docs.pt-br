@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_container | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0533eb2cdea1dd3e1bea3d64e2b94ce29a09353d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 62bb2f29d737aeb09cc228038be96480922e204c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740773"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464026"
 ---
 # <a name="idiasymbolget_container"></a>IDiaSymbol::get_container
 Essa função recupera um ponteiro para um símbolo que representa o pai/contêiner deste símbolo.
@@ -35,7 +35,7 @@ HRESULT get_container(
 
 fora Retorna um ponteiro para um `IDiaSymbol` que contém informações sobre o contêiner deste símbolo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará S_OK; caso contrário, retorna S_FALSE ou um código de erro.
 
 > [!NOTE]
@@ -48,5 +48,5 @@ fora Retorna um ponteiro para um `IDiaSymbol` que contém informações sobre o 
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

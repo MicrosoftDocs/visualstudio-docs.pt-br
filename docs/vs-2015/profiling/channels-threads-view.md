@@ -13,12 +13,12 @@ caps.latest.revision: 21
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 445eaf5269ce59e6f6f8fa323020a80648567f54
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.openlocfilehash: df93a87285bdf1172e75b63ed956c1aa978fc71e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68193632"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545529"
 ---
 # <a name="channels-threads-view"></a>Canais (exibição de threads)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,13 +28,13 @@ A Visualização Simultânea mostra quatro tipos de canais: canais de thread, ca
 ## <a name="thread-channels"></a>Canais de thread  
  Um canal de thread mostra o estado do thread, por cor, para apenas um thread. Quando você pausa no nome do canal, a função de início para o thread determinado é exibida. A Visualização Simultânea detecta vários tipos de threads. Os tipos mais comuns são mostrados na tabela a seguir.  
   
-|||  
+|Thread|Descrição|  
 |-|-|  
 |Thread principal|O thread que iniciou o aplicativo.|  
 |Thread de trabalho|Um thread que foi criado pelo thread principal do aplicativo.|  
 |Thread de trabalho CLR|Um thread de trabalho que foi criado pelo CLR (Common Language Runtime).|  
 |Depurador Auxiliar|Um thread de trabalho que foi criado pelo depurador do Visual Studio.|  
-|Thread ConcRT|Um thread que foi criado pelo Tempo de Execução de Simultaneidade Microsoft.|  
+|Thread ConcRT|Um thread que foi criado pelo Runtime de Simultaneidade Microsoft.|  
 |Thread GDI|Um thread que foi criado por GDIPlus.|  
 |Thread OLE/RPC|Um thread que foi criado como um Thread de Trabalho do RPC.|  
 |Thread RPC|Um thread que foi criado como um Thread do RPC.|  
@@ -50,5 +50,5 @@ A Visualização Simultânea mostra quatro tipos de canais: canais de thread, ca
 ## <a name="gpu-channels"></a>Canais da GPU  
  Canais da GPU exibem informações sobre a atividade do DirectX 11 no sistema.  Cada mecanismo DirectX associado à placa gráfica tem um canal separado.  Os segmentos individuais representam o tempo gasto no processamento de um pacote DMA.  
   
-## <a name="see-also"></a>Veja também  
- [Exibição de Threads](../profiling/threads-view-parallel-performance.md)
+## <a name="see-also"></a>Consulte Também  
+ [Modo de Exibição de Threads](../profiling/threads-view-parallel-performance.md)

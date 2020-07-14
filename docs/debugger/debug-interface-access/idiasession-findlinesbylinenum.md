@@ -1,7 +1,7 @@
 ---
 title: IDiaSession::findLinesByLinenum | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5d64e9484b9450f5211e271df3b154ebab0fa75
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 240eb3196ac47bf48bc6d6c3ef3ca844ec010dde
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742099"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465660"
 ---
 # <a name="idiasessionfindlinesbylinenum"></a>IDiaSession::findLinesByLinenum
 Determina os números de linha do compiland que o número de linha especificado em um arquivo de origem está dentro ou próximo.
@@ -58,8 +58,8 @@ no Especifica o número da coluna. Use zero para especificar todas as colunas. U
 
 fora Retorna um [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objta que contém uma lista dos números de linha recuperados.
 
-## <a name="return-value"></a>Valor retornado
-Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo
 O exemplo a seguir mostra como abrir um arquivo de origem, enumerar o compilandos contribuído por esse arquivo e localizar os números de linha no arquivo de origem onde cada compiland é iniciado.
@@ -101,7 +101,7 @@ void ShowLinesInCompilands(IDiaSession *pSession, LPCOLESTR filename)
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSession::findLinesByAddr](../../debugger/debug-interface-access/idiasession-findlinesbyaddr.md)

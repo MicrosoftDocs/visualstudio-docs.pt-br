@@ -17,24 +17,24 @@ caps.latest.revision: 40
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5e817bc76a76c3d0af0e3509ef14312ac1b98acf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: efdbf1b96e1dc49f5b9c48cebe6cededc9ea7c6e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669797"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534141"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>Geração de código na hora de design usando modelos de texto T4
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Modelos de texto T4 de tempo de design permitem gerar código de programa e outros arquivos em seu projeto [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Normalmente, você escreve os modelos para que variem o código que eles geram de acordo com os dados de um *modelo*. Um modelo é um arquivo ou banco de dados que contém informações importantes sobre os requisitos do seu aplicativo.
+Modelos de texto T4 de tempo de design permitem gerar código de programa e outros arquivos em seu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projeto. Normalmente, você escreve os modelos para que variem o código que eles geram de acordo com os dados de um *modelo*. Um modelo é um arquivo ou banco de dados que contém informações importantes sobre os requisitos do seu aplicativo.
 
  Por exemplo, você pode ter um modelo que define um fluxo de trabalho, como uma tabela ou um diagrama. A partir do modelo, você pode gerar o software que executa o fluxo de trabalho. Quando os requisitos dos seus usuários mudam, fica fácil discutir o novo fluxo de trabalho com os usuários. Gerar novamente o código do fluxo de trabalho é mais confiável do que atualizar o código manualmente.
 
 > [!NOTE]
 > Um *modelo* é uma fonte de dados que descreve um aspecto específico de um aplicativo. Ela pode estar em qualquer formulário, tipo de arquivo ou banco de dados. Ela não precisa estar em qualquer formulário particular, como um modelo UML ou modelo DSL. Os modelos comuns estão na forma de tabelas ou arquivos XML.
 
- Você provavelmente já está familiarizado com a geração de código. Quando você define recursos em um arquivo **. resx** em sua solução de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], um conjunto de classes e métodos é gerado automaticamente. O arquivo de recursos torna mais fácil e confiável editar os recursos do que se você tivesse que editar as classes e métodos. Com modelos de texto, você pode gerar o código da mesma forma a partir de uma fonte de seu próprio projeto.
+ Você provavelmente já está familiarizado com a geração de código. Quando você define recursos em um arquivo **. resx** em sua [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] solução, um conjunto de classes e métodos é gerado automaticamente. O arquivo de recursos torna mais fácil e confiável editar os recursos do que se você tivesse que editar as classes e métodos. Com modelos de texto, você pode gerar o código da mesma forma a partir de uma fonte de seu próprio projeto.
 
  Um modelo de texto contém uma mistura do texto que você deseja gerar e o código de programa que gera partes variáveis ​​do texto. O código do programa permite repetir ou omitir condicionalmente partes do texto gerado. O texto gerado pode ser o próprio código de programa que fará parte do seu aplicativo.
 
@@ -42,7 +42,7 @@ Modelos de texto T4 de tempo de design permitem gerar código de programa e outr
 
 #### <a name="to-create-a-design-time-t4-template-in-visual-studio"></a>Para criar um modelo T4 em tempo de design no Visual Studio
 
-1. Crie um projeto [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou abra um existente.
+1. Crie um [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projeto ou abra um existente.
 
      Por exemplo, no menu **arquivo** , escolha **novo**, **projeto**.
 
@@ -52,7 +52,7 @@ Modelos de texto T4 de tempo de design permitem gerar código de programa e outr
 
      Observe que a propriedade de **ferramenta personalizada** do arquivo é **TextTemplatingFileGenerator**.
 
-3. Abrir o arquivo. Ele conterá as seguintes diretrizes:
+3. Abra o arquivo. Ele conterá as seguintes diretrizes:
 
     ```
     <#@ template hostspecific="false" language="C#" #>
@@ -125,7 +125,7 @@ Modelos de texto T4 de tempo de design permitem gerar código de programa e outr
 
    Observe que as instruções são incluídas em `<#...#>` e expressões individuais em `<#=...#>`. Para obter mais informações, consulte [escrevendo um modelo de texto T4](../modeling/writing-a-t4-text-template.md).
 
-   Se você escrever o código de geração no [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], a diretiva `template` deve conter `language="VB"`. `"C#"` é o padrão.
+   Se você escrever o código de geração no [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], a diretiva `template` deve conter `language="VB"`. O padrão é `"C#"`.
 
 ## <a name="debugging-a-design-time-t4-text-template"></a>Depurando um modelo de texto T4 em tempo de design
  Para depurar um modelo de texto:
@@ -141,7 +141,7 @@ Modelos de texto T4 de tempo de design permitem gerar código de programa e outr
   O modelo executará e parará nos pontos de interrupção. Você pode examinar variáveis ​​e percorrer o código como de costume.
 
 > [!TIP]
-> O `debug="true"` torna o mapa de código gerado mais preciso para o modelo de texto, com a inserção de mais diretivas de numeração de linhas no código gerado. Se você deixa-o de fora, os pontos de interrupção podem parar a execução no estado errado.
+> `debug="true"`torna o mapa de código gerado mais precisamente para o modelo de texto, inserindo mais diretivas de numeração de linha no código gerado. Se você deixa-o de fora, os pontos de interrupção podem parar a execução no estado errado.
 >
 > Mas, você pode deixar a cláusula na diretiva do modelo mesmo quando você não estiver depurando. Isso causa apensa uma pequena queda de desempenho.
 
@@ -276,7 +276,7 @@ Modelos de texto T4 de tempo de design permitem gerar código de programa e outr
 
  O tipo de `this.Host` (no VB, `Me.Host`) é `Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost`.
 
-### <a name="getting-data-from-includevsprvsincludesvsprvs-mdmd"></a>Obtendo dados do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
+### <a name="getting-data-from-vsprvs"></a>Obtendo dados do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
  Para usar os serviços fornecidos no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], defina o atributo `hostSpecific` e carregue o assembly `EnvDTE`. Você pode usar ServiceProvider.GetCOMService() para acessar o DTE e outros serviços. Por exemplo:
 
 ```scr
@@ -295,7 +295,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 > [!TIP]
 > Um modelo de texto é executado em seu próprio domínio de aplicativo e os serviços são acessados ​​por empacotamento. Nesse caso, GetCOMService() é mais confiável que GetService().
 
-## <a name="Regenerating"></a>Regenerando o código automaticamente
+## <a name="regenerating-the-code-automatically"></a><a name="Regenerating"></a>Regenerando o código automaticamente
  Normalmente, vários arquivos em uma solução [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] são gerados com um modelo de entrada. Cada arquivo é gerado a partir do seu próprio modelo, mas todos os modelos se referem ao mesmo modelo.
 
  Se o modelo de fonte mudar, você deve executar novamente todos os modelos na solução. Para fazer isso manualmente, escolha **transformar todos os modelos** no menu **Compilar** .
@@ -320,8 +320,8 @@ Error("An error message");
 Warning("A warning message");
 ```
 
-## <a name="Converting"></a>Convertendo um arquivo existente em um modelo
- Um recurso útil dos modelos é que eles parecem muito com os arquivos que eles geram, além de um código de programa inserido. Isso sugere um método útil para a criação de um modelo. Primeiro, crie um arquivo comum como um protótipo, como um arquivo de [!INCLUDE[csprcs](../includes/csprcs-md.md)] e, em seguida, introduza gradualmente o código de geração que varia o arquivo resultante.
+## <a name="converting-an-existing-file-to-a-template"></a><a name="Converting"></a>Convertendo um arquivo existente em um modelo
+ Um recurso útil dos modelos é que eles parecem muito com os arquivos que eles geram, além de um código de programa inserido. Isso sugere um método útil para a criação de um modelo. Primeiro, crie um arquivo comum como um protótipo, como um [!INCLUDE[csprcs](../includes/csprcs-md.md)] arquivo, e, em seguida, introduza gradualmente o código de geração que varia o arquivo resultante.
 
 #### <a name="to-convert-an-existing-file-to-a-design-time-template"></a>Para converter um arquivo existente para um modelo de tempo de design
 
@@ -333,10 +333,10 @@ Warning("A warning message");
 
 4. Verifique as seguintes propriedades do arquivo **. tt** :
 
-    |||
+    |Propriedade|Valor|
     |-|-|
     |**Ferramenta personalizada =**|**TextTemplatingFileGenerator**|
-    |**Ação de compilação =**|**Nenhum**|
+    |**Build Action =**|**Nenhuma**|
 
 5. Insira as seguintes linhas no início do arquivo:
 
@@ -355,20 +355,20 @@ Warning("A warning message");
 
      Verifique se o arquivo gerado contém o mesmo conteúdo que o arquivo original.
 
-7. Identifique uma parte do arquivo que você deseja variar. Por exemplo, uma parte que aparece apenas sob certas condições, uma parte que se repete ou em que os valores específicos variam. Insira o código de geração. Salve o arquivo e verifique se o arquivo subsidiário é gerado corretamente. Repita essa etapa.
+7. Identifique uma parte do arquivo que você deseja variar. Por exemplo, uma parte que aparece apenas sob certas condições, uma parte que se repete ou em que os valores específicos variam. Insira o código de geração. Salve o arquivo e verifique se o arquivo subsidiário é gerado corretamente. Repita esta etapa.
 
 ## <a name="guidelines-for-code-generation"></a>Diretrizes para a geração de código
  Consulte as [diretrizes para escrever modelos de texto T4](../modeling/guidelines-for-writing-t4-text-templates.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 
-|Próximas etapas|Tópico|
+|Próxima etapa|Tópico|
 |---------------|-----------|
 |Escreva e depure um modelo de texto mais avançado, com código que usa funções auxiliares, arquivos e dados externos incluídos.|[Gravando um modelo de texto T4](../modeling/writing-a-t4-text-template.md)|
 |Gere documentos a partir de modelos em tempo de execução.|[Geração de texto de tempo de execução com modelos de texto T4](../modeling/run-time-text-generation-with-t4-text-templates.md)|
 |Execute geração de texto fora do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|[Gerando arquivos com o utilitário TextTransform](../modeling/generating-files-with-the-texttransform-utility.md)|
-|Transforme dados na forma de uma linguagem específica do domínio.|[Gerando código com base em uma linguagem específica de domínio](../modeling/generating-code-from-a-domain-specific-language.md)|
-|Grave processadores de diretivas para transformar suas próprias fontes de dados.|[Personalizando a transformação de texto T4](../modeling/customizing-t4-text-transformation.md)|
+|Transforme dados na forma de uma linguagem específica do domínio.|[Gerando código a partir de uma linguagem específica do domínio](../modeling/generating-code-from-a-domain-specific-language.md)|
+|Grave processadores de diretivas para transformar suas próprias fontes de dados.|[Personalizando transformação de texto T4](../modeling/customizing-t4-text-transformation.md)|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Diretrizes para escrever modelos de texto T4](../modeling/guidelines-for-writing-t4-text-templates.md)

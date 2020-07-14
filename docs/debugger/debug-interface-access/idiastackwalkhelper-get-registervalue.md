@@ -1,7 +1,7 @@
 ---
 title: IDiaStackWalkHelper::get_registerValue | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bfb3e219012effe47a2352f7c22c6cf51b4617f9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3fb78b4cbdfa2130731e3847b1a3325ab4cb3eac
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741412"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464719"
 ---
 # <a name="idiastackwalkhelperget_registervalue"></a>IDiaStackWalkHelper::get_registerValue
 Recupera o valor de um registro.
@@ -34,18 +34,18 @@ HRESULT get_registerValue ( 
 #### <a name="parameters"></a>Parâmetros
  `index`
 
-no Um valor da enumeração de [Enumeração CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md) especificando para qual registro obter o valor.
+no Um valor da enumeração de [enumeração de CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md) especificando para qual registro obter o valor.
 
  `pRetVal`
 
 fora Retorna o valor atual do registro.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
- Apesar do tamanho do parâmetro `pRetVal`, uma implementação deve armazenar apenas o que o registro normalmente mantém. Por exemplo, um registro de 8 bits mantém apenas os 8 bits mais baixos do valor especificado. Esse valor de 8 bits é expandido para 64 bits quando retornado desse método.
+ Apesar do tamanho do `pRetVal` parâmetro, uma implementação deve armazenar apenas o que o registro normalmente mantém. Por exemplo, um registro de 8 bits mantém apenas os 8 bits mais baixos do valor especificado. Esse valor de 8 bits é expandido para 64 bits quando retornado desse método.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
 - [Enumeração CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md)

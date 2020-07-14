@@ -1,7 +1,7 @@
 ---
 title: Como armazenar em cache dados para uso offline ou em um servidor
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,28 +17,28 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 551d27cf8d40f2e6e9c996b031fa6c4e0a233355
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: ce295e299e4accb2d79655675f6264a1497b8d69
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189569"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546179"
 ---
 # <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>Como armazenar em cache dados para uso offline ou em um servidor
   Você pode marcar um item de dados para ser armazenado em cache no documento, para que ele esteja disponível offline. Isso também possibilita que os dados no documento sejam manipulados por outro código quando o documento é armazenado em um servidor.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Você pode marcar um item de dados a ser armazenado em cache quando o item de dados for declarado em seu código ou, se você estiver usando um <xref:System.Data.DataSet>, definindo uma propriedade na janela **Propriedades** . Se você estiver armazenando em cache um item de dados que não é um <xref:System.Data.DataSet> ou <xref:System.Data.DataTable>, verifique se ele atende aos critérios para serem armazenados em cache no documento. Para obter mais informações, consulte [armazenar dados em cache](../vsto/caching-data.md).
+ Você pode marcar um item de dados para ser armazenado em cache quando o item de dados é declarado em seu código ou, se você estiver usando um <xref:System.Data.DataSet> , definindo uma propriedade na janela **Propriedades** . Se você estiver armazenando em cache um item de dados que não seja um <xref:System.Data.DataSet> ou <xref:System.Data.DataTable> , verifique se ele atende aos critérios para serem armazenados em cache no documento. Para obter mais informações, consulte [armazenar dados em cache](../vsto/caching-data.md).
 
 > [!NOTE]
-> Conjuntos de dados criados usando Visual Basic que são marcados como **armazenados em cache** e **WithEvents** (incluindo conjuntos de dados que são arrastados da janela **Data Sources** ou da **caixa de ferramentas** que têm a propriedade **CacheInDocument** definida como **true** ) têm um sublinhado prefixado para seus nomes no cache. Por exemplo, se você criar um conjunto de um e nomeá-lo como **Customers**, o nome do <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> será **_Customers** no cache. Ao usar <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> para acessar esse item em cache, você deve especificar **_Customers** em vez de **clientes**.
+> Os conjuntos de dados criados usando Visual Basic que são marcados como **armazenados em cache** e **WithEvents** (incluindo conjuntos de dados que são arrastados da janela **Data Sources** ou da **caixa de ferramentas** que têm a propriedade **CacheInDocument** definida como **true**) têm um sublinhado prefixado para seus nomes no cache. Por exemplo, se você criar um conjunto de um e nomeá-lo como **Customers**, o <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> nome será **_Customers** no cache. Ao usar <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> o para acessar esse item em cache, você deve especificar **_Customers** em vez de **clientes**.
 
 ### <a name="to-cache-data-in-the-document-using-code"></a>Para armazenar em cache dados no documento usando código
 
-1. Declare um campo público ou uma propriedade para o item de dados como um membro de uma classe de item de host em seu projeto, como a classe `ThisDocumen`t em um projeto do Word ou a classe `ThisWorkbook` em um projeto do Excel.
+1. Declare um campo público ou uma propriedade para o item de dados como um membro de uma classe de item de host em seu projeto, como a `ThisDocumen` classe t em um projeto do Word ou a `ThisWorkbook` classe em um projeto do Excel.
 
-2. Aplique o atributo <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> ao membro para marcar o item de dados a ser armazenado no cache de dados do documento. O exemplo a seguir aplica esse atributo a uma declaração de campo para uma <xref:System.Data.DataSet>.
+2. Aplique o <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> atributo ao membro para marcar o item de dados a ser armazenado no cache de dados do documento. O exemplo a seguir aplica esse atributo a uma declaração de campo para um <xref:System.Data.DataSet> .
 
      [!code-csharp[Trin_VstcoreDataExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#11)]
      [!code-vb[Trin_VstcoreDataExcel#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#11)]

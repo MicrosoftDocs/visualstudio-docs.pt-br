@@ -1,7 +1,7 @@
 ---
-title: 'Erro: O processo de destino foi encerrado com o código &#39;código&#39; ao avaliar a função &#39;função&#39; | Microsoft Docs'
+title: Erro-o processo de destino saiu com código &#39;código&#39; ao avaliar a função &#39;função&#39; | Microsoft Docs
 ms.date: 4/06/2018
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.process_exit_during_func_eval
 author: mikejo5000
@@ -9,39 +9,39 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75d82b6011a0dfa7f2c388e7d5f39a9ebabcd663
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d1721196becf1f746d81fa7e3d4ff5f0371e3f57
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850821"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460772"
 ---
-# <a name="error-the-target-process-exited-with-code-39code39-while-evaluating-the-function-39function39"></a>Erro: O processo de destino foi encerrado com o código &#39;código&#39; ao avaliar a função &#39;função&#39;
+# <a name="error-the-target-process-exited-with-code-39code39-while-evaluating-the-function-39function39"></a>Erro: o processo de destino saiu com o código &#39;código&#39; ao avaliar a função &#39;function&#39;
 
-Texto da mensagem completa: O processo de destino foi encerrado com código 'code' durante a avaliação da função 'function'.
+Texto completo da mensagem: o processo de destino saiu com o código ' code ' ao avaliar a função ' function '.
 
-Para tornar mais fácil de inspecionar o estado de objetos .NET, o depurador automaticamente forçará o processo depurado para executar código adicional (normalmente os métodos de getter de propriedade e `ToString` funções). Na maioria dos cenários, essas funções concluída com êxito ou lancem exceções que podem ser capturadas pelo depurador. No entanto, há algumas circunstâncias em que as exceções não podem ser detectadas porque cruzar os limites do kernel, exigem o bombeamento de mensagens do usuário ou são irrecuperáveis. Como resultado, um getter de propriedade ou método ToString que executa o código que encerra o processo explicitamente (por exemplo, chamadas `ExitProcess()`) ou gera uma exceção sem tratamento que não pode ser detectada (por exemplo, `StackOverflowException`) encerrará o processo depurado e encerre a sessão de depuração. Se você encontrar esta mensagem de erro, isso ocorreu.
+Para facilitar a inspeção do estado dos objetos .NET, o depurador forçará automaticamente o processo depurado a executar código adicional (normalmente, métodos e funções getter da propriedade `ToString` ). Na maioria dos cenários, essas funções são concluídas com êxito ou geram exceções que podem ser detectadas pelo depurador. No entanto, há algumas circunstâncias em que as exceções não podem ser detectadas porque elas cruzam limites de kernel, exigem bombeamento de mensagens do usuário ou são irrecuperáveis. Como resultado, um método getter ou ToString de propriedade que executa o código que encerra explicitamente o processo (por exemplo, chamadas `ExitProcess()` ) ou gera uma exceção sem tratamento que não pode ser detectada (por exemplo, `StackOverflowException` ) encerrará o processo depurado e encerrará a sessão de depuração. Se você encontrar essa mensagem de erro, isso ocorreu.
 
-Uma razão comum para esse problema é que, quando o depurador avalia uma propriedade que chama a mesmo, isso pode resultar em uma exceção de estouro de pilha. A exceção de estouro de pilha não pode ser recuperada e o processo de destino será encerrado.
+Um motivo comum para esse problema é que quando o depurador avalia uma propriedade que chama a si mesmo, isso pode resultar em uma exceção de estouro de pilha. A exceção de estouro de pilha não pode ser recuperada e o processo de destino será encerrado.
 
 ## <a name="to-correct-this-error"></a>Para corrigir este erro
 
 Há duas soluções possíveis para esse problema.
 
-### <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>Solução 1 #: Impedir que o depurador chamar a propriedade getter ou o método ToString 
+### <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>#1 da solução: impedir que o depurador chame a propriedade getter ou o método ToString 
 
-A mensagem de erro informará o nome da função que o depurador tentou chamar. Com o nome da função, você pode tentar reavaliar essa função do **imediato** janela Depurar a avaliação. É possível depurar ao avaliar a partir de **imediato** janela porque, diferentemente de avaliações implícitas do **Autos/locais/inspeção** windows, o depurador é interrompido em exceções sem tratamento.
+A mensagem de erro informará o nome da função que o depurador tentou chamar. Com o nome da função, você pode tentar avaliar novamente essa função na janela **imediata** para depurar a avaliação. A depuração é possível ao avaliar a partir da janela **imediata** porque, ao contrário das avaliações implícitas das janelas **auto-/-local/Watch** , o depurador interrompe as exceções sem tratamento.
 
-Se você pode modificar essa função, você pode impedir que o depurador de chamar o getter de propriedade ou `ToString` método. Tente um destes procedimentos:
+Se você puder modificar essa função, poderá impedir que o depurador chame o método ou getter da propriedade `ToString` . Tente uma das seguintes opções:
 
-* Alterar o método para algum outro tipo de código, além de um getter de propriedade ou método ToString e o problema desaparecerá.
-    - ou -
-* (Para `ToString`) definir um `DebuggerDisplay` atributo no tipo e você pode ter o depurador avaliar algo diferente de `ToString`.
-    - ou -
-* (Para um getter de propriedade) Coloque o `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]` atributo na propriedade. Isso pode ser útil se você tiver um método que deve permanecer a uma propriedade por razões de compatibilidade de API, mas na verdade, ele deve ser um método.
+* Altere o método para algum outro tipo de código além de um método getter ou ToString de propriedade e o problema irá desaparecer.
+    -ou-
+* (Para `ToString` ) Defina um `DebuggerDisplay` atributo no tipo e você pode fazer com que o depurador avalie algo diferente de `ToString` .
+    -ou-
+* (Para um getter de propriedade) Coloque o `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]` atributo na propriedade. Isso pode ser útil se você tiver um método que precisa permanecer como uma propriedade para motivos de compatibilidade com a API, mas deve realmente ser um método.
 
-Se você não pode modificar esse método, você poderá interromper o processo de destino em uma instrução de alternativa e tente novamente a avaliação.
+Se você não puder modificar esse método, poderá interromper o processo de destino em uma instrução alternativa e tentar novamente a avaliação.
 
-### <a name="solution-2-disable-all-implicit-evaluation"></a>Solução #2: Desabilitar todos os avaliação implícita
+### <a name="solution-2-disable-all-implicit-evaluation"></a>#2 da solução: desabilitar toda a avaliação implícita
 
-Se as soluções anteriores não resolverem o problema, vá para **ferramentas** > **opções**e desmarque a configuração **depuração**  >   **Gerais** > **habilitar avaliação de propriedade e outras chamadas de função implícitas**. Isso desabilitará a maioria das avaliações de função implícitas e deve resolver o problema.
+Se as soluções anteriores não corrigirem o problema, vá para **ferramentas**  >  **Opções**e desmarque a opção **depuração**  >  **geral**  >  **habilitar avaliação de propriedade e outras chamadas de função implícitas**. Isso desabilitará a maioria das avaliações de função implícitas e deverá resolver o problema.

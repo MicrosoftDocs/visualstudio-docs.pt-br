@@ -1,7 +1,7 @@
 ---
-title: 'DA0022: alta taxa de coletas de lixo da Ger 2 | Microsoft Docs'
+title: DA0022-alta taxa de coletas de lixo de Gen 2 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.DA0022
 - vs.performance.rules.DA0022
@@ -13,16 +13,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e1fa46162f2aea74c5b3cb8396ad5e8d4c9a4cf
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c17c27c8827c8612f08298667f09eda89f90f8d9
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779370"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544671"
 ---
-# <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022: taxa alta de coletas de lixo Gen 2
+# <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022: Alta taxa de coletas de lixo de Geração 2
 
-|||
+|Item|Valor|
 |-|-|
 |ID de regra|DA0022|
 |Categoria|Uso do .NET Framework|

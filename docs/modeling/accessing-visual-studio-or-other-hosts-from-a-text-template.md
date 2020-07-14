@@ -2,33 +2,33 @@
 title: Acessando o Visual Studio ou outros hosts a partir de um modelo de texto
 titleSuffix: ''
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd69ae5864df9cbddd204c45975736fc4aae49e5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 068de3c14240bc7e13be0e2e564c2c4e6034f987
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597250"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85531411"
 ---
 # <a name="access-visual-studio-or-other-hosts-from-a-text-template"></a>Acessar o Visual Studio ou outros hosts de um modelo de texto
 
-Em um modelo de texto, você pode usar os métodos e propriedades que são expostas pelo host que executa o modelo. Visual Studio é um exemplo de um host.
+Em um modelo de texto, você pode usar métodos e propriedades que são expostos pelo host que executa o modelo. O Visual Studio é um exemplo de um host.
 
 > [!NOTE]
-> Você pode usar propriedades e métodos de host nos modelos de texto normal, mas não no *pré-processado* modelos de texto.
+> Você pode usar métodos e propriedades de host em modelos de texto comuns, mas não em modelos de texto *pré-processados* .
 
 ## <a name="obtain-access-to-the-host"></a>Obter acesso ao host
 
-Para acessar o host, defina `hostspecific="true"` no `template` diretiva. Agora você pode usar `this.Host`, que tem o tipo [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)). O tipo [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)) tem membros que você pode usar para resolver nomes de arquivo e erros de log, por exemplo.
+Para acessar o host, defina `hostspecific="true"` na `template` diretiva. Agora você pode usar `this.Host` , que tem o tipo [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)). O tipo [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)) tem membros que você pode usar para resolver nomes de arquivo e erros de log, por exemplo.
 
 ### <a name="resolve-file-names"></a>Resolver nomes de arquivo
 
-Para localizar o caminho completo de um arquivo em relação ao modelo de texto, use `this.Host.ResolvePath()`.
+Para localizar o caminho completo de um arquivo relativo ao modelo de texto, use `this.Host.ResolvePath()` .
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -44,7 +44,7 @@ Content of myFile is:
 
 ### <a name="display-error-messages"></a>Exibir mensagens de erro
 
-Este exemplo registra mensagens quando você transformar o modelo. Se o host for Visual Studio, os erros são adicionados para o **Error List**.
+Este exemplo registra mensagens quando você transforma o modelo. Se o host for o Visual Studio, os erros serão adicionados à **lista de erros**.
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -60,13 +60,13 @@ Este exemplo registra mensagens quando você transformar o modelo. Se o host for
 #>
 ```
 
-## <a name="use-the-visual-studio-api"></a>Use a API do Visual Studio
+## <a name="use-the-visual-studio-api"></a>Usar a API do Visual Studio
 
-Se você estiver executando um modelo de texto no Visual Studio, você pode usar `this.Host` para acessar os serviços fornecidos pelo Visual Studio e de pacotes ou as extensões que são carregadas.
+Se você estiver executando um modelo de texto no Visual Studio, poderá usar o `this.Host` para acessar os serviços fornecidos pelo Visual Studio e quaisquer pacotes ou extensões que estejam carregados.
 
-Definir hostspecific = "true" e converta `this.Host` para <xref:System.IServiceProvider>.
+Defina hostspecific = "true" e Convert `this.Host` para <xref:System.IServiceProvider> .
 
-Este exemplo obtém a API do Visual Studio, <xref:EnvDTE.DTE>, como um serviço:
+Este exemplo obtém a API do Visual Studio, <xref:EnvDTE.DTE> , como um serviço:
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -80,6 +80,6 @@ Este exemplo obtém a API do Visual Studio, <xref:EnvDTE.DTE>, como um serviço:
 Number of projects in this solution: <#=  dte.Solution.Projects.Count #>
 ```
 
-## <a name="use-hostspecific-with-template-inheritance"></a>Usar hostSpecific com herança do modelo
+## <a name="use-hostspecific-with-template-inheritance"></a>Usar hostSpecific com herança de modelo
 
-Especificar `hostspecific="trueFromBase"` se você também usar o `inherits` atributo, e se você herda de um modelo que especifica `hostspecific="true"`. Se você não fizer isso, você pode obter um compilador avisando que a propriedade `Host` foi declarada duas vezes.
+Especifique `hostspecific="trueFromBase"` se você também usa o `inherits` atributo e se herda de um modelo que especifica `hostspecific="true"` . Caso contrário, você pode obter um compilador avisando que a propriedade foi `Host` declarada duas vezes.

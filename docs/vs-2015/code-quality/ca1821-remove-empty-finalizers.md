@@ -14,19 +14,19 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3d340d69ee32de20142abf740f7fedc871c9733a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a2e704202773447e353f041df66b05cb5f648c00
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657469"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545347"
 ---
-# <a name="ca1821-remove-empty-finalizers"></a>CA1821: remover finalizadores vazios
+# <a name="ca1821-remove-empty-finalizers"></a>CA1821: Remover finalizadores vazios
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|RemoveEmptyFinalizers|
+|TypeName|RemoveEmptyFinalizers|
 |CheckId|CA1821|
 |Categoria|Microsoft. performance|
 |Alteração Significativa|Sem interrupção|
@@ -44,6 +44,6 @@ ms.locfileid: "72657469"
  Não suprimir uma mensagem dessa regra. Falha ao suprimir a finalização diminui o desempenho e não fornece nenhum benefício.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir mostra um finalizador vazio que deve ser removido, um finalizador que deve ser colocado entre `#if DEBUG / #endif` diretivas e um finalizador que usa as diretivas de `#if DEBUG / #endif` corretamente.
+ O exemplo a seguir mostra um finalizador vazio que deve ser removido, um finalizador que deve ser colocado entre `#if DEBUG / #endif` diretivas e um finalizador que usa as `#if DEBUG / #endif` diretivas corretamente.
 
  [!code-csharp[FxCop.Performance.RemoveEmptyFinalizers#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Performance.RemoveEmptyFinalizers/cs/FxCop.Performance.RemoveEmptyFinalizers.cs#1)]

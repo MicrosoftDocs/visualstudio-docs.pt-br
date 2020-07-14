@@ -15,19 +15,19 @@ caps.latest.revision: 23
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f81aec5973d1915ba646c20c3b84186443678754
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 67a3588a857a0eea7d338217f975ed593dfdad52
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669095"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543696"
 ---
-# <a name="ca1716-identifiers-should-not-match-keywords"></a>CA1716: os identificadores não devem corresponder a palavras-chave
+# <a name="ca1716-identifiers-should-not-match-keywords"></a>CA1716: Identificadores não devem corresponder a palavras-chave
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|IdentifiersShouldNotMatchKeywords|
+|TypeName|IdentifiersShouldNotMatchKeywords|
 |CheckId|CA1716|
 |Categoria|Microsoft. Naming|
 |Alteração Significativa|Quebra|
@@ -46,10 +46,10 @@ ms.locfileid: "72669095"
 
 - C++/CLI
 
-  A comparação que não diferencia maiúsculas de minúsculas é usada para [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] palavras-chave e a comparação que diferencia maiúsculas de minúsculas é usada para os outros idiomas.
+  A comparação que não diferencia maiúsculas de minúsculas é usada para [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] palavras-chave e a comparação diferencia maiúsculas de minúsculas é usada para os outros idiomas.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
  Selecione um nome que não apareça na lista de palavras-chave.
 
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- Você pode suprimir um aviso dessa regra se estiver convencido de que o identificador não confundirá os usuários da API e que a biblioteca pode ser usada em todos os idiomas disponíveis no [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].
+ Você pode suprimir um aviso dessa regra se estiver convencido de que o identificador não confundirá os usuários da API e que a biblioteca pode ser usada em todos os idiomas disponíveis no [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .

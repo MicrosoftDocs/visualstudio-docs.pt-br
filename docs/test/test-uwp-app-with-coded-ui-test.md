@@ -1,7 +1,7 @@
 ---
 title: Testar um aplicativo UWP com um teste de IU codificado
 ms.date: 05/31/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - uwp
-ms.openlocfilehash: fdd3d98bd848bb6fe679809a58f2e316a316f012
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: aad17d244d70051a363a4cde294c592968093ba0
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590352"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286746"
 ---
 # <a name="create-a-coded-ui-test-to-test-a-uwp-app"></a>Criar um teste de IU codificado para testar um aplicativo UWP
 
@@ -57,7 +57,7 @@ A primeira etapa é criar um aplicativo UWP simples no qual executar o teste.
    Me.textBox.Text = Me.button.Name
    ```
 
-1. Pressione **Ctrl**+**F5** para executar o aplicativo. Você verá algo semelhante ao que se segue:
+1. Pressione **Ctrl** + **F5** para executar o aplicativo. Você verá algo semelhante ao que se segue:
 
    ![Aplicativo UWP com botão e caixa de texto](media/uwp-app.png)
 
@@ -80,7 +80,7 @@ A primeira etapa é criar um aplicativo UWP simples no qual executar o teste.
 
    ![Caixa de diálogo Gerar Código para Teste de IU Codificado](../test/media/manually-edit-the-test.png)
 
-1. Se o aplicativo UWP ainda não estiver em execução, inicie-o pressionando **Ctrl**+**F5**.
+1. Se seu aplicativo UWP ainda não estiver em execução, inicie-o pressionando **Ctrl** + **F5**.
 
 1. Abra a caixa de diálogo **Construtor de Teste de IU Codificado** colocando o cursor no método `CodedUITestMethod1` e, em seguida, escolhendo **Testar** > **Gerar Código para Teste de IU Codificado** > **Usar Construtor de Teste de IU Codificado**.
 
@@ -98,7 +98,7 @@ A primeira etapa é criar um aplicativo UWP simples no qual executar o teste.
 
      ![Clicar no controle de botão para definir o valor da caixa de texto](../test/media/uwp-app-button-textbox.png)
 
-1. Adicione uma asserção para verificar o texto no controle de caixa de texto. Use a ferramenta de fios para selecionar o controle de caixa de texto e, em seguida, selecione a propriedade **Text** na caixa de diálogo **Adicionar Asserções**. Em seguida, selecione **Adicionar Asserção** ou pressione **Alt**+**A**. Na caixa **Mensagem de Falha de Asserção**, insira **O valor da caixa de texto é inesperado.** e, em seguida, selecione **OK**.
+1. Adicione uma asserção para verificar o texto no controle de caixa de texto. Use a ferramenta de fios para selecionar o controle de caixa de texto e, em seguida, selecione a propriedade **Text** na caixa de diálogo **Adicionar Asserções**. Em seguida, selecione **Adicionar Asserção** ou pressione **Alt**+**A**. Na caixa **Mensagem de Falha de Asserção**, insira **O valor da caixa de texto é inesperado.** e selecione **OK**.
 
      ![Escolher a caixa de texto com fios e adicionar asserção](../test/media/add-assertion-for-text.png)
 
@@ -226,7 +226,7 @@ A primeira etapa é criar um aplicativo UWP simples no qual executar o teste.
 
 **R**: Todas as alterações de código feitas no arquivo *UIMapDesigner.cs* são substituídas sempre que você gera o código usando o **Construtor de Teste de IU Codificado**. Se precisar modificar um método registrado, copie-o para o arquivo *UIMap.cs* e renomeie-o. O arquivo *UIMap.cs* pode ser usado para substituir métodos e propriedades no arquivo *UIMapDesigner.cs*. Remova a referência ao método original no arquivo *CodedUITest.cs* e substitua-a pelo nome do método renomeado.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Usar a automação da interface do usuário para testar o código](../test/use-ui-automation-to-test-your-code.md)
 - [Definir propriedades de automação exclusivas para controles UWP](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)

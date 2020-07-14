@@ -1,7 +1,7 @@
 ---
 title: Criar tabelas de pesquisa em aplicativos do WPF
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - data [WPF], displaying
 - WPF, data binding in Visual Studio
@@ -16,18 +16,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a14209d895b461c64b30d0f1690b68484f09d970
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7485c63d358bc6f6fe7030e589fbdf7286ded3fd
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586751"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282612"
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>Criar tabelas de pesquisa em aplicativos do WPF
 
 A *tabela de pesquisa* de termos (às vezes chamada de *Associação de pesquisa*) descreve um controle que exibe informações de uma tabela de dados com base no valor de um campo de chave estrangeira em outra tabela. Você pode criar uma tabela de pesquisa arrastando o nó principal de uma tabela ou objeto pai na janela **fontes de dados** para um controle já associado a uma coluna ou propriedade em uma tabela filho relacionada.
 
-Por exemplo, considere uma tabela de `Orders` em um banco de dados de vendas. Cada registro na tabela de `Orders` inclui um `CustomerID` que indica qual cliente fez o pedido. O `CustomerID` é uma chave estrangeira que aponta para um registro de cliente na tabela `Customers`. Ao exibir uma lista de pedidos da tabela `Orders`, talvez você queira exibir o nome do cliente real em vez do `CustomerID`. Como o nome do cliente está na tabela `Customers`, você precisa criar uma tabela de pesquisa para exibir o nome do cliente. A tabela de pesquisa usa o valor `CustomerID` no registro de `Orders` para navegar na relação e retornar o nome do cliente.
+Por exemplo, considere uma tabela de `Orders` em um banco de dados de vendas. Cada registro na `Orders` tabela inclui um `CustomerID` que indica qual cliente fez o pedido. O `CustomerID` é uma chave estrangeira que aponta para um registro de cliente na `Customers` tabela. Ao exibir uma lista de pedidos da `Orders` tabela, talvez você queira exibir o nome real do cliente em vez do `CustomerID` . Como o nome do cliente está na `Customers` tabela, você precisa criar uma tabela de pesquisa para exibir o nome do cliente. A tabela de pesquisa usa o `CustomerID` valor no `Orders` registro para navegar na relação e retorna o nome do cliente.
 
 ## <a name="to-create-a-lookup-table"></a>Criar uma tabela de pesquisa
 
@@ -68,7 +68,7 @@ Por exemplo, considere uma tabela de `Orders` em um banco de dados de vendas. Ca
         > [!NOTE]
         > Se o controle **ListBox** ou **ListView** não aparecer na lista, você poderá adicionar esses controles à lista. Para obter informações, consulte [definir o controle a ser criado ao arrastar da janela fontes de dados](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
-    - Qualquer controle personalizado que deriva de <xref:System.Windows.Controls.Primitives.Selector>.
+    - Qualquer controle personalizado derivado de <xref:System.Windows.Controls.Primitives.Selector> .
 
         > [!NOTE]
         > Para obter informações sobre como adicionar controles personalizados à lista de controles que você pode selecionar para itens na janela **fontes de dados** , consulte [Adicionar controles personalizados à janela fontes de dados](../data-tools/add-custom-controls-to-the-data-sources-window.md).
@@ -81,9 +81,9 @@ Por exemplo, considere uma tabela de `Orders` em um banco de dados de vendas. Ca
 
      O Visual Studio define algumas propriedades no controle para configurar a associação de pesquisa. A tabela a seguir lista as propriedades que o Visual Studio modifica. Se necessário, você pode alterar essas propriedades no XAML ou na janela **Propriedades** .
 
-    |propriedade|Explicação da configuração|
+    |Propriedade|Explicação da configuração|
     |--------------| - |
-    |<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>|Essa propriedade especifica a coleção ou associação que é usada para obter os dados que são exibidos no controle. O Visual Studio define essa propriedade como a <xref:System.Windows.Data.CollectionViewSource> para os dados pai que você arrastou para o controle.|
+    |<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>|Essa propriedade especifica a coleção ou associação que é usada para obter os dados que são exibidos no controle. O Visual Studio define essa propriedade como o <xref:System.Windows.Data.CollectionViewSource> para os dados pai que você arrastou para o controle.|
     |<xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>|Esta propriedade especifica o caminho do item de dados que é exibido no controle. O Visual Studio define essa propriedade como a primeira coluna ou propriedade nos dados pai, após a chave primária, que tem um tipo de dados de cadeia de caracteres.<br /><br /> Se você quiser exibir uma coluna ou propriedade diferente nos dados pai, altere essa propriedade para o caminho de uma propriedade diferente.|
     |<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>|O Visual Studio associa essa propriedade à coluna ou à propriedade dos dados filho que você arrastou para o designer. Essa é a chave estrangeira para os dados pai.|
     |<xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A>|O Visual Studio define essa propriedade como o caminho da coluna ou da propriedade dos dados filho que são a chave estrangeira para os dados pai.|
@@ -92,4 +92,4 @@ Por exemplo, considere uma tabela de `Orders` em um banco de dados de vendas. Ca
 
 - [Associar controles WPF a dados no Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
 - [Exibir dados relacionados em aplicativos WPF](../data-tools/display-related-data-in-wpf-applications.md)
-- [Passo a passo: exibindo dados relacionados em um aplicativo WPF](../data-tools/display-related-data-in-wpf-applications.md)
+- [Walkthrough: Exibindo dados relacionados em um aplicativo do WPF](../data-tools/display-related-data-in-wpf-applications.md)

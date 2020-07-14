@@ -1,19 +1,19 @@
 ---
 title: Como exportar uma textura que tenha Alfa pré-multiplicado
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 05348afa-f079-4f53-a05b-ecd91d13adab
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84017bef80f42bd1848833b957abd88297d1e12d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a1325b5bc0009ba0c022d37be70ca6aab7cc8084
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72635479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768917"
 ---
 # <a name="how-to-export-a-texture-that-has-premultiplied-alpha"></a>Como exportar uma textura que tem alfa pré-multiplicado
 
@@ -40,9 +40,9 @@ O alfa pré-multiplicado oferece diversas vantagens em relação ao alfa convenc
 
 1. Comece com uma textura básica. Carregue um arquivo de imagem existente ou crie um, conforme descrito em [Como criar uma textura básica](../designers/how-to-create-a-basic-texture.md).
 
-2. Configure o arquivo de textura para que ele seja processado pelo Pipeline de conteúdo de imagem. No **Gerenciador de Soluções**, abra o menu de atalho do arquivo de textura e escolha **Propriedades**. Na página Propriedades > de **configuração****geral,** defina a propriedade **Item Type** como Image Content **Pipeline**. Verifique se a propriedade **Conteúdo** está definida como **Sim** e se **Excluir do Build** está definido como **Não** e, em seguida, escolha o botão **Aplicar**. A página de propriedades de configuração **Pipeline de Conteúdo de Imagem** é exibida.
+2. Configure o arquivo de textura para que ele seja processado pelo Pipeline de conteúdo de imagem. No **Gerenciador de Soluções**, abra o menu de atalho do arquivo de textura e escolha **Propriedades**. Na página **Propriedades de configuração**  >  **geral** , defina a propriedade **tipo de item** como pipeline de conteúdo da **imagem**. Verifique se a propriedade **Conteúdo** está definida como **Sim** e se **Excluir do Build** está definido como **Não** e, em seguida, escolha o botão **Aplicar**. A página de propriedades de configuração **Pipeline de Conteúdo de Imagem** é exibida.
 
-3. Configure o Pipeline de conteúdo de imagem para gerar alfa pré-multiplicado. Na página **Configuração Propriedades De** > **conteúdo de imagem Pipeline** > **Geral,** defina a propriedade **Converter para formato alfa pré-multiplicado** como **Sim (/geraralfa pré-multiplicado)**.
+3. Configure o Pipeline de conteúdo de imagem para gerar alfa pré-multiplicado. Na página **Propriedades de configuração do**  >  **pipeline de conteúdo**  >  **geral** , defina a propriedade **converter para formato alfa multiplicado** como **Sim (/generatepremultipliedalpha)**.
 
 4. Clique no botão **OK**.
 

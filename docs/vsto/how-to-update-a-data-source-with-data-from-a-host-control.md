@@ -1,7 +1,7 @@
 ---
-title: 'Como: Atualizar uma fonte de dados com dados de um controle de host'
+title: 'Como: atualizar uma fonte de dados com dados de um controle de host'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +15,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 41ccdc77c58ef95a63e3e5273b7ea00d4f942681
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 8384b35583517a832763f5229d2b526ca10190ad
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255664"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541239"
 ---
-# <a name="how-to-update-a-data-source-with-data-from-a-host-control"></a>Como: Atualizar uma fonte de dados com dados de um controle de host
+# <a name="how-to-update-a-data-source-with-data-from-a-host-control"></a>Como: atualizar uma fonte de dados com dados de um controle de host
   Você pode associar um controle de host a uma fonte de dados e atualizar a fonte de dados com as alterações feitas nos dados no controle. Há duas etapas principais neste processo:
 
-1. Atualize a fonte de dados na memória com os dados modificados no controle. Normalmente, a fonte de dados na memória é um <xref:System.Data.DataSet>, um <xref:System.Data.DataTable>ou algum outro objeto de dados.
+1. Atualize a fonte de dados na memória com os dados modificados no controle. Normalmente, a fonte de dados na memória é um <xref:System.Data.DataSet> , um <xref:System.Data.DataTable> ou algum outro objeto de dados.
 
 2. Atualize o banco de dados com o dado alterado na fonte de dados na memória. Isso será aplicável somente se a fonte de dados estiver conectada a um banco de dado de back-end, como um SQL Server ou Microsoft Office banco de dados do Access.
 
@@ -42,9 +42,9 @@ ms.locfileid: "71255664"
 
 ### <a name="to-update-the-in-memory-data-source-at-run-time"></a>Para atualizar a fonte de dados na memória em tempo de execução
 
-- Chame o <xref:System.Windows.Forms.Binding.WriteValue%2A> método <xref:System.Windows.Forms.Binding> do objeto que associa o controle à fonte de dados.
+- Chame o <xref:System.Windows.Forms.Binding.WriteValue%2A> método do <xref:System.Windows.Forms.Binding> objeto que associa o controle à fonte de dados.
 
-     O exemplo a seguir salva as alterações feitas <xref:Microsoft.Office.Tools.Excel.NamedRange> em um controle em uma planilha do Excel na fonte de dados. Este exemplo pressupõe que você tenha um <xref:Microsoft.Office.Tools.Excel.NamedRange> controle chamado `namedRange1` com sua <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> propriedade associada a um campo em uma fonte de dados.
+     O exemplo a seguir salva as alterações feitas em um <xref:Microsoft.Office.Tools.Excel.NamedRange> controle em uma planilha do Excel na fonte de dados. Este exemplo pressupõe que você tenha um <xref:Microsoft.Office.Tools.Excel.NamedRange> controle chamado `namedRange1` com sua <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> propriedade associada a um campo em uma fonte de dados.
 
      [!code-csharp[Trin_VstcoreDataExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#1)]
      [!code-vb[Trin_VstcoreDataExcel#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#1)]
@@ -76,7 +76,7 @@ ms.locfileid: "71255664"
 
 3. Na janela **Propriedades** , expanda a propriedade **(DataBindings)** .
 
-4. Ao lado da propriedade **(avançado)** , clique no botão de reticências (captura de tela![VisualStudioEllipsesButton screenshot](../vsto/media/vbellipsesbutton.png "VisualStudioEllipsesButton")).
+4. Ao lado da propriedade **(avançado)** , clique no botão de reticências (![captura de tela VisualStudioEllipsesButton](../vsto/media/vbellipsesbutton.png "Captura de tela de VisualStudioEllipsesButton")).
 
 5. Na caixa de diálogo **formatação e Associação avançada** , clique na lista suspensa **modo de atualização da fonte de dados** e selecione um dos seguintes valores:
 
@@ -94,11 +94,11 @@ ms.locfileid: "71255664"
 
 ### <a name="to-update-the-database"></a>Para atualizar o banco de dados
 
-1. Chame o <xref:System.Windows.Forms.BindingSource.EndEdit%2A> método <xref:System.Windows.Forms.BindingSource> do para o controle.
+1. Chame o <xref:System.Windows.Forms.BindingSource.EndEdit%2A> método do <xref:System.Windows.Forms.BindingSource> para o controle.
 
      O <xref:System.Windows.Forms.BindingSource> é gerado automaticamente quando você adiciona um controle de vinculação de dados a um documento ou pasta de trabalho em tempo de design. O <xref:System.Windows.Forms.BindingSource> conecta o controle ao dataset tipado em seu projeto. Para obter mais informações, consulte [visão geral do componente BindingSource](/dotnet/framework/winforms/controls/bindingsource-component-overview).
 
-     O exemplo de código a seguir pressupõe que seu projeto <xref:System.Windows.Forms.BindingSource> contém `customersBindingSource`um nome.
+     O exemplo de código a seguir pressupõe que seu projeto contém um <xref:System.Windows.Forms.BindingSource> nome `customersBindingSource` .
 
      [!code-csharp[Trin_VstcoreDataExcel#20](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#20)]
      [!code-vb[Trin_VstcoreDataExcel#20](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#20)]
@@ -107,7 +107,7 @@ ms.locfileid: "71255664"
 
      O TableAdapter é gerado automaticamente quando você adiciona um controle de vinculação de dados a um documento ou pasta de trabalho em tempo de design. O TableAdapter conecta o dataset tipado em seu projeto ao banco de dados. Para obter mais informações, consulte [visão geral do TableAdapter](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
 
-     O exemplo de código a seguir pressupõe que você tenha uma conexão com a tabela Customers no banco de dados Northwind e que seu projeto contenha um TableAdapter chamado `customersTableAdapter` e um dataset tipado chamado. `northwindDataSet`
+     O exemplo de código a seguir pressupõe que você tenha uma conexão com a tabela Customers no banco de dados Northwind e que seu projeto contenha um TableAdapter chamado `customersTableAdapter` e um dataset tipado chamado `northwindDataSet` .
 
      [!code-csharp[Trin_VstcoreDataExcel#21](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#21)]
      [!code-vb[Trin_VstcoreDataExcel#21](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#21)]
@@ -116,8 +116,8 @@ ms.locfileid: "71255664"
 - [Associar dados a controles em soluções do Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Salvar dados de volta no banco de dados](../data-tools/save-data-back-to-the-database.md)
 - [Atualizar dados usando um TableAdapter](../data-tools/update-data-by-using-a-tableadapter.md)
-- [Como: Percorrer os registros de banco de dados em uma planilha](../vsto/how-to-scroll-through-database-records-in-a-worksheet.md)
-- [Como: Preencher planilhas com dados de um banco de dado](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
-- [Como: Preencher documentos com dados de objetos](../vsto/how-to-populate-documents-with-data-from-objects.md)
-- [Como: Preencher documentos com dados de um banco de dado](../vsto/how-to-populate-documents-with-data-from-a-database.md)
-- [Como: Preencher documentos com dados de serviços](../vsto/how-to-populate-documents-with-data-from-services.md)
+- [Como rolar por registros de banco de dados em uma planilha](../vsto/how-to-scroll-through-database-records-in-a-worksheet.md)
+- [Como: preencher planilhas com dados de um banco de dado](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
+- [Como: popular documentos com dados de objetos](../vsto/how-to-populate-documents-with-data-from-objects.md)
+- [Como: popular documentos com dados de um banco de dado](../vsto/how-to-populate-documents-with-data-from-a-database.md)
+- [Como: popular documentos com dados de serviços](../vsto/how-to-populate-documents-with-data-from-services.md)

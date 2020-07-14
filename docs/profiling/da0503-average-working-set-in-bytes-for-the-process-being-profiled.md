@@ -1,7 +1,7 @@
 ---
-title: 'DA0503: conjunto de trabalho médio em bytes para o processo do qual o perfil está sendo criado | Microsoft Docs'
+title: DA0503-conjunto de trabalho médio em bytes para o processo que está sendo criado com perfil | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.503
 - vs.performance.DA0503
@@ -13,16 +13,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c9d309d7bf10cee07cc30c4568d2dfa59d1be56
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b6717f524f6a2d3f9f09290ac9bfbd8f02fc23fb
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777444"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544541"
 ---
 # <a name="da0503-average-working-set-in-bytes-for-the-process-being-profiled"></a>DA0503: conjunto de trabalho médio em bytes para o processo que está sendo analisado
 
-|||
+|Item|Valor|
 |-|-|
 |ID de regra|DA0503|
 |Categoria|Monitoramento de recursos|

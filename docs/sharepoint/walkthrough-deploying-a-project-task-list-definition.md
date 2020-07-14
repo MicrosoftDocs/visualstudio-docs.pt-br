@@ -1,7 +1,7 @@
 ---
 title: 'Walkthrough: Implantando uma definição de Lista de Tarefas de projeto | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,20 +12,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c0b7f1b0668af8218017c5cc96712384ed5f275c
-ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
-ms.translationtype: MT
+ms.openlocfilehash: b5639fe7a1b35dea41b14be3730986ad7c7309b7
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73661882"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015768"
 ---
 # <a name="walkthrough-deploy-a-project-task-list-definition"></a>Walkthrough: implantar uma definição de lista de tarefas de projeto
 
-Este tutorial mostra como usar [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] para criar, personalizar, depurar e implantar uma lista do SharePoint para acompanhar as tarefas do projeto.
+Este tutorial mostra como usar o [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] para criar, personalizar, depurar e implantar uma lista do SharePoint para acompanhar as tarefas do projeto.
 
 [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Edições com suporte do Microsoft Windows e do SharePoint.
 
@@ -43,7 +42,7 @@ Crie um projeto de lista do SharePoint e associe a definição de lista a tarefa
 
 3. Especifique o site do SharePoint local que você usa para depuração, escolha o botão de opção **implantar como uma solução de farm** e, em seguida, escolha o botão **concluir** .
 
-4. Abra o menu de atalho do projeto e escolha **adicionar** > **novo item**.
+4. Abra o menu de atalho do projeto e escolha **Adicionar**  >  **novo item**.
 
 5. No painel **modelos** , escolha o modelo de **lista** e, em seguida, escolha o botão **Adicionar** .
 
@@ -73,7 +72,7 @@ Na lista de tarefas, você pode adicionar um receptor de eventos que define auto
 
      Um novo nó receptor de eventos é adicionado ao projeto com um arquivo de código chamado **ProjectTaskListEventReceiver**.
 
-6. Adicione o código ao método `ItemAdded` no arquivo de código **ProjectTaskListEventReceiver** . Cada vez que uma nova tarefa é adicionada, uma data de vencimento padrão e uma descrição são adicionadas à tarefa. A data de vencimento padrão é 1º de julho de 2009.
+6. Adicione o código ao `ItemAdded` método no arquivo de código **ProjectTaskListEventReceiver** . Cada vez que uma nova tarefa é adicionada, uma data de vencimento padrão e uma descrição são adicionadas à tarefa. A data de vencimento padrão é 1º de julho de 2009.
 
      [!code-vb[SPProjectTaskList#1](../sharepoint/codesnippet/VisualBasic/projecttasklist1/projecttasklisteventreceiver/projecttasklisteventreceiver.vb#1)]
      [!code-csharp[SPProjectTaskList#1](../sharepoint/codesnippet/CSharp/projecttasklist/projecttasklisteventreceiver/projecttasklisteventreceiver.cs#1)]
@@ -136,29 +135,29 @@ Depois de criar e testar a lista de tarefas do projeto, você pode implantá-la 
 
 ### <a name="to-deploy-the-project-task-list-to-the-local-system"></a>Para implantar a lista de tarefas do projeto no sistema local
 
-Na barra de menus do Visual Studio, escolha **compilar** > **implantar solução**.
+Na barra de menus do Visual Studio, escolha **Compilar**  >  **implantar solução**.
 
-O Visual Studio recicla o pool de aplicativos do IIS, cancela todas as versões existentes da solução, copia o arquivo de pacote de solução ( *. wsp*) no SharePoint e ativa seus recursos. Agora você pode usar a solução no SharePoint. Para obter mais informações sobre as etapas de configuração de implantação, consulte [como editar uma configuração de implantação do SharePoint](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md).
+O Visual Studio recicla o pool de aplicativos do IIS, cancela todas as versões existentes da solução, copia o arquivo de pacote de solução (*. wsp*) no SharePoint e ativa seus recursos. Agora você pode usar a solução no SharePoint. Para obter mais informações sobre as etapas de configuração de implantação, consulte [como editar uma configuração de implantação do SharePoint](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md).
 
 ### <a name="to-deploy-the-project-task-list-to-a-remote-system"></a>Para implantar a lista de tarefas do projeto em um sistema remoto
 
-1. Na barra de menus do Visual Studio, escolha **criar** > **publicar**.
+1. Na barra de menus do Visual Studio, escolha **Compilar**  >  **publicar**.
 
 2. Na caixa de diálogo **publicar** , escolha o botão de opção **publicar no sistema de arquivos** .
 
      Você pode alterar o local de destino na caixa de diálogo **publicar** escolhendo o ![ícone](../sharepoint/media/ellipsisicon.gif "Ícone de reticências") de reticências do botão de reticências e, em seguida, navegando para outro local.
 
-3. Escolha o botão **publicar** .
+3. Escolha o botão **Publicar**.
 
      Um arquivo *. wsp* é criado para a solução.
 
 4. Copie o arquivo *. wsp* para o sistema remoto do SharePoint.
 
-5. Use o comando `Add-SPUserSolution` do PowerShell para instalar o pacote na instalação remota do SharePoint. (Para soluções de farm, use o comando `Add-SPSolution`.)
+5. Use o comando do PowerShell `Add-SPUserSolution` para instalar o pacote na instalação remota do SharePoint. (Para soluções de farm, use o `Add-SPSolution` comando.)
 
      Por exemplo, `Add-SPUserSolution C:\MyProjects\ProjectTaskList\ProjectTaskList\bin\Debug\ProjectTaskList.wsp`.
 
-6. Use o comando `Install-SPUserSolution` do PowerShell para implantar a solução. (Para soluções de farm, use o comando `Install-SPSolution`.)
+6. Use o comando do PowerShell `Install-SPUserSolution` para implantar a solução. (Para soluções de farm, use o `Install-SPSolution` comando.)
 
      Por exemplo, `Install-SPUserSolution -Identity ProjectTaskList.wsp -Site http://NewSiteName`.
 

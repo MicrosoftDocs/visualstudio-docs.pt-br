@@ -1,23 +1,23 @@
 ---
 title: Método marker_series::write_alert | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
-- cvmarkersobj/Concurrency::diagnostic:marker_series::write_alert
+- cvmarkersobj/Concurrency, diagnostic:marker_series::write_alert
 helpviewer_keywords:
-- Concurrency::diagnostic:marker_series::write_alert method
+- Concurrency, diagnostic:marker_series::write_alert method
 ms.assetid: 9d5465c7-f862-47a7-b249-4116605075a6
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 635f767f97ea3d237aeff843e99735eccae31efc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d5e79bab25885c8759ea5726b037771a4943c563
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62831378"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329635"
 ---
 # <a name="marker_serieswrite_alert-method"></a>Método marker_series::write_alert
 Grava um alerta para o arquivo de rastreamento da Visualização Simultânea.
@@ -31,7 +31,7 @@ void write_alert(
 );
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
  `_Format` Uma cadeia de caracteres de formato composto, que contém um texto intercalado com zero ou mais itens de formato correspondentes aos objetos na lista de argumentos.
 
 ## <a name="requirements"></a>Requisitos
@@ -39,5 +39,5 @@ void write_alert(
 
  **Namespace:** Concurrency::diagnostic
 
-## <a name="see-also"></a>Confira também
-- [Classe marker_series](../profiling/marker-series-class.md)
+## <a name="see-also"></a>Veja também
+- [classe marker_series](../profiling/marker-series-class.md)

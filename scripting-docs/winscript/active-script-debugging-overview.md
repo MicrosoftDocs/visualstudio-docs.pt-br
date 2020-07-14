@@ -5,7 +5,7 @@ ms.date: 01/18/2017
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - Active Script Debugging overview
 ms.assetid: ce4ec768-d017-4dfa-a7e3-cced3a29e679
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a8c06477b7cd9d069e416cfd7d86a8cd0cb7bfd5
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 0181ee305c99a1d0af1d3e1e965c6ac8fe16f375
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72572274"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835661"
 ---
 # <a name="active-script-debugging-overview"></a>Visão geral de depuração de script ativo
 As interfaces de depuração de script ativo permitem a depuração com neutralidade de idioma e de host e dão suporte a uma ampla variedade de ambientes de desenvolvimento.  
   
  ![Processo de host de script](../winscript/media/scp56activdbgarchgif.gif "Scp56ActivDbgArchgif")  
-Figura 1  
+A figura 1  
   
  Um ambiente de depuração com neutralidade de idioma pode dar suporte a qualquer linguagem de programação ou uma combinação de linguagens de programação, sem a necessidade de conhecimento específico de qualquer uma dessas linguagens. O ambiente de depuração também dá suporte a pontos de interrupção e execução em etapas entre linguagens diferentes. (Esta visão geral concentra-se principalmente em suporte a linguagens de script, tais como VBScript e [!INCLUDE[javascript](../javascript/includes/javascript-md.md)].)  
   
@@ -38,15 +38,15 @@ Figura 1
  **mecanismo de linguagem**  
  Um componente que fornece abstrações de análise, execução e depuração para uma linguagem específica.  
   
- **IDE do depurador**  
+ **IDE de depurador**  
  O aplicativo que fornece depuração da interface do usuário por meio da comunicação com o aplicativo host e os mecanismos de linguagem.  
   
  **gerenciador de depuração do computador** Um componente que mantém um registro dos processos de aplicativos depuráveis.  
   
- **gerenciador de depuração do processo**  
+ **Gerenciador de depuração de processo**  
  Um componente que mantém a árvore de documentos depuráveis para um determinado aplicativo, controla os threads em execução e assim por diante.  
   
- **contexto de documento**  
+ **contexto do documento**  
  Um contexto de documento é uma abstração que representa um intervalo específico no código-fonte de um documento de host.  
   
  **contexto de código**  
@@ -77,13 +77,13 @@ Figura 1
   
   Abaixo estão as interfaces às quais um mecanismo de script precisa dar suporte para fornecer depuração, avaliação de expressão e navegação de objeto. Essas interfaces são usadas pelo aplicativo host para mapear entre seu contexto de documento e contextos de código do mecanismo, além de serem usadas pelo depurador da interface do usuário para fazer a avaliação da expressão, a enumeração de pilha e a navegação de objeto.  
   
-  [IActiveScriptDebug Interface](../winscript/reference/iactivescriptdebug-interface.md)  
+  [Interface IActiveScriptDebug](../winscript/reference/iactivescriptdebug-interface.md)  
   Fornece a enumeração de contexto de código e a colorização de sintaxe.  
   
-  [IActiveScriptErrorDebug Interface](../winscript/reference/iactivescripterrordebug-interface.md)  
+  [Interface IActiveScriptErrorDebug](../winscript/reference/iactivescripterrordebug-interface.md)  
   Retorna contextos de documento e registros de ativação para erros.  
   
-  [IActiveScriptSiteDebug Interface](../winscript/reference/iactivescriptsitedebug-interface.md)  
+  [Interface IActiveScriptSiteDebug](../winscript/reference/iactivescriptsitedebug-interface.md)  
   Link fornecido pelo host do mecanismo de script para o depurador.  
   
   [Interface IDebugCodeContext](../winscript/reference/idebugcodecontext-interface.md)  
@@ -107,16 +107,16 @@ Figura 1
   [Interface IDebugSyncOperation](../winscript/reference/idebugsyncoperation-interface.md)  
   Permite que um mecanismo de script extraia uma operação que precisa ser executada enquanto aninhado em um thread bloqueado específico.  
   
-  [IDebugAsyncOperation Interface](../winscript/reference/idebugasyncoperation-interface.md)  
+  [Interface IDebugAsyncOperation](../winscript/reference/idebugasyncoperation-interface.md)  
   Fornece acesso assíncrono a uma operação de depuração síncrona.  
   
-  [IDebugAsyncOperationCallBack Interface](../winscript/reference/idebugasyncoperationcallback-interface.md)  
+  [Interface IDebugAsyncOperationCallBack](../winscript/reference/idebugasyncoperationcallback-interface.md)  
   Fornece eventos de status relacionados ao andamento da avaliação de uma interface `IDebugAsyncOperation`.  
   
   [Interface IEnumDebugExpressionContexts](../winscript/reference/ienumdebugexpressioncontexts-interface.md)  
   Enumera uma coleção de objetos `IDebugExpressionContexts`.  
   
-  [IProvideExpressionContexts Interface](../winscript/reference/iprovideexpressioncontexts-interface.md)  
+  [Interface IProvideExpressionContexts](../winscript/reference/iprovideexpressioncontexts-interface.md)  
   Fornece uma maneira de enumerar os contextos de expressão conhecidos por um determinado componente.  
   
   [Interface IDebugFormatter](../winscript/reference/idebugformatter-interface.md)  
@@ -147,7 +147,7 @@ Figura 1
   
  É claro que não é obrigatório para um host usar essas interfaces. No entanto, usar essas interfaces pode evitar implementação ou uso de um número de interfaces mais complicadas.  
   
- [IDebugDocumentHelper Interface](../winscript/reference/idebugdocumenthelper-interface.md)  
+ [Interface IDebugDocumentHelper](../winscript/reference/idebugdocumenthelper-interface.md)  
  Implementado pelo PDM e fornece implementações de várias interfaces necessárias para hospedagem inteligente.  
   
  [IDebugDocumentHost Interface](../winscript/reference/idebugdocumenthost-interface.md)  
@@ -180,11 +180,11 @@ Figura 1
   
  Interfaces implementadas pelo PDM em nome do host:  
   
- [IDebugApplicationNode Interface](../winscript/reference/idebugapplicationnode-interface.md)  
+ [Interface IDebugApplicationNode](../winscript/reference/idebugapplicationnode-interface.md)  
  Estende a funcionalidade da interface `IDebugDocumentProvider` fornecendo um contexto dentro de uma árvore de projeto.  
   
 ## <a name="debugger-ide"></a>IDE de depurador  
- O IDE é uma interface do usuário de depuração independente de linguagem. Ele fornece:  
+ O IDE é uma interface do usuário de depuração independente de linguagem. Ela oferece:  
   
 - Visualizadores/editores de documento.  
   
@@ -200,7 +200,7 @@ Figura 1
   
   Interfaces implementadas pelo depurador:  
   
-  [IApplicationDebugger Interface](../winscript/reference/iapplicationdebugger-interface.md)  
+  [Interface IApplicationDebugger](../winscript/reference/iapplicationdebugger-interface.md)  
   A interface primária exposta por uma sessão IDE do depurador.  
   
   [IApplicationDebuggerUI Interface](../winscript/reference/iapplicationdebuggerui-interface.md)  
@@ -255,10 +255,10 @@ Figura 1
   [Interface IProcessDebugManager](../winscript/reference/iprocessdebugmanager-interface.md)  
   A interface primária para o gerenciador de depuração do processo. Essa interface pode criar, adicionar ou remover um aplicativo virtual de um processo.  
   
-  [IRemoteDebugApplication Interface](../winscript/reference/iremotedebugapplication-interface.md)  
+  [Interface IRemoteDebugApplication](../winscript/reference/iremotedebugapplication-interface.md)  
   Representa um aplicativo em execução.  
   
-  [IDebugApplication Interface](../winscript/reference/idebugapplication-interface.md)  
+  [Interface IDebugApplication](../winscript/reference/idebugapplication-interface.md)  
   Expõe métodos de depuração não configuráveis como remotos para uso por hosts e mecanismos de idioma.  
   
   [Interface IRemoteDebugApplicationThread](../winscript/reference/iremotedebugapplicationthread-interface.md)  
@@ -267,13 +267,13 @@ Figura 1
   [Interface IDebugApplicationThread](../winscript/reference/idebugapplicationthread-interface.md)  
   Permite que os hosts e mecanismos de linguagem forneçam sincronização de thread e mantenham informações sobre o estado de depuração específicas de thread.  
   
-  [IEnumRemoteDebugApplicationThreads Interface](../winscript/reference/ienumremotedebugapplicationthreads-interface.md)  
+  [Interface IEnumRemoteDebugApplicationThreads](../winscript/reference/ienumremotedebugapplicationthreads-interface.md)  
   Enumera os threads em execução em um aplicativo.  
   
   [Interface IDebugThreadCall](../winscript/reference/idebugthreadcall-interface.md)  
   Expede chamadas com marshalling.  
   
-  [IDebugApplicationNode Interface](../winscript/reference/idebugapplicationnode-interface.md)  
+  [Interface IDebugApplicationNode](../winscript/reference/idebugapplicationnode-interface.md)  
   Mantém uma posição para um documento na hierarquia.  
   
   [Interface IEnumDebugApplicationNodes](../winscript/reference/ienumdebugapplicationnodes-interface.md)  
@@ -291,5 +291,5 @@ Figura 1
   [Interface ISimpleConnectionPoint](../winscript/reference/isimpleconnectionpoint-interface.md)  
   Fornece uma maneira simples para descrever e enumerar os eventos acionados em um ponto de conexão específico, para mecanismos de script.  
   
-## <a name="see-also"></a>Consulte também  
- [Active Script Debugger Interfaces](../winscript/reference/active-script-debugger-interfaces.md)
+## <a name="see-also"></a>Confira também  
+ [Interfaces do depurador de script ativo](../winscript/reference/active-script-debugger-interfaces.md)

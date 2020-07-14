@@ -1,7 +1,7 @@
 ---
 title: 'Walkthrough: criando uma página de aplicativo do SharePoint | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0eaf7bda4ac4ed67dae79b8dd83bb59ba6985343
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 76375c15077bf672eaba01c840ba406228046435
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985021"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016488"
 ---
 # <a name="walkthrough-create-a-sharepoint-application-page"></a>Walkthrough: criar uma página de aplicativo do SharePoint
 
@@ -26,7 +25,7 @@ Uma página de aplicativo é uma forma especializada de uma página ASP.NET. As 
 
 Este tutorial mostra como criar uma página de aplicativo e depurá-la usando um site do SharePoint local. Esta página mostra todos os itens que cada usuário criou ou modificou em todos os sites no farm de servidores.
 
-Esta explicação passo a passo ilustra as seguintes tarefas:
+Este passo a passo ilustra as seguintes tarefas:
 
 - Criando um projeto do SharePoint.
 - Adicionando uma página de aplicativo ao projeto do SharePoint.
@@ -35,9 +34,9 @@ Esta explicação passo a passo ilustra as seguintes tarefas:
 - Testando a página do aplicativo.
 
 > [!NOTE]
-> Seu computador pode mostrar diferentes nomes ou locais para alguns dos elementos de interface do usuário do Visual Studio nas instruções a seguir. A edição do Visual Studio que você possui e as configurações que você usa determinam esses elementos. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
+> Seu computador pode mostrar diferentes nomes ou locais para alguns dos elementos de interface do usuário do Visual Studio nas instruções a seguir. A edição do Visual Studio que você possui e as configurações que você usa determinam esses elementos. Para obter mais informações, consulte [Personalizar o IDE do Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>{1&gt;Pré-requisitos&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Edições com suporte do Windows e do SharePoint.
 
@@ -61,19 +60,19 @@ Para criar uma página de aplicativo, adicione um item de **página de aplicativ
 
 1. Em **Gerenciador de soluções**, escolha o projeto **MySharePointProject** .
 
-2. Na barra de menus, escolha **Projeto** > **Adicionar Novo Item**.
+2. Na barra de menus, escolha **projeto**  >  **Adicionar novo item**.
 
 3. Na caixa de diálogo **Adicionar novo item** , escolha a **página do aplicativo (modelo somente solução de farm** .
 
 4. Nomeie a página **SearchItems**e, em seguida, escolha o botão **Adicionar** .
 
-     O designer do Visual Web Developer exibe a página do aplicativo no modo de exibição de **origem** , onde você pode ver os elementos HTML da página. O designer exibe a marcação para vários controles de <xref:System.Web.UI.WebControls.Content>. Cada controle é mapeado para um controle de <xref:System.Web.UI.WebControls.ContentPlaceHolder> que é definido na página mestra do aplicativo padrão.
+     O designer do Visual Web Developer exibe a página do aplicativo no modo de exibição de **origem** , onde você pode ver os elementos HTML da página. O designer exibe a marcação para vários <xref:System.Web.UI.WebControls.Content> controles. Cada controle é mapeado para um <xref:System.Web.UI.WebControls.ContentPlaceHolder> controle que é definido na página mestra do aplicativo padrão.
 
 ## <a name="design-the-layout-of-the-application-page"></a>Criar o layout da página do aplicativo
 
 O item de página do aplicativo permite que você use um designer para adicionar controles ASP.NET à página do aplicativo. Esse designer é o mesmo designer usado no Visual Web Developer. Adicione um rótulo, uma lista de botões de opção e uma tabela à exibição de **origem** do designer e, em seguida, defina as propriedades como você faria ao criar qualquer página ASP.NET padrão.
 
-1. Na barra de menus, escolha **Exibir** > **Caixa de Ferramentas**.
+1. Na barra de menus, escolha **Exibir**  >  **caixa de ferramentas**.
 
 2. No nó padrão da caixa de **ferramentas**, execute uma das seguintes etapas:
 
@@ -83,9 +82,9 @@ O item de página do aplicativo permite que você use um designer para adicionar
 
 3. Repita a etapa anterior para adicionar um item **DropDownList** e um item de **tabela** ao controle de conteúdo **PlaceHolderMain** .
 
-4. No designer, altere o valor do atributo `Text` do controle rótulo para **Mostrar todos os itens**.
+4. No designer, altere o valor do `Text` atributo do controle rótulo para **Mostrar todos os itens**.
 
-5. No designer, substitua o elemento `<asp:DropDownList>` pelo seguinte XML.
+5. No designer, substitua o `<asp:DropDownList>` elemento pelo seguinte XML.
 
     ```xml
     <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true"
@@ -97,13 +96,13 @@ O item de página do aplicativo permite que você use um designer para adicionar
 
 ## <a name="handle-the-events-of-controls-on-the-page"></a>Manipular os eventos de controles na página
 
-Manipule controles em uma página de aplicativo da mesma forma que faria com qualquer página do ASP.NET. Neste procedimento, você manipulará o evento `SelectedIndexChanged` da lista suspensa.
+Manipule controles em uma página de aplicativo da mesma forma que faria com qualquer página do ASP.NET. Neste procedimento, você manipulará o `SelectedIndexChanged` evento da lista suspensa.
 
 1. No menu **Exibir** , escolha **código**.
 
      O arquivo de código de página do aplicativo é aberto no editor de código.
 
-2. Adicione o seguinte método à classe `SearchItems`. Esse código manipula o evento de <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> do <xref:System.Web.UI.WebControls.DropDownList> chamando um método que você criará posteriormente neste passo a passos.
+2. Adicione o método a seguir à classe `SearchItems`. Esse código manipula o <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> evento do <xref:System.Web.UI.WebControls.DropDownList> chamando um método que você criará mais tarde neste passo a passos.
 
      [!code-vb[SP_ApplicationPage#5](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#5)]
      [!code-csharp[SP_ApplicationPage#5](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#5)]
@@ -113,12 +112,12 @@ Manipule controles em uma página de aplicativo da mesma forma que faria com qua
      [!code-vb[SP_ApplicationPage#1](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#1)]
      [!code-csharp[SP_ApplicationPage#1](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#1)]
 
-4. Adicione o seguinte método à classe `SearchItems`. Esse método itera em todos os sites no farm de servidores e procura itens criados ou modificados pelo usuário atual.
+4. Adicione o método a seguir à classe `SearchItems`. Esse método itera em todos os sites no farm de servidores e procura itens criados ou modificados pelo usuário atual.
 
      [!code-vb[SP_ApplicationPage#2](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#2)]
      [!code-csharp[SP_ApplicationPage#2](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#2)]
 
-5. Adicione o seguinte método à classe `SearchItems`. Esse método exibe itens criados ou modificados pelo usuário atual na tabela.
+5. Adicione o método a seguir à classe `SearchItems`. Esse método exibe itens criados ou modificados pelo usuário atual na tabela.
 
      [!code-vb[SP_ApplicationPage#3](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#3)]
      [!code-csharp[SP_ApplicationPage#3](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#3)]
@@ -153,5 +152,5 @@ Você pode aprender mais sobre como criar conteúdo de página do SharePoint usa
 
 ## <a name="see-also"></a>Consulte também
 
-[Como: criar uma página de aplicativo](../sharepoint/how-to-create-an-application-page.md)
-[tipo de página de _layouts de aplicativo](/previous-versions/office/aa979604(v=office.14))
+[Como: criar uma página](../sharepoint/how-to-create-an-application-page.md) 
+ de aplicativo [Tipo de página de _layouts de aplicativo](/previous-versions/office/aa979604(v=office.14))

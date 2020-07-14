@@ -1,7 +1,7 @@
 ---
-title: Como coletar dados de desempenho de um site da Web | Microsoft Docs
+title: Como coletar dados de desempenho para um site | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vsperf.url.url
 - vsperf.chooseurl
@@ -18,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b5cacba328c48b682fe9069d8ab4a9ee21635db
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c2f8169716bda09e3c4d89ce06dc907c726adee2
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79302899"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330963"
 ---
 # <a name="how-to-collect-performance-data-for-a-web-site"></a>Como coletar dados de desempenho de um site
 
@@ -40,7 +40,7 @@ Você pode usar o **Assistente de Desempenho** para coletar dados de desempenho 
 
 - Alguns usuários podem negar acesso à criação de perfil para todos os outros usuários.
 
-  Para obter mais informações, consulte [a segurança do Perfil e do Windows Vista](../profiling/profiling-and-windows-vista-security.md) e as opções de ADMIN no [VSPerfCmd](../profiling/vsperfcmd.md).
+  Para obter mais informações, consulte [criação de perfil e segurança do Windows Vista](../profiling/profiling-and-windows-vista-security.md) e as opções de administrador na [VSPerfCmd](../profiling/vsperfcmd.md).
 
 ## <a name="to-profile-a-web-site-project"></a>Para criar o perfil de um projeto de site
 
@@ -56,7 +56,7 @@ Você pode usar o **Assistente de Desempenho** para coletar dados de desempenho 
 
     - Para coletar a interação da camada, selecione a caixa de seleção **Habilitar Criação de Perfil de Interação de Camada**.
 
-    - Para coletar dados do JavaScript em execução nas páginas da Web, selecione a caixa de seleção **Perfil JavaScript.**
+    - Para coletar dados do JavaScript em execução nas páginas da Web, marque a caixa de seleção **perfil JavaScript** .
 
 6. Clique em **Avançar**.
 
@@ -78,7 +78,7 @@ Você pode usar o **Assistente de Desempenho** para coletar dados de desempenho 
 
 5. Na caixa **Qual URL ou Caminho executará seu aplicativo Web** na terceira página do assistente, insira a URL para a home page do aplicativo e, em seguida, clique em **Avançar**.
 
-   - Para um site baseado em servidor (IIS), ** < `http://localhost/MySite/default.aspx` **digite uma URL como . Isso faz com que o aplicativo [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] no computador local na raiz do aplicativo do MySite tenha seu perfil criado e a página default.aspx nesse site seja iniciada no Internet Explorer para iniciar a sessão.
+   - Para um site baseado em servidor (IIS), digite uma URL como **<`http://localhost/MySite/default.aspx`>** . Isso faz com que o aplicativo [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] no computador local na raiz do aplicativo do MySite tenha seu perfil criado e a página default.aspx nesse site seja iniciada no Internet Explorer para iniciar a sessão.
 
    - Para um site da Web baseado em um arquivo, digite um caminho como file///**c:\WebSites\MySite\default.aspx**. Isso faz com que o aplicativo [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] localizado em c:\webSites\MySite tenha seu perfil criado e a página `http://localhost:nnnn/MySite/default.aspx` seja iniciada no Internet Explorer para iniciar a sessão.
 
@@ -100,9 +100,9 @@ Você pode usar o **Assistente de Desempenho** para coletar dados de desempenho 
 
      O criador de perfil gera o arquivo de dados e demonstra a exibição dos dados de Resumo na janela principal do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Visões gerais](../profiling/overviews-performance-tools.md)
-[Configure sessões](../profiling/configuring-performance-sessions.md)
-de desempenho[Compreenda os valores dos](../profiling/understanding-instrumentation-data-values.md)
-dados de instrumentação[Entenda os valores dos dados amostrais](../profiling/understanding-sampling-data-values.md)
+[Visões gerais](../profiling/overviews-performance-tools.md) 
+ [Configurar sessões](../profiling/configuring-performance-sessions.md) 
+ de desempenho [Entender os valores](../profiling/understanding-instrumentation-data-values.md) 
+ de dados de instrumentação [Entender os valores de dados de amostragem](../profiling/understanding-sampling-data-values.md)

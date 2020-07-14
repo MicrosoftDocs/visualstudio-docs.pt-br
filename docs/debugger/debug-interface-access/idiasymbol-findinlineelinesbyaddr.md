@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::findInlineeLinesByAddr | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: f1ab47ca-c851-48ea-9c12-47fb80b31102
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1709120dfa8e115f4b14a4ee4e2d1c7ffb293329
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6ea271ae921ebefe9c579a89b487a6f96c014f1d
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741214"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464544"
 ---
 # <a name="idiasymbolfindinlineelinesbyaddr"></a>IDiaSymbol::findInlineeLinesByAddr
 Recupera uma enumeração que permite que um cliente itere pelas informações de número de linha de todas as funções que são embutidas, direta ou indiretamente, neste símbolo dentro do intervalo de endereços especificado.
@@ -46,12 +46,12 @@ no Especifica o intervalo de endereços, em número de bytes, a ser abordado com
 
  `ppResult`
 
-fora Mantém um objeto `IDiaEnumLineNumbers` que contém a lista de números de linha recuperados.
+fora Mantém um `IDiaEnumLineNumbers` objeto que contém a lista de números de linha recuperados.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)

@@ -1,7 +1,7 @@
 ---
 title: 'Como: personalizar uma guia interna'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3550c3bd48a02d5daf4ef7156960e8a8fab3b93a
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 5f73ec7a8555a5e5d569d4316ca619747550bf11
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985954"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547180"
 ---
 # <a name="how-to-customize-a-built-in-tab"></a>Como: personalizar uma guia interna
   Você pode adicionar grupos e controles a uma guia interna. Uma guia interna é uma guia que já está na faixa de bits de um aplicativo Microsoft Office. Por exemplo, a guia **dados** é uma guia interna no Excel. Quando você cria um grupo personalizado, ele aparece por último na guia, mas você pode mover o grupo para qualquer lugar na guia.
@@ -66,9 +66,9 @@ ms.locfileid: "72985954"
 
      Para obter uma lista de IDs de controle, consulte [arquivos de ajuda do office 2010: identificadores de controle de interface do usuário Fluent do Office](https://www.microsoft.com/download/details.aspx?id=6627).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Visão geral da faixa de faixas](../vsto/ribbon-overview.md)
-- [Designer da faixa de opções](../vsto/ribbon-designer.md)
+- [Designer de faixa de das](../vsto/ribbon-designer.md)
 - [XML da faixa de opções](../vsto/ribbon-xml.md)
 - [Walkthrough: criar uma guia personalizada usando o designer de faixa de faixas](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)
 - [Walkthrough: criar uma guia personalizada usando o XML da faixa de uma](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)

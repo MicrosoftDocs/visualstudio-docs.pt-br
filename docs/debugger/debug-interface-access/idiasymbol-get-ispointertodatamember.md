@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_isPointerToDataMember | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: ef17c737-242e-43e8-b7e1-2c3bc58cfcef
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e06a8605b38042773cfa60e4847ed3ace9c5954
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 227235ea91ac6929ce098decde5acd11b1d0fefc
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740120"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463256"
 ---
 # <a name="idiasymbolget_ispointertodatamember"></a>IDiaSymbol::get_isPointerToDataMember
 Especifica se este símbolo é um ponteiro para um membro de dados.
@@ -32,8 +32,8 @@ HRESULT get_isPointerToDataMember(
 
 fora Um ponteiro para um `BOOL` que especifica se este símbolo é um ponteiro para um membro de dados.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

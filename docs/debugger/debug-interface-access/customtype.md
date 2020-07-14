@@ -1,7 +1,7 @@
 ---
 title: CustomType | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,20 +12,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be5ed68ef6923bfc58ebc072f27268e8d4e163b2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b5398cbd4b2678bd435673eb8b30155d3593d34c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745381"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462151"
 ---
 # <a name="customtype"></a>CustomType
-Os tipos definidos pelo fornecedor (tipos específicos do compilador) são identificados por um símbolo de `SymTagCustomType`.
+Tipos definidos pelo fornecedor (tipos específicos do compilador) são identificados por um `SymTagCustomType` símbolo.
 
 ## <a name="properties"></a>Propriedades
  A tabela a seguir mostra as propriedades válidas adicionais para esse tipo de símbolo.
 
-|propriedade|Tipo de dados|Descrição|
+|Propriedade|Tipo de dados|Descrição|
 |--------------|---------------|-----------------|
 |[IDiaSymbol::get_oemId](../../debugger/debug-interface-access/idiasymbol-get-oemid.md)|`DWORD`|Identificador do OEM.|
 |[IDiaSymbol::get_oemSymbolId](../../debugger/debug-interface-access/idiasymbol-get-oemsymbolid.md)|`DWORD`|ID interna do OEM.|
@@ -35,5 +35,5 @@ Os tipos definidos pelo fornecedor (tipos específicos do compilador) são ident
 |[IDiaSymbol::get_typeId](../../debugger/debug-interface-access/idiasymbol-get-typeid.md)|`DWORD`|ID do símbolo de tipo.|
 |[IDiaSymbol::get_types](../../debugger/debug-interface-access/idiasymbol-get-types.md)|`IDiaSymbol**`|Matriz de todos os tipos referenciados pelo símbolo de tipo personalizado.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Hierarquia de classes de tipos de símbolo](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)

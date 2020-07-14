@@ -1,7 +1,7 @@
 ---
 title: IDiaSegment::get_execute | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a2673880b80f229b05f5efba5c5dfb708aec0f7
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 349b9b865223e2df0083e12d4c8bfd26ae2c2643
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742448"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466003"
 ---
 # <a name="idiasegmentget_execute"></a>IDiaSegment::get_execute
 Recupera um sinalizador que indica se o segmento é executável.
@@ -33,10 +33,10 @@ HRESULT get_execute ( 
 #### <a name="parameters"></a>Parâmetros
  `pRetVal`
 
-fora Retornará `TRUE` se o segmento estiver marcado como executável; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se o segmento está marcado como executável; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver suporte para essa propriedade. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

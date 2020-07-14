@@ -5,14 +5,14 @@ ms.author: v-evwin
 manager: lank
 ms.assetid: fc33d419-78cf-485e-b558-5b7efa900f14
 ms.date: 04/17/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: Saiba mais sobre a assinatura de treinamento do DataCamp incluída na assinatura do Visual Studio.
-ms.openlocfilehash: 85545df5a38f5f8c3e3c29e6ffe1581298999562
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: 49370b4b3425effc4b8eeef704684420edfd3d41
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81649588"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904514"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>O benefício de treinamento do DataCamp em assinaturas do Visual Studio
 As assinaturas qualificadas do Visual Studio incluem assinaturas do DataCamp.  Com o DataCamp, você aprende todas as habilidades de ciência de dados necessárias no conforto do seu navegador. Você escolhe quando e o que aprender. Sem software para instalar e sem requisitos especiais de hardware, aprender ciência de dados é mais fácil do que nunca.
@@ -38,7 +38,7 @@ As assinaturas qualificadas do Visual Studio incluem assinaturas do DataCamp.  C
    > [!div class="mx-imgBorder"]
    > ![Escolha de roteiro no DataCamp](_img/vs-datacamp/vs-datacamp-choose-path.png)
 
-5. Depois de selecionar o roteiro, é possível refinar ainda mais seu roteiro de aprendizagem selecionando uma meta.  Por exemplo, se você escolher o caminho "Desenvolver seu conjunto de qualificações de ciência de dados", as opções a seguir serão exibidas. Escolha uma opção, ou clique **em que não tenho certeza.  Mostre-me todos os caminhos da carreira** para criar um caminho mais amplo.
+5. Depois de selecionar o roteiro, é possível refinar ainda mais seu roteiro de aprendizagem selecionando uma meta.  Por exemplo, se você escolher o caminho "Desenvolver seu conjunto de qualificações de ciência de dados", as opções a seguir serão exibidas. Escolha uma opção ou clique em **não tenho certeza.  Mostre-me todos os caminhos de carreira** para criar um caminho mais amplo.
    > [!div class="mx-imgBorder"]
    > ![Conjunto de qualificações de ciência de dados do DataCamp](_img/vs-datacamp/vs-datacamp-datascience.png)
 
@@ -51,7 +51,7 @@ As assinaturas qualificadas do Visual Studio incluem assinaturas do DataCamp.  C
    > [!div class="mx-imgBorder"]
    > ![Introdução ao DataCamp](_img/vs-datacamp/vs-datacamp-getting-started.png)
 
-Você pode parar a qualquer momento e retomar seu treinamento na próxima sessão.  Basta [https://www.datacamp.com](https://www.datacamp.com)visitar e fazer login.  O seu painel será exibido e você poderá retomar o treinamento exatamente onde parou. Basta clicar em **Continuar Treinamento**.
+Você pode parar a qualquer momento e retomar seu treinamento na próxima sessão.  Basta visitar [https://www.datacamp.com](https://www.datacamp.com) e entrar.  O seu painel será exibido e você poderá retomar o treinamento exatamente onde parou. Basta clicar em **Continuar Treinamento**.
 
 > [!div class="mx-imgBorder"]
 > ![Treinamento Contínuo no DataCamp](_img/vs-datacamp/vs-datacamp-continue-training.png)
@@ -60,20 +60,20 @@ Você pode parar a qualquer momento e retomar seu treinamento na próxima sessã
 | Nível de Assinatura                                                 |     Canais                                            | Benefício                                                          | Renovável?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | 3 meses       |  Não.  Disponível apenas para novos assinantes          |
-| Visual Studio Enterprise com GitHub Enterprise   | Vl | 3 meses       |  Não.  Disponível apenas para novos assinantes          |
+| Visual Studio Enterprise com GitHub Enterprise   | VL | 3 meses       |  Não.  Disponível apenas para novos assinantes          |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | 3 meses                                                            |  Não.  Disponível apenas para novos assinantes           |
-| Visual Studio Professional com GitHub Enterprise| Vl | 3 meses                                                            |  Não.  Disponível apenas para novos assinantes           |
+| Visual Studio Professional com GitHub Enterprise| VL | 3 meses                                                            |  Não.  Disponível apenas para novos assinantes           |
 | Visual Studio Test Professional (Padrão)                         | VL, Retail                                              | 3 meses                                             |  Não.  Disponível apenas para novos assinantes           |
 | Plataformas MSDN (Padrão)                                          | VL, Retail                                              | 3 meses                                              |  Não.  Disponível apenas para novos assinantes           |
 | Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Não disponível  | N/D |
 | Visual Studio Enterprise, Visual Studio Professional (nuvem mensal) | Azure | Não disponível | N/D |
 
-<sup>1</sup>  *Inclui: Não para revenda (NFR), FTE, Profissional Mais Valioso (MVP), Diretor Regional (RD), Microsoft Partner Network (MPN), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark, Imagine*
+<sup>1</sup>  *inclui: não para revenda (NFR), FTE, profissional mais valioso (MVP), diretor regional (RD), Microsoft Partner Network (MPN), parceiro do setor do Visual Studio (VSIP), Microsoft Certified Trainer, BizSpark, imagine*
 
 > [!NOTE]
-> A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) ir para explorar diferentes opções para comprar o Visual Studio.
+> A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a ir para [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a fim de explorar diferentes opções para comprar o Visual Studio.
 
-Não tem certeza de qual assinatura você está usando?  Conecte-se [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) para ver todas as assinaturas atribuídas ao seu endereço de e-mail. Se não vir todas as suas assinaturas, talvez você tenha uma ou mais atribuídas a outro endereço de email.  Você precisará entrar com esse endereço de email para ver as assinaturas.
+Não tem certeza de qual assinatura você está usando?  Conecte-se ao [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) para ver todas as assinaturas atribuídas ao seu endereço de email. Se não vir todas as suas assinaturas, talvez você tenha uma ou mais atribuídas a outro endereço de email.  Você precisará entrar com esse endereço de email para ver as assinaturas.
 
 ## <a name="support-resources"></a>Recursos de suporte
 - Precisa de ajuda para usar o DataCamp?  Confira estes recursos:
@@ -81,7 +81,7 @@ Não tem certeza de qual assinatura você está usando?  Conecte-se [https://my.
   - [Centro de Ajuda do DataCamp](https://support.datacamp.com/hc), onde procurar tópicos de suporte e consultar as perguntas de usuário de solicitação.
   - [Enviar uma solicitação de suporte](https://support.datacamp.com/hc/requests/new)
 - Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio.
-- Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite [o Visual Studio Support](https://visualstudio.microsoft.com/support/).
+- Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](https://docs.microsoft.com/visualstudio/)
@@ -94,4 +94,4 @@ Confira mais oportunidades de desenvolvimento profissional em sua assinatura:
 - [Pluralsight](vs-pluralsight.md)
 - [LinkedIn Learning](vs-linkedin-learning.md)
 
-Se você ainda não ativou o benefício de crédito individual do Azure DevTest que vem com sua assinatura, visite [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) e clique no azulejo Do Zure na categoria Ferramentas para configurar sua assinatura do Azure e resgatar seu crédito individual Do Azure DevTest.
+Se você ainda não ativou o benefício de crédito individual do Azure DevTest que vem com sua assinatura, visite [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) e clique no bloco Azure na categoria ferramentas para configurar sua assinatura do Azure e resgatar seu crédito individual do Azure DevTest.

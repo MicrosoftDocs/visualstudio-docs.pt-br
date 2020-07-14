@@ -1,19 +1,19 @@
 ---
 title: Como criar um sombreador de cor básico
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c301328a-079a-49e8-b688-4749c01657c0
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 162632f0043d23fb111a9e455c1100f9506924a8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0fe0fc31f3be758e16042de6133399b2df6b65c5
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769157"
 ---
 # <a name="how-to-create-a-basic-color-shader"></a>Como criar um sombreador de cor básico
 
@@ -42,11 +42,11 @@ A ilustração a seguir mostra o grafo de sombreador concluído e uma visualiza�
 
 ![Grafo de sombreador e seu resultado em um modelo 3D](../designers/media/digit-flat-color-effect.png)
 
-Determinadas formas podem fornecer melhores visualizações para alguns sombreadores. Para obter mais informações sobre como visualizar sombreadores no Shader Designer, consulte [Shader Designer](../designers/shader-designer.md).
+Determinadas formas podem fornecer melhores visualizações para alguns sombreadores. Para obter mais informações sobre como Visualizar sombreadores no designer do sombreador, consulte [Designer de sombreador](../designers/shader-designer.md).
 
 ## <a name="see-also"></a>Confira também
 
-- [Como: Aplicar um sombreador a um modelo 3D](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
-- [Como: Exportar um sombreador](../designers/how-to-export-a-shader.md)
-- [Designer de Sombreador](../designers/shader-designer.md)
-- [Nós do Designer de Sombreador](../designers/shader-designer-nodes.md)
+- [Como: aplicar um sombreador a um modelo 3D](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [Como: exportar um sombreador](../designers/how-to-export-a-shader.md)
+- [Designer de sombreador](../designers/shader-designer.md)
+- [Nós do designer do sombreador](../designers/shader-designer-nodes.md)

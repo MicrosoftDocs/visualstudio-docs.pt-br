@@ -1,7 +1,7 @@
 ---
 title: API de teste de carga
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - code, load tests
 - plug-ins, load test
@@ -10,12 +10,12 @@ ms.assetid: e15567bc-1f21-4feb-b81d-f17ba35cfde5
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 3d949b8c73bb155b2e6fe4900c54c6d5314d26c4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1fc3ff1aa238249f7425c61b5b28d2a96e299fec
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588805"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287097"
 ---
 # <a name="how-to-use-the-load-test-api"></a>Como usar a API de teste de carga
 
@@ -26,7 +26,7 @@ O Visual Studio dá suporte a plug-ins de teste de carga que podem controlar ou 
 > [!TIP]
 > Use o pesquisador de objetos para examinar o namespace <xref:Microsoft.VisualStudio.TestTools.LoadTesting>. Os editores do Visual C# e do Visual Basic oferecem suporte do IntelliSense para codificação com as classes no namespace.
 
-Você também pode criar plug-ins para testes de desempenho na Web. Para obter mais informações, [consulte Como: Criar um plug-in de teste de desempenho da Web](../test/how-to-create-a-web-performance-test-plug-in.md) e [como: Criar um plug-in em nível de solicitação](../test/how-to-create-a-request-level-plug-in.md).
+Você também pode criar plug-ins para testes de desempenho na Web. Para obter mais informações, consulte [como: criar um plug-in de teste de desempenho na Web](../test/how-to-create-a-web-performance-test-plug-in.md) e [como criar um plug-in de nível de solicitação](../test/how-to-create-a-request-level-plug-in.md).
 
 ## <a name="to-use-the-loadtesting-namespace"></a>Para usar o namespace LoadTesting
 
@@ -53,13 +53,13 @@ Você também pode criar plug-ins para testes de desempenho na Web. Para obter m
     3. No painel **Propriedades do plug-in selecionado**, defina os valores iniciais a serem usados pelo plug-in em tempo de execução.
 
         > [!NOTE]
-        > Você pode expor quantas propriedades quiser de seus plug-ins. Basta torná-los públicos, definidos, e de um tipo básico como Inteiro, Boolean o ou String. Edite também as propriedades do plug-in de teste de carga posteriormente usando a janela **Propriedades**.
+        > Você pode expor quantas Propriedades desejar de seus plug-ins. Basta torná-las pública, configurável e de um tipo base como inteiro, booliano ou cadeia de caracteres. Edite também as propriedades do plug-in de teste de carga posteriormente usando a janela **Propriedades**.
 
 9. Execute o teste de carga.
 
-     Para uma <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin>implementação de , consulte [Como: Criar um plug-in de teste de carga](../test/how-to-create-a-load-test-plug-in.md).
+     Para uma implementação do <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin> , consulte [como: criar um plug-in de teste de carga](../test/how-to-create-a-load-test-plug-in.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualStudio.TestTools.LoadTesting>
 - [Criar código personalizado e plug-ins para testes de carga](../test/create-custom-code-and-plug-ins-for-load-tests.md)

@@ -3,19 +3,19 @@ title: Ferramentas do Visual Studio para Unity | Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2019
 ms.technology: vs-unity-tools
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: 6cabc626-5310-4622-a743-210a9abb5535
 author: therealjohn
 ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 9789c400ee01bc986bbdf72c509f7a1841c5f300
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 967e0bfbaec19d3afa558957008ea14a5c37f359
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74797120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814948"
 ---
 # <a name="visual-studio-tools-for-unity"></a>Ferramentas do Visual Studio para Unity
 
@@ -48,11 +48,11 @@ As Ferramentas do Visual Studio para Unity dá suporte aos recursos robustos de 
 * Inspecione e modifique o valor de variáveis e argumentos.
 * Analise objetos complexos e estruturas de dados.
 
-### <a name="roslyn-diagnostics-and-quick-fixes-for-unity"></a>Diagnósticos de Roslyn e correções rápidas para unidade
+### <a name="roslyn-diagnostics-and-quick-fixes-for-unity"></a>Diagnóstico de Roslyn e correções rápidas para o Unity
 
-Escreva um código melhor que capture as melhores práticas com a profunda compreensão do Visual Studio sobre projetos de Unidade.
+Escreva um código melhor que capture as práticas recomendadas com a profunda compreensão do Visual Studio dos projetos do Unity.
 
-![VS refatorando a comparação de strings com CompareTag](media/unity-diagnostics.png)
+![Comparação de cadeia de caracteres de refatoração do VS com CompareTag](media/unity-diagnostics.png)
 
 ### <a name="visual-studio-for-mac-tools-for-unity"></a>Ferramentas do Visual Studio para Mac para Unity
 

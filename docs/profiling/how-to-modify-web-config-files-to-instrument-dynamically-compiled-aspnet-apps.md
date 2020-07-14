@@ -1,7 +1,7 @@
 ---
-title: 'Arquivo Web.Config: Instrumento & perfil dinâmico compilado ASP.NET web'
+title: Web.Config arquivo-instrumento & perfil aplicativo Web ASP.NET compilado dinâmico
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a92e5692-2183-4ae3-9431-b067c6a7aab4
 author: mikejo5000
 ms.author: mikejo
@@ -9,22 +9,22 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 6fb67a5b0da186bd87b9e5c39204e3acccc0529f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8ed2d8e8cc62d26f9d63a8a675301c78fc35c51a
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74775389"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331504"
 ---
 # <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>Como modificar arquivos Web.Config para instrumentar e criar perfil de Aplicativos Web ASP.NET compilados dinamicamente
 Você pode usar o método de instrumentação das Ferramentas de Criação de Perfil do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para coletar dados de tempo detalhados, dados de alocação de memória do .NET e dados de tempo de vida do objeto do .NET de aplicativos Web do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] dinamicamente compilados.
 
- Este tópico descreve como modificar o arquivo de configuração *web.config* para habilitar a instrumentação e o perfil de aplicativos da [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web.
+ Este tópico descreve como modificar o arquivo de configuração de *web.config* para habilitar a instrumentação e a criação de perfil de [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplicativos Web.
 
 > [!NOTE]
-> Você não é obrigado a modificar o arquivo *web.config* quando você usa o método de [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] criação de perfil de amostragem ou quando deseja instrumentar um módulo pré-compilado.
+> Não é necessário modificar o arquivo de *web.config* quando você usa o método de criação de perfil de amostragem ou quando você deseja instrumentar um módulo pré-compilado [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] .
 
- A raiz de um arquivo *web.config* é o elemento **de configuração.** Para instrumentar e criar o perfil de um aplicativo Web [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] compilado dinamicamente, é necessário adicionar ou modificar os seguintes elementos:
+ A raiz de um arquivo de *web.config* é o elemento de **configuração** . Para instrumentar e criar o perfil de um aplicativo Web [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] compilado dinamicamente, é necessário adicionar ou modificar os seguintes elementos:
 
 - Um elemento **configuration/runtime/assemblyBinding/dependentAssembly** que identifica o assembly Microsoft.VisualStudio.Enterprise.ASPNetHelper que controla a criação de perfil. O elemento **dependentAssembly** contém dois elementos filho: **assemblyIdentity** e **codeBase**.
 
@@ -32,7 +32,7 @@ Você pode usar o método de instrumentação das Ferramentas de Criação de Pe
 
 - Dois elementos **add** que identificam o local das Ferramentas de Criação de Perfil são adicionados à seção **configuration/appSettings**.
 
-  Recomendamos que você crie uma cópia do arquivo *web.config* original que você pode usar para restaurar a configuração do aplicativo.
+  Recomendamos que você crie uma cópia do arquivo de *web.config* original que você pode usar para restaurar a configuração do aplicativo.
 
 ### <a name="to-add-the-aspnethelper-assembly-as-a-configurationruntimeassemblybindingdependentassembly-element"></a>Para adicionar o assembly ASPNetHelper como um elemento configuration/runtime/assemblyBinding/dependentAssembly
 
@@ -62,7 +62,7 @@ Você pode usar o método de instrumentação das Ferramentas de Criação de Pe
    |--------------------| - |
    | **name** | **Microsoft.VisualStudio.Enterprise.ASPNetHelper** |
    | **PublicKeyToken** | **b03f5f7f11d50a3a** |
-   | **Cultura** | **Neutro** |
+   | **cultura** | **Neutro** |
 
 7. Adicione um elemento **codeBase** como um filho do elemento **dependentAssembly**.
 
@@ -70,7 +70,7 @@ Você pode usar o método de instrumentação das Ferramentas de Criação de Pe
 
    |Nome do atributo|Valor do atributo|
    |--------------------|---------------------|
-   |**versão**|**10.0.0.0**|
+   |**version**|**10.0.0.0**|
    |**href**|`PathToASPNetHelperDll`|
 
     `PathToASPNetHelperDll` é a URL do arquivo da Microsoft.VisualStudio.Enterprise.ASPNetHelper.dll. Se o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] estiver instalado no local padrão, o valor **href** deverá ser `C:/Program%20Files/Microsoft%20Visual%20Studio%202010.0/Common7/IDE/PrivateAssemblies/Microsoft.VisualStudio.Enterprise.ASPNetHelper.DLL`
@@ -139,7 +139,7 @@ Você pode usar o método de instrumentação das Ferramentas de Criação de Pe
 
    | Nome do atributo | Valor do atributo |
    |----------------| - |
-   | **Chave** | **Microsoft.VisualStudio.Enterprise.AspNetHelper.VsInstrLocation** |
+   | **chave** | **Microsoft.VisualStudio.Enterprise.AspNetHelper.VsInstrLocation** |
    | **value** | `PerformanceToolsFolder` **\VSInstr.Exe** |
 
 4. Adicione outro elemento **add** como um filho do elemento **appSettings**.
@@ -148,7 +148,7 @@ Você pode usar o método de instrumentação das Ferramentas de Criação de Pe
 
    |Nome do atributo|Valor do atributo|
    |--------------------|---------------------|
-   |**Chave**|**Microsoft.VisualStudio.Enterprise.AspNetHelper.VsInstrTools**|
+   |**chave**|**Microsoft.VisualStudio.Enterprise.AspNetHelper.VsInstrTools**|
    |**value**|`PerformanceToolsFolder`|
 
     `PerformanceToolsFolder` é o caminho dos arquivos executáveis do criador de perfil. Para obter o caminho para as ferramentas de criação de perfil, confira [Especificar o caminho para ferramentas de linha de comando](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
@@ -175,7 +175,7 @@ Você pode usar o método de instrumentação das Ferramentas de Criação de Pe
 ```
 
 ## <a name="example"></a>Exemplo
- A seguir está um arquivo *web.config* completo que permite a [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] instrumentação e o perfil de aplicativos da Web compilados dinamicamente. Este exemplo presume que não havia outras configurações no arquivo antes de qualquer modificação.
+ A seguir está um arquivo de *web.config* completo que habilita a instrumentação e a criação de perfil de aplicativos Web compilados dinamicamente [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] . Este exemplo presume que não havia outras configurações no arquivo antes de qualquer modificação.
 
 ```xml
 <?xml version="1.0"?>
@@ -220,6 +220,6 @@ Você pode usar o método de instrumentação das Ferramentas de Criação de Pe
 
 ```
 
-## <a name="see-also"></a>Confira também
-- [Como: Instrumentar um aplicativo de ASP.NET compilado dinamicamente e coletar dados de tempo detalhados](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md)
-- [Como: Instrumentar um aplicativo de ASP.NET compilado dinamicamente e coletar dados de memória](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data.md)
+## <a name="see-also"></a>Veja também
+- [Como instrumentar um aplicativo ASP.NET compilado dinamicamente e coletar dados de tempo detalhados](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md)
+- [Como instrumentar um aplicativo ASP.NET compilado dinamicamente e coletar dados de memória](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_hasDebugInfo | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 42ec4efef230a2a12827b92d76eaec5e8e346acd
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c7c158d15f7d60000bfd022e8cab10c3f2bc060c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740554"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463767"
 ---
 # <a name="idiasymbolget_hasdebuginfo"></a>IDiaSymbol::get_hasDebugInfo
 Recupera um sinalizador que especifica se o [compiland](../../debugger/debug-interface-access/compiland.md) contém informações de depuração.
@@ -33,13 +33,13 @@ HRESULT get_hasDebugInfo(
 #### <a name="parameters"></a>Parâmetros
  `pFlag`
 
-fora Retorna `TRUE` se o compiland contiver informações de depuração; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se o compiland contém informações de depuração; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
-> Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
+> Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,5 +48,5 @@ fora Retorna `TRUE` se o compiland contiver informações de depuração; caso c
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

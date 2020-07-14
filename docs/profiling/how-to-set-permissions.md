@@ -1,7 +1,7 @@
 ---
 title: Como definir permissões | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - profiling, setting permissions
 - security [Visual Studio ALM], setting permissions
@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c1ab7705c7ab46b07b08b707ce447f37c581036a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 03f508bd2ff904898d77cd5ac07c30992da63b46
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74774583"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328948"
 ---
 # <a name="how-to-set-permissions"></a>Como definir permissões
 
@@ -36,7 +36,7 @@ Membros do grupo Usuários podem executar as ferramentas de criação de perfil 
 
 ## <a name="to-create-a-user-account-that-has-user-permissions"></a>Para criar uma conta de usuário que tenha permissões de Usuário
 
-1. Clique com o botão direito do mouse **em Meu computador** e clique em **Gerenciar**.
+1. Clique com o botão direito do mouse em **meu computador** e clique em **gerenciar**.
 
      A janela **Gerenciamento do Computador** é aberta.
 
@@ -48,7 +48,7 @@ Membros do grupo Usuários podem executar as ferramentas de criação de perfil 
 
 4. Preencha os campos nessa caixa de diálogo com as informações da conta de usuário que você está criando. Especifique uma senha. Opcionalmente, marque a caixa de seleção que exige que o usuário altere a senha no próximo logon.
 
-5. Clique **em Criar** e clique em **Fechar**.
+5. Clique em **criar** e em **fechar**.
 
      O novo usuário aparecerá no grupo Usuários, um grupo de usuários que não têm permissões de Administrador.
 
@@ -64,13 +64,13 @@ Membros do grupo Usuários podem executar as ferramentas de criação de perfil 
 
 2. Clique com botão direito do mouse na pasta e, em seguida, clique em **Propriedades**.
 
-     O ** \<nome da pasta> caixa** de diálogo Propriedades é exibido.
+     A caixa de diálogo ** \<folder name> Propriedades** é exibida.
 
 3. Clique na guia **Segurança**.
 
 4. Clique no nome da conta do usuário na caixa **Nomes de usuário ou grupo**.
 
-5. Na caixa **Permissões para \<nome de usuário>**, marque a caixa de seleção **Controle Total**.
+5. Na caixa **permissões para \<user name> ** , marque a caixa de seleção para **controle total**.
 
 6. Clique em **OK**.
 
@@ -104,7 +104,7 @@ Membros do grupo Usuários podem executar as ferramentas de criação de perfil 
     vsperfcmd /admin:security,allow,<right[,right],<user name|group name>
     ```
 
-     Este comando concede à conta \<nome de usuário> ou \<nome do grupo> o acesso às ferramentas de Criação de Perfil. A opção \<direito> determina a funcionalidade de criação de perfil que o usuário pode acessar. A opção \<direito> pode ser um ou mais dos seguintes valores:
+     Esse comando concede o \<user name> \<group name> acesso à conta do ou às ferramentas de criação de perfil. A \<right> opção determina a funcionalidade de criação de perfil que o usuário pode acessar. A \<right> opção pode ser um ou mais dos seguintes valores:
 
     - FullAccess – permite acesso a todos os métodos de criação de perfil, incluindo a coleta de dados de desempenho de serviços, de amostragem e de criação de perfil entre sessões.
 
@@ -120,8 +120,8 @@ Membros do grupo Usuários podem executar as ferramentas de criação de perfil 
 
    Os usuários especificados, após o logon, agora poderão usar as ferramentas de criação de perfil sem permissões de Administrador.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Configure as sessões de](../profiling/configuring-performance-sessions.md)
-desempenho[VSPerfCmd](../profiling/vsperfcmd.md)
-[Profiling e Windows Vista Security](../profiling/profiling-and-windows-vista-security.md)
+[Configurar sessões](../profiling/configuring-performance-sessions.md) 
+ de desempenho [VSPerfCmd](../profiling/vsperfcmd.md) 
+ [Criação de perfil e segurança do Windows Vista](../profiling/profiling-and-windows-vista-security.md)

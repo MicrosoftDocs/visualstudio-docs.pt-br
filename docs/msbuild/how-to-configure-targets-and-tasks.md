@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe2955feb50a28e5ba631cdeddd169973a42ed25
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3ccb29f0ea6322a3f6bbfac5c3c0817892f74644
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633883"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288891"
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>Como configurar destinos e tarefas
 
@@ -112,6 +112,7 @@ Os parâmetros `MSBuildRuntime` e `MSBuildArchitecture` fornecem a maneira mais 
 > [!NOTE]
 > Os parâmetros de tarefa são avaliados no contexto do nó pai, não no contexto do host da tarefa. As variáveis de ambiente que são dependentes do runtime ou da arquitetura (como o local *Arquivos de Programas*) serão avaliadas como o valor que corresponde ao nó pai. No entanto, se a mesma variável de ambiente for lida diretamente pela tarefa, ela será avaliada corretamente no contexto do host da tarefa.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Configure alvos e tarefas](../msbuild/configuring-targets-and-tasks.md)
+- [Configurar destinos e tarefas](../msbuild/configuring-targets-and-tasks.md)
+- [Elemento UsingTask](../msbuild/usingtask-element-msbuild.md)

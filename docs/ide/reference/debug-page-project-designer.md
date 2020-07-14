@@ -9,23 +9,23 @@ helpviewer_keywords:
 - Project Designer, Debug page
 - Debug page in Project Designer
 ms.assetid: ef11eae9-df96-4e20-aabd-2678ba317140
-author: TerryGLee
-ms.author: tglee
+author: Mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 16be10dc69f203e52eb0dccc0e0738399d37ee3d
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: 406b3ecdc0e4e3f0d45c22fc9201bd37c6031152
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81649431"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85418737"
 ---
 # <a name="debug-page-project-designer"></a>Página de Depuração, Designer de Projeto
 
 Use a página **Depurar** do **Designer de Projeto** para definir as propriedades do comportamento de depuração em um projeto do Visual Basic ou C#.
 
-Para acessar a página **Depurar**, selecione um nó do projeto no **Gerenciador de Soluções**. No menu **Projeto**, escolha **\<NomeProjeto> Propriedades**. Quando o **Designer de Projeto** for exibido, clique na guia **Depurar**.
+Para acessar a página **Depurar**, selecione um nó do projeto no **Gerenciador de Soluções**. No menu **projeto** , escolha ** \<ProjectName> Propriedades**. Quando o **Designer de Projeto** for exibido, clique na guia **Depurar**.
 
 > [!NOTE]
 > Este tópico não se aplica a aplicativos UWP. Confira [Iniciar uma sessão de depuração (VB, C#, C++ e XAML)](../../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md) para aplicativos UWP.
@@ -34,7 +34,7 @@ Para acessar a página **Depurar**, selecione um nó do projeto no **Gerenciador
 
 As opções a seguir permitem selecionar a configuração e a plataforma a ser exibida ou modificada.
 
-**Configuração**
+**Configuration**
 
 Especifica quais definições de configuração exibir ou modificar. As configurações podem ser **Depurar** (padrão), **Versão** ou **Todas as Configurações**.
 
@@ -44,11 +44,11 @@ Especifica quais configurações de plataforma exibir ou modificar. As opções 
 
 ## <a name="start-action"></a>Iniciar ação
 
-**A ação start** indica o item a ser inicializado quando o aplicativo é depurado: o projeto, um programa personalizado, uma URL ou nada. Por padrão, essa opção é definida como **Iniciar projeto**. A configuração **Iniciar ação** na página **Depurar** determina o valor da propriedade `StartAction`.
+A **ação iniciar** indica o item a ser iniciado quando o aplicativo é depurado: o projeto, um programa personalizado, uma URL ou nada. Por padrão, essa opção é definida como **Iniciar projeto**. A configuração **Iniciar ação** na página **Depurar** determina o valor da propriedade `StartAction`.
 
 **Iniciar projeto**
 
-Escolha esta opção para especificar que o executável (para projetos de aplicativos do Windows e aplicativos de console) deve ser iniciado quando o aplicativo for depurado. Esta opção é selecionada por padrão.
+Escolha esta opção para especificar que o executável (para projetos de aplicativos do Windows e aplicativos de console) deve ser iniciado quando o aplicativo for depurado. Essa opção é habilitada por padrão.
 
 **Iniciar programa externo**
 
@@ -82,10 +82,10 @@ Esta opção especifica se a depuração de código nativo tem suporte. Marque e
 
 Marque ou desmarque esta caixa de seleção para habilitar ou desabilitar a depuração de procedimentos SQL de seu aplicativo do Visual Basic. Essa caixa de seleção é desmarcada por padrão.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Introdução ao depurador](../../debugger/debugger-feature-tour.md)
-- [Configurações do projeto para configurações de depuração C#](../../debugger/project-settings-for-csharp-debug-configurations.md)
-- [Configurações do projeto para uma configuração de depuração básica visual](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
-- [Aplicativos secure ClickOnce](../../deployment/securing-clickonce-applications.md)
-- [Como: Criar e Editar configurações](../../ide/how-to-create-and-edit-configurations.md)
+- [Definições do projeto para configurações de depuração do C#](../../debugger/project-settings-for-csharp-debug-configurations.md)
+- [Definições do projeto para uma configuração de depuração do Visual Basic](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
+- [Proteger aplicativos ClickOnce](../../deployment/securing-clickonce-applications.md)
+- [Como: criar e editar configurações](../../ide/how-to-create-and-edit-configurations.md)

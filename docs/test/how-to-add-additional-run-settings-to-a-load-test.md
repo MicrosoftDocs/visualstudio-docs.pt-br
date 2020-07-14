@@ -1,7 +1,7 @@
 ---
 title: Adicionar configurações de execução a um teste de carga
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - load tests, run settings, adding
 - load tests, run settings
@@ -9,12 +9,12 @@ ms.assetid: 257d2a24-d582-4cfe-8b2b-51f51ba9cc84
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: adcb50d2c6800c5ce64ab2b7cf16ce9d2a25aaaa
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a2f62b3e9797e411138590fc15b0fe872920d203
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75584498"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288449"
 ---
 # <a name="how-to-add-additional-run-settings-to-a-load-test"></a>Como adicionar configurações de execução adicionais a um teste de carga
 
@@ -47,7 +47,7 @@ Você pode adicionar mais configurações de execução ao teste de carga com co
 
      Agora você pode especificar que deseja usar a configuração de execução adicionada definindo-a como ativa. Para saber mais, consulte [Como selecionar a configuração de execução ativa para um teste de carga](../test/how-to-select-the-active-run-setting-for-a-load-test.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Configure as configurações de execução do teste de carga](../test/configure-load-test-run-settings.md)
+- [Definir configurações de execução de teste de carga](../test/configure-load-test-run-settings.md)
 - [Especificar os conjuntos de contadores e as regras de limite para computadores em um teste de carga](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)

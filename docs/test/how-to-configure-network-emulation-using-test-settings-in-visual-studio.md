@@ -1,19 +1,19 @@
 ---
 title: Configurar a emulação de rede usando configurações do teste
 ms.date: 10/03/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - test settings, network emulation
 ms.assetid: ff275cfb-5df9-4710-9a91-9caabaaad34f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 685b22f25c7138c4c3e7c9068ba52864e40648e1
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+ms.openlocfilehash: 55daa1e16af45c153efced3736c46c3c27d748ac
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880137"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288176"
 ---
 # <a name="how-to-configure-network-emulation-using-test-settings-in-visual-studio"></a>Como configurar a emulação de rede usando configurações de teste no Visual Studio
 
@@ -28,7 +28,7 @@ Você pode configurar o adaptador de dados de diagnóstico para testar o aplicat
 O procedimento a seguir descreve como configurar a emulação de rede no editor de configuração. Essas etapas se aplicam ao editor de configuração no Microsoft Test Manager e ao Visual Studio.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-O procedimento a seguir descreve como configurar a emulação de rede no editor de configuração. Essas etapas se aplicam ao editor de configuração do Visual Studio.
+O procedimento a seguir descreve como configurar a emulação de rede no editor de configuração. Essas etapas se aplicam ao editor de configuração no Visual Studio.
 ::: moniker-end
 
 > [!NOTE]
@@ -90,7 +90,7 @@ Antes de executar as etapas neste procedimento, você deverá abrir as configura
     > [!TIP]
     > Você também pode instalar o driver de emulação de rede de linha de comando em seu computador local sem instalar o agente de teste do Visual Studio, usando o seguinte comando: **VSTestConfig NETWORKEMULATION /install**
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Coletar informações de diagnóstico usando configurações de teste](../test/collect-diagnostic-information-using-test-settings.md)
 - [Executar testes manuais (Azure Test Plans)](/azure/devops/test/run-manual-tests?view=vsts)

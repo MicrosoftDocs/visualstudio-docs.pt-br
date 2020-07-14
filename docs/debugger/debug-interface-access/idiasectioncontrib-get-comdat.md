@@ -1,7 +1,7 @@
 ---
 title: IDiaSectionContrib::get_comdat | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ef38d5c4afcb065f7a095501e2bf5d95ee493789
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8e5c5f707be5d687417d06e71d58f11012516e00
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742724"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466345"
 ---
 # <a name="idiasectioncontribget_comdat"></a>IDiaSectionContrib::get_comdat
 Recupera um sinalizador que indica se a seção é um registro COMDAT.
@@ -33,13 +33,13 @@ HRESULT get_comdat ( 
 #### <a name="parameters"></a>Parâmetros
  `pRetVal`
 
-fora Retorna `TRUE` se a seção for um registro COMDAT; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se a seção é um registro COMDAT; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver suporte para essa propriedade. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
 ## <a name="remarks"></a>Comentários
  Um registro COMDAT é um registro COFF (formato de arquivo de objeto comum) que torna as funções empacotadas visíveis para o vinculador.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

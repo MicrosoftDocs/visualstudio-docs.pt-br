@@ -2,7 +2,7 @@
 title: Tour de recursos do Blend para Visual Studio
 titleSuffix: ''
 ms.date: 07/31/2019
-ms.topic: conceptual
+ms.topic: overview
 f1_keywords:
 - Blend.Start.Dev12
 author: TerryGLee
@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f2b9f38d83befcf49ecd3de8da3a2cd26ff3ab46
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: 8348ba38849b76a745a56f941850d6b61a8f433f
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301667"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332092"
 ---
 # <a name="blend-for-visual-studio-overview"></a>Visão geral do Blend para Visual Studio
 
@@ -79,7 +79,7 @@ Usar os botões relacionados ao storyboard ![Botões do storyboard no Blend para
 
 Passe o mouse sobre cada botão na janela para saber mais sobre a funcionalidade disponível.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Animar objetos](../xaml-tools/animate-objects-in-xaml-designer.md)
 - [Desenhar formas e caminhos](../xaml-tools/draw-shapes-and-paths.md)

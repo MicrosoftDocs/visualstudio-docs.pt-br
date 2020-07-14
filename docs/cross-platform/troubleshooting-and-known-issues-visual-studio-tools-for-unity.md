@@ -3,19 +3,19 @@ title: Solução de problemas e problemas conhecidos (Ferramentas do VS para Uni
 ms.custom: ''
 ms.date: 07/03/2018
 ms.technology: vs-unity-tools
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 8f5db192-8d78-4627-bd07-dbbc803ac554
 author: therealjohn
 ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: d6856ff73f9aab2325a31e164e7983a919097d46
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0173c076a04c4c725565e63c41396b7c4d235952
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "66261121"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815052"
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>Solução de problemas e problemas conhecidos (Ferramentas do Visual Studio para Unity)
 
@@ -25,7 +25,7 @@ Nesta seção, você encontrará soluções para problemas comuns das Ferramenta
 
 ### <a name="confirm-editor-attaching-is-enabled"></a>Confirme que Editor Attaching está habilitado
 
-No Menu Unidade, **selecione Editar > Preferências** e, em seguida, selecione a guia **Ferramentas externas.** Confirme se a caixa de seleção **de anexo do editor** está ativada. Para saber mais, confira a [Documentação de preferências do Unity](https://docs.unity3d.com/Manual/Preferences.html).
+No menu do Unity, selecione **Editar preferências de >** e, em seguida, selecione a guia **Ferramentas externas** . Confirme se a caixa de seleção **anexação do editor** está habilitada. Para saber mais, confira a [Documentação de preferências do Unity](https://docs.unity3d.com/Manual/Preferences.html).
 
 ### <a name="unable-to-attach"></a>Não é possível anexar
 
@@ -168,4 +168,4 @@ Tente atualizar o Visual Studio 2015 para atualização 3.
     bt all
     ```
 
-Finalmente, envie o thread-dump para [vstusp@microsoft.com](mailto:vstusp@microsoft.com), juntamente com uma descrição do que você estava fazendo quando o Visual Studio ficou congelado.
+Por fim, envie o despejo de thread para [vstusp@microsoft.com](mailto:vstusp@microsoft.com) , juntamente com uma descrição do que você estava fazendo quando o Visual Studio ficou congelado.

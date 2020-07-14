@@ -1,7 +1,7 @@
 ---
-title: 'Como: Adicionar itens a um projeto do SharePoint | Microsoft Docs'
+title: 'Como: adicionar itens a um projeto do SharePoint | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,40 +12,39 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 572b466907fdbe43c5b9f094b74837ca05d1b212
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 1f7a36591d94e846a0024bce8c5d0b618479e647
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62966946"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014702"
 ---
-# <a name="how-to-add-items-to-a-sharepoint-project"></a>Como: Adicionar itens a um projeto do SharePoint
-  Soluções do SharePoint contêm um ou mais projetos, cada um deles contém vários itens de projeto do SharePoint. Depois que você abra ou crie uma solução do SharePoint, você pode adicionar itens novos ou existentes para esses projetos. Por exemplo, novos projetos de fluxo de trabalho vem com um formulário padrão denominado Default. aspx, mas você pode substituir esse formulário com um formulário de novo ou diferente ou adicione outro formulário ASPX.
+# <a name="how-to-add-items-to-a-sharepoint-project"></a>Como: adicionar itens a um projeto do SharePoint
+  As soluções do SharePoint contêm um ou mais projetos, cada um contendo vários itens de projeto do SharePoint. Depois de abrir ou criar uma solução do SharePoint, você pode adicionar itens novos ou existentes a esses projetos. Por exemplo, novos projetos de fluxo de trabalho vêm com um formulário padrão denominado Default. aspx, mas você pode substituir esse formulário por um formulário novo ou diferente ou adicionar outro formulário ASPX.
 
 ### <a name="to-add-a-new-project-item-to-a-sharepoint-solution"></a>Para adicionar um novo item de projeto a uma solução do SharePoint
 
-1. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], abra ou crie uma solução do SharePoint.
+1. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , abra ou crie uma solução do SharePoint.
 
-2. Na **Gerenciador de soluções**, escolha o nó do projeto.
+2. Em **Gerenciador de soluções**, escolha o nó do projeto.
 
-3. Na barra de menus, escolha **Project** > **Adicionar Novo Item** para exibir o **Add New Item** caixa de diálogo.
+3. Na barra de menus, escolha **projeto**  >  **Adicionar novo item** para exibir a caixa de diálogo **Adicionar novo item** .
 
-4. No **modelos instalados** lista, expanda o **SharePoint** nó e, em seguida, escolha o **2010** nó.
+4. Na lista **modelos instalados** , expanda o nó **SharePoint** e escolha o nó **2010** .
 
 5. Na lista de modelos de item de projeto, escolha um modelo.
 
-6. No **nome** caixa de texto, insira um nome e, em seguida, escolha o **Okey** botão.
+6. Na caixa de texto **nome** , insira um nome e, em seguida, escolha o botão **OK** .
 
 ### <a name="to-add-an-existing-project-item-to-a-sharepoint-solution"></a>Para adicionar um item de projeto existente a uma solução do SharePoint
 
-1. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], abra ou crie uma solução do SharePoint.
+1. No [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , abra ou crie uma solução do SharePoint.
 
-2. Na **Gerenciador de soluções**, escolha o nó do projeto.
+2. Em **Gerenciador de soluções**, escolha o nó do projeto.
 
-3. Na barra de menus, escolha **Project** > **Adicionar Item existente** para exibir o **Add Existing Item** caixa de diálogo.
+3. Na barra de menus, escolha **projeto**  >  **Adicionar item existente** para exibir a caixa de diálogo **Adicionar item existente** .
 
-4. Navegue até a pasta que contém o item que você deseja adicionar, escolha-o e, em seguida, escolha o **adicionar** botão.
+4. Navegue até a pasta que contém o item que você deseja adicionar, escolha-o e, em seguida, escolha o botão **Adicionar** .
 
 ## <a name="see-also"></a>Consulte também
-- [Projeto do SharePoint e modelos de item de projeto](../sharepoint/sharepoint-project-and-project-item-templates.md)
+- [Modelos de projeto e item de projeto do SharePoint](../sharepoint/sharepoint-project-and-project-item-templates.md)
 - [Desenvolver soluções do SharePoint](../sharepoint/developing-sharepoint-solutions.md)

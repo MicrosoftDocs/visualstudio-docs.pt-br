@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_hasSEH | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e96216b5e33031405df3b01a3f76412a544bb51
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e0f9e7b1dc2fb5a338dc2cd2edbf3cf9d0eb2441
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740433"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463662"
 ---
 # <a name="idiasymbolget_hasseh"></a>IDiaSymbol::get_hasSEH
-Recupera um sinalizador que especifica se a função contém qualquer [manipulação de exceção estruturada (C++C/)](/cpp/cpp/structured-exception-handling-c-cpp) (por exemplo, blocos __try/\__except).
+Recupera um sinalizador que especifica se a função contém qualquer [manipulação de exceção estruturada (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) (por exemplo, blocos de __try/ \_ _except).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,10 +33,10 @@ HRESULT get_hasSEH(
 #### <a name="parameters"></a>Parâmetros
  `pFlag`
 
-fora Retorna `TRUE` se a função tiver qualquer bloco de manipulação de exceção estruturada; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se a função tem qualquer bloco de manipulação de exceção estruturado; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
@@ -48,6 +48,6 @@ fora Retorna `TRUE` se a função tiver qualquer bloco de manipulação de exce�
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
-- [Tratamento de exceções estruturado (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp)
+- [Manipulação de exceção estruturada (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp)

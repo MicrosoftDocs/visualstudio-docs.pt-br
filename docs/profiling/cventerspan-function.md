@@ -1,7 +1,7 @@
 ---
 title: Função CvEnterSpan | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvEnterSpanVA
 - cvmarkers/CvEnterSpanW
@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d501f7c1e75f5b63c82c34f2dc0a4913d7a88c7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a5bb034d4a2501175d117256364082966a97af8a
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62552626"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328974"
 ---
 # <a name="cventerspan-function"></a>Função CvEnterSpan
 Marca o início de um novo intervalo.
@@ -101,7 +101,7 @@ HRESULT CvEnterSpanExVA(
 
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
  `argList` Lista de argumentos.
 
  `category` Categoria do período
@@ -114,7 +114,7 @@ HRESULT CvEnterSpanExVA(
 
  `ppSpan` Endereço da variável que conterá o objeto de período resultante. O endereço não pode ser NULL; a variável pode ter qualquer valor.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  S_OK quando a mensagem é gravada com êxito. Código de erro em caso de erros. Use as macros SUCCEEDED/FAILED para verificar a condição de erro.
 
 ## <a name="requirements"></a>Requisitos
@@ -124,5 +124,5 @@ HRESULT CvEnterSpanExVA(
 
  **ANSI:** CvEnterSpanA, CvEnterSpanVA, CvEnterSpanExA, CvEnterSpanExVW
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Referência da biblioteca C++](../profiling/cpp-library-reference.md)

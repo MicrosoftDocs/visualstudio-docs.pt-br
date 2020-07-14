@@ -8,19 +8,19 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7b4a15530a43937b4f73fba1779216391c862c11
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ad4698fe469176ae8ed590c44b4efbb4ccf39de2
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669027"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545048"
 ---
 # <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351 não use algoritmos de criptografia desfeitos
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|DoNotUseBrokenCryptographicAlgorithms|
+|TypeName|DoNotUseBrokenCryptographicAlgorithms|
 |CheckId|CA5351|
 |Categoria|Microsoft. Cryptography|
 |Alteração Significativa|Sem interrupção|
@@ -29,7 +29,7 @@ ms.locfileid: "72669027"
 > Esse aviso foi atualizado pela última vez em 2015 de novembro.
 
 ## <a name="cause"></a>Causa
- As funções de hash, como <xref:System.Security.Cryptography.MD5> e algoritmos de criptografia, como <xref:System.Security.Cryptography.DES> e <xref:System.Security.Cryptography.RC2>, podem expor um risco significativo e podem resultar na exposição de informações confidenciais por meio de técnicas de ataque triviais, como ataques de força bruta e colisões de hash.
+ Funções de hash, como <xref:System.Security.Cryptography.MD5> e algoritmos de criptografia, como <xref:System.Security.Cryptography.DES> e <xref:System.Security.Cryptography.RC2> podem expor um risco significativo e podem resultar na exposição de informações confidenciais por meio de técnicas de ataque triviais, como ataques de força bruta e colisões de hash.
 
  A lista de algoritmos criptográficos a seguir está sujeita a ataques criptográficos conhecidos. O algoritmo de hash criptográfico <xref:System.Security.Cryptography.MD5> está sujeito a ataques de colisão de hash.  Dependendo do uso, uma colisão de hash pode levar à representação, violação ou outros tipos de ataques em sistemas que dependem da saída criptográfica exclusiva de uma função de hash. Os algoritmos de criptografia <xref:System.Security.Cryptography.DES> e <xref:System.Security.Cryptography.RC2> estão sujeitos a ataques criptográficos que podem resultar na divulgação não intencional de dados criptografados.
 
@@ -38,18 +38,18 @@ ms.locfileid: "72669027"
 
  Para algoritmos de criptografia:
 
-- a criptografia <xref:System.Security.Cryptography.DES> contém um tamanho de chave pequeno, que pode ser forçado por uma força bruta em menos de um dia.
+- <xref:System.Security.Cryptography.DES>a criptografia contém um tamanho de chave pequeno, que pode ser forçado por uma força bruta em menos de um dia.
 
-- a criptografia <xref:System.Security.Cryptography.RC2> é suscetível a um ataque de chave relacionada, em que o invasor encontra relações matemáticas entre todos os valores de chave.
+- <xref:System.Security.Cryptography.RC2>a criptografia é suscetível a um ataque de chave relacionada, em que o invasor encontra relações matemáticas entre todos os valores de chave.
 
   Essa regra é disparada quando encontra qualquer uma das funções criptográficas acima no código-fonte e gera um aviso ao usuário.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
  Use opções criptograficamente mais fortes:
 
-- Para MD5, use hashes na família [SHA-2](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx) (por exemplo,  <xref:System.Security.Cryptography.SHA512>, <xref:System.Security.Cryptography.SHA384>, <xref:System.Security.Cryptography.SHA256>).
+- Para MD5, use hashes na família [SHA-2](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx) (por exemplo <xref:System.Security.Cryptography.SHA512> ,, <xref:System.Security.Cryptography.SHA384> <xref:System.Security.Cryptography.SHA256> ).
 
-- Para DES e RC2, use a criptografia <xref:System.Security.Cryptography.Aes>.
+- Para DES e RC2, use <xref:System.Security.Cryptography.Aes> criptografia.
 
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
  Não suprimir um aviso desta regra, a menos que ela tenha sido revisada por um especialista em criptografia.

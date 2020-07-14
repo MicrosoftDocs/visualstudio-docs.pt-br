@@ -1,7 +1,7 @@
 ---
-title: 'Linha de comando Profiler: Inicie o aplicativo autônomo, obtenha estatísticas do aplicativo'
+title: Linha de comando do profiler – iniciar aplicativo autônomo, obter estatísticas de aplicativo
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 52dcee2b-f178-4a76-bddc-e36c50bfcb78
 author: mikejo5000
 ms.author: mikejo
@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fb6228592115091dc538dbe59c227a180e75aa10
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 96838b622171aa3e313dd8c241a5e316f72ff7b2
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74775407"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85327763"
 ---
 # <a name="how-to-launch-a-stand-alone-application-with-the-profiler-and-collect-application-statistics-by-using-the-command-line"></a>Como iniciar um aplicativo autônomo com o criador de perfil e coletar estatísticas do aplicativo usando a linha de comando
 Este tópico descreve como usar as ferramentas de linha de comando das Ferramentas de Criação de Perfil do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para iniciar um aplicativo autônomo (cliente) e coletar estatísticas de desempenho usando o método de amostragem.
@@ -22,7 +22,7 @@ Este tópico descreve como usar as ferramentas de linha de comando das Ferrament
 > [!NOTE]
 > Os recursos de segurança aprimorados no Windows 8 e no Windows Server 2012 exigiram alterações significativas na maneira como o criador de perfil do Visual Studio coleta dados nessas plataformas. Os aplicativos UWP também requerem novas técnicas de coleta. Consulte [Ferramentas de desempenho em aplicativos do Windows 8 e do Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 >
-> A adição de dados de interação de camada a uma execução de criação de perfil requer procedimentos específicos com ferramentas de criação de perfil de linha de comando. Consulte [Coletar dados de interação de camadas](../profiling/adding-tier-interaction-data-from-the-command-line.md)
+> A adição de dados de interação de camada a uma execução de criação de perfil requer procedimentos específicos com ferramentas de criação de perfil de linha de comando. Consulte [coletar dados de interação de camada](../profiling/adding-tier-interaction-data-from-the-command-line.md)
 
  Para usar ferramentas de linha de comando do criador de perfil, você precisa adicionar o caminho à variável de ambiente PATH da janela de Prompt de Comando ou adicioná-lo ao próprio comando. Você pode executar as ferramentas de criação de perfil em um computador em que o Visual Studio está instalado de uma janela Comando do Visual Studio.
 
@@ -42,37 +42,37 @@ Este tópico descreve como usar as ferramentas de linha de comando das Ferrament
 
 2. Inicie o criador de perfil. Tipo:
 
-    **VSPerfCmd /start:sample /output:** `OutputFile` [`Options`]
+    **VSPerfCmd/start: exemplo/output:** `OutputFile` [`Options`]
 
    - A opção [/start](../profiling/start.md)**:sample** inicializa o criador de perfil.
 
-   - A [opção /saída](../profiling/output.md)**:** `OutputFile` é necessária com **/start**. `OutputFile` especifica o nome e o local do arquivo de dados de criação de perfil (.vsp).
+   - A opção [/output](../profiling/output.md)**:** `OutputFile` é necessária com **/Start**. `OutputFile` especifica o nome e o local do arquivo de dados de criação de perfil (.vsp).
 
      É possível usar qualquer uma das opções a seguir com a opção **/start:sample**.
 
    | Opção | Descrição |
    | - | - |
-   | [/wincounter:](../profiling/wincounter.md) **:**`WinCounterPath` | Especifica um contador de desempenho do Windows que deve ser coletado durante a criação de perfil. |
-   | [/marca automática:](../profiling/automark.md) **:**`Interval` | Use somente com **/wincounter**. Especifica o número de milissegundos entre eventos de coleta do contador de desempenho do Windows. O padrão é 500 ms. |
-   | [/eventos:](../profiling/events-vsperfcmd.md) **:**`Config` | Especifica um evento de ETW (Rastreamento de Eventos para Windows) a ser coletado durante a criação de perfil. Os eventos ETW são coletados separadamente (.* etl*) arquivo. |
+   | [/WinCounter](../profiling/wincounter.md) **:**`WinCounterPath` | Especifica um contador de desempenho do Windows que deve ser coletado durante a criação de perfil. |
+   | [/AutoMark](../profiling/automark.md) **:**`Interval` | Use somente com **/wincounter**. Especifica o número de milissegundos entre eventos de coleta do contador de desempenho do Windows. O padrão é 500 ms. |
+   | [/Events](../profiling/events-vsperfcmd.md) **:**`Config` | Especifica um evento de ETW (Rastreamento de Eventos para Windows) a ser coletado durante a criação de perfil. Os eventos ETW são coletados em um separado (.* ETL*). |
 
-3. Inicie o aplicativo de destino. Tipo:**VSPerfCmd /lançamento:** `appName` [`Options`] [`Sample Event`]
+3. Inicie o aplicativo de destino. Tipo:**VSPerfCmd/Launch:** `appName` [ `Options` ] [ `Sample Event` ]
 
     Você pode usar uma ou mais das opções a seguir com a opção **/launch**.
 
    |Opção|Descrição|
    |------------|-----------------|
-   |[/args:](../profiling/args.md) **:**`Arguments`|Especifica uma cadeia de caracteres que contém os argumentos de linha de comando a serem passados para o aplicativo de destino.|
+   |[/args](../profiling/args.md) **:**`Arguments`|Especifica uma cadeia de caracteres que contém os argumentos de linha de comando a serem passados para o aplicativo de destino.|
    |[/console](../profiling/console.md)|Inicia o aplicativo de destino de linha de comando em uma janela separada.|
 
     Por padrão, os dados de desempenho têm amostra obtida a cada 10.000.000 ciclos de relógio de processador não interrompidos. Isso é aproximadamente uma vez a cada 10 segundos em um processador de 1 GHz. Você pode especificar uma das opções a seguir para alterar o intervalo de ciclo de relógio ou especificar um evento de amostragem diferente.
 
    |Evento de exemplo|Descrição|
    |------------------|-----------------|
-   |[/temporizador:](../profiling/timer.md) **:**`Interval`|Altera o intervalo de amostragem para o número de ciclos de relógio não interrompidos especificados pelo `Interval`.|
-   |[/pf](../profiling/pf.md)[**:**`Interval`]|Altera o evento de amostragem para falhas de página. Se `Interval` for especificado, define o número de falhas de página entre as amostras. O padrão é 10.|
-   |[/sys](../profiling/sys-vsperfcmd.md)[**:**`Interval`]|Altera o evento de amostragem para chamadas do sistema do processo para o kernel do sistema operacional (syscalls). Se `Interval` for especificado, define o número de chamadas entre as amostras. O padrão é 10.|
-   |[/contador:](../profiling/counter.md) **:**`Config`|Altera o evento de amostragem e o intervalo para o contador de desempenho do processador e o intervalo especificado em `Config`.|
+   |[/timer](../profiling/timer.md) **:**`Interval`|Altera o intervalo de amostragem para o número de ciclos de relógio não interrompidos especificados pelo `Interval`.|
+   |[/PF](../profiling/pf.md)[**:** `Interval` ]|Altera o evento de amostragem para falhas de página. Se `Interval` for especificado, define o número de falhas de página entre as amostras. O padrão é 10.|
+   |[/Sys](../profiling/sys-vsperfcmd.md)[**:** `Interval` ]|Altera o evento de amostragem para chamadas do sistema do processo para o kernel do sistema operacional (syscalls). Se `Interval` for especificado, define o número de chamadas entre as amostras. O padrão é 10.|
+   |[/Counter](../profiling/counter.md) **:**`Config`|Altera o evento de amostragem e o intervalo para o contador de desempenho do processador e o intervalo especificado em `Config`.|
 
 ## <a name="control-data-collection"></a>Controlar a coleta de dados
  Quando o aplicativo de destino estiver em execução, você pode controlar a coleta de dados iniciando e interrompendo a gravação de dados no arquivo de dados do criador de perfil usando as opções do *VSPerfCmd.exe*. Controlar a coleta de dados permite coletar dados de uma parte específica da execução do programa, como a inicialização ou o desligamento do aplicativo.
@@ -83,9 +83,9 @@ Este tópico descreve como usar as ferramentas de linha de comando das Ferrament
 
     |Opção|Descrição|
     |------------|-----------------|
-    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|Inicia (**/globalon**) ou interrompe (**/globaloff**) a coleta de dados para todos os processos.|
-    |[/processon:](../profiling/processon-and-processoff.md) **:** `PID` [/processoff:](../profiling/processon-and-processoff.md) **:**  `PID`|Inicia (**/processon**) ou interrompe (**/processoff**) a coleta de dados para o processo especificado pela ID de processo (`PID`).|
-    |[/attach:](../profiling/attach.md) **:**`PID` { `ProcName`&#124;} [/desapego](../profiling/detach.md)[**:**{`PID`&#124;`ProcName`}]|**/attach** começa a coletar dados para o processo especificado por `PID` ou pelo nome de processo (ProcName). **/detach** interrompe a coleta de dados para o processo especificado ou para todos os processos se nenhum processo específico for especificado.|
+    |[/GLOBALON/GLOBALOFF](../profiling/globalon-and-globaloff.md)|Inicia (**/globalon**) ou interrompe (**/globaloff**) a coleta de dados para todos os processos.|
+    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [/ProcessOff](../profiling/processon-and-processoff.md) **:**  `PID`|Inicia (**/processon**) ou interrompe (**/processoff**) a coleta de dados para o processo especificado pela ID de processo (`PID`).|
+    |[/Attach](../profiling/attach.md) **:**{ `PID`&#124;`ProcName` } [/Detach](../profiling/detach.md)[**:**{ `PID`&#124;`ProcName` }]|**/attach** começa a coletar dados para o processo especificado por `PID` ou pelo nome de processo (ProcName). **/detach** interrompe a coleta de dados para o processo especificado ou para todos os processos se nenhum processo específico for especificado.|
 
 ## <a name="end-the-profiling-session"></a>Encerrar a sessão de criação de perfil
  Para concluir uma sessão de criação de perfil, o criador de perfil não deve estar anexado a nenhum processo analisado e o criador de perfil deve ser desligado explicitamente. É possível desanexar o criador de perfil de um aplicativo que foi analisado usando o método de amostragem ao fechar o aplicativo ou chamar a opção **VSPerfCmd /detach**. Depois, chame a opção **VSPerfCmd /shutdown** para desativar o criador de perfil e fechar o arquivo de dados de criação de perfil. O comando **VSPerfClrEnv /off** limpa as variáveis de ambiente da criação de perfil.
@@ -98,12 +98,12 @@ Este tópico descreve como usar as ferramentas de linha de comando das Ferrament
 
          -ou-
 
-    - Tipo **VSPerfCmd/desapego**
+    - Digite **VSPerfCmd/Detach**
 
 2. Desligue o criador de perfil. Tipo:
 
-     **VSPerfCmd**  [/shutdown](../profiling/shutdown.md)
+     **VSPerfCmd**  [/Shutdown](../profiling/shutdown.md)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Aplicativos Autônomos de Perfil](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Visualizações de dados do método de amostragem](../profiling/profiler-sampling-method-data-views.md)
+- [Exibições de dados do método de amostragem](../profiling/profiler-sampling-method-data-views.md)

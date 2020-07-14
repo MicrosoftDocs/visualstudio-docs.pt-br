@@ -1,7 +1,7 @@
 ---
 title: Desenvolver o código sem projetos nem soluções
-ms.date: 02/21/2018
-ms.topic: conceptual
+ms.date: 06/22/2020
+ms.topic: how-to
 helpviewer_keywords:
 - open folder [Visual Studio]
 - anycode [Visual Studio]
@@ -11,36 +11,44 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d7a9459868d569a7466dccf92e4b548c0500bf80
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 68665acfcc3ea00f118dc19cf155cb3e6f5d1b36
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596288"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769665"
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>Desenvolver código no Visual Studio sem projetos nem soluções
 
 Abra o código em praticamente todos os tipos de projeto baseado em diretório no Visual Studio sem a necessidade de um arquivo de projeto ou de solução. Isso significa que você pode, por exemplo, clonar um repositório no GitHub, abri-lo diretamente no Visual Studio e começar o desenvolvimento sem precisar criar uma solução ou um projeto. Se for necessário, você pode especificar as tarefas de compilação personalizadas e iniciar os parâmetros por meio de arquivos JSON simples.
 
-Depois de abrir seus arquivos de código no Visual Studio, **o Solution Explorer** exibe todos os arquivos da pasta. Você pode clicar em qualquer arquivo para começar a editá-lo. Em segundo plano, o Visual Studio inicia a indexação dos arquivos para habilitar os recursos de IntelliSense, navegação e refatoração. À medida que você edita, cria, move ou exclui arquivos, o Visual Studio rastreia as alterações automaticamente e atualiza continuamente seu índice do IntelliSense. O código será exibido com a colorização de sintaxe e, em muitos casos, incluirá o preenchimento instrução básico do IntelliSense.
+Depois de abrir seus arquivos de código no Visual Studio, **Gerenciador de soluções** exibe todos os arquivos na pasta. Você pode clicar em qualquer arquivo para começar a editá-lo. Em segundo plano, o Visual Studio inicia a indexação dos arquivos para habilitar os recursos de IntelliSense, navegação e refatoração. À medida que você edita, cria, move ou exclui arquivos, o Visual Studio rastreia as alterações automaticamente e atualiza continuamente seu índice do IntelliSense. O código será exibido com a colorização de sintaxe e, em muitos casos, incluirá o preenchimento instrução básico do IntelliSense.
 
 ## <a name="open-any-code"></a>Abra qualquer código
 
-Você pode abrir o código no Visual Studio usando uma destas maneiras:
+Você pode abrir o código no Visual Studio das seguintes maneiras:
 
-- Na barra de menus do Visual Studio, escolha **Pasta** > **aberta de** > **arquivos**e navegue até o local do código.
+- Na barra de menus do Visual Studio, escolha **arquivo**  >  **abrir**  >  **pasta**e, em seguida, navegue até o local do código.
 
 - No menu de contexto (acesso por clique com o botão direito do mouse) de uma pasta que contém o código, escolha o comando **Abrir no Visual Studio**.
 
 ::: moniker range="vs-2017"
-- Escolha o link **'Pasta aberta'** na **página inicial do**estúdio visual .
+- Escolha o link **abrir pasta** na **página inicial**do Visual Studio.
+
+    > [!IMPORTANT]
+    > Nem todo o código pode ser aberto usando o link **abrir pasta** da **página inicial**do Visual Studio. Por exemplo, se o arquivo de código tiver sido salvo como parte de uma solução &mdash; em outras palavras, em um arquivo. sln, &mdash; você deverá usar uma das outras opções listadas aqui para abrir seu código.
+
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 - Escolha o link **Abrir Pasta** na janela de início.
+
+    > [!IMPORTANT]
+    > Nem todo o código pode ser aberto usando o link **abrir pasta** da janela inicial do Visual Studio. Por exemplo, se o arquivo de código tiver sido salvo como parte de uma solução &mdash; em outras palavras, em um arquivo. sln, &mdash; você deverá usar uma das outras opções listadas aqui para abrir seu código.
+
 ::: moniker-end
 
-- Se você é um usuário de teclado, **pressione Ctrl**+**Shift**+**Alt**+**O** no Visual Studio.
+- Se você for um usuário de teclado, pressione **Ctrl** + **Shift** + **ALT** + **O** no Visual Studio.
 
 - Abra o código de um repositório GitHub clonado.
 
@@ -54,7 +62,7 @@ O exemplo a seguir mostra como clonar um repositório GitHub e, em seguida, abri
 
    ![Botão de clone do GitHub](./media/VSIDE_Code_Clone.png)
 
-1. No Visual Studio, escolha a guia **Team Explorer** para abrir o **Team Explorer**. Se você não ver a guia, abra-a no **View** > **Team Explorer**.
+1. No Visual Studio, escolha a guia **Team Explorer** para abrir **Team Explorer**. Se você não vir a guia, abra-a em **Exibir**  >  **Team Explorer**.
 
 1. No Team Explorer, na seção **Repositórios Git Locais**, escolha o comando **Clonar** e, em seguida, cole a URL da página do GitHub na caixa de texto.
 
@@ -62,11 +70,11 @@ O exemplo a seguir mostra como clonar um repositório GitHub e, em seguida, abri
 
 1. Escolha o botão **Clonar** para clonar os arquivos do projeto para um repositório Git local. Dependendo do tamanho do repositório, esse processo poderá levar vários minutos.
 
-1. Depois que o repo tiver sido clonado para o seu sistema, no **Team Explorer,** escolha o comando **Abrir** no menu contexto (clique com o botão direito do mouse) do repo recém-clonado.
+1. Depois que o repositório for clonado para o seu sistema, em **Team Explorer**, escolha o comando **abrir** no menu de contexto (clique com o botão direito do mouse) do repositório recentemente clonado.
 
    ![Repositório clonado](./media/VSIDE_Code_Clone3.png)
 
-1. Escolha o **comando Mostrar pasta Exibir** para exibir os arquivos no Solution **Explorer**.
+1. Escolha o comando **Mostrar exibição de pasta** para exibir os arquivos em **Gerenciador de soluções**.
 
    ![Mostrar exibição de pasta](./media/VSIDE_Code_Clone3_show.png)
 
@@ -118,6 +126,6 @@ O texto do botão **Iniciar** muda para refletir que o projeto é o item de inic
 ## <a name="see-also"></a>Confira também
 
 - [Personalizar as tarefas de depuração e build](../ide/customize-build-and-debug-tasks-in-visual-studio.md)
-- [Projetos de pasta aberta para C++](/cpp/build/open-folder-projects-cpp)
+- [Projetos Open Folder para C++](/cpp/build/open-folder-projects-cpp)
 - [Projetos CMake em C++](/cpp/build/cmake-projects-in-visual-studio)
 - [Escrevendo código no editor de código e texto](../ide/writing-code-in-the-code-and-text-editor.md)

@@ -1,7 +1,7 @@
 ---
 title: Como definir uma instância de método | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +15,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0e21900e87278ad500ee8497d1dd0c49350695d1
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 170982a5d4abe33ca8cd705a979acc0737185a9c
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981804"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016832"
 ---
 # <a name="how-to-define-a-method-instance"></a>Como definir uma instância de método
   Você deve definir pelo menos uma instância de método para cada método em seu modelo.
 
- Adicione uma instância de método usando a janela **detalhes do método do BDC** . Quando você adiciona a instância do método, o Visual Studio adiciona um elemento `<MethodInstance>` ao XML do arquivo de modelo em seu projeto. Para obter mais informações sobre os atributos de um elemento `<MethodInstance>`, consulte [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
+ Adicione uma instância de método usando a janela **detalhes do método do BDC** . Quando você adiciona a instância do método, o Visual Studio adiciona um `<MethodInstance>` elemento ao XML do arquivo de modelo em seu projeto. Para obter mais informações sobre os atributos de um `<MethodInstance>` elemento, consulte [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
 
 ### <a name="to-define-a-method-instance"></a>Para definir uma instância de método
 
@@ -35,7 +34,7 @@ ms.locfileid: "72981804"
 
      Uma nova instância de método aparece abaixo do nó **instâncias** .
 
-3. Na barra de menus, escolha **exibir** > **janela Propriedades**.
+3. Na barra de menus, escolha **Exibir**  >  **janela de propriedades**.
 
 4. Na janela **Propriedades** , defina as propriedades da instância do método. Para obter mais informações sobre cada propriedade, consulte [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
 

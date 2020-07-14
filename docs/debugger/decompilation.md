@@ -1,7 +1,7 @@
 ---
-title: Descompilar o código .NET durante a depuração | Microsoft Docs
+title: Descompilar código .NET durante a depuração | Microsoft Docs
 ms.date: 2/2/2020
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 helpviewer_keywords:
@@ -13,103 +13,103 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: d63c05120842d52dd54359e128d0cc5f2a195817
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b7d9ed2f2ceeae21b85fdb8227e65715cb07bc8b
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79508739"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350557"
 ---
-# <a name="generate-source-code-from-net-assemblies-while-debugging"></a>Gerar código-fonte a partir de conjuntos .NET durante a depuração
+# <a name="generate-source-code-from-net-assemblies-while-debugging"></a>Gerar código-fonte de assemblies do .NET durante a depuração
 
-Ao depurar um aplicativo .NET, você pode descobrir que deseja visualizar o código-fonte que você não tem. Por exemplo, quebrar uma exceção ou usar a pilha de chamadas para navegar até um local de origem.
+Ao depurar um aplicativo .NET, você pode achar que deseja exibir o código-fonte que você não tem. Por exemplo, dividindo uma exceção ou usando a pilha de chamadas para navegar até um local de origem.
 
 > [!NOTE]
-> * A geração de código-fonte (descompilação) está disponível apenas para aplicativos .NET e é baseada no projeto [ILSpy](https://github.com/icsharpcode/ILSpy) de código aberto.
-> * Decompilation só está disponível no Visual Studio 2019 16.5 e posterior.
-> * A aplicação do [atributo SuppressIldasmAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.compilerservices.suppressildasmattribute) a um conjunto ou módulo impede o Visual Studio de tentar descompilação.
+> * A geração de código-fonte (descompilação) só está disponível para aplicativos .NET e é baseada no projeto [ILSpy](https://github.com/icsharpcode/ILSpy) de código-fonte aberto.
+> * A descompilação só está disponível no Visual Studio 2019 16,5 e posterior.
+> * Aplicar o atributo [SuppressIldasmAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.compilerservices.suppressildasmattribute) a um assembly ou módulo impede que o Visual Studio tente a descompilação.
 
 ## <a name="generate-source-code"></a>Gerar código-fonte
 
-Quando você está depurando e nenhum código fonte está disponível, o Visual Studio mostra o documento **Fonte Não Encontrado** ou se você não tiver símbolos para a montagem, o documento **Sem Símbolos Carregados.** Ambos os documentos têm uma opção **de código-fonte Decompilaque** gera código C# para a localização atual. O código C# gerado pode então ser usado como qualquer outro código fonte. Você pode visualizar o código, inspecionar variáveis, definir pontos de interrupção e assim por diante.
+Quando você estiver Depurando e nenhum código-fonte estiver disponível, o Visual Studio mostrará o documento de **origem não encontrado** ou, se você não tiver símbolos para o assembly, o documento **nenhum símbolo carregado** . Ambos os documentos têm uma opção de **código-fonte de descompilação** que gera código C# para o local atual. O código C# gerado pode ser usado assim como qualquer outro código-fonte. Você pode exibir o código, inspecionar variáveis, definir pontos de interrupção e assim por diante.
 
-### <a name="no-symbols-loaded"></a>Sem símbolos carregados
+### <a name="no-symbols-loaded"></a>Nenhum símbolo carregado
 
-A ilustração a seguir mostra a mensagem **Sem Símbolos Carregados.**
+A ilustração a seguir mostra a mensagem **nenhum símbolo carregado** .
 
-![Captura de tela de nenhum documento carregado de símbolo](media/decompilation-no-symbol-found.png)
+![Captura de tela sem documento carregado de símbolo](media/decompilation-no-symbol-found.png)
 
-### <a name="source-not-found"></a>Fonte não encontrada
+### <a name="source-not-found"></a>Origem não encontrada
 
-A ilustração a seguir mostra a mensagem **Fonte Não Encontrada.**
+A ilustração a seguir mostra a mensagem **fonte não encontrada** .
 
-![Captura de tela de origem não encontrada documento](media/decompilation-no-source-found.png)
+![Captura de tela do documento fonte não encontrada](media/decompilation-no-source-found.png)
 
-## <a name="generate-and-embed-sources-for-an-assembly"></a>Gerar e incorporar fontes para uma montagem
+## <a name="generate-and-embed-sources-for-an-assembly"></a>Gerar e inserir fontes para um assembly
 
-Além de gerar código fonte para um local específico, você pode gerar todo o código fonte para um determinado conjunto .NET. Para fazer isso, vá para a janela **Módulos** e no menu de contexto de um conjunto .NET e selecione o comando **Decompile source code.** O Visual Studio gera um arquivo símbolo para a montagem e, em seguida, incorpora a fonte no arquivo símbolo. Em uma etapa posterior, você pode [extrair](#extract-and-view-the-embedded-source-code) o código fonte incorporado.
+Além de gerar o código-fonte para um local específico, você pode gerar todo o código-fonte para um determinado assembly .NET. Para fazer isso, vá para a janela **módulos** e, no menu de contexto de um assembly .net, e selecione o comando **descompilar código-fonte** . O Visual Studio gera um arquivo de símbolo para o assembly e, em seguida, insere a origem no arquivo de símbolo. Em uma etapa posterior, você pode [extrair](#extract-and-view-the-embedded-source-code) o código-fonte incorporado.
 
-![Captura de tela do menu de contexto de montagem na janela módulos com comando de fonte descompilação.](media/decompilation-decompile-source-code.png)
+![Captura de tela do menu de contexto do assembly na janela de módulos com o comando de origem de descompilação.](media/decompilation-decompile-source-code.png)
 
-## <a name="extract-and-view-the-embedded-source-code"></a>Extrair e visualizar o código-fonte incorporado
+## <a name="extract-and-view-the-embedded-source-code"></a>Extrair e exibir o código-fonte inserido
 
-Você pode extrair arquivos de origem que estão incorporados em um arquivo símbolo usando o comando **Extrato código-fonte** no menu de contexto da janela **Módulos.**
+Você pode extrair os arquivos de origem inseridos em um arquivo de símbolo usando o comando **extrair código-fonte** no menu de contexto da janela **módulos** .
 
-![Captura de tela do menu de contexto de montagem na janela módulos com comando extract sources.](media/decompilation-extract-source-code.png)
+![Captura de tela do menu de contexto do assembly na janela de módulos com o comando extrair fontes.](media/decompilation-extract-source-code.png)
 
-Os arquivos de origem extraídos são [adicionados](../ide/reference/miscellaneous-files.md)à solução como arquivos diversos . O recurso de arquivos diversos está desligado por padrão no Visual Studio. Você pode habilitar esse recurso a partir do **Ambiente de Ferramentas** > **Options** > **Documentos** > **do Ambiente** > Mostrar Arquivos Diversos na caixa de seleção**do Solution Explorer.** Sem habilitar esse recurso, você não poderá abrir o código fonte extraído.
+Os arquivos de origem extraídos são adicionados à solução como [arquivos diversos](../ide/reference/miscellaneous-files.md). O recurso de arquivos diversos está desativado por padrão no Visual Studio. Você pode habilitar esse recurso na caixa de seleção **ferramentas**  >  **Options**  >  documentos do**ambiente**  >  **Documents**  >  **Mostrar arquivos diversos na Gerenciador de soluções** . Sem habilitar esse recurso, você não poderá abrir o código-fonte extraído.
 
-![Captura de tela da página de opção de ferramentas com opção de arquivos diversos ativado.](media/decompilation-tools-options-misc-files.png)
+![Captura de tela da página opção de ferramentas com a opção diversos arquivos habilitada.](media/decompilation-tools-options-misc-files.png)
 
-Arquivos de origem extraídos aparecem nos arquivos diversos no **Solution Explorer**.
+Os arquivos de origem extraídos aparecem nos arquivos diversos em **Gerenciador de soluções**.
 
-![Captura de tela do explorador de soluções com arquivos diversos.](media/decompilation-solution-explorer.png)
+![Captura de tela do Gerenciador de soluções com arquivos diversos.](media/decompilation-solution-explorer.png)
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-### <a name="requires-break-mode"></a>Requer modo de quebra
+### <a name="requires-break-mode"></a>Requer o modo de interrupção
 
-A geração de código-fonte usando a compilação só é possível quando o depurador está no modo de quebra e o aplicativo é pausado. Por exemplo, o Visual Studio entra no modo de quebra quando atinge um ponto de ruptura ou uma exceção. Você pode facilmente acionar o Visual Studio para quebrar a próxima![vez](media/decompilation-break-all.png)que seu código é executado usando o comando **Break All** (Break all icon).
+A geração do código-fonte usando a descompilação só é possível quando o depurador está no modo de interrupção e o aplicativo é pausado. Por exemplo, o Visual Studio entra no modo de interrupção quando atinge um ponto de interrupção ou uma exceção. Você pode facilmente disparar o Visual Studio para interromper na próxima vez em que o seu código for executado usando o comando **Break All** ( ![ ícone interromper tudo ](media/decompilation-break-all.png) ).
 
 ### <a name="decompilation-limitations"></a>Limitações de descompilação
 
-A geração de código-fonte a partir do formato intermediário (IL) que é usado em conjuntos .NET tem algumas limitações inerentes. Como tal, o código-fonte gerado não se parece com o código fonte original. A maioria das diferenças estão em lugares onde as informações no código-fonte original não são necessárias em tempo de execução. Por exemplo, informações como espaço em branco, comentários e nomes de variáveis locais não são necessárias em tempo de execução. Recomendamos que você use a fonte gerada para entender como o programa está sendo executado e não como um substituto para o código fonte original.
+A geração do código-fonte do formato intermediário (IL) usado em assemblies .NET tem algumas limitações inerentes. Como tal, o código-fonte gerado não se parece com o código-fonte original. A maioria das diferenças é em locais onde as informações no código-fonte original não são necessárias no tempo de execução. Por exemplo, informações como espaço em branco, comentários e nomes de variáveis locais não são necessárias em tempo de execução. Recomendamos que você use a origem gerada para entender como o programa está em execução e não como uma substituição para o código-fonte original.
 
-### <a name="debug-optimized-or-release-assemblies"></a>Depuração otimizada ou lançamento de montagens
+### <a name="debug-optimized-or-release-assemblies"></a>Depurar assemblies otimizados ou de versão
 
-Ao depurar o código que foi descompilado de um conjunto que foi compilado usando otimizações de compiladores, você pode se deparar com os seguintes problemas:
-- Os pontos de interrupção podem nem sempre se ligar ao local de sourcing correspondente.
-- A pisada pode nem sempre passar para o local correto.
+Ao depurar o código que foi descompilado de um assembly que foi compilado usando otimizações do compilador, você pode ter os seguintes problemas:
+- Os pontos de interrupção nem sempre podem ser associados ao local de fornecimento correspondente.
+- A depuração pode nem sempre passar para o local correto.
 - As variáveis locais podem não ter nomes precisos.
 - Algumas variáveis podem não estar disponíveis para avaliação.
 
-Mais detalhes podem ser encontrados no problema do GitHub: [integração ICSharpCode.Decompiler no VS Debugger](https://github.com/icsharpcode/ILSpy/issues/1901).
+Mais detalhes podem ser encontrados no problema do GitHub: [integração do ICSharpCode. decompilador ao depurador do vs](https://github.com/icsharpcode/ILSpy/issues/1901).
 
-### <a name="decompilation-reliability"></a>Confiabilidade da compilação
+### <a name="decompilation-reliability"></a>Confiabilidade de descompilação
 
-Uma porcentagem relativamente pequena de tentativas de descompilação pode resultar em falha. Isso é devido a um erro de referência nulo de ponto de seqüência no ILSpy.  Nós mitigamos o fracasso pegando essas questões e falhando graciosamente na tentativa de descompilação.
+Uma porcentagem relativamente pequena de tentativas de descompilação pode resultar em falha. Isso ocorre devido a um erro de referência nula de ponto de sequência em ILSpy.  Reduzimos a falha ao detectar esses problemas e, normalmente, falha na tentativa de descompilação.
 
-Mais detalhes podem ser encontrados no problema do GitHub: [integração ICSharpCode.Decompiler no VS Debugger](https://github.com/icsharpcode/ILSpy/issues/1901).
+Mais detalhes podem ser encontrados no problema do GitHub: [integração do ICSharpCode. decompilador ao depurador do vs](https://github.com/icsharpcode/ILSpy/issues/1901).
 
 ### <a name="limitations-with-async-code"></a>Limitações com código assíncrono
 
-Os resultados de descompilação de módulos com padrões de código assincronico/espera podem estar incompletos ou falhar completamente. A implementação do ILSpy de máquinas de estado de async/aguardar e produzir apenas parcialmente implementadas. 
+Os resultados de descompilação de módulos com padrões de código Async/Await podem estar incompletos ou falhar inteiramente. A implementação ILSpy de Async/Await e yield State-Machines é implementada apenas parcialmente. 
 
-Mais detalhes podem ser encontrados no problema do GitHub: [PDB Generator Status](https://github.com/icsharpcode/ILSpy/issues/1422).
+Mais detalhes podem ser encontrados no problema do GitHub: [status do gerador de PDB](https://github.com/icsharpcode/ILSpy/issues/1422).
 
 ### <a name="just-my-code"></a>Apenas Meu Código
 
-As configurações [do Just My Code (JMC)](https://docs.microsoft.com/visualstudio/debugger/just-my-code) permitem que o Visual Studio ultrapasse o sistema, a estrutura, a biblioteca e outras chamadas não-usuários. Durante uma sessão de depuração, a janela **Módulos** mostra quais módulos de código o depurador está tratando como Meu Código (código do usuário).
+As configurações de [apenas meu código (JMC)](https://docs.microsoft.com/visualstudio/debugger/just-my-code) permitem que o Visual Studio Percorra o sistema, a estrutura, a biblioteca e outras chamadas que não são de usuário. Durante uma sessão de depuração, a janela **módulos** mostra quais módulos de código o depurador está tratando como meu código (código do usuário).
 
-A descompilação de módulos otimizados ou de lançamento produz código não-usuário. Se o depurador quebrar seu código não-usuário descompilado, por exemplo, a janela **Sem Origem** será exibida. Para desativar Just My Code, navegue até as**opções** **de ferramentas** > (ou **depuração** > **de opções)**> **Depuração** > **Geral**e, em seguida, desmarque Ativar apenas **meu código**.
+A descompilação de módulos otimizados ou de versão produz código que não é de usuário. Se o depurador interromper o código de não-usuário descompilado, por exemplo, a janela **nenhuma fonte** será exibida. Para desabilitar apenas meu código, navegue até **ferramentas**  >  **Opções** (ou **Debug**  >  **Opções**de depuração) > **depuração**  >  **geral**e, em seguida, desmarque **habilitar apenas meu código**.
 
 ### <a name="extracted-sources"></a>Fontes extraídas
 
-O código-fonte extraído de um conjunto tem as seguintes limitações:
-- O nome e a localização dos arquivos gerados não são configuráveis.
+O código-fonte extraído de um assembly tem as seguintes limitações:
+- O nome e o local dos arquivos gerados não são configuráveis.
 - Os arquivos são temporários e serão excluídos pelo Visual Studio.
-- Os arquivos são colocados em uma única pasta e qualquer hierarquia de pasta que as fontes originais tinham não é usada.
-- O nome do arquivo para cada arquivo contém um hash de soma de cheques do arquivo.
+- Os arquivos são colocados em uma única pasta e qualquer hierarquia de pastas que as fontes originais tinham não ser usada.
+- O nome de arquivo para cada arquivo contém um hash de soma de verificação do arquivo.
 
-### <a name="generated-code-is-c-only"></a>O código gerado é c# apenas
-Decompilação só gera arquivos de código-fonte em C#. Não há opção de gerar arquivos em qualquer outro idioma.
+### <a name="generated-code-is-c-only"></a>O código gerado é somente C#
+A descompilação gera apenas arquivos de código-fonte em C#. Não há nenhuma opção para gerar arquivos em qualquer outro idioma.

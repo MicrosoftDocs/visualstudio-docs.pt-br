@@ -1,7 +1,7 @@
 ---
 title: Criar soluções e projetos
 ms.date: 02/06/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.openprojectfromweb
 - VS.ToolsOptionsPages.Projects.General
@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 503b343299f7b30e9f5e834099274215b262a635
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 19a836847aa01038bdbb015612c4fb4a3964d9a9
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79301814"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770547"
 ---
 # <a name="create-solutions-and-projects"></a>Criar soluções e projetos
 
@@ -46,14 +46,14 @@ Para obter informações sobre como criar um projeto com base em um modelo, veja
 
 Se você tem uma coleção de arquivos de origem de código, é possível adicioná-los facilmente a um projeto.
 
-1. No menu, escolha **Arquivo** > **novo** > **projeto do código existente**.
+1. No menu, escolha **arquivo**  >  **novo**  >  **projeto do código existente**.
 
 1. No assistente **Criação de Projeto de Arquivos de Código Existentes**, escolha o tipo de projeto que você deseja na caixa de listagem suspensa **Que tipo de projeto deseja criar?** e, em seguida, escolha o botão **Avançar**.
 
 1. No assistente, navegue até o local dos arquivos e, em seguida, insira um nome para o novo projeto na caixa **Nome**. Quando terminar, escolha o botão **Concluir**.
 
 > [!NOTE]
-> Essa opção funciona melhor para uma coleção relativamente simples de arquivos. Atualmente, apenas os tipos de projeto C++, Apache Cordova, Visual Basic e C# são suportados.
+> Essa opção funciona melhor para uma coleção relativamente simples de arquivos. Atualmente, há suporte apenas para os tipos de projeto C++, Apache Cordova, Visual Basic e C#.
 
 ## <a name="add-files-to-a-solution"></a>Adicionar arquivos a uma solução
 
@@ -76,7 +76,7 @@ Para especificar uma versão do .NET Framework, escolha o menu suspenso **Framew
 
 ::: moniker range=">=vs-2019"
 
-Para especificar uma versão .NET Framework, escolha o menu suspenso **''Estrutura'** na **página Criar um novo projeto.**
+Para especificar uma versão .NET Framework, escolha o menu suspenso **estrutura** na página **criar um novo projeto** .
 
 ![Seletor de Framework em configurar um novo projeto](media/vs-2019/configure-new-project-framework.png)
 
@@ -88,7 +88,7 @@ Você também pode criar soluções vazias que não tenham projetos. Isso é pre
 
 ### <a name="to-create-an-empty-solution"></a>Para criar uma solução vazia
 
-1. Na barra de menu, escolha **Arquivo** > **Novo** > **Projeto**.
+1. Na barra de menus, escolha **arquivo**  >  **novo**  >  **projeto**.
 
 ::: moniker range="vs-2017"
 
@@ -122,16 +122,16 @@ Como mencionado anteriormente, você também pode abrir arquivos de código sem 
 
 Se você criar um projeto com base em .NET sem especificar um local de disco, ele será um projeto temporário. Os projetos temporários permitem fazer experimentos com projetos do .NET. A qualquer momento, enquanto você está trabalhando com um projeto temporário, é possível escolher salvá-lo ou descartá-lo.
 
-Para criar um projeto temporário, primeiro vá para **Tools** > **Options** > **Projects and Solutions** > **General**, e desmarque os novos projetos save **quando criado** saque-box. Em seguida, abra a caixa de diálogo **Novo projeto** como de costume.
+Para criar um projeto temporário, primeiro vá para **ferramentas**  >  **Opções**  >  **projetos e soluções**  >  **geral**e desmarque a caixa de seleção **salvar novos projetos quando criados** . Em seguida, abra a caixa de diálogo **Novo projeto** como de costume.
 
 ::: moniker-end
 
 ## <a name="delete-a-solution-project-or-item"></a>Excluir uma solução, um projeto ou um item
 
-Você pode excluir as soluções e seu conteúdo permanentemente, mas não usando o IDE do Visual Studio. A exclusão de itens dentro do Visual Studio somente os remove da solução ou do projeto atual. Para excluir permanentemente uma solução ou outro componente do sistema, use o File Explorer para excluir a pasta que contém os arquivos de solução *.sln* e *.suo.* No entanto, antes de excluir permanentemente uma solução, é recomendável que você faça backup de todos os projetos ou arquivos, caso sejam necessários novamente.
+Você pode excluir as soluções e seu conteúdo permanentemente, mas não usando o IDE do Visual Studio. A exclusão de itens dentro do Visual Studio somente os remove da solução ou do projeto atual. Para excluir permanentemente uma solução ou outro componente do seu sistema, use o explorador de arquivos para excluir a pasta que contém os arquivos de solução *. sln* e *. suo* . No entanto, antes de excluir permanentemente uma solução, é recomendável que você faça backup de todos os projetos ou arquivos, caso sejam necessários novamente.
 
 > [!NOTE]
-> O arquivo *.suo* é um arquivo oculto que não é exibido nas configurações padrão do Explorador de Arquivos. Para mostrar arquivos ocultos, no menu **Exibir** do Explorador de Arquivos, marque a caixa de seleção **Itens Ocultos**.
+> O arquivo *. suo* é um arquivo oculto que não é exibido sob as configurações padrão do explorador de arquivos. Para mostrar arquivos ocultos, no menu **Exibir** do Explorador de Arquivos, marque a caixa de seleção **Itens Ocultos**.
 
 ### <a name="permanently-delete-a-solution"></a>Excluir uma solução permanentemente
 
@@ -145,5 +145,5 @@ Você pode excluir as soluções e seu conteúdo permanentemente, mas não usand
 
 - [Soluções e projetos](../ide/solutions-and-projects-in-visual-studio.md)
 - [Repositórios de software livre da Microsoft no GitHub](https://github.com/Microsoft)
-- [Amostras de código de desenvolvedor](https://code.msdn.microsoft.com/)
+- [Exemplos de código do desenvolvedor](https://code.msdn.microsoft.com/)
 - [Criar projetos (Visual Studio para Mac)](/visualstudio/mac/create-new-projects)

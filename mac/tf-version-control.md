@@ -6,12 +6,13 @@ ms.author: jomatthi
 ms.date: 09/02/2019
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
-ms.openlocfilehash: e56aec03aabe818731c65acb30eafcc18f170ac3
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: troubleshooting
+ms.openlocfilehash: c51f3cd50598cd0c33b019c09f95554cc5f9058b
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "73714516"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950496"
 ---
 # <a name="does-visual-studio-for-mac-support-team-foundation-version-control"></a>O Visual Studio para Mac oferece suporte para o Controle de Versão do Team Foundation?
 
@@ -21,7 +22,7 @@ ms.locfileid: "73714516"
 
 ## <a name="alternative-version-control-options-in-visual-studio-for-mac"></a>Opções alternativas de controle de versão no Visual Studio para Mac
 
-Para obter a melhor experiência de controle de versão no macOS, recomendamos o uso do **Git** em vez do Team Foundation Version Control (TFVC). 
+Para obter a melhor experiência de controle de versão no macOS, é recomendável usar **git** em vez de controle de versão do Team Foundation (TFVC). 
 
 O Git é suportado no Visual Studio para Mac e é a opção padrão para repositórios hospedados no Team Foundation Server (TFS)/Azure DevOps. Para saber mais sobre como usar o Git com o TFS/Azure DevOps, confira o guia [Configurar um Repositório Git](/visualstudio/mac/set-up-git-repository).
 
@@ -29,14 +30,14 @@ O Git é suportado no Visual Studio para Mac e é a opção padrão para reposit
 
 Embora o Visual Studio para Mac não forneça oficialmente o suporte para TFVC, este guia proporciona algumas soluções alternativas para trabalhar com TFVC no macOS. Se você estiver usando o TFVC para o controle de versão hoje, veja abaixo algumas soluções que você poderá usar para acessar seu código-fonte hospedado no TFVC:
 
-* Opção 1. [Use o Visual Studio Code e a extensão Azure Repos, para uma interface do usuário gráfica](#use-visual-studio-code-and-the-azure-repos-extension)
+* Opção 1. [Usar Visual Studio Code e a extensão Azure Repos para uma interface gráfica do usuário](#use-visual-studio-code-and-the-azure-repos-extension)
 * Opção 2. [Conectar-se ao seu repositório usando o cliente de linha de comando Team Explorer Everywhere (TEE-CLC)](#connecting-using-the-team-explorer-everywhere-command-line-client)
 
-### <a name="option-1--use-visual-studio-code-and-the-azure-repos-extension"></a>Opção 1. <a id="use-visual-studio-code-and-the-azure-repos-extension"></a>Use o Visual Studio Code e a extensão Azure Repos
+### <a name="option-1--use-visual-studio-code-and-the-azure-repos-extension"></a>Opção 1. <a id="use-visual-studio-code-and-the-azure-repos-extension"></a>Usar Visual Studio Code e a extensão de Azure Repos
 
 Se você gosta de trabalhar com uma interface gráfica para gerenciar seus arquivos no controle de versão, a extensão Azure Repos para o Visual Studio Code fornece uma solução com suporte da Microsoft. Para começar, faça o download do [Visual Studio Code](https://code.visualstudio.com) e saiba como [configurar a extensão do Azure Repos](https://marketplace.visualstudio.com/items?itemName=ms-vsts.team).
 
-### <a name="option-2--connecting-using-the-team-explorer-everywhere-command-line-client"></a>Opção 2. <a id="connecting-using-the-team-explorer-everywhere-command-line-client"></a>Conectando usando o Cliente de Linha de Comando do Explorador de Equipe em Todos os Lugares
+### <a name="option-2--connecting-using-the-team-explorer-everywhere-command-line-client"></a>Opção 2. <a id="connecting-using-the-team-explorer-everywhere-command-line-client"></a>Conectando usando o cliente de linha de comando Team Explorer Everywhere
 
 > [!IMPORTANT]
 > Conforme o arquivo Leiame do Team Explorer Everywhere, este projeto [não recebe mais manutenção](https://github.com/microsoft/team-explorer-everywhere).
@@ -106,6 +107,6 @@ Para aprender mais sobre os comandos mencionados aqui, ou outros, você pode usa
 
 `tf help`
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Desenvolver e compartilhar seu código no TFVC usando o Visual Studio (no Windows)](/azure/devops/repos/tfvc/share-your-code-in-tfvc-vs)

@@ -1,7 +1,7 @@
 ---
-title: 'Como: Habilitar o AutoStart para instalações por CD | Microsoft Docs'
+title: Como habilitar a inicialização automática para instalações de CD | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,34 +16,34 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 66f5510ae63507aebb97a7f8bdfd3e367f1afc85
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6ff96cdfe412e5016c04daa2b22922b0ec47a3a3
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62928514"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382439"
 ---
-# <a name="how-to-enable-autostart-for-cd-installations"></a>Como: Habilitar o Início Automático para instalações do CD
-Ao implantar uma [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo por meio de uma mídia removível, como CD-ROM ou DVD-ROM, você pode habilitar `AutoStart` para que o [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo seja iniciado automaticamente quando a mídia for inserida.
+# <a name="how-to-enable-autostart-for-cd-installations"></a>Como habilitar o Início Automático para instalações por CD
+Ao implantar um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo por meio de mídia removível, como CD-ROM ou DVD-ROM, você pode habilitar `AutoStart` para que o [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo seja iniciado automaticamente quando a mídia for inserida.
 
- `AutoStart` pode ser habilitada na **Publish** página do **Designer de projeto**.
+ `AutoStart`pode ser habilitado na página **publicar** do designer de **projeto**.
 
 ### <a name="to-enable-autostart"></a>Para habilitar o AutoStart
 
 1. Com um projeto selecionado no **Gerenciador de Soluções**, no menu **Projeto**, clique em **Propriedades**.
 
-2. Clique o **publicar** guia.
+2. Clique na guia **Publicar**.
 
-3. Clique o **opções** botão.
+3. Clique no botão **Opções** .
 
-     O **opções de publicação** caixa de diálogo é exibida.
+     A caixa de diálogo **Opções de publicação** é exibida.
 
-4. Clique em **implantação**.
+4. Clique em **Implantação**.
 
-5. Selecione o **instalações para CD, iniciar automaticamente a instalação quando o CD é inserido** caixa de seleção.
+5. Marque a caixa **de seleção para instalações de CD, iniciar a instalação automaticamente quando o CD for inserido** .
 
-     Uma *Autorun* arquivo será copiado para o local de publicação quando o aplicativo é publicado.
+     Um arquivo *autorun. inf* será copiado para o local de publicação quando o aplicativo for publicado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Publicar aplicativos ClickOnce](../deployment/publishing-clickonce-applications.md)
-- [Como: Publicar um aplicativo ClickOnce usando o assistente de publicação](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+- [Como publicar um aplicativo ClickOnce usando o assistente de publicação](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

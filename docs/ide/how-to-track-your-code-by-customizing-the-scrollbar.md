@@ -1,18 +1,18 @@
 ---
 title: Modo de mapa e modo de barra da barra de rolagem
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c66cda1b90d11a44f744faf0012a3e41212d33dd
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 5d1b659dabed2337013ffb84ff48277f0edacb09
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79988569"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283977"
 ---
 # <a name="how-to-customize-the-scroll-bar"></a>Como: personalizar a barra de rolagem
 
@@ -54,7 +54,7 @@ O *modo de barra* exibe indicadores de anotação na barra de rolagem. Clicando 
 
 ### <a name="map-mode"></a>Modo de mapa
 
-*O modo mapa* exibe linhas de código, em miniatura, na barra de rolagem. É possível escolher a largura da coluna do mapa selecionando um valor em **Visão geral do Código-fonte**. Para habilitar uma visualização maior do código quando você parar o ponteiro no mapa, selecione a opção **Mostrar Dica de Ferramenta de Visualização**. As regiões recolhidas ficam sombreadas de forma diferente e são expandidas quando você clica duas vezes nelas.
+O *modo de mapa* exibe linhas de código, em miniatura, na barra de rolagem. É possível escolher a largura da coluna do mapa selecionando um valor em **Visão geral do Código-fonte**. Para habilitar uma visualização maior do código quando você parar o ponteiro no mapa, selecione a opção **Mostrar Dica de Ferramenta de Visualização**. As regiões recolhidas ficam sombreadas de forma diferente e são expandidas quando você clica duas vezes nelas.
 
 > [!TIP]
 > Você pode desabilitar a exibição de código em miniatura no modo de mapa definindo a opção **Visão geral do código-fonte** como **Desabilitada**. Se a opção **Mostrar Dica de Ferramenta de Visualização** estiver selecionada, você ainda verá uma visualização do código nesse local ao passar o ponteiro do mouse sobre a barra de rolagem e, o cursor ainda o levará para esse local no arquivo quando você clicar.
@@ -68,8 +68,8 @@ A imagem a seguir mostra a opção **Mostrar dica de ferramenta de visualizaçã
 ![Barra de rolagem do Visual Studio com uma dica de ferramenta](../ide/media/enhancedscrollbarsearchtooltip.png)
 
 > [!TIP]
-> Para alterar as cores que você vê no modo mapa, escolha **Ferramentas** > **Opções** > **De Ambiente** > **Fontes e Cores**. Em seguida, em **Itens de exibição,** escolha qualquer um dos itens que são precedidos com "Visão geral", faça as alterações de cor desejadas e, em seguida, escolha **OK**.
+> Para alterar as cores que você vê no modo de mapa, escolha **ferramentas**  >  **Opções**  >  **Environment**  >  **fontes e cores**do ambiente. Em seguida, em **itens de exibição**, escolha qualquer um dos itens precedidos de "visão geral", faça as alterações de cor desejadas e escolha **OK**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Recursos do editor de código](../ide/writing-code-in-the-code-and-text-editor.md)

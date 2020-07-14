@@ -1,7 +1,7 @@
 ---
 title: 'Como: adicionar um parâmetro a um método | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,12 +17,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eb1a1c1e8f11ac6daa46f9fe1468a1ff3509e135
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 6d0496d0fd6a347683d56630990e50af585520ba
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986231"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016711"
 ---
 # <a name="how-to-add-a-parameter-to-a-method"></a>Como: adicionar um parâmetro a um método
   Use um parâmetro para passar informações para o método ou para retornar informações de um método. Todos os métodos devem ter pelo menos um parâmetro. Para obter mais informações sobre como criar um parâmetro para dar suporte ao tipo de método que você deseja criar, consulte [criando um modelo de conectividade de dados corporativos](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -33,7 +32,7 @@ ms.locfileid: "72986231"
 
 1. Adicione um método a uma entidade.
 
-2. Na barra de menus, escolha **exibir** > **outros** detalhes do **método**do Windows > BDC.
+2. Na barra de menus, escolha **Exibir**  >  **outros**  >  **detalhes do método**do Windows BDC.
 
      A janela **detalhes do método BDC** é aberta. Para obter mais informações, consulte [visão geral das ferramentas de design de modelo do BDC](../sharepoint/bdc-model-design-tools-overview.md).
 
@@ -43,7 +42,7 @@ ms.locfileid: "72986231"
 
      Um novo parâmetro é exibido abaixo do nó **parâmetros** .
 
-5. Na barra de menus, escolha **exibir** > **janela Propriedades**.
+5. Na barra de menus, escolha **Exibir**  >  **janela de propriedades**.
 
 6. Na janela **Propriedades** , defina a propriedade **Name** como qualquer nome que faça sentido. Por exemplo, se o método retornar clientes, você poderá nomear o método **GetCustomers**.
 

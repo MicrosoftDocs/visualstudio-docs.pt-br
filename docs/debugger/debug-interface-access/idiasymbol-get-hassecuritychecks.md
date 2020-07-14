@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_hasSecurityChecks | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 11fd7f70da9ae47b9858f8265d0608e3d6994ef7
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a8d544a2172655df91e7156bc3f0d53b236490d1
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740464"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463669"
 ---
 # <a name="idiasymbolget_hassecuritychecks"></a>IDiaSymbol::get_hasSecurityChecks
 Recupera um sinalizador que especifica se a compiland ou a função foi compilada com verificações de segurança de saturação de buffer (por exemplo, a opção de compilador [/GS (verificação de segurança de buffer)](/cpp/build/reference/gs-buffer-security-check) ).
@@ -33,13 +33,13 @@ HRESULT get_hasSecurityChecks(
 #### <a name="parameters"></a>Parâmetros
  `pFlag`
 
-fora Retorna `TRUE` se a função tiver verificações de segurança; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se a função tem verificações de segurança; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
-> Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
+> Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,6 +48,6 @@ fora Retorna `TRUE` se a função tiver verificações de segurança; caso contr
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [/GS (verificação de segurança do buffer)](/cpp/build/reference/gs-buffer-security-check)

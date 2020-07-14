@@ -1,7 +1,7 @@
 ---
 title: StackFrameTypeEnum | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 20b0c9dd106e5744a369ddaa6cb870788f7464d3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3f83cdb163881366a1a0bede95a07e1dae1fc50a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738548"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461094"
 ---
 # <a name="stackframetypeenum"></a>StackFrameTypeEnum
 Especifica o tipo de quadro de pilha.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```C++
 enum StackFrameTypeEnum {
@@ -36,17 +36,17 @@ enum StackFrameTypeEnum {
 ```
 
 ## <a name="elements"></a>Elementos
-ponteiro de quadro `FrameTypeFPO` omitido; Informações de FPO disponíveis.
+`FrameTypeFPO`Ponteiro de quadro omitido; Informações de FPO disponíveis.
 
-`FrameTypeTrap` quadro de interceptação do kernel.
+`FrameTypeTrap`Quadro de interceptação do kernel.
 
-`FrameTypeTSS` quadro de interceptação do kernel.
+`FrameTypeTSS`Quadro de interceptação do kernel.
 
-`FrameTypeStandard` o quadro de pilha do EBP padrão.
+`FrameTypeStandard`Quadro de pilha EBP padrão.
 
-ponteiro de quadro `FrameTypeFrameData` omitido; Informações de dados de quadro disponíveis.
+`FrameTypeFrameData`Ponteiro de quadro omitido; Informações de dados de quadro disponíveis.
 
-`FrameTypeUnknown` quadro que não tem nenhuma informação de depuração.
+`FrameTypeUnknown`Quadro que não tem nenhuma informação de depuração.
 
 ## <a name="remarks"></a>Comentários
 Os valores nessa enumeração são retornados por uma chamada para o método [IDiaStackFrame:: get_Type](../../debugger/debug-interface-access/idiastackframe-get-type.md) .
@@ -54,6 +54,6 @@ Os valores nessa enumeração são retornados por uma chamada para o método [ID
 ## <a name="requirements"></a>Requisitos
 Cabeçalho: cvconst. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Enumerações e estruturas](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaStackFrame::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)

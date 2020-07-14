@@ -1,7 +1,7 @@
 ---
 title: Adicionar uma fonte de dados a um teste de desempenho para Web
 ms.date: 10/03/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Web performance tests, walkthroughs
 - Web performance tests, data binding (database)
@@ -9,12 +9,12 @@ ms.assetid: 2ada376d-f168-455d-9643-6acb535360c1
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7c7f947be01500b0d45b81d404206722ac71084a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 94ad53e4ac3d65bfe6cf08bf03f1f79c2075e03d
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75565403"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289060"
 ---
 # <a name="add-a-data-source-to-a-web-performance-test"></a>Adicionar uma fonte de dados a um teste de desempenho para Web
 
@@ -249,7 +249,7 @@ Sua solução também deve incluir um teste de desempenho Web que navegará pela
 
 ### <a name="q-how-do-i-use-an-xml-file-as-a-data-source"></a>P: Como uso um arquivo XML como uma fonte de dados?
 
-**A:** Sim.
+**R:** Sim.
 
 1. Crie uma pasta para organizar seus artefatos de banco de dados de projetos e adicione um item.
 

@@ -15,30 +15,30 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ebc6732e559b70e753a44b14cf45b7de9fc150d4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e115b4d327f1ac45673de491ceaffc90941e1111
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668178"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546777"
 ---
-# <a name="ca1047-do-not-declare-protected-members-in-sealed-types"></a>CA1047: não declarar membros protegidos em tipos lacrados
+# <a name="ca1047-do-not-declare-protected-members-in-sealed-types"></a>CA1047: Não declarar membros protegidos em tipos selados
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|DoNotDeclareProtectedMembersInSealedTypes|
+|TypeName|DoNotDeclareProtectedMembersInSealedTypes|
 |CheckId|CA1047|
 |Categoria|Microsoft. Design|
 |Alteração Significativa|Sem interrupção|
 
 ## <a name="cause"></a>Causa
- Um tipo público é `sealed` (`NotInheritable` no Visual Basic) e declara um membro protegido ou um tipo aninhado protegido. Essa regra não relata violações para métodos de <xref:System.Object.Finalize%2A>, que devem seguir esse padrão.
+ Um tipo público é `sealed` ( `NotInheritable` no Visual Basic) e declara um membro protegido ou um tipo aninhado protegido. Essa regra não relata violações para <xref:System.Object.Finalize%2A> métodos, que devem seguir esse padrão.
 
 ## <a name="rule-description"></a>Descrição da Regra
  Os tipos declaram membros protegidos de forma que a herança de tipos possa acessar ou substituir o membro. Por definição, você não pode herdar de um tipo lacrado, o que significa que métodos protegidos em tipos lacrados não podem ser chamados.
 
- O C# compilador emite um aviso para esse erro.
+ O compilador C# emite um aviso para esse erro.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
  Para corrigir uma violação dessa regra, altere o nível de acesso do membro para privado ou torne o tipo herdável.

@@ -1,7 +1,7 @@
 ---
 title: Como criar associações entre tipos (Designer de Classe)
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.classdesigner.associationline
 helpviewer_keywords:
@@ -16,25 +16,25 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61b598505ad465ec9086102b9e16e96cb7aa8275
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3cce893efaad5f2317b175391a2685cae7053e3c
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770960"
 ---
 # <a name="how-to-create-associations-between-types-in-class-designer"></a>Como criar associações entre tipos no Designer de Classe
 
-Linhas de associação no **Class Designer** mostram como as classes em um diagrama estão relacionadas. Uma linha de associação representa uma classe que é o tipo de uma propriedade ou de um campo de outra classe no seu projeto. As linhas de associação geralmente são usadas para ilustrar as relações mais importantes entre classes do projeto.
+As linhas de associação no **Designer de classe** mostram como as classes em um diagrama estão relacionadas. Uma linha de associação representa uma classe que é o tipo de uma propriedade ou de um campo de outra classe no seu projeto. As linhas de associação geralmente são usadas para ilustrar as relações mais importantes entre classes do projeto.
 
 Embora você possa exibir todos os campos e propriedades como associações, faz mais sentido mostrar apenas membros importantes como associações, dependendo do que você pretende enfatizar no diagrama. (É possível mostrar membros menos importantes como membros regulares ou ocultá-los no geral.)
 
 > [!NOTE]
-> **O Class Designer** suporta apenas associações unidirecionais.
+> **Designer de classe** dá suporte apenas a associações unidirecionais.
 
 ## <a name="to-define-an-association-line-in-the-class-diagram"></a>Para definir uma linha de associação no Diagrama de Classes
 
-1. Na caixa de ferramentas, em **Class Designer,** selecione **Association**.
+1. Na caixa de ferramentas, em **Designer de classe**, selecione **Associação**.
 
 2. Desenhe uma linha entre as duas formas que deseja vincular a uma associação.
 
@@ -52,8 +52,8 @@ Ou siga estas etapas:
 
 2. Na janela **Detalhes da Classe** ou **Propriedades**, edite o campo de nome dessa propriedade e pressione **Enter**.
 
-   O nome é atualizado na janela Detalhes da **classe,** na linha de associação, na janela **Propriedades** e em código.
+   O nome é atualizado na janela **detalhes da classe** , na linha associação, na janela **Propriedades** e no código.
 
 ## <a name="see-also"></a>Confira também
 
-- [Como: Alterar entre notação de membro e notação de associação](how-to-change-between-member-notation-and-association-notation.md)
+- [Como alterar entre notação de membro e notação de associação](how-to-change-between-member-notation-and-association-notation.md)

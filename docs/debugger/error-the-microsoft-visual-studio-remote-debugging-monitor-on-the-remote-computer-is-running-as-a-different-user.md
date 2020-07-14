@@ -1,9 +1,9 @@
 ---
-title: 'Erro: o Monitor de Depuração Remota do Microsoft Visual Studio no computador remoto está sendo executado como um usuário diferente'
+title: Erro-o Monitor de Depuração Remota de Microsoft Visual Studio no computador remoto está sendo executado como um usuário diferente
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 dev_langs:
 - CSharp
 - VB
@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5ff383b279bbdac85ce85de6e65b857cec6a8e7
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a69745a051af0ec44eb813054e40fb9f6c6a0aa6
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737484"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460397"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user"></a>Erro: o Monitor de Depuração Remota do Microsoft Visual Studio no computador remoto está sendo executado como um usuário diferente
 Ao tentar fazer a depuração remota, você pode receber a seguinte mensagem de erro:
@@ -42,6 +42,6 @@ Ao tentar fazer a depuração remota, você pode receber a seguinte mensagem de 
 > [!CAUTION]
 > Conceder permissões a outros usuários para se conectar permite a possibilidade de acidentalmente conectar à sessão de depuração remota incorreta. A depuração no modo **Sem Autenticação** nunca é segura e deve ser usada com cuidado.
 
-## <a name="see-also"></a>Consulte também
-- [Erros e solução de problemas de depuração remota](../debugger/remote-debugging-errors-and-troubleshooting.md)
+## <a name="see-also"></a>Veja também
+- [Erros de depuração remota e solução de problemas](../debugger/remote-debugging-errors-and-troubleshooting.md)
 - [Depuração remota](../debugger/remote-debugging.md)

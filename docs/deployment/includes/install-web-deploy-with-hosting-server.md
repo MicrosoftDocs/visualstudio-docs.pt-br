@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 1e6c6714720d652fff266e3e852d01982c98e34a
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: a292b37a50bbf667fa5b23f18879cd79c3f76805
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173859"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85292081"
 ---
 A Implantação da Web 3.6 para Servidores de Hospedagem fornece recursos adicionais de configuração que permitem a criação do arquivo de configurações da publicação por meio da interface do usuário.
 
-1. Se você tiver implantação da Web 3,6 já instalado no Windows Server, desinstale-o usando programas do **painel**  >  **Programs**  >  **de controle desinstalar um programa**.
+1. Se você já tiver o implantação da Web instalado no Windows Server, desinstale-o usando programas do **painel**  >  **Programs**  >  **de controle desinstalar um programa**.
 
 2. Em seguida, instale Implantação da Web 3.6 para Servidores de Hospedagem no Windows Server.
 
@@ -24,6 +24,12 @@ A Implantação da Web 3.6 para Servidores de Hospedagem fornece recursos adicio
 
     Os scripts e as ferramentas são necessários para permitir a geração do arquivo de configurações da publicação.
 
-4. (Opcional) Verifique se a Implantação da Web está em execução corretamente abrindo **Painel de Controle > Sistema e Segurança > Ferramentas Administrativas > Serviços** e verifique se o **Serviço do Agente de Implantação da Web** está em execução (o nome do serviço é diferente em versões mais antigas).
+4. Adicional Verifique se Implantação da Web está sendo executado corretamente abrindo o **painel de controle > sistema e segurança > ferramentas administrativas > serviços**e, em seguida, verifique se:
 
-    Se o serviço de agente não estiver em execução, inicie-o. Se não estiver presente, acesse **Painel de Controle > Programas > Desinstalar um programa**, localize **Implantação da Web da Microsoft \<version>**. Escolha **Alterar** a instalação e certifique-se de escolher **Será instalado na unidade de disco rígido local** para os componentes de Implantação da Web. Conclua as etapas de instalação de alteração.
+    * O **serviço Web Deployment Agent** está em execução (o nome do serviço é diferente em versões mais antigas).
+
+    * O **serviço de gerenciamento da Web** está em execução.
+
+    Se um dos serviços do Agent não estiver em execução, reinicie o **serviço Web Deployment Agent**.
+
+    Se o serviço Web Deployment Agent não estiver presente, vá para painel de **controle > programas > desinstalar um programa**, localize **o Microsoft implantação da Web \<version> **. Escolha **Alterar** a instalação e certifique-se de escolher **Será instalado na unidade de disco rígido local** para os componentes de Implantação da Web. Conclua as etapas de instalação de alteração.

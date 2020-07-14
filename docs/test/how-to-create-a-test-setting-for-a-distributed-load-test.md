@@ -1,21 +1,21 @@
 ---
 title: Criar uma configuração de teste para um teste de carga distribuída
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - test settings, for distributed load tests
 ms.assetid: b63d4b71-3b74-4872-b2d1-f0bd1a9a8544
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 3129aa5139533db0783c168c3489e071fe9339b5
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 625f4720e94f6ec0b3b9751c28ad18e0a9f38bbd
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589130"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287994"
 ---
-# <a name="how-to-create-a-test-settings-file-for-a-distributed-load-test"></a>Como: Criar um arquivo de configurações de teste para um teste de carga distribuída
+# <a name="how-to-create-a-test-settings-file-for-a-distributed-load-test"></a>Como: criar um arquivo de configurações de teste para um teste de carga distribuído
 
 Defina *configurações de teste* para seus testes de carga para que você possa distribuir esses testes entre vários computadores usando agentes e controladores de teste. Também é possível definir configurações de teste para usar *adaptadores de dados de diagnóstico*, que especificam os tipos de dados que você deseja coletar ou como afetar os computadores de teste quando você executa testes de carga com o Visual Studio.
 
@@ -33,7 +33,7 @@ As configurações de teste do Visual Studio são armazenadas em um arquivo. As 
 
 Ao executar seus testes, você seleciona as configurações de teste para usar como as configurações ativas de teste, dependendo do que você precisa para essa execução específica de teste. O arquivo de configurações de teste é armazenado como parte de sua solução. O nome do arquivo tem a extensão *.testsettings*.
 
-Quando você adiciona um projeto de teste de desempenho da Web e de carga a uma solução, um arquivo *Default.testsettings* é criado. O arquivo é automaticamente adicionado à solução na pasta **Itens de Solução**. Este arquivo executa seus testes localmente sem adaptadores de dados de diagnóstico. É possível adicionar ou editar um arquivo **.testsettings** para especificar adaptadores de dados de diagnóstico e controladores de teste.
+Quando você adiciona um projeto de teste de carga e desempenho da Web a uma solução, um arquivo *Default. testsettings* é criado. O arquivo é automaticamente adicionado à solução na pasta **Itens de Solução**. Este arquivo executa seus testes localmente sem adaptadores de dados de diagnóstico. É possível adicionar ou editar um arquivo **.testsettings** para especificar adaptadores de dados de diagnóstico e controladores de teste.
 
 O controlador de teste terá agentes que podem ser usados para cada função nas configurações de teste. Para obter mais informações sobre controladores e agentes de teste, confira [Gerenciar controladores e agentes de teste com o Visual Studio](../test/manage-test-controllers-and-test-agents.md).
 
@@ -41,7 +41,7 @@ Siga estas etapas para criar e remover configurações de teste em sua solução
 
 ## <a name="create-a-test-settings-file"></a>Criar um arquivo de configurações do teste
 
-1. No **Solution Explorer,** clique com o botão direito do mouse **Items,** aponte para **Adicionar**e escolha **Novo Item**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **itens de solução**, aponte para **Adicionar**e, em seguida, escolha **novo item**.
 
      A caixa de diálogo **Adicionar Novo Item** aparecerá.
 
@@ -51,7 +51,7 @@ Siga estas etapas para criar e remover configurações de teste em sua solução
 
 4. Escolha **Adicionar**.
 
-     O novo arquivo de configurações de teste aparece no **Solution Explorer**, na pasta Itens **de solução.**
+     O novo arquivo de configurações de teste aparece no **Gerenciador de soluções**, na pasta **itens de solução** .
 
 5. A caixa de diálogo **Configurações de Teste** é exibida. A página **Geral** está selecionada.
 
@@ -89,7 +89,7 @@ Siga estas etapas para criar e remover configurações de teste em sua solução
     > [!IMPORTANT]
     > As outras funções que você cria e define não executarão testes, mas serão usadas somente para coletar dados de acordo com os dados e adaptadores de diagnóstico especificados para as funções na página **Dados e Diagnóstico**.
 
-16. Para limitar os agentes que podem ser usados para uma função, selecione a função e escolha **Adicionar** na barra de ferramentas em **atributos do Agente para a função selecionada**.
+16. Para limitar os agentes que podem ser usados para uma função, selecione a função e, em seguida, escolha **Adicionar** na barra de ferramentas em **atributos de agente para a função selecionada**.
 
      A caixa de diálogo **Regra de Seleção de Agente** é exibida.
 
@@ -111,7 +111,7 @@ Siga estas etapas para criar e remover configurações de teste em sua solução
 
      Para obter detalhes sobre cada adaptador de dados de diagnóstico e como configurá-lo, você pode exibir o tópico associado na tabela a seguir.
 
-     Para obter mais informações sobre adaptadores de dados diagnósticos, consulte [Coletar informações de diagnóstico usando as configurações do teste](../test/collect-diagnostic-information-using-test-settings.md).
+     Para obter mais informações sobre adaptadores de dados de diagnóstico, consulte [coletar informações de diagnóstico usando configurações de teste](../test/collect-diagnostic-information-using-test-settings.md).
 
      **Adaptadores de dados de diagnóstico para testes de carga**
 
@@ -119,8 +119,8 @@ Siga estas etapas para criar e remover configurações de teste em sua solução
     |-|-------------------------|-|
     |**Proxy de Cliente do ASP.NET para IntelliTrace e Impacto de Teste:** esse proxy permite que você colete informações sobre as chamadas HTTP de um cliente para um servidor Web para os adaptadores de dados de diagnóstico do IntelliTrace e de Impacto de Teste.|![Ícone de informações](../test/media/vc364f4.gif)<br /><br /> A menos que você tenha uma necessidade específica de coletar informações do sistema para os computadores do agente de teste, não inclua este adaptador. **Cuidado:** não recomendamos o uso do adaptador IntelliTrace em testes de carga devido a problemas que ocorrem devido à grande quantidade de dados que são coletados. <br /><br /> Os dados do impacto de teste não são coletados usando testes de carga.||
     |**IntelliTrace:** você pode configurar informações de rastreamento de diagnóstico específicas armazenadas em um arquivo de log. Um arquivo de log tem uma extensão *.tdlog*. Ao executar o teste e uma etapa falhar, você pode criar um bug. O arquivo de log que contém o rastreamento de diagnóstico que é anexado automaticamente a este bug. Os dados coletados no arquivo do log aumentam a produtividade de depuração reduzindo o tempo necessário para reproduzir e diagnosticar um erro no código. Deste arquivo de log, a sessão local pode ser recriada em outro computador. Isso reduz o risco de um bug não poder ser reproduzido.<br /><br /> Para obter mais informações, consulte [Coletar dados do IntelliTrace](../test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues.md).|![Ícone de importante](../test/media/vc364f3.gif)<br /><br /> Não recomendamos o uso do adaptador IntelliTrace em testes de carga devido a problemas que ocorrem devido à grande quantidade de dados que são coletados e registrados em log. Você deve tentar usar o adaptador de IntelliTrace somente em testes de carga que não são executados por muito tempo e não usam vários agentes de teste.|[Como coletar dados do IntelliTrace para ajudar a depurar problemas difíceis](../test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues.md)|
-    |**ASP.NET Profiler:** Você pode criar uma configuração de teste que inclua ASP.NET criação de perfil, que coleta dados de desempenho em ASP.NET aplicativos web.|O adaptador de dados de diagnóstico do criador de perfis do ASP.NET cria perfis do processo do IIS (Serviços de Informações da Internet), portanto ele não funcionará em um servidor Web de desenvolvimento. Para analisar o site no teste de carga, você precisa instalar um agente de teste no computador em que o IIS está sendo executado. O agente de teste não estará gerando carga, mas será um agente de coleção somente. Para obter mais informações, consulte [Instalar e configurar agentes de teste](../test/lab-management/install-configure-test-agents.md).|[Como: Configurar ASP.NET profiler para testes de carga usando as configurações de teste](../test/how-to-configure-aspnet-profiler-for-load-tests-using-test-settings.md)|
-    |**Log de eventos:** você pode configurar uma configuração de teste para incluir a coleta de logs de eventos, que será incluída nos resultados de teste.||[Como: Configurar a coleta de registros de eventos usando as configurações de teste](https://msdn.microsoft.com/48d67891-6018-4549-83e3-213d5d824a02)|
+    |**ASP.net Profiler:** Você pode criar uma configuração de teste que inclua a criação de perfil do ASP.NET, que coleta dados de desempenho em aplicativos Web do ASP.NET.|O adaptador de dados de diagnóstico do criador de perfis do ASP.NET cria perfis do processo do IIS (Serviços de Informações da Internet), portanto ele não funcionará em um servidor Web de desenvolvimento. Para analisar o site no teste de carga, você precisa instalar um agente de teste no computador em que o IIS está sendo executado. O agente de teste não estará gerando carga, mas será um agente de coleção somente. Para obter mais informações, consulte [Instalar e configurar agentes de teste](../test/lab-management/install-configure-test-agents.md).|[Como: configurar o ASP.NET Profiler para testes de carga usando configurações de teste](../test/how-to-configure-aspnet-profiler-for-load-tests-using-test-settings.md)|
+    |**Log de eventos:** você pode configurar uma configuração de teste para incluir a coleta de logs de eventos, que será incluída nos resultados de teste.||[Como configurar a coleta de log de eventos usando configurações de teste](https://msdn.microsoft.com/48d67891-6018-4549-83e3-213d5d824a02)|
     |**Emulação de rede:** você pode especificar que você deseja colocar uma carga artificial de rede em seu teste usando uma configuração de teste. A emulação de rede afeta a comunicação para e do computador emulando uma velocidade de conexão de rede específica, como a conexão discada. **Observação:** a emulação de rede não pode ser usada para aumentar a velocidade de conexão de rede.|O adaptador Emulação de Rede é ignorado por teste de carga. Em vez disso, os testes de carga usam as configurações especificadas na mistura de rede do cenário de teste de carga.<br /><br /> Para obter mais informações, confira [Especificar tipos de rede virtual](../test/specify-virtual-network-types-in-a-load-test-scenario.md).||
     |**Informações do sistema:** uma configuração de teste pode ser configurada para incluir as informações do sistema sobre os computadores em que o coletor de dados e diagnóstico de informações do sistema é executado. As informações do sistema são especificadas nos resultados do teste usando uma configuração de teste.|![Ícone de informações](../test/media/vc364f4.gif)<br /><br /> Você pode reunir informações do sistema de agentes de carregamento e do sistema em teste.|Nenhuma configuração é necessária para coletar essa informação.|
     |**Impacto de teste:** você pode reunir informações sobre quais métodos do seu código de aplicativos foram usados quando um caso de teste estava sendo executado. Podem ser usadas em conjunto com as alterações feitas no código do aplicativo por desenvolvedores para determinar quais testes foram afetados pelas alterações de desenvolvimento.|Os dados do impacto de teste não são coletados com testes de carga.||
@@ -157,10 +157,10 @@ Siga estas etapas para criar e remover configurações de teste em sua solução
         > [!NOTE]
         > **ASP.NET** em **Tipo de host** não tem suporte em testes de carga.
 
-    2. Use o teste Executar em um processo de **32 bits ou 64 bits** para selecionar se você deseja que os testes de desempenho da Web e unidade no teste de carga sejam executados como processos de 32 ou 64 bits.
+    2. Use a lista suspensa **Executar teste no processo de 32 bits ou 64** bits para selecionar se você deseja que os testes de unidade e o desempenho da Web no teste de carga sejam executados como processos de 32 bits ou de 64 bits.
 
         > [!NOTE]
-        > Para obter a máxima flexibilidade, você deve compilar seus projetos de teste de desempenho da Web e carregar usando a **configuração Qualquer CPU.** Em seguida, você poderá executar os agentes de 32 bits e de 64 bits. Compilar projetos de teste de desempenho da Web e carregar usando a configuração **de 64 bits** não oferece nenhuma vantagem.
+        > Para obter a máxima flexibilidade, você deve compilar seus projetos de teste de carga e desempenho na Web usando a configuração de **CPU** . Em seguida, você poderá executar os agentes de 32 bits e de 64 bits. A compilação de projetos de teste de carga e desempenho da Web usando a configuração de **64 bits** não oferece nenhuma vantagem.
 
 25. (Opcional) Para delimitar o tempo para cada execução de teste e testes individuais, selecione **Tempos limite de testes.**
 
@@ -176,11 +176,11 @@ Siga estas etapas para criar e remover configurações de teste em sua solução
 
 ## <a name="remove-a-test-settings-file-from-your-solution"></a>Remover um arquivo de configurações do teste da solução
 
-Na pasta **Itens de solução** no Solution **Explorer,** clique com o botão direito do mouse nas configurações de teste que deseja remover e, em seguida, escolha **Remover**.
+Na pasta **itens de solução** em **Gerenciador de soluções**, clique com o botão direito do mouse nas configurações de teste que você deseja remover e escolha **remover**.
 
 O arquivo de configurações de teste é removido de sua solução.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Controladores de teste e agentes de teste](configure-test-agents-and-controllers-for-load-tests.md)
 - [Coletar informações de diagnóstico usando configurações de teste](../test/collect-diagnostic-information-using-test-settings.md)

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Build options [C#]
 - Project Designer, Build page
 ms.assetid: 77ff1bfc-d633-4634-ba29-9afdb6d7e362
-author: TerryGLee
-ms.author: tglee
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 85bf50c653d82a7de22d5a81fd81c38db0db1be8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 7da7414b9cf454e861c8407633de7851dcb86df3
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76923263"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419218"
 ---
 # <a name="build-page-project-designer-c"></a>Página de Build, Designer de Projeto (C#)
 
@@ -36,7 +36,7 @@ As opções a seguir permitem selecionar a configuração e a plataforma a ser e
 > [!NOTE]
 > Com configurações de build simplificadas, o sistema do projeto determina se é necessário compilar uma versão de depuração ou de liberação. Portanto, essas opções não são exibidas. Para saber mais, consulte [Como definir configurações de depuração e versão](../../debugger/how-to-set-debug-and-release-configurations.md).
 
-**Configuração**
+**Configuration**
 
 Especifica quais definições de configuração exibir ou modificar. As configurações podem ser **Ativa (Depuração)** (esse é o padrão), **Depuração**, **Versão** ou **Todas as Configurações**.
 
@@ -52,7 +52,7 @@ As opções a seguir permitem definir várias configurações do compilador do C
 
 Especifica símbolos nos quais a compilação condicional é executada. Separe os símbolos com um ponto-e-vírgula (";"). Para obter mais informações, consulte [/define (opções do compilador C#)](/dotnet/csharp/language-reference/compiler-options/define-compiler-option).
 
-**Definir constante DEBUG**
+**Definir constante de depuração**
 
 Define DEBUG como um símbolo em todos os arquivos de código-fonte do aplicativo. Selecionar essa opção equivale a usar a opção de linha de comando `/define:DEBUG`.
 
@@ -66,11 +66,11 @@ Especifica o processador de destino do arquivo de saída. Escolha **x86** para q
 
 Para obter mais informações, consulte [/platform (opções do compilador C#)](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option).
 
-**Nullable**
+**Permite valor nulo**
 
-Especifica o contexto nulo C# em todo o projeto. Esta opção de IU foi introduzida no Visual Studio 16.5, e só está habilitada para projetos que usam C# 8.0 ou posterior.
+Especifica o contexto anulável do C# em todo o projeto. Essa opção de interface do usuário foi introduzida no Visual Studio 16,5 e só é habilitada para projetos que usam C# 8,0 ou posterior.
 
-Para obter mais informações, consulte [Contextos Anulados](/dotnet/csharp/nullable-references#nullable-contexts).
+Para obter mais informações, consulte [contextos anuláveis](/dotnet/csharp/nullable-references#nullable-contexts).
 
 **Preferir 32 bits**
 
@@ -110,14 +110,14 @@ Bloqueia a capacidade do compilador de gerar um ou mais avisos. Separe vários n
 
 As configurações a seguir são usadas para especificar quais avisos são tratados como erros. Selecione uma das opções a seguir para indicar em quais condições um erro é retornado quando o build recebe um aviso. Para obter mais informações, consulte [/warnaserror (opções do compilador C#)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option).
 
-**Nenhum** - Não trata avisos como erros.
+**None** -não trata avisos como erros.
 
-**Todos** - Trata todos os avisos como erros.
+**All** -trata todos os avisos como erros.
 
-**Avisos específicos** - Trata os avisos especificados como erros. Separe vários números de aviso com uma vírgula ou um ponto-e-vírgula.
+**Avisos específicos** – trata os avisos especificados como erros. Separe vários números de aviso com uma vírgula ou um ponto-e-vírgula.
 
 > [!TIP]
-> Se você não quiser que os avisos de análise de código sejam tratados como erros, consulte [Perguntas frequentes sobre análise de código](../../code-quality/analyzers-faq.md#treat-warnings-as-errors).
+> Se você não quiser que os avisos de análise de código sejam tratados como erros, consulte [perguntas frequentes sobre análise de código](../../code-quality/analyzers-faq.md#treat-warnings-as-errors).
 
 ## <a name="output"></a>Saída
 
@@ -145,7 +145,7 @@ Especifica se o compilador usará a ferramenta Gerador de Serializador XML (Sgen
 
 Clique para exibir a caixa de diálogo [Configurações de Build Avançadas (C#)](../../ide/reference/advanced-build-settings-dialog-box-csharp.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Referência de propriedades do projeto](../../ide/reference/project-properties-reference.md)
-- [C# Opções de compilador](/dotnet/csharp/language-reference/compiler-options/index)
+- [Opções do compilador C#](/dotnet/csharp/language-reference/compiler-options/index)

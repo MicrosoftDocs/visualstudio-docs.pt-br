@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_baseDataSlot | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: f9ed21b7-9397-4813-926e-ade11914b06b
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 12aa68a549f47b27fd2b750d41631f4fabd546ba
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8ce2a1f2d6404f7bbb708478dff1e64b09b8246d
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740956"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464222"
 ---
 # <a name="idiasymbolget_basedataslot"></a>IDiaSymbol::get_baseDataSlot
 Recupera o slot de dados base.
@@ -32,8 +32,8 @@ HRESULT get_baseDataSlot(
 
 fora Um ponteiro para um `DWORD` que contém o slot de dados base.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

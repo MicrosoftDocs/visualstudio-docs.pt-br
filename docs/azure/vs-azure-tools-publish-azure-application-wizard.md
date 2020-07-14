@@ -6,15 +6,15 @@ manager: jillfra
 assetId: 7d8f1ac9-e439-47e0-a183-0642c4ea1920
 ms.custom: vs-azure
 ms.workload: azure-vs
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: bc3c58343c699833a5a12eee6f79c023f57a2e85
-ms.sourcegitcommit: 59a8732dc563242590f7c6ccf4ced6c6d195533c
+ms.openlocfilehash: 477b7860c320730d6362cdb7e0fcb46ad3bc7d17
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81489643"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280525"
 ---
 # <a name="using-the-visual-studio-publish-azure-application-wizard"></a>Uso do Assistente Publicar Aplicativo do Azure do Visual Studio
 
@@ -81,7 +81,7 @@ A conta de armazenamento do Azure armazena o pacote para a implantação do apli
 
 **Atualização da implantação — configurações**: essa caixa de diálogo é usada para especificar ainda mais como que você quer que as funções sejam atualizadas. Se você escolher **Atualização incremental**, cada instância do aplicativo será atualizada uma após a outra, de modo que o aplicativo estará sempre disponível. Se você escolher **Atualização simultânea**, todas as instâncias do aplicativo serão atualizadas ao mesmo tempo. A atualização simultânea é mais rápida, mas o serviço pode não estar disponível durante o processo de atualização.
 
-![Configurações de implantação](./media/vs-azure-tools-publish-azure-application-wizard/deployment-settings.png)
+![Configurações da implantação](./media/vs-azure-tools-publish-azure-application-wizard/deployment-settings.png)
 
 **Habilitar o IntelliTrace**: especifique se deseja habilitar o IntelliTrace. Com o IntelliTrace, você pode registrar em log informações extensas de depuração sobre uma instância de função quando ela é executada no Azure. Se precisa encontrar a causa de um problema, você pode usar os logs do IntelliTrace para examinar seu código no Visual Studio como se ele estivesse em execução no Azure. Para saber mais sobre como usar o IntelliTrace, confira [Depuração de um serviço de nuvem publicado com o IntelliTrace e o Visual Studio](./vs-azure-tools-intellitrace-debug-published-cloud-services.md).
 
@@ -118,6 +118,6 @@ Depois de definir todas as configurações da implantação do projeto, selecion
 
 - [Testar o desempenho de um serviço de nuvem do Azure](./vs-azure-tools-performance-profiling-cloud-services.md)
 
-- [Configuração de diagnósticos para serviços de nuvem do Azure e máquinas virtuais](./vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md).
+- [Configurando o diagnóstico para os serviços de nuvem do Azure e máquinas virtuais](./vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md).
 
 - [O que é o Application Insights?](/azure/application-insights/app-insights-overview)

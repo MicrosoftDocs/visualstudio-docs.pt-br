@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_RValueReference | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 43ef604b55cd29d7acf86f38d307dff3958d0162
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b8123ca0a9679a46e8e411d817f42ae8497f3ef3
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739416"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462402"
 ---
 # <a name="idiasymbolget_rvaluereference"></a>IDiaSymbol::get_RValueReference
 Recupera um sinalizador que especifica se um tipo de ponteiro é uma referência rvalue. Use quando a [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) for definida como um tipo de ponteiro.
@@ -33,10 +33,10 @@ HRESULT get_RValueReference (
 #### <a name="parameters"></a>Parâmetros
  `pRetVal`
 
-fora Retorna `TRUE` se o ponteiro for uma referência rvalue; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se o ponteiro é uma referência rvalue; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
@@ -50,5 +50,5 @@ fora Retorna `TRUE` se o ponteiro for uma referência rvalue; caso contrário, r
 
  DLL: msdia100.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

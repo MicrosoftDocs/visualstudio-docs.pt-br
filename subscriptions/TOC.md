@@ -31,8 +31,8 @@
 #### [CAST Highlight](vs-cast.md)
 #### [CloudPilot](vs-cloudpilot.md)
 #### [Enterprise Mobility & Security](vs-ems.md)
+#### [Aplicativos do Microsoft 365 para empresas](microsoft-365-apps-for-enterprise.md)
 #### [Desenvolvedor do Microsoft 365](vs-m365.md)
-#### [Office 365 Pro Plus](vs-office365.md)
 #### [Parasoft](vs-parasoft.md)
 #### [Power BI Pro](vs-pbi.md)
 #### [Visual Studio App Center](vs-visual-studio-app-center.md)
@@ -74,6 +74,7 @@
 ### [Superadministradores e administradores](admin-roles.md)
 ### [Definir preferências de contrato](admin-prefs.md)
 ### [Visão geral](using-admin-portal.md)
+### [Adicionar assinaturas mensais](add-monthly-subs.md)
 ### Atribuir assinaturas
 #### [Adicionar usuários únicos](assign-license.md)
 #### [Adicionar vários usuários](assign-license-bulk.md)

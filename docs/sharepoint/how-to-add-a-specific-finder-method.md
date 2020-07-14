@@ -1,7 +1,7 @@
 ---
 title: Como adicionar um método localizador específico | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,12 +17,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 732921b021d7887faf31dd3f602f5400c1d06a59
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 403213b6dcd87251df0b24333c759c8de8720afd
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985257"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014811"
 ---
 # <a name="how-to-add-a-specific-finder-method"></a>Como adicionar um método localizador específico
   Você pode retornar uma única instância de entidade criando um método *localizador específico* . O serviço corporativo de conectividade de dados (BDC) executa o método localizador específico quando um usuário escolhe uma entidade em uma Web Part de dados corporativos ou em uma lista externa. Para obter mais informações, consulte [criar um modelo de conectividade de dados corporativos](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -33,7 +32,7 @@ ms.locfileid: "72985257"
 
     Para obter informações sobre como adicionar uma entidade ao **designer do BDC** no Visual Studio, consulte [como: adicionar uma entidade a um modelo](../sharepoint/how-to-add-an-entity-to-a-model.md).
 
-2. Na barra de menus, escolha **exibir** > **outras janelas**, **detalhes do método do BDC**.
+2. Na barra de menus, escolha **Exibir**  >  **outras janelas**, **detalhes do método do BDC**.
 
     A janela **detalhes do método BDC** é aberta. Para obter mais informações sobre essa janela, consulte [visão geral das ferramentas de design de modelo do BDC](../sharepoint/bdc-model-design-tools-overview.md).
 
@@ -80,7 +79,7 @@ ms.locfileid: "72985257"
      O exemplo a seguir retorna um contato do banco de dados de exemplo AdventureWorks para SQL Server.
 
      > [!NOTE]
-     > Substitua o valor do campo `ServerName` pelo nome do seu servidor.
+     > Substitua o valor do `ServerName` campo pelo nome do seu servidor.
 
      [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]
      [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]

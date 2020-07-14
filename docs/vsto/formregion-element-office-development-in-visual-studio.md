@@ -1,9 +1,9 @@
 ---
-title: '&lt;formRegion&gt; elemento (desenvolvimento do Office no Visual Studio)'
+title: '&lt;&gt;elemento FormRegion (desenvolvimento do Office no Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -14,15 +14,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 33bc2ce58f90f37a1219427558a01bd13e5654df
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9e13576ef673728d673d0351cf289a80944584bd
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414524"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543525"
 ---
-# <a name="ltformregiongt-element-office-development-in-visual-studio"></a>&lt;formRegion&gt; elemento (desenvolvimento do Office no Visual Studio)
-  O `formRegion` elemento o `vstov4` namespace identifica uma região de formulário do Outlook do Microsoft Office que está associada com um suplemento do VSTO.
+# <a name="ltformregiongt-element-office-development-in-visual-studio"></a>&lt;&gt;elemento FormRegion (desenvolvimento do Office no Visual Studio)
+  O `formRegion` elemento do `vstov4` namespace identifica uma região de formulário Microsoft Office do Outlook que está associada a um suplemento do VSTO.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -35,29 +35,29 @@ ms.locfileid: "62414524"
 ```
 
 ## <a name="elements-and-attributes"></a>Elementos e atributos
- O `formRegion` elemento o `vstov4` namespace identifica uma região de formulário que está associada com um suplemento do VSTO do Outlook. É necessária apenas para Outlook suplementos do VSTO que incluem regiões de formulário.
+ O `formRegion` elemento do `vstov4` namespace identifica uma região de formulário que está associada a um suplemento do VSTO do Outlook. Ele é necessário apenas para suplementos do VSTO do Outlook que incluem regiões de formulário.
 
- Pode haver vários `formRegion` elementos definidos dentro de um `formRegions` elemento para um único suplemento VSTO.
+ Pode haver vários `formRegion` elementos definidos dentro de um `formRegions` elemento para um único suplemento do VSTO.
 
- O `formRegion` elemento tem o seguinte atributo.
+ O `formRegion` elemento tem o atributo a seguir.
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|`name`|Necessário. Identifica o nome da região de formulário.|
+|`name`|Obrigatórios. Identifica o nome da região do formulário.|
 
  O `formRegion` elemento tem os seguintes elementos filho.
 
-### <a name="messageclass"></a>messageClass
- O `messageClass` elemento identifica o formulário do Outlook que está associado com a região do formulário.
+### <a name="messageclass"></a>Class
+ O `messageClass` elemento identifica o formulário do Outlook que está associado à região do formulário.
 
- O `messageClass` elemento tem o seguinte atributo.
+ O `messageClass` elemento tem o atributo a seguir.
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|`name`|Necessário. Identifica o formulário que está associado com a região do formulário.|
+|`name`|Obrigatórios. Identifica o formulário associado à região do formulário.|
 
 ## <a name="example"></a>Exemplo
- O exemplo de código a seguir ilustra uma `formRegion` elemento em um manifesto de aplicativo para um Add-in do VSTO do Outlook implantado usando [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Há três classes de mensagem associadas a esta região do formulário de um. Este exemplo de código é parte de um exemplo maior fornecido no [manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).
+ O exemplo de código a seguir ilustra um `formRegion` elemento em um manifesto de aplicativo para um suplemento do VSTO do Outlook implantado usando o [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Há três classes de mensagem associadas a esta região de formulário. Este exemplo de código faz parte de um exemplo maior fornecido em [manifestos do aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md).
 
 ```xml
 <vstov4:formRegion
@@ -68,9 +68,9 @@ ms.locfileid: "62414524"
 </vstov4:formRegion>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Criar regiões de formulário do Outlook](../vsto/creating-outlook-form-regions.md)
-- [Manifestos de aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md)
+- [Manifestos do aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md)
 - [Manifestos de implantação para soluções do Office](../vsto/deployment-manifests-for-office-solutions.md)
 - [Manifesto do aplicativo ClickOnce](../deployment/clickonce-application-manifest.md)

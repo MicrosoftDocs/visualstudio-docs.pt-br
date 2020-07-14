@@ -1,7 +1,7 @@
 ---
-title: 'Como: Adicionar uma propriedade personalizada | Microsoft Docs'
+title: Como adicionar uma propriedade personalizada | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.BDC.Property_Editor
 dev_langs:
@@ -17,34 +17,33 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: caf2d0e63db724c8eb3c1e72c79a109548af8f9c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: e79b18b4d2b388d2ff0387fed24778f8db03fd54
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62556837"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017080"
 ---
-# <a name="how-to-add-a-custom-property"></a>Como: Adicionar uma propriedade personalizada
-  Você pode adicionar propriedades personalizadas para o modelo usando o **Editor de propriedade**. Você pode acessar essas propriedades no código para recuperar informações como cadeias de conexão e outros dados em tempo de execução.
+# <a name="how-to-add-a-custom-property"></a>Como: adicionar uma propriedade personalizada
+  Você pode adicionar propriedades personalizadas ao modelo usando o editor de **Propriedade**. Você pode acessar essas propriedades no código para recuperar informações como cadeias de conexão e outros dados em tempo de execução.
 
 ### <a name="to-add-a-custom-property"></a>Para adicionar uma propriedade personalizada
 
 1. No **BDC Explorer**, escolha o nó que representa o elemento de modelo ao qual você deseja aplicar uma propriedade personalizada.
 
-2. Na barra de menus, escolha **modo de exibição** > **janela propriedades**.
+2. Na barra de menus, escolha **Exibir**  >  **janela de propriedades**.
 
-3. No **propriedades** janela, escolha o **Custom Properties** propriedade e, em seguida, escolha o botão de reticências (![elipse do Designer de dispositivo móvel do ASP.NET](../sharepoint/media/mwellipsis.gif "ASP. Elipse de Designer de dispositivo móvel NET")).
+3. Na janela **Propriedades** , escolha a propriedade **Propriedades personalizadas** e, em seguida, escolha o botão de reticências (![elipse do designer móvel ASP.net](../sharepoint/media/mwellipsis.gif "Elipse do designer móvel ASP.NET")).
 
-     O **Editor de propriedade** caixa de diálogo é exibida.
+     A caixa de diálogo **Editor de propriedades** é exibida.
 
-4. Na caixa de texto a **nome** coluna, especifique o nome da propriedade.
+4. Na caixa de texto na coluna **nome** , especifique o nome da propriedade.
 
-5. Para o **tipo** campo da propriedade personalizada, escolha o tipo de dados apropriado.
+5. Para o campo **tipo** da propriedade personalizada, escolha o tipo de dados apropriado.
 
-6. Para o **valor** campo da propriedade personalizada, especifique um valor e, em seguida, escolha o **Okey** botão.
+6. Para o campo **valor** da propriedade personalizada, especifique um valor e, em seguida, escolha o botão **OK** .
 
 ## <a name="see-also"></a>Consulte também
 - [Criar um modelo de conectividade de dados corporativos](../sharepoint/designing-a-business-data-connectivity-model.md)
 - [Criar um modelo de conectividade de dados corporativos](../sharepoint/designing-a-business-data-connectivity-model.md)
 - [Criar um modelo de conectividade de dados corporativos](../sharepoint/creating-a-business-data-connectivity-model.md)
-- [Integre dados corporativos no SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md)
+- [Integre dados corporativos ao SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md)

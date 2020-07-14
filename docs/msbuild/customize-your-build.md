@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b0cb05948f8010964eefe101cbc77d48a149566
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 6c52c6b584db94ff3cbe8dc041c00ebe969c9faf
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84180396"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288930"
 ---
 # <a name="customize-your-build"></a>Personalizar seu build
 
@@ -80,7 +80,7 @@ As propriedades que são definidas em *Directory. Build. props* podem ser substi
 Quando você precisa definir uma propriedade ou definir um destino para um projeto individual que substitui todas as configurações anteriores, coloque essa lógica no arquivo de projeto após a importação final. Para fazer isso em um projeto em estilo SDK, primeiro você precisa substituir o atributo de estilo SDK pelas importações equivalentes. Consulte [como usar SDKs de projeto do MSBuild](how-to-use-project-sdk.md).
 
 > [!NOTE]
-> O mecanismo do MSBuild lê em todos os arquivos importados durante a avaliação, antes de iniciar a execução de compilação para qualquer projeto (incluindo qualquer `PreBuildEvent` ), de modo que não se espera que esses arquivos sejam modificados pelo `PreBuildEvent` ou por qualquer outra parte do processo de compilação. Quaisquer modificações não entram em vigor até a próxima invocação do *MSBuild. exe* ou do próximo Build do Visual Studio.
+> O mecanismo do MSBuild lê em todos os arquivos importados durante a avaliação, antes de iniciar a execução de compilação para qualquer projeto (incluindo qualquer `PreBuildEvent` ), de modo que não se espera que esses arquivos sejam modificados pelo `PreBuildEvent` ou por qualquer outra parte do processo de compilação. Quaisquer modificações não entram em vigor até a próxima invocação do *MSBuild.exe* ou da próxima compilação do Visual Studio.
 
 ### <a name="use-case-multi-level-merging"></a>Caso de uso: mesclagem de vários níveis
 
@@ -182,7 +182,7 @@ A mesma estrutura de diretório é pesquisada em `$(MSBuildUserExtensionsPath)`,
 ## <a name="customize-the-solution-build"></a>Personalizar o build de solução
 
 > [!IMPORTANT]
-> A personalização do build de solução dessa maneira aplica-se apenas a builds de linha de comando com o *MSBuild.exe*. Isso **não** se aplica a builds dentro do Visual Studio.
+> A personalização do build de solução dessa maneira aplica-se apenas a builds de linha de comando com o *MSBuild.exe*. Isso **não** se aplica a builds dentro do Visual Studio. Por esse motivo, não é recomendável colocar a personalização no nível da solução. Uma alternativa melhor para personalizar todos os projetos em uma solução é usar os arquivos *Directory. Build. props* e *Directory. Build. targets* na pasta da solução, conforme discutido em outro lugar neste artigo.
 
 Quando o MSBuild compila um arquivo de solução, ele primeiro se converte internamente em um arquivo de projeto e, em seguida, compila isso. O arquivo de projeto gerado importa `before.{solutionname}.sln.targets` antes de definir quaisquer destinos e `after.{solutionname}.sln.targets` após importar destinos, incluindo destinos instalados nos diretórios `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportBefore` e `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportAfter`.
 

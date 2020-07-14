@@ -1,7 +1,7 @@
 ---
 title: Como criar uma solução de linguagem específica do domínio
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.dsltools.designerwizard
 helpviewer_keywords:
@@ -13,21 +13,21 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 175da19782927f8c84b9fae0e6d9820a22bd891a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 844f3eb97ed9e07aa8125688d2bfe8944249b008
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594663"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541785"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>Como criar uma solução de linguagem específica do domínio
 Uma DSL (linguagem específica do domínio) é criada usando uma solução especializada do Visual Studio.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para poder iniciar este procedimento, instale estes componentes:
 
-- {1&gt;Visual Studio&lt;1}
+- Visual Studio
 - SDK do Visual Studio (instalado como parte da carga de trabalho de **desenvolvimento de extensão do Visual Studio** )
 - SDK de modelagem (instalado como um componente do Visual Studio)
 
@@ -38,7 +38,7 @@ Para poder iniciar este procedimento, instale estes componentes:
 1. Inicie o assistente de DSL criando um novo projeto de **Designer de linguagem específica de domínio** .
 
    > [!NOTE]
-   > Preferivelmente, o nome que você escolher para o projeto deve ser um identificador C# Visual válido, pois ele pode ser usado para gerar código.
+   > Preferivelmente, o nome que você escolher para o projeto deve ser um identificador válido do Visual C# porque ele pode ser usado para gerar código.
 
    ::: moniker range="vs-2017"
 
@@ -65,7 +65,7 @@ Para poder iniciar este procedimento, instale estes componentes:
    > [!NOTE]
    > Se você vir uma mensagem que alerta você não executar modelos de texto de fontes não confiáveis, clique em **OK**. Você pode definir que essa mensagem não apareça novamente.
 
-## <a name="settings"></a>As páginas do assistente de Designer de DSL
+## <a name="the-dsl-designer-wizard-pages"></a><a name="settings"></a>As páginas do assistente de Designer de DSL
  Você pode deixar vários campos inalterados de seus valores padrão. No entanto, certifique-se de definir o campo extensão de arquivo.
 
 ### <a name="solution-settings-page"></a>Página de configurações da solução
@@ -73,7 +73,7 @@ Para poder iniciar este procedimento, instale estes componentes:
 Escolha um modelo que seja semelhante à DSL que você deseja criar. Os diferentes modelos fornecem pontos de partida convenientes. Quando você seleciona um modelo de solução, o assistente exibe uma descrição. Para obter mais informações sobre modelos de solução, consulte [escolhendo um modelo de solução de linguagem específica de domínio](../modeling/choosing-a-domain-specific-language-solution-template.md).
 
  **Como você deseja nomear sua linguagem específica de domínio?**
-O padrão é o nome da solução. O código é gerado a partir desse valor. Ele deve ser válido como um C# nome de classe.
+O padrão é o nome da solução. O código é gerado a partir desse valor. Ele deve ser válido como um nome de classe C#.
 
 ### <a name="file-extension-page"></a>Página extensão de arquivo
  **Qual extensão os arquivos de modelo devem usar?**
@@ -87,11 +87,11 @@ Digite uma nova extensão de arquivo.
 
 - Digite uma extensão de arquivo diferente.
 
-     \- ou -
+     \- ou –
 
 - Redefina a instância experimental do Visual Studio. Isso cancelará o registro de todas as DSLs que você criou anteriormente. No menu **Iniciar** , clique em **todos os programas**, **Microsoft Visual Studio SDK 2010**, **ferramentas**e, em seguida, **redefina a instância experimental Microsoft Visual Studio 2010**. Você pode recompilar todas as outras DSLs que deseja usar novamente.
 
-     \- ou -
+     \- ou –
 
 - Se uma extensão do Visual Studio que usa essa extensão de arquivo tiver sido totalmente instalada em seu computador, desinstale-a. No menu **ferramentas** , clique em **Gerenciador de extensões**.
 
@@ -116,7 +116,7 @@ O padrão é um nome composto por seus nomes de produtos e da empresa.
 
  Para obter mais informações sobre nomes fortes, consulte [criando e usando assemblies de nome forte](/dotnet/standard/assembly/create-use-strong-named).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Como definir uma linguagem específica de domínio](../modeling/how-to-define-a-domain-specific-language.md)
+- [Como definir uma linguagem específica do domínio](../modeling/how-to-define-a-domain-specific-language.md)
 - [Glossário das Ferramentas de Linguagem Específica de Domínio](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

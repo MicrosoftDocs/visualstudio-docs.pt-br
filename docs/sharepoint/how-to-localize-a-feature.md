@@ -1,7 +1,7 @@
 ---
-title: 'Como: Localizar um recurso | Microsoft Docs'
+title: Como localizar um recurso | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,52 +13,51 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f6e796cc00478ee823c345fd02738f8677c36373
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: b0d15654ba48b6c95cf2b2f7fa4f9cd665f0959a
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62813661"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016137"
 ---
-# <a name="how-to-localize-a-feature"></a>Como: Localizar um recurso
-  Por padrão, o recurso títulos e descrições de usam valores de cadeia de caracteres embutida. Para localizar o título do recurso e a descrição, substitua as cadeias de caracteres com expressões que fazem referência a recursos localizados.
+# <a name="how-to-localize-a-feature"></a>Como localizar um recurso
+  Por padrão, títulos e descrições de recursos usam valores de cadeia de caracteres embutidos em código. Para localizar o título e a descrição do recurso, substitua as cadeias de caracteres por expressões que fazem referência a recursos localizados.
 
 ## <a name="localize-a-feature"></a>Localizar um recurso
 
 #### <a name="to-localize-a-feature"></a>Para localizar um recurso
 
-1. Na **Gerenciador de soluções**, abra o menu de atalho para o **Feature1** nó e, em seguida, escolha **adicionar recurso**.
+1. No **Gerenciador de soluções**, abra o menu de atalho para o nó **Feature1** e escolha **Adicionar recurso**de recurso.
 
-2. No **adicionar recurso** diálogo caixa, escolha **idioma invariável** da lista como a cultura para o arquivo de recurso do recurso de idioma padrão.
+2. Na caixa de diálogo **Adicionar recurso** , escolha **Idioma invariável** na lista como a cultura do arquivo de recurso de recurso de idioma padrão.
 
-3. Repita a etapa anterior para cada idioma localizado, escolhendo os idiomas de sua preferência para o recurso localizado em arquivos de recurso.
+3. Repita a etapa anterior para cada idioma localizado, escolhendo os idiomas de sua escolha para os arquivos de recurso de recurso localizado.
 
-     Os arquivos de recurso separados são criados: um para o idioma padrão e um para cada idioma que você deseja dar suporte a localizado.
+     Arquivos de recurso de recurso separados são criados: um para o idioma padrão e outro para cada idioma localizado que você deseja dar suporte.
 
-4. Abra cada arquivo de recurso no Editor de recursos e, em seguida, insira todas as IDs de cadeia de caracteres e seus valores.
+4. Abra cada arquivo de recurso no editor de recursos e, em seguida, insira todas as IDs de cadeia de caracteres e seus valores.
 
-     Por exemplo, no arquivo de recurso do recurso padrão, insira uma ID de cadeia de caracteres de **Title** com um valor de **meu título do recurso**, e uma segunda cadeia de caracteres ID da **descrição** com um valor de **Minha descrição do recurso**. Para cada arquivo de recurso localizado, usar a mesma cadeia de caracteres IDs usadas no recurso do recurso padrão, mas insira cadeias de caracteres localizadas para os valores.
+     Por exemplo, no arquivo de recurso de recurso padrão, insira uma ID de cadeia de caracteres de **título** com um valor de **meu título de recurso**e uma segunda ID de **cadeia de caracteres** com um valor de **Descrição de meu recurso**. Para cada arquivo de recurso localizado, use as mesmas IDs de cadeias de caracteres usadas no recurso de recurso padrão, mas insira cadeias localizadas para os valores.
 
-5. Depois de inserir todos os valores de recursos, abra o menu de atalho para o recurso (por exemplo, *Feature1.feature*) e, em seguida, escolha **View Designer** para abrir o recurso no Designer de recurso.
+5. Depois de inserir todos os valores de recurso, abra o menu de atalho para o recurso (por exemplo, *Feature1. Feature*) e escolha **Designer de exibição** para abrir o recurso no designer de recursos.
 
-6. Para localizar o **Title** e **descrição** campos no recurso, use o seguinte formato para inserir valores em suas caixas de:
+6. Para localizar os campos **título** e **Descrição** no recurso, use o seguinte formato para inserir valores em suas caixas:
 
-     `$Resources:` *ID de cadeia de caracteres*
+     `$Resources:` *ID da Cadeia de Caracteres*
 
-     Por exemplo, digite $Resources:**Title** na **título do recurso** caixa e $Resources:**descrição** no **descrição do recurso** caixa .
+     Por exemplo, digite $Resources:**título** na caixa **título do recurso** e $Resources:**Descrição** na caixa **Descrição do recurso** .
 
-     A IDs de cadeia de caracteres deve corresponder àqueles que são usados nos arquivos de recurso.
+     As IDs de cadeia de caracteres devem corresponder às que são usadas nos arquivos de recurso.
 
-7. Escolha o **F5** tecla para compilar e executar o aplicativo.
+7. Escolha a tecla **F5** para compilar e executar o aplicativo.
 
-8. No SharePoint, abra o **ações do Site** menu, escolha **configurações de Site**e, em seguida, no **ações do Site** seção escolher o **gerenciar recursos de Site** link.
+8. No SharePoint, abra o menu **ações do site** , escolha configurações do **site**e, na seção **ações do site** , escolha o link **gerenciar recursos do site** .
 
 9. No SharePoint, altere o idioma de exibição do padrão.
 
-     O título do recurso localizado e a descrição são exibidos no aplicativo. Para exibir recursos localizados, o servidor do SharePoint deve ter um pacote de idiomas instalado que corresponda à cultura do arquivo de recurso.
+     O título e a descrição do recurso localizado aparecem no aplicativo. Para exibir recursos localizados, o servidor do SharePoint deve ter um pacote de idiomas instalado que corresponda à cultura do arquivo de recurso.
 
 ## <a name="see-also"></a>Consulte também
 - [Localizar soluções do SharePoint](../sharepoint/localizing-sharepoint-solutions.md)
-- [Como: Adicionar um arquivo de recurso](../sharepoint/how-to-add-a-resource-file.md)
-- [Como: Localizar marcação ASPX](../sharepoint/how-to-localize-aspx-markup.md)
+- [Como adicionar um arquivo de recurso](../sharepoint/how-to-add-a-resource-file.md)
+- [Como: localizar marcação ASPX](../sharepoint/how-to-localize-aspx-markup.md)
 - [Como: Localizar código](../sharepoint/how-to-localize-code.md)

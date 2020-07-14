@@ -15,19 +15,19 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 56ac5e60964621859c77bf53dc4f6c14480b4a83
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b5e078fc1bb7fe247d541e7695e98c2de76c2466
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669246"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544060"
 ---
-# <a name="ca1704-identifiers-should-be-spelled-correctly"></a>CA1704: os identificadores do recurso devem ter a ortografia correta
+# <a name="ca1704-identifiers-should-be-spelled-correctly"></a>CA1704: Identificadores devem ser escritos corretamente
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|IdentifiersShouldBeSpelledCorrectly|
+|TypeName|IdentifiersShouldBeSpelledCorrectly|
 |CheckId|CA1704|
 |Categoria|Microsoft. Naming|
 |Alteração Significativa|Quebra|
@@ -46,12 +46,12 @@ ms.locfileid: "72669246"
 
 - Sublinhados significam o final de um token e são removidos. Por exemplo, Hello_world cria tokens para "Olá", "mundo".
 
-- Os e comercial inseridos são removidos. Por exemplo, para & passe-partout cria tokens para "Format".
+- Os e comercial inseridos são removidos. Por exemplo, para&passe-partout cria tokens para "Format".
 
   Por padrão, a versão em inglês (EN) do verificador ortográfico é usada. Nenhum outro dicionário de idiomas está disponível no momento.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação dessa regra, corrija a grafia da palavra ou adicione a palavra a um dicionário personalizado chamado CustomDictionary. xml. Coloque o dicionário no diretório de instalação da ferramenta, no diretório do projeto ou no diretório associado à ferramenta sob o perfil do usuário (%USERPROFILE%\Application Data \\...). Para saber como adicionar o dicionário personalizado a um projeto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], consulte [como: personalizar o dicionário de análise de código](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
+ Para corrigir uma violação dessa regra, corrija a ortografia da palavra ou adicione a palavra a um dicionário personalizado chamado CustomDictionary.xml. Coloque o dicionário no diretório de instalação da ferramenta, no diretório do projeto ou no diretório que está associado à ferramenta sob o perfil do usuário (%USERPROFILE%\Application Data \\ ...). Para saber como adicionar o dicionário personalizado a um projeto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , consulte [como: personalizar o dicionário de análise de código](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
 
 - Adicione palavras que não devem causar uma violação sob o dicionário/palavras/caminho reconhecido.
 
@@ -90,17 +90,17 @@ ms.locfileid: "72669246"
  Suprimir um aviso dessa regra somente se a palavra for intencionalmente digitada incorretamente e a palavra se aplicar a um conjunto limitado da biblioteca. Palavras escritas corretamente reduzem a curva de aprendizado necessária para novas bibliotecas de software.
 
 ## <a name="related-rules"></a>Regras relacionadas
- [CA2204: os literais devem ter a ortografia correta](../code-quality/ca2204-literals-should-be-spelled-correctly.md)
+ [CA2204: Literais devem ser escritos corretamente](../code-quality/ca2204-literals-should-be-spelled-correctly.md)
 
- [CA1703: as cadeias de caracteres do recurso devem ter a ortografia correta](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
+ [CA1703: Cadeias de caracteres de recurso devem ser escritas corretamente](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
 
- [CA1709: os identificadores devem ter maiúsculas e minúsculas corretas](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+ [CA1709: Identificadores devem ter maiúsculas e minúsculas corretas](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 
- [CA1708: os identificadores devem ser diferentes além de maiúsculas de minúsculas](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+ [CA1708: Identificadores devem ser diferentes em algo além das maiúsculas e minúsculas](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
 
- [CA1707: os identificadores não devem conter sublinhados](../code-quality/ca1707-identifiers-should-not-contain-underscores.md)
+ [CA1707: Identificadores não devem conter sublinhados](../code-quality/ca1707-identifiers-should-not-contain-underscores.md)
 
- [CA1726: usar termos preferenciais](../code-quality/ca1726-use-preferred-terms.md)
+ [CA1726: Usar termos preferenciais](../code-quality/ca1726-use-preferred-terms.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Como personalizar o dicionário de análise de código](../code-quality/how-to-customize-the-code-analysis-dictionary.md)

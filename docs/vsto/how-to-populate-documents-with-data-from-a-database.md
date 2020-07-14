@@ -1,7 +1,7 @@
 ---
 title: 'Como: popular documentos com dados de um banco de dado'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 907b3deeadd0a56f9e47a6e17a40579a0c9ffa64
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 8470ec4acf686c016088c5f474539a1ab7ed85df
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985879"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547193"
 ---
 # <a name="how-to-populate-documents-with-data-from-a-database"></a>Como: popular documentos com dados de um banco de dado
 
@@ -36,7 +36,7 @@ O exemplo a seguir mostra como adicionar controles vinculados a dados em projeto
 
 ### <a name="to-populate-a-document-with-data-from-a-database"></a>Para preencher um documento com dados de um banco de dado
 
-1. Abra um projeto de nível de documento do Word no [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], com o documento aberto no designer.
+1. Abra um projeto de nível de documento do Word no [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , com o documento aberto no designer.
 
 2. Abra a janela **Data Sources** e crie uma fonte de dados de um banco de dado. Para obter mais informações, consulte [adicionar novas conexões](../data-tools/add-new-connections.md).
 
@@ -62,7 +62,7 @@ Quando você executa o projeto, o controle exibe o primeiro registro na fonte de
 
 ### <a name="to-scroll-through-the-records"></a>Para percorrer os registros
 
-- Use <xref:System.Windows.Forms.BindingSource> métodos como <xref:System.Windows.Forms.BindingSource.MoveNext%2A> e <xref:System.Windows.Forms.BindingSource.MovePrevious%2A>.
+- Use <xref:System.Windows.Forms.BindingSource> métodos como <xref:System.Windows.Forms.BindingSource.MoveNext%2A> e <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> .
 
 Para obter informações sobre como enviar atualizações para o dataset tipado e o banco de [dados, consulte How to: Update a data source with data of a host Control](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
 
@@ -70,7 +70,7 @@ Para obter informações sobre como enviar atualizações para o dataset tipado 
 
 - [Associar dados a controles em soluções do Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Adicionar novas fontes de dados](../data-tools/add-new-data-sources.md)
-- [Associando controles do Windows Forms a dados no Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
+- [Associar controles do Windows Forms a dados no Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
 - [Como: popular documentos com dados de objetos](../vsto/how-to-populate-documents-with-data-from-objects.md)
 - [Como: atualizar uma fonte de dados com dados de um controle de host](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
 - [Visão geral de usar arquivos de banco de dados local em soluções do Office](../vsto/using-local-database-files-in-office-solutions-overview.md)

@@ -2,7 +2,7 @@
 title: Teste de unidade do código Python
 description: A configuração do teste de unidade para o código Python no Visual Studio aproveita ao máximo as funcionalidades do Gerenciador de Testes para descobrir, executar e depurar testes.
 ms.date: 09/18/2019
-ms.topic: include
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 09c67ace9db36cb8ee3d94296d339b62849e3c94
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2a621cd56f980c8a1404ba8855cdf3544e58d39d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "71254193"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535311"
 ---
 # <a name="set-up-unit-testing-for-python-code"></a>Configurar o teste de unidade para o código do Python
 

@@ -1,7 +1,7 @@
 ---
 title: Visão geral de aplicativos de dados de N camadas
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords:
 - presentation tier
 - middle tier
@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 21233b94350823b1f765aa33f9304c10c43e0535
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 14527e84d5bbd2d06b2d091ba7a9d4daa9763462
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586374"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281949"
 ---
 # <a name="n-tier-data-applications-overview"></a>Visão geral de aplicativos de dados de N camadas
 Os aplicativos *de dados de N camadas* são aplicativos de dados separados em várias *camadas*. Também chamados de "aplicativos distribuídos" e "aplicativos multicamadas", os aplicativos de n camadas separam o processamento em camadas discretas que são distribuídas entre o cliente e o servidor. Ao desenvolver aplicativos que acessam dados, você deve ter uma separação clara entre as várias camadas que compõem o aplicativo.
@@ -31,12 +31,12 @@ O Visual Studio contém vários recursos para ajudar os desenvolvedores a criar 
 
 - As [ferramentas de LINQ to SQL no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) fornecem configurações para gerar o DataContext e as classes de dados em namespaces separados. Isso permite a separação lógica das camadas de acesso a dados e de entidade de dados.
 
-- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index) fornece o método <xref:System.Data.Linq.Table%601.Attach%2A> que permite reunir o DataContext de diferentes camadas em um aplicativo. Para obter mais informações, consulte [N camadas e aplicativos remotos com LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql).
+- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index) fornece o <xref:System.Data.Linq.Table%601.Attach%2A> método que permite reunir o DataContext de diferentes camadas em um aplicativo. Para obter mais informações, consulte [N camadas e aplicativos remotos com LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql).
 
 ## <a name="presentation-tier"></a>Camada de apresentação
 A *camada de apresentação* é a camada na qual os usuários interagem com um aplicativo. Ele geralmente também contém lógica adicional do aplicativo. Os componentes típicos da camada de apresentação incluem o seguinte:
 
-- Componentes de vinculação de dados, como o <xref:System.Windows.Forms.BindingSource> e <xref:System.Windows.Forms.BindingNavigator>.
+- Componentes de vinculação de dados, como o <xref:System.Windows.Forms.BindingSource> e o <xref:System.Windows.Forms.BindingNavigator> .
 
 - Representações de objeto de dados, como [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index) classes de entidade para uso na camada de apresentação.
 
@@ -57,7 +57,7 @@ A camada *intermediária* é a camada que a camada de apresentação e a camada 
 
 A ilustração a seguir mostra os recursos e as tecnologias disponíveis no Visual Studio e onde eles podem se ajustar à camada intermediária de um aplicativo de n camadas.
 
-![componentes da camada intermediária](../data-tools/media/ntiermid.png) camada intermediária
+![Camada intermediária dos componentes da camada intermediária ](../data-tools/media/ntiermid.png)
 
 A camada intermediária normalmente se conecta à camada de dados usando uma conexão de dados. Essa conexão de dados normalmente é armazenada no componente de acesso a dados.
 
@@ -66,7 +66,7 @@ A *camada de dados* é basicamente o servidor que armazena os dados de um aplica
 
 A ilustração a seguir mostra os recursos e as tecnologias disponíveis no Visual Studio e onde eles podem se ajustar à camada de dados de um aplicativo de n camadas.
 
-![componentes da camada de dados](../data-tools/media/ntierdatatier.png) camada de dados
+![Camada de dados dos componentes da camada de dados ](../data-tools/media/ntierdatatier.png)
 
 A camada de dados não pode ser acessada diretamente do cliente na camada de apresentação. Em vez disso, o componente de acesso a dados na camada intermediária é usado para comunicação entre as camadas de apresentação e de dados.
 
@@ -75,13 +75,13 @@ Os tópicos a seguir fornecem informações sobre como trabalhar com aplicativos
 
 [Separar conjuntos de dados e TableAdapters em diferentes projetos](../data-tools/separate-datasets-and-tableadapters-into-different-projects.md)
 
-[Passo a passo: criando um aplicativo de dados de N camadas](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
+[Walkthrough: Criando um aplicativo de dados de n camadas](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
 
-[Aplicativos de N camadas e remotos com o LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql)
+[Aplicativos de N camadas e remotos com LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql)
 
 ## <a name="see-also"></a>Veja também
 
-- [Passo a passo: criando um aplicativo de dados de N camadas](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
+- [Walkthrough: Criando um aplicativo de dados de n camadas](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
 - [Atualização hierárquica](../data-tools/hierarchical-update.md)
 - [Ferramentas de conjunto de dados no Visual Studio](../data-tools/dataset-tools-in-visual-studio.md)
 - [Acessando dados no Visual Studio](../data-tools/accessing-data-in-visual-studio.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaFrameData::get_lengthProlog | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 00b85d1db996487d76d396d6e4df9ea557e6aae5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9975446cb8c7691f46b6d320f59718d9d87c8440
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743554"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467305"
 ---
 # <a name="idiaframedataget_lengthprolog"></a>IDiaFrameData::get_lengthProlog
 Recupera o número de bytes do código de prólogo no bloco.
@@ -35,11 +35,11 @@ HRESULT get_lengthProlog ( 
 
 fora Retorna o número de bytes do código de prólogo.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver suporte para essa propriedade. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
 ## <a name="remarks"></a>Comentários
  O código de prólogo é uma sequência de instruções que preserva os registros, define o estado da CPU e estabelece a pilha para a função.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

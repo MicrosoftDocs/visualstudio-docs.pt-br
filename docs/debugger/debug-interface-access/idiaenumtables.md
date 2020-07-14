@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumTables | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d505219468f802a3eff9df0ad766fd1a353d5166
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2f1e2997ebf6916c684751b3d19f68cf044d992f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743699"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467452"
 ---
 # <a name="idiaenumtables"></a>IDiaEnumTables
 Enumera as várias tabelas contidas na fonte de dados.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumTables : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Métodos em ordem vtable
- A tabela a seguir mostra os métodos de `IDiaEnumTables`.
+ A tabela a seguir mostra os métodos de `IDiaEnumTables` .
 
 |Método|Descrição|
 |------------|-----------------|
@@ -47,7 +47,7 @@ IDiaEnumTables : IUnknown
 Obtenha essa interface chamando o método [IDiaSession:: getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md) .
 
 ## <a name="example"></a>Exemplo
-Este exemplo mostra como obter a interface de `IDiaEnumTables` de uma sessão. Para obter um exemplo mais completo de como usar tabelas, consulte a interface [IDiaTable](../../debugger/debug-interface-access/idiatable.md) .
+Este exemplo mostra como obter a `IDiaEnumTables` interface de uma sessão. Para obter um exemplo mais completo de como usar tabelas, consulte a interface [IDiaTable](../../debugger/debug-interface-access/idiatable.md) .
 
 ```C++
 void ShowTableNames(IDiaSession *pSession)
@@ -68,6 +68,6 @@ Biblioteca: diaguids. lib
 
 DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)

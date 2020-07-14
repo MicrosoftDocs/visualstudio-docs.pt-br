@@ -5,12 +5,13 @@ author: cobey
 ms.author: cobey
 ms.date: 05/06/2018
 ms.assetid: 0FE5E929-1846-4F48-B5E3-70990FAF9504
-ms.openlocfilehash: 2966d8b89a2609d3fbfc2b6b4561288433641ca1
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: a0aa3de91f1a2c75d73409d89f3cbc8894faacab
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "67693108"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85939115"
 ---
 # <a name="comments"></a>Comentários
 
@@ -30,7 +31,7 @@ Esses métodos podem ser usados para comentar ou remover a marca de comentário 
 
 Comentários também são úteis para documentar código para futuros desenvolvedores poderão vir a interagir com ele. Isso geralmente é feito na forma de comentário de várias linhas, que são adicionados da seguinte maneira em cada linguagem:
 
-**C #**
+**C#**
 
 ```csharp
 /*
@@ -39,7 +40,7 @@ Comentários também são úteis para documentar código para futuros desenvolve
 */
 ```
 
-**F #**
+**F#**
 
 ```fsharp
 (*

@@ -15,19 +15,19 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a2106042b552efbe824d7517abcc86e322b57aa9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cf797ad67b7df2eb1f3ba1246e965ed6ebbd586d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72607865"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547856"
 ---
-# <a name="ca1501-avoid-excessive-inheritance"></a>CA1501: evitar herança excessiva
+# <a name="ca1501-avoid-excessive-inheritance"></a>CA1501: Evitar herança excessiva
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|AvoidExcessiveInheritance|
+|TypeName|AvoidExcessiveInheritance|
 |CheckId|CA1501|
 |Categoria|Microsoft. Maintainabilidade|
 |Alteração Significativa|Quebra|

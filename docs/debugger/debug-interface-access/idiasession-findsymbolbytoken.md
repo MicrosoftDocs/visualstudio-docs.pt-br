@@ -1,7 +1,7 @@
 ---
 title: IDiaSession::findSymbolByToken | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 098d84d6c7c79fee5fea5e5b2b36136bf7b55b26
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2656cd8e1b509dbfbd3651bf850341c55702d60d
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742020"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465555"
 ---
 # <a name="idiasessionfindsymbolbytoken"></a>IDiaSession::findSymbolByToken
 Recupera o símbolo que contém um token de metadados especificado.
@@ -45,8 +45,8 @@ no Tipo de símbolo a ser encontrado. Os valores são obtidos da enumeração de
 
 fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que representa o símbolo recuperado.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo
 
@@ -55,7 +55,7 @@ IDiaSymbol* pFunc;
 pSession->findSymbolByToken( token, SymTagFunction, &pFunc );
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)

@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9fa92e773c3dc130d0c0fc0ce05cc270dc9b6e53
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ef5ccc0cf432a5c6782b76c4623bfdc55f66a8b5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669003"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538549"
 ---
 # <a name="code-analysis-application-errors"></a>Erros do aplicativo de análise do código
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,14 +27,14 @@ Esta seção é uma referência das mensagens de erro geradas pela ferramenta de
 
 ## <a name="in-this-section"></a>Nesta seção
 
-|||
+|Item|Valor|
 |-|-|
 |[CA0001](ca0001.md)|Uma exceção foi gerada na ferramenta de análise de código gerenciado que não indica uma condição de erro esperada.|
 |[CA0051](ca0051.md)|Nenhuma regra foi selecionada.|
 |[CA0052](ca0052.md)|Nenhum destino foi selecionado para análise.|
 |[CA0053](ca0053.md)|Não foi possível carregar o assembly da regra.|
 |[CA0054](ca0054.md)|Um assembly de regra personalizado tem recursos XML inválidos.|
-|[CA0055](ca0055.md)|Não foi possível carregar o arquivo: \<path >|
+|[CA0055](ca0055.md)|Não foi possível carregar o arquivo:\<path>|
 |[CA0056](ca0056.md)|Um arquivo de projeto tem uma versão incorreta da ferramenta de análise.|
 |[CA0057](ca0057.md)|As violações não podem ser mapeadas para o conjunto atual de destinos e regras.|
 |[CA0058](ca0058.md)|Não é possível carregar assemblies referenciados.|
@@ -47,7 +47,7 @@ Esta seção é uma referência das mensagens de erro geradas pela ferramenta de
 |[CA0065](ca0065.md)|Construção de metadados sem suporte: o tipo '*TypeName*' contém uma propriedade e um campo com o mesmo nome '*PropertyFieldName*'|
 |[CA0066](ca0066.md)|O valor '*VersionId*' fornecido para o **/TargetFrameworkVersion** não é uma versão reconhecida.|
 |[CA0067](ca0067.md)|Diretório não encontrado.|
-|[CA0068](ca0068.md)|Não foi possível encontrar informações de depuração para o assembly de destino *' AssemblyName '* .|
+|[CA0068](ca0068.md)|Não foi possível encontrar informações de depuração para o assembly de destino *' AssemblyName '*.|
 |[CA0069](ca0069.md)|Usando a plataforma alternativa. *FrameworkVersion1* não pôde ser encontrado. Usando *FrameworkVersion2* em vez disso. Para obter os melhores resultados da análise, verifique se o .NET Framework correto está instalado.|
 |[CA0070](ca0070.md)|Não é possível carregar o assembly ou o tipo devido a permissões de segurança.|
 |[CA0501](ca0501.md)|Não é possível ler o relatório de saída.|
@@ -61,4 +61,4 @@ Esta seção é uma referência das mensagens de erro geradas pela ferramenta de
 
 - [Diretrizes para escrever código seguro](https://msdn.microsoft.com/9892fd19-45cd-44b6-9fa8-10f1b5cb6ea4)
 - [Analisando a qualidade do código gerenciado](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)
-- [Recursos para solução de erros em ferramentas de gerenciamento do ciclo de vida do aplicativo](https://msdn.microsoft.com/library/76ca8f76-1e2d-4b55-89e2-bd59e4abe74c)
+- [Recursos para solucionar problemas de erros em ferramentas de gerenciamento do ciclo de vida do aplicativo](https://msdn.microsoft.com/library/76ca8f76-1e2d-4b55-89e2-bd59e4abe74c)

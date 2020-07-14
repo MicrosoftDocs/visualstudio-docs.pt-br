@@ -1,7 +1,7 @@
 ---
 title: Instalar e usar por trás de um firewall ou servidor proxy
 description: Examine as URLs de domínio, as portas e os protocolos que você pode querer adicionar a uma lista de permissões ou abrir se sua organização usar um firewall ou um servidor proxy
-ms.date: 05/13/2020
+ms.date: 06/17/2020
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: c1a1fd706ce64b9b39954142664e0799b6251c56
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 09340940796e20f679c3c9bbad3d55880b25ab7a
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84180435"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283470"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Instalar e usar o Visual Studio e os Serviços do Azure atrás de um firewall ou servidor proxy
 
@@ -93,7 +93,7 @@ Para garantir que você tenha acesso a tudo o que desejar quando usar o Visual S
 | - | - | -: | - | - |
 | URL<br>resolução | go.microsoft.com<br><br>aka.ms | | Usada para reduzir as URLs, que, em seguida, resolvem em URLs mais longas |
 | Start Page | vsstartpage.blob.core.windows.net | 443 | Usada para exibir as Novidades do Desenvolvedor mostradas na página inicial (somente Visual Studio 2017) |
-| Destino<br> Notificação <br>Serviço | targetednotifications-tm.trafficmanager.net <br><br>www.research.net | 443<br><br>443 | Usada para filtrar uma lista global de notificações para uma lista aplicável somente a tipos específicos de cenários de uso/computadores |
+| Direcionado<br> Notification <br>Serviço | targetednotifications-tm.trafficmanager.net <br><br>www.research.net | 443<br><br>443 | Usada para filtrar uma lista global de notificações para uma lista aplicável somente a tipos específicos de cenários de uso/computadores |
 | Extensão <br>verificação de atualização | marketplace.visualstudio.com<br><br>&#42;.windows.net <br>&#42;.microsoftonline.com <br>&#42;.live.com | 443 | Usada para fornecer notificações quando uma extensão instalada tem uma atualização disponível <br><br> Usada como um local de conexão |
 | Projeto do AI <br>Integração | az861674.vo.msecnd.net | 443<br> | Usada para configurar novos projetos para enviar dados de uso para sua conta do Application Insights registrada |
 | CodeLens | codelensprodscus1su0.app.<br>codelens.visualstudio.com | 443 | Usada para fornecer informações no editor sobre quando um arquivo foi atualizado pela última, a linha do tempo de alterações, os itens de trabalho aos quais as alterações estão associadas, os autores e muito mais |
@@ -103,13 +103,13 @@ Para garantir que você tenha acesso a tudo o que desejar quando usar o Visual S
 | Ferramentas do Windows | developer.microsoft.com <br><br>dev.windows.com  <br><br>appdev.microsoft.com | https/443 | Usada para cenários de armazenamento de aplicativos do Windows |
 | Esquema JSON <br>Descoberta <br><br>Esquema JSON <br>Definição<br><br>Esquema JSON <br>O suporte para <br>Recursos do Azure | json.schemastore.org <br>schemastoreorg.azurewebsites.net<br><br>json-schema.org<br><br>schema.management.azure.com | http/80<br>https/443<br><br>http/80<br><br>https/443 | Usada para descobrir e baixar os esquemas JSON que o usuário pode usar durante a edição de documentos JSON <br><br>Usada para obter o esquema de metavalidação para JSON<br><br>Usada para obter o esquema atual para modelos de implantação do Azure Resource Manager |
 | Pacote NPM <br>descobrir | Skimdb.npmjs.com <br><br>Registry.npmjs.org <br><br>Api.npms.io | https/443<br><br>& de http/80<br> https/443<br>https/443 | Necessária para pesquisar pacotes NPM e usada para a instalação do pacote de script do lado do cliente em projetos da Web |
-| Pacote de Bower<br> ícones<br><br>Pacote de Bower <br>pesquisar | Bower.io <br><br>bowercache.azurewebsites.net <br>go.microsoft.com <br>Registry.bower.io | http/80<br><br>https/443<br>http/80<br>https/443 | Fornece o ícone padrão do pacote de Bower  <br><br>Fornece a capacidade de pesquisar pacotes de Bower |
+| Pacote de Bower<br> ícones<br><br>Pacote de Bower <br>pequisa | Bower.io <br><br>bowercache.azurewebsites.net <br>go.microsoft.com <br>Registry.bower.io | http/80<br><br>https/443<br>http/80<br>https/443 | Fornece o ícone padrão do pacote de Bower  <br><br>Fornece a capacidade de pesquisar pacotes de Bower |
 | NuGet<br><br>Pacote NuGet<br> descobrir | api.nuget.org <br>www.nuget.org <br>nuget.org <br>azuresearch-usnc.nuget.org <br>azuresearch-ussc.nuget.org <br>licenses.nuget.org <br>nuget.cdn.azure.cn <br>azuresearch-ea.nuget.org <br>azuresearch-sea.nuget.org <br><br>crl3.digicert.com <br>crl4.digicert.com <br>ocsp.digicert.com <br>cacerts.digicert.com | https/443<br><br>& de http/80<br>https/443<br> | Usada para verificar pacotes NuGet assinados.<br><br>Necessária para pesquisar versões e pacotes NuGet |
 | Informações do repositório GitHub | api.github.com | https/443 | Necessária para obter informações adicionais sobre pacotes de Bower |
 | Linters da Web | Eslint.org<br><br>www.Bing.com <br><br>www.coffeelint.org | http/80 | |
 | Criação do projeto do<br>Explorador do Cookiecutter<br>descobrir <br><br>Criação do projeto do <br>Explorador do Cookiecutter<br> criação  | api.github.com <br>raw.githubusercontent.com <br>go.microsoft.com<br><br>pypi.org <br> pypi.python.org | https/443<br> | Usada para descobrir modelos online de nosso feed recomendado e de repositórios GitHub <br><br>Usada para criar um projeto de um modelo de cookiecutter que requer uma instalação sob demanda única de um pacote do Python de cookiecutter do PyPI (índice de pacote do Python) |
 | Pacote do Python <br>descobrir<br><br>Pacote do Python <br>gerenciamento<br><br>Novo <br>Python <br> project <br>modelos | pypi.org<br> <br>pypi.python.org <br>bootstrap.pypa.io<br><br>go.microsoft.com | https/443 | Fornece a capacidade de pesquisar pacotes de pip<br><br>Usada para instalar o pip automaticamente se ele estiver ausente <br><br>Usada para resolver os seguintes novos modelos de projeto do Python para URLs de modelo do cookiecutter:<br> – Projeto de classificador<br>– Projeto de clustering <br> – Projeto de regressão <br> – PyGame usando PyKinect <br> – Projeto Pyvot |
-| Web do Office <br>add-in <br> Manifest <br>Verificação <br>Serviço | verificationservice.osi.office.net | https/443 | Usada para validar os manifestos de suplementos de Web do Office |
+| Web do Office <br>add-in <br> Manifesto <br>Verificação <br>Serviço | verificationservice.osi.office.net | https/443 | Usada para validar os manifestos de suplementos de Web do Office |
 | Suplementos do SharePoint <br>Suplementos do Office | sharepoint.com<br> office365.com<br> microsoftonline.com <br> outlook.com | https/443 | Usado para publicar e testar os suplementos do SharePoint e do Office no SharePoint Online e no Office 365 |
 | Serviço de teste do <br>Gerenciador de Fluxo de Trabalho<br> Host | | http/12292 | Uma regra de firewall que é criada automaticamente para testar suplementos do SharePoint com fluxos de trabalho |
 | Estatísticas de confiabilidade <br>coletadas automaticamente <br>e outros <br>CEIP (Programas de Aperfeiçoamento da <br>Experiência do Usuário)<br> para o SDK do Azure <br>para Ferramentas do SQL <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | https/443 | Usada para enviar as estatísticas de confiabilidade (dados de travamento ou falha) do usuário à Microsoft. Os despejos de travamento/falha reais ainda serão carregados se o Relatório de Erros do Windows estiver habilitado, apenas informações estatísticas serão suprimidas; <br>Usada para revelar padrões de uso anônimos para a extensão do SDK de Ferramentas do Azure para o Visual Studio e para padrões de uso para ferramentas do SQL para Visual Studio |
@@ -129,6 +129,8 @@ Para garantir que você tenha acesso a tudo o que desejar quando usar o Visual S
 | Azure Data Lake | &#42;.azuredatalakestore.net <br>&#42;.azuredatalakeanalytics.net | https/443 | Usada para compilar, enviar, exibir, diagnosticar e depurar os trabalhos, usada para navegar em arquivos ADLS, usada para carregar e baixar arquivos |
 | Empacotar serviço | [conta].visualstudio.com <br/> [conta].\*.visualstudio.com <br/> \*.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https/443 | O \* . npmjs.org, \* . NuGet.org e \* . NodeJS.org só são necessários para determinados cenários de tarefa de compilação (por exemplo: instalador de ferramenta NuGet, instalador de ferramenta de nó) ou se você pretende usar upstream público com seus feeds. Os outros três domínios são necessários para a funcionalidade principal do serviço de empacotamento. |
 | Azure DevOps Services | \*.vsassets.io <br/> static2.sharepointonline.com <br/> dev.azure.com | | Usado para conectar-se ao Azure DevOps Services |
+| Barramento de Serviço do Azure | \*.servicebus.windows.net | ampq/5671 e 5672, </br> sbmp/9350-9354, </br> http/80, </br> https/443 | Usado para criar filas, tópicos e assinaturas. </br> Também usado para enviar/receber mensagens de/para as filas e tópicos do barramento de serviço. |
+| Azure Cosmos DB | \*. documents.azure.com | https/443 | Usado para chamar APIs de banco de dados de documento principal. |
 | Comunidade de Desenvolvedores | sendvsfeedback2.azurewebsites.net/api | https/443 | Usado para chamar APIs da ferramenta de comentários da comunidade de desenvolvedores (meus problemas, Pesquisar, votar, comentar, enviar, carregar, retomar) |
 | Intellicode | \*. intellicode.vsengsaas.visualstudio.com | https/443 | Usado para chamar APIs Intellicode |
 | Live Share | \*. liveshare.vsengsaas.visualstudio.com| https/443 | Usado para chamar Live Share APIs |
@@ -145,7 +147,7 @@ Para garantir que você tenha acesso a tudo o que desejar quando usar o Visual S
 
 Às vezes, você pode encontrar erros relacionados à rede ou ao proxy ao instalar ou usar o Visual Studio atrás de um firewall ou servidor proxy. Para obter mais informações sobre as soluções para essas mensagens de erro, consulte a página [Solução de erros relacionados à rede ao instalar ou usar o Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md).
 
-## <a name="get-support"></a>Obtenha suporte
+## <a name="get-support"></a>Obter suporte
 
 Oferecemos uma opção de suporte de [**chat de instalação**](https://visualstudio.microsoft.com/vs/support/#talktous) (somente em inglês) para problemas relacionados à instalação.
 

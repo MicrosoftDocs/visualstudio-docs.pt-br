@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSymbols::Skip | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9252826470decd3cddfabdcc2a00e22037d5de5c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: fea037e4e99cc5c8822987c30a94adf37ebe276e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743904"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467704"
 ---
 # <a name="idiaenumsymbolsskip"></a>IDiaEnumSymbols::Skip
 Ignora um número especificado de símbolos em uma sequência de enumeração.
@@ -35,8 +35,8 @@ HRESULT Skip ( 
 
 no O número de símbolos na sequência de enumeração a serem ignorados.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará `S_FALSE` se não houver mais símbolos a serem ignorados.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK` ; caso contrário, retornará `S_FALSE` se não houver mais símbolos a serem ignorados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

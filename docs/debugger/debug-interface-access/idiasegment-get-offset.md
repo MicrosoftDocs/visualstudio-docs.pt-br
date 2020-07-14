@@ -1,7 +1,7 @@
 ---
 title: IDiaSegment::get_offset | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e0d6084f75b3ba903a89c3dfc4249b73887df39
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: be90322d11d8676d1087ee53c914eaf7a33c518b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742398"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465961"
 ---
 # <a name="idiasegmentget_offset"></a>IDiaSegment::get_offset
 Recupera o deslocamento, em segmentos, onde a seção começa.
@@ -35,8 +35,8 @@ HRESULT get_offset ( 
 
 fora Retorna o deslocamento, em segmentos, onde a seção começa.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver suporte para essa propriedade. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

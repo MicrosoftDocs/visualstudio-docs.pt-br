@@ -1,7 +1,7 @@
 ---
 title: Associar controles a dados
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - data, displaying
 - data sources, displaying data
@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9e0746de34a16dc181baff3c8b843b123c2ae434
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3d812316de46caf7480146003f7ba1950ae3b9e2
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587024"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283028"
 ---
 # <a name="bind-controls-to-data-in-visual-studio"></a>Associar controles a dados no Visual Studio
 
@@ -32,11 +32,11 @@ No contexto de vinculação de dados, uma fonte de dados representa os dados na 
 
 | Fonte de dados | Suporte a arrastar e soltar no **Designer de formulários do Windows** | Suporte a arrastar e soltar no **designer do WPF** | Suporte a arrastar e soltar no **designer do Silverlight** |
 | - | - | - | - |
-| Conjunto de Dados | Sim | Sim | Não |
-| Modelo de dados da entidade | Sim<sup>1</sup> | Sim | Sim |
+| Dataset | Sim | Sim | Não |
+| Modelo de Dados de Entidade | Sim<sup>1</sup> | Sim | Sim |
 | Classes do LINQ to SQL | Não<sup>2</sup> | Não<sup>2</sup> | Não<sup>2</sup> |
-| Serviços (incluindo [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)], serviços WCF e serviços Web) | Sim | Sim | Sim |
-| Objeto do | Sim | Sim | Sim |
+| Serviços (incluindo serviços [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] WCF e serviços Web) | Sim | Sim | Sim |
+| Objeto | Sim | Sim | Sim |
 | SharePoint | Sim | Sim | Sim |
 
 1. Gere o modelo usando o assistente de **modelo de dados de entidade** e, em seguida, arraste esses objetos para o designer.
@@ -45,7 +45,7 @@ No contexto de vinculação de dados, uma fonte de dados representa os dados na 
 
 ## <a name="data-sources-window"></a>janela Fontes de Dados
 
-As fontes de dados estão disponíveis para seu projeto como itens na janela **fontes de dados** . Essa janela fica visível quando uma superfície de design de formulário é a janela ativa em seu projeto, ou você pode abri-la (quando um projeto estiver aberto) escolhendo **exibir** > outras **fontes de dados**do **Windows** > . Você pode arrastar itens desta janela para criar controles associados aos dados subjacentes e também pode configurar as fontes de dados clicando com o botão direito do mouse.
+As fontes de dados estão disponíveis para seu projeto como itens na janela **fontes de dados** . Essa janela fica visível quando uma superfície de design de formulário é a janela ativa em seu projeto, ou você pode abri-la (quando um projeto estiver aberto) escolhendo **Exibir**  >  **outras**  >  **fontes de dados**do Windows. Você pode arrastar itens desta janela para criar controles associados aos dados subjacentes e também pode configurar as fontes de dados clicando com o botão direito do mouse.
 
 ![janela Fontes de Dados](../data-tools/media/raddata-data-sources-window.png)
 
@@ -57,11 +57,11 @@ A tabela a seguir lista algumas das tarefas mais comuns que você executa para a
 
 |Tarefa|Mais informações|
 |----------| - |
-|Abra a janela **fontes de dados** .|Abra uma superfície de design no editor e escolha **exibir** > **fontes de dados**.|
+|Abra a janela **fontes de dados** .|Abra uma superfície de design no editor e escolha **Exibir**  >  **fontes de dados**.|
 |Adicione uma fonte de dados ao seu projeto.|[Adicionar novas fontes de dados](../data-tools/add-new-data-sources.md)|
 |Defina o controle que é criado quando você arrasta um item da janela **fontes de dados** para o designer.|[Definir o controle a ser criado quando arrastado da janela Fontes de Dados](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)|
 |Modifique a lista de controles que estão associados aos itens na janela **fontes de dados** .|[Adicionar controles personalizados à janela Fontes de Dados](../data-tools/add-custom-controls-to-the-data-sources-window.md)|
-|Criar controles vinculados a dados.|[Associando controles do Windows Forms a dados no Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)<br /><br /> [Associar controles WPF a dados no Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)|
+|Criar controles vinculados a dados.|[Associar controles do Windows Forms a dados no Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)<br /><br /> [Associar controles WPF a dados no Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)|
 |Associar a um objeto ou uma coleção.|[Associar objetos no Visual Studio](../data-tools/bind-objects-in-visual-studio.md)|
 |Filtre os dados que aparecem na interface do usuário.|[Filtrar e classificar dados em um Aplicativo do Windows Forms](../data-tools/filter-and-sort-data-in-a-windows-forms-application.md)|
 |Personalizar legendas para controles.|[Personalizar o modo como o Visual Studio cria legendas para controles associados a dados](../data-tools/customize-how-visual-studio-creates-captions-for-data-bound-controls.md)|
@@ -69,4 +69,4 @@ A tabela a seguir lista algumas das tarefas mais comuns que você executa para a
 ## <a name="see-also"></a>Veja também
 
 - [Ferramentas de dados do Visual Studio para .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)
-- [Associação de dados do Windows Forms](/dotnet/framework/winforms/windows-forms-data-binding)
+- [Windows Forms Associação de dados](/dotnet/framework/winforms/windows-forms-data-binding)

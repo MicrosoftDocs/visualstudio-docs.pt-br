@@ -3,7 +3,7 @@ title: Usar o Visual Studio sem um mouse
 titleSuffix: ''
 description: Saiba como navegar e escrever código no IDE (ambiente de desenvolvimento integrado) do Visual Studio usando apenas o teclado.
 ms.date: 05/10/2019
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Toolbox, shortcut keys
 - shortcut keys [Visual Studio]
@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b1beb2ccb6b3e3e2b74ed7deaf2f31443ee2466
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5a8c14f59b87be1e59b5d115ea84b555677cda32
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75569017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770224"
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>Como usar exclusivamente o teclado
 
@@ -43,9 +43,9 @@ Para obter uma lista completa de teclas de atalho de comando no Visual Studio, c
 
 Para adicionar um controle na Caixa de Ferramentas a um formulário ou designer sem usar o mouse:
 
-1. Na barra de menus, escolha **Exibir** > **caixa de ferramentas**.
+1. Na barra de menus, escolha **Exibir**  >  **caixa de ferramentas**.
 
-2. Use as**tectas** **Ctrl**+Up ou **Ctrl**+**Down** para mover-se entre as seções da guia Caixa **de ferramentas.**
+2. Use as teclas **Ctrl** + **seta para cima** ou **Ctrl** + **seta para baixo** para mover entre as seções na guia caixa de **ferramentas** .
 
 3. Use a tecla **Seta para cima** ou **Seta para baixo** para percorrer os controles de uma seção.
 
@@ -63,17 +63,17 @@ Para percorrer as opções em uma caixa de diálogo e alterar as configurações
 
    - Para caixas de seleção, pressione a **Barra de espaço** para marcar ou desmarcar a seleção.
 
-   - Para listas para baixo, use**a seta** **Alt**+Down para exibir itens e, em seguida, use as **tectas Seta Para Cima** e Para **Baixo** para alterar o item selecionado.
+   - Para listas suspensas, use **ALT** + **seta para baixo** para exibir itens e, em seguida, use as teclas **seta para cima** e **seta para baixo** para alterar o item selecionado.
 
    - Para os botões, selecione **Enter** para invocar.
 
-   - Para as grades, use as teclas de direção para navegar. Para listas para baixo em grades, use **a**+**seta** Shift**Alt**+Down para exibir itens e, em seguida, use as **tectas Seta Para Cima** e Para **Baixo** para alterar o item selecionado.
+   - Para as grades, use as teclas de direção para navegar. Para listas suspensas em grades, use **Shift** + **ALT** + **seta para baixo** para exibir itens e, em seguida, use as teclas **seta para cima** e **seta para baixo** para alterar o item selecionado.
 
 ## <a name="navigate-between-windows-and-files"></a>Navegar entre janelas e arquivos
 
-- Para mover entre arquivos em um editor ou designer, escolha o atalho de teclado **Ctrl**+**Tab** para exibir o Navegador IDE com **Arquivos Ativos** selecionados. Escolha a tecla **Enter** para navegar até o arquivo realçado.
+- Para mover entre arquivos em um editor ou designer, escolha o atalho de teclado **Ctrl** + **Tab** para exibir o navegador IDE com os **arquivos ativos** selecionados. Escolha a tecla **Enter** para navegar até o arquivo realçado.
 
-- Para mover-se entre as janelas de ferramentas encaixadas, escolha o atalho do teclado **Alt**+**F7** para exibir o Navegador IDE com **o Active Tool Windows** selecionado. Escolha a tecla **Enter** para navegar até a janela realçada.
+- Para mover entre janelas de ferramentas encaixadas, escolha o atalho de teclado **ALT** + **F7** para exibir o navegador IDE com **janelas de ferramentas ativas** selecionadas. Escolha a tecla **Enter** para navegar até a janela realçada.
 
 ## <a name="move-and-dock-tool-windows"></a>Mover e encaixar janelas de ferramentas
 
@@ -81,7 +81,7 @@ Para percorrer as opções em uma caixa de diálogo e alterar as configurações
 
 2. No menu **Janela**, selecione a opção **Encaixável**.
 
-3. Pressione **Alt**+**Spacebar**e escolha **Mover**.
+3. Pressione **Alt**a + **barra de espaços**Alt e escolha **mover**.
 
    O losango guia de encaixe é exibido.
 
@@ -99,7 +99,7 @@ Para percorrer as opções em uma caixa de diálogo e alterar as configurações
 
 ## <a name="see-also"></a>Confira também
 
-* [Identificação e personalização de atalhos de teclado](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)
+* [Identificando e personalizando atalhos de teclado](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)
 * [Dicas e truques de acessibilidade](../../ide/reference/accessibility-tips-and-tricks.md)
 * [Atalhos de teclado padrão](../../ide/default-keyboard-shortcuts-in-visual-studio.md)
 * [Acessibilidade em produtos Microsoft](https://www.microsoft.com/accessibility/)

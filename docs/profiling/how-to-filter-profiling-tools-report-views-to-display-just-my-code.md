@@ -1,19 +1,19 @@
 ---
 title: Filtrar exibições de relatório das ferramentas de criação de perfil para exibir Apenas Meu Código
 ms.date: 02/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: db43caeb00ef8348eb1a7dd584c1b0b52001bc3f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d6444eda5eada1941162bef07e88b430d314c0d1
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778954"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329777"
 ---
 # <a name="how-to-filter-profiling-tools-report-views-to-display-just-my-code"></a>Como filtrar visualizações de relatório das ferramentas de criação de perfil para exibir Apenas Meu Código
 
@@ -35,6 +35,6 @@ O Visual Studio fornece filtragem para relatórios de desempenho para que eles e
 
 3. Em **Configurações Gerais**, desmarque a caixa de seleção **Habilitar Apenas Meu Código**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Personalizar as exibições de relatório das ferramentas de desempenho](../profiling/customizing-performance-tools-report-views.md)
+[Personalizar modos de exibição de relatório das ferramentas de desempenho](../profiling/customizing-performance-tools-report-views.md)

@@ -1,7 +1,7 @@
 ---
 title: NameSearchOptions | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61905c0c6c40d893cc8723b711d67690133a7155
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 696ad3e659b503b27da73056dafb57c5852d5133
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738621"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461171"
 ---
 # <a name="namesearchoptions"></a>NameSearchOptions
 Especifica as opções de pesquisa para nomes de arquivo e símbolo.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```C++
 enum NameSearchOptions {
@@ -45,15 +45,15 @@ enum NameSearchOptions {
 ## <a name="elements"></a>Elementos
 `nsNone` Nenhuma opção foi especificada.
 
-`nsfCaseSensitive` aplica uma correspondência de nome que diferencia maiúsculas de minúsculas.
+`nsfCaseSensitive`Aplica uma correspondência de nome que diferencia maiúsculas de minúsculas.
 
-`nsfCaseInsensitive` aplica uma correspondência de nome que não diferencia maiúsculas de minúsculas.
+`nsfCaseInsensitive`Aplica uma correspondência de nome que não diferencia maiúsculas de minúsculas.
 
-`nsfFNameExt` trata nomes como caminhos e aplica uma correspondência de nome filename. ext.
+`nsfFNameExt`Trata os nomes como caminhos e aplica uma correspondência de nome filename. ext.
 
-`nsfRegularExpression` aplica uma correspondência de nome que diferencia maiúsculas de minúsculas usando asteriscos (*) e pontos de interrogação (?) como curingas. (Não há suporte para outros caracteres comuns de expressão regular.)
+`nsfRegularExpression`Aplica uma correspondência de nome que diferencia maiúsculas de minúsculas usando asteriscos (*) e pontos de interrogação (?) como curingas. (Não há suporte para outros caracteres comuns de expressão regular.)
 
-`nsfUndecoratedName` aplica-se somente a símbolos que têm nomes não decorados e decorados.
+`nsfUndecoratedName`Aplica-se somente a símbolos que têm nomes não decorados e decorados.
 
 ## <a name="remarks"></a>Comentários
 Os valores dessa enumeração são passados para os seguintes métodos:
@@ -67,7 +67,7 @@ Os valores dessa enumeração são passados para os seguintes métodos:
 ## <a name="requirements"></a>Requisitos
 Cabeçalho: dia2. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Enumerações e estruturas](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)
 - [IDiaSession::findFile](../../debugger/debug-interface-access/idiasession-findfile.md)

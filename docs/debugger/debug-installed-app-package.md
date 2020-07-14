@@ -2,7 +2,7 @@
 title: Depurar um pacote de aplicativo UWP instalado | Microsoft Docs
 ms.custom: ''
 ms.date: 11/07/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.installedapppackagelauncher
 - vs.debug.remote.connection
@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: d5c2e94e9fa80145489bddfb005b7136bdff8a71
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: eabc694665bede7d193a360a01c42366568e33c5
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211295"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350726"
 ---
 # <a name="debug-an-installed-uwp-app-package-in-visual-studio"></a>Depurar um pacote de aplicativo UWP instalado no Visual Studio
 
@@ -38,7 +38,7 @@ Para obter mais informações sobre como depurar aplicativos UWP, consulte as po
 
 ## <a name="debug-an-installed-uwp-app-on-a-local-machine"></a>Depurar um aplicativo UWP instalado em um computador local
 
-1. No Visual Studio, selecione **depurar** > **outros destinos** > de depuração**depurar pacote do aplicativo instalado**.
+1. No Visual Studio, selecione **depurar**  >  **outros destinos de depuração**  >  **depurar pacote do aplicativo instalado**.
 
 1. Na caixa de diálogo **depurar pacote do aplicativo instalado** , em **tipo de conexão**, selecione **computador local**.
 
@@ -52,9 +52,9 @@ Para obter mais informações sobre como depurar aplicativos UWP, consulte as po
 1. Selecione **Iniciar**ou, se o aplicativo estiver em execução, selecione **anexar**.
 
 > [!NOTE]
-> Você também pode se conectar a qualquer UWP em execução ou a outro processo de aplicativo selecionando a **depuração** > **anexar para processar** no Visual Studio. Você não precisa do projeto original do Visual Studio para anexar a um processo em execução, mas carregar os símbolos do aplicativo ajudará significativamente ao depurar um processo para o qual você não tenha o código original. Consulte [especificar o símbolo e os arquivos de origem no depurador](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
+> Você também pode se conectar a qualquer UWP em execução ou a outro processo de aplicativo selecionando a **depuração**  >  **anexar para processar** no Visual Studio. Você não precisa do projeto original do Visual Studio para anexar a um processo em execução, mas carregar os símbolos do aplicativo ajudará significativamente ao depurar um processo para o qual você não tenha o código original. Consulte [especificar o símbolo e os arquivos de origem no depurador](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
-## <a name="remote"></a>Depurar um aplicativo UWP instalado em um computador ou dispositivo remoto
+## <a name="debug-an-installed-uwp-app-on-a-remote-computer-or-device"></a><a name="remote"></a>Depurar um aplicativo UWP instalado em um computador ou dispositivo remoto
 
 Na primeira vez que o Visual Studio decorre bugs em um aplicativo UWP instalado em um dispositivo Windows 10 ou em um computador com o Windows 10 do post-Creator remoto, ele instala as ferramentas de depuração remota no dispositivo de destino.
 
@@ -62,7 +62,7 @@ Na primeira vez que o Visual Studio decorre bugs em um aplicativo UWP instalado 
 
 1. Se você estiver se conectando a um computador remoto executando o Windows 10 do pre-Creator, [Instale e inicie manualmente o depurador remoto](../debugger/remote-debugging.md) no computador remoto.
 
-1. No computador do Visual Studio, selecione **depurar** > **outros destinos** > de depuração**depurar pacote do aplicativo instalado**.
+1. No computador do Visual Studio, selecione **depurar**  >  **outros destinos de depuração**  >  **depurar pacote do aplicativo instalado**.
 
 1. Na caixa de diálogo **depurar pacote do aplicativo instalado** , em **tipo de conexão**, selecione **computador remoto** ou **dispositivo**.
 
@@ -77,8 +77,8 @@ Na primeira vez que o Visual Studio decorre bugs em um aplicativo UWP instalado 
       Se o depurador não puder se conectar a um computador remoto usando o nome do computador, use o endereço IP em vez disso. Use o endereço IP para dispositivos Xbox, HoloLens ou IoT.
    1. Selecione uma opção de autenticação ao lado do **modo de autenticação**.
 
-      Para a maioria dos aplicativos, mantenha o valor padrão, **Universal (protocolo não criptografado)** .
-   1. Selecione **selecionar**.
+      Para a maioria dos aplicativos, mantenha o valor padrão, **Universal (protocolo não criptografado)**.
+   1. Selecione **Selecionar**.
 
 1. Em **pacotes de aplicativos instalados**, selecione o aplicativo que você deseja depurar ou digite seu nome na caixa de pesquisa. Os pacotes de aplicativos instalados sem execução aparecem em **não em execução**e os aplicativos em execução estão em **execução**.
 
@@ -94,11 +94,11 @@ Quando você inicia a depuração de um pacote do aplicativo instalado em um dis
 
 Para obter mais informações sobre a implantação remota de aplicativos UWP, consulte [implantar e depurar aplicativos UWP](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options) e [depurar aplicativos UWP em computadores remotos](run-windows-store-apps-on-a-remote-machine.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Depurando no Visual Studio](../debugger/index.yml)
 - [Introdução ao depurador](../debugger/debugger-feature-tour.md)
 - [Depuração remota](../debugger/remote-debugging.md)
 - [Configurar o Firewall do Windows para depuração remota](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
 - [Atribuições de porta do depurador remoto](../debugger/remote-debugger-port-assignments.md)
-- [Erros e solução de problemas de depuração remota](../debugger/remote-debugging-errors-and-troubleshooting.md)
+- [Erros de depuração remota e solução de problemas](../debugger/remote-debugging-errors-and-troubleshooting.md)

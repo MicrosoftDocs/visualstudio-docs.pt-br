@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSectionContribs | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e332bacdeaeca00d4e43d80807ee5f95c51c7e93
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ebc0fe8391c6390d62cffbb591c4cef1ea52976f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744243"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468068"
 ---
 # <a name="idiaenumsectioncontribs"></a>IDiaEnumSectionContribs
 Enumera as várias contribuições de seção contidas na fonte de dados.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumSectionContribs : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Métodos em ordem vtable
-A tabela a seguir mostra os métodos de `IDiaEnumSectionContribs`.
+A tabela a seguir mostra os métodos de `IDiaEnumSectionContribs` .
 
 |Método|Descrição|
 |------------|-----------------|
@@ -47,7 +47,7 @@ A tabela a seguir mostra os métodos de `IDiaEnumSectionContribs`.
 Obtenha essa interface do método [IDiaSession:: getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md) . Consulte o exemplo para obter detalhes.
 
 ## <a name="example"></a>Exemplo
-Este exemplo mostra como obter (a função `GetEnumSectionContribs`) e usar (a função `ShowSectionContribs`) a interface `IDiaEnumSectionContribs`. Para obter um exemplo mais completo de como usar as contribuições de seção, consulte a interface [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) .
+Este exemplo mostra como obter (a `GetEnumSectionContribs` função) e usar (a `ShowSectionContribs` função) a `IDiaEnumSectionContribs` interface. Para obter um exemplo mais completo de como usar as contribuições de seção, consulte a interface [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) .
 
 ```C++
 
@@ -106,7 +106,7 @@ Biblioteca: diaguids. lib
 
 DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

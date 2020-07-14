@@ -12,21 +12,21 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cd455969c93d4ebdea3c2f1a36fadd1ca93f2758
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c04ef8f015b081e29891d7439b783e3851376210
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654851"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85531542"
 ---
 # <a name="shortcut-keys-help-viewer"></a>Teclas de atalho (Visualizador da Ajuda)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 É possível navegar no Microsoft Help Viewer usando as teclas de atalho na tabela a seguir:
 
-|Área|Pressionamento de tecla|Ação|
+|Área|Teclas|Ação|
 |----------|---------------|------------|
-|Aplicativo geral|Espaço|Use em vez de Enter em qualquer lugar, exceto em campos de edição.|
+|Aplicativo geral|Space|Use em vez de Enter em qualquer lugar, exceto em campos de edição.|
 |Aplicativo geral|F1|Abra a Ajuda sobre o elemento da interface do usuário atual.|
 |Aplicativo geral|F11|Alterne entre o modo de exibição de tela inteira e o modo de exibição normal.|
 |Barra de ferramentas|Backspace<br /><br /> -OU-<br /><br /> Alt + Seta para a esquerda|Exiba a página anterior.|
@@ -47,9 +47,9 @@ ms.locfileid: "72654851"
 |Tópico|Tecla do menu de atalho<br /><br /> OU<br /><br /> Shift + F10|Exiba o menu de atalho do elemento da interface do usuário atual.|
 |Tópico|Seta para Cima|Role até o início do documento uma linha por vez.|
 |Tópico|Seta para Baixo|Role até o final do documento uma linha por vez.|
-|Tópico|Página Acima|Role até o início do documento uma tela por vez.|
-|Tópico|Página Abaixo|Role até o final do documento uma tela por vez.|
-|Tópico|Home|Vá até o início do documento.|
+|Tópico|Page Up|Role até o início do documento uma tela por vez.|
+|Tópico|Page Down|Role até o final do documento uma tela por vez.|
+|Tópico|Página Inicial|Vá até o início do documento.|
 |Tópico|End|Vá até o final do documento.|
 |Tópico|Ctrl + F|Localize o texto de pesquisa nesta página.|
 |Tópico|F5|Atualize a página atual.|
@@ -61,12 +61,12 @@ ms.locfileid: "72654851"
 |Tópico|Ctrl + Tab|Mude entre guias da esquerda para a direita.|
 |Tópico|Ctrl + Shift + Tab|Mude entre guias da direita para a esquerda.|
 |Tópico|Ctrl + W|Feche a guia atual.|
-|Tópico|Ctrl + *número*|Mude para uma guia específica, em que o *número* está entre 1 e 9 e indica qual guia da sequência.|
+|Tópico|Ctrl + *número*|Mude para uma guia específica, em que o *Número* está entre 1 e 9 e indica qual guia da sequência.|
 |Tópico|Ctrl +Alt + F4|Feche outras guias de conteúdo.|
 |Tópico|Ctrl + Shift + sinal de adição|Aumente o zoom em 10%.|
 |Tópico|CTRL + sinal de subtração|Diminua o zoom em 10%.|
 |Tópico|CTRL + 0 (zero)|Altere o zoom para 100%.|
-|Índice|Tabulação|Alterne o foco da entrada de palavras-chave para a lista de palavras-chave.|
+|Índice|Tab|Alterne o foco da entrada de palavras-chave para a lista de palavras-chave.|
 |Índice|Ctrl + K|Mude entre a exibição de entradas que contêm a palavra-chave que você especificar e entradas que começam com a palavra-chave que você especificar.|
 |Favoritos|Ctrl +Shift + Del|Limpe o histórico de navegação.|
 |Favoritos|Del|Exclua o item especificado.|
@@ -76,43 +76,41 @@ ms.locfileid: "72654851"
 |Sumário, Índice, Pesquisa e Favoritos|Ctrl + P|Imprima o tópico especificado.|
 |Sumário, Índice, Pesquisa e Favoritos|Ctrl + F2|Exiba uma visualização de impressão do tópico especificado.|
 |Sumário, Índice, Pesquisa e Favoritos|CTRL + clique|Abra o tópico em uma nova guia.|
-|Pesquisar|ESC|Limpe a caixa de texto de pesquisa.|
+|Pesquisar|Esc|Limpe a caixa de texto de pesquisa.|
 |Opções do Visualizador|Alt + T|Altere o foco para a lista **Tamanho do Texto**.|
 |Opções do Visualizador|Alt + S|Altere o foco para a lista **Máximo de Resultados da Pesquisa**.|
 |Opções do Visualizador|Alt + H|Altere o foco para a lista **Máximo de entradas do Histórico salvas**.|
 |Opções do Visualizador|Alt + E|Selecione ou desmarque a caixa de seleção **Incluir conteúdo em inglês em todas as guias de navegação e solicitações F1** se ela estiver habilitada.|
 |Opções do Visualizador|Alt + O|Marque ou desmarque a caixa de seleção **Ficar online para procurar atualizações de conteúdo**.|
-|Localizar|Enter|Altere o foco para o próximo item.|
+|Localizar|Digite|Altere o foco para o próximo item.|
 |Localizar|Shift + Enter|Altere o foco para o item anterior.|
-|Localizar|ESC|Oculta a caixa de texto **Localizar**.|
+|Localizar|Esc|Oculta a caixa de texto **Localizar**.|
 |Barra de status|Alt + E|Abra a caixa de diálogo **Erro** se a barra de status mostrar que um erro ocorreu.|
 |Barra de status|Alt + U|Baixe conteúdo se a barra de status mostrar que atualizações estão disponíveis|
 
- **Gerenciamento de Janelas**
+ **Gerenciamento de janelas**
 
-|||
+|**Teclas**|**Ação**|
 |-|-|
-|**Pressionamento de tecla**|**Ação**|
 |Ctrl + L|Redefina o layout do Help Viewer para o layout padrão e feche todas as guias de tópico.|
 |Ctrl + Tab|O primeiro pressionamento de tecla coloca em foco o menu **Seleção por Tabulação**. O pressionamento de tecla seguinte coloca em foco o item de menu superior, e pressionamentos de tecla posteriores colocam em foco os itens de menu na sequência de cima para baixo. Quando um item de menu está em foco, a tecla Enter faz desse item a guia ativa.|
 |Ctrl + Shift + Tab|O primeiro pressionamento de tecla coloca em foco o menu **Seleção por Tabulação**. O pressionamento de tecla seguinte coloca em foco o item de menu inferior, e pressionamentos de tecla posteriores colocam em foco os itens de menu na sequência de baixo para cima. Quando um item de menu está em foco, a tecla Enter faz desse item a guia ativa.|
 |Alt + I, Alt + S, Alt + C, Alt + F, Alt + M|Essas teclas de atalho não funcionam quando as guias de navegação e gerenciamento de conteúdo estão desencaixadas.|
 
- **Gerenciar Conteúdo**
+ **Gerenciar conteúdo**
 
-|||
+|**Teclas**|**Ação**|
 |-|-|
-|**Pressionamento de tecla**|**Ação**|
 |Alt + D|Altere a origem de instalação para o disco.|
 |Alt + O|Altere a origem de instalação para online.|
-|Tabulação|Altere o foco para a caixa de texto **Caminho do repositório local**.|
-|Tabulação|Altere o foco para **Mover…** .|
+|Tab|Altere o foco para a caixa de texto **Caminho do repositório local**.|
+|Tab|Altere o foco para **Mover…** .|
 |Alt + V|Abra a caixa de diálogo **Mover Conteúdo**.|
 |Ctrl + Alt + F|Altere o foco para a caixa de texto **Filtrar documentação**.|
-|Tabulação|Altere o foco para a lista de documentação.|
+|Tab|Altere o foco para a lista de documentação.|
 |Seta para cima e seta para baixo|Role a lista de documentação.|
-|Espaço|Adicione um item à lista **Alterações pendentes**.|
-|Tabulação|Altere o foco para a lista **Alterações pendentes**.|
+|Space|Adicione um item à lista **Alterações pendentes**.|
+|Tab|Altere o foco para a lista **Alterações pendentes**.|
 |Seta para cima e seta para baixo|Role a lista **Alterações pendentes**.|
-|Espaço|Remova um item da lista **Alterações pendentes**.|
+|Space|Remova um item da lista **Alterações pendentes**.|
 |Alt + T|Aplique todas as alterações pendentes.|

@@ -1,7 +1,7 @@
 ---
 title: Como visualizar uma associação de coleção (Designer de Classe)
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.classdesigner.collectionassociationline
 - vs.classdesigner.ShowAssociationException
@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ba237b9c763421287e3878a6a98f59032bfd092
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3636b6548725ddc9af0a2e28acfdda06a8821f9a
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590768"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769887"
 ---
 # <a name="how-to-visualize-a-collection-association-in-class-designer"></a>Como visualizar uma associação de coleção no Designer de Classe
 

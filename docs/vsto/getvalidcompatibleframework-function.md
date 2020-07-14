@@ -1,7 +1,7 @@
 ---
 title: Função GetValidCompatibleFramework
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -10,15 +10,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b975a4b4b2c1b4ae3f6ef0f1d6d23769bb4c77c7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2219417fe8ddae3d11d0e624ad12d3de80e290dd
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788690"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520218"
 ---
 # <a name="getvalidcompatibleframework-function"></a>Função GetValidCompatibleFramework
-  Essa API dá suporte à infraestrutura do Office e não se destina a ser usado diretamente do seu código.
+  Esta API dá suporte à infraestrutura do Office e não se destina a ser usada diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,5 +36,5 @@ HRESULT WINAPI GetValidCompatibleFramework(
 |*lpwszCompatibleFrameworksXML*|Não use.|
 |*pbstrValidFrameworkTag*|Não use.|
 
-## <a name="return-value"></a>Valor retornado
- Se a função obtiver êxito, retorna **S_OK**. Se a função falhar, ele retornará um código de erro.
+## <a name="return-value"></a>Retornar valor
+ Se a função for realizada com sucesso, ela retornará **S_OK**. Se a função falhar, será exibido um código de erro.

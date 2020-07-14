@@ -1,7 +1,7 @@
 ---
 title: IDiaFrameData::get_addressOffset | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 651ff39eed19a22c1ace24453a44b38ef512b9b8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b48e1a0f5f0655c80e501740eae5fc4152f998a4
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743670"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467438"
 ---
 # <a name="idiaframedataget_addressoffset"></a>IDiaFrameData::get_addressOffset
 Recupera a parte de deslocamento do endereço do código para o quadro.
@@ -35,8 +35,8 @@ HRESULT get_addressOffset ( 
 
 fora Retorna a parte de deslocamento do endereço do código do quadro.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver suporte para essa propriedade. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

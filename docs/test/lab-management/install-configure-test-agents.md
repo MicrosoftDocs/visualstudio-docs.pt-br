@@ -1,7 +1,7 @@
 ---
 title: Instalar agentes e controladores de teste
 ms.date: 04/17/2019
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - configure test agents, test lab
 author: mikejo5000
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 271e9253daf4ab23a5fb06a189ac3042bc925b2a
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+ms.openlocfilehash: 3c374951b4d4875e4e754035ac52afb7f8fc5a2e
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880267"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286889"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>Instalar agentes e controladores de teste
 
@@ -59,7 +59,7 @@ Você pode combinar versões diferentes do TFS, o Microsoft Test Manager, o cont
 ::: moniker range=">=vs-2019"
 ## <a name="compatible-versions-of-tfs-the-test-controller-and-test-agent"></a>Versões compatíveis do TFS, do controlador de teste e do agente de teste
 
-Você pode misturar diferentes versões do TFS, do controlador de teste e do agente de teste, de acordo com a tabela a seguir:
+Você pode misturar versões diferentes do TFS, do controlador de teste e do agente de teste, de acordo com a tabela a seguir:
 
 | TFS | Controller | Agente |
 | --- | -------------------------------------- | ---------- | ----- |
@@ -85,5 +85,5 @@ A tabela a seguir mostra os cenários com suporte do Agents para Visual Studio 2
 | - | - |
 | Fluxo de trabalho compilar-implantar-testar no Visual Studio | Os usuários podem usar um [pipeline de build](/azure/devops/pipelines/index?view=vsts) (não um build XAML) para compilar, implantar e testar os cenários no TFS. |
 | Teste de carga (teste de desempenho) usando computadores remotos locais | Use o Test Controller e o Test Agents 2013 Atualização 5 para executar os testes de carga locais. |
-| Execução remota de testes automatizados do Microsoft Test Manager (preterido no Visual Studio 2017) usando um ambiente de laboratório | Atualmente não há nenhuma alternativa para esse cenário. Recomendamos que você use a tarefa Executar Testes Funcionais nas definições de build e versão (não em um build XAML) para executar testes remotamente. |
+| Execução remota de testes automatizados de Microsoft Test Manager (preterido no Visual Studio 2017) usando um ambiente de laboratório | Atualmente não há nenhuma alternativa para esse cenário. Recomendamos que você use a tarefa Executar Testes Funcionais nas definições de build e versão (não em um build XAML) para executar testes remotamente. |
 | Desenvolvedores executando testes remotos no Visual Studio | Não tem mais suporte. |

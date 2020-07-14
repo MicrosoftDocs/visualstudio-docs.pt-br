@@ -1,23 +1,23 @@
 ---
 title: Não é possível criar uma associação – os tipos de propriedade não correspondem
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: error-reference
 ms.assetid: 97ec5a04-6e23-45a2-9226-d77ead854392
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d7b2e0d777f0d499ca6fbf76b52aa028c940b2df
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4b9735c711abe7826d241e8c8aa7ade0a5f5d5e0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648702"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536715"
 ---
 # <a name="cannot-create-an-association-ltassociation-namegt---property-types-do-not-match"></a>Não é possível criar uma associação &lt;nome da associação&gt; – os tipos de propriedade não correspondem
 
-Não é possível criar uma associação \<nome da associação> – os tipos de propriedade não correspondem. As propriedades não têm tipos compatíveis: \<nomes de propriedade>.
+Não é possível criar \<association name> tipos de propriedade de associação que não correspondem. As propriedades não têm tipos correspondentes: \<property names> .
 
 Associações são definidas pelas **Propriedades de Associação**, selecionadas na caixa de diálogo **Editor de Associação**. As propriedades em cada lado de associação devem ser do mesmo tipo de dados.
 
@@ -33,7 +33,7 @@ As propriedades listadas na mensagem não têm os mesmos tipos de dados.
 
 4. Clique em **OK**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Ferramentas do LINQ to SQL no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [Como: criar uma associação entre classes de LINQ to SQL (O/R Designer)](../data-tools/how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md)

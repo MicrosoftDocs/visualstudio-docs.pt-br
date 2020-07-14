@@ -1,7 +1,7 @@
 ---
 title: Como depurar um controle ActiveX | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vc.controls.debug
 dev_langs:
@@ -24,17 +24,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75abf76516d3827a748e1b896d4c2e8c93bb34da
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 76bc982db167624e567f88a1cf139b41cad9feb7
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733876"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350206"
 ---
 # <a name="how-to-debug-an-activex-control"></a>Como depurar um controle ActiveX
 
 > [!NOTE]
-> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha Importar e Exportar Configurações no menu Ferramentas. Para obter mais informações, confira [Redefinir as configurações](../ide/environment-settings.md#reset-settings).
+> As caixas de diálogo e os comandos de menu encontrados podem diferir daqueles descritos na Ajuda, dependendo das configurações ativas ou edição. Para alterar as configurações, escolha Importar e Exportar Configurações no menu Ferramentas. Para obter mais informações, confira [Redefinir as configurações](../ide/environment-settings.md#reset-settings).
 
 Para depurar seu controle ActiveX, você deverá especificar um contêiner (executável) em que o controle será executado.
 
@@ -56,10 +56,10 @@ Para depurar seu controle ActiveX, você deverá especificar um contêiner (exec
 
      Se você não especificar um contêiner na caixa de diálogo **Páginas de Propriedades do Projeto**, poderá especificar o contêiner quando iniciar a depuração. Quando você selecionar um comando de execução para iniciar a depuração, a [caixa de diálogo Executável para Sessão de Depuração](../debugger/executable-for-debugging-session-dialog-box.md) é exibida. Especifique o nome do caminho do contêiner na caixa de diálogo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Controles ActiveX](/cpp/mfc/activex-controls)
-- [Testando propriedades e eventos com contêiner de teste](/cpp/mfc/testing-properties-and-events-with-test-container)
+- [Testando Propriedades e eventos com contêiner de teste](/cpp/mfc/testing-properties-and-events-with-test-container)
 - [Depuração de COM e ActiveX](../debugger/com-and-activex-debugging.md)
 - [Depurando no Visual Studio](../debugger/index.yml)
 - [Introdução ao depurador](../debugger/debugger-feature-tour.md)

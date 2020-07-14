@@ -6,16 +6,17 @@ ms.author: dominicn
 ms.date: 07/13/2017
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
 ms.custom: video
-ms.openlocfilehash: 5f1a617c5562c4f95fec94ae449f48b681fcb7ef
-ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
+ms.topic: how-to
+ms.openlocfilehash: 2e921ac1e9c85216bebf1626e1454b9fb764f129
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80543752"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85938929"
 ---
 # <a name="getting-started-with-aspnet-core"></a>Introdução ao ASP.NET Core
 
- Visual Studio for Mac facilita o desenvolvimento do serviço do seu aplicativo com o suporte para a mais recente plataforma de desenvolvimento web ASP.NET. O ASP.NET Core é executado no .NET Core, a evolução mais recente do .NET Framework e o runtime. Ele foi ajustado para desempenho rápido, fatorado para pequenos tamanhos de instalação, e reimaginado para rodar no Linux e macOS, bem como no Windows.
+ Visual Studio para Mac facilita o desenvolvimento do serviço do aplicativo com seu suporte para a mais recente ASP.NET Core plataforma de desenvolvimento para a Web. O ASP.NET Core é executado no .NET Core, a evolução mais recente do .NET Framework e o runtime. Ele foi ajustado para desempenho rápido, fatorado para pequenos tamanhos de instalação e reimaginado para ser executado no Linux e no macOS, bem como no Windows.
 
 ## <a name="installing-net-core"></a>Instalando o .NET Core
 
@@ -42,7 +43,7 @@ Selecione o **Aplicativo Web vazio ASP.NET Core** e pressione **Avançar**. Esco
 
 ![Nova exibição Projeto ASP.NET Core vazio](media/asp-net-core-image4.png)
 
-O aplicativo Web ASP.NET Core vazio cria um aplicativo Web com dois arquivos padrão: **Program.cs** e **Startup.cs**, que são explicados abaixo. Ele também cria uma pasta Dependencies, que contém as dependências do pacote NuGet do projeto, como ASP.NET Core, o framework .NET Core e os alvos do MSBuild que constroem o projeto:
+O aplicativo Web ASP.NET Core vazio cria um aplicativo Web com dois arquivos padrão: **Program.cs** e **Startup.cs**, que são explicados abaixo. Ele também cria uma pasta Dependencies, que contém as dependências do pacote NuGet do seu projeto, como ASP.NET Core, o .NET Core Framework e os destinos do MSBuild que criam o projeto:
 
 ![Painel de Soluções exibindo as dependências](media/asp-net-core-image12.png)
 
@@ -64,7 +65,7 @@ public static void Main(string[] args)
 }
 ```
 
-Um aplicativo ASP.NET Core cria um servidor web em seu método principal, configurando e lançando um host através de uma instância de [`WebHostBuilder`](/aspnet/core/fundamentals/hosting). Este construtor fornece métodos para permitir que o host seja configurado. As seguintes configurações são usadas no aplicativo modelo:
+Um aplicativo ASP.NET Core cria um servidor Web em seu método principal Configurando e iniciando um host por meio de uma instância do [`WebHostBuilder`](/aspnet/core/fundamentals/hosting) . Este construtor fornece métodos para permitir que o host seja configurado. As seguintes configurações são usadas no aplicativo modelo:
 
 * `UseKestrel`: especifica que o servidor Kestrel será usado pelo aplicativo
 * `UseContentRoot(Directory.GetCurrentDirectory())`: usa pasta raiz do projeto Web como a raiz de conteúdo do aplicativo ele for iniciado desta pasta

@@ -1,7 +1,7 @@
 ---
 title: Associar dados no Designer XAML
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.XamlDesigner.DataBinding
 dev_langs:
@@ -10,12 +10,12 @@ dev_langs:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 1abe14c443432d0da0ab0c53b33f9321034228be
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f57d4f24348ff805669832ce6db9e8e4e79e4569
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592927"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330755"
 ---
 # <a name="walkthrough-bind-to-data-in-xaml-designer"></a>Passo a passo: associar dados no Designer XAML
 

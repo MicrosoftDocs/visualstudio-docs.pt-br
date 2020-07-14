@@ -1,7 +1,7 @@
 ---
 title: IDiaInjectedSource::get_crc | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e20cdf82af3b36c589879c81c492a3f58b67f90
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b67072fe2928556d355aac2e65cf5d011873edd9
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743386"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467123"
 ---
 # <a name="idiainjectedsourceget_crc"></a>IDiaInjectedSource::get_crc
 Recupera uma CRC (verificação de redundância cíclica) calculada com base nos bytes do código-fonte.
@@ -35,8 +35,8 @@ HRESULT get_crc ( 
 
 fora Retorna o CRC calculado a partir dos bytes do código-fonte.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver suporte para essa propriedade. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_age | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 28a78094d9779a0da35052808dfb8d5f42972894
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b8fc198573123c24a3c48068b50161d0aa7f3b60
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741031"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464341"
 ---
 # <a name="idiasymbolget_age"></a>IDiaSymbol::get_age
 Recupera o valor de idade de um arquivo. pdb.
@@ -35,8 +35,8 @@ HRESULT get_age ( 
 
 fora Retorna o valor de idade de um arquivo. pdb.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
@@ -51,5 +51,5 @@ fora Retorna o valor de idade de um arquivo. pdb.
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

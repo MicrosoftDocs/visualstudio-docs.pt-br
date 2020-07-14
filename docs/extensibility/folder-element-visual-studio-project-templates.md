@@ -1,8 +1,8 @@
 ---
-title: Elemento de pasta (Modelos de Projeto Visual Studio) | Microsoft Docs
+title: Elemento Folder (modelos de projeto do Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#Folder
 helpviewer_keywords:
@@ -13,17 +13,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb256b8be0dd9ce68f193750bf3ff5a383d5f073
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: b05ef44896e5cd428584c7efed267f130597ee35
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80711461"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769584"
 ---
-# <a name="folder-element-visual-studio-project-templates"></a>Elemento de pasta (modelos de projeto do Visual Studio)
+# <a name="folder-element-visual-studio-project-templates"></a>Elemento Folder (modelos de projeto do Visual Studio)
 Especifica uma pasta que será adicionada ao projeto.
 
- \<VSTemplate \<>Template> \<de \<> de> do projeto> de conteúdo
+ \<VSTemplate> \<TemplateContent>
+ \<Project>
+ \<Folder>
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,27 +44,27 @@ Especifica uma pasta que será adicionada ao projeto.
 |Atributo|Descrição|
 |---------------|-----------------|
 |`Name`|Atributo obrigatório.<br /><br /> O nome da pasta do projeto.|
-|`TargetFolderName`|Atributo opcional.<br /><br /> Especifica o nome para dar a pasta quando um projeto é criado a partir do modelo. Este atributo é útil para usar a substituição de parâmetros para criar um nome de pasta ou nomear uma pasta com uma string internacional que não pode ser usada diretamente no arquivo *.zip.*|
+|`TargetFolderName`|Atributo opcional.<br /><br /> Especifica o nome a ser dado à pasta quando um projeto é criado a partir do modelo. Esse atributo é útil para usar a substituição de parâmetro para criar um nome de pasta ou nomear uma pasta com uma cadeia de caracteres internacional que não pode ser usada diretamente no arquivo *. zip* .|
 
 ### <a name="child-elements"></a>Elementos filho
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|`Folder`|Especifica uma pasta para adicionar ao projeto. `Folder`elementos podem `Folder` conter elementos infantis.|
-|[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|Especifica um arquivo para adicionar ao projeto.|
+|`Folder`|Especifica uma pasta a ser adicionada ao projeto. `Folder`os elementos podem conter `Folder` elementos filho.|
+|[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|Especifica um arquivo a ser adicionado ao projeto.|
 
 ### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Project](../extensibility/project-element-visual-studio-templates.md)|Elemento filho opcional do [TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md).|
+|[Projeto](../extensibility/project-element-visual-studio-templates.md)|Elemento filho opcional de [TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md).|
 
 ## <a name="remarks"></a>Comentários
- `Folder`é uma criança `Project`opcional de .
+ `Folder`é um filho opcional de `Project` .
 
  Você pode usar qualquer um dos seguintes métodos para organizar itens de projeto em pastas em um modelo:
 
-- Inclua as pastas no arquivo *.zip* e adicione-as ao projeto no arquivo *.vstemplate* especificando o caminho para o arquivo nos `ProjectItem` elementos, sem `Folder` elementos. Esse é o método recomendado. Por exemplo:
+- Inclua as pastas no arquivo template *. zip* e adicione-as ao projeto no arquivo *. vstemplate* especificando o caminho para o arquivo nos `ProjectItem` elementos, sem `Folder` elementos. Esse é o método recomendado. Por exemplo:
 
      `...`
 
@@ -72,7 +74,7 @@ Especifica uma pasta que será adicionada ao projeto.
 
      `...`
 
-- Inclua as pastas no arquivo *.zip* e adicione-as ao projeto `Folder` no arquivo *.vstemplate* com elementos. Por exemplo:
+- Inclua as pastas no arquivo template *. zip* e adicione-as ao projeto no arquivo *. vstemplate* com `Folder` elementos. Por exemplo:
 
      `...`
 
@@ -86,7 +88,7 @@ Especifica uma pasta que será adicionada ao projeto.
 
      `...`
 
-- Não inclua pastas no arquivo modelo *.zip,* mas `TargetFileName` adicione `ProjectItem` pastas usando o atributo do elemento. Por exemplo:
+- Não inclua pastas no arquivo template *. zip* , mas Adicione pastas usando o `TargetFileName` atributo do `ProjectItem` elemento. Por exemplo:
 
      `...`
 
@@ -97,7 +99,7 @@ Especifica uma pasta que será adicionada ao projeto.
      `...`
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir ilustra os metadados [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] de um modelo de projeto para um aplicativo Windows.
+ O exemplo a seguir ilustra os metadados de um modelo de projeto para um [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplicativo do Windows.
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -127,5 +129,5 @@ Especifica uma pasta que será adicionada ao projeto.
 
 ## <a name="see-also"></a>Confira também
 - [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
-- [Criando modelos de projetos e itens](../ide/creating-project-and-item-templates.md)
-- [Elemento ProjectItem (modelos de itens do Visual Studio)](../extensibility/projectitem-element-visual-studio-item-templates.md)
+- [Criando modelos de projeto e item](../ide/creating-project-and-item-templates.md)
+- [Elemento ProjectItem (modelos de item do Visual Studio)](../extensibility/projectitem-element-visual-studio-item-templates.md)

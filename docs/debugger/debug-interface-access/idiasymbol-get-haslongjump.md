@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_hasLongJump | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fb1e23d252b7cb4f2685a9b07d6e3e92db801bd
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9aa43688b8fd3bb69cd8d44181da22924932e900
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740500"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463697"
 ---
 # <a name="idiasymbolget_haslongjump"></a>IDiaSymbol::get_hasLongJump
 Recupera um sinalizador que especifica se a função contém um uso do comando [longjmp](/cpp/c-runtime-library/reference/longjmp) (emparelhado com um comando [setjmp](/cpp/c-runtime-library/reference/setjmp) , eles formam o método C-Style de manipulação de exceção).
@@ -33,13 +33,13 @@ HRESULT get_hasLongJump
 #### <a name="parameters"></a>Parâmetros
  `pFlag`
 
-fora Retornará `TRUE` se a função contiver um comando `longjmp`; caso contrário, retorna `FALSE`.
+fora Retorna `TRUE` se a função contém um `longjmp` comando; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
-> Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
+> Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,7 +48,7 @@ fora Retornará `TRUE` se a função contiver um comando `longjmp`; caso contrá
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaSymbol::get_hasSetJump](../../debugger/debug-interface-access/idiasymbol-get-hassetjump.md)
 - [longjmp](/cpp/c-runtime-library/reference/longjmp)

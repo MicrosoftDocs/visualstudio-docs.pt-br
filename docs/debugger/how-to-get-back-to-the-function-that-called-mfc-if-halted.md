@@ -1,8 +1,8 @@
 ---
-title: Voltar para a função que chamou MFC em caso de interrupção | Microsoft Docs
+title: Voltar à função que chamou o MFC, se for interrompido | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.mfc
 dev_langs:
@@ -24,27 +24,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f846b636d2790839de6d05d048fc7e24d0bc6253
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ef96bab28b1a17d4f20728a393511720fd10c624
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62906686"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349465"
 ---
-# <a name="how-to-get-back-to-the-function-that-called-mfc-if-halted"></a>Como: Retornar à função que chamou o MFC em caso de interrupção
+# <a name="how-to-get-back-to-the-function-that-called-mfc-if-halted"></a>Como retornar à função que chamou MFC em caso de parada
 
 > [!NOTE]
-> As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Redefinir as configurações](../ide/environment-settings.md#reset-settings).
+> As caixas de diálogo e os comandos de menu encontrados podem diferir daqueles descritos na Ajuda, dependendo das configurações ativas ou edição. Para alterar suas configurações, selecione **Importar e Exportar Configurações** no menu **Ferramentas** . Para obter mais informações, confira [Redefinir as configurações](../ide/environment-settings.md#reset-settings).
 
-Se você usou o comando **Interromper** no menu **Depurar** para interromper o programa e terminou no MFC e se você tiver certeza de que o problema está no código, use a janela Pilha de Chamadas para retornar à função. Para obter mais informações, confira [Como: Usar a janela Pilha de Chamadas](../debugger/how-to-use-the-call-stack-window.md).
+Se você usou o comando **Interromper** no menu **Depurar** para interromper o programa e terminou no MFC e se você tiver certeza de que o problema está no código, use a janela Pilha de Chamadas para retornar à função. Para obter mais informações, consulte [como: usar a janela pilha de chamadas](../debugger/how-to-use-the-call-stack-window.md).
 
-Às vezes seu código pode ser interrompido na bomba da mensagem. Nesse caso, não há nenhum código de usuário na pilha de chamadas. Para evitar esse problema, use pontos de interrupção (possivelmente com condições e contagens de ocorrências) em vez do comando **Interromper**. Para obter mais informações, consulte [pontos de interrupção e Tracepoints](https://msdn.microsoft.com/library/fe4eedc1-71aa-4928-962f-0912c334d583).
+Às vezes seu código pode ser interrompido na bomba da mensagem. Nesse caso, não há nenhum código de usuário na pilha de chamadas. Para evitar esse problema, use pontos de interrupção (possivelmente com condições e contagens de ocorrências) em vez do comando **Interromper**. Para obter mais informações, consulte [pontos de interrupção e tracepoints](https://msdn.microsoft.com/library/fe4eedc1-71aa-4928-962f-0912c334d583).
 
 ## <a name="navigate-to-the-function-from-which-mfc-was-called"></a>Navegue até a função da qual o MFC foi chamado
 
-- Use a janela **Pilha de Chamadas**.
+- Use a janela **pilha de chamadas** .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Perguntas frequentes de depuração de código nativo](../debugger/debugging-native-code-faqs.md)
+- [Perguntas frequentes de depuração do código nativo](../debugger/debugging-native-code-faqs.md)
 - [Depurando código nativo](../debugger/debugging-native-code.md)

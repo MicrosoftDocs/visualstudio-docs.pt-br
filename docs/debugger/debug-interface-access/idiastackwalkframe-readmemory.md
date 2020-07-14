@@ -1,7 +1,7 @@
 ---
 title: 'IDiaStackWalkFrame:: readMemory | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae1201fca1fc25cce19b40b47d6435d02d80e1b4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f682f3fe0e300f84dc28b959497138a5019f954b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741476"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464824"
 ---
 # <a name="idiastackwalkframereadmemory"></a>IDiaStackWalkFrame::readMemory
 Lê a memória da imagem.
@@ -49,14 +49,14 @@ no Tamanho do buffer de dados, em bytes.
 
  `pcbData`
 
-fora Retorna o número de bytes retornados. Se `data` for `NULL`, `pcbData` conterá o número total de bytes de dados disponíveis.
+fora Retorna o número de bytes retornados. Se `data` for `NULL` , `pcbData` conterá o número total de bytes de dados disponíveis.
 
  `data`
 
 fora Um buffer que deve ser preenchido com dados do local especificado.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

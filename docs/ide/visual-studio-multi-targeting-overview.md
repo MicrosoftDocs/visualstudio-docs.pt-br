@@ -1,7 +1,7 @@
 ---
 title: Estruturas .NET de destino
 ms.date: 03/31/2020
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords:
 - targeting .NET Framework [Visual Studio]
 - framework targeting [Visual Studio]
@@ -11,21 +11,21 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 48d770f5d88e19c749c1a1e657c369089d4c7afb
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: b7c3c2b6b81f8f7793bda35c6b220e43caee9b5f
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80472727"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770446"
 ---
 # <a name="framework-targeting-overview"></a>Visão geral do direcionamento de estrutura
 
 No Visual Studio, é possível especificar a versão do .NET que você deseja que o projeto tenha como destino. O direcionamento de estrutura ajuda a garantir que o aplicativo use apenas a funcionalidade disponível na versão da estrutura especificada. Para que os aplicativos .NET Framework sejam executados em outro computador, a versão da estrutura de destino do aplicativo precisa ser compatível com a versão da estrutura instalada no computador.
 
-Uma solução do Visual Studio pode conter projetos destinados a diferentes versões do .NET.  No entanto, observe que você só pode construir contra uma única versão do .NET usando condicionadores de referência para uma única compilação ou construir binários diferentes para cada versão.  Para obter mais informações sobre estruturas de destino, confira [Estruturas de destino](/dotnet/standard/frameworks).
+Uma solução do Visual Studio pode conter projetos destinados a diferentes versões do .NET.  No entanto, observe que você só pode compilar em uma única versão do .NET usando condicionais de referência para uma única compilação ou criar recursivamente diferentes binários para cada versão.  Para obter mais informações sobre estruturas de destino, confira [Estruturas de destino](/dotnet/standard/frameworks).
 
 > [!TIP]
-> Também é possível definir aplicativos como destino para plataformas diferentes. Para obter mais informações, consulte [Multitargeting](../msbuild/msbuild-multitargeting-overview.md).
+> Também é possível definir aplicativos como destino para plataformas diferentes. Para obter mais informações, consulte [multidirecionamento](../msbuild/msbuild-multitargeting-overview.md).
 
 ## <a name="framework-targeting-features"></a>Recursos de definição de destino da estrutura
 
@@ -83,7 +83,7 @@ Em um projeto existente do Visual Basic, C# ou F#, você altera a versão do .NE
 
 1. No **Gerenciador de Soluções**, abra o menu de contexto do projeto que você deseja alterar e, em seguida, escolha **Propriedades**.
 
-1. Na coluna esquerda da janela **Propriedades,** escolha a guia **Aplicativo.**
+1. Na coluna à esquerda da janela **Propriedades** , escolha a guia **aplicativo** .
 
    ![Guia Aplicativo das propriedades do projeto](../ide/media/vs_slnexplorer_properties_applicationtab.png)
 
@@ -110,7 +110,7 @@ Em um projeto existente do Visual Basic, C# ou F#, você altera a versão do .NE
 
 Para definir uma versão do .NET como destino, é necessário primeiro instalar as referências de assembly apropriadas. Baixe pacotes de desenvolvedor para diferentes versões do .NET na página de [downloads do .NET](https://www.microsoft.com/net/download/windows).
 
-Para projetos .NET Framework, a caixa de diálogo **Adicionar Referência** desabilita os assemblies do sistema que não pertencem à versão do .NET Framework de destino, de modo que eles não possam ser adicionados a um projeto acidentalmente. (Os conjuntos do sistema são arquivos *.dll* incluídos em uma versão .NET Framework.) As referências que pertencem a uma versão-quadro superior à versão direcionada não serão resolvidas, e os controles que dependem de tal referência não podem ser adicionados. Se você desejar habilitar essa referência, redefina o destino do .NET Framework do projeto para um que inclua a referência.
+Para projetos .NET Framework, a caixa de diálogo **Adicionar Referência** desabilita os assemblies do sistema que não pertencem à versão do .NET Framework de destino, de modo que eles não possam ser adicionados a um projeto acidentalmente. (Os assemblies do sistema são arquivos *. dll* incluídos em uma versão do .NET Framework.) As referências que pertencem a uma versão de estrutura superior à versão de destino não serão resolvidas e os controles que dependem dessa referência não poderão ser adicionados. Se você desejar habilitar essa referência, redefina o destino do .NET Framework do projeto para um que inclua a referência.
 
 Para obter mais informações sobre referências de assembly, consulte [Resolver assemblies em tempo de design](../msbuild/resolving-assemblies-at-design-time.md).
 
@@ -122,4 +122,4 @@ Ao direcionar ao .NET Framework 3.5 ou posterior, uma referência ao **System.Co
 
 - [Estruturas de destino](/dotnet/standard/frameworks)
 - [Multiplataforma (MSBuild)](../msbuild/msbuild-multitargeting-overview.md)
-- [Como: Modificar o framework de destino e o conjunto de ferramentas da plataforma (C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)
+- [Como modificar o Framework de destino e o conjunto de ferramentas de plataforma (C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)

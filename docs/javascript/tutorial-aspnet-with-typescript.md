@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 91c712ce396000ff9babaf70335edfd5709a3000
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: cb1d5196874956d54c01504288a4d948b12abea8
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183087"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283561"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Tutorial: criar um aplicativo ASP.NET Core com TypeScript no Visual Studio
 
@@ -34,7 +34,7 @@ Se você ainda não instalou o Visual Studio, vá para a página de [downloads d
 
 ::: moniker-end
 
-Neste tutorial, você aprenderá como:
+Neste tutorial, você aprenderá a:
 > [!div class="checklist"]
 > * Criar um projeto ASP.NET Core
 > * Adicionar o pacote NuGet para o suporte do TypeScript
@@ -97,9 +97,9 @@ Neste tutorial, você começa com um projeto simples contendo código para um ap
 
 1. Clique com o botão direito do mouse no nó do projeto e escolha **adicionar > novo item**. Escolha o **arquivo de configuração JSON do TypeScript**e clique em **Adicionar**.
 
-   O Visual Studio adiciona o arquivo *tsconfig. JSON* à raiz do projeto. Você pode usar esse arquivo para [Configurar opções](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) para o compilador TypeScript.
+   O Visual Studio adiciona o *tsconfig.jsno* arquivo à raiz do projeto. Você pode usar esse arquivo para [Configurar opções](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) para o compilador TypeScript.
 
-1. Abra *tsconfig. JSON* e substitua o código padrão pelo código a seguir:
+1. Abra *tsconfig.js* e substitua o código padrão pelo código a seguir:
 
    ```json
    {
@@ -162,7 +162,7 @@ Neste tutorial, você começa com um projeto simples contendo código para um ap
 
     Selecione `lastName` para adicionar o sobrenome de volta ao código.
 
-1. Abra a pasta *views/Home* e, em seguida, abra *index. html*.
+1. Abra a pasta *views/Home* e, em seguida, abra *index. cshtml*.
 
 1. Adicione o código HTML a seguir ao final do arquivo.
 
@@ -189,7 +189,7 @@ Neste tutorial, você começa com um projeto simples contendo código para um ap
 
    Embora o aplicativo seja criado automaticamente quando você o executa, queremos dar uma olhada em algo que acontece durante o processo de compilação.
 
-1. Abra a pasta *wwwroot/js* e você encontrará dois arquivos novos, *app. js* e o arquivo de mapa de origem, *app. js. map*. Esses arquivos são gerados pelo compilador TypeScript.
+1. Abra a pasta *wwwroot/js* e você encontrará dois arquivos novos, *app.js* e o arquivo de mapa de origem, *app.js. map*. Esses arquivos são gerados pelo compilador TypeScript.
 
    Os arquivos de mapa de origem são necessários para depuração.
 
@@ -224,7 +224,7 @@ Neste tutorial, você começa com um projeto simples contendo código para um ap
    >[!NOTE]
    > Para projetos ASP.NET Core, você também pode usar o [Gerenciador de biblioteca](https://docs.microsoft.com/aspnet/core/client-side/libman/?view=aspnetcore-3.1) ou yarn em vez de NPM para instalar arquivos JavaScript e CSS do lado do cliente.
 
-1. Neste exemplo, adicione um arquivo de definição do TypeScript para o jQuery ao seu projeto. Inclua o seguinte no arquivo *Package. JSON* .
+1. Neste exemplo, adicione um arquivo de definição do TypeScript para o jQuery ao seu projeto. Inclua o seguinte em seu *package.jsno* arquivo.
 
    ```json
    "devDependencies": {
@@ -237,7 +237,7 @@ Neste tutorial, você começa com um projeto simples contendo código para um ap
 1. Se o pacote no Gerenciador de Soluções não estiver instalado, clique com o botão direito do mouse no nó NPM e escolha **restaurar pacotes**.
 
    >[!NOTE]
-   > Em alguns cenários, Gerenciador de Soluções pode indicar que um pacote NPM está fora de sincronia com *Package. JSON* devido a um problema conhecido descrito [aqui](https://github.com/aspnet/Tooling/issues/479). Por exemplo, o pacote pode aparecer como não instalado quando instalado. Na maioria dos casos, você pode atualizar Gerenciador de Soluções excluindo *Package. JSON*, reiniciar o Visual Studio e adicionar novamente o arquivo *Package. JSON* conforme descrito anteriormente neste artigo.
+   > Em alguns cenários, Gerenciador de Soluções pode indicar que um pacote NPM está fora de sincronia com *package.jsem* devido a um problema conhecido descrito [aqui](https://github.com/aspnet/Tooling/issues/479). Por exemplo, o pacote pode aparecer como não instalado quando instalado. Na maioria dos casos, você pode atualizar Gerenciador de Soluções excluindo *package.js*, reiniciando o Visual Studio e adicionando novamente o *package.jsno* arquivo, conforme descrito anteriormente neste artigo.
 
 1. Em Gerenciador de soluções, clique com o botão direito do mouse na pasta scripts e escolha **Adicionar**  >  **novo item**.
 

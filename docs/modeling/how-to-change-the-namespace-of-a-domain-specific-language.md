@@ -1,20 +1,20 @@
 ---
 title: 'Como: alterar o namespace de uma linguagem específica de domínio'
 ms.date: 10/31/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Domain-Specific Language, namespace
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b64a61c02f44db0ce70b758331d0d70f7bb8014d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3ff7c73694cb53f7fbea21514feeaab4abce3f29
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653752"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542669"
 ---
 # <a name="how-to-change-the-namespace-of-a-domain-specific-language"></a>Como: alterar o namespace de uma linguagem específica de domínio
 
@@ -46,12 +46,12 @@ Você pode alterar o namespace de uma linguagem específica de domínio. Faça a
 
 10. Redefina a instância experimental do Visual Studio.
 
-    1. Exclua **\users \\** _{your name}_ **\AppData\Local\Microsoft\VisualStudio \\ \*Exp**.
+    1. Exclua ** \\ \Users**_{Your Name}_**\AppData\Local\Microsoft\VisualStudio \\ \* exp**.
 
-    2. No menu **Iniciar** do Windows, escolha **todos os programas**  > **Microsoft Visual Studio 2010 SDK**  > **ferramentas**  > **redefinir a instância experimental**.
+    2. No menu **Iniciar** do Windows, escolha **todos os programas**  >  **Microsoft Visual Studio**  >  **ferramentas**SDK  >  **do 2010 redefinam a instância experimental**.
 
 11. No menu **Compilar** , escolha **Recompilar solução**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Glossário de ferramentas de linguagem específica de domínio](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

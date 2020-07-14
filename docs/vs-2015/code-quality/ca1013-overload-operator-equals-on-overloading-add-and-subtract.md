@@ -19,19 +19,19 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: dd1c144f04150e3965e2c0264b80147cbd9b8f19
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2304b78073b806dfc4aec9686f061d946b379ded
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663205"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545412"
 ---
-# <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: sobrecarregar igualdades de operador em add e subtract de sobrecarga
+# <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: Sobrecarregar o operador equals na sobrecarga de adição e subtração
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|OverloadOperatorEqualsOnOverloadingAddAndSubtract|
+|TypeName|OverloadOperatorEqualsOnOverloadingAddAndSubtract|
 |CheckId|CA1013|
 |Categoria|Microsoft. Design|
 |Alteração Significativa|Sem interrupção|
@@ -40,9 +40,9 @@ ms.locfileid: "72663205"
  Um tipo público ou protegido implementa os operadores de adição ou subtração sem implementar o operador de igualdade.
 
 ## <a name="rule-description"></a>Descrição da Regra
- Quando instâncias de um tipo podem ser combinadas usando operações como adição e subtração, você quase sempre deve definir igualdade para retornar `true` para quaisquer duas instâncias que tenham os mesmos valores de constituintes.
+ Quando as instâncias de um tipo podem ser combinadas usando operações como adição e subtração, você quase sempre deve definir igualdade para retornar `true` para duas instâncias que tenham os mesmos valores de constituintes.
 
- Você não pode usar o operador de igualdade padrão em uma implementação sobrecarregada do operador de igualdade. Isso causará um estouro de pilha. Para implementar o operador de igualdade, use o método Object. Equals em sua implementação. Consulte o exemplo a seguir.
+ Você não pode usar o operador de igualdade padrão em uma implementação sobrecarregada do operador de igualdade. Isso causará um estouro de pilha. Para implementar o operador de igualdade, use o método Object. Equals em sua implementação. Veja os exemplos a seguir.
 
 ```vb
 If (Object.ReferenceEquals(left, Nothing)) Then
@@ -65,7 +65,7 @@ return left.Equals(right);
  É seguro suprimir um aviso dessa regra quando a implementação padrão do operador de igualdade fornece o comportamento correto para o tipo.
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir define um tipo (`BadAddableType`) que viola essa regra. Esse tipo deve implementar o operador de igualdade para fazer com que as duas instâncias que têm os mesmos valores de campo testem `true` para igualdade. O tipo `GoodAddableType` mostra a implementação corrigida. Observe que esse tipo também implementa o operador de desigualdade e substitui <xref:System.Object.Equals%2A> para atender a outras regras. Uma implementação completa também implementará <xref:System.Object.GetHashCode%2A>.
+ O exemplo a seguir define um tipo ( `BadAddableType` ) que viola essa regra. Esse tipo deve implementar o operador de igualdade para fazer com que as duas instâncias que têm os mesmos valores de campo sejam testadas `true` para igualdade. O tipo `GoodAddableType` mostra a implementação corrigida. Observe que esse tipo também implementa o operador de desigualdade e substitui o <xref:System.Object.Equals%2A> para atender a outras regras. Uma implementação completa também implementaria <xref:System.Object.GetHashCode%2A> .
 
  [!code-csharp[FxCop.Design.AddAndSubtract#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AddAndSubtract/cs/FxCop.Design.AddAndSubtract.cs#1)]
 
@@ -76,8 +76,10 @@ return left.Equals(right);
 
  Este exemplo gerencia a seguinte saída.
 
- **Tipo inadequado: {2,2} {2,2} são iguais? Não há** 
-**bom tipo: {3,3} {3,3} são iguais? Sim** 
-**bom tipo: {3,3} 0 são = =?   Sim** 1**tipo inadequado: 3 4 são iguais? Não há** 5**bom tipo: 7 8 são = =?   Não**
-## <a name="see-also"></a>Consulte também
+ **Tipo inadequado: {2,2} {2,2} são iguais? Nenhum** 
+ **bom tipo: {3,3} {3,3} é igual? Sim** 
+ **tipo correto: {3,3} {3,3} são = =?   Sim** 
+ **tipo inadequado: {2,2} {9,9} é igual? Sem** 
+ **bom tipo: {3,3} {9,9} são = =?   Não**
+## <a name="see-also"></a>Consulte Também
  [Operadores de igualdade](https://msdn.microsoft.com/library/bc496a91-fefb-4ce0-ab4c-61f09964119a)

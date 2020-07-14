@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 29c74f74bbee19e414b3ee32948f3ca5338e8d53
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b87ed03c8f513f6a9a750186d8763e56061bed98
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592983"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350817"
 ---
 # <a name="draw-shapes-and-paths"></a>Desenhe as formas e demarcadores
 
@@ -84,11 +84,11 @@ Use a ferramenta **Seleção** para selecionar o caminho. Em seguida, use a ferr
 
 Use a ferramenta **Seleção** para selecionar o caminho. Use a ferramenta **Caneta** para clicar em qualquer local do caminho em que deseja adicionar o ponto.
 
-## <a name="convert-a-shape-to-a-path"></a>Converter uma forma em um demarcador
+## <a name="convert-a-shape-to-a-path"></a>Converter uma forma em um caminho
 
-Para modificar uma forma da mesma maneira que um caminho, converta a forma em um caminho. Selecione a forma e, em seguida, selecione **Formatar** > **Caminho** > **Converter em Caminho**.
+Para modificar uma forma da mesma maneira que um caminho, converta a forma em um caminho. Selecione a forma e, em seguida, selecione **Formatar**  >  **caminho**  >  **converter em demarcador**.
 
-**Assista a um breve vídeo:** ![configurar os recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png) [trabalhando com caminhos: Converta uma forma em um caminho](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147).
+**Assista a um vídeo curto:** ![Configure installed features](../designers/media/bldadminconsoleinitialconfigicon.png) [Working with paths: Convert a shape to a path](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147) (Configurar recursos instalados, Trabalhando com demarcadores: converter uma forma em um demarcador).
 
 > [!NOTE]
 > Atualmente, a opção **Converter em Caminho** não está disponível para aplicativos UWP que tenham no mínimo a `TargetPlatformVersion` 10.0.16299.0 ou posterior.
@@ -99,13 +99,16 @@ Para modificar uma forma da mesma maneira que um caminho, converta a forma em um
 
 ![Combinar demarcadores](../designers/media/2df17a5d-a338-4ef4-96c5-dae51cc1ca8a.png)
 
-|||||
-|-|-|-|-|
-|![Duas formas antes da combinação](../designers/media/b1_1.png)|Duas formas antes da combinação|![Interseção](../designers/media/b1_4.png)|Interseção|
-|![União](../designers/media/b1_2.png)|União|![Excluir sobreposição](../designers/media/b1_5.png)|Excluir Sobreposição|
-|![Divisão](../designers/media/b1_3.png)|Divisão|![Subtração](../designers/media/b1_6.png)|Subtração|
+|Número|Ação|
+|-|-|
+|![Duas formas antes da combinação](../designers/media/b1_1.png)|Duas formas antes da combinação|
+|![União](../designers/media/b1_2.png)|União|
+|![Dividir](../designers/media/b1_3.png)|Dividir|
+|![Intersect](../designers/media/b1_4.png)|Intersect|
+|![Excluir sobreposição](../designers/media/b1_5.png)|Excluir Sobreposição|
+|![Subtrair](../designers/media/b1_6.png)|Subtrair|
 
-**Assista a um breve vídeo:** ![configurar os recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png) [trabalhando com caminhos: combinar caminhos](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195).
+**Assista a um vídeo curto:** ![Configure installed features](../designers/media/bldadminconsoleinitialconfigicon.png) [Working with paths: Combine paths](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195) (Configurar recursos instalados, Trabalhando com caminhos: combinar caminhos).
 
 ## <a name="create-a-compound-path"></a>Criar um demarcador composto
 
@@ -115,7 +118,7 @@ Quando você cria um caminho composto, todas as partes de interseção dos camin
 
 ![Interromper um demarcador composto](../designers/media/2157a8aa-d9a7-4de4-8de5-b10d28f08a84.png)
 
-**Assista a um breve vídeo:** ![configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png) [trabalhando com caminhos: criar um caminho composto](https://www.youtube.com/watch?v=Io5bC0-nH6Q).
+**Assista a um vídeo curto:** ![Configure installed features](../designers/media/bldadminconsoleinitialconfigicon.png) [Working with paths: Create a compound path](https://www.youtube.com/watch?v=Io5bC0-nH6Q) (Configurar recursos instalados, Trabalhando com caminhos: criar um demarcador composto).
 
 ## <a name="create-a-clipping-path"></a>Criar um demarcador de recorte
 
@@ -123,4 +126,4 @@ Um caminho de recorte é um caminho ou uma forma que é aplicada a outro objeto,
 
 ![Demarcador de recorte](../designers/media/22471e98-a841-4f39-a3ef-36090cf5a625.png)
 
-**Assista a um breve vídeo:** ![configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png) [trabalhando com caminhos: criar um caminho de recorte](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232).
+**Assista a um vídeo curto:** ![Configure installed features](../designers/media/bldadminconsoleinitialconfigicon.png) [Working with paths: Create a clipping path](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232) (Configurar recursos instalados, Trabalhando com demarcadores: criar um demarcador de recorte).

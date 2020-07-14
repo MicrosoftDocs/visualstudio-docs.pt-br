@@ -12,12 +12,12 @@ caps.latest.revision: 21
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1c2134c38a3910a5dd1308990b0788002a7ded2d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.openlocfilehash: 7cac308de96c3edc2dfe5c7577b0bee8077bf9e7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441912"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548428"
 ---
 # <a name="nameprofile"></a>NameProfile
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -62,7 +62,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
   
  Identificador de nível de criação de perfil. Use o identificador de processo ou thread que é gerado pelo sistema.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  A função indica êxito ou falha usando a enumeração **PROFILE_COMMAND_STATUS**. O valor de retorno pode ser um dos seguintes:  
   
 |Enumerador|Descrição|  
@@ -89,16 +89,16 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  Microsoft.VisualStudio.Profiler.dll  
   
-## <a name="function-information"></a>Informações de função  
+## <a name="function-information"></a>Informações de Função  
   
-|||  
+|Item|Descrição|  
 |-|-|  
-|**Header**|Inclui VSPerf.h|  
-|**Library**|Use VSPerf.lib|  
+|**Cabeçalho**|Inclui VSPerf.h|  
+|**Biblioteca**|Use VSPerf.lib|  
 |**Unicode**|Implementado como `NameProfileW` (Unicode) e `NameProfileA` (ANSI).|  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir ilustra a chamada da função NameProfile. O exemplo pressupõe o uso de macros de cadeia de caracteres do Win32 e as configurações de compilador para ANSI para determinar se o código chama a função habilitada por ANSI.  
+ O código a seguir ilustra a chamada da função NameProfile. O exemplo pressupõe o uso de macros da cadeia de caracteres do Win32 e as configurações do compilador para ANSI para determinar se o código chama a função habilitada do ANSI.  
   
 ```  
 void ExerciseNameProfile()  
@@ -135,5 +135,5 @@ void ExerciseNameProfile()
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência da API do criador de perfil do Visual Studio (nativo)](../profiling/visual-studio-profiler-api-reference-native.md)

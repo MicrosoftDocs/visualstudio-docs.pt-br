@@ -15,12 +15,12 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7138784201a1ac036047e1c8df362727fa393b51
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e9dbd245edd81907197e23c0d193a01cc07424b4
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72620781"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548103"
 ---
 # <a name="adding-visual-studio-editor-support-for-other-languages"></a>Adicionando suporte para outras linguagens ao editor do Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,18 +34,46 @@ Saiba mais sobre como o editor do Visual Studio dá suporte à leitura e à nave
 
  No momento, o Visual Studio oferece suporte à colorização de sintaxe e preenchimento de declaração básico para as seguintes linguagens usando [gramáticas TextMate](https://manual.macromates.com/en/language_grammars). Se sua linguagem favorita não estiver na tabela, não se preocupe – é possível adicioná-la.
 
-|||||||
-|-|-|-|-|-|-|
-|Bat|F#|Java|Markdown|Rust|Visual Basic|
-|Clojure|Ir|JavaDoc|Objective-C|ShaderLab|Visual C#|
-|CMake|Groovy|JSON|Perl|ShellScript|Visual C++|
-|CoffeeScript|HTML|LESS|Python|SQL|VBNet|
-|CSS|INI|LUA|R|Swift|XML|
-|Docker|Jade|Marca|Ruby|TypeScript|YAML|
+- Bat
+- F#
+- Java
+- Markdown
+- Rust
+- Visual Basic
+- Clojure
+- Go
+- JavaDoc
+- Objective-C
+- ShaderLab
+- C#
+- CMake
+- Groovy
+- JSON
+- Perl
+- ShellScript
+- Visual C++
+- CoffeeScript
+- HTML
+- LESS
+- Python
+- SQL
+- VBNet
+- CSS
+- INI
+- LUA
+- R
+- Swift
+- XML
+- Docker
+- Jade
+- Faça
+- Ruby
+- TypeScript
+- YAML
 
  Além da colorização de sintaxe e do preenchimento de declaração, o Visual Studio também tem um recurso chamado [Navegar até](https://blogs.msdn.microsoft.com/benwilli/2015/04/09/visual-studio-tip-3-use-navigate-to/). Esse recurso permite pesquisar rapidamente arquivos de código, caminhos de arquivo e símbolos de código. O Visual Studio oferece suporte Navegar até para as seguintes linguagens.
 
-- Ir
+- Go
 
 - Java
 
@@ -74,13 +102,13 @@ Saiba mais sobre como o editor do Visual Studio dá suporte à leitura e à nave
 
 |Nome da Pasta|Descrição|
 |-----------------|-----------------|
-|\\ *\<nome da linguagem>*|A pasta da linguagem. Substitua *\<nome da linguagem>* pelo nome da linguagem. Por exemplo, **\Matlab**.|
+|\\*\<language name>*|A pasta da linguagem. Substituir *\<language name>* pelo nome do idioma. Por exemplo, **\Matlab**.|
 |\Syntaxes|A pasta da gramática. Contém os arquivos .json da gramática para a linguagem, como **Matlab.json**.|
 |\Snippets|A pasta de snippets. Contém snippets da linguagem.|
 
- No Windows, %userprofile% determina o caminho: c:\Usuários\\ *\<nome do usuário >* . Se a pasta de extensões não existir em seu sistema, será necessário criá-la. Se a pasta já existir, ela será oculta.
+ No Windows,% USERPROFILE% é resolvido para o caminho: c:\Users \\ *\<user name>* . Se a pasta de extensões não existir em seu sistema, será necessário criá-la. Se a pasta já existir, ela será oculta.
 
  Para obter detalhes sobre como criar Gramáticas TextMate, consulte [TextMate – Introduction to Language Grammars: How to add source code syntax highlighting embedded in HTML (TextMate – Introdução a gramáticas de linguagem: como adicionar realce de sintaxe do código-fonte inserido no HTML)](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/) e [Notes on how to create a Language Grammar and Custom Theme for a Textmate Bundle (Observações sobre como criar uma gramática de linguagem e um tema personalizado para um pacote Textmate)](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Visual Studio 2013 navegar até os aprimoramentos](https://blogs.msdn.microsoft.com/mvpawardprogram/2013/10/22/visual-studio-2013-navigate-to-improvements/) [Walkthrough: Criando um trecho de código](../ide/walkthrough-creating-a-code-snippet.md) [Walkthrough: exibindo a conclusão da instrução](../extensibility/walkthrough-displaying-statement-completion.md)

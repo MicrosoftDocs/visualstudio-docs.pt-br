@@ -1,7 +1,7 @@
 ---
 title: Como adicionar, atualizar ou remover uma referência de WCF Data Services
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - service references [Visual Studio]
 - WCF Data Service reference
@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 494e85049a173749d418276340389ebe826a0b0b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: f5f5a1e14a6eab7537c8ce64636f0f34378ad7f0
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184219"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282365"
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>Como adicionar, atualizar ou remover uma referência de serviço de dados do WCF
 
@@ -57,7 +57,7 @@ Você pode usar o nó **Serviços conectados** no **Gerenciador de soluções** 
 
 1. Clique em **OK** para adicionar a referência ao projeto.
 
-     Um cliente de serviço (proxy) é gerado e os metadados que descrevem o serviço são adicionados ao arquivo *app. config* .
+     Um cliente de serviço (proxy) é gerado e os metadados que descrevem o serviço são adicionados ao arquivo de *app.config* .
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 1. Em **Gerenciador de soluções**, clique duas vezes ou toque no nó **Serviços conectados** .
@@ -86,7 +86,7 @@ Você pode usar o nó **Serviços conectados** no **Gerenciador de soluções** 
 
 1. Clique em **concluir** para adicionar a referência ao projeto.
 
-     Um cliente de serviço (proxy) é gerado e os metadados que descrevem o serviço são adicionados ao arquivo *app. config* .
+     Um cliente de serviço (proxy) é gerado e os metadados que descrevem o serviço são adicionados ao arquivo de *app.config* .
 
 ::: moniker-end
 
@@ -108,7 +108,7 @@ Você pode usar o nó **Serviços conectados** no **Gerenciador de soluções** 
 
 1. Clique em **OK** para adicionar a referência ao projeto.
 
-    Um cliente de serviço (proxy) gera e metadados que descrevem o serviço é adicionado ao arquivo *app. config* .
+    Um cliente de serviço (proxy) gera e metadados que descrevem o serviço é adicionado ao arquivo de *app.config* .
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 1. Em **Gerenciador de soluções**, clique duas vezes ou toque no nó **Serviços conectados** . 
@@ -129,7 +129,7 @@ Você pode usar o nó **Serviços conectados** no **Gerenciador de soluções** 
 
 1. Clique em **concluir** para adicionar a referência ao projeto.
 
-    Um cliente de serviço (proxy) gera e metadados que descrevem o serviço é adicionado ao arquivo *app. config* .
+    Um cliente de serviço (proxy) gera e metadados que descrevem o serviço é adicionado ao arquivo de *app.config* .
 
 ::: moniker-end
 
@@ -151,7 +151,7 @@ Se uma referência de serviço não estiver mais sendo usada, você poderá remo
 
 - Em **Gerenciador de soluções**, clique com o botão direito do mouse na referência de serviço e clique em **excluir**.
 
-     O cliente de serviço será removido da solução e os metadados que descrevem o serviço serão removidos do arquivo *app. config* .
+     O cliente de serviço será removido da solução e os metadados que descrevem o serviço serão removidos do arquivo de *app.config* .
 
     > [!NOTE]
     > Qualquer código que referencie a referência de serviço deve ser removido manualmente.

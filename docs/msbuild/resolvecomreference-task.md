@@ -18,18 +18,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fdc6c6ccd58bcc83cc37ff3a9f7888af837ed6e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b99e743cf5bc9e3e634a8738e30d17c8e5517191
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75595196"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286174"
 ---
 # <a name="resolvecomreference-task"></a>Tarefa ResolveComReference
 
-Pega uma lista de um ou mais nomes de biblioteca de tipo ou arquivos *.tlb* e resolve essas bibliotecas de tipo para locais em disco.
+Usa uma lista de um ou mais nomes de biblioteca de tipos ou arquivos *. tlb* e resolve essas bibliotecas de tipos para locais no disco.
 
-## <a name="parameters"></a>parâmetros
+## <a name="parameters"></a>Parâmetros
 
  A tabela a seguir descreve os parâmetros da tarefa `ResolveCOMReference`.
 
@@ -37,7 +37,7 @@ Pega uma lista de um ou mais nomes de biblioteca de tipo ou arquivos *.tlb* e re
 |---------------|-----------------|
 |`DelaySign`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, coloca a chave pública no assembly. Se `false`, assina totalmente o assembly.|
 |`EnvironmentVariables`|Parâmetro `String[]` opcional.<br /><br /> Matriz de pares de variáveis de ambiente, separadas por sinais de igual. Essas variáveis são passadas para *tlbimp.exe* e *aximp.exe* gerados, adicionando ou substituindo seletivamente o bloqueio de ambiente regular.|
-|`ExecuteAsTool`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, executa *tlbimp.exe* e *aximp.exe* a partir da estrutura de destino apropriada fora-de-proc para gerar os conjuntos de invólucros necessários. Esse parâmetro habilita multiplataformas.|
+|`ExecuteAsTool`|Parâmetro `Boolean` opcional.<br /><br /> Se `true` , o executará *tlbimp.exe* e *aximp.exe* da estrutura de destino apropriada fora do processo para gerar os assemblies de wrapper necessários. Esse parâmetro habilita multiplataformas.|
 |`IncludeVersionInInteropName`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, a versão de typelib será incluída no nome do wrapper. O padrão é `false`.|
 |`KeyContainer`|Parâmetro `String` opcional.<br /><br /> Especifica um contêiner que armazena um par de chaves pública/privada.|
 |`KeyFile`|Parâmetro `String` opcional.<br /><br /> Especifica um item que contém um par de chaves pública/privada.|
@@ -80,11 +80,21 @@ Pega uma lista de um ou mais nomes de biblioteca de tipo ou arquivos *.tlb* e re
 
 ## <a name="remarks"></a>Comentários
 
-Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base de tarefas](../msbuild/task-base-class.md).
+Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [classe base da tarefa](../msbuild/task-base-class.md).
 
 A DLL COM não precisa estar registrada na máquina para que essa tarefa funcione.
 
-## <a name="see-also"></a>Confira também
+## <a name="msb4803-error"></a>Erro de MSB4803
+
+Se você tentar executar um projeto que usa a `ResolveCOMReference` tarefa dos comandos da `dotnet` CLI, você receberá o erro:
+
+```output
+MSB4803: The task "ResolveComReference" is not supported on the .NET Core version of MSBuild. Please use the .NET Framework version of MSBuild.
+```
+
+Essa tarefa não tem suporte na versão do .NET Core do MSBuild, que é usada quando você executa o `dotnet build` comando na linha de comando. Tente compilar o projeto invocando [MSBuild.exe](msbuild-command-line-reference.md) da prompt de comando do desenvolvedor do Visual Studio, já que isso usa a versão .NET Framework do MSBuild.
+
+## <a name="see-also"></a>Veja também
 
 - [Tarefas](../msbuild/msbuild-tasks.md)
-- [Referência de tarefas](../msbuild/msbuild-task-reference.md)
+- [Referência de tarefa](../msbuild/msbuild-task-reference.md)

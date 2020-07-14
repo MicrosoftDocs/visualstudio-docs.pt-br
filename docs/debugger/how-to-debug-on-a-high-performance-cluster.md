@@ -1,7 +1,7 @@
 ---
-title: 'Como: Depurar em um cluster de alto desempenho | Microsoft Docs'
+title: Como depurar em um cluster de alto desempenho | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -16,14 +16,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d95c6eeadfdf1bb90471997712299ae03a945be8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 905a196b0872ac0d8665293200837861adf49795
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733662"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350063"
 ---
-# <a name="how-to-debug-on-a-high-performance-cluster-c-visual-basic-c"></a>Como: Depurar em um cluster de alto desempenho (C#, Visual Basic,) C++
+# <a name="how-to-debug-on-a-high-performance-cluster-c-visual-basic-c"></a>Como: Depurar em um cluster de alto desempenho (C#, Visual Basic, C++)
 
 A depuração de um programa com vários processamentos em um cluster de alto desempenho é semelhante à depuração de um programa comum em um computador remoto. No entanto, há algumas considerações adicionais. Para requisitos gerais de configuração remota, consulte [depuração remota](../debugger/remote-debugging.md).
 
@@ -63,9 +63,9 @@ A depuração de um programa com vários processamentos em um cluster de alto de
 
 3. Na caixa de diálogo **Filtro de Ponto de Interrupção**, digite:
 
-     `ProcessName =` *nomedoseuprocesso*
+     `ProcessName =`  *nomedoseuprocesso*
 
-     —ou—
+     — ou —
 
      `ProcessID =` *númerodaIDdoseuprocesso*
 
@@ -83,7 +83,7 @@ A depuração de um programa com vários processamentos em um cluster de alto de
 
      `ThreadName =` *nomedothread*
 
-     —ou—
+     — ou —
 
      `ThreadID =` *númerodaIDdothread*
 
@@ -96,8 +96,8 @@ A depuração de um programa com vários processamentos em um cluster de alto de
 
 `(MachineName = marvin) & (ThreadName = fourier1)`
 
-## <a name="see-also"></a>Consulte também
-- [Depurar aplicativos multi-threaded](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+## <a name="see-also"></a>Veja também
+- [Depurar aplicativos multithread](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Depuração remota](../debugger/remote-debugging.md)
 - [Como: usar a janela de processos](/previous-versions/visualstudio/visual-studio-2010/7h8h5sdw(v=vs.100))
 - [Introdução à depuração de aplicativos multithread](../debugger/get-started-debugging-multithreaded-apps.md)

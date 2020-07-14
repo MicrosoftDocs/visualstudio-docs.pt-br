@@ -1,7 +1,7 @@
 ---
 title: IDiaLineNumber::get_sourceFileId | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 54b460fc96d71048b192313d03956e3b2cbe321f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f5a0151a8cd5bcc10fb306b34762ad5d1bb698f4
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743147"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466850"
 ---
 # <a name="idialinenumberget_sourcefileid"></a>IDiaLineNumber::get_sourceFileId
 Recupera um identificador de arquivo de origem exclusivo para o arquivo de origem que contribuiu para esta linha.
@@ -35,8 +35,8 @@ HRESULT get_sourceFileId ( 
 
 fora Retorna o identificador de arquivo de origem exclusivo para o arquivo de origem que contribuiu para esta linha.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver suporte para essa propriedade. Caso contrário, retornará um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

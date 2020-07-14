@@ -15,19 +15,19 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5b5e1525d1ee706f9cd46a58c022763d2ed234bf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6a63ebb7f3946926864c4dd882c281b5dcd7c6c5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662693"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535831"
 ---
-# <a name="ca2208-instantiate-argument-exceptions-correctly"></a>CA2208: instanciar exceções de argumento corretamente
+# <a name="ca2208-instantiate-argument-exceptions-correctly"></a>CA2208: Criar instância de exceções de argumento corretamente
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|InstantiateArgumentExceptionsCorrectly|
+|TypeName|InstantiateArgumentExceptionsCorrectly|
 |CheckId|CA2208|
 |Categoria|Microsoft. Usage|
 |Alteração Significativa|Sem interrupção|
@@ -42,26 +42,26 @@ ms.locfileid: "72662693"
 ## <a name="rule-description"></a>Descrição da Regra
  Em vez de chamar o construtor padrão, chame uma das sobrecargas do construtor que permite que uma mensagem de exceção mais significativa seja fornecida. A mensagem de exceção deve ter como alvo o desenvolvedor e explicar claramente a condição de erro e como corrigir ou evitar a exceção.
 
- As assinaturas de um e dois construtores de cadeia de caracteres de <xref:System.ArgumentException> e seus tipos derivados não são consistentes em relação aos parâmetros `message` e `paramName`. Verifique se esses construtores são chamados com os argumentos de cadeia de caracteres corretos. As assinaturas são as seguintes:
+ As assinaturas de um e dois construtores de cadeia de caracteres de <xref:System.ArgumentException> e seus tipos derivados não são consistentes em relação `message` aos `paramName` parâmetros e. Verifique se esses construtores são chamados com os argumentos de cadeia de caracteres corretos. As assinaturas são as seguintes:
 
- <xref:System.ArgumentException> (cadeia de caracteres `message`)
+ <xref:System.ArgumentException>(cadeia de caracteres `message` )
 
- <xref:System.ArgumentException> (cadeia de caracteres `message`, Cadeia de caracteres `paramName`)
+ <xref:System.ArgumentException>(cadeia `message` de caracteres, Cadeia de caracteres `paramName` )
 
- <xref:System.ArgumentNullException> (cadeia de caracteres `paramName`)
+ <xref:System.ArgumentNullException>(cadeia de caracteres `paramName` )
 
- <xref:System.ArgumentNullException> (cadeia de caracteres `paramName`, Cadeia de caracteres `message`)
+ <xref:System.ArgumentNullException>(cadeia `paramName` de caracteres, Cadeia de caracteres `message` )
 
- <xref:System.ArgumentOutOfRangeException> (cadeia de caracteres `paramName`)
+ <xref:System.ArgumentOutOfRangeException>(cadeia de caracteres `paramName` )
 
- <xref:System.ArgumentOutOfRangeException> (cadeia de caracteres `paramName`, Cadeia de caracteres `message`)
+ <xref:System.ArgumentOutOfRangeException>(cadeia `paramName` de caracteres, Cadeia de caracteres `message` )
 
- <xref:System.DuplicateWaitObjectException> (cadeia de caracteres `parameterName`)
+ <xref:System.DuplicateWaitObjectException>(cadeia de caracteres `parameterName` )
 
- <xref:System.DuplicateWaitObjectException> (cadeia de caracteres `parameterName`, Cadeia de caracteres `message`)
+ <xref:System.DuplicateWaitObjectException>(cadeia `parameterName` de caracteres, Cadeia de caracteres `message` )
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação dessa regra, chame um construtor que receba uma mensagem, um nome de parâmetro ou ambos, e verifique se os argumentos são adequados para o tipo de <xref:System.ArgumentException> sendo chamado.
+ Para corrigir uma violação dessa regra, chame um construtor que receba uma mensagem, um nome de parâmetro ou ambos, e verifique se os argumentos são adequados para o tipo de <xref:System.ArgumentException> chamada.
 
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
  É seguro suprimir um aviso dessa regra somente se um construtor com parâmetros for chamado com os argumentos de cadeia de caracteres corretos.

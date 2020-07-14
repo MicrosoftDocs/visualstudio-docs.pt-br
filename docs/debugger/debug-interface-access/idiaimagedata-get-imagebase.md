@@ -1,7 +1,7 @@
 ---
 title: IDiaImageData::get_imageBase | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7887fea30b04f4ebb6605169c58551122eccf73d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 00461f73059198f5e9028658100c9ccf400be607
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743443"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467172"
 ---
 # <a name="idiaimagedataget_imagebase"></a>IDiaImageData::get_imageBase
 Recupera o local da memória onde a imagem deve ser baseada.
@@ -35,11 +35,11 @@ HRESULT get_imageBase ( 
 
 fora Retorna o valor base da imagem sugerida.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
  Devido a conflitos na base da imagem, uma imagem pode ser reutilizada automaticamente para um local de memória não utilizado quando ela é carregada. Esse método retorna a dica de base (local da memória sugerida) que foi armazenada no módulo no momento da compilação.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)

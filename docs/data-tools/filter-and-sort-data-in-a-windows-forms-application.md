@@ -1,7 +1,7 @@
 ---
 title: Filtrar e classificar dados em um aplicativo do Windows Forms
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -19,32 +19,32 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 596397cc22cf0f0134463256c0861127dcfb81e1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7c420896a883146cf60de414100fc41080220e36
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586608"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282378"
 ---
 # <a name="filter-and-sort-data-in-a-windows-forms-application"></a>Filtrar e classificar dados em um aplicativo do Windows Forms
 
-Você filtra os dados definindo a propriedade <xref:System.Windows.Forms.BindingSource.Filter%2A> como uma expressão de cadeia de caracteres que retorna os registros desejados.
+Você filtra os dados definindo a <xref:System.Windows.Forms.BindingSource.Filter%2A> propriedade como uma expressão de cadeia de caracteres que retorna os registros desejados.
 
-Você classifica os dados definindo a propriedade <xref:System.Windows.Forms.BindingSource.Sort%2A> como o nome da coluna na qual você deseja classificar; Acrescente `DESC` para classificar em ordem decrescente ou acrescentar `ASC` para classificar em ordem crescente.
+Você classifica os dados definindo a <xref:System.Windows.Forms.BindingSource.Sort%2A> propriedade como o nome da coluna na qual você deseja classificar; acrescentar `DESC` para classificar em ordem decrescente ou acrescentar `ASC` para classificar em ordem crescente.
 
 > [!NOTE]
 > Se o seu aplicativo não usar <xref:System.Windows.Forms.BindingSource> componentes, você poderá filtrar e classificar dados usando <xref:System.Data.DataView> objetos. Para obter mais informações, consulte [DataViews](/dotnet/framework/data/adonet/dataset-datatable-dataview/dataviews).
 
 ## <a name="to-filter-data-by-using-a-bindingsource-component"></a>Para filtrar dados usando um componente BindingSource
 
-- Defina a propriedade <xref:System.Windows.Forms.BindingSource.Filter%2A> como a expressão que você deseja retornar. Por exemplo, o código a seguir retorna aos clientes um `CompanyName` que começa com "B":
+- Defina a <xref:System.Windows.Forms.BindingSource.Filter%2A> propriedade para a expressão que você deseja retornar. Por exemplo, o código a seguir retorna clientes com um `CompanyName` que começa com "B":
 
      [!code-csharp[VbRaddataDisplaying#6](../data-tools/codesnippet/CSharp/filter-and-sort-data-in-a-windows-forms-application_1.cs)]
      [!code-vb[VbRaddataDisplaying#6](../data-tools/codesnippet/VisualBasic/filter-and-sort-data-in-a-windows-forms-application_1.vb)]
 
 ## <a name="to-sort-data-by-using-a-bindingsource-component"></a>Para classificar dados usando um componente BindingSource
 
-- Defina a propriedade <xref:System.Windows.Forms.BindingSource.Sort%2A> como a coluna que você deseja classificar. Por exemplo, o código a seguir classifica os clientes na coluna `CompanyName` em ordem decrescente:
+- Defina a <xref:System.Windows.Forms.BindingSource.Sort%2A> propriedade para a coluna que você deseja classificar. Por exemplo, o código a seguir classifica os clientes na `CompanyName` coluna em ordem decrescente:
 
      [!code-csharp[VbRaddataDisplaying#7](../data-tools/codesnippet/CSharp/filter-and-sort-data-in-a-windows-forms-application_2.cs)]
      [!code-vb[VbRaddataDisplaying#7](../data-tools/codesnippet/VisualBasic/filter-and-sort-data-in-a-windows-forms-application_2.vb)]

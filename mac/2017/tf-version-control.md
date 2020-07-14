@@ -6,12 +6,13 @@ ms.author: dominicn
 ms.date: 06/25/2019
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
-ms.openlocfilehash: b7b160d58cead031a0eece2a522501d8c2060bd2
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: troubleshooting
+ms.openlocfilehash: 33d00d853c7496e23cb5cd97a0b9abbe05e3accc
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74985205"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950584"
 ---
 # <a name="connecting-to-team-foundation-version-control"></a>Conexão com o Controle de Versão do Team Foundation
 
@@ -20,7 +21,7 @@ ms.locfileid: "74985205"
 >
 > Se a versão prévia da extensão do TFVC para o Visual Studio para Mac foi usada anteriormente, ela não é mais compatível ao atualizar para o Visual Studio 2019 para Mac.
 
-O Azure Repos fornece dois modelos de controle de versão: [Git](/azure/devops/repos/git/?view=azure-devops), um sistema de controle de versão distribuída, e [Team Foundation Version Control](/azure/devops/repos/tfvc/index?view=azure-devops) (TFVC), um sistema centralizado de controle de versão.
+Azure Repos fornece dois modelos de controle de versão: [git](/azure/devops/repos/git/?view=azure-devops), um sistema de controle de versão distribuído e [controle de versão do Team Foundation](/azure/devops/repos/tfvc/index?view=azure-devops) (TFVC), um sistema de controle de versão centralizado.
 
 O Visual Studio para Mac fornece suporte completo para repositórios Git, mas requer algumas soluções alternativas para trabalhar com o TFVC. Se você estiver usando o TFVC para o controle de versão hoje, veja abaixo algumas soluções que você poderá usar para acessar seu código-fonte hospedado no TFVC:
 
@@ -124,7 +125,7 @@ Siga os prompts para instalar a extensão. Depois de instalá-la, reinicie o IDE
 
 ### <a name="updating-the-extension"></a>Atualizando a extensão
 
-Periodicamente, são feitas atualizações na extensão do TFVC. Para acessar atualizações, escolha **visual studio > extensões...** no menu e selecione a guia **Atualizações.** Selecione a extensão na lista e pressione o botão **Atualizar:**
+Periodicamente, são feitas atualizações na extensão do TFVC. Para acessar as atualizações, escolha **Visual Studio > Extensions...** no menu e selecione a guia **atualizações** . Selecione a extensão na lista e pressione o botão **Atualizar** :
 
 Pressione **Instalar** na próxima caixa de diálogo para desinstalar o pacote antigo e instalar um novo.
 
@@ -272,6 +273,6 @@ Ao tentar [criar um workspace](#creating-a-new-workspace), verifique se as segui
 - O nome deve ter menos de 64 caracteres.
 - O caminho local não pode ser usado por outros workspaces.
 
-### <a name="see-also"></a>Confira também
+### <a name="see-also"></a>Veja também
 
 - [Desenvolver e compartilhar seu código no TFVC usando o Visual Studio (no Windows)](/azure/devops/repos/tfvc/share-your-code-in-tfvc-vs)

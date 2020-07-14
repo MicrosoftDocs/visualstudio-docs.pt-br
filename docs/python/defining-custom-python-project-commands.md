@@ -2,7 +2,7 @@
 title: Definir comandos de menu personalizados para projetos do Python
 description: Editando arquivos de projeto e de destino, você pode adicionar comandos personalizados ao menu de contexto de projeto do Python no Visual Studio para invocar programas executáveis, scripts, módulos, snippets de código embutidos e PIP.
 ms.date: 11/12/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: aee42648eb4a2de3611d20fc0ca83ff898ad1fa9
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: f0e56b7db76d308a55f7d6bd24930e258385b0f9
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183074"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540862"
 ---
 # <a name="define-custom-commands-for-python-projects"></a>Definir comandos personalizados para projetos do Python
 
@@ -133,7 +133,7 @@ Para referenciar propriedades do projeto ou variáveis de ambiente em valores de
 
 | Atributo | Obrigatório | Descrição |
 | --- | --- | --- |
-| Nome | Sim | O identificador do comando dentro do projeto do Visual Studio. Esse nome deve ser adicionado ao grupo de propriedades `<PythonCommands>` para que o comando seja exibido no submenu Python. |
+| Name | Sim | O identificador do comando dentro do projeto do Visual Studio. Esse nome deve ser adicionado ao grupo de propriedades `<PythonCommands>` para que o comando seja exibido no submenu Python. |
 | Rotular | Sim | O nome de exibição da interface do usuário que é exibido no submenu Python. |
 | Retornos | Sim | Deve conter `@(Commands)`, que identifica o destino como um comando. |
 
@@ -306,7 +306,7 @@ Para explorar como os comandos **Iniciar servidor** e **Iniciar servidor de depu
   </Target>
 ```
 
-*De [fxthomas/example. pyproj. xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (github), usado com a permissão.*
+*De [fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (github), usado com a permissão.*
 
 ### <a name="generate-windows-installer"></a>Gerar o Windows Installer
 
@@ -325,7 +325,7 @@ Para explorar como os comandos **Iniciar servidor** e **Iniciar servidor de depu
   </Target>
 ```
 
-*De [fxthomas/example. pyproj. xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (github), usado com a permissão.*
+*De [fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (github), usado com a permissão.*
 
 ### <a name="generate-wheel-package"></a>Gerar pacote wheel
 
@@ -345,7 +345,7 @@ Para explorar como os comandos **Iniciar servidor** e **Iniciar servidor de depu
 </Target>
 ```
 
-*De [fxthomas/example. pyproj. xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (github), usado com a permissão.*
+*De [fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (github), usado com a permissão.*
 
 ## <a name="troubleshooting"></a>Solução de problemas
 

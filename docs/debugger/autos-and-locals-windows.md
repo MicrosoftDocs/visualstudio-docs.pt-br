@@ -1,8 +1,8 @@
-﻿---
+---
 title: Inspecionar variáveis – Janelas automáticas e locais Microsoft Docs
 ms.custom: seodec18
 ms.date: 10/18/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.autos
 - vs.debug.locals
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b159f631534135ac568fb03dbffa46ae0360fc47
-ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
+ms.openlocfilehash: 3ae67fadf5d9710f2088f47617b74eeeb8212826
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74904070"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350739"
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows"></a>Inspecionar variáveis nas janelas automáticas e locais
 
@@ -49,14 +49,14 @@ O formato numérico padrão nas janelas do depurador é Decimal. Para alterá-la
 
 Para editar os valores da maioria das variáveis na **Autos** ou **Locals** windows, clique duas vezes o valor e digite o novo valor.
 
-Você pode inserir uma expressão para um valor, por exemplo `a + b`. O depurador aceita mais expressões de linguagem válidas.
+Você pode inserir uma expressão para um valor, por exemplo `a + b` . O depurador aceita mais expressões de linguagem válidas.
 
-No código C++ nativo, talvez você precise qualificar o contexto de um nome de variável. Para obter mais informações, consulte [Context OperatorC++()](../debugger/context-operator-cpp.md).
+No código C++ nativo, talvez você precise qualificar o contexto de um nome de variável. Para obter mais informações, consulte [Context Operator (C++)](../debugger/context-operator-cpp.md).
 
 >[!CAUTION]
 >Certifique-se de entender as consequências antes de alterar valores e expressões. Alguns dos possíveis problemas são:
 >
->- Avaliar algumas expressões pode alterar o valor de uma variável ou, de outra forma, afetar o estado do programa. Por exemplo, avaliar `var1 = ++var2` altera o valor de `var1` e `var2`. Essas expressões são consideradas como [efeitos colaterais](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\)). Os efeitos colaterais podem causar resultados inesperados se você não estiver ciente deles.
+>- Avaliar algumas expressões pode alterar o valor de uma variável ou, de outra forma, afetar o estado do programa. Por exemplo, avaliar `var1 = ++var2` altera o valor de `var1` e `var2` . Essas expressões são consideradas como [efeitos colaterais](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\)). Os efeitos colaterais podem causar resultados inesperados se você não estiver ciente deles.
 >
 >- Editar valores de ponto flutuante pode resultar em imprecisões secundárias devido à conversão decimal-binária de componentes fracionários. Até mesmo uma edição aparentemente inofensiva pode resultar em alterações em alguns dos bits na variável de ponto flutuante.
 
@@ -82,8 +82,8 @@ Você pode inspecionar rapidamente os objetos por suas propriedades nas janelas 
 
 Você também pode alternar os nomes de propriedade e filtrar as propriedades não fixadas ao exibir a lista de propriedades do objeto nas janelas automáticas ou locais.  Você pode acessar cada opção selecionando os botões na barra de ferramentas acima das janelas automáticas ou locais.
 
-![Filtrar propriedades favoritas](../debugger/media/filter-pinned-properties-locals.png "Filtrar propriedades favoritas")
-![alternar nomes de propriedade](../debugger/media/toggle-property-names.gif "Alternar nomes de propriedade")
+![Filtrar propriedades favoritas](../debugger/media/filter-pinned-properties-locals.png "Filtrar propriedades favoritas") 
+ ![Alternar nomes de propriedade](../debugger/media/toggle-property-names.gif "Alternar nomes de propriedade")
 
 ::: moniker-end
 
@@ -95,13 +95,13 @@ Para habilitar a barra de ferramentas **local de depuração**, clique em uma pa
 
 Definir um ponto de interrupção e iniciar a depuração. Quando o ponto de interrupção é atingido, a execução para e você pode ver o local na barra de ferramentas **local de depuração**.
 
-![Barra de ferramentas do local de depuração](../debugger/media/debuglocationtoolbar.png "Barra de ferramentas Local de Depuração")
+![Barra de ferramentas do local de depuração](../debugger/media/debuglocationtoolbar.png "Depurar barra de ferramentas de local")
 
-## <a name="bkmk_whatvariables"></a>Variáveis na janela Autos (C#, C++, Visual Basic, Python)
+## <a name="variables-in-the-autos-window-c-c-visual-basic-python"></a><a name="bkmk_whatvariables"></a>Variáveis na janela Autos (C#, C++, Visual Basic, Python)
 
 Linguagens de código diferentes exibem variáveis diferentes nos **Autos** janela.
 
-- No C# e Visual Basic, a janela **Autos** exibirá qualquer variável usada na linha atual ou anterior. Por exemplo, no C# ou Visual Basic código, declare as quatro variáveis a seguir:
+- No C# e Visual Basic, a janela **Autos** exibirá qualquer variável usada na linha atual ou anterior. Por exemplo, em C# ou Visual Basic código, declare as quatro variáveis a seguir:
 
    ```csharp
        public static void Main()
@@ -114,13 +114,13 @@ Linguagens de código diferentes exibem variáveis diferentes nos **Autos** jane
        }
    ```
 
-   Defina um ponto de interrupção na linha `c = 3;`e inicie o depurador. Quando a execução pausa, o **Autos** janela será exibida:
+   Defina um ponto de interrupção na linha `c = 3;` e inicie o depurador. Quando a execução pausa, o **Autos** janela será exibida:
 
    ![Auto-CSharp](../debugger/media/autos-csharp.png "Auto-CSharp")
 
    O valor de `c` é 0, porque a linha `c = 3` ainda não foi executada.
 
-- No C++, o **Autos** janela exibe as variáveis usadas em pelo menos três linhas antes da linha atual em que a execução está em pausa. Por exemplo, no C++ código, declare seis variáveis:
+- No C++, o **Autos** janela exibe as variáveis usadas em pelo menos três linhas antes da linha atual em que a execução está em pausa. Por exemplo, no código C++, declare seis variáveis:
 
    ```C++
        void main() {
@@ -136,14 +136,14 @@ Linguagens de código diferentes exibem variáveis diferentes nos **Autos** jane
 
     Defina um ponto de interrupção na linha `e = 5;` e execute o depurador. Quando a execução for interrompida, o **Autos** janela será exibida:
 
-    ![AutosC++](../debugger/media/autos-cplus.png "AutosC++")
+    ![Auto-C + +](../debugger/media/autos-cplus.png "Auto-C + +")
 
-    A variável `e` não foi inicializada porque a linha `e = 5` ainda não foi executada.
+    A variável `e` não foi inicializada, pois a linha `e = 5` ainda não foi executada.
 
-## <a name="bkmk_returnValue"></a>Exibir valores de retorno de chamadas de método
+## <a name="view-return-values-of-method-calls"></a><a name="bkmk_returnValue"></a>Exibir valores de retorno de chamadas de método
  No código .NET e C++, você pode examinar os valores de retorno na **Autos** janela ao passar sobre ou fora de uma chamada de método. Pode ser útil exibir valores de retornor de chamadas de método quando eles não são armazenados em variáveis locais. Um método pode ser usado como um parâmetro ou como o valor retornado de outro método.
 
- Por exemplo, o código C# a seguir adiciona os valores de retorno de duas funções:
+ Por exemplo, o seguinte código C# adiciona os valores de retorno de duas funções:
 
 ```csharp
 static void Main(string[] args)
@@ -167,17 +167,17 @@ private static int subtractVars(int i, int j)
 }
 ```
 
-Para ver os valores de retorno das chamadas de método `sumVars()` e `subtractVars()` na janela Autos:
+Para ver os valores de retorno das `sumVars()` `subtractVars()` chamadas de método e na janela de automóveis:
 
-1. Defina um ponto de interrupção na linha de `int x = sumVars(a, b) + subtractVars(c, d);`.
+1. Defina um ponto de interrupção na linha `int x = sumVars(a, b) + subtractVars(c, d);`.
 
 1. Inicie a depuração e, quando a execução parar no ponto de interrupção, selecione **Step Over** ou pressione **F10**. Você deve ver os seguintes valores de retornados na **Autos** janela:
 
-  ![Valor de retorno automáticoC#](../debugger/media/autosreturnvaluecsharp2.png "Valor de retorno automáticoC#")
+  ![Valor de retorno automático C #](../debugger/media/autosreturnvaluecsharp2.png "Valor de retorno automático C #")
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [O que é depuração?](../debugger/what-is-debugging.md)
-- [Ferramentas e técnicas de depuração](../debugger/write-better-code-with-visual-studio.md)
+- [Técnicas e ferramentas de depuração](../debugger/write-better-code-with-visual-studio.md)
 - [Primeira olhada na depuração](../debugger/debugger-feature-tour.md)
 - [Janelas do depurador](../debugger/debugger-windows.md)

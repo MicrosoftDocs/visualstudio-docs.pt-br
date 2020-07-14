@@ -19,14 +19,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70c16b603f1c38eeb3e71718937e7c669ae8ebc9
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 0e184507415810f64060b0d2b2e92a825d642d2e
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184543"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280870"
 ---
 # <a name="create-custom-data-visualizers"></a>Criar visualizadores de dados personalizados
+
  Um *Visualizador* faz parte da [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] interface do usuário do depurador que exibe uma variável ou objeto de uma maneira apropriada ao seu tipo de dados. Por exemplo, um visualizador de HTML interpreta uma cadeia de caracteres HTML e exibe o resultado como seria exibido em uma janela do navegador. Um visualizador de bitmap interpreta uma estrutura de bitmap e exibe o gráfico que ela representa. Alguns visualizadores permitem que você modifique e exiba os dados.
 
  O depurador do [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] inclui seis visualizadores padrão. Os visualizadores de texto, HTML, XML e JSON funcionam em objetos de cadeia de caracteres. O Visualizador de árvore do WPF exibe as propriedades de uma árvore visual do objeto WPF. O Visualizador do conjunto de um funciona para objetos DataSet, DataView e DataTable.
@@ -74,11 +75,23 @@ Para criar a interface do usuário do visualizador no lado do depurador, você c
 
 ### <a name="to-create-the-visualizer-object-source-for-the-debuggee-side"></a>Para criar a origem do objeto visualisador para o lado que está sendo depurado
 
-Você especifica o tipo a ser visualizado (a origem do objeto do lado de depuração) usando o <xref:System.Diagnostics.DebuggerVisualizerAttribute> no código do lado do depurador.
+No código do lado do depurador, edite o <xref:System.Diagnostics.DebuggerVisualizerAttribute> , dando a ele o tipo a ser visualizado (a origem do objeto do lado do depurador) ( <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> ). A `Target` propriedade define a origem do objeto. Se você omitir a origem do objeto, o visualizador usará uma fonte de objeto padrão.
 
-1. No código do lado do depurador, edite o <xref:System.Diagnostics.DebuggerVisualizerAttribute> , dando a ele a origem do objeto ( <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> ). A `Target` propriedade define a origem do objeto. Se você omitir a origem do objeto, o visualizador usará uma fonte de objeto padrão.
+::: moniker range=">=vs-2019"
+O código do lado de depuração contém a origem do objeto que é visualizado. O objeto de dados pode substituir métodos de <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> . Uma DLL do lado de depuração será necessária se você quiser criar um visualizador autônomo.
+::: moniker-end
 
-1. Para permitir que o visualizador edite, bem como exibir objetos de dados, substitua os `TransferData` `CreateReplacementObject` métodos ou de <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> .
+No código do lado do depurador:
+
+- Para permitir que o visualizador edite objetos de dados, a origem do objeto deve herdar de <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> e substituir os `TransferData` `CreateReplacementObject` métodos ou.
+
+- Se você precisar dar suporte a vários destinos em seu visualizador, poderá usar os seguintes monikers da estrutura de destino (TFMs) no arquivo de projeto do lado do depurador.
+
+   ```xml
+   <TargetFrameworks>net20;netstandard2.0;netcoreapp2.0</TargetFrameworks>
+   ```
+
+   Esses são os únicos TFMs com suporte.
 
 ## <a name="see-also"></a>Veja também
 

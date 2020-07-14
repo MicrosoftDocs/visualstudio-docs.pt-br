@@ -1,7 +1,7 @@
 ---
-title: Como criar um relatório de rastreamento de chamada das ferramentas de criação de perfil | Microsoft Docs
+title: Como criar um relatório de rastreamento de chamada Ferramentas de Criação de Perfil | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - performance tools, viewing ETW data
 - ETW [Visual Studio ALM], viewing data
@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b184310d837193679a1a5eacf2fbae4ecf29caa
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2fe1ae2870e2e48d092f303f3e7458e7498c0ba5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778980"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548155"
 ---
 # <a name="how-to-create-a-profiling-tools-call-trace-report"></a>Como criar um relatório de rastreamento de chamada das ferramentas de criação de perfil
 O *relatório de rastreamento de chamada* para as Ferramentas de criação de perfil do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] lista informações de tempo para cada ponto de entrada e de saída para as funções do aplicativo e cada chamada para outras funções por sua função. Relatórios de rastreamento de chamada estão disponíveis para criação de perfil de dados somente se foram coletados com o método de instrumentação.
@@ -27,18 +27,18 @@ O *relatório de rastreamento de chamada* para as Ferramentas de criação de pe
 
 ### <a name="to-create-a-call-trace-report"></a>Para criar um relatório de rastreamento de chamada
 
-1. Abra uma janela **de comando prompt.**
+1. Abra uma janela de **prompt de comando** .
 
 2. No prompt de comando, digite o comando a seguir:
 
      *ToolsPath* **VSPerfReport** *VSPFile*  **/CallTrace [/Xml]**
 
-    |||
+    |Item|Descrição|
     |-|-|
     |*ToolsPath*|O caminho para as ferramentas de linha de comando das Ferramentas de Criação de Perfil. Para saber mais, confira [Especificar o caminho para ferramentas de linha de comando](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).|
-    |*VSPFile*|Os dados de criação de perfil (.* vsp* ou . *vsps*) Arquivo. Caminhos completos e parciais são aceitos.|
+    |*VSPFile*|Os dados de criação de perfil (.* VSP* ou. *vsps*) Grupo. Caminhos completos e parciais são aceitos.|
     |Xml|Gera um relatório XML formatado.|
 
 ## <a name="see-also"></a>Confira também
-- [Como: Coletar dados de Rastreamento de Eventos para Windows (ETW)](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
+- [Como coletar dados do ETW (rastreamento de eventos para Windows)](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
 - [APIs de ferramentas de criação de perfil](../profiling/profiling-tools-apis.md)

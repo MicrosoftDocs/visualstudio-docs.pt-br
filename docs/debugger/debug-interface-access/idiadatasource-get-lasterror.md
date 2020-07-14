@@ -1,7 +1,7 @@
 ---
 title: IDiaDataSource::get_lastError | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 48595dda70560f555533a1857f73db4d7bd20a86
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 231c6b082f7a641ee78d10003d544c3fb9644c1c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744968"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468521"
 ---
 # <a name="idiadatasourceget_lasterror"></a>IDiaDataSource::get_lastError
 Recupera o nome do arquivo para o último erro de carregamento.
@@ -35,8 +35,8 @@ HRESULT get_lastError (
 
 fora Retorna uma cadeia de caracteres que contém o nome do arquivo. PDB associado ao último erro de carregamento.
 
-## <a name="return-value"></a>Valor retornado
- Retorna o último código de erro causado por uma operação de carregamento. Retorna `E_INVALIDARG` se o parâmetro `pRetVal` é `NULL`.
+## <a name="return-value"></a>Valor Retornado
+ Retorna o último código de erro causado por uma operação de carregamento. Retorna `E_INVALIDARG` se o `pRetVal` parâmetro é `NULL` .
 
 ## <a name="example"></a>Exemplo
 
@@ -45,5 +45,5 @@ BSTR    fileName;
 HRESULT errorCode = pSource->get_lastError( &fileName );
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)

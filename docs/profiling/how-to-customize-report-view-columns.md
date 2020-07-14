@@ -1,7 +1,7 @@
 ---
-title: Como personalizar as colunas de exibição do relatório | Microsoft Docs
+title: Como personalizar colunas de exibição de relatório | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.test.columnchooser.dialogbox
 helpviewer_keywords:
@@ -14,35 +14,35 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a297e6bfbed5023db97cabd370679b0de6caaab
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 58d2a7b7c83f1260427ff0d805510e08ae35c019
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778967"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329805"
 ---
 # <a name="how-to-customize-report-view-columns"></a>Como personalizar as colunas de exibição de relatório
 As ferramentas de desempenho no Visual Studio Team System Development Edition são totalmente integradas ao IDE (ambiente de desenvolvimento integrado) para proporcionar uma experiência perfeita para o usuário. A lista a seguir representa as exibições que podem ser personalizadas adicionando, removendo e reorganizando as colunas:
 
-- [Exibição Módulos](../profiling/modules-view.md)
+- [Exibição de módulos](../profiling/modules-view.md)
 
 - [Exibição de funções](../profiling/functions-view.md)
 
 - [Exibição de linhas](../profiling/lines-view.md)
 
-- [Exibição de IPs (ponteiros de instrução)](../profiling/instruction-pointers-ips-view.md)
+- [Exibição de ponteiros de instrução (IPs)](../profiling/instruction-pointers-ips-view.md)
 
-- [Visualização de chamada/callee](../profiling/caller-callee-view.md)
+- [Exibição do chamador/receptor](../profiling/caller-callee-view.md)
 
-- [Chamada Tree View](../profiling/call-tree-view.md)
+- [Exibição de árvore de chamadas](../profiling/call-tree-view.md)
 
 - [Exibição de alocações](../profiling/dotnet-memory-allocations-view.md)
 
-- [Exibição do Tempo de Vida do Objeto](../profiling/object-lifetime-view.md)
+- [Exibição do tempo de vida do objeto](../profiling/object-lifetime-view.md)
 
-- [Exibição de Marcas](../profiling/marks-view.md)
+- [Exibição de marcas](../profiling/marks-view.md)
 
-- [Exibição de Processo](../profiling/process-view.md)
+- [Exibição de processo](../profiling/process-view.md)
 
 ### <a name="to-customize-a-report-view"></a>Para personalizar uma exibição de relatório
 

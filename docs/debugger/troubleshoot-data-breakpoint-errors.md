@@ -1,7 +1,7 @@
 ---
-title: 'Erro: não é possível definir o ponto de interrupção de dados | Microsoft Docs'
+title: Erro-não é possível definir o ponto de interrupção de dados | Microsoft Docs
 ms.date: 12/3/2019
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.unable_to_set_data_breakpoint
 dev_langs:
@@ -15,12 +15,12 @@ ms.author: waan
 manager: caslan
 ms.workload:
 - multiple
-ms.openlocfilehash: 18fa63f2a6f4b6d789bad6f813cb3956a636a2d2
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: dab5e146d510601c6e93582b6b128abcd964b4a7
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75404079"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85459929"
 ---
 # <a name="troubleshooting-data-breakpoint-errors"></a>Solucionando problemas de erros de ponto de interrupção de dados
 Esta página orientará você na resolução de erros comuns vistos ao usar "interromper quando o valor for alterado"
@@ -44,7 +44,7 @@ Abaixo está uma lista de erros que podem ocorrer ao usar pontos de interrupçã
 
     - "Interromper quando o valor é alterado" em uma variável que não é expandida de uma lista suspensa.
         - O depurador internamente precisa saber o objeto que contém o campo que você deseja rastrear. O coletor de lixo pode mover seu objeto no heap para que o depurador precise saber o objeto que está mantendo a variável que você deseja rastrear. 
-        - **Solução alternativa**: se você estiver em um método dentro do objeto no qual deseja definir um ponto de interrupção de dados, vá um quadro e use a janela `locals/autos/watch` para expandir o objeto e definir um ponto de interrupção de dados no campo desejado.
+        - **Solução alternativa**: se você estiver em um método dentro do objeto do qual deseja definir um ponto de interrupção de dados, vá um quadro e use a `locals/autos/watch` janela para expandir o objeto e definir um ponto de interrupção de dados no campo desejado.
 
 - *"Os pontos de interrupção de dados não têm suporte para campos estáticos ou propriedades estáticas."*
     
@@ -56,17 +56,17 @@ Abaixo está uma lista de erros que podem ocorrer ao usar pontos de interrupçã
 
 - *"O valor da propriedade foi alterado e não pode mais ser acompanhado."*
 
-    - Uma propriedade pode alterar como ela é calculada durante o tempo de execução e, se isso acontecer, o número de variáveis que a propriedade depende aumentará e poderá exceder a limitação de hardware. Consulte `"The property is dependent on more memory than can be tracked by the hardware."` abaixo.
+    - Uma propriedade pode alterar como ela é calculada durante o tempo de execução e, se isso acontecer, o número de variáveis que a propriedade depende aumentará e poderá exceder a limitação de hardware. Veja `"The property is dependent on more memory than can be tracked by the hardware."` abaixo.
 
 - *"A propriedade depende de mais memória do que pode ser controlada pelo hardware."*
     
     - Cada arquitetura tem um número definido de bytes e pontos de interrupção de dados de hardware que ele pode dar suporte e a propriedade para a qual você deseja definir um ponto de interrupção de dados excedeu esse limite. Consulte a tabela [limitações de hardware de ponto de interrupção de dados](#data-breakpoint-hardware-limitations) para descobrir quantos pontos de interrupção e bytes de dados com suporte de hardware estão disponíveis para a arquitetura que você está usando. 
     - **Solução alternativa**: defina um ponto de interrupção de dados em um valor que possa ser alterado dentro da propriedade.
 
-- *"Não há suporte para pontos de interrupção de dados ao C# usar o avaliador de expressão herdado."*
+- *"Não há suporte para pontos de interrupção de dados ao usar o avaliador de expressão C# herdado".*
 
-    - Os pontos de interrupção de dados só têm suporte no avaliador de expressão não herdado C# . 
-    - **Solução**: desabilite o avaliador de expressão herdado C# acessando `Debug -> Options` em `Debugging -> General` desmarque `"Use the legacy C# and VB expression evaluators"`.
+    - Os pontos de interrupção de dados só têm suporte no avaliador de expressão C# não herdado. 
+    - **Solução**: você desabilita o avaliador de expressão C# herdado acessando em `Debug -> Options` `Debugging -> General` desmarcar `"Use the legacy C# and VB expression evaluators"` .
 
 ## <a name="data-breakpoint-hardware-limitations"></a>Limitações de hardware de ponto de interrupção de dados
 
@@ -76,7 +76,7 @@ A arquitetura (configuração de plataforma) em que seu programa é executado te
 | :-------------: |:-------------:| :-------------:|
 | x86 | 4 | 4 |
 | x64 | 4 | 8 |
-| {1&gt;{2&gt;ARM&lt;2}&lt;1} | 1 | 4 |
+| ARM | 1 | 4 |
 | ARM64 | 2 | 8 |
 
 ## <a name="provide-feedback"></a>Fornecer comentários

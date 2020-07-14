@@ -1,7 +1,7 @@
 ---
-title: 'DA0017: altas taxas de paginação de memória ativa em disco | Microsoft Docs'
+title: DA0017-taxas altas de paginação de memória ativa para o disco | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.17
 - vs.performance.rules.DA0017
@@ -13,16 +13,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 87e7c6b2d94602eca9e81098bb50bd0330b2bcd9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 06295c1b158fe25b481b2aa036f8448895c546f5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779383"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544697"
 ---
-# <a name="da0017-high-rates-of-paging-active-memory-to-disk"></a>DA0017: taxas elevadas de paginação de memória ativa em disco
+# <a name="da0017-high-rates-of-paging-active-memory-to-disk"></a>DA0017: Altas taxas de paginação de memória ativa para o disco
 
-|||
+|Item|Valor|
 |-|-|
 |ID de regra|DA0017|
 |Categoria|Memória e paginação|
@@ -45,7 +45,7 @@ ms.locfileid: "74779383"
  Com frequência, as páginas são lidas do disco ou gravadas no disco em operações de paginação em massa. O número de Saída de páginas/s é geralmente muito maior do que o número de Gravações de página/s, por exemplo. Pois a Saída de páginas/s também inclui as páginas de dados alterados do cache de arquivos do sistema. No entanto, nem sempre é fácil determinar qual processo é diretamente responsável pela paginação e por quê.
 
 ## <a name="how-to-fix-violations"></a>Como corrigir violações
- Clique duas vezes na mensagem na janela Lista de erros para navegar até a exibição [Marcas.](../profiling/marks-view.md) Encontre a coluna **Memória\Páginas/s**. Determine se há fases específicas da execução do programa em que a atividade de E/S de paginação é mais pesada do que em outras.
+ Clique duas vezes na mensagem na janela Lista de Erros para navegar até o modo de exibição de [marcas](../profiling/marks-view.md) . Encontre a coluna **Memória\Páginas/s**. Determine se há fases específicas da execução do programa em que a atividade de E/S de paginação é mais pesada do que em outras.
 
  Se estiver coletando dados de perfil para um aplicativo ASP.NET em um cenário de teste de carga, tente executar novamente o teste de carga em um computador configurado com memória física (ou RAM) adicional.
 

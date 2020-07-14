@@ -16,33 +16,33 @@ caps.latest.revision: 29
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 50044b51a3e576ff7d1c11b19b2f498f99b63019
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 377906675d70a712f8ca72b0b6e4d8a6864c1fbc
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663655"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533231"
 ---
-# <a name="ca1062-validate-arguments-of-public-methods"></a>CA1062: validar argumentos de métodos públicos
+# <a name="ca1062-validate-arguments-of-public-methods"></a>CA1062: Validar argumentos de métodos públicos
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|ValidateArgumentsOfPublicMethods|
+|TypeName|ValidateArgumentsOfPublicMethods|
 |CheckId|CA1062|
 |Categoria|Microsoft. Design|
 |Alteração Significativa|Sem interrupção|
 
 ## <a name="cause"></a>Causa
- Um método visível externamente faz referência a um de seus argumentos de referência sem verificar se esse argumento é `null` (`Nothing` em Visual Basic).
+ Um método visível externamente faz referência a um de seus argumentos de referência sem verificar se esse argumento é `null` ( `Nothing` em Visual Basic).
 
 ## <a name="rule-description"></a>Descrição da Regra
- Todos os argumentos de referência que são passados para métodos externos visíveis devem ser verificados em relação a `null`. Se apropriado, lança um <xref:System.ArgumentNullException> quando o argumento é `null`.
+ Todos os argumentos de referência que são passados para métodos externos visíveis devem ser verificados em relação a `null` . Se apropriado, acione um <xref:System.ArgumentNullException> quando o argumento for `null` .
 
- Se um método puder ser chamado de um assembly desconhecido porque é declarado público ou protegido, você deve validar todos os parâmetros do método. Se o método for projetado para ser chamado somente por assemblies conhecidos, você deverá tornar o método interno e aplicar o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> ao assembly que contém o método.
+ Se um método puder ser chamado de um assembly desconhecido porque é declarado público ou protegido, você deve validar todos os parâmetros do método. Se o método for projetado para ser chamado somente por assemblies conhecidos, você deverá tornar o método interno e aplicar o <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atributo ao assembly que contém o método.
 
 ## <a name="how-to-fix-violations"></a>Como Corrigir Violações
- Para corrigir uma violação dessa regra, valide cada argumento de referência em relação a `null`.
+ Para corrigir uma violação dessa regra, valide cada argumento de referência em relação a `null` .
 
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
  Você pode suprimir um aviso dessa regra se tiver certeza de que o parâmetro de referência foi validado por outra chamada de método na função.
@@ -55,16 +55,16 @@ ms.locfileid: "72663655"
  [!code-vb[FxCop.Design.ValidateArguments#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.ValidateArguments/vb/FxCop.Design.ValidateArguments.vb#1)]
 
 ## <a name="example"></a>Exemplo
- Em [!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)], essa regra não detecta que os parâmetros estão sendo passados para outro método que faz a validação.
+ No [!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)] , essa regra não detecta que os parâmetros estão sendo passados para outro método que faz a validação.
 
  [!code-csharp[FxCop.Design.ValidateArguments#2](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.ValidateArguments/cs/fxcop.design.validatearguments.copyctors.cs#2)]
  [!code-csharp[FxCop.Design.ValidateArguments#2](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.ValidateArguments/cs/FxCop.Design.ValidateArguments.cs#2)]
  [!code-vb[FxCop.Design.ValidateArguments#2](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.ValidateArguments/vb/FxCop.Design.ValidateArguments.vb#2)]
 
 ## <a name="example"></a>Exemplo
- Os construtores de cópia que populam campos ou propriedades que são objetos de referência também podem violar a regra CA1062. A violação ocorre porque o objeto copiado que é passado para o construtor de cópia pode ser `null` (`Nothing` em Visual Basic). Para resolver a violação, use um método estático (compartilhado no Visual Basic) para verificar se o objeto copiado não é nulo.
+ Os construtores de cópia que populam campos ou propriedades que são objetos de referência também podem violar a regra CA1062. A violação ocorre porque o objeto copiado que é passado para o construtor de cópia pode ser `null` ( `Nothing` em Visual Basic). Para resolver a violação, use um método estático (compartilhado no Visual Basic) para verificar se o objeto copiado não é nulo.
 
- No exemplo de classe `Person` a seguir, o objeto `other` que é passado para o construtor de cópia `Person` pode ser `null`.
+ No exemplo de `Person` classe a seguir, o `other` objeto que é passado para o `Person` Construtor de cópia pode ser `null` .
 
 ```
 
@@ -89,7 +89,7 @@ public class Person
 ```
 
 ## <a name="example"></a>Exemplo
- No exemplo a seguir revisado `Person`, o objeto `other` que é passado para o construtor de cópia é verificado primeiro para nulo no método `PassThroughNonNull`.
+ No exemplo revisado a seguir `Person` , o `other` objeto que é passado para o construtor de cópia é verificado primeiro para nulo no `PassThroughNonNull` método.
 
 ```
 public class Person

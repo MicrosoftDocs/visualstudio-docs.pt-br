@@ -1,19 +1,19 @@
 ---
 title: Altere o tipo de retorno de um método DataContext não pode ser desfeito
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: error-reference
 ms.assetid: 76b161fc-5075-4192-8d94-f15b02e199e9
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 95d75e084b4824cf7cc8e717b1ce9174e76aa2e7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 80e7407472188ef25d6fd5127179c7ddbce54318
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648688"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536702"
 ---
 # <a name="changing-the-return-type-of-a-datacontext-method-cannot-be-undone"></a>Altere o tipo de retorno de um método DataContext não pode ser desfeito
 
@@ -37,6 +37,6 @@ O tipo de retorno de um método de <xref:System.Data.Linq.DataContext> diferem d
 
     Um método de <xref:System.Data.Linq.DataContext> é criado com o tipo de retorno padrão original.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Ferramentas do LINQ to SQL no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

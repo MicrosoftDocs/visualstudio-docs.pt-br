@@ -17,12 +17,12 @@ caps.latest.revision: 38
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: db619767725159900adf9b18075c45c020df888d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 907d075f597799edd582c9f2bae693eac92c0b2c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670369"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544957"
 ---
 # <a name="outlining"></a>Estrutura de tópicos
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ Você pode optar por ocultar a exibição de algum código recolhendo uma regiã
 
  Os comandos a seguir podem ser encontrados no submenu **Editar/Estrutura de Tópicos**.
 
-|||
+|Comando|Descrição|
 |-|-|
 |Ocultar Seleção|(CTRL + M, CTRL + H) – recolhe um bloco de código selecionado que normalmente não estaria disponível para a estrutura de tópicos, por exemplo, um bloco `if`. Para remover a região personalizada, use **Interromper Ocultação Atual** (ou CTRL + M, CTRL + U). Não disponível no Visual Basic.|
 |Ativar/Desativar Expansão da Estrutura de Tópicos|– Reverte o estado atual oculto ou expandido da seção de estrutura de tópicos mais interna quando o cursor está em uma seção recolhida aninhada.|
@@ -48,7 +48,7 @@ Você pode optar por ocultar a exibição de algum código recolhendo uma regiã
 |Interromper Estrutura de Tópicos|(CTRL + M, CTRL + P) – remove todas as informações de estrutura de tópicos para o documento inteiro.|
 |Interromper Ocultação Atual|(CTRL + M, CTRL + U) – remove as informações de estrutura de tópicos para a região definida pelo usuário atualmente selecionada. Não disponível no Visual Basic.|
 |Recolher para Definições|(CTRL + M, CTRL + S) – recolhe os membros de todos os tipos.|
-|Recolher bloco:\<limite lógico>|(Visual C++) Recolhe uma região na função que contém o ponto de inserção. Por exemplo, se o ponto de inserção estiver dentro de um loop, o loop será ocultado.|
-|Recolher tudo: \<estruturas lógicas>|(Visual C++) Recolhe todas as estruturas de dentro da função.|
+|Recolher bloco:\<logical boundary>|(Visual C++) Recolhe uma região na função que contém o ponto de inserção. Por exemplo, se o ponto de inserção estiver dentro de um loop, o loop será ocultado.|
+|Recolher tudo em:\<logical structures>|(Visual C++) Recolhe todas as estruturas de dentro da função.|
 
  Você também pode usar o SDK do Visual Studio para definir as regiões de texto que deseja expandir ou recolher. Consulte [Instruções passo a passo: estrutura de tópicos](../extensibility/walkthrough-outlining.md).

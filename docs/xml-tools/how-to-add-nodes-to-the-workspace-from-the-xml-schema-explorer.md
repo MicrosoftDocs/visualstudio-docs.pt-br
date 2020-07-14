@@ -1,19 +1,19 @@
 ---
 title: Adicionar nós ao espaço de trabalho do XML Schema Explorer
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 3b5a5749-9693-4b29-b0c2-8e07e0e55514
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2049b8da1caa4e0af0afc52aec6e75f499d85b8b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 751e291188e6357343936d61d56f07bd86f97eaf
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592809"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816391"
 ---
 # <a name="how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer"></a>Como adicionar nós ao espaço de trabalho do XML Schema Explorer
 
@@ -26,17 +26,17 @@ Este tópico explica como adicionar nós ao espaço de [trabalho do designer de 
 
 1. Siga as etapas em [como criar e editar um arquivo de esquema XSD](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md).
 
-2. Clique com o botão direito do mouse no nó `PurchaseOrderType` no Gerenciador de XSD. Selecione **Mostrar no modo de exibição de gráfico**.
+2. Clique com o botão direito do mouse no `PurchaseOrderType` nó no Gerenciador de XSD. Selecione **Mostrar no modo de exibição de gráfico**.
 
      O nó de `purchaseOrderType` aparece na superfície de design do modo de gráfico.
 
 ## <a name="to-drag-and-drop-a-node-on-to-a-view"></a>Para arrastar e soltar sobre um nó para uma visualização
 
-1. Clique com o botão direito do mouse no nó `PurchaseOrderType` no modo de exibição de gráfico. Selecione **Mostrar no Gerenciador de esquema XML**.
+1. Clique com o botão direito do mouse no `PurchaseOrderType` nó no modo de exibição de gráfico. Selecione **Mostrar no Gerenciador de esquema XML**.
 
      O nó é realçado no **XML Schema Explorer**.
 
-2. Clique com o botão direito do mouse no nó `PurchaseOrderType` no **XML Schema Explorer** e selecione **Mostrar todas as referências**.
+2. Clique com o botão direito do mouse no `PurchaseOrderType` nó no **XML Schema Explorer** e selecione **Mostrar todas as referências**.
 
      O nó de `purchaseOrder` é realçado.
 
@@ -56,7 +56,7 @@ Este tópico explica como adicionar nós ao espaço de [trabalho do designer de 
 
      ![Resultado da pesquisa do XML Schema Explorer](../xml-tools/media/schemaexplorersearchresult.gif)
 
-     O nó `purchaseOrder` e o nó `PurchaseOrderType` aparecem ao lado um do outro na superfície de design do [modo de exibição de gráfico](../xml-tools/graph-view.md). Porque os dois nós são relacionados (o elemento de `purchaseOrder` é do tipo de `PurchaseOrderType` ), uma seta é desenhada entre eles.
+     O `purchaseOrder` nó e o `PurchaseOrderType` nó aparecem ao lado um do outro na superfície de design do [modo de exibição de gráfico](../xml-tools/graph-view.md). Porque os dois nós são relacionados (o elemento de `purchaseOrder` é do tipo de `PurchaseOrderType` ), uma seta é desenhada entre eles.
 
 ## <a name="see-also"></a>Veja também
 

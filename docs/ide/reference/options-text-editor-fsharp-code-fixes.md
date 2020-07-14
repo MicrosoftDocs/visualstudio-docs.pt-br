@@ -4,21 +4,21 @@ ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.F%2523.Code_Fixes
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a5c736be59c257d98085831971d6b7b9dc2a0ef3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c20646c8da4101ac674a64c5ca1ed23a3b1fd7b5
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72666280"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770933"
 ---
-# <a name="options-text-editor--f--code-fixes"></a>Opções: Editor de texto > F# > Correções de Código
+# <a name="options-text-editor--f--code-fixes"></a>Opções: o editor de texto > F # > correções de código
 
-Use a página de opções Correções de Código para especificar as configurações que podem ajudar a identificar erros de código e oferecer soluções. Para acessar esta página de opções, escolha**Opções de** **ferramentas** > e, em seguida, escolha **'Correções de código' do**Editor > de **texto****F#** > .
+Use a página de opções Correções de Código para especificar as configurações que podem ajudar a identificar erros de código e oferecer soluções. Para acessar essa página de opções, escolha **ferramentas**  >  **Opções**e, em seguida, escolha o **Editor de texto**  >  **F #**  >  **correções de código**.
 
 ## <a name="code-fixes"></a>Correções de Código
 

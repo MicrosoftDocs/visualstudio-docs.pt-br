@@ -1,7 +1,7 @@
 ---
 title: 'Como: marcar controles como controles seguros | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +14,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 232fef4908a6168d550d510a0d753fe8e39db02b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: cd7ed13504d3d91f4239a8ea070454e1c31b1114
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72982725"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016254"
 ---
 # <a name="how-to-mark-controls-as-safe-controls"></a>Como: marcar controles como controles seguros
-  Por segurança, o SharePoint diferencia os controles da Web que são protegidos contra injeção de script e controles da Web que não são. Controles protegidos, ou *controles seguros*, podem ser acessados por usuários não confiáveis. Você pode marcar controles como seguros na propriedade entradas de controle seguro de um item de projeto do SharePoint ou no **Designer de pacotes** ao adicionar um assembly ao pacote. Para saber mais, veja
+  Por segurança, o SharePoint diferencia os controles da Web que são protegidos contra injeção de script e controles da Web que não são. Controles protegidos, ou *controles seguros*, podem ser acessados por usuários não confiáveis. Você pode marcar controles como seguros na propriedade entradas de controle seguro de um item de projeto do SharePoint ou no **Designer de pacotes** ao adicionar um assembly ao pacote. Para obter mais informações, consulte
 
-- [as configurações do arquivo Web. config alteram](/previous-versions/office/developer/sharepoint-2007/bb802890(v=office.12)) e [registram um assembly de Web Part como um controle seguro](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11)).
+- [web.config configurações de arquivo alteram](/previous-versions/office/developer/sharepoint-2007/bb802890(v=office.12)) e [registram um assembly de Web Part como um controle seguro](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11)).
 
 > [!IMPORTANT]
 > Esses procedimentos são para fins ilustrativos. Marque controles seguros somente se você tiver certeza de que eles são seguros.
@@ -63,7 +62,7 @@ ms.locfileid: "72982725"
 
      Anote o namespace do controle porque ele é usado posteriormente.
 
-3. Na barra de menus, escolha **compilar** > **Compilar solução** para compilar o projeto.
+3. Na barra de menus, escolha **Compilar**compilar  >  **solução** para compilar o projeto.
 
 4. Crie outra solução do SharePoint.
 
@@ -85,12 +84,12 @@ ms.locfileid: "72982725"
 
 12. Insira os valores para as propriedades da tabela a seguir.
 
-    |Nome da Propriedade|Valor|
+    |Nome da propriedade|Valor|
     |-------------------|-----------|
-    |espaço de nome|O namespace totalmente qualificado para o controle, como **BdcModelProject1. VisualWebPart1**.|
-    |Nome do tipo|Button1|
+    |Namespace|O namespace totalmente qualificado para o controle, como **BdcModelProject1. VisualWebPart1**.|
+    |Nome do Tipo|Button1|
     |Nome do Assembly|Um nome de assembly forte, como: Microsoft. Office. SharePoint. ClientExtensions, Version = 14.0.0.0, Culture = neutral, PublicKeyToken = 71e9bce111e9429c.|
-    |Removidos|Desmarque a caixa de seleção **seguro** .|
+    |Safe|Desmarque a caixa de seleção **seguro** .|
     |Seguro contra script|Deixe a caixa de seleção **seguro contra o script** desmarcada.|
 
     > [!NOTE]
@@ -102,12 +101,12 @@ ms.locfileid: "72982725"
 
 15. Insira os valores para as propriedades da tabela a seguir.
 
-    |Nome da Propriedade|Valor|
+    |Nome da propriedade|Valor|
     |-------------------|-----------|
-    |espaço de nome|O namespace totalmente qualificado para o controle, como **BdcModelProject1. VisualWebPart1**.|
-    |Nome do tipo|TextBox1|
+    |Namespace|O namespace totalmente qualificado para o controle, como **BdcModelProject1. VisualWebPart1**.|
+    |Nome do Tipo|TextBox1|
     |Nome do Assembly|Um nome de assembly forte, como: Microsoft. Office. SharePoint. ClientExtensions, Version = 14.0.0.0, Culture = neutral, PublicKeyToken = 71e9bce111e9429c.|
-    |Removidos|Marque a caixa de seleção **seguro** .|
+    |Safe|Marque a caixa de seleção **seguro** .|
     |Seguro contra script|Marque a caixa de seleção **seguro contra script** .|
 
 16. Escolha a tecla **Tab** e, em seguida, escolha o botão **OK** para fechar a caixa de diálogo.

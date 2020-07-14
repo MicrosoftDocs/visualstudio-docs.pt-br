@@ -1,7 +1,7 @@
 ---
 title: Modo tela inteira e espaço virtual
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - word wrap
 - views, virtual space
@@ -24,12 +24,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 77f224a6e3a1b12ed17799ddf6a2fc5c23f5d4cc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3f8f86d635e1e57d82dd2d18084c91a9267f9a0b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591028"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284198"
 ---
 # <a name="how-to-manage-editor-modes"></a>Como gerenciar modos do editor
 
@@ -40,9 +40,9 @@ Você pode exibir o editor de código do Visual Studio em vários modos de exibi
 
 ## <a name="enable-full-screen-mode"></a>Habilitar o modo de tela inteira
 
-Você pode optar por ocultar todas as janelas de ferramentas e visualizar apenas janelas de documentos ativando o modo **tela cheia.**
+Você pode optar por ocultar todas as janelas de ferramentas e exibir apenas janelas de documentos habilitando o modo de **tela inteira** .
 
-- Pressione **Alt**+**Shift**+**Enter** para entrar ou sair do modo **full screen.**
+- Pressione **ALT** + **Shift** + **Enter** para entrar ou sair do modo de **tela inteira** .
 
      -- ou --
 
@@ -54,14 +54,14 @@ No modo **Espaço virtual**, os espaços são inseridos no final de cada linha d
 
 1. Selecione **Opções** no menu **Ferramentas**.
 
-2. Expanda a pasta **Editor de Texto** e escolha **Todas as Linguagens** para definir essa opção globalmente ou escolha uma pasta de idioma específico. Por exemplo, para ativar números de linha apenas no Visual Basic, escolha o nó **Editor de** > **texto** básico.
+2. Expanda a pasta **Editor de Texto** e escolha **Todas as Linguagens** para definir essa opção globalmente ou escolha uma pasta de idioma específico. Por exemplo, para ativar números de linha somente em Visual Basic, escolha o **Basic**  >  nó**Editor de texto** básico.
 
 3. Selecione as opções **Gerais** e, em **Configurações**, selecione **Habilitar Espaço virtual**.
 
     > [!NOTE]
     > O **Espaço virtual** está habilitado no modo **Seleção de Coluna**. Quando o modo **Espaço virtual** não está habilitado, o ponto de inserção é movido do final de uma linha diretamente para o primeiro caractere da próxima.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Personalizar layouts de janela no Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md)
-- [Fontes e cores, ambiente, caixa de diálogo Opções](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)
+- [Fontes e cores, caixa de diálogo ambiente, opções](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)

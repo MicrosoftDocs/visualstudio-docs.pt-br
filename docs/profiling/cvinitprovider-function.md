@@ -1,7 +1,7 @@
 ---
 title: Função CvInitProvider | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvInitProvider
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a97be63cd782397e984fd8dbce7da844efa07540
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b06190568454977bfcb54d65db9011fc979f7591
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62552661"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329563"
 ---
 # <a name="cvinitprovider-function"></a>Função CvInitProvider
 Inicializa o provedor de marcador. Deve ser chamada antes das outras funções do SDK da Visualização Simultânea.
@@ -31,7 +31,7 @@ HRESULT CvInitProvider(
 );
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
  `pGuid` GUID do provedor. Não pode ser NULL.
 
  `ppProvider` Endereço de uma variável de saída que armazenará o contexto de provedor. Não pode ser NULL.
@@ -42,5 +42,5 @@ HRESULT CvInitProvider(
 ## <a name="requirements"></a>Requisitos
  **Cabeçalho:** *cvmarkers.h*
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Referência da biblioteca C++](../profiling/cpp-library-reference.md)

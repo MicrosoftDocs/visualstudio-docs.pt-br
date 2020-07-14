@@ -1,7 +1,7 @@
 ---
 title: Como alterar a posição de uma guia na faixa de forma
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bf943f9df4499b30e294e4d7e8bf48b25aa52eab
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 8f821ea2a469fc06f80a7aaea96d07274d02a81d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985981"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544853"
 ---
 # <a name="how-to-change-the-position-of-a-tab-on-the-ribbon"></a>Como alterar a posição de uma guia na faixa de forma
   Você pode alterar a ordem das guias personalizadas em uma faixa de forma usando o **Editor de coleção de guias**. Você pode posicionar guias personalizadas antes ou depois de uma guia interna na faixa de bits. Uma guia interna é uma guia que já está na faixa de bits de um aplicativo Microsoft Office. Por exemplo, a guia **dados** é uma guia interna no Excel.
@@ -58,7 +58,7 @@ ms.locfileid: "72985981"
 
 ## <a name="see-also"></a>Consulte também
 - [Visão geral da faixa de faixas](../vsto/ribbon-overview.md)
-- [Designer da faixa de opções](../vsto/ribbon-designer.md)
+- [Designer de faixa de das](../vsto/ribbon-designer.md)
 - [XML da faixa de opções](../vsto/ribbon-xml.md)
 - [Walkthrough: criar uma guia personalizada usando o designer de faixa de faixas](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)
 - [Walkthrough: criar uma guia personalizada usando o XML da faixa de uma](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)

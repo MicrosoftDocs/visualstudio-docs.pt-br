@@ -1,7 +1,7 @@
 ---
 title: Usar a Lista de Tarefas
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - TaskListWindow
 - VS.TaskList
@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db39850350f99e6c046996f6408973cbc6543868
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: abd6d73c7b312cf00062307370ba2f7aebe6694e
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594221"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768621"
 ---
 # <a name="use-the-task-list"></a>Usar a Lista de Tarefas
 
@@ -104,11 +104,11 @@ Um *atalho* é um indicador no código que é rastreado na **Lista de Tarefas**.
 
 ### <a name="create-a-shortcut"></a>Criar um atalho
 
-Para criar um atalho, insira o ponteiro no código no local em que deseja colocar um atalho. Escolha **Editar** > **marcadores** > **Adicionar atalho de lista de tarefas** ou pressionar **Ctrl**+**K,** **Ctrl**+**H**.
+Para criar um atalho, insira o ponteiro no código no local em que deseja colocar um atalho. Escolha **Editar**  >  **indicadores**  >  **Adicionar lista de tarefas atalho** ou pressione **Ctrl** + **K**, **Ctrl** + **H**.
 
 Para navegar pelos atalhos no código, escolha um atalho na lista e escolha **Próxima Tarefa** ou **Tarefa Anterior** no menu de atalho.
 
 ## <a name="see-also"></a>Confira também
 
-- [Lista de tarefas, ambiente, caixa de diálogo Opções](../ide/reference/task-list-environment-options-dialog-box.md)
+- [Caixa de diálogo Lista de Tarefas, ambiente, opções](../ide/reference/task-list-environment-options-dialog-box.md)
 - [Comentários da tarefa (Visual Studio para Mac)](/visualstudio/mac/task-comments)

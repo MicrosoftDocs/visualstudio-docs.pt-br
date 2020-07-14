@@ -1,7 +1,7 @@
 ---
 title: Como conectar a dados em um serviço
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - data [Visual Studio], connecting to web services
 - data sources, creating from web services
@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 01ad796faa8c722ba088143da814305844136aa3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0b49840a2190abfd223edf5643b8d70da1a59d6b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586517"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282222"
 ---
 # <a name="how-to-connect-to-data-in-a-service"></a>Como se conectar a dados em um serviço
 
@@ -49,15 +49,15 @@ Após a conclusão do assistente, uma referência de serviço é adicionada ao s
 
 5. Clique em **OK** para adicionar uma referência de serviço ao seu projeto.
 
-6. Clique em **Finalizar**.
+6. Clique em **Concluir**.
 
      A fonte de dados é adicionada à janela **fontes de dados** .
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Para adicionar funcionalidade ao seu aplicativo, selecione um item na janela **fontes de dados** e arraste-o para um formulário para criar controles associados. Para obter mais informações, confira [Associar controles a dados no Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md).
 
 ## <a name="see-also"></a>Veja também
 
 - [Associar controles WPF a um WCF Data Service](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)
-- [Serviços do Windows Communication Foundation e WCF Data Services no Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
+- [Serviços de Windows Communication Foundation e WCF Data Services no Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_types | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d23ea3c4d885b3f7575c998999814d0808d03bc
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d947eed08ba28cfdd68e2cd7d34998412fc8bc3a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739063"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461681"
 ---
 # <a name="idiasymbolget_types"></a>IDiaSymbol::get_types
 Recupera uma matriz de tipos específicos do compilador para este símbolo.
@@ -39,17 +39,17 @@ no Tamanho do buffer para armazenar os dados.
 
  `pcTypes`
 
-fora Retorna o número de tipos gravados ou, se o parâmetro `types` for `NULL`, o número total de tipos disponíveis.
+fora Retorna o número de tipos gravados ou, se o `types` parâmetro for `NULL` , o número total de tipos disponíveis.
 
  `types[]`
 
 fora Uma matriz que deve ser preenchida com os objetos [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que representam todos os tipos desse símbolo.
 
-## <a name="return-value"></a>Valor retornado
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` ou um código de erro.
+## <a name="return-value"></a>Valor Retornado
+ Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

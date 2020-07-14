@@ -2,7 +2,7 @@
 title: Quando os conteúdos do pacote são alterados após um lançamento
 description: Ao criar um layout, saiba como determinar se os conteúdos do pacote foram alterados depois que uma liberação já foi enviada.
 ms.date: 05/22/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
@@ -10,12 +10,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: dec1478314e752ddace8fae822747e7c8e328b70
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 135a89534b17a509d75616b0819dae112901fef3
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114578"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419244"
 ---
 # <a name="package-payload-changes"></a>Alterações de conteúdo do pacote
 
@@ -37,7 +37,7 @@ Confira como determinar se o layout que foi criado anteriormente adquiriu os con
 
     `END: Downloading [url] to [path]`
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 * [Criar uma instalação de rede do Visual Studio](create-a-network-installation-of-visual-studio.md)
 * [Atualizar uma instalação em rede do Visual Studio](update-a-network-installation-of-visual-studio.md)

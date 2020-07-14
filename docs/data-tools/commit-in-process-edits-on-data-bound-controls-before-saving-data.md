@@ -1,7 +1,7 @@
 ---
 title: Confirmar edições em processo em controles ligados a dados antes de salvar
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -18,39 +18,39 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4a708128f827568e072c617effff17129e41e558
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f0369f4410c1eaf5a168a5291feebf64dbc9ee65
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586933"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282703"
 ---
 # <a name="commit-in-process-edits-on-data-bound-controls-before-saving-data"></a>Confirmar edições no processo em controles associados a dados antes de salvar os dados
 
-Ao editar valores em controles vinculados a dados, os usuários devem navegar para fora do registro atual para confirmar o valor atualizado para a fonte de dados subjacente à qual o controle está associado. Quando você arrasta itens da [janela fontes de dados](add-new-data-sources.md) para um formulário, o primeiro item que você remove gera código para o evento de clique do botão **salvar** do <xref:System.Windows.Forms.BindingNavigator>. Esse código chama o método <xref:System.Windows.Forms.BindingSource.EndEdit%2A> do <xref:System.Windows.Forms.BindingSource>. Portanto, a chamada para o método <xref:System.Windows.Forms.BindingSource.EndEdit%2A> é gerada somente para a primeira <xref:System.Windows.Forms.BindingSource> que é adicionada ao formulário.
+Ao editar valores em controles vinculados a dados, os usuários devem navegar para fora do registro atual para confirmar o valor atualizado para a fonte de dados subjacente à qual o controle está associado. Quando você arrasta itens da [janela fontes de dados](add-new-data-sources.md) para um formulário, o primeiro item que você remove gera código para o evento de clique do botão **salvar** do <xref:System.Windows.Forms.BindingNavigator> . Esse código chama o <xref:System.Windows.Forms.BindingSource.EndEdit%2A> método do <xref:System.Windows.Forms.BindingSource> . Portanto, a chamada para o <xref:System.Windows.Forms.BindingSource.EndEdit%2A> método é gerada somente para o primeiro <xref:System.Windows.Forms.BindingSource> que é adicionado ao formulário.
 
 A chamada <xref:System.Windows.Forms.BindingSource.EndEdit%2A> confirma as alterações que estão em processo em qualquer controle de associação de dados sendo editado no momento. Portanto, se um controle associado a dados ainda estiver em foco e você clicar no botão **Salvar**, todas as edições pendentes nesse controle serão confirmadas antes da gravação real (o método `TableAdapterManager.UpdateAll`).
 
 Você pode configurar seu aplicativo para confirmar as alterações automaticamente, mesmo se um usuário tentar salvar dados sem confirmar as alterações, como parte do processo de salvamento.
 
 > [!NOTE]
-> O designer adiciona o código de `BindingSource.EndEdit` somente para o primeiro item descartado em um formulário. Portanto, você precisa adicionar uma linha de código para chamar o método <xref:System.Windows.Forms.BindingSource.EndEdit%2A> para cada <xref:System.Windows.Forms.BindingSource> no formulário. Você pode adicionar manualmente uma linha de código para chamar o método <xref:System.Windows.Forms.BindingSource.EndEdit%2A> para cada <xref:System.Windows.Forms.BindingSource>. Como alternativa, você pode adicionar o método `EndEditOnAllBindingSources` ao formulário e chamá-lo antes de executar um salvamento.
+> O designer adiciona o `BindingSource.EndEdit` código somente para o primeiro item descartado em um formulário. Portanto, você precisa adicionar uma linha de código para chamar o <xref:System.Windows.Forms.BindingSource.EndEdit%2A> método para cada <xref:System.Windows.Forms.BindingSource> no formulário. Você pode adicionar manualmente uma linha de código para chamar o <xref:System.Windows.Forms.BindingSource.EndEdit%2A> método para cada <xref:System.Windows.Forms.BindingSource> . Como alternativa, você pode adicionar o `EndEditOnAllBindingSources` método ao formulário e chamá-lo antes de executar um salvamento.
 
-O código a seguir usa uma consulta [LINQ (consulta integrada à linguagem)](/dotnet/csharp/linq/) para iterar todos os componentes <xref:System.Windows.Forms.BindingSource> e chamar o método <xref:System.Windows.Forms.BindingSource.EndEdit%2A> para cada <xref:System.Windows.Forms.BindingSource> em um formulário.
+O código a seguir usa uma consulta [LINQ (consulta integrada à linguagem)](/dotnet/csharp/linq/) para iterar todos os <xref:System.Windows.Forms.BindingSource> componentes e chamar o <xref:System.Windows.Forms.BindingSource.EndEdit%2A> método para cada <xref:System.Windows.Forms.BindingSource> um em um formulário.
 
 ## <a name="to-call-endedit-for-all-bindingsource-components-on-a-form"></a>Para chamar EndEdit para todos os componentes BindingSource em um formulário
 
-1. Adicione o código a seguir ao formulário que contém os componentes de <xref:System.Windows.Forms.BindingSource>.
+1. Adicione o código a seguir ao formulário que contém os <xref:System.Windows.Forms.BindingSource> componentes.
 
      [!code-csharp[VSProDataOrcasEndEditOnAll#1](../data-tools/codesnippet/CSharp/commit-in-process-edits-on-data-bound-controls-before-saving-data_1.cs)]
      [!code-vb[VSProDataOrcasEndEditOnAll#1](../data-tools/codesnippet/VisualBasic/commit-in-process-edits-on-data-bound-controls-before-saving-data_1.vb)]
 
-2. Adicione a seguinte linha de código imediatamente antes de qualquer chamada para salvar os dados do formulário (o método `TableAdapterManager.UpdateAll()`):
+2. Adicione a seguinte linha de código imediatamente antes de qualquer chamada para salvar os dados do formulário (o `TableAdapterManager.UpdateAll()` método):
 
      [!code-csharp[VSProDataOrcasEndEditOnAll#2](../data-tools/codesnippet/CSharp/commit-in-process-edits-on-data-bound-controls-before-saving-data_2.cs)]
      [!code-vb[VSProDataOrcasEndEditOnAll#2](../data-tools/codesnippet/VisualBasic/commit-in-process-edits-on-data-bound-controls-before-saving-data_2.vb)]
 
 ## <a name="see-also"></a>Veja também
 
-- [Associando controles do Windows Forms a dados no Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
+- [Associar controles do Windows Forms a dados no Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
 - [Atualização hierárquica](../data-tools/hierarchical-update.md)

@@ -11,25 +11,25 @@ caps.latest.revision: 11
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 96910ffc53e6c48f930232c83d87570f1bc71e00
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fe9a84280b0124eed6bb0cfffae9c1ec2942bddf
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72608931"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547713"
 ---
-# <a name="ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods"></a>CA2134: os métodos devem manter uma transparência consistente durante a substituição dos métodos base
+# <a name="ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods"></a>CA2134: Os métodos devem manter uma transparência consistente durante a substituição dos métodos base
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|MethodsMustOverrideWithConsistentTransparency|
+|TypeName|MethodsMustOverrideWithConsistentTransparency|
 |CheckId|CA2134|
 |Categoria|Microsoft.Security|
 |Alteração Significativa|Quebra|
 
 ## <a name="cause"></a>Causa
- Essa regra é acionada quando um método marcado com o <xref:System.Security.SecurityCriticalAttribute> substitui um método que é transparente ou marcado com o <xref:System.Security.SecuritySafeCriticalAttribute>. A regra também é acionada quando um método que é transparente ou marcado com o <xref:System.Security.SecuritySafeCriticalAttribute> substitui um método que é marcado com um <xref:System.Security.SecurityCriticalAttribute>.
+ Essa regra é acionada quando um método marcado com o <xref:System.Security.SecurityCriticalAttribute> substitui um método que é transparente ou marcado com <xref:System.Security.SecuritySafeCriticalAttribute> . A regra também é acionada quando um método que é transparente ou marcado com o <xref:System.Security.SecuritySafeCriticalAttribute> substitui um método que é marcado com um <xref:System.Security.SecurityCriticalAttribute> .
 
  A regra é aplicada durante a substituição de um método virtual ou a implementação de uma interface.
 
@@ -42,12 +42,12 @@ ms.locfileid: "72608931"
  Para corrigir uma violação dessa regra, altere a transparência do método que está substituindo um método virtual ou implementando uma interface para corresponder à transparência do método virtual ou da interface.
 
 ## <a name="when-to-suppress-warnings"></a>Quando Suprimir Avisos
- Não suprimir avisos desta regra. As violações dessa regra resultarão em um <xref:System.TypeLoadException> de tempo de execução para assemblies que usam transparência de nível 2.
+ Não suprimir avisos desta regra. As violações dessa regra resultarão em um tempo <xref:System.TypeLoadException> de execução para assemblies que usam transparência de nível 2.
 
 ## <a name="examples"></a>Exemplos
 
 ### <a name="code"></a>Código
  [!code-csharp[FxCop.Security.CA2134.MethodsMustOverrideWithConsistentTransparency#1](../snippets/csharp/VS_Snippets_CodeAnalysis/fxcop.security.ca2134.methodsmustoverridewithconsistenttransparency/cs/ca2134 - methodsmustoverridewithconsistenttransparency.cs#1)]
 
-## <a name="see-also"></a>Consulte também
- [Segurança-código Transparent, nível 2](https://msdn.microsoft.com/library/4d05610a-0da6-4f08-acea-d54c9d6143c0)
+## <a name="see-also"></a>Consulte Também
+ [Código transparente de segurança, nível 2](https://msdn.microsoft.com/library/4d05610a-0da6-4f08-acea-d54c9d6143c0)

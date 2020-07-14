@@ -1,19 +1,19 @@
 ---
 title: Configurar um agente de teste
 ms.date: 09/18/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - agents, configuring for interaction with desktop
 ms.assetid: 3a94dd07-6d17-402c-ae8f-7947143755c9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: dc00598595ee3e3d958562682900bde9aad2a353
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+ms.openlocfilehash: 994d5da8af7b00ab8af55681d4a67e9681ebbde6
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880176"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287526"
 ---
 # <a name="how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop"></a>Como configurar o agente de teste para executar testes que interagem com a área de trabalho
 
@@ -21,7 +21,7 @@ ms.locfileid: "80880176"
 Se desejar executar testes automatizados que interajam com a área de trabalho, configure o agente para ser executado como um processo em vez de um serviço. Por exemplo, se você desejar executar um teste de IU codificado remotamente usando um controlador de teste e um agente de teste ou se desejar executar um teste e capturar uma gravação de vídeo ao executá-lo, será preciso configurar o agente para ser executado como um processo. Quando você atribui agentes a funções nas configurações de teste usando o Visual Studio ou atribui agentes a funções no seu ambiente usando o Microsoft Test Manager, é preciso alterar a configuração para todos os agentes atribuídos às funções que têm que interagir com a área de trabalho.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Se desejar executar testes automatizados que interajam com a área de trabalho, configure o agente para ser executado como um processo em vez de um serviço. Por exemplo, se você desejar executar um teste de IU codificado remotamente usando um controlador de teste e um agente de teste ou se desejar executar um teste e capturar uma gravação de vídeo ao executá-lo, será preciso configurar o agente para ser executado como um processo. Quando você atribui agentes a funções em suas configurações de teste usando o Visual Studio, você deve alterar a configuração para quaisquer agentes atribuídos a funções que tenham que interagir com a área de trabalho.
+Se desejar executar testes automatizados que interajam com a área de trabalho, configure o agente para ser executado como um processo em vez de um serviço. Por exemplo, se você desejar executar um teste de IU codificado remotamente usando um controlador de teste e um agente de teste ou se desejar executar um teste e capturar uma gravação de vídeo ao executá-lo, será preciso configurar o agente para ser executado como um processo. Ao atribuir agentes a funções em suas configurações de teste usando o Visual Studio, você deve alterar a configuração de todos os agentes atribuídos a funções que precisam interagir com a área de trabalho.
 ::: moniker-end
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
@@ -43,13 +43,13 @@ Use o procedimento a seguir para configurar todos os agentes que são atribuído
 
 ## <a name="to-set-up-an-agent-to-run-as-a-process"></a>Para configurar um agente para ser executado como um processo
 
-1. Para configurar o agente de teste instalado para executar como um processo, vá para **Iniciar** > a**ferramenta de configuração do agente de teste**.
+1. Para configurar o agente de teste que você instalou para executar como um processo, vá para **Iniciar**  >  **ferramenta de configuração do agente de teste**.
 
    A caixa de diálogo **Configurar Agente de Teste** é exibida.
 
    ![Configurar Agente de teste para o Visual Studio](media/configure-test-agent.png)
 
-2. Selecione **Processo Interativo**. O agente de teste será iniciado como um processo, e não como um serviço. Escolha **a seguir**.
+2. Selecione **Processo Interativo**. O agente de teste será iniciado como um processo, e não como um serviço. Escolha **Próxima**.
 
 3. Insira o nome de usuário e a senha do usuário que executará o processo do agente de teste.
 
@@ -67,7 +67,7 @@ Use o procedimento a seguir para configurar todos os agentes que são atribuído
 5. Para garantir que a proteção de tela esteja desabilitada, uma vez que isso pode interferir em todos os testes automatizados que devem interagir com a área de trabalho, selecione **Certifique-se de que a proteção de tela está desabilitada**.
 
    > [!WARNING]
-   > Haverá riscos à segurança se você fizer logon automaticamente ou desabilitar a proteção de tela. Ao ativar o logon automático, você permite que outros usuários iniciem esse computador e permite que eles usem a conta que faz logon automaticamente. Se você desabilitar a proteção de tela, o computador talvez não solicite o logon de um usuário para desbloquear o computador. Isso permite que qualquer pessoa acesse o computador se ela tiver acesso físico a ele. Se habilitar esses recursos em um computador, você deverá verificar se esses computadores estão fisicamente seguros. Por exemplo, esses computadores estão localizados em um laboratório fisicamente seguro. Se você limpar **Certifique-se de que o protetor de tela está desativado,** isso não habilita o protetor de tela.
+   > Haverá riscos à segurança se você fizer logon automaticamente ou desabilitar a proteção de tela. Ao ativar o logon automático, você permite que outros usuários iniciem esse computador e permite que eles usem a conta que faz logon automaticamente. Se você desabilitar a proteção de tela, o computador talvez não solicite o logon de um usuário para desbloquear o computador. Isso permite que qualquer pessoa acesse o computador se ela tiver acesso físico a ele. Se habilitar esses recursos em um computador, você deverá verificar se esses computadores estão fisicamente seguros. Por exemplo, esses computadores estão localizados em um laboratório fisicamente seguro. Se você desmarcar **garantir que a proteção de tela está desabilitada**, isso não habilitará a proteção de tela.
 
    Para que o agente volte a ser executado como um serviço, você pode usar essa ferramenta e selecionar **Serviço**.
 
@@ -78,12 +78,12 @@ Use o procedimento a seguir para configurar todos os agentes que são atribuído
 7. Para fechar a caixa de diálogo **Resumo da configuração**, escolha **Fechar**. Em seguida, escolha **Fechar** novamente para fechar a **Ferramenta de Configuração do Test Agent**.
 
    > [!NOTE]
-   > Há um ícone da área de notificação que é executado no computador para um agente de teste que está sendo executado como um processo. Ele mostra o status do agente de teste. Você poderá iniciar, parar ou reiniciar o agente se ele estiver sendo executado como um processo usando essa ferramenta. Para iniciar o agente de teste como um processo se ele não estiver sendo executado, escolha **Iniciar** > **o Visual Studio** > **Microsoft Visual Studio Test Agent**.
+   > Há um ícone da área de notificação que é executado no computador para um agente de teste que está sendo executado como um processo. Ele mostra o status do agente de teste. Você poderá iniciar, parar ou reiniciar o agente se ele estiver sendo executado como um processo usando essa ferramenta. Para iniciar o agente de teste como um processo, se ele não estiver em execução, escolha **Iniciar**o  >  **Visual Studio**  >  **Microsoft Visual Studio agente de teste**.
 
    ::: moniker range="vs-2017"
    Se o controlador de teste para o agente de teste estiver registrado no Team Foundation Server, o status de um agente de teste que estiver sendo executado como um processo interativo será exibido no modo de exibição **Controladores** na **Central do Laboratório** do Microsoft Test Manager. Ele é listado com um símbolo de asterisco precedente para denotar que está sendo executado como um processo interativo. Para reiniciar o agente de teste, você deve usar a ferramenta que é executada no computador para o agente de teste e não o modo de exibição **Controladores**.
    ::: moniker-end
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Instalar e configurar agentes de teste](../test/lab-management/install-configure-test-agents.md)

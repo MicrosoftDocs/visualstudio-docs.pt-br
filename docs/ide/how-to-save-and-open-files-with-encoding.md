@@ -1,7 +1,7 @@
 ---
 title: Como salvar e abrir arquivos com codificação
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Unicode, bidirectional language support
 - files, encoding
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e1e562771567a6ff4f9dc35c9e98ceb5441a074
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 72496e842841b2c55833075e890da4b7088cb489
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596171"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284159"
 ---
 # <a name="how-to-save-and-open-files-with-encoding"></a>Como salvar e abrir arquivos com codificação
 
@@ -56,7 +56,7 @@ Salve arquivos com uma codificação de caracteres específica para dar suporte 
 
 3. Siga as Etapas 2 e 3 do procedimento anterior.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Codificação e quebras de linha](encodings-and-line-breaks.md)
 - [Codificação e globalização do Windows Forms](/dotnet/framework/winforms/advanced/encoding-and-windows-forms-globalization)

@@ -1,7 +1,7 @@
 ---
 title: Quebra automática de linha
 ms.date: 11/07/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - word wrap
 - editors, text viewing
@@ -12,19 +12,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f49925211247e346ac3203de20a97496c54295d
-ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
+ms.openlocfilehash: c4bf76643ce1ea6e2f449c54fbc31d441418becf
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81444798"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770338"
 ---
 # <a name="how-to-manage-word-wrap-in-the-editor"></a>Como gerenciar a quebra automática de linha no editor
 
 É possível definir e desmarcar a opção **Quebra automática de linha**. Quando essa opção for definida, a parte de uma linha longa que se estender além da largura atual da janela Editor de Código será exibida na próxima linha. Quando essa opção estiver desmarcada, por exemplo, para facilitar o uso de numeração de linha, será possível rolar para a direita para ver os finais das linhas longas.
 
 > [!NOTE]
-> Este tópico aplica-se ao Visual Studio no Windows. Para o Visual Studio para Mac, consulte [Editor de origem: Word wrap](/visualstudio/mac/source-editor#word-wrap).
+> Este tópico aplica-se ao Visual Studio no Windows. Para Visual Studio para Mac, consulte [Editor de origem: quebra automática de palavra](/visualstudio/mac/source-editor#word-wrap).
 
 ## <a name="to-set-word-wrap-preferences"></a>Para definir preferências de quebra automática de linha
 

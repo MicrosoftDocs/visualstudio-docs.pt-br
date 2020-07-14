@@ -11,19 +11,19 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 487047b7dd3096e65a6e287d79d91d3029f3dc5a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 12132622900d5698a6b78a1914c687a369d7dc03
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72608992"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547726"
 ---
-# <a name="ca2133-delegates-must-bind-to-methods-with-consistent-transparency"></a>CA2133: os representantes devem ser associados a métodos com transparência consistente
+# <a name="ca2133-delegates-must-bind-to-methods-with-consistent-transparency"></a>CA2133: Representantes devem ser associados a métodos com transparência consistente
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|Valor|
 |-|-|
-|NomeDoTipo|DelegatesMustBindWithConsistentTransparency|
+|TypeName|DelegatesMustBindWithConsistentTransparency|
 |CheckId|CA2133|
 |Categoria|Microsoft.Security|
 |Alteração Significativa|Quebra|
@@ -32,7 +32,7 @@ ms.locfileid: "72608992"
 > Esse aviso é aplicado somente ao código que está executando o CoreCLR (a versão do CLR que é específica para aplicativos Web do Silverlight).
 
 ## <a name="cause"></a>Causa
- Esse aviso é acionado em um método que associa um delegado que está marcado com o <xref:System.Security.SecurityCriticalAttribute> a um método que é transparente ou que está marcado com o <xref:System.Security.SecuritySafeCriticalAttribute>. O aviso também é acionado em um método que associa um representante transparente ou de segurança crítica a um método crítico.
+ Esse aviso é acionado em um método que associa um delegado que é marcado com o <xref:System.Security.SecurityCriticalAttribute> para um método que é transparente ou que está marcado com <xref:System.Security.SecuritySafeCriticalAttribute> . O aviso também é acionado em um método que associa um representante transparente ou de segurança crítica a um método crítico.
 
 ## <a name="rule-description"></a>Descrição da Regra
  Tipos delegados e os métodos aos quais eles se associam devem ter transparência consistente. Delegados transparentes e com segurança crítica só podem ser associados a outros métodos transparentes ou de segurança crítica. Da mesma forma, os delegados críticos só podem ser associados a métodos críticos. Essas regras de associação garantem que o único código que pode invocar um método por meio de um delegado também poderia chamar o mesmo método diretamente. Por exemplo, as regras de associação impedem que o código Transparent chame código Critical diretamente por meio de um delegado transparente.

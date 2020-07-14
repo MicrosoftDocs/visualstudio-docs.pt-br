@@ -1,7 +1,7 @@
 ---
-title: 'Como: Exibir propriedades do Thread | Microsoft Docs'
+title: Como exibir propriedades de thread | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - thread properties
 ms.assetid: f0e64c0e-cdb3-4ad4-9723-09934166f3a2
@@ -10,20 +10,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fa26c20f465ced2643b5c6aa2c8625024b38ed1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ab3f98b5a47c6d950f2d95e732e05e5734c783b5
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62847737"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349868"
 ---
-# <a name="how-to-display-thread-properties"></a>Como: Exibir propriedades do thread
-Para obter mais informações sobre um segmento listado na [exibição de Threads](../debugger/threads-view.md), use o [caixa de diálogo de propriedades do Thread](../debugger/thread-properties-dialog-box.md).
+# <a name="how-to-display-thread-properties"></a>Como exibir Propriedades do Thread
+Para saber mais sobre um thread listado na [exibição threads](../debugger/threads-view.md), use a [caixa de diálogo Propriedades do thread](../debugger/thread-properties-dialog-box.md).
 
-### <a name="to-open-a-thread-properties-dialog-box"></a>Para abrir uma caixa de diálogo Propriedades do Thread
+### <a name="to-open-a-thread-properties-dialog-box"></a>Para abrir uma caixa de diálogo de propriedades de thread
 
-1. Selecione um thread na árvore exibida na [exibição de Threads](../debugger/threads-view.md).
+1. Selecione um thread da árvore exibida na [exibição threads](../debugger/threads-view.md).
 
-2. Dos **modo de exibição** menu, escolha **propriedades**.
+2. No menu **Exibir** , escolha **Propriedades**.
 
-   Caixas de diálogo de propriedades não são modais, portanto, você pode clicar em outro item em uma janela de exibição e a caixa de diálogo mostrará informações sobre o item selecionado.
+   As caixas de diálogo de propriedades não são modais, de modo que você pode clicar em outro item em uma janela de exibição e a caixa de diálogo mostrará informações sobre o item selecionado.

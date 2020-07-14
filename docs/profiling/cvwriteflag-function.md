@@ -1,7 +1,7 @@
 ---
 title: Função CvWriteFlag | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvWriteFlagExVA
 - cvmarkers/CvWriteFlagExW
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a5a388c8f838f182d2f1f3d3f56f84b8fbf10e6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 396edc736f61ae76aab7263bcd15bb0bfad13204
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62936674"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332155"
 ---
 # <a name="cvwriteflag-function"></a>Função CvWriteFlag
 Grava um sinalizador para o arquivo de rastreamento da Visualização Simultânea.
@@ -62,7 +62,7 @@ HRESULT CvWriteFlagExVA(
     _In_ va_list argList);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
  `argList` Lista de argumentos.
 
  `category` Categoria.
@@ -83,5 +83,5 @@ HRESULT CvWriteFlagExVA(
 
  <strong>ANSI:</strong>CvWriteFlagExA, CvWriteFlagExVA
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Referência da biblioteca C++](../profiling/cpp-library-reference.md)

@@ -13,12 +13,12 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 60823c1fe17613f36e800a2cdf69dd19049ddb27
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 382d5dc5ee416d901e1b73b7b2fb346e83abbef6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919110"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545568"
 ---
 # <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>Adicionando uma propriedade de acompanhamento a uma definição de linguagem específica do domínio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,14 +45,14 @@ Este tutorial mostra como adicionar uma propriedade de rastreamento a um modelo 
 
 - Na janela **Propriedades** , quando a propriedade de rastreamento está no estado atualizado por usuário, seu valor é exibido em uma fonte em negrito.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
  Antes de poder iniciar este passo a passos, você deve primeiro instalar estes componentes:
 
-|||
+|Produto|Link de download|
 |-|-|
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[https://www.visualstudio.com/](https://www.visualstudio.com/)|
 |[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[SDK do Visual Studio](../extensibility/visual-studio-sdk.md)|
-|{1&gt;{2&gt;SDK de Visualização e Modelagem do Visual Studio&lt;2}&lt;1}|[Download do SDK de modelagem](https://www.microsoft.com/download/details.aspx?id=48148)|
+|SDK de Visualização e Modelagem do Visual Studio|[Download do SDK de modelagem](https://www.microsoft.com/download/details.aspx?id=48148)|
 
 ## <a name="creating-the-dsl-project"></a>Criando o projeto DSL
  Crie o projeto para sua linguagem específica de domínio.
@@ -65,17 +65,17 @@ Este tutorial mostra como adicionar uma propriedade de rastreamento a um modelo 
 
     1. Selecione o modelo **MinimalLanguage** .
 
-    2. Use o nome padrão para a linguagem específica do domínio, `TrackingPropertyDSL`.
+    2. Use o nome padrão para a linguagem específica do domínio, `TrackingPropertyDSL` .
 
-    3. Defina a extensão dos arquivos de modelo como `trackingPropertyDsl`.
+    3. Defina a extensão para os arquivos de modelo como `trackingPropertyDsl` .
 
     4. Use o ícone de modelo padrão para os arquivos de modelo.
 
-    5. Defina o nome do produto como `Product Name`.
+    5. Defina o nome do produto como `Product Name` .
 
-    6. Defina o nome da empresa como `Company Name`.
+    6. Defina o nome da empresa como `Company Name` .
 
-    7. Use o valor padrão para o namespace raiz para projetos na solução, `CompanyName.ProductName.TrackingPropertyDSL`.
+    7. Use o valor padrão para o namespace raiz para projetos na solução, `CompanyName.ProductName.TrackingPropertyDSL` .
 
     8. Permita que o assistente crie um arquivo de chave de nome forte para seus assemblies.
 
@@ -96,27 +96,27 @@ Este tutorial mostra como adicionar uma propriedade de rastreamento a um modelo 
 
 1. No designer de DSL, clique com o botão direito do mouse na classe de domínio **ExampleModel** , aponte para **Adicionar**e clique em **nomedodomínio**.
 
-    1. Nomeie a nova propriedade `DefaultNamespace`.
+    1. Nomeie a nova propriedade `DefaultNamespace` .
 
-    2. Na janela **Propriedades** da nova propriedade, defina **valor padrão** como `DefaultNamespace`e defina **tipo** como **cadeia de caracteres**.
+    2. Na janela **Propriedades** da nova propriedade, defina **valor padrão** como `DefaultNamespace` e defina **tipo** como **cadeia de caracteres**.
 
-2. Para a classe de domínio **ExampleModel** , adicione uma propriedade de domínio chamada `CustomElements`.
+2. Para a classe de domínio **ExampleModel** , adicione uma propriedade de domínio chamada `CustomElements` .
 
      Na janela **Propriedades** da nova propriedade, defina **tipo** como **calculado**.
 
-3. Para a classe de domínio **exampleelement** , adicione uma propriedade de domínio chamada `Namespace`.
+3. Para a classe de domínio **exampleelement** , adicione uma propriedade de domínio chamada `Namespace` .
 
      Na janela **Propriedades** da nova propriedade, defina **é navegável** como **false**e defina **tipo** como **CustomStorage**.
 
-4. Para a classe de domínio **exampleelement** , adicione uma propriedade de domínio chamada `IsNamespaceTracking`.
+4. Para a classe de domínio **exampleelement** , adicione uma propriedade de domínio chamada `IsNamespaceTracking` .
 
-     Na janela **Propriedades** da nova propriedade, definir **é navegável** como **false**, definir **valor padrão** como `true`e definir **tipo** como **booliano**.
+     Na janela **Propriedades** da nova propriedade, defina **é navegável** como **false**, defina **valor padrão** como `true` e defina **tipo** como **booliano**.
 
 #### <a name="to-update-the-diagram-elements-and-dsl-details"></a>Para atualizar os elementos de diagrama e os detalhes de DSL
 
 1. No designer de DSL, clique com o botão direito do mouse na forma de geometria **ExampleShape** , aponte para **Adicionar**e clique em **decorador de texto**.
 
-    1. Nomeie o novo decorador de texto `NamespaceDecorator`.
+    1. Nomeie o novo decorador de texto `NamespaceDecorator` .
 
     2. Na janela **Propriedades** do decorador de texto, defina **Position** como **InnerBottomLeft**.
 
@@ -152,20 +152,20 @@ Este tutorial mostra como adicionar uma propriedade de rastreamento a um modelo 
 
 #### <a name="to-create-the-code-files"></a>Para criar os arquivos de código
 
-1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto **DSL** , aponte para **Adicionar**e clique em **nova pasta**. Nomeie a nova pasta `CustomCode`.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto **DSL** , aponte para **Adicionar**e clique em **nova pasta**. Nomeie a nova pasta `CustomCode` .
 
 2. Clique com o botão direito do mouse na pasta New **CustomCode** , aponte para **Adicionar**e clique em **novo item**.
 
-3. Selecione o modelo de **arquivo de código** , defina o **nome** como `NamespaceTrackingProperty.cs`e clique em **OK**.
+3. Selecione o modelo de **arquivo de código** , defina o **nome** como e `NamespaceTrackingProperty.cs` clique em **OK**.
 
      O arquivo NamespaceTrackingProperty.cs é criado e aberto para edição.
 
-4. Na pasta, crie os seguintes arquivos de código: `ExampleModel.cs,``HelperClasses.cs`, `Serialization.cs`e `TypeDescriptor.cs`.
+4. Na pasta, crie os seguintes arquivos de código: `ExampleModel.cs,``HelperClasses.cs` , `Serialization.cs` e `TypeDescriptor.cs` .
 
-5. No projeto **DslPackage** , crie também uma pasta `CustomCode` e adicione a ela um arquivo de código `Package.cs`.
+5. No projeto **DslPackage** , crie também uma `CustomCode` pasta e adicione a ela um arquivo de `Package.cs` código.
 
 ## <a name="adding-helper-classes-to-support-tracking-properties"></a>Adicionando classes auxiliares para dar suporte a propriedades de acompanhamento
- Para o arquivo HelperClasses.cs, adicione as classes `TrackingHelper` e `CriticalException` da seguinte maneira. Você fará referência a essas classes mais adiante neste guia.
+ Para o arquivo HelperClasses.cs, adicione as `TrackingHelper` classes e da `CriticalException` seguinte maneira. Você fará referência a essas classes mais adiante neste guia.
 
 #### <a name="to-add-the-helper-classes"></a>Para adicionar as classes auxiliares
 
@@ -245,10 +245,10 @@ Este tutorial mostra como adicionar uma propriedade de rastreamento a um modelo 
     ```
 
 ## <a name="adding-custom-code-for-the-custom-type-descriptor"></a>Adicionando código personalizado para o descritor de tipo personalizado
- Implemente o método `GetCustomProperties` para o descritor de tipo para a classe de domínio `ExampleModel`.
+ Implemente o `GetCustomProperties` método para o descritor de tipo para a `ExampleModel` classe de domínio.
 
 > [!NOTE]
-> O código que as ferramentas DSL geram para o descritor de tipo personalizado para chamadas de `ExampleModel` `GetCustomProperties`; no entanto, as ferramentas de DSL não geram código que implementa o método.
+> O código que as ferramentas de DSL geram para o descritor de tipo personalizado para `ExampleModel` chamadas `GetCustomProperties` ; no entanto, as ferramentas de DSL não geram código que implementa o método.
 
  A definição desse método cria o descritor de propriedade de rastreamento para a propriedade de rastreamento de namespace. Além disso, o fornecimento de atributos para a propriedade de controle permite que a janela **Propriedades** exiba a propriedade corretamente.
 
@@ -341,16 +341,16 @@ Este tutorial mostra como adicionar uma propriedade de rastreamento a um modelo 
     ```
 
 ## <a name="adding-custom-code-for-the-model"></a>Adicionando código personalizado para o modelo
- Implemente o método `GetCustomElementsValue` para a classe de domínio `ExampleModel`.
+ Implemente o `GetCustomElementsValue` método para a `ExampleModel` classe de domínio.
 
 > [!NOTE]
-> O código que as ferramentas DSL geram para `ExampleModel` chama `GetCustomElementsValue`; no entanto, as ferramentas de DSL não geram código que implementa o método.
+> O código que as ferramentas DSL geram para `ExampleModel` chamadas `GetCustomElementsValue` ; no entanto, as ferramentas DSL não geram código que implementa o método.
 
- A definição do método `GetCustomElementsValue` fornece a lógica para a propriedade calculada CustomElements de `ExampleModel`. Esse método conta o número de `ExampleElement` classes de domínio que têm uma propriedade de rastreamento de namespace que tem um valor atualizado pelo usuário e retorna uma cadeia de caracteres que representa essa contagem como uma proporção do total de elementos no modelo.
+ A definição do `GetCustomElementsValue` método fornece a lógica para a propriedade calculada CustomElements de `ExampleModel` . Esse método conta o número de `ExampleElement` classes de domínio que têm uma propriedade de rastreamento de namespace que tem um valor atualizado pelo usuário e retorna uma cadeia de caracteres que representa essa contagem como uma proporção do total de elementos no modelo.
 
- Além disso, adicione um método `OnDefaultNamespaceChanged` para `ExampleModel`e substitua o método `OnValueChanged` do `DefaultNamespacePropertyHandler` classe aninhada de `ExampleModel` para chamar `OnDefaultNamespaceChanged`.
+ Além disso, adicione um `OnDefaultNamespaceChanged` método a `ExampleModel` e substitua o `OnValueChanged` método da `DefaultNamespacePropertyHandler` classe aninhada de `ExampleModel` para chamar `OnDefaultNamespaceChanged` .
 
- Como a propriedade DefaultNamespace é usada para calcular a propriedade de rastreamento de namespace, `ExampleModel` deve notificar todas as classes de domínio `ExampleElement` que o valor de DefaultNamespace foi alterado.
+ Como a propriedade DefaultNamespace é usada para calcular a propriedade de rastreamento de namespace, o `ExampleModel` deve notificar todas as `ExampleElement` classes de domínio que o valor de DefaultNamespace foi alterado.
 
 #### <a name="to-modify-the-property-handler-for-the-tracked-property"></a>Para modificar o manipulador de propriedades para a propriedade rastreada
 
@@ -418,14 +418,14 @@ Este tutorial mostra como adicionar uma propriedade de rastreamento a um modelo 
     ```
 
 ## <a name="adding-custom-code-for-the-tracking-property"></a>Adicionando código personalizado para a propriedade de rastreamento
- Adicione um método `CalculateNamespace` à classe de domínio `ExampleElement`.
+ Adicione um `CalculateNamespace` método à `ExampleElement` classe de domínio.
 
- Definir esse método fornece a lógica para a propriedade calculada CustomElements de `ExampleModel`. Esse método conta o número de `ExampleElement` classes de domínio que têm uma propriedade de rastreamento de namespace que está no estado atualizado pelo usuário e retorna uma cadeia de caracteres que representa essa contagem como uma proporção do total de elementos no modelo.
+ Definir esse método fornece a lógica para a propriedade calculada CustomElements de `ExampleModel` . Esse método conta o número de `ExampleElement` classes de domínio que têm uma propriedade de rastreamento de namespace que está no estado atualizado pelo usuário e retorna uma cadeia de caracteres que representa essa contagem como uma proporção do total de elementos no modelo.
 
- Além disso, adicione armazenamento para, e métodos para obter e definir, a propriedade de armazenamento personalizado de namespace da classe de domínio `ExampleElement`.
+ Além disso, adicione armazenamento para, e métodos para obter e definir, a propriedade de armazenamento personalizado de namespace da `ExampleElement` classe de domínio.
 
 > [!NOTE]
-> O código que as ferramentas DSL geram para `ExampleModel` chama os métodos get e Set; no entanto, as ferramentas de DSL não geram código que implementa os métodos.
+> O código que as ferramentas de DSL geram para `ExampleModel` chama os métodos get e Set; no entanto, as ferramentas DSL não geram código que implementa os métodos.
 
 #### <a name="to-add-the-method-for-the-custom-type-descriptor"></a>Para adicionar o método para o descritor de tipo personalizado
 
@@ -591,7 +591,7 @@ Este tutorial mostra como adicionar uma propriedade de rastreamento a um modelo 
  Adicione código para dar suporte ao comportamento de pós-carregamento personalizado para serialização de XML.
 
 > [!NOTE]
-> O código que as ferramentas DSL geram chama os métodos `OnPostLoadModel` e `OnPostLoadModelAndDiagram`; no entanto, as ferramentas de DSL não geram código que implementa esses métodos.
+> O código que as ferramentas de DSL geram chama os `OnPostLoadModel` `OnPostLoadModelAndDiagram` métodos e; no entanto, as ferramentas de DSL não geram código que implementa esses métodos.
 
 #### <a name="to-add-code-to-support-the-custom-post-load-behavior"></a>Para adicionar código para dar suporte ao comportamento de pós-carregamento personalizado
 
@@ -724,7 +724,7 @@ Este tutorial mostra como adicionar uma propriedade de rastreamento a um modelo 
 
 1. No menu **Compilar**, clique em **Recompilar Solução**.
 
-2. No menu **Depuração**, clique em **Iniciar Depuração**.
+2. No menu **depurar** , clique em **Iniciar Depuração**.
 
      A compilação experimental do [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] abre a solução de **depuração** , que contém um arquivo de teste vazio.
 
@@ -759,6 +759,6 @@ Este tutorial mostra como adicionar uma propriedade de rastreamento a um modelo 
 ## <a name="next-steps"></a>Próximas etapas
  Se você planeja usar mais de uma propriedade de controle ou implementar propriedades de rastreamento em mais de uma DSL, você pode criar um modelo de texto para gerar o código comum para dar suporte a cada propriedade de controle. Para obter mais informações sobre modelos de texto, consulte [geração de código e modelos de texto T4](../modeling/code-generation-and-t4-text-templates.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
  <xref:Microsoft.VisualStudio.Modeling.Design.TrackingPropertyDescriptor> <xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>
  [Como definir uma linguagem específica de domínio](../modeling/how-to-define-a-domain-specific-language.md) [como: criar uma solução de linguagem específica a um domínio](../modeling/how-to-create-a-domain-specific-language-solution.md) [: Personalizando a definição de linguagem específica de domínio](../misc/walkthrough-customizing-the-domain-specific-language-definition.md)

@@ -1,7 +1,7 @@
 ---
 title: Coletando dados de interação de camada | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.performance.property.tierinteraction
 helpviewer_keywords:
@@ -15,12 +15,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e01259fdd23e60a1408addc10a6af3a12479c9f2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4f7b2a2bb5efd86d052247825a29a06c7f5ad109
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74772812"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331600"
 ---
 # <a name="collect-tier-interaction-data"></a>Coletar dados de interação de camadas
 
@@ -34,7 +34,7 @@ Os dados de criação de perfil de interação de camadas podem ser coletados us
 
 Para coletar dados de interação de camada em aplicativos da área de trabalho do Windows 8 e os aplicativos do Windows Server 2012, é necessário usar o método de instrumentação. Não é possível coletar dados de interação de camada de aplicativos UWP. Consulte [Ferramentas de desempenho em aplicativos do Windows 8 e do Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md). É possível incluir dados de interação de camada em todos os métodos de criação de perfil em outra versão com suporte do Windows.
 
-**Assistente de desempenho**
+**Assistente de Desempenho**
 
 Por causa de um bug no Assistente de desempenho, é necessário adicionar a opção de coleta de dados de interação de camada para uma execução de criação de perfil do Gerenciador de Desempenho. Também é necessário adicionar o projeto, o executável ou o site ao nó de Destino do Gerenciador de Desempenho.
 
@@ -46,6 +46,6 @@ Por causa de um bug no Assistente de desempenho, é necessário adicionar a opç
 
 3. No Gerenciador de Desempenho, selecione o nó **Destinos** e, em seguida, especifique o projeto, o executável ou o site da Web para o qual você deseja criar o perfil.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Exibição de interações de nível](../profiling/tier-interactions-view.md)
+[Exibição de interações de camada](../profiling/tier-interactions-view.md)

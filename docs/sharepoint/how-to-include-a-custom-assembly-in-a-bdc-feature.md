@@ -1,7 +1,7 @@
 ---
-title: 'Como: Incluir um Assembly personalizado em uma recurso BDC | Microsoft Docs'
+title: 'Como: incluir um assembly personalizado em um recurso do BDC | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.BDC.Add_Assemblies_Dialog
 dev_langs:
@@ -17,39 +17,38 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6de3313dad06c009244a8b784e81bf7d2a768c3b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 772cdbaca67cc82fc6b7eb2c5ef5adb6508df34a
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443111"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015255"
 ---
-# <a name="how-to-include-a-custom-assembly-in-a-bdc-feature"></a>Como: Incluir um assembly personalizado em uma recurso BDC
-  Seu projeto pode fazer referência a assemblies de outros projetos na mesma solução. No entanto, você deve adicionar esses assemblies para o arquivo de recurso do projeto usando o **Assign referenciado assemblies para o LobSystems** caixa de diálogo.
+# <a name="how-to-include-a-custom-assembly-in-a-bdc-feature"></a>Como: incluir um assembly personalizado em um recurso do BDC
+  Seu projeto pode referenciar assemblies de outros projetos na mesma solução. No entanto, você deve adicionar esses assemblies ao arquivo de recurso do projeto usando a caixa de diálogo **atribuir assemblies referenciados ao LobSystems** .
 
-### <a name="to-include-a-custom-assembly-in-a-business-data-connectivity-bdc-feature"></a>Para incluir um assembly personalizado em um recurso de conectividade (BDC) de dados de negócios
+### <a name="to-include-a-custom-assembly-in-a-business-data-connectivity-bdc-feature"></a>Para incluir um assembly personalizado em um recurso BDC (conectividade de dados corporativos)
 
-1. Na **Gerenciador de soluções**, escolha a pasta que contém o modelo BDC.
+1. Em **Gerenciador de soluções**, escolha a pasta que contém o modelo BDC.
 
-2. Sobre o **modo de exibição** menu, clique em **janela propriedades**.
+2. No menu **Exibir** , clique em **Janela Propriedades**.
 
-3. No **propriedades** janela, escolha o **Assemblies** propriedade e, em seguida, no botão de reticências (![elipse do Designer de dispositivo móvel do ASP.NET](../sharepoint/media/mwellipsis.gif "ASP.NET para dispositivos móveis Elipse de Designer")).
+3. Na janela **Propriedades** , escolha a propriedade **assemblies** e, em seguida, o botão de reticências (![ASP.NET Mobile Designer Ellipse](../sharepoint/media/mwellipsis.gif "Elipse do designer móvel ASP.NET")).
 
-     O **Assign referenciado assemblies para o LobSystems** caixa de diálogo é exibida.
+     A caixa de diálogo **atribuir assemblies referenciados ao LobSystems** é exibida.
 
-4. No **selecione um Assembly** , escolha o assembly personalizado.
-
-    > [!NOTE]
-    > Assemblies são exibidas somente na **Assign referenciado assemblies para o LobSystems** caixa de diálogo se você tiver adicionado uma referência ao projeto que contém o assembly. Para obter mais informações, confira [Como: Adicionar ou remover referências usando a caixa de diálogo Adicionar referência](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9).
-
-5. No **propriedades de referência** grupo, abra a lista que aparece para o **escopo do LobSystem** propriedade, escolha o sistema LOB dos métodos que usam o assembly personalizado e, em seguida, escolha o **Okey**  botão.
+4. Na lista **selecionar um assembly** , escolha o assembly personalizado.
 
     > [!NOTE]
-    > Para depurar o código no assembly personalizado, você deve adicionar o assembly para o pacote de solução. Para obter mais informações, confira [Como: Adicionar e remover assemblies adicionais](../sharepoint/how-to-add-and-remove-additional-assemblies.md).
+    > Os assemblies só aparecem na caixa de diálogo **atribuir assemblies referenciados ao LobSystems** se você tiver adicionado uma referência ao projeto que contém o assembly. Para obter mais informações, consulte [como: Adicionar ou remover referências usando a caixa de diálogo Adicionar referência](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9).
+
+5. No grupo **Propriedades de referência** , abra a lista que aparece para a propriedade **escopo do LobSystem** , escolha o sistema LOB dos métodos que usam o assembly personalizado e escolha o botão **OK** .
+
+    > [!NOTE]
+    > Para depurar o código no assembly personalizado, você deve adicionar o assembly ao pacote de solução. Para obter mais informações, consulte [como adicionar e remover assemblies adicionais](../sharepoint/how-to-add-and-remove-additional-assemblies.md).
 
 ## <a name="see-also"></a>Consulte também
-- [Como: Use um arquivo de recurso para especificar nomes localizados, propriedades e permissões](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)
-- [Como: Adicionar um arquivo de modelo BDC existente a um projeto do SharePoint](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)
+- [Como: usar um arquivo de recurso para especificar nomes, propriedades e permissões localizadas](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)
+- [Como: adicionar um arquivo de modelo BDC existente a um projeto do SharePoint](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)
 - [Criar um modelo de conectividade de dados corporativos](../sharepoint/creating-a-business-data-connectivity-model.md)
-- [Como: Criar um modelo BDC](../sharepoint/how-to-create-a-bdc-model.md)
-- [Dados de negócios Integragte no SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md)
+- [Como: criar um modelo de BDC](../sharepoint/how-to-create-a-bdc-model.md)
+- [Integragte dados corporativos no SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md)

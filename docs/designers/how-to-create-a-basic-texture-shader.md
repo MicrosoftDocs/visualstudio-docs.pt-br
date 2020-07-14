@@ -1,19 +1,19 @@
 ---
 title: Como criar um sombreador de textura básica
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 5af113fb-6415-4be0-8b23-10fddb10e80a
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac74155b8de4669d959d9b14e9be20ada2ec51d9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 30925a9b1814bd636258696fef817be9903f8006
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589468"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769085"
 ---
 # <a name="how-to-create-a-basic-texture-shader"></a>Como criar um sombreador de textura básico
 
@@ -52,7 +52,7 @@ Determinadas formas podem fornecer melhores visualizações para alguns sombread
 
 ## <a name="see-also"></a>Confira também
 
-- [Como: Aplicar um sombreador a um modelo 3D](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
-- [Editor de imagens](../designers/image-editor.md)
-- [Designer de Sombreador](../designers/shader-designer.md)
-- [Nós do Designer de Sombreador](../designers/shader-designer-nodes.md)
+- [Como: aplicar um sombreador a um modelo 3D](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [Editor de imagem](../designers/image-editor.md)
+- [Designer de sombreador](../designers/shader-designer.md)
+- [Nós do designer do sombreador](../designers/shader-designer-nodes.md)

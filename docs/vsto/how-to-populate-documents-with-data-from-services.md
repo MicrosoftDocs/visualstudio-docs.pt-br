@@ -1,7 +1,7 @@
 ---
 title: 'Como: popular documentos com dados de serviços'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4f53000f7d6aa8bdd8261bbe5658607918b6b449
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 01e2a83f464576d1ca780daa17c0d9478f0caa14
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985866"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547141"
 ---
 # <a name="how-to-populate-documents-with-data-from-services"></a>Como: popular documentos com dados de serviços
 
@@ -45,15 +45,15 @@ O exemplo a seguir mostra como adicionar controles vinculados a dados a document
 
      Os métodos que você usa dependem do que o serviço Web oferece.
 
-6. Atribua a resposta de dados do serviço Web para a propriedade <xref:System.Windows.Forms.BindingSource.DataSource%2A> do <xref:System.Windows.Forms.BindingSource>.
+6. Atribua a resposta de dados do serviço Web à <xref:System.Windows.Forms.BindingSource.DataSource%2A> Propriedade do <xref:System.Windows.Forms.BindingSource> .
 
-Quando você executa o projeto, os controles exibem o primeiro registro na fonte de dados. Você pode habilitar a rolagem pelos registros manipulando os eventos de moeda usando os objetos no <xref:System.Windows.Forms.BindingSource>.
+Quando você executa o projeto, os controles exibem o primeiro registro na fonte de dados. Você pode habilitar a rolagem pelos registros manipulando os eventos de moeda usando os objetos no <xref:System.Windows.Forms.BindingSource> .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Associar dados a controles em soluções do Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Adicionar novas fontes de dados](../data-tools/add-new-data-sources.md)
-- [Associando controles do Windows Forms a dados no Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
+- [Associar controles do Windows Forms a dados no Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
 - [Como: preencher planilhas com dados de um banco de dado](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
 - [Como: popular documentos com dados de objetos](../vsto/how-to-populate-documents-with-data-from-objects.md)
 - [Como: popular documentos com dados de um banco de dado](../vsto/how-to-populate-documents-with-data-from-a-database.md)

@@ -5,18 +5,19 @@ author: jmatthiesen
 ms.author: jomatthi
 ms.date: 05/06/2018
 ms.assetid: 4AD51385-B0A8-4BA7-B2D4-BF2BD167A142
-ms.openlocfilehash: a14630c5448632a939e1768040b910caf6276c2a
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: overview
+ms.openlocfilehash: 28ea53826a19a9ec97349060702cf13c68342ad2
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "67692913"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85938997"
 ---
 # <a name="managing-references-in-a-project"></a>Gerenciando referências em um projeto
 
 O Visual Studio para Mac fornece dois meios de acrescentar referências adicionais ao seu projeto:
 
-![Referências do Projeto](media/projects-and-solutions-image10.png)
+![Referências de Projeto](media/projects-and-solutions-image10.png)
 
 Estes são:
 

@@ -10,22 +10,22 @@ ms.assetid: 91b167a3-280a-498b-8fc2-f67859a2c64e
 caps.latest.revision: 29
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4cf121bd7f312518e334c7153acf2d6486e37012
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: d6c6ebe39cf0d32480aee1019aa5ea47496bd793
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851785"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548129"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Executar testes de unidade com o Gerenciador de Testes
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Use o Gerenciador de Testes para executar testes de unidade do Visual Studio ou projetos de teste de unidade de terceiros, agrupar testes em categorias, filtre a lista de testes, criar, salvar e executar as listas de reprodução de testes. Você também pode depurar testes e analisar um teste de desempenho e cobertura de código.
 
-## <a name="BKMK_Contents"></a> Conteúdo
+## <a name="contents"></a><a name="BKMK_Contents"></a>Índice
  [Estruturas de teste de unidade e projetos de teste](#BKMK_Unit_test_frameworks_and_test_projects)
 
- [Executar testes de unidade no Gerenciador de Testes](#BKMK_Run_tests_in_Test_Explorer)
+ [Executar testes no Gerenciador de testes](#BKMK_Run_tests_in_Test_Explorer)
 
  [Exibir resultados de teste](#BKMK_View_test_results)
 
@@ -37,17 +37,17 @@ Use o Gerenciador de Testes para executar testes de unidade do Visual Studio ou 
 
  [Recursos externos](#BKMK_External_resources)
 
-## <a name="BKMK_Unit_test_frameworks_and_test_projects"></a> Estruturas de teste de unidade e projetos de teste
+## <a name="unit-test-frameworks-and-test-projects"></a><a name="BKMK_Unit_test_frameworks_and_test_projects"></a>Estruturas de teste de unidade e projetos de teste
  O Visual Studio instala as estruturas de teste de unidade da Microsoft para código gerenciado e nativo. No entanto, o Gerenciador de Testes também pode executar qualquer estrutura de teste de unidade que implementou um adaptador de Gerenciador de Testes. Para obter mais informações sobre como instalar estruturas de teste de unidade de terceiros, consulte [Instalar estruturas de teste de unidade de terceiros](../test/install-third-party-unit-test-frameworks.md)
 
  O Gerenciador de Testes pode executar testes de vários projetos de teste em uma solução e de classes de teste que fazem parte dos projetos de código de produção. Projetos de teste podem usar estruturas de teste de unidade diferente. Quando o código em teste é escrito para o .NET Framework, o projeto de teste pode ser escrito em qualquer linguagem que tem como alvo o .NET Framework, independentemente do idioma de código de destino. Projetos de código C/C++ nativos devem ser testados usando uma estrutura de teste de unidade C++.
 
  ![Voltar ao](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [conteúdo](#BKMK_Contents) superior
 
-## <a name="BKMK_Run_tests_in_Test_Explorer"></a> Executar testes de unidade no Gerenciador de Testes
- **&#124;** [Executar](#BKMK_Run_tests) testes [executar testes após cada compilação](#BKMK_Run_tests_after_every_build)
+## <a name="run-tests-in-test-explorer"></a><a name="BKMK_Run_tests_in_Test_Explorer"></a> Executar testes no Gerenciador de Testes
+ [Executar Testes](#BKMK_Run_tests) **&#124;** [Executar testes após cada build](#BKMK_Run_tests_after_every_build)
 
- Quando você compila o projeto de teste, os testes são exibidos no Gerenciador de Testes. Se o Gerenciador de Testes não estiver visível, escolha **Teste** no menu do Visual Studio, escolha **Windows** e, em seguida, escolha **Gerenciador de Testes**.
+ Quando você compila o projeto de teste, os testes são exibidos no Gerenciador de Testes. Se o Gerenciador de Testes não estiver visível, escolha **Teste** no menu do Visual Studio, **Windows** e, em seguida, **Gerenciador de Testes**.
 
  ![Gerenciador de Testes de Unidade](../ide/media/ute-failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")
 
@@ -55,89 +55,89 @@ Use o Gerenciador de Testes para executar testes de unidade do Visual Studio ou 
 
  Você pode executar a maior parte do trabalho de encontrar, organizar e executar testes usando a barra de ferramentas do Gerenciador de Testes.
 
- ![Executar testes da barra de ferramentas do Test Explorer](../test/media/ute-toolbar.png "UTE_ToolBar")
+ ![Executar testes na barra de ferramentas do Gerenciador de Testes](../test/media/ute-toolbar.png "UTE_ToolBar")
 
  ![Voltar ao](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [conteúdo](#BKMK_Contents) superior
 
-### <a name="BKMK_Run_tests"></a> Executar testes
- Você pode executar todos os testes na solução, todos os testes em um grupo ou um conjunto de testes que você selecionar. Siga um destes procedimentos:
+### <a name="run-tests"></a><a name="BKMK_Run_tests"></a>Executar testes
+ Você pode executar todos os testes na solução, todos os testes em um grupo ou um conjunto de testes que você selecionar. Realize um dos seguintes procedimentos:
 
 - Para executar todos os testes em uma solução, escolha **Executar Todos**.
 
-- Para executar todos os testes em um grupo padrão, escolha **Executar...** e, em seguida, escolha o grupo no menu.
+- Para executar todos os testes em um grupo padrão, escolha **executar...** e, em seguida, escolha o grupo no menu.
 
 - Selecione os testes individuais que deseja executar, abra o menu de contexto para um teste selecionado e escolha **Executar Testes Selecionados**.
 
 - Se os testes individuais não tiverem dependências que os impeçam de serem executados em qualquer ordem, ative a execução de teste em paralelo com o botão de alternância ![UTE&#95;parallelicon&#45;small](../test/media/ute-parallelicon-small.png "UTE_parallelicon-pequeno") na barra de ferramentas. Isso pode reduzir consideravelmente o tempo necessário para executar todos os testes.
 
-  A barra de aprovação/reprovação na parte superior da janela do Gerenciador de Testes é animada conforme os testes são executados. À conclusão da execução de teste, a barra de aprovação/reprovação ficará verde se todos os testes forem aprovados ou vermelha se algum teste for reprovado.
+  A barra de aprovação/reprovação na parte superior da janela do Gerenciador de Testes é animada conforme os testes são executados. Na conclusão da execução de teste, a barra de aprovação/reprovação ficará verde se todos os testes forem aprovados ou vermelha se algum deles for reprovado.
 
   ![Voltar ao](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [conteúdo](#BKMK_Contents) superior
 
-### <a name="BKMK_Run_tests_after_every_build"></a> Executar testes depois de cada compilação
+### <a name="run-tests-after-every-build"></a><a name="BKMK_Run_tests_after_every_build"></a> Executar testes depois de cada compilação
 
 > [!WARNING]
 > Executar testes de unidade após cada build tem suporte no Visual Studio Enterprise.
 
-|||
+|Imagem|Descrição|
 |-|-|
-|![Executar após compilação](../test/media/ute-runafterbuild-btn.png "UTE_RunAfterBuild_btn")|Para executar os testes de unidade após cada build local, escolha **Teste** no menu padrão e, em seguida, escolha **Executar testes após build** na barra de ferramentas do Gerenciador de Testes.|
+|![Executar após o build](../test/media/ute-runafterbuild-btn.png "UTE_RunAfterBuild_btn")|Para executar os testes de unidade após cada build local, escolha **Teste** no menu padrão e, em seguida, **Executar Testes após Build** na barra de ferramentas do Gerenciador de Testes.|
 
  ![Voltar ao](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [conteúdo](#BKMK_Contents) superior
 
-## <a name="BKMK_View_test_results"></a> Exibir resultados de teste
- [Exibir detalhes](#BKMK_View_test_details) **&#124;** do teste [exiba o código-fonte de um método de teste](#BKMK_View_the_source_code_of_a_test_method)
+## <a name="view-test-results"></a><a name="BKMK_View_test_results"></a>Exibir resultados de teste
+ [Exibir detalhes do teste](#BKMK_View_test_details) **&#124;** [Exibir código-fonte de um método de teste](#BKMK_View_the_source_code_of_a_test_method)
 
  Conforme você executa, grava e executa novamente os testes, o Gerenciador de Testes exibe os resultados em grupos **Testes com falha**, **Testes Aprovados**, **Testes Ignorados** e **Testes Não Executados**. O painel de detalhes na parte inferior do Gerenciador de Testes exibe um resumo da execução de teste.
 
-### <a name="BKMK_View_test_details"></a> Exibir detalhes do teste
+### <a name="view-test-details"></a><a name="BKMK_View_test_details"></a> Exibir detalhes do teste
  Para exibir os detalhes de um teste individual, selecione o teste.
 
  ![Detalhes da execução do teste](../test/media/ute-testdetails.png "UTE_TestDetails")
 
  O painel de detalhes de teste exibe as seguintes informações:
 
-- {1&gt;O nome do arquivo de origem e o número de linha do método de teste.&lt;1}
+- O nome do arquivo de origem e o número de linha do método de teste.
 
-- {1&gt;O status do teste.&lt;1}
+- O status do teste.
 
-- {1&gt;O tempo decorrido que o método de teste levou para ser executado.&lt;1}
+- O tempo decorrido que o método de teste levou para ser executado.
 
-  {1&gt;Se o teste falhar, o painel de detalhes também exibe:&lt;1}
+  Se o teste falhar, o painel de detalhes também exibe:
 
-- {1&gt;A mensagem retornada pela estrutura de teste de unidade para o teste.&lt;1}
+- A mensagem retornada pela estrutura de teste de unidade para o teste.
 
-- {1&gt;O rastreamento de pilha no momento em que o teste falhou.&lt;1}
+- O rastreamento de pilha no momento em que o teste falhou.
 
   ![Voltar ao](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [conteúdo](#BKMK_Contents) superior
 
-### <a name="BKMK_View_the_source_code_of_a_test_method"></a> Exibir o código-fonte de um método de teste
- Para exibir o código-fonte para um método de teste no editor do Visual Studio, selecione o teste e, em seguida, escolha **Abrir teste** no menu de contexto (teclado: F12).
+### <a name="view-the-source-code-of-a-test-method"></a><a name="BKMK_View_the_source_code_of_a_test_method"></a> Exibir o código-fonte de um método de teste
+ Para exibir o código-fonte de um método de teste no editor do Visual Studio, selecione o teste e, em seguida, escolha **abrir teste** no menu de contexto (teclado: F12).
 
  ![Voltar ao](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [conteúdo](#BKMK_Contents) superior
 
-## <a name="BKMK_Group_and_filter_the_test_list"></a> Agrupar e filtrar a lista de testes
- [Agrupando o grupo de listas](#BKMK_Grouping_the_test_list) **&#124;** de teste [por características](#BKMK_Group_by_traits) **&#124;** [Pesquisar e filtrar a lista de testes](#BKMK_Search_and_filter_the_test_list)
+## <a name="group-and-filter-the-test-list"></a><a name="BKMK_Group_and_filter_the_test_list"></a>Agrupar e filtrar a lista de testes
+ [Agrupar a lista de testes](#BKMK_Grouping_the_test_list) **&#124;** [Agrupar por características](#BKMK_Group_by_traits) **&#124;** [Pesquisar e filtrar a lista de testes](#BKMK_Search_and_filter_the_test_list)
 
  O Gerenciador de Testes permite agrupar os testes em categorias predefinidas. A maioria das estruturas de teste de unidade executados no Gerenciador de Testes permitem que você defina suas próprias categorias e pares de valor/categoria para agrupar os testes. Você também pode filtrar a lista de testes por correspondência de cadeias de caracteres em relação a propriedades de teste.
 
-### <a name="BKMK_Grouping_the_test_list"></a> Agrupar a lista de testes
+### <a name="grouping-the-test-list"></a><a name="BKMK_Grouping_the_test_list"></a> Agrupar a lista de testes
  Para alterar a maneira como os testes são organizados, escolha a seta para baixo ao lado do botão **Agrupar por**![botão de grupo do Gerenciador de Testes](../test/media/ute-groupby-btn.png "UTE_GroupBy_btn") e selecione novos critérios de agrupamento.
 
- ![Agrupar testes por categoria no Gerenciador de testes](../test/media/ute-groupbycategory.png "UTE_GroupByCategory")
+ ![Agrupar testes por categoria no Gerenciador de Testes](../test/media/ute-groupbycategory.png "UTE_GroupByCategory")
 
 ### <a name="test-explorer-groups"></a>Grupos de Gerenciador de Testes
 
-|Grupo|Descrição|
+|Agrupar|Descrição|
 |-----------|-----------------|
-|**Duração**|Agrupa teste pelo tempo de execução: **rápido**, **médio** e **lento**.|
+|**Duration**|Agrupa teste pelo tempo de execução: **rápido**, **médio** e **lento**.|
 |**Resultado**|Agrupa testes por resultados da execução: **testes com falha**, **testes ignorados**, **testes aprovados**.|
 |**Características**|Agrupa teste por pares de categoria/valor que você define. A sintaxe para especificar valores e categorias de característica é definida pela estrutura de teste de unidade.|
 |**Projeto**|Agrupa teste por nome dos projetos.|
 
  ![Voltar ao](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [conteúdo](#BKMK_Contents) superior
 
-### <a name="BKMK_Group_by_traits"></a> Agrupar por características
+### <a name="group-by-traits"></a><a name="BKMK_Group_by_traits"></a> Agrupar por características
  Uma característica é geralmente um par de nome/valor de categoria, mas também pode ser uma única categoria. Características podem ser atribuídas aos métodos que são identificados como um método de teste pela estrutura de teste de unidade. Uma estrutura de teste de unidade pode definir categorias de característica. Você pode adicionar valores para as categorias de característica para definir seus próprios pares de nome/valor de categoria. A sintaxe para especificar valores e categorias de característica é definida pela estrutura de teste de unidade.
 
  **Características na Estrutura de Teste da Unidade Microsoft para código gerenciado**
@@ -185,7 +185,7 @@ TEST_METHOD(Method1)
 
  ![Voltar ao](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [conteúdo](#BKMK_Contents) superior
 
-### <a name="BKMK_Search_and_filter_the_test_list"></a> Pesquisar e filtrar a lista de testes
+### <a name="search-and-filter-the-test-list"></a><a name="BKMK_Search_and_filter_the_test_list"></a> Pesquisar e filtrar a lista de testes
  Você pode usar o Gerenciador de Testes filtros para limitar os métodos de teste em seus projetos que você exibe e executa.
 
  Quando você digita uma cadeia de caracteres na caixa de pesquisa do Gerenciador de Testes e escolhe a tecla ENTER, a lista de testes é filtrada para exibir somente os testes cujos nomes totalmente qualificados contêm a cadeia de caracteres.
@@ -198,7 +198,7 @@ TEST_METHOD(Method1)
 
 3. Insira o valor do filtro entre aspas.
 
-   ![Filtrar testes no Gerenciador de testes](../test/media/ute-filtertestlist.png "UTE_FilterTestList")
+   ![Filtrar testes no Gerenciador de Testes](../test/media/ute-filtertestlist.png "UTE_FilterTestList")
 
 > [!NOTE]
 > As pesquisas não diferenciam maiúsculas de minúsculas e correspondem a cadeia especificada para qualquer parte do valor de critérios.
@@ -229,10 +229,10 @@ FullName:"MyClass" - FullName:"PerfTest"
 
  ![Voltar ao](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [conteúdo](#BKMK_Contents) superior
 
-## <a name="BKMK_Create_custom_playlists"></a> Criar listas de reprodução personalizadas
+## <a name="create-custom-playlists"></a><a name="BKMK_Create_custom_playlists"></a>Criar listas de reprodução personalizadas
  É possível criar e salvar uma lista de teste que você deseje executar ou exibir como um grupo. Ao selecionar uma lista de reprodução, os testes na lista são exibidos no Gerenciador de Testes. É possível adicionar um teste a mais de uma lista de reprodução e todos os testes no projeto estarão disponíveis quando você escolher a lista de reprodução **Todos os Testes**.
 
- ![Escolher uma lista de reprodução](../test/media/ute-playlist.png "UTE_Playlist")
+ ![Escolher uma playlist](../test/media/ute-playlist.png "UTE_Playlist")
 
  **Para criar uma lista de reprodução**, escolha um ou mais testes no Gerenciador de Testes. No menu de contexto, escolha **Adicionar à lista de reprodução**, **NewPlaylist**. Salve o arquivo com o nome e local que você especificar na caixa de diálogo **Criar nova lista de reprodução**.
 
@@ -244,16 +244,16 @@ FullName:"MyClass" - FullName:"PerfTest"
 
  ![Voltar ao](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [conteúdo](#BKMK_Contents) superior
 
-## <a name="BKMK_Debug_and_analyze_unit_tests"></a> Depurar e analisar testes de unidade
- [Depurar testes](#BKMK_Debug_unit_tests) **&#124;** de unidade [diagnosticar problemas](#BKMK_Diagnose_test_method_performance_issues) **&#124;** de desempenho do método de teste [analisar cobertura de código de teste de unidade](#BKMK_Analyzeunit_test_code_coverage)
+## <a name="debug-and-analyze-unit-tests"></a><a name="BKMK_Debug_and_analyze_unit_tests"></a> Depurar e analisar testes de unidade
+ [Depurar testes de unidade](#BKMK_Debug_unit_tests) **&#124** [Diagnosticar problemas de desempenho de método de teste](#BKMK_Diagnose_test_method_performance_issues) **&#124** [Analisar cobertura de código de teste de unidade](#BKMK_Analyzeunit_test_code_coverage)
 
-### <a name="BKMK_Debug_unit_tests"></a> Depurar testes de unidade
+### <a name="debug-unit-tests"></a><a name="BKMK_Debug_unit_tests"></a> Depurar testes de unidade
  Você pode usar o Gerenciador de Testes para iniciar uma sessão de depuração para os testes. Passar pelo código com o depurador do Visual Studio permite-lhe navegar facilmente entre os testes de unidade e o projeto sendo testado. Para iniciar a depuração:
 
-1. {1&gt;No editor do Visual Studio, defina um ponto de interrupção em um ou mais métodos de teste que deseje depurar. &lt;1}
+1. No editor do Visual Studio, defina um ponto de interrupção em um ou mais métodos de teste que deseje depurar.
 
    > [!NOTE]
-   > {1&gt;Como os métodos de teste podem ser executados em qualquer ordem, defina pontos de interrupção em todos os métodos de teste que deseje depurar.&lt;1}
+   > Como os métodos de teste podem ser executados em qualquer ordem, defina pontos de interrupção em todos os métodos de teste que deseje depurar.
 
 2. No Gerenciador de Testes, selecione os métodos de teste e escolha **Depurar Testes Selecionados** no menu de contexto.
 
@@ -261,10 +261,10 @@ FullName:"MyClass" - FullName:"PerfTest"
 
    ![Voltar ao](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [conteúdo](#BKMK_Contents) superior
 
-### <a name="BKMK_Diagnose_test_method_performance_issues"></a> Diagnosticar problemas de desempenho do método de teste
+### <a name="diagnose-test-method-performance-issues"></a><a name="BKMK_Diagnose_test_method_performance_issues"></a> Diagnosticar problemas de desempenho do método de teste
  Para diagnosticar por que um método de teste está levando muito tempo, selecione o método no Gerenciador de Testes e, em seguida, escolha o perfil no menu de contexto. Consulte [Gerenciador de Desempenho](../profiling/performance-explorer.md).
 
-### <a name="BKMK_Analyzeunit_test_code_coverage"></a> Analisar a cobertura de código de teste de unidade
+### <a name="analyze-unit-test-code-coverage"></a><a name="BKMK_Analyzeunit_test_code_coverage"></a> Analisar a cobertura de código de teste de unidade
 
 > [!NOTE]
 > Cobertura de código de teste de unidade está disponível apenas no Visual Studio Enterprise.
@@ -287,10 +287,10 @@ FullName:"MyClass" - FullName:"PerfTest"
 
    ![Voltar ao](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [conteúdo](#BKMK_Contents) superior
 
-## <a name="BKMK_External_resources"></a> Recursos externos
+## <a name="external-resources"></a><a name="BKMK_External_resources"></a>Recursos externos
 
-### <a name="BKMK_Guidance"></a> Diretrizes
+### <a name="guidance"></a><a name="BKMK_Guidance"></a>Guia
  [Testes de Entrega Contínua com o Visual Studio 2012 – Capítulo 2: Teste de Unidade: Testando o Interior](https://msdn.microsoft.com/library/jj159340.aspx)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
  [Teste de unidade seu código](../test/unit-test-your-code.md) [Execute um teste de unidade como um processo de 64 bits](../test/run-a-unit-test-as-a-64-bit-process.md)

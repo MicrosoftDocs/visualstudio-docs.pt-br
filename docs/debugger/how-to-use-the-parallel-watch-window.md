@@ -1,7 +1,7 @@
 ---
 title: Definir uma inspeção em variáveis em threads paralelos | Microsoft Docs
 ms.date: 04/25/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.parallelwatch
 dev_langs:
@@ -17,14 +17,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0628e75c54cf0da10dc5aecdf243ae1dda3485fb
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9fb0d5ac60ea5ab89b02a624488b5df4f8a7164b
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732008"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348620"
 ---
-# <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio-c-visual-basic-c"></a>Definir uma inspeção em variáveis em threads paralelos no VisualC#Studio (, C++Visual Basic,)
+# <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio-c-visual-basic-c"></a>Definir uma inspeção em variáveis em threads paralelos no Visual Studio (C#, Visual Basic, C++)
 Na janela Inspeção Paralela, você pode exibir simultaneamente os valores que uma expressão mantém em vários threads. Cada linha representa um thread que está sendo executado em um aplicativo, mas um thread pode ser representado em várias linhas. Mais especificamente, cada linha representa uma chamada de função cuja assinatura de função corresponde à função no registro de ativação atual. Você pode classificar, reorganizar, remover e agrupar os itens que estão nas colunas. Você pode sinalizar, remover sinalização, congelar (suspender) e descongelar (retomar) threads. As colunas a seguir são exibidas na janela **Inspeção Paralela**:
 
 - A coluna do sinalizador, na qual você pode marcar um thread ao qual deseja prestar atenção especial.
@@ -84,7 +84,7 @@ Na janela Inspeção Paralela, você pode exibir simultaneamente os valores que 
 
 - Insira uma expressão booliana na caixa **Filtrar por Expressão Booliana**. O depurador avalia a expressão para cada contexto de thread. Apenas as linhas nas quais o valor é `true` é exibido.
 
-## <a name="see-also"></a>Consulte também
-- [Depurar aplicativos multi-threaded](../debugger/debug-multithreaded-applications-in-visual-studio.md)
-- [Como usar a janela Threads da GPU](../debugger/how-to-use-the-gpu-threads-window.md)
-- [Passo a passo: depurando um aplicativo C++ AMP](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)
+## <a name="see-also"></a>Veja também
+- [Depurar aplicativos multithread](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Como: usar a janela threads GPU](../debugger/how-to-use-the-gpu-threads-window.md)
+- [Walkthrough: Depurando um aplicativo C++ AMP](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)

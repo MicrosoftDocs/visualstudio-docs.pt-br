@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d9f0c9a3259186e1581a4673cdc18d1554e92b3c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: cc887c6bcef9f8b7307d9d6aa570d6458d87f377
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778486"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541694"
 ---
 # <a name="nameprofile"></a>NameProfile
 A função `NameProfile` atribui uma cadeia de caracteres ao thread ou processo especificado.
@@ -33,7 +33,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
                                    unsigned int dwId);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
  `pszName`
 
  O nome do elemento de criação de perfil. Um nome é inválido (resultando em NameProfileA retorna NAME_ERROR_INVALID_NAME) se:
@@ -89,7 +89,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 
 ## <a name="function-information"></a>Informações de função
 
-|||
+|Item|Valor|
 |-|-|
 |**Cabeçalho**|Incluir *VSPerf.h*|
 |**Biblioteca**|Usar *VSPerf.lib*|
@@ -133,5 +133,5 @@ void ExerciseNameProfile()
 }
 ```
 
-## <a name="see-also"></a>Confira também
-- [Referência de API do profiler do Visual Studio (nativa)](../profiling/visual-studio-profiler-api-reference-native.md)
+## <a name="see-also"></a>Consulte também
+- [Referência da API do criador de perfil do Visual Studio (nativo)](../profiling/visual-studio-profiler-api-reference-native.md)
