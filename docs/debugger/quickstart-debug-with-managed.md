@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 061e667196ce1577206ad76939e20daf3db131c0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f790d30dc97d5549737c3c1cd003086477ce984f
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840880"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683017"
 ---
 # <a name="quickstart-debug-with-c-or-visual-basic-using-the-visual-studio-debugger"></a>Início Rápido: depurar com C# ou Visual Basic usando o depurador do Visual Studio
 
@@ -28,13 +28,21 @@ O depurador do Visual Studio oferece muitos recursos avançados para ajudar a de
 1. Abra o Visual Studio e crie um projeto.
 
     ::: moniker range=">=vs-2019"
-    Pressione **Esc** para fechar a janela de início. Digite **Ctrl + Q** para abrir a caixa de pesquisa, digite **console**, escolha **Modelos** e, em seguida, escolha **Criar novo projeto de Aplicativo de Console (.NET Core)**. Na caixa de diálogo que aparece, escolha **Criar**.
+    Se a janela iniciar não estiver aberta, escolha **arquivo**  >  **Iniciar janela**. Na janela iniciar, escolha **criar um novo projeto**.
+
+    Na janela **Criar um novo projeto**, insira ou digite *console* na caixa de pesquisa. Em seguida, escolha **C#** na lista Linguagem de programação e, em seguida, escolha **Windows** na lista Plataforma.
+
+    Depois de aplicar os filtros de idioma e plataforma, escolha o modelo de **aplicativo de console** para .NET Core e, em seguida, escolha **Avançar**.
+
+    Escolha a estrutura de destino recomendada (.NET Core 3,1) ou .NET 5 e, em seguida, escolha **criar**.
+
+    Se você não vir o modelo de projeto de **aplicativo de console** para .NET Core, vá para **ferramentas**  >  **obter ferramentas e recursos...**, que abre o instalador do Visual Studio. Escolha a carga de trabalho de **desenvolvimento de plataforma cruzada do .NET Core** e, em seguida, escolha **Modificar**.
     ::: moniker-end
     ::: moniker range="vs-2017"
     Na barra de menus superior, escolha **arquivo**  >  **novo**  >  **projeto**. No painel esquerdo da caixa de diálogo **Novo projeto**, em **Visual C#**, escolha **.NET Core** e, em seguida, no painel central, escolha **Aplicativo de Console (.NET Core)**. Em seguida, digite um nome como **MyDbgApp** e clique em **OK**.
-    ::: moniker-end
 
-     Caso não veja o modelo de projeto **Aplicativo de Console (.NET Core)**, acesse **Ferramentas** > **Obter Ferramentas e Recursos...**, que abre o Instalador do Visual Studio. Escolha a carga de trabalho **Desenvolvimento de área de trabalho do .NET** e **.NET Core**; em seguida, selecione **Modificar**.
+    Caso não veja o modelo de projeto **Aplicativo de Console (.NET Core)**, acesse **Ferramentas** > **Obter Ferramentas e Recursos...**, que abre o Instalador do Visual Studio. Escolha a carga de trabalho de **desenvolvimento de plataforma cruzada do .NET Core** e, em seguida, escolha **Modificar**.
+    ::: moniker-end
 
     O Visual Studio cria o projeto.
 
@@ -155,17 +163,17 @@ O aplicativo continua a execução, chamando `doWork`, e é pausado na linha de 
 
 Comandos de teclado comuns usados para percorrer o código incluem **F10** e **F11**. Para obter instruções mais detalhadas, confira [Introdução ao depurador](../debugger/debugger-feature-tour.md).
 
-## <a name="inspect-variables-in-a-datatip"></a>Inspecionar variáveis em uma datatip
+## <a name="inspect-variables-in-a-data-tip"></a>Inspecionar variáveis em uma dica de dados
 
-1. Na linha de código atual (indicada pelo ponteiro de execução amarelo), passe o mouse sobre o objeto `c1` com o mouse para mostrar uma datatip.
+1. Na linha atual do código (marcado pelo ponteiro de execução amarela), focalize o `c1` objeto com o mouse para mostrar uma dica de dados.
 
-    ![Exibir uma datatip](../debugger/media/dbg-qs-data-tip-csharp.png "Exibir uma datatip")
+    ![Exibir uma dica de dados](../debugger/media/dbg-qs-data-tip-csharp.png "Exibir uma dica de dados")
 
-    A datatip mostra o valor atual da variável `c1` e permite que você inspecione suas propriedades. Ao depurar, se você vir um valor que não espera, provavelmente haverá um bug nas linhas de código anteriores ou de chamada.
+    A dica de dados mostra o valor atual da `c1` variável e permite que você inspecione suas propriedades. Ao depurar, se você vir um valor que não espera, provavelmente haverá um bug nas linhas de código anteriores ou de chamada.
 
-2. Expanda a datatip para examinar os valores de propriedade atuais do objeto `c1`.
+2. Expanda a dica de dados para examinar os valores de propriedade atuais do `c1` objeto.
 
-3. Se desejar fixar a datatip para poder continuar vendo o valor de `c1` enquanto executa código, clique no pequeno ícone de marcador. (É possível mover a datatip fixada para uma localização conveniente.)
+3. Se você quiser fixar a dica de dados para poder continuar a ver o valor de `c1` enquanto executa o código, clique no ícone de pino pequeno. (Você pode mover a dica de dados fixada para um local conveniente.)
 
 ## <a name="edit-code-and-continue-debugging"></a>Editar o código e continuar a depuração
 

@@ -2,19 +2,19 @@
 title: Trabalhar com várias contas de usuário
 description: Saiba como adicionar todas as suas contas da Microsoft ao Visual Studio para que você possa acessar os recursos de qualquer conta sem precisar entrar nele separadamente.
 ms.custom: SEO-VS-2020
-ms.date: 11/16/2020
+ms.date: 03/02/2021
 ms.topic: conceptual
 author: ornellaalt
 ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 169415537460dae94ca844c426bb3770449161b5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6740eb4c23d739f439103b2ecdd0e8882018204d
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960449"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683787"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Trabalhar com várias contas de usuário
 
@@ -65,7 +65,7 @@ Para ver isso em ação, crie um projeto de **Aplicativo Web ASP.NET Core**. Na 
 
 ::: moniker range=">=vs-2019"
 
-Para ver isso em ação, crie um projeto de **Aplicativo Web ASP.NET Core**. Na página **Criar um Aplicativo Web do ASP.NET Core**, escolha o modelo **Aplicativo Web** e escolha **Alterar** em **Autenticação**.
+Para ver isso em ação, crie um novo projeto de **aplicativo Web ASP.NET Core** . Na página **criar um novo aplicativo Web ASP.NET Core** , escolha **ASP.NET Core 3,1** na lista suspensa, escolha o modelo de **aplicativo Web** e, em seguida, escolha **alterar** em **autenticação**.
 
 ::: moniker-end
 
@@ -136,7 +136,7 @@ A partir da versão 16,8, você poderá adicionar as contas do GitHub e do GitHu
 Para obter instruções detalhadas, consulte [trabalhar com contas do GitHub no Visual Studio](work-with-github-accounts.md).
 ::: moniker-end
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Entrar no Visual Studio](signing-in-to-visual-studio.md)
 - [Entrar no Visual Studio para Mac](/visualstudio/mac/signing-in)

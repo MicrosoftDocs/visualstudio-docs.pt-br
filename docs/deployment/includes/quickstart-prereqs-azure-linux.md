@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6c2065eee7663b627623bf7c68a4a94027c9be57
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b2f9327da5e195c50bd074a468e1f9e57ece94ea
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "70197091"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101750834"
 ---
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -20,6 +20,14 @@ ms.locfileid: "70197091"
 
 * Uma assinatura do Azure. Se você ainda não tiver a assinatura, [inscreva-se gratuitamente](https://azure.microsoft.com/free/dotnet/), que inclui US$ 200 de crédito durante 30 dias e 12 meses de serviços populares gratuitos.
 
-* Um projeto ASP.NET Core. Se você ainda não tiver um, siga [Início Rápido: usar o Visual Studio para criar seu primeiro aplicativo Web ASP.NET Core](../../ide/quickstart-aspnet-core.md) ou use **Arquivo** > **Novo projeto**, selecione **Visual C#** > **.NET Core**; em seguida, selecione **aplicativo Web ASP.NET Core**. Quando solicitado, selecione o modelo **aplicativo Web (Model-View-Controller)**, verifique se **Sem autenticação** está selecionado e, em seguida, selecione **OK**.
+* ASP.NET Core: Siga o [início rápido: Use o Visual Studio para criar seu primeiro aplicativo web ASP.NET Core](../../ide/quickstart-aspnet-core.md)ou use as seguintes etapas:
+  ::: moniker range=">=vs-2019"
+  No Visual Studio 2019, escolha **criar um novo projeto** na janela iniciar. Se a janela iniciar não estiver aberta, escolha **arquivo**  >  **Iniciar janela**. Digite **aplicativo Web** na caixa de pesquisa, escolha **C#** como idioma, escolha **ASP.NET Core aplicativo Web (Model-View-Controller)** e, em seguida, escolha **Avançar**. Na próxima tela, nomeie o projeto **MyASPApp** e escolha **Avançar**.
+
+  Escolha a estrutura de destino recomendada (.NET Core 3,1) ou .NET 5 e, em seguida, escolha **criar**.
+  ::: moniker-end
+  ::: moniker range="vs-2017"
+  No Visual Studio 2017, escolha **arquivo**  >  **novo projeto**, selecione **Visual C#**  >  **.NET Core** e, em seguida, selecione **ASP.NET Core aplicativo Web**. Quando solicitado, selecione o modelo **aplicativo Web (Model-View-Controller)**, verifique se **Sem autenticação** está selecionado e, em seguida, selecione **OK**.
+  ::: moniker-end
 
 * Certifique-se de criar o projeto usando o comando de menu **Criar > Criar solução** antes de seguir as etapas de implantação.

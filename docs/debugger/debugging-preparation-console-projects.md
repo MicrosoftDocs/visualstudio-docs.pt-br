@@ -19,16 +19,16 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e39cb7df53a12b97d297ee739338c42a3201089f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 66610eef4419b71cd41c8a7708b43b30bff4cc80
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872515"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683040"
 ---
 # <a name="debugging-preparation-console-projects-c-c-visual-basic-f"></a>Preparação da depuração: projetos de console (C#, C++, Visual Basic, F #)
 
-A preparação para depurar um projeto de console é semelhante à preparação para depurar um projeto do Windows, com algumas considerações adicionais, como definir argumentos de linha de comando e como pausar o aplicativo para depuração. Para obter mais informações, consulte [aplicativos do Windows Forms](../debugger/debugging-preparation-windows-forms-applications.md), e [preparação de depuração:  Aplicativos do Windows Forms (.NET)](/previous-versions/visualstudio/visual-studio-2010/sez9z95a(v=vs.100)). Devido à semelhança de todos os aplicativos do console, este tópico abrange os seguintes tipos de projeto:
+A preparação para depurar um projeto de console é semelhante à preparação para depurar um projeto do Windows, com algumas considerações adicionais, como definir argumentos de linha de comando e como pausar o aplicativo para depuração. Para obter mais informações, consulte [preparação da depuração para aplicativos do Windows Form](../debugger/debugging-preparation-windows-forms-applications.md). Devido à semelhança de todos os aplicativos do console, este tópico abrange os seguintes tipos de projeto:
 
 - Aplicativo de console do C#, Visual Basic e F #
 
@@ -62,6 +62,6 @@ Como todas as propriedades do projeto, esses argumentos persistem entre sessões
 - [Depurando código nativo](../debugger/debugging-native-code.md)
 - [Depurando código gerenciado](../debugger/debugging-managed-code.md)
 - [Preparar para depurar projetos C++](../debugger/debugging-preparation-visual-cpp-project-types.md)
-- [Tipos de projeto C#, F# e Visual Basic](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)
+- [Tipos de projeto do Visual Basic, C# e F#](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)
 - [Configurações do projeto para uma configuração de depuração do C++](../debugger/project-settings-for-a-cpp-debug-configuration.md)
 - [Segurança do depurador](../debugger/debugger-security.md)

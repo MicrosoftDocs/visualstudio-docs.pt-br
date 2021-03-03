@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - aspnet
-ms.openlocfilehash: 7170983732ff1350061629e1e8aa4ec88fad3fa1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa8601b6fe625c5cab2aa1f5de8a69f2d550ee2a
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952831"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683625"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet-core"></a>Início rápido: analisar dados de uso da CPU no Visual Studio (ASP.NET Core)
 
@@ -42,24 +42,17 @@ O Windows 8 ou posterior é necessário para executar ferramentas de criação d
    Na caixa de diálogo que aparece, escolha **MVC** no painel central e clique em **OK**.
    ::: moniker-end
    ::: moniker range="vs-2019"
-   Se a janela iniciar não estiver aberta, escolha **arquivo** > **Iniciar janela**.
+   No Visual Studio 2019, escolha **criar um novo projeto** na janela iniciar. Se a janela iniciar não estiver aberta, escolha **arquivo**  >  **Iniciar janela** e, em seguida, escolha **criar um novo projeto**.
 
-   Na janela iniciar, escolha **criar um novo projeto**.
+   Digite **aplicativo Web** na caixa de pesquisa, escolha **C#** como idioma, escolha **ASP.NET Core aplicativo Web (Model-View-Controller)** e, em seguida, escolha **Avançar**. Na próxima tela, nomeie o projeto *MyProfilingApp_MVC* e, em seguida, escolha **Avançar**.
 
-   Na janela **criar um novo projeto** , digite ou digite *ASP.net* na caixa de pesquisa. Em seguida, escolha **C#** na lista Linguagem de programação e, em seguida, escolha **Windows** na lista Plataforma.
-
-   Depois de aplicar os filtros de idioma e plataforma, escolha o modelo **aplicativo Web ASP.net (.NET Core)** e, em seguida, escolha **Avançar**.
+   Escolha a estrutura de destino recomendada (.NET Core 3,1) ou .NET 5 e, em seguida, escolha **criar**.
 
    > [!NOTE]
    > Se você não vir o modelo de **aplicativo Web do ASP.net (.NET Core)** , poderá instalá-lo na janela **criar um novo projeto** . Na mensagem **Não encontrou o que precisa?**, escolha o link **Instalar mais ferramentas e recursos**. Em seguida, no Instalador do Visual Studio, escolha a carga de trabalho de **desenvolvimento Web e ASP.NET**.
-
-   Na janela **configurar seu novo projeto** , digite ou insira *MyProfilingApp_MVC* na caixa **nome do projeto** . Em seguida, escolha **criar**.
-
-   Na janela que aparece, escolha **aplicativo Web (Model-View-Controller)** e, em seguida, escolha **criar**.
-
    ::: moniker-end
 
-   O Visual Studio abre seu novo projeto.
+   O Visual Studio cria e abre seu novo projeto.
 
 1. Em Gerenciador de soluções, clique com o botão direito do mouse na pasta modelos e escolha **Adicionar**  >  **classe**.
 
@@ -278,7 +271,7 @@ Recomendamos que você comece a analisar os dados examinando a lista de funçõe
 - [Analisar o uso da CPU](../profiling/cpu-usage.md) para obter informações mais detalhadas sobre a ferramenta de uso de CPU.
 - Analise o uso da CPU sem um depurador conectado ou direcionando um aplicativo em execução. Para saber mais, confira [Coletar dados de criação de perfil sem depuração](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging) em [Executar ferramentas de criação de perfil com ou sem o depurador](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Criação de perfis no Visual Studio](../profiling/index.yml)
 - [Introdução às ferramentas de criação de perfil](../profiling/profiling-feature-tour.md)

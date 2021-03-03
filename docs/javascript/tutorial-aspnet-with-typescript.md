@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: c28355e4097dc014f4757788f175ea80850a3f63
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 411fbd757eb063202136eba5c1e5fbec27f56523
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960423"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683632"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Tutorial: criar um aplicativo ASP.NET Core com TypeScript no Visual Studio
 
@@ -39,7 +39,7 @@ Neste tutorial, você aprenderá como:
 > * Criar um projeto ASP.NET Core
 > * Adicionar o pacote NuGet para o suporte do TypeScript
 > * Adicionar um código TypeScript
-> * Execute o aplicativo
+> * Executar o aplicativo
 > * Adicionar uma biblioteca de terceiros usando NPM
 
 ## <a name="prerequisites"></a>Pré-requisitos
@@ -69,18 +69,18 @@ Neste tutorial, você começa com um projeto simples contendo código para um ap
 1. Criar um novo projeto.
 
     ::: moniker range=">=vs-2019"
-    Se a janela iniciar não estiver aberta, escolha **arquivo**  >  **Iniciar janela**. Na janela iniciar, escolha **criar um novo projeto**. Na lista suspensa idioma, escolha **C#**. Na caixa de pesquisa, digite **ASP.net** e escolha **ASP.NET Core aplicativo Web**. Escolha **Próxima**.
+    No Visual Studio 2019, escolha **criar um novo projeto** na janela iniciar. Se a janela iniciar não estiver aberta, escolha **arquivo**  >  **Iniciar janela**. Digite **aplicativo Web**, escolha **C#** como idioma, escolha **ASP.NET Core aplicativo Web (Model-View-Controller)** e, em seguida, escolha **Avançar**. Na próxima tela, nomeie o projeto e escolha **Avançar**.
 
-    Digite um nome para o projeto e escolha **criar**.
+    Escolha a estrutura de destino recomendada (.NET Core 3,1) ou .NET 5 e, em seguida, escolha **criar**.
     ::: moniker-end
     ::: moniker range="vs-2017"
     Na barra de menus superior, escolha **arquivo**  >  **novo**  >  **projeto**. No painel esquerdo da caixa de diálogo **novo projeto** , expanda **Visual C#** e escolha **.NET Core**. No painel central, escolha **ASP.NET Core aplicativo Web-C#** e, em seguida, escolha **OK**.
+
+    Na caixa de diálogo exibida, selecione **aplicativo Web (Model-View-Controller)** na caixa de diálogo e escolha **criar** (ou **OK**).
+
+    ![Escolher o modelo MVC](../javascript/media/aspnet-core-ts-mvc-template.png)
     ::: moniker-end
     Se você não vir o modelo de projeto de **aplicativo web ASP.NET Core** , deverá adicionar a ASP.net e a carga de trabalho de **desenvolvimento Web** . Confira instruções detalhadas nos [Pré-requisitos](#prerequisites).
-
-1. Na caixa de diálogo exibida, selecione **aplicativo Web (Model-View-Controller)** na caixa de diálogo e escolha **criar** (ou **OK**).
-
-   ![Escolher o modelo MVC](../javascript/media/aspnet-core-ts-mvc-template.png)
 
     O Visual Studio cria a solução e abre o projeto no painel direito.
 

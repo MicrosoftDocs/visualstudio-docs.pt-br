@@ -2,19 +2,19 @@
 title: Dicas para melhorar o desempenho
 description: Saiba como otimizar determinados recursos do Visual Studio que você talvez não esteja usando para ajudar a melhorar o desempenho.
 ms.custom: SEO-VS-2020
-ms.date: 12/14/2020
+ms.date: 03/02/2021
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e53a2e3b1a65e496b4ead3d3bca0e8b0254c39e0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5e2187426fbd2e8892d41672c1cf682ed0b93592
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873860"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683765"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Dicas e truques de desempenho do Visual Studio
 
@@ -142,6 +142,10 @@ Para obter mais informações sobre as considerações de desempenho do .NET Com
 - **Remover as cargas de trabalho**
 
     Você pode usar o Instalador do Visual Studio para remover as cargas de trabalho que não são mais usadas. Esta ação pode simplificar o custo de inicialização e do runtime ignorando pacotes e assemblies que não são mais necessários.
+
+- **Adicionar arquivos não controlados a local. gitignore**
+
+    O Visual Studio executa o comando git `git status` com arquivos não controlados para fornecer uma experiência direta quando você adiciona novos arquivos a um repositório. Quando há um grande número de arquivos não controlados, o `git status` pode consumir memória extra. Para ignorar esses arquivos e melhorar o desempenho do `git status` , você pode adicionar esses arquivos ou pastas ao arquivo. gitignore local. Para acessar o arquivo, vá para configurações do **git**  >    >  **configurações do repositório git**. Em seguida, na seção **arquivos git** , clique em **Adicionar** para criar um arquivo. Gitignore ou clique em **Editar** se você já tiver um.
 
 ## <a name="force-a-garbage-collection"></a>Forçar uma coleta de lixo
 

@@ -9,16 +9,18 @@ ms.topic: how-to
 ms.date: 12/11/2020
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: a0db2f2e4993fcc3c986686322b8915615758e13
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 250b89c983da039717982b31873a470172bde0f5
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727288"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683289"
 ---
 # <a name="adding-azure-app-configuration-by-using-visual-studio-connected-services"></a>Adicionando configuração de Azure App usando os serviços conectados do Visual Studio
 
-Neste tutorial, você aprenderá a adicionar facilmente tudo o que precisa para começar a usar Azure App configuração para gerenciar seus sinalizadores de configuração e recursos para projetos Web no Visual Studio, independentemente de você estar usando ASP.NET Core ou qualquer tipo de projeto ASP.NET. Usando o recurso serviços conectados no Visual Studio, você pode fazer com que o Visual Studio adicione automaticamente todo o código, os pacotes NuGet e as definições de configuração que você precisa para se conectar ao recurso de configuração de aplicativo no Azure. Para usar esse recurso, você deve usar o Visual Studio 2019 versão 16,9 ou posterior.
+Neste tutorial, você aprenderá a adicionar facilmente tudo o que precisa para começar a usar Azure App configuração para gerenciar seus sinalizadores de configuração e recursos para projetos Web no Visual Studio. Usando o recurso serviços conectados no Visual Studio, você pode fazer com que o Visual Studio adicione automaticamente todo o código, os pacotes NuGet e as definições de configuração que você precisa para se conectar ao recurso de configuração de aplicativo no Azure. Para usar esse recurso, você deve usar o Visual Studio 2019 versão 16,9 ou posterior.
+
+Você pode usar o recurso serviços conectados de configuração de aplicativo no ASP.NET Core, no console do .NET Core e em projetos .NET Framework.
 
 > [!NOTE]
 > Este tópico aplica-se ao Visual Studio no Windows. Para o Visual Studio para Mac, confira [Serviços conectados no Visual Studio para Mac](/visualstudio/mac/connected-services).
@@ -76,7 +78,7 @@ Neste tutorial, você aprenderá a adicionar facilmente tudo o que precisa para 
 
 Saiba mais sobre a configuração de Azure App em [Azure app documentação de configuração](/azure/azure-app-configuration/overview).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Tutorial para usar a configuração dinâmica em uma configuração de aplicativo conectada ASP.NET Core aplicativo](/azure/azure-app-configuration/enable-dynamic-configuration-aspnet-core)
 - [Serviço conectados (Visual Studio para Mac)](/visualstudio/mac/connected-services)

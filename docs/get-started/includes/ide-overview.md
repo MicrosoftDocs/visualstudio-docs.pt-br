@@ -1,17 +1,17 @@
 ---
-ms.date: 09/22/2020
+ms.date: 03/02/2021
 ms.technology: vs-ide-general
 ms.custom: vs-get-started
 ms.author: tglee
 author: TerryGLee
 manager: jmartens
 ms.topic: include
-ms.openlocfilehash: afc0466e93b8bf2a71db42c08cd2e043107e3bc5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4e36fe11b5eb604a9b109432047da9a3c26df414
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925003"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101750352"
 ---
 O *ambiente de desenvolvimento integrado* do Visual Studio é um painel de inicialização criativo que você pode usar para editar, depurar e compilar o código e, em seguida, publicar um aplicativo. Um IDE (ambiente de desenvolvimento integrado) é um programa repleto de recursos que pode ser usado por muitos aspectos do desenvolvimento de software. Além do editor e do depurador padrão fornecidos pela maioria dos IDEs, o Visual Studio inclui compiladores, ferramentas de preenchimento de código, designers gráficos e muitos outros recursos para facilitar o processo de desenvolvimento de software.
 
@@ -237,17 +237,23 @@ Vamos nos aprofundar e criar um programa simples.
 
 1. Escolha **criar um novo projeto**.
 
-   ![Janela de início do Visual Studio para criar um projeto](../media/vs-2019/start-window-create-new-project.png)
+    :::image type="content" source="../media/vs-2019/start-window-create-new-project.png" alt-text="Captura de tela da janela ' criar um novo projeto ' no Visual Studio 2019.":::
 
-   A janela **Criar um novo projeto** é aberta e mostra diversos *modelos* de projeto. Um modelo contém as configurações e os arquivos básicos necessários para um tipo de projeto fornecido.
+   A janela **Criar um novo projeto** é aberta e mostra diversos *modelos* de projeto. Um modelo contém os arquivos básicos e as configurações necessárias para um determinado tipo de projeto.
 
-1. Para localizar o modelo desejado, digite ou insira **console do .net core** na caixa de pesquisa. A lista de modelos disponíveis é filtrada automaticamente com base nas palavras-chave que você inseriu. Você pode filtrar ainda mais os resultados do modelo, escolhendo **C#** na lista suspensa **Linguagem**. Selecione o modelo **Aplicativo de Console (.NET Core)** e, em seguida, escolha **Avançar**.
+1. Para localizar o modelo desejado, digite ou insira **console do .net core** na caixa de pesquisa. A lista de modelos disponíveis é filtrada automaticamente com base nas palavras-chave que você inseriu. Você pode filtrar ainda mais os resultados do modelo escolhendo **C#** na lista suspensa **todos os idiomas** , **Windows** na lista **todas as plataformas** e **console** na lista **todos os tipos de projeto** .
 
-    ![Criar um novo projeto no Visual Studio](../media/vs-2019/create-new-project.png)
+    Selecione o modelo de **aplicativo de console** e clique em **Avançar**.
 
-1. Na janela **Configurar seu novo projeto**, insira **HelloWorld** na caixa **Nome do projeto**. Como opção, altere a localização do diretório dos arquivos de projeto e escolha **Criar**.
+    :::image type="content" source="../media/vs-2019/create-new-project.png" alt-text="Captura de tela da janela ' criar um novo projeto ' no Visual Studio 2019, em que você seleciona o modelo desejado.":::
 
-   ![Configurar um novo projeto no Visual Studio](../media/vs-2019/configure-new-project.png)
+1. Na janela **configurar seu novo projeto** , digite **HelloWorld** na caixa **nome do projeto** , opcionalmente, altere o local do diretório para os arquivos do projeto (a localidade padrão é `C:\Users\<name>\source\repos` ) e clique em **Avançar**.
+
+    :::image type="content" source="../media/vs-2019/configure-new-project.png" alt-text="Captura de tela da janela ' configurar seu novo projeto ' no Visual Studio 2019, em que você insere o nome do projeto.":::
+
+1. Na janela **informações adicionais** , verifique se **.NET Core 3,1** aparece no menu suspenso **estrutura de destino** e, em seguida, clique em **criar**.
+
+    :::image type="content" source="../media/vs-2019/create-project-additional-info.png" alt-text="Captura de tela da janela ' informações adicionais ' no Visual Studio 2019, onde você seleciona a versão do .NET Core Framework que deseja.":::
 
    O Visual Studio cria o projeto. É um aplicativo "Olá, Mundo" simples que chama o método <xref:System.Console.WriteLine?displayProperty=nameWithType> para exibir a cadeia de caracteres literal "Olá, Mundo!" na janela do console (saída do programa).
 

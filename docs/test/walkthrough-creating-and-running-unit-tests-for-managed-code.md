@@ -15,12 +15,12 @@ manager: jmartens
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: 264744d7fe39c77da625c778d1bfea51f55e1f2d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a6ab205b7f651f8bb5954bee4998602c79fd78e7
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948004"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683923"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>Passo a passo: Criar e executar testes de unidade para código gerenciado
 
@@ -55,9 +55,14 @@ Este artigo orienta você pela criação, execução e personalização de uma s
 
 2. Na janela iniciar, escolha **criar um novo projeto**.
 
-3. Pesquise o modelo de projeto **Aplicativo de Console (.NET Core)** do C#, selecione-o e, em seguida, clique em **Avançar**.
+3. Pesquise e selecione o modelo de projeto de **aplicativo de console** em C# para .NET Core e clique em **Avançar**.
 
-4. Dê ao projeto o nome **Bank** e clique em **Criar**.
+   > [!NOTE]
+   > Se você não vir o modelo de **aplicativo de console** , poderá instalá-lo na janela **criar um novo projeto** . Na mensagem **Não encontrou o que precisa?**, escolha o link **Instalar mais ferramentas e recursos**. Em seguida, no Instalador do Visual Studio, escolha a carga de trabalho de **desenvolvimento multiplataforma do .NET Core**.
+
+4. Nomeie o **banco** do projeto e clique em **Avançar**.
+
+   Escolha a estrutura de destino recomendada (.NET Core 3,1) ou .NET 5 e, em seguida, escolha **criar**.
 
    O projeto Bank é criado e exibido no **Gerenciador de Soluções** com o arquivo *Program.cs* aberto no editor de códigos.
 
@@ -163,11 +168,14 @@ Agora você tem um projeto com métodos que você pode testar. Neste artigo, os 
 
 ::: moniker range=">=vs-2019"
 
-2. Pesquise pelo modelo de **Projeto de Teste MSTest (.NET Core)** do C#, selecione-o e, em seguida, clique em **Avançar**.
+2. Digite **teste de unidade** na caixa de pesquisa, **Selecione C#** como o idioma e, em seguida, selecione o modelo projeto de **teste de unidade** C# para .NET Core e clique em **Avançar**.
 
-3. Nomeie o projeto como **BankTests**.
+   > [!NOTE]
+   > A partir do Visual Studio 2019 versão 16,9, o nome do modelo de projeto MSTest mudou de **MSTest Unit Test Project (.NET Core)** para **projeto de teste de unidade**.
 
-4. Clique em **Criar**.
+3. Nomeie o projeto **BankTests** e clique em **Avançar**.
+
+4. Escolha a estrutura de destino recomendada (.NET Core 3,1) ou .NET 5 e, em seguida, escolha **criar**.
 
    O projeto **BankTests** é adicionado à solução **Bank**.
 

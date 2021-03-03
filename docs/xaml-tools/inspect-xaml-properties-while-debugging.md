@@ -2,7 +2,7 @@
 title: Inspecionar propriedades XAML durante a depuração | Microsoft Docs
 description: Saiba como usar a árvore visual ao vivo e as ferramentas do Gerenciador de propriedades ao vivo durante a depuração para inspecionar as propriedades XAML e obter uma exibição de árvore dos elementos da interface do usuário.
 ms.custom: SEO-VS-2020
-ms.date: 11/12/2019
+ms.date: 03/02/2021
 ms.topic: how-to
 ms.assetid: 390edde4-7b8d-4c89-8d69-55106b7e6b11
 author: TerryGLee
@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: d9033921c9e9863e5210721fb2c1244c326802d4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 76edf9f1af414a67abd83cec3c2f597c6cdf8707
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881367"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683457"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>Inspecione as propriedades XAML durante a depuração
 
@@ -34,7 +34,17 @@ Vamos começar com um aplicativo WPF muito simples que tem um modo de exibição
 
 ### <a name="create-the-project"></a>Criar o projeto
 
-1. Crie um novo aplicativo WPF em c# (**arquivo**  >  **novo**  >  **projeto**, digite "C# WPF" e escolha **aplicativo WPF (.NET Core)** ou **aplicativo WPF (.NET Framework)**). Nomeie-o como **TestXAML**.
+::: moniker range="vs-2019"
+
+1. Crie um novo aplicativo WPF c# (**arquivo** > **novo** > **projeto**, digite "C# WPF", escolha o modelo de projeto de **aplicativo do WPF** , nomeie o projeto **TestXAML** e, em seguida, verifique se o **.NET Core 3,1** aparece na lista suspensa **estrutura de destino** .
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+1. Crie um novo aplicativo do WPF em c# (**arquivo**  >  **novo**  >  **projeto**, digite "C# WPF" e escolha **aplicativo WPF (.NET Framework)**). Nomeie-o como **TestXAML**.
+
+::: moniker-end
 
 1. Altere MainWindow. XAML para o seguinte:
 

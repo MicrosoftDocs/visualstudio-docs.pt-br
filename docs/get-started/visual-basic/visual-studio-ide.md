@@ -1,7 +1,7 @@
 ---
 title: Visão geral para desenvolvedores de Visual Basic
 description: Saiba como usar o Visual Studio para editar, depurar e compilar código e, em seguida, publicar um aplicativo como um desenvolvedor de Visual Basic.
-ms.date: 11/15/2018
+ms.date: 03/02/2021
 ms.technology: vs-ide-general
 ms.custom:
 - get-started
@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3d771fac2cf494e92cbc27fdbdca0b78af97b67e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 398070e0214e36f696bb69614bb6a51b3462a551
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944388"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101682938"
 ---
 # <a name="welcome-to-the-visual-studio-ide--visual-basic"></a>Bem-vindo ao IDE do Visual Studio | Visual Basic
 
@@ -200,13 +200,13 @@ Nesta seção, você criará um projeto simples para experimentar algumas coisas
 
 ::: moniker range="vs-2017"
 
-Para começar, [baixe o Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) e instale-o no sistema. O instalador modular permite escolher e instalar *cargas de trabalho*, que são grupos de recursos necessários para a linguagem de programação ou para a plataforma de sua preferência. Para seguir as etapas de [criação de um programa](#create-a-program), selecione a carga de trabalho **Desenvolvimento multiplataforma do .NET Core** durante a instalação.
+Para começar, [baixe o Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) e instale-o no sistema. O instalador modular permite que você selecione e instale *cargas de trabalho*, que são grupos de recursos necessários para a linguagem de programação ou plataforma que você preferir. Para seguir as etapas de [criação de um programa](#create-a-program), selecione a carga de trabalho **Desenvolvimento multiplataforma do .NET Core** durante a instalação.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Para começar, [baixe o Visual Studio](https://visualstudio.microsoft.com/downloads) e instale-o no sistema. O instalador modular permite escolher e instalar *cargas de trabalho*, que são grupos de recursos necessários para a linguagem de programação ou para a plataforma de sua preferência. Para seguir as etapas de [criação de um programa](#create-a-program), selecione a carga de trabalho **Desenvolvimento multiplataforma do .NET Core** durante a instalação.
+Para começar, [baixe o Visual Studio](https://visualstudio.microsoft.com/downloads) e instale-o no sistema. O instalador modular permite que você selecione e instale *cargas de trabalho*, que são grupos de recursos necessários para a linguagem de programação ou plataforma que você preferir. Para seguir as etapas de [criação de um programa](#create-a-program), selecione a carga de trabalho **Desenvolvimento multiplataforma do .NET Core** durante a instalação.
 
 ::: moniker-end
 
@@ -230,9 +230,10 @@ Para alterar para o tema **Escuro**:
 
 ::: moniker range=">=vs-2019"
 
-1. Abra o Visual Studio. Na janela de início, escolha **Continuar sem código**.
+1. Abra o Visual Studio. Na janela iniciar, selecione **continuar sem código**.
 
-   ![A janela de início no Visual Studio 2019](media/vs-2019/continue-without-code.png)
+
+    :::image type="content" source="media/vs-2019/continue-without-code.png" alt-text="Captura de tela da janela inicial no Visual Studio 2019, com o link ' continuar sem código ' realçado.":::
 
    O IDE abre.
 
@@ -240,7 +241,7 @@ Para alterar para o tema **Escuro**:
 
 2. Na barra de menus, escolha **ferramentas**  >  **Opções** para abrir a caixa de diálogo **Opções** .
 
-3. Na   >  página opções **gerais** do ambiente, altere a seleção de **tema de cores** para **escuro** e, em seguida, escolha **OK**.
+3. Na   >  página opções **gerais** do ambiente, altere a seleção de **tema de cores** para **escuro** e clique em **OK**.
 
    ![Alterar o tema de cores para escuro no Visual Studio](media/change-color-theme.png)
 
@@ -264,13 +265,13 @@ Primeiro, configuraremos o Visual Studio para usar configurações de ambiente a
 
 1. Na barra de menus, escolha **ferramentas**  >  **importar e exportar configurações**.
 
-2. No **Assistente de Importação e Exportação de Configurações**, selecione **Redefinir todas as configurações** na primeira página e, em seguida, escolha **Avançar**.
+2. No **Assistente de importação e exportação de configurações**, selecione **redefinir todas as configurações** na primeira página e clique em **Avançar**.
 
-3. Na página **Salvar Configurações Atuais**, selecione uma opção para salvar suas configurações atuais ou não e, em seguida, escolha **Avançar**. Se você ainda não personalizou as configurações, selecione **Não, apenas redefina as configurações, substituindo minhas configurações atuais**.
+3. Na página **salvar configurações atuais** , selecione uma opção para salvar as configurações atuais ou não e clique em **Avançar**. Se você ainda não personalizou as configurações, selecione **Não, apenas redefina as configurações, substituindo minhas configurações atuais**.
 
-4. Na página **Escolher uma Coleção Padrão de Configurações**, escolha **Visual Basic** e depois **Concluir**.
+4. Na página **escolher uma coleção padrão de configurações** , escolha **Visual Basic** e clique em **concluir**.
 
-5. Na página **Redefinição Concluída**, escolha **Fechar**.
+5. Na página **Redefinir conclusão** , clique em **fechar**.
 
 Para conhecer outras maneiras pelas quais você pode personalizar o IDE, confira [Personalizar o Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
 
@@ -344,21 +345,25 @@ Vamos nos aprofundar e criar um programa simples.
 
 ::: moniker range=">=vs-2019"
 
-1. Na barra de menus do Visual Studio, escolha **Arquivo** > **Novo Projeto**.
+1. Na barra de menus do Visual Studio, escolha **arquivo**  >  **novo**  >  **projeto**. (Como alternativa, pressione **Ctrl** + **Shift** + **N**.)
 
-   ![Arquivo > Novo projeto na barra de menus](media/vs-2019/file-new-project.png)
+    :::image type="content" source="media/vs-2019/file-new-project.png" alt-text="Captura de tela do arquivo > nova seleção de projeto de > na barra de menus do Visual Studio 2019.":::
 
-   A janela **Criar um novo projeto** é aberta e mostra diversos *modelos* de projeto. Um modelo contém as configurações e os arquivos básicos necessários para um tipo de projeto fornecido.
+   A janela **Criar um novo projeto** é aberta e mostra diversos *modelos* de projeto. Um modelo contém os arquivos básicos e as configurações necessárias para um determinado tipo de projeto.
 
-1. Para localizar o modelo desejado, digite ou insira **console do .net core** na caixa de pesquisa. A lista de modelos disponíveis é filtrada automaticamente com base nas palavras-chave que você inseriu. Você pode filtrar ainda mais os resultados do modelo, escolhendo **Visual Basic** na lista suspensa **Linguagem**.
+1. Para localizar o modelo desejado, digite ou insira **console do .net core** na caixa de pesquisa. A lista de modelos disponíveis é filtrada automaticamente com base nas palavras-chave que você inseriu. Você pode filtrar ainda mais os resultados do modelo escolhendo **Visual Basic** na lista suspensa **todos os idiomas** , **Windows** na lista **todas as plataformas** e **console** na lista **todos os tipos de projeto** .
 
-1. Selecione o modelo **Aplicativo de Console (.NET Core)** e, em seguida, escolha **Avançar**.
+   Selecione o modelo de **aplicativo de console** e clique em **Avançar**.
 
-   ![Criar um novo projeto no Visual Studio](media/vs-2019/create-new-project.png)
+    :::image type="content" source="media/vs-2019/create-new-project.png" alt-text="Captura de tela da janela ' criar um novo projeto ' no Visual Studio 2019, em que você seleciona o modelo desejado.":::
 
-1. Na janela **Configurar seu novo projeto**, insira **HelloWorld** na caixa **Nome do projeto**. Como opção, altere a localização do diretório dos arquivos de projeto e escolha **Criar**.
+1. Na janela **configurar seu novo projeto** , digite **HelloWorld** na caixa **nome do projeto** , opcionalmente, altere o local do diretório para os arquivos do projeto (a localidade padrão é `C:\Users\<name>\source\repos` ) e clique em **Avançar**.
 
-   ![Configurar um novo projeto no Visual Studio](media/vs-2019/configure-new-project.png)
+    :::image type="content" source="media/vs-2019/configure-new-project.png" alt-text="Captura de tela da janela ' configurar seu novo projeto ' no Visual Studio 2019, em que você insere o nome do projeto.":::
+
+1. Na janela **informações adicionais** , verifique se **.NET Core 3,1** aparece no menu suspenso **estrutura de destino** e, em seguida, clique em **criar**.
+
+    :::image type="content" source="media/vs-2019/create-project-additional-info.png" alt-text="Captura de tela da janela ' informações adicionais ' no Visual Studio 2019, onde você seleciona a versão do .NET Core Framework que deseja.":::
 
    O Visual Studio cria o projeto. É um aplicativo "Olá, Mundo" simples que chama o método <xref:System.Console.WriteLine?displayProperty=nameWithType> para exibir a cadeia de caracteres literal "Olá, Mundo!" na janela do console (saída do programa).
 

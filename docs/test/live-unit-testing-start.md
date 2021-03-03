@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: ea87135b1f60c7ae65a8bc25399604151ab2fcee
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d411465869cc960631063d09752d38536af94119
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887803"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683605"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Introdução ao Live Unit Testing
 
@@ -69,7 +69,7 @@ Agora que você criou a solução, criará uma biblioteca de classes chamada Str
 
 ::: moniker range=">=vs-2019"
 
-2. Digite **biblioteca de classes** na caixa de pesquisa de modelo e selecione o modelo **Biblioteca de Classes (.NET Standard)**. Clique em **Próximo**.
+2. Digite **biblioteca de classes** na caixa de pesquisa de modelo e selecione o modelo **Biblioteca de Classes (.NET Standard)**. Clique em **Avançar**.
 
    > [!NOTE]
    > Como nossa biblioteca tem como destino .NET Standard em vez de uma implementação .NET específica, ela pode ser chamada de qualquer implementação do .NET que dê suporte a essa versão do .NET Standard. Para obter mais informações, confira [.NET Standard](/dotnet/standard/net-standard).
@@ -113,20 +113,26 @@ A próxima etapa é criar o projeto de teste de unidade para testar a biblioteca
 
 4. Selecione **OK** para criar o projeto.
 
+   > [!NOTE]
+   > Este tutorial de introdução usa o Live Unit Testing com o framework de teste do MSTest. Você também pode usar as estruturas de teste xUnit e NUnit.
+
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Digite **teste de unidade** na caixa de pesquisa de modelo e selecione o modelo de **projeto de teste MSTest (.NET Core)** . Clique em **Próximo**.
+2. Digite **teste de unidade** na caixa de pesquisa de modelo, selecione **C#** como o idioma e, em seguida, selecione o modelo projeto de **teste de unidade** para .NET Core. Clique em **Avançar**.
 
-3. Nomeie o projeto **StringLibraryTests**.
+   > [!NOTE]
+   > A partir do Visual Studio 2019 versão 16,9, o nome do modelo de projeto MSTest mudou de **MSTest Unit Test Project (.NET Core)** para **projeto de teste de unidade**.
 
-4. Clique em **Criar** para criar o projeto.
+3. Nomeie o projeto **StringLibraryTests** e clique em **Avançar**.
 
-::: moniker-end
+4. Escolha a estrutura de destino recomendada (.NET Core 3,1) ou .NET 5 e, em seguida, escolha **criar**.
 
    > [!NOTE]
    > Este tutorial de introdução usa o Live Unit Testing com o framework de teste do MSTest. Você também pode usar as estruturas de teste xUnit e NUnit.
+
+::: moniker-end
 
 5. O projeto de teste de unidade não pode acessar automaticamente a biblioteca de classes que ele está testando. Forneça acesso à biblioteca de teste adicionando uma referência ao projeto de biblioteca de classes. Para fazer isso, clique com o botão direito do mouse no `StringLibraryTests` projeto e selecione **Adicionar**  >  **referência**. Na caixa de diálogo **Gerenciador de referências** , verifique se a guia **solução** está selecionada e selecione o projeto StringLibrary, conforme mostrado na ilustração a seguir.
 

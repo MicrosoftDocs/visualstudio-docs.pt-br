@@ -5,9 +5,6 @@ ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
-- CSharp
-- VB
-- FSharp
 - C++
 helpviewer_keywords:
 - project templates, debugging
@@ -20,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcd4375b475106b0428f21057f5b44fc8bee8700
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d91d18208a2d05fc4d4b60da98e3e3f8e3c0c835
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872414"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683048"
 ---
 # <a name="debugging-preparation-c-project-types"></a>Preparação da depuração: tipos de projeto C++
 Esta seção descreve como depurar os tipos de projeto básicos criados pelos modelos de projeto do [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)].
@@ -40,8 +37,6 @@ Esta seção descreve como depurar os tipos de projeto básicos criados pelos mo
 - [Para depurar um aplicativo Win32 C ou C++](#BKMK_To_debug_a_C_or_C___Win32_application)
 
 - [Para definir manualmente uma configuração de depuração](#BKMK_To_manually_set_a_Debug_configuration)
-
-  [Aplicativos do Windows Forms (.NET)](#BKMK_Windows_Forms_Applications___NET_)
 
 ## <a name="recommended-property-settings"></a><a name="BKMK_Recommended_Property_Settings"></a> Configurações de propriedade recomendadas
  Certas propriedades devem ser definidas da mesma maneira para todos os cenários não gerenciados de depuração. As tabelas a seguir exibem as configurações de propriedade recomendadas. As configurações não listadas aqui podem variar entre os tipos de projeto não gerenciados diferentes. Para obter mais informações, consulte [configurações de projeto para uma configuração de depuração do C++](../debugger/project-settings-for-a-cpp-debug-configuration.md).
@@ -97,22 +92,8 @@ Esta seção descreve como depurar os tipos de projeto básicos criados pelos mo
 
    [Neste tópico](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)
 
-## <a name="windows-forms-applications-net"></a><a name="BKMK_Windows_Forms_Applications___NET_"></a> Windows Forms aplicativos (.NET)
- O modelo **Aplicativo do Windows Forms (.NET)** cria um aplicativo do Windows Forms do [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]. Para obter mais informações, consulte [Como criar um projeto de aplicativos do Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100)).
-
- Depurar esse tipo de aplicativo no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] é semelhante a depurar em aplicativos gerenciados do Windows Forms.
-
- Quando você cria um projeto do Windows Forms com o modelo de projeto, o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] cria automaticamente as configurações necessárias para as configurações de depuração e versão. Se necessário, você pode alterar essas configurações na caixa de diálogo **\<project name> páginas de propriedades** . Para obter mais informações, confira [Configurações de depuração e versão](../debugger/how-to-set-debug-and-release-configurations.md).
-
- Para obter mais informações, consulte [configurações de projeto para uma configuração de depuração do C++](../debugger/project-settings-for-a-cpp-debug-configuration.md).
-
- Outro modo de depurar um aplicativo do Windows Forms 2 é iniciar o aplicativo fora do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] e anexar a ele. Para obter mais informações, confira [Anexando a um programa ou a vários programas em execução](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).
-
- [Neste tópico](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)
-
 ## <a name="see-also"></a>Confira também
 - [Introdução ao depurador](../debugger/debugger-feature-tour.md)
 - [Configurações do projeto para uma configuração de depuração do C++](../debugger/project-settings-for-a-cpp-debug-configuration.md)
 - [Anexando a um programa ou a vários programas em execução](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
 - [Configurações de depuração e versão](../debugger/how-to-set-debug-and-release-configurations.md)
-- [Como Criar um Projeto de Aplicativo do Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))

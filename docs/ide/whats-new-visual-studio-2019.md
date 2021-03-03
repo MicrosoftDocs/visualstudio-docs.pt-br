@@ -2,7 +2,7 @@
 title: Novidades no Visual Studio 2019
 titleSuffix: ''
 description: Saiba mais sobre os novos recursos do Visual Studio 2019.
-ms.date: 11/10/2020
+ms.date: 03/02/2021
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,16 +15,16 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 41ccdd8ef7285ba0e5fa211b6b9f76fead5a2f3c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e3dc790310fdff71539c6cae354a0170ec36e65e
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960566"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684025"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novidades no Visual Studio 2019
 
-**Atualizado para a [versão 16,8](/visualstudio/releases/2019/release-notes/)**
+**Atualizado para a [versão 16,9](/visualstudio/releases/2019/release-notes/)**
 
 >[!div class="button"]
 >[Baixar o Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
@@ -238,15 +238,15 @@ Por que enviar comentários à equipe do Visual Studio? Porque nós levamos a s�
 
 * Se você tiver um problema em que o Visual Studio pare de responder, falha ou outro problema de desempenho, você poderá compartilhar facilmente as etapas de reprodução e os arquivos de suporte conosco usando o [relatório de uma ferramenta problemática](how-to-report-a-problem-with-visual-studio.md) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 * [O que há de novo nos documentos do Visual Studio](whats-new-visual-studio-docs.md)
 * [Notas de versão do Visual Studio 2019](/visualstudio/releases/2019/release-notes/)
 * [Notas de versão do Visual Studio 2019 para Mac](/visualstudio/releasenotes/vs2019-mac-relnotes/)
 * [O que há de novo no SDK do Visual Studio 2019](../extensibility/whats-new-visual-studio-2019-sdk.md)
 * [Novidades do C++ no Visual Studio](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio/)
-* [O que há de novo no C# 8,0](/dotnet/csharp/whats-new/csharp-8/)
-* [Novidades do .NET Core 3.1](/dotnet/core/whats-new/dotnet-core-3-1/)
+* [O que há de novo no C# 9,0](/dotnet/csharp/whats-new/csharp-9)
+* [Novidades do .NET 5](/dotnet/core/dotnet-five)
 * [O que há de novo no .NET Framework](/dotnet/framework/whats-new/)
 * [Conferência do Microsoft Build](https://www.microsoft.com/build)
 * [Conferência do Microsoft Ignite](https://www.microsoft.com/ignite)

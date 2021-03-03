@@ -2,7 +2,7 @@
 title: Personalizar layouts de janela
 description: Saiba como personalizar as características que o Windows exibe para criar layouts que funcionam melhor para vários fluxos de trabalho de desenvolvimento.
 ms.custom: SEO-VS-2020
-ms.date: 07/31/2020
+ms.date: 03/02/2021
 ms.topic: conceptual
 f1_keywords:
 - vs.windows
@@ -25,12 +25,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f6983f9a4b16cc9ed6ece5779cfc44cd7ffa9259
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bd8859b98e54aa9692beaa98dd0f2c2ca70e2796
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910858"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101682588"
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Personalizar layouts de janela no Visual Studio
 
@@ -163,7 +163,17 @@ Primeiro, crie uma solução de teste que tem dois projetos, cada um com um layo
 
 #### <a name="create-a-ui-project-and-customize-the-layout"></a>Criar um projeto de interface do usuário e personalizar o layout
 
+::: moniker range="vs-2017"
+
 1. Crie um projeto de **Aplicativo do WPF** do C#. Imagine que, neste projeto, você vai estar desenvolvendo uma interface do usuário. Você deseja maximizar o espaço da janela de designer e tirar outras janelas de ferramentas do caminho.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. Crie um novo projeto de **aplicativo do WPF** em C#. Imagine que, neste projeto, você vai estar desenvolvendo uma interface do usuário. Você deseja maximizar o espaço da janela de designer e tirar outras janelas de ferramentas do caminho.
+
+::: moniker-end
 
 2. Se você tiver vários monitores, puxe a janela de **Gerenciador de soluções** e a janela **Propriedades** para o segundo monitor. Em um sistema de monitor único, tente fechar todas as janelas exceto o designer.
 
@@ -206,6 +216,6 @@ Para lembrar-se do atalho de teclado atribuído ao layout, escolha **janela**  >
 
 Esses layouts usam perfis móveis automaticamente entre edições do Visual Studio e também entre instâncias do Blend em computadores separados e de qualquer edição Express para qualquer outra organização Express. No entanto, os layouts não são movidos entre o Visual Studio, o Blend e o Express.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Como: mover-se no IDE](../ide/how-to-move-around-in-the-visual-studio-ide.md)

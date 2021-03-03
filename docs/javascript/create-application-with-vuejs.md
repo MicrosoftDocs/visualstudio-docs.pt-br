@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 52281c403ceb0f2708aa546cbd73559593c419be
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 338e53d576e9f4d73b32c3f432223480d9e708c3
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942822"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683937"
 ---
 # <a name="create-a-vuejs-application-using-nodejs-tools-for-visual-studio"></a>Criar um aplicativo Vue.js usando as Ferramentas Node.js para Visual Studio
 
@@ -68,20 +68,22 @@ Neste exemplo, você usará um aplicativo ASP.NET Core vazio (C#). No entanto, v
 
 #### <a name="create-an-empty-project"></a>Criar um projeto Vazio
 
-1. Abra o Visual Studio e crie um projeto.
+* Abra o Visual Studio e crie um projeto.
 
     ::: moniker range=">=vs-2019"
-    Pressione **Esc** para fechar a janela de início. Digite **Ctrl+Q** para abrir a caixa de pesquisa, digite **asp.net**, escolha **Criar um novo projeto de Aplicativo Web ASP.NET Core**. Na caixa de diálogo que aparece, digite o nome do **aplicativo cliente** e, em seguida, escolha **Criar**.
+    No Visual Studio 2019, escolha **criar um novo projeto** na janela iniciar. Se a janela iniciar não estiver aberta, escolha **arquivo**  >  **Iniciar janela**. Digite **aplicativo Web**, escolha **C#** como idioma, escolha **ASP.NET Core vazio** e, em seguida, escolha **Avançar**. Na próxima tela, nomeie o projeto **cliente-aplicativo** e escolha **Avançar**.
+
+    Escolha a estrutura de destino recomendada (.NET Core 3,1) ou .NET 5 e, em seguida, escolha **criar**.
     ::: moniker-end
     ::: moniker range="vs-2017"
     Na barra de menus superior, escolha **arquivo**  >  **novo**  >  **projeto**. No painel esquerdo da caixa de diálogo **Novo Projeto**, expanda **Visual C#** e escolha **Web**. No painel central, escolha **aplicativo Web ASP.NET Core**, digite o nome do **aplicativo de cliente** e, em seguida, escolha **OK**.
+
+    Selecione **Vazio** e, em seguida, clique em **OK**.
+
+    O Visual Studio criará o projeto, que será aberto no Gerenciador de Soluções (painel direito).
     ::: moniker-end
 
     Se o modelo de projeto **Aplicativo Web ASP.NET Core** não for exibido, instale as cargas de trabalho **desenvolvimento do ASP.NET e para a Web** e **Desenvolvimento do .NET Core** primeiro. Para instalar as cargas de trabalho, clique no link **Abrir Instalador do Visual Studio** no painel esquerdo da caixa de diálogo **Novo Projeto** (selecione **Arquivo** > **Novo** > **Projeto**). O Instalador do Visual Studio é iniciado. Selecione as cargas de trabalho necessárias.
-
-1. Selecione **Vazio** e, em seguida, clique em **OK**.
-
-    O Visual Studio criará o projeto, que será aberto no Gerenciador de Soluções (painel direito).
 
 #### <a name="configure-the-project-startup-file"></a>Configurar o arquivo de inicialização do projeto
 

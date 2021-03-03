@@ -3,7 +3,7 @@ title: 'Tutorial: introdução ao C# e ASP.NET Core'
 titleSuffix: ''
 description: Saiba como criar um aplicativo Web do ASP.NET Core no Visual Studio com C#, passo a passo.
 ms.custom: seodec18, get-started
-ms.date: 05/29/2019
+ms.date: 02/12/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 63db3f62f4e7c763bf02fbfec2dd2f52c32d3264
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 026f6f2902b537312c0714b7eeb61d10e0fb980d
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956354"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683098"
 ---
 # <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>Tutorial: Introdução ao C# e ao ASP.NET Core no Visual Studio
 
@@ -106,16 +106,16 @@ Se o modelo de projeto **Aplicativo Web do ASP.NET Core** não for exibido, voc�
 
 1. Na janela iniciar, escolha **criar um novo projeto**.
 
-   ![Exibir a janela 'Criar um novo projeto'](../../get-started/media/vs-2019/create-new-project-dark-theme.png)
+   :::image type="content" source="../../get-started/media/vs-2019/create-new-project-dark-theme.png" alt-text="Exibir a janela 'Criar um novo projeto'":::
 
-1. Na janela **Criar um novo projeto**, insira ou digite *ASP.NET* na caixa de pesquisa. Em seguida, escolha **C#** na lista Linguagem de programação e, em seguida, escolha **Windows** na lista Plataforma.
+1. Na janela **criar um novo projeto** , escolha **C#** na lista idioma. Em seguida, escolha **Windows** na lista de plataformas e **Web** na lista de tipos de projeto.
 
-   Depois de aplicar os filtros de linguagem de programação e plataforma, escolha o modelo **Aplicativo Web ASP.NET Core (.NET Core)** e, em seguida, escolha **Avançar**.
+      Depois de aplicar o idioma, a plataforma e os filtros de tipo de projeto, escolha o modelo do **aplicativo Web ASP.NET Core** e, em seguida, escolha **Avançar**.
 
-   ![Escolher o modelo de C# para o Aplicativo Web ASP.NET Core](./media/vs-2019/csharp-create-new-project-search-aspnet-core-filtered.png)
+   :::image type="content" source="./media/vs-2019/csharp-create-new-project-aspnet-core.png" alt-text="Escolha o modelo C# para o aplicativo Web ASP.NET Core":::
 
    > [!NOTE]
-   > Se não vir o modelo **Aplicativo Web ASP.NET Core**, você poderá instalá-lo da janela **Criar um novo projeto**. Na mensagem **Não encontrou o que precisa?**, escolha o link **Instalar mais ferramentas e recursos**.
+   > Se você não vir o modelo de **aplicativo Web ASP.NET Core** , poderá instalá-lo na janela **criar um novo projeto** . Na mensagem **Não encontrou o que precisa?**, escolha o link **Instalar mais ferramentas e recursos**.
    >
    > ![O link 'Instalar mais ferramentas e recursos' da mensagem 'Não encontrou o que precisa?' na janela 'Criar novo projeto'](../../get-started/media/vs-2019/not-finding-what-looking-for.png)
    >
@@ -125,15 +125,21 @@ Se o modelo de projeto **Aplicativo Web do ASP.NET Core** não for exibido, voc�
    >
    > Depois disso, escolha o botão **Modificar** no Instalador do Visual Studio. Se você for solicitado a salvar seu trabalho, faça isso. Em seguida, escolha **Continuar** para instalar a carga de trabalho. Em seguida, retorne para a etapa 2 deste procedimento para "[Criar um projeto](#create-a-project)".
 
-1. Na janela **Configurar seu novo projeto**, digite ou insira *MyCoreApp* na caixa **Nome do projeto**. Em seguida, escolha **criar**.
+1. Na janela **Configurar seu novo projeto**, digite ou insira *MyCoreApp* na caixa **Nome do projeto**. Em seguida, escolha **Avançar**.
 
-   ![Na janela "Configurar seu novo projeto", dê ao projeto o nome 'MyCoreApp'](./media/vs-2019/csharp-name-your-aspnet-mycoreapp-project.png)
+   :::image type="content" source="./media/vs-2019/csharp-name-your-aspnet-app.png" alt-text="Na janela &quot;Configurar seu novo projeto&quot;, dê ao projeto o nome 'MyCoreApp'":::
 
-1. Na janela **criar um novo aplicativo Web ASP.NET Core** , verifique se **ASP.NET Core 3,0** aparece no menu suspenso superior. Em seguida, escolha **Aplicativo Web**, que inclui Razor Pages de exemplo. Em seguida, escolha **Criar**.
+1. Na janela **informações adicionais** , verifique se **.NET Core 3,1** aparece no menu suspenso superior. Observe que você pode optar por habilitar o suporte do Docker marcando a caixa. Você também pode adicionar suporte de autenticação clicando no botão Alterar autenticação. Lá, escolha entre:
+    - Nenhum: nenhuma autenticação.
+    - Contas individuais: elas são armazenadas em um banco de dados local ou baseado no Azure.
+    - Plataforma de identidade da Microsoft: essa opção usa Active Directory, Azure AD ou Microsoft 365 para autenticação.
+    - Windows: adequado para aplicativos de intranet.
+    
+    Deixe a caixa **habilitar Docker** desmarcada e selecione **nenhuma** para o tipo de autenticação. Em seguida, selecione **Criar**.
 
-   ![A janela 'Criar um novo Aplicativo Web ASP.NET Core'](./media/vs-2019/csharp-create-aspnet-razor-pages-app.png)
+   :::image type="content" source="./media/vs-2019/aspnet-core-additional-information.png" alt-text="na janela ' informações adicionais ', verifique se o .NET Core 3,1 está selecionado e deixe todos os padrões":::
 
-   O Visual Studio abre seu novo projeto.
+   O Visual Studio abrirá seu novo projeto.
 
 ::: moniker-end
 
@@ -368,6 +374,6 @@ Parabéns por concluir este tutorial. Esperamos que você tenha aprendido um pou
 > [!div class="nextstepaction"]
 > [Criar um aplicativo Web Razor Pages com ASP.NET Core](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1&preserve-view=true)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Publicar seu aplicativo Web no Serviço de Aplicativo do Azure usando o Visual Studio](../../deployment/quickstart-deploy-to-azure.md)

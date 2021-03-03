@@ -6,16 +6,16 @@ keywords: ''
 author: ornellaalt
 ms.author: ornella
 manager: jmartens
-ms.date: 11/10/2020
+ms.date: 3/2/2021
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 0e550d6577a141cbe33adcfdd6c526fc60d8abc3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c5b9805b466f23be12fb6c66f0231d5c9a6ccec8
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937961"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683690"
 ---
 ## <a name="test-agent"></a>Test Agent
 
@@ -27,7 +27,7 @@ ms.locfileid: "99937961"
 
 ID do componente | Nome | Versão | Tipo de dependência
 --- | --- | --- | ---
-Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Principais recursos do Test Agent | 16.0.28315.86 | Obrigatório
+Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Principais recursos do Test Agent | 16.9.31004.209 | Obrigatório
 
 ## <a name="unaffiliated-components"></a>Componentes não afiliados
 

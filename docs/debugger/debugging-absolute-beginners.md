@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fbb99d2b41a8a354ec450e99dab13efb6ec60248
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5d57fa806ae565d0752fb9970c3f335295e83535
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872918"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684224"
 ---
 # <a name="how-to-debug-for-absolute-beginners"></a>Como depurar para iniciantes absolutos
 
@@ -76,22 +76,24 @@ Para ajudar a ilustrar esses conceitos, nós o levamos por meio de um código de
 
 Em seguida, criaremos um aplicativo que tem alguns bugs.
 
-1. Você deve ter o Visual Studio instalado e a carga de **trabalho do .net desktop Development** ou o **desenvolvimento da multiplataforma entre plataformas do .NET Core** instalada, dependendo do tipo de aplicativo que você deseja criar.
+1. Você deve ter o Visual Studio instalado e a carga de trabalho de **desenvolvimento da plataforma cruzada do .NET Core** instalada.
 
     Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads/) para instalá-lo gratuitamente.
 
-    Se você precisar instalar a carga de trabalho, mas já tiver o Visual Studio, clique em **ferramentas**  >  **obter ferramentas e recursos**. O Instalador do Visual Studio é iniciado. Escolha a carga de **trabalho .net desktop Development** (ou **desenvolvimento de plataforma cruzada do .NET Core**) e, em seguida, escolha **Modificar**.
+    Se você precisar instalar a carga de trabalho, mas já tiver o Visual Studio, clique em **ferramentas**  >  **obter ferramentas e recursos**. O Instalador do Visual Studio é iniciado. Escolha a carga de trabalho de **desenvolvimento de plataforma cruzada do .NET Core** e escolha **Modificar**.
 
 1. Abra o Visual Studio.
 
     ::: moniker range=">=vs-2019"
-    Na janela iniciar, escolha **criar um novo projeto**. Digite **console** na caixa de pesquisa e escolha o **aplicativo de console (.NET Core)** ou o **aplicativo de console (.NET Framework)**. Escolha **Próxima**. Digite um nome de projeto como **ConsoleApp-FirstApp** e clique em **Criar**.
+    Na janela iniciar, escolha **criar um novo projeto**. Digite **console** na caixa de pesquisa, selecione **C#** como o idioma e, em seguida, escolha **aplicativo de console** para .NET Core. Escolha **Próxima**. Digite um nome de projeto como **ConsoleApp-FirstApp** e clique em **Avançar**.
+
+    Escolha a estrutura de destino recomendada (.NET Core 3,1) ou .NET 5 e, em seguida, escolha **criar**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Na barra de menus superior, escolha **arquivo**  >  **novo**  >  **projeto**. No painel esquerdo da caixa de diálogo **Novo projeto**, em **Visual C#**, escolha **Aplicativo de Console** e, em seguida, no painel central, escolha **Aplicativo de Console (.NET Framework)** ou **Aplicativo de Console (.NET Core)**. Digite um nome como **ConsoleApp-FirstApp** e clique em **OK**.
+    Na barra de menus superior, escolha **arquivo**  >  **novo**  >  **projeto**. No painel esquerdo da caixa de diálogo **novo projeto** , em **Visual C#**, escolha **aplicativo de console** e, no painel central, escolha o **aplicativo de console (.NET Core)**. Digite um nome como **ConsoleApp-FirstApp** e clique em **OK**.
     ::: moniker-end
 
-    Caso não veja o modelo de projeto **Aplicativo de Console (.NET Framework)** ou **Aplicativo de Console (.NET Core)**, acesse **Ferramentas** > **Obter Ferramentas e Recursos**, que abre o Instalador do Visual Studio. Escolha o **desenvolvimento de plataforma cruzada do .NET Core** ou a carga de **trabalho de desenvolvimento de desktop .net** e escolha **Modificar**.
+    Se você não vir o modelo de projeto de **aplicativo de console** para .NET Core, vá para **ferramentas**  >  **obter ferramentas e recursos**, o que abre o instalador do Visual Studio. Escolha a carga de trabalho de **desenvolvimento de plataforma cruzada do .NET Core** e escolha **Modificar**.
 
     O Visual Studio criará o console do projeto, que será aberto no Gerenciador de Soluções no painel direito.
 
@@ -180,7 +182,7 @@ Em seguida, criaremos um aplicativo que tem alguns bugs.
 
     *nome da galáxia*, *distância*, *tipo de galáxia*.
 
-### <a name="run-the-app"></a>Execute o aplicativo
+### <a name="run-the-app"></a>Executar o aplicativo
 
 1. Pressione **F5** ou o botão **Iniciar Depuração** ![Iniciar Depuração](../debugger/media/dbg-tour-start-debugging.png "Iniciar Depuração") na barra de ferramentas depurar, localizada acima do editor de códigos.
 

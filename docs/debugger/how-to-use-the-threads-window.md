@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dbac3de879937435e9f2e1dc5ab4fad0e7358fc9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cbde477e076203625e35ebf0109ed344679563f8
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925394"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683306"
 ---
 # <a name="walkthrough-debug-a-multithreaded-app-using-the-threads-window-c-visual-basic-c"></a>Walkthrough: Depurar um aplicativo multithread usando a janela threads (C#, Visual Basic, C++)
 
@@ -44,12 +44,14 @@ Crie o seguinte projeto de aplicativo multithread para usar neste tutorial:
 
    Na janela **Criar um novo projeto**, insira ou digite *console* na caixa de pesquisa. Em seguida, escolha **C#** ou **C++** na lista idioma e, em seguida, escolha **Windows** na lista plataforma. 
 
-   Depois de aplicar os filtros de idioma e plataforma, escolha o **aplicativo de console (.NET Core)** ou, para C++, modelo de **aplicativo de console** e escolha **Avançar**.
+   Depois de aplicar os filtros de idioma e plataforma, escolha o **aplicativo de console** para .NET Core ou C++ e, em seguida, escolha **Avançar**.
 
    > [!NOTE]
-   > Se você não vir o modelo correto, vá para **ferramentas**  >  **obter ferramentas e recursos...**, que abre a instalador do Visual Studio. Escolha o desenvolvimento de **área de trabalho .net** ou **desenvolvimento de desktop com** carga de trabalho C++ e, em seguida, escolha **Modificar**.
+   > Se você não vir o modelo correto, vá para **ferramentas**  >  **obter ferramentas e recursos...**, que abre a instalador do Visual Studio. Escolha o **desenvolvimento de plataforma cruzada do .NET Core** ou **desenvolvimento de desktop com** carga de trabalho do C++ e escolha **Modificar**.
 
-   Na janela **configurar seu novo projeto** , digite ou insira *MyThreadWalkthroughApp* na caixa **nome do projeto** . Em seguida, escolha **criar**.
+   Na janela **configurar seu novo projeto** , digite ou insira *MyThreadWalkthroughApp* na caixa **nome do projeto** . Em seguida, escolha **Avançar** ou **criar**, qualquer opção disponível.
+
+   Para o .NET Core, escolha a estrutura de destino recomendada (.NET Core 3,1) ou .NET 5 e, em seguida, escolha **criar**.
 
    ::: moniker-end
    ::: moniker range="vs-2017"
@@ -58,7 +60,7 @@ Crie o seguinte projeto de aplicativo multithread para usar neste tutorial:
    - Para um aplicativo C#, em **Visual C#**, escolha **Windows Desktop** e, no painel central, escolha **aplicativo de console (.NET Framework)**.
    - Para um aplicativo C++, em **Visual C++**, escolha **Windows Desktop**, e, em seguida, escolha **aplicativo de console do Windows**.
 
-   Se você não vir o **aplicativo de console (.NET Core)** ou, para C++, o modelo de projeto de **aplicativo de console** , vá para **ferramentas**  >  **obter ferramentas e recursos...**, que abre a instalador do Visual Studio. Escolha o desenvolvimento de **área de trabalho .net** ou **desenvolvimento de desktop com** carga de trabalho C++ e, em seguida, escolha **Modificar**.
+   Se você não vir o **aplicativo de console (.NET Framework)** ou, para C++, o modelo de projeto de **aplicativo de console** , vá para **ferramentas**  >  **obter ferramentas e recursos...**, que abre o instalador do Visual Studio. Escolha o desenvolvimento de **área de trabalho .net** ou **desenvolvimento de desktop com** carga de trabalho C++ e, em seguida, escolha **Modificar**.
 
    Em seguida, digite um nome como *MyThreadWalkthroughApp* e clique em **OK**.
 
@@ -147,7 +149,7 @@ Selecione um ícone de sinalizador para alterar o estado do thread para sinaliza
 
 Você também pode clicar com o botão direito do mouse em uma linha e selecionar **sinalizar**, **desmarcar** ou **desmarcar todos os threads** no menu de atalho.
 
-A barra de ferramentas da janela **threads** também tem um botão **Mostrar somente threads sinalizados** , que é o righthand um dos dois ícones de sinalizador. Ele funciona da mesma forma que o botão na barra de ferramentas **local de depuração** e o botão controla a exibição em ambos os locais.
+A barra de ferramentas da janela **threads** também tem um botão **Mostrar somente threads sinalizados** , que é o lado direito de um dos dois ícones de sinalizador. Ele funciona da mesma forma que o botão na barra de ferramentas **local de depuração** e o botão controla a exibição em ambos os locais.
 
 ### <a name="other-threads-window-features"></a>Outros recursos da janela threads
 
@@ -207,6 +209,6 @@ Com o marcador de thread no código-fonte, você pode alternar somente para thre
 
 Agora você aprendeu os conceitos básicos da depuração de aplicativos multissegmentados. Você pode observar, sinalizar e desmarcar e congelar e descongelar Threads usando a janela **threads** , a lista de **threads** na barra de ferramentas **local de depuração** ou marcadores de thread no editor de código-fonte.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Depurar aplicativos multi-threaded](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Como mudar para outro thread durante a depuração](../debugger/how-to-switch-to-another-thread-while-debugging.md)

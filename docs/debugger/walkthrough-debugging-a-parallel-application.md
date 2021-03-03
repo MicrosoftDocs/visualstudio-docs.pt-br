@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f46efe377cb01b7b78a9df2de2d1e6fc89826014
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d8f739ab99f060005f7bbfebc400c424c50ba7d5
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884280"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684132"
 ---
 # <a name="walkthrough-debugging-a-parallel-application-in-visual-studio-c-visual-basic-c"></a>Walkthrough: Depurando um aplicativo paralelo no Visual Studio (C#, Visual Basic, C++)
 
@@ -70,14 +70,16 @@ Este passo a passo descreve como usar as janelas **Tarefas Paralelas** e **Pilha
 
    Na janela iniciar, escolha **criar um novo projeto**.
 
-   Na janela **Criar um novo projeto**, insira ou digite *console* na caixa de pesquisa. Em seguida, escolha **C#**, **C++** ou **Visual Basic** na lista idioma e, em seguida, escolha **Windows** na lista plataforma. 
+   Na janela **Criar um novo projeto**, insira ou digite *console* na caixa de pesquisa. Em seguida, escolha **C#**, **C++** ou **Visual Basic** na lista idioma e, em seguida, escolha **Windows** na lista plataforma.
 
-   Depois de aplicar os filtros de idioma e plataforma, escolha o **aplicativo de console (.NET Core)** ou, para C++, modelo de **aplicativo de console** e escolha **Avançar**.
+   Depois de aplicar os filtros de idioma e plataforma, escolha o **aplicativo de console** para .NET Core ou C++ e, em seguida, escolha **Avançar**.
 
    > [!NOTE]
-   > Se você não vir o modelo correto, vá para **ferramentas**  >  **obter ferramentas e recursos...**, que abre a instalador do Visual Studio. Escolha o desenvolvimento de **área de trabalho .net** ou **desenvolvimento de desktop com** carga de trabalho C++ e, em seguida, escolha **Modificar**.
+   > Se você não vir o modelo correto, vá para **ferramentas**  >  **obter ferramentas e recursos...**, que abre a instalador do Visual Studio. Escolha o **desenvolvimento de plataforma cruzada do .NET Core** ou **desenvolvimento de desktop com** carga de trabalho do C++ e escolha **Modificar**.
 
-   Na janela **configurar seu novo projeto** , digite um nome ou use o nome padrão na caixa **nome do projeto** . Em seguida, escolha **criar**.
+   Na janela **configurar seu novo projeto** , digite um nome ou use o nome padrão na caixa **nome do projeto** . Em seguida, escolha **Avançar** ou **criar**, qualquer opção disponível.
+
+   Para o .NET Core, escolha a estrutura de destino recomendada (.NET Core 3,1) ou .NET 5 e, em seguida, escolha **criar**.
 
    ::: moniker-end
    ::: moniker range="vs-2017"

@@ -3,19 +3,19 @@ title: 'Início rápido: tour pelo IDE do Visual Studio'
 description: Saiba mais sobre algumas das janelas, menus e outros recursos de interface do usuário do IDE (ambiente de desenvolvimento integrado) do Visual Studio.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
-ms.date: 02/21/2019
+ms.date: 03/02/2021
 ms.topic: quickstart
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e0199319bc0c647f42e87d4003dd2fabe4544a0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 237b3384d6bec010a760c4bc193b9a95f33febeb
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945494"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683982"
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>Início rápido: Introdução ao IDE do Visual Studio
 
@@ -83,15 +83,25 @@ Para continuar explorando os recursos do Visual Studio, vamos criar um projeto.
 
 1. Na janela iniciar, escolha **criar um novo projeto**.
 
-   Uma caixa de diálogo é aberta com o título **Criar um novo projeto**. Aqui, você pode pesquisar, filtrar e, em seguida, escolher um modelo de projeto. Ela também mostra uma lista dos modelos de projeto usados recentemente por você.
+    :::image type="content" source="../get-started/media/vs-2019/start-window-create-new-project.png" alt-text="Captura de tela da janela ' criar um novo projeto ' no Visual Studio 2019.":::
 
-1. Na caixa de pesquisa na parte superior, digite **console** para filtrar a lista de tipos de projeto àqueles que contêm "console" no nome. Refine ainda mais os resultados da pesquisa pela separação **C#** (ou outra linguagem de sua escolha) do seletor **Linguagem**.
+   A janela **Criar um novo projeto** é aberta e mostra diversos *modelos* de projeto. Um modelo contém os arquivos básicos e as configurações necessárias para um determinado tipo de projeto.
 
-   ![Caixa de diálogo Novo Projeto no Visual Studio 2019](media/vs-2019/create-a-new-project.png)
+   Aqui, você pode pesquisar, filtrar e, em seguida, escolher um modelo de projeto. Ela também mostra uma lista dos modelos de projeto usados recentemente por você.
 
-1. Se você tiver selecionado C#, Visual Basic ou F# como linguagem, selecione o modelo **Aplicativo de Console (.NET Core)** e, em seguida, escolha **Avançar**. (Se você tiver selecionado uma linguagem diferente, escolha qualquer modelo. A interface do usuário que veremos é semelhante em todas as linguagens de programação.)
+1. Na caixa de pesquisa na parte superior, digite **console** para filtrar a lista de tipos de projeto àqueles que contêm "console" no nome. Refine ainda mais os resultados da pesquisa selecionando **C#** (ou outro idioma de sua escolha) na lista suspensa **todos os idiomas** .
 
-1. Na página **Configurar seu novo projeto**, aceite o nome de projeto e o local padrão e escolha **Criar**.
+    :::image type="content" source="media/vs-2019/create-new-project.png" alt-text="Captura de tela da janela ' criar um novo projeto ' no Visual Studio 2019, em que você seleciona o modelo desejado.":::
+
+1. Se você selecionou C#, Visual Basic ou F # como seu idioma, selecione o modelo de **aplicativo de console** e, em seguida, escolha **Avançar**. (Se você tiver selecionado uma linguagem diferente, escolha qualquer modelo. A interface do usuário que veremos é semelhante em todas as linguagens de programação.)
+
+1. Na janela **configurar seu novo projeto** , aceite o nome e o local do projeto padrão e escolha **Avançar**.
+
+    :::image type="content" source="media/vs-2019/configure-new-project-console.png" alt-text="Captura de tela da janela ' configurar um novo projeto ' no Visual Studio 2019, em que você insere o nome do projeto.":::
+
+1. Na janela **informações adicionais** , verifique se **.NET Core 3,1** aparece no menu suspenso **estrutura de destino** e, em seguida, clique em **criar**.
+
+    :::image type="content" source="../get-started/media/vs-2019/create-project-additional-info.png" alt-text="Captura de tela da janela ' informações adicionais ' no Visual Studio 2019, onde você seleciona a versão do .NET Core Framework que deseja.":::
 
 ::: moniker-end
 
