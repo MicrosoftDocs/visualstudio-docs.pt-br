@@ -1,4 +1,5 @@
 ---
+description: Essa interface representa um único quadro de pilha em uma pilha de chamadas em um thread específico.
 title: IDebugStackFrame2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7241c697baf7810d961f4cc3aba71d469bad4582
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b5ec53e89afb43187c641058620df53c4a61d6cc
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963556"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102145905"
 ---
 # <a name="idebugstackframe2"></a>IDebugStackFrame2
 Essa interface representa um único quadro de pilha em uma pilha de chamadas em um thread específico.
@@ -60,5 +61,5 @@ IDebugStackFrame2 : IUnknown
 
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Interfaces principais](../../../extensibility/debugger/reference/core-interfaces.md)

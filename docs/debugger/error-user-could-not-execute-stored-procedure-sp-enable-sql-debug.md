@@ -1,4 +1,5 @@
 ---
+description: A depuração do Procedimento Armazenado sp_enable_sql_debug não pode ser executada no servidor.
 title: O usuário não pôde executar o procedimento armazenado sp_enable_sql_debug | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 41576d83ecff9f501b56ecc3fef3878f7c8a00b6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8c7597acb201aa810d34fe0df0f0aebbbd2f70fe
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99870903"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102146282"
 ---
 # <a name="error-user-could-not-execute-stored-procedure-sp_enable_sql_debug"></a>Erro: o usuário não conseguiu executar o procedimento armazenado sp_enable_sql_debug
 
@@ -29,7 +30,7 @@ A depuração do Procedimento Armazenado sp_enable_sql_debug não pode ser execu
 
 Para obter mais informações, consulte [How to: Set SQL Server Permissions for Debugging](/previous-versions/w1bhybwz(v=vs.100)).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Como configurar permissões para depuração no SQL Server](/previous-versions/w1bhybwz(v=vs.100))
 - [Configurando a depuração SQL](/previous-versions/visualstudio/visual-studio-2010/s4sszxst\(v\=vs.100\))

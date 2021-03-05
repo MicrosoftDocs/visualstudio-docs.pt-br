@@ -1,4 +1,5 @@
 ---
+description: Obtém o nome do fornecedor da porta.
 title: 'IDebugPortSupplier2:: GetPortSupplierName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 181197e99e33be7ac07514ad1a67dac72335a374
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 780dd6c3974f407c753131183e4ac6e9562ed5dd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840373"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102145404"
 ---
 # <a name="idebugportsupplier2getportsuppliername"></a>IDebugPortSupplier2::GetPortSupplierName
 Obtém o nome do fornecedor da porta.
@@ -43,8 +44,8 @@ int GetPortSupplierName(
 `pbstrName`\
 fora Retorna o nome do fornecedor da porta.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)

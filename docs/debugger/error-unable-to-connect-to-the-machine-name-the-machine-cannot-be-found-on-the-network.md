@@ -1,5 +1,6 @@
 ---
 title: Não é possível conectar-se ao nome do computador &lt; &gt; . Não foi possível encontrar o computador na rede. | Microsoft Docs
+description: 'Esse comportamento ocorre se uma das seguintes condições for verdadeira: (1) a conexão com o computador remoto foi interrompida. (2) sua conta de usuário no computador remoto está desabilitada. (3) sua senha no computador remoto expirou.'
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dcf52a258a46f44afaf6e890531496f57b11fc24
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5e0d83f043e020ad3c65ac0f986ec174fac95585
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871059"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102146425"
 ---
 # <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>Erro: não é possível conectar-se ao nome do computador &lt; &gt; . Não foi possível encontrar o computador na rede.
 Esse comportamento ocorre se uma das seguintes condições for verdadeira:
@@ -44,6 +45,6 @@ Esse comportamento ocorre se uma das seguintes condições for verdadeira:
 
 - Verifique se a senha que você está usando para se conectar ao computador remoto está válida e não expirou.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Depuração remota](../debugger/remote-debugging.md)
 - [Configurações e preparação do depurador](../debugger/debugger-settings-and-preparation.md)

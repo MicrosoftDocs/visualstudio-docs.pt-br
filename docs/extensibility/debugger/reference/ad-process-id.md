@@ -1,4 +1,5 @@
 ---
+description: Especifica a ID do processo, que pode ser uma ID do sistema ou um GUID.
 title: AD_PROCESS_ID | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 303c05b241347922a4253ef3654e06bed8e824ef
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c56bc1941bcff5d70dbcf0cb3a126c1f434d3f24
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952415"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102144670"
 ---
 # <a name="ad_process_id"></a>AD_PROCESS_ID
 Especifica a ID do processo, que pode ser uma ID do sistema ou um GUID.

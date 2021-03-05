@@ -1,4 +1,5 @@
 ---
+description: O mecanismo de depuração (DE) usa essa interface para solicitar que um documento seja carregado.
 title: IDebugActivateDocumentEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5ec3168a7e104e20bbb53607b4bd7a6acd8e79e7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 557cb86765c06c8589f30a013a1087764f3f909e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904650"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102145450"
 ---
 # <a name="idebugactivatedocumentevent2"></a>IDebugActivateDocumentEvent2
 O mecanismo de depuração (DE) usa essa interface para solicitar que um documento seja carregado.

@@ -1,4 +1,5 @@
 ---
+description: Chamado por um manipulador de eventos para recuperar resultados sobre um processo de carregamento de símbolo.
 title: 'IDebugSymbolSearchEvent2:: GetSymbolSearchInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 01b7ee4b0220fcd83573d29954c03d738ed53051
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9f03562f3370268f720b2d8053bbd6a2979f6a19
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909368"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102145762"
 ---
 # <a name="idebugsymbolsearchevent2getsymbolsearchinfo"></a>IDebugSymbolSearchEvent2::GetSymbolSearchInfo
 Chamado por um manipulador de eventos para recuperar resultados sobre um processo de carregamento de símbolo.
@@ -56,7 +57,7 @@ fora Um objeto IDebugModule3 que representa o módulo para o qual os símbolos f
 `pdwModuleInfoFlags`\
 fora Uma combinação de sinalizadores da enumeração [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md) indicando se os símbolos foram carregados.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

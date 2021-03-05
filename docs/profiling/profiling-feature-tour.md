@@ -2,7 +2,7 @@
 title: Introdução às ferramentas de criação de perfil
 description: Dê uma olhada rápida em diferentes ferramentas de diagnóstico disponíveis no Visual Studio.
 ms.custom: ''
-ms.date: 09/08/2020
+ms.date: 02/18/2021
 ms.topic: overview
 f1_keywords:
 - vs.diagnosticshub.overview
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bfd7055303fed2c18501d5eea3b49b34c68ec248
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 855a04fae1d5b406019e758c6d6f931d6657bb4e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929102"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102145372"
 ---
 # <a name="first-look-at-profiling-tools"></a>Introdução às ferramentas de criação de perfil
 
@@ -162,6 +162,14 @@ A ferramenta mostra cada consulta em um modo de exibição de lista. Você pode 
 
 ![Alocação](./media/db-gotosource.png "Alocação")
 
+## <a name="visualize-net-counters-net-core"></a>Visualizar contadores do .NET (.NET Core)
+
+A partir do Visual Studio 2019 versão 16,7, você pode usar a [ferramenta contadores do .net](../profiling/dotnet-counters-tool.md) no Visual Studio para visualizar os contadores de desempenho. Você pode visualizar os contadores criados usando [contadores dotnet](/dotnet/core/diagnostics/dotnet-counters). os contadores dotnet dão suporte a muitos contadores, como o uso da CPU e o tamanho do heap do coletor de lixo.
+
+A ferramenta mostra valores dinâmicos para cada contador em uma exibição de lista.
+
+:::image type="content" source="../profiling/media/dotnet-counters-tool-collecting.png" alt-text="Ferramenta de contador .NET coletando.":::
+
 ::: moniker-end
 
 ## <a name="examine-ui-performance-and-accessibility-events-uwp"></a>Examinar os eventos de desempenho e de acessibilidade da interface do usuário (UWP)
@@ -235,6 +243,7 @@ Eis aqui uma tabela que lista as diferentes ferramentas que o Visual Studio ofer
 |[Linha do tempo do aplicativo](../profiling/application-timeline.md)|Sim (XAML)|sim|não|
 |[Visualizador de eventos](../profiling/events-viewer.md)|sim|sim|sim|
 |[.NET Async](../profiling/analyze-async.md)|Sim (somente .NET)|sim|sim|
+|[Contadores do .NET](../profiling/dotnet-counters-tool.md)|Sim (somente no .NET Core)|não|Sim (somente ASP.NET Core)|
 |[Backup de banco de dados](../profiling/analyze-database.md)|Sim (somente no .NET Core)|não|Sim (somente ASP.NET Core)|
 |[Performance Explorer](#analyze-performance-legacy-tools)|não|não|não|
 |[IntelliTrace](../debugger/intellitrace.md)|.NET com Visual Studio Enterprise somente|.NET com Visual Studio Enterprise somente|.NET com Visual Studio Enterprise somente|

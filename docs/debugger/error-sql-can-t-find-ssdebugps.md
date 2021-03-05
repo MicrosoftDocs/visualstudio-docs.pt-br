@@ -1,4 +1,5 @@
 ---
+description: SSDEBUGPS.dll é o componente do host de depuração do SQL Server.
 title: O SQL não pode &apos; localizar SSDEBUGPS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -15,12 +16,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 67d7602357a39cbdce0c96b494f4c02758533e73
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a746759f294a1d8ac6b13350efd56976a1f3ae21
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871384"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102146750"
 ---
 # <a name="error-sql-can39t-find-ssdebugps"></a>Erro: o SQL pode&#39;t localizar SSDEBUGPS
 

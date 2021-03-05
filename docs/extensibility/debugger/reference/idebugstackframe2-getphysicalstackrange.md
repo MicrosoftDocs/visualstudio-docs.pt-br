@@ -1,4 +1,5 @@
 ---
+description: Obtém uma representação dependente de computador do intervalo de endereços físicos associados a um quadro de pilha.
 title: 'IDebugStackFrame2:: GetPhysicalStackRange | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8c4c4bbc468403aaf94aca1b5133a732e0c050b2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 41664f0e59b0eba6ae8a98599c74bd91fe26cf2a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837470"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102145918"
 ---
 # <a name="idebugstackframe2getphysicalstackrange"></a>IDebugStackFrame2::GetPhysicalStackRange
 Obtém uma representação dependente de computador do intervalo de endereços físicos associados a um quadro de pilha.
@@ -48,7 +49,7 @@ fora Retorna o endereço físico mais baixo associado a esse quadro de pilha.
 `paddrMax`\
 fora Retorna o endereço físico mais alto associado a esse quadro de pilhas.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
@@ -56,5 +57,5 @@ fora Retorna o endereço físico mais alto associado a esse quadro de pilhas.
 
  Supõe-se que a pilha de chamadas cresce, ou seja, que novos quadros de pilha são adicionados em endereços de memória cada vez mais baixos. Uma arquitetura de tempo de execução deve fornecer intervalos de pilha física que correspondam a essa suposição.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

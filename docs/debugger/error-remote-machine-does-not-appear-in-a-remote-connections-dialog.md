@@ -1,4 +1,5 @@
 ---
+description: Se o computador remoto não aparecer na caixa de diálogo conexões remotas, verifique as causas comuns a seguir.
 title: O computador remoto não aparece em uma caixa de diálogo conexões remotas | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: be39d733b2e5fe83fa9f7e2241c7de06980bb583
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 407b33fdcc79b5ff51f34670c91bfd52ec522dac
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871358"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102146763"
 ---
 # <a name="error-remote-machine-does-not-appear-in-a-remote-connections-dialog"></a>Erro: o computador remoto não aparece em uma caixa de diálogo Conexões Remotas
 Se o computador remoto não aparecer na caixa de diálogo conexões remotas, verifique as causas comuns a seguir.
@@ -34,5 +35,5 @@ Se o computador remoto não aparecer na caixa de diálogo conexões remotas, ver
 
 - O software antivírus está bloqueando a comunicação entre o Visual Studio e o computador remoto. Para corrigir isso, configure o software antivírus para permitir que o Visual Studio e o o depurador remoto (msvsmon) se comuniquem.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Depuração remota](../debugger/remote-debugging.md)
