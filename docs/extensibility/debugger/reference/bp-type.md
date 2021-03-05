@@ -1,4 +1,5 @@
 ---
+description: Especifica se o ponto de interrupção está em um local de código, é um local de dados ou outro tipo de ponto de interrupção.
 title: BP_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d01485a6044122baf460eede90470c5cc1478323
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3e310154bc62cdea1fb9069cc868cf9e20335d06
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912996"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151098"
 ---
 # <a name="bp_type"></a>BP_TYPE
 Especifica se o ponto de interrupção está em um local de código, é um local de dados ou outro tipo de ponto de interrupção.
@@ -69,7 +70,7 @@ Namespace: Microsoft. VisualStudio. Debugger. Interop
 
 Assembly: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)
 - [GetBreakpointType](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md)

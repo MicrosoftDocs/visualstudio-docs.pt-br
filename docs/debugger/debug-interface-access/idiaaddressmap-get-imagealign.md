@@ -1,4 +1,5 @@
 ---
+description: Recupera o alinhamento da imagem atual.
 title: IDiaAddressMap::get_imageAlign | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c77fad0a43736e448ad828a7dc9300290bd8b835
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: daf52fa451c690445778258400f68ad95cc91f3c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865303"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151151"
 ---
 # <a name="idiaaddressmapget_imagealign"></a>IDiaAddressMap::get_imageAlign
 Recupera o alinhamento da imagem atual.
@@ -35,7 +36,7 @@ HRESULT get_imageAlign (
 
 fora Retorna o valor de alinhamento da imagem do executável.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
