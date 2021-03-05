@@ -1,4 +1,5 @@
 ---
+description: Recupera o stride da matriz ou da matriz substituída.
 title: IDiaSymbol::get_stride | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ab4fae7c0e2816fa8c69e239cc96df82b9e805d7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 331949c4b37c6e4f472bc2d1f5d805d7a9f7426a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853593"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147145"
 ---
 # <a name="idiasymbolget_stride"></a>IDiaSymbol::get_stride
 Recupera o stride da matriz ou da matriz substituída.
@@ -32,8 +33,8 @@ HRESULT get_stride(
 
 fora Um ponteiro para um `DWORD` que contém o Stride.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

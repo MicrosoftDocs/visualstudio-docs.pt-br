@@ -1,4 +1,5 @@
 ---
+description: 'IDiaStackFrame:: get_lengthProlog recupera o número de bytes do código de prólogo no bloco.'
 title: 'IDiaStackFrame:: get_lengthProlog | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e21a5d3fce48a6919908cdaa148de7759d90189
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a365b0640979d39ca2436c9d37473f1e9fa80af8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854916"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147467"
 ---
 # <a name="idiastackframeget_lengthprolog"></a>IDiaStackFrame::get_lengthProlog
 Recupera o número de bytes do código de prólogo no bloco.
@@ -35,8 +36,8 @@ HRESULT get_lengthProlog (
 
 fora Retorna o número de bytes do código de prólogo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se a propriedade não tem suporte. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

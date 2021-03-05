@@ -1,4 +1,5 @@
 ---
+description: Recupera o valor de um registro especificado como armazenado no quadro de pilha.
 title: 'IDiaStackFrame:: get_registerValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f11d99a3e3a8a78b6c8152dd94a28f27d800772
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 92ada384d6e231a33dc2b1bbccfafa1e790f1c9c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863938"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147432"
 ---
 # <a name="idiastackframeget_registervalue"></a>IDiaStackFrame::get_registerValue
 Recupera o valor de um registro especificado como armazenado no quadro de pilha.
@@ -40,9 +41,9 @@ no Um dos valores de enumeração de [enumeração de CV_HREG_e](../../debugger/
 
 fora Valor armazenado no registro.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna o código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)
 - [Enumeração CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md)

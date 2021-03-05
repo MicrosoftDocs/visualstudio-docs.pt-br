@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se o tipo de dados definido pelo usuário está aninhado.
 title: IDiaSymbol::get_nested | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 04de0500105a460006d49788c5563eba3820685f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 70c4b5d348c69aece9164a24e8e24a4cf4fdb86b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853831"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147187"
 ---
 # <a name="idiasymbolget_nested"></a>IDiaSymbol::get_nested
 Recupera um sinalizador que especifica se o tipo de dados definido pelo usuário está aninhado.
@@ -35,11 +36,11 @@ HRESULT get_nested (
 
 fora Retorna `TRUE` se o tipo de dados definido pelo usuário está aninhado; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

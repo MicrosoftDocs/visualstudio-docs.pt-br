@@ -1,4 +1,5 @@
 ---
+description: Recupera o número de bytes de código.
 title: IDiaInjectedSource::get_length | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c5fde6459d2c5bb0463a919732427b277a371099
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3154f1a76c0f5b74c795884c62ecc61e049264a9
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864848"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148419"
 ---
 # <a name="idiainjectedsourceget_length"></a>IDiaInjectedSource::get_length
 Recupera o número de bytes de código.
@@ -35,12 +36,12 @@ HRESULT get_length (
 
 fora Retorna o número de bytes de código.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
 ## <a name="remarks"></a>Comentários
  O valor retornado por esse método é o comprimento do código-fonte e é o mesmo valor retornado pelo método [IDiaInjectedSource:: get_source](../../debugger/debug-interface-access/idiainjectedsource-get-source.md) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)
 - [IDiaInjectedSource::get_source](../../debugger/debug-interface-access/idiainjectedsource-get-source.md)

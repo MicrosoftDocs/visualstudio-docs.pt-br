@@ -1,4 +1,5 @@
 ---
+description: 'IDiaStackFrame:: get_maxStack recupera o número máximo de bytes enviados por push na pilha no quadro.'
 title: 'IDiaStackFrame:: get_maxStack | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 69b342520e9ae72b8d48367390d1189179e7747d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7668d07db8717892951110b181ae2baa5cd7d153
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863945"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147446"
 ---
 # <a name="idiastackframeget_maxstack"></a>IDiaStackFrame::get_maxStack
 Recupera o número máximo de bytes enviados por push na pilha no quadro.
@@ -35,8 +36,8 @@ HRESULT get_maxStack (
 
 fora Retorna o número máximo de bytes enviados por push na pilha.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se a propriedade não tem suporte. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

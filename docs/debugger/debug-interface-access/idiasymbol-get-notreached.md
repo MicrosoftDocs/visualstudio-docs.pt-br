@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se a função ou o rótulo nunca é alcançado.
 title: IDiaSymbol::get_notReached | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 65456c26881b3351e834397745ace5f8be280d16
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 63acaae080dee21516729764906e959c8dca9930
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853810"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147164"
 ---
 # <a name="idiasymbolget_notreached"></a>IDiaSymbol::get_notReached
 Recupera um sinalizador que especifica se a função ou o rótulo nunca é alcançado.
@@ -35,7 +36,7 @@ HRESULT get_notReached(
 
 fora Retorna `TRUE` se a função ou o rótulo nunca for alcançado; caso contrário, retornará `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -48,5 +49,5 @@ fora Retorna `TRUE` se a função ou o rótulo nunca for alcançado; caso contr�
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

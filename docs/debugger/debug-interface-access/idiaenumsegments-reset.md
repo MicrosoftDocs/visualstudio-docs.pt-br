@@ -1,4 +1,5 @@
 ---
+description: Redefine uma sequência de enumeração de segmentos para o início.
 title: IDiaEnumSegments::Reset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ab6bf3da112104f4eec2ea7bc4cf4d1e9e0c30d6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2ed5e31ed807d343ef550e81e8bc95bb1ff85e0a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856330"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148839"
 ---
 # <a name="idiaenumsegmentsreset"></a>IDiaEnumSegments::Reset
 Redefine uma sequência de enumeração para o início.
@@ -31,5 +32,5 @@ HRESULT Reset ();
 ## <a name="return-value"></a>Valor retornado
  Retorna `S_OK`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)

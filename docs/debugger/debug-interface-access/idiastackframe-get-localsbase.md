@@ -1,4 +1,5 @@
 ---
+description: Recupera o endereço base das variáveis locais para o quadro.
 title: IDiaStackFrame::get_localsBase | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ebec528c0361ac9eab1149b0988c476f90d302ac
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2efe2d85f46ef18927be3c8667808ce51c761c90
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854902"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147453"
 ---
 # <a name="idiastackframeget_localsbase"></a>IDiaStackFrame::get_localsBase
 Recupera o endereço base das variáveis locais para o quadro.
@@ -35,8 +36,8 @@ HRESULT get_localsBase (
 
 fora Retorna o endereço base das variáveis locais.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se a propriedade não tem suporte. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

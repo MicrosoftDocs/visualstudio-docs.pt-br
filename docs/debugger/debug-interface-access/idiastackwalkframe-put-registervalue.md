@@ -1,4 +1,5 @@
 ---
+description: IDiaStackWalkFrame::p ut_registerValue define o valor de um registro.
 title: IDiaStackWalkFrame::p ut_registerValue | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f4a827d05ab091ac9ff436f08a723bdca77eedf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 731993bb9074e6b67d9908c42999d53768abaa5b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863826"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147327"
 ---
 # <a name="idiastackwalkframeput_registervalue"></a>IDiaStackWalkFrame::put_registerValue
 Define o valor de um registro.
@@ -40,9 +41,9 @@ no Um valor da enumeração de [enumeração de CV_HREG_e](../../debugger/debug-
 
 no O novo valor de registro.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)
 - [Enumeração CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md)

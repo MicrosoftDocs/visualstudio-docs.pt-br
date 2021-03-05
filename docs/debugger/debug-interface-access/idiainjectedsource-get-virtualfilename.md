@@ -1,4 +1,5 @@
 ---
+description: Recupera o nome fornecido para código-fonte que não é de arquivo; ou seja, o código que foi injetado.
 title: 'IDiaInjectedSource:: get_virtualFilename | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 78bb087f7e5b66d68e24d66315d9edcd15b06544
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c57f354b250710f5ec5d5fe6c6a29aa7e0938c4a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864869"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148363"
 ---
 # <a name="idiainjectedsourceget_virtualfilename"></a>IDiaInjectedSource::get_virtualFilename
 Recupera o nome fornecido para código-fonte que não é de arquivo; ou seja, o código que foi injetado.
@@ -35,8 +36,8 @@ HRESULT get_virtualFilename (
 
 fora Retorna o nome fornecido para código-fonte de não arquivo injetado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

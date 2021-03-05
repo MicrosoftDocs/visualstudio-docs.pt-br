@@ -1,4 +1,5 @@
 ---
+description: Recupera o tipo de quadro.
 title: IDiaStackFrame::get_type | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 435e8fadf1c1928013f52d3e1d7339066990abff
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 24b05b9a651072854b3e7db91a8f27d94781f323
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863875"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147425"
 ---
 # <a name="idiastackframeget_type"></a>IDiaStackFrame::get_type
 Recupera o tipo de quadro.
@@ -35,9 +36,9 @@ HRESULT get_type (
 
 fora Retorna um valor da enumeração de [Enumeração StackFrameTypeEnum](../../debugger/debug-interface-access/stackframetypeenum.md) .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se a propriedade não tem suporte. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)
 - [Enumeração StackFrameTypeEnum](../../debugger/debug-interface-access/stackframetypeenum.md)

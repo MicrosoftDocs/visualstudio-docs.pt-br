@@ -1,4 +1,5 @@
 ---
+description: Ignora um número especificado de números de linha em uma sequência de enumeração.
 title: IDiaEnumLineNumbers::Skip | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f2d171b36cb45bbe51ef9920217a17cf67edc343
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 051d55b901512168a8bca5cdaa71c487f791c8a8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856540"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148916"
 ---
 # <a name="idiaenumlinenumbersskip"></a>IDiaEnumLineNumbers::Skip
 Ignora um número especificado de números de linha em uma sequência de enumeração.
@@ -35,8 +36,8 @@ HRESULT Skip (
 
 no O número de números de linha na sequência de enumeração a serem ignorados.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK` ; caso contrário, retornará `S_FALSE` se não houver mais números de linha a serem ignorados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

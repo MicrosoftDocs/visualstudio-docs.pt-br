@@ -1,4 +1,5 @@
 ---
+description: Recupera a CRC (verificação de redundância cíclica) das informações de realocação da seção.
 title: IDiaSectionContrib::get_relocationsCrc | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a0b746b639bceb49f576e6834ad0b86da75ebd5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 353344b93806bdf4cb000ed5b2307969f7e74bb6
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855364"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147999"
 ---
 # <a name="idiasectioncontribget_relocationscrc"></a>IDiaSectionContrib::get_relocationsCrc
 Recupera a CRC (verificação de redundância cíclica) das informações de realocação da seção.
@@ -35,8 +36,8 @@ HRESULT get_relocationsCrc (
 
 fora Retorna o CRC das informações de realocação da seção.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se a função foi marcada como não embutida (usando o atributo não embutido)).
 title: IDiaSymbol::get_noInline | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b3ac08460995cbaec149c5dda9ffc4c1e3e5bfbf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fe98c362b4bc1bc6e355e86f2f90fe6b9f2069eb
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862958"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147173"
 ---
 # <a name="idiasymbolget_noinline"></a>IDiaSymbol::get_noInline
 Recupera um sinalizador que especifica se a função foi marcada como não embutida (usando o atributo [noinline](/cpp/cpp/noinline) ).
@@ -35,7 +36,7 @@ HRESULT get_noInline(
 
 fora Retorna `TRUE` se a função tem o `noinline` atributo; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -48,6 +49,6 @@ fora Retorna `TRUE` se a função tem o `noinline` atributo; caso contrário, re
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [noinline](/cpp/cpp/noinline)

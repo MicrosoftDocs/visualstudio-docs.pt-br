@@ -1,4 +1,5 @@
 ---
+description: Lê valores longos em um conjunto de propriedades.
 title: 'IDiaPropertyStorage:: ReadLONG | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e8e2ceabd73d95d1606359346a1e6d52bbd20eae
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3328048efaad86f987511e390ca2a041161f029a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864575"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148153"
 ---
 # <a name="idiapropertystoragereadlong"></a>IDiaPropertyStorage::ReadLONG
 Lê `LONG` valores em um conjunto de propriedades.
@@ -40,11 +41,11 @@ no Identificador da propriedade a ser lida ( `PROPID` definida em WTypes. h como
 
 fora Retorna o valor da propriedade.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. Retorna `E_INVALIDARG` se a propriedade não é do tipo `LONG` .
 
 ## <a name="remarks"></a>Comentários
  Um `LONG` é definido pelo Windows como um inteiro com sinal de 32 bits.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

@@ -1,4 +1,5 @@
 ---
+description: Recupera um número especificado de símbolos na sequência de enumeração.
 title: IDiaEnumSymbols::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 788bbacdca0cdf03ed1a96a4c19c43ed38b9ec42
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f1effa2d3b861be076a18adaaeafa10549ec7478
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865142"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148706"
 ---
 # <a name="idiaenumsymbolsnext"></a>IDiaEnumSymbols::Next
 Recupera um número especificado de símbolos na sequência de enumeração.
@@ -45,7 +46,7 @@ fora Uma matriz que deve ser preenchida com os objetos [IDiaSymbol](../../debugg
 
 fora Retorna o número de símbolos no enumerador obtido.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver mais símbolos. Caso contrário, retornará um código de erro.
 
 ## <a name="example"></a>Exemplo

@@ -1,4 +1,5 @@
 ---
+description: Recupera o endereço virtual relativo (RVA) do código para o quadro.
 title: IDiaFrameData::get_relativeVirtualAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4803b095425d701cf82cf94bf30fb6d2ea3e3d51
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a7622526e993e12330d1ef1f6c28485223194d42
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855896"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148482"
 ---
 # <a name="idiaframedataget_relativevirtualaddress"></a>IDiaFrameData::get_relativeVirtualAddress
 Recupera o endereço virtual relativo (RVA) do código para o quadro.
@@ -35,8 +36,8 @@ HRESULT get_relativeVirtualAddress (
 
 fora Retorna o endereço virtual relativo do código para o quadro.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

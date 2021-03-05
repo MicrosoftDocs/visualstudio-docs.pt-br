@@ -1,4 +1,5 @@
 ---
+description: Lê valores DWORD em um conjunto de propriedades.
 title: IDiaPropertyStorage::ReadDWORD | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b85c8095ca4d730dd74054c976d9a5bf217f1cc1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 70eb083c3b4469037195334a0bbfa3784462c89e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855574"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148160"
 ---
 # <a name="idiapropertystoragereaddword"></a>IDiaPropertyStorage::ReadDWORD
 Lê `DWORD` valores em um conjunto de propriedades.
@@ -40,11 +41,11 @@ no Identificador da propriedade a ser lida ( `PROPID` definida em WTypes. h como
 
 fora Retorna o valor da propriedade.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. Retorna `E_INVALIDARG` se a propriedade não é do tipo `DWORD` .
 
 ## <a name="remarks"></a>Comentários
  Um `DWORD` é definido pelo Windows como um inteiro sem sinal de 32 bits.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

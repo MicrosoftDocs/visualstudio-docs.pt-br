@@ -1,4 +1,5 @@
 ---
+description: Esse método recupera o valor da variável local especificada como bytes brutos.
 title: IDiaStackFrame::get_rawLVarInstanceValue | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a0c0052ca7183a0c53080a4e51bddd2cdfbf72ee
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dc7bc12fe8fd38fc02b6794b2026bce328d95511
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854888"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147439"
 ---
 # <a name="idiastackframeget_rawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
 Esse método recupera o valor da variável local especificada como bytes brutos.
@@ -50,8 +51,8 @@ fora Retorna o número real de bytes armazenados no buffer.
 
 fora Um buffer a ser preenchido com dados. Esse não pode ser `NULL`.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

@@ -1,4 +1,5 @@
 ---
+description: Recupera números de linha dentro de compiland e identificadores de arquivo de origem especificados.
 title: IDiaSession::findLines | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f2949eaca7e6f3a18a121e7b92ecb5db88a2156
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a887436555f1ac3d4880c53f1a9103d0fa285df0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855154"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147712"
 ---
 # <a name="idiasessionfindlines"></a>IDiaSession::findLines
 Recupera números de linha dentro de compiland e identificadores de arquivo de origem especificados.
@@ -45,10 +46,10 @@ no Um objeto [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefi
 
 fora Retorna um objeto [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) que contém uma lista dos números de linha recuperados.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

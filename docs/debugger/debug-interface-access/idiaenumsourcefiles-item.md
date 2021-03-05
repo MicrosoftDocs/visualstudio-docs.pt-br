@@ -1,4 +1,5 @@
 ---
+description: Recupera um arquivo de origem por meio de um índice.
 title: IDiaEnumSourceFiles::Item | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 110ce322946d1712f75ad68963299455c7865a52
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6a592c715e066059a2f1d3840ae6959e2fe2751c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856246"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148832"
 ---
 # <a name="idiaenumsourcefilesitem"></a>IDiaEnumSourceFiles::Item
 Recupera um arquivo de origem por meio de um índice.
@@ -40,9 +41,9 @@ no Índice do objeto [IDiaSourceFile](../../debugger/debug-interface-access/idia
 
 fora Retorna um objeto [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) que representa o arquivo de origem desejado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

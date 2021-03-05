@@ -1,4 +1,5 @@
 ---
+description: Lê os valores de ULONGLONG em um conjunto de propriedades.
 title: IDiaPropertyStorage::ReadULONGLONG | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ab1459100d773e0f887c09f06d03cdfa8e578e35
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f314152355459ffd2437621efaae002ef284c765
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855539"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148132"
 ---
 # <a name="idiapropertystoragereadulonglong"></a>IDiaPropertyStorage::ReadULONGLONG
 Lê `ULONGLONG` valores em um conjunto de propriedades.
@@ -40,11 +41,11 @@ no Identificador da propriedade a ser lida ( `PROPID` definida em WTypes. h como
 
 fora Retorna o valor da propriedade.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. Retorna `E_INVALIDARG` se a propriedade não é do tipo `ULONGLONG` .
 
 ## <a name="remarks"></a>Comentários
  Um `ULONGLONG` é definido pelo Windows como um inteiro sem sinal de 64 bits.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

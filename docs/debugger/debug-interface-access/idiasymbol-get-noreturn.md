@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se a função foi marcada como nunca retornando com o atributo noreturn).
 title: IDiaSymbol::get_noReturn | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 631cb2f9e6ebc9d0e88816bb862bf2c5429c7428
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6d3d140afd80855be7afeeef11481d5df20c057b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853817"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147180"
 ---
 # <a name="idiasymbolget_noreturn"></a>IDiaSymbol::get_noReturn
 Recupera um sinalizador que especifica se a função foi marcada como nunca retornando com o atributo [noreturn](/cpp/cpp/noreturn) .
@@ -35,7 +36,7 @@ HRESULT get_noReturn(
 
 fora Retorna `TRUE` se a função foi declarada como nunca retornando com o `noreturn` atributo; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -48,6 +49,6 @@ fora Retorna `TRUE` se a função foi declarada como nunca retornando com o `nor
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [noreturn](/cpp/cpp/noreturn)

@@ -1,4 +1,5 @@
 ---
+description: Recupera o nome do arquivo de objeto para o qual a origem foi compilada.
 title: IDiaInjectedSource::get_objectFilename | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a539d0fe6f99650254a53db9b8dd38c98fecae9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 576539b278b353facf5d8d946ed4aacd73678a53
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855784"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148433"
 ---
 # <a name="idiainjectedsourceget_objectfilename"></a>IDiaInjectedSource::get_objectFilename
 Recupera o nome do arquivo de objeto para o qual a origem foi compilada.
@@ -35,8 +36,8 @@ HRESULT get_objectFilename (
 
 fora Retorna o nome do arquivo de objeto para o qual a origem foi compilada.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

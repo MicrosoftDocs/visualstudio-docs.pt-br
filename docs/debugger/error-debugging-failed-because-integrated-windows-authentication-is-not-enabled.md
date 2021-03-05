@@ -1,4 +1,5 @@
 ---
+description: A autenticação do usuário que solicitou a depuração foi impedida por um erro de autenticação.
 title: Falha na depuração porque a autenticação integrada do Windows não está habilitada | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d1bbdc3e06dee87e7d8930bc5c4e60c6d25ee2f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a3f95359c7963ca7da3d59f81aa471424c23de8a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871735"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147023"
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>Erro: falha na depuração porque a autenticação integrada do Windows não está habilitada
 A autenticação do usuário que solicitou a depuração foi impedida por um erro de autenticação. Isso pode ocorrer ao tentar entrar em um aplicativo Web ou serviço Web XML. Uma causa desse erro é que a autenticação integrada do Windows não está habilitada. Para habilitá-la, siga as etapas em “Para habilitar a autenticação integrada do Windows”.
@@ -73,7 +74,7 @@ A autenticação do usuário que solicitou a depuração foi impedida por um err
 
          A caixa de diálogo Controle de Acesso do Usuário aparecerá e solicitará para que a permissão continue.
 
-    3. Clique em **Continue**.
+    3. Clique em **Continuar**.
 
          A caixa de diálogo Recursos do Windows é exibida.
 
@@ -113,7 +114,7 @@ A autenticação do usuário que solicitou a depuração foi impedida por um err
 
 10. Feche a janela **Gerenciador do IIS (Serviços de Informações da Internet)**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Depurando aplicativos Web: erros e solução de problemas](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
 - [Autenticação do Microsoft Digest](/windows/win32/secauthn/microsoft-digest-authentication)
 - [Executando aplicativos Web no Windows Vista com o IIS 7,0 e o Visual Studio](/previous-versions/aa964620(v=vs.140))

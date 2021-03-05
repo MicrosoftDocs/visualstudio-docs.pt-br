@@ -1,4 +1,5 @@
 ---
+description: Recupera todos os filhos de um identificador pai especificado que correspondem ao nome e ao tipo de símbolo.
 title: IDiaSession::findChildren | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 498831197f5480314695a68d3b5a76a4595a21a6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ea45a427b00d7627eaba21bdd628f2cff2cefbf0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864267"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147859"
 ---
 # <a name="idiasessionfindchildren"></a>IDiaSession::findChildren
 Recupera todos os filhos de um identificador pai especificado que correspondem ao nome e ao tipo de símbolo.
@@ -55,7 +56,7 @@ no Especifica as opções de comparação aplicadas à correspondência de nomes
 
 fora Retorna um objeto [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) que contém a lista de símbolos filho recuperados.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo

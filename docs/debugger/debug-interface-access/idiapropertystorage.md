@@ -1,4 +1,5 @@
 ---
+description: Permite que você leia as propriedades persistentes de um conjunto de propriedades de DIA.
 title: IDiaPropertyStorage | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bc38d92dc20d1eea368c07e45237508dd5f85585
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7a78801ff0c93960dca4e10ec18ec3cbc39da73d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864561"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148125"
 ---
 # <a name="idiapropertystorage"></a>IDiaPropertyStorage
 Permite que você leia as propriedades persistentes de um conjunto de propriedades de DIA.
@@ -126,7 +127,7 @@ Biblioteca: diaguids. lib
 
 DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

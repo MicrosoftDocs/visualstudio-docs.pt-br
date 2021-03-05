@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que indica se o segmento pode ser modificado.
 title: IDiaSegment::get_write | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f804267175bfffef0a21cabf7c1c9549551f74aa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 82403209712c9238febf9a32e6b82d2bda7e0d56
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864295"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147880"
 ---
 # <a name="idiasegmentget_write"></a>IDiaSegment::get_write
 Recupera um sinalizador que indica se o segmento pode ser modificado.
@@ -35,8 +36,8 @@ HRESULT get_write (
 
 fora Retorna `TRUE` se o segmento pode ser gravado; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

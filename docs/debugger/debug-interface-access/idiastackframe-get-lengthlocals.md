@@ -1,4 +1,5 @@
 ---
+description: 'IDiaStackFrame:: get_lengthLocals recupera o número de bytes de variáveis locais enviadas por push na pilha.'
 title: 'IDiaStackFrame:: get_lengthLocals | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c2a78811b39243c31385201ee327fbe7b5c5416b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 21bca9962d73bf02deed763fb1c0de49eef5efe8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854909"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147481"
 ---
 # <a name="idiastackframeget_lengthlocals"></a>IDiaStackFrame::get_lengthLocals
 Recupera o número de bytes de variáveis locais enviadas por push na pilha.
@@ -35,8 +36,8 @@ HRESULT get_lengthLocals (
 
 fora Retorna o número de bytes de variáveis locais.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se a propriedade não tem suporte. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

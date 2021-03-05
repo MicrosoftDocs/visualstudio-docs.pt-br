@@ -1,4 +1,5 @@
 ---
+description: Chamado quando um diretório de depuração foi encontrado no arquivo. exe.
 title: IDiaLoadCallback::NotifyDebugDir | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e5844cc235d604e8433940920eb9244044732d54
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ed83b79dea8f488be79a2161968876c9aa2a9a11
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855644"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148279"
 ---
 # <a name="idialoadcallbacknotifydebugdir"></a>IDiaLoadCallback::NotifyDebugDir
 Chamado quando um diretório de depuração foi encontrado no arquivo. exe.
@@ -45,7 +46,7 @@ no Contagem de bytes de dados no diretório de depuração.
 
 no Uma matriz que é preenchida com o diretório de depuração.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. O código de retorno é normalmente ignorado.
 
 ## <a name="remarks"></a>Comentários
@@ -55,6 +56,6 @@ no Uma matriz que é preenchida com o diretório de depuração.
 
  A maioria dos clientes não precisará desse retorno de chamada, pois o `IDiaDataSource::loadDataForExe` método abre de forma transparente os arquivos. PDB e. dbg quando necessário para atender aos símbolos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)
 - [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)

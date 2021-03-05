@@ -1,4 +1,5 @@
 ---
+description: Recupera um tipo de símbolo especificado que contém ou está mais próximo de um endereço virtual relativo (RVA) específico.
 title: IDiaSession::findSymbolByRVA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 720b77852ab0e8eb863fd903f756fb38ebbcf47d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 12e9bfbc1a774f435efc52f5ea1aaf5aff9d4340
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855084"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147628"
 ---
 # <a name="idiasessionfindsymbolbyrva"></a>IDiaSession::findSymbolByRVA
 Recupera um tipo de símbolo especificado que contém ou está mais próximo de um endereço virtual relativo (RVA) específico.
@@ -45,7 +46,7 @@ no Tipo de símbolo a ser encontrado. Os valores são obtidos da enumeração de
 
 fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que representa o símbolo recuperado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo
@@ -55,7 +56,7 @@ IDiaSymbol* pFunc;
 pSession->findSymbolByRVA( rva, SymTagFunction, &pFunc );
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)

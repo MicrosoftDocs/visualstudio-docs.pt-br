@@ -1,4 +1,5 @@
 ---
+description: Obtém um enumerador para propriedades dentro deste conjunto.
 title: 'IDiaPropertyStorage:: enum | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8972fa93ebae30fc64839324106d068e27577434
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d113107621c3254b86356202e94eac6e3e3a8c66
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864645"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148174"
 ---
 # <a name="idiapropertystorageenum"></a>IDiaPropertyStorage::Enum
 Obtém um enumerador para propriedades dentro deste conjunto.
@@ -35,8 +36,8 @@ HRESULT Enum (
 
 fora Retorna um `IEnumSTATPROPSTG` objeto (no namespace Microsoft. VisualStudio. OLE. Interop) que representa uma enumeração de propriedades.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

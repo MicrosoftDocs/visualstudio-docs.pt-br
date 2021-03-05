@@ -1,4 +1,5 @@
 ---
+description: Recupera o número de bytes no segmento.
 title: IDiaSegment::get_length | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a887ddad0b22cd1ccc478ab7caed1ed22c25f5d1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a1bd18742b310e26f79f411f687c43e9b22b6833
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855308"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147901"
 ---
 # <a name="idiasegmentget_length"></a>IDiaSegment::get_length
 Recupera o número de bytes no segmento.
@@ -35,8 +36,8 @@ HRESULT get_ length (
 
 fora Retorna o número de bytes no segmento.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

@@ -1,4 +1,5 @@
 ---
+description: Lê as propriedades especificadas do conjunto de propriedades atual.
 title: IDiaPropertyStorage::ReadMultiple | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 45eaed0b3306ba0ab1c448d5e61657f0461a9474
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c7d0191d17074ec41b5fc73b3e33ba94b845a96e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855546"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148146"
 ---
 # <a name="idiapropertystoragereadmultiple"></a>IDiaPropertyStorage::ReadMultiple
 Lê as propriedades especificadas do conjunto de propriedades atual.
@@ -45,11 +46,11 @@ no Uma matriz de propriedades a ser lida. As propriedades podem ser especificada
 
 [entrada, saída] Uma matriz de `PROPVARIANT` estruturas (no namespace Microsoft. VisualStudio. OLE. Interop) a ser preenchida com valores para cada propriedade. A matriz deve ter pelo menos `cpspec` elementos de tamanho. O chamador não precisa inicializar os valores na matriz.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se uma ou mais das propriedades não foram encontradas. Caso contrário, retornará um código de erro.
 
 ## <a name="remarks"></a>Comentários
  Se uma propriedade não for encontrada, a entrada correspondente na `rgvar` matriz conterá um `VARIANT` com o tipo de `VT_EMPTY` .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)
