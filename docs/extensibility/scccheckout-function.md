@@ -1,4 +1,5 @@
 ---
+description: Dada uma lista de nomes de arquivo totalmente qualificados, essa função os verifica na unidade local.
 title: Função SccCheckout | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4112190e145242da591fa3d8e4db7d054bd07466
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5ed6b494957374244d98f0cca59a063e5a6648c4
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943134"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221621"
 ---
 # <a name="scccheckout-function"></a>Função SccCheckout
 Dada uma lista de nomes de arquivo totalmente qualificados, essa função os verifica na unidade local. O comentário se aplica a todos os arquivos cujo check-out está sendo feito. O argumento comment pode ser uma `null` cadeia de caracteres.
@@ -65,7 +66,7 @@ no Sinalizadores de comando (consulte [Bitflags usado por comandos específicos]
 
 no Opções específicas de plug-ins de controle do código-fonte.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|

@@ -1,4 +1,5 @@
 ---
+description: Esse método redefine a enumeração de endereços para o primeiro elemento.
 title: 'IEnumDebugAddresses:: Reset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a29620fe97079c865aa18d354a88cc6bd12e6893
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 90ccbb3be28f676133756d5d07fcaca7e0aca3ec
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897088"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102222660"
 ---
 # <a name="ienumdebugaddressesreset"></a>IEnumDebugAddresses::Reset
 Esse método redefine a enumeração para o primeiro elemento.
@@ -38,7 +39,7 @@ int Reset();
 ## <a name="parameters"></a>Parâmetros
  Nenhum
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

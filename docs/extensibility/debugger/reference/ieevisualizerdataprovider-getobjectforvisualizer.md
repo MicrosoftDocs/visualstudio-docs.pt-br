@@ -1,4 +1,5 @@
 ---
+description: Esse método obtém o objeto que este visualizador representa.
 title: 'IEEVisualizerDataProvider:: GetObjectForVisualizer | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f7ac35b3bd3757e804840478c586100a3f56e656
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ec4cef6cf7a0715ee31ce5a88736581a0abd610b
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890923"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102222907"
 ---
 # <a name="ieevisualizerdataprovidergetobjectforvisualizer"></a>IEEVisualizerDataProvider::GetObjectForVisualizer
 Esse método obtém o objeto que este visualizador representa.
@@ -43,7 +44,7 @@ int GetObjectForVisualizer(
 `ppObject`\
 fora O objeto que está sendo representado por este visualizador
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

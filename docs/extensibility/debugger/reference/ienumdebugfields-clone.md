@@ -1,4 +1,5 @@
 ---
+description: Esse método retorna uma cópia da enumeração campos atuais como um objeto separado.
 title: 'IEnumDebugFields:: clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b2a9cc66e0e3b56d27c71147bd1b77ee3e559b6b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 965bc201646c7e068c58f9238dccba9a9e587d26
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896947"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102224896"
 ---
 # <a name="ienumdebugfieldsclone"></a>IEnumDebugFields::Clone
 Esse método retorna uma cópia da enumeração atual como um objeto separado.

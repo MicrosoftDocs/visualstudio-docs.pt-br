@@ -1,4 +1,5 @@
 ---
+description: Essa função determina o caminho do projeto pai de um projeto especificado.
 title: Função SccGetParentProjectPath | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 825586ed29152bddf0f5dd909f71f96c96db8624
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e624d8765da65dc6231c0128e87ffd9d6cdf848d
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958395"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102220606"
 ---
 # <a name="sccgetparentprojectpath-function"></a>Função SccGetParentProjectPath
 Essa função determina o caminho do projeto pai de um projeto especificado. Essa função é chamada quando o usuário está adicionando um projeto do Visual Studio ao controle do código-fonte.
@@ -60,7 +61,7 @@ no Cadeia de caracteres que identifica o caminho do projeto (até SCC_PRJPATH_SI
 
 [entrada, saída] Cadeia de caracteres de saída que identifica o caminho do projeto pai (até SCC_PRJPATH_SIZE, incluindo o terminador nulo).
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|

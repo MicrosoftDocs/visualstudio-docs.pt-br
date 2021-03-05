@@ -1,4 +1,5 @@
 ---
+description: Essa estrutura especifica vários tipos de informações sobre o tipo de um campo.
 title: TYPE_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: eeb4a306e7b357c59f8d75a91e2c21c50f1ed16b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0e6b37fbc4d2d812bfa10d8f05455050bb5a239d
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880080"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223414"
 ---
 # <a name="type_info"></a>TYPE_INFO
 Essa estrutura especifica vários tipos de informações sobre o tipo de um campo.

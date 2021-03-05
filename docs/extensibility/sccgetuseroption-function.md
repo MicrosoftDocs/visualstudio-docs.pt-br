@@ -1,4 +1,5 @@
 ---
+description: Essa função recupera uma variedade de opções específicas do usuário.
 title: Função SccGetUserOption | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e4bc3e4bf6acef8ff8de1cdcecb2596dcf6d86e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c137630e4a29fc534e9bfced16cffe862e07a046
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99844548"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102220619"
 ---
 # <a name="sccgetuseroption-function"></a>Função SccGetUserOption
 Essa função recupera uma variedade de opções específicas do usuário.
@@ -45,7 +46,7 @@ no Opção para recuperar (consulte comentários para as opções possíveis).
 
 fora Valor associado à opção.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|
@@ -61,6 +62,6 @@ fora Valor associado à opção.
 |-----------------|-----------------|
 |`SCC_USEROPT_CHECKOUT_LOCALVER`|Determina se o usuário deseja fazer check-out da versão local dos arquivos. `lpVal` é atribuído `SCC_USEROPT_COLV_YES` (o usuário deseja fazer check-out de arquivos locais) ou `SCC_USEROPT_COLV_NO` .|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Funções de API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
 - [Códigos de Erro](../extensibility/error-codes.md)

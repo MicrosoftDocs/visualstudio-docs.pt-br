@@ -1,4 +1,5 @@
 ---
+description: Especifica a versão mínima do sistema operacional que o modelo de projeto requer para funcionar corretamente.
 title: Elemento RequiredPlatformVersion (Modelos do Visual Studio)
 titleSuffix: ''
 ms.custom: SEO-VS-2020
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d182d308f852dda05f20f4ea30d3536850e20e90
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5f281e51bd07c76d63bc0247d9d7f62fe0390283
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837015"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221776"
 ---
 # <a name="requiredplatformversion-element-visual-studio-templates"></a>Elemento RequiredPlatformVersion (modelos do Visual Studio)
 

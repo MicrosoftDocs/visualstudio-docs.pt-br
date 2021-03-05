@@ -1,4 +1,5 @@
 ---
+description: Essa função obtém informações de status para um conjunto de arquivos selecionados sob controle do código-fonte.
 title: Função SccQueryInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2794e915efe35c2fee593d677ffd228c055a565a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 880cb2cf7db5c7a988d6549865de1864cb799e53
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836729"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221490"
 ---
 # <a name="sccqueryinfo-function"></a>Função SccQueryInfo
 Essa função obtém informações de status para um conjunto de arquivos selecionados sob controle do código-fonte.
@@ -50,7 +51,7 @@ no Uma matriz de nomes de arquivos a serem consultados.
 
 [entrada, saída] Uma matriz na qual o plug-in de controle do código-fonte retorna os sinalizadores de status para cada arquivo. Para obter mais informações, consulte [código de status do arquivo](../extensibility/file-status-code-enumerator.md).
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|

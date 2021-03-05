@@ -1,4 +1,5 @@
 ---
+description: Esse método determina se o Visualizador pode ter o objeto de dados que ele representa atualizado.
 title: 'IEEVisualizerDataProvider:: CanSetObjectForVisualizer | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3b6f3b3ebf41ebd3fd4c04b0cb7451f57a41fa73
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a0a7f69ea57e14e7a1960712631f03a3becc8b80
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890988"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102222933"
 ---
 # <a name="ieevisualizerdataprovidercansetobjectforvisualizer"></a>IEEVisualizerDataProvider::CanSetObjectForVisualizer
 Esse método determina se o Visualizador pode ter o objeto de dados que ele representa atualizado.
@@ -43,7 +44,7 @@ int CanSetObjectForVisualizer(
 `b`\
 fora Diferente de zero ( `TRUE` ) se o objeto no visualizador puder ser atualizado, zero ( `FALSE` ) se não puder.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

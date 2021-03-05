@@ -1,4 +1,5 @@
 ---
+description: Essa função recupera do controle do código-fonte cada um dos arquivos especificados sem interação do usuário.
 title: Função SccBackgroundGet | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d081389124b8703958f82cb97fc877f9f812290
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4df0866458f04081c82796767808194b292866a1
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952116"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102220918"
 ---
 # <a name="sccbackgroundget-function"></a>Função SccBackgroundGet
 Essa função recupera do controle do código-fonte cada um dos arquivos especificados sem interação do usuário.
@@ -58,7 +59,7 @@ no Sinalizadores de comando ( `SCC_GET_ALL` , `SCC_GET_RECURSIVE` ).
 
 no Um valor exclusivo associado a esta operação.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|
@@ -72,6 +73,6 @@ no Um valor exclusivo associado a esta operação.
 
  O uso do `dwFlags` argumento é o mesmo que o [SccGet](../extensibility/sccget-function.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Funções da API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
 - [SccGet](../extensibility/sccget-function.md)

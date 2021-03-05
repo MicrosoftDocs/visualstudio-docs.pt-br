@@ -1,4 +1,5 @@
 ---
+description: Essa função determina se o plug-in de controle do código-fonte dá suporte à criação do MSSCCPRJ. Arquivo SCC para cada um dos arquivos fornecidos.
 title: Função SccWillCreateSccFile | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 50ef18e44579525df136bd770cda96124cb30c87
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ee01478858615aad135d07a5c10d5d6c58280926
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956861"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221282"
 ---
 # <a name="sccwillcreatesccfile-function"></a>Função SccWillCreateSccFile
 Essa função determina se o plug-in de controle do código-fonte dá suporte à criação do MSSCCPRJ. Arquivo SCC para cada um dos arquivos fornecidos.
@@ -50,7 +51,7 @@ no Uma matriz de nomes de arquivos totalmente qualificados a serem verificados (
 
 [entrada, saída] Matriz na qual armazenar os resultados.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|

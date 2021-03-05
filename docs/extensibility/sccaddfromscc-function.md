@@ -1,4 +1,5 @@
 ---
+description: Essa função permite que o usuário procure arquivos que já estão no sistema de controle do código-fonte e, posteriormente, torne esses arquivos parte do projeto atual.
 title: Função SccAddFromScc | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e35ae460d6ceb505bc7ad64a0e522bf2841260f2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2bbc321d7ff7e335b28f6bc7430fb0f8dce3d57c
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99886607"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221698"
 ---
 # <a name="sccaddfromscc-function"></a>Função SccAddFromScc
 Essa função permite que o usuário procure arquivos que já estão no sistema de controle do código-fonte e, posteriormente, torne esses arquivos parte do projeto atual. Por exemplo, essa função pode obter um arquivo de cabeçalho comum no projeto atual sem copiar o arquivo. A matriz de retorno de arquivos, `lplpFileNames` , contém a lista de arquivos que o usuário deseja adicionar ao projeto do IDE.
@@ -50,7 +51,7 @@ no Um identificador para a janela do IDE que o plug-in de controle do código-fo
 
 [entrada, saída] Uma matriz de ponteiros para todos os nomes de arquivo sem caminhos de diretório. Essa matriz é alocada e liberada pelo plug-in de controle do código-fonte. Se `lpnFiles` = 1 e `lplpFileNames` não for `NULL` , o primeiro nome na matriz apontado pelo `lplpFileNames` contém a pasta de destino.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|

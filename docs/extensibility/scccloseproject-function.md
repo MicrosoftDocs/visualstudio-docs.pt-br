@@ -1,4 +1,5 @@
 ---
+description: Essa função fecha um projeto, marcando o final de uma sessão específica.
 title: Função SccCloseProject | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a4a54193b23015135b6112655fe48d79d3de74e4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f3fb9208619639a8f1c767cbf12a2de0ed24768f
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943147"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102220866"
 ---
 # <a name="scccloseproject-function"></a>Função SccCloseProject
 Essa função fecha um projeto, marcando o final de uma sessão específica.
@@ -33,7 +34,7 @@ SCCRTN SccCloseProject (
 ### <a name="parameters"></a>Parâmetros
  pvContext a estrutura de contexto do plug-in de controle do código-fonte.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|

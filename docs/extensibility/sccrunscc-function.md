@@ -1,4 +1,5 @@
 ---
+description: Essa função invoca a ferramenta de administração do controle do código-fonte.
 title: Função SccRunScc | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 10c04daf8ffea8266c874dfb0fb805e551942bc9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ca492c35ba061072dc9e4b3d0eabc42476bcd8ed
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836755"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221360"
 ---
 # <a name="sccrunscc-function"></a>Função SccRunScc
 Essa função invoca a ferramenta de administração do controle do código-fonte.
@@ -50,7 +51,7 @@ no Número de arquivos especificados na `lpFileNames` matriz.
 
 no Matriz de nomes de arquivo selecionados.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|

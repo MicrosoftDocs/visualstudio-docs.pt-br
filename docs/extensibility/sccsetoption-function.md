@@ -1,4 +1,5 @@
 ---
+description: Essa função define opções que controlam o comportamento do plug-in de controle do código-fonte.
 title: Função SccSetOption | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 33ef775f33194a616d93478aecfdcceec446ebe8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e25647eb8d2e5796665f072af6df43b2f585c7b0
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836690"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221373"
 ---
 # <a name="sccsetoption-function"></a>Função SccSetOption
 Essa função define opções que controlam o comportamento do plug-in de controle do código-fonte.
@@ -45,7 +46,7 @@ no A opção que está sendo definida.
 
 no Configurações da opção.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|
@@ -83,7 +84,7 @@ no Configurações da opção.
 ## <a name="scc_opt_sharesubproj"></a>SCC_OPT_SHARESUBPROJ
  Se `nOption` é definido como `SCC_OPT_SHARESUBPROJ` , o IDE está testando se o plug-in de controle do código-fonte pode usar uma pasta local especificada ao adicionar arquivos do controle do código-fonte. O valor do `dwVal` parâmetro não importa nesse caso. Se o plug-in permitir que o IDE especifique a pasta de destino local em que os arquivos serão adicionados do controle do código-fonte quando o [SccAddFromScc](../extensibility/sccaddfromscc-function.md) for chamado, o plug-in deverá retornar `SCC_I_SHARESUBPROJOK` quando a `SccSetOption` função for chamada. Em seguida, o IDE usa o `lplpFileNames` parâmetro da `SccAddFromScc` função para passar a pasta de destino. O plug-in usa essa pasta de destino para posicionar os arquivos adicionados do controle do código-fonte. Se o plug-in não retornar `SCC_I_SHARESUBPROJOK` quando a `SCC_OPT_SHARESUBPROJ` opção for definida, o IDE assumirá que o plug-in é capaz de adicionar arquivos somente na pasta local atual.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Funções de API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
 - [SccInitialize](../extensibility/sccinitialize-function.md)
 - [SccOpenProject](../extensibility/sccopenproject-function.md)

@@ -1,4 +1,5 @@
 ---
+description: Essa função atualiza uma lista de arquivos para um comando de controle do código-fonte específico e fornece o status do controle do código-fonte em todos os arquivos fornecidos.
 title: Função SccPopulateList | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2deb30b606de686269e095fffe369a7d56adb453
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 24ed033d05711e4c6815945796595897e926ba74
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836924"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102220541"
 ---
 # <a name="sccpopulatelist-function"></a>Função SccPopulateList
 Essa função atualiza uma lista de arquivos para um comando de controle do código-fonte específico e fornece o status do controle do código-fonte em todos os arquivos fornecidos.
@@ -70,7 +71,7 @@ no Valor que deve ser passado inalterado para a função de retorno de chamada.
 
 no Sinalizadores de comando (consulte a seção "sinalizador de populalist" de [Bitflags usada por comandos específicos](../extensibility/bitflags-used-by-specific-commands.md) para obter detalhes).
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|

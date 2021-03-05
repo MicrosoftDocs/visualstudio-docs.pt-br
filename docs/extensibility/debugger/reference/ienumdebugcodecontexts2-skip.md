@@ -1,4 +1,5 @@
 ---
+description: Ignora o número especificado de elementos na enumeração de contextos de código.
 title: 'IEnumDebugCodeContexts2:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e6fecf3b8bf4b96834a19d6dc13ce63d7a72ea7a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e3d6dba22758860df17ea6ce16da8ae888b0829c
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929401"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102224922"
 ---
 # <a name="ienumdebugcodecontexts2skip"></a>IEnumDebugCodeContexts2::Skip
 Ignora o número especificado de elementos.
@@ -43,7 +44,7 @@ int Skip(
 `celt`\
 no Número de elementos a serem ignorados.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se `celt` é maior que o número de elementos restantes; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

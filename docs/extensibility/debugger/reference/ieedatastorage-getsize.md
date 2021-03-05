@@ -1,4 +1,5 @@
 ---
+description: Retorna o número de bytes contidos neste objeto.
 title: 'IEEDataStorage:: GetSize | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2a18ae08500bd457f6e9ab316514836a30538a42
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 46051ae73859213b3206e27fb83d40c0561d0c0b
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965506"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102222920"
 ---
 # <a name="ieedatastoragegetsize"></a>IEEDataStorage::GetSize
 Retorna o número de bytes contidos neste objeto.
@@ -43,7 +44,7 @@ int GetSize(
 `size`\
 fora O número de bytes contidos neste objeto.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

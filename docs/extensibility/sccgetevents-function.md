@@ -1,4 +1,5 @@
 ---
+description: Essa função recupera um evento de status enfileirado.
 title: Função SccGetEvents | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4502dd1cdf5cb23f317cd29bee74460c5911482c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 069e9399a91a39d8005d9137bd19f4032773b24a
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965155"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102220788"
 ---
 # <a name="sccgetevents-function"></a>Função SccGetEvents
 Essa função recupera um evento de status enfileirado.
@@ -50,7 +51,7 @@ no A estrutura de contexto do plug-in de controle do código-fonte.
 
 [entrada, saída] Retorna o número de entradas deixadas na fila após essa chamada. Se esse número for grande, o chamador poderá decidir chamar o [SccQueryInfo](../extensibility/sccqueryinfo-function.md) para obter todas as informações ao mesmo tempo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|
@@ -64,6 +65,6 @@ no A estrutura de contexto do plug-in de controle do código-fonte.
 
  Se não houver nenhuma atualização de status para relatar, o plug-in de controle do código-fonte armazenará uma cadeia de caracteres vazia no buffer apontado por `lpFileName` . Caso contrário, o plug-in armazena o nome do caminho completo do arquivo para o qual as informações de status foram alteradas e retorna o código de status apropriado (um dos valores detalhados no [código de status do arquivo](../extensibility/file-status-code-enumerator.md)).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Funções da API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
 - [Código de status do arquivo](../extensibility/file-status-code-enumerator.md)

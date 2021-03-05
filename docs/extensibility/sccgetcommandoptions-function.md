@@ -1,4 +1,5 @@
 ---
+description: Essa função solicita ao usuário opções avançadas para um determinado comando.
 title: Função SccGetCommandOptions | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3b1f465e6709932cd89794c5c0558d608fadd2a8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 400b778cf5e26b0cabad0fb19c548b2faa0a803f
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965194"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102220801"
 ---
 # <a name="sccgetcommandoptions-function"></a>Função SccGetCommandOptions
 Essa função solicita ao usuário opções avançadas para um determinado comando.
@@ -50,7 +51,7 @@ no O comando para o qual as opções avançadas são solicitadas (consulte o [c�
 
 no A estrutura da opção (também pode ser `NULL` ).
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|
@@ -79,6 +80,6 @@ no A estrutura da opção (também pode ser `NULL` ).
 > [!NOTE]
 > O comando `SCC_COMMAND_OPTIONS` é usado quando o IDE exibe uma caixa de diálogo **Opções** que permite que o usuário defina as preferências que controlam como a integração funciona. Se o plug-in de controle do código-fonte quiser fornecer sua própria caixa de diálogo de preferências, ele poderá exibi-lo de um botão **avançado** na caixa de diálogo Preferências do IDE. O plug-in é exclusivamente responsável por obter e persistir essas informações; o IDE não o usa ou o modifica.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Funções da API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
 - [Código de comando](../extensibility/command-code-enumerator.md)

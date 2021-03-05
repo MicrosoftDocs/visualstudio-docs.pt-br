@@ -13,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 16615dfdbfd7e9762046e37899ecf23619837ae2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3fa4c2910a1f694a822d2a31b5ad537c8104f99c
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99926011"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221295"
 ---
 # <a name="visibilityitem-element"></a>Elemento VisibilityItem
 O `VisibilityItem` elemento determina a visibilidade estática de comandos e barras de ferramentas. Cada entrada identifica um comando ou menu e também um contexto de interface do usuário de comando associado. O Visual Studio detecta comandos, menus e barras de ferramentas e sua visibilidade, sem carregar o VSPackages que os define. O IDE usa o <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> método para determinar se um contexto de interface do usuário de comando está ativo.
@@ -33,8 +33,8 @@ O `VisibilityItem` elemento determina a visibilidade estática de comandos e bar
 
 ```xml
 <VisibilityItem
-  guid ="="cmdGuidMyProductCommands"
-  id=="cmdidAddWidget"
+  guid="cmdGuidMyProductCommands"
+  id="cmdidAddWidget"
   context="guidNotViewSourceMode"/>
 ```
 
@@ -45,9 +45,9 @@ O `VisibilityItem` elemento determina a visibilidade estática de comandos e bar
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|guid|Obrigatório. O GUID do identificador do comando GUID/ID.|
-|id|Obrigatório. A ID do identificador de comando de GUID/ID.|
-|contexto|Obrigatório. O contexto de interface do usuário no qual o comando está visível.|
+|guid|Obrigatórios. O GUID do identificador do comando GUID/ID.|
+|id|Obrigatórios. A ID do identificador de comando de GUID/ID.|
+|contexto|Obrigatórios. O contexto de interface do usuário no qual o comando está visível.|
 |Condição|Opcional. Consulte [atributos condicionais](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Elementos filho

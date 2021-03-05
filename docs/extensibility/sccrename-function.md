@@ -1,4 +1,5 @@
 ---
+description: Essa função renomeia um arquivo no sistema de controle do código-fonte.
 title: Função SccRename | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4b4579644b04002ae9da3361ba35c63472eef637
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dcfb68518f42e969b7c9d52acfb37723e9774f97
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836742"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221334"
 ---
 # <a name="sccrename-function"></a>Função SccRename
 Essa função renomeia um arquivo no sistema de controle do código-fonte.
@@ -50,7 +51,7 @@ no O nome de arquivo totalmente qualificado do arquivo que está sendo renomeado
 
 no O novo nome totalmente qualificado. Se o caminho do diretório for diferente, o arquivo terá sido movido de um subdiretório para outro.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|

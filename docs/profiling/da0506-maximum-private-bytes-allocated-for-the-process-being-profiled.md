@@ -1,4 +1,5 @@
 ---
+description: Essa mensagem relata a quantidade máxima de memória virtual que o processo alocou em bytes (Bytes privados).
 title: DA0506-máximo de bytes particulares alocados para o processo que está sendo criado com perfil | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 48671c7e8552626deed814f06f21be38527545bd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a796dd962485e5569ec09b07b881a8bb183b6e9d
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918068"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223635"
 ---
 # <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506: Máximo de Bytes Privados alocados para o Processo cujo perfil está sendo criado
 
@@ -26,7 +27,7 @@ ms.locfileid: "99918068"
 |-|-|
 |ID de regra|DA0506|
 |Categoria|Monitoramento de recursos|
-|Método de criação de perfil|Tudo|
+|Método de criação de perfil|Todos|
 |Mensagem|Essas informações foram coletadas apenas para fins informativos. O contador Bytes privados do processo mede a memória virtual alocada pelo processo do qual o perfil está sendo criado. O valor relatado é o máximo observado em todos os intervalos de medição.|
 |Tipo de regra|Informações|
 

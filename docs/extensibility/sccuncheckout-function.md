@@ -1,4 +1,5 @@
 ---
+description: Essa função Desfaz uma operação de check-out anterior, restaurando assim o conteúdo do arquivo ou dos arquivos selecionados para o estado anterior ao check-out.
 title: Função SccUncheckout | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3fdcd8cd94914763d103a6232c4f87c3ec93f216
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 33e0c4904a92d71e000d8c911d551eb8d0aab621
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836664"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221347"
 ---
 # <a name="sccuncheckout-function"></a>Função SccUncheckout
 Essa função Desfaz uma operação de check-out anterior, restaurando assim o conteúdo do arquivo ou dos arquivos selecionados para o estado anterior ao check-out. Todas as alterações feitas no arquivo desde que o check-out são perdidas.
@@ -60,7 +61,7 @@ no Sinalizadores de comando (não usados).
 
 no Opções específicas de plug-ins de controle do código-fonte.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|
@@ -77,5 +78,5 @@ no Opções específicas de plug-ins de controle do código-fonte.
 ## <a name="remarks"></a>Comentários
  Após essa operação, os `SCC_STATUS_CHECKEDOUT` `SCC_STATUS_MODIFIED` sinalizadores e serão limpos para os arquivos nos quais o check-out de desfazer foi executado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Funções de API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)

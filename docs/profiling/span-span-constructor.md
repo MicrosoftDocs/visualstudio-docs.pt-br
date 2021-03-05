@@ -1,4 +1,5 @@
 ---
+description: Inicializa uma nova instância da classe span.
 title: Construtor span::span | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a813506e64242d1effdb9ed64d35c9ee5d31239
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fdffdc59b31f5f04817536769d9a712484e6cdd7
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949968"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223856"
 ---
 # <a name="spanspan-constructor"></a>Construtor span::span
 
