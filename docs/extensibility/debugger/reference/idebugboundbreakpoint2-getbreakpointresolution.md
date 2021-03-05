@@ -1,4 +1,5 @@
 ---
+description: Obtém a resolução do ponto de interrupção que descreve esse ponto de interrupção.
 title: 'IDebugBoundBreakpoint2:: GetBreakpointResolution | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 51912fce3bf98502be7ae05f815fce60e595e89c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: aa5f5e9aabbf96bc0dffb13e99b404c906384324
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887335"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102173719"
 ---
 # <a name="idebugboundbreakpoint2getbreakpointresolution"></a>IDebugBoundBreakpoint2::GetBreakpointResolution
 Obtém a resolução do ponto de interrupção que descreve esse ponto de interrupção.
@@ -48,7 +49,7 @@ fora Retorna a interface [IDebugBreakpointResolution2](../../../extensibility/de
 
 - O local de dados em que um ponto de interrupção de dados está associado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o estado do objeto de ponto de interrupção associado é definido como `BPS_DELETED` (parte da enumeração de [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) ).
 
 ## <a name="remarks"></a>Comentários

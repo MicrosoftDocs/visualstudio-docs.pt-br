@@ -1,4 +1,5 @@
 ---
+description: Obtém o contexto de código que descreve o local desse evento.
 title: 'IDebugCanStopEvent2:: GetCodeContext | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: aefce11ba82cae7529ed1127784d70771add8302
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 29863a16d59528e86f7c5a3449e7c321b2dcaf9d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919979"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102173531"
 ---
 # <a name="idebugcanstopevent2getcodecontext"></a>IDebugCanStopEvent2::GetCodeContext
 Obtém o contexto de código que descreve o local desse evento.
@@ -43,7 +44,7 @@ int GetCodeContext(
 `ppCodeContext`\
 fora Retorna o objeto [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) que representa o local do código atual.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

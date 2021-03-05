@@ -1,4 +1,5 @@
 ---
+description: Grava um despejo em um arquivo.
 title: 'IDebugProgram2:: WriteDump | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 265c77acdb15069c1fcd7f33d93d4ff74a528eca
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d0e4c90034d19635993196a0cd00ffcb06f26433
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896143"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102171921"
 ---
 # <a name="idebugprogram2writedump"></a>IDebugProgram2::WriteDump
 Grava um despejo em um arquivo.
@@ -48,7 +49,7 @@ no Um valor da enumeração [dumptype](../../../extensibility/debugger/reference
 `pszDumpUrl`\
 no A URL na qual gravar o despejo. Normalmente, isso está na forma de `file://c:\path\filename.ext` , mas pode ser qualquer URL válida.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

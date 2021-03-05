@@ -1,4 +1,5 @@
 ---
+description: Especifica o escopo do fluxo de desmontagem.
 title: DISASSEMBLY_STREAM_SCOPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 54773ee6f770855122992f49bebad44fa1f6129a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c688da1c850743f92fb9b87f7f5d72fb66d946d6
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99870292"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102170439"
 ---
 # <a name="disassembly_stream_scope"></a>DISASSEMBLY_STREAM_SCOPE
 Especifica o escopo do fluxo de desmontagem.
@@ -71,7 +72,7 @@ Namespace: Microsoft. VisualStudio. Debugger. Interop
 
 Assembly: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md)
 - [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md)

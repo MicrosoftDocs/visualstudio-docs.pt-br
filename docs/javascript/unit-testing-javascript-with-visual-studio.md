@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: e10f9b628d1d9fbbdb2911977fe7e63b1a7b6d57
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 04ef9834fdc66256b601ecdcf156e4d290447ce3
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957472"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102171312"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Teste de unidade em JavaScript e TypeScript no Visual Studio
 
@@ -97,7 +97,7 @@ Para o TypeScript, os testes de unidade são executados no código JavaScript ge
 
 ### <a name="run-tests-from-the-command-line"></a>Executar testes na linha de comando
 
-Você pode executar os testes do [prompt de comando do desenvolvedor](/dotnet/framework/tools/developer-command-prompt-for-vs) para Visual Studio usando o seguinte comando:
+Você pode executar os testes de [prompt de comando do desenvolvedor para Visual Studio](../ide/reference/command-prompt-powershell.md) usando o seguinte comando:
 
 ```
 vstest.console.exe <path to project file>\NodejsConsoleApp23.njsproj /TestAdapterPath:<VisualStudioFolder>\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter
@@ -152,11 +152,12 @@ Para obter um bom exemplo das implementações `find_tests` e `run_tests`, confi
 A descoberta das estruturas de teste disponíveis ocorre na inicialização do Visual Studio. Se uma estrutura for adicionada enquanto o Visual Studio estiver em execução, reinicie o Visual Studio para detectar a estrutura. No entanto, você não precisa reiniciar ao fazer alterações na implementação.
 
 ## <a name="unit-tests-in-other-project-types"></a>Testes de unidade em outros tipos de projeto
+
 Você não está limitado a escrever testes de unidade apenas em seus projetos Node.js. Quando você adicionar as propriedades TestFramework e TestRoot a qualquer projeto de C# ou Visual Basic, esses testes serão enumerados e você poderá executá-los usando a janela do Gerenciador de Testes.
 
 Para habilitar isso, clique com o botão direito do mouse no nó do projeto no Gerenciador de Soluções, escolha **Descarregar Projeto** e, em seguida, escolha **Editar Projeto**. Em seguida, no arquivo de projeto, adicione os dois elementos a seguir a um grupo de propriedades.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Certifique-se de que o grupo de propriedades a que você está adicionando os elementos não tenha uma condição especificada.
 > Isso pode causar um comportamento inesperado.
 
@@ -170,6 +171,7 @@ Para habilitar isso, clique com o botão direito do mouse no nó do projeto no G
 Em seguida, adicione seus testes à pasta raiz de teste especificada por você e eles ficarão disponíveis para execução na janela do Gerenciador de Testes. Se eles não aparecerem inicialmente, você precisará recompilar o projeto.
 
 ### <a name="unit-test-net-core-and-net-standard"></a>Teste de unidade no .NET Core e no .NET Standard
+
 Além das propriedades acima, também será necessário instalar o pacote [Microsoft.JavaScript.UnitTest](https://www.nuget.org/packages/Microsoft.JavaScript.UnitTest/) do NuGet e definir a propriedade:
 
 ```xml

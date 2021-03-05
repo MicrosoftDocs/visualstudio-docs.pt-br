@@ -1,4 +1,5 @@
 ---
+description: Executa uma etapa.
 title: 'IDebugProgram2:: Step | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 544ca22d263a3fca47f9484ac126031e83cde4e0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8ff4ee710369aef80ac18603ac3fc117e17dba07
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99911901"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102171990"
 ---
 # <a name="idebugprogram2step"></a>IDebugProgram2::Step
 Executa uma etapa.
@@ -56,7 +57,7 @@ no Um valor da enumeração [STEPKIND](../../../extensibility/debugger/reference
 `step`\
 no Um valor da enumeração [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md) que especifica a unidade de etapa (por exemplo, por instrução ou instrução).
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
@@ -65,7 +66,7 @@ no Um valor da enumeração [STEPUNIT](../../../extensibility/debugger/reference
 > [!WARNING]
 > Não enviar um evento de interrupção ou um evento imediato (síncrono) para [evento](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) ao lidar com essa chamada; caso contrário, o depurador pode parar de responder.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)
 - [Evento](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

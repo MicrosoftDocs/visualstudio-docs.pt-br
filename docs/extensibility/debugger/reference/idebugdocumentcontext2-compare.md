@@ -1,4 +1,5 @@
 ---
+description: Compara este contexto de documento com uma determinada matriz de contextos de documento.
 title: 'IDebugDocumentContext2:: Compare | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 959d909d0c777110905aff3b11c8c29d27d628dd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a18a689a187e802b92485f092b10b7323d0f97c8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880756"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102173011"
 ---
 # <a name="idebugdocumentcontext2compare"></a>IDebugDocumentContext2::Compare
 Compara este contexto de documento com uma determinada matriz de contextos de documento.
@@ -58,7 +59,7 @@ no O comprimento da matriz de contextos de documento a ser comparado.
 `pdwDocContext`\
 fora Retorna o índice para a `rgpDocContextSet` matriz do primeiro contexto de documento que satisfaz a comparação.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Retorna `S_OK` se uma correspondência foi encontrada. Retorna `S_FALSE` se nenhuma correspondência foi encontrada. Caso contrário, retornará um código de erro.
 
 ## <a name="remarks"></a>Comentários

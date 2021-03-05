@@ -1,4 +1,5 @@
 ---
+description: Especifica as informações a serem recuperadas sobre a resolução bem-sucedida de um ponto de interrupção.
 title: BPRESI_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0d82650fabf467d44b1bd5eba01599c5cb5e40bb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 91fa2a8b973149cb9365d817e14ac877bfc9f617
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99938257"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102171025"
 ---
 # <a name="bpresi_fields"></a>BPRESI_FIELDS
 Especifica as informações a serem recuperadas sobre a resolução bem-sucedida de um ponto de interrupção.

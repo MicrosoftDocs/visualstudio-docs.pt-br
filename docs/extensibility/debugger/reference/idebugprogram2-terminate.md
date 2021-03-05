@@ -1,4 +1,5 @@
 ---
+description: Encerra o programa.
 title: 'IDebugProgram2:: Terminate | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 74a186bd39dab7ab1f7228504070f50b3aa6c311
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 880bf4e727d90c19cf11f42cc3020124235bb1e2
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99911895"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102171977"
 ---
 # <a name="idebugprogram2terminate"></a>IDebugProgram2::Terminate
 Encerra o programa.
@@ -45,6 +46,6 @@ int Terminate();
 
  Esse método ou o método [Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md) é chamado pelo IDE, normalmente em resposta ao usuário que está interrompendo toda a depuração. A implementação desse método deve, de preferência, encerrar o programa dentro do processo. Se isso não for possível, o DE deve impedir que o programa execute mais nenhum nesse processo (e faça qualquer limpeza necessária). Se o `IDebugProcess2::Terminate` método foi chamado pelo IDE, todo o processo será encerrado em algum momento depois que o `IDebugProgram2::Terminate` método for chamado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [Encerrar](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)

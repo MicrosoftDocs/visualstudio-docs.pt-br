@@ -1,4 +1,5 @@
 ---
+description: Recupera os sinalizadores para este parâmetro genérico.
 title: 'IDebugGenericParamField:: GetFlags | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: be9f842db6b322ffb9bdc76ebd2a954d849e5d65
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8f54c85e7838370b383d1b3f8df1e044df655407
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929817"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102172660"
 ---
 # <a name="idebuggenericparamfieldgetflags"></a>IDebugGenericParamField::GetFlags
 Recupera os sinalizadores para este parâmetro genérico.
@@ -42,7 +43,7 @@ int GetFlags(
 `pdwFlags`\
 fora Retorna os sinalizadores para este parâmetro genérico.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

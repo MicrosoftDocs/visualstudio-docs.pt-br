@@ -1,4 +1,5 @@
 ---
+description: Esse método retorna o número de tipos de argumentos associados a esse objeto.
 title: 'IDebugBinder3:: GetTypeArgumentCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 79f134d48e61aeee536d584dda2b4c0a7254e0a9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3118d7e0fc4f493013a9a328cda0682fcc0707aa
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840490"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102173998"
 ---
 # <a name="idebugbinder3gettypeargumentcount"></a>IDebugBinder3::GetTypeArgumentCount
 Esse método retorna o número de tipos de argumentos associados a esse objeto.
@@ -43,12 +44,12 @@ int GetTypeArgumentCount(
 `uCount`\
 fora Número de tipos de argumentos associados a este objeto.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
  O valor retornado por esse método pode ser usado para alocar uma matriz para uso com o método [gettypearguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)
 - [GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md)

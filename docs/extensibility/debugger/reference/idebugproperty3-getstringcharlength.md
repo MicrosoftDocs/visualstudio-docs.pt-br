@@ -1,4 +1,5 @@
 ---
+description: Retorna o número de caracteres na cadeia de caracteres da propriedade associada.
 title: 'IDebugProperty3:: GetStringCharLength | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d3189a7c84ed36827ab48b27c8f727314eb34983
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eaf0792b6e0c2311b7eeb01f12b01a485739c6c9
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963114"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102171377"
 ---
 # <a name="idebugproperty3getstringcharlength"></a>IDebugProperty3::GetStringCharLength
 Retorna o número de caracteres na cadeia de caracteres da propriedade associada.
@@ -45,7 +46,7 @@ int GetStringCharLength(
 |---------------|-----------------|
 |`pLen`|fora Retorna o número de caracteres na cadeia de caracteres da propriedade.|
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna o código de erro.
 
 ## <a name="remarks"></a>Comentários

@@ -1,4 +1,5 @@
 ---
+description: Obtém o número de visualizadores personalizados que podem estar disponíveis para esta propriedade.
 title: 'IDebugProperty3:: GetCustomViewerCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ffdca7e4a556a72c8fb7f3f533e69d47fa289732
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 58ad7ffc1b3250f5002f9f08208c464d14a2cc15
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896084"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102171390"
 ---
 # <a name="idebugproperty3getcustomviewercount"></a>IDebugProperty3::GetCustomViewerCount
 Obtém o número de visualizadores personalizados que podem estar disponíveis para esta propriedade.
@@ -43,7 +44,7 @@ int GetCustomViewerCount(
 `pcelt`\
 fora O número de visualizadores personalizados disponíveis para esta propriedade.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

@@ -1,4 +1,5 @@
 ---
+description: Esse método recupera um objeto de memória que representa a memória à qual esse objeto está associado.
 title: 'IDebugBinder3:: getmemoryobject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3408237de91e822e2ea3cbd95fad40c859267c1d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6ca708c9a6fd80a7a04d8202a73f0bce99102ff1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99916312"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102173968"
 ---
 # <a name="idebugbinder3getmemoryobject"></a>IDebugBinder3::GetMemoryObject
 Esse método recupera um objeto de memória que representa a memória à qual esse objeto está associado.
@@ -53,7 +54,7 @@ no Representa um endereço de memória ou um valor para um valor constante.
 `ppObject`\
 fora Um [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) que representa a memória à qual esse objeto está associado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

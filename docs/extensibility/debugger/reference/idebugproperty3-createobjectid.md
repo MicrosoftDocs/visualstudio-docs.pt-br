@@ -1,4 +1,5 @@
 ---
+description: Cria uma ID exclusiva para essa propriedade para garantir que ela seja exclusiva entre todas as outras propriedades.
 title: 'IDebugProperty3:: createobjectid | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a9d555d7b0480d910a5cb88397db5bfd7e734fd1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9e82e11d83c77131e47d815529813484d2869cdc
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896117"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102171433"
 ---
 # <a name="idebugproperty3createobjectid"></a>IDebugProperty3::CreateObjectID
 Cria uma ID exclusiva para essa propriedade para garantir que ela seja exclusiva entre todas as outras propriedades.

@@ -1,4 +1,5 @@
 ---
+description: Essa estrutura especifica informações sobre um tipo de campo extraído dos metadados.
 title: BUILT_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 35ae5661127c0e19e87c96a47a2985161beae7c5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dd9f5984861b0f56e4a46b4f793a38bbb3bafa60
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874376"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102170979"
 ---
 # <a name="built_type"></a>BUILT_TYPE
 Essa estrutura especifica informações sobre um tipo de campo extraído dos metadados.

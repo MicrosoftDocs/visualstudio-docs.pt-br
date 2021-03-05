@@ -1,4 +1,5 @@
 ---
+description: Cria um enumerador para todas as variáveis locais do método, incluindo aquelas geradas internamente por um compilador.
 title: 'IDebugMethodField:: EnumAllLocals | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c10de4db63a7706326ff6f387366c75f860408bf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 38f14ba2d520974b9f8f567c7840737ed2763080
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928153"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102172162"
 ---
 # <a name="idebugmethodfieldenumalllocals"></a>IDebugMethodField::EnumAllLocals
 Cria um enumerador para todas as variáveis locais do método, incluindo aquelas geradas internamente por um compilador.
@@ -48,7 +49,7 @@ no Um objeto [IDebugAddress](../../../extensibility/debugger/reference/idebugadd
 `ppLocals`\
 fora Retorna um objeto [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) que representa a lista de todos os locais no escopo especificado; caso contrário, retorna um valor nulo que indica nenhum local.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará S_OK ou retornará S_FALSE se não houver nenhum local. Caso contrário, retornará um código de erro.
 
 ## <a name="remarks"></a>Comentários

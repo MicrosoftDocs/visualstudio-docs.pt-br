@@ -1,4 +1,5 @@
 ---
+description: Recupera as restrições que estão associadas a esse parâmetro genérico.
 title: 'IDebugGenericParamField:: getconstraints | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b32fcb5beae3ca00324f2b2606b5eebae51af5fa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 51c3dcbeda334953ef09f8bcfbf1789450201a0c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869733"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102172780"
 ---
 # <a name="idebuggenericparamfieldgetconstraints"></a>IDebugGenericParamField::GetConstraints
 Recupera as restrições que estão associadas a esse parâmetro genérico.
@@ -52,7 +53,7 @@ fora Retorna uma matriz que contém as restrições associadas a este campo.
 `pcConstraints`\
 [entrada, saída] Número de restrições na `ppConstraints` matriz.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo
@@ -151,5 +152,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)

@@ -1,4 +1,5 @@
 ---
+description: Obtém informações estendidas para a propriedade.
 title: 'IDebugProperty2:: GetExtendedInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1bb9fe21b1dc004d5a124a1146e6f7610fbe8699
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 004c7d545dbaaa20016fd94febe999420305fc7a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99916048"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102171493"
 ---
 # <a name="idebugproperty2getextendedinfo"></a>IDebugProperty2::GetExtendedInfo
 Obtém informações estendidas para a propriedade.
@@ -48,7 +49,7 @@ no GUID que determina o tipo de informações estendidas a serem recuperadas. Co
 `pExtendedInfo`\
 fora Retorna um `VARIANT` (C++) ou um objeto (C#) que pode ser usado para recuperar as informações de propriedade estendida. Por exemplo, esse parâmetro pode retornar uma `IUnknown` interface que pode ser consultada para uma interface [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) . Consulte Comentários para obter detalhes.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna o código de erro. Retorna `S_GETEXTENDEDINFO_NO_EXTENDEDINFO` se não houver informações estendidas a serem recuperadas.
 
 ## <a name="remarks"></a>Comentários

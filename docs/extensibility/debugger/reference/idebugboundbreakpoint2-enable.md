@@ -1,4 +1,5 @@
 ---
+description: Habilita ou desabilita o ponto de interrupção.
 title: 'IDebugBoundBreakpoint2:: habilitar | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0de6de53c765e8e82ac63f85b52f443da3f9ee90
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4b7620af5091907557a0a90a0cf0f2b0e301938c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99930519"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102173921"
 ---
 # <a name="idebugboundbreakpoint2enable"></a>IDebugBoundBreakpoint2::Enable
 Habilita ou desabilita o ponto de interrupção.
@@ -44,7 +45,7 @@ int Enable(
 `fEnable`\
 no Defina como diferente de zero ( `TRUE` ) para habilitar ou para zero ( `FALSE` ) para desabilitar o ponto de interrupção.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o estado do objeto de ponto de interrupção associado é definido como `BPS_DELETED` (parte da enumeração de [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) ).
 
 ## <a name="example"></a>Exemplo
