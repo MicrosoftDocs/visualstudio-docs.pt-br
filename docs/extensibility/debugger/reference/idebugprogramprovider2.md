@@ -1,4 +1,5 @@
 ---
+description: Essa interface registrada permite que o SDM (Gerenciador de depuração de sessão) obtenha informações sobre programas que foram publicados por meio da interface IDebugProgramPublisher2.
 title: IDebugProgramProvider2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 788c4add42b70107ea2960ae5682a2e2cc815d59
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d0102aa650d9739ae862f1357a1560842ae2fa59
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959617"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151435"
 ---
 # <a name="idebugprogramprovider2"></a>IDebugProgramProvider2
 Essa interface registrada permite que o SDM (Gerenciador de depuração de sessão) obtenha informações sobre programas que foram "publicados" por meio da interface [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md) .
@@ -82,7 +83,7 @@ IDebugProgramProvider2 *GetProgramProvider(GUID *pDebugEngineGuid)
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Interfaces principais](../../../extensibility/debugger/reference/core-interfaces.md)
 - [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)
 - [Auxiliares do SDK para depuração](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)

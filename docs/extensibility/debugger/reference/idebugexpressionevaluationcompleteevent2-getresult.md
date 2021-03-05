@@ -1,4 +1,5 @@
 ---
+description: Obtém o resultado da avaliação de expressão.
 title: 'IDebugExpressionEvaluationCompleteEvent2:: GetResult | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9abc7ce472543b6d2fd6e82fbd5a01f97e4d1784
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 00200c9aaa23249eefc4b1b6d0876065ce1ed4ad
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99930441"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102152605"
 ---
 # <a name="idebugexpressionevaluationcompleteevent2getresult"></a>IDebugExpressionEvaluationCompleteEvent2::GetResult
 Obtém o resultado da avaliação de expressão.
@@ -42,7 +43,7 @@ int GetResult(
 ## <a name="parameters"></a>Parâmetros
 `ppResult` fora Retorna um objeto [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) que representa o resultado da avaliação da expressão.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

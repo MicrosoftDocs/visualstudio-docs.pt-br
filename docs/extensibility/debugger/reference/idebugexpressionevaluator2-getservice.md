@@ -1,4 +1,5 @@
 ---
+description: Recupera um objeto de serviço de acordo com seu identificador exclusivo.
 title: 'IDebugExpressionEvaluator2:: GetService | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fb0f822011a5f54cf97e58f53ec1cf03b5d26a23
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4a522cefec514baf8b7d8219846587f18c37559a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99926340"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102152358"
 ---
 # <a name="idebugexpressionevaluator2getservice"></a>IDebugExpressionEvaluator2::GetService
 Recupera um objeto de serviço de acordo com seu identificador exclusivo.
@@ -47,7 +48,7 @@ no Identificador exclusivo do serviço a ser recuperado.
 `ppService`\
 fora Retorna um objeto que representa o serviço.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

@@ -1,4 +1,5 @@
 ---
+description: As classes Friend e as funções Friend são identificadas por símbolos SymTagFriend.
 title: Friend (debug interface Access SDK) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b895555ce1334fa306b64fe213787bdf5dc827e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4a0e9784c864b2b591847f3d77ced553762911c1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865380"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151212"
 ---
 # <a name="friend-debug-interface-access-sdk"></a>Friend (SDK de Acesso à Interface de Depuração)
 As classes Friend e as funções Friend são identificadas por `SymTagFriend` símbolos. Eles são filhos de UDTs (tipos definidos pelo usuário) pai e têm uma propriedade [IDiaSymbol:: get_classParent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md) .
@@ -37,5 +38,5 @@ As classes Friend e as funções Friend são identificadas por `SymTagFriend` s�
 |[IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)|`IDiaSymbol*`|Símbolo da classe ou função.|
 |[IDiaSymbol::get_typeId](../../debugger/debug-interface-access/idiasymbol-get-typeid.md)|`DWORD`|ID do símbolo de tipo.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Hierarquia de classes de tipos de símbolo](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)

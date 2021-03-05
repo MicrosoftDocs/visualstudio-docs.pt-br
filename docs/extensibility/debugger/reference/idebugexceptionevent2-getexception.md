@@ -1,4 +1,5 @@
 ---
+description: Obtém uma descrição detalhada da exceção que disparou este evento.
 title: 'IDebugExceptionEvent2:: GetException | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0d9b9a174843b4c48dccc00370176668c582b53c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d6505cd2309323d7fe91f2c807af33555c3575fd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933278"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102152891"
 ---
 # <a name="idebugexceptionevent2getexception"></a>IDebugExceptionEvent2::GetException
 Obtém uma descrição detalhada da exceção que disparou este evento.
@@ -43,7 +44,7 @@ int GetException(
 `pExceptionInfo`\
 [entrada, saída] Uma estrutura de [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) que é preenchida com a descrição da exceção.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

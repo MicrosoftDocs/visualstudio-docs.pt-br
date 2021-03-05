@@ -1,4 +1,5 @@
 ---
+description: Envia a notificação de eventos de depuração.
 title: 'IDebugEventCallback2:: Event | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 54f53132f0a1f4769386874118d24f7e77a95f71
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: afa0cfd8f96d21a510370a4fc526a3cae053c77b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933304"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102152917"
 ---
 # <a name="idebugeventcallback2event"></a>IDebugEventCallback2::Event
 Envia a notificação de eventos de depuração.
@@ -73,7 +74,7 @@ no GUID que identifica qual interface de evento obter do `pEvent` parâmetro.
 `dwAttrib`\
 no Uma combinação de sinalizadores da enumeração do [eventoattributes](../../../extensibility/debugger/reference/eventattributes.md) .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

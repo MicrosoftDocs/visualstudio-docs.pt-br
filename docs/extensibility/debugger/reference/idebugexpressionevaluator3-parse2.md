@@ -1,4 +1,5 @@
 ---
+description: Converte uma cadeia de caracteres de expressão em uma expressão analisada, dado o provedor de símbolos e o endereço do quadro de avaliação.
 title: IDebugExpressionEvaluator3::P arse2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8a82e729f3811f63a11aa8476ad23b566521c8cd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 39edfbcdec6f634307c61b3db4ac76b238ac3614
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99915522"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102152202"
 ---
 # <a name="idebugexpressionevaluator3parse2"></a>IDebugExpressionEvaluator3::Parse2
 Converte uma cadeia de caracteres de expressão em uma expressão analisada, dado o provedor de símbolos e o endereço do quadro de avaliação.
@@ -76,7 +77,7 @@ fora Retorna a posição do caractere do início do erro na cadeia de caracteres
 `ppParsedExpression`\
 fora Retorna a expressão analisada em um objeto [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
@@ -137,5 +138,5 @@ HRESULT CEE::Parse2 ( LPCOLESTR in_szExprText,
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md)

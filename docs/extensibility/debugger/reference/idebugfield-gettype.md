@@ -1,4 +1,5 @@
 ---
+description: Esse método obtém o tipo de campo.
 title: 'IDebugField:: GetType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dbfb21abc8feaa95a8842707a56add513eaa6875
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 944965196b34e5d57bc473a40261288598f7e2d1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869798"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151851"
 ---
 # <a name="idebugfieldgettype"></a>IDebugField::GetType
 Esse método obtém o tipo de campo.
@@ -43,8 +44,8 @@ int GetType(
 `ppType`\
 fora Retorna o tipo de campo como outro objeto [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

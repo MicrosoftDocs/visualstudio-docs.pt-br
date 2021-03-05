@@ -1,4 +1,5 @@
 ---
+description: Indica o escopo específico de um valor de dados.
 title: DataKind | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bab3bc1c79b6444e75ab75e3d25e8bc395c1be86
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 24f13fc1157dd7f3de723474091a1f80e3717504
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857317"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151311"
 ---
 # <a name="datakind"></a>DataKind
 Indica o escopo específico de um valor de dados.
@@ -66,6 +67,6 @@ Os valores nessa enumeração são retornados pelo método [IDiaSymbol:: get_dat
 ## <a name="requirements"></a>Requisitos
 Cabeçalho: cvconst. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Enumerações e estruturas](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSymbol::get_dataKind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md)

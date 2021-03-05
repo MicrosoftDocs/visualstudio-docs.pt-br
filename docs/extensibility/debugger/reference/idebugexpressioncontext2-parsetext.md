@@ -1,4 +1,5 @@
 ---
+description: Analisa uma expressão na forma de texto para avaliação posterior.
 title: IDebugExpressionContext2::P arseText | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fc55cceb8db392d590ff414ac3df5b807d1e52e0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2095a1d6e035c676ab92722f9ae785e1a42c5b78
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901640"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102152631"
 ---
 # <a name="idebugexpressioncontext2parsetext"></a>IDebugExpressionContext2::ParseText
 Analisa uma expressão na forma de texto para avaliação posterior.
@@ -68,7 +69,7 @@ fora Retorna a mensagem de erro se a expressão contiver um erro.
 `pichError`\
 fora Retorna o índice de caracteres do erro em `pszCode` se a expressão contiver um erro.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
@@ -125,7 +126,7 @@ HRESULT CEnvBlock::ParseText(
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md)
 - [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md)
 - [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)

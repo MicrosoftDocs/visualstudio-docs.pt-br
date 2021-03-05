@@ -1,4 +1,5 @@
 ---
+description: Determina se o SDM (Gerenciador de depuração de sessão) pode desanexar o processo.
 title: 'IDebugProcess2:: desanexar | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 06cad6406951467339d34e467c6de3677cda724a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 92e876d5642cf8a4b7b60f5119839e64959f296e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874159"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151669"
 ---
 # <a name="idebugprocess2candetach"></a>IDebugProcess2::CanDetach
 Determina se o SDM (Gerenciador de depuração de sessão) pode desanexar o processo.

@@ -2,7 +2,7 @@
 title: Novidades no Visual Studio 2019
 titleSuffix: ''
 description: Saiba mais sobre os novos recursos do Visual Studio 2019.
-ms.date: 03/02/2021
+ms.date: 03/04/2021
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: e3dc790310fdff71539c6cae354a0170ec36e65e
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: bdbad2633136ead7cfe04a1ef82e3cc9db587212
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101684025"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151409"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novidades no Visual Studio 2019
 
@@ -47,11 +47,19 @@ Veja o vídeo a seguir para saber mais sobre como economizar tempo com novos rec
 
 ### <a name="improved-search"></a>Pesquisa aprimorada
 
-Anteriormente conhecida como Início Rápido, nossa nova experiência de pesquisa é mais rápida e eficaz. Agora, os resultados da pesquisa são exibidos dinamicamente conforme você digita. Além disso, os resultados da pesquisa podem incluir atalhos de teclado para comandos, de modo que você possa memorizá-los facilmente para uso futuro.
+Anteriormente conhecida como Início Rápido, nossa nova experiência de pesquisa é mais rápida e eficaz. Agora, os resultados da pesquisa são exibidos dinamicamente conforme você digita. E, em geral, os resultados da pesquisa podem incluir atalhos de teclado para comandos, para que você possa memorizar para uso futuro.
 
    ![Animação da nova experiência de pesquisa do Visual Studio 2019](media/vs-2019/new-search-feature.gif "A nova experiência de pesquisa no Visual Studio 2019.")
 
 A nova lógica de pesquisa difusa localizará tudo o que você precisa, mesmo com erros de digitação. Se está procurando por comandos, configurações, documentação ou outras coisas úteis, o novo recurso de pesquisa facilita a localização de itens.
+
+Para obter mais informações, consulte [usar a pesquisa do Visual Studio](visual-studio-search.md).
+
+#### <a name="intelligent-search-service"></a>Serviço de pesquisa inteligente
+
+**Novidade em 16,9**: usando a tecnologia de nuvem, inteligência artificial e aprendizado de máquina, aprimoramos nossos resultados de pesquisa. A pesquisa não só é mais relevante no Visual Studio, mas também pode ajudá-lo a descobrir recursos do produto com mais facilidade.
+
+Para obter mais informações, consulte a postagem no blog do [serviço de pesquisa inteligente do Visual Studio](https://devblogs.microsoft.com/visualstudio/intelligent-visual-studio-search-service/) .
 
 ### <a name="refactorings"></a>Refatorações
 

@@ -1,4 +1,5 @@
 ---
+description: Esse método obtém informações de exibição sobre o campo.
 title: 'IDebugField:: GetInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 21d80f222bdea8a8e17a9b74eefb7885cab0c289
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c681fef38377f0ce8e74b45dba065b5eae39462c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869902"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151929"
 ---
 # <a name="idebugfieldgetinfo"></a>IDebugField::GetInfo
 Esse método obtém informações de exibição sobre o campo.
@@ -48,9 +49,9 @@ no Uma combinação de [FIELD_INFO_FIELDS](../../../extensibility/debugger/refer
 `pFieldInfo`\
 fora Retorna as informações na estrutura de [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) fornecida.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)
 - [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)

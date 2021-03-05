@@ -1,4 +1,5 @@
 ---
+description: Cada matriz FORTRAN tem uma dimensão identificada por um símbolo de SymTagDimension.
 title: Dimensão | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f20217f1a83db71e5a63b2f592e2749dc07a2889
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fb077c24c42af561e884384959149c9b1990d422
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865422"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151278"
 ---
 # <a name="dimension"></a>Dimensão
 Cada matriz FORTRAN tem uma dimensão identificada por um `SymTagDimension` símbolo.
@@ -34,6 +35,6 @@ Cada matriz FORTRAN tem uma dimensão identificada por um `SymTagDimension` sím
 |[IDiaSymbol::get_upperBound](../../debugger/debug-interface-access/idiasymbol-get-upperbound.md)|`IDiaSymbol*`|Limite superior de uma dimensão de matriz FORTRAN.|
 |[IDiaSymbol::get_upperBoundId](../../debugger/debug-interface-access/idiasymbol-get-upperboundid.md)|`DWORD`|ID do símbolo de limite superior.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [ArrayType](../../debugger/debug-interface-access/arraytype.md)
 - [Hierarquia de classes de tipos de símbolo](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)

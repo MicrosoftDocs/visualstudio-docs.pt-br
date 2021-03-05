@@ -1,4 +1,5 @@
 ---
+description: Permite que um mecanismo de depuração passe um retorno de chamada para o avaliador de expressão durante a inicialização.
 title: 'IDebugExpressionEvaluator2:: SetIDebugIDECallback | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4a3f1acf1921afe81a8874bde6c18081e429ce93
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 827e8a2096b0ac79720e5306cce83c55267269c6
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99938207"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102152254"
 ---
 # <a name="idebugexpressionevaluator2setidebugidecallback"></a>IDebugExpressionEvaluator2::SetIDebugIDECallback
 Permite que um mecanismo de depuração passe um retorno de chamada para o avaliador de expressão durante a inicialização.
@@ -42,7 +43,7 @@ int SetIDebugIDECallback (
 `pCallback`\
 no Interface para o retorno de chamada.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

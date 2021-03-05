@@ -1,4 +1,5 @@
 ---
+description: Essa interface é usada pelo mecanismo de depuração (DE) para enviar eventos de depuração para o SDM (Gerenciador de depuração de sessão).
 title: IDebugEventCallback2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: fe81a7d8a07a80f38e771e2cfbac3ec23da54b62
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cb33bcbdff14b0f95aab5d8f300473c13d4c342f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933356"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102152904"
 ---
 # <a name="idebugeventcallback2"></a>IDebugEventCallback2
 Essa interface é usada pelo mecanismo de depuração (DE) para enviar eventos de depuração para o SDM (Gerenciador de depuração de sessão).

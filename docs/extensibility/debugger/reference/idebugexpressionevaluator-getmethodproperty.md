@@ -1,4 +1,5 @@
 ---
+description: Esse método obtém um objeto de propriedade que contém os locais, os argumentos e outras propriedades de um método.
 title: 'IDebugExpressionEvaluator:: getmethodproperty | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 29a8e22301cbcd074c12d100d13601b57871a91a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4d98e661ad3f469c41c120e07e6d54f76b089cb0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99930402"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102152501"
 ---
 # <a name="idebugexpressionevaluatorgetmethodproperty"></a>IDebugExpressionEvaluator::GetMethodProperty
 Esse método obtém um objeto de propriedade que contém os locais, os argumentos e outras propriedades de um método.
@@ -63,7 +64,7 @@ no Um valor diferente de zero ( `TRUE` ) significa incluir locais ocultos; zero 
 `ppProperty`\
 fora Retorna um objeto [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) que representa o método.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

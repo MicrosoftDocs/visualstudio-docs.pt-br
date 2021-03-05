@@ -1,4 +1,5 @@
 ---
+description: Esse método obtém o endereço de depuração de um campo.
 title: 'IDebugField:: GetAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5939f0ffd3a975c5fd3286045573fbf0da8006e3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bda569ecc278fa0ff4a479b55817cd905ca85c40
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99915424"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102152059"
 ---
 # <a name="idebugfieldgetaddress"></a>IDebugField::GetAddress
 Esse método obtém o endereço de depuração de um campo.
@@ -43,7 +44,7 @@ int GetAddress(
 `ppAddress`\
 fora Retorna o endereço como um objeto [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se obtiver êxito, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

@@ -1,4 +1,5 @@
 ---
+description: Esse método obtém informações estendidas sobre um campo.
 title: 'IDebugField:: GetExtendedInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 911556cb615e373d620b496fb31e5d6093b7cc37
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 98d522222d57a0828ebcefe446262033d2d8dfc1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869928"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151956"
 ---
 # <a name="idebugfieldgetextendedinfo"></a>IDebugField::GetExtendedInfo
 Esse método obtém informações estendidas sobre um campo.
@@ -58,11 +59,11 @@ fora Retorna as informações estendidas.
 `pdwLen`\
 [entrada, saída] Retorna o tamanho das informações estendidas, em bytes.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
  Atualmente, esse método retorna apenas o tipo ou o valor de uma constante. O chamador deve liberar o buffer retornado no `prgBuffer` chamando a função de com `CoTaskMemFree` (C++) ou <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> (C#).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

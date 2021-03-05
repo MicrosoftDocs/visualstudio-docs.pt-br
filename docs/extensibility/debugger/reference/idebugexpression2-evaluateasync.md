@@ -1,4 +1,5 @@
 ---
+description: Esse método avalia a expressão de forma assíncrona.
 title: 'IDebugExpression2:: EvaluateAsync | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8af09c2db00b1f24631418c5332811cf4cb9202c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7b01289c792e887c096d0a9068bac55b21a3a503
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99916258"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102152683"
 ---
 # <a name="idebugexpression2evaluateasync"></a>IDebugExpression2::EvaluateAsync
 Esse método avalia a expressão de forma assíncrona.
@@ -48,7 +49,7 @@ no Uma combinação de sinalizadores da enumeração [EVALFLAGS](../../../extens
 `pExprCallback`\
 no Esse parâmetro é sempre um valor nulo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. Um código de erro típico é:
 
 |Erro|Descrição|

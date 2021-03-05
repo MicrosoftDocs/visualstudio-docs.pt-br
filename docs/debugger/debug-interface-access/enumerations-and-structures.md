@@ -1,4 +1,5 @@
 ---
+description: Essas são as enumerações e estruturas usadas pelo DIA SDK.
 title: Enumerações e estruturas | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bb7fbdfac3026d1487b39fd2ae3f1adb72d01f4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: aa7fa04080596a5d54297557c33238826450830e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865401"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151245"
 ---
 # <a name="enumerations-and-structures"></a>Enumerações e estruturas
 
@@ -102,6 +103,6 @@ Especifica as interfaces fornecidas pelo DIA SDK.
 
 Especifica as constantes que estão disponíveis no DIA SDK.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)

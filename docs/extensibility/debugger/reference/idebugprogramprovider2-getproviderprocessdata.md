@@ -1,4 +1,5 @@
 ---
+description: Recupera uma lista de programas em execução a partir de um processo especificado.
 title: 'IDebugProgramProvider2:: GetProviderProcessData | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4ce5bee4f2401e3895570f16a6de5567b5979d98
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b878a6731a9a7f2bf58bf55530d0b5f83cc978de
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99898289"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151552"
 ---
 # <a name="idebugprogramprovider2getproviderprocessdata"></a>IDebugProgramProvider2::GetProviderProcessData
 Recupera uma lista de programas em execução a partir de um processo especificado.
@@ -70,7 +71,7 @@ no Uma matriz de GUIDs para mecanismos de depuração atribuídos para depurar e
 `pProcess`\
 fora Uma estrutura de [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) que é preenchida com as informações solicitadas.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

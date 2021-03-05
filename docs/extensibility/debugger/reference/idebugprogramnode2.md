@@ -1,4 +1,5 @@
 ---
+description: Essa interface representa um programa que pode ser depurado.
 title: IDebugProgramNode2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1e6460653795720f10dca7f304035c49e4d8e035
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d697ce389a7672f4f97efc17547e79173da3e2dd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99898524"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151565"
 ---
 # <a name="idebugprogramnode2"></a>IDebugProgramNode2
 Essa interface representa um programa que pode ser depurado.

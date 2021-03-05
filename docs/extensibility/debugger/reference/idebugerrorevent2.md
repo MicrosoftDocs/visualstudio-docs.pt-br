@@ -1,4 +1,5 @@
 ---
+description: Essa interface especifica uma mensagem de erro a ser relatada ao usuário.
 title: IDebugErrorEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1af67a00b9a692e5156ec7a6a14ef3fadcc3ac32
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bf249e8568c3ae70bc8d881d72b491cf7fa3576b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888336"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102153034"
 ---
 # <a name="idebugerrorevent2"></a>IDebugErrorEvent2
 Essa interface especifica uma mensagem de erro a ser relatada ao usuário.

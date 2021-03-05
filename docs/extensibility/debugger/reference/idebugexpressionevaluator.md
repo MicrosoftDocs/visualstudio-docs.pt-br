@@ -1,4 +1,5 @@
 ---
+description: Essa interface representa o avaliador de expressão.
 title: IDebugExpressionEvaluator | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3c12dc405f08851e55040c3097e5d7f409030f61
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b2e1fb465155bac2aa4be2b0d0a041715bf63bfa
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934325"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102152345"
 ---
 # <a name="idebugexpressionevaluator"></a>IDebugExpressionEvaluator
 > [!IMPORTANT]

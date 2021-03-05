@@ -1,4 +1,5 @@
 ---
+description: Esse método define a raiz do registro.
 title: 'IDebugExpressionEvaluator:: SetRegistryRoot | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b5151d337618409970b61e515cd4428467a7fe25
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3b900817a5025b0d523f8d3bb3237a1b10cc3a6a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99930337"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102152397"
 ---
 # <a name="idebugexpressionevaluatorsetregistryroot"></a>IDebugExpressionEvaluator::SetRegistryRoot
 Esse método define a raiz do registro. Usado para depuração lado a lado.
@@ -43,7 +44,7 @@ int SetRegistryRoot(
 `ustrRegistryRoot`\
 no A nova raiz do registro.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
