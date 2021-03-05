@@ -1,4 +1,5 @@
 ---
+description: O mecanismo de depuração (DE) envia essa interface para o SDM (Gerenciador de depuração de sessão) quando o programa está prestes a executar sua primeira instrução de código de usuário.
 title: IDebugEntryPointEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0373557b13ae6532a34235ff53e1dc38d2813597
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: da733292407c93327374a4c6fa54c558d3202caa
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892574"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102153385"
 ---
 # <a name="idebugentrypointevent2"></a>IDebugEntryPointEvent2
 O mecanismo de depuração (DE) envia essa interface para o SDM (Gerenciador de depuração de sessão) quando o programa está prestes a executar sua primeira instrução de código de usuário.
@@ -46,6 +47,6 @@ IDebugEntryPointEvent2 : IUnknown
 
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)
 - [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md)

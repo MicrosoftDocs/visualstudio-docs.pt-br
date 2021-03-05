@@ -1,4 +1,5 @@
 ---
+description: Especifica as opções de pesquisa para nomes de arquivo e símbolo.
 title: NameSearchOptions | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c63d38e1b4d79227cfdc694dc6d8c154a01532f2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bd074de0c44803a06d5399f2bd4dc1e3c43618a1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853208"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155344"
 ---
 # <a name="namesearchoptions"></a>NameSearchOptions
 Especifica as opções de pesquisa para nomes de arquivo e símbolo.
@@ -67,7 +68,7 @@ Os valores dessa enumeração são passados para os seguintes métodos:
 ## <a name="requirements"></a>Requisitos
 Cabeçalho: dia2. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Enumerações e estruturas](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)
 - [IDiaSession::findFile](../../debugger/debug-interface-access/idiasession-findfile.md)

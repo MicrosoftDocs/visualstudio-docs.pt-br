@@ -1,4 +1,5 @@
 ---
+description: Um local no código do programa é identificado por um símbolo de SymTagLabel.
 title: Rótulo (debug interface Access SDK) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 254be1bd88151b962cf563de3ff8aa26a983bc1e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f63adb3873cc94ea5631603b50387e5c9614a646
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862363"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155407"
 ---
 # <a name="label-debug-interface-access-sdk"></a>Label (SDK de Acesso à Interface de Depuração)
 Um local no código do programa é identificado por um `SymTagLabel` símbolo.
@@ -47,7 +48,7 @@ Um local no código do programa é identificado por um `SymTagLabel` símbolo.
 |[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Retorna `SymTagFuncDebugLabel` (um dos valores de [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) ).|
 |[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|`ULONGLONG`|Posição deste rótulo na imagem executável.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Hierarquia lexical de tipos de símbolo](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)
 - [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md)
 - [Locais de símbolos](../../debugger/debug-interface-access/symbol-locations.md)

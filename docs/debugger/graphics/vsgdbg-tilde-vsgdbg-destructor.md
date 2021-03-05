@@ -1,4 +1,5 @@
 ---
+description: Destrói uma instância da classe VsgDbg.
 title: 'VsgDbg:: ~ VsgDbg (destruidor) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 53d969e6be772b446598c9c3644582684be488a8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d90664723695756ebd8acdc7c56bec1fcbd08a31
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861342"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155220"
 ---
 # <a name="vsgdbgvsgdbg-destructor"></a>VsgDbg::~VsgDbg (Destruidor)
 Destrói uma instância da `VsgDbg` classe. Se as informações gráficas estiverem sendo registradas ativamente, o arquivo de log de gráficos será finalizado e fechado, e os recursos que foram usados durante a captura ativa das informações gráficas serão liberados.

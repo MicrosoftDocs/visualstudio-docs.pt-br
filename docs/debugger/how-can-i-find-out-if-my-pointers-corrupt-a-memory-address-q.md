@@ -1,6 +1,6 @@
 ---
 title: Descubra se meus ponteiros corromperam um endereço de memória | Microsoft Docs
-Description: Para determinar se o ponteiro está corrompendo a memória, você pode procurar corrupção de heap e pode definir um ponto de interrupção de dados para descobrir como um valor é modificado.
+description: Para determinar se o ponteiro está corrompendo a memória, você pode procurar corrupção de heap e pode definir um ponto de interrupção de dados para descobrir como um valor é modificado.
 ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a1857d349f339a537748f11154b43f7d30c7bdb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d95e38c6393d6576f2867aad5d1224940f33cebc
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910038"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155194"
 ---
 # <a name="how-can-i-find-out-if-my-pointers-corrupt-a-memory-address"></a>Como posso saber se meus ponteiros corrompem um endereço de memória?
 ## <a name="problem-description"></a>Descrição do problema

@@ -1,4 +1,5 @@
 ---
+description: Essa interface é usada para solicitar que o SDM (Gerenciador de depuração de sessão) seja interrompido no local do código atual.
 title: IDebugCanStopEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 87306e1373d746479ce59c96b6625fa41ef119fb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d46f4aacdc886e455771f5a30ba82b941b29c957
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903233"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102154841"
 ---
 # <a name="idebugcanstopevent2"></a>IDebugCanStopEvent2
 Essa interface é usada para solicitar que o SDM (Gerenciador de depuração de sessão) seja interrompido no local do código atual.
@@ -56,6 +57,6 @@ IDebugCanStopEvent2 : IUknown
 
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugStepCompleteEvent2](../../../extensibility/debugger/reference/idebugstepcompleteevent2.md)
 - [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

@@ -1,4 +1,5 @@
 ---
+description: O mecanismo de depuração (DE) envia essa interface para o SDM (Gerenciador de depuração de sessão) quando uma instância do de é criada.
 title: IDebugEngineCreateEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a6aebd8a27f4eb9962abbcd593c947c04a17854
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6155324150b963a5fd26ccecc1244e0792f448bc
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99916289"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102153645"
 ---
 # <a name="idebugenginecreateevent2"></a>IDebugEngineCreateEvent2
 O mecanismo de depuração (DE) envia essa interface para o SDM (Gerenciador de depuração de sessão) quando uma instância do de é criada.

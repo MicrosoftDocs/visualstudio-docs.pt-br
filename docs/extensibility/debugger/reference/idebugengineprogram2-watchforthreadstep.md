@@ -1,4 +1,5 @@
 ---
+description: Inspeciona a execução (ou pára de observar a execução) para ocorrer no thread determinado.
 title: 'IDebugEngineProgram2:: WatchForThreadStep | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8168b0813eb99f4f70c8a5d8ffbdae4f6fce2094
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eaf02e07bebbbfd711d99ef7605befbdce1f9376
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892613"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102153411"
 ---
 # <a name="idebugengineprogram2watchforthreadstep"></a>IDebugEngineProgram2::WatchForThreadStep
 Inspeciona a execução (ou pára de observar a execução) para ocorrer no thread determinado.
@@ -58,7 +59,7 @@ no Diferente de zero ( `TRUE` ) significa começar a assistir para execução no
 `dwFrame`\
 no Especifica um índice de quadro que controla o tipo de etapa. Quando esse valor for zero (0), o tipo de etapa será "Step Into" e o programa deverá ser interrompido sempre que o thread identificado pelo for `dwTid` executado. Quando `dwFrame` for diferente de zero, o tipo de etapa será "Step Over" e o programa deverá parar somente se o thread identificado pelo `dwTid` estiver em execução em um quadro cujo índice seja igual ou superior na pilha do que `dwFrame` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

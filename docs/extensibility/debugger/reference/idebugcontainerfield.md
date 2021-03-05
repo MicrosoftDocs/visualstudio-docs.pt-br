@@ -1,4 +1,5 @@
 ---
+description: Essa interface representa um símbolo ou tipo que é um contêiner para outros símbolos ou tipos.
 title: IDebugContainerField | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e7ed9e573236f0bdeff9c9a8433af322a5a5f79
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 752eb7d77035a25ad1d0ddc8aec45afe95d898c7
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928491"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102154776"
 ---
 # <a name="idebugcontainerfield"></a>IDebugContainerField
 Essa interface representa um símbolo ou tipo que é um contêiner para outros símbolos ou tipos.

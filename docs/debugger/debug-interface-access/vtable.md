@@ -1,4 +1,5 @@
 ---
+description: A tabela virtual é identificada pelo símbolo SymTagVTable.
 title: VTable | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ab5c576cf033be9bff2560a92a46b8e196d016c4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d0f4e82ed2704bfa9d4776336816c5d019f5c7b4
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873403"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155261"
 ---
 # <a name="vtable"></a>VTable
 A tabela virtual é identificada pelo `SymTagVTable` símbolo.

@@ -1,4 +1,5 @@
 ---
+description: Essa interface representa um mecanismo DE depuração (DE).
 title: IDebugEngine2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c38dc023c44e0c1743fd9d35dbe65befda405f4e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ce76ccdc444dafc4b6b8ee6afb3c9ded8adcf3d0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919931"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102153827"
 ---
 # <a name="idebugengine2"></a>IDebugEngine2
 Essa interface representa um mecanismo DE depuração (DE). Ele é usado para gerenciar vários aspectos de uma sessão de depuração, desde a criação de pontos de interrupção até a configuração e a limpeza de exceções.

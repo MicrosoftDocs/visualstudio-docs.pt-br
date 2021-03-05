@@ -1,4 +1,5 @@
 ---
+description: Especifica como o mecanismo de depuração (DE) deve tratar uma determinada exceção.
 title: 'IDebugEngine2:: SetException | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1e2a6dbd5d5700d4d64625490c016da2d04af6d6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 543cccbbefd12accd75213f255f8e3b677cdea38
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878936"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102153931"
 ---
 # <a name="idebugengine2setexception"></a>IDebugEngine2::SetException
 Especifica como o mecanismo de depuração (DE) deve tratar uma determinada exceção.
@@ -43,7 +44,7 @@ int SetException(
 `pException`\
 no Uma estrutura de [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) que descreve a exceção e como depurá-la.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

@@ -1,4 +1,5 @@
 ---
+description: Notifica o pacote de depuração que o texto foi removido do documento.
 title: 'IDebugDocumentTextEvents2:: onRemoveText | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: abe3942ec83136aca313562bc45e156b123fdf19
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4569c3597633980c32c23248fbdc7ec6f7f33fcd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903999"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102154152"
 ---
 # <a name="idebugdocumenttextevents2onremovetext"></a>IDebugDocumentTextEvents2::onRemoveText
 Notifica o pacote de depuração que o texto foi removido do documento.
@@ -48,7 +49,7 @@ no Uma estrutura de [TEXT_POSITION](../../../extensibility/debugger/reference/te
 `dwNumToRemove`\
 no Especifica o número de caracteres de texto que foram removidos.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

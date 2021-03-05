@@ -1,4 +1,5 @@
 ---
+description: A tabela a seguir mostra os tipos de símbolo na hierarquia lexical.
 title: Hierarquia lexical de tipos de símbolo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,19 +13,19 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d1c9284637be43ab30d35d3e0cb4aea937c0a224
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 605b16d2a53178b52095e9919c10bba53f3f21a1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853250"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155386"
 ---
 # <a name="lexical-hierarchy-of-symbol-types"></a>Hierarquia lexical de tipos de símbolos
 A tabela a seguir mostra os tipos de símbolo na hierarquia lexical.
 
 ## <a name="symbol-types"></a>Tipos de símbolo
 
-|Tipo de símbolo|Description|
+|Tipo de símbolo|Descrição|
 |-----------------|-----------------|
 |[Anotação](../../debugger/debug-interface-access/annotation.md)|Especifica um local anotado no código do programa.|
 |[Bloquear](../../debugger/debug-interface-access/block.md)|Especifica escopos aninhados em funções.|
@@ -45,7 +46,7 @@ A tabela a seguir mostra os tipos de símbolo na hierarquia lexical.
 > [!NOTE]
 > As propriedades de símbolo adicionais podem estar disponíveis dependendo do tipo de símbolo. Essas propriedades são listadas nos tópicos de símbolos individuais.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Hierarquia de classes de tipos de símbolo](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)
 - [IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)
 - [Símbolos e marcações de símbolos](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)

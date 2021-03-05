@@ -1,4 +1,5 @@
 ---
+description: Recupera uma lista de todas as portas disponíveis.
 title: 'IDebugCoreServer2:: EnumPorts | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c5a27156ef9a4a7bee795261069a7df3fa1eb8a3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b9da125b5e10315f74d806cf5ba7026601393366
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928478"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102154750"
 ---
 # <a name="idebugcoreserver2enumports"></a>IDebugCoreServer2::EnumPorts
 Recupera uma lista de todas as portas disponíveis.
@@ -43,7 +44,7 @@ int EnumPorts(
 `ppEnum`\
 fora Retorna um objeto [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md) que contém uma lista de todas as portas de todos os fornecedores de porta.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

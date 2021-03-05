@@ -1,4 +1,5 @@
 ---
+description: Obtém o contexto do documento que descreve a posição no documento que deve ser tornado ativa pelo pacote de depuração.
 title: 'IDebugActivateDocumentEvent2:: GetDocumentContext | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 32bc4715438c7197628b4df66203aadb753bec25
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 680382e43feee9298a2de99933847ea633982a15
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904684"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102154932"
 ---
 # <a name="idebugactivatedocumentevent2getdocumentcontext"></a>IDebugActivateDocumentEvent2::GetDocumentContext
 Obtém o contexto do documento que descreve a posição no documento que deve ser tornado ativa pelo pacote de depuração.
@@ -47,7 +48,7 @@ fora Retorna um objeto [IDebugDocumentContext2](../../../extensibility/debugger/
 ## <a name="remarks"></a>Comentários
  Essa posição pode ser usada para mostrar o cursor, por exemplo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

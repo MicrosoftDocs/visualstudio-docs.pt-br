@@ -1,4 +1,5 @@
 ---
+description: Esse método inicia um processo por meio do mecanismo de depuração (DE).
 title: 'IDebugEngineLaunch2:: LaunchSuspended | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1afa09abd0e997c47b33953e5321d4c5d1845a25
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9fd8b610f99161a9716b9bffc235196165306711
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892821"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102153580"
 ---
 # <a name="idebugenginelaunch2launchsuspended"></a>IDebugEngineLaunch2::LaunchSuspended
 Esse método inicia um processo por meio do mecanismo de depuração (DE).
@@ -103,7 +104,7 @@ no O objeto [IDebugEventCallback2](../../../extensibility/debugger/reference/ide
 `ppDebugProcess`\
 fora Retorna o objeto [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) resultante que representa o processo iniciado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

@@ -1,4 +1,5 @@
 ---
+description: Representa uma consulta de atributos personalizados em um método ou tipo.
 title: IDebugCustomAttributeQuery | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 52549ac36ef8bdbf36d8f28c8864a874fc71fb6f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 31212a7c2d032dd22aa2fddb8df6718cceeff587
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840465"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102154464"
 ---
 # <a name="idebugcustomattributequery"></a>IDebugCustomAttributeQuery
 Representa uma consulta de atributos personalizados em um método ou tipo.

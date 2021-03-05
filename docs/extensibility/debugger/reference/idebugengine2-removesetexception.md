@@ -1,4 +1,5 @@
 ---
+description: Remove a exceção especificada para que ela não seja mais manipulada pelo mecanismo de depuração.
 title: 'IDebugEngine2:: RemoveSetException | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 29756b3be6d2c46d39b581dd3db0af61bfaa18f3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 588037ef9dcf495f8fbbb210acc3154c31558a32
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878923"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102153938"
 ---
 # <a name="idebugengine2removesetexception"></a>IDebugEngine2::RemoveSetException
 Remove a exceção especificada para que ela não seja mais manipulada pelo mecanismo de depuração.
@@ -43,7 +44,7 @@ int RemoveSetException(
 `pException`\
 no Uma estrutura de [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) que descreve a exceção a ser removida.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

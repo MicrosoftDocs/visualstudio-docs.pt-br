@@ -1,4 +1,5 @@
 ---
+description: Obtém o escopo do fluxo de desmontagem.
 title: 'IDebugDisassemblyStream2:: GetScope | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 28c0d07dd389814c0aa06792f4509ed9da1b4ef9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8b112975649ec477a036826e3dc938ba756615c0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901687"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102154451"
 ---
 # <a name="idebugdisassemblystream2getscope"></a>IDebugDisassemblyStream2::GetScope
 Obtém o escopo do fluxo de desmontagem.
@@ -43,7 +44,7 @@ int GetScope(
 `pdwScope`\
 fora Retorna um valor da enumeração [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) que descreve o escopo desse fluxo de desmontagem.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

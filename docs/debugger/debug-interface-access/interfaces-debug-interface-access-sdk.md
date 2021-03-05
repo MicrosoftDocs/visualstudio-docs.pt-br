@@ -1,4 +1,5 @@
 ---
+description: Os métodos são listados em ordem alfabética em cada interface no sumário e na página de interface em ordem vtable.
 title: Interfaces (debug interface Access SDK) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 234bfa31c79fa2c9ef60afd29d655cfc6e585aed
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3d827e688e7618ebf66842eb4e633acdb483aa4f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853257"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155421"
 ---
 # <a name="interfaces-debug-interface-access-sdk"></a>Interfaces (SDK de Acesso à Interface de Depuração)
 Os métodos são listados em ordem alfabética em cada interface no sumário e na página de interface em ordem vtable.
@@ -166,6 +167,6 @@ Descreve as enumerações e estruturas usadas pelas várias interfaces do DIA SD
 
 Descreve as constantes disponíveis no DIA SDK.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: Recupera o objeto que representa o mecanismo DE depuração recém-criado (DE).
 title: 'IDebugEngineCreateEvent2:: GetEngine | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 95e3991b9e6c5d08793780b9bb3b5150e28c5246
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3aaabac0b9ee0e6fb2e8982d673e8e55e1cede4e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99936139"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102153659"
 ---
 # <a name="idebugenginecreateevent2getengine"></a>IDebugEngineCreateEvent2::GetEngine
 Recupera o objeto que representa o mecanismo DE depuração recém-criado (DE).
@@ -43,7 +44,7 @@ int GetEngine(
 `pEngine`\
 fora Retorna um objeto [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) que representa o de recém-criado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

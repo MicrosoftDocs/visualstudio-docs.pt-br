@@ -1,4 +1,5 @@
 ---
+description: Notifica o destinatário sobre o evento de que os atributos do documento foram atualizados.
 title: 'IDebugDocumentTextEvents2:: onUpdateDocumentAttributes | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3e73b4c071f28abf80e9d35da05b0b49c96af265
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa7c6f4ca65043410c8d2f3e6e843b10c149709f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919972"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102154139"
 ---
 # <a name="idebugdocumenttextevents2onupdatedocumentattributes"></a>IDebugDocumentTextEvents2::onUpdateDocumentAttributes
 Notifica o destinatário sobre o evento de que os atributos do documento foram atualizados.
@@ -43,7 +44,7 @@ int onUpdateDocumentAttributes(
 `textdocattr`\
 no Uma combinação de sinalizadores da enumeração [TEXT_DOC_ATTR_2](../../../extensibility/debugger/reference/text-doc-attr-2.md) que especifica os atributos atualizados do documento.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

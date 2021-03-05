@@ -1,4 +1,5 @@
 ---
+description: Representa um único mecanismo DE depuração (DE) que controla a depuração de um ou mais módulos.
 title: IDebugEngine3 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a985acc5a949ead841239d56c8b067967531fb1e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2d91098a1f0a7f2df579a347fccb01239fdfeebe
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927048"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102153658"
 ---
 # <a name="idebugengine3"></a>IDebugEngine3
 Representa um único mecanismo DE depuração (DE) que controla a depuração de um ou mais módulos.

@@ -1,4 +1,5 @@
 ---
+description: Cada ponteiro é identificado por um símbolo de SymTagPointerType.
 title: PointerType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f0099fd7cb3b07bbcea5561762909207a48bddb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 151f8da41dbf517e8cef054ace35254c847e3848
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853215"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155337"
 ---
 # <a name="pointertype"></a>PointerType
 Cada ponteiro é identificado por um `SymTagPointerType` símbolo.
