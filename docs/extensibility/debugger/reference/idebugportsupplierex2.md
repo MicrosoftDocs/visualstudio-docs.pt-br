@@ -1,4 +1,5 @@
 ---
+description: Fornece suporte para um fornecedor de porta selecionar e interagir com um servidor principal.
 title: IDebugPortSupplierEx2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a9a0958614c8df326c20ad8030bb798447a5e62a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bd166280ab75b6cb560d6936342d8c3905b87ade
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840152"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102167107"
 ---
 # <a name="idebugportsupplierex2"></a>IDebugPortSupplierEx2
 Fornece suporte para um fornecedor de porta selecionar e interagir com um servidor principal.

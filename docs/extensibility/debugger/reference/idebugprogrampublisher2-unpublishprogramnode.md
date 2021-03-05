@@ -1,4 +1,5 @@
 ---
+description: Remove um nó de programa especificado da disponibilidade para os mecanismos de depuração (DEs) e o Gerenciador de depuração de sessão (SDM).
 title: 'IDebugProgramPublisher2:: UnpublishProgramNode | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 69afe6dba5db73b2b2af80031612ada5b18ae0a3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 32c1384eadbf4e11a31534fccce21ab271000643
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99916188"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102166990"
 ---
 # <a name="idebugprogrampublisher2unpublishprogramnode"></a>IDebugProgramPublisher2::UnpublishProgramNode
 Remove um nó de programa especificado da disponibilidade para os mecanismos de depuração (DEs) e o Gerenciador de depuração de sessão (SDM).
@@ -43,7 +44,7 @@ int UnpublishProgramNode(
 `pProgramNode`\
 no Um objeto [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) que representa o nó do programa que está sendo removido.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
@@ -51,7 +52,7 @@ no Um objeto [IDebugProgramNode2](../../../extensibility/debugger/reference/ideb
 
  Para disponibilizar um nó de programa, chame o método [PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)
 - [PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)

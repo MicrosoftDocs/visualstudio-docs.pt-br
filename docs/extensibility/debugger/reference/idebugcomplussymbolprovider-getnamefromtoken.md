@@ -1,4 +1,5 @@
 ---
+description: Retorna o nome associado ao token especificado, dado seu objeto de metadados.
 title: 'IDebugComPlusSymbolProvider:: GetNameFromToken | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f4e3a99e35bd16f9986d1c4e9c59578a39cda1f8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 698f8f90d40623a1162d597777aae24dd002d934
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880847"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102167354"
 ---
 # <a name="idebugcomplussymbolprovidergetnamefromtoken"></a>IDebugComPlusSymbolProvider::GetNameFromToken
 Retorna o nome associado ao token especificado, dado seu objeto de metadados.
@@ -52,7 +53,7 @@ no Token a ser nomeado.
 `pbstrName`\
 fora Nome que corresponde ao token.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo

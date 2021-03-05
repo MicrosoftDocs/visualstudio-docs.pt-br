@@ -1,4 +1,5 @@
 ---
+description: Recupera a cadeia de caracteres associada a essa propriedade e a armazena em um buffer fornecido pelo usuário.
 title: 'IDebugProperty3:: GetStringChars | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8b188b386dea7279530e186073847e26915af63d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d3b220fa02809015d1fa699c5e9eb5edac8cf2f3
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897287"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102166678"
 ---
 # <a name="idebugproperty3getstringchars"></a>IDebugProperty3::GetStringChars
 Recupera a cadeia de caracteres associada a essa propriedade e a armazena em um buffer fornecido pelo usuário.
@@ -55,7 +56,7 @@ fora Retorna a cadeia de caracteres.
 `pceltFetched`\
 fora Em que o número de caracteres realmente armazenados no buffer é retornado. (Pode estar `NULL` em C++.)
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

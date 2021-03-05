@@ -1,4 +1,5 @@
 ---
+description: Esse método retorna um serviço solicitado.
 title: 'IDebugBinder3:: GetEEService | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5156f905eb5891be64d0718e8aeff4c3c404663b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5ecd439ba1af40a54512c3ef15efb4728c8c54a1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891248"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102167666"
 ---
 # <a name="idebugbinder3geteeservice"></a>IDebugBinder3::GetEEService
 Esse método retorna um serviço solicitado.
@@ -58,7 +59,7 @@ Int GetEEService(
 `ppService`\
 fora Uma interface para o serviço solicitado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

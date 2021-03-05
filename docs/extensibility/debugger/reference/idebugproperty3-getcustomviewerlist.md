@@ -1,4 +1,5 @@
 ---
+description: Obtém uma lista de visualizadores personalizados associados a esta propriedade.
 title: 'IDebugProperty3:: GetCustomViewerList | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bdabe777bf2147dee2b98ca552183ae0e14d16f1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e772987a6e27dbe72a927dd83f8d33d043408fd0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888206"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102166664"
 ---
 # <a name="idebugproperty3getcustomviewerlist"></a>IDebugProperty3::GetCustomViewerList
 Obtém uma lista de visualizadores personalizados associados a esta propriedade.
@@ -58,7 +59,7 @@ no O número de visualizadores a serem recuperados (também especifica o tamanho
 `pceltFetched`\
 fora O número real de visualizadores retornado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

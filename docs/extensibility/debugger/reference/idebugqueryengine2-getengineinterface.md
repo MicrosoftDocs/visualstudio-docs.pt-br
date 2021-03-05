@@ -1,4 +1,5 @@
 ---
+description: Obtém uma interface do mecanismo DE depuração personalizado (DE).
 title: 'IDebugQueryEngine2:: GetEngineInterface | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ab1d9be5e4405cea3bb75d7837d4ff3ad9a91e9c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cbf727de01c8cbf34d645aff4e0a64aeb476ebbd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909785"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102167835"
 ---
 # <a name="idebugqueryengine2getengineinterface"></a>IDebugQueryEngine2::GetEngineInterface
 Obtém uma interface do mecanismo DE depuração personalizado (DE).
@@ -43,7 +44,7 @@ int GetEngineInterface(
 `ppUnk`\
 fora Retorna um `IUnknown` objeto que representa o mecanismo de depuração (de) e que pode ser consultado para qualquer outra interface válida associada a um de (por exemplo, [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) ou [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)).
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

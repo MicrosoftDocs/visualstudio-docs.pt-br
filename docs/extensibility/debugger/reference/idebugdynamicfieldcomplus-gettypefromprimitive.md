@@ -1,4 +1,5 @@
 ---
+description: Recupera um tipo dado seu tipo primitivo.
 title: 'IDebugDynamicFieldCOMPlus:: GetTypeFromPrimitive | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d1f0a93c14c99c885a9ea8af0f1d650b508efb76
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bfd9b64a760a170791a921bb19508cfd6c789993
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899023"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102167211"
 ---
 # <a name="idebugdynamicfieldcomplusgettypefromprimitive"></a>IDebugDynamicFieldCOMPlus::GetTypeFromPrimitive
 Recupera um tipo dado seu tipo primitivo.
@@ -47,7 +48,7 @@ no Valor da [enumeração CorElementType](/dotnet/framework/unmanaged-api/metada
 `ppType`\
 fora Retorna o [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) que representa o tipo.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

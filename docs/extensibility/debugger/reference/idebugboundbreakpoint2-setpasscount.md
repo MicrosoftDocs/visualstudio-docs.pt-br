@@ -1,4 +1,5 @@
 ---
+description: Define ou altera a contagem de aprovações associada a este ponto de interrupção associado.
 title: 'IDebugBoundBreakpoint2:: SetPassCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8f02d74b1c826b9e9ef7fa7406ca9a61d19b7311
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ccefd1e3b120ac52801a1163ea8bda814626a0b9
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951297"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102167484"
 ---
 # <a name="idebugboundbreakpoint2setpasscount"></a>IDebugBoundBreakpoint2::SetPassCount
 Define ou altera a contagem de aprovações associada a este ponto de interrupção associado.
@@ -44,7 +45,7 @@ int SetPassCount(
 `bpPassCount`\
 no A estrutura de [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) que especifica a contagem de aprovações.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o estado do objeto de ponto de interrupção associado é definido como `BPS_DELETED` (parte da enumeração de [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) ).
 
 ## <a name="remarks"></a>Comentários
@@ -52,7 +53,7 @@ no A estrutura de [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-pa
 
  Qualquer contagem de aprovação que foi associada anteriormente a esse ponto de interrupção é perdida.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 - [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md)
 - [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)

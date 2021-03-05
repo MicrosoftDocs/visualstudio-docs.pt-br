@@ -1,4 +1,5 @@
 ---
+description: Define o valor de uma propriedade de uma determinada cadeia de caracteres.
 title: 'IDebugProperty2:: SetValueAsString | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 812bb7807a8b739d09cb15c6f03e58732fde20a4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b86de71cd6df3e028697518de8c6faccad7e2336
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99916033"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102166717"
 ---
 # <a name="idebugproperty2setvalueasstring"></a>IDebugProperty2::SetValueAsString
 Define o valor de uma propriedade de uma determinada cadeia de caracteres.
@@ -53,7 +54,7 @@ no Uma Radix a ser usada na interpretação de qualquer informação numérica. 
 `dwTimeout`\
 no Especifica o tempo máximo, em milissegundos, a aguardar antes de retornar desse método. Use `INFINITE` para aguardar indefinidamente.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna o código de erro. A tabela a seguir mostra outros valores possíveis.
 
 |Valor|Descrição|

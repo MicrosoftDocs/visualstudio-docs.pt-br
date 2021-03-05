@@ -1,4 +1,5 @@
 ---
+description: Obtém a contagem de sucessos atual para este ponto de interrupção associado.
 title: 'IDebugBoundBreakpoint2:: GetHitCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 875f1e55953d412e0c6dc49f1b00bd24cf589446
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eec08d34f74ad1f91b7c9cbabd4b3982f270bf09
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945819"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102167601"
 ---
 # <a name="idebugboundbreakpoint2gethitcount"></a>IDebugBoundBreakpoint2::GetHitCount
 Obtém a contagem de sucessos atual para este ponto de interrupção associado.
@@ -44,12 +45,12 @@ int GetHitCount(
 `pdwHitCount`\
 fora Retorna a contagem de acesso.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o estado do objeto de ponto de interrupção associado é definido como `BPS_DELETED` (parte da enumeração de [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) ).
 
 ## <a name="remarks"></a>Comentários
  A contagem de ocorrências é o número de vezes que esse ponto de interrupção foi acionado durante a execução atual da sessão.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 - [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)

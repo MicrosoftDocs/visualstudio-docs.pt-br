@@ -1,4 +1,5 @@
 ---
+description: Define o valor do objeto a partir de uma série de bytes consecutivos.
 title: 'IDebugObject:: SetValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c282e5682cb01da56407cbbcb91a69984ded85de
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 972281335b964679f38693182e42c4e64074dffa
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99953585"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102167146"
 ---
 # <a name="idebugobjectsetvalue"></a>IDebugObject::SetValue
 Define o valor do objeto a partir de uma série de bytes consecutivos.
@@ -48,7 +49,7 @@ no Uma matriz de bytes que representa o novo valor.
 `nSize`\
 no O tamanho do valor em bytes.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará S_OK; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

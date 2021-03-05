@@ -1,4 +1,5 @@
 ---
+description: Notifica o pacote de depuração que os atributos de texto foram atualizados no documento.
 title: 'IDebugDocumentTextEvents2:: onupdatetextattributes | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f663f6dc2de0a0c471587ecb19bfb3fade31e943
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c7331745ca734afff26b19075e3427d46ea88bdb
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896182"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102167250"
 ---
 # <a name="idebugdocumenttextevents2onupdatetextattributes"></a>IDebugDocumentTextEvents2::onUpdateTextAttributes
 Notifica o pacote de depuração que os atributos de texto foram atualizados no documento.
@@ -48,7 +49,7 @@ no Uma estrutura de [TEXT_POSITION](../../../extensibility/debugger/reference/te
 `dwNumToUpdate`\
 no Especifica o número de caracteres de texto que foram atualizados.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

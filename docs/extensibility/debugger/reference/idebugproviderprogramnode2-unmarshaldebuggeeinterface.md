@@ -1,4 +1,5 @@
 ---
+description: Obtém uma interface especificada entre limites de processo.
 title: 'IDebugProviderProgramNode2:: UnmarshalDebuggeeInterface | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1449141885a51b3557f8c626b309fcc64c7fb268
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0f51484ae1e9acbb9b94fe546f8157145673e22f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909836"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102167861"
 ---
 # <a name="idebugproviderprogramnode2unmarshaldebuggeeinterface"></a>IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
 Obtém uma interface especificada entre limites de processo.
@@ -48,7 +49,7 @@ no GUID da interface a ser obtida.
 `ppvObject`\
 fora Retorna o objeto que implementa a interface desejada. [C++] isso pode ser convertido diretamente no tipo de interface desejado. [C#] use o <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> método para obter a interface desejada.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

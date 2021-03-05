@@ -1,4 +1,5 @@
 ---
+description: O IDebugProcessSecurity é implementado por um fornecedor de porta para avisar o usuário que anexar ao processo não é seguro.
 title: IDebugProcessSecurity | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c6807ff64d8acf44551fa12fcb79199d3817373
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b5e2ca72cc3d9c1d204c6fb1f90ccc9b03060cff
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933018"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102166093"
 ---
 # <a name="idebugprocesssecurity"></a>IDebugProcessSecurity
 `IDebugProcessSecurity` é implementado por um fornecedor de porta para avisar o usuário que anexar ao processo não é seguro.

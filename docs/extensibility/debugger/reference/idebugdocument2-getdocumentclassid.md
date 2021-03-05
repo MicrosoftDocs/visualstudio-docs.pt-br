@@ -1,4 +1,5 @@
 ---
+description: Obtém o identificador de classe do documento.
 title: 'IDebugDocument2:: GetDocumentClassID | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8c635afa758a4f025305b88f1e11c48737a146a3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 36a95914f470d0ce095db0c0db8d1397b02be3cf
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944596"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102166548"
 ---
 # <a name="idebugdocument2getdocumentclassid"></a>IDebugDocument2::GetDocumentClassID
 Obtém o identificador de classe do documento.
@@ -42,11 +43,11 @@ int GetDocumentClassID(
 ## <a name="parameters"></a>Parâmetros
 `pclsid` fora Retorna um GUID que é a ID de classe do documento.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
  O GUID de classe pode ser usado para instanciar classes individuais, cada uma representando um documento.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

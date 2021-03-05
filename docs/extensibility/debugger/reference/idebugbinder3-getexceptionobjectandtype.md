@@ -1,4 +1,5 @@
 ---
+description: Esse método recupera a exceção associada a um objeto, se houver.
 title: 'IDebugBinder3:: GetExceptionObjectAndType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ee86b12b16cc76b8e2c06ede5ec0110322b515ca
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5ec511cc6145c890c4f62a76563c51aa7c667977
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891222"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102167627"
 ---
 # <a name="idebugbinder3getexceptionobjectandtype"></a>IDebugBinder3::GetExceptionObjectAndType
 Esse método recupera a exceção associada a um objeto, se houver.
@@ -48,7 +49,7 @@ fora Retorna o objeto que representa a exceção.
 `ppField`\
 fora Retorna o objeto que representa um campo específico que pode ter causado a exceção (esse pode ser um valor nulo).
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 > [!NOTE]

@@ -1,4 +1,5 @@
 ---
+description: Essa interface permite que um mecanismo DE depuração (DE) ou fornecedores de porta personalizada registrem programas para depuração.
 title: IDebugProgramPublisher2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 430cd05c66311971ad3cdbf60e170478810899ac
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: deac68ba693bd9e4f827fef5610e3c9d2c3c26f6
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99916201"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102166964"
 ---
 # <a name="idebugprogrampublisher2"></a>IDebugProgramPublisher2
 Essa interface permite que um mecanismo DE depuração (DE) ou fornecedores de porta personalizada registrem programas para depuração.
@@ -89,6 +90,6 @@ void CProgram::Start(IDebugEngine2 * pEngine)
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Interfaces principais](../../../extensibility/debugger/reference/core-interfaces.md)
 - [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)

@@ -1,4 +1,5 @@
 ---
+description: Essa interface representa um fluxo de instruções.
 title: IDebugDisassemblyStream2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d561c8eaa9f7b4fc08f71c241fd052fd366ca80d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 760d77ced3cc07da2dd02c21cf3ed0200df14231
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944635"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102166561"
 ---
 # <a name="idebugdisassemblystream2"></a>IDebugDisassemblyStream2
 Essa interface representa um fluxo de instruções.
@@ -58,7 +59,7 @@ IDebugDisassemblyStream2 : IUnknown
 
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Interfaces principais](../../../extensibility/debugger/reference/core-interfaces.md)
 - [GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md)
 - [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)

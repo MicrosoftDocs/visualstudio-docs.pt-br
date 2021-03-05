@@ -1,4 +1,5 @@
 ---
+description: Esta caixa de diálogo de aviso aparece quando você estiver usando o servidor de origem.
 title: 'Aviso de segurança: o depurador deve executar o comando não confiável | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,12 +16,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d845719b758d3d64280337a1ab4138f2948ee97b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1ca71db31fc976a2bc3c652929fd9215f2f3123f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99838984"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102166652"
 ---
 # <a name="security-warning-debugger-must-execute-untrusted-command"></a>Aviso de segurança: o depurador deve executar o comando não confiável
 Esta caixa de diálogo de aviso aparece quando você estiver usando o servidor de origem. Indica que o comando que o depurador precisa executar para obter o código-fonte não está na lista de comandos confiáveis para o servidor de origem contido no arquivo srcsvr.ini. Se esse for um comando válido, você poderá adicioná-lo ao arquivo srcsvr.ini. Caso contrário, você não deverá executá-lo. Para obter mais informações, consulte [especificar símbolo (. pdb) e arquivos de origem](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).

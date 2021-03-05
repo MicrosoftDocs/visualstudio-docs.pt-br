@@ -1,4 +1,5 @@
 ---
+description: Esse método informa ao processo que uma sessão não está mais Depurando o processo.
 title: IDebugProcessEx2::D Etach | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 62ca404442d6bf6080972f03c3e2fd0da2621e20
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3140da647b46a1cbc3b60691e820238c2c6c83eb
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954885"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102166249"
 ---
 # <a name="idebugprocessex2detach"></a>IDebugProcessEx2::Detach
 Esse método informa ao processo que uma sessão não está mais Depurando o processo.
@@ -43,7 +44,7 @@ int Detach(
 `pSession`\
 no Um valor que identifica exclusivamente a sessão da qual desanexar esse processo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

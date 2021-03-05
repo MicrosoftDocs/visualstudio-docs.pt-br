@@ -1,4 +1,5 @@
 ---
+description: Obtém o nome de usuário do fornecedor da porta.
 title: 'IDebugProcessSecurity:: GetUserName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 075cc96866a2b7b4a987c04c6cb78dcd22da2b50
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 04ad8bf6ba572a1f9e14e26ef2ca37d021f6e3a0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912025"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102166197"
 ---
 # <a name="idebugprocesssecuritygetusername"></a>IDebugProcessSecurity::GetUserName
 Obtém o nome de usuário do fornecedor da porta.
@@ -41,7 +42,7 @@ int GetUserName (
 `pbstrUserName`\
 fora Uma cadeia de caracteres que contém o nome de usuário.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se o método for bem-sucedido, retornará `S_OK`. Caso contrário, ele retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

@@ -1,4 +1,5 @@
 ---
+description: Define a contagem de acesso para o ponto de interrupção associado.
 title: 'IDebugBoundBreakpoint2:: SetHitCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a5daff1f0bd1928633a32021f96addcacd291694
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c7dbba43563a87a6c434d24014ce773375cd705c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99930467"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102167510"
 ---
 # <a name="idebugboundbreakpoint2sethitcount"></a>IDebugBoundBreakpoint2::SetHitCount
 Define a contagem de acesso para o ponto de interrupção associado.
@@ -44,7 +45,7 @@ int SetHitCount(
 `dwHitCount`\
 no A contagem de pressionamentos a ser definida.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o estado do objeto de ponto de interrupção associado é definido como `BPS_DELETED` (parte da enumeração de [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) ).
 
 ## <a name="remarks"></a>Comentários

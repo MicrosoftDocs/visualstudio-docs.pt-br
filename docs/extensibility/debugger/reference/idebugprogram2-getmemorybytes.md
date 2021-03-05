@@ -1,4 +1,5 @@
 ---
+description: Recupera os bytes de memória ocupados pelo programa.
 title: 'IDebugProgram2:: GetMemoryBytes | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 279333dc85a225a679efd205805ccee282b11260
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e63d25807e6a434066c7fc3bb860e9657faadf15
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906217"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102165989"
 ---
 # <a name="idebugprogram2getmemorybytes"></a>IDebugProgram2::GetMemoryBytes
 Recupera os bytes de memória ocupados pelo programa.
@@ -43,7 +44,7 @@ int GetMemoryBytes(
 `ppMemoryBytes`\
 fora Retorna um objeto [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) que representa os bytes de memória do programa.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

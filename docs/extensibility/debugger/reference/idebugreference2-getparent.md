@@ -1,4 +1,5 @@
 ---
+description: Obtém a referência pai de uma referência.
 title: 'IDebugReference2:: GetParent | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c4ed767023fc8d1de65f75c8fb73e31004319024
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eee5015a304b3f4939c06664606a7d4aa8803f02
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909619"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102165976"
 ---
 # <a name="idebugreference2getparent"></a>IDebugReference2::GetParent
 Obtém a referência pai de uma referência. Reservado para uso futuro.
@@ -43,7 +44,7 @@ int GetParent (
 `ppParent`\
 fora Retorna um objeto [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) que representa o pai desta propriedade.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Sempre retorna `E_NOTIMPL`.
 
 ## <a name="see-also"></a>Confira também
