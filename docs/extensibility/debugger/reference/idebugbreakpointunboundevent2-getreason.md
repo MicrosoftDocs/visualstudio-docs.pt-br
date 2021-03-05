@@ -1,4 +1,5 @@
 ---
+description: Obtém o motivo pelo qual o ponto de interrupção foi desassociado.
 title: 'IDebugBreakpointUnboundEvent2:: GetReason | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 21b1eaf51f9f533fccb5275e0659367a43adb2c3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6d230a9228ff59a90224030f050761a05858c8c1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900219"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102170244"
 ---
 # <a name="idebugbreakpointunboundevent2getreason"></a>IDebugBreakpointUnboundEvent2::GetReason
 Obtém o motivo pelo qual o ponto de interrupção foi desassociado.
@@ -43,7 +44,7 @@ int GetReason(
 `pdwUnboundReason`\
 fora Retorna um valor da enumeração [BP_UNBOUND_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md) especificando o motivo pelo qual o ponto de interrupção foi desassociado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
