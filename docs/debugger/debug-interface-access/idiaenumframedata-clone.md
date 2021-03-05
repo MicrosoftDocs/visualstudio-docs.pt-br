@@ -1,4 +1,5 @@
 ---
+description: Cria um enumerador que contém o mesmo estado de enumeração que o enumerador de dados de quadro atual.
 title: IDiaEnumFrameData::Clone | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e5c2b6b70c1e6c4b68c5597aa71f17fb491be1ac
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9a5df5295143e9a6fb815ddc78d103b910ccfda7
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856883"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158081"
 ---
 # <a name="idiaenumframedataclone"></a>IDiaEnumFrameData::Clone
 Cria um enumerador que contém o mesmo estado de enumeração que o enumerador atual.
@@ -35,8 +36,8 @@ HRESULT Clone(
 
 fora Retorna um objeto [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md) que contém uma duplicata do enumerador. Os dados do quadro não são duplicados, somente o enumerador.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)

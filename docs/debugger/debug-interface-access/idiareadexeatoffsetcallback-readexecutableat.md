@@ -1,4 +1,5 @@
 ---
+description: Lê o número especificado de bytes começando no deslocamento especificado a partir de um arquivo executável.
 title: IDiaReadExeAtOffsetCallback::ReadExecutableAt | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d70ca331d56fd423e7bfbfc4596b8f3ef5954b03
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9986ba6d493353644d8387b2df36a96cbf542933
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855511"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157359"
 ---
 # <a name="idiareadexeatoffsetcallbackreadexecutableat"></a>IDiaReadExeAtOffsetCallback::ReadExecutableAt
 Lê o número especificado de bytes começando no deslocamento especificado a partir de um arquivo executável.
@@ -53,6 +54,6 @@ fora Retorna o número de bytes lidos.
 ## <a name="remarks"></a>Comentários
  Esse método é chamado pelo código de suporte do DIA para carregar bytes de dados de um executável usando um deslocamento de arquivo absoluto. Esse método é chamado no suporte do método [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)
 - [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)

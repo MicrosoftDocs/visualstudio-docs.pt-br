@@ -1,4 +1,5 @@
 ---
+description: Lê a memória da imagem.
 title: 'IDiaStackWalkFrame:: readMemory | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ffd85fd1a6878fd378931901098d90f2a24c8ccc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: edfe15c8303236f31ab50a948a8b5506cee0356b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854797"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158918"
 ---
 # <a name="idiastackwalkframereadmemory"></a>IDiaStackWalkFrame::readMemory
 Lê a memória da imagem.
@@ -55,8 +56,8 @@ fora Retorna o número de bytes retornados. Se `data` for `NULL` , `pcbData` con
 
 fora Um buffer que deve ser preenchido com dados do local especificado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

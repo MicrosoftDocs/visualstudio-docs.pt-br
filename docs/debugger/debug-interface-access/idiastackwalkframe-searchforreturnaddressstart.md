@@ -1,4 +1,5 @@
 ---
+description: Pesquisa o quadro de ativação especificado em busca de um endereço de retorno no endereço especificado ou próximo dele.
 title: IDiaStackWalkFrame::searchForReturnAddressStart | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7df2a6bf560c8b0916357c063dff01f1d8f5ac9e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 49beac1d7f7c998b5ad3a73222903830a934bc9c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854769"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158904"
 ---
 # <a name="idiastackwalkframesearchforreturnaddressstart"></a>IDiaStackWalkFrame::searchForReturnAddressStart
 Pesquisa o quadro de ativação especificado em busca de um endereço de retorno no endereço especificado ou próximo dele.
@@ -45,9 +46,9 @@ no Um endereço de memória virtual do qual começar a Pesquisar.
 
 fora Retorna o endereço de retorno de função mais próximo para `startAddress` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

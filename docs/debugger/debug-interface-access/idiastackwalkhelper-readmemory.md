@@ -1,4 +1,5 @@
 ---
+description: Lê um bloco de dados da imagem do executável na memória.
 title: IDiaStackWalkHelper::readMemory | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ed505938636c9cccb69a927cdafbcb9589b35bc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a70cc9660e872a3e64e202d7498814b3aa24daa3
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863798"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158883"
 ---
 # <a name="idiastackwalkhelperreadmemory"></a>IDiaStackWalkHelper::readMemory
 Lê um bloco de dados da imagem do executável na memória.
@@ -55,9 +56,9 @@ fora Retorna o número de bytes realmente lidos. Se `pbData` for `NULL` , este �
 
 [entrada, saída] Um buffer que é preenchido com a leitura de memória.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
 - [Enumeração MemoryTypeEnum](../../debugger/debug-interface-access/memorytypeenum.md)

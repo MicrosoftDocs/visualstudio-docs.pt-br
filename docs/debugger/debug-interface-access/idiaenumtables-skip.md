@@ -1,4 +1,5 @@
 ---
+description: Ignora um número especificado de tabelas em uma sequência de enumeração.
 title: IDiaEnumTables::Skip | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 739c8e0684e435d4b6747a7127907ec424d90c4f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 98cec85c0b36051cb3fc173794188dbf7d58fcee
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856015"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157850"
 ---
 # <a name="idiaenumtablesskip"></a>IDiaEnumTables::Skip
 Ignora um número especificado de tabelas em uma sequência de enumeração.
@@ -35,8 +36,8 @@ HRESULT Skip (
 
 no O número de tabelas na sequência de enumeração a serem ignoradas.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK` ; caso contrário, retornará `S_FALSE` se não houver mais tabelas a serem ignoradas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)

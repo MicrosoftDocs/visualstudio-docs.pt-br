@@ -1,4 +1,5 @@
 ---
+description: Enumera os vários elementos de dados de quadro contidos na fonte de dados.
 title: IDiaEnumFrameData | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f1f2483971b8bb9deb59174fab77bd2c5692f830
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0bd1ca95e2f7377c00548658634cbf1e2993e3d8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856750"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158004"
 ---
 # <a name="idiaenumframedata"></a>IDiaEnumFrameData
 Enumera os vários elementos de dados de quadro contidos na fonte de dados.
@@ -107,7 +108,7 @@ void ShowFrameData(IDiaSession *pSession)
 
 **DLL:** msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

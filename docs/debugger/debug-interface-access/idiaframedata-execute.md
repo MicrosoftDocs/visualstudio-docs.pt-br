@@ -1,4 +1,5 @@
 ---
+description: Executa o desenrolamento de pilha e retorna os resultados em uma interface de quadro de movimentação de pilha.
 title: IDiaFrameData::execute | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 00cc4ba3f7ba3f54df4dd8687996fa72d27e91fb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 483854d0bea61af1bf8bd1f5338770fcc49b37be
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855994"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157808"
 ---
 # <a name="idiaframedataexecute"></a>IDiaFrameData::execute
 Executa o desenrolamento de pilha e retorna os resultados em uma interface de quadro de movimentação de pilha.
@@ -35,7 +36,7 @@ HRESULT execute (
 
 no Um objeto [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md) que contém o estado dos registros de quadro.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. A tabela a seguir mostra os possíveis valores de retorno para esse método.
 
 |Valor|Descrição|
@@ -48,6 +49,6 @@ no Um objeto [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastac
 ## <a name="remarks"></a>Comentários
  Esse método é chamado durante a depuração para desenrolar a pilha. O objeto [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md) é implementado pelo aplicativo cliente para receber atualizações para os registros e para fornecer métodos usados pelo `execute` método.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

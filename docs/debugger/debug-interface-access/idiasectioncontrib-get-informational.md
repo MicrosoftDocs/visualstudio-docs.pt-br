@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que indica se uma seção contém comentários ou informações semelhantes.
 title: IDiaSectionContrib::get_informational | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8801a6ca7e2284afeed19e2519003ead1288f0e3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 72b16e3823afa8abc3b43373d9e63fe9c5cd883e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855427"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157262"
 ---
 # <a name="idiasectioncontribget_informational"></a>IDiaSectionContrib::get_informational
 Recupera um sinalizador que indica se uma seção contém comentários ou informações semelhantes.
@@ -35,11 +36,11 @@ HRESULT get_informational(
 
 fora Retorna `TRUE` se a seção contém comentários ou outras informações; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
 ## <a name="remarks"></a>Comentários
  Normalmente, a seção. diretivo contém informações.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

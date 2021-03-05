@@ -1,4 +1,5 @@
 ---
+description: Recupera o número de linha de origem baseado em um onde a instrução ou expressão termina.
 title: IDiaLineNumber::get_lineNumberEnd | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 93bb9e6cf42966b80bd2512a0cdc488ef91c7429
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ef5fd04d3c56918885bd9301f1f821c01c018b9b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864778"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157535"
 ---
 # <a name="idialinenumberget_linenumberend"></a>IDiaLineNumber::get_lineNumberEnd
 Recupera o número de linha de origem baseado em um onde a instrução ou expressão termina.
@@ -35,7 +36,7 @@ HRESULT get_lineNumberEnd (
 
 fora Retorna o número de linha onde a instrução ou a expressão termina. Se o valor for zero, as informações finais não estão presentes.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
 ## <a name="see-also"></a>Confira também

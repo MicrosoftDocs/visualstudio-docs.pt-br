@@ -1,4 +1,5 @@
 ---
+description: Recupera uma matriz de identificadores exclusivos para os mecanismos de depuração disponíveis.
 title: 'IDebugProcess3:: GetEngineFilter | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8a36066ef14ceb10160067f146574e1495f856f5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 77ad90af772bb210402cfd43449350ccf0f02058
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99915283"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158456"
 ---
 # <a name="idebugprocess3getenginefilter"></a>IDebugProcess3::GetEngineFilter
 Recupera uma matriz de identificadores exclusivos para os mecanismos de depuração disponíveis.
@@ -42,7 +43,7 @@ public int GetEngineFilter(
 `pEngineArray`\
 fora Referência a uma estrutura que contém identificadores exclusivos para mecanismos de depuração.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

@@ -1,4 +1,5 @@
 ---
+description: Obtém o tipo do ponto de interrupção representado por essa resolução.
 title: 'IDebugBreakpointResolution2:: getbreakpointtype | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5410cbf6147e0c8c6f4cba97b0214c4503f9790b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cca069871c99c623119853f37d1c422125b985ff
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892990"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158508"
 ---
 # <a name="idebugbreakpointresolution2getbreakpointtype"></a>IDebugBreakpointResolution2::GetBreakpointType
 Obtém o tipo do ponto de interrupção representado por essa resolução.
@@ -43,7 +44,7 @@ int GetBreakpointType(
 `pBPType`\
 fora Retorna um valor da enumeração [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) que especifica o tipo desse ponto de interrupção.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. Retorna E_FAIL se o `bpResLocation` campo na estrutura de [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) associada não for válido.
 
 ## <a name="remarks"></a>Comentários

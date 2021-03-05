@@ -1,4 +1,5 @@
 ---
+description: 'IDiaFrameData:: get_systemExceptionHandling recupera um sinalizador que indica se a manipulação de exceção do sistema está em vigor.'
 title: IDiaFrameData::get_systemExceptionHandling | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9409c7a3e30f080df4a821cdd6f0003a016ea31f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 130afc2a52f848749d7c46f643e1b552975e894c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864932"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157703"
 ---
 # <a name="idiaframedataget_systemexceptionhandling"></a>IDiaFrameData::get_systemExceptionHandling
 Recupera um sinalizador que indica se a manipulação de exceção do sistema está em vigor.
@@ -35,7 +36,7 @@ HRESULT get_systemExceptionHandling (
 
 fora Retorna `TRUE` se a manipulação de exceção do sistema está em vigor; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
 ## <a name="remarks"></a>Comentários
@@ -43,6 +44,6 @@ fora Retorna `TRUE` se a manipulação de exceção do sistema está em vigor; c
 
  Para determinar se a manipulação de exceção do C++ está em vigor, chame o método [IDiaFrameData:: get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-cplusplusexceptionhandling.md) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [IDiaFrameData::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-cplusplusexceptionhandling.md)

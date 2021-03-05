@@ -1,4 +1,5 @@
 ---
+description: Determina se a pesquisa de arquivos. pdb é permitida no diretório raiz do sistema.
 title: IDiaLoadCallback2::RestrictSystemRootAccess | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e9c3a144ccde9f6464db6f5b84f36aa5eac5668
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7d38f18a9e0cc0510e237780c4361acb086125eb
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864652"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157381"
 ---
 # <a name="idialoadcallback2restrictsystemrootaccess"></a>IDiaLoadCallback2::RestrictSystemRootAccess
 Determina se a pesquisa de arquivos. pdb é permitida no diretório raiz do sistema.
@@ -34,5 +35,5 @@ HRESULT RestrictSystemRootAccess();
 ## <a name="remarks"></a>Comentários
  Qualquer código de retorno diferente de `S_OK` impede a pesquisa da raiz do sistema para arquivos. pdb.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

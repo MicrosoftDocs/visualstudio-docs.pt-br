@@ -1,4 +1,5 @@
 ---
+description: Abre uma sessão para consultar símbolos.
 title: IDiaDataSource::openSession | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1221bac37b51d9aa55e31a07f2a301defa3af16e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d31e30c2044332d1e299d6a734ee5fecb22ec686
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857121"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158235"
 ---
 # <a name="idiadatasourceopensession"></a>IDiaDataSource::openSession
 Abre uma sessão para consultar símbolos.
@@ -35,7 +36,7 @@ ppSession
 
 fora Retorna um objeto [IDiaSession](../../debugger/debug-interface-access/idiasession.md) que representa a sessão aberta.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. A tabela a seguir mostra os possíveis valores de retorno para esse método.
 
 |Valor|Descrição|
@@ -60,7 +61,7 @@ if (FAILED(hr))
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)
 - [Visão geral](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

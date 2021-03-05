@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que indica se a seção contém dados não inicializados.
 title: IDiaSectionContrib::get_uninitializedData | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d18e6398f563f7f766ba1e38047a688676b55bca
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 391ef6ddc2b0a377fbde0b9475b689df2823fdcc
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864386"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157157"
 ---
 # <a name="idiasectioncontribget_uninitializeddata"></a>IDiaSectionContrib::get_uninitializedData
 Recupera um sinalizador que indica se a seção contém dados não inicializados.
@@ -35,8 +36,8 @@ HRESULT get_uninitializedData (
 
 fora Retorna `TRUE` se a seção contém dados não inicializados; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

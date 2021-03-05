@@ -1,4 +1,5 @@
 ---
+description: Acessa informações que descrevem o processo de mapeamento a partir de um bloco de bytes de texto de imagem para um número de linha de arquivo de origem.
 title: IDiaLineNumber | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 62552c6cce3c17da52de14669071bec43db548de
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cffe65f66aee4ae53418e93480e9b3e457812247
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864701"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157451"
 ---
 # <a name="idialinenumber"></a>IDiaLineNumber
 Acessa informações que descrevem o processo de mapeamento a partir de um bloco de bytes de texto de imagem para um número de linha de arquivo de origem.

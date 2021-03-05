@@ -1,4 +1,5 @@
 ---
+description: Recupera um número especificado de fontes injetadas na sequência de enumeração.
 title: IDiaEnumInjectedSources::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b77fd91e53e6fd0a3e5940e25c8d495a87d7f45
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bdc57bd1b15150b93e8c42537e5a4abed8dfae57
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856673"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157997"
 ---
 # <a name="idiaenuminjectedsourcesnext"></a>IDiaEnumInjectedSources::Next
 Recupera um número especificado de fontes injetadas na sequência de enumeração.
@@ -45,9 +46,9 @@ fora Retorna uma matriz de objetos [IDiaInjectedSource](../../debugger/debug-int
 
 fora Retorna o número de fontes injetadas no enumerador obtido.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver mais fontes injetadas. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

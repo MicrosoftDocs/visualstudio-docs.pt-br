@@ -1,4 +1,5 @@
 ---
+description: Recupera o tipo de quadro específico do compilador.
 title: IDiaFrameData::get_type | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 76696529440d6ecce34f623c51e2909d0b2d7f00
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7c362f6a781d7596c438a3fc2c8d0acfc47f070a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855882"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157682"
 ---
 # <a name="idiaframedataget_type"></a>IDiaFrameData::get_type
 Recupera o tipo de quadro específico do compilador.
@@ -35,9 +36,9 @@ HRESULT get_type (
 
 fora Retorna um valor da enumeração de [Enumeração StackFrameTypeEnum](../../debugger/debug-interface-access/stackframetypeenum.md) que indica o tipo de quadro específico do compilador.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [Enumeração StackFrameTypeEnum](../../debugger/debug-interface-access/stackframetypeenum.md)

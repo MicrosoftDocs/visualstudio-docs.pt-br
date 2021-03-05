@@ -1,4 +1,5 @@
 ---
+description: Recupera o número de linha no arquivo de origem.
 title: IDiaLineNumber::get_lineNumber | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 60fcb463b4705a13cbdcf9802fb8fcf74df32246
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: db9a07b0fd636df9cd09c5bd22dceee9144678a6
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855728"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157563"
 ---
 # <a name="idialinenumberget_linenumber"></a>IDiaLineNumber::get_lineNumber
 Recupera o número de linha no arquivo de origem.
@@ -35,7 +36,7 @@ HRESULT get_lineNumber (
 
 fora Retorna o número de linha no arquivo de origem.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
 ## <a name="example"></a>Exemplo
@@ -46,5 +47,5 @@ DWORD linenum;
 pLine->get_lineNumber( &linenum );
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

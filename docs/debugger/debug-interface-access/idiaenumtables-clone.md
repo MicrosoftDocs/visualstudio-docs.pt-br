@@ -1,4 +1,5 @@
 ---
+description: Cria um enumerador que contém o mesmo estado de enumeração que o enumerador de tabelas atual.
 title: IDiaEnumTables::Clone | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b7abdc5545c25f0e4dfa68657a0867c4c97b483
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 410e02ab0a7a914c06b09b97a10fe3e2f3e3c630
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856043"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157892"
 ---
 # <a name="idiaenumtablesclone"></a>IDiaEnumTables::Clone
 Cria um enumerador que contém o mesmo estado de enumeração que o enumerador atual.
@@ -35,8 +36,8 @@ HRESULT Clone (
 
 fora Retorna um objeto [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md) que contém uma duplicata do enumerador. As tabelas não são duplicadas, somente o enumerador.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)

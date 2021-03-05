@@ -1,4 +1,5 @@
 ---
+description: Recupera um identificador exclusivo para o compiland que contribuiu para esta linha.
 title: IDiaLineNumber::get_compilandId | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 30e944c04eb3a6fb7fd7bcc2a7749edbb4d9f2f3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 090b8ac199ab709c453bd5f3280afe1abd088077
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855749"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157577"
 ---
 # <a name="idialinenumberget_compilandid"></a>IDiaLineNumber::get_compilandId
 Recupera um identificador exclusivo para o compiland que contribuiu para esta linha.
@@ -35,8 +36,8 @@ HRESULT get_compilandId (
 
 fora Retorna `DWORD` que contém o identificador exclusivo para o compiland que contribuiu para esta linha.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não há suporte para essa propriedade. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
