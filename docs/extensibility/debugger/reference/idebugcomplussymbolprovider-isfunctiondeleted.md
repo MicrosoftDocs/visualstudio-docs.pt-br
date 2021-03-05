@@ -1,4 +1,5 @@
 ---
+description: Determina que a função no endereço de depuração especificado é excluída.
 title: 'IDebugComPlusSymbolProvider:: IsFunctionDeleted | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0677b45d3c78f1e652a1185e0e5519bb60bc35ed
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fcaf296381e6035613ebc496e440f10d1ec65baa
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99911202"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102163701"
 ---
 # <a name="idebugcomplussymbolproviderisfunctiondeleted"></a>IDebugComPlusSymbolProvider::IsFunctionDeleted
 Determina que a função no endereço de depuração especificado é excluída.
@@ -41,7 +42,7 @@ int IsFunctionDeleted(
 `pAddress`\
 no O endereço de depuração representado por uma interface [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) . Esse endereço deve ser um METHOD_ADDRESS.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se a função for excluída, retorna `S_OK` . Se a função existir, retornará `S_FALSE` .
 
 ## <a name="example"></a>Exemplo

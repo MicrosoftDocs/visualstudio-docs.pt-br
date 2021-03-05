@@ -1,4 +1,5 @@
 ---
+description: Obtém o ponto de interrupção pendente que está sendo associado.
 title: 'IDebugBreakpointBoundEvent2:: GetPendingBreakpoint | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8dfa6b79863c11d81a5ee36b47497a17e78a3be1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1e629549405a86a44ef982f5b9ffd5212c2c1db8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952311"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162375"
 ---
 # <a name="idebugbreakpointboundevent2getpendingbreakpoint"></a>IDebugBreakpointBoundEvent2::GetPendingBreakpoint
 Obtém o ponto de interrupção pendente que está sendo associado.
@@ -43,7 +44,7 @@ int GetPendingBreakpoint(
 `ppPendingBP`\
 fora Retorna o objeto [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) que representa o ponto de interrupção pendente que está sendo associado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo

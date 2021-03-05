@@ -1,4 +1,5 @@
 ---
+description: Recupera um símbolo que representa o limite superior de uma dimensão de matriz FORTRAN.
 title: IDiaSymbol::get_upperBound | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 002d198411a421d0209e238f6021dbdf9d8f4b31
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8e07eed5400b49adc38bff878207cf4d9f38eada
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853397"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161777"
 ---
 # <a name="idiasymbolget_upperbound"></a>IDiaSymbol::get_upperBound
 Recupera um símbolo que representa o limite superior de uma dimensão de matriz FORTRAN.
@@ -35,11 +36,11 @@ HRESULT get_upperBound (
 
 fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que representa o limite superior de uma dimensão de matriz Fortran.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

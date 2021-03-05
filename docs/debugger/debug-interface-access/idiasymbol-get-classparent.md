@@ -1,4 +1,5 @@
 ---
+description: Recupera uma referência para a classe pai do símbolo.
 title: IDiaSymbol::get_classParent | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 44b556529a0cf4a30cd84f83700947cb52c671de
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 61bab788c29a987ad7204d395c5e0d87fe2ab7dd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863525"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162209"
 ---
 # <a name="idiasymbolget_classparent"></a>IDiaSymbol::get_classParent
 Recupera uma referência para a classe pai do símbolo.
@@ -35,7 +36,7 @@ HRESULT get_classParent (
 
 fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que representa a classe pai do símbolo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -51,6 +52,6 @@ fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasy
 ## <a name="remarks"></a>Comentários
  Os tipos de símbolos que podem ser pais de classe são documentados na [hierarquia de classes de tipos de símbolo](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Hierarquia de classes de tipos de símbolo](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)

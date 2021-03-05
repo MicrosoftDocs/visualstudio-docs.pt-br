@@ -1,4 +1,5 @@
 ---
+description: Recupera uma referência ao pai léxico do símbolo.
 title: IDiaSymbol::get_lexicalParent | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: afac75a650f3ffc8dc365626a7a61fea8c3193f4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d36147effa96d6c5a8ceb0b8f06a01cb0de5e455
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853950"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162001"
 ---
 # <a name="idiasymbolget_lexicalparent"></a>IDiaSymbol::get_lexicalParent
 Recupera uma referência ao pai léxico do símbolo.
@@ -35,7 +36,7 @@ HRESULT get_lexicalParent (
 
 fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que representa o pai léxico do símbolo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
@@ -46,6 +47,6 @@ fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasy
 
  Os possíveis símbolos que podem aparecer como pais léxicos são documentados na [hierarquia lexical dos tipos de símbolo](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Hierarquia lexical de tipos de símbolo](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)

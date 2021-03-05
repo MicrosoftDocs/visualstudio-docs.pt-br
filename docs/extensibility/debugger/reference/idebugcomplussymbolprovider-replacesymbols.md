@@ -1,4 +1,5 @@
 ---
+description: Substitui os símbolos de depuração atuais por aqueles no fluxo de dados especificado.
 title: 'IDebugComPlusSymbolProvider:: ReplaceSymbols | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 10c2b8b7154e5286d295df2c87398c57277325ba
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5c6a7ec5ce2345a78920f210d2d84f5284cfd4d3
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99842518"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102163571"
 ---
 # <a name="idebugcomplussymbolproviderreplacesymbols"></a>IDebugComPlusSymbolProvider::ReplaceSymbols
 Substitui os símbolos de depuração atuais por aqueles no fluxo de dados especificado.
@@ -52,7 +53,7 @@ no Identificador exclusivo do módulo.
 `pStream`\
 no Fluxo de dados que contém os novos símbolos.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo
@@ -81,5 +82,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

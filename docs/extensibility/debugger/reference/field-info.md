@@ -1,4 +1,5 @@
 ---
+description: Esta estrutura descreve uma variável local, um parâmetro ou outro campo.
 title: FIELD_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f358c6c9a192ddd4d71f26a0f2f795ae012bc2c7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 47b7c7cb3a77d0ad925b044130901dd481b99943
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941834"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162427"
 ---
 # <a name="field_info"></a>FIELD_INFO
 Esta estrutura descreve uma variável local, um parâmetro ou outro campo.
@@ -73,7 +74,7 @@ Namespace: Microsoft. VisualStudio. Debugger. Interop
 
 Assembly: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md)
 - [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)

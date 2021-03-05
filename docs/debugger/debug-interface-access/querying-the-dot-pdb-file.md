@@ -1,4 +1,5 @@
 ---
+description: Um arquivo de banco de dados do programa (Extension. pdb) é um arquivo binário que contém informações sobre tipo e depuração simbólicas coletadas ao longo do curso da compilação e vinculação do projeto.
 title: Consultando o. Arquivo PDB | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f1ff2a0cc850930a960e518e4039d6cb970005cc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ea69572304feb5bb2fcb2ef91c0f94a96c138cf7
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853229"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161658"
 ---
 # <a name="querying-the-pdb-file"></a>Consultando o arquivo .Pdb
 Um arquivo de banco de dados do programa (Extension. pdb) é um arquivo binário que contém informações sobre tipo e depuração simbólicas coletadas ao longo do curso da compilação e vinculação do projeto. Um arquivo PDB é criado quando você compila um programa C/C++ com **/Zi** ou **/Zi** , ou [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] um [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] programa, ou [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] com a opção **/debug** . Os arquivos de objeto contêm referências ao arquivo. pdb para informações de depuração. Para obter mais informações sobre arquivos PDB, consulte [arquivos PDB](/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100)). Um aplicativo DIA pode usar as seguintes etapas gerais para obter detalhes sobre os vários símbolos, objetos e elementos de dados em uma imagem executável.

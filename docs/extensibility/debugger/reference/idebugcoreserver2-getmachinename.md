@@ -1,4 +1,5 @@
 ---
+description: Obtém o nome do computador no qual o servidor principal está sendo executado.
 title: 'IDebugCoreServer2:: GetMachineName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3e67d32b2f5e38627d8c28d96d6d86beb8fb415b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1fcde7bcc59f38aba5369059e1aeb31a61a0e8cd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904065"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102163181"
 ---
 # <a name="idebugcoreserver2getmachinename"></a>IDebugCoreServer2::GetMachineName
 Obtém o nome do computador no qual o servidor principal está sendo executado.
@@ -43,7 +44,7 @@ int GetName(
 `pbstrName`\
 fora Retorna uma cadeia de caracteres que contém o nome da máquina.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

@@ -1,4 +1,5 @@
 ---
+description: Recupera o idioma da origem.
 title: IDiaSymbol::get_language | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 530bfc0b977cd99f1924461d52417deb49e7330e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 50d4ee9899b7d625a18babc3551d41b4e2ddc8bc
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853964"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162022"
 ---
 # <a name="idiasymbolget_language"></a>IDiaSymbol::get_language
 Recupera o idioma da origem.
@@ -35,12 +36,12 @@ HRESULT get_language (
 
 fora Retorna um valor da enumeração de [enumeração CV_CFL_LANG](../../debugger/debug-interface-access/cv-cfl-lang.md) que especifica o idioma da origem.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração CV_CFL_LANG](../../debugger/debug-interface-access/cv-cfl-lang.md)

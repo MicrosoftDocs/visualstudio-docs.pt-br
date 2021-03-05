@@ -1,4 +1,5 @@
 ---
+description: Descreve o resultado da Associação de um ponto de interrupção de dados.
 title: BP_RESOLUTION_DATA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 25756c00ba493dba866ab70693e69971333ae9ee
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1d33f05036965e500a007b97e7575a5c0d788158
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901927"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162609"
 ---
 # <a name="bp_resolution_data"></a>BP_RESOLUTION_DATA
 Descreve o resultado da Associação de um ponto de interrupção de dados.

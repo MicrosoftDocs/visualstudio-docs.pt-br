@@ -1,4 +1,5 @@
 ---
+description: Especifica a estrutura do local de resolução do ponto de interrupção.
 title: BP_RESOLUTION_LOCATION | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2c2032c15430fb4038ecdeab2050b47a59c932c4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 87fef44d02911e84952f6eb8ab09dd9a1360dea6
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881068"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162557"
 ---
 # <a name="bp_resolution_location"></a>BP_RESOLUTION_LOCATION
 Especifica a estrutura do local de resolução do ponto de interrupção.

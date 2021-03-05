@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se um tipo de ponteiro é uma referência rvalue.
 title: IDiaSymbol::get_RValueReference | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a66ec650c1e12e795241ab31cafc50ebaacf20ee
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3be0c7f5a25459823911c27c39f80f3b6593cbbe
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853649"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161854"
 ---
 # <a name="idiasymbolget_rvaluereference"></a>IDiaSymbol::get_RValueReference
 Recupera um sinalizador que especifica se um tipo de ponteiro é uma referência rvalue. Use quando a [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) for definida como um tipo de ponteiro.
@@ -35,7 +36,7 @@ HRESULT get_RValueReference (
 
 fora Retorna `TRUE` se o ponteiro é uma referência rvalue; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -50,5 +51,5 @@ fora Retorna `TRUE` se o ponteiro é uma referência rvalue; caso contrário, re
 
  DLL: msdia100.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

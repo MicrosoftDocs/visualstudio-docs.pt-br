@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se o ponteiro do quadro está presente.
 title: 'IDiaSymbol:: get_framePointerPresent | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 591ed4888bd33040be87181c9dbfab8f1a02172c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 66c3a0967a2a692cdc7e6c3d50ab71c56286b94b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854342"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162169"
 ---
 # <a name="idiasymbolget_framepointerpresent"></a>IDiaSymbol::get_framePointerPresent
 Recupera um sinalizador que especifica se o ponteiro do quadro está presente. Use quando a [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) for definida como `SymTagFunction` .
@@ -35,7 +36,7 @@ HRESULT get_framePointerPresent(
 
 [fora]] Retorna `TRUE` se o ponteiro do quadro estiver presente; caso contrário, retornará `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -50,5 +51,5 @@ HRESULT get_framePointerPresent(
 
  DLL: msdia100.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

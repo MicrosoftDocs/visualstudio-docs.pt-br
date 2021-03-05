@@ -1,4 +1,5 @@
 ---
+description: Recupera para um tipo de símbolo dado seu endereço de depuração.
 title: 'IDebugComPlusSymbolProvider:: GetTypeFromAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 65b94be12bab00b44f12bc23239de90f5e8c0ddc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1dfcc7987c672ebf9647f33281b64d6d446a383e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892834"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102163713"
 ---
 # <a name="idebugcomplussymbolprovidergettypefromaddress"></a>IDebugComPlusSymbolProvider::GetTypeFromAddress
 Recupera para um tipo de símbolo dado seu endereço de depuração.
@@ -47,7 +48,7 @@ no O endereço de depuração que é representado por uma interface [IDebugAddre
 `ppField`\
 fora Retorna o tipo de matriz conforme representado por uma interface [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) .
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo

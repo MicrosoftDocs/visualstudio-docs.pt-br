@@ -1,4 +1,5 @@
 ---
+description: Especifica se este ponteiro está sinalizado como restrito.
 title: IDiaSymbol::get_restrictedType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4dcd200d40c982ddcf8137cac51ada813c962fd6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c75e11b4b16f2a8123c833999d7bb793915e2dad
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862727"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161861"
 ---
 # <a name="idiasymbolget_restrictedtype"></a>IDiaSymbol::get_restrictedType
 Especifica se o `this` ponteiro está sinalizado como restrito.
@@ -32,8 +33,8 @@ HRESULT get_restrictedType(
 
 fora Um ponteiro para um `BOOL` que especifica se o `this` ponteiro está sinalizado como restrito.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

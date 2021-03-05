@@ -1,4 +1,5 @@
 ---
+description: Obtém as informações de atributo como um blob de bytes.
 title: 'IDebugCustomAttribute:: GetAttributeBytes | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fe0db0267898b54837cd9d05e39b0ddce97d21cb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d7cfc3ba650ff8277bb6cb85f5d1530d202bd426
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928452"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102163077"
 ---
 # <a name="idebugcustomattributegetattributebytes"></a>IDebugCustomAttribute::GetAttributeBytes
 Obtém as informações de atributo como um blob de bytes.
@@ -48,7 +49,7 @@ int GetAttributeBytes(
 `pdwLen`\
 [entrada, saída] Especifica o número máximo de bytes a serem retornados na `ppBlob` matriz e retorna o número de bytes gravados na matriz.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará S_OK; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

@@ -1,4 +1,5 @@
 ---
+description: Recupera as classes com o atributo especificado que são implementados na linguagem de programação especificada.
 title: IDebugComPlusSymbolProvider::GetAttributedClassesForLanguage
 titleSuffix: ''
 ms.custom: SEO-VS-2020
@@ -16,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d2e9c5b6738d328c92393f2f7487b980de3e50cb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1f5275d67379879a09521d6c3331accd9cab07c4
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892925"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102163857"
 ---
 # <a name="idebugcomplussymbolprovidergetattributedclassesforlanguage"></a>IDebugComPlusSymbolProvider::GetAttributedClassesForLanguage
 Recupera as classes com o atributo especificado que são implementados na linguagem de programação especificada.
@@ -54,7 +55,7 @@ no A cadeia de caracteres do atributo.
 `ppEnum`\
 fora Retorna uma enumeração das classes de atributo.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo

@@ -1,4 +1,5 @@
 ---
+description: Descarrega os símbolos de depuração do módulo especificado da memória.
 title: 'IDebugComPlusSymbolProvider:: UnloadSymbols | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0e826f8190650eed26228b9ce54b7128139f981a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 529e25d99152b18e3b12aad612ad3162c2fc9008
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99842479"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102163558"
 ---
 # <a name="idebugcomplussymbolproviderunloadsymbols"></a>IDebugComPlusSymbolProvider::UnloadSymbols
 Descarrega os símbolos de depuração do módulo especificado da memória.
@@ -47,7 +48,7 @@ no Identificador do domínio do aplicativo.
 `guidModule`\
 no Identificador exclusivo do módulo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo
@@ -92,5 +93,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

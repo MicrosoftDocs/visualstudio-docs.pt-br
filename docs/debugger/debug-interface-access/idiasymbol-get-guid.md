@@ -1,4 +1,5 @@
 ---
+description: Recupera o GUID (identificador global exclusivo) do símbolo.
 title: IDiaSymbol::get_guid | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: faba8ccc1cbaacdf6459c8245a230595bf258624
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2eeab640835575a8e58f757325d709974a0eb5f5
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863399"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162147"
 ---
 # <a name="idiasymbolget_guid"></a>IDiaSymbol::get_guid
 Recupera o GUID (identificador global exclusivo) do símbolo.
@@ -35,7 +36,7 @@ HRESULT get_guid (
 
 fora Retorna o GUID do símbolo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
@@ -48,5 +49,5 @@ fora Retorna o GUID do símbolo.
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

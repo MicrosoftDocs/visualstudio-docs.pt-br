@@ -1,4 +1,5 @@
 ---
+description: Carregue os símbolos de depuração de um fluxo de dados, dado o objeto ICorDebugModule.
 title: IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
 titleSuffix: ''
 ms.custom: SEO-VS-2020
@@ -16,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: af48a3b42bf559595714c9af8116c112579a4012
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 29ae5004869a6146e3a8bb22f2569d1cc4cd758f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954898"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102163350"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolsfromstreamwithcormodule"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
 Carregue os símbolos de depuração de um fluxo de dados, dado o objeto **ICorDebugModule** .
@@ -69,7 +70,7 @@ no Objeto que implementa a [interface ICorDebugModule](/dotnet/framework/unmanag
 `pStream`\
 no Fluxo de dados que contém os símbolos de depuração a serem carregados.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo

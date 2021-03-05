@@ -1,4 +1,5 @@
 ---
+description: Descreve as propriedades de uma instância de símbolo.
 title: IDiaSymbol | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: da51eda00bd2c80152029e503cfb33089e608683
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f0d48d0a3ed09ea98c9bb299b921409b711b695a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853306"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161714"
 ---
 # <a name="idiasymbol"></a>IDiaSymbol
 Descreve as propriedades de uma instância de símbolo.

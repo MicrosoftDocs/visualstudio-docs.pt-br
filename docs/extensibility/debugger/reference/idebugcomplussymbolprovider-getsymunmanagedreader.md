@@ -1,4 +1,5 @@
 ---
+description: Recupera o leitor de símbolos a ser usado pelo código não gerenciado.
 title: 'IDebugComPlusSymbolProvider:: GetSymUnmanagedReader | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4463085b021f2de5f9237817b6d8ffade88612a5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a650d55b6c3b36a5b3b08138f44618e2c3645627
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99936152"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102163792"
 ---
 # <a name="idebugcomplussymbolprovidergetsymunmanagedreader"></a>IDebugComPlusSymbolProvider::GetSymUnmanagedReader
 Recupera o leitor de símbolos a ser usado pelo código não gerenciado.
@@ -52,7 +53,7 @@ no Identificador exclusivo do módulo.
 `ppSymUnmanagedReader`\
 fora Retorna o objeto que representa o leitor de símbolo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo

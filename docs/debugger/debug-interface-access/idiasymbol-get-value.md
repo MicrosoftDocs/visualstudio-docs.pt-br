@@ -1,4 +1,5 @@
 ---
+description: Recupera o valor de uma constante.
 title: IDiaSymbol::get_value | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e04a21f5f0a8273975f0a0437f28808696de2da
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 680ddd3dd90538e3e37991e890b61bc74220c8a3
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853390"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161784"
 ---
 # <a name="idiasymbolget_value"></a>IDiaSymbol::get_value
 Recupera o valor de uma constante.
@@ -35,7 +36,7 @@ HRESULT get_value (
 
 [entrada, saída] Um `VARIANT` objeto que é preenchido com o valor de uma constante.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -69,5 +70,5 @@ void ProcessValue2(IDiaSymbol *pSymbol)
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

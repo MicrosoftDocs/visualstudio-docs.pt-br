@@ -1,4 +1,5 @@
 ---
+description: Recupera uma descrição do computador no qual o servidor principal está sendo executado.
 title: 'IDebugCoreServer2:: GetMachineInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f90e8f97b020f746f6caa4807fe8ed063d613001
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9fd7f42816ce477af4ae259adca49e8aac20137d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904151"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102163207"
 ---
 # <a name="idebugcoreserver2getmachineinfo"></a>IDebugCoreServer2::GetMachineInfo
 Recupera uma descrição do computador no qual o servidor principal está sendo executado.
@@ -49,7 +50,7 @@ no Uma combinação de sinalizadores da enumeração [MACHINE_INFO_FIELDS](../..
 
  [entrada, saída] Uma estrutura de [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) que é preenchida com uma descrição do computador.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

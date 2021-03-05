@@ -1,4 +1,5 @@
 ---
+description: Retorna o comprimento do intervalo de endereços no qual o símbolo local é válido.
 title: IDiaSymbol::get_liveRangeLength | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b243159cccc53361e833107fdf4d6381833ac6da
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 44c4871915ca32dfde0b04d30ada8ce2721cb7de
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863014"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161952"
 ---
 # <a name="idiasymbolget_liverangelength"></a>IDiaSymbol::get_liveRangeLength
 Retorna o comprimento do intervalo de endereços no qual o símbolo local é válido.
@@ -35,7 +36,7 @@ HRESULT get_liveRangeLength (
 
 fora Retorna o comprimento do intervalo de endereços.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 > [!NOTE]
@@ -50,5 +51,5 @@ fora Retorna o comprimento do intervalo de endereços.
 
  DLL: msdia100.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

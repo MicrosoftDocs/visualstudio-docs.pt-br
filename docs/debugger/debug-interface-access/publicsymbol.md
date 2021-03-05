@@ -1,4 +1,5 @@
 ---
+description: Quando o arquivo. exe é criado, cada símbolo público (no mínimo, cada função global e símbolo de dados) recebe uma marca SymTagPublicSymbol.
 title: PublicSymbol | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c13674eb7aba147946f2dc8a75bcabbdb4b7147
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 02a706a1dc20dd61c43fce62905b2d3ac48f87fd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862293"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161644"
 ---
 # <a name="publicsymbol"></a>PublicSymbol
 Quando o arquivo. exe é criado, cada símbolo público (no mínimo, cada função global e símbolo de dados) recebe uma `SymTagPublicSymbol` marca.
@@ -46,7 +47,7 @@ Quando o arquivo. exe é criado, cada símbolo público (no mínimo, cada funç�
 |[IDiaSymbol::get_undecoratedName](../../debugger/debug-interface-access/idiasymbol-get-undecoratedname.md)|`BSTR`|O nome do símbolo não decorado.|
 |[IDiaSymbol::get_undecoratedNameEx](../../debugger/debug-interface-access/idiasymbol-get-undecoratednameex.md)|`BSTR`|Parte ou todo o nome de símbolo não decorado.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Hierarquia lexical de tipos de símbolo](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)
 - [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md)
 - [Locais de símbolos](../../debugger/debug-interface-access/symbol-locations.md)

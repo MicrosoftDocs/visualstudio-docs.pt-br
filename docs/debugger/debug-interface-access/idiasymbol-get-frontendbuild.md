@@ -1,4 +1,5 @@
 ---
+description: Recupera o número de Build de front-end.
 title: IDiaSymbol::get_frontEndBuild | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fc3c967f296e87ef46fe9121eaca055fd879025
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d9f12777b41cca5e4bf654318b72bc98e52ccede
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863413"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162155"
 ---
 # <a name="idiasymbolget_frontendbuild"></a>IDiaSymbol::get_frontEndBuild
 Recupera o número de Build de front-end.
@@ -35,7 +36,7 @@ HRESULT get_frontEndBuild (
 
 fora Retorna o número da compilação de front-end. Consulte Observações.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -53,5 +54,5 @@ fora Retorna o número da compilação de front-end. Consulte Observações.
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

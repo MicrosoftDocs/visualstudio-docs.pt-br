@@ -1,4 +1,5 @@
 ---
+description: Carrega os símbolos de depuração especificados na memória.
 title: 'IDebugComPlusSymbolProvider:: LoadSymbols | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4d74480e68dda5f9cd4316b4eb6de2e140542071
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d09cbe3afd5bc32f3143e5fb15387b7c5c7cb702
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99911998"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102163623"
 ---
 # <a name="idebugcomplussymbolproviderloadsymbols"></a>IDebugComPlusSymbolProvider::LoadSymbols
 Carrega os símbolos de depuração especificados na memória.
@@ -67,7 +68,7 @@ no Nome do módulo.
 `bstrSymSearchPath`\
 no Caminho para procurar o arquivo de símbolo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo

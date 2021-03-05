@@ -1,4 +1,5 @@
 ---
+description: Recupera o número de bits ou bytes de memória usados pelo objeto representado por esse símbolo.
 title: IDiaSymbol::get_length | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b9ad12358e92be12dca0dd9c49f4a2941f5c1da3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9a7b3a7a88c688f8ff68f2c1280390f10110c3a9
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863042"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162008"
 ---
 # <a name="idiasymbolget_length"></a>IDiaSymbol::get_length
 Recupera o número de bits ou bytes de memória usados pelo objeto representado por esse símbolo.
@@ -35,7 +36,7 @@ HRESULT get_length (
 
 fora Retorna o número de bytes ou bits de memória usados pelo objeto representado por este símbolo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -59,6 +60,6 @@ pSymbol->get_length( &length );
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md)

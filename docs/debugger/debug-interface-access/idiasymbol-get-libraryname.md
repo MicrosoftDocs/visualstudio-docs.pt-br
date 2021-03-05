@@ -1,4 +1,5 @@
 ---
+description: Recupera o nome do arquivo da biblioteca ou do arquivo de objeto do qual o objeto foi carregado.
 title: IDiaSymbol::get_libraryName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ab6dc26ef8e449b27daf8c99982cf5fbb2a0d5fc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e717e1794531114d7b68966ef19bdbb2158bfe60
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853943"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161987"
 ---
 # <a name="idiasymbolget_libraryname"></a>IDiaSymbol::get_libraryName
 Recupera o nome do arquivo da biblioteca ou do arquivo de objeto do qual o objeto foi carregado.
@@ -35,11 +36,11 @@ HRESULT get_libraryName (
 
 fora Retorna o nome do arquivo da biblioteca ou do arquivo de objeto do qual o objeto foi carregado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

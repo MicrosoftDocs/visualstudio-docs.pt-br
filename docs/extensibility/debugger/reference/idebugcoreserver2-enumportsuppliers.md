@@ -1,4 +1,5 @@
 ---
+description: Recupera uma lista de todos os fornecedores de porta disponíveis.
 title: 'IDebugCoreServer2:: EnumPortSuppliers | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: df295625a7e21dbfe13150e05e4b0ecbfa08f694
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 079854ca6395ef1a85caffe81ff9ee971f843ee4
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904183"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102163233"
 ---
 # <a name="idebugcoreserver2enumportsuppliers"></a>IDebugCoreServer2::EnumPortSuppliers
 Recupera uma lista de todos os fornecedores de porta disponíveis.
@@ -43,7 +44,7 @@ int EnumPortSuppliers(
 `ppEnum`\
 fora Retorna um objeto [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md) que contém uma lista de todos os fornecedores de porta.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

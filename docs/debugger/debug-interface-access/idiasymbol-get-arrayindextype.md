@@ -1,4 +1,5 @@
 ---
+description: Recupera a interface de símbolo do tipo de índice de matriz do símbolo.
 title: IDiaSymbol::get_arrayIndexType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 225723fbc5eb40025a6dad1b52a5ab6c790f3fea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0b7a98d5b18b39e405068e0c7283f69f25a41f7e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854552"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162309"
 ---
 # <a name="idiasymbolget_arrayindextype"></a>IDiaSymbol::get_arrayIndexType
 Recupera a interface de símbolo do tipo de índice de matriz do símbolo.
@@ -35,7 +36,7 @@ HRESULT get_arrayIndexType (
 
 fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que representa o tipo de índice de matriz do símbolo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
@@ -51,5 +52,5 @@ fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasy
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

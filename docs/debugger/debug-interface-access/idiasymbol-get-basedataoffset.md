@@ -1,4 +1,5 @@
 ---
+description: Recupera o deslocamento de dados base.
 title: IDiaSymbol::get_baseDataOffset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c97b83bea8dad9f069041710f9ef76e62a071ea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f1394f5d5d19431ed6d1db6860edd171e164ad35
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863553"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162276"
 ---
 # <a name="idiasymbolget_basedataoffset"></a>IDiaSymbol::get_baseDataOffset
 Recupera o deslocamento de dados base.
@@ -32,8 +33,8 @@ HRESULT get_baseDataOffset(
 
 fora Um ponteiro para um `DWORD` que contém o deslocamento de dados base.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

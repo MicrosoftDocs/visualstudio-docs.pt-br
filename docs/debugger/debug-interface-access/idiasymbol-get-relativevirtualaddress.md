@@ -1,4 +1,5 @@
 ---
+description: Recupera o endereço virtual relativo (RVA) do local.
 title: IDiaSymbol::get_relativeVirtualAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 693bf46ceb3194f699d9a5a4dbb0a8828e723fe5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 261c24dc73b7fca7c26aac61185e5f197d089453
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853663"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161868"
 ---
 # <a name="idiasymbolget_relativevirtualaddress"></a>IDiaSymbol::get_relativeVirtualAddress
 Recupera o endereço virtual relativo (RVA) do local. Use quando a [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) for definida como `LocIsStatic` .
@@ -35,7 +36,7 @@ HRESULT get_relativeVirtualAddress (
 
 fora Retorna o endereço virtual relativo do local.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -49,6 +50,6 @@ DWORD       rva;
 pSymbol->get_relativeVirtualAddress( &rva );
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md)

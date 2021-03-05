@@ -1,4 +1,5 @@
 ---
+description: Recupera o valor de assinatura do símbolo.
 title: IDiaSymbol::get_signature | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a846c445ff15c626335accd077af8ffb8d16051e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eee113e7998d983b601b93a90ad3ed6a9a97fa5d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853628"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161812"
 ---
 # <a name="idiasymbolget_signature"></a>IDiaSymbol::get_signature
 Recupera o valor de assinatura do símbolo.
@@ -35,11 +36,11 @@ HRESULT get_signature (
 
 fora Retorna o valor de assinatura do símbolo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

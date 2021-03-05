@@ -1,4 +1,5 @@
 ---
+description: Essa interface é usada para representar e obter informações de um servidor em um computador na rede.
 title: IDebugCoreServer2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ba05cb5a933c5b3caaf080c9098c83451a20e484
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 871f7ea5671fa4f3c615d84e0591bd331f945ccc
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909997"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102163129"
 ---
 # <a name="idebugcoreserver2"></a>IDebugCoreServer2
 Essa interface é usada para representar e obter informações de um servidor em um computador na rede.

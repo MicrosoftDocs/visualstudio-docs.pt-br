@@ -1,4 +1,5 @@
 ---
+description: Esse método obtém uma interface para o servidor no qual essa porta está.
 title: 'IDebugDefaultPort2:: GetServer | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e046dbad9329ae377cef6864b7bc71b2ea6a538b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9d5bfd242cd3f441bf094f94e41a78e240f1ec46
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894940"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162973"
 ---
 # <a name="idebugdefaultport2getserver"></a>IDebugDefaultPort2::GetServer
 Esse método obtém uma interface para o servidor no qual essa porta está.
@@ -43,7 +44,7 @@ int GetServer(
 `ppServer`\
 fora Retorna um objeto que implementa a interface [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md) .
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

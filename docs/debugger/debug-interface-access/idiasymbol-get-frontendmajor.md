@@ -1,4 +1,5 @@
 ---
+description: Recupera o número de versão principal de front-end.
 title: IDiaSymbol::get_frontEndMajor | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bec64aa467ffeb4780626f2296d9fddbea4d3f1f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bf5bc125b00fa8194475c9f6101e697dbf66062a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854335"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162162"
 ---
 # <a name="idiasymbolget_frontendmajor"></a>IDiaSymbol::get_frontEndMajor
 Recupera o número de versão principal de front-end.
@@ -35,7 +36,7 @@ HRESULT get_frontEndMajor (
 
 fora Retorna o número de versão principal de front-end. Consulte Observações.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -53,5 +54,5 @@ fora Retorna o número de versão principal de front-end. Consulte Observações
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

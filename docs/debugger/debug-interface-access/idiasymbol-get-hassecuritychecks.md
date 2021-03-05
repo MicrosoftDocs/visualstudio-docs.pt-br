@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se a compiland ou a função foi compilada com verificações de segurança de saturação de buffer (por exemplo, a opção de compilador/GS (verificação de segurança de buffer)).
 title: IDiaSymbol::get_hasSecurityChecks | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 03e4415b57e687aefc5e165ffef85302c3610644
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 56f337a84081aa8c0282efcf07b70f30d98da15e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854223"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162064"
 ---
 # <a name="idiasymbolget_hassecuritychecks"></a>IDiaSymbol::get_hasSecurityChecks
 Recupera um sinalizador que especifica se a compiland ou a função foi compilada com verificações de segurança de saturação de buffer (por exemplo, a opção de compilador [/GS (verificação de segurança de buffer)](/cpp/build/reference/gs-buffer-security-check) ).
@@ -35,7 +36,7 @@ HRESULT get_hasSecurityChecks(
 
 fora Retorna `TRUE` se a função tem verificações de segurança; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -48,6 +49,6 @@ fora Retorna `TRUE` se a função tem verificações de segurança; caso contrá
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [/GS (verificação de segurança do buffer)](/cpp/build/reference/gs-buffer-security-check)

@@ -1,4 +1,5 @@
 ---
+description: Recupera o designador de registro do local quando a enumeração LocationType é definida como LocIsEnregistered '.
 title: IDiaSymbol::get_registerId | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d7c63c9464b0d8c716b4946dab5c5b86d198a14c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3f6845c83b46fb524221933eb859742ebe7a95e6
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853670"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161896"
 ---
 # <a name="idiasymbolget_registerid"></a>IDiaSymbol::get_registerId
 Recupera o designador de registro do local quando a [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) é definida como `LocIsEnregistered` .
@@ -35,7 +36,7 @@ HRESULT get_registerId (
 
 fora Retorna o designador de registro do local.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -44,6 +45,6 @@ fora Retorna o designador de registro do local.
 ## <a name="remarks"></a>Comentários
  Se o símbolo for relativo a um registro, ou seja, se a [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) do símbolo for definida como `LocIsRegRel` , use o `get_registerId` método seguido por uma chamada para o método [IDiaSymbol:: get_Offset](../../debugger/debug-interface-access/idiasymbol-get-offset.md) para obter o deslocamento do registro onde o símbolo está localizado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md)
