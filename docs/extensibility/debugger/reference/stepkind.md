@@ -1,4 +1,5 @@
 ---
+description: Especifica o tipo de etapa para depuração.
 title: STEPKIND | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e4c87a2c221149f8478a083d1efea6e9edfb542d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a9cb230eac9e8851437614a590615ad2402923f6
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965467"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102225286"
 ---
 # <a name="stepkind"></a>STEPKIND
 Especifica o tipo de etapa para depuração.

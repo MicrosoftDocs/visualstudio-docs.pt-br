@@ -1,4 +1,5 @@
 ---
+description: Especifica as propriedades associadas a um provedor de programa.
 title: PROVIDER_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 25aa56244fa9cb981732718deb40b2ea7af90e89
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: daf2ca4aa53c2800685f8fdbde26c402f217b811
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922940"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102225299"
 ---
 # <a name="provider_fields"></a>PROVIDER_FIELDS
 Especifica as propriedades associadas a um provedor de programa.

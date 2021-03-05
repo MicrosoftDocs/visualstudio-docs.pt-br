@@ -1,4 +1,5 @@
 ---
+description: Essa interface implementa os principais métodos que fornecem funcionalidade às interfaces IDebugProperty3 e IPropertyProxyEESide.
 title: IEEVisualizerService | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b10a09aeab6012981fd464694c641aaf6bba4951
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5054041ab09898943d300393d36205581231b06d
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99842232"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102227210"
 ---
 # <a name="ieevisualizerservice"></a>IEEVisualizerService
 > [!IMPORTANT]

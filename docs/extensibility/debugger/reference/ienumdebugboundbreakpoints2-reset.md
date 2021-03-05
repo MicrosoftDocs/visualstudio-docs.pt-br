@@ -1,4 +1,5 @@
 ---
+description: Redefine a enumeração de pontos de interrupção associados para o primeiro elemento.
 title: 'IEnumDebugBoundBreakpoints2:: Reset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4f1a8649dd49d8252fc509cf117e2f28923b906c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 980288cdacf492ca135066396498838d25b1e697
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875595"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102227054"
 ---
 # <a name="ienumdebugboundbreakpoints2reset"></a>IEnumDebugBoundBreakpoints2::Reset
 Redefine a enumeração para o primeiro elemento.

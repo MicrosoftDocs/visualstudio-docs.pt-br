@@ -1,4 +1,5 @@
 ---
+description: Redefine a enumeração de caminhos de código para o primeiro elemento.
 title: 'IEnumCodePaths2:: Reset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d94343bd008139b0d1932e3ae0c94e0c9b6eb926
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 35e77450ca610f94d266617f1a972290d667e3f4
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912873"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102227158"
 ---
 # <a name="ienumcodepaths2reset"></a>IEnumCodePaths2::Reset
 Redefine a enumeração para o primeiro elemento.

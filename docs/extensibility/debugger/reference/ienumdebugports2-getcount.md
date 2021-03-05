@@ -1,4 +1,5 @@
 ---
+description: Retorna o número de elementos na enumeração de portas.
 title: 'IEnumDebugPorts2:: GetCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 47a72debd686fe0586c4eb65adae1198cf16b6e0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 22550fa1ba700a77564f6da666d6300335427e1a
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957043"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102226313"
 ---
 # <a name="ienumdebugports2getcount"></a>IEnumDebugPorts2::GetCount
 Retorna o número de elementos na enumeração.
@@ -43,7 +44,7 @@ int GetCount(
 `pcelt`\
 fora Retorna o número de elementos na enumeração.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

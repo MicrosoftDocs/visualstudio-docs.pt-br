@@ -1,4 +1,5 @@
 ---
+description: Retorna uma cópia da enumeração de fornecedores da porta atual como um objeto separado.
 title: 'IEnumDebugPortSuppliers2:: clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fca68c1fd6f0c3d59759499c6aa5e4f5a7fe8e22
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f7c5a96f30150c40bb0042afcb2574d49843a2bb
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967781"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102226261"
 ---
 # <a name="ienumdebugportsuppliers2clone"></a>IEnumDebugPortSuppliers2::Clone
 Retorna uma cópia da enumeração atual como um objeto separado.
@@ -43,11 +44,11 @@ int Clone(
 `ppEnum`\
 fora Retorna uma cópia dessa enumeração como um objeto separado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
  A cópia da enumeração tem o mesmo estado que o original no momento em que esse método é chamado. No entanto, os Estados da cópia e do original são separados e podem ser alterados individualmente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md)
