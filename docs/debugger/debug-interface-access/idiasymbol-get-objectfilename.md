@@ -1,4 +1,5 @@
 ---
+description: Recupera o nome do arquivo de objeto.
 title: IDiaSymbol::get_objectFileName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 351efbd1f8beaf40ef0b50a450b1fe03cd8832e4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 643a1fe69f2dedc693df9be027c5e1cd51d36243
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853796"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160725"
 ---
 # <a name="idiasymbolget_objectfilename"></a>IDiaSymbol::get_objectFileName
 Recupera o nome do arquivo de objeto.
@@ -32,8 +33,8 @@ HRESULT get_objectFilename(
 
 fora Um ponteiro para um `BSTR` que contém o nome do arquivo de objeto.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

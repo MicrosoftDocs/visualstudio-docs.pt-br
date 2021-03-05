@@ -1,4 +1,5 @@
 ---
+description: Recupera a classificação de variável de um símbolo de dados.
 title: IDiaSymbol::get_dataKind | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6448b30f94924d24358409715af0dec673e31d87
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 833ff0fb6602d7f33aabbb9aa1a442bda07a379b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863434"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161005"
 ---
 # <a name="idiasymbolget_datakind"></a>IDiaSymbol::get_dataKind
 Recupera a classificação de variável de um símbolo de dados.
@@ -35,7 +36,7 @@ HRESULT get_dataKind (
 
 fora Retorna um valor da enumeração de [Enumeração datakind](../../debugger/debug-interface-access/datakind.md) especificando o tipo de dados como global, estático ou constante, por exemplo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -48,6 +49,6 @@ fora Retorna um valor da enumeração de [Enumeração datakind](../../debugger/
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração DataKind](../../debugger/debug-interface-access/datakind.md)

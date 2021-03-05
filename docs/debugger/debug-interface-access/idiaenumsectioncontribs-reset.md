@@ -1,4 +1,5 @@
 ---
+description: Redefine uma sequência de enumeração de contribuições de seção para o início.
 title: IDiaEnumSectionContribs::Reset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e2bced8f580c30444aec767f7e7c0b2cd760d74
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b462ffbdb0d85e7ad1680076d5fdd70734cc97f3
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856463"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159310"
 ---
 # <a name="idiaenumsectioncontribsreset"></a>IDiaEnumSectionContribs::Reset
 Redefine uma sequência de enumeração para o início.
@@ -31,5 +32,5 @@ HRESULT Reset();
 ## <a name="return-value"></a>Valor retornado
  Retorna `S_OK`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)

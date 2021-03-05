@@ -1,4 +1,5 @@
 ---
+description: Recupera o número de itens em uma lista ou matriz.
 title: IDiaSymbol::get_count | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ade59bbe5c89a9fa88c49dc0ef3d648c45030f6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bd7e31841d61b87b8a2f2c360ef7621aedacecfb
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854384"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161054"
 ---
 # <a name="idiasymbolget_count"></a>IDiaSymbol::get_count
 Recupera o número de itens em uma lista ou matriz.
@@ -35,7 +36,7 @@ HRESULT get_count (
 
 fora Retorna o número de itens em uma lista ou matriz.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -48,5 +49,5 @@ fora Retorna o número de itens em uma lista ou matriz.
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

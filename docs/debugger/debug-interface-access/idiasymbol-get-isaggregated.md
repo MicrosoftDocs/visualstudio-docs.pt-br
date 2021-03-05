@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se o símbolo de dados é parte de uma agregação ou coleção de símbolos; o compilador tratará símbolos agregados como entidades separadas, mas, na verdade, eles fazem parte de um único símbolo maior.
 title: IDiaSymbol::get_isAggregated | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fc7eb836bab2219e764a7d6a40fc6b8421c916f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e78ec7f180ad1c719d562975377a413156bb1480
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863245"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160858"
 ---
 # <a name="idiasymbolget_isaggregated"></a>IDiaSymbol::get_isAggregated
 Recupera um sinalizador que especifica se o símbolo de dados é parte de uma agregação ou coleção de símbolos; o compilador tratará símbolos agregados como entidades separadas, mas, na verdade, eles fazem parte de um único símbolo maior.
@@ -35,7 +36,7 @@ HRESULT get_isAggregated(
 
 fora Retorna `TRUE` se os dados fazem parte de uma agregação de símbolos de divisão de um símbolo pai; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -51,6 +52,6 @@ fora Retorna `TRUE` se os dados fazem parte de uma agregação de símbolos de d
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaSymbol::get_isSplitted](../../debugger/debug-interface-access/idiasymbol-get-issplitted.md)

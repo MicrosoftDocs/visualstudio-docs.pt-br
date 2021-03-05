@@ -1,4 +1,5 @@
 ---
+description: Recupera um número especificado de registros na sequência enumerada.
 title: IDiaEnumDebugStreamData::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9eb951dd2362b93c61e835da78e5e02d6dc67069
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e854a4bbcd7c1429ef14a90f705f80afc92e75bc
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857037"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159449"
 ---
 # <a name="idiaenumdebugstreamdatanext"></a>IDiaEnumDebugStreamData::Next
 Recupera um número especificado de registros na sequência enumerada.
@@ -55,9 +56,9 @@ fora Um buffer que deve ser preenchido com os dados de registro do fluxo de depu
 
 [entrada, saída] Retorna o número de registros em `data` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver mais registros. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)
 - [IDiaEnumDebugStreams::Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md)

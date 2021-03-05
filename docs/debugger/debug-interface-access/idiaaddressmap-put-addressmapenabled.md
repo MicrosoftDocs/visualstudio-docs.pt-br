@@ -1,4 +1,5 @@
 ---
+description: Especifica se o mapa de endereço deve ser usado para converter endereços de símbolo.
 title: IDiaAddressMap::put_addressMapEnabled | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e3ebfcc5b76765a8fbfbe2be9ccef2112d351039
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 84878e83db15cfa5a9c68dccfec78536035cb70f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865268"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159510"
 ---
 # <a name="idiaaddressmapput_addressmapenabled"></a>IDiaAddressMap::put_addressMapEnabled
 Especifica se o mapa de endereço deve ser usado para converter endereços de símbolo.
@@ -35,7 +36,7 @@ HRESULT put_addressMapEnabled (
 
 no Defina como `TRUE` para habilitar a tradução de símbolos ou `FALSE` para desabilitar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

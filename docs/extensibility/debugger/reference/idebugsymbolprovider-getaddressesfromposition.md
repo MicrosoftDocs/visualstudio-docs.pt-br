@@ -1,4 +1,5 @@
 ---
+description: Esse método mapeia uma posição de documento em uma matriz de endereços de depuração.
 title: 'IDebugSymbolProvider:: GetAddressesFromPosition | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 15838ff1efe9cba6920b98a8b7f00cb62f2fc3b4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d4437055ccd693b40fe4f1f7d6364d9601c827a3
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956458"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159673"
 ---
 # <a name="idebugsymbolprovidergetaddressesfromposition"></a>IDebugSymbolProvider::GetAddressesFromPosition
 Esse método mapeia uma posição de documento em uma matriz de endereços de depuração.
@@ -58,7 +59,7 @@ fora Retorna um enumerador para os endereços de depuração inicial associados 
 `ppEnumEndAddresses`\
 fora Retorna um enumerador [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) para os endereços de depuração finais associados a esta instrução ou linha.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

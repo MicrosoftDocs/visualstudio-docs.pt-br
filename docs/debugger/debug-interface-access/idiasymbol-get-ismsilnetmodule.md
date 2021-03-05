@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que indica se o módulo é um. netmodule (um módulo do Microsoft Intermediate Language (MSIL) que contém apenas metadados e nenhum símbolo nativo).
 title: IDiaSymbol::get_isMSILNetmodule | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 943f496ff4c08a6f3b2047c977c4ed4588190587
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 27d1294e5cbced8cd2f521a25858a37efe9f5b8c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863154"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160760"
 ---
 # <a name="idiasymbolget_ismsilnetmodule"></a>IDiaSymbol::get_isMSILNetmodule
 Recupera um sinalizador que indica se o módulo é um. netmodule (um módulo do Microsoft Intermediate Language (MSIL) que contém apenas metadados e nenhum símbolo nativo).
@@ -35,7 +36,7 @@ HRESULT get_isMSILNetmodule(
 
 fora Retorna `TRUE` se o módulo é MSIL; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -51,6 +52,6 @@ fora Retorna `TRUE` se o módulo é MSIL; caso contrário, retorna `FALSE` .
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)

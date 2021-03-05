@@ -1,4 +1,5 @@
 ---
+description: Use a guia mensagens para selecionar os tipos de mensagem a serem listados no modo de exibição de mensagens) e para especificar os critérios de pesquisa de mensagens.
 title: Guia mensagens, caixa de diálogo opções de mensagem | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c0a97a5b42e27c6db770e0c74a64e214561cea9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 66c1abcedbf48e8cd80aeafe0c4a5def1ddbb9eb
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891599"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160362"
 ---
 # <a name="messages-tab-message-options-dialog-box"></a>Guia Mensagens, Caixa de diálogo Opções da Mensagem
 Use a guia **mensagens** para selecionar os tipos de mensagem a serem listados no [modo de exibição de mensagens](../debugger/messages-view.md)e para especificar os critérios de pesquisa de mensagens. Para exibir a [caixa de diálogo opções de mensagem](../debugger/message-options-dialog-box.md), escolha **registrar mensagens** no menu do **Spy** .

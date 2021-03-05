@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se a camada de função ou de conversão foi marcada como estática.
 title: 'IDiaSymbol:: get_isStatic | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 338c2e650b59f501bbf184e877ca1e1f08b924c6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 59a29412a95192306454b40335285f580d1120c8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863105"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160711"
 ---
 # <a name="idiasymbolget_isstatic"></a>IDiaSymbol::get_isStatic
 Recupera um sinalizador que especifica se a camada de função ou de conversão foi marcada como estática.
@@ -35,7 +36,7 @@ HRESULT get_isStatic(
 
 fora Retorna `TRUE` se a função ou camada de conversão foi marcada como estática; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -48,5 +49,5 @@ fora Retorna `TRUE` se a função ou camada de conversão foi marcada como está
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,4 +1,5 @@
 ---
+description: Constrói uma instância da classe VsgDbg com ou sem preparar o componente no aplicativo de diagnóstico de gráficos para capturar e gravar ativamente informações de gráficos por padrão, com base no parâmetro booliano especificado.
 title: 'VsgDbg:: VsgDbg (Construtor) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 466c64f3b055eef3629f0f4666529f1be4247f42
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ae4259b1af1bcb51b05431131db596d2a26da895
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861329"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160437"
 ---
 # <a name="vsgdbgvsgdbg-constructor"></a>VsgDbg::VsgDbg (Construtor)
 Constrói uma instância da `VsgDbg` classe com ou sem preparar o componente no aplicativo de diagnóstico de gráficos para capturar e gravar ativamente informações de gráficos por padrão, com base no parâmetro booliano especificado.

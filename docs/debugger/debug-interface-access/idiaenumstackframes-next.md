@@ -1,4 +1,5 @@
 ---
+description: Recupera um número especificado de elementos de quadro de pilha da sequência de enumeração.
 title: IDiaEnumStackFrames::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e96190e76d13f6934333b4d743a1d7d2e5ee2e80
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0cee13aa9e26de77cf22cf7a51011a567cb14c25
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856183"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159156"
 ---
 # <a name="idiaenumstackframesnext"></a>IDiaEnumStackFrames::Next
 Recupera um número especificado de elementos de quadro de pilha da sequência de enumeração.
@@ -45,9 +46,9 @@ fora Uma matriz que deve ser preenchida com os objetos [IDiaStackFrame](../../de
 
 fora Retorna o número de elementos de quadro de pilha no enumerador obtido.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver mais quadros de pilha. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

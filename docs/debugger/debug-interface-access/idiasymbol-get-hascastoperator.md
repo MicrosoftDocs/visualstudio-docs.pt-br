@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se o tipo de dados definido pelo usuário tem qualquer operador de conversão definido.
 title: IDiaSymbol::get_hasCastOperator | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a6329ea001ec2584c34cda76417c143634f4fb3e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f7b89c89bb2555edcfd70ac78dbe6a31a6af7fd8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854272"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160970"
 ---
 # <a name="idiasymbolget_hascastoperator"></a>IDiaSymbol::get_hasCastOperator
 Recupera um sinalizador que especifica se o tipo de dados definido pelo usuário tem qualquer operador de conversão definido.
@@ -35,7 +36,7 @@ HRESULT get_hasCastOperator (
 
 fora Retorna um `TRUE` se o tipo de dados definido pelo usuário tiver qualquer operador de conversão definido; caso contrário, retornará `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -48,5 +49,5 @@ fora Retorna um `TRUE` se o tipo de dados definido pelo usuário tiver qualquer 
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

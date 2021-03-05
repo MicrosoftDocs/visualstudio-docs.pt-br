@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se o tipo de dados definido pelo usuário é constante.
 title: IDiaSymbol::get_constType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 13a2b81f307e2b925037dfa2075446d0a9c837a1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c91896d84c140d6a736c481013e1414f48260518
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863448"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161047"
 ---
 # <a name="idiasymbolget_consttype"></a>IDiaSymbol::get_constType
 Recupera um sinalizador que especifica se o tipo de dados definido pelo usuário é constante.
@@ -35,7 +36,7 @@ HRESULT get_constType (
 
 fora Retorna `TRUE` se o tipo de dados definido pelo usuário for constante; caso contrário, retornará `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
@@ -48,5 +49,5 @@ fora Retorna `TRUE` se o tipo de dados definido pelo usuário for constante; cas
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

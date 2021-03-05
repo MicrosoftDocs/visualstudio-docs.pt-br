@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se a função é uma função virtual de introdução.
 title: IDiaSymbol::get_intro | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5099eb9d8ba1f56419cd1cf0138e29a79e2c28f6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad2e791995f4edc1b09655640bc339d577f7f37d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863259"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160872"
 ---
 # <a name="idiasymbolget_intro"></a>IDiaSymbol::get_intro
 Recupera um sinalizador que especifica se a função é uma função virtual de introdução.
@@ -35,7 +36,7 @@ HRESULT get_intro (
 
 fora Retorna `TRUE` se a função é de introdução virtual; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
@@ -61,5 +62,5 @@ Ambos `A::f1` e `B::f1` são funções virtuais, mas `A::f1` é a introdução v
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

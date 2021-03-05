@@ -1,4 +1,5 @@
 ---
+description: Recupera o tipo de conversão de uma função.
 title: IDiaSymbol::get_thunkOrdinal | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 276cb0ed42f884f2be3b10d82fd8561c6b9aa20c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: de9b0fa692ff44096e962bc952b91c3f2fd314f2
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853502"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160606"
 ---
 # <a name="idiasymbolget_thunkordinal"></a>IDiaSymbol::get_thunkOrdinal
 Recupera o tipo de conversão de uma função.
@@ -35,7 +36,7 @@ HRESULT get_thunkOrdinal (
 
 fora Retorna um valor da enumeração de [enumeração THUNK_ORDINAL](../../debugger/debug-interface-access/thunk-ordinal.md) que especifica o tipo de conversão de uma função.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -46,7 +47,7 @@ fora Retorna um valor da enumeração de [enumeração THUNK_ORDINAL](../../debu
 
  Uma "conversão" é um trecho de código que converte entre um espaço de endereço de memória de 32 bits (também conhecido como espaço de endereço simples) e um espaço de endereço de 16 bits (conhecido como um espaço de endereço segmentado).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração THUNK_ORDINAL](../../debugger/debug-interface-access/thunk-ordinal.md)
 - [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)

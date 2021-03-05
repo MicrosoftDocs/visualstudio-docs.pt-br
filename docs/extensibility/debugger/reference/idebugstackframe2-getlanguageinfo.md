@@ -1,4 +1,5 @@
 ---
+description: Obtém o idioma associado a este quadro de pilhas.
 title: 'IDebugStackFrame2:: GetLanguageInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e7e9b08847ea4d0c513ea458bd1ab40211cb9515
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 38d9cfcab6748aad2166bfddfb48e9a0c0dc90c0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956523"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159816"
 ---
 # <a name="idebugstackframe2getlanguageinfo"></a>IDebugStackFrame2::GetLanguageInfo
 
@@ -62,10 +63,10 @@ fora Retorna o `GUID` do idioma. Para os [!INCLUDE[vsprvs](../../../code-quality
 
 - `guidScriptLang`\
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

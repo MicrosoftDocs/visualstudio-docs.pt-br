@@ -1,4 +1,5 @@
 ---
+description: Recupera o identificador de tipo do símbolo.
 title: IDiaSymbol::get_typeId | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e75e07da9d3c217511a3d742e115ebc146108cab
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 898db7938620fc2f55a5b5f44aefe3e86dfd2f70
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853488"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160585"
 ---
 # <a name="idiasymbolget_typeid"></a>IDiaSymbol::get_typeId
 Recupera o identificador de tipo do símbolo.
@@ -35,7 +36,7 @@ HRESULT get_typeId (
 
 fora Retorna a ID do tipo do símbolo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -44,5 +45,5 @@ fora Retorna a ID do tipo do símbolo.
 ## <a name="remarks"></a>Comentários
  O identificador é um valor exclusivo criado pelo DIA SDK para marcar todos os símbolos como exclusivos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

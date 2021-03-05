@@ -1,4 +1,5 @@
 ---
+description: Recupera os bytes de dados de um símbolo OEM.
 title: IDiaSymbol::get_dataBytes | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a079f8c452951ae17b3bc0be07c06890bb76d5e0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 09156b8d99daa5cbfd065110073c3c185c3ac0a1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854356"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161012"
 ---
 # <a name="idiasymbolget_databytes"></a>IDiaSymbol::get_dataBytes
 Recupera os bytes de dados de um símbolo OEM.
@@ -44,7 +45,7 @@ fora Retorna o número de bytes gravados ou, se o `data` parâmetro for `NULL` ,
  `data[]`
 - [fora,] Um buffer que é preenchido com os bytes de dados.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -57,5 +58,5 @@ fora Retorna o número de bytes gravados ou, se o `data` parâmetro for `NULL` ,
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

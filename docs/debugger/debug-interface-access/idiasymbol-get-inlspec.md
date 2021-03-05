@@ -1,4 +1,5 @@
 ---
+description: Essa função recupera um sinalizador que indica se a função foi marcada como embutida (usando um dos atributos inline, _inline, __forceinline)).
 title: IDiaSymbol::get_InlSpec | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: efde91caaa4e7b79db01975c0691b2acb5f01bee
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f727e83d067fed37698eb750bb39309a9454535a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854188"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160865"
 ---
 # <a name="idiasymbolget_inlspec"></a>IDiaSymbol::get_InlSpec
 Essa função recupera um sinalizador que indica se a função foi marcada como embutida (usando um dos atributos [inline, __inline \_ _forceinline](/cpp/cpp/inline-functions-cpp) ).
@@ -35,7 +36,7 @@ HRESULT get_inlSpec(
 
 fora Retorna `TRUE` se a função foi marcada como embutida; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
@@ -48,6 +49,6 @@ fora Retorna `TRUE` se a função foi marcada como embutida; caso contrário, re
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [inline, __inline, \_ _forceinline](/cpp/cpp/inline-functions-cpp)

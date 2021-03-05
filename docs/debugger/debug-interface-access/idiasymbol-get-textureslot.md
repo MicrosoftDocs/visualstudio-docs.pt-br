@@ -1,4 +1,5 @@
 ---
+description: Recupera o slot de textura.
 title: IDiaSymbol::get_textureSlot | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c62620528a6cad9b2b5033841c2645b4c4248716
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3491b80436a09692ee4db65fd84806f4bb0ccf89
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853516"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160620"
 ---
 # <a name="idiasymbolget_textureslot"></a>IDiaSymbol::get_textureSlot
 Recupera o slot de textura.
@@ -32,8 +33,8 @@ HRESULT get_textureSlot(
 
 fora Um ponteiro para um `DWORD` que contém o slot de textura.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

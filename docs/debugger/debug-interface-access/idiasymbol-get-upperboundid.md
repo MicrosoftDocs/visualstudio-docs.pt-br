@@ -1,4 +1,5 @@
 ---
+description: Recupera o identificador de símbolo do limite superior de uma dimensão de matriz FORTRAN.
 title: IDiaSymbol::get_upperBoundId | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 11f86019cdf037aaf5859346dba21e94a0471500
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6a510a11ce0df3397027af13f908c50b18c649af
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862496"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160578"
 ---
 # <a name="idiasymbolget_upperboundid"></a>IDiaSymbol::get_upperBoundId
 Recupera o identificador de símbolo do limite superior de uma dimensão de matriz FORTRAN.
@@ -34,7 +35,7 @@ HRESULT get_upperBoundId (
  `pRetVal`
 - [fora,] Retorna a ID do símbolo que representa o limite superior de uma dimensão de matriz FORTRAN.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -43,5 +44,5 @@ HRESULT get_upperBoundId (
 ## <a name="remarks"></a>Comentários
  O identificador é um valor exclusivo criado pelo DIA SDK para marcar todos os símbolos como exclusivos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

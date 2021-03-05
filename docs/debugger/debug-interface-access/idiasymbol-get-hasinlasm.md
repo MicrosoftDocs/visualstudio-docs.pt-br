@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se a função contém assembly embutido.
 title: IDiaSymbol::get_hasInlAsm | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 26a617f01c56e417ed9d0a05c4fea72bc1e0b88b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d422310a255e6442ee0d878f541882cdee254244
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854237"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160949"
 ---
 # <a name="idiasymbolget_hasinlasm"></a>IDiaSymbol::get_hasInlAsm
 Recupera um sinalizador que especifica se a função contém assembly embutido.
@@ -35,7 +36,7 @@ HRESULT get_hasInlAsm(
 
 fora Retorna `TRUE` se a função tem qualquer assembly embutido; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -48,5 +49,5 @@ fora Retorna `TRUE` se a função tem qualquer assembly embutido; caso contrári
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

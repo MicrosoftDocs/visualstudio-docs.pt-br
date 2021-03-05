@@ -1,4 +1,5 @@
 ---
+description: Obtém o idioma associado a este contexto de documento.
 title: 'IDebugDocumentContext2:: GetLanguageInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4ce260e172e8f09ffac38fa8c267c286af15c32f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cd7bc00a0be242f66ff47ac5318753d81237c63a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947067"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160206"
 ---
 # <a name="idebugdocumentcontext2getlanguageinfo"></a>IDebugDocumentContext2::GetLanguageInfo
 Obtém o idioma associado a este contexto de documento.
@@ -48,7 +49,7 @@ fora Retorna o nome do idioma que implementa o código neste contexto de documen
 `pguidLanguage`\
 fora Retorna o GUID do idioma que implementa o código neste contexto de documento. Por exemplo, `guidVBScriptLang` ou `guidCPPLang`. Esse GUID não está limitado aos idiomas fornecidos pelo [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo

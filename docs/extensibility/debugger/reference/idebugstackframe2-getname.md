@@ -1,4 +1,5 @@
 ---
+description: Obtém o nome do quadro de pilhas.
 title: 'IDebugStackFrame2:: GetName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 05b226afa482e195600ac073b1f77e49790ec9cd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e94cc5a7df302ebf641bfcb9db9af1ca228c30c6
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837483"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159746"
 ---
 # <a name="idebugstackframe2getname"></a>IDebugStackFrame2::GetName
 Obtém o nome do quadro de pilhas.
@@ -43,11 +44,11 @@ int GetName (
 `pbstrName`\
 fora Retorna o nome do quadro de pilhas.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
  O nome de um quadro de pilha normalmente é o nome do método que está sendo executado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

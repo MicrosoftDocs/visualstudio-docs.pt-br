@@ -1,4 +1,5 @@
 ---
+description: Define cabeçalhos de imagem para habilitar a conversão de endereço virtual relativa.
 title: IDiaAddressMap::set_imageHeaders | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 63bf56b7749033ecc99c7ba1ef0c9357c95542d9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f5ae155c6491acf90c327b2503e6993a08c5f536
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865275"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159490"
 ---
 # <a name="idiaaddressmapset_imageheaders"></a>IDiaAddressMap::set_imageHeaders
 Define cabeçalhos de imagem para habilitar a conversão de endereço virtual relativa.
@@ -45,7 +46,7 @@ no Uma matriz de  `IMAGE_SECTION_HEADER` estruturas a ser usada como cabeçalhos
 
 no Defina como `FALSE` se os cabeçalhos de imagem forem da nova imagem, `TRUE` se eles refletirem a imagem original antes de uma atualização. Normalmente, isso seria definido como `TRUE` somente em combinação com chamadas para o método [IDiaAddressMap:: set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) .
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

@@ -1,4 +1,5 @@
 ---
+description: Retorna um indicador de uma Convenção de chamada de métodos.
 title: IDiaSymbol::get_callingConvention | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: eee47ae1b1254e553c4b2bb1e075079c3f51a1ba
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5f075ad1758b96319293d72b34fe369d2f0ea55d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854475"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161089"
 ---
 # <a name="idiasymbolget_callingconvention"></a>IDiaSymbol::get_callingConvention
 Retorna um indicador de uma Convenção de chamada de métodos.
@@ -35,7 +36,7 @@ HRESULT get_callingConvention (
 
 fora Retorna um valor da enumeração de [enumeração CV_call_e](../../debugger/debug-interface-access/cv-call-e.md) que especifica a Convenção de chamada de um método.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -48,6 +49,6 @@ fora Retorna um valor da enumeração de [enumeração CV_call_e](../../debugger
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração CV_call_e](../../debugger/debug-interface-access/cv-call-e.md)

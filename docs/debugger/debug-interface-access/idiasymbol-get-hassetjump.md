@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se a função contém um uso do comando setjmp) (emparelhado com o comando longjmp (/CPP/c-Runtime-Library/Reference/longjmp); eles formam o método C-Style de manipulação de exceção).
 title: IDiaSymbol::get_hasSetJump | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a2584351919e717c893afcf35b4812df63042240
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8b0721969fb9419c8467fdd6019ff4de5aaf761c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854209"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160920"
 ---
 # <a name="idiasymbolget_hassetjump"></a>IDiaSymbol::get_hasSetJump
 Recupera um sinalizador que especifica se a função contém um uso do comando [setjmp](/cpp/c-runtime-library/reference/setjmp) (emparelhado com o comando [longjmp](/cpp/c-runtime-library/reference/longjmp) , eles formam o método C-Style de manipulação de exceção).
@@ -35,7 +36,7 @@ HRESULT get_hasSetJump(
 
 fora Retorna `TRUE` se a função contém um `setjmp` comando; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
@@ -48,7 +49,7 @@ fora Retorna `TRUE` se a função contém um `setjmp` comando; caso contrário, 
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaSymbol::get_hasLongJump](../../debugger/debug-interface-access/idiasymbol-get-haslongjump.md)
 - [longjmp](/cpp/c-runtime-library/reference/longjmp)

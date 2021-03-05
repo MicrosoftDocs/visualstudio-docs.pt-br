@@ -1,4 +1,5 @@
 ---
+description: Recupera um número especificado de segmentos na sequência de enumeração.
 title: IDiaEnumSegments::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a4533b34b35f5050e3bb13a9dee9c74fa69c61d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 95d4ac6d566033472d7769e4a1a5df86cdf7ff70
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856345"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159226"
 ---
 # <a name="idiaenumsegmentsnext"></a>IDiaEnumSegments::Next
 Recupera um número especificado de segmentos na sequência de enumeração.
@@ -45,9 +46,9 @@ fora Uma matriz que deve ser preenchida com os objetos [IDiaSegment](../../debug
 
 fora Retorna o número de segmentos no enumerador obtido.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se não houver mais segmentos. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

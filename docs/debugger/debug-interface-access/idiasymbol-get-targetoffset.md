@@ -1,4 +1,5 @@
 ---
+description: Recupera a seção de deslocamento de um destino de conversão.
 title: IDiaSymbol::get_targetOffset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f16521314971617f07c4adabafa14187c3c7b7c1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 352e9e00e033ac52b238fc8c207beff298e8b300
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853537"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160669"
 ---
 # <a name="idiasymbolget_targetoffset"></a>IDiaSymbol::get_targetOffset
 Recupera a seção de deslocamento de um destino de conversão.
@@ -35,11 +36,11 @@ HRESULT get_targetOffset (
 
 fora Retorna a parte de deslocamento de um endereço de destino de conversão.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

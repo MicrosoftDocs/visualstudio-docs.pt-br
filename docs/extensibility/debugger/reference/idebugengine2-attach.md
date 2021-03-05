@@ -1,4 +1,5 @@
 ---
+description: Anexa um mecanismo DE depuração (DE) a um programa ou programas.
 title: 'IDebugEngine2:: Attach | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9c045c68af91896323e4cb6422108de77ae76352
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a780ab04e693fd2868579efbf015aef25e0cca32
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948303"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160142"
 ---
 # <a name="idebugengine2attach"></a>IDebugEngine2::Attach
 Anexa um mecanismo DE depuração (DE) a um programa ou programas. Chamado pelo SDM (Gerenciador de depuração de sessão) quando o DE está em execução em processo para o SDM.
@@ -63,7 +64,7 @@ no O objeto [IDebugEventCallback2](../../../extensibility/debugger/reference/ide
 `dwReason`\
 no Um valor da enumeração [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) que especifica o motivo para anexar esses programas. Para obter mais informações, consulte a seção Comentários.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

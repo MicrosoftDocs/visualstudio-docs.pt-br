@@ -1,4 +1,5 @@
 ---
+description: Cria um ponto de interrupção pendente no mecanismo de depuração (DE).
 title: 'IDebugEngine2:: CreatePendingBreakpoint | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 93534a40d523c7b67a769ebea319463cf59e4b7a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c364778fa857049139c058f144651edc28bb4692
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879014"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160155"
 ---
 # <a name="idebugengine2creatependingbreakpoint"></a>IDebugEngine2::CreatePendingBreakpoint
 Cria um ponto de interrupção pendente no mecanismo de depuração (DE).
@@ -48,7 +49,7 @@ no Um objeto [IDebugBreakpointRequest2](../../../extensibility/debugger/referenc
 `ppPendingBP`\
 fora Retorna um objeto [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) que representa o ponto de interrupção pendente.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. Normalmente retorna `E_FAIL` se o `pBPRequest` parâmetro não corresponde a nenhum idioma suportado pelo de se o `pBPRequest` parâmetro for inválido ou incompleto.
 
 ## <a name="remarks"></a>Comentários
