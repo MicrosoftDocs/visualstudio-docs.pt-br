@@ -1,4 +1,5 @@
 ---
+description: Obtém o objeto apontado para.
 title: IDebugPointerObject::D eReference | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9b3646df80dc93d3248c698efb172bb12a09925e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e4aa96f726ec18e84aceba159fe9be6128456ce0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869629"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102169685"
 ---
 # <a name="idebugpointerobjectdereference"></a>IDebugPointerObject::Dereference
 Obtém o objeto apontado para.
@@ -48,11 +49,11 @@ no Um deslocamento de byte simples do início do objeto apontado para.
 `ppObject`\
 fora Retorna um objeto [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) que representa o objeto apontado para, além de offset, se houver.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará S_OK; caso contrário, retorna um código de erro. Retorna E_FAIL se esse objeto não apontar para outro objeto.
 
 ## <a name="remarks"></a>Comentários
  O objeto apontado pode ser um tipo primitivo ou mais complexo, como uma classe ou estrutura.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)

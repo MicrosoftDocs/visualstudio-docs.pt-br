@@ -1,4 +1,5 @@
 ---
+description: Especifica a existência de um ponto de interrupção associado e também especifica se ele está habilitado.
 title: BP_STATE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d2aad05751a1e8abe89caaf2c2f6627e01e4f825
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2ae225a7eeb782257a716c48c1882d78ad150e7e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931468"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102168329"
 ---
 # <a name="bp_state"></a>BP_STATE
 Especifica a existência de um ponto de interrupção associado e também especifica se ele está habilitado.

@@ -1,4 +1,5 @@
 ---
+description: Obtém uma descrição do quadro de pilhas.
 title: 'IDebugStackFrame2:: GetInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 161796827507cf40f7ac7124ae3376d4252fb3d6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3af7aafe43c0d7916a3fc11b855d5512f50a1d5f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837522"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102168615"
 ---
 # <a name="idebugstackframe2getinfo"></a>IDebugStackFrame2::GetInfo
 Obtém uma descrição do quadro de pilhas.
@@ -53,10 +54,10 @@ no A base a ser usada na formatação de qualquer informação numérica.
 `pFrameInfo`\
 fora Uma estrutura [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) que é preenchida com a descrição do quadro de pilhas.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)
 - [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)
 - [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)

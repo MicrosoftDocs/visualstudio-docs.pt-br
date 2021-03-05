@@ -1,4 +1,5 @@
 ---
+description: Os mecanismos de depuração não implementam esse método.
 title: 'IDebugThread2:: GetLogicalThread | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 05d788f63d4807ccfd8e99d36cbf858df2be499f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9193cde20ba1035552451143c676aab291d7c684
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940248"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102168342"
 ---
 # <a name="idebugthread2getlogicalthread"></a>IDebugThread2::GetLogicalThread
 Os mecanismos de depuração não implementam esse método.
@@ -48,7 +49,7 @@ no Um objeto [IDebugStackFrame2](../../../extensibility/debugger/reference/idebu
 `ppLogicalThread`\
 fora Retorna uma `IDebugLogicalThread2` interface que representa o thread lógico associado. Uma implementação do mecanismo de depuração deve definir isso como um valor nulo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Implementações do mecanismo de depuração sempre retornam `E_NOTIMPL` .
 
 ## <a name="see-also"></a>Confira também

@@ -1,4 +1,5 @@
 ---
+description: Enumera os avaliadores de expressão disponíveis de acordo com os identificadores de idioma e fornecedor.
 title: 'IDebugSettingsCallback2:: enums | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: af31c78058ffa0816a566a090288cb1e31c17b70
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6ccd154643ece5f9ec87ee0fdb063082e7d371d8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963023"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102168797"
 ---
 # <a name="idebugsettingscallback2enumees"></a>IDebugSettingsCallback2::EnumEEs
 Enumera os avaliadores de expressão disponíveis de acordo com os identificadores de idioma e fornecedor.
@@ -56,7 +57,7 @@ no Número de elementos no `pceltEEs` buffer.
 `pceltEEs`\
 [entrada, saída] Matriz de avaliadores de expressão.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

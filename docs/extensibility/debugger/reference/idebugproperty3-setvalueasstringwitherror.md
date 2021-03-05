@@ -1,4 +1,5 @@
 ---
+description: Define o valor dessa propriedade e retorna uma mensagem de erro, se necessário.
 title: 'IDebugProperty3:: SetValueAsStringWithError | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4139d3c254c6d824c28e7ceb7fd5fe29b47a3737
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bd789561a85f23cff2ec794d4877662441f9149e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897297"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102168095"
 ---
 # <a name="idebugproperty3setvalueasstringwitherror"></a>IDebugProperty3::SetValueAsStringWithError
 Define o valor dessa propriedade e retorna uma mensagem de erro, se necessário.
@@ -58,7 +59,7 @@ no O período de tempo de espera para o valor a ser definido ( `INFINITE` signif
 `errorString`\
 fora Se houvesse um erro ao definir o valor, isso conterá o motivo da falha.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

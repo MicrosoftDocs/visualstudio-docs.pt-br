@@ -1,4 +1,5 @@
 ---
+description: Obtém o nome e o GUID do mecanismo de depuração (DE) que executa este programa.
 title: 'IDebugProgram2:: GetEngineInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b26d6dcde31d3599c8aa8f8223c1f3cf00a59437
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d59d621097e57336b67535d29a11d05ab4e686b4
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906251"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102169165"
 ---
 # <a name="idebugprogram2getengineinfo"></a>IDebugProgram2::GetEngineInfo
 Obtém o nome e o GUID do mecanismo de depuração (DE) que executa este programa.
@@ -48,7 +49,7 @@ fora Retorna o nome do de execução deste programa.
 `pguidEngine`\
 fora Retorna o GUID do de execução deste programa.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

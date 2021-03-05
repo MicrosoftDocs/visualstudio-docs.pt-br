@@ -1,4 +1,5 @@
 ---
+description: Recupera o valor de uma métrica de acordo com seu nome.
 title: 'IDebugSettingsCallback2:: GetMetricDword | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2c0db9bfd870921de151d5fb9eda2f2a06f50dc8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c67dccee1c59856ef295aa4fd815f2eb6b4ae758
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875842"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102168680"
 ---
 # <a name="idebugsettingscallback2getmetricdword"></a>IDebugSettingsCallback2::GetMetricDword
 Recupera o valor de uma métrica de acordo com seu nome.
@@ -56,7 +57,7 @@ no Nome da métrica.
 `pdwValue`\
 fora Retorna o valor da métrica.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

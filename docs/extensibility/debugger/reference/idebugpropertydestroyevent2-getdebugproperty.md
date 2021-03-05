@@ -1,4 +1,5 @@
 ---
+description: Obtém a propriedade a ser destruída.
 title: 'IDebugPropertyDestroyEvent2:: getdebugproperty | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 292e3cb75731317bce8452f3045a555f9ea24937
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 78b1aecd63ba8b7a6defe7a24bcea8d6983f1610
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99876037"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102168030"
 ---
 # <a name="idebugpropertydestroyevent2getdebugproperty"></a>IDebugPropertyDestroyEvent2::GetDebugProperty
 Obtém a propriedade a ser destruída.
@@ -43,7 +44,7 @@ int GetDebugProperty (
 `ppProperty`\
 fora Retorna um objeto [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) que representa a propriedade a ser destruída.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

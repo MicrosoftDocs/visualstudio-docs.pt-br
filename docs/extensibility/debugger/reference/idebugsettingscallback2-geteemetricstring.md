@@ -1,4 +1,5 @@
 ---
+description: Recupera a cadeia de caracteres de valor de uma métrica do avaliador de expressão Considerando seu nome.
 title: 'IDebugSettingsCallback2:: GetEEMetricString | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 710b4e7623450cbba04e449cbd732486f00932d3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4e5fa78173eeb74ae5f0137805c09298304abd65
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963634"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102168745"
 ---
 # <a name="idebugsettingscallback2geteemetricstring"></a>IDebugSettingsCallback2::GetEEMetricString
 Recupera a cadeia de caracteres de valor de uma métrica do avaliador de expressão Considerando seu nome.
@@ -56,8 +57,8 @@ no Nome da métrica.
 `pbstrValue`\
 fora Retorna a cadeia de caracteres do valor da métrica.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

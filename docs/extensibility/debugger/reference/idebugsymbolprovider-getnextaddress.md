@@ -1,4 +1,5 @@
 ---
+description: Obtém o endereço de depuração que segue um determinado endereço de depuração em um método.
 title: 'IDebugSymbolProvider:: GetNextAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a370cf4591146a31627b80f6358a3d3f9202e306
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d177d03daef4f8d3344941658b85f71551af126b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888219"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102168407"
 ---
 # <a name="idebugsymbolprovidergetnextaddress"></a>IDebugSymbolProvider::GetNextAddress
 Obtém o endereço de depuração que segue um determinado endereço de depuração em um método.
@@ -53,7 +54,7 @@ no Se for TRUE, limita os endereços de depuração a uma única instrução.
 `ppAddress`\
 fora Retorna o próximo endereço de depuração.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Retorna um válido `HRESULT` , normalmente S_OK.
 
 ## <a name="see-also"></a>Confira também

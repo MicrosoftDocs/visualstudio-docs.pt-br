@@ -1,4 +1,5 @@
 ---
+description: Obtenha o processo em que este programa está sendo executado.
 title: 'IDebugProgram2:: GetProcess | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9cd3b6e76a7e675a2228217d9a72c1d004de919c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 233bd9bbb41f64b375e899dba9c0be9a9fba3d97
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891001"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102168983"
 ---
 # <a name="idebugprogram2getprocess"></a>IDebugProgram2::GetProcess
 Obtenha o processo em que este programa está sendo executado.
@@ -43,7 +44,7 @@ int GetProcess(
 `ppProcess`\
 fora Retorna a interface [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) que representa o processo.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

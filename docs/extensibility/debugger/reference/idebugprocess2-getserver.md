@@ -1,4 +1,5 @@
 ---
+description: Obtém o servidor em que esse processo está sendo executado.
 title: 'IDebugProcess2:: GetServer | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f3e8a1553d374f7eaddaace3e3a2ad4a0c882b20
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fba7af19093d853d227241187242a24bf9bd8cdb
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890065"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102169191"
 ---
 # <a name="idebugprocess2getserver"></a>IDebugProcess2::GetServer
 Obtém o servidor em que esse processo está sendo executado.
@@ -43,7 +44,7 @@ int GetServer(
 `ppServer`\
 fora Retorna um objeto [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) que representa o servidor no qual esse processo está em execução.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

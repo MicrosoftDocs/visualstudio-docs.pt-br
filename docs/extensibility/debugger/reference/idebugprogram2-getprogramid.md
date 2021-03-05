@@ -1,4 +1,5 @@
 ---
+description: Obtém um GUID para este programa.
 title: 'IDebugProgram2:: getprogramid | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7723333547e0aeac7fe7a73c0dc40b36f4b6e071
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 45721d4214c396f3366bd23c2bc48e74a1427ec8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890026"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102168957"
 ---
 # <a name="idebugprogram2getprogramid"></a>IDebugProgram2::GetProgramId
 Obtém um GUID para este programa.
@@ -43,7 +44,7 @@ int GetProgramId(
 `pguidProgramId`\
 fora Retorna o `GUID` para este programa.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

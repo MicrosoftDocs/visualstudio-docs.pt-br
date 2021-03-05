@@ -1,4 +1,5 @@
 ---
+description: Essa interface notifica um ouvinte (normalmente o Gerenciador de depuração de sessão [SDM] ou um mecanismo de depuração) de criação e destruição de processos e programas em uma porta específica.
 title: IDebugPortEvents2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ba68608e09405265940686bbb235a41c53959943
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 50dadee6ac2e1d1a441796aac7ca49614b84bcdf
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891183"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102169464"
 ---
 # <a name="idebugportevents2"></a>IDebugPortEvents2
 Essa interface notifica um ouvinte (normalmente o Gerenciador de depuração de sessão [SDM] ou um mecanismo de depuração) de criação e destruição de processos e programas em uma porta específica. Essas informações podem ser usadas para apresentar uma exibição em tempo real dos processos e programas em execução na porta.
