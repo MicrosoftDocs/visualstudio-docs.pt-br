@@ -1,4 +1,5 @@
 ---
+description: Designa tipos de conversão.
 title: THUNK_ORDINAL | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c3984f106b3b29a25adac70745166878927a60b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8d9fe78eedd0166594daf43093aa525e3d8d3e88
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862272"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161588"
 ---
 # <a name="thunk_ordinal"></a>THUNK_ORDINAL
 Designa tipos de conversão.
@@ -59,6 +60,6 @@ Os valores nessa enumeração são retornados de uma chamada para o método [IDi
 ## <a name="requirements"></a>Requisitos
 Cabeçalho: cvconst. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Enumerações e estruturas](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSymbol::get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)

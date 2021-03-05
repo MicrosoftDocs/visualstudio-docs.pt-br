@@ -1,4 +1,5 @@
 ---
+description: Anexa o SDM (Gerenciador de depuração de sessão) ao processo.
 title: 'IDebugProcess2:: Attach | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 462b2299a658359e81fc3641e590b95ab183a24e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 73dbe76a32e67794736fd26595378485879b00b8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874172"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161438"
 ---
 # <a name="idebugprocess2attach"></a>IDebugProcess2::Attach
 Anexa o SDM (Gerenciador de depuração de sessão) ao processo.
@@ -58,7 +59,7 @@ no O número de mecanismos de depuração na `rgguidSpecificEngines` matriz e o 
 `rghrEngineAttach`\
 [entrada, saída] Uma matriz de códigos HRESULT retornados pelos mecanismos de depuração. O tamanho dessa matriz é especificado no `celtSpecificEngines` parâmetro. Cada código costuma ser `S_OK` ou `S_ATTACH_DEFERRED` . O segundo indica que o DE está conectado no momento a nenhum programa.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. A tabela a seguir mostra outros valores possíveis.
 
 |Valor|Descrição|

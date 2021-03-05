@@ -1,4 +1,5 @@
 ---
+description: Os símbolos com marcas SymTagTypedef introduzem nomes para outros tipos.
 title: Typedef (debug interface Access SDK) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2aaaafb263e2276e760750d2f13217e72869a6aa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0ef070e5efa1b50bc71b6e5a541d05c3374a29ad
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873411"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161567"
 ---
 # <a name="typedef-debug-interface-access-sdk"></a>Typedef (SDK de Acesso à Interface de Depuração)
 Os símbolos com `SymTagTypedef` marcas apresentam nomes para outros tipos.
@@ -57,5 +58,5 @@ Os símbolos com `SymTagTypedef` marcas apresentam nomes para outros tipos.
 ## <a name="remarks"></a>Comentários
  Como um typedef pode representar uma classe, um ponteiro ou um tipo definido pelo usuário (UDT), o símbolo de um typedef compartilha as mesmas propriedades que um desses outros tipos de símbolos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Hierarquia de classes de tipos de símbolo](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)

@@ -1,4 +1,5 @@
 ---
+description: 'IDiaStackWalkHelper:: get_registerValue recupera o valor de um registro.'
 title: IDiaStackWalkHelper::get_registerValue | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f5df55043c1a29a95cd0f8883c2a6546e8153320
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa87529f90b20d7d9099dd76e294e406ae0c7a08
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863812"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161176"
 ---
 # <a name="idiastackwalkhelperget_registervalue"></a>IDiaStackWalkHelper::get_registerValue
 Recupera o valor de um registro.
@@ -40,12 +41,12 @@ no Um valor da enumeração de [enumeração de CV_HREG_e](../../debugger/debug-
 
 fora Retorna o valor atual do registro.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
  Apesar do tamanho do `pRetVal` parâmetro, uma implementação deve armazenar apenas o que o registro normalmente mantém. Por exemplo, um registro de 8 bits mantém apenas os 8 bits mais baixos do valor especificado. Esse valor de 8 bits é expandido para 64 bits quando retornado desse método.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
 - [Enumeração CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md)

@@ -1,4 +1,5 @@
 ---
+description: Define o valor de referência deste objeto.
 title: 'IDebugObject:: setreferencevalue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1df408e11803c7cd3508d1939ca6e12f046153fd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bb376e4399157f9f9fe393086cca8fcf94c3b9de
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99953598"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161418"
 ---
 # <a name="idebugobjectsetreferencevalue"></a>IDebugObject::SetReferenceValue
 Define o valor de referência deste objeto.
@@ -43,7 +44,7 @@ int SetReferenceValue(
 `pObject`\
 no Um objeto [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) que representa o novo valor de referência.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará S_OK; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

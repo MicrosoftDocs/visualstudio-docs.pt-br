@@ -1,4 +1,5 @@
 ---
+description: Cada classe, estrutura e União é identificada por um símbolo de SymTagUDT.
 title: UDT | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d49d41c6f399391ac748125cb9012630784827c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d4479c41bfe68e5dcaa4265dd96091fe3938b775
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873397"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161574"
 ---
 # <a name="udt"></a>UDT
 Cada classe, estrutura e União é identificada por um `SymTagUDT` símbolo. Cada membro, função, dados ou tipo aninhado, e cada classe base, aparece como um filho de classe do tipo definido pelo usuário (UDT).
@@ -54,5 +55,5 @@ Cada classe, estrutura e União é identificada por um `SymTagUDT` símbolo. Cad
 |[IDiaSymbol::get_virtualTableShapeId](../../debugger/debug-interface-access/idiasymbol-get-virtualtableshapeid.md)|`DWORD`|ID do símbolo da forma da tabela virtual.|
 |[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE` Se o UDT for marcado como volátil.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Hierarquia de classes de tipos de símbolo](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)

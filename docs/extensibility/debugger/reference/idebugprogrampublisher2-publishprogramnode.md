@@ -1,4 +1,5 @@
 ---
+description: Disponibiliza um nó de programa para uso por DEs (mecanismos de depuração) e o SDM (Gerenciador de depuração de sessão).
 title: IDebugProgramPublisher2::P ublishProgramNode | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c93ce91b664a1d0ccb13534eb6109538df46f35b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 56d407e22aabb396b331c14047f5a1753a5adf09
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959539"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161320"
 ---
 # <a name="idebugprogrampublisher2publishprogramnode"></a>IDebugProgramPublisher2::PublishProgramNode
 Disponibiliza um nó de programa para uso por DEs (mecanismos de depuração) e o SDM (Gerenciador de depuração de sessão).
@@ -43,7 +44,7 @@ int PublishProgramNode(
 `pProgramNode`\
 no Um objeto [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) que representa o nó do programa a ser disponibilizado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
@@ -51,7 +52,7 @@ no Um objeto [IDebugProgramNode2](../../../extensibility/debugger/reference/ideb
 
  Para remover um nó de programa da disponibilidade, chame o método [UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)
 - [UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md)

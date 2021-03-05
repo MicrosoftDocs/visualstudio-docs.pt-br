@@ -1,4 +1,5 @@
 ---
+description: Alguns símbolos podem ser referenciados pelo namespace e, subsequentemente, ser identificados por uma marca SymTagUsingNameSpace.
 title: UsingNameSpace | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c42899aaf829d4c12efdcb6e1daa004d7611960
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1fde0be17059342c3b00ba43cab93f4464e31f1e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873383"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161539"
 ---
 # <a name="usingnamespace"></a>UsingNameSpace
 Alguns símbolos podem ser referenciados pelo namespace e, subsequentemente, ser identificados por uma `SymTagUsingNameSpace` marca.

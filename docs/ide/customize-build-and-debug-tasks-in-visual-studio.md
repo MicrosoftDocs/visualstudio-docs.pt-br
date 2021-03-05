@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1088cae031dc3498d2c5cdcd33db8d42f721b7d7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 659e0f4e46d6960a2a1350c605e55357a84ec115
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954417"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161294"
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>Personalizar tarefas de compilação e depuração para desenvolvimento de "Pasta Aberta"
 
@@ -203,7 +203,7 @@ Esta seção descreve algumas das propriedades que você pode especificar em *ta
 
 Você pode criar tarefas para qualquer arquivo ou pasta especificando seu nome no campo `appliesTo`, por exemplo `"appliesTo": "hello.js"`. As máscaras de arquivo a seguir podem ser usadas como valores:
 
-|Máscara de arquivo|Description|
+|Máscara de arquivo|Descrição|
 |-|-|
 |`"*"`| a tarefa está disponível para todos os arquivos e pastas no workspace|
 |`"*/"`| a tarefa está disponível para todas as pastas no workspace|
@@ -215,9 +215,9 @@ Você pode criar tarefas para qualquer arquivo ou pasta especificando seu nome n
 
 #### <a name="macros-for-tasksvsjson"></a>Macros para tasks.vs.json
 
-|Macro|Description|
+|Macro|Descrição|
 |-|-|
-|`${env.<VARIABLE>}`| Especifica qualquer variável de ambiente (por exemplo, ${env.PATH}, ${env.COMSPEC} e assim por diante) que esteja definida para o prompt de comando do desenvolvedor. Para obter mais informações, consulte [prompt de comando do desenvolvedor para o Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
+|`${env.<VARIABLE>}`| Especifica qualquer variável de ambiente (por exemplo, ${env.PATH}, ${env.COMSPEC} e assim por diante) que esteja definida para o prompt de comando do desenvolvedor. Para obter mais informações, consulte [prompt de comando do desenvolvedor e o PowerShell do desenvolvedor](../ide/reference/command-prompt-powershell.md).|
 |`${workspaceRoot}`| O caminho completo para a pasta do espaço de trabalho (por exemplo, *C:\sources\hello*)|
 |`${file}`| O caminho completo do arquivo ou da pasta selecionada para executar essa tarefa (por exemplo, *C:\sources\hello\src\hello.js*)|
 |`${relativeFile}`| O caminho relativo para o arquivo ou a pasta (por exemplo, *src\hello.js*)|
@@ -311,7 +311,7 @@ Os arquivos *.gitignore* são usados para informar ao Git quais arquivos ignorar
 
 As configurações lidas no arquivo *.gitignore* são aplicadas ao seu diretório pai e a todos os subdiretórios.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Desenvolver o código sem projetos nem soluções](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
 - [Projetos Open Folder para C++](/cpp/build/open-folder-projects-cpp)
