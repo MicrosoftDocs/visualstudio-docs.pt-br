@@ -1,4 +1,5 @@
 ---
+description: Cria um objeto usando um construtor.
 title: 'IDebugFunctionObject:: CreateObject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e6085e974f58346eba7b38e76e5588b34fc3ff2c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8870910e01f2afa5bff6eac461d6e80f35e6a7e0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929974"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150036"
 ---
 # <a name="idebugfunctionobjectcreateobject"></a>IDebugFunctionObject::CreateObject
 Cria um objeto usando um construtor.
@@ -58,7 +59,7 @@ no Uma matriz de objetos [IDebugObject](../../../extensibility/debugger/referenc
 `ppObject`\
 fora Retorna um `IDebugObject` representando o objeto recém-criado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará S_OK; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

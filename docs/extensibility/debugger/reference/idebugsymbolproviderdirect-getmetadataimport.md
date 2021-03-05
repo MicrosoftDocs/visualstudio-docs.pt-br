@@ -1,4 +1,5 @@
 ---
+description: Recupera as informações de importação de metadados.
 title: 'IDebugSymbolProviderDirect:: GetMetaDataImport | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7028d6e958de0d1c15d0e0c7c40a78e29a815736
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4bbab6ea486d1de4076424bd70d86b34eac19813
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909472"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149464"
 ---
 # <a name="idebugsymbolproviderdirectgetmetadataimport"></a>IDebugSymbolProviderDirect::GetMetaDataImport
 Recupera as informações de importação de metadados.
@@ -52,7 +53,7 @@ no Identificador para o domínio do aplicativo.
 `ppImport`\
 fora Retorna um objeto que contém as informações de importação de metadados.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

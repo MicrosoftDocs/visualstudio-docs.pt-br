@@ -1,4 +1,5 @@
 ---
+description: Sinaliza a IU do depurador do Visual Studio para avisar ao usuário que não foi possível localizar os símbolos para o executável iniciado.
 title: IDebugNoSymbolsEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0922d6e6e7d7e4ccc162652427e3f8c584580dd4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 859c9c1d07a5f4660f2d13dcffac4f19659a2bc2
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929661"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149815"
 ---
 # <a name="idebugnosymbolsevent2"></a>IDebugNoSymbolsEvent2
 Sinaliza a interface de usuário do [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] depurador para avisar ao usuário que não foi possível localizar os símbolos para o executável iniciado.

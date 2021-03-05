@@ -1,4 +1,5 @@
 ---
+description: Obtém o módulo que está sendo carregado ou descarregado.
 title: 'IDebugModuleLoadEvent2:: GetModule | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c0baed5d7c0717f1bb8fd1a999f767d9e59abbae
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0e44268dcf4ab79e99bd1bdf5a996ae18762e139
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920895"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149828"
 ---
 # <a name="idebugmoduleloadevent2getmodule"></a>IDebugModuleLoadEvent2::GetModule
 Obtém o módulo que está sendo carregado ou descarregado.
@@ -53,7 +54,7 @@ fora Retorna um objeto [IDebugModule2](../../../extensibility/debugger/reference
 `pbLoad`\
 [entrada, saída] Diferente de zero ( `TRUE` ) se o módulo estiver sendo carregado e zero ( `FALSE` ) se o módulo estiver descarregando. Se esse parâmetro for um valor nulo, nenhum status será solicitado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

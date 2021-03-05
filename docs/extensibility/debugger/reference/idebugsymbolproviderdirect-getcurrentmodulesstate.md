@@ -1,4 +1,5 @@
 ---
+description: Recupera informações sobre o grupo de símbolos do qual o provedor de símbolos é membro.
 title: 'IDebugSymbolProviderDirect:: GetCurrentModulesState | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e089973061df779ca7f4e40765625897142efbcf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fcc127bd3450f06a51ab0b04d61d52f4ee08e092
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909486"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149477"
 ---
 # <a name="idebugsymbolproviderdirectgetcurrentmodulesstate"></a>IDebugSymbolProviderDirect::GetCurrentModulesState
 Recupera informações sobre o grupo de símbolos do qual o provedor de símbolos é membro.
@@ -47,7 +48,7 @@ fora O estado do grupo de provedores de símbolos.
 `count`\
 fora Número de módulos no grupo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

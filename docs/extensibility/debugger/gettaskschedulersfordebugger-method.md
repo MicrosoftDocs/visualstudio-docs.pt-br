@@ -1,4 +1,5 @@
 ---
+description: Recupera uma matriz de todos os objetos System. Threading. Tasks. TaskScheduler que estão ativos no momento.
 title: Método GetTaskSchedulersForDebugger | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2b9826681d2d322b1b240abb4062de007b564619
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f60ffa851e8b8821e3d07e1bfdd6e864104b5001
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99921268"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150088"
 ---
 # <a name="gettaskschedulersfordebugger-method"></a>Método GetTaskSchedulersForDebugger
 Recupera uma matriz de todos os <xref:System.Threading.Tasks.TaskScheduler> objetos que estão ativos no momento.
@@ -32,7 +33,7 @@ Recupera uma matriz de todos os <xref:System.Threading.Tasks.TaskScheduler> obje
 .method assembly hidebysig static class System.Threading.Tasks.TaskScheduler[] GetTaskSchedulersForDebugger() cil managed
 ```
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
  Uma matriz de todos os <xref:System.Threading.Tasks.TaskScheduler> objetos que estão atualmente ativos neste <xref:System.AppDomain> .
 
 ## <a name="remarks"></a>Comentários

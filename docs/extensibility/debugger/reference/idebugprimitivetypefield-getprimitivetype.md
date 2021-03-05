@@ -1,4 +1,5 @@
 ---
+description: Recupera o tipo primitivo associado a este campo.
 title: 'IDebugPrimitiveTypeField:: getprimitivatype | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 099456e16ad2bb01329ebff49b13066f1e357ed0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0742f6a1d639d891a816bba479b6507a5a66b583
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874198"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150322"
 ---
 # <a name="idebugprimitivetypefieldgetprimitivetype"></a>IDebugPrimitiveTypeField::GetPrimitiveType
 Recupera o tipo primitivo associado a este campo.
@@ -42,7 +43,7 @@ int GetPrimitiveType (
 `pdwType`\
 fora Valor da [enumeração CorElementType](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) que representa o tipo primitivo.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` .
 
 ## <a name="see-also"></a>Confira também

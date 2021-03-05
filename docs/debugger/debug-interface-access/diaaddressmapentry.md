@@ -1,4 +1,5 @@
 ---
+description: Descreve uma entrada em um mapa de endereços.
 title: DiaAddressMapEntry | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 05475d2e6d48e7a8dacea834e5d7ca18c71d3260
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bdac0233901ac8571bbfb2a5d6659adf69e35298
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857303"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149189"
 ---
 # <a name="diaaddressmapentry"></a>DiaAddressMapEntry
 Descreve uma entrada em um mapa de endereços.
@@ -52,6 +53,6 @@ Para converter um endereço, `addrA` , na imagem a para um endereço, `addrB` , 
 ## <a name="requirements"></a>Requisitos
 Cabeçalho: dia2. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Enumerações e estruturas](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaAddressMap::set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)

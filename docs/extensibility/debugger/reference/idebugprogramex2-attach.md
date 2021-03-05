@@ -1,4 +1,5 @@
 ---
+description: Anexe uma sessão a um programa.
 title: 'IDebugProgramEx2:: Attach | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 30818627f8ebc293e444b43adb0590db077da4a2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa9a66bdec3da9b6d18772b4ff2c85a7874bde6c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99898835"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150140"
 ---
 # <a name="idebugprogramex2attach"></a>IDebugProgramEx2::Attach
 Anexe uma sessão a um programa.
@@ -53,7 +54,7 @@ no Um valor da enumeração [ATTACH_REASON](../../../extensibility/debugger/refe
 `pSession`\
 no Um valor que identifica exclusivamente a sessão que está anexando ao programa.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. Esse método deve retornar `E_ATTACH_DEBUGGER_ALREADY_ATTACHED` se o programa já estiver anexado.
 
 ## <a name="remarks"></a>Comentários

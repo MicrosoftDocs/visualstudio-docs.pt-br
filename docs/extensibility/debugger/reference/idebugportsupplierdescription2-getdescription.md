@@ -1,4 +1,5 @@
 ---
+description: Recupera os metadados de descrição e descrição para o fornecedor da porta.
 title: 'IDebugPortSupplierDescription2:: GetDescription | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7bbf1f154f23b7cb97f685b4e367199b73547546
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ef6660c0d3521bb9197f626f10142a5f9976475b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840217"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150361"
 ---
 # <a name="idebugportsupplierdescription2getdescription"></a>IDebugPortSupplierDescription2::GetDescription
 Recupera os metadados de descrição e descrição para o fornecedor da porta.
@@ -46,8 +47,8 @@ fora Sinalizadores de metadados para a descrição.
 `pbstrText`\
 fora Descrição do fornecedor da porta.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugPortSupplierDescription2](../../../extensibility/debugger/reference/idebugportsupplierdescription2.md)

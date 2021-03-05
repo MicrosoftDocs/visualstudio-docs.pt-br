@@ -1,4 +1,5 @@
 ---
+description: Continua executando esse processo a partir de um estado parado. Qualquer estado de execução anterior (como uma etapa) é preservado e o processo começa a ser executado novamente.
 title: 'IDebugProcess3:: Continue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 60ac7109b9f92a4ed7eecf57095c44fc4208b9f0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5e003193a189017b9aeacf6a983756d219b10195
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891053"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149764"
 ---
 # <a name="idebugprocess3continue"></a>IDebugProcess3::Continue
 Continua executando esse processo a partir de um estado parado. Qualquer estado de execução anterior (como uma etapa) é preservado e o processo começa a ser executado novamente.
@@ -46,7 +47,7 @@ int Continue(
 `pThread`\
 no Um objeto [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) que representa o thread a ser continuado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna o código de erro.
 
 ## <a name="remarks"></a>Comentários

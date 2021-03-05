@@ -1,4 +1,5 @@
 ---
+description: Define a localidade para o fornecedor da porta.
 title: 'IDebugPortSupplierLocale2:: setlocale | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 28ba94e40e475527b586c3e9da33bbf1a893295a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 351cd82388731d52620d376f9d943c0b8afab8b7
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840100"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150335"
 ---
 # <a name="idebugportsupplierlocale2setlocale"></a>IDebugPortSupplierLocale2::SetLocale
 Define a localidade para o fornecedor da porta.
@@ -41,7 +42,7 @@ int SetLocale(
 `wLangID`\
 Identificador da localidade a ser definida.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

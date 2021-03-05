@@ -1,4 +1,5 @@
 ---
+description: Retorna um objeto de contexto de código correspondente a um identificador de local de código especificado.
 title: 'IDebugDisassemblyStream2:: GetCodeContext | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9bd0c78853a41c7efa7907fd1004277862721dc4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0a8662fdadfbd2c41d193ddced158a956cb8c6fc
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928413"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150621"
 ---
 # <a name="idebugdisassemblystream2getcodecontext"></a>IDebugDisassemblyStream2::GetCodeContext
 Retorna um objeto de contexto de código correspondente a um identificador de local de código especificado.
@@ -48,7 +49,7 @@ no Especifica o identificador de local do código. Consulte a seção comentári
 `ppCodeContext`\
 fora Retorna um objeto [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) que representa o contexto de código associado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

@@ -1,4 +1,5 @@
 ---
+description: Ignora um número especificado de fontes injetadas em uma sequência de enumeração.
 title: IDiaEnumInjectedSources::Skip | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ab2adf44fa1ed2d394a6ad5edaca0818c503a180
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7966419e7d623fe6678c6194708360d102fb816b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856659"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148986"
 ---
 # <a name="idiaenuminjectedsourcesskip"></a>IDiaEnumInjectedSources::Skip
 Ignora um número especificado de fontes injetadas em uma sequência de enumeração.
@@ -35,8 +36,8 @@ HRESULT Skip (
 
 no O número de fontes injetadas na sequência de enumeração a serem ignoradas.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK` ; caso contrário, retornará se não houver `S_FALSE` mais fontes injetadas para ignorar.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

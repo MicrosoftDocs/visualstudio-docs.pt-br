@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 959d015bd23c91ec2ba6215c7a5b42d13b37ee29
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 52264580e428fa6a2c33d80ea8fb9fb8e07f0c59
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865820"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149321"
 ---
 # <a name="configure-windows-firewall-for-remote-debugging"></a>Configurar o Firewall do Windows para depuração remota
 
@@ -50,6 +50,16 @@ O Visual Studio e o depurador remoto tentam abrir as portas corretas durante a i
 
    A nova regra deve aparecer e ser selecionada na lista **regras de entrada** ou **regras de saída** .
 
+**Para abrir uma porta usando o PowerShell:**
+
+Para o Firewall do Windows, você pode usar comandos do PowerShell como [New-NetFirewallRule](/powershell/module/netsecurity/new-netfirewallrule?view=win10-ps).
+
+O exemplo a seguir abre a porta 4024 para o depurador remoto no computador remoto. O caminho que você precisa usar pode ser diferente.
+
+```ps
+New-NetFirewallRule -DisplayName "msvsmon" -Direction Inbound -Program "Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Remote Debugger\x86\msvsmon.exe" -LocalPort 4024 -Protocol TCP -Authentication Required -Action Allow
+```
+
 ### <a name="ports-on-the-remote-computer-that-enable-remote-debugging"></a>Portas no computador remoto que habilitam a depuração remota
 
 Para a depuração remota, as seguintes portas devem estar abertas no computador remoto:
@@ -78,8 +88,8 @@ Se você selecionar **usar o modo de compatibilidade gerenciado** em **ferrament
 
 |**Portas**|**Entrada/saída**|**Protocolo**|**Descrição**|
 |-|-|-|-|
-|135, 139, 445|Saída|TCP|Obrigatório.|
-|137, 138|Saída|UDP|Obrigatório.|
+|135, 139, 445|Saída|TCP|Obrigatórios.|
+|137, 138|Saída|UDP|Obrigatórios.|
 
 Se sua política de domínio exigir que a comunicação de rede seja executada por meio do IPSec, você deverá abrir portas adicionais no Visual Studio e nos computadores remotos. Para depurar em um servidor Web IIS remoto, abra a porta 80 no computador remoto.
 

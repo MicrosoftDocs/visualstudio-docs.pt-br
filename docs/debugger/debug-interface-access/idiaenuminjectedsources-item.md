@@ -1,4 +1,5 @@
 ---
+description: Recupera uma fonte injetada por meio de um índice.
 title: IDiaEnumInjectedSources::Item | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 029c47cc04a09dc1168ff755c1640da9c9662207
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1d1ab3a9ce19705a4d9ff22f33a1275efc0e8b02
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856708"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148993"
 ---
 # <a name="idiaenuminjectedsourcesitem"></a>IDiaEnumInjectedSources::Item
 Recupera uma fonte injetada por meio de um índice.
@@ -40,9 +41,9 @@ no Índice do objeto [IDiaInjectedSource](../../debugger/debug-interface-access/
 
 fora Retorna um objeto [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) que representa a fonte injetada.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

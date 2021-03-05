@@ -1,4 +1,5 @@
 ---
+description: Cada assinatura de função exclusiva é identificada por um símbolo de SymTagFunctionType.
 title: FunctionType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 52c69e4aba479073256d5dcf136c9d955b13f50c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2ac1a15528783f21169427a67f47afcb2d64a81e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857233"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149126"
 ---
 # <a name="functiontype"></a>FunctionType
 Cada assinatura de função exclusiva é identificada por um `SymTagFunctionType` símbolo. Cada parâmetro é identificado como um símbolo filho de classe com uma `SymTagFunctionArgType` marca.
@@ -44,7 +45,7 @@ Cada assinatura de função exclusiva é identificada por um `SymTagFunctionType
 |[IDiaSymbol::get_unalignedType](../../debugger/debug-interface-access/idiasymbol-get-unalignedtype.md)|`BOOL`|`TRUE` se a função não estiver alinhada.|
 |[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE` se a função estiver marcada como volátil.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Hierarquia de classes de tipos de símbolo](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)
 - [Enumeração CV_access_e](../../debugger/debug-interface-access/cv-access-e.md)
 - [FunctionArgType](../../debugger/debug-interface-access/functionargtype.md)

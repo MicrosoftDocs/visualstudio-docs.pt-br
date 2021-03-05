@@ -1,4 +1,5 @@
 ---
+description: Faz com que o processo passe uma instrução ou instrução.
 title: 'IDebugProcess3:: Step | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 69f7c1736f786b2c59678826b71f7f9349629057
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b85df970c073fa2203873733073c5b6b85cabe06
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99926246"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150127"
 ---
 # <a name="idebugprocess3step"></a>IDebugProcess3::Step
 Faz com que o processo passe uma instrução ou instrução.
@@ -56,7 +57,7 @@ no Um dos valores de [STEPKIND](../../../extensibility/debugger/reference/stepki
 `step`\
 no Um dos valores de [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md) .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará S_OK; caso contrário, retorna o código de erro.
 
 ## <a name="remarks"></a>Comentários

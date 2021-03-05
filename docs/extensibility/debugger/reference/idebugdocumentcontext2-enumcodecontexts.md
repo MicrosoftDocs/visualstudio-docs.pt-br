@@ -1,4 +1,5 @@
 ---
+description: Recupera uma lista de todos os contextos de código associados a este contexto de documento.
 title: 'IDebugDocumentContext2:: EnumCodeContexts | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 089122a4a4d7ff3d6a8828ba0c251efd3729c101
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d361a0cee6a5c54a11e5497366fe1d82bf30af45
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933538"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150595"
 ---
 # <a name="idebugdocumentcontext2enumcodecontexts"></a>IDebugDocumentContext2::EnumCodeContexts
 Recupera uma lista de todos os contextos de código associados a este contexto de documento.
@@ -42,7 +43,7 @@ int EnumCodeContexts(
 ## <a name="parameters"></a>Parâmetros
 `ppEnumCodeCxts`\
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

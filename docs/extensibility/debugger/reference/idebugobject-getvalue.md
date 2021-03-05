@@ -1,4 +1,5 @@
 ---
+description: Obtém o valor do objeto como uma série de bytes consecutivos.
 title: 'IDebugObject:: GetValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f7534a05879bdae0a885ae0cbe23d072c30132d0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 63e07ccfbcf2117363ed3e2096d5f0bb4bcac806
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99846797"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150439"
 ---
 # <a name="idebugobjectgetvalue"></a>IDebugObject::GetValue
 Obtém o valor do objeto como uma série de bytes consecutivos.
@@ -48,11 +49,11 @@ int GetValue(
 `nSize`\
 no O número máximo de bytes a buscar.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará S_OK; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
  Obtenha o número total de bytes de valor que podem ser buscados chamando o método [GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

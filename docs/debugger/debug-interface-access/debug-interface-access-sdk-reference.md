@@ -1,4 +1,5 @@
 ---
+description: Uma referência completa a todas as interfaces e enumerações e estruturas de suporte no DIA SDK.
 title: Referência do SDK de acesso à interface de depuração | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e914cb7fade7c46213f3ffc1c68113ebf83188b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 012de677e6b6d819df05cf0b95640fe800b63b3d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865408"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149290"
 ---
 # <a name="debug-interface-access-sdk-reference"></a>Referência do SDK de Acesso à Interface de Depuração
 
@@ -45,6 +46,6 @@ Descreve um número de cadeias de caracteres e seus rótulos que podem ser usado
 
 Descreve quais símbolos são e como eles são identificados por tipo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [SDK de Acesso à Interface de Depuração](../../debugger/debug-interface-access/debug-interface-access-sdk.md)

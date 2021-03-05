@@ -1,4 +1,5 @@
 ---
+description: Se uma função tiver um ponto definido no qual a depuração é encerrada, o ponto de partida de depuração será identificado por um símbolo com uma marca SymTagFuncDebugEnd.
 title: FuncDebugEnd | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 88a81f9a179ab573cdf370c1870378b993e4b6fd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5b28fe8f1a436dd308487187897fa62fd247a293
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857275"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149154"
 ---
 # <a name="funcdebugend"></a>FuncDebugEnd
 Se uma função tiver um ponto definido no qual a depuração é encerrada, o ponto de partida de depuração será identificado por um símbolo com uma `SymTagFuncDebugEnd` marca.
@@ -47,7 +48,7 @@ Se uma função tiver um ponto definido no qual a depuração é encerrada, o po
 |[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Retorna `SymTagFuncDebugEnd` (um dos valores de [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) ).|
 |[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|`ULONGLONG`|Posição dessa função na imagem executável.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Hierarquia lexical de tipos de símbolo](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)
 - [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md)
 - [Locais de símbolos](../../debugger/debug-interface-access/symbol-locations.md)

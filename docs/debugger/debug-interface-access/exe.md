@@ -1,4 +1,5 @@
 ---
+description: Exe é o único símbolo sem um pai lexical ou de classe, pois representa o escopo global do arquivo. exe ou. dll.
 title: Exe | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 85dc30078565f73d4d2f6cab19c57afade6d8e41
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5394acaa19efed0c882d97f6ee5b633ffe1c68c0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857268"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149147"
 ---
 # <a name="exe"></a>Exe
 Exe é o único símbolo sem um pai lexical ou de classe, pois representa o escopo global do arquivo. exe ou. dll. Há apenas um símbolo com a `SymTagExe` marca por arquivo. O método [IDiaSession:: get_globalScope](../../debugger/debug-interface-access/idiasession-get-globalscope.md) retorna o símbolo.
@@ -41,6 +42,6 @@ Exe é o único símbolo sem um pai lexical ou de classe, pois representa o esco
 |[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|ID do índice do símbolo.|
 |[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Retorna `SymTagExe` (um dos valores de [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) ).|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSession::get_globalScope](../../debugger/debug-interface-access/idiasession-get-globalscope.md)
 - [Hierarquia lexical de tipos de símbolo](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)

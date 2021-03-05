@@ -1,4 +1,5 @@
 ---
+description: Obtém os bytes de atributos personalizados, dado o nome do atributo personalizado.
 title: 'IDebugCustomAttributeQuery2:: GetCustomAttributeByName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8662e3c18f568e60ac98e5468acc3da28966505c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8c65abff050af7b7c34161cbca2594431cb119b5
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99842440"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150070"
 ---
 # <a name="idebugcustomattributequery2getcustomattributebyname"></a>IDebugCustomAttributeQuery2::GetCustomAttributeByName
 Obtém os bytes de atributos personalizados, dado o nome do atributo personalizado.
@@ -53,7 +54,7 @@ no Uma cadeia de caracteres que contém o nome do atributo personalizado a ser p
 `pdwLen`\
 [entrada, saída] Especifica o número máximo de bytes a serem retornados na `ppBlob` matriz e retorna o número de bytes gravados na matriz.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará S_OK ou retornará S_FALSE se o atributo personalizado não existir. Caso contrário, retornará um código de erro.
 
 ## <a name="remarks"></a>Comentários
@@ -63,6 +64,6 @@ no Uma cadeia de caracteres que contém o nome do atributo personalizado a ser p
 
  Se os `ppBlob` `pdwLen` parâmetros e forem definidos como um valor nulo, esse método poderá ser usado para determinar se o atributo personalizado simplesmente existe. No entanto, uma alternativa mais fácil é chamar o método [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)
 - [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md)

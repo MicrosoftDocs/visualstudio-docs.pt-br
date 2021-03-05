@@ -1,4 +1,5 @@
 ---
+description: Especifica os sinalizadores que controlam a avaliação da expressão.
 title: EVALFLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 073dac8de37edddc1b748c52258047cd2d85e218
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 531d155104475b84d881358711a6aa3f1d0bf2ce
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937069"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150933"
 ---
 # <a name="evalflags"></a>EVALFLAGS
 Especifica os sinalizadores que controlam a avaliação da expressão.

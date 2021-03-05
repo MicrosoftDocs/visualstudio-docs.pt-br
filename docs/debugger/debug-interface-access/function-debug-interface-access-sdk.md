@@ -1,4 +1,5 @@
 ---
+description: Cada função é identificada por um símbolo de SymTagFunction.
 title: Função (debug interface Access SDK) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a294444cf03760ef83fb02ae012bcbf609a2982a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 850ecedbdacb8349dc8ff6450c79dee219b61418
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857247"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149133"
 ---
 # <a name="function-debug-interface-access-sdk"></a>Function (SDK de Acesso à Interface de Depuração)
 Cada função é identificada por um `SymTagFunction` símbolo.
@@ -73,7 +74,7 @@ Cada função é identificada por um `SymTagFunction` símbolo.
 |[IDiaSymbol::get_virtualBaseOffset](../../debugger/debug-interface-access/idiasymbol-get-virtualbaseoffset.md)|`DWORD`|Se for uma função virtual, o deslocamento na tabela de funções virtuais.|
 |[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE` se a função estiver marcada como volátil.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Enumeração CV_access_e](../../debugger/debug-interface-access/cv-access-e.md)
 - [Hierarquia lexical de tipos de símbolo](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)
 - [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md)

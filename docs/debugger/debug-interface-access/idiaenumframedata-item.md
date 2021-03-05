@@ -1,4 +1,5 @@
 ---
+description: Recupera um elemento de dados de quadro por meio de um índice.
 title: IDiaEnumFrameData::Item | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d8d2335cf84ece792b710725156d2f74e3f33770
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c22983881c6f4e7d1bbb8e25ec6030d85411145c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856813"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149049"
 ---
 # <a name="idiaenumframedataitem"></a>IDiaEnumFrameData::Item
 Recupera um elemento de dados de quadro por meio de um índice.
@@ -40,9 +41,9 @@ no Índice do objeto [IDiaFrameData](../../debugger/debug-interface-access/idiaf
 
 fora Retorna um objeto [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) que representa o elemento de dados de quadro desejado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

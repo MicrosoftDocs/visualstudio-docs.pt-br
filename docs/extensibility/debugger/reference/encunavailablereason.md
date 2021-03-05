@@ -1,4 +1,5 @@
 ---
+description: Representa os motivos pelos quais editar e continuar não estão disponíveis.
 title: EncUnavailableReason | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 384d71d6f88e8cd792585bb097594fa7b1e38c64
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e1f80dc1454cb1c15feddd099411bcb339dbc58c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99953741"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150998"
 ---
 # <a name="encunavailablereason"></a>EncUnavailableReason
 `This is for internal use only!` Representa os motivos pelos quais **Editar e continuar** não estão disponíveis.
