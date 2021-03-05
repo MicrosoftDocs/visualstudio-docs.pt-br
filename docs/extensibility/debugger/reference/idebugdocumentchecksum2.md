@@ -1,4 +1,5 @@
 ---
+description: Representa uma soma de verificação para um documento de depuração e permite passar a soma de verificação entre componentes.
 title: IDebugDocumentChecksum2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca8a33626ad68dcac690ca288d4bc375679a4e3e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c5b39f381817cd98fd94b1c746cbdccde31e0b1f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880769"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102165560"
 ---
 # <a name="idebugdocumentchecksum2"></a>IDebugDocumentChecksum2
 Representa uma soma de verificação para um documento de depuração e permite passar a soma de verificação entre componentes.

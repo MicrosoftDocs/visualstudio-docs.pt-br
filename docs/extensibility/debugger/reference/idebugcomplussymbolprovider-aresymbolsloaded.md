@@ -1,4 +1,5 @@
 ---
+description: Determina se os símbolos de depuração são carregados para o módulo especificado, dado o identificador de domínio do aplicativo.
 title: 'IDebugComPlusSymbolProvider:: AreSymbolsLoaded | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: df11531cc90081aad45b887066ce0799af771747
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4e071f18442f66711b59c1063e7c2770ed772c60
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928712"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102163974"
 ---
 # <a name="idebugcomplussymbolprovideraresymbolsloaded"></a>IDebugComPlusSymbolProvider::AreSymbolsLoaded
 Determina se os símbolos de depuração são carregados para o módulo especificado, dado o identificador de domínio do aplicativo.
@@ -47,7 +48,7 @@ no Identificador para o domínio do aplicativo.
 `guidModule`\
 no Identificador exclusivo do módulo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se os símbolos de depuração forem carregados, retorna `S_OK` ; caso contrário, retorna `S_FALSE` .
 
 ## <a name="example"></a>Exemplo

@@ -1,4 +1,5 @@
 ---
+description: Retorna o número de argumentos de parâmetro de tipo para esta instância.
 title: 'IDebugGenericFieldInstance:: TypeArgumentCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3b811780bf135a700f0ea451ef148598fe621e4f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 034c180e41a2754347dd0eea7a81cb4ae64a0c2a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928348"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102165352"
 ---
 # <a name="idebuggenericfieldinstancetypeargumentcount"></a>IDebugGenericFieldInstance::TypeArgumentCount
 Retorna o número de argumentos de parâmetro de tipo para esta instância.
@@ -42,7 +43,7 @@ int TypeArgumentCount(
 `pcArgs`\
 [entrada, saída] Número de argumentos de parâmetro de tipo para esta instância.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

@@ -1,4 +1,5 @@
 ---
+description: Cria um objeto de dados primitivo, como um inteiro simples.
 title: 'IDebugFunctionObject:: createprimitivaobject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 69ad4328d2ae94a23ebaa9fb4fd0aa0d2cff7c74
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eed6bf305667b98e16f4a112b1196456269e5b3c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929973"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102165535"
 ---
 # <a name="idebugfunctionobjectcreateprimitiveobject"></a>IDebugFunctionObject::CreatePrimitiveObject
 Cria um objeto de dados primitivo, como um inteiro simples.
@@ -48,7 +49,7 @@ no Um valor da enumeração de [OBJECT_TYPE](../../../extensibility/debugger/ref
 `ppObject`\
 fora Retorna um [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) que representa o objeto recém-criado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará S_OK; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

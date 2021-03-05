@@ -9,12 +9,12 @@ manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 10bfed2a9a2a0ce466e1b3276a487695d40fb580
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9d6b4dd8bd21da7fcfc4d7cde54e5f5a7926472e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964557"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102165716"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Configurar testes de unidade usando um arquivo *. RunSettings*
 
@@ -135,7 +135,7 @@ O arquivo aparece no menu teste e você pode selecioná-lo ou desselecioná-lo. 
 
 Para executar testes da linha de comando, use *vstest.console.exe* e especifique o arquivo de configurações usando o parâmetro **/Settings** .
 
-1. Abra um [prompt de comando do desenvolvedor](/dotnet/framework/tools/developer-command-prompt-for-vs) para o Visual Studio.
+1. Abra o [prompt de comando do desenvolvedor para Visual Studio](../ide/reference/command-prompt-powershell.md).
 
 2. Insira um comando semelhante a:
 
@@ -466,7 +466,7 @@ O nó **RunConfiguration** deve conter um nó **EnvironmentVariables** . Uma var
 > [!NOTE]
 > Como essas variáveis de ambiente sempre devem ser definidas quando o host de teste é iniciado, os testes sempre devem ser executados em um processo separado. Para isso, o sinalizador */InIsolation* será definido quando houver variáveis de ambiente para que o host de teste sempre seja invocado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Configurar uma execução de teste](https://github.com/microsoft/vstest-docs/blob/master/docs/configure.md)
 - [Personalizar a análise de cobertura de código](../test/customizing-code-coverage-analysis.md)

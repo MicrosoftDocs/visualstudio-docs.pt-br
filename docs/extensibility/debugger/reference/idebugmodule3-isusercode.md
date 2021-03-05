@@ -1,4 +1,5 @@
 ---
+description: Recupera informações sobre se o módulo representa ou não o código do usuário.
 title: 'IDebugModule3:: IsUserCode | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c8b313ecdbc1168238bad517f34350a420fb30ff
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a936d4408b2d289477a860ffca3d53ca7b0ad61d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929765"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102164832"
 ---
 # <a name="idebugmodule3isusercode"></a>IDebugModule3::IsUserCode
 Recupera informações sobre se o módulo representa ou não o código do usuário.
@@ -43,7 +44,7 @@ int IsUserCode(
 `pfUser`\
 fora Diferente de zero ( `TRUE` ) se o módulo representar o código de usuário, zero ( `FALSE` ) se não tiver.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna o código de erro.
 
 ## <a name="see-also"></a>Confira também

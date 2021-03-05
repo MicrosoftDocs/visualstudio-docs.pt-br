@@ -1,4 +1,5 @@
 ---
+description: Especifica como interpretar uma ID de processo na estrutura de AD_PROCESS_ID.
 title: AD_PROCESS_ID_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 72bca5a909b7a001bf12779e54953d403134995b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f56ca1db0462a85bd68b193147f5dd3a46c6bee9
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948407"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102164338"
 ---
 # <a name="ad_process_id_type"></a>AD_PROCESS_ID_TYPE
 Especifica como interpretar uma ID de processo na estrutura de [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) .

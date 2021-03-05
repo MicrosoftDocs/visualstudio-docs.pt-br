@@ -1,4 +1,5 @@
 ---
+description: 'IDebugProgram2:: continuar continua executando este programa a partir de um estado parado. Qualquer estado de execução anterior (como uma etapa) é preservado e o programa começa a ser executado novamente.'
 title: 'IDebugProgram2:: Continue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 07e48a59f044f8f3ccc94576210a51e7d70d9b66
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4f10d9266e8562d7ba1afed45b4b054f306bfbca
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912951"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102164715"
 ---
 # <a name="idebugprogram2continue"></a>IDebugProgram2::Continue
 Continua executando este programa a partir de um estado parado. Qualquer estado de execução anterior (como uma etapa) é preservado e o programa começa a ser executado novamente.
@@ -45,7 +46,7 @@ int Continue(
 ## <a name="parameters"></a>Parâmetros
 `pThread` no Um objeto [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) que representa o thread.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

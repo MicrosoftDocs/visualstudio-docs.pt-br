@@ -1,4 +1,5 @@
 ---
+description: Obtém as propriedades que descrevem este thread.
 title: 'IDebugThread2:: getthreadproperties | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5c547ad049fa36231ce108a6cfc406233b972ff2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 293607e30fa8c5d1f4367b23a1f4904f94aa0bed
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893770"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102164520"
 ---
 # <a name="idebugthread2getthreadproperties"></a>IDebugThread2::GetThreadProperties
 Obtém as propriedades que descrevem este thread.
@@ -48,7 +49,7 @@ no Uma combinação de sinalizadores da enumeração [THREADPROPERTY_FIELDS](../
 `ptp`\
 [entrada, saída] Uma estrutura de [threadproperties](../../../extensibility/debugger/reference/threadproperties.md) que é preenchida com as propriedades do thread.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

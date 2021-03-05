@@ -1,4 +1,5 @@
 ---
+description: Cria um enumerador para os parâmetros do método.
 title: 'IDebugMethodField:: EnumParameters | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4c164fa08f4195d685bf7dd2faa120ff030e44c6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 51b0ca4d799bc5943a1effd612947b5822730d37
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837717"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102164988"
 ---
 # <a name="idebugmethodfieldenumparameters"></a>IDebugMethodField::EnumParameters
 Cria um enumerador para os parâmetros do método.
@@ -43,7 +44,7 @@ int EnumParameters(
 `ppParams`\
 fora Retorna um objeto [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) que representa a lista de parâmetros para o método; caso contrário, retornará um valor nulo se não houver parâmetros.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará S_OK ou retornará S_FALSE se não houver parâmetros. Caso contrário, retornará um código de erro.
 
 ## <a name="remarks"></a>Comentários
@@ -53,7 +54,7 @@ fora Retorna um objeto [IEnumDebugFields](../../../extensibility/debugger/refere
 
  Se apenas os tipos dos parâmetros forem necessários, chame o método [EnumArguments](../../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

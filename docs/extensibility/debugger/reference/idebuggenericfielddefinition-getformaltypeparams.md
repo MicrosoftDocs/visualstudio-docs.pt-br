@@ -1,4 +1,5 @@
 ---
+description: Recupera os parâmetros de tipo de acordo com o número de parâmetros.
 title: 'IDebugGenericFieldDefinition:: GetFormalTypeParams | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: aa1401181f844be2e1fa3dfd9e45b627e2daae19
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 593e54c67e762d5ad1643f0481554fe98b5ba019
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904580"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102165469"
 ---
 # <a name="idebuggenericfielddefinitiongetformaltypeparams"></a>IDebugGenericFieldDefinition::GetFormalTypeParams
 Recupera os parâmetros de tipo de acordo com o número de parâmetros.
@@ -52,7 +53,7 @@ fora Matriz de parâmetros de tipo.
 `pcParams`\
 [entrada, saída] Número de parâmetros na `ppParams` matriz.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

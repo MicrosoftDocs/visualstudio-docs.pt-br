@@ -1,4 +1,5 @@
 ---
+description: Essa interface representa uma classe como um tipo.
 title: IDebugClassField | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e8e9ea277ee5e383c6d61528183f43dd01a0040
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1c8f566d7decc344dda17700da6712ff78120a1c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928855"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102164169"
 ---
 # <a name="idebugclassfield"></a>IDebugClassField
 Essa interface representa uma classe como um tipo.

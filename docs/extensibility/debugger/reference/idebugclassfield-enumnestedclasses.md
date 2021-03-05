@@ -1,4 +1,5 @@
 ---
+description: Cria um enumerador para as classes aninhadas nesta classe.
 title: 'IDebugClassField:: EnumNestedClasses | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 63b42df8181ca12da1be2aca6faf1346406b621f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 87538db39df590fd3885f545e5442c7dafecb9a1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877428"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102164260"
 ---
 # <a name="idebugclassfieldenumnestedclasses"></a>IDebugClassField::EnumNestedClasses
 Cria um enumerador para as classes aninhadas nesta classe.
@@ -43,13 +44,13 @@ int EnumNestedClasses(
 `ppEnum`\
 fora Retorna um objeto [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) que representa a lista de classes aninhadas. Retorna um valor nulo se não houver nenhuma classe aninhada.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se for bem-sucedido, retornará S_OK ou retornará S_FALSE se não houver classes aninhadas. Caso contrário, retornará um código de erro.
 
 ## <a name="remarks"></a>Comentários
 Cada elemento da enumeração é um objeto [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) que descreve uma classe aninhada.
 
-Uma classe aninhada é uma classe definida dentro de outra classe. Por exemplo:
+Uma classe aninhada é uma classe definida dentro de outra classe. Por exemplo: 
 
 ```
 class RootClass {

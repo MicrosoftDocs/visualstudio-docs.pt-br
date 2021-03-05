@@ -1,4 +1,5 @@
 ---
+description: Subtrai o valor especificado do contexto atual e retorna um novo contexto.
 title: 'IDebugMemoryContext2:: subtrair | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 71e3191384a0ee45778cb7ee37b7e55e5f673578
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7d77a0fcd4d791eefe98ae908bdf86ba49bec519
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851082"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102165001"
 ---
 # <a name="idebugmemorycontext2subtract"></a>IDebugMemoryContext2::Subtract
 Subtrai o valor especificado do contexto atual e retorna um novo contexto.
@@ -49,7 +50,7 @@ no O número de bytes de memória a serem reduzidos.
 `ppMemCxt`\
 fora Retorna um novo objeto [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
@@ -57,5 +58,5 @@ fora Retorna um novo objeto [IDebugMemoryContext2](../../../extensibility/debugg
 
  Esse método sempre deve produzir um novo contexto, mesmo se o endereço resultante estiver fora do espaço de memória associado a esse contexto. A única exceção a isso é se nenhuma memória puder ser alocada para o novo contexto ou se `ppMemCxt` for um valor nulo (que é um erro).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

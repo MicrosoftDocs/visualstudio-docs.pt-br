@@ -2,7 +2,7 @@
 title: Gerenciar pacotes npm
 description: O Visual Studio ajuda você a gerenciar pacotes usando o npm (gerenciador de pacotes do Node.js)
 ms.custom: seodec18
-ms.date: 04/16/2020
+ms.date: 02/23/2021
 ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 26c750a11c2910a6c6f91e1207d731024af64a5f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b017495d12d654be3e11da7153310b5bcba367d5
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962711"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102165807"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Gerenciar pacotes de npm no Visual Studio
 
@@ -179,5 +179,7 @@ Pode levar vários minutos para instalar um pacote. Verifique o andamento na ins
 * Para projetos Node.js, você deve ter a carga de trabalho de **desenvolvimentoNode.js** instalada para suporte NPM.
 
 * Em alguns cenários, Gerenciador de Soluções pode não mostrar o status correto dos pacotes NPM instalados devido a um problema conhecido descrito [aqui](https://github.com/aspnet/Tooling/issues/479). Por exemplo, o pacote pode aparecer como não instalado quando instalado. Na maioria dos casos, você pode atualizar Gerenciador de Soluções excluindo *package.js*, reiniciando o Visual Studio e adicionando novamente o *package.jsno* arquivo, conforme descrito anteriormente neste artigo. Ou, ao instalar pacotes, você pode usar a janela saída do NPM para verificar o status da instalação.
+
+* Em alguns cenários de ASP.NET Core, o nó NPM no Gerenciador de Soluções pode não estar visível após a compilação do projeto. Para tornar o nó visível novamente, clique com o botão direito do mouse no nó do projeto e escolha **descarregar projeto.** Em seguida, clique com o botão direito do mouse no nó do projeto e escolha **recarregar projeto**.
 
 * Se você encontrar erros ao criar seu aplicativo ou código TypeScript transpiling, verifique se há incompatibilidades de pacotes NPM como uma fonte de erros potencial. Para ajudar a identificar erros, verifique a janela de saída do NPM ao instalar os pacotes, conforme descrito anteriormente neste artigo. Por exemplo, se uma ou mais versões de pacote NPM tiverem sido preteridas e resultarem em um erro, talvez seja necessário instalar uma versão mais recente para corrigir erros. Para obter informações sobre como usar *package.json* para controlar as versões do pacote de npm, confira [Configuração de package.json](../javascript/configure-packages-with-package-json.md).

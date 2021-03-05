@@ -1,4 +1,5 @@
 ---
+description: Recupera informações de tipo sobre a matriz especificada de acordo com seu endereço de depuração.
 title: 'IDebugComPlusSymbolProvider:: GetArrayTypeFromAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8d7e8ce5fa6295d3a076cffe21178df0e8c9c63a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d177f49ad5f86e3b64e62dffdc7408c61d2f3d05
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892938"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102163935"
 ---
 # <a name="idebugcomplussymbolprovidergetarraytypefromaddress"></a>IDebugComPlusSymbolProvider::GetArrayTypeFromAddress
 Recupera informações de tipo sobre a matriz especificada de acordo com seu endereço de depuração.
@@ -57,7 +58,7 @@ no Comprimento em bytes da `pSig` matriz.
 `ppField`\
 fora Retorna o tipo de matriz conforme representado por uma interface [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) .
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo

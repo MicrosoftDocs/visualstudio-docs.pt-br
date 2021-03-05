@@ -1,4 +1,5 @@
 ---
+description: Recupera uma lista de contextos de código para uma determinada posição em um arquivo de origem.
 title: 'IDebugProgram2:: EnumCodeContexts | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2971eba711682781f509757c3986bb76f2e37703
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fd26ee9fe0c6e28695eeca5a77a5b90fbbb25213
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891027"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102164728"
 ---
 # <a name="idebugprogram2enumcodecontexts"></a>IDebugProgram2::EnumCodeContexts
 Recupera uma lista de contextos de código para uma determinada posição em um arquivo de origem.
@@ -47,7 +48,7 @@ no Um objeto [IDebugDocumentPosition2](../../../extensibility/debugger/reference
 
 `ppEnum` fora Retorna um objeto [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md) que contém uma lista de contextos de código.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
