@@ -1,4 +1,5 @@
 ---
+description: Essa interface fornece acesso à ID do processo que possui o objeto cujo endereço é representado por essa interface.
 title: IDebugAddress2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b31efd42d4d51384a09d6f0468484561e32f4397
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 58a3f01472f60996b7094334de8cb2dbd79acac0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944811"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102143955"
 ---
 # <a name="idebugaddress2"></a>IDebugAddress2
 Essa interface fornece acesso à ID do processo que possui o objeto cujo endereço é representado por essa interface.

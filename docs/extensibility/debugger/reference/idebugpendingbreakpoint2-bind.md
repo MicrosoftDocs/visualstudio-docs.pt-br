@@ -1,4 +1,5 @@
 ---
+description: Associa esse ponto de interrupção pendente a um ou mais locais de código.
 title: 'IDebugPendingBreakpoint2:: bind | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6385765c8062040da2f42ba56fcc6e8a16ca02e5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eda2cdef924aec782b18155a92e3a0159b338f08
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99953208"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102143103"
 ---
 # <a name="idebugpendingbreakpoint2bind"></a>IDebugPendingBreakpoint2::Bind
 Associa esse ponto de interrupção pendente a um ou mais locais de código.
@@ -46,7 +47,7 @@ int Bind();
 
  Depois que esse método retorna, o chamador precisa aguardar eventos indicando que o ponto de interrupção pendente está associado ou está com erro antes de assumir que as chamadas para [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) ou [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md). os métodos enumerarão todos os pontos de interrupção de erro ou associados, respectivamente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
 - [IDebugBreakpointBoundEvent2](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md)
 - [IDebugBreakpointErrorEvent2](../../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md)

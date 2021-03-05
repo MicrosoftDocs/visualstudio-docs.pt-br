@@ -1,4 +1,5 @@
 ---
+description: Esse método obtém o contexto de memória ou o objeto que contém o valor atual do símbolo.
 title: 'IDebugBinder:: bind | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8ee9f303223da15bc75adbf31d533848fb017bb1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c373fbdae030de30544c67c1509eb812b746b7f1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901907"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102143647"
 ---
 # <a name="idebugbinderbind"></a>IDebugBinder::Bind
 Esse método obtém o contexto de memória ou o objeto que contém o valor atual do símbolo.
@@ -53,7 +54,7 @@ no O [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) que
 `ppObject`\
 fora Retorna o `IDebugObject` que representa a instância do símbolo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

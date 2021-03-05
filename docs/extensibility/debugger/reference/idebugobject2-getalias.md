@@ -1,4 +1,5 @@
 ---
+description: Obtém o alias associado a este objeto, se houver.
 title: 'IDebugObject2:: getalias | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2f2fa330b98a37f3946ef19bc2f5641b5b525d88
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8c2ac683a5fb4d694b7cf3ab84849b9d7c7df7a3
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99953481"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102143123"
 ---
 # <a name="idebugobject2getalias"></a>IDebugObject2::GetAlias
 Obtém o alias associado a este objeto, se houver.
@@ -43,7 +44,7 @@ int GetAlias(
 `ppAlias`\
 fora Retorna um objeto [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) que representa o alias para este objeto; caso contrário, retorna um valor nulo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará S_OK; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

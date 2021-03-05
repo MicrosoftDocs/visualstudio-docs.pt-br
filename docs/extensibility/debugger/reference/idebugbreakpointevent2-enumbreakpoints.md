@@ -1,4 +1,5 @@
 ---
+description: Cria um enumerador para todos os pontos de interrupção que foram acionados no local do código atual.
 title: 'IDebugBreakpointEvent2:: EnumBreakpoints | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: aaf3cac6d49ef2d09a9952ac41b2bb36262fbc7d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6bccb263fbdfebe1a83dab5f2ce5f570338b6d2e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899044"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102143341"
 ---
 # <a name="idebugbreakpointevent2enumbreakpoints"></a>IDebugBreakpointEvent2::EnumBreakpoints
 Cria um enumerador para todos os pontos de interrupção que foram acionados no local do código atual.
@@ -43,7 +44,7 @@ int EnumBreakpoints(
 `ppEnum`\
 fora Retorna um objeto [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) que enumera todos os pontos de interrupção associados ao local do código atual.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

@@ -1,4 +1,5 @@
 ---
+description: Obtém o estado do ponto de interrupção pendente.
 title: 'IDebugPendingBreakpoint2:: GetState | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 93aae8aea0216adfff533aa9aacd3c5c925e362c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 94e513828ba726b314a6b748992c42bd95a614c4
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940287"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102143045"
 ---
 # <a name="idebugpendingbreakpoint2getstate"></a>IDebugPendingBreakpoint2::GetState
 Obtém o estado do ponto de interrupção pendente.
@@ -44,7 +45,7 @@ int GetState(
 `pState`\
 [entrada, saída] Uma estrutura de [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) que é preenchida com uma descrição desse ponto de interrupção pendente.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

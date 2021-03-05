@@ -1,4 +1,5 @@
 ---
+description: Determina se esse ponto de interrupção pendente pode ser associado a um local de código.
 title: 'IDebugPendingBreakpoint2:: canbind | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 89781298dc9134f80f8f57cc0e008068fa47bad3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 55b51049929941e868803242af8ef12bca368dd8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99953195"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102143084"
 ---
 # <a name="idebugpendingbreakpoint2canbind"></a>IDebugPendingBreakpoint2::CanBind
 Determina se esse ponto de interrupção pendente pode ser associado a um local de código.
@@ -44,7 +45,7 @@ int CanBind (
 `ppErrorEnum`\
 fora Retorna um objeto [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) que contém uma lista de objetos [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) se houver erros.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK.` retornará `S_FALSE` se o ponto de interrupção não puder ser associado, caso em que os erros são retornados pelo `ppErrorEnum` parâmetro. Caso contrário, retornará um código de erro. Retorna `E_BP_DELETED` se o ponto de interrupção foi excluído.
 
 ## <a name="remarks"></a>Comentários

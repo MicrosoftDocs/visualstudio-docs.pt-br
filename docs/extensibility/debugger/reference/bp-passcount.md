@@ -1,4 +1,5 @@
 ---
+description: Descreve a contagem e as condições nas quais um ponto de interrupção condicional é acionado.
 title: BP_PASSCOUNT | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 99e250dab652ff0d63033f8b40423e76975eeee5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9c1e44ede0f39b3d1b33967311365508da6a701d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99902082"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102144150"
 ---
 # <a name="bp_passcount"></a>BP_PASSCOUNT
 Descreve a contagem e as condições nas quais um ponto de interrupção condicional é acionado.
@@ -60,7 +61,7 @@ Namespace: Microsoft. VisualStudio. Debugger. Interop
 
 Assembly: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)
 - [SetPassCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setpasscount.md)

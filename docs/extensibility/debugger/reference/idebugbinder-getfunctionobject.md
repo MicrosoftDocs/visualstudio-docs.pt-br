@@ -1,4 +1,5 @@
 ---
+description: Esse método obtém um objeto IDebugFunctionObject usado para criar parâmetros de função.
 title: 'IDebugBinder:: GetFunctionObject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f7128c97c60b5743ea9759a9449b82e4e909a686
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9868edafb18a129d119a818d9e51363d4964afa2
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939026"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102143643"
 ---
 # <a name="idebugbindergetfunctionobject"></a>IDebugBinder::GetFunctionObject
 Esse método obtém um objeto [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) usado para criar parâmetros de função.
@@ -43,7 +44,7 @@ int GetFunctionObject(
 `ppFunction`\
 fora Retorna a interface [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) que é usada para criar parâmetros de função.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará S_OK; caso contrário, retorna um código de erro.
 
 ## <a name="see-also"></a>Confira também

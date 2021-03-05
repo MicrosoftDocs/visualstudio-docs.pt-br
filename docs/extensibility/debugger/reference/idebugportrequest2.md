@@ -1,4 +1,5 @@
 ---
+description: Esta interface descreve uma porta.
 title: IDebugPortRequest2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 44e0bc66d9f385a41f0f43af7217738e40e69126
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2ca2d1d59c66c87c2dbb0fc256481d35ad590dbe
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887114"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102142615"
 ---
 # <a name="idebugportrequest2"></a>IDebugPortRequest2
 Esta interface descreve uma porta. Essa descrição é usada para adicionar a porta a um fornecedor de porta.

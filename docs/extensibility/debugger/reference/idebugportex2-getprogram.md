@@ -1,4 +1,5 @@
 ---
+description: Obtém o programa associado a um nó de programa.
 title: 'IDebugPortEx2:: getprogram | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a8ed073d873ecb0d46b85d37c355d6c374a7eabc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5bb169ecdbd0dcea188054c96af06da609edf3f7
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99844782"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102142798"
 ---
 # <a name="idebugportex2getprogram"></a>IDebugPortEx2::GetProgram
 Obtém o programa associado a um nó de programa.
@@ -46,10 +47,10 @@ int GetProgram(
 
 `ppProgram` fora Retorna um objeto [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) que representa o programa associado ao nó do programa.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

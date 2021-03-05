@@ -1,4 +1,5 @@
 ---
+description: Esse método avalia a expressão analisada e, opcionalmente, converte o resultado em outro tipo de dados.
 title: 'IDebugParsedExpression:: EvaluateSync | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ff14c10f5563053ce704982455eee6d9dc81b742
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 99760fb35975834186beddf2962ea8402543d088
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99953247"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102143097"
 ---
 # <a name="idebugparsedexpressionevaluatesync"></a>IDebugParsedExpression::EvaluateSync
 Esse método avalia a expressão analisada e, opcionalmente, converte o resultado em outro tipo de dados.
@@ -73,7 +74,7 @@ no O tipo do qual o resultado deve ser convertido. Esse argumento pode ser um va
 `ppResult`\
 fora Retorna a interface [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) que representa os resultados da avaliação.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

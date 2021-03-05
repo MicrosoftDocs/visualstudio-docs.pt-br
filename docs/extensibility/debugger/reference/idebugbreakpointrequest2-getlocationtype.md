@@ -1,4 +1,5 @@
 ---
+description: Obtém o tipo de local do ponto de interrupção dessa solicitação de ponto de interrupção.
 title: 'IDebugBreakpointRequest2:: getlocationtype | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 076a5e70f94594f7b526c0893be51eb2cfa08cdf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ed19d65fc0c29b8cd97b607a0748c48ad52783b2
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887309"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102143370"
 ---
 # <a name="idebugbreakpointrequest2getlocationtype"></a>IDebugBreakpointRequest2::GetLocationType
 Obtém o tipo de local do ponto de interrupção dessa solicitação de ponto de interrupção.
@@ -43,7 +44,7 @@ int GetLocationType(
 `pBPLocationType`\
 fora Retorna um valor da enumeração [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) que descreve o local dessa solicitação de ponto de interrupção.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. Retorna `E_FAIL` se o `bpLocation` campo na estrutura de [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) associada não for válido.
 
 ## <a name="example"></a>Exemplo

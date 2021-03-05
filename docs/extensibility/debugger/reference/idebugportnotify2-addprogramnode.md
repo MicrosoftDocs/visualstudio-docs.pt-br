@@ -1,4 +1,5 @@
 ---
+description: Registra um programa que pode ser depurado com a porta em que está sendo executado.
 title: 'IDebugPortNotify2:: AddProgramNode | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bfafb48aea95cd3ea79997fb2c84621396af210c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 186bfbfd44a88450aeade264020f70e0eddc7fb8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919834"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102142577"
 ---
 # <a name="idebugportnotify2addprogramnode"></a>IDebugPortNotify2::AddProgramNode
 Registra um programa que pode ser depurado com a porta em que está sendo executado.
@@ -43,7 +44,7 @@ int AddProgramNode(
 `pProgramNode`\
 no Um objeto [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) que representa o programa a ser registrado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

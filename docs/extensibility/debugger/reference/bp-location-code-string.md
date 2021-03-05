@@ -1,4 +1,5 @@
 ---
+description: Usado para definir pontos de interrupção de código com base em uma cadeia de caracteres que o usuário pode inserir do ambiente de desenvolvimento integrado (IDE).
 title: BP_LOCATION_CODE_STRING | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 - vssdk
 dev_langs:
 - CPP
-ms.openlocfilehash: 98b85a1b27255902f4cfba9923beda4305ca03d5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9508a4a83894757fb47e35d8db7334bfb144ff59
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923222"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102144371"
 ---
 # <a name="bp_location_code_string"></a>BP_LOCATION_CODE_STRING
 Usado para definir pontos de interrupção de código com base em uma cadeia de caracteres que o usuário pode inserir do ambiente de desenvolvimento integrado (IDE).

@@ -1070,6 +1070,8 @@
       items:
         - name: Hierarquia de chamadas
           href: ide/reference/call-hierarchy.md
+        - name: Prompt de Comando do Desenvolvedor o PowerShell do & Developer
+          href: ide/reference/command-prompt-powershell.md
         - name: Visualizar Alterações
           href: ide/preview-changes.md
         - name: 'Escolher itens da Caixa de Ferramentas, Componentes do WPF'

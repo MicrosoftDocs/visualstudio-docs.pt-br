@@ -1,4 +1,5 @@
 ---
+description: Usado para definir pontos de interrupção de dados baseados em uma cadeia de caracteres que o usuário pode inserir do ambiente de desenvolvimento integrado (IDE).
 title: BP_LOCATION_DATA_STRING | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 - vssdk
 dev_langs:
 - CPP
-ms.openlocfilehash: ce47dc9a3fac9ee56b801e4d2681668f4467f532
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1e4a250843ebbb6ab7680040e3aa296699e184ee
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99902165"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102144345"
 ---
 # <a name="bp_location_data_string"></a>BP_LOCATION_DATA_STRING
 Usado para definir pontos de interrupção de dados baseados em uma cadeia de caracteres que o usuário pode inserir do ambiente de desenvolvimento integrado (IDE).

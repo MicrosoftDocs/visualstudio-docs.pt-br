@@ -1,4 +1,5 @@
 ---
+description: Exibe a caixa de diálogo especificada que permite ao usuário selecionar uma porta.
 title: IDebugPortPicker::D isplayPortPicker | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 49cc4500e887a3fbfcd8f6da8a62c42c75ef56aa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9c07e95343521692d41d045a89a4038f5ff64e7b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929531"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102142551"
 ---
 # <a name="idebugportpickerdisplayportpicker"></a>IDebugPortPicker::DisplayPortPicker
 Exibe a caixa de diálogo especificada que permite ao usuário selecionar uma porta.
@@ -47,7 +48,7 @@ no Identificador da caixa de diálogo pai.
 `pbstrPortId`\
 fora Cadeia de caracteres do identificador de porta.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. Um valor de retorno de `S_FALSE` (ou um valor de retorno de `S_OK` com o `BSTR` definido como `NULL` ) indica que o usuário clicou em **Cancelar**.
 
 ## <a name="see-also"></a>Confira também

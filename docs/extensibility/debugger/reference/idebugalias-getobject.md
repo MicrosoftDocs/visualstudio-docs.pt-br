@@ -1,4 +1,5 @@
 ---
+description: Obtém o objeto para o qual este alias se destina.
 title: 'IDebugAlias:: GetObject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5ff5459903b5259d6005a4ebb01228117c2801db
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 10bcb0bb356907cb3f23b1c470248b9926f329ec
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944778"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102143890"
 ---
 # <a name="idebugaliasgetobject"></a>IDebugAlias::GetObject
 Obtém o objeto para o qual este alias se destina.
@@ -43,9 +44,9 @@ int GetObject(
 `ppObject`\
 fora O [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md) que este alias representa.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará S_OK; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)
 - [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

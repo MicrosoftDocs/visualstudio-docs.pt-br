@@ -1,4 +1,5 @@
 ---
+description: Recupera uma interface de código gerenciado que representa o valor associado a esse alias.
 title: 'IDebugAlias:: GetICorDebugValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2ba5456ba3beabb1d5418d739be2aa74838daa41
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b809e16fefb9306da842f39d93bdb3dd0f7b404f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947171"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102143929"
 ---
 # <a name="idebugaliasgeticordebugvalue"></a>IDebugAlias::GetICorDebugValue
 Recupera uma interface de código gerenciado que representa o valor associado a esse alias.
@@ -43,11 +44,11 @@ int GetICorDebugValue(
 `ppUnk`\
 [fora] `IUnknown` interface que representa o valor associado a este alias. Essa interface pode ser consultada para a `ICorDebugValue` interface.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará S_OK; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
  Esse método se aplica somente a valores gerenciados (o `ICorDebugValue` é uma interface disponível no .NET Framework e é definido no SDK do .NET Framework no arquivo CorDebug. idl).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

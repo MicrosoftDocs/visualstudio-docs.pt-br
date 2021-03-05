@@ -1,4 +1,5 @@
 ---
+description: Inicia um arquivo executável.
 title: 'IDebugPortEx2:: LaunchSuspended | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3cfaf6dd332f17bd934a55f700e4d28096fba8b8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b5982ad665333aa4d11e2098d3b148db88e77c32
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99844769"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102142812"
 ---
 # <a name="idebugportex2launchsuspended"></a>IDebugPortEx2::LaunchSuspended
 Inicia um arquivo executável.
@@ -78,7 +79,7 @@ no Identificador para um fluxo de saída de erro alternativo. Pode ser 0 se o re
 `ppPortProcess`\
 fora Retorna um objeto [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) que representa o processo iniciado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

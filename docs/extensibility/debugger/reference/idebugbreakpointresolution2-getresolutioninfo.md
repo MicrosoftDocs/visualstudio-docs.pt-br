@@ -1,4 +1,5 @@
 ---
+description: Obtém as informações de resolução do ponto de interrupção que descrevem esse ponto de interrupção.
 title: 'IDebugBreakpointResolution2:: GetResolutionInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e31bdd47297a532a2eba69513aef01554791690e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d6982053fc7fb723a2c1efe93c27d9ddf7f27a3d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881042"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102143396"
 ---
 # <a name="idebugbreakpointresolution2getresolutioninfo"></a>IDebugBreakpointResolution2::GetResolutionInfo
 Obtém as informações de resolução do ponto de interrupção que descrevem esse ponto de interrupção.
@@ -48,7 +49,7 @@ no Uma combinação de sinalizadores da enumeração [BPRESI_FIELDS](../../../ex
 `pBPResolutionInfo`\
 fora A estrutura de [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) a ser preenchida com informações sobre este ponto de interrupção.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="example"></a>Exemplo
