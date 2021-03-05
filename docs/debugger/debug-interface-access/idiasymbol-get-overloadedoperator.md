@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se o tipo de dados definido pelo usuário tem operadores sobrecarregados.
 title: IDiaSymbol::get_overloadedOperator | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b42c1c6a5a05d18ec4846b950bce46f4fa26787
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c30cfd825379e88293aa8f32b9b994798ea5f8a8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862832"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155862"
 ---
 # <a name="idiasymbolget_overloadedoperator"></a>IDiaSymbol::get_overloadedOperator
 Recupera um sinalizador que especifica se o tipo de dados definido pelo usuário tem operadores sobrecarregados.
@@ -35,11 +36,11 @@ HRESULT get_overloadedOperator (
 
 fora Retorna `TRUE` se o tipo de dados definido pelo usuário tem operadores sobrecarregados; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

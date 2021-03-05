@@ -1,4 +1,5 @@
 ---
+description: Recupera um enumerador de compilandos que têm números de linha referenciando este arquivo.
 title: 'IDiaSourceFile:: get_compilands | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 339097280cc3ddf88082f7c18c65693fd8e30702
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2161501bb55385fa9967d6b841b938c1482f20ce
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854979"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156947"
 ---
 # <a name="idiasourcefileget_compilands"></a>IDiaSourceFile::get_compilands
 Recupera um enumerador de compilandos que têm números de linha referenciando este arquivo.
@@ -35,9 +36,9 @@ HRESULT get_compilands (
 
 fora Retorna um objeto [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) que contém uma lista de todos os compilandos que têm números de linha referenciando esse arquivo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

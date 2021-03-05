@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se o compiland) contém informações de depuração.
 title: IDiaSymbol::get_hasDebugInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f8914c0eae31e7faac8cea523f4c558a9f00749a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8c1ca848ec33e31fbb1f6e8708fd41930931d5f6
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863385"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156324"
 ---
 # <a name="idiasymbolget_hasdebuginfo"></a>IDiaSymbol::get_hasDebugInfo
 Recupera um sinalizador que especifica se o [compiland](../../debugger/debug-interface-access/compiland.md) contém informações de depuração.
@@ -35,7 +36,7 @@ HRESULT get_hasDebugInfo(
 
 fora Retorna `TRUE` se o compiland contém informações de depuração; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -48,5 +49,5 @@ fora Retorna `TRUE` se o compiland contém informações de depuração; caso co
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

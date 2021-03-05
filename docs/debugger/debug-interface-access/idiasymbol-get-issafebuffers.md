@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se a diretiva de pré-processador para um buffer seguro é usada.
 title: 'IDiaSymbol:: get_isSafeBuffers | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c32382468c4d67dae9e94a3fc9882fd61213cf00
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b9fd2114a1e4272296e97fa498c5c9137b49adeb
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863119"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156051"
 ---
 # <a name="idiasymbolget_issafebuffers"></a>IDiaSymbol::get_isSafeBuffers
 Recupera um sinalizador que especifica se a diretiva de pré-processador para um buffer seguro é usada. Use quando a [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) for definida como `SymTagFunction` .
@@ -35,7 +36,7 @@ HRESULT get_isSafeBuffers(
 
 fora Retorna `TRUE` se o ponteiro usa uma diretiva de pré-processador para um buffer seguro; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -50,6 +51,6 @@ fora Retorna `TRUE` se o ponteiro usa uma diretiva de pré-processador para um b
 
  DLL: msdia100.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [strict_gs_check](/cpp/preprocessor/strict-gs-check)

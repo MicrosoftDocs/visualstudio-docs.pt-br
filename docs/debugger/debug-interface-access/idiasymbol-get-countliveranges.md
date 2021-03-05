@@ -1,4 +1,5 @@
 ---
+description: Recupera o número de intervalos de endereços válidos associados ao símbolo local.
 title: IDiaSymbol::get_countLiveRanges | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 03db9af960ac22c7a1ed869fbdfa4ddfebc377c1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d05c962a9b5b5e2d939b1b99d926443c8d876ac9
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854377"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156352"
 ---
 # <a name="idiasymbolget_countliveranges"></a>IDiaSymbol::get_countLiveRanges
 Recupera o número de intervalos de endereços válidos associados ao símbolo local.
@@ -35,7 +36,7 @@ HRESULT get_countLiveRanges (
 
 fora Retorna o número de intervalos de endereços.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="requirements"></a>Requisitos
@@ -45,5 +46,5 @@ fora Retorna o número de intervalos de endereços.
 
  DLL: msdia100.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

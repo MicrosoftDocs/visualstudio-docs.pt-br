@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que indica se o módulo foi compilado com a opção de compilador/hotpatch (Create Hotpatchable Image)).
 title: IDiaSymbol::get_isHotpatchable | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9433743788663e9a3975f7bb2b402d930b0b4837
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8af3d00d15bb521dda05ce345a93b16a47f8539b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854090"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156184"
 ---
 # <a name="idiasymbolget_ishotpatchable"></a>IDiaSymbol::get_isHotpatchable
 Recupera um sinalizador que indica se o módulo foi compilado com a opção de compilador [/hotpatch (Create Hotpatchable Image)](/cpp/build/reference/hotpatch-create-hotpatchable-image) .
@@ -35,7 +36,7 @@ HRESULT get_isHotpatchable(
 
 fora Retorna `TRUE` se o módulo é Hot-patchable; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
@@ -51,6 +52,6 @@ fora Retorna `TRUE` se o módulo é Hot-patchable; caso contrário, retorna `FAL
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)

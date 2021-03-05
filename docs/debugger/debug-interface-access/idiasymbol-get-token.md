@@ -1,4 +1,5 @@
 ---
+description: Recupera o token de metadados de uma função ou variável gerenciada.
 title: IDiaSymbol::get_token | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d8da3cbfa085eea44af8a1caf7489aaaab83f60e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b6b71a3bdd7c4223607cdbcc883d299101823a54
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853495"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155631"
 ---
 # <a name="idiasymbolget_token"></a>IDiaSymbol::get_token
 Recupera o token de metadados de uma função ou variável gerenciada.
@@ -35,11 +36,11 @@ HRESULT get_token (
 
 fora Retorna o token de metadados de uma função ou variável gerenciada.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

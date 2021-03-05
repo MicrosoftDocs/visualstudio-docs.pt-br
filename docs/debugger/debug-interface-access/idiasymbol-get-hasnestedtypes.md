@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se o tipo de dados definido pelo usuário tem definições de tipo aninhado.
 title: IDiaSymbol::get_hasNestedTypes | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 117bbed95e4adf79270072888c8ac1ac71215433
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b52efb012ef713c2308e3fc7b6b28367327e8311
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863308"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156282"
 ---
 # <a name="idiasymbolget_hasnestedtypes"></a>IDiaSymbol::get_hasNestedTypes
 Recupera um sinalizador que especifica se o tipo de dados definido pelo usuário tem definições de tipo aninhado.
@@ -35,7 +36,7 @@ HRESULT get_hasNestedTypes (
 
 fora Retorna `TRUE` se o tipo de dados definido pelo usuário tiver definições de tipo aninhadas; caso contrário, retornará `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -48,5 +49,5 @@ fora Retorna `TRUE` se o tipo de dados definido pelo usuário tiver definições
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

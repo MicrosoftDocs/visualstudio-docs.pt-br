@@ -1,4 +1,5 @@
 ---
+description: Recupera a ID do registro que contém um ponteiro de base para os parâmetros.
 title: IDiaSymbol::get_paramBasePointerRegisterId | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f2ea60722775d706bdbf4753c9dd8d6e0b18b20
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 25430f835ffedce3fa890c189cabc358f160a4ba
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862825"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155855"
 ---
 # <a name="idiasymbolget_parambasepointerregisterid"></a>IDiaSymbol::get_paramBasePointerRegisterId
 Recupera a ID do registro que contém um ponteiro de base para os parâmetros. Use quando a [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) for definida como `SymTagFunction` .
@@ -35,7 +36,7 @@ HRESULT get_paramBasePointerRegisterId (
 
 fora Retorna a ID do registro que contém um ponteiro de base para os parâmetros.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -50,5 +51,5 @@ fora Retorna a ID do registro que contém um ponteiro de base para os parâmetro
 
  DLL: msdia100.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

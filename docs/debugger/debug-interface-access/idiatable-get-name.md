@@ -1,4 +1,5 @@
 ---
+description: Recupera o nome da tabela.
 title: IDiaTable::get_name | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 127beb471a44c4edfd5a070451f369ec54452fe9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8181b0950fc1c985f64b4d978dcaeef5ae663641
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853299"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155477"
 ---
 # <a name="idiatableget_name"></a>IDiaTable::get_name
 Recupera o nome da tabela.
@@ -35,8 +36,8 @@ HRESULT get_name (
 
 fora Retorna o nome da tabela.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaTable](../../debugger/debug-interface-access/idiatable.md)

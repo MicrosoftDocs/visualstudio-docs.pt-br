@@ -1,4 +1,5 @@
 ---
+description: Retorna o início do intervalo de endereços no qual o símbolo local é válido.
 title: IDiaSymbol::get_liveRangeStartRelativeVirtualAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 38b8d66146b840cabe457784a072d55459ffa646
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 39ee479721a7168aae5504b58495cfb536f5b38a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853922"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156037"
 ---
 # <a name="idiasymbolget_liverangestartrelativevirtualaddress"></a>IDiaSymbol::get_liveRangeStartRelativeVirtualAddress
 Retorna o início do intervalo de endereços no qual o símbolo local é válido.
@@ -35,7 +36,7 @@ HRESULT get_liveRangeStartRelativeVirtualAddress (
 
 fora Retorna o início do intervalo de endereços.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. O endereço virtual relativo retornado é o início do intervalo no qual o símbolo é válido.
 
 > [!NOTE]
@@ -50,5 +51,5 @@ fora Retorna o início do intervalo de endereços.
 
  DLL: msdia100.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

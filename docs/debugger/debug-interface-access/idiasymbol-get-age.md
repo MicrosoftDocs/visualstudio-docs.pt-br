@@ -1,4 +1,5 @@
 ---
+description: Recupera o valor de idade de um arquivo. pdb.
 title: IDiaSymbol::get_age | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d9d7ebaaafa1e01ef081aa96d64170ac59922dc8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4d4c252f66f297715f710d340e583d0dcb087b10
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863588"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156548"
 ---
 # <a name="idiasymbolget_age"></a>IDiaSymbol::get_age
 Recupera o valor de idade de um arquivo. pdb.
@@ -35,7 +36,7 @@ HRESULT get_age (
 
 fora Retorna o valor de idade de um arquivo. pdb.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
@@ -51,5 +52,5 @@ fora Retorna o valor de idade de um arquivo. pdb.
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

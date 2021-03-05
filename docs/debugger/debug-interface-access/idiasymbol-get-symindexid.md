@@ -1,4 +1,5 @@
 ---
+description: Recupera o identificador de símbolo exclusivo.
 title: IDiaSymbol::get_symIndexId | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 810de26d9bef93308744a161f6638fb61913dea2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 89edbd90e8577849f00bfe2661f6ad4f6abb181a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853558"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155736"
 ---
 # <a name="idiasymbolget_symindexid"></a>IDiaSymbol::get_symIndexId
 Recupera o identificador de símbolo exclusivo.
@@ -35,7 +36,7 @@ HRESULT get_symIndexId (
 
 fora Retorna a ID do símbolo do símbolo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
@@ -44,5 +45,5 @@ fora Retorna a ID do símbolo do símbolo.
 ## <a name="remarks"></a>Comentários
  O identificador é um valor exclusivo criado pelo DIA SDK para marcar todos os símbolos como exclusivos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

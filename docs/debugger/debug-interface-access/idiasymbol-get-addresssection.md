@@ -1,4 +1,5 @@
 ---
+description: Recupera a parte da seção de um local de endereço.
 title: IDiaSymbol::get_addressSection | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 274b2e4820c78618df8f048cd3607a9ec9436500
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3e0b6554011a29a7b90d1d7c55deefced01b27c3
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863609"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156583"
 ---
 # <a name="idiasymbolget_addresssection"></a>IDiaSymbol::get_addressSection
 Recupera a parte da seção de um local de endereço. Use quando a [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) for definida como `LocIsStatic` .
@@ -35,7 +36,7 @@ HRESULT get_addressSection (
 
 fora Retorna a parte da seção de um local de endereço.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -53,6 +54,6 @@ fora Retorna a parte da seção de um local de endereço.
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md)

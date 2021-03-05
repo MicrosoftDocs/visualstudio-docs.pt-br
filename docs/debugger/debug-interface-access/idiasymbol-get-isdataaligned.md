@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se o tipo definido pelo usuário (UDT) foi alinhado a algum limite de memória específico.
 title: IDiaSymbol::get_isDataAligned | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f2270a960eda7942216751be90241e4f896ba5ea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9e32df5e095f7f7af332e29a8f9899d6f1f5351e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854104"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156198"
 ---
 # <a name="idiasymbolget_isdataaligned"></a>IDiaSymbol::get_isDataAligned
 Recupera um sinalizador que especifica se o tipo definido pelo usuário (UDT) foi alinhado a algum limite de memória específico.
@@ -35,7 +36,7 @@ HRESULT get_isDataAligned(
 
 fora Retorna `TRUE` se o UDT foi alinhado a algum limite de memória; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
@@ -51,5 +52,5 @@ fora Retorna `TRUE` se o UDT foi alinhado a algum limite de memória; caso contr
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

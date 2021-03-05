@@ -1,4 +1,5 @@
 ---
+description: Retorna a parte de deslocamento do endereço inicial do intervalo no qual o símbolo local é válido.
 title: IDiaSymbol::get_liveRangeStartAddressOffset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d7c2e80ebbd7cef116b27d6c3b9a40ef21fd38d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 41cdaaa1035a27294f3172c6533da2f682ff69a7
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853929"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156030"
 ---
 # <a name="idiasymbolget_liverangestartaddressoffset"></a>IDiaSymbol::get_liveRangeStartAddressOffset
 Retorna a parte de deslocamento do endereço inicial do intervalo no qual o símbolo local é válido.
@@ -35,7 +36,7 @@ HRESULT get_liveRangeStartAddressOffset (
 
 fora Retorna a parte de deslocamento do intervalo de endereços inicial.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 > [!NOTE]
@@ -53,5 +54,5 @@ fora Retorna a parte de deslocamento do intervalo de endereços inicial.
 
  DLL: msdia100.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

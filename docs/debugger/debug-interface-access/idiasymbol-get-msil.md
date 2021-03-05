@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se o símbolo refere-se ao código MSIL (Microsoft Intermediate Language).
 title: IDiaSymbol::get_msil | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 89e14e118c6d9f0a04cfe2c29de345a88a0fc63c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 322b01e97507da4940aea02fe461da0b19b7995c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853859"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155946"
 ---
 # <a name="idiasymbolget_msil"></a>IDiaSymbol::get_msil
 Recupera um sinalizador que especifica se o símbolo refere-se ao código MSIL (Microsoft Intermediate Language).
@@ -35,11 +36,11 @@ HRESULT get_msil (
 
 fora Retorna `TRUE` se o símbolo se refere ao código MSIL; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,4 +1,5 @@
 ---
+description: Facilita a movimentação da pilha usando o arquivo de banco de dados de depuração do programa (. pdb).
 title: IDiaStackWalkHelper | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b84661f5cd51da17cf20577490b2fe458e71ef71
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fb014ebf703a0775e4f18208bc17d74a3fa29f12
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863735"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156737"
 ---
 # <a name="idiastackwalkhelper"></a>IDiaStackWalkHelper
 Facilita a movimentação da pilha usando o arquivo de banco de dados de depuração do programa (. pdb).
@@ -58,7 +59,7 @@ IDiaStackWalkHelper: IUnknown
 
  DLL: msdia80.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Interfaces (SDK de Acesso à Interface de Depuração)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)

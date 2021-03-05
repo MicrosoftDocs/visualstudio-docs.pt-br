@@ -1,4 +1,5 @@
 ---
+description: Recupera o carimbo de data/hora do arquivo executável subjacente.
 title: IDiaSymbol::get_timeStamp | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 43556164d3b3713f827797c0b5b8325b67299059
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 652956c4a49d76beeaa5de2dbb607e1ac80f61b9
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862587"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155638"
 ---
 # <a name="idiasymbolget_timestamp"></a>IDiaSymbol::get_timeStamp
 Recupera o carimbo de data/hora do arquivo executável subjacente.
@@ -35,11 +36,11 @@ HRESULT get_timeStamp (
 
 fora Retorna o carimbo de data/hora do arquivo executável subjacente.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,4 +1,5 @@
 ---
+description: Recupera uma matriz de valores de identificador de tipo específicos do compilador para este símbolo.
 title: IDiaSymbol::get_typeIds | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 31cff55617e21c8ed750800fec982f2b1492d977
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 04a39af21ebb8a409656bd8b8ae0b4323da33c60
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862566"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155610"
 ---
 # <a name="idiasymbolget_typeids"></a>IDiaSymbol::get_typeIds
 Recupera uma matriz de valores de identificador de tipo específicos do compilador para este símbolo.
@@ -45,11 +46,11 @@ fora Retorna o número de `typeIds` gravados ou, se `typeIds` for `NULL` , o nú
 
 fora Uma matriz que deve ser preenchida com os identificadores de tipo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

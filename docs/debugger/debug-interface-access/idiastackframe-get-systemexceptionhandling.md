@@ -1,4 +1,5 @@
 ---
+description: 'IDiaStackFrame:: get_systemExceptionHandling recupera um sinalizador que indica se a manipulação de exceção do sistema está em vigor.'
 title: IDiaStackFrame::get_systemExceptionHandling | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a8211c1fc7dfc87b16f89c1f6dd181e92ec68f36
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 976445f34dcbfff5c96bf4d5fdd4a1ebedc8bd03
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854846"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156884"
 ---
 # <a name="idiastackframeget_systemexceptionhandling"></a>IDiaStackFrame::get_systemExceptionHandling
 Recupera um sinalizador que indica se a manipulação de exceção do sistema está em vigor.
@@ -35,7 +36,7 @@ HRESULT get_systemExceptionHandling (
 
 fora Retorna `TRUE` se a manipulação de exceção do sistema está em vigor para este quadro; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se a propriedade não tem suporte. Caso contrário, retornará um código de erro.
 
 ## <a name="remarks"></a>Comentários
@@ -43,6 +44,6 @@ fora Retorna `TRUE` se a manipulação de exceção do sistema está em vigor pa
 
  Para determinar se a manipulação de exceção do C++ está em vigor, chame o método [IDiaStackFrame:: get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-cplusplusexceptionhandling.md) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)
 - [IDiaStackFrame::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-cplusplusexceptionhandling.md)

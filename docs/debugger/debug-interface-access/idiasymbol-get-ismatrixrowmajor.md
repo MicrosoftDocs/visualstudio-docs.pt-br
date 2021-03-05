@@ -1,4 +1,5 @@
 ---
+description: Especifica se a matriz é a linha principal.
 title: IDiaSymbol::get_isMatrixRowMajor | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f211c7c8d57b02dc6fdc615a253434c005152b60
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5d96dcde53bf09d8705964e9c01e2d6ca650f744
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854083"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156177"
 ---
 # <a name="idiasymbolget_ismatrixrowmajor"></a>IDiaSymbol::get_isMatrixRowMajor
 Especifica se a matriz é a linha principal.
@@ -32,8 +33,8 @@ HRESULT get_isMatrixRowMajor(
 
 fora Um ponteiro para um `BOOL` que especifica se a matriz é a linha principal.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

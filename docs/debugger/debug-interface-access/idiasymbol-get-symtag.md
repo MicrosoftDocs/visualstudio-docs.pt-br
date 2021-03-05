@@ -1,4 +1,5 @@
 ---
+description: Recupera o classificador de tipo de símbolo.
 title: IDiaSymbol::get_symTag | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9421807871a173535aaded1064133dcef683f513
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5d8988efac8f29ec587a48568a9b61a40d7c710b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862671"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155729"
 ---
 # <a name="idiasymbolget_symtag"></a>IDiaSymbol::get_symTag
 Recupera o classificador de tipo de símbolo.
@@ -35,7 +36,7 @@ HRESULT get_symTag (
 
 fora Retorna um valor da enumeração de [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) que especifica o classificador de tipo de símbolo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -49,6 +50,6 @@ DWORD       tag = 0;
 pType->get_symTag( &tag );
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)

@@ -1,4 +1,5 @@
 ---
+description: Recupera o símbolo que contém o endereço virtual especificado.
 title: IDiaStackWalkHelper::symbolForVA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d6944e2736fb418581306fa25b4541471335488f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4f75ba05573c5c41baea3ab24ec5b7d06c916c0e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854706"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156743"
 ---
 # <a name="idiastackwalkhelpersymbolforva"></a>IDiaStackWalkHelper::symbolForVA
 Recupera o símbolo que contém o endereço virtual especificado.
@@ -40,9 +41,9 @@ no O endereço virtual que está contido no símbolo solicitado. O símbolo deve
 
 fora Um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que representa o símbolo no endereço especificado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

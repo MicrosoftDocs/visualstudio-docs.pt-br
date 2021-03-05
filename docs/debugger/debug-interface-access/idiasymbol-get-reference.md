@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se um tipo de ponteiro é uma referência.
 title: IDiaSymbol::get_reference | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b2337dbe13b6d6fed1b12bbcee86f943831dff3d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 278a146da28b3402c8586b96ab1053250bf8f2c0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862769"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155806"
 ---
 # <a name="idiasymbolget_reference"></a>IDiaSymbol::get_reference
 Recupera um sinalizador que especifica se um tipo de ponteiro é uma referência.
@@ -35,11 +36,11 @@ HRESULT get_reference (
 
 fora Retorna `TRUE` se um tipo de ponteiro é uma referência; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

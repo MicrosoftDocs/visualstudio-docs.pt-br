@@ -1,4 +1,5 @@
 ---
+description: Recupera o endereço base do quadro.
 title: 'IDiaStackFrame:: get_base | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a842f9bb96376acd1a712ee96caec6106356e9a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d62e6ce291b8f45768c6e533278496bb36e53b8d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863973"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156912"
 ---
 # <a name="idiastackframeget_base"></a>IDiaStackFrame::get_base
 Recupera o endereço base do quadro.
@@ -35,8 +36,8 @@ HRESULT get_base (
 
 fora Retorna o endereço base.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se a propriedade não tem suporte. Caso contrário, retornará um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

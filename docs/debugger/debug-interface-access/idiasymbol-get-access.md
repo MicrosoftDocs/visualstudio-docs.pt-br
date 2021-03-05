@@ -1,4 +1,5 @@
 ---
+description: Recupera o modificador de acesso de um membro de classe.
 title: IDiaSymbol::get_access | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a25d2eb12529461a9787deadf3f3babff6b6cbe
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 691af7faecf964bf80fc13a8b4b50f079f16f3fb
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863665"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156604"
 ---
 # <a name="idiasymbolget_access"></a>IDiaSymbol::get_access
 Recupera o modificador de acesso de um membro de classe.
@@ -35,7 +36,7 @@ HRESULT get_access (
 
 fora Retorna um valor da enumeração de [enumeração CV_access_e](../../debugger/debug-interface-access/cv-access-e.md) que especifica o modificador de acesso de um membro de classe.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -48,6 +49,6 @@ fora Retorna um valor da enumeração de [enumeração CV_access_e](../../debugg
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração CV_access_e](../../debugger/debug-interface-access/cv-access-e.md)

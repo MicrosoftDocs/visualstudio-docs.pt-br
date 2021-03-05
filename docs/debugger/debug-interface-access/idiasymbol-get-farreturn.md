@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se a função contém um retorno distante.
 title: IDiaSymbol::get_farReturn | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f0f06b6fa14af959d051409ce721807fc939f8ce
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6bebf0d1f61c6cf1dc21528e44703de049d247c1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863420"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156338"
 ---
 # <a name="idiasymbolget_farreturn"></a>IDiaSymbol::get_farReturn
 Recupera um sinalizador que especifica se a função contém um retorno distante.
@@ -35,7 +36,7 @@ HRESULT get_farReturn(
 
 no Retorna `TRUE` se a função usa um retorno distante, caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -48,5 +49,5 @@ no Retorna `TRUE` se a função usa um retorno distante, caso contrário, retorn
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

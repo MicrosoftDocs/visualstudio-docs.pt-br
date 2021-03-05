@@ -1,4 +1,5 @@
 ---
+description: Recupera o deslocamento do local do símbolo.
 title: IDiaSymbol::get_offset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e6469180cada412fe5f08db1bd982f5a6e250e9e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8c5c3e59596fdfc1e769710f8459620303e72d6a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853740"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155897"
 ---
 # <a name="idiasymbolget_offset"></a>IDiaSymbol::get_offset
 Recupera o deslocamento do local do símbolo. Use quando a [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md) for `LocIsRegRel` ou `LocIsBitField` .
@@ -35,7 +36,7 @@ HRESULT get_offset (
 
 fora Retorna o deslocamento em bytes do local do símbolo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -51,6 +52,6 @@ fora Retorna o deslocamento em bytes do local do símbolo.
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração LocationType](../../debugger/debug-interface-access/locationtype.md)

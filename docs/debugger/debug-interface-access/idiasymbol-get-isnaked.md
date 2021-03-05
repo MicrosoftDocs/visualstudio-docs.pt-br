@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se a função tem o atributo Naked (ou seja, a função não tem um prólogo ou código epílogo adicionado pelo compilador).
 title: IDiaSymbol::get_isNaked | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c9e905cc68bb612d9a59bb1780d08561716abca8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6ec1d273ce826a87ae658f7ed22fe7680edad25d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863140"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156156"
 ---
 # <a name="idiasymbolget_isnaked"></a>IDiaSymbol::get_isNaked
 Recupera um sinalizador que especifica se a função tem o atributo [Naked](/cpp/cpp/naked-cpp) (ou seja, a função não tem um prólogo ou código epílogo adicionado pelo compilador).
@@ -35,7 +36,7 @@ HRESULT get_isNaked(
 
 fora Retorna `TRUE` se a função tem o `naked` atributo; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -48,6 +49,6 @@ fora Retorna `TRUE` se a função tem o `naked` atributo; caso contrário, retor
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Chamadas de função Naked](/cpp/cpp/naked-function-calls)

@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que indica se o símbolo foi gerado pelo compilador.
 title: IDiaSymbol::get_compilerGenerated | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d73abdd735131c0af9e776dfcd41772b240059f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b47e93b37b3aded2526be713feeb11c3ee837300
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854454"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156422"
 ---
 # <a name="idiasymbolget_compilergenerated"></a>IDiaSymbol::get_compilerGenerated
 Recupera um sinalizador que indica se o símbolo foi gerado pelo compilador.
@@ -35,7 +36,7 @@ HRESULT get_compilerGenerated (
 
 fora Retorna `TRUE` se o compilador gerou o símbolo; caso contrário, retorna `FALSE` se o símbolo foi gerado a partir da fonte gravada pelo usuário.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
@@ -48,5 +49,5 @@ fora Retorna `TRUE` se o compilador gerou o símbolo; caso contrário, retorna `
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

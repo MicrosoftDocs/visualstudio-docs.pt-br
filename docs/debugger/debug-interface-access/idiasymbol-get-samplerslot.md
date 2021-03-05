@@ -1,4 +1,5 @@
 ---
+description: Recupera o slot de amostra.
 title: IDiaSymbol::get_samplerSlot | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 70463ad786afda31f6cba97131582e16820d64dc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f0b6ef05dd1d89328e079380381d8e5d06ed67dc
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862734"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155785"
 ---
 # <a name="idiasymbolget_samplerslot"></a>IDiaSymbol::get_samplerSlot
 Recupera o slot de amostra.
@@ -32,8 +33,8 @@ HRESULT get_samplerSlot(
 
 fora Um ponteiro para um `DWORD` que contém o slot de amostra.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

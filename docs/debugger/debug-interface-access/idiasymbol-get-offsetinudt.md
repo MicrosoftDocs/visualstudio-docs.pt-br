@@ -1,4 +1,5 @@
 ---
+description: Recupera o deslocamento para o início de um tipo definido pelo usuário (UDT) de um membro no UDT.
 title: IDiaSymbol::get_offsetInUdt | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 81dc8975b415ca821fbfb89848cad7d1d02177b3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2f02c684ad4a21c64ca45aefa8a9da765e5549fe
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862839"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155890"
 ---
 # <a name="idiasymbolget_offsetinudt"></a>IDiaSymbol::get_offsetInUdt
 Recupera o deslocamento para o início de um tipo definido pelo usuário (UDT) de um membro no UDT.
@@ -35,7 +36,7 @@ HRESULT get_offsetInUdt(
 
 fora Retorna o deslocamento em bytes do local do símbolo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -51,5 +52,5 @@ fora Retorna o deslocamento em bytes do local do símbolo.
 
  DLL: msdia100.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

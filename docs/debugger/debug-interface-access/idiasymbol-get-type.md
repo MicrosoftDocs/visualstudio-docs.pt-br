@@ -1,4 +1,5 @@
 ---
+description: Recupera o símbolo que representa o tipo deste símbolo.
 title: IDiaSymbol::get_type | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d739764d540c67d8b776770c400f499ad49fa7fb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f0f6e86eaa78fd57d3cb62b1602111df1406f1bf
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862573"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155624"
 ---
 # <a name="idiasymbolget_type"></a>IDiaSymbol::get_type
 Recupera o símbolo que representa o tipo deste símbolo.
@@ -35,7 +36,7 @@ HRESULT get_type (
 
 fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que representa o tipo deste símbolo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -57,7 +58,7 @@ if (SUCCEEDED(pType->get_type( &pBaseType ))) {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaSymbol::get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)
 - [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)

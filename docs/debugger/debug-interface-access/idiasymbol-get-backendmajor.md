@@ -1,4 +1,5 @@
 ---
+description: Recupera o número de versão principal de back-end do compilador.
 title: IDiaSymbol::get_backEndMajor | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 725e08bbe9ae41dc44fb90033bec994a9ca45ab6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1ead97e4fd347829f202dc60d136178414f25d5a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863560"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156485"
 ---
 # <a name="idiasymbolget_backendmajor"></a>IDiaSymbol::get_backEndMajor
 Recupera o número de versão principal de back-end do compilador.
@@ -35,7 +36,7 @@ HRESULT get_backEndMajor (
 
 fora Retorna o número de versão principal de back-end. Consulte Observações.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]

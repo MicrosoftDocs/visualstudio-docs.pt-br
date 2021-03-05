@@ -1,4 +1,5 @@
 ---
+description: Recupera o tipo de um ponteiro de tabela base virtual.
 title: IDiaSymbol::get_virtualBaseTableType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e31fd1b8d3ea014b5fde2f57969871fe4237800a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f67affafd1984f811432a0b69fdcdfec0521e377
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862433"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155512"
 ---
 # <a name="idiasymbolget_virtualbasetabletype"></a>IDiaSymbol::get_virtualBaseTableType
 Recupera o tipo de um ponteiro de tabela base virtual.
@@ -36,7 +37,7 @@ HRESULT get_virtualBaseTableType(
 |---------------|-----------------|
 |`pRetVal`|fora Retorna um objeto [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) que especifica o tipo de tabela base.|
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]

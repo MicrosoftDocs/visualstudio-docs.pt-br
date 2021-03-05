@@ -1,4 +1,5 @@
 ---
+description: Recupera parte ou todo um nome não decorado para um nome de C++ decorado (vinculação).
 title: IDiaSymbol::get_undecoratedNameEx | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b3d34c362a64107bff94e271c01b57d45d09cf8d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 35e1dcb2704b4a8e76fe8d7ffb172f0846fbdc78
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862545"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155526"
 ---
 # <a name="idiasymbolget_undecoratednameex"></a>IDiaSymbol::get_undecoratedNameEx
 Recupera parte ou todo um nome não decorado para um nome de C++ decorado (vinculação).
@@ -40,7 +41,7 @@ no Especifica uma combinação de sinalizadores que controlam o que é retornado
 
 fora Retorna o nome não decorado para um nome decorado em C++.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -75,5 +76,5 @@ fora Retorna o nome não decorado para um nome decorado em C++.
 |UNDNAME_NO_IDENT_CHAR_CHECK|0x10000|Suprime a verificação de caracteres de identificador válidos.|
 |UNDNAME_NO_PTR64|0x20000|Não inclui ptr64 na saída.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

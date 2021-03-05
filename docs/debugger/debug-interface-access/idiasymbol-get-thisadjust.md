@@ -1,4 +1,5 @@
 ---
+description: Recupera o ajuste lógico deste ajustador para o método.
 title: IDiaSymbol::get_thisAdjust | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ae752826e1e57527087140ab1ecdad7b52e25ce
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cedb234c324f08f9de0a8c51abd5609b6b061612
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862594"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155652"
 ---
 # <a name="idiasymbolget_thisadjust"></a>IDiaSymbol::get_thisAdjust
 Recupera o `this` ajustador lógico para o método.
@@ -35,7 +36,7 @@ HRESULT get_thisAdjust (
 
 fora Retorna o `this` ajustador lógico para o método.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -44,5 +45,5 @@ fora Retorna o `this` ajustador lógico para o método.
 ## <a name="remarks"></a>Comentários
  Em alguns casos de herança múltipla, o próprio método deve calcular um `this` valor verdadeiro adicionando um deslocamento a `this` .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

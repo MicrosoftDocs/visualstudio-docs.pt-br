@@ -1,4 +1,5 @@
 ---
+description: Recupera o número de versão secundária de back-end do compilador.
 title: IDiaSymbol::get_backEndMinor | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 72d7b5712c4ec0e2040d6e0f37a322e8b7b1dac0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e9506e142728235ad58560ab787c881c47b729a4
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854517"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156471"
 ---
 # <a name="idiasymbolget_backendminor"></a>IDiaSymbol::get_backEndMinor
 Recupera o número de versão secundária de back-end do compilador.
@@ -35,7 +36,7 @@ HRESULT get_backEndMinor (
 
 fora Retorna o número de versão secundária do back-end. Consulte Observações.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -53,5 +54,5 @@ fora Retorna o número de versão secundária do back-end. Consulte Observaçõe
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

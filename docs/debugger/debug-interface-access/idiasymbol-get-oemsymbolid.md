@@ -1,4 +1,5 @@
 ---
+description: Recupera o valor da ID do símbolo do OEM (fabricante original do equipamento).
 title: IDiaSymbol::get_oemSymbolId | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bec0bcde96bbb55129cf3549afa48707e236ddeb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bd7ce01dea21a8d9fe2886fb5fe7b4277f458636
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862846"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155918"
 ---
 # <a name="idiasymbolget_oemsymbolid"></a>IDiaSymbol::get_oemSymbolId
 Recupera o valor da ID do símbolo do OEM (fabricante original do equipamento).
@@ -35,7 +36,7 @@ HRESULT get_oemSymbolId (
 
 fora Retorna a ID de símbolo atribuída internamente de um OEM.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -46,6 +47,6 @@ fora Retorna a ID de símbolo atribuída internamente de um OEM.
 
  Essa propriedade aplica-se somente a símbolos com um tipo de [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md) de `SymTagCustomType` .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)

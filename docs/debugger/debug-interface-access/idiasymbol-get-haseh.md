@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que especifica se a função contém qualquer manipulação de exceção de estilo C++ não gerenciado (por exemplo, um bloco try/catch).
 title: IDiaSymbol::get_hasEH | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d387d37103773e7352357ebef5f9134bcff85c59
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d60a47c4d655bd0a489d293c88ea5b318971547d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854244"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156303"
 ---
 # <a name="idiasymbolget_haseh"></a>IDiaSymbol::get_hasEH
 Recupera um sinalizador que especifica se a função contém qualquer manipulação de exceção de estilo C++ não gerenciado (por exemplo, um bloco try/catch).
@@ -35,7 +36,7 @@ HRESULT get_hasEH(
 
 fora Retorna `TRUE` se a função tem qualquer manipulação de exceção em estilo C++; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou código de erro.
 
 > [!NOTE]
@@ -48,5 +49,5 @@ fora Retorna `TRUE` se a função tem qualquer manipulação de exceção em est
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

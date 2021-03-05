@@ -1,4 +1,5 @@
 ---
+description: Recupera um sinalizador que indica se o módulo foi compilado com a opção de compilador/Z7,/Zi,/ZI (formato de informações de depuração)).
 title: IDiaSymbol::get_editAndContinueEnabled | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4168ab7ba3351dc8abe5f9c781fccea881fb7df0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ead107b051dd898b549ee25f800a8b8d2e83973a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854349"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156345"
 ---
 # <a name="idiasymbolget_editandcontinueenabled"></a>IDiaSymbol::get_editAndContinueEnabled
 Recupera um sinalizador que indica se o módulo foi compilado com a opção de compilador [/Z7,/Zi,/Zi (debug Information Format)](/cpp/build/reference/z7-zi-zi-debug-information-format) .
@@ -35,7 +36,7 @@ HRESULT get_editAndContinueEnabled (
 
 fora Retorna `TRUE` se o Edit-and-Continue foi habilitado na compilação; caso contrário, retorna `FALSE` .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -48,6 +49,6 @@ fora Retorna `TRUE` se o Edit-and-Continue foi habilitado na compilação; caso 
 |Cabeçalho:|dia2.h|
 |Versão:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [/Z7,/Zi,/ZI (formato de informações de depuração)](/cpp/build/reference/z7-zi-zi-debug-information-format)

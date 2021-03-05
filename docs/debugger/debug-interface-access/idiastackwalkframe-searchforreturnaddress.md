@@ -1,4 +1,5 @@
 ---
+description: 'IDiaStackWalkFrame:: searchForReturnAddress pesquisa o quadro de pilha especificado para o endereço de retorno de função mais próximo.'
 title: IDiaStackWalkFrame::searchForReturnAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 409aef9c6516c3804cd2b35df012d2494cecdbbb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3fa964f5b91185b75d9d10f1be225084cb9253da
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863833"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156863"
 ---
 # <a name="idiastackwalkframesearchforreturnaddress"></a>IDiaStackWalkFrame::searchForReturnAddress
 Pesquisa o quadro de pilha especificado para o endereço de retorno de função mais próximo.
@@ -40,9 +41,9 @@ no Um objeto [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata
 
 fora Retorna o endereço de retorno de função mais próximo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

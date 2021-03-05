@@ -1,4 +1,5 @@
 ---
+description: Recupera o número de modificadores que são aplicados ao tipo original.
 title: 'IDiaSymbol:: get_numberOfModifiers | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 433e57eaa6e1f3a36a83f4613e13f7cf717d2fe8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad43e11f45c005aad923cbb27e23865978d047d7
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862874"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155932"
 ---
 # <a name="idiasymbolget_numberofmodifiers"></a>IDiaSymbol::get_numberOfModifiers
 Recupera o número de modificadores que são aplicados ao tipo original.
@@ -32,8 +33,8 @@ HRESULT get_numberOfModifiers(
 
 fora Um ponteiro para um `DWORD` que especifica o número de modificadores que são aplicados ao tipo original.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

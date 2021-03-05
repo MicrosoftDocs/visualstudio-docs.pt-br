@@ -1,4 +1,5 @@
 ---
+description: Recupera os filhos do símbolo que são válidos em um endereço virtual relativo (RVA) específico.
 title: IDiaSymbol::findChildrenExByRVA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b2ef64d288bdb8e6e5a7cf8befa1f6d7c90ecf0e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0a888c29663e4d5dc9e487c9d6df283c0c13cfbf
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863700"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156758"
 ---
 # <a name="idiasymbolfindchildrenexbyrva"></a>IDiaSymbol::findChildrenExByRVA
 Recupera os filhos do símbolo que são válidos em um endereço virtual relativo (RVA) específico.
@@ -55,7 +56,7 @@ no Especifica o RVA.
 
 fora Retorna um objeto [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) que contém uma lista dos símbolos filho recuperados.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Retorna `S_OK` se pelo menos um filho do símbolo foi encontrado ou retorna `S_FALSE` se nenhum filho foi encontrado; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
@@ -68,7 +69,7 @@ fora Retorna um objeto [IDiaEnumSymbols](../../debugger/debug-interface-access/i
 
  DLL: msdia100.dll
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

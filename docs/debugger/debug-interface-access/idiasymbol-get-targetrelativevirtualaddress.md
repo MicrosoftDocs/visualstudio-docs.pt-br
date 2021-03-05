@@ -1,4 +1,5 @@
 ---
+description: Recupera o endereço virtual relativo (RVA) de um destino de conversão.
 title: IDiaSymbol::get_targetRelativeVirtualAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 847317c735332a91c8a7949aa3c860da0cd63631
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 247019f8fce089276372f4fe0daad434b50a88d4
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862629"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155722"
 ---
 # <a name="idiasymbolget_targetrelativevirtualaddress"></a>IDiaSymbol::get_targetRelativeVirtualAddress
 Recupera o endereço virtual relativo (RVA) de um destino de conversão.
@@ -35,7 +36,7 @@ HRESULT get_targetRelativeVirtualAddress (
 
 fora Retorna o RVA de um destino de conversão.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
@@ -46,6 +47,6 @@ fora Retorna o RVA de um destino de conversão.
 
  Uma "conversão" é um trecho de código que converte entre um espaço de endereço de memória de 32 bits (também conhecido como espaço de endereço simples) e um espaço de endereço de 16 bits (conhecido como um espaço de endereço segmentado).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [Enumeração SymTagEnum](../../debugger/debug-interface-access/symtagenum.md)

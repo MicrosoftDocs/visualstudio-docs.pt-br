@@ -1,4 +1,5 @@
 ---
+description: Recupera a seção de endereço de um destino de conversão.
 title: IDiaSymbol::get_targetSection | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 76df469bb02f847827fd95c53ef2924e54185428
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d72ce83ada785cc598df123929b54a3cc8b6d7b2
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853530"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155666"
 ---
 # <a name="idiasymbolget_targetsection"></a>IDiaSymbol::get_targetSection
 Recupera a seção de endereço de um destino de conversão.
@@ -35,11 +36,11 @@ HRESULT get_targetSection (
 
 fora Parte de uma seção de um endereço de destino de conversão.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retorna `S_OK` ; caso contrário, retorna `S_FALSE` ou um código de erro.
 
 > [!NOTE]
 > Um valor de retorno de `S_FALSE` significa que a propriedade não está disponível para o símbolo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
