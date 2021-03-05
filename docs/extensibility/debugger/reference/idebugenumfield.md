@@ -1,4 +1,5 @@
 ---
+description: Essa interface representa um tipo de enumeração.
 title: IDebugEnumField | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a67c660ec8457191e688fdd430c3f7a07b5d75c3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f78e8d2560224ad22a58b74823530b6be4b1efb8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933317"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102153203"
 ---
 # <a name="idebugenumfield"></a>IDebugEnumField
 Essa interface representa um tipo de enumeração.

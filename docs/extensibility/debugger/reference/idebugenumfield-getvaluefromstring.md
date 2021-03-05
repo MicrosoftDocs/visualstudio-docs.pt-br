@@ -1,4 +1,5 @@
 ---
+description: Esse método retorna o valor associado ao nome de uma constante de enumeração.
 title: 'IDebugEnumField:: GetValueFromString | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 77cce7a6780c816fbee0ade1c795cb1174e3e7f0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6a4ab2950667ba9268335f2e0dbca1c0ce5183bc
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933447"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102153294"
 ---
 # <a name="idebugenumfieldgetvaluefromstring"></a>IDebugEnumField::GetValueFromString
 Esse método retorna o valor associado ao nome de uma constante de enumeração.
@@ -48,7 +49,7 @@ no Uma cadeia de caracteres que especifica o nome para o qual obter o valor. Obs
 `pValue`\
 fora Retorna o valor numérico associado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK` ; caso contrário, retornará `S_FALSE` , se o nome não fizer parte da enumeração ou um código de erro.
 
 ## <a name="remarks"></a>Comentários
