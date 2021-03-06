@@ -1,4 +1,5 @@
 ---
+description: Esse método obtém o número de visualizadores de tipo disponíveis neste serviço.
 title: 'IEEVisualizerService:: GetCustomViewerCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4d4aa1f082351e84348854457506b5428935a903
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7d44cc0c53185f823a8092335052e52dcfd201c1
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897155"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102227145"
 ---
 # <a name="ieevisualizerservicegetcustomviewercount"></a>IEEVisualizerService::GetCustomViewerCount
 Esse método obtém o número de visualizadores de tipo disponíveis neste serviço.
@@ -43,7 +44,7 @@ int GetCustomViewerCount(
 `pcelt`\
 fora Retorna o número de visualizadores de tipo disponíveis.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

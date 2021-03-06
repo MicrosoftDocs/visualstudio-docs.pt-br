@@ -1,4 +1,5 @@
 ---
+description: Retorna uma cópia da enumeração FRAMEINFO atual como um objeto separado.
 title: 'IEnumDebugFrameInfo2:: clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 494f8d3d2f6a870f2d0b95a1d152f077f0514055
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8854316e7bef9973f985f577ff1a00aeeba50426
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967807"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102226521"
 ---
 # <a name="ienumdebugframeinfo2clone"></a>IEnumDebugFrameInfo2::Clone
 Retorna uma cópia da enumeração atual como um objeto separado.
@@ -43,7 +44,7 @@ int Clone(
 `ppEnum`\
 fora Retorna uma cópia dessa enumeração como um objeto separado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

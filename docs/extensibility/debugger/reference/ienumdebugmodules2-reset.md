@@ -1,4 +1,5 @@
 ---
+description: Redefine a enumeração de módulos para o primeiro elemento.
 title: 'IEnumDebugModules2:: Reset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fdc98e9ac2d545670fde240cea914be9108b8f0f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a395a31b029b0d6a63eda670b10cbe8d4132b5b2
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956250"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102224714"
 ---
 # <a name="ienumdebugmodules2reset"></a>IEnumDebugModules2::Reset
 Redefine a enumeração para o primeiro elemento.
@@ -43,5 +44,5 @@ int Reset();
 ## <a name="remarks"></a>Comentários
  Depois que esse método é chamado, a próxima chamada para o [próximo](../../../extensibility/debugger/reference/ienumdebugmodules2-next.md) método retorna o primeiro elemento da enumeração.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md)

@@ -1,4 +1,5 @@
 ---
+description: Redefine a enumeração para o primeiro elemento DEBUG_REFERENCE_INFO.
 title: 'IEnumDebugReferenceInfo2:: Reset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4e1465d3007896e0361612c8bdc60a9f53282c25
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b2cdb977b66fb4be8dd6c378c77cfeefd5e19f18
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99926918"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102225806"
 ---
 # <a name="ienumdebugreferenceinfo2reset"></a>IEnumDebugReferenceInfo2::Reset
 Redefine a enumeração para o primeiro elemento.

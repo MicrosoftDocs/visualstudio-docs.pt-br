@@ -1,4 +1,5 @@
 ---
+description: Redefine a enumeração de threads para o primeiro elemento.
 title: 'IEnumDebugThreads2:: Reset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5405b17771ea48541c3f6812945a0d09d2464ac4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1521e69b5896422a811714be9e4aefa649824ab4
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852863"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102225780"
 ---
 # <a name="ienumdebugthreads2reset"></a>IEnumDebugThreads2::Reset
 Redefine a enumeração para o primeiro elemento.
@@ -43,5 +44,5 @@ int Reset();
 ## <a name="remarks"></a>Comentários
  Depois que esse método é chamado, a próxima chamada para o [próximo](../../../extensibility/debugger/reference/ienumdebugthreads2-next.md) método retorna o primeiro elemento da enumeração.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IEnumDebugThreads2](../../../extensibility/debugger/reference/ienumdebugthreads2.md)

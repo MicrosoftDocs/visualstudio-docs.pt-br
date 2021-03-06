@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 05/23/2018
 ms.author: mikejo
 ms.custom: include file
-ms.openlocfilehash: 1d049bc8b74b83028e04fe92e7ce96f45907d042
-ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
+ms.openlocfilehash: b6ceee76d8c24ccddb41e47c0865d96c79e6fc32
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97762584"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249880"
 ---
 1. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **publicar** (para Web Forms, **publicar aplicativo Web**).
 
@@ -21,18 +21,30 @@ ms.locfileid: "97762584"
 
 1. Na caixa de diálogo **publicar** , selecione **pasta**, clique em **procurar** e crie uma nova pasta, **C:\Publish**.
 
-    ![Captura de tela da caixa de diálogo escolher um destino de publicação no Visual Studio com a pasta ' bin\Release\Publish ' selecionada como o destino de publicação.](../media/remotedbg_publish_local.png)
+   ::: moniker range=">=vs-2019"
 
-    Para um aplicativo Web Forms, escolha **personalizado** na caixa de diálogo publicar, insira um nome de perfil e escolha **OK**.
+   :::image type="content" source="../media/vs-2019/remotedbg-publish-local.png" alt-text="Captura de tela da caixa de diálogo escolher um destino de publicação no Visual Studio com a pasta ' C:\Publish ' selecionada como o destino de publicação.":::
 
-1. Clique em **Criar perfil** na lista suspensa (**publicar** é o valor padrão).
+   Clique em **concluir** para salvar o perfil de publicação.
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   ![Captura de tela da caixa de diálogo escolher um destino de publicação no Visual Studio com a pasta ' bin\Release\Publish ' selecionada como o destino de publicação.](../media/remotedbg_publish_local.png)
+   Para um aplicativo Web Forms, escolha **personalizado** na caixa de diálogo publicar, insira um nome de perfil e escolha **OK**.
 
-1. Na caixa de diálogo **publicar** , clique no link **configurações** e, em seguida, selecione a guia **configurações** .
+   Clique em **Criar perfil** na lista suspensa (**publicar** é o valor padrão).
+   ::: moniker-end
 
-1. Defina a configuração a ser **depurada**, selecione **excluir todos os arquivos existentes antes de publicar** e clique em **salvar**.
+1. Alterne para uma configuração de depuração.
 
-    > [!NOTE]
-    > Se você usar uma compilação de versão, desabilite a depuração no arquivo de web.config quando publicar.
+   ::: moniker range=">=vs-2019"
+   Escolha **Editar** para editar o perfil e, em seguida, escolha **configurações**. Escolha uma configuração de **depuração** e escolha **remover arquivos adicionais no destino** nas opções de **publicação de arquivo** .
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   Na caixa de diálogo **configurações** , habilite a depuração clicando em **Avançar**, escolha uma configuração de **depuração** e, em seguida, escolha **remover arquivos adicionais no destino** nas opções de **publicação de arquivo** .
+   ::: moniker-end
+
+   > [!NOTE]
+   > Se você usar uma compilação de versão, desabilite a depuração no arquivo de *web.config* quando publicar.
 
 1. Clique em **Publicar**.
 
@@ -43,7 +55,7 @@ ms.locfileid: "97762584"
 1. Copie o diretório do projeto ASP.NET do computador do Visual Studio para o diretório local configurado para o aplicativo ASP.NET (neste exemplo, **C:\Publish**) no computador do Windows Server. Neste tutorial, supomos que você está copiando manualmente, mas pode usar outras ferramentas como PowerShell, xcopy ou Robocopy.
 
     > [!CAUTION]
-    > Se precisar fazer alterações no código ou recompilar, você deverá republicar e repetir essa etapa. O executável que você copiou para o computador remoto deve corresponder exatamente à fonte local e aos símbolos.    Se você não fizer isso, receberá um `cannot find or open the PDB file` aviso no Visual Studio ao tentar depurar o processo.
+    > Se precisar fazer alterações no código ou recompilar, você deverá republicar e repetir essa etapa. O executável que você copiou para o computador remoto deve corresponder exatamente à fonte local e aos símbolos. Se você não fizer isso, receberá um `cannot find or open the PDB file` aviso no Visual Studio ao tentar depurar o processo.
 
 1. No Windows Server, verifique se você pode executar o aplicativo corretamente abrindo o aplicativo em seu navegador.
 

@@ -1,4 +1,5 @@
 ---
+description: Cria uma cópia de um objeto de dados específico para o avaliador de expressão (EE).
 title: 'IPropertyProxyEESide:: ReplaceObject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 30e2b8037059824bd514024e6fb86561406895c5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 341ca3d00a433c4bb36bc22ab2d598d7b454842a
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852824"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102225702"
 ---
 # <a name="ipropertyproxyeesidecreatereplacementobject"></a>IPropertyProxyEESide::CreateReplacementObject
 Cria uma cópia de um objeto de dados específico para o avaliador de expressão (EE).
@@ -48,7 +49,7 @@ no Um objeto [IEEDataStorage](../../../extensibility/debugger/reference/ieedatas
 `dataOut`\
 fora Retorna um novo `IEEDataStorage` objeto.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
@@ -56,6 +57,6 @@ fora Retorna um novo `IEEDataStorage` objeto.
 
  Observe que os dados fornecidos pelo objeto de entrada `IEEDataStorage` devem ser os mesmos dados no objeto de saída `IEEDataStorage` .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)
 - [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)

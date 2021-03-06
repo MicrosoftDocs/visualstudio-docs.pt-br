@@ -1,4 +1,5 @@
 ---
+description: Retorna o número de elementos DEBUG_REFERENCE_INFO na enumeração.
 title: 'IEnumDebugReferenceInfo2:: GetCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e087992cd5b2d5ac29b4f987d2c29dbf0e9006e2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6756426e6ed668860a743c87964014fff3bc7f79
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967716"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102225975"
 ---
 # <a name="ienumdebugreferenceinfo2getcount"></a>IEnumDebugReferenceInfo2::GetCount
 Retorna o número de elementos na enumeração.
@@ -43,7 +44,7 @@ int GetCount(
 `pcelt`\
 fora Retorna o número de elementos na enumeração.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

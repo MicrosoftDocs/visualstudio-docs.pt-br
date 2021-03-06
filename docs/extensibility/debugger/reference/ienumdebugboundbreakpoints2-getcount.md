@@ -1,4 +1,5 @@
 ---
+description: Retorna o número de elementos na enumeração de pontos de interrupção associados.
 title: 'IEnumDebugBoundBreakpoints2:: GetCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 059ac49ebec0d8a7ef1a9aa54dab085a2cbf525c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 30467eaf8c40cdfa100585893a513fd5d856601e
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875686"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102225013"
 ---
 # <a name="ienumdebugboundbreakpoints2getcount"></a>IEnumDebugBoundBreakpoints2::GetCount
 Retorna o número de elementos na enumeração.
@@ -43,7 +44,7 @@ int GetCount(
 `pcelt`\
 fora Retorna o número de elementos na enumeração.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

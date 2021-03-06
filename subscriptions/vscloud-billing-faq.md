@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 21e0471d-ad59-4d21-9c6f-13f7147569af
-ms.date: 02/04/2021
+ms.date: 03/05/2021
 ms.topic: conceptual
 description: Perguntas sobre cobrança para assinaturas de nuvem.
-ms.openlocfilehash: a812965a549f2e6e6d6c58366d943f3129d951cd
-ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
+ms.openlocfilehash: 2c03871d11279b7c368ebd0c7012670fc92c9ee0
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99572870"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249723"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Perguntas frequentes sobre cobrança de assinaturas de nuvem do Visual Studio
 [Compare os benefícios e os preços das assinaturas de nuvem](https://visualstudio.microsoft.com/vs/pricing/) para entender os benefícios de cada assinatura do Visual Studio, com comparações entre as assinaturas de nuvem e padrão do Visual Studio, detalhes sobre os benefícios do assinante e muito mais.
@@ -56,7 +56,7 @@ Mais tarde, quando você aumentar a quantidade paga, o aumento de unidades tamb�
 ### <a name="q-how-are-annual-cloud-subscription-charges-processed"></a>P: Como os encargos **anuais** da assinatura de nuvem são processados?
 R: A cada compra, a quantidade comprada será cobrada imediatamente. Os encargos não são distribuídos ao longo do ano e não há cobrança proporcional. Se você comprar assinaturas de nuvem anuais em diferentes momentos no ano, você terá assinaturas que se renovarão em meses diferentes. Nós não fazemos com que todas as assinaturas de nuvem anuais do cliente coincidam como é comum nas compras do contrato de licenciamento por volume da Microsoft.
 
-### <a name="q-how-do-cancelations-work"></a>P: Como funcionam os cancelamentos?
+### <a name="q-how-do-cancellations-work"></a>P: Como os cancelamentos funcionam?
 R: Ao cancelar uma assinatura de nuvem do Visual Studio, você está cancelando a renovação automática. A assinatura continuará até a data de renovação normal e, em seguida, simplesmente expirará.
 Após a expiração, o assinante do Visual Studio não poderá mais usar o Visual Studio nem os outros benefícios da assinatura.
 
@@ -93,6 +93,9 @@ R: Sim. Quando novas versões são lançadas, você pode baixar e executá-las. 
 
 ### <a name="q-can-i-buy-visual-studio-cloud-subscriptions-from-my-software-reseller"></a>P: Posso comprar assinaturas de nuvem do Visual Studio do meu revendedor de software?
 R: Sim, você pode, se o revendedor participar do programa CSP (provedor de soluções na nuvem). Pergunte isso a ele.
+
+### <a name="q-where-can-i-find-information-about-azure-invoices"></a>P: onde posso encontrar informações sobre as faturas do Azure?
+R: Confira o artigo [entender sua fatura do Azure](https://docs.microsoft.com/azure/cost-management-billing/understand/understand-invoice) na [documentação do Azure](/azure/).
 
 ## <a name="related-resources"></a>Recursos relacionados
 - [Portal de administração de assinaturas do Visual Studio](https://manage.visualstudio.com/)

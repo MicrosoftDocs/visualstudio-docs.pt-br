@@ -1,4 +1,5 @@
 ---
+description: Esse método redefine a enumeração para o primeiro elemento IDebugObject.
 title: 'IEnumDebugObjects:: Reset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 39f2949a0c3b0c7009b17c8ceee09eee210c61cf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cacc9071004ddb68993bb3d3315eb1bda3b90cbb
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957095"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102224649"
 ---
 # <a name="ienumdebugobjectsreset"></a>IEnumDebugObjects::Reset
 Esse método redefine a enumeração para o primeiro elemento.
@@ -38,7 +39,7 @@ int Reset();
 ## <a name="parameters"></a>Parâmetros
  Nenhum
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 97ac8e4d-7a03-42f8-98cb-15bcaa90ef65
-ms.date: 11/09/2020
+ms.date: 02/18/2021
 ms.topic: how-to
 description: Saiba como os administradores podem editar as atribuições de assinatura.
-ms.openlocfilehash: 0f1ec9c9aa63b5bd877e13f112964f7d74a4b5af
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: f24c949224d895f4cc2926ab30db637835e7886c
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94433551"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249795"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>Editar atribuições de assinatura do Visual Studio
 Como administrador de assinatura, você pode fazer alterações nas assinaturas atribuídas a indivíduos dentro da sua organização.  Este artigo descreve os tipos de alterações que você pode fazer e fornece as etapas necessárias.
@@ -30,7 +30,6 @@ Para editar um assinante, selecione as reticências (...) que aparecem ao lado d
 Você pode atualizar o nome, sobrenome, nível de assinatura, endereço de email, país, idioma, downloads e campo de referência do Assinante. Edite as informações do assinante e clique em **salvar**.
 
 ## <a name="edit-multiple-subscribers-using-bulk-edit"></a>Editar vários assinantes usando a edição em massa
-
 
 Você pode editar vários assinantes de uma vez usando o processo de edição em massa. Esse recurso é usado principalmente para organizações que estão passando por alterações de endereço de email corporativo ou quando uma organização decide restringir o acesso a downloads.
 
@@ -55,6 +54,9 @@ Assista a este vídeo ou Continue lendo para saber como editar vários assinante
    > ![Editando uma licença – upload do arquivo de edições em massa](_img/edit-license/edit-license-bulk-file-upload1.png "Navegue até o local do arquivo concluído do Excel, selecione-o e clique em OK.")
 
 5. Depois de carregar o arquivo, será exibida uma notificação informando que o upload foi bem-sucedido. Neste ponto, suas edições serão refletidas nas informações do assinante.
+
+## <a name="resources"></a>Recursos
+- [Suporte a assinaturas](https://visualstudio.microsoft.com/subscriptions/support/)
 
 ## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](/visualstudio/)

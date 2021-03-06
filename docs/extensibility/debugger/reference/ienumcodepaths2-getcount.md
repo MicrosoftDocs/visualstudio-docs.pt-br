@@ -1,4 +1,5 @@
 ---
+description: Retorna o número de elementos na enumeração de caminhos de código.
 title: 'IEnumCodePaths2:: GetCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b85490c3641158ecff6881e139dbec54796e0f5a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3b3f0016f98b1e6993a1646908a25c7e774e94e4
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912925"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102227197"
 ---
 # <a name="ienumcodepaths2getcount"></a>IEnumCodePaths2::GetCount
 Retorna o número de elementos na enumeração.
@@ -43,7 +44,7 @@ int GetCount(
 `pcelt`\
 fora Retorna o número de elementos na enumeração.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários
