@@ -11,12 +11,12 @@ manager: jmartens
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 1b4eabfe35671b3cda0e2df71163b7c91695b264
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: a364289ded27879c74767f03e89b9ea7b9f604fc
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683076"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249902"
 ---
 # <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio"></a>ASP.NET Core de depuração remota em um computador IIS remoto no Visual Studio
 
@@ -129,10 +129,17 @@ Você pode usar essa opção para criar um arquivo de configurações de publica
 
 Depois que o aplicativo for implantado com êxito, ele deverá ser iniciado automaticamente. Se o aplicativo não iniciar no Visual Studio, inicie o aplicativo no IIS para verificar se ele é executado corretamente. Por ASP.NET Core, você também precisa certificar-se de que o campo pool de aplicativos para **DefaultAppPool** esteja definido como **nenhum código gerenciado**.
 
-1. Na caixa de diálogo **configurações** , habilite a depuração clicando em **Avançar**, escolha uma configuração de **depuração** e, em seguida, escolha **remover arquivos adicionais no destino** nas opções de **publicação de arquivo** .
+1. Alterne para uma configuração de depuração.
 
-    > [!IMPORTANT]
-    > Se você escolher uma configuração de versão, desabilite a depuração no arquivo de *web.config* quando publicar.
+   ::: moniker range=">=vs-2019"
+   Escolha **Editar** para editar o perfil e, em seguida, escolha **configurações**. Escolha uma configuração de **depuração** e escolha **remover arquivos adicionais no destino** nas opções de **publicação de arquivo** .
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   Na caixa de diálogo **configurações** , habilite a depuração clicando em **Avançar**, escolha uma configuração de **depuração** e, em seguida, escolha **remover arquivos adicionais no destino** nas opções de **publicação de arquivo** .
+   ::: moniker-end
+
+   > [!IMPORTANT]
+   > Se você escolher uma configuração de versão, desabilite a depuração no arquivo de *web.config* quando publicar.
 
 1. Clique em **salvar** e Republique o aplicativo.
 
@@ -150,13 +157,13 @@ Você pode usar essa opção para implantar seu aplicativo se quiser copiar o ap
 
 4. Selecione o **site da Web padrão**, escolha **configurações básicas** e defina o **caminho físico** como **C:\Publish**.
 
-4. Clique com o botão direito do mouse no nó do **site da Web padrão** e selecione **Adicionar aplicativo**.
+5. Clique com o botão direito do mouse no nó do **site da Web padrão** e selecione **Adicionar aplicativo**.
 
-5. Defina o campo **alias** como **MyASPApp**, aceite o pool de aplicativos padrão (**DefaultAppPool**) e defina o **caminho físico** como **C:\Publish**.
+6. Defina o campo **alias** como **MyASPApp**, aceite o pool de aplicativos padrão (**DefaultAppPool**) e defina o **caminho físico** como **C:\Publish**.
 
-6. Em **conexões**, selecione **pools de aplicativos**. Abra **DefaultAppPool** e defina o campo pool de aplicativos como **sem código gerenciado**.
+7. Em **conexões**, selecione **pools de aplicativos**. Abra **DefaultAppPool** e defina o campo pool de aplicativos como **sem código gerenciado**.
 
-7. Clique com o botão direito do mouse no novo site no Gerenciador do IIS, escolha **Editar permissões** e certifique-se de que IUSR, IIS_IUSRS ou o usuário configurado para acesso ao aplicativo Web é um usuário autorizado com direitos de execução de leitura &.
+8. Clique com o botão direito do mouse no novo site no Gerenciador do IIS, escolha **Editar permissões** e certifique-se de que IUSR, IIS_IUSRS ou o usuário configurado para acesso ao aplicativo Web é um usuário autorizado com direitos de execução de leitura &.
 
     Se você não vir um desses usuários com acesso, siga as etapas para adicionar IUSR como um usuário com direitos de execução de leitura &.
 

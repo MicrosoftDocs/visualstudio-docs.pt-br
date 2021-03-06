@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
-ms.date: 09/08/2020
+ms.date: 02/18/2021
 ms.topic: how-to
 description: Saiba como entrar em contato com seu administrador de assinatura para obter assistência com perguntas ou problemas.
-ms.openlocfilehash: 363fc84d0607e511d259153dc3e39d4b4063ff42
-ms.sourcegitcommit: fb2a60cfdf78964fa0cb6783a5d947deae04b6bc
+ms.openlocfilehash: 4eb17f5480b3839248d0968b6c20434c149bb756
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93289982"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102250040"
 ---
 # <a name="get-assistance-from-your-subscriptions-admin"></a>Obtenha assistência de seu administrador de assinaturas
 Se sua assinatura do Visual Studio for fornecida por seu trabalho ou escola, provavelmente ela foi atribuída a você por um administrador de assinaturas ou "admin".  Os administradores podem atribuir ou remover assinaturas, alterar endereços de email de credenciais, determinar se você tem a capacidade de baixar software e executar outras funções relacionadas à sua assinatura.
@@ -33,7 +33,7 @@ Considerando o porte e a complexidade de muitas organizações, você pode não 
 > **Superadministradores:**  Para definir o endereço de email para o qual as solicitações "contatar meu administrador" são enviadas, especifique esse endereço nas [preferências de contrato](admin-prefs.md#contact-email-address).
 
 ## <a name="resources"></a>Recursos
-- [Suporte à administração e às assinaturas do Visual Studio](https://visualstudio.microsoft.com/subscriptions/support/#talktous)
+- [Suporte a assinaturas do Visual Studio](https://my.visualstudio.com/gethelp)
 
 ## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](/visualstudio/)

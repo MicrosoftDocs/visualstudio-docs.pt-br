@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b16c10d13f63be43ad2e8c3e16d24c0f9fd5e38
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 23ef2036af7b93ee6eeaaa14cb8733a4e0ced638
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927425"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249496"
 ---
 # <a name="deploy-an-app-to-a-folder-using-visual-studio"></a>Implantar um aplicativo em uma pasta usando o Visual Studio
 
@@ -46,25 +46,34 @@ Você pode usar a ferramenta de **publicação** para publicar aplicativos ASP.N
 
 1. Na janela **publicar** , selecione **pasta**.
 
-    ![Escolher pasta como um destino de publicação](../deployment/media/quickstart-publish-folder-new.png "Escolher pasta")
+   ![Escolher pasta como um destino de publicação](../deployment/media/quickstart-publish-folder-new.png "Escolher pasta")
 
-::: moniker range=">=vs-2019"
+   ::: moniker range=">=vs-2019"
 
-4. Se você estiver implantando um aplicativo do Windows .NET Core 3,1 ou mais recente, talvez seja necessário selecionar a **pasta** na janela de **destino específica** .
+   Se você estiver implantando um aplicativo do Windows .NET Core 3,1 ou mais recente, talvez seja necessário selecionar a **pasta** na janela de **destino específica** .
 
-![Escolher pasta como destino específico](../deployment/media/quickstart-publish-folder-targets.png "Escolher destino específico")
+   ![Escolher pasta como destino específico](../deployment/media/quickstart-publish-folder-targets.png "Escolher destino específico")
 
-5. Se você quiser publicar um aplicativo do Windows .NET Core 3,1 ou mais recente com o ClickOnce, consulte [implantar um aplicativo .net do Windows usando o ClickOnce](quickstart-deploy-using-clickonce-folder.md).
+   Se você quiser publicar um aplicativo do Windows .NET Core 3,1 ou mais recente com o ClickOnce, consulte [implantar um aplicativo .net do Windows usando o ClickOnce](quickstart-deploy-using-clickonce-folder.md).
+   ::: moniker-end
 
- ::: moniker-end
+1. Insira um caminho ou selecione **procurar** para especificar uma pasta.
 
-4. Insira um caminho ou selecione **procurar** para especificar uma pasta.
+   ![Especifique o caminho para a pasta](../deployment/media/quickstart-publish-folder-path.png "Escolher pasta")
 
-    ![Especifique o caminho para a pasta](../deployment/media/quickstart-publish-folder-path.png "Escolher pasta")
+   ::: moniker range=">=vs-2019"
+   Clique em **concluir** para salvar o perfil.
 
-1. Selecione **Publicar**. O Visual Studio cria o projeto e o publica na pasta especificada. O painel **Publicar** das propriedades do projeto é exibido, mostrando um resumo do perfil.
+   ![Publicar painel de propriedade mostrando um resumo do perfil](../deployment/media/quickstart-publish-folder-summary.png)
+   ::: moniker-end
 
-    ![Publicar painel de propriedade mostrando um resumo do perfil](../deployment/media/quickstart-publish-folder-summary.png)
+1. Selecione **Publicar**. O Visual Studio cria o projeto e o publica na pasta especificada.
+
+   ::: moniker range="vs-2017"
+   O painel **Publicar** das propriedades do projeto é exibido, mostrando um resumo do perfil.
+
+   ![Publicar painel de propriedade mostrando um resumo do perfil](../deployment/media/quickstart-publish-folder-summary.png)
+   ::: moniker-end
 
 1. Para definir as configurações de implantação, selecione **Editar** no resumo do perfil de publicação e selecione a guia **configurações** .
 

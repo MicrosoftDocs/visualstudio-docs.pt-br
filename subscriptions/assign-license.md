@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 4e529a43-7aed-4eee-895d-862a631952df
-ms.date: 09/21/2020
+ms.date: 02/18/2021
 ms.topic: conceptual
 description: Saiba como os administradores podem atribuir licenças aos assinantes
-ms.openlocfilehash: dd80a14a3ff57100f210fd7ae1b882c0ab7a9faf
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 3bfa1174a8655de27496c3138e1eab21e32c2f8d
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915408"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249556"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Atribuir licenças no portal de administração de assinaturas do Visual Studio
 Como administrador de assinaturas do Visual Studio, você pode usar o portal de administração para atribuir assinaturas a usuários individuais e grupos de usuários.
@@ -67,6 +67,8 @@ Usar um endereço de email de notificação fornece a opção de permitir que se
 Depois de adicionar um assinante, um email de atribuição será enviado automaticamente para o novo assinante com mais instruções. Você pode enviar o email de atribuição novamente a qualquer momento selecionando o Assinante e, em seguida, selecionando o botão **reenviar** no menu superior.  Para reenviar emails a vários usuários, mantenha pressionada a tecla **Ctrl** enquanto seleciona os assinantes.  Ao selecionar o botão **reenviar** , você verá uma caixa de diálogo solicitando que você confirme se deseja reenviar para esses assinantes.  
 
 
+## <a name="resources"></a>Recursos
+- Precisa de ajuda?  [Suporte a assinaturas](https://visualstudio.microsoft.com/subscriptions/support/)de contato.
 
 ## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](/visualstudio/)
@@ -74,7 +76,5 @@ Depois de adicionar um assinante, um email de atribuição será enviado automat
 - [Documentação do Azure](/azure/)
 - [Documentação do Microsoft 365](/microsoft-365/)
 
-
 ## <a name="next-steps"></a>Próximas etapas
 - Tem muitos usuários para adicionar?  Saiba como atribuir assinaturas a [vários assinantes](assign-license-bulk.md).
-- Precisa de ajuda?  Contate o [Suporte à administração e às assinaturas do Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs).

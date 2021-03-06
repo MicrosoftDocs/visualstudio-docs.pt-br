@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: e2f2619c-7736-47e5-a066-5940d5994db9
-ms.date: 10/26/2020
+ms.date: 02/18/2021
 ms.topic: conceptual
 description: Saiba como localizar e baixar títulos de software da Microsoft em assinaturas do Visual Studio
-ms.openlocfilehash: e6a5b6a1caab199ec2b67108f539c1d68d545551
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: c53429f7fe7d88c1c75642d9f820c8a6fa444eb9
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92903627"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249281"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Baixar títulos de software em assinaturas do Visual Studio
 Dependendo da assinatura do Visual Studio que você tem, uma ampla variedade de títulos de software da Microsoft pode estar disponível para você.  Este artigo descreverá como localizar e baixar o software de que você precisa para aproveitar o máximo de sua assinatura. 
@@ -52,7 +52,10 @@ Para obter uma chave de produto para o download, você pode selecionar a tecla a
 > [!div class="mx-imgBorder"]
 > ![Reivindicar chaves do produto (Product Keys) do Visual Studio 2019](_img/subscriber-downloads/vs2019-claim-keys.png "Selecione chave de declaração para declarar chaves restantes.")
 
-## <a name="see-also"></a>Veja também
+## <a name="resources"></a>Recursos
+- [Suporte a assinaturas do Visual Studio](https://my.visualstudio.com/gethelp)
+
+## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

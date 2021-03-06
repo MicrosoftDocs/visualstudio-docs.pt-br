@@ -12,14 +12,15 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - aspnet
-ms.openlocfilehash: 854d3e23252e63d6330abd9f1704890d3b90ae36
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 104927d42f7ec68e43686278042c0712bb3c875e
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908304"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102250083"
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>Depuração remota do ASP.NET em um computador remoto IIS
+
 Para depurar um aplicativo ASP.NET que foi implantado no IIS, instale e execute as ferramentas remotas no computador em que você implantou seu aplicativo e, em seguida, anexe ao seu aplicativo em execução no Visual Studio.
 
 ![Componentes do depurador remoto](../debugger/media/remote-debugger-aspnet.png "Remote_debugger_components")
@@ -39,6 +40,7 @@ O Visual Studio 2017 é necessário para seguir as etapas mostradas neste artigo
 ::: moniker-end
 
 Esses procedimentos foram testados nessas configurações de servidor:
+
 * Windows Server 2012 R2 e IIS 8 (para Windows Server 2008 R2, as etapas do servidor são diferentes)
 
 ## <a name="network-requirements"></a>Requisitos de rede
@@ -130,10 +132,17 @@ Você pode usar essa opção para criar um arquivo de configurações de publica
 
 Depois que o aplicativo for implantado com êxito, ele deverá ser iniciado automaticamente. Se o aplicativo não iniciar no Visual Studio, inicie o aplicativo no IIS.
 
-1. Na caixa de diálogo **configurações** , habilite a depuração clicando em **Avançar**, escolha uma configuração de **depuração** e, em seguida, escolha **remover arquivos adicionais no destino** nas opções de **publicação de arquivo** .
+1. Alterne para uma configuração de depuração.
 
-    > [!IMPORTANT]
-    > Se você escolher uma configuração de versão, desabilite a depuração no arquivo de *web.config* quando publicar.
+   ::: moniker range=">=vs-2019"
+   Escolha **Editar** para editar o perfil e, em seguida, escolha **configurações**. Escolha uma configuração de **depuração** e escolha **remover arquivos adicionais no destino** nas opções de **publicação de arquivo** .
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   Na caixa de diálogo **configurações** , habilite a depuração clicando em **Avançar**, escolha uma configuração de **depuração** e, em seguida, escolha **remover arquivos adicionais no destino** nas opções de **publicação de arquivo** .
+   ::: moniker-end
+
+   > [!IMPORTANT]
+   > Se você escolher uma configuração de versão, desabilite a depuração no arquivo de *web.config* quando publicar.
 
 1. Clique em **salvar** e Republique o aplicativo.
 

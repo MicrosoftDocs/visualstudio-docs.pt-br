@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Studio terminal
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 no-loc: cmdlet
-ms.openlocfilehash: 2500a540a4135517c65736d7a0f3d039c90cc71e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 406ef4e7d475df82a0e36732dd5e777959ea3b96
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102168840"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249740"
 ---
 # <a name="developer-command-prompt-and-developer-powershell"></a>Prompt de Comando do Desenvolvedor e o PowerShell para desenvolvedores
 
@@ -55,11 +55,11 @@ Siga estas etapas para abrir o Prompt de Comando do Desenvolvedor ou o PowerShel
 
    ![Item de menu do prompt de comando no Visual Studio](./media/developer-command-prompt-for-vs/vs-menu.png)
 
-### <a name="use-the-windows-start-menu"></a>Usar o menu Iniciar do Windows
+## <a name="use-the-windows-start-menu"></a>Usar o menu Iniciar do Windows
 
 Você pode ter vários prompts de comando, dependendo da versão do Visual Studio e de quaisquer SDKs e cargas de trabalho adicionais instalados. Se as etapas a seguir não funcionarem, você poderá tentar [localizar manualmente os arquivos em seu computador](#manually-locate-the-file) ou [iniciar o Shell de dentro do Visual Studio](#start-the-shell-from-inside-visual-studio).
 
-#### <a name="windows-10"></a>Windows 10
+### <a name="windows-10"></a>Windows 10
 
 1. Selecione **Iniciar** ![ a tecla do logotipo do Windows no teclado.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) e role até a letra **V**.
 
@@ -71,7 +71,7 @@ Você pode ter vários prompts de comando, dependendo da versão do Visual Studi
 
    ![GIF animado mostrando o comportamento de pesquisa no Windows 10](./media/developer-command-prompt-for-vs/windows-10-search.gif)
 
-#### <a name="windows-81"></a>Windows 8.1
+### <a name="windows-81"></a>Windows 8.1
 
 1. Vá para a tela **Inicial** pressionando a tecla do logotipo do Windows ![tecla do logotipo do Windows no teclado.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) no seu teclado, por exemplo.
 
@@ -79,7 +79,7 @@ Você pode ter vários prompts de comando, dependendo da versão do Visual Studi
 
 1. Escolha **prompt de comando do desenvolvedor para o vs 2019** ou o **PowerShell para desenvolvedores para vs 2019**.
 
-#### <a name="windows-7"></a>Windows 7
+### <a name="windows-7"></a>Windows 7
 
 1. Escolha **Iniciar** e expanda **todos os programas**.
 
@@ -89,11 +89,11 @@ Você pode ter vários prompts de comando, dependendo da versão do Visual Studi
 
 Se você tiver outros SDKs instalados, como o [SDK do Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk) ou [versões anteriores](https://developer.microsoft.com/windows/downloads/sdk-archive), poderá ver prompts de comando adicionais. Consulte a documentação das ferramentas individuais para determinar qual versão do prompt de comando você deve usar.
 
-### <a name="manually-locate-the-file"></a>Localizar o arquivo manualmente
+## <a name="manually-locate-the-file"></a>Localizar o arquivo manualmente
 
 Normalmente, os atalhos para os shells que você instalou são colocados na pasta do **menu iniciar** do Visual Studio, como no *%ProgramData%\Microsoft\Windows\Start Menu\Programs\Visual Studio 2019 \ Ferramentas do Visual Studio*. Mas se a pesquisa do prompt de comando não produzir os resultados esperados, você poderá tentar localizar manualmente os arquivos em seu computador.
 
-#### <a name="developer-command-prompt"></a>Prompt de Comando do Desenvolvedor
+### <a name="developer-command-prompt"></a>Prompt de Comando do Desenvolvedor
 
 Procure o nome do arquivo de prompt de comando, que é *VsDevCmd.bat* ou vá para a pasta Ferramentas do Visual Studio, como *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Community\Common7\Tools* (o caminho muda de acordo com sua versão, edição e local de instalação do Visual Studio).
 
@@ -112,7 +112,7 @@ Ou digite o seguinte comando na caixa de diálogo **executar** do Windows:
 > [!TIP]
 > Você precisará editar o caminho para corresponder à instalação do Visual Studio.
 
-#### <a name="developer-powershell"></a>PowerShell para desenvolvedores
+### <a name="developer-powershell"></a>PowerShell para desenvolvedores
 
 Procure um arquivo de script do PowerShell chamado *Launch-VsDevShell.ps1* ou vá para a pasta Ferramentas do Visual Studio, como *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Community\Common7\Tools*. (O caminho muda de acordo com a versão, edição e o local de instalação do Visual Studio.) Depois de localizar o arquivo do PowerShell, execute-o digitando o seguinte comando em um prompt do Windows PowerShell ou do PowerShell 6:
 
