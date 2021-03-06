@@ -1,4 +1,5 @@
 ---
+description: Essa função exibe propriedades de controle do código-fonte para um arquivo ou projeto.
 title: Função SccProperties | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a68694388f49d59c7e8e872f0fc70994130e2990
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 410febfbbb79cb352b6247139a11b1c49f3cde9c
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836768"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102220528"
 ---
 # <a name="sccproperties-function"></a>Função SccProperties
 Essa função exibe propriedades de controle do código-fonte para um arquivo ou projeto.
@@ -45,7 +46,7 @@ no Um identificador para a janela do IDE que o plug-in de controle do código-fo
 
 no O nome do caminho totalmente qualificado do arquivo ou projeto.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|
@@ -62,5 +63,5 @@ no O nome do caminho totalmente qualificado do arquivo ou projeto.
 
  As propriedades são definidas pelo plug-in de controle do código-fonte e podem ser diferentes do plug-in para o plug-in. Se o plug-in permitir que o usuário altere as propriedades de controle do código-fonte de um arquivo, ele deverá retornar `SCC_I_RELOAD` para sinalizar ao IDE que esse arquivo ou projeto precisa ser recarregado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Funções de API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)

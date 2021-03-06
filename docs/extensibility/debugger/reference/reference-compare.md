@@ -1,4 +1,5 @@
 ---
+description: Especifica o tipo de comparação para referências.
 title: REFERENCE_COMPARE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fd36ad090a0b354744becf7140ff0d0785588eb0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 65b38d342dc84e680e202b73976550fcca5809cf
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922866"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221945"
 ---
 # <a name="reference_compare"></a>REFERENCE_COMPARE
 Especifica o tipo de comparação para referências.

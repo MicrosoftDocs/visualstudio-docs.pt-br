@@ -1,4 +1,5 @@
 ---
+description: O elemento formRegions do namespace vstov4 contém as regiões de formulário do Microsoft Office Outlook que estão associadas a um suplemento do VSTO.
 title: '&lt;&gt;elemento FormRegions (desenvolvimento do Office no Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a1a718c6a247528788d91e9c1f30ad636acb7ab9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7c8fd7e0ced0fadcd945388a9730513b2a591ed0
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970329"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223453"
 ---
 # <a name="ltformregionsgt-element-office-development-in-visual-studio"></a>&lt;&gt;elemento FormRegions (desenvolvimento do Office no Visual Studio)
   O `formRegions` elemento do `vstov4` namespace contém as Microsoft Office regiões de formulário do Outlook que estão associadas a um suplemento do VSTO.

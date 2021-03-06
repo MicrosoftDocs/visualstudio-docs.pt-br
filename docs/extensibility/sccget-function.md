@@ -1,4 +1,5 @@
 ---
+description: Essa função recupera uma cópia de um ou mais arquivos para exibição e compilação, mas não para edição.
 title: Função SccGet | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 50281ffdd233debd3c10672868e9debd4b1f395f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 799d51c607ce720502c269cf82fe5a857ec7a826
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965207"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102220827"
 ---
 # <a name="sccget-function"></a>Função SccGet
 Essa função recupera uma cópia de um ou mais arquivos para exibição e compilação, mas não para edição. Na maioria dos sistemas, os arquivos são marcados como somente leitura.
@@ -60,7 +61,7 @@ no Sinalizadores de comando ( `SCC_GET_ALL` , `SCC_GET_RECURSIVE` ).
 
 no Opções específicas de plug-ins de controle do código-fonte.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|
@@ -106,6 +107,6 @@ no Opções específicas de plug-ins de controle do código-fonte.
 
     6. O arquivo atualizado *b.txt* agora pode ser verificado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Funções da API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
 - [Bitflags usado por comandos específicos](../extensibility/bitflags-used-by-specific-commands.md)

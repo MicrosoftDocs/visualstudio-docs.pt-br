@@ -1,4 +1,5 @@
 ---
+description: Essa função exibe as diferenças entre o diretório local atual no disco do cliente e o projeto correspondente sob controle do código-fonte.
 title: Função SccDirDiff | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8b7f045669a0d4b7e4e206c6ad8e85db55edc4ef
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 98a843c061941765404397186af74ab71923a9da
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929206"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221594"
 ---
 # <a name="sccdirdiff-function"></a>Função SccDirDiff
 Essa função exibe as diferenças entre o diretório local atual no disco do cliente e o projeto correspondente sob controle do código-fonte.
@@ -55,7 +56,7 @@ no Sinalizadores de comando (consulte a seção comentários).
 
 no Opções específicas de plug-ins de controle do código-fonte.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|

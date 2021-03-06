@@ -1,4 +1,5 @@
 ---
+description: Use esta janela para exibir e alterar as propriedades de tempo de design e os eventos dos objetos selecionados localizados em editores e designers.
 title: Janela Propriedades
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,12 +21,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ff6435aa006de851a14f4f04570d086a86a5999
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ddbfb4d001f73e30296a35c2cff4aae0e0c527f9
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967976"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221113"
 ---
 # <a name="properties-window"></a>Janela de Propriedades
 
@@ -83,7 +84,7 @@ Mostra uma representação visual do elemento selecionado no momento ao editar a
 Pesquisar\
 Fornece uma função de Pesquisa de propriedades e eventos ao editar arquivos XAML no designer. A caixa de pesquisa responde a pesquisas de palavras parciais e atualiza os resultados da pesquisa à medida que você digita.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de propriedades do projeto](../../ide/reference/project-properties-reference.md)
 - [Personalizando layouts de janela](../../ide/customizing-window-layouts-in-visual-studio.md)

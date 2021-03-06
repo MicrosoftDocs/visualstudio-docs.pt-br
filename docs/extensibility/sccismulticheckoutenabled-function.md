@@ -1,4 +1,5 @@
 ---
+description: Essa função verifica se o plug-in de controle do código-fonte permite vários check-outs em um arquivo.
 title: Função SccIsMultiCheckoutEnabled | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 009bc5ba0bb307d0aaee78076266260aa5bb20ef
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 648b68f1575e31e81b6f12ca09abcb8e7305a985
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924821"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102220554"
 ---
 # <a name="sccismulticheckoutenabled-function"></a>Função SccIsMultiCheckoutEnabled
 Essa função verifica se o plug-in de controle do código-fonte permite vários check-outs em um arquivo.
@@ -40,7 +41,7 @@ no A estrutura de contexto do plug-in de controle do código-fonte.
 
 fora Especifica se vários check-outs estão habilitados para este projeto (diferente de zero significa que há suporte para vários check-outs).
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|

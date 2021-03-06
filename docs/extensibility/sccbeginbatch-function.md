@@ -1,4 +1,5 @@
 ---
+description: Essa função inicia uma sequência em lote de operações de controle do código-fonte.
 title: Função SccBeginBatch | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e79a1203d97bfbf105a69b97516bda307825bd99
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b52b82919b10e58772343aee42cb8723b10d6ca3
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952129"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221646"
 ---
 # <a name="sccbeginbatch-function"></a>Função SccBeginBatch
 Essa função inicia uma sequência em lote de operações de controle do código-fonte. O [SccEndBatch](../extensibility/sccendbatch-function.md) será chamado para encerrar o lote. Esses lotes não podem ser aninhados.
@@ -31,7 +32,7 @@ SCCRTN SccBeginBatch(void);
 ### <a name="parameters"></a>Parâmetros
  Nenhum.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|
@@ -44,6 +45,6 @@ SCCRTN SccBeginBatch(void);
 
  Enquanto uma operação em lote está em vigor, o plug-in de controle do código-fonte deve apresentar no máximo uma caixa de diálogo para qualquer pergunta ao usuário e aplicar a resposta dessa caixa de diálogo em todas as operações subsequentes.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Funções da API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
 - [SccEndBatch](../extensibility/sccendbatch-function.md)

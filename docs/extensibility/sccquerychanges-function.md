@@ -1,4 +1,5 @@
 ---
+description: Essa função enumera uma determinada lista de arquivos, fornecendo informações sobre alterações de nome para cada arquivo por meio de uma função de retorno de chamada.
 title: Função SccQueryChanges | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: fd69183b290fa194d87dff79d69596dd65ec19ba
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e34c37ca999b05e7148d910032fe90c33470ce50
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836716"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102220515"
 ---
 # <a name="sccquerychanges-function"></a>Função SccQueryChanges
 Essa função enumera uma determinada lista de arquivos, fornecendo informações sobre alterações de nome para cada arquivo por meio de uma função de retorno de chamada.
@@ -55,7 +56,7 @@ no Função de retorno de chamada para chamar cada nome de arquivo na lista (con
 
 no Valor que será passado inalterado para a função de retorno de chamada.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|

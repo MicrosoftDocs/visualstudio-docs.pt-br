@@ -1,4 +1,5 @@
 ---
+description: Contém informações de status sobre caminhos de pesquisa de símbolos que foram pesquisados.
 title: MODULE_SYMBOL_SEARCH_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1b296307ff30b045d7bda2db5d3605cf0a63d01e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bc914334fc4b8ebf2dd73f691cdec242e19364a9
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928159"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102222283"
 ---
 # <a name="module_symbol_search_info"></a>MODULE_SYMBOL_SEARCH_INFO
 

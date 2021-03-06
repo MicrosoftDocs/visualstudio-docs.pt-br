@@ -1,4 +1,5 @@
 ---
+description: Essa estrutura fornece informações sobre os processos em execução em um computador.
 title: PROVIDER_PROCESS_DATA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5845ce7f512a24d341f73afa9f9905339dda87cb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f49ef1c2990fe578738356cbe5db19cbc1c159ab
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922971"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221972"
 ---
 # <a name="provider_process_data"></a>PROVIDER_PROCESS_DATA
 Essa estrutura fornece informações sobre os processos em execução em um computador.

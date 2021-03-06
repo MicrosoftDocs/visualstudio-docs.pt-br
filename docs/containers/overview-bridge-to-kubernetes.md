@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jmartens
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: 253b50ff4778458b28375b06b7fb7f24f4d85054
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d44dc484da904d2692b90e23d10db6edc6f6e7b8
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867562"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223154"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Como funciona a Ponte para Kubernetes
 
@@ -86,7 +86,7 @@ O diagrama a seguir mostra o mesmo cluster com ponte para kubernetes habilitado 
 
 ![Diagrama de cluster com ponte para kubernetes habilitado](media/bridge-to-kubernetes/kubr-cluster-devcomputer.svg)
 
-Quando uma solicitação com o subdomínio *GENERATED_NAME* é recebida no cluster, um cabeçalho *kubernetes-Route-as = GENERATED_NAME* é adicionado ao à solicitação. O Envoy pods manipula o roteamento dessa solicitação para o serviço apropriado no cluster. Se a solicitação for roteada para o serviço que está sendo trabalhado no isolamento, essa solicitação será redirecionada para o computador de desenvolvimento pelo agente remoto.
+Quando uma solicitação com o subdomínio *GENERATED_NAME* é recebida no cluster, um cabeçalho *kubernetes-Route-as = GENERATED_NAME* é adicionado à solicitação. O Envoy pods manipula o roteamento dessa solicitação para o serviço apropriado no cluster. Se a solicitação for roteada para o serviço que está sendo trabalhado no isolamento, essa solicitação será redirecionada para o computador de desenvolvimento pelo agente remoto.
 
 Quando uma solicitação sem o subdomínio *GENERATED_NAME* é recebida no cluster, nenhum cabeçalho é adicionado à solicitação. O Envoy pods manipula o roteamento dessa solicitação para o serviço apropriado no cluster. Se a solicitação for roteada para o serviço que está sendo substituído, essa solicitação será roteada para o serviço original em vez do agente remoto.
 

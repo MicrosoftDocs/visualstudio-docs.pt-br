@@ -1,4 +1,5 @@
 ---
+description: Essa estrutura representa o endereço de uma variável local dentro de um escopo (geralmente uma função ou método).
 title: METADATA_ADDRESS_LOCAL | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d5d4e9ee9808c25bb0df570ac451c061067904c2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6fba3b02fde05655413f5826fa2a32645b5dc95f
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99938744"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102222400"
 ---
 # <a name="metadata_address_local"></a>METADATA_ADDRESS_LOCAL
 

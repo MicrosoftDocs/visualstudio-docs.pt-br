@@ -1,4 +1,5 @@
 ---
+description: Recupera o número de cadeias de caracteres de valor a serem exibidas para a propriedade ou o campo especificado.
 title: 'IEEVisualizerService:: GetValueDisplayStringCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 97b06179027549c0bebe83b2b4866e53c8fd9569
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b77e2537e7581bb15f6458b4515d407fcfa1f827
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99842246"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102222842"
 ---
 # <a name="ieevisualizerservicegetvaluedisplaystringcount"></a>IEEVisualizerService::GetValueDisplayStringCount
 Recupera o número de cadeias de caracteres de valor a serem exibidas para a propriedade ou o campo especificado.
@@ -52,8 +53,8 @@ no Uma interface [IDebugField](../../../extensibility/debugger/reference/idebugf
 `pcelt`\
 fora Retorna o número de cadeias de caracteres de valor a serem exibidas.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)

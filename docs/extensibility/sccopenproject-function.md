@@ -1,4 +1,5 @@
 ---
+description: Essa função abre um projeto de controle do código-fonte existente ou cria um novo.
 title: Função SccOpenProject | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ebc78c73c37a5db3c1808cc3bb4b6715e85bcebe
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ff0aa402f3c3ba264524d6d4082c4a9fbf57c8ad
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836937"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221542"
 ---
 # <a name="sccopenproject-function"></a>Função SccOpenProject
 Essa função abre um projeto de controle do código-fonte existente ou cria um novo.
@@ -75,7 +76,7 @@ no Uma função de retorno de chamada opcional para exibir a saída de texto do 
 
 no Sinaliza se um novo projeto precisa ser criado se o projeto for desconhecido para o plug-in de controle do código-fonte. O valor pode ser uma combinação de `SCC_OP_CREATEIFNEW` e `SCC_OP_SILENTOPEN.`
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|

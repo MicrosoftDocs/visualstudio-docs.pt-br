@@ -1,4 +1,5 @@
 ---
+description: Retorna uma cópia da enumeração de DEBUG_REFERENCE_INFO atual como um objeto separado.
 title: 'IEnumDebugReferenceInfo2:: clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 71e7925e4158baced3683b5eaaa71206bd5a2506
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d39bcf4721a02975e36d16599cc041980ebf2aad
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967742"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102224194"
 ---
 # <a name="ienumdebugreferenceinfo2clone"></a>IEnumDebugReferenceInfo2::Clone
 Retorna uma cópia da enumeração atual como um objeto separado.
@@ -43,7 +44,7 @@ int Clone(
 `ppEnum`\
 fora Retorna uma cópia dessa enumeração como um objeto separado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

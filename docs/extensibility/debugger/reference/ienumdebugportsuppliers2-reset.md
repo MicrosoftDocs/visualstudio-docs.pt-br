@@ -1,4 +1,5 @@
 ---
+description: Redefine a enumeração de fornecedores de porta para o primeiro elemento.
 title: 'IEnumDebugPortSuppliers2:: Reset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8bcf4575282e845e96085b23b283e99c22a81039
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2d39d2e26de04dfb3417f4ebd673634d22194519
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954742"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102224493"
 ---
 # <a name="ienumdebugportsuppliers2reset"></a>IEnumDebugPortSuppliers2::Reset
 Redefine a enumeração para o primeiro elemento.

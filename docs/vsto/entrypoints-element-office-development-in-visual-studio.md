@@ -1,4 +1,5 @@
 ---
+description: O elemento entryPoints do namespace vstav3 contém todos os elementos entryPoint associados a uma solução do Office.
 title: '&lt;elemento entryPoints &gt; (desenvolvimento do Office no Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0cd5b49183bc4754e894caf898f6ca6a0c0e5440
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 481c67302c84ce08f60c571eb17084b96c0322bd
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910461"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223167"
 ---
 # <a name="ltentrypointsgt-element-office-development-in-visual-studio"></a>&lt;elemento entryPoints &gt; (desenvolvimento do Office no Visual Studio)
   O `entryPoints` elemento do `vstav3` namespace contém todos os `entryPoint` elementos associados a uma solução do Office.
@@ -49,7 +50,7 @@ ms.locfileid: "99910461"
  `entryPoints` tem os elementos a seguir.
 
 ### <a name="entrypoint"></a>entryPoint
- Obrigatório. A função do `entryPoint` elemento no `vstav3` namespace é definida no [ elemento&#60;EntryPoint&#62; &#40;o desenvolvimento do Office no Visual Studio&#41;](../vsto/entrypoint-element-office-development-in-visual-studio.md).
+ Obrigatórios. A função do `entryPoint` elemento no `vstav3` namespace é definida no [ elemento&#60;EntryPoint&#62; &#40;o desenvolvimento do Office no Visual Studio&#41;](../vsto/entrypoint-element-office-development-in-visual-studio.md).
 
 ## <a name="document-level-customization-example"></a>Exemplo de personalização no nível do documento
 

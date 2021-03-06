@@ -1,4 +1,5 @@
 ---
+description: Essa interface enumera os fornecedores de porta.
 title: IEnumDebugPortSuppliers2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: edff2cad101a6a6f0f19a4b384b8f2398b98b2e4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 893135291be3126055fa139dacaf3cc12141d8f4
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883734"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102224480"
 ---
 # <a name="ienumdebugportsuppliers2"></a>IEnumDebugPortSuppliers2
 Essa interface enumera os fornecedores de porta.

@@ -1,4 +1,5 @@
 ---
+description: Esse método retorna uma lista de visualizadores de tipo que esse serviço conhece.
 title: 'IEEVisualizerService:: GetCustomViewerList | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2ba63a1f27e043ca114a3b954adfe403b60283ca
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0bd9c633c6b65bbd597619f9fd30487a734d9004
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99907805"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102222894"
 ---
 # <a name="ieevisualizerservicegetcustomviewerlist"></a>IEEVisualizerService::GetCustomViewerList
 Esse método retorna uma lista de visualizadores de tipo que esse serviço conhece.
@@ -58,7 +59,7 @@ no Número de visualizadores a serem recuperados (também especifica o tamanho d
 `pceltFetched`\
 fora Número de visualizadores recuperados na verdade.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

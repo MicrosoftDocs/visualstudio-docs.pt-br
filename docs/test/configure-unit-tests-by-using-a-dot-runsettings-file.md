@@ -9,12 +9,12 @@ manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 9d6b4dd8bd21da7fcfc4d7cde54e5f5a7926472e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 65785384746fa3f16dd25f0405e5ead45c553c21
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/05/2021
-ms.locfileid: "102165716"
+ms.locfileid: "102221152"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Configurar testes de unidade usando um arquivo *. RunSettings*
 
@@ -81,6 +81,9 @@ Há três maneiras de especificar um arquivo de configurações de execução no
 - [Definir uma propriedade de compilação](#set-a-build-property)
 
 #### <a name="autodetect-the-run-settings-file"></a>Detectar automaticamente o arquivo de configurações de execução
+
+> [!NOTE]
+> Isso funcionará apenas para um arquivo chamado `.runsettings` .
 
 Para detectar automaticamente o arquivo de configurações de execução, coloque-o na raiz da sua solução.
 

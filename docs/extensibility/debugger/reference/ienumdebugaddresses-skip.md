@@ -1,4 +1,5 @@
 ---
+description: Esse método ignora o número especificado de elementos na enumeração addresses.
 title: 'IEnumDebugAddresses:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b0921d2b65aedb94c15c66ad878aa66bff73dbe2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1ae1b23c28f98d90649e701b7ff96b2394a9894b
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923051"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102222647"
 ---
 # <a name="ienumdebugaddressesskip"></a>IEnumDebugAddresses::Skip
 Esse método ignora o número especificado de elementos.
@@ -43,7 +44,7 @@ int Skip(
 `celt`\
 no Número de elementos a serem ignorados.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se `celt` é maior que o número de elementos restantes; caso contrário, retorna um código de erro.
 
 ## <a name="remarks"></a>Comentários

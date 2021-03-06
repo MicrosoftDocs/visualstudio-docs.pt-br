@@ -1,4 +1,5 @@
 ---
+description: O sistema de projeto Visual C++ é usado para arquivos. vcxproj.
 title: Extensibilidade do projeto Visual C++
 ms.date: 04/23/2019
 ms.technology: vs-ide-mobile
@@ -10,12 +11,12 @@ ms.author: corob
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c699c835c6a53ec346dadb8bbbbf787aacc9206
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fc538402ae39753f14a3bccd8bcd17ddb0081078
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99926027"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221230"
 ---
 # <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Integração de extensibilidade e conjunto de ferramentas do sistema de projeto do Visual Studio C++
 
