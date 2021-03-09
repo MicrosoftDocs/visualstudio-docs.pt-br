@@ -1,5 +1,6 @@
 ---
 title: Aplicativo DA0018-32-bit em execução em limites de memória gerenciada do processo | Microsoft Docs
+description: Os dados do sistema coletados durante a execução de criação de perfil indicam que os heaps de memória do .NET Framework se aproximaram do tamanho máximo que os heaps gerenciados podem atingir em um processo de 32 bits.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +14,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5730e96a47e7e931606269341d5f1cca302a0e5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 48f94f064b983ae671546f543dfbdfa380f35119
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99886386"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102466096"
 ---
 # <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018: aplicativo de 32 bits em execução em limites de memória gerenciada do processo
 

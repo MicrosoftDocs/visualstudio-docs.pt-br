@@ -1,6 +1,7 @@
 ---
 title: '&lt;&gt;elemento vstoRuntime (desenvolvimento do Office no Visual Studio)'
 titleSuffix: ''
+description: O elemento vstoRuntime do namespace vstav3 contém uma versão com suporte do Ferramentas do Visual Studio para o tempo de execução do Office para uma solução específica do Office.
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -15,17 +16,17 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c866db5f691db56e68f6980c9c07d21ee15c0ae5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7c856836bd2ba107a2fa6c3017c5ecb2694fcf6b
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99921743"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102468566"
 ---
 # <a name="ltvstoruntimegt-element-office-development-in-visual-studio"></a>&lt;&gt;elemento vstoRuntime (desenvolvimento do Office no Visual Studio)
   O `vstoRuntime` elemento do `vstav3` namespace contém uma versão com suporte do ferramentas do Visual Studio para o tempo de execução do Office para uma solução específica do Office.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <vstoRuntime
@@ -42,7 +43,7 @@ ms.locfileid: "99921743"
 |Atributo|Descrição|
 |---------------|-----------------|
 |`release`|Obrigatórios. A versão de lançamento do Ferramentas do Visual Studio para o tempo de execução do Office.|
-|`version`|Obrigatório. Número de versão do Ferramentas do Visual Studio para o tempo de execução do Office.|
+|`version`|Obrigatórios. Número de versão do Ferramentas do Visual Studio para o tempo de execução do Office.|
 |`supportUrl`|Opcional. Link para o local de instalação do Ferramentas do Visual Studio para o tempo de execução do Office.|
 
  `vstoRuntime` Não tem elementos.

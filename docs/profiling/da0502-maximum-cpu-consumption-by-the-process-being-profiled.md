@@ -1,5 +1,6 @@
 ---
 title: DA0502-consumo máximo de CPU pelo processo que está sendo criado com perfil | Microsoft Docs
+description: Essa mensagem relata o percentual máximo de tempo que um processador esteve ocupado executando instruções do aplicativo.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +14,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 988e9576f7c5aacac4bc4335f06b08dd1176f847
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 45071fb94b00be721e8c76c69dc5135a59f3a9b1
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918105"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465771"
 ---
 # <a name="da0502-maximum-cpu-consumption-by-the-process-being-profiled"></a>DA0502: consumo máximo da CPU pelo processo que está sendo analisado
 
@@ -26,7 +27,7 @@ ms.locfileid: "99918105"
 |-|-|
 |ID de regra|DA0502|
 |Categoria|Monitoramento de recursos|
-|Método de criação de perfil|Tudo|
+|Método de criação de perfil|Todos|
 |Mensagem|Essa regra se destina apenas a fins informativos. O contador Processo()\\% de tempo do processador mede o consumo da CPU do processo do qual o perfil está sendo criado. O valor relatado é o máximo observado em todos os intervalos de medição.|
 |Tipo de regra|Informativo|
 

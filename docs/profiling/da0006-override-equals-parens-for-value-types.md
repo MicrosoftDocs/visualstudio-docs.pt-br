@@ -1,5 +1,6 @@
 ---
 title: DA0006-override Equals () para tipos Value | Microsoft Docs
+description: Chamadas para o método Equals ou os operadores de igualdade de um tipo de valor público são uma parte significativa dos dados de criação de perfil.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +15,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e815c985653bc58271b643aabd53955ae3c83f9c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6f8399dbe43c20a8c888ac4e4bac9ec8b03e9610
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937648"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102466135"
 ---
 # <a name="da0006-override-equals-for-value-types"></a>DA0006: Substituir Equals() por tipos de valor
 

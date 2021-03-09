@@ -1,5 +1,6 @@
 ---
 title: DA0017-taxas altas de paginação de memória ativa para o disco | Microsoft Docs
+description: Os dados de desempenho do sistema coletados na execução de criação de perfil indicam que ocorreu uma taxa alta de paginação de memória ativa do ou no disco durante a execução de criação de perfil.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +14,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f66db4c727be1377b41da381b75609af6478c10
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fc3be6c354e7ac412ffa069caef4ee09396d6cb5
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99916763"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102466071"
 ---
 # <a name="da0017-high-rates-of-paging-active-memory-to-disk"></a>DA0017: Altas taxas de paginação de memória ativa para o disco
 
@@ -26,7 +27,7 @@ ms.locfileid: "99916763"
 |-|-|
 |ID de regra|DA0017|
 |Categoria|Memória e paginação|
-|Método de criação de perfil|Tudo|
+|Método de criação de perfil|Todos|
 |Mensagem|Uma alta taxa de paginação de memória ativa em disco está ocorrendo. O aplicativo pode ser associado à memória.|
 |Tipo de regra|Informações|
 

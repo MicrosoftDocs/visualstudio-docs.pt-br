@@ -1,5 +1,6 @@
 ---
 title: DA0007-Evite usar exceções para o fluxo de controle | Microsoft Docs
+description: Uma alta taxa de manipuladores de exceção do .NET Framework foram chamados nos dados de criação de perfil.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +15,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4796fa1e998e75fcbbebe21df394ed41fe4807df
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2648e287ea37e1ae78b14a65c02521f72a3491d0
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949383"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102466122"
 ---
 # <a name="da0007-avoid-using-exceptions-for-control-flow"></a>DA0007: Evitar usar exceções no fluxo de controle
 
@@ -27,7 +28,7 @@ ms.locfileid: "99949383"
 |-|-|
 |ID de regra|DA0007|
 |Categoria|Uso do .NET Framework|
-|Métodos de criação de perfil|Tudo|
+|Métodos de criação de perfil|Todos|
 |Mensagem|Um número elevado de exceções está sendo gerado de forma consistente. Considere a redução do uso de exceções na lógica do programa.|
 |Tipo de mensagem|Aviso|
 

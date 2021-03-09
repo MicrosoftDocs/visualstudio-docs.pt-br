@@ -1,5 +1,6 @@
 ---
 title: A depuração &apos; não é possível porque um depurador de kernel está habilitado no sistema | Microsoft Docs
+description: Essa mensagem ocorre quando você tenta Depurar código gerenciado em um sistema Windows 7 ou Windows Vista que foi iniciado no modo de depuração, e o aplicativo usa a versão CLR 2,0, 3,0 ou 3,5.
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a06ed9092145188bf5fbecd2caeb42f5ad5c2e3a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ced7fb79a11321678ae2963241807e5ddd4600ab
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871761"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102466453"
 ---
 # <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>Erro: a depuração não&#39;o t possível porque um depurador de kernel está habilitado no sistema
 Quando você depura o código gerenciado, talvez receba a seguinte mensagem de erro:
@@ -32,7 +33,7 @@ Debugging isn't possible because a kernel debugger is enabled on the system
 
  Essa mensagem ocorre quando você tenta depurar o código gerenciado:
 
-- em um sistema do [!INCLUDE[win7](../debugger/includes/win7_md.md)] ou [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)]que foi iniciado em modo de depuração.
+- em um [!INCLUDE[win7](../debugger/includes/win7_md.md)] [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)] sistema ou que foi iniciado no modo de depuração.
 
 - o aplicativo usa o CLR versão 2.0, 3.0 ou 3.5.
 

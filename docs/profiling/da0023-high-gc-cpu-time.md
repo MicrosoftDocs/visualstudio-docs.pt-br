@@ -1,5 +1,6 @@
 ---
 title: DA0023-tempo de CPU de GC alto | Microsoft Docs
+description: Os dados de desempenho do sistema coletados durante a criação de perfil indicam que a quantidade de tempo gasto na coleta de lixo é significativa em comparação com o tempo total de processamento do aplicativo.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +14,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f719cf2e416e3cb1a58a279d6327810c71e41d0e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eccf44528b18d43a97a5a9c202c72b59abbdf431
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966975"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102466070"
 ---
 # <a name="da0023-high-gc-cpu-time"></a>DA0023: Tempo de CPU de GC elevado
 
@@ -26,7 +27,7 @@ ms.locfileid: "99966975"
 |-|-|
 |ID de regra|DA0023|
 |Categoria|Uso do .NET Framework|
-|Método de criação de perfil|Tudo|
+|Método de criação de perfil|Todos|
 |Mensagem|O % de tempo no GC é bem alto. Essa indicação de quantidade excessiva de sobrecarga de coleta de lixo pode estar afetando a capacidade de resposta do aplicativo. Você pode coletar dados de alocação de memória do .NET e informações de tempo de vida do objeto para entender o padrão de alocação de memória usado melhor pelo aplicativo.|
 |Tipo de regra|Informativo|
 

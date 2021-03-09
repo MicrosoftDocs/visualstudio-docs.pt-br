@@ -1,5 +1,6 @@
 ---
 title: DA0504-conjunto de trabalho máximo em bytes para o processo que está sendo criado com perfil | Microsoft Docs
+description: Essa mensagem relata a quantidade máxima de memória física, em bytes, que o processo está usando.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +14,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c218965add570035e9396652cec46279fcebc4d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7810646f14c61683fc3fc5e3e70eee33ba01dde1
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931741"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465784"
 ---
 # <a name="da0504-maximum-working-set-in-bytes-for-the-process-being-profiled"></a>DA0504: Conjunto de trabalho máximo em bytes para o processo cujo perfil está sendo criado
 
@@ -26,7 +27,7 @@ ms.locfileid: "99931741"
 |-|-|
 |ID de regra|DA0504|
 |Categoria|Gerenciamento de recursos|
-|Método de criação de perfil|Tudo|
+|Método de criação de perfil|Todos|
 |Mensagem|Essas informações foram coletadas apenas para fins informativos. O contador Conjunto de trabalho do processo mede o uso de memória física do processo do qual está sendo criado o perfil. O valor relatado é o máximo observado em todos os intervalos de medição.|
 |Tipo de regra|Informações|
 
