@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 5dc7f57e-883a-4cc1-a914-06245a8cb1ff
-ms.date: 10/21/2020
+ms.date: 02/19/2021
 ms.topic: how-to
 description: Saiba como configurar sua conta de Pago Conforme o Uso do Azure.
-ms.openlocfilehash: cb9d89cc704c8d072e0807189f88ba757d9aad78
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 3668302778532f1413f240308faa503c9c58837a
+ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904568"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102473264"
 ---
 # <a name="azure-devtest-pay-as-you-go-subscriptions"></a>Assinaturas pagas conforme o uso do Azure DevTest
 Colabore com sua equipe na nuvem.  Crie várias assinaturas Pagas Conforme o Uso de Desenvolvimento e de Teste, permitindo a colaboração com outros assinantes e também o isolamento entre as equipes e os ambientes.  Você recebe taxas por hora com desconto exclusivas para desenvolvimento/teste e direitos de uso de nuvem para seu software de assinatura no Azure.
@@ -26,11 +26,11 @@ Colabore com sua equipe na nuvem.  Crie várias assinaturas Pagas Conforme o Uso
 
 3. Na página de inscrição do Microsoft Azure, haverá a opção de configurar a oferta Desenvolvimento/Teste Pago Conforme o Uso (PAYG) ou atualizar para a oferta Visual Studio Enterprise.  Clique em **Continuar com a oferta atual (Desenvolvimento/Teste Pago Conforme o Uso)** se você não desejar atualizar.
 
-4. Para verificar sua identidade, insira um número de telefone e escolha "Enviar mensagem de texto" ou "Telefonar para mim".  Insira o código recebido.  Clique em **Verificar código** .
+4. Para verificar sua identidade, insira um número de telefone e escolha "Enviar mensagem de texto" ou "Telefonar para mim".  Insira o código recebido.  Clique em **Verificar código**.
 
-5. Em seguida, forneça as informações de cobrança da sua conta e clique em **Avançar** .  (Trata-se das informações do cartão de crédito no qual as suas compras do Azure são cobradas.)
+5. Em seguida, forneça as informações de cobrança da sua conta e clique em **Avançar**.  (Trata-se das informações do cartão de crédito no qual as suas compras do Azure são cobradas.)
 
-6. Na seção Contrato, clique na caixa de seleção para aceitar o contrato de assinatura, os detalhes da oferta e a política de privacidade e, em seguida, clique em **Comprar** .
+6. Na seção Contrato, clique na caixa de seleção para aceitar o contrato de assinatura, os detalhes da oferta e a política de privacidade e, em seguida, clique em **Comprar**.
 
 7. Na página **Bem-vindo ao Microsoft Azure** haverá a opção de comprar um plano de suporte ou começar a usar sua assinatura.
 
@@ -40,11 +40,14 @@ Colabore com sua equipe na nuvem.  Crie várias assinaturas Pagas Conforme o Uso
 ### <a name="q--what-if-i-want-to-make-changes-to-this-subscription"></a>P: e se eu quiser fazer alterações nessa assinatura?
 R: para fazer alterações em qualquer uma das suas assinaturas do Azure:
 1. Entre no [portal do Azure](https://portal.azure.com).
-2. Na lista no painel esquerdo, selecione **Gerenciamento de Custos + Cobrança** .
-3. Você verá uma lista das suas assinaturas na caixa **Minhas assinaturas** . Clique na assinatura desejada.
+2. Na lista no painel esquerdo, selecione **Gerenciamento de Custos + Cobrança**.
+3. Você verá uma lista das suas assinaturas na caixa **Minhas assinaturas**. Clique na assinatura desejada.
 4. Agora você terá opções para gerenciar ou cancelar a assinatura, renomeá-la, alterar o diretório ou transferir a propriedade de cobrança.
 
-## <a name="see-also"></a>Veja também
+## <a name="resources"></a>Recursos
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio.
+
+## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

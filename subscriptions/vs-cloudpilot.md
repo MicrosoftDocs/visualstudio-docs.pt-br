@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 6255b6a3-f101-4b2c-b7fa-851eccc944b2
-ms.date: 12/02/2020
+ms.date: 02/19/2021
 ms.topic: conceptual
 description: Saiba mais sobre o benefício do CloudPilot disponível nas assinaturas do Visual Studio selecionadas
-ms.openlocfilehash: 505e4caad5ee6d9b70fc50769c8a008469aa1345
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 4d9b7bea4b2165b8efc9f57396b078c42a5fc8eb
+ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538143"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102473355"
 ---
 # <a name="the-cloudpilot-benefit-in-visual-studio-subscriptions"></a>O benefício CloudPilot nas assinaturas do Visual Studio
 Mova seus aplicativos para o Microsoft Azure em poucas etapas simples. Em minutos, identifique todas as alterações de código necessárias à linha de código para a migração bem-sucedida para: Contêineres, VMs, Serviços de Aplicativos, SQL do Azure e/ou MI do SQL. Em seguida, migre os aplicativos para o Azure usando assistentes e aproveitando o ASR, o AMD e o DMS.
@@ -48,7 +48,7 @@ O CloudPilot, da UnifyCloud, foi projetado para ajudar os desenvolvedores a move
     > [!div class="mx-imgBorder"]
     > ![Página de produto do CloudPilot](_img/vs-cloudpilot/vs-cloudpilot-navigate.png)
 
-0. Pronto!  Você verá o portal do CloudPilot e estará pronto para começar a usar sua assinatura do CloudPilot para mover os aplicativos para o Microsoft Azure.
+0. É isso!  Você verá o portal do CloudPilot e estará pronto para começar a usar sua assinatura do CloudPilot para mover os aplicativos para o Microsoft Azure.
 
 0. Assim que a conta for criada com êxito, você receberá um email do suporte de VSS da UnifyCloud confirmando a criação bem-sucedida de sua conta.
 
@@ -81,10 +81,10 @@ Não tem certeza de qual assinatura você está usando?  Conecte-se ao [https://
   - [Manual do usuário do CloudPilot](https://www.cloudatlasinc.com/cloudpilot/doc/CloudPilot-User-Manual.pdf )
   - [Enviar uma solicitação de suporte](https://support.datacamp.com/hc/requests/new)
 
-- Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio.
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio.
 - Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

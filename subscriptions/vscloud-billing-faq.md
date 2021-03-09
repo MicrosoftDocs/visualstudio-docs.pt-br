@@ -7,12 +7,12 @@ ms.assetid: 21e0471d-ad59-4d21-9c6f-13f7147569af
 ms.date: 03/05/2021
 ms.topic: conceptual
 description: Perguntas sobre cobrança para assinaturas de nuvem.
-ms.openlocfilehash: 2c03871d11279b7c368ebd0c7012670fc92c9ee0
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: d3c370eecab49de5f4ea5001e6052c18ff83e00b
+ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249723"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102473407"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Perguntas frequentes sobre cobrança de assinaturas de nuvem do Visual Studio
 [Compare os benefícios e os preços das assinaturas de nuvem](https://visualstudio.microsoft.com/vs/pricing/) para entender os benefícios de cada assinatura do Visual Studio, com comparações entre as assinaturas de nuvem e padrão do Visual Studio, detalhes sobre os benefícios do assinante e muito mais.
@@ -99,8 +99,8 @@ R: Confira o artigo [entender sua fatura do Azure](https://docs.microsoft.com/az
 
 ## <a name="related-resources"></a>Recursos relacionados
 - [Portal de administração de assinaturas do Visual Studio](https://manage.visualstudio.com/)
-- [Suporte de assinatura do Visual Studio](https://visualstudio.microsoft.com/vs/support/)
 - [Compra de assinatura de nuvem do Visual Studio para CSPs](vscloud-csp.md)
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio.
 
 ## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](/visualstudio/)

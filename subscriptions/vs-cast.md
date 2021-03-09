@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 92e8957f-c690-46bd-a812-3efd06a2bc6b
-ms.date: 10/21/2020
+ms.date: 02/19/2021
 ms.topic: how-to
 description: Saiba mais sobre o benefício CAST Highlight disponível nas assinaturas do Visual Studio selecionadas
-ms.openlocfilehash: fbc7b6278d29d96ed8d97933c295468c7d3e2754
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 0acc7b62dbac66d25e61dcddfeee0c9124d66694
+ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538131"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102473316"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>O benefício CAST Highlight nas assinaturas do Visual Studio
 Os desenvolvedores precisam de insights críticos sobre seu software ao migrar para a nuvem. Com o realce de conversão, os assinantes do Visual Studio podem examinar rapidamente o código-fonte do aplicativo para identificar a preparação da nuvem de seus aplicativos para migração para o Azure e monitorar o progresso de seus aplicativo durante e após uma migração.
@@ -98,10 +98,10 @@ Não tem certeza de qual assinatura você está usando?  Conecte-se ao [https://
   - [Enviar uma solicitação de suporte](https://casthighlight.com/support/)
   - [Guia de introdução (PDF)](https://casthighlight.com/Getting-Started-Guide.pdf)
 
-- Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio.
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio.
 - Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

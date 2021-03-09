@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: d2ab13ed-ef79-4ef0-8736-eccd04bc6020
-ms.date: 10/21/2020
+ms.date: 02/19/2021
 ms.topic: conceptual
 description: Informações para Provedores de Soluções na Nuvem como comprar e gerenciar assinaturas de nuvem do Visual Studio para seus clientes.
-ms.openlocfilehash: 632e407aa4455b7c2a87299cc8811bc996c8d5b6
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: 78d4f39eef4b3daabc5bcbfbf47e969dd6213d36
+ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353259"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102473290"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>Comprar e gerenciar assinaturas de nuvem do Visual Studio para seus clientes
 Os parceiros do programa [CSP (Provedores de Soluções na Nuvem)](https://partner.microsoft.com/cloud-solution-provider) podem comprar assinaturas de nuvem do Visual Studio Enterprise e do Visual Studio Professional para seus clientes.
@@ -106,7 +106,10 @@ R: Não, os preços para assinaturas do Visual Studio são fixos. O mesmo preço
 ### <a name="q-are-there-azure-devtest-pricing-options-for-csps"></a>P: Há opções de preços de Desenvolvimento/Teste do Azure para os CSPs?
  R: Não no momento. Seus clientes podem usufruir dos [preços do Azure para Desenvolvimento/Teste](https://azure.microsoft.com/pricing/dev-test/), mas não há nada específico para os CSPs.
 
-## <a name="see-also"></a>Veja também
+## <a name="resources"></a>Recursos
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio.
+
+## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

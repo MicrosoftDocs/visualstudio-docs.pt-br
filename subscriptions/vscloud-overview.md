@@ -4,18 +4,18 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
-ms.date: 10/28/2020
+ms.date: 02/19/2021
 ms.topic: overview
 description: Alugue o Visual Studio Professional ou o Visual Studio Enterprise mês a mês ou anualmente, sem nenhum contrato de longo prazo.
-ms.openlocfilehash: fbb4204ec5b36d865a1c8b3d9c235cdf97b4019e
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 6aa17046726e19086f511c7ab59ab19228142e20
+ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92918078"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102473381"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Comprar assinaturas de nuvem do Visual Studio Professional e do Visual Studio Enterprise
-Você pode comprar [assinaturas do Visual Studio Professional e do Visual Studio Enterprise](https://visualstudio.microsoft.com/subscriptions/) no [Visual Studio Marketplace](https://marketplace.visualstudio.com). Elas são chamadas de **"assinaturas de nuvem"** .
+Você pode comprar [assinaturas do Visual Studio Professional e do Visual Studio Enterprise](https://visualstudio.microsoft.com/subscriptions/) no [Visual Studio Marketplace](https://marketplace.visualstudio.com). Elas são chamadas de **"assinaturas de nuvem"**.
 
 [Compare os benefícios e os preços da assinatura na nuvem](https://visualstudio.microsoft.com/vs/pricing/)
 
@@ -42,7 +42,7 @@ Você precisará ser um colaborador ou superior para uma assinatura do Azure que
     > [!div class="mx-imgBorder"]
     > ![Selecionar número de assinaturas](_img/buy-vs-subscriptions/buy-vs-sub-users.png "Escolha o número de assinaturas a serem compradas")
 
-    Se não desejar assinaturas atribuídas a você, desmarque **Atribuir esta assinatura a mim** .
+    Se não desejar assinaturas atribuídas a você, desmarque **Atribuir esta assinatura a mim**.
 
 5. Confirme e conclua a compra. Se você tiver atribuído uma assinatura para si mesmo, visite o [Portal do assinante do Visual Studio](https://my.visualstudio.com) para iniciar o download do software e usar outros benefícios do assinante.
 
@@ -72,7 +72,7 @@ Para cancelar as assinaturas, você só precisa definir o número de assinaturas
 > [!div class="mx-imgBorder"]
 > ![Exibir visão geral da assinatura](_img/buy-vs-subscriptions/overview-button.png "Selecione o botão visão geral para exibir detalhes da assinatura")
 
-4. Localize a entrada para as assinaturas que você deseja cancelar e selecione **Alterar quantidade** .
+4. Localize a entrada para as assinaturas que você deseja cancelar e selecione **Alterar quantidade**.
 1. Defina a quantidade como zero (0). Suas assinaturas permanecerão em vigor até a data de cobrança agendada, mas não serão renovadas quando a data de cobrança for atingida.   
 
 > [!div class="mx-imgBorder"]
@@ -105,7 +105,7 @@ R: as assinaturas anuais que são adquiridas durante um determinado mês são co
 R: seu administrador ainda pode diminuir o número de assinaturas visitando https://manage.visualstudio.com e seguindo as instruções neste artigo para diminuir as contagens de assinaturas. O sistema *não* gerará um crédito proporcionalmente. Para obter um reembolso, você precisará entrar em contato com a equipe de cobrança do Azure.
 
 #### <a name="q-if-i-cancel-my-subscription-will-i-be-able-to-buy-another-annual-cloud-subscription-later"></a>P: se eu cancelar minha assinatura, serei capaz de comprar outra assinatura de nuvem anual mais tarde?
-R: embora você não consiga comprar outra assinatura anual de nuvem, há muitas opções para comprar assinaturas do Visual Studio.  Saiba mais em [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) .
+R: embora você não consiga comprar outra assinatura anual de nuvem, há muitas opções para comprar assinaturas do Visual Studio.  Saiba mais em [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/).
 
 ### <a name="for-cloud-solution-providers-csp"></a>Para CSPs (Provedores de Soluções na Nuvem)
 #### <a name="q-how-will-this-change-impact-my-customers"></a>P: como essa alteração afeta meus clientes?
@@ -121,15 +121,15 @@ R: as assinaturas anuais adquiridas durante um determinado mês são cobradas im
 R: seu administrador ainda pode diminuir o número de assinaturas visitando [https://manage.visualstudio.com](https://manage.visualstudio.com) e seguindo as instruções neste artigo para diminuir as contagens de assinaturas. O sistema **não** gerará um crédito proporcionalmente. Para obter um reembolso, você precisará entrar em contato com a equipe de cobrança do Azure.
 
 #### <a name="q-if-my-customers-cancel-their-subscriptions-will-they-be-able-to-buy-more-annual-cloud-subscriptions-later"></a>P: se meus clientes cancelarem suas assinaturas, eles poderão comprar mais assinaturas de nuvem anuais mais tarde?
-R: embora eles não possam comprar outra assinatura anual de nuvem, há muitas opções para comprar assinaturas do Visual Studio.  Saiba mais em [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) .
+R: embora eles não possam comprar outra assinatura anual de nuvem, há muitas opções para comprar assinaturas do Visual Studio.  Saiba mais em [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/).
 
 ## <a name="related-resources"></a>Recursos relacionados
 - [Portal de administração de assinaturas do Visual Studio](https://manage.visualstudio.com/)
-- [Suporte de assinatura do Visual Studio](https://visualstudio.microsoft.com/vs/support/)
 - [Visual Studio cloud subscription billing FAQ](vscloud-billing-faq.md) (Perguntas frequentes sobre cobrança de assinaturas de nuvem do Visual Studio)
 - [Compra de assinatura de nuvem do Visual Studio para CSPs](vscloud-csp.md)
+- - Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)
