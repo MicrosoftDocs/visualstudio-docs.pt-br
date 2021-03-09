@@ -1,5 +1,6 @@
 ---
 title: IDebugProperty3 | Microsoft Docs
+description: Essa interface fornece suporte para recuperar uma cadeia de caracteres longa e arbitrariamente associada à propriedade, associando uma ID exclusiva à propriedade, recuperando uma lista de visualizadores personalizados para a propriedade, definindo o valor de uma propriedade com a capacidade de relatar quaisquer erros resultantes.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2f24e7ec1842866011bb4d3735104a043bc77e01
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 65da477c47e88699cc479f632843f839b3d02f9d
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897255"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102469769"
 ---
 # <a name="idebugproperty3"></a>IDebugProperty3
 Esta interface fornece suporte para:
@@ -30,7 +31,7 @@ Esta interface fornece suporte para:
 
 - Definindo o valor de uma propriedade com a capacidade de relatar quaisquer erros resultantes
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugProperty3 : IDebugProperty2

@@ -1,5 +1,6 @@
 ---
 title: '&lt;elemento de ação &gt; (desenvolvimento do Office no Visual Studio)'
+description: O elemento Action do namespace vstav3 contém os elementos EntryPoint e todos os elementos postActionData associados a ações pós-implantação, que são executadas depois que as soluções do Office são instaladas.
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -14,17 +15,17 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0490e9423cb747782029eb0fd7254407adb3a607
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 04f8c92c52aeee9f7f1dd5ab67b3dcef3a295474
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99955756"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102470047"
 ---
 # <a name="ltpostactiongt-element-office-development-in-visual-studio"></a>&lt;elemento de ação &gt; (desenvolvimento do Office no Visual Studio)
   O `postAction` elemento do `vstav3` namespace contém os `entrypoint` elementos e todos os `postActionData` elementos associados às ações pós-implantação, que são executadas após a instalação das soluções do Office.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <postAction>

@@ -1,5 +1,6 @@
 ---
 title: '&lt;&gt;elemento de ações (desenvolvimento do Office)'
+description: O elemento executes do namespace vstav3 contém todos os elementos de ação que descrevem as ações pós-implantação, que são executadas após a instalação das soluções do Office.
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: reference
@@ -15,17 +16,17 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: da0c3ee640d7ae4ec1b61df7a60893a7e1428cd2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5c4a66e270cd446996884262d380df0f7384f54f
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879430"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102470034"
 ---
 # <a name="ltpostactionsgt-element-office-development"></a>&lt;&gt;elemento de ações (desenvolvimento do Office)
   O `postActions` elemento do `vstav3` namespace contém todos os `postAction` elementos que descrevem as ações pós-implantação, que são executadas após a instalação das soluções do Office.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <postActions>

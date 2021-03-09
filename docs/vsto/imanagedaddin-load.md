@@ -1,5 +1,6 @@
 ---
 title: IManagedAddin::Load
+description: Chamado quando um suplemento do VSTO gerenciado é carregado.
 ms.date: 02/02/2017
 ms.topic: interface
 dev_langs:
@@ -11,12 +12,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 605c1dc7a7b0d24ba082767930fd53148cccbd95
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fc89ba13e9fc0f62b264cdb926e1a8392c0b41bd
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920327"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102469756"
 ---
 # <a name="imanagedaddinload"></a>IManagedAddin::Load
   Chamado quando um suplemento do VSTO gerenciado é carregado.
@@ -35,7 +36,7 @@ HRESULT Load([in] BSTR bstrManifestURL,
 |*bstrManifestURL*|O caminho completo do manifesto para o suplemento do VSTO.|
 |*pdispApplication*|Um ponteiro para um IDispatch que representa o aplicativo host que está carregando o suplemento do VSTO.|
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
  Um valor HRESULT que indica se o método foi concluído com êxito.
 
 ## <a name="remarks"></a>Comentários
@@ -45,6 +46,6 @@ HRESULT Load([in] BSTR bstrManifestURL,
 
  Implemente o método [IManagedAddin:: Load](../vsto/imanagedaddin-load.md) para executar tarefas como configurar o domínio do aplicativo e a política de segurança para o suplemento do VSTO que está sendo carregado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Interface IManagedAddin](../vsto/imanagedaddin-interface.md)
 - [IManagedAddin::Unload](../vsto/imanagedaddin-unload.md)

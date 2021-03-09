@@ -1,5 +1,6 @@
 ---
 title: '&lt;&gt;elemento postActionData (desenvolvimento do Office)'
+description: O elemento postActionData do namespace vstav3 especifica os dados associados a qualquer ação pós-implantação que é executada Depois que as soluções do Office são instaladas.
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: reference
@@ -15,17 +16,17 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 505b55b7513446a158adac66e7e0e38f401f0808
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a75f61c6d1f80a127f49d96c4e3f4910c66dd8aa
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99847681"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102470060"
 ---
 # <a name="ltpostactiondatagt-element-office-development"></a>&lt;&gt;elemento postActionData (desenvolvimento do Office)
   O `postActionData` elemento do `vstav3` namespace Especifica os dados associados a qualquer ação pós-implantação que é executada Depois que as soluções do Office são instaladas.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <postActionData>
@@ -52,7 +53,7 @@ ms.locfileid: "99847681"
 </vstav3:postActionData>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Manifestos do aplicativo para soluções do Office](../vsto/application-manifests-for-office-solutions.md)
 - [Manifestos de implantação para soluções do Office](../vsto/deployment-manifests-for-office-solutions.md)
