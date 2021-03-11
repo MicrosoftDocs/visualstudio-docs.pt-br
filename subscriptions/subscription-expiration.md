@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: b6fbfa3e-654a-462f-8e22-e313b6ea617f
-ms.date: 10/30/2020
+ms.date: 02/19/2021
 ms.topic: conceptual
 description: Saiba o que acontece quando sua assinatura do Visual Studio expira
-ms.openlocfilehash: 3bab529f4a45a57e6cc21260fdde2d5e18bc5217
-ms.sourcegitcommit: f81984aec5341a84b87c2466461656c38d8ff681
+ms.openlocfilehash: 26659cf70ace2ffb6eaa8f02146ed965c03df48a
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93245014"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607126"
 ---
 # <a name="what-happens-when-your-subscription-expires"></a>O que acontece quando sua assinatura expira
 As assinaturas do Visual Studio têm durações específicas e, a menos que sejam renovadas, elas expirarão.  Quando uma assinatura expira, os benefícios fornecidos pela assinatura são afetados de maneiras diferentes.  Este artigo explicará como a expiração afeta vários aspectos de uma assinatura do Visual Studio. 
@@ -40,7 +40,10 @@ As alocações mensais de crédito do Azure continuarão por um período limitad
 ### <a name="other-benefits"></a>Outros benefícios 
 Muitos dos benefícios incluídos nas assinaturas do Visual Studio têm durações específicas.  Os benefícios fornecidos pelos parceiros da Microsoft, como Pluralsight, datacamp ou Whitestate, têm limites de tempo quando são ativados.  Os benefícios que você ativou anteriormente continuarão disponíveis para você pelo restante dos seus termos.  Por exemplo, se você ativou uma assinatura do LinkedIn Learning de seis meses e ainda tiver quatro meses restantes quando sua assinatura do Visual Studio expirar, você ainda terá quatro meses de acesso à assinatura do LinkedIn Learning.  
 
-## <a name="see-also"></a>Confira também
+## <a name="resources"></a>Recursos
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio.
+
+## <a name="see-also"></a>Consulte também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

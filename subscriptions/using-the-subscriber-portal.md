@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 8470f035-2a82-4052-9a12-6f24ce796861
-ms.date: 10/28/2020
+ms.date: 02/19/2021
 ms.topic: overview
 description: Saiba mais sobre a gama completa de benefícios disponíveis para você no portal de assinaturas do Visual Studio
-ms.openlocfilehash: d4f65f4c430d585485c388f22664726c848e6d1e
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 6ce759b3ef6a73980e7bd477e36479d65a61b3c8
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904577"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607131"
 ---
 # <a name="using-the-subscriber-portal---myvisualstudiocom"></a>Usando o Portal do Assinante – my.visualstudio.com
 
@@ -47,13 +47,13 @@ A página Assinaturas fornece os recursos para ver quais assinaturas você possu
 
 ## <a name="support"></a>Suporte
 
-Além dos benefícios individuais encontrados na categoria de Suporte na página Benefícios, a página Suporte fornece acesso a recursos para ajudá-lo a tirar o máximo proveito da assinatura do Visual Studio. Acesse [recursos de suporte](https://visualstudio.microsoft.com/subscriptions/support/) para resolver problemas técnicos ou dúvidas relacionadas a vendas de assinaturas, contas e cobrança.
+Além dos benefícios individuais encontrados na categoria de Suporte na página Benefícios, a página Suporte fornece acesso a recursos para ajudá-lo a tirar o máximo proveito da assinatura do Visual Studio. Acesse [recursos de suporte](https://aka.ms/vssubscriberhelp) para resolver problemas técnicos ou dúvidas relacionadas a vendas de assinaturas, contas e cobrança.
 
 ## <a name="marketplace"></a>[Marketplace](https://marketplace.visualstudio.com/)
 
 É necessário renovar a assinatura de nuvem do Visual Studio?  Deseja baixar as extensões mais recentes para a família de produtos Visual Studio?  O Marketplace ajuda os usuários a localizar extensões, ferramentas e serviços que tornam o Azure DevOps, Azure DevOps Server e Visual Studio Code ainda melhores. Você pode até se tornar um editor e publicar suas próprias extensões no Marketplace.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

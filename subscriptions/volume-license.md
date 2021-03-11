@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 7aaa4727-00ef-41dc-937d-8d46973aaf56
-ms.date: 10/28/2020
+ms.date: 03/08/2021
 ms.topic: conceptual
 description: Saiba como os administradores em contratos de licença por volume podem acessar o portal de administração de assinaturas do Visual Studio
-ms.openlocfilehash: 85e82eed6b8810e7e6a2f8622aead9d50323841d
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 4704b3258eedf8fd1639804a8792a1c18fafce77
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904213"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607282"
 ---
 # <a name="accessing-the-admin-portal-as-an-admin-on-a-volume-license-agreement"></a>Acessando o portal de administração como um administrador em um contrato de licença por volume
 
@@ -23,12 +23,12 @@ Se você for o contato principal ou para notificações no contrato de sua organ
 
 Quando estiver conectado, você será configurado automaticamente como um superadministrador e poderá começar a gerenciar assinaturas e outros administradores. Para obter informações sobre as diferenças entre superadministradores e administradores, dê uma olhada em nosso artigo sobre [funções de administrador](admin-roles.md).
 
-Isso se aplica a todos os tipos de contrato de licenciamento por volume, incluindo, mas não se limitando a: contratos Enterprise, assinaturas corporativas, selecione, selecione mais, abra, abra licença, govt. e contratos acadêmicos. 
+Isso se aplica a todos os tipos de contrato de licenciamento por volume, incluindo, mas não se limitando a: contratos Enterprise, assinaturas corporativas, selecione, selecione mais, abrir, licença aberta, governo. e contratos acadêmicos. 
 
 ## <a name="resources"></a>Recursos
-- [Suporte a Admins e assinaturas do Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

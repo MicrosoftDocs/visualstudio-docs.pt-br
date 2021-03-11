@@ -1,18 +1,18 @@
 ---
 title: Problemas ao entrar nas assinaturas do Visual Studio | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 176c7f11-b19d-49e9-a6dd-b2e5da5e8480
-ms.date: 10/28/2020
+ms.date: 02/19/2021
 ms.topic: conceptual
 description: Saiba mais sobre problemas que podem surgir ao entrar em assinaturas do Visual Studio
-ms.openlocfilehash: cf89d2deff2a5e9e81d065fbb7efda8097102d03
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 5735e0c4178e6866539fff2edac6155642a1ba73
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903445"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607191"
 ---
 # <a name="issues-signing-in-to-visual-studio-subscriptions"></a>Problemas ao entrar em assinaturas do Visual Studio
 Para usar sua Assinatura do Visual Studio, primeiro é necessário entrar.  Dependendo da sua assinatura, talvez você a tenha configurado com uma identidade da MSA (conta Microsoft) ou do AAD (Azure Active Directory).  Este artigo discute alguns problemas que podem ser encontrados ao entrar em sua assinatura.
@@ -61,9 +61,12 @@ O termo "alias" refere-se a usuários com identidades diferentes para entrar no 
 Os aliases podem ser encontrados quando a empresa tem um Serviço Online da Microsoft para a entrada no diretório, como JohnD@contoso.com, mas os usuários acessam as contas de email usando aliases ou nomes amigáveis, como John.Doe@contoso.com. Para muitos clientes que gerenciam as assinaturas por VLSC (Volume Licensing Service Center), isso pode resultar em uma experiência de logon malsucedida, pois o endereço de email fornecido (John.Doe@contoso.com) não coincide com o endereço do diretório (JohnD@contoso.com) necessário para a autenticação bem-sucedida por meio da opção "Conta corporativa ou de estudante".
 
 ### <a name="what-options-do-i-have"></a>Quais as opções disponíveis?
-Do ponto de vista de um assinante, é importante trabalhar primeiro com seu administrador para entender a configuração de identidade da sua empresa. Se necessário, seu administrador pode ter que atualizar as configurações de conta do portal de administração ou você pode precisar criar uma conta da Microsoft (MSA) usando seu endereço de email corporativo. Antes de executar as etapas para criar um MSA, fale com seu administrador em relação a quaisquer políticas ou problemas com a realização desta ação. 
+Do ponto de vista de um assinante, é importante trabalhar primeiro com seu administrador para entender a configuração de identidade da sua empresa. Se necessário, seu administrador pode ter que atualizar as configurações de conta do portal de administração ou você pode precisar criar uma conta da Microsoft (MSA) usando seu endereço de email corporativo. Antes de executar as etapas para criar um MSA, fale com seu administrador em relação a quaisquer políticas ou problemas com a realização desta ação.
 
-## <a name="see-also"></a>Veja também
+## <a name="resources"></a>Recursos
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio. 
+
+## <a name="see-also"></a>Consulte também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

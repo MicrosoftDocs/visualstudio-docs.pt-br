@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6a9d0ea6f6cb0aedc4fa13a8014b1a8bd66ccca0
-ms.sourcegitcommit: 6ed6ae5a1693607dce57923a78d01eea3d88b29a
+ms.openlocfilehash: 597d17b69aa3f0feca520e6100439d934e5d9211
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102514928"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607322"
 ---
 # <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>Gerar substituições dos métodos Equals e GetHashCode no Visual Studio
 
@@ -34,7 +34,7 @@ Esta geração de código aplica-se a:
 
 - Substitua o método **GetHashCode** para permitir que um tipo funcione corretamente em uma tabela de hash. Leia mais orientação em [operadores de igualdade](/dotnet/standard/design-guidelines/equality-operators).
 
-## <a name="how-to"></a>Como fazer
+## <a name="how-to"></a>Instruções
 
 1. Coloque o cursor em algum lugar na linha de sua declaração de tipo.
 
@@ -61,7 +61,7 @@ Esta geração de código aplica-se a:
 
    - Clique no botão ![Captura de tela do ícone de chave de fenda de ações rápidas no Visual Studio](../media/screwdriver-icon.png) ícone que aparece na margem esquerda.
 
-1. Selecione **Gerar Equals(object)** ou **Gerar Equals e GetHashCode** no menu suspenso.
+1. No menu suspenso, selecione **gerar Equals (Object)** ou **gerar Equals e GetHashCode**.
 
    ![Captura de tela do menu suspenso gerar substituições](media/overrides-preview-cs.png)
 

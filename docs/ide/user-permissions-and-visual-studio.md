@@ -1,7 +1,7 @@
 ---
 title: Executar como administrador
 description: Saiba como executar o Visual Studio como administrador.
-ms.date: 01/06/2020
+ms.date: 03/09/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio, user permissions
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 63787b394d9e8988759cd141540785e34324f8c6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b3d2a22533137bf2c1f2e7cfeb3802f5824c3926
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971291"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607243"
 ---
 # <a name="user-permissions-and-visual-studio"></a>Permissões de usuário e o Visual Studio
 
@@ -72,9 +72,19 @@ Se você precisar executar o Visual Studio como administrador, siga estas etapas
 
 ::: moniker-end
 
-Você também pode modificar o atalho do aplicativo para sempre ser executado com permissões administrativas.
+Você também pode modificar o atalho do aplicativo para sempre executar com permissões administrativas:
 
-## <a name="see-also"></a>Confira também
+1. Abra o menu **Iniciar** , role até a versão do Visual Studio que você está usando e, em seguida, selecione **mais**  >  **local do arquivo aberto**.
+
+1. No **Explorador de arquivos**, localize o atalho do **Visual Studio** para a versão que você está usando. Em seguida, clique com o botão direito do mouse no atalho e selecione **Enviar para**  >  **área de trabalho (criar atalho)**.
+
+1. Na área de trabalho do **Windows** , clique com o botão direito do mouse no atalho do **Visual Studio** e selecione **Propriedades**.
+
+1. Selecione o botão **avançado** e, em seguida, marque a caixa de seleção **Executar como administrador** .
+
+1. Selecione **OK** e, em seguida, **OK** novamente.
+
+## <a name="see-also"></a>Consulte também
 
 - [Portar, migrar e atualizar projetos do Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
 - [Instalar o Visual Studio](../install/install-visual-studio.md)

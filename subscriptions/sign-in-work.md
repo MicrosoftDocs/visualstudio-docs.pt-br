@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: f39a2672-c283-4755-93d3-31c7c7a032d0
-ms.date: 10/28/2020
+ms.date: 02/19/2021
 ms.topic: how-to
 description: Saiba como entrar em suas assinaturas do Visual Studio com sua conta corporativa ou de estudante.
-ms.openlocfilehash: 3ac4e9fedae66656d4dee2155c8a8dcbe9325970
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: effec7889199d4eddc3c149bdd4ded296a50e0b1
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903388"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607256"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-work-or-school-account"></a>Entrar em assinaturas do Visual Studio com sua conta corporativa ou de estudante 
 
@@ -28,7 +28,7 @@ Este artigo fornecerá as etapas para entrar com um endereço de email fornecido
    > [!NOTE]
    > Esse endereço também é identificado no Email de Boas-vindas do assinante que você recebeu. Verifique as pastas de lixo eletrônico, se você tiver problemas para localizar o email de boas-vindas.
 
-3. Clique em **Continuar** .
+3. Clique em **Continue**.
 4. Você será redirecionado para sua página de entrada empresarial.
 5. Digite sua senha.
 6. Clique em **entrar**
@@ -40,13 +40,13 @@ Você também pode ver a assinatura atualmente selecionada no canto superior dir
 
 ## <a name="using-your-microsoft-account-msa-to-sign-in-to-a-work-or-school-account"></a>Usar sua MSA (Conta Microsoft) para entrar em uma conta corporativa ou de estudante
 
-1. Acesse [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs).
+1. Vá para [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs).
 2. Insira o endereço de email ao qual a nova assinatura do Visual Studio foi atribuída
 
    > [!NOTE]
    > Esse endereço também é identificado na Carta de Boas-vindas do assinante. Se você não recebeu a Carta de boas-vindas, verifique as pastas de lixo eletrônico
 
-3. Clique em **Continuar** .
+3. Clique em **Continue**.
 4. Você será redirecionado para uma página de decisão.
     - Selecione **Conta corporativa ou de estudante** se a assinatura estiver atribuída a uma conta "Corporativa ou de estudante" associada a um locatário do AAD (Azure Active Directory).
     - Selecione **pessoal** se a assinatura estiver associada a um endereço de email "corporativo", mas também tiver sido convertida em uma MSA (conta da Microsoft) "pessoal".
@@ -57,7 +57,7 @@ Você também pode ver a assinatura atualmente selecionada no canto superior dir
     - Se um caminho falhar, tente o outro.  Os administradores de assinatura podem ter modificado sua assinatura.
 
 5. Digite sua senha.
-6. Clique em **Entrar** .
+6. Clique em **Entrar**.
 7. Neste ponto, a página "Benefícios" deve ser exibida.
 
 ## <a name="frequently-asked-questions"></a>Perguntas frequentes
@@ -69,9 +69,10 @@ R: muitos usuários têm mais de uma assinatura.  Se você conseguir entrar no p
 1. Você está conectado com uma conta Microsoft diferente.  É possível que você tenha várias assinaturas, como uma assinatura Professional ou Enterprise, além de uma associação ao Visual Studio Dev Essentials e que elas estejam associadas a diferentes endereços de email. Para ver as outras assinaturas, saia e entre novamente usando a outra MSA.
 2. Você tem várias assinaturas associadas ao mesmo endereço de email.  Para ver todas as assinaturas associadas ao seu endereço de email, acesse https://my.visualstudio.com/subscriptions e escolha a assinatura que deseja usar. 
 
-Se ainda tiver problemas, você poderá contatar nossa equipe de [suporte de assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) para obter assistência.  
+## <a name="resources"></a>Recursos 
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)
