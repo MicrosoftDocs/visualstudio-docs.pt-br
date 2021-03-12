@@ -29,7 +29,7 @@ ms.locfileid: "102465797"
 |Categoria|Monitoramento de recursos|
 |Método de criação de perfil|Todos|
 |Mensagem|Essas informações foram coletadas apenas para fins informativos. O contador Conjunto de trabalho do processo mede o uso de memória física do processo do qual está sendo criado o perfil. O valor relatado é a média calculada de todos os intervalos de medição.|
-|Tipo de regra|Informações|
+|Tipo de regra|Informações do|
 
  Ao criar o perfil usando a amostragem, a memória do .NET ou métodos de contenção de recursos, é necessário coletar pelo menos 10 amostras para disparar essa regra.
 
