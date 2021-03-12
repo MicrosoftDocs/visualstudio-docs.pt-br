@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: b26b31dc-1eeb-4871-9ce6-2c980e703f1e
-ms.date: 02/02/2021
+ms.date: 03/11/2021
 ms.topic: conceptual
 description: Saiba mais sobre as responsabilidades de administradores de assinaturas.
-ms.openlocfilehash: 9d2c724fafb41ee44e531a1eec41d76d7e888686
-ms.sourcegitcommit: d124123528776993eb5e7461dae8da3975d11d0d
+ms.openlocfilehash: 14b8832a8031ddbc96ce82e10a015c730530ce3e
+ms.sourcegitcommit: 9da787bf5b4281f933dc22083dc0bdeae3bc9461
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99511287"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103225983"
 ---
 # <a name="overview-of-admin-responsibilities"></a>Visão geral das responsabilidades do administrador
 Como administrador, você pode gerenciar assinaturas para sua organização.  A função Administrador também transporta responsabilidades para garantir que as assinaturas sejam gerenciadas de acordo com os termos de licença. Este artigo descreve as responsabilidades, os benefícios e as limitações da função de administrador.
@@ -33,10 +33,10 @@ As assinaturas do Visual Studio permitem que os desenvolvedores instalem e usem 
 | Licenciamento baseado no usuário                     | As Plataformas MSDN e todos os níveis de assinaturas do Visual Studio são licenciados por usuário. Cada membro da equipe de desenvolvimento que interagir (instalar, configurar ou acessar) com o software que acompanha esses produtos e serviços, exigirá sua própria assinatura do Visual Studio.                                                                                                                                                                                                                                                                                                                                  |
 | Instalações ilimitadas                  | Cada usuário licenciado poderá instalar e usar o software em qualquer número de dispositivos para projetar, desenvolver, testar, avaliar e demonstrar o software. A exceção é o Microsoft Office, que é licenciado para uma área de trabalho. O software licenciado do Visual Studio pode ser instalado e usado no trabalho, em casa, na escola e em dispositivos no escritório de um cliente ou também em hardware dedicado hospedado por terceiros.                                                                                                                                                                                                                                  |
 | Não destinado a ambientes de produção | O software das assinaturas do Visual Studio não está licenciado para ambientes de produção, incluindo qualquer ambiente acessado por usuários finais para finalidades diferentes de testes de aceitação ou comentários, um ambiente em conexão com um banco de dados de produção, para dar suporte à recuperação de desastres ou backup de produção ou ser usado para a produção durante períodos de pico de atividade. As exceções incluem benefícios específicos para determinados níveis de assinatura, descritos no [White Paper de licenciamento do Visual Studio](https://aka.ms/vslicensing).                                                                                            |
-| Reatribuição de licença                     | Quando um usuário sair de uma equipe e não precisar mais de uma licença, você poderá reatribuir a licença depois de 90 dias. Quando você reatribuir uma licença, as chaves do produto (Product Keys) que já tiverem sido usadas ainda ficarão disponíveis, mas não serão substituídas. Para organizações que têm contratos EA (Contrato Enterprise), todos os benefícios que já tiverem sido usados pelo usuário original, como treinamentos do Pluralsight, serão redefinidos.                                                                                                                                                                                                                                                 |
+| Reatribuição de licença                     | Quando um usuário deixa uma equipe e não requer mais uma licença, você pode reatribuir a licença a outro usuário se pelo menos 90 dias tiver passado desde que foi atribuído ao usuário anterior. Quando você reatribuir uma licença, as chaves do produto (Product Keys) que já tiverem sido usadas ainda ficarão disponíveis, mas não serão substituídas. Para organizações que têm contratos EA (Contrato Enterprise), todos os benefícios que já tiverem sido usados pelo usuário original, como treinamentos do Pluralsight, serão redefinidos.                                                                                                                                                                                                                                                 |
 | Exceção para usuários finais                  | Ao final de um projeto de desenvolvimento de software, os usuários finais normalmente examinam um aplicativo e determinam se ele atende aos critérios necessários para o lançamento. Esse processo é chamado de UAT (teste de aceitação do usuário). Os membros da equipe, como um responsável pela empresa ou um gerente de produto, podem agir como proxies para os usuários finais. Os usuários finais que não tiverem uma assinatura do Visual Studio poderão acessar o software para realizar o UAT se o uso do software estiver em conformidade com todos os termos de licenciamento do Visual Studio. É raro que alguém cuja função principal esteja criando, desenvolvendo ou testando o software também seja qualificado como um "usuário final". |
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)
