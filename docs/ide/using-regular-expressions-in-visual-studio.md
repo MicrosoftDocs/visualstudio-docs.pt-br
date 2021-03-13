@@ -18,12 +18,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d62d35a296c70462aab75af5a8c6729179d5b34d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e2314bb8fdb44d769a5067a39b01b40b0a74734f
+ms.sourcegitcommit: 99b66b0f4ced46ead0b2506a103f974f40cc0076
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925763"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103295750"
 ---
 # <a name="use-regular-expressions-in-visual-studio"></a>Usar expressões regulares no Visual Studio
 
@@ -33,7 +33,7 @@ O Visual Studio usa [expressões regulares .NET](/dotnet/standard/base-types/reg
 
 A tabela a seguir contém alguns caracteres de expressão regular, operadores, constructos e exemplos de padrão. Para obter uma referência mais completa, confira [Linguagem de expressão regular](/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
-|Finalidade|Expression|Exemplo|
+|Finalidade|Expressão|Exemplo|
 |-------------|----------------|-------------|
 |Encontrar a correspondência de um único caractere (exceto uma quebra de linha). Para saber mais, veja [Qualquer caractere](/dotnet/standard/base-types/character-classes-in-regular-expressions#any-character-).|.|`a.o` corresponde a "toa" em "redor" e "Abo" em "sobre", mas não "quivos" em "em"|
 |Encontrar a correspondência de zero ou mais ocorrências da expressão anterior (encontrar a correspondência do máximo de caracteres possíveis). Para saber mais, confira [Corresponder a zero ou mais vezes](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-zero-or-more-times-).|*|`a*r` corresponde a “r” em “rack”, “ar” em “ark” e “aar” em “aardvark”|
@@ -60,7 +60,7 @@ A tabela a seguir contém alguns caracteres de expressão regular, operadores, c
 |Corresponder qualquer [caractere de espaço em branco](/dotnet/standard/base-types/character-classes-in-regular-expressions#whitespace-character-s)|\s|`Public\sInterface` corresponde à frase "interface pública"|
 |Encontrar a correspondência de qualquer [caractere de dígito decimal](/dotnet/standard/base-types/character-classes-in-regular-expressions#decimal-digit-character-d)|\d|`\d` corresponde a "4" e "0" em "WD40"|
 
-Um exemplo de expressão regular que combina alguns dos operadores e construções para corresponder a um número hexadecimal `\b0[xX]([0-9a-fA-F]+\)\b` . Essa expressão corresponde a "0xc67f", mas não a "0xc67g".
+Um exemplo de expressão regular que combina alguns dos operadores e construções para corresponder a um número hexadecimal `\b0[xX]([0-9a-fA-F]+)\b` . Essa expressão corresponde a "0xc67f", mas não a "0xc67g".
 
 > [!TIP]
 > Em sistemas operacionais Windows, a maioria das linhas termina em “\r\n” (um retorno de carro seguido por uma nova linha). Esses caracteres não são visíveis, mas estão presentes no editor e passados para o serviço de expressões regulares do .NET.
