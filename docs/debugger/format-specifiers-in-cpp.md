@@ -26,14 +26,15 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97c0730b2c1fd8d534fed232846dcca76c58ce2e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2a3fa99594f42e7e9c3739a8a8d57abf226bc04c
+ms.sourcegitcommit: 66951f064d601b1d7a2253cb9b250380807e12db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99870630"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103483187"
 ---
 # <a name="format-specifiers-for-c-in-the-visual-studio-debugger"></a>Especificadores de formato para C++ no depurador do Visual Studio
+
 Você pode alterar o formato no qual um valor é exibido nas janelas de **inspeção**, **automáticos** e **locais** usando especificadores de formato.
 
 Você também pode usar especificadores de formato na janela **imediata** , a janela de **comando** , em [tracepoints](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)e até mesmo em janelas de origem. Se você pausar uma expressão nessas janelas, o resultado aparecerá em um [DataTip](../debugger/view-data-values-in-data-tips-in-the-code-editor.md). A exibição DataTip reflete o especificador de formato.
@@ -42,6 +43,7 @@ Você também pode usar especificadores de formato na janela **imediata** , a ja
 > Quando o depurador nativo do Visual Studio foi alterado para um novo mecanismo de depuração, alguns novos especificadores de formato foram adicionados e alguns antigos foram removidos. O depurador mais antigo ainda é usado quando você faz a depuração de Interop (nativo e de gerenciamento misto) com C++/CLI.
 
 ## <a name="set-format-specifiers"></a>Definir especificadores de formato
+
 Usaremos o seguinte código de exemplo:
 
 ```C++
@@ -64,6 +66,7 @@ Você pode exibir e selecionar em uma lista de especificadores de formato dispon
 ::: moniker-end
 
 ## <a name="format-specifiers"></a><a name="BKMK_Visual_Studio_2012_format_specifiers"></a> Especificadores de formato
+
 As tabelas a seguir descrevem os especificadores de formato que você pode usar no Visual Studio. Especificadores em negrito só têm suporte para o novo depurador e não para depuração de interoperabilidade com C++/CLI.
 
 ::: moniker range=">= vs-2019" 
@@ -138,6 +141,7 @@ As tabelas a seguir descrevem os especificadores de formato que você pode usar 
 > Quando o especificador de formato **HV** estiver presente, o depurador tentará determinar o comprimento do buffer e exibirá esse número de elementos. Como nem sempre é possível que o depurador encontre o tamanho exato do buffer de uma matriz, você deve usar um especificador de tamanho `(pBuffer,[bufferSize])` sempre que possível. O especificador de formato **HV** é útil quando o tamanho do buffer não está prontamente disponível.
 
 ### <a name="size-specifiers-for-pointers-as-arrays"></a><a name="BKMK_Size_specifiers_for_pointers_as_arrays_in_Visual_Studio_2012"></a> Especificadores de tamanho para ponteiros como matrizes
+
 Se você tiver um ponteiro para um objeto que queira exibir como uma matriz, poderá usar um inteiro ou uma expressão para especificar o número de elementos da matriz.
 
 |Especificador|Formatar|Valor de inspeção original|Valor exibido|
@@ -147,7 +151,8 @@ Se você tiver um ponteiro para um objeto que queira exibir como uma matriz, pod
 |**expand(n)**|Uma expressão C++ válida que é avaliada como um inteiro|pBuffer, expand(2)|Exibe o terceiro elemento de  `pBuffer`|
 
 ## <a name="format-specifiers-for-interop-debugging-with-ccli"></a><a name="BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue"></a> Especificadores de formato para depuração de interoperabilidade com C++/CLI
-Não há suporte para especificadores em **negrito** apenas para depuração de código nativo e C++/CLI.
+
+Não há suporte para especificadores em **negrito** apenas para depuração de código nativo e C++/CLI. Isso requer o depurador herdado, especificado usando o [modo de compatibilidade gerenciado](../debugger/general-debugging-options-dialog-box.md).
 
 |Especificador|Formatar|Valor de inspeção original|Valor exibido|
 |---------------|------------|--------------------------|---------------------|
@@ -170,7 +175,10 @@ Não há suporte para especificadores em **negrito** apenas para depuração de 
 |!|formato bruto, ignorando quaisquer personalizações de exibição de tipo de dados|\<customized representation>|4|
 
 ### <a name="format-specifiers-for-memory-locations-in-interop-debugging-with-ccli"></a><a name="BKMK_Format_specifiers_memory_locations_in_interop_debugging_and_C___edit_and_continue"></a> Especificadores de formato para locais de memória na depuração de interoperabilidade com C++/CLI
+
 A tabela a seguir descreve os símbolos de formatação usados para locais de memória. Você pode usar um especificador de local da memória com qualquer valor ou expressão que seja avaliada como um local.
+
+Não há suporte para especificadores em **negrito** apenas para depuração de código nativo e C++/CLI. Isso requer o depurador herdado, especificado usando o [modo de compatibilidade gerenciado](../debugger/general-debugging-options-dialog-box.md).
 
 |Símbolo|Formatar|Valor de inspeção original|Valor exibido|
 |------------|------------|--------------------------|---------------------|
@@ -183,8 +191,9 @@ A tabela a seguir descreve os símbolos de formatação usados para locais de me
 |**Mu**|Caracteres de 2 bytes (Unicode)|0x0012ffac|0x0012ffac 8478 77f4 ffff ffff 0000 0000 0000 0000|
 
 ### <a name="size-specifier-for-pointers-as-arrays-in-interop-debugging-with-ccli"></a><a name="BKMK_Size_specifier_for_pointers_as_arrays_in_interop_debugging_and_C___edit_and_continue"></a> Especificador de tamanho para ponteiros como matrizes na depuração de interoperabilidade com C++/CLI
+
 Se você tiver um ponteiro para um objeto que você deseja exibir como uma matriz, poderá usar um inteiro para especificar o número de elementos da matriz.
 
-|Especificador|Formatar|Expression|Valor exibido|
+|Especificador|Formatar|Expressão|Valor exibido|
 |---------------|------------|----------------|---------------------|
 |n|Inteiro decimal|pBuffer[32]|Exibe `pBuffer` como uma matriz de elemento 32.|

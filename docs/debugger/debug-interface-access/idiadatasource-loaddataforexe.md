@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ecb7c774314a35f99de41af720b180475e0c55b5
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 649efd5202d8b153b5fe5b4dbf9ba5052883f352
+ms.sourcegitcommit: 66951f064d601b1d7a2253cb9b250380807e12db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158270"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103483180"
 ---
 # <a name="idiadatasourceloaddataforexe"></a>IDiaDataSource::loadDataForExe
 Abre e prepara os dados de depuração associados ao arquivo. exe/. dll.
@@ -60,6 +60,8 @@ Se bem-sucedido, retorna `S_OK` ; caso contrário, retorna um código de erro. A
 
 ## <a name="remarks"></a>Comentários
 O cabeçalho de depuração do arquivo. exe/. dll nomeia o local de dados de depuração associado.
+
+Se você estiver carregando dados de depuração de um servidor de símbolos, *symsrv.dll* deverá estar presente no mesmo diretório em que o aplicativo ou *msdia140.dll* do usuário está instalado ou deve estar presente no diretório do sistema.
 
 Esse método lê o cabeçalho de depuração e, em seguida, pesquisa e prepara os dados de depuração. O progresso da pesquisa pode, opcionalmente, ser relatado e controlado por meio de retornos de chamada. Por exemplo, o [IDiaLoadCallback:: NotifyDebugDir](../../debugger/debug-interface-access/idialoadcallback-notifydebugdir.md) é invocado quando o `IDiaDataSource::loadDataForExe` método localiza e processa um diretório de depuração.
 
