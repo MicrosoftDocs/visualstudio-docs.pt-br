@@ -1,4 +1,5 @@
 ---
+description: Você tentou criar um literal de expressão regular, mas não incluiu uma das barras (/).
 title: Esperado '-' | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: a31d161a-4a51-43a9-9d65-d8b765ce3c19
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2bb965a4807a31df106102318cf6618680a97adb
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: c7d7660c097f30afc31679d3128d224dc8b7f71e
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862604"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571734"
 ---
 # <a name="expected--"></a>'-' esperado
 Você tentou criar um literal de expressão regular, mas não incluiu uma das barras (/). Assim como os literais de cadeia de caracteres são gravados como caracteres dentro de um par de aspas, os literais de expressão regular são expressos como caracteres dentro de um par de caracteres de barra (/).  

@@ -1,4 +1,5 @@
 ---
+description: A estrutura da sua cadeia de caracteres de pesquisa viola uma ou mais das regras gramaticais de uma expressão regular do JavaScript.
 title: Erro de sintaxe em expressão regular (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: 7799ed69-c877-42a1-87cf-ad6739302c10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b6cb95c0cb5c4178267241c57cc431c8b7acff21
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 10ff0350ef612fd247fd8837639e05c4ae0559a4
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862040"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103572085"
 ---
 # <a name="syntax-error-in-regular-expression-javascript"></a>Erro de sintaxe em expressão regular (JavaScript)
 A estrutura da sua cadeia de caracteres de pesquisa viola uma ou mais das regras gramaticais de uma [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] expressão regular.  

@@ -1,4 +1,5 @@
 ---
+description: Você não incluiu a chave direita que marca o final do corpo da função, loop, bloco de código ou inicializador de objeto.
 title: Esperado '} ' | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: dff04495-9a6e-4604-9231-e40433fec152
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 55f91202184561aff5d0865b326415b3910b99b6
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 31ad11a551e76db30544baa59cd9c2f31e20fc31
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862122"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571721"
 ---
 # <a name="expected-"></a>'}' esperado
 Você não incluiu a chave direita que marca o final do corpo da função, loop, bloco de código ou inicializador de objeto. Um exemplo desse erro seria um loop **for** apenas com a chave esquerda marcando o corpo do loop.  

@@ -1,4 +1,5 @@
 ---
+description: Ao definir a propriedade Length de um objeto de matriz existente, você especificou um comprimento de matriz que não era um número positivo ou zero.
 title: O comprimento da matriz deve ser atribuído a um número positivo finito | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: c51c66a4-a543-4e95-b18d-2cfbcb3d1fdd
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8e0016c7a0a6acb3f08121d8636ccdf848dcf201
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 3938f240580564112915ab0ba3036b63dc96cd8f
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862818"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103572137"
 ---
 # <a name="array-length-must-be-assigned-a-finite-positive-number"></a>O tamanho da matriz deve receber um número finito e positivo
 Ao definir a propriedade **Length** de um objeto de **matriz** existente, você especificou um comprimento de matriz que não era um número positivo ou zero. Esse erro ocorre quando você atribui um valor à propriedade **Length** de um `Array` objeto que é negativo ou não é um número ( `NaN` ). Observe que o [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] converte automaticamente números fracionários para inteiros inteiros.  

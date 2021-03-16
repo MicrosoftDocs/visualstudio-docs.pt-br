@@ -1,4 +1,5 @@
 ---
+description: Você tentou invocar o método Number. prototype. toString ou Number. prototype. valueOf em um objeto de um tipo diferente de Number * *.
 title: Número esperado | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: b272f51a-97c2-4398-8b46-9cc49a5c0bd6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 09a49fb0cbff746f11606e4cef7417a5c9a68d0b
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: cc26c2009b9b3cea17a001c4d1a6a020234757de
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862514"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103572098"
 ---
 # <a name="number-expected"></a>Número esperado
 Você tentou invocar o método **Number. prototype. ToString** ou **Number. prototype. valueOf** em um objeto de um tipo diferente de **Number**. O objeto desse tipo de invocação deve ser do tipo **número**.  

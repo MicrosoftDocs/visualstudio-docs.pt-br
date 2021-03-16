@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jmartens
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: d44dc484da904d2692b90e23d10db6edc6f6e7b8
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: 49c3081e68baf4f2bf1d0975bcdae7ea25ab90b3
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102223154"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571539"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Como funciona a Ponte para Kubernetes
 
@@ -142,10 +142,8 @@ kubectl -n <namespace> apply -f <yaml file name>
 
 A ponte para o kubernetes tem as seguintes limitações:
 
-* Um serviço deve ser apoiado por um único pod para se conectar a esse serviço. Você não pode se conectar a um serviço com vários pods, como um serviço com réplicas.
-* Um pod pode ter apenas um único contêiner em execução nesse pod para que a ponte para kubernetes se conecte com êxito. A ponte para o kubernetes não pode se conectar a serviços com pods que têm contêineres adicionais, como contêineres sidecar injetados por malhas de serviços.
+* Um pod pode ter apenas um único contêiner em execução nesse pod para que a ponte para kubernetes se conecte com êxito.
 * Atualmente, a ponte para kubernetes pods deve ser contêineres do Linux. Contêineres do Windows não têm suporte.
-* O isolamento não pode ser usado com HTTPS quando você usa a ponte para kubernetes com o Visual Studio. Somente há suporte para HTTPS no modo de isolamento quando você usa Visual Studio Code.
 * O Bridge para kubernetes precisa de permissões elevadas para ser executado em seu computador de desenvolvimento para editar o arquivo de hosts.
 * A ponte para kubernetes não pode ser usada em clusters com Azure Dev Spaces habilitado.
 

@@ -1,4 +1,5 @@
 ---
+description: Você incluiu uma instrução Throw em seu código, mas ela não estava colocada dentro de um bloco try ou não havia nenhum bloco CATCH associado para interceptar o erro.
 title: Exceção lançada e não detectada | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: b5235490-a8e7-42e3-804e-d85235bc6f05
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6a0e3eb6d1275e5598ad44ea553e22f0b53eeb45
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: b8abcfced6dfe78dc18f4e31d2bd90d5e5a45a4a
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862755"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103570629"
 ---
 # <a name="exception-thrown-and-not-caught"></a>Exceção lançada, mas não capturada
 Você incluiu uma `throw` instrução em seu código, mas ela não estava colocada dentro de um bloco **try** ou não havia nenhum bloco **Catch** associado para interceptar o erro. As exceções são geradas de dentro do bloco **try** usando a instrução **throw** e detectadas fora do bloco **try** com uma instrução **Catch** .  

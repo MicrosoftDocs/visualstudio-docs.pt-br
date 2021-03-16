@@ -1,4 +1,5 @@
 ---
+description: Você tentou atribuir um valor a um resultado de função.
 title: Não é possível atribuir a um resultado de função | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: ee8ffb3a-1451-4cb3-99bf-5e9cf8b77d79
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6aab43ec6a547982cf670d64c8ad8b752160839f
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 125d2dc7d41b1b65027952e4e6cb94ff97083e6e
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862343"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571916"
 ---
 # <a name="cannot-assign-to-a-function-result"></a>Não é possível designar a um resultado de função
 Você tentou atribuir um valor a um resultado de função. O resultado de uma função pode ser atribuído a uma variável, mas não pode ser usado como uma variável. Se você quiser atribuir um novo valor à função em si, omita os parênteses (o operador de chamada de função). O exemplo a seguir demonstra uma situação em que esse erro é gerado.  

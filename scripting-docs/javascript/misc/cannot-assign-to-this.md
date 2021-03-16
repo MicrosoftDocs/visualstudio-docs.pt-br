@@ -1,4 +1,5 @@
 ---
+description: Você tentou atribuir um valor a isso.
 title: Não é possível atribuir a ' this ' | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: ba2b0a2b-f0f8-4698-b335-a4ab6c166671
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8985c7201a8e315353dd89ab5e1f5a3ad3b403ea
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 3c52118ee78b7ecb7efa94dd6d86cc4fb34c7d1f
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862773"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571825"
 ---
 # <a name="cannot-assign-to-this"></a>Não é possível designar a "isso"
 Você tentou atribuir um valor a **isso**. **essa** é uma [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] palavra-chave que se refere a:
@@ -37,7 +38,7 @@ Dentro de um método, você pode usar **isso** para fazer referência ao objeto 
 - Não tente atribuir a **isso**. Para acessar uma propriedade ou um método de um objeto instanciado, use o operador ponto (por exemplo, **Circle. RADIUS**).
 
   > [!NOTE]
-  > Você não pode nomear **uma variável criada**pelo usuário; é uma [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] palavra reservada.
+  > Você não pode nomear **uma variável criada** pelo usuário; é uma [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] palavra reservada.
 
 ## <a name="see-also"></a>Confira também
 

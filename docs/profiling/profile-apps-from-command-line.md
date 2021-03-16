@@ -14,12 +14,12 @@ manager: jmartens
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b1d5906213b148605e35c483b377280dc942515
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e1c8c20d350561eec520038dec521ab7bc5f5311
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99936542"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103570670"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>Medir o desempenho do aplicativo na linha de comando
 
@@ -79,7 +79,7 @@ A criação de perfil usando as ferramentas da CLI de Diagnóstico do Visual Stu
 
 Os Agentes de Coleta são componentes intercambiáveis que coletam diferentes tipos de dados, dependendo do que você está tentando medir.
 
-Para sua conveniência, você pode armazenar essas informações em um arquivo de configuração do agente. O arquivo de configuração é um arquivo *.json* que contém, no mínimo, o nome da *.dll* e o CLSID COM. Estes são os arquivos de configuração de exemplo que podem ser encontrados na seguinte pasta:
+Para sua conveniência, recomendamos que você armazene essas informações em um arquivo de configuração do agente. O arquivo de configuração é um arquivo *.json* que contém, no mínimo, o nome da *.dll* e o CLSID COM. Estes são os arquivos de configuração de exemplo que podem ser encontrados na seguinte pasta:
 
 ```<Visual Studio installation folder>Team Tools\DiagnosticsHub\Collector\AgentConfigs\```
 
@@ -99,11 +99,7 @@ As configurações de DotNetObjectAlloc (base/baixa) correspondem aos dados cole
 
 As configurações Base/Baixa/Alta referem-se à taxa de amostragem. Por exemplo, Baixa representa 100 amostras/segundo e Alta, 4.000 amostras/segundo.
 
-Para que a ferramenta *VSDiagnostics.exe* funcione com um agente de coleta, ela exige uma DLL e um CLSID COM para o agente apropriado e o agente pode ter outras opções de configuração também. Se você usar um agente sem um arquivo de configuração, use o formato no comando a seguir.
-
-```cmd
-VSDiagnostics.exe start <id> /attach:<pid> /loadAgent:<agentCLSID>;<agentName>[;<config>]
-```
+Para que a ferramenta *VSDiagnostics.exe* funcione com um agente de coleta, ela requer uma dll e um CLSID com para o agente apropriado. O agente também pode ter opções de configuração adicionais, que seriam qualquer opção especificada no arquivo de configuração, formatada como JSON de escape correto.
 
 ## <a name="permissions"></a>Permissões
 

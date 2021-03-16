@@ -1,4 +1,5 @@
 ---
+description: As tabelas a seguir listam os operadores JavaScript em suas respectivas categorias.
 title: Resumo do operador (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -12,12 +13,12 @@ ms.assetid: 3bc55336-912f-4ff8-8d28-1e26e0144840
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: de5d26f810fc1ab46c5ef09112fd62fada5d7d9b
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 47f14b0d8ee87877dc8f4305eb19679ea19fb9e3
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862083"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571682"
 ---
 # <a name="operator-summary-javascript"></a>Resumo de operador (JavaScript)
 As tabelas a seguir listam os [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] operadores em suas respectivas categorias.  

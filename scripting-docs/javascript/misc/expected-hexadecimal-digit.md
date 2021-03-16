@@ -1,4 +1,5 @@
 ---
+description: Você criou uma sequência de escape Unicode incorreta.
 title: Dígito hexadecimal esperado | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: 67a86df7-49f9-43cb-99c6-99b1a427827a
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8c6be5302c0c4c6565884fa800da7cb9a002d151
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 107ce2dd4f9a65a0a04b8e2ec773367ffae4ce81
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91861926"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103570421"
 ---
 # <a name="expected-hexadecimal-digit"></a>Dígito hexadecimal esperado
 Você criou uma sequência de escape Unicode incorreta. As seqüências de escape Unicode começam com \u, seguida de exatamente quatro dígitos hexadecimais (não mais e não menos). Os dígitos hexadecimais Unicode podem conter apenas os números 0-9, as letras maiúsculas a-F e as letras minúsculas a-f. O exemplo a seguir demonstra uma sequência de escape Unicode formada corretamente.  

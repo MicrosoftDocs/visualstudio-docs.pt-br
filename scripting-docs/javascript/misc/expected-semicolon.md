@@ -1,4 +1,5 @@
 ---
+description: Você tentou posicionar mais de uma instrução em uma linha, mas não as separava com pontos-e-vírgulas.
 title: Esperado '; ' | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: 3070cc6c-1138-4655-a7ac-723379f48f94
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2898a007e07dea326bbcd7b8d19f1a623941605d
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 49b039ef4e225693a2baa6cf434a672245ebd383
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862409"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103570408"
 ---
 # <a name="expected-"></a>';' esperado
 Você tentou posicionar mais de uma instrução em uma linha, mas não as separava com pontos-e-vírgulas. Pontos e vírgulas são usados para encerrar instruções. Embora você possa inserir várias instruções em uma única linha, cada uma delas deve ser delimitada da próxima com um ponto-e-vírgula.  
