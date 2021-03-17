@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 684c6254aac8bd45926759e0b6ad96cfe3f6c8ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fb30135ac5c137fdc836273855e2d9f000f1c6b2
+ms.sourcegitcommit: 3a855d3513407ea78336386dc3be0b75142614b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964414"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103622628"
 ---
 # <a name="create-unit-test-method-stubs-from-code"></a>Criar stubs de método de teste de unidade a partir do código
 
@@ -52,7 +52,7 @@ Caso pretenda executar esses testes como parte do processo de automação de tes
 Para gerar automaticamente os testes de unidade para o NUnit ou o xUnit, instale uma das seguintes extensões de estrutura de teste do Visual Studio Marketplace:
 
 * [Extensão NUnit para geradores de teste](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension)
-* [Extensão xUnit.net para geradores de teste](https://marketplace.visualstudio.com/items?itemName=BradWilson.xUnitnetTestExtensions)
+* [Extensão xUnit.net para geradores de teste](https://marketplace.visualstudio.com/items?itemName=YowkoTsai.xUnitnetTestGenerator)
 
 ## <a name="when-should-i-use-this-feature"></a>Quando devo usar esse recurso?
 
@@ -60,7 +60,7 @@ Use esse recurso sempre que precisar criar testes de unidade, mas especialmente 
 
 No entanto, esse recurso é igualmente aplicável quando um desenvolvedor começa escrevendo um pouco de código e o usa para inicializar testes de unidade. Dentro do fluxo de codificação, o desenvolvedor talvez queira criar rapidamente um stub de método de teste de unidade (com uma classe de teste adequada e um projeto de teste adequado) para uma determinada parte do código.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Como criar stubs de método de teste de unidade com "Criar Testes de Unidade"](https://devblogs.microsoft.com/devops/creating-unit-test-method-stubs-with-create-unit-tests/)
 - [Postagens no blog sobre testes de unidade](https://devblogs.microsoft.com/devops/?s=unit+testing)

@@ -2,7 +2,7 @@
 title: 'Documentos do Visual Studio: histórico das novidades '
 titleSuffix: ''
 description: Histórico de novidades nos documentos do Visual Studio
-ms.date: 02/01/2021
+ms.date: 03/08/2021
 helpviewer_keywords:
 - Visual Studio, what's new, docs
 - what's new [Visual Studio]
@@ -15,16 +15,98 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 178c84be9def77e013da336193877617c1434b2e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bbad51f6d06c221118ffda01e1c7e93374eea2ff
+ms.sourcegitcommit: 3a855d3513407ea78336386dc3be0b75142614b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960527"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103622563"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Histórico de novidades nos documentos do Visual Studio
 
-Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este artigo contém as principais alterações no docs antes de janeiro de 2021 (a partir de 2020 de julho). Para obter as novidades mais recentes, consulte [Visual Studio docs: What ' s New in the docs](whats-new-visual-studio-docs.md).
+Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este artigo contém as principais alterações no docs antes de fevereiro de 2021 (a partir de 2020 de julho). Para obter as novidades mais recentes, consulte [Visual Studio docs: What ' s New in the docs](whats-new-visual-studio-docs.md).
+
+## <a name="january-2021"></a>Janeiro de 2021
+### <a name="azure"></a>Azure
+
+**Novos artigos**
+
+- [Criar e implantar serviços de nuvem (suporte estendido) no Visual Studio (visualização)](../azure/cloud-services-extended-support.md) -suporte estendido de serviços de nuvem-sem modelo
+
+### <a name="code-quality"></a>Qualidade do código
+
+**Novos artigos**
+
+- [Métricas de código – acoplamento de classe](../code-quality/code-metrics-class-coupling.md) – atualizar métricas de código
+- [Métricas de código-intervalo de índice de manutenção e significado](../code-quality/code-metrics-maintainability-index-range-and-meaning.md) -atualização de métricas de código
+
+### <a name="debugger"></a>Depurador
+
+**Novos artigos**
+
+- [Depurar aplicativos .NET Core no WSL 2 com Visual Studio](../debugger/debug-dotnet-core-in-wsl-2.md) -depuração WSL2 do .NET Core
+
+**Artigos atualizados**
+
+- [Criar exibições personalizadas de objetos C++ no depurador usando a estrutura Natvis](../debugger/create-custom-views-of-native-objects.md) -esclarecimento para formatação XML de caracteres especiais no Natvis
+- [Aviso de segurança: anexar a um processo de propriedade de um usuário não confiável pode ser perigoso. Se as informações a seguir parecerem suspeitas ou se você não tiver certeza, não anexe a este processo](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md) – atualizações de aviso de segurança ao anexar a um processo não confiável
+
+### <a name="deployment"></a>Implantação
+
+**Artigos atualizados**
+
+- [ &lt; &gt; Elemento InstallChecks (Bootstrapper)](../deployment/installchecks-element-bootstrapper.md) -atualizar a documentação do pacote de bootstrapper para incluir o novo elemento BeforeInstallChecks
+
+### <a name="extensibility"></a>Extensibilidade
+
+**Artigos atualizados**
+
+- [Walkthrough: publicar uma extensão do Visual Studio](../extensibility/walkthrough-publishing-a-visual-studio-extension.md) -[PUBLIC_MOVE] confirmar do PUBLIC PR 6214
+
+### <a name="get-started"></a>Introdução
+
+**Novos artigos**
+
+- [Tutorial: abrir um projeto de um repositório no Visual Studio 2017](../get-started/tutorial-open-project-from-repo-visual-studio-2017.md) – atualizar abrir um projeto de um tutorial do repositório
+
+**Artigos atualizados**
+
+- [Tutorial: abrir um projeto de um repositório](../get-started/tutorial-open-project-from-repo.md) -atualizar abrir um projeto em um tutorial do repositório
+
+### <a name="ide"></a>IDE
+
+**Novos artigos**
+
+- [Ajuda F1 do JavaScript para Visual Studio](./not-in-toc/default-f1-javascript.md) -adicionadas páginas F1 padrão js e TS
+- [Ajuda F1 do TypeScript para Visual Studio](./not-in-toc/default-f1-typescript.md) -adicionadas páginas F1 padrão js e TS
+
+**Artigos atualizados**
+
+- [Soluções e projetos no Visual Studio](./solutions-and-projects-in-visual-studio.md) – adicionar link para a biblioteca de imagens do Visual Studio
+
+### <a name="install"></a>Instalar
+
+**Artigos atualizados**
+
+- [Números de Build do Visual Studio e datas de lançamento](../install/visual-studio-build-numbers-and-release-dates.md) – atualizações de Patch Tuesday
+
+### <a name="msbuild"></a>MSBuild
+
+**Artigos atualizados**
+
+- [Glossário do MSBuild](../msbuild/msbuild-glossary.md) – promover as chaves do glossário para H2
+
+### <a name="profiling"></a>Criação de perfil
+
+**Novos artigos**
+
+- [Visualizar contadores do dotnet do criador de perfil do Visual Studio](../profiling/dotnet-counters-tool.md) – adicionando o documento da ferramenta de contadores do .net
+
+### <a name="test"></a>Teste
+
+**Artigos atualizados**
+
+- [Executar testes de unidade com o Test Explorer](../test/run-unit-tests-with-test-explorer.md) – adicionar documento de sinalização de áudio de teste
 
 ## <a name="december-2020"></a>Dezembro de 2020
 ### <a name="azure"></a>Azure

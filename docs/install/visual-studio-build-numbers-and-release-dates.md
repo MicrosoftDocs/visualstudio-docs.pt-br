@@ -5,19 +5,19 @@ description: Uma lista com as versões lançadas e números de build do Visual S
 author: ornellaalt
 ms.author: ornella
 manager: jmartens
-ms.date: 03/09/2021
+ms.date: 03/16/2021
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 3f904c2528ce0daa228bc2cb8fbe1c48908ce0ea
-ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
+ms.openlocfilehash: 90d28d2658bba70ffc45a0b52beaee06f2ba97da
+ms.sourcegitcommit: 3a855d3513407ea78336386dc3be0b75142614b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102607373"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103622615"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Números de build e datas de lançamento do Visual Studio
 
@@ -27,8 +27,9 @@ ms.locfileid: "102607373"
 
 A tabela a seguir lista os números de build e as datas de lançamento do Visual Studio 2019 até o momento.
 
-| **Versão**| **Channel** | **Data de liberação** | **Versão da compilação** |
+| **Versão**| **Channel** | **Data de lançamento** | **Versão da compilação** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.9.2 | Versão | 16 de março de 2021 | 16.9.31112.23 |
 | 16.4.20 | Versão | 9 de março de 2021 | 16.4.31026.101 |
 | 16.7.13 | Versão | 9 de março de 2021 | 16.7.31026.100 |
 | 16.9.1 | Versão | 9 de março de 2021 | 16.9.31105.61 |
@@ -39,7 +40,7 @@ A tabela a seguir lista os números de build e as datas de lançamento do Visual
 | 16.4.19 | Versão | 10 de fevereiro de 2021 | 16.4.31009.304 |
 | 16.7.12 | Versão | 10 de fevereiro de 2021 | 16.7.31009.191 |
 | 16.8.5 | Versão | 9 de fevereiro de 2021 | 16.8.31005.135 |
-| 16.9.0 | Visualização 4 | 9 de fevereiro de 2021 | 16.9.31004.235 | 
+| 16.9.0 | Visualização 4 | 9 de fevereiro de 2021 | 16.9.31004.235 |
 | 16.7.11 | Versão | 9 de fevereiro de 2021 | 16.7.30928.143 |
 | 16.4.18 | Versão | 9 de fevereiro de 2021 | 16.4.30928.142 |
 | 16.9.0 | Versão Prévia 3 | 21 de janeiro de 2021 | 16.9.30914.41 |
@@ -215,7 +216,7 @@ A tabela a seguir lista os números de build e as datas de lançamento do Visual
 
 A tabela a seguir relaciona os números de build e as datas de lançamento do Visual Studio 2017 até o momento.
 
-| **Versão**| **Channel** | **Data de liberação** | **Versão da compilação** |
+| **Versão**| **Channel** | **Data de lançamento** | **Versão da compilação** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
 | 15.9.34 | Versão | 9 de março de 2021 | 15.9.28307.1440 |
 | 15.9.33 | Versão | 10 de fevereiro de 2021 | 15.9.28307.1401 |
@@ -402,7 +403,7 @@ A tabela a seguir relaciona os números de build e as datas de lançamento do Vi
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 * [Roteiro do Visual Studio](/visualstudio/productinfo/vs-roadmap)
 * [Ritmo de lançamento do Visual Studio](/visualstudio/productinfo/release-rhythm)
