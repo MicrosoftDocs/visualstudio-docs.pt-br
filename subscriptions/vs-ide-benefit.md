@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: c4b13464-76be-40f1-ad60-ed79ee264b12
-ms.date: 12/02/2020
+ms.date: 03/17/2021
 ms.topic: how-to
 description: Saiba como baixar e instalar o IDE do Visual Studio incluído na sua assinatura do Visual Studio
-ms.openlocfilehash: edabaa21e8f8b6c7fe8fee33d2c1a4252efa7a1c
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 2cff154f61d662f180fe5087a877073a9d84e27c
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538053"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104671996"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>O benefício do Visual Studio 2019
 
@@ -69,7 +69,7 @@ Para baixar o IDE:
 | Visual Studio Test Professional (Padrão)                         | VL, Retail                                              | Disponível                                             |  Sim         |
 | Plataformas MSDN (Padrão)                                          | VL, Retail                                              | Não disponível                                              |  N/D          |
 
-<sup>1</sup>  *inclui: não para revenda (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), FTE, MCT software & Developer Services, BizSpark, imagine, profissional mais valioso (MVP), diretor regional (RD).  Exclusões: serviços de & de software do MCT.*
+<sup>1</sup>  *inclui: não para revenda (NFR), NFR Basic, Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), FTE, MCT software & Services Developer, BizSpark, imagine, profissional mais valioso (MVP), diretor regional (RD).  Exclusões: serviços de & de software do MCT.*
 
 > [!NOTE]
 > A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a ir para [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a fim de explorar diferentes opções para comprar o Visual Studio.
@@ -80,9 +80,9 @@ Não tem certeza de qual assinatura você está usando?  Conecte-se ao [https://
 - Se precisar de ajuda com o IDE do Visual Studio, confira estes recursos:
   - Suporte técnico: [https://visualstudio.microsoft.com/support/](https://visualstudio.microsoft.com/support/)
   - [Documentação](/visualstudio/)
-- Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio.
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas do Visual Studio](https://my.visualstudio.com/gethelp).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

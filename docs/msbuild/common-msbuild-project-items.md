@@ -17,22 +17,20 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cd43be13351309e0f4715ee889fb910f4f7e49a3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ceb6b01f06964b8c79fa7357da6688e2e0229799
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963192"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672820"
 ---
 # <a name="common-msbuild-project-items"></a>Itens de projeto comuns do MSBuild
 
 No MSBuild, um item é uma referência nomeada para um ou mais arquivos. Itens contêm metadados, como nomes de arquivos, caminhos e números de versão. Todos os tipos de projeto no Visual Studio têm vários itens em comum. Esses itens são definidos no arquivo *Microsoft.Build.CommonTypes.xsd*.
 
-## <a name="common-items"></a>Itens comuns
+Este artigo lista todos os itens de projeto comuns.
 
-Esta é uma lista de todos os itens de projeto em comum.
-
-### <a name="reference"></a>Referência
+## <a name="reference"></a>Referência
 
 Representa uma referência de assembly (gerenciado) no projeto.
 
@@ -45,7 +43,7 @@ Representa uma referência de assembly (gerenciado) no projeto.
 |Aliases|Cadeia de caracteres opcional. Quaisquer aliases da referência.|
 |Privados|Booliano opcional. Especifica se a referência deve ser copiada para a pasta de saída. Esse atributo corresponde à propriedade **Copiar Local** da referência que está no Visual Studio IDE.|
 
-### <a name="comreference"></a>COMReference
+## <a name="comreference"></a>COMReference
 
 Representa uma referência a um componente COM (não gerenciado) no projeto. Este item se aplica somente a projetos .NET.
 
@@ -59,7 +57,7 @@ Representa uma referência a um componente COM (não gerenciado) no projeto. Est
 |WrapperTool|Cadeia de caracteres opcional. O nome da ferramenta wrapper usada no componente, por exemplo, “tlbimp”.|
 |Isolado|Booliano opcional. Especifica se o componente é um componente sem registro.|
 
-### <a name="comfilereference"></a>COMFileReference
+## <a name="comfilereference"></a>COMFileReference
 
 Representa uma lista de bibliotecas de tipos que alimentam o parâmetro `TypeLibFiles` do destino [ResolveComReference](resolvecomreference-task.md). Este item se aplica somente a projetos .NET.
 
@@ -67,7 +65,7 @@ Representa uma lista de bibliotecas de tipos que alimentam o parâmetro `TypeLib
 |---------------|-----------------|
 |WrapperTool|Cadeia de caracteres opcional. O nome da ferramenta wrapper usada no componente, por exemplo, “tlbimp”.|
 
-### <a name="nativereference"></a>NativeReference
+## <a name="nativereference"></a>NativeReference
 
 Representa um arquivo de manifesto nativo ou uma referência a esse arquivo.
 
@@ -76,7 +74,7 @@ Representa um arquivo de manifesto nativo ou uma referência a esse arquivo.
 |Nome|Cadeia de caracteres obrigatória. O nome de base do arquivo de manifesto.|
 |HintPath|Cadeia de caracteres obrigatória. O caminho relativo do arquivo de manifesto.|
 
-### <a name="projectreference"></a>ProjectReference
+## <a name="projectreference"></a>ProjectReference
 
 Representa uma referência a outro projeto. `ProjectReference` os itens são transformados em itens de [referência](#reference) pelo `ResolveProjectReferences` destino, portanto, quaisquer metadados válidos em uma referência poderão ser válidos em `ProjectReference` , se o processo de transformação não o substituir.
 
@@ -91,9 +89,9 @@ Representa uma referência a outro projeto. `ProjectReference` os itens são tra
 |Setplatform|Cadeia de caracteres opcional. Define a propriedade global `Platform` para o projeto referenciado, por exemplo `Platform=AnyCPU` .|
 |SetTargetFramework|Cadeia de caracteres opcional. Define a propriedade global `TargetFramework` para o projeto referenciado, por exemplo `TargetFramework=netstandard2.0` .|
 |SkipGetTargetFrameworkProperties|Booliano opcional. Se `true` , o criará o projeto referenciado sem negociar o valor mais compatível `TargetFramework` . Assume o padrão de `false`.|
-|Targets|`string[]` opcional. Lista de destinos separados por ponto e vírgula nos projetos referenciados que devem ser compilados. Padrão é o valor do `$(ProjectReferenceBuildTargets)` qual o padrão é vazio, indicando os destinos padrão.|
+|Destinos|`string[]` opcional. Lista de destinos separados por ponto e vírgula nos projetos referenciados que devem ser compilados. Padrão é o valor do `$(ProjectReferenceBuildTargets)` qual o padrão é vazio, indicando os destinos padrão.|
 
-### <a name="compile"></a>Compilar
+## <a name="compile"></a>Compilar
 
 Representa os arquivos de origem do compilador.
 
@@ -105,7 +103,7 @@ Representa os arquivos de origem do compilador.
 | Visible | Booliano opcional. Indica se o arquivo deve ser exibido em **Gerenciador de soluções** no Visual Studio. |
 | CopyToOutputDirectory | Cadeia de caracteres opcional. Determina se o arquivo deve ser copiado para o diretório de saída. Os valores são:<br /><br /> 1. nunca<br />2. sempre<br />3. PreserveNewest |
 
-### <a name="embeddedresource"></a>EmbeddedResource
+## <a name="embeddedresource"></a>EmbeddedResource
 
 Representa os recursos a serem inseridos no assembly gerado.
 
@@ -120,7 +118,7 @@ Representa os recursos a serem inseridos no assembly gerado.
 | CopyToOutputDirectory | Cadeia de caracteres opcional. Determina se o arquivo deve ser copiado para o diretório de saída. Os valores são:<br /><br /> 1. nunca<br />2. sempre<br />3. PreserveNewest |
 | LogicalName | Cadeia de caracteres obrigatória. O nome lógico do recurso inserido. |
 
-### <a name="content"></a>Conteúdo
+## <a name="content"></a>Conteúdo
 
 Representa os arquivos não compilados no projeto, mas pode ser inserido ou publicado junto com ele.
 
@@ -136,7 +134,7 @@ Representa os arquivos não compilados no projeto, mas pode ser inserido ou publ
 | Visible | Booliano opcional. Indica se o arquivo deve ser exibido em **Gerenciador de soluções** no Visual Studio. |
 | CopyToOutputDirectory | Cadeia de caracteres opcional. Determina se o arquivo deve ser copiado para o diretório de saída. Os valores são:<br /><br /> 1. nunca<br />2. sempre<br />3. PreserveNewest |
 
-### <a name="none"></a>Nenhum
+## <a name="none"></a>Nenhum
 
 Representa arquivos que não devem ter função no processo de build.
 
@@ -150,7 +148,7 @@ Representa arquivos que não devem ter função no processo de build.
 | Visible | Booliano opcional. Indica se o arquivo deve ser exibido em **Gerenciador de soluções** no Visual Studio. |
 | CopyToOutputDirectory | Cadeia de caracteres opcional. Determina se o arquivo deve ser copiado para o diretório de saída. Os valores são:<br /><br /> 1. nunca<br />2. sempre<br />3. PreserveNewest |
 
-### <a name="assemblymetadata"></a>AssemblyMetadata
+## <a name="assemblymetadata"></a>AssemblyMetadata
 
 Representa os atributos de assembly a serem gerados como `[AssemblyMetadata(key, value)]` .
 
@@ -162,7 +160,7 @@ Representa os atributos de assembly a serem gerados como `[AssemblyMetadata(key,
 > [!NOTE]
 > Este item se aplica a projetos que usam o SDK para .NET 5 (e .NET Core) e versões posteriores.
 
-### <a name="internalsvisibleto"></a>InternalsVisibleTo
+## <a name="internalsvisibleto"></a>InternalsVisibleTo
 
 Especifica os assemblies a serem emitidos como `[InternalsVisibleTo(..)]` atributos de assembly.
 
@@ -174,19 +172,19 @@ Especifica os assemblies a serem emitidos como `[InternalsVisibleTo(..)]` atribu
 > [!NOTE]
 > Este item se aplica a projetos que usam o SDK para .NET 5 (e .NET Core) e versões posteriores.
 
-### <a name="baseapplicationmanifest"></a>BaseApplicationManifest
+## <a name="baseapplicationmanifest"></a>BaseApplicationManifest
 
 Representa o manifesto do aplicativo base para a compilação e contém informações de segurança de implantação do ClickOnce.
 
-### <a name="codeanalysisimport"></a>CodeAnalysisImport
+## <a name="codeanalysisimport"></a>CodeAnalysisImport
 
 Representa o projeto do FxCop a ser importado.
 
-### <a name="import"></a>Importar
+## <a name="import"></a>Importar
 
 Representa assemblies cujos namespaces devem ser importados pelo compilador Visual Basic.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Propriedades de projeto comuns do MSBuild](../msbuild/common-msbuild-project-properties.md)
 - [Metadados de itens comuns do MSBuild](common-msbuild-item-metadata.md)

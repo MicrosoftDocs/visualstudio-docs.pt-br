@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: e5768153-2758-46d3-a323-3272def213ee
-ms.date: 01/19/2021
+ms.date: 03/18/2021
 ms.topic: how-to
 description: Saiba mais sobre o benefício da revista de código incluído na sua assinatura do Visual Studio.
-ms.openlocfilehash: a9aabd98fa872846d12e20b3aad3f617d1c97a64
-ms.sourcegitcommit: 59b63039982bb5894eb35d8b544657688731614f
+ms.openlocfilehash: 831885a89b67bc5d9ab50f49c59eb91bc5717262
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98597397"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672035"
 ---
 # <a name="code-magazine-included-in-visual-studio-subscriptions"></a>Revista de código incluída nas assinaturas do Visual Studio
 
@@ -58,7 +58,7 @@ Depois de concluir sua ordem de assinatura, você verá uma página de confirma�
 | Visual Studio Enterprise, Visual Studio Professional (nuvem mensal) | Azure | Não disponível | N/D |
 | Visual Studio Enterprise NFR<sup>1</sup> | NFR | Não disponível | N/D |
 
-<sup>1</sup>  *inclui: não para revenda (NFR), parceiro do setor do Visual Studio (VSIP), FTE, BizSpark, imagine, imagine Premium, Microsoft Partner Network (MPN), profissional mais valioso (MVP), diretor regional (RD), MCT software & Developer Services, MCT software & Services.*
+<sup>1</sup>  * inclui: não para revenda (NFR), parceiro do setor do Visual Studio (VSIP), FTE, BizSpark, imagine, imagine Premium, Microsoft Partner Network (MPN), profissional mais valioso (MVP), diretor regional (RD), mct software & Developer Services, mct software & Services.  
 
 > [!NOTE]
 > A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a ir para [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a fim de explorar diferentes opções para comprar o Visual Studio.
@@ -74,10 +74,10 @@ R: a revista de código coleta seu endereço, independentemente de a assinatura 
 
 ## <a name="support-resources"></a>Recursos de suporte
 - Tem dúvidas sobre sua assinatura da revista de código?  Contate a [revista de código](https://www.codemag.com/contact) por email ou telefone ou envie uma solicitação de suporte online.
-- Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio.
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas do Visual Studio](https://my.visualstudio.com/gethelp).
 - Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

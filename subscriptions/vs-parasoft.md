@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 00c1f300-d04e-4695-815e-775ffbf0f931
-ms.date: 12/02/2020
+ms.date: 03/17/2021
 ms.topic: how-to
 description: Saiba como ativar a assinatura do Parasoft Virtualize/SOA Test Professional incluída em sua assinatura do Visual Studio.
-ms.openlocfilehash: dbe3ee78d46128a5944ee7b4d0bc69f001270588
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 5f7a7cacab798bdb4959b755be39d7322f9b1d1c
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96537442"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672885"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Parasoft Virtualize/SOAtest Professional Desktop em assinaturas do Visual Studio
 
@@ -47,7 +47,7 @@ Teste antes e com mais frequência.  Simule e teste o comportamento de aplicativ
 
 9. Escolha o idioma desejado e, em seguida, clique em **OK**.
 
-10. O Assistente para Instalação do Parasoft SOAtest & Virtualize será iniciado.  Clique em **Avançar**.
+10. O Assistente para Instalação do Parasoft SOAtest & Virtualize será iniciado.  Clique em **Próximo**.
     > [!div class="mx-imgBorder"]
     > ![Iniciar instalação do benefício Parasoft](_img/vs-parasoft/vs-parasoft-start-install.png "Clique em ' Avançar ' para iniciar a instalação de Parasoft SOAtest & virtualização.")
 
@@ -82,7 +82,7 @@ Teste antes e com mais frequência.  Simule e teste o comportamento de aplicativ
 | Visual Studio Enterprise, Visual Studio Professional (nuvem mensal) | Azure                                       | Não disponível                                                           |NA|
 ||
 
-<sup>1</sup>  *inclui: Microsoft Partner Network (Enterprise).  Exclusões: não para revenda (NFR), parceiro do setor do Visual Studio (VSIP), FTE, MCT software & Services Developer, BizSpark, imagine, Most Valuable Professional (MVP), diretor regional (RD).  MCT software & Services.*
+<sup>1</sup>  *inclui: Microsoft Partner Network (Enterprise). Exclusões: não para revenda (NFR), parceiro do setor do Visual Studio (VSIP), FTE, MCT software & Services Developer, BizSpark, imagine, Most Valuable Professional (MVP), diretor regional (RD).  MCT software & Services, NFR básico*
 
 > [!NOTE]
 > A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a ir para [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a fim de explorar diferentes opções para comprar o Visual Studio.
@@ -91,10 +91,10 @@ Teste antes e com mais frequência.  Simule e teste o comportamento de aplicativ
 - Precisa de ajuda com produtos Parasoft?  Confira estes recursos:
   - Suporte técnico: https://www.parasoft.com/support/
   - Central de Recursos da Parasoft: https://www.parasoft.com/resources/
-- Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio.
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas do Visual Studio](https://my.visualstudio.com/gethelp).
 - Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

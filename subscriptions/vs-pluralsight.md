@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
-ms.date: 12/02/2020
+ms.date: 03/17/2021
 ms.topic: how-to
 description: Saiba mais sobre a assinatura de treinamento do Pluralsight incluída nas assinaturas do Visual Studio selecionadas.
-ms.openlocfilehash: c5503c2adad075bdf6f186567fc372705f1ab55f
-ms.sourcegitcommit: 51e4426889ae5f49c69b122e37b3f48aa7a3925d
+ms.openlocfilehash: 6d12fcf49184d8e8293d4f4e3a3c552e859d3afe
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100542984"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104671694"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Benefícios de treinamento do Pluralsight nas assinaturas do Visual Studio
 
@@ -82,7 +82,7 @@ Quando a sua assinatura do Pluralsight expirar, o status será alterado para "0 
 |             Visual Studio Enterprise (NFR<sup>1</sup> )              |      Programa      | Não disponível |       NA       |
 ||
 
-<sup>1</sup>  *inclui: não para revenda (NFR), parceiro do setor do Visual Studio (VSIP), BizSpark, MCT software & Services Developer, MCT software & Service, MVP (Most Valuable Professional), RD (regional Director), Microsoft Partner Network (MPN), FTE, imagine.*
+<sup>1</sup>  *inclui: não para revenda (NFR), parceiro do setor do Visual Studio (VSIP), BizSpark, MCT software & Services Developer, MCT software & Service, MVP (Most Valuable Professional), RD (regional Director), Microsoft Partner Network (MPN), FTE, imagine. Exclusões: NFR básico.*
 
 <sup>2</sup>  *o benefício da Pluralsight nas assinaturas do Visual Studio selecionadas renova quando sua assinatura renova. Por exemplo, se você tiver uma assinatura anual renovada a cada ano, o benefício estará disponível a cada ano quando você renovar. Se você tiver uma assinatura de vários anos, o benefício da Pluralsight estará disponível para você uma vez durante o período da assinatura.  Se você renovar uma assinatura de vários anos, o benefício estará disponível novamente após a renovação.*
 
@@ -110,10 +110,10 @@ R: ao final da sua assinatura gratuita do Pluralsight, você poderá optar por c
 
 ## <a name="support-resources"></a>Recursos de suporte
 - O [Centro de Ajuda do Pluralsight](https://help.pluralsight.com/help) fornece assistência para realização dos cursos do Pluralsight ou para o uso do site do Pluralsight.
-- Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio.
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas do Visual Studio](https://my.visualstudio.com/gethelp)
 - Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

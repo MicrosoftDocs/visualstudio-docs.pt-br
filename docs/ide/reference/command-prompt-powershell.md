@@ -1,6 +1,6 @@
 ---
 title: Shells de linha de comando para desenvolvedores
-description: Saiba como localizar e usar o Prompt de Comando do Desenvolvedor para o Visual Studio, o PowerShell do desenvolvedor e o terminal do Visual Studio, que permitem usar as ferramentas do .NET e do C++ com mais facilidade.
+description: Saiba como localizar e usar o Visual Studio Prompt de Comando do Desenvolvedor, o Visual Studio Developer PowerShell e o terminal do Visual Studio, que permitem usar as ferramentas .NET e C++ com mais facilidade.
 ms.date: 03/04/2021
 ms.custom: contperf-fy21q3
 helpviewer_keywords:
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Visual Studio terminal
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 no-loc: cmdlet
-ms.openlocfilehash: 406ef4e7d475df82a0e36732dd5e777959ea3b96
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: fb2c99037577528b77ab5c1b0c74bf7af9e73d1b
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249740"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672319"
 ---
 # <a name="developer-command-prompt-and-developer-powershell"></a>Prompt de Comando do Desenvolvedor e o PowerShell para desenvolvedores
 
 O Visual Studio 2019 inclui dois shells de linha de comando para desenvolvedores:
 
-- **Prompt de comando do desenvolvedor para Visual Studio** -um prompt de comando padrão com determinadas variáveis de ambiente definido para facilitar o uso das ferramentas de desenvolvedor de linha de comando.
-- **Developer PowerShell** – mais potente do que um prompt de comando. Por exemplo, você pode passar a saída de um comando (conhecido como um *cmdlet* ) para outro cmdlet . Este Shell tem as mesmas variáveis de ambiente definidas como Prompt de Comando do Desenvolvedor.
+- **Visual Studio prompt de comando do desenvolvedor** -um prompt de comando padrão com determinadas variáveis de ambiente definido para facilitar o uso das ferramentas de desenvolvedor de linha de comando. Disponível desde o Visual Studio 2015.
+- **Visual Studio Developer PowerShell** – mais potente do que um prompt de comando. Por exemplo, você pode passar a saída de um comando (conhecido como um *cmdlet* ) para outro cmdlet . Este Shell tem as mesmas variáveis de ambiente definidas como Prompt de Comando do Desenvolvedor. Disponível desde o Visual Studio 2019.
 
 Ambos os shells têm variáveis de ambiente específicas definidas que permitem que você use ferramentas de desenvolvedor de linha de comando mais facilmente. Depois de abrir um desses shells, você pode inserir os comandos para diferentes utilitários sem precisar saber onde eles estão localizados. Os comandos que você pode executar incluem:
 
@@ -40,10 +40,6 @@ A partir do Visual Studio 2019 versão 16,5, o Visual Studio inclui um **termina
 :::image type="content" source="media/developer-command-prompt-for-vs/vs-terminal.png" alt-text="Terminal do Visual Studio mostrando várias guias":::
 
 Quando você abre um dos shells do desenvolvedor do Visual Studio, seja como um aplicativo separado ou na janela do terminal, ele é aberto no diretório da sua solução atual (se você tiver uma solução carregada). Esse comportamento torna conveniente executar comandos na solução ou em seus projetos.
-
-## <a name="prerequisites"></a>Pré-requisitos
-
-- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
 ## <a name="start-the-shell-from-inside-visual-studio"></a>Iniciar o Shell de dentro do Visual Studio
 
@@ -125,7 +121,7 @@ Por padrão, o PowerShell de desenvolvedor que é iniciado é configurado para a
 > [!TIP]
 > A [política de execução](/powershell/module/microsoft.powershell.core/about/about_execution_policies) deve ser definida para que o cmdlet seja executado.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [PowerShell para desenvolvedores](https://devblogs.microsoft.com/visualstudio/the-powershell-you-know-and-love-now-with-a-side-of-visual-studio/)
 - [Diga Olá para o novo terminal do Visual Studio](https://devblogs.microsoft.com/visualstudio/say-hello-to-the-new-visual-studio-terminal/)

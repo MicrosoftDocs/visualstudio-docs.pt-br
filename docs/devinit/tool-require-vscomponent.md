@@ -11,14 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 50172f96a49e2384553a372ded0c889b30a23fff
-ms.sourcegitcommit: e262f4c2a147c3fa2d27de666aae3a0497317867
+ms.openlocfilehash: 7d6609c49efb9f77c9823ca3f703b8843ddb753e
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100006392"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672669"
 ---
 # <a name="require-vscomponent"></a>require-vscomponent
+
+> [!IMPORTANT]
+> A partir de 12 de abril de 2021, a conexão ao GitHub Codespaces do Visual Studio 2019 não será mais suportada e essa versão prévia privada terá sido concluída. Estamos concentrados em experiências em evolução para um loop interno baseado em nuvem e soluções de VDI otimizadas para um amplo conjunto de cargas de trabalho do Visual Studio. Como parte desse `devinit` e as ferramentas associadas não estarão mais disponíveis. Incentivamos você a estar envolvido em nosso fórum da comunidade de desenvolvedores para Visual Studio para obter informações sobre versões futuras e informações de roteiro.
 
 A `require-vscomponent` ferramenta é usada para importar configurações do Visual Studio para o Visual Studio existente. Leia mais sobre `.vsconfig` [aqui](../install/import-export-installation-configurations.md).
 
@@ -26,7 +29,7 @@ A `require-vscomponent` ferramenta é usada para importar configurações do Vis
 
 Se as `input` Propriedades e `additionalOptions` forem omitidas ou vazias, a ferramenta seguirá o comportamento [padrão](#default-behavior) detalhado abaixo.
 
-| Nome                                     | Tipo   | Obrigatório | Valor                                                                |
+| Nome                                     | Type   | Obrigatório | Valor                                                                |
 |------------------------------------------|--------|----------|----------------------------------------------------------------------|
 | **feitos**                             | Cadeia de caracteres | No       | Propriedade de comentários opcional. Não usado.                                |
 | [**entrada**](#input)                      | Cadeia de caracteres | No       | O caminho completo de `.vsconfig` . Consulte a [entrada](#input) abaixo para obter detalhes. |
@@ -40,7 +43,7 @@ A `input` propriedade é usada para especificar o caminho completo do `.vsconfig
 
 Opções de configuração adicionais podem ser passadas como um valor de `additionalOptions` . 
 
-| Nome                      | Tipo      | Obrigatório | Valor                                                                                                                                                                                    |
+| Nome                      | Type      | Obrigatório | Valor                                                                                                                                                                                    |
 |---------------------------|-----------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | --installPath             | Cadeia de caracteres    | No       | O caminho de instalação da instância do Visual Studio que você deseja modificar.                                                                                                                       |
 

@@ -18,20 +18,20 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 59a0660bb78e966150a6ef8d17dc24512a901a26
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2b5fd7129cfb21e5b59e8cdf0049b4ee75d59c87
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913946"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672729"
 ---
 # <a name="item-element-msbuild"></a>Elemento Item (MSBuild)
 
 Contém um item definido pelo usuário e seus metadados. Cada item usado em um projeto do MSBuild deve ser especificado como um filho de um `ItemGroup` elemento.
 
-\<Project>
-\<ItemGroup>
-\<Item>
+\<Project>\
+&nbsp;\<ItemGroup>\
+&nbsp;&nbsp;\<Item>
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -126,7 +126,7 @@ O exemplo de código a seguir mostra como usar o atributo `Update` para modifica
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Itens](../msbuild/msbuild-items.md)
 - [Itens de projeto comuns do MSBuild](../msbuild/common-msbuild-project-items.md)

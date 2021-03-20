@@ -1,7 +1,7 @@
 ---
 title: Teste de unidade em JavaScript e TypeScript
 description: O Visual Studio fornece suporte ao teste de unidade do código JavaScript e TypeScript usando as Ferramentas Node.js para Visual Studio
-ms.date: 07/06/2020
+ms.date: 03/18/2021
 ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
@@ -11,16 +11,16 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 04ef9834fdc66256b601ecdcf156e4d290447ce3
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: dc44e39223fd252ae8c4130a1b358aa6af981119
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102171312"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104671489"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Teste de unidade em JavaScript e TypeScript no Visual Studio
 
-As Ferramentas Node.js para Visual Studio permitem que você escreva e execute testes de unidade usando algumas das estruturas mais populares do JavaScript, sem a necessidade de alternar para um prompt de comando.
+Você pode escrever e executar testes de unidade no Visual Studio usando algumas das estruturas JavaScript mais populares sem a necessidade de alternar para um prompt de comando. Há suporte para projetos Node.js e ASP.NET Core.
 
 As estruturas compatíveis são:
 * Mocha ([mochajs.org](https://mochajs.org/))
@@ -29,9 +29,11 @@ As estruturas compatíveis são:
 * Jest ([jestjs.io](https://jestjs.io/))
 * Executor de Exportação (essa estrutura é específica das Ferramentas Node.js para Visual Studio)
 
+Para ASP.NET Core e JavaScript ou TypeScript, consulte [gravar testes de unidade para ASP.NET Core ](#write-unit-tests-for-aspnet-core).
+
 Se não houver suporte para sua estrutura favorita, confira [Adicionar suporte para uma estrutura de teste de unidade](#addingFramework) para obter informações sobre como adicionar o suporte.
 
-## <a name="write-unit-tests"></a>Escrever testes de unidade
+## <a name="write-unit-tests-in-a-nodejs-project"></a>Gravar testes de unidade em um projeto Node.js
 
 Antes de adicionar testes de unidade ao projeto, verifique se a estrutura que você pretende usar está instalada localmente no projeto. É fácil fazer isso usando a [janela de instalação de pacotes npm](npm-package-management.md#npmInstallWindow).
 
@@ -74,7 +76,7 @@ Depois de abrir o Gerenciador de testes (escolha **testar** o  >  **Windows**  >
 > [!NOTE]
 > Para o TypeScript, não use a `outdir` `outfile` opção ou no *tsconfig.jsno*, porque o Gerenciador de testes não poderá localizar os testes de unidade.
 
-## <a name="run-tests"></a>Executar testes
+## <a name="run-tests-nodejs"></a>Executar testes (Node.js)
 
 Você pode executar testes no Visual Studio ou na linha de comando.
 
@@ -134,6 +136,130 @@ Test execution time: 1.5731 Seconds
 > [!NOTE]
 > Se você receber um erro indicando que o *vstest.console.exe* não pode ser encontrado, verifique se você abriu o Prompt de Comando do Desenvolvedor e não um prompt de comando comum.
 
+## <a name="write-unit-tests-for-aspnet-core"></a>Gravar testes de unidade para ASP.NET Core
+
+1. Crie um projeto ASP.NET Core e adicione suporte a TypeScript.
+
+   Para obter um exemplo de projeto, consulte [criar um aplicativo ASP.NET Core com TypeScript](../javascript/tutorial-aspnet-with-typescript.md). Para o suporte a testes de unidade, recomendamos que você comece com um modelo de projeto ASP.NET Core padrão.
+
+   Use o pacote NuGet para adicionar suporte a TypeScript em vez do pacote TypeScript NPM.
+
+1. Instale o pacote NuGet [Microsoft. JavaScript. UnitTest](https://www.nuget.org/packages/Microsoft.JavaScript.UnitTest/)
+
+1. Em Gerenciador de Soluções, clique com o botão direito do mouse no nó do projeto e escolha **descarregar projeto**.
+
+   O arquivo *. csproj* deve ser aberto no Visual Studio.
+
+1. Adicione os seguintes elementos ao arquivo *. csproj* no `PropertyGroup` elemento.
+
+   Este exemplo especifica Mocha como a estrutura de teste. Você pode especificar Jest, tape ou Jasmine em vez disso.
+
+   ```xml
+   <PropertyGroup>
+      ...
+      <JavaScriptTestRoot>tests\</JavaScriptTestRoot>
+      <JavaScriptTestFramework>Mocha</JavaScriptTestFramework>
+      <GenerateProgramFile>false</GenerateProgramFile>
+   </PropertyGroup>
+   ```
+
+   O `JavaScriptTestRoot` elemento Especifica que os testes de unidade estarão na pasta *tests* da raiz do projeto.
+
+1. Em Gerenciador de Soluções, clique com o botão direito do mouse no nó do projeto e escolha **recarregar projeto**.
+
+1. Adicione o suporte do NPM conforme descrito no artigo gerenciamento de pacotes do NPM em [ASP.NET Core projetos](../javascript/npm-package-management.md#aspnet-core-projects).
+
+   Isso requer a instalação do Node.js Runtime para suporte NPM e a adição de *package.js* na raiz do projeto.
+
+1. Em *package.jsem*, adicione o pacote NPM que você deseja em dependências.
+
+   Por exemplo, para Mocha, você pode usar o seguinte:
+
+   ```json
+   "dependencies": {
+     "mocha": "8.3.0",
+   ```
+
+   Algumas estruturas de teste de unidade, como jest, exigem pacotes NPM adicionais. Para Jest, use o JSON a seguir:
+
+   ```json
+   "dependencies": {
+     "jest": "26.6.3",
+     "jest-editor-support": "28.1.0"
+   ```
+
+   >[!NOTE]
+   > Em alguns cenários, Gerenciador de Soluções pode não mostrar o nó NPM devido a um problema conhecido descrito [aqui](https://github.com/aspnet/Tooling/issues/479). Se você precisar ver o nó NPM, você pode descarregar o projeto (clique com o botão direito do mouse no projeto e escolher **descarregar projeto**) e recarregar o projeto para fazer com que o nó NPM seja exibido novamente.
+
+1. Adicione o código para testar.
+
+   Se você estiver usando o exemplo descrito em [criar um aplicativo ASP.NET Core com TypeScript](tutorial-aspnet-with-typescript.md), adicione o código a seguir ao final do arquivo *library. TS* , que está na pasta *scripts* .
+
+   ```typescript
+   function getData(value) {
+      if (value > 1) {
+         return true;
+      }
+   }
+    
+   module.exports = getData;
+   ```
+
+   Para o TypeScript, os testes de unidade são executados no código JavaScript gerado.
+
+1. Adicione os testes de unidade à pasta *tests* na raiz do projeto.
+
+   Por exemplo, você pode usar o código a seguir selecionando a guia de documentação correta que corresponde à estrutura de teste, neste exemplo, Mocha ou jest. Esse código testa uma função chamada `getData` .
+
+   # <a name="mocha"></a>[Mocha](#tab/mocha)
+
+   ```typescript
+   const getData = require('../wwwroot/js/library.js');
+   var assert = require('assert');
+    
+   describe('Test Suite 1', function () {
+      it('getData', function () {
+         assert.ok(true, getData(2));
+      })
+   })
+   ```
+
+   # <a name="jest"></a>[Jest](#tab/jest)
+
+   ```typescript
+   const getData = require('../wwwroot/js/library.js');
+    
+   test('should return true', () => {
+      expect(getData(2)).toBe(true);
+   });
+   ```
+
+1. Abra o Gerenciador de testes (escolha **testar** o  >  **Windows**  >  **Test Explorer**) e o Visual Studio descobre e exibe testes. Se os testes não estiverem sendo mostrados inicialmente, recompile o projeto para atualizar a lista.
+
+   ![Descoberta de teste do Test Explorer](../javascript/media/unit-tests-aspnet-core-discovery.png)
+
+   > [!NOTE]
+   > Para o TypeScript, não use a `outfile` opção no *tsconfig.jsno*, porque o Gerenciador de testes não poderá localizar os testes de unidade. Você pode usar a `outdir` opção, mas certifique-se de que arquivos de configuração, como `package.json` e `tsconfig.json` estão na raiz do projeto.
+
+## <a name="run-tests-aspnet-core"></a>Executar testes (ASP.NET Core)
+
+::: moniker range=">=vs-2019"
+Execute os testes clicando no link **Executar Tudo** no Gerenciador de Testes. Ou, você pode executar testes selecionando um ou mais testes ou grupos, clicando com o botão direito do mouse e selecionando **executar** no menu de atalho. Os testes são executados em segundo plano e o Gerenciador de Testes atualiza e mostra os resultados automaticamente. Além disso, você também pode depurar os testes selecionados clicando com o botão direito do mouse e selecionando **depurar**.
+::: moniker-end
+::: moniker range="vs-2017"
+Execute os testes clicando no link **Executar Tudo** no Gerenciador de Testes. Ou se preferir, execute os testes selecionando um ou mais testes ou grupos, clicando com o botão direito do mouse e escolhendo **Executar Testes Selecionados** no menu de atalho. Os testes são executados em segundo plano e o Gerenciador de Testes atualiza e mostra os resultados automaticamente. Além disso, depure também testes selecionados selecionando **Depurar Testes Selecionados**.
+::: moniker-end
+
+Para o TypeScript, os testes de unidade são executados no código JavaScript gerado.
+
+![Resultados do Gerenciador de testes](../javascript/media/unit-tests-aspnet-core-run.png)
+
+> [!NOTE]
+> Na maioria dos cenários do TypeScript, você pode depurar um teste de unidade definindo um ponto de interrupção no código do TypeScript, clicando com o botão direito do mouse em um teste no Gerenciador de testes e escolhendo **depurar**. Em cenários mais complexos, como alguns cenários que usam mapas de origem, você pode ter dificuldade ao atingir pontos de interrupção no código do TypeScript. Como alternativa, tente usar a `debugger` palavra-chave.
+
+> [!NOTE]
+> No momento, não damos suporte à criação de perfil de testes nem à cobertura de código.
+
 ## <a name="add-support-for-a-unit-test-framework"></a><a name="addingFramework"></a>Adicionar suporte para uma estrutura de teste de unidade
 
 Adicione suporte para estruturas de teste adicionais implementando a lógica de descoberta e execução usando o JavaScript. Faça isso adicionando uma pasta com o nome da estrutura de teste em:
@@ -151,9 +277,9 @@ Para obter um bom exemplo das implementações `find_tests` e `run_tests`, confi
 
 A descoberta das estruturas de teste disponíveis ocorre na inicialização do Visual Studio. Se uma estrutura for adicionada enquanto o Visual Studio estiver em execução, reinicie o Visual Studio para detectar a estrutura. No entanto, você não precisa reiniciar ao fazer alterações na implementação.
 
-## <a name="unit-tests-in-other-project-types"></a>Testes de unidade em outros tipos de projeto
+## <a name="unit-tests-in-net-framework"></a>Testes de unidade no .NET Framework
 
-Você não está limitado a escrever testes de unidade apenas em seus projetos Node.js. Quando você adicionar as propriedades TestFramework e TestRoot a qualquer projeto de C# ou Visual Basic, esses testes serão enumerados e você poderá executá-los usando a janela do Gerenciador de Testes.
+Você não está limitado a escrever testes de unidade apenas em seus projetos Node.js e ASP.NET Core. Quando você adicionar as propriedades TestFramework e TestRoot a qualquer projeto de C# ou Visual Basic, esses testes serão enumerados e você poderá executá-los usando a janela do Gerenciador de Testes.
 
 Para habilitar isso, clique com o botão direito do mouse no nó do projeto no Gerenciador de Soluções, escolha **Descarregar Projeto** e, em seguida, escolha **Editar Projeto**. Em seguida, no arquivo de projeto, adicione os dois elementos a seguir a um grupo de propriedades.
 
@@ -170,9 +296,9 @@ Para habilitar isso, clique com o botão direito do mouse no nó do projeto no G
 
 Em seguida, adicione seus testes à pasta raiz de teste especificada por você e eles ficarão disponíveis para execução na janela do Gerenciador de Testes. Se eles não aparecerem inicialmente, você precisará recompilar o projeto.
 
-### <a name="unit-test-net-core-and-net-standard"></a>Teste de unidade no .NET Core e no .NET Standard
+## <a name="unit-test-net-core-and-net-standard"></a>Teste de unidade no .NET Core e no .NET Standard
 
-Além das propriedades acima, também será necessário instalar o pacote [Microsoft.JavaScript.UnitTest](https://www.nuget.org/packages/Microsoft.JavaScript.UnitTest/) do NuGet e definir a propriedade:
+Além das propriedades anteriores, você também precisa instalar o pacote NuGet [Microsoft. JavaScript. UnitTest](https://www.nuget.org/packages/Microsoft.JavaScript.UnitTest/) e definir a propriedade:
 
 ```xml
 <PropertyGroup>

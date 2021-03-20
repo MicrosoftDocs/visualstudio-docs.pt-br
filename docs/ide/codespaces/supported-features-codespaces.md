@@ -11,14 +11,18 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 1a94915748f6c7cedb19a0b27c67eb67d6086963
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ebd64a314f1c4d6afd7b6e6fcc3b38148ff68225
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971135"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672963"
 ---
 # <a name="supported-visual-studio-features-preview"></a>Recursos do Visual Studio com suporte (versão prévia)
+
+> [!Important] 
+> A partir de 12 de abril de 2021, a conexão ao GitHub Codespaces do Visual Studio 2019 não será mais suportada e essa versão prévia privada terá sido concluída. Estamos concentrados em experiências em evolução para um loop interno baseado em nuvem e soluções de VDI otimizadas para um amplo conjunto de cargas de trabalho do Visual Studio. Incentivamos você a estar envolvido em nosso [Fórum da comunidade de desenvolvedores](https://developercommunity.visualstudio.com/home) para Visual Studio para obter informações sobre versões futuras e informações de roteiro. 
+
 
 O Visual Studio fornece uma experiência de desenvolvimento rica ao se conectar a um codespace. Você Obtém as ferramentas de loop interno do Visual Studio com as quais está familiarizado para editar, depurar, testar e realizar a versão do código-fonte, bem como recursos de produtividade, como modelos de projeto, navegação de código avançada e IntelliSense.
 
@@ -122,7 +126,7 @@ Ainda não disponível:
 * Recursos de teste empresarial-Live Unit Testing, falsificações da Microsoft, cobertura de código e IntelliTest não têm suporte.
 * Cenários de publicação avançada-publicação seletiva, publicação de FTP, alterações de visualização, barra de ferramentas de publicação rápida, etc.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [O que é o GitHub Codespaces?](codespaces-overview.md)
 * [Como usar o Visual Studio com um codespace](use-visual-studio-with-codespaces.md)

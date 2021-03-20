@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
-ms.date: 02/09/2021
+ms.date: 03/17/2021
 ms.topic: how-to
 description: Saiba mais sobre a Conta de Desenvolvedor do Windows incluída em sua assinatura do Visual Studio.
-ms.openlocfilehash: a988dabb5849d13733c72ebb5976be489f67dd95
-ms.sourcegitcommit: 0f3606917cf5451e8c4e0b2e0c3fbb9113429645
+ms.openlocfilehash: 4ea61f0bdb131c20412c0b99bbd09cbc44777fb7
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100089587"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672755"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Conta de Desenvolvedor do Windows nas assinaturas do Visual Studio
 A Conta de Desenvolvedor para Windows, incluída com assinaturas selecionadas do Visual Studio, permite que você envie aplicativos do Windows gratuitos e pagos para a Windows Store.
@@ -55,7 +55,7 @@ Para usar a conta de desenvolvedor do Windows, será necessário configurar uma 
 | Visual Studio Enterprise, Visual Studio Professional (nuvem mensal) | Azure                                       | Não disponível                                                           |NA|
 ||
 
-<sup>1</sup>  *inclui: não para revenda (NFR), FTE, Visual Studio Industry Partner (VSIP), BizSpark, MCT software & Services Developer, Most VALUABLE Professional (MVP), diretor regional (RD). Exclui: Microsoft Partner Network (MPN), imagine, MCT software & Services.*
+<sup>1</sup>  *inclui: não para revenda (NFR), FTE, Visual Studio Industry Partner (VSIP), BizSpark, MCT software & Services Developer, Most VALUABLE Professional (MVP), diretor regional (RD). Exclui: Microsoft Partner Network (MPN), imagine, MCT software & Services, NFR básico.*
 
 > [!NOTE]
 > A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a ir para [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a fim de explorar diferentes opções para comprar o Visual Studio.
@@ -65,10 +65,10 @@ Não tem certeza de qual assinatura você está usando?  Conecte-se ao [https://
 ## <a name="support-resources"></a>Recursos de suporte
 - Precisa de ajuda para usar sua Conta de Desenvolvedor do Windows?  Confira os recursos de [suporte](https://developer.microsoft.com/windows/support) no [Centro de Desenvolvimento do Windows](https://developer.microsoft.com/windows).
 - [Desenvolvimento em Windows](/windows/)
-- Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio.
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, entre em contato com o [suporte às assinaturas](https://my.visualstudio.com/gethelp)do Visual Studio Visual Studio.
 - Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

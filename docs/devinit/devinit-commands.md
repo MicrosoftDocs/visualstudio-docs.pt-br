@@ -11,14 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 9cd9fef6cebdefc190d37c067616e51c6d3e372f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d6c8f487fcb35fc210db57f0c8a49a2a86f909e9
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908130"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672210"
 ---
 # <a name="devinit-commands"></a>comandos devinit
+
+> [!IMPORTANT]
+> A partir de 12 de abril de 2021, a conexão ao GitHub Codespaces do Visual Studio 2019 não será mais suportada e essa versão prévia privada terá sido concluída. Estamos concentrados em experiências em evolução para um loop interno baseado em nuvem e soluções de VDI otimizadas para um amplo conjunto de cargas de trabalho do Visual Studio. Como parte desse `devinit` e as ferramentas associadas não estarão mais disponíveis. Incentivamos você a estar envolvido em nosso fórum da comunidade de desenvolvedores para Visual Studio para obter informações sobre versões futuras e informações de roteiro.
 
 ## <a name="init"></a>Init
 
@@ -81,7 +84,7 @@ Opções para o `devinit run` comando.
 
 | Argumento                                      | Obrigatório | Descrição                                                                          |
 |-----------------------------------------------|----------|--------------------------------------------------------------------------------------|
-| -t,--ferramenta                                     | Sim      | Obrigatório. O nome da ferramenta.                                                             |
+| -t,--ferramenta                                     | Sim      | Obrigatórios. O nome da ferramenta.                                                             |
 | -i,--entrada                                    | Não       | O valor de entrada da ferramenta. Por exemplo, um FileName, um pacote ou um nome.                     |
 | --ação de erro                                | Não       | Especifica como tratar erros de ferramenta: parar, ignorar, continuar. O padrão é parar. |
 | -v,--detalhado                                  | Não       | Emitir saída detalhada.                                                                 |
@@ -124,7 +127,7 @@ Para instalar o dotnet em um diretório específico `C:\Program Files\dotnet` :
 devinit run -t require-dotnetcoresdk --"-InstallDir \"C:\Program Files\dotnet\""
 ```
 
-## <a name="list"></a>List
+## <a name="list"></a>Lista
 
 ```console
 devinit list
@@ -140,7 +143,7 @@ devinit show -t <toolname>
 
 | Argumento       | Obrigatório | Descrição                                                                          |
 |----------------|----------|--------------------------------------------------------------------------------------|
-| -t,--ferramenta      | Sim      | Obrigatório. O nome da ferramenta.                                                             |
+| -t,--ferramenta      | Sim      | Obrigatórios. O nome da ferramenta.                                                             |
 
 Imprime informações de ajuda para uma determinada ferramenta.
 
@@ -152,7 +155,7 @@ devinit version
 
 Imprime as informações de versão atuais para devinit.
 
-## <a name="help"></a>Ajuda
+## <a name="help"></a>Help
 
 ```console
 devinit help

@@ -11,14 +11,17 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 15efee817e41f928e5ca1162e9ace20276bd20d2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0e23ca3255761f4d93f89251d00c12c14aecf7b9
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971148"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672345"
 ---
 # <a name="how-to-customize-a-codespace-preview"></a>Como personalizar um codespace (visualização)
+
+> [!Important] 
+> A partir de 12 de abril de 2021, a conexão ao GitHub Codespaces do Visual Studio 2019 não será mais suportada e essa versão prévia privada terá sido concluída. Estamos concentrados em experiências em evolução para um loop interno baseado em nuvem e soluções de VDI otimizadas para um amplo conjunto de cargas de trabalho do Visual Studio. Incentivamos você a estar envolvido em nosso [Fórum da comunidade de desenvolvedores](https://developercommunity.visualstudio.com/home) para Visual Studio para obter informações sobre versões futuras e informações de roteiro. 
 
 O GitHub Codespaces fornece um ambiente de desenvolvimento completo na nuvem. Para o desenvolvimento baseado em Windows usando o Visual Studio 2019, as instâncias padrão do GitHub Codespaces fornecem um ótimo ponto de partida, mas você também pode personalizar o ambiente para seu projeto específico.
 
@@ -192,7 +195,7 @@ Se você estiver usando uma identidade de Azure Active Directory para autenticar
 
 Você pode saber mais sobre o `az login` comando na [documentação](/cli/azure/reference-index#az_login)do CLI do Azure.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [O que é o GitHub Codespaces?](codespaces-overview.md)
 - [Como usar o Visual Studio com um codespace](use-visual-studio-with-codespaces.md)

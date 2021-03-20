@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 6255b6a3-f101-4b2c-b7fa-851eccc944b2
-ms.date: 02/19/2021
+ms.date: 03/18/2021
 ms.topic: conceptual
 description: Saiba mais sobre o benefício do CloudPilot disponível nas assinaturas do Visual Studio selecionadas
-ms.openlocfilehash: 4d9b7bea4b2165b8efc9f57396b078c42a5fc8eb
-ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
+ms.openlocfilehash: 466358af00fe0f174043989c6eb54e976d98d3be
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102473355"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672061"
 ---
 # <a name="the-cloudpilot-benefit-in-visual-studio-subscriptions"></a>O benefício CloudPilot nas assinaturas do Visual Studio
 Mova seus aplicativos para o Microsoft Azure em poucas etapas simples. Em minutos, identifique todas as alterações de código necessárias à linha de código para a migração bem-sucedida para: Contêineres, VMs, Serviços de Aplicativos, SQL do Azure e/ou MI do SQL. Em seguida, migre os aplicativos para o Azure usando assistentes e aproveitando o ASR, o AMD e o DMS.
@@ -68,7 +68,7 @@ O CloudPilot, da UnifyCloud, foi projetado para ajudar os desenvolvedores a move
 | Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Não disponível  | N/D |
 | Visual Studio Enterprise, Visual Studio Professional (nuvem mensal) | Azure | Não disponível | N/D |
 
-<sup>1</sup>  *inclui: não para revenda (NFR), FTE, profissional mais valioso (MVP), diretor regional (RD), Microsoft Partner Network (MPN), parceiro do setor do Visual Studio (VSIP), Microsoft Certified Trainer, BizSpark, imagine*
+<sup>1</sup>  *inclui: não para revenda (NFR), FTE, profissional mais valioso (MVP), diretor regional (RD), Microsoft Partner Network (MPN), parceiro do setor do Visual Studio (VSIP), Microsoft Certified Trainer, BizSpark, imagine, NFR básico*
 
 > [!NOTE]
 > A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a ir para [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a fim de explorar diferentes opções para comprar o Visual Studio.
@@ -79,12 +79,10 @@ Não tem certeza de qual assinatura você está usando?  Conecte-se ao [https://
 - Precisa de ajuda para usar o CloudPilot?  Confira estes recursos:
   - [Entre em contato com UnifyCloud](https://www.unifycloud.com/contacts/) para consultas sobre produtos UnifyCloud.
   - [Manual do usuário do CloudPilot](https://www.cloudatlasinc.com/cloudpilot/doc/CloudPilot-User-Manual.pdf )
-  - [Enviar uma solicitação de suporte](https://support.datacamp.com/hc/requests/new)
-
 - Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio.
 - Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

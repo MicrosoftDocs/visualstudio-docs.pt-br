@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 7aaa4727-00ef-41dc-937d-8d46973aaf56
-ms.date: 03/08/2021
+ms.date: 03/18/2021
 ms.topic: conceptual
 description: Saiba como os administradores em contratos de licença por volume podem acessar o portal de administração de assinaturas do Visual Studio
-ms.openlocfilehash: 4704b3258eedf8fd1639804a8792a1c18fafce77
-ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
+ms.openlocfilehash: 0ab0ca532c1c2cdb848a3f6df9862c1d80518248
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102607282"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672524"
 ---
 # <a name="accessing-the-admin-portal-as-an-admin-on-a-volume-license-agreement"></a>Acessando o portal de administração como um administrador em um contrato de licença por volume
 
@@ -26,9 +26,9 @@ Quando estiver conectado, você será configurado automaticamente como um supera
 Isso se aplica a todos os tipos de contrato de licenciamento por volume, incluindo, mas não se limitando a: contratos Enterprise, assinaturas corporativas, selecione, selecione mais, abrir, licença aberta, governo. e contratos acadêmicos. 
 
 ## <a name="resources"></a>Recursos
-- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio.
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

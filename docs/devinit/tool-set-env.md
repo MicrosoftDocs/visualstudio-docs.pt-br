@@ -11,14 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 82f0def521a7a5a6bf4bd4595d32775324a0a39c
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 86e6f7c22ac75d976050858eb2853f9036377fee
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102171018"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672655"
 ---
 # <a name="set-env"></a>set-env
+
+> [!IMPORTANT]
+> A partir de 12 de abril de 2021, a conexão ao GitHub Codespaces do Visual Studio 2019 não será mais suportada e essa versão prévia privada terá sido concluída. Estamos concentrados em experiências em evolução para um loop interno baseado em nuvem e soluções de VDI otimizadas para um amplo conjunto de cargas de trabalho do Visual Studio. Como parte desse `devinit` e as ferramentas associadas não estarão mais disponíveis. Incentivamos você a estar envolvido em nosso fórum da comunidade de desenvolvedores para Visual Studio para obter informações sobre versões futuras e informações de roteiro.
 
 A `set-env` ferramenta pode ser usada para definir variáveis de ambiente para uso no processo atual. As variáveis de ambiente são definidas somente no processo atual e serão usadas por outras `devinit` ferramentas se elas forem executadas nesse processo.
 

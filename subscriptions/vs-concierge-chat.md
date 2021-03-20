@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: dcd99e32-c9f3-4e19-8428-319dfa220463
-ms.date: 12/02/2020
+ms.date: 03/18/2021
 ms.topic: how-to
 description: Saiba mais sobre o benefício de Atendimento via Chat incluído nas assinaturas do Visual Studio.
-ms.openlocfilehash: 4f5f188ee7b6662549e5ade80a97c57f24bce64c
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 468433ba6cc378fd422f1fee6c806c6a701a9e65
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538092"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672022"
 ---
 # <a name="concierge-chat-in-visual-studio-subscriptions"></a>Atendimento via Chat em assinaturas do Visual Studio
 O serviço de Atendimento via Chat fornece assistência para a localização de informações sobre produtos e documentação técnica, bem como ajuda para usar os benefícios de assinatura do Visual Studio.
@@ -27,7 +27,7 @@ Obter ajuda por meio do serviço de Atendimento via Chat é muito fácil.
     > [!div class="mx-imgBorder"]
     > ![Bloco de Chat de Atendimento](_img/vs-concierge-chat/vs-concierge-chat-tile.png "Clique em ' bater papo agora ' para iniciar uma nova sessão de bate-papo.")
 
-3. Clique em **Continuar**.
+3. Clique em **Continue**.
 
 4. Será aberta uma janela de chat, e você verá um contador mostrando a posição na fila.
 
@@ -46,7 +46,7 @@ Obter ajuda por meio do serviço de Atendimento via Chat é muito fácil.
 | Plataformas MSDN (Padrão)                                          | VL, Retail                                              | Disponível                                              |  Sim          |
 | Visual Studio Enterprise, Visual Studio Professional (nuvem mensal) | Azure | Não disponível | N/D |
 
-<sup>1</sup>  *inclui: não para revenda (NFR), parceiro do setor do Visual Studio (VSIP), Microsoft Certified Trainer, BizSpark.  Exclusões: FTE, profissional mais valioso (MVP), diretor regional (RD), Microsoft Partner Network (MPN), imagine.*
+<sup>1</sup>  *inclui: não para revenda (NFR), parceiro do setor do Visual Studio (VSIP), Microsoft Certified Trainer, BizSpark.  Exclusões: FTE, profissional mais valioso (MVP), diretor regional (RD), Microsoft Partner Network (MPN), imagine.  Exclusões: NFR básico*
 
 > [!NOTE]
 > A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a ir para [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a fim de explorar diferentes opções para comprar o Visual Studio.
@@ -58,10 +58,10 @@ Não tem certeza de qual assinatura você está usando?  Conecte-se ao [https://
    R: A assistência com problemas de contas, cobrança e assinaturas está disponível em vários idiomas.  A assistência para localizar informações sobre produtos e documentação técnica está disponível em inglês.
 
 ## <a name="support-resources"></a>Recursos de suporte
-- Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio.
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas do Visual Studio](https://my.visualstudio.com/gethelp).
 - Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

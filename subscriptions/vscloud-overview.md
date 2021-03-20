@@ -7,12 +7,12 @@ ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
 ms.date: 02/19/2021
 ms.topic: overview
 description: Alugue o Visual Studio Professional ou o Visual Studio Enterprise mês a mês ou anualmente, sem nenhum contrato de longo prazo.
-ms.openlocfilehash: 6aa17046726e19086f511c7ab59ab19228142e20
-ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
+ms.openlocfilehash: 56988001272fb11252b85cb60bdcae109edf8e29
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102473381"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672537"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Comprar assinaturas de nuvem do Visual Studio Professional e do Visual Studio Enterprise
 Você pode comprar [assinaturas do Visual Studio Professional e do Visual Studio Enterprise](https://visualstudio.microsoft.com/subscriptions/) no [Visual Studio Marketplace](https://marketplace.visualstudio.com). Elas são chamadas de **"assinaturas de nuvem"**.
@@ -127,9 +127,9 @@ R: embora eles não possam comprar outra assinatura anual de nuvem, há muitas o
 - [Portal de administração de assinaturas do Visual Studio](https://manage.visualstudio.com/)
 - [Visual Studio cloud subscription billing FAQ](vscloud-billing-faq.md) (Perguntas frequentes sobre cobrança de assinaturas de nuvem do Visual Studio)
 - [Compra de assinatura de nuvem do Visual Studio para CSPs](vscloud-csp.md)
-- - Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio.
+- - Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

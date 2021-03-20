@@ -11,14 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 3c236e63686d3882ed199c122fed9ebddfa8fa20
-ms.sourcegitcommit: e262f4c2a147c3fa2d27de666aae3a0497317867
+ms.openlocfilehash: 4a2ad1ef30692d7d23f2d450f0ba32d6f38f8262
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100012354"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672620"
 ---
 # <a name="winget-install"></a>Winget-instalar
+
+> [!IMPORTANT]
+> A partir de 12 de abril de 2021, a conexão ao GitHub Codespaces do Visual Studio 2019 não será mais suportada e essa versão prévia privada terá sido concluída. Estamos concentrados em experiências em evolução para um loop interno baseado em nuvem e soluções de VDI otimizadas para um amplo conjunto de cargas de trabalho do Visual Studio. Como parte desse `devinit` e as ferramentas associadas não estarão mais disponíveis. Incentivamos você a estar envolvido em nosso fórum da comunidade de desenvolvedores para Visual Studio para obter informações sobre versões futuras e informações de roteiro.
 
 A `winget-install` ferramenta é usada para instalar [pacotes do Winget](https://docs.microsoft.com/windows/package-manager/winget/).
 
@@ -26,7 +29,7 @@ A `winget-install` ferramenta é usada para instalar [pacotes do Winget](https:/
 
 Se as `input` Propriedades e `additionalOptions` forem omitidas ou vazias, a ferramenta gerará um erro.
 
-| Nome                                         | Tipo   | Obrigatório | Valor                                                                             |
+| Nome                                         | Type   | Obrigatório | Valor                                                                             |
 |----------------------------------------------|--------|----------|-----------------------------------------------------------------------------------|
 | **feitos**                                 | Cadeia de caracteres | No       | Propriedade de comentários opcional. Não usado.                                             |
 | [**entrada**](#input)                          | Cadeia de caracteres | No       | O pacote a instalar. Consulte a [entrada](#input) abaixo para obter detalhes.                    |

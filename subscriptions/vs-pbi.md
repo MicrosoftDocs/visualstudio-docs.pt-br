@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 383fc910-3f4c-474a-a3f8-0f13525f05e9
-ms.date: 12/02/2020
+ms.date: 03/17/2021
 ms.topic: how-to
 description: Saiba mais sobre a assinatura de treinamento do Power BI Pro incluída na assinatura do Visual Studio.
-ms.openlocfilehash: 6d64c9e5d15e24dcf53dd5b45261305dffb43353
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 1801ed8deae3294837078401420e16efdc016979
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538066"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672898"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Power BI Pro em assinaturas do Visual Studio
 
@@ -49,7 +49,7 @@ Para usar o Power BI Pro, você precisará configurar uma conta ou entrar usando
    > [!div class="mx-imgBorder"]
    > ![Informações de contato do benefício Power BI Pro](_img/vs-pbi/vs-pbi-contact-cropped.png "Forneça suas informações de contato para sua conta.")
 
-9. A próxima página confirmará que sua assinatura do Power BI Pro para Desenvolvedor (MSDN) tem o preço igual a $0,00.  Clique em **Avançar**.
+9. A próxima página confirmará que sua assinatura do Power BI Pro para Desenvolvedor (MSDN) tem o preço igual a $0,00.  Clique em **Próximo**.
 
 10. Por fim, vamos coletar algumas informações de pagamento.  Não se preocupe, você não será cobrado por nada.  Observe que o preço ainda é $0,00.  Você pode escolher cartão de crédito, conta bancária ou fatura como forma de pagamento.  Se você escolher **Fatura**, talvez seja solicitado que você forneça comentários sobre o motivo pelo qual prefere esse método de pagamento.  Forneça as informações solicitadas sobre o método de pagamento preferencial e clique em **Fazer pedido**.
     > [!div class="mx-imgBorder"]
@@ -72,7 +72,7 @@ Para usar o Power BI Pro, você precisará configurar uma conta ou entrar usando
 | Visual Studio Enterprise (nuvem mensal) | Azure                                       | Não disponível                                  |NA|
 ||
 
-<sup>1</sup>  *inclui: não para revenda (NFR), parceiro do setor do Visual Studio (VSIP), BizSpark, MCT software & Developer Services, MCT software & Service, MVP (Most Valuable Professional), RD (regional Director).  Exclui: Microsoft Partner Network (MPN), FTE, imagine.*
+<sup>1</sup>  *inclui: não para revenda (NFR), parceiro do setor do Visual Studio (VSIP), BizSpark, MCT software & Developer Services, MCT software & Service, MVP (Most Valuable Professional), RD (regional Director).  Exclui: Microsoft Partner Network (MPN), FTE, imagine, NFR básico.*
 
 > [!NOTE]
 > A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a ir para [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a fim de explorar diferentes opções para comprar o Visual Studio.
@@ -110,10 +110,10 @@ R: Não.  O benefício do Power BI Pro não pode ser adicionado a locatários do
   - Confira a [documentação online](/power-bi/).
   - Problemas durante a inscrição?  Confira [Inscrever-se no Power BI como um indivíduo](/power-bi/service-self-service-signup-for-power-bi)
   - Explore os principais problemas, obtenha ajuda da comunidade ou envie um tíquete de suporte na [página de Suporte](https://powerbi.microsoft.com/support/).
-- Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio.
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas do Visual Studio](https://my.visualstudio.com/gethelp)
 - Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

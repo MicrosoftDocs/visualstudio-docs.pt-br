@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: bb2fa359-8170-4db0-a0c5-d49fc692b0aa
-ms.date: 03/05/2021
+ms.date: 03/18/2021
 ms.topic: conceptual
 description: Saiba mais sobre os efeitos da atualização ou do download do seu nível de assinatura do Visual Studio.
-ms.openlocfilehash: ac4355149ba66cd06ae5c1abaeb57e7065631050
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 93ea729280916cb62ba2b87ff820bb25069369d7
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102250090"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672976"
 ---
 # <a name="what-happens-when-you-change-visual-studio-subscription-levels"></a>O que acontece quando você altera os níveis de assinatura do Visual Studio?
 Nas assinaturas do Visual Studio, o software, as ferramentas, os serviços e outros benefícios disponíveis dependem do seu nível de assinatura.  Em geral, quanto maior o nível de assinatura, mais robusto os benefícios que ele fornece.  
@@ -63,10 +63,10 @@ Se você estiver usando um benefício que é autenticado toda vez que entrar no 
 Se você estiver usando os benefícios oferecidos em sua assinatura atual, mas não na assinatura para a qual ele está sendo desatualizado, você poderá perder o acesso a esses benefícios.  
 
 ## <a name="support-resources"></a>Recursos de suporte
-- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas](https://visualstudio.microsoft.com/subscriptions/support/)do Visual Studio.
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas do Visual Studio](https://my.visualstudio.com/gethelp).
 - Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps ou outros produtos ou serviços do Visual Studio?  Visite o [Suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

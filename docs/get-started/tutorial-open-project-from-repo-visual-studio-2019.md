@@ -2,7 +2,7 @@
 title: 'Tutorial: abrir um projeto de um repositório no Visual Studio 2019'
 description: Saiba como abrir um projeto em um repositório do git ou DevOps do Azure usando o Visual Studio 2019.
 ms.custom: get-started
-ms.date: 02/11/2021
+ms.date: 03/18/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -15,12 +15,12 @@ ms.workload:
 - dotnet
 - dotnetcore
 monikerRange: vs-2019
-ms.openlocfilehash: 5a637b2536c05e8f5678989f47dba61cd6ec7381
-ms.sourcegitcommit: 15109ead7991f52092502518a6f4d9061cc22cd2
+ms.openlocfilehash: 76dcd5061e2e12688f5119598071c3235e620967
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "100335490"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104671707"
 ---
 # <a name="tutorial-open-a-project-from-a-repo"></a>Tutorial: abrir um projeto de um repositório
 
@@ -53,6 +53,9 @@ Mas não importa qual versão você instalou, você sempre pode abrir um projeto
    ![Captura de tela da caixa de diálogo informações do usuário do git em que você insere ou edita suas informações de conta no Visual Studio 2019 versão 16,8 e posterior](../ide/media/vs-2019/git-user-information-dialog.png)
 
     Selecione **salvar** para adicionar as informações ao arquivo global. gitconfig. (Ou, você pode optar por fazer isso mais tarde selecionando **Cancelar**.)
+
+    > [!TIP]
+    > Para obter mais informações sobre como entrar no Visual Studio, consulte a página [entrar no Visual Studio](../ide/signing-in-to-visual-studio.md) . E para obter informações específicas sobre como usar sua conta do GitHub para entrar, consulte a página [trabalhar com contas do GitHub no Visual Studio](../ide/work-with-github-accounts.md) .
 
     Em seguida, o Visual Studio carrega e abre automaticamente a solução no repositório.
 
@@ -203,9 +206,10 @@ Se estiver pronto para codificar com o Visual Studio, aprofunde-se em qualquer u
 - [Tutoriais do Visual Studio | **Python**](../python/index.yml)
 - [Tutoriais do Visual Studio | **JavaScript**, **TypeScript** e **Node.js**](../javascript/index.yml)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Abrir um projeto de um repositório no Visual Studio 2017](tutorial-open-project-from-repo-visual-studio-2017.md)
 - [Nova experiência de git no Visual Studio 2019](../ide/git-with-visual-studio.md)
+- [Compare o git e o Team Explorer lado a lado](../ide/git-team-explorer-feature-comparison.md)
 - [Azure DevOps Services: introdução ao Azure Repos e ao Visual Studio](/azure/devops/repos/git/gitquickstart/)
 - [Microsoft Learn: introdução ao Azure DevOps](/learn/modules/get-started-with-devops/)

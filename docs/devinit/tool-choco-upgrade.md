@@ -11,14 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: fab2a3f2893ba79874b6909b3d19ccf939f8b14a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bcd2288ef9399f27f53565ea7ea971579cad7858
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906315"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104671647"
 ---
 # <a name="choco-upgrade"></a>choco-upgrade
+
+> [!IMPORTANT]
+> A partir de 12 de abril de 2021, a conexão ao GitHub Codespaces do Visual Studio 2019 não será mais suportada e essa versão prévia privada terá sido concluída. Estamos concentrados em experiências em evolução para um loop interno baseado em nuvem e soluções de VDI otimizadas para um amplo conjunto de cargas de trabalho do Visual Studio. Como parte desse `devinit` e as ferramentas associadas não estarão mais disponíveis. Incentivamos você a estar envolvido em nosso fórum da comunidade de desenvolvedores para Visual Studio para obter informações sobre versões futuras e informações de roteiro.
 
 A `choco-upgrade` ferramenta pode ser usada para instalar e atualizar pacotes de [Chocolatey](https://chocolatey.org/docs/commandsupgrade) .
 
@@ -26,7 +29,7 @@ A `choco-upgrade` ferramenta pode ser usada para instalar e atualizar pacotes de
 
 Se as `input` Propriedades e `additionalOptions` forem omitidas ou vazias, a ferramenta não fará nada.
 
-| Nome                                             | Tipo   | Obrigatório  | Valor                                                                                                          |
+| Nome                                             | Type   | Obrigatório  | Valor                                                                                                          |
 |--------------------------------------------------|--------|-----------|----------------------------------------------------------------------------------------------------------------|
 | **feitos**                                     | Cadeia de caracteres | No        | Propriedade de comentários opcional. Não usado.                                                                          |
 | [**entrada**](#input)                              | string | Sim       | O pacote a ser atualizado. Consulte a [entrada](#input) abaixo para obter detalhes.                                                 |

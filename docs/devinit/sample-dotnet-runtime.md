@@ -11,14 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: e2565a215ca97d2933dee14e639772f43da3f51f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d703e71b6f8ab57ab07c4143fdd5435585c6004c
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943574"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672449"
 ---
 # <a name="net-core-runtime"></a>runtime do .NET Core
+
+> [!IMPORTANT]
+> A partir de 12 de abril de 2021, a conexão ao GitHub Codespaces do Visual Studio 2019 não será mais suportada e essa versão prévia privada terá sido concluída. Estamos concentrados em experiências em evolução para um loop interno baseado em nuvem e soluções de VDI otimizadas para um amplo conjunto de cargas de trabalho do Visual Studio. Como parte desse `devinit` e as ferramentas associadas não estarão mais disponíveis. Incentivamos você a estar envolvido em nosso fórum da comunidade de desenvolvedores para Visual Studio para obter informações sobre versões futuras e informações de roteiro.
 
 Este exemplo ilustra como personalizar o [dotnet/tempo](https://github.com/dotnet/runtime) de execução do .NET Core Runtime para ser provisionado automaticamente com o [GitHub Codespaces](https://github.com/features/codespaces).
 

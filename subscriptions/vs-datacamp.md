@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: fc33d419-78cf-485e-b558-5b7efa900f14
-ms.date: 12/02/2020
+ms.date: 03/17/2021
 ms.topic: how-to
 description: Saiba mais sobre a assinatura de treinamento do DataCamp incluída na assinatura do Visual Studio.
-ms.openlocfilehash: c675d49f1a099c53dfdabe08a71f1c5545010f97
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 270dffd75a0b442e5f275d0840033e54be5fe883
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538079"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672009"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>O benefício de treinamento do DataCamp em assinaturas do Visual Studio
 As assinaturas qualificadas do Visual Studio incluem assinaturas do DataCamp.  Com o DataCamp, você aprende todas as habilidades de ciência de dados necessárias no conforto do seu navegador. Você escolhe quando e o que aprender. Sem software para instalar e sem requisitos especiais de hardware, aprender ciência de dados é mais fácil do que nunca.
@@ -68,7 +68,7 @@ Você pode parar a qualquer momento e retomar seu treinamento na próxima sessã
 | Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Não disponível  | N/D |
 | Visual Studio Enterprise, Visual Studio Professional (nuvem mensal) | Azure | Não disponível | N/D |
 
-<sup>1</sup>  *inclui: não para revenda (NFR), FTE, profissional mais valioso (MVP), diretor regional (RD), Microsoft Partner Network (MPN), parceiro do setor do Visual Studio (VSIP), Microsoft Certified Trainer, BizSpark, imagine*
+<sup>1</sup>  *inclui: não para revenda (NFR), FTE, profissional mais valioso (MVP), diretor regional (RD), Microsoft Partner Network (MPN), parceiro do setor do Visual Studio (VSIP), Microsoft Certified Trainer, BizSpark, imagine.  Exclusões: NFR básico*
 
 > [!NOTE]
 > A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a ir para [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a fim de explorar diferentes opções para comprar o Visual Studio.
@@ -80,10 +80,10 @@ Não tem certeza de qual assinatura você está usando?  Conecte-se ao [https://
   - [Comunidade DataCamp](https://www.datacamp.com/community/tutorials), com fóruns e tutoriais.
   - [Centro de Ajuda do DataCamp](https://support.datacamp.com/hc), onde procurar tópicos de suporte e consultar as perguntas de usuário de solicitação.
   - [Enviar uma solicitação de suporte](https://support.datacamp.com/hc/requests/new)
-- Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio.
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas do Visual Studio](https://my.visualstudio.com/gethelp).
 - Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

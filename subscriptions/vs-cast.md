@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 92e8957f-c690-46bd-a812-3efd06a2bc6b
-ms.date: 02/19/2021
+ms.date: 03/18/2021
 ms.topic: how-to
 description: Saiba mais sobre o benefício CAST Highlight disponível nas assinaturas do Visual Studio selecionadas
-ms.openlocfilehash: 0acc7b62dbac66d25e61dcddfeee0c9124d66694
-ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
+ms.openlocfilehash: e8f218db14340171cc056075699dd80d3fb7ef55
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102473316"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672048"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>O benefício CAST Highlight nas assinaturas do Visual Studio
 Os desenvolvedores precisam de insights críticos sobre seu software ao migrar para a nuvem. Com o realce de conversão, os assinantes do Visual Studio podem examinar rapidamente o código-fonte do aplicativo para identificar a preparação da nuvem de seus aplicativos para migração para o Azure e monitorar o progresso de seus aplicativo durante e após uma migração.
@@ -86,7 +86,7 @@ Após a aprovação de sua solicitação, você receberá um segundo email confi
 | Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Não disponível  | N/D |
 | Visual Studio Enterprise, Visual Studio Professional (nuvem mensal) | Azure | Não disponível | N/D |
 
-<sup>1</sup>  *inclui: não para revenda (NFR), FTE, profissional mais valioso (MVP), diretor regional (RD), Microsoft Partner Network (MPN), parceiro do setor do Visual Studio (VSIP), Microsoft Certified Trainer, BizSpark, imagine*
+<sup>1</sup>  *inclui: não para revenda (NFR), FTE, profissional mais valioso (MVP), diretor regional (RD), Microsoft Partner Network (MPN), parceiro do setor do Visual Studio (VSIP), Microsoft Certified Trainer, BizSpark, imagine, NFR básico*
 
 > [!NOTE]
 > A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a ir para [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a fim de explorar diferentes opções para comprar o Visual Studio.
@@ -101,7 +101,7 @@ Não tem certeza de qual assinatura você está usando?  Conecte-se ao [https://
 - Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio.
 - Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

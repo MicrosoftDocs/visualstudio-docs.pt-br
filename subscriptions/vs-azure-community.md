@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: c15f7e18-b280-4902-a60d-2c2598653207
-ms.date: 02/19/2021
+ms.date: 03/18/2021
 ms.topic: conceptual
 description: Saiba mais sobre o benefício do Suporte da Comunidade Azure incluído nas assinaturas do Visual Studio.
-ms.openlocfilehash: 57190bce0625108c332e307051cf28aec192f556
-ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
+ms.openlocfilehash: 43633e20bbf10988092a2d98d7d0a5ddd9b08601
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102473329"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672101"
 ---
 # <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Fórum do Suporte da Comunidade do Azure em assinaturas do Visual Studio
 Obtenha ajuda diretamente da equipe do Azure em fóruns de suporte selecionados por meio da Comunidade Azure.  O benefício da Comunidade Azure fornece acesso a um conjunto de fóruns voltados para tópicos relacionados ao Azure.
@@ -76,9 +76,9 @@ A disponibilidade do benefício Comunidade Azure depende do nível de sua assina
 |                          Assinatura Visual Studio Professional com o GitHub Enterprise                          | VL, Azure, Retail |   Disponível    |    Sim     |
 |                              Visual Studio Test Professional (Padrão)                               |    VL, Retail     |   Disponível    |    Sim     |
 |                                       Plataformas MSDN (Padrão)                                       |    VL, Retail     |   Disponível    |    Sim     |
-| Visual Studio Enterprise (nuvem mensal), Visual Studio Professional (nuvem mensal)|        Todos        | Não disponível |     Não     |
+| Visual Studio Enterprise (nuvem mensal), Visual Studio Professional (nuvem mensal)|        Tudo        | Não disponível |     Não     |
 
-<sup>1</sup>  *inclui: não para revenda (NFR), Microsoft FTE, profissional mais valioso (MVP), diretor regional (RD), parceiro do setor do Visual Studio (VSIP), BizSpark, imagine, Microsoft Certified Trainer (MCT)*
+<sup>1</sup>  *inclui: não para revenda (NFR), Microsoft FTE, profissional mais valioso (MVP), diretor regional (RD), parceiro do setor do Visual Studio (VSIP), BizSpark, imagine, Microsoft Certified Trainer (MCT). Exclusões: NFR básico*
 
 > [!NOTE]
 > A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a ir para [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a fim de explorar diferentes opções para comprar o Visual Studio.
@@ -91,7 +91,7 @@ Não tem certeza de qual assinatura você está usando?  Conecte-se ao [https://
 - Precisa de assistência para vendas, assinaturas, contas e cobrança nas assinaturas do Visual Studio?  Contate o [Suporte de Assinaturas do Visual Studio](https://aka.ms/vssubscriberhelp).
 - Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

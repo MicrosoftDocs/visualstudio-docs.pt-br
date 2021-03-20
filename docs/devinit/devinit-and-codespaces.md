@@ -11,14 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 8f80c0a7106fc476529f662035a3cafbd1db470f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c98c00e0b62d3a2a755790b07621d717abcb41c1
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904823"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672217"
 ---
 # <a name="devinit-and-github-codespaces"></a>devinit e Codespaces do GitHub
+
+> [!IMPORTANT]
+> A partir de 12 de abril de 2021, a conexão ao GitHub Codespaces do Visual Studio 2019 não será mais suportada e essa versão prévia privada terá sido concluída. Estamos concentrados em experiências em evolução para um loop interno baseado em nuvem e soluções de VDI otimizadas para um amplo conjunto de cargas de trabalho do Visual Studio. Como parte desse `devinit` e as ferramentas associadas não estarão mais disponíveis. Incentivamos você a estar envolvido em nosso fórum da comunidade de desenvolvedores para Visual Studio para obter informações sobre versões futuras e informações de roteiro.
 
 devinit é um ótimo complemento para o [GitHub Codespaces](https://github.com/features/codespaces) e o devinit pode ser usado para obter uma configuração de codespace para que os colaboradores possam criar, executar e depurar imediatamente.
 

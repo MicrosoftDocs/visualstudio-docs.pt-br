@@ -11,14 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 47859d00861c2361ed03931bf1417e22425d6e68
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4f94ee609ba4c0783a06648ed037e58d864aa2a9
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908117"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672203"
 ---
 # <a name="devinit-configuration-file"></a>arquivo de configuração devinit
+
+> [!IMPORTANT]
+> A partir de 12 de abril de 2021, a conexão ao GitHub Codespaces do Visual Studio 2019 não será mais suportada e essa versão prévia privada terá sido concluída. Estamos concentrados em experiências em evolução para um loop interno baseado em nuvem e soluções de VDI otimizadas para um amplo conjunto de cargas de trabalho do Visual Studio. Incentivamos você a estar envolvido em nosso fórum da comunidade de desenvolvedores para Visual Studio para obter informações sobre versões futuras e informações de roteiro.
 
 O `.devinit.json` arquivo define as dependências de todo o sistema de que seu aplicativo precisa para executar e compilar. As dependências de todo o sistema são coisas como Node.js, SQL Server, IIS, RabbitMQ, Docker etc. Esses são os tipos de coisas que você normalmente instalaria em sua caixa de desenvolvimento que não estão instaladas por um repositório específico. Não é um local para definir dependências específicas do aplicativo, como você faria em gerenciadores de pacotes, como NuGet ou NPM. No entanto, é um local para definir que você precisa desses gerenciadores de pacotes.
 
@@ -64,14 +67,14 @@ Em um `.devinit.json` , você pode especificar mais de uma ferramenta a ser exec
 
 ### <a name="property-values"></a>Valores de propriedade
 
-| Nome         | Tipo   | Obrigatório | Valor                              |
+| Nome         | Type   | Obrigatório | Valor                              |
 |--------------|--------|----------|------------------------------------|
 | **feitos** | Cadeia de caracteres | No       | Comentários para o arquivo.             |
 | **funcionam**      | array  | Sim      | [Objeto RunTool](#run-tool-object) |
 
 #### <a name="run-tool-object"></a>Executar objeto de ferramenta
 
-| Nome                  | Tipo   | Obrigatório | Valor                                                                                                      |
+| Nome                  | Type   | Obrigatório | Valor                                                                                                      |
 |-----------------------|--------|----------|------------------------------------------------------------------------------------------------------------|
 | **feitos**          | Cadeia de caracteres | No       | Comentários para a entrada da ferramenta.                                                                               |
 | **'**              | string | Sim      | O nome da ferramenta. Consulte o `devinit list` comando para obter uma lista de ferramentas disponíveis.                            |
