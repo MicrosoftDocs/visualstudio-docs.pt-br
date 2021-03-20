@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 36f0d9f1-fe28-469f-a54c-dc46638270a8
-ms.date: 09/03/2020
+ms.date: 03/19/2021
 ms.topic: how-to
 description: Saiba como comprar recentemente as assinaturas mensais do Visual Studio para o portal de administração de assinaturas
-ms.openlocfilehash: f6b835969fff3a8316a2b46c6e15217ebe3e33b1
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 931f297a650926e4da5c13271a58091c9f00ddd3
+ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92467590"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104757640"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>Adicionar novas assinaturas mensais do Visual Studio ao portal de administração de assinaturas
 Quando você adquire novas assinaturas mensais do Visual Studio usando uma assinatura do Azure, talvez seja necessário adicioná-las ao portal de administração de assinaturas para atribuí-las aos usuários.  
@@ -40,6 +40,9 @@ As etapas para adicionar assinaturas mensais dependem de quais tipos de assinatu
 ## <a name="things-to-keep-in-mind"></a>Algumas coisas que se deve manter em mente
 - A opção de adicionar novas assinaturas mensais só estará disponível na primeira vez em que você as comprar.  Depois de adicionar assinaturas mensais, verificaremos se há novas assinaturas cada vez que você entrar no Portal. 
 - Quando novas assinaturas forem encontradas, você poderá ver que elas já estão atribuídas aos assinantes.  Isso ocorre porque há outros administradores com acesso à assinatura do Azure e já atribuiram as novas assinaturas do Visual Studio aos usuários.  Agora que você também os adicionou ao seu portal, você pode administrar essas assinaturas. 
+
+## <a name="support-resources"></a>Recursos de suporte
+- Para obter assistência com a administração de assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas do Visual Studio](https://aka.ms/vsadminhelp).
 
 ## <a name="next-steps"></a>Próximas etapas
 Agora que você adicionou assinaturas, você está pronto para atribuí-las aos usuários.  Você pode fazer isso de várias maneiras:

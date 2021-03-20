@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 97bf7474-c6c2-49b3-b2c9-f1b2808eed1a
-ms.date: 10/22/2020
+ms.date: 03/19/2021
 ms.topic: conceptual
 description: A entrada poderá falhar se forem usados aliases ou nomes amigáveis
-ms.openlocfilehash: 4d9b3194cf7636106740e35b230cc02aaab7eded
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.openlocfilehash: d3a3cd962bafcf6a3e0c5aa20c98128233ace988
+ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92467603"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104757692"
 ---
 # <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>Entrar em assinaturas do Visual Studio pode falhar ao usar aliases
 Dependendo do tipo de conta usado para entrar, as assinaturas disponíveis podem não ser exibidas corretamente ao entrar no [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) . Uma possível causa é o uso de "alias" ou "nomes amigáveis" em vez da identidade à qual a assinatura foi atribuída. Isso é chamado de "alias".
@@ -91,12 +91,14 @@ Ambas as opções são configuradas no portal de administração ao concluir as 
 > [!NOTE]
 > Para alterações individuais e em massa, os Assinantes receberão um email com instruções de que seu endereço de email de entrada foi alterado e precisarão entrar usando o endereço de email atualizado. Também é importante observar que, se o assinante ativou anteriormente os benefícios do outro endereço de entrada, eles precisarão continuar usando o outro endereço de entrada para acessá-los.  
 
-## <a name="see-also"></a>Confira também
+## <a name="support-resources"></a>Recursos de suporte
+- Para obter assistência com a administração de assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas do Visual Studio](https://aka.ms/vsadminhelp).
+
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)
 - [Documentação do Microsoft 365](/microsoft-365/)
-
 
 ## <a name="next-steps"></a>Próximas etapas
 Saiba mais sobre como gerenciar assinaturas do Visual Studio.

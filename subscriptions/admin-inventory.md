@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 7d74e113-8fb2-490e-8502-48cce7b1327a
-ms.date: 01/14/2021
+ms.date: 03/19/2021
 ms.topic: conceptual
 description: Saiba mais sobre a responsabilidade dos administradores de realizar inventários de pré-produção
-ms.openlocfilehash: da8146b9f7d2b758ac2d249534d43bd98beae385
-ms.sourcegitcommit: d124123528776993eb5e7461dae8da3975d11d0d
+ms.openlocfilehash: f6b1e1ebc02a986be86fb48578a4be47ccc3dfaa
+ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99511300"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104757666"
 ---
 # <a name="inventory-of-pre-production-environment"></a>Inventário do ambiente de pré-produção
 As assinaturas do Visual Studio simplificam o gerenciamento de ativos ao contar usuários em vez de dispositivos.
@@ -30,10 +30,10 @@ Aqui estão algumas maneiras para simplificar a realização do inventário do a
 
 ## <a name="resources"></a>Recursos
 - [White paper de licenciamento do Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
-- [Suporte a assinaturas do Visual Studio](https://my.visualstudio.com/gethelp)
+- [Suporte a assinaturas do Visual Studio](https://aka.ms/vsadminhelp)
 - [Termos de licenciamento por volume](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

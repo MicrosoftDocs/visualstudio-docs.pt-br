@@ -7,12 +7,12 @@ ms.assetid: ce5fc8a4-484c-4df6-97c3-cb60174fb66b
 ms.date: 03/11/2021
 ms.topic: conceptual
 description: Saiba como os dados de assinante são anonimizados quando o acesso às assinaturas é perdido.
-ms.openlocfilehash: 69f41232a678a857908b30d63df2ae7f72b79904
-ms.sourcegitcommit: 9da787bf5b4281f933dc22083dc0bdeae3bc9461
+ms.openlocfilehash: 2a3d55824db1c90ff0868dda6d398e8c0e9a53d7
+ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103225957"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104757601"
 ---
 # <a name="anonymization-of-visual-studio-subscriber-information"></a>Anonimização de informações de assinante do Visual Studio
 Quando ocorre um evento que bloqueia o uso de uma assinatura pelo assinante, como o término de uma assinatura ou a exclusão da conta de logon de um assinante, as informações pessoais do usuário, como nome e a conta de logon, são essencialmente embaralhadas para torná-las inutilizáveis.  Isso é feito para proteger as informações pessoais do assinante.
@@ -44,7 +44,10 @@ R: há duas maneiras de evitar o problema:
 - Implante um sistema de gerenciamento de identidades único, MSA ou AAD, mas não ambos.  
 - Associe as identidades do AAD e MSA por meio do locatário. 
 
-## <a name="see-also"></a>Confira também
+## <a name="support-resources"></a>Recursos de suporte
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio.
+
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

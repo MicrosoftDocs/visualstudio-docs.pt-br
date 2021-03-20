@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: b26b31dc-1eeb-4871-9ce6-2c980e703f1e
-ms.date: 03/11/2021
+ms.date: 03/19/2021
 ms.topic: conceptual
 description: Saiba mais sobre as responsabilidades de administradores de assinaturas.
-ms.openlocfilehash: 14b8832a8031ddbc96ce82e10a015c730530ce3e
-ms.sourcegitcommit: 9da787bf5b4281f933dc22083dc0bdeae3bc9461
+ms.openlocfilehash: 817330093ce0a2e9df6379db42420057ded30486
+ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103225983"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104757679"
 ---
 # <a name="overview-of-admin-responsibilities"></a>Visão geral das responsabilidades do administrador
 Como administrador, você pode gerenciar assinaturas para sua organização.  A função Administrador também transporta responsabilidades para garantir que as assinaturas sejam gerenciadas de acordo com os termos de licença. Este artigo descreve as responsabilidades, os benefícios e as limitações da função de administrador.
@@ -36,12 +36,12 @@ As assinaturas do Visual Studio permitem que os desenvolvedores instalem e usem 
 | Reatribuição de licença                     | Quando um usuário deixa uma equipe e não requer mais uma licença, você pode reatribuir a licença a outro usuário se pelo menos 90 dias tiver passado desde que foi atribuído ao usuário anterior. Quando você reatribuir uma licença, as chaves do produto (Product Keys) que já tiverem sido usadas ainda ficarão disponíveis, mas não serão substituídas. Para organizações que têm contratos EA (Contrato Enterprise), todos os benefícios que já tiverem sido usados pelo usuário original, como treinamentos do Pluralsight, serão redefinidos.                                                                                                                                                                                                                                                 |
 | Exceção para usuários finais                  | Ao final de um projeto de desenvolvimento de software, os usuários finais normalmente examinam um aplicativo e determinam se ele atende aos critérios necessários para o lançamento. Esse processo é chamado de UAT (teste de aceitação do usuário). Os membros da equipe, como um responsável pela empresa ou um gerente de produto, podem agir como proxies para os usuários finais. Os usuários finais que não tiverem uma assinatura do Visual Studio poderão acessar o software para realizar o UAT se o uso do software estiver em conformidade com todos os termos de licenciamento do Visual Studio. É raro que alguém cuja função principal esteja criando, desenvolvendo ou testando o software também seja qualificado como um "usuário final". |
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)
 - [Documentação do Microsoft 365](/microsoft-365/)
-- [Suporte para administração e assinaturas do Visual Studio](https://my.visualstudio.com/gethelp)
+- [Suporte para administração e assinaturas do Visual Studio](https://aka.ms/vsadminhelp)
 
 ## <a name="next-steps"></a>Próximas etapas
 Saiba mais sobre as responsabilidades para administradores:

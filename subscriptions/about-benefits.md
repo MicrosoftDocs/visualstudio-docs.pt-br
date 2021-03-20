@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 0a02232c-437f-4c48-85c1-93ca7887236b
-ms.date: 10/26/2020
+ms.date: 03/19/2021
 ms.topic: how-to
 description: Saiba quais são os benefícios incluídos nas assinaturas e como ativá-los.
-ms.openlocfilehash: 351d81f29d01ec8322fcd6602d3ac4afccdb8ca1
-ms.sourcegitcommit: 8efe6b45d65f9db23f5575c15155fe363fa12cdb
+ms.openlocfilehash: 13c0633c7d775b082bf10cf21421ec843092231d
+ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92750145"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104757627"
 ---
 # <a name="about-your-subscription-benefits"></a>Sobre os benefícios da sua assinatura
 Como assinante do Visual Studio, você tem acesso a uma variedade de benefícios, dependendo do seu nível de assinatura. Há várias coisas importantes a serem observadas sobre os benefícios.
@@ -42,6 +42,9 @@ Alguns dos benefícios incluídos nas assinaturas do Visual Studio, incluindo al
 
 ## <a name="benefits-that-become-temporarily-unavailable"></a>Benefícios que ficam temporariamente indisponíveis
 Embora seja raro, algumas vezes questões técnicas podem tornar o benefício indisponível por um curto período de tempo. Nesses casos, alteraremos o bloco de benefícios no portal de [assinaturas do Visual Studio](https://my.visualstudio.com/benefits) para indicar que o benefício é "temporariamente indisponível" até que o problema seja resolvido. nesse momento, restauraremos o bloco e o benefício estará disponível novamente.
+
+## <a name="support-resources"></a>Recursos de suporte
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas do Visual Studio](https://aka.ms/vssubscriberhelp).
 
 ## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)

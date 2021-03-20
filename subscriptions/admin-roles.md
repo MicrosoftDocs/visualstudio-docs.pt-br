@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 6601c395-f778-48c1-ab76-cf454b9193e4
-ms.date: 02/02/2021
+ms.date: 03/19/2021
 ms.topic: conceptual
 description: Saiba mais sobre as funções de superadministrador e administrador e como atribuir administradores.
-ms.openlocfilehash: 2d9abf5a3079320011cb979a8109278c878321e3
-ms.sourcegitcommit: d124123528776993eb5e7461dae8da3975d11d0d
+ms.openlocfilehash: eca87026c681454925974f2e394737092c3e226d
+ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99511326"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104757588"
 ---
 # <a name="super-admins-and-admins-for-visual-studio-subscription-agreements"></a>Superadministradores e administradores para contratos de assinatura do Visual Studio
 
@@ -42,9 +42,9 @@ Para atribuir novos administradores (administradores):
 5. Depois de clicar em **Adicionar** para atribuir o novo administrador, ele receberá um email convidando-o para entrar no portal.  
 
 ## <a name="resources"></a>Recursos
-- [Suporte para administração e assinaturas do Visual Studio](https://my.visualstudio.com/gethelp)
+- [Suporte para administração e assinaturas do Visual Studio](https://aka.ms/vsadminhelp)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

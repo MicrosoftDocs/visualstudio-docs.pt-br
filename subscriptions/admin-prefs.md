@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 0fe9eaa4-f589-429e-a443-13bf86637d5a
-ms.date: 10/22/2020
+ms.date: 03/19/2021
 ms.topic: conceptual
 description: Saiba como definir preferências de idioma, contatos, nível de assinatura e outros no Portal de Administração
-ms.openlocfilehash: bdb6a5bc1160c75830fe9f1473222155d8fad781
-ms.sourcegitcommit: d124123528776993eb5e7461dae8da3975d11d0d
+ms.openlocfilehash: 93a9417a88d07dcc841c6a59a7353b0ffb5e7565
+ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99511339"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104757614"
 ---
 # <a name="set-preferences-for-your-agreements-in-the-administration-portal"></a>Definir preferências para os contratos no Portal de Administração
 Os superadministradores podem definir certas preferências no portal de administração (Portal do administrador) que serão aplicadas globalmente para cada contrato.  Essas preferências preencherão automaticamente os detalhes da assinatura para seus administradores quando eles estiverem adicionando assinantes e só poderão ser modificados globalmente por superadministradores.  
@@ -73,9 +73,9 @@ R: Confira nosso artigo sobre [o meu administrador de contatos](contact-my-admin
 R: se nenhum endereço de email específico for definido na preferência de **endereço de email de contato** , todos os administradores no contrato receberão a solicitação. 
 
 ## <a name="resources"></a>Recursos
-- [Suporte para administração e assinaturas do Visual Studio](https://my.visualstudio.com/gethelp)
+- [Suporte para administração e assinaturas do Visual Studio](https://aka.ms/vsadminhelp)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)
