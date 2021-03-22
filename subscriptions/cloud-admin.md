@@ -1,18 +1,18 @@
 ---
 title: Configurando administradores para assinaturas mensais do Visual Studio | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 8b30e2bc-2ac3-4fcc-b296-128731471032
-ms.date: 02/18/2021
+ms.date: 03/21/2021
 ms.topic: how-to
 description: Configurando administradores para assinaturas mensais
-ms.openlocfilehash: c018dbc3437c03c6d029a98c84e0b6cceaef9e2c
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 220f5986bb06b638504379b63e911f9bb62926b5
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249533"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776942"
 ---
 # <a name="set-up-admins-for-visual-studio-monthly-subscriptions"></a>Configurar administradores para assinaturas mensais do Visual Studio
 
@@ -49,7 +49,7 @@ Para adicionar administradores:
 9. Na lista de usuários role para baixo até o usuário que você deseja tornar administrador e selecione-o. 
    > [!div class="mx-imgBorder"]
    > ![Escolher função, administrador de acesso do usuário](_img/cloud-admin/add-role-user-access-admin.png "Escolha função, selecione administrador de acesso do usuário e, em seguida, selecione o nome do usuário para torná-lo um administrador.")
-10. Clique em **Salvar**.
+10. Clique em **Save** (Salvar).
 11. Clique na guia **Atribuições de função** para verificar se o usuário selecionado é exibido como um Administrador de Acesso do Usuário.
 
 Agora, o novo administrador pode entrar no [portal de administração](https://manage.visualstudio.com), selecionar a mesma assinatura do Azure que foi usada para comprar as assinaturas mensais da lista no canto superior esquerdo da página e começar a gerenciar essas assinaturas.
@@ -60,10 +60,9 @@ Agora, o novo administrador pode entrar no [portal de administração](https://m
 Para obter informações sobre assinaturas mensais do Visual Studio, consulte a [visão geral](vscloud-overview.md) em comprando assinaturas. Para comprar as assinaturas mensais do Visual Studio, visite a Visual Studio Marketplace em [https://marketplace.visualstudio.com/subscriptions](https://marketplace.visualstudio.com/subscription) .
 
 ## <a name="resources"></a>Recursos
-- [Suporte a assinaturas](https://visualstudio.microsoft.com/subscriptions/support/)
+- [Suporte a assinaturas](https://aka.ms/vsadminhelp)
 
-
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

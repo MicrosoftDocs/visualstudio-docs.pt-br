@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: lank
 manager: cabuschl
 ms.assetid: da8df006-4896-4ff9-b487-698d78deabc3
-ms.date: 02/18/2021
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Saiba como encontrar, reivindicar e exportar chaves do produto (Product Keys) em assinaturas do Visual Studio
-ms.openlocfilehash: 5e055295e76ee91dbaf641256b8b7e93a530fcfb
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 2e74269c3e5e49e776b00484de790472030dc1c1
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249262"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776565"
 ---
 # <a name="finding-and-claiming-product-keys-in-visual-studio-subscriptions"></a>Encontrar e reivindicar chaves do produto (Product Keys) em assinaturas do Visual Studio
 Este artigo explica como localizar, reivindicar e exportar chaves do produto (Product Keys) do https://my.visualstudio.com/productkeys.  Para obter mais informações sobre como ativar um produto com uma chave, versões de varejo e de licença de volume de chaves e limites diários de declaração de chave do produto, visite a [visão geral das chaves do produto](product-keys.md).
@@ -67,9 +67,9 @@ Você pode exportar uma lista das chaves que você declarou.  Isso inclui uma gr
 Para exportar suas chaves, selecione o link **exportar todas as chaves** na extrema direita da página chaves do produto (Product Keys).  Um arquivo. xml intitulado KeysExport.xml será criado e você poderá optar por abrir ou salvar o arquivo.  Você precisará abrir o arquivo com um aplicativo compatível com arquivos .xml.  Por exemplo, você poderá abrir o arquivo como uma pasta de trabalho somente leitura no Excel.
 
 ## <a name="resources"></a>Recursos
-- [Suporte a assinaturas do Visual Studio](https://my.visualstudio.com/gethelp)
+- [Suporte a assinaturas do Visual Studio](https://aka.ms/vssubscriberhelp)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

@@ -3,15 +3,15 @@ title: Atribuir GUIDs específicos a assinantes do Visual Studio | Microsoft Doc
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
-ms.date: 02/18/2021
+ms.date: 03/19/2021
 ms.topic: conceptual
 description: Saiba como os administradores podem especificar GUID de assinatura para assinantes
-ms.openlocfilehash: 3c92a3e6cc35230f6bcf10320e92a50dc5ffb85b
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: a0721029186605c6b9a277c9eb95a370a086d7d2
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249679"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776644"
 ---
 # <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Atribuir assinaturas específicas no portal de administração de assinaturas do Visual Studio
 
@@ -63,9 +63,9 @@ A etapa final é baixar o modelo de **adição em massa** , preencher as informa
 R: se você quiser alterar qual GUID é atribuído a um usuário, primeiro você deve excluir a assinatura para esse usuário.  Para obter mais informações, consulte nosso artigo [excluir assinaturas](delete-license.md) para obter mais informações.  Depois de excluir a assinatura para esse usuário, use o processo descrito acima para exportar a lista e carregar as novas informações de assinatura.  
 
 ## <a name="resources"></a>Recursos
-- [Suporte a assinaturas](https://visualstudio.microsoft.com/subscriptions/support/)
+- [Suporte a assinaturas](https://aka.ms/vsadminhelp)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)
@@ -78,5 +78,3 @@ Agora que você atribuiu assinaturas aos usuários, descubra como executar outra
 - [Editar assinaturas](edit-license.md)
 - [Excluir assinaturas](delete-license.md)
 - [Determinar o uso máximo](maximum-usage.md)
-
-

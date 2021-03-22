@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: c473b01f-2dfe-4cc2-ad29-bb5e2a268123
-ms.date: 10/28/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Saiba como exibir o número máximo de assinaturas atribuídas no portal de administração
-ms.openlocfilehash: e8ea9aa9001312c792e6f9d356dbc5f7cf58dfb8
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 29aaa3d2268d5fc0ae99a1a400238d633e9026a5
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92904489"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104777007"
 ---
 # <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>Usar o recurso de uso máximo para controlar o número de assinaturas atribuídas
 Um novo recurso no portal de administração de assinaturas do Visual Studio ajuda a acompanhar quantas assinaturas você comprou e atribuiu e identifica o número máximo de assinaturas de cada nível que você atribuiu, tanto dentro do ano passado quanto durante o período de seus contratos. 
@@ -32,7 +32,7 @@ Para ver o número máximo de assinaturas atribuídas para qualquer nível de as
 3. O "uso máximo de 12 meses" será exibido e o número máximo de assinaturas atribuídas no ano passado para cada nível será exibido, junto com o mês em que você atingiu o pico.    
 
 ## <a name="view-your-assignment-history"></a>Exibir o histórico de atribuições
-Além de ver o pico de atribuições para cada nível de assinatura, você pode ver uma conta em execução da atividade no contrato, incluindo compras e atribuições, clicando no botão **Exportar o relatório completo** .  (Talvez seja necessário rolar para baixo para ver o botão.)  
+Além de ver o pico de atribuições para cada nível de assinatura, você pode ver uma conta em execução da atividade no contrato, incluindo compras e atribuições, clicando no botão **Exportar o relatório completo**.  (Talvez seja necessário rolar para baixo para ver o botão.)  
 
 > [!div class="mx-imgBorder"]
 > ![Relatório Completo do Uso Máximo](_img/maximum-usage/maximum-usage-full-report.png "O relatório completo inclui um registro de todas as suas compras e atribuições de assinatura.")
@@ -45,7 +45,7 @@ R: as informações na visão geral mostram as atribuições *atuais* e as assin
 
 ## <a name="resources"></a>Recursos
 - [White paper de licenciamento do Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
-- [Suporte à administração e às assinaturas do Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
+- [Suporte à administração e às assinaturas do Visual Studio](https://aka.ms/vsadminhelp)
 - [Termos de licenciamento por volume](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Veja também

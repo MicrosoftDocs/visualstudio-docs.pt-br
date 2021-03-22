@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 83a9162a-b9e7-43a4-b07f-6c1fd8580f78
-ms.date: 02/18/2021
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Saiba mais sobre a responsabilidade dos administradores para acompanhar as atribuições de usuário e os pedidos de processo.
-ms.openlocfilehash: 3da446dad534a6a76413a66de2b9ad52e937e253
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 9ba54d13f4481f68d13e43a2e21f62036d23cab3
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249481"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776981"
 ---
 # <a name="track-user-assignment-and-process-orders"></a>Rastrear atribuição de usuário e processar pedidos
 O administrador de assinaturas do Visual Studio deve acompanhar o uso do Visual Studio e processar os pedidos para qualquer aumento no uso no agendamento do contrato de licenciamento por volume ou do contrato de produtos e serviços da Microsoft. O novo Portal de administração de assinaturas do Visual Studio tornou isso mais simples com um rastreador útil que mostra as licenças usadas e disponíveis.
@@ -38,9 +38,9 @@ Você pode estar atribuindo assinaturas por meio de programas como Open License 
 Os contratos de EA (Microsoft Enterprise Agreements), MPSA e Select Plus oferecem flexibilidade na maneira como você usa e licencia o software Visual Studio ao longo do tempo. Os administradores do Visual Studio devem fazer uma ordem de True-Up anual para trazer suas licenças de software para o uso máximo estabelecido durante o período do contrato.
 
 ## <a name="resources"></a>Recursos
-- Precisa de ajuda?  [Suporte a assinaturas](https://visualstudio.microsoft.com/subscriptions/support/)de contato.
+- Precisa de ajuda?  [Suporte a assinaturas](https://aka.ms/vsadminhelp)de contato.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
-ms.date: 03/09/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Saiba como aproveitar ao máximo as suas assinaturas do Visual Studio
-ms.openlocfilehash: a865bfa5cf7d55504e022efb1b134bddde7d231c
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: fce096a0999fefe16abc009c04f87cf4eff35748
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92904688"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776826"
 ---
 # <a name="managing-subscriptions"></a>Gerenciando assinaturas
 
@@ -70,8 +70,8 @@ Você pode alterar facilmente as informações de contato e as preferências em 
 
 1. Selecione seu nome no canto superior direito do portal do Assinante.
 2. Selecione o botão **Editar perfil** .
-3. Na guia **Sobre** , você pode alterar o nome, o email, o país/a região, a imagem do perfil e as preferências de contato. Na guia **preferências** , você pode selecionar o idioma preferencial, os padrões de data e hora, o fuso horário e o tema da interface do usuário.
-4. Quando você tiver finalizado as alterações, selecione **salvar** .
+3. Na guia **Sobre**, você pode alterar o nome, o email, o país/a região, a imagem do perfil e as preferências de contato. Na guia **preferências** , você pode selecionar o idioma preferencial, os padrões de data e hora, o fuso horário e o tema da interface do usuário.
+4. Quando você tiver finalizado as alterações, selecione **salvar**.
 5. Selecione o botão **voltar** do navegador para retornar à página de benefícios.
 
 ### <a name="setting-communications-preferences"></a>Definir preferências de comunicação
@@ -89,8 +89,8 @@ Para adicionar uma conta alternativa:
 
 1. Entre no [Portal do Assinante](https://my.visualstudio.com?wt.mc_id=o~msft~docs) com sua MSA (Conta da Microsoft).
 2. Selecione a guia **Assinaturas** .
-3. Em **Links Relacionados** , escolha **Adicionar conta alternativa** .
-4. Insira seu endereço de email da conta corporativa/de estudante e selecione **Adicionar** .
+3. Em **Links Relacionados**, escolha **Adicionar conta alternativa**.
+4. Insira seu endereço de email da conta corporativa/de estudante e selecione **Adicionar**.
 
 Depois de adicionar uma conta alternativa, você pode atualizá-la ou removê-la a qualquer momento selecionando a guia **assinaturas** e escolhendo a opção apropriada na seção **links relacionados** .
 
@@ -112,6 +112,9 @@ R: dependendo do canal de compra, a Microsoft mantém os dados do cliente durant
 > [!NOTE]
 > - Se optar por fechar sua conta Microsoft ou o Azure AD, seus dados pessoais serão tornados anônimos imediatamente.
 > - Não removeremos completamente todos os seus dados pessoais se você tiver assinaturas ativas.
+
+## <a name="support-resources"></a>Recursos de suporte
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas do Visual Studio](https://aka.ms/vssubscriberhelp).
 
 ## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)

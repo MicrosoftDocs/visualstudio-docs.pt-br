@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 3f4b0528-03f0-4a02-b3c3-a39292a9bbe1
-ms.date: 10/28/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: 'As assinaturas do Visual Studio: por que estou vendo endereços do Hotmail ou do Gmail para os assinantes?'
-ms.openlocfilehash: fda7dab50c2151049e0feffa50609bf4c38e38cc
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 99c22d74a9a6fb57e79f699e548de928ef1ebcb6
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189037"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776994"
 ---
 # <a name="visual-studio-subscriptions--why-do-i-see-personal-accounts-for-my-subscribers"></a>Assinaturas do Visual Studio – por que vejo contas pessoais para meus assinantes?
 Depois que as empresas migraram do VLSC (Volume Licensing Service Center) para o novo [portal de administração de assinaturas](https://manage.visualstudio.com)do Visual Studio, os administradores ficaram surpresos em descobrir que o "endereço de email de entrada" para alguns assinantes mostra um endereço de email pessoal como o hotmail ou o Outlook.  
@@ -49,6 +49,9 @@ Em seguida, clique em **continuar** , que levará você para uma lista das alter
 
 > [!NOTE]
 > Quando você edita o endereço de email de entrada, isso atualiza apenas o email usado pelo assinante para entrar em sua assinatura no https://my.visualstudio.com . Se o Assinante já tiver ativado os benefícios como o Azure ou o Pluralsight usando o outro endereço de email, eles precisarão continuar a usar esses endereços de email para acessá-los. Para quaisquer benefícios novos que eles acessam, eles devem usar o novo endereço de email. 
+
+## <a name="support-resources"></a>Recursos de suporte
+- Para obter assistência com a administração de assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas do Visual Studio](https://aka.ms/vsadminhelp).
 
 ## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: b331c837-3524-42b7-820e-b4fdd5e12793
-ms.date: 03/05/2021
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Saiba mais sobre como gerenciar assinaturas do Visual Studio em um contrato de produtos e serviços da Microsoft (MPSA)
-ms.openlocfilehash: 49f18b540d27678b46a5fa111c76a069b705309d
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 63124e8853184fde04db7bc202e5acea3cfbe89f
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249457"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776526"
 ---
 # <a name="visual-studio-subscriptions-in-a-microsoft-products-and-services-agreement-mpsa"></a>Assinaturas do Visual Studio em um MPSA (Contrato de Produtos e Serviços da Microsoft)
 Se você comprou assinaturas do Visual Studio por meio do programa MPSA, há algumas coisas que você deve conhecer antes de se tornar um administrador de assinaturas do Visual Studio e atribuir assinaturas a seus usuários. Se você já tiver configurado como administrador, poderá ir diretamente para o [portal de administração](https://manage.visualstudio.com/)de assinaturas do Visual Studio.
@@ -57,7 +57,10 @@ Para obter uma explicação mais detalhada desse processo, use os [guias de Iní
 > [!NOTE]
 > Ao concluir o processo de processamento de domínio, você deve aderir aos critérios das cinco etapas na seção para a associação pré-locatário (gerenciada). Depois que os critérios forem atendidos, só será necessário entrar em contato com o suporte do MPSA para provisionar administradores adicionais de assinaturas do Visual Studio.
 
-## <a name="see-also"></a>Confira também
+## <a name="support-resources"></a>Recursos de suporte
+- Para obter assistência com a administração de assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas do Visual Studio](https://aka.ms/vsadminhelp).
+
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 97ac8e4d-7a03-42f8-98cb-15bcaa90ef65
-ms.date: 02/18/2021
+ms.date: 03/21/2021
 ms.topic: how-to
 description: Saiba como os administradores podem editar as atribuições de assinatura.
-ms.openlocfilehash: f24c949224d895f4cc2926ab30db637835e7886c
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: b1779b80cc295e680ff1856181be42a6390fe25b
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249795"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776864"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>Editar atribuições de assinatura do Visual Studio
 Como administrador de assinatura, você pode fazer alterações nas assinaturas atribuídas a indivíduos dentro da sua organização.  Este artigo descreve os tipos de alterações que você pode fazer e fornece as etapas necessárias.
@@ -56,9 +56,9 @@ Assista a este vídeo ou Continue lendo para saber como editar vários assinante
 5. Depois de carregar o arquivo, será exibida uma notificação informando que o upload foi bem-sucedido. Neste ponto, suas edições serão refletidas nas informações do assinante.
 
 ## <a name="resources"></a>Recursos
-- [Suporte a assinaturas](https://visualstudio.microsoft.com/subscriptions/support/)
+- [Suporte a assinaturas](https://aka.ms/vsadminhelp)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

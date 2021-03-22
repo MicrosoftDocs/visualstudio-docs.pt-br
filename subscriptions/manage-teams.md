@@ -1,18 +1,18 @@
 ---
 title: Gerenciando grandes equipes e prestadores de gerenciamento em assinaturas do Visual Studio | Visual Studio Marketplace
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 3fc57f5f-2446-4774-9f8f-98ea1340f6b2
-ms.date: 03/09/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Saiba mais sobre a responsabilidade dos administradores de gerenciar assinaturas para equipes grandes, bem como para prestadores de gerenciamento externos.
-ms.openlocfilehash: 55d2ac2eacaf523503c2593349abbcf561aed3b1
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: b54dc7a6a90556e73e1bebdd918435e9ce56a596
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904665"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776799"
 ---
 # <a name="large-teams-and-external-contractors"></a>Equipes grandes e prestadores de serviço externos
 Os administradores de assinaturas do Visual Studio são responsáveis por garantir que cada usuário que interage com o software licenciado do Visual Studio seja adequadamente licenciado com sua própria assinatura do Visual Studio.
@@ -31,7 +31,7 @@ Os prestadores de serviço externos podem trazer licenças para se relacionar co
 
 ## <a name="resources"></a>Recursos
 - [White paper de licenciamento do Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
-- [Suporte à administração e às assinaturas do Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
+- [Suporte à administração e às assinaturas do Visual Studio](https://aka.ms/vsadminhelp)
 - [Termos de licenciamento por volume](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Veja também

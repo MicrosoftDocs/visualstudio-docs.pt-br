@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: a335ed23-34ee-40cb-83c6-6c93dee57424
-ms.date: 02/18/2021
+ms.date: 03/21/2021
 ms.topic: how-to
 description: Saiba como aproveitar os preços especiais do Azure DevTest disponíveis para clientes com Enterprise Agreements
-ms.openlocfilehash: 9043a2d8f3ab069bcc02375089780d16d1e8a18b
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 157d094ef02864578ce4bf626d11457506817418
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249475"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776968"
 ---
 # <a name="azure-enterprise-agreement-devtest-offer"></a>Oferta do Azure Contrato Enterprise DevTest
 
@@ -32,7 +32,7 @@ Para habilitar as ofertas:
 0. Passe o mouse sobre o nome da conta. 
 0. Clique no ícone de **edição** (lápis) na extrema direita. 
 0. Clique na caixa de seleção **desenvolvimento/teste** .
-0. Clique em **Salvar**.
+0. Clique em **Save** (Salvar).
 
 ## <a name="create-individual-subscriptions-within-the-account"></a>Criar assinaturas individuais dentro da conta
 Cada Assinante na conta pode criar uma assinatura seguindo estas etapas:
@@ -42,9 +42,9 @@ Cada Assinante na conta pode criar uma assinatura seguindo estas etapas:
 0. Clique em **Comprar**.  (Com essa oferta, você não está realmente comprando nada.)
 
 ## <a name="resources"></a>Recursos
-- Precisa de ajuda?  [Suporte a assinaturas](https://visualstudio.microsoft.com/subscriptions/support/)de contato.
+- Precisa de ajuda?  [Suporte a assinaturas](https://aka.ms/vsadminhelp)de contato.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: d1257931-392a-4a65-bf26-177737505122
-ms.date: 06/24/2020
+ms.date: 03/21/2021
 ms.topic: how-to
 description: Saiba mais e instale os aplicativos Microsoft 365 para empresas
-ms.openlocfilehash: d23f8cccd284972d05d7085aea7e0b1cab0f275d
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: e1d629aae2d3c9e5d906a5593c287bd0b3250446
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96537819"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776708"
 ---
 # <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Microsoft 365 aplicativos para empresas em assinaturas do Visual Studio
 Microsoft 365 aplicativos para empresas (anteriormente conhecido como Office 365 Pro Plus) estão disponíveis em assinaturas do Visual Studio selecionadas. 
@@ -34,7 +34,7 @@ O processo de ativação de seus aplicativos Microsoft 365 para a assinatura Ent
    > [!div class="mx-imgBorder"]
    > ![Aplicativos de Microsoft 365 para informações de clientes empresariais](_img/microsoft-365-apps-for-enterprise/get-to-know-you.png "Insira suas informações de contato")
 
-1. Na caixa de diálogo "criar sua ID de usuário", crie o nome de seu usuário e a senha para seu locatário e, em seguida, selecione **criar meu conta**.
+1. Na caixa de diálogo "criar sua ID de usuário", crie o nome de seu usuário e a senha para seu locatário e, em seguida, selecione **criar minha conta**.
    > [!div class="mx-imgBorder"]
    > ![Microsoft 365 aplicativos para a criação da ID de usuário empresarial](_img/microsoft-365-apps-for-enterprise/create-your-user-id.png "Criar sua ID de usuário e senha")
 
@@ -74,10 +74,10 @@ Não tem certeza de qual assinatura você está usando?  Conecte-se ao [https://
 
 ## <a name="support-resources"></a>Recursos de suporte
 - Para obter suporte técnico com qualquer componente do Microsoft 365 aplicativos para empresas, visite https://support.microsoft.com/allproducts e selecione o produto.
-- Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio.
+- Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://aka.ms/vssubscriberhelp) do Visual Studio.
 - Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

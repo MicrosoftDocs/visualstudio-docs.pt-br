@@ -4,21 +4,21 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 9c0b9a4f-b9a3-491c-a68f-6e4bac7f7b3d
-ms.date: 09/21/2020
+ms.date: 03/21/2021
 ms.topic: how-to
 description: Saiba como os administradores podem localizar assinantes ou grupos individuais no portal de administração.
-ms.openlocfilehash: e1fd5ea959043cbea58d0eb9a14649044f5d556e
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: df94b32dfcc5e2672282c0d18859cba42b490437
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92904546"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776682"
 ---
 # <a name="search-and-filter-subscribers-in-visual-studio-subscriptions"></a>Pesquisar e filtrar assinantes em assinaturas do Visual Studio
 O Portal de Administração de Assinaturas do Visual Studio permite encontrar um subconjunto específico de assinantes com base em vários critérios. Você pode filtrar a lista de assinantes por nome, endereço de email, nível de assinatura e outras informações.
 
 ## <a name="to-filter-the-subscriber-list"></a>Para filtrar a lista de assinantes
-1. Para pesquisar um grupo específico de assinantes, selecione a guia **Filtrar** .
+1. Para pesquisar um grupo específico de assinantes, selecione a guia **Filtrar**.
    > [!div class="mx-imgBorder"]
    > ![Selecione Filtrar para pesquisar uma lista de assinantes](_img/search-filter/filter-list.png "Clique em filtrar para inserir critérios para limitar as assinaturas exibidas.")
 
@@ -36,14 +36,12 @@ O Portal de Administração de Assinaturas do Visual Studio permite encontrar um
    > [!div class="mx-imgBorder"]
    > ![Limpar o filtro da lista de assinantes](_img/search-filter/clear-filter.png "Clique em Limpar filtro para remover o filtro e retomar a exibição de todas as suas assinaturas atribuídas.")
 
-
 ## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)
 - [Documentação do Microsoft 365](/microsoft-365/)
 
-
 ## <a name="next-steps"></a>Próximas etapas
 - Agora que você sabe como encontrar um assinante, aprenda como [editar](edit-license.md) a assinatura dele.
-- Precisa de ajuda para usar o portal de administração?  Contate o [Suporte à administração e às assinaturas do Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs).
+- Precisa de ajuda para usar o portal de administração?  Contate o [Suporte à administração e às assinaturas do Visual Studio](https://aka.ms/vsadminhelp).

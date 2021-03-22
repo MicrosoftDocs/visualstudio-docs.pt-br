@@ -7,12 +7,12 @@ ms.assetid: 6866dfab-c4fa-428e-bb0d-7b202c81f770
 ms.date: 10/28/2020
 ms.topic: conceptual
 description: Saiba como os parceiros gerenciam as assinaturas do Visual Studio para seus clientes.
-ms.openlocfilehash: ba62a2b3d9920ca145722c137322e4471d110d9e
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 72891535be7f65b54fb6b9493bd7cc638516177f
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903757"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776786"
 ---
 # <a name="partners-managing-subscriptions-on-behalf-of-customers"></a>Parceiros que gerenciam assinaturas em nome dos clientes
 Para gerenciar assinaturas no [portal de administração de assinaturas](https://manage.visualstudio.com)do Visual Studio, há algumas etapas que os parceiros precisam seguir. 
@@ -26,7 +26,7 @@ O processo será:
 Esse cenário se aplica a novos parceiros, que já fizeram novos pedidos de licença aberta, mas que não se registraram no [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) e vão diretamente para o [portal de administração de assinaturas do Visual Studio](https://manage.visualstudio.com).  Siga estas etapas:
 1. Visite <https://manage.visualstudio.com>.
 1. Você recebe uma notificação informando que você não é um usuário reconhecido.
-1. Selecione a opção de registro **Parceiros de OLP** e insira o número de autorização, o número da licença, o endereço de email do cliente usado no pedido, selecione a caixa de seleção e clique em **Enviar** .
+1. Selecione a opção de registro **Parceiros de OLP** e insira o número de autorização, o número da licença, o endereço de email do cliente usado no pedido, selecione a caixa de seleção e clique em **Enviar**.
 
 > [!NOTE]
 > O cliente receberá um email de notificação informando que um Parceiro foi adicionado ao Open License. Ele pode optar por remover o acesso do Parceiro.
@@ -36,7 +36,7 @@ Esse cenário se aplica a novos parceiros, que já fizeram novos pedidos de lice
 Isso se aplica a novos parceiros que fazem novas ordens de licença aberta, mas que se registram no [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) por meio do fluxo de adição e abertura antes de tentar acessar o [portal de administração de assinaturas](https://manage.visualstudio.com)do Visual Studio. Os parceiros devem seguir estas etapas:
 1. Entrar no VLSC e navegar até o "Resumo do Relacionamento".
 1. Selecionar a Open License desejada.
-1. Em seguida, nos "Detalhes da licença", em "Assinaturas do Visual Studio", selecionar a opção para gerenciar assinaturas por meio do link **clique aqui** .
+1. Em seguida, nos "Detalhes da licença", em "Assinaturas do Visual Studio", selecionar a opção para gerenciar assinaturas por meio do link **clique aqui**.
 1. Entre no portal de administração usando o mesmo endereço de email listado como um contato principal.
 1. O parceiro poderá gerenciar assinaturas para essa Open License.
 
@@ -52,8 +52,8 @@ Isso se aplica aos parceiros que já têm acesso ao [portal de administração d
 
 Etapas para que os parceiros adicionem uma nova licença:
 1. Entrar no <https://manage.visualstudio.com>.
-1. Ao lado do menu suspenso contrato, selecione + Adicionar contrato e escolha e role até a parte inferior, em que há uma opção para **nova licença aberta** .
-1. No painel pop-out, inserir o número de autorização, o número da licença, o endereço de email do cliente que está no contrato, selecionar a caixa de seleção e, em seguida, clicar em **Enviar** .
+1. Ao lado do menu suspenso contrato, selecione + Adicionar contrato e escolha e role até a parte inferior, em que há uma opção para **nova licença aberta**.
+1. No painel pop-out, inserir o número de autorização, o número da licença, o endereço de email do cliente que está no contrato, selecionar a caixa de seleção e, em seguida, clicar em **Enviar**.
 
 > [!NOTE]
 > O cliente receberá um email de notificação informando que um Parceiro foi adicionado ao Open License. Ele pode optar por remover o acesso do Parceiro.
@@ -61,7 +61,7 @@ Etapas para que os parceiros adicionem uma nova licença:
 
 ## <a name="resources"></a>Recursos
 - [White paper de licenciamento do Visual Studio](https://aka.ms/vslicensing)
-- [Suporte à administração e às assinaturas do Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
+- [Suporte à administração e às assinaturas do Visual Studio](https://aka.ms/vsadminhelp)
 - [Termos de licenciamento por volume](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Veja também

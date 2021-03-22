@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 7f4399d8-41da-41e5-a666-acc34958b8c0
-ms.date: 03/09/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Detalhes de quais assinaturas são oferecidas, quais regras se aplicam e quantas assinaturas são oferecidas no MPN.
-ms.openlocfilehash: 47b13147e87880ea90c07ee4746d5359571719b0
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: eab7779c7aedbbe7116a6227b16b6b3f4f15471c
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005827"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776747"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Assinaturas do Visual Studio oferecidas aos parceiros no MPN (Microsoft Partner Network)
 
@@ -32,7 +32,7 @@ Quando um parceiro ganha uma competência, seja no nível Silver ou Gold, ele re
 
 | Competência                                  | Assinaturas adicionais ganhadas para a Competência **Silver** | Assinaturas adicionais ganhadas para a Competência **Gold** |
 |---------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------|
-| Desenvolvimento do aplicativo                     | Cinco assinaturas do Visual Studio Enterprise                  | 25 assinaturas do Visual Studio Enterprise               |
+| Desenvolvimento de aplicativo                     | Cinco assinaturas do Visual Studio Enterprise                  | 25 assinaturas do Visual Studio Enterprise               |
 | Gerenciamento de relacionamento com o cliente em nuvem      | Cinco assinaturas do Visual Studio Enterprise                  | 25 assinaturas do Visual Studio Enterprise               |
 | Plataforma de Nuvem                              | Cinco assinaturas do Visual Studio Enterprise                  | 25 assinaturas do Visual Studio Enterprise               |
 | Produtividade de nuvem                          | Cinco assinaturas do Visual Studio Enterprise                  | 25 assinaturas do Visual Studio Enterprise               |
@@ -71,13 +71,12 @@ Essa restrição de uso somente interno significa basicamente que os parceiros n
 Nas assinaturas de nuvem do Visual Studio oferecidas pelo MPN, o usuário licenciado precisa entrar no Visual Studio usando a mesma identidade ou o mesmo logon que foi usado para ativar a assinatura do Visual Studio. As chaves do produto não são oferecidas para desbloquear o produto; entrar é a única opção para executar o Visual Studio. O assinante do Visual Studio pode operar offline por até 30 dias antes que o Visual Studio deixe de funcionar. Durante o trabalho online, o Visual Studio atualiza silenciosamente o status de licença do usuário periodicamente para garantir que a assinatura ainda esteja válida.
 
 ## <a name="resources"></a>Recursos
-
 - [Guia de programas do Microsoft Partner Network](https://assets.microsoft.com/MPN-MAPS-Product-Usage-Guide.pdf?tpqid=300-000121)
 - [Atribuir assinaturas do Visual Studio para funcionários do MPN](manage-mpn-subscriptions.md)
 - [Termos de uso](https://www.microsoft.com/useterms/) – as assinaturas do Visual Studio oferecidas por meio do MPN estão sujeitas aos termos de licença das assinaturas do Visual Studio NFR (Proibida a revenda).
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas do Visual Studio](https://aka.ms/vssubscriberhelp).
 
-
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 76654645-08ee-445d-b9ee-123126d1f0fb
-ms.date: 02/18/2021
+ms.date: 03/21/2021
 ms.topic: how-to
 description: Saiba como comprar as assinaturas do Visual Studio no Microsoft Store e ativá-las no portal de assinaturas do Visual Studio.
-ms.openlocfilehash: 3902ca5a4cce146d4a0ad62eb23dd777d6032f67
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 4ed9a46112e6a4f976948375f797cb37c0a52c6e
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249416"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776955"
 ---
 # <a name="visual-studio-subscriptions-are-available-through-the-microsoft-store"></a>As assinaturas do Visual Studio estão disponíveis por meio do Microsoft Store
 As assinaturas do Visual Studio estão disponíveis por meio de vários canais. Escolha entre [Licenciamento por volume](https://www.microsoft.com/licensing/default), provedores de soluções de nuvem, [Visual Studio Marketplace](https://marketplace.visualstudio.com/subscriptions)e Microsoft Store.  Este artigo explorará a compra e a ativação de assinaturas por meio do [Microsoft Store](https://www.microsoft.com/store/collections/visualstudio).  
@@ -50,7 +50,7 @@ Se você tiver alguma dúvida sobre como comprar por meio do Microsoft Store, a 
 ## <a name="resources"></a>Recursos 
 - [Suporte a assinaturas do Visual Studio](https://my.visualstudio.com/gethelp)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

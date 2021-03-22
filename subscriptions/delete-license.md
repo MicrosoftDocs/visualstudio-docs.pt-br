@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: e49242bc-e9f2-49e8-8caa-f574d508aba6
-ms.date: 02/18/2021
+ms.date: 03/21/2021
 ms.topic: how-to
 description: Saiba como os administradores podem excluir atribuições de assinatura no portal de administração de assinaturas do Visual Studio
-ms.openlocfilehash: efd0e149f390dd21a286b6ab7405ec36a43b8f78
-ms.sourcegitcommit: 9da787bf5b4281f933dc22083dc0bdeae3bc9461
+ms.openlocfilehash: d0ce93855cf56dab5e1a333e41e24ac2a368a540
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103225970"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776927"
 ---
 # <a name="delete-assignments-in-visual-studio-subscriptions"></a>Excluir atribuições em assinaturas do Visual Studio
 Quando um assinante não precisar mais de uma assinatura do Visual Studio, como quando ele sair da empresa, concluir um projeto ou alternar para uma nova função de trabalho, você poderá remover sua assinatura e atribuí-la a outra pessoa. Observe que quando você reatribui uma assinatura, nem todos os benefícios do Assinante serão redefinidos.  O novo usuário poderá solicitar todas as chaves não solicitadas e exibir as chaves anteriormente solicitadas, mas os limites de solicitação **não** serão redefinidos.  Para organizações que têm contratos EA (Contrato Enterprise), todos os benefícios que já tiverem sido usados pelo usuário original, como treinamentos do Pluralsight, serão redefinidos. 
@@ -36,9 +36,9 @@ Assista a este vídeo ou Continue lendo para saber como excluir atribuições.
    > Se você adicionou atribuições de assinatura por meio de Azure Active Directory grupos de segurança, pode levar até 24 horas para que a exclusão seja atualizada no portal de administração.  Consulte [nosso artigo](assign-license-bulk.md#use-azure-active-directory-groups-to-assign-subscriptions) para obter mais informações sobre como usar grupos de Azure Active Directory para gerenciar assinaturas. 
 
 ## <a name="resources"></a>Recursos
-- [Suporte a assinaturas](https://visualstudio.microsoft.com/subscriptions/support/)
+- [Suporte a assinaturas](https://aka.ms/vsadminhelp)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: abf271b5-7547-4695-a46f-72b2878ba8d4
-ms.date: 03/09/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Saiba mais sobre a disponibilidade de produtos em downloads de software para assinaturas do Visual Studio
-ms.openlocfilehash: e223946aabd9a0b789f51e80e522c24d8a85dd4c
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 8188395c236ae116c36da7f60f0afb8042cb81b3
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005853"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776617"
 ---
 # <a name="product-availability-for-software-downloads-in-visual-studio-subscriptions"></a>Disponibilidade de produtos para downloads de software em assinaturas do Visual Studio
 Como parte de seus benefícios de assinante, você tem acesso a uma ampla variedade de downloads de software.
@@ -38,7 +38,10 @@ O número e os tipos de downloads dependem do seu nível de assinatura e das sua
 
 Não tem certeza de qual assinatura você está usando?  Conecte-se ao [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) para ver todas as assinaturas atribuídas ao seu endereço de email. Se não vir todas as suas assinaturas, talvez você tenha uma ou mais atribuídas a outro endereço de email.  Você precisará entrar com esse endereço de email para ver as assinaturas.
 
-## <a name="see-also"></a>Confira também
+## <a name="support-resources"></a>Recursos de suporte
+- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, entre em contato com o [suporte de assinaturas do Visual Studio](https://aka.ms/vssubscriberhelp).
+
+## <a name="see-also"></a>Veja também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)
