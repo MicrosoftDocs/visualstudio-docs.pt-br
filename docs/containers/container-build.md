@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 11/20/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 004427ced7d18d9a5af5c863172416fd8637aa69
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 07ecc9a171cf6c0ca254ddbf284f116545ddd0f0
+ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536858"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104884077"
 ---
 # <a name="how-visual-studio-builds-containerized-apps"></a>Como o Visual Studio cria aplicativos em contêineres
 
@@ -107,7 +107,7 @@ Para que a depuração funcione em contêineres, o Visual Studio usa o mapeament
 
 |Volume|Descrição|
 |-|-|
-| **Depurador remoto** | Contém os bits necessários para executar o depurador no contêiner, dependendo do tipo de projeto. Isso é explicado em mais |detalhes na seção de [depuração](#debugging) .
+| **Depurador remoto** | Contém os bits necessários para executar o depurador no contêiner, dependendo do tipo de projeto. Isso é explicado em mais detalhes na seção [depuração](#debugging) .|
 | **Pasta do aplicativo** | Contém a pasta do projeto onde o Dockerfile está localizado.|
 | **Pasta de origem** | Contém o contexto de compilação que é passado para comandos do Docker.|
 | **Pastas de pacotes NuGet** | Contém os pacotes NuGet e as pastas de fallback que são lidas no arquivo *obj \{ projeto}. csproj. NuGet. g. props* no projeto. |
@@ -189,7 +189,7 @@ O ponto de entrada de contêiner só pode ser modificado em projetos de composi�
 
 Saiba como personalizar ainda mais suas compilações definindo propriedades adicionais do MSBuild em seus arquivos de projeto. Consulte [Propriedades do MSBuild para projetos de contêiner](container-msbuild-properties.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [MSBuild](../msbuild/msbuild.md) 
  [Dockerfile no Windows](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile) 

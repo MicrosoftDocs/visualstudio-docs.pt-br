@@ -11,12 +11,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab5ddea8ddb3fdd741f4df3b3b53f4239d016049
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 81311e9dea2c5367b44cdf2cc8e2327a8aff5617
+ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928951"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104884103"
 ---
 # <a name="how-to-launch-a-stand-alone-net-framework-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line"></a>Como iniciar um aplicativo do .NET Framework autônomo com o criador de perfil para coletar dados de simultaneidade usando a linha de comando
 Este tópico descreve como usar ferramentas de linha de comando das Ferramentas de Criação de Perfil do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para iniciar um aplicativo autônomo (cliente) do .NET Framework e coletar dados de simultaneidade de thread e processo
@@ -39,7 +39,7 @@ Este tópico descreve como usar ferramentas de linha de comando das Ferramentas 
 
    - A opção [/start](../profiling/start.md) inicializa o criador de perfil.
 
-     | | |
+     | Comando | Descrição |
      |-------------------------------------| - |
      | **/start:concurrency** | Permite a coleta de dados de contenção de recursos e de execução do thread. |
      | **/start:concurrency,resourceonly** | Habilita apenas a coleta de dados de contenção de recursos. |
@@ -91,7 +91,7 @@ Este tópico descreve como usar ferramentas de linha de comando das Ferramentas 
 
     - Feche o aplicativo de destino.
 
-         -ou-
+         – ou –
 
     - Digite **VSPerfCmd/Detach**
 
@@ -99,5 +99,5 @@ Este tópico descreve como usar ferramentas de linha de comando das Ferramentas 
 
      **VSPerfCmd**  [/Shutdown](../profiling/shutdown.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Coletar dados de simultaneidade](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)
