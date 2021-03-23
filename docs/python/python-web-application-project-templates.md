@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1f6376978826afc2946cfac25ab635d0b7533dc4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a309ba898c22836fb5c0cebfc390b6c8d7c116c5
+ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939533"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104805985"
 ---
 # <a name="python-web-application-project-templates"></a>Modelos de projeto de aplicativo Web Python
 
@@ -56,6 +56,7 @@ Todos os modelos de **\<Framework> projeto Web** criam um aplicativo Web inicial
 | **Projeto Web do Flask** | Gera um aplicativo cujos arquivos estáticos estão contidos na pasta *static*. O código em *views.py* manipula o roteamento, com modelos de página que usam o mecanismo Jinja contido na pasta *templates*. O arquivo *runserver.py* fornece o código de inicialização. Confira [Etapa 4 do tutorial – Conheça o Flask](learn-flask-visual-studio-step-04-full-flask-project-template.md). |
 | **Projeto Web do Flask/Jade** | Gera o mesmo aplicativo que com o modelo de **projeto Web Flask** , mas usando a extensão Jade para o mecanismo de modelagem jinja. |
 
+::: moniker range="vs-2017"
 ### <a name="polls-group"></a>Grupo de pesquisas
 
 Os modelos de **\<framework> projeto Web de pesquisas** criam um aplicativo Web inicial por meio do qual os usuários podem votar em diferentes perguntas de sondagem. Cada aplicativo se baseia na estrutura dos modelos de projeto **Web** para usar um banco de dados para gerenciar as pesquisas e as respostas dos usuários. Os aplicativos incluem modelos de dados adequados e uma página de aplicativo especial (/seed) que carrega votações de um arquivo *samples.json*.
@@ -66,6 +67,7 @@ Os modelos de **\<framework> projeto Web de pesquisas** criam um aplicativo Web 
 | **Projeto Web de Votações do Django** | Gera um projeto e um aplicativo do Django com três páginas e um banco de dados SQLite. Inclui personalizações na interface administrativa do Django para permitir que um administrador autenticado crie e gerencie pesquisas. Para obter mais informações, confira [Modelos do Django](python-django-web-application-project-template.md) e [Etapa 6 do tutorial – Conheça o Django](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md). |
 | **Projeto Web de Votações do Flask** | Gera um aplicativo que pode ser executado em um banco de dados em memória, no MongoDB ou no Armazenamento de Tabelas do Azure, configurado usando a variável de ambiente do `REPOSITORY_NAME`. Os modelos de dados e o código do armazenamento de dados estão contidos na pasta *models*, e o arquivo *settings.py* contém o código para determinar qual armazenamento de dados é usado. O aplicativo usa o mecanismo Jinja para modelos de página. Confira [Etapa 5 do tutorial – Conheça o Flask](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md). |
 | **Pesquisas Projeto Web do Flask/Jade** | Gera o mesmo aplicativo como com o modelo de **projeto Web Flask de pesquisas** , mas usando a extensão Jade para o mecanismo de modelagem jinja. |
+::: moniker-end
 
 ## <a name="install-project-requirements"></a>Instalar requisitos de projeto
 
@@ -145,7 +147,7 @@ O comando **converter para Microsoft Azure projeto de serviço de nuvem** (image
 
 ![Comando Converter em projeto do serviço de nuvem do Microsoft Azure](media/template-web-convert-menu.png)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Referência de modelos de item do Python](python-item-templates.md)
 - [Publicar no Serviço de Aplicativo do Azure](publishing-python-web-applications-to-azure-from-visual-studio.md)

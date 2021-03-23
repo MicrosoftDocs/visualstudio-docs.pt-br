@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ef9154a34ddd08e7e0a4b9434f7f748b2603aef4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7926a7983e43545ad47e8bc975f051821c108c18
+ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882863"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104805998"
 ---
 # <a name="step-4-use-the-full-flask-web-project-template"></a>Etapa 4: Usar o modelo Projeto Web do Flask completo
 
@@ -229,8 +229,24 @@ Fique à vontade para fazer experimentos com sintaxes do Jinja e do Jade para ve
 
 ## <a name="next-steps"></a>Próximas etapas
 
-> [!div class="nextstepaction"]
-> [O modelo Pesquisa Projeto Web de Flask](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md)
+::: moniker range="vs-2017"
+- [O modelo Pesquisa Projeto Web de Flask](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md)
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+> [!Note]
+> Se você tiver confirmando sua solução do Visual Studio para controle de origem ao longo deste tutorial, agora será um bom momento para fazer outra confirmação. Sua solução deve corresponder ao código-fonte do tutorial no GitHub: [Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask).
+
+Agora você explorou a totalidade dos modelos "Projeto Web em Branco do Flask", "Projeto Web do Flask[/Jade]" e "Pesquisa Projeto Web de Flask[/Jade]" no Visual Studio. Você conheceu todas as noções básicas do Flask, como usar modos de exibição, modelos e roteamento, e viu como usar armazenamentos de dados de backup. Agora você poderá começar a usar um aplicativo Web por sua conta com os modos de exibição e modelos de que precisar.
+
+A execução de um aplicativo Web no computador de desenvolvimento é apenas uma etapa para disponibilizar o aplicativo para seus clientes. As próximas etapas podem incluir as seguintes tarefas:
+
+- Implante o aplicativo Web em um servidor de produção, como o Serviço de Aplicativo do Azure. Confira [Publicar no Serviço de Aplicativo do Azure](publishing-python-web-applications-to-azure-from-visual-studio.md).
+
+- Adicione uma implementação de repositório que usa outro armazenamento de dados em nível de produção como o PostgreSQL, o MySQL e o SQL Server (que podem ser hospedados no Azure). Também é possível usar o [SDK do Azure para Python](/azure/python/) para trabalhar com serviços de armazenamento do Azure como tabelas e blobs, bem como o Cosmos DB.
+
+- Configure um pipeline de integração contínua/implantação contínua em um serviço como o Azure DevOps. Além de trabalhar com o controle do código-fonte (por meio do Azure Repos, do GitHub ou em outro local), você pode configurar um projeto do Azure DevOps para executar automaticamente os testes de unidade como um pré-requisito para o lançamento, bem como configurar o pipeline para implantação em um servidor de preparo para testes adicionais antes de implantar na produção. O Azure DevOps, além disso, integra-se às soluções de monitoramento, como o App Insights e fecha o ciclo de inteiro com ferramentas ágeis de planejamento. Saiba mais em [Criar um pipeline de CI/CD para Python com o projeto do Azure DevOps](/azure/devops-project/azure-devops-project-python?view=vsts&preserve-view=true) e também a [documentação geral do Azure DevOps](/azure/devops/?view=vsts&preserve-view=true).
+::: moniker-end
 
 ## <a name="go-deeper"></a>Aprofunde-se um pouco mais
 

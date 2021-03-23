@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: afde24347237ed3fc87d7a00ebdf21787d78909c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c6bf427f7597b59fc5bb6fb32766134daa5b22bf
+ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942654"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104806063"
 ---
 # <a name="tutorial-get-started-with-the-django-web-framework-in-visual-studio"></a>Tutorial: Introdução à estrutura da Web do Django no Visual Studio
 
@@ -24,13 +24,22 @@ O [Django](https://www.djangoproject.com/) é uma estrutura do Python de alto n�
 
 Neste tutorial, você aprenderá como:
 
-> [!div class="checklist"]
-> - Criar um projeto básico do Django em um repositório Git usando o modelo "Projeto Web em Branco do Django" (etapa 1)
-> - Criar um aplicativo do Django com uma página e renderizar essa página usando um modelo (etapa 2)
-> - Fornecer arquivos estáticos, adicionar páginas e usar a herança do modelo (etapa 3)
-> - Usar o modelo Projeto Web do Django para criar um aplicativo com várias páginas e design responsivo (etapa 4)
-> - Autenticar usuários (etapa 5)
-> - Usar o modelo Pesquisas Projeto Web do Django para criar um aplicativo que usa modelos, migrações de banco de dados e personalizações na interface administrativa (etapa 6)
+::: moniker range="vs-2017"
+- Criar um projeto básico do Django em um repositório Git usando o modelo "Projeto Web em Branco do Django" (etapa 1)
+- Criar um aplicativo do Django com uma página e renderizar essa página usando um modelo (etapa 2)
+- Fornecer arquivos estáticos, adicionar páginas e usar a herança do modelo (etapa 3)
+- Usar o modelo Projeto Web do Django para criar um aplicativo com várias páginas e design responsivo (etapa 4)
+- Autenticar usuários (etapa 5)
+- Usar o modelo Pesquisas Projeto Web do Django para criar um aplicativo que usa modelos, migrações de banco de dados e personalizações na interface administrativa (etapa 6)
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+- Criar um projeto básico do Django em um repositório Git usando o modelo "Projeto Web em Branco do Django" (etapa 1)
+- Criar um aplicativo do Django com uma página e renderizar essa página usando um modelo (etapa 2)
+- Fornecer arquivos estáticos, adicionar páginas e usar a herança do modelo (etapa 3)
+- Usar o modelo Projeto Web do Django para criar um aplicativo com várias páginas e design responsivo (etapa 4)
+- Autenticar usuários (etapa 5)
+::: moniker-end
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

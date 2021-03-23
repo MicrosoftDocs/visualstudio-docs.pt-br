@@ -11,18 +11,24 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ea708c1721d85468d99a0ccc327f378042579f85
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3f589aed953a852cb57570988d914f77b2fa10b2
+ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942484"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104806011"
 ---
 # <a name="step-5-authenticate-users-in-django"></a>Etapa 5: Autenticar usuários no Django
 
 **Etapa anterior: [Usar o modelo Projeto Web completo do Django](learn-django-in-visual-studio-step-04-full-django-project-template.md)**
 
+::: moniker range="vs-2017"
 Como a autenticação é uma necessidade comum dos aplicativos Web, o modelo "Projeto Web do Django" inclui um fluxo de autenticação básico. (O modelo "pesquisas do Django Web Project" abordado na etapa 6 deste tutorial também inclui o mesmo fluxo.) Ao usar qualquer um dos modelos de projeto Django, o Visual Studio inclui todos os módulos necessários para autenticação no *Settings.py* do projeto Django.
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+Como a autenticação é uma necessidade comum dos aplicativos Web, o modelo "Projeto Web do Django" inclui um fluxo de autenticação básico. Ao usar um dos modelos de projeto do Django, o Visual Studio inclui todos os módulos necessários para a autenticação em *settings.py* do projeto do Django.
+::: moniker-end
 
 Nesta etapa, você aprenderá:
 
@@ -210,9 +216,28 @@ Resposta: A marcação `{% csrf_token %}` inclui a [proteção interna contra so
 
 ## <a name="next-steps"></a>Próximas etapas
 
-> [!div class="nextstepaction"]
-> [Usar o modelo Pesquisas Projeto Web do Django](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md)
+::: moniker range="vs-2017"
+- [Usar o modelo Pesquisas Projeto Web do Django](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md)
+::: moniker-end
 
+::: moniker range=">=vs-2019"
+> [!Note]
+> Se você tiver confirmando sua solução do Visual Studio para controle de origem ao longo deste tutorial, agora será um bom momento para fazer outra confirmação. A solução deve corresponder ao código-fonte do tutorial no GitHub: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django).
+
+Agora você explorou todo o inteiro dos modelos "projeto Web Django em branco" e "projeto Web Django" no Visual Studio. Você aprendeu as noções básicas do Django como o uso de modelos e modos de exibição e explorou roteamento, autenticação e uso de modelos de banco de dados. Agora você deverá ser capaz de criar um aplicativo Web por sua conta com os modos de exibição e os modelos de que precisar.
+
+A execução de um aplicativo Web no computador de desenvolvimento é apenas uma etapa para disponibilizar o aplicativo para seus clientes. As próximas etapas podem incluir as seguintes tarefas:
+
+- Implante o aplicativo Web em um servidor de produção, como o Serviço de Aplicativo do Azure. Confira [Publicar no Serviço de Aplicativo do Azure](publishing-python-web-applications-to-azure-from-visual-studio.md).
+
+- Personalizar a página 404 criando um modelo chamado *templates/404.html*. Quando presente, o Django usa esse modelo, em vez de seu padrão. Para saber mais, veja [Modos de exibição de erro](https://docs.djangoproject.com/en/2.0/ref/views/#error-views) na documentação do Django.
+
+- Escreva testes de unidade em *tests.py*; os modelos de projeto do Visual Studio fornecem pontos iniciais para eles e mais informações podem ser encontradas em [Escrevendo seu primeiro aplicativo do Django, parte 5 – teste](https://docs.djangoproject.com/en/2.0/intro/tutorial05/) e [Testando no Django](https://docs.djangoproject.com/en/2.0/topics/testing/) na documentação do Django.
+
+- Altere o aplicativo de SQLite para um repositório de dados de nível de produção como PostgreSQL, MySQL e SQL Server (que pode ser hospedado no Azure). Conforme descrito em [Quando usar o SQLite](https://www.sqlite.org/whentouse.html) (sqlite.org), o SQLite funciona bem para sites de tráfego baixo a médio com menos de 100 mil acessos por dia, mas não é recomendado para volumes maiores. Também é limitado a um único computador, de modo que ele não pode ser usado em qualquer cenário de vários servidores, como balanceamento de carga e replicação geográfica. Para obter informações sobre o suporte do Django para outros bancos de dados, veja [Instalação do banco de dados](https://docs.djangoproject.com/en/2.0/intro/tutorial02/#database-setup). Você também pode usar o [SDK do Azure para Python](/azure/python/) para trabalhar com serviços de armazenamento do Azure como tabelas e blobs.
+
+- Configure um pipeline de integração contínua/implantação contínua em um serviço como o Azure DevOps. Além de trabalhar com o controle do código-fonte (por meio do Azure Repos, do GitHub ou em outro local), você pode configurar um projeto do Azure DevOps para executar automaticamente os testes de unidade como um pré-requisito para o lançamento, bem como configurar o pipeline para implantação em um servidor de preparo para testes adicionais antes de implantar na produção. O Azure DevOps, além disso, integra-se às soluções de monitoramento, como o App Insights e fecha o ciclo de inteiro com ferramentas ágeis de planejamento. Para saber mais, confira [Criar um pipeline de CI/CD para Python com o projeto do Azure DevOps](/azure/devops-project/azure-devops-project-python?view=vsts&preserve-view=true) e também a [documentação geral do Azure DevOps](/azure/devops/?view=vsts&preserve-view=true).
+::: moniker-end
 ## <a name="go-deeper"></a>Aprofunde-se um pouco mais
 
 - [Autenticação de usuário no Django](https://docs.djangoproject.com/en/2.0/topics/auth/) (docs.djangoproject.com)
