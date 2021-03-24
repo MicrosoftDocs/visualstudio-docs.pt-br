@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 01/21/2020
 ms.assetid: E4CFD03C-03AF-48CA-B409-6DB1CA45E991
 ms.topic: how-to
-ms.openlocfilehash: 86d701e50b4d9f5b8e4c9af0c736c117cd2e91be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9b4c3aa608969d9f62e2d5ab3bd3d98ef79236d9
+ms.sourcegitcommit: 08ee19f260164271e18bdbafe624301508f554ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950541"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "104999622"
 ---
 # <a name="sign-in-to-visual-studio-for-mac"></a>Entrar no Visual Studio para Mac
 
@@ -21,7 +21,7 @@ Para [ativar sua assinatura](enable-subscription.md), basta fazer login no Visua
 
 * **Conexão automática ao Azure** no IDE sem solicitar credenciais da mesma conta novamente.
 
-Quando você iniciar o Visual Studio para Mac pela primeira vez, será necessário entrar usando uma conta da Microsoft. Use uma conta da Microsoft conectada à licença que você deseja usar. Se você não tiver uma conta da Microsoft, consulte [Como faço para criar uma conta](https://support.microsoft.com/instantanswers/d18cc497-d839-cf50-dea8-f99c95f2bd16/sign-up-for-a-microsoft-account).
+Quando você iniciar o Visual Studio para Mac pela primeira vez, será necessário entrar usando uma conta da Microsoft. Use uma conta da Microsoft conectada à licença que você deseja usar. Se você não tiver uma conta da Microsoft, consulte [Como faço para criar uma conta](https://support.microsoft.com/account-billing/how-to-create-a-new-microsoft-account-a84675c3-3e9e-17cf-2911-3d56b15c0aaf).
 
 Se você optar por não entrar imediatamente, poderá usar uma cópia de avaliação de 30 dias. Após 30 dias, será necessário entrar para continuar usando a cópia do Visual Studio para Mac.
 
@@ -62,7 +62,7 @@ Para adicionar contas de usuário adicionais, escolha o menu **Visual Studio > C
 
 3. Quando terminar, escolha **Salvar alterações**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Entrar no Visual Studio (no Windows)](/visualstudio/ide/signing-in-to-visual-studio)
 - [Trabalhar com várias contas de usuário (Visual Studio no Windows)](/visualstudio/ide/work-with-multiple-user-accounts)
