@@ -9,17 +9,17 @@ helpviewer_keywords:
 - properties [Visual Studio SDK]
 - Property Browser, exposing properties
 ms.assetid: 47f295b5-1ca5-4e7b-bb52-7b926b136622
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bd9f2eb66bd2e1b8edcffd9e1053e4f644ba5e77
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b9de86e956fe6a4d7841d519d7252b75ae216229
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890754"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105075244"
 ---
 # <a name="expose-properties-to-the-properties-window"></a>Expor propriedades para o janela Propriedades
 
@@ -37,9 +37,9 @@ Nesta seção, você cria uma janela de ferramentas personalizada e exibe as pro
 
 1. Cada extensão do Visual Studio começa com um projeto de implantação VSIX, que conterá os ativos de extensão. Crie um [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projeto VSIX denominado `MyObjectPropertiesExtension` . Você pode encontrar o modelo de projeto VSIX na caixa de diálogo **novo projeto** pesquisando por "VSIX".
 
-2. Adicione uma janela de ferramentas adicionando um modelo de item de janela de ferramenta personalizada chamado `MyToolWindow` . Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Na **caixa de diálogo Adicionar novo item**, vá para extensibilidade de **itens do Visual C#**  >   e selecione **janela de ferramenta personalizada**. No campo **nome** na parte inferior da caixa de diálogo, altere o nome do arquivo para *MyToolWindow.cs*. Para obter mais informações sobre como criar uma janela de ferramentas personalizada, consulte [criar uma extensão com uma janela de ferramentas](../extensibility/creating-an-extension-with-a-tool-window.md).
+2. Adicione uma janela de ferramentas adicionando um modelo de item de janela de ferramenta personalizada chamado `MyToolWindow` . Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Na **caixa de diálogo Adicionar novo item**, vá para extensibilidade de **itens do Visual C#**  >   e selecione **janela de ferramenta personalizada**. No campo **nome** na parte inferior da caixa de diálogo, altere o nome do arquivo para *MyToolWindow. cs*. Para obter mais informações sobre como criar uma janela de ferramentas personalizada, consulte [criar uma extensão com uma janela de ferramentas](../extensibility/creating-an-extension-with-a-tool-window.md).
 
-3. Abra *MyToolWindow.cs* e adicione a seguinte instrução Using:
+3. Abra *MyToolWindow. cs* e adicione a seguinte instrução Using:
 
    ```csharp
    using System.Collections;
@@ -112,7 +112,7 @@ Nesta seção, você adiciona uma janela de ferramentas e expõe suas propriedad
 
 ### <a name="to-expose-tool-window-properties"></a>Para expor propriedades da janela de ferramentas
 
-1. Abra *MyToolWindow.cs* e adicione a propriedade booliana pública IsChecked à `MyToolWindow` classe.
+1. Abra *MyToolWindow. cs* e adicione a propriedade Public booliana IsChecked à `MyToolWindow` classe.
 
     ```csharp
     [Category("My Properties")]
@@ -131,7 +131,7 @@ Nesta seção, você adiciona uma janela de ferramentas e expõe suas propriedad
 
      Essa propriedade obtém seu estado na caixa de seleção do WPF que você criará posteriormente.
 
-2. Abra *MyToolWindowControl.XAML.cs* e substitua o Construtor MyToolWindowControl pelo código a seguir.
+2. Abra *MyToolWindowControl. XAML. cs* e substitua o Construtor MyToolWindowControl pelo código a seguir.
 
     ```vb
     private MyToolWindow pane;
@@ -145,7 +145,7 @@ Nesta seção, você adiciona uma janela de ferramentas e expõe suas propriedad
 
      Isso dá `MyToolWindowControl` acesso ao `MyToolWindow` painel.
 
-3. No *MyToolWindow.cs*, altere o `MyToolWindow` Construtor da seguinte maneira:
+3. No *MyToolWindow. cs*, altere o `MyToolWindow` Construtor da seguinte maneira:
 
     ```csharp
     base.Content = new MyToolWindowControl(this);
@@ -189,7 +189,7 @@ Nesta seção, você adiciona uma janela de ferramentas e expõe suas propriedad
 
 ### <a name="to-change-selection-lists"></a>Para alterar as listas de seleção
 
-1. Abra *MyToolWindow.cs* e adicione uma classe pública chamada `Simple` .
+1. Abra *MyToolWindow. cs* e adicione uma classe pública denominada `Simple` .
 
     ```csharp
     public class Simple
@@ -242,7 +242,7 @@ Nesta seção, você adiciona uma janela de ferramentas e expõe suas propriedad
     }
     ```
 
-3. No *MyToolWindowControl.cs*, substitua os manipuladores de caixa de seleção por estas linhas de código:
+3. No *MyToolWindowControl. cs*, substitua os manipuladores de caixa de seleção por estas linhas de código:
 
     ```csharp
     private void checkbox_Checked(object sender, RoutedEventArgs e)

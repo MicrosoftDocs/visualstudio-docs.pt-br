@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugErrorEvent2 interface
 ms.assetid: 275b6f38-b3d4-4cae-8491-491177f524fb
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf249e8568c3ae70bc8d881d72b491cf7fa3576b
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: d531180ca2fad9a6605837105c4ec5d626584a19
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102153034"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105054225"
 ---
 # <a name="idebugerrorevent2"></a>IDebugErrorEvent2
 Essa interface especifica uma mensagem de erro a ser relatada ao usuário.

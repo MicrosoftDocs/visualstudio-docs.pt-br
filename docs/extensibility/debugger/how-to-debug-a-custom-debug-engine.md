@@ -8,17 +8,17 @@ helpviewer_keywords:
 - debug engines, debugging
 - debugging [Debugging SDK], custom debug engines
 ms.assetid: df27a8d6-3938-45ff-b47f-b684e80b38a0
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 46e9b18f7bb34433ff86fe6a5bede436228d3ff1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ffd21fb08e920209d47ff66feb436f8a83aab53e
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947691"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105059919"
 ---
 # <a name="how-to-debug-a-custom-debug-engine"></a>Como depurar um mecanismo de depuração personalizado
 Um tipo de projeto inicia o mecanismo de depuração (DE) do <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A> método. Isso significa que o DE é iniciado sob o controle da instância de controle do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tipo de projeto. No entanto, essa instância do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] não pode depurar o de. O que vem a seguir são as etapas que permitem que você depure seus personalizados DE.
@@ -75,5 +75,5 @@ Um tipo de projeto inicia o mecanismo de depuração (DE) do <xref:Microsoft.Vis
 
 9. Se você optar por depurar o processo de inicialização de um, você poderá executar as etapas no procedimento "depurar um mecanismo de depuração personalizado" para anexar ao DE depois que ele for iniciado. Isso lhe dá três instâncias de [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] execução: uma para a origem do tipo de projeto, uma segunda para o tipo de projeto instanciado e uma terceira anexada ao de.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Criando um mecanismo de depuração personalizado](../../extensibility/debugger/creating-a-custom-debug-engine.md)

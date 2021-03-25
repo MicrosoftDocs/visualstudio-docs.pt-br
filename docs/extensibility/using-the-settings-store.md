@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Settings Store, using
 ms.assetid: 447ec08a-eca5-40b8-89b0-f98fdf3d39a4
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 752a912fd9a565e4b3e8dcb5c4c142e8f37dffc5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0a84fa551a4a3ea10b212832c0891fb0d7d19b2f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934032"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060179"
 ---
 # <a name="using-the-settings-store"></a>Usar o repositório de configurações
 Há dois tipos de armazenamentos de configurações:
@@ -33,12 +33,12 @@ Há dois tipos de armazenamentos de configurações:
 
 1. Cada extensão do Visual Studio começa com um projeto de implantação VSIX que conterá os ativos de extensão. Crie um [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projeto VSIX denominado `SettingsStoreExtension` . Você pode encontrar o modelo de projeto VSIX na caixa de diálogo **novo projeto** em **Visual C#/extensibilidade**.
 
-2. Agora, adicione um modelo de item de comando personalizado chamado **SettingsStoreCommand**. Na caixa de diálogo **Adicionar novo item** , vá para **Visual C#/extensibilidade** e selecione **comando personalizado**. No campo **nome** na parte inferior da janela, altere o nome do arquivo de comando para **SettingsStoreCommand.cs**. Para obter mais informações sobre como criar um comando personalizado, consulte [criando uma extensão com um comando de menu](../extensibility/creating-an-extension-with-a-menu-command.md)
+2. Agora, adicione um modelo de item de comando personalizado chamado **SettingsStoreCommand**. Na caixa de diálogo **Adicionar novo item** , vá para **Visual C#/extensibilidade** e selecione **comando personalizado**. No campo **nome** na parte inferior da janela, altere o nome do arquivo de comando para **SettingsStoreCommand. cs**. Para obter mais informações sobre como criar um comando personalizado, consulte [criando uma extensão com um comando de menu](../extensibility/creating-an-extension-with-a-menu-command.md)
 
 ## <a name="using-the-configuration-settings-store"></a>Usando o repositório de definições de configuração
  Esta seção mostra como detectar e exibir definições de configuração.
 
-1. No arquivo SettingsStorageCommand.cs, adicione as seguintes diretivas using:
+1. No arquivo SettingsStorageCommand. cs, adicione as seguintes diretivas using:
 
    ```
    using System.Collections.Generic;
@@ -56,7 +56,7 @@ Há dois tipos de armazenamentos de configurações:
 
     O <xref:Microsoft.VisualStudio.Shell.Settings.ShellSettingsManager> é uma classe auxiliar gerenciada sobre o <xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsManager> serviço.
 
-3. Agora descubra se as ferramentas do Windows Phone estão instaladas. O código deve ser assim:
+3. Agora descubra se as ferramentas do Windows Phone estão instaladas. Seu código deve ficar assim:
 
    ```
    private void MenuItemCallback(object sender, EventArgs e)

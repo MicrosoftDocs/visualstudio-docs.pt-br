@@ -8,17 +8,17 @@ helpviewer_keywords:
 - ButtonText element (VSCT XML schema)
 - VSCT XML schema elements, ButtonText
 ms.assetid: 56aba884-0356-4894-ae4e-32d3938f6865
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b03b5fce58795488f6c379fcf93e5f7fea074e13
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4fa9ad6aab9d42113f3e01760e191184e168b62d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927165"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105068109"
 ---
 # <a name="buttontext-element"></a>Elemento ButtonText
 Esse campo permite que você especifique o texto que aparece em vários menus. Por padrão, o `ButtonText` elemento aparece em controladores de menu. O `ButtonText` elemento também se tornará o padrão se os outros campos de texto estiverem em branco. O `ButtonText` elemento não pode ficar em branco mesmo que os outros campos de texto sejam especificados.

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - menus, adding menu controllers to toolbars
 - menu controllers, adding to toolbars
 ms.assetid: 6af9b0b4-037f-404c-bb40-aaa1970768ea
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82da331d93a2208b76bb953f3a6a489913c907ac
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 304f4ea11abc332c01603f96b6b67c0bd22e38c6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951518"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060062"
 ---
 # <a name="add-a-menu-controller-to-a-toolbar"></a>Adicionar um controlador de menu a uma barra de ferramentas
 Este tutorial se baseia na guia [Adicionar uma barra de ferramentas a uma janela](../extensibility/adding-a-toolbar-to-a-tool-window.md) de ferramentas e mostra como adicionar um controlador de menu à barra de ferramentas da janela de ferramentas. As etapas mostradas aqui também podem ser aplicadas à barra de ferramentas criada na guia [Adicionar uma barra de ferramentas](../extensibility/adding-a-toolbar.md) .
@@ -112,7 +112,7 @@ A partir do Visual Studio 2015, você não instala o SDK do Visual Studio a part
 
 ## <a name="implement-the-menu-controller-commands"></a>Implementar os comandos do controlador de menu
 
-1. No *TWTestCommandPackageGuids.cs*, adicione IDs de comando para os três itens de menu após as IDs de comando existentes.
+1. Em *TWTestCommandPackageGuids. cs*, adicione IDs de comando para os três itens de menu após as IDs de comando existentes.
 
     ```csharp
     public const int cmdidMCItem1 = 0x130;
@@ -120,7 +120,7 @@ A partir do Visual Studio 2015, você não instala o SDK do Visual Studio a part
     public const int cmdidMCItem3 = 0x132;
     ```
 
-2. No *TWTestCommand.cs*, adicione o código a seguir na parte superior da `TWTestCommand` classe.
+2. No *TWTestCommand. cs*, adicione o código a seguir na parte superior da `TWTestCommand` classe.
 
     ```csharp
     private int currentMCCommand; // The currently selected menu controller command
@@ -224,6 +224,6 @@ A partir do Visual Studio 2015, você não instala o SDK do Visual Studio a part
 
     Uma caixa de diálogo é exibida com a mensagem **que você selecionou item do controlador de menu 3**. Observe que a mensagem corresponde ao texto no botão controlador do menu. O botão controlador de menu agora exibe o **item 3 do MC**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Adicionando uma barra de ferramentas a uma janela de ferramentas](../extensibility/adding-a-toolbar-to-a-tool-window.md)
 - [Adicionando uma barra de ferramentas](../extensibility/adding-a-toolbar.md)

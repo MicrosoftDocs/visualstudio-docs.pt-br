@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], control of execution
 ms.assetid: 97071846-007e-450f-95a6-f072d0f5e61e
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b00e0529c1d2ac7224881067628618251ba03898
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 55edea88c5983920b382672d160498b9901ba5ca
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99930506"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105068018"
 ---
 # <a name="control-of-execution"></a>Controle de execução
 O mecanismo de depuração (DE) normalmente envia um dos seguintes eventos como o último evento de inicialização:
@@ -41,11 +41,11 @@ O mecanismo de depuração (DE) normalmente envia um dos seguintes eventos como 
 
 5. Se o usuário optar por entrar, acima ou fora de uma função, o IDE solicitará que a sessão de depuração chame o método do programa `Step` . Em seguida, o IDE passa a unidade de etapa (instrução, instrução ou linha) e o tipo de etapa (se deseja entrar, acima ou fora da função). Quando a etapa for concluída, o DE enviará um evento DE conclusão de etapa para a sessão de depuração, que é um evento de parada.
 
-    -ou-
+    – ou –
 
     Se o usuário optar por continuar executando a partir do ponteiro de instrução atual, o IDE solicitará a sessão de depuração para chamar o método **Execute** do programa. O programa retoma a execução até encontrar a próxima condição de interrupção.
 
-    -ou-
+    – ou –
 
     Se a sessão de depuração for ignorar um evento de interrupção específico, a sessão de depuração chamará o método **continue** do programa. Se o programa estava passando para cima ou para fora de uma função quando ele encontrou a condição de interrupção, ele continua a etapa.
 

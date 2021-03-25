@@ -8,17 +8,17 @@ helpviewer_keywords:
 - multi
 - tool windows
 ms.assetid: 4a7872f1-acc9-4f43-8932-5a526b36adea
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1d332e3c41a55de8f405f028070fa95f97f6717
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ce6122cbf4d6f85ab50e067fbbd643053ac4e4dd
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923274"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089349"
 ---
 # <a name="create-a-multi-instance-tool-window"></a>Criar uma janela de ferramentas de várias instâncias
 Você pode programar uma janela de ferramentas para que várias instâncias dela possam ser abertas simultaneamente. Por padrão, as janelas de ferramentas podem ter apenas uma instância aberta.
@@ -34,7 +34,7 @@ Ao usar uma janela de ferramenta de várias instâncias, você pode mostrar vár
 
 ## <a name="make-a-tool-window-multi-instance"></a>Criar uma janela de ferramentas com várias instâncias
 
-1. Abra o arquivo *MIToolWindowPackage.cs* e localize o `ProvideToolWindow` atributo. e o `MultiInstances=true` parâmetro, conforme mostrado no exemplo a seguir:
+1. Abra o arquivo *MIToolWindowPackage. cs* e localize o `ProvideToolWindow` atributo. e o `MultiInstances=true` parâmetro, conforme mostrado no exemplo a seguir:
 
     ```csharp
     [PackageRegistration(UseManagedResourcesOnly = true)]
@@ -46,7 +46,7 @@ Ao usar uma janela de ferramenta de várias instâncias, você pode mostrar vár
     {. . .}
     ```
 
-2. No arquivo *MIToolWindowCommand.cs* , localize o `ShowToolWindos()` método. Nesse método, chame o <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> método e defina seu `create` sinalizador como para `false` que ele seja iterado por meio das instâncias da janela de ferramentas existentes até que uma disponível `id` seja encontrada.
+2. No arquivo *MIToolWindowCommand. cs* , localize o `ShowToolWindos()` método. Nesse método, chame o <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> método e defina seu `create` sinalizador como para `false` que ele seja iterado por meio das instâncias da janela de ferramentas existentes até que uma disponível `id` seja encontrada.
 
 3. Para criar uma instância de janela de ferramenta, chame o <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> método e defina seu `id` como um valor disponível e seu `create` sinalizador como `true` .
 

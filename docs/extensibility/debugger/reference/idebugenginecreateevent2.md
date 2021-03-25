@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngineCreateEvent2 interface
 ms.assetid: 37c0a841-1c8d-4802-a990-36b54bca3ef7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6155324150b963a5fd26ccecc1244e0792f448bc
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: da6b249581f4cf51d22ceb86eb0fd5837a42e8ac
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102153645"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105054355"
 ---
 # <a name="idebugenginecreateevent2"></a>IDebugEngineCreateEvent2
 O mecanismo de depuração (DE) envia essa interface para o SDM (Gerenciador de depuração de sessão) quando uma instância do de é criada.

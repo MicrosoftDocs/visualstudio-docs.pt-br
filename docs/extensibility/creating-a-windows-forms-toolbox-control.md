@@ -8,17 +8,17 @@ helpviewer_keywords:
 - toolbox
 - windows forms
 ms.assetid: 0be6ffc1-8afd-4d02-9a5d-e27dde05fde6
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4bb9505ab475da7919a39eb03e7c84b92857db4e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 42dcf30e7c31880357bb95e3858a2c70aa59f174
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99902191"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089323"
 ---
 # <a name="create-a-windows-forms-toolbox-control"></a>Criar um controle de caixa de ferramentas de Windows Forms
 
@@ -46,7 +46,7 @@ O `Counter` controle requer dois controles filho: a <xref:System.Windows.Forms.L
 
 #### <a name="to-build-the-user-interface"></a>Para criar a interface do usuário
 
-1. Em **Gerenciador de soluções**, clique duas vezes em *Counter.cs* para abri-lo no designer.
+1. Em **Gerenciador de soluções**, clique duas vezes em *Counter. cs* para abri-lo no designer.
 
 2. Remova o **clique aqui!** botão que é incluído por padrão quando você adiciona o modelo de item de controle Windows Forms caixa de ferramentas.
 
@@ -163,7 +163,7 @@ O `Counter` controle irá expor um método para incrementar o contador, um event
 
 2. Na instância experimental do Visual Studio, crie um projeto de **aplicativo Windows Forms** .
 
-3. Em **Gerenciador de soluções**, clique duas vezes em *Form1.cs* para abri-lo no designer se ele ainda não estiver aberto.
+3. Em **Gerenciador de soluções**, clique duas vezes em *Form1. cs* para abri-lo no designer se ele ainda não estiver aberto.
 
 4. Na **caixa de ferramentas**, o `Counter` controle deve ser exibido na seção **geral** .
 
@@ -173,7 +173,7 @@ O `Counter` controle irá expor um método para incrementar o contador, um event
 
 7. Arraste um <xref:System.Windows.Forms.Button> controle para o formulário e defina as propriedades Name e Text do botão como `Test` .
 
-8. Clique duas vezes no botão para abrir *Form1.cs* na exibição de código e criar um manipulador de cliques.
+8. Clique duas vezes no botão para abrir *Form1. cs* na exibição de código e criar um manipulador de cliques.
 
 9. No manipulador de cliques, chame `counter1.Increment()` .
 

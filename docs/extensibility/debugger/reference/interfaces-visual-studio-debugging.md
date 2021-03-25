@@ -7,17 +7,17 @@ ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], interfaces
 ms.assetid: 79875cbb-f946-49d4-94eb-941d0e1a40b2
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2b7fad96ddd62767b67b65b83121498079a81b07
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 185781d17e1b80aab5267902031bf3d1ede1231c
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852837"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105082602"
 ---
 # <a name="interfaces-visual-studio-debugging"></a>Interfaces (depuração no Visual Studio)
 Os métodos são listados em ordem alfabética em cada interface no sumário e na página de interface em ordem vtable.
@@ -40,5 +40,5 @@ Os métodos são listados em ordem alfabética em cada interface no sumário e n
 
  Contém a documentação para as interfaces, enumeradores e estruturas do [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] SDK de depuração.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Referência da API](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)
