@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, architecture
 ms.assetid: 35351d4c-9414-409b-98fc-f2023e2426b7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 669ef527e65e56612199b8303f7cc99e8b993b50
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3fe51878603996044535b0abfb70302ef9027c03
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99846394"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105064248"
 ---
 # <a name="source-control-plug-in-architecture"></a>Arquitetura do plug-in de controle do código-fonte
 Você pode adicionar suporte de controle do código-fonte ao [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ambiente de desenvolvimento integrado (IDE) implementando e anexando um plug-in de controle do código-fonte. O IDE conecta-se ao plug-in de controle do código-fonte por meio do controle do código-fonte bem definido Plug-In API. O IDE expõe os recursos de controle de versão do sistema de controle do código-fonte fornecendo uma interface do usuário (IU) que consiste em barras de ferramentas e comandos de menu. O plug-in de controle do código-fonte implementa a funcionalidade de controle do código-fonte.

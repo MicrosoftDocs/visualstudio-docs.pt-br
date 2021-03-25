@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK]
 ms.assetid: 13d5728c-4e28-42e4-944a-a565b1765ef8
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 33c13b1bc0c7b3b700d65b67e0aa6b856372dffa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 99c19fd202cf0e9fe56ba6485aaa1a7005047774
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958460"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105064053"
 ---
 # <a name="source-control"></a>Controle do código-Fonte
 Esta seção aborda as opções para implementar o controle do código-fonte como um recurso integrado do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , seja por meio de um plug-in de controle do código-fonte ou de um VSPackage de controle do código-fonte.

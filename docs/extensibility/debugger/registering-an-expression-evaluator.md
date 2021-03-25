@@ -8,17 +8,17 @@ helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluators, registering
 ms.assetid: 236be234-e05f-4ad8-9200-24ce51768ecf
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1074e8dea5dfdb05571d3b1aa04e5c411530bb1f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3cf6998a9dd8bc521d8d5c7b8bd3e598e9a4e3bc
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961099"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070642"
 ---
 # <a name="register-an-expression-evaluator"></a>Registrar um avaliador de expressão
 > [!IMPORTANT]

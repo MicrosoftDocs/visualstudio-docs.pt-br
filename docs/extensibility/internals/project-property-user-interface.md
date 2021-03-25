@@ -9,17 +9,17 @@ helpviewer_keywords:
 - projects [Visual Studio SDK], properties UI
 - project properties UI
 ms.assetid: b6aec634-8533-476c-9ebd-36536a2288e2
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: da60258f41665bbbb5510eb73b4fbca0a88809ac
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 051c373b85eff4483012dec5b264fa09fe7d962e
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970173"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105064469"
 ---
 # <a name="project-property-user-interface"></a>Interface do usuário de propriedades do projeto
 
@@ -59,7 +59,7 @@ Como o subtipo de projeto agrega o <xref:Microsoft.VisualStudio.Shell.Interop.IV
 
 Novas páginas de propriedades adicionadas por um subtipo de projeto são enviadas por um objeto de navegação de configuração de projeto da implementação do projeto base. Este objeto de procura de configuração de projeto dá suporte a extensores de automação. Para obter mais informações sobre o AutomationExtenders, consulte [implementando e usando extensores de automação](/previous-versions/0y92k2w2(v=vs.140)). As páginas de propriedades implementadas pela chamada de subtipo de projeto <xref:EnvDTE.Project.Extender%2A> para recuperar seu próprio projeto de pesquisa de configuração de subtipo, que estende o objeto de procura de configuração do projeto base.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:EnvDTE.IFilterProperties>
 - [Caixa de diálogo páginas de propriedades](/previous-versions/visualstudio/visual-studio-2010/as5chysf(v=vs.100))

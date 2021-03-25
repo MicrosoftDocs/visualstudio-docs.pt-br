@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - TYPE_INFO structure
 ms.assetid: d725cb68-a565-49d1-a16f-ff0445c587a0
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0e6b37fbc4d2d812bfa10d8f05455050bb5a239d
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: b83c4a829a050b9e78b65a9a68be96d2397ea8c6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102223414"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070733"
 ---
 # <a name="type_info"></a>TYPE_INFO
 Essa estrutura especifica vários tipos de informações sobre o tipo de um campo.

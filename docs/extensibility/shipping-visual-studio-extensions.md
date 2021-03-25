@@ -9,17 +9,17 @@ helpviewer_keywords:
 - deployment, VSIX
 - satellite DLLs, in VSIX packages
 ms.assetid: 13cd263d-25f7-488e-9c1a-cff908caedb6
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c1b5787eaecd6b3787d77c7ecab70acae689df8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c88c80ffbc1e80815b8370a940a75c0eb197ff78
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99938090"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090129"
 ---
 # <a name="shipping-visual-studio-extensions"></a>Enviando extensões do Visual Studio
 Depois de terminar de desenvolver sua extensão, você pode instalá-la em outros computadores, compartilhá-lo com seus amigos e colegas de trabalho ou publicá-lo na Visual Studio Marketplace. Nesta seção, explicaremos todas as coisas que você precisa fazer para publicar e manter sua extensão: trabalhando com arquivos. vsix, publicação, localização e atualização.
@@ -49,7 +49,7 @@ Depois de terminar de desenvolver sua extensão, você pode instalá-la em outro
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Title|Descrição|
+|Título|Descrição|
 |-----------|-----------------|
 |[Introdução ao modelo de projeto do VSIX](../extensibility/getting-started-with-the-vsix-project-template.md)|Explica como usar o modelo de projeto VSIX para instalar um modelo de projeto personalizado.|
 |[Anatomia de um pacote VSIX](../extensibility/anatomy-of-a-vsix-package.md)|Descreve os componentes de um pacote VSIX.|

@@ -9,17 +9,17 @@ f1_keywords:
 helpviewer_keywords:
 - POPLISTFUNC callback function
 ms.assetid: b2199fd5-d707-4628-92dd-e2a01e2f507a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ddf641cf309eb5b5352904da2ac07b64b0886f97
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: aec322d73e49d4aae91956bd8df015a01c922a10
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967352"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090233"
 ---
 # <a name="poplistfunc"></a>POPLISTFUNC
 Esse retorno de chamada é fornecido para o [SccPopulateList](../extensibility/sccpopulatelist-function.md) pelo IDE e é usado pelo plug-in de controle do código-fonte para atualizar uma lista de arquivos ou diretórios (também fornecidos para a `SccPopulateList` função).
@@ -47,7 +47,7 @@ typedef BOOL (*POPLISTFUNC) (
 
  lpFileName caminho completo do diretório do nome do arquivo a ser adicionado ou excluído da lista.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
 
 |Valor|Descrição|
 |-----------|-----------------|

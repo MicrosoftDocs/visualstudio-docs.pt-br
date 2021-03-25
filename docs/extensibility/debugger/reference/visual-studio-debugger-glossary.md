@@ -8,17 +8,17 @@ helpviewer_keywords:
 - glossary [Debugging SDK]
 - debugging [Debugging SDK], glossary
 ms.assetid: 4a2cfaab-1fbd-4a23-bd00-9ac4cc50d7fd
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0cc5a8b75fd089318434cadea185f8070616cd8a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1871a395e87177c89f8af2bfce640a63c2cba324
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961190"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070681"
 ---
 # <a name="visual-studio-debugger-glossary"></a>Glossário do depurador do Visual Studio
 Veja a seguir os termos usados no [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] SDK de depuração.
@@ -68,5 +68,5 @@ Veja a seguir os termos usados no [!INCLUDE[vsprvs](../../../code-quality/includ
 
   ponto de interrupção de aviso uma abstração para descrever um aviso em um ponto de interrupção pendente. Um ponto de interrupção de aviso descreve um motivo pelo qual o ponto de interrupção pendente ainda não está associado a um local de código. Isso pode ser que o código ainda não foi carregado para o local descrito pelo ponto de interrupção pendente ou por algum outro motivo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Extensibilidade do depurador do Visual Studio](../../../extensibility/debugger/visual-studio-debugger-extensibility.md)

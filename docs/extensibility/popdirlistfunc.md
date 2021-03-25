@@ -9,17 +9,17 @@ f1_keywords:
 helpviewer_keywords:
 - POPDIRLISTFUNC callback function
 ms.assetid: 0ee90fd2-5467-4154-ab4c-7eb02ac3a14c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: da499ee9bbdcdff95456a4e4d5f5dc63f2acfb2c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0f8cde3e6835a7d3262bbb89fed13e0dbc8e540e
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967391"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090246"
 ---
 # <a name="popdirlistfunc"></a>POPDIRLISTFUNC
 Essa é uma função de retorno de chamada fornecida para a função [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) para atualizar uma coleção de diretórios e (opcionalmente) nomes de arquivos para descobrir quais estão sob controle do código-fonte.
@@ -49,7 +49,7 @@ no Valor de usuário fornecido a [SccPopulateDirList](../extensibility/sccpopula
 
 no Caminho local completo para um diretório ou nome de arquivo que está sob controle do código-fonte.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
  O IDE retorna um código de erro apropriado:
 
 |Valor|Descrição|
@@ -61,7 +61,7 @@ no Caminho local completo para um diretório ou nome de arquivo que está sob co
 ## <a name="remarks"></a>Comentários
  Se o `fOptions` parâmetro da `SccPopulateDirList` função contiver o `SCC_PDL_INCLUDEFILES` sinalizador, a lista provavelmente conterá nomes de arquivo, bem como nomes de diretório.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Funções de retorno de chamada implementadas pelo IDE](../extensibility/callback-functions-implemented-by-the-ide.md)
 - [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)
 - [Códigos de erro](../extensibility/error-codes.md)

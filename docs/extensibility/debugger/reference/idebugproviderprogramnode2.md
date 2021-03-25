@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProviderProgramNode2
 ms.assetid: f0bca1cc-afbe-44cf-b5aa-d078aa685d24
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a615c076fd34d7bc230efb0f36683b7167b66566
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 3d09046d70d6bc766d17963ea4cdd6469c0981fb
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102167848"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105083668"
 ---
 # <a name="idebugproviderprogramnode2"></a>IDebugProviderProgramNode2
 Essa interface empacota interfaces relacionadas a programas entre limites de processo.
