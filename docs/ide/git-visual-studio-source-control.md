@@ -49,7 +49,7 @@ A integração do git no Visual Studio promove a confiança e a confiança forne
 
 Para saber mais sobre como usar o git e o GitHub no Visual Studio, Assista ao seguinte vídeo do YouTube: [introdução ao git no Visual Studio](https://www.youtube.com/watch?v=GCZ9x3yqkyc&list=PLReL099Y5nRc-zbaFbf0aNcIamBQujOxP)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [A nova experiência de git no Visual Studio](git-with-visual-studio.md)
 - [Compare o git e o Team Explorer lado a lado](git-team-explorer-feature-comparison.md)

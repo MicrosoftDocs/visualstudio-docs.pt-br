@@ -45,7 +45,7 @@ O Visual Studio para Mac dá suporte à adição de várias contas a sua conta d
 
 Para adicionar contas de usuário adicionais, siga as etapas na seção [Como entrar no Visual Studio para Mac](#how-to-sign-in-to-visual-studio-for-mac).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Entrar no Visual Studio (no Windows)](/visualstudio/ide/signing-in-to-visual-studio)
 - [Trabalhar com várias contas de usuário (Visual Studio no Windows)](/visualstudio/ide/work-with-multiple-user-accounts)

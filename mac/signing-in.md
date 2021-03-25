@@ -62,7 +62,7 @@ Para adicionar contas de usuário adicionais, escolha o menu **Visual Studio > C
 
 3. Quando terminar, escolha **Salvar alterações**.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Entrar no Visual Studio (no Windows)](/visualstudio/ide/signing-in-to-visual-studio)
 - [Trabalhar com várias contas de usuário (Visual Studio no Windows)](/visualstudio/ide/work-with-multiple-user-accounts)
