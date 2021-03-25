@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBreakpointRequest3
 ms.assetid: 8a042beb-b319-48e3-b3c8-9c8336ab371b
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 628a68cf6712e6863550d85a5f876afbe1b6bdb5
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 6803b62975822f1b5219caa43844c8983303a998
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102150738"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105054407"
 ---
 # <a name="idebugbreakpointrequest3"></a>IDebugBreakpointRequest3
 Essa interface representa as informações necessárias para criar e associar qualquer tipo de ponto de interrupção. É uma extensão de [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md).

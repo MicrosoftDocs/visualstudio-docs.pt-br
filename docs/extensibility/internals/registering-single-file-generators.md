@@ -8,17 +8,17 @@ helpviewer_keywords:
 - registration, custom tools
 - custom tools, defining registry settings
 ms.assetid: db7592c0-1273-4843-9617-6e2ddabb6ca8
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6b2cb27baaca465096a14c836b0dfc7ebc43d42e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ee110defb06d308c017230a36cebc2b04b3c63b9
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837229"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062675"
 ---
 # <a name="registering-single-file-generators"></a>Registrando geradores de arquivo único
 Para disponibilizar uma ferramenta personalizada no [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , você deve registrá-la para que [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] possa instanciá-la e o associe a um determinado tipo de projeto.
@@ -46,11 +46,11 @@ Para disponibilizar uma ferramenta personalizada no [!INCLUDE[vsprvs](../../code
 
    - CLSID
 
-        Obrigatório. Especifica o identificador da biblioteca de classes do componente COM que implementa <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> .
+        Obrigatórios. Especifica o identificador da biblioteca de classes do componente COM que implementa <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> .
 
    - GeneratesDesignTimeSource
 
-        Obrigatório. Indica se os tipos de arquivos produzidos por essa ferramenta personalizada são disponibilizados para designers visuais. O valor desse parâmetro precisa ser (zero) 0 para tipos não disponíveis para designers visuais ou (um) 1 para tipos disponíveis para designers visuais.
+        Obrigatórios. Indica se os tipos de arquivos produzidos por essa ferramenta personalizada são disponibilizados para designers visuais. O valor desse parâmetro precisa ser (zero) 0 para tipos não disponíveis para designers visuais ou (um) 1 para tipos disponíveis para designers visuais.
 
    > [!NOTE]
    > Você deve registrar a ferramenta personalizada separadamente para cada idioma para o qual você deseja que a ferramenta personalizada esteja disponível.
@@ -69,7 +69,7 @@ Para disponibilizar uma ferramenta personalizada no [!INCLUDE[vsprvs](../../code
    "GeneratesDesignTimeSource"=dword:00000001
    ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>
 - [Implementando geradores de arquivo único](../../extensibility/internals/implementing-single-file-generators.md)
 - [Expondo tipos para designers visuais](../../extensibility/internals/exposing-types-to-visual-designers.md)

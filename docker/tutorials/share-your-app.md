@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 676668b1247377597bed55b293efb8ad8b5cd253
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad9f7d329bf00e3fadd665cefea22a2301fdf695
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841699"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061778"
 ---
 # <a name="share-your-app"></a>Compartilhar seu aplicativo
 
@@ -24,7 +24,7 @@ Agora que criamos uma imagem, vamos compartilhar! Para compartilhar imagens do D
 
 Para enviar uma imagem por push, primeiro, você precisa criar um repositório no Hub do Docker.
 
-1. Vá para o [Hub do Docker](https://hub.docker.com) e faça logon se necessário.
+1. Vá para o [Hub do Docker](https://hub.docker.com/signup/msftedge?utm_source=msftedge) e faça logon se necessário.
 
 1. Clique no botão **criar repositório** .
 

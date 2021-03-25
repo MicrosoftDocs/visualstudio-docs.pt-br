@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Add New Project dialog box
 - registry, Add New Project dialog box
 ms.assetid: 6b909f93-d7f5-4aec-81c6-ee9ff0f31638
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: cc268236a10ab3f6be660b0e69a82a8f656f8910
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d6f4abe3a8632f4fe9208922aee1ccd92da3dab5
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837230"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062688"
 ---
 # <a name="registering-project-and-item-templates"></a>Registrando modelos de projeto e item
 Os tipos de projeto devem registrar os diretórios em que os modelos de projeto e de item de projeto estão localizados. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] usa as informações de registro associadas aos tipos de projeto para determinar o que mostrar nas caixas de diálogo **Adicionar novo projeto** e **Adicionar novo item** .
@@ -118,7 +118,7 @@ Os tipos de projeto devem registrar os diretórios em que os modelos de projeto 
 
  \WizardFiles
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Adicionando o projeto e os modelos de item do projeto](../../extensibility/internals/adding-project-and-project-item-templates.md)
 - [Assistentes](../../extensibility/internals/wizards.md)

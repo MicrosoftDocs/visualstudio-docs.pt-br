@@ -9,17 +9,17 @@ helpviewer_keywords:
 - editors [Visual Studio SDK], opening project-specific editors
 - projects [Visual Studio SDK], opening folders
 ms.assetid: 83e56d39-c97b-4c6b-86d6-3ffbec97e8d1
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 719460b36f926df19e76db1aab4e90b4d959fdc0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b8fa68ff628212a207f860a3f9e6eca960481ee9
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850488"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105069875"
 ---
 # <a name="how-to-open-project-specific-editors"></a>Como: abrir editores específicos do projeto
 Se um arquivo de item que está sendo aberto por um projeto estiver associado intrinsecamente ao editor específico desse projeto, o projeto deverá abrir o arquivo usando um editor específico do projeto. Não é possível delegar o arquivo para o mecanismo do IDE para selecionar um editor. Por exemplo, em vez de usar um editor de bitmap padrão, você pode usar essa opção de editor específica do projeto para especificar um editor de bitmap específico que reconheça as informações no arquivo que é exclusivo para seu projeto.
@@ -53,7 +53,7 @@ Se um arquivo de item que está sendo aberto por um projeto estiver associado in
 
 6. Chame o <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A> método para mostrar e abrir o modo de exibição.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Abrir e salvar itens de projeto](../extensibility/internals/opening-and-saving-project-items.md)
 - [Como: abrir editores padrão](../extensibility/how-to-open-standard-editors.md)
 - [Como abrir editores para documentos abertos](../extensibility/how-to-open-editors-for-open-documents.md)

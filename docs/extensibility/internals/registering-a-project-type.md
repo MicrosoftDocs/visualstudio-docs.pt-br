@@ -9,17 +9,17 @@ helpviewer_keywords:
 - registry, new project types
 - registration, new project types
 ms.assetid: dfc0e231-6b4e-447d-9d64-0e66dea3394a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 893f59aa9e99d990623e0c8383c12bbffbc4a510
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e54f62a90ece61fc2dd8f3cc2b242957f249ed33
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944505"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062766"
 ---
 # <a name="registering-a-project-type"></a>Registrando um tipo de projeto
 Ao criar um novo tipo de projeto, você deve criar entradas de registro que habilitam [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] o para reconhecer e trabalhar com o tipo de projeto. Normalmente, você cria essas entradas de registro usando um arquivo de script do registro (. rgs).
@@ -149,7 +149,7 @@ Ao criar um novo tipo de projeto, você deve criar entradas de registro que habi
 
  A tabela a seguir mostra as opções de filtros disponíveis no segmento de código anterior.
 
-|Opção de filtro|Description|
+|Opção de filtro|Descrição|
 |-------------------|-----------------|
 |`CommonFindFilesFilter`|Indica que o filtro é um dos filtros comuns na caixa de diálogo **localizar nos arquivos** . Os filtros comuns são listados na lista de filtros antes que os filtros não sejam marcados como comuns.|
 |`CommonOpenFilesFilter`|Indica que o filtro é um dos filtros comuns na caixa de diálogo **Abrir arquivo** . Os filtros comuns são listados na lista de filtros antes que os filtros não sejam marcados como comuns.|
@@ -266,7 +266,7 @@ Ao criar um novo tipo de projeto, você deve criar entradas de registro que habi
 
  Isso significa que se você incluir uma entrada PROJECT_TYPE = EF no arquivo. vsz, o ambiente localizará os arquivos. vsz no diretório ProductDir especificado anteriormente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Lista de verificação: Criando tipos de projeto](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [Elementos de um modelo de projeto](../../extensibility/internals/elements-of-a-project-model.md)
 - [Criando instâncias de projeto por meio de fábricas de projeto](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)

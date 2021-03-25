@@ -9,17 +9,17 @@ helpviewer_keywords:
 - language services, registry information
 - registry, language services
 ms.assetid: ca312aa3-f9f1-4572-8553-89bf3a724deb
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d08552683ce61892b0ee233173466a79326e4c6f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fbad469b28c0b8a6aab070d47cf12c326beb92d8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894849"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062779"
 ---
 # <a name="registering-a-legacy-language-service-2"></a>Registrando um serviço de idioma herdado 2
 As seções a seguir fornecem listas de entradas de registro para as várias opções de serviço de linguagem disponíveis no [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
@@ -29,7 +29,7 @@ As seções a seguir fornecem listas de entradas de registro para as várias op�
 ## <a name="registry-entries-for-language-service-options"></a>Entradas de registro para opções de serviço de idioma
  A chave do nome do idioma dos serviços \Languages\Languages *raiz vs reg* \\  pode conter os valores a seguir.
 
-|Nome|Tipo|Intervalo|Descrição|
+|Nome|Type|Intervalo|Descrição|
 |----------|----------|-----------|-----------------|
 |(Padrão)|REG_SZ|*\<GUID>*|GUID do serviço de idioma.|
 |LangResID|REG_DWORD|0x0-0xFFFF|ResID (identificador de recurso de cadeia de caracteres) para o nome de texto localizado do idioma.|
@@ -66,7 +66,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-debugger-languages-options"></a>Entradas de registro para opções de idiomas do depurador
  O nome do idioma dos serviços \Languages\Languages *raiz vs reg* \\ \Debugger *Languages* \\ *GUID*\ Key pode incluir os valores a seguir.
 
-|Nome|Tipo|Intervalo|Descrição|
+|Nome|Type|Intervalo|Descrição|
 |----------|----------|-----------|-----------------|
 |(Padrão)|REG_SZ|text|O valor padrão pode ser usado para documentar o nome do idioma. O nome dessa chave é um GUID de um avaliador de expressão que tem uma entrada correspondente no *\<VS Reg Root>* avaliador \AD7Metrics\Expression.|
 
@@ -85,7 +85,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-editor-tools-options"></a>Entradas de registro para opções de ferramentas do editor
  Você pode adicionar chaves do registro na chave EditorToolsOptions para páginas de propriedades e nós de propriedade. Essas chaves e seus valores identificam páginas de propriedades na caixa de diálogo **Opções** (no menu **ferramentas** ) que são usadas para configurar o serviço de idioma. No exemplo a seguir, *nome da página* é o nome de uma página de propriedades e *nome do nó* é o nome de um nó na árvore na caixa de diálogo **Opções** . A entrada de página e a entrada de nó devem ser especificadas separadamente.
 
-|Nome|Tipo|Intervalo|Descrição|
+|Nome|Type|Intervalo|Descrição|
 |----------|----------|-----------|-----------------|
 |(Padrão)|REG_SZ|ResID|O nome de exibição localizado desta página de opções. O nome pode ser um texto literal, ou # `nnn` , em que `nnn` é uma ID de recurso de cadeia de caracteres na DLL satélite do VSPackage especificado.|
 |Pacote|REG_SZ|*GUID*|O GUID do VSPackage que implementa essa página de opções.|
@@ -119,7 +119,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-file-name-extension-options"></a>Entradas de registro para opções de extensão de nome de arquivo
  A entrada para a extensão de arquivo deve incluir o período à esquerda, por exemplo ". myext".
 
-|Nome|Tipo|Intervalo|Descrição|
+|Nome|Type|Intervalo|Descrição|
 |----------|----------|-----------|-----------------|
 |(Padrão)|REG_SZ|*GUID*|GUID de serviço para o serviço de idioma padrão para este tipo de extensão de nome de arquivo.|
 
@@ -136,7 +136,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-editor-options"></a>Entradas do registro para opções do editor
  A chave \Editors do *vs reg raiz* pode conter os seguintes valores:
 
-|Nome|Tipo|Intervalo|Descrição|
+|Nome|Type|Intervalo|Descrição|
 |----------|----------|-----------|-----------------|
 |(Padrão)|REG_SZ|""|Não utilizado Você pode colocar seu nome aqui para documentação.|
 |DefaultToolboxTab|REG_SZ|""|Nome da guia caixa de ferramentas para tornar o padrão quando o editor estiver ativo.|
@@ -161,7 +161,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-logical-view-options"></a>Entradas de registro para opções de exibição lógica
  A GUI do editor \Editors do *vs reg raiz* \\ *>* chave \LogicalViews pode conter os valores a seguir.
 
-|Nome|Tipo|Intervalo|Descrição|
+|Nome|Type|Intervalo|Descrição|
 |----------|----------|-----------|-----------------|
 |(Padrão)|REG_SZ||Não utilizado.|
 |*\<GUID>*|REG_SZ|""|Chave para as exibições lógicas com suporte. Você pode ter quantas delas forem necessárias. O nome da entrada do registro é o que é importante, não o valor, que é sempre uma cadeia de caracteres vazia.|
@@ -183,7 +183,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-editor-extension-options"></a>Entradas de registro para opções de extensão do editor
  A chave \Extensions do GUID do editor \Editors do *vs reg raiz* \\ pode conter os valores a seguir. A extensão de nome de arquivo não inclui o período à esquerda.
 
-|Nome|Tipo|Intervalo|Descrição|
+|Nome|Type|Intervalo|Descrição|
 |----------|----------|-----------|-----------------|
 |(Padrão)|REG_SZ||Não utilizado.|
 |*\<ext>*|REG_DWORD|0-0xFFFFFFFF|Prioridade relativa de extensões. Se dois ou mais idiomas compartilharem a mesma extensão, a linguagem de prioridade mais alta será escolhida.|
@@ -209,7 +209,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0\
 
  Essas entradas de registro são acessadas por meio da <xref:Microsoft.VisualStudio.Package.LanguagePreferences> classe.
 
-|Nome|Tipo|Intervalo|Descrição|
+|Nome|Type|Intervalo|Descrição|
 |----------|----------|-----------|-----------------|
 |CodeSense|REG_DWORD|0-1|Suporte para operações do IntelliSense.|
 |MatchBraces|REG_DWORD|0-1|Suporte para pares de idiomas correspondentes, como chaves, parênteses e colchetes.|
