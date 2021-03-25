@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - FIELD_KIND enumeration
 ms.assetid: fd522b9c-52e2-42fa-939d-343347d5c3b1
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 519b18f9e4b0329ded9b17ec0152f36e37377df0
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 2476b819d940b5fb6014d00e1bdf920f02a46696
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102150855"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105085202"
 ---
 # <a name="field_kind"></a>FIELD_KIND
 Especifica o tipo de campo contido em um objeto [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) .

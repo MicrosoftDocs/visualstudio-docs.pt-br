@@ -10,15 +10,15 @@ helpviewer_keywords:
 - localize package
 - localize extension
 ms.assetid: 2a2932bc-cdbe-4d32-91fa-a3e0474f9098
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
-ms.openlocfilehash: 5a12fe1be4030332e804f38cee1e0eb646356d79
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0e7107cb90a79e8cd1a052cd73706d95a782781d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971863"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062272"
 ---
 # <a name="vsix-language-pack-schema-20-reference"></a>Referência do esquema 2,0 do pacote de idiomas do VSIX
 
@@ -65,7 +65,7 @@ Dentro do `<Metadata>` elemento, você pode ter os seguintes elementos:
 </PackageLanguagePackManifest>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 |Título|Descrição|
 |-----------|-----------------|

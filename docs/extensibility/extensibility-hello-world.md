@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 03/14/2019
 ms.topic: tutorial
 ms.assetid: f74e1ad1-1ee5-4360-9bd5-d82467b884ca
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e943da6745832cbe59cfe94013650a503265636
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ec465eda5a0bd7d017c3822390d68b43f76b5c47
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903286"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070174"
 ---
 # <a name="tutorial---create-your-first-extension-hello-world"></a>Tutorial – Crie sua primeira extensão: Olá, Mundo
 
@@ -26,7 +26,7 @@ No processo, você aprenderá a:
 * **[Criar um projeto de extensibilidade](#create-an-extensibility-project)**
 * **[Adicionar um comando personalizado](#add-a-custom-command)**
 * **[Modificar o código-fonte](#modify-the-source-code)**
-* **[Execute-o.](#run-it)**
+* **[Execute-o](#run-it)**
 
 Para este exemplo, você usará o Visual C# para adicionar um botão de menu personalizado chamado "Diga Olá, Mundo!" Isso se parece com este:
 
@@ -78,7 +78,7 @@ Etapa 2. Clique com o botão direito do mouse no projeto (não na solução). No
 
 Etapa 3. Selecione a seção **extensibilidade** e, em seguida, escolha **comando**.
 
-Etapa 4. No campo **nome** na parte inferior, insira um nome de arquivo, como *Command.cs*.
+Etapa 4. No campo **nome** na parte inferior, insira um nome de arquivo, como *Command. cs*.
 
 ![comando personalizado](media/hello-world-vsix-command.png)
 
@@ -120,7 +120,7 @@ Etapa 2. Altere o `ButtonText` parâmetro para `Say Hello World!` .
   ...
 ```
 
-Etapa 3. Volte para **Gerenciador de soluções** e localize o arquivo *Command.cs* . No `Execute` método, altere a cadeia `message` de caracteres de `string.Format(..)` para `Hello World!` .
+Etapa 3. Volte para **Gerenciador de soluções** e localize o arquivo *Command. cs* . No `Execute` método, altere a cadeia `message` de caracteres de `string.Format(..)` para `Hello World!` .
 
 ```csharp
   ...

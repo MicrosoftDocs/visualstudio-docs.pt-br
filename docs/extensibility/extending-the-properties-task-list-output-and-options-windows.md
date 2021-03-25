@@ -12,17 +12,17 @@ helpviewer_keywords:
 - tutorials
 - tool windows
 ms.assetid: 06990510-5424-44b8-9fd9-6481acec5c76
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2586618b16afa8f8bfd6b7aa529486adf1d9ce41
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 970ab167434da4ba9c28eb6bbf9a8ea5f6cc6af0
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99938129"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070135"
 ---
 # <a name="extend-the-properties-task-list-output-and-options-windows"></a>Estenda as propriedades, Lista de Tarefas, saída e opções do Windows
 Você pode acessar qualquer janela de ferramentas no Visual Studio. Este tutorial mostra como integrar informações sobre a janela da ferramenta em uma nova página **Opções** e uma nova configuração na página **Propriedades** e também como gravar nas janelas **lista de tarefas** e **saída** .
@@ -63,13 +63,13 @@ Você pode acessar qualquer janela de ferramentas no Visual Studio. Este tutoria
 
 ### <a name="customize-the-constructor"></a>Personalizar o Construtor
 
-1. No arquivo *TodoWindowControl.XAML.cs* , adicione a seguinte diretiva using:
+1. No arquivo *TodoWindowControl. XAML. cs* , adicione o seguinte usando a diretiva:
 
     ```csharp
     using System;
     ```
 
-2. Adicione uma referência pública ao TodoWindow e faça com que o Construtor TodoWindowControl use um parâmetro TodoWindow. O código deve ser assim:
+2. Adicione uma referência pública ao TodoWindow e faça com que o Construtor TodoWindowControl use um parâmetro TodoWindow. Seu código deve ficar assim:
 
     ```csharp
     public TodoWindow parent;
@@ -81,7 +81,7 @@ Você pode acessar qualquer janela de ferramentas no Visual Studio. Este tutoria
     }
     ```
 
-3. Em *TodoWindow.cs*, altere o Construtor TodoWindowControl para incluir o parâmetro TodoWindow. O código deve ser assim:
+3. No *TodoWindow. cs*, altere o Construtor TodoWindowControl para incluir o parâmetro TodoWindow. Seu código deve ficar assim:
 
     ```csharp
     public TodoWindow() : base(null)
@@ -95,7 +95,7 @@ Você pode acessar qualquer janela de ferramentas no Visual Studio. Este tutoria
     ```
 
 ## <a name="create-an-options-page"></a>Criar uma página de opções
- Você pode fornecer uma página na caixa de diálogo **Opções** para que os usuários possam alterar as configurações da janela de ferramentas. A criação de uma página de opções requer uma classe que descreva as opções e uma entrada no arquivo *TodoListPackage.cs* ou *TodoListPackage. vb* .
+ Você pode fornecer uma página na caixa de diálogo **Opções** para que os usuários possam alterar as configurações da janela de ferramentas. A criação de uma página de opções requer uma classe que descreva as opções e uma entrada no arquivo *TodoListPackage. cs* ou *TodoListPackage. vb* .
 
 1. Adicione uma classe chamada `ToolsOptions.cs`. Faça a `ToolsOptions` herança da classe <xref:Microsoft.VisualStudio.Shell.DialogPage> .
 
@@ -127,7 +127,7 @@ Você pode acessar qualquer janela de ferramentas no Visual Studio. Este tutoria
 
 ### <a name="make-the-options-page-available-to-users"></a>Tornar a página de opções disponível para os usuários
 
-1. No *TodoWindowPackage.cs*, adicione uma <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> à `TodoWindowPackage` classe:
+1. Em *TodoWindowPackage. cs*, adicione um <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> à `TodoWindowPackage` classe:
 
     ```csharp
     [ProvideOptionPage(typeof(ToolsOptions), "ToDo", "General", 101, 106, true)]
@@ -152,7 +152,7 @@ Você pode acessar qualquer janela de ferramentas no Visual Studio. Este tutoria
 
      ![Janela Propriedades](../extensibility/media/t5properties.png "T5Properties")
 
-2. Adicione o seguinte usando as diretivas do arquivo *TodoItem.cs* .
+2. Adicione o seguinte usando as diretivas do arquivo *TodoItem. cs* .
 
     ```csharp
     using System.ComponentModel;
@@ -232,7 +232,7 @@ Você pode acessar qualquer janela de ferramentas no Visual Studio. Este tutoria
     }
     ```
 
-5. Como as instâncias da `TodoItem` classe serão armazenadas na caixa de listagem e a caixa de listagem chamará a `ToString` função, você deve sobrecarregar a `ToString` função. Adicione o seguinte código a *TodoItem.cs*, após o construtor e antes do final da classe.
+5. Como as instâncias da `TodoItem` classe serão armazenadas na caixa de listagem e a caixa de listagem chamará a `ToString` função, você deve sobrecarregar a `ToString` função. Adicione o código a seguir a *TodoItem. cs*, após o construtor e antes do final da classe.
 
     ```csharp
     public override string ToString()
@@ -241,7 +241,7 @@ Você pode acessar qualquer janela de ferramentas no Visual Studio. Este tutoria
     }
     ```
 
-6. No *TodoWindowControl.XAML.cs*, adicione métodos stub à `TodoWindowControl` classe para os `CheckForError` métodos e `UpdateList` . Coloque-os após ProcessDialogChar e antes do final do arquivo.
+6. Em *TodoWindowControl. XAML. cs*, adicione métodos stub à `TodoWindowControl` classe para os `CheckForError` métodos e `UpdateList` . Coloque-os após ProcessDialogChar e antes do final do arquivo.
 
     ```csharp
     public void CheckForErrors()
@@ -285,7 +285,7 @@ Você pode acessar qualquer janela de ferramentas no Visual Studio. Este tutoria
     }
     ```
 
-4. Adicione as seguintes diretivas using ao *TodoWindowControl.XAML.cs*:
+4. Adicione as seguintes diretivas using a *TodoWindowControl. XAML. cs*:
 
     ```csharp
     using System.Runtime.InteropServices;
@@ -353,7 +353,7 @@ Você pode acessar qualquer janela de ferramentas no Visual Studio. Este tutoria
 
      Agora que você tem uma classe que a janela **Propriedades** pode usar, você pode integrar a janela **Propriedades** com a janela de ferramentas. Quando o usuário clica em um item na caixa de listagem na janela de ferramentas, a janela **Propriedades** deve ser atualizada de acordo. Da mesma forma, quando o usuário altera um item de tarefas pendentes na janela **Propriedades** , o item associado deve ser atualizado.
 
-7. Agora, adicione o restante do código da função UpdateList em *TodoWindowControl.XAML.cs*. Ele deve descartar e adicionar novamente o TodoItem modificado da caixa de listagem.
+7. Agora, adicione o restante do código da função UpdateList em *TodoWindowControl. XAML. cs*. Ele deve descartar e adicionar novamente o TodoItem modificado da caixa de listagem.
 
     ```csharp
     public void UpdateList(TodoItem item)
@@ -378,7 +378,7 @@ Você pode acessar qualquer janela de ferramentas no Visual Studio. Este tutoria
 ## <a name="add-text-to-the-output-window-and-items-to-the-task-list"></a>Adicionar texto à janela de saída e itens à Lista de Tarefas
  Para o **lista de tarefas**, você cria um novo objeto do tipo tarefa e, em seguida, adiciona esse objeto de tarefa ao **lista de tarefas** chamando seu `Add` método. Para gravar na janela de **saída** , você chama seu `GetPane` método para obter um objeto de painel e, em seguida, chama o `OutputString` método do objeto de painel.
 
-1. Em *TodoWindowControl.XAML.cs*, no `button1_Click` método, adicione o código para obter o painel **geral** da janela de **saída** (que é o padrão) e grave nela. O método deverá ter esta aparência:
+1. Em *TodoWindowControl. XAML. cs*, no `button1_Click` método, adicione o código para obter o painel **geral** da janela de **saída** (que é o padrão) e grave nela. O método deverá ter esta aparência:
 
     ```csharp
     private void button1_Click(object sender, EventArgs e)
@@ -418,7 +418,7 @@ Você pode acessar qualquer janela de ferramentas no Visual Studio. Este tutoria
     }
     ```
 
-3. Em seguida, adicione uma referência privada a `TodoTaskProvider` e um `CreateProvider()` método à `TodoWindowControl` classe. O código deve ser assim:
+3. Em seguida, adicione uma referência privada a `TodoTaskProvider` e um `CreateProvider()` método à `TodoWindowControl` classe. Seu código deve ficar assim:
 
     ```csharp
     private TodoWindowTaskProvider taskProvider;

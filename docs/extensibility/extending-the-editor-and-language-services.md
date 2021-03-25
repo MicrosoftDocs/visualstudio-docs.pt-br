@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new -
 ms.assetid: 8d04f8db-eda7-4b3e-b6eb-c06df104502a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 81b1e46db4f38f37296798a645d6547cdd6f017f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8d85b018b4e0ea7d5ed1c91e617afcb2759d49b8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895720"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070109"
 ---
 # <a name="extend-the-editor-and-language-services"></a>Estenda os serviços de editor e linguagem
 Você pode adicionar recursos de serviço de linguagem (como IntelliSense) ao seu próprio editor e estender a maioria dos recursos do editor de código do Visual Studio.  Para obter uma lista completa do que você pode estender, consulte [serviço de linguagem e pontos de extensão do editor](../extensibility/language-service-and-editor-extension-points.md).
@@ -30,7 +30,7 @@ Você pode adicionar recursos de serviço de linguagem (como IntelliSense) ao se
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Title|Descrição|
+|Título|Descrição|
 |-----------|-----------------|
 |[Introdução ao serviço de linguagem e às extensões do editor](../extensibility/getting-started-with-language-service-and-editor-extensions.md)|Explica como criar uma extensão para o editor.|
 |[Dentro do editor](../extensibility/inside-the-editor.md)|Descreve a estrutura geral do editor e lista alguns de seus recursos.|

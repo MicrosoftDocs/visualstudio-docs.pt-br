@@ -7,17 +7,17 @@ helpviewer_keywords:
 - ContingentProperties class [.NET Framework debug engines]
 - debug engines, ContingentProperties class [.NET Framework]
 ms.assetid: c49d1362-ab1c-4b6d-9950-fcae40e0e66b
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2303318c7a5f36027ce7709c5b09b5846fc6fab6
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 295b8c3b33059811e665e362c9894103b47c422d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102154971"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105054992"
 ---
 # <a name="contingentproperties-class---internal-members"></a>Classe contingentproperties-membros internos
 Contém propriedades adicionais para um <xref:System.Threading.Tasks.Task> objeto.

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - status bars, about status bars
 - status bars, overview
 ms.assetid: f955115c-4c5f-45ec-b41b-365868c5ec0c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7776c7fa35cd7ac06dec60ced3604cb67c96da4a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5ab87f9c8b54d9c31466068668eb8dd5a1857a06
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903192"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070096"
 ---
 # <a name="extend-the-status-bar"></a>Estender a barra de status
 Você pode usar a barra de status do Visual Studio na parte inferior do IDE para exibir informações.
@@ -36,7 +36,7 @@ Você pode usar a barra de status do Visual Studio na parte inferior do IDE para
 
 1. Crie um projeto VSIX chamado **TestStatusBarExtension** e adicione um comando de menu chamado **TestStatusBarCommand**.
 
-2. No *TestStatusBarCommand.cs*, substitua o código do método do manipulador de comandos ( `MenuItemCallback` ) pelo seguinte:
+2. No *TestStatusBarCommand. cs*, substitua o código do método do manipulador de comandos ( `MenuItemCallback` ) pelo seguinte:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -80,7 +80,7 @@ Você pode usar a barra de status do Visual Studio na parte inferior do IDE para
 
 1. Neste procedimento, mostraremos como inicializar e atualizar a barra de progresso.
 
-2. Abra o arquivo *TestStatusBarCommand.cs* e substitua o `MenuItemCallback` método pelo código a seguir:
+2. Abra o arquivo *TestStatusBarCommand. cs* e substitua o `MenuItemCallback` método pelo código a seguir:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -118,7 +118,7 @@ Você pode usar a barra de status do Visual Studio na parte inferior do IDE para
 
      Neste procedimento, exibimos a animação padrão do Visual Studio que representa a criação de um projeto ou uma solução.
 
-2. Abra o arquivo *TestStatusBarCommand.cs* e substitua o `MenuItemCallback` método pelo código a seguir:
+2. Abra o arquivo *TestStatusBarCommand. cs* e substitua o `MenuItemCallback` método pelo código a seguir:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)

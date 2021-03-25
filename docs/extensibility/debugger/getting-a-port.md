@@ -8,17 +8,17 @@ helpviewer_keywords:
 - ports, getting
 - debugging [Debugging SDK], ports
 ms.assetid: 745c2337-cfff-4d02-b49c-3ca7c4945c5e
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1f3ee9c145a4c6275f64d357d87ac1cc284bfac6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7b2d9c58f9a2e58e58fce44cb06827e9039e48c9
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99921297"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105054862"
 ---
 # <a name="get-a-port"></a>Obter uma porta
 Uma porta representa uma conexão com um computador no qual os processos estão em execução. Esse computador pode ser o computador local ou um computador remoto (que poderia estar executando um sistema operacional não baseado no Windows; consulte [portas](../../extensibility/debugger/ports.md) para obter mais informações).
