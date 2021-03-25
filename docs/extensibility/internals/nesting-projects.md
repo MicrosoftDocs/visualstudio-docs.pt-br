@@ -10,17 +10,17 @@ helpviewer_keywords:
 - projects [Visual Studio SDK], child projects
 - projects [Visual Studio SDK], nesting
 ms.assetid: 12cce037-9840-4761-845e-5abd5fb317b0
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 306099f1fc65a211943e4fb25a5cd73ad6195ea2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 30b562cac794b7ab960f055fe67a5d0cc4ec871f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895668"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105063209"
 ---
 # <a name="nesting-projects"></a>Aninhando projetos
 Os desenvolvedores de aplicativos empresariais que usam o pacote do VS podem, de forma conveniente, agrupar tipos semelhantes de projetos no [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] usando o *aninhamento de projetos*. Por exemplo, o projeto de modelo empresarial usa projetos aninhados para agrupar projetos em categorias. Projetos de fachada de negócios, projetos de interface do usuário da Web e assim por diante são agrupados em uma categoria.

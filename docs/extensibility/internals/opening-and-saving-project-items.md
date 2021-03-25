@@ -9,17 +9,17 @@ helpviewer_keywords:
 - files [Visual Studio], opening and saving
 - editors [Visual Studio SDK], file persistence
 ms.assetid: f71898ad-335f-4c43-a177-4da87078afd1
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: df851f304cd6c62e1447f791a23618a6de5cb0bc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6ff3c76294ce99fa5eeb7bf311307e54f5d0e6cc
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895590"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105063065"
 ---
 # <a name="opening-and-saving-project-items"></a>Abrindo e salvando itens de projeto
 Ao adicionar um novo tipo de projeto, você deve gerenciar a abertura e o salvamento de seus arquivos de projetos no [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ambiente de desenvolvimento integrado (IDE). Os tópicos a seguir discutem as diferentes abordagens para abrir e salvar arquivos.

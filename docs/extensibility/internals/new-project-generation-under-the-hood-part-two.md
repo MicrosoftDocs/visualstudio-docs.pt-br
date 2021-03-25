@@ -7,17 +7,17 @@ helpviewer_keywords:
 - projects [Visual Studio], new project dialog
 - projects [Visual Studio], new project generation
 ms.assetid: 73ce91d8-0ab1-4a1f-bf12-4d3c49c01e13
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7891cb6a40e6b7de48ba11871688881625b9c68d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e391ad66c9925dc68997ff610dc5d1556ddf09b2
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895603"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105063078"
 ---
 # <a name="new-project-generation-under-the-hood-part-two"></a>Geração de novo projeto: Bastidores, parte dois
 
@@ -31,7 +31,7 @@ Em [nova geração de projeto: nos bastidores, parte 1](../../extensibility/inte
 ### <a name="template-parameter-replacement"></a>Substituição de parâmetro de modelo
  Quando o modelo copia um modelo de item para um novo projeto, ele substitui todos os parâmetros de modelo por cadeias de caracteres para personalizar o arquivo. Um parâmetro de modelo é um token especial que é precedido e seguido por um cifrão, por exemplo, $date $.
 
- Vamos examinar um modelo de item de projeto típico. Extraia e examine Program.cs na pasta Program Files\Microsoft Visual Studio 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip.
+ Vamos examinar um modelo de item de projeto típico. Extraia e examine Program. cs na pasta Program Files\Microsoft Visual Studio 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip.
 
 ```csharp
 using System;
@@ -130,7 +130,7 @@ namespace Simple
  Isso instrui o novo modelo de projeto a criar o arquivo de projeto simples. csproj copiando e personalizando o item de modelo WindowsApplication. csproj.
 
 ### <a name="designers-and-references"></a>Designers e referências
- Você pode ver na Gerenciador de Soluções que a pasta Propriedades está presente e contém os arquivos esperados. Mas e as referências de projeto e as dependências de arquivo de designer, como Resources.Designer.cs para Resources. resx e Form1.Designer.cs para Form1.cs?  Eles são configurados no arquivo. csproj simples quando ele é gerado.
+ Você pode ver na Gerenciador de Soluções que a pasta Propriedades está presente e contém os arquivos esperados. Mas e as referências de projeto e as dependências de arquivo de designer, como Resources. designer. cs a Resources. resx e Form1. designer. cs como Form1. cs?  Eles são configurados no arquivo. csproj simples quando ele é gerado.
 
  Aqui está o \<ItemGroup> de Simple. csproj que cria as referências do projeto:
 
@@ -145,7 +145,7 @@ namespace Simple
 </ItemGroup>
 ```
 
- Você pode ver que essas são as seis referências de projeto que aparecem na Gerenciador de Soluções. Aqui está uma seção de outra \<ItemGroup> . Muitas linhas de código foram excluídas para fins de clareza. Esta seção torna o Settings.Designer.cs dependente das configurações. configurações:
+ Você pode ver que essas são as seis referências de projeto que aparecem na Gerenciador de Soluções. Aqui está uma seção de outra \<ItemGroup> . Muitas linhas de código foram excluídas para fins de clareza. Esta seção torna o Settings. designer. cs dependente de Settings. Settings:
 
 ```xml
 <ItemGroup>

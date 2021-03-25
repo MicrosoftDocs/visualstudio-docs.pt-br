@@ -9,17 +9,17 @@ helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluation
 ms.assetid: f9381b2f-99aa-426c-aea0-d9c15f3c859b
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4addc7b1f62c7528e845b34842c0fd85ba66148a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6876bea4174df7f5ac293ea0d470f5922d7492d8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99921402"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105055018"
 ---
 # <a name="expression-evaluator"></a>Avaliador de expressão
 Os avaliadores de expressão (EE) examinam a sintaxe de um idioma para analisar e avaliar variáveis e expressões em tempo de execução, permitindo que eles sejam exibidos pelo usuário quando o IDE estiver no modo de interrupção.
