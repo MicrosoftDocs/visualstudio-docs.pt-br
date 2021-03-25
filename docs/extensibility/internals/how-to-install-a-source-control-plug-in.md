@@ -8,17 +8,17 @@ helpviewer_keywords:
 - installation [Visual Studio SDK], source control plug-ins
 - source control plug-ins, installing
 ms.assetid: 9e2e01d9-7beb-42b2-99b2-86995578afda
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ad5b77176d05c28b3ba938a1255de6e10fcd7094
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4a0798cb7763ff2766d2de2bb00a80759be8fd3e
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912756"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078806"
 ---
 # <a name="how-to-install-a-source-control-plug-in"></a>Como instalar um plug-in de controle do código-fonte
 A criação de um plug-in de controle de origem envolve três etapas:
@@ -118,5 +118,5 @@ A criação de um plug-in de controle de origem envolve três etapas:
 
  Se ambas as condições forem atendidas, as novas funções com suporte nas versões 1,2 e 1,3 poderão ser chamadas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Introdução aos plug-ins de controle do código-fonte](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - views [Visual Studio SDK], VSCodeWindow object
 - VsCodeWindow object
 ms.assetid: cf5fe926-e784-4098-bc01-cac49c7c55c6
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6b324c0b572f025b3733233d70cf36485f90524c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 77839bf80f30de3177f647795ffb89aa3e103d58
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925853"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062415"
 ---
 # <a name="vscodewindow-object"></a>Objeto VSCodeWindow
 Uma janela de código é uma janela de documento especializada que pode incluir uma ou mais exibições de texto, geralmente o <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> objeto.

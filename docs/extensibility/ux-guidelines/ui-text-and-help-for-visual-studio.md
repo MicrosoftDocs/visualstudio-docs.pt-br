@@ -4,17 +4,17 @@ description: Saiba mais sobre o texto da interface do usuário e a terminologia 
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e8747d07-6c90-46cc-b425-55b589f7e9e4
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0b0da682f8403890e57118384b7d979f8760d62f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8635907b5c0190165855378fa692fb9abca4b0ec
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99926141"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105052652"
 ---
 # <a name="ui-text-and-help-for-visual-studio"></a>Texto de interface do usuário e Ajuda para Visual Studio
 ## <a name="ui-text-and-terminology"></a><a name="BKMK_UITextAndTerminology"></a> Texto e terminologia da interface do usuário
@@ -421,7 +421,7 @@ public class HelpForm : Form
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Fontes e formatação para Visual Studio](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md)
 - [Layout para Visual Studio](../../extensibility/ux-guidelines/layout-for-visual-studio.md)
 - [Notificações e progresso do Visual Studio](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md)

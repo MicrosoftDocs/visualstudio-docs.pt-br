@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Call Browser tool, identifying symbols in the library
 - Call Browser tool
 ms.assetid: 8fb0de61-71e7-42d1-8b41-2ad915474384
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b4e4c551c516b78ababb2400f7cfbd699ab06627
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c6c897801b98857f4a310323d4e00583c98245d5
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932586"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078871"
 ---
 # <a name="how-to-identify-symbols-in-a-library"></a>Como identificar símbolos em uma biblioteca
 As ferramentas de navegação de símbolos exibem exibições hierárquicas de símbolos. Os símbolos representam namespaces, objetos, classes, membros de classe e outros elementos de linguagem.

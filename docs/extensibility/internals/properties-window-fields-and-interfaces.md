@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Properties window, fields and interfaces
 ms.assetid: 0328f0e5-2380-4a7a-a872-b547cb775050
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: eb1f0a0f78b935a3b61596e4dd0b595030640b00
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9f445d31fe995321ad6ec334a5b6eb93570b8875
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970004"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061024"
 ---
 # <a name="properties-window-fields-and-interfaces"></a>Interfaces e campos da janela Propriedades
 O modelo de seleção para determinar quais informações são exibidas na janela **Propriedades** baseia-se na janela que tem o foco no IDE. Cada janela e objeto dentro da janela selecionada podem ter seu objeto de contexto de seleção enviado por push para o contexto de seleção global. O ambiente atualiza o contexto de seleção global com valores de um quadro de janela quando essa janela tem o foco. Quando o foco muda, o contexto de seleção é alterado.
@@ -116,6 +116,6 @@ STDAPI DLLGetDocumentation
 
  Outra maneira de obter o nome localizado e a descrição de uma propriedade é implementando <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.GetLocalizedPropertyInfo%2A> . Para obter mais informações relacionadas à implementação desse método, consulte [Propriedades e campos da janela de propriedade](../../extensibility/internals/properties-window-fields-and-interfaces.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Estendendo propriedades](../../extensibility/internals/extending-properties.md)

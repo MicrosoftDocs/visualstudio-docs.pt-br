@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - link content type to file name extension
 ms.assetid: 21ee64ce-9afe-4b08-94a0-8389cc4dc67c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: fb65f581994c6ba90cbb49166612d81bc00de803
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 990f10fe82b9230c12ba13d736750f2f644c3ee5
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99955496"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078442"
 ---
 # <a name="walkthrough-link-a-content-type-to-a-file-name-extension"></a>Walkthrough: vincular um tipo de conteúdo a uma extensão de nome de arquivo
 Você pode definir seu próprio tipo de conteúdo e vincular uma extensão de nome de arquivo a ele usando as extensões de Managed Extensibility Framework do editor (MEF). Em alguns casos, a extensão de nome de arquivo já está definida por um serviço de idioma. Mas, para usá-lo com o MEF, você ainda deve vinculá-lo a um tipo de conteúdo.

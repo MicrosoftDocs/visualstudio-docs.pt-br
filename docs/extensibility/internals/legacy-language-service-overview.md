@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - language services [managed package framework], about language services
 ms.assetid: bb44e27b-d228-463c-b2cf-cd5c24c7c1b5
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5226f9a3464786f85ad9d5348226e82e070cf57e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 236fc2a2923ffd0829f74ab56a119ff81b29cd7f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839580"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061167"
 ---
 # <a name="legacy-language-service-overview"></a>Visão geral do serviço de linguagem herdado
 Um serviço de linguagem fornece suporte ao editor que permite que você implemente determinados [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] recursos. As classes de serviço de linguagem MPF (Managed Package Framework) fornecem suporte completo para recursos usados com frequência e suporte parcial para outros recursos.
@@ -91,6 +91,6 @@ Um serviço de linguagem fornece suporte ao editor que permite que você impleme
 
 - [Validando pontos de interrupção em um serviço de linguagem herdado](../../extensibility/internals/validating-breakpoints-in-a-legacy-language-service.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Implementando um serviço de linguagem herdado](../../extensibility/internals/implementing-a-legacy-language-service1.md)
 - [Extensibilidade do serviço de linguagem herdado](../../extensibility/internals/legacy-language-service-extensibility.md)

@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - highlight text
 ms.assetid: 64b772ad-4392-42e9-a237-5137f0384bf0
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 95bc250219c59d4db21fcb086cdf43e0ba7800e3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a500d63eb497ce6d2b23860cd3793cbc2632b819
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99838624"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078455"
 ---
 # <a name="walkthrough-highlight-text"></a>Walkthrough: realçar texto
 Você pode adicionar diferentes efeitos visuais ao editor criando partes do componente Managed Extensibility Framework (MEF). Este tutorial mostra como realçar todas as ocorrências da palavra atual em um arquivo de texto. Se uma palavra ocorrer mais de uma vez em um arquivo de texto e você posicionar o cursor em uma ocorrência, todas as ocorrências serão realçadas.

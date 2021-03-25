@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - getting the DTE object
 ms.assetid: c1f40bab-c6ec-45b0-8333-ea5ceb02a39d
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7228165d49c7f11c15d12086933c473699ef6bc8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7035842f608428f149dd2c0965b4792afa25db67
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905591"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062064"
 ---
 # <a name="walkthrough-access-the-dte-object-from-an-editor-extension"></a>Walkthrough: acessar o objeto DTE a partir de uma extensão do editor
 
@@ -40,7 +40,7 @@ Para seguir este passo a passos, você deve instalar o SDK do Visual Studio. Par
     - Microsoft. VisualStudio. Shell. Framework
     - Microsoft. VisualStudio. Shell. imutável. 10.0
 
-3. No arquivo *DTETestProvider.cs* , adicione as seguintes `using` diretivas:
+3. No arquivo *DTETestProvider. cs* , adicione as seguintes `using` diretivas:
 
     ```csharp
     using EnvDTE;
@@ -70,7 +70,7 @@ Para seguir este passo a passos, você deve instalar o SDK do Visual Studio. Par
    - EnvDTE
    - Microsoft. VisualStudio. Shell. Framework
 
-3. No arquivo *DTETestProvider.cs* , adicione as seguintes `using` diretivas:
+3. No arquivo *DTETestProvider. cs* , adicione as seguintes `using` diretivas:
 
     ```csharp
     using EnvDTE;

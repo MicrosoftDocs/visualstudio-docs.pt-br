@@ -8,17 +8,17 @@ helpviewer_keywords:
 - source control [Visual Studio SDK], adding and opening solutions
 - source control plug-ins, adding and opening solutions
 ms.assetid: 5b3b5b08-5e9b-41be-ac72-c63957faed22
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: dbcbc197a610f7caf2a1641a291db18fcea9dbda
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 174834dde4c049bcb1b3fd8bc2eb8e82166d01d4
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99898331"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078676"
 ---
 # <a name="test-area-1-add-toopen-from-source-control"></a>Área de teste 1: Adicionar/abrir do controle do código-fonte
 Esta área de teste de plug-in de controle de origem aborda a colocação de soluções ou projetos sob controle do código-fonte e sua recuperação no controle do código-fonte.
@@ -85,5 +85,5 @@ Esta área de teste de plug-in de controle de origem aborda a colocação de sol
 |Adicionar à solução com um único projeto — único projeto|1. Crie uma solução com um único projeto.<br />2. Adicione a solução ao controle do código-fonte.<br />3. Feche a solução.<br />4. Crie uma segunda solução vazia.<br />5. Adicione a solução controlada anteriormente do controle do código-fonte (**arquivo**, **controle do código-fonte**, **Adicionar projeto do controle do código-fonte**).|O projeto adicionado aparece na **Gerenciador de soluções** e é feito check-in.|
 |Adicionar à solução — solução adicionada ao controle do código-fonte por seleção|1. Crie uma solução com um projeto.<br />2. Adicione apenas a solução ao controle do código-fonte como seleção. Se essa etapa for concluída com sucesso, continue na próxima etapa.<br />3. Feche a solução.<br />4. Crie uma nova solução.<br />5. Adicione a solução controlada anteriormente do controle do código-fonte (**arquivo**, **controle do código-fonte**, **Adicionar projeto do controle do código-fonte**).|`Result from Step 2:`<br /><br /> O projeto não está no controle do código-fonte.<br /><br /> `Result from Step 5:`<br /><br /> Se a primeira solução tiver itens de solução, eles não poderão ser adicionados do controle do código-fonte, portanto, eles não aparecerão.<br /><br /> O projeto da primeira solução aparece como indisponível.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Guia de teste para plug-ins de controle do código-fonte](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

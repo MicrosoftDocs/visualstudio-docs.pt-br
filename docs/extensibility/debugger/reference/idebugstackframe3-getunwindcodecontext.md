@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugStackFrame3::GetUnwindCodeContext method
 ms.assetid: b25f7e7d-2b24-48e4-93b3-829e61d73ebf
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1ef0a66729a2e9061a9e71ec0634a65999b55bf2
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: d8e6feb81533a17305181c4cdaed9dea214e010b
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102159725"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105053263"
 ---
 # <a name="idebugstackframe3getunwindcodecontext"></a>IDebugStackFrame3::GetUnwindCodeContext
 Retorna o contexto de código que representa um local se uma operação de desenrolamento de pilha ocorreu.

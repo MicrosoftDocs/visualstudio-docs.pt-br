@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Properties window, providing support
 ms.assetid: 68e2cbd4-861c-453f-8c9f-4ab6afc80e67
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b9a777bf11f388873978f450184f1455236e9ff9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3b1006f74cd2de03b4fe74e090d7ffcd1c921e5d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887075"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105069641"
 ---
 # <a name="extend-properties"></a>Estender Propriedades
 A [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] janela **Propriedades** é um navegador de propriedades universal para componentes com e com+ e dá suporte a todos os [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] produtos. A janela **Propriedades** funciona com `ITypeInfo` informações de tipo e metadados com+ para listar as propriedades de tempo de design para o objeto atualmente selecionado em qualquer outra janela no IDE (ambiente de desenvolvimento integrado).

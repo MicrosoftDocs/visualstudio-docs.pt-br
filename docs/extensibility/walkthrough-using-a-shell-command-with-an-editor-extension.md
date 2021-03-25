@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - add a menu command
 ms.assetid: 08526848-a442-4cd4-afa1-b2eac2005adb
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4e0072d3f39ef037dfaa660d3a297afb59baacf3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f36d141c75b43dfaf90960261e40c4a619069802
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888908"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061986"
 ---
 # <a name="walkthrough-use-a-shell-command-with-an-editor-extension"></a>Walkthrough: usar um comando do shell com uma extensão do editor
 Em um VSPackage, você pode adicionar recursos como comandos de menu ao editor. Este tutorial mostra como adicionar um Adornment a uma exibição de texto no editor invocando um comando de menu.
@@ -614,7 +614,7 @@ Em um VSPackage, você pode adicionar recursos como comandos de menu ao editor. 
 
     - Microsoft. VisualStudio. Text. UI. WPF
 
-2. Abra o arquivo *AddAdornment.cs* e adicione as seguintes `using` diretivas.
+2. Abra o arquivo *Addadornament. cs* e adicione as seguintes `using` diretivas.
 
     ```csharp
     using Microsoft.VisualStudio.TextManager.Interop;

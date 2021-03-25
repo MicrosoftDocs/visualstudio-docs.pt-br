@@ -8,17 +8,17 @@ helpviewer_keywords:
 - managed VSPackages, registering
 - registration, managed VSPackages
 ms.assetid: 79b9424e-7e9b-4fc8-9b9f-00212674573c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 111debccd1623901790c83e743469327ffdd667e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9e2ed8d7c376f7d9f23e06786fefc1a955ebea3a
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905827"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105069459"
 ---
 # <a name="registering-vspackages"></a>Registrando VSPackages
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] depende de arquivos. pkgdef para descrever e localizar um VSPackage. Um arquivo. pkgdef contém todas as informações de registro que, de outra forma, seriam adicionadas ao registro do sistema. Os VSPackages gerenciados são registrados pela adição de atributos ao código-fonte e, em seguida, pela execução do [utilitário CreatePkgDef](../../extensibility/internals/createpkgdef-utility.md) no assembly resultante para gerar um arquivo. pkgdef.

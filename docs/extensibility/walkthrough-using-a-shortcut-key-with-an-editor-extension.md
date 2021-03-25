@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - link keystrokes to commands
 ms.assetid: cf6cc6c6-5a65-4f90-8f14-663decf74672
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0f6cb0d3cc0bef03539428bafeff5ae3da64964
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c2d49fa9e858d65529e466f6ed960835ab8c2324
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931260"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061947"
 ---
 # <a name="walkthrough-use-a-shortcut-key-with-an-editor-extension"></a>Walkthrough: usar uma tecla de atalho com uma extensão do editor
 Você pode responder às teclas de atalho na extensão do editor. A instrução a seguir mostra como adicionar uma exibição Adornment a uma exibição de texto usando uma tecla de atalho. Este passo a passos é baseado no modelo do editor de Adornment do visor e permite que você adicione o Adornment usando o caractere +.
@@ -47,7 +47,7 @@ Você pode responder às teclas de atalho na extensão do editor. A instrução 
 this.layer = view.GetAdornmentLayer("PurpleCornerBox");
 ```
 
-No arquivo da classe KeyBindingTestTextViewCreationListener.cs, altere o nome do AdornmentLayer de **KeyBindingTest** para **PurpleCornerBox**:
+No arquivo de classe KeyBindingTestTextViewCreationListener. cs, altere o nome do AdornmentLayer de **KeyBindingTest** para **PurpleCornerBox**:
 
 ```csharp
 [Export(typeof(AdornmentLayerDefinition))]
@@ -259,7 +259,7 @@ O manipulador de comandos é uma implementação do <xref:Microsoft.VisualStudio
    }
    ```
 
-   7. Copie a definição de camada Adornment do arquivo *KeyBindingTestTextViewCreationListener.cs* para o *KeyBindingCommandHandler.cs* e, em seguida, exclua o arquivo *KeyBindingTestTextViewCreationListener.cs* :
+   7. Copie a definição de camada Adornment do arquivo *KeyBindingTestTextViewCreationListener. cs* para o *KeyBindingCommandHandler. cs* e exclua o arquivo *KeyBindingTestTextViewCreationListener. cs* :
 
    ```csharp
    /// <summary>
@@ -276,7 +276,7 @@ O manipulador de comandos é uma implementação do <xref:Microsoft.VisualStudio
 
 O Adornment original apareceu em cada caractere ' a ' em um arquivo de texto. Agora que alteramos o código para adicionar o Adornment em resposta ao **+** caractere, ele adiciona o Adornment somente na linha em que o **+** caractere é digitado. Podemos alterar o código Adornment para que o Adornment mais uma vez apareça em cada ' a '.
 
-No arquivo *KeyBindingTest.cs* , altere o `CreateVisuals()` método para iterar em todas as linhas na exibição para decorar o caractere ' a '.
+No arquivo *KeyBindingTest. cs* , altere o `CreateVisuals()` método para iterar em todas as linhas na exibição para decorar o caractere ' a '.
 
 ```csharp
 private void CreateVisuals(ITextViewLine line)

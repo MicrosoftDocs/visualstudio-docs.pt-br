@@ -8,17 +8,17 @@ helpviewer_keywords:
 - source control plug-ins, getting started
 - getting started, source control plug-ins
 ms.assetid: 46ac1f9f-4ecc-4a72-88d3-4c7e1647e1cb
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: eefd2b20afe94a19b21f9b8361123c193f3ec59f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1c1279fd425e8519ede49763ee2a307778c91e9e
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99886927"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061245"
 ---
 # <a name="get-started-with-source-control-plug-ins"></a>Introdução aos plug-ins de controle do código-fonte
 Para criar um plug-in de controle do código-fonte, você deve criar uma DLL que implemente as funções definidas na API de plug-in de controle do código-fonte e, em seguida, registrar a DLL com [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] para disponibilizá-la para uso no controle de versão do código-fonte.

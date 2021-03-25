@@ -7,17 +7,17 @@ ms.topic: troubleshooting
 helpviewer_keywords:
 - services, troubleshooting
 ms.assetid: 001551da-4847-4f59-a0b2-fcd327d7f5ca
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f6e29f2c65ec7503f06baca4af4c6772090d5eb8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a105f38166ecea958bb0e5bbfe790170b020e354
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952285"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105079209"
 ---
 # <a name="how-to-troubleshoot-services"></a>Como: solucionar problemas de serviços
 Há vários problemas comuns que podem ocorrer quando você tenta obter um serviço:
@@ -68,7 +68,7 @@ if (log == null) return;
 
     Se uma janela de ferramenta hospedar um controle de usuário ou qualquer outro contêiner de controle, o contêiner será site pelo modelo de componente do Windows e não terá acesso a nenhum [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] serviço. Você pode chamar <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> para obter um provedor de serviços VSPackage de dentro de um contêiner de controle.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Lista de serviços disponíveis](../extensibility/internals/list-of-available-services.md)
 - [Usar e fornecer serviços](../extensibility/using-and-providing-services.md)
 - [Noções básicas do serviço](../extensibility/internals/service-essentials.md)

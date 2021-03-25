@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugStepCompleteEvent2 interface
 ms.assetid: eba2b76e-f90d-486b-ae5c-c47f1b8ba2e5
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f366b9eb1d9406ba5207016ca97ea40d1fd48529
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 38791456500fc5996345314a0a779f5ccd03d940
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102149529"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105053185"
 ---
 # <a name="idebugstepcompleteevent2"></a>IDebugStepCompleteEvent2
 Essa interface é enviada pelo mecanismo de depuração (DE) para o SDM (Gerenciador de depuração de sessão) quando o programa que está sendo depurado conclui uma etapa para dentro, uma etapa acima ou uma etapa de uma linha de código-fonte, ou instrução ou instrução.

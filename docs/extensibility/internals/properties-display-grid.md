@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - properties [Visual Studio SDK], grid
 ms.assetid: 318e41b0-acf5-4842-b85e-421c9d5927c5
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0dd336701fc25497fdecba8b5b9860a02447558d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9ccf8afd293c47a1eb55b0b57b8190c11492cfa8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970043"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061115"
 ---
 # <a name="properties-display-grid"></a>Grade de exibição de propriedades
 
@@ -57,6 +57,6 @@ A janela **Propriedades** exibe diferentes tipos de campos, dependendo dos atrib
 
 - Clicar no botão de reticências (...) exibe uma lista de valores de propriedade dos quais o usuário pode selecionar (como um seletor de cores ou uma lista de fontes). <xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder> fornece esses valores.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Estender Propriedades](../../extensibility/internals/extending-properties.md)
