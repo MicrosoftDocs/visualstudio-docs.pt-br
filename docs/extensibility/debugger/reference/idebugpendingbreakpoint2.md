@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPendingBreakpoint2 interface
 ms.assetid: d416b095-917e-475e-b796-ec0a03ffb8da
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 05e66a0066abca5fb657960f2042b738a10e59ca
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: a52856cfa70491b7a7daa9079c111b1430475d22
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102169724"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105053705"
 ---
 # <a name="idebugpendingbreakpoint2"></a>IDebugPendingBreakpoint2
 Essa interface representa um ponto de interrupção que está pronto para ser associado a um local de código.
@@ -50,7 +50,7 @@ IDebugPendingBreakpoint2 : IUnknown
 |[SetPassCount](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setpasscount.md)|Define ou altera a contagem de aprovações associada a esse ponto de interrupção pendente.|
 |[EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)|Enumera todos os pontos de interrupção associados a este ponto de interrupção pendente.|
 |[EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)|Enumera todos os pontos de interrupção de erro que resultaram desse ponto de interrupção pendente.|
-|[Delete (excluir)](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)|Exclui esse ponto de interrupção pendente e todos os pontos de interrupção associados a ele.|
+|[Excluir](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)|Exclui esse ponto de interrupção pendente e todos os pontos de interrupção associados a ele.|
 
 ## <a name="remarks"></a>Comentários
  `IDebugPendingBreakpoint2` pode ser pensado como um provedor de todas as informações necessárias para associar um ponto de interrupção ao código que pode ser aplicado a um ou vários programas.

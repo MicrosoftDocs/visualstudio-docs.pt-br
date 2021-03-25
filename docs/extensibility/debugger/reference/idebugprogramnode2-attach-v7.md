@@ -1,5 +1,6 @@
 ---
 title: 'IDebugProgramNode2:: Attach_V7 | Microsoft Docs'
+description: Esse método de interface é um método de anexo antigo e preterido usado antes do Visual Studio 2005.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramNode2::Attach_V7
 - IDebugProgramNode2::Attach
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b143477dc558b20a302a54d5baecc64d02d33ea3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c949bba45457917e4dd00bdc05bc300f3a38eb7e
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99898639"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105053588"
 ---
 # <a name="idebugprogramnode2attach_v7"></a>IDebugProgramNode2::Attach_V7
 
@@ -56,7 +57,7 @@ no A interface [IDebugEventCallback2](../../../extensibility/debugger/reference/
 `dwReason`\
 no Um valor da enumeração [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) que especifica o motivo da anexação.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Uma implementação sempre deve retornar `E_NOTIMPL` .
 

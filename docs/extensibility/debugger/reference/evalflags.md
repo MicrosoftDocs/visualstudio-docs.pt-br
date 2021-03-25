@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - EVALFLAGS enumeration
 ms.assetid: 7b2cb14a-511a-4fef-9e4f-308139719fba
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 531d155104475b84d881358711a6aa3f1d0bf2ce
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 5bcf68b95bb905d41aaab906603cd4dd248e52ad
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102150933"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105095934"
 ---
 # <a name="evalflags"></a>EVALFLAGS
 Especifica os sinalizadores que controlam a avaliação da expressão.

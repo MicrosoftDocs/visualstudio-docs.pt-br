@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - DUMPTYPE enumeration
 ms.assetid: ea8160db-8732-4056-a1d7-892ef72da71e
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cef9f90c1f08dac742a6f01a4dd48f6bff76848b
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: bc27474b0012e60cccadda44665dc368178a02da
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102150972"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105095960"
 ---
 # <a name="dumptype"></a>DUMPTYPE
 Especifica a quantidade de estado do programa (como threads em execução, quadros de pilha e endereço de instrução atual) a ser despejada.

@@ -1,5 +1,6 @@
 ---
 title: 'IDebugProgramNode2:: GetHostMachineName_V7 | Microsoft Docs'
+description: Esse é o método antigo, preterido para obter o nome do computador host usado antes do Visual Studio 2005.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramNode2::GetHostMachineName_V7
 - IDebugProgramNode2::GetHostMachineNameIDebugProgramNode2::GetHostMachineName
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 843e5fdf91fe817681b95422474d3887de5756b0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 20d62c180848c4875fa3312e0194ebdb467a93ca
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99898616"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105053536"
 ---
 # <a name="idebugprogramnode2gethostmachinename_v7"></a>IDebugProgramNode2::GetHostMachineName_V7
 
@@ -46,7 +47,7 @@ int GetHostMachineName_V7 (
 `pbstrHostMachineName`\
 fora Retorna o nome do computador no qual o programa está em execução.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 
 Uma implementação sempre deve retornar `E_NOTIMPL` .
 
