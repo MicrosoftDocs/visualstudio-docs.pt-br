@@ -8,17 +8,17 @@ helpviewer_keywords:
 - debug engines, launching
 - programs, launching
 ms.assetid: 6857e9c6-e44a-468a-afa4-f7c4a0b77844
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: de29b012914ac9997a78674fd3215f2c15d43c6e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a21036d3a9661306d1efff5a66ae47f8f7404209
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945910"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105094712"
 ---
 # <a name="launch-a-program"></a>Iniciar um programa
 Os usuários que desejam depurar um programa podem pressionar **F5** para executar o depurador do IDE. Isso inicia uma série de eventos que, por fim, resultam na conexão do IDE com um mecanismo DE depuração (DE), que, por sua vez, está conectado, ou anexado, ao programa da seguinte maneira:
@@ -27,7 +27,7 @@ Os usuários que desejam depurar um programa podem pressionar **F5** para execut
 
 2. Se um DE for especificado, o DE chamará o sistema operacional para iniciar o programa. Como consequência de iniciar o programa, o ambiente de tempo de execução do programa é carregado. Por exemplo, se um programa for escrito em MSIL, o Common Language Runtime será invocado para executar o programa.
 
-    -ou-
+    – ou –
 
     Se um DE não for especificado, a porta chamará o sistema operacional para iniciar o programa, o que faz com que o ambiente de tempo de execução do programa seja carregado.
 

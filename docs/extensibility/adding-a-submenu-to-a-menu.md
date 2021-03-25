@@ -10,17 +10,17 @@ helpviewer_keywords:
 - cascading submenus
 - menus, creating cascading submenus
 ms.assetid: 692600cb-d052-40e2-bdae-4354ae7c6c84
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b784cae836f1a5cae520a9650c8f396ccc960a72
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cc6d521e699beb2345ba76e2e617ff749886eee9
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951505"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105094894"
 ---
 # <a name="add-a-submenu-to-a-menu"></a>Adicionar um submenu a um menu
 Este tutorial se baseia na demonstração em [Adicionar um menu à barra de menus do Visual Studio](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) , mostrando como adicionar um submenu ao menu **TestMenu** .
@@ -85,7 +85,7 @@ Este tutorial se baseia na demonstração em [Adicionar um menu à barra de menu
 
 ## <a name="add-a-command"></a>Adicionar um comando
 
-1. Abra *TestCommand.cs* e adicione a seguinte ID de comando após a ID de comando existente.
+1. Abra *TestCommand. cs* e adicione a seguinte ID de comando após a ID de comando existente.
 
     ```csharp
     public const int cmdidTestSubCmd = 0x0105;

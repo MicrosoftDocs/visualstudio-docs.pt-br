@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDefaultPort2 interface
 ms.assetid: 7b3452af-9a96-4c4c-9946-4339b72d3d7b
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5ec637daa197574710978af7cb22195c969f48b
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 03eb9f8c1bae74f15d295a72b27821d41b8282a1
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102154412"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105067108"
 ---
 # <a name="idebugdefaultport2"></a>IDebugDefaultPort2
 Essa interface fornece vários métodos para acessar os recursos de notificação e servidor de uma porta.

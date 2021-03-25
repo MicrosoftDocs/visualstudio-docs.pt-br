@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPortEvents2::Event
 ms.assetid: 5cc813f7-04a1-4462-9ea7-fbddcf0e0143
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fc975c2f48c560d0f15f08a6cc957c67ecc13808
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 314c31c426300c31f90813e2b73b150678578437
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102142902"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105058333"
 ---
 # <a name="idebugportevents2event"></a>IDebugPortEvents2::Event
 Esse método envia eventos que significam a criação e a destruição de processos e programas em uma porta.
