@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - DOCCONTEXT_COMPARE enumeration
 ms.assetid: ed947c34-b07e-4b69-8381-b6e7cb842862
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f64e2e8ec365daa84cbd1d4f7e3e9bdc43391d5e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 6eeee3e31c898660930b676df716fe25769bbb8b
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102170426"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105095999"
 ---
 # <a name="doccontext_compare"></a>DOCCONTEXT_COMPARE
 Especifica os critérios para comparar dois contextos de documento.

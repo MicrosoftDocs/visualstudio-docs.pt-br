@@ -6,20 +6,20 @@ ms.topic: reference
 helpviewer_keywords:
 - DisplayKind enumeration
 ms.assetid: 940968c5-6065-4bda-8ee6-c31597db4d71
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5632c6844a38f1891070311fe3c7c65a0220def5
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: b8c474c9295ceedbdffd286e99975c375ea69fc4
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102151018"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105096025"
 ---
 # <a name="displaykind"></a>DisplayKind
 Enumera os valores válidos que representam os tipos de informações a serem executadas de um objeto [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) e são exibidos para o usuário.

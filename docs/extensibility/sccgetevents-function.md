@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - SccGetEvents function
 ms.assetid: 32f8147d-6dcc-465e-b07b-42da5824f9b0
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 069e9399a91a39d8005d9137bd19f4032773b24a
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: e7611a3f71b5fa6205708aca6b957f3921a71517
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102220788"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105072982"
 ---
 # <a name="sccgetevents-function"></a>Função SccGetEvents
 Essa função recupera um evento de status enfileirado.
