@@ -28,12 +28,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a310cd4428232338ed46a8a54502d9956e73be15
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eadec17e7c5221f0b169d38b15b9601cec746fa4
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932002"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105094972"
 ---
 # <a name="midl-task"></a>tarefa MIDL
 
@@ -79,7 +79,7 @@ Encapsula a ferramenta do compilador da MIDL (linguagem IDL) da Microsoft, *midl
 
      Parâmetro de **cadeia de caracteres** opcional.
 
-     Especifica as opções para passar para o pré-processador C/C++. Especifique uma lista delimitada por espaço de opções de pré-processador.
+     Especifica as opções para passar para o pré-processador C/C++. Especifique uma lista delimitada por espaço de opções de pré-processador. Deve conter a `/E` opção.
 
      Para obter mais informações, confira a opção **/cpp_opt** em [Referência da linha de comando MIDL](/windows/desktop/Midl/midl-command-line-reference).
 
@@ -94,7 +94,7 @@ Encapsula a ferramenta do compilador da MIDL (linguagem IDL) da Microsoft, *midl
     |Valor|Opção de linha de comando|
     |-----------|--------------------------|
     |**Com sinal**|**/char signed**|
-    |**Não assinados**|**/char unsigned**|
+    |**Não assinado**|**/char unsigned**|
     |**Localizados**|**/char ascii7**|
 
      Para obter mais informações, confira a opção **/char** em [Referência da linha de comando MIDL](/windows/desktop/Midl/midl-command-line-reference).

@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - verbs, registering
 ms.assetid: 81a58e40-7cd0-4ef4-a475-c4e1e84d6e06
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 10e1b158ab62cfedfb6171a0a3874cfe14e89caf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9936efc2e01c0d82d5cc9fce140d543eb95247ad
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836995"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105068473"
 ---
 # <a name="register-verbs-for-file-name-extensions"></a>Registrar verbos para extensões de nome de arquivo
 A associação de uma extensão de nome de arquivo com um aplicativo geralmente tem uma ação preferida que ocorre quando um usuário clica duas vezes em um arquivo. Essa ação preferencial é vinculada a um verbo, por exemplo, abrir, que corresponde à ação.
@@ -35,7 +35,7 @@ A associação de uma extensão de nome de arquivo com um aplicativo geralmente 
 
 - Imprimir
 
-- Visualizar
+- Visualização
 
   Sempre que possível, registre um verbo padrão. A escolha mais comum é o verbo Open. Use o verbo editar somente se houver uma diferença clara entre abrir o arquivo e editar o arquivo. Por exemplo, abrir um arquivo *. htm* o exibe no navegador, enquanto a edição de um arquivo *. htm* inicia um editor de HTML. Os verbos padrão são localizados com a localidade do sistema operacional.
 

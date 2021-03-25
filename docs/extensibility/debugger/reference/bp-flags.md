@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - BP_FLAGS enumeration
 ms.assetid: c45dfc74-5e7f-4f1e-a147-ab2a55dccbd0
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b0a3ccb96aecf00943bc637b78fb5219c3273281
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 8e35e0b219bb77ce722f2e06a260de7ecc837dfb
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102165664"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105085319"
 ---
 # <a name="bp_flags"></a>BP_FLAGS
 Fornece sinalizadores opcionais que podem ser usados para especificar informações adicionais ao definir um ponto de interrupção.

@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f0ef65e9-0f1f-45f4-9f25-6e2398691168
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bac47ee29029bdcccb5c248bc8e366376b5aed0d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a6b273c1ee2ee83c713500d972ecab27a67b3145
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931650"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105068538"
 ---
 # <a name="notifications-and-progress-for-visual-studio"></a>Notificações e progresso do Visual Studio
 ## <a name="notification-systems"></a><a name="BKMK_NotificationSystems"></a> Sistemas de notificação
@@ -151,7 +151,7 @@ ms.locfileid: "99931650"
 
 #### <a name="determinate-progress"></a>Progresso de destérmino
 
-|Tipo de progresso|Quando e como usar|Observações|
+|Tipo de progresso|Quando e como usar|Anotações|
 |-------------------|-------------------------|-----------|
 |Barra de progresso (determinável)|Duração esperada de >5 segundos.<br /><br /> Pode incluir a descrição textual dos detalhes do processo.|**Não** inserir texto em animação.|
 |Barra|Mensagens associadas à interface do usuário contextual. Consulte [Infobars](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars).<br /><br /> Pode incluir a descrição textual dos detalhes do processo.|**Não** use vários infobars quando precisar indicar vários processos. Em vez disso, use barras de progresso empilhadas.|
@@ -161,7 +161,7 @@ ms.locfileid: "99931650"
 
 #### <a name="indeterminate-progress"></a>Progresso indeterminado
 
-|Tipo de progresso|Quando e como usar|Observações|
+|Tipo de progresso|Quando e como usar|Anotações|
 |-------------------|-------------------------|-----------|
 |Barra de progresso (indeterminada)|Duração esperada de >5 segundos.<br /><br /> Pode incluir a descrição textual dos detalhes do processo.|**Não** inserir texto em animação.|
 |Ants (pontos horizontais animados)|Viagem de ida e volta ao servidor.<br /><br /> Posicionado próximo ao ponto de contexto na parte superior do contêiner pai.|**Não** use se não for pai do contêiner inteiro.|

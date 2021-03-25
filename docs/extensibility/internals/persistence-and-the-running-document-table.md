@@ -10,17 +10,17 @@ helpviewer_keywords:
 - architecture, persistence
 - running document table (RDT), architecture
 ms.assetid: 27117eae-6c58-4189-a61a-1397a43b5ecf
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6070cba3e24f16da0bf5619fc979e0d4471971c0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5244e14498da0f556a71b8d710ccbaa8b9b03e65
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895434"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105095115"
 ---
 # <a name="persistence-and-the-running-document-table"></a>Persistência e a tabela de documentos em execução
 No [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE, os projetos são totalmente responsáveis por gerenciar a persistência de seus itens de projeto, que são realizados usando o serviço, <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable> . Os documentos são a unidade básica de persistência no ambiente do Visual Studio. Os projetos coordenam a abertura, o salvamento e a renomeação de documentos com a tabela de documentos em execução (RDT), um recurso que controla o estado de todos os documentos abertos.

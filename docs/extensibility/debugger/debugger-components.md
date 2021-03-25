@@ -9,17 +9,17 @@ helpviewer_keywords:
 - components [Visual Studio SDK], debugging
 - debugging [Debugging SDK], components
 ms.assetid: 8b8ab77f-a134-495c-be42-3bc51aa62dfb
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: de941be8c5535a2cef5995e3be9954ee32dcdc71
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b7c558d20d24acd65ece4c4df43eb8f474c20447
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952441"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105094946"
 ---
 # <a name="debugger-components"></a>Componentes do depurador
 O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] depurador é implementado como um VSPackage e gerencia toda a sessão de depuração. A sessão de depuração compreende os seguintes elementos:
@@ -64,5 +64,5 @@ O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] depurador é impl
 
  [Tarefas de depuração](../../extensibility/debugger/debugging-tasks.md) Contém links para várias tarefas de depuração, como iniciar um programa e avaliar expressões.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Introdução](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)

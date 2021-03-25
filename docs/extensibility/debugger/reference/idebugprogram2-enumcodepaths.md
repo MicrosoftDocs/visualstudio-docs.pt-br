@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgram2::EnumCodePaths
 ms.assetid: fb100c3c-9c29-4d63-bd1f-a3e531cb395f
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c647379d0b72832a4068d720846f8a9331f9b939
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 057089c8c7b68fd1109c31bbfc0014f49a71368c
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102159959"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105076037"
 ---
 # <a name="idebugprogram2enumcodepaths"></a>IDebugProgram2::EnumCodePaths
 Recupera uma lista de caminhos de código para uma determinada posição em um arquivo de origem.

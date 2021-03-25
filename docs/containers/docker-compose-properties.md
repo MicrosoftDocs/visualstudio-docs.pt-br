@@ -7,12 +7,12 @@ ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: 0a27535e9c07f87391b3cdfd8440578e36feee9e
-ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
+ms.openlocfilehash: 4478656af7fff4cfd3a0fdafefe623af5811154f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97846816"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105068291"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose Propriedades de compilação
 
@@ -39,11 +39,12 @@ A tabela a seguir mostra as propriedades do MSBuild disponíveis para projetos D
 |AdditionalComposeFilePaths|dcproj|Especifica arquivos de composição adicionais em uma lista delimitada por ponto-e-vírgula a serem enviados para docker-compose.exe para todos os comandos. São permitidos caminhos relativos do arquivo de projeto Docker-Compose (dcproj).|-|
 |DockerComposeBaseFilePath|dcproj|Especifica a primeira parte dos nomes de arquivo dos arquivos Docker-Compose, sem a extensão *. yml* . Por exemplo: <br>1. DockerComposeBaseFilePath = NULL/undefined: Use o caminho do arquivo base *Docker-Compose*, e os arquivos serão nomeados *Docker-Compose. yml* e *Docker-Compose. Override. yml*<br>2. DockerComposeBaseFilePath = *mydockercompose*: os arquivos serão nomeados *mydockercompose. yml* e *mydockercompose. Override. yml*<br> 3. DockerComposeBaseFilePath = *.. \mydockercompose*: os arquivos terão um nível acima. |Docker-Compose|
 |DockerComposeBuildArguments|dcproj|Especifica os parâmetros extras a serem passados para o `docker-compose build` comando. Por exemplo, `--parallel --pull` |
-|DockerComposeDownArguments|dcproj|Especifica os parâmetros extras a serem passados para o `docker-compose down` comando. Por exemplo, `--timeout 500`|-|  
+|DockerComposeDownArguments|dcproj|Especifica os parâmetros extras a serem passados para o `docker-compose down` comando. Por exemplo, `--timeout 500`|-|
+|DockerComposeProjectName| dcproj | Se especificado, substitui o nome do projeto para um projeto de composição do Docker. | "dockercompose" + hash gerado automaticamente |
 |DockerComposeProjectPath|csproj ou vbproj|O caminho relativo para o arquivo de projeto do Docker-Compose (dcproj). Defina essa propriedade ao publicar o projeto de serviço para localizar as configurações de Build de imagem associadas armazenadas no arquivo Docker-Compose. yml.|-|
 |DockerComposeUpArguments|dcproj|Especifica os parâmetros extras a serem passados para o `docker-compose up` comando. Por exemplo, `--timeout 500`|-|
 |DockerDevelopmentMode|dcproj| Controla se a otimização "Build-on-host" (depuração "modo rápido") está habilitada.  Os valores permitidos são **rápido** e **regular**. | Rápido |
-|DockerLaunchAction| dcproj | Especifica a ação de inicialização a ser executada em F5 ou CTRL + F5.  Os valores permitidos são None, LaunchBrowser e LaunchWCFTestClient|Nenhum|
+|DockerLaunchAction| dcproj | Especifica a ação de inicialização a ser executada em F5 ou CTRL + F5.  Os valores permitidos são None, LaunchBrowser e LaunchWCFTestClient.|Nenhum|
 |DockerLaunchBrowser| dcproj | Indica se o navegador deve ser iniciado. Ignorado se DockerLaunchAction for especificado. | Falso |
 |DockerServiceName| dcproj|Se DockerLaunchAction ou DockerLaunchBrowser forem especificados, DockerServiceName será o nome do serviço que deve ser iniciado.  Use essa propriedade para determinar qual dos possíveis projetos que podem ser referenciados por um arquivo Docker-Compose será iniciado.|-|
 |DockerServiceUrl| dcproj | A URL a ser usada ao iniciar o navegador.  Os tokens de substituição válidos são "{% IPAddress}", "{ServicePortal}" e "{Scheme}".  Por exemplo: {Scheme}://{ServiceIPAddress}: {ServicePortal}|-|
@@ -130,7 +131,7 @@ Se você omitir *Docker-Compose. vs. Release. yml* ou *Docker-Compose. vs. Debug
 
 Para obter informações sobre propriedades do MSBuild em geral, consulte [Propriedades do MSBuild](../msbuild/msbuild-properties.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Propriedades de compilação das ferramentas de contêiner](container-msbuild-properties.md)
 
