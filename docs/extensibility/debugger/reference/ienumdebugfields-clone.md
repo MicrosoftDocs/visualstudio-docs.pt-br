@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugFields::Clone method
 ms.assetid: 7ec265a8-696f-45ce-a2a2-0a83e96fee1b
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 965bc201646c7e068c58f9238dccba9a9e587d26
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: d4f3a37f6e664d7fe3278e3a7c3e088e1e9e4565
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102224896"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105058151"
 ---
 # <a name="ienumdebugfieldsclone"></a>IEnumDebugFields::Clone
 Esse método retorna uma cópia da enumeração atual como um objeto separado.
