@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 99e5566d-450e-4660-9bca-454e1c056a02
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e1c906b96f3bd20b72cf2b5eca92190e0ad42916
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad000d486b0808ea4ddc3311daa7178c6eda1231
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931286"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105080314"
 ---
 # <a name="walkthrough-display-light-bulb-suggestions"></a>Walkthrough: Exibir sugestões de lâmpada
 Lâmpadas são ícones no editor do Visual Studio que se expandem para exibir um conjunto de ações, por exemplo, correções de problemas identificados pelos analisadores de código internos ou refatoração de código.
@@ -74,7 +74,7 @@ Lâmpadas são ícones no editor do Visual Studio que se expandem para exibir um
 
 ## <a name="implement-the-light-bulb-source-provider"></a>Implementar o provedor de origem de lâmpada
 
-1. No arquivo da classe *LightBulbTest.cs* , exclua a classe LightBulbTest. Adicione uma classe chamada **TestSuggestedActionsSourceProvider** que implementa <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider> . Exporte-o com um nome de **ações sugeridas de teste** e um <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> de "texto".
+1. No arquivo de classe *LightBulbTest. cs* , exclua a classe LightBulbTest. Adicione uma classe chamada **TestSuggestedActionsSourceProvider** que implementa <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider> . Exporte-o com um nome de **ações sugeridas de teste** e um <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> de "texto".
 
     ```csharp
     [Export(typeof(ISuggestedActionsSourceProvider))]
