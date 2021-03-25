@@ -9,17 +9,17 @@ f1_keywords:
 helpviewer_keywords:
 - OPTNAMECHANGEPFN callback function
 ms.assetid: 147303f3-c7f1-438a-81b7-db891ea3d076
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e583c7e19fb6123da06d0ee525abe9c573d8d788
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4e6cb58aebbe76eff5c66dc29ecfad8c77c8717c
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922879"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090363"
 ---
 # <a name="optnamechangepfn"></a>OPTNAMECHANGEPFN
 Essa é uma função de retorno de chamada especificada em uma ligação para o [SccSetOption](../extensibility/sccsetoption-function.md) (usando a opção `SCC_OPT_NAMECHANGEPFN` ) e é usada para comunicar alterações de nome feitas pelo plug-in de controle do código-fonte de volta para o IDE.
@@ -47,7 +47,7 @@ no O nome original do arquivo.
 
 no O nome para o qual o arquivo foi renomeado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
  Nenhum.
 
 ## <a name="remarks"></a>Comentários

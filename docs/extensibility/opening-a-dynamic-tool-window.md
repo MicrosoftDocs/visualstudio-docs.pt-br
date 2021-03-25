@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - tool windows, dynamic
 ms.assetid: 21547ba7-6e81-44df-9277-265bf34f877a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1998091559f78ed7c7eb8d9585206cf0217d8b2d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 357644f67da9a3bbc468d708cf39e44f737dbf0f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946586"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090415"
 ---
 # <a name="open-a-dynamic-tool-window"></a>Abrir uma janela de ferramentas dinâmicas
 As janelas de ferramentas normalmente são abertas a partir de um comando em um menu ou um atalho de teclado equivalente. Às vezes, no entanto, você pode precisar de uma janela de ferramenta que é aberta sempre que um contexto de interface do usuário específico se aplica e fecha quando o contexto da interface do usuário não se aplica mais. Esses tipos de janelas de ferramentas são chamados *dinâmicos* ou *visíveis automaticamente*.
@@ -34,9 +34,9 @@ As janelas de ferramentas normalmente são abertas a partir de um comando em um 
 
 ## <a name="to-open-a-dynamic-tool-window"></a>Para abrir uma janela de ferramentas dinâmicas
 
-1. Crie um projeto VSIX chamado **DynamicToolWindow** e adicione um modelo de item da janela de ferramentas chamado *DynamicWindowPane.cs*. Para obter mais informações, consulte [criar uma extensão com uma janela de ferramentas](../extensibility/creating-an-extension-with-a-tool-window.md).
+1. Crie um projeto VSIX chamado **DynamicToolWindow** e adicione um modelo de item da janela de ferramentas chamado *DynamicWindowPane. cs*. Para obter mais informações, consulte [criar uma extensão com uma janela de ferramentas](../extensibility/creating-an-extension-with-a-tool-window.md).
 
-2. No arquivo *DynamicWindowPanePackage.cs* , localize a declaração DynamicWindowPanePackage. Adicione os <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> atributos e para registrar a janela de ferramentas.
+2. No arquivo *DynamicWindowPanePackage. cs* , localize a declaração DynamicWindowPanePackage. Adicione os <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> atributos e para registrar a janela de ferramentas.
 
     ```vb
     [ProvideToolWindow(typeof(DynamicWindowPane)]

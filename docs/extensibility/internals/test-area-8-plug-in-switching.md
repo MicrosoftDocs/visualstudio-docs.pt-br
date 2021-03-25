@@ -8,17 +8,17 @@ helpviewer_keywords:
 - source control [Visual Studio SDK], switching plug-ins
 - source control plug-ins, switching
 ms.assetid: 01370792-b5da-4e46-9ce2-7dd326587141
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 50cbf92b8214e605976aec58aaea984276ca8cc6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2dbc6b9646bcdec8cbdfae9d262397eb0ff74bdc
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99848202"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090766"
 ---
 # <a name="test-area-8-plug-in-switching"></a>Área de teste 8: Alternância de plug-in
 O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE (ambiente de desenvolvimento integrado) tem a interface do usuário para alterar o plug-in atual de controle do código-fonte. Essa área de teste fornece casos de teste para o processo de escolher qual plug-in usar para o controle de origem da solução.

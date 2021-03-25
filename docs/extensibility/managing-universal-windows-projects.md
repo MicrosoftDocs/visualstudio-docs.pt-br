@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 47926aa1-3b41-410d-bca8-f77fc950cbe7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03d4fbd509cbbb408bdcd0465ba4460f8c3b1e9f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8af418d8ffcaad18aca4497078f4e24f9bb679fd
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943238"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090636"
 ---
 # <a name="manage-universal-windows-projects"></a>Gerenciar projetos universais do Windows
 
@@ -31,7 +31,7 @@ A partir do Visual Studio 2015, você não instala o SDK do Visual Studio a part
 
 2. Adicione uma referência a *Microsoft.VisualStudio.Shell.Interop.12.1.DesignTime.dll* e *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll* (na seção **extensões** ).
 
-3. Abra *TestUniversalProject.cs* e adicione as seguintes `using` diretivas:
+3. Abra *TestUniversalProject. cs* e adicione as seguintes `using` diretivas:
 
     ```csharp
     using EnvDTE;
@@ -425,9 +425,9 @@ A partir do Visual Studio 2015, você não instala o SDK do Visual Studio a part
 
       Neste procedimento, você adiciona um ouvinte de eventos a um projeto compartilhado e a um projeto de plataforma. Em seguida, ao renomear um arquivo em um projeto compartilhado e outro arquivo em um projeto de plataforma, você poderá ver os eventos que são acionados para cada operação de renomeação.
 
-2. Adicione um ouvinte de eventos. Adicione um novo arquivo de classe ao projeto e chame-o de *HierarchyEventListener.cs*.
+2. Adicione um ouvinte de eventos. Adicione um novo arquivo de classe ao projeto e chame-o de *HierarchyEventListener. cs*.
 
-3. Abra o arquivo *HierarchyEventListener.cs* e adicione as seguintes diretivas using:
+3. Abra o arquivo *HierarchyEventListener. cs* e adicione as seguintes diretivas using:
 
    ```csharp
    using Microsoft.VisualStudio.Shell.Interop;
@@ -551,7 +551,7 @@ A partir do Visual Studio 2015, você não instala o SDK do Visual Studio a part
     this.ModifyFileNameInProject(sharedHier, fullPath);
     ```
 
-11. Compile e execute o projeto. Crie um aplicativo de Hub universal do C# na instância experimental, vá para o menu **ferramentas** e clique em **invocar TestUniversalProject** e verifique o texto no painel saída geral. O nome do primeiro item no projeto compartilhado (esperamos que seja o arquivo *app. XAML* ) deve ser alterado e você verá que o <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> evento foi acionado. Nesse caso, como renomear o *app. XAML* faz com que *app.XAML.cs* seja renomeado também, você verá quatro eventos (dois para cada projeto de plataforma). (Os eventos do DTE não rastreiam os itens no projeto compartilhado.) Você deve ver dois <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> eventos (um para cada um dos projetos de plataforma), mas nenhum <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> evento.
+11. Compile e execute o projeto. Crie um aplicativo de Hub universal do C# na instância experimental, vá para o menu **ferramentas** e clique em **invocar TestUniversalProject** e verifique o texto no painel saída geral. O nome do primeiro item no projeto compartilhado (esperamos que seja o arquivo *app. XAML* ) deve ser alterado e você verá que o <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> evento foi acionado. Nesse caso, como renomear o *app. XAML* faz com que o *app. XAML. cs* seja renomeado também, você verá quatro eventos (dois para cada projeto de plataforma). (Os eventos do DTE não rastreiam os itens no projeto compartilhado.) Você deve ver dois <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> eventos (um para cada um dos projetos de plataforma), mas nenhum <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> evento.
 
 12. Agora, tente renomear um arquivo em um projeto de plataforma e você pode ver a diferença nos eventos que são acionados. Adicione o seguinte código `ShowMessageBox` ao após a chamada para `ModifyFileName` .
 

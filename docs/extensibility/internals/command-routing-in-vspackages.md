@@ -8,17 +8,17 @@ helpviewer_keywords:
 - commands, routing
 - command routing, Visual Studio SDK
 ms.assetid: a9c7f9ae-3594-4557-a314-8cf76f5f8772
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d05612f9d15c3670411a7901157570fbb3e315a3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 35ab5e7989fdeb46592f38cb7e55854885e076d1
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939988"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105057293"
 ---
 # <a name="command-routing-in-vspackages"></a>Roteamento de comandos em VSPackages
 Um comando é roteado [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] com base no contexto no qual ele é executado. Ele é roteado do contexto inicial para fora para o contexto global.

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - interop assemblies, determining command status
 - command handling with interop assemblies, status
 ms.assetid: 2f5104d1-7b4c-4ca0-a626-50530a8f7f5c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5473fffa00723735b022412e7f37f184e043df4b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ef6940aef83ad3865385b4e39fd9cfd62b8866d7
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963439"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090896"
 ---
 # <a name="determine-command-status-by-using-interop-assemblies"></a>Determinar o status do comando usando assemblies de interoperabilidade
 Um VSPackage deve acompanhar o estado dos comandos que ele pode manipular. O ambiente não pode determinar quando um comando manipulado em seu VSPackage se torna habilitado ou desabilitado. É responsabilidade do seu VSPackage informar o ambiente sobre os Estados de comando, por exemplo, o estado de comandos gerais, como **recortar**, **copiar** e **colar**.
@@ -35,6 +35,6 @@ Um VSPackage deve acompanhar o estado dos comandos que ele pode manipular. O amb
 ## <a name="status-notification-failure"></a>Falha na notificação de status
  Falha de seu VSPackage para notificar o ambiente de uma alteração de estado de comando pode posicionar a interface do usuário em um estado inconsistente. Lembre-se de que qualquer um dos comandos menu ou menu de contexto pode ser colocado em uma barra de ferramentas pelo usuário. Portanto, atualizar a interface do usuário somente quando um menu ou menu de contexto é aberto não é suficiente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Como VSPackages adicionar elementos da interface do usuário](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Implementação](../../extensibility/internals/command-implementation.md)

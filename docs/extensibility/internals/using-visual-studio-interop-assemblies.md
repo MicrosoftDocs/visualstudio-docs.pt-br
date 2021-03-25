@@ -9,17 +9,17 @@ helpviewer_keywords:
 - interop assemblies, Visual Studio
 - managed VSPackages, interop assemblies
 ms.assetid: 1043eb95-4f0d-4861-be21-2a25395b3b3c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1764cc735ca836feada2ad6f794f2bc8520fef41
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1253f5e7197f587e4a5e62365b42cb5040010666
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941691"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090662"
 ---
 # <a name="using-visual-studio-interop-assemblies"></a>Usando assemblies de interoperabilidade do Visual Studio
 Os assemblies de interoperabilidade do Visual Studio permitem que os aplicativos gerenciados acessem as interfaces COM que fornecem extensibilidade do Visual Studio. Há algumas diferenças entre interfaces COM diretas e suas versões de interoperabilidade. Por exemplo, HRESULTs geralmente são representados como valores int e precisam ser manipulados da mesma maneira que as exceções, e os parâmetros (especialmente parâmetros de saída) são tratados de forma diferente.
