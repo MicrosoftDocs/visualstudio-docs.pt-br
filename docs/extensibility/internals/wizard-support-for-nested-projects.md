@@ -9,17 +9,17 @@ helpviewer_keywords:
 - nested projects, wizard support
 - New Project wizard
 ms.assetid: 1b496acc-b326-4cdb-bb48-e3b5c6f12e05
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f2cd84379ead1cd45296ae370aab215a37cf4b50
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7f52b42462fdc4b7878f97c01bdc65322f32eb5b
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935863"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074139"
 ---
 # <a name="wizard-support-for-nested-projects"></a>Suporte do assistente para projetos aninhados
 O IDE executa dois assistentes que o projeto pai para projetos aninhados podem implementar: o assistente de **novo projeto** e o assistente para **Adicionar item** .
@@ -30,6 +30,6 @@ O IDE executa dois assistentes que o projeto pai para projetos aninhados podem i
 
  Para obter mais informações sobre assistentes, consulte [Wizard (. Vsz) arquivo](../../extensibility/internals/wizard-dot-vsz-file.md), [parâmetros de contexto](../../extensibility/internals/context-parameters.md) e [registro de modelos de projeto e item](../../extensibility/internals/registering-project-and-item-templates.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>
 - [Aninhando projetos](../../extensibility/internals/nesting-projects.md)

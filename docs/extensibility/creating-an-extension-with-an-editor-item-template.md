@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - extensions
 ms.assetid: fa3b993b-ab95-47fa-a38b-b788f3a5b2d8
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c8bfdcd854cf35c392578d9851a7421bacc8cbfe
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 06c3fbfabb4eccc08e528aef913e1c1ba502cbf1
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884982"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089128"
 ---
 # <a name="create-an-extension-with-an-editor-item-template"></a>Criar uma extensão com um modelo de item do editor
 Você pode usar modelos de item que estão incluídos no SDK do Visual Studio para criar extensões básicas do editor que adicionam classificadores, adornos e margens ao editor. Os modelos de item do editor estão disponíveis para projetos VSIX do Visual C# ou Visual Basic.
@@ -30,17 +30,17 @@ Você pode usar modelos de item que estão incluídos no SDK do Visual Studio pa
 
 1. Na caixa de diálogo **novo projeto** , expanda **Visual C#** ou **Visual Basic** e clique em **extensibilidade**. No painel **modelos** , selecione **projeto VSIX**. Na caixa **Nome**, digite `TestClassifier`. Clique em **OK**.
 
-2. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Vá para o nó **extensibilidade** do Visual C# e selecione **classificador de editor**. Deixe o nome de arquivo padrão (*EditorClassifier1.cs*).
+2. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Vá para o nó **extensibilidade** do Visual C# e selecione **classificador de editor**. Deixe o nome de arquivo padrão (*EditorClassifier1. cs*).
 
 3. Há quatro arquivos de código, da seguinte maneira:
 
-    - *EditorClassifier1.cs* contém a `EditorClassifier1` classe.
+    - *EditorClassifier1. cs* contém a `EditorClassifier1` classe.
 
-    - *EditorClassifier1ClassificationDefinition.cs* contém a `EditorClassifier1ClassificationDefinition` classe.
+    - *EditorClassifier1ClassificationDefinition. cs* contém a `EditorClassifier1ClassificationDefinition` classe.
 
-    - *EditorClassifier1Format.cs* contém a `EditorClassifier1Format`  classe.
+    - *EditorClassifier1Format. cs* contém a `EditorClassifier1Format`  classe.
 
-    - *EditorClassifier1Provider.cs* contém a `EditorClassifier1Provider` classe.
+    - *EditorClassifier1Provider. cs* contém a `EditorClassifier1Provider` classe.
 
 4. Compile o projeto e comece a depuração. A instância experimental do Visual Studio é exibida.
 
@@ -51,13 +51,13 @@ Você pode usar modelos de item que estão incluídos no SDK do Visual Studio pa
 
 1. Na caixa de diálogo **novo projeto** , expanda **Visual C#** ou **Visual Basic** e clique em **extensibilidade**. No painel **modelos** , selecione **projeto VSIX**. Na caixa **Nome**, digite `TestAdornment`. Clique em **OK**.
 
-2. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Vá para o nó **extensibilidade** do Visual C# e selecione **texto do editor Adornment**. Deixe o nome de arquivo padrão (*TextAdornment1.cs/vb*).
+2. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Vá para o nó **extensibilidade** do Visual C# e selecione **texto do editor Adornment**. Deixe o nome de arquivo padrão (*TextAdornment1. cs/vb*).
 
 3. Há dois arquivos de código, da seguinte maneira:
 
-    - *TextAdornment1.cs* contém a `TextAdornment1` classe.
+    - *TextAdornment1. cs* contém a `TextAdornment1` classe.
 
-    - *TextAdornment1TextViewCreationListener.cs* contém a `TextAdornment1TextViewCreationListener` classe.
+    - *TextAdornment1TextViewCreationListener. cs* contém a `TextAdornment1TextViewCreationListener` classe.
 
 4. Compile o projeto e comece a depuração. A instância experimental é exibida. Se você abrir um arquivo de texto, todos os caracteres ' a ' no texto serão contornados em vermelho em relação a um plano de fundo azul.
 
@@ -71,13 +71,13 @@ Você pode usar modelos de item que estão incluídos no SDK do Visual Studio pa
 
 1. Na caixa de diálogo **novo projeto** , expanda **Visual C#** ou **Visual Basic** e clique em **extensibilidade**. No painel **modelos** , selecione **projeto VSIX**. Na caixa **Nome**, digite `ViewportAdornment`. Clique em **OK**.
 
-2. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Vá para o nó **extensibilidade** do Visual C# e selecione **Editor visor Adornment**. Deixe o nome de arquivo padrão (*ViewportAdornment1.cs/vb*).
+2. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Vá para o nó **extensibilidade** do Visual C# e selecione **Editor visor Adornment**. Deixe o nome de arquivo padrão (*ViewportAdornment1. cs/vb*).
 
 3. Há dois arquivos de código, da seguinte maneira:
 
-    - *ViewportAdornment1.cs* contém a `ViewportAdornment1` classe.
+    - *ViewportAdornment1. cs* contém a `ViewportAdornment1` classe.
 
-    - *ViewportAdornment1TextViewCreationListener.cs* contém a `ViewportAdornment1TextViewCreationListener` classe
+    - *ViewportAdornment1TextViewCreationListener. cs* contém a `ViewportAdornment1TextViewCreationListener` classe
 
 4. Compile o projeto e comece a depuração. A instância experimental é exibida. Se você criar um novo arquivo de texto, uma caixa violeta que tem um contorno vermelho será exibida no canto superior direito do visor.
 
@@ -88,13 +88,13 @@ Você pode usar modelos de item que estão incluídos no SDK do Visual Studio pa
 
 1. Na caixa de diálogo **novo projeto** , expanda **Visual C#** ou **Visual Basic** e clique em **extensibilidade**. No painel **modelos** , selecione **projeto VSIX**. Na caixa **Nome**, digite `MarginExtension`. Clique em **OK**.
 
-2. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Vá para o nó **extensibilidade** do Visual C# e selecione **margem do editor**. Deixe o nome de arquivo padrão (EditorMargin1.cs/vb).
+2. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Vá para o nó **extensibilidade** do Visual C# e selecione **margem do editor**. Deixe o nome de arquivo padrão (EditorMargin1. cs/vb).
 
 3. Há dois arquivos de código, da seguinte maneira:
 
-    - *EditorMargin1.cs* contém a `EditorMargin1` classe.
+    - *EditorMargin1. cs* contém a `EditorMargin1` classe.
 
-    - *EditorMargin1Factory.cs* contém a `EditorMargin1Factory` classe.
+    - *EditorMargin1Factory. cs* contém a `EditorMargin1Factory` classe.
 
 4. Compile este projeto e inicie a depuração. A instância experimental é exibida. Se você abrir um arquivo de texto, uma margem verde com as palavras **Hello EditorMargin1** será exibida abaixo da barra de rolagem horizontal.
 

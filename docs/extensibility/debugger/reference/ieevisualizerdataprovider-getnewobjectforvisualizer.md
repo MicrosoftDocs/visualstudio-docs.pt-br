@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEEVisualizerDataProvider::GetNewObjectForVisualizer method
 ms.assetid: a898d549-4898-4fde-aad1-e8bb89129652
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 07bc02adc9dc3e6675c7bfbbcafd21a350b3a94f
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: af26455e37d0ecf881cd0bed898e1997f00a82ea
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102227288"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105083343"
 ---
 # <a name="ieevisualizerdataprovidergetnewobjectforvisualizer"></a>IEEVisualizerDataProvider::GetNewObjectForVisualizer
 Esse método obtém um novo objeto para o visualizador. Esse método sempre criará um novo objeto a partir do objeto existente.

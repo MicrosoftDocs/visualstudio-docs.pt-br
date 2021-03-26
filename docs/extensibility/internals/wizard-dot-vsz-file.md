@@ -9,17 +9,17 @@ helpviewer_keywords:
 - vsz files
 - wizards, files
 ms.assetid: 72e1d0f3-eef1-455e-b803-96827f030f50
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5fa9b9e06ccb20e6a2859770c0637fc85422fd0a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2663a6b05780b16d05b419c00aba904ded848796
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935853"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074230"
 ---
 # <a name="wizard-vsz-file"></a>Arquivo do assistente (.Vsz)
 
@@ -48,7 +48,7 @@ Os parâmetros permitem que o arquivo. vsz passe parâmetros personalizados adic
 
 Para adicionar uma ID de localidade padrão ao seu arquivo. vsz, especifique `FALLBACK_LCID` = xxxx, onde xxxx é a ID de localidade, por exemplo, 1033 para inglês. Quando `FALLBACK_LCID` o parâmetro for definido, o assistente usará a ID de localidade de fallback fornecida se a ID atual não for encontrada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Parâmetros personalizados](../../extensibility/internals/custom-parameters.md)
 - [Assistentes](../../extensibility/internals/wizards.md)

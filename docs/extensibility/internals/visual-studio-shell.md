@@ -8,17 +8,17 @@ helpviewer_keywords:
 - shell, Visual Studio
 - Visual Studio, shell
 ms.assetid: cb124ef4-1a6b-4bfe-bfbf-295ef9c07f36
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9ebc01c76c17319ebcfe2b61c06a6f2365a68122
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5dafd90294fd0968c78846d4162c1ff02c584f3f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941613"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074334"
 ---
 # <a name="visual-studio-shell"></a>Shell do Visual Studio
 O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] shell é o principal agente de integração no [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . O Shell fornece a funcionalidade necessária para permitir que o VSPackages Compartilhe serviços comuns. Como o objetivo da arquitetura do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] é a principal funcionalidade de benefício no VSPackages, o Shell é uma estrutura para fornecer funcionalidade básica e oferecer suporte à comunicação cruzada entre seu componente VSPackages.
@@ -80,7 +80,7 @@ O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] shell é o princi
 
 - **Caixa de Ferramentas**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>
 - <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>

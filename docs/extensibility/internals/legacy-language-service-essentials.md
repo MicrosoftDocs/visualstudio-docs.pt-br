@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Visual Studio, integrating programming languages
 - programming languages, integrating into Visual Studio
 ms.assetid: c15e0ccb-e7c5-4dbb-affb-fe3d3244debe
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a96b17fbb4caca92124732593da8982f07349155
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa3fc358e7557360f02a80f108bcbec74ae48e5f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839684"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074555"
 ---
 # <a name="legacy-language-service-essentials"></a>Conceitos básicos do serviço de linguagem herdado
 Você deve fornecer um serviço de linguagem para integrar uma linguagem de programação ao Visual Studio. Este tópico explica os recursos disponíveis em serviços de idioma herdados.

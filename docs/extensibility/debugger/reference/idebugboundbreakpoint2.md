@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBoundBreakpoint2 interface
 ms.assetid: df33c52e-ded2-48a0-951d-1f36c8fc922e
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2726a2422c49335d9c95e7d500381ad1fdc0108
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: b8a48ffcb3c0409839ec9323679e396a7e23b8f3
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102167471"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105088816"
 ---
 # <a name="idebugboundbreakpoint2"></a>IDebugBoundBreakpoint2
 Essa interface representa um ponto de interrupção associado a um local de código.
@@ -48,7 +48,7 @@ IDebugBoundBreakpoint2 : IUnknown
 |[SetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-sethitcount.md)|Define a contagem de acesso para este ponto de interrupção associado.|
 |[SetCondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md)|Define ou altera a condição associada a este ponto de interrupção associado.|
 |[SetPassCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setpasscount.md)|Define ou altera a contagem de aprovações associada a este ponto de interrupção associado.|
-|[Delete (excluir)](../../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md)|Exclui o ponto de interrupção.|
+|[Excluir](../../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md)|Exclui o ponto de interrupção.|
 
 ## <a name="requirements"></a>Requisitos
  Cabeçalho: msdbg. h

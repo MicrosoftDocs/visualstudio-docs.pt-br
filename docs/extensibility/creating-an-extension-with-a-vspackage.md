@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 ms.assetid: c0cc5e08-4897-44f2-8309-e3478f1f999e
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b847fad9752c6a2448c0fdc571815ea1823e2d9c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a6c93d90771eeffbfe28ae91781403019743afa9
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944889"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089141"
 ---
 # <a name="create-an-extension-with-a-vspackage"></a>Criar uma extensão com um VSPackage
 
@@ -29,7 +29,7 @@ A partir do Visual Studio 2015, você não instala o SDK do Visual Studio a part
 
 1. Crie um projeto VSIX chamado **FirstPackage**. Você pode encontrar o modelo de projeto VSIX na caixa de diálogo **novo projeto** pesquisando por "VSIX".
 
-2. Quando o projeto for aberto, adicione um modelo de item de pacote do Visual Studio chamado **FirstPackage**. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Na caixa de diálogo **Adicionar novo item** , vá para extensibilidade do **Visual C#**  >   e selecione **pacote do Visual Studio**. No campo **nome** na parte inferior da janela, altere o nome do arquivo de comando para *FirstPackage.cs*.
+2. Quando o projeto for aberto, adicione um modelo de item de pacote do Visual Studio chamado **FirstPackage**. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Na caixa de diálogo **Adicionar novo item** , vá para extensibilidade do **Visual C#**  >   e selecione **pacote do Visual Studio**. No campo **nome** na parte inferior da janela, altere o nome do arquivo de comando para *FirstPackage. cs*.
 
 3. Compile o projeto e comece a depuração.
 
@@ -41,7 +41,7 @@ A partir do Visual Studio 2015, você não instala o SDK do Visual Studio a part
 
 Neste ponto, a extensão não é carregada porque não há nada que faça com que ela seja carregada. Geralmente, é possível carregar uma extensão quando você interage com sua interface do usuário (clicando em um comando de menu, abrindo uma janela de ferramentas) ou especificando que o VSPackage deve ser carregado em um contexto de interface do usuário específico. Para obter mais informações sobre como carregar VSPackages e contextos de interface do usuário, consulte [carregando VSPackages](../extensibility/loading-vspackages.md). Para este procedimento, mostraremos como carregar um VSPackage quando uma solução estiver aberta.
 
-1. Abra o arquivo *FirstPackage.cs* . Procure a declaração da `FirstPackage` classe. Substitua os atributos existentes pelos seguintes atributos:
+1. Abra o arquivo *FirstPackage. cs* . Procure a declaração da `FirstPackage` classe. Substitua os atributos existentes pelos seguintes atributos:
 
     ```csharp
     [PackageRegistration(UseManagedResourcesOnly = true)]

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Visual Studio integration SDK roadmap
 - integration roadmap, Visual Studio SDK
 ms.assetid: 9118eaa4-0453-4dc5-9e16-c7062d254869
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2d67c3d9f998c8dd5192363cf8ff8fae2ce4b57
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e11ee862f43ead3605d8e07dc159e18da13413b8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839853"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074698"
 ---
 # <a name="inside-the-visual-studio-sdk"></a>Por dentro do SDK do Visual Studio
 
@@ -64,7 +64,7 @@ Esta seção fornece informações detalhadas sobre as extensões do Visual Stud
 
  Algumas das janelas de ferramentas são encaixadas juntas em um único painel que exibe a janela de ferramentas de Gerenciador de Soluções e oculta as outras janelas de ferramentas, mas as torna disponíveis clicando em guias. A imagem mostra duas outras janelas de ferramentas, a **lista de erros** e a janela de **saída** , encaixadas juntas em um único painel.
 
- Também é mostrado o painel principal do documento, que mostra várias janelas do editor. Embora as janelas de ferramentas normalmente tenham apenas uma instância (por exemplo, você pode abrir apenas uma **Gerenciador de soluções**), as janelas do editor podem ter várias instâncias, cada uma delas usada para editar um documento separado, mas todas elas são encaixadas no mesmo painel. A imagem mostra um painel de documentos que tem duas janelas de editor, uma janela de designer de formulário. Todas as janelas no painel do documento estão disponíveis clicando em guias, mas a janela do editor que contém o arquivo EditorPane.cs é visível e ativa.
+ Também é mostrado o painel principal do documento, que mostra várias janelas do editor. Embora as janelas de ferramentas normalmente tenham apenas uma instância (por exemplo, você pode abrir apenas uma **Gerenciador de soluções**), as janelas do editor podem ter várias instâncias, cada uma delas usada para editar um documento separado, mas todas elas são encaixadas no mesmo painel. A imagem mostra um painel de documentos que tem duas janelas de editor, uma janela de designer de formulário. Todas as janelas no painel do documento estão disponíveis clicando em guias, mas a janela do editor que contém o arquivo legenda. cs é visível e ativa.
 
  Ao estender o Visual Studio, você pode criar janelas de ferramentas que permitem que os usuários do Visual Studio interajam com sua extensão. Você também pode criar seus próprios editores que permitem que os usuários do Visual Studio editem documentos. Como suas janelas de ferramentas e editores serão integrados ao Visual Studio, você não precisará programá-las para encaixar ou aparecer em uma guia corretamente. Quando eles são registrados corretamente no Visual Studio, eles terão automaticamente os recursos típicos de janelas de ferramentas e janelas de documentos no Visual Studio. Para obter mais informações, consulte [estendendo e personalizando janelas de ferramentas](../../extensibility/extending-and-customizing-tool-windows.md).
 

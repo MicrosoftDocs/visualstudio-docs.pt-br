@@ -8,17 +8,17 @@ helpviewer_keywords:
 - project configurations, managing deployment
 - projects [Visual Studio SDK], configuration for managing deployment
 ms.assetid: bd5940d9-d94d-4944-beda-4ec1ab2bbde5
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ebdc1dc529e73e17ba55a0b4766f11dced4addcb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 589403f126a4fd614911c1deb99e9acd32d1ec7d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893640"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074412"
 ---
 # <a name="project-configuration-for-managing-deployment"></a>Configuração de projeto para gerenciar a implantação
 A implantação é o ato de mover fisicamente os itens de saída de um processo de compilação para o local esperado para depuração e instalação. Por exemplo, um aplicativo Web pode ser criado em um computador local e, em seguida, colocado no servidor.
