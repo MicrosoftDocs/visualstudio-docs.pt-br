@@ -8,17 +8,17 @@ helpviewer_keywords:
 - project configurations
 - configuration options, about configuration options
 ms.assetid: f4ad4dd3-b39e-42df-ad89-d403cdf24a2b
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa018d340e016ba5c9f424f705599a150ecdc818
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad30e3f7b91e8a76715f66d9f6701597f3830bd6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884683"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105057124"
 ---
 # <a name="configuration-options-overview"></a>Visão geral das opções de configuração
 Os projetos no [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podem dar suporte a várias configurações que podem ser criadas, depuradas, executadas e/ou implantadas. Uma configuração é um tipo de compilação descrito com um conjunto nomeado de propriedades, normalmente comutadores de compilador e locais de arquivo. Por padrão, novas soluções contêm duas configurações, *depuração* e *versão*. Essas configurações podem ser aplicadas usando suas configurações padrão ou modificadas para atender aos requisitos de solução e/ou projeto específicos. Alguns pacotes podem ser criados de duas maneiras: como um editor do ActiveX ou um componente in-loco. No entanto, os projetos não precisam dar suporte a várias configurações. Se houver apenas uma configuração disponível, essa configuração será mapeada em todas as configurações da solução.

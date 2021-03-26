@@ -10,17 +10,17 @@ helpviewer_keywords:
 - pkgdef
 - createpkgdef
 ms.assetid: c745cb76-47a6-49ff-9eed-16af0f748e35
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f9822319a74d1374ef2a88d4f9231e6fd86b1e5f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 519cc251a245e1eeb65ddb1fcd34b0fa1af8f686
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884527"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056877"
 ---
 # <a name="createpkgdef-utility"></a>Utilitário CreatePkgDef
 Usa um arquivo. dll para uma extensão do Visual Studio como um parâmetro e cria um arquivo *. pkgdef* para acompanhar o arquivo *. dll* . O arquivo *. pkgdef* contém todas as informações que, de outra forma, seriam gravadas no registro do sistema quando a extensão é instalada.
@@ -36,7 +36,7 @@ CreatePkgDef /out=<FileName> [/codebase] [/assembly] <AssemblyPath>
 
 ## <a name="arguments"></a>Argumentos
 **/out = &lt; nome do arquivo&gt;**\
-Obrigatório. Define o nome do arquivo de saída *. pkgdef* para &lt; filename &gt; .
+Obrigatórios. Define o nome do arquivo de saída *. pkgdef* para &lt; filename &gt; .
 
 **/codebase**\
 Opcional. Força o registro com o utilitário **codebase** .

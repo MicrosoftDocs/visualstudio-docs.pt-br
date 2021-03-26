@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Add New Item dialog box, contributing to
 ms.assetid: b2e53175-9372-4d17-8c2b-9264c9e51e9c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e3fdc5705cad0ec696a520350042d7f18aaec146
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8186f25f8e1631f0e13aa7a8f43620812c4c7693
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884631"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105057046"
 ---
 # <a name="contribute-to-the-add-new-item-dialog-box"></a>Contribuir para a caixa de diálogo Adicionar novo item
 Um subtipo de projeto pode fornecer um novo diretório completo de itens para a caixa de diálogo **Adicionar novo item** , registrando adicionar modelos de **Item** na subchave do registro **projetos** .

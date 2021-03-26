@@ -9,17 +9,17 @@ helpviewer_keywords:
 - IntelliSense, Quick Info
 - language services [managed package framework], IntelliSense Quick Info
 ms.assetid: 159ccb0b-f5d6-4912-b88b-e9612924ed5e
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a2798f54bc89b9dddea3e3727084bae0086fab0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 90cab5683c7a13aec25b15d75da0117beee34721
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99915249"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060881"
 ---
 # <a name="quick-info-in-a-legacy-language-service"></a>Informações rápidas em um serviço de linguagem herdado
 As informações rápidas do IntelliSense mostram informações sobre um identificador na origem quando o usuário posiciona o cursor no identificador e seleciona **informações rápidas** no menu do **IntelliSense** ou mantém o cursor do mouse sobre o identificador. Isso faz com que uma dica de ferramenta apareça com informações sobre o identificador. Normalmente, essas informações consistem no tipo de identificador. Quando o mecanismo de depuração está ativo, essas informações podem incluir o valor atual. O mecanismo de depuração fornece valores de expressão, enquanto o serviço de linguagem manipula somente identificadores.

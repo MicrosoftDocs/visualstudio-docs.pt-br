@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 99395da7-ec34-491d-9baa-0590d23283ce
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e6e4a07a023be398c4106984fe4dc33eddd2706
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9486f1cd3e931d134c6fe2842f8704926de70966
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929193"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060699"
 ---
 # <a name="vsix-color-compiler"></a>Compilador de cores do VSIX
 A ferramenta de compilador de cores de extensão do Visual Studio é um aplicativo de console que usa um arquivo. XML que representa as cores dos temas existentes do Visual Studio e o faz em um arquivo. pkgdef para que essas cores possam ser usadas no Visual Studio. Como é fácil comparar as diferenças entre arquivos. xml, essa ferramenta é útil para gerenciar cores personalizadas no controle do código-fonte. Ele também pode ser conectado a ambientes de compilação para que a saída da compilação seja um arquivo. pkgdef válido.
@@ -107,7 +107,7 @@ A ferramenta de compilador de cores de extensão do Visual Studio é um aplicati
 
 |**Atributo**|**Definição**|
 |-|-|
-|Tipo|Necessária O tipo da cor. Pode ser um dos seguintes:<br /><br /> *CT_INVALID:* A cor é inválida ou não está definida.<br /><br /> *CT_RAW:* Um valor de ARGB bruto.<br /><br /> *CT_COLORINDEX:* NÃO USE.<br /><br /> *CT_SYSCOLOR:* Uma cor de sistema do Windows de SysColor.<br /><br /> *CT_VSCOLOR:* Uma cor do Visual Studio de __VSSYSCOLOREX.<br /><br /> *CT_AUTOMATIC:* A cor automática.<br /><br /> *CT_TRACK_FOREGROUND:* NÃO USE.<br /><br /> *CT_TRACK_BACKGROUND:* NÃO USE.|
+|Type|Necessária O tipo da cor. Pode ser um dos seguintes:<br /><br /> *CT_INVALID:* A cor é inválida ou não está definida.<br /><br /> *CT_RAW:* Um valor de ARGB bruto.<br /><br /> *CT_COLORINDEX:* NÃO USE.<br /><br /> *CT_SYSCOLOR:* Uma cor de sistema do Windows de SysColor.<br /><br /> *CT_VSCOLOR:* Uma cor do Visual Studio de __VSSYSCOLOREX.<br /><br /> *CT_AUTOMATIC:* A cor automática.<br /><br /> *CT_TRACK_FOREGROUND:* NÃO USE.<br /><br /> *CT_TRACK_BACKGROUND:* NÃO USE.|
 |Fonte|Necessária O valor da cor representada em hexadecimal|
 
  Todos os valores compatíveis com a enumeração __VSCOLORTYPE são suportados pelo esquema no atributo Type. No entanto, recomendamos que você use apenas CT_RAW e CT_SYSCOLOR.
@@ -149,7 +149,7 @@ A ferramenta de compilador de cores de extensão do Visual Studio é um aplicati
 
 - VsixColorCompiler D:\xml\colors.xml/noLogo
 
-## <a name="notes"></a>Observações
+## <a name="notes"></a>Anotações
 
 - Essa ferramenta requer que a versão mais recente do tempo de execução do VC + + seja instalada.
 

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - installation [Visual Studio SDK], components
 - installation [Visual Studio SDK], file management
 ms.assetid: 029bffa2-6841-4caa-a41a-442467e1aedc
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 44ee1a3afe313cdc11bb28e0a24a89e3e3ad7f0c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9767af4c30957111526303600f9e8eda815b42f0
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852720"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105057085"
 ---
 # <a name="component-management"></a>Gerenciamento de componentes
 As unidades de tarefas no Windows Installer são chamadas de componentes Windows Installer (às vezes chamados de WICs ou apenas componentes). Um GUID identifica cada WIC, que é a unidade básica de instalação e a contagem de referência para as configurações que usam Windows Installer.
@@ -49,6 +49,6 @@ As unidades de tarefas no Windows Installer são chamadas de componentes Windows
 
      Se você fizer isso, as chaves compartilhadas serão substituídas quando outro VSPackage com versão for instalado. Depois de remover a segunda versão, o arquivo para o qual a chave está apontando é desaparecido.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Escolha entre VSPackages compartilhadas e com controle de versão](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)
 - [Cenários de instalação do VSPackage](../../extensibility/internals/vspackage-setup-scenarios.md)

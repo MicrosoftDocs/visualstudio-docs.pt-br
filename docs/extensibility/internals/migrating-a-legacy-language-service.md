@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - language services, migrating
 ms.assetid: e0f666a0-92a7-4f9c-ba79-d05b13fb7f11
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7a0e20c77a1c8a81a29691079ace1e4751135560
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: afe98f2d96618999aa02dd01f03f55395af46e19
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895681"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105063260"
 ---
 # <a name="migrating-a-legacy-language-service"></a>Migrando um serviço de linguagem herdado
 Você pode migrar um serviço de idioma herdado para uma versão posterior do Visual Studio atualizando o projeto e adicionando um arquivo Source. Extension. vsixmanifest ao projeto. O próprio serviço de linguagem continuará a funcionar como antes, porque o editor do Visual Studio o adapta.
@@ -71,13 +71,13 @@ Você pode migrar um serviço de idioma herdado para uma versão posterior do Vi
 
     - Adicione uma referência a Microsoft.VisualStudio.Shell.Interop.10.0.dll.
 
-8. Abra o arquivo VsPkg.cs e altere o valor do `DefaultRegistryRoot` atributo para
+8. Abra o arquivo VsPkg. cs e altere o valor do `DefaultRegistryRoot` atributo para
 
     ```
     "Software\\Microsoft\\VisualStudio\\14.0Exp"
     ```
 
-9. O exemplo original não registra seu serviço de idioma, portanto, você deve adicionar o seguinte atributo a VsPkg.cs.
+9. O exemplo original não registra seu serviço de idioma, portanto, você deve adicionar o seguinte atributo a VsPkg. cs.
 
     ```
     [ProvideLanguageService(typeof(RegularExpressionLanguageService), "RegularExpressionLanguage", 0, RequestStockColors=true)]

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - selection, Visual Studio IDE
 - IDE, currency
 ms.assetid: 2f6f18d1-acd8-454d-a856-9a4d81155052
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0f77afea813158c787978e2ea4dbec1a55e36eca
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0fb65a63b99f625f8d32af8436db753a0f17322e
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890624"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105080899"
 ---
 # <a name="selection-and-currency-in-the-ide"></a>Seleção e moeda no IDE
 O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE (ambiente de desenvolvimento integrado) mantém informações sobre os objetos selecionados no momento usando o *contexto* de seleção. Com o contexto de seleção, VSPackages pode participar do controle de moeda de duas maneiras:

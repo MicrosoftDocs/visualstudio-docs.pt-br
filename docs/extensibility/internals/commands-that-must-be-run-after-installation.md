@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - post-install commands
 ms.assetid: c9601f2e-2c6e-4da9-9a6e-e707319b39e2
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: deca5b39701fd073b3191cf7a24d83ccf1e08794
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ef557c0c679fad0dff25a51a8529270e4bd7ced2
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884722"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105057137"
 ---
 # <a name="commands-that-must-be-run-after-installation"></a>Comandos que devem ser executados após a instalação
 Se você implantar sua extensão por meio de um arquivo *. msi* , deverá executar **devenv/setup** como parte de sua instalação para que o Visual Studio descubra suas extensões.
@@ -30,7 +30,7 @@ Se você implantar sua extensão por meio de um arquivo *. msi* , deverá execut
 
 ### <a name="reglocator-table-rows-to-locate-devenvexe-from-different-versions-of-visual-studio"></a>RegLocator linhas da tabela para localizar devenv.exe de diferentes versões do Visual Studio
 
-|Assinatura|Root|Chave|Nome|Tipo|
+|Assinatura|Root|Chave|Nome|Type|
 |-----------------|----------|---------|----------|----------|
 |RL_DevenvExe_2002|2|SOFTWARE\Microsoft\VisualStudio\7.0\Setup\VS|EnvironmentPath|2|
 |RL_DevenvExe_2003|2|SOFTWARE\Microsoft\VisualStudio\7.1\Setup\VS|EnvironmentPath|2|
@@ -60,7 +60,7 @@ Se você implantar sua extensão por meio de um arquivo *. msi* , deverá execut
 
 ### <a name="customaction-table-rows-to-run-devenvexe"></a>Linhas da tabela CustomAction a serem executadas devenv.exe
 
-|Ação|Tipo|Fonte|Destino|
+|Ação|Type|Fonte|Destino|
 |------------|----------|------------|------------|
 |CA_RunDevenv2002|1586|DEVENV_EXE_2002|/setup|
 |CA_RunDevenv2003|1586|DEVENV_EXE_2003|/setup|
