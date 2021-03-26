@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Symbols element (VSCT XML schema)
 - VSCT XML schema elements, Symbols
 ms.assetid: 1cda43d8-42a5-4b1b-a3c8-cf0401c3202f
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 173da18ca3b38dd64b8a2594c03abd83987f58f5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9a013bbe438d1e4dd1f6b5149dcb7da78835fd09
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839316"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056045"
 ---
 # <a name="symbols-element"></a>Elemento Symbols
 Define GUIDs e IDs que são usados por outros elementos VSCT. Para código não gerenciado, essas informações normalmente são provenientes dos arquivos de cabeçalho especificados pelo [elemento externo](../extensibility/extern-element.md). O código gerenciado usa os elementos filho do elemento Symbols para definir essas informações.

@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, implementation strategies
 ms.assetid: 90458fdd-2d34-4f10-82dc-6d8f31b66d8b
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e544e4cebaa4e2e1691f6c175dfa750a1f951abc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6126df3e4adb1e0d942669b561801be4449036df
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99930688"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105055052"
 ---
 # <a name="choose-a-debug-engine-implementation-strategy"></a>Escolher uma estratégia de implementação do mecanismo de depuração
 Use a arquitetura de tempo de execução para determinar sua estratégia DE implementação do mecanismo DE depuração. Você pode criar o mecanismo de depuração em processo para o programa que você está depurando. Crie o mecanismo de depuração em processo para o SDM (Gerenciador de depuração de sessão) do Visual Studio. Ou crie o mecanismo de depuração fora do processo para ambos. As diretrizes a seguir devem ajudá-lo a escolher entre essas três estratégias.

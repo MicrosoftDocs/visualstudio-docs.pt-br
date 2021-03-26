@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - extension points
 ms.assetid: 91a6417e-a6fe-4bc2-9d9f-5173c634a99b
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 925bc0f123649bd0d5d29f5a7bec83227829b8af
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a8d71e6c7cd7569c9e73134345584a8237337bc7
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99915220"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105073294"
 ---
 # <a name="language-service-and-editor-extension-points"></a>Pontos de extensão do serviço de linguagem e do editor
 O Editor fornece pontos de extensão que você pode estender como partes de componente Managed Extensibility Framework (MEF), incluindo a maioria dos recursos de serviço de linguagem. Estas são as principais categorias de ponto de extensão:
@@ -81,7 +81,7 @@ internal static ContentTypeDefinition TestContentTypeDefinition;
 
   Estes são alguns dos tipos de conteúdo que são definidos pelo Visual Studio e alguns dos idiomas hospedados no Visual Studio:
 
-- Básico
+- Basic
 
 - C/C++
 

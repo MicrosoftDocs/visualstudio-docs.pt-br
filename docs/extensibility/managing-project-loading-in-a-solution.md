@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - solutions, managing project loading
 ms.assetid: 097c89d0-f76a-4aaf-ada9-9a778bd179a0
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca17eae2b4f21e9705788faa1a2371a066be6475
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 425f610e8a473460cb7d9170138521e2e7bee08a
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952155"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105073086"
 ---
 # <a name="manage-project-loading-in-a-solution"></a>Gerenciar o carregamento do projeto em uma solução
 As soluções do Visual Studio podem conter um grande número de projetos. O comportamento padrão do Visual Studio é carregar todos os projetos em uma solução no momento em que a solução é aberta e não permitir que o usuário acesse qualquer um dos projetos até que todos tenham terminado o carregamento. Quando o processo de carregamento do projeto durar mais de dois minutos, será exibida uma barra de progresso mostrando o número de projetos carregados e o número total de projetos. O usuário pode descarregar projetos enquanto trabalha em uma solução com vários projetos, mas esse procedimento tem algumas desvantagens: os projetos descarregados não são criados como parte de um comando de solução de recompilação, e as descrições do IntelliSense de tipos e membros de projetos fechados não são exibidas.

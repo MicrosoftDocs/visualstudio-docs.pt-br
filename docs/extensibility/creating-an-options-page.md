@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - Tools Options pages [Visual Studio SDK], creating
 ms.assetid: 9f4e210c-4b47-4daa-91fa-1c301c4587f9
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1069109cbda6b0385c9409a12f9f9c674ddec14c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eb94554b4ac1af30d8187a8ab75aa83f65dccc72
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877480"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105055798"
 ---
 # <a name="create-an-options-page"></a>Criar uma página de opções
 
@@ -166,7 +166,7 @@ Este tutorial cria uma página simples de ferramentas/opções que usa uma grade
 
 7. Adicione um controle **TextBox** ao controle de usuário.
 
-     Na janela **Propriedades** , na barra de ferramentas, clique no botão **eventos** e clique duas vezes no evento **sair** . O novo manipulador de eventos aparece no código *MyUserControl.cs* .
+     Na janela **Propriedades** , na barra de ferramentas, clique no botão **eventos** e clique duas vezes no evento **sair** . O novo manipulador de eventos aparece no código *MyUserControl. cs* .
 
 8. Adicione um `OptionsPage` campo público, um `Initialize` método à classe de controle e atualize o manipulador de eventos para definir o valor da opção como o conteúdo da caixa de texto:
 
@@ -249,7 +249,7 @@ Este tutorial cria uma página simples de ferramentas/opções que usa uma grade
 
      Esse código chama <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> a criação ou recuperação de uma `OptionPageGrid` instância. `OptionPageGrid` chama <xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A> para carregar suas opções, que são propriedades públicas.
 
-2. Agora, adicione um modelo de item de comando personalizado chamado **MyToolsOptionsCommand** para exibir o valor. Na caixa de diálogo **Adicionar novo item** , vá para extensibilidade do **Visual C#**  >   e selecione **comando personalizado**. No campo **nome** na parte inferior da janela, altere o nome do arquivo de comando para *MyToolsOptionsCommand.cs*.
+2. Agora, adicione um modelo de item de comando personalizado chamado **MyToolsOptionsCommand** para exibir o valor. Na caixa de diálogo **Adicionar novo item** , vá para extensibilidade do **Visual C#**  >   e selecione **comando personalizado**. No campo **nome** na parte inferior da janela, altere o nome do arquivo de comando para *MyToolsOptionsCommand. cs*.
 
 3. No arquivo *MyToolsOptionsCommand* , substitua o corpo do método do comando `ShowMessageBox` pelo seguinte:
 

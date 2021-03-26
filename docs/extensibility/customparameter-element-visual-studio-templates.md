@@ -10,17 +10,17 @@ f1_keywords:
 helpviewer_keywords:
 - CustomParameters element [Visual Studio project templates]
 ms.assetid: 743c4489-74ac-403a-bbaa-eed7d785a3ac
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 98f7df8593b09acb2fa4db81ebfa734aeb1ddcaf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6190dc96501221a31c9a51f59e1bd734b9e08260
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947730"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105055590"
 ---
 # <a name="customparameter-element-visual-studio-templates"></a>Elemento CustomParameter (modelos do Visual Studio)
 Contém um nome de parâmetro personalizado e um valor a ser usado quando um projeto ou item é criado a partir do modelo.
@@ -39,7 +39,7 @@ Contém um nome de parâmetro personalizado e um valor a ser usado quando um pro
 |Atributo|Descrição|
 |---------------|-----------------|
 |`Name`|Obrigatórios. O nome do parâmetro. O formato dos parâmetros é $*Name*$.|
-|`Value`|Obrigatório. O valor de substituição para o parâmetro.|
+|`Value`|Obrigatórios. O valor de substituição para o parâmetro.|
 
 ### <a name="child-elements"></a>Elementos filho
  Nenhum.

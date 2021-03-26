@@ -7,17 +7,17 @@ helpviewer_keywords:
 - AsyncTaskMethodBuilder<TResult> structure [.NET Framework debug engines]
 - debug engines, AsyncTaskMethodBuilder<TResult> structure [.NET Framework]
 ms.assetid: 17ebc340-8170-4aff-bf54-dc4548c83632
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 35e1ca4d19727383bdd7c957bc59fd6b6568c9f5
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 253d4fa79280fbb49ff0292121c0d0a5cfe4bdb2
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102145645"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105055512"
 ---
 # <a name="asynctaskmethodbuilderlttresultgt-structure---internal-members"></a>&lt; &gt; Estrutura de TResult AsyncTaskMethodBuilder-membros internos
 Este tópico descreve os membros internos da <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> classe. Para obter informações gerais sobre essa classe, consulte o <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> tópico de referência.

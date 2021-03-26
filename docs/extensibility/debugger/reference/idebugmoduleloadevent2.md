@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugModuleLoadEvent2 interface
 ms.assetid: 7d26fb23-5d49-4ba7-b7c5-3aed4d7be81e
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 59b5e9e7619434b9ff4d914fc7b955ebbab4ace2
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: f6030e5962c0544a63b7b9658622447324a15792
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102149841"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105065353"
 ---
 # <a name="idebugmoduleloadevent2"></a>IDebugModuleLoadEvent2
 Essa interface é enviada pelo mecanismo de depuração (DE) para o SDM (Gerenciador de depuração de sessão) quando um módulo é carregado ou descarregado.

@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - commands, implementation
 ms.assetid: c782175c-cce4-4bd0-8374-4a897ceb1b3d
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2031fd74a10c8725157908eaa906c1963a477526
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 93c99b131340d2e53b931619d4e5742d9e19f570
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940105"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105091133"
 ---
 # <a name="command-implementation"></a>Implementação de comando
 Para implementar um comando em um VSPackage, você deve executar as seguintes tarefas:

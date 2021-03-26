@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e48ecfb2-f4b5-4d3a-b4a2-7a4d62fa4ec0
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c8ac314a2ec49b805fc87badf6b63a719b8511e8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0c6f609842f2531fe39158e871a330e136603433
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952090"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090051"
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Padrões de composição para Visual Studio
 Padrões de composição combinam elementos de interação e design em configurações distintas. Alguns dos padrões de composição mais importantes no Visual Studio em relação à consistência incluem:
@@ -327,7 +327,7 @@ Padrões de composição combinam elementos de interação e design em configura
 
 #### <a name="mouse-interaction"></a>Interação com o mouse
 
-|Entrada|Result|
+|Entrada|Resultado|
 |-----------|------------|
 |Clique em um objeto não selecionado|Seleciona o objeto e exibe uma linha tracejada e alças de seleção, se o objeto for redimensionável.|
 |Clique em um objeto selecionado|Ativa a edição in-loco se o objeto der suporte a ele. Clicar fora do objeto desativa o modo de edição in-loco.|
@@ -342,7 +342,7 @@ Padrões de composição combinam elementos de interação e design em configura
 
 #### <a name="keyboard-interaction"></a>Interação do teclado
 
-|Entrada|Result|
+|Entrada|Resultado|
 |-----------|------------|
 |Tab|Move o indicador de foco entre a ordem lógica dos objetos no editor. Isso pode ser da esquerda para a direita ou de cima para baixo, dependendo do valor da propriedade **TabIndex** (ou equivalente), da ordem de criação do objeto e da finalidade geral do editor. Shift + Tab inverte a direção do indicador de foco.|
 |Barra de espaços|Ativa o modo panorâmico enquanto a tecla é mantida. A entrada adicional do mouse é necessária para deslocar a posição do visor.|
@@ -362,7 +362,7 @@ Padrões de composição combinam elementos de interação e design em configura
 #### <a name="graphical-containers"></a>Contêineres gráficos
  Em alguns casos, os editores gráficos fornecem contêineres para outros objetos gráficos, como o controle de painel de Windows Forms ou o controle de layout de grade no designer de HTML. Se o seu editor fornece contêineres para outros objetos gráficos, o modelo de seleção a seguir deve ser usado somente para o contêiner (os objetos dentro do contêiner seguem o modelo padrão, conforme descrito acima):
 
-|Entrada|Result|
+|Entrada|Resultado|
 |-----------|------------|
 |Clique uma vez no contêiner|Seleciona o objeto de contêiner sem selecionar diretamente nenhum dos objetos contidos. O contêiner pode ser movido e/ou redimensionado com a entrada padrão do mouse e do teclado (conforme descrito acima). Os objetos contidos são movidos em relação ao contêiner, mas os objetos contidos não são redimensionados, a menos que também sejam selecionados diretamente.|
 |Passe o mouse sobre a região de limite do contêiner|Transforma o mouse no cursor de movimentação, indicando que o contêiner pode ser movido.|
@@ -422,7 +422,7 @@ Padrões de composição combinam elementos de interação e design em configura
 ##### <a name="renaming"></a>Renomear
  Se os nós na árvore oferecerem suporte à renomeação, a renomeação deverá ser feita em vigor. A operação in-loco deve ser a padrão em todos os controles de árvore no Visual Studio. Forneça um comando de renomeação que ativa imediatamente o modo de edição in-loco, com a seleção de texto que cobre o nome completo do nó, pronto para aceitar a entrada do usuário. Se o nó representar um arquivo, o nome do arquivo deverá conter a extensão. O realce de seleção deve incluir apenas o corpo do nome de arquivo e não a extensão.
 
-|Entrada|Result|
+|Entrada|Resultado|
 |-----------|------------|
 |Tecla Enter|Confirma a operação de renomeação|
 |Tecla Esc|Cancela a operação de renomeação|
@@ -439,9 +439,9 @@ Padrões de composição combinam elementos de interação e design em configura
 
 | Objeto | Seleção |
 |--------|------------|
-| List | Vizinha |
-| List | Não contíguo |
-| List | Região |
+| Lista | Vizinha |
+| Lista | Não contíguo |
+| Lista | Região |
 
  Clicar uma vez em uma lista seleciona a linha na qual o clique ocorreu. Se o usuário for clicar em uma célula de lista que dá suporte à edição in-loco, a célula também será imediatamente ativada para edição in-loco. Caso contrário, a linha inteira será selecionada imediatamente e mostrará um realce.
 

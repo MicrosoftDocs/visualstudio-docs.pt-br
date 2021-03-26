@@ -11,17 +11,17 @@ helpviewer_keywords:
 - templates [Visual Studio], wizards
 - IWizard interface
 ms.assetid: 47ee26cf-67b7-4ff1-8a9d-ab11a725405c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: eb70931f2c26c248b2e2d41348fa26958d5348b3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 41290f946c198ed854cad9a7eb2af088f6fe228a
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883305"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105082277"
 ---
 # <a name="how-to-use-wizards-with-project-templates"></a>Como: usar assistentes com modelos de projeto
 
@@ -74,7 +74,7 @@ Este procedimento mostra como criar um assistente personalizado que abre um form
 
 5. Adicione uma classe para a implementação do assistente ao projeto VSIX. (Em **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto VSIX e selecione **Adicionar**, **novo item** e **classe**.) Nomeie a classe **WizardImplementation**.
 
-6. Substitua o código no arquivo *WizardImplementationClass.cs* pelo código a seguir:
+6. Substitua o código no arquivo *WizardImplementationClass. cs* pelo código a seguir:
 
    ```csharp
    using System;
@@ -161,7 +161,7 @@ Este procedimento mostra como criar um assistente personalizado que abre um form
 
      Este exemplo adiciona um valor de parâmetro do formulário de entrada do usuário para o <xref:System.Collections.Generic.Dictionary%602> parâmetro. Cada instância do `$custommessage$` parâmetro no projeto será substituída pelo texto inserido pelo usuário.
 
-7. Agora, crie o **UserInputForm**. No arquivo *WizardImplementation.cs* , adicione o código a seguir após o final da `WizardImplementation` classe.
+7. Agora, crie o **UserInputForm**. No arquivo *WizardImplementation. cs* , adicione o código a seguir após o final da `WizardImplementation` classe.
 
    ```csharp
    public partial class UserInputForm : Form
@@ -265,7 +265,7 @@ Para que o modelo de projeto personalizado use seu assistente personalizado, voc
 
 Neste exemplo, o projeto usado como o modelo exibe a mensagem especificada no formulário entrada do usuário do assistente personalizado.
 
-1. Na **Gerenciador de soluções**, vá para o projeto **MyProjectTemplate** e abra *Class1.cs*.
+1. Na **Gerenciador de soluções**, vá para o projeto **MyProjectTemplate** e abra *Class1. cs*.
 
 2. No `Main` método do aplicativo, adicione a seguinte linha de código.
 

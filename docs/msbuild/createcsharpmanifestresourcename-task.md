@@ -2,7 +2,7 @@
 title: Tarefa CreateCSharpManifestResourceName | Microsoft Docs
 description: Use a tarefa MSBuild CreateCSharpManifestResourceName para criar um nome de manifesto em estilo C# de um determinado nome de arquivo. resx ou outro recurso.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 11/15/2020
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3406a5f61c9a4aa1c9e2a3c6388741c3ae0fa0f0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3e1bd096c2a9c7763a3be0611f3716f61df22856
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901447"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105055863"
 ---
 # <a name="createcsharpmanifestresourcename-task"></a>Tarefa CreateCSharpManifestResourceName
 
@@ -43,7 +43,7 @@ Cria um nome de manifesto em estilo C# a partir de um determinado nome de arquiv
 
 ## <a name="remarks"></a>Comentários
 
- A [tarefa CreateVisualBasicManifestResourceName](../msbuild/createvisualbasicmanifestresourcename-task.md) determina o nome do recurso de manifesto apropriado a ser atribuído a um determinado arquivo *. resx* ou outro recurso. A tarefa fornece um nome lógico para um arquivo de recurso e, em seguida, anexa-o a um parâmetro de saída como metadados.
+ A [tarefa CreateCSharpManifestResourceName](../msbuild/createcsharpmanifestresourcename-task.md) determina o nome do recurso de manifesto apropriado a ser atribuído a um determinado arquivo *. resx* ou outro recurso. A tarefa fornece um nome lógico para um arquivo de recurso e, em seguida, anexa-o a um parâmetro de saída como metadados.
 
  Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, confira [Classe base TaskExtension](../msbuild/taskextension-base-class.md).
 

@@ -13,17 +13,17 @@ helpviewer_keywords:
 - tool window toolbar
 - guid
 ms.assetid: c9cacd57-9225-450f-a9ac-cbf3168ea844
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b4df4bac9fcc933cccc1bd54ced89c416b23863
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8ca3a2ec0b9d0eef7821641eaf05e93f83f94f40
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970212"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105082069"
 ---
 # <a name="guids-and-ids-of-visual-studio-toolbars"></a>GUIDs e IDs das barras de ferramentas do Visual Studio
 Este tópico enumera os valores de GUID e ID das barras de ferramentas que estão incluídas no IDE (ambiente de desenvolvimento integrado) do Visual Studio e nos grupos que eles contêm. Esses valores são definidos em arquivos *. vsct* que são instalados como parte do SDK do Visual Studio. Para obter mais informações, consulte [comandos, menus e grupos definidos pelo IDE](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
@@ -56,7 +56,7 @@ Este tópico enumera os valores de GUID e ID das barras de ferramentas que estã
 |Adicionar comando|IDM_VS_TOOL_ADDCOMMAND|
 |Indefinido|IDM_VS_TOOL_UNDEFINED|
 |esquema XML|IDM_VS_TOOL_SCHEMA|
-|dados XML|IDM_VS_TOOL_DATA|
+|Dados XML|IDM_VS_TOOL_DATA|
 
 ## <a name="groups-on-the-ide-toolbars"></a>Grupos nas barras de ferramentas do IDE
  Para adicionar um botão a uma barra de ferramentas padrão, defina um dos grupos a seguir como seu pai. Os grupos são classificados por barra de ferramentas pai.
@@ -136,7 +136,7 @@ Este tópico enumera os valores de GUID e ID das barras de ferramentas que estã
 |Memória 1-4|guidVSDebugGroup: IDM_MEMORY_WINDOW_TOOLBAR1... quatro|IDG_MEMORY_EXPRESSION1.. quatro<br /><br /> IDG_MEMORY_COLUMNS1.. quatro|
 |Processos|guidVSDebugGroup: IDM_ATTACHED_PROCS_TOOLBAR|IDG_ATTACHED_PROCS_EXECCNTRL IDG_ATTACHED_PROCS_STEPPING<br /><br /> IDG_ATTACHED_PROCS_EXECCNTRL2<br /><br /> IDG_ATTACHED_PROCS_ATTACH<br /><br /> IDG_ATTACHED_PROCS_COLUMNS|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Adicionar um controlador de menu a uma barra de ferramentas](../../extensibility/adding-a-menu-controller-to-a-toolbar.md)
 - [Adicionar uma barra de ferramentas a uma janela de ferramentas](../../extensibility/adding-a-toolbar-to-a-tool-window.md)
 - [GUIDs e IDs dos menus do Visual Studio](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)

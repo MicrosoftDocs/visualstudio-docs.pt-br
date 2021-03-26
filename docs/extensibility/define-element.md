@@ -8,17 +8,17 @@ helpviewer_keywords:
 - VSCT XML schema elements, Define
 - Define element (VSCT XML schema)
 ms.assetid: 5aee74e3-de41-4dc6-9618-93e158af56dd
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2a2686abd8e8c703d8fb85009b3ba56070f166f0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 83a8ee40205cafcaff29399ead4036374f798abf
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968444"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105082264"
 ---
 # <a name="define-element"></a>Definir elemento
 Define um par de nome e valor de símbolo. Esse símbolo pode ser avaliado por atributos condicionais. Para obter mais informações, consulte [atributos condicionais](../extensibility/vsct-xml-schema-conditional-attributes.md). Consulte também o [elemento Symbols](../extensibility/symbols-element.md).
@@ -36,8 +36,8 @@ Define um par de nome e valor de símbolo. Esse símbolo pode ser avaliado por a
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|name|Obrigatório. O nome do símbolo:<br /><br /> nome = "modo"|
-|value|Obrigatório. O valor do símbolo:<br /><br /> valor = "padrão"|
+|name|Obrigatórios. O nome do símbolo:<br /><br /> nome = "modo"|
+|value|Obrigatórios. O valor do símbolo:<br /><br /> valor = "padrão"|
 |Condição|Opcional. Para obter mais informações, consulte [atributos condicionais](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Elementos filho

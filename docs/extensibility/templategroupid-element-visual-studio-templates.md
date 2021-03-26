@@ -11,17 +11,17 @@ helpviewer_keywords:
 - TemplateGroupID element [Visual Studio Templates]
 - <TemplateGroupID> element [Visual Studio Templates]
 ms.assetid: bce7b49a-90bc-4691-aff3-a87e209f6d83
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d9db0d2744648901a9389bd2d2805d8c6a4073ae
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5f97d60fe319ee19cf74c7a5e3a3f3d7ef13b921
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895356"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105055993"
 ---
 # <a name="templategroupid-element-visual-studio-templates"></a>Elemento TemplateGroupID (modelos do Visual Studio)
 Especifica que tipo de projeto um modelo de item será exibido. Esse elemento é significativo quando [ShowByDefault (modelos do Visual Studio)](../extensibility/showbydefault-visual-studio-templates.md) é definido como `false` . Quando [ShowByDefault (modelos do Visual Studio)](../extensibility/showbydefault-visual-studio-templates.md) é definido como `true` , um modelo de item está disponível em todos os tipos de projeto.

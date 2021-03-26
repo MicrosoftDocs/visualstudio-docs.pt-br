@@ -9,17 +9,17 @@ helpviewer_keywords:
 - localize extension
 - localized deployment
 ms.assetid: 10e80b13-b39e-466c-a7c8-774a862355af
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d55acd30a0ea5381e9b14cf10c952c5626922c22
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7d2e297484e89f1ae2cfb9f2be7af25f1fe92714
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893601"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105073216"
 ---
 # <a name="localizing-vsix-packages"></a>Localizando pacotes do VSIX
 
@@ -103,7 +103,7 @@ O exemplo a seguir mostra partes relevantes de um arquivo *extension. vsixmanife
 
 ## <a name="see-also"></a>Confira também
 
-|Title|Descrição|
+|Título|Descrição|
 |-----------|-----------------|
 |[Referência do esquema 2,0 do pacote de idiomas do VSIX](vsix-language-pack-schema-2-0-reference.md)|Um pacote de idiomas do VSIX descreve as informações de localização de um arquivo de implantação. vsix.|
 |[Anatomia de um pacote VSIX](../extensibility/anatomy-of-a-vsix-package.md)|Descreve a estrutura e o conteúdo de um pacote VSIX.|

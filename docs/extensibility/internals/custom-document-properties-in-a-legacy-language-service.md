@@ -9,17 +9,17 @@ helpviewer_keywords:
 - document properties, custom
 - language services [managed package framework], custom document properties
 ms.assetid: cc714a67-b33e-4440-9203-3c90f648bd9c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7a9bd5b41d1c04e52d16ecb2fc327e648d9f81aa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1e154ba5e6ce4c85f597957b1d6704ca341b3c4d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99902997"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105091130"
 ---
 # <a name="custom-document-properties-in-a-legacy-language-service"></a>Propriedades de documento personalizadas em um serviço de idioma herdado
 As propriedades do documento podem ser exibidas na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] janela **Propriedades** . Linguagens de programação geralmente não têm propriedades associadas a arquivos de origem individuais. No entanto, o XML dá suporte a propriedades de documento que afetam a codificação, o esquema e a folha de estilos.

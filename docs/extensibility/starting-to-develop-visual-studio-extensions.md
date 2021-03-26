@@ -8,17 +8,17 @@ helpviewer_keywords:
 - getting started, Visual Studio integration
 - Visual Studio, integration
 ms.assetid: 8fe5e2ab-a424-4173-9d39-dd082c4d58d0
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8c45ff8b0fd2328a6398f844dc1416decc0ea591
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d8101640ce3e4a998d0a97fa1d85ded27fa746d0
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99848078"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089934"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Começar a desenvolver extensões do Visual Studio
 

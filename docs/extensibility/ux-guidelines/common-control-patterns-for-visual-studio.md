@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: 3e893949-6398-42f1-9eab-a8d8c2b7f02d
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab8f04ff885f4b57d24cb3bc0eb449859fca6271
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e55bb5f4473971f99ce04f9e48b7e05ec13f94c6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952181"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090103"
 ---
 # <a name="common-control-patterns-for-visual-studio"></a>Padrões de controle comuns para Visual Studio
 ## <a name="common-controls"></a><a name="BKMK_CommonControls"></a> Controles comuns
@@ -365,7 +365,7 @@ Um nó de exibição de árvore pode revelar as opções de submenu em um menu d
 
 ![O item que gerou o menu de contexto ganha foco para notificar o usuário qual item foi selecionado.](../../extensibility/ux-guidelines/media/070705-5_contextmenu.png "070705-5_ContextMenu")<br />O item que gerou o menu de contexto ganha foco para notificar o usuário qual item foi selecionado.
 
-#### <a name="keyboard"></a>Teclado
+#### <a name="keyboard"></a>Keyboard
 O modo de exibição de árvore deve fornecer a capacidade de selecionar itens e expandir/recolher nós usando o teclado. Isso garante que a navegação atenda aos nossos requisitos de acessibilidade.
 
 ##### <a name="tree-view-control"></a>Controle de exibição de árvore

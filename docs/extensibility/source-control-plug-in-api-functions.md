@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, functions
 ms.assetid: 4b0536dd-4f92-4ef2-9031-4548281f37aa
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8df7a4be9c8a270feebd7e27d25c006eb4dc5817
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c28c175d53fb37cf890dad4240a84fb132f6af35
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927932"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090116"
 ---
 # <a name="source-control-plug-in-api-functions"></a>Funções de API de plug-in de controle do código-fonte
 A API de plug-in de controle do código-fonte fornece as seguintes funções, que devem ser implementadas pelo plug-in de controle do código-fonte de acordo com essa API. As assinaturas de cada função e a semântica associada aos sinalizadores de bits e a outros parâmetros são descritas detalhadamente nessa referência.
@@ -87,6 +87,6 @@ A API de plug-in de controle do código-fonte fornece as seguintes funções, qu
 
  (Fornecido no SDK do ambiente, o inclui a pasta, por padrão *[unidade]* \Program Files\VSIP 8.0 \ EnvSDK\common\inc; também fornecida na pasta VSIP com o exemplo MSSCCI, *[unidade]* \Arquivos de Files\VSIP \ MSSCCI).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Plug-ins de controle do código-fonte](../extensibility/source-control-plug-ins.md)
 - [Criando um plug-in de controle do código-fonte](../extensibility/internals/creating-a-source-control-plug-in.md)

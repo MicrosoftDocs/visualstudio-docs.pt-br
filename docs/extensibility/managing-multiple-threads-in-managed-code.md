@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 59730063-cc29-4dae-baff-2234ad8d0c8f
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5486d5faa4f994883d2a32d152ceec59c65629ab
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7b301770a54baf0416aa9fcc838a9a6633252fbe
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924954"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105073125"
 ---
 # <a name="how-to-manage-multiple-threads-in-managed-code"></a>Como: gerenciar vários threads em código gerenciado
 Se você tiver uma extensão VSPackage gerenciada que chama métodos assíncronos ou que tem operações que são executadas em threads diferentes do thread da interface do usuário do Visual Studio, você deve seguir as diretrizes fornecidas abaixo. Você pode manter o thread da interface do usuário responsivo porque ele não precisa aguardar o trabalho em outro thread ser concluído. Você pode tornar seu código mais eficiente, porque você não tem threads extras que ocupam espaço de pilha, e você pode torná-lo mais confiável e mais fácil de depurar, pois evita deadlocks e código sem resposta.

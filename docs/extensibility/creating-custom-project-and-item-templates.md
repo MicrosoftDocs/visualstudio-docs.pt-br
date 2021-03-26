@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: overview
 ms.assetid: 586da5dc-f678-402b-afd0-0332959fd7a6
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2dc5f347e3f5823613d11c8c217fcb2d29635867
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: afddd162312ac686e97df84bec0f48dc0478c898
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851342"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105055759"
 ---
 # <a name="create-custom-project-and-item-templates"></a>Criar modelos de item e projeto personalizados
 
@@ -86,7 +86,7 @@ Para cenários de criação de modelo básico, você deve usar o assistente para
 
 5. Para um projeto de modelo de projeto, você deve ver o modelo de projeto listado na caixa de diálogo **novo projeto** (**arquivo**  >  **novo**  >  **projeto**), no nó Visual C# ou Visual Basic. Para um projeto de modelo de item, você deve ver o modelo de item listado na caixa de diálogo **Adicionar novo item** . Para exibir a caixa de diálogo **Adicionar novo item** , na **Gerenciador de soluções**, selecione o nó do projeto e selecione **Adicionar**  >  **novo item**).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de modelo do Visual Studio](../ide/creating-project-and-item-templates.md)
 - [Pacotes NuGet em modelos do Visual Studio](/nuget/visual-studio-extensibility/visual-studio-templates)

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - GetSymbolInfo method
 - IDebugModule3::GetSymbolInfo method
 ms.assetid: dda5e8e1-6878-4aa9-9ee4-e7d0dcc11210
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d2793c9b6d9d88997ce2e4e84c147f87183555cd
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 9cc4c8d7c88e4b973ad7055327da73472a6ed4d2
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102164845"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105065522"
 ---
 # <a name="idebugmodule3getsymbolinfo"></a>IDebugModule3::GetSymbolInfo
 Recupera uma lista de caminhos que são pesquisados em busca de símbolos, bem como os resultados da pesquisa de cada caminho.
