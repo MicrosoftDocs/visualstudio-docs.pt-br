@@ -10,17 +10,17 @@ helpviewer_keywords:
 - VSCT XML schema elements, Extern
 - Extern element (VSCT XML schema)
 ms.assetid: db6c3ddd-a1ba-450a-897a-bb568a5377fc
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8892de377d2383e5aed3ec7824616d626bc5164f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5771dbc1c6b17b0f488d42c30a036ff1d90a5a18
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862090"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074984"
 ---
 # <a name="extern-element"></a>Elemento externo
 O elemento externo faz referência a quaisquer arquivos de cabeçalho externo (*. h*) para mesclar com o arquivo *. vsct* no momento da compilação. Os arquivos a serem mesclados devem estar no caminho de inclusão fornecido ao compilador VSCT ou referenciados por um [elemento include](../extensibility/include-element.md). Os arquivos podem ser outros arquivos *. vsct* ou arquivos de cabeçalho do C++.
@@ -42,7 +42,7 @@ O elemento externo faz referência a quaisquer arquivos de cabeçalho externo (*
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|href|Obrigatório. O caminho para o arquivo de cabeçalho:<br /><br /> href = "stdidcmd. h"|
+|href|Obrigatórios. O caminho para o arquivo de cabeçalho:<br /><br /> href = "stdidcmd. h"|
 |Condição|Opcional. Consulte [atributos condicionais](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 |Linguagem|Opcional. O idioma padrão de todos os [\<Strings>](../extensibility/strings-element.md) elementos na tabela de comandos:<br /><br /> Language = "en-US"|
 
@@ -70,7 +70,7 @@ O elemento externo faz referência a quaisquer arquivos de cabeçalho externo (*
 </CommandTable>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Arquivos de tabela de comando do Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 - [Como VSPackages adicionar elementos da interface do usuário](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Comandos, menus e barras de ferramentas](../extensibility/internals/commands-menus-and-toolbars.md)

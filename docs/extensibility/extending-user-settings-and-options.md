@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Options dialog box, controlling with the Visual Studio SDK
 - VSPackages, user preferences
 ms.assetid: 5bb6277a-8c9d-48c8-9b4e-1cb3052caded
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f9c51456654862a94c6caf4c1819a36f4656cc74
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: afc0e9eb1904515554e08ae06a70fe5af8c1dd7b
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862103"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074997"
 ---
 # <a name="extend-user-settings-and-options"></a>Estender as configurações e opções de usuário
 No Visual Studio, há duas maneiras principais de manter as preferências do usuário. As   >  páginas **Opções** de ferramentas permitem que os usuários definam seus próprios valores para muitos tipos diferentes de configurações, tanto gerais quanto específicas de idioma. As configurações de usuário permitem que os usuários especifiquem Propriedades gerais de configuração do Visual Studio. Para obter mais informações sobre páginas de opções, consulte [Opções e páginas](../extensibility/internals/options-and-options-pages.md)de opções. Para obter mais informações sobre as configurações do usuário, consulte [suporte para configurações do usuário](../extensibility/internals/support-for-user-settings.md).

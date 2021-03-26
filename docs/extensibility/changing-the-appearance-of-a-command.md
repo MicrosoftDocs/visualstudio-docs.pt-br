@@ -9,17 +9,17 @@ helpviewer_keywords:
 - menu commands, changing appearance
 - menus, changing command appearance
 ms.assetid: da2474fa-f92d-4e9e-b8bf-67c61bf249c2
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1514fb9409805df91a16678a5cce67ee1f66ab9f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8b6911d865b253ff82ffcc6c4911e0989f109f28
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99911230"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089817"
 ---
 # <a name="change-the-appearance-of-a-command"></a>Alterar a aparência de um comando
 Você pode fornecer comentários para o usuário alterando a aparência de um comando. Por exemplo, você pode desejar que um comando pareça diferente quando não estiver disponível. Você pode tornar os comandos disponíveis ou indisponíveis, ocultá-los ou exibi-los, ou marque ou desmarque-os no menu.
@@ -38,19 +38,19 @@ Para alterar a aparência de um comando, execute uma destas ações:
 
 1. Siga as instruções em [alterar o texto de um comando de menu](../extensibility/changing-the-text-of-a-menu-command.md) para criar um item de menu chamado `New Text` .
 
-2. No arquivo *ChangeMenuText.cs* , adicione a seguinte instrução Using:
+2. No arquivo *ChangeMenuText. cs* , adicione a seguinte instrução Using:
 
     ```csharp
     using System.Security.Permissions;
     ```
 
-3. No arquivo *ChangeMenuTextPackageGuids.cs* , adicione a seguinte linha:
+3. No arquivo *ChangeMenuTextPackageGuids. cs* , adicione a seguinte linha:
 
     ```csharp
     public const string guidChangeMenuTextPackageCmdSet= "00000000-0000-0000-0000-00000000";  // get the GUID from the .vsct file
     ```
 
-4. No arquivo *ChangeMenuText.cs* , substitua o código no método de inmessagebox pelo seguinte:
+4. No arquivo *ChangeMenuText. cs* , substitua o código no método de a MessageBox pelo seguinte:
 
     ```csharp
     private void Execute(object sender, EventArgs e)
@@ -86,7 +86,7 @@ Para alterar a aparência de um comando, execute uma destas ações:
 
 8. No menu **ferramentas** , agora você deve ver o **novo texto**. Clique em **novo texto**. O comando agora deve estar esmaecido.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Comandos, menus e barras de ferramentas](../extensibility/internals/commands-menus-and-toolbars.md)
 - [Como VSPackages adicionar elementos da interface do usuário](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Estendendo menus e comandos](../extensibility/extending-menus-and-commands.md)

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - projects [Visual Studio SDK], adding
 - project items [Visual Studio], adding
 ms.assetid: 8c59217f-56e5-4540-a73b-cd10de189373
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8ff54e24408577ba8bfbf553a5c641eab2d15814
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3f2c10b310569a412025fd114f7818734106bc18
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906226"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105079053"
 ---
 # <a name="add-project-and-project-item-templates"></a>Adicionar projeto e modelos de item de projeto
 Ao criar seus próprios tipos de projeto, você deve fornecer suporte para adicionar novos projetos e itens de projeto usando as caixas de diálogo padrão do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ambiente de desenvolvimento integrado (IDE). Os tópicos a seguir discutem técnicas diferentes para adicionar projetos e itens de projeto.

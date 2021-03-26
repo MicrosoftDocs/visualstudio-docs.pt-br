@@ -8,17 +8,17 @@ helpviewer_keywords:
 - designers [Visual Studio SDK], initializing
 - designers [Visual Studio SDK], configuring metadata
 ms.assetid: f7fe9a7e-f669-4642-ad5d-186b2e6e6ec9
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 57e335839905e828d3587ce82b1e23b0d62ddf65
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 13c65913fe54b9c22eb8fa374b7a16de84438e33
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968314"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105091273"
 ---
 # <a name="designer-initialization-and-metadata-configuration"></a>Configuração de metadados e inicialização do designer
 
@@ -99,7 +99,7 @@ Se o sinalizador global tiver sido definido como `false` , a alteração de meta
 > [!NOTE]
 > A superfície de design só dá suporte à criação de componentes e, portanto, somente os componentes podem ter metadados locais. No exemplo acima, estávamos tentando modificar uma propriedade, como a `Color` propriedade de um objeto. Se `false` foi passado para o sinalizador global, `CustomBrowser` nunca apareceria porque o designer nunca cria uma instância do `Color` . Definir o sinalizador global como `false` é útil para componentes, como controles, temporizadores e caixas de diálogo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>
 - <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtensionAttribute>

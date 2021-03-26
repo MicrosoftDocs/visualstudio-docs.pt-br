@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Output window, about Output window
 ms.assetid: b02fa88c-f92a-4ff6-ba5f-2eb4d48a643a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 91c59737d269af4eb91df402f38346cf41e3146e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cf875d070d27d307380f23e71af2bda7c4a205b5
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961762"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105075023"
 ---
 # <a name="extend-the-output-window"></a>Estender a janela de saída
 A janela de **saída** é um conjunto de painéis de texto de leitura/gravação. O Visual Studio tem esses painéis internos: **Build**, nos quais os projetos comunicam mensagens sobre compilações e **geral**, em que [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] o comunica mensagens sobre o IDE. Os projetos obtêm uma referência ao painel de **compilação** automaticamente por meio dos <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> métodos de interface, e o Visual Studio oferece acesso direto ao painel **geral** por meio do <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> serviço. Além dos painéis internos, você pode criar e gerenciar seus próprios painéis personalizados.
@@ -35,14 +35,14 @@ A janela de **saída** é um conjunto de painéis de texto de leitura/gravação
 
     2. EnvDTE80
 
-3. No *TestOutput.cs*, adicione a seguinte instrução Using:
+3. No *TestOutput. cs*, adicione a seguinte instrução Using:
 
     ```f#
     using EnvDTE;
     using EnvDTE80;
     ```
 
-4. No *TestOutput.cs*, exclua o `ShowMessageBox` método. Adicione o seguinte stub de método:
+4. No *TestOutput. cs*, exclua o `ShowMessageBox` método. Adicione o seguinte stub de método:
 
     ```csharp
     private void OutputCommandHandler(object sender, EventArgs e)

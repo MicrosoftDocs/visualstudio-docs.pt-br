@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - document data and document view
 ms.assetid: 71eea623-f566-4feb-84cd-ca1ba71bc493
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 89f2903b2ec1308692f629c40af06f89706a427b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 391bec513f1f6d32d7ff2f87d70abdbf491ab8be
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968288"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105091234"
 ---
 # <a name="document-data-and-document-view-in-custom-editors"></a>Dados de documento e exibição de documento em editores personalizados
 Um editor personalizado consiste em duas partes: um objeto de dados de documento e um objeto de exibição de documento. Como os nomes sugerem, o objeto de dados do documento representa os dados de texto a serem exibidos. Da mesma forma, o objeto de exibição de documento (ou "exibição") representa uma ou mais janelas nas quais exibir o objeto de dados do documento.
@@ -38,7 +38,7 @@ Um editor personalizado consiste em duas partes: um objeto de dados de documento
 
  Há duas opções para criar uma exibição para um editor personalizado. Um é o modelo de ativação in-loco, em que a exibição é hospedada em uma janela usando um controle ActiveX ou um objeto de dados de documento. O segundo é o modelo de incorporação simplificado, em que a exibição é hospedada pelo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] e <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> é implementada para manipular comandos de janela. Para obter informações sobre o modelo de ativação in-loco, consulte [ativação in-loco](/previous-versions/visualstudio/visual-studio-2015/misc/in-place-activation?preserve-view=true&view=vs-2015). Para obter informações sobre o modelo de incorporação simplificada, consulte [incorporação simplificada](../extensibility/simplified-embedding.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Suporte a exibições de vários documentos](../extensibility/supporting-multiple-document-views.md)
 - [Incorporação simplificada](../extensibility/simplified-embedding.md)

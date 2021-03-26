@@ -6,17 +6,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - TASK_STATE_CANCELED field, Task class [.NET Framework debug engines]
 ms.assetid: f4f5a96a-8230-493d-9696-8d2716bda261
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8e99148c223f86a0307a0588e7803a5fadf52d6a
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: e02bd5c81fea58e49eca0909d53d2fe68269b72d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102223323"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105079261"
 ---
 # <a name="task_state_canceled-field"></a>Campo de TASK_STATE_CANCELED
 A tarefa foi cancelada antes de atingir o estado de execução ou confirmou seu cancelamento e foi concluído sem exceção.

@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Add New Item dialog box, extending
 ms.assetid: 67ae8af6-3752-49e8-8ce3-007aca5f7982
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 68a16d544147ca95512f8b6064d2b9712b26ed64
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 131c04d1025885c59a884220a61098b2c85dd5a1
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969016"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105079144"
 ---
 # <a name="add-directories-to-the-add-new-item-dialog-box"></a>Adicionar diretórios à caixa de diálogo Adicionar novo item
 O exemplo de código a seguir demonstra como registrar um novo conjunto de diretórios para a caixa de diálogo **Adicionar novo item** . Os diretórios para a caixa de diálogo **Adicionar novo item** são diferentes para cada projeto. Portanto, os diretórios são registrados na subchave **projetos** , encontrados em **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\Projects**.
@@ -56,7 +56,7 @@ NoRemove Projects
 
  Você também pode estender um projeto existente programando um subtipo de projeto. Com um subtipo de projeto, você pode estender um projeto sem gravar um novo tipo de projeto. Para obter mais informações sobre subtipos de projeto, consulte [subtipos de projeto](../../extensibility/internals/project-subtypes.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Registrar modelos de projeto e item](../../extensibility/internals/registering-project-and-item-templates.md)
 - [Adicionar itens à caixa de diálogo Adicionar novo item](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
 - [Adicionar diretórios à caixa de diálogo novo projeto](../../extensibility/internals/adding-directories-to-the-new-project-dialog-box.md)

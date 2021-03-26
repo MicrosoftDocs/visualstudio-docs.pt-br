@@ -9,17 +9,17 @@ helpviewer_keywords:
 - toolbox
 - wpf
 ms.assetid: 9cc34db9-b0d1-4951-a02f-7537fbbb51ad
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9b401baf1605a869772ba41ce83ad906061f8144
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1dccdeb09a938b3b0bbbab803faeed538001b825
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851433"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089245"
 ---
 # <a name="create-a-wpf-toolbox-control"></a>Criar um controle de caixa de ferramentas do WPF
 
@@ -33,7 +33,7 @@ A partir do Visual Studio 2015, você não instala o SDK do Visual Studio a part
 
 1. Crie um projeto VSIX denominado `MyToolboxControl` . Você pode encontrar o modelo de projeto VSIX na caixa de diálogo **novo projeto** pesquisando por "VSIX".
 
-2. Quando o projeto for aberto, adicione um modelo de item de **controle da caixa de ferramentas do WPF** denominado `MyToolboxControl` . Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Na caixa de diálogo **Adicionar novo item** , vá para extensibilidade do **Visual C#**  >   e selecione **controle da caixa de ferramentas WPF**. No campo **nome** na parte inferior da janela, altere o nome do arquivo de comando para *MyToolboxControl.cs*.
+2. Quando o projeto for aberto, adicione um modelo de item de **controle da caixa de ferramentas do WPF** denominado `MyToolboxControl` . Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Na caixa de diálogo **Adicionar novo item** , vá para extensibilidade do **Visual C#**  >   e selecione **controle da caixa de ferramentas WPF**. No campo **nome** na parte inferior da janela, altere o nome do arquivo de comando para *MyToolboxControl. cs*.
 
     Agora, a solução contém um controle de usuário, um `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> que adiciona o controle à **caixa de ferramentas** e uma entrada de ativo **Microsoft. VisualStudio. ToolboxControl** no manifesto do VSIX para implantação.
 
@@ -57,9 +57,9 @@ A partir do Visual Studio 2015, você não instala o SDK do Visual Studio a part
 
 ## <a name="renaming-the-control"></a>Renomeando o controle
 
- Por padrão, seu controle aparecerá na **caixa de ferramentas** como **MyToolboxControl** em um grupo chamado **MyToolboxControl. MyToolboxControl**. Você pode alterar esses nomes no arquivo *MyToolboxControl.XAML.cs* .
+ Por padrão, seu controle aparecerá na **caixa de ferramentas** como **MyToolboxControl** em um grupo chamado **MyToolboxControl. MyToolboxControl**. Você pode alterar esses nomes no arquivo *MyToolboxControl. XAML. cs* .
 
-1. Abra *MyToolboxControl.XAML.cs* na exibição de código.
+1. Abra *MyToolboxControl. XAML. cs* na exibição de código.
 
 2. Localize a `MyToolboxControl` classe e renomeie-a como TestControl. (A maneira mais rápida de fazer isso é renomear a classe e, em seguida, selecionar **renomear** no menu de contexto e concluir as etapas. (Para obter mais informações sobre o comando **renomear** , consulte [refatoração Renomear (C#)](../ide/reference/rename.md).)
 

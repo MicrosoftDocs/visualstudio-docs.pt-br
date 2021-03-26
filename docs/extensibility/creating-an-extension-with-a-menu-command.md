@@ -10,17 +10,17 @@ helpviewer_keywords:
 - tutorials
 - visual studio package
 ms.assetid: f97104c8-2bcb-45c7-a3c9-85abeda8df98
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4ada5870bc06465b97bdf767eb64910f62e15f0a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: de79662494a3228dd301e8d08480c6aa0a0192a2
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944902"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089206"
 ---
 # <a name="create-an-extension-with-a-menu-command"></a>Criar uma extensão com um comando de menu
 
@@ -36,13 +36,13 @@ A partir do Visual Studio 2015, você não instala o SDK do Visual Studio a part
 
 ::: moniker range="vs-2017"
 
-2. Quando o projeto for aberto, adicione um modelo de item de comando personalizado chamado **FirstCommand**. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Na caixa de diálogo **Adicionar novo item** , vá para extensibilidade do **Visual C#**  >   e selecione **comando personalizado**. No campo **nome** na parte inferior da janela, altere o nome do arquivo de comando para *FirstCommand.cs*.
+2. Quando o projeto for aberto, adicione um modelo de item de comando personalizado chamado **FirstCommand**. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Na caixa de diálogo **Adicionar novo item** , vá para extensibilidade do **Visual C#**  >   e selecione **comando personalizado**. No campo **nome** na parte inferior da janela, altere o nome do arquivo de comando para *FirstCommand. cs*.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Quando o projeto for aberto, adicione um modelo de item de comando personalizado chamado **FirstCommand**. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Na caixa de diálogo **Adicionar novo item** , vá para extensibilidade do **Visual C#**  >   e selecione **comando**. No campo **nome** na parte inferior da janela, altere o nome do arquivo de comando para *FirstCommand.cs*.
+2. Quando o projeto for aberto, adicione um modelo de item de comando personalizado chamado **FirstCommand**. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **novo item**. Na caixa de diálogo **Adicionar novo item** , vá para extensibilidade do **Visual C#**  >   e selecione **comando**. No campo **nome** na parte inferior da janela, altere o nome do arquivo de comando para *FirstCommand. cs*.
 
 ::: moniker-end
 
@@ -68,7 +68,7 @@ Agora, vá para o menu **ferramentas** na instância experimental. Você deverá
 
 Agora, vamos atualizar o manipulador de comandos para iniciar o bloco de notas.
 
-1. Pare a depuração e volte para sua instância de trabalho do Visual Studio. Abra o arquivo *FirstCommand.cs* e adicione a seguinte instrução Using:
+1. Pare a depuração e volte para sua instância de trabalho do Visual Studio. Abra o arquivo *FirstCommand. cs* e adicione a seguinte instrução Using:
 
     ```csharp
     using System.Diagnostics;

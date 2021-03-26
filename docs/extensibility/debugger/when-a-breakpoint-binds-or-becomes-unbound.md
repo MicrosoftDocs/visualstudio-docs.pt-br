@@ -8,17 +8,17 @@ helpviewer_keywords:
 - debugging [Debugging SDK], breakpoint unbound events
 - breakpoint bound events
 ms.assetid: 61bf00b2-8293-49d3-b919-1efb0dec9151
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 97ac7dc9afbd3b740c95a7e76a30836e938eaeaf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b6e1a6acdee89be293ab4a6dc72a3d4fd4336d88
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968496"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105091403"
 ---
 # <a name="when-a-breakpoint-binds-or-becomes-unbound"></a>Quando um ponto de interrupção associa ou se torna desassociado
 Quando um ponto de interrupção não pode ser associado no momento em que uma chamada é feita ao método [IDebugPendingBreakpoint2:: canbind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md) , a hora de ligação e a hora de criação do ponto de interrupção são diferentes.
@@ -36,5 +36,5 @@ Quando um ponto de interrupção não pode ser associado no momento em que uma c
 
 5. Métodos [IDebugBreakpointBoundEvent2:: GetPendingBreakpoint](../../extensibility/debugger/reference/idebugbreakpointboundevent2-getpendingbreakpoint.md) e [IDebugBreakpointBoundEvent2:: EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md) para verificar e obter os pontos de interrupção associados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Chamando eventos do depurador](../../extensibility/debugger/calling-debugger-events.md)
