@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - SccInitialize function
 ms.assetid: 5bc0d28b-2c68-4d43-9e51-541506a8f76e
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 986e3624b1716c782102f0f214283a7fa7020a08
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: 9f266fbe27cb509d2d6dca47a913261eea7f937c
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102220580"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105063819"
 ---
 # <a name="sccinitialize-function"></a>Função SccInitialize
 Essa função inicializa o plug-in de controle do código-fonte e fornece recursos e limites para o IDE (ambiente de desenvolvimento integrado).

@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], contexts
 ms.assetid: 8e8b5702-5c16-4988-953d-69dd807d8b84
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: be2e5e168b232f120a22e7e4b39352008fee7418
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 34c69e11c57574c07a8ecb40480842834a8ee53f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840750"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105097234"
 ---
 # <a name="document-context"></a>Contexto do documento
 Em [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] depuração, um *contexto de documento*:
@@ -28,7 +28,7 @@ Em [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] depuração, um 
 
 - É implementado por uma interface [IDebugDocumentContext2](../../extensibility/debugger/reference/idebugdocumentcontext2.md) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Contexto de código](../../extensibility/debugger/code-context.md)
 - [Provedor de símbolos](../../extensibility/debugger/symbol-provider.md)
 - [Interfaces de provedor de símbolo](../../extensibility/debugger/reference/symbol-provider-interfaces.md)

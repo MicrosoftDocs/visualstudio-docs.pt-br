@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Watch window, expressions
 - expression evaluation, Watch window expressions
 ms.assetid: b07e72c7-60d3-4b30-8e3f-6db83454c348
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 34367b836e766754ce5e274698eb4f5a5d407760
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e72a89a6d3b51a328294d5bfa56e1699ead5498a
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840607"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105097065"
 ---
 # <a name="evaluate-a-watch-window-expression"></a>Avaliar uma expressão de janela de inspeção
 > [!IMPORTANT]

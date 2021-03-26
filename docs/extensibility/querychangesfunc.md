@@ -10,17 +10,17 @@ helpviewer_keywords:
 - QUERYCHANGESFUNC callback function
 - QUERYCHANGESDATA structure
 ms.assetid: 9d383e2c-eee1-4996-973a-0652d4c5951c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8abe32abcb79fada541124f50a750fb4c1edde58
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cc797d68f6df6d9aab93554ba95955a7d9f45eea
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910861"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105068616"
 ---
 # <a name="querychangesfunc"></a>QUERYCHANGESFUNC
 Essa é uma função de retorno de chamada usada pela operação [SccQueryChanges](../extensibility/sccquerychanges-function.md) para enumerar uma coleção de nomes de arquivo e determinar o status de cada arquivo.
@@ -45,7 +45,7 @@ no O `pvCallerData` parâmetro passado pelo chamador (IDE) para [SccQueryChanges
 
 no Ponteiro para uma estrutura de [estrutura QUERYCHANGESDATA](#LinkQUERYCHANGESDATA) que descreve as alterações em um arquivo.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
  O IDE retorna um código de erro apropriado:
 
 |Valor|Descrição|
@@ -98,7 +98,7 @@ struct QUERYCHANGESDATA_W
 
  lpLatestName o nome do arquivo atual para este item.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Funções de retorno de chamada implementadas pelo IDE](../extensibility/callback-functions-implemented-by-the-ide.md)
 - [SccQueryChanges](../extensibility/sccquerychanges-function.md)
 - [Códigos de erro](../extensibility/error-codes.md)

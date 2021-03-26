@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - SccGetUserOption function
 ms.assetid: 17863747-1901-4c53-a2b3-ed996085e120
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c137630e4a29fc534e9bfced16cffe862e07a046
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: 262a15069f840c048f574396d5a7ec076760d77e
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102220619"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105063949"
 ---
 # <a name="sccgetuseroption-function"></a>Função SccGetUserOption
 Essa função recupera uma variedade de opções específicas do usuário.
