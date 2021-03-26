@@ -1,21 +1,21 @@
 ---
 title: Página padrão para ajuda com F1
 description: Página padrão para solicitações de ajuda F1 para o Visual Studio
-ms.date: 08/20/2020
+ms.date: 03/25/2021
 ms.topic: troubleshooting
-ms.custom: contperf-fy21q1
+ms.custom: contperf-fy21q3
 robots: noindex,nofollow
 f1_keywords:
 - vs.ambient
 manager: jmartens
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 7026db3e4a3c9490c5ea770342d04fe477fdf28f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3e6af978a080e0c75e439f1ee29a90fc0d40a653
+ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961606"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105616916"
 ---
 # <a name="f1-help"></a>ajuda F1
 
@@ -28,14 +28,14 @@ Se você estiver procurando ajuda F1 em uma janela, uma palavra-chave ou um nome
 - Tente pesquisar em [docs.Microsoft.com](/)
 - Tente pesquisar usando um mecanismo de pesquisa.
 
-## <a name="find-help-on-a-keyword-or-api"></a>Encontrar ajuda em uma palavra-chave ou API
+## <a name="get-help-for-your-programming-language"></a>Obter ajuda para sua linguagem de programação?
 
-- Para obter ajuda em C#, consulte o [Guia de programação c#](/dotnet/csharp/programming-guide/) ou a [referência de linguagem](/dotnet/csharp/language-reference/).
-- Para obter Visual Basic ajuda, consulte os recursos ou a [referência de linguagem](/dotnet/visual-basic/language-reference/)do [Visual Basic](/dotnet/visual-basic/programming-guide/language-features/) .
-- Para obter ajuda do Python, consulte a [documentação do Python](https://docs.python.org/).
-- Para obter ajuda sobre o C++, consulte [referência da linguagem C/C++ e bibliotecas padrão](/cpp/cpp/c-cpp-language-and-standard-libraries).
-- Para obter ajuda no F#, consulte o [guia do F#](/dotnet/fsharp/).
-- Para obter ajuda do TypeScript, consulte a [documentação do typescript](https://www.typescriptlang.org/docs).
+- [Guia de programação C#](/dotnet/csharp/programming-guide/) ou [referência de linguagem](/dotnet/csharp/language-reference/).
+- [Recursos de linguagem Visual Basic](/dotnet/visual-basic/programming-guide/language-features/) ou [referência de linguagem](/dotnet/visual-basic/language-reference/).
+- [Documentação do Python](https://docs.python.org/).
+- [Referência de bibliotecas padrão e linguagem C/C++](/cpp/cpp/c-cpp-language-and-standard-libraries).
+- [Guia F #](/dotnet/fsharp/).
+- [Documentação do TypeScript](https://www.typescriptlang.org/docs).
 
 ## <a name="re-map-or-disable-the-f1-help-key"></a>Mapear novamente ou desabilitar a tecla de ajuda F1
 

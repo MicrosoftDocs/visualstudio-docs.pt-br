@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: b572a6854d505704accd79cc4da2ac4e52c193d6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e76c5346230b6991f238384a4852938dcc540f6c
+ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850160"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105616929"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Criar uma instalação de rede do Visual Studio
 
@@ -70,7 +70,7 @@ Outros bootstrapper com suporte incluem [vs_teamexplorer.exe](https://download.v
 
 ## <a name="create-an-offline-installation-folder"></a>Criar uma pasta de instalação offline
 
-Você deve ter uma conexão com a Internet para concluir esta etapa. Para criar uma instalação offline com todos os idiomas e todos os recursos, use um comando semelhante a um dos exemplos a seguir.
+Você deve ter uma conexão com a Internet para concluir esta etapa. Para criar uma instalação offline com todos os idiomas e todos os recursos, use um comando semelhante a um dos exemplos a seguir. Essa pasta deve permanecer estática e todas as atualizações para o layout devem ser incluídas nessa pasta. 
 
    > [!IMPORTANT]
    > Um layout completo para uma localidade de idioma único requer cerca de 35 GB de espaço em disco para a Comunidade do Visual Studio e 42 GB para Visual Studio Enterprise. As [localidades de idioma](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales) adicionais exigem cerca de metade a GB cada. Consulte a seção [Personalizar o layout de rede](#customize-the-network-layout) para obter mais informações.
@@ -287,7 +287,7 @@ Também oferecemos uma opção de suporte por meio de [**chat de instalação**]
 
 Também temos outras opções de suporte disponíveis. Para obter uma lista, confira nossa página de [comentários](../ide/feedback-options.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Guia do administrador do Visual Studio](visual-studio-administrator-guide.md)
 - [Atualizar uma instalação em rede do Visual Studio](update-a-network-installation-of-visual-studio.md)

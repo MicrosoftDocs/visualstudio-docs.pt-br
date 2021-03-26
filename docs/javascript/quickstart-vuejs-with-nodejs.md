@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: ee855700502469783a8eab60bb24a28c2e30a9c8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad2892ab7c605ba25902ac2c4c24e68236a5d740
+ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950634"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105616968"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-vuejs-app"></a>Início Rápido: Usar o Visual Studio para criar seu primeiro aplicativo Vue.js
 
@@ -140,6 +140,8 @@ Parabéns por concluir este Guia de Início Rápido! Esperamos que você tenha a
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- Percorra o artigo para [Vue.js](create-application-with-vuejs.md)
-- Veja o [Tutorial para Node.js e Express](tutorial-nodejs.md)
-- [Implantar o aplicativo no Serviço de Aplicativo do Linux](../javascript/publish-nodejs-app-azure.md)
+> [!div class="nextstepaction"]
+> [Criar um aplicativo Vue.js](create-application-with-vuejs.md)
+
+> [!div class="nextstepaction"]
+> [Implantar o aplicativo no Serviço de Aplicativo do Linux](../javascript/publish-nodejs-app-azure.md)
