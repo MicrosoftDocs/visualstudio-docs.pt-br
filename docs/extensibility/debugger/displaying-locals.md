@@ -8,17 +8,17 @@ helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluation, displaying locals
 ms.assetid: 62264cec-845b-4233-aed7-0b038fa79250
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 31e0ebeb4155fef551f98a81f93e02ecdf2ecb9b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 564b42a15e1420027b79cb5f00c70f61649ad4f9
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840763"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105097260"
 ---
 # <a name="display-locals"></a>Exibir locais
 > [!IMPORTANT]
@@ -39,5 +39,5 @@ ms.locfileid: "99840763"
 ## <a name="related-sections"></a>Seções relacionadas
  [Contexto de avaliação](../../extensibility/debugger/evaluation-context.md) Explica que quando o mecanismo de depuração (DE) chama o avaliador de expressão (EE), ele passa três argumentos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
  [Escrever um avaliador de expressão CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
