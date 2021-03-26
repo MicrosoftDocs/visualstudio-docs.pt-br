@@ -8,17 +8,17 @@ helpviewer_keywords:
 - VSCT files, compiling
 - command-table file compilation (VSCT files)
 ms.assetid: 9dc6c33f-e6cf-4cf2-9b05-e8f7bfac1cfb
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 53e50e408166eb2d2e1545549cdd6c72018c9553
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 20c078d65af6224c65c2c574471b046deaf0cc92
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99938779"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105069290"
 ---
 # <a name="vsct-compiler-command-line-flags"></a>Sinalizadores de linha de comando do compilador VSCT
 O compilador de tabela de comando do Visual Studio (VSCT) fornece opções de linha de comando para garantir a compilação bem-sucedida de arquivos. vsct.

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - message enumerator
 - source control plug-ins, message enumeration
 ms.assetid: 4a4faa0d-d352-40ea-a21d-c09ea286a8e1
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 00d6b3e27b87e4bac8cee196a60e7fc934f6187d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 113f9fe8470b718a219e967b41bc92ecab2cf3c8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99886737"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105063988"
 ---
 # <a name="message-enumerator"></a>Enumerador de mensagem
 Os sinalizadores a seguir são usados para a `TEXTOUTPROC` função, que é uma função de retorno de chamada que o IDE fornece quando chama o [SccOpenProject](../extensibility/sccopenproject-function.md) (consulte [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) para obter detalhes sobre a função de retorno de chamada).

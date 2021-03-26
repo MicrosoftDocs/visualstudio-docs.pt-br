@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - brace matching
 ms.assetid: 5af08ac7-1d08-4ccf-997e-01aa6cb3d3d7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f89c6303dc8ca9e48fb212a3ae889251b34ece91
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0950f6b8ed647a3922fe63e365a97ea0a888ec6e
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961723"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078611"
 ---
 # <a name="walkthrough-display-matching-braces"></a>Walkthrough: Exibir chaves correspondentes
 Implemente recursos baseados em linguagem, como correspondência de chaves, definindo as chaves que você deseja corresponder e adicionando uma marca de marcador de texto às chaves correspondentes quando o cursor estiver em uma das chaves. Você pode definir chaves no contexto de um idioma, definir sua própria extensão de nome de arquivo e tipo de conteúdo e aplicar as marcas a apenas esse tipo ou aplicar as marcas a um tipo de conteúdo existente (como "texto"). A instrução a seguir mostra como aplicar marcas de correspondência de chaves ao tipo de conteúdo "text".
@@ -124,5 +124,5 @@ Implemente recursos baseados em linguagem, como correspondência de chaves, defi
 
 4. Quando você posiciona o cursor antes de uma chave de abertura, essa chave e a chave de fechamento correspondente devem ser realçadas. Quando você posiciona o cursor logo após a chave de fechamento, essa chave e a chave de abertura correspondente devem ser realçadas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Walkthrough: vincular um tipo de conteúdo a uma extensão de nome de arquivo](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

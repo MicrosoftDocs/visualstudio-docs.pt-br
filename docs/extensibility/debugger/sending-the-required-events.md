@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], required events
 ms.assetid: 08319157-43fb-44a9-9a63-50b919fe1377
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a056f3a7d986ca9abcf82edd3a77aac013665976
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a53f4d7a89b1f5902f576490d827148e9fb816bf
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960813"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070369"
 ---
 # <a name="send-the-required-events"></a>Enviar os eventos necessários
 Use este procedimento para enviar os eventos necessários.

@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 70879c5d-e0f0-4845-993c-2f4229869706
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1bf699a5dcb7f14c2a0ac88943b94d9e65c86450
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bfd6ff388119d829c2e5994c0fa78d01958326bc
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900081"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105069277"
 ---
 # <a name="vsix-color-editor"></a>Editor de cores do VSIX
 A ferramenta Editor de cores de extensão do Visual Studio pode criar e Editar cores personalizadas para o Visual Studio. A ferramenta também pode gerar chaves de recursos de tema para que as cores possam ser usadas no código. Essa ferramenta é útil para fazer cores para uma extensão do Visual Studio que dá suporte a elas. Essa ferramenta pode abrir arquivos. pkgdef e. xml. Os temas do Visual Studio (arquivos. vstheme) podem ser usados com o editor de cores de extensão do Visual Studio, alterando a extensão de arquivo para. xml. Além disso, os arquivos. vstheme podem ser importados para um arquivo. XML atual.
@@ -75,7 +75,7 @@ A ferramenta Editor de cores de extensão do Visual Studio pode criar e Editar c
 
 - MouseDown
 
-- Selecionado
+- Selecionada
 
 - Focalizado
 
@@ -189,7 +189,7 @@ namespace MyCustomColors
 
  Para tornar as alterações permanentes, recompile e reimplante a extensão do Visual Studio depois de adicionar as novas cores ao arquivo. pkgdef e gravar o código que usará essas cores. A recriação da extensão do Visual Studio mesclará os valores do registro para as novas cores no restante dos temas. Em seguida, reinicie o Visual Studio, exiba a interface do usuário e verifique se as novas cores aparecem conforme o esperado.
 
-## <a name="notes"></a>Observações
+## <a name="notes"></a>Anotações
  Essa ferramenta deve ser usada para criar cores personalizadas para os temas preexistentes do Visual Studio ou para editar as cores de um tema personalizado do Visual Studio. Para criar temas personalizados do Visual Studio, baixe a [extensão do editor de tema de cores do Visual Studio](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.VisualStudio2015ColorThemeEditor) na Galeria de extensões do Visual Studio.
 
 ## <a name="sample-output"></a>Saída de exemplo

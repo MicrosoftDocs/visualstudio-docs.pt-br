@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - project types [Visual Studio SDK]
 ms.assetid: 09991589-2300-430e-b6a4-7f2b95fe676f
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ccd63039b55fce076153cbb2a60bd04a1ca674c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 86ed1c1098fe13cd19ce686782e18b190f455f8c
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970160"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105064287"
 ---
 # <a name="project-type-essentials"></a>Conceitos básicos do tipo de projeto
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] inclui vários tipos de projeto para linguagens como [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] ou [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] também permite que você crie seus próprios tipos de projeto.
@@ -66,5 +66,5 @@ ms.locfileid: "99970160"
 
 - Os tipos de projeto podem dar suporte a várias configurações, como Debug e Release. Os usuários podem alterar as diferentes configurações de um projeto usando as páginas de propriedades fornecidas por você. Para obter mais informações, consulte [Gerenciando opções de configuração](../../extensibility/internals/managing-configuration-options.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Tipos de projeto de implantação](../../extensibility/internals/deploying-project-types.md)

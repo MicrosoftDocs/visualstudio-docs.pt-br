@@ -5,18 +5,18 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 754b9bf3-8681-4c77-b0a4-09146a4e1d2d
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: e32db6c2aecde61598036b8ba2ed21141e41a4af
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: be270fe8b76b6cd07bd27350eabceb5eecbc446b
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888934"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078325"
 ---
 # <a name="walkthrough-save-user-settings-on-a-start-page"></a>Walkthrough: salvar as configurações do usuário em uma página inicial
 
@@ -79,7 +79,7 @@ Para obter mais informações sobre como persistir configurações, consulte [es
 
 1. No painel XAML, clique com o botão direito do mouse no `Click` atributo do <xref:System.Windows.Controls.Button> elemento e clique em **navegar até manipulador de eventos**.
 
-     Essa etapa abre *myControl.XAML.cs* e cria um manipulador de stub para o `Button_Click` evento.
+     Essa etapa abre *myControl. XAML. cs* e cria um manipulador de stub para o `Button_Click` evento.
 
 2. Adicione as seguintes `using` diretivas à parte superior do arquivo.
 

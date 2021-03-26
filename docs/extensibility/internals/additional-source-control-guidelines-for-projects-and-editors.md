@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], guidelines for projects and editors
 ms.assetid: 2483cce5-321c-4d3c-9c5c-ee8385263f74
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 688c7de73c1a935ed6f7a30c6d956c7db97bdc6f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2509f2f6f9da91c3df60d6b041d5ebb6bdd367b6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906123"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105079001"
 ---
 # <a name="additional-source-control-guidelines-for-projects-and-editors"></a>Diretrizes adicionais de controle do código-fonte para projetos e editores
 Há várias diretrizes que os projetos e editores devem seguir para dar suporte ao controle do código-fonte.

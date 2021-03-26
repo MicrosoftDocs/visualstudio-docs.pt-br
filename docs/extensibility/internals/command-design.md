@@ -8,17 +8,17 @@ helpviewer_keywords:
 - commands
 - commands, implementation
 ms.assetid: 097108c3-f758-4b87-89d6-b32d12d9041a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9b7e0f214f50831392b5f0f5633d7c06ba03f37c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0acef6dd38238ef58f1dd66f7d8de35318e4ffc6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940121"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078923"
 ---
 # <a name="command-design"></a>Design de comando
 Quando você adiciona um comando a um VSPackage, é necessário especificar onde ele deve aparecer, quando ele está disponível e como ele deve ser manipulado.
@@ -62,7 +62,7 @@ Quando você adiciona um comando a um VSPackage, é necessário especificar onde
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Title|Descrição|
+|Título|Descrição|
 |-----------|-----------------|
 |[Implementação de comando](../../extensibility/internals/command-implementation.md)|Descreve como implementar comandos em um VSPackage.|
 |[Disponibilidade do comando](../../extensibility/internals/command-availability.md)|Descreve como o contexto do Visual Studio determina quais comandos estão disponíveis.|

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - ProjectItem element [Visual Studio project templates]
 - <ProjectItem> element [Visual Studio project templates]
 ms.assetid: 82879fbe-7756-42cd-9a07-c10edf5b4673
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e0cf60b260204ac3b97a222591946765cf8bb80
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bb7513a37f73bfd4dfc1cb8060c772d375a57329
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910975"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105068733"
 ---
 # <a name="projectitem-element-visual-studio-project-templates"></a>Elemento ProjectItem (modelos de projeto do Visual Studio)
 Especifica um arquivo que está incluído no modelo de projeto.
@@ -139,7 +139,7 @@ Especifica um arquivo que está incluído no modelo de projeto.
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Criar modelos de projeto e de item](../ide/creating-project-and-item-templates.md)
 - [Parâmetros de modelo](../ide/template-parameters.md)

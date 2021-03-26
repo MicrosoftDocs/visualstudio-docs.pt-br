@@ -7,20 +7,20 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - outlining
 ms.assetid: d75a44aa-265a-44d4-9c28-457f59c4ff9f
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: aa66d3b32f6992cb3a5db13bc2b7ee4d5cd9294c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 48454af0c4bb27a1c66cae9fa2d469622856dcc3
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951180"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078416"
 ---
 # <a name="walkthrough-outlining"></a>Passo a passo: estrutura de tópicos
 Configure recursos baseados em idioma, como estrutura de tópicos, definindo os tipos de regiões de texto que você deseja expandir ou recolher. Você pode definir regiões no contexto de um serviço de idioma ou definir sua própria extensão de nome de arquivo e tipo de conteúdo e aplicar a definição de região somente a esse tipo, ou aplicar as definições de região a um tipo de conteúdo existente (como "texto"). Este tutorial mostra como definir e exibir regiões de estrutura de tópicos.
