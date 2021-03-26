@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugInterceptExceptionCompleteEvent2
 ms.assetid: 8ebc256b-5428-4ed6-a505-6aedc8242b8e
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 93440facf13a230cd746400832afcb48971cd557
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 6902382a94beaa983ee97ebb63223e5bdfa1645f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102165287"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105091806"
 ---
 # <a name="idebuginterceptexceptioncompleteevent2"></a>IDebugInterceptExceptionCompleteEvent2
 Essa interface é enviada pelo mecanismo de depuração (DE) para o SDM (Gerenciador de depuração de sessão) quando o DE tiver concluído o tratamento de um evento interceptado.

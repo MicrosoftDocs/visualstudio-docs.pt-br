@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - source control packages, about source control packages
 ms.assetid: 60b3326e-e7e2-4729-95fc-b682e7ad5c99
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 80c86a8ab40b74d1b8f2838e3bf4359af41b0fc5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 89e2ea0db7f162c70261ab2ba9aab187f9c11bd0
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963426"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090883"
 ---
 # <a name="determine-whether-to-implement-a-source-control-vspackage"></a>Determinar se uma VSPackage de controle do código-fonte deve ser implementada
 
@@ -41,6 +41,6 @@ Esta seção elabora as opções de plug-ins de controle do código-fonte e VSPa
 
 4. Manipule eventos de edição de consulta e salvar consulta (veja [consulta editar consulta salvar](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Criar um plug-in de controle do código-fonte](../../extensibility/internals/creating-a-source-control-plug-in.md)

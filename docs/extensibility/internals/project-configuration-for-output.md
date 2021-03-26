@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - project configurations, output
 ms.assetid: a4517f73-45af-4745-9d7f-9fddf887b636
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6817dbd534d272924e5020b1c4c48753dcd70a54
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 13e37999ad9f3bada375c1897207e1e4c15546e8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890663"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105082004"
 ---
 # <a name="project-configuration-for-output"></a>Configuração de projeto para saída
 Cada configuração pode dar suporte a um conjunto de processos de compilação que produzem itens de saída, como arquivos executáveis ou de recursos. Esses itens de saída são privados para o usuário e podem ser colocados em grupos que vinculam tipos relacionados de saída, como arquivos executáveis (. exe,. dll,. lib) e arquivos de origem (arquivos. idl,. h).

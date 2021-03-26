@@ -15,17 +15,17 @@ helpviewer_keywords:
 - command line, switches
 - Visual Studio SDK, command-line switches
 ms.assetid: d65d2c04-dd84-42b0-b956-555b11f5a645
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2c6b6260bad412127afe4dd9135ccf66d48e9e3e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 94cca255390d9f5637f0bf4f5b24f2d0fd6b4e83
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968301"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105091260"
 ---
 # <a name="devenv-command-line-switches-for-vspackage-development"></a>Opções de linha de comando do Devenv para desenvolvimento de VSPackage
 
@@ -43,7 +43,7 @@ O Visual Studio permite que os desenvolvedores automatizem tarefas da linha de c
 
 A documentação do Visual Studio descreve as opções de linha de comando no nível do usuário `devenv` . Para obter mais informações, consulte [Opções de linha de comando do devenv](../ide/reference/devenv-command-line-switches.md). A `devenv` ferramenta também dá suporte a opções de linha de comando adicionais que são úteis com o desenvolvimento, a implantação e a depuração do VSPackage.
 
-| Opção de linha de comando | Description |
+| Opção de linha de comando | Descrição |
 |---------------------| - |
 | `/ResetSkipPkgs` | Desmarca todas as opções de ignorar carregamento que foram adicionadas por usuários que desejam evitar o carregamento de VSPackages problemáticas e, em seguida, inicia o Visual Studio. A presença de uma marca SkipLoading desabilita o carregamento de um VSPackage. Limpar a marca habilita novamente o carregamento do VSPackage.<br /><br /> Esta opção não aceita nenhum argumento. |
 | `/RootSuffix` | Inicia o Visual Studio usando um local alternativo. O comando a seguir é executado pelo atalho criado pelo instalador do SDK do Visual Studio:<br /><br /> `devenv /RootSuffix exp`<br /><br /> Nesse caso, o `exp` identifica um local com um sufixo específico (por exemplo, `10.0Exp` em vez de `10.0` ). A instância experimental permite que você depure um VSPackage separadamente da instância do Visual Studio que você está usando para escrever código.<br /><br /> Essa opção pode usar qualquer cadeia de caracteres que identifique um local que você criou usando VSRegEx.exe. Para obter mais informações, consulte [a instância experimental](../extensibility/the-experimental-instance.md). |
@@ -51,7 +51,7 @@ A documentação do Visual Studio descreve as opções de linha de comando no n�
 | `/Setup` | Força o Visual Studio a Mesclar metadados de recursos que descrevem menus, barras de ferramentas e grupos de comandos de todos os VSPackages disponíveis. Você só pode executar este comando como administrador. <br /><br /> Esta opção não aceita nenhum argumento. O comando `devenv /Setup` geralmente é fornecido como a última etapa do processo de instalação. O uso da `/Setup` opção não inicia o IDE.|
 | `/Splash` | Mostra a tela inicial do Visual Studio, como de costume, e mostra uma caixa de mensagem antes de mostrar o IDE principal. A caixa de mensagem permite que você estude a tela inicial (por exemplo, para verificar um ícone de produto VSPackage).<br /><br /> Esta opção não aceita nenhum argumento. |
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Adicionar opções de linha de comando](../extensibility/adding-command-line-switches.md)
 - [Opções de linha de comando do Devenv](../ide/reference/devenv-command-line-switches.md)

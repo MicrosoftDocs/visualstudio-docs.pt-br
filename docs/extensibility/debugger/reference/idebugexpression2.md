@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugExpression2 interface
 ms.assetid: f5e4b124-1e30-47c8-a511-80084a02dba5
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6fe6a6955f5d8d4ae42d51e3623b0c4f966dc416
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 934cef3dfd95b0aeadd588889dad020687d1cfd7
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102152657"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105092326"
 ---
 # <a name="idebugexpression2"></a>IDebugExpression2
 Esta interface representa uma expressão analisada pronta para associação e avaliação.

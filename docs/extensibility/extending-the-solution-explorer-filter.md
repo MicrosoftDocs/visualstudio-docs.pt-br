@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Solution Explorer, extending
 - extensibility [Visual Studio], projects and solutions
 ms.assetid: df976c76-27ec-4f00-ab6d-a26a745dc6c7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: dfe2947d60ad5dde6e2f23b9bed59b09e6abe8ea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d1256b807d67f95aa8ca1e952a4dca7bd550e0fc
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862116"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105075010"
 ---
 # <a name="extend-the-solution-explorer-filter"></a>Estender o filtro de Gerenciador de Soluções
 Você pode estender **Gerenciador de soluções** funcionalidade de filtro para mostrar ou ocultar arquivos diferentes. Por exemplo, você pode criar um filtro que mostra somente arquivos de fábrica de classes C# no **Gerenciador de soluções**, como demonstra este passo a passos.
@@ -60,14 +60,14 @@ Você pode estender **Gerenciador de soluções** funcionalidade de filtro para 
 
 ### <a name="add-the-filter-code"></a>Adicionar o código do filtro
 
-1. Adicione alguns GUIDs ao arquivo *FileFilterPackageGuids.cs* :
+1. Adicione alguns GUIDs ao arquivo *FileFilterPackageGuids. cs* :
 
     ```csharp
     public const string guidFileFilterPackageCmdSetString = "00000000-0000-0000-0000-00000000"; // get your GUID from the .vsct file
     public const int FileFilterId = 0x100;
     ```
 
-2. Adicione um arquivo de classe ao projeto FileFilter chamado *FileNameFilter.cs*.
+2. Adicione um arquivo de classe ao projeto FileFilter chamado *FileNameFilter. cs*.
 
 3. Substitua o namespace vazio e a classe vazia pelo código abaixo.
 
@@ -160,7 +160,7 @@ Você pode estender **Gerenciador de soluções** funcionalidade de filtro para 
 
     ```
 
-4. No *FileFilter.cs*, remova o posicionamento do comando e manuseie o código do Construtor FileFilter. O resultado deve ser assim:
+4. Em *FileFilter. cs*, remova o posicionamento do comando e manuseie o código do Construtor FileFilter. O resultado deve ser assim:
 
     ```csharp
     private FileFilter(Package package)
@@ -176,7 +176,7 @@ Você pode estender **Gerenciador de soluções** funcionalidade de filtro para 
 
      Remova o `ShowMessageBox()` método também.
 
-5. No *FileFilterPackage.cs*, substitua o código no `Initialize()` método pelo seguinte:
+5. No *FileFilterPackage. cs*, substitua o código no `Initialize()` método pelo seguinte:
 
     ```csharp
     protected override void Initialize()
