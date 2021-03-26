@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - BP_LOCATION_CODE_FUNC_OFFSET structure
 ms.assetid: ab38f7ca-fa01-4cf3-a06c-56cbb7207617
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
-ms.openlocfilehash: 83a5a27601ab6d7498394d6723b86ad3e66aceb5
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 8e193171a82f21c92871cd226db09c3dc2713585
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102144358"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105096779"
 ---
 # <a name="bp_location_code_func_offset"></a>BP_LOCATION_CODE_FUNC_OFFSET
 Descreve o local de deslocamento de um ponto de interrupção em uma função no código.

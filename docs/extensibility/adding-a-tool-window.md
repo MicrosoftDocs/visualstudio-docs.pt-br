@@ -8,17 +8,17 @@ helpviewer_keywords:
 - tutorials
 - tool windows
 ms.assetid: 8e16c381-03c8-404e-92ef-3614cdf3150a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f3c84eafcfe19efdf6427db10f65dcf24504b598
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 314a684e34c91f43abe9babe4cdd6efc8a15cc35
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951427"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105085514"
 ---
 # <a name="add-a-tool-window"></a>Adicionar uma janela de ferramentas
 
@@ -117,7 +117,7 @@ Adicione um comando à barra de ferramentas, que é exibido como um botão.
     </Button>
     ```
 
-3. Abra *FirstToolWindowCommand.cs* e adicione as linhas a seguir na classe logo após os campos existentes.
+3. Abra *FirstToolWindowCommand. cs* e adicione as linhas a seguir na classe logo após os campos existentes.
 
     ```csharp
     public const string guidFirstToolWindowPackageCmdSet = "00000000-0000-0000-0000-0000";  // get the GUID from the .vsct file
@@ -143,7 +143,7 @@ public System.Windows.Controls.MediaElement MediaPlayer
 ## <a name="instantiate-the-tool-window-and-toolbar"></a>Criar uma instância da janela de ferramentas e da barra de ferramentas
 Adicione uma barra de ferramentas e um comando de menu que invoque a caixa de diálogo **Abrir arquivo** e reproduza o arquivo de mídia selecionado.
 
-1. Abra *FirstToolWindow.cs* e adicione as seguintes `using` diretivas:
+1. Abra *FirstToolWindow. cs* e adicione as seguintes `using` diretivas:
 
     ```csharp
     using System.ComponentModel.Design;
@@ -188,7 +188,7 @@ Adicione uma barra de ferramentas e um comando de menu que invoque a caixa de di
     }
     ```
 
-6. Adicione o comando de menu à barra de ferramentas. Na classe FirstToolWindowCommand.cs, adicione o seguinte usando a diretiva:
+6. Adicione o comando de menu à barra de ferramentas. Na classe FirstToolWindowCommand. cs, adicione o seguinte usando a diretiva:
 
     ```csharp
     using System.Windows.Forms;
@@ -255,9 +255,9 @@ Adicione uma barra de ferramentas e um comando de menu que invoque a caixa de di
 
 ## <a name="set-the-default-position-for-the-tool-window"></a>Definir a posição padrão para a janela de ferramentas
 
-Em seguida, especifique um local padrão no IDE para a janela de ferramentas. As informações de configuração para a janela de ferramentas estão no arquivo *FirstToolWindowPackage.cs* .
+Em seguida, especifique um local padrão no IDE para a janela de ferramentas. As informações de configuração para a janela de ferramentas estão no arquivo *FirstToolWindowPackage. cs* .
 
-1. No *FirstToolWindowPackage.cs*, localize o <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> atributo na `FirstToolWindowPackage` classe, que passa o tipo FirstToolWindow para o construtor. Para especificar uma posição padrão, você deve adicionar mais parâmetros ao Construtor após o exemplo.
+1. Em *FirstToolWindowPackage. cs*, localize o <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> atributo na `FirstToolWindowPackage` classe, que passa o tipo FirstToolWindow para o construtor. Para especificar uma posição padrão, você deve adicionar mais parâmetros ao Construtor após o exemplo.
 
     ```csharp
     [ProvideToolWindow(typeof(FirstToolWindow),

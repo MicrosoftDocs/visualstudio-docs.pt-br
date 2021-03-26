@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcessEx2::Attach method
 ms.assetid: f3334ed7-39bf-4d02-a338-36f567b9b287
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1938ae8299612caabe2fe684b7b5c1af685d4596
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: da538b5ba91a976e96f447ba63843f20ae0b6f62
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102149737"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105076362"
 ---
 # <a name="idebugprocessex2attach"></a>IDebugProcessEx2::Attach
 Esse método informa ao processo que uma sessão está depurando o processo.

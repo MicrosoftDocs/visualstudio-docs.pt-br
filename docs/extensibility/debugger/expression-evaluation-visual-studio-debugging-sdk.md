@@ -8,17 +8,17 @@ helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluation
 ms.assetid: 5044ced5-c18c-4534-b0bf-cc3e50cd57ac
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 772d38b328eca1e0afb6ff48a5ad580d01939527
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9e6a79a3268f0bd4acebde795109d39466032a2f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99921474"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105096792"
 ---
 # <a name="expression-evaluation-visual-studio-debugging-sdk"></a>Avaliação de expressão (SDK de depuração do Visual Studio)
 Durante o modo de interrupção, o IDE deve avaliar expressões simples envolvendo várias variáveis de programa. Para realizar sua avaliação, o mecanismo DE depuração (DE) deve analisar e avaliar uma expressão que é inserida em uma das janelas do IDE.

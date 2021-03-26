@@ -8,17 +8,17 @@ helpviewer_keywords:
 - project factories
 - projects [Visual Studio SDK], project factories
 ms.assetid: 94c90012-8669-459c-af8e-307ac242c8c4
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5e90b12b12589fff89f4df1241eb73504e8bdb74
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 40b7c3fbe5b5b7fd59fe0e57376290181f3e9a20
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903144"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056787"
 ---
 # <a name="create-project-instances-by-using-project-factories"></a>Criar instâncias de projeto usando fábricas de projeto
 Tipos de projeto em [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] usar uma *fábrica de projetos* para criar instâncias de objetos de projeto. Uma fábrica de projetos é semelhante a uma fábrica de classes padrão para objetos COM de Cocriação. No entanto, os objetos do projeto não são cocriáveis; Eles só podem ser criados usando uma fábrica de projetos.

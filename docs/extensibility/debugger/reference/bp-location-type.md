@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - BP_LOCATION_TYPE structure
 ms.assetid: 0248430a-3b61-4809-87a9-e9b6bb7d1130
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e1ccf81393e42cc79b0ef93703b4a2327207baf6
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 7bb3ea3220c6b4be74e0767f0e88ab1b46d2685c
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102144189"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105096701"
 ---
 # <a name="bp_location_type"></a>BP_LOCATION_TYPE
 Especifica o tipo de local do ponto de interrupção para uma solicitação de ponto de interrupção.

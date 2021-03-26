@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - SccAddFilesFromSCC function
 ms.assetid: f21a3500-ade8-4dd8-8647-10e2179be9c1
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 27b695b2777aa32f77d49ced7b74436ce870df80
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: 056e918642e75bbd74c310499544cb2500428646
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102220970"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060465"
 ---
 # <a name="sccaddfilesfromscc-function"></a>Função SccAddFilesFromSCC
 Essa função adiciona uma lista de arquivos do controle do código-fonte ao projeto atualmente aberto.
