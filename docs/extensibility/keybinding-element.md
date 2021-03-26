@@ -8,17 +8,17 @@ helpviewer_keywords:
 - VSCT XML schema elements, KeyBindings
 - KeyBinding element (VSCT XML schema)
 ms.assetid: e55a1098-15df-42a9-9f87-e3a99cf437dd
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ce96da36a8c6eff0fda71d8a5d077721876ab8b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9162d9b21c54577e48f4dced6ddddd7138c9de66
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943342"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074087"
 ---
 # <a name="keybinding-element"></a>Elemento keybind
 O elemento KeyBinding especifica atalhos de teclado para os comandos.
@@ -38,10 +38,10 @@ O elemento KeyBinding especifica atalhos de teclado para os comandos.
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|guid|Obrigatório.|
-|id|Obrigatório.|
-|editor|Obrigatório. O GUID do editor indica o contexto de edição para o qual esse atalho de teclado estará ativo. O valor do escopo de associação global é "guidVSStd97".|
-|key1|Obrigatório. Os valores válidos incluem todos os alfanuméricos typable e também valores hexadecimais de dois dígitos precedidos por 0x e [VK_constants](/windows/desktop/inputdev/virtual-key-codes).|
+|guid|Obrigatórios.|
+|id|Obrigatórios.|
+|editor|Obrigatórios. O GUID do editor indica o contexto de edição para o qual esse atalho de teclado estará ativo. O valor do escopo de associação global é "guidVSStd97".|
+|key1|Obrigatórios. Os valores válidos incluem todos os alfanuméricos typable e também valores hexadecimais de dois dígitos precedidos por 0x e [VK_constants](/windows/desktop/inputdev/virtual-key-codes).|
 |mod1|Opcional. Qualquer combinação de **Ctrl**, **ALT** e **Shift** separada por espaço.|
 |key2|Opcional. Os valores válidos incluem todos os alfanuméricos typable e também valores hexadecimais de dois dígitos precedidos por 0x e [VK_constants](/windows/desktop/inputdev/virtual-key-codes).|
 |mod2|Opcional. Qualquer combinação de **Ctrl**, **ALT** e **Shift** separada por espaço.|

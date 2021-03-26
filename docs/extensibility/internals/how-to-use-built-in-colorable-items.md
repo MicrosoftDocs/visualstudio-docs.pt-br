@@ -8,17 +8,17 @@ helpviewer_keywords:
 - colorable items
 - language services, built-in colorable items
 ms.assetid: 5e5f3436-6bad-4fd2-8823-6a30353ba648
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 64738bfe67ccc53970087100cd6c37a9881e6b2a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 253c108fe83eaf44f945f546bd64dd6529de1dd6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99898318"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105086073"
 ---
 # <a name="how-to-use-built-in-colorable-items"></a>Como: usar itens de cores internos
 Antes de usar os itens coloridos internos, você deve primeiro sinalizar para o IDE (ambiente de desenvolvimento integrado) que você não está fornecendo seus próprios itens personalizáveis personalizados, que nesse caso seriam <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> objetos. Você faz isso definindo uma entrada de registro para o serviço de idioma.

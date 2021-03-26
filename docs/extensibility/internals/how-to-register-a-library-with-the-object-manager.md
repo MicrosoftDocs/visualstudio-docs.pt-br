@@ -11,17 +11,17 @@ helpviewer_keywords:
 - IVsObjectManager2 interface, registering library with object manager
 - libraries, symbol-browsing tools
 ms.assetid: f124dd05-cb0f-44ad-bb2a-7c0b34ef4038
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5f4e9805eec8fd5d0089f1b8348253523d9056f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b83b68af4c026c40aca7969068ad015a61d64321
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925016"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105086060"
 ---
 # <a name="how-to-register-a-library-with-the-object-manager"></a>Como registrar uma biblioteca com o Gerenciador de objetos
 Símbolos – ferramentas de navegação, como **modo de exibição de classe**, **pesquisador de objetos**, **pesquisador de chamadas** e **Localizar resultados de símbolos**, permitem Exibir símbolos em seu projeto ou em componentes externos. Os símbolos incluem namespaces, classes, interfaces, métodos e outros elementos de linguagem. As bibliotecas acompanham esses símbolos e os expõem ao [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Gerenciador de objetos que popula as ferramentas com os dados.

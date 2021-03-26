@@ -12,17 +12,17 @@ helpviewer_keywords:
 - localize visual studio
 - localize vsct
 ms.assetid: b04ee0f6-82ea-47e6-853a-72382267d6da
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: af86f64935d4e99d4c1245669505fcef8ce7ec1f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 141fb0d8ba6746e7d299984461fb3ca739d931d4
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893614"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105073255"
 ---
 # <a name="localize-menu-commands"></a>Comandos do menu localizar
 
@@ -112,9 +112,9 @@ Recursos de texto diferentes de nomes de comando são definidos em arquivos de r
 
 ## <a name="incorporate-localized-resources-into-the-project"></a>Incorporar recursos localizados ao projeto
 
-Você deve modificar o arquivo *AssemblyInfo.cs* e o arquivo de projeto para incorporar os recursos localizados.
+Você deve modificar o arquivo *AssemblyInfo. cs* e o arquivo de projeto para incorporar os recursos localizados.
 
-1. No nó **Propriedades** no **Gerenciador de Soluções**, abra *AssemblyInfo.cs* ou *AssemblyInfo. vb* no editor.
+1. No nó **Propriedades** no **Gerenciador de soluções**, abra *AssemblyInfo. cs* ou *AssemblyInfo. vb* no editor.
 
 2. Adicione a entrada a seguir.
 

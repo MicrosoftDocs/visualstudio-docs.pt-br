@@ -8,17 +8,17 @@ helpviewer_keywords:
 - source control plug-ins, getting items from source control
 - source control [Visual Studio SDK], getting items from
 ms.assetid: cbd345c5-ca43-4630-b7a4-85564f4e2090
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 83b869a91b823a2f14823ab65a745a3ef6c0d883
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ab6a35aa896d7a68e151007d6f694672f7477688
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99898223"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105073424"
 ---
 # <a name="test-area-2-get-from-source-control"></a>Área de teste 2: Obter do controle do código-fonte
 Essa área de teste abrange os casos de teste para recuperar itens do repositório de versão por meio do comando Get. Esses casos de teste podem ser aplicados a projetos locais e para a Web.
@@ -55,5 +55,5 @@ Essa área de teste abrange os casos de teste para recuperar itens do repositór
 |Obter um arquivo que existe localmente, igual à versão mais recente no repositório de versão|1. Crie um novo projeto.<br />2. adicionar um item ao projeto.<br />3. Coloque o projeto sob controle do código-fonte.<br />4. obter o item (**arquivo**, **controle do código-fonte**, **Get** \<item> ).|O arquivo local está inalterado.|
 |Obter uma solução com um projeto|1. Crie uma solução com um projeto.<br />2. Coloque a solução sob controle do código-fonte.<br />3. exclua todos os arquivos de projeto localmente.<br />4. Obtenha a solução (**arquivo**, **controle do código-fonte**, **Get**).|Todos os arquivos excluídos são restaurados localmente.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Guia de teste para plug-ins de controle do código-fonte](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

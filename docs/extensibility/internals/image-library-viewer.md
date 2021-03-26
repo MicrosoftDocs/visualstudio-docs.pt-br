@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 9d9c7fbb-ebae-4b20-9dd8-3c9070c0d0d1
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc0acd64a61acac2cb30b9251bcb4e528c08f227
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d60443e97bc557bc964d59750417b2662e4c3c8f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840113"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105085969"
 ---
 # <a name="image-library-viewer"></a>Visualizador da biblioteca de imagens
 A ferramenta Visualizador de biblioteca de imagens do Visual Studio pode carregar e Pesquisar manifestos de imagem, permitindo que o usuário manipule-os da mesma forma que o Visual Studio. O usuário pode alterar o plano de fundo, tamanhos, DPI, alto contraste e outras configurações. A ferramenta também exibe informações de carregamento para cada manifesto de imagem e exibe informações de origem para cada imagem no manifesto da imagem. Essa ferramenta é útil para:
@@ -148,7 +148,7 @@ A ferramenta Visualizador de biblioteca de imagens do Visual Studio pode carrega
 
 |**Atributo**|**Definição**|
 |-|-|
-|Tipo|Necessária O tipo do recurso nativo, XAML ou PNG|
+|Type|Necessária O tipo do recurso nativo, XAML ou PNG|
 |ID|Necessária A parte da ID de número inteiro do recurso nativo|
 
  **ImageList**
@@ -217,7 +217,7 @@ A ferramenta Visualizador de biblioteca de imagens do Visual Studio pode carrega
 
  ![ID do filtro do Visualizador de biblioteca de imagens](../../extensibility/internals/media/image-library-viewer-filter-id.png "ID do filtro do Visualizador de biblioteca de imagens")
 
-## <a name="notes"></a>Observações
+## <a name="notes"></a>Anotações
 
 - Por padrão, a ferramenta receberá vários manifestos de imagem presentes no diretório de instalação do Visual Studio. A única que tem monikers publicamente consumíveis é o manifesto **Microsoft. VisualStudio. ImageCatalog** . GUID: ae27a6b0-e345-4288-96df-5eaf394ee369 (não **substitua este** GUID em um manifesto personalizado) tipo: KnownMonikers
 

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - GUIDs, VSPackages
 - CATIDs for VSPackages
 ms.assetid: 0c7fdb66-ed96-4b36-89f6-021bca573572
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bebaf35fc19cbad86a1e1ee4c8bbeddef0259cb4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 276e7f146858c2de166c0ba20063a0bf4d8b88a0
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905874"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105086086"
 ---
 # <a name="catids-for-objects-that-are-typically-used-to-extend-projects"></a>CATIDs para objetos que normalmente são usados para estender projetos
 A tabela a seguir lista os CATIDs que são usados para estender `Project` e `ProjectItem` automatizar objetos para [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] projetos, e [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] . Essas CATIDs são definidas em *VSLangProj. olb*.

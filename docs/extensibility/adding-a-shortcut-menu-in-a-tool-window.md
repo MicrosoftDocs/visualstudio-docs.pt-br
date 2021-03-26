@@ -10,17 +10,17 @@ helpviewer_keywords:
 - shortcut menus, adding to tool windows
 - tool windows, adding context menus
 ms.assetid: 50234537-9e95-4b7e-9cb7-e5cf26d6e9d2
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a35652c0eacf22a46eed3f3fc64c3bcc0d6d10ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3ba0eb2324812ca7536b361d602bb683d627c743
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951531"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105097611"
 ---
 # <a name="add-a-shortcut-menu-in-a-tool-window"></a>Adicionar um menu de atalho em uma janela de ferramentas
 Este tutorial coloca um menu de atalho em uma janela de ferramentas. Um menu de atalho é um menu que aparece quando um usuário clica com o botão direito do mouse em um botão, caixa de texto ou plano de fundo da janela. Os comandos em um menu de atalho se comportam da mesma forma que comandos em outros menus ou barras de ferramentas. Para dar suporte a um menu de atalho, especifique-o no arquivo *. vsct* e exiba-o em resposta ao clique com o botão direito do mouse.
@@ -114,7 +114,7 @@ Um menu de atalho como aquele mostrado neste passo a passos permite que o usuár
     </Buttons>
     ```
 
-5. No *ShortcutMenuCommand.cs*, adicione as definições para o GUID do conjunto de comandos, o menu de atalho e os itens de menu.
+5. No *ShortcutMenuCommand. cs*, adicione as definições para o GUID do conjunto de comandos, o menu de atalho e os itens de menu.
 
     ```csharp
     public const string guidShortcutMenuPackageCmdSet = "00000000-0000-0000-0000-00000000"; // your GUID will differ
@@ -129,9 +129,9 @@ Um menu de atalho como aquele mostrado neste passo a passos permite que o usuár
 ## <a name="implementing-the-shortcut-menu"></a>Implementando o menu de atalho
  Esta seção implementa o menu de atalho e seus comandos.
 
-1. No *ShortcutMenu.cs*, a janela de ferramentas pode obter o serviço de comando de menu, mas o controle que ele contém não pode. As etapas a seguir mostram como tornar o serviço de comando de menu disponível para o controle de usuário.
+1. No *ShortcutMenu. cs*, a janela de ferramentas pode obter o serviço de comando de menu, mas o controle que ele contém não pode. As etapas a seguir mostram como tornar o serviço de comando de menu disponível para o controle de usuário.
 
-2. No *ShortcutMenu.cs*, adicione as seguintes diretivas using:
+2. No *ShortcutMenu. cs*, adicione as seguintes diretivas using:
 
     ```csharp
     using Microsoft.VisualStudio.Shell;
@@ -159,7 +159,7 @@ Um menu de atalho como aquele mostrado neste passo a passos permite que o usuár
     }
     ```
 
-5. No *ShortcutMenuControl.XAML.cs*, adicione um campo particular para o serviço de comando de menu e altere o construtor de controle para obter o serviço de comando de menu. Em seguida, use o serviço de comando de menu para adicionar os comandos do menu de contexto. O Construtor ShortcutMenuControl agora deve se parecer com o código a seguir. O manipulador de comando será definido mais tarde.
+5. Em *ShortcutMenuControl. XAML. cs*, adicione um campo particular para o serviço de comando de menu e altere o construtor de controle para obter o serviço de comando de menu. Em seguida, use o serviço de comando de menu para adicionar os comandos do menu de contexto. O Construtor ShortcutMenuControl agora deve se parecer com o código a seguir. O manipulador de comando será definido mais tarde.
 
     ```csharp
     public ShortcutMenuControl(OleMenuCommandService service)
@@ -207,7 +207,7 @@ Um menu de atalho como aquele mostrado neste passo a passos permite que o usuár
     </UserControl>
     ```
 
-7. No *ShortcutMenuControl.XAML.cs*, adicione um stub para o manipulador de eventos.
+7. Em *ShortcutMenuControl. XAML. cs*, adicione um stub para o manipulador de eventos.
 
     ```csharp
     private void MyToolWindow_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -278,6 +278,6 @@ Um menu de atalho como aquele mostrado neste passo a passos permite que o usuár
 
 4. Clique em uma cor no menu de atalho. A cor do plano de fundo da janela de ferramentas deve ser alterada para a cor selecionada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Comandos, menus e barras de ferramentas](../extensibility/internals/commands-menus-and-toolbars.md)
 - [Usando e fornecendo serviços](../extensibility/using-and-providing-services.md)

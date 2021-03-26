@@ -11,17 +11,17 @@ helpviewer_keywords:
 - keyboard shortcuts
 - menu items
 ms.assetid: 19f483b6-4d3e-424e-9d68-dc129c788e47
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bed07019b3651ba7b0fe2959d06f0634374bb31a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 88cc7d91ee8cd24daae278efdbfd35271412af40
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941925"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105097299"
 ---
 # <a name="bind-keyboard-shortcuts-to-menu-items"></a>Associar atalhos de teclado a itens de menu
 Para associar um atalho de teclado a um comando de menu personalizado, basta adicionar uma entrada ao arquivo *. vsct* do pacote. Este tópico explica como mapear um atalho de teclado para um botão personalizado, um item de menu ou um comando de barra de ferramentas e como aplicar o mapeamento de teclado no editor padrão ou limitá-lo a um editor personalizado.

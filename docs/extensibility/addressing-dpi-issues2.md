@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 359184aa-f5b6-4b6c-99fe-104655b3a494
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8151748b946d2c1b5ad21359569d6f5f856f9250
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9cf7b4fe19cdefe11b77de1418b16454089f45c6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99876154"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105097507"
 ---
 # <a name="address-dpi-issues"></a>Problemas de endereço de DPI
 Um número cada vez maior de dispositivos é enviado com telas de "alta resolução". Essas telas normalmente têm mais de 200 pixels por polegada (ppi). Trabalhar com um aplicativo nesses computadores exigirá que o conteúdo seja dimensionado para atender às necessidades de exibição do conteúdo em uma distância de exibição normal do dispositivo. A partir de 2014, o destino principal para monitores de alta densidade é dispositivos de computação móvel (tablets, laptops Clamshell e telefones).

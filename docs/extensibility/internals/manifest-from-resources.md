@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0234109b-5dcb-4d9d-acb9-a63f8bd5699c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 65e4b16beefdef765fe52afd9d84e64a767999fa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 42bd932b093ae805e8885bc9fc61324c3cadbe30
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839422"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105095167"
 ---
 # <a name="manifest-from-resources"></a>Manifest from Resources
 A ferramenta de Manifest from Resources é um aplicativo de console que usa uma lista de recursos de imagem (arquivos. png ou. XAML) e gera um arquivo. imagemanifest que permite que essas imagens sejam usadas com o serviço de imagem do Visual Studio. Além disso, essa ferramenta pode ser usada para adicionar imagens a um. imagemanifest existente. Essa ferramenta é útil para adicionar suporte de alto DPI e temas para imagens a uma extensão do Visual Studio. O arquivo. imagemanifest gerado deve ser incluído no e implantado como parte de uma extensão do Visual Studio (. VSIX).
@@ -50,7 +50,7 @@ A ferramenta de Manifest from Resources é um aplicativo de console que usa uma 
 
 - ManifestFromResources/resources:D:\Images\Image1.png;D: \Images\Image1.xaml/assembly: My. assembly. Name/guidName: myImages/newGuids/newIds
 
-## <a name="notes"></a>Observações
+## <a name="notes"></a>Anotações
 
 - A ferramenta só dá suporte a arquivos. png e. XAML. Qualquer outra imagem ou tipo de arquivo será ignorado. Um aviso é gerado para todos os tipos sem suporte encontrados durante a análise dos recursos. Se nenhuma imagem com suporte for encontrada quando a ferramenta for concluída com a análise dos recursos, um erro será gerado
 
