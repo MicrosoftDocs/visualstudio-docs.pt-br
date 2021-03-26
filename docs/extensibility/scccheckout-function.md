@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - SccCheckout function
 ms.assetid: 06e9ecd7-fc09-40c1-9dd1-2b56c622c80b
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5ed6b494957374244d98f0cca59a063e5a6648c4
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: f93052ebe255cddb4703a8246b7e89c744548a7f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102221621"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060374"
 ---
 # <a name="scccheckout-function"></a>Função SccCheckout
 Dada uma lista de nomes de arquivo totalmente qualificados, essa função os verifica na unidade local. O comentário se aplica a todos os arquivos cujo check-out está sendo feito. O argumento comment pode ser uma `null` cadeia de caracteres.

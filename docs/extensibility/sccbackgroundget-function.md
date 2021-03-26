@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - SccBackgroundGet function
 ms.assetid: 69817e52-b9ac-4f4d-820b-2cc9c384f0dc
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4df0866458f04081c82796767808194b292866a1
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: 6d850b1f8493f3118cb4d3e49915361daa1e4837
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102220918"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060452"
 ---
 # <a name="sccbackgroundget-function"></a>Função SccBackgroundGet
 Essa função recupera do controle do código-fonte cada um dos arquivos especificados sem interação do usuário.

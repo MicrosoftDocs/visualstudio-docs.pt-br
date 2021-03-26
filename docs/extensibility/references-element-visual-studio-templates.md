@@ -11,17 +11,17 @@ helpviewer_keywords:
 - <References> element [Visual Studio Templates]
 - References element [Visual Studio Templates]
 ms.assetid: 1969146d-46bf-422d-8d46-0e9493925003
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a9c2cc5d8827f6419472e5fd84add4d9c9f5228
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: be367bbd1b466c5df3051af384ccefdcf93f8b44
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837171"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056565"
 ---
 # <a name="references-element-visual-studio-templates"></a>Elemento References (modelos do Visual Studio)
 Agrupa as referências de assembly que o modelo adiciona aos projetos.
@@ -83,6 +83,6 @@ Agrupa as referências de assembly que o modelo adiciona aos projetos.
 </TemplateContent>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Criando modelos de projeto e item](../ide/creating-project-and-item-templates.md)

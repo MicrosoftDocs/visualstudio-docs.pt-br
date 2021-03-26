@@ -9,17 +9,17 @@ helpviewer_keywords:
 - VSDIR files
 - template directory description files
 ms.assetid: 9df51800-190e-4662-b685-fdaafcff1400
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e2b56c061ce6e3124a7ed5a5dc00e41c3964204
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bdd21dfa9fe5aae11553bb0268017690aba46fe9
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99898250"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105080496"
 ---
 # <a name="template-directory-description-vsdir-files"></a>Arquivos de descrição do diretório de modelo (.Vsdir)
 Um arquivo de descrição do diretório de modelo (. vsdir) é um arquivo de texto que permite que o IDE (ambiente de desenvolvimento integrado) exiba pastas, arquivos. vsz e arquivos de modelo associados ao seu projeto em caixas de diálogo. O conteúdo inclui um registro por arquivo ou pasta. Todos os arquivos. vsdir em um local referenciado são mesclados, embora apenas um arquivo. vsdir seja geralmente fornecido para descrever várias pastas, assistentes ou arquivos de modelo.
@@ -44,7 +44,7 @@ SourceFile.cpp|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#122|110|#123|0|0|0|#124
 | {clsidPackage} | O GUID do VSPackage que permite o acesso a cadeias de caracteres localizadas, como localizador, descrição, IconResourceId e SuggestedBaseName, nos recursos da DLL (biblioteca de vínculo dinâmico) de satélite do VSPackage. IconResourceId se aplica se DLLPath não for fornecido. **Observação:**  Esse campo é opcional, a menos que um ou mais dos campos anteriores seja um identificador de recurso. Normalmente, esse campo é deixado em branco para arquivos. vsdir que correspondem a assistentes de terceiros que não localizam seu texto. |
 | Localizador | O nome localizado do arquivo de modelo ou assistente. Esse campo pode ser uma cadeia de caracteres ou um identificador de recurso do formato "#ResID". Esse nome é exibido na caixa de diálogo **Adicionar novo item** . **Observação:**  Se o localizador for um identificador de recurso, {clsidPackage} será necessário. |
 | SortPriority | Um inteiro que representa a prioridade relativa deste arquivo de modelo ou assistente. Por exemplo, se esse item tiver um valor de 1, esse item será exibido ao lado de outros itens com um valor de 1 e à frente de todos os itens com um valor de classificação 2 ou maior.<br /><br /> A prioridade de classificação é relativa aos itens no mesmo diretório. Pode haver mais de um arquivo. vsdir no mesmo diretório. Nesse caso, os itens de todos <em>.</em> os arquivos VSDir nesse diretório são mesclados. Os itens com a mesma prioridade são listados em ordem lexicográfica não diferencia maiúsculas de minúsculas do nome exibido. A `_wcsicmp` função é usada para ordenar os itens.<br /><br /> Os itens não descritos nos arquivos. vsdir incluem um número de prioridade maior que o número de prioridade mais alto listado nos arquivos. VSDir. O resultado é que esses itens estão no final da lista exibida, independentemente de seu nome. |
-| Description | A descrição localizada do arquivo de modelo ou do assistente. Esse campo pode ser uma cadeia de caracteres ou um identificador de recurso do formato "#ResID". Essa cadeia de caracteres aparece na caixa de diálogo **novo projeto** ou **Adicionar novo item** quando o item é selecionado. |
+| Descrição | A descrição localizada do arquivo de modelo ou do assistente. Esse campo pode ser uma cadeia de caracteres ou um identificador de recurso do formato "#ResID". Essa cadeia de caracteres aparece na caixa de diálogo **novo projeto** ou **Adicionar novo item** quando o item é selecionado. |
 | DLLPath ou {clsidPackage} | Usado para carregar um ícone para o arquivo de modelo ou assistente. O ícone é carregado como um recurso de um arquivo. dll ou. exe usando o IconResourceId. Esse arquivo. dll ou. exe pode ser identificado usando um caminho completo ou usando um GUID de um VSPackage. A DLL de implementação do VSPackage é usada para carregar o ícone (não a DLL satélite). |
 | IconResourceId | O identificador de recurso na DLL de implementação DLL ou VSPackage que determina o ícone a ser exibido. |
 | Sinalizadores ( <xref:Microsoft.VisualStudio.Shell.Interop.__VSDIRFLAGS> ) | Usado para desabilitar ou habilitar os campos de **nome** e **local** na caixa de diálogo **Adicionar novo item** . O valor do campo **flags** é o equivalente Decimal da combinação de sinalizadores de bits necessários.<br /><br /> Quando um usuário seleciona um item na **nova** guia, o projeto determina se o campo nome e o campo local são mostrados quando a caixa de diálogo **Adicionar novo item** é exibida pela primeira vez. Um item, por meio de um arquivo. vsdir, pode controlar apenas se os campos estão habilitados versus desabilitados quando o item é selecionado. |
@@ -64,6 +64,6 @@ SourceFile.cpp|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#122|110|#123|0|0|0|#124
 
 - Se você excluir os arquivos. vsz, pastas ou arquivos de modelo, também deverá remover seus registros associados do arquivo. VSDir.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Assistentes](../../extensibility/internals/wizards.md)
 - [Arquivo do assistente (.Vsz)](../../extensibility/internals/wizard-dot-vsz-file.md)

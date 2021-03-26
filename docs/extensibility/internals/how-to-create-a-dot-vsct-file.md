@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - VSCT files, creating
 ms.assetid: b955f51c-f9f9-49c3-a8e4-63b6eb0e0341
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 66174d5de1abb4f5bdd23eeab0155a795cf0b634
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7fe1d92a9117193a72f579a01f264f1a13be6b6e
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879976"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056604"
 ---
 # <a name="how-to-create-a-vsct-file"></a>Como criar um arquivo. vsct
 
@@ -71,7 +71,7 @@ Você pode criar um arquivo *. vsct* baseado em XML de um arquivo de origem *. C
 
 5. Na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] janela do prompt de comando, navegue até o diretório.
 
-6. Tipo
+6. Type
 
    ```
    perl.exe ConvertCTCtoVSCT.pl PkgCmd.ctc PkgCmd.vsct
@@ -98,7 +98,7 @@ Você pode criar um arquivo *. vsct* baseado em XML de um arquivo binário *. CT
 
 3. No prompt de comando do Visual Studio, vá para o diretório que contém os arquivos *. CTO* e *. ctsym* .
 
-4. Tipo
+4. Type
 
     ```
     vsct.exe <ctofilename>.cto <vsctfilename>.vsct -S<symfilename>.ctsym
@@ -140,7 +140,7 @@ Você pode criar um arquivo *. vsct* baseado em XML de um arquivo binário *. CT
 
      Essa marcação deve estar dentro do `ItemGroup` elemento que contém recursos incorporados.
 
-4. Abra o arquivo de pacote, geralmente chamado *\<ProjectName\> Package.cs* ou *\<ProjectName\> Package. vb*, no editor.
+4. Abra o arquivo de pacote, geralmente chamado *\<ProjectName\> Package. cs* ou *\<ProjectName\> Package. vb*, no editor.
 
 5. Adicione um `ProvideMenuResource` atributo à classe de pacote, conforme mostrado no exemplo a seguir.
 

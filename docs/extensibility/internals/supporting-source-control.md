@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], supporting
 ms.assetid: 567acde3-354e-4f39-8d99-0ef86c103396
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6923eb7a534a4cacf8062883d073ddddc9395e17
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 56880cab310367a5c4da3af0cf310867a5519495
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892548"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105080600"
 ---
 # <a name="supporting-source-control"></a>Suporte para controle do código-fonte
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] dá suporte a check-outs de arquivo, check-ins e outras operações de controle do código-fonte para seu projeto ou editor. Como um cliente de controle do código-fonte, o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] é projetado para interagir com um pacote de controle do código-fonte, como [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] o, que fornece arquivamento, controle de versão e instalações para um conjunto de arquivos definido dinamicamente.

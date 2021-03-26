@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - simple view embedding
 ms.assetid: f1292478-a57d-48ec-8c9e-88a23f04ffe5
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f62e3a4f33193f36e76b1286ae3d35d26706b3ac
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dca3b0c11c916a1fc47e4687bfeeabee35bcdfb4
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928088"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056370"
 ---
 # <a name="simplified-embedding"></a>Incorporação simplificada
 A incorporação simplificada é habilitada em um editor quando seu objeto de exibição de documento é pai de (ou seja, tornou-se um filho de) [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] e a <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> interface é implementada para manipular seus comandos de janela. Editores de inserção simplificados não podem hospedar controles ativos. Os objetos usados para criar um editor com inserção simplificada são mostrados na ilustração a seguir.

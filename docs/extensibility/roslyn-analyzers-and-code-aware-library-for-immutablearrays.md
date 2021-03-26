@@ -6,17 +6,17 @@ titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0b0afa22-3fca-4d59-908e-352464c1d903
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c41b70cf9a4e4e5ae4b1d1ddd2d2a6f6876b9a96
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e3bdcc9c35f5acaf9937bd18b0160f9e5a58161c
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875517"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060571"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Analisadores de Roslyn e biblioteca com reconhecimento de código para ImmutableArrays
 
@@ -66,7 +66,7 @@ Coloque o cursor do editor na linha que declara `b1` . Você verá a Syntax Visu
 
 No menu principal, escolha **arquivo**  >  **novo**  >  **projeto**. Na caixa de diálogo **novo projeto** , em projetos **C#** na barra de navegação à esquerda, escolha **extensibilidade** e, no painel direito, escolha o **analisador com** o modelo de projeto de correção de código. Insira um nome e confirme a caixa de diálogo.
 
-O modelo abre um arquivo *DiagnosticAnalyzer.cs* . Escolha essa guia buffer do editor. Esse arquivo tem uma classe do analisador (formada pelo nome que você deu ao projeto) derivado de `DiagnosticAnalyzer` (um tipo de API Roslyn). Sua nova classe tem um `DiagnosticAnalyzerAttribute` declarando que o analisador é relevante para a linguagem C# para que o compilador descubra e carregue seu analisador.
+O modelo abre um arquivo *DiagnosticAnalyzer. cs* . Escolha essa guia buffer do editor. Esse arquivo tem uma classe do analisador (formada pelo nome que você deu ao projeto) derivado de `DiagnosticAnalyzer` (um tipo de API Roslyn). Sua nova classe tem um `DiagnosticAnalyzerAttribute` declarando que o analisador é relevante para a linguagem C# para que o compilador descubra e carregue seu analisador.
 
 ```csharp
 [DiagnosticAnalyzer(LanguageNames.CSharp)]

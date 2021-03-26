@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - multiple document views
 ms.assetid: c7ec2366-91c4-477f-908d-e89068bdb3e3
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5360f67714e1da4f7372ee51eb4f75cc8835c1fd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e54ee028c6a7db2d5d2ea1ab609be6c2887c9829
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965116"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056201"
 ---
 # <a name="supporting-multiple-document-views"></a>Dando suporte a várias exibições de documento
 Você pode fornecer mais de uma exibição de um documento criando dados de documento separados e objetos de exibição de documento para seu editor. Alguns casos em que uma exibição de documento adicional seria útil são:
@@ -26,7 +26,7 @@ Você pode fornecer mais de uma exibição de um documento criando dados de docu
 
 - Suporte para exibição de formulário e código: você quer que seu editor forneça exibições de tipos diferentes. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], por exemplo, fornece uma exibição de formulário e uma exibição de código.
 
-  Para obter mais informações sobre isso, consulte o procedimento CreateEditorInstance no arquivo EditorFactory.cs no projeto de editor personalizado criado pelo modelo de pacote do Visual Studio. Para obter mais informações sobre este projeto, consulte [passo a passos: Criando um editor personalizado](../extensibility/walkthrough-creating-a-custom-editor.md).
+  Para obter mais informações sobre isso, consulte o procedimento CreateEditorInstance no arquivo EditorFactory. cs no projeto de editor personalizado criado pelo modelo de pacote do Visual Studio. Para obter mais informações sobre este projeto, consulte [passo a passos: Criando um editor personalizado](../extensibility/walkthrough-creating-a-custom-editor.md).
 
 ## <a name="synchronizing-views"></a>Sincronizando exibições
  Quando você implementa vários modos de exibição, o objeto de dados do documento é responsável por manter todas as exibições sincronizadas com os dados. Você pode usar as interfaces de manipulação de eventos no <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> para sincronizar vários modos de exibição com os dados.

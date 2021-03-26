@@ -8,17 +8,17 @@ helpviewer_keywords:
 - setup, VSPackages
 - launch conditions
 ms.assetid: 0ba94acf-bf0b-4bb3-8cca-aaac1b5d6737
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 20287ba123c5736c9eb7077622623f4a739bde5c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ffb00ca42376f8b7c150552c862bba7a24a5c1fb
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963465"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056760"
 ---
 # <a name="detect-system-requirements"></a>Detectar requisitos do sistema
 Um VSPackage não pode funcionar, a menos que o Visual Studio esteja instalado. Ao usar o Microsoft Windows Installer para gerenciar a instalação do seu VSPackage, você pode configurar o instalador para detectar se o Visual Studio está instalado. Você também pode configurá-lo para verificar o sistema em busca de outros requisitos, por exemplo, uma versão específica do Windows ou uma quantidade específica de RAM.
@@ -26,7 +26,7 @@ Um VSPackage não pode funcionar, a menos que o Visual Studio esteja instalado. 
 ## <a name="detect-visual-studio-editions"></a>Detectar edições do Visual Studio
  Para determinar se uma edição do Visual Studio está instalada, verifique se o valor da chave do registro de **instalação** é *(REG_DWORD) 1* na pasta apropriada, conforme listado na tabela a seguir. Observe que há uma hierarquia das edições do Visual Studio:
 
-1. Empresarial
+1. Enterprise
 
 2. Professional
 
@@ -47,5 +47,5 @@ Quando uma edição mais recente é instalada, as chaves do registro para essa e
 ## <a name="detect-when-visual-studio-is-running"></a>Detectar quando o Visual Studio está em execução
  Seu VSPackage não poderá ser registrado corretamente se o Visual Studio estiver em execução quando o VSPackage estiver instalado. O instalador deve detectar quando o Visual Studio está em execução e, em seguida, recusar a instalação do programa. Windows Installer não permite que você use entradas de tabela para habilitar tal detecção. Em vez disso, você deve criar uma ação personalizada, da seguinte maneira: usar a `EnumProcesses` função para detectar o *devenv.exe* processo e, em seguida, definir uma propriedade do instalador que é usada em uma condição de inicialização ou exibir condicionalmente uma caixa de diálogo que solicita ao usuário fechar o Visual Studio.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Instalar o VSPackages com Windows Installer](../../extensibility/internals/installing-vspackages-with-windows-installer.md)

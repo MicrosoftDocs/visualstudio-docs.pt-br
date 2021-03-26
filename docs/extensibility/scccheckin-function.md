@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - SccCheckin function
 ms.assetid: e3f26ac2-6163-42e1-a764-22cfea5a3bc6
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a835ead5fb0404b78d9e9c9ecc92ee0c73eaf252
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: d6864549c6825092b6ad26be199f8c7b5ea6bab6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102220853"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060426"
 ---
 # <a name="scccheckin-function"></a>Função SccCheckin
 Essa função faz check-out de arquivos extraídos anteriormente no sistema de controle do código-fonte, armazenando as alterações e criando uma nova versão. Essa função é chamada com uma contagem e uma matriz de nomes dos arquivos nos quais será feito o check-in.
@@ -76,7 +76,7 @@ no Opções específicas de plug-in SCC.
 |SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle do código-fonte, provavelmente devido a problemas de rede ou de contenção. Uma nova tentativa é recomendada.|
 |SCC_E_NONSPECIFICERROR|Falha não específica. O check-in do arquivo não foi feito.|
 |SCC_E_NOTCHECKEDOUT|O usuário não fez o check-out do arquivo; portanto, não é possível verificá-lo.|
-|SCC_E_CHECKINCONFLICT|O check-in não pôde ser executado porque:<br /><br /> -Outro usuário fez o check-in antecipado e `bAutoReconcile` foi falso.<br /><br /> -ou-<br /><br /> -A mesclagem automática não pode ser feita (por exemplo, quando os arquivos são binários).|
+|SCC_E_CHECKINCONFLICT|O check-in não pôde ser executado porque:<br /><br /> -Outro usuário fez o check-in antecipado e `bAutoReconcile` foi falso.<br /><br /> – ou –<br /><br /> -A mesclagem automática não pode ser feita (por exemplo, quando os arquivos são binários).|
 |SCC_E_VERIFYMERGE|O arquivo foi mesclado automaticamente, mas não foi verificado na verificação de usuário pendente.|
 |SCC_E_FIXMERGE|O arquivo foi mesclado automaticamente, mas não foi verificado devido a um conflito de mesclagem que deve ser resolvido manualmente.|
 |SCC_E_NOTAUTHORIZED|O usuário não tem permissão para executar esta operação.|

@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, strings used for finding
 ms.assetid: c1e31f76-42a1-4c3d-afb2-664044ef12fd
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e6ded8a5d43226a5c37eef1e0ba5ec32e2720f1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b61c13973ac6668814fbc3ba076b373d6e0b1e44
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99847928"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056292"
 ---
 # <a name="strings-used-as-keys-for-finding-a-source-control-plug-in"></a>Cadeias de caracteres usadas como chaves para localizar um plug-in de controle do código-fonte
 As cadeias de caracteres a seguir são as chaves para acessar o registro para encontrar informações sobre o plug-in de controle do código-fonte.
@@ -48,7 +48,7 @@ As cadeias de caracteres a seguir são as chaves para acessar o registro para en
 |`STR_UI_LANGUAGE`|UILanguage|
 |`STR_SRCSAFE_ROOT_KEY`|Software\Microsoft\SourceSafe|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Plug-ins de controle do código-fonte](../extensibility/source-control-plug-ins.md)
 - [Como instalar um plug-in de controle do código-fonte](../extensibility/internals/how-to-install-a-source-control-plug-in.md)
 - [Arquivo MSSCCPRJ.SCC](../extensibility/mssccprj-scc-file.md)
