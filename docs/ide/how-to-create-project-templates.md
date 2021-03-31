@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: 9dc515b35fd57368e2be4742cb685be9414734ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a823d6a519da286e5c6df8947d64934a244c1985
+ms.sourcegitcommit: 9c831a7f39e5b3e3c5db000b2545715bf12225f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878689"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105933765"
 ---
 # <a name="how-to-create-project-templates"></a>Como criar modelos de projeto
 
@@ -68,3 +68,4 @@ Se o SDK do Visual Studio estiver instalado, você poderá encapsular o modelo c
 - [Criar modelos de projeto e de item](../ide/creating-project-and-item-templates.md)
 - [Como: criar modelos de item](../ide/how-to-create-item-templates.md)
 - [Introdução ao modelo de projeto do VSIX](../extensibility/getting-started-with-the-vsix-project-template.md)
+- [Personalizar modelos de projeto e de item](customizing-project-and-item-templates.md)
