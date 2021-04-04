@@ -2,7 +2,7 @@
 title: Depurar de um projeto de DLL | Microsoft Docs
 description: Você pode iniciar a depuração de um projeto de DLL do projeto em si, especificando o aplicativo de chamada nas propriedades do projeto. Consulte este artigo para obter detalhes.
 ms.custom: SEO-VS-2020
-ms.date: 10/10/2018
+ms.date: 3/30/2021
 ms.topic: how-to
 dev_langs:
 - CSharp
@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f6063c5a0343951bb098c6937ce13dac7100d4a
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 7846cc3fd17b46365da59f6fe1a744032cb8ba14
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160428"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106083636"
 ---
 # <a name="how-to-debug-from-a-dll-project-in-visual-studio-c-c-visual-basic-f"></a>Como: Depurar de um projeto de DLL no Visual Studio (C#, C++, Visual Basic, F #)
 
@@ -81,7 +81,13 @@ Os projetos DLL nativos e gerenciados têm configurações diferentes para espec
 
 1. Verifique se o campo de **configuração de soluções** está definido como **depurar**. Pressione **F5**, clique na seta de **início** verde ou selecione **depurar**  >  **Iniciar Depuração**.
 
-Se a depuração não atingir seus pontos de interrupção, verifique se a saída da DLL (por padrão, a pasta *\<project> \debug* ) é o local que o aplicativo de chamada está chamando.
+Outras dicas:
+
+- Se a depuração não atingir seus pontos de interrupção, verifique se a saída da DLL (por padrão, a pasta *\<project> \debug* ) é o local que o aplicativo de chamada está chamando.
+
+- Se você quiser dividir o código em um aplicativo de chamada gerenciado de uma DLL nativa, ou vice-versa, habilite a [depuração de modo misto](../debugger/how-to-debug-in-mixed-mode.md).
+
+- Em alguns cenários, talvez seja necessário informar ao depurador onde encontrar o código-fonte. Para obter mais informações, consulte [usar os símbolos não carregados/nenhuma página carregada de origem](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#use-the-no-symbols-loadedno-source-loaded-pages).
 
 ## <a name="see-also"></a>Confira também
 - [Depuração de projetos de DLL](../debugger/debugging-dll-projects.md)

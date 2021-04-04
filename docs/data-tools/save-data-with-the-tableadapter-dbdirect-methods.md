@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 00f508163dc039d5c29013538a78fa7dab6091fd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4539d269f27cd09f96c8633d0efd603708f1f2e1
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858443"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215767"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>Salvar os dados com os métodos TableAdapter DBDirect
 
@@ -91,7 +91,7 @@ Esta etapa usa o **Assistente de Configuração de Fonte de Dados** para criar u
 
     - Se uma conexão de dados com o banco de dados de exemplo Northwind estiver disponível na lista suspensa, selecione-o.
 
-         -ou-
+         – ou –
 
     - Selecione **Nova Conexão** para inicializar a caixa de diálogo **Adicionar/Modificar Conexão**.
 
@@ -123,7 +123,7 @@ Um controle <xref:System.Windows.Forms.DataGridView> e uma faixa de ferramentas 
     |----------|----------|
     |`InsertButton`|**Inserção**|
     |`UpdateButton`|**Atualizar**|
-    |`DeleteButton`|**Delete (excluir)**|
+    |`DeleteButton`|**Excluir**|
 
 ### <a name="to-add-code-to-insert-new-records-into-the-database"></a>Para adicionar código para inserir novos registros no banco de dados
 
@@ -131,8 +131,8 @@ Um controle <xref:System.Windows.Forms.DataGridView> e uma faixa de ferramentas 
 
 2. Substitua o manipulador de eventos `InsertButton_Click` pelo seguinte código:
 
-     [!code-vb[VbRaddataSaving#1](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_1.vb)]
-     [!code-csharp[VbRaddataSaving#1](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_1.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form1.vb" id="Snippet1":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form1.cs" id="Snippet1":::
 
 ### <a name="to-add-code-to-update-records-in-the-database"></a>Para adicionar código para atualizar registros no banco de dados
 
@@ -140,8 +140,8 @@ Um controle <xref:System.Windows.Forms.DataGridView> e uma faixa de ferramentas 
 
 2. Substitua o manipulador de eventos `UpdateButton_Click` pelo seguinte código:
 
-     [!code-vb[VbRaddataSaving#2](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_2.vb)]
-     [!code-csharp[VbRaddataSaving#2](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_2.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form1.vb" id="Snippet2":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form1.cs" id="Snippet2":::
 
 ### <a name="to-add-code-to-delete-records-from-the-database"></a>Para adicionar código para excluir registros do banco de dados
 
@@ -149,8 +149,8 @@ Um controle <xref:System.Windows.Forms.DataGridView> e uma faixa de ferramentas 
 
 2. Substitua o manipulador de eventos `DeleteButton_Click` pelo seguinte código:
 
-     [!code-vb[VbRaddataSaving#3](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_3.vb)]
-     [!code-csharp[VbRaddataSaving#3](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_3.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form1.vb" id="Snippet3":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form1.cs" id="Snippet3":::
 
 ## <a name="run-the-application"></a>Executar o aplicativo
 

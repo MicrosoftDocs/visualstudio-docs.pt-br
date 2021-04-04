@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b8f690b15f843af9337e16ee803509b72e85d7af
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 17d9ac144b97c090292395dd5ae5e85319dd1308
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99889662"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215507"
 ---
 # <a name="how-to-add-a-property-to-a-custom-sharepoint-project-item-type"></a>Como: adicionar uma propriedade a um tipo de item de projeto personalizado do SharePoint
   Ao definir um tipo de item de projeto personalizado do SharePoint, você pode adicionar uma propriedade ao item de projeto. A propriedade aparece na janela **Propriedades** quando o item de projeto é selecionado em **Gerenciador de soluções**.
@@ -39,8 +39,8 @@ ms.locfileid: "99889662"
 ## <a name="example"></a>Exemplo
  O exemplo de código a seguir demonstra como adicionar uma propriedade denominada de propriedade de **exemplo** a um tipo de item de projeto personalizado.
 
- [!code-vb[SPExtensibility.ProjectItemExtension.MenuAndProperty#11](../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemtypeproperty.vb#11)]
- [!code-csharp[SPExtensibility.ProjectItemExtension.MenuAndProperty#11](../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemtypeproperty.cs#11)]
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemtypeproperty.vb" id="Snippet11":::
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemtypeproperty.cs" id="Snippet11":::
 
 ### <a name="understand-the-code"></a>Compreender o código
  Para garantir que a mesma instância da `CustomProperties` classe seja usada cada vez que o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertiesRequested> evento ocorrer, o exemplo de código salva o objeto de propriedades na <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> Propriedade do item do projeto na primeira vez em que esse evento ocorre. O código recupera esse objeto sempre que esse evento ocorrer novamente. Para obter mais informações sobre como usar a <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> propriedade para salvar dados com itens de projeto, consulte [associar dados personalizados a extensões de ferramentas do SharePoint](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md).

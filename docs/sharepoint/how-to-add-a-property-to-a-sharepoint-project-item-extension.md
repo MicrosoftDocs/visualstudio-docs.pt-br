@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3d721c8d4f381e99a814852839de0e808d326b3a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2634035435679bd5ab2627f803ff9d2c1dc5a863
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99889636"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215442"
 ---
 # <a name="how-to-add-a-property-to-a-sharepoint-project-item-extension"></a>Como: adicionar uma propriedade a uma extensão de item de projeto do SharePoint
   Você pode usar uma extensão de item de projeto para adicionar uma propriedade a qualquer item de projeto do SharePoint que já esteja instalado no Visual Studio. A propriedade aparece na janela **Propriedades** quando o item de projeto é selecionado em **Gerenciador de soluções**.
@@ -40,8 +40,8 @@ ms.locfileid: "99889636"
 ## <a name="example"></a>Exemplo
  O exemplo de código a seguir demonstra como adicionar uma propriedade chamada de propriedade de **exemplo** ao item de projeto receptor de evento.
 
- [!code-csharp[SPExtensibility.ProjectItemExtension.MenuAndProperty#8](../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemextensionproperty.cs#8)]
- [!code-vb[SPExtensibility.ProjectItemExtension.MenuAndProperty#8](../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemextensionproperty.vb#8)]
+:::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemextensionproperty.cs" id="Snippet8":::
+:::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemextensionproperty.vb" id="Snippet8":::
 
 ### <a name="understand-the-code"></a>Compreender o código
  Para garantir que a mesma instância da `CustomProperties` classe seja usada cada vez que o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertiesRequested> evento ocorrer, o exemplo de código adiciona o objeto de propriedades à <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> Propriedade do item do projeto na primeira vez em que esse evento ocorrer. O código recupera esse objeto sempre que esse evento ocorrer novamente. Para obter mais informações sobre como usar a <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> propriedade para associar dados a itens de projeto, consulte [associar dados personalizados a extensões de ferramentas do SharePoint](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md).

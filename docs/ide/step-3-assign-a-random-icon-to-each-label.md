@@ -15,12 +15,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 82356ce29f46388f9c74318c05dc6a4b68fcbbae
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3254a986fb21c5a562d0d9a3c7f098d2b560dbfd
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950764"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214285"
 ---
 # <a name="step-3-assign-a-random-icon-to-each-label"></a>Etapa 3: Atribuir um ícone aleatório a cada rótulo
 
@@ -30,8 +30,8 @@ Se os ícones aparecerem nas mesmas células a cada jogo, ele não será muito d
 
 1. Antes de adicionar o código a seguir, considere como o método funciona. Há uma nova palavra-chave: `foreach` em C# e `For Each` em Visual Basic. (Uma das linhas é comentada intencionalmente, que é explicada no fim deste procedimento.)
 
-     [!code-csharp[VbExpressTutorial4Step2_3_4#2](../ide/codesnippet/CSharp/step-3-assign-a-random-icon-to-each-label_1.cs)]
-     [!code-vb[VbExpressTutorial4Step2_3_4#2](../ide/codesnippet/VisualBasic/step-3-assign-a-random-icon-to-each-label_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs" id="Snippet2":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/vb/form1.vb" id="Snippet2":::
 
       > [!IMPORTANT]
       > Use o controle linguagem de programação no canto superior direito desta página para exibir o trecho de código C# ou o trecho de código de Visual Basic.<br><br>![Controle de linguagem de programação para Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
@@ -40,8 +40,8 @@ Se os ícones aparecerem nas mesmas células a cada jogo, ele não será muito d
 
      Como mencionado anteriormente, há algo novo em seu `AssignIconsToSquares()` método: um `foreach` loop em C# e `For Each` em Visual Basic. Você pode usar um loop `For Each` no momento em que desejar realizar a mesma ação várias vezes. Nesse caso, execute as mesmas instruções para cada rótulo no seu <xref:System.Windows.Forms.TableLayoutPanel>, conforme explicado pelo código a seguir. A primeira linha cria uma variável denominada `control` que armazena cada controle, um por vez, enquanto as instruções no loop são executadas nesse controle.
 
-     [!code-csharp[VbExpressTutorial4Step2_3_4#14](../ide/codesnippet/CSharp/step-3-assign-a-random-icon-to-each-label_2.cs)]
-     [!code-vb[VbExpressTutorial4Step2_3_4#14](../ide/codesnippet/VisualBasic/step-3-assign-a-random-icon-to-each-label_2.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs" id="Snippet14":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/vb/form1.vb" id="Snippet14":::
 
     > [!NOTE]
     > Os nomes "iconLabel" e "control" são usados porque são descritivos. É possível substituir esses nomes por quaisquer nomes, e o código funcionará exatamente da mesma forma, desde que você altere o nome em cada instrução dentro do loop.
@@ -50,8 +50,8 @@ Se os ícones aparecerem nas mesmas células a cada jogo, ele não será muito d
 
      Observe mais detalhadamente o código que é executado no loop `foreach` ou `For Each`. Esse código é reproduzido aqui.
 
-     [!code-csharp[VbExpressTutorial4Step2_3_4#16](../ide/codesnippet/CSharp/step-3-assign-a-random-icon-to-each-label_3.cs)]
-     [!code-vb[VbExpressTutorial4Step2_3_4#16](../ide/codesnippet/VisualBasic/step-3-assign-a-random-icon-to-each-label_3.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs" id="Snippet16":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/vb/form1.vb" id="Snippet16":::
 
      A primeira linha converte a variável **control** em um rótulo denominado **iconLabel**. A linha que vem a seguir está uma instrução `if` que verifica se a conversão funcionou. Se a conversão realmente funcionar, as instruções na instrução `if` serão executadas. (Como você pode se lembrar dos tutoriais anteriores, a `if` instrução é usada para avaliar qualquer condição que você especificar.) A primeira linha na `if` instrução cria uma variável chamada **randomNumber** que contém um número aleatório que corresponde a um dos itens na lista de ícones. Para fazer isso, ela usa o método <xref:System.Random.Next> do objeto <xref:System.Random> que você criou anteriormente. O método `Next` retorna o número aleatório. Essa linha também usa a propriedade <xref:System.Collections.Generic.List%601.Count> da lista **icons** para determinar o intervalo do qual escolher o número aleatório. A próxima linha atribui um dos itens da lista de ícones à propriedade <xref:System.Windows.Forms.Label.Text> do rótulo. A linha comentada é explicada mais adiante neste tópico. Por fim, a última linha na instrução `if` remove da lista o ícone que foi adicionado ao formulário.
 
@@ -59,7 +59,7 @@ Se os ícones aparecerem nas mesmas células a cada jogo, ele não será muito d
 
 3. Para preencher o tabuleiro do jogo com ícones, você precisa chamar o método `AssignIconsToSquares()` assim que programa for iniciado. Se você estiver usando C#, adicione uma instrução logo abaixo da chamada para o `InitializeComponent()` método no construtor **Form1** , para que seu formulário chame o novo método para se configurar antes de ser mostrado. Os construtores são chamados quando você cria um novo objeto, como uma classe ou um struct. Veja [Construtores (Guia de programação do C#)](/dotnet/csharp/programming-guide/classes-and-structs/constructors) ou [Uso de construtores e destruidores](/previous-versions/visualstudio/visual-studio-2008/2z08e49e\(v\=vs.90\)) no Visual Basic para obter mais informações.
 
-     [!code-csharp[VbExpressTutorial4Step2_3_4#13](../ide/codesnippet/CSharp/step-3-assign-a-random-icon-to-each-label_4.cs)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs" id="Snippet13":::
 
      Para o Visual Basic, adicione a chamada de método `AssignIconsToSquares()` ao método `Form1_Load` para que o código se pareça com o mostrado a seguir.
 
@@ -80,8 +80,8 @@ Se os ícones aparecerem nas mesmas células a cada jogo, ele não será muito d
 
 6. Para ocultar os ícones, interrompa o programa e remova as marcas de comentário da linha de código comentada dentro do loop `For Each`.
 
-     [!code-csharp[VbExpressTutorial4Step2_3_4#15](../ide/codesnippet/CSharp/step-3-assign-a-random-icon-to-each-label_5.cs)]
-     [!code-vb[VbExpressTutorial4Step2_3_4#15](../ide/codesnippet/VisualBasic/step-3-assign-a-random-icon-to-each-label_5.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs" id="Snippet15":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/vb/form1.vb" id="Snippet15":::
 
 7. Na barra de menus, escolha o botão **Salvar Tudo** para salvar seu programa e, em seguida, execute-o. Os ícones parecem ter desaparecido; é exibido apenas um plano de fundo azul. No entanto, os ícones são atribuídos aleatoriamente e continuam lá. Como os ícones são da mesma cor do plano de fundo, eles ficam ocultos para o jogador. Até porque, ele não seria um jogo muito desafiador se o jogador pudesse ver todos os ícones imediatamente!
 

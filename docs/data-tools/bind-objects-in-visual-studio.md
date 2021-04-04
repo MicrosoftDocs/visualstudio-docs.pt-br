@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: b9446fa0edb9302d4032f19f23c8adb8747d9cc8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 140700615759404f02109c4506f4c27d083a74b1
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859301"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215533"
 ---
 # <a name="bind-objects-as-data-sources-in-visual-studio"></a>Associar objetos como fontes de dados no Visual Studio
 
@@ -69,8 +69,8 @@ A maneira mais fácil de carregar objetos personalizados com dados é chamar o `
 
 O exemplo a seguir mostra como executar um loop pelas linhas em uma tabela de dados e preencher um objeto com dados:
 
-[!code-csharp[VbRaddataConnecting#4](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_1.cs)]
-[!code-vb[VbRaddataConnecting#4](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_1.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConnecting/CS/Form1.cs" id="Snippet4":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConnecting/VB/Form1.vb" id="Snippet4":::
 
 ### <a name="create-a-typed-collection-of-objects"></a>Criar uma coleção de objetos tipada
 
@@ -85,8 +85,8 @@ A coleção gerada automaticamente no <xref:System.Windows.Forms.BindingSource> 
 
 O código a seguir mostra como criar a classe para uma coleção de objetos fortemente tipada `Order` :
 
-[!code-csharp[VbRaddataConnecting#8](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_2.cs)]
-[!code-vb[VbRaddataConnecting#8](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_2.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConnecting/CS/Class1.cs" id="Snippet8":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConnecting/VB/Class1.vb" id="Snippet8":::
 
 ### <a name="add-objects-to-a-collection"></a>Adicionar objetos a uma coleção
 
@@ -97,16 +97,16 @@ Você adiciona objetos a uma coleção chamando o `Add` método da sua classe de
 
 O código a seguir mostra como adicionar objetos à coleção tipada em um <xref:System.Windows.Forms.BindingSource> :
 
-[!code-csharp[VbRaddataConnecting#5](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_3.cs)]
-[!code-vb[VbRaddataConnecting#5](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_3.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConnecting/CS/Class1.cs" id="Snippet5":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConnecting/VB/Class1.vb" id="Snippet5":::
 
 O código a seguir mostra como adicionar objetos a uma coleção tipada que herda de <xref:System.ComponentModel.BindingList%601> :
 
 > [!NOTE]
 > Neste exemplo, a `Orders` coleção é uma propriedade do `Customer` objeto.
 
-[!code-csharp[VbRaddataConnecting#6](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_4.cs)]
-[!code-vb[VbRaddataConnecting#6](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_4.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConnecting/CS/Class1.cs" id="Snippet6":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConnecting/VB/Class1.vb" id="Snippet6":::
 
 ### <a name="remove-objects-from-a-collection"></a>Remover objetos de uma coleção
 
@@ -117,8 +117,8 @@ Você remove objetos de uma coleção chamando o `Remove` método ou `RemoveAt` 
 
 O código a seguir mostra como localizar e remover objetos da coleção tipada em um <xref:System.Windows.Forms.BindingSource> com o <xref:System.Windows.Forms.BindingSource.RemoveAt%2A> método:
 
-[!code-csharp[VbRaddataConnecting#7](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_5.cs)]
-[!code-vb[VbRaddataConnecting#7](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_5.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConnecting/CS/Class1.cs" id="Snippet7":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConnecting/VB/Class1.vb" id="Snippet7":::
 
 ### <a name="display-object-data-to-users"></a>Exibir dados de objeto para usuários
 
@@ -146,8 +146,8 @@ Para salvar dados de uma coleção de objetos, faça um loop através da coleç�
 
 O exemplo a seguir mostra como usar o `TableAdapter.Insert` Método DBDirect para adicionar um novo cliente diretamente ao banco de dados:
 
-[!code-csharp[VbRaddataSaving#23](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_6.cs)]
-[!code-vb[VbRaddataSaving#23](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_6.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form3.cs" id="Snippet23":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form3.vb" id="Snippet23":::
 
 ## <a name="see-also"></a>Confira também
 

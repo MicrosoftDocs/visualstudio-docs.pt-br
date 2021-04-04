@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a7f8645cd34fe56d7d8d0f6a9efa6bf01bd13d8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9bc7fe3898bec19b4eb0130e7279974823669e7f
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939650"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106082533"
 ---
 # <a name="how-msbuild-builds-projects"></a>Como o MSBuild compila projetos
 
@@ -139,7 +139,7 @@ O arquivo *Microsoft. Common. props* define os padrões que podem ser substituí
 
 O arquivo *Microsoft. Common. targets* e os arquivos de destino que ele importa definem o processo de compilação padrão para projetos .net. Ele também fornece pontos de extensão que você pode usar para personalizar a compilação.
 
-Na implementação, *Microsoft. Common. targets* é um wrapper fino que importa *Microsoft. Common. CurrentVersion. targets*. Esse arquivo contém configurações para propriedades padrão e define os destinos reais que definem o processo de compilação. O `Build` destino é definido aqui, mas está, na verdade, vazio. No entanto, o `Build` destino contém o `DependsOn` atributo que especifica os destinos individuais que compõem as etapas de compilação reais, que são `BeforeBuild` , `CoreBuild` e `AfterBuild` . O `Build` destino é definido da seguinte maneira:
+Na implementação, *Microsoft. Common. targets* é um wrapper fino que importa *Microsoft. Common. CurrentVersion. targets*. Esse arquivo contém configurações para propriedades padrão e define os destinos reais que definem o processo de compilação. O `Build` destino é definido aqui, mas está, na verdade, vazio. No entanto, o `Build` destino contém o `DependsOnTargets` atributo que especifica os destinos individuais que compõem as etapas de compilação reais, que são `BeforeBuild` , `CoreBuild` e `AfterBuild` . O `Build` destino é definido da seguinte maneira:
 
 ```xml
   <PropertyGroup>
@@ -157,7 +157,7 @@ Na implementação, *Microsoft. Common. targets* é um wrapper fino que importa 
       Returns="@(TargetPathWithTargetPlatformMoniker)" />
 ```
 
-`BeforeBuild` e `AfterBuild` são pontos de extensão. Eles estão vazios no arquivo *Microsoft. Common. CurrentVersion. targets* , mas os projetos podem fornecer seus próprios `BeforeBuild` e `AfterBuild` destinos com tarefas que precisam ser executadas antes ou depois do processo de compilação principal. `AfterBuild` é executado antes do destino não op, `Build` , porque `AfterBuild` aparece no `DependsOn` atributo no `Build` destino, mas ocorre após `CoreBuild` .
+`BeforeBuild` e `AfterBuild` são pontos de extensão. Eles estão vazios no arquivo *Microsoft. Common. CurrentVersion. targets* , mas os projetos podem fornecer seus próprios `BeforeBuild` e `AfterBuild` destinos com tarefas que precisam ser executadas antes ou depois do processo de compilação principal. `AfterBuild` é executado antes do destino não op, `Build` , porque `AfterBuild` aparece no `DependsOnTargets` atributo no `Build` destino, mas ocorre após `CoreBuild` .
 
 O `CoreBuild` destino contém as chamadas para as ferramentas de compilação, da seguinte maneira:
 

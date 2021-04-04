@@ -15,12 +15,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 496bf75495d864024ef587849edd554bfd435db5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3d38ccb600894cec523bd06d46f0aee071af8796
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950881"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214337"
 ---
 # <a name="step-2-add-a-random-object-and-a-list-of-icons"></a>Etapa 2: Adicionar um objeto aleatório e uma lista de ícones
 
@@ -28,14 +28,14 @@ Nesta etapa, você cria um conjunto de símbolos correspondentes para o jogo. Ca
 
 ## <a name="to-add-a-random-object-and-a-list-of-icons"></a>Para adicionar um objeto aleatório e uma lista de ícones
 
-1. Em **Gerenciador de soluções**, escolha *Form1.cs* se você estiver usando C# ou *Form1. vb* se estiver usando Visual Basic e, em seguida, na barra de menus, escolha **Exibir**  >  **código**. Como uma alternativa, é possível pressionar a tecla **F7** ou clicar duas vezes em **Form1** no **Gerenciador de Soluções**.
+1. Em **Gerenciador de soluções**, escolha *Form1. cs* se você estiver usando C# ou *Form1. vb* se estiver usando Visual Basic e, em seguida, na barra de menus, escolha **Exibir**  >  **código**. Como uma alternativa, é possível pressionar a tecla **F7** ou clicar duas vezes em **Form1** no **Gerenciador de Soluções**.
 
      Isso exibe o módulo de código por trás de Form1.
 
 2. No código existente, adicione o código a seguir.
 
-     [!code-csharp[VbExpressTutorial4Step2_3_4#1](../ide/codesnippet/CSharp/step-2-add-a-random-object-and-a-list-of-icons_1.cs)]
-     [!code-vb[VbExpressTutorial4Step2_3_4#1](../ide/codesnippet/VisualBasic/step-2-add-a-random-object-and-a-list-of-icons_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs" id="Snippet1":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/vb/form1.vb" id="Snippet1":::
 
       > [!IMPORTANT]
       > Use o controle linguagem de programação no canto superior direito desta página para exibir o trecho de código C# ou o trecho de código de Visual Basic.<br><br>![Controle de linguagem de programação para Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)

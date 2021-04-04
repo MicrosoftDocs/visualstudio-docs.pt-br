@@ -20,12 +20,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5d03a6dbe728d77fb9158ec02e1f59016e7c4a99
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f3054c5c74c8844f780c3562327353fca164f1f4
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858274"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215637"
 ---
 # <a name="update-data-by-using-a-tableadapter"></a>Atualizar dados usando um TableAdapter
 
@@ -50,8 +50,8 @@ Chame o `Update` método de um TableAdapter. Passe o nome da tabela de dados que
 
 - Coloque o método do TableAdapter `Update` em um `try` / `catch` bloco. O exemplo a seguir mostra como atualizar o conteúdo da `Customers` tabela no `NorthwindDataSet` de dentro de um `try` / `catch` bloco.
 
-     [!code-csharp[VbRaddataSaving#9](../data-tools/codesnippet/CSharp/update-data-by-using-a-tableadapter_1.cs)]
-     [!code-vb[VbRaddataSaving#9](../data-tools/codesnippet/VisualBasic/update-data-by-using-a-tableadapter_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form3.cs" id="Snippet9":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form3.vb" id="Snippet9":::
 
 ## <a name="see-also"></a>Confira também
 

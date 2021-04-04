@@ -1,5 +1,6 @@
 ---
 title: Publicar no Serviço de Aplicativo do Azure
+description: Você pode usar a ferramenta Publicar para publicar aplicativos do ASP.NET Core no Serviço de Aplicativo do Azure.
 ms.date: 01/17/2019
 helpviewer_keywords:
 - deployment, website
@@ -12,12 +13,12 @@ ms.custom: video
 ms.topic: how-to
 ms.workload:
 - azure
-ms.openlocfilehash: 49a8dfb3625ebda01caf0d0fa806b197c1bdaefb
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: e0fdabe38f2696540db1a3b629609dbc1c42d821
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98722991"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106083623"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio-for-mac"></a>Publicar um aplicativo Web no Serviço de Aplicativo do Azure usando o Visual Studio para Mac
 

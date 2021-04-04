@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: f212fbd1868ad873f0692a11bae975eade8778a5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 38ceec2cafd3476342d9319d9b5d034564759fad
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858911"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215897"
 ---
 # <a name="edit-data-in-datasets"></a>Editar dados em conjuntos de dados
 Você edita dados em tabelas de dados da mesma forma que edita os dados em uma tabela em qualquer banco de dado. O processo pode incluir inserção, atualização e exclusão de registros na tabela. Em um formulário vinculado a dados, você pode especificar quais campos são editáveis pelo usuário. Nesses casos, a infraestrutura de ligação de dados lida com todo o controle de alterações para que as alterações possam ser enviadas de volta para o banco mais tarde. Se você fizer edições programaticamente nos dados e pretende enviar essas alterações de volta ao banco de dado, deverá usar os objetos e métodos que fazem o controle de alterações para você.
@@ -33,21 +33,21 @@ Para editar uma linha existente em um <xref:System.Data.DataTable> , você preci
 
 Se você não souber o índice da linha que deseja editar, use o `FindBy` método para pesquisar pela chave primária:
 
-[!code-csharp[VbRaddataEditing#3](../data-tools/codesnippet/CSharp/edit-data-in-datasets_1.cs)]
-[!code-vb[VbRaddataEditing#3](../data-tools/codesnippet/VisualBasic/edit-data-in-datasets_1.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataEditing/CS/Form1.cs" id="Snippet3":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb" id="Snippet3":::
 
 Se você souber o índice de linha, poderá acessar e editar as linhas da seguinte maneira:
 
-[!code-csharp[VbRaddataEditing#5](../data-tools/codesnippet/CSharp/edit-data-in-datasets_2.cs)]
-[!code-vb[VbRaddataEditing#5](../data-tools/codesnippet/VisualBasic/edit-data-in-datasets_2.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataEditing/CS/Form1.cs" id="Snippet5":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb" id="Snippet5":::
 
 ## <a name="to-insert-new-rows-into-a-dataset"></a>Para inserir novas linhas em um conjunto de registros
 Os aplicativos que usam controles vinculados a dados normalmente adicionam novos registros por meio do botão **Adicionar novo** em um [controle BindingNavigator](/dotnet/framework/winforms/controls/bindingnavigator-control-windows-forms).
 
 Para adicionar manualmente novos registros a um DataSet, crie uma nova linha de dados chamando o método na DataTable. Em seguida, adicione a linha à <xref:System.Data.DataRow> coleção ( <xref:System.Data.DataTable.Rows%2A> ) do <xref:System.Data.DataTable> :
 
-[!code-csharp[VbRaddataEditing#1](../data-tools/codesnippet/CSharp/edit-data-in-datasets_3.cs)]
-[!code-vb[VbRaddataEditing#1](../data-tools/codesnippet/VisualBasic/edit-data-in-datasets_3.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataEditing/CS/Form1.cs" id="Snippet1":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb" id="Snippet1":::
 
 Para manter as informações que o conjunto de dados precisa para enviar atualizações para a fonte, use o <xref:System.Data.DataRow.Delete%2A> método para remover linhas em uma tabela de dados. Por exemplo, se seu aplicativo usa um TableAdapter (ou <xref:System.Data.Common.DataAdapter> ), o método do TableAdapter `Update` exclui linhas no banco de dados que têm um <xref:System.Data.DataRow.RowState%2A> de <xref:System.Data.DataRowState.Deleted> .
 
@@ -64,8 +64,8 @@ Se seu aplicativo não precisar enviar atualizações de volta para uma fonte de
 
 O exemplo a seguir mostra como chamar o <xref:System.Data.DataRow.Delete%2A> método para marcar a primeira linha na `Customers` tabela como excluída:
 
-[!code-csharp[VbRaddataEditing#8](../data-tools/codesnippet/CSharp/edit-data-in-datasets_4.cs)]
-[!code-vb[VbRaddataEditing#8](../data-tools/codesnippet/VisualBasic/edit-data-in-datasets_4.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataEditing/CS/Form1.cs" id="Snippet8":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb" id="Snippet8":::
 
 ## <a name="determine-if-there-are-changed-rows"></a>Determinar se há linhas alteradas
 Quando são feitas alterações nos registros em um conjunto de dados, as informações sobre essas alterações são armazenadas até você confirmá-las. As alterações são confirmadas quando você chama o `AcceptChanges` método de um conjunto de dados ou de uma tabela data, ou quando você chama o `Update` método de um TableAdapter ou adaptador de dados.
@@ -84,8 +84,8 @@ O <xref:System.Data.DataSet.HasChanges%2A> método de um conjunto de um DataSet 
 
 O exemplo a seguir mostra como verificar o valor de retorno do <xref:System.Data.DataSet.HasChanges%2A> método para detectar se há linhas alteradas em um conjunto de registros chamado `NorthwindDataset1` :
 
-[!code-csharp[VbRaddataEditing#12](../data-tools/codesnippet/CSharp/edit-data-in-datasets_5.cs)]
-[!code-vb[VbRaddataEditing#12](../data-tools/codesnippet/VisualBasic/edit-data-in-datasets_5.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataEditing/CS/Form1.cs" id="Snippet12":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb" id="Snippet12":::
 
 ## <a name="determine-the-type-of-changes"></a>Determinar o tipo de alterações
 Você também pode verificar para ver quais tipos de alterações foram feitas em um conjunto de um DataSet, passando um valor da <xref:System.Data.DataRowState> enumeração para o <xref:System.Data.DataSet.HasChanges%2A> método.
@@ -96,8 +96,8 @@ Você também pode verificar para ver quais tipos de alterações foram feitas e
 
 O exemplo a seguir mostra como verificar um conjunto de `NorthwindDataset1` registros chamado para determinar se alguma nova linha foi adicionada a ele:
 
-[!code-csharp[VbRaddataEditing#13](../data-tools/codesnippet/CSharp/edit-data-in-datasets_6.cs)]
-[!code-vb[VbRaddataEditing#13](../data-tools/codesnippet/VisualBasic/edit-data-in-datasets_6.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataEditing/CS/Form1.cs" id="Snippet13":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb" id="Snippet13":::
 
 ## <a name="to-locate-rows-that-have-errors"></a>Para localizar linhas com erros
 Ao trabalhar com colunas individuais e linhas de dados, você pode encontrar erros. Você pode verificar a `HasErrors` propriedade para determinar se há erros em um <xref:System.Data.DataSet> , <xref:System.Data.DataTable> ou <xref:System.Data.DataRow> .
@@ -106,8 +106,8 @@ Ao trabalhar com colunas individuais e linhas de dados, você pode encontrar err
 
 2. Se a `HasErrors` propriedade for `true` , itere pelas coleções de tabelas e, em seguida, as pelas linhas, para localizar a linha com o erro.
 
-[!code-csharp[VbRaddataEditing#23](../data-tools/codesnippet/CSharp/edit-data-in-datasets_7.cs)]
-[!code-vb[VbRaddataEditing#23](../data-tools/codesnippet/VisualBasic/edit-data-in-datasets_7.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataEditing/CS/Form1.cs" id="Snippet23":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb" id="Snippet23":::
 
 ## <a name="see-also"></a>Confira também
 

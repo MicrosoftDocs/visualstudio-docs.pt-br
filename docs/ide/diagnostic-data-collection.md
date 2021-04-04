@@ -4,17 +4,17 @@ description: Saiba mais sobre os logs gerados pelo sistema do Visual Studio, os 
 ms.custom: SEO-VS-2020
 ms.date: 05/24/2018
 ms.topic: conceptual
-author: jillre
-ms.author: michma
+author: TerryGLee
+ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a6df4a90d8ddb31db88bb91ff4e874cadd3c589
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d357b5e21ca86d7ccf11f576a15bbd0e7a90e466
+ms.sourcegitcommit: a339547aa2f4e0f64b7afbcc3e1ade0a4f9287d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894654"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106171830"
 ---
 # <a name="system-generated-logs-collected-by-visual-studio"></a>Logs gerados pelo sistema coletados pelo Visual Studio
 
@@ -70,7 +70,7 @@ Os autores de extensão devem limitar a exposição de informações pessoais n�
 
 ## <a name="opt-out-of-data-collection"></a>Recusar a coleta de dados
 
-Considerando a finalidade dos dados que coletamos e as restrições de acesso e retenção, recomendamos que você use as configurações de privacidade padrão para o Visual Studio e o Windows. No entanto, você pode [recusar](../ide/visual-studio-experience-improvement-program.md#opt-in-or-out) o Programa de Aperfeiçoamento da Experiência do Visual Studio. Para recusar a coleta de logs gerados pelo sistema para todos os programas, confira [Diagnóstico, comentários e privacidade no Windows 10](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy). As opções podem variar de acordo com a versão do Windows que você está usando.
+Considerando a finalidade dos dados que coletamos e as restrições de acesso e retenção, recomendamos que você use as configurações de privacidade padrão para o Visual Studio e o Windows. No entanto, você pode [recusar](../ide/visual-studio-experience-improvement-program.md#opt-in-or-out) o Programa de Aperfeiçoamento da Experiência do Visual Studio. Ao recusar, você está recusando a coleta de dados de diagnóstico **opcional** . Uma coleta de dados de diagnóstico é **necessária** para garantir que o Visual Studio esteja seguro, atualizado e funcionando conforme o esperado. A coleta de dados de diagnóstico necessária não será afetada por sua escolha para recusar o VSCEIP. Para recusar a coleta de logs gerados pelo sistema para todos os programas, confira [Diagnóstico, comentários e privacidade no Windows 10](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy). As opções podem variar de acordo com a versão do Windows que você está usando.
 
 ## <a name="see-also"></a>Confira também
 

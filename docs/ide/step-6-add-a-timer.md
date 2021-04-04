@@ -15,12 +15,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 77daa47cdd6336849903202233392d3eecc33c1a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f59375e9e64e6a7302d65b8c940d82b63adef54f
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868888"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214194"
 ---
 # <a name="step-6-add-a-timer"></a>Etapa 6: Adicionar um temporizador
 Em seguida, adicione um controle <xref:System.Windows.Forms.Timer> ao jogo de correspondência. Um temporizador aguarda um número especificado de milissegundos e, em seguida, dispara um evento, conhecido como um *tique*. Isso é útil para iniciar uma ação, ou repetir uma ação, regularmente. Nesse caso, você usará um temporizador para permitir que os jogadores escolham dois ícones e, se os ícones não corresponderem, ocultar os dois ícones novamente após um curto período.
@@ -30,7 +30,7 @@ Em seguida, adicione um controle <xref:System.Windows.Forms.Timer> ao jogo de co
 1. Na caixa de ferramentas do **Designer de Formulários do Windows**, escolha **Temporizador** (na categoria **Componentes**) e escolha a tecla **Enter** ou clique duas vezes no temporizador para adicionar um controle de temporizador ao formulário. O ícone do temporizador, chamado **Timer1**, deve aparecer em um espaço abaixo do formulário, conforme mostrado na imagem a seguir.
 
      ![Timer](../ide/media/express_timer.png)<br/>
-***Temporizador***
+***Timer***
 
     > [!NOTE]
     > Se a caixa de ferramentas estiver vazia, você deve selecionar o designer de formulário, e não o código por trás do formulário, antes de abrir a caixa de ferramentas.
@@ -39,8 +39,8 @@ Em seguida, adicione um controle <xref:System.Windows.Forms.Timer> ao jogo de co
 
 3. Escolha o ícone do controle de temporizador no **Designer de Formulários do Windows** e escolha a tecla **Enter** ou clique duas vezes no temporizador, para adicionar um manipulador de eventos Tick vazio. Substitua o código pelo código a seguir ou insira-o manualmente no manipulador de eventos.
 
-     [!code-csharp[VbExpressTutorial4Step6#7](../ide/codesnippet/CSharp/step-6-add-a-timer_1.cs)]
-     [!code-vb[VbExpressTutorial4Step6#7](../ide/codesnippet/VisualBasic/step-6-add-a-timer_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step6/cs/form1.cs" id="Snippet7":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step6/vb/form1.vb" id="Snippet7":::
 
       > [!IMPORTANT]
       > Use o controle linguagem de programação no canto superior direito desta página para exibir o trecho de código C# ou o trecho de código de Visual Basic.<br><br>![Controle de linguagem de programação para Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
@@ -52,8 +52,8 @@ Em seguida, adicione um controle <xref:System.Windows.Forms.Timer> ao jogo de co
 
 4. Para ver o novo temporizador em ação, vá para o editor de código e adicione o código a seguir no início e no fim do método do manipulador de eventos `label_Click()`. (Você está adicionando duas `if` instruções à parte superior e três instruções à parte inferior; o restante do método permanece o mesmo.)
 
-     [!code-csharp[VbExpressTutorial4Step6#8](../ide/codesnippet/CSharp/step-6-add-a-timer_2.cs)]
-     [!code-vb[VbExpressTutorial4Step6#8](../ide/codesnippet/VisualBasic/step-6-add-a-timer_2.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step6/cs/form1.cs" id="Snippet8":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step6/vb/form1.vb" id="Snippet8":::
 
      O código no início do método verifica se o temporizador foi iniciado verificando o valor da propriedade **Habilitado**. Dessa forma, se o jogador escolher o primeiro e o segundo controle Label e o temporizador for iniciado, a escolha de um terceiro rótulo não terá efeito. Ele também impede que o Player clique rapidamente em uma terceira vez antes que o jogo esteja pronto para outro primeiro clique. 
 

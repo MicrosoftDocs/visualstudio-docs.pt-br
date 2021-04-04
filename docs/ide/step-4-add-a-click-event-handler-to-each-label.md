@@ -15,12 +15,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f37d0f89ad5124956198df1bde94bdb6cf54f64
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 931bd4191331f229f40a813b605eac7f69a1427a
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950673"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214272"
 ---
 # <a name="step-4-add-a-click-event-handler-to-each-label"></a>Etapa 4: Adicionar um manipulador de eventos de clique a cada rótulo
 
@@ -48,11 +48,11 @@ O jogo da memória funciona desta forma:
 
 5. Preencha o restante do código, como se segue:
 
-     [!code-csharp[VbExpressTutorial4Step2_3_4#4](../ide/codesnippet/CSharp/step-4-add-a-click-event-handler-to-each-label_1.cs)]
-     [!code-vb[VbExpressTutorial4Step2_3_4#4](../ide/codesnippet/VisualBasic/step-4-add-a-click-event-handler-to-each-label_1.vb)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs" id="Snippet4":::
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/vb/form1.vb" id="Snippet4":::
 
-     > [!IMPORTANT]
-     > Use o controle linguagem de programação no canto superior direito desta página para exibir o trecho de código C# ou o trecho de código de Visual Basic.<br><br>![Controle de linguagem de programação para Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
+    > [!IMPORTANT]
+    > Use o controle linguagem de programação no canto superior direito desta página para exibir o trecho de código C# ou o trecho de código de Visual Basic.<br><br>![Controle de linguagem de programação para Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
 
     > [!NOTE]
     > Se você copiar e colar o bloco de código `label_Click()` em vez de inserir o código manualmente, não se esqueça de substituir o código `label_Click()` existente. Caso contrário, você terá um bloco de código duplicado.

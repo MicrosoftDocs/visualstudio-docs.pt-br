@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1b4722f04ae46f85d7cc70dadf6127330e8f6616
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5665fc28bacb76c6887cb7dcb1820ec9dc0d2b3a
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851706"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215312"
 ---
 # <a name="associate-custom-data-with-sharepoint-tools-extensions"></a>Associar dados personalizados a extensões de ferramentas do SharePoint
   Você pode adicionar dados personalizados a determinados objetos em extensões de ferramentas do SharePoint. Isso é útil quando você tem dados em uma parte da extensão que deseja acessar posteriormente de outro código em sua extensão. Em vez de implementar uma maneira personalizada de armazenar e acessar dados, você pode associar os dados a um objeto em sua extensão e, em seguida, recuperar os dados do mesmo objeto mais tarde.
@@ -79,10 +79,10 @@ ms.locfileid: "99851706"
 
   O exemplo de código a seguir determina se um determinado objeto de dados já está associado a um item de projeto. Se o objeto de dados ainda não estiver associado ao item do projeto, o código adicionará o objeto à <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> Propriedade do item do projeto. Para ver esse exemplo no contexto de um exemplo maior, consulte [como adicionar uma propriedade a um tipo de item de projeto personalizado do SharePoint](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md).
 
-  [!code-vb[SPExtensibility.ProjectItemExtension.MenuAndProperty#13](../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemtypeproperty.vb#13)]
-  [!code-csharp[SPExtensibility.ProjectItemExtension.MenuAndProperty#13](../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemtypeproperty.cs#13)]
+  :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemtypeproperty.vb" id="Snippet13":::
+  :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemtypeproperty.cs" id="Snippet13":::
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Conceitos e recursos de programação para extensões de ferramentas do SharePoint](../sharepoint/programming-concepts-and-features-for-sharepoint-tools-extensions.md)
 - [Walkthrough: Criando um item de projeto de ação personalizada com um modelo de item, parte 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)
 - [Walkthrough: estendendo Gerenciador de Servidores para exibir Web Parts](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)

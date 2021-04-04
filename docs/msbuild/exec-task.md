@@ -20,18 +20,18 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 785d1bcfb8fdce5b09e749dcca17ff476a5d3f48
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c3b89e074a4c67e8d16a07eb48431ebe1ade694f
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877155"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106083562"
 ---
 # <a name="exec-task"></a>tarefa Exec
 
 Executa o programa ou comando especificado pelo uso dos argumentos especificados.
 
-## <a name="parameters"></a>parâmetros
+## <a name="parameters"></a>Parâmetros
 
 A tabela a seguir descreve os parâmetros da tarefa `Exec`.
 
@@ -49,6 +49,7 @@ A tabela a seguir descreve os parâmetros da tarefa `Exec`.
 |`Outputs`|Parâmetro de saída <xref:Microsoft.Build.Framework.ITaskItem>`[]` opcional.<br /><br /> Contém os itens de saída da tarefa. A tarefa `Exec` não define esses itens. Em vez disso, você pode fornecê-los como se ela os tivesse definido, para que eles podem ser usados posteriormente no projeto.|
 |`StdErrEncoding`|Parâmetro de saída `String` opcional.<br /><br /> Especifica a codificação do fluxo de erro padrão de tarefa capturada. O padrão é a codificação de saída do console atual.|
 |`StdOutEncoding`|Parâmetro de saída `String` opcional.<br /><br /> Especifica a codificação do fluxo de saída padrão de tarefa capturada. O padrão é a codificação de saída do console atual.|
+|`UseUtf8Encoding`|Parâmetro `String` opcional.<br /><br /> Especifica se a página de código UTF8 deve ser usada ao processar a linha de comando para comandos executados. Os valores válidos são `Always`, `Never` ou `Detect`. O padrão é `Detect` , que significa usar a página de código UTF8 somente quando caracteres não-ANSI estiverem presentes.|
 |`WorkingDirectory`|Parâmetro `String` opcional.<br /><br /> Especifica o diretório no qual o comando será executado.<br /><br />Padrão: o diretório de trabalho atual do projeto.|
 
 [!INCLUDE [ToolTaskExtension arguments](includes/tooltaskextension-base-params.md)]

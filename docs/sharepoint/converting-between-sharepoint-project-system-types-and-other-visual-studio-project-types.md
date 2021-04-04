@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: cc0eca8005c4eee6e1eb89c410b50be5d0228ec6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 973c3d4b3c4fa2dc602e45736dc3a2d2f23c7616
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946326"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215286"
 ---
 # <a name="convert-between-sharepoint-project-system-types-and-other-visual-studio-project-types"></a>Converter entre os tipos do sistema de projeto do SharePoint e outros tipos de projeto do Visual Studio
   Em alguns casos, você pode ter um objeto no sistema de projeto do SharePoint e deseja usar recursos de um objeto correspondente no modelo de objeto de automação ou no modelo de objeto de integração do Visual Studio ou vice-versa. Nesses casos, você pode usar o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A> método do serviço de projeto do SharePoint para converter o objeto em um modelo de objeto diferente.
@@ -40,8 +40,8 @@ ms.locfileid: "99946326"
 ## <a name="example"></a>Exemplo
  O exemplo de código a seguir demonstra como usar o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A> método para converter um <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject> objeto em um <xref:EnvDTE.Project> .
 
- [!code-csharp[SPExtensibility.ProjectService.FromDTE#2](../sharepoint/codesnippet/CSharp/spprojectserviceaddin/connect.cs#2)]
- [!code-vb[SPExtensibility.ProjectService.FromDTE#2](../sharepoint/codesnippet/VisualBasic/spprojectserviceaddin/connect.vb#2)]
+:::code language="csharp" source="../sharepoint/codesnippet/CSharp/spprojectserviceaddin/connect.cs" id="Snippet2":::
+:::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spprojectserviceaddin/connect.vb" id="Snippet2":::
 
  Este exemplo requer:
 

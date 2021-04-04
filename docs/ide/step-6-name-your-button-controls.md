@@ -15,12 +15,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f6612806f8bf1453cf28f9d75c78588c2074bb0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f69a87d923eebaea03c9c8a38496c4c379db8aba
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868875"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214207"
 ---
 # <a name="step-6-name-your-button-controls"></a>Etapa 6: Nomear os controles de botão
 
@@ -43,15 +43,15 @@ Há quatro botões no formulário e o IDE os nomeou **button1**, **button2**, **
 1. Renomeie os outros três botões para **backgroundButton**, **clearButton** e **showButton**.
 Você pode verificar os nomes escolhendo a lista suspensa seletora de controle na janela **Propriedades**. Os nomes dos novos botões aparecem.
 
-1. Clique duas vezes no botão **Mostrar uma imagem** no formulário. Como alternativa, escolha o botão **mostrar uma imagem** no formulário e pressione a tecla **Enter** . Quando você fizer isso, o IDE abrirá uma guia adicional na janela principal chamada **Form1.cs**. (Se você estiver usando Visual Basic, a guia será nomeada **Form1. vb**).
+1. Clique duas vezes no botão **Mostrar uma imagem** no formulário. Como alternativa, escolha o botão **mostrar uma imagem** no formulário e pressione a tecla **Enter** . Quando você fizer isso, o IDE abrirá uma guia adicional na janela principal chamada **Form1. cs**. (Se você estiver usando Visual Basic, a guia será nomeada **Form1. vb**).
 
    Essa guia exibe o arquivo de código por trás do formulário, conforme mostrado na captura de tela a seguir.
 
     ![Guia Form1.cs com código do Visual C&#35;](../ide/media/express_showbuttoncode.png)<br>
-***Form1.cs** _ _tab com código C# *
+***Form1. cs** _ _tab com código C# *
 
     > [!NOTE]
-    > A guia Form1.cs ou Form1. vb pode exibir o **botão** de **exibição como em** vez disso.
+    > A guia Form1. cs ou Form1. vb pode exibir o **botão** de **exibição** como em vez disso.
 
 1. Foco nesta parte do código.
 
@@ -71,18 +71,18 @@ Você pode verificar os nomes escolhendo a lista suspensa seletora de controle n
 
    Você está olhando para o código chamado `showButton_Click()` (Alternativamente `ShowButton_Click()` ). O IDE adicionou isto ao código do formulário quando você abriu o arquivo de código para o botão **showButton**. No tempo de design, quando você abre o arquivo de código para um controle em um formulário, o código é gerado para o controle se ainda não existir. Esse código, conhecido como *método*, é executado quando você executa o aplicativo e escolhe o controle, nesse caso, o botão **mostrar uma imagem** .
 
-1. Escolha a guia **Designer de formulários do Windows** novamente (**Form1.cs [Design]**) e, em seguida, abra o arquivo de código para o botão **limpar imagem** para criar um método para ele no código do formulário. Repita isso para os dois botões restantes. A cada vez, o IDE adiciona um novo método ao arquivo de código do formulário.
+1. Escolha a guia **Designer de formulários do Windows** novamente (**Form1. cs [Design]**) e, em seguida, abra o arquivo de código para o botão **limpar imagem** para criar um método para ele no código do formulário. Repita isso para os dois botões restantes. A cada vez, o IDE adiciona um novo método ao arquivo de código do formulário.
 
 1. Para adicionar mais um método, abra o arquivo de código do controle de **caixa de seleção** em **Designer de formulários do Windows** para fazer com que o IDE adicione um `checkBox1_CheckedChanged()` método. Esse método é chamado sempre que o usuário seleciona ou desmarca a caixa de seleção.
 
    > [!TIP]
-   > Ao trabalhar em um aplicativo, você geralmente se move entre o editor de código e **Designer de formulários do Windows**. O IDE torna fácil a navegação no projeto. Use **Gerenciador de soluções** para abrir **Designer de formulários do Windows** clicando duas vezes em *Form1.cs* em C# ou *Form1. vb* no Visual Basic, ou na barra de menus, escolha **Exibir**  >  **Designer**.
+   > Ao trabalhar em um aplicativo, você geralmente se move entre o editor de código e **Designer de formulários do Windows**. O IDE torna fácil a navegação no projeto. Use **Gerenciador de soluções** para abrir **Designer de formulários do Windows** clicando duas vezes em *Form1. cs* em C# ou *Form1. vb* no Visual Basic, ou na barra de menus, escolha **View**  >  **Designer**.
 
     A seguir temos o novo código que você vê no editor de códigos.
 
-    [!code-csharp[VbExpressTutorial1Step6_#2](../ide/codesnippet/CSharp/step-6-name-your-button-controls_2.cs)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial1step6/cs/form1.cs" id="Snippet2":::
 
-    [!code-vb[VbExpressTutorial1Step6_#2](../ide/codesnippet/VisualBasic/step-6-name-your-button-controls_2.vb)]
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial1step6/vb/form1.vb" id="Snippet2":::
 
     > [!NOTE]
     > Seu código pode não exibir manipuladores de eventos em letras "camelCase".

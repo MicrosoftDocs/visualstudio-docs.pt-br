@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9f3c4cc273d89b5d1fc74596f1f5565177319da7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ae6a2fd6eac9f59a7836dae23d442962e1b2b27e
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867354"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215546"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>Associar controles do WPF a um WCF Data Service
 
@@ -110,8 +110,8 @@ Você deve configurar o serviço para operar no Modelo de Dados de Entidade que 
 
 1. No `AdventureWorks.svc` arquivo de código, substitua a declaração da classe **AdventureWorksService** pelo código a seguir.
 
-     [!code-csharp[Data_WPFWCF#1](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_1.cs)]
-     [!code-vb[Data_WPFWCF#1](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_ProTools/data_wpfwcf/cs/adventureworksservice.svc.cs" id="Snippet1":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_ProTools/data_wpfwcf/vb/adventureworksservice.svc.vb" id="Snippet1":::
 
      Esse código atualiza a classe **AdventureWorksService** , de forma que ela deriva de um <xref:System.Data.Services.DataService%601> que opera na `AdventureWorksLTEntities` classe de contexto de objeto em seu modelo de dados de entidade. Ele também atualiza o método `InitializeService` para permitir aos clientes do serviço acesso completo de leitura/gravação à entidade `SalesOrderHeader`.
 
@@ -223,8 +223,8 @@ Use o objeto proxy de serviço para carregar dados de vendas do serviço. Em seg
 
 2. Substitua o manipulador de eventos pelo código a seguir. Substitua o endereço *localhost* neste código pelo endereço de host local no computador de desenvolvimento.
 
-     [!code-csharp[Data_WPFWCF#2](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_2.cs)]
-     [!code-vb[Data_WPFWCF#2](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_2.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_ProTools/data_wpfwcf/cs/adventureworkssaleseditor/mainwindow.xaml.cs" id="Snippet2":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_ProTools/data_wpfwcf/vb/adventureworkssaleseditor/mainwindow.xaml.vb" id="Snippet2":::
 
 ## <a name="navigate-sales-records"></a>Navegar pelos registros de vendas
 
@@ -236,8 +236,8 @@ Adicione o código que permite que os usuários percorram os registros de vendas
 
 2. Adicione o seguinte código ao manipulador de eventos `backButton_Click` gerado:
 
-     [!code-csharp[Data_WPFWCF#3](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_3.cs)]
-     [!code-vb[Data_WPFWCF#3](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_3.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_ProTools/data_wpfwcf/cs/adventureworkssaleseditor/mainwindow.xaml.cs" id="Snippet3":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_ProTools/data_wpfwcf/vb/adventureworkssaleseditor/mainwindow.xaml.vb" id="Snippet3":::
 
 3. Retorne ao designer e clique duas vezes no **>** botão.
 
@@ -245,8 +245,8 @@ Adicione o código que permite que os usuários percorram os registros de vendas
 
 4. Adicione o seguinte código ao manipulador de eventos `nextButton_Click` gerado:
 
-     [!code-csharp[Data_WPFWCF#4](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_4.cs)]
-     [!code-vb[Data_WPFWCF#4](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_4.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_ProTools/data_wpfwcf/cs/adventureworkssaleseditor/mainwindow.xaml.cs" id="Snippet4":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_ProTools/data_wpfwcf/vb/adventureworkssaleseditor/mainwindow.xaml.vb" id="Snippet4":::
 
 ## <a name="save-changes-to-sales-records"></a>Salvar alterações em registros de vendas
 
@@ -258,8 +258,8 @@ Adicione o código que permite aos usuários exibir e salvar as alterações em 
 
 2. Adicione o seguinte código ao manipulador de eventos do `saveButton_Click`.
 
-     [!code-csharp[Data_WPFWCF#5](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_5.cs)]
-     [!code-vb[Data_WPFWCF#5](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_5.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_ProTools/data_wpfwcf/cs/adventureworkssaleseditor/mainwindow.xaml.cs" id="Snippet5":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_ProTools/data_wpfwcf/vb/adventureworkssaleseditor/mainwindow.xaml.vb" id="Snippet5":::
 
 ## <a name="test-the-application"></a>Testar o aplicativo
 

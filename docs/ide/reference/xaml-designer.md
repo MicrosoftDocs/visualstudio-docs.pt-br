@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 15bfae190ba2960c291dca635bfff1188ac64ab5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b0418c8f3928ae2004055db7dfa70be123719377
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836183"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106082520"
 ---
 # <a name="xaml-designer-options-page"></a>Página de opções do Designer XAML
 
@@ -50,7 +50,7 @@ Use essa configuração para controlar quando e como o XAML Designer aparece ao 
 |-|-|
 |**Vertical**|A fonte de XAML aparece no lado esquerdo do modo de exibição XAML e o XAML Designer aparece no outro lado.|
 |**Horizontal**|O XAML Designer aparece na parte superior do modo de exibição XAML e a fonte de XAML aparece abaixo dele.|
-|**Default**|O documento XAML usa a orientação de divisão recomendada para a plataforma de destino do projeto do documento. Para a maioria das plataformas, isso é equivalente a **Horizontal**.|
+|**Padrão**|O documento XAML usa a orientação de divisão recomendada para a plataforma de destino do projeto do documento. Para a maioria das plataformas, isso é equivalente a **Horizontal**.|
 
 ## <a name="zoom-by-using"></a>Aplicar zoom usando
 
@@ -63,6 +63,17 @@ Use essa configuração para determinar o funcionamento de aplicar zoom ao edita
 |**Alt + botão de rolagem do mouse**|Aplique zoom na Designer XAML pressionando a tecla **ALT** ao rolar a roda do mouse.|
 
 Essas configurações determinam o comportamento do Designer ao editar um documento XAML.
+
+## <a name="default-zoom-setting"></a>Configuração de zoom padrão
+
+Use essa configuração para determinar o valor de zoom padrão para exibir o documento XAML.
+
+|Nome|Descrição|
+|-|-|
+|**Última utilização**|Use o último valor de zoom usado para todos os documentos XAML por padrão. Quando um documento XAML é aberto pela primeira vez, ele usará a configuração "ajustar tudo" pela primeira vez.|
+|**Ajustar tudo**|Use esta opção para definir o valor de zoom como "ajustar tudo" para o designer XAML. Quando um documento XAML é fechado e reaberto, o último valor de conjunto persistirá para essa sessão, mas para diferentes sessões, "ajustar tudo" será usado por padrão.|
+
+Essas configurações determinam o comportamento do designer quando você edita um documento XAML.
 
 |Nome|Descrição|
 |-|-|

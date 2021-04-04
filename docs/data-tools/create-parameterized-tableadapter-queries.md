@@ -20,12 +20,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 373e062ad7f2d8600fd28f098cbc0cae1c8d5a65
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d747459abc62462864e94ed9b8af9b11c6b9eabe
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859002"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215924"
 ---
 # <a name="create-parameterized-tableadapter-queries"></a>Criar consultas TableAdapter parametrizadas
 
@@ -42,7 +42,7 @@ Você cria consultas de TableAdapter com parâmetros no **Designer de conjunto d
 
 - Crie um novo TableAdapter, adicionando uma cláusula WHERE com os parâmetros desejados à instrução SQL. Para obter mais informações, consulte [criar e configurar TableAdapters](../data-tools/create-and-configure-tableadapters.md).
 
-     -ou-
+     – ou –
 
 - Acrescente uma consulta a um TableAdapter existente, adicionando uma cláusula WHERE com os parâmetros desejados à instrução SQL.
 
@@ -67,7 +67,7 @@ Você cria consultas de TableAdapter com parâmetros no **Designer de conjunto d
 
 4. Digite um nome na caixa **Nome da nova consulta** ao criar uma nova consulta.
 
-     -ou-
+     – ou –
 
      Selecione uma consulta na caixa **Nome da consulta existente**.
 
@@ -89,8 +89,8 @@ WHERE (ShippedDate = @ShippedDate) OR (ShippedDate IS NULL)
 
 Se essa fosse uma consulta em um TableAdapter, você poderia consultar todos os pedidos que não foram enviados com o seguinte código:
 
-[!code-csharp[VbRaddataTableAdapters#8](../data-tools/codesnippet/CSharp/create-parameterized-tableadapter-queries_1.cs)]
-[!code-vb[VbRaddataTableAdapters#8](../data-tools/codesnippet/VisualBasic/create-parameterized-tableadapter-queries_1.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataTableAdapters/CS/Form2.cs" id="Snippet8":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataTableAdapters/VB/Form2.vb" id="Snippet8":::
 
 Para habilitar uma consulta para aceitar valores nulos:
 

@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 54699947588e29da7312c0574833a13bbc3c8cfd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f519d8e3bfe01fc3e4a1e4cfe82f4f8502c84821
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858183"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215689"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>Passo a passo: criando um Serviço de Dados WCF com WPF e Entity Framework
 Este passo a passo demonstra como criar um [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] simples que é hospedado em um aplicativo Web do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] e como acessá-lo de um aplicativo do Windows Forms.
@@ -94,7 +94,7 @@ Na próxima etapa, você cria um [!INCLUDE[adonet_edm](../data-tools/includes/ad
 
     - Se uma conexão de dados com o banco de dados de exemplo Northwind estiver disponível na lista suspensa, selecione-a.
 
-         -ou-
+         – ou –
 
     - Escolha o botão **Nova Conexão** para configurar uma nova conexão de dados. Para obter mais informações, consulte [adicionar novas conexões](../data-tools/add-new-connections.md).
 
@@ -126,13 +126,14 @@ Na próxima etapa, você criará e testará o serviço de dados.
 
 4. No **Editor de Códigos**, localize o primeiro comentário `TODO:` e substitua o código pelo seguinte:
 
-     [!code-vb[WCFDataServiceWalkthrough#1](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_1.vb)]
-     [!code-csharp[WCFDataServiceWalkthrough#1](../data-tools/codesnippet/CSharp/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_1.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/vb/northwindcustomers.svc.vb" id="Snippet1":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/cs/northwindcustomers.svc.cs" id="Snippet1":::
 
 5. Substitua os comentários no manipulador de eventos `InitializeService` pelo seguinte código:
 
-     [!code-vb[WCFDataServiceWalkthrough#2](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_2.vb)]
-     [!code-csharp[WCFDataServiceWalkthrough#2](../data-tools/codesnippet/CSharp/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_2.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/vb/northwindcustomers.svc.vb" id="Snippet2":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/cs/northwindcustomers.svc.cs" id="Snippet2":::
+
 
 6. Na barra de menus, escolha **depurar**  >  **Iniciar sem depuração** para executar o serviço. Uma janela do navegador é aberta e o esquema XML para o serviço é exibido.
 

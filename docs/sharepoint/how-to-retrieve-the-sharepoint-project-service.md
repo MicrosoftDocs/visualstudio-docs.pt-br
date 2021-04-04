@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 6ae4000bb0ef147a8f601ce80483b9f2ecbe2de8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ef53a0328fe8427b356132fe878b52a3e504ea9a
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99955223"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214454"
 ---
 # <a name="how-to-retrieve-the-sharepoint-project-service"></a>Como recuperar o serviço de projeto do SharePoint
   Você pode acessar o serviço de projeto do SharePoint nos seguintes tipos de soluções:
@@ -43,8 +43,8 @@ ms.locfileid: "99955223"
 
      O exemplo de código a seguir demonstra como usar o serviço de projeto para gravar uma mensagem na janela de **saída** e **lista de erros** janela em uma extensão de projeto simples.
 
-     [!code-vb[SPExtensibility.ProjectService.FromProjectSystemExtensions#1](../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.vb#1)]
-     [!code-csharp[SPExtensibility.ProjectService.FromProjectSystemExtensions#1](../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.cs#1)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.vb" id="Snippet1":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.cs" id="Snippet1":::
 
      Para obter mais informações sobre como criar extensões de projeto, consulte [como: criar uma extensão de projeto do SharePoint](../sharepoint/how-to-create-a-sharepoint-project-extension.md).
 
@@ -56,8 +56,8 @@ ms.locfileid: "99955223"
 
      O exemplo de código a seguir demonstra como usar o serviço de projeto para gravar uma mensagem na janela de **saída** e **lista de erros** janela em uma extensão simples do item de projeto de **definição de lista** .
 
-     [!code-vb[SPExtensibility.ProjectService.FromProjectSystemExtensions#2](../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.vb#2)]
-     [!code-csharp[SPExtensibility.ProjectService.FromProjectSystemExtensions#2](../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.cs#2)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.vb" id="Snippet2":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.cs" id="Snippet2":::
 
      Para obter mais informações sobre como criar extensões de item de projeto, consulte [como: criar uma extensão de item de projeto do SharePoint](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md).
 
@@ -69,8 +69,8 @@ ms.locfileid: "99955223"
 
      O exemplo de código a seguir demonstra como usar o serviço de projeto para gravar uma mensagem na janela de **saída** e **lista de erros** janela em uma definição de tipo de item de projeto simples.
 
-     [!code-vb[SPExtensibility.ProjectService.FromProjectSystemExtensions#3](../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.vb#3)]
-     [!code-csharp[SPExtensibility.ProjectService.FromProjectSystemExtensions#3](../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.cs#3)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.vb" id="Snippet3":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.cs" id="Snippet3":::
 
      Para obter mais informações sobre como definir tipos de item de projeto, consulte [como definir um tipo de item de projeto do SharePoint](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).
 
@@ -85,8 +85,8 @@ ms.locfileid: "99955223"
 
      O exemplo de código a seguir demonstra como usar o serviço de projeto para gravar uma mensagem na janela de **saída** e **lista de erros** janela de um menu de atalho que a extensão adiciona aos nós da lista em **Gerenciador de servidores**.
 
-     [!code-vb[SPExtensibility.ProjectService.FromSPExplorerExtensions#1](../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromspexplorerextensions.getprojectservice/extension/extension.vb#1)]
-     [!code-csharp[SPExtensibility.ProjectService.FromSPExplorerExtensions#1](../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromspexplorerextensions.getprojectservice/extension/extension.cs#1)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromspexplorerextensions.getprojectservice/extension/extension.vb" id="Snippet1":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromspexplorerextensions.getprojectservice/extension/extension.cs" id="Snippet1":::
 
      Para obter mais informações sobre como estender o nó **conexões do SharePoint** no **Gerenciador de servidores**, consulte [como: estender um nó do SharePoint no Gerenciador de servidores](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).
 
@@ -101,7 +101,7 @@ ms.locfileid: "99955223"
 
   Em uma extensão do Visual Studio que tem acesso a um <xref:EnvDTE80.DTE2> objeto, você pode solicitar um <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> objeto usando o <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> método de um <xref:Microsoft.VisualStudio.Shell.ServiceProvider> objeto. Para obter mais informações, consulte [obtendo um serviço do objeto DTE](../extensibility/how-to-get-a-service.md#getting-a-service-from-the-dte-object).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Usar o serviço de projeto do SharePoint](../sharepoint/using-the-sharepoint-project-service.md)
 - [Como: obter um serviço](../extensibility/how-to-get-a-service.md)
 - [Como: usar assistentes com modelos de projeto](../extensibility/how-to-use-wizards-with-project-templates.md)

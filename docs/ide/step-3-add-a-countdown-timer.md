@@ -15,12 +15,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 238f6a2b6492fdd4ac04e0b596bbfbc304529786
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f64189cbde62ea70ae51fcdcbb8869377dd865f1
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950829"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214298"
 ---
 # <a name="step-3-add-a-countdown-timer"></a>Etapa 3: Adicionar um temporizador de contagem regressiva
 
@@ -33,8 +33,8 @@ Na terceira parte deste tutorial, você adicionará um timer de contagem regress
 
 1. Adicione uma variável de inteiro chamada **timeLeft**, exatamente como você fez no procedimento anterior. Seu código deve se parecer com o seguinte.
 
-     [!code-vb[VbExpressTutorial3Step3#5](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_1.vb)]
-     [!code-csharp[VbExpressTutorial3Step3#5](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_1.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step3/vb/form1.vb" id="Snippet5":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step3/cs/form1.cs" id="Snippet5":::
 
      [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
@@ -54,8 +54,8 @@ Na terceira parte deste tutorial, você adicionará um timer de contagem regress
 
 5. Adicione as seguintes instruções ao novo método do manipulador de eventos.
 
-     [!code-vb[VbExpressTutorial3Step3#6](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_2.vb)]
-     [!code-csharp[VbExpressTutorial3Step3#6](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_2.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step3/vb/form1.vb" id="Snippet6":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step3/cs/form1.cs" id="Snippet6":::
 
      Com base no que você adicionou, o temporizador verificará a cada segundo se o tempo limite foi ou não atingido determinando se a variável de inteiro **timeLeft** é ou não maior que 0. Se for, o tempo ainda permanece. Primeiro o temporizador subtrai 1 do timeLeft e atualiza a propriedade **Text** do controle **timeLabel** para exibir o comprador de teste quantos segundos restam.
 
@@ -91,8 +91,8 @@ Na terceira parte deste tutorial, você adicionará um timer de contagem regress
 
      Examine atenciosamente a instrução que você adicionou no bloco de `else` para mostrar a resposta ao problema de adição.
 
-     [!code-vb[VbExpressTutorial3Step3#24](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_3.vb)]
-     [!code-csharp[VbExpressTutorial3Step3#24](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_3.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step3/vb/form1.vb" id="Snippet24":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step3/cs/form1.cs" id="Snippet24":::
 
      A instrução `addend1 + addend2` adiciona os valores em duas variáveis juntas. A primeira parte (`sum.Value`) usa a propriedade **Valor** do controle da soma NumericUpDown para exibir a resposta correta. Você usa a mesma propriedade posteriormente para verificar as respostas para o teste.
 
@@ -100,8 +100,8 @@ Na terceira parte deste tutorial, você adicionará um timer de contagem regress
 
 6. Adicione três linhas ao final do método de `StartTheQuiz()`, para que o código se pareça com o seguinte.
 
-     [!code-vb[VbExpressTutorial3Step3#7](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_4.vb)]
-     [!code-csharp[VbExpressTutorial3Step3#7](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_4.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step3/vb/form1.vb" id="Snippet7":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step3/cs/form1.cs" id="Snippet7":::
 
      Agora, quando seu teste for iniciado, a variável de **timeLeft** será definida para 30 e a propriedade **Text** do controle de **timeLabel** será definida para 30 segundos. O método <xref:System.Windows.Forms.Timer.Start> de controle do Temporizador inicia a contagem regressiva. (O teste não verifica a resposta ainda, isso acontece em seguida.)
 

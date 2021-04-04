@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: cde9235ffb7c692240c8f16ea0e93f49c79f002e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7be241dd4a043b8104c628e73f98e8881dc8b88b
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934865"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215416"
 ---
 # <a name="how-to-add-a-property-to-sharepoint-projects"></a>Como: adicionar uma propriedade a projetos do SharePoint
   Você pode usar uma extensão de projeto para adicionar uma propriedade a qualquer projeto do SharePoint. A propriedade aparece na janela **Propriedades** quando o projeto é selecionado em **Gerenciador de soluções**.
@@ -39,8 +39,8 @@ ms.locfileid: "99934865"
 ## <a name="example"></a>Exemplo
  O exemplo de código a seguir demonstra como adicionar duas propriedades a projetos do SharePoint. Uma propriedade persiste seus dados no arquivo de opção de usuário do projeto (o arquivo *. csproj. User* ou *. vbproj. User* ). A outra propriedade persiste seus dados no arquivo de projeto (arquivo *. csproj* ou arquivo *. vbproj* ).
 
- [!code-vb[SpExt_SPCustomPrjProperty#1](../sharepoint/codesnippet/VisualBasic/customspproperty/customproperty.vb#1)]
- [!code-csharp[SpExt_SPCustomPrjProperty#1](../sharepoint/codesnippet/CSharp/customspproperty/customproperty.cs#1)]
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/customspproperty/customproperty.vb" id="Snippet1":::
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/customspproperty/customproperty.cs" id="Snippet1":::
 
 ### <a name="understand-the-code"></a>Compreender o código
  Para garantir que a mesma instância da `CustomProjectProperties` classe seja usada cada vez que o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertiesRequested> evento ocorrer, o exemplo de código adiciona o objeto de propriedades à <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> Propriedade do projeto na primeira vez em que esse evento ocorrer. O código recupera esse objeto sempre que esse evento ocorrer novamente. Para obter mais informações sobre como usar a <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> propriedade para associar dados a projetos, consulte [associar dados personalizados a extensões de ferramentas do SharePoint](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md).

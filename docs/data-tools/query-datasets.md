@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4342af681f8e2cc38855bec6041e8b4cd83dcf5d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c5f085cae185a48f3d41c6fa4bca5cad7afb46b3
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866613"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215793"
 ---
 # <a name="query-datasets"></a>Consultar conjuntos de dados
 Para pesquisar registros específicos em um conjunto de informações, use o `FindBy` método na DataTable, escreva sua própria instrução foreach para executar um loop sobre a coleção de linhas da tabela ou use [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset).
@@ -39,8 +39,8 @@ No entanto, a diferenciação de maiúsculas e minúsculas pode ser um fator em 
 
      No exemplo a seguir, a `CustomerID` coluna é a chave primária da `Customers` tabela. Isso significa que o `FindBy` método gerado é `FindByCustomerID` . O exemplo mostra como atribuir um específico <xref:System.Data.DataRow> a uma variável usando o `FindBy` método gerado.
 
-     [!code-csharp[VbRaddataEditing#18](../data-tools/codesnippet/CSharp/query-datasets_1.cs)]
-     [!code-vb[VbRaddataEditing#18](../data-tools/codesnippet/VisualBasic/query-datasets_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataEditing/CS/Form1.cs" id="Snippet18":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb" id="Snippet18":::
 
 #### <a name="to-find-a-row-in-an-untyped-dataset-with-a-primary-key-value"></a>Para localizar uma linha em um conjunto de um DataSet não tipado com um valor de chave primária
 
@@ -48,8 +48,8 @@ No entanto, a diferenciação de maiúsculas e minúsculas pode ser um fator em 
 
      O exemplo a seguir mostra como declarar uma nova linha chamada `foundRow` e atribuí-la ao valor de retorno do <xref:System.Data.DataRowCollection.Find%2A> método. Se a chave primária for encontrada, o conteúdo do índice de coluna 1 será exibido em uma caixa de mensagem.
 
-     [!code-csharp[VbRaddataEditing#19](../data-tools/codesnippet/CSharp/query-datasets_2.cs)]
-     [!code-vb[VbRaddataEditing#19](../data-tools/codesnippet/VisualBasic/query-datasets_2.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataEditing/CS/Form1.cs" id="Snippet19":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb" id="Snippet19":::
 
 ## <a name="find-rows-by-column-values"></a>Localizar linhas por valores de coluna
 
@@ -59,8 +59,8 @@ No entanto, a diferenciação de maiúsculas e minúsculas pode ser um fator em 
 
      O exemplo a seguir mostra como usar o <xref:System.Data.DataTable.Select%2A> método do <xref:System.Data.DataTable> para localizar linhas específicas.
 
-     [!code-csharp[VbRaddataEditing#20](../data-tools/codesnippet/CSharp/query-datasets_3.cs)]
-     [!code-vb[VbRaddataEditing#20](../data-tools/codesnippet/VisualBasic/query-datasets_3.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataEditing/CS/Form1.cs" id="Snippet20":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb" id="Snippet20":::
 
 ## <a name="access-related-records"></a>Acessar registros relacionados
 Quando as tabelas em um conjunto de registros estão relacionadas, um <xref:System.Data.DataRelation> objeto pode tornar os registros relacionados disponíveis em outra tabela. Por exemplo, um conjunto de um DataSet que contém `Customers` `Orders` tabelas e pode ser disponibilizado.
@@ -86,15 +86,15 @@ Além disso, ambas as tabelas precisam ser preenchidas com dados para que todos 
 
 - Chame o <xref:System.Data.DataRow.GetChildRows%2A> método de uma `Customers` linha de dados específica e retorne uma matriz de linhas da `Orders` tabela:
 
-     [!code-csharp[VbRaddataDatasets#6](../data-tools/codesnippet/CSharp/query-datasets_4.cs)]
-     [!code-vb[VbRaddataDatasets#6](../data-tools/codesnippet/VisualBasic/query-datasets_4.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDatasets/CS/Form1.cs" id="Snippet6":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDatasets/VB/Form1.vb" id="Snippet6":::
 
 #### <a name="to-return-the-parent-record-of-a-selected-child-record"></a>Para retornar o registro pai de um registro filho selecionado
 
 - Chame o <xref:System.Data.DataRow.GetParentRow%2A> método de uma `Orders` linha de dados específica e retorne uma única linha da `Customers` tabela:
 
-     [!code-csharp[VbRaddataDatasets#7](../data-tools/codesnippet/CSharp/query-datasets_5.cs)]
-     [!code-vb[VbRaddataDatasets#7](../data-tools/codesnippet/VisualBasic/query-datasets_5.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDatasets/CS/Form1.cs" id="Snippet7":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDatasets/VB/Form1.vb" id="Snippet7":::
 
 ## <a name="see-also"></a>Confira também
 
