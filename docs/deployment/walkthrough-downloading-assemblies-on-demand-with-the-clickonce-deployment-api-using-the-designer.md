@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c2ced89c73d39fecb6b6cee80a8fddb0a8c2391
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7bb30b26e859708d295a31bd45b310897e4bcaac
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917332"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216989"
 ---
 # <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>Walkthrough: baixar assemblies sob demanda com a API de implantação do ClickOnce usando o designer
 Por padrão, todos os assemblies incluídos em um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo são baixados quando o aplicativo é executado pela primeira vez. No entanto, pode haver partes do seu aplicativo que são usadas por um pequeno conjunto de usuários. Nesse caso, você deseja baixar um assembly somente quando você cria um de seus tipos. A instrução a seguir demonstra como marcar determinados assemblies em seu aplicativo como "opcional" e como baixá-los usando classes no <xref:System.Deployment.Application> namespace quando o Common Language Runtime os exige.
@@ -46,8 +46,8 @@ Por padrão, todos os assemblies incluídos em um [!INCLUDE[ndptecclick](../depl
 
 2. Defina uma classe chamada `DynamicClass` com uma única propriedade chamada `Message` .
 
-    [!code-vb[ClickOnceLibrary#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_1.vb)]
-    [!code-csharp[ClickOnceLibrary#1](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_1.cs)]
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceLibrary/VB/Class1.vb" id="Snippet1":::
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceLibrary/CS/Class1.cs" id="Snippet1":::
 
 3. Selecione o projeto Windows Forms no **Gerenciador de soluções**. Adicione uma referência ao <xref:System.Deployment.Application> assembly e uma referência de projeto ao `ClickOnceLibrary` projeto.
 
@@ -56,18 +56,18 @@ Por padrão, todos os assemblies incluídos em um [!INCLUDE[ndptecclick](../depl
 
 4. Clique com o botão direito do mouse no formulário, clique em **Exibir código** no menu e adicione as referências a seguir ao formulário.
 
-    [!code-csharp[ClickOnceOnDemand#1](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_2.cs)]
-    [!code-vb[ClickOnceOnDemand#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_2.vb)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceOnDemand/CS/Form1.cs" id="Snippet1":::
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceOnDemand/VB/Form1.vb" id="Snippet1":::
 
 5. Adicione o código a seguir para baixar esse assembly sob demanda. Este código mostra como mapear um conjunto de assemblies para um nome de grupo usando uma <xref:System.Collections.DictionaryBase.Dictionary%2A> classe genérica. Como estamos baixando apenas um único assembly neste passo a passos, há apenas um assembly em nosso grupo. Em um aplicativo real, você provavelmente desejaria baixar todos os assemblies relacionados a um único recurso em seu aplicativo ao mesmo tempo. A tabela de mapeamento permite que você faça isso facilmente associando todas as DLLs que pertencem a um recurso com um nome de grupo de download.
 
-    [!code-csharp[ClickOnceOnDemand#2](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_3.cs)]
-    [!code-vb[ClickOnceOnDemand#2](../deployment/codesnippet/VisualBasic/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_3.vb)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceOnDemand/CS/Form1.cs" id="Snippet2":::
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceOnDemand/VB/Form1.vb" id="Snippet2":::
 
 6. No menu **Exibir** , clique em **Caixa de Ferramentas**. Arraste um <xref:System.Windows.Forms.Button> da **caixa de ferramentas** para o formulário. Clique duas vezes no botão e adicione o código a seguir ao <xref:System.Windows.Forms.Control.Click> manipulador de eventos.
 
-    [!code-csharp[ClickOnceOnDemand#3](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_4.cs)]
-    [!code-vb[ClickOnceOnDemand#3](../deployment/codesnippet/VisualBasic/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_4.vb)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceOnDemand/CS/Form1.cs" id="Snippet3":::
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceOnDemand/VB/Form1.vb" id="Snippet3":::
 
 ## <a name="mark-assemblies-as-optional"></a>Marcar assemblies como opcionais
 

@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e7513617ab4ee4a051dd48cd110ecb2c5e22495
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f7b1b8b92f978739bfa4e540013347e216781cd4
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056825"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217236"
 ---
 # <a name="create-options-pages"></a>Criar páginas de opções
 Na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] estrutura de pacote gerenciado, as classes derivadas de <xref:Microsoft.VisualStudio.Shell.DialogPage> estender o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE adicionando as páginas de **Opções** no menu **ferramentas** .
@@ -65,15 +65,15 @@ Na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] estrutura de pac
  A classe a seguir define uma página de opções mínima "Olá, mundo". Quando aberto, o usuário pode definir a `HelloWorld` propriedade pública em uma grade de propriedades.
 
 ### <a name="code"></a>Código
- [!code-csharp[UI_UserSettings_ToolsOptionPages#11](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_1.cs)]
- [!code-vb[UI_UserSettings_ToolsOptionPages#11](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_1.vb)]
+:::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/ui_usersettings_toolsoptionpages/cs/class1.cs" id="Snippet11":::
+:::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/ui_usersettings_toolsoptionpages/vb/class1.vb" id="Snippet11":::
 
 ### <a name="description"></a>Descrição
  Aplicar o atributo a seguir à classe de pacote disponibiliza a página opções quando o pacote é carregado. Os números são IDs de recursos arbitrários para a categoria e a página, e o valor booliano no final especifica se a página oferece suporte à automação.
 
 ### <a name="code"></a>Código
- [!code-csharp[UI_UserSettings_ToolsOptionPages#07](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_2.cs)]
- [!code-vb[UI_UserSettings_ToolsOptionPages#07](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_2.vb)]
+:::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/ui_usersettings_toolsoptionpages/cs/uiusersettingstoolsoptionspagespackage.cs" id="Snippet07":::
+:::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/ui_usersettings_toolsoptionpages/vb/uiusersettingstoolsoptionspagespackage.vb" id="Snippet07":::
 
 ### <a name="description"></a>Descrição
  O manipulador de eventos a seguir exibe um resultado, dependendo do valor do conjunto de propriedades na página opções. Ele usa o <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> método com o resultado convertido explicitamente no tipo de página de opção personalizada para acessar as propriedades expostas pela página.
@@ -81,8 +81,8 @@ Na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] estrutura de pac
  No caso de um projeto gerado pelo modelo de pacote, chame essa função da `MenuItemCallback` função para anexá-la ao comando padrão adicionado ao menu **ferramentas** .
 
 ### <a name="code"></a>Código
- [!code-csharp[UI_UserSettings_ToolsOptionPages#08](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_3.cs)]
- [!code-vb[UI_UserSettings_ToolsOptionPages#08](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_3.vb)]
+:::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/ui_usersettings_toolsoptionpages/cs/uiusersettingstoolsoptionspagespackage.cs" id="Snippet08":::
+:::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/ui_usersettings_toolsoptionpages/vb/uiusersettingstoolsoptionspagespackage.vb" id="Snippet08":::
 
 ## <a name="see-also"></a>Confira também
 - [Estender as configurações e opções de usuário](../../extensibility/extending-user-settings-and-options.md)

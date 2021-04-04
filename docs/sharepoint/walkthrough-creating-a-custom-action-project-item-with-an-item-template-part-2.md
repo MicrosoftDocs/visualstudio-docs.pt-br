@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: bc1474d1c7aeabb9b3e9ecbbe6b42931d44c59c7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4b6fad27342c086e551320977cdf712f816b383c
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839078"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217938"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-2"></a>Walkthrough: criar um item de projeto de ação personalizada com um modelo de item, parte 2
   Depois de definir um tipo personalizado de item de projeto do SharePoint e associá-lo a um modelo de item no Visual Studio, talvez você também queira fornecer um assistente para o modelo. Você pode usar o assistente para coletar informações de usuários quando eles usam seu modelo para adicionar uma nova instância do item de projeto a um projeto. As informações coletadas podem ser usadas para inicializar o item do projeto.
@@ -115,8 +115,8 @@ ms.locfileid: "99839078"
 
 2. No projeto **ItemTemplateWizard** , substitua o código no arquivo de código de cadeia de caracteres pelo código a seguir.
 
-     [!code-csharp[SPExtensibility.ProjectItem.CustomAction#6](../sharepoint/codesnippet/CSharp/customactionprojectitem/itemtemplatewizard/strings.cs#6)]
-     [!code-vb[SPExtensibility.ProjectItem.CustomAction#6](../sharepoint/codesnippet/VisualBasic/customactionprojectitem/itemtemplatewizard/strings.vb#6)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/customactionprojectitem/itemtemplatewizard/strings.cs" id="Snippet6":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/customactionprojectitem/itemtemplatewizard/strings.vb" id="Snippet6":::
 
 ## <a name="create-the-wizard-ui"></a>Criar a interface do usuário do assistente
  Adicione XAML para definir a interface do usuário do assistente e adicione algum código para associar alguns dos controles do assistente às cadeias de caracteres de ID. O assistente que você cria é semelhante ao assistente interno para projetos do SharePoint no Visual Studio.
@@ -130,7 +130,7 @@ ms.locfileid: "99839078"
     > [!NOTE]
     > Seu projeto terá alguns erros de compilação depois que você adicionar esse código. Esses erros vão desaparecer quando você adiciona código em etapas posteriores.
 
-     [!code-xml[SPExtensibility.ProjectItem.CustomAction#9](../sharepoint/codesnippet/Xaml/customactionprojectitem/itemtemplatewizard/wizardwindow.xaml#9)]
+     :::code language="xml" source="../sharepoint/codesnippet/Xaml/customactionprojectitem/itemtemplatewizard/wizardwindow.xaml" id="Snippet9":::
 
     > [!NOTE]
     > A janela que é criada neste XAML é derivada da <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> classe base. Quando você adiciona uma caixa de diálogo personalizada do WPF ao Visual Studio, recomendamos que você Derive sua caixa de diálogo dessa classe para ter estilos consistentes com outras caixas de diálogo no Visual Studio e para evitar problemas que podem ocorrer de outra forma com caixas de diálogo modais. Para obter mais informações, consulte [criando e gerenciando caixas de diálogo modais](../extensibility/creating-and-managing-modal-dialog-boxes.md).
@@ -143,8 +143,8 @@ ms.locfileid: "99839078"
 
 4. No arquivo code-behind do arquivo WizardWindow. XAML, substitua o código atual pelo código a seguir.
 
-     [!code-vb[SPExtensibility.ProjectItem.CustomAction#7](../sharepoint/codesnippet/VisualBasic/customactionprojectitem/itemtemplatewizard/wizardwindow.xaml.vb#7)]
-     [!code-csharp[SPExtensibility.ProjectItem.CustomAction#7](../sharepoint/codesnippet/CSharp/customactionprojectitem/itemtemplatewizard/wizardwindow.xaml.cs#7)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/customactionprojectitem/itemtemplatewizard/wizardwindow.xaml.vb" id="Snippet7":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/customactionprojectitem/itemtemplatewizard/wizardwindow.xaml.cs" id="Snippet7":::
 
 ## <a name="implement-the-wizard"></a>Implementar o assistente
  Defina a funcionalidade do assistente implementando a <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface.
@@ -153,8 +153,8 @@ ms.locfileid: "99839078"
 
 1. No projeto **ItemTemplateWizard** , abra o arquivo de código **CustomActionWizard** e, em seguida, substitua o código atual neste arquivo pelo seguinte código:
 
-     [!code-csharp[SPExtensibility.ProjectItem.CustomAction#8](../sharepoint/codesnippet/CSharp/customactionprojectitem/itemtemplatewizard/customactionwizard.cs#8)]
-     [!code-vb[SPExtensibility.ProjectItem.CustomAction#8](../sharepoint/codesnippet/VisualBasic/customactionprojectitem/itemtemplatewizard/customactionwizard.vb#8)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/customactionprojectitem/itemtemplatewizard/customactionwizard.cs" id="Snippet8":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/customactionprojectitem/itemtemplatewizard/customactionwizard.vb" id="Snippet8":::
 
 ## <a name="checkpoint"></a>Ponto de verificação
  Neste ponto do passo a passo, todo o código do assistente agora está no projeto. Compile o projeto para certificar-se de que ele seja compilado sem erros.
@@ -344,7 +344,7 @@ ms.locfileid: "99839078"
 
 4. Feche as duas instâncias do Visual Studio (a instância experimental e a instância do Visual Studio na qual a solução CustomActionProjectItem está aberta).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Walkthrough: criar um item de projeto de ação personalizada com um modelo de item, parte 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)
 - [Definir tipos de item de projeto personalizados do SharePoint](../sharepoint/defining-custom-sharepoint-project-item-types.md)
 - [Criar modelos de item e modelos de projeto para itens de projeto do SharePoint](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)

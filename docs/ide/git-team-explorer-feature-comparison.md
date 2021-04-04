@@ -2,18 +2,18 @@
 title: Comparação lado a lado do git e do Team Explorer no Visual Studio
 titleSuffix: ''
 description: Compare e contraste como usar a nova experiência de git em vez de Team Explorer no Visual Studio para gerenciar o controle do código-fonte.
-ms.date: 03/12/2021
+ms.date: 04/01/2021
 ms.topic: how-to
 ms.author: tglee
 author: TerryGLee
 ms.manager: jmartens
 monikerRange: vs-2019
-ms.openlocfilehash: 4cbd5b928bb066401c2f091863ad610fbd9f23d5
-ms.sourcegitcommit: 8edb1a7e3e8eee48bf0a900f00b5ee8e08de8e1d
+ms.openlocfilehash: bff03c9435a763607fd32936ddfa3fb38b45296b
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103482030"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216911"
 ---
 # <a name="side-by-side-comparison-of-git-and-team-explorer"></a>Comparação lado a lado do git e do Team Explorer
 
@@ -69,5 +69,7 @@ Se você estiver usando o Team Explorer, aqui está um guia passo a passo que ex
 Para obter mais informações sobre a nova experiência de git, consulte o vídeo mais recente, [introdução ao git no Visual Studio](https://www.youtube.com/watch?v=GCZ9x3yqkyc), no YouTube.
 
 ## <a name="see-also"></a>Confira também
+
 - [A nova experiência de git no Visual Studio](git-with-visual-studio.md)
+- [Introdução ao git e ao GitHub no Visual Studio](/learn/modules/visual-studio-github-push/)
 - [Trabalhar com contas do GitHub no Visual Studio](work-with-github-accounts.md)

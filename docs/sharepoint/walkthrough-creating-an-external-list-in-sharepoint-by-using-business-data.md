@@ -21,12 +21,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: dbf996a2d44f94e4571a332fa7a86d861d820d45
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0811b029bf7e4705bc0c3689eff73f38280c3b3d
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99847707"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217678"
 ---
 # <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>Walkthrough: criar uma lista externa no SharePoint usando dados corporativos
 
@@ -114,9 +114,9 @@ O projeto de **modelo de conectividade de dados corporativos** adiciona uma enti
 
 3. No designer, abra o menu de atalho para **Entity1** e, em seguida, escolha **excluir**.
 
-4. No **Gerenciador de soluções**, abra o menu de atalho para *Entity1. vb* (em Visual Basic) ou *Entity1.cs* (em C#) e, em seguida, escolha **excluir**.
+4. No **Gerenciador de soluções**, abra o menu de atalho para *Entity1. vb* (em Visual Basic) ou *Entity1. cs* (em C#) e, em seguida, escolha **excluir**.
 
-5. Abra o menu de atalho para *Entity1Service. vb* (em Visual Basic) ou *Entity1Service.cs* (em C#) e, em seguida, escolha **excluir**.
+5. Abra o menu de atalho para *Entity1Service. vb* (em Visual Basic) ou *Entity1Service. cs* (em C#) e, em seguida, escolha **excluir**.
 
 ## <a name="add-an-entity-to-the-model"></a>Adicionar uma entidade ao modelo
 
@@ -126,7 +126,7 @@ Adicione uma entidade ao modelo. Você pode adicionar entidades da **caixa de fe
 
 2. Na guia **BusinessDataConnectivity** da caixa de **ferramentas**, adicione uma **entidade** no designer do BDC.
 
-     A nova entidade aparece no designer. O Visual Studio adiciona um arquivo chamado *EntityService. vb* (em Visual Basic) ou *EntityService.cs* (em C#) ao projeto.
+     A nova entidade aparece no designer. O Visual Studio adiciona um arquivo chamado *EntityService. vb* (em Visual Basic) ou *EntityService. cs* (em C#) ao projeto.
 
 3. Na barra de menus, escolha **Exibir**  >    >  **janela** de propriedades.
 
@@ -186,7 +186,7 @@ Adicione um método localizador específico à entidade Contact usando a janela 
 
     |Nome|Nome do Tipo|
     |----------|---------------|
-    |FirstName|System.String|
+    |Nome|System.String|
     |LastName|System.String|
     |Telefone|System.String|
     |EmailAddress|System.String|
@@ -208,8 +208,8 @@ Adicione um método localizador específico à entidade Contact usando a janela 
     > [!NOTE]
     > Substitua o valor do `ServerName` campo pelo nome do seu servidor.
 
-     [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]
-     [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs" id="Snippet3":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb" id="Snippet3":::
 
 ## <a name="add-a-finder-method"></a>Adicionar um método localizador
 
@@ -236,8 +236,8 @@ Para habilitar o serviço BDC para exibir os contatos em uma lista, você deve a
      > [!NOTE]
      > Substitua o valor do `ServerName` campo pelo nome do seu servidor.
 
-     [!code-csharp[SP_BDC#2](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#2)]
-     [!code-vb[SP_BDC#2](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#2)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs" id="Snippet2":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb" id="Snippet2":::
 
 ## <a name="test-the-project"></a>Testar o projeto
 

@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0f2d14bfd069fcf5064c9d8643393e28e52570be
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3e018085bd9900a9ee04f838b7c802afd2acc4fe
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918627"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217704"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint"></a>Walkthrough: criar uma Web Part para o SharePoint
 
@@ -82,14 +82,14 @@ Adicione um item de **Web Part** ao projeto. O item de **Web Part** adiciona o a
 
 Você pode especificar quais controles você deseja que apareçam na Web Part adicionando-os à coleção Controls da classe Web Part.
 
-1. No **Gerenciador de soluções**, abra *WebPart1. vb* (em Visual Basic) ou *WebPart1.cs* (em C#).
+1. No **Gerenciador de soluções**, abra *WebPart1. vb* (em Visual Basic) ou *WebPart1. cs* (em C#).
 
      O arquivo de código da Web Part é aberto no editor de código.
 
 2. Adicione as seguintes diretivas à parte superior do arquivo de código da Web Part.
 
-     [!code-csharp[SP_WebPart#1](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#1)]
-     [!code-vb[SP_WebPart#1](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#1)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet1":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet1":::
 
 3. Adicione o código a seguir à classe `WebPart1` . Esse código declara os seguintes campos:
 
@@ -101,13 +101,13 @@ Você pode especificar quais controles você deseja que apareçam na Web Part ad
 
    - Uma cadeia de caracteres que contém o caminho do arquivo de dados do funcionário.
 
-     [!code-csharp[SP_WebPart#2](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#2)]
-     [!code-vb[SP_WebPart#2](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#2)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet2":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet2":::
 
 4. Adicione o código a seguir à classe `WebPart1` . Esse código adiciona uma propriedade personalizada chamada `DataFilePath` à Web Part. Uma propriedade personalizada é uma propriedade que pode ser definida no SharePoint pelo usuário. Essa propriedade obtém e define o local de um arquivo de dados XML que é usado para preencher a grade de dados.
 
-     [!code-csharp[SP_WebPart#3](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#3)]
-     [!code-vb[SP_WebPart#3](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#3)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet3":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet3":::
 
 5. Substitua o método `CreateChildControls` pelo seguinte código. Esse código executa as seguintes tarefas:
 
@@ -115,8 +115,8 @@ Você pode especificar quais controles você deseja que apareçam na Web Part ad
 
    - Associa a grade de dados a um arquivo XML que contém dados de funcionários.
 
-     [!code-csharp[SP_WebPart#4](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#4)]
-     [!code-vb[SP_WebPart#4](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#4)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet4":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet4":::
 
 6. Adicione o método a seguir à classe `WebPart1`. Esse código executa as seguintes tarefas:
 
@@ -124,8 +124,8 @@ Você pode especificar quais controles você deseja que apareçam na Web Part ad
 
    - Manipula o evento que é gerado quando o usuário escolhe o verbo no menu de verbos. Esse código filtra a lista de funcionários que aparece na grade de dados.
 
-     [!code-csharp[SP_WebPart#5](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#5)]
-     [!code-vb[SP_WebPart#5](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#5)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet5":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet5":::
 
 ## <a name="test-the-web-part"></a>Testar a Web Part
 
@@ -216,7 +216,7 @@ Mostre e oculte os funcionários que não são gerentes selecionando um item que
 
      Todos os funcionários aparecem na Web Part.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Criar Web Parts para SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md) 
  [Como: criar uma Web Part](../sharepoint/how-to-create-a-sharepoint-web-part.md) 

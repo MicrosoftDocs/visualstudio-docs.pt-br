@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 74d57ae4beca074fbf7711ea3d732d903d8faa4b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a91cbd863ed613804418cd5d1666412a01f8f542
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952675"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217691"
 ---
 # <a name="walkthrough-extend-a-sharepoint-project-item-type"></a>Walkthrough: estender um tipo de item de projeto do SharePoint
   Você pode usar o item de projeto **modelo de conectividade de dados corporativos** para criar um modelo para o serviço corporativo de conectividade de dados (BDC) no SharePoint. Por padrão, quando você cria um modelo usando esse item de projeto, os dados no modelo não são exibidos aos usuários. Você também deve criar uma lista externa no SharePoint para permitir que os usuários exibam os dados.
@@ -136,8 +136,8 @@ ms.locfileid: "99952675"
     > [!NOTE]
     > Depois de adicionar esse código, o projeto terá alguns erros de compilação. Esses erros vão desaparecer quando você adiciona código em etapas posteriores.
 
-     [!code-csharp[SPExtensibility.ProjectItemExtension.BDCGenerateExternalDataLists#1](../sharepoint/codesnippet/CSharp/generateexternaldatalists/bdcprojectitemextension/projectitemextension.cs#1)]
-     [!code-vb[SPExtensibility.ProjectItemExtension.BDCGenerateExternalDataLists#1](../sharepoint/codesnippet/VisualBasic/generateexternaldatalists/bdcprojectitemextension/projectitemextension.vb#1)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/generateexternaldatalists/bdcprojectitemextension/projectitemextension.cs" id="Snippet1":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/generateexternaldatalists/bdcprojectitemextension/projectitemextension.vb" id="Snippet1":::
 
 ## <a name="create-the-external-data-lists"></a>Criar listas de dados externos
  Adicione uma definição parcial da `GenerateExternalDataListsExtension` classe que cria uma lista de dados externos para cada entidade no modelo BDC. Para criar a lista de dados externos, esse código primeiro lê os dados da entidade no modelo do BDC analisando os dados XML no arquivo de modelo do BDC. Em seguida, ele cria uma instância de lista baseada no modelo do BDC e adiciona essa instância de lista ao projeto.
@@ -146,8 +146,8 @@ ms.locfileid: "99952675"
 
 1. Cole o código a seguir no arquivo de código GenerateExternalDataLists.
 
-     [!code-vb[SPExtensibility.ProjectItemExtension.BDCGenerateExternalDataLists#2](../sharepoint/codesnippet/VisualBasic/generateexternaldatalists/bdcprojectitemextension/generateexternaldatalists.vb#2)]
-     [!code-csharp[SPExtensibility.ProjectItemExtension.BDCGenerateExternalDataLists#2](../sharepoint/codesnippet/CSharp/generateexternaldatalists/bdcprojectitemextension/generateexternaldatalists.cs#2)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/generateexternaldatalists/bdcprojectitemextension/generateexternaldatalists.vb" id="Snippet2":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/generateexternaldatalists/bdcprojectitemextension/generateexternaldatalists.cs" id="Snippet2":::
 
 ## <a name="checkpoint"></a>Ponto de verificação
  Neste ponto do passo a passo, todo o código para a extensão de item de projeto agora está no projeto. Compile a solução para garantir que o projeto seja compilado sem erros.
@@ -294,7 +294,7 @@ ms.locfileid: "99952675"
 
 5. Feche as duas instâncias do Visual Studio (a instância experimental e a instância na qual a solução GenerateExternalDataLists está aberta).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Estender o sistema de projeto do SharePoint](../sharepoint/extending-the-sharepoint-project-system.md)
 - [Criar um modelo de conectividade de dados corporativos](../sharepoint/creating-a-business-data-connectivity-model.md)
 - [Criar um modelo de conectividade de dados corporativos](../sharepoint/designing-a-business-data-connectivity-model.md)

@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 8d42726cddb0565af66e161b41c16c94cfe2cb2b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 77c80134ad63346b363c072ef2eff7e49978501f
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839130"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217925"
 ---
 # <a name="walkthrough-create-a-custom-deployment-step-for-sharepoint-projects"></a>Walkthrough: criar uma etapa de implantação personalizada para projetos do SharePoint
   Quando você implanta um projeto do SharePoint, o Visual Studio executa uma série de etapas de implantação em uma ordem específica. O Visual Studio inclui muitas etapas de implantação internas, mas você também pode criar as suas próprias.
@@ -151,8 +151,8 @@ ms.locfileid: "99839130"
     > [!NOTE]
     > Depois de adicionar esse código, o projeto terá alguns erros de compilação, mas eles desaparecerão quando você adicionar código em etapas posteriores.
 
-     [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#1](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/upgradestep.cs#1)]
-     [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#1](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/upgradestep.vb#1)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/upgradestep.cs" id="Snippet1":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/upgradestep.vb" id="Snippet1":::
 
 ## <a name="create-a-deployment-configuration-that-includes-the-custom-deployment-step"></a>Criar uma configuração de implantação que inclui a etapa de implantação personalizada
  Crie uma extensão de projeto para a nova configuração de implantação, que inclui várias etapas de implantação internas e a nova etapa de implantação de atualização. Ao criar essa extensão, você ajuda os desenvolvedores do SharePoint a usar a etapa de implantação de atualização em projetos do SharePoint.
@@ -163,8 +163,8 @@ ms.locfileid: "99839130"
 
 1. No projeto **DeploymentStepExtension** , abra o arquivo de código DeploymentConfigurationExtension e cole o código a seguir nele.
 
-     [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#2](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/deploymentconfigurationextension.cs#2)]
-     [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#2](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/deploymentconfigurationextension.vb#2)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/deploymentconfigurationextension.cs" id="Snippet2":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/deploymentconfigurationextension.vb" id="Snippet2":::
 
 ## <a name="create-the-custom-sharepoint-commands"></a>Criar os comandos personalizados do SharePoint
  Crie dois comandos personalizados que chamam o modelo de objeto do servidor para SharePoint. Um comando determina se uma solução já está implantada; o outro comando atualiza uma solução.
@@ -173,8 +173,8 @@ ms.locfileid: "99839130"
 
 1. No projeto **SharePointCommands** , abra o arquivo de código de comandos e cole o código a seguir nele.
 
-     [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#4](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs#4)]
-     [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#4](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/sharepointcommands/commands.vb#4)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs" id="Snippet4":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/sharepointcommands/commands.vb" id="Snippet4":::
 
 ## <a name="checkpoint"></a>Ponto de verificação
  Neste ponto do passo a passo, todo o código para a etapa de implantação personalizada e os comandos do SharePoint agora estão nos projetos. Crie-os para garantir que eles sejam compilados sem erros.

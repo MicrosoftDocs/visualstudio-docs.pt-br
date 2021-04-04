@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: e4853dfbffdf07d3b605b13c5fce749a30285c27
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: daf4f722eb51a08e7a6ddb287e5b54956ecdfe73
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866327"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216014"
 ---
 # <a name="typed-vs-untyped-datasets"></a>Conjuntos de dados tipados versus. não tipados
 Um conjunto de dados tipado é um conjunto de dados que é derivado primeiro da <xref:System.Data.DataSet> classe base e, em seguida, usa informações do **Designer de conjunto de dados**, que é armazenado em um arquivo. xsd, para gerar uma nova classe de conjunto de dados com rigidez de tipos. As informações do esquema (tabelas, colunas e assim por diante) são geradas e compiladas nessa nova classe de conjunto de dados como um conjunto de objetos e propriedades de primeira classe. Como um conjunto de dados tipado herda da <xref:System.Data.DataSet> classe base, a classe tipada assume toda a funcionalidade da <xref:System.Data.DataSet> classe e pode ser usada com métodos que usam uma instância de uma <xref:System.Data.DataSet> classe como um parâmetro.
@@ -28,13 +28,13 @@ Um conjunto de um DataSet não tipado, por outro lado, não tem nenhum esquema i
 ## <a name="contrast-data-access-in-typed-and-untyped-datasets"></a>Contraste o acesso a dados em datasets digitados e não tipados
 A classe de um conjunto de dados tipado tem um modelo de objeto no qual suas propriedades assumem os nomes reais das tabelas e colunas. Por exemplo, se você estiver trabalhando com um dataset tipado, poderá fazer referência a uma coluna usando um código como o seguinte:
 
-[!code-csharp[VbRaddataDatasets#4](../data-tools/codesnippet/CSharp/typed-vs-untyped-datasets_1.cs)]
-[!code-vb[VbRaddataDatasets#4](../data-tools/codesnippet/VisualBasic/typed-vs-untyped-datasets_1.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDatasets/CS/Form1.cs" id="Snippet4":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDatasets/VB/Form1.vb" id="Snippet4":::
 
 Por outro lado, se você estiver trabalhando com um conjunto de um DataSet não tipado, o código equivalente será:
 
-[!code-csharp[VbRaddataDatasets#5](../data-tools/codesnippet/CSharp/typed-vs-untyped-datasets_2.cs)]
-[!code-vb[VbRaddataDatasets#5](../data-tools/codesnippet/VisualBasic/typed-vs-untyped-datasets_2.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDatasets/CS/Form1.cs" id="Snippet5":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDatasets/VB/Form1.vb" id="Snippet5":::
 
 O acesso digitado não é apenas mais fácil de ler, mas também tem suporte completo do IntelliSense no **Editor de código** do Visual Studio. Além de ser mais fácil de trabalhar com, a sintaxe para o dataset tipado fornece verificação de tipo em tempo de compilação, reduzindo significativamente a possibilidade de erros na atribuição de valores a membros de conjuntos de de DataSet. Se você alterar o nome de uma coluna em sua <xref:System.Data.DataSet> classe e, em seguida, compilar seu aplicativo, receberá um erro de compilação. Ao clicar duas vezes no erro de compilação na **lista de tarefas**, você pode ir diretamente para a linha ou linhas de código que referenciam o nome de coluna antigo. O acesso a tabelas e colunas em um dataset tipado também é ligeiramente mais rápido no tempo de execução porque o acesso é determinado em tempo de compilação, não através de coleções em tempo de execução.
 

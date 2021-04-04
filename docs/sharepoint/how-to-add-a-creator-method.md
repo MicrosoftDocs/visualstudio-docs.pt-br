@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4079fb5be612421bfa4a0b6dc53c3003a1c65e61
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 950745a533fbea8d360c8bea6d839a304dd6e0d7
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934878"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216404"
 ---
 # <a name="how-to-add-a-creator-method"></a>Como: adicionar um método de criador
   Um método de criador adiciona novos dados à fonte de dados de uma entidade. O serviço BDC (conectividade de dados corporativos) chama esse método quando os usuários escolhem o botão **novo item** na **faixa de faixas** de uma lista baseada no modelo. Para obter mais informações, consulte [criar um modelo de conectividade de dados corporativos](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -62,8 +62,8 @@ ms.locfileid: "99934878"
    > [!NOTE]
    > Substitua o valor do `ServerName` campo pelo nome do seu servidor.
 
-    [!code-csharp[SP_BDC#4](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#4)]
-    [!code-vb[SP_BDC#4](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#4)]
+    :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs" id="Snippet4":::
+    :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb" id="Snippet4":::
 
 ## <a name="see-also"></a>Confira também
 - [Criar um modelo de conectividade de dados corporativos](../sharepoint/designing-a-business-data-connectivity-model.md)

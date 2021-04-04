@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e7427c0866806c705ed28a049b33024771631c0a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 71e9d83cbe3459abb05e24b127e54651aade8ee5
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839117"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217951"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-1"></a>Walkthrough: criar um item de projeto de ação personalizada com um modelo de item, parte 1
   Você pode estender o sistema de projeto do SharePoint no Visual Studio criando seus próprios tipos de item de projeto. Neste tutorial, você criará um item de projeto que pode ser adicionado a um projeto do SharePoint para criar uma ação personalizada em um site do SharePoint. A ação personalizada adiciona um item de menu ao menu **ações do site** do site do SharePoint.
@@ -152,8 +152,8 @@ ms.locfileid: "99839117"
 
 2. Substitua o código deste arquivo pelo código a seguir.
 
-     [!code-csharp[SPExtensibility.ProjectItem.CustomAction#1](../sharepoint/codesnippet/CSharp/customactionprojectitem/projectitemtypedefinition/customaction.cs#1)]
-     [!code-vb[SPExtensibility.ProjectItem.CustomAction#1](../sharepoint/codesnippet/VisualBasic/customactionprojectitem/projectitemdefinition/customaction.vb#1)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/customactionprojectitem/projectitemtypedefinition/customaction.cs" id="Snippet1":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/customactionprojectitem/projectitemdefinition/customaction.vb" id="Snippet1":::
 
 ## <a name="create-an-icon-for-the-project-item-in-solution-explorer"></a>Criar um ícone para o item de projeto no Gerenciador de Soluções
  Ao criar um item de projeto personalizado do SharePoint, você pode associar uma imagem (um ícone ou bitmap) ao item do projeto. Essa imagem é exibida ao lado do item de projeto em **Gerenciador de soluções**.
@@ -452,7 +452,7 @@ ms.locfileid: "99839117"
 ## <a name="next-steps"></a>Próximas etapas
  Depois de concluir este passo a passos, você pode adicionar um assistente ao modelo de item. Quando um usuário adiciona um item de projeto de ação personalizada a um projeto do SharePoint, o assistente coleta informações sobre a ação (como sua localização e a URL para navegar quando a ação é escolhida) e adiciona essas informações ao arquivo de *Elements.xml* no novo item de projeto. Para obter mais informações, consulte [Walkthrough: criar um item de projeto de ação personalizada com um modelo de item, parte 2](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Walkthrough: criar um item de projeto de ação personalizada com um modelo de item, parte 2](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)
 - [Definir tipos de item de projeto personalizados do SharePoint](../sharepoint/defining-custom-sharepoint-project-item-types.md)

@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: be772075be27cc8d6e58b6b54bb281a127f4677f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e7c0a13879850bbd31112ddcb3193d027abeb5d1
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878117"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216352"
 ---
 # <a name="how-to-add-a-custom-sharepoint-node-to-server-explorer"></a>Como: adicionar um nó personalizado do SharePoint a Gerenciador de Servidores
   Você pode adicionar nós personalizados no nó **conexões do SharePoint** no **Gerenciador de servidores**. Isso é útil quando você deseja exibir componentes adicionais do SharePoint que não são exibidos no **Gerenciador de servidores** por padrão. Para obter mais informações, consulte [estender o nó conexões do SharePoint no Gerenciador de servidores](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
@@ -54,8 +54,8 @@ ms.locfileid: "99878117"
 
      O exemplo de código a seguir demonstra como definir um novo nó. Este exemplo pressupõe que seu projeto contém um ícone chamado CustomChildNodeIcon como um recurso inserido.
 
-     [!code-vb[SPExtensibility.ProjectSystemExtension.General#6](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorernode.vb#6)]
-     [!code-csharp[SPExtensibility.ProjectSystemExtension.General#6](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorernode.cs#6)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorernode.vb" id="Snippet6":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorernode.cs" id="Snippet6":::
 
 ### <a name="to-add-the-new-node-as-a-child-of-an-existing-node"></a>Para adicionar o novo nó como um filho de um nó existente
 
@@ -77,14 +77,14 @@ ms.locfileid: "99878117"
 
      O exemplo de código a seguir demonstra como adicionar o novo nó como um filho do nó do site do SharePoint no **Gerenciador de servidores**.
 
-     [!code-vb[SPExtensibility.ProjectSystemExtension.General#7](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorernode.vb#7)]
-     [!code-csharp[SPExtensibility.ProjectSystemExtension.General#7](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorernode.cs#7)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorernode.vb" id="Snippet7":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorernode.cs" id="Snippet7":::
 
 ## <a name="complete-example"></a>Exemplo completo
  O exemplo de código a seguir fornece o código completo para definir um nó simples e adicioná-lo como um filho do nó do site do SharePoint no **Gerenciador de servidores**.
 
- [!code-vb[SPExtensibility.ProjectSystemExtension.General#5](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorernode.vb#5)]
- [!code-csharp[SPExtensibility.ProjectSystemExtension.General#5](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorernode.cs#5)]
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorernode.vb" id="Snippet5":::
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorernode.cs" id="Snippet5":::
 
 ## <a name="compiling-the-code"></a>Compilando o código
  Este exemplo pressupõe que seu projeto contém um ícone chamado CustomChildNodeIcon como um recurso inserido. Este exemplo também requer referências aos seguintes assemblies:

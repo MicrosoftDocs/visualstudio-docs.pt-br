@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 52c9d8ca4af6467c6db21be64083b5bf64af0b6a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e3432dd9a72fa71ea1e749dd28e80a3d55cce19c
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859184"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216053"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>Criar um aplicativo de dados simples com o WPF e o Entity Framework 6
 
@@ -130,9 +130,9 @@ Agora você está pronto para conectar esse modelo à página XAML para que poss
 
      ![Arrastar classes Orders como grade](../data-tools/media/raddata-drag-orders-classes-as-grid.png)
 
-7. O Visual Studio gerou todo o código de ligação que conecta os controles da interface do usuário a eventos no modelo. Tudo o que você precisa fazer para ver alguns dados é escrever algum código para preencher o modelo. Primeiro, navegue até *MainWindow.XAML.cs* e adicione um membro de dados à classe MainWindow para o contexto de dados. Esse objeto, que foi gerado para você, atua como um controle que controla as alterações e eventos no modelo. Você também adicionará membros de dados do CollectionViewSource para clientes e pedidos e a lógica de inicialização do Construtor associada. A parte superior da classe deve ter a seguinte aparência:
+7. O Visual Studio gerou todo o código de ligação que conecta os controles da interface do usuário a eventos no modelo. Tudo o que você precisa fazer para ver alguns dados é escrever algum código para preencher o modelo. Primeiro, navegue até *MainWindow. XAML. cs* e adicione um membro de dados à classe MainWindow para o contexto de dados. Esse objeto, que foi gerado para você, atua como um controle que controla as alterações e eventos no modelo. Você também adicionará membros de dados do CollectionViewSource para clientes e pedidos e a lógica de inicialização do Construtor associada. A parte superior da classe deve ter a seguinte aparência:
 
-     [!code-csharp[MainWindow#1](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#1)]
+     :::code language="csharp" source="../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs" id="Snippet1":::
 
      Adicione uma `using` diretiva para System. Data. Entity para colocar o método de extensão de carga no escopo:
 
@@ -142,7 +142,8 @@ Agora você está pronto para conectar esse modelo à página XAML para que poss
 
      Agora, role para baixo e localize o `Window_Loaded` manipulador de eventos. Observe que o Visual Studio adicionou um objeto CollectionViewSource. Isso representa o objeto NorthwindEntities que você selecionou quando criou o modelo. Você adicionou isso já, portanto, não precisa dela aqui. Vamos substituir o código `Window_Loaded` para que o método agora se pareça com o seguinte:
 
-     [!code-csharp[Window_Loaded#2](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#2)]
+     :::code language="csharp" source="../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs" id="Snippet2":::
+
 
 8. Pressione **F5**. Você deve ver os detalhes do primeiro cliente que foi recuperado para o CollectionViewSource. Você também deve ver seus pedidos na grade de dados. A formatação não é ótima, então vamos corrigi-la. Você também pode criar uma maneira de exibir os outros registros e realizar operações CRUD básicas.
 
@@ -421,15 +422,16 @@ Há quatro partes para a lógica de comando: (1) os comandos, (2) as associaçõ
 
 O code-behind é mínimo, exceto para os métodos Add e Delete. A navegação é executada por meio da chamada de métodos na Propriedade View do CollectionViewSource. O `DeleteOrderCommandHandler` mostra como executar uma exclusão em cascata em um pedido. Precisamos primeiro excluir os Order_Details associados a ele. O `UpdateCommandHandler` adiciona um novo cliente ou uma ordem à coleção, ou apenas atualiza um cliente existente ou uma ordem com as alterações que o usuário fez nas caixas de texto.
 
-Adicione esses métodos de manipulador à classe MainWindow em *MainWindow.XAML.cs*. Se o seu CollectionViewSource para a tabela Customers tiver um nome diferente, você precisará ajustar o nome em cada um destes métodos:
+Adicione esses métodos de manipulador à classe MainWindow em *MainWindow. XAML. cs*. Se o seu CollectionViewSource para a tabela Customers tiver um nome diferente, você precisará ajustar o nome em cada um destes métodos:
 
-[!code-csharp[CommandHandlers#3](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#3)]
+:::code language="csharp" source="../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs" id="Snippet3":::
+
 
 ## <a name="run-the-application"></a>Executar o aplicativo
 
 Para iniciar a depuração, pressione **F5**. Você deve ver os dados do cliente e do pedido populados na grade e os botões de navegação devem funcionar conforme o esperado. Clique em **confirmar** para adicionar um novo cliente ou pedido ao modelo depois de inserir os dados. Clique em **Cancelar** para voltar a um novo formulário de cliente ou de novo pedido sem salvar os dados. Você pode fazer edições em clientes e pedidos existentes diretamente nas caixas de texto, e essas alterações são gravadas automaticamente no modelo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Ferramentas de dados do Visual Studio para .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)
 - [Documentação do Entity Framework](/ef/)

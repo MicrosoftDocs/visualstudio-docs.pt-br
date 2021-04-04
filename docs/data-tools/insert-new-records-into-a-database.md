@@ -19,12 +19,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8b5228d463bebf7ed57c68cbcf16a1d767d94917
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6e1046dfd114e4cad69445b8f4e1432c03aac0e5
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858664"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216456"
 ---
 # <a name="insert-new-records-into-a-database"></a>Inserir novos registros em um banco de dados
 
@@ -52,8 +52,8 @@ Se o seu aplicativo usa conjuntos de dados para armazenar, você pode simplesmen
 
    O código a seguir mostra como adicionar um novo registro a um <xref:System.Data.DataTable> e, em seguida, chamar o `TableAdapter.Update` método para salvar a nova linha no banco de dados. (Este exemplo usa a `Region` tabela no banco de dados Northwind.)
 
-   [!code-vb[VbRaddataSaving#14](../data-tools/codesnippet/VisualBasic/insert-new-records-into-a-database_1.vb)]
-   [!code-csharp[VbRaddataSaving#14](../data-tools/codesnippet/CSharp/insert-new-records-into-a-database_1.cs)]
+   :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form5.vb" id="Snippet14":::
+   :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form5.cs" id="Snippet14":::
 
 ### <a name="to-insert-new-records-into-a-database-by-using-the-tableadapterinsert-method"></a>Para inserir novos registros em um banco de dados usando o método TableAdapter. Insert
 
@@ -66,8 +66,8 @@ O procedimento a seguir demonstra como usar o `TableAdapter.Insert` método para
 > [!NOTE]
 > Se você não tiver uma instância disponível, crie uma instância do TableAdapter que você deseja usar.
 
-[!code-vb[VbRaddataSaving#15](../data-tools/codesnippet/VisualBasic/insert-new-records-into-a-database_2.vb)]
-[!code-csharp[VbRaddataSaving#15](../data-tools/codesnippet/CSharp/insert-new-records-into-a-database_2.cs)]
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Class1.vb" id="Snippet15":::
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Class1.cs" id="Snippet15":::
 
 ## <a name="insert-new-records-by-using-command-objects"></a>Inserir novos registros usando objetos de comando
 
@@ -79,8 +79,8 @@ Você pode inserir novos registros diretamente em um banco de dados usando objet
 
 O exemplo a seguir demonstra a inserção de registros em um banco de dados usando o objeto Command. Ele insere dados na `Region` tabela no banco de dado Northwind.
 
-[!code-vb[VbRaddataSaving#16](../data-tools/codesnippet/VisualBasic/insert-new-records-into-a-database_3.vb)]
-[!code-csharp[VbRaddataSaving#16](../data-tools/codesnippet/CSharp/insert-new-records-into-a-database_3.cs)]
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Class1.vb" id="Snippet16":::
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Class1.cs" id="Snippet16":::
 
 ## <a name="net-security"></a>Segurança do .NET
 

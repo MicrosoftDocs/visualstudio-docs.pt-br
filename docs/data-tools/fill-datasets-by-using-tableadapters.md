@@ -21,12 +21,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8037b8d19bad19485e9ed8f7926e6a3e45b8fef1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 47c17c66a1def3c3fa774437825fe15b3f9ff534
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866899"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216274"
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>Preencher conjuntos de dados usando TableAdapters
 
@@ -56,8 +56,8 @@ Os TableAdapters são componentes gerados pelo designer que se conectam a um ban
 
 Embora os TableAdapters sejam projetados com o **Designer de conjunto de dados**, as classes do TableAdapter não são geradas como classes aninhadas de  <xref:System.Data.DataSet> . Eles estão localizados em namespaces separados que são específicos para cada conjunto de informações. Por exemplo, se você tiver um conjunto de um DataSet chamado `NorthwindDataSet` , os TableAdapters associados a  <xref:System.Data.DataTable> s no `NorthwindDataSet` estarão no `NorthwindDataSetTableAdapters` namespace. Para acessar um TableAdapter específico de forma programática, você deve declarar uma nova instância do TableAdapter. Por exemplo:
 
-[!code-csharp[VbRaddataTableAdapters#7](../data-tools/codesnippet/CSharp/fill-datasets-by-using-tableadapters_1.cs)]
-[!code-vb[VbRaddataTableAdapters#7](../data-tools/codesnippet/VisualBasic/fill-datasets-by-using-tableadapters_1.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataTableAdapters/CS/Class1.cs" id="Snippet7":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataTableAdapters/VB/Class1.vb" id="Snippet7":::
 
 ## <a name="associated-datatable-schema"></a>Esquema DataTable associado
 

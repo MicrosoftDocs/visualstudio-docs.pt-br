@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9c10c2bc69086e3c98633ba746c1e6fc8d7f2a20
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1f77e0044b8ae3c7456a31bb9c9153ba9e9f4c99
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99889688"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106218029"
 ---
 # <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>Estenda o nó conexões do SharePoint no Gerenciador de Servidores
   No Visual Studio, você pode se conectar a sites locais do SharePoint no computador de desenvolvimento usando o nó **conexões do SharePoint** na janela **Gerenciador de servidores** . Esse nó exibe muitos dos componentes de sites locais do SharePoint em um modo de exibição de árvore hierárquica. Por exemplo, você pode exibir as listas, as bibliotecas de documentos e os tipos de conteúdo em sites locais. Para obter mais informações sobre como usar **Gerenciador de servidores** para se conectar a sites locais do SharePoint, consulte [procurar conexões do SharePoint usando Gerenciador de servidores](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md).
@@ -50,8 +50,8 @@ ms.locfileid: "99889688"
 
  O exemplo de código a seguir demonstra como obter o objeto de dados para um nó de lista. Para ver esse exemplo no contexto de um exemplo maior, consulte [como: obter dados para um nó interno do SharePoint no Gerenciador de servidores](../sharepoint/how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer.md).
 
- [!code-vb[SPExtensibility.ProjectSystemExtension.General#11](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorerextensionnodeinfo.vb#11)]
- [!code-csharp[SPExtensibility.ProjectSystemExtension.General#11](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorerextensionnodeinfo.cs#11)]
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorerextensionnodeinfo.vb" id="Snippet11":::
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorerextensionnodeinfo.cs" id="Snippet11":::
 
  A tabela a seguir lista os tipos de objeto de dados para cada tipo de nó interno.
 
@@ -61,7 +61,7 @@ ms.locfileid: "99889688"
 |Tipo de conteúdo|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IContentTypeNodeInfo>|
 |Recurso|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFeatureNodeInfo>|
 |Campo|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo>|
-|List|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo>|
+|Lista|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo>|
 |Modelo de lista|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListTemplateNodeInfo>|
 |Exibição de lista (Microsoft. SharePoint. SPView)|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListViewNodeInfo>|
 |Associação de fluxo de trabalho|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowAssociationNodeInfo>|

@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: bc664a50fc307c59d5c168b26c8af1bc6181ebad
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 13a2f2c147bbf175a7601cd465dc8acbba9b5388
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918724"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217743"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>Walkthrough: criar um item de projeto de coluna de site com um modelo de projeto, parte 2
   Depois de definir um tipo personalizado de item de projeto do SharePoint e associá-lo a um modelo de projeto no Visual Studio, talvez você também queira fornecer um assistente para o modelo. Você pode usar o assistente para coletar informações de usuários quando eles usam seu modelo para criar um novo projeto que contém o item de projeto. As informações coletadas podem ser usadas para inicializar o item do projeto.
@@ -204,22 +204,22 @@ ms.locfileid: "99918724"
 
 1. No projeto ProjectTemplateWizard, abra o arquivo de código CommandIds e, em seguida, substitua todo o conteúdo desse arquivo pelo código a seguir.
 
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#5](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/commandids.cs#5)]
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#5](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/commandids.vb#5)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/commandids.cs" id="Snippet5":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/commandids.vb" id="Snippet5":::
 
 #### <a name="to-create-the-wizard-model"></a>Para criar o modelo do assistente
 
 1. Abra o arquivo de código SiteColumnWizardModel e substitua todo o conteúdo desse arquivo pelo código a seguir.
 
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#6](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/sitecolumnwizardmodel.vb#6)]
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#6](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/sitecolumnwizardmodel.cs#6)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/sitecolumnwizardmodel.vb" id="Snippet6":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/sitecolumnwizardmodel.cs" id="Snippet6":::
 
 #### <a name="to-create-the-project-signing-manager"></a>Para criar o Gerenciador de assinatura de projeto
 
 1. Abra o arquivo de código ProjectSigningManager e, em seguida, substitua todo o conteúdo desse arquivo pelo código a seguir.
 
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#8](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/projectsigningmanager.vb#8)]
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#8](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/projectsigningmanager.cs#8)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/projectsigningmanager.vb" id="Snippet8":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/projectsigningmanager.cs" id="Snippet8":::
 
 ## <a name="create-the-wizard-ui"></a>Criar a interface do usuário do assistente
  Adicione o XAML para definir a interface do usuário da janela do assistente e os dois controles de usuário que fornecem a interface do usuário para as páginas do assistente e adicione o código para definir o comportamento dos controles Window e User. O assistente que você cria é semelhante ao assistente interno para projetos do SharePoint no Visual Studio.
@@ -233,7 +233,7 @@ ms.locfileid: "99918724"
 
 2. Na exibição XAML do designer, substitua o XAML atual pelo XAML a seguir. O XAML define uma interface do usuário que inclui um título, um <xref:System.Windows.Controls.Grid> que contém as páginas do assistente e os botões de navegação na parte inferior da janela.
 
-     [!code-xml[SPExtensibility.ProjectItem.SiteColumn#10](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml#10)]
+     :::code language="xml" source="../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml" id="Snippet10":::
 
     > [!NOTE]
     > A janela que é criada neste XAML é derivada da <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> classe base. Quando você adiciona uma caixa de diálogo personalizada do WPF ao Visual Studio, recomendamos que você Derive sua caixa de diálogo dessa classe para ter estilos consistentes com outras caixas de diálogo do Visual Studio e para evitar problemas de caixa de diálogo modais que poderiam ocorrer. Para obter mais informações, consulte [criando e gerenciando caixas de diálogo modais](../extensibility/creating-and-managing-modal-dialog-boxes.md).
@@ -248,8 +248,8 @@ ms.locfileid: "99918724"
 
 5. Substitua o conteúdo desse arquivo, exceto pelas `using` declarações na parte superior do arquivo, pelo código a seguir.
 
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#4](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.vb#4)]
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#4](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.cs#4)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.vb" id="Snippet4":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.cs" id="Snippet4":::
 
 #### <a name="to-create-the-first-wizard-page-ui"></a>Para criar a primeira interface do usuário da página do assistente
 
@@ -257,7 +257,7 @@ ms.locfileid: "99918724"
 
 2. Na exibição XAML do designer, substitua o XAML atual pelo XAML a seguir. O XAML define uma interface do usuário que inclui uma caixa de texto onde os usuários podem inserir a URL dos sites locais que desejam usar para depuração. A interface do usuário também inclui botões de opção com os quais os usuários podem especificar se o projeto está em área restrita.
 
-     [!code-xml[SPExtensibility.ProjectItem.SiteColumn#11](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page1.xaml#11)]
+     :::code language="xml" source="../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page1.xaml" id="Snippet11":::
 
 3. Se você estiver desenvolvendo um projeto Visual Basic, remova o `ProjectTemplateWizard` namespace do `Page1` nome da classe no `x:Class` atributo do `UserControl` elemento. Isso está na primeira linha do XAML. Quando terminar, a primeira linha deverá ser parecida com a seguinte.
 
@@ -267,8 +267,8 @@ ms.locfileid: "99918724"
 
 4. Substitua o conteúdo do arquivo página1. XAML, exceto pelas `using` declarações na parte superior do arquivo, pelo código a seguir.
 
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#2](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.vb#2)]
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#2](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.cs#2)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.vb" id="Snippet2":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.cs" id="Snippet2":::
 
 #### <a name="to-create-the-second-wizard-page-ui"></a>Para criar a segunda interface do usuário da página de assistente
 
@@ -278,7 +278,7 @@ ms.locfileid: "99918724"
 
 2. No modo de exibição XAML, substitua o XAML atual pelo XAML a seguir. O XAML define uma interface do usuário que inclui uma lista suspensa para escolher o tipo base da coluna site, uma caixa de combinação para especificar um grupo interno ou personalizado no qual exibir a coluna site na galeria e uma caixa de texto para especificar o nome da coluna site.
 
-     [!code-xml[SPExtensibility.ProjectItem.SiteColumn#12](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page2.xaml#12)]
+     :::code language="xml" source="../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page2.xaml" id="Snippet12":::
 
 3. Se você estiver desenvolvendo um projeto Visual Basic, remova o `ProjectTemplateWizard` namespace do `Page2` nome da classe no `x:Class` atributo do `UserControl` elemento. Isso está na primeira linha do XAML. Quando terminar, a primeira linha deverá ser parecida com a seguinte.
 
@@ -288,8 +288,8 @@ ms.locfileid: "99918724"
 
 4. Substitua o conteúdo do arquivo code-behind do arquivo página2. XAML, exceto pelas `using` declarações na parte superior do arquivo, pelo código a seguir.
 
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#3](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.vb#3)]
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#3](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.cs#3)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.vb" id="Snippet3":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.cs" id="Snippet3":::
 
 ## <a name="implement-the-wizard"></a>Implementar o assistente
  Defina a funcionalidade principal do assistente implementando a <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface. Essa interface define os métodos que o Visual Studio chama quando o assistente é iniciado e concluído e em determinados momentos durante a execução do assistente.
@@ -300,8 +300,8 @@ ms.locfileid: "99918724"
 
 2. Substitua todo o conteúdo deste arquivo pelo código a seguir.
 
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#7](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/sitecolumnprojectwizard.vb#7)]
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#7](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/sitecolumnprojectwizard.cs#7)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/sitecolumnprojectwizard.vb" id="Snippet7":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/sitecolumnprojectwizard.cs" id="Snippet7":::
 
 ## <a name="create-the-sharepoint-commands"></a>Criar os comandos do SharePoint
  Crie dois comandos personalizados que chamam o modelo de objeto do SharePoint Server. Um comando determina se a URL do site que o usuário digita no assistente é válida. O outro comando obtém todos os tipos de campo do site do SharePoint especificado para que os usuários possam selecionar qual deles usar como base para sua nova coluna de site.
@@ -312,8 +312,8 @@ ms.locfileid: "99918724"
 
 2. Substitua todo o conteúdo deste arquivo pelo código a seguir.
 
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#9](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/sharepointcommands/commands.vb#9)]
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#9](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/sharepointcommands/commands.cs#9)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/sharepointcommands/commands.vb" id="Snippet9":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/sharepointcommands/commands.cs" id="Snippet9":::
 
 ## <a name="checkpoint"></a>Ponto de verificação
  Neste ponto do passo a passo, todo o código do assistente agora está no projeto. Compile o projeto para certificar-se de que ele seja compilado sem erros.
@@ -541,7 +541,7 @@ ms.locfileid: "99918724"
 
      Para obter informações sobre como implantar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] extensões, consulte [enviando extensões do Visual Studio](../extensibility/shipping-visual-studio-extensions.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Walkthrough: criar um item de projeto de coluna de site com um modelo de projeto, parte 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)
 - [Definir tipos de item de projeto personalizados do SharePoint](../sharepoint/defining-custom-sharepoint-project-item-types.md)
 - [Criando modelos de item e de projeto para itens de projeto do SharePoint](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)

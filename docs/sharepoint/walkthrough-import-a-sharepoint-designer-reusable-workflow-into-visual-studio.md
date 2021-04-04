@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: d4c12626550e36acc1a135258750f2d96ac5e81d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0c78a7b1ea0e8de96146367782d9de274f413a5f
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952584"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217600"
 ---
 # <a name="walkthrough-import-a-sharepoint-designer-reusable-workflow"></a>Walkthrough: importar um fluxo de trabalho reutilizável do SharePoint Designer
 
@@ -216,13 +216,13 @@ ms.locfileid: "99952584"
 
 15. Adicione o seguinte nas diretivas **usando** ou **Imports** existentes:
 
-     [!code-csharp[SP_SPDWFImport#1](../sharepoint/codesnippet/CSharp/workflowimportproject1/workflows/spd_task_workflowft/spd task workflow.xoml.cs#1)]
-     [!code-vb[SP_SPDWFImport#1](../sharepoint/codesnippet/VisualBasic/workflowimportproject1/workflows/spd_task_workflowft/spd task workflow.xoml.vb#1)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/workflowimportproject1/workflows/spd_task_workflowft/spd task workflow.xoml.cs" id="Snippet1":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/workflowimportproject1/workflows/spd_task_workflowft/spd task workflow.xoml.vb" id="Snippet1":::
 
 16. Substitua `codeActivity1_ExecuteCode` pelo seguinte:
 
-     [!code-csharp[SP_SPDWFImport#2](../sharepoint/codesnippet/CSharp/workflowimportproject1/workflows/spd_task_workflowft/spd task workflow.xoml.cs#2)]
-     [!code-vb[SP_SPDWFImport#2](../sharepoint/codesnippet/VisualBasic/workflowimportproject1/workflows/spd_task_workflowft/spd task workflow.xoml.vb#2)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/workflowimportproject1/workflows/spd_task_workflowft/spd task workflow.xoml.cs" id="Snippet2":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/workflowimportproject1/workflows/spd_task_workflowft/spd task workflow.xoml.vb" id="Snippet2":::
 
 ## <a name="deploy-the-project-and-associate-the-workflow"></a>Implantar o projeto e associar o fluxo de trabalho
  Em seguida, execute WorkflowImportProject1 para implantá-lo em um site do SharePoint e associe o fluxo de trabalho à lista de tarefas para exibir e testar o fluxo de trabalho modificado e convertido.
@@ -264,7 +264,7 @@ ms.locfileid: "99952584"
 
      Observe que duas ações são executadas pelo fluxo de trabalho: seu nome aparece na coluna **atribuído à** tarefa e um anúncio é exibido na lista **comunicados** .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Importar itens de um site existente do SharePoint](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
 - [Desenvolver soluções do SharePoint](../sharepoint/developing-sharepoint-solutions.md)
 - [Criar controles reutilizáveis para Web Parts ou páginas de aplicativo](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)

@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b9ccf478a084b8dedabc6f470a333e3fe4b54eb7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 07f3b90df070eca4e17e5bba9fa6a9e3582bd238
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918735"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217784"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-1"></a>Walkthrough: criar um item de projeto de coluna de site com um modelo de projeto, parte 1
   Projetos do SharePoint são contêineres para um ou mais itens de projeto do SharePoint. Você pode estender o sistema de projeto do SharePoint no Visual Studio criando seus próprios tipos de item de projeto do SharePoint e, em seguida, associando-os a um modelo de projeto. Neste tutorial, você definirá um tipo de item de projeto para criar uma coluna de site e, em seguida, criará um modelo de projeto que pode ser usado para criar um novo projeto que contém um item de projeto de coluna de site.
@@ -150,8 +150,8 @@ ms.locfileid: "99918735"
 
 1. No arquivo de código **SiteColumnProjectItemTypeProvider** , substitua o código padrão pelo código a seguir e salve o arquivo.
 
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#1](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projectitemtypedefinition/sitecolumnprojectitemtypeprovider.cs#1)]
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#1](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projectitemtypedefinition/sitecolumnprojectitemtypeprovider.vb#1)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projectitemtypedefinition/sitecolumnprojectitemtypeprovider.cs" id="Snippet1":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projectitemtypedefinition/sitecolumnprojectitemtypeprovider.vb" id="Snippet1":::
 
 ## <a name="create-a-visual-studio-project-template"></a>Criar um modelo de projeto do Visual Studio
  Ao criar um modelo de projeto, você permite que outros desenvolvedores criem projetos do SharePoint que contenham itens de projeto de coluna de site. Um modelo de projeto do SharePoint inclui arquivos que são necessários para todos os projetos no Visual Studio, como arquivos *. csproj* ou *. vbproj* e *. vstemplate* , e arquivos que são específicos para projetos do SharePoint. Para obter mais informações, consulte [criar modelos de item e modelos de projeto para itens de projeto do SharePoint](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).
@@ -225,7 +225,7 @@ ms.locfileid: "99918735"
 ## <a name="edit-the-project-template-files"></a>Editar os arquivos de modelo de projeto
  No projeto SiteColumnProjectTemplate, edite os seguintes arquivos para definir o comportamento do modelo de projeto:
 
-- *AssemblyInfo.cs* ou *AssemblyInfo. vb*
+- *AssemblyInfo. cs* ou *AssemblyInfo. vb*
 
 - *Elements.xml*
 
@@ -241,9 +241,9 @@ ms.locfileid: "99918735"
 
   Nos procedimentos a seguir, você adicionará parâmetros substituíveis a alguns desses arquivos. Um parâmetro substituível é um token que inicia e termina com o caractere de cifrão ($). Quando um usuário usa esse modelo de projeto para criar um projeto, o Visual Studio substitui automaticamente esses parâmetros no novo projeto com valores específicos. Para obter mais informações, consulte [parâmetros substituíveis](../sharepoint/replaceable-parameters.md).
 
-#### <a name="to-edit-the-assemblyinfocs-or-assemblyinfovb-file"></a>Para editar o arquivo AssemblyInfo.cs ou AssemblyInfo. vb
+#### <a name="to-edit-the-assemblyinfocs-or-assemblyinfovb-file"></a>Para editar o arquivo AssemblyInfo. cs ou AssemblyInfo. vb
 
-1. No projeto SiteColumnProjectTemplate, abra o arquivo *AssemblyInfo.cs* ou *AssemblyInfo. vb* e, em seguida, adicione a seguinte instrução à parte superior dele:
+1. No projeto SiteColumnProjectTemplate, abra o arquivo *AssemblyInfo. cs* ou *AssemblyInfo. vb* e, em seguida, adicione a seguinte instrução à parte superior dele:
 
     ```vb
     Imports System.Security
@@ -755,7 +755,7 @@ ms.locfileid: "99918735"
 ## <a name="next-steps"></a>Próximas etapas
  Depois de concluir este passo a passos, você pode adicionar um assistente ao modelo de projeto. Quando um usuário cria um projeto de coluna de site, o assistente solicita ao usuário a URL do site a ser usada para depuração e se a nova solução está em área restrita e o assistente configura o novo projeto com essas informações. O assistente também coleta informações sobre a coluna (como o tipo base e o grupo no qual listar a coluna na Galeria de colunas do site) e adiciona essas informações ao arquivo de *Elements.xml* no novo projeto. Para obter mais informações, consulte [Walkthrough: criar um item de projeto de coluna de site com um modelo de projeto, parte 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Walkthrough: criar um item de projeto de coluna de site com um modelo de projeto, parte 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)
 - [Definir tipos de item de projeto personalizados do SharePoint](../sharepoint/defining-custom-sharepoint-project-item-types.md)

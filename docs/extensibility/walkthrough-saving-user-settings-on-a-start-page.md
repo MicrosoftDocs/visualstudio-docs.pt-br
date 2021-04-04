@@ -11,12 +11,12 @@ manager: jmartens
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: be270fe8b76b6cd07bd27350eabceb5eecbc446b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2f7dddfca06d7bc475286c73087828305464daa5
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105078325"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217210"
 ---
 # <a name="walkthrough-save-user-settings-on-a-start-page"></a>Walkthrough: salvar as configurações do usuário em uma página inicial
 
@@ -83,7 +83,7 @@ Para obter mais informações sobre como persistir configurações, consulte [es
 
 2. Adicione as seguintes `using` diretivas à parte superior do arquivo.
 
-     [!code-csharp[StartPageDTE#11](../extensibility/codesnippet/CSharp/walkthrough-saving-user-settings-on-a-start-page_1.cs)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VSSDK/startpagedte/cs/startpagecontrol/mycontrol.xaml.cs" id="Snippet11":::
 
 3. Adicione uma `SettingsStore` propriedade privada, conforme mostrado no exemplo a seguir.
 

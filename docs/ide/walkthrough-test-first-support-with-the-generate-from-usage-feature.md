@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ea04a9c70f23c30a5f603fa9411780223fff563
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1a1f115dfff92b1c5e5979e62af257cde6a92360
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883045"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216586"
 ---
 # <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>Instruções passo a passo: desenvolvimento de teste antes da codificação com o recurso gerar com base no uso
 
@@ -85,15 +85,15 @@ O recurso **gerar de uso** pode ser usado com estruturas de teste que se integra
 
 7. Clique em **OK** para fechar a caixa de diálogo e criar o novo arquivo.
 
-8. Em **Gerenciador de soluções**, examine o **GFUDemo_VB** ou **GFUDemo_CS** nó do projeto para verificar se o novo arquivo *automóvel. vb* ou *Automobile.cs* está lá. No editor de código, o foco ainda estará em `AutomobileTest.DefaultAutomobileIsInitializedCorrectly`, o que permite que você continue a escrever o teste com um mínimo de interrupção.
+8. Em **Gerenciador de soluções**, examine o **GFUDemo_VB** ou **GFUDemo_CS** nó do projeto para verificar se o novo arquivo *automóvel. vb* ou *automóvel. cs* está lá. No editor de código, o foco ainda estará em `AutomobileTest.DefaultAutomobileIsInitializedCorrectly`, o que permite que você continue a escrever o teste com um mínimo de interrupção.
 
 ### <a name="generate-a-property-stub"></a>Gerar um stub de propriedade
 Suponha que a especificação de produto afirma que a classe `Automobile` tem duas propriedades públicas chamadas `Model` e `TopSpeed`. Essas propriedades devem ser inicializadas com valores padrão de `"Not specified"` e `-1` pelo construtor padrão. O seguinte teste de unidade verificará para que o construtor padrão defina as propriedades para seus valores padrão corretos.
 
 1. Adicione a seguinte linha de código no método de teste `DefaultAutomobileIsInitializedCorrectly`.
 
-     [!code-csharp[VbTDDWalkthrough#1](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.cs)]
-     [!code-vb[VbTDDWalkthrough#1](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/unittest1.cs" id="Snippet1":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/unittest1.vb" id="Snippet1":::
 
 2. Com o código faz referência a duas propriedades indefinidas em `Automobile`, um sublinhado ondulado aparecerá sob `Model` e `TopSpeed`. Passe o mouse sobre `Model`, escolha a lâmpada de erro **Ações Rápidas** e, em seguida, escolha **Gerar propriedade 'Automobile.Model'**.
 
@@ -106,8 +106,8 @@ Agora vamos criar um método de teste que gerará um stub de construtor para ini
 
 1. Adicione também o seguinte método de teste à sua classe `AutomobileTest`.
 
-     [!code-csharp[VbTDDWalkthrough#2](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.cs)]
-     [!code-vb[VbTDDWalkthrough#2](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/intermediate.cs" id="Snippet2":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/intermediate.vb" id="Snippet2":::
 
 2. Clique na lâmpada de erro **Ações Rápidas** sob a linha ondulada vermelha e, em seguida, clique em **Gerar construtor em 'Automobile'**.
 
@@ -120,8 +120,8 @@ Suponha que a especificação afirme que um novo `Automobile` poderá ser coloca
 
 1. Adicione as seguintes linhas ao método `AutomobileWithModelNameCanStart`.
 
-     [!code-csharp[VbTDDWalkthrough#3](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.cs)]
-     [!code-vb[VbTDDWalkthrough#3](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/unittest1.cs" id="Snippet3":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/unittest1.vb" id="Snippet3":::
 
 2. Clique na lâmpada de erro **Ações Rápidas** para a chamada de método `myAuto.Start` e, em seguida, clique em **Gerar método 'Automobile.Start'**.
 
@@ -145,13 +145,13 @@ Suponha que a especificação afirme que um novo `Automobile` poderá ser coloca
 
 1. Adicione o seguinte código ao construtor padrão, de maneira que as propriedades `Model`, `TopSpeed` e `IsRunning` sejam inicializadas com seus valores padrão corretos, `"Not specified"`, `-1` e `False` (ou `false` para o C#).
 
-     [!code-csharp[VbTDDWalkthrough#5](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.cs)]
-     [!code-vb[VbTDDWalkthrough#5](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/automobile.cs" id="Snippet5":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/automobile.vb" id="Snippet5":::
 
 2. Quando o método `Start` é chamado, ele deve definir o sinalizador `IsRunning` como true apenas se as propriedades `Model` ou `TopSpeed` estiverem definidas com valor diferente de seu valor padrão. Remova o `NotImplementedException` do corpo do método e adicione o código a seguir.
 
-     [!code-csharp[VbTDDWalkthrough#6](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.cs)]
-     [!code-vb[VbTDDWalkthrough#6](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/automobile.cs" id="Snippet6":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/automobile.vb" id="Snippet6":::
 
 ### <a name="run-the-tests-again"></a>Executar os testes novamente
 

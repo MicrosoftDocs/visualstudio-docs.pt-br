@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4fe2da1bc6aefefb92fbd6f7d11613372b8b7742
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 47fcc7e388f240d8b9636a733df4b6b8767f0df4
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879690"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106218003"
 ---
 # <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>Como: adicionar um descritor de filtro a um método localizador
   Os descritores de filtro permitem que os consumidores do modelo passem valores para métodos antes de serem executados. Para obter mais informações, consulte [criar um modelo de conectividade de dados corporativos](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -66,8 +66,8 @@ ms.locfileid: "99879690"
     > [!NOTE]
     > Substitua o valor do `ServerName` campo pelo nome do seu servidor.
 
-     [!code-csharp[SP_BDC#11](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#11)]
-     [!code-vb[SP_BDC#11](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#11)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs" id="Snippet11":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb" id="Snippet11":::
 
 ## <a name="see-also"></a>Confira também
 - [Como adicionar um método localizador](../sharepoint/how-to-add-a-finder-method.md)

@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 237cd28bffece4517e80b979602ac8d2ed357aa2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 87f5b0cf86178b88b1611f4b0ce8a4bbacde780e
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882681"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216794"
 ---
 # <a name="how-to-add-a-specific-finder-method"></a>Como adicionar um método localizador específico
   Você pode retornar uma única instância de entidade criando um método *localizador específico* . O serviço corporativo de conectividade de dados (BDC) executa o método localizador específico quando um usuário escolhe uma entidade em uma Web Part de dados corporativos ou em uma lista externa. Para obter mais informações, consulte [criar um modelo de conectividade de dados corporativos](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -84,8 +84,8 @@ ms.locfileid: "99882681"
      > [!NOTE]
      > Substitua o valor do `ServerName` campo pelo nome do seu servidor.
 
-     [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]
-     [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs" id="Snippet3":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb" id="Snippet3":::
 
 ## <a name="see-also"></a>Confira também
 - [Criar um modelo de conectividade de dados corporativos](../sharepoint/designing-a-business-data-connectivity-model.md)

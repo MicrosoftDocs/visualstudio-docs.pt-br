@@ -20,12 +20,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: c410d9290b7e377654a9cff87f8df7524a1b7149
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f84fbaae3273b8830cce1c39cc3e42b62e487d3e
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866873"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216235"
 ---
 # <a name="handle-a-concurrency-exception"></a>Tratar uma exceção de simultaneidade
 
@@ -159,13 +159,13 @@ Quando você tenta executar uma atualização e uma exceção é gerada, geralme
 
 1. Adicione o seguinte código abaixo do `Form1_Load` método:
 
-   [!code-csharp[VbRaddataConcurrency#1](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_1.cs)]
-   [!code-vb[VbRaddataConcurrency#1](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_1.vb)]
+   :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConcurrency/CS/Form1.cs" id="Snippet1":::
+   :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConcurrency/VB/Form1.vb" id="Snippet1":::
 
 2. Substitua o `CustomersBindingNavigatorSaveItem_Click` método para chamar o `UpdateDatabase` método para que fique semelhante ao seguinte:
 
-   [!code-csharp[VbRaddataConcurrency#2](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_2.cs)]
-   [!code-vb[VbRaddataConcurrency#2](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_2.vb)]
+   :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConcurrency/CS/Form1.cs" id="Snippet2":::
+   :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConcurrency/VB/Form1.vb" id="Snippet2":::
 
 ### <a name="display-choices-to-the-user"></a>Exibir opções para o usuário
 
@@ -173,8 +173,8 @@ O código que você acabou de escrever chama o `CreateMessage` procedimento para
 
 Crie a mensagem adicionando o código a seguir ao **Editor de código**. Insira este código abaixo do `UpdateDatabase` método:
 
-[!code-csharp[VbRaddataConcurrency#4](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_3.cs)]
-[!code-vb[VbRaddataConcurrency#4](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_3.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConcurrency/CS/Form1.cs" id="Snippet4":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConcurrency/VB/Form1.vb" id="Snippet4":::
 
 ### <a name="process-the-users-response"></a>Processar a resposta do usuário
 
@@ -182,8 +182,8 @@ Você também precisa de código para processar a resposta do usuário para a ca
 
 Adicione o código a seguir abaixo do código que foi adicionado na seção anterior:
 
-[!code-csharp[VbRaddataConcurrency#3](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_4.cs)]
-[!code-vb[VbRaddataConcurrency#3](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_4.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConcurrency/CS/Form1.cs" id="Snippet3":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConcurrency/VB/Form1.vb" id="Snippet3":::
 
 ## <a name="test-the-form-behavior"></a>Testar o comportamento do formulário
 
@@ -214,6 +214,6 @@ Agora, é possível testar o formulário para garantir que ele se comporta da fo
 
    A seleção de **não** cancela a atualização e atualiza o conjunto de dados com os valores que estão no momento. Selecionar **Sim** grava o valor proposto no banco de dados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Salvar dados novamente no banco de dados](../data-tools/save-data-back-to-the-database.md)

@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e4eade25f53bfd58f920a8d2a046d7d09ee98ac8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6bd75c94e2f0f557b85d945d141f952950abb2eb
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879677"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216339"
 ---
 # <a name="how-to-add-a-finder-method"></a>Como adicionar um método localizador
   Para habilitar o serviço BDC (conectividade de dados corporativos) para exibir uma lista de entidades em uma Web Part ou lista, você deve criar um método *localizador* . Um método Finder é um método especial que retorna uma coleção de instâncias de entidade. Para obter mais informações, consulte [criando um modelo de conectividade de dados corporativos](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -61,8 +61,8 @@ ms.locfileid: "99879677"
    > [!NOTE]
    > Substitua o valor do `ServerName` campo pelo nome do seu servidor.
 
-    [!code-csharp[SP_BDC#2](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#2)]
-    [!code-vb[SP_BDC#2](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#2)]
+    :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs" id="Snippet2":::
+    :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb" id="Snippet2":::
 
 ## <a name="see-also"></a>Confira também
 - [Visão geral das ferramentas de design de modelo do BDC](../sharepoint/bdc-model-design-tools-overview.md)

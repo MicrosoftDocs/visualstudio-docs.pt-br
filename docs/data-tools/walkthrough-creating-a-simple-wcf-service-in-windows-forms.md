@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 92c2d72e2b0c71abe93290ab2bfb9b5b584e9178
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5352ad4724e7c54e72dbaa52573c814657fa041e
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866275"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216092"
 ---
 # <a name="walkthrough-create-a-simple-wcf-service-in-windows-forms"></a>Walkthrough: criar um serviço WCF simples no Windows Forms
 
@@ -65,35 +65,35 @@ Este tutorial demonstra como criar um serviço de Windows Communication Foundati
    > [!NOTE]
    > Isso cria um serviço de trabalho que pode ser testado e acessado. As duas etapas a seguir demonstram como você pode modificar o método padrão para usar um tipo de dados diferente. Em um aplicativo real, você também adicionaria suas próprias funções ao serviço.
 
-5. Em **Gerenciador de soluções**, clique duas vezes em **IService1. vb** ou **IService1.cs**.
+5. Em **Gerenciador de soluções**, clique duas vezes em **IService1. vb** ou **IService1. cs**.
 
    ![O arquivo IService1](../data-tools/media/wcf2.png)
 
    Localize a seguinte linha:
 
-   [!code-csharp[WCFWalkthrough#4](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_1.cs)]
-   [!code-vb[WCFWalkthrough#4](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_1.vb)]
+   :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/iservice1_2.cs" id="Snippet4":::
+   :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/iservice1_2.vb" id="Snippet4":::
 
    Altere o tipo do `value` parâmetro para cadeia de caracteres:
 
-   [!code-csharp[WCFWalkthrough#1](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_2.cs)]
-   [!code-vb[WCFWalkthrough#1](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_2.vb)]
+   :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/iservice1.cs" id="Snippet1":::
+   :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/iservice1.vb" id="Snippet1":::
 
    No código acima, observe os `<OperationContract()>` atributos ou `[OperationContract]` . Esses atributos são necessários para qualquer método exposto pelo serviço.
 
-6. Em **Gerenciador de soluções**, clique duas vezes em **Service1. vb** ou **Service1.cs**.
+6. Em **Gerenciador de soluções**, clique duas vezes em **Service1. vb** ou **Service1. cs**.
 
    ![O arquivo Service1](../data-tools/media/wcf3.png)
 
    Localize a seguinte linha:
 
-   [!code-vb[WCFWalkthrough#5](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_3.vb)]
-   [!code-csharp[WCFWalkthrough#5](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_3.cs)]
+   :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/service1_2.vb" id="Snippet5":::
+   :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/service1_2.cs" id="Snippet5":::
 
    Altere o tipo do `value` parâmetro para cadeia de caracteres:
 
-   [!code-csharp[WCFWalkthrough#2](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_4.cs)]
-   [!code-vb[WCFWalkthrough#2](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_4.vb)]
+   :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/service1.cs" id="Snippet2":::
+   :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/service1.vb" id="Snippet2":::
 
 ## <a name="test-the-service"></a>Teste o serviço
 
@@ -135,7 +135,7 @@ Este tutorial demonstra como criar um serviço de Windows Communication Foundati
 
 ### <a name="build-a-client-application"></a>Compilar um aplicativo cliente
 
-1. Em **Gerenciador de soluções**, clique duas vezes em **Form1. vb** ou **Form1.cs** para abrir a designer de formulários do Windows se ela ainda não estiver aberta.
+1. Em **Gerenciador de soluções**, clique duas vezes em **Form1. vb** ou **Form1. cs** para abrir o designer de formulários do Windows se ele ainda não estiver aberto.
 
 2. Na **caixa de ferramentas**, arraste um `TextBox` controle, `Label` um controle e um `Button` controle para o formulário.
 
@@ -143,8 +143,8 @@ Este tutorial demonstra como criar um serviço de Windows Communication Foundati
 
 3. Clique duas vezes em `Button` e adicione o seguinte código ao manipulador de `Click` eventos:
 
-     [!code-csharp[WCFWalkthrough#3](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_5.cs)]
-     [!code-vb[WCFWalkthrough#3](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_5.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/form1.cs" id="Snippet3":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/form1.vb" id="Snippet3":::
 
 4. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **WindowsApplication1** e clique em **definir como projeto de inicialização**.
 

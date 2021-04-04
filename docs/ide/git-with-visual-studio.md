@@ -2,18 +2,18 @@
 title: A experiência do git no Visual Studio
 titleSuffix: ''
 description: Saiba como a nova experiência integrada do git no Visual Studio 2019 pode ajudá-lo a ser mais produtivo.
-ms.date: 03/16/2021
+ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: e33b91088022a4588773737b2820677c84a65807
-ms.sourcegitcommit: 3a855d3513407ea78336386dc3be0b75142614b0
+ms.openlocfilehash: b58a60efbf2c602706eed6d9278574d1bf1fffcc
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103622641"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216755"
 ---
 # <a name="git-experience-in-visual-studio"></a>Experiência de git no Visual Studio
 
@@ -202,9 +202,10 @@ Embora a nova experiência de git esteja agora ativada por padrão no Visual Stu
 
 ## <a name="see-also"></a>Confira também
 
+- Introdução [ao git e ao GitHub no tutorial do Visual Studio](/learn/modules/visual-studio-github-push/) sobre Microsoft Learn
 - [Introdução ao git no Visual Studio](https://www.youtube.com/watch?v=GCZ9x3yqkyc) vídeo sobre o YouTube
 - [Anunciando o lançamento da experiência de git na](https://devblogs.microsoft.com/visualstudio/announcing-the-release-of-the-git-experience-in-visual-studio/) postagem de blog do Visual Studio
-- [O lançamento da nova experiência de git](https://www.youtube.com/watch?v=UHrAg3iKoe0&t) no YouTube
+- [O lançamento do novo vídeo de experiência git](https://www.youtube.com/watch?v=UHrAg3iKoe0&t) no YouTube
 - [A série de caixas de ferramentas do Visual Studio apresenta: o novo vídeo de experiência git](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/The-New-Git-Experience) no Channel 9 e no [YouTube](https://www.youtube.com/watch?v=ZiQ2LXtAJ6I&feature=youtu.be)
 - [Novas atualizações incríveis para a experiência de git na](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/) postagem de blog do Visual Studio
 - [Experiência de git aprimorada na postagem no blog do Visual Studio 2019](https://devblogs.microsoft.com/visualstudio/improved-git-experience-in-visual-studio-2019/)

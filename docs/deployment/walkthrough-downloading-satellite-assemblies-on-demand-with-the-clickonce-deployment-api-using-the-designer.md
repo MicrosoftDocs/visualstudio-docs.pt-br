@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 74e6641eff7fcaecfab300afe4747bb2ab7b75b2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9e9166dbd3d6cd7ba4500e2390bd611a31bcee7b
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917298"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216872"
 ---
 # <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>Walkthrough: baixar assemblies satélite sob demanda com a API de implantação do ClickOnce usando o designer
 Windows Forms aplicativos podem ser configurados para várias culturas por meio do uso de assemblies satélite. Um *assembly satélite* é um assembly que contém recursos de aplicativo para uma cultura diferente da cultura padrão do aplicativo.
@@ -57,11 +57,11 @@ Windows Forms aplicativos podem ser configurados para várias culturas por meio 
 
 ### <a name="to-download-satellite-assemblies-on-demand-in-c"></a>Para baixar assemblies satélite sob demanda em C\#
 
-1. Abra o arquivo *Program.cs* . Se você não vir esse arquivo em Gerenciador de Soluções, selecione seu projeto e, no menu **projeto** , clique em **Mostrar todos os arquivos**.
+1. Abra o arquivo *Program. cs* . Se você não vir esse arquivo em Gerenciador de Soluções, selecione seu projeto e, no menu **projeto** , clique em **Mostrar todos os arquivos**.
 
 2. Use o código a seguir para baixar o assembly satélite apropriado e iniciar o aplicativo.
 
-     [!code-csharp[ClickOnce.SatelliteAssemblies#1](../deployment/codesnippet/CSharp/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_1.cs)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnce.SatelliteAssemblies/CS/Program.cs" id="Snippet1":::
 
 ### <a name="to-download-satellite-assemblies-on-demand-in-visual-basic"></a>Para baixar assemblies satélite sob demanda no Visual Basic
 
@@ -71,11 +71,11 @@ Windows Forms aplicativos podem ser configurados para várias culturas por meio 
 
 3. Adicione as seguintes importações ao início do arquivo *ApplicationEvents. vb* .
 
-     [!code-vb[ClickOnce.SatelliteAssembliesVB#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_2.vb)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnce.SatelliteAssembliesVB/VB/ApplicationEvents.vb" id="Snippet1":::
 
 4. Adicione o código a seguir à classe `MyApplication` .
 
-     [!code-vb[ClickOnce.SatelliteAssembliesVB#2](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_3.vb)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnce.SatelliteAssembliesVB/VB/ApplicationEvents.vb" id="Snippet2":::
 
 ## <a name="next-steps"></a>Próximas etapas
  Em um ambiente de produção, provavelmente você precisará remover a linha nos exemplos de código que define <xref:System.Threading.Thread.CurrentUICulture%2A> para um valor específico, pois os computadores cliente terão o valor correto definido por padrão. Quando o aplicativo é executado em um computador cliente japonês, por exemplo, <xref:System.Threading.Thread.CurrentUICulture%2A> será `ja-JP` por padrão. Configurá-lo programaticamente é uma boa maneira de testar seus assemblies satélites antes de implantar seu aplicativo.

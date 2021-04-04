@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0f55eb3ba06f2541bf1f4777c24927993444c6b1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8f01d3c15490a19c8cb5071cf7677fcf2b2a5384
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873600"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216612"
 ---
 # <a name="how-to-create-a-sharepoint-project-item-extension"></a>Como: criar uma extensão de item de projeto do SharePoint
   Crie uma extensão de item de projeto quando desejar adicionar funcionalidade a um item de projeto do SharePoint que já esteja instalado no Visual Studio. Para obter mais informações, consulte [estender itens de projeto do SharePoint](../sharepoint/extending-sharepoint-project-items.md).
@@ -49,8 +49,8 @@ ms.locfileid: "99873600"
 ## <a name="example"></a>Exemplo
  O exemplo de código a seguir demonstra como criar uma extensão simples para o item de projeto receptor de evento. Cada vez que o usuário adiciona um item de projeto receptor de eventos a um projeto do SharePoint, essa extensão grava uma mensagem na janela de **saída** e na janela de **lista de erros** .
 
- [!code-csharp[SPExtensibility.ProjectSystemExtension.General#1](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/projectitemextension.cs#1)]
- [!code-vb[SPExtensibility.ProjectSystemExtension.General#1](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/projectitemextension.vb#1)]
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/projectitemextension.cs" id="Snippet1":::
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/projectitemextension.vb" id="Snippet1":::
 
  Este exemplo usa o serviço de projeto do SharePoint para gravar a mensagem na janela de **saída** e na janela de **lista de erros** . Para obter mais informações, consulte [usar o serviço de projeto do SharePoint](../sharepoint/using-the-sharepoint-project-service.md).
 

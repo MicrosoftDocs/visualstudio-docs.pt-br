@@ -22,12 +22,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9fb859d61ab31a554579f72121a18a541b2995a7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b3a238bf325819b340b983618b5aac8f723184f4
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858547"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216183"
 ---
 # <a name="read-xml-data-into-a-dataset"></a>Ler dados XML em um conjunto de dados
 
@@ -174,8 +174,8 @@ O botão **ler XML** lê o arquivo XML no conjunto de os. Em seguida, ele define
 
 3. Digite o seguinte código no `ReadXmlButton_Click` manipulador de eventos:
 
-     [!code-csharp[VbRaddataFillingAndExecuting#2](../data-tools/codesnippet/CSharp/read-xml-data-into-a-dataset_1.cs)]
-     [!code-vb[VbRaddataFillingAndExecuting#2](../data-tools/codesnippet/VisualBasic/read-xml-data-into-a-dataset_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataFillingAndExecuting/CS/Form1.cs" id="Snippet2":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataFillingAndExecuting/VB/Form1.vb" id="Snippet2":::
 
 4. No `ReadXMLButton_Click` código do manipulador de eventos, altere a `filepath =` entrada para o caminho correto.
 
@@ -191,8 +191,8 @@ O botão **Mostrar esquema** cria um <xref:System.IO.StringWriter> objeto que é
 
 3. Cole o código a seguir no `ShowSchemaButton_Click` manipulador de eventos.
 
-     [!code-csharp[VbRaddataFillingAndExecuting#3](../data-tools/codesnippet/CSharp/read-xml-data-into-a-dataset_2.cs)]
-     [!code-vb[VbRaddataFillingAndExecuting#3](../data-tools/codesnippet/VisualBasic/read-xml-data-into-a-dataset_2.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataFillingAndExecuting/CS/Form1.cs" id="Snippet3":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataFillingAndExecuting/VB/Form1.vb" id="Snippet3":::
 
 ## <a name="test-the-form"></a>Testar o formulário
 

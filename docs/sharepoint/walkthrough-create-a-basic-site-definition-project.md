@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: def1ae862a7b9ba4def62cb590260c5a18758929
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a505ff059b347c6adbef15a8fe8bcfe7b274eaa4
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937700"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106218016"
 ---
 # <a name="walkthrough-create-a-basic-site-definition-project"></a>Walkthrough: criar um projeto de definição de site básico
   Este tutorial mostra como criar uma definição de site básica que contém uma Web Part Visual com alguns controles. Para fins de clareza, a Web Part Visual que você cria tem apenas alguns controles. No entanto, você pode criar definições de site do SharePoint mais sofisticadas que incluem mais funcionalidade.
@@ -112,10 +112,10 @@ ms.locfileid: "99937700"
     </table>
     ```
 
-6. Em *VisualWebPart1. ascx*, abra o arquivo *VisualWebPart1.ascx.cs* (para [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)] ) ou *VisualWebPart1. ascx. vb* (para [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ) e, em seguida, adicione o seguinte código:
+6. Em *VisualWebPart1. ascx*, abra o arquivo *VisualWebPart1. ascx. cs* (para [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)] ) ou *VisualWebPart1. ascx. vb* (para [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ) e, em seguida, adicione o seguinte código:
 
-     [!code-vb[SP_SimpleSiteDef#1](../sharepoint/codesnippet/VisualBasic/testsitedefvb/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.vb#1)]
-     [!code-csharp[SP_SimpleSiteDef#1](../sharepoint/codesnippet/CSharp/testsitedef/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.cs#1)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/testsitedefvb/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.vb" id="Snippet1":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/testsitedef/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.cs" id="Snippet1":::
 
      Esse código adiciona a funcionalidade para o clique no botão da Web Part.
 
@@ -183,6 +183,6 @@ ms.locfileid: "99937700"
 
      O texto aparece no rótulo no lado direito do botão.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Como: criar um receptor de eventos](../sharepoint/how-to-create-an-event-receiver.md)
 - [Desenvolver soluções do SharePoint](../sharepoint/developing-sharepoint-solutions.md)

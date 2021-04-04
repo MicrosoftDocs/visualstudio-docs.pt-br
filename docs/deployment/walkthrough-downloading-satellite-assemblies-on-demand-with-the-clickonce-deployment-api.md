@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 59c468e28321c01993cd2f4b119218fb29bc6020
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d6ebcb455147b1cb014eb7aafc9f6a9e658e0131
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917320"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217002"
 ---
 # <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api"></a>Walkthrough: baixar assemblies satélite sob demanda com a API de implantação do ClickOnce
 Windows Forms aplicativos podem ser configurados para várias culturas por meio do uso de assemblies satélite. Um *assembly satélite* é um assembly que contém recursos de aplicativo para uma cultura diferente da cultura padrão do aplicativo.
@@ -47,8 +47,8 @@ Windows Forms aplicativos podem ser configurados para várias culturas por meio 
 
 1. Adicione o código a seguir ao seu aplicativo para habilitar o download sob demanda de assemblies satélite.
 
-    [!code-csharp[ClickOnce.SatelliteAssembliesSDK#1](../deployment/codesnippet/CSharp/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api_1.cs)]
-    [!code-vb[ClickOnce.SatelliteAssembliesSDK#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api_1.vb)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnce.SatelliteAssembliesSDK/CS/Program.cs" id="Snippet1":::
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnce.SatelliteAssembliesSDK/VB/Form1.vb" id="Snippet1":::
 
 2. Gere assemblies satélite para seu aplicativo usando [Resgen.exe (gerador de arquivo de recurso)](/dotnet/framework/tools/resgen-exe-resource-file-generator) ou [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
@@ -67,5 +67,5 @@ Windows Forms aplicativos podem ser configurados para várias culturas por meio 
 ## <a name="next-steps"></a>Próximas etapas
  Em um ambiente de produção, provavelmente você precisará remover a linha no exemplo de código que define <xref:System.Threading.Thread.CurrentUICulture%2A> para um valor específico, pois os computadores cliente terão o valor correto definido por padrão. Quando o aplicativo é executado em um computador cliente japonês, por exemplo, <xref:System.Threading.Thread.CurrentUICulture%2A> será `ja-JP` por padrão. Definir esse valor programaticamente é uma boa maneira de testar seus assemblies satélites antes de implantar seu aplicativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Localizar aplicativos ClickOnce](../deployment/localizing-clickonce-applications.md)
