@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c8bc59fd1d47a04b2f4c6ec2be9b9adb035f11e2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cbffa062e1115264f9496081cdcf63d17d2a36c7
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837808"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217483"
 ---
 # <a name="access-local-and-remote-data-in-clickonce-applications"></a>Acesso a dados locais e remotos em aplicativos ClickOnce
 A maioria dos aplicativos consome ou gera dados. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] oferece uma variedade de opções para ler e gravar dados, tanto localmente quanto remotamente.
@@ -55,8 +55,8 @@ A maioria dos aplicativos consome ou gera dados. [!INCLUDE[ndptecclick](../deplo
 
  Depois que o aplicativo tiver essas permissões, ele poderá acessar o diretório de dados usando chamadas de método em classes dentro do <xref:System.IO> . Você pode obter o caminho do diretório de dados em um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo Windows Forms usando a <xref:System.Deployment.Application.ApplicationDeployment.DataDirectory%2A> propriedade definida na <xref:System.Deployment.Application.ApplicationDeployment.CurrentDeployment%2A> propriedade de <xref:System.Deployment.Application.ApplicationDeployment> . Essa é a maneira mais conveniente e recomendada para acessar seus dados. O exemplo de código a seguir demonstra como fazer isso para um arquivo de texto chamado *CSV.txt* que você incluiu em sua implantação como um arquivo de dados.
 
- [!code-csharp[ClickOnce.OpenDataFile#1](../deployment/codesnippet/CSharp/accessing-local-and-remote-data-in-clickonce-applications_1.cs)]
- [!code-vb[ClickOnce.OpenDataFile#1](../deployment/codesnippet/VisualBasic/accessing-local-and-remote-data-in-clickonce-applications_1.vb)]
+ :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnce.OpenDataFile/CS/Form1.cs" id="Snippet1":::
+ :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnce.OpenDataFile/VB/Form1.vb" id="Snippet1":::
 
  Para obter mais informações sobre como marcar arquivos em sua implantação como arquivos de dados, consulte [como: incluir um arquivo de dados em um aplicativo ClickOnce](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md).
 
@@ -109,6 +109,6 @@ A maioria dos aplicativos consome ou gera dados. [!INCLUDE[ndptecclick](../deplo
 
  Na maioria das vezes, você não precisará acessar o banco de dados diretamente, mas o acessará, em vez disso, por meio de um aplicativo de servidor Web escrito em um [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] serviço Web XML. O acesso ao banco de dados dessa maneira costuma ser o melhor método se seu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo for implantado de um servidor Web. Você pode acessar o servidor em confiança parcial sem elevar as permissões do aplicativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Como: incluir um arquivo de dados em um aplicativo ClickOnce](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)

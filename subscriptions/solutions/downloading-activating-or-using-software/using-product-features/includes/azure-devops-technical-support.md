@@ -10,12 +10,12 @@ user.type: subscriber
 tags: redirect
 subscription.type: vl, cloud, retail, partner
 sap.id: af210210-e3e1-2b2e-8d79-9bd20e851241
-ms.openlocfilehash: 096b025710a2907996654d59a9f30d92500b64d3
-ms.sourcegitcommit: 04954be0c4373f82f79181e1a5e7812be4d3e1f7
+ms.openlocfilehash: 1361fe540c037a7890fff89fe60b25249d69bfff
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100496271"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106097091"
 ---
 ## <a name="azure-devops-technical-support"></a>Suporte técnico do Azure DevOps  
 
@@ -23,7 +23,7 @@ O suporte a assinaturas do Visual Studio fornece assistência com vendas, assina
 
 ## <a name="azure-devops-documentation"></a>Documentação do Azure DevOps 
 
-Examine os tutoriais, os guias de solução de problemas, os recursos úteis e uma variedade de outros tópicos na [documentação do Azure DevOps](https://docs.microsoft.com/azure/devops/?view=azure-devops).
+Examine os tutoriais, os guias de solução de problemas, os recursos úteis e uma variedade de outros tópicos na [documentação do Azure DevOps](https://docs.microsoft.com/azure/devops/?view=azure-devops&preserve-view=true).
 
 ## <a name="developer-community"></a>Comunidade de desenvolvedores
 

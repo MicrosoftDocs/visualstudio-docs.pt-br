@@ -2,7 +2,7 @@
 title: Instalar versões do Visual Studio lado a lado
 description: Saiba como instalar o Visual Studio em um computador que tenha uma versão anterior ou posterior do Visual Studio já instalada.
 ms.custom: SEO-VS-2020
-ms.date: 07/24/2019
+ms.date: 03/29/2021
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: conceptual
@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: ornellaalt
 ms.author: ornella
 manager: jmartens
-ms.openlocfilehash: f17759d186805dc72623f27c9f254c7a6c0d36e2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0814b6ebfacd5b4cf24d0f451967903b9551808f
+ms.sourcegitcommit: 22789927ec8e877b7d2b67a555d6df97d84103e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941522"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105981271"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>Instalar versões do Visual Studio lado a lado
 
@@ -50,17 +50,44 @@ Antes de instalar as versões lado a lado, revise as seguintes condições:
 
 ## <a name="install-minor-visual-studio-versions-side-by-side"></a>Instale as versões secundárias do Visual Studio lado a lado
 
-Ao atualizar de uma versão secundária do Visual Studio para a próxima, o instalador do Visual Studio atualizará sua instalação atual para a próxima versão nesse canal por padrão. Por exemplo, ao instalar a versão prévia do 16.6.4, o instalador tentará substituir a instalação atual do 16.6.3 preview, já que ambas as versões estão no canal de visualização 16,6. Isso ajuda a garantir que as versões mais antigas do Visual Studio não estejam ocupando espaço no seu computador. Em alguns casos específicos, pode ser útil instalar versões secundárias lado a lado. Em nosso exemplo, isso significa ter 16.6.3 e 16.6.4 no mesmo computador.
+Ao atualizar de uma versão secundária do Visual Studio para a próxima, o instalador do Visual Studio, por padrão, atualizará sua instalação atual para a versão mais recente nesse canal. Por exemplo, suponha que 16.9.4 acabou de ser lançado. O instalador tentará substituir sua instalação atual do 16.9.3 (ou inferior) por 16.9.4, já que ambas as versões fazem parte do [canal de lançamento do Visual Studio 2019](https://docs.microsoft.com/visualstudio/productinfo/release-rhythm). Substituir a versão mais antiga pela versão mais recente durante a atualização ajuda a garantir que as versões mais antigas do Visual Studio não estejam ocupando espaço no seu computador. No entanto, em alguns casos específicos, pode ser útil instalar diferentes versões secundárias de lançamento do Visual Studio lado a lado. Por exemplo, talvez você queira ter 16.9.3 e 16.9.4 no mesmo computador. 
 
-1. Baixe o [arquivo bootstrapper do Visual Studio](/visualstudio/releases/2019/history#installing-an-earlier-release) para a versão secundária que você deseja instalar lado a lado com suas versões existentes do Visual Studio.
+::: moniker range="vs-2017"
+
+1. Baixe o bootstrapper mais recente para o Visual Studio 2017 versão 15,9 da página [versões anteriores do Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/) para a versão que você deseja instalar lado a lado com a versão existente do Visual Studio.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. Baixe o arquivo bootstrapper do Visual Studio 2019 na [página de downloads do Visual Studio](https://visualstudio.microsoft.com/downloads) ou na página de [versões do Visual Studio 2019](https://docs.microsoft.com/visualstudio/releases/2019/history#installing-an-earlier-release) para a versão secundária que você deseja instalar lado a lado com a versão existente do Visual Studio.
+
+::: moniker-end
+
+
 2. Abra o prompt de comando no modo de administrador. Para fazer isso, abra o menu Iniciar do Windows, digite "cmd", clique com o botão direito do mouse no resultado da pesquisa do prompt de comando e selecione **Executar como administrador**. No prompt de comando, altere o diretório para a pasta onde o arquivo de bootstrapper do Visual Studio está localizado.
-3. Execute o comando a seguir, especificando um novo caminho de pasta para o local de instalação e substituindo o nome do arquivo. exe pelo nome de bootstrapper apropriado para a versão do Visual Studio que você está instalando. O nome do arquivo. exe deve corresponder ou ser semelhante a um dos seguintes arquivos:
-   * vs_community.exe para Visual Studio Community
-   * vs_professional.exe para Visual Studio Professional
-   * vs_enterprise.exe para Visual Studio Enterprise
 
+::: moniker range="vs-2017"
+
+3. Execute o comando a seguir, especificando um novo caminho de pasta para o local de instalação e substituindo o nome do arquivo. exe pelo nome de bootstrapper apropriado para a versão do Visual Studio que você está instalando. O nome do arquivo. exe deve corresponder ou ser semelhante a um dos seguintes arquivos:
+
+   * vs_enterprise.exe para Visual Studio Enterprise
+   * vs_professional.exe para Visual Studio Professional
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+3. Execute o comando a seguir, especificando um novo caminho de pasta para o local de instalação e substituindo o nome do arquivo. exe pelo nome de bootstrapper apropriado para a versão do Visual Studio que você está instalando. O nome do arquivo. exe deve corresponder ou ser semelhante a um dos seguintes arquivos:
+
+   * vs_enterprise.exe para Visual Studio Enterprise
+   * vs_professional.exe para Visual Studio Professional
+   * vs_community.exe para Visual Studio Community
+
+::: moniker-end 
+  
    ```
-   vs_Enterprise.exe --installPath "C:\Program Files (x86)\Microsoft Visual Studio\<2019 AddNewPath>"
+   vs_Enterprise.exe --installPath "C:\Program Files (x86)\Microsoft Visual Studio\<AddNewPath>"
    ```
 
 4. Siga as caixas de diálogo do instalador para selecionar os componentes necessários para a instalação. Para obter mais informações, consulte [instalar o Visual Studio](install-visual-studio.md#step-4---choose-workloads).
@@ -75,7 +102,7 @@ Para informações específicas do idioma, consulte o tópico apropriado na tabe
 
 ::: moniker range="vs-2017"
 
-| Linguagem | Tópico |
+| Idioma | Tópico |
 |--------------|-----------|
 | Visual Basic | [Página de Aplicativo, Designer de Projeto (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md?view=vs-2017&preserve-view=true) |
 | Visual C# | [Página Aplicativo, Designer de Projeto (C#)](../ide/reference/application-page-project-designer-csharp.md?view=vs-2017&preserve-view=true) |
@@ -94,7 +121,7 @@ Para informações específicas do idioma, consulte o tópico apropriado na tabe
 
 ::: moniker range=">= vs-2019"
 
-| Linguagem | Tópico |
+| Idioma | Tópico |
 |--------------|-----------|
 | Visual Basic | [Página de Aplicativo, Designer de Projeto (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md) |
 | Visual C# | [Página Aplicativo, Designer de Projeto (C#)](../ide/reference/application-page-project-designer-csharp.md) |

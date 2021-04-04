@@ -11,12 +11,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7c163aa10bdcb3ee28de6d6950dd15f85df876bc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b09db3fecde5d4b87b24963930b2783b0c68052c
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885606"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106213973"
 ---
 # <a name="how-to-handle-deployment-conflicts"></a>Como tratar conflitos de implantação
   Você pode fornecer seu próprio código para lidar com conflitos de implantação para um item de projeto do SharePoint. Por exemplo, você pode determinar se algum arquivo no item de projeto atual já existe no local de implantação e, em seguida, excluir os arquivos implantados antes de o item de projeto atual ser implantado. Para obter mais informações sobre conflitos de implantação, consulte [estendendo o empacotamento e a implantação do SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md).
@@ -44,8 +44,8 @@ ms.locfileid: "99885606"
 
  Para simplificar, o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted> manipulador de eventos neste exemplo supõe que exista um conflito de implantação (ou seja, ele sempre adiciona um novo <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict> objeto) e o `Resolve` método simplesmente retorna **true** para indicar que o conflito foi resolvido. Em um cenário real, o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted> manipulador de eventos determinará primeiro se existe um conflito entre um arquivo no item de projeto atual e um arquivo no local de implantação e, em seguida, adicionará um <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict> objeto somente se houver um conflito. Por exemplo, você pode usar a `e.ProjectItem.Files` propriedade no manipulador de eventos para analisar os arquivos no item de projeto e pode chamar um comando do SharePoint para analisar os arquivos no local de implantação. Da mesma forma, em um cenário real, o `Resolve` método pode chamar um comando do SharePoint para resolver o conflito no site do SharePoint. Para obter mais informações sobre como criar comandos do SharePoint, consulte [como: criar um comando do SharePoint](../sharepoint/how-to-create-a-sharepoint-command.md).
 
- [!code-vb[SPExtensibility.ProjectItemExtension.DeploymentConflict#1](../sharepoint/codesnippet/VisualBasic/deploymentconflict/extension/deploymentconflictextension.vb#1)]
- [!code-csharp[SPExtensibility.ProjectItemExtension.DeploymentConflict#1](../sharepoint/codesnippet/CSharp/deploymentconflict/extension/deploymentconflictextension.cs#1)]
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/deploymentconflict/extension/deploymentconflictextension.vb" id="Snippet1":::
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/deploymentconflict/extension/deploymentconflictextension.cs" id="Snippet1":::
 
 ## <a name="compile-the-code"></a>Compilar o código
  Este exemplo requer referências aos seguintes assemblies:

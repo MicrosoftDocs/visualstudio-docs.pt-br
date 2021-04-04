@@ -3,17 +3,17 @@ title: Instalar o Visual Studio 2019 para Mac
 description: Instruções sobre como instalar o Visual Studio 2019 para Mac e os componentes adicionais necessários para o desenvolvimento de multiplataforma.
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 09/18/2019
+ms.date: 03/04/2021
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: 5155c37a89f566841fc342bbd8213f5a38eb399d
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 653e653a0574da52c0030b06c7a8c13b436ed686
+ms.sourcegitcommit: 4bf7d82eb3a837ad5d1ae5c110039cbf74258f18
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727561"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106273408"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>Instalar o Visual Studio 2019 para Mac
 
@@ -28,7 +28,8 @@ Para começar a desenvolver aplicativos nativos de multiplataforma do .NET no ma
 
 Para criar aplicativos Xamarin para iOS ou macOS, você também precisará de:
 
-- Xcode 10.0 ou posterior. A versão estável mais recente geralmente é recomendada.
+- Um Mac compatível com a versão mais recente do Xcode. Consulte a [documentação de requisitos mínimos](https://developer.apple.com/support/xcode/) da Apple
+- A versão mais recente do [Xcode](https://developer.apple.com/xcode). Pode ser possível [usar uma versão mais antiga do Xcode](https://docs.microsoft.com/xamarin/ios/troubleshooting/questions/old-version-xcode) se o seu Mac não for compatível com a versão mais recente.
 - Uma ID da Apple. Se ainda não tiver uma ID da Apple, crie uma nova em https://appleid.apple.com. Será necessário ter uma ID da Apple para instalar e entrar no Xcode.
 
 ## <a name="installation-instructions"></a>Instruções de instalação
@@ -96,14 +97,21 @@ A instalação do Visual Studio para Mac permite que você comece a escrever có
 
 ### <a name="ios"></a>iOS
 
-1. [Hello, iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
-2. [Provisionamento de dispositivo](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning) (para executar o aplicativo no dispositivo).
+1. [Hello, iOS](https://docs.microsoft.com//xamarin/ios/get-started/hello-ios/)
+2. [Provisionamento de dispositivo](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/) (para executar o aplicativo no dispositivo).
 
 ### <a name="android"></a>Android
 
-1. [Como usar o Gerenciador de SDK do Xamarin Android](https://developer.xamarin.com/guides/android/getting_started/installation/android-sdk/?ide=xs)
-2. [Emulador do SDK do Android](https://developer.xamarin.com/guides/android/getting_started/installation/android-emulator/)
-4. [Configurar o dispositivo para desenvolvimento](https://developer.xamarin.com/guides/android/getting_started/installation/set_up_device_for_development/)
+1. [Hello, Android](https://docs.microsoft.com/xamarin/android/get-started/hello-android/)
+2. [Como usar o Gerenciador de SDK do Xamarin Android](https://docs.microsoft.com/xamarin/android/get-started/installation/android-sdk?tabs=macos)
+3. [Emulador do SDK do Android](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/)
+4. [Configurar o dispositivo para desenvolvimento](https://docs.microsoft.com/xamarin/android/get-started/installation/set-up-device-for-development)
+
+### <a name="xamarinforms"></a>Xamarin.Forms
+
+Crie aplicativos nativos de plataforma cruzada com o Xamarin. Forms:
+
+1. [Guias de início rápido do Xamarin. Forms](https://docs.microsoft.com/xamarin/get-started/quickstarts/)
 
 ### <a name="net-core-apps-aspnet-core-web-apps-unity-game-development"></a>Aplicativos .NET Core, aplicativos Web do ASP.NET Core, desenvolvimento de jogos em Unity
 
@@ -113,6 +121,6 @@ Para outras cargas de trabalho, confira a página [Cargas de trabalho](workloads
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Acquisition/player]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Instalar o Visual Studio (no Windows)](/visualstudio/install/install-visual-studio)

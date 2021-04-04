@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 01d8602971e2a89aef8cf8451d1273fa28c70f05
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b61474f4290771fb139d511296580ec1ef0f8820
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949123"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106213908"
 ---
 # <a name="create-reusable-controls-for-web-parts-or-application-pages"></a>Criar controles reutilizáveis para Web Parts ou páginas de aplicativo
   No Visual Studio, você pode criar controles personalizados e reutilizáveis que podem ser consumidos por páginas de aplicativo e Web Parts executados no SharePoint. Esses controles são chamados de controles de usuário. Um controle de usuário é um tipo de controle composto que funciona de forma muito parecida com uma página da Web ASP.NET – você pode adicionar controles de servidor Web e marcação existentes a um controle de usuário e definir propriedades e métodos para o controle. Em seguida, você pode incorporá-las em páginas da Web do ASP.NET, onde atuam como uma unidade.
@@ -47,8 +47,8 @@ ms.locfileid: "99949123"
 
  Para incluir um controle de usuário em uma Web Part, adicione o controle de usuário à coleção de Web Parts <xref:System.Web.UI.WebControls.WebParts.Part.Controls%2A> no arquivo de código da Web Part. O exemplo a seguir adiciona um controle de usuário à <xref:System.Web.UI.WebControls.WebParts.Part.Controls%2A> coleção de uma Web Part.
 
- [!code-vb[SP_VisualWebPart#5](../sharepoint/codesnippet/VisualBasic/sp_visualwebpart.vb/visualwebpart1/visualwebpart1.vb#5)]
- [!code-csharp[SP_VisualWebPart#5](../sharepoint/codesnippet/CSharp/sp_visualwebpart.cs/visualwebpart1/visualwebpart1.cs#5)]
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_visualwebpart.vb/visualwebpart1/visualwebpart1.vb" id="Snippet5":::
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sp_visualwebpart.cs/visualwebpart1/visualwebpart1.cs" id="Snippet5":::
 
 ## <a name="debug-a-user-control"></a>Depurar um controle de usuário
  Para depurar um controle de usuário, verifique se o controle de usuário está incluído em uma página de aplicativo ou Web Part em seu projeto do SharePoint. Em seguida, você pode depurar o código no controle de usuário da mesma forma que você depuraria o código em qualquer projeto do Visual Studio.
