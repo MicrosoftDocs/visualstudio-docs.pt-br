@@ -10,12 +10,12 @@ metadata:
   ms.topic: landing-page
   ms.date: 12/05/2019
   ms.author: ghogen
-  ms.openlocfilehash: e2a545d1b9165a158f7d1913668e983386127874
-  ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
-  ms.translationtype: HT
+  ms.openlocfilehash: 7a7740ad4fffd80bc4b96ef7096b3bdd7c7a31bd
+  ms.sourcegitcommit: 2a50f4c1705baeee5c05580f04e3f468550f44e3
+  ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 10/09/2020
-  ms.locfileid: "91860530"
+  ms.lasthandoff: 04/05/2021
+  ms.locfileid: "106381575"
 landingContent:
 - title: Implantar no Serviço de Aplicativo do Azure
   linkLists:
@@ -71,7 +71,7 @@ landingContent:
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Azure Active Directory
+    - text: Active Directory do Azure
       url: /azure/active-directory/develop/vs-active-directory-add-connected-service
     - text: Cache Redis do Azure
       url: azure-cache-for-redis-add-connected-service.md
@@ -85,10 +85,12 @@ landingContent:
       url: azure-sql-database-add-connected-service.md
     - text: Armazenamento do Azure
       url: vs-azure-tools-connected-services-storage.md
-- title: Serviços de Nuvem do Azure
+- title: Serviços de nuvem do Azure
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Criar e implantar serviços de nuvem (suporte estendido)
+      url: cloud-services-extended-support.md
     - text: Crie e configure projetos de serviço de nuvem do Azure
       url: vs-azure-tools-azure-project-create.md
     - text: Depure serviços de nuvem localmente e no Azure

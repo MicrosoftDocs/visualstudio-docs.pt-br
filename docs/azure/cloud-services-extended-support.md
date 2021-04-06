@@ -1,5 +1,5 @@
 ---
-title: Usar Serviços de Nuvem (suporte estendido) (versão prévia)
+title: Usar serviços de nuvem (suporte estendido)
 description: Aprenda agora a criar e implantar serviços de nuvem (suporte estendido) usando o Azure Resource Manager com o Visual Studio
 author: ghogen
 manager: jmartens
@@ -9,32 +9,26 @@ ms.topic: how-to
 ms.date: 01/25/2021
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 39a76f4c76afb2ed0c738adfc477807eebfdbc61
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 289bc88d9aef40fdc260ce84395b1c4b9237c689
+ms.sourcegitcommit: 2a50f4c1705baeee5c05580f04e3f468550f44e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841127"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "106381589"
 ---
-# <a name="create-and-deploy-to-cloud-services-extended-support-in-visual-studio-preview"></a>Criar e implantar serviços de nuvem (suporte estendido) no Visual Studio (visualização)
+# <a name="create-and-deploy-to-cloud-services-extended-support-in-visual-studio"></a>Criar e implantar serviços de nuvem (suporte estendido) no Visual Studio
 
-A partir do [Visual Studio 2019 versão 16,9](https://visualstudio.microsoft.com/vs/preview) (atualmente em visualização), você pode trabalhar com os serviços de nuvem usando Azure Resource Manager, o que simplifica bastante e permite a manutenção e o gerenciamento de recursos do Azure. Isso é habilitado por um novo serviço do Azure referido como *serviços de nuvem (suporte estendido)*. Você pode publicar um serviço de nuvem existente nos Serviços de Nuvem (suporte estendido). Para obter informações sobre esse serviço do Azure, confira [Documentação dos Serviços de Nuvem (suporte estendido)](/azure/cloud-services-extended-support/overview).
+A partir do [Visual Studio 2019 versão 16,9](https://visualstudio.microsoft.com/vs/), você pode trabalhar com os serviços de nuvem usando Azure Resource Manager, o que simplifica bastante e permite a manutenção e o gerenciamento de recursos do Azure. Isso é habilitado por um novo serviço do Azure referido como *serviços de nuvem (suporte estendido)*. Você pode publicar um serviço de nuvem existente nos Serviços de Nuvem (suporte estendido). Para obter informações sobre esse serviço do Azure, confira [Documentação dos Serviços de Nuvem (suporte estendido)](/azure/cloud-services-extended-support/overview).
 
 ## <a name="publish-to-cloud-services-extended-support"></a>Publicar em serviços de nuvem (suporte estendido)
 
-Ao publicar seu projeto de serviço de nuvem do Azure existente para serviços de nuvem (suporte estendido), você ainda mantém a capacidade de publicar em um serviço de nuvem do Azure clássico. No Visual Studio 2019 versão 16,9 Preview 3 e posteriores, os projetos de serviço de nuvem clássicos têm uma versão especial do comando **Publish** , **publicar (suporte estendido)**. Esse comando é exibido no menu de atalho no **Gerenciador de soluções**.
+Ao publicar seu projeto de serviço de nuvem do Azure existente para serviços de nuvem (suporte estendido), você ainda mantém a capacidade de publicar em um serviço de nuvem do Azure clássico. No Visual Studio 2019 versão 16,9 e posterior, os projetos de serviço de nuvem clássicos têm uma versão especial do comando de **publicação** , **publicação (suporte estendido)**. Esse comando é exibido no menu de atalho no **Gerenciador de soluções**.
 
-Há algumas diferenças quando você publica em serviços de nuvem (suporte estendido). Por exemplo, você não será perguntado se estiver publicando para **preparo** ou **produção**, porque esses slots de implantação não fazem parte do modelo de publicação de suporte estendido. Em vez disso, com os serviços de nuvem (suporte estendido), você pode configurar várias implantações e permutar implantações no portal do Azure. Embora as ferramentas do Visual Studio permitam definir isso no 16,9 Preview 3, o recurso de permuta não será habilitado até uma versão posterior dos serviços de nuvem (suporte estendido) e poderá resultar em uma falha no tempo de implantação durante a versão prévia.
+Há algumas diferenças quando você publica em serviços de nuvem (suporte estendido). Por exemplo, você não será perguntado se estiver publicando para **preparo** ou **produção**, porque esses slots de implantação não fazem parte do modelo de publicação de suporte estendido. Em vez disso, com os serviços de nuvem (suporte estendido), você pode configurar várias implantações e permutar implantações no portal do Azure. Embora as ferramentas do Visual Studio permitam definir isso em 16,9, o recurso de permuta não será habilitado até uma versão posterior dos serviços de nuvem (suporte estendido) e poderá resultar em uma falha no tempo de implantação durante a versão prévia.
 
 Antes de publicar um serviço de nuvem do Azure clássico para serviços de nuvem (suporte estendido), verifique as contas de armazenamento que seu projeto usa e verifique se elas são contas de armazenamento v1 ou Storage v2. Os tipos de conta de armazenamento clássico falharão com uma mensagem de erro no momento da implantação. Certifique-se de verificar a conta de armazenamento usada pelo diagnóstico. Para verificar a conta de armazenamento de diagnóstico, consulte [Configurar o diagnóstico para os serviços de nuvem do Azure e máquinas virtuais](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md). Se o serviço usar uma conta de armazenamento clássico, você poderá atualizá-la; consulte [atualizar para uma conta de armazenamento v2 de uso geral](/azure/storage/common/storage-account-upgrade?tabs=azure-portal).  Para obter informações gerais sobre os tipos de contas de armazenamento, consulte [visão geral da conta de armazenamento](/azure/storage/common/storage-account-overview).
 
 ### <a name="to-publish-a-classic-azure-cloud-service-project-to-cloud-services-extended-support"></a>Para publicar um projeto de serviço de nuvem do Azure clássico para serviços de nuvem (suporte estendido)
-
-1. No momento, os Serviços de Nuvem (suporte estendido) estão em versão prévia. Registrar recurso para sua assinatura como a seguir:
-
-   ```azurepowershell-interactive
-   Register-AzProviderFeature -FeatureName CloudServices -ProviderNamespace Microsoft.Compute
-   ```
 
 1. Clique com o botão direito do mouse no nó do projeto no projeto do serviço de nuvem do Azure (clássico) e escolha **publicar (suporte estendido)...**. O **Assistente de publicação** é aberto na primeira tela.
 

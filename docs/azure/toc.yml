@@ -40,7 +40,7 @@
   items:
     - name: Trabalhar com projetos de serviço de nuvem
       items:
-        - name: Usar serviços de nuvem (suporte estendido) (visualização)
+        - name: Usar serviços de nuvem (suporte estendido)
           href: cloud-services-extended-support.md
         - name: Criar um projeto de serviço de nuvem do Azure
           href: vs-azure-tools-azure-project-create.md
