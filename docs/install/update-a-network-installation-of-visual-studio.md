@@ -1,7 +1,7 @@
 ---
 title: Atualizar uma instalação baseada em rede
 description: Saiba como atualizar uma instalação do Visual Studio baseada em rede usando o comando --layout
-ms.date: 06/29/2020
+ms.date: 04/06/2021
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 6829bac79f747d4f9bacfe5e71f57352fcad0970
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d5ad0231c2dc21acc4a8d954456921dbe2838e39
+ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959149"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106547395"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Atualizar uma instalação em rede do Visual Studio
 
@@ -33,17 +33,7 @@ ms.locfileid: "99959149"
 
 Para atualizar o compartilhamento de instalação de rede para que ele inclua as últimas atualizações, execute o comando `--layout` para baixar pacotes atualizados de forma incremental.
 
-::: moniker range="vs-2017"
-
-**Novo no 15,3**: se você selecionou um layout parcial quando [criou o layout de rede pela primeira vez](create-a-network-installation-of-visual-studio.md), essas configurações serão salvas. Comandos de layout futuros usam as opções anteriores e quaisquer novas opções que você especificar. Porém, se você está usando um layout de uma versão anterior, use os mesmos parâmetros de linha de comando utilizados ao criar o layout de instalação de rede pela primeira vez (em outras palavras, as mesmas cargas de trabalho e os mesmos idiomas) para atualizar o conteúdo.
-
-::: moniker-end
-
-::: moniker range="vs-2019"
-
 Se você selecionou um layout parcial quando [criou o layout de rede pela primeira vez](create-a-network-installation-of-visual-studio.md), essas configurações serão salvas. Comandos de layout futuros usam as opções anteriores e quaisquer novas opções que você especificar.
-
-::: moniker-end
 
 Se você hospedar um layout em um compartilhamento de arquivos, deverá atualizar uma cópia privada do layout (por exemplo, c:\VSLayout) e, depois, depois que todo o conteúdo atualizado for baixado, copie-o para o compartilhamento de arquivos (por exemplo, \\ server\products\VS). Se você não fizer isso, haverá uma chance maior de que quaisquer usuários que executem a instalação enquanto o layout está sendo atualizado não consigam obter todo o conteúdo do layout, pois ele não estará completamente atualizado.
 

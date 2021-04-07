@@ -1,7 +1,7 @@
 ---
 title: Guia do Visual Studio para empresas
 description: Configurar e solucionar problemas do Visual Studio em um ambiente corporativo.
-ms.date: 07/29/2020
+ms.date: 04/06/2021
 ms.custom: seodec18
 ms.topic: overview
 helpviewer_keywords:
@@ -16,18 +16,20 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: e653d7ae5f2408fd8438cbdf69a28648c6bcc446
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e5e8a28ac89c2bea85aee8323060bf948266ad2e
+ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967105"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106547382"
 ---
 # <a name="visual-studio-enterprise-guide"></a>Guia do Visual Studio para empresas
 Se você estiver procurando economizar tempo enquanto está fazendo sua empresa em execução no Visual Studio, comece aqui. Este guia da empresa inclui dicas que podem ajudá-lo a instalar e atualizar o Visual Studio em cenários empresariais comuns, ficar desbloqueado se você tiver problemas e aprender a relatar um problema se precisar de mais ajuda. 
 
 ## <a name="get-started"></a>Introdução 
-Saiba como implantar o Visual Studio em sua empresa em ambientes de rede e offline. 
+Saiba como implantar o Visual Studio em sua empresa em ambientes de rede e offline.
+
+- **[Habilitar atualizações do administrador usando o Microsoft Endpoint Configuration Manager (SCCM)](enabling-administrator-updates.md)**.  As atualizações do Visual Studio estão incluídas no [catálogo Microsoft Update](https://www.catalog.update.microsoft.com/Home.aspx) e no [Windows Server Update Services (WSUS)](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus). Os administradores corporativos podem baixar a atualização e distribuí-la para computadores cliente do Visual Studio em toda a organização usando ferramentas de implantação padrão, como o Microsoft Endpoint Configuration Manager (SCCM).
 
 - **Entenda as opções de implantação empresarial em ambientes de rede**. O [Guia do administrador do Visual Studio](visual-studio-administrator-guide.md) fornece diretrizes baseadas em cenários para administradores do sistema. 
 
@@ -43,17 +45,19 @@ Saiba como implantar o Visual Studio em sua empresa em ambientes de rede e offli
 
 Saiba como instalar o Visual Studio em cenários empresariais comuns. 
 
-- **[Use parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)**. Use uma variedade de parâmetros para controlar ou personalizar a instalação do Visual Studio. Automatize o processo de instalação ou crie um cache dos arquivos de instalação para uso posterior. 
+- **[Use parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)**. Use uma variedade de parâmetros para controlar ou personalizar a instalação do Visual Studio. Automatize o processo de instalação ou crie um cache dos arquivos de instalação para uso posterior. Para obter mais informações, consulte [exemplos de parâmetro de linha de comando](command-line-parameter-examples.md).
 
-- **Consulte [exemplos de parâmetro de linha de comando para instalação do Visual Studio](command-line-parameter-examples.md)**. Para ilustrar como usar parâmetros de linha de comando para instalar o Visual Studio, exiba vários exemplos que você pode personalizar para atender às suas necessidades. 
+- **[Crie uma instalação de rede do Visual Studio](create-a-network-installation-of-visual-studio.md)**. Armazene em cache os arquivos para a instalação inicial junto com todas as atualizações de produto em uma única pasta. 
 
-- **[Instalar e usar o Visual Studio e os serviços do Azure por trás de um firewall ou servidor proxy](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)**. Se sua organização usa medidas de segurança como um firewall ou um servidor proxy, há URLs de domínio que você pode querer adicionar a uma "lista de permissões" e portas e protocolos que você pode querer abrir para que você tenha a melhor experiência ao instalar e usar o Visual Studio e os serviços do Azure. 
+- **[Instalar e usar o Visual Studio e os serviços do Azure por trás de um firewall ou servidor proxy](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)**. Se sua organização usa medidas de segurança como um firewall ou um servidor proxy, há URLs de domínio que você talvez queira adicionar a uma "lista de permissões" e portas e protocolos que você talvez queira abrir para que tenha a melhor experiência ao instalar e usar o Visual Studio e os serviços do Azure. 
 
-- **[Crie uma instalação de rede do Visual Studio](create-a-network-installation-of-visual-studio.md)**. Armazene em cache os arquivos para a instalação inicial junto com todas as atualizações de produto em uma única pasta.  
+- **[Instale os certificados necessários para a instalação offline](../install/install-certificates-for-visual-studio-offline.md)**. Instale os certificados necessários se o computador cliente estiver completamente desconectado da Internet.
 
 ## <a name="update-visual-studio"></a>Atualizar o Visual Studio 
 
 Saiba como atualizar o Visual Studio com êxito e corrigir problemas de atualização. 
+
+- **[Aplicar atualizações do administrador usando o Microsoft Endpoint Configuration Manager (SCCM)](../install/applying-administrator-updates.md)**. Saiba mais sobre como distribuir atualizações de recursos, segurança e qualidade do Visual Studio por meio do SCCM. 
 
 - **[Atualize uma instalação baseada em rede do Visual Studio](update-a-network-installation-of-visual-studio.md)**. Atualize um layout de instalação de rede do Visual Studio com as atualizações de produto mais recentes para que ele possa ser usado como um ponto de instalação para a atualização mais recente do Visual Studio e também para manter as instalações já implantadas em estações de trabalho cliente.
 
@@ -67,6 +71,7 @@ Saiba como atualizar o Visual Studio com êxito e corrigir problemas de atualiza
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Consulte também 
+## <a name="see-also"></a>Confira também 
 
 - [Guia de produtividade do Visual Studio](../ide/productivity-features.md)
+

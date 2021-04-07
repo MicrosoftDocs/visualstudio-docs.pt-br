@@ -2,7 +2,7 @@
 title: Habilitando atualizações do administrador para o Visual Studio com o Microsoft Endpoint Configuration Manager
 titleSuffix: ''
 description: Saiba mais sobre como implantar atualizações do administrador no Visual Studio.
-ms.date: 03/04/2021
+ms.date: 04/06/2021
 ms.custom: ''
 ms.topic: overview
 ms.assetid: 546fbad6-f12b-49cf-bccc-f2e63e051a18
@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ae0bdde60cbf4c4c1eed00847c76ee797809b8db
-ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
+ms.openlocfilehash: 9ca14e1f4e84777fd1781249dd54a6646fb2c72a
+ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "105617319"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106547473"
 ---
 # <a name="enabling-administrator-updates-to-visual-studio-with-microsoft-endpoint-configuration-manager"></a>Habilitando atualizações do administrador para o Visual Studio com o Microsoft Endpoint Configuration Manager
 
@@ -63,7 +63,7 @@ Para permitir que um computador cliente aceite atualizações de administrador d
 
 ### <a name="visual-studio-client-detector-utility"></a>Utilitário de detector de cliente do Visual Studio 
 
-O utilitário detector de cliente do Visual Studio deve ser instalado nos computadores cliente para que as atualizações do administrador sejam recebidas corretamente. Esse utilitário foi incluído com todas as versões recentes do Visual Studio.  
+O [utilitário detector de cliente do Visual Studio](https://support.microsoft.com/help/5001148) deve ser instalado nos computadores cliente para que as atualizações do administrador sejam corretamente reconhecidas e recebidas. Esse utilitário foi incluído com todas as atualizações de produto do Visual Studio 2017 e do Visual Studio 2019 lançadas no ou após 12 de maio de 2020, ela é incluída como um pré-requisito com todas as atualizações de administrador do Visual Studio e também está disponível no [Catálogo de Microsoft Update](https://catalog.update.microsoft.com) para ser instalado de forma independente. 
 
 ### <a name="encoding-administrator-intent-on-the-client-machines"></a>Codificação da intenção de administrador nos computadores cliente 
 
@@ -79,12 +79,12 @@ A chave **AdministratorUpdatesEnabled**   foi projetada para o administrador
 
 Você pode usar os seguintes métodos para fornecer comentários sobre as atualizações do administrador do Visual Studio ou os problemas de relatório que afetam as atualizações:
 * Consulte as diretrizes [solução de problemas de instalação e atualização do Visual Studio](../install/troubleshooting-installation-issues.md) .
-* Faça perguntas à Comunidade na configuração do [Visual Q&um fórum](https://docs.microsoft.com/answers/topics/vs-setup.html).
+* Faça perguntas à Comunidade na instalação do [Visual Studio Q&um fórum](https://docs.microsoft.com/answers/topics/vs-setup.html).
 * Vá para a [página de suporte do Visual Studio](https://visualstudio.microsoft.com/vs/support/)e verifique se o problema está listado nas perguntas frequentes.  Você também pode selecionar o botão [link de suporte](https://visualstudio.microsoft.com/vs/support/#talktous) para a ajuda do chat.
-* [Forneça comentários sobre recursos ou relate um problema](https://aka.ms/vs/wsus/feedback) à equipe do Visual Studio para essa experiência.
+* [Forneça comentários sobre recursos ou relate um problema](https://aka.ms/vs/wsus/feedback) à equipe do Visual Studio sobre essa experiência de habilitar atualizações do administrador.
 * Entre em contato com o gerente técnico de conta da sua organização para a Microsoft.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 * [Aplicando atualizações do administrador](../install/applying-administrator-updates.md)
 * [Guia do administrador do Visual Studio](../install/visual-studio-administrator-guide.md)
 * [Ciclo de vida e manutenção do produto Visual Studio](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs)

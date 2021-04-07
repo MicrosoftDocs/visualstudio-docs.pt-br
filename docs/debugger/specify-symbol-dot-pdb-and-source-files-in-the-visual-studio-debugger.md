@@ -2,7 +2,7 @@
 title: Definir o símbolo (. pdb) e os arquivos de origem no depurador
 description: Saiba como configurar e gerenciar arquivos de símbolo e de origem no Visual Studio
 ms.custom: ''
-ms.date: 10/31/2019
+ms.date: 3/31/2021
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Debugger.Native
@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 496994c0f9d546efe8804481230081090309d47e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7ad72d2aa659f3d43bfca99c359d5db94e2d1045
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903573"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106083674"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Especificar o símbolo (. pdb) e os arquivos de origem no depurador do Visual Studio (C#, C++, Visual Basic, F #)
 
@@ -246,9 +246,10 @@ Quando isso acontece, o depurador exibe as páginas **nenhum símbolo carregado*
 
 - Para alterar o caminho de pesquisa, selecione um caminho não selecionado ou selecione **novo** caminho ou **novo caminho do VSTS** e insira ou selecione um novo caminho. Selecione **carregar** para pesquisar os caminhos novamente e carregar o arquivo de símbolo se ele for encontrado.
 - Para substituir as opções de símbolo e repetir os caminhos de pesquisa, selecione **procurar \<executable-name> e localizar**. O arquivo de símbolo será carregado se for encontrado ou o **Explorador de arquivos** será aberto para que você possa selecionar manualmente o arquivo de símbolo.
-- Para abrir a página de símbolos de depuração de **Opções**  >    >   , selecione **alterar configurações de símbolo**.
-- Para mostrar a desmontagem em uma nova janela uma vez, selecione **Exibir desmontagem** ou selecione a **caixa de diálogo opções** para definir a opção para sempre mostrar a desmontagem quando os arquivos de origem ou de símbolo não forem encontrados.
+- Para abrir a página de configurações de símbolo para configurar o comportamento, selecione **alterar configurações de símbolo** (ou escolha **Opções**  >    >  **símbolos** de depuração).
+- Avançadas Para mostrar a desmontagem em uma nova janela uma vez, selecione **Exibir desmontagem** ou selecione a **caixa de diálogo opções** para definir a opção para sempre mostrar a desmontagem quando os arquivos de origem ou de símbolo não forem encontrados. Para obter mais informações, consulte [Exibir código de desmontagem](../debugger/how-to-use-the-disassembly-window.md).
 - Para mostrar os locais pesquisados e o resultado, expanda **informações de carregamento de símbolo**.
+- Para o código C#, você também pode optar por [descompilar o código-fonte](../debugger/decompilation.md) dos **símbolos não carregados** ou **nenhuma página carregada de origem** .
 
 Se o depurador encontrar o arquivo *. pdb* depois de executar uma das opções e puder recuperar o arquivo de origem usando as informações no arquivo *. pdb* , ele exibirá a origem. Caso contrário, ele exibirá uma página **nenhuma fonte carregada** que descreve o problema, com links para ações que podem resolver o problema.
 
@@ -259,6 +260,8 @@ Você pode especificar os locais em que o depurador pesquisa arquivos de origem 
 1. Selecione a solução em **Gerenciador de soluções** e, em seguida, selecione o ícone **Propriedades** , pressione **ALT** + **Enter**, ou clique com o botão direito do mouse e selecione **Propriedades**.
 
 1. Selecione **depurar arquivos de origem**.
+
+   ![Página depurar arquivos de origem](../debugger/media/dbg-source-files.png)
 
 1. Em **diretórios que contêm código-fonte**, digite ou selecione locais de código-fonte para pesquisar. Use o ícone **nova linha** para adicionar mais locais, os ícones de seta para **cima** e para **baixo** para reordená-los ou o ícone **X** para excluí-los.
 

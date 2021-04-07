@@ -1,7 +1,7 @@
 ---
 title: Criar uma instalação baseada em rede
 description: Saiba como criar um ponto de instalação de rede para implantar o Visual Studio em uma empresa.
-ms.date: 08/27/2020
+ms.date: 04/06/2021
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,21 +15,21 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: e76c5346230b6991f238384a4852938dcc540f6c
-ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
+ms.openlocfilehash: 748f0da7810918d8b41247059277fb73158f1bc9
+ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "105616929"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106547421"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Criar uma instalação de rede do Visual Studio
 
-Normalmente, um administrador corporativo cria um ponto de instalação de rede para implantação em estações de trabalho do cliente. Criamos o Visual Studio para permitir que você armazene em cache os arquivos para a instalação inicial juntamente com todas as atualizações de produto para uma única pasta. (Esse processo também é referido como _criação de um layout_.)
-
-Fizemos isso para que as estações de trabalho cliente pudessem usar o mesmo local de rede para gerenciar sua instalação, mesmo que elas ainda não tivessem sido atualizadas para a atualização de serviço mais recente.
+Às vezes, um administrador corporativo deseja criar um ponto de instalação de rede que contenha arquivos do Visual Studio que possam ser implantados em estações de trabalho cliente. Isso é para facilitar cenários em que os computadores cliente podem ter permissões limitadas ou acesso limitado à Internet, ou quando equipes internas desejam fazer testes de compatibilidade antes de sua organização padronizar em uma versão específica do conjunto de ferramentas de desenvolvedor. Criamos o Visual Studio para que um administrador possa _criar um layout de rede_ que, essencialmente, cria um cache de arquivos localizado em um compartilhamento de rede estático interno que inclui todos os arquivos do Visual Studio para instalação inicial e todas as atualizações futuras do produto.
 
  > [!NOTE]
- > Se você tiver várias edições do Visual Studio em uso em sua empresa (por exemplo, o Visual Studio Professional e o Visual Studio Enteprise), precisará criar um compartilhamento de instalação de rede separado para cada edição.
+ >  - Se você tiver várias edições do Visual Studio em uso em sua empresa (por exemplo, o Visual Studio 2019 Professional e o Visual Studio 2019 Enterprise), deverá criar um compartilhamento de instalação de rede separado para cada edição.
+ >  - Recomendamos que você decida como deseja que os clientes recebam as atualizações do produto _antes_ de fazer a instalação inicial do cliente.  Isso facilita a garantia de que suas opções de configuração estejam definidas corretamente. Suas opções incluem fazer com que os clientes obtenham atualizações do local de layout de rede ou da Internet. 
+ >  - O layout original de instalação do Visual Studio e todas as atualizações de produto posteriores devem estar localizados no mesmo diretório de rede para garantir que a funcionalidade de reparo e desinstalação funcione corretamente. 
 
 ## <a name="download-the-visual-studio-bootstrapper"></a>Baixar o bootstrapper do Visual Studio
 
@@ -37,64 +37,72 @@ Baixe um arquivo bootstrapper para a edição do Visual Studio que você deseja.
 
 ::: moniker range="vs-2017"
 
-Para obter um bootstrapper para o Visual Studio 2017, consulte a página de download de [versões anteriores do Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/) para obter detalhes sobre como fazer isso.
-
-Seu executável de instalação &mdash; ou ser mais específico, o arquivo bootstrapper &mdash; deve corresponder ou ser semelhante a um dos seguintes.
+Para obter o bootstrapper mais recente para o Visual Studio 2017 versão 15,9, vá para a página [versões anteriores do Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/) e baixe um dos seguintes arquivos bootstrapper:
 
 | Edition | Nome de arquivo |
 |-------------|-----------------------|
-|Visual Studio Enterprise | **vs_enterprise.exe** |
-|Visual Studio Professional | **vs_professional.exe** |
-|Ferramentas de Build do Visual Studio   | **vs_buildtools.exe** |
+|Visual Studio 2017 Enterprise versão 15,9 | vs_enterprise.exe |
+|Visual Studio 2017 Professional versão 15,9 | vs_professional.exe |
+|Ferramentas de Build do Visual Studio 2017 versão 15,9  | vs_buildtools.exe |
 
-Outros bootstrapper com suporte incluem **vs_feedbackclient.exe**, **vs_teamexplorer.exe**, **vs_testagent.exe**, **vs_testcontroller.exe** e **vs_testprofessional.exe**.
+Outros bootstrapper com suporte incluem vs_feedbackclient.exe, vs_teamexplorer.exe, vs_testagent.exe, vs_testcontroller.exe e vs_testprofessional.exe.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Seu executável de instalação &mdash; ou ser mais específico, um arquivo bootstrapper &mdash; deve corresponder ou ser semelhante a um dos itens a seguir.
+Comece baixando o bootstrapper do Visual Studio 2019 da [página de downloads do Visual Studio](https://visualstudio.microsoft.com/downloads) ou da página de [versões do Visual Studio 2019](https://docs.microsoft.com/visualstudio/releases/2019/history#installing-an-earlier-release) para a versão escolhida e a edição do Visual Studio.  Seu executável de instalação &mdash; ou ser mais específico, um arquivo bootstrapper &mdash; será compatível ou ser semelhante a um dos seguintes:
 
 |Edition | Baixar|
 |-------------|-----------------------|
-|Visual Studio Enterprise | [**vs_enterprise.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
-|Visual Studio Professional | [**vs_professional.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
-| Ferramentas de Build do Visual Studio   | [**vs_buildtools.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019) |
+|Visual Studio Enterprise | [vs_enterprise.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
+|Visual Studio Professional | [vs_professional.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
+| Ferramentas de Build do Visual Studio   | [vs_buildtools.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019) |
 
 Outros bootstrapper com suporte incluem [vs_teamexplorer.exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/4026077127d25d33789f3882998266946608d8ada378b6ed7c8fff8c07f3dde2/vs_TeamExplorer.exe), [vs_testagent.exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/1383bf8bcda3d0e986a2e42c14114aaea8a7b085d31aa0623c9f70b2bad130e4/vs_TestAgent.exe)e [vs_testcontroller.exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/54dcf24b76e7cd9fb8be0ac518a9dfba6daf18fe9b2aa1543411b1cda8820918/vs_TestController.exe).
 
 ::: moniker-end
 
+::: moniker range="vs-2017"
+
 >[!TIP]
->Se você tiver baixado anteriormente um arquivo bootstrapper e quiser verificar sua versão, veja como fazer isso. No Windows, abra o explorador de arquivos, clique com o botão direito do mouse no arquivo bootstrapper, escolha **Propriedades**, escolha a guia **detalhes** e, em seguida, exiba o número de **versão do produto** . Para corresponder esse número a uma versão do Visual Studio, consulte a página [números de compilação e datas de lançamento do Visual Studio](visual-studio-build-numbers-and-release-dates.md) .
+>Se você tiver baixado um arquivo bootstrapper anteriormente e quiser verificar qual é a versão dele, veja como fazer isso. No Windows, abra o explorador de arquivos, clique com o botão direito do mouse no arquivo bootstrapper, escolha **Propriedades**, escolha a guia **detalhes** e, em seguida, exiba o número de **versão do produto** . Para corresponder esse número a uma versão do Visual Studio, consulte [números de compilação e datas de lançamento do Visual Studio](visual-studio-build-numbers-and-release-dates.md).
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+>[!TIP]
+>Se você tiver baixado um arquivo bootstrapper anteriormente e quiser verificar qual é a versão dele, veja como fazer isso. No Windows, abra o explorador de arquivos, clique com o botão direito do mouse no arquivo bootstrapper, escolha **Propriedades**, escolha a guia **detalhes** e, em seguida, exiba o número de **versão do produto** . Para corresponder esse número a uma versão do Visual Studio, consulte [versões do visual studio 2019](https://docs.microsoft.com/visualstudio/releases/2019/history).
+
+::: moniker-end
 
 ## <a name="create-an-offline-installation-folder"></a>Criar uma pasta de instalação offline
 
-Você deve ter uma conexão com a Internet para concluir esta etapa. Para criar uma instalação offline com todos os idiomas e todos os recursos, use um comando semelhante a um dos exemplos a seguir. Essa pasta deve permanecer estática e todas as atualizações para o layout devem ser incluídas nessa pasta. 
+Você deve ter uma conexão com a Internet para concluir esta etapa. 
+
+Abra um prompt de comando, navegue até o diretório em que você baixou o bootstrapper e use os parâmetros do bootstrapper, conforme definido na página [usar parâmetros de linha de comando para instalar o Visual Studio](../install/use-command-line-parameters-to-install-visual-studio.md) , para criar e manter o cache de instalação de rede. Exemplos comuns de criação de layouts iniciais são ilustrados abaixo e em [exemplos de parâmetro de linha de comando para a instalação do Visual Studio](../install/command-line-parameter-examples.md).  
 
    > [!IMPORTANT]
-   > Um layout completo para uma localidade de idioma único requer cerca de 35 GB de espaço em disco para a Comunidade do Visual Studio e 42 GB para Visual Studio Enterprise. As [localidades de idioma](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales) adicionais exigem cerca de metade a GB cada. Consulte a seção [Personalizar o layout de rede](#customize-the-network-layout) para obter mais informações.
-   >
-   > [!TIP]
-   > Lembre-se de executar o comando no diretório de Download. Normalmente, isso é `C:\Users\<username>\Downloads` em um computador que executa o Windows 10.
-
-- Para o Visual Studio Enterprise, execute:
+   > Um layout inicial completo para uma localidade de idioma único requer cerca de 35 GB de espaço em disco para a Comunidade do Visual Studio e 42 GB para Visual Studio Enterprise. As [localidades de idioma](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales) adicionais exigem cerca de metade a GB cada. Consulte a seção [Personalizar o layout de rede](#customize-the-network-layout) para obter mais informações. Lembre-se de que as atualizações de layout subsequentes também devem ser armazenadas nesse mesmo local de rede, portanto, espere que o conteúdo do diretório do local do layout de rede possa ficar muito grande ao longo do tempo.  
+   
+- Para criar um layout inicial de Visual Studio Enterprise com todos os idiomas e todos os recursos, execute:
 
   ```vs_enterprise.exe --layout c:\VSLayout```
 
-- Para o Visual Studio Professional, execute:
+- Para criar um layout inicial de Visual Studio Professional com todos os idiomas e todos os recursos, execute:
 
   ```vs_professional.exe --layout c:\VSLayout```
 
 ## <a name="modify-the-responsejson-file"></a>Modificar o arquivo response.json
 
-Você pode modificar response.json para definir valores padrão que serão usados quando a instalação for executada.  Por exemplo, você pode configurar o arquivo `response.json` para selecionar um conjunto específico de cargas de trabalho selecionadas automaticamente. Confira [Automatizar a instalação do Visual Studio com um arquivo de resposta](automated-installation-with-response-file.md) para obter detalhes.
+Você pode modificar o `response.json` arquivo para definir valores padrão que são usados quando a instalação é executada.  Por exemplo, você pode configurar o `response.json` arquivo para selecionar um conjunto específico de cargas de trabalho que devem ser selecionadas automaticamente. Você também pode configurar o `response.json` para especificar se o cliente só deve receber arquivos atualizados do local de layout de rede. Para obter mais informações, consulte [automatizar a instalação do Visual Studio com um arquivo de resposta](../install/automated-installation-with-response-file.md). 
 
-E, se você tiver um problema com o inicializador do Visual Studio gerando um erro ao emparelhar com um response.jsno arquivo, consulte a seção "falha ao analisar a ID do processo pai" em [solucionar erros relacionados à rede ao instalar ou usar o Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md#error-failed-to-parse-id-from-parent-process) página para obter mais informações sobre o que fazer.
+Se você tiver um problema com o bootstrapper do Visual Studio lançando um erro ao emparelhar com um `response.json` arquivo, consulte [solucionar erros relacionados à rede ao instalar ou usar o Visual Studio](../install/troubleshooting-network-related-errors-in-visual-studio.md#error-failed-to-parse-id-from-parent-process) página para obter mais informações.
 
 ## <a name="copy-the-layout-to-a-network-share"></a>Copiar o layout para um compartilhamento de rede
 
-Hospede o layout em um compartilhamento de rede para que ele possa ser executado de outros computadores.
+Hospede o layout em um compartilhamento de rede para que ele possa ser executado a partir de computadores cliente.
 
 O exemplo a seguir usa [xcopy](/windows-server/administration/windows-commands/xcopy/). Também é possível usar [robocopy](/windows-server/administration/windows-commands/robocopy/), caso queira.
 
@@ -166,17 +174,7 @@ Aqui estão alguns exemplos de como criar um layout personalizado parcial.
     vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeOptional
     ```
 
-::: moniker range="vs-2017"
-
-### <a name="new-in-version-153"></a>Novidades na versão 15.3
-
-::: moniker-end
-
-::: moniker range="vs-2019"
-
 ### <a name="save-your-layout-options"></a>Salvar suas opções de layout
-
-::: moniker-end
 
 Quando você executa um comando de layout, as opções que você especifica são salvas (por exemplo, as cargas de trabalho e os idiomas). Comandos de layout subsequentes incluirão todas as opções anteriores.  Aqui está um exemplo de um layout com uma carga de trabalho apenas para inglês:
 
@@ -255,29 +253,13 @@ Quando atualizações de produto se tornam disponíveis, pode-se [atualizar o la
 
 ## <a name="how-to-create-a-layout-for-a-previous-visual-studio-release"></a>Como criar um layout para uma versão anterior do Visual Studio
 
-::: moniker range="vs-2017"
+Primeiro, você precisa entender que há dois tipos de inicializadores do Visual Studio, um que pode ser caracterizado pelas palavras "mais recente", "atual", "verde" e "Tip" e um que, essencialmente, significa "versão fixa". Os dois tipos de arquivos bootstrapper têm exatamente o mesmo nome e a melhor maneira de distinguir o tipo é prestar atenção para onde você o obteve. Os inicializadores do Visual Studio disponíveis na [página de downloads do Visual Studio](https://visualstudio.microsoft.com/downloads) são considerados inicializadores do Visual Studio e sempre instalam (ou atualizam) a versão mais recente que está disponível no canal no momento em que o bootstrapper é executado. Os inicializadores do Visual Studio disponíveis na página de [lançamentos do visual studio 2019](https://docs.microsoft.com/visualstudio/releases/2019/history) ou que são inseridos dentro da atualização do administrador no catálogo de Microsoft Update instalam uma versão fixa específica do produto. 
 
-> [!NOTE]
-> Os bootstrappers do Visual Studio disponíveis em [visualstudio.microsoft.com](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) baixam e instalam a última versão do Visual Studio disponível sempre que são executados.
->
-> Portanto, se você baixar um *bootstrapper* do Visual Studio hoje e executá-lo daqui a seis meses, ele instalará a versão do Visual Studio disponível no momento em que você executar o bootstrapper.
->
-> Porém, se você criar um *layout* e, em seguida, fizer a instalação por meio dele, o layout instalará a versão específica do Visual Studio existente nele. Mesmo que uma versão mais recente exista online, você obterá a versão do Visual Studio que está no layout.
+Portanto, se você baixar um bootstrapper do Visual Studio no momento e executá-lo seis meses a partir de agora, ele instalará a versão do Visual Studio que é atual no momento em que o bootstrapper é executado. Ele foi projetado para sempre instalar os bits mais recentes e mantê-lo atualizado.
 
-::: moniker-end
+Se você baixar um bootstrapper de vínculo fixo, ou se você executar uma atualização do administrador que você baixou do catálogo da Microsoft, ele sempre instalará uma versão específica do produto, não importa quando ele foi executado.
 
-::: moniker range="vs-2019"
-
-> [!NOTE]
-> Os bootstrappers do Visual Studio disponíveis em [visualstudio.microsoft.com](https://visualstudio.microsoft.com/downloads) baixam e instalam a última versão do Visual Studio disponível sempre que são executados.
->
-> Portanto, se você baixar um *bootstrapper* do Visual Studio hoje e executá-lo daqui a seis meses, ele instalará a versão do Visual Studio disponível no momento em que você executar o bootstrapper.
->
-> Porém, se você criar um *layout* e, em seguida, fizer a instalação por meio dele, o layout instalará a versão específica do Visual Studio existente nele. Mesmo que uma versão mais recente exista online, você obterá a versão do Visual Studio que está no layout.
-
-::: moniker-end
-
-Se você precisar criar um layout para uma versão mais antiga do Visual Studio, vá para [https://my.visualstudio.com](https://my.visualstudio.com) para baixar as versões "fixas" dos inicializadores do Visual Studio.
+Por fim, você pode criar um layout de rede usando qualquer um desses bootstrappers, e a versão que será criada no layout depende do bootstrapper que você está usando, por exemplo, que será uma versão fixa ou atual. Em seguida, você pode atualizar o layout de rede usando qualquer bootstrapper posterior ou também pode usar o pacote de atualização do administrador do catálogo Microsoft Update. Independentemente de como você atualiza o layout, o layout atualizado resultante será um cache de pacote que contém uma versão específica do produto e, em seguida, se comportará como um bootstrapper de link fixo. Assim, sempre que o cliente for instalado a partir do layout, o cliente instalará a versão específica do Visual Studio que existe no layout (mesmo que uma versão mais recente possa existir online). 
 
 ### <a name="how-to-get-support-for-your-offline-installer"></a>Como obter suporte para o instalador offline
 
@@ -287,7 +269,7 @@ Também oferecemos uma opção de suporte por meio de [**chat de instalação**]
 
 Também temos outras opções de suporte disponíveis. Para obter uma lista, confira nossa página de [comentários](../ide/feedback-options.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Guia do administrador do Visual Studio](visual-studio-administrator-guide.md)
 - [Atualizar uma instalação em rede do Visual Studio](update-a-network-installation-of-visual-studio.md)
