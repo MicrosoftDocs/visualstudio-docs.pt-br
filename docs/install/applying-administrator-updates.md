@@ -2,7 +2,7 @@
 title: Aplicando atualizações do administrador ao Visual Studio com o Microsoft Endpoint Configuration Manager
 titleSuffix: ''
 description: Saiba como aplicar atualizações do administrador ao Visual Studio.
-ms.date: 04/06/2021
+ms.date: 04/07/2021
 ms.custom: ''
 ms.topic: overview
 ms.assetid: 9a3fdb28-db3d-4970-bc17-7417a985f0fb
@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d316fc35df8c571a9112d7a653737e099df80559
-ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
+ms.openlocfilehash: 4df931ee5eb5eaefdf6d918ff05df65b799bef7e
+ms.sourcegitcommit: be14ae4b95e289f16e9444293bb2ec997d4b4d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "106547447"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107031600"
 ---
 # <a name="applying-administrator-updates-that-use-microsoft-endpoint-configuration-manager"></a>Aplicando atualizações do administrador que usam o Microsoft Endpoint Configuration Manager
 
@@ -83,9 +83,9 @@ Há algumas opções de configuração que podem ser usadas para personalizar as
 
 ::: moniker range="vs-2019"
 
-* **Manutenção da adesão da linha de base**: conforme descrito acima, as atualizações do administrador que são atualizações de recursos avançam em uma instalação do Visual Studio para uma versão secundária mais atual do produto. Às vezes, no entanto, as equipes de desenvolvimento gostam de permanecer em um nível específico de linha de base de serviço estável e seguro, e eles gostam de controlar quando seus clientes avançam para uma versão secundária mais atual. Para configurar um computador cliente para permanecer em uma linha de base de serviço e ignorar as atualizações de recursos de administrador indesejadas enviadas a ele, você precisará criar e definir o valor de dados de Reg_SZ **BaselineStickinessVersions2019** para uma cadeia de caracteres que represente as linhas de base permitidas que o computador cliente pode ajustar e permanecer.  A cadeia de caracteres pode conter uma sequência de versões de linha de base de serviço, separadas por vírgulas, como **16.4.0, 16.7.0**. Qualquer número de versões de linha de base de serviço pode ser incluído na cadeia de caracteres e a palavra **tudo**, que é a abreviação para fazer referência a todas as linhas de base de serviço com suporte, também tem suporte. 
+* **Manutenção da adesão da linha de base**: conforme descrito acima, o recurso do administrador atualiza a instalação do Visual Studio para uma versão secundária mais atual do produto. Às vezes, no entanto, os usuários do Visual Studio precisam permanecer em um nível específico de linha de base de manutenção estável e seguro, e eles desejam controlar quando seus computadores avançam para uma versão secundária mais atual. Para configurar um computador cliente para permanecer em uma linha de base de serviço e ignorar as atualizações de recursos de administrador indesejadas enviadas a ele, você precisará criar e definir o valor de dados de Reg_SZ **BaselineStickinessVersions2019** para uma cadeia de caracteres que represente a linha de base preferida na qual o computador cliente deve se ajustar e permanecer. A cadeia de caracteres pode conter uma versão de linha de base de manutenção permitida, como **16.7.0**.  
 
-     Se o `BaselineStickinessVersions2019` valor do registro estiver malformado, todas as atualizações do recurso serão impedidas de serem instaladas no computador. Além disso, preste atenção aos [períodos de tempo com suporte para atualizações de recursos do Visual Studio](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs). Embora seja tecnicamente possível aplicar atualizações de recursos que atingiram o término de seus tempos de vida, não recomendamos isso porque eles estarão fora de suporte e, portanto, potencialmente inseguros.
+     Se o `BaselineStickinessVersions2019` valor do registro estiver malformado, todas as atualizações de recursos do administrador serão impedidas de instalar no computador. Certifique-se de prestar atenção aos [períodos de tempo com suporte para atualizações de recursos do Visual Studio](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs). Além disso, independentemente da presença ou do valor da `BaselineStickinessVersions2019` chave, embora seja tecnicamente possível aplicar as atualizações de recursos do administrador que atingiram o final de seus tempos de vida, não recomendamos isso porque eles estarão sem suporte e, portanto, potencialmente inseguros.
 
 ::: moniker-end
 
