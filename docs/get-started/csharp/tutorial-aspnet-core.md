@@ -8,20 +8,20 @@ ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
 ms.devlang: CSharp
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: b9c7f41fd2977ca00294eabd941bc371d8a3220e
-ms.sourcegitcommit: 99b66b0f4ced46ead0b2506a103f974f40cc0076
+ms.openlocfilehash: a86b7273a123a5c9ed0519caf2166127c090d16f
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103295798"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107296918"
 ---
 # <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>Tutorial: Introdução ao C# e ao ASP.NET Core no Visual Studio
 
@@ -168,7 +168,7 @@ Esta solução segue o padrão de design da **Página do Razor**. Ele é diferen
 
  1. Visualize o arquivo **About.cs** no editor de códigos.
 
-     ![Captura de tela mostrando as primeiras 18 linhas do arquivo About.cshtml.cs no editor de código do Visual Studio. ](media/csharp-aspnet-razor-aboutcshtmlcs-mycoreapp-code.png)
+     ![Captura de tela mostrando as primeiras 18 linhas do arquivo about. cshtml. cs no editor de código do Visual Studio. ](media/csharp-aspnet-razor-aboutcshtmlcs-mycoreapp-code.png)
 
  1. O projeto também contém a pasta **wwwroot** que é a raiz do site. Expanda a pasta para exibir seu conteúdo.
 
@@ -265,11 +265,11 @@ Esta solução segue o padrão de design da **Página do Razor**. Ele é diferen
 
      ![Exibir o arquivo index. cshtml no editor de código do Visual Studio](media/vs-2019/csharp-aspnet-index-cshtml.png)
 
- 1. Cada arquivo. cshtml tem um arquivo de código associado. Para abrir o arquivo de código no editor, expanda o nó **index. cshtml** em Gerenciador de soluções e escolha o arquivo **index.cshtml.cs** .
+ 1. Cada arquivo. cshtml tem um arquivo de código associado. Para abrir o arquivo de código no editor, expanda o nó **index. cshtml** em Gerenciador de soluções e escolha o arquivo **index. cshtml. cs** .
 
-     ![Escolha o arquivo Index.cshtml.cs no editor de código do Visual Studio](media/vs-2019/csharp-aspnet-choose-index-cshtml.png)
+     ![Escolha o arquivo index. cshtml. cs no editor de código do Visual Studio](media/vs-2019/csharp-aspnet-choose-index-cshtml.png)
 
- 1. Exiba o arquivo **index.cshtml.cs** no editor de código.
+ 1. Exiba o arquivo **index. cshtml. cs** no editor de código.
 
      ![Visualizar o arquivo About.cshtml no editor de códigos do Visual Studio](media/vs-2019/csharp-aspnet-index-cshtml-editing.png)
 
@@ -308,11 +308,11 @@ Esta solução segue o padrão de design da **Página do Razor**. Ele é diferen
 
     ![Alterar o texto no arquivo privacy. cshtml](media/vs-2019/csharp-aspnet-privacy-cshtml-code-changed.png)
 
-1. Agora, vamos fazer uma alteração no código. Escolha **privacy.cshtml.cs**. Em seguida, limpe as diretivas `using` na parte superior do arquivo usando o seguinte atalho:
+1. Agora, vamos fazer uma alteração no código. Escolha **privacy. cshtml. cs**. Em seguida, limpe as diretivas `using` na parte superior do arquivo usando o seguinte atalho:
 
    Escolha uma das diretivas `using` esmaecidas, e será exibida a lâmpada [Ações Rápidas](../../ide/quick-actions.md) logo abaixo da seta ou na margem esquerda. Escolha a lâmpada e, em seguida, passe o mouse sobre **remover utilizações desnecessárias**.
 
-   ![Remover usos desnecessários no arquivo Privacy.cshtml.cs](media/vs-2019/csharp-aspnet-remove-unnecessary-usings.png)
+   ![Remova os using desnecessários no arquivo privacy. cshtml. cs](media/vs-2019/csharp-aspnet-remove-unnecessary-usings.png)
 
    Agora escolha **Visualizar alterações** para ver o que será alterado.
 

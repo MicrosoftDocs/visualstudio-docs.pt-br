@@ -9,17 +9,17 @@ ms.topic: tutorial
 dev_langs:
 - VB
 ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 00b8488682674b2531bac561e9f2536e616800fb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f337551c16aa63b606c10492bab9956a92cbe141
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944362"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107295423"
 ---
 # <a name="tutorial-create-a-simple-application-with-visual-basic"></a>Tutorial: criar um aplicativo simples com Visual Basic
 
@@ -259,13 +259,13 @@ Inicie o depurador novamente (pressione **F5**). Você deverá ver a janela **Sa
 
  Agora, feche a janela do aplicativo para parar a depuração.
 
-### <a name="debug-with-breakpoints"></a>Depurar com pontos de interrupção
+### <a name="debug-with-breakpoints&quot;></a>Depurar com pontos de interrupção
 
 Você pode testar o código durante a depuração ao adicionar alguns pontos de interrupção. Você pode adicionar pontos de interrupção escolhendo **depurar**  >  **alternar ponto de interrupção**, clicando na margem esquerda do editor ao lado da linha de código onde você deseja que a interrupção ocorra ou pressionando **F9**.
 
-#### <a name="add-breakpoints"></a>Adicionar pontos de interrupção
+#### <a name=&quot;add-breakpoints&quot;></a>Adicionar pontos de interrupção
 
-1. Abra o *Greetings. XAML. vb* e selecione a seguinte linha: `MessageBox.Show("Hello.")`
+1. Abra o *Greetings. XAML. vb* e selecione a seguinte linha: `MessageBox.Show(&quot;Hello.")`
 
 2. Adicione um ponto de interrupção pressionando **F9** ou por meio do menu selecionando **Depurar** e, em seguida, **Ativar/Desativar Ponto de Interrupção**.
 
@@ -283,13 +283,13 @@ Você pode testar o código durante a depuração ao adicionar alguns pontos de 
 
 6. Na barra de menus, escolha **depurar depuração**  >  .
 
-     O aplicativo retomará a execução e uma caixa de mensagem com a palavra "Olá" será exibida.
+     O aplicativo retomará a execução e uma caixa de mensagem com a palavra "Olá&quot; será exibida.
 
 7. Escolha o botão **OK** na caixa de mensagem para fechá-la.
 
 8. Na janela **Saudações**, escolha o botão de opção **Até logo** e depois o botão **Exibição**.
 
-     A linha `MessageBox.Show("Goodbye.")` é realçada em amarelo.
+     A linha `MessageBox.Show(&quot;Goodbye.")` é realçada em amarelo.
 
 9. Escolha a tecla **F5** para continuar a depuração. Quando a caixa de mensagem for exibida, escolha o botão **OK** na caixa de mensagem para fechá-la.
 
@@ -315,7 +315,7 @@ Agora que você verificou que tudo está funcionando, já pode preparar um build
 
 Parabéns por concluir este tutorial. Você pode encontrar o *. exe* criado sob sua solução e o diretório do projeto (*. ..\HelloWPFApp\HelloWPFApp\bin\Release*).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 ::: moniker range="vs-2017"
 

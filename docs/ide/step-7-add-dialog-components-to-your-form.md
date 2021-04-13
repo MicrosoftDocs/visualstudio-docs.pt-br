@@ -7,17 +7,17 @@ ms.assetid: ea98c55e-6213-4893-ba7b-f19d7f119527
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a485433ef73ef853a186a5b441396f6d5a57f679
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 66a6663cfbbcc212f05f75a8bc87bf30a3e4f880
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868849"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107297061"
 ---
 # <a name="step-7-add-dialog-components-to-your-form"></a>Etapa 7: Adicionar componentes de diálogo ao formulário
 
@@ -27,7 +27,7 @@ Um componente é como um controle de certas maneiras. Use a **Caixa de Ferrament
 
 ## <a name="to-add-dialog-components-to-your-form"></a>Para adicionar componentes da caixa de diálogo ao seu formulário
 
-1. Escolha o **Designer de formulários do Windows** (**Form1.cs [Design]**) e, em seguida, abra o grupo de **caixas de diálogo** na **caixa de ferramentas**.
+1. Escolha o **Designer de formulários do Windows** (**Form1. cs [Design]**) e, em seguida, abra o grupo de **caixas de diálogo** na **caixa de ferramentas**.
 
     > [!NOTE]
     > O grupo **Caixas de Diálogo** na **Caixa de Ferramentas** tem componentes que abrem muitas caixas de diálogo úteis para você, que podem ser usadas para abrir e salvar arquivos, navegar por pastas e escolher fontes e cores. Você usa dois componentes de caixa de diálogo no projeto: OpenFileDialog e ColorDialog.

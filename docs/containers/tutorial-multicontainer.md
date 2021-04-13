@@ -4,15 +4,15 @@ author: ghogen
 description: Saiba como usar vários contêineres com Docker Compose
 ms.custom: SEO-VS-2020
 ms.author: ghogen
-ms.date: 01/10/2020
+ms.date: 03/15/2021
 ms.technology: vs-azure
 ms.topic: tutorial
-ms.openlocfilehash: eca1d66ddef1a0f89a3971a4867254549118e2a1
-ms.sourcegitcommit: 99b66b0f4ced46ead0b2506a103f974f40cc0076
+ms.openlocfilehash: 412156894658cdb2160574e77ea052e4b194d386
+ms.sourcegitcommit: c875360278312457f4d2212f0811466b4def108d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103295716"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107315973"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>Tutorial: Criar um aplicativo de vários contêineres com o Docker Compose
 
@@ -67,7 +67,7 @@ Adicione um projeto à mesma solução e chame-o de *MyWebAPI*. Selecione **API*
 
 ## <a name="add-code-to-call-the-web-api"></a>Adicionar código para chamar a API da Web
 
-1. No `WebFrontEnd` projeto, abra o arquivo *index.cshtml.cs* e substitua o `OnGet` método pelo código a seguir.
+1. No `WebFrontEnd` projeto, abra o arquivo *index. cshtml. cs* e substitua o `OnGet` método pelo código a seguir.
 
    ```csharp
     public async Task OnGet()
@@ -118,7 +118,7 @@ Adicione um projeto à mesma solução e chame-o de *MyWebAPI*. Selecione **API*
         }
       ```
 
-    Com o .NET Core 3,1, você não precisa disso, pois você pode usar a API WeatherForecast que já está lá. No entanto, você precisa comentar a chamada para <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection*>  no `Configure` método em *Startup.cs*, pois esse código usa http, não HTTPS, para chamar a API da Web.
+    Com o .NET Core 3,1, você não precisa disso, pois você pode usar a API WeatherForecast que já está lá. No entanto, você precisa comentar a chamada para <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection*>  no `Configure` método em *Startup. cs*, pois esse código usa http, não HTTPS, para chamar a API da Web.
 
     ```csharp
                 //app.UseHttpsRedirection();

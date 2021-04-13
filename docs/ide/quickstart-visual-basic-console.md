@@ -7,19 +7,19 @@ ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: quickstart
 ms.devlang: vb
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 34b412d254d0775b57f2c9befaae71ce25c6ae75
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 3a103c672b6539f5893cf52a6e83acde6c87176d
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683854"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107296632"
 ---
 # <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>Guia de início rápido: criar seu primeiro aplicativo de console no Visual Studio com o Visual Basic
 
@@ -113,14 +113,14 @@ Se clicar no botão **HelloWorld** no IDE, você poderá executar o programa no 
 
 Quando você faz isso, a janela do console se torna visível somente por um momento antes de ser fechada. Isso acontece porque o método `Main` é encerrado após a execução de sua instrução única e, portanto, o aplicativo é encerrado.
 
-### <a name="add-some-code"></a>Adicionar código
+### <a name="add-some-code&quot;></a>Adicionar código
 
 Vamos adicionar alguns códigos para pausar o aplicativo e, em seguida, solicitar a entrada do usuário.
 
 1. Adicione o seguinte código imediatamente após a chamada ao método <xref:System.Console.WriteLine%2A>:
 
    ```vb
-   Console.Write("Press any key to continue...")
+   Console.Write(&quot;Press any key to continue...")
    Console.ReadKey(true)
    ```
 

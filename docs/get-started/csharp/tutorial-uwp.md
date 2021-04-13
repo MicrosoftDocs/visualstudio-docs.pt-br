@@ -7,19 +7,19 @@ ms.date: 09/20/2019
 ms.technology: vs-ide-general
 ms.topic: tutorial
 ms.devlang: CSharp
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 342fb2ba0d094299b41707b93b52f3b28a3afdce
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2e68039e02a6181ef7970fdc6a1b3bd6ad173093
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909259"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107295631"
 ---
 # <a name="tutorial-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>Tutorial: criar seu primeiro aplicativo Plataforma Universal do Windows no Visual Studio com XAML e C&#35;
 
@@ -162,7 +162,7 @@ O código usa algumas APIs do Windows para criar um objeto de sintetização de 
 ## <a name="run-the-application"></a>Executar o aplicativo
 
 ::: moniker range="vs-2017"
-É hora de criar, implantar e iniciar o aplicativo UWP "Olá, Mundo" para ver como ele é e como ele soa. Veja como.
+É hora de criar, implantar e iniciar o aplicativo UWP "Olá, Mundo" para ver como ele é e como ele soa. Veja aqui como fazer isso.
 
 1. Use o botão Play (ele tem o texto **Computador Local**) para iniciar o aplicativo no computador local.
 
@@ -182,7 +182,7 @@ O código usa algumas APIs do Windows para criar um objeto de sintetização de 
 
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-É hora de criar, implantar e iniciar o aplicativo UWP "Olá, Mundo" para ver como ele é e como ele soa. Veja como.
+É hora de criar, implantar e iniciar o aplicativo UWP "Olá, Mundo" para ver como ele é e como ele soa. Veja aqui como fazer isso.
 
 1. Use o botão Play (ele tem o texto **Computador Local**) para iniciar o aplicativo no computador local.
 
@@ -209,7 +209,7 @@ Parabéns por concluir este tutorial. Esperamos que você tenha aprendido alguma
 > [!div class="nextstepaction"]
 > [Criar uma interface do usuário](/windows/uwp/design/basics/xaml-basics-ui)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Visão Geral da UWP](/windows/uwp/get-started/universal-application-platform-guide)
 - [Obter exemplos de aplicativo UWP](/windows/uwp/get-started/get-uwp-app-samples)

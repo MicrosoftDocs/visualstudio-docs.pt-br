@@ -7,17 +7,17 @@ ms.assetid: dc2746f4-0b5c-4674-9ef7-f40f94150f52
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 58f46f80a90cce116b985def0377ef80f5a671c6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d2c05dbaa70585fb1a15f4f7378ea85c2c0a33b9
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950660"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107296294"
 ---
 # <a name="step-5-add-controls-to-your-form"></a>Etapa 5: Adicionar controles ao formulário
 
@@ -50,7 +50,7 @@ Nessa etapa, você adiciona controles como um controle <xref:System.Windows.Form
 1. Escolha o **TableLayoutPanel** no formulário e, em seguida, vá para o grupo **contêineres** na **caixa de ferramentas** (onde você obteve o controle TableLayoutPanel) e clique duas vezes no item **FlowLayoutPanel** para adicionar um novo controle à última célula (canto inferior direito). Em seguida, encaixe o FlowLayoutPanel no TableLayoutPanel. Você pode fazer isso escolhendo **encaixar no contêiner pai** na lista de tarefas do triângulo preto do FlowLayoutPanel ou definindo a propriedade **Dock** do FlowLayoutPanel como **Fill**.
 
     > [!NOTE]
-    > Um <xref:System.Windows.Forms.FlowLayoutPanel> é um contêiner que organiza outros controles em uma linha, um após o outro. Quando você redimensiona um FlowLayoutPanel, ele dispõe de todos os seus controles em uma única linha, se tiver espaço para fazer isso. Caso contrário, organize-os em linhas, um sobre o outro. <br/><br/>Aqui, você usará um FlowLayoutPanel para manter quatro botões. Se os botões organizam um no topo do outro ao adicioná-los, certifique-se de selecionar o FlowLayoutPanel antes de adicionar os botões. <br/><br/>(Normalmente, cada célula contém apenas um controle. Neste exemplo, a célula inferior direita do TableLayoutPanel contém quatro controles Button. Por quê?  Como o FlowLayoutPanel é um controle de contêiner, que é um controle em uma célula que contém outros controles.)
+    > Um <xref:System.Windows.Forms.FlowLayoutPanel> é um contêiner que organiza outros controles em uma linha, um após o outro. Quando você redimensiona um FlowLayoutPanel, ele dispõe de todos os seus controles em uma única linha, se tiver espaço para fazer isso. Caso contrário, organize-os em linhas, um sobre o outro. <br/><br/>Aqui, você usará um FlowLayoutPanel para manter quatro botões. Se os botões organizam um no topo do outro ao adicioná-los, certifique-se de selecionar o FlowLayoutPanel antes de adicionar os botões. <br/><br/>(Normalmente, cada célula contém apenas um controle. Neste exemplo, a célula inferior direita do TableLayoutPanel contém quatro controles Button. Por que?  Como o FlowLayoutPanel é um controle de contêiner, que é um controle em uma célula que contém outros controles.)
 
 ## <a name="to-add-buttons"></a>Para adicionar botões
 
@@ -88,7 +88,7 @@ Nessa etapa, você adiciona controles como um controle <xref:System.Windows.Form
 
 * Para retornar à etapa anterior do tutorial, consulte [etapa 4: dispor o formulário com um controle TableLayoutPanel](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 * [Tutorial 2: criar um teste de matemática cronometrado](tutorial-2-create-a-timed-math-quiz.md)
 * [Tutorial 3: criar um jogo de correspondência](tutorial-3-create-a-matching-game.md)

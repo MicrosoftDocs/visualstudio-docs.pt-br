@@ -9,17 +9,17 @@ ms.topic: tutorial
 dev_langs:
 - CSharp
 ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f3232ad0a8b7cc34abbe6d49c05944c066226da
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 419fa05ae510f3dc22ce82c3805f9f54b4e53b27
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101682856"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107295566"
 ---
 # <a name="tutorial-create-a-simple-application-with-c"></a>Tutorial: criar um aplicativo simples com C\#
 
@@ -293,13 +293,13 @@ Inicie o depurador novamente (pressione **F5**). Você deverá ver a janela **Sa
 
 Agora, feche a janela do aplicativo para parar a depuração.
 
-### <a name="debug-with-breakpoints"></a>Depurar com pontos de interrupção
+### <a name="debug-with-breakpoints&quot;></a>Depurar com pontos de interrupção
 
 Você pode testar o código durante a depuração ao adicionar alguns pontos de interrupção. Você pode adicionar pontos de interrupção escolhendo **depurar**  >  **alternar ponto de interrupção**, clicando na margem esquerda do editor ao lado da linha de código onde você deseja que a interrupção ocorra ou pressionando **F9**.
 
-#### <a name="add-breakpoints"></a>Adicionar pontos de interrupção
+#### <a name=&quot;add-breakpoints&quot;></a>Adicionar pontos de interrupção
 
-1. Abra *Greetings.XAML.cs* e selecione a seguinte linha: `MessageBox.Show("Hello.")`
+1. Abra o *Greetings. XAML. cs* e selecione a seguinte linha: `MessageBox.Show(&quot;Hello.")`
 
 1. Adicione um ponto de interrupção por meio do menu selecionando **Depurar** e, em seguida, **Ativar/Desativar Ponto de Interrupção**.
 

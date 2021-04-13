@@ -6,19 +6,19 @@ ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.devlang: CSharp
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fcc42b999039abe5d682394e378cb95f12b9283
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 26f13d12324beb0e414761ce2d79297767c5d708
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956926"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107297113"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-c"></a>Criar um aplicativo Windows Forms no Visual Studio com C\#
 
@@ -133,11 +133,11 @@ Agora que adicionamos um controle de botão para criar uma ação, vamos adicion
 
 ### <a name="add-code-to-the-form"></a>Adicionar código ao formulário
 
-1. Na janela **Form1.cs &#91;Design&#93;** **, clique duas vezes no botão para** abrir a janela **Form1.cs** .
+1. Na janela **Form1. cs &#91;Design&#93;** **, clique duas vezes no botão para** abrir a janela **Form1. cs** .
 
-      (Como alternativa, você pode expandir **Form1.cs** em **Gerenciador de soluções** e, em seguida, escolher **Form1**.)
+      (Como alternativa, você pode expandir **Form1. cs** em **Gerenciador de soluções** e, em seguida, escolher **Form1**.)
 
-1. Na janela **Form1.cs** , após a linha **void particular** , digite ou insira, `lblHelloWorld.Text = "Hello World!";` conforme mostrado na seguinte captura de tela:
+1. Na janela **Form1. cs** , após a linha **void particular** , digite ou insira, `lblHelloWorld.Text = "Hello World!";` conforme mostrado na seguinte captura de tela:
 
      ![Adicionar código ao formulário](../get-started/csharp/media/csharp-winforms-add-code.png)
 

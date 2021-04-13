@@ -3,15 +3,15 @@ title: Visão geral de compilação e depuração das ferramentas de contêiner 
 author: ghogen
 description: Visão geral do processo de compilação e depuração das ferramentas de contêiner
 ms.author: ghogen
-ms.date: 11/20/2019
+ms.date: 03/15/2021
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 07ecc9a171cf6c0ca254ddbf284f116545ddd0f0
-ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
+ms.openlocfilehash: 6b860abeab0745ebae580e3020c94e446f2441c8
+ms.sourcegitcommit: c875360278312457f4d2212f0811466b4def108d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104884077"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107315947"
 ---
 # <a name="how-visual-studio-builds-containerized-apps"></a>Como o Visual Studio cria aplicativos em contêineres
 
@@ -26,7 +26,7 @@ O recurso de compilação de vários estágios ajuda a tornar o processo de cria
 O Build de multiestágio permite que as imagens de contêiner sejam criadas em estágios que produzem imagens intermediárias. Como exemplo, considere um típico Dockerfile gerado pelo Visual Studio – o primeiro estágio é `base` :
 
 ```
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-stretch-slim AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
@@ -37,24 +37,24 @@ As linhas no Dockerfile começam com a imagem Debian do mcr.microsoft.com (regis
 O próximo estágio é `build` , que aparece da seguinte maneira:
 
 ```
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1-buster-slim AS build
 WORKDIR /src
 COPY ["WebApplication43/WebApplication43.csproj", "WebApplication43/"]
 RUN dotnet restore "WebApplication43/WebApplication43.csproj"
 COPY . .
 WORKDIR "/src/WebApplication43"
-RUN dotnet build "WebApplication43.csproj" -c Release -o /app
+RUN dotnet build "WebApplication43.csproj" -c Release -o /app/build
 ```
 
 Você pode ver que o `build` estágio inicia de uma imagem original diferente do registro ( `sdk` em vez de `aspnet` ), em vez de continuar da base.  A `sdk` imagem tem todas as ferramentas de compilação e, por esse motivo, é muito maior do que a imagem ASPNET, que contém apenas componentes de tempo de execução. O motivo para usar uma imagem separada fica claro quando você examina o restante do Dockerfile:
 
 ```
 FROM build AS publish
-RUN dotnet publish "WebApplication43.csproj" -c Release -o /app
+RUN dotnet publish "WebApplication43.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebApplication43.dll"]
 ```
 
@@ -189,7 +189,7 @@ O ponto de entrada de contêiner só pode ser modificado em projetos de composi�
 
 Saiba como personalizar ainda mais suas compilações definindo propriedades adicionais do MSBuild em seus arquivos de projeto. Consulte [Propriedades do MSBuild para projetos de contêiner](container-msbuild-properties.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [MSBuild](../msbuild/msbuild.md) 
  [Dockerfile no Windows](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile) 
