@@ -2,19 +2,19 @@
 title: Personalizar o IDE
 description: Saiba como personalizar o IDE do Visual Studio de maneiras que melhor ofereça suporte ao seu próprio estilo e requisitos de desenvolvimento.
 ms.custom: SEO-VS-2020
-ms.date: 11/20/2017
+ms.date: 04/12/2021
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 550ab6449cc74d3d0d81d60a41b11f0273003c51
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9a1bcfdc9489ee59f5697f1d96de21e31a71fb17
+ms.sourcegitcommit: 5035ccb32fb5e06451337cbf9a150687082ae2af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909026"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107373161"
 ---
 # <a name="personalize-the-visual-studio-ide"></a>Personalizar o IDE do Visual Studio
 
@@ -40,7 +40,7 @@ Muitas opções de personalização são expostas pela caixa de diálogo [Opçõ
 
 ## <a name="environment-color-themes"></a>Temas de cores do ambiente
 
-Para alterar o tema de cores entre leve, escuro e azul, digite **ambiente** na caixa de pesquisa e escolha **ambiente > geral**. Na caixa de diálogo **Opções**, altere a opção **Tema de cores**.
+Para alterar o tema de cores entre escuro, claro, azul e azul (contraste extra), digite **Theme** na caixa de pesquisa e escolha **ambiente > geral**. Na caixa de diálogo **Opções**, altere a opção **Tema de cores**.
 
 Para alterar as opções de colorização no editor, digite **ambiente** na caixa de pesquisa e escolha **ambiente > fontes e cores**. Consulte [How to: Change fonts and colors](../ide/how-to-change-fonts-and-colors-in-visual-studio.md) (Como alterar fontes e cores).
 
@@ -70,7 +70,7 @@ Você pode definir e salvar vários layouts de janela e mudar entre eles. Por ex
 
 ## <a name="see-also"></a>Confira também
 
-- [Configurações do ambiente](environment-settings.md)
+- [Configurações de ambiente](environment-settings.md)
 - [Visão geral do IDE do Visual Studio](../get-started/visual-studio-ide.md)
 - [Início rápido: Introdução ao IDE do Visual Studio](../ide/quickstart-ide-orientation.md)
 - [Personalizar o IDE do Visual Studio para Mac](/visualstudio/mac/customizing-the-ide)
