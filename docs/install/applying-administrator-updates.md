@@ -156,7 +156,7 @@ Você pode usar os seguintes métodos para fornecer comentários sobre as atuali
 * [Forneça comentários sobre recursos ou relate um problema](https://aka.ms/vs/wsus/feedback) à equipe do Visual Studio sobre essa experiência de aplicação de atualizações do administrador.
 * Entre em contato com o gerente técnico de conta da sua organização para a Microsoft.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 * [Habilitando atualizações do administrador](../install/enabling-administrator-updates.md)    
 * [Guia do administrador do Visual Studio](../install/visual-studio-administrator-guide.md)
 * [Ciclo de vida e manutenção do produto Visual Studio](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs)

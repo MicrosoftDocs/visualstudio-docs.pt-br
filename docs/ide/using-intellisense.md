@@ -17,12 +17,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 46eae980a1dafc8e9b7f95f5d40593e57045cc01
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0e6b984a9f885f137cf387837a242cc1207e45ae
+ms.sourcegitcommit: 52b093e000334f53d87c6165d1418347e4f45dec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971317"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107221712"
 ---
 # <a name="intellisense-in-visual-studio"></a>IntelliSense no Visual Studio
 
@@ -68,7 +68,7 @@ Quando você seleciona um membro na caixa **Listar Membros**, as Informações R
 
 ![Informações do parâmetro em um arquivo de código C&#35;](../ide/media/vs2015_paraminfo.png)
 
-Você pode invocar manualmente informações rápidas escolhendo **Editar**  >    >  **informações rápidas** do IntelliSense, pressionando **Ctrl** + **I** ou escolhendo o botão **informações rápidas** na barra de ferramentas do editor.
+Você pode invocar manualmente informações rápidas escolhendo **Editar**  >    >  **informações rápidas** do IntelliSense, pressionando **Ctrl** + **K**, **Ctrl** + **I** ou escolhendo o botão **informações rápidas** na barra de ferramentas do editor.
 
 Se uma função estiver sobrecarregada, o IntelliSense não poderá exibir informações de todos os formulários da sobrecarga.
 
@@ -85,7 +85,7 @@ As opções do IntelliSense são ativadas por padrão. Para desativá-las, escol
 ## <a name="intellisense-icons"></a>Ícones do IntelliSense
 Os ícones no IntelliSense podem transmitir significado adicional com modificadores de ícone. Esses são estrelas, corações e cadeados sobrepostos ao ícone do objeto e que transmitem, respectivamente, os significados de protegido, interno ou privado.
 
-|    ícone    |    Acessibilidade    |    Description    |
+|    ícone    |    Acessibilidade    |    Descrição    |
 |------------|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ![Modificador de ícone público](../ide/media/intellisensePublicNoModifier.png)       |    Classe pública    |    O acesso não é restrito.   |
 | ![Modificador de ícone protegido](../ide/media/intellisenseProtectedModifier.png)       |    Classe protegida    |    O acesso é limitado à classe que os contém ou aos tipos derivados da classe que os contém.    |
@@ -93,7 +93,7 @@ Os ícones no IntelliSense podem transmitir significado adicional com modificado
 | ![Modificador de ícone interno](../ide/media/intellisenseInternalModifier.png)       |    Classe interna    |    O acesso é limitado ao assembly atual.    |
 |![Modificador de ícone privado](../ide/media/intellisensePrivateModifier.png)        |    Classe privada    |    O acesso é limitado à classe que o contém ou a tipos derivados da classe que o contém no assembly atual. (Disponível desde o C# 7.2.)    |
 
-## <a name="troubleshoot-intellisense"></a>Solução de problemas do IntelliSense
+## <a name="troubleshoot-intellisense&quot;></a>Solução de problemas do IntelliSense
 
 As opções do IntelliSense podem não funcionar como você espera em alguns casos.
 
@@ -104,12 +104,12 @@ As opções do IntelliSense podem não funcionar como você espera em alguns cas
 **O cursor está em um literal de cadeia de caracteres.** Não será possível usar o IntelliSense se o cursor estiver entre aspas em um literal de cadeia de caracteres, como no exemplo a seguir:
 
 ```cpp
-MessageBox( hWnd, "String literal|")
+MessageBox( hWnd, &quot;String literal|")
 ```
 
 **As opções automáticas estão desativadas.** Por padrão, o IntelliSense funciona automaticamente, mas é possível desabilitar isso. Mesmo se o preenchimento automático de declaração for desabilitado, é possível invocar um recurso IntelliSense.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visual Basic IntelliSense](../ide/visual-basic-specific-intellisense.md)
 - [C# IntelliSense](../ide/visual-csharp-intellisense.md)

@@ -1,8 +1,8 @@
 ---
-title: Shells de linha de comando para desenvolvedores
-description: Saiba como localizar e usar o Visual Studio Prompt de Comando do Desenvolvedor, o Visual Studio Developer PowerShell e o terminal do Visual Studio, que permitem usar as ferramentas .NET e C++ com mais facilidade.
-ms.date: 03/04/2021
-ms.custom: contperf-fy21q3
+title: Shells de linha de comando & prompt para desenvolvedores
+description: Inicie nas ferramentas > menu linha de comando. O Visual Studio Prompt de Comando do Desenvolvedor, o PowerShell do desenvolvedor e o terminal permitem que você use as ferramentas do .NET e do C++ com mais facilidade.
+ms.date: 04/11/2021
+ms.custom: contperf-fy21q4
 helpviewer_keywords:
 - Visual Studio command prompt
 - command prompt, Visual Studio
@@ -11,27 +11,21 @@ helpviewer_keywords:
 - Visual Studio terminal
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 no-loc: cmdlet
-ms.openlocfilehash: fb2c99037577528b77ab5c1b0c74bf7af9e73d1b
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 57cbc93f4b6e8cf64dd5149462788e0cde833350
+ms.sourcegitcommit: 52b093e000334f53d87c6165d1418347e4f45dec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672319"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107221725"
 ---
-# <a name="developer-command-prompt-and-developer-powershell"></a>Prompt de Comando do Desenvolvedor e o PowerShell para desenvolvedores
+# <a name="visual-studio-developer-command-prompt-and-developer-powershell"></a>PowerShell de Prompt de Comando do Desenvolvedor e desenvolvedor do Visual Studio
 
 O Visual Studio 2019 inclui dois shells de linha de comando para desenvolvedores:
 
 - **Visual Studio prompt de comando do desenvolvedor** -um prompt de comando padrão com determinadas variáveis de ambiente definido para facilitar o uso das ferramentas de desenvolvedor de linha de comando. Disponível desde o Visual Studio 2015.
+
 - **Visual Studio Developer PowerShell** – mais potente do que um prompt de comando. Por exemplo, você pode passar a saída de um comando (conhecido como um *cmdlet* ) para outro cmdlet . Este Shell tem as mesmas variáveis de ambiente definidas como Prompt de Comando do Desenvolvedor. Disponível desde o Visual Studio 2019.
 
-Ambos os shells têm variáveis de ambiente específicas definidas que permitem que você use ferramentas de desenvolvedor de linha de comando mais facilmente. Depois de abrir um desses shells, você pode inserir os comandos para diferentes utilitários sem precisar saber onde eles estão localizados. Os comandos que você pode executar incluem:
-
-- [`MSBuild`](../../msbuild/msbuild-command-line-reference.md), para criar um projeto ou solução.
-- [.NET Framework ferramentas](/dotnet/framework/tools/index), como [`clrver`](/dotnet/framework/tools/clrver-exe-clr-version-tool) e [`ildasm`](/dotnet/framework/tools/ildasm-exe-il-disassembler) .
-- Ferramentas de compilação C/C++, como [`CL`](/cpp/build/reference/compiler-command-line-syntax) e [`NMAKE`](/cpp/build/reference/running-nmake) .
-- Ferramentas de Build do C/C++ adicionais, como [`LIB`](/cpp/build/reference/lib-reference) e [`DUMPBIN`](/cpp/build/reference/dumpbin-reference) .
-- [Comandos da CLI do .net](/dotnet/core/tools/index), como [`dotnet`](/dotnet/core/tools/dotnet) e [`dotnet run`](/dotnet/core/tools/dotnet-run) . (Esses comandos também estão disponíveis em um prompt de comando regular).
 
 :::image type="content" source="media/developer-command-prompt-for-vs/command-prompt.png" alt-text="Prompt de Comando do Desenvolvedor para Visual Studio mostrando a ferramenta CLRVer":::
 
@@ -41,7 +35,22 @@ A partir do Visual Studio 2019 versão 16,5, o Visual Studio inclui um **termina
 
 Quando você abre um dos shells do desenvolvedor do Visual Studio, seja como um aplicativo separado ou na janela do terminal, ele é aberto no diretório da sua solução atual (se você tiver uma solução carregada). Esse comportamento torna conveniente executar comandos na solução ou em seus projetos.
 
-## <a name="start-the-shell-from-inside-visual-studio"></a>Iniciar o Shell de dentro do Visual Studio
+Ambos os shells têm variáveis de ambiente específicas definidas que permitem que você use ferramentas de desenvolvedor de linha de comando mais facilmente. Depois de abrir um desses shells, você pode inserir os comandos para diferentes utilitários sem precisar saber onde eles estão localizados. 
+
+|Comandos populares|Descrição|
+|--|--|
+|[`MSBuild`](../../msbuild/msbuild-command-line-reference.md)|Compilar um projeto ou solução|
+|[`clrver`](/dotnet/framework/tools/clrver-exe-clr-version-tool)| Uma [.NET Framework ferramentas](/dotnet/framework/tools/index) para CLR.|
+|[`ildasm`](/dotnet/framework/tools/ildasm-exe-il-disassembler)|Uma [ferramenta de .NET Framework](/dotnet/framework/tools/index) para o desmontador.|
+|[`dotnet`](/dotnet/core/tools/dotnet)|Um [comando da CLI do .net](/dotnet/core/tools/index)|
+|[`dotnet run`](/dotnet/core/tools/dotnet-run)|Um [comando da CLI do .net](/dotnet/core/tools/index)|
+|[`CL`](/cpp/build/reference/compiler-command-line-syntax)|Ferramenta de compilação C/C++|
+|[`NMAKE`](/cpp/build/reference/running-nmake)|Ferramenta de compilação C/C++|
+|[`LIB`](/cpp/build/reference/lib-reference)| Ferramenta de Build do C/C++|
+|[`DUMPBIN`](/cpp/build/reference/dumpbin-reference)| Ferramenta de Build do C/C++|
+
+
+## <a name="start-in-visual-studio"></a>Iniciar no Visual Studio
 
 Siga estas etapas para abrir o Prompt de Comando do Desenvolvedor ou o PowerShell do desenvolvedor no Visual Studio:
 
@@ -51,9 +60,9 @@ Siga estas etapas para abrir o Prompt de Comando do Desenvolvedor ou o PowerShel
 
    ![Item de menu do prompt de comando no Visual Studio](./media/developer-command-prompt-for-vs/vs-menu.png)
 
-## <a name="use-the-windows-start-menu"></a>Usar o menu Iniciar do Windows
+## <a name="start-from-windows-menu"></a>Iniciar no menu do Windows
 
-Você pode ter vários prompts de comando, dependendo da versão do Visual Studio e de quaisquer SDKs e cargas de trabalho adicionais instalados. Se as etapas a seguir não funcionarem, você poderá tentar [localizar manualmente os arquivos em seu computador](#manually-locate-the-file) ou [iniciar o Shell de dentro do Visual Studio](#start-the-shell-from-inside-visual-studio).
+Outra maneira de iniciar os shells é a partir do menu iniciar. Você pode ter vários prompts de comando, dependendo da versão do Visual Studio e de quaisquer SDKs e cargas de trabalho adicionais instalados. 
 
 ### <a name="windows-10"></a>Windows 10
 
@@ -85,7 +94,7 @@ Você pode ter vários prompts de comando, dependendo da versão do Visual Studi
 
 Se você tiver outros SDKs instalados, como o [SDK do Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk) ou [versões anteriores](https://developer.microsoft.com/windows/downloads/sdk-archive), poderá ver prompts de comando adicionais. Consulte a documentação das ferramentas individuais para determinar qual versão do prompt de comando você deve usar.
 
-## <a name="manually-locate-the-file"></a>Localizar o arquivo manualmente
+## <a name="start-from-file-browser"></a>Iniciar no navegador de arquivos 
 
 Normalmente, os atalhos para os shells que você instalou são colocados na pasta do **menu iniciar** do Visual Studio, como no *%ProgramData%\Microsoft\Windows\Start Menu\Programs\Visual Studio 2019 \ Ferramentas do Visual Studio*. Mas se a pesquisa do prompt de comando não produzir os resultados esperados, você poderá tentar localizar manualmente os arquivos em seu computador.
 
