@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d57fa806ae565d0752fb9970c3f335295e83535
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: ee849354d82b11b8d94a737a2b546f686d04d34a
+ms.sourcegitcommit: 3985d0ae8d6332f4682c82a10897763173d52961
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101684224"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107386031"
 ---
 # <a name="how-to-debug-for-absolute-beginners"></a>Como depurar para iniciantes absolutos
 
@@ -70,7 +70,7 @@ Se você não recebeu uma exceção, você provavelmente tem uma boa ideia de on
 
 No Visual Studio, é possível definir rapidamente um ponto de interrupção clicando na margem esquerda ao lado de uma linha de código. Ou coloque o cursor em uma linha e pressione **F9**.
 
-Para ajudar a ilustrar esses conceitos, nós o levamos por meio de um código de exemplo que já tem vários bugs. Estamos usando o C#, mas os recursos de depuração são aplicáveis ao Visual Basic, C++, JavaScript, Python e a outras linguagens com suporte.
+Para ajudar a ilustrar esses conceitos, nós o levamos por meio de um código de exemplo que já tem vários bugs. Estamos usando o C#, mas os recursos de depuração são aplicáveis ao Visual Basic, C++, JavaScript, Python e a outras linguagens com suporte. O código de exemplo para Visual Basic também é fornecido, mas as capturas de tela estão em C#.
 
 ### <a name="create-a-sample-app-with-some-bugs"></a>Criar um aplicativo de exemplo (com alguns bugs)
 
@@ -85,19 +85,21 @@ Em seguida, criaremos um aplicativo que tem alguns bugs.
 1. Abra o Visual Studio.
 
     ::: moniker range=">=vs-2019"
-    Na janela iniciar, escolha **criar um novo projeto**. Digite **console** na caixa de pesquisa, selecione **C#** como o idioma e, em seguida, escolha **aplicativo de console** para .NET Core. Escolha **Próxima**. Digite um nome de projeto como **ConsoleApp-FirstApp** e clique em **Avançar**.
+    Na janela iniciar, escolha **criar um novo projeto**. Digite **console** na caixa de pesquisa, selecione **C#** ou **Visual Basic** como o idioma e, em seguida, escolha **aplicativo de console** para .NET Core. Escolha **Próxima**. Digite um nome de projeto como **ConsoleApp_FirstApp** e clique em **Avançar**.
 
     Escolha a estrutura de destino recomendada (.NET Core 3,1) ou .NET 5 e, em seguida, escolha **criar**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Na barra de menus superior, escolha **arquivo**  >  **novo**  >  **projeto**. No painel esquerdo da caixa de diálogo **novo projeto** , em **Visual C#**, escolha **aplicativo de console** e, no painel central, escolha o **aplicativo de console (.NET Core)**. Digite um nome como **ConsoleApp-FirstApp** e clique em **OK**.
+    Na barra de menus superior, escolha **arquivo**  >  **novo**  >  **projeto**. No painel esquerdo da caixa de diálogo **novo projeto** , em **Visual C#** ou **Visual Basic**, escolha **aplicativo de console** e, no painel central, escolha o **aplicativo de console (.NET Core)**. Digite um nome como **ConsoleApp_FirstApp** e clique em **OK**.
     ::: moniker-end
 
     Se você não vir o modelo de projeto de **aplicativo de console** para .NET Core, vá para **ferramentas**  >  **obter ferramentas e recursos**, o que abre o instalador do Visual Studio. Escolha a carga de trabalho de **desenvolvimento de plataforma cruzada do .NET Core** e escolha **Modificar**.
 
     O Visual Studio criará o console do projeto, que será aberto no Gerenciador de Soluções no painel direito.
 
-1. Em *Program.cs*, substitua todo o código padrão pelo seguinte:
+1. Em *Program. cs* (ou *Program. vb*), substitua todo o código padrão pelo código a seguir. (Selecione a guia idioma correto primeiro, C# ou Visual Basic.)
+
+   #### <a name="c"></a>[C#](#tab/csharp)
 
     ```csharp
     using System;
@@ -178,6 +180,109 @@ Em seguida, criaremos um aplicativo que tem alguns bugs.
     }
     ```
 
+   #### <a name="visual-basic"></a>[Visual Basic](#tab/visualbasic)
+
+    ```vb
+    Imports System
+    Imports System.Collections.Generic
+
+    Namespace ConsoleApp_FirstApp
+        Friend Class Program
+            Public Shared Sub Main(ByVal args As String())
+                Console.WriteLine("Welcome to Galaxy News!")
+                Call IterateThroughList()
+                Console.ReadKey()
+            End Sub
+
+            Private Shared Sub IterateThroughList()
+                Dim theGalaxies = New List(Of Galaxy) From {
+                    New Galaxy() With {
+                        .Name = "Tadpole",
+                        .MegaLightYears = 400,
+                        .GalaxyType = New GType("S"c)
+                    },
+                    New Galaxy() With {
+                        .Name = "Pinwheel",
+                        .MegaLightYears = 25,
+                        .GalaxyType = New GType("S"c)
+                    },
+                    New Galaxy() With {
+                        .Name = "Cartwheel",
+                        .MegaLightYears = 500,
+                        .GalaxyType = New GType("L"c)
+                    },
+                    New Galaxy() With {
+                        .Name = "Small Magellanic Cloud",
+                        .MegaLightYears = 0.2,
+                        .GalaxyType = New GType("I"c)
+                    },
+                    New Galaxy() With {
+                        .Name = "Andromeda",
+                        .MegaLightYears = 3,
+                        .GalaxyType = New GType("S"c)
+                    },
+                    New Galaxy() With {
+                        .Name = "Maffei 1",
+                        .MegaLightYears = 11,
+                        .GalaxyType = New GType("E"c)
+                    }
+                }
+    
+                For Each theGalaxy As Galaxy In theGalaxies
+                    Console.WriteLine(theGalaxy.Name & "  " & theGalaxy.MegaLightYears & ",  " & theGalaxy.GalaxyType)
+                Next
+
+            End Sub
+        End Class
+    
+        Public Class Galaxy
+            Public Property Name As String
+            Public Property MegaLightYears As Double
+            Public Property GalaxyType As Object
+        End Class
+    
+        Public Class GType
+    
+            Shared Operator &(ByVal left As String, ByVal right As GType) As String
+                Return New String(left & right.ToString())
+            End Operator
+            Public Sub New(ByVal type As Char)
+                Select Case type
+                    Case "S"c
+                        MyGType = GType.Type.Spiral
+                    Case "E"c
+                        MyGType = GType.Type.Elliptical
+                    Case "l"c
+                        MyGType = GType.Type.Irregular
+                    Case "L"c
+                        MyGType = GType.Type.Lenticular
+                    Case Else
+                End Select
+    
+            End Sub
+    
+            Private _MyGType As String
+            Public Property MyGType As Object
+                Get
+                    Return _MyGType
+                End Get
+                Set(ByVal value As Object)
+                    _MyGType = value.ToString()
+                End Set
+            End Property
+    
+            Private Enum Type
+                Spiral
+                Elliptical
+                Irregular
+                Lenticular
+            End Enum
+        End Class
+    End Namespace
+    ```
+
+    ---
+
     Nossa intenção para esse código é exibir o nome da galáxia, a distância até ela e o tipo de galáxia. Tudo isso em uma lista. Para depurar, é importante entender a intenção do código. Veja o formato para uma linha na lista que desejamos mostrar na saída:
 
     *nome da galáxia*, *distância*, *tipo de galáxia*.
@@ -214,6 +319,8 @@ Em seguida, criaremos um aplicativo que tem alguns bugs.
 
 1. Com o aplicativo ainda em execução, defina um ponto de interrupção clicando na margem esquerda ao lado da chamada de método `Console.WriteLine` nesta linha de código.
 
+    #### <a name="c"></a>[C#](#tab/csharp)
+
     ```csharp
     foreach (Galaxy theGalaxy in theGalaxies)
     {
@@ -221,6 +328,15 @@ Em seguida, criaremos um aplicativo que tem alguns bugs.
     }
     ```
 
+    #### <a name="visual-basic"></a>[Visual Basic](#tab/visualbasic)
+
+    ```vb
+    For Each theGalaxy As Galaxy In theGalaxies
+        Console.WriteLine(theGalaxy.Name & "  " & theGalaxy.MegaLightYears & ",  " & theGalaxy.GalaxyType)
+    Next
+    ```
+
+    ---
     Quando você definir o ponto de interrupção, um ponto vermelho será exibido na margem esquerda.
 
     Como vemos um problema na saída, começaremos a depuração examinando o código anterior que define a saída no depurador.
@@ -235,9 +351,12 @@ Em seguida, criaremos um aplicativo que tem alguns bugs.
 
     "Espiral" é, na verdade, o valor correto que você estava aguardando para imprimir no console! Portanto, é um bom começo você poder acessar esse valor neste código ao executar o aplicativo. Nesse cenário, estamos usando a API incorreta. Veremos se podemos corrigir isso durante a execução do código no depurador.
 
-1. No mesmo código, ainda durante a depuração, coloque o cursor no final de `theGalaxy.GalaxyType` e altere-o para `theGalaxy.GalaxyType.MyGType`. Embora seja possível fazer essa alteração, o editor de códigos mostra um erro que indica que não é possível compilar esse código.
+1. No mesmo código, ainda durante a depuração, coloque o cursor no final de `theGalaxy.GalaxyType` e altere-o para `theGalaxy.GalaxyType.MyGType`. Embora seja possível fazer essa alteração, o editor de códigos mostra um erro que indica que não é possível compilar esse código. (No Visual Basic, você não verá o erro e esta seção de código funciona)
 
     ![Captura de tela do depurador do Visual Studio com uma linha de código realçada em vermelho e uma caixa de mensagem editar e continuar com o botão Editar selecionado.](../debugger/media/beginners-edit.png)
+
+   > [!NOTE]
+   > Para depurar o código de exemplo Visual Basic, ignore as próximas etapas até que você seja instruído a clicar no botão **reiniciar** ![aplicativo](../debugger/media/dbg-tour-restart.png "RestartApp") de reinicialização.
 
 1. Clique em **Editar** na caixa de mensagem **Editar e continuar**. Você vê uma mensagem de erro agora na janela **Lista de Erros**. O erro indica que o `'object'` não contém uma definição para `MyGType`.
 
@@ -274,11 +393,21 @@ Em seguida, criaremos um aplicativo que tem alguns bugs.
     Maffei 1,  Elliptical
     ```
 
-1. Defina um ponto de interrupção nessa linha de código.
+1. Defina um ponto de interrupção nesta linha de código antes da instrução switch (antes da instrução SELECT em Visual Basic).
+
+    #### <a name="c"></a>[C#](#tab/csharp)
 
     ```csharp
     public GType(char type)
     ```
+
+    #### <a name="visual-basic"></a>[Visual Basic](#tab/visualbasic)
+
+    ```vb
+    Public Sub New(ByVal type As Char)
+    ```
+
+    ---
 
     Esse código é onde o tipo de galáxia foi definido, portanto, queremos examiná-la mais de perto.
 
@@ -296,7 +425,7 @@ Em seguida, criaremos um aplicativo que tem alguns bugs.
 
     **F11** avança o depurador (e executa o código) uma instrução por vez. **F10** (**Depuração parcial**) é um comando semelhante e ambos são extremamente úteis ao aprender a usar o depurador.
 
-1. Pressione **F11** até que você pare na linha de código na instrução `switch` para um valor de 'I'. Aqui, você vê um claro problema decorrente de um erro de digitação. Você esperava que o código avançasse para onde ele define `MyGType` como um tipo de galáxia irregular, mas, em vez disso, o depurador ignora esse código completamente e faz uma pausa na seção `default` da instrução `switch`.
+1. Pressione **F11** até parar na linha de código na `switch` instrução para obter um valor de ' I ' ( `Select` instrução para Visual Basic). Aqui, você vê um claro problema decorrente de um erro de digitação. Você esperava que o código avançasse para onde ele é definido `MyGType` como um tipo irregular do Galaxy, mas o depurador, em vez disso, ignora esse código completamente e pausa na `default` seção da `switch` instrução ( `Else` instrução no Visual Basic).
 
     ![Localizar um erro de digitação](../debugger/media/beginners-typo.png)
 
