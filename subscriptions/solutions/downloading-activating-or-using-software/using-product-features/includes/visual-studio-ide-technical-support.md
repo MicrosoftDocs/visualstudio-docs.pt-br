@@ -10,18 +10,18 @@ user.type: subscriber
 tags: download, activate, licensing
 subscription.type: vl, cloud, retail, partner
 sap.id: af210210-e3e1-2b2e-8d79-9bd20e851241
-ms.openlocfilehash: ac57b500685ae885d5cd68c5901a6ee2617462d0
-ms.sourcegitcommit: bbf532e50b9140724c1a0f66f9a35862bf6e4a97
+ms.openlocfilehash: 755574a0ae60b078a2ea5414e43e16c80c91fa67
+ms.sourcegitcommit: f6aa84e34c2f41877b84c01e7ead956a1b4c24f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "107291410"
+ms.lasthandoff: 04/15/2021
+ms.locfileid: "107512948"
 ---
 ## <a name="visual-studio-ide-technical-support"></a>Suporte técnico do IDE do Visual Studio  
 
 O suporte a assinaturas do Visual Studio fornece assistência com vendas, assinaturas, contas e cobrança. Se você tiver um problema técnico ou uma pergunta técnica do Visual Studio IDE, sua pergunta precisará ser direcionada para o [suporte técnico do Visual Studio](https://visualstudio.microsoft.com/vs/support/). Antes de usar seus [incidentes de suporte técnico limitados do Visual Studio](https://docs.microsoft.com/visualstudio/subscriptions/vs-tech-support) que podem ser incluídos na sua assinatura do Visual Studio, sugerimos experimentar alguns outros recursos online.
 
-Para problemas de instalação do Visual Studio, consulte [solucionar problemas de instalação e atualização do Visual Studio](https://docs.microsoft.com/visualstudio/install/troubleshooting-installation-issues?view=vs-2019) para obter orientações passo a passo. Você também pode tentar a opção de suporte de [chat](https://visualstudio.microsoft.com/vs/support/#talktous) (somente em inglês) para problemas relacionados à instalação.
+Para problemas de instalação do Visual Studio, consulte [solucionar problemas de instalação e atualização do Visual Studio](https://docs.microsoft.com/visualstudio/install/troubleshooting-installation-issues) para obter orientações passo a passo. Você também pode tentar a opção de suporte de [chat](https://visualstudio.microsoft.com/vs/support/#talktous) (somente em inglês) para problemas relacionados à instalação.
 
 
 ## <a name="developer-community--visual-studio-ide"></a>Comunidade de desenvolvedores | IDE do Visual Studio

@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jmartens
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: 49c3081e68baf4f2bf1d0975bcdae7ea25ab90b3
-ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
+ms.openlocfilehash: 1709785c63bd4fbcd702fbcacfe59dddcb71d1b3
+ms.sourcegitcommit: 0135fc6ffa38995cc9e6ab05fa265758890d2e15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103571539"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107526154"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Como funciona a Ponte para Kubernetes
 
@@ -26,6 +26,8 @@ A ponte para o kubernetes redireciona o tráfego entre o cluster kubernetes cone
 
 > [!WARNING]
 > O Bridge to kubernetes destina-se ao uso somente em cenários de desenvolvimento e teste. Ele não se destina ou tem suporte para uso com clusters de produção ou serviços dinâmicos em uso ativo.
+
+As informações sobre os recursos com suporte no momento e um roteiro futuro para o Bridge to kubernetes podem ser encontradas em [Bridge to kubernetes Roadmap](https://github.com/microsoft/mindaro/projects/1).
 
 ## <a name="using-bridge-to-kubernetes"></a>Usando o Bridge para kubernetes
 
@@ -53,7 +55,7 @@ Além disso, o Bridge para o kubernetes fornece uma maneira de replicar as vari�
 
 ## <a name="additional-configuration-with-kuberneteslocalprocessconfigyaml"></a>Configuração adicional com KubernetesLocalProcessConfig. YAML
 
-O `KubernetesLocalProcessConfig.yaml` arquivo permite replicar as variáveis de ambiente e os arquivos montados disponíveis para o pods em seu cluster. Para obter mais informações sobre as opções de configuração adicionais, consulte [Configure Bridge to kubernetes][using-config-yaml].
+O `KubernetesLocalProcessConfig.yaml` arquivo permite replicar as variáveis de ambiente e os arquivos montados disponíveis para o pods em seu cluster. Ao usar o Visual Studio para ponte para o desenvolvimento do kubernetes, o arquivo KubernetesLocalConfig. YAML deve estar localizado no mesmo diretório que o arquivo de projeto para o serviço que você está redirecionando. Para obter mais informações sobre as opções de configuração adicionais, consulte [Configure Bridge to kubernetes][using-config-yaml].
 
 ## <a name="using-routing-capabilities-for-developing-in-isolation"></a>Usando recursos de roteamento para o desenvolvimento em isolamento
 
