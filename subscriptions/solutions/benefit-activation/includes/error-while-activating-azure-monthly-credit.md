@@ -5,21 +5,23 @@ ms.topic: include
 ms.assetid: eed8114a-651a-47e2-bb24-130acd2a76d0
 author: CaityBuschlen
 ms.author: cabuschl
-ms.date: 8/14/2020
+ms.date: 4/16/2021
 user.type: subscriber
 tags: benefit, azure
 subscription.type: vl, cloud, retail, partner
 sap.id: 8dedd10e-cb1c-2eb1-bcda-fe00b07ac903
-ms.openlocfilehash: 91014bf9e942d874316cf74b9631d23426a61ea1
-ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
+ms.openlocfilehash: 4481af6b1ff33df7542d230abba2d39964027d41
+ms.sourcegitcommit: 54aac5044a9853a435577acc5a134cb254494ffb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99541279"
+ms.lasthandoff: 04/17/2021
+ms.locfileid: "107590050"
 ---
 ## <a name="im-getting-an-error-while-trying-to-activate-my-azure-monthly-credit"></a>Estou recebendo um erro ao tentar ativar meu crédito mensal do Azure.
 
-Você pode ter apenas um benefício de crédito individual de desenvolvimento/teste do Azure por assinatura do Azure associada à sua assinatura do Visual Studio. Você poderá estar vendo um erro se tiver ativado anteriormente o crédito Azure mensal. Se você não tiver certeza se ativou o crédito, faça logon no [portal do Azure](https://portal.azure.com/) para verificar. 
+Você pode ter apenas um benefício de crédito individual de desenvolvimento/teste do Azure por assinatura do Azure associado à sua assinatura do Visual Studio. Você poderá estar vendo um erro se tiver ativado anteriormente o crédito Azure mensal. Se você não tiver certeza se ativou o crédito, faça logon no [portal do Azure](https://portal.azure.com/) para verificar. 
+
+Se você tiver uma nova assinatura do Visual Studio e estiver recebendo o erro "não é possível ativar este benefício do Visual Studio mais de uma vez" ao tentar ativar o benefício de crédito do Azure mensalmente, entre em contato com o suporte de assinaturas do Visual Studio clicando no botão "criar um tíquete de suporte" na parte inferior dessa solução. 
 
 ## <a name="verify-your-email"></a>Verifique seu email 
 
