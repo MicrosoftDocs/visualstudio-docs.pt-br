@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f3ef1a32d145169db815915ee93d03893943e71f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0f2fc5bbfabbe2672ae59c55734a5cf57fc84318
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877896"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825154"
 ---
 # <a name="how-to-programmatically-search-for-and-replace-text-in-documents"></a>Como: Pesquisar e substituir texto de forma programática em documentos
   O <xref:Microsoft.Office.Interop.Word.Find> objeto é um membro dos <xref:Microsoft.Office.Interop.Word.Selection> objetos e e <xref:Microsoft.Office.Interop.Word.Range> você pode usar qualquer um para pesquisar texto em Microsoft Office documentos do Word. O comando Replace é uma extensão do comando find.
@@ -41,23 +41,23 @@ ms.locfileid: "99877896"
 
 1. Atribua uma cadeia de caracteres de pesquisa a uma variável.
 
-    [!code-vb[Trin_VstcoreWordAutomation#68](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#68)]
-    [!code-csharp[Trin_VstcoreWordAutomation#68](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#68)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet68":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet68":::
 
 2. Limpar formatação de pesquisas anteriores.
 
-    [!code-vb[Trin_VstcoreWordAutomation#69](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#69)]
-    [!code-csharp[Trin_VstcoreWordAutomation#69](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#69)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet69":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet69":::
 
 3. Execute a pesquisa e exiba uma caixa de mensagem com os resultados.
 
-    [!code-vb[Trin_VstcoreWordAutomation#70](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#70)]
-    [!code-csharp[Trin_VstcoreWordAutomation#70](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#70)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet70":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet70":::
 
    O exemplo a seguir mostra o método Complete.
 
-   [!code-vb[Trin_VstcoreWordAutomation#67](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#67)]
-   [!code-csharp[Trin_VstcoreWordAutomation#67](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#67)]
+   :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet67":::
+   :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet67":::
 
 ## <a name="use-a-range-object"></a>Usar um objeto Range
  O uso de um <xref:Microsoft.Office.Interop.Word.Range> objeto permite Pesquisar texto sem exibir nada na interface do usuário. O <xref:Microsoft.Office.Interop.Word.Find> objeto retornará **true** se for encontrado texto que corresponde aos critérios de pesquisa e **false** se não. Ele também redefine o <xref:Microsoft.Office.Interop.Word.Range> objeto para corresponder aos critérios de pesquisa se o texto for encontrado.
@@ -68,35 +68,35 @@ ms.locfileid: "99877896"
 
     O exemplo de código a seguir pode ser usado em uma personalização em nível de documento.
 
-    [!code-vb[Trin_VstcoreWordAutomation#72](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#72)]
-    [!code-csharp[Trin_VstcoreWordAutomation#72](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#72)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet72":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet72":::
 
     O exemplo de código a seguir pode ser usado em um suplemento do VSTO. Este exemplo usa o documento ativo.
 
-    [!code-vb[Trin_VstcoreWordAutomationAddIn#72](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#72)]
-    [!code-csharp[Trin_VstcoreWordAutomationAddIn#72](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#72)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet72":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet72":::
 
 2. Usando a <xref:Microsoft.Office.Interop.Word.Range.Find%2A> Propriedade do <xref:Microsoft.Office.Interop.Word.Range> objeto, primeiro desmarque todas as opções de formatação existentes e, em seguida, procure a cadeia de caracteres **Localize-me**.
 
-    [!code-vb[Trin_VstcoreWordAutomation#73](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#73)]
-    [!code-csharp[Trin_VstcoreWordAutomation#73](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#73)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet73":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet73":::
 
 3. Exiba os resultados da pesquisa em uma caixa de mensagem e selecione o <xref:Microsoft.Office.Interop.Word.Range> para torná-lo visível.
 
-    [!code-vb[Trin_VstcoreWordAutomation#74](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#74)]
-    [!code-csharp[Trin_VstcoreWordAutomation#74](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#74)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet74":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet74":::
 
     Se a pesquisa falhar, o segundo parágrafo será selecionado; Se tiver sucesso, os critérios de pesquisa serão exibidos.
 
    O exemplo a seguir mostra o código completo de uma personalização em nível de documento. Para usar este exemplo, execute o código da `ThisDocument` classe em seu projeto.
 
-   [!code-vb[Trin_VstcoreWordAutomation#71](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#71)]
-   [!code-csharp[Trin_VstcoreWordAutomation#71](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#71)]
+   :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet71":::
+   :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet71":::
 
    O exemplo a seguir mostra o código completo de um suplemento do VSTO. Para usar este exemplo, execute o código da `ThisAddIn` classe em seu projeto.
 
-   [!code-vb[Trin_VstcoreWordAutomationAddIn#71](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#71)]
-   [!code-csharp[Trin_VstcoreWordAutomationAddIn#71](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#71)]
+   :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet71":::
+   :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet71":::
 
 ## <a name="search-for-and-replace-text-in-documents"></a>Pesquisar e substituir texto em documentos
  O código a seguir pesquisa a seleção atual e substitui todas as ocorrências da cadeia de caracteres, **encontre-me** com a cadeia de caracteres **encontrada**.
@@ -105,8 +105,8 @@ ms.locfileid: "99877896"
 
 1. Adicione o seguinte código de exemplo à `ThisDocument` `ThisAddIn` classe ou em seu projeto.
 
-     [!code-vb[Trin_VstcoreWordAutomation#75](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#75)]
-     [!code-csharp[Trin_VstcoreWordAutomation#75](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#75)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet75":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet75":::
 
      A <xref:Microsoft.Office.Interop.Word.Find> classe tem um <xref:Microsoft.Office.Interop.Word.Find.ClearFormatting%2A> método e a <xref:Microsoft.Office.Interop.Word.Replacement> classe também tem seu próprio <xref:Microsoft.Office.Interop.Word.Replacement.ClearFormatting%2A> método. Ao executar operações de localizar e substituir, você deve usar o método ClearFormatting de ambos os objetos. Se você usá-lo somente no <xref:Microsoft.Office.Interop.Word.Find> objeto, poderá obter resultados imprevistos no texto de substituição.
 
@@ -118,7 +118,7 @@ ms.locfileid: "99877896"
 
     - <xref:Microsoft.Office.Interop.Word.WdReplace.wdReplaceOne> Substitui o primeiro item encontrado.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Como: definir opções de pesquisa de forma programática no Word](../vsto/how-to-programmatically-set-search-options-in-word.md)
 - [Como fazer loops programaticamente por meio de itens encontrados em documentos](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)
 - [Como: definir e selecionar intervalos de forma programática em documentos](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)

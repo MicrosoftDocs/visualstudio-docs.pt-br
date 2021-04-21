@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 07372334e9e50275208abd383f73c9d27f8c49d6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b1ce30c9a0e21bd4b8860f7a4d17191c48cd2ad9
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910077"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828300"
 ---
 # <a name="how-to-programmatically-apply-styles-to-ranges-in-workbooks"></a>Como: aplicar estilos programaticamente a intervalos em pastas de trabalho
   Você pode aplicar estilos nomeados a regiões em pastas de trabalho. O Excel fornece vários estilos predefinidos.
@@ -35,41 +35,41 @@ ms.locfileid: "99910077"
 
 1. Crie um novo estilo e defina seus atributos.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#53](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#53)]
-     [!code-vb[Trin_VstcoreExcelAutomation#53](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#53)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet53":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet53":::
 
 2. Crie um <xref:Microsoft.Office.Tools.Excel.NamedRange> controle, atribua o texto a ele e aplique o novo estilo. Esse código deve ser colocado em uma classe de planilha, não na `ThisWorkbook` classe.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#54](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#54)]
-     [!code-vb[Trin_VstcoreExcelAutomation#54](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#54)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet54":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet54":::
 
 ## <a name="to-clear-a-style-from-a-named-range-in-a-document-level-customization"></a>Para limpar um estilo de um intervalo nomeado em uma personalização no nível do documento
 
 1. Aplique o estilo normal ao intervalo. Esse código deve ser colocado em uma classe de planilha, não na `ThisWorkbook` classe.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#55](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#55)]
-     [!code-vb[Trin_VstcoreExcelAutomation#55](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#55)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet55":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet55":::
 
 ## <a name="to-apply-a-style-to-a-named-range-in-a-vsto-add-in"></a>Para aplicar um estilo a um intervalo nomeado em um suplemento do VSTO
 
 1. Crie um novo estilo e defina seus atributos.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#28](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#28)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#28](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#28)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet28":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet28":::
 
 2. Crie um <xref:Microsoft.Office.Interop.Excel.Range> , atribua um texto a ele e, em seguida, aplique o novo estilo.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#29](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#29)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#29](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#29)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet29":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet29":::
 
 ## <a name="to-clear-a-style-from-a-named-range-in-a-vsto-add-in"></a>Para limpar um estilo de um intervalo nomeado em um suplemento do VSTO
 
 1. Aplique o estilo normal ao intervalo.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#56](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#56)]
-     [!code-vb[Trin_VstcoreExcelAutomation#56](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#56)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet56":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet56":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Trabalhar com intervalos](../vsto/working-with-ranges.md)
 - [Controle NamedRange](../vsto/namedrange-control.md)
 - [Acesso global a objetos em projetos do Office](../vsto/global-access-to-objects-in-office-projects.md)

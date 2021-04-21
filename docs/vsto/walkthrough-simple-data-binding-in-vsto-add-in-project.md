@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e6162c8cc508c1eaada6c2be90bd28d430779cb0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e1891173f10acfff74e0f7ef7ab17e29b258b80e
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937362"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826831"
 ---
 # <a name="walkthrough-simple-data-binding-in-vsto-add-in-project"></a>Walkthrough: vinculação de dados simples no projeto de suplemento do VSTO
 
@@ -64,7 +64,7 @@ A primeira etapa é criar um projeto de suplemento do VSTO do Word.
 
      Para obter mais informações, consulte [como: criar projetos do Office no Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     O Visual Studio abre o arquivo *ThisAddIn. vb* ou *ThisAddIn.cs* e adiciona os **documentos populando de um projeto de banco de dados** para **Gerenciador de soluções**.
+     O Visual Studio abre o arquivo *ThisAddIn. vb* ou *ThisAddIn. cs* e adiciona os **documentos populando de um projeto de banco de dados** para **Gerenciador de soluções**.
 
 2. Se o seu projeto se destina ao [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] ou ao [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] , adicione uma referência ao assembly *Microsoft.Office.Tools.Word.v4.0.Utilities.dll* . Essa referência é necessária para adicionar programaticamente Windows Forms controles ao documento mais adiante neste guia.
 
@@ -108,38 +108,38 @@ Para obter mais informações sobre como ligar controles a dados, consulte [asso
 
 1. Na `ThisAddIn` classe, declare os seguintes controles para exibir e percorrer a `Customer` tabela do `AdventureWorksLTDataSet` banco de dados.
 
-     [!code-vb[Trin_WordAddInDatabase#1](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#1)]
-     [!code-csharp[Trin_WordAddInDatabase#1](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet1":::
 
 2. No `ThisAddIn_Startup` método, adicione o código a seguir para inicializar o conjunto de dados, preencha o conjunto com informações do `AdventureWorksLTDataSet` banco de dados.
 
-     [!code-vb[Trin_WordAddInDatabase#2](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#2)]
-     [!code-csharp[Trin_WordAddInDatabase#2](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#2)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet2":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet2":::
 
 3. Adicione o seguinte código ao `ThisAddIn_Startup` método. Isso gera um item de host que estende o documento. Para obter mais informações, consulte [estender documentos do Word e pastas de trabalho do Excel em suplementos do VSTO em tempo de execução](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
-     [!code-vb[Trin_WordAddInDatabase#3](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#3)]
-     [!code-csharp[Trin_WordAddInDatabase#3](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#3)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet3":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet3":::
 
 4. Defina vários intervalos no início do documento. Esses intervalos identificam onde inserir texto e posicionar controles.
 
-     [!code-vb[Trin_WordAddInDatabase#4](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#4)]
-     [!code-csharp[Trin_WordAddInDatabase#4](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#4)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet4":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet4":::
 
 5. Adicione os controles de interface aos intervalos definidos anteriormente.
 
-     [!code-vb[Trin_WordAddInDatabase#5](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#5)]
-     [!code-csharp[Trin_WordAddInDatabase#5](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#5)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet5":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet5":::
 
 6. Associe o controle de conteúdo ao `AdventureWorksLTDataSet` usando o <xref:System.Windows.Forms.BindingSource> . Para desenvolvedores de C#, adicione dois manipuladores de eventos para os <xref:Microsoft.Office.Tools.Word.Controls.Button> controles.
 
-     [!code-vb[Trin_WordAddInDatabase#6](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#6)]
-     [!code-csharp[Trin_WordAddInDatabase#6](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#6)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet6":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet6":::
 
 7. Adicione o código a seguir para navegar pelos registros do banco de dados.
 
-     [!code-vb[Trin_WordAddInDatabase#7](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#7)]
-     [!code-csharp[Trin_WordAddInDatabase#7](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#7)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet7":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet7":::
 
 ## <a name="test-the-add-in"></a>Testar o suplemento
 

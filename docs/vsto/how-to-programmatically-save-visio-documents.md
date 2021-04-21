@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a9d3b8e7d7e7e1a0a58dee5ceb5f1ca49753930f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 340d813a19c0c0dc5c347d3cfe4c7b29ff1bd049
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947756"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828989"
 ---
 # <a name="how-to-programmatically-save-visio-documents"></a>Como: salvar documentos do Visio programaticamente
   Há várias maneiras de salvar Microsoft Office documentos do Visio:
@@ -44,8 +44,8 @@ ms.locfileid: "99947756"
     > [!NOTE]
     > O `Microsoft.Office.Interop.Visio.Document.Save` método lançará uma exceção se um novo documento do Visio ainda não tiver sido salvo.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#11](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#11)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#11](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#11)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet11":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet11":::
 
 ## <a name="save-a-document-with-a-new-name"></a>Salvar um documento com um novo nome
  Use o `Microsoft.Office.Interop.Visio.Document.SaveAs` método para salvar um novo documento ou um documento que tenha um novo nome. Esse método requer que você especifique o novo nome de arquivo.
@@ -56,8 +56,8 @@ ms.locfileid: "99947756"
 
      Para usar este exemplo de código, execute-o da `ThisAddIn` classe em seu projeto.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#10)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#10)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet10":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet10":::
 
 ## <a name="save-a-document-with-a-new-name-and-specified-arguments"></a>Salvar um documento com um novo nome e argumentos especificados
  Use o `Microsoft.Office.Interop.Visio.Document.SaveAsEx` método para salvar um documento com um novo nome e especifique os argumentos aplicáveis a serem aplicados ao documento.
@@ -68,8 +68,8 @@ ms.locfileid: "99947756"
 
      O exemplo de código a seguir salva o documento ativo com um novo nome, marca o documento como somente leitura e mostra o documento na lista de documentos usada mais recentemente. Para usar este exemplo de código, execute-o da `ThisAddIn` classe em seu projeto.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#12](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#12)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#12](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#12)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet12":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet12":::
 
 ## <a name="compile-the-code"></a>Compilar o código
  Este exemplo de código requer o seguinte:

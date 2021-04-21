@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 82bd595b76a03ee730995e546fd9c4e827c95a53
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5a7c19dbaed9e2f8829845e777130e0f09084046
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99953845"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107823923"
 ---
 # <a name="how-to-programmatically-retrieve-unread-messages-from-the-inbox"></a>Como: recuperar programaticamente mensagens não lidas da caixa de entrada
   Este exemplo recupera mensagens de email não lidas da **caixa de entrada** do Outlook e exibe o número de itens.
@@ -30,10 +30,10 @@ ms.locfileid: "99953845"
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
 ## <a name="example"></a>Exemplo
- [!code-vb[Trin_Outlook_RL_UnreadItems#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_RL_UnreadItems/thisaddin.vb#1)]
- [!code-csharp[Trin_Outlook_RL_UnreadItems#1](../vsto/codesnippet/CSharp/Trin_Outlook_RL_UnreadItems/thisaddin.cs#1)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_RL_UnreadItems/thisaddin.vb" id="Snippet1":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_RL_UnreadItems/thisaddin.cs" id="Snippet1":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Trabalhar com itens de email](../vsto/working-with-mail-items.md)
 - [Introdução à programação de suplementos do VSTO](../vsto/getting-started-programming-vsto-add-ins.md)
 - [Como: criar programaticamente um item de email](../vsto/how-to-programmatically-create-an-e-mail-item.md)

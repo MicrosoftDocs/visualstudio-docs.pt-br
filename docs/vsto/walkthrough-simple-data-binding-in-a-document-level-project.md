@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 31084703a581999a1f25bfc82db6c36d9e2cbf6c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 36d4da65a6cd39c53f1f9d8edf4f9d9b1fe46284
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937401"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826844"
 ---
 # <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>Walkthrough: vinculação de dados simples em um projeto de nível de documento
   Este tutorial demonstra os conceitos básicos da vinculação de dados em um projeto de nível de documento. Um único campo de dados em um banco de dado SQL Server está associado a um intervalo nomeado no Microsoft Office Excel. O Walkthrough também mostra como adicionar controles que permitem percorrer todos os registros na tabela.
@@ -128,16 +128,16 @@ ms.locfileid: "99937401"
 
 ### <a name="to-initialize-the-controls"></a>Para inicializar os controles
 
-1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **Plan1. vb** ou **Sheet1.cs** e clique em **Exibir código** no menu de atalho.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **Plan1. vb** ou **Plan1. cs** e clique em **Exibir código** no menu de atalho.
 
 2. Adicione o código a seguir ao `Sheet1_Startup` método para definir o texto para cada botão.
 
-    [!code-csharp[Trin_VstcoreDataExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#2)]
-    [!code-vb[Trin_VstcoreDataExcel#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#2)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet2":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet2":::
 
 3. Somente para C#, adicione manipuladores de eventos para os eventos de clique de botão ao `Sheet1_Startup` método.
 
-    [!code-csharp[Trin_VstcoreDataExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#3)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet3":::
 
    Agora, adicione o código para manipular os <xref:System.Windows.Forms.Control.Click> eventos dos botões para que o usuário possa navegar pelos registros.
 
@@ -148,29 +148,29 @@ ms.locfileid: "99937401"
 
 1. Adicione um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> evento do `Button1` botão e adicione o seguinte código para mover para o primeiro registro:
 
-     [!code-csharp[Trin_VstcoreDataExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#4)]
-     [!code-vb[Trin_VstcoreDataExcel#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet4":::
 
 ### <a name="to-move-to-the-previous-record"></a>Para mover para o registro anterior
 
 1. Adicione um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> evento do `Button2` botão e adicione o seguinte código para mover a posição de volta por um:
 
-     [!code-csharp[Trin_VstcoreDataExcel#5](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#5)]
-     [!code-vb[Trin_VstcoreDataExcel#5](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet5":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet5":::
 
 ### <a name="to-move-to-the-next-record"></a>Para mover para o próximo registro
 
 1. Adicione um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> evento do `Button3` botão e adicione o seguinte código para avançar a posição em um:
 
-     [!code-csharp[Trin_VstcoreDataExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#6)]
-     [!code-vb[Trin_VstcoreDataExcel#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet6":::
 
 ### <a name="to-move-to-the-last-record"></a>Para mover para o último registro
 
 1. Adicione um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> evento do `Button4` botão e adicione o seguinte código para mover para o último registro:
 
-     [!code-csharp[Trin_VstcoreDataExcel#7](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#7)]
-     [!code-vb[Trin_VstcoreDataExcel#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#7)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet7":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet7":::
 
 ## <a name="test-the-application"></a>Testar o aplicativo
  Agora você pode testar sua pasta de trabalho para verificar se você pode navegar pelos registros no banco de dados.

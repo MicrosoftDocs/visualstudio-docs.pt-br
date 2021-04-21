@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4449e286fed0572e2dfc1ed855daf834400bd4e4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fcb2bcc91eb1d19309904caae16701b814113089
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966624"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824400"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-excel"></a>Walkthrough: criar seu primeiro suplemento do VSTO para Excel
   Este guia introdutório mostra como criar um suplemento em nível de aplicativo para Microsoft Office Excel. Os recursos que você cria nesse tipo de solução estão disponíveis para o próprio aplicativo, independentemente de quais pastas de trabalho estão abertas.
@@ -83,12 +83,12 @@ ms.locfileid: "99966624"
 
     Quando o usuário salva uma pasta de trabalho, o manipulador de eventos adiciona um novo texto no início da planilha ativa.
 
-    [!code-vb[Trin_ExcelAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ExcelAddInTutorial/ThisAddIn.vb#1)]
-    [!code-csharp[Trin_ExcelAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs#1)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ExcelAddInTutorial/ThisAddIn.vb" id="Snippet1":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs" id="Snippet1":::
 
 2. Se você estiver usando C#, adicione o seguinte código necessário ao `ThisAddIn_Startup` manipulador de eventos. Esse código é usado para conectar o `Application_WorkbookBeforeSave` manipulador de eventos ao <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> evento.
 
-    [!code-csharp[Trin_ExcelAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs#2)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs" id="Snippet2":::
 
    Para modificar a pasta de trabalho quando ela é salva, os exemplos de código anteriores usam os seguintes objetos:
 

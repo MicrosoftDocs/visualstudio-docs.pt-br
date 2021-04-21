@@ -21,12 +21,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: fbba5c629807815a306221368d00b7d759dcc294
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 31c2364213d3b4dae16558f395ad7bdd93231787
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954222"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827858"
 ---
 # <a name="how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins"></a>Como: adicionar partes XML personalizadas a documentos usando suplementos do VSTO
   Você pode armazenar dados XML nos seguintes tipos de documentos criando uma parte XML personalizada em um suplemento do VSTO:
@@ -47,8 +47,8 @@ ms.locfileid: "99954222"
 
      O exemplo de código a seguir adiciona uma parte XML personalizada a uma pasta de trabalho especificada.
 
-     [!code-vb[Trin_AddCustomXmlPartExcelAppLevel#1](../vsto/codesnippet/VisualBasic/trin_addcustomxmlpartexcelapplevel/ThisAddIn.vb#1)]
-     [!code-csharp[Trin_AddCustomXmlPartExcelAppLevel#1](../vsto/codesnippet/CSharp/Trin_AddCustomXmlPartExcelAppLevel/ThisAddIn.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_addcustomxmlpartexcelapplevel/ThisAddIn.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddCustomXmlPartExcelAppLevel/ThisAddIn.cs" id="Snippet1":::
 
 2. Adicione o `AddCustomXmlPartToWorkbook` método à `ThisAddIn` classe em um projeto de suplemento do VSTO para Excel.
 
@@ -60,8 +60,8 @@ ms.locfileid: "99954222"
 
      O exemplo de código a seguir adiciona uma parte XML personalizada a um documento especificado.
 
-     [!code-vb[Trin_AddCustomXmlPartWordAppLevel#1](../vsto/codesnippet/VisualBasic/Trin_AddCustomXmlPartWordAppLevel/ThisAddIn.vb#1)]
-     [!code-csharp[Trin_AddCustomXmlPartWordAppLevel#1](../vsto/codesnippet/CSharp/Trin_AddCustomXmlPartWordAppLevel/ThisAddIn.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddCustomXmlPartWordAppLevel/ThisAddIn.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddCustomXmlPartWordAppLevel/ThisAddIn.cs" id="Snippet1":::
 
 2. Adicione o `AddCustomXmlPartToDocument` método à `ThisAddIn` classe em um projeto de suplemento do VSTO para Word.
 
@@ -73,8 +73,8 @@ ms.locfileid: "99954222"
 
      O exemplo de código a seguir adiciona uma parte XML personalizada a uma apresentação especificada.
 
-     [!code-csharp[Trin_AddCustomXmlPartPowerPointAppLevel#1](../vsto/codesnippet/CSharp/Trin_AddCustomXmlPartPowerPointAppLevel/ThisAddIn.cs#1)]
-     [!code-vb[Trin_AddCustomXmlPartPowerPointAppLevel#1](../vsto/codesnippet/VisualBasic/Trin_AddCustomXmlPartPowerPointAppLevel/ThisAddIn.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddCustomXmlPartPowerPointAppLevel/ThisAddIn.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddCustomXmlPartPowerPointAppLevel/ThisAddIn.vb" id="Snippet1":::
 
 2. Adicione o `AddCustomXmlPartToPresentation` método à `ThisAddIn` classe em um projeto de suplemento do VSTO para PowerPoint.
 
@@ -83,6 +83,6 @@ ms.locfileid: "99954222"
 ## <a name="robust-programming"></a>Programação robusta
  Para simplificar, este exemplo usa uma cadeia de caracteres XML que é definida como uma variável local no método. Normalmente, você deve obter o XML de uma fonte externa, como um arquivo ou um banco de dados.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Visão geral das partes XML personalizadas](../vsto/custom-xml-parts-overview.md)
 - [Como: adicionar partes XML personalizadas a personalizações em nível de documento](../vsto/how-to-add-custom-xml-parts-to-document-level-customizations.md)

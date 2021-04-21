@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4d83fb8fad6de0c932d371f7f874cea0ff9a8f80
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3f6fbb91c37fd8956860eed8e4d39f8b0a8c1a0e
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958655"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824413"
 ---
 # <a name="walkthrough-change-document-formatting-using-checkbox-controls"></a>Walkthrough: alterar a formatação do documento usando controles CheckBox
   Este tutorial demonstra como usar Windows Forms controles em uma personalização em nível de documento para Microsoft Office Word para alterar a formatação de texto.
@@ -90,7 +90,7 @@ ms.locfileid: "99958655"
     |Propriedade|Valor|
     |--------------|-----------|
     |**Nome**|**applyUnderlineFont**|
-    |**Text**|**Underline**|
+    |**Text**|**Aplicar**|
 
 ### <a name="add-text-and-a-bookmark-control"></a>Adicionar texto e um controle de indicador
 
@@ -119,26 +119,26 @@ ms.locfileid: "99958655"
 
 2. Somente para C#, adicione as constantes a seguir à classe **ThisDocument** .
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#2](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs" id="Snippet2":::
 
 3. Adicione o código a seguir ao <xref:System.Windows.Forms.Control.Click> manipulador de eventos da `applyBoldFont` caixa de seleção.
 
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#3](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#3)]
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#3](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#3)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb" id="Snippet3":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs" id="Snippet3":::
 
 4. Adicione o código a seguir ao <xref:System.Windows.Forms.Control.Click> manipulador de eventos da `applyItalicFont` caixa de seleção.
 
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#4](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#4)]
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#4](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#4)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb" id="Snippet4":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs" id="Snippet4":::
 
 5. Adicione o código a seguir ao <xref:System.Windows.Forms.Control.Click> manipulador de eventos da `applyUnderlineFont` caixa de seleção.
 
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#5](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#5)]
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#5](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#5)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb" id="Snippet5":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs" id="Snippet5":::
 
 6. No C#, você deve adicionar manipuladores de eventos para as caixas de texto ao <xref:Microsoft.Office.Tools.Word.Document.Startup> evento. Para obter informações sobre como criar manipuladores de eventos, consulte [como criar manipuladores de eventos em projetos do Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs" id="Snippet6":::
 
 ## <a name="test-the-application"></a>Testar o aplicativo
  Agora você pode testar seu documento para verificar se o texto está formatado corretamente quando você marca ou desmarca uma caixa de seleção.

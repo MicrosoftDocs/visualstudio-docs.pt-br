@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ae0f4982ca325970b8b7965c956a7d2dea4bf60f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9254aa5fd465c14e24133df59bbcee46f3c1acf4
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966663"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826896"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-excel"></a>Walkthrough: criar sua primeira personalização em nível de documento para o Excel
 
@@ -140,8 +140,8 @@ ms.locfileid: "99966663"
 
 2. Substitua o `Sheet1_Startup` manipulador de eventos pelo código a seguir. Quando Plan1 é aberto, esse código adiciona uma segunda linha de texto à planilha.
 
-     [!code-csharp[Trin_ExcelWorkbookTutorial#1](../vsto/codesnippet/CSharp/Trin_ExcelWorkbookTutorial/Sheet1.cs#1)]
-     [!code-vb[Trin_ExcelWorkbookTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ExcelWorkbookTutorial/Sheet1.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ExcelWorkbookTutorial/Sheet1.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ExcelWorkbookTutorial/Sheet1.vb" id="Snippet1":::
 
 ## <a name="test-the-project"></a>Testar o projeto
 

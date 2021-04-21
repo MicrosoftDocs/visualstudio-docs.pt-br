@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3cc88b5ee48241a15a66144c992936b55fb2acf3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c2088a4d2ca81418ca16b51b53b0af38595d75b2
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99838081"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825388"
 ---
 # <a name="walkthrough-add-controls-to-a-document-at-run-time-in-a-vsto-add-in"></a>Walkthrough: adicionar controles a um documento em tempo de execução em um suplemento do VSTO
   Você pode adicionar controles a qualquer documento do Word aberto Microsoft Office usando um suplemento do VSTO. Este tutorial demonstra como usar a faixa de faixas para permitir que os usuários adicionem um <xref:Microsoft.Office.Tools.Word.Controls.Button> ou um <xref:Microsoft.Office.Tools.Word.RichTextContentControl> documento.
@@ -68,7 +68,7 @@ ms.locfileid: "99838081"
 
 3. Altere o nome da nova faixa de forma para **MyRibbon** e clique em **Adicionar**.
 
-    O arquivo **MyRibbon.cs** ou **MyRibbon. vb** é aberto no designer de faixa de faixas e exibe uma guia e um grupo padrão.
+    O arquivo **MyRibbon. cs** ou **MyRibbon. vb** é aberto no designer de faixa de faixas e exibe uma guia e um grupo padrão.
 
 4. No designer de faixa de faixas, clique no grupo **grupo1** .
 
@@ -109,46 +109,46 @@ ms.locfileid: "99838081"
 
 ### <a name="to-add-and-remove-controls-on-the-active-document"></a>Para adicionar e remover controles no documento ativo
 
-1. Em **Gerenciador de soluções**, clique duas vezes em *ThisAddIn.cs* ou em *ThisAddIn. vb* para abrir o arquivo no editor de código.
+1. Em **Gerenciador de soluções**, clique duas vezes em *ThisAddIn. cs* ou em *ThisAddIn. vb* para abrir o arquivo no editor de código.
 
 2. Adicione o código a seguir à classe `ThisAddIn` . Esse código declara <xref:Microsoft.Office.Tools.Word.Controls.Button> e <xref:Microsoft.Office.Tools.Word.RichTextContentControl> objetos que representam os controles que serão adicionados ao documento.
 
-     [!code-vb[Trin_WordAddInDynamicControlsWalkthrough#1](../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb#1)]
-     [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#1](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs" id="Snippet1":::
 
 3. Adicione o método a seguir à classe `ThisAddIn`. Quando o usuário clicar na caixa de seleção **Adicionar botão** na faixa de opção, esse método adicionará um <xref:Microsoft.Office.Tools.Word.Controls.Button> à seleção atual no documento se a caixa de seleção estiver marcada ou removerá o <xref:Microsoft.Office.Tools.Word.Controls.Button> se a caixa de seleção estiver desmarcada.
 
-     [!code-vb[Trin_WordAddInDynamicControlsWalkthrough#2](../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb#2)]
-     [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#2](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs#2)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb" id="Snippet2":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs" id="Snippet2":::
 
 4. Adicione o método a seguir à classe `ThisAddIn`. Quando o usuário clica na caixa de seleção **Adicionar controle de Rich Text** na faixa de opção, esse método adiciona um <xref:Microsoft.Office.Tools.Word.RichTextContentControl> à seleção atual no documento se a caixa de seleção estiver marcada ou removerá o <xref:Microsoft.Office.Tools.Word.RichTextContentControl> se a caixa de seleção estiver desmarcada.
 
-     [!code-vb[Trin_WordAddInDynamicControlsWalkthrough#3](../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb#3)]
-     [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#3](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs#3)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb" id="Snippet3":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs" id="Snippet3":::
 
 ## <a name="remove-the-button-control-when-the-document-is-saved"></a>Remover o controle de botão quando o documento for salvo
  Windows Forms controles não são persistidos quando o documento é salvo e fechado. No entanto, um wrapper ActiveX para cada controle permanece no documento e a borda desse wrapper pode ser vista pelos usuários finais quando o documento é reaberto. Há várias maneiras de limpar controles de Windows Forms criados dinamicamente em suplementos do VSTO. Neste tutorial, você remove programaticamente o <xref:Microsoft.Office.Tools.Word.Controls.Button> controle quando o documento é salvo.
 
 ### <a name="to-remove-the-button-control-when-the-document-is-saved"></a>Para remover o controle de botão quando o documento é salvo
 
-1. No arquivo de código *ThisAddIn.cs* ou *ThisAddIn. vb* , adicione o método a seguir à `ThisAddIn` classe. Esse método é um manipulador de eventos para o <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> evento. Se o documento salvo tiver um <xref:Microsoft.Office.Tools.Word.Document> item de host associado a ele, o manipulador de eventos obterá o item de host e removerá o <xref:Microsoft.Office.Tools.Word.Controls.Button> controle, se ele existir.
+1. No arquivo de código *ThisAddIn. cs* ou *ThisAddIn. vb* , adicione o método a seguir à `ThisAddIn` classe. Esse método é um manipulador de eventos para o <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> evento. Se o documento salvo tiver um <xref:Microsoft.Office.Tools.Word.Document> item de host associado a ele, o manipulador de eventos obterá o item de host e removerá o <xref:Microsoft.Office.Tools.Word.Controls.Button> controle, se ele existir.
 
-     [!code-vb[Trin_WordAddInDynamicControlsWalkthrough#4](../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb#4)]
-     [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#4](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs#4)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb" id="Snippet4":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs" id="Snippet4":::
 
 2. No C#, adicione o código a seguir ao `ThisAddIn_Startup` manipulador de eventos. Esse código é necessário em C# para conectar o `Application_DocumentBeforeSave` manipulador de eventos ao <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> evento.
 
-     [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#5](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs" id="Snippet5":::
 
 ## <a name="add-and-remove-controls-when-the-user-clicks-the-check-boxes-on-the-ribbon"></a>Adicionar e remover controles quando o usuário clica nas caixas de seleção na faixa de quadros
  Por fim, modifique os <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click> manipuladores de eventos das caixas de seleção que você adicionou à faixa de lista para adicionar ou remover controles no documento.
 
 ### <a name="to-add-or-remove-controls-when-the-user-clicks-the-check-boxes-on-the-ribbon"></a>Para adicionar ou remover controles quando o usuário clica nas caixas de seleção na faixa de quadros
 
-1. No arquivo de código *MyRibbon.cs* ou *MyRibbon. vb* , substitua os `addButtonCheckBox_Click` `addRichTextCheckBox_Click` manipuladores de eventos e gerados pelo código a seguir. Esse código redefine esses manipuladores de eventos para chamar os `ToggleButtonOnDocument` `ToggleRichTextControlOnDocument` métodos e que você adicionou à `ThisAddIn` classe anteriormente neste guia.
+1. No arquivo de código *MyRibbon. cs* ou *MyRibbon. vb* , substitua os `addButtonCheckBox_Click` `addRichTextCheckBox_Click` manipuladores de eventos e gerados pelo código a seguir. Esse código redefine esses manipuladores de eventos para chamar os `ToggleButtonOnDocument` `ToggleRichTextControlOnDocument` métodos e que você adicionou à `ThisAddIn` classe anteriormente neste guia.
 
-     [!code-vb[Trin_WordAddInDynamicControlsWalkthrough#6](../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/MyRibbon.vb#6)]
-     [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#6](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/MyRibbon.cs#6)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/MyRibbon.vb" id="Snippet6":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/MyRibbon.cs" id="Snippet6":::
 
 ## <a name="test-the-solution"></a>Testar a solução
  Adicione controles a um documento selecionando-os na guia personalizado na faixa de faixas. Quando você salva o documento, o <xref:Microsoft.Office.Tools.Word.Controls.Button> controle é removido.

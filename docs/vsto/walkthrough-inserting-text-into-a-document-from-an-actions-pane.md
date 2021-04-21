@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c0f24c7270dc3c174be124506e1e36dafe7581f6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1ac42954e32b30a293abbe031218213948fb103a
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937375"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824972"
 ---
 # <a name="walkthrough-insert-text-into-a-document-from-an-actions-pane"></a>Walkthrough: inserir texto em um documento a partir de um painel Ações
   Este tutorial demonstra como criar um painel Ações em um Microsoft Office documento do Word. O painel Ações contém dois controles que coletam entrada e enviam o texto ao documento.
@@ -142,12 +142,12 @@ ms.locfileid: "99937375"
 
 1. Adicione o código a seguir ao <xref:System.Windows.Forms.Control.Click> manipulador de eventos do botão **AddText** .
 
-     [!code-csharp[Trin_VstcoreActionsPaneWord#8](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/InsertTextControl.cs#8)]
-     [!code-vb[Trin_VstcoreActionsPaneWord#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/InsertTextControl.vb#8)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/InsertTextControl.cs" id="Snippet8":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/InsertTextControl.vb" id="Snippet8":::
 
 2. No C#, você deve adicionar um manipulador de eventos para o clique do botão. Você pode posicionar esse código no `InsertTextControl` Construtor após a chamada para `InitializeComponent` . Para obter informações sobre como criar manipuladores de eventos, consulte [como criar manipuladores de eventos em projetos do Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_VstcoreActionsPaneWord#9](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/InsertTextControl.cs#9)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/InsertTextControl.cs" id="Snippet9":::
 
 ## <a name="add-code-to-show-the-actions-pane"></a>Adicionar código para mostrar o painel Ações
  Para mostrar o painel Ações, adicione o controle que você criou à coleção de controle.
@@ -156,13 +156,13 @@ ms.locfileid: "99937375"
 
 1. Crie uma nova instância do controle do painel Ações na `ThisDocument` classe.
 
-     [!code-csharp[Trin_VstcoreActionsPaneWord#10](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#10)]
-     [!code-vb[Trin_VstcoreActionsPaneWord#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#10)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet10":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet10":::
 
 2. Adicione o código a seguir ao <xref:Microsoft.Office.Tools.Word.Document.Startup> manipulador de eventos de `ThisDocument` .
 
-     [!code-csharp[Trin_VstcoreActionsPaneWord#11](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#11)]
-     [!code-vb[Trin_VstcoreActionsPaneWord#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#11)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet11":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet11":::
 
 ## <a name="test-the-application"></a>Testar o aplicativo
  Teste seu documento para verificar se o painel Ações é aberto quando o documento é aberto e esse texto digitado nas caixas de texto é inserido nos indicadores quando o botão é clicado.
