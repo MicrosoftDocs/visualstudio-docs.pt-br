@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 6fd35551c5c40494c169fb569113e3530f633a6f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dce8bb0667cecbe073c734595d341f9c7b7ccac9
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940794"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826077"
 ---
 # <a name="threading-support-in-office"></a>Suporte a Threading no Office
   Este artigo fornece informações sobre como o threading tem suporte no modelo de objeto Microsoft Office. O modelo de objeto do Office não é thread-safe, mas é possível trabalhar com vários threads em uma solução do Office. Os aplicativos do Office são servidores Component Object Model (COM). O COM permite que os clientes chamem servidores COM em threads arbitrários. Para servidores COM que não são thread-safe, COM fornece um mecanismo para serializar chamadas simultâneas para que apenas um thread lógico seja executado no servidor a qualquer momento. Esse mecanismo é conhecido como modelo STA (single-threaded apartment). Como as chamadas são serializadas, os chamadores podem ser bloqueados por períodos de tempo enquanto o servidor está ocupado ou manipulando outras chamadas em um thread em segundo plano.
@@ -38,7 +38,7 @@ ms.locfileid: "99940794"
 
 - Simultaneidade
 
-- Sincronização
+- Synchronization
 
 - Marshaling
 
@@ -65,15 +65,15 @@ ms.locfileid: "99940794"
 ## <a name="start-the-thread-correctly"></a>Iniciar o thread corretamente
  Quando você cria um novo thread STA, defina o estado apartment para STA antes de iniciar o thread. O exemplo de código a seguir demonstra como fazer isso.
 
- [!code-csharp[Trin_VstcoreCreatingExcel#5](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/ThisWorkbook.cs#5)]
- [!code-vb[Trin_VstcoreCreatingExcel#5](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/ThisWorkbook.vb#5)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/ThisWorkbook.cs" id="Snippet5":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/ThisWorkbook.vb" id="Snippet5":::
 
  Para obter mais informações, consulte [práticas recomendadas de Threading gerenciadas](/dotnet/standard/threading/managed-threading-best-practices).
 
 ## <a name="modeless-forms"></a>Formulários sem janela restrita
  Um formulário sem janela restrita permite algum tipo de interação com o aplicativo enquanto o formulário é exibido. O usuário interage com o formulário e o formulário interage com o aplicativo sem fechar. O modelo de objeto do Office dá suporte a formulários gerenciados sem janela restrita; no entanto, eles não devem ser usados em um thread em segundo plano.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Threading (C#)](/dotnet/csharp/programming-guide/concepts/threading/index)
 - [Threading (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/threading/index)
 - [Usar threads e threading](/dotnet/standard/threading/using-threads-and-threading)

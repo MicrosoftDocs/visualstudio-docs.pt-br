@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 843718ea49ae7df7d34775283ce8120f077b0a0f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 177b21e2278153693601adf7b7dc18b751cf184e
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925508"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824842"
 ---
 # <a name="walkthrough-create-a-master-detail-relation-using-a-cached-dataset"></a>Walkthrough: criar uma relação de detalhes mestre usando um conjunto de um DataSet armazenado em cache
   Este tutorial demonstra como criar uma relação mestre/detalhes em uma planilha e armazenar em cache os dados para que a solução possa ser usada offline.
@@ -138,16 +138,16 @@ ms.locfileid: "99925508"
 
 ### <a name="to-initialize-the-data-and-the-controls"></a>Para inicializar os dados e os controles
 
-1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **Plan1. vb** ou **Sheet1.cs** e clique em **Exibir código** no menu de atalho.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **Plan1. vb** ou **Plan1. cs** e clique em **Exibir código** no menu de atalho.
 
 2. Adicione o código a seguir ao `Sheet1_Startup` método para definir o texto para os botões.
 
-     [!code-vb[Trin_VstcoreDataExcel#15](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#15)]
-     [!code-csharp[Trin_VstcoreDataExcel#15](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#15)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb" id="Snippet15":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs" id="Snippet15":::
 
 3. Somente para C#, adicione manipuladores de eventos para os eventos de clique de botão ao `Sheet1_Startup` método.
 
-     [!code-csharp[Trin_VstcoreDataExcel#16](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#16)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs" id="Snippet16":::
 
 ## <a name="add-code-to-enable-scrolling-through-the-records"></a>Adicionar código para habilitar a rolagem pelos registros
  Adicione código ao <xref:System.Windows.Forms.Control.Click> manipulador de eventos de cada botão para percorrer os registros.
@@ -156,13 +156,13 @@ ms.locfileid: "99925508"
 
 1. Adicione um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> evento de `Button1` e adicione o seguinte código para mover-se para trás pelos registros:
 
-     [!code-vb[Trin_VstcoreDataExcel#17](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#17)]
-     [!code-csharp[Trin_VstcoreDataExcel#17](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#17)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb" id="Snippet17":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs" id="Snippet17":::
 
 2. Adicione um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> evento de `Button2` e adicione o seguinte código para avançar pelos registros:
 
-     [!code-vb[Trin_VstcoreDataExcel#18](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#18)]
-     [!code-csharp[Trin_VstcoreDataExcel#18](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#18)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb" id="Snippet18":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs" id="Snippet18":::
 
 ## <a name="test-the-application"></a>Testar o aplicativo
  Agora você pode testar sua pasta de trabalho para certificar-se de que os dados aparecem como esperado e que você pode usar a solução offline.
@@ -190,7 +190,7 @@ ms.locfileid: "99925508"
 
 - Implante a solução. Para obter mais informações, consulte [implantar uma solução do Office](../vsto/deploying-an-office-solution.md)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Associar dados a controles em soluções do Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Dados em soluções do Office](../vsto/data-in-office-solutions.md)
 - [Dados de cache](../vsto/caching-data.md)

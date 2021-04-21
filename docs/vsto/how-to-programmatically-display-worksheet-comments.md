@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7de75a1846aa7261a723c87297511b7461c49f47
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: af327a6756189c73f80f624205451274abf19264
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885502"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828664"
 ---
 # <a name="how-to-programmatically-display-worksheet-comments"></a>Como exibir programaticamente comentários de planilha
   Você pode mostrar e ocultar de forma programática comentários em planilhas Microsoft Office Excel.
@@ -31,17 +31,17 @@ ms.locfileid: "99885502"
 
 1. Defina a <xref:Microsoft.Office.Interop.Excel.Comment.Visible%2A> propriedade como **true** se desejar mostrar comentários; caso contrário, **false**. Esse código deve ser colocado em uma classe de planilha, não na `ThisWorkbook` classe.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#31](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#31)]
-     [!code-vb[Trin_VstcoreExcelAutomation#31](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#31)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet31":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet31":::
 
 ## <a name="to-display-all-comments-on-a-worksheet-in-an-application-level-vsto-add-in"></a>Para exibir todos os comentários em uma planilha em um suplemento do VSTO em nível de aplicativo
 
 1. Defina a <xref:Microsoft.Office.Interop.Excel.Comment.Visible%2A> propriedade como **true** se desejar mostrar comentários; caso contrário, **false**.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#21](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#21)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#21](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#21)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet21":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet21":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Trabalhar com planilhas](../vsto/working-with-worksheets.md)
 - [Como: Adicionar e excluir de forma programática comentários da planilha](../vsto/how-to-programmatically-add-and-delete-worksheet-comments.md)
 - [Visão geral de itens de host e controles de host](../vsto/host-items-and-host-controls-overview.md)

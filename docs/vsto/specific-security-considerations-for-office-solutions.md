@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 57b330884ef6638e5c853cfb5670e3552aca46cc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 58cd5f7a26be57ce0cb742e153d88ee455b2f85b
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940820"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826103"
 ---
 # <a name="specific-security-considerations-for-office-solutions"></a>Considerações de segurança específicas para soluções do Office
   Os recursos de segurança fornecidos pelo Microsoft .NET Framework e Microsoft Office podem ajudar a proteger suas soluções do Office contra possíveis ameaças à segurança. Este tópico explica algumas dessas ameaças e fornece recomendações para ajudar a protegê-las. Ele também inclui informações sobre como Microsoft Office configurações de segurança afetam as soluções do Office.
@@ -67,13 +67,13 @@ ms.locfileid: "99940820"
 
  O exemplo de código a seguir exibirá um aviso de segurança se o Object Model Guard estiver habilitado. A `To` propriedade da `Microsoft.Office.Interop.Outlook.MailItem` classe é restrita pelo Object Model Guard. O `Microsoft.Office.Interop.Outlook.MailItem` objeto não é confiável porque o código o obtém de um `Microsoft.Office.Interop.Outlook.Application` que é criado usando o **novo** operador, em vez de obtê-lo do `Application` campo.
 
- [!code-csharp[Trin_VstcoreOutlookSecurity#1](../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs#1)]
- [!code-vb[Trin_VstcoreOutlookSecurity#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb" id="Snippet1":::
 
  O exemplo de código a seguir demonstra como usar a propriedade Restricted to de um `Microsoft.Office.Interop.Outlook.MailItem` objeto que é confiável pelo Object Model Guard. O código usa o `Application` campo confiável para obter o `Microsoft.Office.Interop.Outlook.MailItem` .
 
- [!code-csharp[Trin_VstcoreOutlookSecurity#2](../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs#2)]
- [!code-vb[Trin_VstcoreOutlookSecurity#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb#2)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs" id="Snippet2":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb" id="Snippet2":::
 
 > [!NOTE]
 > Se o Outlook for usado com o Exchange, a obtenção de todos os objetos do Outlook do `ThisAddIn.Application` não garante que o suplemento do VSTO poderá acessar todo o modelo de objeto do Outlook. Por exemplo, se um administrador do Exchange definir o Outlook para negar automaticamente todas as tentativas de acessar informações de endereço usando o modelo de objeto do Outlook, o Outlook não permitirá que o exemplo de código anterior acesse a propriedade to, mesmo que o exemplo de código use o `ThisAddIn.Application` campo confiável.
@@ -117,5 +117,5 @@ ms.locfileid: "99940820"
 
 6. No painel de detalhes, selecione **exigir que os suplementos de aplicativo sejam assinados por um fornecedor confiável** ou **desabilite todos os suplementos de aplicativo**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Proteger soluções do Office](../vsto/securing-office-solutions.md)

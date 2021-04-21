@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: d411465869cc960631063d09752d38536af94119
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 5c965fd73f63906f7a1e055ae5ff051eebab19d5
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683605"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828807"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Introdução ao Live Unit Testing
 
@@ -69,7 +69,7 @@ Agora que você criou a solução, criará uma biblioteca de classes chamada Str
 
 ::: moniker range=">=vs-2019"
 
-2. Digite **biblioteca de classes** na caixa de pesquisa de modelo e selecione o modelo **Biblioteca de Classes (.NET Standard)**. Clique em **Avançar**.
+2. Digite **biblioteca de classes** na caixa de pesquisa de modelo e selecione o modelo **Biblioteca de Classes (.NET Standard)**. Clique em **Próximo**.
 
    > [!NOTE]
    > Como nossa biblioteca tem como destino .NET Standard em vez de uma implementação .NET específica, ela pode ser chamada de qualquer implementação do .NET que dê suporte a essa versão do .NET Standard. Para obter mais informações, confira [.NET Standard](/dotnet/standard/net-standard).
@@ -82,7 +82,41 @@ Agora que você criou a solução, criará uma biblioteca de classes chamada Str
 
 5. Substitua todo o código existente no editor de código pelo código a seguir:
 
-   [!code-csharp[StringLibrary source code](samples/csharp/utilitylibraries/stringlibrary/class1.cs)]
+   ```csharp
+   using System;
+
+   namespace UtilityLibraries
+   {
+       public static class StringLibrary
+       {
+           public static bool StartsWithUpper(this string s)
+           {
+               if (String.IsNullOrWhiteSpace(s))
+                   return false;
+
+               return Char.IsUpper(s[0]);
+           }
+
+           public static bool StartsWithLower(this string s)
+           {
+               if (String.IsNullOrWhiteSpace(s))
+                   return false;
+
+               return Char.IsLower(s[0]);
+           }
+
+           public static bool HasEmbeddedSpaces(this string s)
+           {
+               foreach (var ch in s.Trim())
+               {
+                   if (ch == ' ')
+                       return true;
+               }
+               return false;
+           }
+       }
+   }
+   ```
 
    StringLibrary tem três métodos estáticos:
 
@@ -120,7 +154,7 @@ A próxima etapa é criar o projeto de teste de unidade para testar a biblioteca
 
 ::: moniker range=">=vs-2019"
 
-2. Digite **teste de unidade** na caixa de pesquisa de modelo, selecione **C#** como o idioma e, em seguida, selecione o modelo projeto de **teste de unidade** para .NET Core. Clique em **Avançar**.
+2. Digite **teste de unidade** na caixa de pesquisa de modelo, selecione **C#** como o idioma e, em seguida, selecione o modelo projeto de **teste de unidade** para .NET Core. Clique em **Próximo**.
 
    > [!NOTE]
    > A partir do Visual Studio 2019 versão 16,9, o nome do modelo de projeto MSTest mudou de **MSTest Unit Test Project (.NET Core)** para **projeto de teste de unidade**.
@@ -140,7 +174,59 @@ A próxima etapa é criar o projeto de teste de unidade para testar a biblioteca
 
 6. Substitua o código de teste de unidade clichê que o modelo fornece pelo código a seguir:
 
-   [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest1.cs)]
+   ```csharp
+   using System;
+   using Microsoft.VisualStudio.TestTools.UnitTesting;
+   using UtilityLibraries;
+
+   namespace StringLibraryTest
+   {
+       [TestClass]
+       public class UnitTest1
+       {
+           [TestMethod]
+           public void TestStartsWithUpper()
+           {
+               // Tests that we expect to return true.
+               string[] words = { "Alphabet", "Zebra", "ABC", "Αθήνα", "Москва" };
+               foreach (var word in words)
+               {
+                   bool result = word.StartsWithUpper();
+                   Assert.IsTrue(result,
+                                 $"Expected for '{word}': true; Actual: {result}");
+               }
+           }
+
+           [TestMethod]
+           public void TestDoesNotStartWithUpper()
+           {
+               // Tests that we expect to return false.
+               string[] words = { "alphabet", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
+                                  "1234", ".", ";", " " };
+               foreach (var word in words)
+               {
+                   bool result = word.StartsWithUpper();
+                   Assert.IsFalse(result,
+                                  $"Expected for '{word}': false; Actual: {result}");
+               }
+           }
+
+           [TestMethod]
+           public void DirectCallWithNullOrEmpty()
+           {
+               // Tests that we expect to return false.
+               string[] words = { String.Empty, null };
+               foreach (var word in words)
+               {
+                   bool result = StringLibrary.StartsWithUpper(word);
+                   Assert.IsFalse(result,
+                                  $"Expected for '{(word == null ? "<null>" : word)}': " +
+                                  $"false; Actual: {result}");
+               }
+           }
+       }
+   }
+   ```
 
 7. Salve o projeto selecionando o ícone **Salvar** na barra de ferramentas.
 
@@ -162,7 +248,7 @@ Você criou uma biblioteca de classes e também alguns testes de unidade para el
 
 Até agora, embora você tenha escrito os testes para a biblioteca de classes StringLibrary, você não os executou. O Live Unit Testing executa-os automaticamente ao ser habilitado. Para isso, faça o seguinte:
 
-1. Opcionalmente, selecione a janela Editor de código que contém o código para StringLibrary. Isso é *Class1.cs* para um projeto em C# ou *Class1. vb* para um projeto Visual Basic. (Essa etapa permite inspecionar visualmente o resultado de seus testes e a extensão de sua cobertura de código depois que você habilita o Live Unit Testing.)
+1. Opcionalmente, selecione a janela Editor de código que contém o código para StringLibrary. Isso é *Class1. cs* para um projeto C# ou *Class1. vb* para um projeto Visual Basic. (Essa etapa permite inspecionar visualmente o resultado de seus testes e a extensão de sua cobertura de código depois que você habilita o Live Unit Testing.)
 
 1. Selecione **testar**  >  **Live Unit Testing**  >  **Iniciar** no menu de nível superior do Visual Studio.
 
@@ -173,8 +259,8 @@ Quando ele termina de executar os testes, o **Gerenciador de Testes** exibe os r
 
 ![O Gerenciador de testes e a janela do editor de código depois de iniciar o Live Unit Test](media/lut-start/lut-results-cs.png)
 ::: moniker-end
-::: moniker range=">=vs-2019"
-Quando terminar de executar seus testes, **Live Unit Testing** exibirá os resultados gerais e o resultado de testes individuais. Além disso, a janela Editor de código exibe graficamente a cobertura do código de teste e o resultado de seus testes. Como mostra a ilustração a seguir, todos os três testes foram executados com êxito. Ela também mostra que nossos testes cobriram todos os caminhos de código no método `StartsWithUpper` e que todos esses testes foram executados com êxito (o que é indicado pela marca de verificação verde "✓"). Por fim, ele mostra que nenhum dos outros métodos em StringLibrary tem cobertura de código (que é indicada por uma linha azul, "➖").
+::: moniker range=">=vs-2019&quot;
+Quando terminar de executar seus testes, **Live Unit Testing** exibirá os resultados gerais e o resultado de testes individuais. Além disso, a janela Editor de código exibe graficamente a cobertura do código de teste e o resultado de seus testes. Como mostra a ilustração a seguir, todos os três testes foram executados com êxito. Ela também mostra que nossos testes cobriram todos os caminhos de código no método `StartsWithUpper` e que todos esses testes foram executados com êxito (o que é indicado pela marca de verificação verde &quot;✓"). Por fim, ele mostra que nenhum dos outros métodos em StringLibrary tem cobertura de código (que é indicada por uma linha azul, "➖").
 
 ![O Live Test Explorer e a janela do editor de código depois de iniciar o Live Unit Test](media/lut-start/vs-2019/lut-results-cs.png)
 ::: moniker-end
@@ -199,11 +285,11 @@ Para estender a cobertura de código para o método `StartsWithLower`, faça o s
 
 1. Adicione os seguintes métodos `TestStartsWithLower` e `TestDoesNotStartWithLower` no arquivo de código-fonte do teste do projeto:
 
-    [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest2.cs#1)]
+   :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/unittest2.cs" id="Snippet1":::
 
 1. Modifique o `DirectCallWithNullOrEmpty` método adicionando o código a seguir imediatamente após a chamada para o [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.isfalse) método.
 
-    [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest2.cs#2)]
+   :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/unittest2.cs" id="Snippet2":::
 
 1. O Live Unit Testing executa automaticamente os testes novos e modificados quando você modifica o código-fonte. Como mostra a ilustração a seguir, todos os testes, incluindo os dois que você adicionou e o que você modificou foram bem-sucedidos.
 
@@ -228,7 +314,7 @@ Nesta seção, você vai explorar como é possível usar o Live Unit Testing par
 
 1. Adicione o seguinte método ao arquivo de teste:
 
-    [!code-csharp[The TestHasEmbeddedSpaces test method](samples/snippets/csharp/lut-start/unittest2.cs#3)]
+   :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/unittest2.cs" id="Snippet3":::
 
 1. Quando o teste é executado, Live Unit Testing indica que o `TestHasEmbeddedSpaces` método falhou, como mostra a ilustração a seguir:
 
@@ -275,13 +361,13 @@ Isso fornece informações suficientes para uma investigação preliminar do bug
 
 1. Substitua a comparação de igualdade por uma chamada para o método <xref:System.Char.IsWhiteSpace%2A?displayProperty=fullName>:
 
-    [!code-csharp[The TestHasEmbeddedSpaces test method](samples/snippets/csharp/lut-start/program2.cs#1)]
+   :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/program2.cs" id="Snippet1":::
 
 1. Live Unit Testing executa automaticamente o método de teste com falha.
 
    Live Unit Testing mostra que os resultados atualizados são exibidos, que também aparecem na janela Editor de código.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Live Unit Testing no Visual Studio](live-unit-testing.md)
 - [Perguntas frequentes sobre o Live Unit Testing](live-unit-testing-faq.md)

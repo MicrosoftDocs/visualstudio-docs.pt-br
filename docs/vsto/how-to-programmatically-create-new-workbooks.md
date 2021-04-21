@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 13acd34d9883cfdc7df201dff193d261252f8a9d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8a0a6e0b7b81c472ce03b1255c2c6899df0389da
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963985"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825973"
 ---
 # <a name="how-to-programmatically-create-new-workbooks"></a>Como criar programaticamente novas pastas de trabalho
   Quando você cria uma pasta de trabalho programaticamente, ela é um <xref:Microsoft.Office.Interop.Excel.Workbook> objeto nativo, não um <xref:Microsoft.Office.Tools.Excel.Workbook> item de host.
@@ -33,8 +33,8 @@ ms.locfileid: "99963985"
 
 1. Use o <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> método da <xref:Microsoft.Office.Interop.Excel.Workbooks> coleção.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#1](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#1)]
-     [!code-vb[Trin_VstcoreExcelAutomation#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet1":::
 
     > [!NOTE]
     > Você pode criar uma pasta de trabalho com base em um modelo diferente do modelo padrão: passe o modelo que você deseja usar como um parâmetro para o <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> método.

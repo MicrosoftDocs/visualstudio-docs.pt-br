@@ -34,12 +34,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 83fdc3b6a60c5f8972ff5d955c56476fb13315d9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2ee62f35b0626139a8080649076d2ac941366a26
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971824"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828703"
 ---
 # <a name="program-vsto-add-ins"></a>Programar suplementos do VSTO
   Ao estender um aplicativo Microsoft Office criando um suplemento do VSTO, você escreve o código diretamente `ThisAddIn` na classe em seu projeto. Você pode usar essa classe para executar tarefas como acessar o modelo de objeto do aplicativo host Microsoft Office, personalizar a interface do usuário do aplicativo e expor objetos em seu suplemento do VSTO a outras soluções do Office.
@@ -51,7 +51,7 @@ ms.locfileid: "99971824"
  Para obter informações gerais sobre os suplementos do VSTO e outros tipos de soluções que você pode criar usando as ferramentas de desenvolvimento do Office no Visual Studio, consulte [visão geral do desenvolvimento de soluções do office &#40;&#41;do VSTO ](../vsto/office-solutions-development-overview-vsto.md).
 
 ## <a name="use-the-thisaddin-class"></a>Usar a classe ThisAddIn
- Você pode começar a gravar seu código de suplemento do VSTO na `ThisAddIn` classe. O Visual Studio gera automaticamente essa classe no arquivo de código *ThisAddIn. vb* (in [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ) ou *ThisAddIn.cs* (em C#) em seu projeto de suplemento do VSTO. O [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] instancia automaticamente essa classe para você quando o aplicativo Microsoft Office carrega seu suplemento do VSTO.
+ Você pode começar a gravar seu código de suplemento do VSTO na `ThisAddIn` classe. O Visual Studio gera automaticamente essa classe no arquivo de código *ThisAddIn. vb* (no [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ) ou *ThisAddIn. cs* (em C#) em seu projeto de suplemento do VSTO. O [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] instancia automaticamente essa classe para você quando o aplicativo Microsoft Office carrega seu suplemento do VSTO.
 
  Há dois manipuladores de eventos padrão na `ThisAddIn` classe. Para executar o código quando o suplemento do VSTO for carregado, adicione o código ao `ThisAddIn_Startup` manipulador de eventos. Para executar o código logo antes que o suplemento do VSTO seja descarregado, adicione o código ao `ThisAddIn_Shutdown` manipulador de eventos. Para obter mais informações sobre esses manipuladores de eventos, consulte [eventos em projetos do Office](../vsto/events-in-office-projects.md).
 
@@ -112,8 +112,8 @@ Excel.Workbook newWorkbook = Globals.ThisAddIn.Application.Workbooks.Add(System.
 
  O exemplo de código a seguir funciona com um documento no Word somente quando o usuário cria um documento ou abre um documento existente.
 
- [!code-csharp[Trin_WordAddIn_Menus#3](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs#3)]
- [!code-vb[Trin_WordAddIn_Menus#3](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb#3)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs" id="Snippet3":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb" id="Snippet3":::
 
 ### <a name="thisaddin-members-to-use-for-other-tasks"></a>Membros de ThisAddIn a serem usados para outras tarefas
  A tabela a seguir descreve outras tarefas comuns e mostra quais membros da `ThisAddIn` classe você pode usar para executar as tarefas.
@@ -145,7 +145,7 @@ Excel.Workbook newWorkbook = Globals.ThisAddIn.Application.Workbooks.Add(System.
 
  Para obter mais informações, consulte [chamar código em suplementos do VSTO de outras soluções do Office](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Desenvolver soluções do Office](../vsto/developing-office-solutions.md)
 - [Estenda documentos do Word e pastas de trabalho do Excel em suplementos do VSTO em tempo de execução](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
 - [Chamar código em suplementos do VSTO de outras soluções do Office](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)
