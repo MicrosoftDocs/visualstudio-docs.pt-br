@@ -34,12 +34,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7bf4da3f0b2dd9cbab960a779690aa752744cdae
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: be1625be3d8c3fce409562be948c83a34d40d7b1
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910315"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825674"
 ---
 # <a name="events-in-office-projects"></a>Eventos em projetos do Office
   Cada modelo de projeto do Office gera automaticamente vários manipuladores de eventos. Os manipuladores de eventos para personalizações em nível de documento são ligeiramente diferentes dos manipuladores de eventos para os suplementos do VSTO.
@@ -91,16 +91,16 @@ ms.locfileid: "99910315"
 
  O exemplo de código a seguir mostra os manipuladores de eventos padrão em projetos de nível de documento para o Word.
 
- [!code-vb[Trin_VstcoreWordAutomation#121](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#121)]
- [!code-csharp[Trin_VstcoreWordAutomation#121](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#121)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet121":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet121":::
 
  O exemplo de código a seguir mostra os manipuladores de eventos padrão em projetos de nível de documento para o Excel.
 
 > [!NOTE]
 > O exemplo de código a seguir mostra os manipuladores de eventos na `Sheet1` classe. Os nomes dos manipuladores de eventos em outras classes de item de host correspondem ao nome da classe. Por exemplo, na `Sheet2` classe, o manipulador de eventos de **inicialização** é chamado `Sheet2_Startup` . Na `ThisWorkbook` classe, o manipulador de eventos de **inicialização** é chamado `ThisWorkbook_Startup` .
 
- [!code-csharp[Trin_VstcoreExcelAutomation#83](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#83)]
- [!code-vb[Trin_VstcoreExcelAutomation#83](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#83)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet83":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet83":::
 
 ### <a name="order-of-events-in-document-level-excel-projects"></a>Ordem de eventos em projetos do Excel em nível de documento
  Os manipuladores de eventos de **inicialização** em projetos do Excel são chamados nesta ordem:

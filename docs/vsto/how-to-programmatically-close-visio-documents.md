@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c1592bd500103a2db42934ab8f81392a5f1fa0d1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8802cc34555fcb695c5554209255cb8fd9f154c2
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903687"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825297"
 ---
 # <a name="how-to-programmatically-close-visio-documents"></a>Como: fechar documentos do Visio por meio de programação
   Você pode fechar o documento do Active Microsoft Office Visio usando o `Microsoft.Office.Interop.Visio.Document.Close` método.
@@ -35,10 +35,10 @@ ms.locfileid: "99903687"
 
      Para usar o exemplo de código a seguir, execute-o na `ThisAddIn` classe em um projeto de suplemento do VSTO para Visio.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#7](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#7)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#7](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#7)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet7":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet7":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Soluções do Visio](../vsto/visio-solutions.md)
 - [Visão geral do modelo de objeto do Visio](../vsto/visio-object-model-overview.md)
 - [Como criar programaticamente novos documentos do Visio](../vsto/how-to-programmatically-create-new-visio-documents.md)

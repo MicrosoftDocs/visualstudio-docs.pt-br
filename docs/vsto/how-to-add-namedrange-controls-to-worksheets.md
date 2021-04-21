@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: aa1b8372f9499695612a0e7335b1dbaf94800e79
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b7bf2f3ef91a6f572c64f94cb4b1a9a2f493e864
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954170"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827702"
 ---
 # <a name="how-to-add-namedrange-controls-to-worksheets"></a>Como: adicionar controles NamedRange a planilhas
   Você pode adicionar <xref:Microsoft.Office.Tools.Excel.NamedRange> controles a uma Microsoft Office planilha do Excel em tempo de design e em tempo de execução em projetos de nível de documento.
@@ -82,8 +82,8 @@ ms.locfileid: "99954170"
 
 1. No <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> manipulador de eventos de `Sheet1` , insira o código a seguir para adicionar o <xref:Microsoft.Office.Tools.Excel.NamedRange> controle à célula **a1** e defina sua <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> propriedade como `Hello world!`
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#3)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet3":::
 
 ## <a name="add-namedrange-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> Adicionar controles NamedRange em tempo de execução em um projeto de suplemento do VSTO
  Você pode adicionar um <xref:Microsoft.Office.Tools.Excel.NamedRange> controle programaticamente a qualquer planilha aberta em um projeto de suplemento do VSTO. Os intervalos nomeados criados dinamicamente não são mantidos na planilha como controles de host quando a planilha é fechada. Para obter mais informações, consulte [estender documentos do Word e pastas de trabalho do Excel em suplementos do VSTO em tempo de execução](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
@@ -92,8 +92,8 @@ ms.locfileid: "99954170"
 
 1. O código a seguir gera um item de host de planilha baseado na planilha aberta e, em seguida, adiciona um <xref:Microsoft.Office.Tools.Excel.NamedRange> controle à célula **a1** e define sua <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> propriedade como `Hello world` .
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#7](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#7)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#7](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#7)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs" id="Snippet7":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb" id="Snippet7":::
 
 ## <a name="see-also"></a>Consulte também
 - [Estenda documentos do Word e pastas de trabalho do Excel em suplementos do VSTO em tempo de execução](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)

@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 2f5c244d78ab5a6b5d98550b11c280159f285db7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 276dc7b8094c495a1b3896a4a93a068b1005c8d5
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913458"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828443"
 ---
 # <a name="how-to-add-commands-to-shortcut-menus"></a>Como: adicionar comandos a menus de atalho
   Este tópico demonstra como adicionar comandos a um menu de atalho em um aplicativo do Office usando um suplemento do VSTO.
@@ -31,7 +31,7 @@ ms.locfileid: "99913458"
 
 1. Adicione um item **XML da faixa** de bits a um projeto de suplemento do VSTO ou no nível do documento. Para obter mais informações, consulte [como: começar a personalizar a faixa de](../vsto/how-to-get-started-customizing-the-ribbon.md)visualização. Em
 
-2. **Gerenciador de soluções**, selecione **ThisAddIn.cs** ou **ThisAddIn. vb**.
+2. **Gerenciador de soluções**, selecione **ThisAddIn. cs** ou **ThisAddIn. vb**.
 
 3. Na barra de menus, escolha **Exibir**  >  **código**.
 
@@ -39,8 +39,8 @@ ms.locfileid: "99913458"
 
 4. Adicione o código a seguir à classe **ThisAddIn** . Esse código substitui o `CreateRibbonExtensibilityObject` método e retorna a classe XML da faixa de forma para o aplicativo do Office.
 
-     [!code-csharp[Trin_WordAddIn_Menus#1](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs#1)]
-     [!code-vb[Trin_WordAddIn_Menus#1](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb" id="Snippet1":::
 
 5. Em **Gerenciador de soluções**, selecione o arquivo XML da faixa de opções. Por padrão, o arquivo XML da faixa de faixas é denominado *Ribbon1.xml*.
 
@@ -72,14 +72,14 @@ ms.locfileid: "99913458"
     </customUI>
     ```
 
-8. Em **Gerenciador de soluções**, escolha **MyRibbon.cs** ou **MyRibbon. vb**.
+8. Em **Gerenciador de soluções**, escolha **MyRibbon. cs** ou **MyRibbon. vb**.
 
 9. Adicione um método de retorno de chamada à `Ribbon1` classe para cada controle que você deseja manipular.
 
      O método de retorno de chamada a seguir manipula o botão de **botão My** . Esse código adiciona uma cadeia de caracteres ao documento ativo no local atual do cursor.
 
-     [!code-vb[Trin_WordAddIn_Menus#2](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/ribbon1.vb#2)]
-     [!code-csharp[Trin_WordAddIn_Menus#2](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/ribbon1.cs#2)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/ribbon1.vb" id="Snippet2":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/ribbon1.cs" id="Snippet2":::
 
 ## <a name="see-also"></a>Consulte também
 - [Personalização da interface do usuário do Office](../vsto/office-ui-customization.md)

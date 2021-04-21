@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e583b7deb9fbe37f40e582d2c8a946332dd00ffa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 605f782bf6dc3bb56b52bdcd896d1c6419cf5f51
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913469"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825024"
 ---
 # <a name="how-to-programmatically-set-search-options-in-word"></a>Como: definir opções de pesquisa de forma programática no Word
   Há duas maneiras de definir opções de pesquisa para seleções em documentos Microsoft Office Word:
@@ -42,7 +42,7 @@ ms.locfileid: "99913469"
 
 1. Defina as propriedades de um <xref:Microsoft.Office.Interop.Word.Find> objeto para pesquisar adiante por uma seleção para o texto **encontrá-** lo.
 
-     [!code-vb[Trin_VstcoreWordAutomation#76](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#76)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet76":::
 
 ## <a name="use-execute-method-arguments"></a>Usar argumentos do método execute
  O código a seguir usa o <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> método de um <xref:Microsoft.Office.Interop.Word.Find> objeto para Pesquisar texto dentro da seleção atual. Observe que os critérios de pesquisa, como Pesquisar em frente, disposição e texto a serem pesquisados, são passados como parâmetros do <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> método.
@@ -51,10 +51,10 @@ ms.locfileid: "99913469"
 
 1. Passe os critérios de pesquisa como parâmetros do <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> método para pesquisar em uma seleção para o texto **encontrá-** lo.
 
-     [!code-vb[Trin_VstcoreWordAutomation#77](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#77)]
-     [!code-csharp[Trin_VstcoreWordAutomation#77](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#77)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet77":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet77":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Como: Pesquisar e substituir texto de forma programática em documentos](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)
 - [Como fazer loops programaticamente por meio de itens encontrados em documentos](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)
 - [Como: programaticamente restaurar seleções após pesquisas](../vsto/how-to-programmatically-restore-selections-after-searches.md)

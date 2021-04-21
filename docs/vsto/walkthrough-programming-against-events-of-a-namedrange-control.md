@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b3305fdc8f4fbadb3dcdd9775c3a6fe3dac3a1fb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ec1c670867fae277a3c3c8290cd34d0d4be7ddf3
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937388"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824959"
 ---
 # <a name="walkthrough-program-against-events-of-a-namedrange-control"></a>Walkthrough: programa em relação a eventos de um controle NamedRange
   Este tutorial demonstra como adicionar um <xref:Microsoft.Office.Tools.Excel.NamedRange> controle a uma Microsoft Office planilha e programa do Excel em relação a seus eventos usando as ferramentas de desenvolvimento do Office no Visual Studio.
@@ -101,16 +101,16 @@ ms.locfileid: "99937388"
 
 ### <a name="to-insert-text-into-namedrange2-based-on-the-beforedoubleclick-event"></a>Para inserir texto em NamedRange2 com base no evento BeforeDoubleClick
 
-1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **Plan1. vb** ou **Sheet1.cs** e selecione **Exibir código**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **Plan1. vb** ou **Plan1. cs** e selecione **Exibir código**.
 
 2. Adicione o código para que o `namedRange1_BeforeDoubleClick` manipulador de eventos fique semelhante ao seguinte:
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#24](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#24)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#24](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#24)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet24":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet24":::
 
 3. No C#, você deve adicionar manipuladores de eventos para o intervalo nomeado, conforme mostrado no <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> evento abaixo. Para obter informações sobre como criar manipuladores de eventos, consulte [como criar manipuladores de eventos em projetos do Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#25](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#25)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet25":::
 
 ## <a name="add-code-to-respond-to-the-change-event"></a>Adicionar código para responder ao evento de alteração
 
@@ -118,8 +118,8 @@ ms.locfileid: "99937388"
 
 1. Adicione o código para que o `NamedRange1_Change` manipulador de eventos fique semelhante ao seguinte:
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#26](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#26)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#26](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#26)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet26":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet26":::
 
     > [!NOTE]
     > Como clicar duas vezes em uma célula em um intervalo do Excel entra no modo de edição, um <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> evento ocorre quando a seleção é movida para fora do intervalo, mesmo que nenhuma alteração no texto tenha ocorrido.
@@ -130,8 +130,8 @@ ms.locfileid: "99937388"
 
 1. Adicione o código para que o manipulador de eventos de **NamedRange1_SelectionChange** se pareça com o seguinte:
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#27](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#27)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#27](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#27)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet27":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet27":::
 
     > [!NOTE]
     > Como clicar duas vezes em uma célula em um intervalo do Excel faz com que a seleção seja movida para o intervalo, um <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> evento ocorre antes do <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> evento ocorrer.

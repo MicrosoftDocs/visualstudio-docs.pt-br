@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c12e92ef77130ca2d9b55ccec737f37c73396c2b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: df28de0f8a9497fabecff816c26db7593bf349bd
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99849873"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828053"
 ---
 # <a name="customize-a-ribbon-for-outlook"></a>Personalizar uma faixa de faixas para o Outlook
   Ao personalizar a faixa de faixas no Microsoft Office Outlook, você deve considerar onde sua faixa de faixas personalizada aparecerá no aplicativo. O Outlook exibe a faixa de tipos na interface do usuário do aplicativo principal e no Windows que é aberta quando os usuários executam determinadas tarefas, como a criação de mensagens de email. Essas janelas de aplicativos são identificadas como inspetores.
@@ -47,8 +47,8 @@ ms.locfileid: "99849873"
 
  O exemplo de código a seguir demonstra como exibir uma faixa de opções personalizada somente no `Microsoft.Outlook.Mail.Compose` inspetor. Este é o inspetor que é aberto quando um usuário cria uma nova mensagem de email. A faixa de visualização a ser exibida é especificada no `GetResourceText()` método, que é gerado na classe **Ribbon** . Para obter mais informações sobre a classe **Ribbon** , consulte [Ribbon XML](../vsto/ribbon-xml.md).
 
- [!code-csharp[Trin_RibbonOutlookBasic#1](../vsto/codesnippet/CSharp/Trin_RibbonOutlookBasic/Ribbon1.cs#1)]
- [!code-vb[Trin_RibbonOutlookBasic#1](../vsto/codesnippet/VisualBasic/Trin_RibbonOutlookBasic/Ribbon1.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_RibbonOutlookBasic/Ribbon1.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_RibbonOutlookBasic/Ribbon1.vb" id="Snippet1":::
 
 ## <a name="see-also"></a>Consulte também
 - [Acessar a faixa de faixas em tempo de execução](../vsto/accessing-the-ribbon-at-run-time.md)

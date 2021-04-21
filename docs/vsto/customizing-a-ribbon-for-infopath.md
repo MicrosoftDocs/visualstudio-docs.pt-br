@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0bc66a9266baf865e2efb87497361bc0c525e55a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5af7c4ed2f396c5a806cc42c49c8f4209b6b5c2c
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99849886"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828131"
 ---
 # <a name="customize-a-ribbon-for-infopath"></a>Personalizar uma faixa de faixas para o InfoPath
   Ao personalizar a faixa de faixas no Microsoft Office InfoPath, você deve considerar onde sua faixa de faixas personalizada aparecerá no aplicativo. [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] pode exibir a faixa de opções nos três seguintes tipos de janelas de aplicativo do InfoPath:
@@ -60,10 +60,10 @@ ms.locfileid: "99849886"
 
  O exemplo de código a seguir demonstra como exibir uma faixa de opções personalizada somente em uma janela que exibe um modelo de formulário no modo de design. A faixa de visualização a ser exibida é especificada no `GetResourceText()` método, que é gerado na classe Ribbon. Para obter mais informações sobre a classe Ribbon, consulte [Ribbon XML](../vsto/ribbon-xml.md).
 
- [!code-csharp[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/CSharp/myinfopathproject/ribbon.cs#1)]
- [!code-vb[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/VisualBasic/myinfopathproject/ribbon.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/myinfopathproject/ribbon.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/myinfopathproject/ribbon.vb" id="Snippet1":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Acessar a faixa de faixas em tempo de execução](../vsto/accessing-the-ribbon-at-run-time.md)
 - [Visão geral da faixa de faixas](../vsto/ribbon-overview.md)
 - [Designer de faixa de das](../vsto/ribbon-designer.md)

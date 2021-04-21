@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 459c50b5f8135756f85de852a62de44b3878148d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ccc45e9ec389e265e69c81baaf569aa3eb3c978b
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882473"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825622"
 ---
 # <a name="bind-data-to-controls-in-office-solutions"></a>Associar dados a controles em soluções do Office
   Você pode associar controles de Windows Forms e de *host* em um documento Microsoft Office Word ou Microsoft Office planilha do Excel a uma fonte de dados para que os controles exibam automaticamente os dados. Você pode associar dados a controles em projetos de nível de aplicativo e de documento.
@@ -43,8 +43,8 @@ ms.locfileid: "99882473"
 
  O exemplo a seguir demonstra como associar a <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> Propriedade a um elemento de dados em um projeto de nível de documento.
 
- [!code-vb[Trin_BindableComponent#4](../vsto/codesnippet/VisualBasic/Trin_BindableComponent/Sheet1.vb#4)]
- [!code-csharp[Trin_BindableComponent#4](../vsto/codesnippet/CSharp/Trin_BindableComponent/Sheet1.cs#4)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_BindableComponent/Sheet1.vb" id="Snippet4":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_BindableComponent/Sheet1.cs" id="Snippet4":::
 
  Para obter orientações que demonstram a vinculação de dados simples, consulte [passo a passos: vinculação de dados simples em um projeto de nível de documento](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md) para um projeto de nível de documento e [passo a passos: vinculação de dados simples no projeto de suplemento](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md) do VSTO para um projeto de suplemento do VSTO.
 
@@ -55,8 +55,8 @@ ms.locfileid: "99882473"
 
  O exemplo de código a seguir cria um <xref:System.Data.DataSet> com dois <xref:System.Data.DataTable> objetos e popula uma das tabelas com dados. Em seguida, o código associa a <xref:Microsoft.Office.Tools.Excel.ListObject> à tabela que contém dados. Este exemplo é para um projeto de nível de documento do Excel.
 
- [!code-csharp[Trin_ExcelListObject#18](../vsto/codesnippet/CSharp/Trin_ExcelListObject/Trin_ExcelListObject.cs#18)]
- [!code-vb[Trin_ExcelListObject#18](../vsto/codesnippet/VisualBasic/Trin_ExcelListObject/Sheet1.vb#18)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ExcelListObject/Trin_ExcelListObject.cs" id="Snippet18":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ExcelListObject/Sheet1.vb" id="Snippet18":::
 
  Para obter orientações que demonstram a vinculação de dados complexa, consulte [passo a passos: vinculação de dados complexa em um projeto de nível de documento](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md) para um projeto de nível de documento e [passo a passos: ligação de dados complexa no projeto de suplemento](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md) do VSTO para um projeto de suplemento do VSTO.
 
@@ -99,7 +99,7 @@ ms.locfileid: "99882473"
 
  Para obter mais informações, consulte [como: atualizar uma fonte de dados com dados de um controle de host](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Associação de dados e Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms)
 - [Como criar um controle de associação simples em um formulário do Windows](/dotnet/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form)
 - [Associar controles do Windows Forms a dados no Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

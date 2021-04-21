@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 596f7ea7586ee70ae740dc237d83b7a4b40fa83f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 445857200dfb269dd71f7cb3d446d025048cb3ac
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910191"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828430"
 ---
 # <a name="how-to-programmatically-add-pictures-and-word-art-to-documents"></a>Como: adicionar imagens e arte de palavras programaticamente a documentos
   Você pode adicionar imagens e objetos de desenho a seus documentos em tempo de design ou durante o tempo de execução. O WordArt permite que você adicione texto decorativo a Microsoft Office documentos do Word. Esses efeitos de texto especiais são objetos de desenho que você pode personalizar e inserir em seu documento.
@@ -53,8 +53,8 @@ ms.locfileid: "99910191"
 
 1. Chame o <xref:Microsoft.Office.Interop.Word.InlineShapes.AddPicture%2A> método da <xref:Microsoft.Office.Interop.Word.InlineShapes> coleção e passe o nome do arquivo.
 
-     [!code-vb[Trin_VstcoreWordAutomation#108](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#108)]
-     [!code-csharp[Trin_VstcoreWordAutomation#108](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#108)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet108":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet108":::
 
 ## <a name="add-wordart-at-design-time"></a>Adicionar WordArt em tempo de design
  Se você estiver desenvolvendo uma personalização em nível de documento, poderá adicionar o WordArt ao documento em tempo de design.
@@ -78,25 +78,25 @@ ms.locfileid: "99910191"
 
 1. Obter a posição esquerda e superior do local do cursor atual.
 
-     [!code-vb[Trin_VstcoreWordAutomation#109](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#109)]
-     [!code-csharp[Trin_VstcoreWordAutomation#109](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#109)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet109":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet109":::
 
 2. Chame o <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A> método do <xref:Microsoft.Office.Interop.Word.Shapes> objeto no documento.
 
-     [!code-vb[Trin_VstcoreWordAutomation#110](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#110)]
-     [!code-csharp[Trin_VstcoreWordAutomation#110](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#110)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet110":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet110":::
 
 ### <a name="to-add-wordart-at-the-cursor-location-in-a-vsto-add-in"></a>Para adicionar um WordArt no local do cursor em um suplemento do VSTO
 
 1. Obter a posição esquerda e superior do local do cursor atual.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#109](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#109)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#109](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#109)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet109":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet109":::
 
 2. Chamar o <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A> método do <xref:Microsoft.Office.Interop.Word.Shapes> objeto do documento ativo (ou um documento diferente que você especificar).
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#110](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#110)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#110](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#110)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet110":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet110":::
 
 ## <a name="compile-the-code"></a>Compilar o código
 

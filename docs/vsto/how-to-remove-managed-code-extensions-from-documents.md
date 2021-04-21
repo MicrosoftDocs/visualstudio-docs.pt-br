@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: fea8a8f73155875f9a10e9d8138ee4b345d531d4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 129b1bda44abf7283efe1996f1898491025ee9d9
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942146"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825440"
 ---
 # <a name="how-to-remove-managed-code-extensions-from-documents"></a>Como remover extensões de código gerenciado de documentos
   Você pode remover programaticamente o assembly de personalização de um documento ou pasta de trabalho que faz parte de uma personalização em nível de documento para Microsoft Office Word ou Microsoft Office Excel. Os usuários podem abrir os documentos e exibir o conteúdo, mas qualquer interface do usuário personalizada (IU) que você adicionar aos documentos não será exibida e seu código não será executado.
@@ -41,18 +41,18 @@ ms.locfileid: "99942146"
 
 2. Adicione as seguintes **importações** ou **use** a instrução na parte superior do seu arquivo de código.
 
-     [!code-csharp[Trin_VstcoreDeployment#1](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#1)]
-     [!code-vb[Trin_VstcoreDeployment#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb" id="Snippet1":::
 
 3. Chame o <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A> método estático da <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> classe e especifique o caminho do documento da solução para o parâmetro.
 
      O exemplo de código a seguir pressupõe que você está removendo a personalização de um documento chamado *WordDocument1.docx* que está na área de trabalho.
 
-     [!code-csharp[Trin_VstcoreDeployment#2](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#2)]
-     [!code-vb[Trin_VstcoreDeployment#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb" id="Snippet2":::
 
 4. Compile o projeto e execute o aplicativo no computador em que você deseja remover a personalização. O computador deve ter o tempo de execução do Visual Studio 2010 Tools for Office instalado.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Gerenciar documentos em um servidor usando a classe ServerDocument](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)
 - [Como: anexar extensões de código gerenciado a documentos](../vsto/how-to-attach-managed-code-extensions-to-documents.md)

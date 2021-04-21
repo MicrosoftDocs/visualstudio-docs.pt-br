@@ -21,12 +21,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1dc962e372f4406fffb5cf8a6357f3826f0c8845
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cc333871d4f371530db84a0c4f07ab891db2a937
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942250"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825466"
 ---
 # <a name="how-to-protect-parts-of-documents-by-using-content-controls"></a>Como: proteger partes de documentos usando controles de conteúdo
   Ao proteger parte de um documento, você impede que os usuários alterem ou excluam o conteúdo dessa parte do documento. Há várias maneiras pelas quais você pode proteger partes de um Microsoft Office documento do Word usando controles de conteúdo:
@@ -60,13 +60,13 @@ ms.locfileid: "99942250"
 
      O exemplo de código a seguir demonstra como usar as <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContents%2A> <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContentControl%2A> Propriedades e de dois <xref:Microsoft.Office.Tools.Word.RichTextContentControl> objetos diferentes em um projeto de nível de documento. Para executar esse código, adicione o código à `ThisDocument` classe em seu projeto e chame o `AddProtectedContentControls` método do `ThisDocument_Startup` manipulador de eventos.
 
-     [!code-csharp[Trin_ContentControlHowToProtect#2](../vsto/codesnippet/CSharp/Trin_ContentControlHowToProtect/ThisDocument.cs#2)]
-     [!code-vb[Trin_ContentControlHowToProtect#2](../vsto/codesnippet/VisualBasic/Trin_ContentControlHowToProtect/ThisDocument.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ContentControlHowToProtect/ThisDocument.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ContentControlHowToProtect/ThisDocument.vb" id="Snippet2":::
 
      O exemplo de código a seguir demonstra como usar as <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContents%2A> <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContentControl%2A> Propriedades e de dois <xref:Microsoft.Office.Tools.Word.RichTextContentControl> objetos diferentes em um projeto de suplemento do VSTO. Para executar esse código, adicione o código à `ThisAddIn` classe em seu projeto e chame o `AddProtectedContentControls` método do `ThisAddIn_Startup` manipulador de eventos.
 
-     [!code-vb[Trin_WordAddInDynamicControls#14](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#14)]
-     [!code-csharp[Trin_WordAddInDynamicControls#14](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#14)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet14":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet14":::
 
 ## <a name="protect-a-part-of-a-document-that-is-not-in-a-content-control"></a>Proteger uma parte de um documento que não está em um controle de conteúdo
  Você pode impedir que os usuários alterem uma área de um documento colocando a área em um <xref:Microsoft.Office.Tools.Word.GroupContentControl> . Isso é útil nos seguintes cenários:
@@ -97,15 +97,15 @@ ms.locfileid: "99942250"
 
      O exemplo de código a seguir para um projeto de nível de documento adiciona texto ao primeiro parágrafo do documento, seleciona o primeiro parágrafo e, em seguida, cria uma instância de um <xref:Microsoft.Office.Tools.Word.GroupContentControl> . Para executar esse código, adicione o código à `ThisDocument` classe em seu projeto e chame o `ProtectFirstParagraph` método do `ThisDocument_Startup` manipulador de eventos.
 
-     [!code-csharp[Trin_ContentControlHowToProtect#1](../vsto/codesnippet/CSharp/Trin_ContentControlHowToProtect/ThisDocument.cs#1)]
-     [!code-vb[Trin_ContentControlHowToProtect#1](../vsto/codesnippet/VisualBasic/Trin_ContentControlHowToProtect/ThisDocument.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ContentControlHowToProtect/ThisDocument.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ContentControlHowToProtect/ThisDocument.vb" id="Snippet1":::
 
      O exemplo de código a seguir para um projeto de suplemento do VSTO adiciona texto ao primeiro parágrafo no documento ativo, seleciona o primeiro parágrafo e, em seguida, cria uma instância de um <xref:Microsoft.Office.Tools.Word.GroupContentControl> . Para executar esse código, adicione o código à `ThisAddIn` classe em seu projeto e chame o `ProtectFirstParagraph` método do `ThisAddIn_Startup` manipulador de eventos.
 
-     [!code-vb[Trin_WordAddInDynamicControls#15](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#15)]
-     [!code-csharp[Trin_WordAddInDynamicControls#15](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#15)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet15":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet15":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Automatizar o Word usando objetos estendidos](../vsto/automating-word-by-using-extended-objects.md)
 - [Controles de conteúdo](../vsto/content-controls.md)
 - [Como: adicionar controles de conteúdo a documentos do Word](../vsto/how-to-add-content-controls-to-word-documents.md)

@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5c965c911977f657fe8c5252eabc1739564cf8c0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 29035f4867421ed3f05e5f0c3a5c196f58b7ab34
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958733"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825115"
 ---
 # <a name="improve-the-performance-of-a-vsto-add-in"></a>Melhorar o desempenho de um suplemento do VSTO
   Você pode dar aos seus usuários uma experiência melhor otimizando os suplementos do VSTO criados para aplicativos do Office para que eles sejam iniciados rapidamente, desligados, abram itens e executem outras tarefas. Se o suplemento do VSTO for para Outlook, você também poderá reduzir a chance de o suplemento do VSTO ser desabilitado devido ao mau desempenho. Você pode aumentar o desempenho do suplemento do VSTO implementando as seguintes estratégias:
@@ -106,8 +106,8 @@ ms.locfileid: "99958733"
 
  O exemplo a seguir retorna um objeto de faixa de opções com base no valor de um campo.
 
- [!code-vb[Trin_Ribbon_Choose_Ribbon#1](../vsto/codesnippet/VisualBasic/trin_ribbon_choose_ribbon_4/ThisWorkbook.vb#1)]
- [!code-csharp[Trin_Ribbon_Choose_Ribbon#1](../vsto/codesnippet/CSharp/trin_ribbon_choose_ribbon_4/ThisWorkbook.cs#1)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_ribbon_choose_ribbon_4/ThisWorkbook.vb" id="Snippet1":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_ribbon_choose_ribbon_4/ThisWorkbook.cs" id="Snippet1":::
 
 ## <a name="perform-expensive-operations-in-a-separate-execution-thread"></a><a name="Perform"></a> Executar operações caras em um thread de execução separado
  Considere executar tarefas demoradas (como tarefas de longa execução, conexões de banco de dados ou outros tipos de chamadas de rede) em um thread separado. Para obter mais informações, consulte [suporte a threads no Office](../vsto/threading-support-in-office.md).
@@ -115,7 +115,7 @@ ms.locfileid: "99958733"
 > [!NOTE]
 > Todo o código que chama para o modelo de objeto do Office deve ser executado no thread principal.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Suplementos do VSTO de carregamento por demanda](/archive/blogs/andreww/demand-loading-vsto-add-ins)
 - [Atraso ao carregar o CLR nos suplementos do Office](/archive/blogs/andreww/delay-loading-the-clr-in-office-add-ins)

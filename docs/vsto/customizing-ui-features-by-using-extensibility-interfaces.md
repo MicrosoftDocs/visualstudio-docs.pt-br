@@ -23,12 +23,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f84a694c9a18b6ec1c64204c8150ff721633278d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 86f4e5f286d817fb3f657e40399eccd3a2b4de73
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962464"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828027"
 ---
 # <a name="customize-ui-features-by-using-extensibility-interfaces"></a>Personalizar recursos de interface do usuário usando interfaces de extensibilidade
   As ferramentas de desenvolvimento do Office no Visual Studio fornecem classes e designers que lidam com muitos detalhes de implementação ao usá-los para criar painéis de tarefas personalizados, personalizações da faixa de forma e regiões de formulário do Outlook em um suplemento do VSTO. No entanto, você também pode implementar a *interface de extensibilidade* para cada recurso se tiver requisitos especiais.
@@ -68,16 +68,16 @@ ms.locfileid: "99962464"
   > [!NOTE]
   > Para expor a `TaskPaneUI` classe a com, você também deve definir a propriedade **Register for com Interop** para o projeto.
 
-  [!code-vb[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#1)]
-  [!code-csharp[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#1)]
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb" id="Snippet1":::
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs" id="Snippet1":::
 
   Para obter mais informações sobre como implementar <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> o, consulte [criar painéis de tarefas personalizados no sistema do Office 2007](/previous-versions/office/developer/office-2007/aa338197(v=office.12)) na documentação do Microsoft Office.
 
 ### <a name="example-of-overriding-the-requestservice-method"></a>Exemplo de substituição do método RequestService
  O exemplo de código a seguir demonstra como substituir o <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> método para retornar uma instância da `TaskPaneHelper` classe do exemplo de código anterior. Ele verifica o valor do parâmetro do *perguid* para determinar qual interface está sendo solicitada e, em seguida, retorna um objeto que implementa essa interface.
 
- [!code-vb[Trin_SimpleExtensibilityInterface#2](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#2)]
- [!code-csharp[Trin_SimpleExtensibilityInterface#2](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#2)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb" id="Snippet2":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs" id="Snippet2":::
 
 ## <a name="see-also"></a>Consulte também
 - [Exemplos e orientações de desenvolvimento do Office](../vsto/office-development-samples-and-walkthroughs.md)

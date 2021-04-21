@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a3301abf4807c02e1ed3e330e27c609a721bf48d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: af3cc1d9c34bf0d6dc503ca2aabe35de5848265c
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946144"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827598"
 ---
 # <a name="how-to-programmatically-protect-documents-and-parts-of-documents"></a>Como: proteger documentos e partes de documentos programaticamente
   Você pode adicionar proteção a Microsoft Office documentos do Word para impedir que os usuários façam qualquer edição no documento.
@@ -42,20 +42,20 @@ ms.locfileid: "99946144"
 
 1. Chame o <xref:Microsoft.Office.Tools.Word.Document.Protect%2A> método da `ThisDocument` classe em seu projeto.
 
-     [!code-vb[Trin_VstcoreWordAutomation#111](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#111)]
-     [!code-csharp[Trin_VstcoreWordAutomation#111](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#111)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet111":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet111":::
 
 ### <a name="to-exclude-a-bookmark-control-from-document-protection"></a>Para excluir um controle de indicador da proteção de documentos
 
 1. Proteja todo o documento usando o <xref:Microsoft.Office.Tools.Word.Document.Protect%2A> método.
 
-     [!code-vb[Trin_VstcoreWordAutomation#111](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#111)]
-     [!code-csharp[Trin_VstcoreWordAutomation#111](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#111)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet111":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet111":::
 
 2. Exclua `Bookmark1` da proteção de documento.
 
-     [!code-vb[Trin_VstcoreWordAutomation#112](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#112)]
-     [!code-csharp[Trin_VstcoreWordAutomation#112](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#112)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet112":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet112":::
 
 ### <a name="compile-the-code"></a>Compilar o código
  Para usar esses exemplos de código, execute-os a partir da `ThisDocument` classe em seu projeto. Esses exemplos de código pressupõem que você tenha um <xref:Microsoft.Office.Tools.Word.Bookmark> controle existente chamado `Bookmark1` no documento no qual esse código é exibido.
@@ -68,10 +68,10 @@ ms.locfileid: "99946144"
 
      O exemplo de código a seguir protege o documento ativo. Para usar este exemplo de código, execute-o da `ThisAddIn` classe em seu projeto.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#111](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#111)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#111](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#111)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet111":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet111":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Proteção de documentos em soluções de nível de documento](../vsto/document-protection-in-document-level-solutions.md)
 - [Proteção por senha em documentos do Office](../vsto/password-protection-on-office-documents.md)
 - [Como: permitir que o código execute por trás de documentos com permissões restritas](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)

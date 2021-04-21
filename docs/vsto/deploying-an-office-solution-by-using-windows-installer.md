@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ef515ce323322dee667dab5690b85b29af97c07d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f6dfa2bb4d3309420cf0a9a71e79b5d07b5477ce
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875413"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828521"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>Implantar uma solução do Office usando o Windows Installer
 
@@ -335,7 +335,7 @@ As instalações por usuário exigem apenas um instalador independente do Office
 
 7. Repita esse processo para criar os seguintes valores.
 
-|Tipo do Valor<br /><br />|Nome<br /><br />|
+|Tipo de valor<br /><br />|Nome<br /><br />|
 |--------------|--------|
 |Valor da cadeia de caracteres<br /><br />|**FriendlyName**<br /><br />|
 |Valor DWORD<br /><br />|**LoadBehavior**<br /><br />|
@@ -404,14 +404,14 @@ Para modificar propriedades personalizadas, você cria um programa que remove a 
 
    - Microsoft.VisualStudio.Tools.Applications.ServerDocument
 
-7. Em **Gerenciador de soluções**, escolha o arquivo **Program.cs** (para aplicativos C#) ou o arquivo **Module1. vb** (para aplicativos Visual Basic).
+7. Em **Gerenciador de soluções**, escolha o arquivo **Program. cs** (para aplicativos C#) ou o arquivo **Module1. vb** (para aplicativos Visual Basic).
 
 8. Na barra de menus, escolha **Exibir**  >  **abrir**.
 
 9. Substitua o conteúdo do arquivo inteiro pelo seguinte código.
 
-[!code-vb[Trin_CustomAction#1](../vsto/codesnippet/VisualBasic/setexceldocumentproperties/module1.vb#1)]
-[!code-csharp[Trin_CustomAction#1](../vsto/codesnippet/CSharp/setexceldocumentproperties/program.cs#1)]
+:::code language="vb" source="../vsto/codesnippet/VisualBasic/setexceldocumentproperties/module1.vb" id="Snippet1":::
+:::code language="csharp" source="../vsto/codesnippet/CSharp/setexceldocumentproperties/program.cs" id="Snippet1":::
 
 10. Compile o projeto.
 
@@ -504,7 +504,7 @@ Para modificar propriedades personalizadas, você cria um programa que remove a 
 
    Depois que a compilação for concluída, você poderá localizar o arquivo de *setup.exe* do projeto **OfficeAddInSetup** no seguinte local: <em>OfficeAddInSetupProjectRoot</em>**\OfficeAddInSetup\Express\SingleImage\DiskImages\DISK1 \\**
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Pré-requisitos da solução do Office para implantação](/previous-versions/bb608617(v=vs.110))
 - [Implantar uma solução do Office](../vsto/deploying-an-office-solution.md)

@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 063b66af781ee412e7f7d2ab8014e009bc93bad9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 60fc27345ef148fd47fdcee15924917ce63f8d68
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954105"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825492"
 ---
 # <a name="how-to-attach-managed-code-extensions-to-documents"></a>Como: anexar extensões de código gerenciado a documentos
   Você pode anexar um assembly de personalização a um documento existente do Microsoft Office Word ou Microsoft Office pasta de trabalho do Excel. O documento ou a pasta de trabalho pode estar em qualquer formato de arquivo com suporte na Microsoft Office projetos e ferramentas de desenvolvimento no Visual Studio. Para obter mais informações, consulte [arquitetura de personalizações em nível de documento](../vsto/architecture-of-document-level-customizations.md).
@@ -38,15 +38,15 @@ ms.locfileid: "99954105"
 
 2. Adicione as seguintes **importações** ou instruções **using** à parte superior do seu arquivo de código.
 
-     [!code-csharp[Trin_VstcoreDeployment#4](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#4)]
-     [!code-vb[Trin_VstcoreDeployment#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb" id="Snippet4":::
 
 3. Chame o <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> método estático.
 
      O exemplo de código a seguir usa a <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> sobrecarga. Essa sobrecarga usa o caminho completo do documento e um <xref:System.Uri> que especifica o local do manifesto de implantação para a personalização que você deseja anexar ao documento. Este exemplo pressupõe que um documento do Word chamado **WordDocument1.docx** está na área de trabalho e que o manifesto de implantação está localizado em uma pasta chamada **Publish** que também está na área de trabalho.
 
-     [!code-csharp[Trin_VstcoreDeployment#3](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#3)]
-     [!code-vb[Trin_VstcoreDeployment#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb" id="Snippet3":::
 
 4. Compile o projeto e execute o aplicativo no computador em que você deseja anexar a personalização. O computador deve ter o tempo de execução do Visual Studio 2010 Tools for Office instalado.
 

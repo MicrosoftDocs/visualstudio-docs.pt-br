@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 49739b6011fcf977db84a3350929a56514040975
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 182dee248f161f3dde721c50ee996d6f621dd9af
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918591"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827442"
 ---
 # <a name="how-to-manage-control-layout-on-actions-panes"></a>Como: gerenciar o layout de controle em painéis de ações
   Um painel Ações é encaixado à direita de um documento ou planilha por padrão; no entanto, ele pode ser encaixado à esquerda, à parte superior ou inferior. Se você estiver usando vários controles de usuário, poderá escrever código para empilhar corretamente os controles de usuário no painel Ações. Para obter mais informações, consulte [visão geral do painel Ações](../vsto/actions-pane-overview.md).
@@ -40,27 +40,27 @@ ms.locfileid: "99918591"
 
 1. Abra um projeto de nível de documento para Microsoft Office Word que inclui um painel Ações com vários controles de usuário ou controles do painel Ações aninhadas. Para obter mais informações, consulte [como: adicionar um painel ações a documentos do Word ou pastas de trabalho do Excel](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md).
 
-2. Clique com o botão direito do mouse em **ThisDocument.cs** ou **ThisDocument. vb** em **Gerenciador de soluções** e clique em **Exibir código**.
+2. Clique com o botão direito do mouse em **ThisDocument. cs** ou **ThisDocument. vb** em **Gerenciador de soluções** e clique em **Exibir código**.
 
 3. No <xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged> manipulador de eventos do painel Ações, verifique se a orientação do painel Ações é horizontal.
 
-     [!code-csharp[Trin_VstcoreActionsPaneWord#30](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#30)]
-     [!code-vb[Trin_VstcoreActionsPaneWord#30](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#30)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet30":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet30":::
 
 4. Se a orientação for horizontal, empilhe os controles do painel de ação da esquerda; caso contrário, empilhe-os da parte superior.
 
-     [!code-csharp[Trin_VstcoreActionsPaneWord#31](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#31)]
-     [!code-vb[Trin_VstcoreActionsPaneWord#31](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#31)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet31":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet31":::
 
 5. No C#, você deve adicionar um manipulador de eventos para o `ActionsPane` para o <xref:Microsoft.Office.Tools.Word.Document.Startup> manipulador de eventos. Para obter informações sobre como criar manipuladores de eventos, consulte [como criar manipuladores de eventos em projetos do Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_VstcoreActionsPaneWord#32](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#32)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet32":::
 
 6. Execute o projeto e verifique se os controles do painel ações estão empilhados da esquerda para a direita quando o painel Ações está encaixado na parte superior do documento, e os controles são empilhados de cima para baixo quando o painel Ações é encaixado no lado direito do documento.
 
 ## <a name="example"></a>Exemplo
- [!code-csharp[Trin_VstcoreActionsPaneWord#29](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#29)]
- [!code-vb[Trin_VstcoreActionsPaneWord#29](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#29)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet29":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet29":::
 
 ## <a name="compile-the-code"></a>Compilar o código
  Este exemplo requer:

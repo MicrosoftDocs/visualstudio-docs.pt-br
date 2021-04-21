@@ -25,12 +25,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 69ca0269859db9e1a69904c2211b8f4d1ad45710
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a84a0c21bba42263e7b4dad9ad9118f462389ad6
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879287"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827494"
 ---
 # <a name="ribbon-xml"></a>XML da faixa de opções
   O item da faixa de de (XML) permite que você personalize uma faixa de faixas usando XML. Use o item da faixa de opção (XML) se desejar personalizar a faixa de uma forma que não seja suportada pelo item da faixa de opção (Visual Designer). Para obter uma comparação do que você pode fazer com cada item, consulte [visão geral da faixa](../vsto/Ribbon-overview.md)de medida.
@@ -51,8 +51,8 @@ ms.locfileid: "99879287"
 
  O exemplo de código a seguir substitui o `CreateRibbonExtensibilityObject` método e retorna uma classe XML da faixa de opções chamada MyRibbon.
 
- [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs#1)]
- [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb" id="Snippet1":::
 
 ## <a name="define-the-behavior-of-the-custom-ribbon"></a>Definir o comportamento da faixa de Ribbon personalizada
  Você pode responder às ações do usuário, como clicar em um botão na faixa de faixas, criando *métodos de retorno de chamada*. Os métodos de retorno de chamada são semelhantes a eventos nos controles Windows Forms, mas são identificados por um atributo no XML do elemento de interface do usuário. Você escreve métodos na classe Ribbon e um controle chama o método que tem o mesmo nome que o valor do atributo. Por exemplo, você pode criar um método de retorno de chamada que é chamado quando um usuário clica em um botão na faixa de faixas. Duas etapas são necessárias para criar um método de retorno de chamada:
@@ -92,8 +92,8 @@ ms.locfileid: "99879287"
 
   Todos os métodos de retorno de chamada têm um <xref:Microsoft.Office.Core.IRibbonControl> parâmetro que representa o controle que chamou o método. Você pode usar esse parâmetro para reutilizar o mesmo método de retorno de chamada para vários controles. O exemplo de código a seguir demonstra um método de retorno de chamada **OnAction** que executa tarefas diferentes dependendo de qual controle o usuário clica.
 
-  [!code-csharp[Trin_RibbonOutlookBasic#2](../vsto/codesnippet/CSharp/Trin_RibbonOutlookBasic/Ribbon1.cs#2)]
-  [!code-vb[Trin_RibbonOutlookBasic#2](../vsto/codesnippet/VisualBasic/Trin_RibbonOutlookBasic/Ribbon1.vb#2)]
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_RibbonOutlookBasic/Ribbon1.cs" id="Snippet2":::
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_RibbonOutlookBasic/Ribbon1.vb" id="Snippet2":::
 
 ## <a name="ribbon-xml-file-reference"></a><a name="RibbonDescriptorFile"></a> Referência de arquivo XML da faixa de Ribbon
  Você pode definir sua faixa de faixas personalizada adicionando elementos e atributos ao arquivo XML da faixa de faixas. Por padrão, o arquivo XML da faixa de opções contém o XML a seguir.
@@ -145,7 +145,7 @@ ms.locfileid: "99879287"
 |`OnLoad`|Atribui o <xref:Microsoft.Office.Core.IRibbonControl> parâmetro ao `Ribbon` campo. Microsoft Office aplicativos chamam esse método quando carregam a faixa de Ribbon personalizada. Você pode usar esse campo para atualizar dinamicamente a faixa de Ribbon personalizada. Para obter mais informações, consulte o artigo técnico [Personalizar a interface do usuário da faixa de forma do Office (2007) para desenvolvedores (parte 1 de 3)](/previous-versions/office/developer/office-2007/aa338202(v=office.12)).|
 |`GetResourceText`|Chamado pelo `GetCustomUI` método para obter o conteúdo do arquivo XML da faixa de faixas.|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Visão geral da faixa de faixas](../vsto/ribbon-overview.md)
 - [Walkthrough: criar uma guia personalizada usando o XML da faixa de uma](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)
 - [Personalização da interface do usuário do Office](../vsto/office-ui-customization.md)

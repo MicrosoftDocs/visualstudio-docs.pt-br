@@ -24,12 +24,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5d49c7fa9224b2d527956536cb0c56b016f6b52e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 64a4d4dcd2e6115a3b8093a0a9338cb126f49a28
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948642"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825128"
 ---
 # <a name="add-controls-to-office-documents-at-run-time"></a>Adicionar controles a documentos do Office em tempo de execução
   Você pode adicionar controles a um documento Microsoft Office Word e Microsoft Office pasta de trabalho do Excel em tempo de execução. Você também pode removê-los em tempo de execução. Os controles que você adiciona ou remove em tempo de execução são chamados de *controles dinâmicos*.
@@ -62,6 +62,9 @@ ms.locfileid: "99948642"
 
  [!code-vb[Trin_ExcelWorkbookDynamicControls#3](../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/ThisWorkbook.vb#3)]
  [!code-csharp[Trin_ExcelWorkbookDynamicControls#3](../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs#3)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/ThisWorkbook.vb" id="Snippet3":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs" id="Snippet3":::
+
 
 ### <a name="access-and-delete-controls"></a>Acessar e excluir controles
  Você pode usar a `Controls` propriedade de um <xref:Microsoft.Office.Tools.Excel.Worksheet> ou <xref:Microsoft.Office.Tools.Word.Document> para iterar por todos os controles em seu documento, incluindo os controles adicionados em tempo de design. Os controles que você adiciona em tempo de design também são chamados de *controles estáticos*.
@@ -70,6 +73,9 @@ ms.locfileid: "99948642"
 
  [!code-vb[Trin_ExcelWorkbookDynamicControls#4](../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/ThisWorkbook.vb#4)]
  [!code-csharp[Trin_ExcelWorkbookDynamicControls#4](../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs#4)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/ThisWorkbook.vb" id="Snippet4":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs" id="Snippet4":::
+
 
  Não é possível remover controles estáticos em tempo de execução. Se você tentar usar o `Delete` método ou `Remove` para remover um controle estático, um <xref:Microsoft.Office.Tools.CannotRemoveControlException> será gerado.
 
@@ -116,8 +122,8 @@ Quando um documento é salvo e fechado, todos os controles de host criados dinam
 
   O exemplo de código a seguir demonstra como usar o <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddControl%2A> método para adicionar dinamicamente um controle de usuário personalizado a uma planilha em um projeto do Excel de nível de documento. Neste exemplo, o controle de usuário é nomeado `UserControl1` e o <xref:Microsoft.Office.Interop.Excel.Range> é nomeado `range1` . Para usar este exemplo, execute-o de uma `Sheet` classe *n* no projeto.
 
-  [!code-vb[Trin_VstcoreProgrammingControlsExcel#2](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#2)]
-  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#2)]
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb" id="Snippet2":::
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet2":::
 
 ### <a name="use-members-of-custom-controls"></a>Usar membros de controles personalizados
  Depois de usar um dos `AddControl` métodos para adicionar um controle a uma planilha ou documento, agora você tem dois objetos de controle diferentes:
@@ -136,10 +142,10 @@ Quando um documento é salvo e fechado, todos os controles de host criados dinam
 
   Por exemplo, a <xref:Microsoft.Office.Tools.Excel.ControlSite> classe e a <xref:System.Windows.Forms.Control> classe têm uma `Top` propriedade. Para obter ou definir a distância entre a parte superior do controle e a parte superior do documento, use a <xref:Microsoft.Office.Tools.Excel.ControlSite.Top%2A> propriedade de <xref:Microsoft.Office.Tools.Excel.ControlSite> , não a <xref:System.Windows.Forms.Control.Top%2A> Propriedade do <xref:System.Windows.Forms.Control> .
 
-  [!code-vb[Trin_VstcoreProgrammingControlsExcel#3](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#3)]
-  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#3)]
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb" id="Snippet3":::
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet3":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Controles em documentos do Office](../vsto/controls-on-office-documents.md)
 - [Persistir controles dinâmicos em documentos do Office](../vsto/persisting-dynamic-controls-in-office-documents.md)
 - [Como adicionar controles ListObject a planilhas](../vsto/how-to-add-listobject-controls-to-worksheets.md)

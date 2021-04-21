@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 270754005704d91569f014ed2e0be382bc2dd707
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b1209bf903f5a5b9c0005d9ba4ba6a891752aedd
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906467"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827780"
 ---
 # <a name="walkthrough-display-text-in-a-text-box-in-a-worksheet-using-a-button"></a>Walkthrough: exibir texto em uma caixa de texto em uma planilha usando um botão
   Este tutorial mostra as noções básicas de como usar botões e caixas de texto em Microsoft Office planilhas do Excel e como criar projetos do Excel usando as ferramentas de desenvolvimento do Office no Visual Studio. Para ver o resultado como um exemplo completo, consulte o exemplo de controles do Excel em [exemplos de desenvolvimento do Office e passo a passos](../vsto/office-development-samples-and-walkthroughs.md).
@@ -87,12 +87,12 @@ ms.locfileid: "99906467"
 
 2. Adicione o seguinte código ao <xref:System.Windows.Forms.Control.Click> manipulador de eventos do botão:
 
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#11](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#11)]
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#11)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb" id="Snippet11":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet11":::
 
 3. No C#, você deve adicionar um manipulador de eventos ao <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> evento, conforme mostrado abaixo. Para obter informações sobre como criar manipuladores de eventos, consulte [como criar manipuladores de eventos em projetos do Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#12](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#12)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet12":::
 
 ## <a name="test-the-application"></a>Testar o aplicativo
  Agora você pode testar sua pasta de trabalho para certificar-se de que a mensagem **Olá, mundo!** aparece na caixa de texto quando você clica no botão.
@@ -112,7 +112,7 @@ ms.locfileid: "99906467"
 
 - Usando as caixas de seleção para alterar a formatação. Para obter mais informações, consulte [Walkthrough: alterar a formatação da planilha usando controles CheckBox](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Como: adicionar controles de Windows Forms a documentos do Office](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
 - [Passo a passos usando o Excel](../vsto/walkthroughs-using-excel.md)
 - [Limitações de controles de Windows Forms em documentos do Office](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)

@@ -21,12 +21,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 2a0511fd103345859f96b18f333465106505057a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1514410094deaf9c77e088c3b69e2d39d29175c2
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99953975"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825583"
 ---
 # <a name="how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>Como exportar uma faixa de faixas do designer de faixa de das faixas para XML da faixa de modo
   O item **da faixa de tipos (Visual Designer)** não dá suporte a todos os tipos possíveis de personalização da faixa de medida. Para personalizar a faixa de opções de maneiras avançadas, você pode exportar a faixa do designer para o XML da faixa e editar o XML diretamente.
@@ -54,8 +54,8 @@ ms.locfileid: "99953975"
 
      Depois que você remover o comentário do código, ele deverá ser semelhante ao exemplo a seguir. Neste exemplo, a classe Ribbon é chamada `MyRibbon` .
 
-     [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs#1)]
-     [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb" id="Snippet1":::
 
 6. Alterne para o arquivo de código XML da faixa de opções e localize a `Ribbon Callbacks` região.
 
@@ -67,7 +67,7 @@ ms.locfileid: "99953975"
 
      Para obter informações sobre como escrever métodos de retorno de chamada e usar o modelo de programação do RibbonX, consulte [Ribbon XML](../vsto/ribbon-xml.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Visão geral da faixa de faixas](../vsto/ribbon-overview.md)
 - [Designer da faixa de opções](../vsto/ribbon-designer.md)
 - [XML da faixa de opções](../vsto/ribbon-xml.md)

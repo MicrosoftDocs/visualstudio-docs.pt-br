@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 21a4b172fe2a29ac098f236cebb33efa43fb11c8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7a21f51c42f1f55423019361d1b1535482f4e4b1
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964167"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828001"
 ---
 # <a name="how-to-programmatically-create-a-custom-calendar"></a>Como: criar programaticamente um calendário personalizado
   Este exemplo cria uma nova pasta de calendário chamada **PersonalCalendar** e, em seguida, cria um novo item de compromisso e o adiciona à pasta Calendar. Em seguida, o código exibe a pasta calendário.
@@ -29,9 +29,9 @@ ms.locfileid: "99964167"
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
 ## <a name="example"></a>Exemplo
- [!code-csharp[Trin_OL_CustomCalendar#1](../vsto/codesnippet/CSharp/Trin_OL_CustomCalendar/thisaddin.cs#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_OL_CustomCalendar/thisaddin.cs" id="Snippet1":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Trabalhar com itens de calendário](../vsto/working-with-calendar-items.md)
 - [Como: criar compromissos programaticamente](../vsto/how-to-programmatically-create-appointments.md)
 - [Como: criar programaticamente uma solicitação de reunião](../vsto/how-to-programmatically-create-a-meeting-request.md)

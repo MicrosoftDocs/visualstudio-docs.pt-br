@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 11202da11cee72ec368ac525fce13fd084ab99be
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 99374a2daded3c4b49b60053a69cd1ff7c4dffe8
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954248"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827676"
 ---
 # <a name="how-to-add-custom-xml-parts-to-document-level-customizations"></a>Como: adicionar partes XML personalizadas a personalizações em nível de documento
   Você pode armazenar dados XML em uma Microsoft Office pasta de trabalho do Excel ou Microsoft Office documento do Word criando uma parte XML personalizada em uma personalização no nível do documento. Para obter mais informações, consulte [visão geral de partes XML personalizadas](../vsto/custom-xml-parts-overview.md).
@@ -39,8 +39,8 @@ ms.locfileid: "99954248"
 
 1. Adicione um novo <xref:Microsoft.Office.Core.CustomXMLPart> objeto à <xref:Microsoft.Office.Core.CustomXMLParts> coleção na pasta de trabalho. O <xref:Microsoft.Office.Core.CustomXMLPart> contém a cadeia de caracteres XML que você deseja armazenar na pasta de trabalho.
 
-     [!code-csharp[Trin_AddCustomXmlPartExcelDocLevel#1](../vsto/codesnippet/CSharp/Trin_AddCustomXmlPartExcelDocLevel/ThisWorkbook.cs#1)]
-     [!code-vb[Trin_AddCustomXmlPartExcelDocLevel#1](../vsto/codesnippet/VisualBasic/Trin_AddCustomXmlPartExcelDocLevel/ThisWorkbook.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddCustomXmlPartExcelDocLevel/ThisWorkbook.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddCustomXmlPartExcelDocLevel/ThisWorkbook.vb" id="Snippet1":::
 
 2. Adicione o `AddCustomXmlPartToWorkbook` método à `ThisWorkbook` classe em um projeto de nível de documento para o Excel.
 
@@ -50,8 +50,8 @@ ms.locfileid: "99954248"
 
 1. Adicione um novo <xref:Microsoft.Office.Core.CustomXMLPart> objeto à <xref:Microsoft.Office.Core.CustomXMLParts> coleção no documento. O <xref:Microsoft.Office.Core.CustomXMLPart> contém a cadeia de caracteres XML que você deseja armazenar no documento.
 
-     [!code-vb[Trin_AddCustomXmlPartWordDocLevel#1](../vsto/codesnippet/VisualBasic/Trin_AddCustomXmlPartWordDocLevel/ThisDocument.vb#1)]
-     [!code-csharp[Trin_AddCustomXmlPartWordDocLevel#1](../vsto/codesnippet/CSharp/Trin_AddCustomXmlPartWordDocLevel/ThisDocument.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddCustomXmlPartWordDocLevel/ThisDocument.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddCustomXmlPartWordDocLevel/ThisDocument.cs" id="Snippet1":::
 
 2. Adicione o `AddCustomXmlPartToDocument` método à `ThisDocument` classe em um projeto de nível de documento para o Word.
 
@@ -60,6 +60,6 @@ ms.locfileid: "99954248"
 ## <a name="robust-programming"></a>Programação robusta
  Para simplificar, este exemplo usa uma cadeia de caracteres XML que é definida como uma variável local no método. Normalmente, você deve obter o XML de uma fonte externa, como um arquivo ou um banco de dados.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Visão geral das partes XML personalizadas](../vsto/custom-xml-parts-overview.md)
 - [Como: adicionar partes XML personalizadas a documentos usando suplementos do VSTO](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)

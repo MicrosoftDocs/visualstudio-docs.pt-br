@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9579de6712b742dde1f9b399ca8a1e4598783679
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 61e7ab9f00db6036d3bc8e41b9a2f19cf51f5511
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896768"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828144"
 ---
 # <a name="actions-pane-overview"></a>Visão geral do painel Ações
   Um painel Ações é um painel de tarefas de **ações de documento** personalizável que é anexado a um documento do Word Microsoft Office específico ou Microsoft Office pasta de trabalho do Excel. O painel Ações é hospedado no painel de tarefas do Office junto com outros painéis de tarefas internos, como o painel de tarefas **origem XML** no Excel ou o painel de tarefas **estilos e formatação** no Word. Você pode usar controles de Windows Forms ou controles WPF para criar a interface do usuário do painel Ações.
@@ -37,8 +37,8 @@ ms.locfileid: "99896768"
 ## <a name="display-the-actions-pane"></a>Exibir o painel Ações
  O painel Ações é representado pela <xref:Microsoft.Office.Tools.ActionsPane> classe. Quando você cria um projeto de nível de documento, uma instância dessa classe está disponível para seu código usando o `ActionsPane` campo da `ThisWorkbook` classe (para Excel) ou `ThisDocument` (para Word) em seu projeto. Para exibir o painel Ações, adicione um controle de Windows Forms à <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> Propriedade do `ActionsPane` campo. O exemplo de código a seguir adiciona um controle chamado `actions` ao painel Ações.
 
- [!code-csharp[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#7)]
- [!code-vb[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#7)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet7":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet7":::
 
  O painel ações se torna visível em tempo de execução assim que você adiciona explicitamente um controle a ele. Depois que o painel Ações for exibido, você poderá adicionar ou remover dinamicamente os controles em resposta às ações do usuário. Normalmente, você adiciona o código para exibir o painel Ações no `Startup` manipulador de eventos do `ThisDocument` ou `ThisWorkbook` para que o painel Ações fique visível quando o usuário abrir o documento pela primeira vez. No entanto, talvez você queira exibir o painel Ações somente em resposta à ação de um usuário no documento. Por exemplo, você pode adicionar o código ao `Click` evento de um controle no documento.
 
@@ -63,18 +63,18 @@ ms.locfileid: "99896768"
 
 - Para o Word, defina a <xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A> Propriedade do <xref:Microsoft.Office.Interop.Word.TaskPane> objeto que representa o painel de tarefas ações do documento como **falso**. O exemplo de código a seguir deve ser executado da `ThisDocument` classe em seu projeto.
 
-     [!code-csharp[Trin_VstcoreActionsPaneWord#34](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#34)]
-     [!code-vb[Trin_VstcoreActionsPaneWord#34](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#34)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet34":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet34":::
 
 - Para o Excel, defina a <xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A> Propriedade do <xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A> objeto como **false**. O exemplo de código a seguir deve ser executado da `ThisWorkbook` classe em seu projeto.
 
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#11)]
-     [!code-vb[Trin_VstcoreActionsPaneExcel#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#11)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs" id="Snippet11":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb" id="Snippet11":::
 
 - Para o Word ou Excel, você pode definir como alternativa a <xref:Microsoft.Office.Core.CommandBar.Visible%2A> propriedade da barra de comandos que representa o painel de tarefas como **false**. O exemplo de código a seguir deve ser executado a partir `ThisDocument` da `ThisWorkbook` classe ou no seu projeto.
 
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#9)]
-     [!code-vb[Trin_VstcoreActionsPaneExcel#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#9)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs" id="Snippet9":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb" id="Snippet9":::
 
 ### <a name="clear-the-actions-pane-when-the-document-is-opened"></a>Limpar o painel ações quando o documento é aberto
  Quando um usuário salva o documento enquanto o painel Ações está visível, o painel Ações fica visível toda vez que o documento é aberto, independentemente de o painel Ações conter ou não controles. Se você quiser controlar quando ele aparece, chame o <xref:Microsoft.Office.Tools.ActionsPane.Clear%2A> método do `ActionsPane` campo no `Startup` manipulador de eventos do `ThisDocument` ou `ThisWorkbook` para garantir que o painel ações não esteja visível quando o documento for aberto.
@@ -118,8 +118,8 @@ ms.locfileid: "99896768"
 
  O código a seguir define a <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> propriedade para empilhar os controles de usuário da parte superior do painel Ações.
 
- [!code-csharp[Trin_VstcoreActionsPaneExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#10)]
- [!code-vb[Trin_VstcoreActionsPaneExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#10)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs" id="Snippet10":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb" id="Snippet10":::
 
 ## <a name="anchor-controls"></a>Controles de âncora
  Se o usuário redimensionar o painel Ações em tempo de execução, os controles poderão ser redimensionados com o painel Ações. Você pode usar a <xref:System.Windows.Forms.Control.Anchor%2A> propriedade de um controle de Windows Forms para ancorar controles no painel Ações. Você também pode ancorar os controles de Windows Forms no controle de usuário da mesma maneira. Para obter mais informações, consulte [como: ancorar controles em Windows Forms](/dotnet/framework/winforms/controls/how-to-anchor-controls-on-windows-forms).
@@ -129,16 +129,16 @@ ms.locfileid: "99896768"
 
  O redimensionamento programático do painel de tarefas não é recomendado porque o usuário deve ser capaz de selecionar o tamanho do painel de tarefas que melhor atenda às suas necessidades. No entanto, se for necessário redimensionar a largura do painel de tarefas, você poderá usar o código a seguir para obter essa tarefa.
 
- [!code-csharp[Trin_VstcoreActionsPaneWord#102](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#102)]
- [!code-vb[Trin_VstcoreActionsPaneWord#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#102)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet102":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet102":::
 
 ## <a name="reposition-the-actions-pane"></a>Reposicionar o painel Ações
  Não é possível reposicionar diretamente o <xref:Microsoft.Office.Tools.ActionsPane> porque ele está inserido no painel de tarefas. No entanto, você pode mover o painel de tarefas programaticamente definindo a <xref:Microsoft.Office.Core.CommandBar.Position%2A> Propriedade do <xref:Microsoft.Office.Core.CommandBar> que representa o painel de tarefas.
 
  O reposicionamento programático do painel de tarefas não é recomendado porque o usuário deve ser capaz de escolher a posição do painel de tarefas na tela que melhor atenda às suas necessidades. No entanto, se for necessário mover o painel de tarefas para uma determinada posição, você poderá usar o código a seguir para obter essa tarefa.
 
- [!code-csharp[Trin_VstcoreActionsPaneWord#100](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#100)]
- [!code-vb[Trin_VstcoreActionsPaneWord#100](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#100)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet100":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet100":::
 
 > [!NOTE]
 > Os usuários finais podem reposicionar manualmente o painel de tarefas a qualquer momento. Não há como garantir que o painel de tarefas permanecerá encaixado na posição que você indicar programaticamente. No entanto, você pode verificar se há alterações de orientação e garantir que os controles no painel ações sejam empilhados na direção correta. Para obter mais informações, consulte [como: gerenciar o layout de controle em painéis de ações](../vsto/how-to-manage-control-layout-on-actions-panes.md).
@@ -147,10 +147,10 @@ ms.locfileid: "99896768"
 
  Se o painel de tarefas não estiver encaixado, você poderá definir as <xref:Microsoft.Office.Core.CommandBar.Top%2A> <xref:Microsoft.Office.Core.CommandBar.Left%2A> Propriedades e do <xref:Microsoft.Office.Core.CommandBar> que representa o painel de tarefas. O código a seguir move um painel de tarefas desencaixado para o canto superior esquerdo do documento.
 
- [!code-csharp[Trin_VstcoreActionsPaneWord#101](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#101)]
- [!code-vb[Trin_VstcoreActionsPaneWord#101](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#101)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet101":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet101":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Usar controles WPF em soluções do Office](../vsto/using-wpf-controls-in-office-solutions.md)
 - [Personalização da interface do usuário do Office](../vsto/office-ui-customization.md)
 - [Acesso global a objetos em projetos do Office](../vsto/global-access-to-objects-in-office-projects.md)

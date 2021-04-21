@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 2eff346425dca31cb88342e69701a229de2b80ea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8920c8a402b4566cf95bb74626171cca833d32de
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940859"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825544"
 ---
 # <a name="ribbon-overview"></a>Visão geral da faixa de faixas
   A faixa de opção é uma maneira de organizar comandos relacionados para que eles sejam mais fáceis de localizar. Os comandos aparecem como controles na faixa de faixas. Os controles são organizados em *grupos* ao longo de uma faixa horizontal na borda superior de uma janela de aplicativo. Os grupos relacionados são organizados em guias.
@@ -112,12 +112,12 @@ ms.locfileid: "99940859"
 
  Adicione os códigos a seguir:
 
- [!code-vb[Trin_Ribbon_Choose_Ribbon#1](../vsto/codesnippet/VisualBasic/trin_Ribbon_choose_Ribbon_4/ThisWorkbook.vb#1)]
- [!code-csharp[Trin_Ribbon_Choose_Ribbon#1](../vsto/codesnippet/CSharp/trin_Ribbon_choose_Ribbon_4/ThisWorkbook.cs#1)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_Ribbon_choose_Ribbon_4/ThisWorkbook.vb" id="Snippet1":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_Ribbon_choose_Ribbon_4/ThisWorkbook.cs" id="Snippet1":::
 
 ### <a name="related-topics"></a>Tópicos relacionados
 
-|Title|Descrição|
+|Título|Descrição|
 |-----------|-----------------|
 |[Como: começar a personalizar a faixa de faixas](../vsto/how-to-get-started-customizing-the-ribbon.md)|Mostra como personalizar a faixa de visualização de um aplicativo Microsoft Office, adicionar um item **da faixa de Ribbon (designer visual)** ou de **faixa (XML)** a um projeto do Office.|
 |[Designer de faixa de das](../vsto/ribbon-designer.md)|Descreve como você pode usar o designer de faixa de faixas para adicionar guias, grupos e controles personalizados à faixa de faixas de um aplicativo Microsoft Office.|

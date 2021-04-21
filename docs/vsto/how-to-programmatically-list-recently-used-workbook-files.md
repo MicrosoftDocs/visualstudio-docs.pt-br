@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 75405c7a2e02189e205edf6615c5d95a8f1d023c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ba7ca717af4330e8fb3c102b3a5fe5bf7d9162b6
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963140"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825323"
 ---
 # <a name="how-to-programmatically-list-recently-used-workbook-files"></a>Como programaticamente listar arquivos de pasta de trabalho usados recentemente
   A <xref:Microsoft.Office.Interop.Excel._Application.RecentFiles%2A> propriedade retorna uma coleção que contém os nomes de todos os arquivos que aparecem na lista Microsoft Office Excel de arquivos usados recentemente. O comprimento da lista varia dependendo do número de arquivos que o usuário selecionou para reter. Você pode exibir os resultados em um intervalo.
@@ -34,10 +34,10 @@ ms.locfileid: "99963140"
 
 1. Execute um loop na lista de arquivos recentes e exiba os nomes em células relativas a um <xref:Microsoft.Office.Interop.Excel.Range> objeto.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#9](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#9)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#9](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#9)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet9":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet9":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Trabalhar com pastas de trabalho](../vsto/working-with-workbooks.md)
 - [Controle NamedRange](../vsto/namedrange-control.md)
 - [Parâmetros opcionais em soluções do Office](../vsto/optional-parameters-in-office-solutions.md)

@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 43104ad8b26045056ca8d8d653fcb9625734f7eb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fd3509ab674faa220ed7bbea15a9762f52b1a525
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899431"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828274"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-word"></a>Walkthrough: criar seu primeiro suplemento do VSTO para Word
   Este guia introdutório mostra como criar um suplemento do VSTO para o Microsoft Office Word. Os recursos que você cria nesse tipo de solução estão disponíveis para o próprio aplicativo, independentemente de quais documentos estão abertos.
@@ -81,15 +81,15 @@ ms.locfileid: "99899431"
 
     Quando o usuário salva um documento, o manipulador de eventos adiciona um novo texto no início do documento.
 
-    [!code-vb[Trin_WordAddInTutorial#1](../vsto/codesnippet/VisualBasic/FirstWordAddIn/ThisAddIn.vb#1)]
-    [!code-csharp[Trin_WordAddInTutorial#1](../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs#1)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/FirstWordAddIn/ThisAddIn.vb" id="Snippet1":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs" id="Snippet1":::
 
    > [!NOTE]
    > Esse código usa um valor de índice de 1 para acessar o primeiro parágrafo na <xref:Microsoft.Office.Interop.Word._Document.Paragraphs%2A> coleção. Embora Visual Basic e o Visual C# usem matrizes baseadas em 0, os limites de matriz inferiores da maioria das coleções no modelo de objeto do Word são 1. Para obter mais informações, consulte [escrever código em soluções do Office](../vsto/writing-code-in-office-solutions.md).
 
 2. Se você estiver usando C#, adicione o seguinte código necessário ao `ThisAddIn_Startup` manipulador de eventos. Esse código é usado para conectar o `Application_DocumentBeforeSave` manipulador de eventos ao <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> evento.
 
-    [!code-csharp[Trin_WordAddInTutorial#2](../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs#2)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs" id="Snippet2":::
 
    Para modificar o documento quando ele é salvo, os exemplos de código anteriores usam os seguintes objetos:
 
@@ -135,7 +135,7 @@ ms.locfileid: "99899431"
 
 - Implantando suplementos do VSTO para Word: [implantar uma solução do Office](../vsto/deploying-an-office-solution.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Visão geral do desenvolvimento de soluções do Office &#40;&#41;VSTO ](../vsto/office-solutions-development-overview-vsto.md)
 - [Soluções do Word](../vsto/word-solutions.md)
 - [Programar suplementos do VSTO](../vsto/programming-vsto-add-ins.md)

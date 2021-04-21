@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 62d8236b987afbb7dc9d5e4462b79ffb4fe00bc5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dbd60f5773392af2066e4693751dd6fff99128b9
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928868"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827962"
 ---
 # <a name="access-a-form-region-at-run-time"></a>Acessar uma região de formulário em tempo de execução
 
@@ -38,24 +38,24 @@ ms.locfileid: "99928868"
 
  O exemplo a seguir obtém a coleção de regiões de formulário que aparecem no Inspetor que atualmente tem foco. Em seguida, este exemplo acessa uma região de formulário na coleção denominada `formRegion1` e define o texto que aparece em uma caixa de texto para `Hello World` .
 
- [!code-vb[Trin_Outlook_FR_Access#2](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb#2)]
- [!code-csharp[Trin_Outlook_FR_Access#2](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs#2)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb" id="Snippet2":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs" id="Snippet2":::
 
 ## <a name="access-form-regions-that-appear-in-a-specific-outlook-explorer-window"></a>Acessar regiões de formulário que aparecem em uma janela específica do Outlook Explorer
  Para acessar todas as regiões de formulário que aparecem em um Gerenciador do Outlook específico, chame a `FormRegions` propriedade da `Globals` classe e passe um <xref:Microsoft.Office.Interop.Outlook.Explorer> objeto que represente o Gerenciador.
 
  O exemplo a seguir obtém a coleção de regiões de formulário que aparecem no Gerenciador que tem o foco no momento. Em seguida, este exemplo acessa uma região de formulário na coleção denominada `formRegion1` e define o texto que aparece em uma caixa de texto para `Hello World` .
 
- [!code-vb[Trin_Outlook_FR_Access#3](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb#3)]
- [!code-csharp[Trin_Outlook_FR_Access#3](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs#3)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb" id="Snippet3":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs" id="Snippet3":::
 
 ## <a name="access-all-form-regions"></a>Acessar todas as regiões de formulário
  Para acessar todas as regiões de formulário que aparecem em todos os gerenciadores e todos os inspetores, chame a `FormRegions` propriedade da `Globals` classe.
 
  O exemplo a seguir obtém a coleção de regiões de formulário que aparecem em todos os gerenciadores e todos os inspetores. Esse exemplo acessa uma região de formulário denominada `formRegion1` e define o texto que aparece em uma caixa de texto para `Hello World` .
 
- [!code-vb[Trin_Outlook_FR_Access#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb#1)]
- [!code-csharp[Trin_Outlook_FR_Access#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs#1)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb" id="Snippet1":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs" id="Snippet1":::
 
 ## <a name="access-controls-on-a-form-region"></a>Controles de acesso em uma região de formulário
  Para acessar controles em uma região de formulário usando a `Globals` classe, você deve tornar os controles acessíveis para o código fora do arquivo de código de região do formulário.
@@ -74,7 +74,7 @@ ms.locfileid: "99928868"
 
  Para obter mais informações sobre como criar propriedades no Visual Basic, consulte [como: criar uma propriedade (Visual Basic)](/dotnet/visual-basic/programming-guide/language-features/procedures/how-to-create-a-property).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Diretrizes para criar regiões de formulário do Outlook](../vsto/guidelines-for-creating-outlook-form-regions.md)
 - [Walkthrough: criar uma região de formulário do Outlook](../vsto/walkthrough-designing-an-outlook-form-region.md)
 - [Como: adicionar uma região de formulário a um projeto de suplemento do Outlook](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)

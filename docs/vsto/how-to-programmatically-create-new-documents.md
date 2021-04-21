@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e9ff98654da8d7125ecf788fadc9cbf7ff4bdfc7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4ba9aed0194804354af62fb1fd582b8ea12ac6b1
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964063"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825180"
 ---
 # <a name="how-to-programmatically-create-new-documents"></a>Como criar programaticamente novos documentos
   Quando você cria um documento programaticamente, o novo documento é um <xref:Microsoft.Office.Interop.Word.Document> objeto nativo. Este objeto não tem os recursos adicionais de associação de dados e eventos de um <xref:Microsoft.Office.Tools.Word.Document> item de host. Para obter mais informações, consulte [limitações programáticas de itens de host e controles de host](../vsto/programmatic-limitations-of-host-items-and-host-controls.md).
@@ -34,8 +34,8 @@ ms.locfileid: "99964063"
 
 - Use o <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> método da <xref:Microsoft.Office.Interop.Word.Documents> coleção para criar um novo documento com base no modelo normal. Para usar este exemplo de código, execute-o `ThisDocument` da `ThisAddIn` classe ou em seu projeto.
 
-     [!code-vb[Trin_VstcoreWordAutomation#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#1)]
-     [!code-csharp[Trin_VstcoreWordAutomation#1](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet1":::
 
 ## <a name="use-custom-templates"></a>Usar modelos personalizados
  O <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> método tem um argumento de *modelo* opcional para criar um novo documento com base em um modelo diferente do modelo normal. Você deve fornecer o nome do arquivo e o caminho totalmente qualificado do modelo.
@@ -44,10 +44,10 @@ ms.locfileid: "99964063"
 
 - Chame o <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> método da <xref:Microsoft.Office.Interop.Word.Documents> coleção e especifique o caminho para o modelo. Para usar este exemplo de código, execute-o `ThisDocument` da `ThisAddIn` classe ou em seu projeto.
 
-     [!code-vb[Trin_VstcoreWordAutomation#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#2)]
-     [!code-csharp[Trin_VstcoreWordAutomation#2](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#2)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet2":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet2":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Como: abrir documentos existentes programaticamente](../vsto/how-to-programmatically-open-existing-documents.md)
 - [Visão geral de itens de host e controles de host](../vsto/host-items-and-host-controls-overview.md)
 - [Limitações programáticas de itens de host e controles de host](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)

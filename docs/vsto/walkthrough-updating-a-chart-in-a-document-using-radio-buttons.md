@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0db8cd113983231ee45252fec8fb47e3a7b75b7d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4d6689d82051ef5f8c887c19ec91cbb6d513b8b8
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937323"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828196"
 ---
 # <a name="walkthrough-update-a-chart-in-a-document-using-radio-buttons"></a>Walkthrough: atualizar um gráfico em um documento usando botões de opção
   Esse passo a passo demonstra como usar os botões de opção em uma personalização ao nível do documento do Microsoft Office Word para fornecer aos usuários a opção de selecionar estilos de gráficos no documento.
@@ -103,7 +103,7 @@ ms.locfileid: "99937323"
     |Propriedade|Valor|
     |--------------|-----------|
     |**Nome**|**barChart**|
-    |**Text**|**Gráfico de Barras**|
+    |**Text**|**Gráfico de barras**|
 
 4. Adicione um terceiro **botão de opção** ao controle de usuário e altere as propriedades a seguir.
 
@@ -139,34 +139,34 @@ ms.locfileid: "99937323"
 
 2. Adicione um código para criar um evento `SelectionChanged` e a propriedade `Selection` à classe `ChartOptions`.
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#9](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#9)]
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#9](../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb#9)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs" id="Snippet9":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb" id="Snippet9":::
 
 ### <a name="to-handle-the-checkedchange-event-of-the-radio-buttons"></a>Para tratar o evento CheckedChange dos botões de opção
 
 1. Defina o tipo de gráfico no manipulador de eventos `CheckedChanged` do botão de opção `areaBlockChart` e, em seguida, gere o evento.
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#10](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#10)]
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#10](../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb#10)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs" id="Snippet10":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb" id="Snippet10":::
 
 2. Defina o tipo de gráfico no manipulador de eventos `CheckedChanged` do botão de opção `barChart`.
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#11](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#11)]
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#11](../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb#11)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs" id="Snippet11":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb" id="Snippet11":::
 
 3. Defina o tipo de gráfico no manipulador de eventos `CheckedChanged` do botão de opção `columnChart`.
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#12](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#12)]
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#12](../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb#12)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs" id="Snippet12":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb" id="Snippet12":::
 
 4. Defina o tipo de gráfico no manipulador de eventos `CheckedChanged` do botão de opção `lineChart`.
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#13](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#13)]
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#13](../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb#13)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs" id="Snippet13":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb" id="Snippet13":::
 
 5. No C#, é necessário adicionar manipuladores de eventos aos botões de opção. É possível adicionar o código ao construtor `ChartOptions`, abaixo da chamada para `InitializeComponent`. Para obter informações sobre como criar manipuladores de eventos, consulte [como criar manipuladores de eventos em projetos do Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#14](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#14)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs" id="Snippet14":::
 
 ## <a name="add-the-user-control-to-the-document"></a>Adicionar o controle de usuário ao documento
  Quando você cria a solução, o novo controle de usuário é adicionado automaticamente à **caixa de ferramentas**. Em seguida, você pode arrastar o controle da **caixa de ferramentas** para seu documento.
@@ -177,7 +177,7 @@ ms.locfileid: "99937323"
 
      O controle de usuário **ChartOptions** é adicionado à **caixa de ferramentas**.
 
-2. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **ThisDocument. vb** ou **ThisDocument.cs** e clique em **Designer de exibição**.
+2. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **ThisDocument. vb** ou **ThisDocument. cs** e clique em **Designer de exibição**.
 
 3. Arraste o `ChartOptions` controle da **caixa de ferramentas** para o documento.
 
@@ -190,12 +190,12 @@ ms.locfileid: "99937323"
 
 1. Adicione o manipulador de eventos a seguir à classe `ThisDocument`.
 
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#15](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#15)]
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#15](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#15)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb" id="Snippet15":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs" id="Snippet15":::
 
 2. No C#, é necessário adicionar um manipulador de eventos do controle de usuário ao evento <xref:Microsoft.Office.Tools.Word.Document.Startup>.
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#16](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#16)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs" id="Snippet16":::
 
 ## <a name="test-the-application"></a>Testar o aplicativo
  Agora é possível testar seu documento para certificar-se de que o estilo gráfico está atualizado corretamente ao selecionar um botão de opção.

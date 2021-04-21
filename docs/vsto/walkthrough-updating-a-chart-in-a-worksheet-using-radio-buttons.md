@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b1c9da3b1d019c77988ef01e1b3c019dd3f1d775
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3d61579181f00d97a74cc48e022bb5d93a05c0f0
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937310"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828170"
 ---
 # <a name="walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons"></a>Instruções passo a passo: atualizando um gráfico em uma planilha usando botões de opção
   Este tutorial mostra as noções básicas de como usar botões de opção em uma Microsoft Office planilha do Excel para dar ao usuário uma maneira de alternar rapidamente entre as opções. Nesse caso, as opções alteram o estilo de um gráfico.
@@ -144,7 +144,7 @@ ms.locfileid: "99937310"
    | Propriedade | Valor |
    |----------|---------------|
    | **Nome** | **barChart** |
-   | **Text** | **Gráfico de Barras** |
+   | **Text** | **Gráfico de barras** |
 
 4. Adicione um terceiro botão de opção ao controle de usuário e altere as propriedades a seguir.
 
@@ -171,34 +171,34 @@ ms.locfileid: "99937310"
 
 2. Adicione o código à `ChartOptions` classe para criar um `SelectionChanged` evento e a `Selection` propriedade.
 
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#13](../vsto/codesnippet/VisualBasic/my excel chart/ChartOptions.vb#13)]
-     [!code-cs[Trin_VstcoreProgrammingControlsExcel#13](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/ChartOptions.cs#13)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/ChartOptions.vb" id="Snippet13":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/ChartOptions.cs" id="Snippet13":::
 
 ### <a name="to-handle-the-checkedchanged-event-of-the-radio-buttons"></a>Para manipular o evento CheckedChanged dos botões de opção
 
 1. Defina o tipo de gráfico no manipulador de eventos `CheckedChanged` do botão de opção `areaBlockChart` e, em seguida, gere o evento.
 
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#14](../vsto/codesnippet/VisualBasic/my excel chart/ChartOptions.vb#14)]
-     [!code-cs[Trin_VstcoreProgrammingControlsExcel#14](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/ChartOptions.cs#14)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/ChartOptions.vb" id="Snippet14":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/ChartOptions.cs" id="Snippet14":::
 
 2. Defina o tipo de gráfico no manipulador de eventos `CheckedChanged` do botão de opção `barChart`.
 
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#15](../vsto/codesnippet/VisualBasic/my excel chart/ChartOptions.vb#15)]
-     [!code-cs[Trin_VstcoreProgrammingControlsExcel#15](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/ChartOptions.cs#15)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/ChartOptions.vb" id="Snippet15":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/ChartOptions.cs" id="Snippet15":::
 
 3. Defina o tipo de gráfico no manipulador de eventos `CheckedChanged` do botão de opção `columnChart`.
 
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#16](../vsto/codesnippet/VisualBasic/my excel chart/ChartOptions.vb#16)]
-     [!code-cs[Trin_VstcoreProgrammingControlsExcel#16](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/ChartOptions.cs#16)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/ChartOptions.vb" id="Snippet16":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/ChartOptions.cs" id="Snippet16":::
 
 4. Defina o tipo de gráfico no manipulador de eventos `CheckedChanged` do botão de opção `lineChart`.
 
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#17](../vsto/codesnippet/VisualBasic/my excel chart/ChartOptions.vb#17)]
-     [!code-cs[Trin_VstcoreProgrammingControlsExcel#17](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/ChartOptions.cs#17)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/ChartOptions.vb" id="Snippet17":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/ChartOptions.cs" id="Snippet17":::
 
 5. No C#, é necessário adicionar manipuladores de eventos aos botões de opção. É possível adicionar o código ao construtor `ChartOptions`, abaixo da chamada para `InitializeComponent`. Para obter informações sobre como criar manipuladores de eventos, consulte [como criar manipuladores de eventos em projetos do Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-cs[Trin_VstcoreProgrammingControlsExcel#18](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/ChartOptions.cs#18)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/ChartOptions.cs" id="Snippet18":::
 
 ## <a name="add-the-user-control-to-the-worksheet"></a>Adicionar o controle de usuário à planilha
  Quando você cria a solução, o novo controle de usuário é adicionado automaticamente à **caixa de ferramentas**. Em seguida, você pode arrastar o controle da **caixa de ferramentas** para sua planilha.
@@ -209,7 +209,7 @@ ms.locfileid: "99937310"
 
      O controle de usuário **ChartOptions** é adicionado à **caixa de ferramentas**.
 
-2. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **Plan1. vb** ou **Sheet1.cs** e clique em **Designer de exibição**.
+2. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **Plan1. vb** ou **Plan1. cs** e clique em **Designer de exibição**.
 
 3. Arraste o controle **ChartOptions** da **caixa de ferramentas** para a planilha.
 
@@ -224,12 +224,12 @@ ms.locfileid: "99937310"
 
 1. Adicione o manipulador de eventos a seguir à classe `Sheet1`.
 
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#19](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#19)]
-     [!code-cs[Trin_VstcoreProgrammingControlsExcel#19](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#19)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb" id="Snippet19":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet19":::
 
 2. No C#, você deve adicionar um manipulador de eventos para o controle de usuário ao <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> evento, conforme mostrado abaixo. Para obter informações sobre como criar manipuladores de eventos, consulte [como criar manipuladores de eventos em projetos do Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-cs[Trin_VstcoreProgrammingControlsExcel#20](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#20)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet20":::
 
 ## <a name="test-the-application"></a>Testar o aplicativo
  Agora você pode testar sua pasta de trabalho para verificar se o gráfico está com o estilo correto quando você seleciona um botão de opção.
@@ -251,5 +251,5 @@ ms.locfileid: "99937310"
 
 - Altere a formatação em uma planilha usando as caixas de seleção. Para obter mais informações, consulte [Walkthrough: alterar a formatação da planilha usando controles CheckBox](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Passo a passos usando o Excel](../vsto/walkthroughs-using-excel.md)

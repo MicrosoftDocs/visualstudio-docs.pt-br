@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 181fafeb55720b5a97a635a4c2322cf7343643d3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7cf9bbe73bd43fa01aec8e7d0dec42fd8301ff30
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937180"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827508"
 ---
 # <a name="walkthrough-update-the-controls-on-a-ribbon-at-run-time"></a>Walkthrough: atualizar os controles em uma faixa de faixas em tempo de execução
 
@@ -82,7 +82,7 @@ A faixa de para este exemplo aparecerá quando um usuário compor uma nova mensa
 
 3. Altere o nome da nova faixa de forma para **CustomerRibbon** e clique em **Adicionar**.
 
-     O arquivo *CustomerRibbon.cs* ou *CustomerRibbon. vb* é aberto no designer de faixa de faixas e exibe uma guia e um grupo padrão.
+     O arquivo *CustomerRibbon. cs* ou *CustomerRibbon. vb* é aberto no designer de faixa de faixas e exibe uma guia e um grupo padrão.
 
 4. Clique no designer de faixa de opções para selecioná-lo.
 
@@ -180,7 +180,7 @@ Use o modelo de objeto da faixa de opções para executar as seguintes tarefas:
 
     Esse assembly contém classes para usar consultas de Language-Integrated (LINQ). Você usará o LINQ para popular os controles no grupo personalizado com os dados do Northwind.
 
-3. Em **Gerenciador de soluções**, clique em **CustomerRibbon.cs** ou **CustomerRibbon. vb** para selecioná-lo.
+3. Em **Gerenciador de soluções**, clique em **CustomerRibbon. cs** ou **CustomerRibbon. vb** para selecioná-lo.
 
 4. No menu **Exibir** , clique em **Código**.
 
@@ -188,18 +188,18 @@ Use o modelo de objeto da faixa de opções para executar as seguintes tarefas:
 
 5. Adicione as instruções a seguir à parte superior do arquivo de código da faixa de opções. Essas instruções fornecem acesso fácil aos namespaces LINQ e ao namespace do PIA (assembly de interoperabilidade primária) do Outlook.
 
-    [!code-csharp[Trin_Ribbon_Update_At_Runtime#1](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#1)]
-    [!code-vb[Trin_Ribbon_Update_At_Runtime#1](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#1)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs" id="Snippet1":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb" id="Snippet1":::
 
 6. Adicione o código a seguir dentro da `CustomerRibbon` classe. Esse código declara a tabela de dados e os adaptadores de tabela que você usará para armazenar informações do cliente, pedidos, detalhes do pedido e tabelas de produtos do banco de dados Northwind.
 
-    [!code-csharp[Trin_Ribbon_Update_At_Runtime#2](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#2)]
-    [!code-vb[Trin_Ribbon_Update_At_Runtime#2](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#2)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs" id="Snippet2":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb" id="Snippet2":::
 
 7. Adicione o seguinte bloco de código à `CustomerRibbon` classe. Esse código adiciona três métodos auxiliares que criam controles para a faixa de, em tempo de execução.
 
-    [!code-csharp[Trin_Ribbon_Update_At_Runtime#3](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#3)]
-    [!code-vb[Trin_Ribbon_Update_At_Runtime#3](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#3)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs" id="Snippet3":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb" id="Snippet3":::
 
 8. Substitua o `CustomerRibbon_Load` método do manipulador de eventos pelo código a seguir. Esse código usa uma consulta LINQ para executar as seguintes tarefas:
 
@@ -207,8 +207,8 @@ Use o modelo de objeto da faixa de opções para executar as seguintes tarefas:
 
    - Chama o `PopulateSalesOrderInfo` método auxiliar. Esse método atualiza o menu **ProductsPurchased** com números de ordem de venda que pertencem ao cliente selecionado no momento.
 
-     [!code-csharp[Trin_Ribbon_Update_At_Runtime#4](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#4)]
-     [!code-vb[Trin_Ribbon_Update_At_Runtime#4](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb" id="Snippet4":::
 
 9. Adicione o código a seguir à classe `CustomerRibbon` . Esse código usa consultas LINQ para executar as seguintes tarefas:
 
@@ -218,8 +218,8 @@ Use o modelo de objeto da faixa de opções para executar as seguintes tarefas:
 
    - Adiciona manipuladores de eventos a cada botão.
 
-     [!code-csharp[Trin_Ribbon_Update_At_Runtime#6](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#6)]
-     [!code-vb[Trin_Ribbon_Update_At_Runtime#6](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb" id="Snippet6":::
 
 10. Em **Gerenciador de soluções**, clique duas vezes no arquivo de código da faixa de bits.
 
@@ -235,13 +235,13 @@ Use o modelo de objeto da faixa de opções para executar as seguintes tarefas:
 
     - Chama o `PopulateMailItem` método auxiliar e passa o texto atual, que é o nome do cliente selecionado. Esse método popula os campos para, assunto e corpo de novas mensagens de email.
 
-      [!code-csharp[Trin_Ribbon_Update_At_Runtime#5](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#5)]
-      [!code-vb[Trin_Ribbon_Update_At_Runtime#5](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#5)]
+      :::code language="csharp" source="../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs" id="Snippet5":::
+      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb" id="Snippet5":::
 
 13. Adicione o seguinte `Click` manipulador de eventos à `CustomerRibbon` classe. Esse código adiciona o nome dos produtos selecionados ao campo corpo de novas mensagens de email.
 
-     [!code-csharp[Trin_Ribbon_Update_At_Runtime#8](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#8)]
-     [!code-vb[Trin_Ribbon_Update_At_Runtime#8](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#8)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs" id="Snippet8":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb" id="Snippet8":::
 
 14. Adicione o código a seguir à classe `CustomerRibbon` . Esse código executa as seguintes tarefas:
 
@@ -249,8 +249,8 @@ Use o modelo de objeto da faixa de opções para executar as seguintes tarefas:
 
     - Adiciona texto aos campos de assunto e corpo de novas mensagens de email.
 
-      [!code-csharp[Trin_Ribbon_Update_At_Runtime#7](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#7)]
-      [!code-vb[Trin_Ribbon_Update_At_Runtime#7](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#7)]
+      :::code language="csharp" source="../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs" id="Snippet7":::
+      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb" id="Snippet7":::
 
 ## <a name="test-the-controls-in-the-custom-group"></a>Testar os controles no grupo personalizado
 
@@ -298,7 +298,7 @@ Você pode aprender mais sobre como personalizar a interface do usuário do Offi
 
 - Adicione um painel de tarefas personalizado ao Outlook. Para obter mais informações, consulte [painéis de tarefas personalizados](../vsto/custom-task-panes.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Acessar a faixa de faixas em tempo de execução](../vsto/accessing-the-ribbon-at-run-time.md)
 - [Visão geral da faixa de faixas](../vsto/ribbon-overview.md)

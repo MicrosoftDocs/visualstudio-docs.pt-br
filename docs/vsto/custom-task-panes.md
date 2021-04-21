@@ -27,12 +27,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 8ed86cb10f6521e5863562cdb67e768b1a2367d1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6c35d963b426fe24a43bef24617f79c042c272e9
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850029"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828157"
 ---
 # <a name="custom-task-panes"></a>Painéis de tarefas personalizados
   Os painéis de tarefas são painéis de interface do usuário que normalmente são encaixados em um lado de uma janela em um aplicativo Microsoft Office. Os painéis de tarefas personalizados fornecem uma maneira de criar seu próprio painel de tarefas e fornecer aos usuários uma interface familiar para acessar os recursos da solução. Por exemplo, a interface pode conter controles que executam código para modificar documentos ou exibir dados de uma fonte de dados.
@@ -66,8 +66,8 @@ ms.locfileid: "99850029"
 ### <a name="instantiate-the-custom-task-pane"></a>Criar uma instância do painel de tarefas personalizado
  Depois de criar um controle de usuário que contém a interface do usuário do painel de tarefas personalizado, você precisa criar uma instância de um <xref:Microsoft.Office.Tools.CustomTaskPane> . Para fazer isso, passe o controle de usuário para o <xref:Microsoft.Office.Tools.CustomTaskPaneCollection> em seu suplemento do VSTO chamando um dos <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> métodos. Essa coleção é exposta como o `CustomTaskPanes` campo da `ThisAddIn` classe. O exemplo de código a seguir deve ser executado da `ThisAddIn` classe.
 
- [!code-vb[Trin_TaskPaneBasic#2](../vsto/codesnippet/VisualBasic/Trin_TaskPaneBasic/ThisAddIn.vb#2)]
- [!code-csharp[Trin_TaskPaneBasic#2](../vsto/codesnippet/CSharp/Trin_TaskPaneBasic/ThisAddIn.cs#2)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneBasic/ThisAddIn.vb" id="Snippet2":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneBasic/ThisAddIn.cs" id="Snippet2":::
 
  Os <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> métodos retornam um novo <xref:Microsoft.Office.Tools.CustomTaskPane> objeto. Você pode usar esse objeto para modificar a aparência do painel de tarefas e para responder a eventos de usuário.
 
@@ -217,7 +217,7 @@ ms.locfileid: "99850029"
 
 - [Microsoft.Office.Interop.PowerPoint.EApplication_Event. WindowDeactivate](/previous-versions/office/developer/office-2010/ff763093(v=office.14))
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Como: adicionar um painel de tarefas personalizado a um aplicativo](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)
 - [Walkthrough: automatizar um aplicativo de um painel de tarefas personalizado](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)
 - [Walkthrough: sincronizar um painel de tarefas personalizado com um botão da faixa de das](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)

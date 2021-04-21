@@ -32,12 +32,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5786ea4bdd0dd6f4c92284aaf9cff2a3c95e4231
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b939131f388642b452445e0afee0f5e38d2a5195
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920489"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825531"
 ---
 # <a name="global-access-to-objects-in-office-projects"></a>Acesso global a objetos em projetos do Office
   Quando você cria um projeto do Office, o Visual Studio gera automaticamente uma classe chamada `Globals` no projeto. Você pode usar a `Globals` classe para acessar vários itens de projeto diferentes em tempo de execução de qualquer código no projeto.
@@ -69,15 +69,15 @@ ms.locfileid: "99920489"
 
   Por exemplo, você pode usar a `Globals.Sheet1` propriedade para inserir texto em um <xref:Microsoft.Office.Tools.Excel.NamedRange> controle em `Sheet1` quando um usuário clica em um botão no painel Ações em um projeto de nível de documento para o Excel.
 
-  [!code-vb[Trin_VstcoreProgramming#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#1)]
-  [!code-csharp[Trin_VstcoreProgramming#1](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs#1)]
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb" id="Snippet1":::
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs" id="Snippet1":::
 
  O código que tenta usar a `Globals` classe antes que o documento ou suplemento do VSTO seja inicializado pode gerar uma exceção de tempo de execução. Por exemplo, usar `Globals` quando declarar uma variável em nível de classe pode falhar porque a `Globals` classe pode não ser inicializada com referências a todos os itens de host antes que o objeto declarado seja instanciado.
 
 > [!NOTE]
 > A `Globals` classe nunca é inicializada em tempo de design, mas as instâncias de controle são criadas pelo designer. Isso significa que, se você criar um controle de usuário que usa uma propriedade da `Globals` classe de dentro de uma classe de controle de usuário, deverá verificar se a propriedade retorna **NULL** antes de tentar usar o objeto retornado.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Acessar a faixa de faixas em tempo de execução](../vsto/accessing-the-ribbon-at-run-time.md)
 - [Acessar uma região de formulário em tempo de execução](../vsto/accessing-a-form-region-at-run-time.md)
 - [Visão geral de itens de host e controles de host](../vsto/host-items-and-host-controls-overview.md)
