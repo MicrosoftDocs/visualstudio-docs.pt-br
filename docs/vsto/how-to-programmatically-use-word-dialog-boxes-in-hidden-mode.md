@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0977e7241920ad23a6248bb2349ddaeb10a5e931
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 39a81ccec284541d93d3a5901211d8a46ea6b61a
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931234"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826181"
 ---
 # <a name="how-to-programmatically-use-word-dialog-boxes-in-hidden-mode"></a>Como: usar de forma programática as caixas de diálogo do Word no modo oculto
   Você pode executar operações complexas com uma chamada de método invocando as caixas de diálogo internas no Microsoft Office Word sem exibi-las ao usuário. Você pode fazer isso usando o <xref:Microsoft.Office.Interop.Word.Dialog.Execute%2A> método do <xref:Microsoft.Office.Interop.Word.Dialog> objeto sem chamar o <xref:Microsoft.Office.Interop.Word.Dialog.Display%2A> método.
@@ -34,14 +34,14 @@ ms.locfileid: "99931234"
 
  O exemplo a seguir demonstra como executar essa tarefa em projetos Visual Basic em que **Option Strict** é off e em projetos do Visual C# direcionados para o [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] . Nesses projetos, você pode usar os recursos de associação tardia nos compiladores Visual Basic e Visual C#. Para usar este exemplo, execute-o da `ThisDocument` `ThisAddIn` classe ou no seu projeto.
 
- [!code-vb[Trin_VstcoreWordAutomation#123](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#123)]
- [!code-csharp[Trin_VstcoreWordAutomation#123](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#123)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet123":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet123":::
 
  O exemplo a seguir demonstra como executar essa tarefa em projetos Visual Basic em que **Option Strict** está on. Nesses projetos, você deve usar a reflexão para acessar as propriedades de associação tardia. Para usar este exemplo, execute-o da `ThisDocument` `ThisAddIn` classe ou no seu projeto.
 
- [!code-vb[Trin_VstcoreWordAutomation#104](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#104)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet104":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Como: usar programaticamente caixas de diálogo internas no Word](../vsto/how-to-programmatically-use-built-in-dialog-boxes-in-word.md)
 - [Visão geral do modelo de objeto do Word](../vsto/word-object-model-overview.md)
 - [Associação tardia em soluções do Office](../vsto/late-binding-in-office-solutions.md)

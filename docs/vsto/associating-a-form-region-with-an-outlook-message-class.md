@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0bbbd381ff84714b780bbb817ccfea64ac05e949
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: be3b789fabf00d853d447cb3489ef07a5b494fcd
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882538"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826987"
 ---
 # <a name="associate-a-form-region-with-an-outlook-message-class"></a>Associar uma região de formulário a uma classe de mensagem do Outlook
   Você pode especificar quais Microsoft Office itens do Outlook exibem uma região de formulário associando a região do formulário à classe de mensagem de cada item. Por exemplo, se você quiser acrescentar uma região de formulário à parte inferior de um item de email, poderá associar a região de formulário à `IPM.Note` classe de mensagem.
@@ -87,8 +87,8 @@ ms.locfileid: "99882538"
 
  O exemplo a seguir mostra dois <xref:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute> atributos que foram aplicados a uma classe de fábrica de região de formulário chamada `myFormRegion` . O primeiro atributo associa a região de formulário a uma classe de mensagem padrão para um formulário de mensagem de email. O segundo atributo associa a região do formulário a uma classe de mensagem personalizada denominada `IPM.Task.Contoso` .
 
- [!code-vb[Trin_Outlook_FR_Attributes#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Attributes/FormRegion1.vb#1)]
- [!code-csharp[Trin_Outlook_FR_Attributes#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Attributes/FormRegion1.cs#1)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Attributes/FormRegion1.vb" id="Snippet1":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Attributes/FormRegion1.cs" id="Snippet1":::
 
  Os atributos devem estar em conformidade com as seguintes diretrizes:
 
@@ -105,7 +105,7 @@ ms.locfileid: "99882538"
 > [!NOTE]
 > O Visual Studio não verifica se os nomes de classe de mensagem que você fornece estão corretos ou válidos.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Acessar uma região de formulário em tempo de execução](../vsto/accessing-a-form-region-at-run-time.md)
 - [Criar regiões de formulário do Outlook](../vsto/creating-outlook-form-regions.md)
 - [Walkthrough: criar uma região de formulário do Outlook](../vsto/walkthrough-designing-an-outlook-form-region.md)

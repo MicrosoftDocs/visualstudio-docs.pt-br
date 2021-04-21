@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: cf38843d2ce7f617d44793769e6ca236c2683805
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f67dbbe4d1d5c24d617f9cbc49a58ec2d134e90b
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934722"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826194"
 ---
 # <a name="how-to-programmatically-update-bookmark-text"></a>Como: atualizar o texto do indicador programaticamente
   Você pode inserir texto em um marcador de espaço reservado em um Microsoft Office documento do Word para que você possa recuperar o texto mais tarde ou substituir o texto em um indicador. Se você estiver desenvolvendo uma personalização em nível de documento, também poderá atualizar o texto em um <xref:Microsoft.Office.Tools.Word.Bookmark> controle associado aos dados. Para obter mais informações, consulte [associar dados a controles em soluções do Office](../vsto/binding-data-to-controls-in-office-solutions.md).
@@ -49,13 +49,13 @@ ms.locfileid: "99934722"
     > [!NOTE]
     > A atribuição de texto à <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> propriedade ou <xref:Microsoft.Office.Tools.Word.Bookmark.FormattedText%2A> de um <xref:Microsoft.Office.Tools.Word.Bookmark> controle não faz com que o indicador seja excluído.
 
-     [!code-vb[Trin_VstcoreWordAutomation#63](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#63)]
-     [!code-csharp[Trin_VstcoreWordAutomation#63](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#63)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet63":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet63":::
 
 2. Atribua a cadeia de caracteres *TextoNovo* à <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> Propriedade do <xref:Microsoft.Office.Tools.Word.Bookmark> .
 
-     [!code-vb[Trin_VstcoreWordAutomation#64](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#64)]
-     [!code-csharp[Trin_VstcoreWordAutomation#64](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#64)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet64":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet64":::
 
 ## <a name="use-word-objects"></a>Usar objetos do Word
 
@@ -66,22 +66,22 @@ ms.locfileid: "99934722"
     > [!NOTE]
     > A atribuição de texto a um <xref:Microsoft.Office.Interop.Word.Bookmark> objeto do Word nativo faz com que o indicador seja excluído.
 
-     [!code-vb[Trin_VstcoreWordAutomation#65](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#65)]
-     [!code-csharp[Trin_VstcoreWordAutomation#65](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#65)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet65":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet65":::
 
 2. Atribua a cadeia de caracteres *TextoNovo* à <xref:Microsoft.Office.Interop.Word.Range.Text%2A> Propriedade do indicador, que exclui automaticamente o indicador. Em seguida, adicione novamente o indicador à <xref:Microsoft.Office.Interop.Word.Bookmarks> coleção.
 
      O exemplo de código a seguir pode ser usado em uma personalização em nível de documento.
 
-     [!code-vb[Trin_VstcoreWordAutomation#66](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#66)]
-     [!code-csharp[Trin_VstcoreWordAutomation#66](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#66)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet66":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet66":::
 
      O exemplo de código a seguir pode ser usado em um suplemento do VSTO. Este exemplo usa o documento ativo.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#66](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#66)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#66](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#66)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet66":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet66":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Como: inserir texto de forma programática em documentos do Word](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
 - [Visão geral do modelo de objeto do Word](../vsto/word-object-model-overview.md)
 - [Controle de indicador](../vsto/bookmark-control.md)

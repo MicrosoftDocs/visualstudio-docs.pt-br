@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 75df7a3a9ddfa6009b0002bfe83b57f2d91e6e0d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 377c3405211c91712f8754131d8379c3dae7e820
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906559"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824543"
 ---
 # <a name="walkthrough-bind-data-to-controls-on-an-excel-actions-pane"></a>Walkthrough: associar dados a controles em um painel de ações do Excel
   Este tutorial demonstra a vinculação de dados a controles em um painel Ações no Microsoft Office Excel. Os controles demonstram uma relação mestre/detalhes entre tabelas em um banco de dados SQL Server.
@@ -142,29 +142,29 @@ ms.locfileid: "99906559"
 
 2. Adicione o código a seguir ao <xref:System.Windows.Forms.UserControl.Load> evento do controle do painel Ações.
 
-     [!code-vb[Trin_VstcoreActionsPaneExcel#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ActionsControl.vb#1)]
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ActionsControl.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ActionsControl.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ActionsControl.cs" id="Snippet1":::
 
 3. No C#, você deve criar um manipulador de eventos para o `ActionsControl` . Você pode posicionar esse código no `ActionsControl` Construtor. Para obter mais informações sobre como criar manipuladores de eventos, consulte [como criar manipuladores de eventos em projetos do Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ActionsControl.cs#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ActionsControl.cs" id="Snippet2":::
 
 ## <a name="show-the-actions-pane"></a>Mostrar o painel Ações
  O painel ações não é visível até que você adicione o controle em tempo de execução.
 
 #### <a name="to-show-the-actions-pane"></a>Para mostrar o painel Ações
 
-1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em *ThisWorkbook. vb* ou *ThisWorkbook.cs* e clique em **Exibir código**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em *ThisWorkbook. vb* ou *ThisWorkbook. cs* e clique em **Exibir código**.
 
 2. Crie uma nova instância do controle de usuário na `ThisWorkbook` classe.
 
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#3)]
-     [!code-vb[Trin_VstcoreActionsPaneExcel#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb" id="Snippet3":::
 
 3. No <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> manipulador de eventos do `ThisWorkbook` , adicione o controle ao painel Ações.
 
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#4)]
-     [!code-vb[Trin_VstcoreActionsPaneExcel#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb" id="Snippet4":::
 
 ## <a name="test-the-application"></a>Testar o aplicativo
  Agora você pode testar seu documento para verificar se o painel Ações é aberto quando o documento é aberto e se os controles têm uma relação mestre/detalhes.
@@ -186,7 +186,7 @@ ms.locfileid: "99906559"
 
 - Implantando o projeto. Para obter mais informações, consulte [implantar uma solução do Office usando o ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Visão geral do painel Ações](../vsto/actions-pane-overview.md)
 - [Como: gerenciar o layout de controle em painéis de ações](../vsto/how-to-manage-control-layout-on-actions-panes.md)
 - [Associar dados a controles em soluções do Office](../vsto/binding-data-to-controls-in-office-solutions.md)

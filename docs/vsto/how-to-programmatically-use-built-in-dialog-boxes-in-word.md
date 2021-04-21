@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 18a6176c6472f1587e00364f0e0bd300611eabf0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6038000dec20f9183f974ad8d187230e634d5eed
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897520"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826207"
 ---
 # <a name="how-to-programmatically-use-built-in-dialog-boxes-in-word"></a>Como: usar programaticamente caixas de diálogo internas no Word
   Ao trabalhar com o Microsoft Office Word, há ocasiões em que você precisa exibir caixas de diálogo para entrada do usuário. Embora você possa criar o seu próprio, talvez também queira adotar a abordagem de uso das caixas de diálogo internas do Word, que são expostas na <xref:Microsoft.Office.Interop.Word.Dialogs> coleção do <xref:Microsoft.Office.Interop.Word.Application> objeto. Isso permite que você acesse mais de 200 das caixas de diálogo internas, que são representadas como enumerações.
@@ -33,22 +33,22 @@ ms.locfileid: "99897520"
 
  O exemplo de código a seguir demonstra como exibir a caixa de diálogo **Abrir arquivo** . Para usar este exemplo, execute-o da `ThisDocument` `ThisAddIn` classe ou no seu projeto.
 
- [!code-vb[Trin_VstcoreWordAutomation#100](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#100)]
- [!code-csharp[Trin_VstcoreWordAutomation#100](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#100)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet100":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet100":::
 
 ### <a name="access-dialog-box-members-that-are-available-through-late-binding"></a>Acessar membros da caixa de diálogo que estão disponíveis por meio da associação tardia
  Algumas propriedades e métodos de caixas de diálogo no Word estão disponíveis somente por meio da associação tardia. Em projetos de Visual Basic em que **Option Strict** está on, você deve usar Reflection para acessar esses membros. Para obter mais informações, consulte [associação tardia em soluções do Office](../vsto/late-binding-in-office-solutions.md).
 
  O exemplo de código a seguir demonstra como usar a propriedade **Name** da caixa de diálogo **File Open** em Visual Basic projetos em que **Option Strict** está off ou em projetos do Visual C# direcionados para o [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] ou o [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] . Para usar este exemplo, execute-o da `ThisDocument` `ThisAddIn` classe ou no seu projeto.
 
- [!code-vb[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#122)]
- [!code-csharp[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#122)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet122":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet122":::
 
  O exemplo de código a seguir demonstra como usar a reflexão para acessar a propriedade **Name** da caixa de diálogo **arquivo abrir** em projetos de Visual Basic em que **Option Strict** está on. Para usar este exemplo, execute-o da `ThisDocument` `ThisAddIn` classe ou no seu projeto.
 
- [!code-vb[Trin_VstcoreWordAutomation#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#102)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet102":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Como: usar de forma programática as caixas de diálogo do Word no modo oculto](../vsto/how-to-programmatically-use-word-dialog-boxes-in-hidden-mode.md)
 - [Visão geral do modelo de objeto do Word](../vsto/word-object-model-overview.md)
 - [Parâmetros opcionais em soluções do Office](../vsto/optional-parameters-in-office-solutions.md)

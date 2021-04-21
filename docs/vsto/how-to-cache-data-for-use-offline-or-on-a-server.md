@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ab53676d6c00fdda3bb7f4554321f0c0550e5748
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 07d7a33d90fd9d05c041ddc27f92a5b6a59bb75e
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954040"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825986"
 ---
 # <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>Como armazenar em cache dados para uso offline ou em um servidor
   Você pode marcar um item de dados para ser armazenado em cache no documento, para que ele esteja disponível offline. Isso também possibilita que os dados no documento sejam manipulados por outro código quando o documento é armazenado em um servidor.
@@ -42,8 +42,8 @@ ms.locfileid: "99954040"
 
 2. Aplique o <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> atributo ao membro para marcar o item de dados a ser armazenado no cache de dados do documento. O exemplo a seguir aplica esse atributo a uma declaração de campo para um <xref:System.Data.DataSet> .
 
-     [!code-csharp[Trin_VstcoreDataExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#11)]
-     [!code-vb[Trin_VstcoreDataExcel#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#11)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet11":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet11":::
 
 3. Adicione o código para criar uma instância do item de dados e, se aplicável, para carregá-lo a partir dele.
 

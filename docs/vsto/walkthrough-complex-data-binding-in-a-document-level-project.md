@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 2dc5708da09074c7d973336958c9e89c16bf9da6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a85f46cf9c234ad662966372a8d014ae0f98be84
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927659"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826363"
 ---
 # <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>Walkthrough: ligação de dados complexa em um projeto de nível de documento
   Este tutorial demonstra os conceitos básicos da ligação de dados complexa em um projeto de nível de documento. Você pode associar várias células em uma Microsoft Office planilha do Excel a campos no banco de dados Northwind SQL Server.
@@ -117,16 +117,16 @@ ms.locfileid: "99927659"
 
 ### <a name="to-initialize-the-control"></a>Para inicializar o controle
 
-1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **Plan1. vb** ou **Sheet1.cs** e clique em **Exibir código** no menu de atalho.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **Plan1. vb** ou **Plan1. cs** e clique em **Exibir código** no menu de atalho.
 
 2. Adicione o código a seguir ao `Sheet1_Startup` método para definir o texto para o b `utton` .
 
-    [!code-csharp[Trin_VstcoreDataExcel#8](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#8)]
-    [!code-vb[Trin_VstcoreDataExcel#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#8)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs" id="Snippet8":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb" id="Snippet8":::
 
 3. Somente para C#, adicione um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> evento ao `Sheet1_Startup` método.
 
-    [!code-csharp[Trin_VstcoreDataExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#9)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs" id="Snippet9":::
 
    Agora, adicione o código para manipular o <xref:System.Windows.Forms.Control.Click> evento do botão.
 
@@ -137,8 +137,8 @@ ms.locfileid: "99927659"
 
 1. Adicione um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> evento do `button` e adicione o código a seguir para confirmar todas as alterações que foram feitas no conjunto de dados de volta para o Database.
 
-     [!code-csharp[Trin_VstcoreDataExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#10)]
-     [!code-vb[Trin_VstcoreDataExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#10)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs" id="Snippet10":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb" id="Snippet10":::
 
 ## <a name="test-the-application"></a>Testar o aplicativo
  Agora você pode testar sua pasta de trabalho para verificar se os dados aparecem como esperado e se você pode manipular os dados no objeto de lista.
@@ -181,7 +181,7 @@ ms.locfileid: "99927659"
 
 2. Adicione as seguintes informações na linha vazia.
 
-   |EmployeeID|LastName|Nome|Title|
+   |IDFuncionário|LastName|Nome|Título|
    |----------------|--------------|---------------|-----------|
    |10|Ito|Shu|Gerente de Vendas|
 
@@ -226,7 +226,7 @@ ms.locfileid: "99927659"
 
 - Crie uma relação mestre/detalhes entre um campo e uma tabela. Para obter mais informações, consulte [Walkthrough: criar uma relação de detalhes mestre usando um conjunto de dados em cache](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Associar dados a controles em soluções do Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Dados em soluções do Office](../vsto/data-in-office-solutions.md)
 - [Walkthrough: vinculação de dados simples em um projeto de nível de documento](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)

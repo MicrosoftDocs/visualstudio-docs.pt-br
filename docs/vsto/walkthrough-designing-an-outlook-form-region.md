@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9eaa78a04c7dfda42a82a5d5a9ff3b407e6502d8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 80c574799029f3fe8c4769d852886a625ffd93aa
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841992"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824270"
 ---
 # <a name="walkthrough-design-an-outlook-form-region"></a>Walkthrough: criar uma região de formulário do Outlook
   As regiões de formulário personalizadas estendem formulários do Outlook Microsoft Office padrão ou personalizados. Neste tutorial, você criará uma região de formulário personalizada que aparece como uma nova página na janela Inspetor de um item de contato. Essa região de formulário exibe um mapa de cada endereço listado para o contato, enviando as informações de endereço para o site de pesquisa local do Windows Live. Para obter informações sobre regiões de formulário, consulte [criar regiões de formulário do Outlook](../vsto/creating-outlook-form-regions.md).
@@ -90,14 +90,14 @@ ms.locfileid: "99841992"
 
 8. Na página **identificar as classes de mensagem que exibirão esta região de formulário** , desmarque a **mensagem de email**, selecione **contato** e clique em **concluir**.
 
-     Um arquivo *MapIt.cs* ou *MapIt. vb* é adicionado ao seu projeto.
+     Um arquivo *MapIt. cs* ou *MapIt. vb* é adicionado ao seu projeto.
 
 ## <a name="design-the-layout-of-the-form-region"></a>Criar o layout da região do formulário
  Desenvolva regiões de formulário visualmente usando o *Designer de região de formulário*. Você pode arrastar controles gerenciados para a superfície do designer de região de formulário. Use o designer e a janela **Propriedades** para ajustar o layout e a aparência do controle.
 
 ### <a name="to-design-the-layout-of-the-form-region"></a>Para criar o layout da região do formulário
 
-1. Em **Gerenciador de soluções**, expanda o projeto **MapItAddIn** e clique duas vezes em *MapIt.cs* ou *MapIt. vb* para abrir o designer de região de formulário.
+1. Em **Gerenciador de soluções**, expanda o projeto **MapItAddIn** e clique duas vezes em *MapIt. cs* ou *MapIt. vb* para abrir o designer de região do formulário.
 
 2. Clique com o botão direito do mouse no designer e clique em **Propriedades**.
 
@@ -116,9 +116,9 @@ ms.locfileid: "99841992"
 
 ### <a name="to-customize-the-behavior-of-the-form-region"></a>Para personalizar o comportamento da região do formulário
 
-1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em *MapIt.cs* ou *MapIt. vb* e clique em **Exibir código**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em *MapIt. cs* ou *MapIt. vb* e clique em **Exibir código**.
 
-    *MapIt.cs* ou *MapIt. vb* é aberto no editor de código.
+    *MapIt. cs* ou *MapIt. vb* é aberto no editor de código.
 
 2. Expanda o formulário região de código de **fábrica** .
 
@@ -126,8 +126,8 @@ ms.locfileid: "99841992"
 
 3. Adicione o seguinte código ao manipulador de eventos do `MapItFactory_FormRegionInitializing`. Esse manipulador de eventos é chamado quando o usuário abre um item de contato. O código a seguir determina se o item de contato contém um endereço. Se o item de contato não contiver um endereço, esse código definirá a <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade da <xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs> classe como **true** e a região do formulário não será exibida. Caso contrário, o suplemento do VSTO gerará o <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> evento e exibirá a região do formulário.
 
-    [!code-csharp[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#1)]
-    [!code-vb[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#1)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs" id="Snippet1":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb" id="Snippet1":::
 
 4. Adicione o seguinte código ao manipulador de eventos do <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing>. Esse código executa as seguintes tarefas:
 
@@ -137,8 +137,8 @@ ms.locfileid: "99841992"
 
      O site de pesquisa local aparece na região do formulário de mapa e apresenta cada endereço no bloco de rascunho.
 
-     [!code-csharp[Trin_Outlook_FR_Separate#2](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#2)]
-     [!code-vb[Trin_Outlook_FR_Separate#2](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb" id="Snippet2":::
 
 ## <a name="test-the-outlook-form-region"></a>Testar a região de formulário do Outlook
  Quando você executa o projeto, o Visual Studio abre o Outlook. Abra um item de contato para exibir a região do formulário de mapa. A região do formulário de mapa é exibida como uma página na forma de qualquer item de contato que contenha um endereço.
@@ -157,7 +157,7 @@ ms.locfileid: "99841992"
     |------------------|-------------|
     |**Negócios**|**4567 principal St. Buffalo, NY**|
     |**Início**|**1234 norte St. Buffalo, NY**|
-    |**Outros**|**3456 principal St. Seattle, WA**|
+    |**Outras**|**3456 principal St. Seattle, WA**|
 
 4. Salve e feche o item de contato.
 

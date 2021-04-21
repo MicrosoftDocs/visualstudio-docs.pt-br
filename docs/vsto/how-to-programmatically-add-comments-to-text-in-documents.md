@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f5f0fba5169be71718993fbc271faf64fdac9fb1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4e03f189f2236131308b8f9ea5d90c52ffa3147d
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918489"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825817"
 ---
 # <a name="how-to-programmatically-add-comments-to-text-in-documents"></a>Como: adicionar comentários ao texto de forma programática em documentos
   A propriedade Comments da classe Document adiciona um comentário a um intervalo de texto em um Microsoft Office documento do Word.
@@ -34,8 +34,8 @@ ms.locfileid: "99918489"
 
 1. Chame o <xref:Microsoft.Office.Interop.Word.Comments.Add%2A> método da <xref:Microsoft.Office.Tools.Word.Document.Comments%2A> propriedade e forneça um intervalo e o texto do comentário. Para usar o exemplo de código a seguir, execute-o da `ThisDocument` classe em seu projeto.
 
-     [!code-vb[Trin_VstcoreWordAutomation#118](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#118)]
-     [!code-csharp[Trin_VstcoreWordAutomation#118](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#118)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet118":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet118":::
 
 ## <a name="to-add-a-new-comment-to-text-in-a-vsto-add-in"></a>Para adicionar um novo comentário ao texto em um suplemento do VSTO
 
@@ -43,12 +43,12 @@ ms.locfileid: "99918489"
 
      O exemplo de código a seguir adiciona um comentário ao documento ativo. Para usar este exemplo, execute-o da `ThisAddIn` classe em seu projeto.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#118](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#118)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#118](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#118)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet118":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet118":::
 
 ## <a name="robust-programming"></a>Programação robusta
  Para alterar as iniciais do usuário que o Word adiciona aos comentários, use a <xref:Microsoft.Office.Interop.Word._Application.UserInitials%2A> propriedade.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Como: remover programaticamente todos os comentários de documentos](../vsto/how-to-programmatically-remove-all-comments-from-documents.md)
 - [Item de host do documento](../vsto/document-host-item.md)

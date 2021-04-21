@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e8c88bbf529da8e07976c012d40ca59e5f1e5626
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 62a49919522c5d4a88b6f4b6876b567c8d275dec
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920376"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826415"
 ---
 # <a name="walkthrough-collect-data-by-using-a-windows-form"></a>Walkthrough: coletar dados usando um formulário do Windows
   Este tutorial demonstra como abrir um formulário do Windows de uma personalização em nível de documento para Microsoft Office Excel, coletar informações do usuário e gravar essas informações em uma célula de planilha.
@@ -73,7 +73,7 @@ ms.locfileid: "99920376"
 
 2. No menu **projeto** , clique em **Adicionar Windows Form**.
 
-3. Nomeie o formulário **GetInputString. vb** ou **GetInputString.cs** e clique em **Adicionar**.
+3. Nomeie o formulário **GetInputString. vb** ou **GetInputString. cs** e clique em **Adicionar**.
 
     O novo formulário é aberto no designer.
 
@@ -88,20 +88,20 @@ ms.locfileid: "99920376"
 
 #### <a name="to-display-the-form-and-collect-information"></a>Para exibir o formulário e coletar informações
 
-1. Clique com o botão direito do mouse em **ThisWorkbook. vb** ou **ThisWorkbook.cs** em **Gerenciador de soluções** e clique em **Exibir código**.
+1. Clique com o botão direito do mouse em **ThisWorkbook. vb** ou **ThisWorkbook. cs** em **Gerenciador de soluções** e clique em **Exibir código**.
 
 2. No <xref:Microsoft.Office.Tools.Excel.Workbook.Open> manipulador de eventos do `ThisWorkbook` , adicione o código a seguir para declarar uma variável para o formulário `GetInputString` e, em seguida, mostrar o formulário.
 
    > [!NOTE]
    > No C#, você deve adicionar um manipulador de eventos, conforme mostrado no <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> evento abaixo. Para obter informações sobre como criar manipuladores de eventos, consulte [como criar manipuladores de eventos em projetos do Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-    [!code-csharp[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#1)]
-    [!code-vb[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#1)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs" id="Snippet1":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb" id="Snippet1":::
 
 3. Crie um método chamado `WriteStringToCell` que grava o texto em um intervalo nomeado. Esse método é chamado no formulário, e a entrada do usuário é passada para o <xref:Microsoft.Office.Tools.Excel.NamedRange> controle, `formInput` , na célula **a1**.
 
-    [!code-csharp[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#2)]
-    [!code-vb[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#2)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs" id="Snippet2":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb" id="Snippet2":::
 
    Em seguida, adicione o código ao formulário para manipular o evento de clique do botão.
 
@@ -115,8 +115,8 @@ ms.locfileid: "99920376"
 
 3. Adicione código ao manipulador de eventos para obter a entrada da caixa de texto, enviá-la para a função `WriteStringToCell` e, em seguida, feche o formulário.
 
-     [!code-csharp[Trin_VstcoreProgrammingCollectingData#3](../vsto/codesnippet/CSharp/WinFormInputCS/GetInputString.cs#3)]
-     [!code-vb[Trin_VstcoreProgrammingCollectingData#3](../vsto/codesnippet/VisualBasic/WinFormInput/GetInputString.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/WinFormInputCS/GetInputString.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/WinFormInput/GetInputString.vb" id="Snippet3":::
 
 ## <a name="test"></a>Teste
  Agora você pode executar o projeto. O formulário do Windows é exibido e sua entrada é exibida na planilha.
@@ -138,7 +138,7 @@ ms.locfileid: "99920376"
 
 - Modifique a interface do usuário de um aplicativo Microsoft Office de uma personalização no nível do documento ou um suplemento do VSTO. Para obter mais informações, consulte [personalização da interface do usuário do Office](../vsto/office-ui-customization.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Desenvolver soluções do Office](../vsto/developing-office-solutions.md)
 - [Escrever código em soluções do Office](../vsto/writing-code-in-office-solutions.md)
 - [Programar suplementos do VSTO](../vsto/programming-vsto-add-ins.md)

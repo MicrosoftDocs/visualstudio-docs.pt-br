@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 61e729113ecfa988f424e2182662d506377d33e5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 21e0928396327911ea794c6270340c6efd27a43e
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882382"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824595"
 ---
 # <a name="walkthrough-call-code-in-a-vsto-add-in-from-vba"></a>Walkthrough: chamar o código em um suplemento do VSTO do VBA
   Este tutorial demonstra como expor um objeto em um suplemento do VSTO para outras soluções de Microsoft Office, incluindo Visual Basic for Applications (VBA) e suplementos do VSTO COM.
@@ -58,7 +58,7 @@ ms.locfileid: "99882382"
 
 1. Crie um projeto de suplemento do VSTO do Excel com o nome **ExcelImportData**, usando o modelo de projeto de suplemento do VSTO do Excel. Para obter mais informações, consulte [como: criar projetos do Office no Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Abre o arquivo de código **ThisAddIn.cs** ou **ThisAddIn. vb** e adiciona o projeto **ExcelImportData** ao **Gerenciador de soluções**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Abre o arquivo de código **ThisAddIn. cs** ou **ThisAddIn. vb** e adiciona o projeto **ExcelImportData** ao **Gerenciador de soluções**.
 
 ## <a name="define-a-class-that-you-can-expose-to-other-office-solutions"></a>Definir uma classe que você pode expor a outras soluções do Office
  A finalidade deste passo a passos é chamar o `ImportData` método de uma classe chamada `AddInUtilities` em seu suplemento do VSTO do código do VBA. Esse método grava uma cadeia de caracteres na célula a1 da planilha ativa.
@@ -71,17 +71,17 @@ ms.locfileid: "99882382"
 
 2. Na caixa de diálogo **Adicionar novo item** , altere o nome da nova classe para **AddInUtilities** e clique em **Adicionar**.
 
-     O arquivo **AddInUtilities.cs** ou **AddInUtilities. vb** é aberto no editor de código.
+     O arquivo **AddInUtilities. cs** ou **AddInUtilities. vb** é aberto no editor de código.
 
 3. Adicione as seguintes diretivas à parte superior do arquivo.
 
-     [!code-csharp[Trin_AddInInteropWalkthrough#2](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs#2)]
-     [!code-vb[Trin_AddInInteropWalkthrough#2](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb" id="Snippet2":::
 
 4. Substitua a `AddInUtilities` classe pelo código a seguir.
 
-     [!code-csharp[Trin_AddInInteropWalkthrough#3](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs#3)]
-     [!code-vb[Trin_AddInInteropWalkthrough#3](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb" id="Snippet3":::
 
      Esse código torna a `AddInUtilities` classe visível para com e adiciona o `ImportData` método à classe. Para expor a interface [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) , a `AddInUtilities` classe também tem o <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> atributo e implementa uma interface que é visível para com.
 
@@ -92,12 +92,12 @@ ms.locfileid: "99882382"
 
 1. Em **Gerenciador de soluções**, expanda **Excel**.
 
-2. Clique com o botão direito do mouse em **ThisAddIn.cs** ou em **ThisAddIn. vb** e clique em **Exibir código**.
+2. Clique com o botão direito do mouse em **ThisAddIn. cs** ou em **ThisAddIn. vb** e clique em **Exibir código**.
 
 3. Adicione o código a seguir à classe `ThisAddIn` .
 
-     [!code-csharp[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/ThisAddIn.cs#1)]
-     [!code-vb[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/ThisAddIn.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/ThisAddIn.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/ThisAddIn.vb" id="Snippet1":::
 
 4. No menu **Compilar**, clique em **Compilar Solução**.
 
@@ -152,7 +152,7 @@ ms.locfileid: "99882382"
 
 - Personalize a faixa de bits em um suplemento do VSTO. Para obter mais informações, consulte [visão geral da faixa](../vsto/ribbon-overview.md) de e [como: introdução à personalização da faixa de faixas](../vsto/how-to-get-started-customizing-the-ribbon.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Programar suplementos do VSTO](../vsto/programming-vsto-add-ins.md)
 - [Chamar código em suplementos do VSTO de outras soluções do Office](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)
 - [Desenvolver soluções do Office](../vsto/developing-office-solutions.md)

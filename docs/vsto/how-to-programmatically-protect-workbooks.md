@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 05587b067fb5e8365433049c7da7fd3d5949a831
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9f0b479c56be6da7b14f87263c8c01d66910ac20
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963842"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827099"
 ---
 # <a name="how-to-programmatically-protect-workbooks"></a>Como: proteger pastas de trabalho programaticamente
   Você pode proteger um Microsoft Office pasta de trabalho do Excel para que os usuários não possam adicionar ou excluir planilhas e também desproteger a pasta de trabalho programaticamente. Opcionalmente, você pode especificar uma senha, indicar se deseja que a estrutura seja protegida (para que os usuários não possam mover as planilhas) e indicar se deseja que o Windows da pasta de trabalho seja protegido.
@@ -41,15 +41,15 @@ ms.locfileid: "99963842"
 
 1. Chame o <xref:Microsoft.Office.Tools.Excel.Workbook.Protect%2A> método da pasta de trabalho e inclua uma senha. Para usar o exemplo de código a seguir, execute-o na `ThisWorkbook` classe, não em uma classe de planilha.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#10](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#10)]
-     [!code-vb[Trin_VstcoreExcelAutomation#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#10)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs" id="Snippet10":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb" id="Snippet10":::
 
 ### <a name="to-unprotect-a-workbook"></a>Para desproteger uma pasta de trabalho
 
 1. Chame o <xref:Microsoft.Office.Tools.Excel.Workbook.Unprotect%2A> método, passando uma senha, se necessário. Para usar o exemplo de código a seguir, execute-o na `ThisWorkbook` classe, não em uma classe de planilha.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#11](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#11)]
-     [!code-vb[Trin_VstcoreExcelAutomation#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#11)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs" id="Snippet11":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb" id="Snippet11":::
 
 ## <a name="protect-a-workbook-by-using-an-application-level-add-in"></a>Proteger uma pasta de trabalho usando um suplemento em nível de aplicativo
 
@@ -57,15 +57,15 @@ ms.locfileid: "99963842"
 
 1. Chame o <xref:Microsoft.Office.Interop.Excel._Workbook.Protect%2A> método da pasta de trabalho e inclua uma senha. Este exemplo de código usa a pasta de trabalho ativa. Para usar este exemplo, execute o código da `ThisAddIn` classe em seu projeto.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#6](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#6)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#6](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet6":::
 
 ### <a name="to-unprotect-a-workbook"></a>Para desproteger uma pasta de trabalho
 
 1. Chame o <xref:Microsoft.Office.Interop.Excel._Workbook.Unprotect%2A> método da pasta de trabalho ativa, passando uma senha, se necessário. Para usar este exemplo, execute o código da `ThisAddIn` classe em seu projeto.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#7](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#7)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#7](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#7)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet7":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet7":::
 
 ## <a name="see-also"></a>Consulte também
 - [Trabalhar com pastas de trabalho](../vsto/working-with-workbooks.md)

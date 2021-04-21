@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c2b702d2986315ce32a9ab489db239f2c784f3e6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa6a45a199d4edce924f0e36a971026726d96eca
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877857"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824790"
 ---
 # <a name="how-to-programmatically-send-email"></a>Como: enviar emails por meio de programação
   Este exemplo envia uma mensagem de email para contatos que têm o nome de domínio **example.com** em seus endereços de email.
@@ -32,7 +32,7 @@ ms.locfileid: "99877857"
 [!include[Add-ins note](includes/addinsnote.md)]
 
 ## <a name="example"></a>Exemplo
- [!code-csharp[Trin_OL_ProgramEmail#1](../vsto/codesnippet/CSharp/Trin_OL_ProgramEMail/thisaddin.cs#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_OL_ProgramEMail/thisaddin.cs" id="Snippet1":::
 
 ## <a name="compile-the-code"></a>Compilar o código
  Este exemplo requer:
@@ -42,7 +42,7 @@ ms.locfileid: "99877857"
 ## <a name="robust-programming"></a>Programação robusta
  Não remova o código de filtro que procura o nome de domínio **example.com**. Sua solução enviará mensagens de email para todos os seus contatos se você remover o filtro.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Trabalhar com itens de email](../vsto/working-with-mail-items.md)
 - [Como: criar programaticamente um item de email](../vsto/how-to-programmatically-create-an-e-mail-item.md)
 - [Como programaticamente acessar contatos do Outlook](../vsto/how-to-programmatically-access-outlook-contacts.md)

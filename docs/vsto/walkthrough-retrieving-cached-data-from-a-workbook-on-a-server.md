@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 818c7c9aa5edeae32859d0b5af6449b513df1c85
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e11099b0ea37856919affb927c3f118572d339af
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937432"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826861"
 ---
 # <a name="walkthrough-retrieve-cached-data-from-a-workbook-on-a-server"></a>Walkthrough: recuperar dados armazenados em cache de uma pasta de trabalho em um servidor
   Este passo a passos demonstra como recuperar dados de um DataSet que é armazenado em cache em uma Microsoft Office pasta de trabalho do Excel sem iniciar o Excel usando a <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> classe.
@@ -82,9 +82,9 @@ ms.locfileid: "99937432"
 
 8. Clique em **OK**.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Adiciona o projeto **AdventureWorksDataSet** para **Gerenciador de soluções** e abre o arquivo de código *Class1.cs* ou *Class1. vb* .
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Adiciona o projeto **AdventureWorksDataSet** para **Gerenciador de soluções** e abre o arquivo de código *Class1. cs* ou *Class1. vb* .
 
-9. Em **Gerenciador de soluções**, clique com o botão direito do mouse em *Class1.cs* ou *Class1. vb* e clique em **excluir**. Você não precisa desse arquivo para este passo a passos.
+9. Em **Gerenciador de soluções**, clique com o botão direito do mouse em *Class1. cs* ou *Class1. vb* e clique em **excluir**. Você não precisa desse arquivo para este passo a passos.
 
 ## <a name="define-a-dataset-in-the-class-library-project"></a>Definir um conjunto de um DataSet no projeto de biblioteca de classes
  Defina um dataset tipado que contenha dados do AdventureWorksLT para SQL Server 2005. Mais adiante neste tutorial, você fará referência a esse conjunto de aplicativos de um projeto de pasta de trabalho do Excel e um projeto de aplicativo de console.
@@ -149,7 +149,7 @@ ms.locfileid: "99937432"
 ## <a name="add-the-dataset-to-data-sources-in-the-excel-workbook-project"></a>Adicionar o conjunto de dados a fontes de dado no projeto de pasta de trabalho do Excel
  Antes de exibir o conjunto de dados na pasta de trabalho do Excel, você deve primeiro adicionar o conjunto de dados a fontes de dado no projeto de pasta de trabalho do Excel.
 
-1. Em **Gerenciador de soluções**, clique duas vezes em *Sheet1.cs* ou *Plan1. vb* no projeto **AdventureWorksReport** .
+1. Em **Gerenciador de soluções**, clique duas vezes em *Plan1. cs* ou *Plan1. vb* no projeto **AdventureWorksReport** .
 
      A pasta de trabalho é aberta no designer.
 
@@ -192,12 +192,12 @@ ms.locfileid: "99937432"
 ## <a name="initialize-the-dataset-in-the-workbook"></a>Inicializar o conjunto de os na pasta de trabalho
  Antes de poder recuperar os dados do DataSet armazenado em cache usando o aplicativo de console, você deve primeiro preencher o conjunto de dados armazenado em cache com data.
 
-1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no arquivo *Sheet1.cs* ou *Plan1. vb* e clique em **Exibir código**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no arquivo *Plan1. cs* ou *Plan1. vb* e clique em **Exibir código**.
 
 2. Substitua o `Sheet1_Startup` manipulador de eventos pelo código a seguir. Esse código usa uma instância da `ProductTableAdapter` classe que é definida no projeto **AdventureWorksDataSet** para preencher o conjunto de dados armazenado em cache com data, se estiver vazio no momento.
 
-     [!code-csharp[Trin_CachedDataWalkthroughs#8](../vsto/codesnippet/CSharp/AdventureWorksDataSet/AdventureWorksReport/Sheet1.cs#8)]
-     [!code-vb[Trin_CachedDataWalkthroughs#8](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/AdventureWorksReport/Sheet1.vb#8)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/AdventureWorksDataSet/AdventureWorksReport/Sheet1.cs" id="Snippet8":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/AdventureWorksReport/Sheet1.vb" id="Snippet8":::
 
 ## <a name="checkpoint"></a>Ponto de verificação
  Crie e execute o projeto de pasta de trabalho do Excel para garantir que ele seja compilado e executado sem erros. Essa operação também preenche o conjunto de dados armazenado em cache e salva o dado na pasta de trabalho.
@@ -229,7 +229,7 @@ ms.locfileid: "99937432"
 
 5. Clique em **OK**.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Adiciona o projeto **DataReader** a **Gerenciador de soluções** e abre o arquivo de código *Program.cs* ou *Module1. vb* .
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Adiciona o projeto **DataReader** a **Gerenciador de soluções** e abre o arquivo de código *Program. cs* ou *Module1. vb* .
 
 ## <a name="retrieve-data-from-the-cached-dataset-by-using-the-console-application"></a>Recuperar dados do conjunto de dados armazenado em cache usando o aplicativo de console
  Use a <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> classe no aplicativo de console para ler os dados em um `AdventureWorksLTDataSet` objeto local. Para confirmar que o conjunto de dados local foi inicializado com os data do DataSet armazenado em cache, o aplicativo exibirá o número de linhas no DataSet local.
@@ -246,12 +246,12 @@ ms.locfileid: "99937432"
 
 5. Na guia **projetos** , selecione **AdventureWorksDataSet** e clique em **OK**.
 
-6. Abra o arquivo *Program.cs* ou *Module1. vb* no editor de código.
+6. Abra o arquivo *Program. cs* ou *Module1. vb* no editor de código.
 
 7. Adicione a instrução **using** (for C#) ou **Imports** (for Visual Basic) a seguir na parte superior do arquivo de código.
 
-    [!code-csharp[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#1)]
-    [!code-vb[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#1)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs" id="Snippet1":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb" id="Snippet1":::
 
 8. Adicione o seguinte código ao `Main` método. Esse código declara os seguintes objetos:
 
@@ -264,8 +264,8 @@ ms.locfileid: "99937432"
      > [!NOTE]
      > O código a seguir pressupõe que a pasta de trabalho seja salva usando a extensão *. xlsx* . Se a pasta de trabalho em seu projeto tiver uma extensão diferente, modifique o caminho conforme necessário.
 
-     [!code-csharp[Trin_CachedDataWalkthroughs#10](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#10)]
-     [!code-vb[Trin_CachedDataWalkthroughs#10](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#10)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs" id="Snippet10":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb" id="Snippet10":::
 
 9. Adicione o código a seguir ao `Main` método, após o código que você adicionou na etapa anterior. Esse código executa as seguintes tarefas:
 
@@ -275,8 +275,8 @@ ms.locfileid: "99937432"
 
    - Ele exibe o número de linhas no conjunto de dados local, para confirmar que ela contém os mesmos.
 
-     [!code-csharp[Trin_CachedDataWalkthroughs#11](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#11)]
-     [!code-vb[Trin_CachedDataWalkthroughs#11](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#11)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs" id="Snippet11":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb" id="Snippet11":::
 
 10. No menu **Compilar** , clique em **criar DataReader**.
 

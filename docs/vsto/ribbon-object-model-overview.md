@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 6306b13cc40d8b93de734168fe1e6df92c256d21
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f053e87f8cdfd2bdf87bbdf4b7d115f6d9bbec26
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888687"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107823984"
 ---
 # <a name="ribbon-object-model-overview"></a>Visão geral do modelo de objeto Ribbon
   O [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] expõe um modelo de objeto fortemente tipado que você pode usar para obter e definir as propriedades dos controles da faixa de tipos em tempo de execução. Por exemplo, você pode preencher dinamicamente controles de menu ou mostrar e ocultar os controles de forma contextual. Você também pode adicionar guias, grupos e controles a uma faixa de faixas, mas somente antes de a faixa de faixas ser carregada pelo aplicativo do Office. Para obter informações, consulte [definir propriedades que se tornam somente leitura](#SettingReadOnlyProperties).
@@ -56,7 +56,7 @@ ms.locfileid: "99888687"
 |**ComboBox**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>|
 |**Suspenso**|<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>|
 |**Edição**|<xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox>|
-|**Galeria**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|
+|**Clip**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|
 |**Grupo**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>|
 |**Rótulo**|<xref:Microsoft.Office.Tools.Ribbon.RibbonLabel>|
 |**Menu**|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>|
@@ -111,12 +111,12 @@ ms.locfileid: "99888687"
 
  Adicione o código seguinte:
 
- [!code-csharp[Trin_Ribbon_ObjectModel#1](../vsto/codesnippet/CSharp/trin_Ribbon_objectmodel_dotnet4/Ribbon1.Designer.cs#1)]
- [!code-vb[Trin_Ribbon_ObjectModel#1](../vsto/codesnippet/VisualBasic/trin_Ribbon_objectmodel_dotnet4/Ribbon1.Designer.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_Ribbon_objectmodel_dotnet4/Ribbon1.Designer.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_Ribbon_objectmodel_dotnet4/Ribbon1.Designer.vb" id="Snippet1":::
 
  Em projetos do Visual C# que você atualizou do Visual Studio 2008, o Construtor aparece no arquivo de código da faixa de medida.
 
- Em projetos Visual Basic ou em projetos do Visual C# que você criou no [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] , o Construtor aparece no arquivo de código do designer de faixa de Ribbon. Esse arquivo é denominado *YourRibbonItem*. Designer.cs ou *YourRibbonItem*. Designer. vb. Para ver esse arquivo em projetos Visual Basic, primeiro você deve clicar no botão **Mostrar todos os arquivos** em Gerenciador de soluções.
+ Em projetos Visual Basic ou em projetos do Visual C# que você criou no [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] , o Construtor aparece no arquivo de código do designer de faixa de Ribbon. Esse arquivo é denominado *YourRibbonItem*. Designer. cs ou *YourRibbonItem*. Designer. vb. Para ver esse arquivo em projetos Visual Basic, primeiro você deve clicar no botão **Mostrar todos os arquivos** em Gerenciador de soluções.
 
 ### <a name="set-properties-in-the-createribbonextensibilityobject-method"></a>Definir propriedades no método CreateRibbonExtensibilityObject
  Você pode definir as propriedades de um `Ribbon` controle ao substituir o `CreateRibbonExtensibilityObject` método na `ThisAddin` `ThisWorkbook` classe, ou `ThisDocument` do seu projeto. Para obter mais informações sobre o `CreateRibbonExtensibilityObject` método, consulte [visão geral da faixa](../vsto/ribbon-overview.md)de visualização.
@@ -125,8 +125,8 @@ ms.locfileid: "99888687"
 
  Adicione o código seguinte:
 
- [!code-vb[Trin_Ribbon_ObjectModel#2](../vsto/codesnippet/VisualBasic/trin_Ribbon_objectmodel_dotnet4/ThisWorkbook.vb#2)]
- [!code-csharp[Trin_Ribbon_ObjectModel#2](../vsto/codesnippet/CSharp/trin_Ribbon_objectmodel_dotnet4/ThisWorkbook.cs#2)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_Ribbon_objectmodel_dotnet4/ThisWorkbook.vb" id="Snippet2":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_Ribbon_objectmodel_dotnet4/ThisWorkbook.cs" id="Snippet2":::
 
 ### <a name="properties-that-become-read-only"></a><a name="ReadOnlyProperties"></a> Propriedades que se tornam somente leitura
  A tabela a seguir mostra as propriedades que só podem ser definidas antes que a faixa de opções seja carregada.
@@ -186,7 +186,7 @@ ms.locfileid: "99888687"
 |*Sender*|Um <xref:System.Object> que representa o controle que disparou o evento.|
 |*Oriental*|Um <xref:Microsoft.Office.Tools.Ribbon.RibbonControlEventArgs> que contém um <xref:Microsoft.Office.Core.IRibbonControl> . Use este controle para acessar qualquer propriedade que não esteja disponível no modelo de objeto da faixa de forma fornecido pelo [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] .|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Acessar a faixa de faixas em tempo de execução](../vsto/accessing-the-ribbon-at-run-time.md)
 - [Visão geral da faixa de faixas](../vsto/ribbon-overview.md)
 - [Como: começar a personalizar a faixa de faixas](../vsto/how-to-get-started-customizing-the-ribbon.md)

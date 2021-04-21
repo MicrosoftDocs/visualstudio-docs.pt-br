@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c73c5ab61c51ca4be749e9bf14700c7bea64023e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a5adf37c6d55d4704ee370052646e620cbe716c3
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966533"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824244"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-powerpoint"></a>Walkthrough: criar seu primeiro suplemento do VSTO para PowerPoint
   Este tutorial mostra como criar um suplemento do VSTO para Microsoft Office PowerPoint. Os recursos que você cria nesse tipo de solução estão disponíveis para o próprio aplicativo, independentemente de quais apresentações estão abertas. Para obter mais informações, consulte [visão geral do desenvolvimento de soluções do Office &#40;&#41;do VSTO ](../vsto/office-solutions-development-overview-vsto.md).
@@ -82,12 +82,12 @@ ms.locfileid: "99966533"
 
     Quando o usuário adiciona um novo slide à apresentação ativa, esse manipulador de eventos adiciona uma caixa de texto à parte superior do novo slide e adiciona um texto à caixa de texto.
 
-    [!code-vb[Trin_PowerPointAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_PowerPointAddInTutorial/ThisAddIn.vb#1)]
-    [!code-csharp[Trin_PowerPointAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_PowerPointAddInTutorial/ThisAddIn.cs#1)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_PowerPointAddInTutorial/ThisAddIn.vb" id="Snippet1":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_PowerPointAddInTutorial/ThisAddIn.cs" id="Snippet1":::
 
 2. Se você estiver usando C#, adicione o código a seguir ao `ThisAddIn_Startup` manipulador de eventos. Esse código é necessário para conectar o `Application_PresentationNewSlide` manipulador de eventos com o evento [Microsoft.Office.Interop.PowerPoint.EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) .
 
-    [!code-csharp[Trin_PowerPointAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_PowerPointAddInTutorial/ThisAddIn.cs#2)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_PowerPointAddInTutorial/ThisAddIn.cs" id="Snippet2":::
 
    Para modificar cada novo slide, os exemplos de código anteriores usam os seguintes objetos:
 
@@ -132,7 +132,7 @@ ms.locfileid: "99966533"
 
 - Implantando suplementos do VSTO para PowerPoint. Para obter mais informações, consulte [implantar uma solução do Office](../vsto/deploying-an-office-solution.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Programar suplementos do VSTO](../vsto/programming-vsto-add-ins.md)
 - [Soluções do PowerPoint](../vsto/powerpoint-solutions.md)
 - [Personalização da interface do usuário do Office](../vsto/office-ui-customization.md)

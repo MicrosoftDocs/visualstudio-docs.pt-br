@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4bd636070a8375b6761cb2d3ab62d08be4302db4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7f78ca406d19461de7fa8e2a8c147b1003c9c852
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937492"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826961"
 ---
 # <a name="walkthrough-create-a-template-by-using-content-controls"></a>Walkthrough: criar um modelo usando controles de conteúdo
   Este tutorial demonstra como criar uma personalização em nível de documento que usa controles de conteúdo para criar conteúdo estruturado e reutilizável em um modelo do Word Microsoft Office.
@@ -78,7 +78,7 @@ ms.locfileid: "99937492"
    |**Nome do funcionário**|
    |**Hire Date**|
    |**Título**|
-   |**Picture**|
+   |**Imagem**|
 
 4. Clique na primeira célula na segunda coluna (ao lado do **nome do funcionário**).
 
@@ -116,7 +116,7 @@ ms.locfileid: "99937492"
 
    ||
    |-|
-   |**Nome do cliente**|
+   |**Nome do Cliente**|
    |**Classificação de satisfação**|
    |**Comentários**|
 
@@ -139,17 +139,17 @@ ms.locfileid: "99937492"
 
 ### <a name="to-modify-the-ui-of-the-content-controls-programmatically"></a>Para modificar a interface do usuário dos controles de conteúdo programaticamente
 
-1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **ThisDocument.cs** ou **ThisDocument. vb** e clique em **Exibir código**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **ThisDocument. cs** ou **ThisDocument. vb** e clique em **Exibir código**.
 
 2. Adicione o código a seguir à classe `ThisDocument` . Esse código declara vários objetos que você usará posteriormente neste passo a passos.
 
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#1](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#1)]
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#1](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs" id="Snippet1":::
 
 3. Adicione o código a seguir ao `ThisDocument_Startup` método da `ThisDocument` classe. Esse código adiciona entradas ao <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> e <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> nas tabelas e define o texto do espaço reservado que é exibido em cada um desses controles antes de o usuário editá-los.
 
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#2](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#2)]
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#2](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#2)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb" id="Snippet2":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs" id="Snippet2":::
 
 ## <a name="prevent-users-from-editing-the-employee-table"></a>Impedir que os usuários editem a tabela Employee
  Use o <xref:Microsoft.Office.Tools.Word.GroupContentControl> objeto declarado anteriormente para proteger a tabela Employee. Depois de proteger a tabela, os usuários ainda poderão editar os controles de conteúdo na tabela. No entanto, eles não podem editar texto na primeira coluna ou modificar a tabela de outras maneiras, como adicionar ou excluir linhas e colunas. Para obter mais informações sobre como usar um <xref:Microsoft.Office.Tools.Word.GroupContentControl> para proteger uma parte de um documento, consulte [controles de conteúdo](../vsto/content-controls.md).
@@ -158,8 +158,8 @@ ms.locfileid: "99937492"
 
 1. Adicione o código a seguir ao `ThisDocument_Startup` método da `ThisDocument` classe, após o código que você adicionou na etapa anterior. Esse código impede que os usuários editem a tabela Employee colocando a tabela dentro do <xref:Microsoft.Office.Tools.Word.GroupContentControl> objeto que você declarou anteriormente.
 
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#3](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#3)]
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#3](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#3)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb" id="Snippet3":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs" id="Snippet3":::
 
 ## <a name="add-the-tables-to-the-building-block-collection"></a>Adicionar as tabelas à coleção de blocos de construção
  Adicione as tabelas a uma coleção de blocos de construção de documento no modelo para que os usuários possam inserir as tabelas que você criou no documento. Para obter mais informações sobre blocos de construção de documento, consulte [controles de conteúdo](../vsto/content-controls.md).
@@ -168,13 +168,13 @@ ms.locfileid: "99937492"
 
 1. Adicione o código a seguir ao `ThisDocument_Startup` método da `ThisDocument` classe, após o código que você adicionou na etapa anterior. Esse código adiciona novos blocos de construção que contêm as tabelas à coleção Microsoft. Office. Interop. Word. BuildingBlockEntries, que contém todos os blocos de construção reutilizáveis no modelo. Os novos blocos de construção são definidos em uma nova categoria denominada **informações de funcionário e cliente** e recebem o tipo de bloco de construção `Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustom1` .
 
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#4](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#4)]
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#4](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#4)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb" id="Snippet4":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs" id="Snippet4":::
 
 2. Adicione o código a seguir ao `ThisDocument_Startup` método da `ThisDocument` classe, após o código que você adicionou na etapa anterior. Esse código exclui as tabelas do modelo. As tabelas não são mais necessárias, pois você as adicionou à galeria de blocos de construção reutilizáveis no modelo. O código coloca o documento primeiro em modo de design para que a tabela de funcionários protegida possa ser excluída.
 
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#5](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#5)]
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#5](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#5)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb" id="Snippet5":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs" id="Snippet5":::
 
 ## <a name="create-a-content-control-that-displays-the-building-blocks"></a>Criar um controle de conteúdo que exibe os blocos de construção
  Crie um controle de conteúdo que forneça acesso aos blocos de construção (ou seja, as tabelas) que você criou anteriormente. Os usuários podem clicar nesse controle para adicionar as tabelas ao documento.
@@ -183,8 +183,8 @@ ms.locfileid: "99937492"
 
 1. Adicione o código a seguir ao `ThisDocument_Startup` método da `ThisDocument` classe, após o código que você adicionou na etapa anterior. Esse código inicializa o <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> objeto que você declarou anteriormente. O <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> exibe todos os blocos de construção definidos na categoria **informações de funcionário e cliente** e que têm o tipo de bloco de construção `Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustom1` .
 
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#6](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#6)]
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#6](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#6)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb" id="Snippet6":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs" id="Snippet6":::
 
 ## <a name="test-the-project"></a>Testar o projeto
  Os usuários podem clicar nos controles da Galeria de blocos de construção no documento para inserir a tabela de funcionários ou a tabela de comentários do cliente. Os usuários podem digitar ou selecionar respostas nos controles de conteúdo nas duas tabelas. Os usuários podem modificar outras partes da tabela de comentários do cliente, mas não devem ser capazes de modificar outras partes da tabela Employee.

@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 770f056dc681e1ee2cd6704f9bd1d42afae4957b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b8e951ab393d09506ad4f2d593962ea1826eff09
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888856"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826727"
 ---
 # <a name="how-to-programmatically-move-items-in-outlook"></a>Como: mover itens programaticamente no Outlook
   Este exemplo move as mensagens de email não lidas da **caixa de entrada** para uma pasta chamada **Test**. O exemplo move apenas as mensagens que têm a palavra **Test** no `Subject` campo.
@@ -27,7 +27,7 @@ ms.locfileid: "99888856"
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
 ## <a name="example"></a>Exemplo
- [!code-csharp[Trin_OL_MoveItems#1](../vsto/codesnippet/CSharp/Trin_OL_MoveItems/thisaddin.cs#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_OL_MoveItems/thisaddin.cs" id="Snippet1":::
 
 ## <a name="compile-the-code"></a>Compilar o código
  Este exemplo requer:
@@ -36,7 +36,7 @@ ms.locfileid: "99888856"
 
 - Uma mensagem de email que chega com a palavra **Test** no `Subject` campo.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Trabalhar com pastas](../vsto/working-with-folders.md)
 - [Como: recuperar programaticamente uma pasta por nome](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
 - [Como: pesquisar programaticamente em uma pasta específica](../vsto/how-to-programmatically-search-within-a-specific-folder.md)

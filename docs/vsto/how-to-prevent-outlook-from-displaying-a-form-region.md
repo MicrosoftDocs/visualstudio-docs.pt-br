@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f6e6b00e8e26d261aac18dd48af1d912bd6ffad1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1dc9322dd2ad3c3a2111222d7491f9e1a82cd6c4
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899543"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825843"
 ---
 # <a name="how-to-prevent-outlook-from-displaying-a-form-region"></a>Como: impedir que o Outlook exiba uma região de formulário
   Pode haver situações em que você não deseja Microsoft Office o Outlook exiba uma região de formulário para um determinado item. Por exemplo, se um item de contato não contiver um endereço comercial, você poderá impedir que uma região de formulário que mostra o local da empresa em um mapa apareça.
@@ -38,10 +38,11 @@ ms.locfileid: "99899543"
    Neste exemplo, se o item de contato não contiver um endereço, a <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade será definida como **true** e a região do formulário não será exibida.
 
 ## <a name="example"></a>Exemplo
- [!code-csharp[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#1)]
- [!code-vb[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb" id="Snippet1":::
 
-## <a name="see-also"></a>Confira também
+
+## <a name="see-also"></a>Consulte também
 - [Criar regiões de formulário do Outlook](../vsto/creating-outlook-form-regions.md)
 - [Walkthrough: criar uma região de formulário do Outlook](../vsto/walkthrough-designing-an-outlook-form-region.md)
 - [Como: adicionar uma região de formulário a um projeto de suplemento do Outlook](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)

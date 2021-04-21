@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: deb8fec9212c686bce670df6bab23ed56e51741f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2519c9d1a22eb6f5577a258fb9b465cfd7caafc2
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903807"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826974"
 ---
 # <a name="call-code-in-vsto-add-ins-from-other-office-solutions"></a>Chamar código em suplementos do VSTO de outras soluções do Office
   Você pode expor um objeto em seu suplemento do VSTO a outras soluções, incluindo outras soluções de Microsoft Office. Isso será útil se o suplemento do VSTO fornecer um serviço que você deseja permitir que outras soluções usem. Por exemplo, se você tiver um suplemento do VSTO para Microsoft Office Excel que executa cálculos em dados financeiros de um serviço Web, outras soluções poderão executar esses cálculos chamando o suplemento do VSTO do Excel em tempo de execução.
@@ -78,8 +78,8 @@ ms.locfileid: "99903807"
 
    O exemplo de código a seguir demonstra uma `AddInUtilities` classe com um `ImportData` método que pode ser chamado por outras soluções. Para ver esse código no contexto de uma explicação detalhada, consulte [Walkthrough: chamar código em um suplemento do VSTO do VBA](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md).
 
-   [!code-csharp[Trin_AddInInteropWalkthrough #3](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs#3)]
-   [!code-vb[Trin_AddInInteropWalkthrough#3](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb#3)]
+   :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs" id="Snippet3":::
+   :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb" id="Snippet3":::
 
 ### <a name="expose-classes-to-vba"></a>Expor classes ao VBA
  Quando você executa as etapas fornecidas acima, o código VBA pode chamar somente os métodos que você declara na interface. O código VBA não pode chamar nenhum outro método em sua classe, incluindo métodos que sua classe obtém de classes base, como <xref:System.Object> .
@@ -96,8 +96,8 @@ ms.locfileid: "99903807"
 ### <a name="override-the-requestcomaddinautomationservice-method"></a>Substituir o método RequestComAddInAutomationService
  O exemplo de código a seguir demonstra como substituir <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> na `ThisAddIn` classe em seu suplemento do VSTO. O exemplo supõe que você definiu uma classe denominada `AddInUtilities` que deseja expor a outras soluções. Para ver esse código no contexto de uma explicação detalhada, consulte [Walkthrough: chamar código em um suplemento do VSTO do VBA](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md).
 
- [!code-csharp[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/ThisAddIn.cs#1)]
- [!code-vb[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/ThisAddIn.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/ThisAddIn.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/ThisAddIn.vb" id="Snippet1":::
 
  Quando o suplemento do VSTO é carregado, o [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] chama o <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> método. O tempo de execução atribui o objeto retornado à propriedade COMAddIn. Object de um <xref:Microsoft.Office.Core.COMAddIn> objeto que representa o suplemento do VSTO. Esse <xref:Microsoft.Office.Core.COMAddIn> objeto está disponível para outras soluções do Office e para soluções que automatizam o Office.
 
@@ -144,7 +144,7 @@ utilities.ImportData();
 
  Neste exemplo, se você tentar converter o valor da propriedade COMAddIn. Object para a `AddInUtilities` classe em vez da `IAddInUtilities` interface, o código gerará um <xref:System.InvalidCastException> .
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Programar suplementos do VSTO](../vsto/programming-vsto-add-ins.md)
 - [Walkthrough: chamar o código em um suplemento do VSTO do VBA](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)
 - [Desenvolver soluções do Office](../vsto/developing-office-solutions.md)

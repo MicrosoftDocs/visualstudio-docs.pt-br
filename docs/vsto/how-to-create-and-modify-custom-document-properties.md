@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0080c9b0ddd7ffba4730a8cfb305bc34b6ba1690
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cd89cb1e2991f48fefd9984eaa6d5894d9b506c1
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964310"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826571"
 ---
 # <a name="how-to-create-and-modify-custom-document-properties"></a>Como: criar e modificar propriedades de documento personalizadas
   Os aplicativos Microsoft Office listados acima fornecem propriedades internas que são armazenadas com documentos. Além disso, você pode criar e modificar propriedades de documento personalizadas se houver informações adicionais que você deseja armazenar com o documento.
@@ -33,13 +33,13 @@ ms.locfileid: "99964310"
  O exemplo a seguir demonstra como adicionar uma propriedade personalizada em uma personalização no nível do documento para o Excel e atribuir um valor a ela.
 
 ## <a name="example"></a>Exemplo
- [!code-vb[Trin_VstcoreProgramming#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/ThisWorkbook.vb#6)]
- [!code-csharp[Trin_VstcoreProgramming#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/ThisWorkbook.cs#6)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/ThisWorkbook.vb" id="Snippet6":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/ThisWorkbook.cs" id="Snippet6":::
 
 ## <a name="robust-programming"></a>Programação robusta
  A tentativa de acessar a `Value` propriedade para propriedades indefinidas gera uma exceção.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Programar suplementos do VSTO](../vsto/programming-vsto-add-ins.md)
 - [Programar personalizações em nível de documento](../vsto/programming-document-level-customizations.md)
 - [Como: ler e gravar nas propriedades do documento](../vsto/how-to-read-from-and-write-to-document-properties.md)

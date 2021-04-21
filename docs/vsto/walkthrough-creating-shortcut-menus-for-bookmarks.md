@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: aabc7dec0a9965a055bce07cafeca25ac0165037
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 48381d452b0c67a34581092a47896aba60e7125c
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937404"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826298"
 ---
 # <a name="walkthrough-create-shortcut-menus-for-bookmarks"></a>Walkthrough: criar menus de atalho para indicadores
   Este tutorial demonstra como criar menus de atalho para <xref:Microsoft.Office.Tools.Word.Bookmark> controles em uma personalização em nível de documento para o Word. Quando um usuário clica com o botão direito do mouse no texto em um indicador, um menu de atalho é exibido e fornece ao usuário as opções para formatar o texto.
@@ -92,7 +92,7 @@ ms.locfileid: "99937404"
 
 1. Adicione um item **XML da faixa de faixas** ao projeto. Para obter mais informações, consulte [como: começar a personalizar a faixa de](../vsto/how-to-get-started-customizing-the-ribbon.md)visualização.
 
-2. Em **Gerenciador de soluções**, selecione **ThisDocument.cs** ou **ThisDocument. vb**.
+2. Em **Gerenciador de soluções**, selecione **ThisDocument. cs** ou **ThisDocument. vb**.
 
 3. Na barra de menus, escolha **Exibir**  >  **código**.
 
@@ -100,8 +100,8 @@ ms.locfileid: "99937404"
 
 4. Adicione o código a seguir à classe **ThisDocument** . Esse código substitui o método CreateRibbonExtensibilityObject e retorna a classe XML da faixa de forma para o aplicativo do Office.
 
-     [!code-csharp[Trin_Word_Document_Menus#1](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#1)]
-     [!code-vb[Trin_Word_Document_Menus#1](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb" id="Snippet1":::
 
 5. Em **Gerenciador de soluções**, selecione o arquivo XML da faixa de opções. Por padrão, o arquivo XML da faixa de faixas é denominado Ribbon1.xml.
 
@@ -131,10 +131,10 @@ ms.locfileid: "99937404"
 
 9. Declare as variáveis a seguir e uma variável de indicador no nível de classe.
 
-     [!code-csharp[Trin_Word_Document_Menus#2](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#2)]
-     [!code-vb[Trin_Word_Document_Menus#2](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb" id="Snippet2":::
 
-10. Em **Gerenciador de soluções**, selecione o arquivo de código da faixa de opções. Por padrão, o arquivo de código da faixa de Ribbon é denominado **Ribbon1.cs** ou **Ribbon1. vb**.
+10. Em **Gerenciador de soluções**, selecione o arquivo de código da faixa de opções. Por padrão, o arquivo de código da faixa de faixas é denominado **Ribbon1. cs** ou **Ribbon1. vb**.
 
 11. Na barra de menus, escolha **Exibir**  >  **código**.
 
@@ -142,8 +142,8 @@ ms.locfileid: "99937404"
 
 12. No arquivo de código da faixa de opções, adicione o método a seguir. Esse é um método de retorno de chamada para os dois botões que você adicionou ao menu de atalho do documento. Esse método determina se esses botões aparecem no menu de atalho. Os botões negrito e itálico serão exibidos apenas se você clicar com o botão direito do mouse no texto dentro do indicador.
 
-     [!code-csharp[Trin_Word_Document_Menus#5](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#5)]
-     [!code-vb[Trin_Word_Document_Menus#5](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs" id="Snippet5":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb" id="Snippet5":::
 
 ## <a name="format-the-text-in-the-bookmark"></a><a name="BKMK_formattextbkmk"></a> Formatar o texto no indicador
 
@@ -151,10 +151,10 @@ ms.locfileid: "99937404"
 
 1. No arquivo de código da faixa de opções, adicione um `ButtonClick` manipulador de eventos para aplicar formatação ao indicador.
 
-     [!code-csharp[Trin_Word_Document_Menus#6](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#6)]
-     [!code-vb[Trin_Word_Document_Menus#6](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb" id="Snippet6":::
 
-2. **Gerenciador de soluções**, selecione **ThisDocument.cs** ou **ThisDocument. vb**.
+2. **Gerenciador de soluções**, selecione **ThisDocument. cs** ou **ThisDocument. vb**.
 
 3. Na barra de menus, escolha **Exibir**  >  **código**.
 
@@ -162,15 +162,15 @@ ms.locfileid: "99937404"
 
 4. Adicione o código a seguir à classe **ThisDocument** .
 
-     [!code-csharp[Trin_Word_Document_Menus#3](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#3)]
-     [!code-vb[Trin_Word_Document_Menus#3](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb" id="Snippet3":::
 
     > [!NOTE]
     > Você deve escrever o código para lidar com o caso em que os indicadores se sobrepõem. Se você não fizer isso, por padrão, o código será chamado para todos os indicadores na seleção.
 
 5. No C#, você deve adicionar manipuladores de eventos para os controles de indicador ao <xref:Microsoft.Office.Tools.Word.Document.Startup> evento. Para obter informações sobre como criar manipuladores de eventos, consulte [como criar manipuladores de eventos em projetos do Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_Word_Document_Menus#4](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs" id="Snippet4":::
 
 ## <a name="test-the-application"></a>Testar o aplicativo
  Teste seu documento para verificar se os itens de menu em negrito e itálico aparecem no menu de atalho quando você clica com o botão direito do mouse em texto em um indicador e se o texto está formatado corretamente.

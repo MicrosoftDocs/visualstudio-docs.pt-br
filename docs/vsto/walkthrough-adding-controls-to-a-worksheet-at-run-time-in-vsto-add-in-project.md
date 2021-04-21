@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: bc6c608d406cabe6962a47dae4c86fa7503a05a1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 178180e8c698ca56b15e46bcbe65877d68c6b2a1
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99921791"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824673"
 ---
 # <a name="walkthrough-add-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project"></a>Walkthrough: adicionar controles a uma planilha em tempo de execução no projeto de suplemento do VSTO
   Você pode adicionar controles a qualquer planilha aberta usando um suplemento do VSTO do Excel. Este tutorial demonstra como usar a faixa de faixas para permitir que os usuários adicionem um <xref:Microsoft.Office.Tools.Excel.Controls.Button> , um <xref:Microsoft.Office.Tools.Excel.NamedRange> e um <xref:Microsoft.Office.Tools.Excel.ListObject> a uma planilha. Para obter informações, consulte [Adicionar controles a documentos do Office em tempo de execução](../vsto/adding-controls-to-office-documents-at-run-time.md).
@@ -65,7 +65,7 @@ ms.locfileid: "99921791"
 
 2. Na caixa de diálogo **Adicionar novo item** , selecione **faixa de opções (designer visual)** e clique em **Adicionar**.
 
-     Um arquivo chamado **Ribbon1.cs** ou **Ribbon1. vb** é aberto no designer de faixa de faixas e exibe uma guia e um grupo padrão.
+     Um arquivo chamado **Ribbon1. cs** ou **Ribbon1. vb** é aberto no designer de faixa de faixas e exibe uma guia e um grupo padrão.
 
 3. Na guia **controles da faixa** de **ferramentas** do Office, arraste um controle de caixa de seleção para o **grupo1**.
 
@@ -105,10 +105,10 @@ ms.locfileid: "99921791"
 
      Esse código usa o `GetVstoObject` método para obter um item de host que representa a primeira planilha na pasta de trabalho e, em seguida, adiciona um <xref:Microsoft.Office.Tools.Excel.Controls.Button> controle à célula atualmente selecionada.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#2](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#2)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#2](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb" id="Snippet2":::
 
-3. Em **Gerenciador de soluções**, selecione *Ribbon1.cs* ou *Ribbon1. vb*.
+3. Em **Gerenciador de soluções**, selecione *Ribbon1. cs* ou *Ribbon1. vb*.
 
 4. No menu **Exibir** , clique em **Designer**.
 
@@ -118,8 +118,8 @@ ms.locfileid: "99921791"
 
      Esse código usa o `GetVstoObject` método para obter um item de host que representa a primeira planilha na pasta de trabalho e, em seguida, define um <xref:Microsoft.Office.Tools.Excel.NamedRange> controle para a célula ou células selecionadas no momento.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#3](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#3)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#3](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb" id="Snippet3":::
 
 7. No designer de faixa de faixas, clique duas vezes em **ListObject**.
 
@@ -127,31 +127,31 @@ ms.locfileid: "99921791"
 
      Esse código usa o `GetVstoObject` método para obter um item de host que representa a primeira planilha na pasta de trabalho e, em seguida, define um <xref:Microsoft.Office.Tools.Excel.ListObject> para a célula ou células selecionadas no momento.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#4](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#4)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#4](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb" id="Snippet4":::
 
 9. Adicione as instruções a seguir à parte superior do arquivo de código da faixa de opções.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#1](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#1)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#1](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb" id="Snippet1":::
 
 ## <a name="remove-controls-from-the-worksheet"></a>Remover controles da planilha
  Os controles não são persistidos quando a planilha é salva e fechada. Você deve remover programaticamente todos os controles de Windows Forms gerados antes que a planilha seja salva, ou apenas uma estrutura de tópicos do controle será exibida quando a pasta de trabalho for aberta novamente. Adicione código ao <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> evento que remove Windows Forms controles da coleção Controls do item de host gerado. Para obter mais informações, consulte [manter controles dinâmicos em documentos do Office](../vsto/persisting-dynamic-controls-in-office-documents.md).
 
 ### <a name="to-remove-controls-from-the-worksheet"></a>Para remover controles da planilha
 
-1. Em **Gerenciador de soluções**, selecione *ThisAddIn.cs* ou *ThisAddIn. vb*.
+1. Em **Gerenciador de soluções**, selecione *ThisAddIn. cs* ou *ThisAddIn. vb*.
 
 2. No menu **Exibir** , clique em **Código**.
 
 3. Adicione o método a seguir à classe `ThisAddIn`. Esse código obtém a primeira planilha na pasta de trabalho e, em seguida, usa o `HasVstoObject` método para verificar se a planilha tem um objeto de planilha gerado. Se o objeto de planilha gerado tiver controles, o código obterá esse objeto de planilha e iterará pela coleção de controle, removendo os controles.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#6](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#6)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#6](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb" id="Snippet6":::
 
 4. No C#, você deve criar um manipulador de eventos para o <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> evento. Você pode posicionar esse código no `ThisAddIn_Startup` método. Para obter mais informações sobre como criar manipuladores de eventos, consulte [como criar manipuladores de eventos em projetos do Office](../vsto/how-to-create-event-handlers-in-office-projects.md). Substitua o método `ThisAddIn_Startup` pelo seguinte código.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#5](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs" id="Snippet5":::
 
 ## <a name="test-the-solution"></a>Testar a solução
  Adicione controles a uma planilha selecionando-os em uma guia personalizada na faixa de faixas. Quando você salva a planilha, esses controles são removidos.
@@ -189,7 +189,7 @@ ms.locfileid: "99921791"
 
 - Para saber mais sobre como salvar controles em uma planilha, confira o exemplo de controles dinâmicos do suplemento VSTO do Excel em [exemplos de desenvolvimento do Office e passo a passos](../vsto/office-development-samples-and-walkthroughs.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Soluções do Excel](../vsto/excel-solutions.md)
 - [Visão geral dos controles do Windows Forms em documentos do Office](../vsto/windows-forms-controls-on-office-documents-overview.md)
 - [Controles em documentos do Office](../vsto/controls-on-office-documents.md)

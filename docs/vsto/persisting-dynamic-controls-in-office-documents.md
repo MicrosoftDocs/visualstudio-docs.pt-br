@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e833a480713e3c04215c03a3dc4a549c92e0f772
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9d42aa2d8594ed44e4fd4edbac8a0d64c4dc16da
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99938467"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826142"
 ---
 # <a name="persist-dynamic-controls-in-office-documents"></a>Persistir controles dinâmicos em documentos do Office
 
@@ -57,8 +57,8 @@ Para recriar um controle de host para o Word ou um <xref:Microsoft.Office.Tools.
 
 Por exemplo, se você quiser criar um <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> controle de host de um nativo existente <xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName> quando o documento for aberto, use o <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A> método e passe o existente <xref:Microsoft.Office.Interop.Excel.ListObject> . O exemplo de código a seguir demonstra isso em um projeto de nível de documento para o Excel. O código recria um dinâmico <xref:Microsoft.Office.Tools.Excel.ListObject> que se baseia em um <xref:Microsoft.Office.Interop.Excel.ListObject> nome existente `MyListObject` na `Sheet1` classe.
 
-[!code-csharp[Trin_ExcelWorkbookDynamicControls#6](../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/Sheet1.cs#6)]
-[!code-vb[Trin_ExcelWorkbookDynamicControls#6](../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/Sheet1.vb#6)]
+:::code language="csharp" source="../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/Sheet1.cs" id="Snippet6":::
+:::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/Sheet1.vb" id="Snippet6":::
 
 ### <a name="re-create-chart"></a>Recriar gráfico
 
@@ -94,8 +94,8 @@ Esse procedimento é útil quando você sabe que o documento será aberto soment
 
 O exemplo de código a seguir demonstra como chamar o `GetVstoObject` método quando o documento é aberto.
 
-[!code-vb[Trin_WordAddInDynamicControls#11](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#11)]
-[!code-csharp[Trin_WordAddInDynamicControls#11](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#11)]
+:::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet11":::
+:::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet11":::
 
 Embora o `GetVstoObject` método seja usado principalmente para gerar um novo item de host em tempo de execução, esse método também limpa todos os wrappers ActiveX do documento na primeira vez que é chamado para um documento específico. Para obter mais informações sobre como usar o `GetVstoObject` método, consulte [estender documentos do Word e pastas de trabalho do Excel em suplementos do VSTO em tempo de execução](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
@@ -107,9 +107,9 @@ Seu suplemento do VSTO pode remover explicitamente cada controle dinâmico do do
 
 O exemplo de código a seguir demonstra como remover todos os controles de Windows Forms de um documento do Word quando o documento é fechado.
 
-[!code-vb[Trin_WordAddInDynamicControls#10](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#10)]
-[!code-csharp[Trin_WordAddInDynamicControls#10](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#10)]
+:::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet10":::
+:::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet10":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Adicionar controles a documentos do Office em tempo de execução](../vsto/adding-controls-to-office-documents-at-run-time.md)

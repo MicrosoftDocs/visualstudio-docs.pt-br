@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a9c7861698e678ca6d8332e3940c3ae49ff423f3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b25880420e23b82f6f63ab28ef5f1f93429bdd8c
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877870"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824751"
 ---
 # <a name="how-to-programmatically-search-within-a-specific-folder"></a>Como: pesquisar programaticamente em uma pasta específica
   Este exemplo de código usa `Find` os `FindNext` métodos e para Pesquisar texto no campo assunto das mensagens de email que estão na **caixa de entrada**. Esse método usa um filtro de cadeia de caracteres para verificar a letra T como a letra inicial do `Subject` texto.
@@ -28,9 +28,9 @@ ms.locfileid: "99877870"
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
 ## <a name="example"></a>Exemplo
- [!code-csharp[Trin_OL_SearchFolder#1](../vsto/codesnippet/CSharp/Trin_OL_SearchFolder/thisaddin.cs#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_OL_SearchFolder/thisaddin.cs" id="Snippet1":::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Trabalhar com pastas](../vsto/working-with-folders.md)
 - [Visão geral do modelo de objeto do Outlook](../vsto/outlook-object-model-overview.md)
 - [Como: recuperar programaticamente uma pasta por nome](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)

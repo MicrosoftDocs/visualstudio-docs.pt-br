@@ -25,12 +25,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9ac8c4ef96a421ece6c0591d4340d570d71c08e3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5e7fe64d2df3298d53f567d11fe765280843e2ce
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99846277"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826779"
 ---
 # <a name="walkthrough-synchronize-a-custom-task-pane-with-a-ribbon-button"></a>Walkthrough: sincronizar um painel de tarefas personalizado com um botão da faixa de das
   Este tutorial demonstra como criar um painel de tarefas personalizado que os usuários podem ocultar ou exibir clicando em um botão de alternância na faixa de opção. Você sempre deve criar um elemento de interface do usuário (IU), como um botão, que os usuários possam clicar para exibir ou ocultar seu painel de tarefas personalizado, pois os aplicativos Microsoft Office não fornecem uma maneira padrão para os usuários mostrarem ou ocultarem painéis de tarefas personalizados.
@@ -64,7 +64,7 @@ ms.locfileid: "99846277"
 
 1. Crie um projeto de suplemento do Excel com o nome **SynchronizeTaskPaneAndRibbon**, usando o modelo de projeto de suplemento do Excel. Para obter mais informações, consulte [como: criar projetos do Office no Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Abre o arquivo de código **ThisAddIn.cs** ou **ThisAddIn. vb** e adiciona o projeto **SynchronizeTaskPaneAndRibbon** ao **Gerenciador de soluções**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Abre o arquivo de código **ThisAddIn. cs** ou **ThisAddIn. vb** e adiciona o projeto **SynchronizeTaskPaneAndRibbon** ao **Gerenciador de soluções**.
 
 ## <a name="add-a-toggle-button-to-the-ribbon"></a>Adicionar um botão de alternância à faixa de opção
  Uma das diretrizes de design de aplicativos do Office é que os usuários sempre devem ter o controle da interface do usuário do aplicativo do Office. Para permitir que os usuários controlem o painel de tarefas personalizado, você pode adicionar um botão de alternância da faixa de opção que mostra e oculta o painel de tarefas. Para criar um botão de alternância, adicione um item **da faixa de opção (designer visual)** ao projeto. O designer ajuda você a adicionar e posicionar controles, definir propriedades de controle e manipular eventos de controle. Para obter mais informações, consulte [Designer de faixa](../vsto/ribbon-designer.md)de das.
@@ -77,7 +77,7 @@ ms.locfileid: "99846277"
 
 3. Altere o nome da nova faixa de forma para **ManageTaskPaneRibbon** e clique em **Adicionar**.
 
-     O arquivo **ManageTaskPaneRibbon.cs** ou **ManageTaskPaneRibbon. vb** é aberto no designer de faixa de faixas e exibe uma guia e um grupo padrão.
+     O arquivo **ManageTaskPaneRibbon. cs** ou **ManageTaskPaneRibbon. vb** é aberto no designer de faixa de faixas e exibe uma guia e um grupo padrão.
 
 4. No designer de faixa de faixas, clique em **grupo1**.
 
@@ -109,27 +109,27 @@ ms.locfileid: "99846277"
 
 1. Em **Gerenciador de soluções**, expanda **Excel**.
 
-2. Clique com o botão direito do mouse em **ThisAddIn.cs** ou em **ThisAddIn. vb** e clique em **Exibir código**.
+2. Clique com o botão direito do mouse em **ThisAddIn. cs** ou em **ThisAddIn. vb** e clique em **Exibir código**.
 
 3. Adicione o código a seguir à classe `ThisAddIn` . Esse código declara uma instância do `TaskPaneControl` como um membro de `ThisAddIn` .
 
-     [!code-csharp[Trin_TaskPaneRibbonSynchronize#1](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#1)]
-     [!code-vb[Trin_TaskPaneRibbonSynchronize#1](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb" id="Snippet1":::
 
 4. Substitua o `ThisAddIn_Startup` manipulador de eventos pelo código a seguir. Esse código adiciona o `TaskPaneControl` objeto ao `CustomTaskPanes` campo, mas não exibe o painel de tarefas personalizado (por padrão, a <xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A> propriedade da <xref:Microsoft.Office.Tools.CustomTaskPane> classe é **false**). O código do Visual C# também anexa um manipulador de eventos ao <xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged> evento.
 
-     [!code-csharp[Trin_TaskPaneRibbonSynchronize#2](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#2)]
-     [!code-vb[Trin_TaskPaneRibbonSynchronize#2](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb" id="Snippet2":::
 
 5. Adicione o método a seguir à classe `ThisAddIn`. Esse método manipula o <xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged> evento. Quando o usuário fecha o painel de tarefas clicando no botão **fechar** (X), esse método atualiza o estado do botão de alternância na faixa de opção.
 
-     [!code-csharp[Trin_TaskPaneRibbonSynchronize#3](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#3)]
-     [!code-vb[Trin_TaskPaneRibbonSynchronize#3](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb" id="Snippet3":::
 
 6. Adicione a propriedade a seguir à `ThisAddIn` classe. Essa propriedade expõe o `myCustomTaskPane1` objeto particular para outras classes. Mais adiante neste tutorial, você adicionará o código à `MyRibbon` classe que usa essa propriedade.
 
-     [!code-csharp[Trin_TaskPaneRibbonSynchronize#4](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#4)]
-     [!code-vb[Trin_TaskPaneRibbonSynchronize#4](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb" id="Snippet4":::
 
 ## <a name="hide-and-show-the-custom-task-pane-by-using-the-toggle-button"></a>Ocultar e mostrar o painel de tarefas personalizado usando o botão de alternância
  A última etapa é adicionar o código que exibe ou oculta o painel de tarefas personalizado quando o usuário clica no botão de alternância na faixa de opção.
@@ -138,12 +138,12 @@ ms.locfileid: "99846277"
 
 1. No designer de faixa de opção, clique duas vezes no botão de alternância **Mostrar painel de tarefas** .
 
-     O Visual Studio gera automaticamente um manipulador de eventos chamado `toggleButton1_Click` , que manipula o <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> evento do botão de alternância. O Visual Studio também abre o arquivo *MyRibbon.cs* ou *MyRibbon. vb* no editor de código.
+     O Visual Studio gera automaticamente um manipulador de eventos chamado `toggleButton1_Click` , que manipula o <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> evento do botão de alternância. O Visual Studio também abre o arquivo *MyRibbon. cs* ou *MyRibbon. vb* no editor de código.
 
 2. Substitua o `toggleButton1_Click` manipulador de eventos pelo código a seguir. Quando o usuário clica no botão de alternância, esse código exibe ou oculta o painel de tarefas personalizado, dependendo se o botão de alternância é pressionado ou não pressionado.
 
-     [!code-vb[Trin_TaskPaneRibbonSynchronize#5](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ManageTaskPaneRibbon.vb#5)]
-     [!code-csharp[Trin_TaskPaneRibbonSynchronize#5](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ManageTaskPaneRibbon.cs#5)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ManageTaskPaneRibbon.vb" id="Snippet5":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ManageTaskPaneRibbon.cs" id="Snippet5":::
 
 ## <a name="test-the-add-in"></a>Testar o suplemento
  Quando você executa o projeto, o Excel é aberto sem exibir o painel de tarefas personalizado. Clique no botão de alternância na faixa de opção para testar o código.
@@ -173,7 +173,7 @@ ms.locfileid: "99846277"
 
 - Crie um painel de tarefas personalizado para cada mensagem de email aberta no Outlook. Para obter mais informações, consulte [Walkthrough: Exibir painéis de tarefas personalizados com mensagens de email no Outlook](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Painéis de tarefas personalizados](../vsto/custom-task-panes.md)
 - [Como: adicionar um painel de tarefas personalizado a um aplicativo](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)
 - [Walkthrough: automatizar um aplicativo de um painel de tarefas personalizado](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)

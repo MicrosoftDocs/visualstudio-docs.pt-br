@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f35649db5f61cb545bb3550980b3d6b9a8742cd3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 48d7baf9605947818ffd79eb7312c0dbefe581ac
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966494"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824257"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-project"></a>Walkthrough: criar seu primeiro suplemento do VSTO para o projeto
   Este tutorial mostra como criar um suplemento do VSTO para Microsoft Office projeto. Os recursos que você cria nesse tipo de solução estão disponíveis para o próprio aplicativo, independentemente de quais projetos estão abertos. Para obter mais informações, consulte [visão geral do desenvolvimento de soluções do Office &#40;&#41;do VSTO ](../vsto/office-solutions-development-overview-vsto.md).
@@ -81,8 +81,8 @@ ms.locfileid: "99966494"
 
     Quando o usuário cria um novo projeto, esse manipulador de eventos adiciona uma tarefa ao projeto.
 
-    [!code-vb[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ProjectAddInTutorial/ThisAddIn.vb#1)]
-    [!code-csharp[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs#1)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ProjectAddInTutorial/ThisAddIn.vb" id="Snippet1":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs" id="Snippet1":::
 
    Para modificar o projeto, este exemplo de código usa os seguintes objetos:
 
@@ -92,7 +92,7 @@ ms.locfileid: "99966494"
 
 1. Se você estiver usando C#, adicione o código a seguir ao `ThisAddIn_Startup` manipulador de eventos. Esse código conecta o `Application_Newproject` manipulador de eventos ao evento NewProject.
 
-     [!code-csharp[Trin_ProjectAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs" id="Snippet2":::
 
 ## <a name="test-the-project"></a>Testar o projeto
  Ao compilar e executar o projeto, verifique se a nova tarefa aparece no novo projeto resultante.
@@ -129,7 +129,7 @@ ms.locfileid: "99966494"
 
 - Implantando suplementos do VSTO para o projeto: [implantar uma solução do Office](../vsto/deploying-an-office-solution.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Programar suplementos do VSTO](../vsto/programming-vsto-add-ins.md)
 - [Soluções de projeto](../vsto/project-solutions.md)
 - [Criar soluções do Office](../vsto/building-office-solutions.md)

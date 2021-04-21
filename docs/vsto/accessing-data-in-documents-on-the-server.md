@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1c610bdc33564e3e211d1ec5aab943af4eec49d1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0df6aef3c83d66b84f569e85e953fde8a3f0e16c
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965792"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826766"
 ---
 # <a name="access-data-in-documents-on-the-server"></a>Acessar dados em documentos no servidor
   Você pode programar contra os dados em uma personalização em nível de documento sem precisar usar o modelo de objeto do Microsoft Office Word ou Microsoft Office Excel. Isso significa que você pode acessar os dados contidos em um documento em um servidor que não tenha o Word ou o Excel instalado. Por exemplo, o código em um servidor (por exemplo, em uma [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] página) pode personalizar os dados em um documento e enviar o documento personalizado para um usuário final. Quando o usuário final abre o documento, o código de vinculação de dados no assembly da solução associa os dados personalizados ao documento. Isso é possível porque os dados no documento são separados da interface do usuário. Para obter mais informações, consulte [dados armazenados em cache em personalizações em nível de documento](../vsto/cached-data-in-document-level-customizations.md).
@@ -45,8 +45,8 @@ ms.locfileid: "99965792"
 
   O exemplo de código a seguir demonstra como acessar uma cadeia de caracteres armazenada em cache na `Sheet1` classe de um projeto de pasta de trabalho do Excel. Este exemplo faz parte de um exemplo maior que é fornecido para o <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save%2A> método.
 
-  [!code-csharp[Trin_ServerDocument#12](../vsto/codesnippet/CSharp/Trin_ServerDocument/Form1.cs#12)]
-  [!code-vb[Trin_ServerDocument#12](../vsto/codesnippet/VisualBasic/Trin_ServerDocument/Form1.vb#12)]
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ServerDocument/Form1.cs" id="Snippet12":::
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ServerDocument/Form1.vb" id="Snippet12":::
 
 ## <a name="modify-data-in-the-cache"></a>Modificar dados no cache
  Para modificar um objeto de dados em cache, você normalmente executa as seguintes etapas:
@@ -66,8 +66,8 @@ ms.locfileid: "99965792"
 
  O exemplo de código a seguir demonstra como alterar o valor de uma cadeia de caracteres armazenada em cache na `Sheet1` classe de um projeto de pasta de trabalho do Excel. Este exemplo faz parte de um exemplo maior que é fornecido para o <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save%2A> método.
 
- [!code-csharp[Trin_ServerDocument#11](../vsto/codesnippet/CSharp/Trin_ServerDocument/Form1.cs#11)]
- [!code-vb[Trin_ServerDocument#11](../vsto/codesnippet/VisualBasic/Trin_ServerDocument/Form1.vb#11)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ServerDocument/Form1.cs" id="Snippet11":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ServerDocument/Form1.vb" id="Snippet11":::
 
 ### <a name="modify-null-values-in-the-data-cache"></a>Modificar valores nulos no cache de dados
  O cache de dados não armazena objetos que têm o valor **NULL** quando o documento é salvo e fechado. Essa limitação tem várias consequências quando você modifica os dados armazenados em cache:
@@ -79,7 +79,7 @@ ms.locfileid: "99965792"
 ## <a name="access-typed-datasets-in-the-cache"></a>Acessar conjuntos de linhas tipados no cache
  Se você quiser acessar os dados em um dataset tipado tanto de uma solução do Office quanto de um aplicativo fora do escritório, como um aplicativo Windows Forms ou um [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] projeto, você deve definir o conjunto de dados tipado em um assembly separado que é referenciado em ambos os projetos. Se você adicionar o conjunto de dados tipado a cada projeto usando o assistente de **configuração da fonte de dados** ou o **Designer de Conjunto de Dados**, o .NET Framework tratará os conjuntos de dados tipados nos dois projetos como tipos diferentes. Para obter mais informações sobre como criar conjuntos de dados tipados, consulte [criar e configurar conjuntos de dados no Visual Studio](../data-tools/create-and-configure-datasets-in-visual-studio.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Acessar dados em documentos no servidor](../vsto/accessing-data-in-documents-on-the-server.md)
 - [Dados armazenados em cache em personalizações em nível de documento](../vsto/cached-data-in-document-level-customizations.md)

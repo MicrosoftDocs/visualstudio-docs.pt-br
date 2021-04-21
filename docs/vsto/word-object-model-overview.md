@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3d593185412db23fa985f7effea6e91f9b3faa6c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3367c1ad557c647639b9fd2d2aacf7845e067660
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99847642"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826623"
 ---
 # <a name="word-object-model-overview"></a>Visão geral do modelo de objeto do Word
   Ao desenvolver soluções do Word no Visual Studio, você interage com o modelo de objeto do Word. Esse modelo de objeto consiste em classes e interfaces que são fornecidas no assembly de interoperabilidade primário para o Word e são definidas no <xref:Microsoft.Office.Interop.Word> namespace.
@@ -78,8 +78,8 @@ ms.locfileid: "99847642"
 
  Ao criar um projeto de nível de documento, você pode acessar <xref:Microsoft.Office.Tools.Word.Document> os membros usando a `ThisDocument` classe gerada em seu projeto. Você pode acessar os membros do <xref:Microsoft.Office.Tools.Word.Document> item de host usando o **me** ou **essas** palavras-chave do código na `ThisDocument` classe ou usando o `Globals.ThisDocument` código de fora da `ThisDocument` classe. Para obter mais informações, consulte [programar personalizações em nível de documento](../vsto/programming-document-level-customizations.md). Por exemplo, para selecionar o primeiro parágrafo no documento, use o código a seguir.
 
- [!code-vb[Trin_VstcoreWordAutomation#120](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#120)]
- [!code-csharp[Trin_VstcoreWordAutomation#120](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#120)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet120":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet120":::
 
  Em projetos de suplemento do VSTO, você pode gerar <xref:Microsoft.Office.Tools.Word.Document> itens de host em tempo de execução. Você pode usar o item de host gerado para adicionar controles ao documento associado. Para obter mais informações, consulte [estender documentos do Word e pastas de trabalho do Excel em suplementos do VSTO em tempo de execução](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
@@ -130,7 +130,7 @@ ms.locfileid: "99847642"
 
  Todos os objetos e membros na referência do modelo de objeto do VBA correspondem a tipos e membros no PIA do Word. Por exemplo, o objeto Document na referência do modelo de objeto do VBA corresponde ao <xref:Microsoft.Office.Interop.Word.Document> objeto no pia do Word. Embora a referência de modelo de objeto do VBA Forneça exemplos de código para a maioria das propriedades, métodos e eventos, você deve converter o código VBA nesta referência para Visual Basic ou Visual C# se quiser usá-los em um projeto do Word criado usando o Visual Studio.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Assemblies de interoperabilidade primária do Office](../vsto/office-primary-interop-assemblies.md)
 - [Automatizar o Word usando objetos estendidos](../vsto/automating-word-by-using-extended-objects.md)
 - [Trabalhar com documentos](../vsto/working-with-documents.md)

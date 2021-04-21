@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0efea386da2bec0136a8a5399a04b9ce8cabf5c7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 716d0ed0b203d55932fef4d6e3e22eabf1137ded
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942094"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824192"
 ---
 # <a name="walkthrough-display-text-in-a-text-box-in-a-document-using-a-button"></a>Walkthrough: exibir texto em uma caixa de texto em um documento usando um botão
   Este tutorial demonstra como usar botões e caixas de texto em uma personalização em nível de documento para Microsoft Office Word.
@@ -86,12 +86,12 @@ ms.locfileid: "99942094"
 
 2. Adicione o código a seguir ao <xref:System.Windows.Forms.Control.Click> manipulador de eventos do botão.
 
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#7](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#7)]
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#7](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#7)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb" id="Snippet7":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs" id="Snippet7":::
 
 3. No C#, você deve adicionar um manipulador de eventos para o botão ao <xref:Microsoft.Office.Tools.Word.Document.Startup> evento. Para obter informações sobre como criar manipuladores de eventos, consulte [como criar manipuladores de eventos em projetos do Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#8](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#8)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs" id="Snippet8":::
 
 ## <a name="test-the-application"></a>Testar o aplicativo
  Agora você pode testar seu documento para certificar-se de que a mensagem **Olá, mundo!** aparece na caixa de texto quando você clica no botão.

@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b87113b47ee0dc4d296bb5e206d6d277394160c5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3886e20d45834f98f36b8d7e48f3b11c9ef7d5dd
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962269"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824814"
 ---
 # <a name="walkthrough-create-a-custom-tab-by-using-the-ribbon-designer"></a>Walkthrough: criar uma guia personalizada usando o designer de faixa de faixas
   Usando o designer de faixa de faixas, você pode criar uma guia personalizada e, em seguida, adicionar e posicionar controles nela.
@@ -68,7 +68,7 @@ ms.locfileid: "99962269"
 
 2. Na caixa de diálogo **Adicionar novo item** , selecione **ActionsPaneControl** e, em seguida, escolha **Adicionar**.
 
-     O arquivo **ActionsPaneControl1.cs** ou **ActionsPaneControl1. vb** é aberto no designer.
+     O arquivo **ActionsPaneControl1. cs** ou **ActionsPaneControl1. vb** é aberto no designer.
 
 3. Na guia **controles comuns** da caixa de **ferramentas**, adicione um rótulo à superfície do designer.
 
@@ -87,7 +87,7 @@ ms.locfileid: "99962269"
 
 3. Altere o nome da nova faixa de forma para **MyRibbon** e escolha **Adicionar**.
 
-     O arquivo **MyRibbon.cs** ou **MyRibbon. vb** é aberto no designer de faixa de faixas e exibe uma guia e um grupo padrão.
+     O arquivo **MyRibbon. cs** ou **MyRibbon. vb** é aberto no designer de faixa de faixas e exibe uma guia e um grupo padrão.
 
 4. No designer de faixa de faixas, escolha a guia padrão.
 
@@ -116,22 +116,22 @@ ms.locfileid: "99962269"
 
 ### <a name="to-hide-and-show-actions-panes-by-using-buttons-in-the-custom-tab"></a>Para ocultar e mostrar painéis de ações usando botões na guia personalizado
 
-1. No **Gerenciador de soluções**, abra o menu de atalho para *MyRibbon.cs* ou *MyRibbon. vb* e escolha **Exibir código**.
+1. No **Gerenciador de soluções**, abra o menu de atalho para *MyRibbon. cs* ou *MyRibbon. vb* e escolha **Exibir código**.
 
 2. Adicione o código a seguir à parte superior da `MyRibbon` classe. Esse código cria dois objetos do painel Ações.
 
-     [!code-csharp[Trin_Ribbon_Custom_Tab#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs#1)]
-     [!code-vb[Trin_Ribbon_Custom_Tab#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb" id="Snippet1":::
 
 3. Substitua o método `MyRibbon_Load` pelo seguinte código. Esse código adiciona os objetos do painel Ações à <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> coleção e oculta os objetos de exibição. O código do Visual C# também anexa delegados a vários eventos de controle da faixa de faixas.
 
-     [!code-csharp[Trin_Ribbon_Custom_Tab#2](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs#2)]
-     [!code-vb[Trin_Ribbon_Custom_Tab#2](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb" id="Snippet2":::
 
 4. Adicione os três métodos do manipulador de eventos a seguir à `MyRibbon` classe. Esses métodos manipulam os <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click> eventos dos dois botões e o <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> evento do botão de alternância. Os manipuladores de eventos para button1 e Button2 mostram painéis de ações alternativas. O manipulador de eventos para toggleButton1 mostra e oculta o painel Ações ativas.
 
-     [!code-csharp[Trin_Ribbon_Custom_Tab#3](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs#3)]
-     [!code-vb[Trin_Ribbon_Custom_Tab#3](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb" id="Snippet3":::
 
 ## <a name="test-the-custom-tab"></a>Testar a guia personalizada
  Quando você executa o projeto, o Excel é iniciado e a guia **minha guia personalizada** é exibida na faixa de faixas. Escolha os botões na **minha guia personalizada** para mostrar e ocultar os painéis de ações.

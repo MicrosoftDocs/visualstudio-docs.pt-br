@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 569a3bea98095afebb243c521db02410879b0b59
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a5d7992462ac3ece9782b0168feedd87577c2d0e
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920357"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826324"
 ---
 # <a name="walkthrough-create-a-custom-tab-by-using-ribbon-xml"></a>Walkthrough: criar uma guia personalizada usando o XML da faixa de uma
   Este tutorial demonstra como criar uma guia de faixa de forma personalizada usando o item da faixa de para **(XML)** .
@@ -56,7 +56,7 @@ ms.locfileid: "99920357"
 
      Para obter mais informações, consulte [como: criar projetos do Office no Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Abre o arquivo de código **ThisAddIn.cs** ou **ThisAddIn. vb** e adiciona o projeto **MyRibbonAddIn** ao **Gerenciador de soluções**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Abre o arquivo de código **ThisAddIn. cs** ou **ThisAddIn. vb** e adiciona o projeto **MyRibbonAddIn** ao **Gerenciador de soluções**.
 
 ## <a name="create-the-vsto-add-ins-tab"></a>Criar a guia de suplementos do VSTO
  Para criar a guia de **suplementos** , adicione um item **da faixa de bits (XML)** ao seu projeto. Mais adiante neste tutorial, você adicionará alguns botões a essa guia.
@@ -69,14 +69,14 @@ ms.locfileid: "99920357"
 
 3. Altere o nome da nova faixa de forma para **MyRibbon** e clique em **Adicionar**.
 
-     O arquivo **MyRibbon.cs** ou **MyRibbon. vb** é aberto no designer. Um arquivo XML chamado **MyRibbon.xml** também é adicionado ao seu projeto.
+     O arquivo **MyRibbon. cs** ou **MyRibbon. vb** é aberto no designer. Um arquivo XML chamado **MyRibbon.xml** também é adicionado ao seu projeto.
 
-4. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **ThisAddIn.cs** ou em **ThisAddIn. vb** e clique em **Exibir código**.
+4. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **ThisAddIn. cs** ou em **ThisAddIn. vb** e clique em **Exibir código**.
 
 5. Adicione o código a seguir à classe **ThisAddIn** . Esse código substitui o `CreateRibbonExtensibilityObject` método e retorna a classe XML da faixa de forma para o aplicativo do Office.
 
-     [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs#1)]
-     [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb" id="Snippet1":::
 
 6. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto **MyRibbonAddIn** e clique em **Compilar**. Verifique se o projeto é compilado sem erros.
 
@@ -107,22 +107,22 @@ ms.locfileid: "99920357"
 
 ### <a name="to-add-callback-methods-for-the-buttons"></a>Para adicionar métodos de retorno de chamada para os botões
 
-1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **MyRibbon.cs** ou **MyRibbon. vb** e clique em **abrir**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **MyRibbon. cs** ou **MyRibbon. vb** e clique em **abrir**.
 
-2. Adicione o seguinte código à parte superior do arquivo **MyRibbon.cs** ou **MyRibbon. vb** . Esse código cria um alias para o <xref:Microsoft.Office.Interop.Word> namespace.
+2. Adicione o código a seguir à parte superior do arquivo **MyRibbon. cs** ou **MyRibbon. vb** . Esse código cria um alias para o <xref:Microsoft.Office.Interop.Word> namespace.
 
-     [!code-csharp[Trin_RibbonButtons#1](../vsto/codesnippet/CSharp/Trin_RibbonButtons/MyRibbon.cs#1)]
-     [!code-vb[Trin_RibbonButtons#1](../vsto/codesnippet/VisualBasic/Trin_RibbonButtons/MyRibbon.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_RibbonButtons/MyRibbon.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_RibbonButtons/MyRibbon.vb" id="Snippet1":::
 
 3. Adicione o método a seguir à classe `MyRibbon`. Esse é um método de retorno de chamada para o botão **Inserir texto** que adiciona uma cadeia de caracteres ao documento ativo no local atual do cursor.
 
-     [!code-csharp[Trin_Ribbon_Custom_Tab_XML#2](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.cs#2)]
-     [!code-vb[Trin_Ribbon_Custom_Tab_XML#2](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.vb" id="Snippet2":::
 
 4. Adicione o método a seguir à classe `MyRibbon`. Esse é um método de retorno de chamada para o botão **Inserir Tabela** que adiciona uma tabela ao documento ativo no local atual do cursor.
 
-     [!code-csharp[Trin_Ribbon_Custom_Tab_XML#3](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.cs#3)]
-     [!code-vb[Trin_Ribbon_Custom_Tab_XML#3](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.vb" id="Snippet3":::
 
 ## <a name="testing-the-vsto-add-in"></a>Testando o suplemento do VSTO
  Quando você executa o projeto, o Word é aberto e a guia denominada **suplementos** é exibida na faixa de palavras. Clique nos botões **Inserir texto** e **Inserir Tabela** na guia **suplementos** para testar o código.
@@ -156,7 +156,7 @@ ms.locfileid: "99920357"
 
 - Personalize a interface do usuário do Microsoft Office Outlook usando as regiões de formulário do Outlook. Para obter mais informações, consulte [Walkthrough: criar uma região de formulário do Outlook](../vsto/walkthrough-designing-an-outlook-form-region.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - [Visão geral da faixa de faixas](../vsto/ribbon-overview.md)
 - [XML da faixa de opções](../vsto/ribbon-xml.md)
 - [Walkthrough: criar uma guia personalizada usando o designer de faixa de faixas](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)
