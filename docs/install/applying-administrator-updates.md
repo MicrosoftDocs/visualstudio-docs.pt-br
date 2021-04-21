@@ -2,31 +2,31 @@
 title: Aplicando atualizações do administrador ao Visual Studio com o Microsoft Endpoint Configuration Manager
 titleSuffix: ''
 description: Saiba como aplicar atualizações do administrador ao Visual Studio.
-ms.date: 04/07/2021
+ms.date: 04/16/2021
 ms.custom: ''
 ms.topic: overview
 ms.assetid: 9a3fdb28-db3d-4970-bc17-7417a985f0fb
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 4df931ee5eb5eaefdf6d918ff05df65b799bef7e
-ms.sourcegitcommit: be14ae4b95e289f16e9444293bb2ec997d4b4d72
+ms.openlocfilehash: d7d2950b9495846693d5edee7790b8611cbca170
+ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "107031600"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107800795"
 ---
 # <a name="applying-administrator-updates-that-use-microsoft-endpoint-configuration-manager"></a>Aplicando atualizações do administrador que usam o Microsoft Endpoint Configuration Manager
 
-Este documento descreve diferentes tipos e características das atualizações do administrador do Visual Studio. Abaixo, você encontrará informações sobre como e quando eles devem ser distribuídos em toda a sua organização, quais opções de configuração estão disponíveis e como exibir relatórios e solucionar problemas. Para obter mais informações sobre os pré-requisitos para usar atualizações do administrador, consulte [habilitando atualizações do administrador](../install/enabling-administrator-updates.md).
+Este documento descreve diferentes tipos e características das atualizações do administrador do Visual Studio. Abaixo, você encontrará informações sobre como e quando eles devem ser distribuídos em toda a sua organização, quais opções de configuração estão disponíveis e como exibir relatórios e solucionar problemas. Para obter mais informações sobre os pré-requisitos para usar atualizações do administrador, consulte [habilitando atualizações do administrador](../install/enabling-administrator-updates.md). As atualizações do administrador presumem que o Visual Studio já está instalado no computador. A aplicação de atualizações do administrador não iniciará uma instalação totalmente nova.
 
 ## <a name="understanding-visual-studio-administrator-updates"></a>Noções básicas sobre atualizações do administrador do Visual Studio 
 
-O pacote de atualização do administrador do Visual Studio que é publicado no Microsoft Update para consumo pelo catálogo da Microsoft e pelo WSUS contém informações que o Configuration Manager precisa para poder baixar e distribuir a atualização para o Visual Studio para computadores cliente. Ele também contém informações de que um administrador de ti precisa para decidir quais atualizações devem ser distribuídas em toda a organização e facilita a manutenção de layouts de rede. Os pacotes de atualização do administrador do Visual Studio não contêm informações suficientes para fazer uma nova instalação do produto, nem eles contêm os binários de produto reais que são publicados na rede de distribuição de conteúdo. As atualizações do administrador do Visual Studio são cumulativas, assim como as atualizações regulares do Visual Studio. Você pode assumir que qualquer atualização do Visual Studio que tenha um número de versão do produto maior e uma data de lançamento posterior é um superconjunto de uma versão mais antiga e inferior. 
+O pacote de atualização do administrador do Visual Studio que é publicado no Microsoft Update para consumo pelo catálogo da Microsoft e pelo WSUS contém informações que o Configuration Manager precisa para poder baixar e distribuir a atualização do Visual Studio para computadores cliente. Ele também contém informações de que um administrador de ti precisa para decidir quais atualizações devem ser distribuídas em toda a organização. Ele também pode ser usado para facilitar a manutenção de layouts de rede. Os pacotes de atualização do administrador do Visual Studio não contêm informações suficientes para fazer uma nova instalação do produto, nem eles contêm os binários de produto reais que são publicados na rede de distribuição de conteúdo. As atualizações do administrador do Visual Studio são cumulativas, assim como as atualizações regulares do Visual Studio. Você pode assumir que qualquer atualização do Visual Studio que tenha um número de versão do produto maior e uma data de lançamento posterior é um superconjunto de uma versão mais antiga e inferior. 
 
 As atualizações do administrador do Visual Studio se aplicam às versões de serviço do Visual Studio que estão em suporte. Para obter mais informações sobre quais linhas de base de serviço do Visual Studio ainda estão em suporte durante um determinado período, consulte [ciclo de vida do produto e manutenção do Visual Studio](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs). Todas as linhas de base de serviço do Visual Studio com suporte serão mantidas seguras.  
 
@@ -156,7 +156,7 @@ Você pode usar os seguintes métodos para fornecer comentários sobre as atuali
 * [Forneça comentários sobre recursos ou relate um problema](https://aka.ms/vs/wsus/feedback) à equipe do Visual Studio sobre essa experiência de aplicação de atualizações do administrador.
 * Entre em contato com o gerente técnico de conta da sua organização para a Microsoft.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 * [Habilitando atualizações do administrador](../install/enabling-administrator-updates.md)    
 * [Guia do administrador do Visual Studio](../install/visual-studio-administrator-guide.md)
 * [Ciclo de vida e manutenção do produto Visual Studio](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs)

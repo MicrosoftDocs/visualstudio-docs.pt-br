@@ -6,13 +6,13 @@ ms.topic: include
 ms.assetid: 5b27454c-f036-4f4d-9d67-54d1fc775f72
 author: CaityBuschlen
 ms.author: cabuschl
-ms.date: 01/12/2021
-ms.openlocfilehash: bb436cfdff0f6783d041858430b4fd9864ceb569
-ms.sourcegitcommit: cfeffe2364275a347db0ba2dce36d8e80001c081
+ms.date: 04/20/2021
+ms.openlocfilehash: cdacf4bb150d4fb836b4c7088f80f63e738aea15
+ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99104479"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107800894"
 ---
 ## <a name="how-do-i-purchase-visual-studio-subscriptions"></a>Como comprar as assinaturas do Visual Studio?
 
@@ -27,6 +27,8 @@ As assinaturas de varejo do Visual Studio disponíveis na Microsoft Store inclue
 - [Visual Studio Test Professional](https://www.microsoft.com/p/visual-studio-test-professional-subscription/dg7gmgf0dst6?activetab=pivot%3aoverviewtab) 
 
 Cada uma dessas assinaturas oferece a opção de fazer uma compra inicial ou renovar uma assinatura existente. O preço de renovação reflete um desconto significativo e está disponível apenas para assinaturas existentes. Para terem direito à renovação de assinaturas pelo preço de renovação com desconto, as assinaturas devem ser renovadas antes de expirarem. 
+
+Se você pretende fazer uma compra única do Visual Studio sem uma assinatura ou qualquer um dos benefícios incluídos em uma assinatura, visite o Microsoft Store para [Visual Studio Professional 2019](https://www.microsoft.com/p/visual-studio-professional-2019/dg7gmgf0f6q1?cid=msft_web_collection&activetab=pivot%3aoverviewtab). 
 
 ### <a name="visual-studio-marketplace"></a>Visual Studio Marketplace 
 Com assinaturas mensais, você pode alugar o Visual Studio e o Azure DevOps sem um contrato de longo prazo. A cobrança é tratada por meio da sua assinatura do Microsoft Azure. Se você ainda não tem uma assinatura do Azure, a instalação é grátis e você pode fazê-la enquanto conclui sua primeira compra.  

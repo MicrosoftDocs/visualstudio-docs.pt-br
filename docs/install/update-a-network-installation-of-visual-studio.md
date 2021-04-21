@@ -1,7 +1,7 @@
 ---
 title: Atualizar uma instalação baseada em rede
 description: Saiba como atualizar uma instalação do Visual Studio baseada em rede usando o comando --layout
-ms.date: 04/06/2021
+ms.date: 04/16/2021
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0f6e13333b6cab86f6485ddc18516039c712455a
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 0400f4be06afab2326ac738e1ac15f9d93a6ecee
+ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107295943"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107800776"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Atualizar uma instalação em rede do Visual Studio
 
@@ -29,9 +29,9 @@ ms.locfileid: "107295943"
 ## <a name="how-to-update-a-network-layout"></a>Como atualizar um layout de rede
 
 > [!IMPORTANT]
-> Essas instruções pressupõem que você criou anteriormente um layout de instalação de rede. Para obter mais informações sobre como fazer isso, consulte a página [criar uma instalação de rede do Visual Studio](create-a-network-installation-of-visual-studio.md) .
+> Essas instruções pressupõem que você criou anteriormente um layout de instalação de rede e tomou algumas decisões sobre como o cliente deve obter as atualizações. Para obter mais informações sobre como fazer isso, consulte a página [criar uma instalação de rede do Visual Studio](create-a-network-installation-of-visual-studio.md) e [controlar atualizações para as implantações do Visual Studio](../install/controlling-updates-to-visual-studio-deployments.md) .
 
-Para atualizar o compartilhamento de instalação de rede para que ele inclua as últimas atualizações, execute o comando `--layout` para baixar pacotes atualizados de forma incremental.
+Para atualizar o compartilhamento de instalação de rede para que ele inclua as atualizações mais recentes, execute o bootstrapper usando o `--layout` parâmetro para baixar os pacotes atualizados.
 
 Se você selecionou um layout parcial quando [criou o layout de rede pela primeira vez](create-a-network-installation-of-visual-studio.md), essas configurações serão salvas. Comandos de layout futuros usam as opções anteriores e quaisquer novas opções que você especificar.
 
