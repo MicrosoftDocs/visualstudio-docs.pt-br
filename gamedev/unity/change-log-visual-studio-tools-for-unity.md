@@ -12,12 +12,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 12a6e122d6193b7aa98cf27668dab201bbb86ce4
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: a03d0fc896fcbc971bc62cd9391c4f38d0aad06c
+ms.sourcegitcommit: 3e1ff87fba290f9e60fb4049d011bb8661255d58
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683478"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107879376"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>Log de alterações (Ferramentas do Visual Studio para Unity, Windows)
 
@@ -1879,9 +1879,9 @@ Lançado em 28 de novembro de 2012
 
 - Análise de mensagem do console Info, de modo que clicar na Lista de Erros o levará ao primeiro stackframe com símbolos.
 
-- Adicione uma [API](extensibility/customize-project-files-created-by-vstu.md) para permitir que o usuário participe da geração do projeto.
+- Adicione uma API para permitir que o usuário participe da geração do projeto.
 
-- Adicione uma [API](extensibility/share-the-unity-log-callback-with-vstu.md) para permitir que o usuário participe de LogCallback.
+- Adicione uma API para permitir que o usuário participe de LogCallback.
 
 ### <a name="bug-fixes"></a>Correções de bug
 

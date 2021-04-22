@@ -3,16 +3,19 @@ title: Editor de código XAML
 description: Faça um tour pelo editor de código XAML no Visual Studio
 ms.date: 06/16/2020
 ms.topic: overview
+f1_keywords:
+- VS.XamlEditor
 monikerRange: vs-2019
+ms.custom: contperf-fy21q4
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: df2c257caed24e85569ca41f3cc83dd9d47d5b03
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 672bfa6b28e364351f262cb2a2c6e2258ecd9746
+ms.sourcegitcommit: 3e1ff87fba290f9e60fb4049d011bb8661255d58
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962308"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107879389"
 ---
 # <a name="xaml-code-editor"></a>Editor de código XAML
 
@@ -101,7 +104,7 @@ O painel central é a parte "código" do editor de código XAML. Ele inclui a ma
 
 Você pode usar [ações rápidas](../ide/quick-actions.md) para refatorar, gerar ou modificar código de outra forma com uma única ação.
 
-Por exemplo, uma tarefa útil que você pode executar usando ações rápidas é remover o **uso desnecessário** do código C# na guia **MainWindow.XAML.cs** .
+Por exemplo, uma tarefa útil que você pode executar usando ações rápidas é remover o **uso desnecessário** do código C# na guia **MainWindow. XAML. cs** .
 
 Aqui está como:
 
@@ -218,7 +221,7 @@ Os desenvolvedores geralmente preferem documentar seu código usando comentário
 
 - Selecione o código que você deseja envolver com um comentário e pressione **Ctrl** + **K**, **Ctrl** + **C**. Para remover o comentário do código selecionado, pressione **Ctrl** + **K**, **Ctrl** + **U**.
 
-Para obter mais informações sobre como usar comentários no código C# que está na guia **MainWindow.XAML.cs** , consulte a página [comentários da documentação](/dotnet/csharp/language-reference/language-specification/documentation-comments/) .
+Para obter mais informações sobre como usar comentários no código C# que está na guia **MainWindow. XAML. cs** , consulte a página [comentários da documentação](/dotnet/csharp/language-reference/language-specification/documentation-comments/) .
 
 ### <a name="xaml-lightbulbs"></a>Lâmpadas XAML
 
@@ -270,24 +273,24 @@ Você pode usar a caixa de diálogo [Opções](../ide/reference/options-dialog-b
 
 > [!NOTE]
 > Você também pode usar atalhos de teclado para acessar a caixa de diálogo opções. Veja como: pressione **Ctrl** + **Q** para pesquisar o IDE, digite **Options** e pressione **Enter**. Em seguida, **pressione CTRL** + **E** para pesquisar a caixa de diálogo opções, digite **Editor de texto**, pressione **Enter**, digite **XAML** e pressione **Enter**.
->  
+>
 > Para obter mais informações sobre atalhos de teclado, consulte a página [dicas de atalho para o Visual Studio](../ide/productivity-shortcuts.md#code-editor) .
 
 ### <a name="universal-text-editor-options"></a>Opções do editor de texto universal
 
 Na caixa de diálogo [Opções](../ide/reference/options-text-editor-xaml-formatting.md) para XAML, os três primeiros itens a seguir são universais para todas as linguagens de programação às quais o IDE do Visual Studio dá suporte. Visite as informações vinculadas na tabela a seguir para saber mais sobre essas opções e como usá-las.
 
-|Nome  |Mais informações  |
+|Nome  |Obter mais informações  |
 |---------|---------|
 |Geral  | [Caixa de diálogo opções: editor de texto > todos os idiomas](../ide/reference/options-text-editor-all-languages.md) |
 |Barras de rolagem | [Opções, Editor de Texto, Todas as Linguagens, Barras de Rolagem](../ide/reference/options-text-editor-all-languages-scroll-bars.md) |
-|Tabulações  |  [Opções, Editor de Texto, Todas as Linguagens, Guias](../ide/reference/options-text-editor-all-languages-tabs.md) |
+|Guias  |  [Opções, Editor de Texto, Todas as Linguagens, Guias](../ide/reference/options-text-editor-all-languages-tabs.md) |
 
 ### <a name="xaml-specific-text-editor-options"></a>Opções do editor de texto específico para XAML
 
 A tabela a seguir lista as configurações na caixa de diálogo [Opções](../ide/reference/options-text-editor-xaml-formatting.md) que podem aprimorar sua experiência de edição quando você desenvolve aplicativos baseados em XAML. Visite as informações vinculadas para saber mais sobre essas opções e como usá-las.
 
-|Nome  |Mais informações  |
+|Nome  |Obter mais informações  |
 |---------|---------|
 |Formatação | [Opções, Editor de Texto, XAML, Formatação](../ide/reference/options-text-editor-xaml-formatting.md) |
 |Diversos |  [Opções, Editor de texto, XAML, Diversos](../ide/reference/options-text-editor-xaml-miscellaneous.md) |
@@ -299,7 +302,7 @@ A tabela a seguir lista as configurações na caixa de diálogo [Opções](../id
 
 Para saber mais sobre como editar seu código em tempo real enquanto você estiver executando seu aplicativo no modo de depuração, consulte a página de [Hot recarregamento de XAML](xaml-hot-reload.md) .
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Recursos do editor de código do Visual Studio](../ide/writing-code-in-the-code-and-text-editor.md)
 - [XAML em aplicativos UWP](/windows/uwp/xaml-platform/xaml-overview/)
