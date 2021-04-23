@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: e6e7dfd0d677412ded44459c7850fa9028142c42
-ms.sourcegitcommit: be14ae4b95e289f16e9444293bb2ec997d4b4d72
+ms.openlocfilehash: 863ba91f88ee953ce7d62179ff3b50aca5500c83
+ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "107031574"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107913053"
 ---
 # <a name="visual-studio-docs-whats-new-for-march-2021"></a>Documentos do Visual Studio: novidades para março de 2021
 
@@ -85,9 +85,9 @@ Bem-vindo ao que há de novo nos documentos do Visual Studio de março de 2021. 
 ## <a name="ide"></a>IDE
 
 **Novos artigos**
-- [Como o Visual Studio torna o controle do código-fonte fácil](./git-visual-studio-source-control.md) criar novo tópico de controle do código-fonte do Visual Studio
+- [Como o Visual Studio torna o controle do código-fonte fácil](../version-control/git-visual-studio-source-control.md) criar novo tópico de controle do código-fonte do Visual Studio
 - [Prompt de comando do desenvolvedor e desenvolvedor PowerShell](./reference/command-prompt-powershell.md) – prompt de comando do desenvolvedor e PowerShell do desenvolvedor
-- [Comparação lado a lado do git e do Team Explorer](./git-team-explorer-feature-comparison.md) -Adicionar nova página de comparação lado a lado do Team Explorer e novos recursos do git
+- [Comparação lado a lado do git e do Team Explorer](../version-control/git-team-explorer-feature-comparison.md) -Adicionar nova página de comparação lado a lado do Team Explorer e novos recursos do git
 
 **Artigos atualizados**
 

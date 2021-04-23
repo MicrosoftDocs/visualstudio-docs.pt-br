@@ -7,12 +7,12 @@ author: alihamie
 ms.author: tglee
 manager: jmartens
 monikerRange: vs-2019
-ms.openlocfilehash: 4bd059fa82f8a959d6e3b8a843f19cbec636fb7e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 915fe38da63f0b3994a809b20515fdc18e0790ce
+ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880405"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107913066"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Usar dados de tempo de design com o Designer XAML no Visual Studio
 
@@ -66,7 +66,10 @@ Você pode definir uma fonte de tempo de design para imagens vinculadas à pági
 
 ## <a name="design-time-data-for-listviews"></a>Dados de tempo de design para ListViews
 
-ListViews são uma maneira popular de exibir dados em seu aplicativo de área de trabalho. No entanto, é difícil Visualizar sem nenhum dado. Você pode usar esse recurso para criar uma fonte de dados de tempo de design embutida. O Designer XAML exibe o que está nessa matriz em seu ListView em tempo de design. Este é um exemplo para WPF .NET Core. Para usar o tipo System: String, certifique-se `xmlns:system="clr-namespace:System;assembly=mscorlib` de incluir no seu cabeçalho XAML.
+ListViews são uma maneira popular de exibir dados em seu aplicativo de área de trabalho. No entanto, é difícil Visualizar sem nenhum dado. Você pode usar esse recurso para criar uma fonte de dados de tempo de design embutida ou itens. O Designer XAML exibe o que está nessa matriz em seu ListView em tempo de design.
+
+### <a name="wpf-net-core--example"></a>Exemplo do WPF .NET Core
+Para usar o tipo System: String, certifique-se `xmlns:system="clr-namespace:System;assembly=mscorlib` de incluir no seu cabeçalho XAML.
 
 ```xml
 <StackPanel>
@@ -135,6 +138,22 @@ xmlns:models="clr-namespace:Cities.Models"
 [![Modelo real em dados de tempo de design com um ListView](media\xaml-design-time-listview-models.png "Dados reais de tempo de design de modelo com um ListView")](media\xaml-design-time-listview-models.png#lightbox)
 
 O benefício aqui é que você pode associar seus controles a uma versão estática de tempo de design de seu modelo.
+
+### <a name="uwp-example"></a>Exemplo de UWP 
+
+Não há suporte para x:Array no UWP. Portanto, podemos usar `<d:ListView.Items>` em vez disso. Para usar o tipo System: String, certifique-se `http://schemas.microsoft.com/winfx/2009/xaml` de incluir no seu cabeçalho XAML.
+
+```xml
+    <StackPanel>
+        <ListView>
+            <d:ListView.Items>
+                <system:String>Item One</system:String>
+                <system:String>Item Two</system:String>
+                <system:String>Item Three</system:String>
+            </d:ListView.Items>
+        </ListView>
+    </StackPanel>
+```
 
 ## <a name="use-design-time-data-with-custom-types-and-properties"></a>Usar dados de tempo de design com tipos e propriedades personalizados
 

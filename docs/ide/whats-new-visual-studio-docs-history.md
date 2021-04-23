@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 05af4933569e988b35bea9763a27d8f68aae3627
-ms.sourcegitcommit: be14ae4b95e289f16e9444293bb2ec997d4b4d72
+ms.openlocfilehash: d29c8be82ba0461231d9cd02eb6799dd38a690ed
+ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "107031587"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107913027"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Histórico de novidades nos documentos do Visual Studio
 
@@ -296,7 +296,7 @@ Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este arti
 
 **Artigos atualizados**
 
-- [Experiência de git no Visual Studio](./git-with-visual-studio.md)
+- [Experiência de git no Visual Studio](../version-control/git-with-visual-studio.md)
   - Texto alt atualizado & metadados
   - Atualizações para o novo conteúdo de experiência git para 16,8 GA
 - [O que há de novo no Visual Studio 2019](./whats-new-visual-studio-2019.md)
@@ -482,7 +482,7 @@ Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este arti
 
 **Novos artigos**
 
-- [Nova experiência de git no Visual Studio (visualização)](./git-with-visual-studio.md) – adicionar novo conteúdo de experiência git (versão prévia)
+- [Nova experiência de git no Visual Studio (visualização)](../version-control/git-with-visual-studio.md) – adicionar novo conteúdo de experiência git (versão prévia)
 - [Convenções de formatação C++ EditorConfig](./cpp-editorconfig-properties.md) -novo artigo
 - [O que é o GitHub Codespaces? (Visualização)](./codespaces/codespaces-overview.md) -adicionar conteúdo de Codespaces (versão prévia)
 - [Como personalizar um codespace (visualização)](./codespaces/customize-codespaces.md) – adicionar conteúdo de Codespaces (versão prévia)
