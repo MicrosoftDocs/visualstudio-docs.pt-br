@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 993b5f61d8517d5638cb785fa2d79b47f80d1caf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f3b72db232e5e83a0d83fbab1d1223da507054d9
+ms.sourcegitcommit: 925db7adb9cb554b081c7e727d09680d4863feed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940547"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107941117"
 ---
 # <a name="dump-files-in-the-visual-studio-debugger"></a>Arquivos de despejo no depurador do Visual Studio
 
@@ -43,6 +43,10 @@ O depurador do Visual Studio pode salvar arquivos de despejo para código gerenc
 ## <a name="requirements-and-limitations"></a><a name="BKMK_Requirements_and_limitations"></a> Requisitos e limitações
 
 - Para depurar arquivos de despejo de computadores de 64 bits, o Visual Studio deve estar em execução em um computador de 64 bits.
+
+::: moniker range=">= vs-2019"
+- O Visual Studio pode depurar arquivos de despejo de aplicativos gerenciados do SO Linux. 
+::: moniker-end
 
 - O Visual Studio pode depurar arquivos de despejo de aplicativos nativos em dispositivos ARM. Ele também pode depurar despejos de aplicativos gerenciados de dispositivos ARM, mas apenas no depurador nativo.
 
@@ -116,6 +120,7 @@ Se o Visual Studio não conseguir localizar os arquivos necessários para depura
 
 ## <a name="see-also"></a>Confira também
 
+- [Como depurar um despejo de memória gerenciado com analisadores de diagnóstico do .NET](../debugger/how-to-debug-managed-memory-dump.md)
 - [Depuração Just-in-time](../debugger/just-in-time-debugging-in-visual-studio.md)
 - [Especificar o símbolo (. pdb) e os arquivos de origem](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
 - [IntelliTrace](../debugger/intellitrace.md)

@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c4ae447976798372e049df46552f8383389f7b3e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e82073b77231f84452ba51402f407904142bbf8e
+ms.sourcegitcommit: 925db7adb9cb554b081c7e727d09680d4863feed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920770"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107941091"
 ---
 # <a name="step-3-use-the-interactive-repl-window"></a>Etapa 3: usar a janela interativa REPL
 
@@ -40,7 +40,7 @@ A janela **interativa** do Visual Studio para Python fornece uma experiência de
 
     ![Resultados imediatos da janela interativa do Python](media/vs-getting-started-python-12-interactive2.png)
 
-1. Ao começar a escrever uma instrução de várias linhas, como uma definição de função, a janela **Interativa** mostrará o prompt **...** do Python para linhas em continuação, o que, ao contrário do REPL de linha de comando, proporcionará recuo automático:
+1. Quando você começa a gravar uma instrução de várias linhas, como uma definição de função, a janela **interativa** mostra o prompt do Python **...** para as linhas contínuas, que, ao contrário da repl de linha de comando, fornece recuo automático. Para adicionar uma nova linha **...** , pressione `Shift+Enter` :
 
     ![Janela interativa do Python com continuação de instrução](media/vs-getting-started-python-13-interactive3.png)
 

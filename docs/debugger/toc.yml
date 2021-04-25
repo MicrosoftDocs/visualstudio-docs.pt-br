@@ -688,6 +688,8 @@
       items:
         - name: Usar arquivos de despejo
           href: using-dump-files.md
+        - name: Depurar um despejo de memória gerenciado
+          href: how-to-debug-managed-memory-dump.md
         - name: API de extensibilidade de resumo do arquivo de despejo
           href: dump-file-summary-extensibility-api.md
     - name: Segurança do depurador
