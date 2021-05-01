@@ -8,16 +8,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - filtered solution
 - solution filtering
-author: jillre
+author: TerryGLee
 ms.author: stsu
 manager: jmartens
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: eae0d02e1fff3f9ad5b35384e6ccab599805372b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3fc64b5f0623a03443278eaa8e4ee1f47b86da38
+ms.sourcegitcommit: 30c404655fb83ea28f96ab1edb1c09b4d8d7eec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869382"
+ms.lasthandoff: 04/29/2021
+ms.locfileid: "108217191"
 ---
 # <a name="filtered-solutions-in-visual-studio"></a>Soluções filtradas no Visual Studio
 
@@ -55,7 +55,7 @@ Para abrir uma solução sem carregar nenhum dos projetos usando a caixa de diá
 
    O Visual Studio lembrará de quais projetos estão carregados na próxima vez em que você abrir a solução localmente.
 
-### <a name="command-line"></a>Linha de comando
+### <a name="command-line"></a>Linha de Comando
 
 (Novo no Visual Studio 2019 versão 16.1.)
 
@@ -104,7 +104,7 @@ Depois de criar um arquivo de filtro de solução, ele é adicionado à sua list
 
 ![Abrir recente no Visual Studio](media/filtered-solutions/open-recent.png)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Personalizar o aninhamento de arquivos no Gerenciador de Soluções](file-nesting-solution-explorer.md)
 - [Otimizar o desempenho do Visual Studio](optimize-visual-studio-performance.md)

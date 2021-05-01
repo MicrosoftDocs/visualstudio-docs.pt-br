@@ -1,18 +1,18 @@
 ---
 title: Usar dados de tempo de design com o Designer XAML no Visual Studio
 description: Saiba como usar dados de tempo de design em XAML.
-ms.date: 11/17/2020
+ms.date: 04/22/2021
 ms.topic: overview
 author: alihamie
 ms.author: tglee
 manager: jmartens
 monikerRange: vs-2019
-ms.openlocfilehash: 915fe38da63f0b3994a809b20515fdc18e0790ce
-ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
+ms.openlocfilehash: a9f7f23625bb01c227158f720260f14347d39f9d
+ms.sourcegitcommit: 60b7a6159045a44293043a519c8ea6d915bf2c31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2021
-ms.locfileid: "107913066"
+ms.lasthandoff: 05/01/2021
+ms.locfileid: "108334935"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Usar dados de tempo de design com o Designer XAML no Visual Studio
 
@@ -68,7 +68,7 @@ Você pode definir uma fonte de tempo de design para imagens vinculadas à pági
 
 ListViews são uma maneira popular de exibir dados em seu aplicativo de área de trabalho. No entanto, é difícil Visualizar sem nenhum dado. Você pode usar esse recurso para criar uma fonte de dados de tempo de design embutida ou itens. O Designer XAML exibe o que está nessa matriz em seu ListView em tempo de design.
 
-### <a name="wpf-net-core--example"></a>Exemplo do WPF .NET Core
+### <a name="wpf-net-core-example"></a>Exemplo do WPF .NET Core
 Para usar o tipo System: String, certifique-se `xmlns:system="clr-namespace:System;assembly=mscorlib` de incluir no seu cabeçalho XAML.
 
 ```xml
@@ -139,7 +139,7 @@ xmlns:models="clr-namespace:Cities.Models"
 
 O benefício aqui é que você pode associar seus controles a uma versão estática de tempo de design de seu modelo.
 
-### <a name="uwp-example"></a>Exemplo de UWP 
+### <a name="uwp-example"></a>Exemplo de UWP
 
 Não há suporte para x:Array no UWP. Portanto, podemos usar `<d:ListView.Items>` em vez disso. Para usar o tipo System: String, certifique-se `http://schemas.microsoft.com/winfx/2009/xaml` de incluir no seu cabeçalho XAML.
 
