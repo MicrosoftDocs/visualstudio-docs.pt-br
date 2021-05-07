@@ -1,0 +1,223 @@
+### YamlMime:FAQ
+metadata:
+  title: Perguntas frequentes sobre depuração de instantâneo | Microsoft Docs
+  description: Examine uma lista de perguntas frequentes que podem surgir ao depurar aplicativos do Azure em tempo real usando o Depurador de Instantâneos no Visual Studio.
+  ms.custom: SEO-VS-2020
+  ms.date: 11/07/2017
+  ms.topic: reference
+  helpviewer_keywords:
+  - debugger
+  ms.assetid: 944f1eb0-a74b-4d28-ae2b-a370cd869add
+  author: mikejo5000
+  ms.author: mikejo
+  manager: jmartens
+  ms.workload:
+  - multiple
+  ms.openlocfilehash: 8c51570ec5cd8d2c0358c863d1d1fb656c8ebfd9
+  ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 05/06/2021
+  ms.locfileid: "108800328"
+title: Perguntas frequentes sobre depuração de instantâneo no Visual Studio
+summary: Veja a seguir uma lista de perguntas que podem surgir durante a depuração de aplicativos dinâmicos do Azure usando o Depurador de Instantâneos.
+sections:
+- name: Geral
+  questions:
+  - question: >
+      Qual é o custo de desempenho de capturar um instantâneo?
+    answer: >
+      Quando o Depurador de Instantâneos captura um instantâneo do seu aplicativo, ele bifurca o processo do aplicativo e suspende a cópia bifurcada. Ao depurar um instantâneo, você o está depurando em relação à cópia bifurcada do processo. Esse processo leva apenas 10 a 20 milissegundos, mas não copia o heap completo do aplicativo. Em vez disso, copia apenas a tabela de página e define as páginas para cópia na gravação. Se algum dos objetos do seu aplicativo no heap for alterado, as respectivas páginas serão copiadas. Isso porque cada instantâneo tem um pequeno custo na memória (na ordem de centenas de kilobytes para a maioria dos aplicativos).
+  - question: >
+      O que acontece se eu tiver um Serviço de Aplicativo do Azure expandido (várias instâncias do meu aplicativo)?
+    answer: >
+      Quando você tiver várias instâncias do seu aplicativo, os snappoints serão aplicados a cada instância única. Somente o primeiro snappoint a atender às condições especificadas cria um instantâneo. Se você tiver vários snappoints, instantâneos posteriores serão provenientes da mesma instância que criou o primeiro instantâneo. Logpoints enviados para a janela de saída mostrarão apenas as mensagens de uma instância, enquanto logpoints enviados para os logs de aplicativo enviarão mensagens de todas as instâncias.
+  - question: >
+      Como o Depurador de Instantâneos carrega símbolos?
+    answer: >
+      O Depurador de Instantâneos requer que você tenha os símbolos correspondentes para seu aplicativo no local ou implantados no Serviço de Aplicativo do Azure. (Não há suporte para PDBs inseridos no momento.) O Depurador de Instantâneos baixa automaticamente os símbolos do seu serviço de Azure App. A partir do Visual Studio 2017 versão 15.2, a implantação no Serviço de Aplicativo do Azure também faz a implantação dos símbolos do seu aplicativo.
+  - question: >
+      O Depurador de Instantâneos funciona em builds de versão do meu aplicativo?
+    answer: >
+      Sim, o Depurador de Instantâneos deve funcionar em builds de versão. Quando um snappoint for colocado em uma função, a função será recompilada para uma versão de depuração, tornando-o depurável. A interrupção do Depurador de Instantâneos retorna funções para a versão do build de versão.
+  - question: >
+      Os logpoints pode causar efeitos colaterais no meu aplicativo de produção?
+    answer: >
+      Não. As mensagens de log que você adiciona ao seu aplicativo são avaliadas virtualmente. Elas não podem causar efeitos colaterais em seu aplicativo. No entanto, algumas propriedades nativas podem não ser acessíveis com logpoints.
+  - question: >
+      O Depurador de Instantâneos funcionará se meu servidor estiver sob carga?
+    answer: >
+      Sim, a depuração de instantâneos pode funcionar em servidores sob carga. O Depurador de Instantâneos faz a restrição e não captura instantâneos em situações em que há uma quantidade pequena de memória livre em seu servidor.
+  - question: >
+      Como faço para desinstalar o Depurador de Instantâneos?
+    answer: >
+      Você pode desinstalar a extensão de site do Depurador de Instantâneos no seu Serviço de Aplicativo com as seguintes etapas:
+
+
+      1. Desative o serviço de aplicativo por meio do Cloud Explorer no Visual Studio ou no portal do Azure.
+
+      1. Navegue até o site do Kudu do Serviço de Aplicativo (ou seja, seu serviçodeaplicativo.**scm**.azurewebsites.net) e vá até **Extensões de Site**.
+
+      1. Clique no X na extensão de site do Depurador de Instantâneos para removê-lo.
+  - question: >
+      Por que as portas ficam abertas durante uma sessão do Depurador de Instantâneos?
+    answer: >
+      O Depurador de Instantâneos precisa abrir um conjunto de portas para depurar os instantâneos tirados no Azure. São as mesmas portas necessárias para depuração remota. [Encontre a lista de portas aqui](../debugger/remote-debugger-port-assignments.md).
+  - question: >
+      Como fazer desabilitar a extensão do depurador remoto?
+    answer: >
+      Para serviços de aplicativos:
+
+      1. Desabilite a extensão do depurador remoto por meio do portal do Azure para seu serviço de aplicativo.
+
+      2. Portal do Azure > folha de recursos do serviço de aplicativo > *configurações do aplicativo*
+
+      3. Navegue até a seção *depuração* e clique no botão *desligar* para a *depuração remota*.
+
+
+      Para AKS:
+
+      1. Atualize seu Dockerfile para remover as seções correspondentes à [depurador de instantâneos do Visual Studio em imagens do Docker](https://github.com/Microsoft/vssnapshotdebugger-docker).
+
+      2. Recompile e reimplante a imagem do Docker modificada.
+
+
+      Para os conjuntos de dimensionamento de máquinas virtuais/máquina virtual, remova a extensão do depurador remoto, os certificados, os compartimentos de chaves e os pools de NAT de entrada da seguinte maneira:
+
+
+      1. Remover extensão do depurador remoto
+
+         Há várias maneiras de desabilitar o depurador remoto para máquinas virtuais e conjuntos de dimensionamento de máquinas virtuais:
+
+            - Desabilitar o depurador remoto por meio do Cloud Explorer
+
+               - O Cloud Explorer > seu recurso de máquina virtual > desabilitar a depuração (desabilitar a depuração não existe para o conjunto de dimensionamento de máquinas virtuais no Cloud Explorer).
+
+            - Desabilitar o depurador remoto com os scripts/cmdlets do PowerShell
+
+               Para a máquina virtual:
+
+               ```powershell
+               Remove-AzVMExtension -ResourceGroupName $rgName -VMName $vmName -Name Microsoft.VisualStudio.Azure.RemoteDebug.VSRemoteDebugger
+               ```
+
+               Para conjuntos de dimensionamento de máquinas virtuais:
+
+               ```powershell
+               $vmss = Get-AzVmss -ResourceGroupName $rgName -VMScaleSetName $vmssName
+               $extension = $vmss.VirtualMachineProfile.ExtensionProfile.Extensions | Where {$_.Name.StartsWith('VsDebuggerService')} | Select -ExpandProperty Name
+               Remove-AzVmssExtension -VirtualMachineScaleSet $vmss -Name $extension
+               ```
+
+            - Desabilite o depurador remoto por meio do portal do Azure
+               - portal do Azure > a folha de recursos de conjuntos de dimensionamento de máquinas virtuais/máquinas virtuais > Extensões
+               - Desinstalar a extensão Microsoft.VisualStudio.Azure.RemoteDebug.VSRemoteDebugger
+
+               > [!NOTE]
+               > Conjuntos de dimensionar máquinas virtuais – o portal não permite remover as portas DebuggerListener. Você precisará usar o Azure PowerShell. Confira os detalhes abaixo.
+
+      2. Remover certificados e o Azure KeyVault
+
+         Ao instalar a extensão do Depurador Remoto para máquinas virtuais ou conjuntos de dimensionamento de máquinas virtuais, os certificados de cliente e servidor são criados para autenticar o cliente Visual Studio com os recursos de conjuntos de dimensionamento de máquinas virtuais/máquinas virtuais do Azure.
+
+         - O certificado do cliente
+
+            Esse certificado é um certificado auto-assinado localizado em Cert:/CurrentUser/My/
+
+            ```
+            Thumbprint                                Subject
+            ----------                                -------
+
+            1234123412341234123412341234123412341234  CN=ResourceName
+            ```
+
+            Uma maneira de remover esse certificado do computador é por meio do PowerShell
+
+            ```powershell
+            $ResourceName = 'ResourceName' # from above
+            Get-ChildItem -Path Cert:\CurrentUser\My | Where-Object {$_.Subject -match $ResourceName} | Remove-Item
+            ```
+
+         - O certificado do servidor
+            - A impressão digital do certificado do servidor correspondente é implantada como um segredo para o Azure KeyVault. Visual Studio tentará encontrar ou criar um KeyVault com o prefixo MSVSAZ* na região correspondente ao recurso de conjuntos de dimensionar máquinas virtuais ou máquinas virtuais. Todos os recursos de conjuntos de dimensionmento de máquinas virtuais ou máquinas virtuais implantados nessa região, portanto, compartilharão o mesmo KeyVault.
+            - Para excluir o segredo da impressão digital do certificado do servidor, vá para o portal do Azure e encontre o KeyVault MSVSAZ* na mesma região que está hospedando o recurso. Excluir o segredo que deve ser rotulado `remotedebugcert<<ResourceName>>`
+            - Você também precisará excluir o segredo do servidor do recurso por meio do PowerShell.
+
+            Para máquinas virtuais:
+
+            ```powershell
+            $vm.OSProfile.Secrets[0].VaultCertificates.Clear()
+            Update-AzVM -ResourceGroupName $rgName -VM $vm
+            ```
+
+            Para conjuntos de dimensionar máquinas virtuais:
+
+            ```powershell
+            $vmss.VirtualMachineProfile.OsProfile.Secrets[0].VaultCertificates.Clear()
+            Update-AzVmss -ResourceGroupName $rgName -VMScaleSetName $vmssName -VirtualMachineScaleSet $vmss
+            ```
+
+      3. Remover todos os pools nat de entrada do DebuggerListener (somente conjunto de dimensionador de máquinas virtuais)
+
+         O Depurador Remoto introduz pools NAT in-bound do DebuggerListener que são aplicados ao balanceador de carga do conjunto de dimensionamento.
+
+         ```powershell
+         $inboundNatPools = $vmss.VirtualMachineProfile.NetworkProfile.NetworkInterfaceConfigurations.IpConfigurations.LoadBalancerInboundNatPools
+         $inboundNatPools.RemoveAll({ param($pool) $pool.Id.Contains('inboundNatPools/DebuggerListenerNatPool-') }) | Out-Null
+
+         if ($LoadBalancerName)
+         {
+            $lb = Get-AzLoadBalancer -ResourceGroupName $ResourceGroup -name $LoadBalancerName
+            $lb.FrontendIpConfigurations[0].InboundNatPools.RemoveAll({ param($pool) $pool.Id.Contains('inboundNatPools/DebuggerListenerNatPool-') }) | Out-Null
+            Set-AzLoadBalancer -LoadBalancer $lb
+         }
+         ```
+  - question: >
+      Como fazer desabilitar Depurador de Instantâneos?
+    answer: >
+      Para o serviço de aplicativo:
+
+      1. Desabilite Depurador de Instantâneos por meio do portal do Azure para seu serviço de aplicativo.
+
+      2. Portal do Azure > folha de recursos do serviço de aplicativo > *configurações do aplicativo*
+
+      3. Exclua as configurações de aplicativo a seguir no portal do Azure e salve as alterações.
+         - INSTRUMENTATIONENGINE_EXTENSION_VERSION
+         - SNAPSHOTDEBUGGER_EXTENSION_VERSION
+
+         > [!WARNING]
+         > As alterações nas configurações do aplicativo iniciarão uma reinicialização do aplicativo. Para obter mais informações sobre as configurações do aplicativo, consulte [configurar um aplicativo do serviço de aplicativo no portal do Azure](/azure/app-service/web-sites-configure).
+
+      Para AKS:
+
+      1. Atualize seu Dockerfile para remover as seções correspondentes à [depurador de instantâneos do Visual Studio em imagens do Docker](https://github.com/Microsoft/vssnapshotdebugger-docker).
+
+      2. Recompile e reimplante a imagem do Docker modificada.
+
+
+      Para conjuntos de dimensionamento de máquinas virtuais/máquina virtual:
+
+
+      Há várias maneiras de desabilitar o Depurador de Instantâneos:
+
+      - Cloud Explorer > seu recurso de máquina virtual/conjunto de dimensionamento de máquinas virtuais > desabilitar o diagnóstico
+
+
+      - Portal do Azure > a folha de recursos da máquina virtual/conjunto de dimensionamento de máquinas virtuais > extensões > desinstalar a extensão Microsoft. insights. VMDiagnosticsSettings
+
+
+      - Cmdlets do PowerShell do [AZ PowerShell](/powershell/azure/overview)
+
+         Máquina virtual:
+
+         ```powershell
+            Remove-AzVMExtension -ResourceGroupName $rgName -VMName $vmName -Name Microsoft.Insights.VMDiagnosticsSettings
+         ```
+
+         Conjuntos de dimensionamento de máquinas virtuais:
+
+         ```powershell
+            $vmss = Get-AzVmss -ResourceGroupName $rgName -VMScaleSetName $vmssName
+            Remove-AzVmssExtension -VirtualMachineScaleSet $vmss -Name Microsoft.Insights.VMDiagnosticsSettings
+         ```
+additionalContent: "\n## <a name=\"see-also\"></a>Consulte também\n  - [Depurando no Visual Studio](../debugger/index.yml)\n  - [Depurar aplicativos ASP.NET dinâmicos usando o Depurador de Instantâneos](../debugger/debug-live-azure-applications.md)\n  - [Depurar conjuntos de dimensionamento de máquinas Machines\\Virtual virtuais do ASP.NET do Azure em tempo real usando o Depurador de Instantâneos](../debugger/debug-live-azure-virtual-machines.md)\n  - [Depurar Kubernetes ASP.NET dinâmicos usando o Depurador de Instantâneos](../debugger/debug-live-azure-kubernetes.md)\n  - [Solução de problemas e problemas conhecidos da depuração de instantâneos](../debugger/debug-live-azure-apps-troubleshooting.md)"

@@ -4,14 +4,14 @@ description: Este artigo descreve como compilar e criar projetos e soluções no
 ms.topic: overview
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 08/29/2019
+ms.date: 05/03/2021
 ms.assetid: FB253757-DB00-4889-A6BF-E44722E25BD1
-ms.openlocfilehash: b4f1cfc3dfdffcc3dd4cb90cd7d29d4333578b9a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a24c57907afedb4f02068a071d2c9f81eb8962bb
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71128416"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108640968"
 ---
 # <a name="compiling-and-building-in-visual-studio-for-mac"></a>Compilação e criação no Visual Studio para Mac
 
@@ -27,7 +27,7 @@ No Mac, você pode usar qualquer um dos seguintes métodos para criar seu aplica
 | Linha de comando do MSBuild| – Compilar projetos sem instalar o Visual Studio para Mac.<br />– Executar builds em multiprocessador para todos os tipos de projeto.<br />– Personalizar a maioria das áreas do sistema de build.|
 | Azure Pipelines | – Automatizar o processo de build como parte de um pipeline de integração contínua/entrega contínua.<br />– Aplicar testes automatizados com cada compilação.<br />– Empregar recursos baseados em nuvem praticamente ilimitados para processos de build.<br />– Modificar o fluxo de trabalho de compilação e, conforme necessário, criar atividades de compilação para realizar tarefas profundamente personalizadas.|
 
-A documentação nesta seção detalha mais o processo de compilação baseado no IDE. Saiba mais sobre a compilação de aplicativos por linha de comando em [MSBuild](/visualstudio/msbuild/msbuild). Saiba mais sobre a compilação de aplicativos com o Azure Pipelines em [Azure Pipelines](/azure/devops/pipelines).
+A documentação nesta seção detalha mais o processo de compilação baseado no IDE. Para criar aplicativos a partir da linha de comando sem instalar o Visual Studio para Mac, você pode instalar a [SDK do .NET Core](https://dotnet.microsoft.com/download)mais recente. Saiba mais sobre a compilação de aplicativos por linha de comando em [MSBuild](/visualstudio/msbuild/msbuild). Saiba mais sobre a compilação de aplicativos com o Azure Pipelines em [Azure Pipelines](/azure/devops/pipelines).
 
 
 > [!NOTE]

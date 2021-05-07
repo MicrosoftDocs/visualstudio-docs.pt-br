@@ -123,7 +123,7 @@
       items:
         - name: Atualizar do MSTestV1 para o MSTestV2
           href: mstest-update-to-mstestv2.md
-        - name: Migrar testsettings para RunSettings
+        - name: Migrar testsettings para runsettings
           href: migrate-testsettings-to-runsettings.md
 - name: Live Unit Testing
   items:
@@ -137,7 +137,7 @@
     - name: Configurar e usar
       href: live-unit-testing.md
     - name: Perguntas frequentes
-      href: live-unit-testing-faq.md
+      href: live-unit-testing-faq.yml
 - name: Desempenho da Web e teste de carga
   items:
     - name: 'Início Rápido: Criar um projeto de teste de carga'

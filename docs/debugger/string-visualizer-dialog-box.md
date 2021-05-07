@@ -2,7 +2,7 @@
 title: Caixa de diálogo Visualizador de cadeia de caracteres | Microsoft Docs
 description: Exiba cadeias de caracteres com a caixa de diálogo Visualizador de cadeia interna ao depurar no Visual Studio.
 ms.date: 10/10/2018
-ms.custom: seoapril2019, SEO-VS-2020
+ms.custom: contperf-fy21q4
 ms.topic: reference
 f1_keywords:
 - vs.debug.stringviewer
@@ -21,18 +21,18 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3084db99226ab268bb6ce70611628dcafcf1753b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 85092f6a339fdaaa3ddaa56112cc351d8b8e9bdc
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904286"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108640831"
 ---
 # <a name="string-visualizer-dialog-box"></a>Caixa de diálogo Visualizador da Cadeia de Caracteres
 
 Enquanto você estiver depurando no Visual Studio, você pode exibir cadeias de caracteres com o Visualizador de cadeias interno. O Visualizador de cadeia de caracteres mostra cadeias muito longas para uma janela de dica de dados ou depurador. Ele também pode ajudá-lo a identificar cadeias de caracteres malformadas.
 
-O Visualizador de cadeia de caracteres interno inclui opções de texto sem formatação, XML, HTML e JSON. Você também pode abrir visualizadores internos para alguns outros tipos, como objetos [DataSet, DataTable e DataView](../debugger/dataset-visualizer-dialog-box.md) , das janelas **automáticas** ou de outro depurador.
+Os visualizadores de cadeia de caracteres internos incluem opções de [texto](#text-string-data), [XML](#xml-string-data), [HTML](#html-string-data)e [JSON](#json-string-data) . Você também pode abrir visualizadores internos para alguns outros tipos, como objetos [DataSet, DataTable e DataView](../debugger/dataset-visualizer-dialog-box.md) , das janelas **automáticas** ou de outro depurador.
 
 > [!NOTE]
 > Se você precisar inspecionar elementos de interface do usuário XAML ou WPF em um visualizador, consulte ou [inspecione as propriedades XAML durante a depuração](../xaml-tools/inspect-xaml-properties-while-debugging.md) ou [como usar o Visualizador de árvore do WPF](../debugger/how-to-use-the-wpf-tree-visualizer.md).
@@ -44,6 +44,12 @@ Para abrir o Visualizador de cadeia de caracteres, você deve estar em pausa dur
 O campo **expressão** mostra a variável ou expressão que você está focalizando.
 
 O campo **valor** mostra o valor da cadeia de caracteres. Um **valor** em branco significa que o visualizador escolhido não pode reconhecer a cadeia de caracteres. Por exemplo, o **Visualizador de XML** mostra um **valor** em branco para uma cadeia de texto sem marcas XML ou uma cadeia de caracteres JSON. Para exibir as cadeias de caracteres que o visualizador escolhido não pode reconhecer, escolha o **Visualizador de texto** em vez disso. O **Visualizador de texto** mostra texto sem formatação.
+
+### <a name="text-string-data"></a>Dados de cadeia de texto
+
+O **Visualizador de texto** mostra texto sem formatação. Se você precisar de formatação personalizada para uma cadeia de caracteres C++, crie uma [visualização de Natvis](../debugger/create-custom-views-of-native-objects.md).
+
+![Visualizador de cadeia de texto](../debugger/media/dbg-string-visualizer-text.png "Visualizador de cadeia de texto")
 
 ### <a name="json-string-data"></a>Dados de cadeia de caracteres JSON
 

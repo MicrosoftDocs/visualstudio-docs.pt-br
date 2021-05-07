@@ -12,11 +12,11 @@ manager: jmartens
 ms.workload:
 - multiple
 ms.openlocfilehash: 6d67471027f36d0e22c055f4306ce2137d972463
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99843742"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108800469"
 ---
 # <a name="code-analysis-faq"></a>Perguntas frequentes sobre análise de código
 
@@ -45,31 +45,31 @@ Além dos conjuntos de regras e arquivos EditorConfig, alguns analisadores são 
 > - Os arquivos EditorConfig só podem ser usados para habilitar regras e definir sua gravidade no Visual Studio 2019 versão 16,3 e posterior.
 > - Os arquivos EditorConfig não podem ser usados para configurar a análise herdada, enquanto os conjuntos de regras podem.
 
-## <a name="code-analysis-in-ci-builds"></a>Análise de código em compilações CI
+## <a name="code-analysis-in-ci-builds"></a>Análise de código em builds de CI
 
-**P**: a análise de código baseada em .net Compiler Platform funciona em compilações de CI (integração contínua)?
+**P:** A .NET Compiler Platform de código baseada em dados funciona em builds de CI (integração contínua) ?
 
-**R**: Sim. Para analisadores que são instalados a partir de um pacote NuGet, essas regras são [impostas no momento da compilação](roslyn-analyzers-overview.md#build-errors), incluindo durante uma compilação de CI. Os analisadores usados em compilações de CI respeitam a configuração de regra dos conjuntos de regras e dos arquivos EditorConfig. Atualmente, os analisadores de código que são criados no Visual Studio não estão disponíveis como um pacote NuGet e, portanto, essas regras não são impostas em uma compilação de CI.
+**R**: Sim. Para analisadores instalados de um pacote NuGet, essas regras são impostas em tempo [de build,](roslyn-analyzers-overview.md#build-errors)incluindo durante um build de CI. Analisadores usados em builds de CI respeitam a configuração de regra de conjuntos de regras e arquivos EditorConfig. Atualmente, os analisadores de código que são integrados Visual Studio não estão disponíveis como um pacote NuGet e, portanto, essas regras não são imposiveis em um build de CI.
 
-## <a name="ide-analyzers-versus-stylecop"></a>Analisadores IDE versus StyleCop
+## <a name="ide-analyzers-versus-stylecop"></a>Analisadores de IDE versus StyleCop
 
-**P**: Qual é a diferença entre os analisadores de código do IDE do Visual Studio e os analisadores do StyleCop?
+**P:** Qual é a diferença entre os analisadores de código Visual Studio IDE e os analisadores styleCop?
 
-**R**: o IDE do Visual Studio inclui analisadores internos que procuram problemas de qualidade e estilo de código. Essas regras ajudam você a usar novos recursos de linguagem à medida que são introduzidos e aprimoram a manutenção do seu código. Os analisadores IDE são continuamente atualizados com cada versão do Visual Studio.
+**R:** o Visual Studio IDE inclui analisadores integrados que buscam problemas de qualidade e estilo de código. Essas regras ajudam você a usar novos recursos de linguagem à medida que eles são introduzidos e a melhorar a capacidade de manutenção do código. Os analisadores de IDE são atualizados continuamente com cada Visual Studio versão.
 
-[Analisadores de StyleCop](https://github.com/DotNetAnalyzers/StyleCopAnalyzers) são analisadores de terceiros instalados como um pacote NuGet que verifica a consistência de estilo em seu código. Em geral, as regras de StyleCop permitem definir preferências pessoais para uma base de código sem recomendar um estilo em vez de outra.
+[Os analisadores StyleCop](https://github.com/DotNetAnalyzers/StyleCopAnalyzers) são analisadores de terceiros instalados como um pacote NuGet que verificam a consistência de estilo em seu código. Em geral, as regras do StyleCop permitem definir preferências pessoais para uma base de código sem recomendar um estilo em vez de outro.
 
 ## <a name="code-analyzers-versus-legacy-analysis"></a>Analisadores de código versus análise herdada
 
-**P**: Qual é a diferença entre análise herdada e análise de código baseada em .net Compiler Platform?
+**P:** Qual é a diferença entre a análise herdada e .NET Compiler Platform de código baseada em dados?
 
-**R**: a análise de código baseada em .net Compiler Platform analisa o código-fonte em tempo real e durante a compilação, enquanto a análise herdada analisa arquivos binários após a conclusão da compilação. Para obter mais informações, consulte [análise baseada em .net Compiler Platform versus análise herdada](../code-quality/net-analyzers-faq.md#whats-the-difference-between-legacy-fxcop-and-net-analyzers).
+**R:**.NET Compiler Platform de código baseado em dados analisa o código-fonte em tempo real e durante a compilação, enquanto a análise herdada analisa arquivos binários após a conclusão do build. Para obter mais informações, [.NET Compiler Platform análise baseada em dados versus análise herdada](../code-quality/net-analyzers-faq.md#whats-the-difference-between-legacy-fxcop-and-net-analyzers).
 
-## <a name="fxcop-analyzers-versus-net-analyzers"></a>Analisadores do FxCop versus analisadores .NET
+## <a name="fxcop-analyzers-versus-net-analyzers"></a>Analisadores FxCop versus analisadores .NET
 
-**P**: Qual é a diferença entre analisadores do FxCop e analisadores .net?
+**P:** Qual é a diferença entre analisadores FxCop e analisadores do .NET?
 
-**R**: os analisadores do FxCop e os analisadores do .net referem-se às implementações do analisador .net Compiler Platform ("Roslyn") das regras de AC do FxCop. Antes do Visual Studio 2019 16,8 e do .NET 5,0, esses analisadores foram fornecidos como `Microsoft.CodeAnalysis.FxCopAnalyzers` [pacote NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers). A partir do Visual Studio 2019 16,8 e do .NET 5,0, esses analisadores estão [incluídos no SDK do .net](/dotnet/fundamentals/code-analysis/overview). Eles também estão disponíveis como `Microsoft.CodeAnalysis.NetAnalyzers` [pacote NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers). Considere [migrar dos analisadores do FxCop para os analisadores do .net](migrate-from-fxcop-analyzers-to-net-analyzers.md).
+**R:** Os analisadores FxCop e os analisadores do .NET referem-se às implementações do analisador .NET Compiler Platform ("Roslyn") das regras de AC do FxCop. Antes Visual Studio 2019 16.8 e .NET 5.0, esses analisadores eram fornecidos como o `Microsoft.CodeAnalysis.FxCopAnalyzers` [pacote NuGet.](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) A partir do Visual Studio 2019 16,8 e do .NET 5,0, esses analisadores estão [incluídos no SDK do .net](/dotnet/fundamentals/code-analysis/overview). Eles também estão disponíveis como `Microsoft.CodeAnalysis.NetAnalyzers` [pacote NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers). Considere [migrar dos analisadores do FxCop para os analisadores do .net](migrate-from-fxcop-analyzers-to-net-analyzers.md).
 
 ## <a name="treat-warnings-as-errors"></a>Tratar avisos como erros
 

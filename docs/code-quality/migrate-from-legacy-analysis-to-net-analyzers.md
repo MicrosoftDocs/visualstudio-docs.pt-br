@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 96a0c0b7fa1f2c703cefde31070ed98c5edddcb6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9a673e7467816e71b8240de9e5f68840c9188dcd
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859756"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798226"
 ---
 # <a name="migrate-from-legacy-analysis-fxcop-to-source-analysis-net-analyzers"></a>Migrar da análise herdada (FxCop) para a análise de origem (analisadores .NET)
 
@@ -28,9 +28,9 @@ Muitas das regras de análise herdada (FxCop) já foram reescritas para analisad
 
 Para obter mais informações sobre as diferenças entre análise herdada e análise de origem, consulte o seguinte:
 
-- [Análise de código-fonte versus análise herdada](../code-quality/net-analyzers-faq.md#whats-the-difference-between-legacy-fxcop-and-net-analyzers)
+- [Análise de código-fonte versus análise herdada](../code-quality/net-analyzers-faq.yml#what-s-the-difference-between-legacy-fxcop-and--net-analyzers-)
 
-- [Perguntas frequentes sobre os analisadores do .NET](../code-quality/net-analyzers-faq.md)
+- [Perguntas frequentes sobre os analisadores do .NET](../code-quality/net-analyzers-faq.yml)
 
 ## <a name="migration"></a>Migração
 
@@ -45,8 +45,8 @@ Para saber mais sobre como configurar os analisadores do .NET:
 
 - Para configurar os analisadores do .NET, consulte [Configurar analisadores .net](/dotnet/fundamentals/code-analysis/code-quality-rule-options).
 
-- Para descobrir sobre a configuração de analisadores usando regras predefinidas com EditorConfig ou um arquivo de conjunto de regras, consulte [habilitar uma categoria de regras](/dotnet/fundamentals/code-analysis/code-quality-rule-options).
+- Para saber mais sobre como configurar analisadores usando regras predefinida com EditorConfig ou um arquivo de conjunto de regras, consulte [Habilitar uma categoria de regras](/dotnet/fundamentals/code-analysis/code-quality-rule-options).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Migrar de analisadores do FxCop para analisadores de .NET](migrate-from-fxcop-analyzers-to-net-analyzers.md)

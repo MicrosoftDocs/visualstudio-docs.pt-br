@@ -12,42 +12,42 @@ manager: jmartens
 ms.workload:
 - multiple
 ms.openlocfilehash: 3c215b232c64b97c57285618056ee4675587b48e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99870708"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108800465"
 ---
-# <a name="faq---find-the-debugging-feature-you-need-in-visual-studio"></a>Perguntas frequentes-encontre o recurso de depuração de que você precisa no Visual Studio
+# <a name="faq---find-the-debugging-feature-you-need-in-visual-studio"></a>Perguntas frequentes – encontre o recurso de depuração que você precisa em Visual Studio
 
-Se você precisar de ajuda para mapear sua tarefa de depuração para o recurso correto do depurador do Visual Studio que é relevante, use os links fornecidos neste artigo. A lista de tarefas aqui inclui tarefas comuns, como pausar o código para depurar, inspecionar variáveis e enviar mensagens para a janela de **saída** . Se você precisar de uma visão geral dos recursos do depurador, consulte [primeiro examinar o depurador](debugger-feature-tour.md) .
+Se você precisar de ajuda para mapear sua tarefa de depuração para o recurso correto do Visual Studio depurador relevante, use os links fornecidos neste artigo. A lista de tarefas aqui inclui tarefas comuns, como pausar o código para depurar, inspecionar variáveis e enviar mensagens para a **janela Saída.** Se você precisar de uma visão geral dos recursos do depurador, confira [Primeiro, veja Primeiro o depurador.](debugger-feature-tour.md)
 
 ## <a name="fix-an-exception"></a>Corrigir uma exceção
 
-- Consulte [corrigir uma exceção](write-better-code-with-visual-studio.md#fix-an-exception).
+- Consulte [Corrigir uma exceção](write-better-code-with-visual-studio.md#fix-an-exception).
 
-## <a name="pause-running-code"></a>Pausar código em execução
+## <a name="pause-running-code"></a>Pausar o código em execução
 
-- **Pausar o código em execução para inspecionar uma linha de código que pode conter um bug**
+- **Pausar a execução do código para inspecionar uma linha de código que pode conter um bug**
 
-  {2&gt;Defina um ponto de interrupção.&lt;2} Para obter mais informações, consulte [usando pontos de interrupção](using-breakpoints.md).
+  {2&gt;Defina um ponto de interrupção.&lt;2} Para obter mais informações, consulte [Usando pontos de interrupção](using-breakpoints.md).
 
 - **Pausar e inspecionar seu aplicativo quando ele atingir um estado específico**
 
-  Tente um ponto de interrupção condicional para controlar onde e quando um ponto de interrupção é ativado usando a lógica condicional. Para obter mais informações, consulte [condições de ponto de interrupção](using-breakpoints.md#breakpoint-conditions).
+  Tente um ponto de interrupção condicional para controlar onde e quando um ponto de interrupção é ativado usando a lógica condicional. Para obter mais informações, consulte [Condições de ponto de interrupção](using-breakpoints.md#breakpoint-conditions).
 
-- **Pausar o código somente quando a propriedade ou o valor de um objeto específico for alterado**
+- **Pausar o código somente quando a propriedade ou o valor de um objeto específico mudar**
 
-  Para C++, defina um [ponto de interrupção de dados](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus). 
+  Para C++, de definir um [ponto de interrupção de dados](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus). 
   ::: moniker range=">= vs-2019"
   Para aplicativos que usam o .NET Core 3, você também pode definir um [ponto de interrupção de dados](using-breakpoints.md#BKMK_set_a_data_breakpoint_managed).
   ::: moniker-end
 
-  Caso contrário, somente para C# e F #, você poderá [acompanhar uma ID de objeto com um ponto de interrupção condicional](using-breakpoints.md#using-object-ids-in-breakpoint-conditions-c-and-f).
+  Caso contrário, somente para C# e F#, você pode acompanhar uma [ID de objeto com um ponto de interrupção condicional](using-breakpoints.md#using-object-ids-in-breakpoint-conditions-c-and-f).
 
 - **Pausar o código dentro de um loop em uma determinada iteração**
 
-  Defina um ponto de interrupção usando **contagem de acesso** como uma condição. Para obter mais informações, consulte [contagem de acesso](using-breakpoints.md#set-a-hit-count-condition).
+  Definir um ponto de interrupção usando **Contagem de acertos** como uma condição. Para obter mais informações, consulte [Contagem de acertos.](using-breakpoints.md#set-a-hit-count-condition)
 
 - **Pausar o código no início de uma função quando você souber o nome da função, mas não sua localização**
 
@@ -73,7 +73,7 @@ Se você precisar de ajuda para mapear sua tarefa de depuração para o recurso 
 
   Você pode fazer isso [definindo um ponto de interrupção na janela de desmontagem](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows).
 
-## <a name="execute-code"></a>Executar código
+## <a name="execute-code"></a>Código de execução
 
 - **Conheça os comandos para percorrer seu código durante a depuração**
 
@@ -87,41 +87,41 @@ Se você precisar de ajuda para mapear sua tarefa de depuração para o recurso 
 
 - **Observar o valor de alteração de uma variável específica**
 
-  Defina uma inspeção na variável. Para obter mais informações, consulte [definir uma inspeção em variáveis](watch-and-quickwatch-windows.md).
+  Defina uma inspeção na variável. Para obter mais informações, consulte [Definir um relógio em variáveis](watch-and-quickwatch-windows.md).
 
-- **Exibir cadeias de caracteres muito longas para a janela do depurador**
+- **Exibir cadeias de caracteres que são muito longas para a janela do depurador**
 
-  Abra o [Visualizador de cadeia de caracteres](view-strings-visualizer.md) interno durante a depuração.
+  Abra o visualizador de cadeia de [caracteres integrado durante](view-strings-visualizer.md) a depuração.
 
 ## <a name="debug-an-app-that-is-already-running"></a>Depurar um aplicativo que já está em execução
 
-- Consulte [anexar a um processo em execução](attach-to-running-processes-with-the-visual-studio-debugger.md).
+- Consulte [Anexar a um processo em execução.](attach-to-running-processes-with-the-visual-studio-debugger.md)
 
 ## <a name="debug-multithreaded-applications"></a>Depurar aplicativos multi-threaded
 
-- Consulte [depurar aplicativos multissegmentados](debug-multithreaded-applications-in-visual-studio.md).
+- Consulte [Depurar aplicativos multithreaded](debug-multithreaded-applications-in-visual-studio.md).
 
 ## <a name="configure-debugging"></a>Configurar a depuração
 
 - **Definir configurações do depurador**
 
-  Para configurar opções do depurador e configurações do projeto do depurador, consulte [configurações e preparação do depurador](debugger-settings-and-preparation.md).
+  Para definir as opções do depurador e as configurações do projeto do depurador, consulte [Configurações do depurador e preparação](debugger-settings-and-preparation.md).
 
-- **Personalizar as informações mostradas no depurador**
+- **Personalizar informações mostradas no depurador**
 
-  Talvez você queira mostrar informações que não sejam o tipo de objeto como o valor em janelas do depurador diferentes. Para o código C#, Visual Basic, F # e C++/CLI, use o atributo [DebuggerDisplay](using-the-debuggerdisplay-attribute.md) . Para opções mais avançadas, você também pode personalizar a interface do usuário criando um [visualizador personalizado](create-custom-visualizers-of-data.md).
+  Talvez você queira mostrar informações diferentes do tipo de objeto como o valor em janelas de depurador diferentes. Para código C#, Visual Basic, F# e C++/CLI, use o atributo [DebuggerDisplay.](using-the-debuggerdisplay-attribute.md) Para opções mais avançadas, você também pode personalizar a interface do usuário criando um [visualizador personalizado.](create-custom-visualizers-of-data.md)
 
-  Para C++ nativo, use a [estrutura NatVis](create-custom-views-of-native-objects.md).
+  Para C++nativo, use a [estrutura NatVis](create-custom-views-of-native-objects.md).
 
 ## <a name="additional-tasks"></a>Tarefas adicionais
 
 - **Editar código durante uma sessão de depuração**
 
-  Use [Editar e continuar](edit-and-continue.md). Para o XAML, use o [Hot recarregamento de XAML](../xaml-tools/xaml-hot-reload.md).
+  Use [Editar e continue](edit-and-continue.md). Para XAML, use [Recarga Dinâmica de XAML](../xaml-tools/xaml-hot-reload.md).
 
-- **Enviar mensagens para a janela de saída sem modificar o código**
+- **Enviar mensagens para a janela Saída sem modificar o código**
 
-  Definir um tracepoint. Para obter mais informações, consulte [usando tracepoints](using-tracepoints.md).
+  Definir um ponto de rastreamento. Para obter mais informações, consulte [Usando pontos de rastreamento](using-tracepoints.md).
 
 - **Exibir a ordem na qual as funções são chamadas**
 

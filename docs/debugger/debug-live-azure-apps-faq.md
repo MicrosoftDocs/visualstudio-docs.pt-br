@@ -1,6 +1,6 @@
 ---
 title: Perguntas frequentes sobre depuração de instantâneo | Microsoft Docs
-description: Examine uma lista de perguntas frequentes que podem surgir ao depurar aplicativos do Azure em tempo real usando o Depurador de Instantâneos no Visual Studio.
+description: Revise uma lista de perguntas frequentes que podem aparecer durante a depuração de aplicativos do Azure em tempo Depurador de Instantâneos no Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/07/2017
 ms.topic: reference
@@ -13,11 +13,11 @@ manager: jmartens
 ms.workload:
 - multiple
 ms.openlocfilehash: 9bd8a80f7f6d11587c9f0cd5c6b9bf96e38a0a74
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873231"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108800466"
 ---
 # <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>Perguntas frequentes sobre depuração de instantâneo no Visual Studio
 
@@ -33,7 +33,7 @@ Quando você tiver várias instâncias do seu aplicativo, os snappoints serão a
 
 #### <a name="how-does-the-snapshot-debugger-load-symbols"></a>Como o Depurador de Instantâneos carrega símbolos?
 
-O Depurador de Instantâneos requer que você tenha os símbolos correspondentes para seu aplicativo no local ou implantados no Serviço de Aplicativo do Azure. (Não há suporte para PDBs inseridos no momento.) O Depurador de Instantâneos baixa automaticamente os símbolos do seu serviço de Azure App. A partir do Visual Studio 2017 versão 15.2, a implantação no Serviço de Aplicativo do Azure também faz a implantação dos símbolos do seu aplicativo.
+O Depurador de Instantâneos requer que você tenha os símbolos correspondentes para seu aplicativo no local ou implantados no Serviço de Aplicativo do Azure. (No momento, não há suporte para PDBs inseridos.) O Depurador de Instantâneos baixa automaticamente os símbolos do seu Serviço de Aplicativo do Azure. A partir do Visual Studio 2017 versão 15.2, a implantação no Serviço de Aplicativo do Azure também faz a implantação dos símbolos do seu aplicativo.
 
 #### <a name="does-the-snapshot-debugger-work-against-release-builds-of-my-application"></a>O Depurador de Instantâneos funciona em builds de versão do meu aplicativo?
 
@@ -51,7 +51,7 @@ Sim, a depuração de instantâneos pode funcionar em servidores sob carga. O De
 
 Você pode desinstalar a extensão de site do Depurador de Instantâneos no seu Serviço de Aplicativo com as seguintes etapas:
 
-1. Desative o serviço de aplicativo por meio do Cloud Explorer no Visual Studio ou no portal do Azure.
+1. Desligue o Serviço de Aplicativo por meio do Cloud Explorer Visual Studio ou do portal do Azure.
 1. Navegue até o site do Kudu do Serviço de Aplicativo (ou seja, seu serviçodeaplicativo.**scm**.azurewebsites.net) e vá até **Extensões de Site**.
 1. Clique no X na extensão de site do Depurador de Instantâneos para removê-lo.
 
@@ -59,36 +59,36 @@ Você pode desinstalar a extensão de site do Depurador de Instantâneos no seu 
 
 O Depurador de Instantâneos precisa abrir um conjunto de portas para depurar os instantâneos tirados no Azure. São as mesmas portas necessárias para depuração remota. [Encontre a lista de portas aqui](../debugger/remote-debugger-port-assignments.md).
 
-#### <a name="how-do-i-disable-the-remote-debugger-extension"></a>Como fazer desabilitar a extensão do depurador remoto?
+#### <a name="how-do-i-disable-the-remote-debugger-extension"></a>Como fazer desabilitar a extensão do Depurador Remoto?
 
-Para serviços de aplicativos:
-1. Desabilite a extensão do depurador remoto por meio do portal do Azure para seu serviço de aplicativo.
-2. Portal do Azure > folha de recursos do serviço de aplicativo > *configurações do aplicativo*
-3. Navegue até a seção *depuração* e clique no botão *desligar* para a *depuração remota*.
+Para Serviços de Aplicativos:
+1. Desabilite a extensão do Depurador Remoto por meio do portal do Azure para o Serviço de Aplicativo.
+2. portal do Azure > folha de recursos do Serviço de Aplicativo > *Configurações do Aplicativo*
+3. Navegue até *a seção Depuração* e clique no *botão Desligar* para *Depuração Remota*.
 
-Para AKS:
-1. Atualize seu Dockerfile para remover as seções correspondentes à [depurador de instantâneos do Visual Studio em imagens do Docker](https://github.com/Microsoft/vssnapshotdebugger-docker).
-2. Recompile e reimplante a imagem do Docker modificada.
+Para o AKS:
+1. Atualize seu Dockerfile para remover as seções correspondentes ao [Depurador de Instantâneos do Visual Studio em imagens do Docker](https://github.com/Microsoft/vssnapshotdebugger-docker).
+2. Reimplantar e reimplantar a imagem modificada do Docker.
 
-Para os conjuntos de dimensionamento de máquinas virtuais/máquina virtual, remova a extensão do depurador remoto, os certificados, os compartimentos de chaves e os pools de NAT de entrada da seguinte maneira:
+Para conjuntos de dimensionamento de máquinas virtuais/máquinas virtuais, remova a extensão do Depurador Remoto, certificados, KeyVaults e pools nat de entrada da seguinte forma:
 
-1. Remover extensão do depurador remoto
+1. Remover extensão do Depurador Remoto
 
-   Há várias maneiras de desabilitar o depurador remoto para máquinas virtuais e conjuntos de dimensionamento de máquinas virtuais:
+   Há várias maneiras de desabilitar o Depurador Remoto para máquinas virtuais e conjuntos de dimensionamento de máquinas virtuais:
 
-      - Desabilitar o depurador remoto por meio do Cloud Explorer
+      - Desabilitar o Depurador Remoto por meio do Cloud Explorer
 
-         - O Cloud Explorer > seu recurso de máquina virtual > desabilitar a depuração (desabilitar a depuração não existe para o conjunto de dimensionamento de máquinas virtuais no Cloud Explorer).
+         - O Cloud Explorer > seu recurso de máquina virtual > Desabilitar Depuração (desabilitar a depuração não existe para o conjunto de dimensionamento de máquinas virtuais no Cloud Explorer).
 
-      - Desabilitar o depurador remoto com os scripts/cmdlets do PowerShell
+      - Desabilitar o depurador remoto com scripts/cmdlets do PowerShell
 
-         Para a máquina virtual:
+         Para máquina virtual:
 
          ```powershell
          Remove-AzVMExtension -ResourceGroupName $rgName -VMName $vmName -Name Microsoft.VisualStudio.Azure.RemoteDebug.VSRemoteDebugger
          ```
 
-         Para conjuntos de dimensionamento de máquinas virtuais:
+         Para conjuntos de dimensionar máquinas virtuais:
 
          ```powershell
          $vmss = Get-AzVmss -ResourceGroupName $rgName -VMScaleSetName $vmssName
@@ -96,7 +96,7 @@ Para os conjuntos de dimensionamento de máquinas virtuais/máquina virtual, rem
          Remove-AzVmssExtension -VirtualMachineScaleSet $vmss -Name $extension
          ```
 
-      - Desabilite o depurador remoto por meio do portal do Azure
+      - Desabilitar o Depurador Remoto por meio do portal do Azure
          - Portal do Azure > suas extensões de máquina virtual/conjunto de dimensionamento de máquinas virtuais > Extensions
          - Desinstalar a extensão Microsoft. VisualStudio. Azure. RemoteDebug. VSRemoteDebugger
 
@@ -162,28 +162,28 @@ Para os conjuntos de dimensionamento de máquinas virtuais/máquina virtual, rem
 
 #### <a name="how-do-i-disable-snapshot-debugger"></a>Como fazer desabilitar Depurador de Instantâneos?
 
-Para o serviço de aplicativo:
-1. Desabilite Depurador de Instantâneos por meio do portal do Azure para seu serviço de aplicativo.
-2. Portal do Azure > folha de recursos do serviço de aplicativo > *configurações do aplicativo*
-3. Exclua as configurações de aplicativo a seguir no portal do Azure e salve as alterações.
+Para o Serviço de Aplicativo:
+1. Desabilite Depurador de Instantâneos por meio do portal do Azure para o Serviço de Aplicativo.
+2. portal do Azure > folha de recursos do Serviço de Aplicativo > *Configurações do Aplicativo*
+3. Exclua as seguintes configurações de aplicativo no portal do Azure e salve suas alterações.
    - INSTRUMENTATIONENGINE_EXTENSION_VERSION
    - SNAPSHOTDEBUGGER_EXTENSION_VERSION
 
    > [!WARNING]
-   > As alterações nas configurações do aplicativo iniciarão uma reinicialização do aplicativo. Para obter mais informações sobre as configurações do aplicativo, consulte [configurar um aplicativo do serviço de aplicativo no portal do Azure](/azure/app-service/web-sites-configure).
+   > As alterações nas Configurações do Aplicativo iniciarão uma reinicialização do aplicativo. Para obter mais informações sobre configurações de aplicativo, consulte [Configurar um aplicativo do Serviço](/azure/app-service/web-sites-configure)de Aplicativo no portal do Azure .
 
-Para AKS:
-1. Atualize seu Dockerfile para remover as seções correspondentes à [depurador de instantâneos do Visual Studio em imagens do Docker](https://github.com/Microsoft/vssnapshotdebugger-docker).
-2. Recompile e reimplante a imagem do Docker modificada.
+Para o AKS:
+1. Atualize seu Dockerfile para remover as seções correspondentes ao [Depurador de Instantâneos do Visual Studio em imagens do Docker](https://github.com/Microsoft/vssnapshotdebugger-docker).
+2. Reimplantar e reimplantar a imagem modificada do Docker.
 
-Para conjuntos de dimensionamento de máquinas virtuais/máquina virtual:
+Para conjuntos de dimensionar máquinas virtuais/máquinas virtuais:
 
 Há várias maneiras de desabilitar o Depurador de Instantâneos:
-- Cloud Explorer > seu recurso de máquina virtual/conjunto de dimensionamento de máquinas virtuais > desabilitar o diagnóstico
+- O Cloud Explorer > recurso do conjunto de dimensionmento de máquinas virtuais/máquina virtual > Desabilitar Diagnóstico
 
-- Portal do Azure > a folha de recursos da máquina virtual/conjunto de dimensionamento de máquinas virtuais > extensões > desinstalar a extensão Microsoft. insights. VMDiagnosticsSettings
+- portal do Azure > a folha de recursos do conjunto de dimensionamento de máquinas virtuais/máquinas virtuais > Extensões > desinstalar a extensão Microsoft.Insights.VMDiagnosticsSettings
 
-- Cmdlets do PowerShell do [AZ PowerShell](/powershell/azure/overview)
+- Cmdlets do PowerShell [do Az PowerShell](/powershell/azure/overview)
 
    Máquina virtual:
 
@@ -191,7 +191,7 @@ Há várias maneiras de desabilitar o Depurador de Instantâneos:
       Remove-AzVMExtension -ResourceGroupName $rgName -VMName $vmName -Name Microsoft.Insights.VMDiagnosticsSettings
    ```
 
-   Conjuntos de dimensionamento de máquinas virtuais:
+   Conjuntos de dimensionar máquinas virtuais:
 
    ```powershell
       $vmss = Get-AzVmss -ResourceGroupName $rgName -VMScaleSetName $vmssName
@@ -202,6 +202,6 @@ Há várias maneiras de desabilitar o Depurador de Instantâneos:
 
 - [Depurando no Visual Studio](../debugger/index.yml)
 - [Depurar aplicativos ASP.NET dinâmicos usando o Depurador de Instantâneos](../debugger/debug-live-azure-applications.md)
-- [Depurar conjuntos de dimensionamento de máquinas Machines\Virtual virtuais do ASP.NET do Azure em tempo real usando o Depurador de Instantâneos](../debugger/debug-live-azure-virtual-machines.md)
+- [Depurar conjuntos ASP.NET de escala de Máquinas Virtuais do Azure\Máquinas Virtuais usando o Depurador de Instantâneos](../debugger/debug-live-azure-virtual-machines.md)
 - [Depurar Kubernetes ASP.NET dinâmicos usando o Depurador de Instantâneos](../debugger/debug-live-azure-kubernetes.md)
 - [Solução de problemas e problemas conhecidos da depuração de instantâneos](../debugger/debug-live-azure-apps-troubleshooting.md)

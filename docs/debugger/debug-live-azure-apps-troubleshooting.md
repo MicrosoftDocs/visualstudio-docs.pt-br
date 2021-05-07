@@ -1,6 +1,6 @@
 ---
 title: Solucionar problemas de depuração de instantâneos | Microsoft Docs
-description: Entender a solução de problemas e questões conhecidas para depuração de instantâneo no Visual Studio. Carregue o ICorProfiler sem causar tempo de inatividade em seu site de produção.
+description: Entenda a solução de problemas e problemas conhecidos para depuração de instantâneos Visual Studio. Carregue ICorProfiler sem causar tempo de inatividade em seu site de produção.
 ms.custom: SEO-VS-2020
 ms.date: 04/24/2019
 ms.topic: troubleshooting
@@ -12,33 +12,33 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 55d6c5a4b9485051f8c0293ad72f78e5cdddca59
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: aad883ac0c3f703b2d6a4e10d3a0ef2468cd8465
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873253"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798434"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Solução de problemas e problemas conhecidos da depuração de instantâneos no Visual Studio
 
-Se as etapas descritas neste artigo não resolverem o problema, procure o problema na [comunidade de desenvolvedores](https://aka.ms/feedback/suggest?space=8) ou informe um novo problema, escolhendo **ajudar**  >  **enviar comentários** para  >  **relatar um problema** no Visual Studio.
+Se as etapas descritas neste artigo não resolverem [](https://aka.ms/feedback/suggest?space=8) o problema, pesquise o problema no Developer Community ou reporte um novo problema escolhendo Ajuda para enviar comentários relatar um problema  >    >   Visual Studio.
 
-## <a name="issue-attach-snapshot-debugger-encounters-an-http-status-code-error"></a>Problema: "Attach Depurador de Instantâneos" encontra um erro de código de status HTTP
+## <a name="issue-attach-snapshot-debugger-encounters-an-http-status-code-error"></a>Problema: "Anexar Depurador de Instantâneos" encontra um erro de código de status HTTP
 
-Se você vir o erro a seguir na janela de **saída** durante a tentativa de anexar, pode ser um problema conhecido listado abaixo. Experimente as soluções propostas e, se o problema continuar a persistir, entre em contato com o alias anterior.
+Se você vir o seguinte erro na **janela** Saída durante a tentativa de anexação, pode ser um problema conhecido listado abaixo. Experimente as soluções propostas e, se o problema continuar a persistir, entre em contato com o alias anterior.
 
 `[TIMESTAMP] Error --- Unable to Start Snapshot Debugger - Attach Snapshot Debugger failed: System.Net.WebException: The remote server returned an error: (###) XXXXXX`
 
-### <a name="401-unauthorized"></a>(401) não autorizado
+### <a name="401-unauthorized"></a>(401) Não autorizado
 
 Esse erro indica que a chamada REST emitida pelo Visual Studio para o Azure usa uma credencial inválida. 
 
 Siga estas etapas:
 
-* Certifique-se de que sua conta de personalização do Visual Studio tenha permissões para a assinatura do Azure e o recurso ao qual você está anexando. Uma maneira rápida de determinar isso é verificar se o recurso está disponível na caixa de diálogo do **debug**  >  **Attach depurador de instantâneos...**  >  **Recurso**  >  do Azure **Selecione existente** ou no Cloud Explorer.
-* Se esse erro continuar a persistir, use um dos canais de comentários descritos no início deste artigo.
+* Certifique-se de que sua Visual Studio de personalização do banco de dados tenha permissões para a assinatura e o recurso do Azure ao que você está anexando. Uma maneira rápida de determinar isso é verificar se o recurso está disponível na caixa de diálogo de **Anexação** de  >  **Depuração Depurador de Instantâneos...**  >  **Recurso do Azure**  >  **Selecione Existente ou** no Cloud Explorer.
+* Se esse erro persistir, use um dos canais de comentários descritos no início deste artigo.
 
-Se você tiver habilitado a autenticação/autorização (EasyAuth) em seu serviço de aplicativo, poderá encontrar um erro 401 com LaunchAgentAsync na mensagem de erro da pilha de chamadas. Verifique se a **ação a ser tomada quando a solicitação não está autenticada** está definida para **Permitir solicitações anônimas (nenhuma ação)** no portal do Azure e forneça um authorization.jsno D:\Home\sites\wwwroot com o conteúdo a seguir em vez disso. 
+Se você habilitar a Autenticação/Autorização (EasyAuth) em seu Serviço de Aplicativo, poderá encontrar um erro 401 com LaunchAgentAsync na mensagem de erro da pilha de chamada. Verifique  se a ação a ser tomada quando a solicitação não está autenticada está definida como Permitir solicitações anônimas **(sem ação)** no portal do Azure e forneça um authorization.json em D:\Home\sites\wwwroot com o conteúdo a seguir. 
 
 ```
 {
@@ -60,7 +60,7 @@ Se você tiver habilitado a autenticação/autorização (EasyAuth) em seu servi
 }
 ```
 
-A primeira rota efetivamente protege seu domínio de aplicativo semelhante a **fazer logon com [identityprovider]**. A segunda rota expõe o ponto de extremidade SnapshotDebugger AgentLaunch fora da autenticação, que executa a ação predefinida de iniciar o agente de diagnóstico SnapshotDebugger *somente se* a extensão de site pré-instalada do SnapshotDebugger estiver habilitada para seu serviço de aplicativo. Para obter mais detalhes sobre o authorization.jssobre configuração, consulte [regras de autorização de URL](https://azure.github.io/AppService/2016/11/17/URL-Authorization-Rules.html).
+A primeira rota efetivamente protegerá seu domínio de aplicativo semelhante a Fazer **logoff com [IdentityProvider]**. A segunda rota expõe o ponto de extremidade SnapshotDebugger AgentLaunch fora da autenticação, que executa a ação predefinida de iniciar o agente de diagnóstico SnapshotDebugger *somente se* a extensão de site pré-instalada do SnapshotDebugger estiver habilitada para seu serviço de aplicativo. Para obter mais detalhes sobre o authorization.jssobre configuração, consulte [regras de autorização de URL](https://azure.github.io/AppService/2016/11/17/URL-Authorization-Rules.html).
 
 ### <a name="403-forbidden"></a>(403) Proibido
 
@@ -91,48 +91,48 @@ Siga estas etapas:
 
 * Verifique se seu site está disponível em https:// \<resource\> . azurewebsites.net
 * Verifique se o site não foi migrado para novas instâncias. Depurador de Instantâneos usa a noção de ARRAffinity para rotear solicitações para instâncias específicas que podem produzir esse erro intermitentemente.
-* Se esse erro continuar a persistir, use um dos canais de comentários descritos no início deste artigo.
+* Se esse erro persistir, use um dos canais de comentários descritos no início deste artigo.
 
-### <a name="409-conflict"></a>(409) conflito
+### <a name="409-conflict"></a>(409) Conflito
 
-Esse erro indica que a solicitação está em conflito com o estado atual do servidor.
+Esse erro indica que a solicitação está em conflito com o estado do servidor atual.
 
-Esse é um problema conhecido que ocorre quando um usuário tenta anexar Depurador de Instantâneos em um AppService que habilitou o ApplicationInsights. ApplicationInsights define as AppSettings com maiúsculas e minúsculas diferentes do Visual Studio, causando esse problema.
+Esse é um problema conhecido que ocorre quando um usuário tenta anexar Depurador de Instantâneos a um AppService que habilitar o ApplicationInsights. O ApplicationInsights define as AppSettings com um uso de Visual Studio, causando esse problema.
 
 ::: moniker range=">= vs-2019"
-Resolvemos isso no Visual Studio 2019.
+Isso foi resolvido em Visual Studio 2019.
 ::: moniker-end
 
 Siga estas etapas:
 
 ::: moniker range="vs-2017"
 
-* Verifique na portal do Azure que AppSettings para SnapshotDebugger (SNAPSHOTDEBUGGER_EXTENSION_VERSION) e InstrumentationEngine (INSTRUMENTATIONENGINE_EXTENSION_VERSION) estão em maiúsculas. Caso contrário, atualize as configurações manualmente, o que força uma reinicialização do site.
+* Verifique no portal do Azure se as AppSettings para SnapshotDebugger (SNAPSHOTDEBUGGER_EXTENSION_VERSION) e InstrumentationEngine (INSTRUMENTATIONENGINE_EXTENSION_VERSION) estão em letras maiúsculas. Caso não, atualize as configurações manualmente, o que força a reinicialização do site.
 ::: moniker-end
-* Se esse erro continuar a persistir, use um dos canais de comentários descritos no início deste artigo.
+* Se esse erro persistir, use um dos canais de comentários descritos no início deste artigo.
 
-### <a name="500-internal-server-error"></a>(500) erro interno do servidor
+### <a name="500-internal-server-error"></a>(500) Erro interno do servidor
 
-Esse erro indica que o site está completamente inativo ou o servidor não pode manipular a solicitação. Depurador de Instantâneos só funciona em aplicativos em execução. [Application Insights depurador de instantâneos](/azure/azure-monitor/app/snapshot-debugger) fornece instantâneos sobre exceções e pode ser a melhor ferramenta para suas necessidades.
+Esse erro indica que o site está completamente inoossado ou que o servidor não pode lidar com a solicitação. Depurador de Instantâneos funções somente em aplicativos em execução. [Application Insights Depurador de Instantâneos](/azure/azure-monitor/app/snapshot-debugger) fornece instantâneos em exceções e pode ser a melhor ferramenta para suas necessidades.
 
-### <a name="502-bad-gateway"></a>(502) gateway inadequado
+### <a name="502-bad-gateway"></a>(502) Gateway ruim
 
 Esse erro indica um problema de rede do lado do servidor e pode ser temporário.
 
 Siga estas etapas:
 
 * Tente aguardar alguns minutos antes de anexar o Depurador de Instantâneos novamente.
-* Se esse erro continuar a persistir, use um dos canais de comentários descritos no início deste artigo.
+* Se esse erro persistir, use um dos canais de comentários descritos no início deste artigo.
 
 ## <a name="issue-snappoint-does-not-turn-on"></a>Problema: o snappoint não é ativado
 
-Se você vir um ícone de aviso ![Snappoint ícone de aviso](../debugger/media/snapshot-troubleshooting-snappoint-warning-icon.png "Ícone de aviso do Snappoint") com seu Snappoint em vez do ícone normal de Snappoint, o Snappoint não será ativado.
+Se você vir um ícone de aviso Ícone de aviso do ![snappoint](../debugger/media/snapshot-troubleshooting-snappoint-warning-icon.png "Ícone de aviso do Snappoint") com o snappoint em vez do ícone de snappoint normal, o snappoint não será ligado.
 
-![Snappoint não ativa](../debugger/media/snapshot-troubleshooting-dont-turn-on.png "Snappoint não ativa")
+![O Snappoint não é a ligar](../debugger/media/snapshot-troubleshooting-dont-turn-on.png "Snappoint não ativa")
 
 Siga estas etapas:
 
-1. Verifique se você tem a mesma versão do código-fonte que foi usada para criar e implantar seu aplicativo. Verifique se que você está carregando os símbolos corretos para sua implantação. Para isso, exiba a janela **Módulos** durante a depuração de instantâneos e verifique se a coluna Arquivo de Símbolos mostra um arquivo .pdb carregado para o módulo que você está depurando. O Depurador de Instantâneos tentará baixar automaticamente e usar os símbolos em sua implantação.
+1. Certifique-se de ter a mesma versão do código-fonte que foi usada para criar e implantar seu aplicativo. Verifique se que você está carregando os símbolos corretos para sua implantação. Para isso, exiba a janela **Módulos** durante a depuração de instantâneos e verifique se a coluna Arquivo de Símbolos mostra um arquivo .pdb carregado para o módulo que você está depurando. O Depurador de Instantâneos tentará baixar automaticamente e usar os símbolos em sua implantação.
 
 ## <a name="issue-symbols-do-not-load-when-i-open-a-snapshot"></a>Problema: os símbolos não são carregados quando eu abro um instantâneo
 
@@ -243,10 +243,10 @@ A depuração de instantâneos e o Application Insights dependem de um ICorProfi
 - Inicie o site do Slot. Recomendamos que você visite o site para aquecê-lo novamente.
 - Troque o Slot com a produção.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Depurando no Visual Studio](../debugger/index.yml)
 - [Depurar aplicativos ASP.NET dinâmicos usando o Depurador de Instantâneos](../debugger/debug-live-azure-applications.md)
 - [Depurar Máquinas Virtuais ASP.NET Azure\Conjuntos de Dimensionamento de VMs dinâmicos usando o Depurador de Instantâneos](../debugger/debug-live-azure-virtual-machines.md)
 - [Depurar Kubernetes ASP.NET dinâmicos usando o Depurador de Instantâneos](../debugger/debug-live-azure-kubernetes.md)
-- [Perguntas frequentes sobre depuração de instantâneo](../debugger/debug-live-azure-apps-faq.md)
+- [Perguntas frequentes sobre depuração de instantâneo](../debugger/debug-live-azure-apps-faq.yml)

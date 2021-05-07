@@ -1,6 +1,6 @@
 ---
-title: Tempo de depuração ASP.NET ao vivo de viagem na VM do Azure
-description: Saiba como registrar e reproduzir aplicativos ASP.NET em tempo real em máquinas virtuais do Azure usando o Depurador de Instantâneos.
+title: Depuração de viagem no tempo ASP.NET em tempo real na VM do Azure
+description: Saiba como registrar e repetir aplicativos ASP.NET em máquinas virtuais do Azure usando o Depurador de Instantâneos.
 ms.custom: SEO-VS-2020
 ms.date: 04/11/2019
 ms.topic: how-to
@@ -13,45 +13,45 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: eb0db0bab5295925f71a81645e64fdeb5f2077df
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: f8aabb109de02a1beec326407472a841fe16425a
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809564"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798447"
 ---
-# <a name="record-and-replay-live-aspnet-apps-on-azure-virtual-machines-using-the-snapshot-debugger"></a>Registre e reproduza aplicativos ASP.NET ao vivo em máquinas virtuais do Azure usando o Depurador de Instantâneos
+# <a name="record-and-replay-live-aspnet-apps-on-azure-virtual-machines-using-the-snapshot-debugger"></a>Registrar e repetir aplicativos ASP.NET em máquinas virtuais do Azure usando o Depurador de Instantâneos
 
-A visualização de TTD (depuração de viagem de tempo) no Visual Studio Enterprise fornece a capacidade de gravar um aplicativo Web em execução em uma VM (máquina virtual) do Azure e, em seguida, reconstruir e reproduzir com precisão o caminho de execução. O TTD integra-se com o Depurador de Instantâneos e permite que você retroceda e reproduza cada linha de código quantas vezes desejar, ajudando-o a isolar e identificar problemas que podem ocorrer apenas em ambientes de produção.
+A versão prévia da TTD (Depuração de Viagem no Tempo) no Visual Studio Enterprise fornece a capacidade de registrar um aplicativo Web em execução em uma VM (Máquina Virtual) do Azure e, em seguida, reconstruir e repetir com precisão o caminho de execução. O TTD se integra ao Depurador de Instantâneos e permite que você rewind e replay cada linha de código quantas vezes você quiser, ajudando você a isolar e identificar problemas que podem ocorrer apenas em ambientes de produção.
 
-Capturar uma gravação de TTD não interromperá o aplicativo. No entanto, a gravação de TDD adiciona sobrecarga significativa ao seu processo em execução, reduzindo-a com base em fatores que incluem o tamanho do processo e o número de threads ativos.
+Capturar uma gravação TTD não interromperá o aplicativo. No entanto, a gravação de TDD adiciona sobrecarga significativa ao seu processo de execução, retardando-o com base em fatores que incluem o tamanho do processo e o número de threads ativos.
 
-Este recurso está em versão prévia para o lançamento do Visual Studio 2019 com uma licença do Go Live.
+Esse recurso está em versão prévia para o lançamento do Visual Studio 2019 com uma licença go live.
 
 Neste tutorial, você irá:
 
 > [!div class="checklist"]
-> * Iniciar a Depurador de Instantâneos com a depuração de viagem de tempo habilitada
-> * Definir um snappoint e coletar um horário de gravação de viagem
-> * Começar a depurar uma gravação de viagem de tempo
+> * Iniciar o Depurador de Instantâneos com a Depuração de Viagem no Tempo habilitada
+> * Definir um snappoint e coletar uma gravação de viagem no tempo
+> * Iniciar a depuração de uma gravação de viagem no tempo
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* A depuração de viagem de tempo para VMs (máquinas virtuais) do Azure só está disponível para o Visual Studio 2019 Enterprise ou superior com a **carga de trabalho de desenvolvimento do Azure**. (Na guia **Componentes individuais**,é possível encontrá-lo em **Depuração e testes** > **Depurador de instantâneos**).
+* A Depuração de Viagem no Tempo para VMs (Máquinas Virtuais) do Azure só está disponível para o Visual Studio 2019 Enterprise ou superior com a carga de trabalho **de desenvolvimento do Azure**. (Na guia **Componentes individuais**,é possível encontrá-lo em **Depuração e testes** > **Depurador de instantâneos**).
 
-    Se ele ainda não estiver instalado, instale o [Visual Studio 2019 Enterprise](https://visualstudio.microsoft.com/vs/).
+    Se ele ainda não estiver instalado, instale o [Visual Studio 2019 Enterprise.](https://visualstudio.microsoft.com/vs/)
 
-* A depuração de viagem de tempo está disponível para os seguintes aplicativos Web da VM do Azure:
-  * ASP.NET Applications (AMD64) em execução no .NET Framework 4,8 ou posterior.
+* A Depuração de Viagem no Tempo está disponível para os seguintes aplicativos Web de VM do Azure:
+  * ASP.NET aplicativos (AMD64) em execução .NET Framework 4.8 ou posterior.
 
-## <a name="start-the-snapshot-debugger-with-time-travel-debugging-enabled"></a>Iniciar a Depurador de Instantâneos com a depuração de viagem de tempo habilitada
+## <a name="start-the-snapshot-debugger-with-time-travel-debugging-enabled"></a>Iniciar o Depurador de Instantâneos com a Depuração de Viagem no Tempo habilitada
 
-1. Abra o projeto para o qual você gostaria de coletar uma gravação de viagem de tempo.
+1. Abra o projeto para o qual você gostaria de coletar uma gravação de viagem no tempo.
 
     > [!IMPORTANT]
-    > Para iniciar o TTD, você precisa abrir a *mesma versão do código-fonte* que é publicado em seu serviço de VM do Azure.
+    > Para iniciar o TTD, você precisa abrir *a* mesma versão do código-fonte publicada no serviço de VM do Azure.
 
-1. Escolha **depurar > anexar depurador de instantâneos...**. Selecione a VM do Azure em que seu aplicativo Web é implantado e uma conta de armazenamento do Azure. Selecione a opção **habilitar visualização de viagem de tempo de depuração** e clique em **anexar**.
+1. Escolha **Depurar > Anexar Depurador de Instantâneos...**. Selecione a VM do Azure em que seu aplicativo Web está implantado e uma conta de armazenamento do Azure. Selecione a opção **habilitar visualização de viagem de tempo de depuração** e clique em **anexar**.
 
       ![Selecionar recurso do Azure](../debugger/media/time-travel-debugging-select-azure-resource-vm.png)
 
@@ -95,17 +95,17 @@ Quando um snappoint é ativado, ele captura um instantâneo sempre que a linha d
 
 1. Clique no link exibir instantâneo para abrir a hora de gravação de viagem no editor de códigos.
   
-   Você pode executar cada linha de código registrada pelo TTD usando os botões **continue** e **Reverse continue** . Além disso, a barra de ferramentas de **depuração** pode ser usada para **mostrar a próxima instrução** **, entrar, passar** **por**etapas, **sair**, voltar para, voltar **para** **trás,** **voltar.**
+   Você pode executar cada linha de código registrada pelo TTD usando os botões **continue** e **Reverse continue** . Além disso, a barra de ferramentas de **depuração** pode ser usada para **mostrar a próxima instrução** **, entrar, passar** **por** etapas, **sair**, voltar para, voltar **para** **trás,** **voltar.**
 
    ![Iniciar Depuração](../debugger/media/time-travel-debugging-step-commands.png)
 
-   Você também pode usar as janelas **locais**, **inspeções**e **pilha de chamadas** e também avaliar expressões.
+   Você também pode usar as janelas **locais**, **inspeções** e **pilha de chamadas** e também avaliar expressões.
 
    ![Inspecionar dados de instantâneo](../debugger/media/time-travel-debugging-start-debugging.png)
 
     O próprio site ainda é dinâmico e os usuários finais não são afetados por nenhuma atividade TTD subsequente. Apenas um instantâneo é capturado por snappoint por padrão: após a captura de um instantâneo, o snappoint é desativado. Se você quiser capturar outro instantâneo no snappoint, poderá ativar o snappoint novamente clicando em **Atualizar Coleção**.
 
-**Precisa de ajuda?** Consulte as páginas [Solução de problemas e problemas conhecidos](../debugger/debug-live-azure-apps-troubleshooting.md) e [Perguntas frequentes sobre depuração de instantâneo](../debugger/debug-live-azure-apps-faq.md).
+**Precisa de ajuda?** Consulte as páginas [Solução de problemas e problemas conhecidos](../debugger/debug-live-azure-apps-troubleshooting.md) e [Perguntas frequentes sobre depuração de instantâneo](../debugger/debug-live-azure-apps-faq.yml).
 
 ## <a name="set-a-conditional-snappoint"></a>Definir um snappoint condicional
 
@@ -113,7 +113,7 @@ Se você tiver dificuldades para recriar um estado específico em seu aplicativo
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Neste tutorial, você aprendeu a coletar uma gravação de viagem de tempo para máquinas virtuais do Azure. Talvez você queira ler mais detalhes sobre Depurador de Instantâneos.
+Neste tutorial, você aprendeu a coletar uma gravação de viagem no tempo para Máquinas Virtuais do Azure. Talvez você queira ler mais detalhes sobre Depurador de Instantâneos.
 
 > [!div class="nextstepaction"]
-> [Perguntas frequentes sobre depuração de instantâneo](../debugger/debug-live-azure-apps-faq.md)
+> [Perguntas frequentes sobre depuração de instantâneo](../debugger/debug-live-azure-apps-faq.yml)

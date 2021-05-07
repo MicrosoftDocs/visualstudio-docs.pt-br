@@ -1,7 +1,7 @@
 ---
 title: Depurar aplicativos do Azure ASP.NET dinâmicos
 titleSuffix: Visual Studio Enterprise
-description: Saiba como usar o Depurador de Instantâneos no Visual Studio para definir snappoints e tirar instantâneos ao depurar aplicativos do Azure ASP.NET Live.
+description: Saiba como usar o Depurador de Instantâneos no Visual Studio para definir snappoints e tirar instantâneos durante a depuração de aplicativos ASP.NET do Azure.
 ms.custom: ''
 ms.date: 03/16/2018
 ms.topic: how-to
@@ -13,12 +13,12 @@ manager: jmartens
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: 53a7d00548e6d273e2afa2da48669b3d1f3cf827
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 94c65814572c99f95d7a6edc6769e5af0ea6e748
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873318"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798369"
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>Depurar aplicativos do Azure ASP.NET dinâmicos usando o Depurador de Instantâneos
 
@@ -35,13 +35,13 @@ Neste tutorial, você irá:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* Depurador de Instantâneos só está disponível a partir do Visual Studio 2017 Enterprise versão 15,5 ou superior com a **carga de trabalho de desenvolvimento do Azure**. (Na guia **Componentes individuais**,é possível encontrá-lo em **Depuração e testes** > **Depurador de instantâneos**).
+* Depurador de Instantâneos está disponível somente a partir do Visual Studio 2017 Enterprise versão 15.5 ou superior com a carga **de trabalho de desenvolvimento do Azure**. (Na guia **Componentes individuais**,é possível encontrá-lo em **Depuração e testes** > **Depurador de instantâneos**).
 
    ::: moniker range=">=vs-2019"
-   Se ele ainda não estiver instalado, instale o [Visual Studio 2019](https://visualstudio.microsoft.com/downloads). Se você estiver atualizando de uma instalação anterior do Visual Studio, execute o Instalador do Visual Studio e verifique o componente Depurador de Instantâneos na **carga de trabalho ASP.net e de desenvolvimento na Web**.
+   Se ele ainda não estiver instalado, instale o [Visual Studio 2019](https://visualstudio.microsoft.com/downloads). Se você estiver atualizando de uma instalação de Visual Studio anterior, execute o Instalador do Visual Studio e verifique o componente Depurador de Instantâneos na carga de trabalho ASP.NET desenvolvimento para a **Web.**
    ::: moniker-end
    ::: moniker range="<=vs-2017"
-   Se ainda não estiver instalado, instale a [versão 15.5 do Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ou posterior. Se você estiver atualizando de uma instalação anterior do Visual Studio 2017, execute o Instalador do Visual Studio e verifique o componente Depurador de Instantâneos na **carga de trabalho de desenvolvimento da Web e ASP.net**.
+   Se ainda não estiver instalado, instale a [versão 15.5 do Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ou posterior. Se você estiver atualizando de uma instalação anterior do Visual Studio 2017, execute o Instalador do Visual Studio e verifique o componente Depurador de Instantâneos na carga de trabalho ASP.NET desenvolvimento para a **Web.**
    ::: moniker-end
 
 * Plano de Serviço de Aplicativo do Azure básico ou avançado.
@@ -67,7 +67,7 @@ Neste tutorial, você irá:
 
 ::: moniker range=">=vs-2019"
 
-2. Escolha **depurar > anexar depurador de instantâneos...**. Selecione o serviço de Azure App em que seu projeto é implantado e uma conta de armazenamento do Azure e clique em **anexar**. O Depurador de Instantâneos também dá suporte ao [serviço kubernetes do Azure](debug-live-azure-kubernetes.md) e às [VMS (máquinas virtuais) do Azure & conjuntos de dimensionamento de máquinas virtuais](debug-live-azure-virtual-machines.md).
+2. Escolha **Depurar > Anexar Depurador de Instantâneos...**. Selecione a Serviço de Aplicativo do Azure em que seu projeto está implantado e uma conta de armazenamento do Azure e clique em **Anexar**. Depurador de Instantâneos também dá suporte [Serviço de Kubernetes do Azure](debug-live-azure-kubernetes.md) [VM (Máquinas Virtuais) do Azure &](debug-live-azure-virtual-machines.md)conjuntos de dimensionar máquinas virtuais.
 
    ![Iniciar o depurador de instantâneos no menu Depurar](../debugger/media/snapshot-debug-menu-attach.png)
 
@@ -80,11 +80,11 @@ Neste tutorial, você irá:
 
    ::: moniker range="<=vs-2017"
    > [!NOTE]
-   > A extensão de site do Application Insights também dá suporte à depuração de instantâneos. Se você entrar em uma mensagem de erro "extensão do site desatualizada", consulte Dicas de solução de problemas [e problemas conhecidos para depuração de instantâneo](../debugger/debug-live-azure-apps-troubleshooting.md) para atualizar os detalhes.
+   > A extensão de site do Application Insights também dá suporte à depuração de instantâneos. Se você encontrar uma mensagem de erro "extensão de site desagregue", confira dicas de solução de problemas e problemas conhecidos para [depuração de](../debugger/debug-live-azure-apps-troubleshooting.md) instantâneos para atualizar detalhes.
    ::: moniker-end
    ::: moniker range=">=vs-2019"
    > [!NOTE]
-   > (Visual Studio 2019 versão 16,2 e superior) O Depurador de Instantâneos habilitou o suporte à nuvem do Azure. Verifique se o recurso do Azure e a conta de armazenamento do Azure selecionados são da mesma nuvem. Entre em contato com o administrador do Azure se você tiver dúvidas sobre as configurações de [conformidade do Azure](https://azure.microsoft.com/overview/trusted-cloud/) da sua empresa.
+   > (Visual Studio 2019 versão 16.2 e superior) Depurador de Instantâneos habilitar o suporte à nuvem do Azure. Certifique-se de que o recurso do Azure e a conta de Armazenamento do Azure selecionados sejam da mesma nuvem. Entre em contato com o administrador do Azure se tiver dúvidas sobre as configurações de conformidade do [Azure](https://azure.microsoft.com/overview/trusted-cloud/) da sua empresa.
    ::: moniker-end
 
    O Visual Studio agora está no modo de depuração de instantâneos.
@@ -96,7 +96,7 @@ Neste tutorial, você irá:
 
 ## <a name="set-a-snappoint"></a>Definir um snappoint
 
-1. No editor de código, clique na medianiz à esquerda ao lado de uma linha de código em que você está interessado para definir um snappoint. Verifique se o código que você sabe que será executado.
+1. No editor de códigos, clique na medianiz esquerda ao lado de uma linha de código em que você está interessado para definir um snappoint. Certifique-se de que é o código que você sabe que será executado.
 
    ![Definir um snappoint](../debugger/media/snapshot-set-snappoint.png)
 
@@ -109,7 +109,7 @@ Neste tutorial, você irá:
 
 ## <a name="take-a-snapshot"></a>Tirar um instantâneo
 
-Quando um snappoint é definido, você pode gerar manualmente um instantâneo acessando a exibição do navegador do seu site e executando a linha de código marcada ou aguardando que os usuários gerem um a partir de seu uso do site.
+Depois que um snappoint for definido, você poderá gerar um instantâneo manualmente indo para a exibição do navegador do site e executando a linha de código marcada ou aguarde até que os usuários gerem um usando o site.
 
 ## <a name="inspect-snapshot-data"></a>Inspecionar dados de instantâneo
 
@@ -127,7 +127,7 @@ Quando um snappoint é definido, você pode gerar manualmente um instantâneo ac
 
 Você também pode adicionar mais snappoints ao seu aplicativo e ativá-los com o botão **Atualizar Coleção**.
 
-**Precisa de ajuda?** Consulte as páginas [Solução de problemas e problemas conhecidos](../debugger/debug-live-azure-apps-troubleshooting.md) e [Perguntas frequentes sobre depuração de instantâneo](../debugger/debug-live-azure-apps-faq.md).
+**Precisa de ajuda?** Consulte as páginas [Solução de problemas e problemas conhecidos](../debugger/debug-live-azure-apps-troubleshooting.md) e [Perguntas frequentes sobre depuração de instantâneo](../debugger/debug-live-azure-apps-faq.yml).
 
 ## <a name="set-a-conditional-snappoint"></a>Definir um snappoint condicional
 
@@ -170,4 +170,4 @@ Além de tirar um instantâneo quando um snappoint é atingido, também é poss�
 Neste tutorial, você aprendeu como usar o Depurador de Instantâneos para Serviços de Aplicativos. Talvez você queira ler mais detalhes sobre esse recurso.
 
 > [!div class="nextstepaction"]
-> [Perguntas frequentes sobre depuração de instantâneo](../debugger/debug-live-azure-apps-faq.md)
+> [Perguntas frequentes sobre depuração de instantâneo](../debugger/debug-live-azure-apps-faq.yml)

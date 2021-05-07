@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: e435502587e65bd694567f4100516a91fa97cc0a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d6f9c36b1b64abe648c3aa9014c633e4e4949b1a
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867861"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798252"
 ---
 # <a name="migrate-from-fxcop-analyzers-to-net-analyzers"></a>Migrar de analisadores do FxCop para analisadores de .NET
 
@@ -47,10 +47,10 @@ A partir da versão `3.3.2` , o `Microsoft.CodeAnalysis.FxCopAnalyzers` pacote N
    </PropertyGroup>
    ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Análise de código-fonte versus análise herdada](net-analyzers-faq.md#whats-the-difference-between-legacy-fxcop-and-net-analyzers)
+- [Análise de código-fonte versus análise herdada](net-analyzers-faq.yml#what-s-the-difference-between-legacy-fxcop-and--net-analyzers-)
 - [Migrar da análise herdada para analisadores de .NET](migrate-from-legacy-analysis-to-net-analyzers.md)
-- [Habilitar ou instalar analisadores .NET](install-net-analyzers.md)
-- [Perguntas frequentes sobre os analisadores do .NET](net-analyzers-faq.md)
+- [Habilitar ou instalar analisadores do .NET](install-net-analyzers.md)
+- [Perguntas frequentes sobre analisadores .NET](net-analyzers-faq.yml)
 - [Configurar analisadores .NET](/dotnet/fundamentals/code-analysis/code-quality-rule-options)
