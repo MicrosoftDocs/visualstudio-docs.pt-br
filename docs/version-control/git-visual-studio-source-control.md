@@ -1,34 +1,36 @@
 ---
-title: Como o Visual Studio torna o controle do código-fonte fácil
+title: Como Visual Studio facilita o controle do código-fonte
 titleSuffix: ''
-description: Saiba como usar o Git & GitHub no Visual Studio para controlar as alterações no seu código e revertê-las, se necessário.
+description: Saiba como usar o Git & GitHub no Visual Studio para controlar as alterações em seu código e reverti-las se necessário.
 ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jmartens
-ms.openlocfilehash: f6213174bbef5c4d5976e410f92b771b34ae6f23
-ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
+ms.openlocfilehash: 982eea07b6668678669ac73678f6a0460a4ebff0
+ms.sourcegitcommit: a0f5e7188838c5989c9cc78d99fb29bb2813501e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2021
-ms.locfileid: "107917660"
+ms.lasthandoff: 05/11/2021
+ms.locfileid: "109729233"
 ---
-# <a name="how-visual-studio-makes-source-control-easy"></a>Como o Visual Studio torna o controle do código-fonte fácil
+# <a name="how-visual-studio-makes-source-control-easy"></a>Como Visual Studio facilita o controle do código-fonte
 
-Você já quisou que poderia voltar para uma versão de trabalho anterior do seu código? Você se encontra armazenando manualmente cópias do seu código em locais diferentes como um backup? O controle do código-fonte possibilita controlar as alterações feitas em seu código ao longo do tempo, para que você possa controlar seu progresso e reverter para versões específicas. O Visual Studio facilita o trabalho com o Git, que é o sistema de controle de versão moderno mais amplamente usado.
+Você já pediu que poderia voltar para uma versão de trabalho anterior do seu código? Você se encontra armazenar manualmente cópias do código em locais diferentes como um backup? O controle do código-fonte possibilita acompanhar as alterações feitas no código ao longo do tempo para que você possa acompanhar o progresso e reverter para versões específicas. Visual Studio facilita o trabalho com o Git, que é o sistema de controle de versão moderno mais amplamente usado.
 
 ## <a name="a-great-place-to-start-with-git--github"></a>Um ótimo lugar para começar com o Git & GitHub
 
-O GitHub oferece armazenamento de código de nuvem gratuito e seguro, onde você pode armazenar seu código e acessá-lo de qualquer dispositivo, em qualquer lugar. O Visual Studio é fornecido com a funcionalidade de git e GitHub de primeira classe que facilita o uso do controle do código-fonte para gerenciar seu códigos e colaborar com outras pessoas. Comece adicionando seu código ao git & GitHub com a caixa de diálogo **criar um repositório git** a seguir. Para fazer isso, escolha **git**  >  **criar um repositório git** na barra de menus.
+O GitHub oferece armazenamento de código de nuvem gratuito e seguro, no qual você pode armazenar seu código e acessá-lo de qualquer dispositivo, em qualquer lugar. Visual Studio vem com a funcionalidade de primeira classe do Git e do GitHub que facilita o uso do controle do código-fonte para gerenciar seu código e colaborar com outras pessoas. Para começar, adicione seu código ao Git & GitHub com a caixa de diálogo Criar **um repositório Git a** seguir. Para fazer isso, escolha **Git**  >  **Criar um repositório Git na** barra de menus.
 
-:::image type="content" source="media/git-source-control-create-repository.png" alt-text="A caixa de diálogo criar um repositório git no Visual Studio.":::
+:::image type="content" source="media/git-source-control-create-repository.png" alt-text="A caixa de diálogo Criar um Repositório Git Visual Studio.":::
 
-Você também pode usar o GitHub para explorar e aprender com um grande número de repositórios de código-fonte aberto. O Visual Studio torna mais fácil clonar e navegar por repositórios GitHub existentes, portanto, é um excelente ambiente de aprendizado.
+Você também pode usar o GitHub para explorar e aprender com um grande número de repositórios de software livre. Visual Studio torna mais fácil clonar e procurar repositórios GitHub existentes, portanto, é um ótimo ambiente de aprendizado.
 
-## <a name="streamlined-and-intuitive-inner-loop-git-experience"></a>Experiência de git de loop interno simplificada e intuitiva
+## <a name="streamlined-and-intuitive-inner-loop-git-experience"></a>Experiência do Git de loop interno simplificado e intuitivo
 
-O Visual Studio fornece recursos git detectáveis e intuitivos focados na maximização da produtividade do fluxo de trabalho diário (loop interno). Você não precisa mais sair do seu código para confirmar suas alterações. Esses recursos incluem um menu de nível superior do git, uma janela de alterações do git e uma barra de status centrada no git. O Git integra-se com o Visual Studio como uma experiência holística; por exemplo, tanto Gerenciador de Soluções quanto o editor de código têm uma integração do git de primeira classe.
+Visual Studio fornece recursos git descobriveis e intuitivos voltados para maximizar a produtividade do fluxo de trabalho diário (loop interno). Você não precisa mais sair do código para fazer commit das alterações. Esses recursos incluem um menu Git de nível superior, uma janela Alterações do Git e uma barra de Status voltada para Git. O Git se integra ao Visual Studio como uma experiência holística; por exemplo, os Gerenciador de Soluções e o Editor de Códigos têm uma integração git de primeira classe.
 
 :::image type="content" source="media/git-source-control-inner-loop.png" alt-text="O IDE do Visual Studio com o menu git e a guia alterações do git em Gerenciador de Soluções mostrados.":::
 
@@ -48,8 +50,8 @@ A integração do git no Visual Studio promove a confiança e a confiança forne
 
 Para saber mais sobre como usar o git e o GitHub no Visual Studio, Assista ao seguinte vídeo do YouTube: [introdução ao git no Visual Studio](https://www.youtube.com/watch?v=GCZ9x3yqkyc&list=PLReL099Y5nRc-zbaFbf0aNcIamBQujOxP)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Introdução ao Git e ao GitHub no Visual Studio](/learn/modules/visual-studio-github-push/)
+- [Introdução ao git e ao GitHub no Visual Studio](/learn/modules/visual-studio-github-push/)
 - [A nova experiência de git no Visual Studio](git-with-visual-studio.md)
 - [Compare o git e o Team Explorer lado a lado](git-team-explorer-feature-comparison.md)

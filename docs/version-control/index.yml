@@ -1,48 +1,48 @@
 ### YamlMime:Landing
-title: Documentação do controle de versão do Visual Studio
-summary: Compartilhe seu código no Visual Studio 2019 usando tecnologias de controle de versão, como git e GitHub.
+title: Visual Studio de controle de versão
+summary: Compartilhe seu código de dentro do Visual Studio 2019 usando tecnologias de controle de versão, como Git e GitHub.
 metadata:
   title: Controle de versão no Visual Studio
-  description: Tecnologias de controle de versão, como git e GitHub, estão disponíveis diretamente no Visual Studio. Você pode usá-los para compartilhar e gerenciar seu código sem sair de sua base de código.
+  description: As tecnologias de controle de versão, como Git e GitHub, estão disponíveis diretamente no Visual Studio. Você pode usá-los para compartilhar e gerenciar seu código sem sair da base de código.
   ms.topic: landing-page
   ms.date: 04/20/2021
   author: TerryGLee
   ms.author: tglee
   manager: jmartens
   ms.prod: visual-studio-windows
-  ms.technology: vs-general-ide
-  ms.openlocfilehash: a377d39b0d8184dc7aca038238f2dacb0345627d
-  ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
+  ms.technology: vs-ide-general
+  ms.openlocfilehash: 50226243cc698391d79a52371262ec6202b45ad9
+  ms.sourcegitcommit: a0f5e7188838c5989c9cc78d99fb29bb2813501e
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/23/2021
-  ms.locfileid: "107917658"
+  ms.lasthandoff: 05/11/2021
+  ms.locfileid: "109729220"
 landingContent:
 - title: Visão geral
   linkLists:
   - linkListType: overview
     links:
-    - text: Experiência de git no Visual Studio
+    - text: Experiência do Git no Visual Studio
       url: git-with-visual-studio.md
   - linkListType: concept
     links:
-    - text: Como o Visual Studio torna o controle do código-fonte fácil
+    - text: Como Visual Studio facilita o controle do código-fonte
       url: git-visual-studio-source-control.md
 - title: Introdução
   linkLists:
   - linkListType: learn
     links:
-    - text: Introdução ao git e ao GitHub no Visual Studio
+    - text: Introdução ao Git e ao GitHub no Visual Studio
       url: /learn/modules/visual-studio-github-push/
   - linkListType: how-to-guide
     links:
-    - text: Compare o git e o Team Explorer lado a lado
+    - text: Comparar Git e Team Explorer lado a lado
       url: git-team-explorer-feature-comparison.md
 - title: Novidades
   linkLists:
   - linkListType: whats-new
     links:
-    - text: Produtividade aprimorada com o Git no Visual Studio (visualização)
+    - text: Produtividade aprimorada com o Git Visual Studio (versão prévia)
       url: https://devblogs.microsoft.com/visualstudio/enhanced-productivity-with-git-in-visual-studio/
     - text: Notas de versão do Visual Studio 2019
       url: /visualstudio/releases/2019/release-notes/
