@@ -1,6 +1,6 @@
 ---
 title: Introdução às Ferramentas do Visual Studio para Unity | Microsoft Docs
-description: Saiba como instalar e configurar o Visual Studio para desenvolvimento do Unity.
+description: Saiba como instalar e configurar o Visual Studio desenvolvimento do Unity.
 ms.custom: ''
 ms.date: 01/27/2021
 ms.technology: vs-unity-tools
@@ -13,48 +13,48 @@ manager: crdun
 ms.workload:
 - unity
 zone_pivot_groups: platform
-ms.openlocfilehash: e05a94ecf9cf690f46299684c82f2b3961a783c8
-ms.sourcegitcommit: 585547ea7363ab1b6bb9d41f6d008cbe478d1a3b
+ms.openlocfilehash: 791f25b61c86f0115c225d505bdb1edb07869961
+ms.sourcegitcommit: 69256dc47489853dc66a037f5b0c1275977540c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98912562"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109782602"
 ---
-# <a name="get-started-with-visual-studio-and-unity"></a>Introdução ao Visual Studio e ao Unity
+# <a name="get-started-with-visual-studio-and-unity"></a>Começar a trabalhar com Visual Studio e Unity
 
 > [!NOTE]
-> Este guia pressupõe que você já instalou o Unity usando o programa do Hub do Unity. Se você for novo no Unity, é recomendável visitar o Unity Learn e concluir primeiro o [roteiro de aprendizagem do Unity Essentials](https://learn.unity.com/pathway/unity-essentials) .
+> Este guia pressu que você já instalou o Unity usando o programa hub do Unity. Se você for novo no Unity, recomendamos visitar o Unity Learn e concluir o caminho de aprendizagem do [Unity Essentials](https://learn.unity.com/pathway/unity-essentials) primeiro.
 
-## <a name="install-unity-support-for-visual-studio"></a>Instalar o suporte do Unity para o Visual Studio
+## <a name="install-unity-support-for-visual-studio"></a>Instalar o suporte do Unity para Visual Studio
 
-Ferramentas do Visual Studio para Unity é uma extensão gratuita que fornece suporte para escrever e depurar C# e muito mais. Visite a [visão geral do Tools for Unity](./visual-studio-tools-for-unity.md) para obter uma lista completa do que as extensões incluem.
+Ferramentas do Visual Studio para Unity é uma extensão gratuita que fornece suporte para escrever e depurar C# e muito mais. Visite a [visão geral das Ferramentas para Unity](./visual-studio-tools-for-unity.md) para ver uma lista completa do que as extensões incluem.
 
 :::zone pivot="windows"
 
 > [!NOTE]
-> Este guia de instalação é para o Visual Studio. Se você estiver usando Visual Studio Code, visite a [documentação de desenvolvimento do Unity com vs Code](https://code.visualstudio.com/docs/other/unity).
+> Este guia de instalação é para Visual Studio. Se você estiver usando o Visual Studio Code, visite a documentação Desenvolvimento [do Unity com VS Code .](https://code.visualstudio.com/docs/other/unity)
 
-1. [Baixe o instalador do Visual Studio](/visualstudio/docs/install/install-visual-studio.md)ou execute-o se já estiver instalado.
+1. [Baixe o Visual Studio ou](/visualstudio/install/install-visual-studio.md)execute-o se já estiver instalado.
 2. Clique em **Modificar** (se já estiver instalado) ou em **Instalar** (para novas instalações) para a versão desejada do Visual Studio.
-3. Na guia **cargas de trabalho** , role até a seção **jogos** e selecione o **desenvolvimento de jogos com** carga de trabalho do Unity.
+3. Na guia **Cargas de** trabalho, role até **a seção Jogos** e selecione a carga de trabalho Desenvolvimento de jogos com **Unity.**
 
-    ![Desenvolvimento de jogos com a caixa carga de trabalho do Unity no instalador](../media/vs/unity-workload.png)
+    ![Caixa de trabalho Desenvolvimento de jogos com Unity no instalador](../media/vs/unity-workload.png)
 
 :::zone-end
 :::zone pivot="macos"
 
 > [!NOTE]
-> Este guia de instalação é para Visual Studio para Mac. Se você estiver usando Visual Studio Code, visite a [documentação de desenvolvimento do Unity com vs Code](https://code.visualstudio.com/docs/other/unity).
+> Este guia de instalação é para Visual Studio para Mac. Se você estiver usando o Visual Studio Code, visite a documentação Desenvolvimento [do Unity com VS Code .](https://code.visualstudio.com/docs/other/unity)
 
-As ferramentas para o Unity estão incluídas na instalação do Visual Studio para Mac e não são necessárias etapas de instalação separadas. Você pode verificar isso no menu **Visual Studio para Mac > Extensions > desenvolvimento de jogos** . As **ferramentas de Visual Studio para Mac para Unity** devem ser habilitadas.
+As ferramentas para Unity estão incluídas na instalação do Visual Studio para Mac e nenhuma etapa de instalação separada é necessária. Você pode verificar isso no menu **Visual Studio para Mac > Extensões > Game Development.** **Visual Studio para Mac Ferramentas para Unity** devem ser habilitadas.
 
-![Exibição do Gerenciador de extensões mostrando as ferramentas de Visual Studio para Mac para o Unity habilitado](../media/vsm/unity-workload.png)
+![Exibição do Gerenciador de Extensões mostrando Visual Studio para Mac ferramentas para Unity habilitadas](../media/vsm/unity-workload.png)
 
 :::zone-end
 
 ## <a name="check-for-updates"></a>Verificar atualizações
 
-É recomendável manter o Visual Studio e Visual Studio para Mac atualizado para que você tenha as mais recentes correções de bugs, recursos e suporte do Unity. Isso não requer uma atualização das versões do Unity.
+É recomendável manter o Visual Studio e Visual Studio para Mac para que você tenha as correções de bug, os recursos e o suporte ao Unity mais recentes. Isso não requer uma atualização das versões do Unity.
 
 :::zone pivot="windows"
 
