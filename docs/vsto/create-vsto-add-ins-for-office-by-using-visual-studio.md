@@ -1,9 +1,9 @@
 ---
 title: Criar suplementos do VSTO para o Office usando o Visual Studio
-description: Saiba como você pode usar as ferramentas de desenvolvedor de Microsoft Office no Visual Studio para criar .NET Framework aplicativos que estendam o Office.
+description: Saiba como você pode usar as ferramentas Microsoft Office desenvolvedor no Visual Studio para criar .NET Framework aplicativos que estendem o Office.
 titleSuffix: ''
 ms.custom: seodec18, SEO-VS-2020
-ms.date: 08/14/2019
+ms.date: 04/28/2021
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -13,24 +13,27 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 611feb69dc4c5ebdd340a61c49e76e0d7c33e713
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 990caeec642a745bec5b6e0f2d29ff5d6213d095
+ms.sourcegitcommit: 9cb0097c33755a3e5cbadde3b0a6e9e76cee727d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947952"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "109848312"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Criar suplementos do VSTO para o Office usando o Visual Studio
-  Você pode usar as ferramentas de desenvolvedor de Microsoft Office no Visual Studio para criar .NET Framework aplicativos que estendam o Office. Esses aplicativos também são chamados de *soluções do Office*.
+> [!IMPORTANT]
+> O VSTO depende do [.NET Framework](https://docs.microsoft.com/dotnet/framework/get-started/overview). Os complementos COM também podem ser escritos com o .NET Framework. Os complementos do Office não podem ser criados com o .NET Core e [o .NET 5+](https://docs.microsoft.com/dotnet/core/dotnet-five), as versões mais recentes do .NET. Isso porque o .NET Core/.NET 5+ não pode trabalhar junto com .NET Framework no mesmo processo e pode levar a falhas de carga de complemento. Você pode continuar a usar .NET Framework para gravar os complementos VSTO e COM para o Office. A Microsoft não atualizará o VSTO ou a plataforma de complemento COM para usar o .NET Core ou o .NET 5+. Você pode aproveitar o .NET Core e o .NET 5+, incluindo ASP.NET Core, para criar o lado do servidor dos [complementos da Web do Office.](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins)
+
+  Você pode usar as Microsoft Office de desenvolvedor no Visual Studio para criar .NET Framework aplicativos que estendem o Office. Esses aplicativos também são nomeados *soluções do Office.*
 
  As ferramentas do desenvolvedor do Office fornecem recursos que ajudam a criar soluções do Office para atender a uma variedade de necessidades comerciais. As ferramentas incluem modelos de projeto para ajudá-lo a criar soluções do Office usando Visual Basic ou Visual C#, além de designers visuais que ajudam a criam interfaces de usuário personalizada para as soluções do Office.
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
- Para obter as informações mais recentes sobre o desenvolvimento do Office, consulte o [centro de desenvolvedores do Microsoft Office](https://developer.microsoft.com/office/docs).
+ Para obter as informações mais recentes sobre o desenvolvimento do Office, [consulte o Microsoft Office de desenvolvedores.](https://developer.microsoft.com/office/docs)
 
 ## <a name="in-this-section"></a>Nesta seção
-- [Introdução &#40;desenvolvimento do Office no Visual Studio&#41;](getting-started-office-development-in-visual-studio.md)
+- [Começar a &#40;do Office no Visual Studio&#41;](getting-started-office-development-in-visual-studio.md)
 
  Fornece links para informações sobre como configurar um computador de desenvolvimento para criar soluções do Office, como começar a criar soluções do Office e o que há de novo para desenvolvimento do Office no Visual Studio.
 
@@ -38,9 +41,9 @@ ms.locfileid: "99947952"
 
  Fornece links para informações sobre o processo de atualização de projetos criados usando versões anteriores do Visual Studio.
 
-- [Arquitetura de soluções do Office no Visual Studio](architecture-of-office-solutions-in-visual-studio.md)
+- [Arquitetura de soluções do Office Visual Studio](architecture-of-office-solutions-in-visual-studio.md)
 
- Fornece links para informações sobre como funcionam as soluções do Office, incluindo informações sobre personalizações em nível de documento e suplementos do VSTO.
+ Fornece links para informações sobre como as soluções do Office funcionam, incluindo informações sobre personalizações no nível do documento e complementos vsto.
 
 - [Projetar e criar soluções do Office](designing-and-creating-office-solutions.md)
 
@@ -56,7 +59,7 @@ ms.locfileid: "99947952"
 
 - [Soluções do InfoPath](infopath-solutions.md)
 
- Fornece informações sobre como criar modelos de formulário e suplementos do VSTO para o InfoPath.
+ Fornece informações sobre como criar modelos de formulário e complementos do VSTO para InfoPath.
 
 - [Soluções do Outlook](outlook-solutions.md)
 
@@ -111,12 +114,12 @@ ms.locfileid: "99947952"
  Contém links para informações sobre interfaces COM que você pode usar para executar ações como carregar e descarregar suplementos do VSTO gerenciados em aplicativos do Office.
 
 ## <a name="related-sections"></a>Seções relacionadas
-- [Desenvolvimento do Office com o portal do desenvolvedor do Visual Studio](https://developer.microsoft.com/office/docs) Fornece recursos adicionais, como artigos técnicos, vídeos e Blogs.
+- [Desenvolvimento do Office com Visual Studio portal do desenvolvedor](https://developer.microsoft.com/office/docs) Fornece recursos adicionais, como artigos técnicos, vídeos e blogs.
 
-- [Central de desenvolvedores do Visual Studio](https://visualstudio.microsoft.com/) Fornece recursos adicionais do Visual Studio, como artigos técnicos, vídeos e Blogs.
+- [Visual Studio de desenvolvedores](https://visualstudio.microsoft.com/) Fornece recursos Visual Studio recursos adicionais, como artigos técnicos, vídeos e blogs.
 
-- [Microsoft Office seção de desenvolvimento da biblioteca MSDN](/previous-versions/office/office-12/bb726434(v=office.12)) A área da biblioteca MSDN, na qual você pode encontrar artigos e documentação de referência sobre o desenvolvimento de soluções para várias versões do Office (não específicas do desenvolvimento do Office usando o Visual Studio).
+- [Microsoft Office de desenvolvimento da biblioteca MSDN](/previous-versions/office/office-12/bb726434(v=office.12)) A área da biblioteca MSDN em que você pode encontrar artigos e documentação de referência sobre como desenvolver soluções para várias versões do Office (não específicas para o desenvolvimento do Office usando Visual Studio).
 
-- [Desenvolvimento de aplicativos no Visual Studio](/previous-versions/h8w79z10(v=vs.140)) Contém links para tópicos que explicam como você pode usar o Visual Studio para projetar, desenvolver, depurar e implantar aplicativos Web, Web Services XML e aplicativos cliente tradicionais.
+- [Desenvolvimento de aplicativos Visual Studio](/previous-versions/h8w79z10(v=vs.140)) Contém links para tópicos que explicam como você pode usar o Visual Studio para projetar, desenvolver, depurar e implantar aplicativos Web, serviços Web XML e aplicativos cliente tradicionais.
 
-- [Programação de .NET Framework no Visual Studio](/previous-versions/visualstudio/visual-studio-2010/k1s94fta(v=vs.100)) Discute o desenvolvimento de aplicativos com o .NET Framework no Visual Basic e no Visual C#.
+- [.NET Framework programação em Visual Studio](/previous-versions/visualstudio/visual-studio-2010/k1s94fta(v=vs.100)) Discute o desenvolvimento de aplicativos com .NET Framework no Visual Basic e no Visual C#.

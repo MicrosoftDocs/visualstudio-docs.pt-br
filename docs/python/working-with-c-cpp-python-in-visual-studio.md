@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 286d5f2c316379316b1a1cf55334cab39cdc247c
-ms.sourcegitcommit: 69256dc47489853dc66a037f5b0c1275977540c0
+ms.openlocfilehash: 866b588b8b46477b397cda92076780d1955cfa83
+ms.sourcegitcommit: 9cb0097c33755a3e5cbadde3b0a6e9e76cee727d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109782628"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "109848299"
 ---
 # <a name="create-a-c-extension-for-python"></a>Criar uma extensão do C++ para o Python
 
@@ -120,12 +120,12 @@ Siga as instruções nesta seção para criar dois projetos de C++ idênticos ch
     ::: moniker range=">=vs-2019"
     | Tab | Propriedade | Valor |
     | --- | --- | --- |
-    | **Geral** | **Nome de destino** | Especifique o nome do módulo ao qual você deseja se referir do Python nas instruções `from...import`. Você pode usar esse mesmo nome em C++ ao definir o módulo para Python. Se você quiser usar o nome do projeto como o nome do módulo, deixe o valor padrão de **$(ProjectName)**. Para `python_d.exe` , adicione `_d` ao final do nome. |
-    | | **Tipo de Configuração** | **Biblioteca Dinâmica (.dll)** |
-    | **Avançado** | **Extensão do arquivo de destino** | **.pyd** |
+    | **Geral** | **Geral** > **Nome de Destino** | Especifique o nome do módulo ao qual você deseja se referir do Python nas instruções `from...import`. Você pode usar esse mesmo nome em C++ ao definir o módulo para Python. Se você quiser usar o nome do projeto como o nome do módulo, deixe o valor padrão de **$(ProjectName)**. |
+    | | **Avançado** > **Extensão do arquivo de destino** | **.pyd** |
+    | | **Padrões do Projeto** > **Tipo de Configuração** | **Biblioteca Dinâmica (.dll)** |
     | **C/C++** > **Geral** | **Diretórios de Inclusão Adicionais** | Adicione a pasta *include* do Python conforme apropriado para sua instalação, por exemplo, `c:\Python36\include`.  |
-    | **C/C++** > **Pré-processador** | **Definições do Pré-processador** | Se estiver presente, altere o valor de **_DEBUG** para **NDEBUG**, para corresponder à versão de não depuração de `CPython` . (Ao usar `python_d.exe` , deixe isso inalterado.) |
-    | **C/C++** > **Geração de Código** | **Biblioteca de Runtime** | **DLL multithreaded (/MD)** para corresponder à versão de não depuração de `CPython` . (Ao usar `python_d.exe` , deixe isso inalterado.) |
+    | **C/C++** > **Pré-processador** | **Definições do Pré-processador** | **Apenas CPython**: adicione `Py_LIMITED_API;` no início da cadeia de caracteres (inclusive o ponto e vírgula). Essa definição restringe algumas das funções que podem ser chamadas do Python e torna o código mais portável entre diferentes versões do Python. Se você estiver trabalhando com PyBind11, não adicione essa definição, caso contrário, verá erros de build. |
+    | **C/C++** > **Geração de Código** | **Biblioteca de Runtime** | **DLL com multi-thread (/MD)** (confira Aviso abaixo) |
     | **Vinculador** > **Geral** | **Diretórios de Biblioteca Adicionais** | Adicione a pasta *libs* do Python que contém arquivos *.lib* conforme apropriado para sua instalação, por exemplo, `c:\Python36\libs`. (Lembre-se de apontar para a pasta *libs* que contém arquivos *.lib* e *não* para a pasta *Lib* que contém arquivos *.py*.) |
     ::: moniker-end
     ::: moniker range="=vs-2017"
@@ -178,7 +178,7 @@ As seções a seguir explicam como executar essas etapas usando as `CPython` ext
 
 ### <a name="cpython-extensions"></a>Extensões de CPython
 
-Para obter mais informações sobre o que é mostrado nesta seção, [](https://docs.python.org/3/c-api/module.html) consulte o Manual de Referência da API do [Python/C](https://docs.python.org/3/c-api/index.html) e, especialmente, Os Objetos de Módulo no python.org (lembre-se de selecionar sua versão do Python no controle de lista inferior no canto superior direito para exibir a documentação correta).
+Para obter mais informações sobre o que é mostrado nesta seção, consulte o [manual de referência da API do Python/C](https://docs.python.org/3/c-api/index.html) e especialmente [objetos de módulo](https://docs.python.org/3/c-api/module.html) no Python.org (Lembre-se de selecionar sua versão do Python no controle suspenso no canto superior direito para exibir a documentação correta).
 
 1. Na parte superior de *module.cpp*, inclua *Python.h*:
 
@@ -288,7 +288,7 @@ O primeiro método funcionará se o projeto Python e o projeto C++ estiverem na 
 
 ![Adicionando uma referência ao projeto superfastcode](media/cpp-add-reference.png)
 
-O método alternativo, descrito nas etapas a seguir, instala o módulo em seu ambiente Python, disponibilizando-o para outros projetos do Python também. Visite o [projeto **setuptools**](https://setuptools.readthedocs.io/) para obter uma documentação mais completa.
+O método alternativo, descrito nas etapas a seguir, instala o módulo em seu ambiente python, disponibilizando-o para outros projetos do Python também. Visite o [ **projeto setuptools** para](https://setuptools.readthedocs.io/) obter uma documentação mais completa.
 
 1. Crie um arquivo chamado *setup.py* em seu projeto de C++ clicando com o botão direito do mouse no projeto e selecionando **Adicionar** > **Novo Item**. Em seguida, escolha **Arquivo do C++ (.cpp)**, nomeie o arquivo como `setup.py` e escolha **OK** (nomear o arquivo com a extensão *.py* faz com que o Visual Studio o reconheça como Python, apesar do uso do modelo do C++). Quando o arquivo for exibido no editor, cole o seguinte código nele conforme for adequado ao método de extensão:
 
@@ -381,7 +381,7 @@ Após disponibilizar a DLL para o Python conforme descrito na seção anterior, 
 
 1. Tente aumentar a variável `COUNT` para que as diferenças sejam mais evidentes. Uma compilação de **depuração** do módulo C++ também é executada mais lentamente do que uma compilação de **versão** porque a compilação de **depuração** é menos otimizada e contém várias verificações de erro. Sinta-se à vontade para alternar entre essas configurações para comparação (mas lembre-se de voltar e atualizar as propriedades anteriores para a configuração de **versão** ).
 
-Na saída, você pode ver que a extensão PyBind11 não é tão rápida quanto a `CPython` extensão, embora ela deva ser significativamente mais rápida do que a implementação pura do Python. Essa diferença é em grande parte porque utilizamos a chamada , que não dá suporte a vários parâmetros, nomes de `METH_O` parâmetros ou argumentos de palavras-chave. PyBind11 gera um código ligeiramente mais complexo para fornecer uma interface mais semelhante ao Python para chamadores, mas como o código de teste chama a função 500.000 vezes, os resultados podem ampliar muito essa sobrecarga!
+Na saída, você pode ver que a extensão PyBind11 não é tão rápida quanto a `CPython` extensão, embora ela deva ser significativamente mais rápida do que a implementação pura do Python. Essa diferença é basicamente porque usamos a `METH_O` chamada, que não dá suporte a vários parâmetros, nomes de parâmetros ou argumentos de palavras-chave. PyBind11 gera um código ligeiramente mais complexo para fornecer uma interface mais semelhante ao Python para chamadores, mas como o código de teste chama a função 500.000 vezes, os resultados podem ampliar muito essa sobrecarga!
 
 Podemos reduzir ainda mais a sobrecarga movendo o `for` loop para o código nativo. Isso envolveria o uso [do protocolo iterador](https://docs.python.org/c-api/iter.html) (ou o tipo de PyBind11 para o parâmetro de função `py::iterable` ) para processar cada [](https://pybind11.readthedocs.io/en/stable/advanced/functions.html#python-objects-as-args)elemento. Remover as transições repetidas entre Python e C++ é uma maneira eficaz de reduzir o tempo gasto para processar a sequência.
 
@@ -406,7 +406,7 @@ O Visual Studio é compatível com a depuração de código de Python e C++ junt
 
 1. Selecione **Arquivo**  >  **Salvar** para salvar as alterações de propriedade.
 
-1. Defina a configuração de compilação a ser **depurada** na barra de ferramentas do Visual Studio.
+1. De definir a configuração de build **como Depurar** na barra de Visual Studio ferramentas.
 
     ![Definir a configuração de build como Depuração](media/cpp-set-debug.png)
 

@@ -1,6 +1,6 @@
 ---
 title: MSBuild | Microsoft Docs
-description: Saiba mais sobre como a plataforma de Microsoft Build Engine (MSBuild) fornece um arquivo de projeto com um esquema XML para controlar as compilações.
+description: Saiba mais sobre como a plataforma Microsoft Build Engine (MSBuild) fornece um arquivo de projeto com um esquema XML para controlar builds.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,24 +13,24 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dbf938e61cc1567beb682847821595f5ca6cc026
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 372fc5c81b963cbb8e46cab689713e476fcfff7d
+ms.sourcegitcommit: 9cb0097c33755a3e5cbadde3b0a6e9e76cee727d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905467"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "109848273"
 ---
 # <a name="msbuild"></a>MSBuild
 
-A Microsoft Build Engine é uma plataforma para a criação de aplicativos. Esse mecanismo, que é também conhecido como MSBuild, fornece um esquema XML para um arquivo de projeto que controla como a plataforma de build processa e compila software. O Visual Studio usa o MSBuild, mas o MSBuild não depende do Visual Studio. Ao invocar o *msbuild.exe* no seu arquivo de projeto ou solução, você pode organizar e criar produtos em ambientes em que o Visual Studio não está instalado.
+O Microsoft Build Engine é uma plataforma para a criação de aplicativos. Esse mecanismo, que é também conhecido como MSBuild, fornece um esquema XML para um arquivo de projeto que controla como a plataforma de build processa e compila software. Visual Studio usa o MSBuild, mas o MSBuild não depende de Visual Studio. Ao invocar o *msbuild.exe* no seu arquivo de projeto ou solução, você pode organizar e criar produtos em ambientes em que o Visual Studio não está instalado.
 
  O Visual Studio usa o MSBuild para carregar e compilar projetos gerenciados. Os arquivos de projeto no Visual Studio (*.csproj*, *.vbproj*, *.vcxproj* e outros) contêm o código XML do MSBuild que é executado ao compilar um projeto usando o IDE. Os projetos do Visual Studio importam toas as configurações e processos de build necessários para realizar o trabalho de desenvolvimento típico, mas você pode estendê-las ou modificá-las de dentro do Visual Studio ou usando um editor de XML.
 
- Para obter informações sobre o MSBuild para C++, consulte [MSBuild (C++)](/cpp/build/msbuild-visual-cpp).
+ Para obter informações sobre o MSBuild para C++, consulte [MSBuild (C++).](/cpp/build/msbuild-visual-cpp)
 
- Os exemplos a seguir ilustram quando você pode executar compilações invocando o MSBuild da linha de comando em vez do IDE do Visual Studio.
+ Os exemplos a seguir ilustram quando você pode executar builds invocando o MSBuild na linha de comando em vez do Visual Studio IDE.
 
-- O Visual Studio não está instalado. ([Baixe o MSBuild sem o Visual Studio](https://visualstudio.microsoft.com/downloads/?q=build+tools).)
+- O Visual Studio não está instalado. ([Baixe o MSBuild sem Visual Studio](https://visualstudio.microsoft.com/downloads/?q=build+tools).)
 
 - Você deseja usar a versão de 64 bits do MSBuild. Esta versão do MSBuild normalmente não é necessária, mas permite que o MSBuild acesse mais memória.
 
@@ -46,29 +46,29 @@ A Microsoft Build Engine é uma plataforma para a criação de aplicativos. Esse
 
   - Realizar uma etapa de pós-processamento. Por exemplo, convém marcar um assembly com uma versão diferente.
 
-Você pode escrever código no IDE do Visual Studio, mas executar os builds usando o MSBuild. Como outra alternativa, você pode criar código no IDE em um computador de desenvolvimento, mas executar o MSBuild na linha de comando para compilar o código que é integrado a vários desenvolvedores. Você também pode usar a [CLI (interface de linha de comando) do .NET Core](/dotnet/core/tools/), que usa o MSBuild, para compilar projetos do .NET Core.
+Você pode escrever código no IDE do Visual Studio, mas executar os builds usando o MSBuild. Como outra alternativa, você pode criar código no IDE em um computador de desenvolvimento, mas executar o MSBuild na linha de comando para criar código integrado de vários desenvolvedores. Você também pode usar a CLI (interface de linha de comando) do [.NET Core,](/dotnet/core/tools/)que usa o MSBuild, para criar projetos do .NET Core.
 
 > [!NOTE]
-> Você pode usar Azure Pipelines para compilar, testar e implantar automaticamente seu aplicativo. O sistema de build pode executar builds automaticamente quando os desenvolvedores fazem o check-in de código (por exemplo, como parte de uma estratégia de Integração Contínua) ou de acordo com um cronograma (por exemplo, um build de teste de aceitação pós-build noturno). Azure Pipelines compila seu código usando o MSBuild. Para obter mais informações, confira [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true).
+> Você pode usar Azure Pipelines para compilar, testar e implantar seu aplicativo automaticamente. O sistema de build pode executar builds automaticamente quando os desenvolvedores fazem o check-in de código (por exemplo, como parte de uma estratégia de Integração Contínua) ou de acordo com um cronograma (por exemplo, um build de teste de aceitação pós-build noturno). Azure Pipelines compila seu código usando o MSBuild. Para obter mais informações, confira [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true).
 
 Este artigo fornece uma visão geral do MSBuild. Para um tutorial de introdução, consulte [Instruções passo a passo: usando o MSBuild](../msbuild/walkthrough-using-msbuild.md).
 
 ## <a name="use-msbuild-at-a-command-prompt"></a>Usar MSBuild em um prompt de comando
 
- Para executar o MSBuild em um prompt de comando, passe um arquivo de projeto para *MSBuild.exe*, junto com as opções de linha de comando apropriadas. As opções de linha de comando permitem que você defina propriedades, execute destinos específicos e defina outras opções que controlam o processo de build. Por exemplo, você usaria a seguinte sintaxe de linha de comando para criar o arquivo *MyProj.proj* com a propriedade `Configuration` definida como `Debug`.
+ Para executar o MSBuild em um prompt de comando, passe um arquivo de projeto *para* MSBuild.exe, juntamente com as opções de linha de comando apropriadas. As opções de linha de comando permitem que você defina propriedades, execute destinos específicos e defina outras opções que controlam o processo de build. Por exemplo, você usaria a seguinte sintaxe de linha de comando para criar o arquivo *MyProj.proj* com a propriedade `Configuration` definida como `Debug`.
 
 ```cmd
 MSBuild.exe MyProj.proj -property:Configuration=Debug
 ```
 
- Para obter mais informações sobre opções de linha de comando do MSBuild, consulte [referência de linha de comando](../msbuild/msbuild-command-line-reference.md).
+ Para obter mais informações sobre as opções de linha de comando do MSBuild, consulte [Referência de linha de comando](../msbuild/msbuild-command-line-reference.md).
 
 > [!IMPORTANT]
 > Antes de baixar um projeto, determine a confiabilidade do código.
 
 ## <a name="project-file"></a>Arquivo de projeto
 
- O MSBuild usa um formato de arquivo de projeto baseado em XML que é simples e extensível. O formato de arquivo de projeto do MSBuild permite que os desenvolvedores descrevam os itens que devem ser criados e também como eles devem ser criados para diferentes sistemas operacionais e configurações. Além disso, o formato de arquivo de projeto permite aos desenvolvedores criar regras de build reutilizáveis que podem ser fatoradas em arquivos separados para que os builds possam ser realizados de forma consistente entre os diferentes projetos no produto.
+ O MSBuild usa um formato de arquivo de projeto baseado em XML que é simples e extensível. O formato de arquivo de projeto do MSBuild permite que os desenvolvedores descrevam os itens que devem ser construídos e também como eles devem ser construídos para diferentes sistemas operacionais e configurações. Além disso, o formato de arquivo de projeto permite aos desenvolvedores criar regras de build reutilizáveis que podem ser fatoradas em arquivos separados para que os builds possam ser realizados de forma consistente entre os diferentes projetos no produto.
 
  As seções a seguir descrevem alguns dos elementos básicos do formato de arquivo de projeto do MSBuild. Para obter um tutorial sobre como criar um arquivo de projeto básico, consulte [Passo a passo: criar um arquivo de projeto do MSBuild do zero](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md).
 
@@ -88,13 +88,13 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 <Configuration  Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 ```
 
- As propriedades podem ser referenciadas em todo o arquivo de projeto usando a sintaxe $ ( \<PropertyName> ). Por exemplo, você pode fazer referência às propriedades nos exemplos anteriores usando `$(BuildDir)` e `$(Configuration)`.
+ As propriedades podem ser referenciadas em todo o arquivo de projeto usando a sintaxe $( \<PropertyName> ). Por exemplo, você pode fazer referência às propriedades nos exemplos anteriores usando `$(BuildDir)` e `$(Configuration)`.
 
  Para obter mais informações sobre propriedades, confira [Propriedades do MSBuild](../msbuild/msbuild-properties.md).
 
-### <a name="items"></a><a name="BKMK_Items"></a> Los
+### <a name="items"></a><a name="BKMK_Items"></a> Itens
 
- Os itens são entradas no sistema de build e normalmente representam arquivos. Os itens são agrupados em tipos de item com base em nomes de itens definidos pelo usuário. Esses tipos de item podem ser usados como parâmetros para tarefas, que usam os itens individuais para executar as etapas do processo de build.
+ Os itens são entradas no sistema de build e normalmente representam arquivos. Os itens são agrupados em tipos de item com base em nomes de item definidos pelo usuário. Esses tipos de item podem ser usados como parâmetros para tarefas, que usam os itens individuais para executar as etapas do processo de build.
 
  Os itens são declarados no arquivo de projeto, criando um elemento que tem o nome do tipo de item como um filho de um elemento [ItemGroup](../msbuild/itemgroup-element-msbuild.md). Por exemplo, o código a seguir cria um tipo de item chamado `Compile`, que inclui dois arquivos.
 
@@ -105,14 +105,14 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 </ItemGroup>
 ```
 
- Os tipos de item podem ser referenciados em todo o arquivo de projeto usando a sintaxe @ ( \<ItemType> ). Por exemplo, o tipo de item no exemplo seria referenciado usando `@(Compile)`.
+ Os tipos de item podem ser referenciados em todo o arquivo de projeto usando a sintaxe @( \<ItemType> ). Por exemplo, o tipo de item no exemplo seria referenciado usando `@(Compile)`.
 
  No MSBuild, os nomes de elementos e atributos diferenciam maiúsculas de minúsculas. No entanto, os nomes de propriedade, item e metadados não. O exemplo a seguir cria o tipo de item `Compile`, `comPile` ou qualquer outra variação de maiúsculas e minúsculas e fornece ao tipo de item o valor "one.cs;two.cs".
 
 ```xml
 <ItemGroup>
   <Compile Include="one.cs" />
-  <comPile Include="two.cs" />
+  <Compile Include="two.cs" />
 </ItemGroup>
 ```
 
@@ -180,7 +180,7 @@ Para obter mais informações, consulte [multidirecionamento](../msbuild/msbuild
 
 ## <a name="see-also"></a>Confira também
 
-| Title | Descrição |
+| Título | Descrição |
 | - | - |
 | [Passo a passo: Criar um arquivo de projeto do MSBuild do zero](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md) | Mostra como criar um arquivo de projeto básico de forma incremental, usando somente um editor de texto. |
 | [Passo a passo: Usando o MSBuild](../msbuild/walkthrough-using-msbuild.md) | Apresenta os blocos de construção do MSBuild e mostra como escrever, manipular e depurar projetos do MSBuild sem fechar o IDE do Visual Studio. |
@@ -192,7 +192,7 @@ Para obter mais informações, consulte [multidirecionamento](../msbuild/msbuild
 | [Condições](../msbuild/msbuild-conditions.md) | Discute como usar o atributo `Condition` em um elemento do MSBuild. |
 | [Conceitos avançados](../msbuild/msbuild-advanced-concepts.md) | Apresenta o envio em lote, a execução de transformações, a multiplataforma e outras técnicas avançadas. |
 | [Registrando em log no MSBuild](../msbuild/logging-in-msbuild.md) | Descreve como registrar eventos de build, mensagens e erros. |
-| [Como o MSBuild compila projetos](build-process-overview.md) | Descreve o processo de compilação interno usado no MSBuild |
+| [Como o MSBuild compila projetos](build-process-overview.md) | Descreve o processo de build interno usado no MSBuild |
 | [Recursos adicionais](https://social.msdn.microsoft.com/forums/vstudio/home?forum=msbuild) | Lista os recursos de comunidade e suporte para obter mais informações sobre o MSBuild. |
 
 ## <a name="reference"></a>Referência
