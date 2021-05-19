@@ -1,40 +1,40 @@
 ---
-title: Acessando o portal de administração para clientes de licenciamento por volume do Visual Studio | Microsoft Docs
+title: Acessando o Portal de Administração para clientes Visual Studio licença de volume | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 7aaa4727-00ef-41dc-937d-8d46973aaf56
-ms.date: 03/18/2021
+ms.date: 05/18/2021
 ms.topic: conceptual
-description: Saiba como os administradores em contratos de licença por volume podem acessar o portal de administração de assinaturas do Visual Studio
-ms.openlocfilehash: 0ab0ca532c1c2cdb848a3f6df9862c1d80518248
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+description: Saiba como os administradores em contratos de Licença por Volume podem acessar o Portal de Administração Visual Studio assinaturas do Visual Studio
+ms.openlocfilehash: 70a44dd659fe2c972db6ae3b6155e3c2374b159f
+ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672524"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "109973554"
 ---
-# <a name="accessing-the-admin-portal-as-an-admin-on-a-volume-license-agreement"></a>Acessando o portal de administração como um administrador em um contrato de licença por volume
+# <a name="accessing-the-admin-portal-as-an-admin-on-a-volume-license-agreement"></a>Acessando o Portal de Administração como administrador em um contrato de licença por volume
 
 Se você for o contato principal ou para notificações no contrato de sua organização, o acesso ao portal será provisionado automaticamente para você ao configurar seu contrato de licenciamento por volume. Você receberá um email de boas-vindas disparado pelo sistema, que solicitará sua entrada no portal. O email indicará qual endereço de email deve ser usado para entrar no portal. 
 
    > [!div class="mx-imgBorder"]
-   > ![Notificação do administrador de licença de volume](_img/volume-license/super-admin-notice-2020.png "Novos administradores recebem uma notificação de boas-vindas para acessar o Portal.")
+   > ![Notificação do administrador de licença de volume](_img/volume-license/super-admin-notice-2020.png "Novos administradores recebem uma notificação de boas-vindas para acessar o portal.")
 
-Quando estiver conectado, você será configurado automaticamente como um superadministrador e poderá começar a gerenciar assinaturas e outros administradores. Para obter informações sobre as diferenças entre superadministradores e administradores, dê uma olhada em nosso artigo sobre [funções de administrador](admin-roles.md).
+Depois de entrar, você será automaticamente configurada como um superd admin e poderá começar a gerenciar assinaturas e outros administradores. Para obter informações sobre as diferenças entre administradores e administradores, confira nosso artigo sobre funções [de administrador.](admin-roles.md)
 
-Isso se aplica a todos os tipos de contrato de licenciamento por volume, incluindo, mas não se limitando a: contratos Enterprise, assinaturas corporativas, selecione, selecione mais, abrir, licença aberta, governo. e contratos acadêmicos. 
+Isso se aplica a todos os tipos de contrato de Licenciamento por Volume, incluindo: Contratos Enterprise, Assinaturas Enterprise, Selecionar, Selecionar Mais, Abrir, Abrir Licença, Governo. e Contratos acadêmicos. 
 
 ## <a name="resources"></a>Recursos
-- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio
+- Para saber mais sobre vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, confira Suporte Visual Studio [assinaturas](https://visualstudio.microsoft.com/subscriptions/support/)
 
-## <a name="see-also"></a>Veja também
-- [Documentação do Visual Studio](/visualstudio/)
+## <a name="see-also"></a>Confira também
+- [Visual Studio documentação](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)
-- [Documentação do Microsoft 365](/microsoft-365/)
+- [Microsoft 365 documentação](/microsoft-365/)
 
 ## <a name="next-steps"></a>Próximas etapas
 - Saiba como [atribuir assinaturas](assign-license.md)
 - Saiba mais sobre a gama completa de [benefícios da assinatura](https://visualstudio.microsoft.com/vs/benefits/)
-- [Definir preferências de contrato](admin-prefs.md)
+- [Definir preferências de contrato](admin-preferences.md)

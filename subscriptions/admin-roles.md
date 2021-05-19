@@ -7,12 +7,12 @@ ms.assetid: 6601c395-f778-48c1-ab76-cf454b9193e4
 ms.date: 03/19/2021
 ms.topic: conceptual
 description: Saiba mais sobre as funções de superadministrador e administrador e como atribuir administradores.
-ms.openlocfilehash: eca87026c681454925974f2e394737092c3e226d
-ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
+ms.openlocfilehash: 1f107a5bcef9be61c4693549ee8e628a207cc789
+ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104757588"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "109973533"
 ---
 # <a name="super-admins-and-admins-for-visual-studio-subscription-agreements"></a>Superadministradores e administradores para contratos de assinatura do Visual Studio
 
@@ -44,7 +44,7 @@ Para atribuir novos administradores (administradores):
 ## <a name="resources"></a>Recursos
 - [Suporte para administração e assinaturas do Visual Studio](https://aka.ms/vsadminhelp)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)
@@ -55,4 +55,4 @@ Para atribuir novos administradores (administradores):
 ## <a name="next-steps"></a>Próximas etapas
 - Saiba como [atribuir assinaturas](assign-license.md)
 - Saiba mais sobre a gama completa de [benefícios da assinatura](https://visualstudio.microsoft.com/vs/benefits/)
-- [Definir preferências de contrato](admin-prefs.md)
+- [Definir preferências de contrato](admin-preferences.md)

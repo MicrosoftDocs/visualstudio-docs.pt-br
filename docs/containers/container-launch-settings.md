@@ -1,21 +1,21 @@
 ---
-title: Configurações de inicialização das ferramentas de contêiner do Visual Studio
+title: Visual Studio configurações de início das Ferramentas de Contêiner
 author: ghogen
-description: Saiba mais sobre as configurações de inicialização para ferramentas de contêiner relacionadas ao modo como o Visual Studio lida com aplicativos em contêineres.
+description: Saiba mais sobre as configurações de lançamento das Ferramentas de Contêiner relacionadas à Visual Studio lida com aplicativos em contêineres.
 ms.author: ghogen
 ms.date: 08/15/2019
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: 24a36bdbe0d3c6ac57b7595883301841ffa138e1
-ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
+ms.openlocfilehash: e50935145913bcd1f3c4457f4704376a0ac0f6ef
+ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97846713"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "109973233"
 ---
-# <a name="container-tools-launch-settings"></a>Configurações de inicialização das ferramentas de contêiner
+# <a name="container-tools-launch-settings"></a>Configurações de início das Ferramentas de Contêiner
 
-Na pasta *Propriedades* em um projeto ASP.NET Core, você pode encontrar o launchSettings.jsno arquivo, que contém configurações que controlam como seu aplicativo Web é iniciado em seu computador de desenvolvimento. Para obter informações detalhadas sobre como esse arquivo é usado no desenvolvimento do ASP.NET, consulte [usar vários ambientes no ASP.NET Core](/aspnet/core/fundamentals/environments?view=aspnetcore-2.2&preserve-view=true). No *launchSettings.jsno*, as configurações na seção **Docker** estão relacionadas ao modo como o Visual Studio lida com aplicativos em contêineres.
+Na pasta *Propriedades* em um projeto ASP.NET Core, você pode encontrar o arquivo launchSettings.js, que contém configurações que controlam como seu aplicativo Web é iniciado no computador de desenvolvimento. Para obter informações detalhadas sobre como esse arquivo é usado ASP.NET desenvolvimento, consulte Usar vários [ambientes no ASP.NET Core](/aspnet/core/fundamentals/environments?view=aspnetcore-2.2&preserve-view=true). No *launchSettings.jsno*, as configurações na seção do **Docker** estão relacionadas a como Visual Studio lida com aplicativos em contêineres.
 
 ::: moniker range="vs-2017"
 
@@ -47,14 +47,14 @@ Na pasta *Propriedades* em um projeto ASP.NET Core, você pode encontrar o launc
 
 ::: moniker-end
 
-A configuração commandName identifica que esta seção se aplica a ferramentas de contêiner. A tabela a seguir mostra as propriedades que podem ser definidas nesta seção:
+A configuração commandName identifica que esta seção se aplica às Ferramentas de Contêiner. A tabela a seguir mostra as propriedades que podem ser definidas nesta seção:
 
 ::: moniker range="vs-2017"
 
 |Nome da configuração|Versão|Exemplo|Descrição|
 |------------|-------|-------|---------------|
-|launchBrowser|Visual Studio 2017|"launchBrowser": verdadeiro|Indica se o navegador deve ser iniciado após a inicialização bem-sucedida do projeto.|
-|launchUrl|Visual Studio 2017|"launchUrl": "{Scheme}://{ServiceHost}: {ServicePortal}"|Essa URL é usada ao iniciar o navegador.  Os tokens de substituição com suporte para esta cadeia de caracteres são:<br>   {Scheme}-substituído por "http" ou "https", dependendo de o SSL ser usado.<br>   {ServiceHost} – geralmente substituído por "localhost". No entanto, ao direcionar contêineres do Windows no Windows 10 RS3 ou mais antigo, ele é substituído pelo IP do contêiner.<br>   {ServicePortal} – geralmente substituído por porta SSL ou httpPort, dependendo se o SSL é usado.  No entanto, ao direcionar contêineres do Windows no Windows 10 RS3 ou mais antigo, ele é substituído por "443" ou "80", dependendo se o SSL é usado.|
+|launchBrowser|Visual Studio 2017|"launchBrowser": true|Indica se o navegador deve ser lançado após iniciar o projeto com êxito.|
+|launchUrl|Visual Studio 2017|"launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}"|Essa URL é usada ao iniciar o navegador.  Os tokens de substituição com suporte para essa cadeia de caracteres são:<br>   {Scheme} – substituído por "http" ou "https", dependendo se o SSL é usado.<br>   {ServiceHost} – geralmente substituído por "localhost". No entanto, ao direcionar contêineres do Windows Windows 10 RS3 ou mais antigo, ele é substituído pelo IP do contêiner.<br>   {ServicePort} – geralmente substituído por sslPort ou httpPort, dependendo se o SSL é usado.  No entanto, ao direcionar contêineres do Windows no Windows 10 RS3 ou mais antigo, ele é substituído por "443" ou "80", dependendo se o SSL é usado.|
 
 ::: moniker-end
 
@@ -73,20 +73,21 @@ A configuração commandName identifica que esta seção se aplica a ferramentas
 | launchUrl            | "launchUrl": "{Scheme}://{ServiceHost}: {ServicePortal}" | Essa URL é usada ao iniciar o navegador. Os tokens de substituição com suporte para esta cadeia de caracteres são:                          |
 |                      |                                                       | -{Scheme} – substituído por "http" ou "https", dependendo de o SSL ser usado.                                   |
 |                      |                                                       | -{ServiceHost} – geralmente substituído por "localhost".                                                                    |
-|                      |                                                       | No entanto, ao direcionar contêineres do Windows no Windows 10 RS3 ou mais antigo, ele é substituído pelo IP do contêiner.           |
-|                      |                                                       | -{ServicePortal} – geralmente substituído por porta SSL ou httpPort, dependendo se o SSL é usado.                   |
-|                      |                                                       | No entanto, ao direcionar contêineres do Windows no Windows 10 RS3 ou mais antigo, ele é substituído por "443" ou "80",         |
+|                      |                                                       | No entanto, ao direcionar contêineres do Windows Windows 10 RS3 ou mais antigo, ele é substituído pelo IP do contêiner.           |
+|                      |                                                       | - {ServicePort} - geralmente substituído por sslPort ou httpPort, dependendo se o SSL é usado.                   |
+|                      |                                                       | No entanto, ao direcionar contêineres do Windows Windows 10 RS3 ou mais antigo, ele é substituído por "443" ou "80",         |
 |                      |                                                       | dependendo se o SSL é usado.                                                                                       |
-| Porta SSL              | "porta SSL": 44381                                      | Essa porta no host é mapeada para a porta do contêiner 443 ao iniciar o contêiner.                               |
-|                      |                                                       | Se não for especificado, o valor será obtido do valor iisSettings.                                                          |
-| useSSL               | "useSSL": verdadeiro                                        | Indica se o SSL deve ser usado ao iniciar o projeto. Se useSSL não for especificado, o SSL será usado quando porta SSL > 0. |
+| sslPort              | "sslPort": 44381                                      | Essa porta no host é mapeada para a porta 443 do contêiner ao iniciar o contêiner.                               |
+|                      |                                                       | Se não for especificado, o valor será retirado do valor iisSettings.                                                          |
+| Usessl               | "useSSL": true                                        | Indica se o SSL deve ser usado ao iniciar o projeto. Se useSSL não for especificado, o SSL será usado quando sslPort > 0. |
 
 ::: moniker-end
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Configure seu projeto definindo as [ferramentas de contêiner Propriedades de compilação](container-msbuild-properties.md).
+Configure seu projeto definindo as propriedades [de build das Ferramentas de Contêiner .](container-msbuild-properties.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Docker Compose Propriedades de compilação](docker-compose-properties.md)
+- [Docker Compose de build](docker-compose-properties.md)
+- [Gerenciar perfis de lançamento para Docker Compose](launch-profiles.md)

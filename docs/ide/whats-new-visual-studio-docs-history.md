@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: b45b67f03c7f95fe12c0f4322e682588a7f50714
-ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
+ms.openlocfilehash: c735eea8fe3a8b62f1901f7b9c6edf50d42aaf2c
+ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "108640981"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "109973627"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Histórico de novidades nos documentos do Visual Studio
 
@@ -69,38 +69,38 @@ Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este arti
 **Artigos atualizados**
 
 - [Dicionário da linguagem Visual](../extensibility/ux-guidelines/visual-language-dictionary-for-visual-studio.md) – adicione colchetes de redução ausentes para corrigir o erro de renderização do ícone
-- [Instalação do modelo de solução de problemas](../extensibility/troubleshooting-template-discovery.md) -prompt de comando do desenvolvedor e PowerShell do desenvolvedor
+- [Solução de problemas de instalação do modelo](../extensibility/troubleshooting-template-discovery.md) – Prompt de Comando do Desenvolvedor e Desenvolvedor do PowerShell
 
 ### <a name="get-started"></a>Introdução
 
 **Artigos atualizados**
 
-- [Tutorial: abrir um projeto de um repositório](../get-started/tutorial-open-project-from-repo-visual-studio-2019.md)
-  - atualizar tópicos com comparação lado a lado do & do git Team Explorer link
-  - Adicionar links de entrada para obter mais informações sobre a seção de entrada
-- [Tutorial: introdução ao C# e ASP.NET Core no Visual Studio](../get-started/csharp/tutorial-aspnet-core.md) – atualizar tutorial-ASPNET-Core.MD
+- [Tutorial: Abrir um projeto de umpo](../get-started/tutorial-open-project-from-repo-visual-studio-2019.md)
+  - atualizar tópicos com a comparação lado a lado do git & Team Explorer link
+  - adicionar links de conexão para obter mais informações à seção de conexão
+- [Tutorial: Introdução ao C# e ASP.NET Core no Visual Studio](../get-started/csharp/tutorial-aspnet-core.md) – Atualizar tutorial-aspnet-core.md
 
 ### <a name="ide"></a>IDE
 
 **Novos artigos**
-- [Como o Visual Studio torna o controle do código-fonte fácil](../version-control/git-visual-studio-source-control.md) criar novo tópico de controle do código-fonte do Visual Studio
-- [Prompt de comando do desenvolvedor e desenvolvedor PowerShell](./reference/command-prompt-powershell.md) – prompt de comando do desenvolvedor e PowerShell do desenvolvedor
-- [Comparação lado a lado do git e do Team Explorer](../version-control/git-team-explorer-feature-comparison.md) -Adicionar nova página de comparação lado a lado do Team Explorer e novos recursos do git
+- [Como Visual Studio facilita o controle do código-fonte](../version-control/git-visual-studio-source-control.md) – criar um novo tópico Visual Studio controle do código-fonte
+- [Prompt de Comando do Desenvolvedor e o PowerShell para](./reference/command-prompt-powershell.md) desenvolvedores – Prompt de Comando do Desenvolvedor e o PowerShell para desenvolvedores
+- [Comparação lado a lado do Git](../version-control/git-team-explorer-feature-comparison.md) e Team Explorer – adicionar nova página de comparação lado a lado do Team Explorer novos recursos do Git
 
 **Artigos atualizados**
 
-- [Logs gerados pelo sistema coletados pelo Visual Studio](./diagnostic-data-collection.md) – atualizar Diagnostic-Data-Collection.MD
-- Programa de Aperfeiçoamento da Experiência do Usuário de atualização do [Visual Studio](./visual-studio-experience-improvement-program.md) Visual-Studio-Experience-Improvement-Program.MD
-- [Personalizar modelos de projeto e item](./customizing-project-and-item-templates.md) -adicionar links sobre como personalizar modelos e usar a linha de comando
-- [Como: criar modelos de projeto](./how-to-create-project-templates.md) -adicionar links sobre como personalizar modelos e usar a linha de comando
-- [Ajuda F1 do editor de código](./not-in-toc/default-f1-text-editor.md) -link para as páginas padrão F1
-- [Ajuda F1](./not-in-toc/default.md) – atualizações de link para páginas padrão F1
-- [Início rápido: Use o Visual Studio para criar suas primeiras atualizações de Node.js aplicativo](./quickstart-nodejs.md) -AngularJS
-- [Extrair uma refatoração de método](./reference/extract-method.md) -atualizar Extract-Method.MD
-- [Página de opções de designer XAML](./reference/xaml-designer.md) – adicionar informações sobre as opções adicionadas recentemente dentro do designer XAML
-- [O que há de novo no Visual Studio 2019](./whats-new-visual-studio-2019.md)
-  - adicionar informações de Serviço de Pesquisa inteligente
-  - Adicione o novo link CSharp 9 para ver também
+- [Logs gerados pelo sistema coletados pelo Visual Studio](./diagnostic-data-collection.md) - Atualizar diagnostic-data-collection.md
+- [Visual Studio Programa de Aperfeiçoamento da Experiência do Usuário](./visual-studio-experience-improvement-program.md) - Atualizar visual-studio-experience-improvement-program.md
+- [Personalizar modelos de projeto e item](./customizing-project-and-item-templates.md) – adicione links sobre como personalizar modelos e usar a linha de comando
+- [Como criar modelos de projeto –](./how-to-create-project-templates.md) adicionar links sobre como personalizar modelos e usar a linha de comando
+- [Ajuda F1 do editor de código](./not-in-toc/default-f1-text-editor.md) – Vincular atualizações para páginas padrão F1
+- [Ajuda F1](./not-in-toc/default.md) – Vincular atualizações para páginas padrão F1
+- [Início Rápido: Usar Visual Studio para criar seu primeiro aplicativo Node.js –](./quickstart-nodejs.md) atualizações do AngularJS
+- [Extrair uma refactoração de método](./reference/extract-method.md) – Atualizar extract-method.md
+- [Designer XAML de opções –](./reference/xaml-designer.md) Adicionar informações sobre opções recém-adicionadas dentro do designer XAML
+- [Novidades no Visual Studio 2019](./whats-new-visual-studio-2019.md)
+  - adicionar informações do Serviço de Pesquisa Inteligente
+  - adicionar novo link do CSharp 9 para Ver Também
 - [Prompt de Comando do Desenvolvedor e o PowerShell para desenvolvedores](./reference/command-prompt-powershell.md)
   - Atualizar títulos de recursos e remover a seção pré
   - Atualizar hierarquia de títulos
@@ -130,31 +130,31 @@ Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este arti
 - [Números de build e datas de lançamento do Visual Studio](../install/visual-studio-build-numbers-and-release-dates.md)
   - Atualizar visual-studio-build-numbers-and-release-dates.md
   - Adicionar dados de versão do 16.9.2
-  - Atualizações de Patch Tuesday
-  - Data de atualização da página de números de compilação
-  - números de Build para 16,9 GA e 16,10 Preview 1
-  - Atualizar para novas versões
-- [Criar uma instalação offline do Visual Studio](../install/create-an-offline-installation-of-visual-studio.md) – edições do documento de atualização do administrador
-- [Instalar certificados necessários para a instalação offline do Visual Studio](../install/install-certificates-for-visual-studio-offline.md) -edição do documento de atualização do administrador
-- [Instalar as versões do Visual Studio lado a lado](../install/install-visual-studio-versions-side-by-side.md) – edição do documento de atualização do administrador
-- [Instale e use o Visual Studio e os serviços do Azure por trás de um firewall ou de um servidor proxy](../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md) -artigo atualizado.
+  - Atualizações de patch de terça-feira
+  - atualizar a data da página de números de build
+  - números de build para 16.9 GA e 16.10 Versão Prévia 1
+  - Atualização para novas versões
+- [Criar uma instalação offline do Visual Studio](../install/create-an-offline-installation-of-visual-studio.md) – edições de documento de atualização de administrador
+- [Instalar certificados necessários para Visual Studio instalação offline](../install/install-certificates-for-visual-studio-offline.md) – edições de documento de atualização do administrador
+- [Instalar Visual Studio versões lado a lado](../install/install-visual-studio-versions-side-by-side.md) – edições de documento de atualização do administrador
+- [Instalar e usar Visual Studio serviços do Azure por trás de um firewall](../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md) ou servidor proxy – artigo atualizado.
 
 ### <a name="javascript"></a>JavaScript
 
 **Artigos atualizados**
 
-- [JavaScript e TypeScript no Visual Studio # Required; título da página exibido nos resultados da pesquisa. Inclua a marca. < caracteres 60.](../javascript/index.yml) -Atualizações de AngularJS
-- [Início rápido: Use o Visual Studio para criar suas primeiras atualizações de Vue.js aplicativo](../javascript/quickstart-vuejs-with-nodejs.md) -AngularJS
-- [Tutorial: criar um aplicativo ASP.NET Core com TypeScript no Visual Studio](../javascript/tutorial-aspnet-with-typescript.md)
-  - Atualizações de AngularJS
-  - VisualStudio-docs/issues/6457--versão ausente
-- [Tutorial: criar um aplicativo Node.js e Express no Visual Studio](../javascript/tutorial-nodejs.md) – atualizações do AngularJS
-- [Aprenda a usar o editor de código para atualizações de JavaScript](../javascript/write-and-edit-code.md) -AngularJS
+- [JavaScript e TypeScript em Visual Studio # Obrigatório; título da página exibido nos resultados da pesquisa. Inclua a marca. < 60 caracteres.](../javascript/index.yml) - Atualizações do AngularJS
+- [Início Rápido: Usar Visual Studio para criar seu primeiro aplicativo Vue.js –](../javascript/quickstart-vuejs-with-nodejs.md) atualizações do AngularJS
+- [Tutorial: Criar um ASP.NET Core com TypeScript no Visual Studio](../javascript/tutorial-aspnet-with-typescript.md)
+  - Atualizações do AngularJS
+  - visualstudio-docs/issues/6457 – versão ausente
+- [Tutorial: Criar um aplicativo Node.js Express no Visual Studio](../javascript/tutorial-nodejs.md) - Atualizações do AngularJS
+- [Saiba como usar o editor de código para JavaScript](../javascript/write-and-edit-code.md) – Atualizações do AngularJS
 - [Teste de unidade em JavaScript e TypeScript no Visual Studio](../javascript/unit-testing-javascript-with-visual-studio.md)
   - Testes de unidade para ASP.NET Core e TypeScript
   - Prompt de Comando do Desenvolvedor e o PowerShell para desenvolvedores
-  - Correções de problemas do GitHub
-- [Gerenciar pacotes NPM no Visual Studio](../javascript/npm-package-management.md) – correções de problemas do github
+  - Correções de problema do GitHub
+- [Gerenciar pacotes npm no Visual Studio](../javascript/npm-package-management.md) - Correções de problema do GitHub
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -196,16 +196,16 @@ Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este arti
 **Novos artigos**
 
 - [Atualizar de *. testsettings* para *. RunSettings*](../test/migrate-testsettings-to-runsettings.md) -adicionar migrar para o Doc RunSettings
-- [Atualizar de MSTestV1 para MSTestV2](../test/mstest-update-to-mstestv2.md) -adicionar doc ao atualizar do MSTestV1 para o MSTestV2
+- [Atualizar de MSTestV1 para MSTestV2](../test/mstest-update-to-mstestv2.md) – Adicionar documento sobre a atualização de MSTestV1 para MSTestv2
 
 **Artigos atualizados**
 
-- [Criar stubs de método de teste de unidade a partir do código](../test/create-unit-tests-menu.md) -VisualStudio-docs/issues/6484--atualizar link
-- [Primeiro, veja as ferramentas de teste no Visual Studio](../test/improve-code-quality.md) -VisualStudio-docs/issues/6429--atualizar links de laboratório
-- [Configurar testes de unidade usando um arquivo *. RunSettings*](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
+- [Criar stubs de método de teste de](../test/create-unit-tests-menu.md) unidade do código – visualstudio-docs/issues/6484 – atualizar link
+- [Primeiro, veja as ferramentas de teste Visual Studio](../test/improve-code-quality.md) – visualstudio-docs/issues/6429 – atualizar links de laboratório
+- [Configurar testes de unidade usando um *arquivo .runsettings*](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
   - Prompt de Comando do Desenvolvedor e o PowerShell para desenvolvedores
-  - Correção de digitação
-- [ Opções de linha de comandoVSTest.Console.exe](../test/vstest-console-options.md) -prompt de comando do desenvolvedor e o PowerShell do desenvolvedor
+  - Erros de digitação corrigidos
+- [VSTest.Console.exe opções de linha de comando](../test/vstest-console-options.md) – Prompt de Comando do Desenvolvedor e Desenvolvedor do PowerShell
 
 ## <a name="february-2021"></a>Fevereiro de 2021
 
@@ -213,20 +213,20 @@ Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este arti
 
 **Artigos atualizados**
 
-- [Usar pontos de interrupção no depurador do Visual Studio](../debugger/using-breakpoints.md) – atualizações para acessibilidade
+- [Usar pontos de interrupção no depurador Visual Studio -](../debugger/using-breakpoints.md) Atualizações para acessibilidade
 
 ### <a name="get-started"></a>Introdução
 
 **Artigos atualizados**
 
-- [Tutorial: abrir um projeto de um repositório no Visual Studio 2017](../get-started/tutorial-open-project-from-repo-visual-studio-2017.md) -Update consulte também links no VS2017 Open Project de um repositório
-- [Tutorial: abrir um projeto de um repositório](../get-started/tutorial-open-project-from-repo-visual-studio-2019.md) -adicionar link para a versão VS2017 da página "abrir um projeto de um repositório"
+- [Tutorial: Abrir um projeto de um Visual Studio 2017](../get-started/tutorial-open-project-from-repo-visual-studio-2017.md) – atualizar Consulte Também links no VS2017 Abrir Projeto de um Repo
+- [Tutorial: Abrir um projeto de](../get-started/tutorial-open-project-from-repo-visual-studio-2019.md) um repo – Adicionar link à versão vs2017 da página "Abrir um projeto de um repo"
 
 ### <a name="ide"></a>IDE
 
 **Artigos atualizados**
 
-- [Solucionar problemas e criar logs para problemas do MSBuild](./msbuild-logs.md) – adicionar instruções sobre como usar a extensão de ferramentas do sistema de projeto
+- [Solucionar problemas e criar logs para problemas do MSBuild](./msbuild-logs.md) – Adicionar instruções sobre como usar a extensão de ferramentas do sistema de projeto
 
 ### <a name="install"></a>Instalar
 
@@ -240,18 +240,18 @@ Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este arti
 
 **Novos artigos**
 
-- [MSB3644: os assemblies de referência para ' FrameworkVersion ' não foram encontrados](../msbuild/errors/msb3644.md) -erros do MSBuild
-- [MSB8036: a SDK do Windows ' version ' não foi encontrada](../msbuild/errors/msb8036.md) -erros do MSBuild
+- [MSB3644: Os assemblies](../msbuild/errors/msb3644.md) de referência para 'FrameworkVersion' não foram encontrados – Erros do MSBuild
+- [MSB8036: O SDK do Windows 'version' não foi encontrado](../msbuild/errors/msb8036.md) – Erros do MSBuild
 
 ### <a name="test"></a>Teste
 
 **Artigos atualizados**
 
-- [Usar a estrutura de testes de unidade da Microsoft para C++ no Visual Studio](../test/how-to-use-microsoft-test-framework-for-cpp.md) -atualização e edição de conteúdo pequena
-- [Gravar testes de unidade para DLLs do C++ no Visual Studio](../test/how-to-write-unit-tests-for-cpp-dlls.md) -atualização e edição de conteúdo pequena
-- [Executar testes de unidade com o Gerenciador de testes](../test/run-unit-tests-with-test-explorer.md) – atualizações para acessibilidade
-- [Walkthrough: criar e executar testes de unidade para código gerenciado](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md) -atualizações para acessibilidade
-- [Isole o código sob teste com falsificações da Microsoft](../test/isolating-code-under-test-with-microsoft-fakes.md) – mencione explicitamente o .NET 5,0 em documentos de falsificações
+- [Usar o Microsoft Unit Testing Framework para C++ em Visual Studio](../test/how-to-use-microsoft-test-framework-for-cpp.md) - Pequena atualização e edição de conteúdo
+- [Escrever testes de unidade para DLLs do C++ Visual Studio](../test/how-to-write-unit-tests-for-cpp-dlls.md) – pequena atualização e edição de conteúdo
+- [Executar testes de unidade com o Test Explorer](../test/run-unit-tests-with-test-explorer.md) – Atualizações para acessibilidade
+- [Passo a passo: criar e executar testes de unidade para código](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md) gerenciado – Atualizações para acessibilidade
+- [Isolar código em teste com Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) – mencione explicitamente o .NET 5.0 nos documentos do Fakes
 
 ## <a name="january-2021"></a>Janeiro de 2021
 ### <a name="azure"></a>Azure
@@ -347,54 +347,54 @@ Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este arti
 **Artigos atualizados**
 
 - [Visão geral](../code-quality/use-roslyn-analyzers.md) -criando a partir da linha de comando com editorconfig
-- [Habilitar ou instalar analisadores de .NET de primeira empresa](../code-quality/install-net-analyzers.md)
-  - Adicione mais clareza aos documentos de migração para FxCopAnalyzers para netanalyzers
-  - Reorganizar o Sumário para analisadores .NET
-- [Migrar de analisadores do FxCop para analisadores do .net](../code-quality/migrate-from-fxcop-analyzers-to-net-analyzers.md) – adicione mais clareza aos documentos de migração para FxCopAnalyzers para netanalyzers
+- [Habilitar ou instalar analisadores .NET de terceiros](../code-quality/install-net-analyzers.md)
+  - Adicionar mais clareza aos documentos de migração para FxCopAnalyzers para NetAnalyzers
+  - Re organize o tabela de conteúdo para analisadores do .NET
+- [Migrar de analisadores FxCop para analisadores .NET](../code-quality/migrate-from-fxcop-analyzers-to-net-analyzers.md) – Adicione mais clareza aos documentos de migração para FxCopAnalyzers para NetAnalyzers
 
 ### <a name="containers"></a>Contêineres
 
 **Artigos atualizados**
 
-- Solução de problemas de [desenvolvimento do Visual Studio com](../containers/troubleshooting-docker-errors.md) o Docker – atualizando o Docker para Visual Studio Guia de solução de problemas
+- [Solucionar Visual Studio desenvolvimento com o Docker](../containers/troubleshooting-docker-errors.md) – Guia de solução de problemas do Docker para Visual Studio atualização
 
 ### <a name="debugger"></a>Depurador
 
 **Artigos atualizados**
 
-- [Perguntas frequentes-encontre o recurso de depuração de que você precisa no Visual Studio](../debugger/find-your-debugging-task.md) -trabalho de descoberta para localizar sua tarefa de depuração e tópicos de visão geral
+- [Perguntas frequentes – Localizar o recurso de depuração](../debugger/find-your-debugging-task.yml) necessário no Visual Studio – Descoberta para localizar sua tarefa de depuração e tópicos de visão geral
 
 ### <a name="get-started"></a>Introdução
 
 **Artigos atualizados**
 
-- [Tutorial: criar um aplicativo de console c# simples no Visual Studio](../get-started/csharp/tutorial-console.md) – tutorial do console C#: parte 2 aplica-se apenas ao vs 2019
+- [Tutorial: Criar um aplicativo de console C#](../get-started/csharp/tutorial-console.md) simples Visual Studio tutorial do console do C#: a Parte 2 se aplica somente ao VS 2019
 
 ### <a name="ide"></a>IDE
 
 **Artigos atualizados**
 
-- [Soluções e projetos no Visual Studio](./solutions-and-projects-in-visual-studio.md) – tópicos de atualizações para solução de & projetos
+- [Soluções e projetos no Visual Studio](./solutions-and-projects-in-visual-studio.md) – atualizações para tópicos de projetos & solução
 - [Criar um novo projeto no Visual Studio](./create-new-project.md)
-  - refinar alt-text para capturas de tela e diagramas
-  - Tópicos de mais atualizações para soluções & projetos
-- [Recursos para solução de problemas de erros de IDE](./reference/resources-for-troubleshooting-integrated-development-environment-errors.md) – seção revisar recursos de fórum desatualizados
-- [Trabalhar com soluções e projetos](./creating-solutions-and-projects.md) – mais atualizações para soluções & tópicos de projetos
+  - refinar texto alt para capturas de tela e diagramas
+  - mais atualizações para os tópicos & projetos de soluções
+- [Recursos para solucionar problemas de erros do IDE –](./reference/resources-for-troubleshooting-integrated-development-environment-errors.md) revisar a seção Recursos de Fórum desatualizados
+- [Trabalhar com soluções e projetos](./creating-solutions-and-projects.md) – mais atualizações para os tópicos soluções & Projetos
 - [Como relatar um problema com o Visual Studio para Mac ou com o Instalador do Visual Studio](./how-to-report-a-problem-with-visual-studio.md)
   - Captura de tela atualizada
-  - Alterações na Comunidade de desenvolvedores
-- [Dicas e truques de desempenho do Visual Studio](./visual-studio-performance-tips-and-tricks.md) – atualizar a seção desabilitar ferramentas de diagnóstico
+  - Alterações na comunidade de desenvolvedores
+- [Visual Studio dicas e truques de desempenho](./visual-studio-performance-tips-and-tricks.md) – atualize a seção Ferramentas de Diagnóstico desabilitar
 - [Introdução a projetos e soluções](../get-started/tutorial-projects-solutions.md)
-  - Tópicos de atualizações para soluções & projetos
+  - atualizações para tópicos & Projetos de Soluções
   - Atualizar tutorial-projects-solutions.md
-  - opção from ausente no menu
+  - opção missing from menu
 
 ### <a name="test"></a>Teste
 
 **Artigos atualizados**
 
-- [Introdução ao teste de unidade](../test/getting-started-with-unit-testing.md) – trabalho de descoberta e outros aprimoramentos para ferramentas de teste
-- [Primeiro, veja as ferramentas de teste no Visual Studio](../test/improve-code-quality.md) – trabalho de descoberta e outros aprimoramentos para ferramentas de teste
+- [Começar a testar a unidade –](../test/getting-started-with-unit-testing.md) Trabalho de descoberta e outras melhorias para ferramentas de teste
+- [Primeiro, veja as ferramentas de teste no Visual Studio](../test/improve-code-quality.md) – Descoberta de trabalho e outras melhorias para ferramentas de teste
 - [Ferramentas de teste no Visual Studio # necessárias; título da página exibido nos resultados da pesquisa. Inclua a marca. < caracteres 60.](../test/index.yml) -Trabalho de descoberta e outros aprimoramentos para ferramentas de teste
 - [Executar testes de unidade com o Test Explorer](../test/run-unit-tests-with-test-explorer.md) – Adicionar XML de playlist dinâmica para estruturas diff
 
@@ -406,11 +406,11 @@ Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este arti
 - [Habilitar ou instalar analisadores do .net](../code-quality/install-net-analyzers.md) – adicionar documentação para migrar de analisadores do FxCop para analisadores do .net
 - [Migrar de analisadores do FxCop para analisadores do .net](../code-quality/migrate-from-fxcop-analyzers-to-net-analyzers.md) – adicionar documentação para migrar de analisadores do FxCop para analisadores do .net
 - [Migrar da análise herdada (FxCop) para a análise de origem (analisadores .net)](../code-quality/migrate-from-legacy-analysis-to-net-analyzers.md) – adicionar documentação para migrar de analisadores do FxCop para analisadores do .net
-- [Perguntas frequentes sobre os analisadores do FxCop e do .net herdados](../code-quality/net-analyzers-faq.md) -adicione a documentação para migrar de analisadores do FxCop para analisadores do .net
+- [Perguntas frequentes sobre os analisadores do FxCop e do .net herdados](../code-quality/net-analyzers-faq.yml) -adicione a documentação para migrar de analisadores do FxCop para analisadores do .net
 
 **Artigos atualizados**
 
-- [Perguntas frequentes sobre análise de código](../code-quality/analyzers-faq.md) -adição de documentação para migrar de analisadores do FxCop para analisadores .net
+- [Perguntas frequentes sobre análise de código](../code-quality/analyzers-faq.yml) -adição de documentação para migrar de analisadores do FxCop para analisadores .net
 - [Status da porta de regra do FxCop](../code-quality/fxcop-rule-port-status.md) – documentação adicionada para migrar de analisadores do FxCop para analisadores do .net
 - [Regras preteridas](../code-quality/fxcop-unported-deprecated-rules.md) -adição de documentação para migrar de analisadores do FxCop para analisadores do .net
 - [Regras não portadas que podem ser](../code-quality/fxcop-unported-rules-may-get-ported.md) a documentação adicionada para migrar de analisadores do FxCop para analisadores do .net
@@ -439,47 +439,47 @@ Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este arti
 
 **Novos artigos**
 
-- [Implantar um aplicativo de área de trabalho do Windows .NET usando o ClickOnce](../deployment/quickstart-deploy-using-clickonce-folder.md) – adicionar início rápido do ClickOnce para projetos do Windows .net
+- [Implantar um aplicativo de área de trabalho do Windows .NET usando ClickOnce](../deployment/quickstart-deploy-using-clickonce-folder.md) – Adicionar início rápido do ClickOnce para projetos do Windows .NET
 
 **Artigos atualizados**
 
 - [Introdução à implantação no Visual Studio](../deployment/deploying-applications-services-and-components.md)
   - Editar passagem
-  - Descoberta e atualizações de link para o .NET 5
-- [Implantação no Visual Studio # necessária; título da página exibido nos resultados da pesquisa. Inclua a marca. < caracteres 60.](../deployment/index.yml) -Descoberta e atualizações de link para o .NET 5
-- [Crie aplicativos ClickOnce na linha de comando](../deployment/building-clickonce-applications-from-the-command-line.md) – adicione início rápido do ClickOnce para projetos do .net Windows
-- [Implantar seu aplicativo em uma pasta, IIS, Azure ou outro destino](../deployment/deploying-applications-services-and-components-resources.md) -adicionar início rápido do ClickOnce para projetos do Windows .net
-- [Implantar um aplicativo em uma pasta usando o Visual Studio](../deployment/quickstart-deploy-to-local-folder.md) – adicionar início rápido do ClickOnce para projetos do Windows .net
+  - Descoberta e atualizações de link para .NET 5
+- [Implantação no Visual Studio # Obrigatório; título da página exibido nos resultados da pesquisa. Inclua a marca. < 60 caracteres.](../deployment/index.yml) - Descoberta e atualizações de link para o .NET 5
+- [Criar aplicativos ClickOnce na linha de comando –](../deployment/building-clickonce-applications-from-the-command-line.md) Adicionar início rápido do ClickOnce para projetos do Windows .NET
+- [Implantar seu aplicativo em uma pasta, IIS, Azure](../deployment/deploying-applications-services-and-components-resources.md) ou outro destino – Adicionar início rápido do ClickOnce para projetos do Windows .NET
+- [Implantar um aplicativo em uma pasta usando Visual Studio](../deployment/quickstart-deploy-to-local-folder.md) – Adicionar início rápido do ClickOnce para projetos do Windows .NET
 
 ### <a name="designers"></a>Designers
 
 **Artigos atualizados**
 
-- [Tutorial: introdução ao designer de formulários do Windows](../designers/walkthrough-windows-forms-designer.md) -correção de digitação
+- [Tutorial: Introdução ao Designer de Formulários do Windows](../designers/walkthrough-windows-forms-designer.md) – Erro de digitação corrigido
 
 ### <a name="get-started"></a>Introdução
 
 **Artigos atualizados**
 
-- [Saiba mais sobre projetos e soluções](../get-started/tutorial-projects-solutions.md) – texto alt atualizado & metadados, além de uma observação adicional sobre o modelo de solução em branco
-- [Tutorial: abrir um projeto de uma](../get-started/tutorial-open-project-from-repo.md) Observação adicionada ao repositório e consulte também link para a nova experiência do git
+- [Saiba mais sobre projetos e soluções](../get-started/tutorial-projects-solutions.md) – atualização de texto alt & metadados, bem como adição de observação sobre o modelo solução em branco
+- [Tutorial: Abrir um projeto de um repositório – a](../get-started/tutorial-open-project-from-repo.md) adoção de observação e ver também o link para nova experiência do Git
 
 ### <a name="ide"></a>IDE
 
 **Novos artigos**
 
-- [Trabalhar com contas do GitHub no Visual Studio](./work-with-github-accounts.md) -adicionado trabalhando com a página do GitHub e informações sobre a entrada do GitHub em outras páginas
-- [Extrair a classe base](./reference/extract-base-class.md) -recursos de produtividade dotnet adicionados
-- [Método embutido](./reference/inline-method.md) -recursos de produtividade dotnet adicionados
-- [Tornar a classe abstrata](./reference/make-class-abstract.md) -adicionadas recursos de produtividade dotnet
-- [Usar `new()` ](./reference/use-new.md) o -Recursos de produtividade dotnet adicionados
-- [Usar correspondência de padrões](./reference/use-pattern-matching.md) -recursos de produtividade dotnet adicionados
+- [Trabalhar com contas do GitHub no Visual Studio](./work-with-github-accounts.md) – adicionado trabalhando com a página do GitHub e informações sobre como entrar no GitHub em outras páginas
+- [Extrair classe base –](./reference/extract-base-class.md) recursos de produtividade de dotnet adicionados
+- [Método em linha](./reference/inline-method.md) – recursos de produtividade de dotnet adicionados
+- [Tornar a classe abstrata](./reference/make-class-abstract.md) – recursos de produtividade de dotnet adicionados
+- [Usar `new()` ](./reference/use-new.md) – Adicionados recursos de produtividade dotnet
+- [Usar a correspondência de padrões](./reference/use-pattern-matching.md) – recursos de produtividade de dotnet adicionados
 
 **Artigos atualizados**
 
-- [Experiência de git no Visual Studio](../version-control/git-with-visual-studio.md)
+- [Experiência do Git no Visual Studio](../version-control/git-with-visual-studio.md)
   - Texto alt atualizado & metadados
-  - Atualizações para o novo conteúdo de experiência git para 16,8 GA
+  - Atualizações para o conteúdo da Nova Experiência git para GA 16.8
 - [O que há de novo no Visual Studio 2019](./whats-new-visual-studio-2019.md)
   - Texto alt atualizado & metadados
   - Atualizado o que há de novo na página do Visual Studio 2019 para 16,8 GA
@@ -512,61 +512,61 @@ Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este arti
 
 **Novos artigos**
 
-- [Alterar ondas](../msbuild/change-waves.md) -MSBuild: novo tópico de ondas de alteração
+- [Alterar ondas](../msbuild/change-waves.md) – MSBuild: Alterar ondas novo tópico
 
 **Artigos atualizados**
 
-- [Funções de propriedade](../msbuild/property-functions.md) – versão 16,8
-- [Itens de projeto comuns do MSBuild](../msbuild/common-msbuild-project-items.md) – restaura o conteúdo para o item InternalsVisibleTo
+- [Funções de propriedade](../msbuild/property-functions.md) – Versão 16.8
+- [Itens de projeto comuns do MSBuild](../msbuild/common-msbuild-project-items.md) – restaura o conteúdo do item InternalsVisibleTo
 
 ### <a name="profiling"></a>Criação de perfil
 
 **Artigos atualizados**
 
-- [Medir o desempenho do aplicativo da linha de comando](../profiling/profile-apps-from-command-line.md) – atualizando a criação de perfil nos documentos de linha de comando
+- [Medir o desempenho do aplicativo na linha de comando –](../profiling/profile-apps-from-command-line.md) Atualizando a criação de perfil dos documentos de linha de comando
 
 ### <a name="test"></a>Teste
 
 **Artigos atualizados**
 
-- [Executar testes de unidade com o Test Explorer](../test/run-unit-tests-with-test-explorer.md) – adicionou uma seção curta no formato XML de playlist
-- [Isolar código em teste com falsificações da Microsoft](../test/isolating-code-under-test-with-microsoft-fakes.md) -documentação atualizada com suporte ao .NET Core
-- [Use shims para isolar seu aplicativo para o teste de unidade](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md) -documentação atualizada com o suporte do .NET Core
+- [Executar testes de unidade com o Gerenciador de Testes](../test/run-unit-tests-with-test-explorer.md) – Adicionada uma breve seção no formato xml da playlist
+- [Isolar o código em teste com Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) – Documentação atualizada com suporte do .NET Core
+- [Usar shims para isolar seu aplicativo para teste de unidade](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md) – Documentação atualizada com suporte do .NET Core
 
 ### <a name="xaml-tools"></a>Ferramentas XAML
 
 **Artigos atualizados**
 
-- [Usar dados de tempo de design com o Designer XAML no Visual Studio](../xaml-tools/xaml-designtime-data.md)
-  - Atualização da seção de requisitos para 16,8 GA
-  - Modificou a seção de requisitos
-  - Atualizar o comentário de visualização do 16,8 + link para GA
+- [Usar dados de tempo de design com o Designer XAML em Visual Studio](../xaml-tools/xaml-designtime-data.md)
+  - Atualização da seção Requisitos para GA 16.8
+  - Modificação da seção Requisitos
+  - Atualização 16.8 Comentário de visualização + link para GA
 
 ## <a name="october-2020"></a>Outubro de 2020
 ### <a name="code-quality"></a>Qualidade do código
 
 **Artigos atualizados**
-- [Analisadores de código](../code-quality/index.yml) -refatoração de CA para .NET 5
+- [Analisadores de código](../code-quality/index.yml) –fator de AC para .NET 5
 
 ### <a name="containers"></a>Contêineres
 
 **Artigos atualizados**
 
-- [Início rápido: usar o Docker com um aplicativo de página única reagir no Visual Studio](../containers/container-tools-react.md)
-  - Ferramentas de contêiner: remover referências ao repositório de imagem antigo
-  - Tutorial de reagir de contêineres de atualização para .NET 3,1 e VS 16,7
-- [Como o Bridge to kubernetes funciona](../containers/overview-bridge-to-kubernetes.md) – Bridge para kubernetes: Adicionar limitações
-- [Depurar aplicativos em um contêiner do Docker local](../containers/edit-and-refresh.md) – caixa de ferramentas do Docker
+- [Início Rápido: Usar o Docker com um aplicativo de página única react no Visual Studio](../containers/container-tools-react.md)
+  - Ferramentas de Contêiner: remover referências ao repositório de imagens antigo
+  - Tutorial atualizar contêineres react para .NET 3.1 e VS 16.7
+- [Como Bridge to Kubernetes funciona](../containers/overview-bridge-to-kubernetes.md) – Bridge to Kubernetes: adicionar limitações
+- [Depurar aplicativos em um contêiner local do Docker](../containers/edit-and-refresh.md) – Caixa de Ferramentas do Docker
 
 ### <a name="debugger"></a>Depurador
 
 **Novos artigos**
 
-- [Suporte ao DirectX 12 no Visual Studio](../debugger/graphics/visual-studio-graphics-diagnostics-directx-12.md) – Vsdg dx12
+- [Suporte ao DirectX 12 no Visual Studio](../debugger/graphics/visual-studio-graphics-diagnostics-directx-12.md) - Vsdg dx12
 
 **Artigos atualizados**
 
-- [Depurar aplicativos ASP.net ou ASP.NET Core no Visual Studio](../debugger/how-to-enable-debugging-for-aspnet-applications.md) – correções de conteúdo do depurador para problemas do github
+- [Depurar ASP.NET ou ASP.NET Core no Visual Studio](../debugger/how-to-enable-debugging-for-aspnet-applications.md) – Correções de conteúdo do depurador para problemas do GitHub
 - [Usar pontos de interrupção no depurador do Visual Studio](../debugger/using-breakpoints.md) -correções de conteúdo do depurador para problemas do github
 - [Depurar serviços do Azure no Visual Studio](../debugger/debug-azure-apps.md) – SEO e vincular atualizações para o depurador de instantâneos
 - [Depurar aplicativos do Azure ASP.net ao vivo usando o depurador de instantâneos](../debugger/debug-live-azure-applications.md) -SEO e vincular atualizações para o depurador de instantâneos
@@ -616,84 +616,80 @@ Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este arti
 - [Executar ferramentas de criação de perfil com ou sem o depurador](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
   - Atualizações de uso de memória para criação de perfil-links e esclarecimentos
   - Atualizações da ferramenta de uso de memória
-- [Analisar o uso da CPU sem depuração no criador de perfil de desempenho](../profiling/cpu-usage.md) – atualizações da ferramenta de uso de memória
+- [Analisar o uso da CPU sem depurar no Criador de Perfil de Desempenho](../profiling/cpu-usage.md) – Atualizações da ferramenta de uso de memória
 
 ### <a name="windows"></a>Windows
 
 **Artigos atualizados**
 
-- [Documentação do Visual Studio | Microsoft Docs](../windows/index.yml) -atualizações do Hub do Windows
+- [Visual Studio documentação | Microsoft Docs](../windows/index.yml) - Atualizações do Hub do Windows
 
 ### <a name="xaml-tools"></a>Ferramentas XAML
 
 **Novos artigos**
 
-- [Usar dados de tempo de design com o Designer XAML no Visual Studio](../xaml-tools/xaml-designtime-data.md)
-  - Seção de extensibilidade adicionada a documentos de tempo de design XAML
-  - Novo artigo XAML de tempo de design
+- [Usar dados de tempo de design com o Designer XAML em Visual Studio](../xaml-tools/xaml-designtime-data.md)
+  - Adicionada a seção extensibilidade aos documentos de tempo de design XAML
+  - Novo artigo XAML em tempo de design
 
 ## <a name="september-2020"></a>Setembro de 2020
 ### <a name="code-quality"></a>Qualidade do código
 
 **Novos artigos**
 
-- [CA1416: validar a compatibilidade da plataforma](/dotnet/fundamentals/code-analysis/quality-rules/ca1416) -documentando CA1416 validar compatibilidade de plataforma
-- [CA1834: Use StringBuilder. Append (Char) para cadeias de caracteres únicas](/dotnet/fundamentals/code-analysis/quality-rules/ca1834) -docs para CA1834
+- [CA1416: Validar a compatibilidade da plataforma](/dotnet/fundamentals/code-analysis/quality-rules/ca1416) – Documentando a compatibilidade da plataforma CA1416
+- [CA1834: Usar StringBuilder.Append(char)](/dotnet/fundamentals/code-analysis/quality-rules/ca1834) para cadeias de caracteres individuais – Docs para CA1834
 
 **Updated**
 
-- [Visão geral da análise de código-fonte](../code-quality/roslyn-analyzers-overview.md) – atualizações de análise de código para refatoração do .net
-- [Configurar análise de qualidade de código](../code-quality/use-roslyn-analyzers.md) – atualizações de análise de código para refatoração do .net
+- [Visão geral da análise de código-fonte](../code-quality/roslyn-analyzers-overview.md) – Atualizações de análise de código para a refactor do .NET
+- [Configurar a análise de qualidade do código](../code-quality/use-roslyn-analyzers.md) – Atualizações de análise de código para a refactor do .NET
 
 ### <a name="containers"></a>Contêineres
 
 **Novos artigos**
 
-- [Usar a ponte para](../containers/bridge-to-kubernetes.md) o processo kubernetes-local com a remarcação do kubernetes para a ponte para o kubernetes
-- [Como a ponte para kubernetes funciona](../containers/overview-bridge-to-kubernetes.md) – processo local com a remarcação kubernetes para a ponte para o kubernetes
+- [Usar Bridge to Kubernetes](../containers/bridge-to-kubernetes.md) – Processo Local com a renomeação do Kubernetes para Bridge to Kubernetes
+- [Como Bridge to Kubernetes funciona](../containers/overview-bridge-to-kubernetes.md) – Processo local com a renomeação do Kubernetes para Bridge to Kubernetes
 
 ### <a name="deployment"></a>Implantação
 
 **Artigos atualizados**
 
-- [Implantar seu aplicativo em uma pasta, IIS, Azure ou outra](../deployment/deploying-applications-services-and-components-resources.md) atualização de destino-implantação
-- [Implantar um aplicativo em uma pasta usando o Visual Studio](../deployment/quickstart-deploy-to-local-folder.md) -atualizações de implantação
+- [Implantar seu aplicativo em uma pasta, IIS, Azure ou outro destino](../deployment/deploying-applications-services-and-components-resources.md) – Atualizações de implantação
+- [Implantar um aplicativo em uma pasta usando o Visual Studio](../deployment/quickstart-deploy-to-local-folder.md) – Atualizações de implantação
 
 ### <a name="ide"></a>IDE
 
 **Novos artigos**
 
-- [Nova experiência de git no Visual Studio (visualização)](../version-control/git-with-visual-studio.md) – adicionar novo conteúdo de experiência git (versão prévia)
-- [Convenções de formatação C++ EditorConfig](./cpp-editorconfig-properties.md) -novo artigo
-- [O que é o GitHub Codespaces? (Visualização)](./codespaces/codespaces-overview.md) -adicionar conteúdo de Codespaces (versão prévia)
-- [Como personalizar um codespace (visualização)](./codespaces/customize-codespaces.md) – adicionar conteúdo de Codespaces (versão prévia)
-- [Recursos do Visual Studio com suporte (versão prévia)](./codespaces/supported-features-codespaces.md) – adicionar conteúdo de Codespaces (versão prévia)
-- [Como usar o Visual Studio com um codespace (visualização)](./codespaces/use-visual-studio-with-codespaces.md) – adicionar conteúdo de Codespaces (versão prévia)
+- [Nova experiência do Git no Visual Studio (versão prévia)](../version-control/git-with-visual-studio.md) – adicionar conteúdo da Nova Experiência Do Git (versão prévia)
+- [Convenções de formatação do Editor C++Config](./cpp-editorconfig-properties.md) – novo artigo
 
 **Artigos atualizados**
 
-- [Configurações da Convenção de codificação .net para EditorConfig](/dotnet/fundamentals/code-analysis/code-style-rule-options) atualizadas EditorConfig
-- [Convenções de linguagem](/dotnet/fundamentals/code-analysis/style-rules/language-rules) -exemplos ausentes
+- [Configurações de convenção de codificação do .NET para EditorConfig](/dotnet/fundamentals/code-analysis/code-style-rule-options) – editorconfig atualizado
+- [Convenções de linguagem](/dotnet/fundamentals/code-analysis/style-rules/language-rules) – exemplos ausentes
 
 ### <a name="install"></a>Instalar
 
 **Novos artigos**
 
-- [Visual Studio em dispositivos com tecnologia ARM](../install/visual-studio-on-arm-devices.md) -adicionando doc para vs no ARM
+- [Visual Studio em dispositivos com ARM](../install/visual-studio-on-arm-devices.md) – Adicionando documento para VS no ARM
 
 **Artigos atualizados**
 
-- [Solucionar erros relacionados à rede ao instalar ou usar o Visual Studio](../install/troubleshooting-network-related-errors-in-visual-studio.md) -adicionar solução alternativa para falha de proxy de autenticação de comentários
+- [Solucionar problemas de erros relacionados à rede ao](../install/troubleshooting-network-related-errors-in-visual-studio.md) instalar ou usar Visual Studio – Adicionar solução alternativa para falha de proxy de auth de comentários
 
 ### <a name="profiling"></a>Criação de perfil
 
 **Artigos atualizados**
 
-- [Medir o uso de memória no Visual Studio](../profiling/memory-usage.md) – atualizações para o Tour de recursos de criação de perfil
-- [PerfTips](../profiling/perftips.md) -atualizações para o Tour de recursos de criação de perfil
-- [Primeira análise de ferramentas de criação de perfil](../profiling/profiling-feature-tour.md) – atualizações para o Tour de recursos de criação de perfil
+- [Medir o uso de memória no Visual Studio](../profiling/memory-usage.md) - Atualizações para o tour de recursos de criação de perfil
+- [PerfTips](../profiling/perftips.md) – Atualizações para o tour de recursos de criação de perfil
+- [Primeiro, veja as ferramentas de criação de perfil](../profiling/profiling-feature-tour.md) – Atualizações para o tour de recursos de criação de perfil
 - [Executar ferramentas de criação de perfil com ou sem o depurador](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
-  - Atualizações para o Tour do recurso de criação de perfil
+  - Atualizações do tour de recursos de criação de perfil
   - Aprimoramentos de desempenho de conteúdo
 
 ## <a name="august-2020"></a>Agosto de 2020
@@ -701,30 +697,30 @@ Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este arti
 
 **Novos artigos**
 
-- [Adicionar informações de aplicativo Azure usando os serviços conectados do Visual Studio](../azure/azure-app-insights-add-connected-service.md) – serviços conectados para VS 2019 16,7
-- [Adicionar o cache do Azure para Redis usando os serviços conectados do Visual Studio](../azure/azure-cache-for-redis-add-connected-service.md) – serviços conectados para VS 2019 16,7
-- [Adicionar Azure Cosmos DB ao seu aplicativo usando serviços conectados do Visual Studio](../azure/azure-cosmosdb-add-connected-service.md) -serviços conectados para VS 2019 16,7
-- [Adicionar o Azure signalr usando serviços conectados do Visual Studio](../azure/azure-signalr-add-connected-service.md) -serviços conectados para VS 2019 16,7
-- [Adicionar uma conexão com os serviços conectados ao banco de dados SQL do Azure](../azure/azure-sql-database-add-connected-service.md) para VS 2019 16,7
+- [Adicionar Aplicativo Azure Insights usando Visual Studio Connected Services](../azure/azure-app-insights-add-connected-service.md) – Serviços conectados para VS 2019 16.7
+- [Adicionar Cache do Azure para Redis usando Visual Studio Connected Services](../azure/azure-cache-for-redis-add-connected-service.md) – Serviços conectados para VS 2019 16.7
+- [Adicione Azure Cosmos DB ao seu aplicativo usando Visual Studio Connected Services](../azure/azure-cosmosdb-add-connected-service.md) – Serviços conectados para VS 2019 16.7
+- [Adicionar o Azure SignalR usando Visual Studio Connected Services](../azure/azure-signalr-add-connected-service.md) – Serviços conectados para VS 2019 16.7
+- [Adicionar uma conexão ao Banco de Dados SQL do Azure](../azure/azure-sql-database-add-connected-service.md) - Serviços conectados para VS 2019 16.7
 
 **Artigos atualizados**
 
 - [Adicionando armazenamento do Azure usando os serviços conectados do Visual Studio](../azure/vs-azure-tools-connected-services-storage.md)
-  - Serviços conectados para VS 2019 16,7
-  - Artigo dos serviços conectados do armazenamento do Azure: atualizar interface do usuário e tipos de projeto com suporte
+  - Serviços conectados para VS 2019 16.7
+  - Artigo serviços conectados do Armazenamento do Azure: atualizar a interface do usuário e os tipos de projeto com suporte
 
 ### <a name="code-quality"></a>Qualidade do código
 
 **Novos artigos**
 
-- [CA1310: especifique StringComparison para correção](/dotnet/fundamentals/code-analysis/quality-rules/ca1310) – adicione a documentação para CA1310 e atualize a documentação do CA1307
-- [CA1837: Use Environment. ProcessId em vez de Process. GetCurrentProcess (). ID](/dotnet/fundamentals/code-analysis/quality-rules/ca1837) -docs para CA1837
-- [CA1838: Evite `StringBuilder` parâmetros para P/Invokes](/dotnet/fundamentals/code-analysis/quality-rules/ca1838) -adicionar documentação para CA1838
-- [CA2008: não crie tarefas sem passar por uma documentação TaskScheduler](/dotnet/fundamentals/code-analysis/quality-rules/ca2008) -Add para CA2008
-- [CA2249: considere usar String. Contains em vez de String. IndexOf](/dotnet/fundamentals/code-analysis/quality-rules/ca2249) -docs para CA2249
-- [CA2361: Certifique-se de que a classe gerada automaticamente contendo DataSet. ReadXml () não seja usada com dados não confiáveis](/dotnet/fundamentals/code-analysis/quality-rules/ca2361) -mais regras de DataSet/DataTable
-- [CA2362: DataSet ou DataTable não seguro em tipo serializável gerado automaticamente pode ser vulnerável a ataques de execução remota de código](/dotnet/fundamentals/code-analysis/quality-rules/ca2362) -mais regras de conjunto de informações/DataTable
-- [IL3000: Evite usar o caminho do arquivo de assembly de acesso ao publicar como uma](/dotnet/fundamentals/code-analysis/quality-rules/il3000) documentação de adição de arquivo único para IL3000
+- [CA1310: Especificar StringComparison](/dotnet/fundamentals/code-analysis/quality-rules/ca1310) para correção – Adicionar documentação para CA1310 e atualizar documentação para CA1307
+- [CA1837: use Environment.ProcessId em vez de Process.GetCurrentProcess(). ID](/dotnet/fundamentals/code-analysis/quality-rules/ca1837) – Documentos para CA1837
+- [CA1838: Evitar `StringBuilder` parâmetros para P/Invokes](/dotnet/fundamentals/code-analysis/quality-rules/ca1838) – Adicionar documentação para CA1838
+- [CA2008: Não criar tarefas sem passar um TaskScheduler](/dotnet/fundamentals/code-analysis/quality-rules/ca2008) – Adicionar documentação para CA2008
+- [CA2249: considere usar String.Contains em vez de String.IndexOf](/dotnet/fundamentals/code-analysis/quality-rules/ca2249) – Docs para CA2249
+- CA2361: verifique se a classe gerado automaticamente que contém [DataSet.ReadXml()](/dotnet/fundamentals/code-analysis/quality-rules/ca2361) não é usada com dados não verdadeiros – Mais regras de DataSet/DataTable
+- [CA2362: DataSet](/dotnet/fundamentals/code-analysis/quality-rules/ca2362) ou DataTable não seguros no tipo serializável gerado automaticamente podem ser vulneráveis a ataques de execução de código remoto – Mais regras de DataSet/DataTable
+- [IL3000: evite](/dotnet/fundamentals/code-analysis/quality-rules/il3000) usar o acesso ao caminho do arquivo assembly ao publicar como um único arquivo – Adicionar documentação para IL3000
 - [IL3001: Evite acessar o caminho do arquivo de assembly ao publicar como um arquivo único](/dotnet/fundamentals/code-analysis/quality-rules/il3001) – adicionar documentos para IL3001
 
 **Updated**
@@ -775,39 +771,39 @@ Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este arti
 - [Alterar a tecla de ajuda F1 no Visual Studio](./not-in-toc/change-f1-help-key.md) -página de ajuda F1 padrão de refatoração
 - [Ajuda F1 para a](./not-in-toc/default-f1-text-editor.md) página de ajuda do editor de texto – Refactor padrão F1
 - [Converter `typeof` em `nameof` ](./reference/convert-typeof-to-nameof.md) – converter typeof em refatoração de nameof
-- [Simplificar a expressão LINQ](./reference/simplify-linq-expression.md) -simplificar a refatoração de expressão LINQ
+- [Simplificar a expressão LINQ](./reference/simplify-linq-expression.md) – Simplificar a refactoração de expressão LINQ
 
 **Artigos atualizados**
 
-- [Personalizar layouts de janela no Visual Studio](./customizing-window-layouts-in-visual-studio.md) – adicionar informações de guias de documento vertical com moniker para personalizar o artigo layouts de janela.
+- [Personalizar layouts de janela Visual Studio](./customizing-window-layouts-in-visual-studio.md) – adicione informações de guias verticais do documento com moniker ao artigo Personalizar Layouts de Janela.
 - [Como relatar um problema com o Visual Studio para Mac ou com o Instalador do Visual Studio](./how-to-report-a-problem-with-visual-studio.md)
-  - Adição de mais informações ao NMI
-  - Redid a página inteira do problema do relatório
-- [Ajuda F1](./not-in-toc/default.md) -página de ajuda F1 padrão de refatoração
-- [Caixa de diálogo recuperação automática, ambiente, opções](./reference/autorecover-environment-options-dialog-box.md) – adicionar informações sobre locais de arquivo de salvamento automático atualizados
-- [Opções, editor de texto, básico (Visual Basic),](./reference/options-text-editor-basic-visual-basic.md) documentação básica de adição avançada para dicas de nome de parâmetro embutido
-- [Opções, editor de texto, C#,](./reference/options-text-editor-csharp-advanced.md) documentação básica de adição avançada para dicas de nome de parâmetro embutido
-- [Dicas e truques de desempenho do Visual Studio](./visual-studio-performance-tips-and-tricks.md) – adicionar as informações de ' desabilitar modo de mapa ' e ' desabilitar quebra automática de palavra '
-- [Novidades no visual studio 2019](./whats-new-visual-studio-2019.md) – atualizar o que há de novo no visual Studio 2019 com as informações do 16,7 GA
+  - Adicionadas mais informações à NMI
+  - Redid toda a página Relatar um Problema
+- [Ajuda F1](./not-in-toc/default.md) – Página de Ajuda F1 padrão de refactor
+- [Caixa de diálogo Recuperação Automática, Ambiente, Opções –](./reference/autorecover-environment-options-dialog-box.md) adicionar informações sobre os locais de arquivo de salvar automaticamente atualizados
+- [Opções, Editor de Texto, Básico (Visual Basic), Avançado](./reference/options-text-editor-basic-visual-basic.md) – Adicionada documentação básica para dicas de nome de parâmetro em linha
+- [Opções, Editor de Texto, C#, Avançado](./reference/options-text-editor-csharp-advanced.md) – Adicionada documentação básica para dicas de nome de parâmetro em linha
+- [Visual Studio dicas de desempenho e truques](./visual-studio-performance-tips-and-tricks.md) – adicionar informações de 'desabilitar o modo de mapa' e 'desabilitar quebra de linha'
+- [Novidades no Visual Studio 2019](./whats-new-visual-studio-2019.md) – atualize Novidades no Visual Studio 2019 com informações de GA 16.7
 
 ### <a name="rtvs"></a>RTVS
 
 **Artigos atualizados**
 
-- [Trabalhar com tabelas corrigidas SQL Server e R](../rtvs/integrating-sql-server-with-r.md) para incluir cabeçalhos de coluna
+- [Trabalhar com SQL Server e R](../rtvs/integrating-sql-server-with-r.md) – tabelas corrigidas para incluir os headers de coluna
 
 ## <a name="july-2020"></a>Julho de 2020
 ### <a name="code-quality"></a>Qualidade do código
 
 **Novos artigos**
 
-- [CA1417: não use `OutAttribute` parâmetros de cadeia de caracteres para P/Invokes](/dotnet/fundamentals/code-analysis/quality-rules/ca1417) -adicionar documentação para CA1417
-- [CA1805: não inicializar desnecessariamente.](/dotnet/fundamentals/code-analysis/quality-rules/ca1805) -Adicionar documentos para CA1805
-- [CA1836: prefira IsEmpty ao longo da contagem quando disponível](/dotnet/fundamentals/code-analysis/quality-rules/ca1836) – adicione a documentação para CA1836 (prefira IsEmpty com contagem)
-- [CA2016: encaminhe o parâmetro CancellationToken para métodos que usam um](/dotnet/fundamentals/code-analysis/quality-rules/ca2016) documento CA2016-encaminhar o parâmetro CancellationToken para métodos que usam um
-- [CA2350: Verifique se a entrada de DataTable. ReadXml () é confiável](/dotnet/fundamentals/code-analysis/quality-rules/ca2350) – documentos de regras de desserialização de conjunto de dados/DataTable iniciais
-- [CA2351: Verifique se a entrada do conjunto de dados. ReadXml () é confiável](/dotnet/fundamentals/code-analysis/quality-rules/ca2351) – documentos de regras de desserialização de conjunto de dados/DataTable iniciais
-- [CA2352: DataSet ou DataTable não seguro em tipo serializável pode ser vulnerável a ataques de execução remota de código](/dotnet/fundamentals/code-analysis/quality-rules/ca2352) -documentos iniciais de regras de desserialização de conjunto de texto/DataTable
+- [CA1417: Não usar em parâmetros de cadeia `OutAttribute` de caracteres para P/Invokes](/dotnet/fundamentals/code-analysis/quality-rules/ca1417) – Adicionar documentação para CA1417
+- [CA1805: não inicialize desnecessariamente.](/dotnet/fundamentals/code-analysis/quality-rules/ca1805) – Adicionar documentos para CA1805
+- [CA1836: preferir IsEmpty](/dotnet/fundamentals/code-analysis/quality-rules/ca1836) em vez de Contagem quando disponível – Adicionar documentação para CA1836 (preferir IsEmpty em vez de Contagem)
+- [CA2016: encaminhar](/dotnet/fundamentals/code-analysis/quality-rules/ca2016) o parâmetro CancellationToken para métodos que levam um – Documento CA2016 – Encaminhar o parâmetro CancellationToken para métodos que levam um
+- [CA2350: garantir que a entrada de DataTable.ReadXml()](/dotnet/fundamentals/code-analysis/quality-rules/ca2350) seja confiável – documentos de regras de desterialização de DataSet/DataTable
+- [CA2351: garantir que a entrada de DataSet.ReadXml()](/dotnet/fundamentals/code-analysis/quality-rules/ca2351) seja confiável – documentos de regras de desterialização de DataSet/DataTable
+- [CA2352: DataSet](/dotnet/fundamentals/code-analysis/quality-rules/ca2352) ou DataTable não seguros no tipo serializável podem ser vulneráveis a ataques de execução de código remoto – documentos de regras de desserialização de DataSet/DataTable
 - [CA2353: DataSet ou DataTable não seguro no tipo serializável](/dotnet/fundamentals/code-analysis/quality-rules/ca2353) – documentos de regras de desserialização de conjunto de texto inicial/DataTable
 - [CA2354: um DataSet não seguro ou DataTable no grafo de objeto desserializado pode ser vulnerável ao ataque de execução de código remoto](/dotnet/fundamentals/code-analysis/quality-rules/ca2354) -documentos de regras de desserialização de conjunto de usuários/DataTable iniciais
 - [CA2355: DataSet não seguro ou DataTable no grafo de objeto desserializado](/dotnet/fundamentals/code-analysis/quality-rules/ca2355) -documentos de regras de desserialização de conjunto de tabelas/DataTable iniciais
@@ -872,6 +868,6 @@ Bem-vindo ao histórico das novidades dos documentos do Visual Studio. Este arti
 
 **Artigos atualizados**
 
-- [Configurar testes de unidade usando um arquivo *. RunSettings*](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
-  - Atualizações para configurar testes de unidade usando um arquivo RunSettings
-  - A descrição da opção de culpa foi alterada e o exemplo foi adicionado.
+- [Configurar testes de unidade usando um *arquivo .runsettings*](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
+  - Atualizações para configurar testes de unidade usando um arquivo runsettings
+  - A descrição da opção Blame foi alterada e o exemplo foi adicionado.
