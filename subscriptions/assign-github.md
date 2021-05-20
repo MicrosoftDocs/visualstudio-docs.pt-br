@@ -7,12 +7,12 @@ ms.assetid: f271d623-dcde-442a-865c-4dca5ad8a9c5
 ms.date: 03/03/2021
 ms.topic: conceptual
 description: Gerenciando assinaturas nas assinaturas do Visual Studio com o GitHub Enterprise
-ms.openlocfilehash: c174b9beb7a7a0eec6bdb65e684869bc0be7dadb
-ms.sourcegitcommit: 8da735b586276c95bf566a867655e3464ab1f989
+ms.openlocfilehash: a1ece92990bf54d85140b1d3548ebf811913fae4
+ms.sourcegitcommit: 0088835f22334b8fee89f8c07bb12bcdfdef1639
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2021
-ms.locfileid: "109740656"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110188107"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>Gerenciar assinaturas do Visual Studio com o GitHub Enterprise
 Os clientes que têm o EA (Enterprise Agreements) com a Microsoft estão qualificados a comprar uma nova oferta de assinatura que reúne as assinaturas do Visual Studio Standard e o GitHub Enterprise. É uma maneira fácil e econômica para os assinantes do Visual Studio adquirirem o GitHub Enterprise. 
@@ -33,6 +33,10 @@ Para obter mais informações sobre como gerenciar assinaturas do Visual Studio,
 > Se as assinaturas do Visual Studio com o GitHub Enterprise forem atribuídas pelos administradores de assinatura do Visual Studio sem comprar primeiro, o GitHub não será notificado de que você deseja criar uma conta empresarial do GitHub.  **Uma compra de pelo menos uma** A assinatura do Visual Studio com o GitHub Enterprise deve ser feita antes que as assinaturas sejam atribuídas.
 
 ## <a name="moving-to-visual-studio-with-github-enterprise"></a>Migrando para o Visual Studio com o GitHub Enterprise
+</br>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWEAsv]
+
 Se sua organização comprar assinaturas do Visual Studio com os pacotes do GitHub Enterprise após a atribuição de Visual Studio Enterprise padrão e Visual Studio Professional assinaturas, o portal de Administração conterá um recurso para ajudá-lo a mover seus assinantes existentes para o Visual Studio Enterprise correspondente com o GitHub Enterprise e/ou Visual Studio Professional com assinaturas do GitHub Enterprise.  Por exemplo, assinantes com Visual Studio Professional assinaturas serão movedas para o Visual Studio Professional com GitHub Enterprise assinaturas. No painel "Visão geral" da barra esquerda, você verá o seguinte lado:
 
    > [!div class="mx-imgBorder"]

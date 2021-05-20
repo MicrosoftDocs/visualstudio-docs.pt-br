@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 9971007ed38a1f09aa28145ead468f6e5383eeae
-ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
+ms.openlocfilehash: f3bc253f0babbc404164a9e85fda1e54ba5f5297
+ms.sourcegitcommit: 0088835f22334b8fee89f8c07bb12bcdfdef1639
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/19/2021
-ms.locfileid: "109973601"
+ms.locfileid: "110188103"
 ---
 # <a name="update-visual-studio-using-a-minimal-offline-layout"></a>Atualizar o Visual Studio usando um layout offline mínimo
 
@@ -142,6 +142,12 @@ Alguns outros exemplos que usam o comando **Generate** :
     MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Professional --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop Microsoft.VisualStudio.Workload.NetWeb;includeRecommended --languages en-US
     ```
 
+- Você também pode gerar um layout mínimo offline que dá suporte a vários produtos.
+
+    ```cmd
+    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise,Microsoft.VisualStudio.Product.Professional --baseVersion 16.4.0 --targetVersion 16.4.4 --languages en-US
+    ```
+
 - E, finalmente, aqui está como você incluiria vários idiomas em seu layout mínimo.
 
     ```cmd
@@ -178,6 +184,12 @@ Alguns outros exemplos que usam o comando **Generate** :
     MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Professional --baseVersion 15.0.0 --targetVersion 15.9.31 --add Microsoft.VisualStudio.Workload.ManagedDesktop Microsoft.VisualStudio.Workload.NetWeb;includeRecommended --languages en-US
     ```
 
+- Você também pode gerar um layout mínimo offline que dá suporte a vários produtos.
+
+    ```cmd
+    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise,Microsoft.VisualStudio.Product.Professional --baseVersion 15.0.0 --targetVersion 15.9.31 --languages en-US
+    ```
+
 - E, finalmente, aqui está como você incluiria vários idiomas em seu layout mínimo.
 
     ```cmd
@@ -196,7 +208,7 @@ Use os comandos **Verify** e **Fix** para manter o layout mínimo após sua cria
     MinimalLayout.exe Verify --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop --includeRecommended --languages en-US
     ```
 
-- E aqui está como corrigir esse layout:
+- E veja como corrigir esse layout:
 
     ```cmd
     MinimalLayout.exe fix --targetLocation C:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeRecommended --languages en-US
@@ -230,9 +242,9 @@ A atualização é aplicada a uma instância Visual Studio em duas etapas. Comec
 
 2. **Atualizar o Visual Studio aplicativo**
 
-    Para atualizar Visual Studio, você precisa especificar o installPath da Visual Studio instância que deseja atualizar. Se várias instâncias de Visual Studio estão instaladas, cada uma precisa ser atualizada separadamente. É recomendável que você especifique a opção com o comando update para impedir a instalação de componentes que não `–noWeb` estão no layout mínimo. Isso impede que você Visual Studio em um estado inutilizável.
+    Para atualizar Visual Studio, você precisa especificar o installPath da Visual Studio instância que deseja atualizar. Se várias instâncias de Visual Studio estão instaladas, cada uma precisa ser atualizada separadamente. É recomendável que você especifique a opção com o comando update para impedir a instalação de componentes que não `–noWeb` estão no layout mínimo. Isso impede que você deixe o Visual Studio em um estado inutilizável.
 
-    Execute o comando a seguir, substituindo o parâmetro de linha de comando installPath adequadamente. Certifique-se de usar também o nome do aplicativo bootstrapper correto.
+    Execute o comando a seguir, substituindo adequadamente o parâmetro de linha de comando installPath. Certifique-se de usar também o nome do aplicativo bootstrapper correto.
 
     ```cmd
     vs_enterprise.exe update --noWeb --quiet --installpath "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise"
