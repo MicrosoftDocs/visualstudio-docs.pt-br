@@ -10,12 +10,12 @@ user.type: subscriber
 tags: portal-error
 subscription.type: vl, cloud, retail, partner
 sap.id: 8250612f-7446-20c5-7473-16d089f2280d
-ms.openlocfilehash: d8646c451d857446f9b20254d3716b5582fc3963
-ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
+ms.openlocfilehash: d21629abbc145c62ff926502d90556aa94df81a9
+ms.sourcegitcommit: beb16d5cc31b3565ec0c8d69f819a4ec67b45aae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99541205"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110349893"
 ---
 ## <a name="were-sorry-to-hear-that-youre-experiencing-an-issue-with-a-page-not-being-displayed-while-using-the-visual-studio-subscriptions-portal"></a>Lamentamos saber que você está enfrentando um problema com uma página que não está sendo exibida ao usar o portal de assinaturas do Visual Studio. 
 
@@ -26,4 +26,4 @@ Se os controles ou botões do portal de assinaturas não estiverem funcionando, 
 * Abrindo o portal em uma janela Incognito ou InPrivate 
 * Atualizando a página  
 
-Se nenhuma dessas soluções simples resolver o problema, clique em "criar um tíquete de suporte" para obter ajuda.
+Se nenhuma dessas soluções simples resolver o problema, entre em contato com o suporte de assinaturas do Visual Studio clicando no botão "solicitação online" abaixo. 

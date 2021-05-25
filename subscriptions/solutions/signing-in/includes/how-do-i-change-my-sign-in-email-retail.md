@@ -1,6 +1,6 @@
 ---
-title: Como fazer alterar meu email de entrada para minha assinatura de varejo do Visual Studio?
-description: Saiba como solicitar uma alteração de seu endereço de entrada do Visual Studio para assinaturas adquiridas por meio do Microsoft Store
+title: Como fazer meu email de login para minha Visual Studio de varejo?
+description: Saiba como solicitar uma alteração de seu Visual Studio de login para assinaturas adquiridas por meio do Microsoft Store
 author: evanwindom
 ms.author: cabuschl
 ms.date: 03/16/2020
@@ -10,14 +10,14 @@ user.type: subscriber
 tags: sign-in
 subscription.type: retail
 sap.id: 17a2bf94-0d03-2629-dfd8-e8935f9126ec
-ms.openlocfilehash: 39f74d1014f3cea75b0a7f5a85e17f3694b99370
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: cbbd449b89e441e756cc49f374c98e653f52706e
+ms.sourcegitcommit: beb16d5cc31b3565ec0c8d69f819a4ec67b45aae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915839"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110349952"
 ---
-## <a name="how-to-change-your-sign-in-email-address-for-visual-studio-subscriptions-purchased-through-the-microsoft-store"></a>Como alterar seu endereço de email de entrada para assinaturas do Visual Studio adquiridas por meio do Microsoft Store
-Se você quiser alterar o endereço de email usado para entrar em suas assinaturas do Visual Studio e adquirir suas assinaturas por meio do Microsoft Store, será necessário entrar em contato com a equipe de suporte da conta, assinatura e cobrança da Microsoft para que seu endereço de email de entrada seja alterado. 
+## <a name="how-to-change-your-sign-in-email-address-for-visual-studio-subscriptions-purchased-through-the-microsoft-store"></a>Como alterar seu endereço de email de Visual Studio assinaturas adquiridas por meio do Microsoft Store
+Se você quiser alterar o endereço de email usado para entrar em suas assinaturas do Visual Studio e tiver comprado suas assinaturas por meio do Microsoft Store, precisará entrar em contato com a equipe de Suporte de Cobrança, Assinatura e Conta da Microsoft para que seu email de entrada seja alterado. 
 
-Clique em "criar um tíquete de suporte" para obter ajuda.
+Clique em "Solicitação online" para obter ajuda.
