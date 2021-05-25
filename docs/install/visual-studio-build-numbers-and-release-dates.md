@@ -12,12 +12,12 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: a0aa395864aa05c268819e5da52d6fed80d96a56
-ms.sourcegitcommit: d6fb4f8dff6ac69dfdd61e481a4ddd6b0dd8fa63
+ms.openlocfilehash: 73ec976b14501ae8f6d5315cdcc6a80677b6762b
+ms.sourcegitcommit: 55aeafdd369bea434adaebe5f9d4631e33623545
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/25/2021
-ms.locfileid: "110395418"
+ms.locfileid: "110399015"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Números de build e datas de lançamento do Visual Studio
 
@@ -29,6 +29,7 @@ A tabela a seguir lista os números de build e as datas de lançamento do Visual
 
 | **Versão**| **Channel** | **Data de liberação** | **Versão de build** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.11.0 | Preview 1 | 25 de maio de 2021 | 16.11.31320.298 |
 | 16.10.0 | Versão | 25 de maio de 2021 | 16.10.31321.278 |
 | 16.10.0 | Visualização 4 | 18 de maio de 2021 | 16.10.31313.381 |
 | 16.9.6 | Versão | 18 de maio de 2021 | 16.9.31313.79 |
