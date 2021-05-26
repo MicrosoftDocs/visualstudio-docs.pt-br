@@ -3,19 +3,19 @@ title: IDs de carga de trabalho e de componente do Visual Studio Enterprise 2017
 titleSuffix: ''
 description: Use as IDs de carga de trabalho e de componente para instalar o Visual Studio usando a linha de comando ou para especificar como uma dependência em um manifesto do VSIX
 keywords: ''
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.date: 2/12/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: d250a1b00c65c24d38a47f7a9a2791f9ef7a2e82
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 977c50d42a5c3b59a397714a656f6fd84d94de36
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881823"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "110449814"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-enterprise-2017"></a>Principal editor do Visual Studio (incluído no Visual Studio Enterprise 2017)
 
@@ -979,7 +979,7 @@ Microsoft.VisualStudio.ComponentGroup.UWP.VC | Ferramentas da Plataforma Univers
 Microsoft.VisualStudio.ComponentGroup.Windows10SDK.15063 | SDK do Windows 10 (10.0.15063.0) | 15.8.27825.0 | Opcional
 Microsoft.VisualStudio.ComponentGroup.Windows10SDK.16299 | SDK do Windows 10 (10.0.16299.0) | 15.8.27825.0 | Opcional
 
-## <a name="visual-studio-extension-development"></a>Desenvolvimento de extensões do Visual Studio
+## <a name="visual-studio-extension-development"></a>Desenvolvimento de extensão do Visual Studio
 
 **ID:** Microsoft.VisualStudio.Workload.VisualStudioExtension
 

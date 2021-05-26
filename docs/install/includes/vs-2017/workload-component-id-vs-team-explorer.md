@@ -3,19 +3,19 @@ title: IDs de carga de trabalho e de componente do Team Explorer para Visual Stu
 titleSuffix: ''
 description: Usar IDs de carga de trabalho e de componente do Visual Studio para fornecer ferramentas de teste integradas para testadores em geral
 keywords: ''
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.date: 2/12/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 2f60ee53234d45ca43ea60fa4a56e51d7d23e914
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 560457caff5d67cff0d6a6b72c1612283e1f340f
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868550"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "110449785"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-team-explorer-2017"></a>Editor de núcleo do Visual Studio (incluído no Team Explorer para Visual Studio 2017)
 
@@ -36,4 +36,4 @@ Estes são os componentes que não são incluídos com nenhuma carga de trabalho
 
 ID do componente | Nome | Versão
 --- | --- | ---
-N/D | N/D | N/D
+n/d | n/d | N/D

@@ -1,10 +1,10 @@
 ---
 title: IDs de carga de trabalho e de componente do Visual Studio Enterprise
 titleSuffix: ''
-description: Use Visual Studio Enterprise carga de trabalho e IDs de componente para instalar o Visual Studio da linha de comando ou especificar uma dependência em um manifesto do VSIX.
+description: Use Visual Studio Enterprise IDs de carga de trabalho e de componente para instalar Visual Studio da linha de comando ou especificar uma dependência em um manifesto VSIX.
 keywords: ''
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.date: 3/2/2020
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.assetid: be73e3af-d87b-4d14-bd08-2e4bda074fb3
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: aa226ecd3f760672f531adf61467004cd5e1485d
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: af9f8600a9d1e61739a30c03200fa9e0886ad564
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683348"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "110449812"
 ---
 # <a name="visual-studio-enterprise-component-directory"></a>Diretório de componentes do Visual Studio Enterprise
 

@@ -2,19 +2,19 @@
 title: IDs de carga de trabalho e de componente das Ferramentas de Build do Visual Studio 2017
 titleSuffix: ''
 description: Usar IDs de carga de trabalho e de componente do Visual Studio para criar aplicativos clássicos baseados no Windows
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.date: 2/12/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 3d38a5dac5ae23b048e9faf4142cec630b77f9be
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b3fe0d729902ea454d9f81e51e4957bf2c7d37d1
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881914"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "110449781"
 ---
 ## <a name="azure-development-build-tools"></a>Ferramentas de build de desenvolvimento do Azure
 
@@ -287,7 +287,7 @@ Microsoft.VisualStudio.ComponentGroup.NativeDesktop.WinXP | Suporte do Windows X
 Microsoft.VisualStudio.ComponentGroup.Windows10SDK.15063 | SDK do Windows 10 (10.0.15063.0) | 15.8.27825.0 | Opcional
 Microsoft.VisualStudio.ComponentGroup.Windows10SDK.16299 | SDK do Windows 10 (10.0.16299.0) | 15.8.27825.0 | Opcional
 
-## <a name="visual-studio-extension-development"></a>Desenvolvimento de extensões do Visual Studio
+## <a name="visual-studio-extension-development"></a>Desenvolvimento de extensão do Visual Studio
 
 **ID:** Microsoft.VisualStudio.Workload.VisualStudioExtensionBuildTools
 
