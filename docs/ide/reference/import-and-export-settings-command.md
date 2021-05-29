@@ -1,5 +1,5 @@
 ---
-description: Importa, exporta ou redefine as configurações do Visual Studio. Extensão de arquivo vssettings
+description: Importa, exporta ou redefine as configurações do Visual Studio. extensão de arquivo VSSettings
 title: Comando Importar e Exportar Configurações
 ms.date: 05/28/2021
 ms.topic: reference
@@ -21,11 +21,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 05/29/2021
 ms.locfileid: "110687645"
 ---
-# <a name="import-and-export-settings-command-vssettings-file"></a>Comando Importar e Exportar Configurações (arquivo .vssettings)
+# <a name="import-and-export-settings-command-vssettings-file"></a>Comando de configurações de importação e exportação (arquivo. vssettings)
 
-Importa, exporta ou redefine Visual Studio arquivo de configurações, `.vssettings` .
+Importa, exporta ou redefine o arquivo de configurações do Visual Studio, `.vssettings` .
 
-O esquema do arquivo está aberto. Normalmente, o esquema segue uma estrutura XML em que cada categoria é uma marca, que pode conter marcas de subcategoria. Essas marcas de subcategoria podem conter marcas de valor de propriedade. Embora a maioria dos pacotes use a estrutura comum, qualquer pacote no Visual Studio pode contribuir com XML arbitrário para o arquivo com o esquema escolhido.
+O esquema do arquivo está aberto. Normalmente, o esquema segue uma estrutura XML em que cada categoria é uma marca, que pode conter marcas de subcategoria. Essas marcas de subcategorias podem conter marcas de valor de propriedade. Embora a maioria dos pacotes use a estrutura comum, qualquer pacote no Visual Studio pode contribuir com XML arbitrário para o arquivo com o esquema que ele escolhe.
 
 ## <a name="syntax"></a>Sintaxe
 

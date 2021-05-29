@@ -1,6 +1,6 @@
 ---
 title: Desenvolvimento Móvel Multiplataforma no Visual Studio | Microsoft Docs
-description: Neste artigo, saiba como você pode criar aplicativos para dispositivos Android, iOS e Windows usando o Visual Studio.
+description: Neste artigo, saiba como você pode criar aplicativos para dispositivos Android, iOS e Windows usando Visual Studio.
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 10/17/2019
@@ -21,7 +21,7 @@ ms.locfileid: "110687680"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Desenvolvimento móvel multiplataforma no Visual Studio
 
-É possível criar aplicativos para dispositivos Android, iOS e Windows usando o Visual Studio.  Ao projetar seu aplicativo, use as ferramentas do Visual Studio para adicionar facilmente serviços conectados, como Microsoft 365, Azure App Service e Application Insights.
+É possível criar aplicativos para dispositivos Android, iOS e Windows usando o Visual Studio.  Ao projetar seu aplicativo, use ferramentas no Visual Studio para adicionar facilmente serviços conectados, como Microsoft 365, Serviço de Aplicativo do Azure e Application Insights.
 
 Compile seus aplicativos usando o C# e o .NET Framework, HTML e JavaScript ou o C++. Compartilhe código, cadeias de caracteres, imagens e, em alguns casos, até mesmo a interface do usuário.
 
@@ -39,14 +39,14 @@ Com as Ferramentas do Visual Studio para Xamarin, é possível ter o Android, o 
 |[Saiba mais sobre o Xamarin no Visual Studio](https://visualstudio.microsoft.com/xamarin/) (VisualStudio.com)|
 |[Documentação de desenvolvimento de aplicativos móveis do Xamarin](/xamarin/) |
 |[DevOps com aplicativos Xamarin](/xamarin/tools/ci/devops/) |
-|[Saiba mais sobre os aplicativos universais do Windows no Visual Studio](https://visualstudio.microsoft.com/vs/universal-windows-platform/) (VisualStudio.com)|
+|[Saiba mais sobre aplicativos Universais do Windows Visual Studio](https://visualstudio.microsoft.com/vs/universal-windows-platform/) (VisualStudio.com)|
 |[Saiba mais sobre as semelhanças entre o Swift e o C#](https://aka.ms/scposter) (download.microsoft.com)|
 
 ### <a name="target-android-ios-and-windows-from-a-single-code-base"></a><a name="AndroidHTML"></a> Ter o Android, iOS e Windows como destino por meio de uma única base de código
 
- Você pode criar aplicativos nativos para Android, iOS e Windows usando C# ou F # (não há suporte para Visual Basic no momento).  Para começar, instale o Visual Studio, selecione a opção **desenvolvimento móvel com .net** no instalador.
+ Você pode criar aplicativos nativos para Android, iOS e Windows usando C# ou F# (Visual Basic não tem suporte no momento).  Para começar, instale Visual Studio, selecione a **opção Desenvolvimento Móvel** com .NET no instalador.
 
- Se você já tiver o Visual Studio instalado, execute novamente o **instalador do Visual Studio** e selecione o mesmo **desenvolvimento móvel com a opção .net** para Xamarin (como acima).
+ Se você já tiver Visual Studio instalado, execute o Instalador do Visual Studio e selecione **a** mesma opção Desenvolvimento Móvel com **.NET** para Xamarin (como acima).
 
  Quando terminar, os modelos de projeto serão exibidos na caixa de diálogo **Novo Projeto**. A maneira mais fácil de encontrar modelos do Xamarin é simplesmente pesquisar em “Xamarin”.
 
@@ -71,7 +71,7 @@ Com as Ferramentas do Visual Studio para Xamarin, é possível ter o Android, o 
 |[Opções de compartilhamento de código](/xamarin/cross-platform/app-fundamentals/code-sharing/) (Xamarin) |
 |[Opções de compartilhamento de código com o .NET](/dotnet/standard/cross-platform/) |
 
-### <a name="target-windows-10-devices"></a><a name="WindowsHTML"></a> Dispositivos Windows 10 de destino
+### <a name="target-windows-10-devices"></a><a name="WindowsHTML"></a> Dispositivos Windows 10 destino
 
  ![Dispositivos Windows](../cross-platform/media/windowsdevices.png "Dispositivos Windows")
 
@@ -119,11 +119,11 @@ Com as Ferramentas do Visual Studio para Xamarin, é possível ter o Android, o 
 
 ## <a name="build-an-app-for-android-ios-and-windows-c"></a>Criar um aplicativo para Android, iOS e Windows (C++)
 
-![Use o C&#43;&#43; para compilar para Android, iOS e Windows](../cross-platform/media/cross_plat_cpp_intro_image.png "Cross_Plat_CPP_Intro_Image")
+![Usar O&#43;&#43; C para build para Android, iOS e Windows](../cross-platform/media/cross_plat_cpp_intro_image.png "Cross_Plat_CPP_Intro_Image")
 
- Primeiro, instale o Visual Studio e o **desenvolvimento móvel com** carga de trabalho C++. Em seguida, você pode criar um aplicativo de atividade nativa para Android ou um aplicativo destinado ao Windows ou ao iOS. Você pode direcionar para Android, iOS e Windows na mesma solução se desejar e, em seguida, compartilhar o código entre eles usando uma biblioteca compartilhada estática ou dinâmica de plataforma cruzada.
+ Primeiro, instale o Visual Studio e a carga **de trabalho Desenvolvimento Móvel com C++.** Em seguida, você pode criar um aplicativo de atividade nativo para Android ou um aplicativo destinado ao Windows ou iOS. Você pode direcionar Android, iOS e Windows na mesma solução, se quiser, e compartilhar código entre eles usando uma biblioteca compartilhada estática ou dinâmica entre plataformas.
 
- Se você precisar criar um aplicativo para o Android que precisa de algum tipo de manipulação avançada de elementos gráficos, como um jogo, poderá usar o C++ para fazer isso. Comece com o projeto do **aplicativo de atividade nativa (Android)** . Este projeto tem suporte completo na cadeia de ferramentas Clang.
+ Se você precisar criar um aplicativo para o Android que precisa de algum tipo de manipulação avançada de elementos gráficos, como um jogo, poderá usar o C++ para fazer isso. Comece com o **projeto Aplicativo de Atividade Nativa (Android).** Este projeto tem suporte completo na cadeia de ferramentas Clang.
 
  ![Modelo de projeto de atividade nativa](../cross-platform/media/cross-plat_cpp_native.png "Modelo de projeto de atividade nativa")
 
@@ -131,20 +131,20 @@ Com as Ferramentas do Visual Studio para Xamarin, é possível ter o Android, o 
 
  É possível ainda compilar um aplicativo direcionado a toda a amplitude de dispositivos Windows 10 usando o C++ e um modelo de projeto de aplicativo da Plataforma Universal do Windows (UWP). Leia mais sobre isso na seção [Ter dispositivos Windows 10 como destino](#WindowsHTML) mostrada anteriormente neste tópico.
 
- Você pode compartilhar o código C++ entre Android, iOS e Windows criando uma biblioteca compartilhada estática ou dinâmica.
+ Você pode compartilhar código C++ entre Android, iOS e Windows criando uma biblioteca compartilhada estática ou dinâmica.
 
  ![Bibliotecas compartilhadas estáticas e dinâmicas](../cross-platform/media/cross_plat_cpp_libraries.png "Bibliotecas compartilhadas estáticas e dinâmicas")
 
- Você pode consumir essa biblioteca em um projeto windows, iOS ou Android, como aqueles descritos anteriormente nesta seção. Você pode também consumi-la em um aplicativo compilado usando o Xamarin, Java ou qualquer linguagem que permite invocar funções em uma DLL não gerenciada.
+ Você pode consumir essa biblioteca em um projeto do Windows, iOS ou Android, como as descritas anteriormente nesta seção. Você pode também consumi-la em um aplicativo compilado usando o Xamarin, Java ou qualquer linguagem que permite invocar funções em uma DLL não gerenciada.
 
  Ao escrever o código nessas bibliotecas, é possível usar o IntelliSense para explorar as APIs nativas das plataformas Android e Windows. Esses projetos de biblioteca são totalmente integrados com o depurador do Visual Studio, para que você defina pontos de interrupção, execute o código em etapas, encontre e corrija problemas usando todos os recursos avançados do depurador.
 
 |**Saiba mais**|
 |--------------------|
-|[Baixar Visual Studio](https://visualstudio.microsoft.com/downloads/) (VisualStudio.com)|
+|[Baixar o Visual Studio](https://visualstudio.microsoft.com/downloads/) (VisualStudio.com)|
 |[Instalar desenvolvimento de tecnologia móvel multiplataforma com C++](/cpp/cross-platform/install-visual-cpp-for-cross-platform-mobile-development)|
 |[Saiba mais sobre como usar o C++ para direcionar várias plataformas](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) (VisualStudio.com)|
-|[Instale o que você precisa e crie um aplicativo de atividade nativa C++ para Android](/cpp/cross-platform/create-an-android-native-activity-app)|
+|[Instale o que você precisa e, em seguida, crie um aplicativo de atividade nativa do C++ para Android](/cpp/cross-platform/create-an-android-native-activity-app)|
 |[Saiba mais sobre o compartilhamento de código C++ com aplicativos Android e Windows](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) (VisualStudio.com)|
 |[Exemplos de desenvolvimento móvel de plataforma cruzada para C++](/cpp/cross-platform/cross-platform-mobile-development-examples)|
 
@@ -154,7 +154,7 @@ Com as Ferramentas do Visual Studio para Xamarin, é possível ter o Android, o 
 
  As Ferramentas do Visual Studio para Unity são uma extensão gratuita do Visual Studio que integram as ferramentas avançadas de edição de código, produtividade e depuração do Visual Studio ao *Unity*, o mecanismo popular de jogos/elementos gráficos de plataforma cruzada e o ambiente de desenvolvimento para aplicativos imersivos destinados a Windows, iOS, Android e outras plataformas, incluindo a Web.
 
- ![Ambiente de desenvolvimento do VSTU](../cross-platform/media/vstu_overview.png "Ferramentas do Visual Studio para Unity visão geral")
+ ![Ambiente de desenvolvimento VSTU](../cross-platform/media/vstu_overview.png "Visão geral de Ferramentas do Visual Studio para Unity")
 
  Com o VSTU (Ferramentas do Visual Studio para Unity), é possível usar o Visual Studio para escrever scripts de jogo e editor em C# e, em seguida, usar seu depurador avançado para encontrar e corrigir erros. A última versão do VSTU traz suporte para o Unity 2018.1 e inclui a coloração de sintaxe da linguagem de sombreador ShaderLab do Unity, uma melhor sincronização com o Unity, uma depuração mais avançada e uma geração de código aprimorada para o assistente MonoBehavior. O VSTU também leva seus arquivos de projeto do Unity, mensagens do console e a capacidade de iniciar seu jogo para o Visual Studio, para que você possa gastar menos tempo mudando do e para o Editor do Unity durante a escrita do código.
 
@@ -169,6 +169,6 @@ Com as Ferramentas do Visual Studio para Xamarin, é possível ter o Android, o 
 
 ## <a name="see-also"></a>Confira também
 
-- [Adicionar Microsoft 365 APIs a um Visual Studio projeto](/office/developer-program/office-365-developer-program)
+- [Adicionar Microsoft 365 APIs a um projeto do Visual Studio](/office/developer-program/office-365-developer-program)
 - [Serviços de Aplicativos do Azure – Aplicativos Móveis](https://azure.microsoft.com/services/app-service/mobile/)
 - [Visual Studio App Center](/appcenter)
