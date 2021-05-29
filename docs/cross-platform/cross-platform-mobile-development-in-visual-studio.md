@@ -12,12 +12,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: b50edfe91a9b497760c44d3fd548eb6d2a15a049
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 2f3c611ae157be4f2ea89254856bdd3b6fba448d
+ms.sourcegitcommit: 63cb90e8cea112aa2ce8741101b309dbc709e393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399371"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110687680"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Desenvolvimento móvel multiplataforma no Visual Studio
 
@@ -110,7 +110,7 @@ Com as Ferramentas do Visual Studio para Xamarin, é possível ter o Android, o 
 |**Saiba mais**|
 |--------------------|
 |[Instalar o Visual Studio](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
-|[Introdução às Ferramentas do Visual Studio para Apache Cordova](/visualstudio/cross-platform/tools-for-cordova/)|
+|[Introdução às Ferramentas do Visual Studio para Apache Cordova](/previous-versions/visualstudio/cross-platform/tools-for-cordova/)|
 |[Saiba mais sobre o Emulador do Visual Studio para Android](https://visualstudio.microsoft.com/vs/msft-android-emulator/) (VisualStudio.com)|
 
 ::: moniker-end
@@ -135,16 +135,16 @@ Com as Ferramentas do Visual Studio para Xamarin, é possível ter o Android, o 
 
  ![Bibliotecas compartilhadas estáticas e dinâmicas](../cross-platform/media/cross_plat_cpp_libraries.png "Bibliotecas compartilhadas estáticas e dinâmicas")
 
- Você pode consumir essa biblioteca em um projeto do Windows, iOS ou Android, como as descritas anteriormente nesta seção. Você pode também consumi-la em um aplicativo compilado usando o Xamarin, Java ou qualquer linguagem que permite invocar funções em uma DLL não gerenciada.
+ Você pode consumir essa biblioteca em um projeto windows, iOS ou Android, como aqueles descritos anteriormente nesta seção. Você pode também consumi-la em um aplicativo compilado usando o Xamarin, Java ou qualquer linguagem que permite invocar funções em uma DLL não gerenciada.
 
  Ao escrever o código nessas bibliotecas, é possível usar o IntelliSense para explorar as APIs nativas das plataformas Android e Windows. Esses projetos de biblioteca são totalmente integrados com o depurador do Visual Studio, para que você defina pontos de interrupção, execute o código em etapas, encontre e corrija problemas usando todos os recursos avançados do depurador.
 
 |**Saiba mais**|
 |--------------------|
-|[Baixar o Visual Studio](https://visualstudio.microsoft.com/downloads/) (VisualStudio.com)|
+|[Baixar Visual Studio](https://visualstudio.microsoft.com/downloads/) (VisualStudio.com)|
 |[Instalar desenvolvimento de tecnologia móvel multiplataforma com C++](/cpp/cross-platform/install-visual-cpp-for-cross-platform-mobile-development)|
 |[Saiba mais sobre como usar o C++ para direcionar várias plataformas](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) (VisualStudio.com)|
-|[Instale o que você precisa e, em seguida, crie um aplicativo de atividade nativa do C++ para Android](/cpp/cross-platform/create-an-android-native-activity-app)|
+|[Instale o que você precisa e crie um aplicativo de atividade nativa C++ para Android](/cpp/cross-platform/create-an-android-native-activity-app)|
 |[Saiba mais sobre o compartilhamento de código C++ com aplicativos Android e Windows](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) (VisualStudio.com)|
 |[Exemplos de desenvolvimento móvel de plataforma cruzada para C++](/cpp/cross-platform/cross-platform-mobile-development-examples)|
 
@@ -152,9 +152,9 @@ Com as Ferramentas do Visual Studio para Xamarin, é possível ter o Android, o 
 
 ## <a name="build-a-cross-platform-game-for-android-ios-and-windows-by-using-visual-studio-tools-for-unity"></a>Compilar um jogo multiplataforma para o Android, o iOS e o Windows usando as ferramentas do Visual Studio para Unity
 
- As Ferramentas do Visual Studio para Unity são uma extensão gratuita do Visual Studio que integram as ferramentas avançadas de edição de código, produtividade e depuração do Visual Studio ao *Unity* , o mecanismo popular de jogos/elementos gráficos de plataforma cruzada e o ambiente de desenvolvimento para aplicativos imersivos destinados a Windows, iOS, Android e outras plataformas, incluindo a Web.
+ As Ferramentas do Visual Studio para Unity são uma extensão gratuita do Visual Studio que integram as ferramentas avançadas de edição de código, produtividade e depuração do Visual Studio ao *Unity*, o mecanismo popular de jogos/elementos gráficos de plataforma cruzada e o ambiente de desenvolvimento para aplicativos imersivos destinados a Windows, iOS, Android e outras plataformas, incluindo a Web.
 
- ![Ambiente de desenvolvimento VSTU](../cross-platform/media/vstu_overview.png "Visão geral de Ferramentas do Visual Studio para Unity")
+ ![Ambiente de desenvolvimento do VSTU](../cross-platform/media/vstu_overview.png "Ferramentas do Visual Studio para Unity visão geral")
 
  Com o VSTU (Ferramentas do Visual Studio para Unity), é possível usar o Visual Studio para escrever scripts de jogo e editor em C# e, em seguida, usar seu depurador avançado para encontrar e corrigir erros. A última versão do VSTU traz suporte para o Unity 2018.1 e inclui a coloração de sintaxe da linguagem de sombreador ShaderLab do Unity, uma melhor sincronização com o Unity, uma depuração mais avançada e uma geração de código aprimorada para o assistente MonoBehavior. O VSTU também leva seus arquivos de projeto do Unity, mensagens do console e a capacidade de iniciar seu jogo para o Visual Studio, para que você possa gastar menos tempo mudando do e para o Editor do Unity durante a escrita do código.
 
@@ -169,6 +169,6 @@ Com as Ferramentas do Visual Studio para Xamarin, é possível ter o Android, o 
 
 ## <a name="see-also"></a>Confira também
 
-- [Adicionar Microsoft 365 APIs a um projeto do Visual Studio](/office/developer-program/office-365-developer-program)
+- [Adicionar Microsoft 365 APIs a um Visual Studio projeto](/office/developer-program/office-365-developer-program)
 - [Serviços de Aplicativos do Azure – Aplicativos Móveis](https://azure.microsoft.com/services/app-service/mobile/)
 - [Visual Studio App Center](/appcenter)

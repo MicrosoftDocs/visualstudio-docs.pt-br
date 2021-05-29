@@ -1,6 +1,6 @@
 ---
 title: Recursos avançados
-description: Saiba mais sobre os recursos avançados que podem ser mais apropriados para desenvolvedores experientes ou para os desenvolvedores que já estão familiarizados com o Visual Studio.
+description: Saiba mais sobre os recursos avançados que podem ser mais apropriados para desenvolvedores experientes ou para os desenvolvedores que já estão familiarizados com Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 06/01/2018
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 04b048250b2529e21dd30738821b273c268e3498
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 51b25ff5f5f71291bb1aa1fd006b60566a576d7f
+ms.sourcegitcommit: 63cb90e8cea112aa2ce8741101b309dbc709e393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862077"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110687597"
 ---
 # <a name="features-of-visual-studio"></a>Funcionalidades do Visual Studio
 
@@ -26,13 +26,13 @@ O instalador modular do Visual Studio permite que você escolha e instale *carga
 
 ::: moniker range="vs-2017"
 
-Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
+Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
+Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
@@ -82,17 +82,13 @@ Para obter mais informações, consulte [Ferramentas da Web modernas](https://vi
 
 - Crie aplicativos móveis para iOS, Android e Windows em C# e F# usando o [Xamarin](https://developer.xamarin.com/guides/cross-platform/windows/visual-studio/).
 
-- Use tecnologias Web &mdash; HTML, CSS e JavaScript &mdash; padrão para criar aplicativos móveis para iOS, Android e Windows usando o [Apache Cordova](/visualstudio/cross-platform/tools-for-cordova/).
-
 - Crie jogos 2D e 3D em C# usando [Ferramentas do Visual Studio para Unity](/gamedev/unity/get-started/visual-studio-tools-for-unity.md).
 
 - Compile aplicativos C++ nativos para dispositivos iOS, Android e Windows. Compartilhe código comum em bibliotecas criadas para iOS, Android e Windows usando [C++ para desenvolvimento multiplataforma](/cpp/cross-platform/visual-cpp-for-cross-platform-mobile-development).
 
-- Implante, teste e depure aplicativos Android com o [Android Emulator](../cross-platform/visual-studio-emulator-for-android.md).
-
 ## <a name="connect-to-databases"></a>Conectar-se aos bancos de dados
 
-**Gerenciador de servidores** ajuda a procurar e gerenciar SQL Server instâncias e ativos localmente, remotamente e no Azure, Salesforce.com, Microsoft 365 e sites. Para abrir **Gerenciador de servidores**, no menu principal, escolha **Exibir**  >  **Gerenciador de servidores**. Para obter mais informações de como usar o Gerenciador de Servidores, confira [Adicionar novas conexões](../data-tools/add-new-connections.md).
+**Gerenciador de Servidores** ajuda você a procurar e gerenciar instâncias SQL Server e ativos localmente, remotamente e no Azure, Salesforce.com, Microsoft 365 e sites. Para abrir **Gerenciador de Servidores**, no menu principal, escolha **Exibir**  >  **Gerenciador de Servidores**. Para obter mais informações de como usar o Gerenciador de Servidores, confira [Adicionar novas conexões](../data-tools/add-new-connections.md).
 
 O [SSDT (SQL Server Data Tools)](/sql/ssdt/download-sql-server-data-tools-ssdt) é um ambiente de desenvolvimento avançado do SQL Server, do Banco de Dados SQL do Azure e do SQL Data Warehouse do Azure. Ele permite compilar, depurar, manter e refatorar bancos de dados. Você pode trabalhar com um projeto de banco de dados ou diretamente com uma instância local ou não de banco de dados conectado.
 
@@ -142,4 +138,4 @@ Para saber mais sobre como estender o Visual Studio, consulte [Estender o IDE do
 
 - [Visão geral do IDE do Visual Studio](../get-started/visual-studio-ide.md)
 - [Novidades no Visual Studio 2017](../ide/whats-new-visual-studio-2017.md)
-- [O que há de novo no Visual Studio 2019](../ide/whats-new-visual-studio-2019.md)
+- [Novidades no Visual Studio 2019](../ide/whats-new-visual-studio-2019.md)
