@@ -1,7 +1,7 @@
 ---
 title: Atualizar uma instalação baseada em rede
 description: Saiba como atualizar uma instalação do Visual Studio baseada em rede usando o comando --layout
-ms.date: 04/16/2021
+ms.date: 05/26/2021
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0400f4be06afab2326ac738e1ac15f9d93a6ecee
-ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
+ms.openlocfilehash: 74464aa76c24a798d33fa7639cdd0b6a07489bf7
+ms.sourcegitcommit: 62e39ea1bf0ed939376c4375fc180ff7c4c760fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107800776"
+ms.lasthandoff: 05/28/2021
+ms.locfileid: "110660215"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Atualizar uma instalação em rede do Visual Studio
 
@@ -29,13 +29,13 @@ ms.locfileid: "107800776"
 ## <a name="how-to-update-a-network-layout"></a>Como atualizar um layout de rede
 
 > [!IMPORTANT]
-> Essas instruções pressupõem que você criou anteriormente um layout de instalação de rede e tomou algumas decisões sobre como o cliente deve obter as atualizações. Para obter mais informações sobre como fazer isso, consulte a página [criar uma instalação de rede do Visual Studio](create-a-network-installation-of-visual-studio.md) e [controlar atualizações para as implantações do Visual Studio](../install/controlling-updates-to-visual-studio-deployments.md) .
+> Essas instruções pressuem que você criou anteriormente um layout de instalação de rede e tomou algumas decisões sobre como o cliente deve obter as atualizações. Para obter mais informações sobre como fazer isso, consulte a página Criar uma instalação de rede do [Visual Studio](create-a-network-installation-of-visual-studio.md) e Controlar atualizações para Visual Studio [implantações.](../install/controlling-updates-to-visual-studio-deployments.md)
 
-Para atualizar o compartilhamento de instalação de rede para que ele inclua as atualizações mais recentes, execute o bootstrapper usando o `--layout` parâmetro para baixar os pacotes atualizados.
+Para atualizar o compartilhamento de instalação de rede para que ele inclua as atualizações mais recentes, execute o bootstrapper usando o parâmetro `--layout` para baixar os pacotes atualizados.
 
-Se você selecionou um layout parcial quando [criou o layout de rede pela primeira vez](create-a-network-installation-of-visual-studio.md), essas configurações serão salvas. Comandos de layout futuros usam as opções anteriores e quaisquer novas opções que você especificar.
+Se você selecionou um layout parcial quando criou [o layout de rede](create-a-network-installation-of-visual-studio.md)pela primeira vez, essas configurações serão salvas. Comandos de layout futuros usam as opções anteriores e quaisquer novas opções que você especificar.
 
-Se você hospedar um layout em um compartilhamento de arquivos, deverá atualizar uma cópia privada do layout (por exemplo, c:\VSLayout) e, depois, depois que todo o conteúdo atualizado for baixado, copie-o para o compartilhamento de arquivos (por exemplo, \\ server\products\VS). Se você não fizer isso, haverá uma chance maior de que quaisquer usuários que executem a instalação enquanto o layout está sendo atualizado não consigam obter todo o conteúdo do layout, pois ele não estará completamente atualizado.
+Se você hospedar um layout em um compartilhamento de arquivos, deverá atualizar uma cópia privada do layout (por exemplo, c:\VSLayout) e, depois que todo o conteúdo atualizado for baixado, copie-o para o compartilhamento de arquivos (por exemplo, \\ server\products\VS). Se você não fizer isso, haverá uma chance maior de que quaisquer usuários que executem a instalação enquanto o layout está sendo atualizado não consigam obter todo o conteúdo do layout, pois ele não estará completamente atualizado.
 
 Vamos examinar alguns exemplos de como criar e, em seguida, atualizar um layout:
 
@@ -57,24 +57,24 @@ Vamos examinar alguns exemplos de como criar e, em seguida, atualizar um layout:
   vs_enterprise.exe --layout c:\VSLayout --passive
   ```
 
-* Veja aqui como adicionar uma carga de trabalho e idioma traduzido adicionais.  (Esse comando adiciona a carga de trabalho de *desenvolvimento do Azure* .)  Agora, a área de trabalho gerenciada e o Azure estão incluídos nesse layout.  Os recursos de idioma para inglês e alemão também estão incluídos para todas essas cargas de trabalho.  Além disso, o layout é atualizado para a versão mais recente disponível.
+* Veja aqui como adicionar uma carga de trabalho e idioma traduzido adicionais.  (Esse comando adiciona a carga *de trabalho de desenvolvimento do Azure.)*  Agora, a Área de Trabalho Gerenciada e o Azure estão incluídos nesse layout.  Os recursos de idioma para inglês e alemão também estão incluídos para todas essas cargas de trabalho.  Além disso, o layout é atualizado para a versão mais recente disponível.
 
   ```cmd
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --lang de-DE
   ```
 
     > [!IMPORTANT]
-    > Uma operação de atualização não instala componentes opcionais recém-adicionados. Se você precisar dos componentes opcionais adicionados recentemente, remova os componentes opcionais antigos no `Layout.JSON` [arquivo de resposta](automated-installation-with-response-file.md) e inclua os componentes necessários na seção "Adicionar" de `Layout.JSON` . 
+    > Uma operação de atualização não baixa nem instala componentes opcionais adicionais no layout ou no cliente. Se você precisar adicionar ou alterar componentes opcionais, primeiro remova os componentes opcionais antigos do arquivo de resposta e inclua os novos componentes necessários na seção `Layout.JSON` [](automated-installation-with-response-file.md) "adicionar" do `Layout.JSON` . Em seguida, quando você executar o comando update no layout, ele baixará os componentes recém-adicionados ao layout. 
     >
-    > **Solução alternativa**: execute uma operação de modificação separada após uma atualização para instalar os componentes ausentes.
+    > Para instalar esses novos componentes no computador cliente, certifique-se de realizar estas três etapas. Primeiro, verifique se o layout contém os novos componentes, conforme descrito acima. Em seguida, atualize seu cliente para os bits mais recentes no layout.  Por fim, novamente no cliente, execute uma operação de modificação que instalará os novos componentes (que foram adicionados ao layout) no computador cliente.
 
-* E, finalmente, eis aqui como adicionar uma carga de trabalho e um idioma traduzido adicionais sem atualizar a versão. (Esse comando adiciona o ASP.NET e a carga de trabalho de *desenvolvimento da Web* .)  Agora, a área de trabalho gerenciada, o Azure e o ASP.NET & as cargas de desenvolvimento da Web estão incluídas nesse layout. Os recursos de idioma para inglês, alemão e francês também estão incluídos para todas essas cargas de trabalho.  No entanto, o layout não foi atualizado para a versão mais recente disponível quando esse comando foi executado. Ele permanece com a versão existente.
+* E, finalmente, eis aqui como adicionar uma carga de trabalho e um idioma traduzido adicionais sem atualizar a versão. (Esse comando adiciona o ASP.NET *e a carga de trabalho de desenvolvimento para a* Web.)  Agora, a Área de Trabalho Gerenciada, o Azure ASP.NET & cargas de trabalho de desenvolvimento para a Web estão incluídas nesse layout. Os recursos de idioma para inglês, alemão e francês também estão incluídos para todas essas cargas de trabalho.  No entanto, o layout não foi atualizado para a versão mais recente disponível quando esse comando foi executado. Ele permanece com a versão existente.
 
   ```cmd
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.NetWeb --lang fr-FR --keepLayoutVersion
   ```
 
-## <a name="deploy-an-update-to-client-machines"></a>Implantar uma atualização em computadores cliente
+## <a name="deploy-an-update-to-client-machines"></a>Implantar uma atualização em máquinas cliente
 
 Dependendo de como o ambiente de rede é configurado, uma atualização pode ser implantada por um administrador de empresa ou iniciada de um computador cliente.
 
