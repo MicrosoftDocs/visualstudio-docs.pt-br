@@ -22,7 +22,7 @@ ms.locfileid: "110687654"
 ---
 # <a name="secure-applications"></a>Aplicativos seguros
 
-Você deve considerar a segurança em todos os aspectos do desenvolvimento do aplicativo, do design à implantação. Comece executando o Visual Studio com a máxima segurança possível. Consulte [permissões de usuário](../ide/user-permissions-and-visual-studio.md).
+Você deve considerar a segurança em todos os aspectos do desenvolvimento do aplicativo, do design à implantação. Comece executando o Visual Studio com a máxima segurança possível. Consulte [Permissões de usuário](../ide/user-permissions-and-visual-studio.md).
 
 Para que você desenvolva aplicativos efetivamente seguros, é preciso ter um entendimento básico dos conceitos e dos recursos de segurança das plataformas para as quais você está desenvolvendo. Também é preciso entender as técnicas de codificação segura.
 
@@ -47,4 +47,4 @@ A segurança também é uma consideração importante no processo de compilaçã
 - [Guia de segurança do Windows 10 Mobile](/windows/security/threat-protection/windows-10-mobile-security-guide)
 - [Recursos de segurança da plataforma Apache Cordova](/previous-versions/visualstudio/cross-platform/tools-for-cordova/security/best-practices?view=toolsforcordova-2017&preserve-view=true)
 - [Segurança do ASP.NET Core](/aspnet/core/security/?view=aspnetcore-2.1&preserve-view=true)
-- [Segurança de Windows Forms](/dotnet/framework/winforms/windows-forms-security)
+- [Windows Forms segurança](/dotnet/framework/winforms/windows-forms-security)
