@@ -1,6 +1,6 @@
 ---
-title: Problemas de configuração de servidor/cliente (ClickOnce)
-description: Saiba mais sobre problemas de configuração de servidor e cliente que podem afetar a implantação do aplicativo ClickOnce.
+title: Problemas de configuração do servidor/cliente (ClickOnce)
+description: Saiba mais sobre problemas de configuração de servidor e cliente que podem afetar a implantação do seu aplicativo ClickOnce.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -19,29 +19,29 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8040fb8028666d0dd551369b6b7f782de09058ca
-ms.sourcegitcommit: 18e7300d4878f2fcd0263a4aff31a755ae8fc289
+ms.openlocfilehash: 9f0361816d0621f52e9f95f4159dd0d46f4f5951
+ms.sourcegitcommit: f50bbdb15c4f9fca0fa245ca765183c378960cc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110449936"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "111352001"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>Problemas de configuração de servidor e cliente em implantações do ClickOnce
-Se você usar Serviços de Informações da Internet (IIS) no Windows Server e sua implantação contiver um tipo de arquivo que o Windows não reconhece, como um arquivo do Microsoft Word, o IIS se recusará a transmitir esse arquivo e sua implantação não terá êxito.
+Se você usar o Serviços de Informações da Internet (IIS) no Windows Server e sua implantação contiver um tipo de arquivo que o Windows não reconhece, como um arquivo do Microsoft Word, o IIS se recusará a transmitir esse arquivo e sua implantação não terá sucesso.
 
- Além disso, alguns servidores Web e software de aplicativo Web, como , contêm uma lista de arquivos e tipos de [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] arquivos que você não pode baixar. Por exemplo, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] impede o download de todos os *Web.config* arquivos. Esses arquivos podem conter informações confidenciais, como nomes de usuário e senhas.
+ Além disso, alguns servidores Web e software de aplicativos Web, como [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] , contêm uma lista de arquivos e tipos de arquivos que você não pode baixar. Por exemplo, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] impede o download de todos os arquivos de *Web.config* . Esses arquivos podem conter informações confidenciais, como nomes de usuário e senhas.
 
- Embora essa restrição não cause problemas para baixar arquivos principais, como manifestos e assemblies, essa restrição pode impedir que você baixe arquivos de dados incluídos como parte de [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] seu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo. No , você pode resolver esse erro removendo o manipulador que proíbe o download desses arquivos [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] do gerenciador de configuração do IIS. Consulte a documentação do servidor IIS para obter detalhes adicionais.
+ Embora essa restrição não possa causar problemas de download de arquivos de núcleo, como [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifestos e assemblies, essa restrição pode impedi-lo de baixar arquivos de dados incluídos como parte do seu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo. No [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] , você pode resolver esse erro removendo o manipulador que proíbe o download desses arquivos do Gerenciador de configurações do IIS. Consulte a documentação do servidor IIS para obter detalhes adicionais.
 
- Alguns servidores Web podem bloquear arquivos com extensões como *.dll,* *.config* e *.mdf*. Aplicativos baseados no Windows normalmente incluem arquivos com algumas dessas extensões. Se um usuário tentar executar um aplicativo que acessa um arquivo bloqueado em um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] servidor Web, ocorrerá um erro. Em vez de desbloquear todas as extensões de arquivo, publica todos os arquivos de aplicativo com uma extensão de arquivo [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] *.deploy* por padrão. Portanto, o administrador só precisa configurar o servidor Web para desbloquear as três extensões de arquivo a seguir:
+ Alguns servidores Web podem bloquear arquivos com extensões como *.dll*, *.config* e *. MDF*. Aplicativos baseados em Windows normalmente incluem arquivos com algumas dessas extensões. Se um usuário tentar executar um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo que acessa um arquivo bloqueado em um servidor Web, ocorrerá um erro. Em vez de desbloquear todas as extensões de arquivo, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] o publica cada arquivo de aplicativo com uma extensão de arquivo *. Deploy* por padrão. Portanto, o administrador só precisa configurar o servidor Web para desbloquear as três extensões de arquivo a seguir:
 
-- *.application*
+- *. aplicativo*
 
-- *.manifest*
+- *. manifest*
 
-- *.deploy*
+- *. implantar*
 
-  No entanto, você pode desabilitar essa opção desobstruindo a opção Usar extensão de arquivo **".deploy"** na caixa de diálogo Opções de Publicação [,](/previous-versions/visualstudio/visual-studio-2010/7z83t16a(v=vs.100))nesse caso, você deve configurar o servidor Web para desbloquear todas as extensões de arquivo usadas no aplicativo.
+  No entanto, você pode desabilitar essa opção desmarcando a opção de **extensão de arquivo use ". Deploy"** na [caixa de diálogo opções de publicação](/previous-versions/visualstudio/visual-studio-2010/7z83t16a(v=vs.100)). nesse caso, você deve configurar o servidor Web para desbloquear todas as extensões de arquivo usadas no aplicativo.
 
   Você precisará configurar o *. manifest*, o *. Application* e o *. Deploy*, por exemplo, se você estiver usando o IIS em que você não instalou o .NET Framework, ou se estiver usando outro servidor Web (por exemplo, Apache).
 
@@ -62,22 +62,22 @@ Se você usar Serviços de Informações da Internet (IIS) no Windows Server e s
 > O Mozilla Firefox terá suporte se o provedor de implantação não estiver em branco ou se a extensão do assistente do Microsoft .NET Framework estiver instalada. Essa extensão é empacotada com .NET Framework 3,5 SP1. Para suporte a XBAP, o plug-in NPWPF é ativado quando necessário.
 
 ## <a name="activate-clickonce-applications-through-browser-scripting"></a>Ativar aplicativos ClickOnce por meio de scripts de navegador
- Se você tiver desenvolvido uma página da Web personalizada que inicia um aplicativo usando o Active Scripting, poderá descobrir que o aplicativo não [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] será lançado em alguns máquinas. Internet Explorer contém uma configuração chamada Solicitação automática de **downloads de** arquivo , que afeta esse comportamento. Essa configuração está disponível na guia **Segurança** no menu **Opções** que afeta esse comportamento. Ele é chamado **de Solicitação automática de downloads de** arquivo e está listado sob a **categoria Downloads.** A propriedade é definida como **Habilitar** por padrão para páginas da Web da intranet e como **Desabilitar** por padrão para páginas da Web da Internet. Quando essa configuração for definida como **Desabilitar**, qualquer tentativa de ativar um aplicativo programaticamente (por exemplo, atribuindo sua URL à [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `document.location` propriedade) será bloqueada. Sob essa circunstância, os usuários podem iniciar aplicativos somente por meio de um download iniciado pelo usuário, por exemplo, clicando em um hiperlink definido como a URL do aplicativo.
+ Se você tiver desenvolvido uma página da Web personalizada que inicia um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo usando o script ativo, talvez você ache que o aplicativo não será iniciado em alguns computadores. O Internet Explorer contém uma configuração chamada **solicitação automática para downloads de arquivos**, que afeta esse comportamento. Essa configuração está disponível na guia **segurança** no menu de **Opções** que afeta esse comportamento. Ele é chamado de **solicitação automática de downloads de arquivos** e é listado abaixo da categoria de **downloads** . A propriedade é definida como **habilitar** por padrão para páginas da Web da intranet e para **desabilitar** por padrão para páginas da Web da Internet. Quando essa configuração é definida como **desabilitar**, qualquer tentativa de ativar um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo programaticamente (por exemplo, atribuindo sua URL à `document.location` Propriedade) será bloqueada. Sob essa circunstância, os usuários podem iniciar aplicativos somente por meio de um download iniciado pelo usuário, por exemplo, clicando em um hiperlink definido para a URL do aplicativo.
 
-## <a name="additional-server-configuration-issues"></a>Problemas adicionais de configuração do servidor
+## <a name="additional-server-configuration-issues"></a>Problemas de configuração de servidor adicionais
 
 ##### <a name="administrator-permissions-required"></a>Permissões de administrador necessárias
- Você deverá ter permissões de Administrador no servidor de destino se estiver publicando com HTTP. O IIS requer esse nível de permissões. Se você não estiver publicando usando HTTP, só precisará de permissão de gravação no caminho de destino.
+ Você deve ter permissões de administrador no servidor de destino se estiver publicando com HTTP. O IIS requer esse nível de permissões. Se você não estiver publicando usando HTTP, precisará apenas da permissão de gravação no caminho de destino.
 
 ##### <a name="server-authentication-issues"></a>Problemas de autenticação do servidor
- Ao publicar em um servidor remoto que tenha o "Acesso Anônimo" desligado, você receberá o seguinte aviso:
+ Quando você publicar em um servidor remoto que tem "acesso anônimo" desativado, receberá o seguinte aviso:
 
 ```
 "The files could not be downloaded from http://<remoteserver>/<myapplication>/.  The remote server returned an error: (401) Unauthorized."
 ```
 
 > [!NOTE]
-> Você pode fazer com que a autenticação NTLM (NT challenge-response) funcione se o site solicitar credenciais diferentes de suas credenciais padrão e, na caixa de diálogo de segurança, você clicar em **OK** quando for solicitado se quiser salvar as credenciais fornecidas para sessões futuras. No entanto, essa solução alternativa não funcionará para autenticação básica.
+> Você pode fazer com que a autenticação NTLM (NT Challenge-Response) funcione se o site solicitar credenciais que não sejam suas credenciais padrão e, na caixa de diálogo Segurança, você clicar em **OK** quando for solicitado se quiser salvar as credenciais fornecidas para futuras sessões. No entanto, essa solução alternativa não funcionará para a autenticação básica.
 
 ## <a name="use-third-party-web-servers"></a>Usar servidores Web de terceiros
  Se você estiver implantando um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo de um servidor Web que não seja o IIS, poderá ocorrer um problema se o servidor estiver retornando o tipo de conteúdo incorreto para arquivos de chave [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , como o manifesto de implantação e o manifesto do aplicativo. Para resolver esse problema, consulte a documentação da ajuda do seu servidor Web sobre como adicionar novos tipos de conteúdo ao servidor e verifique se todos os mapeamentos de extensão de nome de arquivo listados na tabela a seguir estão em vigor.
@@ -104,35 +104,35 @@ Se você usar Serviços de Informações da Internet (IIS) no Windows Server e s
 | file:// | Você pode instalar um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo usando esse protocolo. |
 
 ## <a name="windows-xp-sp2-windows-firewall"></a>Windows XP SP2: Firewall do Windows
- Por padrão, o Windows XP SP2 habilita o Firewall do Windows. Se você estiver desenvolvendo seu aplicativo em um computador com o Windows XP instalado, ainda poderá publicar e executar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativos do servidor local que está executando o IIS. No entanto, você não pode acessar esse servidor que está executando o IIS de outro computador, a menos que você abra o Firewall do Windows. Consulte Ajuda do Windows para obter instruções sobre como gerenciar o Firewall do Windows.
+ Por padrão, o Windows XP SP2 habilita o Firewall do Windows. Se você estiver desenvolvendo seu aplicativo em um computador com o Windows XP instalado, ainda poderá publicar e executar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativos do servidor local que está executando o IIS. No entanto, você não pode acessar esse servidor que está executando o IIS de outro computador, a menos que você abra o Firewall do Windows. Consulte a ajuda do Windows para obter instruções sobre como gerenciar o Firewall do Windows.
 
-## <a name="windows-server-enable-frontpage-server-extensions"></a>Windows Server: Habilitar extensões de servidor FrontPage
- As Extensões do FrontPage Server da Microsoft são necessárias para publicar aplicativos em um servidor Web do Windows que usa HTTP.
+## <a name="windows-server-enable-frontpage-server-extensions"></a>Windows Server: habilitar extensões de servidor do FrontPage
+ As extensões de servidor do FrontPage da Microsoft são necessárias para publicar aplicativos em um servidor Web do Windows que usa HTTP.
 
- Por padrão, o Windows Server não tem Extensões do Servidor FrontPage instaladas. Se você quiser usar para publicar em um servidor Web do Windows Server que usa HTTP com Extensões do FrontPage Server, instale as Extensões do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] FrontPage Server primeiro. Você pode executar a instalação usando a ferramenta de administração Gerenciar seu servidor no Windows Server.
+ Por padrão, o Windows Server não tem as extensões de servidor do FrontPage instaladas. Se você quiser usar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] o para publicar em um servidor Web do Windows Server que usa http com extensões de servidor do FrontPage, deverá instalar primeiro as extensões de servidor do FrontPage. Você pode executar a instalação usando a ferramenta gerenciar sua administração de servidor no Windows Server.
 
 ## <a name="windows-server-locked-down-content-types"></a>Windows Server: tipos de conteúdo bloqueados
- O IIS em bloqueia todos os tipos de arquivo, exceto para determinados tipos de conteúdo conhecidos [!INCLUDE[WinXPSvr](../debugger/includes/winxpsvr_md.md)] (por exemplo, *.htm,* *.html,* *.txt* e assim por diante). Para habilitar a implantação de aplicativos usando esse servidor, você precisa alterar as configurações do IIS para permitir o download de arquivos do tipo [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] *.application*, *.manifest* e quaisquer outros tipos de arquivo personalizados usados pelo seu aplicativo.
+ O IIS em [!INCLUDE[WinXPSvr](../debugger/includes/winxpsvr_md.md)] bloqueia todos os tipos de arquivo, exceto para determinados tipos de conteúdo conhecidos (por exemplo, *.htm*, *.html*, *.txt* e assim por diante). Para habilitar a implantação de [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativos usando esse servidor, você precisa alterar as configurações do IIS para permitir o download de arquivos do tipo *. Application*, *. manifest* e de qualquer outro tipo de arquivo personalizado usado pelo seu aplicativo.
 
- Se você implantar usando um servidor IIS, execute *inetmgr.exe* e adicione novos Tipos de Arquivo para a página da Web padrão:
+ Se você implantar usando um servidor IIS, execute *inetmgr.exe* e adicione novos tipos de arquivo para a página da Web padrão:
 
-- Para as *extensões .application* e *.manifest,* o tipo MIME deve ser "application/x-ms-application". Para outros tipos de arquivo, o tipo MIME deve ser "application/octet-stream".
+- Para as extensões *. Application* e *. manifest* , o tipo MIME deve ser "application/x-MS-Application". Para outros tipos de arquivo, o tipo MIME deve ser "application/octet-stream".
 
-- Se você criar um tipo MIME com a extensão " " e o tipo MIME "application/octet-stream", ele permitirá que os arquivos do tipo de arquivo desbloqueado sejam \<em> baixados. (No entanto, tipos de arquivo bloqueados como *\* .aspx* e *\* .asmx* não podem ser baixados.)
+- Se você criar um tipo MIME com a extensão " \<em> " e o tipo MIME "application/octet-stream", ele permitirá que os arquivos de tipo de arquivo desbloqueado sejam baixados. (No entanto, os tipos de arquivo bloqueados, como *\* . aspx* e *\* . asmx* , não podem ser baixados.)
 
-  Para obter instruções específicas sobre como configurar tipos MIME no Windows Server, consulte Como adicionar um tipo [MIME a um site](/iis/configuration/system.webserver/staticcontent/mimemap#how-to-add-a-mime-type-to-a-web-site-or-application)ou aplicativo .
+  Para obter instruções específicas sobre como configurar tipos MIME no Windows Server, consulte [como adicionar um tipo de MIME a um site ou aplicativo da Web](/iis/configuration/system.webserver/staticcontent/mimemap#how-to-add-a-mime-type-to-a-web-site-or-application).
 
 ## <a name="content-type-mappings"></a>Mapeamentos de tipo de conteúdo
- Ao publicar por HTTP, o tipo de conteúdo (também conhecido como tipo MIME) para o *arquivo .application* deve ser "application/x-ms-application". Se você tiver .NET Framework 2.0 instalado no servidor, isso será definido automaticamente para você. Se não estiver instalado, você precisará criar uma associação de tipo MIME para o [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo vroot (ou servidor inteiro).
+ Ao publicar por HTTP, o tipo de conteúdo (também conhecido como tipo MIME) para o arquivo *. Application* deve ser "application/x-MS-Application". Se você tiver .NET Framework 2,0 instalado no servidor, isso será definido para você automaticamente. Se não estiver instalado, você precisará criar uma associação de tipo MIME para o [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo vroot (ou servidor inteiro).
 
  Se você implantar usando um servidor IIS, execute <em>inetmgr.</em> exe e adicione um novo tipo de conteúdo de "application/x-MS-Application" para a extensão *. Application* .
 
 ## <a name="http-compression-issues"></a>Problemas de compactação de HTTP
  Com [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] o, você pode executar downloads que usam a compactação HTTP, uma tecnologia de servidor Web que usa o algoritmo gzip para compactar um fluxo de dados antes de enviar o fluxo para o cliente. O cliente — nesse caso, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] — descompacta o fluxo antes de ler os arquivos.
 
- Se você estiver usando o IIS, poderá habilitar facilmente a compactação HTTP. No entanto, quando você habilita a compactação HTTP, ela só é habilitada para determinados tipos de arquivo, ou seja, HTML e arquivos de texto. Para habilitar a compactação para assemblies (*. dll*), XML (*. xml*), manifestos de implantação (*. Application*) e manifestos de aplicativo (*. manifest*), você deve adicionar esses tipos de arquivo à lista de tipos para que o IIS seja compactado. Até que você adicione os tipos de arquivo à sua implantação, somente arquivos de texto e HTML serão compactados.
+ Se você estiver usando o IIS, poderá habilitar facilmente a compactação HTTP. No entanto, quando você habilita a compactação HTTP, ela só é habilitada para determinados tipos de arquivo, ou seja, HTML e arquivos de texto. Para habilitar a compactação para assemblies (*.dll*), XML (*.xml*), manifestos de implantação (*. Application*) e manifestos de aplicativo (*. manifest*), você deve adicionar esses tipos de arquivo à lista de tipos para que o IIS seja compactado. Até que você adicione os tipos de arquivo à sua implantação, somente arquivos de texto e HTML serão compactados.
 
- Para obter instruções detalhadas sobre o IIS, consulte [como especificar tipos de documento adicionais para a compactação http](/troubleshoot/iis/content-types-http-compression.md).
+ Para obter instruções detalhadas sobre o IIS, consulte [como especificar tipos de documento adicionais para a compactação http](/troubleshoot/iis/content-types-http-compression).
 
 ## <a name="see-also"></a>Confira também
 - [Solucionar problemas de implantações do ClickOnce](../deployment/troubleshooting-clickonce-deployments.md)

@@ -1,27 +1,27 @@
 ---
 title: Opções, Editor de Texto, C#, Avançado
-description: Saiba como usar a página avançado na seção C# para modificar as configurações de formatação do editor, refatoração de código e comentários de documentação XML para C#.
+description: Saiba como usar a página Avançado na seção C# para modificar as configurações de formatação do editor, a refactoração de código e os comentários de documentação XML para C#.
 ms.custom: SEO-VS-2020
-ms.date: 11/13/2020
+ms.date: 06/01/2021
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Advanced
-author: akhera99
+author: mikadumont
 ms.author: midumont
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: aa202f5c0abc490967a40255332976cdf9dca25a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 29f6dd2b4a101132bc7bc19664c51fd5d4b8283e
+ms.sourcegitcommit: f50bbdb15c4f9fca0fa245ca765183c378960cc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959318"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "111351976"
 ---
 # <a name="options-text-editor-c-advanced"></a>Opções, Editor de Texto, C#, Avançado
 
-Use a página de opções **Avançado** para modificar as configurações de formatação do editor, de refatoração de código e de comentários da documentação XML para C#. Para acessar essa página de opções, escolha **ferramentas**  >  **Opções** e, em seguida, escolha **Editor de texto**  >  **C#**  >  **avançado**.
+Use a página de opções **Avançado** para modificar as configurações de formatação do editor, de refatoração de código e de comentários da documentação XML para C#. Para acessar essa página de opções, escolha **Opções**  >  **de** Ferramentas e, em seguida, escolha **Editor de Texto**  >  **C#**  >  **Avançado.**
 
 > [!NOTE]
 > É possível que nem todas as opções estejam listadas aqui.
@@ -30,7 +30,7 @@ Use a página de opções **Avançado** para modificar as configurações de for
 
 - Análise de código ao vivo ou escopo de análise em segundo plano
 
-   Configure o escopo de análise em segundo plano para código gerenciado. Para obter mais informações, consulte [como: configurar o escopo de análise de código ao vivo para código gerenciado](../../code-quality/configure-live-code-analysis-scope-managed-code.md).
+   Configure o escopo da análise em segundo plano para o código gerenciado. Para obter mais informações, [consulte Como configurar o escopo de análise de código ao vivo para código gerenciado.](../../code-quality/configure-live-code-analysis-scope-managed-code.md)
 
 ## <a name="using-directives"></a>Usando diretivas
 
@@ -90,7 +90,7 @@ Use a página de opções **Avançado** para modificar as configurações de for
    ```
 
 ::: moniker range=">=vs-2019"                                              
-- Sugerir o uso de tipos em assemblies de .NET Framework
+- Sugerir usos para tipos em .NET Framework assemblies
 ::: moniker-end
                                          
 ::: moniker range="vs-2017"                                                
@@ -102,6 +102,10 @@ Use a página de opções **Avançado** para modificar as configurações de for
    Quando essas opções estiverem selecionadas, uma [Ação Rápida](../quick-actions.md) estará disponível para instalar um pacote NuGet e para adicionar uma diretiva `using` para tipos não referenciados.
 
    ![Ação rápida para instalar o pacote NuGet no Visual Studio](media/nuget-lightbulb.png)
+
+- Adicionar diretivas using ausentes quando colar
+
+    Quando essa opção for selecionada, as diretivas serão adicionadas automaticamente ao código quando `using` você colar um tipo em um arquivo.
 
 ## <a name="highlighting"></a>Realçar
 
@@ -127,30 +131,42 @@ Use a página de opções **Avançado** para modificar as configurações de for
 
 ## <a name="block-structure-guides"></a>Guias de estrutura de bloco
 
-Marque essas caixas de seleção para exibir linhas verticais pontilhadas entre chaves ( **{}** ) em seu código. Isso permite que você veja facilmente blocos individuais de código para o seu nível de declaração e construções no nível do código.
+Marque essas caixas de seleção para exibir linhas verticais pontilhadas entre os colchetes ( **{}** ) em seu código. Isso permite que você veja facilmente blocos individuais de código para o seu nível de declaração e construções no nível do código.
 
-## <a name="editor-help"></a>Ajuda do Editor
-::: moniker range=">=vs-2019"
-- Dicas de Nome de Parâmetro Embutido 
-    
-    Quando selecionado, insere dicas de nome de parâmetro para literais, literais convertidos e instanciações de objeto antes de cada argumento nas chamadas de função.  
-    
-    ![Dicas de nome de parâmetro embutido para CSharp](media/inline-parameter-name-hints-csharp.png)
+## <a name="comments"></a>Comentários
 
-- Dicas de tipo embutido 
-    
-    Quando selecionado, insere dicas de tipo para variáveis com tipos deduzidos e tipos de parâmetro lambda.  
-    
-    ![Dicas de tipo embutido para CSharp](media/inline-type-hints-csharp.png)
-::: moniker-end
 - Gerar comentários da documentação XML para ///
 
    Quando selecionado, insere os elementos XML dos comentários da documentação XML depois que você digita a introdução de comentário `///`. Para obter mais informações sobre a documentação XML, confira [Comentários da documentação XML (Guia de Programação em C#)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments).
 
-## <a name="see-also"></a>Consulte também
+::: moniker range=">=vs-2019"
+
+## <a name="inline-hints"></a>Dicas em linha
+
+- Dicas de Nome de Parâmetro Embutido 
+    
+    Quando selecionado, insere dicas de nome de parâmetro para literais, literais de cast e instações de objeto antes de cada argumento em chamadas de função.  
+    
+    ![Dicas de nome de parâmetro em linha para CSharp](media/inline-parameter-name-hints-csharp.png)
+
+- Dicas de tipo em linha 
+    
+    Quando selecionada, insere dicas de tipo para variáveis com tipos inferidos e tipos de parâmetro lambda.  
+    
+    ![Dicas de tipo em linha para CSharp](media/inline-type-hints-csharp.png)
+
+## <a name="inheritance-margin"></a>Margem de herança 
+
+- Quando selecionado, adiciona ícones às margens que representam as implementações e substituições do código. Clicar nos ícones de margem de herança exibirá opções de herança que você pode selecionar para navegar.
+
+    ![Margem de herança](media/inheritance-margin.png)
+
+::: moniker-end
+
+## <a name="see-also"></a>Confira também
 
 - [Como inserir comentários XML para geração de documentação](../../ide/reference/generate-xml-documentation-comments.md)
-- [Comentários de documentação XML (guia de programação C#)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
+- [Comentários de documentação XML (Guia de Programação em C#)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
 - [Documentar o código com comentários XML (guia do C#)](/dotnet/csharp/codedoc)
 - [Definir opções do editor específicas a um idioma](../../ide/reference/setting-language-specific-editor-options.md)
 - [C# IntelliSense](../../ide/visual-csharp-intellisense.md)

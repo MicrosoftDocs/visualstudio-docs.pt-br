@@ -2,22 +2,22 @@
 title: C# IntelliSense
 description: Saiba mais sobre alguns recursos do IntelliSense que você pode usar ao codificar seu projeto em C#.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 06/01/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - C#, IntelliSense
 - IntelliSense [C#]
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7e67c3a00a427a9f3cd6167af494484a02cc3f2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3156b1236a130478d83fe82c8fa462a1144a8e6a
+ms.sourcegitcommit: f50bbdb15c4f9fca0fa245ca765183c378960cc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862057"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "111351949"
 ---
 # <a name="c-intellisense"></a>C# IntelliSense
 
@@ -102,6 +102,10 @@ Para iniciar a operação **Adicionar usando** , posicione o cursor em uma refer
 
 Clique no ícone de lâmpada de erro e, em seguida, escolha **using System.Xml;** para adicionar automaticamente a diretiva using.
 
+### <a name="add-missing-using-directives-on-paste"></a>Adicionar diretivas using ausentes quando colar
+
+O IntelliSense pode adicionar automaticamente `using` diretivas ausentes ao seu código quando você cola um tipo em seu arquivo de código. Esse recurso poupa tempo ao automatizar a tarefa de adicionar diretivas de uso ausentes ao colar um tipo em um arquivo. Habilite esse recurso em **ferramentas**  >  **Opções**  >  **Editor de texto**  >  **C#** ou **Basic**  >  **Advanced** e selecione **Adicionar diretivas ausentes usando ao colar**.
+
 ### <a name="remove-and-sort-usings"></a>Remover e classificar usos
 
 A opção **Remover e Classificar Usos** classifica e remove as declarações `using` e `extern` sem alterar o comportamento do código-fonte. Ao longo do tempo, os arquivos de origem poderão ficar sobrecarregados e ser difíceis de serem lidos devido a diretivas `using` desnecessárias e desorganizadas. A opção **Remover e Classificar Usos** compacta o código-fonte ao remover as diretivas `using` não utilizadas e melhora a legibilidade com sua classificação. No menu **Editar**, selecione **IntelliSense** e, depois, selecione **Organizar Usos**.
@@ -126,7 +130,7 @@ Um sublinhado vermelho ondulado é exibido em cada identificador indefinido. Ao 
 
 - Clique no identificador indefinido. Uma lâmpada de erro de **Ações Rápidas** é exibida abaixo do identificador. Clique na lâmpada de erro.
 
-- Clique no identificador indefinido e pressione **Ctrl** + **.** (**Ctrl** + ponto final).
+- Clique no identificador indefinido e pressione **Ctrl** + **.** (**Ctrl** + ponto).
 
 - Clique com o botão direito do mouse no identificador indefinido e, em seguida, clique em **Ações Rápidas e Refatorações**.
 
@@ -146,7 +150,7 @@ As opções exibidas podem incluir as seguintes:
 
 No editor de códigos, o IntelliSense pode ajudá-lo a vincular métodos (manipuladores de eventos) a campos de evento.
 
-Quando você digita o `+=` operador após um campo de evento em um arquivo *. cs* , o IntelliSense solicita a opção de pressionar a tecla **Tab** . Isso insere uma nova instância de um delegado que aponta para o método que manipula o evento.
+Quando você digita o operador após um campo de evento em um `+=` *arquivo .cs,* o IntelliSense solicita a opção de pressionar a **tecla Tab.** Isso insere uma nova instância de um delegado que aponta para o método que manipula o evento.
 
 ![Botão Vínculo Automático](../ide/media/vxautohookup.gif)
 
@@ -162,7 +166,7 @@ Se você pressionar a **Guia**, o IntelliSense criará um stub de um método com
 > [!NOTE]
 > Use o comando **Navegação Regressiva** no menu **Exibir** (**Ctrl**+**-**) para retornar à declaração de vínculo de evento.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Usar o IntelliSense](../ide/using-intellisense.md)
 - [Visual Studio IDE](../get-started/visual-studio-ide.md)
