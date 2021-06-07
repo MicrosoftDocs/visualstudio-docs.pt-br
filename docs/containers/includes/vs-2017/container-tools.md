@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 02/01/2019
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 627b0b1260a3ccdd401dbb170f8e2dfffadea2dc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 53bf0d559d9737494567b079621879b97a403a95
+ms.sourcegitcommit: fc05a763b59e212c86350d117a1900a1f2686ec8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81389930"
+ms.lasthandoff: 06/07/2021
+ms.locfileid: "111564642"
 ---
 Com o Visual Studio, você pode facilmente compilar, depurar e executar aplicativos ASP.NET Core em contêineres e publicá-los no ACR (registro de contêiner do Azure), no Hub do Docker, no serviço de Azure App ou em seu próprio registro de contêiner. Neste artigo, publicaremos no ACR.
 
@@ -45,12 +45,12 @@ Para a instalação do Docker, primeiro examine as informações no [Docker desk
 Um *Dockerfile*, ou seja, a receita para criar uma imagem final do Docker, é criado no projeto. Confira a [referência do Dockerfile](https://docs.docker.com/engine/reference/builder/) para entender os comandos que ele contém:
 
 ```
-FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+FROM mcr.microsoft.com/dotnet/aspnet:2.1 AS base
 WORKDIR /app
 EXPOSE 59518
 EXPOSE 44364
 
-FROM microsoft/dotnet:2.1-sdk AS build
+FROM mcr.microsoft.com/dotnet/sdk:2.1 AS build
 WORKDIR /src
 COPY HelloDockerTools/HelloDockerTools.csproj HelloDockerTools/
 RUN dotnet restore HelloDockerTools/HelloDockerTools.csproj
