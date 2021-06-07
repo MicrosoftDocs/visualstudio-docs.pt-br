@@ -8,11 +8,11 @@ ms.assetid: 2004856f-7f54-411f-9bff-2f3472c8fff2
 ms.topic: conceptual
 description: Saiba como solicitar uma assinatura do Visual Studio em seu local de trabalho.
 ms.openlocfilehash: 8fc393782ca8e32cdbdc9f2f1b3a1716633d455c
-ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
+ms.sourcegitcommit: f430d014f912aa7874e1db65026dc72688b973e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99541106"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111448348"
 ---
 ## <a name="how-to-request-a-visual-studio-subscription-from-your-workschool"></a>Como solicitar uma assinatura do Visual Studio de seu trabalho/escola
 Muitas organizações, incluindo áreas de trabalho e escolas, compram assinaturas do Visual Studio por meio de vários programas de licenciamento. Essas assinaturas são gerenciadas por administradores (grupos de assinaturas) que podem atribuir assinaturas, estabelecer preferências e habilitar ou desabilitar determinados recursos.  

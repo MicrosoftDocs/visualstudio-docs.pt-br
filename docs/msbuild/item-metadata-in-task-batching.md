@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 28451b9bf317c33e1aff52a62247374ea2b6871e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1675cf43cb9632d4480265f00a377c1f5c530b51
+ms.sourcegitcommit: c5f2a142ebf9f00808314f79a4508a82e6df1198
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913879"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111395352"
 ---
 # <a name="item-metadata-in-task-batching"></a>Metadados de item no envio de tarefas em lote
 
@@ -138,9 +138,9 @@ A [tarefa Message](../msbuild/message-task.md) exibe as seguintes informações:
 
 ## <a name="batch-one-item-at-a-time"></a>Envio em lote, um item por vez
 
-O envio em lote também pode ser executado nos metadados de itens conhecidos que são atribuídos a cada item no momento da criação. Isso assegura que cada item em uma coleção tenha alguns metadados para usar para o envio em lote. O valor de metadados `Identity` é exclusivo para cada item e é útil para dividir cada item em uma lista de itens em um lote separado. Para obter uma lista completa dos metadados de itens conhecidos, confira [Metadados de item conhecidos](../msbuild/msbuild-well-known-item-metadata.md).
+O envio em lote também pode ser executado nos metadados de itens conhecidos que são atribuídos a cada item no momento da criação. Isso assegura que cada item em uma coleção tenha alguns metadados para usar para o envio em lote. O `Identity` valor de metadados é útil para dividir cada item em uma lista de itens em um lote separado. Para obter uma lista completa dos metadados de itens conhecidos, confira [Metadados de item conhecidos](../msbuild/msbuild-well-known-item-metadata.md).
 
-O exemplo a seguir mostra como enviar em lote cada item em uma lista de itens, um por vez. Já que o valor `Identity` dos metadados de cada item é exclusivo, a lista de itens `ExampColl` é dividida em seis lotes, cada lote contendo um item da lista de itens. A presença de `%(Identity)` no `Text` atributo notifica o MSBuild de que o envio em lote deve ser executado.
+O exemplo a seguir mostra como enviar em lote cada item em uma lista de itens, um por vez. A `ExampColl` lista de itens é dividida em seis lotes, cada lote contendo um item da lista de itens. A presença de `%(Identity)` no `Text` atributo notifica o MSBuild de que o envio em lote deve ser executado.
 
 ```xml
 <Project
@@ -174,6 +174,35 @@ Identity: 'Item3' -- Items in ExampColl: Item3
 Identity: 'Item4' -- Items in ExampColl: Item4
 Identity: 'Item5' -- Items in ExampColl: Item5
 Identity: 'Item6' -- Items in ExampColl: Item6
+```
+
+No entanto, `Identity` não é garantido que seja exclusivo; seu valor é o valor final avaliado do `Include` atributo. Portanto, se qualquer `Include` atributo for usado várias vezes, eles serão agrupados em lote. Como mostra o exemplo a seguir, essa técnica exige que os `Include` atributos sejam exclusivos para cada item no grupo. Para ilustrar esse ponto, considere o seguinte código:
+
+```xml
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Item Include="1">
+      <M>1</M>
+    </Item>
+    <Item Include="1">
+      <M>2</M>
+    </Item>
+    <Item Include="2">
+      <M>3</M>
+    </Item>
+  </ItemGroup>
+
+  <Target Name="Batching">
+    <Warning Text="@(Item->'%(Identity): %(M)')" Condition=" '%(Identity)' != '' "/>
+  </Target>
+</Project>
+```
+
+A saída mostra que os dois primeiros itens estão no mesmo lote, porque o `Include` atributo é o mesmo para eles:
+
+```output
+test.proj(15,5): warning : 1: 1;1: 2
+test.proj(15,5): warning : 2: 3
 ```
 
 ## <a name="filter-item-lists"></a>Filtrar listas de item

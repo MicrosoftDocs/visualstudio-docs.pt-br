@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 966b08a912a7bab59998daf39590a6fd46920eb7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 96e5689c0108231be26ddf7d598227137f7bc1f7
+ms.sourcegitcommit: ab5735d64a6ad7aecabf5d6df159888e3246bff5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969523"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111433773"
 ---
 # <a name="compile-typescript-code-nodejs"></a>Compilar código TypeScript (Node.js)
 
@@ -109,13 +109,13 @@ O [pacote NPM do typescript](https://www.npmjs.com/package/typescript) adiciona 
 
    Embora o aplicativo seja criado automaticamente quando você o executa, queremos dar uma olhada em algo que acontece durante o processo de compilação:
 
-   Se você gerou mapas de origem, abra a pasta especificada na opção *outDir* e localize os \* arquivos. js gerados junto com os \* arquivos js. map gerados.
+   Se você gerou mapas de origem, abra a pasta especificada na opção *outDir* e localize os arquivos de \*.js gerados juntamente com os \* arquivos js. map gerados.
 
    Os arquivos de mapa de origem são necessários para [depuração](../javascript/debug-nodejs.md).
 
 ### <a name="run-the-application"></a>Executar o aplicativo
 
-Para obter instruções para executar o aplicativo depois de compilá-lo, consulte [criar seu primeiro Node.js aplicativo](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json#run-the-application).
+Para obter instruções para executar o aplicativo depois de compilá-lo, consulte [criar seu primeiro Node.js aplicativo](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json#run-the-app).
 
 ## <a name="automate-build-tasks"></a>Automatizar tarefas de compilação
 

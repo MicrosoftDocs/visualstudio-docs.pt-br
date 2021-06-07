@@ -1,26 +1,22 @@
 ---
 title: Soluções de suporte a assinaturas
-description: Lista de arquivos de inclusão de conteúdo do widget de suporte das assinaturas do Visual Studio
+description: Lista de arquivos INCLUDEs para assinaturas Visual Studio suporte ao conteúdo do widget
 ms.topic: conceptual
 ms.assetid: 478648b9-f6f0-4ea3-83b4-5cffa196a496
 robots: noindex, nofollow
 author: evanwindom
 ms.author: v-evwin
 ms.date: 12/07/2020
-ms.openlocfilehash: 9168e857d07c7843bd1576185598f5911263528e
-ms.sourcegitcommit: 5c146b2dfaefc4f44802600c2cd252a7a0e4b846
+ms.openlocfilehash: da284ea9403e4aab929e175f95508cc16684fc60
+ms.sourcegitcommit: a740129796159a69c704d9d372edaa7a7f191d17
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100525532"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530400"
 ---
-# <a name="visual-studio-subscriptions-support-widget-content-includes-files"></a>O conteúdo do widget de suporte às assinaturas do Visual Studio inclui arquivos
+# <a name="visual-studio-subscriptions-support-widget-content-includes-files"></a>Visual Studio assinaturas de suporte a arquivos INCLUDES de conteúdo do widget
 
 ## <a name="admin-solutions"></a>Soluções de administrador
-
-[!INCLUDE [Admin sign-in issues](admin-solutions/includes/admin-sign-in-issues.md)]
-
-[!INCLUDE [Admin tasks](admin-solutions/includes/admin-task-how-to.md)]
 
 [!INCLUDE [Become a super admin](admin-solutions/includes/become-a-super-admin-managed.md)]
 
@@ -28,15 +24,10 @@ ms.locfileid: "100525532"
 
 [!INCLUDE [Cannot access subscriptions](admin-solutions/includes/cannot-access-subs.md)]
 
-[!INCLUDE [Example change email](admin-solutions/includes/example-change-email.md)]
-
-[!INCLUDE [How do I change my sign-in email admin](admin-solutions/includes/how-do-i-change-my-sign-in-email-admin.md)]
-
 [!INCLUDE [I only see VSDE](admin-solutions/includes/only-see-vsde.md)]
 
-[!INCLUDE [Request subscriptions](admin-solutions/includes/request-subscriptions.md)]
 
-## <a name="benefit-activations"></a>Ativações do benefício
+## <a name="benefit-activations"></a>Ativações de benefícios
 
 [!INCLUDE [Error while activating Azure monthly credit](benefit-activation/includes/error-while-activating-azure-monthly-credit.md)]
 
@@ -52,7 +43,7 @@ ms.locfileid: "100525532"
 
 [!INCLUDE [Unable to see Azure monthly credit in Azure portal](benefit-activation/includes/unable-to-see-azure-monthly-credit-in-azure-portal.md)]
 
-## <a name="download-activate-or-use-software"></a>Baixar, ativar ou usar o software
+## <a name="download-activate-or-use-software"></a>Baixar, ativar ou usar software
 
 ### <a name="downloads-and-activations"></a>Downloads e ativações
 [!INCLUDE [Unable to download non-Visual Studio software](downloading-activating-or-using-software/downloading-activating-or-using-software/includes/unable-to-download-software-non-visualstudio.md)]
@@ -67,7 +58,7 @@ ms.locfileid: "100525532"
 
 [!INCLUDE [Unable to locate a product](downloading-activating-or-using-software/downloading-activating-or-using-software/includes/unable-to-locate-product.md)]
 
-### <a name="find-and-use-product-keys"></a>Localizar e usar chaves de produto
+### <a name="find-and-use-product-keys"></a>Encontrar e usar chaves do produto (Product Keys)
 [!INCLUDE [Unable to find or claim product keys](downloading-activating-or-using-software/finding-or-using-product-keys/includes/unable-to-find-or-claim-product-keys.md)]
 
 ### <a name="use-product-features"></a>Usar recursos do produto
@@ -111,15 +102,15 @@ ms.locfileid: "100525532"
 
 [!INCLUDE [Help me renew via Microsoft Store](renewing-purchasing-or-canceling/help-renewing/includes/help-me-renew-microsoft-store.md)]
 
-### <a name="help-with-canceling"></a>Ajuda para cancelar
+### <a name="help-with-canceling"></a>Ajuda com o cancelamento
 [!INCLUDE [Help me cancel monthly or annual subscriptions](renewing-purchasing-or-canceling/help-canceling/includes/help-me-cancel-monthly-annual.md)]
 
-### <a name="order-or-purchase-status"></a>Status da ordem ou da compra
+### <a name="order-or-purchase-status"></a>Status do pedido ou da compra
 [!INCLUDE [Find the status of my renewal or purchase](renewing-purchasing-or-canceling/order-or-purchase-status/includes/find-the-status-of-renewal-or-purchase.md)]
 
 [!INCLUDE [View my invoice](renewing-purchasing-or-canceling/order-or-purchase-status/includes/viewing-my-bill.md)]
 
-## <a name="issues-with-signing-in"></a>Problemas com a entrada 
+## <a name="issues-with-signing-in"></a>Problemas com a assinatura 
 
 [!INCLUDE [How do I change my sign-in email for Cloud](signing-in/includes/how-do-i-change-my-sign-in-email-cloud-self.md)]
 

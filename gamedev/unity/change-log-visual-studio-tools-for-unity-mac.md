@@ -2,7 +2,7 @@
 title: Log de alterações (Ferramentas do Visual Studio para Unity, Mac) | Microsoft Docs
 description: Exiba o log de alterações para Ferramentas do Visual Studio para Unity, Mac. Confira as alterações da versão 1.0.0.0 a 2.7.0.0 e posteriores.
 ms.custom: ''
-ms.date: 3/1/2021
+ms.date: 6/3/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: conceptual
@@ -12,16 +12,87 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: f11c5c1407d16d7a82a9d8d24e6a8dd3a04e57eb
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 2d3faf8e5231ca5d2e99bcf80dc18b6d4f4607cd
+ms.sourcegitcommit: f430d014f912aa7874e1db65026dc72688b973e4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683381"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111448292"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>Log de alterações (Ferramentas do Visual Studio para Unity, Mac)
 
 Log de alterações de Ferramentas do Visual Studio para Unity.
+
+## <a name="21020"></a>2.10.2.0
+Lançado em 2 de junho de 2021
+
+### <a name="new-features"></a>Novos recursos
+
+- **Integrar**
+
+  - [`UNT0024`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0024.md)Diagnóstico adicionado. Atribua prioridade a cálculos escalares em cálculos de vetor.
+
+- **Período**
+
+  - Adicionado suporte para uso de símbolos PDB portáteis para filtrar corretamente os locais visíveis.
+
+### <a name="bug-fixes"></a>Correções de bug
+
+- **Integrar**
+
+  - A análise de anúncio de Player fixa com versões recentes do Unity.
+
+## <a name="21010"></a>2.10.1.0
+Lançado em 11 de maio de 2021
+
+### <a name="bug-fixes"></a>Correções de bug
+
+- **Integrar**
+
+  - Correção de problemas de estabilidade com o [`UNT0008`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0008.md) QuickFix.
+
+  - Correção de problemas de desempenho com threads.
+
+  - Filtragem corrigida de avisos e erros suprimidos no ErrorList.
+
+  - Correção dos processos em segundo plano de Unity de filtragem.
+
+## <a name="21000"></a>2.10.0.0
+Lançado em 13 de abril de 2021
+
+### <a name="new-features"></a>Novos recursos
+
+- **Integrar**
+
+  - [`UNT0019`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0019.md)Diagnóstico adicionado. Chamada de indireção desnecessária para `GameObject.gameObject` .
+
+  - [`UNT0020`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0020.md)Diagnóstico adicionado. `MenuItem` atributo usado em método não estático.
+
+  - [`UNT0021`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0021.md)Diagnóstico adicionado. A mensagem do Unity deve ser protegida (aceitar).
+
+  - [`UNT0022`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0022.md)Diagnóstico adicionado. Método ineficiente para definir a posição e a rotação.
+
+  - [`UNT0023`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0023.md)Diagnóstico adicionado. Atribuição de União em objetos do Unity.
+
+  - Adicionado o [`USP0017`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0017.md) supressor para `IDE0074` . Os objetos do Unity não devem usar a atribuição de União.
+
+## <a name="2940"></a>2.9.4.0
+Lançado em 6 de abril de 2021
+
+### <a name="bug-fixes"></a>Correções de bug
+
+- **Integrar**
+
+  - Corrigir problemas com a enumeração de teste
+
+## <a name="2930"></a>2.9.3.0
+Lançado em 30 de março de 2021
+
+### <a name="bug-fixes"></a>Correções de bug
+
+- **Integrar**
+
+  - Corrigir problemas com o Test Runner 
 
 ## <a name="2920"></a>2.9.2.0
 Lançado em 2 de março de 2021
@@ -281,9 +352,9 @@ Lançado em 23 de março de 2020
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Depurador**
+- **Depurador:**
 
-  - Registro fixo de threads ao anexar.
+  - Corrigido o registro de threads após a anexação.
 
 ## <a name="2510"></a>2.5.1.0
 
@@ -291,19 +362,19 @@ Lançado em 3 de março de 2020
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Integrar**
+- **Integração:**
 
-  - Adicionado o [`USP0008`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0008.md) supressor para `IDE0051` . Os métodos privados usados com Invoke, InvokeRepeating, StartCoroutine ou StopCoroutine não devem ser marcados como não utilizados.
+  - Adicionado [`USP0008`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0008.md) o supressor para `IDE0051` . Métodos privados usados com Invoke, InvokeRepeating, StartCoroutine ou StopCoroutine não devem ser marcados como não utilizados.
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Integrar**
+- **Integração:**
 
-  - Correção da documentação do OnDrawGizmos/OnDrawGizmosSelected.
+  - Corrigida a documentação onDrawGizmos/OnDrawGizmosSelected.
 
-- **Período**
+- **Avaliação:**
 
-  - Inspeção de argumento lambda fixo.
+  - Corrigida a inspeção de argumento lambda.
 
 ## <a name="2501"></a>2.5.0.1
 
@@ -311,9 +382,9 @@ Lançado em 19 de fevereiro de 2020
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Integrar**
+- **Integração:**
 
-  - Correção [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0006.md) da verificação de diagnóstico para assinatura de mensagem incorreta. Ao inspecionar tipos com vários níveis de herança, esse diagnóstico pode falhar com a seguinte mensagem: `warning AD0001: Analyzer 'Microsoft.Unity.Analyzers.MessageSignatureAnalyzer' threw an exception of type 'System.ArgumentException' with message 'An item with the same key has already been added` .
+  - Corrigida [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0006.md) a verificação de diagnóstico para assinatura de mensagem incorreta. Ao inspecionar tipos com vários níveis de herança, esse diagnóstico pode falhar com a seguinte mensagem: `warning AD0001: Analyzer 'Microsoft.Unity.Analyzers.MessageSignatureAnalyzer' threw an exception of type 'System.ArgumentException' with message 'An item with the same key has already been added` .
 
 ## <a name="2500"></a>2.5.0.0
 
@@ -321,27 +392,27 @@ Lançado em 22 de janeiro de 2020
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Integrar**
+- **Integração:**
 
   - Adicionado suporte para arquivos HLSL.
   
-  - Foi alternado para uma interface do usuário da caixa de diálogo Nova pasta.
+  - Alternado para uma nova interface do usuário da caixa de diálogo de pasta.
   
   - Alternado para uma nova grade de propriedades acessível para configurações.
 
-  - Adicionado o [`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0006.md) supressor para `IDE0051` . Campos privados com o `SerializeField` atributo não devem ser marcados como não utilizados.
+  - Adicionado [`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0006.md) o supressor para `IDE0051` . Campos privados com o `SerializeField` atributo não devem ser marcados como não usadas.
 
-  - Adicionado o [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0007.md) supressor para `CS0649` . Os campos com o `SerializeField` atributo não devem ser marcados como não atribuídos.  
+  - Adicionado [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0007.md) o supressor para `CS0649` . Os campos com `SerializeField` o atributo não devem ser marcados como não atribuídos.  
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Integrar**
+- **Integração:**
 
-  - Geração de projeto fixa (o `GenerateTargetFrameworkMonikerAttribute` destino nem sempre foi localizado corretamente).
+  - Correção da geração de projeto ( `GenerateTargetFrameworkMonikerAttribute` o destino nem sempre estava localizado corretamente).
 
-- **Período**
+- **Avaliação:**
 
-  - Avaliação de cadeia de caracteres fixa (não usando chamadas ToString ())
+  - Corrigida a avaliação de cadeia de caracteres (não usando chamadas ToString())
 
 ## <a name="2420"></a>2.4.2.0
 
@@ -349,11 +420,11 @@ Lançado em 3 de dezembro de 2019
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Integrar**
+- **Integração:**
 
   - Corrigido o diagnóstico com interfaces definidas pelo usuário.
 
-  - Correção de dicas de ferramenta rápidas com expressões malformadas.
+  - Corrigidas dicas de ferramenta rápidas com expressões malformadas.
   
 ## <a name="2410"></a>2.4.1.0
 
@@ -361,23 +432,23 @@ Lançado em 6 de novembro de 2019
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Integrar**
+- **Integração:**
 
-  - Suporte adicionado para processos em segundo plano do Unity. (O depurador é capaz de se conectar automaticamente ao processo principal em vez de um processo filho).
+  - Adicionado suporte para processos em segundo plano do Unity. (O depurador é capaz de se conectar automaticamente ao processo principal em vez de um processo filho).
 
   - Adicionada uma dica de ferramenta rápida para mensagens do Unity, exibindo a documentação associada.
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Integrar**
+- **Integração:**
 
-  - Correção do analisador de comparação de marcas `UNT0002` com expressões binárias e de invocação avançadas.
+  - Corrigido o analisador de comparação de `UNT0002` marca com expressões binárias e de invocação avançadas.
 
 ### <a name="deprecated-features"></a>Recursos preteridos
 
-- **Integrar**
+- **Integração:**
 
-  - No futuro, Ferramentas do Visual Studio para Unity dará suporte apenas ao Visual Studio 2017 +.
+  - No futuro, Ferramentas do Visual Studio para Unity só dará suporte Visual Studio 2017+.
 
 ## <a name="2400"></a>2.4.0.0
 
@@ -385,11 +456,11 @@ Lançado em 15 de outubro de 2019
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Integrar**
+- **Integração:**
 
-  - Adicionado o [`USP0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0005.md) supressor para `IDE0060` (parâmetro não usado) para todas as mensagens do Unity.
+  - Adicionado [`USP0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0005.md) o supressor para `IDE0060` (parâmetro nãoutilado) para todas as mensagens do Unity.
 
-  - Adicionada uma dica de ferramenta rápida para campos marcados com `TooltipAttribute` . (Isso também funcionará para um acessador get simples usando esse campo).
+  - Adicionada uma dica de ferramenta rápida para campos marcados com `TooltipAttribute` . (Isso funcionará para um acessador get simples usando esse campo também).
 
 ## <a name="2330"></a>2.3.3.0
 
@@ -397,10 +468,10 @@ Lançado em 23 de setembro de 2019
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Integrar**
+- **Integração:**
 
-  - Foi adicionado um novo supressor para IDE0060, para impedir que o IDE mostre uma correção rápida para remover parâmetros não utilizados.
-    - `USP0005` para `IDE0060` : as mensagens do Unity são invocadas pelo tempo de execução do Unity.
+  - Adicionado um novo supressor para IDE0060, para impedir que o IDE mostra uma correção rápida para remover parâmetros nãoutilados.
+    - `USP0005` para `IDE0060` : as mensagens do Unity são invocadas pelo runtime do Unity.
 
 ## <a name="2320"></a>2.3.2.0
 
@@ -408,24 +479,24 @@ Lançado em 16 de setembro de 2019
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Integrar**
+- **Integração:**
 
-  - Nós aprofundamos a compreensão de que o Visual Studio tem para projetos do Unity adicionando novos diagnósticos específicos ao Unity. Também tornamos o IDE mais inteligente, suprimindo diagnósticos C# gerais que não se aplicam a projetos do Unity. Por exemplo, o IDE não mostrará uma correção rápida para alterar uma variável de inspetor para a `readonly` qual impediria que você modificasse a variável no editor do Unity.
-    - `UNT0001`: As mensagens do Unity são chamadas pelo tempo de execução mesmo se estiverem vazias, não as declare para evitar o processamento de uncesseray pelo tempo de execução do Unity.
-    - `UNT0002`: A comparação de marcas usando a igualdade de cadeia de caracteres é mais lenta do que o método CompareTag interno.
-    - `UNT0003`: O uso da forma genérica de GetComponent é preferencial para a segurança de tipo.
-    - `UNT0004`: A mensagem de atualização é dependente de taxa de quadros e deve usar time. deltaTime em vez de time. fixedDeltaTime.
-    - `UNT0005`: A mensagem FixedUpdate é independente de taxa de quadros e deve usar time. fixedDeltaTime em vez de time. deltaTime.
-    - `UNT0006`: Uma assinatura de método incorreta foi detectada para esta mensagem do Unity.
-    - `UNT0007`: Unity substitui o operador de comparação nulo para objetos do Unity que é incompatível com a União nula.
-    - `UNT0008`: Unity substitui o operador de comparação nulo para objetos do Unity que é incompatível com a propagação nula.
-    - `UNT0009`: Ao aplicar o atributo InitializeOnLoad a uma classe, você precisa fornecer um construtor estático. O atributo InitializeOnLoad verifica se ele será chamado quando o editor for iniciado.
-    - `UNT0010`: Monocomportamentos só devem ser criados usando addComponent (). O MonoBehaviour é um componente e precisa ser anexado a um GameObject.
-    - `UNT0011`: ScriptableObject só deve ser criado usando CreateInstance (). ScriptableObject precisa ser criado pelo mecanismo do Unity para manipular métodos de mensagem do Unity.
-    - `USP0001` para `IDE0029` : objetos Unity não devem usar União nula.
-    - `USP0002` para `IDE0031` : objetos Unity não devem usar a propagação nula.
-    - `USP0003` para `IDE0051` : as mensagens do Unity são invocadas pelo tempo de execução do Unity.
-    - `USP0004` para `IDE0044` : campos com um atributo serializefield não devem ser criados somente leitura.
+  - Aprofundamos a compreensão que o Visual Studio para projetos do Unity adicionando novos diagnósticos específicos ao Unity. Também tornamos o IDE mais inteligente, suprimindo diagnósticos C# gerais que não se aplicam a projetos do Unity. Por exemplo, o IDE não mostrará uma correção rápida para alterar uma variável inspetor para a qual impediria que você modificasse a variável `readonly` no Editor do Unity.
+    - `UNT0001`: as mensagens do Unity são chamadas pelo runtime mesmo se elas estão vazias, não as declare para evitar o processamento uncsseray pelo runtime do Unity.
+    - `UNT0002`: a comparação de marca usando igualdade de cadeia de caracteres é mais lenta do que o método CompareTag integrado.
+    - `UNT0003`: o uso da forma genérica de GetComponent é preferencial para a segurança do tipo.
+    - `UNT0004`: a mensagem de atualização depende da taxa de quadros e deve usar Time.deltaTime em vez de Time.fixedDeltaTime.
+    - `UNT0005`: a mensagem FixedUpdate é independente da taxa de quadros e deve usar Time.fixedDeltaTime em vez de Time.deltaTime.
+    - `UNT0006`: uma assinatura de método incorreta foi detectada para esta mensagem do Unity.
+    - `UNT0007`: o Unity substitui o operador de comparação nula para objetos unity incompatíveis com a união nula.
+    - `UNT0008`: o Unity substitui o operador de comparação nula para objetos unity incompatíveis com propagação nula.
+    - `UNT0009`: ao aplicar o atributo InitializeOnLoad a uma classe, você precisa fornecer um construtor estático. O atributo InitializeOnLoad verifica se ele será chamado quando o editor for iniciado.
+    - `UNT0010`: MonoBehaviours só deve ser criado usando AddComponent(). O MonoBehaviour é um componente e precisa ser anexado a um GameObject.
+    - `UNT0011`: ScriptableObject só deve ser criado usando CreateInstance(). ScriptableObject precisa ser criado pelo mecanismo do Unity para manipular métodos de mensagem do Unity.
+    - `USP0001` para `IDE0029` : os objetos do Unity não devem usar a união nula.
+    - `USP0002` para `IDE0031` : os objetos do Unity não devem usar a propagação nula.
+    - `USP0003` para `IDE0051` : as mensagens do Unity são invocadas pelo runtime do Unity.
+    - `USP0004` para `IDE0044` : os campos com um atributo SerializeField não devem ser feitos de forma readonly.
 
 ## <a name="2310"></a>2.3.1.0
 
@@ -433,11 +504,11 @@ Lançado em 4 de setembro de 2019
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Período**
+- **Avaliação:**
 
-  - Adição de suporte para melhor exibição de tipo, ou seja, `List<object>` em vez de `List'1[[System.Object, <corlib...>]]` .
+  - Adicionado suporte para melhor exibição de tipo, ou seja, `List<object>` em vez de `List'1[[System.Object, <corlib...>]]` .
 
-  - Suporte adicionado para acesso de membro de ponteiro, ou seja, `p->data->member` .
+  - Adicionado suporte para acesso de membro de ponteiro, ou seja, `p->data->member` .
 
   - Suporte adicionado para conversões implícitas em inicializadores de matriz, ou seja, `new byte [] {1,2,3,4}` .
 
@@ -633,19 +704,19 @@ Lançado em 5 de março de 2019
 
 - **Geração de projeto:**
 
-  - Campos públicos e serializados não irão mais gerar avisos. Suprimemos automaticamente os avisos de `CS0649` `IDE0051` compilador e em projetos do Unity que criaram essas mensagens.
+  - Campos públicos e serializados não irão mais gerar avisos. Suprimimos automaticamente os avisos do compilador e em `CS0649` projetos do Unity que `IDE0051` criaram essas mensagens.
 
-- **Integrar**
+- **Integração:**
 
   - Avisar para anexar a uma instância específica se mais de um processo do Unity estiver em execução.
 
-- **Período**
+- **Avaliação:**
 
   - Adicionado suporte para funções locais.
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Depurador**
+- **Depurador:**
 
   - Correção de atributo personalizado de leitura em argumentos nomeados ao usar versões de protocolo antigas.
 
@@ -655,13 +726,13 @@ Lançado em 4 de fevereiro de 2019
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Integrar**
+- **Integração:**
 
   - Atualização da API MonoBehaviour.
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Depurador**
+- **Depurador:**
 
   - Correção de valores primitivos de configuração no depurador.
 
@@ -671,7 +742,7 @@ Lançado em 4 de dezembro de 2018
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Integrar**
+- **Integração:**
 
   - Correção de pacote de instalação autossuficiente.
 
@@ -680,7 +751,7 @@ Lançado em 4 de dezembro de 2018
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Depurador**
+- **Depurador:**
 
   - Substituição do depurador do Unity no Mac pelo mesmo principal depurador Unity do Windows.
 
@@ -696,7 +767,7 @@ Lançado em 4 de dezembro de 2018
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Depurador**
+- **Depurador:**
 
   - Correção de avaliação de expressão com expressões malformadas ou sem suporte.
 
@@ -706,17 +777,17 @@ Lançado em 13 de novembro de 2018
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Depurador**
+- **Depurador:**
 
   - Adição de outras informações de cliente (IP, nome do computador) à caixa de diálogo Anexar.
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Depurador**
+- **Depurador:**
 
   - Corrigido um deadlock na biblioteca usada para se comunicar com o mecanismo de depuração do Unity, causando o congelamento do Visual Studio ou Unity, especialmente ao pressionar "Anexar ao Unity" ou ao reiniciar o jogo.
 
-- **Integrar**
+- **Integração:**
 
   - Correção da ativação de plug-in do Unity quando outro editor padrão é selecionado.
 
@@ -728,7 +799,7 @@ Lançado em 24 de julho de 2018
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Integrar**
+- **Integração:**
 
   - Foi revertida a solução alternativa para um bug de desempenho do Unity que foi corrigido pelo Unity.
 
@@ -738,7 +809,7 @@ Lançado em 10 de julho de 2018
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Integrar**
+- **Integração:**
 
   - Suporte à coloração de código de Sombreador corrigido.
 
@@ -748,7 +819,7 @@ Lançado em 26 de junho de 2018
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Assistentes**
+- **Assistentes:**
 
   - Erro de digitação corrigido com a mensagem OnApplicationFocus.
 
@@ -764,7 +835,7 @@ Lançado em 18 de abril de 2018
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Integrar**
+- **Integração:**
 
   - Adicionado suporte para a conclusão de código básico do Sombreador.
 
@@ -776,7 +847,7 @@ Lançado em 28 de março de 2018
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Integrar**
+- **Integração:**
 
   - Adicionado suporte para modelos adicionais no Explorador de Projeto do Unity.
 
@@ -786,7 +857,7 @@ Lançado em 21 de março de 2018
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Integrar**
+- **Integração:**
 
   - Adicionado suporte para detectar e anexar a players Android conectados por USB.
 
@@ -800,7 +871,7 @@ Lançado em 5 de março de 2018
 
   - Adicionado o suporte para o gerador de projeto novo no Unity 2018.1.
 
-- **Integrar**
+- **Integração:**
 
   - Adicionado painel de opções para configurações dedicadas.
 
@@ -814,7 +885,7 @@ Lançado em 24 de janeiro de 2018
 
   - Correção da detecção de versão Mono.
 
-- **Integrar**
+- **Integração:**
 
   - Correção dos problemas de timing com 2018.1 e ativação de plug-in.
 
@@ -826,7 +897,7 @@ Lançado em 23 de janeiro de 2018
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Integrar**
+- **Integração:**
 
   - Corrigida a funcionalidade de Expandir/Recolher pastas ao clicar duas vezes
 
@@ -842,7 +913,7 @@ Lançado em 13 de dezembro de 2017
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Integrar**
+- **Integração:**
 
   - Correção de pdb automático para conversão de símbolo de depuração de mdb.
 
@@ -852,11 +923,11 @@ Lançado em 12 de dezembro de 2017
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Integrar**
+- **Integração:**
 
   - Correção de chamada indireta para EditorPrefs.GetBool afetando o inspetor ao tentar alterar o tamanho da matriz.
 
-- **Assistentes**
+- **Assistentes:**
 
   - Atualize o contexto do roslyn antes de inserir o método.
 
@@ -866,7 +937,7 @@ Lançado em 20 de novembro de 2017
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Assistentes**
+- **Assistentes:**
 
   - Adicionado o assistente "Implementar mensagem do Unity".
 
@@ -878,7 +949,7 @@ Lançado em 23 de outubro de 2017
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Depurador**
+- **Depurador:**
 
   - Suporte adicionado para arquivos de símbolo de depuração portátil.
 
@@ -906,7 +977,7 @@ Lançado em 8 de agosto de 2017
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Depurador**
+- **Depurador:**
 
   - Iniciar a caixa de diálogo Anexar ao processo se não souber a qual Unity anexar.
 
@@ -920,7 +991,7 @@ Lançado em 20 de julho de 2017
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Integrar**
+- **Integração:**
 
   - Adicionado suporte para recursos localizados.
 
@@ -930,7 +1001,7 @@ Lançado em 12 de julho de 2017
 
 ### <a name="new-features"></a>Novos recursos
 
-- **Integrar**
+- **Integração:**
 
   - Adicionado suporte para anexar a players e editores por meio da janela Anexar ao processo.
 
@@ -944,7 +1015,7 @@ Lançado em 12 de julho de 2017
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Integrar**
+- **Integração:**
 
   - Corrigida mensagem de erro do sombreador ao compilar.
 
@@ -954,7 +1025,7 @@ Lançado em 4 de maio de 2017
 
 ### <a name="bug-fixes"></a>Correções de bug
 
-- **Integrar**
+- **Integração:**
 
   - Corrigido acompanhamento de documento ativo com projetos regulares e híbridos.
 

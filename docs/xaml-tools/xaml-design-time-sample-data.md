@@ -1,29 +1,29 @@
 ---
 title: Usar dados de exemplo de tempo de design com o Designer XAML em Visual Studio
 description: Saiba como usar dados de exemplo em tempo de design em XAML.
-ms.date: 05/28/2021
+ms.date: 06/01/2021
 ms.topic: conceptual
 author: alihamie
 ms.author: tglee
 manager: jmartens
 monikerRange: vs-2019
-ms.openlocfilehash: a987435d454771bdecf078e78af089405718d261
-ms.sourcegitcommit: 5366c6bca3fb217a2fbf847998387578f51ec45c
+ms.openlocfilehash: 8303e1150db7c12c404e8f67bce52418fbd05b9d
+ms.sourcegitcommit: ab5735d64a6ad7aecabf5d6df159888e3246bff5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "110748065"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111433786"
 ---
 # <a name="use-design-time-sample-data-with-the-xaml-designer-in-visual-studio"></a>Usar dados de exemplo de tempo de design com o Designer XAML em Visual Studio
 
 Alguns controles dependentes de dados, como ListView, ListBox ou DataGrid, são difíceis de visualizar sem dados. Neste documento, vamos analisar uma nova abordagem que permite aos desenvolvedores trabalharem em projetos **WPF .NET Core** ou projetos **WPF .NET Framework** com o novo designer para habilitar dados de exemplo nesses controles. 
 
-## <a name="sample-data-feature-basics"></a>Noções básicas de recursos de dados de exemplo
+## <a name="sample-data-feature-basics"></a>Noções básicas do recurso de dados de exemplo
 
 Os dados de exemplo são apenas para visualização em tempo de design, o que significa que eles aparecem apenas no designer XAML, não no aplicativo em execução. Assim, ele é aplicado à versão em tempo de design da propriedade ItemsSource `d:ItemsSource` . Dados de exemplo precisam que o namespace de tempo de design funcione. Para começar, adicione as seguintes linhas de código ao header do documento XAML se elas ainda não estão presentes:
 
 > [!NOTE]
-> Visite [propriedades de tempo de design XAML](/xaml/xaml-tools/xaml/xaml-designtime-data.md) para saber mais sobre as propriedades de tempo de design em XAML.
+> Visite [propriedades de tempo de design XAML](../xaml-tools/xaml-designtime-data.md) para saber mais sobre as propriedades de tempo de design em XAML.
 
 ```xml
 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -93,7 +93,7 @@ Se você tiver um problema que não está listado nesta seção ou não puder se
 
 ## <a name="see-also"></a>Confira também
 
-- [Propriedades de tempo de design XAML](/xaml/xaml-tools/xaml/xaml-designtime-data)
+- [Propriedades de tempo de design XAML](../xaml-tools/xaml-designtime-data.md)
 - [XAML em aplicativos WPF](/dotnet/framework/wpf/advanced/xaml-in-wpf)
 - [XAML em aplicativos UWP](/windows/uwp/xaml-platform/xaml-overview)
 - [XAML em aplicativos do Xamarin.Forms](/xamarin/xamarin-forms/xaml/)

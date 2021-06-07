@@ -9,12 +9,12 @@ ms.reviewer: karthiknadig
 manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 01048bc9b21287eb62693096b34a1ea8305e0ee9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3aefba3880443269dbdb1c933e2c12b2f8001469
+ms.sourcegitcommit: fc05a763b59e212c86350d117a1900a1f2686ec8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851862"
+ms.lasthandoff: 06/07/2021
+ms.locfileid: "111551274"
 ---
 # <a name="use-docker-containers-with-r-tools-for-visual-studio"></a>Use contêineres do Docker com as Ferramentas do R para Visual Studio
 
@@ -53,7 +53,7 @@ As RTVS (Ferramentas do R para Visual Studio) versão 1.3+, juntamente com uma i
 As RTVS detectam e permitem o gerenciamento de contêineres criados usando imagens personalizadas, como a imagem microsoft/rtvs descrita no arquivo do docker abaixo. A imagem base usada aqui tem rtvs-daemon, R 3.4.2 e os pacotes R comuns pré-instalados. **Observação**: altere o nome de usuário e a senha mostrados aqui, conforme necessário.
 
 ```docker
-FROM microsoft/rtvs:1.3-ub1604-r3.4.2
+FROM mcr.microsoft.com/rtvs:1.3-ub1604-r3.4.2
 RUN useradd --create-home ruser1
 RUN echo "ruser1:foobar" | chpasswd
 

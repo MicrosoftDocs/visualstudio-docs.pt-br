@@ -1,6 +1,6 @@
 ---
-title: Gerenciar perfis de inicialização para projetos de Docker Compose
-description: Saiba como usar Docker Compose perfis de inicialização e controlar quais serviços são iniciados quando você usa Docker Compose no Visual Studio.
+title: Gerenciar perfis de lançamento para Docker Compose projetos
+description: Saiba como usar perfis Docker Compose iniciar e controlar quais serviços são lançados quando você usa Docker Compose no Visual Studio.
 author: ghogen
 manager: jmartens
 ms.technology: vs-azure
@@ -9,27 +9,27 @@ ms.topic: how-to
 ms.date: 05/10/2021
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 003205525f883b010f897e6e47d4cab92a31b8a1
-ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
+ms.openlocfilehash: e740ea3b7950c14bf11522c4e438a105b09eb7f6
+ms.sourcegitcommit: ab5735d64a6ad7aecabf5d6df159888e3246bff5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110018489"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111433695"
 ---
-# <a name="manage-launch-profiles-for-docker-compose-preview"></a>Gerenciar perfis de inicialização para Docker Compose (versão prévia)
+# <a name="manage-launch-profiles-for-docker-compose"></a>Gerenciar perfis de lançamento para Docker Compose
 
-Se você tiver um aplicativo que consiste em vários serviços e usar Docker Compose, poderá configurar quais serviços são executados e depurados criando ou editando um perfil de inicialização existente nas configurações de inicialização Docker Compose. Os perfis de inicialização permitem que você execute dinamicamente apenas os serviços que são importantes para o seu cenário atual. Você pode criar e selecionar de perfis de inicialização para personalizar sua experiência de depuração e definir ações de inicialização específicas, como `Browser Launch URL` . Você também terá a opção de escolher cada serviço individualmente ou escolhendo um perfil de Docker Compose, que também examina seu arquivo de composição para determinar o grupo de serviços a serem executados.
+Se você tiver um aplicativo que consiste em vários serviços e usa Docker Compose, poderá configurar quais serviços são executados e depurados criando ou editando um perfil de lançamento existente Docker Compose configurações de lançamento. Os perfis de lançamento permitem que você execute dinamicamente apenas os serviços que são importantes para seu cenário atual. Você pode criar e selecionar perfis de início para personalizar sua experiência de depuração e definir ações de lançamento específicas, como `Browser Launch URL` . Você também terá a opção de escolher cada serviço individualmente ou escolher um perfil de Docker Compose, que também analisa o arquivo Compose para determinar o grupo de serviços a ser executado.
 
-Para obter informações sobre perfis de Docker Compose, consulte [usando perfis com o Compose](https://docs.docker.com/compose/profiles/).
+Para obter informações sobre Docker Compose, consulte [Usando perfis com o Compose](https://docs.docker.com/compose/profiles/).
  
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- [Visual Studio 2019 versão 16,10 Preview](https://visualstudio.microsoft.com/vs/preview/) ou posterior
-- Uma solução com [orquestração de contêiner com Docker Compose](tutorial-multicontainer.md)
+- [Visual Studio 2019 versão 16.10](https://visualstudio.microsoft.com/vs/) ou posterior
+- Uma solução com [Orquestração de Contêineres com Docker Compose](tutorial-multicontainer.md)
 
-## <a name="manage-launch-settings"></a>Gerenciar configurações de inicialização
+## <a name="manage-launch-settings"></a>Gerenciar configurações de lançamento
 
-Considere o seguinte projeto de Docker Compose no qual o *Docker-Compose. yml* tem cinco serviços e três perfis de Compose (Web, web1 e web2).
+Considere o seguinte Docker Compose projeto no qual *o docker-compose.yml* tem cinco serviços e três perfis do Compose (web, web1 e web2).
 
 ```yml
 version: '3.9'
@@ -64,20 +64,20 @@ services:
 
 ```
 
-Há algumas opções para abrir a caixa de diálogo Configurações de inicialização de Docker Compose:
-- No Visual Studio, escolha **depurar**  >  **gerenciar Docker Compose configurações de inicialização**:
+Há algumas opções para abrir a caixa de diálogo Docker Compose configurações de lançamento:
+- No Visual Studio, escolha **Depurar**  >  **Gerenciar Docker Compose Configurações de Início:**
 
-    ![Captura de tela do item de menu de configurações de composição de gerenciamento de depuração](media/launch-settings/debug-dropdown-manage-compose.png)
+    ![Captura de tela do item de menu Gerenciar Configurações de Composição de Depuração](media/launch-settings/debug-dropdown-manage-compose.png)
 
-- Clique com o botão direito do mouse no projeto do Visual Studio `docker-compose` e selecione **gerenciar Docker Compose configurações de inicialização**
+- Clique com o botão direito do mouse no projeto Visual Studio `docker-compose` e selecione Gerenciar Docker Compose **configurações de início**
 
     ![Captura de tela do item de menu de contexto](media/launch-settings/launch-settings-context-menu.png)
 
-- Use o início rápido (**Ctrl** + **Q**) e pesquise **Docker Compose** para localizar o comando mencionado anteriormente.
+- Use o Início Rápido (**Ctrl** Q ) e pesquise Docker Compose para encontrar + o comando mencionado acima. 
 
-No exemplo abaixo, o `web1` perfil compor está selecionado, que filtra a lista de **Serviços** para apenas os três dos cinco incluídos nesse perfil:
+No exemplo a seguir, o perfil Compor é selecionado, que filtra a lista Serviços para apenas os três entre cinco `web1` incluídos nesse  perfil:
 
-!["Captura de tela da caixa de diálogo Configurações de inicialização"](media/launch-settings/launch-settings-create-profile.png)
+!["Captura de tela da caixa de diálogo configurações de lançamento"](media/launch-settings/launch-settings-create-profile.png)
 
 A Docker Compose de perfis somente será exibida se houver perfis definidos nos arquivos *docker-compose.yml.*
 
@@ -165,13 +165,13 @@ Aqui está uma descrição de cada propriedade no *launchSettings.jsem*:
 |Propriedade| Descrição|
 | - | - |
 |Commandname| Nome do comando. O padrão é "DockerCompose"|
-|commandVersion| Número de versão usado para gerenciar o esquema do perfil de inicialização DockerCompose.|
-|composeProfile| Propriedade pai que define a definição do perfil de inicialização. Suas propriedades filho são `includes` e `serviceActions`|
-|composeProfile-inclui | Lista de nomes de perfil de composição que compõem um perfil de inicialização.|
-|composeProfile-peractions | Lista os perfis de composição selecionados, os serviços e a ação de inicialização de cada serviço|
-|Ações | Lista os serviços selecionados e a ação de inicialização.|
-|composeLaunchServiceName| Se DockerLaunchAction ou DockerLaunchBrowser forem especificados, DockerServiceName será o nome do serviço que deve ser iniciado. Use essa propriedade para determinar qual serviço dentro do arquivo de Docker Compose será iniciado.|
-|composeLaunchAction| Especifica a ação de inicialização a ser executada em **F5** ou **Ctrl** + **F5**. Os valores permitidos são None, LaunchBrowser e LaunchWCFTestClient.|
+|commandVersion| Número de versão usado para gerenciar o esquema do perfil de lançamento do DockerCompose.|
+|composeProfile| Propriedade pai que define a definição do perfil de lançamento. Suas propriedades filho são `includes` e `serviceActions`|
+|composeProfile – inclui | Lista de nomes de perfil do Compose que compõem um perfil de lançamento.|
+|composeProfile – serviceActions | Lista os perfis, serviços e a ação de lançamento de cada serviço selecionados|
+|serviceActions | Lista os serviços selecionados e a ação de lançamento.|
+|composeLaunchServiceName| Se DockerLaunchAction ou DockerLaunchBrowser for especificado, DockerServiceName será o nome do serviço que deve ser lançado. Use essa propriedade para determinar qual serviço dentro do arquivo Docker Compose será lançado.|
+|composeLaunchAction| Especifica a ação de lançamento a ser executar em **F5** ou **Ctrl** + **F5.** Os valores permitidos são None, LaunchBrowser e LaunchWCFTestClient.|
 |composeLaunchUrl| A URL a ser usada ao iniciar o navegador. Os tokens de substituição válidos são "{ServiceIPAddress}", "{ServicePort}" e "{Scheme}". Por exemplo: {Scheme}://{ServiceIPAddress}:{ServicePort}|
 
 ## <a name="next-steps"></a>Próximas etapas
