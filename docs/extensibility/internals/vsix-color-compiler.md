@@ -10,19 +10,19 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9486f1cd3e931d134c6fe2842f8704926de70966
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 92914703ea4b293ac054c841251b37886bbc1d5a
+ms.sourcegitcommit: 3fe04d5b931ae459a802a1b965f84186757cbc08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060699"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "111588456"
 ---
 # <a name="vsix-color-compiler"></a>Compilador de cores do VSIX
-A ferramenta de compilador de cores de extensão do Visual Studio é um aplicativo de console que usa um arquivo. XML que representa as cores dos temas existentes do Visual Studio e o faz em um arquivo. pkgdef para que essas cores possam ser usadas no Visual Studio. Como é fácil comparar as diferenças entre arquivos. xml, essa ferramenta é útil para gerenciar cores personalizadas no controle do código-fonte. Ele também pode ser conectado a ambientes de compilação para que a saída da compilação seja um arquivo. pkgdef válido.
+A ferramenta de compilador de cores de extensão do Visual Studio é um aplicativo de console que usa um arquivo de .xml que representa cores para temas existentes do Visual Studio e o faz em um arquivo. pkgdef para que essas cores possam ser usadas no Visual Studio. Como é fácil comparar as diferenças entre .xml arquivos, essa ferramenta é útil para gerenciar cores personalizadas no controle do código-fonte. Ele também pode ser conectado a ambientes de compilação para que a saída da compilação seja um arquivo. pkgdef válido.
 
  **Esquema XML do tema**
 
- Um arquivo Theme. XML completo tem a seguinte aparência:
+ Um arquivo de .xml de tema completo tem a seguinte aparência:
 
 ```xml
 <Themes>
@@ -107,14 +107,14 @@ A ferramenta de compilador de cores de extensão do Visual Studio é um aplicati
 
 |**Atributo**|**Definição**|
 |-|-|
-|Type|Necessária O tipo da cor. Pode ser um dos seguintes:<br /><br /> *CT_INVALID:* A cor é inválida ou não está definida.<br /><br /> *CT_RAW:* Um valor de ARGB bruto.<br /><br /> *CT_COLORINDEX:* NÃO USE.<br /><br /> *CT_SYSCOLOR:* Uma cor de sistema do Windows de SysColor.<br /><br /> *CT_VSCOLOR:* Uma cor do Visual Studio de __VSSYSCOLOREX.<br /><br /> *CT_AUTOMATIC:* A cor automática.<br /><br /> *CT_TRACK_FOREGROUND:* NÃO USE.<br /><br /> *CT_TRACK_BACKGROUND:* NÃO USE.|
+|Tipo|Necessária O tipo da cor. Pode ser um dos seguintes:<br /><br /> *CT_INVALID:* A cor é inválida ou não está definida.<br /><br /> *CT_RAW:* Um valor de ARGB bruto.<br /><br /> *CT_COLORINDEX:* NÃO USE.<br /><br /> *CT_SYSCOLOR:* Uma cor de sistema do Windows de SysColor.<br /><br /> *CT_VSCOLOR:* Uma cor do Visual Studio de __VSSYSCOLOREX.<br /><br /> *CT_AUTOMATIC:* A cor automática.<br /><br /> *CT_TRACK_FOREGROUND:* NÃO USE.<br /><br /> *CT_TRACK_BACKGROUND:* NÃO USE.|
 |Fonte|Necessária O valor da cor representada em hexadecimal|
 
  Todos os valores compatíveis com a enumeração __VSCOLORTYPE são suportados pelo esquema no atributo Type. No entanto, recomendamos que você use apenas CT_RAW e CT_SYSCOLOR.
 
  **Todos juntos**
 
- Este é um exemplo simples de um arquivo Theme. XML válido:
+ Este é um exemplo simples de um arquivo de .xml de tema válido:
 
 ```xml
 <Themes>
@@ -137,7 +137,7 @@ A ferramenta de compilador de cores de extensão do Visual Studio é um aplicati
 
 |**Nome do comutador**|**Observações**|**Obrigatório ou opcional**|
 |-|-|-|
-|Sem nome (arquivo. xml)|Esse é o primeiro parâmetro sem nome e é o caminho para o arquivo XML a ser convertido.|Obrigatório|
+|Sem nome (arquivo .xml)|Esse é o primeiro parâmetro sem nome e é o caminho para o arquivo XML a ser convertido.|Obrigatório|
 |Sem nome (arquivo. pkgdef)|Esse é o segundo parâmetro sem nome e é o caminho de saída para o arquivo. pkgdef gerado.<br /><br /> Padrão: \<XML Filename> . pkgdef|Opcional|
 |/noLogo|A definição desse sinalizador impede que as informações de produtos e direitos autorais sejam impressas.|Opcional|
 |/?|Imprimir informações de ajuda.|Opcional|
@@ -149,11 +149,13 @@ A ferramenta de compilador de cores de extensão do Visual Studio é um aplicati
 
 - VsixColorCompiler D:\xml\colors.xml/noLogo
 
-## <a name="notes"></a>Anotações
+## <a name="notes"></a>Observações
 
 - Essa ferramenta requer que a versão mais recente do tempo de execução do VC + + seja instalada.
 
 - Somente arquivos únicos têm suporte. Não há suporte para conversão em massa via caminhos de pasta.
+
+- A ferramenta pode ser encontrada em `<VS Install Path>\VSSDK\VisualStudioIntegration\Tools\Bin\`
 
 ## <a name="sample-output"></a>Saída de exemplo
  O arquivo. pkgdef gerado pela ferramenta será semelhante às chaves abaixo:

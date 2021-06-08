@@ -1,54 +1,54 @@
 ---
-title: Microsoft Azure benefício em assinaturas do Visual Studio | Microsoft Docs
+title: Microsoft Azure benefício em Visual Studio assinaturas | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
-ms.date: 05/18/2021
+ms.date: 06/07/2021
 ms.topic: how-to
-description: Saiba como ativar o benefício de crédito individual do Azure DevTest incluído na sua assinatura do Visual Studio.
-ms.openlocfilehash: 0888f20c80dbacad0237fdd12f987870c4834f2b
-ms.sourcegitcommit: 6e27b1238a8aa704b127eac34f4173e9d56690c5
+description: Saiba como ativar o benefício de crédito individual do Azure DevTest incluído em sua Visual Studio assinatura.
+ms.openlocfilehash: 4946efb3aa32fd7c80a2926ad2b83c15cfe92452
+ms.sourcegitcommit: 3fe04d5b931ae459a802a1b965f84186757cbc08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "110231972"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "111588435"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Usar o Microsoft Azure nas assinaturas do Visual Studio
-Como assinante do Visual Studio, você pode usar o Microsoft Azure sem custo adicional.  Com o [crédito individual do Azure DevTest mensal](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/), o Azure é sua área restrita pessoal para desenvolvimento/teste.  Você pode provisionar máquinas virtuais, serviços de nuvem e outros recursos do Azure.  Os valores de crédito variam de acordo com o nível da assinatura.
+Como assinante do Visual Studio, você pode usar o Microsoft Azure sem custo adicional.  Com seu [crédito individual mensal do Azure DevTest,](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)o Azure é sua área de segurança pessoal para o dev/teste.  Você pode provisionar máquinas virtuais, serviços de nuvem e outros recursos do Azure.  Os valores de crédito variam de acordo com o nível da assinatura.
 
 ## <a name="activation-steps"></a>Etapas de ativação
 1. Entre em [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 
-2. Localize o bloco do Azure na seção ferramentas na página benefícios e selecione **Ativar** link na parte inferior do bloco benefício.
+2. Localize o artigo do Azure na seção Ferramentas na página Benefícios e selecione Ativar **link** na parte inferior do grupo de benefícios.
    > [!div class="mx-imgBorder"]
-   > ![Bloco do Azure](_img/vs-azure/vs-azure-tile.png "Clique no botão ' Ativar ' no bloco do Azure para começar.")
+   > ![Bloco do Azure](_img/vs-azure/vs-azure-tile.png "Clique no botão &quot;Ativar&quot; no lado do Azure para começar.")
 
-3. Se você não tiver uma assinatura do Azure existente, será solicitado que você preencha as informações necessárias para criar sua assinatura do Azure.  A primeira etapa é fornecer suas informações pessoais e, em seguida, selecionar **Avançar**.
+3. Se você não tiver uma assinatura existente do Azure, será solicitado que preencha as informações necessárias para criar sua assinatura do Azure.  A primeira etapa é fornecer suas informações pessoais e, em seguida, selecionar **Próximo.**
    > [!div class="mx-imgBorder"]
    > ![Inscrição do Azure](_img/vs-azure/vs-azure-about-you.png "Adicione suas informações de contato pessoal à sua assinatura do Azure.")
 
-4. Em seguida, você precisará verificar sua identidade usando um código de verificação simples. Forneça seu número de telefone e escolha se deseja receber o código por texto ou telefone.  Insira o código que você recebe e selecione **verificar código**.   
+4. Em seguida, você precisará verificar sua identidade usando um código de verificação simples. Forneça seu número de telefone e escolha se você gostaria de receber o código por texto ou telefone.  Insira o código recebido e selecione **Verificar código**.   
    > [!div class="mx-imgBorder"]
-   > ![Preparação do Azure](_img/vs-azure/vs-azure-identity.png "Solicite um código de verificação e, em seguida, insira-o para continuar.")
+   > ![Preparação do Azure](_img/vs-azure/vs-azure-identity.png "Solicite um código de verificação e insira-o para continuar.")
 
-5. Para a etapa final, marque a caixa de seleção para aceitar os termos e, em seguida, selecione **inscrever-se**.  Isso é tudo!
+5. Para a etapa final, marque a caixa de seleção para aceitar os termos e, em seguida, **selecione Inscrever-se.**  Isso é tudo!
    > [!div class="mx-imgBorder"]
-   > ![Inscrever-se no Azure](_img/vs-azure/vs-azure-agreement.png "Clique no botão &quot;inscrever-se&quot; para concluir a criação de sua assinatura do Azure.")
+   > ![Inscrever-se no Azure](_img/vs-azure/vs-azure-agreement.png "Clique no botão &quot;Inscrever-se&quot; para concluir a criação de sua assinatura do Azure.")
 
 0. O Centro de Início Rápido do Painel do Azure será carregado.  
    > [!div class="mx-imgBorder"]
-   > ![Painel do Azure](_img/vs-azure/vs-azure-quick-start.png "Depois que sua assinatura do Azure for criada, você será redirecionado para a portal do Azure.") 
+   > ![Painel do Azure](_img/vs-azure/vs-azure-quick-start.png "Depois que sua assinatura do Azure for criada, você será redirecionado para o portal do Azure.") 
 
-0. Marque a [portal do Azure](https://portal.azure.com) para facilitar o acesso no futuro.
+0. Desmarcar [portal do Azure](https://portal.azure.com) para facilitar o acesso no futuro.
 
 ## <a name="maintain-a-subscription-to-use-monthly-credits"></a>Manter uma assinatura para usar créditos mensais
-Se sua assinatura do Visual Studio expirar ou for removida, todos os benefícios da assinatura, incluindo o crédito individual de desenvolvimento/teste do Azure, não estarão mais disponíveis. Para continuar usando o Azure com um crédito mensal, será necessário renovar sua assinatura, comprar uma nova assinatura ou transferir o benefício do Azure para uma assinatura ativa que inclui o crédito individual de desenvolvimento/teste do Azure.  
+Se sua assinatura Visual Studio expirar ou for removida, todos os benefícios da assinatura, incluindo o crédito individual de teste/dev do Azure mensal, não estarão mais disponíveis. Para continuar usando o Azure com um crédito mensal, você precisará renovar sua assinatura, comprar uma nova assinatura e/ou transferir seus recursos do Azure para uma assinatura diferente do Azure que inclua o crédito individual de teste/dev do Azure.  
 
 > [!IMPORTANT]
 > Você deve transferir seus recursos para outra assinatura do Azure antes que sua assinatura atual do Azure seja desabilitada ou você perderá o acesso aos seus dados.  
 
-Há várias maneiras de continuar usando um crédito mensal para o Azure.  Para salvar os recursos do Azure, você precisará [transferir seus recursos](/azure/azure-resource-manager/management/move-resource-group-and-subscription) para outra assinatura do Azure, independentemente da ação escolhida abaixo. 
+Há várias maneiras de continuar usando um crédito mensal para o Azure.  Para salvar seus recursos do Azure, você precisará transferir seus recursos para outra assinatura do Azure, independentemente da ação escolhida abaixo. [](/azure/azure-resource-manager/management/move-resource-group-and-subscription) 
 
 - **Se você comprar sua assinatura Visual Studio diretamente**, compre uma nova assinatura ou renove sua assinatura por meio Microsoft Store.  
     - [Visual Studio Enterprise](https://www.microsoft.com/p/visual-studio-enterprise-subscription/dg7gmgf0dst4?activetab=pivot%3aoverviewtab)
@@ -107,20 +107,20 @@ R: O envio de um incidente de suporte do Portal do Azure é um processo de três
 Visite a [documentação suporte técnico](vs-tech-support.md) para obter detalhes completos.
 
 ### <a name="q-who-owns-the-intellectual-property-i-create-using-my-azure-devtest-individual-credit"></a>P: Quem é o proprietário da propriedade intelectual que eu criei usando meu crédito individual do Azure DevTest?
-R: a propriedade intelectual produzida por um funcionário criado nos recursos fornecidos pela empresa é, portanto, a propriedade intelectual da empresa que fornece o recurso. Portanto, se você recebeu sua assinatura do Visual Studio por meio de seu empregador, suas políticas de propriedade intelectual seriam aplicáveis. 
+R: A propriedade intelectual produzida por um funcionário criado nos recursos fornecidos por essa empresa é, assim, propriedade intelectual da empresa que fornece o recurso. Portanto, se você recebeu sua assinatura Visual Studio por meio de seu funcionário, suas políticas de propriedade intelectual se aplicarão. 
 
 ## <a name="support-resources"></a>Recursos de suporte
 - Precisa de Ajuda com o Azure?  Confira estes recursos:
   - Suporte técnico: [https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
   - [Dicas do Azure & truques](https://microsoft.github.io/AzureTipsAndTricks/ "Dicas do Azure & truques") 
 - Para obter assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, entre em contato com o [Suporte a Assinaturas](https://aka.ms/vssubscriberhelp) do Visual Studio.
-- Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite o [suporte do Visual Studio](https://visualstudio.microsoft.com/support/).
+- Tem alguma pergunta sobre o IDE do Visual Studio, o Azure DevOps Services ou outros produtos ou serviços do Visual Studio?  Visite [Suporte Visual Studio .](https://visualstudio.microsoft.com/support/)
 
-## <a name="see-also"></a>Consulte também
-- [Documentação do Visual Studio](/visualstudio/)
+## <a name="see-also"></a>Confira também
+- [Visual Studio documentação](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)
-- [Documentação do Microsoft 365](/microsoft-365/)
+- [Microsoft 365 documentação](/microsoft-365/)
 
 ## <a name="next-steps"></a>Próximas etapas
 Para obter mais informações sobre ferramentas e serviços da Microsoft, confira a documentação do:
