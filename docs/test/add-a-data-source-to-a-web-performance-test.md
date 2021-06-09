@@ -11,12 +11,12 @@ ms.assetid: 2ada376d-f168-455d-9643-6acb535360c1
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: fc7367db64f096ce5a90e9b51a8f5df162779f36
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 71aa3dbf4657896093dae59451140f48f83f1622
+ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971213"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760998"
 ---
 # <a name="add-a-data-source-to-a-web-performance-test"></a>Adicionar uma fonte de dados a um teste de desempenho para Web
 
@@ -66,7 +66,7 @@ Sua solução também deve incluir um teste de desempenho Web que navegará pela
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. Se você não tiver o Visual Studio Enterprise, baixe-o da página [Downloads do Visual Studio](https://visualstudio.microsoft.com/downloads).
 

@@ -13,51 +13,51 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b5e44f5b9e2fec07fef4e54a48ff89ebb2ff74
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8c68cc67d768dbe2b1c42671a02360e5cef2b56b
+ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861628"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760933"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c"></a>Início Rápido: analisar dados de uso da CPU no Visual Studio (C++)
 
 O Visual Studio fornece muitos recursos poderosos para ajudar a analisar problemas de desempenho em seu aplicativo. Este tópico fornece uma maneira rápida de conhecer alguns dos recursos básicos. Aqui, vamos examinar a ferramenta para identificar os gargalos de desempenho devido ao alto uso da CPU. As Ferramentas de Diagnóstico têm suporte para desenvolvimento de .NET no Visual Studio, incluindo o ASP.NET e para desenvolvimento nativo/C++.
 
-O Hub de diagnósticos oferece várias outras opções para executar e gerenciar sua sessão de diagnóstico. Se a ferramenta **Uso de CPU** descrita aqui não fornecer os dados que você precisa, as [outras ferramentas de criação de perfil](../profiling/profiling-feature-tour.md) fornecerão diferentes tipos de informações que poderão ser úteis. Em muitos casos, o gargalo de desempenho do aplicativo pode ser causado por algo que não seja a CPU, como memória, interface do usuário de renderização ou tempo de solicitação de rede. O criador de perfil de desempenho oferece muitas outras opções para registrar e analisar esse tipo de dados. [PerfTips](../profiling/perftips.md), outra ferramenta de criação de perfil integrada ao depurador, também permite percorrer o código e identificar quanto tempo as funções específicas ou os blocos de código são concluídos.
+O Hub de diagnósticos oferece várias outras opções para executar e gerenciar sua sessão de diagnóstico. Se a ferramenta **Uso de CPU** descrita aqui não fornecer os dados que você precisa, as [outras ferramentas de criação de perfil](../profiling/profiling-feature-tour.md) fornecerão diferentes tipos de informações que poderão ser úteis. Em muitos casos, o gargalo de desempenho do aplicativo pode ser causado por algo que não seja a CPU, como memória, interface do usuário de renderização ou tempo de solicitação de rede. O Criador de Perfil de Desempenho oferece muitas outras opções para registrar e analisar esse tipo de dados. [PerfTips](../profiling/perftips.md), outra ferramenta de criação de perfil integrada ao depurador, também permite que você ande pelo código e identifique quanto tempo leva para concluir funções ou blocos de código específicos.
 
 O Windows 8 ou posterior é necessário para executar ferramentas de criação de perfil com o depurador (janela **Ferramentas de Diagnóstico**). No Windows 7 e posteriores, você pode usar a ferramenta post-mortem, o [Criador de Perfil de Desempenho](../profiling/profiling-feature-tour.md).
 
 ## <a name="create-a-project"></a>Criar um projeto
 
-1. Abra o Visual Studio e crie o projeto.
+1. Abra Visual Studio e crie o projeto.
 
    ::: moniker range="vs-2017"
-   Na barra de menus superior, escolha **arquivo** > **novo** > **projeto**.
+   Na barra de menus superior, escolha **Arquivo** > **Novo** > **Projeto**.
 
-   Na caixa de diálogo **novo projeto** no painel esquerdo, expanda **Visual C++** e, em seguida, escolha **área de trabalho do Windows**. No painel central, escolha **aplicativo de console do Windows**. Em seguida, nomeie o projeto *Diagnostics_Get_Started_Native*.
+   Na caixa **de diálogo** Novo Projeto no painel esquerdo, expanda **Visual C++** e escolha Área de Trabalho **do Windows.** No painel central, escolha Aplicativo **de Console do Windows.** Em seguida, nomeia o *Diagnostics_Get_Started_Native*.
 
-   Se você não vir o modelo de projeto de **aplicativo do console do Windows** , escolha o link **abrir instalador do Visual Studio** no painel esquerdo da caixa de diálogo **novo projeto** . O Instalador do Visual Studio é iniciado. Escolha o **desenvolvimento de desktop com carga de trabalho C++** e, em seguida, escolha **Modificar**.
+   Se você não vir o modelo de projeto Aplicativo de Console do **Windows,** escolha o **link** Abrir Instalador do Visual Studio no painel esquerdo da **caixa** de diálogo Novo Projeto. O Instalador do Visual Studio é iniciado. Escolha a carga de trabalho Desenvolvimento de área de trabalho **com C++** e, em seguida, **escolha Modificar**.
    ::: moniker-end
-   ::: moniker range="vs-2019"
-   Se a janela iniciar não estiver aberta, escolha **arquivo** > **Iniciar janela**.
+   ::: moniker range=">=vs-2019"
+   Se a janela inicial não estiver aberta, escolha **Janela de** Início > **do Arquivo**.
 
-   Na janela iniciar, escolha **criar um novo projeto**.
+   Na janela inicial, escolha **Criar um novo projeto.**
 
-   Na janela **Criar um novo projeto**, insira ou digite *console* na caixa de pesquisa. Em seguida, escolha **C++** na lista idioma e, em seguida, escolha **Windows** na lista plataforma.
+   Na janela **Criar um novo projeto**, insira ou digite *console* na caixa de pesquisa. Em seguida, **escolha C++** na lista Idioma e, em seguida, **escolha Windows** na lista Plataforma.
 
-   Depois de aplicar os filtros de idioma e plataforma, escolha o modelo de **aplicativo de console** e escolha **Avançar**.
+   Depois de aplicar os filtros de linguagem e plataforma, escolha o modelo **Aplicativo de Console** e, em seguida, escolha **Próximo.**
 
    > [!NOTE]
-   > Se você não vir o modelo de **aplicativo de console** , poderá instalá-lo na janela **criar um novo projeto** . Na mensagem **Não encontrou o que precisa?**, escolha o link **Instalar mais ferramentas e recursos**. Em seguida, na Instalador do Visual Studio, escolha o **desenvolvimento de desktop com** carga de trabalho do C++.
+   > Se você não vir o modelo **aplicativo de console,** poderá instalá-lo na **janela Criar um novo** projeto. Na mensagem **Não encontrou o que precisa?**, escolha o link **Instalar mais ferramentas e recursos**. Em seguida, no Instalador do Visual Studio, escolha a carga **de trabalho Desenvolvimento da área de trabalho com C++.**
 
-   Na janela **configurar seu novo projeto** , digite ou insira *Diagnostics_Get_Started_Native* na caixa **nome do projeto** . Em seguida, escolha **criar**.
+   Na janela **Configurar seu novo projeto,** digite ou digite *Diagnostics_Get_Started_Native* na caixa **Nome do** projeto. Em seguida, escolha **Criar**.
 
    ::: moniker-end
 
    O Visual Studio abre seu novo projeto.
 
-1. Em *Diagnostics_Get_Started_Native*, substitua o código a seguir
+1. No *Diagnostics_Get_Started_Native*, substitua o código a seguir
 
     ```c++
     int main()
@@ -144,9 +144,9 @@ O Windows 8 ou posterior é necessário para executar ferramentas de criação d
 
     Definindo dois pontos de interrupção, você pode limitar a coleta de dados às partes do código que deseja analisar.
 
-3. A janela **Ferramentas de Diagnóstico** já fica visível, a menos que tenha sido desativada. Para exibir a janela novamente, clique em **depurar**  >  **janelas**  >  **Mostrar ferramentas de diagnóstico**.
+3. A janela **Ferramentas de Diagnóstico** já fica visível, a menos que tenha sido desativada. Para abrir a janela novamente, clique em **Depurar**  >  **Windows**  >  **Show Ferramentas de Diagnóstico**.
 
-4. Clique em **depurar**  >  **Iniciar Depuração** (ou **Iniciar** na barra de ferramentas ou **F5**).
+4. Clique **em Depurar**  >  **Iniciar Depuração** **(ou Iniciar** na barra de ferramentas ou **F5**).
 
      Quando o aplicativo terminar de ser carregado, a exibição **Resumo** das Ferramentas de Diagnóstico será exibida.
 
@@ -174,7 +174,7 @@ Recomendamos que você comece a analisar os dados examinando a lista de funçõe
 
 1. Na lista de funções, examine as funções que fazem a maior parte do trabalho.
 
-     ![Guia uso de CPU das ferramentas de diagnóstico](../profiling/media/quickstart-cpu-usage-cpu-cplusplus.png "DiagToolsCPUUsageTab")
+     ![Guia Uso da CPU das Ferramentas de Diagnóstico](../profiling/media/quickstart-cpu-usage-cpu-cplusplus.png "DiagToolsCPUUsageTab")
 
     > [!TIP]
     > As funções são listadas em ordem, começando com as que fazem a maior parte do trabalho (elas não ficam na ordem de chamada). Isso ajuda a identificar rapidamente as funções com execução mais longa.

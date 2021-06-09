@@ -5,19 +5,19 @@ description: Uma lista com as versões lançadas e números de build do Visual S
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.date: 05/25/2021
+ms.date: 06/08/2021
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 73ec976b14501ae8f6d5315cdcc6a80677b6762b
-ms.sourcegitcommit: 55aeafdd369bea434adaebe5f9d4631e33623545
+ms.openlocfilehash: 3006e92289a425c327241384e88fb69c567a7a5e
+ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110399015"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111761115"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Números de build e datas de lançamento do Visual Studio
 
@@ -27,8 +27,12 @@ ms.locfileid: "110399015"
 
 A tabela a seguir lista os números de build e as datas de lançamento do Visual Studio 2019 até o momento.
 
-| **Versão**| **Channel** | **Data de liberação** | **Versão de build** |
+| **Versão**| **Channel** | **Data de liberação** | **Versão da compilação** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.10.1 | Versão | 8 de junho de 2021 | 16.10.31402.337 |
+| 16.9.7 | Versão | 8 de junho de 2021 | 16.9.31328.270 |
+| 16.7.16 | Versão | 8 de junho de 2021 | 16.7.31327.30 |
+| 16.4.23| Versão | 8 de junho de 2021 | 16.4.31327.141 |
 | 16.11.0 | Preview 1 | 25 de maio de 2021 | 16.11.31320.298 |
 | 16.10.0 | Versão | 25 de maio de 2021 | 16.10.31321.278 |
 | 16.10.0 | Visualização 4 | 18 de maio de 2021 | 16.10.31313.381 |
@@ -81,9 +85,9 @@ A tabela a seguir lista os números de build e as datas de lançamento do Visual
 | 16.8.0 | Visualização 4 | 13 de outubro de 2020 | 16.8.30608.117 |
 | 16.0.19 | Versão | 13 de outubro de 2020 | 16.0.28803.846 |
 | 16.4.14 | Versão | 13 de outubro de 2020 | 16.4.30607.51 |
-| 16.8.0 | Versão prévia 3.2 | 29 de setembro de 2020 | 16.8.30524.135 |
+| 16.8.0 | Versão prévia 3,2 | 29 de setembro de 2020 | 16.8.30524.135 |
 | 16.7.5 | Versão | 29 de setembro de 2020 |  16.7.30523.141 |
-| 16.8.0 | Versão prévia 3.1 | 22 de setembro de 2020 | 16.8.30516.212 |
+| 16.8.0 | Versão prévia 3,1 | 22 de setembro de 2020 | 16.8.30516.212 |
 | 16.7.4 | Versão | 21 de setembro de 2020 | 16.7.30517.126 |
 | 16.8.0 | Versão Prévia 3 | 14 de setembro de 2020 | 16.8.30509.190 |
 | 16.7.3 | Versão | 08 de setembro de 2020 | 16.7.30503.244 |
