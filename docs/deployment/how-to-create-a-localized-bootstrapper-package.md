@@ -1,5 +1,5 @@
 ---
-title: Criar um pacote de bootstrapper localizado | Microsoft Docs
+title: Criar um pacote bootstrapper localizado | Microsoft Docs
 description: Saiba como criar versões localizadas do pacote de bootstrapper no ClickOnce criando mais dois arquivos para cada localidade.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -14,19 +14,19 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9eb06c54caceb2e9329347fb1dd0114749975e7d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2a9d1fc91dcb385a9250dde3adb47c0d9553147f
+ms.sourcegitcommit: 6aa55db5e1fe19d4d17886e0bfe140dbd186f8ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927581"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111877709"
 ---
 # <a name="how-to-create-a-localized-bootstrapper-package"></a>Como criar um pacote de bootstrapper localizado
 Depois de criar um pacote de bootstrapper, você pode criar versões localizadas desse pacote criando mais dois arquivos para cada localidade: um arquivo de termos de licença de software (como um *eula.rtf*) e um manifesto do pacote (*package.xml*).
 
  Por padrão, o Visual Studio 2010 inclui pacotes de bootstrapper localizados apenas para os .NET Framework 4, .NET Framework 4 Client Profile, F# Runtime 2.0 e F# Runtime 4.0. Você pode criar pacotes localizados para outros bootstrappers concluindo três etapas.
 
-1. Crie uma pasta nomeada após o nome da localidade em *\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages \\ \<BootstrapperPackageName>*.
+1. Crie uma pasta chamada após o nome da localidade em \Arquivos de Programas *(x86)\Microsoft \\ \<BootstrapperPackageName> SDKs\ClickOnce Bootstrapper\Packages*.
 
 2. Crie um arquivo que contém os termos de licença de software para o pacote de bootstrapper e coloque-o na nova pasta.
 
@@ -41,9 +41,9 @@ Depois de criar um pacote de bootstrapper, você pode criar versões localizadas
 
 1. Crie uma pasta com o nome da localidade.
 
-     Em computadores de 32 bits, crie a pasta na pasta *\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages \\ \<BootstrapperPackageName> \\*
+     Em computadores de 32 bits, crie a pasta na pasta \Arquivos de *Programas\Microsoft SDKs\ClickOnce Bootstrapper\Packages. \\ \<BootstrapperPackageName> \\*
 
-     Em computadores de 64 bits, crie a pasta na pasta *\Program Files (86) \Microsoft \\ \<BootstrapperPackageName> \\ SDKs\Windows\v7.0A\Bootstrapper\Packages* .
+     Em computadores de 64 bits, crie a pasta na pasta \Arquivos de *Programas (x86)\Microsoft SDKs\ClickOnce Bootstrapper\Packages. \\ \<BootstrapperPackageName> \\*
 
      A tabela a seguir mostra os nomes das pastas que você pode usar para estabelecer uma localidade correspondente.
 
@@ -66,7 +66,7 @@ Depois de criar um pacote de bootstrapper, você pode criar versões localizadas
 
 2. Crie um arquivo que contém os termos de licença de software para o pacote de bootstrapper e coloque-o na nova pasta.
 
-3. Crie um manifesto de pacote chamado *package.xml* e coloque-o na nova pasta. Para obter mais informações, consulte [como: criar um manifesto de pacote](../deployment/how-to-create-a-package-manifest.md).
+3. Crie um manifesto do pacote *chamadopackage.xml* e coloque-o na nova pasta. Para obter mais informações, [consulte Como criar um manifesto do pacote](../deployment/how-to-create-a-package-manifest.md).
 
 4. Atualize a seção `<Strings>` do manifesto do pacote, para que as cadeias de caracteres fiquem no idioma correto para a localidade.
 
@@ -78,19 +78,22 @@ Depois de criar um pacote de bootstrapper, você pode criar versões localizadas
 
 1. Crie uma pasta chamada *fr*. O nome da pasta deve corresponder ao nome da localidade.
 
-     Em computadores de 32 bits, crie a pasta dentro da pasta *\Arquivos de Programas\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Pacotes\DotNetFX35SP1\\\*.
+     Em computadores de 32 bits, crie a pasta na pasta \Arquivos de *Programas\Microsoft SDKs\ClickOnce Bootstrapper\Packages\DotNetFX35SP1. \\*
 
-     Em computadores de 64 bits, crie a pasta dentro da pasta *\Arquivos de Programas (86)\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Pacotes\DotNetFX35SP1\\\*.
+     Em computadores de 64 bits, crie a pasta na pasta \Arquivos de Programas *(x86)\Microsoft SDKs\ClickOnce Bootstrapper\Packages\DotNetFX35SP1. \\*
 
-2. Coloque uma versão localizada dos termos de licença de software na pasta *fr* .
+2. Coloque uma versão localizada dos termos de licença de software na *pasta* fr.
 
-3. Copie o arquivo *\Arquivos de programas (x86) \microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\DotNetFX35SP1\en\package.xml* para a pasta *fr* e abra o arquivo no XML Designer.
+3. Copie o arquivo \Arquivos de *Programas (x86)\Microsoft SDKs\ClickOnce Bootstrapper\Packages\DotNetFX35SP1\en\package.xml* para a pasta *fr* e abra o arquivo no Designer XML.
 
 4. Atualize a seção `<Strings>` do pacote do manifesto para que as cadeias de caracteres de erro fiquem em francês.
 
-5. Altere o `<String Name="Culture">` valor para *fr*.
+5. Altere `<String Name="Culture">` o valor para *fr.*
 
 6. Salve o arquivo *package.xml*.
+
+>[!NOTE]
+> A partir do Visual Studio 2019 Atualização 7, os pacotes de bootstrapper também serão descobertos no caminho *<VS Install Path> \MSBuild\Microsoft\VisualStudio\BootstrapperPackages*.
 
 ## <a name="see-also"></a>Confira também
 - [Criar pacotes de bootstrapper](../deployment/creating-bootstrapper-packages.md)

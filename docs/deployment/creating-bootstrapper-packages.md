@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 04cbb0db729d39295ee9c608a19302a109980f10
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 007a7f42448ab8026d8acdc262ce5e0dcdd99b28
+ms.sourcegitcommit: 6aa55db5e1fe19d4d17886e0bfe140dbd186f8ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912223"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111877722"
 ---
 # <a name="create-bootstrapper-packages"></a>Criar pacotes de bootstrapper
 O programa de instalação é um instalador genérico que pode ser configurado para detectar e instalar componentes redistribuíveis como arquivos do Windows Installer (*.msi*) e programas executáveis. O instalador também é conhecido como bootstrapper. Ele é programado por um conjunto de manifestos XML que especificam os metadados para gerenciar a instalação do componente.  Cada componente redistribuível, ou pré-requisito, que aparece na caixa de diálogo **pré-requisitos** do ClickOnce é um pacote de bootstrapper. Um pacote de bootstrapper é um grupo de diretórios e arquivos que contém arquivos de manifesto que descrevem como o pré-requisito deve ser instalado.
@@ -63,20 +63,17 @@ CustomBootstrapperPackage
 Em seguida, copie os arquivos redistribuíveis para o local da pasta bootstrapper. Para obter mais informações, consulte [como: criar um pacote de bootstrapper localizado](../deployment/how-to-create-a-localized-bootstrapper-package.md).
 
 ```
-*\Program Files (x86)\Microsoft SDKs\ClickOnce Bootstrapper*
-```
-
-ou, para versões mais antigas do Visual Studio
-
-```
-*\Program Files\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages*
+*\Program Files (x86)\Microsoft SDKs\ClickOnce Bootstrapper\Packages*
 ```
 
 ou
 
 ```
-*\Program Files (x86)\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages*
+*<VS Install Path>\MSBuild\Microsoft\VisualStudio\BootstrapperPackages*
 ```
+
+>[!NOTE]
+>O caminho listado acima no caminho de instalação do Visual Studio funciona a partir da versão do Visual Studio 2019 atualização 7.
 
 Você também pode encontrar o local da pasta bootstrapper a partir do valor **path** na seguinte chave do registro:
 
@@ -120,7 +117,7 @@ A lista redistribuível é um arquivo XML que você deve nomear usando o seguint
 </FileList>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Como: instalar pré-requisitos com um aplicativo ClickOnce](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
 - [Caixa de diálogo pré-requisitos](../ide/reference/prerequisites-dialog-box.md)
 - [Referência de esquema de produto e pacote](../deployment/product-and-package-schema-reference.md)

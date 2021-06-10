@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e7791308de670b209433708e69ec473780342858
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b41529182b7cca8cea8f94206601b7a818d35420
+ms.sourcegitcommit: 6aa55db5e1fe19d4d17886e0bfe140dbd186f8ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900633"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111877735"
 ---
 # <a name="how-to-include-prerequisites-with-a-clickonce-application"></a>Como incluir pré-requisitos com um aplicativo ClickOnce
 Antes que possa distribuir o software necessário com um aplicativo [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], primeiro você deverá baixar os pacotes de instalador desses pré-requisitos em seu computador de desenvolvimento. Quando você publicar um aplicativo e escolher **Baixar pré-requisitos da mesma localização que meu aplicativo baixa**, ocorrerá um erro se os pacotes de instalador não estiverem na pasta **Pacotes**.
@@ -28,6 +28,9 @@ Antes que possa distribuir o software necessário com um aplicativo [!INCLUDE[nd
 1. No Explorador de Arquivos, abra a pasta **Pacotes**.
 
     Por padrão, o caminho é `%ProgramFiles(x86)%\Microsoft SDKs\ClickOnce Bootstrapper\Packages\` .
+
+>[!NOTE]
+> A partir do, os pacotes de bootstrapper de versão da atualização 7 do Visual Studio 2019 também serão descobertos no caminho *<VS Install Path> \MSBuild\Microsoft\VisualStudio\BootstrapperPackages*.
 
 2. Abra a pasta do pré-requisito que você deseja adicionar e, em seguida, abra a pasta do idioma da versão instalada de [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] (por exemplo, **en** para inglês).
 
@@ -47,7 +50,7 @@ Antes que possa distribuir o software necessário com um aplicativo [!INCLUDE[nd
 
 6. Copie o arquivo na pasta raiz do pré-requisito.
 
-    Por exemplo, para o pré-requisito Windows Installer 4,5, copie o arquivo para a pasta *\packages\ WindowsInstaller4_5* .
+    Por exemplo, para o pré-requisito de .NET Framework 4.7.2, copie o arquivo para a pasta *\Packages\DotNetFX472* .
 
     Agora você poderá distribuir o pacote de instalador com seu aplicativo.
 
