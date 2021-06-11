@@ -9,12 +9,12 @@ manager: jmartens
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: de86c2021a2abf3cd5346c684199e8f59e2d314e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2c12c8a0979ab081ea2f09faeeccdb5a8a9d2175
+ms.sourcegitcommit: 398b4d4e5ce0f978720f11990db05b209766aedc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839182"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112016301"
 ---
 # <a name="install-data-science-support-in-visual-studio"></a>Instalar o suporte para ciência de dados no Visual Studio
 
@@ -37,8 +37,8 @@ A carga de trabalho de Aplicativos de Ciência de Dados e Analíticos, seleciona
 O Python e o R são duas das linguagens de script principais usadas para ciência de dados. Essas duas linguagens são fáceis de aprender e compatíveis com um rico ecossistema de pacotes. Esses pacotes abordam uma ampla variedade de cenários, como aquisição de dados, limpeza, treinamento de modelo, implantação e criação de gráficos. O F# também é uma linguagem avançada do .NET que prima pela funcionalidade e é adequada a uma ampla variedade de tarefas de processamento de dados.
 ::: moniker-end
 
-::: moniker range="vs-2019"
-O Python é uma das linguagens de script principais usadas para ciência de dados. O Python é fácil de aprender e é compatível com um rico ecossistema de pacotes. Esses pacotes abordam uma ampla variedade de cenários, como aquisição de dados, limpeza, treinamento de modelo, implantação e criação de gráficos. O F# também é uma linguagem avançada do .NET que prima pela funcionalidade e é adequada a uma ampla variedade de tarefas de processamento de dados. (Para a linguagem R, recomendamos o [Azure Notebooks](https://notebooks.azure.com).)
+::: moniker range=">=vs-2019"
+O Python é uma das linguagens de script principais usadas para ciência de dados. O Python é fácil de aprender e é compatível com um rico ecossistema de pacotes. Esses pacotes abordam uma ampla variedade de cenários, como aquisição de dados, limpeza, treinamento de modelo, implantação e criação de gráficos. O F # também é uma linguagem totalmente funcional e eficiente do .NET que é adequada para uma ampla variedade de tarefas de processamento de dados.)
 ::: moniker-end
 
 <!--Note link on the image because this one is large -->
@@ -48,7 +48,7 @@ O Python é uma das linguagens de script principais usadas para ciência de dado
 
 Por padrão, a carga de trabalho instala as opções a seguir, que você pode modificar na seção de resumo da carga de trabalho no Instalador do Visual Studio:
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 - Suporte à linguagem F# da área de trabalho
 - Python:
   - Suporte da linguagem Python
