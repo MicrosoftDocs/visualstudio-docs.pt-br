@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: b6fbfa3e-654a-462f-8e22-e313b6ea617f
-ms.date: 02/19/2021
+ms.date: 06/10/2021
 ms.topic: conceptual
 description: Saiba o que acontece quando sua assinatura do Visual Studio expira
-ms.openlocfilehash: 26659cf70ace2ffb6eaa8f02146ed965c03df48a
-ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
+ms.openlocfilehash: 576be11954a406947d71a60945b7209f7ef6b688
+ms.sourcegitcommit: 112db9b7a0647f8cdc523e246fb2521e923ce2cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102607126"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "111999004"
 ---
 # <a name="what-happens-when-your-subscription-expires"></a>O que acontece quando sua assinatura expira
 As assinaturas do Visual Studio têm durações específicas e, a menos que sejam renovadas, elas expirarão.  Quando uma assinatura expira, os benefícios fornecidos pela assinatura são afetados de maneiras diferentes.  Este artigo explicará como a expiração afeta vários aspectos de uma assinatura do Visual Studio. 
@@ -29,7 +29,7 @@ A página chaves do produto (Product Keys) <https://my.visualstudio.com/productk
 Nem todos os benefícios são afetados da mesma maneira quando uma assinatura expira.  Nenhum benefício pode ser ativado depois que sua assinatura expirar.  Os benefícios que você ativou anteriormente ainda podem estar disponíveis.  
 
 ### <a name="visual-studio-ide"></a>Visual Studio IDE
-A maioria das assinaturas fornece licenças perpétuas para o IDE do Visual Studio. Baixe o [White Paper licenciamento](https://aka.ms/vslicensing) do Visual Studio para determinar se sua assinatura está qualificada para direitos de uso permanentes.  Se sua assinatura estiver qualificada para direitos de uso permanentes, você continuará a ter acesso à sua versão atual do IDE, mas não receberá atualizações para versões futuras. Para continuar usando o IDE após a expiração, você precisará ir para a [página chave do produto (Product Key](https://my.visualstudio.com/productkeys) ) e baixar a chave do produto **antes de sua assinatura expirar**.
+A maioria das assinaturas fornece licenças perpétuas para o IDE do Visual Studio. Baixe o [White Paper licenciamento](https://aka.ms/vslicensing) do Visual Studio para determinar se sua assinatura está qualificada para direitos de uso permanentes.  Se sua assinatura estiver qualificada, você continuará a ter acesso à sua **versão atual** do IDE, mas não receberá atualizações para versões futuras. Para continuar usando o IDE após a expiração, você precisará ir para a [página chave do produto (Product Key](https://my.visualstudio.com/productkeys) ) e baixar a chave do produto **antes de sua assinatura expirar**.  Depois de reivindicar a chave, você precisará [inseri-la](https://docs.microsoft.com/visualstudio/ide/how-to-unlock-visual-studio?view=vs-2019#enter-a-product-key) para ativar a instalação do IDE.  
 
 ### <a name="azure-devops"></a>Azure DevOps
 O Azure DevOps adquirido por meio de uma assinatura do Visual Studio não estará disponível.  
@@ -43,7 +43,7 @@ Muitos dos benefícios incluídos nas assinaturas do Visual Studio têm duraçõ
 ## <a name="resources"></a>Recursos
 - Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)
