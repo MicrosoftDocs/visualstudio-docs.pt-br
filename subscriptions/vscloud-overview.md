@@ -7,12 +7,12 @@ ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
 ms.date: 02/19/2021
 ms.topic: overview
 description: Alugue o Visual Studio Professional ou o Visual Studio Enterprise mês a mês ou anualmente, sem nenhum contrato de longo prazo.
-ms.openlocfilehash: 56988001272fb11252b85cb60bdcae109edf8e29
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 5e6346b640415b7888826669427512a75427f0cc
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672537"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112043101"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Comprar assinaturas de nuvem do Visual Studio Professional e do Visual Studio Enterprise
 Você pode comprar [assinaturas do Visual Studio Professional e do Visual Studio Enterprise](https://visualstudio.microsoft.com/subscriptions/) no [Visual Studio Marketplace](https://marketplace.visualstudio.com). Elas são chamadas de **"assinaturas de nuvem"**.
@@ -40,7 +40,7 @@ Você precisará ser um colaborador ou superior para uma assinatura do Azure que
 
 4. Selecione o número de assinaturas a serem compradas.
     > [!div class="mx-imgBorder"]
-    > ![Selecionar número de assinaturas](_img/buy-vs-subscriptions/buy-vs-sub-users.png "Escolha o número de assinaturas a serem compradas")
+    > ![Selecionar número de assinaturas](_img/buy-vs-subscriptions/buy-vs-sub-users.png "Escolha o número de assinaturas a comprar")
 
     Se não desejar assinaturas atribuídas a você, desmarque **Atribuir esta assinatura a mim**.
 
@@ -52,16 +52,16 @@ Você precisará ser um colaborador ou superior para uma assinatura do Azure que
 0. Clique em **Exibir minha assinatura** para abrir o portal do assinante e começar a usar sua assinatura.
 
 > [!div class="mx-imgBorder"]
-> ![Ir para o portal do assinante do Visual Studio](_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png "No portal de assinaturas do Visual Studio, você pode explorar sua assinatura e usar os benefícios disponíveis.")
+> ![Ir para o portal do assinante do Visual Studio](_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png "No portal Visual Studio assinaturas, você pode explorar sua assinatura e usar os benefícios disponíveis.")
 
 Se você comprou mais de uma assinatura, vá para o [portal de administração de assinaturas do Visual Studio](https://manage.visualstudio.com) para atribuir assinaturas a outras pessoas.  Talvez seja necessário [adicionar suas novas assinaturas](add-monthly-subs.md) ao portal de administração se esta for a primeira vez que você as comprou.
 
 > [!div class="mx-imgBorder"]
-> ![Atribuir assinaturas para outras pessoas](_img/buy-vs-subscriptions/buy-vs-sub-success-many.png "Clique em ' atribuir a usuários ' para fornecer assinaturas aos seus usuários.")
+> ![Atribuir assinaturas para outras pessoas](_img/buy-vs-subscriptions/buy-vs-sub-success-many.png "Clique em &quot;Atribuir aos usuários&quot; para fornecer assinaturas aos usuários.")
 
 
 > [!div class="mx-imgBorder"]
-> ![Exibir assinaturas](_img/buy-vs-subscriptions/assign-subscriptions.png "Clique em ' Adicionar ' para atribuir assinaturas aos usuários")
+> ![Exibir assinaturas](_img/buy-vs-subscriptions/assign-subscriptions.png "Clique em 'Adicionar' para atribuir assinaturas aos usuários")
 
 ## <a name="cancel-renewals-of-cloud-subscriptions-youve-purchased"></a><a name="manage-subscriptions"></a>Cancelar as renovações das assinaturas de nuvem que você comprou
 
@@ -70,13 +70,13 @@ Para cancelar as assinaturas, você só precisa definir o número de assinaturas
 1. Se você tiver mais de um contrato, escolha o contrato desejado na lista suspensa.
 1. Selecione o ícone de **visão geral** na parte superior esquerda para exibir informações sobre suas assinaturas.  
 > [!div class="mx-imgBorder"]
-> ![Exibir visão geral da assinatura](_img/buy-vs-subscriptions/overview-button.png "Selecione o botão visão geral para exibir detalhes da assinatura")
+> ![Exibir visão geral da assinatura](_img/buy-vs-subscriptions/overview-button.png "Selecione o botão de visão geral para exibir detalhes da assinatura")
 
 4. Localize a entrada para as assinaturas que você deseja cancelar e selecione **Alterar quantidade**.
 1. Defina a quantidade como zero (0). Suas assinaturas permanecerão em vigor até a data de cobrança agendada, mas não serão renovadas quando a data de cobrança for atingida.   
 
 > [!div class="mx-imgBorder"]
-> ![Alterar assinaturas](_img/buy-vs-subscriptions/manage-subscriptions.png "Selecione ' Alterar quantidade ' para cancelar assinaturas")
+> ![Alterar assinaturas](_img/buy-vs-subscriptions/manage-subscriptions.png "Selecione &quot;Alterar quantidade&quot; para cancelar assinaturas")
 
 ## <a name="frequently-asked-questions"></a>Perguntas frequentes
 
@@ -125,17 +125,17 @@ R: embora eles não possam comprar outra assinatura anual de nuvem, há muitas o
 
 ## <a name="related-resources"></a>Recursos relacionados
 - [Portal de administração de assinaturas do Visual Studio](https://manage.visualstudio.com/)
-- [Visual Studio cloud subscription billing FAQ](vscloud-billing-faq.md) (Perguntas frequentes sobre cobrança de assinaturas de nuvem do Visual Studio)
+- [Visual Studio cloud subscription billing FAQ](vscloud-billing-faq.yml) (Perguntas frequentes sobre cobrança de assinaturas de nuvem do Visual Studio)
 - [Compra de assinatura de nuvem do Visual Studio para CSPs](vscloud-csp.md)
 - - Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://visualstudio.microsoft.com/subscriptions/support/) do Visual Studio
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 - [Documentação do Visual Studio](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)
-- [Documentação do Microsoft 365](/microsoft-365/)
+- [Microsoft 365 documentação](/microsoft-365/)
 
 ## <a name="next-steps"></a>Próximas etapas
 Comprar assinaturas de nuvem
-- [Visual Studio Professional mensalmente](https://marketplace.visualstudio.com/items?itemName=ms.vs-professional-monthly)
-- [Visual Studio Enterprise mensalmente](https://marketplace.visualstudio.com/items?itemName=ms.vs-enterprise-monthly)
+- [Visual Studio Professional mensal](https://marketplace.visualstudio.com/items?itemName=ms.vs-professional-monthly)
+- [Visual Studio Enterprise mensal](https://marketplace.visualstudio.com/items?itemName=ms.vs-enterprise-monthly)

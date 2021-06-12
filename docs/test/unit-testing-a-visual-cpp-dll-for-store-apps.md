@@ -9,12 +9,12 @@ manager: jmartens
 ms.workload:
 - uwp
 author: corob-msft
-ms.openlocfilehash: 5117ffb8731ef06f054b0ecbfc651aef2563078e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f1981b3876d2e42e992ef261738da2443edfc114
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962620"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042906"
 ---
 # <a name="how-to-test-a-c-dll"></a>Como testar uma DLL do C++
 
@@ -26,7 +26,7 @@ Este tópico também cria uma única solução do Visual Studio e projetos separ
 
 ## <a name="create-the-solution-and-the-unit-test-project"></a><a name="Create_the_solution_and_the_unit_test_project"></a> Criar a solução e o projeto de teste de unidade
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Comece criando um novo projeto de teste. No menu **Arquivo**, escolha **Novo** > **Projeto**. Na caixa de diálogo **Criar um novo projeto**, digite "teste" na caixa de pesquisa e, em seguida, defina **Linguagem de programação** como C++. Em seguida, escolha **Aplicativo de Teste de Unidade (Windows Universal)** na lista de modelos de projeto.
 
@@ -81,7 +81,7 @@ Comece criando um novo projeto de teste. No menu **Arquivo**, escolha **Novo** >
 
 ## <a name="add-the-dll-project-to-the-solution"></a><a name="Add_the_DLL_project_to_the_solution"></a> Adicionar o projeto DLL à solução
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 No **Gerenciador de Soluções**, escolha o nome da solução. No menu de atalho, escolha **Adicionar** e, em seguida, **Novo projeto**. Na caixa de diálogo **Adicionar um novo projeto**, defina **Linguagem de programação** como C++ e digite "DLL" na caixa de pesquisa. Na lista de resultados, escolha **Aplicativo de teste de unidade (Universal Windows – C++/CX)**.
 
@@ -293,7 +293,7 @@ No **Gerenciador de Soluções**, escolha o nome da solução. No menu de atalho
 
 2. No **Gerenciador de Testes**, escolha **Executar Todos**.
 
-    O teste falhará. Escolha o nome do teste no **Gerenciador de testes**. A asserção com falha é realçada. A mensagem de falha fica visível no painel de detalhes do **Gerenciador de Testes**.
+    O teste falhará. Escolha o nome do teste no **Explorador de Testes.** A asserção com falha é realçada. A mensagem de falha fica visível no painel de detalhes do **Gerenciador de Testes**.
 
     ![Falha de NegativeRangeTests](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
 
@@ -321,13 +321,13 @@ No **Gerenciador de Soluções**, escolha o nome da solução. No menu de atalho
 
        ```
 
-   1. No **Gerenciador de testes**, escolha **executar tudo** para testar o método corrigido e certifique-se de que você não introduziu uma regressão.
+   1. No **Explorador de Testes,** **escolha Executar Tudo** para testar o método corrigido e certifique-se de que você não introduziu uma regressão.
 
    Todos os testes agora foram aprovados.
 
    ![Todos os testes serão aprovados](../test/media/ute_ult_alltestspass.png)
 
-## <a name="refactor-the-code-without-changing-tests"></a><a name="Refactor_the_code_without_changing_tests"></a> Refatorar o código sem alterar os testes
+## <a name="refactor-the-code-without-changing-tests"></a><a name="Refactor_the_code_without_changing_tests"></a> Refactor o código sem alterar testes
 
 1. Simplifique o cálculo central na função `SquareRoot`:
 

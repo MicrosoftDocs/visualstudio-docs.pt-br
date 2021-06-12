@@ -1,6 +1,6 @@
 ---
 title: Como gravar testes de unidade para DLLs em C++
-description: Saiba como desenvolver uma DLL C++ nativa usando a metodologia Test-First. Comece criando um projeto de teste nativo.
+description: Saiba como desenvolver uma DLL nativa do C++ usando a metodologia test-first. Comece criando um projeto de teste nativo.
 ms.custom: SEO-VS-2020
 ms.date: 06/13/2019
 ms.topic: how-to
@@ -9,12 +9,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 2d145e1383e8f6c0d7c25ae72232fdbe2a8d703d
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: cfdc580b94760cb0c5160918210ba6c3dd8fa2f6
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727535"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042919"
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>Como gravar testes de unidade para DLLs em C++
 
@@ -40,8 +40,8 @@ Este passo a passo descreve como desenvolver uma DLL nativa em C++ usando a meto
 
 1. No menu **Arquivo**, escolha **Novo** > **Projeto**.
 
-     **Visual Studio 2017 e anterior**: expanda os modelos **instalados**  >    >  **Visual C++**  >  **teste**.
-     **Visual Studio 2019**: defina o **idioma** como C++ e digite "teste" na caixa de pesquisa.
+     **Visual Studio 2017 e anteriores:** expanda **Modelos**  >  **Instalados**  >  **Visual C++**  >  **Teste**.
+     **Visual Studio 2019:** de definido **Idioma** como C++ e digite "test" na caixa de pesquisa.
 
      Escolha o modelo de **Projeto de Teste de Unidade Nativo** ou qualquer estrutura instalada de sua preferência. Se você escolher outro modelo, como Google Test ou Boost.Test, os princípios básicos são os mesmos, embora alguns detalhes serão diferentes.
 
@@ -86,11 +86,11 @@ Este passo a passo descreve como desenvolver uma DLL nativa em C++ usando a meto
 
 ## <a name="create-a-dll-project"></a><a name="create_dll_project"></a> Criar um projeto de DLL
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 As etapas a seguir mostram como criar um projeto de DLL no Visual Studio 2019.
 
-1. Criar um projeto C++ usando o **Assistente de área de trabalho do Windows**: clique com o botão direito do mouse no nome da solução em **Gerenciador de soluções** e escolha **Adicionar**  >  **novo projeto**. Defina a **Linguagem de programação** como C++ e, em seguida, digite "windows" na caixa de pesquisa. Escolha **Assistente de área de trabalho do Windows** na lista de resultados.
+1. Crie um projeto C++ usando o Assistente de Área de Trabalho do **Windows:** clique com o botão direito do mouse no nome da solução **no** Gerenciador de Soluções e escolha **Adicionar**  >  **Novo Projeto**. Defina a **Linguagem de programação** como C++ e, em seguida, digite "windows" na caixa de pesquisa. Escolha **Assistente de área de trabalho do Windows** na lista de resultados.
 
      Nestas instruções passo a passo, o projeto é chamado `RootFinder`.
 
@@ -196,7 +196,7 @@ As etapas a seguir mostram como criar um projeto de DLL no Visual Studio 2017.
 
    Você configurou o teste e os projetos de código, além de ter verificado que pode executar testes que executam funções no projeto de código. Agora, você pode começar a escrever testes e códigos reais.
 
-## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="iterate"></a> Aumentar iterativamente os testes e fazer com que eles passem
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="iterate"></a> Aumentar iterativamente os testes e fazê-los passar
 
 1. Adicione um novo teste:
 
@@ -245,7 +245,7 @@ As etapas a seguir mostram como criar um projeto de DLL no Visual Studio 2017.
     }
     ```
 
-4. Compile a solução e, em seguida, no **Gerenciador de testes**, escolha **executar tudo**.
+4. Crie a solução e, em seguida, **no Explorador de Testes,** **escolha Executar Tudo.**
 
      Ambos os testes são aprovados.
 
@@ -328,7 +328,7 @@ As etapas a seguir mostram como criar um projeto de DLL no Visual Studio 2017.
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Se os testes individuais não tiverem dependências que os impeçam de serem executados em qualquer ordem, ative a execução de teste paralela com a ![ captura de tela do botão de alternância de execução de teste paralelo na barra de ferramentas do Gerenciador de testes. Quando esse botão é selecionado, os testes serão executados em paralelo.](../test/media/ute_parallelicon-small.png) botão de alternância na barra de ferramentas. Isso pode reduzir consideravelmente o tempo necessário para executar todos os testes.
+> Se os testes individuais não têm dependências que os impeçam de serem executados em qualquer ordem, a turn on parallel test execution with the Screenshot of the parallel test execution toggle button on the Test Explorer toolbar (Captura de tela do botão de alternância de execução de teste paralelo) na barra de ferramentas do Explorador de ![ Testes. Quando esse botão for selecionado, os testes serão executados em paralelo.](../test/media/ute_parallelicon-small.png) botão de alternância na barra de ferramentas. Isso pode reduzir consideravelmente o tempo necessário para executar todos os testes.
 
 ::: moniker-end
 
@@ -339,7 +339,7 @@ As etapas a seguir mostram como criar um projeto de DLL no Visual Studio 2017.
 
 ::: moniker-end
 
-## <a name="refactor-the-code-without-changing-tests"></a><a name="refactor"></a> Refatorar o código sem alterar os testes
+## <a name="refactor-the-code-without-changing-tests"></a><a name="refactor"></a> Refactor o código sem alterar testes
 
 1. Simplifique o cálculo central na função SquareRoot:
 
@@ -360,7 +360,7 @@ As etapas a seguir mostram como criar um projeto de DLL no Visual Studio 2017.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- **Isolado.** A maioria das DLLs são dependentes de outros subsistemas, como bancos de dados e outras DLLs. Geralmente, esses outros componentes são desenvolvidos em paralelo. Para permitir que os testes de unidade sejam executados enquanto os outros componentes ainda não estiverem disponíveis, você precisará substituir o fictício ou
+- **Isolamento.** A maioria das DLLs são dependentes de outros subsistemas, como bancos de dados e outras DLLs. Geralmente, esses outros componentes são desenvolvidos em paralelo. Para permitir que os testes de unidade sejam executados enquanto os outros componentes ainda não estiverem disponíveis, você precisará substituir o fictício ou
 
 - **Testes de aceitação do build.** Você pode executar testes no servidor de build da sua equipe em intervalos definidos. Isso garante que não sejam introduzidos bugs quando o trabalho de vários membros da equipe são integrados.
 
@@ -368,7 +368,7 @@ As etapas a seguir mostram como criar um projeto de DLL no Visual Studio 2017.
 
    Você também pode exigir um nível mínimo de cobertura de código.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Adicionar testes de unidade a aplicativos C++ existentes](../test/how-to-use-microsoft-test-framework-for-cpp.md)
 - [Usando Microsoft.VisualStudio.TestTools.CppUnitTestFramework](how-to-use-microsoft-test-framework-for-cpp.md)

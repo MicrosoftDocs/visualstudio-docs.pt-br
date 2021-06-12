@@ -2,17 +2,17 @@
 title: Conectar-se a projetos no Team Explorer
 description: Saiba como usar Team Explorer no Visual Studio para trabalhar com membros da equipe para desenvolver e gerenciar projetos.
 ms.custom: SEO-VS-2020
-ms.date: 03/31/2021
+ms.date: 06/11/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: 78a71911bb4334e04a085d91ff51238d34981beb
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 4d3d2c005f32aaebacc251414218f5ae03edf546
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106216599"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112043010"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Conectar-se a projetos no Team Explorer
 
@@ -27,7 +27,7 @@ Use a janela de ferramentas **Team Explorer** para coordenar seus esforços de c
 Team Explorer conecta o Visual Studio aos repositórios do TFVC (controle de versão do Team Foundation) e aos projetos hospedados em [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) ou em um [Azure DevOps Server](/azure/devops/user-guide/about-azure-devops-services-tfs?view=azure-devops&preserve-view=true) local (anteriormente conhecido como TFS). Você pode gerenciar o código-fonte, itens de trabalho e builds.
 
 > [!IMPORTANT]
-> Com o lançamento recente do Visual Studio 2019 [**versão 16,8**](/visualstudio/releases/2019/release-notes/), a nova experiência de controle de versão do git agora está ativada por padrão. Se você quiser saber mais sobre como ele é comparado com Team Explorer, consulte a comparação lado a [**lado do git e da página de Team Explorer**](git-team-explorer-feature-comparison.md) .
+> Com o lançamento do Visual Studio 2019 [**versão 16,8**](/visualstudio/releases/2019/release-notes-history), a experiência de controle de versão do git está ativada por padrão. Se você quiser saber mais sobre como ele é comparado com Team Explorer, consulte a comparação lado a [**lado do git e da página de Team Explorer**](../version-control/git-team-explorer-feature-comparison.md) .
 >
 > No entanto, se você preferir continuar a usar Team Explorer, vá para **ferramentas** > **Opções** >  > **Visualização** do ambiente recursos e, em seguida, alterne a caixa de seleção **nova experiência do usuário do git** .
 
@@ -95,13 +95,13 @@ A maneira como você usa Team Explorer para se conectar a um projeto depende da 
 
       ![Captura de tela da notificação de ' soluções e pastas ' de Team Explorer no Visual Studio 2019 versão 16,7 e anterior](../get-started/media/open-proj-repo-solutions-folders.png)
 
-   Se você não tiver um arquivo de solução em seu repositório, uma mensagem "nenhuma solução encontrada" será exibida. No entanto, você pode clicar duas vezes em qualquer arquivo no menu de pastas para abri-lo no editor de códigos do Visual Studio.
+   Se você não tiver um arquivo de solução em seu repositório, uma mensagem "nenhuma solução encontrada&quot; será exibida. No entanto, você pode clicar duas vezes em qualquer arquivo no menu de pastas para abri-lo no editor de códigos do Visual Studio.
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range=&quot;vs-2017&quot;
 
-![Home page do Team Explorer no Visual Studio](media/team-explorer/team-explorer.png "A home page do Team Explorer no Visual Studio.")
+![Home page do Team Explorer no Visual Studio](media/team-explorer/team-explorer.png &quot;A home page do Team Explorer no Visual Studio.")
 
 > [!TIP]
 > Se você abrir o Visual Studio e **Team Explorer** não aparecer, abra-o escolhendo **Exibir**  >  **Team Explorer** na barra de menus ou pressionando **Ctrl** + **&#92;**, **Ctrl** + **M**.
@@ -118,7 +118,7 @@ Para se conectar a um projeto:
 
    ![Botão Gerenciar Conexões no Team Explorer](media/team-explorer/manage-connections.png "O botão Team Explorer-gerenciar conexões no Visual Studio.")
 
-1. Na página **Conectar**, escolha **Gerenciar Conexões** > **Conectar-se a um projeto**.
+1. Na página **conectar** , escolha **gerenciar conexões** > **conectar a um projeto**.
 
    ![Conectar-se a um projeto no Team Explorer](media/team-explorer/connect-project.png "A opção Team Explorer-conectar a um projeto no Visual Studio.")
 

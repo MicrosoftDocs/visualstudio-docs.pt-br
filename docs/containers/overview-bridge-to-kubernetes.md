@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jmartens
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: 1709785c63bd4fbcd702fbcacfe59dddcb71d1b3
-ms.sourcegitcommit: 0135fc6ffa38995cc9e6ab05fa265758890d2e15
+ms.openlocfilehash: 838589e0dd81232de25b88989d621a07fb22f972
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "107526154"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112043049"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Como funciona a Ponte para Kubernetes
 
@@ -52,6 +52,9 @@ Além disso, o Bridge para o kubernetes fornece uma maneira de replicar as vari�
 
 > [!NOTE]
 > Para a duração da conexão com o cluster (mais 15 minutos adicionais), a ponte para kubernetes executa um processo chamado *EndpointManager* com permissões de administrador no computador local.
+
+> [!NOTE]
+> Você pode depurar em paralelo, com vários serviços, mas precisa iniciar tantas instâncias do Visual Studio quanto os serviços que deseja depurar. Verifique se seus serviços escutam em portas diferentes localmente e, em seguida, configure e depure-os separadamente. Não há suporte para isolamento neste cenário.
 
 ## <a name="additional-configuration-with-kuberneteslocalprocessconfigyaml"></a>Configuração adicional com KubernetesLocalProcessConfig. YAML
 
@@ -151,11 +154,11 @@ A ponte para o kubernetes tem as seguintes limitações:
 
 ### <a name="bridge-to-kubernetes-and-clusters-with-azure-dev-spaces-enabled"></a>Ponte para kubernetes e clusters com Azure Dev Spaces habilitado
 
-Não é possível usar a ponte para kubernetes em um cluster com Azure Dev Spaces habilitado. Se você quiser usar a ponte para kubernetes em um cluster com Azure Dev Spaces habilitado, será necessário desabilitar o Azure Dev Spaces antes de se conectar ao cluster.
+Você não pode usar o Bridge to Kubernetes em um cluster com Azure Dev Spaces habilitado. Se você quiser usar o Bridge to Kubernetes em um cluster com Azure Dev Spaces habilitado, desabilite o Azure Dev Spaces antes de se conectar ao cluster.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para começar a usar o Bridge para kubernetes para se conectar ao seu computador de desenvolvimento local ao cluster, consulte [usar o Bridge para o kubernetes](bridge-to-kubernetes.md).
+Para começar a usar o Bridge to Kubernetes para se conectar ao seu computador de desenvolvimento local ao cluster, consulte [Usar Bridge to Kubernetes](bridge-to-kubernetes.md).
 
 [asp-net-header]: https://www.nuget.org/packages/Microsoft.AspNetCore.HeaderPropagation/
 [azds-cli]: /azure/dev-spaces/how-to/install-dev-spaces#install-the-client-side-tools

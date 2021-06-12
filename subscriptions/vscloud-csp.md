@@ -7,12 +7,12 @@ ms.assetid: d2ab13ed-ef79-4ef0-8736-eccd04bc6020
 ms.date: 03/18/2021
 ms.topic: conceptual
 description: Informações para Provedores de Soluções na Nuvem como comprar e gerenciar assinaturas de nuvem do Visual Studio para seus clientes.
-ms.openlocfilehash: b905d698f3d9f1a763ae7d9e9dbc8276a5362da6
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 09c905d113920a0bb55aed8851d3fb62c92a39bf
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104673015"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042846"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>Comprar e gerenciar assinaturas de nuvem do Visual Studio para seus clientes
 Os parceiros do programa [CSP (Provedores de Soluções na Nuvem)](https://partner.microsoft.com/cloud-solution-provider) podem comprar assinaturas de nuvem do Visual Studio Enterprise e do Visual Studio Professional para seus clientes.
@@ -20,7 +20,7 @@ Os parceiros do programa [CSP (Provedores de Soluções na Nuvem)](https://partn
 [Comparar opções de assinatura de nuvem](https://visualstudio.microsoft.com/vs/pricing)
 
 > [!NOTE]
-> A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a ir para [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a fim de explorar diferentes opções para comprar o Visual Studio.
+> A Microsoft não oferece mais assinaturas anuais do Visual Studio Professional e do Visual Studio Enterprise nas Assinaturas na Nuvem. Não haverá nenhuma alteração na experiência dos clientes existentes nem na capacidade de renovar, aumentar, diminuir ou cancelar suas assinaturas. Novos clientes são incentivados a ir para [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) explorar diferentes opções para comprar Visual Studio.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 Primeiro você precisa configurar o locatário do cliente no Partner Center e criar uma assinatura do Azure para esse locatário.
@@ -37,7 +37,7 @@ Qualquer pessoa que tenha [acesso de proprietário ou colaborador](https://na01.
 0. Escolha **Gerenciamento de Serviço**.
 0. Escolha **Visual Studio Marketplace**.
 0. Verifique se o nome do cliente está no canto superior direito.
-0. Escolha **assinaturas**.
+0. Escolha **Assinaturas**.
 0. Escolha Enterprise ou Professional para o Visual Studio.
 0. Escolha **Comprar**.
 0. Escolha a assinatura do Azure a ser cobrada pela compra.
@@ -47,7 +47,7 @@ Qualquer pessoa que tenha [acesso de proprietário ou colaborador](https://na01.
 >[!NOTE]
 > Você precisará seguir estas etapas sempre que comprar assinaturas do Visual Studio como CSP. Ainda não existe uma API para automatizar a compra.
 
-Depois de confirmar a compra, escolha **Gerenciar** para atribuir assinaturas aos usuários finais do cliente.  Você também pode acessar o portal de administração da assinatura no Partner Center escolhendo **Gerenciamento de serviços**.  A partir daí, veja as etapas ou o vídeo abaixo.
+Depois de confirmar a compra, escolha **Gerenciar** para atribuir assinaturas aos usuários finais do cliente.  Você também pode acessar o Portal de Administração de Assinatura no Partner Center escolhendo **Gerenciamento de serviços**.  A partir daí, veja as etapas ou o vídeo abaixo.
 
 ## <a name="how-to-manage-visual-studio-cloud-subscriptions-for-your-customer"></a>Como gerenciar assinaturas de nuvem do Visual Studio para o cliente
 
@@ -107,13 +107,13 @@ R: Não, os preços para assinaturas do Visual Studio são fixos. O mesmo preço
  R: Não no momento. Seus clientes podem usufruir dos [preços do Azure para Desenvolvimento/Teste](https://azure.microsoft.com/pricing/dev-test/), mas não há nada específico para os CSPs.
 
 ## <a name="resources"></a>Recursos
-- Para obter assistência com vendas, assinaturas, contas e cobrança para assinaturas do Visual Studio, consulte [suporte a assinaturas](https://aka.ms/vssubscriberhelp)do Visual Studio.
+- Para assistência com vendas, assinaturas, contas e cobrança para Assinaturas do Visual Studio, consulte suporte Visual Studio [assinaturas do .](https://aka.ms/vssubscriberhelp)
 
-## <a name="see-also"></a>Veja também
-- [Documentação do Visual Studio](/visualstudio/)
+## <a name="see-also"></a>Confira também
+- [Visual Studio documentação](/visualstudio/)
 - [Documentação do Azure DevOps](/azure/devops/)
 - [Documentação do Azure](/azure/)
-- [Documentação do Microsoft 365](/microsoft-365/)
+- [Microsoft 365 documentação](/microsoft-365/)
 
 ## <a name="next-steps"></a>Próximas etapas
-Consulte as [perguntas frequentes sobre cobrança na nuvem](vscloud-billing-faq.md) para obter respostas para perguntas de cobrança comuns.
+Confira as [Perguntas frequentes sobre cobrança na nuvem](vscloud-billing-faq.yml) para obter respostas para perguntas comuns sobre cobrança.

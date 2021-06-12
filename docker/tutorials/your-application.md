@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 1b92792cf9db0090c52f583754e56c306e6d7234
-ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
+ms.openlocfilehash: 00eb3a7cff3ffeaac783b929a000d9258fae7e63
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106082572"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042932"
 ---
 # <a name="build-and-run-the-todo-sample-app"></a>Compilar e executar o aplicativo de exemplo todo
 
@@ -30,7 +30,9 @@ Antes de executar o aplicativo, você precisa obter o código-fonte do aplicativ
 
 1. Verifique se você tem o Docker for Windows ou a Community Edition do Docker instalado no computador local. Consulte [Docker for Windows documentação de instalação](https://docs.docker.com/docker-for-windows/install/). O processo de instalação torna o arquivo ZIP contendo o exemplo disponível no endereço localhost.
 
-1. [Baixe o zip](https://github.com/docker/getting-started/tree/master/app). Abra o arquivo ZIP e certifique-se de extrair o conteúdo.
+1. Baixe a origem do aplicativo do repositório do [Docker](https://github.com/docker/getting-started) . Você pode baixar o arquivo ZIP para o repositório. Para baixar o arquivo ZIP, use o botão **código** verde e escolha **baixar zip**. Abra o arquivo ZIP e Extraia todos para extrair a origem do aplicativo da pasta do *aplicativo* para uma pasta no disco rígido.
+
+   ![Captura de tela mostrando o botão de código verde e a opção de baixar ZIP](media/download-zip.png)
 
 1. Depois de extraído, use seu editor de código favorito para abrir o projeto. Se você for precisar de um editor, poderá usar [Visual Studio Code](https://code.visualstudio.com/). Você deve ver o `package.json` e dois subdiretórios ( `src` e `spec` ).
 

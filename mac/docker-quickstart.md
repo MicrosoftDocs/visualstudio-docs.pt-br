@@ -5,12 +5,12 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 11/09/2020
 ms.topic: how-to
-ms.openlocfilehash: e2bfb78369ae5da389820a318196dd7e9e13e897
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: 4ddb15c8bc5bf90663c5431d2379af61b43e73a6
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493067"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112043088"
 ---
 # <a name="get-started-with-docker-in-visual-studio-for-mac"></a>Introdução ao Docker no Visual Studio para Mac
 
@@ -30,8 +30,8 @@ Para a instalação do Docker, revise e siga as informações em [Instalar Docke
 1. Crie uma nova solução acessando **Arquivo > Nova Solução**.
 1. Em **.NET Core > aplicativo** , escolha o modelo de **aplicativo Web** : ![ criar um novo aplicativo ASP.net](media/docker-quickstart-1.png)
 1. Selecione a estrutura de destino. Neste exemplo, usaremos o .NET Core 2,2: ![ definir estrutura de destino](media/docker-quickstart-2.png)
-1. Insira os detalhes do projeto, como o nome ( _DockerDemo_ neste exemplo). O projeto criado contém todos os princípios necessários para compilar e executar um site do ASP.NET Core.
-1. Na janela da solução, clique com o botão direito do mouse no projeto DockerDemo e selecione **adicionar > adicionar suporte ao Docker** : ![ Adicionar suporte do Docker](media/docker-quickstart-3.png)
+1. Insira os detalhes do projeto, como o nome (_DockerDemo_ neste exemplo). O projeto criado contém todos os princípios necessários para compilar e executar um site do ASP.NET Core.
+1. Na janela da solução, clique com o botão direito do mouse no projeto DockerDemo e selecione **adicionar > adicionar suporte ao Docker**: ![ Adicionar suporte do Docker](media/docker-quickstart-3.png)
 
 O Visual Studio para Mac vai adicionar automaticamente um novo projeto à sua solução denominado **docker-compose** e um **Dockerfile** ao seu projeto existente.
 
@@ -42,24 +42,25 @@ O Visual Studio para Mac vai adicionar automaticamente um novo projeto à sua so
 Um Dockerfile é a receita para criar uma imagem final do Docker. Consulte a [referência do Dockerfile](https://docs.docker.com/engine/reference/builder/) para obter uma compreensão dos comandos dentro dele.
 
 ```
-FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-stretch-slim AS base
 WORKDIR /app
 EXPOSE 80
+EXPOSE 443
 
-FROM microsoft/dotnet:2.2-sdk AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
 WORKDIR /src
 COPY DockerDemo/DockerDemo.csproj DockerDemo/
-RUN dotnet restore DockerDemo/DockerDemo.csproj
+RUN dotnet restore "DockerDemo/DockerDemo.csproj"
 COPY . .
-WORKDIR /src/DockerDemo
-RUN dotnet build DockerDemo.csproj -c Release -o /app
+WORKDIR "/src/DockerDemo"
+RUN dotnet build "DockerDemo.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish DockerDemo.csproj -c Release -o /app
+RUN dotnet publish "DockerDemo.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "DockerDemo.dll"]
 ```
 
@@ -70,7 +71,7 @@ O *Dockerfile* anterior baseia-se na imagem [microsoft/aspnetcore](https://hub.d
 
 ## <a name="debugging"></a>Depuração
 
-Defina o projeto `docker-compose` como o Projeto de Inicialização e inicie a depuração ( **Executar > Iniciar Depuração** ). Isso compila, implanta e inicia o projeto ASP.NET em um contêiner.
+Defina o projeto `docker-compose` como o Projeto de Inicialização e inicie a depuração (**Executar > Iniciar Depuração**). Isso compila, implanta e inicia o projeto ASP.NET em um contêiner.
 
 > [!TIP]
 > Na primeira execução após a instalação do Docker Desktop, você pode receber o seguinte erro ao tentar depurar: `Cannot start service dockerdemo: Mounts denied`
@@ -87,6 +88,6 @@ Observe que o contêiner estará escutando em um porta, `http://localhost:32768`
 
 Para ver a lista de contêineres em execução, use o comando `docker ps` no Terminal.
 
-Observe a retransmissão de porta na captura de tela abaixo (em **PORTS** ). Isso mostra que o contêiner está escutando na porta que vimos no Safari acima e retransmitindo solicitações para o servidor Web interno na porta 80 (conforme definido no Dockerfile). Da perspectiva do aplicativo, ele está escutando na porta 80:
+Observe a retransmissão de porta na captura de tela abaixo (em **PORTS**). Isso mostra que o contêiner está escutando na porta que vimos no Safari acima e retransmitindo solicitações para o servidor Web interno na porta 80 (conforme definido no Dockerfile). Da perspectiva do aplicativo, ele está escutando na porta 80:
 
 ![Lista de contêineres do Docker](media/docker-quickstart-7.png)
