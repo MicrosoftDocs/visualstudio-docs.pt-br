@@ -6,14 +6,14 @@ ms.author: ghogen
 ms.date: 02/01/2019
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 53bf0d559d9737494567b079621879b97a403a95
-ms.sourcegitcommit: fc05a763b59e212c86350d117a1900a1f2686ec8
+ms.openlocfilehash: 92b97cb1091722bdf0caa6e7708e015612c545ad
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2021
-ms.locfileid: "111564642"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112044714"
 ---
-Com o Visual Studio, você pode facilmente compilar, depurar e executar aplicativos ASP.NET Core em contêineres e publicá-los no ACR (registro de contêiner do Azure), no Hub do Docker, no serviço de Azure App ou em seu próprio registro de contêiner. Neste artigo, publicaremos no ACR.
+Com Visual Studio, você pode facilmente criar, depurar e executar aplicativos ASP.NET Core em contêineres e publicá-los em Registro de Contêiner do Azure, Docker Hub, Serviço de Aplicativo do Azure ou seu próprio registro de contêiner. Neste artigo, publicaremos no Registro de Contêiner.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -23,20 +23,20 @@ Com o Visual Studio, você pode facilmente compilar, depurar e executar aplicati
 
 ## <a name="installation-and-setup"></a>Instalação e configuração
 
-Para a instalação do Docker, primeiro examine as informações no [Docker desktop para Windows: o que saber antes de instalar](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install)o. Em seguida, instale o [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows).
+Para a instalação do Docker, primeiro revise as informações em [Docker Desktop for Windows: O que saber antes de instalar o](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install). Em seguida, instale o [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows).
 
 ## <a name="add-a-project-to-a-docker-container"></a>Adicionar um projeto a um contêiner do Docker
 
 1. No menu do Visual Studio, selecione **Arquivo > Novo > Projeto**.
 1. Na seção **Modelos** da caixa de diálogo **Novo Projeto**, selecione **Visual C# > Web**.
-1. Selecione **ASP.NET Core aplicativo Web** ou, se desejar usar o .NET Framework em vez do .NET Core, selecione **aplicativo Web ASP.net**.
+1. Selecione **ASP.NET Aplicativo Web** Principal ou, se você quiser usar o .NET Framework em vez do .NET Core, selecione ASP.NET **Web.**
 1. Dê um nome ao novo aplicativo (ou use o padrão) e selecione **OK**.
-1. Selecione **aplicativo Web**.
+1. Selecione **Aplicativo Web**.
 1. Verifique a caixa de seleção **Habilitar o suporte do Docker**.
 
    ![Caixa de seleção Habilitar Suporte do Docker](../../media/container-tools/enable-docker-support.PNG)
 
-   A captura de tela mostra o .NET Core; Se você estiver usando .NET Framework, parecerá um pouco diferente.
+   A captura de tela mostra o .NET Core; se você estiver usando .NET Framework, ele será um pouco diferente.
 
 1. Selecione o tipo de contêiner desejado (Windows ou Linux) e clique em **OK**.
 
@@ -67,7 +67,7 @@ COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "HelloDockerTools.dll"]
 ```
 
-O *Dockerfile* anterior baseia-se na imagem [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) e inclui instruções para modificar a imagem base criando o projeto e adicionando-o ao contêiner. Se você estiver usando a .NET Framework, a imagem base será diferente.
+O *Dockerfile* anterior baseia-se na imagem [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) e inclui instruções para modificar a imagem base criando o projeto e adicionando-o ao contêiner. Se você estiver usando o .NET Framework, a imagem base será diferente.
 
 Quando a caixa de seleção **Configurar para HTTPS** do novo projeto estiver marcada, o *Dockerfile* exibirá duas portas. Uma porta é usada para o tráfego HTTP; a outra porta é usada para o HTTPS. Se a caixa de seleção não estiver marcada, uma única porta (80) será exposta para o tráfego HTTP.
 
