@@ -45,7 +45,7 @@ O **Designer de Classe** não controla o local dos arquivos de origem, portanto,
 
 Você pode obter ajuda com outros erros e avisos nos seguintes recursos:
 
-- [Trabalhar com o código do Visual C++](working-with-visual-cpp-code.md) inclui informações de solução de problemas de como exibir C++ em um diagrama de classe.
+- [Trabalhar com o código do Visual C++](working-with-visual-cpp-code.md) inclui informações de solução de problemas de como exibir código C++ em um diagrama de classe.
 - O [Fórum do Designer de Classe do Visual Studio](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsclassdesigner) fornece um fórum para perguntas sobre o **Designer de Classe**.
 
 ## <a name="see-also"></a>Confira também
