@@ -1,7 +1,7 @@
 ---
-title: 'Tutorial: criar um aplicativo de console C# simples'
+title: 'Tutorial: Criar um aplicativo de console C# simples'
 description: Saiba como criar aplicativos de console em C# do Visual Basic no Visual Studio, passo a passo.
-ms.custom: seodec18, get-started
+ms.custom: acquisition, seodec18, get-started
 ms.date: 02/10/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -15,26 +15,26 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 12f00bedba6078fc5c471d02b92630b49dd35afa
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 7317af5667f09ff30d0f2cb54d1399da9d0358de
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107295618"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113255"
 ---
-# <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>Tutorial: criar um aplicativo de console C# simples no Visual Studio
+# <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>Tutorial: Criar um aplicativo de console C# simples no Visual Studio
 
 Neste tutorial do C#, você usará o Visual Studio para criar e executar um aplicativo de console e explorar alguns recursos do IDE (ambiente de desenvolvimento integrado) do Visual Studio durante esse processo.
 
 ::: moniker range="vs-2017"
 
-Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
+Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
+Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
@@ -46,10 +46,10 @@ Para começar, criaremos um projeto de aplicativo em C#. O tipo de projeto inclu
 
 1. Abra o Visual Studio 2017.
 
-2. Na barra de menus superior, escolha **arquivo**  >  **novo**  >  **projeto**.
+2. Na barra de menus superior, escolha **Arquivo**  >  **Novo**  >  **Projeto**.
    (Como alternativa, pressione **Ctrl** + **Shift** + **N**).
 
-3. No painel esquerdo da caixa de diálogo **Novo Projeto**, expanda **C#** e, em seguida, escolha **.NET Core**. No painel central, escolha **Aplicativo de Console (.NET Core)**. Em seguida, nomeie a **_calculadora_** de arquivo.
+3. No painel esquerdo da caixa de diálogo **Novo Projeto**, expanda **C#** e, em seguida, escolha **.NET Core**. No painel central, escolha **Aplicativo de Console (.NET Core)**. Em seguida, nomeia a Calculadora **_de arquivos_**.
 
    ![Modelo de projeto do aplicativo do console (.NET Core) na caixa de diálogo Novo projeto no IDE do Visual Studio](./media/new-project-csharp-calculator-console-app.png)
 
@@ -69,7 +69,7 @@ Se o modelo de projeto **Aplicativo do Console (.NET Core)** não for exibido, v
 
 #### <a name="option-2-use-the-tools-menu-bar"></a>Opção 2: usar a barra de menus Ferramentas
 
-1. Cancele a caixa de diálogo **Novo Projeto**; em seguida, vá até a barra de menus superior e escolha **Ferramentas** > **Obter Ferramentas e Recursos**.
+1. Cancele a caixa **de diálogo Novo** Projeto e, na barra de menus superior, escolha **Ferramentas** Obter Ferramentas > **e Recursos**.
 
 1. O Instalador do Visual Studio é iniciado. Escolha a carga de trabalho **Desenvolvimento multiplaforma do .NET Core** e, em seguida, selecione **Modificar**.
 
@@ -79,18 +79,18 @@ Se o modelo de projeto **Aplicativo do Console (.NET Core)** não for exibido, v
 
 1. Abra o Visual Studio 2019.
 
-1. Na janela iniciar, escolha **criar um novo projeto**.
+1. Na janela inicial, escolha **Criar um novo projeto.**
 
    ![Exibir a janela 'Criar um novo projeto'](../../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. Na janela **criar um novo projeto** , escolha **C#** na lista idioma. Em seguida, escolha **Windows** na lista de plataformas e **console** na lista de tipos de projeto. 
+1. Na janela **Criar um novo projeto,** escolha **C#** na lista Idioma. Em seguida, **escolha Windows** na lista Plataforma e **Console** na lista de tipos de projeto. 
 
-   Depois de aplicar o idioma, a plataforma e os filtros de tipo de projeto, escolha o modelo de **aplicativo de console** e, em seguida, escolha **Avançar**.
+   Depois de aplicar os filtros de tipo de idioma, plataforma e projeto, escolha o **modelo Aplicativo** de Console e, em seguida, **escolha Próximo**.
 
     :::image type="content" source="./media/vs-2019/csharp-create-new-project-console-net-core.png" alt-text="Escolha o modelo de C# para o Aplicativo de Console (.NET Framework)":::
 
    > [!NOTE]
-   > Se você não vir o modelo de **aplicativo de console** , poderá instalá-lo na janela **criar um novo projeto** . Na mensagem **Não encontrou o que precisa?**, escolha o link **Instalar mais ferramentas e recursos**.
+   > Se você não vir o modelo **Aplicativo de Console,** poderá instalá-lo na **janela Criar um novo** projeto. Na mensagem **Não encontrou o que precisa?**, escolha o link **Instalar mais ferramentas e recursos**.
    >
    > ![O link 'Instalar mais ferramentas e recursos' da mensagem 'Não encontrou o que precisa?' na janela 'Criar novo projeto'](../../get-started/media/vs-2019/not-finding-what-looking-for.png) 
    > 
@@ -100,13 +100,13 @@ Se o modelo de projeto **Aplicativo do Console (.NET Core)** não for exibido, v
    >
    > Depois disso, escolha o botão **Modificar** no Instalador do Visual Studio. Pode ser solicitado que você salve seu trabalho; nesse caso, faça isso. Em seguida, escolha **Continuar** para instalar a carga de trabalho. Em seguida, retorne para a etapa 2 deste procedimento para "[Criar um projeto](#create-a-project)".
 
-1. Na janela **Configurar seu novo projeto**, digite ou insira *Calculadora* na caixa **Nome do projeto**. Em seguida, escolha **Avançar**.
+1. Na janela **Configurar seu novo projeto**, digite ou insira *Calculadora* na caixa **Nome do projeto**. Em seguida, escolha **Próximo.**
 
     :::image type="content" source="./media/vs-2019/csharp-name-your-calculator-project.png" alt-text="Na janela &quot;Configurar seu novo projeto&quot;, dê ao projeto o nome 'Calculadora'":::
    
-1. Na janela **informações adicionais** , o **.NET Core 3,1** já deve estar selecionado para sua estrutura de destino. Caso contrário, selecione **.NET Core 3,1**. Em seguida, escolha **criar**.
+1. Na janela **Informações adicionais,** **o .NET Core 3.1** já deve estar selecionado para sua estrutura de destino. Caso não, selecione **.NET Core 3.1**. Em seguida, escolha **Criar**.
 
-    :::image type="content" source="./media/vs-2019/csharp-target-framework.png" alt-text="na janela ' informações adicionais ', verifique se o .NET Core 3,1 está selecionado":::
+    :::image type="content" source="./media/vs-2019/csharp-target-framework.png" alt-text="na janela &quot;Na janela &quot;Informações adicionais&quot;, certifique-se de que o .NET Core 3.1 está selecionado":::
 
    O Visual Studio abre seu novo projeto, que inclui o código "Olá, Mundo" padrão.
 
@@ -139,11 +139,11 @@ Vamos começar com alguns cálculos matemáticos básicos de inteiro em C#.
     Observe que quando você faz isso, o recurso IntelliSense no Visual Studio oferece a opção de preencher automaticamente a entrada.
 
     > [!NOTE]
-    > A animação a seguir não se destina a duplicar o código anterior. Destina-se apenas a mostrar como o recurso de preenchimento automático funciona.
+    > A animação a seguir não se destina a duplicar o código anterior. Ele destina-se apenas a mostrar como o recurso de preenchimento automático funciona.
 
     ![Animação de código de matemática de inteiro que mostra o recurso de preenchimento automático do IntelliSense no IDE do Visual Studio](./media/integer-math-intellisense.gif)
 
-1. Escolha o botão **início** verde ao lado da **calculadora** para compilar e executar o programa ou pressione **F5**.
+1. Escolha o botão **verde Iniciar** ao lado de **Calculadora** para criar e executar seu programa ou pressione **F5**.
 
    ![Escolha o botão Calculadora para executar o aplicativo na barra de ferramentas](./media/csharp-console-calculator-button.png)
 
@@ -245,7 +245,7 @@ Como mostrado na captura de tela a seguir, se você executar o aplicativo e divi
 
 Vamos corrigir o código para que ele identifique decimais.
 
-1. Pressione **Ctrl**  +  **H** para abrir o controle **Localizar e substituir** .
+1. Pressione **Ctrl**  +  **H** para abrir o **controle Encontrar e** Substituir.
 
 1. Altere cada instância da variável `int` para `float`.
 

@@ -7,21 +7,21 @@ ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
-ms.custom: seodec18
+ms.custom: acquisition
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9767630fc7fee4eafce72e4eb99aa12db8469691
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4c0b50a74566edfb00cba7efae68a3626ec8ec6d
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970537"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112847"
 ---
 # <a name="install-python-support-in-visual-studio"></a>Instalar o suporte ao Python no Visual Studio
 
 > [!Note]
-> O suporte do Python está disponível atualmente apenas no Visual Studio para Windows; no Mac e no Linux, o suporte ao Python está disponível por meio de [Visual Studio Code](https://code.visualstudio.com/docs/python/python-tutorial).
+> Atualmente, o suporte ao Python está disponível apenas no Visual Studio windows; no Mac e no Linux, o suporte ao Python está disponível [por meio Visual Studio Code](https://code.visualstudio.com/docs/python/python-tutorial).
 
 1. Baixe e execute o instalador do Visual Studio mais recente para Windows (o suporte ao Python está presente na versão 15.2 e posteriores). Se você já tiver o Visual Studio instalado, execute o instalador do Visual Studio e vá para a etapa 2.
 
@@ -35,7 +35,7 @@ ms.locfileid: "99970537"
 
     ![Carga de trabalho de desenvolvimento do Python no instalador do Visual Studio](media/installation-python-workload.png)
 
-1. Para testar rapidamente o suporte do Python, inicie o Visual Studio, pressione **ALT** + **I** para abrir a janela **interativa do Python** e digite `2+2` . Se você não vir a saída de **4**, verifique as etapas novamente.
+1. Para testar rapidamente o suporte ao Python, Visual Studio, pressione **Alt** I para abrir a janela Interativa do +  **Python** e insira `2+2` . Se você não vir a saída de **4**, verifique as etapas novamente.
 
     ![Testando o Python por meio da janela interativa](media/installation-interactive-test.png)
 
@@ -44,7 +44,7 @@ ms.locfileid: "99970537"
 > [!div class="nextstepaction"]
 > [Etapa 1: criar um projeto do Python](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Identificar manualmente um interpretador Python existente](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
 - [Instalar o suporte para Python no Visual Studio 2015 e anterior](installing-python-support-in-visual-studio.md)

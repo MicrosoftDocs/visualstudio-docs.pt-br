@@ -4,6 +4,7 @@ description: Saiba como usar o editor de código no Visual Studio para adicionar
 ms.date: 11/30/2017
 ms.technology: vs-ide-general
 ms.custom:
+- acquisition
 - get-started
 - SEO-VS-2020
 ms.topic: tutorial
@@ -14,12 +15,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: f76eb5ba3ccab85a4cf6c8ca5ad4a8fa3e021f47
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6cdbd70160da596648b24604634de337b7dae2f6
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951206"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113140"
 ---
 # <a name="learn-to-use-the-code-editor"></a>Saiba como usar o editor de códigos
 

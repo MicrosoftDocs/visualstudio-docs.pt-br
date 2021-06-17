@@ -3,7 +3,7 @@ title: Instalar o Visual Studio
 titleSuffix: ''
 description: Saiba como instalar o Visual Studio, passo a passo.
 ms.date: 12/13/2019
-ms.custom: contperf-fy21q1
+ms.custom: acquisition
 ms.topic: conceptual
 f1_keywords:
 - vs.about
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - set up Visual Studio
 - Visual Studio setup
 - Visual Studio installer
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 97e354dfb1208ec7306cb797049cd8ca82d0d8db
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e4db39c55ff669477efc833c2d482897d529b30b
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852109"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113039"
 ---
 # <a name="install-visual-studio"></a>Instalar o Visual Studio
 
@@ -131,11 +131,11 @@ Execute o arquivo bootstrapper para instalar o Instalador do Visual Studio. Esse
 
 2. Solicitaremos que você confirme os termos de [licença](https://visualstudio.microsoft.com/license-terms/) da Microsoft e a [política de privacidade](https://privacy.microsoft.com/privacystatement)da Microsoft. Escolha **Continuar**.
 
-   ![Termos de licença e política de privacidade](media/privacy-and-license-terms.png "Termos de licença da Microsoft e política de privacidade")
+   ![Termos de licença e política de privacidade](media/privacy-and-license-terms.png "Termos de Licença e Política de Privacidade da Microsoft")
 
 ## <a name="step-4---choose-workloads"></a>Etapa 4 – escolher cargas de trabalho
 
-Após a instalação do instalador, use-o para personalizar sua instalação selecionando os conjuntos de recursos ou cargas de trabalho desejados. Veja como.
+Após a instalação do instalador, use-o para personalizar sua instalação selecionando os conjuntos de recursos ou cargas de trabalho desejados. Veja aqui como fazer isso.
 
  ::: moniker range="vs-2017"
 
@@ -174,13 +174,13 @@ Se você não quiser usar o recurso de cargas de trabalho para personalizar a in
 
 ::: moniker range="vs-2017"
 
-  ![Visual Studio 2017-instalar componentes individuais](media/vs-installer-installing-components.png "Instalar componentes individuais do Visual Studio")
+  ![Visual Studio 2017-instalar componentes individuais](media/vs-installer-installing-components.png "Instalar Visual Studio componentes individuais")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-  ![Visual Studio 2019-instalar componentes individuais](media/vs-2019/vs-installer-individual-components.png "Instalar componentes individuais do Visual Studio")
+  ![Visual Studio 2019-instalar componentes individuais](media/vs-2019/vs-installer-individual-components.png "Instalar Visual Studio componentes individuais")
 
 ::: moniker-end
 
@@ -190,13 +190,13 @@ Por padrão, o programa do instalador tenta encontrar a correspondência do idio
 
 ::: moniker range="vs-2017"
 
-  ![Visual Studio 2017-instalar pacotes de idiomas](media/vs-installer-installing-language-packs.png "Instalar pacotes de idiomas do Visual Studio")
+  ![Visual Studio 2017-instalar pacotes de idiomas](media/vs-installer-installing-language-packs.png "Instalar Visual Studio de idiomas")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-  ![Visual Studio 2019-instalar pacotes de idiomas](media/vs-2019/vs-installer-language-packs.png "Instalar pacotes de idiomas do Visual Studio")
+  ![Visual Studio 2019-instalar pacotes de idiomas](media/vs-2019/vs-installer-language-packs.png "Instalar Visual Studio de idiomas")
 
 ::: moniker-end
 
@@ -247,7 +247,7 @@ Para obter mais informações, consulte a página [Selecionar locais de instala�
 
 1. Após a conclusão da instalação do Visual Studio, escolha o botão **Iniciar** para ver a introdução ao desenvolvimento com o Visual Studio.
 
-1. Na janela iniciar, escolha **criar um novo projeto**.
+1. Na janela inicial, escolha **Criar um novo projeto.**
 
 1. Na caixa de pesquisa, insira o tipo de aplicativo que deseja criar para ver uma lista de modelos disponíveis. A lista de modelos depende das cargas de trabalho escolhidas durante a instalação. Para ver os diferentes modelos, escolha diferentes cargas de trabalho.
 

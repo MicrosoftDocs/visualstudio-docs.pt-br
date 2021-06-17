@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 066ae0ab9c23ebb1d55f6c0480d7aeed4255fb4f
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 55f69875b06428c9bbe179e73dd6ea9b4ef40b8e
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106217730"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112441"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint-by-using-a-designer"></a>Walkthrough: criar uma Web Part para o SharePoint usando um designer
 
@@ -52,15 +52,21 @@ Primeiro, crie um projeto de Web Part usando o modelo de projeto de **Web Part V
 1. Comece [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] usando a opção **Executar como administrador** .
 
 2. Na barra de menus, escolha **arquivo**  >  **novo**  >  **projeto**.
-
-     A caixa de diálogo **Novo Projeto** aparecerá.
+::: moniker range="=vs-2017"
 
 3. Na caixa de diálogo **novo projeto** , em **Visual C#** ou **Visual Basic**, expanda **Office/SharePoint** e, em seguida, escolha a categoria **soluções do SharePoint** .
 
 4. Na lista de modelos, escolha o modelo **SharePoint 2013-Web Part Visual** e, em seguida, escolha o botão **OK** .
 
      O **Assistente para personalização do SharePoint** é exibido. Usando esse assistente, você pode especificar o site que será usado para depurar o projeto e o nível de confiança da solução.
+::: moniker-end
+::: moniker range=">=vs-2019"
+3. Na caixa de diálogo **criar um novo projeto** , selecione o *projeto vazio do SharePoint** para a versão específica do SharePoint que você instalou. Por exemplo, se você tiver a instalação do SharePoint 2019, selecione o modelo de **projeto 2019-vazio do SharePoint** .
+    [!INCLUDE[new-project-dialog-search](../sharepoint/includes/new-project-dialog-search-md.md)]
 
+4. Na caixa **nome** , digite **TestProject1** e, em seguida, escolha o botão **criar** .
+
+::: moniker-end
 5. Na seção **o que é o nível de confiança para esta solução do SharePoint?** , escolha o botão de opção **implantar como uma solução de farm** .
 
 6. Escolha o botão **concluir** para aceitar o site do SharePoint local padrão.

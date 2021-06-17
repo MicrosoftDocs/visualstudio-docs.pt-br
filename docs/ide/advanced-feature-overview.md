@@ -1,7 +1,7 @@
 ---
 title: Recursos avançados
-description: Saiba mais sobre os recursos avançados que podem ser mais apropriados para desenvolvedores experientes ou para os desenvolvedores que já estão familiarizados com Visual Studio.
-ms.custom: SEO-VS-2020
+description: Saiba mais sobre os recursos avançados que podem ser mais apropriados para desenvolvedores experientes ou para os desenvolvedores que já estão familiarizados com o Visual Studio.
+ms.custom: acquisition
 ms.date: 06/01/2018
 ms.topic: conceptual
 author: TerryGLee
@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 51b25ff5f5f71291bb1aa1fd006b60566a576d7f
-ms.sourcegitcommit: 63cb90e8cea112aa2ce8741101b309dbc709e393
+ms.openlocfilehash: 843c6f66b833c8f68dad8722c6d32a1975d07913
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2021
-ms.locfileid: "110687597"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113003"
 ---
 # <a name="features-of-visual-studio"></a>Funcionalidades do Visual Studio
 
@@ -26,13 +26,13 @@ O instalador modular do Visual Studio permite que você escolha e instale *carga
 
 ::: moniker range="vs-2017"
 
-Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
+Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
+Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
@@ -88,7 +88,7 @@ Para obter mais informações, consulte [Ferramentas da Web modernas](https://vi
 
 ## <a name="connect-to-databases"></a>Conectar-se aos bancos de dados
 
-**Gerenciador de Servidores** ajuda você a procurar e gerenciar instâncias SQL Server e ativos localmente, remotamente e no Azure, Salesforce.com, Microsoft 365 e sites. Para abrir **Gerenciador de Servidores**, no menu principal, escolha **Exibir**  >  **Gerenciador de Servidores**. Para obter mais informações de como usar o Gerenciador de Servidores, confira [Adicionar novas conexões](../data-tools/add-new-connections.md).
+**Gerenciador de servidores** ajuda a procurar e gerenciar SQL Server instâncias e ativos localmente, remotamente e no Azure, Salesforce.com, Microsoft 365 e sites. Para abrir **Gerenciador de servidores**, no menu principal, escolha **Exibir**  >  **Gerenciador de servidores**. Para obter mais informações de como usar o Gerenciador de Servidores, confira [Adicionar novas conexões](../data-tools/add-new-connections.md).
 
 O [SSDT (SQL Server Data Tools)](/sql/ssdt/download-sql-server-data-tools-ssdt) é um ambiente de desenvolvimento avançado do SQL Server, do Banco de Dados SQL do Azure e do SQL Data Warehouse do Azure. Ele permite compilar, depurar, manter e refatorar bancos de dados. Você pode trabalhar com um projeto de banco de dados ou diretamente com uma instância local ou não de banco de dados conectado.
 
@@ -138,4 +138,4 @@ Para saber mais sobre como estender o Visual Studio, consulte [Estender o IDE do
 
 - [Visão geral do IDE do Visual Studio](../get-started/visual-studio-ide.md)
 - [Novidades no Visual Studio 2017](../ide/whats-new-visual-studio-2017.md)
-- [Novidades no Visual Studio 2019](../ide/whats-new-visual-studio-2019.md)
+- [O que há de novo no Visual Studio 2019](../ide/whats-new-visual-studio-2019.md)

@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: introdução ao Visual Basic'
 description: Saiba como criar aplicativos de console do Visual Basic no Visual Studio, passo a passo.
-ms.custom: seodec18, get-started
+ms.custom: acquisition, seodec18, get-started
 ms.date: 02/10/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -14,12 +14,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 075c84433e5784106bbe1f9c6ac6f58d9613bfdb
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: cc9557c4b7558488fd8757d3c50920debe134568
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107295488"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112463"
 ---
 # <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>Tutorial: Introdução ao Visual Basic no Visual Studio
 
@@ -67,7 +67,7 @@ Se o modelo de projeto **Aplicativo do Console (.NET Core)** não for exibido, v
 
 #### <a name="option-2-use-the-tools-menu-bar"></a>Opção 2: usar a barra de menus Ferramentas
 
-1. Cancele a caixa de diálogo **Novo Projeto**; em seguida, vá até a barra de menus superior e escolha **Ferramentas** > **Obter Ferramentas e Recursos**.
+1. Cancele a caixa de diálogo **novo projeto** e, na barra de menus superior, escolha **ferramentas** > **obter ferramentas e recursos**.
 
 1. O Instalador do Visual Studio é iniciado. Escolha a carga de trabalho **Desenvolvimento multiplaforma do .NET Core** e, em seguida, selecione **Modificar**.
 
@@ -177,7 +177,7 @@ Vamos criar um aplicativo que solicita o nome e o exibe juntamente com a data e 
 
 ::: moniker range="vs-2017"
 
-1. Abra o Visual Studio 2017 e, na barra de menus superior, escolha **Arquivo** > **Novo** > **Projeto**.
+1. Abra o Visual Studio 2017 e, na barra de menus superior, escolha **arquivo** > **novo** > **projeto**.
 
 1. Na caixa de diálogo **Novo Projeto**, no painel esquerdo, expanda **Visual Basic** e, em seguida, escolha **.NET Core**. No painel central, escolha **Aplicativo de Console (.NET Core)**. Em seguida, nomeie o arquivo como *CalculateThis*.
 
@@ -261,7 +261,7 @@ Visual Studio é um pacote de desenvolvimento integrado de ferramentas de produt
 
 ### <a name="what-is-a-console-app"></a>O que é um aplicativo do console?
 
-Um aplicativo de console usa entrada e exibe a saída em uma janela de linha de comando, também conhecida como console.
+Um aplicativo de console recebe entrada e exibe a saída em uma janela de linha de comando, também conhecida como console.
 
 ### <a name="what-is-net-core"></a>O que é o .NET Core?
 

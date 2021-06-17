@@ -1,7 +1,7 @@
 ---
-title: 'Como: criar uma Web Part do SharePoint usando um designer | Microsoft Docs'
+title: Como criar uma Web Part do SharePoint usando um designer | Microsoft Docs
 titleSuffix: ''
-description: Crie uma Web Part adicionando um item de Web Part Visual a um projeto do SharePoint, que abre o designer do Visual Web Developer no Visual Studio.
+description: Crie uma web part adicionando um item de web part visual a um projeto do SharePoint, que abre o designer do Desenvolvedor da Web Visual no Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,44 +17,52 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 14f6add337ecfae3ab0dc5aa77a72962f2a0a915
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cbbb290af0029329910a23a71f68024ee0e5e5f4
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851589"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112379"
 ---
-# <a name="how-to-create-a-sharepoint-web-part-by-using-a-designer"></a>Como: criar uma Web Part do SharePoint usando um designer
-  Você pode criar uma Web Part adicionando um item de **Web Part Visual** a qualquer projeto do SharePoint. Isso abre o designer do Visual Web Developer no Visual Studio, no qual você pode adicionar controles e código à Web Part. As Web Parts visuais funcionam da mesma forma que as Web Parts. A única diferença é que você cria Web Parts visuais no designer do Visual Web Developer.
+# <a name="how-to-create-a-sharepoint-web-part-by-using-a-designer"></a>Como criar uma Web Part do SharePoint usando um designer
 
-### <a name="to-create-a-project-for-visual-web-parts"></a>Para criar um projeto para Web Parts visuais
+  Você pode criar uma web part adicionando um item **do Visual Web Part** a qualquer projeto do SharePoint. Isso abre o designer do Desenvolvedor da Web Visual Visual Studio em que você pode adicionar controles e código à web part. As web parts visuais funcionam da mesma maneira que as web parts. A única diferença é que você projeta web parts visuais no designer do Visual Web Developer.
 
-1. Na barra de menus, escolha **arquivo**  > **novo**  >  **projeto**.
+## <a name="to-create-a-project-for-visual-web-parts"></a>Para criar um projeto para web parts visuais
 
-     A caixa de diálogo **Novo Projeto** será aberta.
+1. Na barra de menus, escolha **Arquivo**  > **Novo**  >  **Projeto**.
+::: moniker range="=vs-2017"
 
-2. Na caixa de diálogo **novo projeto** , em **Visual C#** ou **Visual Basic**, expanda o nó **Office/SharePoint** e escolha a categoria **soluções do SharePoint** .
+2. Na caixa **de diálogo** Novo Projeto, em **Visual C#** ou **Visual Basic**, expanda o nó **Office/SharePoint** e escolha a **categoria Soluções do SharePoint.**
 
-3. Na lista de modelos de projeto, escolha **SharePoint 2013-Web Part Visual** e, em seguida, escolha o botão **OK** .
+3. Na lista de modelos de projeto, escolha **SharePoint 2013 – Visual Web Part** e, em seguida, escolha o botão **OK.**
 
-     O **Assistente para personalização do SharePoint** é exibido.
+     O **Assistente de Personalização do SharePoint** é exibido.
+::: moniker-end
+::: moniker range=">=vs-2019"
+2. Na caixa **de diálogo Criar um Novo Projeto,** selecione o Visual Web Part do *SharePoint** para a versão específica do SharePoint instalada. Por exemplo, se você tiver instalado o SharePoint 2019, selecione o **modelo SharePoint 2019 – Visual Web Part.**
+    [!INCLUDE[new-project-dialog-search](../sharepoint/includes/new-project-dialog-search-md.md)]
 
-4. Na página **especificar o site e o nível de segurança para depuração** , ESPECIFIQUE a URL de um site do SharePoint que está no computador local e, em seguida, escolha o botão **concluir** .
+3. Altere o nome do projeto se quiser e escolha o **botão** Criar.
 
-     No **Gerenciador de soluções**, uma Web Part é exibida. Depois de criar a Web Part no designer do Visual Web Developer, você o testará no site que você especificar.
+::: moniker-end
+4. Na página **Especificar o site** e o nível de segurança para depuração, especifique a URL de um site do SharePoint que está no computador local e escolha o **botão** Concluir.
 
-### <a name="to-add-a-visual-web-part-to-an-existing-sharepoint-project"></a>Para adicionar uma Web Part Visual a um projeto existente do SharePoint
+     No **Gerenciador de Soluções**, uma web part é exibida. Depois de criar a web part no designer do Visual Web Developer, você a testará no site especificado.
 
-1. Na barra de menus, escolha **projeto**  >  **Adicionar novo item**.
+### <a name="to-add-a-visual-web-part-to-an-existing-sharepoint-project"></a>Para adicionar uma web part visual a um projeto existente do SharePoint
 
-2. Na caixa de diálogo **Adicionar novo item** , escolha o nó **Office/SharePoint** .
+1. Na barra de menus, escolha **Projeto**  >  **Adicionar Novo Item**.
 
-3. Na lista de modelos de projeto, escolha **Visual Web Part**, nomeie-o e, em seguida, escolha o botão **Adicionar** .
+2. Na caixa **de diálogo Adicionar Novo Item,** escolha o nó **Office/SharePoint.**
 
-     No **Gerenciador de soluções**, sua Web Part é exibida. Depois de criar a Web Part no designer do Visual Web Developer, você o testará no site que você especificar.
+3. Na lista de modelos de projeto, escolha **Visual Web Part**, nomee escolha o **botão** Adicionar.
 
-## <a name="see-also"></a>Consulte também
-- [Criar Web Parts para SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)
-- [Como: criar uma Web Part do SharePoint](../sharepoint/how-to-create-a-sharepoint-web-part.md)
-- [Walkthrough: criar uma Web Part para o SharePoint](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)
-- [Walkthrough: criar uma Web Part para o SharePoint usando um designer](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)
+     No **Gerenciador de Soluções**, sua web part é exibida. Depois de criar a web part no designer do Visual Web Developer, você a testará no site especificado.
+
+## <a name="see-also"></a>Confira também
+
+- [Criar web parts para SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)
+- [Como criar uma web part do SharePoint](../sharepoint/how-to-create-a-sharepoint-web-part.md)
+- [Passo a passo: criar uma web part para SharePoint](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)
+- [Passo a passo: criar uma web part para SharePoint usando um designer](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)

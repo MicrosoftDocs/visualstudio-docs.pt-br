@@ -1,7 +1,7 @@
 ---
 title: 'Início rápido: tour pelo IDE do Visual Studio'
 description: Saiba mais sobre algumas das janelas, menus e outros recursos de interface do usuário do IDE (ambiente de desenvolvimento integrado) do Visual Studio.
-ms.custom: SEO-VS-2020
+ms.custom: acquisition
 titleSuffix: ''
 ms.date: 03/02/2021
 ms.topic: quickstart
@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 237b3384d6bec010a760c4bc193b9a95f33febeb
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 1f10c3fcca5d87f8371d1373314406cf4aa47ec3
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683982"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113223"
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>Início rápido: Introdução ao IDE do Visual Studio
 

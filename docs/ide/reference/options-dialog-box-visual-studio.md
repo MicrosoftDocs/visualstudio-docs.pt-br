@@ -17,12 +17,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 16c2c6a1d5f9f9b673e7ae12661c4681f713c2fa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 79bd2d95a12aa7c42705d106cf71b4061a020431
+ms.sourcegitcommit: 113b7df611583307d3965984233a33355d6b0318
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910820"
+ms.lasthandoff: 06/16/2021
+ms.locfileid: "112126535"
 ---
 # <a name="options-dialog-box-visual-studio"></a>Caixa de diálogo Opções (Visual Studio)
 
@@ -41,6 +41,7 @@ Opções para um recurso IDE não aparecem no painel de navegação até que o r
 
 Clicar em OK na caixa de diálogo **Opções** salva todas as configurações em todas as páginas. Clicar em Cancelar em qualquer página cancela todas as solicitações de alteração, incluindo qualquer uma recém feita em outras páginas de **Opções**. Algumas alterações nas configurações de opção, como aquelas feitas na [Caixa de Diálogo Fontes e Cores, Ambiente, Opções](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md), apenas entrarão em vigor depois que você fechar e reabrir o Visual Studio.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Personalizando o editor](../how-to-change-text-case-in-the-editor.md)
+- [Configurações e preferências do git](../../version-control/git-settings.md)
