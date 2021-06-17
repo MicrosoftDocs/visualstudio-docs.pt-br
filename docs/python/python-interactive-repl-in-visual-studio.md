@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f34ee9e852c1210425407f80788aa1b9d5c33c1e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 21115673a41e26b2f1685442d2ed0ad93a147990
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912285"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254882"
 ---
 # <a name="work-with-the-python-interactive-window"></a>Trabalhar com a janela Interativa do Python
 
@@ -25,7 +25,7 @@ O Visual Studio fornece uma janela interativa REPL (leitura-avaliação-impress�
 
 O Visual Studio tem diversos modos REPL do Python à sua disposição:
 
-| REPL | Description | Edição | Depuração | Imagens |
+| REPL | Descrição | Edição | Depuração | Imagens |
 | --- | --- | --- | --- | --- |
 | Standard | REPL padrão, que se comunica com o Python diretamente | Edição padrão (várias linhas etc.). | Sim, por meio de `$attach` | Não |
 | Depurar | REPL padrão, que se comunica com o processo depurado do Python | Edição padrão | Somente depuração | Não |
@@ -34,21 +34,21 @@ O Visual Studio tem diversos modos REPL do Python à sua disposição:
 
 Este artigo descreve os modos REPL **Padrão** e **Depuração**. Para obter detalhes sobre os modos do IPython, confira [Usar o REPL do IPython](interactive-repl-ipython.md).
 
-Para obter instruções detalhadas com exemplos, incluindo as interações com o editor, como **Ctrl** + **Enter**, consulte [a etapa 3 do tutorial: usar a janela interativo repl](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md).
+Para ver um passo a passo detalhado com exemplos, incluindo as interações com o editor, como **Ctrl** Enter, consulte Etapa 3 do Tutorial: Usar a +  [janela REPL Interativa](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md).
 
 ## <a name="open-an-interactive-window"></a>Abrir uma janela Interativa
 
 Há várias maneiras de abrir a janela **Interativa** de um ambiente.
 
-Primeiro, alterne para a janela de ambientes do Python (**exiba**  >  **outros**  >  **ambientes Python** do Windows ou **Ctrl** + **K**  >  **Ctrl** + **`** ) e selecione o botão ou o comando **Abrir janela interativa** para um ambiente escolhido.
+Primeiro, alternar para a janela Ambientes do Python **(** Exibir Outros Ambientes python do Windows ou  >    >   **Ctrl** + **K**  >  **Ctrl**) + **`**  e selecione o comando ou botão Abrir Janela Interativa para um ambiente escolhido.
 
 ![Link Janela Interativa na janela Ambientes do Python](media/interactive-window-opening.png)
 
-Em segundo lugar, perto da parte inferior do menu **Exibir**  >  **outro Windows** , há um comando de **janela interativa do Python** para seu ambiente padrão, bem como um comando para alternar para a janela de **ambientes** :
+Em segundo lugar, próximo à parte inferior do menu Exibir Outras Janelas, há um comando janela interativa do Python para seu ambiente padrão, bem como um comando para alternar para  >   a **janela Ambientes:** 
 
 ![Itens de menu da Janela Interativa em Exibir > Outras Janelas](media/interactive-window-menu.png)
 
-Terceiro, você pode abrir uma janela **interativa** no arquivo de inicialização em seu projeto, ou para um arquivo autônomo, selecionando o comando **debug**  >  **Execute \<Project | File> in Python Interactive** menu (**Shift** + **ALT** + **F5**):
+Em terceiro lugar,  você pode abrir uma janela Interativa no arquivo de inicialização em seu projeto ou para um arquivo autônomo, selecionando o comando de menu **Depurar** Executar no  >  **\<Project | File> Python Interativo** (**Shift** + **Alt** + **F5**):
 
 ![Executar Projeto no menu Python Interativo](media/interactive-execute-project.png)
 
@@ -62,18 +62,20 @@ Você pode controlar vários aspectos da janela **Interativa** por meio de **Fer
 
 ## <a name="use-the-interactive-window"></a>Usar a Janela Interativa
 
-Quando a janela **interativa** estiver aberta, você poderá começar a inserir o código linha por linha no **\>\>\>** prompt. A janela **interativa** executa cada linha à medida que você a insere, o que inclui a importação de módulos, a definição de variáveis e assim por diante:
+Depois que **a janela** Interativa for aberta, você poderá começar a inserir o código linha por linha no **\>\>\>** prompt. A **janela** Interativa executa cada linha conforme você a insinte, o que inclui a importação de módulos, a definição de variáveis e assim por diante:
 
 ![Janela interativa do Python](media/interactive-window.png)
 
 A exceção é quando as linhas de código adicionais são necessárias para fazer uma instrução completa, como quando uma instrução `for` termina em dois pontos como mostrado acima. Nesses casos, o prompt de linha muda para **...**, indicando que é necessário inserir linhas adicionais no bloco, conforme mostrado na quarta e quinta linhas do gráfico acima. Ao pressionar **Enter** em uma linha em branco, a janela **Interativa** fecha o bloco e o executa no interpretador.
 
 > [!Tip]
-> A janela **interativa** aprimora a experiência de repl de linha de comando do Python usual, recuando automaticamente as instruções que pertencem a um escopo ao redor. Seu histórico (recuperado com a seta para cima) também fornece itens de várias linhas, enquanto o REPL de linha de comando fornece somente linhas individuais.
+> A **janela** Interativa melhora a experiência comum de REPL de linha de comando do Python recuando automaticamente instruções que pertencem a um escopo ao redor. Seu histórico (recuperado com a seta para cima) também fornece itens de várias linhas, enquanto o REPL de linha de comando fornece somente linhas individuais.
 
 <a name="meta-commands"></a> A janela **Interativa** também dá suporte a vários metacomandos. Todos os metacomandos começam com `$` e é possível digitar `$help` para obter uma lista dos metacomandos e `$help <command>` para obter detalhes de uso de um comando específico.
 
-| Metacomando | Description |
+:::moniker range="<=vs-2017"
+
+| Metacomando | Descrição |
 | --- | --- |
 | `$$` | Insere um comentário, que é útil para comentar o código ao longo da sessão. |
 | `$attach` | Anexa o depurador do Visual Studio ao processo da janela REPL para habilitar a depuração. |
@@ -83,6 +85,22 @@ A exceção é quando as linhas de código adicionais são necessárias para faz
 | `$mod` | Muda o escopo atual para o nome de módulo especificado. |
 | `$reset` | Redefine o ambiente de execução com o estado inicial, mas mantém o histórico. |
 | `$wait` | Aguarda, pelo menos, o número especificado de milissegundos. |
+
+:::moniker-end
+
+:::moniker range=">=vs-2019"
+
+| Metacomando | Descrição |
+| --- | --- |
+| `$$` | Insere um comentário, que é útil para comentar o código ao longo da sessão. |
+| `$cls`, `$clear` | Limpa o conteúdo da janela do editor, deixando intactos o histórico e o contexto de execução. |
+| `$help` | Exibe uma lista de comandos ou a ajuda sobre um comando específico. |
+| `$load` | Carrega comandos do arquivo e os executa até a conclusão. |
+| `$mod` | Muda o escopo atual para o nome de módulo especificado. |
+| `$reset` | Redefine o ambiente de execução com o estado inicial, mas mantém o histórico. |
+| `$wait` | Aguarda, pelo menos, o número especificado de milissegundos. |
+
+:::moniker-end
 
 Os comandos também são extensíveis pelas extensões do Visual Studio implementando e exportando `IInteractiveWindowCommand` ([exemplo](https://github.com/Microsoft/PTVS/blob/master/Python/Product/PythonTools/PythonTools/Repl/InteractiveWindowCommands.cs#L85)).
 
@@ -100,14 +118,14 @@ A inserção de `dir()` em um escopo exibe os identificadores válidos no escopo
 
 ## <a name="send-to-interactive-command"></a>Comando Enviar para Interativa
 
-Além de trabalhar na janela **interativa** diretamente, você pode selecionar o código no editor, clicar com o botão direito do mouse e escolher **Enviar para interativo** ou pressionar **Ctrl** + **Enter**.
+Além de trabalhar  diretamente na janela Interativa, você pode selecionar o código  no editor, clicar com o botão direito do mouse e escolher Enviar para Interativo ou pressionar **Ctrl** + **Enter**.
 
 ![Comando de menu Enviar para interativa](media/interactive-send-to.png)
 
-Esse comando é útil para o desenvolvimento de código iterativo ou evolucionário, incluindo o teste do código durante o desenvolvimento. Por exemplo, depois de enviar um trecho de código para a janela **interativa** e ver sua saída, você pode pressionar a seta para cima para mostrar o código novamente, modificá-lo e testá-lo rapidamente pressionando **Ctrl** + **Enter**. (Pressionar **Enter** no final da entrada a executa, mas pressionar **Enter** no meio da entrada insere uma nova linha.) Depois de ter o código desejado, você poderá copiá-lo facilmente de volta para o arquivo de projeto.
+Esse comando é útil para o desenvolvimento de código iterativo ou evolucionário, incluindo o teste do código durante o desenvolvimento. Por exemplo, depois de enviar um trecho  de código para a janela Interativa e ver sua saída, você pode pressionar a seta para cima para mostrar o código novamente, modificá-lo e testá-lo rapidamente pressionando **Ctrl** + **Enter**. (Pressionar **Enter** no final da entrada o executa, mas pressionar **Enter** no meio da entrada insere uma nova linha.) Depois de ter o código que deseja, você pode copiá-lo facilmente de volta para o arquivo de projeto.
 
 > [!Tip]
-> Por padrão, o Visual Studio remove **>>>** e **...** O REPL solicita ao colar o código da janela **interativa** no editor. Você pode alterar esse comportamento na guia **ferramentas**  >  **Opções**  >  **Editor de texto**  >  do **Python**  >  **avançado** usando a opção **colar remove solicitações repl** . Consulte [Opções – opções diversas](python-support-options-and-settings-in-visual-studio.md#miscellaneous-options).
+> Por padrão, Visual Studio remove **>>>** e **...** O REPL solicita ao colar o código da **janela** Interativa no editor. Você pode alterar esse comportamento na **guia** Ferramentas Opções Editor de Texto Python Avançado usando a  >    >    >    >   opção **Colar remove prompts REPL.** Consulte [Opções – Opções diversas.](python-support-options-and-settings-in-visual-studio.md#miscellaneous-options)
 
 <!-- After 15.3 is released, you can also press **Undo** after pasting to restore prompts. Press **Undo** a second time to remove the pasted code entirely. -->
 

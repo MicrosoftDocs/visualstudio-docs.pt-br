@@ -7,16 +7,17 @@ author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
 ms.custom: seodec18
+monikerRange: vs-2017
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: a40745b19bde57f7f0ca52e04a11a89ad1ca69ea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2de0f255da54d5bd8abf865f6534041d88bbbca3
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912431"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254830"
 ---
 # <a name="azure-cloud-service-projects-for-python"></a>Projetos do serviço de nuvem do Azure para Python
 

@@ -1,6 +1,6 @@
 ---
 title: Usar o Designer de Classe
-description: Saiba como projetar, Visualizar e refatorar classes e outros tipos em seu código com Designer de Classe no Visual Studio.
+description: Saiba como projetar, visualizar e refactor classes e outros tipos em seu código com Designer de Classe em Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 05/08/2018
 ms.topic: conceptual
@@ -19,16 +19,19 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 236efe20ee652e2690cedf36843d539bf8a9cc46
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 85921343ac52c066735d607ce32635e953cf2e6a
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850289"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254782"
 ---
 # <a name="design-and-view-classes-and-types-with-class-designer"></a>Criar e exibir classes e tipos com o Designer de Classe
 
-Projetar, Visualizar e refatorar classes e outros tipos em seu código com **Designer de classe** no Visual Studio. Use diagramas de classe para criar e editar classes em seu projeto C#, Visual Basic ou C++. Você também pode usar diagramas de classe para entender melhor a estrutura do projeto ou reorganizar o código.
+Projete, visualize e recatore classes e outros tipos em seu código **com** Designer de Classe em Visual Studio. Use diagramas de classe para criar e editar classes em seu projeto C#, Visual Basic ou C++. Você também pode usar diagramas de classe para entender melhor a estrutura do projeto ou reorganizar o código.
+
+>[!NOTE]
+>O Designer de Classe não está disponível nos projetos .NET Core.
 
 ## <a name="what-you-can-do-with-class-diagrams"></a>O que você pode fazer com diagramas de classe
 
@@ -58,7 +61,7 @@ Depois de ajustar um ou mais diagramas de classe, copie-os em documentos do Micr
 > [!NOTE]
 > O Designer de Classe não controla o local dos arquivos de origem, por isso quando você altera a estrutura do projeto ou move os arquivos de origem no projeto, o Designer de Classe pode perder o controle do tipo, especialmente o tipo de origem de um typedef, classes base ou tipos de associação. Você pode receber um erro, como **O Designer de Classe não pode exibir esse tipo**. Se você fizer isso, arraste o código-fonte realocado ou modificado para o diagrama de classe, para exibi-lo novamente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Recursos do editor de código](../writing-code-in-the-code-and-text-editor.md)
 - [Mapear as dependências nas soluções](../../modeling/map-dependencies-across-your-solutions.md)

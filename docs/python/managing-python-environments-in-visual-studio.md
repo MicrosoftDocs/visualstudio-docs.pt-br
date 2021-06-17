@@ -9,12 +9,12 @@ manager: jmartens
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: efd75e79d7c015539dfe045f7b0a3b266cfb4756
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 26bcf0fa4d56d4e8df100a0d3e65904d065d8757
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923747"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254869"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Como criar e gerenciar ambientes Python no Visual Studio
 
@@ -151,7 +151,7 @@ Um ambiente do conda é aquele criado usando a ferramenta `conda`, ou com o gere
 
 ::: moniker range=">=vs-2019"
 
-1. Selecione **+ Adicionar Ambiente** na janela **Ambientes Python** (ou na barra de ferramentas Python), que abre a caixa de diálogo **Adicionar ambiente**. Na caixa de diálogo, selecione a guia **Ambiente do Conda**:
+1. Selecione **Adicionar ambiente...** na janela **ambientes Python** (ou na barra de ferramentas do Python), que abre a caixa de diálogo **Adicionar ambiente** . Na caixa de diálogo, selecione a guia **Ambiente do Conda**:
 
     ![Guia Ambiente do Conda na caixa de diálogo Adicionar ambiente](media/environments/environments-conda-1-2019.png)
 
@@ -231,7 +231,7 @@ Use as seguintes etapas para identificar um ambiente instalado em um local não 
 
 ::: moniker range=">=vs-2019"
 
-1. Selecione **+ Adicionar Ambiente** na janela **Ambientes Python** (ou na barra de ferramentas Python), que abre a caixa de diálogo **Adicionar ambiente**. Na caixa de diálogo, selecione a guia **Ambiente existente**:
+1. Selecione **Adicionar ambiente...** na janela **ambientes Python** (ou na barra de ferramentas do Python), que abre a caixa de diálogo **Adicionar ambiente** . Na caixa de diálogo, selecione a guia **Ambiente existente**:
 
     ![Guia Ambiente existente na caixa de diálogo Adicionar ambiente](media/environments/environments-custom-1-2019.png)
 
