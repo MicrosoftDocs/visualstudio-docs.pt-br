@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial: Depurar Visual Basic código'
-description: Conheça os recursos do depurador do Visual Studio e como iniciar o depurador, percorrer o código e inspecionar dados em um aplicativo Visual Basic.
+description: Conheça os recursos do Visual Studio depurador e como iniciar o depurador, passar pelo código e inspecionar dados em um Visual Basic aplicativo.
 ms.custom: debug-experiment, seodec18, get-started
 ms.date: 02/03/2020
 ms.technology: vs-ide-debug
@@ -15,18 +15,18 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a6bc1cd4dd994a744e814ab893bfe67e24f110bb
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 42dd3c6b7301162e239bc87764056fdda2d08413
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101682687"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308409"
 ---
 # <a name="tutorial-learn-to-debug-visual-basic-code-using-visual-studio"></a>Tutorial: aprenda a depurar código do Visual Basic usando o Visual Studio
 
 Este artigo apresenta os recursos do depurador do Visual Studio passo a passo. Caso deseje obter uma exibição de nível superior das funcionalidades do depurador, confira [Introdução ao depurador](../../debugger/debugger-feature-tour.md). Quando você *depura seu aplicativo*, isso normalmente significa executar o aplicativo com o depurador anexado. Quando você faz isso, o depurador fornece várias maneiras de mostrar o que o código está fazendo enquanto é executado. Você pode percorrer o código e examinar os valores armazenados em variáveis, definir inspeções em variáveis para ver quando os valores mudam, examinar o caminho de execução do código, ver se um branch de código está em execução e assim por diante. Se esta for sua primeira tentativa de depurar um código, leia [Como depurar para iniciantes absolutos](../../debugger/debugging-absolute-beginners.md) antes continuar neste artigo.
 
-Embora o aplicativo de demonstração seja Visual Basic, a maioria dos recursos é aplicável a C#, C++, F #, Python, JavaScript e outras linguagens com suporte no Visual Studio (o F # não dá suporte a editar e continuar. F# e JavaScript não dão suporte à janela **Autos**). As capturas de tela estão em Visual Basic.
+Embora o aplicativo de demonstração seja Visual Basic, a maioria dos recursos é aplicável a C#, C++, F#, Python, JavaScript e outras linguagens com suporte do Visual Studio (F# não dá suporte a Editar e continuar. F# e JavaScript não dão suporte à janela **Autos**). As capturas de tela estão em Visual Basic.
 
 Neste tutorial, você irá:
 
@@ -40,28 +40,34 @@ Neste tutorial, você irá:
 
 ::: moniker range=">=vs-2019"
 
-Você deve ter o Visual Studio 2019 instalado e a carga de trabalho de **desenvolvimento de plataforma cruzada do .NET Core** .
+Você deve ter Visual Studio 2019 instalada e a carga de trabalho de desenvolvimento de plataforma cruzada **do .NET Core.**
 
 ::: moniker-end
 ::: moniker range="vs-2017"
 
-Você deve ter o Visual Studio 2017 instalado e a carga de trabalho de **desenvolvimento de plataforma cruzada do .NET Core** .
+Você deve ter Visual Studio 2017 instalada e a carga de trabalho de desenvolvimento de plataforma cruzada **do .NET Core.**
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
+Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
+Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
-Se você precisar instalar a carga de trabalho, mas já tiver o Visual Studio, vá para **ferramentas**  >  **obter ferramentas e recursos...**, que abre o instalador do Visual Studio. O Instalador do Visual Studio é iniciado. Escolha a carga de trabalho de **desenvolvimento de plataforma cruzada do .NET Core** e, em seguida, escolha **Modificar**.
+::: moniker range="vs-2022"
+
+Se você ainda não tiver instalado o Visual Studio 2022 Preview, acesse a página de downloads do [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) para instalá-lo gratuitamente.
+
+::: moniker-end
+
+Se você precisar instalar a carga de trabalho, mas já tiver Visual Studio, acesse Ferramentas Obter Ferramentas e  >  **Recursos...**, que abre o Instalador do Visual Studio. O Instalador do Visual Studio é iniciado. Escolha a carga de trabalho de desenvolvimento de plataforma cruzada do **.NET Core** e, em seguida, **escolha Modificar**.
 
 ## <a name="create-a-project"></a>Criar um projeto
 
@@ -71,9 +77,9 @@ Primeiro, você criará um projeto de aplicativo de console do .NET Core. O tipo
 
 1. Abra o Visual Studio 2017.
 
-2. Na barra de menus superior, escolha **arquivo** > **novo** > **projeto**.
+2. Na barra de menus superior, escolha **Arquivo** > **Novo** > **Projeto**.
 
-3. Na caixa de diálogo **Novo Projeto**, no painel esquerdo, expanda **Visual Basic** e, em seguida, escolha **.NET Core**. No painel central, escolha **Aplicativo de Console (.NET Core)**. Em seguida, nomeie o projeto de introdução à *depuração*.
+3. Na caixa de diálogo **Novo Projeto**, no painel esquerdo, expanda **Visual Basic** e, em seguida, escolha **.NET Core**. No painel central, escolha **Aplicativo de Console (.NET Core)**. Em seguida, *nomeia o projeto get-started-debugging*.
 
      Se você não vir o modelo de projeto do **Aplicativo de Console (.NET Core)**, escolha o link **Abrir Instalador do Visual Studio** no painel esquerdo da caixa de diálogo **Novo Projeto**.
 
@@ -81,26 +87,26 @@ Primeiro, você criará um projeto de aplicativo de console do .NET Core. O tipo
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Abra o Visual Studio 2019.
+1. Abra o Visual Studio.
 
-   Se a janela iniciar não estiver aberta, escolha **arquivo** > **Iniciar janela**.
+   Se a janela inicial não estiver aberta, escolha **Janela de** Início > **do Arquivo**.
 
-1. Na janela iniciar, escolha **criar um novo projeto**.
+1. Na janela inicial, escolha **Criar um novo projeto.**
 
 1. Na janela **Criar um novo projeto**, insira ou digite *console* na caixa de pesquisa. Em seguida, escolha **Visual Basic** na lista Linguagem de programação e, em seguida, escolha **Windows** na lista Plataforma. 
 
-   Depois de aplicar os filtros de idioma e plataforma, escolha o modelo de **aplicativo de console** para .NET Core e, em seguida, escolha **Avançar**.
+   Depois de aplicar os filtros de linguagem e plataforma, escolha o modelo **aplicativo de console** para .NET Core e, em seguida, escolha **Próximo**.
 
-   ![Escolha o modelo de Visual Basic para o aplicativo de console](../visual-basic/media/vs-2019/get-started-create-console-project.png)
+   ![Escolha o modelo Visual Basic para o Aplicativo de Console](../visual-basic/media/vs-2019/get-started-create-console-project.png)
 
    > [!NOTE]
-   > Se você não vir o modelo de **aplicativo de console** , poderá instalá-lo na janela **criar um novo projeto** . Na mensagem **Não encontrou o que precisa?**, escolha o link **Instalar mais ferramentas e recursos**. Em seguida, no Instalador do Visual Studio, escolha a carga de trabalho de **desenvolvimento multiplataforma do .NET Core**.
+   > Se você não vir o modelo **aplicativo de console,** poderá instalá-lo na **janela Criar um novo** projeto. Na mensagem **Não encontrou o que precisa?**, escolha o link **Instalar mais ferramentas e recursos**. Em seguida, no Instalador do Visual Studio, escolha a carga de trabalho de **desenvolvimento multiplataforma do .NET Core**.
 
-1. Na janela **configurar seu novo projeto** , digite ou digite *Get-Started-Debugging* na caixa **nome do projeto** . Em seguida, escolha **Avançar**.
+1. Na janela **Configurar seu novo projeto,** digite ou insira *get-started-debugging* na **caixa Nome do** projeto. Em seguida, escolha **Próximo.**
 
-1. Escolha a estrutura de destino recomendada (.NET Core 3,1) ou .NET 5 e, em seguida, escolha **criar**.
+1. Escolha a estrutura de destino recomendada (.NET Core 3.1) ou .NET 5 e escolha **Criar**.
 
    O Visual Studio abre seu novo projeto.
    
@@ -108,7 +114,7 @@ Primeiro, você criará um projeto de aplicativo de console do .NET Core. O tipo
 
 ## <a name="create-the-application"></a>Criar o aplicativo
 
-1. Em *Program. vb*, substitua todo o código padrão pelo código a seguir, em vez disso:
+1. Em *Program.vb*, substitua todo o código padrão pelo seguinte código:
 
     ```vb
     Imports System
@@ -136,7 +142,7 @@ Primeiro, você criará um projeto de aplicativo de console do .NET Core. O tipo
 
 ## <a name="start-the-debugger"></a>Inicie o depurador.
 
-1. Pressione **F5** (**debug > iniciar depuração**) ou o botão **Iniciar Depuração** ![Iniciar Depuração](../../debugger/media/dbg-tour-start-debugging.png "Iniciar Depuração") na barra de ferramentas Depurar.
+1. Pressione **F5** (**Depurar > Iniciar Depuração**) ou o botão Iniciar **Depuração** Iniciar ![Depuração](../../debugger/media/dbg-tour-start-debugging.png "Iniciar Depuração") na barra de ferramentas de depuração.
 
      **F5** inicia o aplicativo com o depurador anexado ao processo do aplicativo, mas nós ainda não fizemos nada de especial para examinar o código. Portanto, o aplicativo apenas é carregado e a saída do console é exibida.
 
@@ -155,7 +161,7 @@ Primeiro, você criará um projeto de aplicativo de console do .NET Core. O tipo
 
      Neste tutorial, vamos analisar melhor esse aplicativo usando o depurador e analisar os recursos do depurador.
 
-2. Pare o depurador pressionando o botão vermelho parar ![parar depuração](../../debugger/media/dbg-tour-stop-debugging.png "Parar Depuração") (**Shift**  +  **F5**).
+2. Pare o depurador pressionando o botão parar ![depuração](../../debugger/media/dbg-tour-stop-debugging.png "Parar Depuração") vermelho (**Shift**  +  **F5**).
 
 3. Na janela do console, pressione uma tecla para fechar a janela do console.
 
@@ -165,11 +171,11 @@ Primeiro, você criará um projeto de aplicativo de console do .NET Core. O tipo
 
     `name += letters(i)`
 
-    Um ponto de ![interrupção](../../debugger/media/dbg-breakpoint.png "Ponto de interrupção") de círculo vermelho aparece onde você define o ponto de interrupção.
+    Um ponto de ![interrupção do círculo](../../debugger/media/dbg-breakpoint.png "Ponto de interrupção") vermelho é exibido onde você definiu o ponto de interrupção.
 
     Os pontos de interrupção são um dos recursos mais básicos e essenciais da depuração confiável. Um ponto de interrupção indica quando o Visual Studio deve suspender o código em execução para que você possa examinar os valores das variáveis ou o comportamento de memória ou se uma ramificação de código está sendo executada ou não.
 
-2. Pressione **F5** ou o botão **Iniciar Depuração** ![inicie a depuração](../../debugger/media/dbg-tour-start-debugging.png "Iniciar Depuração"), o aplicativo é iniciado e o depurador é executado na linha de código em que você define o ponto de interrupção.
+2. Pressione **F5** ou o botão Iniciar **Depuração** Iniciar ![Depuração](../../debugger/media/dbg-tour-start-debugging.png "Iniciar Depuração"), o aplicativo será iniciado e o depurador será executado na linha de código em que você definiu o ponto de interrupção.
 
     ![Definir e atingir um ponto de interrupção](../visual-basic/media/get-started-hit-breakpoint-vb.png)
 
@@ -177,49 +183,49 @@ Primeiro, você criará um projeto de aplicativo de console do .NET Core. O tipo
 
      Se o aplicativo ainda não estiver em execução, **F5** iniciará o depurador e o interromperá no primeiro ponto de interrupção. Caso contrário, **F5** continuará executando o aplicativo até o próximo ponto de interrupção.
 
-    Os pontos de interrupção são um recurso útil quando você sabe qual linha ou seção de código deseja examinar em detalhes. Para obter informações sobre os diferentes tipos de pontos de interrupção que você pode definir, como pontos de interrupção condicionais, consulte [usando pontos de interrupção](../../debugger/using-breakpoints.md).
+    Os pontos de interrupção são um recurso útil quando você sabe qual linha ou seção de código deseja examinar em detalhes. Para obter informações sobre os diferentes tipos de pontos de interrupção que você pode definir, como pontos de interrupção condicionais, consulte [Usando pontos de interrupção](../../debugger/using-breakpoints.md).
 
 ## <a name="navigate-code-in-the-debugger-using-step-commands"></a>Navegar pelo código no depurador usando comandos de etapa
 
 Geralmente, usamos atalhos de teclado aqui porque essa é uma boa maneira de executar o aplicativo rapidamente no depurador (os comandos equivalentes, como os comandos de menu, são mostrados entre parênteses).
 
-1. Enquanto estiver em pausa no `For` loop no `Main` método, pressione **F11** (ou escolha **debug > Step Into**) duas vezes para avançar para a `SendMessage` chamada de método.
+1. Enquanto estiver em pausa no loop no método , pressione `For` `Main` **F11** (ou escolha **Depurar**> Entrar ) duas vezes para avançar para a chamada `SendMessage` de método.
 
-     Depois de pressionar **F11** duas vezes, você deve estar nesta linha de código:
+     Depois de **pressionar F11** duas vezes, você deverá estar nesta linha de código:
 
      `SendMessage(name, a(i))`
 
-1. Pressione **F11** mais uma vez para entrar no `SendMessage` método.
+1. Pressione **F11** mais uma vez para entrar no `SendMessage` método .
 
-     O ponteiro amarelo avança para o `SendMessage` método.
+     O ponteiro amarelo avança para o `SendMessage` método .
 
-     ![Use F11 para entrar no código](../visual-basic/media/get-started-f11-vb.png "Passo F10")
+     ![Usar F11 para entrar no código](../visual-basic/media/get-started-f11-vb.png "Passo F10")
 
-     F11 é o comando **Intervir**, que avança a execução do aplicativo uma instrução por vez. F11 é uma boa maneira de examinar o fluxo de execução com o máximo de detalhes. (Para mover-se mais rapidamente pelo código, mostraremos algumas outras opções também.) Por padrão, o depurador ignora o código que não é do usuário (se você quiser obter mais detalhes, consulte [apenas meu código](../../debugger/just-my-code.md)).
+     F11 é o comando **Intervir**, que avança a execução do aplicativo uma instrução por vez. F11 é uma boa maneira de examinar o fluxo de execução com o máximo de detalhes. (Para mover mais rapidamente pelo código, mostramos algumas outras opções também.) Por padrão, o depurador ignora o código que não é do usuário (se você quiser mais detalhes, [consulte Apenas Meu Código](../../debugger/just-my-code.md)).
 
-     Digamos que você concluiu a análise do `SendMessage` método e deseja sair do método, mas permanecerá no depurador. Você pode fazer isso usando o comando **Depuração Circular**.
+     Digamos que você terminou de examinar o método e deseja sair do método, mas `SendMessage` permanecer no depurador. Você pode fazer isso usando o comando **Depuração Circular**.
 
-1. Pressione **Shift**  +  **F11** (ou **debug > Step Out**).
+1. Pressione **Shift**  +  **F11** (ou **Depurar > Sair**).
 
      Esse comando retoma a execução do aplicativo (e avança o depurador) até que o método ou a função atual retorne.
 
-     Você deve estar de volta no `For` loop no `Main` método, em pausa na chamada do `SendMessage` método.
+     Você deve estar de volta no `For` loop no método , `Main` pausado na chamada de `SendMessage` método.
 
-1. Pressione **F11** várias vezes até voltar para a chamada do `SendMessage` método novamente.
+1. Pressione **F11 várias** vezes até voltar à chamada `SendMessage` de método novamente.
 
-1. Enquanto estiver em pausa na chamada do método, pressione **F10** (ou escolha **depurar > etapas**) uma vez.
+1. Enquanto estiver em pausa na chamada de método, pressione **F10** (ou escolha **Depurar**> Passar sobre ) uma vez.
 
-     ![Use F10 para percorrer o código](../visual-basic/media/get-started-step-over-vb.png "Passo F10")
+     ![Usar F10 para passar o código](../visual-basic/media/get-started-step-over-vb.png "Passo F10")
 
-     Observe que, desta vez, o depurador não Percorra o `SendMessage` método. **F10** avança o depurador sem intervir em funções ou métodos no código do aplicativo (o código ainda é executado). Pressionando **F10** na chamada do método `SendMessage` (em vez de **F11**), ignoramos o código de implementação de `SendMessage` (que, no momento, talvez não seja de nosso interesse). Para obter mais informações sobre diferentes maneiras de se mover pelo seu código, consulte [navegar no código no depurador](../../debugger/navigating-through-code-with-the-debugger.md).
+     Observe que, desta vez, o depurador não entra no `SendMessage` método . **F10** avança o depurador sem intervir em funções ou métodos no código do aplicativo (o código ainda é executado). Pressionando **F10** na chamada do método `SendMessage` (em vez de **F11**), ignoramos o código de implementação de `SendMessage` (que, no momento, talvez não seja de nosso interesse). Para obter mais informações sobre diferentes maneiras de percorrer seu código, consulte [Navegar no código no depurador](../../debugger/navigating-through-code-with-the-debugger.md).
 
 ## <a name="navigate-code-using-run-to-click"></a>Navegar usando Executar até o Clique
 
 1. Pressione **F5** para avançar para o ponto de interrupção novamente.
 
-1. No editor de código, role para baixo e focalize o `Console.WriteLine` método no `SendMessage` método até que a **execução verde clique** no botão ![Executar para clicar](../../debugger/media/dbg-tour-run-to-click.png "RunToClick") em aparecer à esquerda. A dica de ferramenta para o botão mostra "Realizar a execução até aqui".
+1. No editor de códigos, role para baixo e passe o mouse sobre o método no método até que o botão verde Executar para Clicar Executar para Clicar `Console.WriteLine` `SendMessage` apareça à esquerda.  ![](../../debugger/media/dbg-tour-run-to-click.png "RunToClick") A dica de ferramenta para o botão mostra "Realizar a execução até aqui".
 
-     ![Usar o recurso executar para clicar](../visual-basic/media/get-started-run-to-click-vb.png "Executar com um Clique")
+     ![Usar o recurso Executar para Clicar](../visual-basic/media/get-started-run-to-click-vb.png "Executar com um Clique")
 
    > [!NOTE]
    > O botão **Executar até o Clique** é novo no [!include[vs_dev15](../../misc/includes/vs_dev15_md.md)]. (Se você não vir o botão de seta verde, use **F11** neste exemplo em vez de avançar o depurador para o lugar certo.)

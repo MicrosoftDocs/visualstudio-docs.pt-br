@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 906097e0356922cdcc5afbabb1771348962ea4ff
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e54fdd71d848d1edad93fe38598d71c9dbbede7f
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859496"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308110"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>Desenvolver aplicativos para a UWP (Plataforma Universal do Windows)
 
@@ -50,7 +50,7 @@ Esta é a lista de software de que você precisa:
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 - [Windows 10](https://support.microsoft.com/help/17777/downloads-for-windows). O Visual Studio 2019 dá suporte ao desenvolvimento de UWP somente no Windows 10. Para obter mais detalhes, confira [Direcionamento para plataformas](/visualstudio/releases/2019/compatibility/) e [Requisitos de sistema](/visualstudio/releases/2019/system-requirements/) do Visual Studio.
 
@@ -62,7 +62,7 @@ Esta é a lista de software de que você precisa:
 
 Depois de instalar este software, você precisará habilitar o dispositivo Windows 10 para desenvolvimento. Consulte [Habilitar seu dispositivo para desenvolvimento](/windows/uwp/get-started/enable-your-device-for-development). Não é mais necessária uma licença de desenvolvedor para cada dispositivo Windows 10.
 
-## <a name="universal-windows-apps"></a>Aplicativos Universais do Windows
+## <a name="universal-windows-apps"></a>Aplicativos universais do Windows
 
 Escolha sua linguagem de desenvolvimento preferencial entre C#, Visual Basic, C++ ou JavaScript para criar um aplicativo da Plataforma Universal do Windows para dispositivos Windows 10. Leia [Criar seu primeiro aplicativo](/windows/uwp/get-started/your-first-app) ou assista ao vídeo [Tools for Windows 10 Overview](https://channel9.msdn.com/Series/ConnectOn-Demand/229) (Visão geral das ferramentas para Windows 10).
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.workload: multiple
 ms.date: 07/25/2019
 ms.technology: vs-azure
-ms.openlocfilehash: 3eafb6f3ef345da4316fdbe5d6b96a25d7dc90a9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8fb821acb48dd05aa09723fe5c6c254e7d1ca648
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867627"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306378"
 ---
 # <a name="debug-apps-in-a-local-docker-container"></a>Depurar aplicativos em um contêiner do Docker local
 
@@ -41,6 +41,12 @@ Para depurar aplicativos em um contêiner do Docker local, as seguintes ferramen
 
 ::: moniker-end
 
+::: moniker range="vs-2022"
+
+* [Visual Studio 2022 Preview]() com a carga de trabalho de desenvolvimento para a Web instalada
+
+::: moniker-end
+
 Para executar os contêineres do Docker localmente, você deve ter um cliente Docker local. Você pode usar [Docker for Windows](https://www.docker.com/get-docker), que usa o Hyper-V e requer o Windows 10.
 
 Os contêineres do Docker estão disponíveis para projetos .NET Framework e .NET Core. Vamos analisar dois exemplos. Primeiro, examinamos um aplicativo Web .NET Core. Em seguida, examinamos um aplicativo de console .NET Framework.
@@ -62,7 +68,7 @@ Para iterar alterações rapidamente, você pode iniciar o aplicativo em um cont
 
 1. Verifique se o Docker está configurado para usar o tipo de contêiner (Linux ou Windows) que você está usando. Clique com o botão direito do mouse no ícone do Docker na barra de tarefas e escolha **alternar para contêineres do Linux** ou **alternar para contêineres do Windows** conforme apropriado.
 
-1. (Somente .NET Core 3 e posterior) Editar seu código e atualizar o site em execução, conforme descrito nesta seção, não está habilitado nos modelos padrão no .NET Core >= 3,0. Para habilitá-lo, adicione o pacote NuGet [Microsoft. AspNetCore. Mvc. Razor. RuntimeCompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/). No *Startup.cs*, adicione uma chamada para o método de extensão `IMvcBuilder.AddRazorRuntimeCompilation` ao código no `ConfigureServices` método. Você só precisa dessa habilitação no modo de depuração, portanto, codifique-o da seguinte maneira:
+1. (Somente .NET Core 3 e posterior) Editar seu código e atualizar o site em execução, conforme descrito nesta seção, não está habilitado nos modelos padrão no .NET Core >= 3,0. Para habilitá-lo, adicione o pacote NuGet [Microsoft. AspNetCore. Mvc. Razor. RuntimeCompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/). Em *Startup. cs*, adicione uma chamada para o método de extensão `IMvcBuilder.AddRazorRuntimeCompilation` ao código no `ConfigureServices` método. Você só precisa dessa habilitação no modo de depuração, portanto, codifique-o da seguinte maneira:
 
     ```csharp
     public IWebHostEnvironment Env { get; set; }
@@ -119,7 +125,7 @@ As alterações foram aplicadas.
 
 Geralmente, as alterações exigem uma inspeção mais detalhada. Você pode usar os recursos de depuração do Visual Studio para essa tarefa.
 
-1. No Visual Studio, abra *index.cshtml.cs*.
+1. No Visual Studio, abra *index. cshtml. cs*.
 2. Substitua o conteúdo do método `OnGet` pelo seguinte código:
 
    ```csharp
@@ -130,29 +136,29 @@ Geralmente, as alterações exigem uma inspeção mais detalhada. Você pode usa
 4. Para iniciar a depuração e atingir o ponto de interrupção, pressione F5.
 5. Alterne para o Visual Studio para exibir o ponto de interrupção. Inspecione os valores.
 
-   ![Captura de tela mostrando parte do código para Index.cshtml.cs no Visual Studio com um ponto de interrupção definido à esquerda de uma linha de código que é realçada em amarelo.](media/edit-and-refresh/breakpoint.png)
+   ![Captura de tela mostrando parte do código para index. cshtml. cs no Visual Studio com um ponto de interrupção definido à esquerda de uma linha de código que é realçada em amarelo.](media/edit-and-refresh/breakpoint.png)
 
-## <a name="create-a-net-framework-console-app"></a>Criar um aplicativo de console .NET Framework
+## <a name="create-a-net-framework-console-app&quot;></a>Criar um aplicativo de console .NET Framework
 
 Quando você usa .NET Framework projetos de aplicativo de console, não há suporte para a opção de adicionar suporte do Docker sem orquestração. Você ainda pode usar o procedimento a seguir, mesmo se você estiver usando apenas um único projeto do Docker.
 
 1. Crie um novo projeto de aplicativo de console .NET Framework.
 1. Em Gerenciador de soluções, clique com o botão direito do mouse no nó do projeto e selecione **Adicionar**  >  **suporte à orquestração de contêiner**.  Na caixa de diálogo que aparece, selecione **Docker Compose**. Um Dockerfile é adicionado ao seu projeto e um Docker Compose projeto com arquivos de suporte associados é adicionado.
 
-### <a name="debug-with-breakpoints"></a>Depurar com pontos de interrupção
+### <a name=&quot;debug-with-breakpoints&quot;></a>Depurar com pontos de interrupção
 
-1. Em Gerenciador de Soluções, abra *Program.cs*.
+1. No Gerenciador de Soluções, abra *Program. cs*.
 2. Substitua o conteúdo do método `Main` pelo seguinte código:
 
    ```csharp
-       System.Console.WriteLine("Hello, world!");
+       System.Console.WriteLine(&quot;Hello, world!");
    ```
 
 3. Defina um ponto de interrupção à esquerda da linha de código.
 4. Pressione F5 para iniciar a depuração e atingir o ponto de interrupção.
 5. Alterne para o Visual Studio para exibir os valores de ponto de interrupção e inspecionar.
 
-   ![Captura de tela da janela de código para Program.cs no Visual Studio com um ponto de interrupção definido à esquerda de uma linha de código que é realçada em amarelo.](media/edit-and-refresh/breakpoint-console.png)
+   ![Captura de tela da janela de código do Program. cs no Visual Studio com um ponto de interrupção definido à esquerda de uma linha de código que é realçada em amarelo.](media/edit-and-refresh/breakpoint-console.png)
 
 ## <a name="container-reuse"></a>Reutilização de contêiner
 

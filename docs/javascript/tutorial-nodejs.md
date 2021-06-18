@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 5433ae0e84396f3c16dc5ed50f51ce7e9eb7056f
-ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
+ms.openlocfilehash: 2bca688977187071b5530911f9aa975e10ceef99
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760972"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306521"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>Tutorial: Criar um aplicativo Node.js e Express no Visual Studio
 
@@ -31,6 +31,12 @@ Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual St
 ::: moniker range=">=vs-2019"
 
 Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Se você ainda não tiver instalado o Visual Studio 2022 Preview, acesse a página de downloads do [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
@@ -194,7 +200,7 @@ O IntelliSense é uma ferramenta do Visual Studio que ajuda você na codificaç�
 
     A última linha desta mensagem informa que o interpretador de JavaScript esperava uma vírgula (`,`).
 
-1. No painel inferior, clique na guia **Lista de** Erros e selecione Build **+ IntelliSense** para o tipo de problemas relatados.
+1. No painel inferior, clique na guia **lista de erros** e selecione **Compilar + IntelliSense** para o tipo de problemas relatados.
 
     Você verá o aviso e a descrição juntamente com o nome de arquivo e número de linha.
 
@@ -218,7 +224,7 @@ Em seguida, você executará o aplicativo com o depurador do Visual Studio anexa
 
 ## <a name="run-the-application"></a>Executar o aplicativo
 
-1. Selecione o destino de depuração na barra de ferramentas Depurar, como **Servidor Web (Google Chrome)** ou **Servidor Web (Microsoft Edge).**
+1. Selecione o destino de depuração na barra de ferramentas de depuração, como **servidor Web (Google Chrome)** ou **servidor Web (Microsoft Edge)**.
 
     ::: moniker range=">=vs-2019"
     ![Selecionar o destino de depuração](../javascript/media/vs-2019/tutorial-nodejs-deploy-target.png)
@@ -251,7 +257,7 @@ Em seguida, você executará o aplicativo com o depurador do Visual Studio anexa
 
 ## <a name="optional-publish-to-azure-app-service"></a>(Opcional) Publicar no Serviço de Aplicativo do Azure
 
-1. No Gerenciador de Soluções, clique com o botão direito do mouse no projeto e escolha **Publicar**.
+1. Em Gerenciador de Soluções, clique com o botão direito do mouse no projeto e escolha **publicar**.
 
    ![Publicar no Serviço de Aplicativo do Azure](../javascript/media/tutorial-nodejs-publish-to-azure.png)
 
@@ -275,4 +281,4 @@ Parabéns por concluir este tutorial.
 > [Implantar o aplicativo no Serviço de Aplicativo do Linux](../javascript/publish-nodejs-app-azure.md)
 
 > [!div class="nextstepaction"]
-> [Extensão do serviço de linguagem AngularJS](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio)
+> [Extensão de serviço de linguagem AngularJS](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio)

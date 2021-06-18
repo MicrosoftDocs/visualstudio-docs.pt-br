@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: introdução ao Visual Basic'
+title: 'Tutorial: Introdução ao Visual Basic'
 description: Saiba como criar aplicativos de console do Visual Basic no Visual Studio, passo a passo.
 ms.custom: acquisition, seodec18, get-started
 ms.date: 02/10/2021
@@ -14,26 +14,32 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: cc9557c4b7558488fd8757d3c50920debe134568
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 8491869f5c0d518b394c0baa6a6da91bfeb6c7a3
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112112463"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308370"
 ---
 # <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>Tutorial: Introdução ao Visual Basic no Visual Studio
 
-Neste tutorial para Visual Basic (VB), você usará o Visual Studio para criar e executar alguns aplicativos de console diferentes e explorará alguns recursos do [IDE (ambiente de desenvolvimento integrado) do Visual Studio](visual-studio-ide.md) enquanto faz isso.
+Neste tutorial para Visual Basic (VB), você usará o Visual Studio para criar e executar alguns aplicativos de console diferentes e explorar alguns recursos do [IDE (ambiente](visual-studio-ide.md) de desenvolvimento integrado) do Visual Studio enquanto faz isso.
 
 ::: moniker range="vs-2017"
 
-Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
+Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
+Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Se você ainda não tiver instalado o Visual Studio 2022 Preview, acesse a página de downloads do [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
@@ -45,9 +51,9 @@ Primeiro, criaremos um projeto de aplicativo do Visual Basic. O tipo de projeto 
 
 1. Abra o Visual Studio 2017.
 
-2. Na barra de menus superior, escolha **arquivo** > **novo** > **projeto**.
+2. Na barra de menus superior, escolha **Arquivo** > **Novo** > **Projeto**.
 
-3. Na caixa de diálogo **Novo Projeto**, no painel esquerdo, expanda **Visual Basic** e, em seguida, escolha **.NET Core**. No painel central, escolha **Aplicativo de Console (.NET Core)**. Em seguida, nomeie o projeto *WhatIsYourName*.
+3. Na caixa de diálogo **Novo Projeto**, no painel esquerdo, expanda **Visual Basic** e, em seguida, escolha **.NET Core**. No painel central, escolha **Aplicativo de Console (.NET Core)**. Em seguida, *nomeie o projeto WhatIsYourName*.
 
    ![Modelo de projeto do aplicativo do console (.NET Core) na caixa de diálogo Novo projeto no IDE do Visual Studio](media/new-project-vb-dotnetcore-whatisyourname-console-app.png)
 
@@ -67,31 +73,31 @@ Se o modelo de projeto **Aplicativo do Console (.NET Core)** não for exibido, v
 
 #### <a name="option-2-use-the-tools-menu-bar"></a>Opção 2: usar a barra de menus Ferramentas
 
-1. Cancele a caixa de diálogo **novo projeto** e, na barra de menus superior, escolha **ferramentas** > **obter ferramentas e recursos**.
+1. Cancele a caixa **de diálogo Novo** Projeto e, na barra de menus superior, escolha **Ferramentas** Obter Ferramentas > **e Recursos**.
 
 1. O Instalador do Visual Studio é iniciado. Escolha a carga de trabalho **Desenvolvimento multiplaforma do .NET Core** e, em seguida, selecione **Modificar**.
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 > [!NOTE]
 > Algumas das capturas de tela neste tutorial usam o tema escuro. Se você não estiver usando o tema escuro, mas quiser usá-lo, confira a página [Personalizar o IDE e o Editor do Visual Studio](../../ide/quickstart-personalize-the-ide.md) para saber como.
 
-1. Abra o Visual Studio 2019.
+1. Abra o Visual Studio.
 
-1. Na janela iniciar, escolha **criar um novo projeto**.
+1. Na janela inicial, escolha **Criar um novo projeto.**
 
    ![Exibir a janela 'Criar um novo projeto'](../../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. Na janela **criar um novo projeto** , escolha **Visual Basic** na lista idioma. Em seguida, escolha **Windows** na lista de plataformas e **console** na lista de tipos de projeto.
+1. Na janela **Criar um novo projeto,** escolha **Visual Basic** na lista Idioma. Em seguida, **escolha Windows** na lista Plataforma e **Console** na lista de tipos de projeto.
 
-   Depois de aplicar o idioma, a plataforma e os filtros de tipo de projeto, escolha o modelo de **aplicativo de console** e, em seguida, escolha **Avançar**.
+   Depois de aplicar os filtros de tipo de idioma, plataforma e projeto, escolha o **modelo Aplicativo** de Console e, em seguida, **escolha Próximo**.
 
-   :::image type="content" source="./media/vs-2019/vb-create-new-project-console-net-core.png" alt-text="Escolha o modelo de Visual Basic para o aplicativo de console":::
+   :::image type="content" source="./media/vs-2019/vb-create-new-project-console-net-core.png" alt-text="Escolha o modelo Visual Basic para o Aplicativo de Console":::
 
    > [!NOTE]
-   > Se você não vir o modelo de **aplicativo de console** , poderá instalá-lo na janela **criar um novo projeto** . Na mensagem **Não encontrou o que precisa?**, escolha o link **Instalar mais ferramentas e recursos**.
+   > Se você não vir o modelo **Aplicativo de Console,** poderá instalá-lo na **janela Criar um novo** projeto. Na mensagem **Não encontrou o que precisa?**, escolha o link **Instalar mais ferramentas e recursos**.
    >
    > ![O link 'Instalar mais ferramentas e recursos' da mensagem 'Não encontrou o que precisa?' na janela 'Criar novo projeto'](../../get-started/media/vs-2019/not-finding-what-looking-for.png) 
    > 
@@ -101,13 +107,13 @@ Se o modelo de projeto **Aplicativo do Console (.NET Core)** não for exibido, v
    >
    > Depois disso, escolha o botão **Modificar** no Instalador do Visual Studio. Pode ser solicitado que você salve seu trabalho; nesse caso, faça isso. Em seguida, escolha **Continuar** para instalar a carga de trabalho. Em seguida, retorne para a etapa 2 deste procedimento para "[Criar um projeto](#create-a-project)".
 
-1. Na janela **Configurar seu novo projeto**, digite ou insira *WhatIsYourName* na caixa **Nome do projeto**. Em seguida, escolha **Avançar**.
+1. Na janela **Configurar seu novo projeto**, digite ou insira *WhatIsYourName* na caixa **Nome do projeto**. Em seguida, escolha **Próximo.**
 
    :::image type="content" source="./media/vs-2019/vb-name-your-project-whatname.png" alt-text="Na janela &quot;Configurar seu novo projeto&quot;, dê ao projeto o nome 'WhatIsYourName'":::
 
-1. Na janela **informações adicionais** , o **.NET Core 3,1** já deve estar selecionado para sua estrutura de destino. Caso contrário, selecione **.NET Core 3,1**. Em seguida, escolha **criar**.
+1. Na janela **Informações adicionais,** **o .NET Core 3.1** já deve estar selecionado para sua estrutura de destino. Caso não, selecione **.NET Core 3.1**. Em seguida, escolha **Criar**.
 
-   :::image type="content" source="./media/vs-2019/vb-target-framework.png" alt-text="Na janela ' informações adicionais ', verifique se o .NET Core 3,1 está selecionado":::
+   :::image type="content" source="./media/vs-2019/vb-target-framework.png" alt-text="Na janela 'Informações adicionais', certifique-se de que o .NET Core 3.1 está selecionado":::
 
    O Visual Studio abre seu novo projeto.
 
@@ -136,7 +142,7 @@ Vamos criar um aplicativo que solicita o nome e o exibe juntamente com a data e 
 
    ![Janela de código mostrando o código Qual é o seu nome](./media/vs-2019/vb-codewindow-what-name-dark.png)
 
-1. Use o botão **Iniciar** verde ou pressione **F5** para compilar e executar seu primeiro aplicativo.
+1. Use o botão **verde Iniciar** ou pressione **F5** para criar e executar seu primeiro aplicativo.
 
 1. Quando a janela do console é aberta, digite seu nome. A janela do console deve ser semelhante à captura de tela a seguir:
 
@@ -146,7 +152,7 @@ Vamos criar um aplicativo que solicita o nome e o exibe juntamente com a data e 
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. No projeto *WhatIsYourName*, insira o código do Visual Basic a seguir imediatamente após o colchete de abertura que segue a linha `Sub Main(args As String())` e antes da linha `End Sub`:
 
@@ -163,7 +169,7 @@ Vamos criar um aplicativo que solicita o nome e o exibe juntamente com a data e 
 
    ![Janela de código mostrando o código Qual é o seu nome](./media/vs-2019/vb-codewindow-what-name-dark.png)
 
-1. Use o botão **Iniciar** verde ou pressione **F5** para compilar e executar seu primeiro aplicativo.
+1. Use o botão **verde Iniciar** ou pressione **F5** para criar e executar seu primeiro aplicativo.
 
 1. Quando a janela do console é aberta, digite seu nome. A janela do console deve ser semelhante à captura de tela a seguir:
 
@@ -177,7 +183,7 @@ Vamos criar um aplicativo que solicita o nome e o exibe juntamente com a data e 
 
 ::: moniker range="vs-2017"
 
-1. Abra o Visual Studio 2017 e, na barra de menus superior, escolha **arquivo** > **novo** > **projeto**.
+1. Abra Visual Studio 2017 e, na barra de menus superior, **escolha Arquivo** > **Novo** > **Projeto**.
 
 1. Na caixa de diálogo **Novo Projeto**, no painel esquerdo, expanda **Visual Basic** e, em seguida, escolha **.NET Core**. No painel central, escolha **Aplicativo de Console (.NET Core)**. Em seguida, nomeie o arquivo como *CalculateThis*.
 
@@ -208,17 +214,17 @@ Vamos criar um aplicativo que solicita o nome e o exibe juntamente com a data e 
 
 ::: moniker-end 
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Na janela iniciar, escolha **criar um novo projeto**. 
+1. Na janela inicial, escolha **Criar um novo projeto.** 
 
-1. Na janela **criar um novo projeto** , escolha **Visual Basic** na lista idioma. Em seguida, escolha **Windows** na lista de plataformas e **console** na lista de tipos de projeto.
+1. Na janela **Criar um novo projeto,** escolha **Visual Basic** na lista Idioma. Em seguida, **escolha Windows** na lista Plataforma e **Console** na lista de tipos de projeto.
 
-1. Depois de aplicar o idioma, a plataforma e os filtros de tipo de projeto, escolha o modelo de **aplicativo de console** e, em seguida, escolha **Avançar**.
+1. Depois de aplicar os filtros de tipo de idioma, plataforma e projeto, escolha o **modelo Aplicativo** de Console e, em seguida, **escolha Próximo**.
 
-   Em seguida, na janela **configurar seu novo projeto** , digite ou insira *CalculateThis* na caixa **nome do projeto** . Em seguida, escolha **Avançar**.
+   Em seguida, na **janela Configurar seu novo projeto,** digite ou insira *CalculateThis* na **caixa Nome do** projeto. Em seguida, escolha **Próximo.**
 
-1. Na janela **informações adicionais** , o **.NET Core 3,1** já deve estar selecionado para sua estrutura de destino. Caso contrário, selecione **.NET Core 3,1**. Em seguida, escolha **criar**.
+1. Na janela **Informações adicionais,** **o .NET Core 3.1** já deve estar selecionado para sua estrutura de destino. Caso não, selecione **.NET Core 3.1**. Em seguida, escolha **Criar**.
 
 1. Insira o código a seguir entre as linhas `Module Program` e `End Module`:
 

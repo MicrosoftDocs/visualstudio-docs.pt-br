@@ -17,14 +17,14 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 339b3661760ee539bb4135c59863e7e9fdae5afc
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 41247c13e8b35fd6e6cd26ac0ad0ea82f742fbb0
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107295813"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306690"
 ---
-# <a name="visual-studio-images-on-azure"></a><a id="top"></a> Imagens do Visual Studio no Azure
+# <a name="visual-studio-images-on-azure"></a>Imagens do Visual Studio no Azure
 
 Usar o Visual Studio executando em uma máquina virtual (VM) do Azure pré-configurada é a maneira mais fácil e rápida de partir do nada para um ambiente de desenvolvimento atualizado. As imagens do sistema com diferentes configurações do Visual Studio estão disponíveis no [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/category/compute?filters=virtual-machine-images%3Bmicrosoft%3Bwindows&page=1&subcategories=application-infrastructure).
 
@@ -34,12 +34,12 @@ Você é novo no Azure? [Crie uma conta gratuita do Azure](https://azure.microso
 
 Imagens para as principais versões mais recentes, Visual Studio 2019 e Visual Studio 2017, Visual Studio 2015, podem ser encontradas no Microsoft Azure Marketplace.  Para cada versão principal, você consulta a versão originalmente RTW ("lançada para a Web") e as versões atualizadas mais recentes.  Cada uma dessas versões oferece as edições do Visual Studio Enterprise e Visual Studio Community.  Essas imagens são atualizadas pelo menos uma vez por mês para incluir as atualizações mais recentes do Visual Studio e do Windows.  Embora os nomes das imagens permaneçam os mesmos, a descrição de cada imagem inclui a versão do produto instalada e a data inicial da imagem.
 
-| Versão de lançamento                                                                                                                                          | Edições              |    Versão do produto    |
-|:--------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------:|:-----------------------:|
-| [Visual Studio 2019: mais recente (versão 16,8)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019latest?tab=Overview) | Enterprise, Community | 16.8.0 da versão    |
-| [Visual Studio 2019: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019?tab=Overview)                         | Enterprise            | 16.0.20 da versão    |
-| [Visual Studio 2017: Mais recente (versão 15.9)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)           | Enterprise, Community | 15.9.29 da versão   |
-| [Visual Studio 2017: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)                             | Enterprise, Community | Versão 15.0.28   |
+| Versão de lançamento                                                                                                                                                | Edições              | Versão do produto       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|-----------------------|
+| [Visual Studio 2019: Versão mais recente (versão 16.8)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019latest?tab=Overview) | Enterprise, Community | Versão 16.8.0        |
+| [Visual Studio 2019: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019?tab=Overview)                         | Enterprise            | Versão 16.0.20       |
+| [Visual Studio 2017: Mais recente (versão 15.9)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)           | Enterprise, Community | Versão 15.9.29       |
+| [Visual Studio 2017: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)                             | Enterprise, Community | Versão 15.0.28       |
 | [Visual Studio 2015: Mais recente (atualização 3)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)               | Enterprise, Community | Versão 14.0.25431.01 |
 
 > [!NOTE]
@@ -92,8 +92,9 @@ Com o Azure, é possível reequilibrar sua escolha inicial redimensionando a VM.
 ## <a name="after-the-vm-is-running-whats-next"></a>Depois que a VM estiver em execução, o que vem a seguir?
 
 O Visual Studio acompanha o modelo "traga sua própria licença" no Azure. De forma semelhante a uma instalação em hardware proprietário, uma das primeiras etapas é o licenciamento da instalação do Visual Studio. Para desbloquear o Visual Studio:
-- Entrar com uma conta da Microsoft associada a uma assinatura do Visual Studio
-- Desbloquear o Visual Studio com a chave do produto que acompanha a compra inicial
+
+* Entrar com uma conta da Microsoft associada a uma assinatura do Visual Studio
+* Desbloquear o Visual Studio com a chave do produto que acompanha a compra inicial
 
 Para obter mais informações, consulte [Conectar-se ao Visual Studio](../ide/signing-in-to-visual-studio.md) e [Como desbloquear o Visual Studio](../ide/how-to-unlock-visual-studio.md).
 

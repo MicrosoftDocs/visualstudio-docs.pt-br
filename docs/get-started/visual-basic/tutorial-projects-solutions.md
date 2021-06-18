@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial: Projetos e soluções usando Visual Basic'
-description: Saiba como criar uma solução e um projeto no Visual Studio como um desenvolvedor de Visual Basic.
+description: Saiba como criar uma solução e um projeto no Visual Studio como um Visual Basic desenvolvedor.
 ms.date: 12/12/2018
 ms.technology: vs-ide-general
 ms.custom:
@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 36aabdd07dd7fa966a31d8fc3844e68d816c59ae
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4f27973fcfb76d019cff31787b117f05f8266ad8
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944518"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308175"
 ---
 # <a name="learn-about-projects-and-solutions-using-visual-basic"></a>Saiba mais sobre projetos e soluções usando Visual Basic
 
@@ -28,21 +28,28 @@ Neste artigo introdutório, exploraremos o que significa criar uma *solução* e
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
+> Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
 > [!TIP]
-> Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
+> Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+> [!TIP]
+> Se você ainda não tiver instalado o Visual Studio Preview, acesse a página de downloads do [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
 Desenvolveremos uma solução e um projeto do zero como um exercício educacional para compreendermos o conceito de um projeto. Em seu uso geral do Visual Studio, você provavelmente usará alguns dos vários *modelos* de projeto oferecidos pelo Visual Studio quando estiver criando um projeto.
 
 > [!NOTE]
-> As soluções e os projetos não precisam desenvolver aplicativos no Visual Studio. Você também pode apenas abrir uma pasta que contém o código e começar a codificar, compilar e depurar. Por exemplo, se você clonar um repositório [GitHub](https://github.com/) , ele poderá não conter projetos e soluções do Visual Studio. Para obter mais informações, consulte [Desenvolver código no Visual Studio sem projetos nem soluções](../../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
+> As soluções e os projetos não precisam desenvolver aplicativos no Visual Studio. Você também pode apenas abrir uma pasta que contém o código e começar a codificar, compilar e depurar. Por exemplo, se você clonar um repositório [GitHub,](https://github.com/) ele poderá não conter Visual Studio e soluções. Para obter mais informações, consulte [Desenvolver código no Visual Studio sem projetos nem soluções](../../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
 
 ## <a name="solutions-and-projects"></a>Soluções e projetos
 
@@ -56,7 +63,7 @@ Vamos iniciar nossa exploração criando uma solução vazia. Depois de se famil
 
 1. Abra o Visual Studio.
 
-1. Na barra de menus, escolha **arquivo** > **novo** > **projeto**.
+1. Na barra de menus, escolha **Arquivo** > **Novo** > **Projeto**.
 
    A caixa de diálogo **Novo Projeto** será aberta.
 
@@ -72,7 +79,7 @@ Vamos iniciar nossa exploração criando uma solução vazia. Depois de se famil
 
 1. Abra o Visual Studio.
 
-2. Na janela iniciar, escolha **criar um novo projeto**.
+2. Na janela inicial, escolha **Criar um novo projeto.**
 
 3. Na página **Criar um novo projeto**, insira **solução em branco** na caixa de pesquisa, selecione o modelo **Solução em Branco** e escolha **Avançar**.
 
@@ -90,13 +97,13 @@ Agora vamos adicionar nosso primeiro projeto à solução. Vamos começar com um
 
 ::: moniker range="vs-2017"
 
-1. Ao clicar com o botão direito do mouse ou no menu de contexto da **Solução ‘QuickSolution’** no **Gerenciador de Soluções**, escolha **Adicionar** > **Novo Projeto**.
+1. No menu de contexto ou clique com o botão direito do mouse da Solução **'QuickSolution'** **no Gerenciador de Soluções**, escolha **Adicionar** > **Novo Projeto**.
 
    A caixa de diálogo **Adicionar Novo Projeto** é aberta.
 
-1. No painel esquerdo, expanda **Visual Basic** e escolha **Área de Trabalho do Windows**. Em seguida, no painel central, selecione o modelo **Projeto Vazio (.NET Framework)**. Nomeie o projeto **QuickDate** e escolha o botão **OK** .
+1. No painel esquerdo, expanda **Visual Basic** e escolha **Área de Trabalho do Windows**. Em seguida, no painel central, selecione o modelo **Projeto Vazio (.NET Framework)**. Nomeia o **projeto QuickDate** e, em seguida, escolha o **botão OK.**
 
-   Um projeto chamado QuickDate aparece abaixo da solução em **Gerenciador de soluções**. Atualmente, ele contém um único arquivo chamado *App.config*.
+   Um projeto chamado QuickDate aparece abaixo da solução no **Gerenciador de Soluções**. Atualmente, ele contém um único arquivo chamado *App.config*.
 
    > [!NOTE]
    > Se a opção **Visual Basic** não for exibida no painel esquerdo da caixa de diálogo, você precisará instalar a *carga de trabalho***Desenvolvimento para desktop com .NET** do Visual Studio. O Visual Studio usa a instalação baseada em carga de trabalho para instalar somente os componentes necessários para o tipo de desenvolvimento realizado. Uma maneira fácil de instalar uma nova carga de trabalho é escolher o link **Abrir Instalador do Visual Studio** no canto inferior esquerdo da caixa de diálogo **Adicionar Novo Projeto**. Após o início do Instalador do Visual Studio, escolha a carga de trabalho **Desenvolvimento para área de trabalho em .NET** e, em seguida, o botão **Modificar**.
@@ -107,7 +114,7 @@ Agora vamos adicionar nosso primeiro projeto à solução. Vamos começar com um
 
 ::: moniker range=">=vs-2019"
 
-1. Ao clicar com o botão direito do mouse ou no menu de contexto da **Solução ‘QuickSolution’** no **Gerenciador de Soluções**, escolha **Adicionar** > **Novo Projeto**.
+1. No menu de contexto ou clique com o botão direito do mouse da Solução **'QuickSolution'** **no Gerenciador de Soluções**, escolha **Adicionar** > **Novo Projeto**.
 
    Uma caixa de diálogo é aberta com o título **Adicionar um novo projeto**.
 
@@ -117,7 +124,7 @@ Agora vamos adicionar nosso primeiro projeto à solução. Vamos começar com um
 
 1. Nomeie o projeto **QuickDate** e, em seguida, escolha **Criar**.
 
-   Um projeto chamado QuickDate aparece abaixo da solução em **Gerenciador de soluções**. Atualmente, ele contém um único arquivo chamado *App.config*.
+   Um projeto chamado QuickDate aparece abaixo da solução no **Gerenciador de Soluções**. Atualmente, ele contém um único arquivo chamado *App.config*.
 
    > [!NOTE]
    > Se você não vir o modelo **Projeto Vazio (.NET Framework)**, será necessário instalar a **carga de trabalho** do Visual Studio de *desenvolvimento para área de trabalho do .NET*. O Visual Studio usa a instalação baseada em carga de trabalho para instalar somente os componentes necessários para o tipo de desenvolvimento realizado. Uma maneira fácil de instalar uma nova carga de trabalho ao criar um projeto é escolher o link **Instalar mais ferramentas e recursos** no texto que informa **Não encontra o que você está procurando?**. Após o início do Instalador do Visual Studio, escolha a carga de trabalho **Desenvolvimento para área de trabalho em .NET** e, em seguida, o botão **Modificar**.
@@ -132,9 +139,9 @@ Temos um projeto vazio. Vamos adicionar um arquivo de código.
 
 1. No menu de clique com o botão direito do mouse ou de contexto do projeto **QuickDate** no **Gerenciador de Soluções**, escolha **Adicionar** > **Novo Item**.
 
-   A caixa de diálogo **Adicionar novo item** é aberta.
+   A **caixa de diálogo Adicionar Novo** Item é aberta.
 
-1. Expanda **Itens Comuns** e, em seguida, escolha **Código**. No painel central, escolha o modelo de item **Classe**. Nomeie o **calendário** de classe e, em seguida, escolha o botão **Adicionar** .
+1. Expanda **Itens Comuns** e, em seguida, escolha **Código**. No painel central, escolha o modelo de item **Classe**. Nomeia a **classe Calendar** e, em seguida, escolha o **botão** Adicionar.
 
    Um arquivo chamado *Calendar.vb* é adicionado ao projeto. O *.vb* no final é a extensão de arquivo fornecida a arquivos de código Visual Basic. O arquivo é exibido na hierarquia do projeto visual no **Gerenciador de Soluções** e seu conteúdo é aberto no editor.
 
@@ -188,7 +195,7 @@ Vamos adicionar um projeto de teste de unidade em nossa solução. Desta vez, co
 
 Vamos usar o novo projeto de teste de unidade para testar nosso método no projeto **QuickDate**. Portanto, precisamos adicionar uma referência a esse projeto. Isso cria uma *dependência de build* entre os dois projetos, o que significa que quando a solução é criada, **QuickDate** é criado antes dependência **QuickTest**.
 
-1. Escolha o nó **referências** no projeto **QuickTest** e, no menu de contexto ou clique com o botão direito do mouse, escolha **Adicionar referência**.
+1. Escolha o **nó Referências** no projeto **QuickTest** e, no menu de contexto ou clique com o botão direito do mouse, **escolha Adicionar Referência**.
 
    ![Adicionar menu de referência](media/tutorial-projects-add-reference-vb.png)
 
@@ -232,7 +239,7 @@ A linha no arquivo *Calendar.vb* que contém o atributo <xref:System.Runtime.Com
 
 1. No **Gerenciador de Soluções**, selecione o projeto **QuickTest**. Ao clicar com o botão direito do mouse ou no menu de contexto, selecione **Propriedades** ou pressione **Alt**+**Enter**. (Você também pode clicar duas vezes em **Meu Projeto** no **Gerenciador de Soluções**.)
 
-   As *páginas de propriedades* do projeto abertas na guia **aplicativo** . As páginas de propriedades contêm várias configurações para o projeto. Observe que o nome do assembly do projeto **QuickTest** é, de fato, “QuickTest”. Caso deseje alterá-lo, este é o local em que você poderá fazer isso. Assim, quando você compilar o projeto de teste, o nome do arquivo binário resultante será alterado de *QuickTest.dll* para o que você escolher.
+   As *páginas de propriedades* do projeto são abertas na **guia** Aplicativo. As páginas de propriedades contêm várias configurações para o projeto. Observe que o nome do assembly do projeto **QuickTest** é, de fato, “QuickTest”. Caso deseje alterá-lo, este é o local em que você poderá fazer isso. Assim, quando você compilar o projeto de teste, o nome do arquivo binário resultante será alterado de *QuickTest.dll* para o que você escolher.
 
    ![Propriedades do projeto](../media/tutorial-projects-properties.png)
 
@@ -240,7 +247,7 @@ A linha no arquivo *Calendar.vb* que contém o atributo <xref:System.Runtime.Com
 
 ## <a name="optional-run-the-test"></a>(Opcional) Executar o teste
 
-Se você quiser verificar se o teste de unidade está funcionando, escolha **testar**  >  **executar**  >  **todos os testes** na barra de menus. Uma janela chamada **Gerenciador de Testes** será aberta e você verá que o teste **TestGetCurrentDate** será aprovado.
+Se você quiser verificar se o teste de unidade está funcionando, escolha **Executar** Todos os Testes na  >    >   barra de menus. Uma janela chamada **Gerenciador de Testes** será aberta e você verá que o teste **TestGetCurrentDate** será aprovado.
 
 ![Gerenciador de Testes no Visual Studio mostrando a aprovação no teste](../media/tutorial-projects-test-explorer.png)
 
@@ -251,7 +258,7 @@ Se você quiser verificar se o teste de unidade está funcionando, escolha **tes
 
 Caso deseje explorar ainda mais o Visual Studio, considere a possibilidade de criar um aplicativo seguindo um dos [tutoriais do Visual Basic](index.yml).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Criar projetos e soluções](../../ide/creating-solutions-and-projects.md)
 - [Gerenciar propriedades do projeto e da solução](../../ide/managing-project-and-solution-properties.md)

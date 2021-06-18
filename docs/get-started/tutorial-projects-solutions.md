@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 11db2d793f284557f709a4f72362cfc89a77a059
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 0f962d9e534262fd12cd0ce5c808c9c604db466b
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112113037"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308396"
 ---
 # <a name="introduction-to-projects-and-solutions"></a>Introdução a projetos e soluções
 
@@ -35,6 +35,12 @@ Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual St
 ::: moniker range="vs-2019"
 
 Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Se você ainda não tiver instalado o Visual Studio 2022 Preview, acesse a página de downloads do [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
@@ -61,7 +67,7 @@ Vamos iniciar nossa exploração criando uma solução vazia. Depois de se famil
 
 1. No painel esquerdo, expanda **Outros Tipos de Projeto** e selecione Visual Studio **Soluções**. No painel central, selecione o modelo **Solução em** Branco. Nomeia sua **solução quickSolution** e, em seguida, selecione o **botão OK.**
 
-   ![Modelo de solução em branco Visual Studio 2017](media/tutorial-projects-new-solution.png "O modelo de solução em branco no Visual Studio 2017.")
+   ![Modelo de solução em branco Visual Studio 2017](media/tutorial-projects-new-solution.png "O modelo solução em branco Visual Studio 2017.")
 
    A **Página Inicial** é fechada e uma solução é exibida no **Gerenciador de Soluções** do lado direito da janela do Visual Studio. Você provavelmente usará o **Gerenciador de Soluções** muitas vezes para navegar pelo conteúdo de seus projetos.
 
@@ -75,7 +81,7 @@ Vamos iniciar nossa exploração criando uma solução vazia. Depois de se famil
 
 3. Na página Criar **um novo projeto,** insira a solução  em branco na caixa de pesquisa, selecione o modelo Solução em Branco e, em seguida, **selecione Próximo**. 
 
-   ![Modelo de Solução em branco no Visual Studio 2019](media/vs-2019/tutorial-projects-blank-solution-template.png "O modelo de solução em branco no Visual Studio 2019.")
+   ![Modelo de Solução em branco no Visual Studio 2019](media/vs-2019/tutorial-projects-blank-solution-template.png "O modelo solução em branco no Visual Studio 2019.")
 
     > [!TIP]
     > Se você tiver várias cargas  de trabalho instaladas, o modelo solução em branco poderá não aparecer na parte superior da lista de resultados da pesquisa. Tente rolar para a **seção Outros resultados com base na pesquisa** da lista. Ele deve aparecer lá.
@@ -103,7 +109,7 @@ Agora vamos adicionar nosso primeiro projeto à solução. Vamos começar com um
    > [!NOTE]
    > Se você não vir **o Visual C#** no painel esquerdo da caixa de diálogo, deverá instalar a carga de trabalho desenvolvimento da área de trabalho do **.NET** Visual Studio. Visual Studio usa a instalação baseada em carga de trabalho para instalar apenas os componentes necessários para o tipo de desenvolvimento que você faz. Uma maneira fácil de instalar uma nova carga de trabalho é selecionar o link Abrir **Instalador do Visual Studio** no canto inferior esquerdo da caixa de diálogo Adicionar **Novo** Projeto. Depois Instalador do Visual Studio iniciar, selecione a carga de trabalho desenvolvimento da área de trabalho **do .NET** e, em seguida, o **botão** Modificar.
    >
-   > ![Abrir o link do Instalador do Visual Studio](media/tutorial-projects-open-installer.png "O link abrir Instalador do Visual Studio na caixa de diálogo Adicionar novo projeto no Visual Studio 2017.")
+   > ![Abrir o link do Instalador do Visual Studio](media/tutorial-projects-open-installer.png "O link Abrir Instalador do Visual Studio na caixa de diálogo Adicionar Novo Projeto no Visual Studio 2017.")
 
 ::: moniker-end
 
@@ -126,7 +132,7 @@ Agora vamos adicionar nosso primeiro projeto à solução. Vamos começar com um
    >
    >Uma maneira fácil de instalar uma nova carga de trabalho ao criar um novo projeto é selecionar o **link** Instalar mais ferramentas e recursos no texto que diz Não encontrar o que você **está procurando?**. Depois Instalador do Visual Studio iniciar, selecione a carga de trabalho desenvolvimento da área de trabalho **do .NET** e, em seguida, o **botão** Modificar.
    >
-   > ![Abrir o link do Instalador do Visual Studio](media/vs-2019/tutorial-projects-open-installer.png "O link abrir Instalador do Visual Studio na caixa de diálogo criar um novo projeto no Visual Studio.")
+   > ![Abrir o link do Instalador do Visual Studio](media/vs-2019/tutorial-projects-open-installer.png "O link Abrir Instalador do Visual Studio na caixa de diálogo Criar um Novo Projeto no Visual Studio.")
 
 ::: moniker-end
 
@@ -201,7 +207,7 @@ Vamos adicionar um projeto de teste de unidade em nossa solução. Desta vez, co
 
    Um segundo projeto é adicionado ao **Gerenciador de Soluções** e um arquivo chamado *UnitTest1.cs* é aberto no editor.
 
-   ![Gerenciador de Soluções do Visual Studio com dois projetos](media/vs-2019/tutorial-projects-solution-explorer.png "Gerenciador de Soluções com dois projetos no Visual Studio.")
+   ![Gerenciador de Soluções do Visual Studio com dois projetos](media/vs-2019/tutorial-projects-solution-explorer.png "Gerenciador de Soluções com dois projetos em Visual Studio.")
 
 ::: moniker-end
 
@@ -211,29 +217,29 @@ Vamos usar o novo projeto de teste de unidade para testar nosso método no proje
 
 ::: moniker range="vs-2017"
 
-1. Selecione o nó **dependências** no projeto **QuickTest** e, no menu de contexto ou clique com o botão direito do mouse, selecione **Adicionar referência**.
+1. Selecione o **nó Dependências** no projeto **QuickTest** e, no menu de contexto ou clique com o botão direito do mouse, **selecione Adicionar Referência**.
 
    A caixa de diálogo **Gerenciador de Referências** é aberta.
 
-1. No painel esquerdo, expanda **projetos** e selecione **solução**. No painel central, marque a caixa de seleção ao lado de **QuickDate** e, em seguida, selecione **OK**.
+1. No painel esquerdo, expanda **Projetos e** selecione **Solução**. No painel central, marque a caixa de seleção ao lado de **QuickDate** e, em seguida, selecione **OK.**
 
    Uma referência ao projeto **QuickDate** será adicionada.
 
-   ![Uma captura de tela de Gerenciador de Soluções mostrando a referência do projeto no Visual Studio](media/vs-2019/tutorial-projects-solution-explorer-reference.png "Uma captura de tela de Gerenciador de Soluções mostrando uma referência de projeto no Visual Studio.")
+   ![Uma captura de tela Gerenciador de Soluções a referência de projeto no Visual Studio](media/vs-2019/tutorial-projects-solution-explorer-reference.png "Uma captura de tela Gerenciador de Soluções uma referência de projeto no Visual Studio.")
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Selecione o nó **dependências** no projeto **QuickTest** e, no menu de contexto ou clique com o botão direito do mouse, selecione **Adicionar referência de projeto...**.
+1. Selecione o **nó Dependências** no projeto **QuickTest** e, no menu de contexto ou clique com o botão direito do mouse, **selecione Adicionar Referência de Projeto...**.
 
    A caixa de diálogo **Gerenciador de Referências** é aberta.
 
-1. No painel esquerdo, expanda **projetos** e selecione **solução**. No painel central, marque a caixa de seleção ao lado de **QuickDate** e, em seguida, selecione **OK**.
+1. No painel esquerdo, expanda **Projetos** e, em seguida, selecione **Solução**. No painel central, marque a caixa de seleção ao lado de **QuickDate** e, em seguida, selecione **OK.**
 
    Uma referência ao projeto **QuickDate** será adicionada.
 
-   ![Uma captura de tela de Gerenciador de Soluções mostrando uma referência de projeto no Visual Studio 2019](media/vs-2019/tutorial-projects-solution-explorer-reference.png)
+   ![Uma captura de tela Gerenciador de Soluções uma referência de projeto no Visual Studio 2019](media/vs-2019/tutorial-projects-solution-explorer-reference.png)
 
 ::: moniker-end
 
@@ -271,7 +277,7 @@ Vamos usar o novo projeto de teste de unidade para testar nosso método no proje
 
    O arquivo de código deve ter esta aparência:
 
-   ![Código CSharp](media/tutorial-projects-cs-code.png "O trecho de código da seção adicionar código de teste neste artigo.")
+   ![Código CSharp](media/tutorial-projects-cs-code.png "O snippet de código da seção Adicionar Código de Teste neste artigo.")
 
 ## <a name="project-properties"></a>Propriedades do projeto
 
@@ -279,9 +285,9 @@ A linha no arquivo *Calendar.cs* que contém o atributo <xref:System.Runtime.Com
 
 1. No **Gerenciador de Soluções**, selecione o projeto **QuickTest**. Ao clicar com o botão direito do mouse ou no menu de contexto, selecione **Propriedades** ou pressione **Alt**+**Enter**.
 
-   As *páginas de propriedades* do projeto abertas na guia **aplicativo** . As páginas de propriedades contêm várias configurações para o projeto. Observe que o nome do assembly do projeto **QuickTest** é, de fato, “QuickTest”. Caso deseje alterá-lo, este é o local em que você poderá fazer isso. Assim, quando você compilar o projeto de teste, o nome do arquivo binário resultante será alterado de *QuickTest.dll* para o que você escolher.
+   As *páginas de propriedades* do projeto são abertas na **guia** Aplicativo. As páginas de propriedades contêm várias configurações para o projeto. Observe que o nome do assembly do projeto **QuickTest** é, de fato, “QuickTest”. Caso deseje alterá-lo, este é o local em que você poderá fazer isso. Assim, quando você compilar o projeto de teste, o nome do arquivo binário resultante será alterado de *QuickTest.dll* para o que você escolher.
 
-   ![Propriedades do projeto](media/tutorial-projects-netcore-properties.png "Caixa de diálogo Propriedades do projeto no Visual Studio.")
+   ![Propriedades do projeto](media/tutorial-projects-netcore-properties.png "Caixa de diálogo Propriedades do Projeto Visual Studio.")
 
 1. Explore algumas das outras guias das páginas de propriedades do projeto, como **Build** e **Depurar**. Essas guias são diferentes para diferentes tipos de projetos.
 
@@ -289,17 +295,17 @@ A linha no arquivo *Calendar.cs* que contém o atributo <xref:System.Runtime.Com
 
 ::: moniker range="vs-2017"
 
-Se você quiser verificar se o teste de unidade está funcionando, escolha **testar**  >  **executar**  >  **todos os testes** na barra de menus. Uma janela chamada **Gerenciador de Testes** será aberta e você verá que o teste **TestGetCurrentDate** será aprovado.
+Se você quiser verificar se o teste de unidade está funcionando, escolha **Executar** Todos os Testes na  >    >   barra de menus. Uma janela chamada **Gerenciador de Testes** será aberta e você verá que o teste **TestGetCurrentDate** será aprovado.
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-Se você quiser verificar se o teste de unidade está funcionando, escolha **testar**  >  **executar todos os testes** na barra de menus. Uma janela chamada **Gerenciador de Testes** será aberta e você verá que o teste **TestGetCurrentDate** será aprovado.
+Se você quiser verificar se o teste de unidade está funcionando, escolha **Executar** Todos os Testes na  >   barra de menus. Uma janela chamada **Gerenciador de Testes** será aberta e você verá que o teste **TestGetCurrentDate** será aprovado.
 
 ::: moniker-end
 
-![Gerenciador de Testes no Visual Studio mostrando a aprovação no teste](media/tutorial-projects-test-explorer.png "Gerenciador de testes no Visual Studio mostrando um teste aprovado.")
+![Gerenciador de Testes no Visual Studio mostrando a aprovação no teste](media/tutorial-projects-test-explorer.png "O Explorador de Testes Visual Studio mostrando um teste aprovado.")
 
 ::: moniker range="vs-2017"
 
@@ -311,7 +317,7 @@ Se você quiser verificar se o teste de unidade está funcionando, escolha **tes
 ::: moniker range=">=vs-2019"
 
 > [!TIP]
-> Se o **Gerenciador de testes** não abrir automaticamente, abra-o escolhendo **Test**  >  **Test Explorer** na barra de menus.
+> Se **o Test Explorer** não abrir automaticamente, abra-o escolhendo **Test**  >  **Test Explorer** na barra de menus.
 
 ::: moniker-end
 

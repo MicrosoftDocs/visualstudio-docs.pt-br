@@ -25,68 +25,68 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bd8859b98e54aa9692beaa98dd0f2c2ca70e2796
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: be11db364d0505833e722d3db308b41a18ccbb9d
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101682588"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308123"
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Personalizar layouts de janela no Visual Studio
 
 No Visual Studio, é possível personalizar a posição, tamanho e comportamento de janelas para criar layouts de janela que funcionam melhor para vários fluxos de trabalho de desenvolvimento. Quando você personaliza o layout, o IDE se lembra dele. Por exemplo, se você alterar o local de encaixe do **Gerenciador de Soluções** e fechar o Visual Studio, na próxima vez que o abrir, mesmo que estiver trabalhando em outro computador, o **Gerenciador de Soluções** estará encaixado no mesmo local.
 
-Também é possível dar um nome ao layout personalizado e salvá-lo e, em seguida, mudar entre layouts com um único comando. Por exemplo, você pode criar um layout para edição e um layout para depuração e alternar entre eles usando o comando **janela**  >  **aplicar layout de janela** do menu.
+Também é possível dar um nome ao layout personalizado e salvá-lo e, em seguida, mudar entre layouts com um único comando. Por exemplo, você pode criar um layout para edição e um layout para depuração e alternar entre eles usando o comando de menu Aplicar  >  **Janela** Layout da Janela.
 
 ## <a name="tool-and-document-windows"></a>Janelas de ferramentas e do documento
 
-O IDE tem dois tipos básicos de janela, *janelas de ferramentas* e *janelas do documento*. As janelas de ferramentas incluem **Gerenciador de soluções**, **Gerenciador de servidores**, **janela de saída**, **lista de erros**, designers, janelas do depurador e assim por diante. As janelas do documento contêm arquivos de código-fonte, arquivos de texto arbitrário, arquivos de configuração e assim por diante. As janelas de ferramentas podem ser redimensionadas e arrastadas por sua barra de título. As janelas de documentos podem ser arrastadas por sua guia. Clique com o botão direito do mouse na guia ou na barra de título para definir outras opções na janela.
+O IDE tem dois tipos básicos de janela, *janelas de ferramentas* e *janelas do documento*. As janelas **de ferramentas Gerenciador de Soluções**, **Gerenciador de Servidores**, Janela de Saída **,** Lista de Erros , os designers, as janelas do depurador e assim por diante.  As janelas do documento contêm arquivos de código-fonte, arquivos de texto arbitrário, arquivos de configuração e assim por diante. As janelas de ferramentas podem ser redimensionadas e arrastadas por sua barra de título. As janelas de documentos podem ser arrastadas por sua guia. Clique com o botão direito do mouse na guia ou na barra de título para definir outras opções na janela.
 
-O menu **janela** mostra opções para encaixe, flutuação e ocultação de janelas no IDE. Clique com o botão direito do mouse na guia de janela ou na barra de título para ver outras opções para essa janela específica. É possível exibir mais de uma instância de determinadas janelas de ferramentas por vez. Por exemplo, é possível exibir mais de uma janela do navegador da Web e é possível criar outras instâncias de algumas janelas de ferramentas escolhendo **Nova Janela** no menu **Janela**.
+O menu **Janela** mostra opções para encaixar, flutuante e ocultar janelas no IDE. Clique com o botão direito do mouse na guia de janela ou na barra de título para ver outras opções para essa janela específica. É possível exibir mais de uma instância de determinadas janelas de ferramentas por vez. Por exemplo, é possível exibir mais de uma janela do navegador da Web e é possível criar outras instâncias de algumas janelas de ferramentas escolhendo **Nova Janela** no menu **Janela**.
 
 ### <a name="split-windows"></a>Dividir janelas
 
 Quando é necessário exibir ou editar dois locais ao mesmo tempo em um documento, é possível dividir as janelas. Para dividir seu documento em duas seções de rolagem independente, clique em **Dividir** no menu **Janela**. Clique em **Remover Divisão** no menu **Janela** para restaurar o modo de exibição único.
 
-### <a name="tabs"></a>Tabulações
+### <a name="tabs"></a>Guias
 
-Você pode usar guias para organizar o layout de várias maneiras diferentes. Por exemplo, você pode exibir uma visualização de um arquivo no editor sem abrir o arquivo, pode agrupar suas guias e muito mais.
+Você pode usar guias para organizar seu layout de várias maneiras diferentes. Por exemplo, você pode exibir uma visualização de um arquivo no editor sem abrir o arquivo, agrupar suas guias e muito mais.
 
 #### <a name="preview-tab-document-windows"></a>Guia Visualização (janelas do documento)
 
-Na guia **Visualização** , você pode exibir arquivos no editor sem abri-los. Você pode visualizar os arquivos escolhendo-os no **Gerenciador de soluções**, durante a depuração, quando você entra em arquivos, com **ir para definição** e quando navega pelos resultados de uma pesquisa. Os arquivos de visualização são exibidos em uma guia à direita da caixa de guias de documentos. O arquivo será aberto para edição se você modificá-lo ou escolher **Abrir**.
+Na guia **Visualização,** você pode exibir arquivos no editor sem abri-los. Você pode visualizar arquivos escolhendo-os no Gerenciador de Soluções **,** durante a depuração quando você entra em arquivos, com Ir para Definição **e** quando navega pelos resultados de uma pesquisa. Os arquivos de visualização são exibidos em uma guia à direita da caixa de guias de documentos. O arquivo será aberto para edição se você modificá-lo ou escolher **Abrir**.
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-#### <a name="vertical-document-tabs"></a>Guias de documento vertical
+#### <a name="vertical-document-tabs"></a>Guias verticais do documento
 
-**[Novidade na versão 16,4](/visualstudio/releases/2019/release-notes-v16.4/)**: adicionamos uma das principais solicitações de recursos, [guias de documentos verticais](https://developercommunity.visualstudio.com/idea/467369/vertical-group-tab.html), na versão do Visual Studio 2019 versão 16,4. Agora, você pode gerenciar suas guias de documento em uma lista vertical no lado esquerdo ou direito do seu editor.
+Novidade na versão **[16.4:](/visualstudio/releases/2019/release-notes-v16.4/)** adicionamos uma das principais solicitações de [recursos,](https://developercommunity.visualstudio.com/idea/467369/vertical-group-tab.html)guias verticais de documento, na versão Visual Studio 2019 versão 16.4. Agora, você pode gerenciar suas guias de documento em uma lista vertical no lado esquerdo ou direito do editor.
 
-Você pode aplicar guias de documento vertical das seguintes maneiras:
+Você pode aplicar guias verticais de documento das seguintes maneiras:
 
-- Escolha **ferramentas**  >  **Opções**  >  guias de **ambiente**  >  **e janelas** na barra de menus. Em seguida, no controle **Definir layout de guia** , escolha **superior**, **esquerda** ou **direita** na lista suspensa.
+- Escolha **Ferramentas**  >  **Opções**  >  **Guias de** Ambiente e  >  **Janelas** na barra de menus. Em seguida, no **controle de layout** da guia Definir, escolha **Superior,** **Esquerda** ou **Direita** na lista lista listada.
 
-- Clique com o botão direito do mouse em uma guia, escolha **Definir layout da guia** e escolha **esquerda** ou **direita**. (Para retornar as guias à sua posição padrão, escolha **superior**.)
+- Clique com o botão direito do mouse em uma guia, **escolha Definir Layout** da Guia e escolha **Esquerda** ou **Direita.** (Para retornar as guias para sua posição padrão, escolha **Top**.)
 
-    :::image type="content" source="./media/vs-2019/vertical-tabs.gif" alt-text="Uma animação que mostra as guias de documento vertical em ação":::
+    :::image type="content" source="./media/vs-2019/vertical-tabs.gif" alt-text="Uma animação que mostra guias verticais do documento em ação":::
 
 ::: moniker-end
 
 #### <a name="tab-groups"></a>Grupos de guias
 
-Os grupos de guias ampliam sua capacidade de gerenciar o espaço de trabalho limitado enquanto você trabalha com dois ou mais documentos abertos no IDE. É possível organizar várias janelas do documento e de ferramentas em grupos de guias verticais ou horizontais e embaralhar os documentos de um grupo de guias em outro.
+Os grupos de guias estendem sua capacidade de gerenciar o workspace limitado enquanto você está trabalhando com dois ou mais documentos abertos no IDE. É possível organizar várias janelas do documento e de ferramentas em grupos de guias verticais ou horizontais e embaralhar os documentos de um grupo de guias em outro.
 
 ### <a name="toolbars"></a>Barras de ferramentas
 
-Você pode organizar as barras de ferramentas arrastando-as para onde desejar ou usando a caixa de diálogo **Personalizar** . Para obter mais informações sobre como posicionar e personalizar barras de ferramentas, consulte [como: personalizar menus e barras de ferramentas](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md).
+Você pode organizar barras de ferramentas arrastando-as para onde quiser ou usando a **caixa de** diálogo Personalizar. Para obter mais informações sobre como posicionar e personalizar barras de ferramentas, consulte [Como personalizar menus e barras de ferramentas](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md).
 
 ## <a name="arrange-and-dock-windows"></a>Organizar e encaixar janelas
 
-Uma janela de documento ou janela de ferramentas pode ser *encaixada*, para que ela tenha uma posição e um tamanho dentro do quadro da janela do IDE. Você também pode posicioná-lo como uma janela flutuante separada que está fora do IDE.
+Uma janela de documento ou janela de ferramentas pode *ser* encaixada, de modo que ela tenha uma posição e um tamanho dentro do quadro de janela do IDE. Você também pode posicioná-lo como uma janela flutuante separada que está fora do IDE.
 
-Você pode encaixar uma janela de ferramentas em qualquer lugar dentro do quadro do IDE. Você também pode encaixar algumas janelas de ferramentas como janelas com guias no quadro do editor. E você pode encaixar janelas de documentos dentro do quadro do editor e pode fixá-las à sua posição atual na ordem de tabulação.
+Você pode encaixar uma janela de ferramentas em qualquer lugar dentro do quadro do IDE. Você também pode encaixar algumas janelas de ferramentas como janelas com guias no quadro do editor. Além disso, você pode encaixar janelas de documentos no quadro do editor e fixá-las na posição atual na ordem de tabulação.
 
-Você também pode encaixar várias janelas para flutuar juntas em uma *reposicionamento* ou fora do IDE. As janelas de ferramentas também podem ser ocultadas ou minimizadas.
+Você também pode encaixar várias janelas para flutuar juntas em *uma área de* trabalho ou fora do IDE. As janelas de ferramentas também podem ser ocultadas ou minimizadas.
 
 É possível organizar janelas das seguintes maneiras:
 
@@ -104,7 +104,7 @@ Você também pode encaixar várias janelas para flutuar juntas em uma *reposici
 
 - Redefina o posicionamento da janela para o layout padrão ou para um layout personalizado salvo.
 
-Para organizar as janelas de ferramentas e documentos, você pode posicionar o cursor na barra de título de uma janela e arrastá-lo para o local desejado. Como alternativa, você pode clicar com o botão direito do mouse na barra de título da janela para usar seu menu de contexto ou pode usar os comandos no menu **janela** .
+Para organizar janelas de ferramentas e documentos, você pode colocar o cursor na barra de título de uma janela e, em seguida, arrastá-lo para onde você deseja. Como alternativa, você pode clicar com o botão direito do mouse na barra de título da janela para usar seu menu de contexto ou pode usar os comandos no menu **Janela.**
 
 ### <a name="dock-windows"></a>Encaixar janelas
 
@@ -112,7 +112,7 @@ Quando você clica e arrasta a barra de título de uma janela de ferramentas ou 
 
 Para mover uma janela encaixável sem ajustá-la no local, pressione a tecla **Ctrl** enquanto você arrasta a janela.
 
-Para retornar uma janela de ferramentas ou de documento para seu local encaixado mais recente, pressione **Ctrl** enquanto clica duas vezes na barra de título ou na guia da janela.
+Para retornar uma janela de ferramentas ou uma janela de documento para seu local encaixado mais recente, pressione **Ctrl** enquanto clica duas vezes na barra de título ou na guia da janela.
 
 A ilustração a seguir mostra o losango do guia para janelas de documentos, que só podem ser encaixadas dentro do quadro de edição:
 
@@ -128,22 +128,22 @@ A ilustração a seguir mostra o **Gerenciador de Soluções** que está sendo e
 
 ### <a name="close-and-auto-hide-tool-windows"></a>Fechar e ocultar automaticamente janelas de ferramentas
 
-Você pode fechar uma janela de ferramentas clicando no **X** no canto superior direito da barra de título. Para reabrir a janela, use o respectivo atalho de teclado ou comando de menu. O Windows de ferramentas dá suporte a um recurso denominado *Hide automático*, que faz com que uma janela deslize para fora do caminho quando você usa uma janela diferente. Quando uma janela é ocultada automaticamente, o nome dela é exibido em uma guia na borda do IDE. Para usar a janela novamente, aponte para a guia para que a janela volte a ser exibida.
+Você pode fechar uma janela de ferramentas clicando no **X** no canto superior direito da barra de título. Para reabrir a janela, use o respectivo atalho de teclado ou comando de menu. As janelas de ferramentas suportam um recurso chamado *ocultar* automaticamente , o que faz com que uma janela deslize para fora do caminho quando você usa uma janela diferente. Quando uma janela é ocultada automaticamente, o nome dela é exibido em uma guia na borda do IDE. Para usar a janela novamente, aponte para a guia para que a janela volte a ser exibida.
 
 ![Ocultar automaticamente](../ide/media/vs2015_auto_hide.png)
 
 > [!NOTE]
-> Para definir se o ocultar automaticamente opera nas janelas de ferramentas individualmente ou como grupos encaixados, marque ou desmarque **ocultar automaticamente botão afeta as janelas de ferramentas ativas somente** na caixa de diálogo **Opções** . Para obter mais informações, consulte [Geral, Ambiente, Caixa de diálogo Opções](../ide/reference/general-environment-options-dialog-box.md).
+> Para definir se a ocultação automática opera em janelas de ferramentas individualmente ou como grupos encaixados, selecionar ou limpar Ocultar Automaticamente botão afeta apenas as **janelas** de ferramentas ativas na **caixa de** diálogo Opções. Para obter mais informações, consulte [Geral, Ambiente, Caixa de diálogo Opções](../ide/reference/general-environment-options-dialog-box.md).
 
 > [!NOTE]
 > As janelas de ferramentas que têm ocultar automaticamente habilitado poderão ser exibidas temporariamente quando a janela estiver em foco. Para ocultar a janela novamente, selecione um item fora da janela atual. Quando a janela perde o foco, ela não é mais exibida.
 
 ### <a name="use-a-second-monitor"></a>Usar um segundo monitor
 
-Se você tiver um segundo monitor e seu sistema operacional der suporte a ele, será possível escolher qual monitor exibirá uma janela. Você pode até agrupar várias janelas juntas no *Rafts* em outros monitores.
+Se você tiver um segundo monitor e seu sistema operacional der suporte a ele, será possível escolher qual monitor exibirá uma janela. Você pode até mesmo agrupar várias *janelas em remos* em outros monitores.
 
 > [!TIP]
-> É possível criar várias instâncias do **Gerenciador de Soluções** e movê-las para outro monitor. Clique com o botão direito do mouse na janela e escolha **Novo Modo de Exibição do Gerenciador de Soluções**. Você pode retornar todas as janelas de volta ao monitor original clicando duas vezes ao escolher a tecla **Ctrl** .
+> É possível criar várias instâncias do **Gerenciador de Soluções** e movê-las para outro monitor. Clique com o botão direito do mouse na janela e escolha **Novo Modo de Exibição do Gerenciador de Soluções**. Você pode retornar todas as janelas de volta para o monitor original clicando duas vezes ao escolher a **tecla Ctrl.**
 
 ### <a name="reset-name-and-switch-between-window-layouts"></a>Redefinir, nomear e mudar entre layouts de janela
 
@@ -169,33 +169,33 @@ Primeiro, crie uma solução de teste que tem dois projetos, cada um com um layo
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Crie um novo projeto de **aplicativo do WPF** em C#. Imagine que, neste projeto, você vai estar desenvolvendo uma interface do usuário. Você deseja maximizar o espaço da janela de designer e tirar outras janelas de ferramentas do caminho.
+1. Crie um novo projeto de aplicativo **WPF em** C#. Imagine que, neste projeto, você vai estar desenvolvendo uma interface do usuário. Você deseja maximizar o espaço da janela de designer e tirar outras janelas de ferramentas do caminho.
 
 ::: moniker-end
 
-2. Se você tiver vários monitores, puxe a janela de **Gerenciador de soluções** e a janela **Propriedades** para o segundo monitor. Em um sistema de monitor único, tente fechar todas as janelas exceto o designer.
+2. Se você tiver vários monitores, escareça a janela **Gerenciador de Soluções** e a **janela** Propriedades para o segundo monitor. Em um sistema de monitor único, tente fechar todas as janelas exceto o designer.
 
-3. Pressione **Ctrl** + **ALT** + **X** para exibir a janela **caixa de ferramentas** . Se a janela estiver encaixada, arraste-a para que ela flutue em algum lugar que você gostaria de posicioná-la.
+3. Pressione **Ctrl** + **Alt** + **X para** exibir a janela Caixa **de** Ferramentas. Se a janela estiver encaixada, arraste-a para que ela flutue em algum lugar que você gostaria de posicioná-la.
 
-4. Pressione **F5** para colocar o Visual Studio em modo de depuração. Ajuste a posição das janelas **automáticos**, **pilha de chamadas** e depuração de **saída** da maneira desejada. O layout que você está prestes a criar será aplicado ao modo de edição e ao modo de depuração.
+4. Pressione **F5** para colocar o Visual Studio em modo de depuração. Ajuste a posição das **janelas Autos,** **Pilha de Chamada** e Depuração de Saída da maneira que você deseja.  O layout que você está prestes a criar será aplicado ao modo de edição e ao modo de depuração.
 
-5. Quando os layouts no modo de depuração e no modo de edição estiverem como você deseja, escolha **janela**  >  **salvar layout da janela**. Chame esse layout de "Designer".
+5. Quando os layouts no modo de depuração e no modo de edição são como você deseja, escolha **Janela**  >  **Salvar Layout da Janela**. Chame esse layout de "Designer".
 
-     Observe que o novo layout é atribuído ao próximo atalho de teclado da lista reservada de **Ctrl** + **ALT** + **1... 0**.
+     Observe que o novo layout recebe o próximo atalho de teclado da lista reservada **ctrl** + **Alt** + **1...0**.
 
 #### <a name="create-a-database-project-and-layout"></a>Criar um layout e um projeto de banco de dados
 
 1. Adicione um novo projeto de **Banco de Dados do SQL Server** à solução.
 
-2. Clique com o botão direito do mouse no novo projeto no **Gerenciador de soluções** e escolha **Exibir no Pesquisador de objetos**. Isso exibe a janela **Gerenciador de Objetos do SQL Server**, que permite acessar tabelas, modos de exibição e outros objetos em seu banco de dados. É possível fazer essa janela flutuar ou deixá-la encaixada. Ajuste as outras janelas de ferramentas da maneira como você as desejar. Para obter maior realismo, é possível adicionar um banco de dados real, mas isso não é necessário para esse passo a passo.
+2. Clique com o botão direito do mouse no novo projeto **no Gerenciador de Soluções** e escolha Exibir **no Pesquisador de Objetos**. Isso exibe a janela **Gerenciador de Objetos do SQL Server**, que permite acessar tabelas, modos de exibição e outros objetos em seu banco de dados. É possível fazer essa janela flutuar ou deixá-la encaixada. Ajuste as outras janelas de ferramentas da maneira como você as desejar. Para obter maior realismo, é possível adicionar um banco de dados real, mas isso não é necessário para esse passo a passo.
 
-3. Quando o layout é como você deseja, no menu principal, escolha **janela**  >  **salvar layout da janela**. Chame esse layout de “Projeto de Banco de Dados”. (Não nos preocuparemos com um layout de modo de depuração para este projeto.)
+3. Quando o layout for como você deseja, no menu principal, escolha **Janela Salvar** Layout  >  **da Janela**. Chame esse layout de “Projeto de Banco de Dados”. (Não nos preocuparemos com um layout de modo de depuração para este projeto.)
 
 #### <a name="switch-between-the-layouts"></a>Mudar entre os layouts
 
-Para alternar entre layouts, use os atalhos de teclado ou, no menu principal, escolha **janela**  >  **aplicar layout de janela**.
+Para alternar entre layouts, use os atalhos de teclado ou, no menu principal, **escolha Janela Aplicar** Layout da  >  **Janela**.
 
 ![Aplicar menu de layout de janela](../ide/media/vs2015_applywindowlayout.png)
 
@@ -204,18 +204,18 @@ Depois de aplicar o layout da interface do usuário, observe como ele é preserv
 Se você tiver vários monitores no trabalho e um laptop de um só monitor em casa, será possível criar layouts otimizados para cada computador.
 
 > [!NOTE]
-> Se você aplicar um layout de vários monitor em um sistema de monitor único, as janelas flutuantes inseridas no segundo monitor ficarão ocultas agora atrás da janela do Visual Studio. Você pode trazer essas janelas para a frente pressionando **ALT + TAB**. Se, mais tarde, você abrir o Visual Studio com vários monitores, poderá restaurar as janelas para suas posições especificadas reaplicando o layout.
+> Se você aplicar um layout de vários monitor em um sistema de monitor único, as janelas flutuantes inseridas no segundo monitor ficarão ocultas agora atrás da janela do Visual Studio. Você pode trazer essas janelas para a frente pressionando **Alt + Tab**. Se você abrir o Visual Studio com vários monitores, poderá restaurar as janelas para suas posições especificadas aplicando o layout.
 
 #### <a name="manage-and-roam-your-layouts"></a>Gerenciar e usar perfil móvel nos seus layouts
 
-Você pode remover, renomear ou reordenar seu layout personalizado escolhendo **janela**  >  **gerenciar layouts de janela**. Se você mover um layout, a associação de teclas será ajustada automaticamente para refletir a nova posição na lista. As associações não podem ser modificadas de outra forma e, portanto, você pode armazenar um máximo de 10 layouts por vez.
+Você pode remover, renomear ou reordenar seu layout personalizado escolhendo **Janela**  >  **Gerenciar Layouts de Janela .** Se você mover um layout, a associação de teclas será ajustada automaticamente para refletir a nova posição na lista. As vinculações não podem ser modificadas de outra forma e, portanto, você pode armazenar um máximo de 10 layouts por vez.
 
 ![Gerenciar layouts de janelas](../ide/media/managewindowlayouts.png)
 
-Para lembrar-se do atalho de teclado atribuído ao layout, escolha **janela**  >  **aplicar layout de janela**.
+Para se lembrar qual atalho de teclado é atribuído a qual layout, escolha **Janela Aplicar** Layout  >  **da Janela**.
 
-Esses layouts usam perfis móveis automaticamente entre edições do Visual Studio e também entre instâncias do Blend em computadores separados e de qualquer edição Express para qualquer outra organização Express. No entanto, os layouts não são movidos entre o Visual Studio, o Blend e o Express.
+Esses layouts usam perfis móveis automaticamente entre edições do Visual Studio e também entre instâncias do Blend em computadores separados e de qualquer edição Express para qualquer outra organização Express. No entanto, os layouts não se Visual Studio, Blend e Express.
 
 ## <a name="see-also"></a>Confira também
 
-- [Como: mover-se no IDE](../ide/how-to-move-around-in-the-visual-studio-ide.md)
+- [Como mover-se no IDE](../ide/how-to-move-around-in-the-visual-studio-ide.md)

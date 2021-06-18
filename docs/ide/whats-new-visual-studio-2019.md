@@ -2,7 +2,7 @@
 title: Novidades no Visual Studio 2019
 titleSuffix: ''
 description: Saiba mais sobre os novos recursos do Visual Studio 2019.
-ms.date: 05/28/2021
+ms.date: 06/17/2021
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 1860c399318dbe68c55db9b07068c3dd635481c9
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 2f571860d08d16d85e53148bc1023cb08a1c36d2
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112113054"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307772"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novidades no Visual Studio 2019
 
@@ -220,20 +220,19 @@ Para obter mais informações, consulte a postagem no blog [Propriedades Pinnáv
 
 ## <a name="whats-next"></a>O que vem a seguir
 
-O Visual Studio 2019 é atualizado frequentemente com novos recursos que melhoram ainda mais a experiência de desenvolvimento. Para saber mais sobre nossas inovações mais recentes, confira o [blog Visual Studio .](https://devblogs.microsoft.com/visualstudio/) Para um registro do que lançamos em versão prévia até o momento, dê uma olhada nas Notas sobre a [versão prévia.](/visualstudio/releases/2019/release-notes-preview/) E para ver uma lista do que estamos planejando lançar em seguida, confira o [Visual Studio Roteiro.](/visualstudio/productinfo/vs-roadmap)
+Atualizamos Visual Studio com novos recursos que podem melhorar ainda mais sua experiência de desenvolvimento. Para saber mais sobre nossas inovações mais recentes, confira o [blog Visual Studio .](https://devblogs.microsoft.com/visualstudio/) Para um registro do que lançamos em versão prévia até o momento, dê uma olhada nas Notas sobre a [versão prévia.](/visualstudio/releases/2019/release-notes-preview/) E para ver uma lista do que estamos planejando lançar em seguida, confira o [Visual Studio Roteiro.](/visualstudio/productinfo/vs-roadmap)
 
-Enquanto isso, aqui está um novo recurso que está em uso no momento.
+Enquanto isso, veja o que está em uso no momento:
 
 - **Experiência aprimorada do Git Visual Studio 2019 (versão prévia)**
 
-   Embora a nova experiência de controle de versão do Git agora seja acionada por padrão no Visual Studio 2019 versão [16.8,](/visualstudio/releases/2019/release-notes/)continuamos adicionando recursos para aprimorar a experiência na versão prévia mais recente.
+   Embora a ferramenta de controle de versão do Git seja a experiência padrão no Visual Studio 2019 versão [16.8](/visualstudio/releases/2019/release-notes-history/) e posterior, continuamos adicionando recursos para aprimorar a experiência na versão mais recente do Visual Studio 2019 Preview, versão [16.11.](/visualstudio/releases/2019/release-notes-preview/)
 
    Para obter mais informações, consulte [o Controle de versão Visual Studio](/visualstudio/version-control/) página.
 
-Para obter mais informações sobre a versão prévia do Visual Studio 2019 e um link de download se você quiser experimentar, confira a página &mdash; &mdash; **[Visual Studio Preview.](https://aka.ms/vspreview/)**
+- **A primeira versão pública do Visual Studio 2022 (versão prévia) já está disponível**
 
-> [!TIP]
-> Para saber mais sobre nossa próxima versão, confira a **[postagem Visual Studio blog do Visual Studio 2022.](https://devblogs.microsoft.com/visualstudio/visual-studio-2022/)**
+    A versão prévia pública da nossa próxima versão principal, [Visual Studio 2022,](https://devblogs.microsoft.com/visualstudio/visual-studio-2022/)agora está disponível. A nova versão é mais rápida, mais acessível e mais leve. E, pela primeira vez, Visual Studio é de 64 bits. Para obter um link de download e mais informações, consulte a postagem no blog **[Download Visual Studio 2022 Preview 1](https://devblogs.microsoft.com/visualstudio/?p=232975&preview=true)** .
 
 ## <a name="give-us-feedback"></a>Fornecer comentários
 

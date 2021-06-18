@@ -15,18 +15,18 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: b6e42681d2c25162df22af9711d47b71ba155d67
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a377acba7b8c64503e5e5f821b5f3f833a8d73b2
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867432"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308045"
 ---
 # <a name="add-new-data-sources"></a>Adicionar novas fontes de dados
 
-:::moniker range="vs-2019"
+:::moniker range=">=vs-2019"
 > [!NOTE]
-> Os recursos descritos neste artigo se aplicam ao desenvolvimento .NET Framework Windows Forms e ao WPF. No Visual Studio 2019 (e nas versões anteriores), os recursos não têm suporte para o desenvolvimento do .NET Core, tanto para o WPF quanto para o Windows Forms.
+> Os recursos descritos neste artigo se aplicam ao desenvolvimento .NET Framework Windows Forms e ao WPF. Os recursos não têm suporte para o desenvolvimento do .NET Core, tanto para o WPF quanto para o Windows Forms.
 :::moniker-end
 
 No contexto do .NET Data Tools no Visual Studio, o termo *fonte de dados* refere-se a objetos .NET que se conectam a um armazenamento de dados e disponibilizam os dados para um aplicativo .net. Os designers do Visual Studio podem consumir a saída da fonte de dados para gerar o código clichê que associa os dados a formulários quando você arrasta e solta objetos de banco de **dados da janela Data Sources** . Esse tipo de fonte de dados pode ser:
@@ -65,7 +65,7 @@ A ilustração a seguir mostra um conjunto de um DataSet que foi descartado em u
 
 Você pode criar um conjunto de dados ou um modelo de Entity Framework para usar como uma fonte de dado para um banco de dados ou arquivo de banco de dados.
 
-### <a name="dataset"></a>Conjunto de dados
+### <a name="dataset"></a>Dataset
 
 Para criar um DataSet como uma fonte de dados, execute o **Assistente de configuração de fonte de dados** selecionando **projeto**  >  **Adicionar nova fonte de dados**. Escolha o tipo de fonte de dados **Database** e siga os prompts para especificar uma conexão de banco de dado nova ou existente, ou um arquivo de banco de dados.
 

@@ -1,18 +1,19 @@
 ---
 title: Conectar-se a projetos no Team Explorer
-description: Saiba como usar Team Explorer no Visual Studio para trabalhar com membros da equipe para desenvolver e gerenciar projetos.
+description: Saiba como usar o Team Explorer no Visual Studio para trabalhar com membros da equipe para desenvolver e gerenciar projetos.
 ms.custom: SEO-VS-2020
 ms.date: 06/11/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: 4d3d2c005f32aaebacc251414218f5ae03edf546
-ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
+monikerRange: <=vs-2019
+ms.openlocfilehash: b45399f7a4115ce5946a67caca22ca92148e7434
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2021
-ms.locfileid: "112043010"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308240"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Conectar-se a projetos no Team Explorer
 
@@ -24,113 +25,113 @@ Use a janela de ferramentas **Team Explorer** para coordenar seus esforços de c
 
 ::: moniker range="vs-2019"
 
-Team Explorer conecta o Visual Studio aos repositórios do TFVC (controle de versão do Team Foundation) e aos projetos hospedados em [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) ou em um [Azure DevOps Server](/azure/devops/user-guide/about-azure-devops-services-tfs?view=azure-devops&preserve-view=true) local (anteriormente conhecido como TFS). Você pode gerenciar o código-fonte, itens de trabalho e builds.
+Team Explorer conecta Visual Studio repositórios de controle de versão do Team Foundation (TFVC) e a projetos hospedados no [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) ou em um [Azure DevOps Server](/azure/devops/user-guide/about-azure-devops-services-tfs?view=azure-devops&preserve-view=true) local (anteriormente conhecido como TFS). Você pode gerenciar o código-fonte, itens de trabalho e builds.
 
 > [!IMPORTANT]
-> Com o lançamento do Visual Studio 2019 [**versão 16,8**](/visualstudio/releases/2019/release-notes-history), a experiência de controle de versão do git está ativada por padrão. Se você quiser saber mais sobre como ele é comparado com Team Explorer, consulte a comparação lado a [**lado do git e da página de Team Explorer**](../version-control/git-team-explorer-feature-comparison.md) .
+> Com o lançamento do Visual Studio 2019 [**versão 16.8,**](/visualstudio/releases/2019/release-notes-history)a experiência de controle de versão do Git está em por padrão. Se você quiser saber mais sobre como ele se compara ao Team Explorer, confira a página Comparação lado a lado do [**Git e**](../version-control/git-team-explorer-feature-comparison.md) Team Explorer.
 >
-> No entanto, se você preferir continuar a usar Team Explorer, vá para **ferramentas** > **Opções** >  > **Visualização** do ambiente recursos e, em seguida, alterne a caixa de seleção **nova experiência do usuário do git** .
+> No entanto, se você preferir continuar a usar  o Team Explorer, vá para Ferramentas Opções Recursos de Visualização do Ambiente e, em seguida, alterne a caixa de seleção Nova experiência do usuário >  >  >  **do Git.**
 
-A maneira como você usa Team Explorer para se conectar a um projeto depende da versão do Visual Studio 2019 que você está usando.
+A maneira como Team Explorer para se conectar a um projeto depende da versão Visual Studio 2019 que você está usando.
 
-## <a name="in-version-168-and-later"></a>Na versão 16,8 e posteriores
+## <a name="in-version-168-and-later"></a>Na versão 16.8 e posterior
 
 1. Abra o Visual Studio 2019.
 
-1. Na janela iniciar, selecione **clonar um repositório**.
+1. Na janela inicial, selecione **Clonar um repositório**.
 
-   ![Captura de tela da caixa de diálogo clonar um repositório no Visual Studio 2019 versão 16,8 e posterior, para Azure DevOps](../ide/media/vs-2019/clone-repository.png)
+   ![Captura de tela da caixa de diálogo Clonar um Repositório no Visual Studio 2019 versão 16.8 e posterior, para Azure DevOps](../ide/media/vs-2019/clone-repository.png)
 
-1. Na seção **procurar um repositório** , selecione **Azure DevOps**.
+1. Na seção **Procurar um repositório,** selecione **Azure DevOps**.
 
-    ![Captura de tela da seção ' procurar um repositório ' da caixa de diálogo ' conectar-se a um projeto ' no Visual Studio 2019 versão 16,8 e posterior](../ide/media/vs-2019/browse-repository-azure-devops.png)
+    ![Captura de tela da seção "Procurar um repositório" da caixa de diálogo "Conectar-se a um Projeto" no Visual Studio 2019 versão 16.8 e posterior](../ide/media/vs-2019/browse-repository-azure-devops.png)
 
 1. Se você vir uma janela de entrada, entre em sua conta.
 
-1. Na caixa de diálogo **conectar a um projeto** , escolha o repositório ao qual você deseja se conectar e, em seguida, selecione **clonar**.
+1. Na caixa **de diálogo Conectar-se a** um Projeto, escolha o repo ao qual você deseja se conectar e, em seguida, selecione **Clonar**.
 
-      ![Captura de tela da caixa de diálogo ' conectar-se a um projeto ' gerada no Visual Studio 2019 versão 16,8 e posterior](../ide/media/vs-2019/connect-project-azure-devops.png)
+      ![Captura de tela da caixa de diálogo 'Conectar-se a um Projeto' gerada Visual Studio 2019 versão 16.8 e posterior](../ide/media/vs-2019/connect-project-azure-devops.png)
 
       > [!TIP]
-      > Se você não vir uma lista preenchida previamente de repositórios para se conectar ao, selecione **adicionar Azure DevOps Server** para inserir uma URL de servidor. (Como alternativa, você pode ver um prompt "nenhum servidor encontrado" que inclui links para adicionar um Azure DevOps Server existente ou para criar uma conta do DevOps do Azure.)
+      > Se você não vir uma lista preenchida previamente de repos para se conectar, selecione **Adicionar** Azure DevOps Server para inserir uma URL do servidor. (Como alternativa, você pode ver um prompt "Nenhum servidor encontrado" que inclui links para adicionar um Azure DevOps Server existente ou para criar uma conta Azure DevOps.)
 
-   Em seguida, o Visual Studio abre **Gerenciador de soluções** que mostra as pastas e os arquivos.
+   Em seguida, Visual Studio **abre Gerenciador de Soluções** que mostra as pastas e os arquivos.
 
-1. Selecione a guia **Team Explorer** para exibir as ações de DevOps do Azure.
+1. Selecione a **Team Explorer** para exibir as ações Azure DevOps segurança.
 
-      ![Captura de tela da caixa de diálogo ' Team Explorer ' gerada no Visual Studio 2019 versão 16,8 e posterior](../ide/media/vs-2019/team-explorer-azure-devops.png)
+      ![Captura de tela Team Explorer caixa de diálogo "Team Explorer" gerada Visual Studio 2019 versão 16.8 e posterior](../ide/media/vs-2019/team-explorer-azure-devops.png)
 
-## <a name="in-version-167-and-earlier"></a>Na versão 16,7 e anteriores
+## <a name="in-version-167-and-earlier"></a>Na versão 16.7 e anteriores
 
 1. Abra o Visual Studio 2019.
 
-1. Na janela iniciar, selecione **clonar ou fazer check-out do código**.
+1. Na janela inicial, selecione **Clonar ou confira o código**.
 
-   ![Captura de tela da janela ' criar um novo projeto ' no Visual Studio 2019 versão 16,7 e anterior](../get-started/media/vs-2019/clone-checkout-code-dark.png)
+   ![Captura de tela da janela "Criar um novo projeto" no Visual Studio 2019 versão 16.7 e anteriores](../get-started/media/vs-2019/clone-checkout-code-dark.png)
 
-1. Na seção **procurar um repositório** , selecione **Azure DevOps**.
+1. Na seção **Procurar um repositório,** selecione **Azure DevOps**.
 
-   ![Captura de tela da janela "clonar ou verificar código" com a seção "procurar um repositório" que lista o Azure DevOps no Visual Studio 2019 versão 16,7 e anterior](../get-started/media/vs-2019/clone-checkout-code-git-repo-dark.png)
+   ![Captura de tela da janela "Clonar ou fazer check-out do código" com a seção "Procurar um repositório" que lista Azure DevOps no Visual Studio 2019 versão 16.7 e anteriores](../get-started/media/vs-2019/clone-checkout-code-git-repo-dark.png)
 
    Se você vir uma janela de entrada, entre em sua conta.
 
-1. Na caixa de diálogo **conectar a um projeto** , escolha o repositório ao qual você deseja se conectar e, em seguida, selecione **clonar**.
+1. Na caixa **de diálogo Conectar-se a** um Projeto, escolha o repo ao qual você deseja se conectar e, em seguida, selecione **Clonar**.
 
-      ![Captura de tela da caixa de diálogo ' conectar-se a um projeto ' gerada no Visual Studio 2019 versão 16,7 e anterior](../get-started/media/open-proj-azure-devops-connect-cloud-clone.png)
+      ![Captura de tela da caixa de diálogo 'Conectar-se a um Projeto' gerada Visual Studio 2019 versão 16.7 e anteriores](../get-started/media/open-proj-azure-devops-connect-cloud-clone.png)
 
     > [!NOTE]
     > O que é exibido na caixa de listagem depende dos repositórios Azure DevOps a que você tem acesso.
 
    O Visual Studio abrirá o **Team Explorer** e uma notificação será exibida quando a clonagem for concluída.
 
-     ![Captura de tela da janela de Team Explorer no Visual Studio 2019 versão 16,7 e anterior, após a conclusão do clone](../get-started/media/vs-2019/clone-complete-azure-devops.png)
+     ![Captura de tela da Team Explorer no Visual Studio 2019 versão 16.7 e anteriores, após a conclusão do clone](../get-started/media/vs-2019/clone-complete-azure-devops.png)
 
-1. Para exibir suas pastas e arquivos, selecione o link **Mostrar exibição de pasta** .
+1. Para exibir suas pastas e arquivos, selecione o link **Mostrar Exibição de** Pasta.
 
-     ![Captura de tela da seção soluções da janela Team Explorer no Visual Studio 2019 versão 16,7 e anterior, após a conclusão do clone](../get-started/media/vs-2019/show-folder-view-azure-devops.png)
+     ![Captura de tela da seção Soluções da janela Team Explorer no Visual Studio 2019 versão 16.7 e anteriores, após a conclusão do clone](../get-started/media/vs-2019/show-folder-view-azure-devops.png)
 
      O Visual Studio abre o **Gerenciador de Soluções**.
 
-1. Escolha o link **soluções e pastas** para pesquisar um arquivo de solução (especificamente, um arquivo. sln) a ser aberto.
+1. Escolha o link **Soluções e Pastas** para pesquisar um arquivo de solução (especificamente, um arquivo .sln) a ser aberto.
 
-      ![Captura de tela da notificação de ' soluções e pastas ' de Team Explorer no Visual Studio 2019 versão 16,7 e anterior](../get-started/media/open-proj-repo-solutions-folders.png)
+      ![Captura de tela da notificação de "Soluções e Pastas" Team Explorer no Visual Studio 2019 versão 16.7 e anteriores](../get-started/media/open-proj-repo-solutions-folders.png)
 
-   Se você não tiver um arquivo de solução em seu repositório, uma mensagem "nenhuma solução encontrada&quot; será exibida. No entanto, você pode clicar duas vezes em qualquer arquivo no menu de pastas para abri-lo no editor de códigos do Visual Studio.
+   Se você não tiver um arquivo de solução no seu repo, será exibida uma mensagem "Sem Soluções Encontradas&quot;. No entanto, você pode clicar duas vezes em qualquer arquivo no menu de pastas para abri-lo no editor de códigos do Visual Studio.
 
 ::: moniker-end
 
 ::: moniker range=&quot;vs-2017&quot;
 
-![Home page do Team Explorer no Visual Studio](media/team-explorer/team-explorer.png &quot;A home page do Team Explorer no Visual Studio.")
+![Home page do Team Explorer no Visual Studio](media/team-explorer/team-explorer.png &quot;A Team Explorer - Home page no Visual Studio.")
 
 > [!TIP]
-> Se você abrir o Visual Studio e **Team Explorer** não aparecer, abra-o escolhendo **Exibir**  >  **Team Explorer** na barra de menus ou pressionando **Ctrl** + **&#92;**, **Ctrl** + **M**.
+> Se você abrir Visual Studio e **Team Explorer** não aparecer, abra-o escolhendo Exibir Team Explorer na barra de menus ou pressionando  >   **Ctrl** + **&#92;**, **Ctrl** + **M**.
 
 ## <a name="connect-to-a-project-or-repository"></a>Conectar-se a um projeto ou um repositório
 
 Conecte-se a um projeto ou um repositório na página **Conectar**.
 
-![Página Conectar no Team Explorer](media/team-explorer/connect.png "A página Team Explorer-Connect no Visual Studio")
+![Página Conectar no Team Explorer](media/team-explorer/connect.png "A Team Explorer - Conectar no Visual Studio")
 
 Para se conectar a um projeto:
 
 1. Abra a página **Conectar** escolhendo o ícone **Gerenciar Conexões**.
 
-   ![Botão Gerenciar Conexões no Team Explorer](media/team-explorer/manage-connections.png "O botão Team Explorer-gerenciar conexões no Visual Studio.")
+   ![Botão Gerenciar Conexões no Team Explorer](media/team-explorer/manage-connections.png "O Team Explorer - Gerenciar Conexões no Visual Studio.")
 
-1. Na página **conectar** , escolha **gerenciar conexões** > **conectar a um projeto**.
+1. Na página **Conectar,** escolha Gerenciar  > **Conexões Conectar-se a um projeto**.
 
-   ![Conectar-se a um projeto no Team Explorer](media/team-explorer/connect-project.png "A opção Team Explorer-conectar a um projeto no Visual Studio.")
+   ![Conectar-se a um projeto no Team Explorer](media/team-explorer/connect-project.png "A Team Explorer - Conectar-se a um projeto no Visual Studio.")
 
 > [!TIP]
-> Se você quiser abrir um projeto de um repositório, consulte [abrir um projeto de um repositório](../get-started/tutorial-open-project-from-repo-visual-studio-2017.md). Se você quiser criar um novo projeto ou adicionar usuários a um projeto, consulte [criar um projeto (Azure DevOps)](/azure/devops/organizations/projects/create-project) e [Adicionar usuários a um projeto ou equipe (Azure DevOps)](/azure/devops/organizations/security/add-users-team-project).
+> Se você quiser abrir um projeto de um repo, consulte [Abrir um projeto de um repo](../get-started/tutorial-open-project-from-repo-visual-studio-2017.md). Se você quiser criar um novo projeto ou adicionar usuários a um projeto, consulte Criar um projeto [(Azure DevOps)](/azure/devops/organizations/projects/create-project) e Adicionar usuários a um projeto ou equipe [(Azure DevOps)](/azure/devops/organizations/security/add-users-team-project).
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Confira também
 
-- [Compare o git e o Team Explorer lado a lado](git-team-explorer-feature-comparison.md)
-- [A nova experiência de git no Visual Studio](git-with-visual-studio.md)
+- [Comparar Git e Team Explorer lado a lado](git-team-explorer-feature-comparison.md)
+- [A nova experiência do Git no Visual Studio](git-with-visual-studio.md)
 - [Referência do Team Explorer](reference/team-explorer-reference.md)
 - [Conectar-se a um projeto (Azure DevOps)](/azure/devops/organizations/projects/connect-to-projects)
 - [Solucionar problemas de conexão com um projeto](/azure/devops/user-guide/troubleshoot-connection?view=azure-devops&preserve-view=true)

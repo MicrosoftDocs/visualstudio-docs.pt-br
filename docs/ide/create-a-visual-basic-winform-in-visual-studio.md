@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 974696d1ff7f8e82dab8ef2024710ce645b56c72
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 4d3c1aac5bb06ba29b1c70c39db900e704b2f3ec
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107297126"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308318"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>Criar um aplicativo do Windows Forms no Visual Studio com o Visual Basic
 
@@ -33,6 +33,15 @@ Se você ainda não instalou o Visual Studio, vá para a página de [downloads d
 ::: moniker range="vs-2019"
 
 Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
+
+> [!NOTE]
+> Algumas das capturas de tela neste tutorial usam o tema escuro. Se você não estiver usando o tema escuro, mas quiser usá-lo, confira a página [Personalizar o IDE e o Editor do Visual Studio](../ide/quickstart-personalize-the-ide.md) para saber como.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Se você ainda não instalou o Visual Studio, vá para a página de [downloads do visual studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) para instalá-lo gratuitamente.
 
 > [!NOTE]
 > Algumas das capturas de tela neste tutorial usam o tema escuro. Se você não estiver usando o tema escuro, mas quiser usá-lo, confira a página [Personalizar o IDE e o Editor do Visual Studio](../ide/quickstart-personalize-the-ide.md) para saber como.
@@ -57,9 +66,9 @@ Primeiro, você criará um projeto de aplicativo do Visual Basic. O tipo de proj
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Abra o Visual Studio 2019.
+1. Abra o Visual Studio.
 
 1. Na janela iniciar, escolha **criar um novo projeto**.
 

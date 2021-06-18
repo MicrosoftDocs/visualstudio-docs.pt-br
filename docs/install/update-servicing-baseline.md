@@ -5,26 +5,26 @@ ms.date: 07/17/2019
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: ''
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 2c8510a1ba83243d2d92b538d80876a8b0f20079
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 03a192657a46c2db15cb2d1121735905f06da478
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935645"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306664"
 ---
 # <a name="update-visual-studio-while-on-a-servicing-baseline"></a>Atualizar o Visual Studio enquanto estiver em uma linha de base de manutenção
 
-Atualizamos o Visual Studio com frequência durante seu ciclo de vida de produto. Há dois tipos de atualizações: 
+Atualizamos o Visual Studio com frequência durante seu ciclo de vida de produto. Há dois tipos de atualizações:
 
-* Atualizações de versão **secundária** &mdash; por exemplo, 16,0 a 16,1 &mdash; que incluem novos recursos e componentes.  
+* **Atualizações de versão secundárias** &mdash; por exemplo, 16.0 a 16.1 &mdash; que incluem novos recursos e componentes.  
 * **Atualizações de manutenção**, por exemplo, 16.0.4 a 16.0.5, que incluem apenas correções direcionadas para problemas críticos.
 
 Os administradores do Enterprise podem optar por manter seus clientes em uma linha de base de manutenção. Uma linha de base de manutenção é compatível com as atualizações de manutenção por um ano após o lançamento da próxima linha de base de manutenção.
@@ -51,7 +51,7 @@ Os administradores que usam uma instalação de layout de rede devem modificar o
 
 Para uma instalação baseada na internet, adicione `--channelUri` com um manifesto de canal inexistente à linha de comando usada para iniciar a instalação. Isso desabilita o Visual Studio de usar a versão mais recente disponível para uma atualização. Aqui está um exemplo:
 
-```cmd
+```shell
 vs_enterprise.exe --channelUri c:\doesnotexist.chman
 ```
 
@@ -69,19 +69,31 @@ Para uma instalação baseada na internet, execute o novo instalador de versão 
 
 1. Atualize o Instalador do Visual Studio:
 
-    ```cmd
+    ```shell
     vs_enterprise.exe --quiet --update
     ```
 
+::: moniker range="vs-2019"
+ 
 2. Atualize o aplicativo do Visual Studio em si:
-
-    ```cmd
+    ```shell
     vs_enterprise.exe update --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" --quiet --wait --norestart --channelUri c:\doesnotexist.chman
     ```
 
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+2. Atualize o aplicativo do Visual Studio em si:
+    ```shell
+    vs_enterprise.exe update --installPath "C:\Program Files\Microsoft Visual Studio\2022\Enterprise" --quiet --wait --norestart --channelUri c:\doesnotexist.chman
+    ```
+
+::: moniker-end
+
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 * [Instalar o Visual Studio](install-visual-studio.md)
 * [Guia do administrador do Visual Studio](visual-studio-administrator-guide.md)
@@ -89,4 +101,4 @@ Para uma instalação baseada na internet, execute o novo instalador de versão 
 * [Ferramentas para detectar e gerenciar instâncias do Visual Studio](tools-for-managing-visual-studio-instances.md)
 * [Como definir as configurações em um arquivo de resposta](automated-installation-with-response-file.md)
 * [Atualizações de controle para implantações do Visual Studio com base em rede](controlling-updates-to-visual-studio-deployments.md)
-* [Ciclo de vida do produto Visual Studio e manutenção](/visualstudio/releases/2019/servicing/)
+* [Visual Studio ciclo de vida e manutenção do produto](/visualstudio/releases/2019/servicing/)

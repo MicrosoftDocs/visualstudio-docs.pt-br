@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: eaba06b2da73fc0bc80219ce58baff49a760ebc0
-ms.sourcegitcommit: 529e1716924c3e1ac8a750550b996ad3c79f353b
+ms.openlocfilehash: f632922078383708319e610d82a4c94a58619424
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "112066963"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306391"
 ---
 # <a name="what-are-solutions-and-projects-in-visual-studio"></a>O que são soluções e projetos Visual Studio?
 
@@ -92,9 +92,9 @@ A barra de ferramentas na parte superior do **Gerenciador de Soluções** possui
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-![Captura de tela Gerenciador de Soluções com dois projetos no Visual Studio 2019.](../ide/media/solution-explorer.png)
+![Captura de tela Gerenciador de Soluções com dois projetos em Visual Studio.](../ide/media/solution-explorer.png)
 
 A barra de ferramentas na parte superior do **Gerenciador de Soluções** tem botões para alternar de uma exibição de solução para [](managing-project-and-solution-properties.md) uma exibição de pasta, filtrar alterações pendentes, mostrar todos os arquivos, todos os nós, exibir páginas de propriedades, visualizar código no editor de [código](writing-code-in-the-code-and-text-editor.md)e muito mais.
 

@@ -12,12 +12,12 @@ ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 75019a9f292a07c1dffe6cce5118ef6502014ce6
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 0400c29e53c45ad9a98e7edca78fd2cf9741fcf0
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107296593"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307746"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>Etapa 1: Criar um projeto e adicionar rótulos ao formulário
 
@@ -43,7 +43,7 @@ Nas primeiras etapas do desenvolvimento deste teste, você o cria o projeto, e a
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. Na janela iniciar, escolha **criar um novo projeto**.
 
@@ -210,6 +210,6 @@ Nas primeiras etapas do desenvolvimento deste teste, você o cria o projeto, e a
 
 ## <a name="to-continue-or-review"></a>Para continuar ou revisar
 
-- Para ir para a próxima etapa do tutorial, consulte **[etapa 2: criar um problema de adição aleatória](../ide/step-2-create-a-random-addition-problem.md)**.
+- Para ir para a próxima etapa do tutorial, consulte **[Etapa 2: Criar um problema de adição aleatório.](../ide/step-2-create-a-random-addition-problem.md)**
 
 - Para retornar ao tópico de visão geral, veja [Tutorial 2: Criar um teste de matemática temporizado](../ide/tutorial-2-create-a-timed-math-quiz.md).

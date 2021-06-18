@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 9a2d362bc9fd22f7bb1db2fa005534f2f67e3155
-ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
+ms.openlocfilehash: 0728011c05d47996a313c11a18f31a196ec08e10
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760959"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306493"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Tutorial: Criar um ASP.NET Core com TypeScript no Visual Studio
 
@@ -31,6 +31,12 @@ Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual St
 ::: moniker range=">=vs-2019"
 
 Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Se você ainda não tiver instalado o Visual Studio 2022 Preview, acesse a página de downloads do [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
@@ -241,7 +247,7 @@ Neste tutorial, você começa com um projeto simples que contém código para um
 
 1. Escolha **Arquivo TypeScript,** digite *library.ts* e escolha **Adicionar**.
 
-1. Em *library. TS*, adicione o código a seguir.
+1. Em *library.ts*, adicione o código a seguir.
 
    ```ts
    var jqtest = {
@@ -256,20 +262,20 @@ Neste tutorial, você começa com um projeto simples que contém código para um
    jqtest.showMsg();
    ```
 
-   Para simplificar, esse código exibe uma mensagem usando o jQuery e um alerta.
+   Para simplificar, esse código exibe uma mensagem usando jQuery e um alerta.
 
-   Com as definições de tipo do TypeScript para o jQuery adicionado, você obtém suporte do IntelliSense em objetos jQuery ao digitar um "." seguindo um objeto jQuery, como mostrado aqui.
+   Com as definições de tipo TypeScript para jQuery adicionadas, você obterá suporte ao IntelliSense em objetos jQuery quando digitar um "." após um objeto jQuery, conforme mostrado aqui.
 
-   ![jQuery IntelliSense](../javascript/media/aspnet-core-ts-jquery-intellisense.png)
+   ![jquery IntelliSense](../javascript/media/aspnet-core-ts-jquery-intellisense.png)
 
-1. Em _Layout. cshtml, atualize as referências de script a serem incluídas `library.js` .
+1. Em _Layout.cshtml, atualize as referências de script para incluir `library.js` .
 
    ```html
    <script src="~/js/app.js"></script>
    <script src="~/js/library.js"></script>
    ```
 
-1. Em index. cshtml, adicione o seguinte HTML ao final do arquivo.
+1. Em Index.cshtml, adicione o HTML a seguir ao final do arquivo.
 
    ```html
    <div>
@@ -281,16 +287,16 @@ Neste tutorial, você começa com um projeto simples que contém código para um
 
     O aplicativo é aberto no navegador.
 
-    Clique em **OK** no alerta para ver a página atualizada para a **versão do jQuery: 3.3.1!!**.
+    Clique **em OK** no alerta para ver a página atualizada para a versão **jQuery é: 3.3.1!!**.
 
-    ![exemplo de jQuery](../javascript/media/aspnet-core-ts-jquery-example.png)
+    ![Exemplo de jquery](../javascript/media/aspnet-core-ts-jquery-example.png)
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Talvez você queira saber mais detalhes sobre como usar o TypeScript com ASP.NET Core. Se você estiver interessado em programação AngularJS no Visual Studio, poderá usar a [extensão de serviço de linguagem AngularJS](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio) para o Visual Studio.
+Talvez você queira saber mais detalhes sobre como usar o TypeScript com ASP.NET Core. Se você estiver interessado em programação AngularJS no Visual Studio, poderá usar a extensão de serviço de [linguagem AngularJS](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio) para Visual Studio.
 
 > [!div class="nextstepaction"]
 > [ASP.NET Core e TypeScript](https://www.typescriptlang.org/docs/handbook/asp-net-core.html)
 
 > [!div class="nextstepaction"]
-> [Extensão de serviço de linguagem AngularJS](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio)
+> [Extensão do serviço de linguagem AngularJS](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio)

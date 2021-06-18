@@ -19,12 +19,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e9a90198ce4cf3dc54eedbf80bbf4ffbad634cbc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 007e82ee7c1c2839ba266794432605f1f92a1669
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836482"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307785"
 ---
 # <a name="autorecover-environment-options-dialog-box"></a>Caixa de diálogo AutoRecuperação, Ambiente, Opções
 
@@ -35,6 +35,12 @@ Para acessar essa caixa de diálogo, acesse **ferramentas**  >  **Opções**  > 
 :::image type="content" source="media/autorecover-options.png" alt-text="Captura de tela da seção AutoRecuperação na caixa de diálogo opções":::
 
 **Salvar informações de AutoRecuperação a cada [n] minutos**
+
+::: moniker range=">=vs-2022"
+
+Use esta opção para personalizar a frequência com que um arquivo é salvo automaticamente no editor. Para arquivos salvos anteriormente, o Visual Studio salva uma cópia do arquivo em ***%LocalAppData%\Microsoft\VisualStudio\BackupFiles \\ [ProjectName]***. Se o arquivo for novo e você ainda não o tiver salvo, o Visual Studio o salvará automaticamente usando um nome de arquivo gerado aleatoriamente.
+
+::: moniker-end
 
 ::: moniker range="vs-2019"
 

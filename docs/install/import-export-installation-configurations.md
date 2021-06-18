@@ -11,25 +11,25 @@ helpviewer_keywords:
 - export installation configuration
 - install Visual Studio
 - Visual Studio installer
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 043622d08b5389db8bf4cce80450f62c070a0ace
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1fc4b181436b5e214300b334163b9257af0d0d35
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949461"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307460"
 ---
 # <a name="import-or-export-installation-configurations"></a>Importar ou exportar configurações de instalação
 
 Você pode configurar o Visual Studio em sua organização usando arquivos de configuração de instalação. Para fazer isso, basta exportar as informações de componente e da carga de trabalho para um arquivo .vsconfig usando o instalador do Visual Studio. Em seguida, você pode importar a configuração em instalações novas ou existentes e compartilhá-la com outras pessoas.
 
-Veja como.
+Veja aqui como fazer isso.
 
 ::: moniker range="vs-2017"
 
@@ -66,11 +66,11 @@ Quando estiver pronto para importar um arquivo de configuração de instalação
 
 1. Verifique se você tem as cargas de trabalho e os componentes que deseja e escolha **Fechar**.
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ## <a name="automatically-install-missing-components"></a>Instalar automaticamente os componentes ausentes
 
-**Novo no Visual Studio 2019**: quando você salva um arquivo. vsconfig no diretório raiz da solução e, em seguida, abre uma solução, o Visual Studio detecta automaticamente quais componentes estão ausentes e solicita que você os instale.
+Novidade no **Visual Studio 2019:** quando você salva um arquivo .vsconfig no diretório raiz da solução e, em seguida, abre uma solução, o Visual Studio detecta automaticamente quais componentes estão ausentes e solicita que você os instale.
 
 ![O Gerenciador de Soluções sugere os componentes adicionais](../install/media/vs-2019/solution-explorer-config-file.png)
 
@@ -78,7 +78,7 @@ Você também pode gerar um arquivo .vsconfig diretamente no Gerenciador de Solu
 
 1. Clique com botão direito do mouse no seu arquivo de solução.
 
-1. Escolha **Adicionar** > **Arquivo de configuração de instalação**.
+1. Escolha **Adicionar Arquivo** de > **Configuração de Instalação**.
 
 1. Confirme o local no qual deseja salvar o arquivo .vsconfig e escolha **Revisar detalhes**.
 

@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 76edf9f1af414a67abd83cec3c2f597c6cdf8707
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 86310346566e8c937c2769a9fcc9f0d4e98b3ae2
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683457"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308435"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>Inspecione as propriedades XAML durante a depuração
 
@@ -26,7 +26,7 @@ Você pode usar essas ferramentas nas seguintes configurações:
 |Tipo de aplicativo|Sistema operacional e ferramentas|
 |-----------------|--------------------------------|
 |Aplicativos Windows Presentation Foundation (4,0 e superior)|Windows 7 e posterior|
-|Aplicativos Universais do Windows|Windows 10 e posterior, com o [SDK do Windows 10](https://dev.windows.com/downloads/windows-10-sdk)|
+|Aplicativos universais do Windows|Windows 10 e posterior, com o [SDK do Windows 10](https://dev.windows.com/downloads/windows-10-sdk)|
 
 ## <a name="look-at-elements-in-the-live-visual-tree"></a>Examinar elementos na árvore visual ao vivo
 
@@ -34,7 +34,7 @@ Vamos começar com um aplicativo WPF muito simples que tem um modo de exibição
 
 ### <a name="create-the-project"></a>Criar o projeto
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. Crie um novo aplicativo WPF c# (**arquivo** > **novo** > **projeto**, digite "C# WPF", escolha o modelo de projeto de **aplicativo do WPF** , nomeie o projeto **TestXAML** e, em seguida, verifique se o **.NET Core 3,1** aparece na lista suspensa **estrutura de destino** .
 
@@ -64,7 +64,7 @@ Vamos começar com um aplicativo WPF muito simples que tem um modo de exibição
    </Window>
    ```
 
-1. Adicione o seguinte manipulador de comando ao arquivo MainWindow.xaml.cs:
+1. Adicione o seguinte manipulador de comando ao arquivo MainWindow. XAML. cs:
 
    ```csharp
    int count;

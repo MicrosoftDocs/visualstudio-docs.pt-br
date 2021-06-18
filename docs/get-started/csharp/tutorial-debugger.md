@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6eac51637b3f3b732f1293337080ef851f34c459
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 2cbc35eaabec2dae8bd8b97ba22f55a50fc436c3
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101682750"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308448"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Tutorial: aprenda a depurar código C# usando o Visual Studio
 
@@ -61,6 +61,12 @@ Se você ainda não instalou o Visual Studio, vá para a página de [downloads d
 
 ::: moniker-end
 
+::: moniker range="vs-2022"
+
+Se você ainda não instalou o Visual Studio 2022 Preview, vá para a página de [downloads do visual studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) para instalá-lo gratuitamente.
+
+::: moniker-end
+
 Se você precisar instalar a carga de trabalho, mas já tiver o Visual Studio, vá para **ferramentas**  >  **obter ferramentas e recursos...**, que abre o instalador do Visual Studio. O Instalador do Visual Studio é iniciado. Escolha a carga de trabalho de **desenvolvimento de plataforma cruzada do .NET Core** e, em seguida, escolha **Modificar**.
 
 ## <a name="create-a-project"></a>Criar um projeto
@@ -81,9 +87,9 @@ Primeiro, você criará um projeto de aplicativo de console do .NET Core. O tipo
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Abra o Visual Studio 2019.
+1. Abra o Visual Studio.
 
    Se a janela iniciar não estiver aberta, escolha **arquivo** > **Iniciar janela**.
 
@@ -108,7 +114,7 @@ Primeiro, você criará um projeto de aplicativo de console do .NET Core. O tipo
 
 ## <a name="create-the-application"></a>Criar o aplicativo
 
-1. No *Program.cs*, substitua todo o código padrão pelo código a seguir, em vez disso:
+1. Em *Program. cs*, substitua todo o código padrão pelo código a seguir, em vez disso:
 
     ```csharp
     using System;

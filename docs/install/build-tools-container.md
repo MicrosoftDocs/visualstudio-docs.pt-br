@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: fc3133692007a53b48d658ed284d6af0bde0af4a
-ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
+ms.openlocfilehash: e29e780d146fec63bc1375ed16f72067f9b4ccee
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2021
-ms.locfileid: "112043075"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307629"
 ---
 # <a name="install-build-tools-into-a-container"></a>Instalar Ferramentas de Build em um contêiner
 
@@ -103,7 +103,7 @@ Salve o Dockerfile de exemplo a seguir em um novo arquivo no disco. Se o nome do
    
    ::: moniker-end
 
-   ::: moniker range="vs-2019"
+   ::: moniker range=">=vs-2019"
 
    ```dockerfile
    # escape=`
@@ -164,7 +164,7 @@ Salve o Dockerfile de exemplo a seguir em um novo arquivo no disco. Se o nome do
 
    ::: moniker-end
 
-   ::: moniker range="vs-2019"
+   ::: moniker range=">=vs-2019"
 
    ```shell
    docker build -t buildtools2019:latest -m 2GB .
@@ -192,7 +192,7 @@ Agora que a imagem foi criada, é possível executá-la em um contêiner para fa
 
    ::: moniker-end
 
-   ::: moniker range="vs-2019"
+   ::: moniker range=">=vs-2019"
 
    ```shell
    docker run -it buildtools2019
