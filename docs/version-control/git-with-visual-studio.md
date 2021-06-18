@@ -1,140 +1,140 @@
 ---
-title: A experiência do Git no Visual Studio 2019
+title: A experiência do git no Visual Studio 2019
 titleSuffix: ''
-description: Saiba como a nova experiência integrada do Git no Visual Studio 2019 pode ajudá-lo a ser mais produtivo.
-ms.date: 04/01/2021
+description: Saiba como a nova experiência integrada do git no Visual Studio 2019 pode ajudá-lo a ser mais produtivo.
+ms.date: 06/17/2021
 ms.topic: overview
 ms.author: tglee
 author: TerryGLee
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.manager: jmartens
-ms.openlocfilehash: 7e8f428ea82fb36abf944b06c22e73f1b9ca9fb6
-ms.sourcegitcommit: 113b7df611583307d3965984233a33355d6b0318
+ms.openlocfilehash: ae5d17bfe09f2ebac5abb37c6d6ceed59c5398d3
+ms.sourcegitcommit: a9526ab1556c47570286c7a7d3314af67fd1dcf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2021
-ms.locfileid: "112126548"
+ms.lasthandoff: 06/18/2021
+ms.locfileid: "112365450"
 ---
-# <a name="git-experience-in-visual-studio"></a>Experiência do Git no Visual Studio
+# <a name="git-experience-in-visual-studio"></a>Experiência de git no Visual Studio
 
-O Git agora é a experiência de controle de versão padrão Visual Studio 2019. Desde [a versão 16.6,](/visualstudio/releases/2019/release-notes-v16.6)trabalhamos na criação do conjunto de recursos e na iteração com base em seus comentários. A nova experiência do Git é 1000001 para todos com o lançamento da [versão 16.8.](/visualstudio/releases/2019/release-notes/)
+O Git agora é a experiência de controle de versão padrão no Visual Studio 2019. Desde a [versão 16,6](/visualstudio/releases/2019/release-notes-v16.6), trabalhamos na criação do conjunto de recursos e na iteração com base em seus comentários. A nova experiência de git é ativada por padrão para todos com o lançamento da [versão 16,8](/visualstudio/releases/2019/release-notes/).
 
 > [!TIP]
-> O Git é o sistema de controle de versão moderno mais amplamente usado, portanto, se você é um desenvolvedor profissional ou se está aprendendo a codificar, o Git pode ser muito útil para você. Se você for novo no Git, o https://git-scm.com/ site será um bom lugar para começar. Lá, você encontrará folhas de consulta, um livro online popular e vídeos básicos do Git.
+> O Git é o sistema de controle de versão moderno mais usado, portanto, se você for um desenvolvedor profissional ou se estiver aprendendo a codificar, o Git pode ser muito útil para você. Se você for novo no git, o https://git-scm.com/ site será um bom lugar para começar. Lá, você encontrará folhas de dicas, um livro online popular e vídeos de informações básicas sobre o git.
 
 ## <a name="how-to-use-git-in-visual-studio"></a>Como usar o Git no Visual Studio
 
-Vamos mostrar como usar a nova experiência do Git no Visual Studio 2019, mas se você quiser fazer um tour rápido primeiro, confira o seguinte vídeo: <br><br>*Comprimento do vídeo: 5,27 minutos*
+Vamos orientá-lo sobre como usar a nova experiência de git no Visual Studio 2019, mas se você quiser fazer um tour rápido primeiro, confira o seguinte vídeo: <br><br>*Tamanho do vídeo: 5,27 minutos*
 
 > [!VIDEO https://www.youtube.com/embed/UHrAg3iKoe0]
 
-Há três maneiras de começar a usar o Git com Visual Studio para ser mais produtivo:
+Há três maneiras de começar a usar o Git com o Visual Studio para ser mais produtivo:
 
-- [Abra um repositório Git existente.](#open-an-existing-local-repository) Se o código já estiver em seu computador, você poderá abri-lo usando Arquivo Aberto   >    >  **Projeto/Solução** (ou Pasta ) e o Visual Studio detectará automaticamente se ele tem um repositório Git inicializado.
-- [Crie um repositório Git.](#create-a-new-git-repository) Se o código não estiver associado ao Git, você poderá criar um novo repositório Git.
-- [Clone um repositório Git existente.](#clone-an-existing-git-repository) Se o código em que você gostaria de trabalhar não estiver em seu computador, você poderá clonar todos os repositórios remotos existentes.
+- [Abra um repositório git existente](#open-an-existing-local-repository). Se o seu código já estiver em seu computador, você poderá abri-lo usando **arquivo**  >  **aberto**  >  **projeto/solução** (ou **pasta**) e o Visual Studio detectará automaticamente se ele tem um repositório git inicializado.
+- [Crie um novo repositório git](#create-a-new-git-repository). Se o seu código não estiver associado ao git, você poderá criar um novo repositório git.
+- [Clonar um repositório git existente](#clone-an-existing-git-repository). Se o código no qual você deseja trabalhar não estiver em seu computador, você poderá clonar quaisquer repositórios remotos existentes.
 
 > [!NOTE]
-> A partir da [versão 16.8,](/visualstudio/releases/2019/release-notes/)o Visual Studio 2019 inclui uma experiência de conta do GitHub totalmente integrada. Agora você pode adicionar as contas do GitHub e GitHub Enterprise ao seu keychain. Você poderá adicioná-los e adotá-los da mesma forma que faz com as contas da Microsoft, o que significa que você terá um tempo mais fácil de acessar seus recursos do GitHub em Visual Studio. Para obter mais informações, consulte [a página Trabalhar com contas do GitHub Visual Studio](../ide/work-with-github-accounts.md) dados.
+> Começando também com a [versão 16,8](/visualstudio/releases/2019/release-notes/), o Visual Studio 2019 inclui uma experiência de conta do GitHub totalmente integrada. Agora você pode adicionar as contas do GitHub e do GitHub empresarial ao seu conjunto de chaves. Você poderá adicioná-los e aproveitá-los da mesma forma como faz com contas da Microsoft, o que significa que você terá um tempo mais fácil de acessar seus recursos do GitHub no Visual Studio. Para obter mais informações, consulte a página [trabalhar com contas do GitHub no Visual Studio](../ide/work-with-github-accounts.md) .
 
-## <a name="create-a-new-git-repository"></a>Criar um repositório Git
+## <a name="create-a-new-git-repository"></a>Criar um novo repositório git
 
-Se o código não estiver associado ao Git, você poderá começar criando um novo repositório Git. Para fazer isso, selecione **Git**  >  **Create Git Repository** na barra de menus. Em seguida, na caixa de diálogo Criar um repositório **Git,** insira suas informações.
+Se o seu código não estiver associado ao git, você poderá começar criando um novo repositório git. Para fazer isso, selecione **git**  >  **criar repositório git** na barra de menus. Em seguida, na caixa de diálogo **criar um repositório git** , insira suas informações.
 
-:::image type="content" source="media/git-create-repository.png" alt-text="A caixa de diálogo Criar um Repositório Git Visual Studio.":::
+:::image type="content" source="media/git-create-repository.png" alt-text="A caixa de diálogo criar um repositório git no Visual Studio.":::
 
-A **caixa de diálogo Criar um** repositório Git facilita o push do novo repositório para o GitHub. Por padrão, seu novo repositório é privado, o que significa que você é o único que pode acessá-lo. Se você desmarcar a caixa, seu repositório será público, o que significa que qualquer pessoa no GitHub poderá exibi-lo.
+A caixa de diálogo **criar um repositório git** facilita o envio por push do novo repositório para o github. Por padrão, o novo repositório é privado, o que significa que você é o único que pode acessá-lo. Se você desmarcar a caixa, seu repositório será público, o que significa que qualquer pessoa no GitHub poderá exibi-lo.
 
 > [!TIP]
-> Seja seu repositório público ou privado, é melhor ter um backup remoto do código armazenado com segurança no GitHub, mesmo se você não estiver trabalhando com uma equipe. Isso também disponibiliza seu código para você, independentemente do computador que você está usando.
+> Independentemente de seu repositório ser público ou privado, é melhor ter um backup remoto do código armazenado com segurança no GitHub, mesmo que você não esteja trabalhando com uma equipe. Isso também torna seu código disponível para você, independentemente do computador que você está usando.
 
-Você pode optar por criar um repositório Git somente local usando a **opção Somente** local. Ou você pode vincular seu projeto local a um repositório remoto vazio existente no Azure DevOps ou em qualquer outro provedor Git usando a **opção Remoto** Existente.
+Você pode optar por criar um repositório git somente local usando a opção **somente local** . Ou então, você pode vincular seu projeto local a um repositório remoto vazio existente no Azure DevOps ou qualquer outro provedor de git usando a opção **remota existente** .
 
-## <a name="clone-an-existing-git-repository"></a>Clonar um repositório Git existente
+## <a name="clone-an-existing-git-repository"></a>Clonar um repositório git existente
 
-Visual Studio inclui uma experiência de clone simples. Se você sabe a URL do repositório que você gostaria de clonar, pode colar a URL na seção Local do repositório e, em seguida, escolher o local do disco no qual Visual Studio clonar. 
+O Visual Studio inclui uma experiência de clonagem simples. Se você souber a URL do repositório que deseja clonar, poderá colar a URL na seção **local do repositório** e, em seguida, escolher o local do disco no qual deseja que o Visual Studio seja clonado.
 
-:::image type="content" source="media/git-clone-repository.png" alt-text="A caixa de diálogo Clonar um Repositório Git Visual Studio.":::
+:::image type="content" source="media/git-clone-repository.png" alt-text="A caixa de diálogo clonar um repositório git no Visual Studio.":::
 
-Se você não conhece a URL do repositório, o Visual Studio facilita a navegação e, em seguida, clona o gitHub ou o repositório Azure DevOps existente.
+Se você não souber a URL do repositório, o Visual Studio facilitará a navegação e a clonagem do seu repositório existente do GitHub ou DevOps do Azure.
 
 ### <a name="open-an-existing-local-repository"></a>Abrir um repositório local existente
 
-Depois de clonar um repositório ou criar um, Visual Studio o repositório Git e  o adiciona à sua lista de Repositórios Locais no menu Git. A partir daqui, você pode acessar e alternar rapidamente entre seus repositórios Git.
+Depois de clonar um repositório ou criar um, o Visual Studio detecta o repositório git e o adiciona à lista de **repositórios locais** no menu git. A partir daqui, você pode acessar e alternar rapidamente entre seus repositórios git.
 
-:::image type="content" source="media/git-local-repositories.png" alt-text="A opção Repositórios Locais no menu Git no Visual Studio ":::
+:::image type="content" source="media/git-local-repositories.png" alt-text="A opção repositórios locais do menu git no Visual Studio ":::
 
 ## <a name="view-files-in-solution-explorer"></a>Exibir arquivos no Gerenciador de Soluções
 
-Quando você clona um repositório ou abre um repositório local, Visual Studio alterna para esse contexto do Git salvando e fechando soluções e projetos abertos anteriormente. Gerenciador de Soluções carrega a pasta na raiz do repositório Git e examina a árvore de diretórios em busca de arquivos de exibição. Eles incluem arquivos como CMakeLists.txt ou aqueles com a extensão de arquivo .sln.
+Quando você clona um repositório ou abre um repositório local, o Visual Studio o alterna para o contexto do git salvando e fechando todas as soluções e projetos abertos anteriormente. Gerenciador de Soluções carrega a pasta na raiz do repositório git e examina a árvore de diretórios em busca de qualquer arquivo de exibição. Isso inclui arquivos como CMakeLists.txt ou aqueles com a extensão de arquivo. sln.
 
-Visual Studio ajusta sua Exibição com base em qual arquivo de exibição você carrega Gerenciador de Soluções:
+O Visual Studio ajusta sua exibição com base no arquivo de exibição que você carrega no Gerenciador de Soluções:
 
-- Se você clonar um repositório que contém um único arquivo .sln, Gerenciador de Soluções carregará diretamente essa solução para você.
-- Se Gerenciador de Soluções não detectar nenhum arquivo .sln em seu repositório, por padrão, ele carregará o Modo de Exibição de Pasta.
-- Se o repositório tiver mais de um arquivo .sln, Gerenciador de Soluções mostrará a lista de Exibições disponíveis para sua escolha.
+- Se você clonar um repositório que contém um único arquivo. sln, Gerenciador de Soluções carregar diretamente essa solução para você.
+- Se Gerenciador de Soluções não detectar nenhum arquivo. sln em seu repositório, por padrão ele carregará a exibição de pasta.
+- Se o repositório tiver mais de um arquivo. sln, Gerenciador de Soluções mostrará a lista de modos de exibição disponíveis para sua escolha.
 
-Você pode alternar entre a Exibição aberta no  momento e a lista de Exibições usando o botão Alternar Exibições na barra de ferramentas Gerenciador de Soluções aplicativo.
+Você pode alternar entre a exibição aberta no momento e a lista de exibições usando o botão **alternar exibições** na barra de ferramentas Gerenciador de soluções.
 
-:::image type="content" source="media/git-solution-explorer-views.png" alt-text="Gerenciador de Soluções com o botão Alternar Exibições selecionado Visual Studio.":::
+:::image type="content" source="media/git-solution-explorer-views.png" alt-text="Gerenciador de Soluções com o botão alternar modos de exibição selecionado no Visual Studio.":::
 
 ## <a name="git-changes-window"></a>Janela Alterações Git
 
-O Git rastreia as alterações de arquivo em seu repositório enquanto você trabalha e separa os arquivos em seu repositório em três categorias. Essas alterações são equivalentes ao que você verá ao inserir o `git status` comando na linha de comando:
+O Git rastreia alterações de arquivo em seu repositório à medida que você trabalha e separa os arquivos em seu repositório em três categorias. Essas alterações são equivalentes ao que você veria ao inserir o `git status` comando na linha de comando:
 
-- **Arquivos não modificados:** esses arquivos não foram alterados desde sua última confirmação.
-- **Arquivos modificados:** esses arquivos têm alterações desde a última confirmação, mas você ainda não os treinou para a próxima confirmação.
-- **Arquivos em fases:** esses arquivos têm alterações que serão adicionadas à próxima confirmação.
+- **Arquivos não modificados**: esses arquivos não foram alterados desde a última confirmação.
+- **Arquivos modificados**: esses arquivos têm alterações desde a última confirmação, mas você ainda não os preparou para a próxima confirmação.
+- **Arquivos preparados**: esses arquivos têm alterações que serão adicionadas à próxima confirmação.
 
-Ao fazer seu trabalho, Visual Studio o controle das alterações de  arquivo em seu projeto na seção Alterações da **janela Alterações do Git.**
+Conforme você faz seu trabalho, o Visual Studio controla as alterações de arquivo em seu projeto na seção de **alterações** da janela de **alterações do git** .
 
-:::image type="content" source="media/git-changes-window.png" alt-text="A janela Alterações do Git Visual Studio.":::
+:::image type="content" source="media/git-changes-window.png" alt-text="A janela de alterações do git no Visual Studio.":::
 
-Quando estiver pronto para preparar as alterações, clique no botão (mais) em cada arquivo que deseja preparar ou clique com o botão direito do mouse em um arquivo e **+** selecione **Estágio**. Você também pode fazer o estágio de todos os arquivos modificados com um clique usando o botão de estágio tudo **+** (mais) na parte superior da **seção** Alterações.
+Quando estiver pronto para preparar as alterações, clique no **+** botão (mais) em cada arquivo que deseja preparar ou clique com o botão direito do mouse em um arquivo e selecione **estágio**. Você também pode preparar todos os arquivos modificados com um clique usando o botão preparar todos **+** (mais) na parte superior da seção de **alterações** .
 
-Quando você faz uma alteração, Visual Studio cria uma **seção Alterações em Fases.** Somente as alterações na **seção Alterações em** Fases são adicionadas à próxima confirmação, o que pode ser feito selecionando Commit **Staged**. O comando equivalente para essa ação é `git commit -m "Your commit message"` . As alterações também podem ser desatagadas clicando no **botão –** (menos). O comando equivalente para essa ação é `git reset <file_path>` desemocar um único arquivo ou `git reset <directory_path>` desemocar todos os arquivos em um diretório.
+Quando você testa uma alteração, o Visual Studio cria uma seção de **alterações em etapas** . Somente as alterações na seção de **alterações em etapas** são adicionadas à próxima confirmação, que você pode fazer selecionando **confirmar preparação**. O comando equivalente para essa ação é `git commit -m "Your commit message"` . As alterações também podem ser despreparadas clicando no botão **–** (menos). O comando equivalente para essa ação é `git reset <file_path>` despreparar um único arquivo ou `git reset <directory_path>` despreparar todos os arquivos em um diretório.
 
-Você também pode optar por não preparação dos arquivos modificados ignorando a área de preparação. Nesse caso, o Visual Studio permite que você commit suas alterações diretamente sem precisar adá-las. Basta inserir sua mensagem de commit e, em seguida, **selecionar Commit All**. O comando equivalente para essa ação é `git commit -a` .
+Você também pode optar por não preparar os arquivos modificados ignorando a área de preparo. Nesse caso, o Visual Studio permite que você confirme suas alterações diretamente sem precisar prepará-las. Basta inserir sua mensagem de confirmação e, em seguida, selecionar **confirmar tudo**. O comando equivalente para essa ação é `git commit -a` .
 
-Visual Studio também facilita a confirmação e a sincronização com um clique usando os atalhos **Commit All** e Push e Commit All **e Sync.** Ao clicar duas vezes em  qualquer  arquivo nas seções Alterações e Alterações em fases, você poderá ver uma comparação linha a linha com a versão não modificada do arquivo.
+O Visual Studio também facilita a confirmação e a sincronização com um clique usando os atalhos **confirmar tudo e enviar** e **confirmar todos e sincronizar** . Quando você clica duas vezes em qualquer arquivo nas seções **alterações** e **alterações em etapas** , você pode ver uma comparação linha por linha com a versão não modificada do arquivo.
 
-:::image type="content" source="media/git-file-version-compare.png" alt-text="A comparação linha a linha de versões de arquivo no Visual Studio ":::
+:::image type="content" source="media/git-file-version-compare.png" alt-text="A comparação linha por linha de versões de arquivo no Visual Studio ":::
 
 > [!TIP]
-> Você pode associar um Azure DevOps de trabalho a uma confirmação usando o caractere "#" se estiver conectado ao repositório Azure DevOps. Você pode conectar seu repositório Azure DevOps por meio **Team Explorer**  >  **Gerenciar Conexões**.
+> Você pode associar um item de trabalho do Azure DevOps com uma confirmação usando o caractere "#" se você estiver conectado ao repositório DevOps do Azure. Você pode conectar seu repositório DevOps do Azure por meio de **Team Explorer**  >  **gerenciar conexões**.
 
-### <a name="select-an-existing-branch"></a>Selecionar um branch existente
+### <a name="select-an-existing-branch"></a>Selecionar uma ramificação existente
 
-Visual Studio exibe o branch atual no seletor na parte superior da janela **Alterações do Git.**
+O Visual Studio exibe o Branch atual no seletor na parte superior da janela de **alterações do git** .
 
-:::image type="content" source="media/git-changes-current-branch-selector.png" alt-text="Os branches atuais que você pode exibir usando o seletor na parte superior do seletor de Alterações do Git Visual Studio ":::
+:::image type="content" source="media/git-changes-current-branch-selector.png" alt-text="Os branches atuais que você pode exibir usando o seletor na parte superior do seletor de alterações git no Visual Studio ":::
 
-O branch atual também está disponível na barra de status no canto inferior direito do Visual Studio IDE.
+O Branch atual também está disponível na barra de status no canto inferior direito do IDE do Visual Studio.
 
-:::image type="content" source="media/git-changes-current-branch-status-bar.png" alt-text="Os branches atuais que você pode exibir usando a barra de status no canto inferior direito no Visual Studio IDE ":::
+:::image type="content" source="media/git-changes-current-branch-status-bar.png" alt-text="Os branches atuais que você pode exibir usando a barra de status no canto inferior direito no IDE do Visual Studio ":::
 
 Em ambos os locais, você pode alternar entre branches existentes.
 
 ### <a name="create-a-new-branch"></a>Criar uma nova ramificação
 
-Você também pode criar um branch. O comando equivalente para essa ação é `git checkout -b <branchname>` .
+Você também pode criar uma nova ramificação. O comando equivalente para essa ação é `git checkout -b <branchname>` .
 
-Criar um branch é tão simples quanto inserir o nome do branch e baseá-lo em um branch existente.
+A criação de uma nova ramificação é tão simples quanto inserir o nome da ramificação e baseá-la em uma ramificação existente.
 
-:::image type="content" source="media/git-changes-create-new-branch.png" alt-text="A caixa de diálogo Criar um Novo Branch no Visual Studio ":::
+:::image type="content" source="media/git-changes-create-new-branch.png" alt-text="A caixa de diálogo criar uma nova ramificação no Visual Studio ":::
 
-Você pode escolher um branch local ou remoto existente como a base. A **caixa de seleção Branch** de check-out alterna automaticamente você para o branch recém-criado. O comando equivalente para essa ação é `git checkout -b <new-branch><existing-branch>` .
+Você pode escolher uma ramificação local ou remota existente como base. A caixa de seleção **Branch de check-out** alterna automaticamente para o Branch recém-criado. O comando equivalente para essa ação é `git checkout -b <new-branch><existing-branch>` .
 
-## <a name="git-repository-window"></a>Janela Repositório Git
+## <a name="git-repository-window"></a>Janela do repositório git
 
-Visual Studio tem uma nova janela repositório **Git,** que é uma exibição consolidada de todos os detalhes em seu repositório, incluindo todos os branches, remotos e históricos de confirmação. Você pode acessar essa janela diretamente do **Git** ou **exibição** na barra de menus ou na barra de status.
+O Visual Studio tem uma nova janela de **repositório git** , que é uma exibição consolidada de todos os detalhes em seu repositório, incluindo todas as ramificações, remotos e históricos de confirmação. Você pode acessar essa janela diretamente do **git** ou da **exibição** na barra de menus ou na barra de status.
 
 ### <a name="manage-branches"></a>Gerenciar branches
 
-Ao selecionar **Gerenciar Branches** no menu **Git,** você verá o exibição de árvore de branches na janela **Repositório Git.** No painel esquerdo, você pode usar o menu de contexto do clique com o botão direito do mouse para fazer check-out de branches, criar novos branches, mesclar, rebase, pick-pick e muito mais. Ao clicar no branch, você poderá ver uma visualização de seu histórico de confirmação no painel direito.
+Ao selecionar **gerenciar branches** no menu **git** , você verá a exibição de árvore branches na janela **repositório git** . No painel esquerdo, você pode usar o menu de contexto de clique com o botão direito do mouse para fazer checkout de branches, criar novos branches, mesclar, trocar base, Cherry-escolha e muito mais. Ao clicar na ramificação, você poderá ver uma visualização do histórico de confirmação no painel direito.
 
-### <a name="incoming-and-outgoing-commits"></a>Confirmações de entrada e saída
+### <a name="incoming-and-outgoing-commits"></a>Confirmações de entrada e de saída
 
 Quando você busca um branch, a janela Alterações do **Git** tem um indicador na lista de invasões do branch, que exibe o número de confirmações nãopuladas do branch remoto. Esse indicador também mostra o número de confirmações locais não explicadas.
 
@@ -188,11 +188,15 @@ Para personalizar e personalizar as configurações do Git em um nível de repos
 
 :::image type="content" source="media/git-options-settings.png" alt-text="A caixa de diálogo Opções em que você pode escolher configurações de personalização e personalização Visual Studio IDE ":::
 
+::: moniker range="vs-2019"
+
 ## <a name="how-to-use-the-full-team-explorer-experience-in-visual-studio"></a>Como usar a experiência de Team Explorer completa no Visual Studio
 
 A nova experiência do Git é o sistema de controle de versão padrão Visual Studio 2019 da versão [16.8](/visualstudio/releases/2019/release-notes/) em diante. No entanto, se você quiser desativar, poderá. Vá para **Ferramentas Opções** Recursos de Visualização do Ambiente e, em seguida, alterne a caixa de seleção Nova experiência do usuário do Git, que alterna de volta para o  >    >    >   Team Explorer git. 
 
 :::image type="content" source="media/git-opt-new-user-experience.png" alt-text="A seção Recursos de Visualização da caixa de diálogo Opções Visual Studio ":::
+
+::: moniker-end
 
 ## <a name="whats-next"></a>O que vem a seguir
 

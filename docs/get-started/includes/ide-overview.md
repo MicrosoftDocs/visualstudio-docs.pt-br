@@ -6,12 +6,12 @@ ms.author: tglee
 author: TerryGLee
 manager: jmartens
 ms.topic: include
-ms.openlocfilehash: 3c5cb8d78b254c667ecd131ef3850475a0460323
-ms.sourcegitcommit: 5366c6bca3fb217a2fbf847998387578f51ec45c
+ms.openlocfilehash: 128a09500aaa326fad717efcade9040496452963
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "110748450"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112361879"
 ---
 O *ambiente de desenvolvimento integrado* do Visual Studio é um painel de inicialização criativo que você pode usar para editar, depurar e compilar o código e, em seguida, publicar um aplicativo. Um IDE (ambiente de desenvolvimento integrado) é um programa repleto de recursos que pode ser usado por muitos aspectos do desenvolvimento de software. Além do editor e do depurador padrão fornecidos pela maioria dos IDEs, o Visual Studio inclui compiladores, ferramentas de preenchimento de código, designers gráficos e muitos outros recursos para facilitar o processo de desenvolvimento de software.
 
@@ -21,7 +21,7 @@ O *ambiente de desenvolvimento integrado* do Visual Studio é um painel de inici
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 :::image type="content" source="../media/vs-2019/ide-overview.png" alt-text="Uma captura de tela do Visual Studio IDE, que inclui explicações que indicam onde estão localizados os principais recursos e funcionalidades." lightbox="../media/vs-2019/ide-overview.png":::
 
@@ -51,7 +51,7 @@ Há três edições do Visual Studio: Community, Professional e Enterprise. Conf
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 O Visual Studio está disponível para Windows e Mac. O [Visual Studio para Mac](/visualstudio/mac/) tem muitas das mesmas funcionalidades do Visual Studio 2019 e é otimizado para o desenvolvimento de aplicativos móveis e multiplataforma. Este artigo concentra-se na versão do Visual Studio 2019 para Windows.
 
@@ -372,7 +372,7 @@ Primeiro, vamos renomear a variável `name`:
 
 10. Execute o programa novamente pressionando **Ctrl** + **F5**. A saída é parecida com esta:
 
-    ! Captura de tela da cmd.exe do console mostrando o prompt de um nome, a entrada e a saída "Hello Hello! Dia do ano: 151'.] (.. /media/overview-console-final.png)
+    ! Captura de tela da janela do console cmd.exe mostrando o prompt para um nome, a entrada e a saída ' Olá Georgette! Dia do ano: 151 '.] (.. overview-console-final.png/Media/)
 
 ::: moniker-end
 
@@ -380,7 +380,7 @@ Primeiro, vamos renomear a variável `name`:
 
 10. Execute o programa novamente pressionando **Ctrl** + **F5**. A saída é parecida com esta:
 
-    ![Captura de tela da Microsoft Visual Studio console de depuração mostrando o prompt de um nome, a entrada e a saída "Hello Hello! Dia do ano: 43'.](../media/vs-2019/overview-console-final.png)
+    ![Captura de tela da janela do console de depuração Microsoft Visual Studio mostrando o prompt para um nome, a entrada e a saída ' Olá Georgette! Dia do ano: 43 '.](../media/vs-2019/overview-console-final.png)
 
 ::: moniker-end
 
@@ -396,7 +396,7 @@ Vamos definir um ponto de interrupção para ver o valor da variável `username`
 
    ![Ponto de interrupção na linha de código no Visual Studio](../media/breakpoint.png)
 
-1. Inicie a depuração selecionando **Depurar**  >  **Iniciar Depuração** ou pressionando **F5**.
+1. Inicie a depuração selecionando **depurar**  >  **Iniciar Depuração** ou pressionando **F5**.
 
 1. Quando a janela do console for exibida e solicitar seu nome, digite-o e pressione **Enter**.
 
@@ -414,11 +414,11 @@ Para obter mais detalhes sobre a depuração no Visual Studio, consulte [Tour do
 
 Personalize a interface do usuário do Visual Studio, incluindo a alteração do tema de cores padrão. Para alterar para o tema **Escuro**:
 
-1. Na barra de menus, escolha **Opções**  >  **de Ferramentas** para abrir a caixa de **diálogo** Opções.
+1. Na barra de menus, escolha **ferramentas**  >  **Opções** para abrir a caixa de diálogo **Opções** .
 
 ::: moniker range="vs-2017"
 
-2. Na página **de opções** > **Ambiente Geral,** altere a seleção **Tema de** cores para Escuro e, em seguida, escolha **OK.**
+2. Na  > página opções **gerais** do ambiente, altere a seleção de **tema de cores** para **escuro** e, em seguida, escolha **OK**.
 
    O tema de cores para todo o IDE é alterado para **Escuro**.
 
@@ -428,7 +428,7 @@ Personalize a interface do usuário do Visual Studio, incluindo a alteração do
 
 ::: moniker range=">=vs-2019"
 
-2. Na página **de opções** > **Ambiente Geral,** altere a seleção **Tema de** cores para Escuro e, em seguida, escolha **OK.**
+2. Na  > página opções **gerais** do ambiente, altere a seleção de **tema de cores** para **escuro** e, em seguida, escolha **OK**.
 
    O tema de cores para todo o IDE é alterado para **Escuro**.
 
