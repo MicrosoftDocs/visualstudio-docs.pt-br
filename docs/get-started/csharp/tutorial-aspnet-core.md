@@ -2,8 +2,8 @@
 title: 'Tutorial: Introdução ao C# e ASP.NET Core'
 titleSuffix: ''
 description: Saiba como criar um aplicativo Web do ASP.NET Core no Visual Studio com C#, passo a passo.
-ms.custom: seodec18, get-started
-ms.date: 02/12/2021
+ms.custom: vs-acquisition, get-started
+ms.date: 06/12/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -16,46 +16,41 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 58f9604cbecdbe6414e91079a9e0e4691a32b768
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 25840b820a92925c3d7434d0c76b0138b533b2dc
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308539"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388107"
 ---
 # <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>Tutorial: Introdução ao C# e ao ASP.NET Core no Visual Studio
 
 Neste tutorial para desenvolvimento em C# com ASP.NET Core usando o Visual Studio, você criará um aplicativo Web ASP.NET Core em C#, fará alterações, explorará alguns recursos do IDE e então executará o aplicativo.
 
-## <a name="before-you-begin"></a>Antes de começar
+## <a name="prerequisites"></a>Pré-requisitos
 
-### <a name="install-visual-studio"></a>Instalar o Visual Studio
+1. Instalar o Visual Studio
+   ::: moniker range="vs-2017"
+   
+   Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
+   
+   ::: moniker-end
+   
+   ::: moniker range="vs-2019"
+   
+   Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
+   
+   ::: moniker-end
 
-::: moniker range="vs-2017"
+   ::: moniker range="vs-2022"
 
-Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
+   Se você ainda não tiver instalado o Visual Studio 2022 Preview, acesse a página de downloads do [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) para instalá-lo gratuitamente.
 
-::: moniker-end
+   ::: moniker-end
 
-::: moniker range="vs-2019"
+1. Atualizar Visual Studio – se você já instalou o Visual Studio, certifique-se de estar executando a versão mais recente. Para obter mais informações sobre como atualizar sua instalação, consulte a página Atualizar [Visual Studio para a versão mais](../../install/update-visual-studio.md) recente.
 
-Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
-
-::: moniker-end
-
-::: moniker range="vs-2022"
-
-Se você ainda não tiver instalado o Visual Studio 2022 Preview, acesse a página de downloads do [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) para instalá-lo gratuitamente.
-
-::: moniker-end
-
-### <a name="update-visual-studio"></a>Atualizar o Visual Studio
-
-Se você já tiver instalado o Visual Studio, verifique se está executando a versão mais recente. Para obter mais informações sobre como atualizar sua instalação, consulte a página Atualizar [Visual Studio para a versão mais](../../install/update-visual-studio.md) recente.
-
-### <a name="choose-your-theme-optional"></a>Escolher o tema (opcional)
-
-Este tutorial inclui capturas de tela que usam o tema escuro. Se você não estiver usando o tema escuro, mas quiser usá-lo, confira a página [Personalizar o IDE e o Editor do Visual Studio](../../ide/quickstart-personalize-the-ide.md) para saber como.
+1. Escolha seu tema (opcional) – Este tutorial inclui capturas de tela que usam o tema escuro. Você pode [Personalizar a página Visual Studio IDE e Editor](../../ide/quickstart-personalize-the-ide.md) para saber como.
 
 ## <a name="create-a-project"></a>Criar um projeto
 
@@ -348,13 +343,13 @@ Esta solução segue o padrão de design da **Página do Razor**. Ele é diferen
 
    ![Adicionar a diretiva "using System;"](media/vs-2019/csharp-aspnet-add-usings.png)
 
-1. Pressione **F5** para abrir seu projeto no navegador da Web.
+1. Pressione **F5** para abrir o projeto no navegador da Web.
 
-1. Na parte superior do site da Web, escolha **privacidade** para exibir as alterações.
+1. Na parte superior do site, escolha Privacidade **para** exibir suas alterações.
 
-   ![Exibir a página de privacidade atualizada que inclui as alterações feitas](media/vs-2019/csharp-aspnet-browser-page-privacy-changed.png)
+   ![Exibir a página Privacidade atualizada que inclui as alterações feitas](media/vs-2019/csharp-aspnet-browser-page-privacy-changed.png)
 
-1. Feche o navegador da Web, pressione **Shift** + **F5** para parar o modo de depuração e feche o Visual Studio.
+1. Feche o navegador da Web, pressione **Shift** + **F5** para interromper o modo de depuração e, em seguida, feche Visual Studio.
 ::: moniker-end
 
 ## <a name="quick-answers-faq"></a>Perguntas frequentes com respostas rápidas
@@ -378,7 +373,7 @@ Visual Studio é um pacote de desenvolvimento integrado de ferramentas de produt
 Parabéns por concluir este tutorial. Esperamos que você tenha aprendido um pouco sobre o C#, o ASP.NET Core e o IDE do Visual Studio. Para saber mais sobre como criar um aplicativo Web ou site em C# com o ASP.NET, continue com os tutoriais a seguir:
 
 > [!div class="nextstepaction"]
-> [Criar um aplicativo Web Razor Pages com ASP.NET Core](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1&preserve-view=true)
+> [Criar um Razor Pages Web com o ASP.NET Core](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1&preserve-view=true)
 
 ## <a name="see-also"></a>Confira também
 

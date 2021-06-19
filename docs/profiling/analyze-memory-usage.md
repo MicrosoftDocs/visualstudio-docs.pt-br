@@ -1,7 +1,7 @@
 ---
 title: Analisar o uso de memória
 description: Saiba mais sobre as ferramentas que você pode usar para encontrar vazamentos de memória e uso de memória ineficiente, ferramentas como a ferramenta de uso de memória e a ferramenta de alocação de objeto .NET.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 10/12/2020
 ms.topic: conceptual
 author: mikejo5000
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2af4bc47d711275716eea528a4d9bd816408322f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a6af0cd98e69a3c43ba70f5609567243e6285201
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901141"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387964"
 ---
 # <a name="analyze-memory-usage"></a>Analisar o uso de memória
 

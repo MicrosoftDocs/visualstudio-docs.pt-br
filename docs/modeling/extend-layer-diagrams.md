@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, creating extensions
 - layer models
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 10e0e07b6a8ee4245e19628e03bfdf484f94d34c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c2ed8700cfb18aacf41464bfdfacaedac557bb00
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935138"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388900"
 ---
 # <a name="extend-dependency-diagrams"></a>Estender diagramas de dependência
 
@@ -35,7 +35,7 @@ Você deve ter o seguinte instalado no computador em que deseja desenvolver suas
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-Você deve ter uma edição adequada do Visual Studio instalada no computador em que deseja executar suas extensões de camada. Para ver quais edições do Visual Studio dão suporte a diagramas de dependência, consulte [suporte de edição para ferramentas de arquitetura e modelagem](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Você deve ter uma edição adequada do Visual Studio instalada no computador em que deseja executar suas extensões de camada. Para ver quais edições do Visual Studio dão suporte a diagramas de dependência, consulte [suporte de edição para ferramentas de arquitetura e modelagem](../modeling/analyze-and-model-your-architecture.md#VersionSupport).
 
 ## <a name="see-also"></a>Confira também
 

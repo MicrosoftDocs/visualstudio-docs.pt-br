@@ -4,17 +4,17 @@ description: Saiba como você pode estender sua DSL (linguagem específica de do
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 324037010e642ab4e96f6efea5da0f232c9bd530
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3a4572a7210203d6c7525a278430210c954c3405
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935060"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388874"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>Estender a DSL usando MEF
 
@@ -133,7 +133,7 @@ Se você tiver acesso a um DSL habilitado para MEF criado por você mesmo ou por
 
    - Se você tiver acesso ao projeto de DSL, poderá encontrar o arquivo de assembly na pasta de **DSL \\ \\ \*** do diretório
 
-   - Se você tiver acesso ao arquivo VSIX de DSL, poderá encontrar o assembly alterando a extensão de nome de arquivo do arquivo VSIX para ". zip". Descompacte o arquivo. zip.
+   - Se você tiver acesso ao arquivo VSIX de DSL, poderá encontrar o assembly alterando a extensão de nome de arquivo do arquivo VSIX para ".zip". Descompacte o arquivo de .zip.
 
 3. Adicione referências aos seguintes assemblies .NET:
 

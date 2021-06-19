@@ -8,17 +8,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.elementmergedirective
 helpviewer_keywords:
 - Domain-Specific Language, element merge directives
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 01867bf4c5d3e9c60ad4a2ba0ed76c45eca055c1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 42339c532db3442d5fb5c5da3b51d94801a0907d
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935580"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389391"
 ---
 # <a name="customizing-element-creation-and-movement"></a>Personalizando a criação e o movimento de elementos
 
@@ -318,7 +318,7 @@ Você pode criar uma diretiva de mesclagem direta na solução de modelo de comp
 
      Você não verá o ponteiro indisponível e poderá descartar a nova **porta de entrada** no existente. Selecione a nova **porta de entrada** e arraste-a para outro ponto no **componente**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Navegando e atualizando um modelo no código do programa](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Personalizando ferramentas e a caixa de ferramentas](../modeling/customizing-tools-and-the-toolbox.md)

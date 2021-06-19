@@ -8,17 +8,17 @@ helpviewer_keywords:
 - text templates, syntax
 - text templates, guide
 - text templates, functions that generate text
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: eb988854cb1bc049e024bf204553dd715e652a4e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8034e0d1df6410c842f7d93a4ee3023957904744
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923987"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388081"
 ---
 # <a name="writing-a-t4-text-template"></a>Gravando um modelo de texto T4
 Um modelo de texto contém o texto que será gerado a partir dele. Por exemplo, um modelo que cria uma página da Web conterá " \<html> ..." e todas as outras partes padrão de uma página HTML. Inseridos no modelo são *blocos de controle*, que são fragmentos de código do programa. Os blocos de controle fornecem valores variáveis​e permitem que partes do texto sejam condicionadas e repetidas.
@@ -33,7 +33,7 @@ Um modelo de texto contém o texto que será gerado a partir dele. Por exemplo, 
 
 - **Blocos de controle** -código do programa que insere valores variáveis no texto e controla partes condicionais ou repetidas do texto.
 
-Para testar os exemplos neste tópico, copie-os em um arquivo de modelo conforme descrito em [geração de código em tempo de design usando modelos de texto T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md). Depois de editar o arquivo de modelo, salve-o e inspecione o arquivo output **. txt** .
+Para testar os exemplos neste tópico, copie-os em um arquivo de modelo conforme descrito em [geração de código em tempo de design usando modelos de texto T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md). Depois de editar o arquivo de modelo, salve-o e inspecione o arquivo de **.txt** de saída.
 
 ## <a name="directives"></a>Diretivas
  As diretivas de modelo de texto fornecem instruções gerais ao mecanismo de modelagem de texto sobre como gerar o código de transformação e o arquivo de saída.

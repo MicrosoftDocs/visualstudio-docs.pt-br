@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, DSL Explorer
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fa3fd0fd16f33342e362432e0193a92e0e981b04
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dda7efe884a749d59e0063ef0102681a2510afb8
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923998"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388055"
 ---
 # <a name="working-with-the-domain-specific-language-explorer"></a>Trabalhando com o Gerenciador de Linguagem Específica do Domínio
 O **Gerenciador de DSL** exibe vários tipos de informações em um modo de exibição de árvore. Para obter mais informações sobre a maioria dos itens no Gerenciador de DSL, consulte [como definir um idioma de Domain-Specific](../modeling/how-to-define-a-domain-specific-language.md).

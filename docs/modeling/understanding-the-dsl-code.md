@@ -1,94 +1,94 @@
 ---
 title: Noções básicas do código de DSL
-description: Saiba como a solução de DSL (linguagem de Domain-Specific) gera uma API que você pode usar para ler e atualizar instâncias do DSL no Visual Studio.
+description: Saiba como a solução DSL (Domain-Specific Language) gera uma API que você pode usar para ler e atualizar instâncias da DSL Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, generated code
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 330a2a8f4173ddb22303064ee7f97ee025d05758
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 84f75298bc2854172eb7ec63bd6412e5703cfad7
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924483"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388575"
 ---
 # <a name="understanding-the-dsl-code"></a>Noções básicas do código de DSL
 
-Uma solução de DSL (linguagem de Domain-Specific) gera uma API que você pode usar para ler e atualizar instâncias do DSL no Visual Studio. Essa API é definida no código que é gerado na definição da DSL. Este tópico descreve a API gerada.
+Uma solução Domain-Specific DSL gera uma API que você pode usar para ler e atualizar instâncias da DSL Visual Studio. Essa API é definida no código que é gerado na definição da DSL. Este tópico descreve a API gerada.
 
 ## <a name="the-example-solution-component-diagrams"></a>A solução do exemplo: Diagramas de Componente
 
-Para criar a solução que é a fonte da maioria dos exemplos neste tópico, crie uma DSL a partir do modelo de solução **modelos de componente** . Esse é um dos modelos padrão que são exibidos ao criar uma nova solução DSL.
+Para criar a solução que é a origem da maioria dos exemplos neste tópico, crie uma DSL do modelo de solução **Modelos** de Componente. Esse é um dos modelos padrão que são exibidos ao criar uma nova solução DSL.
 
 > [!NOTE]
-> O modelo DSL de diagramas de componente é chamado de **Designer de linguagem específica de domínio**.
+> O modelo DSL diagramas de componente é **chamado Designer de Linguagem Específica de Domínio**.
 
 Pressione **F5** e experimente se você não estiver familiarizado com este modelo de solução. Observe especificamente que é possível criar portas arrastando uma ferramenta de porta para um componente e que é possível conectar portas.
 
 ![Componentes e portas interconectadas](../modeling/media/componentsample.png)
 
 ## <a name="the-structure-of-the-dsl-solution"></a>A Estrutura da Solução DSL
- O projeto **DSL** define a API para sua DSL. O projeto **DslPackage** define como ele se integra ao Visual Studio. Também é possível adicionar seus próprios projetos, que também podem conter código gerado a partir do modelo.
+ O **projeto Dsl** define a API para sua DSL. O **projeto DslPackage** define como ele se integra ao Visual Studio. Também é possível adicionar seus próprios projetos, que também podem conter código gerado a partir do modelo.
 
 ### <a name="the-code-directories"></a>Os diretórios do código
- A maior parte do código em cada um desses projetos é gerada a partir de **Dsl\DslDefinition.DSL**. O código gerado está na pasta de **código gerada** . Para ver um arquivo gerado, clique em **[+]** ao lado do arquivo gerando **. tt** .
+ A maioria do código em cada um desses projetos é gerada de **Dsl\DslDefinition.dsl**. O código gerado está na **pasta Código** Gerado. Para ver um arquivo gerado, clique **em [+]** ao lado do arquivo **.tt de geração.**
 
  É recomendável inspecionar o código gerado para ajudar a entender a DSL. Para visualizar os arquivos gerados, expanda os arquivos *.tt no Gerenciador de Soluções.
 
- Os \* arquivos. tt contêm muito pouco código de geração. Ao invés, eles usam diretrizes `<#include>` para incluir arquivos de modelo compartilhados. Os arquivos compartilhados podem ser encontrados em **\Program Files\Microsoft Visual Studio 10.0 \ COMMON7\IDE\EXTENSIONS\MICROSOFT\DSL SDK\DSL Designer\11.0\TextTemplates**
+ Os \* arquivos .tt contêm muito pouco código de geração. Ao invés, eles usam diretrizes `<#include>` para incluir arquivos de modelo compartilhados. Os arquivos compartilhados podem ser encontrados em \Arquivos de **Programas\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\Designer de DSL\11.0\TextTemplates**
 
- Ao adicionar seu próprio código do programa à solução DSL, adicione-o em um arquivo separado, fora da pasta do Código Gerado. Talvez você queira criar uma pasta de **código personalizada** . (Ao adicionar um novo arquivo de código a uma pasta personalizada, lembre-se de corrigir o namespace no esqueleto inicial do código.)
+ Ao adicionar seu próprio código do programa à solução DSL, adicione-o em um arquivo separado, fora da pasta do Código Gerado. Talvez você queira criar uma pasta **código** personalizado. (Ao adicionar um novo arquivo de código a uma pasta personalizada, lembre-se de corrigir o namespace no esqueleto inicial do código.)
 
  É altamente recomendável não editar o código gerado diretamente, pois, as edições serão perdidas ao recompilar a solução. Ao invés, para personalizar a DSL:
 
 - Ajuste os diversos parâmetros na Definição da DSL.
 
-- Grave classes parciais em arquivos de código separados, para substituir métodos que são definidos nas ou herdado pelas classes geradas. Em alguns casos, você precisa definir a opção **gerar derivada dupla** de uma classe na definição de DSL, para poder substituir um método gerado.
+- Grave classes parciais em arquivos de código separados, para substituir métodos que são definidos nas ou herdado pelas classes geradas. Em alguns casos, você  precisa definir a opção Gera Derivada Dupla de uma classe na Definição de DSL para poder substituir um método gerado.
 
-- Defina as opções na definição de DSL que fazem com que o código gerado forneça "ganchos" para seu próprio código.
+- Defina opções na Definição de DSL que causam o código gerado a fornecer 'ganchos' para seu próprio código.
 
-     Por exemplo, se você definir a opção **tem um construtor personalizado** de uma classe de domínio e, em seguida, compilar a solução, você verá mensagens de erro. Ao clicar duas vezes em uma dessas mensagens de erro, serão exibidos comentários sobre o código gerado que explicam o que o código personalizado deveria fornecer.
+     Por exemplo, se você definir a opção **Tem** Construtor Personalizado de uma classe de domínio e, em seguida, criar a solução, verá mensagens de erro. Ao clicar duas vezes em uma dessas mensagens de erro, serão exibidos comentários sobre o código gerado que explicam o que o código personalizado deveria fornecer.
 
-- Grave seus próprios modelos de texto para gerar código específico para o aplicativo. Você pode usar arquivos de inclusão para compartilhar partes dos modelos que são comuns a muitos projetos e pode criar modelos de projeto do Visual Studio para configurar projetos que são inicializados com sua própria estrutura de arquivos.
+- Grave seus próprios modelos de texto para gerar código específico para o aplicativo. Você pode usar arquivos de inclusão para compartilhar partes dos modelos que são comuns a muitos projetos e pode criar modelos de projeto Visual Studio para configurar projetos inicializados com sua própria estrutura de arquivos.
 
 ## <a name="generated-files-in-dsl"></a>Arquivos gerados na Dsl
- Os seguintes arquivos gerados aparecem no projeto **DSL** .
+ Os arquivos gerados a seguir aparecem no **projeto Dsl.**
 
  *YourDsl*`Schema.xsd`
 
- O esquema dos arquivos que contêm instâncias da DSL. Esse arquivo é copiado para o diretório de compilação (**bin**). Ao instalar sua DSL, você pode copiar esse arquivo para **\Program Files\Microsoft Visual Studio 11.0 \ Xml\Schemas** para que os arquivos de modelo possam ser validados. Para obter mais informações, confira [Implantando soluções de linguagem específica de domínio](msi-and-vsix-deployment-of-a-dsl.md).
+ O esquema dos arquivos que contêm instâncias da DSL. Esse arquivo é copiado para o diretório de **compilação**( bin ). Ao instalar a DSL, você pode copiar esse arquivo para \Arquivos de **Programas\Microsoft Visual Studio 11.0\Xml\Schemas** para que os arquivos de modelo possam ser validados. Para obter mais informações, confira [Implantando soluções de linguagem específica de domínio](msi-and-vsix-deployment-of-a-dsl.md).
 
- Ao personalizar a serialização configurando opções no Gerenciador de DSL, o esquema será alterado de acordo. No entanto, se escrever seu próprio código de serialização, esse arquivo deixará de representar o esquema atual. Para obter mais informações, consulte [Personalizando o armazenamento de arquivos e a serialização de XML](../modeling/customizing-file-storage-and-xml-serialization.md).
+ Ao personalizar a serialização configurando opções no Gerenciador de DSL, o esquema será alterado de acordo. No entanto, se escrever seu próprio código de serialização, esse arquivo deixará de representar o esquema atual. Para obter mais informações, consulte [Personalização do armazenamento de arquivos e serialização XML.](../modeling/customizing-file-storage-and-xml-serialization.md)
 
  `ConnectionBuilders.cs`
 
- Um compilador de conexão é uma classe que cria relações. É o código por trás de uma ferramenta de conexão. Esse arquivo contém um par de classes para cada ferramenta de conexão. Seus nomes são derivados dos nomes da relação de domínio e da ferramenta de conexão: *relationship* Builder e *ConnectorTool* connectaction.
+ Um compilador de conexão é uma classe que cria relações. É o código por trás de uma ferramenta de conexão. Esse arquivo contém um par de classes para cada ferramenta de conexão. Seus nomes são derivados dos nomes da relação de domínio e da ferramenta de conexão: *Construtor* de Relações e *ConnectorTool* ConnectAction.
 
  (No exemplo de solução de componente, um dos compiladores de conexão é chamado ConnectionBuilder, isso é uma coincidência porque o nome da relação do domínio é Connection.)
 
- A relação é criada no método *relationship* `Builder.Connect()` . A versão padrão verifica se os elementos do modelo de origem e de destino são aceitáveis e instancia a relação. Por exemplo:
+ A relação é criada no *método Relationship.* `Builder.Connect()` A versão padrão verifica se os elementos do modelo de origem e de destino são aceitáveis e instancia a relação. Por exemplo:
 
  `CommentReferencesSubject(sourceAccepted, targetAccepted);`
 
- Cada classe de construtor é gerada a partir de um nó na seção de **construtores de conexão** no Gerenciador de DSL. Um método `Connect` pode criar relações entre um ou mais pares de classes de domínio. Cada par é definido por uma Diretriz de Conexão de Link, que pode ser encontrada no Gerenciador de DSL sob o nó do compilador.
+ Cada classe de construtor é gerada de um nó na seção **Construtores de Conexão** no DSL Explorer. Um método `Connect` pode criar relações entre um ou mais pares de classes de domínio. Cada par é definido por uma Diretriz de Conexão de Link, que pode ser encontrada no Gerenciador de DSL sob o nó do compilador.
 
  Por exemplo, é possível adicionar a um compilador de conexão Diretrizes de Conexão de Link para cada um dos três tipos de relação na DSL de exemplo. Isso forneceria ao usuário uma única ferramenta de conexão. O tipo de relação instanciada dependeria dos tipos dos elementos de origem e de destino selecionados pelo usuário.  Para adicionar Diretrizes de Conexão de Link, clique com o botão direito em um compilador no Gerenciador de DSL.
 
- Para gravar código personalizado que é executado quando um tipo específico de relação do domínio é criado, selecione a Diretriz de Conexão de Link adequada sob o nó do compilador. No janela Propriedades, Set **usa conexão personalizada**. Recompile a solução e forneça o código para corrigir os erros resultantes.
+ Para gravar código personalizado que é executado quando um tipo específico de relação do domínio é criado, selecione a Diretriz de Conexão de Link adequada sob o nó do compilador. Na página janela Propriedades, de conjunto **Usa a Conexão Personalizada.** Recompile a solução e forneça o código para corrigir os erros resultantes.
 
- Para escrever um código personalizado que seja executado sempre que o usuário usar essa ferramenta de conexão, defina a propriedade **personalizada is** do construtor de conexões. É possível fornecer código que decide se um elemento de origem é permitido, se uma combinação específica de origem e destino é permitida e quais atualizações devem ser aplicadas no modelo quando uma conexão é feita. Por exemplo, é possível permitir uma conexão apenas se não criar um loop no diagrama. Ao invés de um único link de relação, é possível instanciar um padrão mais complexo de diversos elementos inter-relacionados entre a origem e o destino.
+ Para escrever código personalizado que é executado sempre que o usuário usa essa ferramenta de conexão, de definir a propriedade **É** Personalizado do construtor de conexões. É possível fornecer código que decide se um elemento de origem é permitido, se uma combinação específica de origem e destino é permitida e quais atualizações devem ser aplicadas no modelo quando uma conexão é feita. Por exemplo, é possível permitir uma conexão apenas se não criar um loop no diagrama. Ao invés de um único link de relação, é possível instanciar um padrão mais complexo de diversos elementos inter-relacionados entre a origem e o destino.
 
  `Connectors.cs`
 
  Contém a classes dos conectores, que são os elementos do diagrama que geralmente representam relações de referência. Cada classe é gerada a partir de um conector na Definição da DSL. Cada classe de conector é derivada de <xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape>
 
- Para tornar a cor e alguns outros recursos de estilo em tempo de execução, clique com o botão direito do mouse na classe no diagrama de definição de DSL e aponte para **Adicionar exposto**.
+ Para tornar a cor e algumas outras variáveis de recursos de estilo em tempo de execução, clique com o botão direito do mouse na classe no diagrama definição de DSL e aponte para **Adicionar Exposto.**
 
  Para tornar recursos de estilo adicionais variáveis em tempo de execução, consulte <xref:Microsoft.VisualStudio.Modeling.Diagrams.TextField> e <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement>, por exemplo.
 
@@ -96,7 +96,7 @@ Pressione **F5** e experimente se você não estiver familiarizado com este mode
 
  Contém a classe que define o diagrama. É derivado de <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>.
 
- Para tornar a cor e alguns outros recursos de estilo em tempo de execução, clique com o botão direito do mouse na classe no diagrama de definição de DSL e aponte para **Adicionar exposto**.
+ Para tornar a cor e algumas outras variáveis de recursos de estilo em tempo de execução, clique com o botão direito do mouse na classe no diagrama definição de DSL e aponte para **Adicionar Exposto.**
 
  Além disso, esse arquivo contém a regra `FixupDiagram`, que responde quando um novo elemento é adicionado ao modelo. A regra adiciona um novo formato e vincula o formato ao elemento do modelo.
 
@@ -104,7 +104,7 @@ Pressione **F5** e experimente se você não estiver familiarizado com este mode
 
  Esse processador de diretriz ajuda os usuários a gravar modelos de texto que fazem a leitura de uma instância da DSL. O processador de diretriz carrega os assemblies (DLLs) da DSL e, efetivamente insere instruções `using` para o namespace. Isso permite ao código nos modelos de texto usar as classes e relações definidas na DSL.
 
- Para obter mais informações, consulte [gerando código de uma linguagem de Domain-Specific](../modeling/generating-code-from-a-domain-specific-language.md) e [criando processadores de diretiva de texto de T4 personalizados](../modeling/creating-custom-t4-text-template-directive-processors.md).
+ Para obter mais informações, consulte [Gerando código de](../modeling/generating-code-from-a-domain-specific-language.md) uma linguagem Domain-Specific e Criando processadores de diretiva de modelo de [texto T4 personalizados.](../modeling/creating-custom-t4-text-template-directive-processors.md)
 
  `DomainClasses.cs`
 
@@ -112,7 +112,7 @@ Pressione **F5** e experimente se você não estiver familiarizado com este mode
 
  Cada classe do domínio contém:
 
-- Uma definição de propriedade e uma classe de manipulador aninhado para cada propriedade do domínio. É possível substituir OnValueChanging() e OnValueChanged(). Para obter mais informações, consulte [manipuladores de alteração de valor de propriedade de domínio](../modeling/domain-property-value-change-handlers.md).
+- Uma definição de propriedade e uma classe de manipulador aninhado para cada propriedade do domínio. É possível substituir OnValueChanging() e OnValueChanged(). Para obter mais informações, consulte [Manipuladores de](../modeling/domain-property-value-change-handlers.md)alteração de valor da propriedade de domínio .
 
    Na DSL de exemplo, a classe `Comment` contém um `Text` de propriedade e um `TextPropertyHandler` de classe de manipulador.
 
@@ -120,9 +120,9 @@ Pressione **F5** e experimente se você não estiver familiarizado com este mode
 
    Na DSL de exemplo, a classe `Comment` possui acessadores que acessa seu modelo pai através da relação de inserção `ComponentModelHasComments`.
 
-- Construtores. Se você quiser substituí-los, defina **tem Construtor personalizado** na classe de domínio.
+- Construtores. Se você quiser substituí-los, de definir **Tem Construtor Personalizado** na classe de domínio.
 
-- Métodos do manipulador Protótipo de Grupo de Elementos (EGP). Eles serão necessários se o usuário puder *mesclar* (Adicionar) outro elemento nas instâncias dessa classe. Geralmente, o usuário faz isso arrastando de uma ferramenta de conexão ou outro formato ou colando.
+- Métodos do manipulador Protótipo de Grupo de Elementos (EGP). Eles serão necessários se o usuário puder *mesclar* (adicionar) outro elemento em instâncias dessa classe. Geralmente, o usuário faz isso arrastando de uma ferramenta de conexão ou outro formato ou colando.
 
    Na DSL de exemplo, uma Porta de Entrada ou Porta de Saída pode ser mesclada com um Componente. Além disso, Componentes e Comentários podem ser mesclados com o modelo. O
 

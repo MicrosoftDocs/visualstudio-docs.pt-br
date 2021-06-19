@@ -1,7 +1,7 @@
 ---
-title: 'Tutorial: abrir um projeto de um repositório no Visual Studio 2017'
-description: Saiba como abrir um projeto em um repositório do git ou DevOps do Azure usando o Visual Studio 2017.
-ms.custom: get-started
+title: 'Tutorial: Abrir um projeto de um Visual Studio 2017'
+description: Saiba como abrir um projeto em um repositório Git ou Azure DevOps usando o Visual Studio 2017.
+ms.custom: vs-acquisition, get-started
 ms.date: 02/15/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -15,35 +15,35 @@ ms.workload:
 - dotnet
 - dotnetcore
 monikerRange: vs-2017
-ms.openlocfilehash: 01aca95bde7a20f746d4faece4090eac60b3849e
-ms.sourcegitcommit: 51e4426889ae5f49c69b122e37b3f48aa7a3925d
+ms.openlocfilehash: 5543a568f7246d9600ba375d9a1cf19af4cbd2d4
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100542971"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389196"
 ---
-# <a name="tutorial-open-a-project-from-a-repo-in-visual-studio-2017"></a>Tutorial: abrir um projeto de um repositório no Visual Studio 2017
+# <a name="tutorial-open-a-project-from-a-repo-in-visual-studio-2017"></a>Tutorial: Abrir um projeto de um Visual Studio 2017
 
-Neste tutorial, você usará o Visual Studio 2017 para se conectar a um repositório pela primeira vez e, em seguida, abrir um projeto a partir dele.
+Neste tutorial, você usará o Visual Studio 2017 para se conectar a um repositório pela primeira vez e, em seguida, abrir um projeto dele.
 
 > [!TIP]
-> Há uma maneira nova e mais totalmente integrada de se conectar com um repositório GitHub no [Visual Studio 2019](https://visualstudio.microsoft.com/downloads). Para obter mais informações, consulte a [**nova experiência de git na página do Visual Studio 2019**](../ide/git-with-visual-studio.md?view=vs-2019&preserve-view=true) .
+> Há uma nova maneira mais integrada de se conectar a um repositório GitHub no [Visual Studio 2019.](https://visualstudio.microsoft.com/downloads) Para obter mais informações, consulte [**a nova experiência do Git na Visual Studio 2019.**](../ide/git-with-visual-studio.md?view=vs-2019&preserve-view=true)
 
 ## <a name="open-a-project-from-a-github-repo-by-using-visual-studio-2017"></a>Abrir um projeto de um repositório GitHub usando o Visual Studio 2017
 
 1. Abra o Visual Studio 2017.
 
-1. Na barra de menus superior, selecione **arquivo**  >  **abrir**  >  **Abrir do controle do código-fonte**.
+1. Na barra de menus superior, selecione **Arquivo**  >  **Aberto Aberto** no Controle do  >  **Código-Fonte**.
 
    O painel **Team Explorer – Conectar** é aberto.
 
     ![A janela do Team Explorer no IDE do Visual Studio](./media/open-proj-repo-team-explorer.png)
 
-1. Na seção **repositórios git locais** , selecione **clonar**.
+1. Na seção **Repositórios Git Locais,** selecione **Clonar**.
 
     ![Escolher Clone na seção Repositórios Git Locais](./media/open-proj-repo-local-git-repo-clone.png)
 
-1. Na caixa que diz ***Insira a URL de um repositório Git para clonar**, digite ou cole a URL do seu repositório e pressione _ * Enter * *. (Talvez você veja um prompt para entrar no GitHub; caso ocorra, entre).
+1. Na caixa que diz * Insira a URL de um repositório Git para **clonar** _, digite ou cole a URL do repositório e pressione _*Enter**. (Talvez você veja um prompt para entrar no GitHub; caso ocorra, entre).
 
    Depois que o Visual Studio clona o repositório, o Team Explorer é fechado e o Gerenciador de Soluções é aberto. É exibida uma mensagem que diz *Clique em Soluções e Pastas acima para exibir uma lista de Soluções*. Escolha **Soluções e Pastas**.
 
@@ -62,13 +62,13 @@ Exiba a animação a seguir para verificar o trabalho que você concluiu a seç�
    ![Animação da abertura de um projeto em um repositório GitHub usando o Visual Studio](./media/open-project-from-github.gif)
 
 > [!NOTE]
-> Para obter informações específicas para o Visual Studio 2019, consulte a página [abrir um projeto de um repositório no visual studio 2019](tutorial-open-project-from-repo-visual-studio-2019.md) .
+> Para obter informações específicas do Visual Studio 2019, consulte a página Abrir um projeto de um Visual Studio [2019.](tutorial-open-project-from-repo-visual-studio-2019.md)
 
-## <a name="open-a-project-from-an-azure-devops-repo-by-using-visual-studio-2017"></a>Abrir um projeto de um repositório DevOps do Azure usando o Visual Studio 2017
+## <a name="open-a-project-from-an-azure-devops-repo-by-using-visual-studio-2017"></a>Abrir um projeto de um Azure DevOps usando o Visual Studio 2017
 
 1. Abra o Visual Studio 2017.
 
-1. Na barra de menus superior, selecione **arquivo**  >  **abrir**  >  **Abrir do controle do código-fonte**.
+1. Na barra de menus superior, selecione **Arquivo**  >  **Aberto Aberto** no Controle do  >  **Código-Fonte**.
 
    O painel **Team Explorer – Conectar** é aberto.
 
@@ -76,17 +76,17 @@ Exiba a animação a seguir para verificar o trabalho que você concluiu a seç�
 
 1. Há duas maneiras de se conectar ao repositório Azure DevOps:
 
-      - Na seção **provedores de serviço hospedado** , selecione **conectar...**.
+      - Na seção **Provedores de Serviços Hospedados,** selecione **Conectar...**.
 
         ![A seção Provedores de Serviços Hospedados da janela Team Explorer no IDE do Visual Studio](./media/open-proj-repo-azure-devops.png)
 
-      - Na lista suspensa **gerenciar conexões** , selecione **conectar a um projeto...**.
+      - Na lista **lista listada do** gerenciar conexões, **selecione Conectar-se a um Projeto...**.
 
         ![A seção Gerenciar Conexões da janela Team Explorer no IDE do Visual Studio](./media/open-proj-repo-azuredevops-manage-connections.png)
 
-1. Na caixa de diálogo **conectar a um projeto** , escolha o repositório ao qual você deseja se conectar e, em seguida, selecione **clonar**.
+1. Na caixa **de diálogo Conectar-se a** um Projeto, escolha o repo ao qual você deseja se conectar e, em seguida, selecione **Clonar**.
 
-      ![A caixa de diálogo ' conectar-se a um projeto ' gerada no Visual Studio](./media/open-proj-azure-devops-connect-cloud-clone.png)
+      ![A caixa de diálogo 'Conectar-se a um Projeto' gerada de Visual Studio](./media/open-proj-azure-devops-connect-cloud-clone.png)
 
     > [!NOTE]
     > O que é exibido na caixa de listagem depende dos repositórios Azure DevOps a que você tem acesso.
@@ -101,17 +101,17 @@ Exiba a animação a seguir para verificar o trabalho que você concluiu a seç�
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Se você estiver pronto para codificar com o Visual Studio 2017, aprofunde-se em qualquer um dos seguintes tutoriais específicos de idioma:
+Se você estiver pronto para codificar com o Visual Studio 2017, adeiba-se em qualquer um dos seguintes tutoriais específicos de linguagem:
 
-- [Tutoriais do Visual Studio | **C#**](./csharp/index.yml)
+- [Visual Studio tutoriais | **C#**](./csharp/index.yml)
 - [Tutoriais do Visual Studio | **Visual Basic**](./visual-basic/index.yml)
 - [Tutoriais do Visual Studio | **C++**](/cpp/get-started/tutorial-console-cpp)
-- [Tutoriais do Visual Studio | **Python**](../python/index.yml)
+- [Visual Studio tutoriais | **Python**](../python/index.yml)
 - [Tutoriais do Visual Studio | **JavaScript**, **TypeScript** e **Node.js**](../javascript/index.yml)
 
 ## <a name="see-also"></a>Confira também
 
-- [Abrir um projeto de um repositório no Visual Studio 2019](tutorial-open-project-from-repo-visual-studio-2019.md)
-- [Nova experiência de git no Visual Studio 2019](../ide/git-with-visual-studio.md)
-- [Azure DevOps Services: introdução ao Azure Repos e ao Visual Studio](/azure/devops/repos/git/gitquickstart/)
-- [Microsoft Learn: introdução ao Azure DevOps](/learn/modules/get-started-with-devops/)
+- [Abrir um projeto de um Visual Studio 2019](tutorial-open-project-from-repo-visual-studio-2019.md)
+- [Nova experiência do Git no Visual Studio 2019](../ide/git-with-visual-studio.md)
+- [Azure DevOps Services: Começar a Azure Repos e Visual Studio](/azure/devops/repos/git/gitquickstart/)
+- [Microsoft Learn: Começar a Azure DevOps](/learn/modules/get-started-with-devops/)

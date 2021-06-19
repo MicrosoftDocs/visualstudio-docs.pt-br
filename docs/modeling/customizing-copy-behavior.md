@@ -4,17 +4,17 @@ description: Saiba que, em uma DSL criada com o SDK de visualização e modelage
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 93a32ed2bb4f375e8938c9a3b9ff34c7af47e0e2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c2e5ffbc7dde0bd1274756d1721088b18ea6ec34
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935593"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389404"
 ---
 # <a name="customizing-copy-behavior"></a>Personalizando o comportamento da operação de copiar
 Em uma DSL (linguagem específica de domínio) criada com o SDK de visualização e modelagem do Visual Studio, você pode alterar o que acontece quando o usuário copia e cola elementos.
@@ -367,7 +367,7 @@ private ElementGroupPrototype ConvertDraggedTypeToLocal (MyTargetShape snapshot,
 ## <a name="standard-copy-behavior"></a>Comportamento copiar padrão 
  O código nesta seção mostra métodos que você pode substituir para alterar o comportamento de cópia. Para ajudá-lo a entender como fazer suas próprias personalizações, esta seção mostra o código que substitui os métodos envolvidos na cópia, mas não altera o comportamento padrão.
 
- Quando o usuário pressiona CTRL+C ou usa o comando Copiar, o método <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A> é chamado. Você pode ver como isso é configurado em **DslPackage\Generated Code\CommandSet.cs**. Para obter mais informações sobre como os comandos são configurados, consulte [como adicionar um comando ao menu de atalho](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
+ Quando o usuário pressiona CTRL+C ou usa o comando Copiar, o método <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A> é chamado. Você pode ver como isso é definido em **DslPackage\Generated Code\CommandSet.cs.** Para obter mais informações sobre como os comandos são definidos, consulte [Como adicionar um comando ao menu de atalho](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
 
  Você pode substituir ProcessOnMenuCopyCommand adicionando uma definição de classe parcial de *MyDsl* `ClipboardCommandSet` no projeto DslPackage.
 
@@ -558,6 +558,6 @@ namespace Company.MyDsl
 
 - [Personalizando a criação e o movimento de elementos](../modeling/customizing-element-creation-and-movement.md)
 - [Como adicionar um manipulador de evento do tipo "arrastar e soltar"](../modeling/how-to-add-a-drag-and-drop-handler.md)
-- [Exemplo: exemplo de diagramas de circuito VMSDK](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+- [Exemplo: Exemplo de diagramas de circuito do VMSDK](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, creating solutions
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cfa8a3cda3f6bb2f564efe745a11863cf4d0e8a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 04180b1fc8930b58c2d78635c794c8a614db5ed5
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945299"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389378"
 ---
 # <a name="customize-and-extend-a-domain-specific-language"></a>Personalizar e estender uma linguagem específica de domínio
 
@@ -52,14 +52,14 @@ O Visual Studio Modeling VMSDK (SDK de modelagem e visualização) fornece vári
 |Altere o nome, o ícone e a visibilidade dos nós no Gerenciador de modelos de sua DSL.|Consulte [Personalizando o Gerenciador de modelos](../modeling/customizing-the-model-explorer.md).|
 |Habilitar copiar, recortar e colar|Defina a propriedade **habilitar copiar colar** do nó do **Editor** no Gerenciador de DSL.|
 |Copie links de referência e seus destinos sempre que um elemento for copiado. Por exemplo, copie os comentários anexados a um item.|Defina a propriedade de **cópia propagada** da função de origem (representada pela linha em um lado da relação de domínio no diagrama de definição de DSL).<br /><br /> Escreva o código para substituir ProcessOnCopy para obter efeitos mais complexos.<br /><br /> Consulte [Personalizando o comportamento de cópia](../modeling/customizing-copy-behavior.md).|
-|Excluir, repai ou vincular novamente os elementos relacionados quando um elemento é excluído.|Defina o valor de **exclusão de propagações** de uma função de relação. Para efeitos mais complexos, substitua `ShouldVisitRelationship` e `ShouldVisitRolePlayer` métodos na `MyDslDeleteClosure` classe, definidos em **DomainModel.cs**.|
+|Excluir, repai ou vincular novamente os elementos relacionados quando um elemento é excluído.|Defina o valor de **exclusão de propagações** de uma função de relação. Para efeitos mais complexos, substitua `ShouldVisitRelationship` e `ShouldVisitRolePlayer` métodos na `MyDslDeleteClosure` classe, definidos em **DomainModel. cs**.|
 |Preserve o layout de forma e a aparência em copiar e arrastar e soltar.|Adicione as formas e os conectores aos copiados `ElementGroupPrototype` . O método mais conveniente para substituir é `ElementOperations.CreateElementGroupPrototype()`<br /><br /> Consulte [Personalizando o comportamento de cópia](../modeling/customizing-copy-behavior.md).|
 |Cole formas em um local escolhido, como a posição atual do cursor.|Substitua `ClipboardCommandSet.ProcessOnCopy()` para usar a versão específica de local do `ElementOperations.Merge().` consulte [Personalizando o comportamento de cópia](../modeling/customizing-copy-behavior.md).|
 |Criar links adicionais ao colar|Substituir ClipboardCommandSet. ProcessOnPasteCommand ()|
 |Habilitar arrastar e soltar deste diagrama, outras DSLs e elementos do Windows|Consulte [como: adicionar um manipulador de arrastar e soltar](../modeling/how-to-add-a-drag-and-drop-handler.md)|
 |Permite que uma forma ou ferramenta seja arrastada para uma forma filho, como uma porta, como se ela fosse arrastada para o pai.|Defina uma diretiva de mesclagem de elementos na classe de objeto de destino para encaminhar o objeto Descartado para o pai. Consulte [Personalizando a criação e movimentação de elementos](../modeling/customizing-element-creation-and-movement.md).|
 |Permite que uma forma ou ferramenta seja arrastada para uma forma e tenha links ou objetos adicionais criados. Por exemplo, para permitir que um comentário seja descartado em um item ao qual ele será vinculado.|Defina uma diretiva de mesclagem de elementos na classe de domínio de destino e defina os links a serem gerados. Em casos complexos, você pode adicionar código personalizado. Consulte [Personalizando a criação e movimentação de elementos](../modeling/customizing-element-creation-and-movement.md).|
-|Crie um grupo de elementos com uma ferramenta. Por exemplo, um componente com um conjunto fixo de portas.|Substitua o método de inicialização da caixa de ferramentas em ToolboxHelper.cs. Crie um protótipo de grupo de elementos (EGP) contendo os elementos e seus links de relacionamento. Consulte [Personalizando ferramentas e a caixa de ferramentas](../modeling/customizing-tools-and-the-toolbox.md).<br /><br /> Inclua as formas de entidade e de porta no EGP, ou defina BoundsRules para posicionar as formas de porta quando o EGP for instanciado.|
+|Crie um grupo de elementos com uma ferramenta. Por exemplo, um componente com um conjunto fixo de portas.|Substitua o método de inicialização da caixa de ferramentas em ToolboxHelper. cs. Crie um protótipo de grupo de elementos (EGP) contendo os elementos e seus links de relacionamento. Consulte [Personalizando ferramentas e a caixa de ferramentas](../modeling/customizing-tools-and-the-toolbox.md).<br /><br /> Inclua as formas de entidade e de porta no EGP, ou defina BoundsRules para posicionar as formas de porta quando o EGP for instanciado.|
 |Use uma ferramenta de conexão para criar uma instância de vários tipos de relação.|Adicione as diretivas de conexão de link (LCD) ao construtor de conexões que é invocado pela ferramenta. Os LCDs determinam o tipo da relação dos tipos dos dois elementos. Para fazer isso depender dos Estados dos elementos, você pode adicionar código personalizado. Consulte [Personalizando ferramentas e a caixa de ferramentas](../modeling/customizing-tools-and-the-toolbox.md).|
 |Ferramentas adesivas – o usuário pode clicar duas vezes em qualquer ferramenta para criar muitas formas ou conectores sucessivamente.|No Gerenciador de DSL, selecione o `Editor` nó. Na janela Propriedades, Set **usa itens de caixa de ferramentas adesivas**.|
 |Definir comandos de menu|Consulte [como: modificar um comando de menu padrão](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)|
@@ -70,7 +70,7 @@ O Visual Studio Modeling VMSDK (SDK de modelagem e visualização) fornece vári
 |Integre várias DSLs para que elas funcionem como parte de um aplicativo.|Consulte [integrando modelos usando o Visual Studio ModelBus](../modeling/integrating-models-by-using-visual-studio-modelbus.md).|
 |Permita que sua DSL seja estendida por terceiros e controle a extensão.|[Estender a DSL usando MEF](../modeling/extend-your-dsl-by-using-mef.md)<br /><br /> [Compartilhando classes entre DSLs por meio de uma biblioteca de DSLs](../modeling/sharing-classes-between-dsls-by-using-a-dsl-library.md)<br /><br /> [Definindo uma política de bloqueio para criar segmentos somente leitura](../modeling/defining-a-locking-policy-to-create-read-only-segments.md)|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Como definir uma linguagem específica do domínio](../modeling/how-to-define-a-domain-specific-language.md)
 - [Escrevendo código para personalizar um idioma Domain-Specific](../modeling/writing-code-to-customise-a-domain-specific-language.md)

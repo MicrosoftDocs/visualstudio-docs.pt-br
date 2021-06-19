@@ -1,32 +1,32 @@
 ---
 title: Manipuladores de alterações nos valores de propriedades de domínio
-description: Saiba mais sobre manipuladores de alteração de valor de propriedade de domínio que podem ser usados em uma linguagem específica de domínio do Visual Studio.
+description: Saiba mais sobre manipuladores de alteração de valor de propriedade de domínio que podem ser usados em uma linguagem Visual Studio específica do domínio.
 ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, overriding event handlers
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a5a372d2e558b44753e9d0bc66d7c4c24b825533
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1c6cdb027bafdf4d1fe7689d7dd30d697b539370
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935086"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388991"
 ---
-# <a name="domain-property-value-change-handlers"></a>Manipuladores de alteração de valor de propriedade de domínio
+# <a name="domain-property-value-change-handlers"></a>Manipuladores de alteração de valor da propriedade de domínio
 
-Em uma linguagem específica de domínio do Visual Studio, quando o valor de uma propriedade de domínio é alterado, os `OnValueChanging()` `OnValueChanged()` métodos e são invocados no manipulador de propriedade de domínio. Para responder à mudança, você pode substituir esses métodos.
+Em um Visual Studio específico do domínio, quando o valor de uma propriedade de domínio é alteração, os métodos e são invocados no `OnValueChanging()` manipulador de propriedades de `OnValueChanged()` domínio. Para responder à mudança, você pode substituir esses métodos.
 
-## <a name="override-the-property-handler-methods"></a>Substituir os métodos do manipulador de propriedades
+## <a name="override-the-property-handler-methods"></a>Substituir os métodos do Manipulador de Propriedades
 
-Cada propriedade de domínio de sua linguagem específica do domínio é manipulada por uma classe que está aninhada em sua classe de domínio pai. Seu nome segue o formato *PropertyName* PropertyHandler. Você pode inspecionar essa classe de manipulador de propriedade no arquivo **Dsl\Generated Code\DomainClasses.cs**. Na classe, `OnValueChanging()` é chamado imediatamente antes de o valor ser alterado, e `OnValueChanged()` é chamado imediatamente após o valor ser alterado.
+Cada propriedade de domínio de sua linguagem específica do domínio é manipulada por uma classe que está aninhada em sua classe de domínio pai. Seu nome segue o formato *PropertyName* PropertyHandler. Você pode inspecionar essa classe de manipulador de propriedades no arquivo **Dsl\Generated Code\DomainClasses.cs**. Na classe, `OnValueChanging()` é chamado imediatamente antes de o valor ser alterado, e `OnValueChanged()` é chamado imediatamente após o valor ser alterado.
 
-Por exemplo, suponha que você tenha uma classe de domínio denominada `Comment` que tenha uma propriedade de domínio de cadeia de caracteres denominada `Text` e uma propriedade de número inteiro chamada `TextLengthCount` . Para fazer com que o `TextLengthCount` sempre contenha o comprimento da `Text` cadeia de caracteres, você pode escrever o seguinte código em um arquivo separado no projeto DSL:
+Por exemplo, suponha que você tenha uma classe de domínio chamada que tem uma propriedade de domínio de cadeia de `Comment` caracteres chamada `Text` e uma propriedade de inteiro chamada `TextLengthCount` . Para fazer com que sempre contenha o comprimento da cadeia de caracteres, você pode escrever o seguinte código em um `TextLengthCount` arquivo separado no projeto `Text` Dsl:
 
 ```csharp
 // Domain Class "Comment":
@@ -62,7 +62,7 @@ Observe os seguintes pontos sobre os manipuladores de propriedades:
 
 - Você não pode usar um manipulador de alterações para modificar o novo valor. Se você quiser fazer isso, por exemplo, para restringir o valor de um determinado intervalo, defina uma `ChangeRule`.
 
-- Você não pode adicionar um manipulador de alterações para uma propriedade que representa a função de um relacionamento. Em vez disso, defina uma `AddRule` e uma `DeleteRule` na classe de relação. Essas regras são disparadas quando você cria ou altera links. Para obter mais informações, consulte [regras propagar alterações no modelo](../modeling/rules-propagate-changes-within-the-model.md).
+- Você não pode adicionar um manipulador de alterações para uma propriedade que representa a função de um relacionamento. Em vez disso, defina uma `AddRule` e uma `DeleteRule` na classe de relação. Essas regras são disparadas quando você cria ou altera links. Para obter mais informações, consulte [Regras propagam alterações dentro do modelo](../modeling/rules-propagate-changes-within-the-model.md).
 
 ### <a name="changes-in-and-out-of-the-store"></a>Alterações dentro e fora do repositório
 
@@ -99,19 +99,19 @@ if (newValue > 10)
 
 O exemplo anterior mostra como OnValueChanged() pode ser usado para propagar os valores de uma propriedade de domínio para outra. Cada propriedade tem seu próprio valor armazenado.
 
-Em vez disso, você poderia considerar a definição da propriedade derivada como uma propriedade calculada. Nesse caso, a propriedade não tem armazenamento próprio e está definindo a função que é avaliada sempre que o seu valor é necessário. Para obter mais informações, consulte [Propriedades de armazenamento calculadas e personalizadas](../modeling/calculated-and-custom-storage-properties.md).
+Em vez disso, você poderia considerar a definição da propriedade derivada como uma propriedade calculada. Nesse caso, a propriedade não tem armazenamento próprio e está definindo a função que é avaliada sempre que o seu valor é necessário. Para obter mais informações, consulte [Propriedades de armazenamento calculadas e personalizadas.](../modeling/calculated-and-custom-storage-properties.md)
 
-Em vez do exemplo anterior, você poderia definir o **tipo** de campo de `TextLengthCount` a ser **calculado** na definição de DSL. Você forneceria seu próprio método **Get** para essa propriedade de domínio. O método **Get** retornaria o comprimento atual da `Text` cadeia de caracteres.
+Em vez do exemplo anterior, você pode definir **o campo Tipo** de para ser Calculado `TextLengthCount` **na** Definição de DSL. Você forneceria seu próprio **método Get** para essa propriedade de domínio. O **método Get** retornaria o comprimento atual da cadeia de `Text` caracteres.
 
 No entanto, há uma possível desvantagem referente às propriedades calculadas, pois a expressão é avaliada toda vez que o valor é usado, o que pode representar um problema de desempenho. Além disso, não há nenhum OnValueChanging() e OnValueChanged() em uma propriedade calculada.
 
 ### <a name="alternative-technique-change-rules"></a>Técnica alternativa: alterar as regras
 
-Se você definir um ChangeRule, ele será executado no final de uma transação na qual o valor de uma propriedade é alterado.  Para obter mais informações, consulte [regras propagar alterações no modelo](../modeling/rules-propagate-changes-within-the-model.md).
+Se você definir um ChangeRule, ele será executado no final de uma transação na qual o valor de uma propriedade é alterado.  Para obter mais informações, consulte [Regras propagam alterações dentro do modelo](../modeling/rules-propagate-changes-within-the-model.md).
 
-Se várias alterações são feitas em uma transação, a ChangeRule executa quando todas estão concluídas. Por outro lado, o onvalue... os métodos são executados quando algumas das alterações não são executadas. Dependendo do que você deseja fazer, essa pode fazer uma ChangeRule mais adequada.
+Se várias alterações são feitas em uma transação, a ChangeRule executa quando todas estão concluídas. Por outro lado, o OnValue... os métodos são executados quando algumas das alterações não foram executadas. Dependendo do que você deseja fazer, essa pode fazer uma ChangeRule mais adequada.
 
-Você também pode usar um ChangeRule para ajustar o novo valor da propriedade para mantê-lo em um intervalo específico.
+Você também pode usar um ChangeRule para ajustar o novo valor da propriedade para mantê-lo dentro de um intervalo específico.
 
 > [!WARNING]
 > Se uma regra fizer alterações no conteúdo do repositório, outras regras e manipuladores de propriedades podem ser disparados. Se uma regra alterar a propriedade que disparou essas regras e manipuladores, ela será chamada novamente. Verifique se suas definições de regras não resultam em disparos infinitos.

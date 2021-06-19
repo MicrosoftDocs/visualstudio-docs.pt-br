@@ -4,23 +4,23 @@ description: Saiba como o DGML (direcionamento do Graph Markup Language) descrev
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9abc3d3596a64c04bf25c0471d32a00f1cb7705d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: adaa09ca7c58652c85cf6c3510e9e47bc4af00f3
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935073"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389105"
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>Referência DGML
 
 A DGML (grafo Markup Language) descreve informações usadas para visualização e para executar a análise de complexidade, e é o formato usado para persistir mapas de código no Visual Studio. Ele usa XML simples para descrever grafos direcionados acíclico e cíclicos. Um gráfico direcionado é um conjunto de nós conectados por links ou bordas. Nós e links podem ser usados representam estruturas de rede como, por exemplo, elementos em um projeto de software.
 
-Observe que algumas versões do Visual Studio dão suporte apenas a um subconjunto de recursos DGML, consulte [suporte de versão para ferramentas de arquitetura e modelagem](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Observe que algumas versões do Visual Studio dão suporte apenas a um subconjunto de recursos DGML, consulte [suporte de versão para ferramentas de arquitetura e modelagem](../modeling/analyze-and-model-your-architecture.md#VersionSupport).
 
 > [!NOTE]
 > Quando você edita um arquivo .dgml, o IntelliSense ajuda você a identificar atributos disponíveis para cada elemento e seus valores. Para especificar a cor em um atributo, use nomes de cores comuns como, por exemplo, "Azul", ou valores hexadecimais ARGB, como "#ffa0b1c3". DGML usa um subconjunto pequeno de formatos de definição de cor do WPF (Windows Presentation Foundation). Para obter mais informações, consulte a [classe Colors](/dotnet/api/system.windows.media.colors?view=netframework-4.8&preserve-view=true).

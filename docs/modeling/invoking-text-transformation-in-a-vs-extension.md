@@ -4,17 +4,17 @@ description: Saiba como você pode usar o serviço de modelagem de texto para tr
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a90ae2a1d5460cd62ff1ccae1542f21c4002433
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 71f376cbe0ffd6c2716802977f1570aa5036fcdb
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860887"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386768"
 ---
 # <a name="invoke-text-transformation-in-a-visual-studio-extension"></a>Invocar a transformação de texto em uma extensão do Visual Studio
 

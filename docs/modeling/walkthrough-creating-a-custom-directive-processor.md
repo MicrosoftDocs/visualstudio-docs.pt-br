@@ -1,30 +1,30 @@
 ---
 title: 'Instruções passo a passo: criando um processador de diretiva'
-description: Saiba como você pode usar o Visual Studio para escrever processadores de diretiva personalizada para personalizar seus modelos de texto.
+description: Saiba como você pode usar o Visual Studio para escrever processadores de diretiva personalizados para personalizar seus modelos de texto.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
 - text templates, custom directive processors
 - walkthroughs [text templates], directive processor
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 718ca7b5abf2a7730470475caf2cdf5c200b23b8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e23c8de467cc45abf6fa9f61dfb29dd6c5f1d9cc
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924107"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388237"
 ---
 # <a name="walkthrough-create-a-custom-directive-processor"></a>Passo a passo: criar um processador de diretiva personalizado
 
-Os *processadores de diretiva* funcionam adicionando código à *classe de transformação gerada*. Se você chamar uma *diretiva* de um *modelo de texto*, o restante do código que você escrever no seu modelo de texto poderá contar com a funcionalidade que a diretiva fornece.
+*Os processadores de diretiva* funcionam adicionando código à *classe de transformação gerada.* Se você chamar uma *diretiva* de um modelo de texto *,* o restante do código que você escreve em seu modelo de texto poderá contar com a funcionalidade que a diretiva fornece.
 
 Você pode escrever seus próprios processadores de diretriz personalizados. Isso permite que você personalize seus modelos de texto. Para criar um processador de diretriz personalizado, é preciso criar uma classe herdada de <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> ou de <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>.
 
@@ -32,9 +32,9 @@ As tarefas ilustradas nesta explicação passo a passo incluem o seguinte:
 
 - Criar um processador de diretiva personalizado
 
-- Registrar o processador de diretivas
+- Registrar o processador de diretiva
 
-- Testar o processador de diretivas
+- Testar o processador de diretiva
 
 ## <a name="create-a-custom-directive-processor"></a>Criar um processador de diretriz personalizado
 
@@ -44,7 +44,7 @@ A chamada para a diretiva personalizada é semelhante a esta:
 
 `<#@ CoolDirective Processor="CustomDirectiveProcessor" FileName="<Your Path>DocFile.xml" #>`
 
-O processador de diretriz personalizado adiciona a variável e a propriedade à classe de transformação gerada. A diretiva que você escreve usa as classes <xref:System.CodeDom> para criar o código que o mecanismo adiciona à classe de transformação gerada. As <xref:System.CodeDom> classes criam código no Visual C# ou Visual Basic, dependendo do idioma especificado no `language` parâmetro da `template` diretiva. A linguagem do processador de diretriz e a linguagem do modelo de texto que está acessando o processador de diretriz não precisam coincidir.
+O processador de diretriz personalizado adiciona a variável e a propriedade à classe de transformação gerada. A diretiva que você escreve usa as classes <xref:System.CodeDom> para criar o código que o mecanismo adiciona à classe de transformação gerada. As <xref:System.CodeDom> classes criam código no Visual C# ou Visual Basic, dependendo da linguagem especificada no `language` parâmetro da diretiva `template` . A linguagem do processador de diretriz e a linguagem do modelo de texto que está acessando o processador de diretriz não precisam coincidir.
 
 O código que a diretiva cria é semelhante a este:
 
@@ -82,13 +82,13 @@ End Property
 1. No Visual Studio, crie um novo projeto de biblioteca de classes C# ou Visual Basic chamado CustomDP.
 
     > [!NOTE]
-    > Se você quiser instalar o processador de diretiva em mais de um computador, é melhor usar um projeto de VSIX (extensão do Visual Studio) e incluir um arquivo. pkgdef na extensão. Para obter mais informações, consulte [implantando um processador de diretiva personalizada](../modeling/deploying-a-custom-directive-processor.md).
+    > Se você quiser instalar o processador de diretiva em mais de um computador, é melhor usar um projeto VSIX (Extensão Visual Studio) e incluir um arquivo .pkgdef na extensão. Para obter mais informações, [consulte Implantando um processador de diretiva personalizado.](../modeling/deploying-a-custom-directive-processor.md)
 
 2. Adicione referências a esses assemblies:
 
-    - **Microsoft. VisualStudio. TextTemplating. \* . 0**
+    - **Microsoft.VisualStudio.TextTemplating. \* . 0**
 
-    - **Microsoft. VisualStudio. TextTemplating. interfaces. \* . 0**
+    - **Microsoft.VisualStudio.TextTemplating.Interfaces. \* . 0**
 
 3. Substitua o código em **Class1** pelo código a seguir. Este código define uma classe CustomDirectiveProcessor que herda da classe <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> e implementa os métodos necessários.
 
@@ -601,7 +601,7 @@ End Property
     End Namespace
     ```
 
-4. Somente para Visual Basic, abra o menu **projeto** e clique em **Propriedades de CustomDP**. Na guia **aplicativo** , em **namespace raiz**, exclua o valor padrão, `CustomDP` .
+4. Por Visual Basic, abra o menu **Projeto** e clique em **Propriedades CustomDP**. Na guia **Aplicativo,** no **namespace Raiz**, exclua o valor padrão, `CustomDP` .
 
 5. No menu **Arquivo** , clique em **Salvar Tudo**.
 
@@ -611,12 +611,12 @@ End Property
 
 Compile o projeto. No menu **Compilar**, clique em **Compilar Solução**.
 
-## <a name="register-the-directive-processor"></a>Registrar o processador de diretivas
+## <a name="register-the-directive-processor"></a>Registrar o processador de diretiva
 
-Antes de poder chamar uma diretiva de um modelo de texto no Visual Studio, você deve adicionar uma chave do registro para o processador de diretiva.
+Antes de chamar uma diretiva de um modelo de texto no Visual Studio, você deve adicionar uma chave do Registro para o processador de diretiva.
 
 > [!NOTE]
-> Se você quiser instalar o processador de diretiva em mais de um computador, é melhor definir uma extensão do Visual Studio (VSIX) que inclui um arquivo *. pkgdef* junto com o assembly. Para obter mais informações, consulte [implantando um processador de diretiva personalizada](../modeling/deploying-a-custom-directive-processor.md).
+> Se você quiser instalar o processador de diretiva em mais de um computador, é melhor definir uma VSIX (extensão Visual Studio) que inclui um arquivo *.pkgdef* junto com o assembly. Para obter mais informações, [consulte Implantando um processador de diretiva personalizado.](../modeling/deploying-a-custom-directive-processor.md)
 
 As chaves dos processadores de diretriz estão no Registro, no seguinte local:
 
@@ -637,11 +637,11 @@ Nesta seção, você adiciona uma chave para o processador de diretriz personali
 
 ### <a name="to-add-a-registry-key-for-the-directive-processor"></a>Para adicionar uma chave do Registro para o processador de diretriz
 
-1. Execute o `regedit` comando usando o menu iniciar ou a linha de comando.
+1. Execute o `regedit` comando usando o menu Iniciar ou a linha de comando.
 
-2. Navegue até o local **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ \* 0 \ TextTemplating\DirectiveProcessors** e clique no nó.
+2. Navegue até o **localHKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ \* .0\TextTemplating\DirectiveProcessors** e clique no nó.
 
-   Em sistemas de 64 bits, use **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\\ \* . 0 \ TextTemplating\DirectiveProcessors**
+   Em sistemas de 64 bits, use **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\\ \* .0\TextTemplating\DirectiveProcessors**
 
 3. Adicione uma nova chave chamada CustomDirectiveProcessor.
 
@@ -652,11 +652,11 @@ Nesta seção, você adiciona uma chave para o processador de diretriz personali
 
 5. Adicione um novo valor da cadeia de caracteres chamado CodeBase que tenha um valor igual ao caminho do arquivo CustomDP.dll criado anteriormente neste passo a passo.
 
-     Por exemplo, o caminho pode ser semelhante a `C:\UserFiles\CustomDP\bin\Debug\CustomDP.dll` .
+     Por exemplo, o caminho pode se parecer com `C:\UserFiles\CustomDP\bin\Debug\CustomDP.dll` .
 
      A chave do Registro deverá ter os seguintes valores:
 
-   | Nome | Type | Dados |
+   | Nome | Tipo | Dados |
    |-|-|-|
    | (Padrão) | REG_SZ | (valor não definido) |
    | Classe | REG_SZ | CustomDP.CustomDirectiveProcessor |
@@ -664,7 +664,7 @@ Nesta seção, você adiciona uma chave para o processador de diretriz personali
 
      Se você colocou o assembly no GAC, os valores deverão se parecer com o seguinte:
 
-   | Nome | Type | Dados |
+   | Nome | Tipo | Dados |
    |-|-|-|
    | (Padrão) | REG_SZ | (valor não definido) |
    | Classe | REG_SZ | CustomDP.CustomDirectiveProcessor |
@@ -672,7 +672,7 @@ Nesta seção, você adiciona uma chave para o processador de diretriz personali
 
 6. Reinicie o Visual Studio.
 
-## <a name="test-the-directive-processor"></a>Testar o processador de diretivas
+## <a name="test-the-directive-processor"></a>Testar o processador de diretiva
 
 Para testar o processador de diretriz, você precisa escrever um modelo de texto que o chame.
 
@@ -680,7 +680,7 @@ Neste exemplo, o modelo de texto chama a diretiva e passa o nome de um arquivo X
 
 ### <a name="to-create-an-xml-file-for-use-in-testing-the-directive-processor"></a>Para criar um arquivo XML para uso no teste do processador de diretriz
 
-1. Crie um arquivo chamado *DocFile.xml* usando qualquer editor de texto (por exemplo, bloco de notas).
+1. Crie um arquivo chamado *DocFile.xml* usando qualquer editor de texto (por exemplo, Bloco de notas).
 
     > [!NOTE]
     > Você pode criar esse arquivo em qualquer local (por exemplo, *C:\Test\DocFile.xml*).
@@ -734,12 +734,12 @@ Neste exemplo, o modelo de texto chama a diretiva e passa o nome de um arquivo X
 
 2. Adicione um novo arquivo de modelo de texto chamado TestDP.tt.
 
-3. Verifique se a propriedade da **ferramenta personalizada** de TestDP.tt está definida como `TextTemplatingFileGenerator` .
+3. Certifique-se de **que a** propriedade Ferramenta Personalizada TestDP.tt está definida como `TextTemplatingFileGenerator` .
 
-4. Altere o conteúdo de TestDP.tt para o texto a seguir.
+4. Altere o conteúdo TestDP.tt para o texto a seguir.
 
     > [!NOTE]
-    > Substitua a cadeia de caracteres `<YOUR PATH>` pelo caminho para o arquivo de *DocFile.xml* .
+    > Substitua a cadeia `<YOUR PATH>` de caracteres pelo caminho para o *DocFile.xml* arquivo.
 
     A linguagem do modelo de texto não precisa corresponder à linguagem do processador de diretriz.
 

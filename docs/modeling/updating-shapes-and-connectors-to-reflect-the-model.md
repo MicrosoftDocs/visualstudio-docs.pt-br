@@ -1,24 +1,24 @@
 ---
 title: Atualizando formas e conectores para refletir o modelo
-description: Saiba que, em uma linguagem específica de domínio no Visual Studio, você pode fazer com que a aparência de uma forma reflita o estado do modelo subjacente.
+description: Saiba que, em um idioma específico do domínio Visual Studio, você pode fazer com que a aparência de uma forma reflita o estado do modelo subjacente.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 57f3785fe232b20123475bd85be2be7148e5b87e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6439a01de2a02361914ce227c43d903f1b24b405
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924348"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388562"
 ---
 # <a name="update-shapes-and-connectors-to-reflect-the-model"></a>Atualizar formas e conectores para refletir o modelo
 
-Em uma linguagem específica de domínio no Visual Studio, você pode fazer com que a aparência de uma forma reflita o estado do modelo subjacente.
+Em um idioma específico do domínio Visual Studio, você pode fazer com que a aparência de uma forma reflita o estado do modelo subjacente.
 
 Os exemplos de código neste tópico devem ser adicionados a um `.cs` arquivo em seu `Dsl` projeto. Você precisa dessas diretivas em cada arquivo:
 
@@ -27,26 +27,26 @@ using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 ```
 
-## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>Definir propriedades de mapa de formas para controlar a visibilidade de um decorador
+## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>Definir propriedades do Mapa de Formas para controlar a visibilidade de um decorador
 
-Você pode controlar a visibilidade de um decorador sem escrever o código do programa, configurando o mapeamento entre a forma e a classe de domínio na definição de DSL. Para obter mais informações, consulte [como definir um idioma de Domain-Specific](../modeling/how-to-define-a-domain-specific-language.md).
+Você pode controlar a visibilidade de um decorador sem escrever o código do programa configurando o mapeamento entre a forma e a classe de domínio na Definição de DSL. Para obter mais informações, [consulte How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md).
 
 ## <a name="expose-the-color-and-style-of-a-shape-as-properties"></a>Expor a cor e o estilo de uma forma como propriedades
 
-Na definição de DSL, clique com o botão direito do mouse na classe Shape, aponte para **Adicionar exposto** e clique em um dos itens como **cor de preenchimento**.
+Na Definição de DSL, clique com o botão direito do mouse na classe de forma, aponte para Adicionar Exposto e clique em um dos itens, como **Cor de Preenchimento.**
 
-A forma agora tem uma propriedade Domain que pode ser definida no código do programa ou como um usuário. Por exemplo, para defini-lo no código do programa de um comando ou regra, você poderia escrever:
+A forma agora tem uma propriedade de domínio que você pode definir no código do programa ou como um usuário. Por exemplo, para defini-lo no código do programa de um comando ou regra, você pode escrever:
 
 `shape.FillColor = System.Drawing.Color.Red;`
 
-Se você quiser tornar a variável de propriedade somente sob o controle do programa, e não pelo usuário, selecione a nova propriedade de domínio, como **cor de preenchimento** no diagrama de definição de DSL. Em seguida, na janela Propriedades, Set **é navegável** para `false` ou definido **é a interface do usuário ReadOnly** para `true` .
+Se você quiser tornar a variável de propriedade somente sob o controle de  programa e não pelo usuário, selecione a nova propriedade de domínio, como Cor de Preenchimento no diagrama de Definição de DSL. Em seguida, no janela Propriedades, de conjunto **É Navegar** como ou definir `false` Is **UI Readonly** como `true` .
 
-## <a name="define-change-rules-to-make-color-style-or-location-depend-on-model-element-properties"></a>Definir regras de alteração para tornar a cor, o estilo ou o local depende das propriedades do elemento de modelo
- Você pode definir regras que atualizam a aparência da forma dependente de outras partes do modelo. Por exemplo, você pode definir uma regra de alteração em um elemento de modelo que atualiza a cor de sua forma dependente das propriedades do elemento de modelo. Para obter mais informações sobre regras de alteração, consulte [regras propagar alterações no modelo](../modeling/rules-propagate-changes-within-the-model.md).
+## <a name="define-change-rules-to-make-color-style-or-location-depend-on-model-element-properties"></a>Definir Regras de Alteração para fazer com que a cor, o estilo ou o local dependam das propriedades do elemento de modelo
+ Você pode definir regras que atualizem a aparência da forma dependente de outras partes do modelo. Por exemplo, você pode definir uma Regra de Alteração em um elemento de modelo que atualiza a cor de sua forma dependendo das propriedades do elemento de modelo. Para obter mais informações sobre regras de alteração, consulte [Regras propagam alterações dentro do modelo](../modeling/rules-propagate-changes-within-the-model.md).
 
- Você deve usar regras somente para atualizar as propriedades mantidas no repositório, pois as regras não são invocadas quando o comando desfazer é executado. Isso não inclui alguns recursos gráficos, como o tamanho e a visibilidade de uma forma. Para atualizar esses recursos de uma forma, consulte [atualizando recursos gráficos que não são de armazenamento](#OnAssociatedProperty).
+ Você deve usar regras somente para atualizar as propriedades mantidas no Store, porque as regras não são invocadas quando o comando Desfazer é executado. Isso não inclui alguns recursos gráficos, como o tamanho e a visibilidade de uma forma. Para atualizar esses recursos de uma forma, consulte [Atualizando recursos gráficos que não são da loja.](#OnAssociatedProperty)
 
- O exemplo a seguir pressupõe que você tenha exposto `FillColor` como uma propriedade de domínio, conforme descrito na seção anterior.
+ O exemplo a seguir presume que você tenha exposto `FillColor` como uma propriedade de domínio, conforme descrito na seção anterior.
 
 ```csharp
 [RuleOn(typeof(ExampleElement))]
@@ -86,7 +86,7 @@ Se você quiser tornar a variável de propriedade somente sob o controle do prog
 
 ## <a name="use-onchildconfigured-to-initialize-a-shapes-properties"></a>Usar OnChildConfigured para inicializar as propriedades de uma forma
 
-Para definir as propriedades de uma forma quando ela é criada pela primeira vez, a substituição `OnChildConfigured()` em uma definição parcial da classe de diagrama. A classe de diagrama é especificada em sua definição de DSL e o código gerado está em **Dsl\Generated Code\Diagram.cs**. Por exemplo:
+Para definir as propriedades de uma forma quando ela é criada pela primeira vez, a substituição `OnChildConfigured()` em uma definição parcial da classe de diagrama. A classe de diagrama é especificada em sua Definição de DSL e o código gerado está em **Dsl\Generated Code\Diagram.cs**. Por exemplo:
 
 ```csharp
 partial class MyLanguageDiagram
@@ -110,11 +110,11 @@ partial class MyLanguageDiagram
 
 Esse método pode ser usado para propriedades de domínio e recursos que não são de armazenamento, como o tamanho da forma.
 
-## <a name="use-associatevaluewith-to-update-other-features-of-a-shape"></a><a name="OnAssociatedProperty"></a> Usar AssociateValueWith () para atualizar outros recursos de uma forma
+## <a name="use-associatevaluewith-to-update-other-features-of-a-shape"></a><a name="OnAssociatedProperty"></a> Usar AssociateValueWith() para atualizar outros recursos de uma forma
 
-Para alguns recursos de uma forma, como se ele tem uma sombra ou o estilo de seta de um conector, não há um método interno de expor o recurso como uma propriedade de domínio.  As alterações em tais recursos não estão sob o controle do sistema de transação. Portanto, não é apropriado atualizá-los usando regras, pois as regras não são invocadas quando o usuário executa o comando desfazer.
+Para alguns recursos de uma forma, como se ela tem uma sombra ou o estilo de seta de um conector, não há nenhum método integrado de expor o recurso como uma propriedade de domínio.  As alterações nesses recursos não estão sob o controle do sistema de transações. Portanto, não é apropriado atualizá-las usando regras, pois as regras não são invocadas quando o usuário executa o comando Desfazer.
 
-Em vez disso, você pode atualizar esses recursos usando o <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A> . No exemplo a seguir, o estilo de seta de um conector é controlado por um valor de uma propriedade de domínio na relação que o conector exibe:
+Em vez disso, você pode atualizar esses recursos usando <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A> . No exemplo a seguir, o estilo de seta de um conector é controlado por um valor de uma propriedade de domínio na relação que o conector exibe:
 
 ```csharp
 public partial class ArrowConnector // My connector class.
@@ -155,6 +155,6 @@ public partial class ArrowConnector // My connector class.
 }
 ```
 
-`AssociateValueWith()` deve ser chamado uma vez para cada propriedade de domínio que você deseja registrar. Depois de ser chamado, qualquer alteração na propriedade especificada chamará todas as `OnAssociatedPropertyChanged()` formas que apresentam o elemento de modelo da propriedade.
+`AssociateValueWith()` deve ser chamado uma vez para cada propriedade de domínio que você deseja registrar. Depois de ser chamado, todas as alterações na propriedade especificada chamarão em qualquer forma que apresente o `OnAssociatedPropertyChanged()` elemento de modelo da propriedade.
 
-Não é necessário chamar `AssociateValueWith()` para cada instância. Embora InitializeResources seja um método de instância, ele é invocado apenas uma vez para cada classe Shape.
+Não é necessário chamar para `AssociateValueWith()` cada instância. Embora InitializeResources seja um método de instância, ele é invocado apenas uma vez para cada classe de forma.

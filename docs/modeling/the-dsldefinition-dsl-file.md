@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, definition file
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c1a9e633bf832021ee2f6262afed108b1515808
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3f2e2ae6e406b8967cb7de49573ce5b26377806e
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924486"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388627"
 ---
 # <a name="the-dsldefinitiondsl-file"></a>O arquivo DslDefinition.dsl
 
@@ -42,7 +42,7 @@ Esta seção define cada relação do modelo. A origem e o destino representam o
 
 ### <a name="types"></a>Tipos
 
-Esta seção define cada tipo e seu namespace. As propriedades do domínio possuem dois tipos. `DomainEnumerations` são definidos no modelo e geram tipos em DomainModel.cs. `ExternalTypes` Consulte tipos que são definidos em outro lugar (como `String` ou `Int32` ) e não geram nada.
+Esta seção define cada tipo e seu namespace. As propriedades do domínio possuem dois tipos. `DomainEnumerations` são definidos no modelo e geram tipos em DomainModel. cs. `ExternalTypes` Consulte tipos que são definidos em outro lugar (como `String` ou `Int32` ) e não geram nada.
 
 ### <a name="shapes"></a>Formas
 
@@ -186,7 +186,7 @@ Cada classe de domínio (incluindo relações, formas, conectores e diagramas) p
 
 - **Propriedades**. Esse atributo contém as propriedades que são mantidas sob controle da transação e persistem quando o modelo é salvo.
 
-- **ElementMergeDirectives**. Cada diretiva de mesclagem de elementos controla como uma instância diferente de outra classe é adicionada a uma instância da classe pai. Você pode encontrar mais detalhes sobre diretivas de mesclagem de elementos mais adiante neste tópico.
+- **ElementMergeDirectives.** Cada diretiva de mesclagem de elementos controla como uma instância diferente de outra classe é adicionada a uma instância da classe pai. Você pode encontrar mais detalhes sobre diretivas de mesclagem de elementos mais adiante neste tópico.
 
 - Uma classe C# é gerada para cada classe de domínio listada na seção `Classes`. As classes C# são geradas em Dsl\GeneratedCode\DomainClasses.cs.
 
@@ -206,9 +206,9 @@ O tipo deve se referir a um dos tipos listados na seção `Types`. Geralmente, o
 
 Cada propriedade de domínio pode ter também estes atributos:
 
-- **Isnavegável**. Esse atributo determina se a propriedade aparece na janela **Propriedades** quando o usuário clica em um objeto da classe pai.
+- **IsBrowsable.** Esse atributo determina se a propriedade aparece na **janela Propriedades** quando o usuário clica em um objeto da classe pai.
 
-- **IsUIReadOnly**. Esse atributo determina se o usuário pode alterar a propriedade na janela **Propriedades** ou por meio de um decorador no qual a propriedade é apresentada.
+- **IsUIReadOnly.** Esse atributo determina se o usuário pode alterar a propriedade na janela **Propriedades** ou por meio de um decorador no qual a propriedade é apresentada.
 
 - **Tipo**. Você pode configurar este atributo como Normal, Calculado ou CustomStorage. Se você configurar este atributo como Calculado, deverá fornecer um código personalizado que determina o valor e a propriedade será somente leitura. Se você configurar esse atributo como CustomStorage, deverá fornecer o código que obtém e configura valores.
 
@@ -216,7 +216,7 @@ Cada propriedade de domínio pode ter também estes atributos:
 
 - `DefaultValue`. Se você tiver especificado este atributo, o valor especificado será atribuído a ele para novas instâncias desta classe. Se `IsElementName` estiver configurado, o atributo DefaultValue especifica a parte inicial da nova cadeia de caracteres.
 
-- **Categoria** é o cabeçalho sob o qual a propriedade aparecerá na janela **Propriedades** .
+- **Categoria** é o header sob o qual a propriedade será exibida na **janela** Propriedades.
 
 ## <a name="relationships"></a>Relações
 
@@ -263,13 +263,13 @@ Todo relacionamento contém funções de origem e de destino que possuem os segu
 
 Além disso, para os atributos e nós filho que estão disponíveis para todas as classes, cada relação possui estes atributos:
 
-- **Isinserção**. Este atributo booliano especifica se o relacionamento faz parte da árvore inserida. Cada modelo deve formar uma árvore com as relações inseridas. Cada classe de domínio deve, portanto, ser o destino de pelo menos uma relação inserida, a menos que seja a raiz de um modelo.
+- **IsEmbedding.** Este atributo booliano especifica se o relacionamento faz parte da árvore inserida. Cada modelo deve formar uma árvore com as relações inseridas. Cada classe de domínio deve, portanto, ser o destino de pelo menos uma relação inserida, a menos que seja a raiz de um modelo.
 
 - **AllowsDuplicates**. Este atributo booliano, que é false por padrão, aplica-se somente a relações que tenham uma multiplicidade "many" tanto na origem como no destino. Ele determina se os usuários da linguagem podem se conectar a um único par de elementos de origem e de destino por mais de um link da mesma relação.
 
 ## <a name="designer-and-toolbox-tabs"></a>Guias Designer e Caixa de Ferramentas
 
-A parte principal da seção de **Designer** do arquivo DslDefinition. DSL é **ToolboxTab** elementos. Um designer pode ter vários desses elementos, cada um representando uma seção de pontas na **caixa de ferramentas** do designer gerado. Cada elemento **ToolboxTab** pode conter um ou mais elementos **ElementTool** , elementos **ConnectionTool** ou ambos.
+A parte principal da seção **Designer** do arquivo DslDefinition.dsl são os **elementos ToolboxTab.** Um designer pode ter vários desses elementos, cada um deles representando uma seção encabeçada na Caixa de Ferramentas do **designer gerado.** Cada **elemento ToolboxTab** pode conter um ou mais **elementos ElementTool,** elementos **ConnectionTool** ou ambos.
 
 As ferramentas de elementos podem criar instâncias de uma classe de domínio específica. Quando o usuário arrasta uma ferramenta de elemento no diagrama, o resultado é determinado pelas diretivas de mesclagem de elementos, conforme descrito na seção sobre diretivas de mesclagem de elementos mais adiante neste tópico.
 

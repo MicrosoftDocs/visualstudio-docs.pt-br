@@ -1,7 +1,7 @@
 ---
 title: Analisar o consumo de recursos em aplicativos XAML
-description: Use o Linha do Tempo do Aplicativo Profiler para encontrar problemas de desempenho em aplicativos XAML. Você pode analisar o tempo gasto para várias tarefas em vários cenários.
-ms.custom: SEO-VS-2020, seodec18
+description: Use o Linha do Tempo do Aplicativo profiler para encontrar problemas de desempenho em aplicativos XAML. Você pode analisar o tempo gasto para várias tarefas em vários cenários.
+ms.custom: SEO-VS-2020
 ms.date: 11/01/2018
 ms.topic: conceptual
 ms.assetid: df7d854b-0a28-45a9-8a64-c015a4327701
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 40fc899aecc3b8aea239703080d8db4efcfaec52
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d352c118bd8b21b9dcbf62f7dd32eaf2999ed471
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901183"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388016"
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>Analisar o consumo de recursos e a Atividade de Thread de Interface do Usuário (XAML)
 
@@ -50,7 +50,7 @@ Veja a seguir as etapas básicas:
 
 3. Selecione **Linha do tempo do aplicativo** e, em seguida, clique em **Iniciar** na parte inferior da janela.
 
-   ![Ferramenta de Linha do Tempo do Aplicativo selecionada](../profiling/media/apptimelineselect.png "Ferramenta de Linha do Tempo do Aplicativo")
+   ![Linha do Tempo do Aplicativo ferramenta selecionada](../profiling/media/apptimelineselect.png "ferramenta Linha do Tempo do Aplicativo de Linha do Tempo do Aplicativo")
 
    > [!NOTE]
    > Talvez você veja uma janela Controle de Conta de Usuário solicitando sua permissão para executar *VsEtwCollector.exe*. Clique em **Sim**.
@@ -61,7 +61,7 @@ Veja a seguir as etapas básicas:
 
    O Visual Studio analisa os dados coletados e exibe os resultados.
 
-   ![Cronograma relatório do criador de perfil](../profiling/media/timeline_base.png "TIMELINE_Base")
+   ![Relatório do profiler de linha do tempo](../profiling/media/timeline_base.png "TIMELINE_Base")
 
 ## <a name="analyze-timeline-profiling-data"></a>Analisar dados de criação de perfil de linha do tempo
 
@@ -101,7 +101,7 @@ A exibição de detalhes é o ponto em que você passa a maior parte do tempo an
 
 Há suporte para os seguintes eventos:
 
-|Nome|Descrição|
+|Name|Descrição|
 |-|-|
 |**Análise**|Tempo gasto analisando arquivos XAML e criando objetos.<br /><br /> Expandir um nó de **Análise** em **Detalhes da linha do tempo** exibe a cadeia de dependências de todos os arquivos XAML analisados devido ao evento raiz. Essa dica permite identificar a criação de objeto e a análise de arquivos desnecessárias em cenários sensíveis a desempenho e otimizá-los.|
 |**Layout**|Em aplicativos grandes, milhares de elementos podem ser mostrados na tela ao mesmo tempo. Essa exibição pode resultar em uma baixa taxa de quadros de interface do usuário e a capacidade de resposta do aplicativo correspondentemente baixa. O evento Layout determina com precisão o custo de estabelecer cada elemento (ou seja, o tempo gasto em Arrange, Measure, ApplyTemplate, ArrangeOverride e MeasureOverride). Ele também cria as árvores visuais que participaram de uma passagem de layout. É possível usar essa visualização para determinar quais árvores lógicas serão removidas ou para avaliar outros mecanismos de adiamento para otimizar sua passagem de layout.|
@@ -117,16 +117,16 @@ Há suporte para os seguintes eventos:
 
 Use a barra de ferramentas **Detalhes da linha do tempo** para classificar, filtrar e especificar as anotações das entradas da exibição **Detalhes da linha do tempo**.
 
-|Nome|Descrição|
+|Name|Descrição|
 |-|-|
 |**Classificar por**|Classifique por hora de início ou o duração de eventos.|
 |![Agrupar eventos por quadro](../profiling/media/timeline_groupbyframes.png "TIMELINE_GroupByFrames")|Adiciona ou remove a categoria de **Quadro** de nível superior que agrupa eventos por quadro.|
 |![Filtrar lista de detalhes da linha do tempo](../profiling/media/timeline_filter.png "TIMELINE_Filter")|Filtra a lista pelas categorias selecionadas e a duração dos eventos.|
-|![Personalizar informações de linha do tempo](../profiling/media/timeline_viewsettings.png "TIMELINE_ViewSettings")|Permite especificar as anotações para eventos.|
+|![Personalizar informações de detalhes da linha do tempo](../profiling/media/timeline_viewsettings.png "TIMELINE_ViewSettings")|Permite especificar as anotações para eventos.|
 
 ## <a name="see-also"></a>Confira também
 
-- [Blog da equipe do WPF: nova ferramenta de análise de desempenho da interface do usuário para aplicativos do WPF](/archive/blogs/wpf/new-ui-performance-analysis-tool-for-wpf-applications)
+- [Blog da equipe do WPF: Nova ferramenta de análise de desempenho de interface do usuário para aplicativos WPF](/archive/blogs/wpf/new-ui-performance-analysis-tool-for-wpf-applications)
 - [Melhores práticas de desempenho para aplicativos UWP em C++, C# e Visual Basic](/previous-versions/windows/apps/hh750313\(v\=win.10\))
 - [Otimizar o desempenho do aplicativo WPF](/dotnet/framework/wpf/advanced/optimizing-wpf-application-performance)
 - [Criação de perfis no Visual Studio](../profiling/index.yml)

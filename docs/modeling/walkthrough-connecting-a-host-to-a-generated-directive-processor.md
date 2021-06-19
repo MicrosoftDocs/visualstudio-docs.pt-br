@@ -7,20 +7,20 @@ ms.topic: how-to
 helpviewer_keywords:
 - walkthroughs [text templates], connecting host to processor
 - text templates, custom directive hosts
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: a815718f099b024708b86658e10fc0e85c087b4c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ed51688e5b65e34d7067963dbf7b839b1f022768
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924133"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388315"
 ---
 # <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>Passo a passo: conectar um host a um processador de diretiva gerado
 
@@ -110,7 +110,7 @@ Depois de gerar o processador de diretiva, você conecta o processador de direti
 
     - Microsoft. VisualStudio. TextTemplating. VSHost. 11.0
 
-4. Na parte superior de Program.cs ou Module1. vb, adicione a seguinte linha de código:
+4. Na parte superior de Program. cs ou Module1. vb, adicione a seguinte linha de código:
 
     ```csharp
     using Microsoft.Win32;
@@ -362,6 +362,6 @@ Para testar o host de modelo de texto personalizado, primeiro você deve escreve
     Linked from: ExampleElement1
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Instruções passo a passo: criando um host de modelo de texto personalizado](../modeling/walkthrough-creating-a-custom-text-template-host.md)

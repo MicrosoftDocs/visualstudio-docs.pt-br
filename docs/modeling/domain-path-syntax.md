@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, domain path
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c11776576d00306e4b0f3de5e7ff830037c1fefd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 69dfd02dca5ead65d4f36303e547aaeba04cde98
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935151"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389092"
 ---
 # <a name="domain-path-syntax"></a>Sintaxe do caminho de domínio
 As definições de DSL usam uma sintaxe semelhante a XPath para localizar elementos específicos em um modelo.

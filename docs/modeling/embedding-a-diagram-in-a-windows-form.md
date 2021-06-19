@@ -1,36 +1,36 @@
 ---
 title: Inserindo um diagrama em um formulário do Windows Forms
-description: Saiba como você pode inserir um diagrama de DSL em um controle do Windows, que aparece na janela do Visual Studio.
+description: Saiba como você pode inserir um diagrama DSL em um controle do Windows, que aparece na Visual Studio janela.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 084de14a9a73e8f9f884c31da1e1ef9a5d8496b3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4db60267b835882a69a08c990af644b902697bad
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935112"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388978"
 ---
 # <a name="embed-a-diagram-in-a-windows-form"></a>Inserir um diagrama em um Windows Form
 
-Você pode inserir um diagrama de DSL em um controle do Windows, que aparece na janela do Visual Studio.
+Você pode inserir um diagrama DSL em um controle do Windows, que aparece na Visual Studio janela.
 
-## <a name="embed-a-dsl-diagram-in-a-windows-control"></a>Inserir um diagrama de DSL em um controle do Windows
+## <a name="embed-a-dsl-diagram-in-a-windows-control"></a>Inserir um diagrama DSL em um controle do Windows
 
-1. Adicione um novo arquivo de **controle de usuário** ao projeto DslPackage.
+1. Adicione um novo **arquivo de Controle de** Usuário ao projeto DslPackage.
 
-2. Adicione um controle de painel ao controle de usuário. Esse painel conterá o diagrama DSL.
+2. Adicione um controle Painel ao Controle de Usuário. Esse painel conterá o Diagrama DSL.
 
-     Adicione outros controles que você precisa.
+     Adicione outros controles necessários.
 
-     Defina as propriedades de âncora dos controles.
+     De acordo com as propriedades de Âncora dos controles.
 
-3. Em Gerenciador de Soluções, clique com o botão direito do mouse no arquivo de controle de usuário e clique em **Exibir código**. Adicione este construtor e a variável ao código:
+3. No Gerenciador de Soluções, clique com o botão direito do mouse no arquivo de controle de usuário e clique **em Exibir Código**. Adicione este construtor e variável ao código:
 
     ```csharp
     internal UserControl1(MyDSLDocView docView, Control content)
@@ -65,13 +65,13 @@ Você pode inserir um diagrama de DSL em um controle do Windows, que aparece na 
     } } } }
     ```
 
-5. Para testar a DSL, pressione **F5** e abra um arquivo de modelo de exemplo. O diagrama aparece dentro do controle. A caixa de ferramentas e outros recursos funcionam normalmente.
+5. Para testar a DSL, pressione **F5** e abra um arquivo de modelo de exemplo. O diagrama aparece dentro do controle . A caixa de ferramentas e outros recursos funcionam normalmente.
 
-## <a name="update-the-form-using-store-events"></a>Atualizar o formulário usando os eventos da loja
+## <a name="update-the-form-using-store-events"></a>Atualizar o formulário usando eventos da loja
 
-1. No designer de formulário, adicione uma caixa de **listagem** chamada `listBox1` . Isso exibirá uma lista dos elementos no modelo. Ele é sincronizado com o modelo usando *eventos de armazenamento*. Para obter mais informações, consulte [manipuladores de eventos propagar alterações fora do modelo](../modeling/event-handlers-propagate-changes-outside-the-model.md).
+1. No designer de formulário, adicione uma **ListBox** chamada `listBox1` . Isso exibirá uma lista dos elementos no modelo. Ele é sincronizado com o modelo usando eventos *de loja*. Para obter mais informações, consulte [Manipuladores de eventos propagam alterações fora do modelo](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
-2. No arquivo de código personalizado, substitua os métodos adicionais para a classe DocView:
+2. No arquivo de código personalizado, substitua outros métodos para a classe DocView:
 
     ```csharp
     partial class MyDSLDocView
@@ -141,7 +141,7 @@ Você pode inserir um diagrama de DSL em um controle do Windows, que aparece na 
 
 4. Para testar a DSL, pressione **F5** e, na instância experimental do Visual Studio, abra um arquivo de modelo de exemplo.
 
-     Observe que a caixa de listagem mostra uma lista dos elementos no modelo e que ele está correto após qualquer adição ou exclusão, e após desfazer e refazer.
+     Observe que a caixa de listagem mostra uma lista dos elementos no modelo e que ela está correta após qualquer adição ou exclusão e após Desfazer e Refazer.
 
 ## <a name="see-also"></a>Confira também
 

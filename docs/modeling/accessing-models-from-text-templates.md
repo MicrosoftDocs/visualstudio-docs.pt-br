@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
 - text templates, accessing models
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 13cae79908e3a760c37ac590ca61f43001d384d1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 05e21dacfe56f41f1d2c0da51659ab55203db1a0
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908928"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389157"
 ---
 # <a name="access-models-from-text-templates"></a>Acessar modelos de modelos de texto
 
@@ -102,7 +102,7 @@ Here is a list of elements in the model:
 > [!NOTE]
 > Esse método permite que você leia vários modelos no mesmo modelo, mas não oferece suporte a referências de ModelBus. Para ler os modelos que são interligados por referências de ModelBus, consulte [usando Visual Studio ModelBus em um modelo de texto](../modeling/using-visual-studio-modelbus-in-a-text-template.md).
 
- Se você quiser acessar mais de um modelo do mesmo modelo de texto, deverá chamar o processador de diretiva gerado uma vez para cada modelo. Você deve especificar o nome do arquivo de cada modelo no `requires` parâmetro. Você deve especificar os nomes que deseja usar para a classe de domínio raiz no `provides` parâmetro. Você deve especificar valores diferentes para os `provides` parâmetros em cada uma das chamadas de diretiva. Por exemplo, suponha que você tenha três arquivos de modelo chamados library. xyz, School. xyz e Work. xyz. Para acessá-los do mesmo modelo de texto, você deve escrever três chamadas de diretiva que se assemelham aos seguintes.
+ Se você quiser acessar mais de um modelo do mesmo modelo de texto, deverá chamar o processador de diretiva gerado uma vez para cada modelo. Você deve especificar o nome do arquivo de cada modelo no `requires` parâmetro. Você deve especificar os nomes que deseja usar para a classe de domínio raiz no `provides` parâmetro. Você deve especificar valores diferentes para os `provides` parâmetros em cada uma das chamadas de diretiva. Por exemplo, suponha que você tenha três arquivos de modelo chamados Library.xyz, School.xyz e Work.xyz. Para acessá-los do mesmo modelo de texto, você deve escrever três chamadas de diretiva que se assemelham aos seguintes.
 
 ```
 <#@ ExampleModel processor="<YourLanguageName>DirectiveProcessor" requires="fileName='Library.xyz'" provides="ExampleModel=LibraryModel" #>

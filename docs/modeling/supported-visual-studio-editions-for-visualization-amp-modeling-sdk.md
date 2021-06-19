@@ -1,27 +1,27 @@
 ---
-title: Edições do Visual Studio com suporte para o SDK de visualização e modelagem
-description: Saiba mais sobre as edições do Visual Studio com suporte nas ferramentas de DSL nos ambientes de criação e implantação.
+title: Edições Visual Studio suporte para visualização e modelagem do SDK
+description: Saiba mais sobre as Visual Studio edições com suporte com as Ferramentas DSL nos ambientes de implantação e de autor.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, supported Visual Studio editions
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 14c23df472361fdee0bc657eb277d3a6bef4be73
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b8435f37ebe68e954af135be0f513247191ea8a9
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899687"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386391"
 ---
 # <a name="supported-visual-studio-editions-for-visualization--modeling-sdk"></a>Edições do Visual Studio compatíveis com o SDK de Visualização e Modelagem
 
-Veja a seguir as listas das edições do Visual Studio com suporte [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] no nos ambientes de criação e implantação. Para obter mais informações sobre essas edições, consulte o Microsoft Visual Studio [Developer Center](https://visualstudio.microsoft.com/).
+A seguir estão as listas das Visual Studio edições com suporte nos [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] ambientes de implantação e de autor. Para obter mais informações sobre essas edições, consulte o Microsoft Visual Studio [Developer Center](https://visualstudio.microsoft.com/).
 
 ## <a name="authoring-edition"></a>Edição de Criação
 
@@ -37,7 +37,7 @@ Para definir uma DSL, é necessário ter instalados os seguintes componentes:
 
 ## <a name="deployment-editions"></a>Edições de Implantação
 
-[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] o oferece suporte às seguintes configurações para implantar as linguagens específicas de domínio que você cria:
+[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] dá suporte às seguintes configurações para implantar os idiomas específicos do domínio que você cria:
 
 - Visual Studio Enterprise
 
@@ -48,7 +48,7 @@ Para definir uma DSL, é necessário ter instalados os seguintes componentes:
 - Pacote redistribuível Visual Studio Shell (modo isolado) pacote redistribuível
 
 > [!NOTE]
-> Para tornar uma DSL capaz de executar em um produto de Shell, você deve definir o campo **com suporte do vs Edition** no manifesto de extensão. Para obter mais informações, confira [Implantando soluções de linguagem específica de domínio](msi-and-vsix-deployment-of-a-dsl.md).
+> Para tornar uma DSL capaz de ser executado em um produto Shell, você deve definir o campo **Edição do VS com** suporte no Manifesto da Extensão. Para obter mais informações, confira [Implantando soluções de linguagem específica de domínio](msi-and-vsix-deployment-of-a-dsl.md).
 
 ## <a name="see-also"></a>Confira também
 
