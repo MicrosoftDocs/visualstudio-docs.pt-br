@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
 - Domain-Specific Language, accessing the current selection
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 83903c8ff911fdd1d4900714137a7f6976513dad
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 28d0f99743535965b3cf203d461fac5d0193607c
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890559"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386599"
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>Como acessar e restringir a seleção atual
 
@@ -103,7 +103,7 @@ Ao adicionar regras de seleção, você pode controlar quais elementos são sele
 
 4. Adicione uma definição de classe parcial para a classe ClassDiagram ao seu arquivo de código personalizado.
 
-     A `ClassDiagram` classe deriva da <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> classe e é definida no arquivo de código gerado, Diagram.cs, no projeto DSL.
+     A `ClassDiagram` classe deriva da <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> classe e é definida no arquivo de código gerado, Diagram. cs, no projeto DSL.
 
 5. Substitua a <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> propriedade da `ClassDiagram` classe para retornar a regra de seleção personalizada.
 

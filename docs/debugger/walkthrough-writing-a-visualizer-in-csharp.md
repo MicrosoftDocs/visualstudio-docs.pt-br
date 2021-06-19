@@ -1,7 +1,7 @@
 ---
 title: Escrever um visualizador em C# | Microsoft Docs
 description: Siga um passo a passos para criar um visualizador simples em C#. Ele mostra as etapas necessárias com e sem usar o modelo de item do visualizador.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 05/27/2020
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: f127d178a8103cfaa01c43970848f5772827440f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 86123ece79f7bbde4f4f91fac657dcc235056c0b
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884059"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384987"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>Instruções passo a passo: escrevendo um visualizador em C\#
 
@@ -67,7 +67,7 @@ Siga as tarefas abaixo para criar um visualizador.
 
 5. Clique em **OK**.
 
-6. No DebuggerSide.cs, adicione o seguinte às `using` diretivas:
+6. No DebuggerSide. cs, adicione o seguinte às `using` diretivas:
 
    ```csharp
    using Microsoft.VisualStudio.DebuggerVisualizers;
@@ -113,7 +113,7 @@ Siga as tarefas abaixo para criar um visualizador.
 
 3. Clique em **OK**.
 
-4. No DebuggerSide.cs, adicione o seguinte às `using` diretivas:
+4. No DebuggerSide. cs, adicione o seguinte às `using` diretivas:
 
    ```csharp
    using System.Windows.Forms;
@@ -139,7 +139,7 @@ Siga as tarefas abaixo para criar um visualizador.
 
 No código do lado do depurador, você especifica o tipo a ser visualizado (a origem do objeto) para o depurado usando o <xref:System.Diagnostics.DebuggerVisualizerAttribute> atributo. A `Target` propriedade define o tipo a ser visualizado.
 
-1. Adicione o seguinte código de atributo a DebuggerSide.cs, após as `using` diretivas, mas antes de `namespace MyFirstVisualizer` :
+1. Adicione o seguinte código de atributo a DebuggerSide. cs, após as `using` diretivas, mas antes de `namespace MyFirstVisualizer` :
 
    ```csharp
    [assembly:System.Diagnostics.DebuggerVisualizer(
@@ -207,9 +207,9 @@ No código do lado do depurador, você especifica o tipo a ser visualizado (a or
 2. Edite o nome de Program.cs para algo mais significativo, por exemplo, TestConsole.cs.
 
     > [!NOTE]
-    > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] altera automaticamente a declaração de classe em TestConsole.cs para corresponder ao novo nome de arquivo.
+    > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] altera automaticamente a declaração de classe em TestConsole. cs para corresponder ao novo nome de arquivo.
 
-3. No TestConsole.cs, adicione o seguinte código às `using` diretivas:
+3. No TestConsole. cs, adicione o seguinte código às `using` diretivas:
 
    ```csharp
    using MyFirstVisualizer;

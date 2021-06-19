@@ -1,7 +1,7 @@
 ---
 title: Configurações do projeto para uma configuração de depuração do VB | Microsoft Docs
 description: Saiba como alterar as configurações do projeto para uma configuração de depuração Visual Basic na janela páginas de propriedades do Visual Studio.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a1f0e7aa0e6ee7523f8ff7ae1f3c8e34745a3af
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f16d0dde62a23d8272cb89aec46f2ce952f18979
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99842702"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385195"
 ---
 # <a name="project-settings-for-a-visual-basic-debug-configuration"></a>Definições do projeto para uma configuração de depuração do Visual Basic
 Você pode alterar as configurações do projeto para uma configuração de depuração do [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] na janela **Páginas de Propriedades**, conforme discutido em [Configurações de depuração e versão](../debugger/how-to-set-debug-and-release-configurations.md). As tabelas a seguir mostram onde localizar as configurações relacionadas ao depurador na janela **Páginas de Propriedades**.
@@ -41,7 +41,7 @@ Você pode alterar as configurações do projeto para uma configuração de depu
 
 | Configuração | Descrição |
 |------------------------------| - |
-| **Configuration** | Define o modo para compilar o aplicativo. Escolha entre **Ativo (depuração)**, **Depuração**, **Versão**, **Todas as Configurações**. |
+| **Configuração** | Define o modo para compilar o aplicativo. Escolha entre **Ativo (depuração)**, **Depuração**, **Versão**, **Todas as Configurações**. |
 | **Iniciar Ação** | Esse grupo de controles especifica a ação que ocorrerá quando você escolhe Iniciar do menu Depurar.<br /><br /> -   **Iniciar projeto** é o padrão e inicia o projeto de inicialização da depuração. <br />-   **Iniciar programa externo** permite que você inicie e anexe a um programa que não faz parte de um projeto [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Para obter mais informações, consulte [anexar a processos em execução](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).<br />-   **Iniciar navegador na URL** permite que você depure um aplicativo Web. |
 | **Argumentos de linha de comando** | Especifica argumentos de linha de comando para o programa ser depurado. O nome do comando é o nome do programa especificado em Iniciar programa externo. Se Iniciar Ação for definida para iniciar URL, os argumentos de linha de comando serão ignorados. |
 | **Diretório de trabalho** | Especifica o diretório de trabalho do programa que está sendo depurado. No [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], o diretório de trabalho é o diretório a partir do qual o aplicativo é iniciado. O diretório de trabalho padrão é \bin\Debug ou \bin\Release, dependendo da configuração atual. |
@@ -58,5 +58,5 @@ Você pode alterar as configurações do projeto para uma configuração de depu
 | **Definir a constante DEBUG** | A definição desse símbolo permite compilar de forma condicional as funções de saída da [classe Debug](/dotnet/api/system.diagnostics.debug). Com esse símbolo definido, os métodos da classe Debug geram saída para a [janela de saída](../ide/reference/output-window.md). Sem esse símbolo, os métodos da classe de depuração não são compilados e nenhuma saída será gerada. Esse símbolo deve ser definido na versão de depuração e não na versão de lançamento. Definir esse símbolo em uma versão de lançamento cria código desnecessário que deixa a execução do seu programa mais lenta. |
 | **Definir constante de rastreamento** | Definir esse símbolo permite compilar de forma condicional as funções de saída da [classe Trace](/dotnet/api/system.diagnostics.trace). Com esse símbolo definido, os métodos da classe Trace geram saída para a [janela de saída](../ide/reference/output-window.md). Sem esse símbolo, os métodos da classe de rastreamento não são compilados e nenhuma saída de rastreamento será gerada. Esse símbolo é definido por padrão para as versões de depuração e lançamento. |
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Configurações e preparação do depurador](../debugger/debugger-settings-and-preparation.md)

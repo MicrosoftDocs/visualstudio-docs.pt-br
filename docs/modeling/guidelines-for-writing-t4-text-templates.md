@@ -4,17 +4,17 @@ description: Conheça as diretrizes gerais que são úteis se você estiver gera
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5418013898f24b15cf51926022d974d23f4a7215
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4f043e95ef477558028e634bf6b48aded2960ec2
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966351"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386651"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>Diretrizes para escrever modelos de texto T4
 
@@ -111,7 +111,7 @@ Por exemplo, em **MyReportText.tt**:
 
 `The total is: <#= ComputeTotal() #>`
 
-Em **MyReportText-Methods.cs**:
+Em **MyReportText-Methods. cs**:
 
 `private string ComputeTotal() { ... }`
 
@@ -153,7 +153,7 @@ Escreva um exemplo do código ou do texto que você deseja gerar e verifique se 
 
 Considere o uso de modelos tipados.
 
-Embora você possa criar um esquema de banco de dados ou XML para seus modelos, pode ser útil criar uma DSL (linguagem específica de domínio). Uma DSL tem a vantagem de que gera uma classe para representar cada nó no esquema e propriedades para representar os atributos. Isso significa que você pode programar em termos do modelo de negócios. Por exemplo:
+Embora você possa criar um esquema de banco de dados ou XML para seus modelos, pode ser útil criar uma DSL (linguagem específica de domínio). Uma DSL tem a vantagem de gerar uma classe para representar cada nó no esquema e propriedades para representar os atributos. Isso significa que você pode programar em termos do modelo de negócios. Por exemplo:
 
 ```
 Team Members:
@@ -165,13 +165,13 @@ Team Members:
 
 Considere o uso de diagramas para seus modelos.
 
-Muitos modelos são apresentados mais efetivamente e gerenciados simplesmente como tabelas de texto, especialmente se forem muito grandes.
+Muitos modelos são apresentados e gerenciados com mais eficiência simplesmente como tabelas de texto, especialmente se eles são muito grandes.
 
-No entanto, para alguns tipos de requisitos de negócios, é importante esclarecer conjuntos complexos de relações e fluxos de trabalho, e os diagramas são os mais adequados. Uma vantagem de um diagrama é que é fácil discutir com usuários e outros participantes. Ao gerar o código de um modelo no nível dos requisitos de negócios, você torna seu código mais flexível quando os requisitos mudam.
+No entanto, para alguns tipos de requisitos de negócios, é importante esclarecer conjuntos complexos de relações e fluxos de trabalho, e os diagramas são a mídia mais adequada. Uma vantagem de um diagrama é que é fácil discutir com usuários e outros stakeholders. Ao gerar código de um modelo no nível dos requisitos de negócios, você torna seu código mais flexível quando os requisitos mudam.
 
-Você também pode criar seu próprio tipo de diagrama como uma DSL (linguagem específica de domínio). O código pode ser gerado de UML e DSLs. Para obter mais informações, consulte [análise e modelagem de arquitetura](../modeling/analyze-and-model-your-architecture.md).
+Você também pode criar seu próprio tipo de diagrama como uma linguagem específica do domínio (DSL). O código pode ser gerado de UML e DSLs. Para obter mais informações, consulte [Analisando e modelando arquitetura](../modeling/analyze-and-model-your-architecture.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Geração de código na hora de design usando modelos de texto T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 - [Geração de texto de tempo de execução com modelos de texto T4](../modeling/run-time-text-generation-with-t4-text-templates.md)

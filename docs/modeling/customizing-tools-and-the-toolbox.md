@@ -10,17 +10,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.selectcursordialog
 helpviewer_keywords:
 - Domain-Specific Language, toolbox
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 40341a0c74b371c4c84429474e58c7d338bb8059
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 956955a9c2feb9982bee0101965336be2ca29ab7
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935424"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385806"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>Personalizando ferramentas e a caixa de ferramentas
 
@@ -166,21 +166,21 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 ### <a name="custom-code-for-connection-builders"></a>Código personalizado para construtores de conexão
  Existem quatro caixas de seleção na interface do usuário que definem diferentes tipos de personalização dos construtores de conexão:
 
-- a caixa de seleção de **aceitação personalizada** em uma diretiva de função de origem ou de destino
+- a **caixa de seleção Aceitação** personalizada em uma diretiva de função de origem ou destino
 
-- a caixa de seleção **conexão personalizada** em uma diretiva de função de origem ou de destino
+- a **caixa de seleção Conexão** personalizada em uma diretiva de função de origem ou destino
 
-- a caixa de seleção **usa conexão personalizada** em uma diretiva Connect
+- a **caixa de seleção Usa conexão** personalizada em uma diretiva de conexão
 
-- a propriedade **personalizada is** do construtor de conexões
+- a **propriedade Is Custom** do construtor de conexões
 
   É necessário fornecer algum código de programa para fazer essas personalizações. Para descobrir qual código é necessário fornecer, verifique uma dessas caixas, clique em Transformar Todos os Modelos e, em seguida, construa sua solução. O resultado será um relatório de erro. Clique duas vezes no relatório de erro para visualizar um comentário que explique qual código deve ser adicionado.
 
 > [!NOTE]
-> Para adicionar o código personalizado, crie uma definição de classe parcial em um arquivo de código separado dos arquivos de códigos nas pastas GeneratedCode. Para evitar a perda de seu trabalho, é necessário que os arquivos de códigos gerados não sejam editados. Para obter mais informações, consulte [substituindo e estendendo as classes geradas](../modeling/overriding-and-extending-the-generated-classes.md).
+> Para adicionar o código personalizado, crie uma definição de classe parcial em um arquivo de código separado dos arquivos de códigos nas pastas GeneratedCode. Para evitar a perda de seu trabalho, é necessário que os arquivos de códigos gerados não sejam editados. Para obter mais informações, [consulte Substituindo e estendendo as classes geradas.](../modeling/overriding-and-extending-the-generated-classes.md)
 
 #### <a name="creating-custom-connection-code"></a>Criação de uma conexão personalizada
- Em cada diretiva de conexão de link, a guia **diretivas de função de origem** define de quais tipos você pode arrastar. Da mesma forma, a guia **diretivas de função de destino** define para quais tipos você pode arrastar. Para cada tipo, você pode especificar se deseja permitir a conexão (para essa diretiva de conexão de link) definindo o sinalizador de **aceitação personalizada** e, em seguida, fornecendo o código extra.
+ Em cada diretiva de conexão de link, a **guia Diretivas de** função de origem define de quais tipos você pode arrastar. Da mesma forma, a **guia Diretivas de função de** destino define para quais tipos você pode arrastar. Para cada tipo, você pode especificar ainda se deve permitir a conexão (para essa diretiva de conexão de link) definindo o sinalizador **De aceitação** personalizado e fornecendo o código extra.
 
  Também é possível personalizar o que ocorre quando a conexão é feita. Por exemplo, é possível personalizar apenas o caso onde o arrasto ocorre para ou de uma determinada classe, todos os casos que um diretiva de conexão de link regula ou o construtor de conexão FlowBuilder todo. Para cada uma dessas opções, é possível ajustar sinalizadores personalizados no nível apropriado. Quando transformar todos os modelos e tentar compilar a solução, as mensagens de erro irão direcioná-lo para os comentários que estão no código gerado. Esses comentários identificam o que deve ser fornecido.
 
@@ -188,9 +188,9 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
  **Conexão vindo para uma OutPort de um Componente Aninhado**
 
- ![Construtor de conexões](../modeling/media/connectionbuilder_3.png)
+ ![Construtor de Conexões](../modeling/media/connectionbuilder_3.png)
 
- Portanto, pode ser desejável especificar que uma conexão pode vir de um componente aninhado para uma OutPort. Para especificar essa conexão, você define **usa a aceitação personalizada** no tipo de **inporta** como função de origem e o tipo de **porta** como função de destino na janela **detalhes de DSL** , conforme mostrado nas seguintes ilustrações:
+ Portanto, pode ser desejável especificar que uma conexão pode vir de um componente aninhado para uma OutPort. Para especificar essa conexão,  defina Usa Aceitação Personalizada no tipo **InPort** como função de origem e o tipo **OutPort** como função de destino na janela Detalhes **da DSL,** conforme mostrado nas ilustrações a seguir:
 
  **Diretiva de conexão de link no DSL Explorer**
 
@@ -198,7 +198,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
  **Diretiva de conexão de link na janela DSL Details**
 
- ![Diretiva de conexão de link na janela de detalhes de DSL](../modeling/media/connectionbuilder_4b.png)
+ ![Diretiva de conexão de link na janela Detalhes da DSL](../modeling/media/connectionbuilder_4b.png)
 
  É necessário fornecer métodos na classe ConnectionBuilder:
 
@@ -223,21 +223,21 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 // And similar for OutPorts...
 ```
 
- Para obter mais informações sobre como personalizar o modelo usando o código do programa, consulte [navegando e atualizando um modelo no código do programa](../modeling/navigating-and-updating-a-model-in-program-code.md).
+ Para obter mais informações sobre como personalizar o modelo usando o código do programa, consulte Navegando e atualizando um [modelo no código do programa.](../modeling/navigating-and-updating-a-model-in-program-code.md)
 
- É possível usar códigos semelhantes, por exemplo, para impedir que os usuários criem loops com links pai-filho. Essas restrições são consideradas restrições ' rígidas ' porque os usuários não podem viola-las a qualquer momento. Você também pode criar verificações de validação ' soft ' que os usuários podem ignorar temporariamente criando configurações inválidas que não podem salvar.
+ É possível usar códigos semelhantes, por exemplo, para impedir que os usuários criem loops com links pai-filho. Essas restrições são consideradas restrições "difíceis", pois os usuários não podem violá-las a qualquer momento. Você também pode criar verificações de validação "soft" que os usuários podem ignorar temporariamente criando configurações inválidas que eles não podem salvar.
 
 ### <a name="good-practice-in-defining-connection-builders"></a>Boas práticas na definição dos construtores de conexão
  É necessário definir um construtor de conexão para criar diferentes tipos de relações, apenas se elas estão relacionadas conceitualmente. No exemplo de fluxo de tarefas, é possível usar o mesmo construtor para criar fluxos entre tarefas e também entre tarefas e objetos. No entanto, seria confuso usar o mesmo construtor para criar relações entre tarefas e comentários.
 
  Se um construtor de conexão for definido para vários tipos de relações, é necessário garantir que ele não possa corresponder a mais de um tipo do mesmo par de objetos de fonte e de destino. Caso contrário, os resultados seriam imprevisíveis.
 
- Você usa código personalizado para aplicar restrições "rígidas", mas deve considerar se os usuários devem ser capazes de fazer conexões inválidas temporariamente. Se o devem, é possível modificar as restrições para que as conexões não são validadas até que os usuários tentem salvar as alterações.
+ Você usa código personalizado para aplicar restrições "difíceis", mas deve considerar se os usuários devem ser capazes de fazer conexões inválidas temporariamente. Se o devem, é possível modificar as restrições para que as conexões não são validadas até que os usuários tentem salvar as alterações.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Personalizando a criação e o movimento de elementos](../modeling/customizing-element-creation-and-movement.md)
 - [Personalizando o comportamento de cópia](../modeling/customizing-copy-behavior.md)
 - [Como adicionar um manipulador de evento do tipo "arrastar e soltar"](../modeling/how-to-add-a-drag-and-drop-handler.md)
 - [Navegando e atualizando um modelo no código do programa](../modeling/navigating-and-updating-a-model-in-program-code.md)
-- [Diagramas de circuito de exemplo DSL](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+- [DSL de exemplo de Diagramas de Circuito](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)

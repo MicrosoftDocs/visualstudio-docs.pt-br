@@ -1,7 +1,7 @@
 ---
 title: Criar seu primeiro Node.js aplicativo
 ms.custom:
-- acquisition
+- vs-acquisition
 - SEO-VS-2020
 description: Neste guia de início rápido, você cria um aplicativo Node.js no Visual Studio
 ms.date: 03/25/2021
@@ -16,12 +16,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: d9397cb121ab3aa68d368a0cc7e1ab709411f6b6
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 0c44bfcfe1e7f07f83ca2b7dbb8b0604f5efe5f1
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112113160"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386157"
 ---
 # <a name="quickstart-create-your-first-nodejs-app-with-visual-studio"></a>Início Rápido: Criar seu primeiro aplicativo Node.js com Visual Studio
 

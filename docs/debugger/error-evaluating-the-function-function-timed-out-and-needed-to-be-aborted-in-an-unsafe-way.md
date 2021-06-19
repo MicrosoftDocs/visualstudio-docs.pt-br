@@ -1,7 +1,7 @@
 ---
-description: "Texto completo da mensagem: avaliar a função ' function ' atingiu o tempo limite e precisava ser anulado de forma não segura."
-title: A avaliação da &apos; função de função &apos; atingiu o tempo limite e precisava ser anulada de forma não segura | Microsoft Docs
-ms.date: 11/04/2016
+title: Avaliar a função &apos; de função &apos; tempou e precisava ser anulada de maneira não segura | Microsoft Docs
+description: "Texto completo da mensagem: a avaliação da função 'função' tempou e precisava ser anulada de maneira não segura."
+ms.date: 06/18/2021
 ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.unsafe_func_eval_abort
@@ -10,43 +10,47 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a540f6f80029039644b22a24a31510042236de2
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: e928bb0ebae1e644729fcaf4f47b7dd461399be6
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147010"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386664"
 ---
-# <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>Erro: avaliar a função &#39;função&#39; atingiu o tempo limite e precisava ser anulado de forma não segura
+# <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>Erro: avaliar a função &#39;função&#39; o tempo foi e precisava ser anulada de maneira não segura
 
-Texto completo da mensagem: avaliar a função ' function ' atingiu o tempo limite e precisava ser anulado de forma não segura. Isso pode ter corrompido o processo de destino.
+Texto completo da mensagem: a avaliação da função 'função' tempou e precisava ser anulada de maneira não segura. Isso pode ter corrompido o processo de destino.
 
-Para facilitar a inspeção do estado dos objetos .NET, o depurador forçará automaticamente o processo depurado a executar código adicional (normalmente, métodos getter de propriedade e funções ToString). Na maioria dos cenários, essas funções são concluídas rapidamente e tornam a depuração muito mais fácil. No entanto, o depurador não executa o aplicativo em uma área restrita. Como resultado, um método getter ou ToString de propriedade que chama uma função nativa que para de responder pode levar a tempos limite longos que podem não ser recuperáveis. Se você encontrar essa mensagem de erro, isso ocorreu.
+Para facilitar a inspeção do estado dos objetos .NET, o depurador força automaticamente o processo depurado a executar código adicional (normalmente métodos getter de propriedade e funções ToString). Na maioria dos cenários, essas funções são concluídas rapidamente e facilitam muito a depuração. No entanto, o depurador não executará o aplicativo em uma área sandbox. Como resultado, um método getter de propriedade ou ToString que chama em uma função nativa que para de responder pode levar a longos tempos que podem não ser recuperáveis. Se você encontrar essa mensagem de erro, isso ocorreu.
 
-Um motivo comum para esse problema é que quando o depurador avalia uma propriedade, ele só permite que o thread seja inspecionado para execução. Portanto, se a propriedade estiver aguardando que outros threads sejam executados dentro do aplicativo depurado e, se estiver esperando de uma maneira que o tempo de execução do .NET não possa ser interrompido, esse problema ocorrerá.
+Um motivo comum para esse problema é que, quando o depurador avalia uma propriedade, ele só permite que o thread que está sendo inspecionado seja executado. Portanto, se a propriedade estiver aguardando outros threads para execução dentro do aplicativo depurado e se ela estiver aguardando de uma maneira que o Runtime do .NET não seja capaz de interromper, esse problema ocorrerá.
 
 ## <a name="to-correct-this-error"></a>Para corrigir este erro
 
-Há várias soluções possíveis para esse problema.
+Confira as seções a seguir para ver várias soluções possíveis para esse problema.
 
-### <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>#1 da solução: impedir que o depurador chame a propriedade getter ou o método ToString
+## <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>Solução #1: impedir que o depurador chama a propriedade getter ou o método ToString
 
-A mensagem de erro informará o nome da função que o depurador tentou chamar. Se você puder modificar essa função, poderá impedir que o depurador chame o método getter ou ToString de propriedade. Tente uma das seguintes opções:
+A mensagem de erro dirá o nome da função que o depurador tentou chamar. Se você puder modificar essa função, poderá impedir que o depurador chamar o método getter ou ToString da propriedade. Tente um dos seguintes:
 
-* Altere o método para algum outro tipo de código além de um método getter ou ToString de propriedade e o problema irá desaparecer.
-    -ou-
-* (Para ToString) Defina um atributo DebuggerDisplay no tipo e você pode fazer com que o depurador avalie algo diferente de ToString.
-    -ou-
-* (Para um getter de propriedade) Coloque o `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]` atributo na propriedade. Isso pode ser útil se você tiver um método que precisa permanecer como uma propriedade para motivos de compatibilidade de API, mas deve ser realmente um método.
+* Altere o método para algum outro tipo de código além de um getter de propriedade ou método ToString e o problema desaparecerá.
+  – ou –
+* (Para ToString) Defina [um atributo DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md) no tipo e você poderá fazer com que o depurador avalie algo diferente de ToString.
+  – ou –
+* (Para um getter de propriedade) Coloque o [atributo System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)](/dotnet/api/system.diagnostics.debuggerbrowsableattribute) na propriedade . Isso pode ser útil se você tiver um método que precisa permanecer uma propriedade por motivos de compatibilidade de API, mas ele realmente deve ser um método.
 
-### <a name="solution-2-have-the-target-code-ask-the-debugger-to-abort-the-evaluation"></a>#2 da solução: faça com que o código de destino peça ao depurador para anular a avaliação
+## <a name="solution-2-have-the-target-code-ask-the-debugger-to-abort-the-evaluation"></a>Solução #2: peça ao código de destino que peça ao depurador para anular a avaliação
 
-A mensagem de erro informará o nome da função que o depurador tentou chamar. Se o método getter ou ToString de propriedade às vezes não for executado corretamente, especialmente em situações em que o problema é que o código precisa de outro thread para executar o código, a função de implementação pode chamar `System.Diagnostics.Debugger.NotifyOfCrossThreadDependency` para solicitar que o depurador anule a avaliação da função. Com essa solução, ainda é possível avaliar explicitamente essas funções, mas o comportamento padrão é que a execução é interrompida quando a chamada NotifyOfCrossThreadDependency ocorre.
+A mensagem de erro dirá o nome da função que o depurador tentou chamar. Se o método getter ou ToString da propriedade às vezes não for executado corretamente, especialmente em situações em que o problema é que o código precisa de outro thread para executar código, a função de implementação pode chamar [System.Diagnostics.Debugger.NotifyOfCrossThreadDependency](/dotnet/api/system.diagnostics.debugger.notifyofcrossthreaddependency) para pedir ao depurador para anular a avaliação da função. Com essa solução, ainda é possível avaliar explicitamente essas funções, mas o comportamento padrão é que a execução é interrompida quando a chamada NotifyOfCrossThreadDependency ocorre.
 
-### <a name="solution-3-disable-all-implicit-evaluation"></a>#3 da solução: desabilitar toda a avaliação implícita
+## <a name="solution-3-disable-all-implicit-evaluation"></a>Solução #3: desabilitar toda a avaliação implícita
 
-Se as soluções anteriores não corrigirem o problema, vá para **ferramentas**  >  **Opções** e desmarque a opção **depuração**  >  **geral**  >  **habilitar avaliação de propriedade e outras chamadas de função implícitas**. Isso desabilitará a maioria das avaliações de função implícitas e deverá resolver o problema.
+Se as soluções anteriores não corrigirem o problema, acesse Opções de Ferramentas e desmarque a configuração  >   **Depuração** Geral Habilitar avaliação de propriedade e outras chamadas  >    >  **de função implícitas**. Isso desabilitará a maioria das avaliações de função implícita e deverá resolver o problema.
 
-### <a name="solution-4-enable-managed-compatibility-mode"></a>#4 de solução: habilitar o modo de compatibilidade gerenciado
+## <a name="solution-4-check-compatibility-with-third-party-developer-tools"></a>Solução #4: verificar a compatibilidade com ferramentas de desenvolvedor de terceiros
 
-Se você alternar para o mecanismo de depuração herdado, talvez seja possível eliminar esse erro. Vá para **ferramentas**  >  **Opções** e selecione a definição configuração   >  **geral**  >  **usar modo de compatibilidade gerenciada**. Para obter mais informações, consulte [Opções gerais de depuração](../debugger/general-debugging-options-dialog-box.md).
+Se você estiver usando o Resharper, consulte este [problema para](https://youtrack.jetbrains.com/issue/RSRP-476824) sugestões.
+
+## <a name="solution-5-enable-managed-compatibility-mode"></a>Solução #5: habilitar o modo de compatibilidade gerenciada
+
+Se você alternar para o mecanismo de depuração herdado, poderá eliminar esse erro. Vá para **Opções**  >  **de Ferramentas** e selecione a configuração **Depuração**  >  **Geral**  >  **Use o modo de compatibilidade gerenciada**. Para obter mais informações, consulte [Opções gerais de depuração](../debugger/general-debugging-options-dialog-box.md).

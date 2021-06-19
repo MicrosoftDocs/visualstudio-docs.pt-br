@@ -8,17 +8,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.port
 helpviewer_keywords:
 - Domain-Specific Language, port shape
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 91b505278ef62a7e0ded42f407e1c38083fa7c6d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b5994d2629a49757980695ca99a6d12ae21160a6
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883006"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386521"
 ---
 # <a name="properties-of-port-shapes"></a>Propriedades de formas de porta
 Você pode usar formas de porta para representar classes de domínio no designer gerado.
@@ -31,7 +31,7 @@ Você pode usar formas de porta para representar classes de domínio no designer
 |-|-|-|
 |Cor de Preenchimento|A cor de preenchimento desta forma.|Branca|
 |Preencher modo de gradiente|O modo de gradiente de preenchimento desta forma.|Horizontal|
-|Geometria|A geometria desta forma (retângulo, retângulo arredondado, elipse ou círculo).|Retângulo|
+|Geometry|A geometria desta forma (retângulo, retângulo arredondado, elipse ou círculo).|Retângulo|
 |Tem pontos de conexão padrão|Se `True` , a forma usará os pontos de conexão superior, inferior, esquerdo e direito no designer gerado.|Falso|
 |Cor do contorno|A cor da estrutura de tópicos desta forma.|Preto|
 |Estilo do contorno tracejado|O estilo de contorno tracejado dessa forma (sólido, traço, ponto, travessão ponto, travessão ponto ponto ou personalizado).|Sólido|
@@ -43,7 +43,7 @@ Você pode usar formas de porta para representar classes de domínio no designer
 |Tem Construtor personalizado|Se `True` , um construtor personalizado será fornecido no código-fonte. Para obter mais informações, consulte [substituindo e estendendo as classes geradas](../modeling/overriding-and-extending-the-generated-classes.md).|Falso|
 |Modificador de herança|Descreve o tipo de herança da classe de código-fonte que é gerada a partir da porta ( `none` , `abstract` ou `sealed` ).|nenhum|
 |Porta base|A classe base dessa forma.|(nenhum)|
-|Nome|O nome desta forma.|Nome atual|
+|Name|O nome desta forma.|Nome atual|
 |Namespace|O namespace que é afiliado a esta forma.|Namespace atual|
 |Tipo de dica de ferramenta|Como a dica de ferramenta é definida (fixa, variável ou nenhuma). Se for corrigido, o valor da `Fixed Tooltip Text` propriedade será usado como dica de ferramenta; se for variável, a dica de ferramenta será definida no código personalizado.|nenhum|
 |Observações|Observações informais associadas a esta forma.|\<none>|

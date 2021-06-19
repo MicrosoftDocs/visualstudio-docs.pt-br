@@ -20,9 +20,9 @@ highlightedContent:
     - title: Bem-vindo ao IDE do Visual Studio
       itemType: overview
       url: ../get-started/visual-studio-ide.md
-    - title: Notas sobre a versão do Visual Studio 2019
+    - title: Visual Studio versão prévia de 2022
       itemType: whats-new
-      url: /visualstudio/releases/2019/release-notes/
+      url: /visualstudio/releases/2022/release-notes-preview
     - title: Aprimore suas habilidades do Visual Studio
       itemType: learn
       url: /learn/browse/?products=vs

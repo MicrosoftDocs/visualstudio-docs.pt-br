@@ -1,26 +1,26 @@
 ---
 title: Diretiva de importação T4
-description: Saiba que, em um modelo de texto T4 do Visual Studio, a diretiva de importação permite que você faça referência a elementos em outro namespace sem fornecer um nome totalmente qualificado.
+description: Saiba que, em um Visual Studio de texto T4, a diretiva de importação permite que você consulte elementos em outro namespace sem fornecer um nome totalmente qualificado.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d9eb50261b346d8751a76817d97d59a798d17236
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d0d441ec5a62dfa5266a17a06ac8fe33941136c6
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899666"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386313"
 ---
 # <a name="t4-import-directive"></a>Diretiva de importação T4
 
-Nos blocos de código de um modelo de texto do T4 do Visual Studio, a `import` diretiva permite que você faça referência a elementos em outro namespace sem fornecer um nome totalmente qualificado. É o equivalente de `using` em C# ou `imports` em [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)].
+Nos blocos de código de um modelo de texto Visual Studio T4, a diretiva permite que você consulte elementos em outro namespace sem fornecer um nome `import` totalmente qualificado. É o equivalente de `using` em C# ou `imports` em [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)].
 
-Para obter uma visão geral da escrita de modelos de texto T4, consulte [escrevendo um modelo de texto T4](../modeling/writing-a-t4-text-template.md).
+Para uma visão geral da escrita de modelos de texto T4, consulte [Escrevendo um modelo de texto T4](../modeling/writing-a-t4-text-template.md).
 
 ## <a name="using-the-import-directive"></a>Usando a diretiva de importação
 
@@ -49,7 +49,7 @@ The file contains: <#=  fileContent #>
 
 - `Microsoft.VisualStudio.Modeling`
 
-- Namespace de sua DSL
+- Namespace da DSL
 
 ## <a name="see-also"></a>Confira também
 

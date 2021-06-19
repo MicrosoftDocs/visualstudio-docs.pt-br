@@ -1,7 +1,7 @@
 ---
-title: Manter o foco ao percorrer meu aplicativo | Microsoft Docs
-description: Use a depuração remota para impedir que o seu programa perca o foco quando você depurar um problema de ativação de janela.
-ms.custom: SEO-VS-2020, seodec18
+title: Mantenha o foco ao passar pelo meu aplicativo | Microsoft Docs
+description: Use a depuração remota para impedir que seu programa perca o foco ao depurar um problema de ativação de janela.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -22,19 +22,19 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9700b5f62637cb70900845185578fbb272f5a22b
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 561e5d4dc009642ee7773cd60d004ef8a64261d6
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155161"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386924"
 ---
-# <a name="how-can-i-keep-focus-when-stepping-through-my-app"></a>Como posso manter o foco ao percorrer meu aplicativo?
+# <a name="how-can-i-keep-focus-when-stepping-through-my-app"></a>Como posso manter o foco ao passar pelo meu aplicativo?
 ## <a name="description"></a>Descrição
  Meu programa tem um problema de ativação de janela. Percorrer o programa com o depurador interfere em minha capacidade de reproduzir o problema, pois meu programa sempre perde o foco. Há alguma maneira de evitar isso?
 
 ## <a name="solution"></a>Solução
- Se você tiver um segundo computador, use a depuração remota. Você pode operar seu programa no computador remoto quando executar o depurador no host. Para obter mais informações, consulte [como: selecionar um computador remoto](/previous-versions/visualstudio/visual-studio-2010/w8wtw2f3(v=vs.100)).
+ Se você tiver um segundo computador, use a depuração remota. Você pode operar seu programa no computador remoto quando executar o depurador no host. Para obter mais informações, [consulte Como selecionar um computador remoto.](/previous-versions/visualstudio/visual-studio-2010/w8wtw2f3(v=vs.100))
 
 ## <a name="see-also"></a>Confira também
 - [Perguntas frequentes sobre depuração de código nativo](../debugger/debugging-native-code-faqs.md)

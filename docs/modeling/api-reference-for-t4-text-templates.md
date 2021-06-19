@@ -4,17 +4,17 @@ description: Saiba como a API de modelagem de texto permite invocar e personaliz
 ms.custom: SEO-VS-20200
 ms.date: 11/04/2016
 ms.topic: reference
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d822aaaf7b951dfb8b60bb568f8d264e26e9a648
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f1782f0a1acb83c2a6cfe7ea34d04377fab1b7b1
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861875"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385442"
 ---
 # <a name="api-reference-for-t4-text-templates"></a>Referência de API para modelos de texto T4
 

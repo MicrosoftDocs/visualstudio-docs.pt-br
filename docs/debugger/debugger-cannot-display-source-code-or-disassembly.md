@@ -1,7 +1,7 @@
 ---
 title: O depurador não pode exibir o código-fonte ou a desmontagem
 description: Consulte os motivos da mensagem "o depurador não pode exibir o código-fonte ou a desmontagem do local atual em que a execução foi interrompida".
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2966405378d2a6144c921c442e7412a41c454c52
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bac2f04ab77e34186a4f0ee202fa8d16f6e45e38
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873061"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387340"
 ---
 # <a name="debugger-cannot-display-source-code-or-disassembly"></a>O depurador não pode exibir o código-fonte ou a desmontagem
 Este erro é:
@@ -37,7 +37,7 @@ Este erro é:
 
 - Os critérios de segurança podem ter impedido que o depurador lesse a pilha, o thread, o registro e outras informações de contexto do programa que você está depurando. É mais provável que isso ocorra se você estiver depurando um aplicativo Web e não tiver a permissão correta para acessar o diretório virtual. Defina a segurança do diretório virtual como Anônima e tente novamente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Depurando no Visual Studio](../debugger/index.yml)
 - [Introdução ao depurador](../debugger/debugger-feature-tour.md)
 - [Exibindo dados no depurador](../debugger/viewing-data-in-the-debugger.md)

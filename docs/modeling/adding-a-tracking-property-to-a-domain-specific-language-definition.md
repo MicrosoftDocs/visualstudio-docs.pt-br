@@ -8,17 +8,17 @@ helpviewer_keywords:
 - tracking properties [Domain-Specific Language Tools], walkthrough
 - Domain-Specific Language Tools, walkthroughs
 - walkthroughs [Domain-Specific Language Tools]
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c58e01fa5da5608b183827e366c115c214aa483d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 546636ec3de4656bf0f6480dfaa5141d38e963d6
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862005"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384909"
 ---
 # <a name="add-a-tracking-property-to-a-domain-specific-language-definition"></a>Adicionar uma propriedade de controle a uma definição de Linguagem Específica de Domínio
 
@@ -153,7 +153,7 @@ Você deve fornecer o código para manter o valor e o estado da sua propriedade 
 
 3. Selecione o modelo de **arquivo de código** , defina o **nome** como e `NamespaceTrackingProperty.cs` clique em **OK**.
 
-     O arquivo NamespaceTrackingProperty.cs é criado e aberto para edição.
+     O arquivo NamespaceTrackingProperty. cs é criado e aberto para edição.
 
 4. Na pasta, crie os seguintes arquivos de código: `ExampleModel.cs,``HelperClasses.cs` , `Serialization.cs` e `TypeDescriptor.cs` .
 
@@ -161,9 +161,9 @@ Você deve fornecer o código para manter o valor e o estado da sua propriedade 
 
 ## <a name="add-helper-classes-to-support-tracking-properties"></a>Adicionar classes auxiliares para dar suporte a propriedades de acompanhamento
 
-Para o arquivo HelperClasses.cs, adicione as `TrackingHelper` classes e da `CriticalException` seguinte maneira. Você fará referência a essas classes mais adiante neste guia.
+Para o arquivo HelperClasses. cs, adicione as `TrackingHelper` classes e da `CriticalException` seguinte maneira. Você fará referência a essas classes mais adiante neste guia.
 
-1. Adicione o código a seguir ao arquivo HelperClasses.cs.
+1. Adicione o código a seguir ao arquivo HelperClasses. cs.
 
     ```csharp
     using System;
@@ -249,7 +249,7 @@ A definição desse método cria o descritor de propriedade de rastreamento para
 
 ### <a name="to-modify-the-type-descriptor-for-the-examplemodel-domain-class"></a>Para modificar o descritor de tipo para a classe de domínio ExampleModel
 
-1. Adicione o código a seguir ao arquivo TypeDescriptor.cs.
+1. Adicione o código a seguir ao arquivo TypeDescriptor. cs.
 
     ```csharp
     using System;
@@ -311,7 +311,7 @@ A definição desse método cria o descritor de propriedade de rastreamento para
 
 O código gerado define um provedor de descrição de tipo para a classe de domínio Exampleelement; no entanto, você deve adicionar código para instruir a DSL a usar esse provedor de descrição de tipo.
 
-1. Adicione o código a seguir ao arquivo Package.cs.
+1. Adicione o código a seguir ao arquivo Package. cs.
 
     ```csharp
     using System.ComponentModel;
@@ -336,16 +336,16 @@ O código gerado define um provedor de descrição de tipo para a classe de dom�
 
 ## <a name="add-custom-code-for-the-model"></a>Adicionar código personalizado para o modelo
 
-Implemente o `GetCustomElementsValue` método para a `ExampleModel` classe de domínio.
+Implemente `GetCustomElementsValue` o método para a classe de `ExampleModel` domínio.
 
 > [!NOTE]
-> O código que as ferramentas DSL geram para `ExampleModel` chamadas `GetCustomElementsValue` ; no entanto, as ferramentas DSL não geram código que implementa o método.
+> O código que as Ferramentas DSL geram para chamadas ; no entanto, as `ExampleModel` Ferramentas DSL não geram código `GetCustomElementsValue` que implementa o método .
 
-A definição do `GetCustomElementsValue` método fornece a lógica para a propriedade calculada CustomElements de `ExampleModel` . Esse método conta o número de `ExampleElement` classes de domínio que têm uma propriedade de rastreamento de namespace que tem um valor atualizado pelo usuário e retorna uma cadeia de caracteres que representa essa contagem como uma proporção do total de elementos no modelo.
+Definir o `GetCustomElementsValue` método fornece a lógica para a propriedade calculada CustomElements de `ExampleModel` . Esse método conta o número de classes de domínio que têm uma propriedade de acompanhamento de Namespace que tem um valor atualizado pelo usuário e retorna uma cadeia de caracteres que representa essa contagem como uma proporção do total de elementos `ExampleElement` no modelo.
 
-Além disso, adicione um `OnDefaultNamespaceChanged` método a `ExampleModel` e substitua o `OnValueChanged` método da `DefaultNamespacePropertyHandler` classe aninhada de `ExampleModel` para chamar `OnDefaultNamespaceChanged` .
+Além disso, adicione um `OnDefaultNamespaceChanged` método a e substitua o método da classe `ExampleModel` `OnValueChanged` `DefaultNamespacePropertyHandler` aninhada `ExampleModel` de para chamar `OnDefaultNamespaceChanged` .
 
-Como a propriedade DefaultNamespace é usada para calcular a propriedade de rastreamento de namespace, o `ExampleModel` deve notificar todas as `ExampleElement` classes de domínio que o valor de DefaultNamespace foi alterado.
+Como a propriedade DefaultNamespace é usada para calcular a propriedade de acompanhamento de Namespace, deve notificar todas as classes de domínio de que o valor `ExampleModel` `ExampleElement` de DefaultNamespace foi alterado.
 
 ### <a name="to-modify-the-property-handler-for-the-tracked-property"></a>Para modificar o manipulador de propriedades para a propriedade rastreada
 
@@ -412,16 +412,16 @@ Como a propriedade DefaultNamespace é usada para calcular a propriedade de rast
     }
     ```
 
-## <a name="add-custom-code-for-the-tracking-property"></a>Adicionar código personalizado para a propriedade de rastreamento
+## <a name="add-custom-code-for-the-tracking-property"></a>Adicionar código personalizado para a propriedade tracking
 
-Adicione um `CalculateNamespace` método à `ExampleElement` classe de domínio.
+Adicione um `CalculateNamespace` método à classe de `ExampleElement` domínio.
 
-Definir esse método fornece a lógica para a propriedade calculada CustomElements de `ExampleModel` . Esse método conta o número de `ExampleElement` classes de domínio que têm uma propriedade de rastreamento de namespace que está no estado atualizado pelo usuário e retorna uma cadeia de caracteres que representa essa contagem como uma proporção do total de elementos no modelo.
+Definir esse método fornece a lógica para a propriedade calculada CustomElements de `ExampleModel` . Esse método conta o número de classes de domínio que têm uma propriedade de acompanhamento de Namespace que está no estado atualizado pelo usuário e retorna uma cadeia de caracteres que representa essa contagem como uma proporção do total de elementos no `ExampleElement` modelo.
 
-Além disso, adicione armazenamento para, e métodos para obter e definir, a propriedade de armazenamento personalizado de namespace da `ExampleElement` classe de domínio.
+Além disso, adicione os métodos e para obter e definir a propriedade de armazenamento personalizada namespace da `ExampleElement` classe de domínio.
 
 > [!NOTE]
-> O código que as ferramentas de DSL geram para `ExampleModel` chama os métodos get e Set; no entanto, as ferramentas DSL não geram código que implementa os métodos.
+> O código que as Ferramentas DSL geram para chama os métodos get e set; no entanto, as Ferramentas DSL não geram código que `ExampleModel` implementa os métodos.
 
 ### <a name="to-add-the-method-for-the-custom-type-descriptor"></a>Para adicionar o método para o descritor de tipo personalizado
 
@@ -585,12 +585,12 @@ Além disso, adicione armazenamento para, e métodos para obter e definir, a pro
 
 ## <a name="add-custom-code-to-support-serialization"></a>Adicionar código personalizado para dar suporte à serialização
 
-Adicione código para dar suporte ao comportamento de pós-carregamento personalizado para serialização de XML.
+Adicione código para dar suporte ao comportamento de pós-carregamento personalizado para serialização XML.
 
 > [!NOTE]
-> O código que as ferramentas de DSL geram chama os `OnPostLoadModel` `OnPostLoadModelAndDiagram` métodos e; no entanto, as ferramentas de DSL não geram código que implementa esses métodos.
+> O código que as Ferramentas DSL geram chama os métodos e ; no entanto, as Ferramentas DSL não geram código que `OnPostLoadModel` `OnPostLoadModelAndDiagram` implementa esses métodos.
 
-### <a name="to-add-code-to-support-the-custom-post-load-behavior"></a>Para adicionar código para dar suporte ao comportamento de pós-carregamento personalizado
+### <a name="to-add-code-to-support-the-custom-post-load-behavior"></a>Para adicionar código para dar suporte ao comportamento personalizado pós-carregamento
 
 1. Adicione o código a seguir ao arquivo Serialization.cs.
 
@@ -716,45 +716,45 @@ Adicione código para dar suporte ao comportamento de pós-carregamento personal
 
 ## <a name="test-the-language"></a>Testar o idioma
 
-A próxima etapa é criar e executar o designer de DSL em uma nova instância do [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] para que você possa verificar se a propriedade de rastreamento está funcionando corretamente.
+A próxima etapa é criar e executar o designer DSL em uma nova instância do para que você possa verificar se a propriedade de acompanhamento [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] está funcionando corretamente.
 
 1. No menu **Compilar**, clique em **Recompilar Solução**.
 
 2. No menu **Depurar** , clique em **Iniciar Depuração**.
 
-    A compilação experimental do [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] abre a solução de **depuração** , que contém um arquivo de teste vazio.
+    O build experimental do [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] abre a solução de **Depuração,** que contém um arquivo de teste vazio.
 
-3. Em **Gerenciador de soluções**, clique duas vezes no arquivo Test. trackingPropertyDsl para abri-lo no designer e, em seguida, clique na superfície de design.
+3. No **Gerenciador de Soluções**, clique duas vezes no arquivo Test.trackingPropertyDsl para abri-lo no designer e clique na superfície de design.
 
-    Observe que, na janela **Propriedades** do diagrama, a propriedade **namespace padrão** é **DefaultNamespace** e a propriedade **Custom Elements** é **0/0**.
+    Observe que, na **janela Propriedades** do diagrama, a propriedade **Namespace** Padrão é **DefaultNamespace** e a propriedade **Elementos** Personalizados **é 0/0.**
 
-4. Arraste um elemento **exampleelement** da **caixa de ferramentas** para a superfície do diagrama.
+4. Arraste um **elemento ExampleElement** da Caixa **de Ferramentas para** a superfície do diagrama.
 
-5. Na janela **Propriedades** do elemento, selecione a propriedade **namespace do elemento** e altere o valor de **DefaultNamespace** para **OtherNamespace**.
+5. Na janela **Propriedades** do elemento, selecione a propriedade **Namespace do** Elemento e altere o valor de **DefaultNamespace** para **OtherNamespace**.
 
-    Observe que o valor do **namespace do elemento** agora é mostrado em negrito.
+    Observe que o valor do **Namespace do Elemento** agora é mostrado em negrito.
 
-6. Na janela **Propriedades** , clique com o botão direito do mouse em **namespace do elemento** e clique em **Redefinir**.
+6. Na janela **Propriedades,** clique com o botão direito do mouse em **Namespace do** Elemento e clique em **Redefinir**.
 
     O valor da propriedade é alterado para **DefaultNamespace** e o valor é mostrado em uma fonte regular.
 
-    Clique com o botão direito do mouse em **namespace do elemento** novamente. O comando **Reset** agora está desabilitado porque a propriedade está atualmente em seu estado de controle.
+    Clique com o botão **direito do mouse em Namespace do** Elemento novamente. O **comando Redefinir** agora está desabilitado porque a propriedade está atualmente em seu estado de acompanhamento.
 
-7. Arraste outro **exemploelement** da **caixa de ferramentas** para a superfície do diagrama e altere seu **namespace de elemento** para **OtherNamespace**.
+7. Arraste outro **ExampleElement** da Caixa **de Ferramentas** para a superfície do diagrama e altere seu **Namespace de** Elemento para **OtherNamespace**.
 
 8. Clique na superfície de design.
 
-    Na janela **Propriedades** do diagrama, o valor dos **elementos personalizados** agora é **1/2**.
+    Na janela **Propriedades** do diagrama, o valor de **Elementos Personalizados** agora é **1/2.**
 
-9. Altere o **namespace padrão** do diagrama de **DefaultNamespace** para **NewNamespace**.
+9. Altere **Namespace Padrão** para o diagrama de **DefaultNamespace para** **NewNamespace**.
 
-     O **namespace** do primeiro elemento rastreia a propriedade de **namespace padrão** , enquanto o **namespace** do segundo elemento retém seu valor atualizado pelo usuário de **OtherNamespace**.
+     O **Namespace** do primeiro elemento rastreia a propriedade **Namespace** Padrão, enquanto o **Namespace** do segundo elemento retém seu valor atualizado pelo usuário de **OtherNamespace**.
 
-10. Salve a solução e, em seguida, feche a compilação experimental.
+10. Salve a solução e feche o build experimental.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Se você planeja usar mais de uma propriedade de controle ou implementar propriedades de rastreamento em mais de uma DSL, você pode criar um modelo de texto para gerar o código comum para dar suporte a cada propriedade de controle. Para obter mais informações sobre modelos de texto, consulte [geração de código e modelos de texto T4](../modeling/code-generation-and-t4-text-templates.md).
+Se você planeja usar mais de uma propriedade de rastreamento ou implementar propriedades de acompanhamento em mais de uma DSL, poderá criar um modelo de texto para gerar o código comum para dar suporte a cada propriedade de rastreamento. Para obter mais informações sobre modelos de texto, consulte [Geração de código e Modelos de texto T4](../modeling/code-generation-and-t4-text-templates.md).
 
 ## <a name="see-also"></a>Confira também
 

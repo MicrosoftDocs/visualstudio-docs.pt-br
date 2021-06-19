@@ -1,7 +1,7 @@
 ---
 title: Depuração de aplicativos Web-erros e solução de problemas
 description: Encontre links para páginas de referência para ajudar a depurar aplicativos Web, como uma página de solução de problemas e páginas que descrevem cada erro que você pode encontrar.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cce4bcbf946dad69fc3e11a7b54365fc549c699
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b7b77afecaaadd65e203bda52dfc9cb92bef52ff
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872294"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387704"
 ---
 # <a name="debugging-web-applications-errors-and-troubleshooting"></a>Depurando aplicativos Web: erros e solução de problemas
 Você pode descobrir os seguintes erros ao tentar depurar aplicativos Web.
@@ -56,6 +56,6 @@ Você pode descobrir os seguintes erros ao tentar depurar aplicativos Web.
 
 - [Erro: não é possível iniciar a depuração no servidor Web](../debugger/error-unable-to-start-debugging-on-the-web-server.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Segurança do depurador](../debugger/debugger-security.md)
 - [Depurando aplicativos Web e script](how-to-enable-debugging-for-aspnet-applications.md)

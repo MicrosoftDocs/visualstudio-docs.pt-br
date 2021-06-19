@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - Domain-Specific Language Tools, walkthroughs
 - walkthroughs [Domain-Specific Language Tools]
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 063c0a5cfcf5136e53750e4405e8619bf3154ee2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4b578c949b3b5121eb90b2c034766ea15ae6d096
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963296"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386560"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>Como: adicionar um comando ao menu de atalho
 
@@ -294,7 +294,7 @@ private const int grpidMyMenuGroup = 0x01001;
 private const int cmdidMyContextMenuCommand = 1;
 ```
 
- Use o mesmo valor de GUID que você inseriu em **Commands. vsct**.
+ Use o mesmo valor guid que você inseriu em **Commands.vsct**.
 
 > [!NOTE]
 > Se você alterar a seção Símbolos do arquivo VSCT, deverá também alterar essas declarações para que correspondam. Você deve também incrementar o número de versão em Package.tt
@@ -323,9 +323,9 @@ protected override IList<MenuCommand> GetMenuCommands()
 
 ### <a name="to-exercise-the-command"></a>Para exercitar o comando
 
-1. Na barra de ferramentas **Gerenciador de soluções** , clique em **transformar todos os modelos**.
+1. Na barra **de Gerenciador de Soluções,** clique em **Transformar Todos os Modelos**.
 
-2. Pressione **F5** para recompilar a solução e iniciar a depuração da linguagem específica do domínio na compilação experimental.
+2. Pressione **F5** para recomperar a solução e iniciar a depuração da linguagem específica do domínio no build experimental.
 
 3. Na compilação experimental, abra o diagrama de amostra.
 
@@ -339,11 +339,11 @@ protected override IList<MenuCommand> GetMenuCommands()
 
 - Verifique se a sua amostra experimental tem a extensão de nome de arquivo correta para esta DSL. Para verificar a extensão do nome do arquivo, abra DslDefinition.dsl na instância principal do Visual Studio. Em seguida, no Gerenciador de DSL, clique com o botão direito do mouse no nó Editor e clique em Propriedades. Na janela Propriedades, examine a propriedade FileExtension.
 
-- Você [incrementa o número de versão do pacote](#version)?
+- Você [incrementou o número de versão do pacote?](#version)
 
 - Defina um ponto de interrupção no início do método OnStatus. Ele deve ser interrompido quando você clicar com o botão direito do mouse em qualquer parte do diagrama.
 
-O **método OnStatus não é chamado**:
+**O método OnStatus não é chamado** de :
 
 - Verifique se os GUIDs e IDs em seu código CommandSet correspondem aos presentes na seção Símbolos de Commands.vsct.
 
@@ -353,7 +353,7 @@ O **método OnStatus não é chamado**:
 
 - Repasse o método OnStatus para verificar se command.Visible e command.Enabled estão definidos como true.
 
-**O texto de menu errado aparece, ou o comando aparece no local errado**:
+**O texto do menu errado é exibido ou o comando aparece no local errado:**
 
 - Certifique-se de que a combinação de GUID e ID seja exclusiva para este comando.
 
@@ -361,9 +361,9 @@ O **método OnStatus não é chamado**:
 
 ## <a name="see-also"></a>Confira também
 
-- [Escrevendo código para personalizar uma linguagem específica de domínio](../modeling/writing-code-to-customise-a-domain-specific-language.md)
+- [Escrevendo código para personalizar um idioma específico do domínio](../modeling/writing-code-to-customise-a-domain-specific-language.md)
 - [Como modificar um comando de menu padrão](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)
-- [Implantando soluções de linguagem específica de domínio](msi-and-vsix-deployment-of-a-dsl.md)
+- [Implantando soluções de linguagem específicas do domínio](msi-and-vsix-deployment-of-a-dsl.md)
 - [Código de exemplo: diagramas de circuito](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

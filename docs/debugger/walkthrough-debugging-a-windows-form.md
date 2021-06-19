@@ -1,7 +1,7 @@
 ---
 title: Depurando um Windows Form | Microsoft Docs
 description: 'Siga um passo a passos para ver como criar e depurar um Windows Form, um aplicativo gerenciado comum. Você pode usar C#, Visual Basic, C++ ou F #.'
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e9293956e2ca47e68ff5bf22502251b22115a827
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 73b58326bb594f275a508e5ba7fb17071f283ac2
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884124"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385169"
 ---
 # <a name="walkthrough-debugging-a-windows-form"></a>Passo a passo: Depurando um Windows Form
 Um Windows Form é um dos aplicativos gerenciados mais comuns. Um Windows Form cria um aplicativo padrão do Windows. Você pode concluir este passo a passo usando o Visual Basic, C# ou C++.

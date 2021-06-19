@@ -1,61 +1,61 @@
 ---
 title: Como abrir um modelo a partir de um arquivo no código do programa
-description: Saiba que o ModelBus fornece um mecanismo padrão para referenciar um modelo ou elementos em um modelo e para localizar o modelo se ele tiver sido movido.
+description: Saiba que o ModelBus fornece mecanismo padrão para referenciar um modelo ou elementos em um modelo e para localizar o modelo se ele foi movido.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dcc1c74f7c4c787a3d6b70b6fd6c7d9d67ad37db
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 97de2d7e79dc44ff785663c4d04dc65851430472
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922676"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387054"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>Como abrir um modelo a partir de um arquivo no código do programa
 
-Você pode abrir modelos de DSL em qualquer aplicativo.
+Você pode abrir modelos DSL em qualquer aplicativo.
 
-A partir de uma extensão do Visual Studio, você pode usar ModelBus para essa finalidade. O ModelBus fornece um mecanismo padrão para referenciar um modelo ou elementos em um modelo e para localizar o modelo se ele tiver sido movido. Para obter mais informações, consulte [integrando modelos usando o Visual Studio ModelBus](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
+Em uma Visual Studio, você pode usar ModelBus para essa finalidade. ModelBus fornece mecanismo padrão para referenciar um modelo ou elementos em um modelo e para localizar o modelo se ele foi movido. Para obter mais informações, [consulte Integrando modelos usando Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
 
 ## <a name="target-framework"></a>Estrutura de destino
 
-Defina a **estrutura de destino** do seu projeto de aplicativo para .NET Framework 4 ou posterior.
+De definir **a Estrutura de destino** do seu projeto de aplicativo como .NET Framework 4 ou posterior.
 
-1. Abra o projeto do Visual Studio para o aplicativo no qual você deseja ler um modelo DSL.
+1. Abra o Visual Studio para o aplicativo no qual você deseja ler um modelo DSL.
 
-2. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e clique em **Propriedades**.
+2. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e clique em **Propriedades**.
 
-3. Na janela Propriedades do projeto, na guia **aplicativo** , defina o campo **estrutura de destino** como **.NET Framework 4** (ou posterior).
+3. Na janela propriedades do projeto, na **guia** Aplicativo, de definido o campo Estrutura **de** destino como **.NET Framework 4** (ou posterior).
 
 > [!NOTE]
-> A estrutura de destino não deve ser **.NET Framework perfil de cliente 4**.
+> A estrutura de destino não deve ser **.NET Framework perfil de cliente 4.**
 
 ## <a name="references"></a>Referências
 
-Adicione estas referências ao seu projeto de aplicativo do Visual Studio:
+Adicione essas referências ao seu projeto Visual Studio aplicativo:
 
 - `Microsoft.VisualStudio.Modeling.Sdk.11.0`
 
-  - Se você não vir isso na guia **.net** da caixa de diálogo **Adicionar referências** , clique na guia **procurar** e navegue até `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\` .
+  - Se você não vir isso na guia  **.NET** na caixa  de diálogo Adicionar Referências, clique na guia Procurar e navegue até `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\` .
 
-- Seu assembly DSL, que será encontrado na pasta bin do seu projeto DSL. Seu nome normalmente é do formato: *suaempresa*. *Seuprojeto* `.Dsl.dll` .
+- O assembly DSL, que você encontrará na pasta bin do projeto DSL. Seu nome normalmente é do formato: *YourCompany*. *SeuProjeto* `.Dsl.dll` .
 
 ## <a name="important-classes-in-the-dsl"></a>Classes importantes na DSL
 
-Antes de escrever o código que lê sua DSL, você deve saber os nomes de algumas das classes geradas por sua DSL. Na sua solução de DSL, abra o projeto **DSL** e procure na pasta **GeneratedCode** . Como alternativa, clique duas vezes no assembly DSL em suas **referências** de projeto e abra o namespace DSL no **pesquisador de objetos**.
+Antes de escrever o código que lê sua DSL, você deve saber os nomes de algumas das classes geradas por sua DSL. Em sua solução DSL, abra o **projeto Dsl** e procure na **pasta GeneratedCode.** Como alternativa, clique duas vezes no assembly DSL no projeto Referências e abra o namespace DSL no **Pesquisador de Objetos**.
 
-Essas são as classes que você deve identificar:
+Estas são as classes que você deve identificar:
 
-- *YourDslRootClass* -este é o nome da classe raiz no seu `DslDefinition.dsl` .
+- *YourDslRootClass* – esse é o nome da classe raiz em seu `DslDefinition.dsl` .
 
-- *YourDslName* `SerializationHelper` -Essa classe é definida em `SerializationHelper.cs` em seu projeto DSL.
+- *YourDslName* `SerializationHelper` - Essa classe é definida em `SerializationHelper.cs` em seu projeto DSL.
 
-- *YourDslName* `DomainModel` -Essa classe é definida em `DomainModel.cs` em seu projeto DSL.
+- *YourDslName* `DomainModel` - Essa classe é definida em `DomainModel.cs` em seu projeto DSL.
 
 ## <a name="read-from-a-file"></a>Ler de um arquivo
 
@@ -107,7 +107,7 @@ namespace StandaloneReadDslConsole
 
 ## <a name="save-to-a-file"></a>Salvar em um arquivo
 
-O seguinte acréscimo ao código anterior faz uma alteração no modelo e, em seguida, salva-o em um arquivo.
+A adição a seguir ao código anterior faz uma alteração no modelo e, em seguida, salva-o em um arquivo.
 
 ```csharp
 using (Transaction t =

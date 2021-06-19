@@ -1,7 +1,7 @@
 ---
 title: Exibir o código de desmontagem no depurador | Microsoft Docs
 description: Use a janela de desmontagem no Visual Studio para mostrar o código do assembly correspondente às instruções criadas pelo compilador.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 10/30/2018
 ms.topic: how-to
 f1_keywords:
@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b7d772ed757b231ce68fe27b74123f7f5878d0ef
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c8cc67b2f8136ea426eb56c25fb3c345198701f1
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99845042"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387457"
 ---
 # <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Exibir o código de desmontagem no depurador do Visual Studio (C#, C++, Visual Basic, F #)
 
@@ -70,7 +70,7 @@ Para ativar ou desativar as informações opcionais, clique com o botão direito
 
 Uma seta amarela na margem esquerda marca o ponto de execução atual. Para código nativo, o ponto de execução corresponde ao contador de programa da CPU. Este local mostra a próxima instrução que será executada em seu programa.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 * [Paginação para cima ou para baixo na memória](../debugger/how-to-page-up-or-down-in-memory.md)
 * [Exibindo dados no depurador](../debugger/viewing-data-in-the-debugger.md)

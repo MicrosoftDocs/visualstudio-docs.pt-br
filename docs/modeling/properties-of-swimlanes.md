@@ -8,17 +8,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.swimlane
 helpviewer_keywords:
 - Domain-Specific Language, swimlane
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 61994a25b5fa862a2014e2dd5b57a0c47130e6ba
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9c171bda2670b698297dd876a8a4403a91cd4af7
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882980"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386482"
 ---
 # <a name="properties-of-swimlanes"></a>Propriedades de swimlanes
 Você pode adicionar raias a um diagrama. As raias dividem um diagrama em áreas verticais ou horizontais. Você pode definir outras formas a serem exibidas dentro de raias. Para obter mais informações, consulte [como definir um idioma de Domain-Specific](../modeling/how-to-define-a-domain-specific-language.md). Para obter mais informações sobre como usar essas propriedades, consulte [Personalizando e estendendo uma linguagem de Domain-Specific](../modeling/customizing-and-extending-a-domain-specific-language.md).
@@ -39,7 +39,7 @@ Você pode adicionar raias a um diagrama. As raias dividem um diagrama em áreas
 |Tem Construtor personalizado|Se `True` , um construtor personalizado será fornecido no código-fonte. Para obter mais informações, consulte [substituindo e estendendo as classes geradas](../modeling/overriding-and-extending-the-generated-classes.md).|Falso|
 |Modificador de herança|Descreve o tipo de herança da classe de código-fonte que é gerada a partir da raia ( `none` `abstract` ou `sealed` ).|nenhum|
 |Raia base|A classe base dessa raia.|(nenhum)|
-|Nome|O nome desta raia.|Nome atual|
+|Name|O nome desta raia.|Nome atual|
 |Namespace|O namespace que é afiliado a esta raia.|Namespace atual|
 |Tipo de dica de ferramenta|Como a dica de ferramenta é definida ( `fixed` , `variable` ou `none` ). Se `fixed` , em seguida, o valor da `Fixed Tooltip Text` propriedade será usado; se `variable` , em seguida, a dica de ferramenta será definida no código personalizado.|\<none>|
 |Observações|Observações informais que estão associadas a esta raia.|\<none>|

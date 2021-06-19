@@ -1,6 +1,6 @@
 ---
 title: Como definir uma linguagem específica do domínio
-description: Saiba como criar uma solução do Visual Studio a partir de um modelo para definir uma DSL (linguagem específica de domínio).
+description: Saiba como criar uma solução Visual Studio de um modelo para definir uma DSL (linguagem específica de domínio).
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,46 +13,46 @@ helpviewer_keywords:
 - Domain-Specific Language, external types
 - Domain-Specific Language, relationships
 - Domain-Specific Language, domain properties
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 440d2f42fb7967ebbcb97433c3faa55e2d91ca0e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 51717e4bdbf12478e22bb825a9c84cfc82815f98
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903927"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387353"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>Como definir uma linguagem específica do domínio
-Para definir uma DSL (linguagem específica de domínio), você cria uma solução do Visual Studio a partir de um modelo. A parte fundamental da solução é o diagrama de Definição de DSL, que é armazenado em DslDefinition.dsl. A Definição de DSL define as classes e formas da DSL. Depois de modificar e adicionar esses elementos, você pode adicionar o código do programa para personalizar a DSL com mais detalhes.
+Para definir uma DSL (linguagem específica de domínio), você cria uma Visual Studio de um modelo. A parte fundamental da solução é o diagrama de Definição de DSL, que é armazenado em DslDefinition.dsl. A Definição de DSL define as classes e formas da DSL. Depois de modificar e adicionar esses elementos, você pode adicionar o código do programa para personalizar a DSL com mais detalhes.
 
-Se você for novo nas DSLs, recomendamos que você trabalhe no **laboratório de ferramentas DSL**, que pode ser encontrado neste site: [SDK de modelagem e visualização](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)
+Se você for novo no DSLs, recomendamos que você trabalhe por meio do Laboratório de Ferramentas **DSL,** que pode encontrar neste site: Visualização e [SDK de Modelagem](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)
 
 ## <a name="selecting-a-template-solution"></a><a name="templates"></a> Selecionando uma solução de modelo
 
 Para definir uma DSL, é necessário ter instalados os seguintes componentes:
 
 - Visual Studio
-- Carga de trabalho de desenvolvimento de extensão do Visual Studio (inclui o SDK do Visual Studio)
+- Visual Studio de desenvolvimento de extensão (inclui o SDK do Visual Studio)
 - SDK de modelagem (instale-o como um componente individual no Visual Studio)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-Para criar uma nova linguagem específica de domínio, você cria uma nova solução do Visual Studio usando o modelo de projeto de Domain-Specific Language.
+Para criar uma nova linguagem específica do domínio, crie uma nova Visual Studio usando o modelo de projeto Domain-Specific Language.
 
 ### <a name="to-create-a-dsl-solution"></a>Para criar uma solução DSL
 
-1. Crie um novo projeto **de linguagem específica de domínio** .
+1. Crie um novo projeto **de Linguagem Específica do** Domínio.
 
    ::: moniker range="vs-2017"
 
-    ![Criar caixa de diálogo DSL](../modeling/media/create_dsldialog.png)
+    ![Caixa de diálogo Criar DSL](../modeling/media/create_dsldialog.png)
 
    ::: moniker-end
 
-    O **Assistente de linguagem específica de domínio** é aberto e exibe uma lista de soluções de modelo de DSL.
+    O **Assistente de Linguagem Específica do Domínio** é aberto e exibe uma lista de soluções DSL de modelo.
 
 2. Clique em cada modelo para ver uma descrição. Escolha a solução que mais se assemelha ao que você deseja criar.
 
@@ -60,15 +60,15 @@ Para criar uma nova linguagem específica de domínio, você cria uma nova solu�
 
     Clique em cada exemplo para obter mais informações.
 
-   - Selecione **fluxo de tarefas** para criar uma DSL que tenha raias. As raias são partições verticais ou horizontais do diagrama.
+   - Selecione **Fluxo de** Tarefas para criar uma DSL que tenha raias. As raias são partições verticais ou horizontais do diagrama.
 
-   - Selecione **modelos de componente** para criar uma DSL que tem portas. As portas são pequenas formas na borda de uma forma maior.
+   - Selecione **Modelos de** Componente para criar uma DSL que tenha portas. As portas são pequenas formas na borda de uma forma maior.
 
-   - Selecione **diagramas de classe** para definir uma DSL que tenha formas de compartimento. As formas do compartimento contêm listas de itens.
+   - Selecione **Diagramas de Classe** para definir uma DSL que tenha formas de compartimento. As formas do compartimento contêm listas de itens.
 
-   - Selecione o **idioma mínimo** em outros casos ou, se você não tiver certeza.
+   - Selecione **Idioma Mínimo** em outros casos ou, se não tiver certeza.
 
-   - Selecione o **designer do WinForm mínimo** ou o **designer do WPF mínimo** para criar uma DSL que é exibida em uma superfície do Windows Forms ou do WPF. Você precisará gravar um código para definir o editor. Para mais informações, consulte os seguintes tópicos:
+   - Selecione **Designer WinForm Mínimo** ou Designer mínimo do **WPF** para criar uma DSL que é exibida em uma superfície Windows Forms ou WPF. Você precisará gravar um código para definir o editor. Para mais informações, consulte os seguintes tópicos:
 
         [Criando uma linguagem específica do domínio baseada no Windows Forms](../modeling/creating-a-windows-forms-based-domain-specific-language.md)
 
@@ -76,9 +76,9 @@ Para criar uma nova linguagem específica de domínio, você cria uma nova solu�
 
 3. Insira uma extensão de nome de arquivo para sua DSL na página do assistente apropriada. Essa é a extensão que será usada pelos arquivos que contêm as instâncias de sua DSL.
 
-   - Escolha uma extensão de nome de arquivo que não esteja associada a nenhum aplicativo em seu computador ou em nenhum computador que você deseja instalar a DSL. Por exemplo, **docx** e **htm** seriam extensões de nome de arquivo inaceitáveis.
+   - Escolha uma extensão de nome de arquivo que não esteja associada a nenhum aplicativo em seu computador ou em nenhum computador que você deseja instalar a DSL. Por exemplo, **docx e** **htm** seriam extensões de nome de arquivo inaceitáveis.
 
-   - O assistente o avisará se a extensão inserida está sendo usada como uma DSL. Considere usar uma extensão de nome de arquivo diferente. Também é possível redefinir a instância Experimental do SDK do Visual Studio para limpar os designers experimentais antigos. Clique em **Iniciar**, **todos os programas**, **Microsoft Visual Studio SDK 2010**, **ferramentas** e, em seguida, **redefina a instância experimental Microsoft Visual Studio 2010**.
+   - O assistente o avisará se a extensão inserida está sendo usada como uma DSL. Considere usar uma extensão de nome de arquivo diferente. Também é possível redefinir a instância Experimental do SDK do Visual Studio para limpar os designers experimentais antigos. Clique **em** Iniciar , **clique** em Todos os Programas, **Microsoft Visual Studio SDK 2010,** Ferramentas **e,** em seguida, Redefina o **Microsoft Visual Studio 2010 Experimental.**
 
 4. Você pode ajustar as configurações nas outras páginas ou manter os valores padrão.
 
@@ -88,20 +88,20 @@ Para criar uma nova linguagem específica de domínio, você cria uma nova solu�
 
    A interface do usuário agora se assemelha à imagem a seguir.
 
-   ![Designer de DSL](../modeling/media/dsl_designer.png)
+   ![designer dsl](../modeling/media/dsl_designer.png)
 
-   Essa solução define uma linguagem específica de domínio. Para obter mais informações, consulte [visão geral da interface do usuário das ferramentas de linguagem de Domain-Specific](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md).
+   Essa solução define uma linguagem específica de domínio. Para obter mais informações, consulte [Visão geral do Domain-Specific Language Tools Interface do Usuário](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md).
 
 ### <a name="test-the-solution"></a>Testar a solução
  A solução de modelo fornece uma DSL de trabalho, que pode ser modificada ou usada da forma como se encontra.
 
- Para testar a solução, pressione F5 ou CTRL+F5. Uma nova instância do Visual Studio é aberta no modo experimental.
+ Para testar a solução, pressione F5 ou CTRL+F5. Uma nova instância do Visual Studio abre no modo experimental.
 
- Na nova instância do Visual Studio, em Gerenciador de Soluções, abra o arquivo de exemplo. Ele se abre como um diagrama, com uma caixa de ferramentas.
+ Na nova instância do Visual Studio, em Gerenciador de Soluções, abra o Arquivo de exemplo. Ele se abre como um diagrama, com uma caixa de ferramentas.
 
- Se você executar uma solução que você criou a partir do modelo de **linguagem mínima** , seu Visual Studio experimental será semelhante ao exemplo a seguir:
+ Se você executar uma solução criada com base no modelo **linguagem** mínima, sua Visual Studio experimental será semelhante ao exemplo a seguir:
 
- ![Árvore de exemplo de linguagem específica de domínio no Visual Studio](../modeling/media/dsl_min.png)
+ ![Árvore de exemplo de idioma específico do domínio Visual Studio](../modeling/media/dsl_min.png)
 
  Experimente com as ferramentas. Crie elementos e os conecte.
 
@@ -115,11 +115,11 @@ Para criar uma nova linguagem específica de domínio, você cria uma nova solu�
 
  É especialmente útil manter estas classes:
 
-- A classe raiz aparece no canto superior esquerdo do diagrama de definição de DSL, em **classes e relações**. Renomeie-a com um nome diferente da DSL. Por exemplo, uma DSL chamada **MusicLibrary** pode ter uma classe raiz chamada **Music**.
+- A classe raiz aparece no canto superior esquerdo do diagrama de Definição de DSL, em **Classes e Relações.** Renomeie-a com um nome diferente da DSL. Por exemplo, uma DSL chamada **MusicLibrary** pode ter uma classe raiz chamada **Music**.
 
-- A classe de diagrama aparece no canto inferior direito do diagrama de definição de DSL, na coluna **elementos de diagrama** . Talvez seja necessário rolar para a direita para vê-la. Normalmente, ele é chamado de **diagrama** _YourDsl_.
+- A classe de diagrama aparece no canto inferior direito do diagrama de Definição de DSL, na coluna **Elementos de** Diagrama. Talvez seja necessário rolar para a direita para vê-la. Normalmente, ele é chamado _de Diagrama YourDsl._
 
-- Se você usou o modelo de **fluxo de tarefas** e deseja criar diagramas com raias, mantenha e renomeie a classe de domínio do ator e a forma ActorSwimlane.
+- Se você usou **o** modelo fluxo de tarefas e deseja criar diagramas com raias, mantenha e renomeie a classe de domínio Actor e a forma ActorSwimlane.
 
   Exclua ou renomeie outras classes para atender aos seus requisitos.
 
@@ -137,23 +137,23 @@ Para criar uma nova linguagem específica de domínio, você cria uma nova solu�
   As seções a seguir descrevem como construir os tipos mais úteis de recursos DSL. Há vários outros padrões com os quais uma DSL pode ser construída, mas esses são os usados com mais frequência.
 
 > [!NOTE]
-> Depois de adicionar um recurso, não se esqueça de clicar em **transformar todos os modelos** na barra de ferramentas de Gerenciador de soluções antes de compilar e executar sua DSL.
+> Depois de adicionar um recurso,  não se esqueça de clicar em Transformar Todos os Modelos na barra de ferramentas do Gerenciador de Soluções antes de criar e executar sua DSL.
 
  A figura a seguir mostra as classes e relações que fazem parte da DSL usada de exemplo neste tópico.
 
- ![Incorporação e relações de referência](../modeling/media/music_classes.png)
+ ![Relações de incorporação e referência](../modeling/media/music_classes.png)
 
  A próxima figura é um modelo de exemplo desta DSL:
 
- ![Modelo de instância da DSL gerada](../modeling/media/music_instance.png)
+ ![Modelo de instância de DSL gerado](../modeling/media/music_instance.png)
 
 > [!NOTE]
 > "Modelo" refere-se a uma instância de sua DSL que os usuários criam e geralmente é exibida como um diagrama. Este tópico discute o diagrama da Definição de DSL e os diagramas de modelo que aparecem quando sua DSL é usada.
 
 ## <a name="defining-domain-classes"></a><a name="classes"></a> Definindo classes de domínio
- As classes de domínio representam os conceitos de sua DSL. As instâncias são *elementos de modelo*. Por exemplo, em uma DSL **MusicLibrary** , você pode ter classes de domínio denominadas **Album** e **Song**.
+ As classes de domínio representam os conceitos de sua DSL. As instâncias são elementos *de modelo*. Por exemplo, em **uma DSL MusicLibrary,** você pode ter classes de domínio chamadas **Álbum** e **Música.**
 
- Para criar uma classe de domínio, você pode arrastar da ferramenta de **classe de domínio nomeada** para o diagrama e, em seguida, renomear a classe.
+ Para criar uma classe de domínio, você pode arrastar da ferramenta **Classe de Domínio** Nomeada para o diagrama e renomear a classe.
 
  Para obter mais informações, consulte [Propriedades de classes de domínio](../modeling/properties-of-domain-classes.md).
 
@@ -178,11 +178,11 @@ Para criar uma nova linguagem específica de domínio, você cria uma nova solu�
 
  No exemplo de Biblioteca de Músicas, Álbuns são exibidos como retângulos nos quais os títulos das Canções são listados. Portanto, o pai de Álbum é a classe raiz Música e o pai de Canção é Álbum.
 
- Para criar uma classe de domínio e sua incorporação ao mesmo tempo, clique na ferramenta de **relação incorporada** , clique na classe pai e, em seguida, clique em uma parte em branco do diagrama.
+ Para criar uma classe de domínio e sua incorporação ao mesmo tempo, clique na ferramenta Relação de Incorporação, clique na classe pai e clique em uma parte em branco do diagrama. 
 
  Geralmente não é necessário ajustar o nome da relação de incorporação e de suas funções, pois acompanharão os nomes de classes automaticamente.
 
- Para obter mais informações, consulte [Propriedades de relações de domínio](../modeling/properties-of-domain-relationships.md) e [Propriedades de funções de domínio](../modeling/properties-of-domain-roles.md).
+ Para obter mais informações, consulte [Propriedades de relações de domínio e](../modeling/properties-of-domain-relationships.md) propriedades de funções de [domínio](../modeling/properties-of-domain-roles.md).
 
 > [!NOTE]
 > Incorporação não é o mesmo que herança. Os filhos em uma relação de incorporação não herdam recursos de seus pais.
@@ -190,23 +190,23 @@ Para criar uma nova linguagem específica de domínio, você cria uma nova solu�
 ### <a name="add-domain-properties-to-each-domain-class"></a>Adicionar propriedades de domínio em cada classe de domínio
  As propriedades de domínio armazenam valores. Os exemplos são: Nome, Título, Data de Publicação.
 
- Clique em **Propriedades de domínio** na classe, pressione a tecla Enter e digite o nome de uma propriedade. O tipo padrão de uma propriedade de domínio é a Cadeia de Caracteres. Se você quiser alterar o tipo, selecione a propriedade de domínio e defina o **tipo** na janela **Propriedades** . Se o tipo desejado não estiver na lista suspensa, consulte [Adicionando tipos de propriedade](#addTypes).
+ Clique **em Propriedades** de Domínio na classe , pressione a tecla ENTER e digite o nome de uma propriedade. O tipo padrão de uma propriedade de domínio é a Cadeia de Caracteres. Se você quiser alterar o tipo, selecione a propriedade de domínio e de definir **o Tipo** na **janela** Propriedades. Se o tipo que você deseja não estiver na listada, consulte [Adicionando tipos de propriedade](#addTypes).
 
- **Configure uma propriedade de Nome de Elemento.**  Selecione uma propriedade de domínio que possa ser usada para identificar elementos no gerenciador de linguagens. Por exemplo, na classe de domínio Canção que você poderia escolher a propriedade de domínio Título. Na janela **Propriedades** , defina **é o nome do elemento** como `true` .
+ **Configure uma propriedade de Nome de Elemento.**  Selecione uma propriedade de domínio que possa ser usada para identificar elementos no gerenciador de linguagens. Por exemplo, na classe de domínio Canção que você poderia escolher a propriedade de domínio Título. Na janela **Propriedades,** de definido **é Nome do Elemento** como `true` .
 
 ### <a name="create-derived-domain-classes"></a>Criar classes de domínio derivadas
  Se você deseja que uma classe de domínio tenha variantes que herdam suas propriedades e relações, crie classes que derivam dela. Por exemplo, Álbum pode ter as classes derivadas WMA e MP3.
 
- Crie a classe derivada usando a ferramenta de **classe de domínio** .
+ Crie a classe derivada usando a ferramenta **Classe de** Domínio.
 
- Clique na ferramenta de **herança** , clique na classe derivada e, em seguida, clique na classe base.
+ Clique na **ferramenta Herança,** clique na classe derivada e, em seguida, clique na classe base.
 
- Considere definir o **modificador de herança** da classe base como **abstract**. Se você acha que talvez precise de instâncias da classe base, considere, em vez disso, criar uma classe derivada separada para elas.
+ Considere definir o **Modificador de Herança** da classe base para **abstrair**. Se você acha que talvez precise de instâncias da classe base, considere, em vez disso, criar uma classe derivada separada para elas.
 
  As classes derivadas herdam as propriedades e funções de suas classes base.
 
 ### <a name="tidy-the-dsl-definition-diagram"></a>Organizar o diagrama de Definição de DSL
- Ao adicionar relações, algumas de suas classes aparecerão em mais de um lugar. Para reduzir o número de aparências e tornar o diagrama mais largo, clique com o botão direito do mouse na classe de destino de uma relação e clique em **colocar árvore aqui**. Para o efeito oposto, clique com o botão direito do mouse na classe de destino de uma relação e clique em **dividir árvore**. Se você não vir esses comandos de menu, certifique-se de que apenas a classe de domínio esteja escolhida.
+ Ao adicionar relações, algumas de suas classes aparecerão em mais de um lugar. Para reduzir o número de aparências e ampliar o diagrama, clique com o botão direito do mouse na classe de destino de uma relação e clique em **Trazer Árvore aqui.** Para o efeito oposto, clique com o botão direito do mouse na classe de destino de uma relação e clique em **Dividir Árvore**. Se você não vir esses comandos de menu, certifique-se de que apenas a classe de domínio esteja escolhida.
 
  Use CTRL+Seta para Cima e CTRL+Seta para Baixo para mover as classes de domínio e as classes de forma.
 
@@ -214,42 +214,42 @@ Para criar uma nova linguagem específica de domínio, você cria uma nova solu�
 
 ##### <a name="to-test-the-new-domain-classes"></a>Para testar as novas classes de domínio
 
-1. **Clique em transformar todos os modelos** na barra de ferramentas de Gerenciador de soluções para gerar o código do designer de DSL. Você pode automatizar esta etapa. Para obter mais informações, consulte [como automatizar a transformação de todos os modelos](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\)).
+1. **Clique em Transformar Todos os** Modelos na barra de ferramentas Gerenciador de Soluções, para gerar o código do designer DSL. Você pode automatizar esta etapa. Para obter mais informações, [consulte How to Automate Transform All Templates](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\)).
 
-2. **Compile e execute a DSL.** Pressione F5 ou CTRL + F5 para executar uma nova instância do Visual Studio no modo experimental. Na instância experimental do Visual Studio, abra ou crie um arquivo que tenha a extensão de nome de arquivo de sua DSL.
+2. **Compile e execute a DSL.** Pressione F5 ou CTRL+F5 para executar uma nova instância do Visual Studio no modo experimental. Na instância experimental do Visual Studio, abra ou crie um arquivo que tenha a extensão de nome de arquivo da DSL.
 
-3. **Abra o Gerenciador.** No lado do diagrama está a janela Gerenciador de idiomas, que geralmente é chamada de *YourLanguage* Explorer. Se você não vir essa janela, ela pode estar em uma guia no Gerenciador de Soluções. Se você não conseguir encontrá-lo, no menu **Exibir** , aponte para **outras janelas** e clique em *YourLanguage* **Explorer**.
+3. **Abra o Gerenciador.** No lado do diagrama está a janela do explorador de idiomas, que geralmente é *chamada de YourLanguage* Explorer. Se você não vir essa janela, ela pode estar em uma guia no Gerenciador de Soluções. Se você não conseguir encontrá-lo, **no** menu Exibir, aponte para **Outras Janelas** e clique *em YourLanguage* **Explorer**.
 
      Seu gerenciador apresentará uma exibição em árvore do modelo.
 
-4. **Crie novos elementos.** Clique com o botão direito do mouse no nó raiz na parte superior e clique em **Adicionar novo**_yourClass_.
+4. **Crie novos elementos.** Clique com o botão direito do mouse no nó raiz na parte superior e clique **em Adicionar Nova**_SuaClasse._
 
      Uma nova instância de sua classe aparecerá no Gerenciador de linguagens.
 
-5. Verifique se cada instância possui um nome diferente ao criar novas instâncias. Isso ocorrerá somente se você tiver definido o sinalizador de **nome do elemento is** em uma propriedade de domínio.
+5. Verifique se cada instância possui um nome diferente ao criar novas instâncias. Isso ocorrerá somente se você tiver definido o **sinalizador Nome do Elemento Is** em uma propriedade de domínio.
 
-6. **Examine as propriedades do domínio. Com uma instância de sua classe selecionada,** Inspecione o janela Propriedades. Ela deve mostrar as propriedades de domínio definidas nesta classe de domínio.
+6. **Examine as propriedades do domínio. Com uma instância da classe selecionada,** inspecione o janela Propriedades. Ela deve mostrar as propriedades de domínio definidas nesta classe de domínio.
 
-7. **Salve o arquivo, feche-o e abra-o novamente**. Após a expansão dos nós, todas as instâncias criadas devem estar visíveis no gerenciador.
+7. **Salve o arquivo, feche-o e abra-o.** Após a expansão dos nós, todas as instâncias criadas devem estar visíveis no gerenciador.
 
 ## <a name="defining-shapes-on-the-diagram"></a><a name="shapes"></a> Definindo formas no diagrama
  Você pode definir as classes de elementos que aparecem em um diagrama como retângulos, elipses ou ícones.
 
 #### <a name="to-define-a-class-of-elements-that-appear-as-shapes-on-a-diagram"></a>Para definir uma classe de elementos que aparece como formas em um diagrama
 
-1. **Defina e teste uma classe de domínio conforme descrito em**  [definindo classes de domínio](#classes) **.**
+1. **Defina e teste uma classe de domínio, conforme descrito em**  [Definindo classes de domínio](#classes) **.**
 
    - O pai da classe deve ser a classe raiz. Ou seja, deve haver uma relação de incorporação entre a classe raiz e a nova classe de domínio.
 
-   - Se o seu diagrama tiver raias, o pai pode ser a classe de domínio que é mapeada para uma raia. Antes de continuar com esse procedimento, consulte [definindo uma DSL que tem raias](#swimlanes).
+   - Se o seu diagrama tiver raias, o pai pode ser a classe de domínio que é mapeada para uma raia. Antes de continuar com este procedimento, consulte [Definindo uma DSL que tem Raias](#swimlanes).
 
 2. **Adicione uma classe de forma** para representar os elementos no diagrama de modelo. Arraste de uma das seguintes ferramentas para o diagrama de Definição de DSL:
 
-   - A **forma Geometry** fornece um retângulo ou uma elipse.
+   - **A forma geometry** fornece um retângulo ou elipse.
 
-   - **Forma de imagem** exibe uma imagem que você fornece.
+   - **Forma da** Imagem exibe uma imagem que você fornece.
 
-   - **Forma de compartimento** é um retângulo que contém uma ou mais listas de itens.
+   - **Forma do** Compartimento é um retângulo que contém uma ou mais listas de itens.
 
      Renomeie a classe de formas, a qual aparecerá no lado direito do diagrama de Definição de DSL, em Formas e Conectores.
 
@@ -306,7 +306,7 @@ Para criar uma nova linguagem específica de domínio, você cria uma nova solu�
 
         Para criar um novo ícone, abra Dsl\Resources em **Gerenciador de soluções**. Copie e cole um dos arquivos BMP da ferramenta de elemento existente. Renomeie a cópia colada e clique duas vezes para editá-la.
 
-        Retorne ao diagrama de definição de DSL, selecione a ferramenta e, na janela Propriedades clique em **[...]** no **ícone da caixa de ferramentas**. Na caixa de diálogo **selecionar bitmap** , selecione seu. Arquivo BMP no menu suspenso.
+        Retorne ao diagrama de definição de DSL, selecione a ferramenta e, na janela Propriedades clique em **[...]** no **ícone da caixa de ferramentas**. Na caixa de diálogo **selecionar bitmap** , selecione o arquivo de .BMP no menu suspenso.
 
    Para obter mais informações, consulte [Propriedades de formas de geometria](../modeling/properties-of-geometry-shapes.md) e [Propriedades de formas de imagem](../modeling/properties-of-image-shapes.md).
 
@@ -384,13 +384,13 @@ Para criar uma nova linguagem específica de domínio, você cria uma nova solu�
 
      Para criar um novo ícone, abra Dsl\Resources em **Gerenciador de soluções**. Copie e cole um dos arquivos BMP da ferramenta de elemento existente. Renomeie a cópia colada e clique duas vezes para editá-la.
 
-     Retorne ao diagrama de definição de DSL, selecione a ferramenta e, na janela Propriedades clique em **[...]** no **ícone da caixa de ferramentas**. Na caixa de diálogo **selecionar bitmap** , selecione seu. Arquivo BMP no menu suspenso.
+     Retorne ao diagrama de definição de DSL, selecione a ferramenta e, na janela Propriedades clique em **[...]** no **ícone da caixa de ferramentas**. Na caixa de diálogo **selecionar bitmap** , selecione o arquivo de .BMP no menu suspenso.
 
 ##### <a name="to-test-a-reference-relationship-and-connector"></a>Para Testar um relação de Referência e um Conector
 
 1. **Clique em transformar todos os modelos** na barra de ferramentas de Gerenciador de soluções para gerar o código do designer de DSL.
 
-2. **Compile e execute a DSL.** Pressione F5 ou CTRL + F5 para executar uma nova instância do Visual Studio no modo experimental. Na instância experimental do Visual Studio, abra ou crie um arquivo que tenha a extensão de nome de arquivo de sua DSL.
+2. **Compile e execute a DSL.** Pressione F5 ou CTRL+F5 para executar uma nova instância do Visual Studio no modo experimental. Na instância experimental do Visual Studio, abra ou crie um arquivo que tenha a extensão de nome de arquivo da DSL.
 
 3. **Verifique se a ferramenta de conexão aparece na caixa de ferramentas.**
 
@@ -400,20 +400,20 @@ Para criar uma nova linguagem específica de domínio, você cria uma nova solu�
 
 6. **Verifique se você não pode criar conexões entre classes inadequadas.**  Por exemplo, se a sua relação for entre Álbuns e Artistas, verifique se não é possível vincular Artistas a Artistas.
 
-7. **Verifique se as multiplicidades estão corretas. Por exemplo, verifique se você não pode conectar uma pessoa a mais de um gerente.**
+7. **Verifique se as multiplicidades estão corretas. Por exemplo, verifique se você não pode conectar uma Pessoa a mais de um gerente.**
 
-8. **Verifique se cada decorador de texto é exibido** e se:
+8. **Verifique se cada decorador de texto aparece** e se:
 
-   1. Você pode editá-lo, a menos que tenha definido o sinalizador **is somente leitura da interface do usuário** na Propriedade Domain.
+   1. Você pode editá-lo, a menos que tenha definido o **sinalizador Is UI Read Only** na propriedade de domínio.
 
    2. Quando você edita a propriedade na janela Propriedades ou no decorador, a outra exibição é atualizada.
 
-   Depois de testar inicialmente um conector, talvez você queira ajustar algumas de suas propriedades e adicionar outros recursos mais avançados. Para obter mais informações, consulte [Personalizando e estendendo uma linguagem de Domain-Specific](../modeling/customizing-and-extending-a-domain-specific-language.md).
+   Depois de testar inicialmente um conector, talvez você queira ajustar algumas de suas propriedades e adicionar outros recursos mais avançados. Para obter mais informações, [consulte Personalização e extensão de uma linguagem Domain-Specific .](../modeling/customizing-and-extending-a-domain-specific-language.md)
 
 ## <a name="defining-shapes-that-contain-lists-compartment-shapes"></a><a name="compartments"></a> Definindo formas que contêm listas: formas de compartimento
  Uma forma do compartimento contém uma ou mais listas de itens. Por exemplo, em uma DSL de Biblioteca de Músicas, você poderia usar formas do compartimento para representar os Álbuns de música. Em cada Álbum, há uma lista de Canções.
 
- ![Forma de compartimento](../modeling/media/compartmentshape.png)
+ ![Forma do compartimento](../modeling/media/compartmentshape.png)
 
  No método mais simples de obter esse efeito em uma definição de DSL, você define uma classe de domínio para o contêiner e uma classe de domínio para cada lista. A classe de contêiner é mapeada para a forma do compartimento.
 
@@ -423,45 +423,45 @@ Para criar uma nova linguagem específica de domínio, você cria uma nova solu�
 
 #### <a name="to-define-a-compartment-shape"></a>Para definir uma forma do compartimento
 
-1. **Crie a classe de domínio do contêiner**. Clique na ferramenta de **relação incorporada** , clique na classe raiz do modelo e, em seguida, clique em uma parte em branco do diagrama de definição de DSL. Com isso, você cria a classe de domínio chamada Álbum na figura de exemplo.
+1. **Crie a classe de domínio de contêiner**. Clique na **ferramenta Relação de** Incorporação, clique na classe raiz do modelo e, em seguida, clique em uma parte em branco do diagrama de definição de DSL. Com isso, você cria a classe de domínio chamada Álbum na figura de exemplo.
 
      Como alternativa, em vez de incorporar na classe raiz, você pode incorporar o contêiner em uma classe de domínio que seja mapeada para uma raia.
 
-     Adicione uma propriedade de domínio, como nome à classe, e defina seu sinalizador de **nome de elemento** no janela Propriedades.
+     Adicione uma propriedade de domínio como Nome à classe e de definido seu sinalizador **Is Element Name** no janela Propriedades.
 
-2. **Crie a classe de domínio do item de lista**. Clique na ferramenta de **relação incorporada** , clique na classe de contêiner (álbum) e, em seguida, clique em uma parte em branco do diagrama. Com isso, você cria a classe de domínio chamada Canção na figura de exemplo.
+2. **Crie a classe de domínio do item de lista**. Clique na **ferramenta Relações de Incorporação,** clique na classe de contêiner (Álbum) e, em seguida, clique em uma parte em branco do diagrama. Com isso, você cria a classe de domínio chamada Canção na figura de exemplo.
 
-     Adicione uma propriedade de domínio, como título à classe, e defina seu sinalizador de **nome de elemento** .
+     Adicione uma propriedade de domínio como Title à classe e de definido seu **sinalizador Is Element Name.**
 
      Adicione outras propriedades de domínio.
 
      Adicione outra classe de domínio do item de lista que você deseja exibir.
 
-3. **Para misturar vários tipos de item na lista**, crie classes que herdam da classe List. Torne a classe de lista abstrata definindo seu **modificador de herança**.
+3. **Para misturar vários tipos de item na lista**, crie classes que herdam da classe de lista. Tornar a classe de lista abstrata definindo seu **Modificador de Herança**.
 
      Por exemplo, se você desejar que música clássica seja classificada por compositor em vez de por artista, é possível criar duas subclasses de Canção, ClassicalSong e NonClassicalSong.
 
-4. **Crie a forma de compartimento**. Arraste da ferramenta **forma de compartimento** até o diagrama de definição de DSL.
+4. **Crie a forma do compartimento**. Arraste da ferramenta **Forma do** Compartimento para o diagrama de definição de DSL.
 
      Adicione um decorador de texto e defina seu nome.
 
      Adicione um compartimento e defina seu nome.
 
-5. Para permitir que o usuário oculte os compartimentos de lista, clique com o botão direito do mouse na classe de forma do compartimento, aponte para **Adicionar** e clique em **expandir/recolher decorador**. Na janela Propriedades, configure a posição do decorador.
+5. Para deixar o usuário ocultar os compartimentos da lista, clique com o botão direito do mouse na classe de forma do compartimento, aponte para Adicionar e clique em **Expandir/Fechar Decorador**. Na janela Propriedades, configure a posição do decorador.
 
-6. Clique na ferramenta **mapa de elementos de diagrama** , clique na classe de domínio de contêiner e, em seguida, clique na forma de compartimento.
+6. Clique na **ferramenta Mapa do Elemento de** Diagrama, clique na classe de domínio de contêiner e, em seguida, clique na forma do compartimento.
 
-7. Selecione o vínculo de mapa do elemento do diagrama entre a classe de domínio e a forma. Na janela **detalhes de DSL** :
+7. Selecione o vínculo de mapa do elemento do diagrama entre a classe de domínio e a forma. Na janela **Detalhes da DSL:**
 
-    1. Clique na guia **decoradores** . Clique no nome do decorador e selecione o item apropriado em **Exibir Propriedade**. Certifique-se de que exista uma marca de seleção ao lado do nome do decorador.
+    1. Clique na **guia Decoradores.** Clique no nome do decorador e selecione o item apropriado em **Exibir Propriedade**. Certifique-se de que exista uma marca de seleção ao lado do nome do decorador.
 
-    2. Clique na guia **mapas de compartimentos** .
+    2. Clique na **guia Mapas do Compartimento.**
 
          Clique no nome do compartimento.
 
-         Em **caminho da coleção de elementos exibidos**, navegue até a classe de elemento de lista (música). Clique na seta suspensa para usar a ferramenta de navegador.
+         Em **Caminho de coleção de elementos exibidos,** navegue até a classe de elemento list (Song). Clique na seta suspensa para usar a ferramenta de navegador.
 
-         Em **Exibir Propriedade**, selecione a propriedade que deve ser exibida na lista. No exemplo, será Título.
+         Em **Propriedade de Exibição**, selecione a propriedade que deve ser exibida na lista. No exemplo, será Título.
 
 > [!NOTE]
 > Usando os campos Caminho nos campos de Mapa do Decorador e Mapa de Compartimento, é possível tornar as relações entre as classes de domínio e a forma do compartimento mais complexas.
@@ -470,28 +470,28 @@ Para criar uma nova linguagem específica de domínio, você cria uma nova solu�
 
 1. **Crie um item da caixa de ferramentas para criar elementos da classe de domínio.**
 
-2. No **Gerenciador de DSL**, expanda o nó do **Editor** e todos os seus subnós.
+2. No **DSL Explorer,** expanda o **nó Editor** e todos os seus sub-nós.
 
-3. Clique com o botão direito do mouse no nó em **guias da caixa de ferramentas** que tem o mesmo nome que a sua DSL, por exemplo, MusicLibrary. Clique em **Adicionar elemento ferramenta**.
+3. Clique com o botão direito do mouse no nó em Guias **da** Caixa de Ferramentas que tem o mesmo nome que sua DSL, por exemplo, MusicLibrary. Clique **em Adicionar Ferramenta de Elemento**.
 
     > [!NOTE]
-    > Se você clicar com o botão direito do mouse no nó **ferramentas** , não verá a **ferramenta Adicionar elemento**. Em vez disso, clique no nó acima dele.
+    > Se você clicar com o botão direito do mouse **no nó** Ferramentas, não verá Adicionar Ferramenta **de Elemento**. Em vez disso, clique no nó acima dele.
 
-4. Na janela Propriedades com a ferramenta novo elemento selecionada, defina **classe** como a classe de domínio que você adicionou recentemente.
+4. No janela Propriedades com a nova ferramenta de elemento selecionada, de definido **Classe** como a classe de domínio que você adicionou recentemente.
 
-5. Defina a **legenda** e a **dica de ferramenta**.
+5. Definir **Legenda e** Dica de **Ferramenta**.
 
-6. Defina o **ícone da caixa de ferramentas** como um ícone que será exibido na caixa de ferramentas. Você pode configurá-lo como um novo ícone ou um ícone já usado por outra ferramenta.
+6. De **definir o Ícone da** Caixa de Ferramentas como um ícone que será exibido na caixa de ferramentas. Você pode configurá-lo como um novo ícone ou um ícone já usado por outra ferramenta.
 
-     Para criar um novo ícone, abra Dsl\Resources em **Gerenciador de soluções**. Copie e cole um dos arquivos .BMP da ferramenta de elemento existente. Renomeie a cópia colada e clique duas vezes para editá-la.
+     Para criar um ícone, abra Dsl\Resources no **Gerenciador de Soluções**. Copie e cole um dos arquivos .BMP da ferramenta de elemento existente. Renomeie a cópia colada e clique duas vezes para editá-la.
 
-     Retorne ao diagrama de definição de DSL, selecione a ferramenta e, na janela Propriedades clique em **[...]** no **ícone da caixa de ferramentas**. Na caixa de diálogo **selecionar bitmap** , selecione o arquivo BMP no menu suspenso.
+     Retorne ao diagrama definição de DSL, selecione a ferramenta e, no janela Propriedades clique **em [...]** no Ícone **de Caixa de Ferramentas**. Na caixa **de diálogo Selecionar Bitmap,** selecione o arquivo BMP no menu suspenso.
 
 #### <a name="to-test-a-compartment-shape"></a>Para testar uma forma do compartimento
 
-1. **Clique em transformar todos os modelos** na barra de ferramentas de Gerenciador de soluções para gerar o código do designer de DSL.
+1. **Clique em Transformar Todos os** Modelos na barra de ferramentas Gerenciador de Soluções, para gerar o código do designer DSL.
 
-2. **Compile e execute a DSL.** Pressione F5 ou CTRL + F5 para executar uma nova instância do Visual Studio no modo experimental. Na instância experimental do Visual Studio, abra ou crie um arquivo que tenha a extensão de nome de arquivo de sua DSL.
+2. **Compile e execute a DSL.** Pressione F5 ou CTRL+F5 para executar uma nova instância do Visual Studio no modo experimental. Na instância experimental do Visual Studio, abra ou crie um arquivo que tenha a extensão de nome de arquivo da DSL.
 
 3. **Verifique se a ferramenta aparece na caixa de ferramentas.**
 
@@ -499,7 +499,7 @@ Para criar uma nova linguagem específica de domínio, você cria uma nova solu�
 
     Verifique se o nome do elemento aparece e é configurado automaticamente como um valor padrão.
 
-5. Clique com o botão direito do mouse no cabeçalho da nova forma e clique em Adicionar *seu item de lista.* No exemplo, o comando é Adicionar Canção.
+5. Clique com o botão direito do mouse no header da nova forma e clique em Adicionar *Seu Item de Lista.* No exemplo, o comando é Adicionar Canção.
 
     Verifique se aparece um item na lista e se ele tem um novo nome.
 
@@ -507,9 +507,9 @@ Para criar uma nova linguagem específica de domínio, você cria uma nova solu�
 
 7. Abra o Gerenciador de linguagens. Verifique se você pode ver os nós do contêiner com os nós do item de lista dentro.
 
-   ![Gerenciador de DSL gerado](../modeling/media/music_explorer.png)
+   ![Explorador gerado de DSL](../modeling/media/music_explorer.png)
 
-   Depois de testar inicialmente uma forma do compartimento, talvez você queira ajustar algumas de suas propriedades e adicionar outros recursos mais avançados. Para obter mais informações, consulte [Personalizando e estendendo uma linguagem de Domain-Specific](../modeling/customizing-and-extending-a-domain-specific-language.md).
+   Depois de testar inicialmente uma forma do compartimento, talvez você queira ajustar algumas de suas propriedades e adicionar outros recursos mais avançados. Para obter mais informações, [consulte Personalização e extensão de uma linguagem Domain-Specific .](../modeling/customizing-and-extending-a-domain-specific-language.md)
 
 ### <a name="displaying-a-reference-link-in-a-compartment"></a>Exibindo um vínculo de referência em um compartimento
  Geralmente, um elemento que você exibe em um compartimento é um filho do elemento que é representado pela forma do compartimento. No entanto, algumas vezes, você pode desejar exibir um elemento que esteja vinculado a ele com uma relação de referência.

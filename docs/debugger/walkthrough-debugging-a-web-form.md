@@ -1,7 +1,7 @@
 ---
 title: Depurar um formulário da Web | Microsoft Docs
-description: Siga um passo a passos para ver como depurar um aplicativo Web ASP.NET (formulário da Web), incluindo como definir pontos de interrupção e examinar variáveis.
-ms.custom: SEO-VS-2020, seodec18
+description: Siga um passo a passo para ver como depurar um aplicativo Web ASP.NET web (Formulário da Web), incluindo como definir pontos de interrupção e examinar variáveis.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 476d36a8ea303f2dd6062eaf0a597c47df580ff7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 18347b7ba9ff52778b5acef685acd8f1ee400793
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884163"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385196"
 ---
 # <a name="walkthrough-debugging-a-web-form"></a>Passo a passo: Depurando um Formulário da Web
 As etapas deste passo a passo mostram como depurar um aplicativo Web do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], também conhecido como um Web Form. Mostra como iniciar e interromper a execução, definir pontos de interrupção e examinar variáveis na janela **Inspeção**.
@@ -49,19 +49,19 @@ As caixas de diálogo e os comandos do menu que você vê podem ser diferentes d
 
 3. No painel **Modelos**, clique no **Site ASP.NET**.
 
-4. Na linha **local** , clique em **http** na lista e, na caixa de texto, digite **http://localhost/WebSite** .
+4. Na linha **Local,** clique **em HTTP** na lista e, na caixa de texto, digite **http://localhost/WebSite** .
 
 5. Na lista **Linguagem**, clique em **Visual C#** ou **Visual Basic**.
 
 6. Clique em **OK**.
 
-    [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Cria um novo projeto e exibe o código-fonte HTML padrão. Ele também cria um novo diretório virtual chamado **WebSite** em **Site Padrão** no IIS.
+    [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] cria um novo projeto e exibe o código-fonte HTML padrão. Ele também cria um novo diretório virtual chamado **WebSite** em **Site Padrão** no IIS.
 
 7. Clique na guia **Design** na margem inferior.
 
 8. Clique na guia **Caixa de Ferramentas** na margem esquerda ou selecione-a no menu **Exibir**.
 
-    A **caixa de ferramentas** é aberta.
+    A **Caixa de Ferramentas** é aberta.
 
 9. Na **Caixa de Ferramentas**, clique no controle de **Botão** e adicione-o à superfície de design principal, Default.aspx.
 
@@ -155,7 +155,7 @@ As caixas de diálogo e os comandos do menu que você vê podem ser diferentes d
 
     O Web Form começa a ser executado no Internet Explorer, mas o depurador não está anexado.
 
-4. Anexe ao processo [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]. Para obter mais informações, consulte [Depurando aplicativos Web implantados](../debugger/debugging-deployed-web-applications.md).
+4. Anexe ao processo [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]. Para obter mais informações, consulte [Depurando aplicativos Web implantados.](../debugger/debugging-deployed-web-applications.md)
 
 5. No Internet Explorer, clique no botão no seu formulário.
 
@@ -165,4 +165,4 @@ As caixas de diálogo e os comandos do menu que você vê podem ser diferentes d
 
 ## <a name="see-also"></a>Confira também
 
-- [Depurar aplicativos ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)
+- [Depurar ASP.NET aplicativos](../debugger/how-to-enable-debugging-for-aspnet-applications.md)

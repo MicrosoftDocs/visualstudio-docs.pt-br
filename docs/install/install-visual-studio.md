@@ -3,7 +3,7 @@ title: Instalar o Visual Studio
 titleSuffix: ''
 description: Saiba como instalar o Visual Studio, passo a passo.
 ms.date: 12/13/2019
-ms.custom: acquisition
+ms.custom: vs-acquisition
 ms.topic: conceptual
 f1_keywords:
 - vs.about
@@ -20,12 +20,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: b7955759c6c60e8074408cbc179f15d6a7a6e194
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 692989d5bf8979752757fb5630a78d55426f85b9
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112307395"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387067"
 ---
 # <a name="install-visual-studio"></a>Instalar o Visual Studio
 
@@ -37,7 +37,7 @@ Bem-vindo ao Visual Studio 2019. Nesta versão, é fácil escolher e instalar ap
 
 ::: moniker range=">=vs-2022"
 
-Bem-vindo ao Visual Studio 2022! Nesta versão, é fácil escolher e instalar apenas os recursos que você precisa. E, devido a seu volume mínimo reduzido, ele é instalado rapidamente e com menos impacto no sistema.
+Bem-vindo Visual Studio 2022! Nesta versão, é fácil escolher e instalar apenas os recursos que você precisa. E, devido a seu volume mínimo reduzido, ele é instalado rapidamente e com menos impacto no sistema.
 
 ::: moniker-end
 
@@ -100,7 +100,7 @@ Antes de começar a instalação do Visual Studio:
 
 ::: moniker range=">=vs-2022"
 
-1. Verifique os [requisitos do sistema](/visualstudio/releases/2022/system-requirements). Esses requisitos ajudam você a saber se o seu computador dá suporte ao Visual Studio 2022.
+1. Verifique os [requisitos do sistema](/visualstudio/releases/2022/system-requirements). Esses requisitos ajudam você a saber se o computador dá suporte Visual Studio 2022.
 
 1. Aplique as atualizações mais recentes do Windows. Essas atualizações garantem que o computador tenha as atualizações de segurança mais recentes e os componentes de sistema obrigatórios para o Visual Studio.
 
@@ -124,7 +124,7 @@ Para solucionar dúvidas sobre a execução de versões anteriores do Visual Stu
 
 ::: moniker range=">=vs-2022"
 
-Para perguntas sobre como executar versões anteriores do Visual Studio lado a lado com o Visual Studio 2022, consulte a página [direcionamento e compatibilidade da plataforma visual studio 2022](/visualstudio/releases/2019/compatibility/) .
+Para perguntas sobre como executar versões anteriores do Visual Studio lado a lado com o Visual Studio 2022, consulte a página direcionamento e compatibilidade da plataforma [Visual Studio 2022.](/visualstudio/releases/2019/compatibility/)
 
 ::: moniker-end
 
@@ -134,7 +134,7 @@ Em seguida, baixe o arquivo bootstrapper do Visual Studio.
 
 ::: moniker range="vs-2017"
 
-Para obter um bootstrapper para o Visual Studio 2017, consulte a página de download de [versões anteriores do Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/) para obter detalhes sobre como fazer isso.
+Para obter um bootstrapper para Visual Studio 2017, consulte a página de download Visual Studio [versões](https://visualstudio.microsoft.com/vs/older-downloads/) anteriores para obter detalhes sobre como fazer isso.
 
 ::: moniker-end
 
@@ -159,9 +159,9 @@ Execute o arquivo bootstrapper para instalar o Instalador do Visual Studio. Esse
 
    Se você receber um aviso de Controle de Conta de Usuário, escolha **Sim**.
 
-2. Solicitaremos que você confirme os termos de [licença](https://visualstudio.microsoft.com/license-terms/) da Microsoft e a [política de privacidade](https://privacy.microsoft.com/privacystatement)da Microsoft. Escolha **Continuar**.
+2. Solicitaremos que você confirme os Termos de [Licença](https://visualstudio.microsoft.com/license-terms/) da Microsoft e a Política de [Privacidade da](https://privacy.microsoft.com/privacystatement)Microsoft. Escolha **Continuar**.
 
-   ![Termos de licença e política de privacidade](media/privacy-and-license-terms.png "Termos de Licença e Política de Privacidade da Microsoft")
+   ![Termos de Licença e Política de Privacidade](media/privacy-and-license-terms.png "Termos de Licença e Política de Privacidade da Microsoft")
 
 ## <a name="step-4---choose-workloads"></a>Etapa 4 – escolher cargas de trabalho
 
@@ -169,9 +169,9 @@ Após a instalação do instalador, use-o para personalizar sua instalação sel
 
  ::: moniker range="vs-2017"
 
-1. Localize a carga de trabalho desejada no **instalador do Visual Studio**.
+1. Encontre a carga de trabalho que você deseja **no Instalador do Visual Studio**.
 
-   ![Visual Studio 2017: instalar uma carga de trabalho](../install/media/vs-installer-installing-workloads.png)
+   ![Visual Studio 2017: Instalar uma carga de trabalho](../install/media/vs-installer-installing-workloads.png)
 
      Por exemplo, escolha a carga de trabalho de “Desenvolvimento de área de trabalho do .NET”. Ela vem com o editor de núcleo padrão, que inclui o suporte à edição de código básico para mais de 20 linguagens, a capacidade de abrir e editar o código de qualquer pasta sem precisar de um projeto e o controle do código-fonte integrado.
 
@@ -183,9 +183,9 @@ Após a instalação do instalador, use-o para personalizar sua instalação sel
 
 ::: moniker range=">=vs-2019"
 
-1. Localize a carga de trabalho desejada no **instalador do Visual Studio**.
+1. Encontre a carga de trabalho que você deseja **no Instalador do Visual Studio**.
 
-   ![Visual Studio 2019: instalar uma carga de trabalho](../install/media/vs-2019/vs-installer-workloads.png)
+   ![Visual Studio 2019: Instalar uma carga de trabalho](../install/media/vs-2019/vs-installer-workloads.png)
 
      Por exemplo, escolha a carga de trabalho "ASP.NET e desenvolvimento Web". Ela vem com o editor de núcleo padrão, que inclui o suporte à edição de código básico para mais de 20 linguagens, a capacidade de abrir e editar o código de qualquer pasta sem precisar de um projeto e o controle do código-fonte integrado.
 
@@ -196,21 +196,21 @@ Após a instalação do instalador, use-o para personalizar sua instalação sel
  ::: moniker-end
 
 > [!TIP]
-> A qualquer momento após a instalação, você pode instalar as cargas de trabalho ou os componentes não instalados inicialmente. Se você tiver o Visual Studio aberto, vá para **ferramentas**  >  **obter ferramentas e recursos...** que abre a instalador do Visual Studio. Outra opção é abrir o **Instalador do Visual Studio** no menu Iniciar. Assim, é possível escolher as cargas de trabalho ou os componentes que você deseja instalar. Em seguida, escolha **Modificar**.
+> A qualquer momento após a instalação, você pode instalar as cargas de trabalho ou os componentes não instalados inicialmente. Se você tiver Visual Studio, acesse Ferramentas Obter Ferramentas e  >  **Recursos...** que abre o Instalador do Visual Studio. Outra opção é abrir o **Instalador do Visual Studio** no menu Iniciar. Assim, é possível escolher as cargas de trabalho ou os componentes que você deseja instalar. Em seguida, escolha **Modificar**.
 
 ## <a name="step-5---choose-individual-components-optional"></a>Etapa 5 – escolher componentes individuais (opcional)
 
-Se você não quiser usar o recurso de cargas de trabalho para personalizar a instalação do Visual Studio ou se quiser adicionar mais componentes do que uma carga de trabalho é instalada, você pode fazer isso instalando ou adicionando componentes individuais da guia **componentes individuais** . Escolha o que você deseja e, em seguida, siga os prompts.
+Se você não quiser usar o recurso Cargas de Trabalho para personalizar a instalação do Visual Studio ou se quiser adicionar mais componentes do  que uma carga de trabalho instalada, poderá fazer isso instalando ou adicionando componentes individuais da guia Componentes individuais. Escolha o que você deseja e siga os prompts.
 
 ::: moniker range="vs-2017"
 
-  ![Visual Studio 2017-instalar componentes individuais](media/vs-installer-installing-components.png "Instalar Visual Studio componentes individuais")
+  ![Visual Studio 2017 – Instalar componentes individuais](media/vs-installer-installing-components.png "Instalar Visual Studio componentes individuais")
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-  ![Visual Studio 2019-instalar componentes individuais](media/vs-2019/vs-installer-individual-components.png "Instalar Visual Studio componentes individuais")
+  ![Visual Studio 2019 – Instalar componentes individuais](media/vs-2019/vs-installer-individual-components.png "Instalar Visual Studio componentes individuais")
 
 ::: moniker-end
 
@@ -220,13 +220,13 @@ Por padrão, o programa do instalador tenta encontrar a correspondência do idio
 
 ::: moniker range="vs-2017"
 
-  ![Visual Studio 2017-instalar pacotes de idiomas](media/vs-installer-installing-language-packs.png "Instalar Visual Studio de idiomas")
+  ![Visual Studio 2017 – Instalar pacotes de idiomas](media/vs-installer-installing-language-packs.png "Instalar Visual Studio de idiomas")
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-  ![Visual Studio 2019-instalar pacotes de idiomas](media/vs-2019/vs-installer-language-packs.png "Instalar Visual Studio de idiomas")
+  ![Visual Studio 2019 – Instalar pacotes de idiomas](media/vs-2019/vs-installer-language-packs.png "Instalar Visual Studio de idiomas")
 
 ::: moniker-end
 

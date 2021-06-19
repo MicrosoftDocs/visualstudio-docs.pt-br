@@ -1,23 +1,23 @@
 ---
 title: Definindo uma imagem de plano de fundo em um diagrama
-description: Saiba que, no SDK de visualização e modelagem do Visual Studio, você pode definir a imagem de plano de fundo para um designer gerado usando código personalizado.
+description: Saiba que, no SDK Visual Studio Visualização e Modelagem, você pode definir a imagem de plano de fundo para um designer gerado usando código personalizado.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ca83bd9f6ac88e26247f6c9beea9c242a505887c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9304117932b92408f12a23747253de66dfd767d1
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873769"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385663"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>Definindo uma imagem de plano de fundo em um diagrama
-No SDK de visualização e modelagem do Visual Studio, você pode definir a imagem de plano de fundo para um designer gerado usando código personalizado.
+No Visual Studio SDK de Visualização e Modelagem, você pode definir a imagem de plano de fundo para um designer gerado usando código personalizado.
 
 ## <a name="setting-the-background-image"></a>Configuração da imagem da tela de fundo
 
@@ -25,37 +25,37 @@ No SDK de visualização e modelagem do Visual Studio, você pode definir a imag
 
 1. Copie o arquivo de imagem que você deseja usar como plano de fundo do diagrama no diretório Dsl\Resources do projeto atual.
 
-2. Em **Gerenciador de soluções**, clique com o botão direito do mouse na pasta Dsl\Resources, aponte para **Adicionar** e clique em **Item existente**.
+2. No **Gerenciador de Soluções**, clique com o botão direito do mouse na pasta Dsl\Resources, aponte para Adicionar e clique **em Item Existente**.
 
-3. Na caixa de diálogo **Adicionar item existente** , navegue até a pasta Dsl\Resources.
+3. Na caixa **de diálogo Adicionar Item** Existente, navegue até a pasta Dsl\Resources.
 
-4. Na lista **arquivos do tipo** , clique em **arquivos de imagem**.
+4. Na lista **Arquivos do tipo** , clique em Arquivos de **Imagem**.
 
-5. Clique no arquivo de imagem que você copiou para o diretório e, em seguida, clique em **Adicionar**.
+5. Clique no arquivo de imagem que você copiou para o diretório e clique em **Adicionar**.
 
-6. Clique com o botão direito do mouse em DSL e clique em **Propriedades** para abrir as propriedades do projeto DSL.
+6. Clique com o botão direito do mouse em Dsl e clique **em Propriedades** para abrir as propriedades do projeto Dsl.
 
-7. Na guia **recursos** , clique em **este projeto não contém um arquivo de recursos padrão. Clique aqui para criar um.**
+7. Na guia **Recursos,** clique em **Este projeto não contém um arquivo de recursos padrão. Clique aqui para criar um.**
 
-8. Adicione o arquivo de imagem ao arquivo de recurso arrastando a imagem de **Gerenciador de soluções** para a janela de recursos.
+8. Adicione o arquivo de imagem ao arquivo de recurso arrastando a imagem **Gerenciador de Soluções** para a janela de recursos.
 
 9. Abra o menu Arquivo e clique na opção para salvar as propriedades do projeto.
 
 10. Verifique se o arquivo Dsl\Properties\Resources.resx existe e se possui o arquivo Resources.Designer.cs nele.
 
-11. Se Resources.Designer.cs estiver ausente, clique no arquivo Resources. resx em **Gerenciador de soluções**.
+11. Se Resources.Designer.cs estiver ausente, clique no arquivo Resources.resx **no Gerenciador de Soluções**.
 
-12. Na janela **Propriedades** , defina a `Custom Tool` propriedade como `ResXFileCodeGenerator` .
+12. Na janela **Propriedades,** de definir a `Custom Tool` propriedade como `ResXFileCodeGenerator` .
 
-13. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto DSL, aponte para **Adicionar** e clique em **nova pasta**.
+13. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto Dsl, aponte para **Adicionar** e clique em **Nova Pasta**.
 
-14. Nomeie a pasta como **personalizada**.
+14. Nomeia a pasta **Personalizado.**
 
-15. Clique com o botão direito do mouse na pasta personalizada, aponte para **Adicionar** e clique em **novo item**.
+15. Clique com o botão direito do mouse na pasta Personalizado, aponte **para Adicionar** e clique em **Novo Item**.
 
-16. Na caixa de diálogo **Adicionar novo item** , na lista **modelos** , clique em **arquivo de código**.
+16. Na caixa **de diálogo Adicionar Novo Item** , na lista **Modelos** , clique em Arquivo **de Código**.
 
-17. Na caixa **nome** , digite `BackgroundImage.cs` e clique em **Adicionar**.
+17. Na caixa **Nome,** digite `BackgroundImage.cs` e clique em **Adicionar**.
 
 18. Copie o código a seguir no arquivo BackgroundImage.cs, ajustando o namespace, o nome da classe do diagrama e o nome do recurso do arquivo de imagem.
 
@@ -100,7 +100,7 @@ No SDK de visualização e modelagem do Visual Studio, você pode definir a imag
     }
     ```
 
-     Para obter mais informações sobre como personalizar o modelo com o código do programa, consulte [navegando e atualizando um modelo no código do programa](../modeling/navigating-and-updating-a-model-in-program-code.md).
+     Para obter mais informações sobre como personalizar o modelo com o código do programa, consulte Navegando e atualizando um [modelo no código do programa.](../modeling/navigating-and-updating-a-model-in-program-code.md)
 
 ## <a name="see-also"></a>Confira também
 

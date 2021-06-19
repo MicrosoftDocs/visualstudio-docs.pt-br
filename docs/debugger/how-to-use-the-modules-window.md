@@ -1,7 +1,7 @@
 ---
 title: Exibir DLLs e executáveis
-description: Exiba DLLs e executáveis (arquivos. exe) que seu aplicativo usa na janela módulos durante uma sessão de depuração no Visual Studio.
-ms.custom: SEO-VS-2020, seodec18
+description: Exiba DLLs e executáveis (.exe arquivos) que seu aplicativo usa na janela módulos durante uma sessão de depuração no Visual Studio.
+ms.custom: SEO-VS-2020
 titleSuffix: Visual Studio Modules window
 ms.date: 11/04/2018
 ms.topic: how-to
@@ -26,16 +26,16 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8add274d74d9d8d7d72f2808a2b0100c66a19717
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f82b8a5051cf1c338c4b1aab6e78209fb2bc08b0
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912205"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385403"
 ---
 # <a name="view-dlls-and-executables-in-the-modules-window-c-c-visual-basic-f"></a>Exibir DLLs e executáveis na janela módulos (C#, C++, Visual Basic, F #)
 
-Durante a depuração do Visual Studio, a janela **módulos** lista e mostra informações sobre as DLLs e os executáveis (arquivos *. exe* ) que seu aplicativo usa.
+Durante a depuração do Visual Studio, a janela **módulos** lista e mostra informações sobre as DLLs e executáveis (*.exe* arquivos) que seu aplicativo usa.
 
 > [!NOTE]
 > A janela Modules não está disponível para depuração de script ou SQL.
@@ -78,7 +78,7 @@ A coluna **status do símbolo** na janela **módulos** mostra quais módulos tê
 
 1. No menu de clique com o botão direito do mouse, selecione ou desmarque **sempre carregar automaticamente**. As alterações entrarão em vigor na próxima sessão de depuração.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Interrompendo a execução](/previous-versions/visualstudio/visual-studio-2010/7z9se2d8(v=vs.100))
 - [Exibindo dados no depurador](../debugger/viewing-data-in-the-debugger.md)
 - [Especificar o símbolo (. pdb) e os arquivos de origem](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

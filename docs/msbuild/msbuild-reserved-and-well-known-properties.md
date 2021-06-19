@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cbf2aff512b98e7a813134c3b376b6972c8cd4f9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e2edfd4b9391beed5c379817c55871759ff02eec
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897747"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384922"
 ---
 # <a name="msbuild-reserved-and-well-known-properties"></a>Propriedades reservadas e conhecidas do MSBuild
 
@@ -70,8 +70,11 @@ A tabela nesta seção mostra as propriedades predefinidas do MSBuild. A coluna 
 | `MSBuildThisFileFullPath` | Reservado | O caminho absoluto do projeto ou do arquivo de destinos que contém o destino que está sendo executado.<br /><br /> Dica: você pode especificar um caminho relativo em um arquivo de destino que é relativo ao arquivo de destino e não relativo ao arquivo de projeto original. | `c:\Source\Repos\ConsoleApp1\ConsoleApp1\ConsoleApp1.csproj` |
 | `MSBuildThisFileName` | Reservado | A parte do nome de arquivo de `MSBuildThisFileFullPath`, sem a extensão de nome de arquivo. | `ConsoleApp1` |
 | `MSBuildToolsPath` | Reservado | O caminho de instalação da versão do MSBuild associada ao valor de `MSBuildToolsVersion` .<br /><br /> Não inclua a barra invertida final no caminho.<br /><br /> Essa propriedade não pode ser substituída. | `C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\MSBuild\Current\Bin` |
-| `MSBuildToolsVersion` | Reservado | A versão do conjunto de ferramentas do MSBuild que é usada para compilar o projeto.<br /><br /> Observação: um conjunto de ferramentas do MSBuild consiste em tarefas, destinos e ferramentas que são usadas para criar um aplicativo. As ferramentas incluem compiladores, como *csc.exe* e *vbc.exe*. Para obter mais informações, consulte [conjunto de ferramentas (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)e [configurações padrão e personalizadas do conjunto de ferramentas](../msbuild/standard-and-custom-toolset-configurations.md). | `Current` |
-| `MSBuildVersion` | Reservado | A versão do MSBuild usada para compilar o projeto. <br /><br/> Essa propriedade não pode ser substituída, caso contrário, a mensagem de erro `MSB4004 - The 'MSBuildVersion' property is reserved, and can not be modified.` é retornada. | 16.7.0 |
+| `MSBuildToolsVersion` | Reservado | A versão do MSBuild Toolset usada para criar o projeto.<br /><br /> Observação: um MSBuild Toolset consiste em tarefas, destinos e ferramentas que são usadas para criar um aplicativo. As ferramentas incluem compiladores, como *csc.exe* e *vbc.exe*. Para obter mais informações, consulte [Toolset (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)e Configurações padrão e [personalizadas do Toolset.](../msbuild/standard-and-custom-toolset-configurations.md) | `Current` |
+| `MSBuildVersion` | Reservado | A versão do MSBuild usada para criar o projeto. <br /><br/> Essa propriedade não pode ser substituída, caso contrário, a mensagem de erro `MSB4004 - The 'MSBuildVersion' property is reserved, and can not be modified.` é retornada. | 16.11.0 |
+| `MSBuildAssemblyVersion` | Reservado | A versão dos assemblies do MSBuild usada para criar o projeto. | 16,0 |
+| `MSBuildFileVersion` | Reservado | A versão de 4 partes dos assemblies do MSBuild usada para criar o projeto. | 16.11.0.30701 |
+| `MSBuildSemanticVersion` | Reservado | A versão completa do semver 2.0 dos assemblies do MSBuild usada para criar o projeto. | 16.11.0-preview-21302-05+5e37cc992 |
 
 ## <a name="names-that-conflict-with-msbuild-elements"></a>Nomes em conflito com elementos do MSBuild
 

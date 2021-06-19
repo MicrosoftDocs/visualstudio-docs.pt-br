@@ -1,7 +1,7 @@
 ---
 title: Aplicar edições no modo de interrupção com editar e continuar | Microsoft Docs
 description: Consulte como usar editar e continuar para editar seu código de Visual Basic quando estiver no modo de interrupção. Há várias maneiras de entrar no modo de interrupção.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a9074d992c06c1b7d49f59481bee35345c5199f8
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: e62c6a7a6e30bac6d054f3e5484498047426d96d
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155036"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386794"
 ---
 # <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue-visual-basic"></a>Como aplicar edições no modo de interrupção com editar e continuar (Visual Basic)
 Você pode usar Editar e Continuar para editar o código no modo de interrupção e, depois, continuar sem interromper e reiniciar a execução.
@@ -42,11 +42,11 @@ Para obter limitações sobre como usar editar e continuar durante a depuração
 
     - Defina um ponto de interrupção no código e escolha **Iniciar Depuração** no menu **Depurar** e aguarde até que o aplicativo atinja o ponto de interrupção.
 
-         -ou-
+         – ou –
 
     - Inicie a depuração e, em seguida, selecione **Interromper Tudo** no menu **Depurar**.
 
-         -ou-
+         – ou –
 
     - Quando ocorrer uma exceção, escolha **Habilitar edição** no **Assistente de exceção**.
 

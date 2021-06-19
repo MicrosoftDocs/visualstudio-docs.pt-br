@@ -1,7 +1,7 @@
 ---
 title: Configurações de propriedade para projetos Web | Microsoft Docs
-description: Saiba como alterar as configurações de propriedade de uma configuração de depuração de site na caixa de diálogo páginas de propriedades do Visual Studio.
-ms.custom: SEO-VS-2020, seodec18
+description: Saiba como alterar as configurações de propriedade de uma configuração de depuração de site na caixa de diálogo Páginas de Propriedades Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -22,17 +22,17 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 83e90b5843731a274bd5cb0913b5e498ce48b067
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3e8a99e2c42ff14aba4bb31f087e55a0f1ebf3ae
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908380"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386506"
 ---
 # <a name="property-pages-settings-for-web-projects"></a>Configurações das páginas de propriedade para projetos Web
 Você pode alterar as configurações de propriedade de uma configuração de depuração do site na caixa de diálogo **Páginas de Propriedades**, conforme discutido em [Configurações de depuração e versão](../debugger/how-to-set-debug-and-release-configurations.md). As tabelas a seguir mostram como localizar configurações relacionadas ao depurador na caixa de diálogo **Páginas de Propriedades**.
 
-### <a name="start-options-category"></a>Categoria de opções de início
+### <a name="start-options-category"></a>Categoria Opções de Início
 
 | **Configuração** | **Descrição** |
 | - | - |
@@ -48,7 +48,7 @@ Você pode alterar as configurações de propriedade de uma configuração de de
 | **Usar servidor Web padrão** | Informa para usar o servidor Web padrão. |
 | **Usar servidor personalizado** | Permite inserir uma URL base para usar como o servidor. |
 | **Depuradores** | Cabeçalho que agrupa as opções relacionadas ao tipo de depuração a ser feito. |
-| **Depuração ASP.NET** | Permite a depuração das páginas do servidor escritas para a plataforma de desenvolvimento do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]. Você precisa especificar uma URL em **URL inicial**. |
+| **ASP.NET depuração** | Permite a depuração das páginas do servidor escritas para a plataforma de desenvolvimento do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]. Você precisa especificar uma URL em **URL inicial**. |
 | **Depuração de código nativo** | Permite depurar chamadas para código Win32 nativo (não gerenciado) a partir do seu aplicativo gerenciado. |
 | **Depuração do SQL Server** | Permite depuração de objetos de banco de dados do SQL Server. |
 | **Depuração do Silverlight** | Permite depuração de componentes do Silverlight. |

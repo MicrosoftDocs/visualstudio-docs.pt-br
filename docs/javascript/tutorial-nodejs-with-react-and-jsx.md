@@ -1,7 +1,7 @@
 ---
 title: Criar um aplicativo Node.js e React
-description: Saiba como criar um projeto Node.js aplicativo Web de um Visual Studio modelo.
-ms.custom: ''
+description: Saiba como criar um projeto de aplicativo Web Node.js de um modelo do Visual Studio.
+ms.custom: vs-acquisition
 ms.date: 4/21/2020
 ms.topic: tutorial
 ms.devlang: javascript
@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 80516adffcb058d6ce28751e7a9f30002ca3a640
-ms.sourcegitcommit: a0f5e7188838c5989c9cc78d99fb29bb2813501e
+ms.openlocfilehash: 9a45be2c18466754fba5469c59396f7a7791156d
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2021
-ms.locfileid: "109729293"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386833"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>Tutorial: Criar um aplicativo Node.js e React no Visual Studio
 
@@ -60,13 +60,13 @@ O webpack empacota arquivos JavaScript para que eles possam ser executados em um
 * Você precisa ter o Visual Studio instalado e a carga de trabalho de desenvolvimento de Node.js.
 
     ::: moniker range=">=vs-2019"
-    Se você ainda não instalou o Visual Studio 2019, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/downloads/) para instalá-lo gratuitamente.
+    Se você ainda não instalou o Visual Studio 2019, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads/) para instalá-lo gratuitamente.
     ::: moniker-end
     ::: moniker range="vs-2017"
     Se você ainda não tiver instalado o Visual Studio 2017, acesse a página [Downloads do Visual Studio](https://visualstudio.microsoft.com/downloads/) para instalá-lo gratuitamente.
     ::: moniker-end
 
-    Se você precisar instalar a carga de trabalho, mas já tiver Visual Studio, acesse Ferramentas Obter Ferramentas e  >  **Recursos...**, que abre o Instalador do Visual Studio. Escolha a carga de trabalho **Desenvolvimento de Node.js** e, em seguida, selecione **Modificar**.
+    Se você precisar instalar a carga de trabalho, mas já tiver o Visual Studio, vá para **ferramentas**  >  **obter ferramentas e recursos...**, que abre o instalador do Visual Studio. Escolha a carga de trabalho **Desenvolvimento de Node.js** e, em seguida, selecione **Modificar**.
 
     ![Carga de trabalho Node.js no instalador do VS](../ide/media/quickstart-nodejs-workload.png)
 
@@ -74,9 +74,9 @@ O webpack empacota arquivos JavaScript para que eles possam ser executados em um
 
     Este tutorial foi testado com a versão 12.6.2.
 
-    Se você não o tiver instalado, recomendamos instalar a versão LTS do siteNode.jspara melhor [ compatibilidade ](https://nodejs.org/en/download/) com estruturas e bibliotecas externas. Node.js é criado para arquiteturas de 32 bits e 64 bits. As Node.js de Visual Studio, incluídas na carga de trabalho Node.js, são suportadas em ambas as versões. Apenas um é necessário e o Node.js instalador dá suporte apenas a um que está sendo instalado por vez.
+    Se você não o tiver instalado, recomendamos que instale a versão LTS do site [Node.js](https://nodejs.org/en/download/) para obter a melhor compatibilidade com estruturas e bibliotecas externas. Node.js é compilado para arquiteturas de 32 bits e 64 bits. As ferramentas de Node.js no Visual Studio, incluídas na carga de trabalho do Node.js, dão suporte a ambas as versões. Apenas um é necessário e o instalador do Node.js dá suporte apenas a uma instalação de cada vez.
 
-    Em geral, o Visual Studio detecta automaticamente o runtime do Node.js instalado. Se ele não detectar um runtime instalado, você poderá configurar seu projeto para referenciar o runtime instalado na página de propriedades (depois de criar um projeto, clicar com o botão direito do mouse no nó do projeto, escolher Propriedades **(ou** pressionar **Alt**  +  **Enter)** e definir **o caminhoNode.exe**). Você pode usar uma instalação global do Node.js ou especificar o caminho para um interpretador local em cada um dos seus projetos Node.js dados. 
+    Em geral, o Visual Studio detecta automaticamente o runtime do Node.js instalado. Se ele não detectar um tempo de execução instalado, você poderá configurar seu projeto para fazer referência ao tempo de execução instalado na página Propriedades (depois de criar um projeto, clique com o botão direito do mouse no nó do projeto, escolha **Propriedades** (ou pressione **ALT**  +  **Enter**) e defina o **caminho doNode.exe**). Você pode usar uma instalação global do Node.js ou pode especificar o caminho para um intérprete local em cada um de seus projetos de Node.js. 
 
 ## <a name="create-a-project"></a>Criar um projeto
 
@@ -87,26 +87,26 @@ Primeiro, crie um projeto de aplicativo Web Node.js.
 1. Criar um novo projeto.
 
     ::: moniker range=">=vs-2019"
-    Pressione **Esc** para fechar a janela de início. Digite **Ctrl + Q** para abrir a caixa de pesquisa, digite **Node.js** e escolha Aplicativo Web em branco Node.js Web **– JavaScript.** (Embora este tutorial use o compilador TypeScript, as etapas exigem que você comece com o **modelo JavaScript.)**
+    Pressione **Esc** para fechar a janela de início. Digite **Ctrl + Q** para abrir a caixa de pesquisa, digite **Node.js** e, em seguida, escolha **em branco Node.js aplicativo Web-JavaScript**. (Embora este tutorial use o compilador TypeScript, as etapas exigem que você comece com o modelo **JavaScript** .)
     
     Na caixa de diálogo que aparece, escolha **Criar**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Na barra de menus superior, escolha **Arquivo**  >  **Novo**  >  **Projeto**. No painel esquerdo da caixa de diálogo **Novo Projeto**, expanda **JavaScript** e escolha **Node.js**. No painel central, escolha **Aplicativo Web Node.js em Branco**, digite o nome **NodejsWebAppBlank** e escolha **OK**.
+    Na barra de menus superior, escolha **arquivo**  >  **novo**  >  **projeto**. No painel esquerdo da caixa de diálogo **Novo Projeto**, expanda **JavaScript** e escolha **Node.js**. No painel central, escolha **Aplicativo Web Node.js em Branco**, digite o nome **NodejsWebAppBlank** e escolha **OK**.
     ::: moniker-end
-    Se você não vir o modelo de projeto Aplicativo **Web** Node.js em branco, deverá adicionar a carga de trabalhoNode.js **desenvolvimento.** Confira instruções detalhadas nos [Pré-requisitos](#prerequisites).
+    Se você não vir o modelo de projeto de **aplicativo Web Node.js em branco** , deverá adicionar a carga de trabalho de **desenvolvimento deNode.js** . Confira instruções detalhadas nos [Pré-requisitos](#prerequisites).
 
     O Visual Studio cria a nova solução e abre seu projeto.
 
     ![Projeto Node.js no Gerenciador de Soluções](../javascript/media/tutorial-nodejs-react-project-structure.png)
 
-    (1) Realçado em **negrito** no projeto, usando o nome fornecido na caixa de diálogo **Novo Projeto**. No sistema de arquivos, este projeto é representado por um arquivo *.njsproj* na pasta do projeto. Você pode definir propriedades e variáveis de ambiente associadas ao projeto clicando com o botão direito do mouse no projeto e escolhendo **Propriedades** (ou pressione **Alt**  +  **Enter**). Você pode fazer o ciclo com outras ferramentas de desenvolvimento, porque o arquivo de projeto não faz alterações personalizadas na fonte do projeto Node.js.
+    (1) Realçado em **negrito** no projeto, usando o nome fornecido na caixa de diálogo **Novo Projeto**. No sistema de arquivos, este projeto é representado por um arquivo *.njsproj* na pasta do projeto. Você pode definir propriedades e variáveis de ambiente associadas ao projeto clicando com o botão direito do mouse no projeto e escolhendo **Propriedades** (ou pressione **ALT**  +  **Enter**). Você pode fazer o ciclo com outras ferramentas de desenvolvimento, porque o arquivo de projeto não faz alterações personalizadas na fonte do projeto Node.js.
 
     (2) No nível superior, há uma solução que, por padrão, tem o mesmo nome do projeto. Uma solução, representada por um arquivo *.sln* no disco, é um contêiner para um ou mais projetos relacionados.
 
     (3) O nó do npm mostra os pacotes npm instalados. Clique com o botão direito do mouse no nó do npm para pesquisar e instalar pacotes npm usando uma caixa de diálogo ou instalar e atualizar pacotes usando as configurações de *package.json* e as opções de clique com o botão direito do mouse no nó do npm.
 
-    (4) *package.json* é um arquivo usado pelo npm para gerenciar versões e dependências de pacote para os pacotes instalados localmente. Para obter mais informações, consulte [Gerenciar pacotes npm](../javascript/npm-package-management.md).
+    (4) *package.json* é um arquivo usado pelo npm para gerenciar versões e dependências de pacote para os pacotes instalados localmente. Para obter mais informações, consulte [Manage NPM Packages](../javascript/npm-package-management.md).
 
     (5) Arquivos de projeto como *server.js* aparecem no nó do projeto. *server.js* é o arquivo de inicialização do projeto e é por isso que ele é exibido em **negrito**. Defina o arquivo de inicialização clicando com o botão direito do mouse em um arquivo no projeto e selecionando **Definir como arquivo de inicialização do Node.js**.
 
@@ -158,7 +158,7 @@ Este aplicativo requer um número de módulos npm para ser executado corretament
 
     Esse comando executa o comando NPM install diretamente.
 
-    No painel inferior, escolha a janela de **Saída** para ver o progresso da instalação dos pacotes. A instalação pode levar alguns minutos e talvez você não veja os resultados imediatamente. Para ver a saída, verifique se marcou **Npm** no campo **Mostrar saída de** na janela de **Saída**. (Para abrir a janela, escolha **Exibir**  >  **Saída** ou pressione **Ctrl**  +  **ALT**  +  **O**.)
+    No painel inferior, escolha a janela de **Saída** para ver o progresso da instalação dos pacotes. A instalação pode levar alguns minutos e talvez você não veja os resultados imediatamente. Para ver a saída, verifique se marcou **Npm** no campo **Mostrar saída de** na janela de **Saída**. (Para abrir a janela, escolha **Exibir**  >  **Saída** ou pressione **Ctrl**  +  **Alt**  +  **O**.)
 
     Estes são os módulos npm que aparecem no Gerenciador de Soluções após a instalação.
 
@@ -178,9 +178,9 @@ Nestas etapas, você adiciona quatro novos arquivos ao seu projeto.
 
 Para este aplicativo simples, você pode adicionar novos arquivos de projeto à raiz do projeto. (Na maioria dos aplicativos, normalmente você adiciona os arquivos a subpastas e ajusta adequadamente as referências do caminho relativo).
 
-1. Em Gerenciador de soluções, clique com o botão direito do mouse no projeto **NodejsWebAppBlank** e escolha **Adicionar**  >  **novo item** (ou pressione **Ctrl**  +  **Shift**  +  **A**).
+1. No Gerenciador de Soluções, clique com o botão direito do mouse no projeto **NodejsWebAppBlank** e escolha Adicionar Novo  >  **Item** (ou pressione **Ctrl**  +  **SHIFT**  +  **A**).
 
-1. Na caixa de diálogo **Adicionar novo item** , escolha **arquivo TypeScript JSX**, digite o nome *app. TSX* e selecione **Adicionar** ou **OK**.
+1. Na caixa de diálogo Adicionar Novo **Item,** escolha **Arquivo JSX typeScript**, digite o nome *app.tsx* e **selecione Adicionar** ou **OK.**
 
 1. Repita essas etapas para adicionar *webpack-config.js*. Em vez de um arquivo JSX TypeScript, escolha **Arquivo JavaScript**.
 
@@ -300,7 +300,7 @@ Nas etapas anteriores, você adicionou *webpack-config.js* ao projeto. Em seguid
     }
     ```
 
-    *app. TSX* é especificado como o arquivo de origem.
+    *app.tsx é* especificado como o arquivo de origem.
 
 ## <a name="transpile-the-jsx"></a>Transcompilar o JSX
 
@@ -316,7 +316,7 @@ Nas etapas anteriores, você adicionou *webpack-config.js* ao projeto. Em seguid
 
     Se encontrar erros em vez da saída anterior, você precisará resolvê-para que seu aplicativo funcione. Se as versões de seu pacote npm forem diferentes das versões mostradas neste tutorial, isso poderá ser uma fonte de erros. Uma maneira de corrigir erros é usar as versões exatas mostradas nas etapas anteriores. Além disso, se uma ou mais dessas versões de pacote tiver sido preterida e gerar um erro, talvez você precise instalar uma versão mais recente para corrigir erros. Para obter informações sobre como usar *package.json* para controlar as versões do pacote de npm, confira [Configuração de package.json](../javascript/configure-packages-with-package-json.md).
 
-1. Em Gerenciador de soluções, clique com o botão direito do mouse no nó do projeto e escolha **Adicionar**  >  **pasta existente**, escolha a pasta *dist* e escolha **Selecionar pasta**.
+1. No Gerenciador de Soluções, clique com o botão direito do mouse no nó do projeto e escolha Adicionar Pasta Existente e, em seguida, escolha a  >   *pasta dist* e selecione Selecionar **Pasta**.
 
     O Visual Studio adiciona a pasta *dist* ao projeto que contém *app-bundle.js* e *app-bundle.js.map*.
 
@@ -342,7 +342,7 @@ Do Visual Studio 2019 em diante, é necessário um script de build. Em vez de tr
 
 ## <a name="run-the-app"></a>Executar o aplicativo
 
-1. Selecione o **servidor Web (Google Chrome)** ou o **servidor Web (Microsoft Edge)** como o destino de depuração atual.
+1. Selecione **Servidor Web (Google Chrome)** ou **Servidor Web (Microsoft Edge)** como o destino de depuração atual.
 
     ::: moniker range=">=vs-2019"
     ![Selecione o Chrome como destino de depuração](../javascript/media/vs-2019/tutorial-nodejs-react-debug-target.png)
@@ -369,7 +369,7 @@ Do Visual Studio 2019 em diante, é necessário um script de build. Em vez de tr
 
 1. Em *server.js*, clique na medianiz à esquerda da declaração `staticPath` para definir um ponto de interrupção:
 
-    ![Captura de tela da janela do Visual Studio Code para server.js. Um ponto vermelho na medianiz à esquerda indica que uma interrupção está definida para a declaração staticPath.](../javascript/media/tutorial-nodejs-react-set-breakpoint.png)
+    ![Captura de tela da Visual Studio de código para server.js. Um ponto vermelho na medianiz esquerda indica que um ponto de interrupção está definido para a declaração staticPath.](../javascript/media/tutorial-nodejs-react-set-breakpoint.png)
 
     Pontos de interrupção são o recurso mais básico e essencial da depuração confiável. Um ponto de interrupção indica quando o Visual Studio deve suspender o código em execução para que você possa examinar os valores das variáveis ou o comportamento de memória ou se uma ramificação de código está sendo executada ou não.
 
@@ -379,7 +379,7 @@ Do Visual Studio 2019 em diante, é necessário um script de build. Em vez de tr
 
 1. Pressione **F5** para continuar o aplicativo.
 
-1. Se você quiser usar as ferramentas do Chrome Ferramentas para Desenvolvedores ou F12 para o Microsoft Edge, pressione **F12**. Você pode usar essas ferramentas para examinar o DOM e interagir com o aplicativo usando o Console do JavaScript.
+1. Se você quiser usar as Ferramentas do Chrome Ferramentas para Desenvolvedores ou F12 para Microsoft Edge, pressione **F12**. Você pode usar essas ferramentas para examinar o DOM e interagir com o aplicativo usando o Console do JavaScript.
 
 1. Feche o navegador da Web e o console.
 
@@ -390,18 +390,18 @@ Na seção anterior, você anexou o depurador ao código do Node.js do lado do s
 ### <a name="prepare-the-browser-for-debugging"></a>Preparar o navegador para depuração
 
 ::: moniker range=">=vs-2019"
-Para este cenário, use o Microsoft Edge (Chromium), atualmente chamado de **Microsoft Edge beta** no IDE ou Chrome.
+Para esse cenário, use Microsoft Edge (Chromium), atualmente **chamado Microsoft Edge Beta** no IDE ou Chrome.
 ::: moniker-end
 ::: moniker range="vs-2017"
-Para este cenário, use o Chrome.
+Para esse cenário, use o Chrome.
 ::: moniker-end
 
 1. Feche todas as janelas do navegador de destino.
 
-   Outras instâncias do navegador podem impedir que o navegador seja aberto com a depuração habilitada. (As extensões do navegador podem estar em execução e impedindo o modo de depuração completa, portanto, talvez seja necessário abrir o Gerenciador de tarefas para localizar instâncias inesperadas do Chrome.)
+   Outras instâncias do navegador podem impedir que o navegador seja aberto com a depuração habilitada. (As extensões do navegador podem estar em execução e impedindo o modo de depuração completo, portanto, talvez seja necessário abrir Gerenciador de Tarefas para encontrar instâncias inesperadas do Chrome.)
 
    ::: moniker range=">=vs-2019"
-   Para o Microsoft Edge (Chromium), também Desligue todas as instâncias do Chrome. Como ambos os navegadores compartilham a base de código chromium, isso fornece os melhores resultados.
+   Por Microsoft Edge (Chromium), também desligue todas as instâncias do Chrome. Como ambos os navegadores compartilham a base de código chromium, isso fornece os melhores resultados.
    ::: moniker-end
 
 2. Inicie o navegador com a depuração habilitada.
@@ -461,33 +461,33 @@ Para este cenário, use o Chrome.
     },
     ```
 
-    Essa é uma configuração somente de desenvolvimento para habilitar a depuração Visual Studio. Essa configuração permite substituir as referências geradas no arquivo source map, *app-bundle.js.map,* ao criar o aplicativo. Por padrão, as referências do webpack no arquivo de mapa de origem incluem o prefixo *webpack:///* , que impede que o Visual Studio localize o arquivo de origem, *app. TSX*. Especificamente, quando você faz essa alteração, a referência ao arquivo de origem, *app. TSX*, é alterada de *webpack:///./app.TSX* para *./app.TSX*, que habilita a depuração.
+    Essa é uma configuração somente de desenvolvimento para habilitar a depuração Visual Studio. Essa configuração permite substituir as referências geradas no arquivo source map, *app-bundle.js.map,* ao criar o aplicativo. Por padrão, as referências webpack no arquivo source map incluem o prefixo *webpack:///,* que impede Visual Studio localizar o arquivo de origem, *app.tsx*. Especificamente, quando você faz essa alteração, a referência ao arquivo de  origem, *app.tsx*, é alterada de webpack:///./app.tsx para *./app.tsx*, que permite a depuração.
 
-3. Selecione o navegador de destino como o destino de depuração no Visual Studio e pressione **Ctrl** + **F5** (**depurar**  >  **Iniciar sem depuração**) para executar o aplicativo no navegador.
+3. Selecione o navegador de destino como o destino de depuração no Visual Studio e pressione **Ctrl** + **F5** (**Depurar** Iniciar Sem  >  **Depuração)** para executar o aplicativo no navegador.
 
     ::: moniker range=">=vs-2019"
-    Se você criou uma configuração de navegador com um nome amigável, escolha-a como seu destino de depuração.
+    Se você criou uma configuração do navegador com um nome amigável, escolha-a como seu destino de depuração.
     ::: moniker-end
 
     O aplicativo será aberto em uma nova guia do navegador.
 
-4. Escolha **depurar**  >  **anexar ao processo** (ou pressione **Ctrl**  +  **ALT**  +  **P**).
+4. Escolha **Depurar**  >  **Anexar ao Processo** (ou pressione **Ctrl**  +  **Alt**  +  **P**).
 
     > [!TIP]
-    > A partir do Visual Studio 2017, depois de anexar ao processo pela primeira vez seguindo estas etapas, você pode reanexar rapidamente ao mesmo processo escolhendo **depurar**  >  **reanexar para processar** (ou pressione **Shift**  +  **ALT**  +  **P**).
+    > A partir do Visual Studio 2017, depois de anexar ao processo pela primeira vez seguindo estas etapas, você pode reanexar rapidamente ao mesmo processo escolhendo **Depurar**  >  **Reanexar** ao Processo (ou pressionar **Shift**  +  **Alt**  +  **P**).
 
-5. Na caixa de diálogo **anexar ao processo** , obtenha uma lista filtrada de instâncias do navegador às quais você pode anexar.
+5. Na caixa **de diálogo Anexar** ao Processo, obter uma lista filtrada de instâncias do navegador às que você pode anexar.
 
     ::: moniker range=">=vs-2019"
-    No Visual Studio 2019, escolha o depurador correto para seu navegador de destino, **JavaScript (Chrome)** ou **JavaScript (Microsoft Edge-Chromium)** no campo **anexar a** , digite **Chrome** ou **Edge** na caixa de filtro para filtrar os resultados da pesquisa.
+    No Visual Studio 2019, escolha o depurador correto para seu navegador de destino, **JavaScript (Chrome)** ou **JavaScript (Microsoft Edge – Chromium)** no campo Anexar ao , digite chrome ou **edge** na caixa de filtro para filtrar os resultados da pesquisa.  
     ::: moniker-end
     ::: moniker range="vs-2017"
-    No Visual Studio 2017, escolha **código WebKit** no campo **anexar a** , digite **Chrome** na caixa de filtro para filtrar os resultados da pesquisa.
+    No Visual Studio 2017, escolha Código do  **Webkit** no campo Anexar a, digite **chrome** na caixa de filtro para filtrar os resultados da pesquisa.
     ::: moniker-end
 
-6. Selecione o processo de navegador com a porta de host correta (localhost neste exemplo) e selecione **anexar**.
+6. Selecione o processo do navegador com a porta de host correta (localhost neste exemplo) e selecione **Anexar**.
 
-    A porta (1337) também pode aparecer no campo **título** para ajudá-lo a selecionar a instância correta do navegador.
+    A porta (1337) também pode aparecer no **campo** Título para ajudá-lo a selecionar a instância correta do navegador.
 
     ::: moniker range=">=vs-2019"
     O exemplo a seguir mostra como isso se parece com o navegador Microsoft Edge (Chromium).

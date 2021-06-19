@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
 - Domain-Specific Language, Properties window
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b7ee201494ed849062458afdcd41c2aed1b83b42
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4e1bd54850264c33c5317a4395f219689a8e8634
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935385"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385793"
 ---
 # <a name="customize-the-properties-window"></a>Personalizar o janela Propriedades
 
@@ -138,7 +138,7 @@ No entanto, você pode especificar os seguintes editores e tipos:
 
 ### <a name="set-a-property-editor"></a>Definir um editor de propriedade
 
-Adicione um atributo CLR à Propriedade Domain, no seguinte formato:
+Adicione um atributo CLR à propriedade de domínio, na seguinte forma:
 
 ```csharp
 [System.ComponentModel.Editor (
@@ -146,17 +146,17 @@ Adicione um atributo CLR à Propriedade Domain, no seguinte formato:
    typeof(System.Drawing.Design.UITypeEditor))]
 ```
 
-Você pode definir o atributo em uma propriedade usando a entrada de **atributo personalizado** no janela Propriedades.
+Você pode definir o atributo em uma propriedade usando a **entrada Atributo** Personalizado no janela Propriedades.
 
-O tipo de `AnEditor` deve ser derivado do tipo especificado no segundo parâmetro. O segundo parâmetro deve ser <xref:System.Drawing.Design.UITypeEditor> ou <xref:System.ComponentModel.ComponentEditor> . Para obter mais informações, consulte <xref:System.ComponentModel.EditorAttribute>.
+O tipo `AnEditor` de deve ser derivado do tipo especificado no segundo parâmetro. O segundo parâmetro deve ser <xref:System.Drawing.Design.UITypeEditor> ou <xref:System.ComponentModel.ComponentEditor> . Para obter mais informações, consulte <xref:System.ComponentModel.EditorAttribute>.
 
 Você pode especificar seu próprio editor ou um editor do .NET, como <xref:System.Windows.Forms.Design.FileNameEditor> ou <xref:System.Drawing.Design.ImageEditor> . Por exemplo, use o procedimento a seguir para ter uma propriedade na qual o usuário possa inserir um nome de arquivo.
 
 #### <a name="define-a-file-name-domain-property"></a>Definir uma propriedade de domínio de nome de arquivo
 
-1. Adicione uma propriedade de domínio a uma classe de domínio em sua definição de DSL.
+1. Adicione uma propriedade de domínio a uma classe de domínio em sua Definição de DSL.
 
-2. Selecione a nova propriedade. No campo **atributo personalizado** na janela Propriedades, insira o atributo a seguir. Para inserir esse atributo, clique nas reticências **[...]** e insira o nome do atributo e os parâmetros separadamente:
+2. Selecione a nova propriedade. No campo **Atributo Personalizado** no janela Propriedades, insira o atributo a seguir. Para inserir esse atributo, clique nas reellipses **[...]** e insira o nome do atributo e os parâmetros separadamente:
 
     ```csharp
     [System.ComponentModel.Editor (
@@ -165,30 +165,30 @@ Você pode especificar seu próprio editor ou um editor do .NET, como <xref:Syst
 
     ```
 
-3. Deixe o tipo da propriedade de domínio em sua configuração padrão de **cadeia de caracteres**.
+3. Deixe o Tipo da propriedade de domínio em sua configuração padrão de **Cadeia de Caracteres**.
 
 4. Para testar o editor, verifique se os usuários podem abrir o editor de nome de arquivo para editar sua propriedade de domínio.
 
-    1. Pressione CTRL + F5 ou F5. Na solução de depuração, abra um arquivo de teste. Crie um elemento da classe de domínio e selecione-o.
+    1. Pressione CTRL+F5 ou F5. Na solução de depuração, abra um arquivo de teste. Crie um elemento da classe de domínio e selecione-o.
 
-    2. Na janela Propriedades, selecione a propriedade domínio. O campo valor mostra uma elipse **[...]**.
+    2. No janela Propriedades, selecione a propriedade de domínio. O campo de valor mostra uma reellipse **[...]**.
 
-    3. Clique nas reticências. Uma caixa de diálogo de arquivo é exibida. Selecione um arquivo e feche a caixa de diálogo. O caminho do arquivo agora é o valor da Propriedade Domain.
+    3. Clique nas reellipses. Uma caixa de diálogo arquivo é exibida. Selecione um arquivo e feche a caixa de diálogo. O caminho do arquivo agora é o valor da propriedade de domínio.
 
-### <a name="define-your-own-property-editor"></a>Definir seu próprio editor de propriedade
+### <a name="define-your-own-property-editor"></a>Definir seu próprio editor de propriedades
 
-Você pode definir seu próprio editor. Você faria isso para permitir que o usuário edite um tipo que você definiu ou para editar um tipo padrão de forma especial. Por exemplo, você pode permitir que o usuário insira uma cadeia de caracteres que representa uma fórmula.
+Você pode definir seu próprio editor. Você faria isso para permitir que o usuário edite um tipo que você definiu ou edite um tipo padrão de uma maneira especial. Por exemplo, você pode permitir que o usuário insinte uma cadeia de caracteres que representa uma fórmula.
 
-Você define um editor escrevendo uma classe que é derivada de <xref:System.Drawing.Design.UITypeEditor> . Sua classe deve substituir:
+Você define um editor escrevendo uma classe derivada de <xref:System.Drawing.Design.UITypeEditor> . Sua classe deve substituir:
 
 - <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>, para interagir com o usuário e atualizar o valor da propriedade.
 
 - <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>, para especificar se o editor abrirá uma caixa de diálogo ou fornecerá um menu suspenso.
 
-Você também pode fornecer uma representação gráfica do valor da propriedade que será exibido na grade de propriedades. Para fazer isso, substitua `GetPaintValueSupported` e `PaintValue` .  Para obter mais informações, consulte <xref:System.Drawing.Design.UITypeEditor>.
+Você também pode fornecer uma representação gráfica do valor da propriedade que será exibida na grade de propriedades. Para fazer isso, substitua `GetPaintValueSupported` e `PaintValue` .  Para obter mais informações, consulte <xref:System.Drawing.Design.UITypeEditor>.
 
 > [!NOTE]
-> Adicione o código em um arquivo de código separado no projeto **DSL** .
+> Adicione o código em um arquivo de código separado no **projeto Dsl.**
 
 Por exemplo:
 
@@ -204,7 +204,7 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
 }
 ```
 
-Para usar esse editor, defina o **atributo personalizado** de uma propriedade de domínio como:
+Para usar este editor, de definir o **Atributo Personalizado de** uma propriedade de domínio como:
 
 ```csharp
 [System.ComponentModel.Editor (
@@ -214,21 +214,21 @@ Para usar esse editor, defina o **atributo personalizado** de uma propriedade de
 
 Para obter mais informações, consulte <xref:System.Drawing.Design.UITypeEditor>.
 
-## <a name="provide-a-drop-down-list-of-values"></a>Forneça uma lista suspensa de valores
+## <a name="provide-a-drop-down-list-of-values"></a>Fornecer uma lista lista de valores
 
-Você pode fornecer uma lista de valores para que um usuário escolha.
+Você pode fornecer uma lista de valores para um usuário escolher.
 
 > [!NOTE]
-> Essa técnica fornece uma lista de valores que podem ser alterados em tempo de execução. Se você quiser fornecer uma lista que não é alterada, considere usar um tipo enumerado como o tipo de sua propriedade de domínio.
+> Essa técnica fornece uma lista de valores que podem ser alterados em tempo de executar. Se você quiser fornecer uma lista que não altere, considere usar um tipo enumerado como o tipo de sua propriedade de domínio.
 
-Para definir uma lista de valores padrão, adicione à propriedade de domínio um atributo CLR que tenha o seguinte formato:
+Para definir uma lista de valores padrão, adicione à sua propriedade de domínio um atributo CLR que tenha o seguinte formato:
 
 ```csharp
 [System.ComponentModel.TypeConverter
 (typeof(MyTypeConverter))]
 ```
 
-Defina uma classe derivada de <xref:System.ComponentModel.TypeConverter>. Adicione o código em um arquivo separado no projeto **DSL** . Por exemplo:
+Defina uma classe derivada de <xref:System.ComponentModel.TypeConverter>. Adicione o código em um arquivo separado no **projeto Dsl.** Por exemplo:
 
 ```csharp
 /// <summary>

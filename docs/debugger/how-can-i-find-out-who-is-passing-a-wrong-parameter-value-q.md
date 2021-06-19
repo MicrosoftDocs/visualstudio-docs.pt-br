@@ -1,7 +1,7 @@
 ---
 title: Descubra quem está passando um valor de parâmetro errado | Microsoft Docs
 description: Você pode descobrir qual código está chamando sua função e passando um valor de parâmetro incorreto. Saiba como usar um ponto de interrupção condicional para fazer isso.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cb4b3c41b46817d15a13626983ccf55ffa9acc5f
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: b2f747e2f92b7817530fe12e14f8f95a9bfbe791
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155174"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386911"
 ---
 # <a name="how-can-i-find-out-who-is-passing-a-wrong-parameter-value"></a>Como posso descobrir quem está passando um valor de parâmetro incorreto?
 ## <a name="problem-description"></a>Descrição do problema
@@ -42,7 +42,7 @@ ms.locfileid: "102155174"
 
 2. Clique com o botão direito do mouse no ponto de interrupção e selecione **Condição**.
 
-3. Na caixa de diálogo **Condição de Ponto de Interrupção**, clique na caixa de seleção **Condição**. Consulte [pontos de interrupção avançados](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression).
+3. Na caixa de diálogo **Condição de Ponto de Interrupção**, clique na caixa de seleção **Condição**. Consulte [Pontos de Interrupção Avançados](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression).
 
 4. Digite uma expressão, como `Var==3`, na caixa de texto, onde `Var` é o nome do parâmetro que contém o valor incorreto, e `3` é o valor incorreto passado para ele.
 
@@ -50,7 +50,7 @@ ms.locfileid: "102155174"
 
 6. Agora, execute o programa novamente. O ponto de interrupção faz com que o programa pare no início da função quando o parâmetro `Var` tiver o valor `3`.
 
-7. Use a janela Pilha de Chamadas para localizar a função de chamada e navegar até seu código-fonte. Para obter mais informações, consulte [como: usar a janela pilha de chamadas](../debugger/how-to-use-the-call-stack-window.md).
+7. Use a janela Pilha de Chamadas para localizar a função de chamada e navegar até seu código-fonte. Para obter mais informações, [consulte Como usar a janela Pilha de Chamada](../debugger/how-to-use-the-call-stack-window.md).
 
 ## <a name="see-also"></a>Confira também
 - [Perguntas frequentes sobre depuração de código nativo](../debugger/debugging-native-code-faqs.md)

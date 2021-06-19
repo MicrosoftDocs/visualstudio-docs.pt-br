@@ -1,7 +1,7 @@
 ---
 title: Visão geral do diagnóstico de gráficos | Microsoft Docs
 description: O Visual Studio Diagnóstico de Gráficos é um conjunto de ferramentas para registrar a atividade do Direct3D e analisar os logs para solucionar problemas de desempenho e renderização.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 02/09/2017
 ms.topic: conceptual
 author: mikejo5000
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ae7969a3eb0e33b46755cdb3fa92cc2bcbe19c8a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 24b67b9585db973e6cbef3b1c28c6068e7c37034
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905183"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386183"
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Visão geral do diagnóstico de gráficos do Visual Studio
 O Visual Studio *diagnóstico de gráficos* é um conjunto de ferramentas para gravar e analisar problemas de desempenho e renderização em aplicativos Direct3D. Diagnóstico de Gráficos pode ser usado em aplicativos que estão sendo executados localmente no seu computador Windows ou em um computador ou dispositivo remoto.
@@ -111,16 +111,16 @@ O Visual Studio *diagnóstico de gráficos* é um conjunto de ferramentas para g
  A janela [pilha de chamadas de evento](graphics-event-call-stack.md) exibe a pilha de chamadas completa de cada evento de gráficos na lista de eventos e até mesmo permite que você salte para o código-fonte do aplicativo se as informações de depuração estiverem disponíveis. Essa é uma ferramenta poderosa para seguir um erro de onde ele aparece pela primeira vez, na GPU, de volta para onde ele se originou no código-fonte do seu aplicativo.
 
 ### <a name="object-table"></a>Tabela de objetos
- Cada quadro que seu aplicativo renderiza é provavelmente apoiado por centenas ou até milhares de objetos de recursos. Eles podem incluir buffers de fundo e renderizar destinos, texturas, buffers de vértice, buffers de índice, buffers gerais – quase tudo o que os membros do Direct3D é um objeto.
+ Cada quadro que seu aplicativo renderiza provavelmente é apoiado por centenas ou até milhares de objetos de recurso. Eles podem incluir buffers de fundo e destinos de renderização, texturas, buffers de vértice, buffers de índice, buffers gerais– quase tudo o que o Direct3D se lembra é um objeto .
 
- A [tabela de objetos](graphics-object-table.md) exibe todos os objetos que existem no momento do evento de gráficos selecionado na lista de eventos. Como a maioria dos objetos em um aplicativo típico são texturas, a lista de eventos é otimizada para mostrar os detalhes relevantes às imagens rapidamente. A coluna tipo informa que tipo de objeto está em cada linha e a coluna de formato mostra ainda mais o subtipo ou a versão do objeto. Outros detalhes também são mostrados. Alguns objetos também têm hiperlinks que você pode seguir para exibir o objeto com um visualizador mais especializado, como texturas (você pode exibir a textura como uma imagem) ou buffers (você pode escolher como o Visualizador de buffer analisa e exibe os bytes brutos do buffer definindo o formato do buffer).
+ A [Tabela de](graphics-object-table.md) Objetos exibe todos os objetos que existem no momento do evento gráfico selecionado na lista de eventos. Como a maioria dos objetos em um aplicativo típico são texturas, a lista de eventos é otimizada para mostrar detalhes relevantes para imagens rapidamente. A coluna Tipo informa qual tipo de objeto está em cada linha e a coluna Formato mostra ainda mais o subtipo ou a versão do objeto. Outros detalhes também são mostrados. Alguns objetos também têm hiperlinks que você pode seguir para exibir o objeto com um visualizador mais especializado, como texturas (você pode exibir a textura como uma imagem) ou buffers (você pode escolher como o visualizador de buffers analisará e exibirá os bytes brutos do buffer definindo o formato de buffer).
 
 ### <a name="frame-analysis"></a>Análise de quadro
- Os elementos gráficos do seu aplicativo não precisam apenas ser corretos. eles também precisam ser rápidos. Mesmo em dispositivos menos poderosos, como laptops, com gráficos integrados ou celulares. E eles ainda precisam ser ótimos.
+ Os gráficos do aplicativo não precisam apenas estar corretos, eles também precisam ser rápidos. Mesmo em dispositivos menos poderosos, como laptops com gráficos integrados ou telefones móveis. E eles ainda precisam ter uma ótima aparência.
 
- A ferramenta de [análise de quadros](graphics-frame-analysis.md) explora otimizações de desempenho potenciais alterando automaticamente a maneira como o aplicativo usa o Direct3D e fornece resultados de benchmark para comparação. Por exemplo, a análise de quadros pode habilitar o mapeamento de MIP em cada textura, o que pode revelar texturas que poderiam se beneficiar do mapeamento de MIP, mas que não estão habilitadas no momento. Em hardware que dá suporte a ele, a análise de quadros também apresenta informações coletadas dos contadores de desempenho da GPU – esse nível de informações pode identificar problemas de desempenho no nível de hardware, como altos números de interrupções de busca de textura ou erros de cache.
+ A [ferramenta Análise de](graphics-frame-analysis.md) Quadro explora possíveis otimizações de desempenho alterando automaticamente a maneira como o aplicativo usa o Direct3D e fornecendo resultados de parâmetro de comparação para comparação. Por exemplo, a Análise de Quadro pode habilitar o mapeamento de mip em cada textura, o que pode revelar texturas que podem se beneficiar do mapeamento de mip, mas que atualmente não a têm habilitada. No hardware que dá suporte a ele, a Análise de Quadros também apresenta informações coletadas dos contadores de desempenho da GPU– esse nível de informações pode identificar problemas de desempenho no nível de hardware, como um grande número de travamentos de busca de textura ou erros de cache.
 
- Mas a análise de quadros não está prestes a ficar rápido. é sobre obter a maior parte do desempenho que você pode, ao mesmo tempo, fornecer a menor quantidade de qualidade visual. Às vezes, um efeito caro que parece ótimo em uma exibição grande não faz o mesmo impacto quando exibido na tela pequena de um telefone, em que um efeito mais simples pode parecer muito bom sem descarregar a bateria. As alterações automáticas e os parâmetros de comparação que a análise gráfica fornece podem ajudá-lo a encontrar o equilíbrio certo para seu aplicativo em uma variedade de dispositivos.
+ Mas a Análise de Quadros não se trata apenas de ser rápida– trata-se de obter o máximo de desempenho que você pode, ao mesmo tempo em que dá a menor quantidade de qualidade visual. Às vezes, um efeito caro que parece ótimo em uma grande exibição não causa o mesmo impacto quando exibido na tela pequena de um telefone, em que um efeito mais simples pode parecer tão bom sem esvaziar a bateria. As alterações automáticas e os parâmetros de comparação que a Análise de Gráficos fornece podem ajudá-lo a encontrar o equilíbrio certo para seu aplicativo em uma variedade de dispositivos.
 
 ## <a name="see-also"></a>Confira também
 - [Ferramenta de captura de linha de comando](command-line-capture-tool.md)

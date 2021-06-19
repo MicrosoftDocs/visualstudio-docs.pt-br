@@ -1,7 +1,7 @@
 ---
 title: Navegar pelo código com o depurador | Microsoft Docs
 description: 'Saiba como usar o depurador do Visual Studio para solucionar problemas de seu código. Os tópicos incluem: entrando em modo de interrupção, percorrendo código e executando para um destino.'
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/12/2018
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e6ad377ddb457018099256cd64b6b8382c69df81
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b9c0424b07ba7a24f109e967d464856781e5dbb2
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942068"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385234"
 ---
 # <a name="navigate-through-code-with-the-visual-studio-debugger"></a>Navegar pelo código com o depurador do Visual Studio
 
@@ -82,7 +82,7 @@ Em uma chamada de função aninhada, a **Depuração Completa** intervém na fun
 
 Talvez você não se preocupa com uma função durante a depuração, ou você sabe que ela funciona, como um código de biblioteca bem testado. Você pode usar os comandos a seguir para ignorar o código durante a depuração de código. As funções ainda são executadas, mas o depurador as ignora.
 
-|Comando de teclado|Comando do menu Depurar|Description|
+|Comando de teclado|Comando do menu Depurar|Descrição|
 |----------------------|------------------|-----------------|
 |**F10**|**Contornar**|Se a linha atual contiver uma chamada de função, a **etapa** executará o código e suspenderá a execução na primeira linha de código depois que a função chamada retornar.|
 |**Shift** + **F11**|**Sair**|O **Step Out** continua executando o código e suspende a execução quando a função atual retorna. O depurador ignora a função atual.|
@@ -156,38 +156,38 @@ O contador de programa salta diretamente para o novo local e as instruções ent
 >- Mover a instrução seguinte para outra função ou escopo normalmente resulta em danos à pilha de chamadas, causando um erro em tempo de execução ou uma exceção. Se você tentar mover a instrução seguinte para outro escopo, o depurador abrirá uma caixa de diálogo com um aviso e dará uma chance de cancelar a operação.
 >- No Visual Basic, você não pode mover a instrução seguinte para outro escopo ou função.
 >- No C++ nativo, se você tiver as verificações de tempo de execução ativadas, definir a instrução seguinte poderá fazer com que uma exceção seja gerada quando a execução chegar ao final do método.
->- Quando a opção Editar e Continuar está habilitada, **Definir Próxima Instrução** falha caso você tenha feito edições que Editar e Continuar não pode remapear imediatamente. Isso pode ocorrer, por exemplo, se você editou o código dentro de um bloco catch. Quando isso acontece, uma mensagem de erro informa que a operação não tem suporte.
+>- Quando a opção Editar e Continuar está habilitada, **Definir Próxima Instrução** falha caso você tenha feito edições que Editar e Continuar não pode remapear imediatamente. Isso pode ocorrer, por exemplo, se você editou o código dentro de um bloco catch. Quando isso acontece, uma mensagem de erro informa que não há suporte para a operação.
 >- No código gerenciado, você não poderá mover a próxima instrução se:
 >   - A instrução a seguir é um método diferente do que a instrução atual.
->   - A depuração foi iniciada pela depuração Just-in-time.
->   - Um desenrolamento de pilha de chamadas está em andamento.
+>   - A depuração foi iniciada pela depuração Just-In-Time.
+>   - Um desenrolamento de pilha de chamada está em andamento.
 >   - Uma exceção System.StackOverflowException ou System.Threading.ThreadAbortException foi lançada.
 
-## <a name="debug-non-user-code"></a><a name="BKMK_Restrict_stepping_to_Just_My_Code"></a>Depurar código de não usuário
+## <a name="debug-non-user-code"></a><a name="BKMK_Restrict_stepping_to_Just_My_Code"></a>Depurar código não usuário
 
-Por padrão, o depurador tenta Depurar apenas o código do aplicativo, habilitando uma configuração chamada *apenas meu código*. Para obter mais detalhes sobre como esse recurso funciona para diferentes tipos de projeto e linguagens, e como você pode personalizá-lo, consulte [apenas meu código](../debugger/just-my-code.md).
+Por padrão, o depurador tenta depurar apenas o código do aplicativo habilitando uma configuração *chamada Apenas Meu Código*. Para obter mais detalhes sobre como esse recurso funciona para diferentes tipos de projeto e linguagens e como você pode [personalizá-lo, consulte Apenas Meu Código](../debugger/just-my-code.md).
 
-Para examinar o código de estrutura, o código de biblioteca de terceiros ou as chamadas do sistema durante a depuração, você pode desabilitar Apenas Meu Código. Em **ferramentas** (ou **depurar**) >   >  **depuração** de opções, desmarque a caixa de seleção **habilitar apenas meu código** . Quando Apenas Meu Código está desabilitado, o código que não é do usuário aparece nas janelas do depurador e o depurador pode entrar no código que não é do usuário.
+Para ver o código da estrutura, o código da biblioteca de terceiros ou as chamadas do sistema durante a depuração, você pode desabilitar Apenas Meu Código. Em **Ferramentas** (ou **Depurar**) > **Depuração** de Opções , desfaça a caixa  >  de seleção **Habilitar Apenas Meu Código** configuração. Quando Apenas Meu Código está desabilitado, o código não usuário é exibido nas janelas do depurador e o depurador pode entrar no código que não é do usuário.
 
 > [!NOTE]
 > Apenas Meu Código não é suportada para projetos de dispositivo.
 
 ### <a name="debug-system-code"></a>Depurar código do sistema
 
-Se você carregou símbolos de depuração para o código do sistema da Microsoft e estiver desabilitado Apenas Meu Código, poderá entrar em uma chamada do sistema da mesma forma que qualquer outra chamada.
+Se você tiver carregado símbolos de depuração para o código do sistema da Microsoft e desabilitado Apenas Meu Código, poderá entrar em uma chamada do sistema assim como qualquer outra chamada.
 
-Para carregar os símbolos da Microsoft, consulte [Configurar locais de símbolo e opções de carregamento](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#configure-symbol-locations-and-loading-options).
+Para carregar símbolos da Microsoft, consulte [Configurar locais de símbolos e opções de carregamento](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#configure-symbol-locations-and-loading-options).
 
 **Para carregar símbolos para um componente do sistema específico:**
 
-1. Enquanto estiver Depurando, abra a janela **módulos** selecionando **depurar**  >    >  **módulos** do Windows ou pressionando **Ctrl** + **ALT** + **U**.
+1. Durante a depuração, abra a janela **Módulos** selecionando **Depurar** Módulos do Windows ou pressionando  >    >   **Ctrl** + **Alt** + **U**.
 
-1. Na janela **módulos** , você pode saber quais módulos têm símbolos carregados na coluna **status do símbolo** . Clique com o botão direito do mouse no módulo para o qual você deseja carregar símbolos e selecione **carregar símbolos**.
+1. Na janela **Módulos,** você pode saber quais módulos têm símbolos carregados na coluna **Status do** Símbolo. Clique com o botão direito do mouse no módulo para o que você deseja carregar símbolos e selecione **Carregar Símbolos**.
 
 ## <a name="step-into-properties-and-operators-in-managed-code"></a><a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a> Intervir em propriedades e operadores no código gerenciado
- O depurador considera propriedades e operadores no código gerenciado por padrão. Na maioria dos casos, isso proporciona uma melhor experiência de depuração. Para habilitar a depuração em Propriedades ou operadores, escolha opções de **depuração**  >  . Na página **depuração**  >  **geral** , desmarque a caixa de seleção **passar por propriedades e operadores (somente gerenciados)** .
+ O depurador considera propriedades e operadores no código gerenciado por padrão. Na maioria dos casos, isso proporciona uma melhor experiência de depuração. Para habilitar a entrada em propriedades ou operadores, escolha **Opções de**  >  **Depuração**. Na página **Depuração** Geral, des marque a caixa de seleção Passar sobre propriedades e operadores  >   **(somente** gerenciados).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [O que é depuração?](../debugger/what-is-debugging.md)
 - [Técnicas e ferramentas de depuração](../debugger/write-better-code-with-visual-studio.md)
-- [Primeira olhada na depuração](../debugger/debugger-feature-tour.md)
+- [Primeiro, veja a depuração](../debugger/debugger-feature-tour.md)

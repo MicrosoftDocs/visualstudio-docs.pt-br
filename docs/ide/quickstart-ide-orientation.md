@@ -1,7 +1,7 @@
 ---
-title: 'Início rápido: tour pelo IDE do Visual Studio'
-description: Saiba mais sobre algumas das janelas, menus e outros recursos de interface do usuário do IDE (ambiente de desenvolvimento integrado) do Visual Studio.
-ms.custom: acquisition
+title: 'Início Rápido: Tour pelo IDE de Visual Studio'
+description: Saiba mais sobre algumas janelas, menus e outros recursos de interface do usuário do Visual Studio IDE (ambiente de desenvolvimento integrado).
+ms.custom: vs-acquisition
 titleSuffix: ''
 ms.date: 03/02/2021
 ms.topic: quickstart
@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f10c3fcca5d87f8371d1373314406cf4aa47ec3
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 0e3a0c62c1ec13ba6fec464a2903512b2acf33ad
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112113223"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386287"
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>Início rápido: Introdução ao IDE do Visual Studio
 
@@ -23,13 +23,13 @@ Nesta introdução de 5 a 10 minutos ao IDE (Ambiente de Desenvolvimento Integra
 
 ::: moniker range="vs-2017"
 
-Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
+Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
+Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
@@ -53,7 +53,7 @@ Se você fechar a **Página Inicial** e desejar vê-la novamente, será possíve
 
 A primeira coisa que você verá depois de abrir o Visual Studio é a janela de início. A janela de início foi projetada para ajudar você a "acessar o código" mais rapidamente. Ela tem opções para clonar o código ou fazer check-out dele, abrir um projeto ou uma solução existente, criar um projeto ou simplesmente abrir uma pasta que contenha alguns arquivos de código.
 
-[![Iniciar janela no Visual Studio 2019](media/vs-2019/start-window-labeled.png)](media/vs-2019/start-window-labeled.png#lightbox)
+[![Janela Iniciar no Visual Studio 2019](media/vs-2019/start-window-labeled.png)](media/vs-2019/start-window-labeled.png#lightbox)
 
 Se essa for a primeira vez que você estiver usando o Visual Studio, sua lista de projetos recentes estará vazia.
 
@@ -81,27 +81,27 @@ Para continuar explorando os recursos do Visual Studio, vamos criar um projeto.
 
 ::: moniker range=">=vs-2019"
 
-1. Na janela iniciar, escolha **criar um novo projeto**.
+1. Na janela inicial, escolha **Criar um novo projeto.**
 
-    :::image type="content" source="../get-started/media/vs-2019/start-window-create-new-project.png" alt-text="Captura de tela da janela ' criar um novo projeto ' no Visual Studio 2019.":::
+    :::image type="content" source="../get-started/media/vs-2019/start-window-create-new-project.png" alt-text="Captura de tela da janela &quot;Criar um novo projeto&quot; no Visual Studio 2019.":::
 
    A janela **Criar um novo projeto** é aberta e mostra diversos *modelos* de projeto. Um modelo contém os arquivos básicos e as configurações necessárias para um determinado tipo de projeto.
 
    Aqui, você pode pesquisar, filtrar e, em seguida, escolher um modelo de projeto. Ela também mostra uma lista dos modelos de projeto usados recentemente por você.
 
-1. Na caixa de pesquisa na parte superior, digite **console** para filtrar a lista de tipos de projeto àqueles que contêm "console" no nome. Refine ainda mais os resultados da pesquisa selecionando **C#** (ou outro idioma de sua escolha) na lista suspensa **todos os idiomas** .
+1. Na caixa de pesquisa na parte superior, digite **console** para filtrar a lista de tipos de projeto àqueles que contêm "console" no nome. Refine ainda mais os resultados da pesquisa escolhendo **C#**  (ou outro idioma de sua escolha) na lista lista de opções Todos os idiomas.
 
-    :::image type="content" source="media/vs-2019/create-new-project.png" alt-text="Captura de tela da janela ' criar um novo projeto ' no Visual Studio 2019, em que você seleciona o modelo desejado.":::
+    :::image type="content" source="media/vs-2019/create-new-project.png" alt-text="Captura de tela da janela &quot;Criar um novo projeto&quot; no Visual Studio 2019, em que você seleciona o modelo que deseja.":::
 
-1. Se você selecionou C#, Visual Basic ou F # como seu idioma, selecione o modelo de **aplicativo de console** e, em seguida, escolha **Avançar**. (Se você tiver selecionado uma linguagem diferente, escolha qualquer modelo. A interface do usuário que veremos é semelhante em todas as linguagens de programação.)
+1. Se você selecionou C#, Visual Basic ou F# como sua linguagem, selecione o modelo Aplicativo de **Console** e, em seguida, **escolha Próximo**. (Se você tiver selecionado uma linguagem diferente, escolha qualquer modelo. A interface do usuário que veremos é semelhante em todas as linguagens de programação.)
 
-1. Na janela **configurar seu novo projeto** , aceite o nome e o local do projeto padrão e escolha **Avançar**.
+1. Na janela **Configurar seu novo projeto,** aceite o nome e o local padrão do projeto e escolha **Próximo.**
 
-    :::image type="content" source="media/vs-2019/configure-new-project-console.png" alt-text="Captura de tela da janela ' configurar um novo projeto ' no Visual Studio 2019, em que você insere o nome do projeto.":::
+    :::image type="content" source="media/vs-2019/configure-new-project-console.png" alt-text="Captura de tela da janela &quot;Configurar um novo projeto&quot; no Visual Studio 2019, em que você ins insira o nome do projeto.":::
 
-1. Na janela **informações adicionais** , verifique se **.NET Core 3,1** aparece no menu suspenso **estrutura de destino** e, em seguida, clique em **criar**.
+1. Na janela **Informações adicionais,** verifique se **o .NET Core 3.1** aparece no menu suspenso Estrutura de Destino e clique em **Criar**. 
 
-    :::image type="content" source="../get-started/media/vs-2019/create-project-additional-info.png" alt-text="Captura de tela da janela ' informações adicionais ' no Visual Studio 2019, onde você seleciona a versão do .NET Core Framework que deseja.":::
+    :::image type="content" source="../get-started/media/vs-2019/create-project-additional-info.png" alt-text="Captura de tela da janela &quot;Informações adicionais&quot; no Visual Studio 2019, em que você seleciona a versão do .NET Core Framework que deseja.":::
 
 ::: moniker-end
 
@@ -143,7 +143,7 @@ A **Lista de Erros** mostra erros, avisos e mensagens sobre o estado atual do c�
 
 A janela de **Saída** mostra as mensagens de saída do build do projeto e do provedor de controle do código-fonte.
 
-Vamos criar o projeto para ver uma saída de build. No menu **Compilar** , escolha **Compilar solução**. A janela **Saída** obtém o foco automaticamente e exibe uma mensagem de build bem-sucedido.
+Vamos criar o projeto para ver uma saída de build. No menu **Build,** escolha **Criar Solução**. A janela **Saída** obtém o foco automaticamente e exibe uma mensagem de build bem-sucedido.
 
 ![Janela de Saída no Visual Studio](media/build-output-minimal.png)
 
@@ -153,7 +153,7 @@ A caixa de pesquisa é uma maneira rápida e fácil de navegar em praticamente t
 
 ::: moniker range="vs-2017"
 
-1. Localize a caixa de pesquisa **Início Rápido** no canto superior direito do IDE. (Como alternativa, pressione **Ctrl** + **P** para acessá-lo.)
+1. Localize a caixa de pesquisa **Início Rápido** no canto superior direito do IDE. (Como alternativa, pressione **Ctrl** + **Q** para acessá-lo.)
 
 2. Digite **detalhamento** na caixa de pesquisa. Nos resultados exibidos, escolha **Projetos e Soluções -> Compilar e Executar** na categoria **Opções**.
 

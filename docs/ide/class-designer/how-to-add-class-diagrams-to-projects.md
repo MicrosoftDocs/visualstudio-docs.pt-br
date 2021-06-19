@@ -13,18 +13,18 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a27f5ae8320e942d5167fcc8260179f8cec96e37
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0af2717efec7cab8594f193c06e8813bd556b01f
+ms.sourcegitcommit: c3713f284c4fe10b10996d5eb67077ddd8641424
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850276"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112375780"
 ---
 # <a name="how-to-add-class-diagrams-to-projects"></a>Como adicionar diagramas de classe a projetos
 
 Para criar, editar e refatorar classes e outros tipos, adicione um diagrama de classe ao projeto em C#, Visual Basic ou C++. Para visualizar diferentes partes do código em um projeto, adicione vários diagramas de classes ao projeto.
 
-Não é possível criar diagramas de classes a partir de projetos que compartilham o código por meio de diversos aplicativos. Para criar diagramas de classe UML, consulte [Criar diagramas e projetos de modelagem UML](../../modeling/what-s-new-for-design-in-visual-studio.md).
+Não é possível criar diagramas de classes a partir de projetos que compartilham o código por meio de diversos aplicativos. Para criar diagramas de classe UML, consulte [Criar diagramas e projetos de modelagem UML](https://devblogs.microsoft.com/devops/uml-designers-have-been-removed-layer-designer-now-supports-live-architectural-analysis/).
 
 ## <a name="install-the-class-designer-component"></a>Instalar o componente do Designer de Classe
 
@@ -61,7 +61,7 @@ Para adicionar vários diagramas de classes, repita as etapas deste procedimento
 
 No **Gerenciador de Soluções**, abra o menu de contexto de um arquivo de classe (clique com o botão direito do mouse) e escolha **Exibir em Diagrama de Classe**.
 
--ou-
+– ou –
 
 No **Modo de Exibição de Classe**, abra o namespace ou o menu de contexto de tipo e escolha **Exibir Diagrama de Classe**.
 
@@ -77,7 +77,7 @@ Um diagrama de classe populado automaticamente é criado.
 > [!NOTE]
 > O Designer de Classe não está disponível nos projetos .NET Core.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Como criar tipos usando o Designer de Classe](how-to-create-types.md)
 - [Como exibir tipos existentes](how-to-view-existing-types.md)

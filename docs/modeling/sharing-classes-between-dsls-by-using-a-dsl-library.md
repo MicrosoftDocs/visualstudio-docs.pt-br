@@ -4,17 +4,17 @@ description: Saiba que, no SDK de visualização e modelagem do Visual Studio, v
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 61e4785ab99ecccc61a097dd27140e250f103de2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c3729e4f386ec5a21c8f30ee3f0df6e7ffa8d891
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899806"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385494"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>Compartilhando classes entre DSLs por meio de uma biblioteca de DSLs
 No SDK de visualização e modelagem do Visual Studio, você pode criar uma definição de DSL incompleta que pode ser importada para outra DSL. Isso permite que você preveja partes comuns de modelos semelhantes.

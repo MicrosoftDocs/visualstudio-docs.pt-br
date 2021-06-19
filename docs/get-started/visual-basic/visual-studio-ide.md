@@ -4,6 +4,7 @@ description: Saiba como usar o Visual Studio para editar, depurar e compilar có
 ms.date: 03/02/2021
 ms.technology: vs-ide-general
 ms.custom:
+- vs-acquisition
 - get-started
 - SEO-VS-2020
 ms.topic: conceptual
@@ -14,12 +15,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 398070e0214e36f696bb69614bb6a51b3462a551
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 486201d61f6bd2d149c9aea66efee1814ce667e7
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101682938"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386625"
 ---
 # <a name="welcome-to-the-visual-studio-ide--visual-basic"></a>Bem-vindo ao IDE do Visual Studio | Visual Basic
 
@@ -281,7 +282,7 @@ Vamos nos aprofundar e criar um programa simples.
 
 ::: moniker range="vs-2017"
 
-1. Na barra de menus do Visual Studio, escolha **Arquivo** > **Novo Projeto**.
+1. Na barra de menus do Visual Studio, escolha **arquivo** > **novo projeto**.
 
    ![Arquivo > Novo projeto na barra de menus](media/file-new-project-menu.png)
 
@@ -432,7 +433,7 @@ Primeiro, vamos renomear a variável `name`:
 
    A variável é renomeada no projeto, o que, em nosso caso, são apenas dois locais.
 
-4. Agora vamos dar uma olhada no IntelliSense. Abaixo da linha que indica `Console.WriteLine("Hello " + username + "!")`, digite o seguinte fragmento de código:
+4. Agora vamos dar uma olhada no IntelliSense. Abaixo da linha que indica `Console.WriteLine("Hello &quot; + username + &quot;!")`, digite o seguinte fragmento de código:
 
     ```vb
    Dim now = Date.
@@ -481,13 +482,13 @@ Primeiro, vamos renomear a variável `name`:
 
 ::: moniker-end
 
-## <a name="debug-code"></a>Depurar o código
+## <a name="debug-code&quot;></a>Depurar o código
 
 Ao escrever o código, você precisa executá-lo e testá-lo para verificar se há bugs. O sistema de depuração do Visual Studio permite que você execute em etapas uma instrução no código por vez e inspecione variáveis durante o processo. Defina *pontos de interrupção* que interrompem a execução do código em uma linha específica. Observe como o valor de uma variável é alterado durante a execução do código e muito mais.
 
-Vamos definir um ponto de interrupção para ver o valor da variável `username` enquanto o programa está "em andamento".
+Vamos definir um ponto de interrupção para ver o valor da variável `username` enquanto o programa está &quot;em andamento&quot;.
 
-1. Encontre a linha de código que indica `Console.WriteLine("Hello " + username + "!")`. Para definir um ponto de interrupção nessa linha de código, ou seja, para fazer com que o programa pause a execução nessa linha, clique na margem mais à esquerda do editor. Clique também em qualquer lugar na linha de código e, em seguida, pressione **F9**.
+1. Encontre a linha de código que indica `Console.WriteLine(&quot;Hello &quot; + username + &quot;!")`. Para definir um ponto de interrupção nessa linha de código, ou seja, para fazer com que o programa pause a execução nessa linha, clique na margem mais à esquerda do editor. Clique também em qualquer lugar na linha de código e, em seguida, pressione **F9**.
 
    Um círculo vermelho é exibido na margem da extrema esquerda, e o código é realçado em vermelho.
 

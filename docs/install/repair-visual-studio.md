@@ -3,7 +3,7 @@ title: Reparar o Visual Studio
 titleSuffix: ''
 description: Saiba como reparar uma instalação do Visual Studio 2017
 ms.date: 10/12/2020
-ms.custom: acquisition
+ms.custom: vs-acquisition
 ms.topic: how-to
 author: j-martens
 ms.author: jmartens
@@ -12,27 +12,27 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 5fd791b035bc99d46f53d499339a9e9f80a42905
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 55ebb7c44b44a14154cc54f54885455821f9ee68
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112306937"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386781"
 ---
 # <a name="repair-visual-studio"></a>Reparar o Visual Studio
 
 Às vezes, a instalação do Visual Studio é danificada ou corrompida. Um reparo é útil para corrigir problemas de tempo de instalação em todas as operações de instalação, incluindo atualizações.
 
 ## <a name="when-to-use-repair"></a>Quando usar o reparo
-* Se você estiver tendo problemas de carga de instalação. Isso pode acontecer quando a escrita do arquivo no disco não é bem-sucedida e não pode ser corrigida excluindo o arquivo corrompido. O reparo pode adquirir os arquivos necessários. 
-* Se você estiver tendo problemas de download do lado do cliente. Supondo que você tenha resolvido problemas de conexão ou proxy, o reparo pode ajudar. 
-* Se você estiver tendo problemas para atualizar Visual Studio. O reparo corrige muitos problemas comuns de atualização. 
+* Se você tiver problemas de carga de instalação. Isso pode acontecer quando a gravação do arquivo no disco não é bem-sucedida e não pode ser corrigida com a exclusão do arquivo corrompido. O reparo pode adquirir novamente os arquivos necessários. 
+* Se você estiver tendo problemas de download no lado do cliente. Supondo que você resolveu quaisquer problemas de conexão ou proxy, o reparo pode ajudar. 
+* Se você estiver tendo problemas para atualizar o Visual Studio. O reparo corrige muitos problemas comuns de atualização. 
 
 > [!TIP] 
-> Se o problema de instalação for causado por um problema em um serviço Windows subjacente, como Windows Installer, o reparo poderá ter o mesmo problema. Problemas sistêmicos podem incluir uma conexão de Windows Installer ou instável com a Internet. Para verificar se há um problema sistêmico, use o relatório de erros gerado da operação de instalação.
+> Se o problema de instalação for causado por um problema em um serviço Windows subjacente, como Windows Installer, o reparo poderá atingir o mesmo problema. Os problemas do sistema podem incluir uma conexão de internet instável ou Windows Installer interrompida. Para verificar se há um problema do sistema, use o relatório de erros gerado pela operação de instalação.
 
 > [!NOTE] 
-> O reparo Visual Studio redefine as configurações do usuário e reins instala novamente os assemblies que você já tem. Se você estiver enfrentando um problema de produto, crie um [tíquete Visual Studio comentários,](https://aka.ms/feedback/suggest?space=8)pois o reparo pode não resolver o problema.
+> O reparo do Visual Studio redefine as configurações do usuário e instala novamente os assemblies que você já tem. Se você estiver enfrentando um problema de produto, crie um [tíquete de comentários do Visual Studio](https://aka.ms/feedback/suggest?space=8), pois o reparo pode não resolver o problema.
 
 ## <a name="how-to-repair"></a>Como reparar
 ::: moniker range="vs-2017"
@@ -48,7 +48,7 @@ ms.locfileid: "112306937"
 
 1. Abra o instalador, escolha **Mais** e, em seguida, escolha **Reparar**.
 
-    ![Reparar Visual Studio do Instalador do Visual Studio](media/repair-visual-studio.png "Reparar Visual Studio do Instalador do Visual Studio")
+    ![Reparar o Visual Studio do Instalador do Visual Studio](media/repair-visual-studio.png "Reparar o Visual Studio do Instalador do Visual Studio")
 
    > [!NOTE]
    > Reparar o Visual Studio redefinirá o ambiente. As personalizações locais, como as extensões do usuário instaladas sem elevação, as configurações de usuário e os perfis serão removidos. As configurações sincronizadas, como temas, cores, associações de teclas serão restauradas.
@@ -65,7 +65,7 @@ ms.locfileid: "112306937"
 
      No Menu Iniciar do Windows, você pode pesquisar "instalador".
 
-     ![Instalador do Visual Studio](media/vs-2019/visual-studio-installer.png "Pesquise a Instalador do Visual Studio")
+     ![Instalador do Visual Studio](media/vs-2019/visual-studio-installer.png "Pesquisar o Instalador do Visual Studio")
 
      > [!NOTE]
      > Também é possível encontrar o Instalador do Visual Studio no seguinte local:
@@ -76,7 +76,7 @@ ms.locfileid: "112306937"
 
 1. No instalador, procure a edição do Visual Studio instalada por você. Em seguida, escolha **Mais** e escolha **Reparar**.
 
-     ![Reparar Visual Studio 2019](media/vs-2019/vs-installer-repair.png "Reparar Visual Studio 2019")
+     ![Reparar o Visual Studio 2019](media/vs-2019/vs-installer-repair.png "Reparar o Visual Studio 2019")
 
    > [!NOTE]
    > Reparar o Visual Studio redefinirá o ambiente. As personalizações locais, como as extensões do usuário instaladas sem elevação, as configurações de usuário e os perfis serão removidos. As configurações sincronizadas, como temas, cores, associações de teclas serão restauradas.

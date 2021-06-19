@@ -1,7 +1,7 @@
 ---
 title: Criar um aplicativo Web ASP.NET Core em C#
 description: Saiba como criar um aplicativo Web simples do Olá, Mundo no Visual Studio com C# e ASP.NET Core, passo a passo.
-ms.custom: acquisition, mvc,seodec18
+ms.custom: vs-acquisition
 ms.date: 11/06/2019
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 61fc3f0cf1e23dcf0f9e22ed7e10050fb84c9ba6
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 65ad48bab545d635763a1cabb4e76734431c2a55
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308058"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384831"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>Início rápido: Usar o Visual Studio para criar seu primeiro aplicativo Web ASP.NET Core
 
@@ -195,11 +195,11 @@ Parabéns por concluir este Guia de Início Rápido! Esperamos que você tenha a
 
    No editor, você verá o código HTML para o texto que aparece na **Home** Page.
 
-   ![O código HTML no arquivo Index.cshtml para a Home page no editor Visual Studio](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page.png)
+   ![O código HTML no arquivo index. cshtml para a Home Page no editor do Visual Studio](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page.png)
 
-1. Altere o texto "Bem-vindo" para ler "**Olá, Mundo!**".
+1. Altere o texto "bem-vindo" para ler "**Olá, mundo!**".
 
-   ![No editor Visual Studio, altere o código HTML padrão que diz Bem-vindo para Olá, Mundo em vez disso](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page-hello-world.png)
+   ![No editor do Visual Studio, altere o código HTML padrão que diz bem-vindo para dizer Olá, Mundo em vez disso](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page-hello-world.png)
 
 1. Escolha **IIS Express** ou pressione **Ctrl**+**F5** para executar o aplicativo e abri-lo em um navegador da Web.
 
@@ -208,9 +208,9 @@ Parabéns por concluir este Guia de Início Rápido! Esperamos que você tenha a
    > [!NOTE]
    > Se você receber uma mensagem de erro informando **Não é possível conectar ao servidor Web 'IIS Express'** ou uma mensagem de erro que mencione um certificado SSL, feche o Visual Studio. Em seguida, abra o Visual Studio usando a opção **Executar como administrador** no menu de contexto acessado ao clicar com o botão direito do mouse. Em seguida, execute o aplicativo novamente.
 
-1. No navegador da Web, verifique se a **Página** Inicial inclui o texto atualizado.
+1. No navegador da Web, verifique se a **Home** Page inclui o texto atualizado.
 
-   ![Exibir a Home page atualizada que inclui as alterações feitas](../ide/media/vs-2019/csharp-aspnet-index-page-hello-world.png)
+   ![Exibir a página inicial atualizada que inclui as alterações feitas](../ide/media/vs-2019/csharp-aspnet-index-page-hello-world.png)
 
 1. Feche o navegador da Web.
 

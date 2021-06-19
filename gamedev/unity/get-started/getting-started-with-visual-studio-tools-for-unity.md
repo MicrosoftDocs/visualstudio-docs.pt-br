@@ -1,7 +1,7 @@
 ---
 title: Introdução às Ferramentas do Visual Studio para Unity | Microsoft Docs
 description: Saiba como instalar e configurar o Visual Studio desenvolvimento do Unity.
-ms.custom: ''
+ms.custom: acquisition
 ms.date: 01/27/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
@@ -13,12 +13,12 @@ manager: crdun
 ms.workload:
 - unity
 zone_pivot_groups: platform
-ms.openlocfilehash: 791f25b61c86f0115c225d505bdb1edb07869961
-ms.sourcegitcommit: 69256dc47489853dc66a037f5b0c1275977540c0
+ms.openlocfilehash: 8eea998731c4d29e533d1e6bf21d4a2870a81ff5
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109782602"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386690"
 ---
 # <a name="get-started-with-visual-studio-and-unity"></a>Começar a trabalhar com Visual Studio e Unity
 
@@ -58,44 +58,44 @@ As ferramentas para Unity estão incluídas na instalação do Visual Studio par
 
 :::zone pivot="windows"
 
-1. Clique no menu **ajuda > verificar atualizações** .
+1. Clique no menu **Ajuda > Verificar Atualizações.**
 
-    ![O menu verificar atualizações no Visual Studio 2019](../media/vs/check-for-updates.png)
+    ![O menu Verificar Atualizações no Visual Studio 2019](../media/vs/check-for-updates.png)
 
 2. Se houver uma atualização disponível, o Instalador do Visual Studio mostrará uma nova versão. Clique no botão **Atualizar**.
 
 :::zone-end
 :::zone pivot="macos"
 
-1. Clique no menu **Visual Studio para Mac > verificar se há atualizações...** para abrir a caixa de diálogo **atualização do Visual Studio** .
-2. Se houver uma atualização disponível, clique no botão **instalar** .
+1. Clique no **menu Visual Studio para Mac > Verificar Atualizações...** para abrir a caixa **de Visual Studio Atualizar.**
+2. Se houver uma atualização disponível, clique no **botão** Instalar.
 
 :::zone-end
 
-## <a name="configure-unity-to-use-visual-studio"></a>Configurar o Unity para usar o Visual Studio
+## <a name="configure-unity-to-use-visual-studio"></a>Configurar o Unity para usar Visual Studio
 
-Por padrão, o Unity já deve estar configurado para usar o Visual Studio ou Visual Studio para Mac como um editor de scripts. Você pode confirmar isso ou alterar o editor de script externo para uma versão específica do Visual Studio do editor do Unity.
+Por padrão, o Unity já deve estar configurado para usar Visual Studio ou Visual Studio para Mac como um editor de scripts. Você pode confirmar isso ou alterar o editor de script externo para uma versão específica do Visual Studio do Editor do Unity.
 
 :::zone pivot="windows"
 
-1. No editor do Unity, selecione o menu **Editar preferências de >** ..
-2. Selecione a guia **Ferramentas externas** à esquerda.
-3. A lista suspensa **Editor de scripts externos** fornece uma maneira de escolher diferentes instalações do Visual Studio. Você também pode clicar em **procurar...** na lista suspensa para adicionar uma versão não listada.
+1. No Editor do Unity, selecione o menu **Editar > Preferências..**
+2. Selecione a **guia Ferramentas** Externas à esquerda.
+3. A **lista suspenso Editor** de Script Externo fornece uma maneira de escolher diferentes instalações de Visual Studio. Você também pode clicar **em Procurar...** na lista suspenso para adicionar uma versão não listada.
 
-    ![O menu de preferências de ferramentas externas no editor do Unity no Windows](../media/vs/preferences-external-tools.png)
+    ![O menu de preferência Ferramentas Externas no Editor do Unity no Windows](../media/vs/preferences-external-tools.png)
 
-4. Se **Procurar...** for selecionado, navegue até o diretório **Common7/IDE** dentro do seu diretório de instalação do Visual Studio e selecione **devenv.exe**. Em seguida, clique em **abrir**.
+4. Se **Procurar...** for selecionado, navegue até o diretório **Common7/IDE** dentro do seu diretório de instalação do Visual Studio e selecione **devenv.exe**. Em seguida, clique **em Abrir.**
 5. Após a seleção do Visual Studio na lista **Editor de Script Externo**, confirme se a caixa de seleção **Anexo do Editor** está selecionada.
 6. Feche a caixa de diálogo **Preferências** para concluir o processo de configuração.
 
 :::zone-end
 :::zone pivot="macos"
 
-1. No editor do Unity, selecione o menu de **preferências do > do Unity** .
-2. Selecione a guia **Ferramentas externas** à esquerda.
-3. A lista suspensa **Editor de scripts externos** fornece uma maneira de escolher diferentes instalações do Visual Studio. Você também pode clicar em **procurar...** na lista suspensa para adicionar uma versão não listada.
+1. No Editor do Unity, selecione o menu **> Unity..**
+2. Selecione a **guia Ferramentas** Externas à esquerda.
+3. A **lista suspenso Editor** de Script Externo fornece uma maneira de escolher diferentes instalações de Visual Studio. Você também pode clicar **em Procurar...** na lista suspenso para adicionar uma versão não listada.
 
-    ![O menu de preferências de ferramentas externas no editor do Unity no macOS](../media/vsm/preferences-external-tools.png)
+    ![O menu de preferência Ferramentas Externas no Editor do Unity no macOS](../media/vsm/preferences-external-tools.png)
 
 4. Feche a caixa de diálogo **Preferências** para concluir o processo de configuração.
 
@@ -103,4 +103,4 @@ Por padrão, o Unity já deve estar configurado para usar o Visual Studio ou Vis
 
 ## <a name="next-steps"></a>Próximas etapas
 
- Para saber como trabalhar com e depurar seu projeto do Unity no Visual Studio, visite [usando ferramentas do Visual Studio para Unity](using-visual-studio-tools-for-unity.md).
+ Para saber como trabalhar e depurar seu projeto do Unity no Visual Studio, visite [Usando Ferramentas do Visual Studio para Unity](using-visual-studio-tools-for-unity.md).
