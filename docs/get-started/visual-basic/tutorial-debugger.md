@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Depurar Visual Basic código'
 description: Conheça os recursos do Visual Studio depurador e como iniciar o depurador, passar pelo código e inspecionar dados em um Visual Basic aplicativo.
-ms.custom: debug-experiment, seodec18, get-started
+ms.custom: debug-experiment, vs-acquisition, get-started
 ms.date: 02/03/2020
 ms.technology: vs-ide-debug
 ms.topic: tutorial
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 42dd3c6b7301162e239bc87764056fdda2d08413
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 48e6b383b0dfdee3a3cb0cc355ffa5900d4dc428
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308409"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390210"
 ---
 # <a name="tutorial-learn-to-debug-visual-basic-code-using-visual-studio"></a>Tutorial: aprenda a depurar código do Visual Basic usando o Visual Studio
 
@@ -199,7 +199,7 @@ Geralmente, usamos atalhos de teclado aqui porque essa é uma boa maneira de exe
 
      O ponteiro amarelo avança para o `SendMessage` método .
 
-     ![Usar F11 para entrar no código](../visual-basic/media/get-started-f11-vb.png "Passo F10")
+     ![Usar F11 para entrar no código](../visual-basic/media/get-started-f11-vb.png "Etapa F10")
 
      F11 é o comando **Intervir**, que avança a execução do aplicativo uma instrução por vez. F11 é uma boa maneira de examinar o fluxo de execução com o máximo de detalhes. (Para mover mais rapidamente pelo código, mostramos algumas outras opções também.) Por padrão, o depurador ignora o código que não é do usuário (se você quiser mais detalhes, [consulte Apenas Meu Código](../../debugger/just-my-code.md)).
 
@@ -215,7 +215,7 @@ Geralmente, usamos atalhos de teclado aqui porque essa é uma boa maneira de exe
 
 1. Enquanto estiver em pausa na chamada de método, pressione **F10** (ou escolha **Depurar**> Passar sobre ) uma vez.
 
-     ![Usar F10 para passar o código](../visual-basic/media/get-started-step-over-vb.png "Passo F10")
+     ![Usar F10 para passar o código](../visual-basic/media/get-started-step-over-vb.png "Passo a passo do F10")
 
      Observe que, desta vez, o depurador não entra no `SendMessage` método . **F10** avança o depurador sem intervir em funções ou métodos no código do aplicativo (o código ainda é executado). Pressionando **F10** na chamada do método `SendMessage` (em vez de **F11**), ignoramos o código de implementação de `SendMessage` (que, no momento, talvez não seja de nosso interesse). Para obter mais informações sobre diferentes maneiras de percorrer seu código, consulte [Navegar no código no depurador](../../debugger/navigating-through-code-with-the-debugger.md).
 
@@ -228,17 +228,17 @@ Geralmente, usamos atalhos de teclado aqui porque essa é uma boa maneira de exe
      ![Usar o recurso Executar para Clicar](../visual-basic/media/get-started-run-to-click-vb.png "Executar com um Clique")
 
    > [!NOTE]
-   > O botão **Executar até o Clique** é novo no [!include[vs_dev15](../../misc/includes/vs_dev15_md.md)]. (Se você não vir o botão de seta verde, use **F11** neste exemplo em vez de avançar o depurador para o lugar certo.)
+   > O botão **Executar até o Clique** é novo no [!include[vs_dev15](../../misc/includes/vs_dev15_md.md)]. (Se você não vir o botão de seta verde, use **F11** neste exemplo para avançar o depurador para o lugar certo.)
 
-2. Clique no botão **Executar para clicar** em ![Executar para clicar em](../../debugger/media/dbg-tour-run-to-click.png "RunToClick").
+2. Clique no **botão Executar para Clicar** Executar até ![Clicar](../../debugger/media/dbg-tour-run-to-click.png "RunToClick").
 
-    O depurador avança para o `Console.WriteLine` método.
+    O depurador avança para o `Console.WriteLine` método .
 
     O uso desse botão é semelhante à configuração de um ponto de interrupção temporário. **Executar até o Clique** é útil para abranger rapidamente uma região visível do código do aplicativo (você pode clicar em qualquer arquivo aberto).
 
 ## <a name="restart-your-app-quickly"></a>Reinicie o aplicativo rapidamente
 
-Clique no botão **reiniciar** ![aplicativo de reinicialização](../../debugger/media/dbg-tour-restart.png "RestartApp") na barra de ferramentas depurar (**Ctrl**  +  **Shift**  +  **F5**).
+Clique no **botão Reiniciar** ![Reiniciar Aplicativo](../../debugger/media/dbg-tour-restart.png "RestartApp") na barra de ferramentas de depuração (**Ctrl**  +  **Shift**  +  **F5**).
 
 Ao pressionar **Reiniciar**, você economiza tempo em comparação com a opção de parar o aplicativo e reiniciar o depurador. O depurador é pausado no primeiro ponto de interrupção que é atingido pela execução do código.
 
@@ -248,15 +248,15 @@ O depurador para novamente no ponto de interrupção que você definiu anteriorm
 
 Os recursos que permitem que você inspecione variáveis são uns dos mais úteis do depurador e há diferentes maneiras de fazer isso. Muitas vezes, ao tentar depurar um problema, você tenta descobrir se as variáveis estão armazenando os valores que elas deveriam conter em um momento específico.
 
-1. Enquanto estiver em pausa na `name += letters[i]` instrução, focalize a `letters` variável e você verá o valor padrão, o valor do primeiro elemento na matriz, `"f"c` .
+1. Enquanto estiver em pausa na instrução, passe o mouse sobre a variável e você verá que é o valor padrão, o valor do primeiro `name += letters[i]` `letters` elemento na matriz, `"f"c` .
 
-1. Em seguida, passe o mouse sobre a `name` variável e você verá seu valor atual, uma cadeia de caracteres vazia.
+1. Em seguida, passe o mouse sobre `name` a variável e você verá seu valor atual, uma cadeia de caracteres vazia.
 
-1. Pressione **F5** (ou **debug**  >  **continue**) algumas vezes para iterar várias vezes pelo `For` loop, pausando novamente no ponto de interrupção e passando o mouse sobre a `name` variável a cada vez para verificar seu valor.
+1. Pressione **F5** (ou **Depurar** Continuar ) algumas vezes para iterar várias vezes pelo loop, pausando novamente no ponto de interrupção e passando o mouse sobre a variável a cada vez para verificar seu  >   `For` `name` valor.
 
      ![Exibir uma dica de dados](../visual-basic/media/get-started-data-tip-vb.png "Exibir uma dica de dados")
 
-     O valor da variável é alterado com cada iteração do `For` loop, mostrando valores de `f` , então, `fr` `fre` e assim por diante.
+     O valor da variável muda com cada iteração do loop, mostrando valores `For` de `f` , em `fr` seguida, , e assim por `fre` diante.
 
      Muitas vezes, durante a depuração, você deseja uma maneira rápida de verificar valores de propriedade em variáveis, para ver se eles estão armazenando os valores que você espera que armazenem. As dicas de dados são uma boa maneira de fazer isso.
 
@@ -264,33 +264,33 @@ Os recursos que permitem que você inspecione variáveis são uns dos mais útei
 
 1. Examine a janela **Autos** na parte inferior do editor de códigos.
 
-    Se ele estiver fechado, abra-o enquanto estiver em pausa no depurador escolhendo **depurar**  >  **janelas**  >  **automáticas**.
+    Se estiver fechado, abra-o enquanto estiver em pausa no depurador escolhendo **Depurar**  >    >  **Autos do** Windows.
 
     Na janela **Autos**, veja as variáveis e seus valores atuais. A janela **Autos** mostra todas as variáveis usadas na linha atual ou a linha anterior (verifique a documentação para saber o comportamento específico a uma linguagem).
 
 1. Em seguida, examine a janela **Locais**, em uma guia ao lado da janela **Autos**.
 
-1. Expanda a `letters` variável para mostrar os elementos que ela contém.
+1. Expanda `letters` a variável para mostrar os elementos que ela contém.
 
-     ![Inspecionar variáveis na janela locais](../visual-basic/media/get-started-locals-window-vb.png "Janela Locais")
+     ![Inspecionar variáveis na janela Locais](../visual-basic/media/get-started-locals-window-vb.png "Janela Locais")
 
     A janela **Locais** mostra as variáveis que estão no [escopo](https://www.wikipedia.org/wiki/Scope_(computer_science)) atual, ou seja, o contexto de execução atual.
 
 ## <a name="set-a-watch"></a>Definir uma inspeção
 
-1. Na janela principal do editor de código, clique com o botão direito do mouse na `name` variável e escolha **Adicionar inspeção**.
+1. Na janela do editor de código principal, clique com o botão direito do mouse na `name` variável e escolha **Adicionar Relógio.**
 
     A janela **Inspeção** é aberta na parte inferior do editor de códigos. Você pode usar uma janela **Inspeção** para especificar uma variável (ou uma expressão) que deseja acompanhar.
 
-    Agora, você tem um observador definido na `name` variável e pode ver seu valor alterado à medida que percorre o depurador. Ao contrário das outras janelas de variáveis, a janela **Inspeção** sempre mostra as variáveis que você está inspecionando (eles ficam esmaecidas quando estão fora do escopo).
+    Agora, você tem um relógio definido na variável e pode ver seu valor mudar conforme você passa `name` pelo depurador. Ao contrário das outras janelas de variáveis, a janela **Inspeção** sempre mostra as variáveis que você está inspecionando (eles ficam esmaecidas quando estão fora do escopo).
 
 ## <a name="examine-the-call-stack"></a>Examinar a pilha de chamadas
 
 1. Durante a pausa no loop `For`, clique na janela **Pilha de Chamadas** que fica aberta por padrão no painel inferior direito.
 
-    Se ele estiver fechado, abra-o enquanto estiver em pausa no depurador escolhendo **depurar**  >    >  **pilha de chamadas** do Windows.
+    Se estiver fechado, abra-o enquanto estiver em pausa no depurador escolhendo **Depurar** Pilha de  >    >  **Chamada do** Windows .
 
-2. Clique em **F11** algumas vezes até ver a pausa do depurador no `SendMessage` método. Examine a janela **Pilha de Chamadas**.
+2. Clique **em F11** algumas vezes até ver a pausa do depurador no `SendMessage` método . Examine a janela **Pilha de Chamadas**.
 
     ![Examinar a pilha de chamadas](../visual-basic/media/get-started-call-stack-vb.png "ExamineCallStack")
 
@@ -307,9 +307,9 @@ Os recursos que permitem que você inspecione variáveis são uns dos mais útei
 
 ## <a name="change-the-execution-flow"></a>Alterar o fluxo de execução
 
-1. Pressione **F11** duas vezes para executar o `Console.WriteLine` método.
+1. Pressione **F11** duas vezes para executar o `Console.WriteLine` método .
 
-1. Com o depurador pausado na `SendMessage` chamada do método, use o mouse para pegar a seta amarela (o ponteiro de execução) à esquerda e mova a seta amarela uma linha para cima, voltando para `Console.WriteLine` .
+1. Com o depurador em pausa na chamada de método, use o mouse para segurar a seta amarela (o ponteiro de execução) à esquerda e mover a seta amarela para cima uma linha, de volta para `SendMessage` `Console.WriteLine` .
 
 1. Pressione **F11**.
 

@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, connectors
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b09ec4278dd78f797067c3acdf3152736fb395c3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 43f55aecf134bf8e4d043a4fc7f6ffa2201f8e95
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899845"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390809"
 ---
 # <a name="properties-of-connectors"></a>Propriedades de conectores
 Os conectores representam relações de domínio em um designer gerado.
@@ -39,7 +39,7 @@ Os conectores representam relações de domínio em um designer gerado.
 |Tem Construtor personalizado|Se `True` , um construtor personalizado será fornecido no código-fonte. Para obter mais informações, consulte [substituindo e estendendo as classes geradas](../modeling/overriding-and-extending-the-generated-classes.md).|Falso|
 |Modificador de herança|Descreve o tipo de herança da classe de código-fonte gerada a partir do conector ( `none` `abstract` ou `sealed` ).|nenhum|
 |Conector base|A classe base deste conector.|(nenhum)|
-|Nome|O nome deste conector.|Nome atual|
+|Name|O nome deste conector.|Nome atual|
 |Namespace|O namespace que é afiliado a esse conector.|Namespace atual|
 |Tipo de dica de ferramenta|Como a dica de ferramenta é definida (fixa, variável ou nenhuma). Se for corrigido, o valor da `Fixed Tooltip Text` propriedade será usado como dica de ferramenta; se for variável, a dica de ferramenta será definida no código personalizado.|\<none>|
 |Observações|Observações informais que estão associadas a este conector.|\<none>|

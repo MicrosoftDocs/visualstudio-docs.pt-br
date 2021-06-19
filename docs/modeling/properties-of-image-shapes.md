@@ -9,21 +9,21 @@ f1_keywords:
 - vs.dsltools.dsldesigner.imageshape
 helpviewer_keywords:
 - Domain-Specific Language, image shape
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8bbd2fff30ab59d14c8aa2762d8cca942063bd79
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 98198b1197de6f5fda6a05a5bae58378a323f718
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918347"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390549"
 ---
 # <a name="properties-of-image-shapes"></a>Propriedades de formas de imagem
 
-Você pode usar formas de imagem para especificar como as classes de domínio aparecem em um designer gerado. Defina uma forma de imagem definindo a `Image` propriedade da classe como um arquivo de imagem predefinido. Há suporte para os seguintes formatos:
+Você pode usar formas de imagem para especificar como as classes de domínio aparecem em um designer gerado. Defina uma forma de imagem definindo a `Image` propriedade da classe como um arquivo de imagem predefinido. Os formatos a seguir são suportados:
 
 - .gif
 
@@ -60,7 +60,7 @@ As formas de imagem têm as propriedades listadas na tabela a seguir.
 |Tem Construtor personalizado|Se `True` , um construtor personalizado será fornecido no código-fonte. Para obter mais informações, consulte [substituindo e estendendo as classes geradas](../modeling/overriding-and-extending-the-generated-classes.md).|Falso|
 |Modificador de herança|Descreve o tipo de herança da classe de código-fonte gerada a partir da forma de imagem `none` ( `abstract` ou `sealed` ).|nenhum|
 |Forma da imagem base|A classe base dessa forma.|(nenhum)|
-|Nome|O nome desta forma.|Nome atual|
+|Name|O nome desta forma.|Nome atual|
 |Namespace|O namespace que é afiliado a esta forma.|Namespace atual|
 |Tipo de dica de ferramenta|O local em que a dica de ferramenta é definida (fixa, variável ou nenhuma). Se for corrigido, o valor da `Fixed Tooltip Text` propriedade será usado como dica de ferramenta; se for variável, a dica de ferramenta será definida no código personalizado.|nenhum|
 |Observações|Observações informais associadas a esta forma.|\<none>|

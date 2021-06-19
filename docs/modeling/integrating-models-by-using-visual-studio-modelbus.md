@@ -4,17 +4,17 @@ description: Saiba que Visual Studio ModelBus fornece um método para criar link
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f0c1d076edc09f7978dcc188b167ce953f631068
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 350398d91d73a722956d195b300311f313ff34db
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957407"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112391056"
 ---
 # <a name="integrate-models-by-using-visual-studio-modelbus"></a>Integrar modelos usando o Visual Studio ModelBus
 
@@ -96,7 +96,7 @@ Para permitir que uma DSL use referências a outra DSL, você deve primeiro torn
 
 2. Na caixa de diálogo, selecione **desejo habilitar esse modelo para consumir referências de barramento de modelo**.
 
-3. No projeto Dsl da DSL consumidora, inclua os assemblies a seguir às referências do projeto. Você encontrará esses assemblies (arquivos. dll) no diretório ModelBusAdapter\bin \\ * da DSL exposta.
+3. No projeto Dsl da DSL consumidora, inclua os assemblies a seguir às referências do projeto. Você encontrará esses assemblies (.dll arquivos) no diretório ModelBusAdapter\bin \\ * da DSL exposta.
 
     - O assembly de DSL exposto, por exemplo **Fabrikam.FamilyTree.Dsl.dll**
 

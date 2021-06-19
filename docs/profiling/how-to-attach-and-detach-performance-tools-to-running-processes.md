@@ -1,7 +1,7 @@
 ---
 title: Anexar ferramentas de desempenho aos processos em execução
 description: Aprenda a usar o criador de perfil do Visual Studio para anexar ou desanexar de um processo em execução para tornar a amostragem e a coleta de dados de desempenho mais fáceis.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -19,12 +19,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 13323a768b9f42e70df9e8be6e64c9dd98438865
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4002334d8fba7b31e33eecd5cf49532ba384046d
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958954"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390015"
 ---
 # <a name="how-to-attach-and-detach-performance-tools-to-running-processes"></a>Como anexar e desanexar ferramentas de desempenho de processos em execução
 O criador de perfil pode ser usado para anexar ou desanexar de um processo em execução para facilitar a amostragem e a coleta de dados de desempenho. É possível usar esse método para criar o perfil de um processo quando você deseja evitar a coleta de dados sobre o tempo de carregamento do aplicativo ou para monitorar o desempenho de um processo após ele atingir um estado específico.
@@ -62,7 +62,7 @@ O criador de perfil pode ser usado para anexar ou desanexar de um processo em ex
 
 3. Clique em **Desanexar**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Controlar a coleta de dados](../profiling/controlling-data-collection.md)
 - [Visão geral da sessão de desempenho](../profiling/performance-session-overview.md)
 - [Como iniciar e terminar a coleta de dados de desempenho](../profiling/how-to-start-and-end-performance-data-collection.md)

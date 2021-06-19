@@ -1,29 +1,29 @@
 ---
-title: Visão geral da interface do usuário das ferramentas de linguagem Domain-Specific
-description: Fornece uma visão geral da interface do usuário de uma solução de ferramentas de linguagem específica de domínio no Visual Studio.
+title: Visão geral da interface do usuário Domain-Specific Language Tools
+description: Fornece uma visão geral da interface do usuário de uma solução de ferramentas de linguagem específica do domínio no Visual Studio.
 ms.date: 11/04/2016
 ms.topic: overview
 f1_keywords:
 - vs.dsltools.dsldesigner.editor
 helpviewer_keywords:
 - Domain-Specific Language Tools, user interface
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: fa47b10edc3804468f6ca0766872849ae9e8a949
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4fe826b373ba2ee468bfe511392eb5564234dc68
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959123"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390952"
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>Visão geral da interface de usuário das Ferramentas de Linguagem Específica do Domínio
-Ao abrir pela primeira vez uma solução de ferramentas de linguagem de Domain-Specific (ferramentas DSL) no Visual Studio, a interface do usuário será semelhante à imagem a seguir.
+Quando você abrir uma solução Domain-Specific ferramentas de linguagem (Ferramentas DSL) no Visual Studio, a interface do usuário será semelhante à imagem a seguir.
 
- ![Designer de DSL](../modeling/media/dsl_designer.png)
+ ![designer dsl](../modeling/media/dsl_designer.png)
 
  A tabela a seguir explica como as partes da interface do usuário são usadas.
 
@@ -37,7 +37,7 @@ Ao abrir pela primeira vez uma solução de ferramentas de linguagem de Domain-S
 ## <a name="the-domain-model-diagram"></a>O diagrama de modelo de domínio
  O diagrama de modelo de domínio é dividido em duas partes. Um dos lados do diagrama mostra os elementos e os relacionamentos no modelo. O outro lado mostra como o modelo deve ser exibido e inclui as formas que serão usadas para exibir os elementos e as propriedades do diagrama de modelo. A imagem a seguir mostra os elementos do diagrama.
 
- ![Designer de DSL com raia](../modeling/media/dsl_desinger.png)
+ ![dsl designer com raia](../modeling/media/dsl_desinger.png)
 
  A tabela a seguir explica alguns dos elementos do diagrama de modelo de domínio.
 

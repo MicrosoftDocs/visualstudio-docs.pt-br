@@ -1,6 +1,6 @@
 ---
 title: Referência de diagramas de dependência
-description: Saiba que, no Visual Studio, você pode usar um diagrama de dependência para visualizar a arquitetura lógica de alto nível do seu sistema.
+description: Saiba que, Visual Studio, você pode usar um diagrama de dependência para visualizar a arquitetura lógica de alto nível do sistema.
 ms.custom: SEO-VS-2020
 ms.date: 09/28/2018
 ms.topic: reference
@@ -17,40 +17,40 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f173e27588538c806d075e0a6b010fbd848f2690
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6bb138164cfab44778c932a4bcb93572a3053a70
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917000"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112391030"
 ---
 # <a name="dependency-diagrams-reference"></a>Diagramas de dependência: referência
 
-No Visual Studio, você pode usar um *diagrama de dependência* para visualizar a arquitetura lógica de alto nível do seu sistema. Um diagrama de dependência organiza os artefatos físicos em seu sistema em grupos lógicos e abstratos chamados *camadas*. Essas camadas descrevem as principais tarefas que os artefatos executam ou os principais componentes do seu sistema. Cada camada também pode conter camadas aninhadas que descrevem tarefas mais detalhadas.
+No Visual Studio, você pode usar um diagrama de *dependência* para visualizar a arquitetura lógica de alto nível do sistema. Um diagrama de dependência organiza os artefatos físicos em seu sistema em grupos lógicos abstratos chamados *camadas*. Essas camadas descrevem as principais tarefas que os artefatos executam ou os principais componentes do sistema. Cada camada também pode conter camadas aninhadas que descrevem tarefas mais detalhadas.
 
-Para ver quais edições do Visual Studio oferecem suporte a esse recurso, consulte [suporte de edição para ferramentas de arquitetura e modelagem](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Para ver quais edições do Visual Studio suporte a esse recurso, confira [Suporte à edição para ferramentas de arquitetura e modelagem](../modeling/analyze-and-model-your-architecture.md#VersionSupport).
 
 > [!NOTE]
-> Há suporte para diagramas de dependência para projetos do .NET Core a partir do Visual Studio 2019 versão 16,2.
+> Há suporte para diagramas de dependência para projetos do .NET Core Visual Studio 2019 versão 16.2.
 
-Você pode especificar as dependências pretendidas ou existentes entre camadas. Essas dependências, que são representadas como setas, indicam quais camadas podem usar ou usar atualmente a funcionalidade representada por outras camadas. Ao organizar seu sistema em camadas que descrevem funções e funções distintas, um diagrama de dependência pode ajudar a facilitar a compreensão, a reutilização e a manutenção de seu código.
+Você pode especificar as dependências pretendido ou existente entre camadas. Essas dependências, representadas como setas, indicam quais camadas podem ser usadas ou atualmente usam a funcionalidade representada por outras camadas. Ao organizar seu sistema em camadas que descrevem funções e funções distintas, um diagrama de dependência pode ajudar a facilitar o entendimento, a reutilização e a manutenção do código.
 
 Use um diagrama de dependência para ajudá-lo a executar as seguintes tarefas:
 
-- Comunique a arquitetura lógica existente ou pretendida do seu sistema.
+- Comunique a arquitetura lógica existente ou pretendido do seu sistema.
 
-- Descubra conflitos entre o código existente e a arquitetura pretendida.
+- Descubra conflitos entre o código existente e a arquitetura pretendido.
 
-- Visualize o impacto das alterações na arquitetura pretendida ao refatorar, atualizar ou desenvolver seu sistema.
+- Visualize o impacto das alterações na arquitetura pretendido ao refactorar, atualizar ou evoluir seu sistema.
 
-- Reforce a arquitetura pretendida durante o desenvolvimento e a manutenção do seu código, incluindo a validação com o check-in e as operações de compilação.
+- Reforce a arquitetura pretendida durante o desenvolvimento e a manutenção do código, incluindo a validação com suas operações de check-in e build.
 
-Este tópico descreve os elementos que você pode usar em um diagrama de dependência. Para obter informações mais detalhadas sobre como criar e desenhar diagramas de dependência, consulte [diagramas de dependência: diretrizes](../modeling/layer-diagrams-guidelines.md). Para obter mais informações sobre padrões de camadas, visite o [site patterns & Practices](https://archive.codeplex.com/?p=apparch).
+Este tópico descreve os elementos que você pode usar em um diagrama de dependência. Para obter informações mais detalhadas sobre como criar e desenhar diagramas de dependência, consulte [Diagramas de dependência: Diretrizes](../modeling/layer-diagrams-guidelines.md). Para obter mais informações sobre padrões de camadas, visite o [site Padrões & Práticas](https://archive.codeplex.com/?p=apparch).
 
 ## <a name="reading-dependency-diagrams"></a>Lendo diagramas de dependência
 
@@ -60,15 +60,15 @@ A tabela a seguir descreve os elementos que você pode usar em um diagrama de de
 
 |**Forma**|**Element**|**Descrição**|
 |-|-|-|
-|1|**Camada**|Um grupo lógico de artefatos físicos em seu sistema. Esses artefatos podem ser namespaces, projetos, classes, métodos e assim por diante.<br /><br /> Para ver os artefatos que estão vinculados a uma camada, abra o menu de atalho da camada e escolha **exibir links** para abrir o **Gerenciador de camadas**.<br /><br /> Para obter mais informações, consulte [Gerenciador de camadas](#Explorer).<br /><br /> -   **Dependências de namespace proibidos** – especifica que os artefatos associados a essa camada não podem depender dos namespaces especificados.<br />-   **Namespaces proibidos** – especifica que os artefatos associados a essa camada não devem pertencer aos namespaces especificados.<br />-   **Namespaces necessários** -especifica que os artefatos associados a essa camada devem pertencer a um dos namespaces especificados.|
-|2|**Dependência**|Indica que uma camada pode usar a funcionalidade em outra camada, mas não vice-versa.<br /><br /> -   **Direction** -especifica a direção da dependência.|
-|3|**Dependência bidirecional**|Indica que uma camada pode usar a funcionalidade em outra camada e vice-versa.<br /><br /> -   **Direction** -especifica a direção da dependência.|
-|4|**Comentário**|Use para adicionar notas gerais ao diagrama ou aos elementos no diagrama.|
+|1|**Camada**|Um grupo lógico de artefatos físicos em seu sistema. Esses artefatos podem ser namespaces, projetos, classes, métodos e assim por diante.<br /><br /> Para ver os artefatos vinculados a uma camada, abra o menu de atalho da camada e escolha Exibir **Links** para abrir o **Layer Explorer.**<br /><br /> Para obter mais informações, consulte [Layer Explorer](#Explorer).<br /><br /> -   **Dependências de namespace proibidas** – especifica que os artefatos associados a essa camada não podem depender dos namespaces especificados.<br />-   **Namespaces proibidos** – especifica que os artefatos associados a essa camada não devem pertencer aos namespaces especificados.<br />-   **Namespaces necessários** – especifica que os artefatos associados a essa camada devem pertencer a um dos namespaces especificados.|
+|2|**Dependência**|Indica que uma camada pode usar a funcionalidade em outra camada, mas não vice-versa.<br /><br /> -   **Direção** – especifica a direção da dependência.|
+|3|**Dependência bidirecional**|Indica que uma camada pode usar a funcionalidade em outra camada e vice-versa.<br /><br /> -   **Direção** – especifica a direção da dependência.|
+|4|**Comentário**|Use para adicionar observações gerais ao diagrama ou elementos no diagrama.|
 |5|**Link de comentário**|Use para vincular comentários a elementos no diagrama.|
 
-## <a name="layer-explorer"></a><a name="Explorer"></a> Gerenciador de camadas
+## <a name="layer-explorer"></a><a name="Explorer"></a> Layer Explorer
 
-Você pode vincular cada camada a artefatos em sua solução, como projetos, classes, namespaces, arquivos de projeto e outras partes do seu software. O número em uma camada mostra o número de artefatos vinculados à camada. No entanto, ao ler o número de artefatos em uma camada, lembre-se do seguinte:
+Você pode vincular cada camada a artefatos em sua solução, como projetos, classes, namespaces, arquivos de projeto e outras partes do seu software. O número em uma camada mostra o número de artefatos que estão vinculados à camada. No entanto, ao ler o número de artefatos em uma camada, lembre-se do seguinte:
 
 - Se uma camada estiver vinculada a um artefato que contenha outros artefatos, mas não estiver vinculada diretamente a outros artefatos, o número incluirá apenas o artefato vinculado. No entanto, os outros artefatos estão incluídos para análise durante a validação da camada.
 
@@ -84,18 +84,18 @@ Para obter mais informações sobre como vincular camadas e artefatos, consulte:
 
 ### <a name="examine-the-linked-artifacts"></a>Examinar os artefatos vinculados
 
-No diagrama de dependência, abra o menu de atalho para uma ou mais camadas e escolha **exibir links**.
+No diagrama de dependência, abra o menu de atalho de uma ou mais camadas e escolha **Exibir Links**.
 
-O **Gerenciador de camadas** é aberto e mostra os artefatos que estão vinculados às camadas selecionadas. O **Gerenciador de camadas** tem uma coluna que mostra cada uma das propriedades dos links de artefato.
+**O Layer Explorer** é aberto e mostra os artefatos vinculados às camadas selecionadas. **O Layer Explorer** tem uma coluna que mostra cada uma das propriedades dos links de artefato.
 
 > [!NOTE]
-> Se você não puder ver todas essas propriedades, expanda a janela **Gerenciador de camadas** .
+> Se você não conseguir ver todas essas propriedades, expanda a janela **Explorador de** Camadas.
 
-|**Coluna no Gerenciador de camadas**|**Descrição**|
+|**Coluna no Layer Explorer**|**Descrição**|
 |-|-|
-|**Categorias**|O tipo de artefato, como uma classe, um namespace, um arquivo de origem e assim por diante|
-|**Camada**|A camada que vincula ao artefato|
-|**Dá suporte à validação**|Se **for true**, o processo de validação de camada poderá verificar se o projeto está de acordo com as dependências de ou para esse elemento.<br /><br /> Se **for false**, o link não participará do processo de validação de camada.<br /><br /> Para obter mais informações, consulte [diagramas de dependência: diretrizes](../modeling/layer-diagrams-guidelines.md).|
+|**Categorias**|O tipo de artefato, como uma classe, namespace, arquivo de origem e assim por diante|
+|**Camada**|A camada que se vincula ao artefato|
+|**Dá suporte à validação**|Se **True**, o processo de validação de camada poderá verificar se o projeto está em conformidade com as dependências desse elemento.<br /><br /> Se **False**, o link não participará do processo de validação de camada.<br /><br /> Para obter mais informações, consulte [Diagramas de dependência: Diretrizes](../modeling/layer-diagrams-guidelines.md).|
 |**Identificador**|A referência ao artefato vinculado|
 
 ## <a name="see-also"></a>Confira também

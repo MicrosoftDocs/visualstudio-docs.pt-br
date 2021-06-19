@@ -9,23 +9,23 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 06f4baed4851681065f3f7ccafecd3af339398f9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f46e2b774cd4da2ef9cdb9ddef7efd19f731ade7
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957368"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112391017"
 ---
 # <a name="dependency-diagrams-guidelines"></a>Diagramas de dependência: diretrizes
 
 Descreva a arquitetura do aplicativo em um alto nível criando *diagramas de dependência* no Visual Studio. Certifique-se de que seu código permaneça consistente com esse design validando seu código com um diagrama de dependência. Você também pode incluir a validação de camada em seu processo de compilação. Veja [vídeo do Channel 9: projete e valide sua arquitetura usando diagramas de dependência](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Using-layer-diagrams-to-design-and-validate-your-architecture).
 
-Para ver quais edições do Visual Studio oferecem suporte a esse recurso, consulte [suporte de edição para ferramentas de arquitetura e modelagem](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Para ver quais edições do Visual Studio oferecem suporte a esse recurso, consulte [suporte de edição para ferramentas de arquitetura e modelagem](../modeling/analyze-and-model-your-architecture.md#VersionSupport).
 
 > [!NOTE]
 > Há suporte para diagramas de dependência para projetos do .NET Core a partir do Visual Studio 2019 versão 16,2.
@@ -117,62 +117,62 @@ Para descrever as alterações que você planeja fazer no sistema ou na arquitet
 
 As alterações de refatoração são melhorias que não afetam o comportamento do aplicativo, mas ajudam a facilitar a alteração e a extensão do código no futuro. O código bem estruturado tem um design que é fácil de abstrair para um diagrama de dependência.
 
-Por exemplo, se você criar uma camada para cada namespace no código e, em seguida, fazer engenharia reversa das dependências, deverá haver um conjunto mínimo de dependências unidirecionais entre as camadas. Se você criar um diagrama mais detalhado usando classes ou métodos como suas camadas, o resultado também deverá ter as mesmas características.
+Por exemplo, se você criar uma camada para cada namespace no código e, em seguida, fazer engenharia reversa das dependências, deverá haver um conjunto mínimo de dependências de via única entre as camadas. Se você criar um diagrama mais detalhado usando classes ou métodos como suas camadas, o resultado também deverá ter as mesmas características.
 
-Se esse não for o caso, o código será mais difícil de ser alterado durante sua vida e será menos adequado para validação usando diagramas de dependência.
+Se esse não for o caso, o código será mais difícil de alterar ao longo de sua vida e será menos adequado para validação usando diagramas de dependência.
 
-## <a name="design-new-areas-of-your-application"></a><a name="NewAreas"></a> Projetar novas áreas do seu aplicativo
+## <a name="design-new-areas-of-your-application"></a><a name="NewAreas"></a> Criar novas áreas do aplicativo
 
-Ao iniciar o desenvolvimento de um novo projeto ou uma nova área em um novo projeto, você pode desenhar camadas e dependências para ajudar a identificar os principais componentes antes de começar a desenvolver o código.
+Ao iniciar o desenvolvimento de um novo projeto ou de uma nova área em um novo projeto, você pode desenhar camadas e dependências para ajudar a identificar os principais componentes antes de começar a desenvolver o código.
 
-- **Mostrar padrões arquitetônicos identificáveis** em seus diagramas de dependência, se possível. Por exemplo, um diagrama de dependência que descreve um aplicativo de área de trabalho pode incluir camadas como apresentação, lógica de domínio e armazenamento de dados. Um diagrama de dependência que abrange um único recurso dentro de um aplicativo pode ter camadas como modelo, exibição e controlador. Para obter mais informações sobre esses padrões, consulte [padrões & práticas: arquitetura do aplicativo](https://archive.codeplex.com/?p=apparch).
+- **Mostre padrões de arquitetura identificáveis** em seus diagramas de dependência, se possível. Por exemplo, um diagrama de dependência que descreve um aplicativo da área de trabalho pode incluir camadas como Apresentação, Lógica de Domínio e Armazenamento de Dados. Um diagrama de dependência que abrange um único recurso dentro de um aplicativo pode ter camadas como Modelo, Exibição e Controlador. Para obter mais informações sobre esses padrões, consulte [Padrões & práticas: arquitetura de aplicativo.](https://archive.codeplex.com/?p=apparch)
 
-- **Crie um artefato de código para cada camada** , como um namespace, uma classe ou um componente. Isso torna mais fácil seguir o código e vincular os artefatos de código a camadas. Assim que você criar cada artefato, vincule-o à camada apropriada.
+- **Crie um artefato de código para cada camada,** como um namespace, classe ou componente. Isso torna mais fácil seguir o código e vincular os artefatos de código às camadas. Assim que você criar cada artefato, vincule-o à camada apropriada.
 
-- **Você não precisa vincular a maioria das classes e outros artefatos a camadas** porque eles se enquadram em artefatos maiores, como namespaces que você já vinculou a camadas.
+- **Você não precisa vincular** a maioria das classes e outros artefatos às camadas porque elas se enquadram em artefatos maiores, como namespaces que você já vinculou a camadas.
 
-- **Crie um novo diagrama para um novo recurso**. Normalmente, haverá um ou mais diagramas de dependência que descrevem todo o aplicativo. Se você estiver criando um novo recurso dentro do aplicativo, não adicione nem altere os diagramas existentes. Em vez disso, crie seu próprio diagrama que reflita as novas partes do código. As camadas no novo diagrama podem incluir camadas de apresentação, lógica de domínio e banco de dados para o novo recurso.
+- **Crie um diagrama para um novo recurso**. Normalmente, haverá um ou mais diagramas de dependência que descrevem todo o aplicativo. Se você estiver projetando um novo recurso dentro do aplicativo, não adicione nem altere os diagramas existentes. Em vez disso, crie seu próprio diagrama que reflita as novas partes do código. As camadas no novo diagrama podem incluir camadas de apresentação, lógica de domínio e banco de dados para o novo recurso.
 
-     Quando você cria o aplicativo, seu código será validado em relação ao diagrama geral e ao diagrama de recursos mais detalhado.
+     Quando você criar o aplicativo, seu código será validado em relação ao diagrama geral e ao diagrama de recursos mais detalhado.
 
 ## <a name="edit-the-layout-for-presentation-and-discussion"></a><a name="EditLayout"></a> Editar o layout para apresentação e discussão
 
-Para ajudá-lo a identificar camadas e dependências ou discuti-las com membros da equipe, edite a aparência e o layout do diagrama das seguintes maneiras:
+Para ajudá-lo a identificar camadas e dependências ou a discutir com os membros da equipe, edite a aparência e o layout do diagrama das seguintes maneiras:
 
-- Altere os tamanhos, as formas e as posições das camadas.
+- Altere os tamanhos, formas e posições das camadas.
 
-- Altere as cores das camadas e dependências.
+- Altere as cores de camadas e dependências.
 
-  - Selecione uma ou mais camadas ou dependências, clique com o botão direito do mouse e clique em **Propriedades**. Na janela **Propriedades** , edite a propriedade **Color** .
+  - Selecione uma ou mais camadas ou dependências, clique com o botão direito do mouse e clique em **Propriedades**. Na janela **Propriedades,** edite a **propriedade** Color.
 
 ## <a name="validate-the-code-against-the-diagram"></a><a name="Validate"></a> Validar o código em relação ao diagrama
 
-Quando tiver editado o diagrama, você poderá validá-lo no código manualmente a qualquer momento ou automaticamente toda vez que criar.
+Quando você editou o diagrama, pode validá-lo no código manualmente a qualquer momento ou automaticamente sempre que criar.
 
 Consulte:
 
 - [Validar o código com diagramas de dependência](../modeling/validate-code-with-layer-diagrams.md)
 
-- [Incluir validação de camada no processo de compilação](#BuildValidation)
+- [Incluir validação de camada no processo de build](#BuildValidation)
 
 ## <a name="update-the-code-to-conform-to-the-new-architecture"></a><a name="UpdateCode"></a> Atualizar o código para estar em conformidade com a nova arquitetura
 
-Normalmente, os erros serão exibidos na primeira vez que você validar o código em relação a um diagrama de dependência atualizado. Esses erros podem ter várias causas:
+Normalmente, os erros aparecerão na primeira vez que você validar o código em relação a um diagrama de dependência atualizado. Esses erros podem ter várias causas:
 
 - Um artefato é atribuído à camada errada. Nesse caso, mova o artefato.
 
 - Um artefato como, por exemplo, uma classe usa outra classe de maneira a entrar em conflito com a arquitetura. Nesse caso, refatore o código para remover a dependência.
 
-Para resolver esses erros, atualize o código até que mais nenhum erro seja exibido durante a validação. Isso geralmente é um processo iterativo. Para obter mais informações sobre esses erros, consulte [validar código com diagramas de dependência](../modeling/validate-code-with-layer-diagrams.md).
+Para resolver esses erros, atualize o código até que mais nenhum erro seja exibido durante a validação. Normalmente, esse é um processo iterativo. Para obter mais informações sobre esses erros, consulte [Validar código com diagramas de dependência](../modeling/validate-code-with-layer-diagrams.md).
 
 > [!NOTE]
-> À medida que desenvolver ou refatorar o código, você poderá ter novos artefatos para vincular ao diagrama de dependência. No entanto, isso pode não ser necessário, por exemplo, quando você tem camadas que representam namespaces existentes, e o novo código só adiciona mais material a esses namespaces.
+> À medida que desenvolve ou refactor o código, você pode ter novos artefatos para vincular ao diagrama de dependência. No entanto, isso pode não ser necessário, por exemplo, quando você tem camadas que representam namespaces existentes e o novo código adiciona apenas mais material a esses namespaces.
 
-Durante o processo de desenvolvimento, você talvez queira suprimir alguns dos conflitos reportados durante a validação. Por exemplo, você talvez queira suprimir erros que já esteja resolvendo ou que não sejam relevantes para seu cenário específico. Ao suprimir um erro, é uma prática recomendada registrar um item de trabalho no Team Foundation. Para executar essa tarefa, consulte [validar código com diagramas de dependência](../modeling/validate-code-with-layer-diagrams.md).
+Durante o processo de desenvolvimento, você talvez queira suprimir alguns dos conflitos reportados durante a validação. Por exemplo, você talvez queira suprimir erros que já esteja resolvendo ou que não sejam relevantes para seu cenário específico. Quando você suprimir um erro, é uma boa prática registrar um item de trabalho no Team Foundation. Para executar essa tarefa, consulte [Validar código com diagramas de dependência](../modeling/validate-code-with-layer-diagrams.md).
 
-## <a name="include-layer-validation-in-the-build-process"></a><a name="BuildValidation"></a> Incluir validação de camada no processo de compilação
+## <a name="include-layer-validation-in-the-build-process"></a><a name="BuildValidation"></a> Incluir validação de camada no processo de build
 
-Para garantir que as alterações futuras no código estejam em conformidade com os diagramas de dependência, inclua a validação de camada no processo de compilação padrão da solução. Sempre que outros membros da equipe criarem a solução, quaisquer diferenças entre as dependências no código e no diagrama de dependência serão relatadas como erros de compilação. Para obter mais informações sobre como incluir a validação de camada no processo de compilação, consulte [validar código com diagramas de dependência](../modeling/validate-code-with-layer-diagrams.md).
+Para garantir que as alterações futuras no código estão em conformidade com os diagramas de dependência, inclua a validação de camada para o processo de build padrão da sua solução. Sempre que outros membros da equipe criarem a solução, quaisquer diferenças entre as dependências no código e o diagrama de dependência serão relatadas como erros de build. Para obter mais informações sobre como incluir a validação de camada no processo de build, consulte [Validar código com diagramas de dependência](../modeling/validate-code-with-layer-diagrams.md).
 
 ## <a name="see-also"></a>Confira também
 

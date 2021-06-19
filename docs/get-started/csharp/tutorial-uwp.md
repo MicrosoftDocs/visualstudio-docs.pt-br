@@ -1,8 +1,8 @@
 ---
-title: 'Criar um aplicativo UWP com o Visual Studio e o C #'
+title: 'Tutorial: Criar aplicativos UWP com Visual Studio & C #'
 description: Criar um aplicativo UWP no Visual Studio com XAML e C#
 titleSuffix: ''
-ms.custom: seodec18, get-started, SEO-VS-2020
+ms.custom: vs-acquisition, get-started, SEO-VS-2020
 ms.date: 09/20/2019
 ms.technology: vs-ide-general
 ms.topic: tutorial
@@ -14,22 +14,22 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e68039e02a6181ef7970fdc6a1b3bd6ad173093
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 2e89c58e3c0dca2b5d009a592d3f242646339f8f
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107295631"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390288"
 ---
-# <a name="tutorial-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>Tutorial: criar seu primeiro aplicativo Plataforma Universal do Windows no Visual Studio com XAML e C&#35;
+# <a name="tutorial-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>Tutorial: Criar seu primeiro aplicativo Plataforma Universal do Windows em Visual Studio com XAML e C&#35;
 
 Nesta introdução ao IDE (ambiente de desenvolvimento integrado) do Visual Studio, você criará um aplicativo "Olá, Mundo" que poderá ser executado em qualquer dispositivo Windows 10. Para fazer isso, você usará um modelo de projeto da UWP (Plataforma Universal do Windows), a linguagem XAML e a linguagem de programação C#.
 
 ::: moniker range="vs-2017"
-Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
+Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) para instalá-lo gratuitamente.
 ::: moniker-end
 ::: moniker range="vs-2019"
-Se você ainda não instalou o Visual Studio, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
+Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/downloads) para instalá-lo gratuitamente.
 ::: moniker-end
 
 ## <a name="create-a-project"></a>Criar um projeto
@@ -39,12 +39,12 @@ Primeiro, crie um projeto da Plataforma Universal do Windows. O tipo de projeto 
 ::: moniker range="vs-2017"
 1. Abra o Visual Studio.
 
-1. Na barra de menus superior, escolha **arquivo** > **novo** > **projeto**.
+1. Na barra de menus superior, escolha **Arquivo** > **Novo** > **Projeto**.
 
 1. No painel esquerdo da caixa de diálogo **Novo Projeto**, expanda **Visual C#** e, em seguida, escolha **Universal do Windows**. No painel do meio, escolha **Aplicativo em Branco (Universal do Windows)**. Em seguida, nomeie o projeto como *HelloWorld* e escolha **OK**.
 
    > [!NOTE]
-   > Certifique-se de que o local do projeto de origem esteja em uma nova unidade formatada do **sistema de arquivos de tecnologia (NTFS)** , como a unidade do sistema operacional (SO). Caso contrário, você pode ter problemas para criar e executar seu projeto. 
+   > Certifique-se de que o local do projeto de origem está em uma unidade formatada **do NTFS (New Technology File System),** como a unidade do sistema operacional. Caso contrário, você poderá ter problemas para criar e executar seu projeto. 
 
    ![Modelo de projeto Universal do Windows na caixa de diálogo Novo Projeto no IDE do Visual Studio](media/new-project-csharp-uwp-helloworld.png)
 
@@ -66,13 +66,13 @@ Primeiro, crie um projeto da Plataforma Universal do Windows. O tipo de projeto 
    > [!NOTE]
    > Se você não vir o modelo de projeto **Aplicativo em Branco (Universal Windows)**, clique no link **Instalar mais ferramentas e recursos**.<br><br>![Clicar no link Instalar mais ferramentas e recursos](media/vs-2019/uwp-not-finding.png)<br><br>O Instalador do Visual Studio é iniciado. Escolha a carga de trabalho **Desenvolvimento na Plataforma Universal do Windows** e, em seguida, selecione **Modificar**.<br><br>![Carga de trabalho de desenvolvimento na Plataforma Universal do Windows no Instalador do Visual Studio](media/uwp-dev-workload.png)
 
-1. Dê um nome ao projeto, _HelloWorld_, e escolha **criar**.
+1. Dê um nome ao projeto, _HelloWorld,_ e escolha **Criar**.
 
-   ![Tela configurar seu projeto](media/vs-2019/uwp-configure-your-project.png)
+   ![Configurar a tela do projeto](media/vs-2019/uwp-configure-your-project.png)
 
 1. Aceite as configurações padrão de **Versão de destino** e de **Versão mínima** na caixa de diálogo **Novo Projeto da Plataforma Universal do Windows**.
 
-   ![Aceite as configurações de versão de destino padrão e de versão mínima na caixa de diálogo novo projeto de Plataforma Universal do Windows](media/vs-2019/new-uwp-project-target-minver-dialog.png)
+   ![Aceite as configurações padrão versão de destino e Versão mínima na caixa de diálogo Novo Plataforma Universal do Windows Projeto](media/vs-2019/new-uwp-project-target-minver-dialog.png)
 ::: moniker-end
 
    > [!NOTE]
@@ -102,7 +102,7 @@ Primeiro, crie um projeto da Plataforma Universal do Windows. O tipo de projeto 
 
    ![Clique na Caixa de Ferramentas para abrir a janela de submenu Caixa de Ferramentas](media/uwp-toolbox.png)
 
-   (Se a opção **Caixa de Ferramentas** não for exibida, ela poderá ser aberta na barra de menus. Para fazer isso, escolha **Exibir**  >  **barra de ferramentas**. Ou pressione **Ctrl** + **ALT** + **X**.)
+   (Se a opção **Caixa de Ferramentas** não for exibida, ela poderá ser aberta na barra de menus. Para fazer isso, escolha **Exibir Barra**  >  **de Ferramentas**. Ou pressione **Ctrl** + **Alt** + **X**.)
 
 1. Clique no ícone **Fixar** para encaixar a janela Caixa de Ferramentas.
 
@@ -112,17 +112,17 @@ Primeiro, crie um projeto da Plataforma Universal do Windows. O tipo de projeto 
 
    ![Clique no controle de Botão e arraste-o para a tela de Design](media/uwp-toolbox-add-button-control.png)
 
-   Se você olhar o código no **editor XAML**, verá que o botão também foi adicionado lá:
+   Se você olhar o código no **Editor XAML,** verá que o botão foi adicionado lá também:
 
-   ![Mostrar botão no editor XAML](media/uwp-xaml-control-code-window.png)
+   ![Botão Mostrar no editor XAML](media/uwp-xaml-control-code-window.png)
 
 ### <a name="add-a-label-to-the-button"></a>Adicionar um rótulo para o botão
 
-1. No **editor XAML**, altere o valor de conteúdo do botão de "botão" para "Olá, mundo!"
+1. No **Editor XAML,** altere o valor de Conteúdo do Botão de "Botão" para "Olá, Mundo!"
 
    ![Altere o valor do conteúdo do botão para Olá, Mundo](media/uwp-change-button-text-in-xaml-code-window.png)
 
-1. Observe que o botão na **Designer XAML** também é alterado.
+1. Observe que o botão **no** Designer XAML também muda.
 
    ![O botão é alterado para Olá, Mundo na tela de design](media/uwp-button-text-change-in-design-canvas.png)
 
@@ -168,7 +168,7 @@ O código usa algumas APIs do Windows para criar um objeto de sintetização de 
 
    ![Clique em um Computador Local para iniciar e depurar o aplicativo UWP](media/uwp-start-or-debug.png)
 
-   (Como alternativa, você pode escolher **Depurar** > **Iniciar Depuração** na barra de menus ou pressionar F5 para iniciar seu aplicativo.)
+   (Como alternativa, você pode escolher **Depurar** > **Inicie a Depuração** na barra de menus ou pressione F5 para iniciar seu aplicativo.)
 
 1. Veja o aplicativo, que aparece logo depois que uma tela inicial desaparece. O aplicativo deve ser semelhante a este:
 
@@ -178,7 +178,7 @@ O código usa algumas APIs do Windows para criar um objeto de sintetização de 
 
    Seu dispositivo Windows 10 dirá literalmente "Olá, Mundo!"
 
-1. Para fechar o aplicativo, clique no botão **Parar Depuração** na barra de ferramentas. (Como alternativa, escolha **depurar**  >  **Pare a depuração** na barra de menus ou pressione Shift + F5.)
+1. Para fechar o aplicativo, clique no botão **Parar Depuração** na barra de ferramentas. (Como alternativa, escolha **Depurar**  >  **Pare a depuração** na barra de menus ou pressione Shift+F5.)
 
 ::: moniker-end
 ::: moniker range=">=vs-2019"
@@ -188,7 +188,7 @@ O código usa algumas APIs do Windows para criar um objeto de sintetização de 
 
    ![Clique em um Computador Local para iniciar e depurar o aplicativo UWP](media/uwp-start-or-debug.png)
 
-   (Como alternativa, você pode escolher **Depurar** > **Iniciar Depuração** na barra de menus ou pressionar F5 para iniciar seu aplicativo.)
+   (Como alternativa, você pode escolher **Depurar** > **Inicie a Depuração** na barra de menus ou pressione F5 para iniciar seu aplicativo.)
 
 1. Veja o aplicativo, que aparece logo depois que uma tela inicial desaparece. O aplicativo deve ser semelhante a este:
 
