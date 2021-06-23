@@ -1,5 +1,5 @@
 ---
-title: Visão geral do Designer XAML
+title: Criar UIs com o Visual Studio Designer XAML
 description: Saiba mais sobre a interface do usuário do espaço de trabalho e os recursos do Designer XAML no Blend para Visual Studio que fornece uma interface visual para ajudá-lo a criar aplicativos baseados em XAML.
 ms.date: 03/03/2020
 ms.topic: conceptual
@@ -14,12 +14,12 @@ ms.assetid: c54969a7-d75a-4a35-9b37-af7a596a7c24
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: 8f022d0f27977488fb089f2cffb40aad22365b46
-ms.sourcegitcommit: 4a91c63683ba1c1832b1ba96657862a849320d81
+ms.openlocfilehash: ef7d94acbb558ef2a8a3c557051e6dea16be916c
+ms.sourcegitcommit: 809fff25b7701882c899c639eeb6da38ad4fb88a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110565226"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "112550682"
 ---
 # <a name="create-a-ui-by-using-xaml-designer"></a>Criar uma interface do usuário usando o Designer XAML
 
@@ -137,7 +137,7 @@ Exibe ou oculta elementos da prancheta. Aparece como um símbolo de olho quando 
 
 **Bloquear/desbloquear**
 
-Bloqueia ou desbloqueia elementos da prancheta. Os elementos bloqueados não podem ser modificados. Aparece como um símbolo de cadeado quando bloqueado. Você também pode pressionar **Ctrl** + **l** para bloquear um elemento e **Shift** + **Ctrl** + **l** para desbloqueá-lo.
+Bloqueia ou desbloqueia elementos da prancheta. Os elementos bloqueados não podem ser modificados. Aparece como um símbolo de cadeado quando bloqueado. Você também pode pressionar **Ctrl** + **L** para bloquear um elemento e **Shift** + **Ctrl** + **L** para desbloqueá-lo.
 
 **Retornar escopo para pageRoot**
 

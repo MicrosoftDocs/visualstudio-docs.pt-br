@@ -1,6 +1,6 @@
 ---
 title: Criar um aplicativo Node.js e React
-description: Saiba como criar um projeto de aplicativo Web Node.js de um modelo do Visual Studio.
+description: Saiba como criar um projeto Node.js aplicativo Web de um Visual Studio modelo.
 ms.custom: vs-acquisition
 ms.date: 4/21/2020
 ms.topic: tutorial
@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 9a45be2c18466754fba5469c59396f7a7791156d
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 3299f38e99c6b96cacd3c3661937a29bdec3c93d
+ms.sourcegitcommit: 809fff25b7701882c899c639eeb6da38ad4fb88a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112386833"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "112550695"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>Tutorial: Criar um aplicativo Node.js e React no Visual Studio
 
@@ -60,13 +60,13 @@ O webpack empacota arquivos JavaScript para que eles possam ser executados em um
 * Você precisa ter o Visual Studio instalado e a carga de trabalho de desenvolvimento de Node.js.
 
     ::: moniker range=">=vs-2019"
-    Se você ainda não instalou o Visual Studio 2019, vá para a página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads/) para instalá-lo gratuitamente.
+    Se você ainda não instalou o Visual Studio 2019, acesse a página [Visual Studio downloads](https://visualstudio.microsoft.com/downloads/) para instalá-lo gratuitamente.
     ::: moniker-end
     ::: moniker range="vs-2017"
     Se você ainda não tiver instalado o Visual Studio 2017, acesse a página [Downloads do Visual Studio](https://visualstudio.microsoft.com/downloads/) para instalá-lo gratuitamente.
     ::: moniker-end
 
-    Se você precisar instalar a carga de trabalho, mas já tiver o Visual Studio, vá para **ferramentas**  >  **obter ferramentas e recursos...**, que abre o instalador do Visual Studio. Escolha a carga de trabalho **Desenvolvimento de Node.js** e, em seguida, selecione **Modificar**.
+    Se você precisar instalar a carga de trabalho, mas já tiver Visual Studio, acesse Ferramentas Obter Ferramentas e  >  **Recursos...**, que abre o Instalador do Visual Studio. Escolha a carga de trabalho **Desenvolvimento de Node.js** e, em seguida, selecione **Modificar**.
 
     ![Carga de trabalho Node.js no instalador do VS](../ide/media/quickstart-nodejs-workload.png)
 
@@ -74,9 +74,9 @@ O webpack empacota arquivos JavaScript para que eles possam ser executados em um
 
     Este tutorial foi testado com a versão 12.6.2.
 
-    Se você não o tiver instalado, recomendamos que instale a versão LTS do site [Node.js](https://nodejs.org/en/download/) para obter a melhor compatibilidade com estruturas e bibliotecas externas. Node.js é compilado para arquiteturas de 32 bits e 64 bits. As ferramentas de Node.js no Visual Studio, incluídas na carga de trabalho do Node.js, dão suporte a ambas as versões. Apenas um é necessário e o instalador do Node.js dá suporte apenas a uma instalação de cada vez.
+    Se você não o tiver instalado, recomendamos instalar a versão LTS do siteNode.jspara melhor [ compatibilidade ](https://nodejs.org/en/download/) com estruturas e bibliotecas externas. Node.js é criado para arquiteturas de 32 bits e 64 bits. As Node.js de Visual Studio, incluídas na carga de trabalho Node.js, são suportadas em ambas as versões. Apenas um é necessário e o Node.js instalador dá suporte apenas a um que está sendo instalado por vez.
 
-    Em geral, o Visual Studio detecta automaticamente o runtime do Node.js instalado. Se ele não detectar um tempo de execução instalado, você poderá configurar seu projeto para fazer referência ao tempo de execução instalado na página Propriedades (depois de criar um projeto, clique com o botão direito do mouse no nó do projeto, escolha **Propriedades** (ou pressione **ALT**  +  **Enter**) e defina o **caminho doNode.exe**). Você pode usar uma instalação global do Node.js ou pode especificar o caminho para um intérprete local em cada um de seus projetos de Node.js. 
+    Em geral, o Visual Studio detecta automaticamente o runtime do Node.js instalado. Se ele não detectar um runtime instalado, você poderá configurar seu projeto para referenciar o runtime instalado na página de propriedades (depois de criar um projeto, clicar com o botão direito do mouse no nó do projeto, escolher Propriedades **(ou** pressionar **Alt**  +  **Enter)** e definir **o caminhoNode.exe**). Você pode usar uma instalação global do Node.js ou especificar o caminho para um interpretador local em cada um dos seus projetos Node.js dados. 
 
 ## <a name="create-a-project"></a>Criar um projeto
 
@@ -87,26 +87,26 @@ Primeiro, crie um projeto de aplicativo Web Node.js.
 1. Criar um novo projeto.
 
     ::: moniker range=">=vs-2019"
-    Pressione **Esc** para fechar a janela de início. Digite **Ctrl + Q** para abrir a caixa de pesquisa, digite **Node.js** e, em seguida, escolha **em branco Node.js aplicativo Web-JavaScript**. (Embora este tutorial use o compilador TypeScript, as etapas exigem que você comece com o modelo **JavaScript** .)
+    Pressione **Esc** para fechar a janela de início. Digite **Ctrl + Q** para abrir a caixa de pesquisa, digite **Node.js** e escolha Aplicativo Web em branco Node.js Web **– JavaScript.** (Embora este tutorial use o compilador TypeScript, as etapas exigem que você comece com o **modelo JavaScript.)**
     
     Na caixa de diálogo que aparece, escolha **Criar**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Na barra de menus superior, escolha **arquivo**  >  **novo**  >  **projeto**. No painel esquerdo da caixa de diálogo **Novo Projeto**, expanda **JavaScript** e escolha **Node.js**. No painel central, escolha **Aplicativo Web Node.js em Branco**, digite o nome **NodejsWebAppBlank** e escolha **OK**.
+    Na barra de menus superior, escolha **Arquivo**  >  **Novo**  >  **Projeto**. No painel esquerdo da caixa de diálogo **Novo Projeto**, expanda **JavaScript** e escolha **Node.js**. No painel central, escolha **Aplicativo Web Node.js em Branco**, digite o nome **NodejsWebAppBlank** e escolha **OK**.
     ::: moniker-end
-    Se você não vir o modelo de projeto de **aplicativo Web Node.js em branco** , deverá adicionar a carga de trabalho de **desenvolvimento deNode.js** . Confira instruções detalhadas nos [Pré-requisitos](#prerequisites).
+    Se você não vir o modelo de projeto Aplicativo **Web** Node.js em branco, deverá adicionar a carga de trabalhoNode.js **desenvolvimento.** Confira instruções detalhadas nos [Pré-requisitos](#prerequisites).
 
     O Visual Studio cria a nova solução e abre seu projeto.
 
     ![Projeto Node.js no Gerenciador de Soluções](../javascript/media/tutorial-nodejs-react-project-structure.png)
 
-    (1) Realçado em **negrito** no projeto, usando o nome fornecido na caixa de diálogo **Novo Projeto**. No sistema de arquivos, este projeto é representado por um arquivo *.njsproj* na pasta do projeto. Você pode definir propriedades e variáveis de ambiente associadas ao projeto clicando com o botão direito do mouse no projeto e escolhendo **Propriedades** (ou pressione **ALT**  +  **Enter**). Você pode fazer o ciclo com outras ferramentas de desenvolvimento, porque o arquivo de projeto não faz alterações personalizadas na fonte do projeto Node.js.
+    (1) Realçado em **negrito** no projeto, usando o nome fornecido na caixa de diálogo **Novo Projeto**. No sistema de arquivos, este projeto é representado por um arquivo *.njsproj* na pasta do projeto. Você pode definir propriedades e variáveis de ambiente associadas ao projeto clicando com o botão direito do mouse no projeto e escolhendo **Propriedades** (ou pressione **Alt**  +  **Enter**). Você pode fazer o ciclo com outras ferramentas de desenvolvimento, porque o arquivo de projeto não faz alterações personalizadas na fonte do projeto Node.js.
 
     (2) No nível superior, há uma solução que, por padrão, tem o mesmo nome do projeto. Uma solução, representada por um arquivo *.sln* no disco, é um contêiner para um ou mais projetos relacionados.
 
     (3) O nó do npm mostra os pacotes npm instalados. Clique com o botão direito do mouse no nó do npm para pesquisar e instalar pacotes npm usando uma caixa de diálogo ou instalar e atualizar pacotes usando as configurações de *package.json* e as opções de clique com o botão direito do mouse no nó do npm.
 
-    (4) *package.json* é um arquivo usado pelo npm para gerenciar versões e dependências de pacote para os pacotes instalados localmente. Para obter mais informações, consulte [Manage NPM Packages](../javascript/npm-package-management.md).
+    (4) *package.json* é um arquivo usado pelo npm para gerenciar versões e dependências de pacote para os pacotes instalados localmente. Para obter mais informações, consulte [Gerenciar pacotes npm](../javascript/npm-package-management.md).
 
     (5) Arquivos de projeto como *server.js* aparecem no nó do projeto. *server.js* é o arquivo de inicialização do projeto e é por isso que ele é exibido em **negrito**. Defina o arquivo de inicialização clicando com o botão direito do mouse em um arquivo no projeto e selecionando **Definir como arquivo de inicialização do Node.js**.
 
@@ -125,7 +125,7 @@ Este aplicativo requer um número de módulos npm para ser executado corretament
 
 1. No Gerenciador de Soluções (painel direito), clique com botão direito do mouse no nó **npm** do projeto e escolha **Instalar Novos Pacotes npm**.
 
-    Na caixa de diálogo **Instalar Novos Pacotes npm**, você pode optar por instalar a versão mais recente do pacote ou especificar uma versão. Se você optar por instalar a versão atual desses pacotes, mas encontrar erros inesperados posteriormente, talvez queira instalar as versões exatas do pacote descritas posteriormente nestas etapas.
+    Na caixa de diálogo **Instalar Novos Pacotes npm**, você pode optar por instalar a versão mais recente do pacote ou especificar uma versão. Se você optar por instalar a versão atual desses pacotes, mas tiver erros inesperados posteriormente, talvez queira instalar as versões exatas do pacote descritas posteriormente nestas etapas.
 
 1. Na caixa de diálogo **Instalar Novos Pacotes npm**, procure o pacote react e selecione **Instalar Pacote** para instalá-lo.
 
@@ -150,13 +150,13 @@ Este aplicativo requer um número de módulos npm para ser executado corretament
     }
     ```
 
-    Se já houver uma seção `dependencies` em sua versão do modelo em branco, basta substituí-la pelo código JSON anterior. Para obter mais informações sobre o uso desse arquivo, consulte [package.jsna configuração](../javascript/configure-packages-with-package-json.md).
+    Se já houver uma seção `dependencies` em sua versão do modelo em branco, basta substituí-la pelo código JSON anterior. Para obter mais informações sobre o uso desse arquivo, [ consultepackage.jsconfiguração](../javascript/configure-packages-with-package-json.md).
 
 1. Salve as alterações.
 
-1. Clique com o botão direito do mouse em nó **NPM** em seu projeto e escolha **instalar pacotes do NPM**.
+1. Clique com o botão direito do mouse no nó **npm** em seu projeto e **escolha Instalar pacotes npm**.
 
-    Esse comando executa o comando NPM install diretamente.
+    Esse comando executa o comando npm install diretamente.
 
     No painel inferior, escolha a janela de **Saída** para ver o progresso da instalação dos pacotes. A instalação pode levar alguns minutos e talvez você não veja os resultados imediatamente. Para ver a saída, verifique se marcou **Npm** no campo **Mostrar saída de** na janela de **Saída**. (Para abrir a janela, escolha **Exibir**  >  **Saída** ou pressione **Ctrl**  +  **Alt**  +  **O**.)
 
@@ -308,7 +308,7 @@ Nas etapas anteriores, você adicionou *webpack-config.js* ao projeto. Em seguid
 
 1. No prompt de comando, digite o seguinte comando:
 
-    `node_modules\.bin\webpack app.tsx --config webpack-config.js`
+    `node_modules\.bin\webpack ./app.tsx --config webpack-config.js`
 
     A janela do prompt de comando mostra o resultado.
 
@@ -336,7 +336,7 @@ Do Visual Studio 2019 em diante, é necessário um script de build. Em vez de tr
 
    ```json
    "scripts": {
-    "build": "webpack-cli app.tsx --config webpack-config.js"
+    "build": "webpack-cli ./app.tsx --config webpack-config.js"
    }
    ```
 
