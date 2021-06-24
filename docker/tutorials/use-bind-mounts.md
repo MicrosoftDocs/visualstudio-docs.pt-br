@@ -1,6 +1,6 @@
 ---
-title: 'Tutorial do Docker-parte 5: usar montagens de associação'
-description: Descreve como usar montagens de associação para controlar o ponto de montagem no host.
+title: 'Tutorial do Docker – Parte 5: Usar montagens de vinculação'
+description: Descreve como usar montagens de vinculação para controlar o ponto de montagem no host.
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
@@ -9,58 +9,59 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 57cb56d0d9a93d0f11e4047f6e25b64841c47e93
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6a4aa7623f69f9b02f9649a1a66ade010a823669
+ms.sourcegitcommit: 98d187abd9352d2255348b84d99d015e65caa0ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841673"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112574107"
 ---
-# <a name="use-bind-mounts"></a>Usar montagens de associação
+# <a name="use-bind-mounts"></a>Usar montagens de vinculação
 
-No capítulo anterior, você aprendeu e usou um **volume nomeado** para manter os dados em seu banco de dado. Os volumes nomeados são ótimos se você simplesmente deseja armazenar dados, pois não precisa se preocupar com o *local em que* os dados são armazenados.
+No capítulo anterior, você aprendeu e usou um **volume nomeado** para persistir os dados em seu banco de dados. Volumes nomeados serão ótimos se você simplesmente quiser armazenar dados, pois não precisa se preocupar com o *local* em que os dados são armazenados.
 
-Com **montagens de associação**, você controla o mountpoint exato no host. Você pode usar isso para manter dados, mas geralmente é usado para fornecer dados adicionais em contêineres. Ao trabalhar em um aplicativo, você pode usar uma montagem de associação para montar o código-fonte no contêiner para permitir que ele veja alterações de código, responder e permitir que você veja as alterações imediatamente.
+Com **montagens de vinculação**, você controla o ponto de montagem exato no host. Você pode usar isso para persistir dados, mas geralmente é usado para fornecer dados adicionais em contêineres. Ao trabalhar em um aplicativo, você pode usar uma montagem de vinculação para montar o código-fonte no contêiner para permitir que ele veja alterações de código, responda e deixe que você veja as alterações imediatamente.
 
-Para aplicativos baseados em nó, [nodemon](https://npmjs.com/package/nodemon) é uma excelente ferramenta para observar alterações de arquivo e reiniciar o aplicativo. Há ferramentas equivalentes na maioria das outras linguagens e estruturas.
+Para aplicativos baseados em [Nó, nodemon](https://npmjs.com/package/nodemon) é uma ótima ferramenta para observar as alterações de arquivo e reiniciar o aplicativo. Há ferramentas equivalentes na maioria das outras linguagens e estruturas.
 
-## <a name="quick-volume-type-comparisons"></a>Comparações de tipo de volume rápido
+## <a name="quick-volume-type-comparisons"></a>Comparações rápidas de tipo de volume
 
-As montagens de ligação e os volumes nomeados são os dois tipos principais de volumes que acompanham o mecanismo do Docker. No entanto, drivers de volume adicionais estão disponíveis para dar suporte a outros casos de uso ([SFTP](https://github.com/vieux/docker-volume-sshfs), [ceph](https://ceph.com/geen-categorie/getting-started-with-the-docker-rbd-volume-plugin/), [NetApp](https://netappdvp.readthedocs.io/en/stable/), [S3](https://github.com/elementar/docker-s3-volume)e mais).
+Montagens de vinculação e volumes nomeados são os dois tipos principais de volumes que vêm com o mecanismo do Docker. No entanto, drivers de volume adicionais estão disponíveis para dar suporte a outros casos de uso[(SFTP,](https://github.com/vieux/docker-volume-sshfs) [Ceph,](https://ceph.com/geen-categorie/getting-started-with-the-docker-rbd-volume-plugin/) [NetApp,](https://netappdvp.readthedocs.io/en/stable/) [S3](https://github.com/elementar/docker-s3-volume)e muito mais).
 
 | Propriedade | Volumes nomeados | Montagens por associação |
 | -------- | ------------- | ----------- |
-| Local do host | O Docker escolhe | Você controla |
-| Exemplo de montagem (usando `-v` ) | meu-volume:/usr/local/dados | /path/to/data:/usr/local/data |
+| Local do host | Escolha do Docker | Você controla |
+| Exemplo de montagem (usando `-v` ) | my-volume:/usr/local/data | /path/to/data:/usr/local/data |
 | Popula o novo volume com o conteúdo do contêiner | Sim | Não |
 | Dá suporte a drivers de volume | Sim | Não |
 
-## <a name="start-a-dev-mode-container"></a>Iniciar um contêiner de modo de desenvolvimento
+## <a name="start-a-dev-mode-container"></a>Iniciar um contêiner de modo dev
 
-Para executar o contêiner para dar suporte a um fluxo de trabalho de desenvolvimento, você fará o seguinte:
+Para executar seu contêiner para dar suporte a um fluxo de trabalho de desenvolvimento, você fará o seguinte:
 
-- Monte seu código-fonte no contêiner
-- Instalar todas as dependências, incluindo as dependências de "desenvolvimento"
-- Iniciar nodemon para observar as alterações do sistema de arquivos
+- Montar o código-fonte no contêiner
+- Instalar todas as dependências, incluindo as dependências de "dev"
+- Inicie nodemon para observar as alterações do sistema de arquivos
 
-1. Verifique se você não tem nenhum `getting-started` contêiner anterior em execução.
+1. Certifique-se de que você não tenha nenhum contêiner `getting-started` anterior em execução.
 
-1. Execute o comando a seguir (substitua os ` \ ` caracteres por `` ` `` no Windows PowerShell). Você aprenderá o que está acontecendo posteriormente:
+1. Execute o comando a seguir (substitua os ` \ ` caracteres `` ` `` por em Windows PowerShell). Você aprenderá o que está acontecendo depois:
 
     ```bash
     docker run -dp 3000:3000 \
-        -w /app -v ${PWD}:/app \
+        -w /app \
+        -v "%cd%:/app" \
         node:12-alpine \
         sh -c "yarn install && yarn run dev"
     ```
 
-    - `-dp 3000:3000` -o mesmo que antes. Executar no modo desanexado (segundo plano) e criar um mapeamento de porta
-    - `-w /app` -define o "diretório de trabalho" ou o diretório atual do qual o comando será executado
-    - `-v ${PWD}:/app` -associar a montagem do diretório atual do host no contêiner no `/app` diretório
-    - `node:12-alpine` -a imagem a ser usada. Observe que essa é a imagem base para seu aplicativo do Dockerfile
-    - `sh -c "yarn install && yarn run dev"` -o comando. Estamos iniciando um shell usando `sh` (o Alpine Ski não tem `bash` ) e executamos `yarn install` para instalar *todas as* dependências e, em seguida, executar `yarn run dev` . Se você olhar no, veremos `package.json` que o `dev` script está sendo iniciado `nodemon` .
+    - `-dp 3000:3000` - o mesmo que antes. Executar no modo de detached (plano de fundo) e criar um mapeamento de porta
+    - `-w /app` – define o "diretório de trabalho" ou o diretório atual do qual o comando será executado
+    - `-v "%cd%:/app"` – a fim de vincular a montagem do diretório atual do host no contêiner ao `/app` diretório
+    - `node:12-alpine` - a imagem a ser usada. Observe que essa é a imagem base para seu aplicativo do Dockerfile
+    - `sh -c "yarn install && yarn run dev"` - o comando . Estamos iniciando um shell usando (alpine não tem ) e executando para instalar todas as `sh` `bash` dependências e, em `yarn install` seguida, executando  `yarn run dev` . Se você procurar no `package.json` , veremos que o script está `dev` iniciando `nodemon` .
 
-1. Você pode assistir aos logs usando `docker logs -f <container-id>` . Você saberá que está pronto para começar quando vir:
+1. Você pode observar os logs usando `docker logs -f <container-id>` . Você vai saber que está pronto para começar quando vir isso:
 
     ```bash
     docker logs -f <container-id>
@@ -73,30 +74,30 @@ Para executar o contêiner para dar suporte a um fluxo de trabalho de desenvolvi
     Listening on port 3000
     ```
 
-    Quando você terminar de assistir aos logs, saia ao pressionar `Ctrl` + `C` .
+    Quando terminar de observar os logs, saia clicando em `Ctrl` + `C` .
 
-1. Agora, faça uma alteração no aplicativo. No `src/static/js/app.js` arquivo, altere o botão **Adicionar item** para simplesmente dizer **Adicionar**. Essa alteração estará na linha 109.
+1. Agora, faça uma alteração no aplicativo. No `src/static/js/app.js` arquivo, altere o **botão Adicionar Item** para simplesmente dizer **Adicionar**. Essa alteração estará na linha 109.
 
     ```diff
     -                         {submitting ? 'Adding...' : 'Add Item'}
     +                         {submitting ? 'Adding...' : 'Add'}
     ```
 
-1. Basta atualizar a página (ou abri-la) e você verá a alteração refletida no navegador quase imediatamente. Pode levar alguns segundos para o servidor de nó reiniciar, portanto, se você receber um erro, basta tentar atualizar após alguns segundos.
+1. Basta atualizar a página (ou abri-la) e você verá a alteração refletida no navegador quase imediatamente. Pode levar alguns segundos para que o servidor Node seja reiniciado, portanto, se você receber um erro, tente atualizar após alguns segundos.
 
     ![Captura de tela do rótulo atualizado para o botão Adicionar](media/updated-add-button.png)
 
-1. Fique à vontade para fazer outras alterações que você gostaria de fazer. Quando terminar, pare o contêiner e crie a nova imagem usando `docker build -t getting-started .` .
+1. Sinta-se à vontade para fazer outras alterações que você gostaria de fazer. Quando terminar, pare o contêiner e crie sua nova imagem usando `docker build -t getting-started .` .
 
-O uso de montagens de associação é *muito* comum para configurações de desenvolvimento local. A vantagem é que a máquina de desenvolvimento não precisa ter todas as ferramentas e ambientes de compilação instalados. Com um único `docker run` comando, o ambiente de desenvolvimento é puxado e pronto para uso. Você aprenderá sobre Docker Compose em uma etapa futura, pois isso ajudará a simplificar seus comandos (você já está recebendo muitos sinalizadores).
+O uso de montagens de *vinculação é muito* comum para configurações de desenvolvimento local. A vantagem é que o computador dev não precisa ter todas as ferramentas de build e ambientes instalados. Com um único `docker run` comando, o ambiente dev é esvasado e pronto para uso. Você aprenderá sobre Docker Compose em uma etapa futura, pois isso ajudará a simplificar seus comandos (você já está recebendo muitos sinalizadores).
 
 ## <a name="recap"></a>Recapitulação
 
-Neste ponto, você pode persistir seu banco de dados e responder rapidamente às necessidades e demandas de seus investidores e fundadores. Alegria! Mas adivinhe? Você recebeu ótima notícia!
+Neste ponto, você pode persistir seu banco de dados e responder rapidamente às necessidades e às demandas de seus diretores e seus criadores. Viva! Mas, adivinha o quê? Você recebeu ótimas notícias!
 
 **Seu projeto foi selecionado para desenvolvimento futuro!**
 
-Para se preparar para a produção, você precisa migrar seu banco de dados do trabalho no SQLite para algo que possa ser dimensionado um pouco melhor. Para simplificar, você continuará com um banco de dados relacional e alternará seu aplicativo para usar o MySQL. Mas como você deve executar o MySQL? Como permitir que os contêineres se comuniquem entre si? Você aprenderá sobre isso em seguida!
+Para se preparar para produção, você precisa migrar seu banco de dados do trabalho no SQLite para algo que possa ser dimensionado um pouco melhor. Para simplificar, você manterá um banco de dados relacional e alterna o aplicativo para usar o MySQL. Mas, como você deve executar o MySQL? Como você permite que os contêineres se comumentem entre si? Você aprenderá sobre isso em seguida!
 
 ## <a name="next-steps"></a>Próximas etapas
 
