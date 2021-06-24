@@ -1,6 +1,6 @@
 ---
 title: Exibir informações personalizadas usando DebuggerDisplay | Microsoft Docs
-description: Use uma instância de DebuggerDisplayAttribute para controlar como um objeto, propriedade ou campo é exibido nas janelas da variável do depurador.
+description: Use uma instância de DebuggerDisplayAttribute para controlar como um objeto, propriedade ou campo é exibido nas janelas de variável do depurador.
 ms.custom: SEO-VS-2020
 ms.date: 01/09/2019
 ms.topic: how-to
@@ -14,25 +14,25 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: edb257f6e5e0b74ef7f60a8447b7c89053a04e24
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5e9579e4969cb53ed2f1bcf749e8114386af85d0
+ms.sourcegitcommit: 674d3fafa7c9e0cb0d1338027ef419a49c028c36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896485"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112602143"
 ---
-# <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Diga ao depurador o que mostrar usando o atributo DebuggerDisplay (C#, Visual Basic, F #, C++/CLI)
+# <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Diga ao depurador o que mostrar usando o atributo DebuggerDisplay (C#, Visual Basic, F#, C++/CLI)
 
-O <xref:System.Diagnostics.DebuggerDisplayAttribute> controla como um objeto, propriedade ou campo é exibido nas janelas da variável do depurador. Esse atributo pode ser aplicado a tipos, delegados, propriedades, campos e assemblies. Se aplicado a um tipo base, o atributo também se aplicará a uma subclasse.
+O <xref:System.Diagnostics.DebuggerDisplayAttribute> controla como um objeto, propriedade ou campo é exibido nas janelas de variável do depurador. Esse atributo pode ser aplicado a tipos, delegados, propriedades, campos e assemblies. Se aplicado a um tipo base, o atributo também se aplica a uma subclasse.
 
 O atributo `DebuggerDisplay` tem um único argumento, que é uma cadeia de caracteres a ser exibida na coluna de valor para instâncias do tipo. Essa cadeia de caracteres pode conter chaves (`{` e `}`). O texto dentro de um par de chaves é avaliado como um campo, propriedade ou método.
 
-Se uma classe tiver um `ToString()` método substituído, o depurador usará o método substituído em vez do padrão `{<typeName>}` . Portanto, se você tiver substituído o `ToString()` método, o depurador usará o método substituído em vez do padrão `{<typeName>}` , e você não precisará usar `DebuggerDisplay` . Se você usar ambos, o `DebuggerDisplay` atributo terá precedência sobre o `ToString()` método substituído. O `DebuggerDisplay` atributo também tem precedência sobre o `ToString()` método substituído em uma subclasse.
+Se uma classe tiver um método substituído, o depurador usará o método substituído em `ToString()` vez do padrão `{<typeName>}` . Portanto, se você substituiu o método , o depurador usa o método substituído em vez do padrão e você não `ToString()` `{<typeName>}` precisa usar `DebuggerDisplay` . Se você usar ambos, `DebuggerDisplay` o atributo tem precedência sobre o método `ToString()` substituído. O `DebuggerDisplay` atributo também tem precedência sobre o método substituído em uma `ToString()` subclasse.
 
-Se o depurador avaliar essa chamada implícita `ToString()` depende de uma configuração de usuário na caixa de diálogo **ferramentas/opções/depuração** .
+Se o depurador avalia essa chamada implícita depende de uma configuração de usuário na caixa de diálogo `ToString()` **Ferramentas/Opções/Depuração.**
 
 > [!IMPORTANT]
-> Se a caixa de seleção **Mostrar estrutura bruta de objetos em variáveis do Windows** estiver marcada na caixa de diálogo **ferramentas/opções/depuração** , o `DebuggerDisplay` atributo será ignorado.
+> Se a **caixa de** seleção Mostrar estrutura bruta de objetos em janelas de variáveis estiver marcada na caixa de diálogo **Ferramentas/Opções/Depuração,** o `DebuggerDisplay` atributo será ignorado.
 
 > [!NOTE]
 > Para código nativo, esse atributo tem suporte apenas no código C++/CLI.
@@ -51,16 +51,16 @@ A tabela a seguir mostra alguns usos possíveis do atributo `DebuggerDisplay` e 
 |`Name`, `Type`|Esses parâmetros afetam as colunas **Nome** e **Tipo** das janelas variáveis. (Podem ser definidos como cadeias de caracteres usando a mesma sintaxe que o construtor.) Usar esses parâmetros demais ou usá-los incorretamente pode causar uma saída confusa.|
 |`Target`, `TargetTypeName`|Especifica o tipo de destino quando o atributo é usado no nível de assembly.|
 
-O arquivo autoexp.cs usa o atributo DebuggerDisplay no nível do assembly. O arquivo autoexp.cs determina as expansões padrão que o Visual Studio usa para objetos .NET. Você pode examinar o arquivo autoexp.cs para obter exemplos de como usar o atributo DebuggerDisplay ou pode modificar e compilar o arquivo autoexp.cs para alterar as expansões padrão. Faça backup do arquivo autoexp.cs antes de modificá-lo.
+O arquivo autoexp.cs usa o atributo DebuggerDisplay no nível do assembly. O arquivo autoexp.cs determina as expansões padrão que Visual Studio usa para objetos .NET. Você pode examinar o arquivo autoexp.cs para ver exemplos de como usar o atributo DebuggerDisplay ou pode modificar e compilar o arquivo autoexp.cs para alterar as expansões padrão. Faça backup do arquivo autoexp.cs antes de modificá-lo.
 
-Para criar o autoexp.cs, abra um Prompt de Comando do Desenvolvedor para VS2015 e execute os comandos a seguir
+Para criar autoexp.cs, abra um Prompt de Comando do Desenvolvedor para VS2015 e execute os comandos a seguir
 
 ```cmd
 cd <directory containing autoexp.cs>
 csc /t:library autoexp.cs
 ```
 
-As alterações a autoexp.dll serão selecionadas na próxima sessão de depuração.
+As alterações no autoexp.dll serão escolhidas na próxima sessão de depuração.
 
 ## <a name="using-expressions-in-debuggerdisplay"></a>Usando expressões em DebuggerDisplay
 Embora você possa usar uma expressão geral entre as chaves em um atributo DebuggerDisplay, esta prática não é recomendada.
@@ -93,10 +93,10 @@ public sealed class MyClass
 }
 ```
 
-O sufixo ", NQ" informa o avaliador de expressão para remover as aspas ao exibir o valor final (NQ = sem aspas).
+O sufixo ",nq" informa ao avaliador de expressão para remover as aspas ao exibir o valor final (nq = sem aspas).
 
 ## <a name="example"></a>Exemplo
-O exemplo de código a seguir mostra como usar `DebuggerDisplay` junto com `DebuggerBrowseable` e `DebuggerTypeProxy`. Quando exibido em uma janela variáveis de depurador, como, por exemplo, a janela **Inspeção**, ele produz uma expansão semelhante ao seguinte:
+O exemplo de código a seguir mostra como usar `DebuggerDisplay` junto com `DebuggerBrowsable` e `DebuggerTypeProxy`. Quando exibido em uma janela variáveis de depurador, como, por exemplo, a janela **Inspeção**, ele produz uma expansão semelhante ao seguinte:
 
 |**Nome**|**Valor**|**Tipo**|
 |--------------|---------------|--------------|
